@@ -1,4 +1,9 @@
+import json
+import logging
+import os.path
 import sys
+import time
+from pathlib import Path
 from typing import Tuple, List
 
 import autocorrect
@@ -6,8 +11,19 @@ import cv2 as cv
 import easyocr
 import enchant
 import numpy as np
-from PIL import Image
-from PIL import ImageDraw
+
+from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
+from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.comics_utils import get_relpath
+
+
+def setup_logging(log_level) -> None:
+    logging.basicConfig(
+        format="%(asctime)s %(levelname)s: %(message)s",
+        datefmt="%m/%d/%Y %H:%M:%S",
+        level=log_level,
+    )
+
 
 REJECTED_WORDS = ["F", "H", "M", "W", "OO", "VV", "|", "L", "\\", "IY"]
 AUTO_CORRECTIONS = {
@@ -113,8 +129,10 @@ def get_easyocr_text_box_data(image_file: str) -> List[Tuple[List[int], str, str
 
 def get_box_str(box: List[int]) -> str:
     assert len(box) == 8
-    return f"{box[0]:04},{box[1]:04}, {box[2]:04},{box[3]:04}, "\
-           f"{box[4]:04},{box[5]:04}, {box[6]:04},{box[7]:04}"
+    return (
+        f"{box[0]:04},{box[1]:04}, {box[2]:04},{box[3]:04}, "
+        f"{box[4]:04},{box[5]:04}, {box[6]:04},{box[7]:04}"
+    )
 
 
 def get_bw_image(file: str) -> cv.typing.MatLike:
@@ -131,26 +149,63 @@ def get_bw_image(file: str) -> cv.typing.MatLike:
     return binary
 
 
-if __name__ == "__main__":
-    input_image_file = sys.argv[1]
+def ocr_titles(title_list: List[str]) -> None:
+    start = time.time()
 
-    bw_image = get_bw_image(input_image_file)
-    grey_image_file = "/tmp/image_grey.png"
+    num_png_files = 0
+    for title in title_list:
+        logging.info(f'OCRing all pages in "{title}"...')
+
+        comic = comics_database.get_comic_book(title)
+
+        srce_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
+        dest_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
+
+        for srce_file, dest_file in zip(srce_files, dest_files):
+            if not ocr_comic_page(srce_file, dest_file):
+                # raise Exception("There were process errors.")
+                pass
+
+        num_png_files += len(srce_files)
+
+    logging.info(f"\nTime taken to OCR all {num_png_files} files: {int(time.time() - start)}s.")
+
+
+def ocr_comic_page(svg_file: str, ocr_json_file: str) -> bool:
+    png_file = svg_file + ".png"
+    logging.info(f'OCRing png file "{get_relpath(png_file)}" to "{get_relpath(ocr_json_file)}"...')
+
+    if not os.path.isfile(png_file):
+        logging.error(f'Could not find png file "{png_file}".')
+        return False
+
+    if os.path.isfile(ocr_json_file):
+        logging.info(f'OCR file "{get_relpath(png_file)}" exists - skipping..')
+        return True
+
+    bw_image = get_bw_image(png_file)
+    # TODO: need work_dir
+    grey_image_file = os.path.join("/tmp", Path(png_file).stem + "-grey.png")
     cv.imwrite(grey_image_file, bw_image)
 
     text_data_boxes = get_easyocr_text_box_data(grey_image_file)
 
-    pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image]))
-    img_rects = ImageDraw.Draw(pil_image)
-    for box, _, _, _ in text_data_boxes:
-        img_rects.polygon(box, outline="green", width=5)
-    img_rects._image.save("/tmp/bubbles-text-data-boxes-easy.png")
+    with open(os.path.join(ocr_json_file), "w") as f:
+        json.dump(text_data_boxes, f, indent=4)
 
-    max_test_len = max([len(t[1]) for t in text_data_boxes])
-    max_acc_test_len = max([len(t[2]) for t in text_data_boxes])
-    print()
-    for box, text, accepted_text, prob in text_data_boxes:
-        print(
-            f'text: "{text:<{max_test_len}}", acc: "{accepted_text:<{max_acc_test_len}}"'
-            f' P: {prob:4.2f}, box: "{get_box_str(box)}"'
-        )
+    return True
+
+
+if __name__ == "__main__":
+
+    setup_logging(logging.INFO)
+
+    cmd_args = CmdArgs("Ocr titles", CmdArgNames.TITLE | CmdArgNames.VOLUME)
+    args_ok, error_msg = cmd_args.args_are_valid()
+    if not args_ok:
+        logging.error(error_msg)
+        sys.exit(1)
+
+    comics_database = cmd_args.get_comics_database()
+
+    ocr_titles(cmd_args.get_titles())
