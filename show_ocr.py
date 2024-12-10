@@ -75,10 +75,12 @@ def ocr_annotate_file(
     if not os.path.isfile(png_file):
         logging.error(f'Could not find image file "{png_file}".')
         return False
-
     if not os.path.isfile(ocr_file):
         logging.error(f'Could not find ocr file "{ocr_file}".')
         return False
+    if os.path.isfile(annotated_img_file):
+        logging.info(f'Found annotation file "{annotated_img_file}" -- skipping.')
+        return True
 
     with open(ocr_file, "r") as f:
         jsn_text_data_boxes = json.load(f)
@@ -107,7 +109,7 @@ if __name__ == "__main__":
 
     setup_logging(logging.INFO)
 
-    cmd_args = CmdArgs("OCR annotate title", CmdArgNames.TITLE)
+    cmd_args = CmdArgs("OCR annotate title", CmdArgNames.TITLE | CmdArgNames.WORK_DIR)
     args_ok, error_msg = cmd_args.args_are_valid()
     if not args_ok:
         logging.error(error_msg)
@@ -115,6 +117,4 @@ if __name__ == "__main__":
 
     comics_database = cmd_args.get_comics_database()
 
-    output_dir = "/tmp/fanta_ocr"
-
-    ocr_annotate_title(cmd_args.get_title(), output_dir)
+    ocr_annotate_title(cmd_args.get_title(), cmd_args.get_work_dir())
