@@ -12,16 +12,7 @@ from PIL import Image, ImageDraw
 from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_info import PNG_FILE_EXT
-from barks_fantagraphics.comics_utils import get_relpath
-
-
-# TODO: Duplicated
-def setup_logging(log_level) -> None:
-    logging.basicConfig(
-        format="%(asctime)s %(levelname)s: %(message)s",
-        datefmt="%m/%d/%Y %H:%M:%S",
-        level=log_level,
-    )
+from barks_fantagraphics.comics_utils import get_relpath, setup_logging
 
 
 # TODO: Duplicated - comics utils??
