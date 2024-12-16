@@ -4,7 +4,6 @@ annotated-types==0.7.0
 anyio==4.7.0
 astor==0.8.1
 autocorrect==2.6.1
--e git+https://github.com/glk1001/barks-fantagraphics.git@e320f9ddb90e7cc73f74d5fab0b9d34dbd52bb07#egg=barks_fantagraphics
 beautifulsoup4==4.12.3
 certifi==2024.8.30
 charset-normalizer==3.4.0
