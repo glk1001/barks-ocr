@@ -8,30 +8,15 @@ from pathlib import Path
 from typing import List, Tuple, Dict
 
 import cv2 as cv
-import numpy as np
 from PIL import Image, ImageDraw
 from shapely.geometry import Polygon
 
 from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.comics_image_io import get_bw_image_from_alpha
 from barks_fantagraphics.comics_info import PNG_FILE_EXT
 from barks_fantagraphics.comics_utils import get_relpath, setup_logging
 from geometry import Rect
-
-
-# TODO: Duplicated - comics utils??
-def get_bw_image(file: str) -> cv.typing.MatLike:
-    black_mask = cv.imread(file, -1)
-
-    scale = 4
-    black_mask = cv.resize(
-        black_mask, (0, 0), fx=1.0 / scale, fy=1.0 / scale, interpolation=cv.INTER_AREA
-    )
-
-    _, _, _, binary = cv.split(black_mask)
-    binary = np.uint8(255 - binary)
-
-    return binary
 
 
 # TODO: Duplicated
@@ -76,11 +61,12 @@ class OcrBox:
     ocr_prob: float
     accepted_text: str
 
-def save_groups_as_json(groups:Dict[int, List[Tuple[OcrBox, float]]], file: str) -> None:
+
+def save_groups_as_json(groups: Dict[int, List[Tuple[OcrBox, float]]], file: str) -> None:
 
     def custom_ocr_box(obj):
         if isinstance(obj, OcrBox):
-            poly_xy = [(xy[0],xy[1]) for xy in obj.box.exterior.coords]
+            poly_xy = [(xy[0], xy[1]) for xy in obj.box.exterior.coords]
             print(f"poly_xy = {poly_xy}")
             return poly_xy, obj.is_rect, obj.ocr_text, obj.ocr_prob, obj.accepted_text
         return obj
@@ -89,11 +75,11 @@ def save_groups_as_json(groups:Dict[int, List[Tuple[OcrBox, float]]], file: str)
         json.dump(groups, f, indent=4, default=custom_ocr_box)
 
 
-def load_groups_from_json(file: str)->Dict[int, List[Tuple[OcrBox, float]]]:
+def load_groups_from_json(file: str) -> Dict[int, List[Tuple[OcrBox, float]]]:
     with open(file, "r") as f:
         json_groups = json.load(f)
 
-    groups:Dict[int, List[Tuple[OcrBox, float]]] = dict()
+    groups: Dict[int, List[Tuple[OcrBox, float]]] = dict()
     for json_group in json_groups:
         for json_ocr_box in json_group[0]:
             pass
@@ -123,7 +109,7 @@ def ocr_annotate_file(
     with open(ocr_file, "r") as f:
         jsn_text_data_boxes = json.load(f)
 
-    bw_image = get_bw_image(png_file)
+    bw_image = get_bw_image_from_alpha(png_file)
     max_test_len = max([len(t[1]) for t in jsn_text_data_boxes])
     max_acc_test_len = max([len(t[2]) for t in jsn_text_data_boxes])
 
@@ -155,7 +141,7 @@ def ocr_annotate_file(
 
     def custom_ocr_box(obj):
         if isinstance(obj, OcrBox):
-            poly_xy = [(xy[0],xy[1]) for xy in obj.box.exterior.coords]
+            poly_xy = [(xy[0], xy[1]) for xy in obj.box.exterior.coords]
             print(f"poly_xy = {poly_xy}")
             return poly_xy, obj.is_rect, obj.ocr_text, obj.ocr_prob, obj.accepted_text
         return obj

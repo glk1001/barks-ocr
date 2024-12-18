@@ -5,25 +5,12 @@ import easyocr
 import numpy as np
 import supervision as sv
 
-
-def get_bw_image(file: str) -> cv.typing.MatLike:
-    black_mask = cv.imread(file, -1)
-
-    scale = 4
-    black_mask = cv.resize(
-        black_mask, (0, 0), fx=1.0 / scale, fy=1.0 / scale, interpolation=cv.INTER_AREA
-    )
-
-    _, _, _, binary = cv.split(black_mask)
-    binary = np.uint8(255 - binary)
-
-    return binary
-
+from barks_fantagraphics.comics_image_io import get_bw_image_from_alpha
 
 if __name__ == "__main__":
     input_image_file = sys.argv[1]
 
-    bw_image = get_bw_image(input_image_file)
+    bw_image = get_bw_image_from_alpha(input_image_file)
     image = cv.merge([bw_image, bw_image, bw_image])
     grey_image_file = "/tmp/image_grey.png"
     cv.imwrite(grey_image_file, bw_image)
@@ -68,5 +55,5 @@ if __name__ == "__main__":
     )
 
     # Display and save the annotated image
-#    sv.plot_image(image=annotated_image)
+    #    sv.plot_image(image=annotated_image)
     cv.imwrite("/tmp/annotated-output.jpg", annotated_image)

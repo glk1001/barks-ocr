@@ -10,10 +10,10 @@ import autocorrect
 import cv2 as cv
 import easyocr
 import enchant
-import numpy as np
 
 from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.comics_image_io import get_bw_image_from_alpha
 from barks_fantagraphics.comics_utils import get_relpath, setup_logging
 
 REJECTED_WORDS = ["F", "H", "M", "W", "OO", "VV", "|", "L", "\\", "IY"]
@@ -126,20 +126,6 @@ def get_box_str(box: List[int]) -> str:
     )
 
 
-def get_bw_image(file: str) -> cv.typing.MatLike:
-    black_mask = cv.imread(file, -1)
-
-    scale = 4
-    black_mask = cv.resize(
-        black_mask, (0, 0), fx=1.0 / scale, fy=1.0 / scale, interpolation=cv.INTER_AREA
-    )
-
-    _, _, _, binary = cv.split(black_mask)
-    binary = np.uint8(255 - binary)
-
-    return binary
-
-
 def ocr_titles(title_list: List[str]) -> None:
     start = time.time()
 
@@ -174,7 +160,7 @@ def ocr_comic_page(svg_file: str, ocr_json_file: str) -> bool:
         logging.info(f'OCR file "{get_relpath(png_file)}" exists - skipping..')
         return True
 
-    bw_image = get_bw_image(png_file)
+    bw_image = get_bw_image_from_alpha(png_file)
     # TODO: need work_dir
     grey_image_file = os.path.join("/tmp", Path(png_file).stem + "-grey.png")
     cv.imwrite(grey_image_file, bw_image)
