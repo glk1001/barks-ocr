@@ -14,7 +14,7 @@ import enchant
 from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_image_io import get_bw_image_from_alpha
-from barks_fantagraphics.comics_utils import get_relpath, setup_logging
+from barks_fantagraphics.comics_utils import get_abbrev_path, setup_logging
 
 REJECTED_WORDS = ["F", "H", "M", "W", "OO", "VV", "|", "L", "\\", "IY"]
 AUTO_CORRECTIONS = {
@@ -150,14 +150,17 @@ def ocr_titles(title_list: List[str]) -> None:
 
 def ocr_comic_page(svg_file: str, ocr_json_file: str) -> bool:
     png_file = svg_file + ".png"
-    logging.info(f'OCRing png file "{get_relpath(png_file)}" to "{get_relpath(ocr_json_file)}"...')
+    logging.info(
+        f'OCRing png file "{get_abbrev_path(png_file)}"'
+        f' to "{get_abbrev_path(ocr_json_file)}"...'
+    )
 
     if not os.path.isfile(png_file):
         logging.error(f'Could not find png file "{png_file}".')
         return False
 
     if os.path.isfile(ocr_json_file):
-        logging.info(f'OCR file "{get_relpath(png_file)}" exists - skipping..')
+        logging.info(f'OCR file "{get_abbrev_path(png_file)}" exists - skipping..')
         return True
 
     bw_image = get_bw_image_from_alpha(png_file)

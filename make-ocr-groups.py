@@ -10,7 +10,7 @@ from shapely.geometry import Polygon
 
 from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
-from barks_fantagraphics.comics_utils import get_relpath, setup_logging
+from barks_fantagraphics.comics_utils import get_abbrev_path, setup_logging
 from geometry import Rect
 from ocr_box import OcrBox, save_groups_as_json, load_groups_from_json, get_box_str
 
@@ -44,7 +44,7 @@ def make_ocr_groups(
     text_and_boxes_file: str,
     text_and_boxes_json_file: str,
 ) -> bool:
-    logging.info(f'Making OCR groups for file "{get_relpath(ocr_file)}"...')
+    logging.info(f'Making OCR groups for file "{get_abbrev_path(ocr_file)}"...')
 
     if not os.path.isfile(ocr_file):
         logging.error(f'Could not find ocr file "{ocr_file}".')

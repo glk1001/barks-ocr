@@ -14,7 +14,7 @@ from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_image_io import get_bw_image_from_alpha
 from barks_fantagraphics.comics_info import PNG_FILE_EXT
-from barks_fantagraphics.comics_utils import get_relpath, setup_logging
+from barks_fantagraphics.comics_utils import get_abbrev_path, setup_logging
 from ocr_box import OcrBox
 
 
@@ -45,7 +45,7 @@ def ocr_annotate_file(
     ocr_file: str,
     annotated_img_file: str,
 ) -> bool:
-    logging.info(f'OCR annotating image "{get_relpath(png_file)}"...')
+    logging.info(f'OCR annotating image "{get_abbrev_path(png_file)}"...')
 
     if not os.path.isfile(png_file):
         logging.error(f'Could not find image file "{png_file}".')
