@@ -11,8 +11,8 @@ from shapely.geometry import Polygon
 from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_utils import get_abbrev_path, setup_logging
-from geometry import Rect
-from ocr_box import OcrBox, save_groups_as_json, load_groups_from_json, get_box_str
+from ocr.utils.geometry import Rect
+from ocr.utils.ocr_box import OcrBox, save_groups_as_json, load_groups_from_json, get_box_str
 
 
 def make_ocr_groups_for_titles(titles: List[str], out_dir: str) -> None:
