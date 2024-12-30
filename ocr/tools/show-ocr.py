@@ -1,6 +1,5 @@
 import json
 import logging
-import math
 import os.path
 import sys
 from pathlib import Path
@@ -8,7 +7,6 @@ from typing import List
 
 import cv2 as cv
 from PIL import Image, ImageDraw
-from shapely.geometry import Polygon
 
 from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
@@ -16,6 +14,33 @@ from barks_fantagraphics.comics_image_io import get_bw_image_from_alpha
 from barks_fantagraphics.comics_info import PNG_FILE_EXT
 from barks_fantagraphics.comics_utils import get_abbrev_path, setup_logging
 from ocr.utils.ocr_box import OcrBox
+
+COLORS = [
+    "green",
+    "yellow",
+    "blue",
+    "red",
+    "brown",
+    "purple",
+    "orange",
+    "pink",
+    "teal",
+    "orchid",
+    "blueviolet",
+    "tan",
+    "olive",
+    "palegreen",
+    "plum",
+    "wheat",
+    "gold",
+    "hotpink",
+]
+
+
+def get_color(group_id: int) -> str:
+    # print(type(group_id), group_id, len(COLORS))
+    group_id %= len(COLORS)
+    return COLORS[group_id]
 
 
 def ocr_annotate_titles(titles: List[str], out_dir: str) -> None:
@@ -32,6 +57,10 @@ def ocr_annotate_title(title: str, out_dir: str) -> None:
     comic = comics_database.get_comic_book(title)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
     ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
+
+    ocr_files = [
+        os.path.join(out_dir, f"{Path(f).stem}-ocr-text-box-groups.json") for f in ocr_files
+    ]
 
     for svg_file, ocr_file in zip(svg_files, ocr_files):
         png_file = svg_file + PNG_FILE_EXT
@@ -66,23 +95,41 @@ def ocr_annotate_file(
     pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image]))
     img_rects = ImageDraw.Draw(pil_image)
 
-    for box, ocr_text, accepted_text, ocr_prob in jsn_text_data_boxes:
-        p1 = (box[0], box[1])
-        p2 = (box[2], box[3])
-        p3 = (box[4], box[5])
-        p4 = (box[6], box[7])
-        poly_points = [p1, p2, p3, p4]
-        poly = Polygon(poly_points)
+    for group in jsn_text_data_boxes:
+        group_id = int(group)
+        text = " ".join([text_data["accepted_text"] for text_data, _ in jsn_text_data_boxes[group]])
+        print(f'group: {group_id:02} - text: "{text}"')
+        for text_data, dist in jsn_text_data_boxes[group]:
+            text_box = text_data["box_points"]
+            is_rect = text_data["is_rect"]
+            ocr_text = text_data["ocr_text"]
+            ocr_prob = text_data["ocr_prob"]
+            accepted_text = text_data["accepted_text"]
 
-        is_rect = math.isclose(poly.minimum_rotated_rectangle.area, poly.area)
-        is_rect = is_rect and p1[0] < p3[0] and p1[1] < p3[1]
+            box = [
+                text_box[0][0],
+                text_box[0][1],
+                text_box[1][0],
+                text_box[1][1],
+                text_box[2][0],
+                text_box[2][1],
+                text_box[3][0],
+                text_box[3][1],
+            ]
+            p1 = (box[0], box[1])
+            p2 = (box[2], box[3])
+            p3 = (box[4], box[5])
+            p4 = (box[6], box[7])
+            poly_points = [p1, p2, p3, p4]
 
-        if is_rect:
-            img_rects.rectangle([p1, p3], outline="green", width=5)
-        else:
-            img_rects.polygon(box, outline="red", width=3)
+            if text_data["is_rect"]:
+                img_rects.rectangle([p1, p3], outline=get_color(group_id), width=5)
+            else:
+                img_rects.polygon(box, outline=get_color(group_id), width=1)
 
-        text_data_polygons.append(OcrBox(poly_points, is_rect, ocr_text, ocr_prob, accepted_text))
+            text_data_polygons.append(
+                OcrBox(poly_points, is_rect, ocr_text, ocr_prob, accepted_text)
+            )
 
     img_rects._image.save(annotated_img_file)
 

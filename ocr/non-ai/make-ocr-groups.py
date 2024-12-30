@@ -31,18 +31,20 @@ def make_ocr_groups_for_title(title: str, out_dir: str) -> None:
     ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
     for svg_file, ocr_file in zip(svg_files, ocr_files):
-        text_and_boxes_file = os.path.join(out_dir, Path(svg_file).stem + "-ocr-text-boxes.txt")
-        text_and_boxes_json_file = os.path.join(
-            out_dir, Path(svg_file).stem + "-ocr-text-boxes.json"
+        text_box_groups_file = os.path.join(
+            out_dir, Path(svg_file).stem + "-ocr-text-box-groups.txt"
         )
-        if not make_ocr_groups(ocr_file, text_and_boxes_file, text_and_boxes_json_file):
+        text_box_groups_json_file = os.path.join(
+            out_dir, Path(svg_file).stem + "-ocr-text-box-groups.json"
+        )
+        if not make_ocr_groups(ocr_file, text_box_groups_file, text_box_groups_json_file):
             raise Exception("There were process errors.")
 
 
 def make_ocr_groups(
     ocr_file: str,
-    text_and_boxes_file: str,
-    text_and_boxes_json_file: str,
+    text_box_groups_file: str,
+    text_box_groups_json_file: str,
 ) -> bool:
     logging.info(f'Making OCR groups for file "{get_abbrev_path(ocr_file)}"...')
 
@@ -70,13 +72,13 @@ def make_ocr_groups(
 
     groups = make_box_groups(text_data_polygons)
 
-    save_groups_as_json(groups, text_and_boxes_json_file)
-    groups = load_groups_from_json(text_and_boxes_json_file)
+    save_groups_as_json(groups, text_box_groups_json_file)
+    groups = load_groups_from_json(text_box_groups_json_file)
 
     max_text_len = max([len(t[1]) for t in jsn_text_data_boxes])
     max_acc_text_len = max([len(t[2]) for t in jsn_text_data_boxes])
 
-    with open(text_and_boxes_file, "w") as f:
+    with open(text_box_groups_file, "w") as f:
         for group in groups:
             for ocr_box, dist in groups[group]:
                 f.write(
