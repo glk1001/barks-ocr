@@ -38,7 +38,6 @@ COLORS = [
 
 
 def get_color(group_id: int) -> str:
-    # print(type(group_id), group_id, len(COLORS))
     group_id %= len(COLORS)
     return COLORS[group_id]
 
@@ -60,6 +59,8 @@ def ocr_annotate_title(title: str, out_dir: str) -> None:
 
     ocr_files = [
         os.path.join(out_dir, f"{Path(f).stem}-ocr-text-box-groups.json") for f in ocr_files
+        #os.path.join(out_dir, f"{Path(f).stem}-ocr-text-groups.json")
+        for f in ocr_files
     ]
 
     for svg_file, ocr_file in zip(svg_files, ocr_files):
@@ -100,36 +101,22 @@ def ocr_annotate_file(
         text = " ".join([text_data["accepted_text"] for text_data, _ in jsn_text_data_boxes[group]])
         print(f'group: {group_id:02} - text: "{text}"')
         for text_data, dist in jsn_text_data_boxes[group]:
-            text_box = text_data["box_points"]
-            is_rect = text_data["is_rect"]
-            ocr_text = text_data["ocr_text"]
-            ocr_prob = text_data["ocr_prob"]
-            accepted_text = text_data["accepted_text"]
+            ocr_box = OcrBox(
+                text_data["box_points"],
+                text_data["ocr_text"],
+                text_data["ocr_prob"],
+                text_data["accepted_text"],
+            )
 
-            box = [
-                text_box[0][0],
-                text_box[0][1],
-                text_box[1][0],
-                text_box[1][1],
-                text_box[2][0],
-                text_box[2][1],
-                text_box[3][0],
-                text_box[3][1],
-            ]
-            p1 = (box[0], box[1])
-            p2 = (box[2], box[3])
-            p3 = (box[4], box[5])
-            p4 = (box[6], box[7])
-            poly_points = [p1, p2, p3, p4]
-
-            if text_data["is_rect"]:
-                img_rects.rectangle([p1, p3], outline=get_color(group_id), width=5)
+            if ocr_box.is_approx_rect:
+                img_rects.rectangle(
+                    ocr_box.min_rotated_rectangle, outline=get_color(group_id), width=5
+                )
             else:
+                box = [item for point in ocr_box.min_rotated_rectangle for item in point]
                 img_rects.polygon(box, outline=get_color(group_id), width=1)
 
-            text_data_polygons.append(
-                OcrBox(poly_points, is_rect, ocr_text, ocr_prob, accepted_text)
-            )
+            text_data_polygons.append(ocr_box)
 
     img_rects._image.save(annotated_img_file)
 

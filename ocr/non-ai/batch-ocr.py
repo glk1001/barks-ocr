@@ -6,15 +6,16 @@ import time
 from pathlib import Path
 from typing import Tuple, List
 
-import autocorrect
 import cv2 as cv
 import easyocr
 import enchant
+from paddleocr import PaddleOCR
 
 from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_image_io import get_bw_image_from_alpha
 from barks_fantagraphics.comics_utils import get_abbrev_path, setup_logging
+from ocr.utils.preprocessing import preprocess_image
 
 REJECTED_WORDS = ["F", "H", "M", "W", "OO", "VV", "|", "L", "\\", "IY"]
 AUTO_CORRECTIONS = {
@@ -24,7 +25,6 @@ AUTO_CORRECTIONS = {
 }
 
 spell_dict = enchant.DictWithPWL("en_US", "mywords.txt")
-spell_correct = autocorrect.Speller()
 
 
 def words_are_ok(words_str: str) -> Tuple[bool, List[str]]:
@@ -79,21 +79,31 @@ def word_is_ok(word: str) -> Tuple[bool, str]:
     if possible_words:
         return True, possible_words[0]
 
-    word = spell_correct.autocorrect_word(word)
-    print(f"AUTO corrected word: '{word}'")
-    if not spell_dict.check(word):
-        return False, ""
+    # word = spell_correct.autocorrect_word(word)
+    # print(f"AUTO corrected word: '{word}'")
+    # if not spell_dict.check(word):
+    #     return False, ""
     return True, word
 
 
 def get_easyocr_text_box_data(image_file: str) -> List[Tuple[List[int], str, str, float]]:
     reader = easyocr.Reader(["en"])
-    result = reader.readtext(image_file)
+    result = reader.readtext(
+        image_file,
+        paragraph=False,
+        decoder="beamsearch",
+        beamWidth=5,
+        batch_size=8,
+        contrast_ths=0.1,
+        adjust_contrast=0.5,
+        text_threshold=0.7,
+        low_text=0.4,
+        link_threshold=0.6,
+        mag_ratio=2.0,
+    )
 
     text_list = []
     for bbox, text, prob in result:
-        (tl, tr, br, bl) = bbox
-
         text_str = text.strip()
         if prob < 0.1 or not text_str:
             continue
@@ -103,14 +113,60 @@ def get_easyocr_text_box_data(image_file: str) -> List[Tuple[List[int], str, str
             continue
         accepted_words_str = " ".join(accepted_words)
 
-        x0 = int(round(tl[0]))
-        y0 = int(round(tl[1]))
-        x1 = int(round(tr[0]))
-        y1 = int(round(tr[1]))
-        x2 = int(round(br[0]))
-        y2 = int(round(br[1]))
-        x3 = int(round(bl[0]))
-        y3 = int(round(bl[1]))
+        (bl, br, tr, tl) = bbox
+        x0 = int(round(bl[0]))
+        y0 = int(round(bl[1]))
+        x1 = int(round(br[0]))
+        y1 = int(round(br[1]))
+        x2 = int(round(tr[0]))
+        y2 = int(round(tr[1]))
+        x3 = int(round(tl[0]))
+        y3 = int(round(tl[1]))
+        bbox = [x0, y0, x1, y1, x2, y2, x3, y3]
+
+        text_list.append((bbox, text_str, accepted_words_str, prob))
+
+    return text_list
+
+
+def get_paddleocr_text_box_data(image_file: str) -> List[Tuple[List[int], str, str, float]]:
+    ocr = PaddleOCR(
+        use_angle_cls=True,
+        lang="en",
+        det_limit_side_len=2560,
+        det_db_thresh=0.1,
+        det_db_box_thresh=0.2,
+        use_space_char=True,
+        use_gpu=True,
+        enable_mkldnn=True,
+        show_log=False,
+    )
+
+    result = ocr.ocr(image_file, cls=True)
+
+    text_list = []
+    for line in result[0]:
+        bbox = line[0]
+        text = line[1][0]
+        prob = line[1][1]
+        text_str = text.strip()
+        if prob < 0.1 or not text_str:
+            continue
+
+        words_ok, accepted_words = words_are_ok(text_str)
+        if not words_ok:
+            continue
+        accepted_words_str = " ".join(accepted_words)
+
+        (bl, br, tr, tl) = bbox
+        x0 = int(round(bl[0]))
+        y0 = int(round(bl[1]))
+        x1 = int(round(br[0]))
+        y1 = int(round(br[1]))
+        x2 = int(round(tr[0]))
+        y2 = int(round(tr[1]))
+        x3 = int(round(tl[0]))
+        y3 = int(round(tl[1]))
         bbox = [x0, y0, x1, y1, x2, y2, x3, y3]
 
         text_list.append((bbox, text_str, accepted_words_str, prob))
@@ -164,11 +220,13 @@ def ocr_comic_page(svg_file: str, ocr_json_file: str) -> bool:
         return True
 
     bw_image = get_bw_image_from_alpha(png_file)
+    bw_image = preprocess_image(bw_image)
     # TODO: need work_dir
     grey_image_file = os.path.join("/tmp", Path(png_file).stem + "-grey.png")
     cv.imwrite(grey_image_file, bw_image)
 
-    text_data_boxes = get_easyocr_text_box_data(grey_image_file)
+#    text_data_boxes = get_easyocr_text_box_data(grey_image_file)
+    text_data_boxes = get_paddleocr_text_box_data(grey_image_file)
 
     with open(os.path.join(ocr_json_file), "w") as f:
         json.dump(text_data_boxes, f, indent=4)

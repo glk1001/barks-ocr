@@ -1,15 +1,76 @@
 import json
-from dataclasses import dataclass
+import math
 from typing import List, Tuple, Dict
 
+import numpy as np
+from shapely import MultiPoint
 
-@dataclass
+
 class OcrBox:
-    box_points: List[Tuple[float, float]]
-    is_rect: bool
-    ocr_text: str
-    ocr_prob: float
-    accepted_text: str
+    def __init__(
+        self,
+        box_points: List[Tuple[float, float]],
+        ocr_text: str,
+        ocr_prob: float,
+        accepted_text: str,
+    ):
+        self._box_points = box_points
+        self.ocr_text = ocr_text
+        self.ocr_prob = ocr_prob
+        self.accepted_text = accepted_text
+
+        min_rotated_rectangle_azimuth = self._get_min_rotated_rectangle_azimuth(
+            MultiPoint(self._box_points).minimum_rotated_rectangle
+        )
+        self.is_approx_rect = (
+            abs(min_rotated_rectangle_azimuth) < 5.0
+            or abs(min_rotated_rectangle_azimuth - 180) < 5.0
+        )
+        if self.is_approx_rect:
+            self.min_rotated_rectangle = self._get_envelope()
+        else:
+            self.min_rotated_rectangle = self._get_min_rotated_rectangle()
+
+    def get_state(self) -> Dict[str, any]:
+        return {
+            "box_points": self._box_points,
+            "ocr_text": self.ocr_text,
+            "ocr_prob": self.ocr_prob,
+            "accepted_text": self.accepted_text,
+        }
+
+    def _get_envelope(self) -> List[Tuple[float, float]]:
+        rect = MultiPoint(self._box_points).envelope
+        coords = rect.exterior.coords
+        bottom_left = coords[0]
+        top_right = coords[2]
+        return [bottom_left, top_right]
+
+    def _get_min_rotated_rectangle(self) -> List[Tuple[float, float]]:
+        rect = MultiPoint(self._box_points).minimum_rotated_rectangle
+        coords = rect.exterior.coords
+        return [coords[0], coords[1], coords[2], coords[3]]
+
+    def _get_min_rotated_rectangle_azimuth(self, rotated_rect):
+        bbox = list(rotated_rect.exterior.coords)
+        axis1 = self._get_dist_between_points(bbox[0], bbox[3])
+        axis2 = self._get_dist_between_points(bbox[0], bbox[1])
+
+        if axis1 <= axis2:
+            az = self._get_azimuth_between_points(bbox[0], bbox[1])
+        else:
+            az = self._get_azimuth_between_points(bbox[0], bbox[3])
+
+        return az
+
+    @staticmethod
+    def _get_azimuth_between_points(point1, point2):
+        angle = np.arctan2(point2[1] - point1[1], point2[0] - point1[0])
+        return np.degrees(angle) if angle > 0 else np.degrees(angle) + 180
+
+    @staticmethod
+    def _get_dist_between_points(a, b):
+        return math.hypot(b[0] - a[0], b[1] - a[1])
 
 
 def load_groups_from_json(file: str) -> Dict[int, List[Tuple[OcrBox, float]]]:
@@ -23,7 +84,6 @@ def load_groups_from_json(file: str) -> Dict[int, List[Tuple[OcrBox, float]]]:
             dist = box_tuple[1]
             ocr_box = OcrBox(
                 json_ocr_box["box_points"],
-                json_ocr_box["is_rect"],
                 json_ocr_box["ocr_text"],
                 json_ocr_box["ocr_prob"],
                 json_ocr_box["accepted_text"],
@@ -41,7 +101,7 @@ def save_groups_as_json(groups: Dict[int, List[Tuple[OcrBox, float]]], file: str
 
     def custom_ocr_box(obj):
         if isinstance(obj, OcrBox):
-            return obj.__dict__
+            return obj.get_state()
         return obj
 
     with open(file, "w") as f:

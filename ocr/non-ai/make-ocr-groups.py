@@ -1,6 +1,5 @@
 import json
 import logging
-import math
 import os.path
 import sys
 from pathlib import Path
@@ -63,12 +62,8 @@ def make_ocr_groups(
         p3 = (box[4], box[5])
         p4 = (box[6], box[7])
         poly_points = [p1, p2, p3, p4]
-        poly = Polygon(poly_points)
 
-        is_rect = math.isclose(poly.minimum_rotated_rectangle.area, poly.area)
-        is_rect = is_rect and p1[0] < p3[0] and p1[1] < p3[1]
-
-        text_data_polygons.append(OcrBox(poly_points, is_rect, ocr_text, ocr_prob, accepted_text))
+        text_data_polygons.append(OcrBox(poly_points, ocr_text, ocr_prob, accepted_text))
 
     groups = make_box_groups(text_data_polygons)
 
@@ -86,7 +81,7 @@ def make_ocr_groups(
                     f"text: '{ocr_box.ocr_text:<{max_text_len}}', "
                     f"acc: '{ocr_box.accepted_text:<{max_acc_text_len}}', "
                     f"P: {ocr_box.ocr_prob:4.2f}, "
-                    f"box: {get_box_str(ocr_box.box_points)}, rect: {ocr_box.is_rect}\n"
+                    f"box: {get_box_str(ocr_box._box_points)}, rect: {ocr_box.is_approx_rect}\n"
                 )
 
     return True
@@ -99,10 +94,12 @@ def make_box_groups(text_data_polygons: List[OcrBox]) -> Dict[int, List[Tuple[Oc
         in_group = False
         for group in groups:
             for grp_ocr_box, _ in groups[group]:
-                if ocr_box.is_rect and grp_ocr_box.is_rect:
-                    dist = get_rect_dist(ocr_box.box_points, grp_ocr_box.box_points)
+                if ocr_box.is_approx_rect and grp_ocr_box.is_approx_rect:
+                    dist = get_rect_dist(
+                        ocr_box.min_rotated_rectangle, grp_ocr_box.min_rotated_rectangle
+                    )
                 else:
-                    dist = get_dist(ocr_box.box_points, grp_ocr_box.box_points)
+                    dist = get_dist(ocr_box._box_points, grp_ocr_box._box_points)
                 if dist < 15:
                     groups[group].append((ocr_box, dist))
                     in_group = True
@@ -116,14 +113,20 @@ def make_box_groups(text_data_polygons: List[OcrBox]) -> Dict[int, List[Tuple[Oc
     return groups
 
 
-def get_rect_dist(poly1: List[Tuple[float, float]], poly2: List[Tuple[float, float]]) -> float:
-    p1 = poly1[0]
-    p3 = poly1[2]
-    rect1 = Rect(p1[0], p1[1], p3[0] - p1[0], p3[1] - p1[1])
+def get_rect_dist(
+    box_rect1: List[Tuple[float, float]], box_rect2: List[Tuple[float, float]]
+) -> float:
+    bottom_left = box_rect1[0]
+    top_right = box_rect1[1]
+    rect1 = Rect(
+        bottom_left[0], bottom_left[1], top_right[0] - bottom_left[0], top_right[1] - bottom_left[1]
+    )
 
-    p1 = poly2[0]
-    p3 = poly2[2]
-    rect2 = Rect(p1[0], p1[1], p3[0] - p1[0], p3[1] - p1[1])
+    bottom_left = box_rect2[0]
+    top_right = box_rect2[1]
+    rect2 = Rect(
+        bottom_left[0], bottom_left[1], top_right[0] - bottom_left[0], top_right[1] - bottom_left[1]
+    )
 
     # print(f"rect1: {rect1.x}, {rect1.y}, {rect1.w}, {rect1.h}")
     # print(f"rect2: {rect2.x}, {rect2.y}, {rect2.w}, {rect2.h}")
