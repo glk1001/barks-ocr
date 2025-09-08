@@ -15,13 +15,17 @@ class Prompts(Enum):
     COLORIZE_WITH_GRADIENTS = auto()
     MAKE_PHOTO_REALISTIC = auto()
     MAKE_OIL_PAINTING = auto()
+    MAKE_IMPRESSIONIST_PAINTING = auto()
+    MAKE_ANSEL_ADAMS = auto()
     EXTRACT_TEXT = auto()
 
 
-REMOVE_BUBBLE_DEST_SUFFIX = "no-bubbles.png"
+REMOVE_BUBBLE_DEST_SUFFIX = "-no-bubbles.png"
 RECOLOR_DEST_SUFFIX = "-recolor.png"
 PHOTO_DEST_SUFFIX = "-photo.png"
 OIL_DEST_SUFFIX = "-oil.png"
+IMPRES_DEST_SUFFIX = "-impres.png"
+ANSEL_DEST_SUFFIX = "-ansel.png"
 EXTRACT_TEXT_DEST_SUFFIX = "-just-text.txt"
 
 PROMPT_TEXT = {
@@ -45,6 +49,14 @@ PROMPT_TEXT = {
         "Make this look like a very realistic and beautiful oil painting.",
         OIL_DEST_SUFFIX,
     ),
+    Prompts.MAKE_IMPRESSIONIST_PAINTING: (
+        "Make this look like a very beautiful impressionist painting.",
+        IMPRES_DEST_SUFFIX,
+    ),
+    Prompts.MAKE_ANSEL_ADAMS: (
+        "Make this like a very detailed black and white Ansel Adams photograph.",
+        ANSEL_DEST_SUFFIX,
+    ),
     Prompts.EXTRACT_TEXT: (
         "Extract the text from this image.",
         EXTRACT_TEXT_DEST_SUFFIX,
@@ -53,35 +65,81 @@ PROMPT_TEXT = {
 # PROMPT = "Remove the smaller inner panel."
 # PROMPT = "Improve this comic book cover."  # bit of a dud
 
-PROMPT_TO_USE = Prompts.MAKE_OIL_PAINTING
-
-SYSTEM_INSTRUCTION = "Do not remove any part of characters. Do not vignette."
+SYSTEM_INSTRUCTION = ("Do not remove any part of characters."
+                      " Do not add any characters."
+                      " Do not vignette."
+                      " Do not crop image."
+                      " Do not add a signature."
+                      " Do not change any objects.")
 CANDIDATE_COUNT = 1
-AI_TEMPERATURE = 0.9
 AI_TOP_P = None
 AI_TOP_K = None
-SEED = None
+SEED = 5
 
 ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 BARKS_PANELS_PNG = ROOT_DIR / "Barks Panels Pngs"
 FANTA_RESTORED_DIR = ROOT_DIR / "Fantagraphics-restored"
-# PANEL_TYPE = "Favourites"
-PANEL_TYPE = "Splash"
-TITLE = "Tralla La"
-EDITED = "edited"
-# EDITED = ""
-IMAGE_FILENAME = "255-big-3.png"
+
+#PANEL_TYPE = "Favourites"
+PANEL_TYPE = "Insets"
+#PANEL_TYPE = "Splash"
+#PANEL_TYPE = "Silhouettes"
+TITLE = "The Bill Collectors"
+#EDITED = "edited"
+EDITED = ""
+IMAGE_FILENAME = "The Bill Collectors.png"
+
+AI_TEMPERATURE = 1.0
+PROMPT_TO_USE = Prompts.MAKE_OIL_PAINTING
 
 DEST_SUFFIX = PROMPT_TEXT[PROMPT_TO_USE][1]
 PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
 
-PROMPT_STR += " Make the trees in the foreground taller. Make the sky darker with more clouds."
-#PROMPT_STR += " Add a some extra trees and rocks in the foreground. Add some more clouds to the sky."
-#PROMPT_STR += " Outpaint the top and bottom of the image to give a consistent scene that seamlessly matches the middle. Crucially make color and structure match."
-#SYSTEM_INSTRUCTION += " Change the shape of the output image so that it's 1000 pixels wide and 1600 pixels high."
+# PROMPT_STR = ("The first image is a black and white comic book page."
+#               # " It consists of black lines on a white page forming panels (rectangular sections),"
+#               # " each panel containing character and object shapes."
+#               " Turn this into a colored comic book image where each black line shape is colored in."
+#               " The black lines of the first image should not be changed."
+#               " As a color guide, use the colors from the second image which is a colored comic"
+#               " book page similar to the first image."
+#               " The image that is output should be the first black and white image but with added colors."
+#               " Do not output anything from the the second image."
+#               " Do not use any of the black lines from the second image."
+#               " VERY IMPORTANT: Like a coloring book, keep all colors WITHIN the black line shapes."
+#               " So colors should not go over black lines."
+#               " Use a flat coloring style."
+#               " Color in all the characters and objects in each panel."
+#               " Color in all characters' clothing including hats and bow-ties."
+#               " The color of each character and object should match the color in the second guide image."
+#               " Character and object colors should be consistent over all panels."
+#               " Include the yellow fence in panel 1,"
+#               " the yellow background in panel 2, "
+#               " and the red shape in panel 3."
+#               " Do not trim the top and bottom of the first image."
+#               " Write the number of each panel in a large black font in the middle of each panel. ")
+# PROMPT_STR = ("The first image is a colored comic book page containing 5 bordered panels."
+#               " The second image is a black and white uncolored version of the same comic book page."
+#               " Using the first color image as guide, for each panel in the second image"
+#               " add colors to the black and white panel and output the colored result.")
+#PROMPT_STR += " Make background detailed and sharp."
+#PROMPT_STR += " Do not remove the wanted poster and text inside it"
+#PROMPT_STR = " Make the character rowing the boat have a very soft subtle glow of light like the other characters in the boat. Don't touch the other characters"
+# PROMPT_STR += " Make the trees in the foreground taller. Make the sky darker with more clouds."
+# PROMPT_STR += " Add a some extra trees and rocks in the foreground. Add some more clouds to the sky."
+# PROMPT_STR += (" This is an image of a deep valley in the Himalayas. Outpaint the top of the image to give a consistent scene that seamlessly matches the middle."
+#                " Extend the image by having a very tall and steep snow covered mountain range moving off to the right in the background."
+#                " Extend the mountain range to near the top of the image."
+#                " The steep slope above the waterfall should be seamlessly continued."
+#                " DO NOT have another waterfall."
+#                " Make a dark cloudy sky. Crucially make color and structure match.")
+# PROMPT_STR += " Outpaint the top and bottom of the image to give a consistent scene that seamlessly matches the middle. Crucially make color and structure match."
+# SYSTEM_INSTRUCTION += " Change the shape of the output image so that it's 1000 pixels wide and 1600 pixels high."
 
 # SRCE_IMAGE="/home/greg/Books/Carl Barks/Fantagraphics-fixes-and-additions/Carl Barks Vol. 8 - Donald Duck - Trail of the Unicorn (Digital-Empire)/images/245.png"
-SRCE_IMAGE = ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / TITLE / EDITED / IMAGE_FILENAME
+if PANEL_TYPE == "Insets":
+    SRCE_IMAGE1 = ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / EDITED / IMAGE_FILENAME
+else:
+    SRCE_IMAGE1 = ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / TITLE / EDITED / IMAGE_FILENAME
 
 # SRCE_IMAGE = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/01.png"
 # PROMPT = ("This is a scanned image. Cleanup and correct any warping caused by scanning. Keep the"
@@ -94,8 +152,9 @@ dest_image = (
     / "AI"
     / TITLE
     / EDITED
-    / (SRCE_IMAGE.stem + DEST_SUFFIX)
+    / (SRCE_IMAGE1.stem + DEST_SUFFIX)
 )
+#dest_image = Path("/tmp/color-test.png")
 dest_image.parent.mkdir(parents=True, exist_ok=True)
 if not dest_image.parent.is_dir():
     raise FileNotFoundError(dest_image)
@@ -110,11 +169,18 @@ AI_MODEL = "gemini-2.5-flash-image-preview"
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 client = genai.Client(api_key=GEMINI_API_KEY)
 
-image = Image.open(SRCE_IMAGE, mode="r")
+# SRCE_IMAGE1 = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/Originals/RCO003_1466986159.jpg"
+# SRCE_IMAGE2 = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/01_cleaned_small.png"
+srce_image1 = Image.open(SRCE_IMAGE1, mode="r")
+#srce_image2 = Image.open(SRCE_IMAGE2, mode="r")
 
 response = client.models.generate_content(
     model=AI_MODEL,
-    contents=[PROMPT_STR, image],
+    contents=[
+        PROMPT_STR,
+        srce_image1,
+#       srce_image2,
+    ],
     config=GenerateContentConfig(
         system_instruction=SYSTEM_INSTRUCTION,
         candidate_count=CANDIDATE_COUNT,
@@ -129,5 +195,5 @@ for part in response.candidates[0].content.parts:
     if part.text is not None:
         print(part.text)
     elif part.inline_data is not None:
-        image = Image.open(BytesIO(part.inline_data.data))
-        image.save(dest_image)
+        srce_image1 = Image.open(BytesIO(part.inline_data.data))
+        srce_image1.save(dest_image)
