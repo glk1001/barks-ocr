@@ -80,17 +80,18 @@ ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 BARKS_PANELS_PNG = ROOT_DIR / "Barks Panels Pngs"
 FANTA_RESTORED_DIR = ROOT_DIR / "Fantagraphics-restored"
 
+PANEL_TYPE = "Censorship"
 #PANEL_TYPE = "Favourites"
-PANEL_TYPE = "Insets"
+#PANEL_TYPE = "Insets"
 #PANEL_TYPE = "Splash"
 #PANEL_TYPE = "Silhouettes"
-TITLE = "The Bill Collectors"
-#EDITED = "edited"
-EDITED = ""
-IMAGE_FILENAME = "The Bill Collectors.png"
+TITLE = "Donald Duck and the Mummy's Ring"
+EDITED = "edited"
+#EDITED = ""
+IMAGE_FILENAME = "145-8.png"
 
 AI_TEMPERATURE = 1.0
-PROMPT_TO_USE = Prompts.MAKE_OIL_PAINTING
+PROMPT_TO_USE = Prompts.MAKE_PHOTO_REALISTIC
 
 DEST_SUFFIX = PROMPT_TEXT[PROMPT_TO_USE][1]
 PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
