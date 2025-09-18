@@ -70,7 +70,10 @@ SYSTEM_INSTRUCTION = ("Do not remove any part of characters."
                       " Do not vignette."
                       " Do not crop image."
                       " Do not add a signature."
-                      " Do not change any objects.")
+                      " Do not change any objects."
+                      " Do not change any clothing."
+                      " No borders."
+                      " Don't change character's expressions.")
 CANDIDATE_COUNT = 1
 AI_TOP_P = None
 AI_TOP_K = None
@@ -80,22 +83,33 @@ ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 BARKS_PANELS_PNG = ROOT_DIR / "Barks Panels Pngs"
 FANTA_RESTORED_DIR = ROOT_DIR / "Fantagraphics-restored"
 
-PANEL_TYPE = "Censorship"
-#PANEL_TYPE = "Favourites"
+#PANEL_TYPE = "Censorship"
+#PANEL_TYPE = "Closeups"
+PANEL_TYPE = "Favourites"
 #PANEL_TYPE = "Insets"
 #PANEL_TYPE = "Splash"
 #PANEL_TYPE = "Silhouettes"
-TITLE = "Donald Duck and the Mummy's Ring"
-EDITED = "edited"
-#EDITED = ""
-IMAGE_FILENAME = "145-8.png"
+DEST_SUFFIX_PRE = ""
+#DEST_SUFFIX_PRE = "-cl"
+
+TITLE = "Donald's Love Letters"
+EDITED = ""
+#EDITED = "edited"
+IMAGE_FILENAME = "150-6.png"
 
 AI_TEMPERATURE = 1.0
-PROMPT_TO_USE = Prompts.MAKE_PHOTO_REALISTIC
+PROMPT_TO_USE = Prompts.MAKE_IMPRESSIONIST_PAINTING
 
-DEST_SUFFIX = PROMPT_TEXT[PROMPT_TO_USE][1]
+DEST_SUFFIX = DEST_SUFFIX_PRE + PROMPT_TEXT[PROMPT_TO_USE][1]
 PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
 
+#PROMPT_STR += " Don't change Donald's expressions."
+#PROMPT_STR += " Keep the high collar. Keep Donald's beak closed the same as the input image. Donald's hat should be blue, the same as the input image."
+#PROMPT_STR += " Just remove the speech bubbles. Do not change anything else."
+# PROMPT_STR += "No clouds."
+# PROMPT_STR += " Do not put a hat on Donald."
+#PROMPT_STR += " Show grey smoke and more blackened background. It's the aftermath of a bushfire."
+# PROMPT_STR += " Clearly show the '313' number plate"
 # PROMPT_STR = ("The first image is a black and white comic book page."
 #               # " It consists of black lines on a white page forming panels (rectangular sections),"
 #               # " each panel containing character and object shapes."
@@ -104,7 +118,7 @@ PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
 #               " As a color guide, use the colors from the second image which is a colored comic"
 #               " book page similar to the first image."
 #               " The image that is output should be the first black and white image but with added colors."
-#               " Do not output anything from the the second image."
+#               " Do not output anything from the second image."
 #               " Do not use any of the black lines from the second image."
 #               " VERY IMPORTANT: Like a coloring book, keep all colors WITHIN the black line shapes."
 #               " So colors should not go over black lines."
