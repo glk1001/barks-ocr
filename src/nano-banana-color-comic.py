@@ -19,10 +19,10 @@ DIR_TO_FIX = CENSORSHIP_FIXES_DIR / "wdcs-34"
 AI_TEMPERATURE = 0.0
 
 
-COLOR_REF_FILE = DIR_TO_FIX / "07_upscayl_8400px_digital-art-4x-orig.png"
-TARGET_BW_LINEART_FILE = DIR_TO_FIX / "07_upscayl_8400px_digital-art-4x-small-test.png"
+COLOR_REF_FILE = DIR_TO_FIX / "08_upscayl_8400px_digital-art-4x-orig.png"
+TARGET_BW_LINEART_FILE = DIR_TO_FIX / "08_upscayl_8400px_digital-art-4x-small-test.png"
+dest_image_file = Path("/tmp/color-test-8.png")
 
-dest_image_file = Path("/tmp/color-test-7.png")
 dest_image_file.parent.mkdir(parents=True, exist_ok=True)
 if not dest_image_file.parent.is_dir():
     raise FileNotFoundError(dest_image_file)
@@ -49,29 +49,30 @@ contents = [
     "And this is the second image (Image 2) of the same page but with cleaned up black-and-white lineart:",
     image2,
     f"""
-**Primary Command:** Your most important task is to generate an output image that has 
-the **exact same aspect ratio as Image 2 ({aspect_ratio})**. Do not deviate from this aspect ratio.
+**Primary Command:** Your most important task is to generate an output image that has the **exact same aspect ratio as Image 2 ({aspect_ratio})**. Do not deviate from this.
 
-**Objective:** Use the colors from Image 1 as a reference to color the lineart in Image 2.
+**Objective:** Use the colors from Image 1 as a reference to color the black and white lineart in Image 2.
 
 **Execution Rules:**
-1.  **Color Style:** Apply colors in a smooth, **flat, digital comic book style**.
-2.  **Colors:** All colored areas in Image 1 must be preserved and appear in Image 2.
-3.  **Lineart:** Preserve the black and white lineart from Image 2 perfectly.
-4.  **Image Integrity:** The output must contain the entire area of Image 2. All panel borders must
-    be fully intact. Image 2 must not be rotated or cropped.
-5.  **Alignment:** The black and white lineart in the output image must exactly align with the 
-    black and white lineart in Image 2.
+1.  **Color Transfer:** Every single colored area in Image 1 must be transferred to the corresponding
+    colored area in Image 2. Do not omit any colors. If an area is colored in Image 1, it must be colored in the output.
+2.  **Color Style:** Apply colors in a smooth, **flat, digital comic book style**.
+3.  **Lineart:** Preserve the black and white lineart from Image 2 perfectly. The lineart must remain on top and be unchanged.
+4.  **Image Integrity:** The output must contain the entire area of Image 2. All panel borders must be fully intact. Image 2 must not be rotated or cropped.
+5.  **Alignment:** The black and white lineart in the output image must exactly align with the black and white lineart in Image 2.
 
 **Strict Prohibitions (DO NOT):**
 -   **DO NOT** use any halftone patterns, dots, or textures. Colors must be flat.
+-   **DO NOT** leave any areas uncolored that are colored in Image 1.
 -   **DO NOT** crop, resize, or alter the aspect ratio. The output dimensions are non-negotiable.
 -   **DO NOT** copy any noise, blur, or printing errors from Image 1.
 -   **DO NOT** rotate or resize Image 2 and the output image.
 
 **Final Output Checklist:**
 -   Aspect ratio is exactly {aspect_ratio}.
+-   All colors from Image 1 are present in the output.
 -   Coloring is flat, with no halftone dots.
+-   Lineart from Image 2 is perfectly preserved and aligned.
 -   The entire image, including all borders from Image 2, is present.
 """,
 ]

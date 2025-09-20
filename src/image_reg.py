@@ -3,10 +3,10 @@ import numpy as np
 
 # Open the image files.
 #img1_color = cv2.imread("/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/gemini-colors-panel 6/color-test.png")  # Image to be aligned.
-img1_color = cv2.imread("/tmp/color-test-7.png")  # Image to be aligned.
-img2_color = cv2.imread("/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/07_upscayl_8400px_digital-art-4x-small-test.png")    # Reference image.
+img1_color = cv2.imread("/tmp/color-test-8.png")  # Image to be aligned.
+img2_color = cv2.imread("/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/08_upscayl_8400px_digital-art-4x-small-test.png")    # Reference image.
 
-output_image = "/tmp/color-test-reg-7.png"
+output_image = "/tmp/color-test-reg-8.png"
 
 # Convert to grayscale.
 img1 = cv2.cvtColor(img1_color, cv2.COLOR_BGR2GRAY)
