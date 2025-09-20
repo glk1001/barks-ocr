@@ -12,7 +12,7 @@ SYSTEM_INSTRUCTION = "Keep all panel borders intact."
 CANDIDATE_COUNT = 1
 AI_TOP_P = None
 AI_TOP_K = None
-SEED = None
+SEED = 1
 
 ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 BARKS_PANELS_PNG = ROOT_DIR / "Barks Panels Pngs"
@@ -23,7 +23,7 @@ IMAGE_FILENAME = "190-4.png"
 AI_TEMPERATURE = 0.0
 
 
-SRCE_IMAGE1 = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/Originals/RCO008_1466986159.jpg"
+SRCE_IMAGE1 = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/06_upscayl_8400px_digital-art-4x-orig.png"
 SRCE_IMAGE2 = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/06_upscayl_8400px_digital-art-4x-small-test.png"
 
 # dest_image = (
@@ -51,34 +51,35 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 
 image1 = Image.open(SRCE_IMAGE1)
 image2 = Image.open(SRCE_IMAGE2)
+width, height = image2.size
 
 contents = [
-    "This is the first image (Image 1) of a scanned comic book page with halftone coloring, low quality,"
-    " and misregistered colors:",
+    "This is the first image (Image 1) of a scanned comic book page with halftone coloring,"
+    " low quality,and misregistered colors:",
     image1,
     "And this is the second image (Image 2) of the same page but with clean black-and-white lineart:",
     image2,
-    """
-Task:
-Use Image 1 as a color reference and Image 2 as the target. Recolor Image 2 with the colors from Image 1 but use a flat coloring style.
+    f"""
+**Primary Command:** Your most important task is to generate an output image that is 
+**exactly {width} pixels wide and {height} pixels high**. Do not deviate from these dimensions.
 
-Requirements:
+**Objective:** Use the colors from Image 1 to colorize the lineart in Image 2.
 
-Preserve the black lineart from Image 2 exactly.
+**Execution Rules:**
+1.  **Color Style:** Apply colors in a smooth, **flat, digital comic book style**.
+2.  **Lineart:** Preserve the black lineart from Image 2 perfectly.
+3.  **Image Integrity:** The output must contain the entire area of Image 2. All panel borders must
+    be fully intact.
 
-Apply the correct flat comic-style colors from Image 1, but remove all halftone dots, noise, and misregistered color artifacts.
+**Strict Prohibitions (DO NOT):**
+-   **DO NOT** use any halftone patterns, dots, or textures. The color must be flat.
+-   **DO NOT** crop, resize, or alter the aspect ratio. The output dimensions are non-negotiable.
+-   **DO NOT** copy any noise, blur, or printing errors from Image 1.
 
-Ensure colors align cleanly within the lineart boundaries.
-
-Ensure all panel borders are intact.
-
-Produce a high-quality, professional comic page that looks freshly printed with smooth flat digital coloring.
-
-Keep the aspect ratio of the output image the same as Image 2.
-
-Instruction to Model:
-“Colorize the clean lineart (Image 2) using Image 1 as the color guide. Ignore halftone dots, noise,
- and misalignment. Final output should be sharp, clean, and professionally colored in a flat colored style.”
+**Final Output Checklist:**
+-   Dimensions are exactly {width}x{height}.
+-   Coloring is flat, with no halftone dots.
+-   The entire image, including all borders from Image 2, is present.
 """,
 ]
 
