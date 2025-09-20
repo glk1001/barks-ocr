@@ -65,15 +65,18 @@ PROMPT_TEXT = {
 # PROMPT = "Remove the smaller inner panel."
 # PROMPT = "Improve this comic book cover."  # bit of a dud
 
-SYSTEM_INSTRUCTION = ("Do not remove any part of characters."
-                      " Do not add any characters."
-                      " Do not vignette."
-                      " Do not crop image."
-                      " Do not add a signature."
-                      " Do not change any objects."
-                      " Do not change any clothing."
-                      " No borders."
-                      " Don't change character's expressions.")
+SYSTEM_INSTRUCTION = (
+    "Do not remove any part of characters."
+    " Do not change character's expressions."
+    " Do not change character's eyes."
+    " Do not add any characters."
+    " Do not vignette."
+    " Do not crop image."
+    " Do not add a signature."
+    " Do not change any objects."
+    " Do not change any clothing."
+    " Do not add a border."
+)
 CANDIDATE_COUNT = 1
 AI_TOP_P = None
 AI_TOP_K = None
@@ -83,32 +86,32 @@ ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 BARKS_PANELS_PNG = ROOT_DIR / "Barks Panels Pngs"
 FANTA_RESTORED_DIR = ROOT_DIR / "Fantagraphics-restored"
 
-#PANEL_TYPE = "Censorship"
-#PANEL_TYPE = "Closeups"
+# PANEL_TYPE = "Censorship"
+# PANEL_TYPE = "Closeups"
 PANEL_TYPE = "Favourites"
-#PANEL_TYPE = "Insets"
-#PANEL_TYPE = "Splash"
-#PANEL_TYPE = "Silhouettes"
+# PANEL_TYPE = "Insets"
+# PANEL_TYPE = "Splash"
+# PANEL_TYPE = "Silhouettes"
 DEST_SUFFIX_PRE = ""
-#DEST_SUFFIX_PRE = "-cl"
+# DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Donald's Love Letters"
+TITLE = "Serum to Codfish Cove"
 EDITED = ""
-#EDITED = "edited"
-IMAGE_FILENAME = "150-6.png"
+# EDITED = "edited"
+IMAGE_FILENAME = "190-4.png"
 
-AI_TEMPERATURE = 1.0
-PROMPT_TO_USE = Prompts.MAKE_IMPRESSIONIST_PAINTING
+AI_TEMPERATURE = 0.0
+PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
 
 DEST_SUFFIX = DEST_SUFFIX_PRE + PROMPT_TEXT[PROMPT_TO_USE][1]
 PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
 
-#PROMPT_STR += " Don't change Donald's expressions."
-#PROMPT_STR += " Keep the high collar. Keep Donald's beak closed the same as the input image. Donald's hat should be blue, the same as the input image."
-#PROMPT_STR += " Just remove the speech bubbles. Do not change anything else."
+# PROMPT_STR += " Don't change Donald's expressions."
+# PROMPT_STR += " Keep the high collar. Keep Donald's beak closed the same as the input image. Donald's hat should be blue, the same as the input image."
+# PROMPT_STR += " Just remove the speech bubbles. Do not change anything else."
 # PROMPT_STR += "No clouds."
 # PROMPT_STR += " Do not put a hat on Donald."
-#PROMPT_STR += " Show grey smoke and more blackened background. It's the aftermath of a bushfire."
+# PROMPT_STR += " Show grey smoke and more blackened background. It's the aftermath of a bushfire."
 # PROMPT_STR += " Clearly show the '313' number plate"
 # PROMPT_STR = ("The first image is a black and white comic book page."
 #               # " It consists of black lines on a white page forming panels (rectangular sections),"
@@ -136,9 +139,9 @@ PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
 #               " The second image is a black and white uncolored version of the same comic book page."
 #               " Using the first color image as guide, for each panel in the second image"
 #               " add colors to the black and white panel and output the colored result.")
-#PROMPT_STR += " Make background detailed and sharp."
-#PROMPT_STR += " Do not remove the wanted poster and text inside it"
-#PROMPT_STR = " Make the character rowing the boat have a very soft subtle glow of light like the other characters in the boat. Don't touch the other characters"
+# PROMPT_STR += " Make background detailed and sharp."
+# PROMPT_STR += " Do not remove the wanted poster and text inside it"
+# PROMPT_STR = " Make the character rowing the boat have a very soft subtle glow of light like the other characters in the boat. Don't touch the other characters"
 # PROMPT_STR += " Make the trees in the foreground taller. Make the sky darker with more clouds."
 # PROMPT_STR += " Add a some extra trees and rocks in the foreground. Add some more clouds to the sky."
 # PROMPT_STR += (" This is an image of a deep valley in the Himalayas. Outpaint the top of the image to give a consistent scene that seamlessly matches the middle."
@@ -154,7 +157,9 @@ PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
 if PANEL_TYPE == "Insets":
     SRCE_IMAGE1 = ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / EDITED / IMAGE_FILENAME
 else:
-    SRCE_IMAGE1 = ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / TITLE / EDITED / IMAGE_FILENAME
+    SRCE_IMAGE1 = (
+        ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / TITLE / EDITED / IMAGE_FILENAME
+    )
 
 # SRCE_IMAGE = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/01.png"
 # PROMPT = ("This is a scanned image. Cleanup and correct any warping caused by scanning. Keep the"
@@ -169,7 +174,7 @@ dest_image = (
     / EDITED
     / (SRCE_IMAGE1.stem + DEST_SUFFIX)
 )
-#dest_image = Path("/tmp/color-test.png")
+# dest_image = Path("/tmp/color-test.png")
 dest_image.parent.mkdir(parents=True, exist_ok=True)
 if not dest_image.parent.is_dir():
     raise FileNotFoundError(dest_image)
@@ -187,14 +192,14 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 # SRCE_IMAGE1 = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/Originals/RCO003_1466986159.jpg"
 # SRCE_IMAGE2 = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/01_cleaned_small.png"
 srce_image1 = Image.open(SRCE_IMAGE1, mode="r")
-#srce_image2 = Image.open(SRCE_IMAGE2, mode="r")
+# srce_image2 = Image.open(SRCE_IMAGE2, mode="r")
 
 response = client.models.generate_content(
     model=AI_MODEL,
     contents=[
         PROMPT_STR,
         srce_image1,
-#       srce_image2,
+        #       srce_image2,
     ],
     config=GenerateContentConfig(
         system_instruction=SYSTEM_INSTRUCTION,
