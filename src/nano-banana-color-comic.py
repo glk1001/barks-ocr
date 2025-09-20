@@ -60,8 +60,8 @@ contents = [
     "And this is the second image (Image 2) of the same page but with clean black-and-white lineart:",
     image2,
     f"""
-**Primary Command:** Your most important task is to generate an output image that is 
-**exactly {width} pixels wide and {height} pixels high**. Do not deviate from these dimensions.
+**Primary Command:** Your most important task is to generate an output image that has 
+the **exact same aspect ratio as Image 2 ({height}/{width})**. Do not deviate from these dimensions.
 
 **Objective:** Use the colors from Image 1 to colorize the lineart in Image 2.
 
@@ -69,15 +69,17 @@ contents = [
 1.  **Color Style:** Apply colors in a smooth, **flat, digital comic book style**.
 2.  **Lineart:** Preserve the black lineart from Image 2 perfectly.
 3.  **Image Integrity:** The output must contain the entire area of Image 2. All panel borders must
-    be fully intact.
+    be fully intact. Image 2 must not be rotated and the black and white lineart in Image 2 
+    must exactly align with the black and white lineart in the output image.
 
 **Strict Prohibitions (DO NOT):**
--   **DO NOT** use any halftone patterns, dots, or textures. The color must be flat.
+-   **DO NOT** use any halftone patterns, dots, or textures. Colors must be flat.
 -   **DO NOT** crop, resize, or alter the aspect ratio. The output dimensions are non-negotiable.
 -   **DO NOT** copy any noise, blur, or printing errors from Image 1.
+-   **DO NOT** rotate or resize Image 2 and the output image.
 
 **Final Output Checklist:**
--   Dimensions are exactly {width}x{height}.
+-   Aspect ratio is exactly {height}/{width}.
 -   Coloring is flat, with no halftone dots.
 -   The entire image, including all borders from Image 2, is present.
 """,
