@@ -1,26 +1,21 @@
 import os
 from enum import Enum, auto
-from pathlib import Path
-
-from PIL import Image
 from io import BytesIO
+from pathlib import Path
 
 from google import genai
 from google.genai.types import GenerateContentConfig
+from PIL import Image
 
 
 class Prompts(Enum):
-    REMOVE_SPEECH_BUBBLES = auto()
-    REMOVE_NARRATION_AND_SPEECH_BUBBLES = auto()
     COLORIZE_WITH_GRADIENTS = auto()
     MAKE_PHOTO_REALISTIC = auto()
     MAKE_OIL_PAINTING = auto()
     MAKE_IMPRESSIONIST_PAINTING = auto()
     MAKE_ANSEL_ADAMS = auto()
-    EXTRACT_TEXT = auto()
 
 
-REMOVE_BUBBLE_DEST_SUFFIX = "-no-bubbles.png"
 RECOLOR_DEST_SUFFIX = "-recolor.png"
 PHOTO_DEST_SUFFIX = "-photo.png"
 OIL_DEST_SUFFIX = "-oil.png"
@@ -29,58 +24,34 @@ ANSEL_DEST_SUFFIX = "-ansel.png"
 EXTRACT_TEXT_DEST_SUFFIX = "-just-text.txt"
 
 PROMPT_TEXT = {
-    Prompts.REMOVE_SPEECH_BUBBLES: (
-        "Remove all speech bubbles.",
-        REMOVE_BUBBLE_DEST_SUFFIX,
-    ),
-    Prompts.REMOVE_NARRATION_AND_SPEECH_BUBBLES: (
-        "Remove all speech bubbles and narrator box.",
-        REMOVE_BUBBLE_DEST_SUFFIX,
-    ),
     Prompts.COLORIZE_WITH_GRADIENTS: (
-        "Colorize this using color gradients.",
+        "colorize the input image using color gradients",
         RECOLOR_DEST_SUFFIX,
     ),
     Prompts.MAKE_PHOTO_REALISTIC: (
-        "Make this look like a super-realistic 3D photograph.",
+        "make the input image look like a super-realistic 3D photograph",
         PHOTO_DEST_SUFFIX,
     ),
     Prompts.MAKE_OIL_PAINTING: (
-        "Make this look like a very realistic and beautiful oil painting.",
+        "make the input image look like a very realistic and beautiful oil painting",
         OIL_DEST_SUFFIX,
     ),
     Prompts.MAKE_IMPRESSIONIST_PAINTING: (
-        "Make this look like a very beautiful impressionist painting.",
+        "make the input image look like a very beautiful impressionist painting",
         IMPRES_DEST_SUFFIX,
     ),
     Prompts.MAKE_ANSEL_ADAMS: (
-        "Make this like a very detailed black and white Ansel Adams photograph.",
+        "make the input image like a very detailed black and white Ansel Adams photograph",
         ANSEL_DEST_SUFFIX,
-    ),
-    Prompts.EXTRACT_TEXT: (
-        "Extract the text from this image.",
-        EXTRACT_TEXT_DEST_SUFFIX,
     ),
 }
 # PROMPT = "Remove the smaller inner panel."
 # PROMPT = "Improve this comic book cover."  # bit of a dud
 
-SYSTEM_INSTRUCTION = (
-    "Do not remove any part of characters."
-    " Do not change character's expressions."
-    " Do not change character's eyes."
-    " Do not add any characters."
-    " Do not vignette."
-    " Do not crop image."
-    " Do not add a signature."
-    " Do not change any objects."
-    " Do not change any clothing."
-    " Do not add a border."
-)
 CANDIDATE_COUNT = 1
-AI_TOP_P = None
+AI_TOP_P = 0.1
 AI_TOP_K = None
-SEED = 5
+SEED = 2
 
 ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 BARKS_PANELS_PNG = ROOT_DIR / "Barks Panels Pngs"
@@ -95,19 +66,20 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Serum to Codfish Cove"
+TITLE = "Billions to Sneeze At"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "190-4.png"
-EXTRA_PROMPT = " Do not change character's eyes. Do not change position of eye pupils."
+IMAGE_FILENAME = "047-5.png"
 AI_TEMPERATURE = 0.0
+EXTRA_PROHIBITION = ""
+#EXTRA_PROHIBITION = "- **DO NOT** have any characters sleeping."
 
-PROMPTS_TO_USE = [
-    # Prompts.COLORIZE_WITH_GRADIENTS,
-    # Prompts.MAKE_PHOTO_REALISTIC,
-    # Prompts.MAKE_OIL_PAINTING,
+PROMPT_TYPES = [
+    #Prompts.COLORIZE_WITH_GRADIENTS,
+    #Prompts.MAKE_PHOTO_REALISTIC,
+    Prompts.MAKE_OIL_PAINTING,
     Prompts.MAKE_IMPRESSIONIST_PAINTING,
-    # Prompts.MAKE_ANSEL_ADAMS,
+    Prompts.MAKE_ANSEL_ADAMS,
 ]
 
 if PANEL_TYPE == "Insets":
@@ -124,9 +96,10 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 
 srce_image1 = Image.open(SRCE_IMAGE1, mode="r")
 
+
 dest_files = []
-for prompt_to_use in PROMPTS_TO_USE:
-    dest_suffix_part = PROMPT_TEXT[prompt_to_use][1]
+for prompt_type in PROMPT_TYPES:
+    dest_suffix_part = PROMPT_TEXT[prompt_type][1]
     dest_suffix = DEST_SUFFIX_PRE + dest_suffix_part
 
     dest_image = (
@@ -148,24 +121,45 @@ for prompt_to_use in PROMPTS_TO_USE:
 
     dest_files.append(dest_image)
 
-for prompt_to_use, dest_image in zip(PROMPTS_TO_USE, dest_files, strict=True):
-    prompt_str, dest_suffix_part = PROMPT_TEXT[prompt_to_use]
+for prompt_type, dest_image in zip(PROMPT_TYPES, dest_files, strict=True):
+    prompt_str, dest_suffix_part = PROMPT_TEXT[prompt_type]
     dest_suffix = DEST_SUFFIX_PRE + dest_suffix_part
 
-    prompt_str += EXTRA_PROMPT
+    final_prompt = f'''
+    **Primary Command:** Your most important task is to {prompt_str}.
+    
+    Use the image's black ink lines to reinforce the structure of the output image.  
+    
+    **Strict Prohibitions (DO NOT):**
+    - **CRITICAL MASKING INSTRUCTION:** The character's eyes and pupils are a masked area.
+            **DO NOT** alter the characters' eyes or pupils in any way.
+            They must be perfectly preserved from the original image.
+    - **DO NOT** remove any part of characters.
+    - **DO NOT** change character's expressions.
+    - **DO NOT** change any objects.
+    - **DO NOT** change any clothing.
+    - **DO NOT** remove any characters' glasses.
+    - **DO NOT** add a signature.
+    - **DO NOT** add a border.
+    - **DO NOT** add any characters.
+    - **DO NOT** vignette.
+    - **DO NOT** crop image.
+    - **DO NOT** add a signature.
+    {EXTRA_PROHIBITION}
+    '''
 
     print("-" * 80)
-    print(f"Prompt: {prompt_str}")
+    print(f"Prompt: {final_prompt}")
     print(f'Saving edited content to "{dest_image}"...')
 
     response = client.models.generate_content(
         model=AI_MODEL,
         contents=[
-            prompt_str,
+            final_prompt,
             srce_image1,
         ],
         config=GenerateContentConfig(
-            system_instruction=SYSTEM_INSTRUCTION,
+            system_instruction=None,
             candidate_count=CANDIDATE_COUNT,
             temperature=AI_TEMPERATURE,
             top_p=AI_TOP_P,

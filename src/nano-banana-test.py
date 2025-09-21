@@ -65,22 +65,10 @@ PROMPT_TEXT = {
 # PROMPT = "Remove the smaller inner panel."
 # PROMPT = "Improve this comic book cover."  # bit of a dud
 
-SYSTEM_INSTRUCTION = (
-    "Do not remove any part of characters."
-    " Do not change character's expressions."
-    " Do not change character's eyes."
-    " Do not add any characters."
-    " Do not vignette."
-    " Do not crop image."
-    " Do not add a signature."
-    " Do not change any objects."
-    " Do not change any clothing."
-    " Do not add a border."
-)
 CANDIDATE_COUNT = 1
-AI_TOP_P = None
+AI_TOP_P = 0.1
 AI_TOP_K = None
-SEED = 5
+SEED = 1
 
 ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 BARKS_PANELS_PNG = ROOT_DIR / "Barks Panels Pngs"
@@ -95,16 +83,40 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Serum to Codfish Cove"
+TITLE = "Billions to Sneeze At"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "190-4.png"
+IMAGE_FILENAME = "047-5.png"
 
 AI_TEMPERATURE = 0.0
 PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
 
 DEST_SUFFIX = DEST_SUFFIX_PRE + PROMPT_TEXT[PROMPT_TO_USE][1]
 PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
+EXTRA_PROHIBITION = ""
+
+final_prompt = f"""
+**Primary Command:** Your most important task is to {PROMPT_STR}.
+
+**Strict Prohibitions (DO NOT):**
+- **CRITICAL MASKING INSTRUCTION:** The character's eyes and pupils are a masked area.
+        **DO NOT** alter the characters' eyes or pupils in any way.
+        They must be perfectly preserved from the original image.
+- **DO NOT** remove any part of characters.
+- **DO NOT** change character's expressions.
+- **DO NOT** change any objects.
+- **DO NOT** change any clothing.
+- **DO NOT** remove any characters' glasses.
+- **DO NOT** add a signature.
+- **DO NOT** add a border.
+- **DO NOT** add any characters.
+- **DO NOT** vignette.
+- **DO NOT** crop image.
+- **DO NOT** add a signature.
+{EXTRA_PROHIBITION}
+"""
+
+#PROMPT_STR += " Also, inpaint missing part of image at top left."
 
 # PROMPT_STR += " Don't change Donald's expressions."
 # PROMPT_STR += " Keep the high collar. Keep Donald's beak closed the same as the input image. Donald's hat should be blue, the same as the input image."
@@ -197,12 +209,12 @@ srce_image1 = Image.open(SRCE_IMAGE1, mode="r")
 response = client.models.generate_content(
     model=AI_MODEL,
     contents=[
-        PROMPT_STR,
+        final_prompt,
         srce_image1,
         #       srce_image2,
     ],
     config=GenerateContentConfig(
-        system_instruction=SYSTEM_INSTRUCTION,
+        system_instruction=None,
         candidate_count=CANDIDATE_COUNT,
         temperature=AI_TEMPERATURE,
         top_p=AI_TOP_P,
