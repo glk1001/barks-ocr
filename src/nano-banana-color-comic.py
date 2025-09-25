@@ -19,9 +19,9 @@ DIR_TO_FIX = CENSORSHIP_FIXES_DIR / "wdcs-34"
 AI_TEMPERATURE = 0.0
 
 
-COLOR_REF_FILE = DIR_TO_FIX / "01_upscayl_8400px_digital-art-4x-orig.png"
-TARGET_BW_LINEART_FILE = DIR_TO_FIX / "01_upscayl_8400px_digital-art-4x-small-test.png"
-dest_image_file = Path("/tmp/color-test-01.png")
+COLOR_REF_FILE = DIR_TO_FIX / "06_upscayl_8400px_digital-art-4x-orig.png"
+TARGET_BW_LINEART_FILE = DIR_TO_FIX / "06_upscayl_8400px_digital-art-4x-small-test.png"
+dest_image_file = Path("/tmp/color-test-06.png")
 
 dest_image_file.parent.mkdir(parents=True, exist_ok=True)
 if not dest_image_file.parent.is_dir():

@@ -49,9 +49,9 @@ PROMPT_TEXT = {
 # PROMPT = "Improve this comic book cover."  # bit of a dud
 
 CANDIDATE_COUNT = 1
-AI_TOP_P = 0.1
+AI_TOP_P = None
 AI_TOP_K = None
-SEED = 2
+SEED = 4
 
 ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 BARKS_PANELS_PNG = ROOT_DIR / "Barks Panels Pngs"
@@ -59,24 +59,24 @@ FANTA_RESTORED_DIR = ROOT_DIR / "Fantagraphics-restored"
 
 # PANEL_TYPE = "Censorship"
 # PANEL_TYPE = "Closeups"
-PANEL_TYPE = "Favourites"
-# PANEL_TYPE = "Insets"
+#PANEL_TYPE = "Favourites"
+PANEL_TYPE = "Insets"
 # PANEL_TYPE = "Splash"
 # PANEL_TYPE = "Silhouettes"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Billions to Sneeze At"
+TITLE = "Good Deeds"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "047-5.png"
-AI_TEMPERATURE = 0.0
+IMAGE_FILENAME = "Good Deeds.png"
+AI_TEMPERATURE = 0.5
 EXTRA_PROHIBITION = ""
 #EXTRA_PROHIBITION = "- **DO NOT** have any characters sleeping."
 
 PROMPT_TYPES = [
-    #Prompts.COLORIZE_WITH_GRADIENTS,
-    #Prompts.MAKE_PHOTO_REALISTIC,
+    Prompts.COLORIZE_WITH_GRADIENTS,
+    Prompts.MAKE_PHOTO_REALISTIC,
     Prompts.MAKE_OIL_PAINTING,
     Prompts.MAKE_IMPRESSIONIST_PAINTING,
     Prompts.MAKE_ANSEL_ADAMS,
@@ -125,10 +125,10 @@ for prompt_type, dest_image in zip(PROMPT_TYPES, dest_files, strict=True):
     prompt_str, dest_suffix_part = PROMPT_TEXT[prompt_type]
     dest_suffix = DEST_SUFFIX_PRE + dest_suffix_part
 
+#    Use the image's black ink lines to reinforce the structure of the output image.
+
     final_prompt = f'''
     **Primary Command:** Your most important task is to {prompt_str}.
-    
-    Use the image's black ink lines to reinforce the structure of the output image.  
     
     **Strict Prohibitions (DO NOT):**
     - **CRITICAL MASKING INSTRUCTION:** The character's eyes and pupils are a masked area.
@@ -147,6 +147,8 @@ for prompt_type, dest_image in zip(PROMPT_TYPES, dest_files, strict=True):
     - **DO NOT** add a signature.
     {EXTRA_PROHIBITION}
     '''
+
+    final_prompt = prompt_str
 
     print("-" * 80)
     print(f"Prompt: {final_prompt}")

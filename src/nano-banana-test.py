@@ -77,16 +77,16 @@ FANTA_RESTORED_DIR = ROOT_DIR / "Fantagraphics-restored"
 # PANEL_TYPE = "Censorship"
 # PANEL_TYPE = "Closeups"
 PANEL_TYPE = "Favourites"
-# PANEL_TYPE = "Insets"
+#PANEL_TYPE = "Insets"
 # PANEL_TYPE = "Splash"
 # PANEL_TYPE = "Silhouettes"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Billions to Sneeze At"
+TITLE = "Good Deeds"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "047-5.png"
+IMAGE_FILENAME = "267-1.png"
 
 AI_TEMPERATURE = 0.0
 PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
