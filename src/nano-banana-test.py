@@ -193,7 +193,7 @@ if not dest_image.parent.is_dir():
 if dest_image.is_file():
     raise FileExistsError(dest_image)
 
-print(f"Prompt:\n    {PROMPT_STR}\n")
+print(f"Prompt:\n    {final_prompt}\n")
 print(f'Saving edited image to "{dest_image}"...')
 
 AI_MODEL = "gemini-2.5-flash-image-preview"
