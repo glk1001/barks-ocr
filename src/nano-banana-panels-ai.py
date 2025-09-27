@@ -51,7 +51,7 @@ PROMPT_TEXT = {
 CANDIDATE_COUNT = 1
 AI_TOP_P = None
 AI_TOP_K = None
-SEED = 4
+SEED = 6
 
 ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 BARKS_PANELS_PNG = ROOT_DIR / "Barks Panels Pngs"
@@ -72,14 +72,14 @@ EDITED = ""
 IMAGE_FILENAME = "263-4.png"
 AI_TEMPERATURE = 0.5
 EXTRA_PROHIBITION = ""
-#EXTRA_PROHIBITION = "- **DO NOT** have any characters sleeping."
+#EXTRA_PROHIBITION = "- Keep the sailor's half closed exactly as in input image. He's sad"
 
 PROMPT_TYPES = [
     Prompts.COLORIZE_WITH_GRADIENTS,
-    Prompts.MAKE_PHOTO_REALISTIC,
-    Prompts.MAKE_OIL_PAINTING,
-    Prompts.MAKE_IMPRESSIONIST_PAINTING,
-    Prompts.MAKE_ANSEL_ADAMS,
+    #Prompts.MAKE_PHOTO_REALISTIC,
+    ##Prompts.MAKE_OIL_PAINTING,
+    # Prompts.MAKE_IMPRESSIONIST_PAINTING,
+    # Prompts.MAKE_ANSEL_ADAMS,
 ]
 
 if PANEL_TYPE == "Insets":
@@ -148,7 +148,7 @@ for prompt_type, dest_image in zip(PROMPT_TYPES, dest_files, strict=True):
     {EXTRA_PROHIBITION}
     '''
 
-    final_prompt = prompt_str
+#    final_prompt = prompt_str
 
     print("-" * 80)
     print(f"Prompt: {final_prompt}")

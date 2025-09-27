@@ -83,10 +83,10 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Good Deeds"
+TITLE = "Gladstone's Luck"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "267-1.png"
+IMAGE_FILENAME = "173-1.png"
 
 AI_TEMPERATURE = 0.0
 PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
