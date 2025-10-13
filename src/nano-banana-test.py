@@ -83,10 +83,10 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Gladstone's Luck"
+TITLE = "The Hypno-Gun"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "173-1.png"
+IMAGE_FILENAME = "050-7.png"
 
 AI_TEMPERATURE = 0.0
 PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
@@ -94,6 +94,7 @@ PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
 DEST_SUFFIX = DEST_SUFFIX_PRE + PROMPT_TEXT[PROMPT_TO_USE][1]
 PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
 EXTRA_PROHIBITION = ""
+#EXTRA_PROHIBITION = " Do not remove any black ink hatching on the back wall. And make sure you inpaint the black ink hatching under the righthand speech bubble."
 
 final_prompt = f"""
 **Primary Command:** Your most important task is to {PROMPT_STR}.
@@ -196,7 +197,7 @@ if dest_image.is_file():
 print(f"Prompt:\n    {final_prompt}\n")
 print(f'Saving edited image to "{dest_image}"...')
 
-AI_MODEL = "gemini-2.5-flash-image-preview"
+AI_MODEL = "gemini-2.5-flash-image"
 
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 client = genai.Client(api_key=GEMINI_API_KEY)

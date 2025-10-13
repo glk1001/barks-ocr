@@ -51,7 +51,7 @@ PROMPT_TEXT = {
 CANDIDATE_COUNT = 1
 AI_TOP_P = None
 AI_TOP_K = None
-SEED = 6
+SEED = 8
 
 ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 BARKS_PANELS_PNG = ROOT_DIR / "Barks Panels Pngs"
@@ -59,25 +59,35 @@ FANTA_RESTORED_DIR = ROOT_DIR / "Fantagraphics-restored"
 
 # PANEL_TYPE = "Censorship"
 # PANEL_TYPE = "Closeups"
-PANEL_TYPE = "Favourites"
+#PANEL_TYPE = "Favourites"
 #PANEL_TYPE = "Insets"
-# PANEL_TYPE = "Splash"
+PANEL_TYPE = "Splash"
 # PANEL_TYPE = "Silhouettes"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Good Deeds"
+TITLE = "Lost in the Andes!"
 EDITED = ""
-# EDITED = "edited"
-IMAGE_FILENAME = "263-4.png"
-AI_TEMPERATURE = 0.5
+EDITED = "edited"
+IMAGE_FILENAME = "246.png"
+AI_TEMPERATURE = 0.9
 EXTRA_PROHIBITION = ""
-#EXTRA_PROHIBITION = "- Keep the sailor's half closed exactly as in input image. He's sad"
+#EXTRA_PROHIBITION = "- Keep the character's eyes closed exactly as in input image. Do not add glasses to characters"
+#EXTRA_PROHIBITION = "- Add a few clouds to the sky."
+#EXTRA_PROHIBITION = "- The character on the tv set is bending over with his tail up and his head is not visible."
+#EXTRA_PROHIBITION = "- Carefully horizontally squeeze the image to make it not as wide. Make it look like a landscape photograph"
+#EXTRA_PROHIBITION = "- EXTREMELY IMPORTANT - Keep the character jumping up and down in the trailer's eyes closed exactly as in input image."
+#EXTRA_PROHIBITION = "- Give the feeling of a mysterious temple in a dark South American jungle. Make it look like a realistic nature photograph"
+#EXTRA_PROHIBITION = "- Scrooge is so worried he is wearing a circular rut into the concrete floor of his worry room"
+# EXTRA_PROHIBITION = ("- The top hat should be colored black. Between the penguin's legs is a large orange egg. Keep the shape and dimensions"
+#                      " and position of the egg the same as the input image. The egg should be resting between the penguin's leg just as in"
+#                      " the input image. The penguin is not wearing a hat. Keep the output image very realistic. Like a photo")
+EXTRA_PROHIBITION = "- Give the feeling of a mysterious lost city high in the Andes. Make it look like a realistic nature photograph"
 
 PROMPT_TYPES = [
-    Prompts.COLORIZE_WITH_GRADIENTS,
-    #Prompts.MAKE_PHOTO_REALISTIC,
-    ##Prompts.MAKE_OIL_PAINTING,
+    # Prompts.COLORIZE_WITH_GRADIENTS,
+    Prompts.MAKE_PHOTO_REALISTIC,
+    # Prompts.MAKE_OIL_PAINTING,
     # Prompts.MAKE_IMPRESSIONIST_PAINTING,
     # Prompts.MAKE_ANSEL_ADAMS,
 ]
@@ -89,7 +99,7 @@ else:
         ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / TITLE / EDITED / IMAGE_FILENAME
     )
 
-AI_MODEL = "gemini-2.5-flash-image-preview"
+AI_MODEL = "gemini-2.5-flash-image"
 
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 client = genai.Client(api_key=GEMINI_API_KEY)
@@ -131,19 +141,17 @@ for prompt_type, dest_image in zip(PROMPT_TYPES, dest_files, strict=True):
     **Primary Command:** Your most important task is to {prompt_str}.
     
     **Strict Prohibitions (DO NOT):**
-    - **CRITICAL MASKING INSTRUCTION:** The character's eyes and pupils are a masked area.
-            **DO NOT** alter the characters' eyes or pupils in any way.
-            They must be perfectly preserved from the original image.
+    - **DO NOT** alter the characters' eyes or pupils in any way.
+        They must be perfectly preserved from the original image.
     - **DO NOT** remove any part of characters.
     - **DO NOT** change character's expressions.
     - **DO NOT** change any objects.
     - **DO NOT** change any clothing.
     - **DO NOT** remove any characters' glasses.
-    - **DO NOT** add a signature.
-    - **DO NOT** add a border.
     - **DO NOT** add any characters.
     - **DO NOT** vignette.
     - **DO NOT** crop image.
+    - **DO NOT** add a border.
     - **DO NOT** add a signature.
     {EXTRA_PROHIBITION}
     '''
