@@ -12,6 +12,7 @@ from google.genai.types import GenerateContentConfig
 class Prompts(Enum):
     REMOVE_SPEECH_BUBBLES = auto()
     REMOVE_NARRATION_AND_SPEECH_BUBBLES = auto()
+    REMOVE_NARRATION_BOX_ONLY = auto()
     COLORIZE_WITH_GRADIENTS = auto()
     MAKE_PHOTO_REALISTIC = auto()
     MAKE_OIL_PAINTING = auto()
@@ -35,6 +36,10 @@ PROMPT_TEXT = {
     ),
     Prompts.REMOVE_NARRATION_AND_SPEECH_BUBBLES: (
         "Remove all speech bubbles and narrator box.",
+        REMOVE_BUBBLE_DEST_SUFFIX,
+    ),
+    Prompts.REMOVE_NARRATION_BOX_ONLY: (
+        "Remove all narrator boxes.",
         REMOVE_BUBBLE_DEST_SUFFIX,
     ),
     Prompts.COLORIZE_WITH_GRADIENTS: (
@@ -83,10 +88,10 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "The Hypno-Gun"
+TITLE = "Trouble Indemnity"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "050-7.png"
+IMAGE_FILENAME = "062-6.png"
 
 AI_TEMPERATURE = 0.0
 PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
@@ -95,6 +100,7 @@ DEST_SUFFIX = DEST_SUFFIX_PRE + PROMPT_TEXT[PROMPT_TO_USE][1]
 PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
 EXTRA_PROHIBITION = ""
 #EXTRA_PROHIBITION = " Do not remove any black ink hatching on the back wall. And make sure you inpaint the black ink hatching under the righthand speech bubble."
+#EXTRA_PROHIBITION = " Do not remove the chicken wire in the background."
 
 final_prompt = f"""
 **Primary Command:** Your most important task is to {PROMPT_STR}.
@@ -103,17 +109,23 @@ final_prompt = f"""
 - **CRITICAL MASKING INSTRUCTION:** The character's eyes and pupils are a masked area.
         **DO NOT** alter the characters' eyes or pupils in any way.
         They must be perfectly preserved from the original image.
+- **DO NOT** remove any characters.
 - **DO NOT** remove any part of characters.
 - **DO NOT** change character's expressions.
 - **DO NOT** change any objects.
 - **DO NOT** change any clothing.
 - **DO NOT** remove any characters' glasses.
+- **DO NOT** remove any characters' hats.
 - **DO NOT** add a signature.
 - **DO NOT** add a border.
 - **DO NOT** add any characters.
+- **DO NOT** add any hats or other clothing.
+- **DO NOT** change any colors.
 - **DO NOT** vignette.
-- **DO NOT** crop image.
+- **DO NOT** crop the image.
+- **DO NOT** trim the image.
 - **DO NOT** add a signature.
+- **KEEP** the same aspect ratio as the input image.
 {EXTRA_PROHIBITION}
 """
 
