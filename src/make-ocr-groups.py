@@ -1,29 +1,33 @@
 import json
-import logging
 import os.path
 import sys
 from pathlib import Path
-from typing import List, Tuple, Dict
+from typing import Dict, List, Tuple
 
-from shapely.geometry import Polygon
-
-from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
+from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_no_json_suffix
-from barks_fantagraphics.comics_logging import setup_logging
+from loguru import logger
+from shapely.geometry import Polygon
+
 from utils.geometry import Rect
-from utils.ocr_box import OcrBox, save_groups_as_json, load_groups_from_json, get_box_str
+from utils.ocr_box import (
+    OcrBox,
+    get_box_str,
+    load_groups_from_json,
+    save_groups_as_json,
+)
 
 
-def make_ocr_groups_for_titles(title_list: List[str], out_dir: str) -> None:
+def make_ocr_groups_for_titles(title_list: List[str], out_dir: Path) -> None:
     for title in title_list:
         make_ocr_groups_for_title(title, out_dir)
 
 
-def make_ocr_groups_for_title(title: str, out_dir: str) -> None:
-    out_dir = os.path.join(out_dir, title)
+def make_ocr_groups_for_title(title: str, out_dir: Path) -> None:
+    out_dir /= title
 
-    logging.info(f'Making OCR groups for all pages in "{title}". To directory "{out_dir}"...')
+    logger.info(f'Making OCR groups for all pages in "{title}". To directory "{out_dir}"...')
 
     os.makedirs(out_dir, exist_ok=True)
     comic = comics_database.get_comic_book(title)
@@ -46,22 +50,22 @@ def make_ocr_groups_for_title(title: str, out_dir: str) -> None:
                 raise Exception("There were process errors.")
 
 
-def get_ocr_groups_txt_filename(svg_stem: str, ocr_suffix, out_dir: str) -> str:
-    return os.path.join(out_dir, svg_stem + f"-calculated-groups{ocr_suffix}.txt")
+def get_ocr_groups_txt_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-calculated-groups{ocr_suffix}.txt")
 
 
-def get_ocr_groups_json_filename(svg_stem: str, ocr_suffix, out_dir: str) -> str:
-    return os.path.join(out_dir, svg_stem + f"-calculated-groups{ocr_suffix}.json")
+def get_ocr_groups_json_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-calculated-groups{ocr_suffix}.json")
 
 
-def make_ocr_groups(ocr_file: str, ocr_groups_json_file: str, ocr_groups_txt_file: str) -> bool:
-    logging.info(f'Making OCR groups for file "{get_abbrev_path(ocr_file)}"...')
+def make_ocr_groups(ocr_file: Path, ocr_groups_json_file: Path, ocr_groups_txt_file: Path) -> bool:
+    logger.info(f'Making OCR groups for file "{ocr_file}"...')
 
-    if not os.path.isfile(ocr_file):
-        logging.error(f'Could not find ocr file "{ocr_file}".')
+    if not ocr_file.is_file():
+        logger.error(f'Could not find ocr file "{ocr_file}".')
         return False
 
-    with open(ocr_file, "r") as f:
+    with ocr_file.open("r") as f:
         jsn_text_data_boxes = json.load(f)
 
     text_data_polygons: List[OcrBox] = []
@@ -83,7 +87,8 @@ def make_ocr_groups(ocr_file: str, ocr_groups_json_file: str, ocr_groups_txt_fil
     max_text_len = max([len(t[1]) for t in jsn_text_data_boxes])
     max_acc_text_len = max([len(t[2]) for t in jsn_text_data_boxes])
 
-    with open(ocr_groups_txt_file, "w") as f:
+    logger.info(f'Writing OCR groups to file "{ocr_groups_txt_file}"...')
+    with ocr_groups_txt_file.open("w") as f:
         for group in groups:
             for ocr_box, dist in groups[group]:
                 f.write(
@@ -149,9 +154,6 @@ def get_dist(poly1: List[Tuple[float, float]], poly2: List[Tuple[float, float]])
 
 
 if __name__ == "__main__":
-
-    setup_logging(logging.INFO)
-
     # TODO(glk): Some issue with type checking inspection?
     # noinspection PyTypeChecker
     cmd_args = CmdArgs(
@@ -159,7 +161,7 @@ if __name__ == "__main__":
     )
     args_ok, error_msg = cmd_args.args_are_valid()
     if not args_ok:
-        logging.error(error_msg)
+        logger.error(error_msg)
         sys.exit(1)
 
     comics_database = cmd_args.get_comics_database()

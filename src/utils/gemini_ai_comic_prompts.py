@@ -67,6 +67,7 @@ Output Format:
 }}
 
 Additional Guidelines:
+- The output format must be a valid json string. NOTE: single quotes are not valid in json.
 - Respect panel boundaries: Never group text from different panels.
 - Maintain bubble integrity: Each group should correspond to a single text bubble, caption, or 
   crucial sound effect/background text element.

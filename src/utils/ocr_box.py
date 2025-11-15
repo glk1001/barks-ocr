@@ -1,5 +1,6 @@
 import json
 import math
+from pathlib import Path
 from typing import List, Tuple, Dict
 
 import numpy as np
@@ -77,7 +78,7 @@ class OcrBox:
         return math.hypot(b[0] - a[0], b[1] - a[1])
 
 
-def load_groups_from_json(file: str) -> Dict[int, List[Tuple[OcrBox, float]]]:
+def load_groups_from_json(file: Path) -> Dict[int, List[Tuple[OcrBox, float]]]:
     with open(file, "r") as f:
         json_groups = json.load(f)
 
@@ -101,7 +102,7 @@ def load_groups_from_json(file: str) -> Dict[int, List[Tuple[OcrBox, float]]]:
     return groups
 
 
-def save_groups_as_json(groups: Dict[int, List[Tuple[OcrBox, float]]], file: str) -> None:
+def save_groups_as_json(groups: Dict[int, List[Tuple[OcrBox, float]]], file: Path) -> None:
 
     def custom_ocr_box(obj):
         if isinstance(obj, OcrBox):

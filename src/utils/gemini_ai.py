@@ -20,6 +20,7 @@ def get_ai_predicted_groups(image: Image, ocr_results: List[Dict[str, any]], api
     response = model.generate_content([image, prompt])
     text = response.text
 
+    cleaned = text
     # cleaned = text.replace(r'\"', '"')
     cleaned = text.replace(r"\'", "'")
     #    cleaned = cleaned.replace(r"\\n", "\n")
@@ -60,7 +61,7 @@ def configure_genai(api_key: str) -> genai.GenerativeModel:
     }
     genai.configure(api_key=api_key)
     return genai.GenerativeModel(
-        model_name="gemini-2.0-flash-exp",
+        model_name="gemini-2.5-flash",
         generation_config=GenerationConfig(
             response_mime_type="application/json", temperature=0, top_k=1, top_p=0
         ),

@@ -1,17 +1,17 @@
 import json
-import logging
 import os.path
 import sys
 from pathlib import Path
 from typing import List, Dict, Tuple
 
 from PIL import Image
+from loguru import logger
+from loguru_config import LoguruConfig
 
 from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_no_json_suffix
-from barks_fantagraphics.comics_logging import setup_logging
-from barks_fantagraphics.cv_image_utils import get_bw_image_from_alpha
+from comic_utils.cv_image_utils import get_bw_image_from_alpha
 from utils.common import ProcessResult
 from utils.gemini_ai import get_ai_predicted_groups
 from utils.geometry import Rect
@@ -20,16 +20,18 @@ from utils.preprocessing import preprocess_image
 
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 
+APP_LOGGING_NAME = "gocr"
 
-def make_gemini_ai_groups_for_titles(title_list: List[str], out_dir: str) -> None:
+
+def make_gemini_ai_groups_for_titles(title_list: List[str], out_dir: Path) -> None:
     for title in title_list:
         make_gemini_ai_groups_for_title(title, out_dir)
 
 
-def make_gemini_ai_groups_for_title(title: str, out_dir: str) -> None:
-    out_dir = os.path.join(out_dir, title)
+def make_gemini_ai_groups_for_title(title: str, out_dir: Path) -> None:
+    out_dir /= title
 
-    logging.info(f'Making OCR groups for all pages in "{title}". To directory "{out_dir}"...')
+    logger.info(f'Making OCR groups for all pages in "{title}". To directory "{out_dir}"...')
 
     os.makedirs(out_dir, exist_ok=True)
     comic = comics_database.get_comic_book(title)
@@ -65,11 +67,11 @@ def make_gemini_ai_groups_for_title(title: str, out_dir: str) -> None:
             if result == ProcessResult.SUCCESS:
                 num_files_processed += 1
 
-        break
+        #break  # Break early for testing
 
 
-def get_ocr_data(ocr_file: str) -> List[Dict[str, any]]:
-    with open(ocr_file, "r") as f:
+def get_ocr_data(ocr_file: Path) -> List[Dict[str, any]]:
+    with ocr_file.open("r") as f:
         ocr_raw_results = json.load(f)
 
     ocr_data = []
@@ -91,42 +93,42 @@ def assign_ids_to_ocr_boxes(bounds: List[Dict[str, any]]) -> List[Dict[str, any]
     return [{**bound, "text_id": str(i)} for i, bound in enumerate(bounds)]
 
 
-def get_ocr_groups_txt_filename(svg_stem: str, ocr_suffix, out_dir: str) -> str:
-    return os.path.join(out_dir, svg_stem + f"-gemini-groups{ocr_suffix}.txt")
+def get_ocr_groups_txt_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-gemini-groups{ocr_suffix}.txt")
 
 
-def get_ocr_groups_json_filename(svg_stem: str, ocr_suffix, out_dir: str) -> str:
-    return os.path.join(out_dir, svg_stem + f"-gemini-groups{ocr_suffix}.json")
+def get_ocr_groups_json_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-gemini-groups{ocr_suffix}.json")
 
 
-def get_ocr_final_groups_json_filename(svg_stem: str, ocr_suffix, out_dir: str) -> str:
-    return os.path.join(out_dir, svg_stem + f"-gemini-final-groups{ocr_suffix}.json")
+def get_ocr_final_groups_json_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-gemini-final-groups{ocr_suffix}.json")
 
 
 def make_gemini_ai_groups(
-    svg_file: str,
-    ocr_file: str,
-    panel_segments_file: str,
+    svg_file: Path,
+    ocr_file: Path,
+    panel_segments_file: Path,
     ocr_final_data_groups_json_file,
-    ocr_groups_json_file: str,
-    ocr_groups_txt_file: str,
+    ocr_groups_json_file: Path,
+    ocr_groups_txt_file: Path,
 ) -> ProcessResult:
     image_name = Path(svg_file).stem
-    png_file = svg_file + ".png"
+    png_file = Path(str(svg_file) + ".png")
 
     if not os.path.isfile(png_file):
-        logging.error(f'Could not find png file "{png_file}".')
+        logger.error(f'Could not find png file "{png_file}".')
         return ProcessResult.FAILURE
     if not os.path.isfile(ocr_file):
-        logging.error(f'Could not find ocr file "{ocr_file}".')
+        logger.error(f'Could not find ocr file "{ocr_file}".')
         return ProcessResult.FAILURE
 
     if os.path.isfile(ocr_groups_json_file):
-        logging.info(f'Found groups file - skipping: "{ocr_groups_json_file}".')
+        logger.info(f'Found groups file - skipping: "{ocr_groups_json_file}".')
         return ProcessResult.SKIPPED
 
-    logging.info(f'Making Gemini AI OCR groups for file "{get_abbrev_path(png_file)}"...')
-    logging.info(f'Using OCR file "{get_abbrev_path(ocr_file)}"...')
+    logger.info(f'Making Gemini AI OCR groups for file "{get_abbrev_path(png_file)}"...')
+    logger.info(f'Using OCR file "{get_abbrev_path(ocr_file)}"...')
 
     ocr_data = get_ocr_data(ocr_file)
     ocr_bound_ids = assign_ids_to_ocr_boxes(ocr_data)
@@ -137,12 +139,12 @@ def make_gemini_ai_groups(
     ai_predicted_groups = get_ai_predicted_groups(
         Image.fromarray(bw_image), ocr_bound_ids, GEMINI_API_KEY
     )
-    with open(os.path.join("/tmp", f"{image_name}-ocr-ai-groups-prelim.json"), "w") as f:
+    with (Path("/tmp") / f"{image_name}-ocr-ai-groups-prelim.json").open("w") as f:
         json.dump(ai_predicted_groups, f, indent=4)
 
     # Merge boxes into text bubbles
     ai_final_data = get_final_ai_data(ai_predicted_groups, ocr_bound_ids, panel_segments_file)
-    with open(ocr_final_data_groups_json_file, "w") as f:
+    with ocr_final_data_groups_json_file.open("w") as f:
         json.dump(ai_final_data, f, indent=4)
 
     groups = get_text_groups(ai_final_data, ocr_bound_ids)
@@ -156,12 +158,12 @@ def make_gemini_ai_groups(
 
 
 def get_final_ai_data(
-    groups: Dict[str, any], ocr_boxes_with_ids: List[Dict[str, any]], panel_segments_file: str
+    groups: Dict[str, any], ocr_boxes_with_ids: List[Dict[str, any]], panel_segments_file: Path
 ) -> Dict[int, any]:
     id_to_bound: Dict[str, PointList] = {bound["text_id"]: bound for bound in ocr_boxes_with_ids}
 
-    logging.info(f'Loading panel segments file "{get_abbrev_path(panel_segments_file)}".')
-    with open(panel_segments_file, "r") as f:
+    logger.info(f'Loading panel segments file "{get_abbrev_path(panel_segments_file)}".')
+    with panel_segments_file.open("r") as f:
         panel_segment_info = json.load(f)
 
     group_id = 0  # TODO: start from 1
@@ -260,7 +262,7 @@ def get_text_groups(
     return groups
 
 
-def write_groups_to_text_file(file: str, groups: Dict[int, any]) -> None:
+def write_groups_to_text_file(file: Path, groups: Dict[int, any]) -> None:
     max_text_len = 0
     max_acc_text_len = 0
     for group in groups:
@@ -268,7 +270,7 @@ def write_groups_to_text_file(file: str, groups: Dict[int, any]) -> None:
             max_text_len = max(max_text_len, len(ocr_box.ocr_text))
             max_acc_text_len = max(max_acc_text_len, len(ocr_box.accepted_text))
 
-    with open(file, "w") as f:
+    with file.open("w") as f:
         for group in groups:
             for ocr_box, dist in groups[group]:
                 f.write(
@@ -289,10 +291,13 @@ if __name__ == "__main__":
     )
     args_ok, error_msg = cmd_args.args_are_valid()
     if not args_ok:
-        logging.error(error_msg)
+        logger.error(error_msg)
         sys.exit(1)
 
-    setup_logging(cmd_args.get_log_level())
+    # Global variables accessed by loguru-config.
+    log_level = cmd_args.get_log_level()
+    log_filename = "batch-ocr.log"
+    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
     comics_database = cmd_args.get_comics_database()
 
