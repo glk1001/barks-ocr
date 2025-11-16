@@ -67,7 +67,7 @@ Output Format:
 }}
 
 Additional Guidelines:
-- The output format must be a valid json string. NOTE: single quotes are not valid in json.
+- The output format must be a valid json string.
 - Respect panel boundaries: Never group text from different panels.
 - Maintain bubble integrity: Each group should correspond to a single text bubble, caption, or 
   crucial sound effect/background text element.
@@ -75,7 +75,8 @@ Additional Guidelines:
 - For included sound effects or background text, describe their significance to the story in the 
   "notes" field.
 - If you make any corrections to the OCR text, briefly explain your reasoning in the "notes" field.
-- Text fragments that match box ids should not contain newlines.
+- Text fragments that go into "split_cleaned_box_texts" should not contain newlines.
+- But "cleaned_text" should have newlines so that the text matches the text format in the comic image 
 
 Analyze the image and OCR data thoroughly to produce accurate and contextually appropriate groupings
 with cleaned and corrected text that reflects the comic's essential narrative elements.

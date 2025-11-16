@@ -17,6 +17,7 @@ from utils.ocr_box import OcrBox
 
 APP_LOGGING_NAME = "socr"
 
+# noinspection SpellCheckingInspection
 COLORS = [
     "green",
     "yellow",
@@ -50,7 +51,7 @@ def ocr_annotate_titles(title_list: List[str], out_dir: Path) -> None:
 
 
 def ocr_annotate_title(title: str, out_dir: Path) -> None:
-    out_dir = out_dir / title
+    out_dir /= title
 
     logger.info(f'OCR annotating all pages in "{title}" to directory "{out_dir}"...')
 
@@ -173,6 +174,7 @@ def write_bounds_to_image_file(
     # x_min, y_min, x_max, y_max = get_min_max_panel_values(panel_segment_info)
     # img_rects.rectangle([x_min, y_min, x_max, y_max], outline="red", width=2)
 
+    # noinspection PyProtectedMember
     img_rects._image.save(bounds_img_file)
 
     return True
@@ -235,6 +237,7 @@ def ocr_annotate_image_with_final_text(
                 top_left, info_text, fill="blue", font=font, align="left"
             )
 
+    # noinspection PyProtectedMember
     img_rects_draw._image.save(annotated_img_file)
 
 
@@ -292,6 +295,7 @@ def ocr_annotate_image_with_individual_boxes(
                 ]
                 img_rects_draw.polygon(box, outline=get_color(group_id), width=2)
 
+    # noinspection PyProtectedMember
     img_rects_draw._image.save(annotated_img_file)
 
 

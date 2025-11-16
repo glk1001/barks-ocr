@@ -6,7 +6,7 @@ from typing import Dict, List, Tuple
 
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
-from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_no_json_suffix
+from barks_fantagraphics.comics_utils import get_ocr_no_json_suffix
 from loguru import logger
 from shapely.geometry import Polygon
 
@@ -91,6 +91,7 @@ def make_ocr_groups(ocr_file: Path, ocr_groups_json_file: Path, ocr_groups_txt_f
     with ocr_groups_txt_file.open("w") as f:
         for group in groups:
             for ocr_box, dist in groups[group]:
+                # noinspection PyProtectedMember
                 f.write(
                     f"Group: {group:03d}, "
                     f"text: '{ocr_box.ocr_text:<{max_text_len}}', "
@@ -114,6 +115,7 @@ def make_box_groups(text_data_polygons: List[OcrBox]) -> Dict[int, List[Tuple[Oc
                         ocr_box.min_rotated_rectangle, grp_ocr_box.min_rotated_rectangle
                     )
                 else:
+                    # noinspection PyProtectedMember
                     dist = get_dist(ocr_box._box_points, grp_ocr_box._box_points)
                 if dist < 15:
                     groups[group].append((ocr_box, dist))

@@ -11,17 +11,23 @@ from PIL import Image
 class Prompts(Enum):
     CLEAN_AND_SHARPEN = auto()
     COLORIZE_WITH_GRADIENTS = auto()
+    COLORIZE_WITH_HALFTONES = auto()
     MAKE_PHOTO_REALISTIC = auto()
     MAKE_OIL_PAINTING = auto()
     MAKE_IMPRESSIONIST_PAINTING = auto()
+    MAKE_WATER_COLOR_PAINTING = auto()
+    MAKE_PASTEL_PAINTING = auto()
     MAKE_ANSEL_ADAMS = auto()
 
 
 CLEAN_DEST_SUFFIX = "-clean.png"
 RECOLOR_DEST_SUFFIX = "-recolor.png"
+HALFTONE_DEST_SUFFIX = "-halftone.png"
 PHOTO_DEST_SUFFIX = "-photo.png"
 OIL_DEST_SUFFIX = "-oil.png"
 IMPRES_DEST_SUFFIX = "-impres.png"
+WATER_COLOR_DEST_SUFFIX = "-water.png"
+PASTEL_COLOR_DEST_SUFFIX = "-pastel.png"
 ANSEL_DEST_SUFFIX = "-ansel.png"
 EXTRACT_TEXT_DEST_SUFFIX = "-just-text.txt"
 
@@ -34,6 +40,10 @@ PROMPT_TEXT = {
         "colorize the input image using color gradients",
         RECOLOR_DEST_SUFFIX,
     ),
+    Prompts.COLORIZE_WITH_HALFTONES: (
+        "colorize the input image using half-tones",
+        HALFTONE_DEST_SUFFIX,
+    ),
     Prompts.MAKE_PHOTO_REALISTIC: (
         "make the input image look like a super-realistic 3D photograph",
         PHOTO_DEST_SUFFIX,
@@ -45,6 +55,14 @@ PROMPT_TEXT = {
     Prompts.MAKE_IMPRESSIONIST_PAINTING: (
         "make the input image look like a very beautiful impressionist painting",
         IMPRES_DEST_SUFFIX,
+    ),
+    Prompts.MAKE_WATER_COLOR_PAINTING: (
+        "make the input image look like a very beautiful water color painting",
+        WATER_COLOR_DEST_SUFFIX,
+    ),
+    Prompts.MAKE_PASTEL_PAINTING: (
+        "make the input image look like a very beautiful pastel painting",
+        PASTEL_COLOR_DEST_SUFFIX,
     ),
     Prompts.MAKE_ANSEL_ADAMS: (
         "make the input image like a very detailed black and white Ansel Adams photograph",
@@ -72,18 +90,18 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Trouble Indemnity"
+TITLE = "Forbidden Valley"
 EDITED = ""
 #EDITED = "edited"
-IMAGE_FILENAME = "062-6.png"
-AI_TEMPERATURE = 1.0
+IMAGE_FILENAME = "045-4.png"
+AI_TEMPERATURE = 0.0
 EXTRA_PROHIBITION = ""
 EXTRA_PROHIBITION += "- Do not change character's expressions"
 EXTRA_PROHIBITION += "- Keep the character's EYES EXACTLY as in input image."
 EXTRA_PROHIBITION += "- Do not add glasses to characters."
 EXTRA_PROHIBITION += "- Do not add extra clothing or hats."
 EXTRA_PROHIBITION += "- Do not add extra pupils to characters' eyes."
-#EXTRA_PROHIBITION = "- Keep the character's EYES CLOSED EXACTLY as in input image. Do not add glasses to characters"
+EXTRA_PROHIBITION += "- Keep the character's EYES CLOSED EXACTLY as in input image. Do not add glasses to characters"
 #EXTRA_PROHIBITION = "- Add a few clouds to the sky."
 #EXTRA_PROHIBITION = "- The character on the tv set is bending over with his tail up and his head is not visible."
 #EXTRA_PROHIBITION = "- Carefully horizontally squeeze the image to make it not as wide. Make it look like a landscape photograph"
@@ -105,15 +123,22 @@ EXTRA_PROHIBITION += "- Do not add extra pupils to characters' eyes."
 #EXTRA_PROHIBITION += " The javelin thrower has a little bit of hayfever but he does not have a runny nose. He is not bald"
 #EXTRA_PROHIBITION += " The musician has his eyes closed enjoying the music he's making."
 #EXTRA_PROHIBITION += " Keep the people in the background silhouetted. But make the rest of the image photo-realistic."
-EXTRA_PROHIBITION += " Make sure the image photo-realistic."
+#EXTRA_PROHIBITION += " Make sure the image photo-realistic."
+#EXTRA_PROHIBITION += " Keep the right eye closed as in the input image."
+#EXTRA_PROHIBITION += " That's a kingfisher flying above but stuck in tar."
+#EXTRA_PROHIBITION += "- The tallest character with the sailor's hat has both eyes closed. EXACTLY as in input image."
+#EXTRA_PROHIBITION += "- The statue DOES NOT have an orange nose."
 
 PROMPT_TYPES = [
     Prompts.MAKE_PHOTO_REALISTIC,
-    # Prompts.COLORIZE_WITH_GRADIENTS,
-    # Prompts.MAKE_OIL_PAINTING,
-    # Prompts.MAKE_IMPRESSIONIST_PAINTING,
-    # Prompts.MAKE_ANSEL_ADAMS,
-    # Prompts.CLEAN_AND_SHARPEN,
+    Prompts.COLORIZE_WITH_GRADIENTS,
+    Prompts.COLORIZE_WITH_HALFTONES,
+    Prompts.MAKE_OIL_PAINTING,
+    Prompts.MAKE_IMPRESSIONIST_PAINTING,
+    Prompts.MAKE_WATER_COLOR_PAINTING,
+    Prompts.MAKE_PASTEL_PAINTING,
+    Prompts.MAKE_ANSEL_ADAMS,
+    Prompts.CLEAN_AND_SHARPEN,
 ]
 
 if PANEL_TYPE == "Insets":

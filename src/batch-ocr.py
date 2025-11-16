@@ -23,6 +23,7 @@ from utils.preprocessing import preprocess_image
 APP_LOGGING_NAME = "bocr"
 
 REJECTED_WORDS = ["F", "H", "M", "W", "OO", "VV", "|", "L", "\\", "IY"]
+# noinspection SpellCheckingInspection
 AUTO_CORRECTIONS = {
     "AOINT MARROW": "POINT MARROW",
     "FIZZLEBUDEET": "FIZZLEBUDGET",

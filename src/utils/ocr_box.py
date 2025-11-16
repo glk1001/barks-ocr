@@ -25,7 +25,7 @@ class OcrBox:
         min_rotated_rectangle_azimuth = self._get_min_rotated_rectangle_azimuth(
             MultiPoint(self._box_points).minimum_rotated_rectangle
         )
-        print(f"azimuth: {min_rotated_rectangle_azimuth}")
+        # print(f"azimuth: {min_rotated_rectangle_azimuth}")
         self.is_approx_rect = (
             abs(min_rotated_rectangle_azimuth) < 5.0
             or abs(min_rotated_rectangle_azimuth - 180) < 5.0

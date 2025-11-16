@@ -2,25 +2,31 @@ import json
 import os.path
 import sys
 from pathlib import Path
-from typing import List, Dict, Tuple
+from typing import Dict, List, Tuple, Any
 
-from PIL import Image
-from loguru import logger
-from loguru_config import LoguruConfig
-
-from barks_fantagraphics.comics_cmd_args import CmdArgs, CmdArgNames
+from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_no_json_suffix
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
+from loguru import logger
+from loguru_config import LoguruConfig
+from PIL import Image
+
 from utils.common import ProcessResult
 from utils.gemini_ai import get_ai_predicted_groups
 from utils.geometry import Rect
-from utils.ocr_box import OcrBox, PointList, save_groups_as_json, load_groups_from_json, get_box_str
+from utils.ocr_box import (
+    OcrBox,
+    PointList,
+    get_box_str,
+    load_groups_from_json,
+    save_groups_as_json,
+)
 from utils.preprocessing import preprocess_image
 
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 
-APP_LOGGING_NAME = "gocr"
+APP_LOGGING_NAME = "gemg"
 
 
 def make_gemini_ai_groups_for_titles(title_list: List[str], out_dir: Path) -> None:
@@ -62,8 +68,8 @@ def make_gemini_ai_groups_for_title(title: str, out_dir: Path) -> None:
             )
 
             if result == ProcessResult.FAILURE:
-                raise Exception("There were process errors.")
-                # pass
+                msg = "There were process errors."
+                logger.error(msg)
             if result == ProcessResult.SUCCESS:
                 num_files_processed += 1
 
@@ -77,7 +83,8 @@ def get_ocr_data(ocr_file: Path) -> List[Dict[str, any]]:
     ocr_data = []
     for result in ocr_raw_results:
         box = result[0]
-        ocr_text = result[1]
+        # noinspection PyUnusedLocal
+        ocr_text = result[1]  # noqa: F841
         accepted_text = result[2]
         ocr_prob = result[3]
 
@@ -113,54 +120,59 @@ def make_gemini_ai_groups(
     ocr_groups_json_file: Path,
     ocr_groups_txt_file: Path,
 ) -> ProcessResult:
-    image_name = Path(svg_file).stem
+    ocr_name = (Path(ocr_file).stem + Path(ocr_file.suffix).stem).replace(".", "-")
     png_file = Path(str(svg_file) + ".png")
 
-    if not os.path.isfile(png_file):
-        logger.error(f'Could not find png file "{png_file}".')
+    # noinspection PyBroadException
+    try:
+        if not os.path.isfile(png_file):
+            logger.error(f'Could not find png file "{png_file}".')
+            return ProcessResult.FAILURE
+        if not os.path.isfile(ocr_file):
+            logger.error(f'Could not find ocr file "{ocr_file}".')
+            return ProcessResult.FAILURE
+
+        if os.path.isfile(ocr_groups_json_file):
+            logger.info(f'Found groups file - skipping: "{ocr_groups_json_file}".')
+            return ProcessResult.SKIPPED
+
+        logger.info(f'Making Gemini AI OCR groups for file "{get_abbrev_path(png_file)}"...')
+        logger.info(f'Using OCR file "{get_abbrev_path(ocr_file)}"...')
+
+        ocr_data = get_ocr_data(ocr_file)
+        ocr_bound_ids = assign_ids_to_ocr_boxes(ocr_data)
+
+        bw_image = get_bw_image_from_alpha(png_file)
+        bw_image = preprocess_image(bw_image)
+
+        ai_predicted_groups = get_ai_predicted_groups(
+            ocr_name, Image.fromarray(bw_image), ocr_bound_ids, GEMINI_API_KEY
+        )
+        with (Path("/tmp") / f"{ocr_name}-ocr-ai-groups-prelim.json").open("w") as f:
+            json.dump(ai_predicted_groups, f, indent=4)
+
+        # Merge boxes into text bubbles
+        ai_final_data = get_final_ai_data(ai_predicted_groups, ocr_bound_ids, panel_segments_file)
+        with ocr_final_data_groups_json_file.open("w") as f:
+            json.dump(ai_final_data, f, indent=4)
+
+        groups = get_text_groups(ai_final_data, ocr_bound_ids)
+
+        save_groups_as_json(groups, ocr_groups_json_file)
+        groups = load_groups_from_json(ocr_groups_json_file)
+
+        write_groups_to_text_file(ocr_groups_txt_file, groups)
+
+        return ProcessResult.SUCCESS
+    except:  # noqa: E722
+        logger.exception(f'Could not process file "{png_file}":')
         return ProcessResult.FAILURE
-    if not os.path.isfile(ocr_file):
-        logger.error(f'Could not find ocr file "{ocr_file}".')
-        return ProcessResult.FAILURE
-
-    if os.path.isfile(ocr_groups_json_file):
-        logger.info(f'Found groups file - skipping: "{ocr_groups_json_file}".')
-        return ProcessResult.SKIPPED
-
-    logger.info(f'Making Gemini AI OCR groups for file "{get_abbrev_path(png_file)}"...')
-    logger.info(f'Using OCR file "{get_abbrev_path(ocr_file)}"...')
-
-    ocr_data = get_ocr_data(ocr_file)
-    ocr_bound_ids = assign_ids_to_ocr_boxes(ocr_data)
-
-    bw_image = get_bw_image_from_alpha(png_file)
-    bw_image = preprocess_image(bw_image)
-
-    ai_predicted_groups = get_ai_predicted_groups(
-        Image.fromarray(bw_image), ocr_bound_ids, GEMINI_API_KEY
-    )
-    with (Path("/tmp") / f"{image_name}-ocr-ai-groups-prelim.json").open("w") as f:
-        json.dump(ai_predicted_groups, f, indent=4)
-
-    # Merge boxes into text bubbles
-    ai_final_data = get_final_ai_data(ai_predicted_groups, ocr_bound_ids, panel_segments_file)
-    with ocr_final_data_groups_json_file.open("w") as f:
-        json.dump(ai_final_data, f, indent=4)
-
-    groups = get_text_groups(ai_final_data, ocr_bound_ids)
-
-    save_groups_as_json(groups, ocr_groups_json_file)
-    groups = load_groups_from_json(ocr_groups_json_file)
-
-    write_groups_to_text_file(ocr_groups_txt_file, groups)
-
-    return ProcessResult.SUCCESS
 
 
 def get_final_ai_data(
     groups: Dict[str, any], ocr_boxes_with_ids: List[Dict[str, any]], panel_segments_file: Path
 ) -> Dict[int, any]:
-    id_to_bound: Dict[str, PointList] = {bound["text_id"]: bound for bound in ocr_boxes_with_ids}
+    id_to_bound: dict[Any, dict[str, Any]] = {bound["text_id"]: bound for bound in ocr_boxes_with_ids}
 
     logger.info(f'Loading panel segments file "{get_abbrev_path(panel_segments_file)}".')
     with panel_segments_file.open("r") as f:
@@ -273,6 +285,7 @@ def write_groups_to_text_file(file: Path, groups: Dict[int, any]) -> None:
     with file.open("w") as f:
         for group in groups:
             for ocr_box, dist in groups[group]:
+                # noinspection PyProtectedMember
                 f.write(
                     f"Group: {group:03d}, "
                     f"text: '{ocr_box.ocr_text:<{max_text_len}}', "

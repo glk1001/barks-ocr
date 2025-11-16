@@ -84,14 +84,14 @@ FANTA_RESTORED_DIR = ROOT_DIR / "Fantagraphics-restored"
 PANEL_TYPE = "Favourites"
 #PANEL_TYPE = "Insets"
 # PANEL_TYPE = "Splash"
-# PANEL_TYPE = "Silhouettes"
+PANEL_TYPE = "Silhouettes"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Trouble Indemnity"
+TITLE = "Forbidden Valley"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "062-6.png"
+IMAGE_FILENAME = "027-1.png"
 
 AI_TEMPERATURE = 0.0
 PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
@@ -101,6 +101,9 @@ PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
 EXTRA_PROHIBITION = ""
 #EXTRA_PROHIBITION = " Do not remove any black ink hatching on the back wall. And make sure you inpaint the black ink hatching under the righthand speech bubble."
 #EXTRA_PROHIBITION = " Do not remove the chicken wire in the background."
+#EXTRA_PROHIBITION = " Make sure you remove the yellow narration box."
+#EXTRA_PROHIBITION = " Do not crop the righthand side of the image. Slightly extend the width to the right"
+#EXTRA_PROHIBITION += " Under the narration box are the legs and shoes of two people lying down."
 
 final_prompt = f"""
 **Primary Command:** Your most important task is to {PROMPT_STR}.
@@ -130,6 +133,7 @@ final_prompt = f"""
 """
 
 #PROMPT_STR += " Also, inpaint missing part of image at top left."
+#PROMPT_STR += " Keep window in background."
 
 # PROMPT_STR += " Don't change Donald's expressions."
 # PROMPT_STR += " Keep the high collar. Keep Donald's beak closed the same as the input image. Donald's hat should be blue, the same as the input image."
