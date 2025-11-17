@@ -1,0 +1,231 @@
+import json
+import os.path
+import sys
+from pathlib import Path
+from typing import Any
+
+from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
+from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
+from comic_utils.cv_image_utils import get_bw_image_from_alpha
+from google import genai
+from loguru import logger
+from loguru_config import LoguruConfig
+from PIL import Image
+
+# noinspection PyProtectedMember
+from utils.gemini_ai import GEMINI_API_KEY, _norm2ai
+from utils.gemini_ai_comic_prompts import comic_prompt
+from utils.preprocessing import preprocess_image
+
+AI_MODEL = "gemini-2.5-pro"
+client = genai.Client(api_key=GEMINI_API_KEY)
+
+APP_LOGGING_NAME = "gemb"
+
+
+def make_gemini_ai_groups_for_titles_batch_job(title_list: list[str], out_dir: Path) -> None:
+    for title in title_list:
+        make_gemini_ai_groups_for_title(title, out_dir)
+
+
+def make_gemini_ai_groups_for_title(title: str, out_dir: Path) -> None:
+    out_dir /= title
+
+    logger.info(f'Making OCR groups for all pages in "{title}". To directory "{out_dir}"...')
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    comic = comics_database.get_comic_book(title)
+    svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
+    ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
+
+    gemini_requests_data = []
+    gemini_output_files = []
+    num_files_processed = 0
+    for svg_file, ocr_file in zip(svg_files, ocr_files, strict=True):
+        svg_stem = Path(svg_file).stem
+
+        for ocr_type_file in ocr_file:
+            ocr_type = get_ocr_type(ocr_type_file)
+
+            ocr_final_groups_json_file = get_ocr_final_groups_json_filename(
+                svg_stem, ocr_type, out_dir
+            )
+
+            result = get_gemini_ai_groups_request(
+                svg_file,
+                ocr_type_file,
+                ocr_final_groups_json_file,
+            )
+
+            if result is not None:
+                gemini_requests_data.append(result)
+                ocr_prelim_file = f"{svg_stem}-{ocr_type}-json-ocr-ai-predicted-groups.json"
+                gemini_output_files.append(ocr_prelim_file)
+                num_files_processed += 1
+
+        #     if num_files_processed >= 2:
+        #         break
+        #
+        # if num_files_processed >= 2:
+        #     break
+
+    json_file_path = Path("/tmp") / "batch_requests_with_image.json"  # noqa: S108
+    logger.info(f'Creating JSONL file: "{json_file_path}"...')
+    with json_file_path.open("w") as f:
+        f.writelines(json.dumps(req) + "\n" for req in gemini_requests_data)
+
+    logger.info(f'Uploading JSONL file: "{json_file_path}"...')
+    batch_input_file = client.files.upload(file=json_file_path)
+    logger.info(f'Uploaded JSONL file: "{batch_input_file.name}".')
+
+    logger.info("\nCreating batch job...")
+    batch_job_from_file = client.batches.create(
+        model=AI_MODEL,
+        src=batch_input_file.name,
+        config={
+            "display_name": "ocr-grouping-batch-job",
+        },
+    )
+    logger.info(f"Created batch job from file: {batch_job_from_file.name}")
+
+    batch_details = {
+        "batch_job_name": batch_job_from_file.name,
+        "gemini_output_files": gemini_output_files,
+    }
+    batch_details_file = Path("/tmp") / "batch-job-details.json"
+    with batch_details_file.open("w") as f:
+        json.dump(batch_details, f, indent=4)
+
+
+def get_gemini_ai_groups_request(
+    svg_file: Path,
+    ocr_file: Path,
+    ocr_groups_json_file: Path,
+) -> dict | None:
+    ocr_name = (Path(ocr_file).stem + Path(ocr_file.suffix).stem).replace(".", "-")
+    png_file = Path(str(svg_file) + ".png")
+
+    # noinspection PyBroadException
+    try:
+        if not png_file.is_file():
+            logger.error(f'Could not find png file "{png_file}".')
+            return None
+        if not ocr_file.is_file():
+            logger.error(f'Could not find ocr file "{ocr_file}".')
+            return None
+
+        if ocr_groups_json_file.is_file():
+            logger.info(f'Found groups file - skipping: "{ocr_groups_json_file}".')
+            return None
+
+        logger.info(f'Making Gemini AI OCR groups for file "{get_abbrev_path(png_file)}"...')
+        logger.info(f'Using OCR file "{get_abbrev_path(ocr_file)}"...')
+
+        ocr_data = get_ocr_data(ocr_file)
+        ocr_bound_ids = assign_ids_to_ocr_boxes(ocr_data)
+
+        bw_image = get_bw_image_from_alpha(png_file)
+        bw_image = preprocess_image(bw_image)
+        bw_image_file = Path("/tmp/bw_image.png")  # noqa: S108
+        bw_image = Image.fromarray(bw_image)
+        width, height = bw_image.size
+        Image.Image.save(bw_image, bw_image_file)
+
+        return get_ai_predicted_groups_request(
+            ocr_name, bw_image_file, width, height, ocr_bound_ids
+        )
+
+    except:  # noqa: E722
+        logger.exception(f'Could not process file "{png_file}":')
+        sys.exit(1)
+        return None
+
+
+def get_ai_predicted_groups_request(
+    ocr_name: str, image_path: Path, width: int, height: int, ocr_results: list[dict[str, Any]]
+) -> dict:
+    # Make the data AI-friendly.
+    norm_ocr_results = json.dumps(_norm2ai(ocr_results, height, width))
+    prompt = comic_prompt.format(norm_ocr_results)
+
+    image_file = client.files.upload(file=str(image_path))
+
+    key = f"request_{ocr_name}"
+    image_file_data = {
+        "file_uri": image_file.uri,
+        "mime_type": image_file.mime_type,
+    }
+    parts = [
+        {"text": prompt},
+        {"file_data": image_file_data},
+    ]
+    generation_config = {"response_mime_type": "application/json"}
+
+    request = {
+        "key": key,
+        "request": {
+            "contents": [{"parts": parts}],
+            "generation_config": generation_config,
+        },
+    }
+
+    return request
+
+
+def get_ocr_data(ocr_file: Path) -> list[dict[str, Any]]:
+    with ocr_file.open("r") as f:
+        ocr_raw_results = json.load(f)
+
+    ocr_data = []
+    for result in ocr_raw_results:
+        box = result[0]
+        # noinspection PyUnusedLocal
+        ocr_text = result[1]  # noqa: F841
+        accepted_text = result[2]
+        ocr_prob = result[3]
+
+        assert len(box) == 8  # noqa: PLR2004
+        text_box = [(box[0], box[1]), (box[2], box[3]), (box[4], box[5]), (box[6], box[7])]
+
+        ocr_data.append({"text_box": text_box, "text": accepted_text, "prob": ocr_prob})
+
+    return ocr_data
+
+
+def assign_ids_to_ocr_boxes(bounds: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [{**bound, "text_id": str(i)} for i, bound in enumerate(bounds)]
+
+
+def get_ocr_groups_txt_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-{ocr_type}-gemini-groups.txt")
+
+
+def get_ocr_groups_json_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-{ocr_type}-gemini-groups.json")
+
+
+def get_ocr_final_groups_json_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-{ocr_type}-gemini-final-groups.json")
+
+
+if __name__ == "__main__":
+    # TODO(glk): Some issue with type checking inspection?
+    # noinspection PyTypeChecker
+    cmd_args = CmdArgs(
+        "Make Gemini AI OCR groups for title",
+        CmdArgNames.VOLUME | CmdArgNames.TITLE | CmdArgNames.WORK_DIR,
+    )
+    args_ok, error_msg = cmd_args.args_are_valid()
+    if not args_ok:
+        logger.error(error_msg)
+        sys.exit(1)
+
+    # Global variables accessed by loguru-config.
+    log_level = cmd_args.get_log_level()
+    log_filename = "batch-ocr.log"
+    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+
+    comics_database = cmd_args.get_comics_database()
+
+    make_gemini_ai_groups_for_titles_batch_job(cmd_args.get_titles(), cmd_args.get_work_dir())
