@@ -1,13 +1,12 @@
 import json
-import os.path
 import sys
 from pathlib import Path
-from typing import Dict, List
+from typing import Any
 
 import cv2 as cv
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import PNG_FILE_EXT, RESTORABLE_PAGE_TYPES
-from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_no_json_suffix
+from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
 from loguru import logger
 from loguru_config import LoguruConfig
@@ -45,7 +44,7 @@ def get_color(group_id: int) -> str:
     return COLORS[group_id]
 
 
-def ocr_annotate_titles(title_list: List[str], out_dir: Path) -> None:
+def ocr_annotate_titles(title_list: list[str], out_dir: Path) -> None:
     for title in title_list:
         ocr_annotate_title(title, out_dir)
 
@@ -55,28 +54,26 @@ def ocr_annotate_title(title: str, out_dir: Path) -> None:
 
     logger.info(f'OCR annotating all pages in "{title}" to directory "{out_dir}"...')
 
-    os.makedirs(out_dir, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
     comic = comics_database.get_comic_book(title)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
     ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
     panel_segments_files = comic.get_srce_panel_segments_files(RESTORABLE_PAGE_TYPES)
 
     for svg_file, ocr_file, panel_segments_file in zip(
-        svg_files, ocr_files, panel_segments_files
+        svg_files, ocr_files, panel_segments_files, strict=True
     ):
         svg_stem = Path(svg_file).stem
         png_file = Path(str(svg_file) + PNG_FILE_EXT)
 
         for ocr_type_file in ocr_file:
-            ocr_suffix = get_ocr_no_json_suffix(ocr_type_file)
+            ocr_type = get_ocr_type(ocr_type_file)
 
-            ocr_group_file = get_ocr_group_filename(svg_stem, ocr_suffix, out_dir)
+            ocr_group_file = get_ocr_group_filename(svg_stem, ocr_type, out_dir)
             final_text_annotated_image_file = get_final_text_annotated_filename(
-                svg_stem, ocr_suffix, out_dir
+                svg_stem, ocr_type, out_dir
             )
-            boxes_annotated_image_file = get_boxes_annotated_filename(
-                svg_stem, ocr_suffix, out_dir
-            )
+            boxes_annotated_image_file = get_boxes_annotated_filename(svg_stem, ocr_type, out_dir)
 
             ocr_annotate_image_with_final_text(
                 png_file, ocr_group_file, final_text_annotated_image_file
@@ -85,45 +82,41 @@ def ocr_annotate_title(title: str, out_dir: Path) -> None:
                 png_file, ocr_group_file, boxes_annotated_image_file
             )
 
-            annotate_image_with_panel_bounds(
-                panel_segments_file, final_text_annotated_image_file
-            )
-            annotate_image_with_panel_bounds(
-                panel_segments_file, boxes_annotated_image_file
-            )
+            annotate_image_with_panel_bounds(panel_segments_file, final_text_annotated_image_file)
+            annotate_image_with_panel_bounds(panel_segments_file, boxes_annotated_image_file)
 
 
-def get_final_text_annotated_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-ocr-gemini-final-text-annotated{ocr_suffix}.png")
-    # return os.path.join(out_dir, svg_stem + f"-ocr-calculated-annotated{ocr_suffix}.png")
+def get_final_text_annotated_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-{ocr_type}-ocr-gemini-final-text-annotated.png")
+    #return out_dir / (svg_stem + f"-{ocr_type}-ocr-calculated-annotated.png")
 
 
-def get_boxes_annotated_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-ocr-gemini-boxes-annotated{ocr_suffix}.png")
-    # return os.path.join(out_dir, svg_stem + f"-ocr-calculated-annotated{ocr_suffix}.png")
+def get_boxes_annotated_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-{ocr_type}-ocr-gemini-boxes-annotated.png")
+    #return out_dir / (svg_stem + f"-{ocr_type}-ocr-calculated-boxes-annotated.png")
 
 
-def get_ocr_group_filename(svg_stem: str, ocr_suffix: str, out_dir: Path) -> Path:
+def get_ocr_group_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
     # return os.path.join(out_dir, svg_stem + f"-gemini-groups{ocr_suffix}.json")
-    return out_dir / (svg_stem + f"-gemini-final-groups{ocr_suffix}.json")
-    # return out_dir / (svg_stem + f"-calculated-groups{ocr_suffix}.json")
+    return out_dir / (svg_stem + f"-{ocr_type}-gemini-final-groups.json")
+    #return out_dir / (svg_stem + f"-{ocr_type}-calculated-groups.json")
 
 
 def get_image_to_annotate(png_file: Path) -> cv.typing.MatLike:
     if not png_file.is_file():
-        raise Exception(f'Could not find image file "{png_file}".')
+        msg = f'Could not find image file "{png_file}".'
+        raise FileNotFoundError(msg)
 
     return get_bw_image_from_alpha(png_file)
 
 
-def get_json_text_data_boxes(ocr_file: Path) -> Dict[str, any]:
+def get_json_text_data_boxes(ocr_file: Path) -> dict[str, Any]:
     if not ocr_file.is_file():
-        raise Exception(f'Could not find ocr file "{ocr_file}".')
+        msg = f'Could not find ocr file "{ocr_file}".'
+        raise RuntimeError(msg)
 
     with ocr_file.open("r") as f:
-        json_text_data_boxes = json.load(f)
-
-    return json_text_data_boxes
+        return json.load(f)
 
 
 def annotate_image_with_panel_bounds(
@@ -131,11 +124,10 @@ def annotate_image_with_panel_bounds(
     annotated_img_file: Path,
 ) -> None:
     if not annotated_img_file.is_file():
-        raise Exception(f'Could not find image file "{annotated_img_file}".')
+        msg = f'Could not find image file "{annotated_img_file}".'
+        raise FileNotFoundError(msg)
 
-    write_bounds_to_image_file(
-        annotated_img_file, panel_segments_file, annotated_img_file
-    )
+    write_bounds_to_image_file(annotated_img_file, panel_segments_file, annotated_img_file)
 
 
 # TODO: Duplicated from show-panel-bounds
@@ -151,9 +143,7 @@ def write_bounds_to_image_file(
         logger.error(f'Could not find panel segments file "{panel_segments_file}".')
         return False
 
-    logger.info(
-        f'Loading panel segments file "{get_abbrev_path(panel_segments_file)}".'
-    )
+    logger.info(f'Loading panel segments file "{get_abbrev_path(panel_segments_file)}".')
     with panel_segments_file.open("r") as f:
         panel_segment_info = json.load(f)
 
@@ -175,7 +165,7 @@ def write_bounds_to_image_file(
     # img_rects.rectangle([x_min, y_min, x_max, y_max], outline="red", width=2)
 
     # noinspection PyProtectedMember
-    img_rects._image.save(bounds_img_file)
+    img_rects._image.save(bounds_img_file)  # noqa: SLF001
 
     return True
 
@@ -213,13 +203,14 @@ def ocr_annotate_image_with_final_text(
         )
         print(
             f'group: {group_id:02} - text: "{text_data["ai_text"]}",'
-            f' box: {text_data["text_box"]}, approx: {ocr_box.is_approx_rect}, rect: {ocr_box.min_rotated_rectangle}'
+            f" box: {text_data['text_box']}, approx: {ocr_box.is_approx_rect},"
+            f" rect: {ocr_box.min_rotated_rectangle}"
         )
         img_rects_draw.rectangle(
             ocr_box.min_rotated_rectangle, outline="orchid", width=7, fill="white"
         )
 
-        text = f'{text_data["ai_text"]}'
+        text = f"{text_data['ai_text']}"
         top_left = ocr_box.min_rotated_rectangle[0]
         top_left = (top_left[0] + 60, top_left[1] + 5)
         img_rects_draw.text(top_left, text, fill="red", font=font, align="left")
@@ -229,16 +220,12 @@ def ocr_annotate_image_with_final_text(
             info_text = f"{panel_num}:{get_text_type_abbrev(text_data['type'])}"
             top_left = ocr_box.min_rotated_rectangle[0]
             top_left = (top_left[0] + 10, top_left[1] - 15)
-            info_box = img_rects_draw.textbbox(
-                top_left, info_text, font=font, align="left"
-            )
+            info_box = img_rects_draw.textbbox(top_left, info_text, font=font, align="left")
             img_rects_draw.rectangle(info_box, fill="white")
-            img_rects_draw.text(
-                top_left, info_text, fill="blue", font=font, align="left"
-            )
+            img_rects_draw.text(top_left, info_text, fill="blue", font=font, align="left")
 
     # noinspection PyProtectedMember
-    img_rects_draw._image.save(annotated_img_file)
+    img_rects_draw._image.save(annotated_img_file)  # noqa: SLF001
 
 
 def get_text_type_abbrev(text_type: str) -> str:
@@ -259,7 +246,7 @@ def ocr_annotate_image_with_individual_boxes(
     ocr_file: Path,
     annotated_img_file: Path,
 ) -> None:
-    if os.path.isfile(annotated_img_file):
+    if annotated_img_file.is_file():
         logger.info(f'Found annotation file - skipping: "{annotated_img_file}".')
         return
 
@@ -290,13 +277,11 @@ def ocr_annotate_image_with_individual_boxes(
                     ocr_box.min_rotated_rectangle, outline=get_color(group_id), width=4
                 )
             else:
-                box = [
-                    item for point in ocr_box.min_rotated_rectangle for item in point
-                ]
+                box = [item for point in ocr_box.min_rotated_rectangle for item in point]
                 img_rects_draw.polygon(box, outline=get_color(group_id), width=2)
 
     # noinspection PyProtectedMember
-    img_rects_draw._image.save(annotated_img_file)
+    img_rects_draw._image.save(annotated_img_file)  # noqa: SLF001
 
 
 if __name__ == "__main__":

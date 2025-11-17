@@ -1,12 +1,12 @@
 import json
 import math
 from pathlib import Path
-from typing import List, Tuple, Dict
+from typing import Any
 
 import numpy as np
 from shapely import MultiPoint
 
-PointList = List[Tuple[float, float]]
+PointList = list[tuple[float, float]]
 
 
 class OcrBox:
@@ -16,7 +16,7 @@ class OcrBox:
         ocr_text: str,
         ocr_prob: float,
         accepted_text: str,
-    ):
+    ) -> None:
         self._box_points = box_points
         self.ocr_text = ocr_text
         self.ocr_prob = ocr_prob
@@ -27,16 +27,16 @@ class OcrBox:
         )
         # print(f"azimuth: {min_rotated_rectangle_azimuth}")
         self.is_approx_rect = (
-            abs(min_rotated_rectangle_azimuth) < 5.0
-            or abs(min_rotated_rectangle_azimuth - 180) < 5.0
-            or abs(min_rotated_rectangle_azimuth - 90) < 5.0
+            abs(min_rotated_rectangle_azimuth) < 5.0  # noqa: PLR2004
+            or abs(min_rotated_rectangle_azimuth - 180) < 5.0  # noqa: PLR2004
+            or abs(min_rotated_rectangle_azimuth - 90) < 5.0  # noqa: PLR2004
         )
         if self.is_approx_rect:
             self.min_rotated_rectangle = self._get_envelope()
         else:
             self.min_rotated_rectangle = self._get_min_rotated_rectangle()
 
-    def get_state(self) -> Dict[str, any]:
+    def get_state(self) -> dict[str, Any]:
         return {
             "box_points": self._box_points,
             "ocr_text": self.ocr_text,
@@ -78,11 +78,11 @@ class OcrBox:
         return math.hypot(b[0] - a[0], b[1] - a[1])
 
 
-def load_groups_from_json(file: Path) -> Dict[int, List[Tuple[OcrBox, float]]]:
-    with open(file, "r") as f:
+def load_groups_from_json(file: Path) -> dict[int, list[tuple[OcrBox, float]]]:
+    with file.open("r") as f:
         json_groups = json.load(f)
 
-    groups: Dict[int, List[Tuple[OcrBox, float]]] = dict()
+    groups: dict[int, list[tuple[OcrBox, float]]] = {}
     for key in json_groups:
         for box_tuple in json_groups[key]:
             json_ocr_box = box_tuple[0]
@@ -93,28 +93,28 @@ def load_groups_from_json(file: Path) -> Dict[int, List[Tuple[OcrBox, float]]]:
                 json_ocr_box["ocr_prob"],
                 json_ocr_box["accepted_text"],
             )
-            key = int(key)
-            if key not in groups:
-                groups[key] = [(ocr_box, dist)]
+            ikey = int(key)
+            if ikey not in groups:
+                groups[ikey] = [(ocr_box, dist)]
             else:
-                groups[key].append((ocr_box, dist))
+                groups[ikey].append((ocr_box, dist))
 
     return groups
 
 
-def save_groups_as_json(groups: Dict[int, List[Tuple[OcrBox, float]]], file: Path) -> None:
+def save_groups_as_json(groups: dict[int, list[tuple[OcrBox, float]]], file: Path) -> None:
 
     def custom_ocr_box(obj):
         if isinstance(obj, OcrBox):
             return obj.get_state()
         return obj
 
-    with open(file, "w") as f:
+    with file.open("w") as f:
         json.dump(groups, f, indent=4, default=custom_ocr_box)
 
 
 def get_box_str(box_pts: PointList) -> str:
-    assert len(box_pts) == 4
+    assert len(box_pts) == 4  # noqa: PLR2004
     return (
         f"{round(box_pts[0][0]):04},{round(box_pts[0][1]):04},"
         f" {round(box_pts[1][0]):04},{round(box_pts[1][1]):04},"

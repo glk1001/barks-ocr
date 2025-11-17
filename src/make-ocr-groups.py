@@ -6,7 +6,7 @@ from typing import Dict, List, Tuple
 
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
-from barks_fantagraphics.comics_utils import get_ocr_no_json_suffix
+from barks_fantagraphics.comics_utils import get_ocr_type
 from loguru import logger
 from shapely.geometry import Polygon
 
@@ -19,7 +19,7 @@ from utils.ocr_box import (
 )
 
 
-def make_ocr_groups_for_titles(title_list: List[str], out_dir: Path) -> None:
+def make_ocr_groups_for_titles(title_list: list[str], out_dir: Path) -> None:
     for title in title_list:
         make_ocr_groups_for_title(title, out_dir)
 
@@ -29,16 +29,16 @@ def make_ocr_groups_for_title(title: str, out_dir: Path) -> None:
 
     logger.info(f'Making OCR groups for all pages in "{title}". To directory "{out_dir}"...')
 
-    os.makedirs(out_dir, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
     comic = comics_database.get_comic_book(title)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
     ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
-    for svg_file, ocr_file in zip(svg_files, ocr_files):
+    for svg_file, ocr_file in zip(svg_files, ocr_files, strict=True):
         svg_stem = Path(svg_file).stem
 
         for ocr_type_file in ocr_file:
-            ocr_suffix = get_ocr_no_json_suffix(ocr_type_file)
+            ocr_suffix = get_ocr_type(ocr_type_file)
 
             ocr_groups_json_file = get_ocr_groups_json_filename(svg_stem, ocr_suffix, out_dir)
             ocr_groups_txt_file = get_ocr_groups_txt_filename(svg_stem, ocr_suffix, out_dir)
@@ -47,15 +47,16 @@ def make_ocr_groups_for_title(title: str, out_dir: Path) -> None:
             # )
 
             if not make_ocr_groups(ocr_type_file, ocr_groups_json_file, ocr_groups_txt_file):
-                raise Exception("There were process errors.")
+                msg = f'"{ocr_file}": There were process errors.'
+                raise RuntimeError(msg)
 
 
-def get_ocr_groups_txt_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-calculated-groups{ocr_suffix}.txt")
+def get_ocr_groups_txt_filename(svg_stem: str, ocr_type:str, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-{ocr_type}-calculated-groups.txt")
 
 
-def get_ocr_groups_json_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-calculated-groups{ocr_suffix}.json")
+def get_ocr_groups_json_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-{ocr_type}-calculated-groups.json")
 
 
 def make_ocr_groups(ocr_file: Path, ocr_groups_json_file: Path, ocr_groups_txt_file: Path) -> bool:
@@ -68,7 +69,7 @@ def make_ocr_groups(ocr_file: Path, ocr_groups_json_file: Path, ocr_groups_txt_f
     with ocr_file.open("r") as f:
         jsn_text_data_boxes = json.load(f)
 
-    text_data_polygons: List[OcrBox] = []
+    text_data_polygons: list[OcrBox] = []
 
     for box, ocr_text, accepted_text, ocr_prob in jsn_text_data_boxes:
         p1 = (box[0], box[1])
@@ -90,21 +91,21 @@ def make_ocr_groups(ocr_file: Path, ocr_groups_json_file: Path, ocr_groups_txt_f
     logger.info(f'Writing OCR groups to file "{ocr_groups_txt_file}"...')
     with ocr_groups_txt_file.open("w") as f:
         for group in groups:
-            for ocr_box, dist in groups[group]:
+            for ocr_box, _dist in groups[group]:
                 # noinspection PyProtectedMember
                 f.write(
                     f"Group: {group:03d}, "
                     f"text: '{ocr_box.ocr_text:<{max_text_len}}', "
                     f"acc: '{ocr_box.accepted_text:<{max_acc_text_len}}', "
                     f"P: {ocr_box.ocr_prob:4.2f}, "
-                    f"box: {get_box_str(ocr_box._box_points)}, rect: {ocr_box.is_approx_rect}\n"
+                    f"box: {get_box_str(ocr_box._box_points)}, rect: {ocr_box.is_approx_rect}\n"  # noqa: SLF001
                 )
 
     return True
 
 
-def make_box_groups(text_data_polygons: List[OcrBox]) -> Dict[int, List[Tuple[OcrBox, float]]]:
-    groups: Dict[int, List[Tuple[OcrBox, float]]] = dict()
+def make_box_groups(text_data_polygons: list[OcrBox]) -> dict[int, list[tuple[OcrBox, float]]]:
+    groups: dict[int, list[tuple[OcrBox, float]]] = {}
     num_groups = 0
     for ocr_box in text_data_polygons:
         in_group = False
@@ -131,7 +132,7 @@ def make_box_groups(text_data_polygons: List[OcrBox]) -> Dict[int, List[Tuple[Oc
 
 
 def get_rect_dist(
-    box_rect1: List[Tuple[float, float]], box_rect2: List[Tuple[float, float]]
+    box_rect1: list[tuple[float, float]], box_rect2: list[tuple[float, float]]
 ) -> float:
     bottom_left = box_rect1[0]
     top_right = box_rect1[1]
@@ -151,7 +152,7 @@ def get_rect_dist(
     return rect1.distance_to_rect(rect2)
 
 
-def get_dist(poly1: List[Tuple[float, float]], poly2: List[Tuple[float, float]]) -> float:
+def get_dist(poly1: list[tuple[float, float]], poly2: list[tuple[float, float]]) -> float:
     return Polygon(poly1).distance(Polygon(poly2))
 
 

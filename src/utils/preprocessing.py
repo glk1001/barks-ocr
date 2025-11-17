@@ -5,7 +5,6 @@ from PIL import Image, ImageEnhance
 
 def preprocess_image(image: np.ndarray) -> np.ndarray:
     """Preprocess the input image for better OCR results."""
-
     pil_image = Image.fromarray(image)
 
     # Enhance sharpness
@@ -20,6 +19,4 @@ def preprocess_image(image: np.ndarray) -> np.ndarray:
     cv_image = np.array(contrasted)
 
     # Denoise
-    denoised = cv.fastNlMeansDenoising(cv_image, None, 10, 7, 21)
-
-    return denoised
+    return cv.fastNlMeansDenoising(cv_image, None, 10, 7, 21)

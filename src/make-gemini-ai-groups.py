@@ -2,11 +2,11 @@ import json
 import os.path
 import sys
 from pathlib import Path
-from typing import Dict, List, Tuple, Any
+from typing import Any
 
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
-from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_no_json_suffix
+from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
 from loguru import logger
 from loguru_config import LoguruConfig
@@ -29,7 +29,7 @@ GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 APP_LOGGING_NAME = "gemg"
 
 
-def make_gemini_ai_groups_for_titles(title_list: List[str], out_dir: Path) -> None:
+def make_gemini_ai_groups_for_titles(title_list: list[str], out_dir: Path) -> None:
     for title in title_list:
         make_gemini_ai_groups_for_title(title, out_dir)
 
@@ -39,24 +39,26 @@ def make_gemini_ai_groups_for_title(title: str, out_dir: Path) -> None:
 
     logger.info(f'Making OCR groups for all pages in "{title}". To directory "{out_dir}"...')
 
-    os.makedirs(out_dir, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
     comic = comics_database.get_comic_book(title)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
     ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
     panel_segments_files = comic.get_srce_panel_segments_files(RESTORABLE_PAGE_TYPES)
 
     num_files_processed = 0
-    for svg_file, ocr_file, panel_segments_file in zip(svg_files, ocr_files, panel_segments_files):
+    for svg_file, ocr_file, panel_segments_file in zip(
+        svg_files, ocr_files, panel_segments_files, strict=True
+    ):
         svg_stem = Path(svg_file).stem
 
         for ocr_type_file in ocr_file:
-            ocr_suffix = get_ocr_no_json_suffix(ocr_type_file)
+            ocr_type = get_ocr_type(ocr_type_file)
 
             ocr_final_groups_json_file = get_ocr_final_groups_json_filename(
-                svg_stem, ocr_suffix, out_dir
+                svg_stem, ocr_type, out_dir
             )
-            ocr_groups_json_file = get_ocr_groups_json_filename(svg_stem, ocr_suffix, out_dir)
-            ocr_groups_txt_file = get_ocr_groups_txt_filename(svg_stem, ocr_suffix, out_dir)
+            ocr_groups_json_file = get_ocr_groups_json_filename(svg_stem, ocr_type, out_dir)
+            ocr_groups_txt_file = get_ocr_groups_txt_filename(svg_stem, ocr_type, out_dir)
 
             result = make_gemini_ai_groups(
                 svg_file,
@@ -73,10 +75,10 @@ def make_gemini_ai_groups_for_title(title: str, out_dir: Path) -> None:
             if result == ProcessResult.SUCCESS:
                 num_files_processed += 1
 
-        #break  # Break early for testing
+        # break  # Break early for testing  # noqa: ERA001
 
 
-def get_ocr_data(ocr_file: Path) -> List[Dict[str, any]]:
+def get_ocr_data(ocr_file: Path) -> list[dict[str, Any]]:
     with ocr_file.open("r") as f:
         ocr_raw_results = json.load(f)
 
@@ -88,7 +90,7 @@ def get_ocr_data(ocr_file: Path) -> List[Dict[str, any]]:
         accepted_text = result[2]
         ocr_prob = result[3]
 
-        assert len(box) == 8
+        assert len(box) == 8  # noqa: PLR2004
         text_box = [(box[0], box[1]), (box[2], box[3]), (box[4], box[5]), (box[6], box[7])]
 
         ocr_data.append({"text_box": text_box, "text": accepted_text, "prob": ocr_prob})
@@ -96,27 +98,27 @@ def get_ocr_data(ocr_file: Path) -> List[Dict[str, any]]:
     return ocr_data
 
 
-def assign_ids_to_ocr_boxes(bounds: List[Dict[str, any]]) -> List[Dict[str, any]]:
+def assign_ids_to_ocr_boxes(bounds: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return [{**bound, "text_id": str(i)} for i, bound in enumerate(bounds)]
 
 
-def get_ocr_groups_txt_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-gemini-groups{ocr_suffix}.txt")
+def get_ocr_groups_txt_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-{ocr_type}-gemini-groups.txt")
 
 
-def get_ocr_groups_json_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-gemini-groups{ocr_suffix}.json")
+def get_ocr_groups_json_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-{ocr_type}-gemini-groups.json")
 
 
-def get_ocr_final_groups_json_filename(svg_stem: str, ocr_suffix, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-gemini-final-groups{ocr_suffix}.json")
+def get_ocr_final_groups_json_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
+    return out_dir / (svg_stem + f"-{ocr_type}-gemini-final-groups.json")
 
 
 def make_gemini_ai_groups(
     svg_file: Path,
     ocr_file: Path,
     panel_segments_file: Path,
-    ocr_final_data_groups_json_file,
+    ocr_final_data_groups_json_file: Path,
     ocr_groups_json_file: Path,
     ocr_groups_txt_file: Path,
 ) -> ProcessResult:
@@ -125,14 +127,14 @@ def make_gemini_ai_groups(
 
     # noinspection PyBroadException
     try:
-        if not os.path.isfile(png_file):
+        if not png_file.is_file():
             logger.error(f'Could not find png file "{png_file}".')
             return ProcessResult.FAILURE
-        if not os.path.isfile(ocr_file):
+        if not ocr_file.is_file():
             logger.error(f'Could not find ocr file "{ocr_file}".')
             return ProcessResult.FAILURE
 
-        if os.path.isfile(ocr_groups_json_file):
+        if ocr_groups_json_file.is_file():
             logger.info(f'Found groups file - skipping: "{ocr_groups_json_file}".')
             return ProcessResult.SKIPPED
 
@@ -148,7 +150,9 @@ def make_gemini_ai_groups(
         ai_predicted_groups = get_ai_predicted_groups(
             ocr_name, Image.fromarray(bw_image), ocr_bound_ids, GEMINI_API_KEY
         )
-        with (Path("/tmp") / f"{ocr_name}-ocr-ai-groups-prelim.json").open("w") as f:
+        temp_ai_predicted_groups_file = Path("/tmp") / f"{ocr_name}-ocr-ai-predicted-groups.json"  # noqa: S108
+        logger.info(f'Writing gemini ai predicted groups to "{temp_ai_predicted_groups_file}".')
+        with temp_ai_predicted_groups_file.open("w") as f:
             json.dump(ai_predicted_groups, f, indent=4)
 
         # Merge boxes into text bubbles
@@ -163,28 +167,35 @@ def make_gemini_ai_groups(
 
         write_groups_to_text_file(ocr_groups_txt_file, groups)
 
-        return ProcessResult.SUCCESS
     except:  # noqa: E722
         logger.exception(f'Could not process file "{png_file}":')
+        #sys.exit(1)
         return ProcessResult.FAILURE
+    else:
+        return ProcessResult.SUCCESS
 
 
 def get_final_ai_data(
-    groups: Dict[str, any], ocr_boxes_with_ids: List[Dict[str, any]], panel_segments_file: Path
-) -> Dict[int, any]:
-    id_to_bound: dict[Any, dict[str, Any]] = {bound["text_id"]: bound for bound in ocr_boxes_with_ids}
+    groups: dict[str, list[Any]],
+    ocr_boxes_with_ids: list[dict[str, Any]],
+    panel_segments_file: Path,
+) -> dict[int, Any]:
+    id_to_bound: dict[Any, dict[str, Any]] = {
+        bound["text_id"]: bound for bound in ocr_boxes_with_ids
+    }
 
     logger.info(f'Loading panel segments file "{get_abbrev_path(panel_segments_file)}".')
     with panel_segments_file.open("r") as f:
         panel_segment_info = json.load(f)
 
-    group_id = 0  # TODO: start from 1
     merged_groups = {}
-    for group in groups["groups"]:
+    # TODO: group_id start from 1
+    for group_id, group in enumerate(groups["groups"]):
+        #print(group_id, group)
         box_ids = group["box_ids"]
         cleaned_box_texts = group["split_cleaned_box_texts"]
 
-        box_bounds: List[PointList] = []
+        box_bounds: list[PointList] = []
         box_texts = {}
         for box_id in box_ids:
             box = id_to_bound[box_id]["text_box"]
@@ -211,12 +222,10 @@ def get_final_ai_data(
             "cleaned_box_texts": box_texts,
         }
 
-        group_id += 1
-
     return merged_groups
 
 
-def get_enclosing_box(boxes: List[PointList]) -> PointList:
+def get_enclosing_box(boxes: list[PointList]) -> PointList:
     x_min = min(box[0][0] for box in boxes)
     y_min = min(box[1][1] for box in boxes)
     x_max = max(box[2][0] for box in boxes)
@@ -225,7 +234,7 @@ def get_enclosing_box(boxes: List[PointList]) -> PointList:
     return [(x_min, y_min), (x_max, y_min), (x_max, y_max), (x_min, y_max)]
 
 
-def get_enclosing_panel_num(box: PointList, panel_segment_info) -> int:
+def get_enclosing_panel_num(box: PointList, panel_segment_info) -> int:  # noqa: ANN001
     ocr_box = OcrBox(box, "", 0, "")
     box = ocr_box.min_rotated_rectangle
     bottom_left = box[0]
@@ -239,7 +248,7 @@ def get_enclosing_panel_num(box: PointList, panel_segment_info) -> int:
         top_left_y = panel_box[1]
         w = panel_box[2]
         h = panel_box[3]
-        print(panel_box, top_left_x, top_left_y, w, h)
+        # print(panel_box, top_left_x, top_left_y, w, h)
         panel_rect = Rect(top_left_x, top_left_y, w, h)
         if panel_rect.is_rect_inside_rect(box_rect):
             return i + 1
@@ -248,15 +257,13 @@ def get_enclosing_panel_num(box: PointList, panel_segment_info) -> int:
 
 
 def get_text_groups(
-    ocr_merged_data: Dict[int, any], ocr_bound_ids: List[Dict[str, any]]
-) -> Dict[int, List[Tuple[any, float]]]:
+    ocr_merged_data: dict[int, Any], ocr_bound_ids: list[dict[str, Any]]
+) -> dict[int, list[tuple[Any, float]]]:
     groups = {}
 
-    for group_id in ocr_merged_data:
+    for group_id, ocr_data in ocr_merged_data.items():
         dist = 0.0
 
-        group_id = int(group_id)
-        ocr_data = ocr_merged_data[group_id]
         group = []
         for text_id in ocr_data["cleaned_box_texts"]:
             cleaned_text_data = ocr_data["cleaned_box_texts"][text_id]
@@ -274,24 +281,24 @@ def get_text_groups(
     return groups
 
 
-def write_groups_to_text_file(file: Path, groups: Dict[int, any]) -> None:
+def write_groups_to_text_file(file: Path, groups: dict[int, Any]) -> None:
     max_text_len = 0
     max_acc_text_len = 0
-    for group in groups:
-        for ocr_box, dist in groups[group]:
+    for group in groups.values():
+        for ocr_box, _dist in group:
             max_text_len = max(max_text_len, len(ocr_box.ocr_text))
             max_acc_text_len = max(max_acc_text_len, len(ocr_box.accepted_text))
 
     with file.open("w") as f:
-        for group in groups:
-            for ocr_box, dist in groups[group]:
+        for group_id, group in groups.items():
+            for ocr_box, _dist in group:
                 # noinspection PyProtectedMember
                 f.write(
-                    f"Group: {group:03d}, "
+                    f"Group: {group_id:03d}, "
                     f"text: '{ocr_box.ocr_text:<{max_text_len}}', "
                     f"acc: '{ocr_box.accepted_text:<{max_acc_text_len}}', "
                     f"P: {ocr_box.ocr_prob:4.2f}, "
-                    f"box: {get_box_str(ocr_box._box_points)}, rect: {ocr_box.is_approx_rect}\n"
+                    f"box: {get_box_str(ocr_box._box_points)}, rect: {ocr_box.is_approx_rect}\n"  # noqa: SLF001
                 )
 
 

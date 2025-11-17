@@ -1,21 +1,22 @@
+# ruff: noqa: ERA001
+
+import concurrent.futures
 import json
-import logging
-import os.path
 import sys
 import tempfile
-import time
 from pathlib import Path
-from typing import List, Tuple
 
 import cv2 as cv
 import easyocr
 import enchant
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
-from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_no_json_suffix
+from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
+from comic_utils.timing import Timing
 from loguru import logger
 from loguru_config import LoguruConfig
+from paddleocr import PaddleOCR
 
 from utils.common import ProcessResult
 from utils.preprocessing import preprocess_image
@@ -31,45 +32,56 @@ AUTO_CORRECTIONS = {
 }
 
 BARKS_OCR_SPELL_DICT = Path(__file__).parent.parent / "barks_words.txt"
-if not os.path.isfile(BARKS_OCR_SPELL_DICT):
-    raise Exception(f'Could not find Barks spelling dict: "{BARKS_OCR_SPELL_DICT}".')
+if not BARKS_OCR_SPELL_DICT.is_file():
+    msg = f'Could not find Barks spelling dict: "{BARKS_OCR_SPELL_DICT}".'
+    raise FileNotFoundError(msg)
 
 spell_dict = enchant.DictWithPWL("en_US", str(BARKS_OCR_SPELL_DICT))
 
+num_files_processed = 0
 
-def ocr_titles(title_list: List[str]) -> None:
-    start = time.time()
 
+def ocr_titles(title_list: list[str]) -> None:
+    timing = Timing()
+
+    global num_files_processed
     num_files_processed = 0
+
     for title in title_list:
-        logging.info(f'OCRing all pages in "{title}"...')
+        logger.info(f'OCRing all pages in "{title}"...')
 
         comic = comics_database.get_comic_book(title)
 
         srce_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
         dest_file_groups = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
-        for srce_file, dest_files in zip(srce_files, dest_file_groups):
-            result = ocr_comic_page(srce_file, dest_files)
-            if result == ProcessResult.FAILURE:
-                raise Exception("There were process errors.")
-                # pass
-            if result == ProcessResult.SUCCESS:
-                num_files_processed += 1
+        with concurrent.futures.ProcessPoolExecutor(10) as executor:
+            for srce_file, dest_files in zip(srce_files, dest_file_groups, strict=True):
+                executor.submit(ocr_page, srce_file, dest_files)
 
-    logging.info(f"Time taken to OCR all {num_files_processed} files: {int(time.time() - start)}s.")
+    logger.info(
+        f"Time taken to OCR all {num_files_processed} files: {timing.get_elapsed_time_with_unit()}."
+    )
+
+def ocr_page(srce_file: Path, dest_files: tuple[Path, Path]) -> None:
+    result = ocr_comic_page(srce_file, dest_files)
+    if result == ProcessResult.FAILURE:
+        logger.error(f'"{srce_file}": There were process errors.')
+    if result == ProcessResult.SUCCESS:
+        global num_files_processed
+        num_files_processed += 1
 
 
-def ocr_comic_page(svg_file: Path, ocr_json_files: Tuple[Path, Path]) -> ProcessResult:
+def ocr_comic_page(svg_file: Path, ocr_json_files: tuple[Path, Path]) -> ProcessResult:
     png_file = Path(str(svg_file) + ".png")
 
-    if not os.path.isfile(png_file):
-        logging.error(f'Could not find png file "{png_file}".')
+    if not png_file.is_file():
+        logger.error(f'Could not find png file "{png_file}".')
         return ProcessResult.FAILURE
 
-    if all([os.path.isfile(f) for f in ocr_json_files]):
+    if all(f.is_file() for f in ocr_json_files):
         for ocr_json_file in ocr_json_files:
-            logging.info(f'OCR file exists - skipping: "{get_abbrev_path(ocr_json_file)}".')
+            logger.info(f'OCR file exists - skipping: "{get_abbrev_path(ocr_json_file)}".')
         return ProcessResult.SKIPPED
 
     svg_stem = Path(svg_file).stem
@@ -77,23 +89,23 @@ def ocr_comic_page(svg_file: Path, ocr_json_files: Tuple[Path, Path]) -> Process
     make_grey_image(png_file, grey_image_file)
 
     for ocr_json_file in ocr_json_files:
-        if os.path.isfile(ocr_json_file):
-            logging.info(f'OCR file exists - skipping: "{get_abbrev_path(ocr_json_file)}".')
+        if ocr_json_file.is_file():
+            logger.info(f'OCR file exists - skipping: "{get_abbrev_path(ocr_json_file)}".')
             continue
 
-        logging.info(
+        logger.info(
             f'OCRing png file "{get_abbrev_path(png_file)}"'
             f' to "{get_abbrev_path(ocr_json_file)}"...'
         )
 
-        ocr_suffix = get_ocr_no_json_suffix(ocr_json_file)
-        if ocr_suffix == ".easyocr":
+        ocr_type = get_ocr_type(ocr_json_file)
+        if ocr_type == "easyocr":
             text_data_boxes = get_easyocr_text_box_data(grey_image_file)
         else:
-            assert ocr_suffix == ".paddleocr"
+            assert ocr_type == "paddleocr"
             text_data_boxes = get_paddleocr_text_box_data(grey_image_file)
 
-        with open(os.path.join(ocr_json_file), "w") as f:
+        with ocr_json_file.open("w") as f:
             json.dump(text_data_boxes, f, indent=4)
 
     return ProcessResult.SUCCESS
@@ -105,7 +117,7 @@ def make_grey_image(png_file: Path, out_grey_file: Path) -> None:
     cv.imwrite(str(out_grey_file), bw_image)
 
 
-def words_are_ok(words_str: str) -> Tuple[bool, List[str]]:
+def words_are_ok(words_str: str) -> tuple[bool, list[str]]:
     words_str = words_str.strip(" ")
 
     auto_ok, corrected_words_str = can_auto_correct(words_str)
@@ -124,18 +136,17 @@ def words_are_ok(words_str: str) -> Tuple[bool, List[str]]:
     return True, accepted_words
 
 
-def can_auto_correct(words_str: str) -> Tuple[bool, str]:
+def can_auto_correct(words_str: str) -> tuple[bool, str]:
     if words_str in AUTO_CORRECTIONS:
         return True, AUTO_CORRECTIONS[words_str]
 
-    if words_str[-1] in ").!;?,":
-        if words_str[:-1] in AUTO_CORRECTIONS:
-            return True, AUTO_CORRECTIONS[words_str[:-1]] + words_str[-1]
+    if words_str[-1] in ").!;?," and words_str[:-1] in AUTO_CORRECTIONS:
+        return True, AUTO_CORRECTIONS[words_str[:-1]] + words_str[-1]
 
     return False, ""
 
 
-def word_is_ok(word: str) -> Tuple[bool, str]:
+def word_is_ok(word: str) -> tuple[bool, str]:
     word = word.upper().strip()
 
     if not word:
@@ -147,9 +158,8 @@ def word_is_ok(word: str) -> Tuple[bool, str]:
     if spell_dict.check(word):
         return True, word
 
-    if word[-1] in ").!;?,":
-        if spell_dict.check(word[:-1]):
-            return True, word
+    if word[-1] in ").!;?," and spell_dict.check(word[:-1]):
+        return True, word
 
     possible_words = spell_dict.suggest(word)
     possible_words = [f'"{word}"' for word in possible_words]
@@ -164,7 +174,9 @@ def word_is_ok(word: str) -> Tuple[bool, str]:
     return True, word
 
 
-def get_easyocr_text_box_data(image_file: Path) -> List[Tuple[List[int], str, str, float]]:
+def get_easyocr_text_box_data(
+    image_file: Path,
+) -> list[tuple[list[int], str, str, float]]:
     reader = easyocr.Reader(["en"])
     result = reader.readtext(
         str(image_file),
@@ -183,7 +195,7 @@ def get_easyocr_text_box_data(image_file: Path) -> List[Tuple[List[int], str, st
     text_list = []
     for bbox, text, prob in result:
         text_str = text.strip()
-        if prob < 0.1 or not text_str:
+        if prob < 0.1 or not text_str:  # noqa: PLR2004
             continue
 
         words_ok, accepted_words = words_are_ok(text_str)
@@ -192,30 +204,30 @@ def get_easyocr_text_box_data(image_file: Path) -> List[Tuple[List[int], str, st
         accepted_words_str = " ".join(accepted_words)
 
         (bl, br, tr, tl) = bbox
-        x0 = int(round(bl[0]))
-        y0 = int(round(bl[1]))
-        x1 = int(round(br[0]))
-        y1 = int(round(br[1]))
-        x2 = int(round(tr[0]))
-        y2 = int(round(tr[1]))
-        x3 = int(round(tl[0]))
-        y3 = int(round(tl[1]))
-        bbox = [x0, y0, x1, y1, x2, y2, x3, y3]
+        x0 = round(bl[0])
+        y0 = round(bl[1])
+        x1 = round(br[0])
+        y1 = round(br[1])
+        x2 = round(tr[0])
+        y2 = round(tr[1])
+        x3 = round(tl[0])
+        y3 = round(tl[1])
+        bnd_box = [x0, y0, x1, y1, x2, y2, x3, y3]
 
-        text_list.append((bbox, text_str, accepted_words_str, prob))
+        text_list.append((bnd_box, text_str, accepted_words_str, prob))
 
     return text_list
 
 
-def get_paddleocr_text_box_data(image_file: Path) -> List[Tuple[List[int], str, str, float]]:
-    # Import PaddleOCR here where it can't screw up 'logging'.
-    from paddleocr import PaddleOCR
-
+def get_paddleocr_text_box_data(
+    image_file: Path,
+) -> list[tuple[list[int], str, str, float]]:
+    # Import PaddleOCR here where it can't screw up 'logger'.
     ocr = PaddleOCR(
         use_doc_orientation_classify=False,
         use_doc_unwarping=False,
         use_textline_orientation=False,
-        #use_angle_cls=True,
+        # use_angle_cls=True,
         lang="en",
         det_limit_side_len=2560,
         det_db_thresh=0.1,
@@ -225,24 +237,17 @@ def get_paddleocr_text_box_data(image_file: Path) -> List[Tuple[List[int], str, 
 
     result = ocr.predict(str(image_file))
 
-    for res in result:
-        print(res['input_path'])
-        print(res['model_settings'])
-        print(res['text_det_params'])
-        res.save_to_img("output")
-        res.save_to_json("output")
-
     text_list = []
     for res in result:
         rec_texts = res["rec_texts"]
         rec_scores = res["rec_scores"]
         rec_polys = res["rec_polys"]
         for i, rec in enumerate(rec_texts):
-            text = rec_texts[i]
+            text = rec
             prob = rec_scores[i]
             text_str = text.strip()
             bbox = [(int(rec_polys[i][j][0]), int(rec_polys[i][j][1])) for j in range(4)]
-            if prob < 0.1 or not text_str:
+            if prob < 0.1 or not text_str:  # noqa: PLR2004
                 continue
 
             words_ok, accepted_words = words_are_ok(text_str)
@@ -251,14 +256,14 @@ def get_paddleocr_text_box_data(image_file: Path) -> List[Tuple[List[int], str, 
             accepted_words_str = " ".join(accepted_words)
 
             (bl, br, tr, tl) = bbox
-            x0 = int(round(bl[0]))
-            y0 = int(round(bl[1]))
-            x1 = int(round(br[0]))
-            y1 = int(round(br[1]))
-            x2 = int(round(tr[0]))
-            y2 = int(round(tr[1]))
-            x3 = int(round(tl[0]))
-            y3 = int(round(tl[1]))
+            x0 = round(bl[0])
+            y0 = round(bl[1])
+            x1 = round(br[0])
+            y1 = round(br[1])
+            x2 = round(tr[0])
+            y2 = round(tr[1])
+            x3 = round(tl[0])
+            y3 = round(tl[1])
             bbox = [x0, y0, x1, y1, x2, y2, x3, y3]
 
             text_list.append((bbox, text_str, accepted_words_str, prob))
@@ -266,8 +271,8 @@ def get_paddleocr_text_box_data(image_file: Path) -> List[Tuple[List[int], str, 
     return text_list
 
 
-def get_box_str(box: List[int]) -> str:
-    assert len(box) == 8
+def get_box_str(box: list[int]) -> str:
+    assert len(box) == 8  # noqa: PLR2004
     return (
         f"{box[0]:04},{box[1]:04}, {box[2]:04},{box[3]:04}, "
         f"{box[4]:04},{box[5]:04}, {box[6]:04},{box[7]:04}"
