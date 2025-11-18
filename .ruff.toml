@@ -20,8 +20,10 @@ exclude = [
     ]
 
     exclude = [
-        "sscraps/*"
+        "sscraps/*",
+    	"src/utils/geomtery.py",
     ]
 
     [lint.per-file-ignores]
         "scripts/*" = ["INP001"]
+

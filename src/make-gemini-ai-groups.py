@@ -1,5 +1,4 @@
 import json
-import os.path
 import sys
 from pathlib import Path
 from typing import Any
@@ -13,7 +12,7 @@ from loguru_config import LoguruConfig
 from PIL import Image
 
 from utils.common import ProcessResult
-from utils.gemini_ai import get_ai_predicted_groups
+from utils.gemini_ai_for_grouping import get_ai_predicted_groups, get_cleaned_text
 from utils.geometry import Rect
 from utils.ocr_box import (
     OcrBox,
@@ -24,7 +23,25 @@ from utils.ocr_box import (
 )
 from utils.preprocessing import preprocess_image
 
-GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
+
+def get_predicted_groups_from_ai(
+    ocr_bound_ids: list[dict[str, Any]], ocr_name: str, png_file: Path
+) -> list[Any]:
+    bw_image = get_bw_image_from_alpha(png_file)
+    bw_image = preprocess_image(bw_image)
+
+    ai_predicted_groups = get_ai_predicted_groups(
+        ocr_name, Image.fromarray(bw_image), ocr_bound_ids
+    )
+    temp_ai_predicted_groups_file = Path("/tmp") / f"{ocr_name}-ocr-ai-predicted-groups.json"  # noqa: S108
+
+    logger.info(f'Writing gemini ai predicted groups to "{temp_ai_predicted_groups_file}".')
+
+    with temp_ai_predicted_groups_file.open("w") as f:
+        json.dump(ai_predicted_groups, f, indent=4)
+
+    return ai_predicted_groups
+
 
 APP_LOGGING_NAME = "gemg"
 
@@ -144,16 +161,7 @@ def make_gemini_ai_groups(
         ocr_data = get_ocr_data(ocr_file)
         ocr_bound_ids = assign_ids_to_ocr_boxes(ocr_data)
 
-        bw_image = get_bw_image_from_alpha(png_file)
-        bw_image = preprocess_image(bw_image)
-
-        ai_predicted_groups = get_ai_predicted_groups(
-            ocr_name, Image.fromarray(bw_image), ocr_bound_ids, GEMINI_API_KEY
-        )
-        temp_ai_predicted_groups_file = Path("/tmp") / f"{ocr_name}-ocr-ai-predicted-groups.json"  # noqa: S108
-        logger.info(f'Writing gemini ai predicted groups to "{temp_ai_predicted_groups_file}".')
-        with temp_ai_predicted_groups_file.open("w") as f:
-            json.dump(ai_predicted_groups, f, indent=4)
+        ai_predicted_groups = get_predicted_groups_from_ai(ocr_bound_ids, ocr_name, png_file)
 
         # Merge boxes into text bubbles
         ai_final_data = get_final_ai_data(ai_predicted_groups, ocr_bound_ids, panel_segments_file)
@@ -169,14 +177,14 @@ def make_gemini_ai_groups(
 
     except:  # noqa: E722
         logger.exception(f'Could not process file "{png_file}":')
-        #sys.exit(1)
+        # sys.exit(1)
         return ProcessResult.FAILURE
     else:
         return ProcessResult.SUCCESS
 
 
 def get_final_ai_data(
-    groups: dict[str, list[Any]],
+    groups: list[Any],
     ocr_boxes_with_ids: list[dict[str, Any]],
     panel_segments_file: Path,
 ) -> dict[int, Any]:
@@ -190,8 +198,8 @@ def get_final_ai_data(
 
     merged_groups = {}
     # TODO: group_id start from 1
-    for group_id, group in enumerate(groups["groups"]):
-        #print(group_id, group)
+    for group_id, group in enumerate(groups):
+        # print(group_id, group)
         box_ids = group["box_ids"]
         cleaned_box_texts = group["split_cleaned_box_texts"]
 
@@ -210,12 +218,14 @@ def get_final_ai_data(
         enclosing_box = get_enclosing_box(box_bounds)
         panel_num = get_enclosing_panel_num(enclosing_box, panel_segment_info)
 
+        ai_text = get_cleaned_text(group["cleaned_text"])
+
         merged_groups[group_id] = {
             "panel_id": group["panel_id"],
             "panel_num": panel_num,
             "text_box": enclosing_box,
             "ocr_text": group["original_text"],
-            "ai_text": group["cleaned_text"],
+            "ai_text": ai_text,
             "type": group["type"],
             "style": group["style"],
             "notes": group["notes"],

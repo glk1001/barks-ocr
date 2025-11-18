@@ -1,8 +1,6 @@
 import json
-import os.path
 import sys
 from pathlib import Path
-from typing import Dict, List, Tuple
 
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
@@ -51,7 +49,7 @@ def make_ocr_groups_for_title(title: str, out_dir: Path) -> None:
                 raise RuntimeError(msg)
 
 
-def get_ocr_groups_txt_filename(svg_stem: str, ocr_type:str, out_dir: Path) -> Path:
+def get_ocr_groups_txt_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
     return out_dir / (svg_stem + f"-{ocr_type}-calculated-groups.txt")
 
 

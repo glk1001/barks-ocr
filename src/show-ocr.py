@@ -1,3 +1,5 @@
+# ruff: noqa: ERA001
+
 import json
 import sys
 from pathlib import Path
@@ -10,7 +12,7 @@ from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
 from loguru import logger
 from loguru_config import LoguruConfig
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageColor, ImageDraw, ImageFont
 
 from utils.ocr_box import OcrBox
 
@@ -73,6 +75,13 @@ def ocr_annotate_title(title: str, out_dir: Path) -> None:
             final_text_annotated_image_file = get_final_text_annotated_filename(
                 svg_stem, ocr_type, out_dir
             )
+
+            if final_text_annotated_image_file.is_file():
+                logger.info(
+                    f'Found annotation file - skipping: "{final_text_annotated_image_file}".'
+                )
+                continue
+
             boxes_annotated_image_file = get_boxes_annotated_filename(svg_stem, ocr_type, out_dir)
 
             ocr_annotate_image_with_final_text(
@@ -88,18 +97,18 @@ def ocr_annotate_title(title: str, out_dir: Path) -> None:
 
 def get_final_text_annotated_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
     return out_dir / (svg_stem + f"-{ocr_type}-ocr-gemini-final-text-annotated.png")
-    #return out_dir / (svg_stem + f"-{ocr_type}-ocr-calculated-annotated.png")
+    # return out_dir / (svg_stem + f"-{ocr_type}-ocr-calculated-annotated.png")
 
 
 def get_boxes_annotated_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
     return out_dir / (svg_stem + f"-{ocr_type}-ocr-gemini-boxes-annotated.png")
-    #return out_dir / (svg_stem + f"-{ocr_type}-ocr-calculated-boxes-annotated.png")
+    # return out_dir / (svg_stem + f"-{ocr_type}-ocr-calculated-boxes-annotated.png")
 
 
 def get_ocr_group_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
     # return os.path.join(out_dir, svg_stem + f"-gemini-groups{ocr_suffix}.json")
     return out_dir / (svg_stem + f"-{ocr_type}-gemini-final-groups.json")
-    #return out_dir / (svg_stem + f"-{ocr_type}-calculated-groups.json")
+    # return out_dir / (svg_stem + f"-{ocr_type}-calculated-groups.json")
 
 
 def get_image_to_annotate(png_file: Path) -> cv.typing.MatLike:
@@ -175,21 +184,19 @@ def ocr_annotate_image_with_final_text(
     ocr_file: Path,
     annotated_img_file: Path,
 ) -> None:
-    if annotated_img_file.is_file():
-        logger.info(f'Found annotation file - skipping: "{annotated_img_file}".')
-        return
-
     logger.info(f'Annotating image "{png_file}" from ocr file "{ocr_file}"...')
 
     json_text_data_boxes = get_json_text_data_boxes(ocr_file)
     bw_image = get_image_to_annotate(png_file)
 
-    pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image]))
-    img_rects_draw = ImageDraw.Draw(pil_image)
+    pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
+    overlay = Image.new("RGBA", pil_image.size, (0, 0, 0, 0))
+    img_rects_draw = ImageDraw.Draw(overlay)
     font_file = "/home/greg/Prj/fonts/verdana.ttf"
     font_size = 25
     font = ImageFont.truetype(font_file, font_size)
 
+    color_index = 0
     for group in json_text_data_boxes:
         group_id = int(group)
         logger.info(f'Annotating group {group_id}"...')
@@ -201,19 +208,27 @@ def ocr_annotate_image_with_final_text(
             1.0,
             text_data["ai_text"],
         )
-        print(
-            f'group: {group_id:02} - text: "{text_data["ai_text"]}",'
-            f" box: {text_data['text_box']}, approx: {ocr_box.is_approx_rect},"
-            f" rect: {ocr_box.min_rotated_rectangle}"
-        )
-        img_rects_draw.rectangle(
-            ocr_box.min_rotated_rectangle, outline="orchid", width=7, fill="white"
-        )
+        # print(
+        #     f'group: {group_id:02} - text: "{text_data["ai_text"]}",'
+        #     f" box: {text_data['text_box']}, approx: {ocr_box.is_approx_rect},"
+        #     f" rect: {ocr_box.min_rotated_rectangle}"
+        # )
+        # img_rects_draw.rectangle(
+        #     ocr_box.min_rotated_rectangle, outline="orchid", width=7, fill=(0,255,255,100)
+        # )
+        bbox_color = (*ImageColor.getrgb(COLORS[color_index]), 255)
+        text_color = "red"
+        text_box_color = (*ImageColor.getrgb(COLORS[color_index]), 120)
+        img_rects_draw.rectangle(ocr_box.min_rotated_rectangle, outline=bbox_color, width=7)
 
         text = f"{text_data['ai_text']}"
         top_left = ocr_box.min_rotated_rectangle[0]
         top_left = (top_left[0] + 60, top_left[1] + 5)
-        img_rects_draw.text(top_left, text, fill="red", font=font, align="left")
+        text_box = img_rects_draw.textbbox(top_left, text, font=font, align="left")
+        img_rects_draw.rectangle(text_box, fill=text_box_color)
+        img_rects_draw.text(
+            top_left, text, fill=text_color, font=font, align="left", stroke_width=1
+        )
 
         panel_num = text_data["panel_num"]
         if panel_num != -1:
@@ -221,11 +236,15 @@ def ocr_annotate_image_with_final_text(
             top_left = ocr_box.min_rotated_rectangle[0]
             top_left = (top_left[0] + 10, top_left[1] - 15)
             info_box = img_rects_draw.textbbox(top_left, info_text, font=font, align="left")
-            img_rects_draw.rectangle(info_box, fill="white")
-            img_rects_draw.text(top_left, info_text, fill="blue", font=font, align="left")
+            img_rects_draw.rectangle(info_box, fill=(0, 255, 255, 100))
+            img_rects_draw.text(top_left, info_text, fill=text_color, font=font, align="left")
 
-    # noinspection PyProtectedMember
-    img_rects_draw._image.save(annotated_img_file)  # noqa: SLF001
+        color_index += 1
+        if color_index == len(COLORS):
+            color_index = 0
+
+    final_image = Image.alpha_composite(pil_image, overlay)
+    final_image.save(annotated_img_file)
 
 
 def get_text_type_abbrev(text_type: str) -> str:

@@ -1,5 +1,4 @@
 import json
-import os.path
 import sys
 from pathlib import Path
 from typing import Any
@@ -8,18 +7,14 @@ from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
-from google import genai
 from loguru import logger
 from loguru_config import LoguruConfig
 from PIL import Image
 
-# noinspection PyProtectedMember
-from utils.gemini_ai import GEMINI_API_KEY, _norm2ai
+from utils.gemini_ai import AI_PRO_MODEL, CLIENT
 from utils.gemini_ai_comic_prompts import comic_prompt
+from utils.gemini_ai_for_grouping import norm2ai
 from utils.preprocessing import preprocess_image
-
-AI_MODEL = "gemini-2.5-pro"
-client = genai.Client(api_key=GEMINI_API_KEY)
 
 APP_LOGGING_NAME = "gemb"
 
@@ -76,12 +71,12 @@ def make_gemini_ai_groups_for_title(title: str, out_dir: Path) -> None:
         f.writelines(json.dumps(req) + "\n" for req in gemini_requests_data)
 
     logger.info(f'Uploading JSONL file: "{json_file_path}"...')
-    batch_input_file = client.files.upload(file=json_file_path)
+    batch_input_file = CLIENT.files.upload(file=json_file_path)
     logger.info(f'Uploaded JSONL file: "{batch_input_file.name}".')
 
     logger.info("\nCreating batch job...")
-    batch_job_from_file = client.batches.create(
-        model=AI_MODEL,
+    batch_job_from_file = CLIENT.batches.create(
+        model=AI_PRO_MODEL,
         src=batch_input_file.name,
         config={
             "display_name": "ocr-grouping-batch-job",
@@ -146,10 +141,10 @@ def get_ai_predicted_groups_request(
     ocr_name: str, image_path: Path, width: int, height: int, ocr_results: list[dict[str, Any]]
 ) -> dict:
     # Make the data AI-friendly.
-    norm_ocr_results = json.dumps(_norm2ai(ocr_results, height, width))
+    norm_ocr_results = json.dumps(norm2ai(ocr_results, height, width))
     prompt = comic_prompt.format(norm_ocr_results)
 
-    image_file = client.files.upload(file=str(image_path))
+    image_file = CLIENT.files.upload(file=str(image_path))
 
     key = f"request_{ocr_name}"
     image_file_data = {

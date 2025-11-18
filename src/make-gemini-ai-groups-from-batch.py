@@ -1,5 +1,4 @@
 import json
-import os.path
 import sys
 from pathlib import Path
 from typing import Any
@@ -11,6 +10,7 @@ from loguru import logger
 from loguru_config import LoguruConfig
 
 from utils.common import ProcessResult
+from utils.gemini_ai_for_grouping import get_cleaned_text
 from utils.geometry import Rect
 from utils.ocr_box import (
     OcrBox,
@@ -19,6 +19,18 @@ from utils.ocr_box import (
     load_groups_from_json,
     save_groups_as_json,
 )
+
+
+def get_ai_predicted_groups(ocr_name: str) -> Any:
+    temp_ai_predicted_groups_file = Path("/tmp") / f"{ocr_name}-ocr-ai-predicted-groups.json"  # noqa: S108
+
+    logger.info(f'Reading gemini ai predicted groups from "{temp_ai_predicted_groups_file}".')
+
+    with temp_ai_predicted_groups_file.open("r") as f:
+        ai_predicted_groups = json.load(f)
+
+    return ai_predicted_groups
+
 
 APP_LOGGING_NAME = "gemg"
 
@@ -54,7 +66,7 @@ def make_gemini_ai_groups_for_title(title: str, out_dir: Path) -> None:
             ocr_groups_json_file = get_ocr_groups_json_filename(svg_stem, ocr_type, out_dir)
             ocr_groups_txt_file = get_ocr_groups_txt_filename(svg_stem, ocr_type, out_dir)
 
-            result = make_gemini_ai_groups_from_batch(
+            result = make_gemini_ai_groups(
                 svg_file,
                 ocr_type_file,
                 panel_segments_file,
@@ -108,7 +120,7 @@ def get_ocr_final_groups_json_filename(svg_stem: str, ocr_type: str, out_dir: Pa
     return out_dir / (svg_stem + f"-{ocr_type}-gemini-final-groups.json")
 
 
-def make_gemini_ai_groups_from_batch(
+def make_gemini_ai_groups(
     svg_file: Path,
     ocr_file: Path,
     panel_segments_file: Path,
@@ -138,10 +150,7 @@ def make_gemini_ai_groups_from_batch(
         ocr_data = get_ocr_data(ocr_file)
         ocr_bound_ids = assign_ids_to_ocr_boxes(ocr_data)
 
-        temp_ai_predicted_groups_file = Path("/tmp") / f"{ocr_name}-ocr-ai-predicted-groups.json"  # noqa: S108
-        logger.info(f'Writing gemini ai predicted groups to "{temp_ai_predicted_groups_file}".')
-        with temp_ai_predicted_groups_file.open("r") as f:
-            ai_predicted_groups = json.load(f)
+        ai_predicted_groups = get_ai_predicted_groups(ocr_name)
 
         # Merge boxes into text bubbles
         ai_final_data = get_final_ai_data(ai_predicted_groups, ocr_bound_ids, panel_segments_file)
@@ -198,12 +207,14 @@ def get_final_ai_data(
         enclosing_box = get_enclosing_box(box_bounds)
         panel_num = get_enclosing_panel_num(enclosing_box, panel_segment_info)
 
+        ai_text = get_cleaned_text(group["cleaned_text"])
+
         merged_groups[group_id] = {
             "panel_id": group["panel_id"],
             "panel_num": panel_num,
             "text_box": enclosing_box,
             "ocr_text": group["original_text"],
-            "ai_text": group["cleaned_text"],
+            "ai_text": ai_text,
             "type": group["type"],
             "style": group["style"],
             "notes": group["notes"],

@@ -1,12 +1,13 @@
-import os
+# ruff: noqa: ERA001,T201,E501
+
 from enum import Enum, auto
+from io import BytesIO
 from pathlib import Path
 
-from PIL import Image
-from io import BytesIO
-
-from google import genai
 from google.genai.types import GenerateContentConfig
+from PIL import Image
+
+from utils.gemini_ai import AI_IMAGE_MODEL, CLIENT
 
 
 class Prompts(Enum):
@@ -82,9 +83,9 @@ FANTA_RESTORED_DIR = ROOT_DIR / "Fantagraphics-restored"
 # PANEL_TYPE = "Censorship"
 # PANEL_TYPE = "Closeups"
 PANEL_TYPE = "Favourites"
-#PANEL_TYPE = "Insets"
+# PANEL_TYPE = "Insets"
 # PANEL_TYPE = "Splash"
-PANEL_TYPE = "Silhouettes"
+# PANEL_TYPE = "Silhouettes"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
@@ -99,11 +100,11 @@ PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
 DEST_SUFFIX = DEST_SUFFIX_PRE + PROMPT_TEXT[PROMPT_TO_USE][1]
 PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
 EXTRA_PROHIBITION = ""
-#EXTRA_PROHIBITION = " Do not remove any black ink hatching on the back wall. And make sure you inpaint the black ink hatching under the righthand speech bubble."
-#EXTRA_PROHIBITION = " Do not remove the chicken wire in the background."
-#EXTRA_PROHIBITION = " Make sure you remove the yellow narration box."
-#EXTRA_PROHIBITION = " Do not crop the righthand side of the image. Slightly extend the width to the right"
-#EXTRA_PROHIBITION += " Under the narration box are the legs and shoes of two people lying down."
+# EXTRA_PROHIBITION = " Do not remove any black ink hatching on the back wall. And make sure you inpaint the black ink hatching under the righthand speech bubble."
+# EXTRA_PROHIBITION = " Do not remove the chicken wire in the background."
+# EXTRA_PROHIBITION = " Make sure you remove the yellow narration box."
+# EXTRA_PROHIBITION = " Do not crop the righthand side of the image. Slightly extend the width to the right"
+# EXTRA_PROHIBITION += " Under the narration box are the legs and shoes of two people lying down."
 
 final_prompt = f"""
 **Primary Command:** Your most important task is to {PROMPT_STR}.
@@ -132,8 +133,8 @@ final_prompt = f"""
 {EXTRA_PROHIBITION}
 """
 
-#PROMPT_STR += " Also, inpaint missing part of image at top left."
-#PROMPT_STR += " Keep window in background."
+# PROMPT_STR += " Also, inpaint missing part of image at top left."
+# PROMPT_STR += " Keep window in background."
 
 # PROMPT_STR += " Don't change Donald's expressions."
 # PROMPT_STR += " Keep the high collar. Keep Donald's beak closed the same as the input image. Donald's hat should be blue, the same as the input image."
@@ -186,23 +187,14 @@ final_prompt = f"""
 if PANEL_TYPE == "Insets":
     SRCE_IMAGE1 = ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / EDITED / IMAGE_FILENAME
 else:
-    SRCE_IMAGE1 = (
-        ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / TITLE / EDITED / IMAGE_FILENAME
-    )
+    SRCE_IMAGE1 = ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / TITLE / EDITED / IMAGE_FILENAME
 
 # SRCE_IMAGE = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/01.png"
 # PROMPT = ("This is a scanned image. Cleanup and correct any warping caused by scanning. Keep the"
 #           " output resolution the same as the input resolution."
 #           " Don't crop any panel borders.")
 
-dest_image = (
-    ROOT_DIR
-    / BARKS_PANELS_PNG
-    / "AI"
-    / TITLE
-    / EDITED
-    / (SRCE_IMAGE1.stem + DEST_SUFFIX)
-)
+dest_image = ROOT_DIR / BARKS_PANELS_PNG / "AI" / TITLE / EDITED / (SRCE_IMAGE1.stem + DEST_SUFFIX)
 # dest_image = Path("/tmp/color-test.png")
 dest_image.parent.mkdir(parents=True, exist_ok=True)
 if not dest_image.parent.is_dir():
@@ -213,18 +205,13 @@ if dest_image.is_file():
 print(f"Prompt:\n    {final_prompt}\n")
 print(f'Saving edited image to "{dest_image}"...')
 
-AI_MODEL = "gemini-2.5-flash-image"
-
-GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
-client = genai.Client(api_key=GEMINI_API_KEY)
-
 # SRCE_IMAGE1 = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/Originals/RCO003_1466986159.jpg"
 # SRCE_IMAGE2 = "/home/greg/Books/Carl Barks/Fantagraphics-censorship-fixes/wdcs-34/01_cleaned_small.png"
 srce_image1 = Image.open(SRCE_IMAGE1, mode="r")
 # srce_image2 = Image.open(SRCE_IMAGE2, mode="r")
 
-response = client.models.generate_content(
-    model=AI_MODEL,
+response = CLIENT.models.generate_content(
+    model=AI_IMAGE_MODEL,
     contents=[
         final_prompt,
         srce_image1,
