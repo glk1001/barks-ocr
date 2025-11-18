@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 
-from utils.gemini_ai import AI_IMAGE_MODEL, CLIENT
+from utils.gemini_ai import AI_FLASH_IMAGE_MODEL, CLIENT
 
 image_root_dir = Path("~/Books/Carl Barks/Barks Panels Pngs").expanduser()
 folder = "Favourites"
@@ -61,7 +61,7 @@ print(f'Uploaded JSONL file: "{batch_input_file.name}".')
 
 print("\nCreating batch job...")
 batch_job_from_file = CLIENT.batches.create(
-    model=AI_IMAGE_MODEL,
+    model=AI_FLASH_IMAGE_MODEL,
     src=batch_input_file.name,
     config={
         "display_name": "speech-bubble-removal-batch-job",

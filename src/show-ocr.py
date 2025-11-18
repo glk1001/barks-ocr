@@ -317,7 +317,7 @@ if __name__ == "__main__":
 
     # Global variables accessed by loguru-config.
     log_level = cmd_args.get_log_level()
-    log_filename = "batch-ocr.log"
+    log_filename = "show-ocr.log"
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
     comics_database = cmd_args.get_comics_database()

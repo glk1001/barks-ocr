@@ -7,7 +7,7 @@ from loguru import logger
 from PIL import Image
 from pydantic import BaseModel, Field
 
-from .gemini_ai import AI_IMAGE_MODEL, CLIENT
+from .gemini_ai import AI_FLASH_MODEL, CLIENT
 from .gemini_ai_comic_prompts import comic_prompt
 
 
@@ -53,7 +53,7 @@ def get_ai_predicted_groups(
 
     """Process OCR results with AI."""
     response = CLIENT.models.generate_content(
-        model=AI_IMAGE_MODEL,
+        model=AI_FLASH_MODEL,
         contents=[
             image,
             prompt,

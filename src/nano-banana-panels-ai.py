@@ -7,7 +7,7 @@ from pathlib import Path
 from google.genai.types import GenerateContentConfig
 from PIL import Image
 
-from utils.gemini_ai import AI_IMAGE_MODEL, CLIENT
+from utils.gemini_ai import AI_FLASH_IMAGE_MODEL, CLIENT
 
 
 class Prompts(Enum):
@@ -92,57 +92,59 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Wishing Stone Island"
+TITLE = "The Persistent Postman"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "085-1.png"
-AI_TEMPERATURE = 0.5
+IMAGE_FILENAME = "112-3.png"
+AI_TEMPERATURE = 0.0
+
 EXTRA_PROHIBITION = ""
-EXTRA_PROHIBITION += "- Do not change character's expressions"
-EXTRA_PROHIBITION += "- Keep the character's EYES EXACTLY as in input image."
-EXTRA_PROHIBITION += "- Do not add glasses to characters."
-EXTRA_PROHIBITION += "- Do not add extra clothing or hats."
-EXTRA_PROHIBITION += "- Do not add extra pupils to characters' eyes."
+EXTRA_PROHIBITION += "- **DO NOT** change character's expressions.\n"
+EXTRA_PROHIBITION += "- **Keep** the character's EYES EXACTLY as in input image.\n"
+EXTRA_PROHIBITION += "- **DO NOT** add glasses to characters.\n"
+EXTRA_PROHIBITION += "- **DO NOT** add extra clothing or hats.\n"
+EXTRA_PROHIBITION += "- **DO NOT** change clothing or hats.\n"
+EXTRA_PROHIBITION += "- **DO NOT** add extra pupils to characters' eyes.\n"
 # EXTRA_PROHIBITION += (
 #     "- Keep the character's EYES CLOSED EXACTLY as in input image. Do not add glasses to characters"
 # )
-# EXTRA_PROHIBITION = "- Add a few clouds to the sky."
-# EXTRA_PROHIBITION = "- The character on the tv set is bending over with his tail up and his head is not visible."
-# EXTRA_PROHIBITION = "- Carefully horizontally squeeze the image to make it not as wide. Make it look like a landscape photograph"
-# EXTRA_PROHIBITION = "- EXTREMELY IMPORTANT - Keep the character jumping up and down in the trailer's eyes closed exactly as in input image."
-# EXTRA_PROHIBITION = "- Give the feeling of a mysterious temple in a dark South American jungle. Make it look like a realistic nature photograph"
-# EXTRA_PROHIBITION = "- Scrooge is so worried he is wearing a circular rut into the concrete floor of his worry room"
-# EXTRA_PROHIBITION = ("- The top hat should be colored black. Between the penguin's legs is a large orange egg. Keep the shape and dimensions"
+# EXTRA_PROHIBITION += "- Add a few clouds to the sky.\n"
+# EXTRA_PROHIBITION += "- The character on the tv set is bending over with his tail up and his head is not visible.\n"
+# EXTRA_PROHIBITION += "- Carefully horizontally squeeze the image to make it not as wide. Make it look like a landscape photograph\n"
+# EXTRA_PROHIBITION += "- EXTREMELY IMPORTANT - Keep the character jumping up and down in the trailer's eyes closed exactly as in input image.\n"
+# EXTRA_PROHIBITION += "- Give the feeling of a mysterious temple in a dark South American jungle. Make it look like a realistic nature photograph"\n
+# EXTRA_PROHIBITION += "- Scrooge is so worried he is wearing a circular rut into the concrete floor of his worry room\n"
+# EXTRA_PROHIBITION += ("- The top hat should be colored black. Between the penguin's legs is a large orange egg. Keep the shape and dimensions\n"
 #                      " and position of the egg the same as the input image. The egg should be resting between the penguin's leg just as in"
-#                      " the input image. The penguin is not wearing a hat. Keep the output image very realistic. Like a photo")
-# EXTRA_PROHIBITION = "- Give the feeling of a mysterious lost city high in the Andes. Make it look like a realistic nature photograph"
-# EXTRA_PROHIBITION = "- It's a scary halloween scene with a witch on a broomstick. MAke it super-realistic."
-# EXTRA_PROHIBITION += "- It's an inside view of a pumpkin and a sword is coming through a triangular hole. Keep yellow background with black shadow at top. Just as in input image. Do not cover eyes with anything"
-# EXTRA_PROHIBITION += "- Note: the duck character's eyes are closed. No eyelids are visible though. Just single lines as in the input image "
-# EXTRA_PROHIBITION = "The lemming in the hat is eating a piece of cheese"
-# EXTRA_PROHIBITION = "Looking up at an old mysterious castle on the outskirts of The Black Forest."
-# EXTRA_PROHIBITION += "Scrooge is looking away from us. We cannot see his face"
-# EXTRA_PROHIBITION += "Scrooge is wearing pince-nez glasses but with no cord. The scrooge in the dream bubble has a goatee"
-# EXTRA_PROHIBITION += "Keep the left-hand character a silhouette"
-# EXTRA_PROHIBITION += " The javelin thrower has a little bit of hayfever, but he does not have a runny nose. He is not bald"
-# EXTRA_PROHIBITION += " The musician has his eyes closed enjoying the music he's making."
-# EXTRA_PROHIBITION += " Keep the people in the background silhouetted. But make the rest of the image photo-realistic."
-# EXTRA_PROHIBITION += " Make sure the image photo-realistic."
-# EXTRA_PROHIBITION += " Keep the right eye closed as in the input image."
-# EXTRA_PROHIBITION += " That's a kingfisher flying above but stuck in tar."
-# EXTRA_PROHIBITION += "- The tallest character with the sailor's hat has both eyes closed. EXACTLY as in input image."
-# EXTRA_PROHIBITION += "- The statue DOES NOT have an orange nose."
+#                      " the input image. The penguin is not wearing a hat. Keep the output image very realistic. Like a photo\n")
+# EXTRA_PROHIBITION += "- Give the feeling of a mysterious lost city high in the Andes. Make it look like a realistic nature photograph\n"
+# EXTRA_PROHIBITION += "- It's a scary halloween scene with a witch on a broomstick. MAke it super-realistic.\n"
+# EXTRA_PROHIBITION += "- It's an inside view of a pumpkin and a sword is coming through a triangular hole. Keep yellow background with black shadow at top. Just as in input image. Do not cover eyes with anything\n"
+# EXTRA_PROHIBITION += "- Note: the duck character's eyes are closed. No eyelids are visible though. Just single lines as in the input image\n"
+# EXTRA_PROHIBITION += "- The lemming in the hat is eating a piece of cheese\n"
+# EXTRA_PROHIBITION += "- Looking up at an old mysterious castle on the outskirts of The Black Forest.\n"
+# EXTRA_PROHIBITION += "- Scrooge is looking away from us. We cannot see his face\n"
+# EXTRA_PROHIBITION += "- Scrooge is wearing pince-nez glasses but with no cord. The scrooge in the dream bubble has a goatee\n"
+# EXTRA_PROHIBITION += "- Keep the left-hand character a silhouette\n"
+# EXTRA_PROHIBITION += "- The javelin thrower has a little bit of hayfever, but he does not have a runny nose. He is not bald\n"
+# EXTRA_PROHIBITION += "- The musician has his eyes closed enjoying the music he's making.\n"
+# EXTRA_PROHIBITION += "- Keep the people in the background silhouetted. But make the rest of the image photo-realistic.\n"
+# EXTRA_PROHIBITION += "- Make sure the image photo-realistic.\n"
+# EXTRA_PROHIBITION += "- Keep the right eye closed as in the input image.\n"
+# EXTRA_PROHIBITION += "- That's a kingfisher flying above but stuck in tar.\n"
+# EXTRA_PROHIBITION += "- The tallest character with the sailor's hat has both eyes closed. EXACTLY as in input image.\n"
+# EXTRA_PROHIBITION += "- The statue DOES NOT have an orange nose.\n"
 
 PROMPT_TYPES = [
-    # Prompts.MAKE_PHOTO_REALISTIC,
+    Prompts.MAKE_PHOTO_REALISTIC,
     Prompts.COLORIZE_WITH_GRADIENTS,
     Prompts.COLORIZE_WITH_HALFTONES,
     Prompts.MAKE_OIL_PAINTING,
     Prompts.MAKE_IMPRESSIONIST_PAINTING,
     Prompts.MAKE_WATER_COLOR_PAINTING,
     Prompts.MAKE_PASTEL_PAINTING,
-    # Prompts.MAKE_ANSEL_ADAMS,
-    # Prompts.CLEAN_AND_SHARPEN,
+    Prompts.MAKE_ANSEL_ADAMS,
+    Prompts.CLEAN_AND_SHARPEN,
 ]
 
 if PANEL_TYPE == "Insets":
@@ -206,7 +208,7 @@ for prompt_type, dest_image in zip(PROMPT_TYPES, dest_files, strict=True):
     print(f'Saving edited content to "{dest_image}"...')
 
     response = CLIENT.models.generate_content(
-        model=AI_IMAGE_MODEL,
+        model=AI_FLASH_IMAGE_MODEL,
         contents=[
             final_prompt,
             srce_image1,

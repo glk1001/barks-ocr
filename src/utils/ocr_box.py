@@ -22,6 +22,7 @@ class OcrBox:
         self.ocr_prob = ocr_prob
         self.accepted_text = accepted_text
 
+        # print(f"minimum_rotated_rectangle: {MultiPoint(self._box_points).minimum_rotated_rectangle}")
         min_rotated_rectangle_azimuth = self._get_min_rotated_rectangle_azimuth(
             MultiPoint(self._box_points).minimum_rotated_rectangle
         )
@@ -103,7 +104,6 @@ def load_groups_from_json(file: Path) -> dict[int, list[tuple[OcrBox, float]]]:
 
 
 def save_groups_as_json(groups: dict[int, list[tuple[OcrBox, float]]], file: Path) -> None:
-
     def custom_ocr_box(obj):
         if isinstance(obj, OcrBox):
             return obj.get_state()

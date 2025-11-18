@@ -2,6 +2,7 @@ line-length = 100
 
 exclude = [
         "scraps",
+    	"src/utils/geomtery.py",
     ]
 
 [lint]
@@ -20,7 +21,7 @@ exclude = [
     ]
 
     exclude = [
-        "sscraps/*",
+        "scraps/*",
     	"src/utils/geomtery.py",
     ]
 

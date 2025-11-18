@@ -7,7 +7,7 @@ from pathlib import Path
 from google.genai.types import GenerateContentConfig
 from PIL import Image
 
-from utils.gemini_ai import AI_IMAGE_MODEL, CLIENT
+from utils.gemini_ai import AI_FLASH_IMAGE_MODEL, CLIENT
 
 
 class Prompts(Enum):
@@ -211,7 +211,7 @@ srce_image1 = Image.open(SRCE_IMAGE1, mode="r")
 # srce_image2 = Image.open(SRCE_IMAGE2, mode="r")
 
 response = CLIENT.models.generate_content(
-    model=AI_IMAGE_MODEL,
+    model=AI_FLASH_IMAGE_MODEL,
     contents=[
         final_prompt,
         srce_image1,

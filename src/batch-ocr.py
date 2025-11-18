@@ -9,6 +9,8 @@ from pathlib import Path
 import cv2 as cv
 import easyocr
 import enchant
+
+from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
@@ -22,6 +24,9 @@ from utils.common import ProcessResult
 from utils.preprocessing import preprocess_image
 
 APP_LOGGING_NAME = "bocr"
+
+MAX_WORKERS = 2
+EASYOCR_BATCH_SIZE = 16
 
 REJECTED_WORDS = ["F", "H", "M", "W", "OO", "VV", "|", "L", "\\", "IY"]
 # noinspection SpellCheckingInspection
@@ -48,6 +53,10 @@ def ocr_titles(title_list: list[str]) -> None:
     num_files_processed = 0
 
     for title in title_list:
+        if is_non_comic_title(title):
+            logger.warning(f'Not a comic title "{title}" - skipping.')
+            continue
+
         logger.info(f'OCRing all pages in "{title}"...')
 
         comic = comics_database.get_comic_book(title)
@@ -55,13 +64,14 @@ def ocr_titles(title_list: list[str]) -> None:
         srce_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
         dest_file_groups = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
-        with concurrent.futures.ProcessPoolExecutor(10) as executor:
+        with concurrent.futures.ProcessPoolExecutor(MAX_WORKERS) as executor:
             for srce_file, dest_files in zip(srce_files, dest_file_groups, strict=True):
                 executor.submit(ocr_page, srce_file, dest_files)
 
     logger.info(
         f"Time taken to OCR all {num_files_processed} files: {timing.get_elapsed_time_with_unit()}."
     )
+
 
 def ocr_page(srce_file: Path, dest_files: tuple[Path, Path]) -> None:
     result = ocr_comic_page(srce_file, dest_files)
@@ -183,7 +193,7 @@ def get_easyocr_text_box_data(
         paragraph=False,
         decoder="beamsearch",
         beamWidth=5,
-        batch_size=8,
+        batch_size=EASYOCR_BATCH_SIZE,
         contrast_ths=0.1,
         adjust_contrast=0.5,
         text_threshold=0.7,
@@ -222,16 +232,15 @@ def get_easyocr_text_box_data(
 def get_paddleocr_text_box_data(
     image_file: Path,
 ) -> list[tuple[list[int], str, str, float]]:
-    # Import PaddleOCR here where it can't screw up 'logger'.
     ocr = PaddleOCR(
         use_doc_orientation_classify=False,
         use_doc_unwarping=False,
         use_textline_orientation=False,
         # use_angle_cls=True,
         lang="en",
-        det_limit_side_len=2560,
-        det_db_thresh=0.1,
-        det_db_box_thresh=0.2,
+        text_det_limit_side_len=2560,
+        text_det_thresh=0.1,
+        text_det_box_thresh=0.2,
         enable_mkldnn=True,
     )
 

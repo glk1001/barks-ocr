@@ -3,6 +3,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
@@ -19,13 +20,25 @@ from utils.preprocessing import preprocess_image
 APP_LOGGING_NAME = "gemb"
 
 
-def make_gemini_ai_groups_for_titles_batch_job(title_list: list[str], out_dir: Path) -> None:
+def make_gemini_ai_groups_for_titles_batch_job(
+    title_list: list[str], previous_results_dir: Path, out_dir: Path
+) -> None:
     for title in title_list:
-        make_gemini_ai_groups_for_title(title, out_dir)
+        if title == "The Hard Loser":
+            continue
+        if is_non_comic_title(title):
+            logger.warning(f'Not a comic title "{title}" - skipping.')
+            continue
+
+        make_gemini_ai_groups_for_title(title, previous_results_dir, out_dir)
 
 
-def make_gemini_ai_groups_for_title(title: str, out_dir: Path) -> None:
+def make_gemini_ai_groups_for_title(title: str, previous_results_dir: Path, out_dir: Path) -> None:
     out_dir /= title
+    vol_title = comics_database.get_fantagraphics_volume_title(
+        comics_database.get_fanta_volume_int(title)
+    )
+    title_prev_results_dir = previous_results_dir / vol_title
 
     logger.info(f'Making OCR groups for all pages in "{title}". To directory "{out_dir}"...')
 
@@ -46,6 +59,14 @@ def make_gemini_ai_groups_for_title(title: str, out_dir: Path) -> None:
             ocr_final_groups_json_file = get_ocr_final_groups_json_filename(
                 svg_stem, ocr_type, out_dir
             )
+            prev_ocr_final_groups_json_file = (
+                title_prev_results_dir / ocr_final_groups_json_file.name
+            )
+            if prev_ocr_final_groups_json_file.is_file():
+                logger.info(
+                    f'Found final groups file "{prev_ocr_final_groups_json_file}" - skipping.'
+                )
+                continue
 
             result = get_gemini_ai_groups_request(
                 svg_file,
@@ -65,7 +86,11 @@ def make_gemini_ai_groups_for_title(title: str, out_dir: Path) -> None:
         # if num_files_processed >= 2:
         #     break
 
-    json_file_path = Path("/tmp") / "batch_requests_with_image.json"  # noqa: S108
+    if num_files_processed == 0:
+        logger.warning(f'No request to process for title "{title}".')
+        return
+
+    json_file_path = Path("/tmp") / f"batch-requests-with-image-{title}.json"  # noqa: S108
     logger.info(f'Creating JSONL file: "{json_file_path}"...')
     with json_file_path.open("w") as f:
         f.writelines(json.dumps(req) + "\n" for req in gemini_requests_data)
@@ -88,9 +113,12 @@ def make_gemini_ai_groups_for_title(title: str, out_dir: Path) -> None:
         "batch_job_name": batch_job_from_file.name,
         "gemini_output_files": gemini_output_files,
     }
-    batch_details_file = Path("/tmp") / "batch-job-details.json"
+    batch_details_file = Path("/tmp") / f"batch-job-details-{title}.json"  # noqa: S108
     with batch_details_file.open("w") as f:
         json.dump(batch_details, f, indent=4)
+    logger.info(
+        f"You can download the results using the batch job details file: {batch_details_file.name}"
+    )
 
 
 def get_gemini_ai_groups_request(
@@ -157,15 +185,13 @@ def get_ai_predicted_groups_request(
     ]
     generation_config = {"response_mime_type": "application/json"}
 
-    request = {
+    return {
         "key": key,
         "request": {
             "contents": [{"parts": parts}],
             "generation_config": generation_config,
         },
     }
-
-    return request
 
 
 def get_ocr_data(ocr_file: Path) -> list[dict[str, Any]]:
@@ -218,9 +244,12 @@ if __name__ == "__main__":
 
     # Global variables accessed by loguru-config.
     log_level = cmd_args.get_log_level()
-    log_filename = "batch-ocr.log"
+    log_filename = "make-gemini-ai-groups-batch-job.log"
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
     comics_database = cmd_args.get_comics_database()
 
-    make_gemini_ai_groups_for_titles_batch_job(cmd_args.get_titles(), cmd_args.get_work_dir())
+    already_processed_dir = Path.home() / "Books" / "Carl Barks" / "Projects" / "OCR" / "Results"
+    make_gemini_ai_groups_for_titles_batch_job(
+        cmd_args.get_titles(), already_processed_dir, cmd_args.get_work_dir()
+    )
