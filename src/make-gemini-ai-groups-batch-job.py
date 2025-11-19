@@ -6,7 +6,7 @@ from typing import Any
 from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
-from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
+from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type, get_timestamp_str
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
 from loguru import logger
 from loguru_config import LoguruConfig
@@ -17,6 +17,8 @@ from ocr_file_paths import (
     UNPROCESSED_BATCH_JOBS_DIR,
     get_batch_details_file,
     get_batch_requests_file,
+    get_ocr_final_groups_json_filename,
+    get_ocr_predicted_groups_filename,
 )
 from utils.gemini_ai import AI_PRO_MODEL, CLIENT
 from utils.gemini_ai_comic_prompts import comic_prompt
@@ -26,9 +28,7 @@ from utils.preprocessing import preprocess_image
 APP_LOGGING_NAME = "gemb"
 
 
-def make_gemini_ai_groups_for_titles_batch_job(
-    title_list: list[str]
-) -> None:
+def make_gemini_ai_groups_for_titles_batch_job(title_list: list[str]) -> None:
     for title in title_list:
         if is_non_comic_title(title):
             logger.warning(f'Not a comic title "{title}" - skipping.')
@@ -46,7 +46,6 @@ def make_gemini_ai_groups_for_title(title: str) -> None:
 
     logger.info(f'Making OCR groups for all pages in "{title}". To directory "{out_title_dir}"...')
 
-    out_title_dir.mkdir(parents=True, exist_ok=True)
     comic = comics_database.get_comic_book(title)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
     ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
@@ -59,29 +58,26 @@ def make_gemini_ai_groups_for_title(title: str) -> None:
 
         for ocr_type_file in ocr_file:
             ocr_type = get_ocr_type(ocr_type_file)
+            ocr_prelim_filename = get_ocr_predicted_groups_filename(svg_stem, ocr_type)
 
-            ocr_final_groups_json_file = get_ocr_final_groups_json_filename(
-                svg_stem, ocr_type, out_title_dir
-            )
-            prev_ocr_predicted_groups_json_file = (
-                title_prev_results_dir / ocr_final_groups_json_file.name
-            )
-            if prev_ocr_predicted_groups_json_file.is_file():
+            ocr_predicted_groups_json_file = title_prev_results_dir / ocr_prelim_filename
+            if ocr_predicted_groups_json_file.is_file():
                 logger.info(
-                    f'Found final groups file "{prev_ocr_predicted_groups_json_file}" - skipping.'
+                    f'Found predicted groups file "{ocr_predicted_groups_json_file}" - skipping.'
                 )
                 continue
 
-            result = get_gemini_ai_groups_request(
-                svg_file,
-                ocr_type_file,
-                ocr_final_groups_json_file,
+            ocr_final_groups_json_file = out_title_dir / get_ocr_final_groups_json_filename(
+                svg_stem, ocr_type
             )
+            if ocr_final_groups_json_file.is_file():
+                logger.error(f'Found final groups file - skipping: "{ocr_final_groups_json_file}".')
+                return
 
+            result = get_gemini_ai_groups_request(svg_file, ocr_type_file)
             if result is not None:
                 gemini_requests_data.append(result)
-                ocr_prelim_file = f"{svg_stem}-{ocr_type}-json-ocr-ai-predicted-groups.json"
-                gemini_output_files.append(ocr_prelim_file)
+                gemini_output_files.append(ocr_prelim_filename)
                 num_files_processed += 1
 
         #     if num_files_processed >= 2:
@@ -95,6 +91,12 @@ def make_gemini_ai_groups_for_title(title: str) -> None:
         return
 
     json_file_path = get_batch_requests_file(title)
+    if json_file_path.is_file():
+        json_backup_file_path = Path(str(json_file_path) + "_" + get_timestamp_str(json_file_path))
+        logger.warning(
+            f'Found JSONL file "{json_file_path}" - backing up to "{json_backup_file_path}".'
+        )
+        json_file_path.rename(json_backup_file_path)
     logger.info(f'Creating JSONL file: "{json_file_path}"...')
     with json_file_path.open("w") as f:
         f.writelines(json.dumps(req) + "\n" for req in gemini_requests_data)
@@ -119,7 +121,14 @@ def make_gemini_ai_groups_for_title(title: str) -> None:
     }
     batch_details_file = get_batch_details_file(title)
     if batch_details_file.is_file():
-        logger.warning(f'Found existing details file "{batch_details_file}" - OVERRIDING.')
+        batch_details_backup_file = Path(
+            str(batch_details_file) + "_" + get_timestamp_str(batch_details_file)
+        )
+        logger.warning(
+            f'Found existing details file "{batch_details_file}"'
+            f' - backing up to "{batch_details_backup_file}".'
+        )
+        batch_details_file.rename(batch_details_backup_file)
     with batch_details_file.open("w") as f:
         json.dump(batch_details, f, indent=4)
     logger.info(
@@ -127,11 +136,7 @@ def make_gemini_ai_groups_for_title(title: str) -> None:
     )
 
 
-def get_gemini_ai_groups_request(
-    svg_file: Path,
-    ocr_file: Path,
-    ocr_groups_json_file: Path,
-) -> dict | None:
+def get_gemini_ai_groups_request(svg_file: Path, ocr_file: Path) -> dict | None:
     ocr_name = (Path(ocr_file).stem + Path(ocr_file.suffix).stem).replace(".", "-")
     png_file = Path(str(svg_file) + ".png")
 
@@ -142,10 +147,6 @@ def get_gemini_ai_groups_request(
             return None
         if not ocr_file.is_file():
             logger.error(f'Could not find ocr file "{ocr_file}".')
-            return None
-
-        if ocr_groups_json_file.is_file():
-            logger.info(f'Found groups file - skipping: "{ocr_groups_json_file}".')
             return None
 
         logger.info(f'Making Gemini AI OCR groups for file "{get_abbrev_path(png_file)}"...')
@@ -222,18 +223,6 @@ def get_ocr_data(ocr_file: Path) -> list[dict[str, Any]]:
 
 def assign_ids_to_ocr_boxes(bounds: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return [{**bound, "text_id": str(i)} for i, bound in enumerate(bounds)]
-
-
-def get_ocr_groups_txt_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-{ocr_type}-gemini-groups.txt")
-
-
-def get_ocr_groups_json_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-{ocr_type}-gemini-groups.json")
-
-
-def get_ocr_final_groups_json_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-{ocr_type}-gemini-final-groups.json")
 
 
 if __name__ == "__main__":

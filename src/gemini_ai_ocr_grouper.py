@@ -60,7 +60,7 @@ class GeminiAiGrouper:
         for svg_file, ocr_file, panel_segments_file in zip(
             svg_files, ocr_files, panel_segments_files, strict=True
         ):
-            svg_stem = Path(svg_file).stem
+            svg_stem = svg_file.stem
 
             for ocr_type_file in ocr_file:
                 ocr_type = get_ocr_type(ocr_type_file)
@@ -74,6 +74,7 @@ class GeminiAiGrouper:
                 result = self._make_groups(
                     svg_file,
                     ocr_type_file,
+                    ocr_type,
                     panel_segments_file,
                     ocr_final_groups_json_file,
                     ocr_groups_json_file,
@@ -92,13 +93,13 @@ class GeminiAiGrouper:
         self,
         svg_file: Path,
         ocr_file: Path,
+        ocr_type: str,
         panel_segments_file: Path,
         ocr_final_data_groups_json_file: Path,
         ocr_groups_json_file: Path,
         ocr_groups_txt_file: Path,
     ) -> ProcessResult:
-        svg_stem = ocr_file.stem
-        ocr_type = Path(ocr_file.suffix).stem.replace(".", "-")
+        svg_stem = svg_file.stem
         png_file = Path(str(svg_file) + ".png")
 
         # noinspection PyBroadException

@@ -18,5 +18,10 @@ def get_batch_requests_file(title: str) -> Path:
     return UNPROCESSED_BATCH_JOBS_DIR / f"{title}-batch-requests-with-image.json"
 
 
+# TODO: Remove json from inside name
 def get_ocr_predicted_groups_filename(svg_stem: str, ocr_type: str) -> str:
     return f"{svg_stem}-{ocr_type}-json-ocr-ai-predicted-groups.json"
+
+
+def get_ocr_final_groups_json_filename(svg_stem: str, ocr_type: str) -> str:
+    return svg_stem + f"-{ocr_type}-gemini-final-groups.json"

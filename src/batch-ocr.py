@@ -1,6 +1,5 @@
 # ruff: noqa: ERA001
 
-import concurrent.futures
 import json
 import sys
 import tempfile
@@ -24,7 +23,6 @@ from utils.preprocessing import preprocess_image
 
 APP_LOGGING_NAME = "bocr"
 
-MAX_WORKERS = 2
 EASYOCR_BATCH_SIZE = 16
 
 REJECTED_WORDS = ["F", "H", "M", "W", "OO", "VV", "|", "L", "\\", "IY"]
@@ -63,9 +61,8 @@ def ocr_titles(title_list: list[str]) -> None:
         srce_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
         dest_file_groups = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
-        with concurrent.futures.ProcessPoolExecutor(MAX_WORKERS) as executor:
-            for srce_file, dest_files in zip(srce_files, dest_file_groups, strict=True):
-                executor.submit(ocr_page, srce_file, dest_files)
+        for srce_file, dest_files in zip(srce_files, dest_file_groups, strict=True):
+            ocr_page(srce_file, dest_files)
 
     logger.info(
         f"Time taken to OCR all {num_files_processed} files: {timing.get_elapsed_time_with_unit()}."
