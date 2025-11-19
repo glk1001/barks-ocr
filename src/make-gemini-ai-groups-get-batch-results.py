@@ -2,55 +2,59 @@ import json
 import sys
 from pathlib import Path
 
+from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from loguru import logger
 from loguru_config import LoguruConfig
 
-from ocr_file_paths import BATCH_JOBS_OUTPUT_DIR, get_batch_details_file
+from ocr_file_paths import (
+    BATCH_JOBS_OUTPUT_DIR,
+    FINISHED_BATCH_JOBS_DIR,
+    get_batch_details_file,
+    get_batch_requests_file,
+)
 from utils.gemini_ai import CLIENT
 
 APP_LOGGING_NAME = "gemr"
 
 
-if __name__ == "__main__":
-    # TODO(glk): Some issue with type checking inspection?
-    # noinspection PyTypeChecker
-    cmd_args = CmdArgs(
-        "Make Gemini AI OCR groups for title",
-        CmdArgNames.VOLUME | CmdArgNames.TITLE,
-    )
-    args_ok, error_msg = cmd_args.args_are_valid()
-    if not args_ok:
-        logger.error(error_msg)
-        sys.exit(1)
+def process_batch_jobs(titles: list[str]):
+    for title in titles:
+        if is_non_comic_title(title):
+            logger.warning(f'Not a comic title "{title}" - skipping.')
+            continue
 
-    # Global variables accessed by loguru-config.
-    log_level = cmd_args.get_log_level()
-    log_filename = "make-gemini-ai-groups-get-batch-results.log"
-    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+        process_batch_job(title)
 
-    comics_database = cmd_args.get_comics_database()
 
-    assert len(cmd_args.get_titles()) == 1
-    title = cmd_args.get_title()
-    volume = comics_database.get_fanta_volume_int(title)
+def process_batch_job(title: str):
+    try:
+        batch_details_file = get_batch_details_file(title)
+        finished_batch_details_file = FINISHED_BATCH_JOBS_DIR / batch_details_file.name
 
-    batch_details_file = get_batch_details_file(title)
-    logger.info(f'Getting batch details from file: "{batch_details_file}".')
+        if not batch_details_file.is_file():
+            if not finished_batch_details_file.exists():
+                msg = f'Batch details file not found and no finished batch details file: "{batch_details_file}"'
+                raise FileNotFoundError(msg)
+            logger.info(f'Found finished batch details file: "{finished_batch_details_file}" - skipping.')
+            return
 
-    with Path(batch_details_file).open("r") as f:
-        details = json.load(f)
-    batch_job_name = details["batch_job_name"]
-    gemini_output_files = details["gemini_output_files"]
-    logger.info(f'Gemini batch job name: {batch_job_name}".')
+        logger.info(f'Getting batch details from file: "{batch_details_file}".')
 
-    # CLIENT.batches.delete(name=batch_job_name)
-    # sys.exit(0)
+        with Path(batch_details_file).open("r") as f:
+            details = json.load(f)
+        batch_job_name = details["batch_job_name"]
+        gemini_output_files = details["gemini_output_files"]
+        logger.info(f'Gemini batch job name: {batch_job_name}".')
 
-    batch_job_from_file = CLIENT.batches.get(name=batch_job_name)
-    if batch_job_from_file.state.name != "JOB_STATE_SUCCEEDED":
-        logger.info(f"Job did not succeed. Final state: {batch_job_from_file.state.name}")
-    else:
+        # CLIENT.batches.delete(name=batch_job_name)
+        # sys.exit(0)
+
+        batch_job_from_file = CLIENT.batches.get(name=batch_job_name)
+        if batch_job_from_file.state.name != "JOB_STATE_SUCCEEDED":
+            logger.error(f"Job did not succeed. Final state: {batch_job_from_file.state.name}")
+            return
+
         logger.info(f"Job status: {batch_job_from_file.state.name}.")
         # The output is in another file.
         result_file_name = batch_job_from_file.dest.file_name
@@ -60,6 +64,7 @@ if __name__ == "__main__":
         file_content_bytes = CLIENT.files.download(file=result_file_name)
         file_content = file_content_bytes.decode("utf-8")
 
+        volume = comics_database.get_fanta_volume_int(title)
         volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
         out_dir = BATCH_JOBS_OUTPUT_DIR / volume_dirname
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -83,3 +88,42 @@ if __name__ == "__main__":
                         logger.info(f'Writing line {file_index} to file: "{out_file}"...')
                         with out_file.open("w") as f:
                             f.write(part["text"])
+
+        batch_details_file.rename(finished_batch_details_file)
+        logger.info(f'Moved "{batch_details_file}" to finished "{finished_batch_details_file}".')
+
+        batch_requests_file = get_batch_requests_file(title)
+        finished_batch_requests_file = FINISHED_BATCH_JOBS_DIR / batch_requests_file.name
+        batch_requests_file.rename(finished_batch_requests_file)
+        logger.info(f'Moved "{batch_requests_file}" to finished "{finished_batch_requests_file}".')
+
+    except:
+        logger.exception(f'Could not process batch result for title: "{title}".')
+
+
+if __name__ == "__main__":
+    # TODO(glk): Some issue with type checking inspection?
+    # noinspection PyTypeChecker
+    cmd_args = CmdArgs(
+        "Make Gemini AI OCR groups for title",
+        CmdArgNames.VOLUME | CmdArgNames.TITLE,
+    )
+    args_ok, error_msg = cmd_args.args_are_valid()
+    if not args_ok:
+        logger.error(error_msg)
+        sys.exit(1)
+
+    # Global variables accessed by loguru-config.
+    log_level = cmd_args.get_log_level()
+    log_filename = "make-gemini-ai-groups-get-batch-results.log"
+    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+
+    comics_database = cmd_args.get_comics_database()
+
+    if cmd_args.one_or_more_volumes():
+        batch_job_titles = cmd_args.get_titles()
+    else:
+        assert len(cmd_args.get_titles()) == 1
+        batch_job_titles = [cmd_args.get_title()]
+
+    process_batch_jobs(batch_job_titles)
