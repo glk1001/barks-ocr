@@ -9,7 +9,6 @@ from pathlib import Path
 import cv2 as cv
 import easyocr
 import enchant
-
 from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
@@ -98,27 +97,31 @@ def ocr_comic_page(svg_file: Path, ocr_json_files: tuple[Path, Path]) -> Process
     grey_image_file = work_dir / (svg_stem + "-grey.png")
     make_grey_image(png_file, grey_image_file)
 
-    for ocr_json_file in ocr_json_files:
-        if ocr_json_file.is_file():
-            logger.info(f'OCR file exists - skipping: "{get_abbrev_path(ocr_json_file)}".')
-            continue
+    try:
+        for ocr_json_file in ocr_json_files:
+            if ocr_json_file.is_file():
+                logger.info(f'OCR file exists - skipping: "{get_abbrev_path(ocr_json_file)}".')
+                continue
 
-        logger.info(
-            f'OCRing png file "{get_abbrev_path(png_file)}"'
-            f' to "{get_abbrev_path(ocr_json_file)}"...'
-        )
+            logger.info(
+                f'OCRing png file "{get_abbrev_path(png_file)}"'
+                f' to "{get_abbrev_path(ocr_json_file)}"...'
+            )
 
-        ocr_type = get_ocr_type(ocr_json_file)
-        if ocr_type == "easyocr":
-            text_data_boxes = get_easyocr_text_box_data(grey_image_file)
-        else:
-            assert ocr_type == "paddleocr"
-            text_data_boxes = get_paddleocr_text_box_data(grey_image_file)
+            ocr_type = get_ocr_type(ocr_json_file)
+            if ocr_type == "easyocr":
+                text_data_boxes = get_easyocr_text_box_data(grey_image_file)
+            else:
+                assert ocr_type == "paddleocr"
+                text_data_boxes = get_paddleocr_text_box_data(grey_image_file)
 
-        with ocr_json_file.open("w") as f:
-            json.dump(text_data_boxes, f, indent=4)
+            with ocr_json_file.open("w") as f:
+                json.dump(text_data_boxes, f, indent=4)
 
-    return ProcessResult.SUCCESS
+        return ProcessResult.SUCCESS
+
+    finally:
+        grey_image_file.unlink()
 
 
 def make_grey_image(png_file: Path, out_grey_file: Path) -> None:

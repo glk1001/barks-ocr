@@ -12,6 +12,12 @@ from loguru import logger
 from loguru_config import LoguruConfig
 from PIL import Image
 
+from ocr_file_paths import (
+    OCR_RESULTS_DIR,
+    UNPROCESSED_BATCH_JOBS_DIR,
+    get_batch_details_file,
+    get_batch_requests_file,
+)
 from utils.gemini_ai import AI_PRO_MODEL, CLIENT
 from utils.gemini_ai_comic_prompts import comic_prompt
 from utils.gemini_ai_for_grouping import norm2ai
@@ -20,25 +26,21 @@ from utils.preprocessing import preprocess_image
 APP_LOGGING_NAME = "gemb"
 
 
-def make_gemini_ai_groups_for_titles_batch_job(
-    title_list: list[str], previous_results_dir: Path, out_dir: Path
-) -> None:
+def make_gemini_ai_groups_for_titles_batch_job(title_list: list[str]) -> None:
     for title in title_list:
-        if title == "The Hard Loser":
-            continue
         if is_non_comic_title(title):
             logger.warning(f'Not a comic title "{title}" - skipping.')
             continue
 
-        make_gemini_ai_groups_for_title(title, previous_results_dir, out_dir)
+        make_gemini_ai_groups_for_title(title)
 
 
-def make_gemini_ai_groups_for_title(title: str, previous_results_dir: Path, out_dir: Path) -> None:
-    out_title_dir = out_dir / title
+def make_gemini_ai_groups_for_title(title: str) -> None:
+    out_title_dir = UNPROCESSED_BATCH_JOBS_DIR / title
     vol_title = comics_database.get_fantagraphics_volume_title(
         comics_database.get_fanta_volume_int(title)
     )
-    title_prev_results_dir = previous_results_dir / vol_title
+    title_prev_results_dir = OCR_RESULTS_DIR / vol_title
 
     logger.info(f'Making OCR groups for all pages in "{title}". To directory "{out_title_dir}"...')
 
@@ -90,7 +92,7 @@ def make_gemini_ai_groups_for_title(title: str, previous_results_dir: Path, out_
         logger.warning(f'No request to process for title "{title}".')
         return
 
-    json_file_path = out_dir / f"batch-requests-with-image-{title}.json"  # noqa: S108
+    json_file_path = get_batch_requests_file(title)
     logger.info(f'Creating JSONL file: "{json_file_path}"...')
     with json_file_path.open("w") as f:
         f.writelines(json.dumps(req) + "\n" for req in gemini_requests_data)
@@ -113,7 +115,7 @@ def make_gemini_ai_groups_for_title(title: str, previous_results_dir: Path, out_
         "batch_job_name": batch_job_from_file.name,
         "gemini_output_files": gemini_output_files,
     }
-    batch_details_file = out_dir / f"batch-job-details-{title}.json"  # noqa: S108
+    batch_details_file = get_batch_details_file(title)
     if batch_details_file.is_file():
         logger.warning(f'Found existing details file "{batch_details_file}" - OVERRIDING.')
     with batch_details_file.open("w") as f:
@@ -237,7 +239,7 @@ if __name__ == "__main__":
     # noinspection PyTypeChecker
     cmd_args = CmdArgs(
         "Make Gemini AI OCR groups for title",
-        CmdArgNames.VOLUME | CmdArgNames.TITLE | CmdArgNames.WORK_DIR,
+        CmdArgNames.VOLUME | CmdArgNames.TITLE,
     )
     args_ok, error_msg = cmd_args.args_are_valid()
     if not args_ok:
@@ -251,8 +253,4 @@ if __name__ == "__main__":
 
     comics_database = cmd_args.get_comics_database()
 
-    already_processed_dir = Path.home() / "Books" / "Carl Barks" / "Projects" / "OCR" / "Results"
-    output_dir = Path.home() / "Books" / "Carl Barks" / "Projects" / "OCR" / "batch-jobs" / "unprocessed"
-    make_gemini_ai_groups_for_titles_batch_job(
-        cmd_args.get_titles(), already_processed_dir, output_dir
-    )
+    make_gemini_ai_groups_for_titles_batch_job(cmd_args.get_titles())

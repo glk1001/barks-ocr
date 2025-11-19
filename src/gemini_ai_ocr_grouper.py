@@ -4,6 +4,7 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
+from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
@@ -35,7 +36,13 @@ class GeminiAiGrouper:
         self._get_ai_predicted_groups = get_ai_predicted_groups_func
 
     def make_groups_for_titles(self, title_list: list[str]) -> None:
+        self._out_dir.mkdir(parents=True, exist_ok=True)
+
         for title in title_list:
+            if is_non_comic_title(title):
+                logger.warning(f'Not a comic title "{title}" - skipping.')
+                continue
+
             self._make_groups_for_title(title)
 
     def _make_groups_for_title(self, title: str) -> None:
@@ -44,7 +51,6 @@ class GeminiAiGrouper:
         )
         logger.info(f'Using directory "{self._prelim_dir}" for prelim results.')
 
-        self._out_dir.mkdir(parents=True, exist_ok=True)
         comic = self._comics_database.get_comic_book(title)
         svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
         ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
@@ -60,14 +66,10 @@ class GeminiAiGrouper:
                 ocr_type = get_ocr_type(ocr_type_file)
 
                 ocr_final_groups_json_file = self._get_ocr_final_groups_json_filename(
-                    svg_stem, ocr_type, self._out_dir
+                    svg_stem, ocr_type
                 )
-                ocr_groups_json_file = self._get_ocr_groups_json_filename(
-                    svg_stem, ocr_type, self._out_dir
-                )
-                ocr_groups_txt_file = self._get_ocr_groups_txt_filename(
-                    svg_stem, ocr_type, self._out_dir
-                )
+                ocr_groups_json_file = self._get_ocr_groups_json_filename(svg_stem, ocr_type)
+                ocr_groups_txt_file = self._get_ocr_groups_txt_filename(svg_stem, ocr_type)
 
                 result = self._make_groups(
                     svg_file,
@@ -177,12 +179,17 @@ class GeminiAiGrouper:
                     box_texts[box_id] = {"text_frag": cleaned_box_text, "text_box": box}
                     box_bounds.append(box)
 
-            if (not box_bounds) or len(box_bounds) <= 2:  # noqa: PLR2004
-                logger.warning(f"Ignoring group {group_id}: 'len(box_bounds) <= 2'.")
+            if not box_bounds:
+                logger.warning(f"Ignoring group {group_id}: 'box_bounds is None'.")
                 continue
 
             enclosing_box = self._get_enclosing_box(box_bounds)
-            panel_num = self._get_enclosing_panel_num(enclosing_box, panel_segment_info)
+            # noinspection PyBroadException
+            try:
+                panel_num = self._get_enclosing_panel_num(enclosing_box, panel_segment_info)
+            except:  # noqa: E722
+                logger.exception(f"Could not get enclosing panel number for group '{group_id}':")
+                continue
 
             ai_text = get_cleaned_text(group["cleaned_text"])
 
@@ -224,16 +231,14 @@ class GeminiAiGrouper:
     def _assign_ids_to_ocr_boxes(bounds: list[dict[str, Any]]) -> list[dict[str, Any]]:
         return [{**bound, "text_id": str(i)} for i, bound in enumerate(bounds)]
 
-    def _get_ocr_groups_txt_filename(self, svg_stem: str, ocr_type: str, group_dir: Path) -> Path:
-        return group_dir / (svg_stem + f"-{ocr_type}-gemini-groups.txt")
+    def _get_ocr_groups_txt_filename(self, svg_stem: str, ocr_type: str) -> Path:
+        return self._out_dir / (svg_stem + f"-{ocr_type}-gemini-groups.txt")
 
-    def _get_ocr_groups_json_filename(self, svg_stem: str, ocr_type: str, group_dir: Path) -> Path:
-        return group_dir / (svg_stem + f"-{ocr_type}-gemini-groups.json")
+    def _get_ocr_groups_json_filename(self, svg_stem: str, ocr_type: str) -> Path:
+        return self._out_dir / (svg_stem + f"-{ocr_type}-gemini-groups.json")
 
-    def _get_ocr_final_groups_json_filename(
-        self, svg_stem: str, ocr_type: str, group_dir: Path
-    ) -> Path:
-        return group_dir / (svg_stem + f"-{ocr_type}-gemini-final-groups.json")
+    def _get_ocr_final_groups_json_filename(self, svg_stem: str, ocr_type: str) -> Path:
+        return self._out_dir / (svg_stem + f"-{ocr_type}-gemini-final-groups.json")
 
     @staticmethod
     def _get_enclosing_box(boxes: list[PointList]) -> PointList:
