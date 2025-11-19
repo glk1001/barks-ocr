@@ -323,7 +323,7 @@ if __name__ == "__main__":
         assert len(cmd_args.get_titles()) == 1
         volume = comics_database.get_fanta_volume_int(cmd_args.get_title())
 
-    volume_dirname = comics_database.get_fantagraphics_volume_dir(volume).name
+    volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
 
     # Global variables accessed by loguru-config.
     log_level = cmd_args.get_log_level()

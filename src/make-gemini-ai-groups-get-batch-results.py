@@ -60,7 +60,7 @@ if __name__ == "__main__":
         file_content_bytes = CLIENT.files.download(file=result_file_name)
         file_content = file_content_bytes.decode("utf-8")
 
-        volume_dirname = comics_database.get_fantagraphics_volume_dir(volume).name
+        volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
         out_dir = BATCH_JOBS_OUTPUT_DIR / volume_dirname
         out_dir.mkdir(parents=True, exist_ok=True)
         logger.info(f'Writing downloaded data to volume directory "{out_dir}"...')

@@ -28,7 +28,7 @@ class GeminiAiGrouper:
         comics_database: ComicsDatabase,
         prelim_dir: Path,
         out_dir: Path,
-        get_ai_predicted_groups_func: Callable[[str, Path, list[dict[str, Any]], Path], Any],
+        get_ai_predicted_groups_func: Callable[[str, str, Path, list[dict[str, Any]], Path], Any],
     ) -> None:
         self._comics_database = comics_database
         self._prelim_dir = prelim_dir
@@ -97,7 +97,8 @@ class GeminiAiGrouper:
         ocr_groups_json_file: Path,
         ocr_groups_txt_file: Path,
     ) -> ProcessResult:
-        ocr_name = (Path(ocr_file).stem + Path(ocr_file.suffix).stem).replace(".", "-")
+        svg_stem = ocr_file.stem
+        ocr_type = Path(ocr_file.suffix).stem.replace(".", "-")
         png_file = Path(str(svg_file) + ".png")
 
         # noinspection PyBroadException
@@ -120,7 +121,7 @@ class GeminiAiGrouper:
             ocr_bound_ids = self._assign_ids_to_ocr_boxes(ocr_data)
 
             ai_predicted_groups = self._get_ai_predicted_groups(
-                ocr_name, self._prelim_dir, ocr_bound_ids, png_file
+                svg_stem, ocr_type, self._prelim_dir, ocr_bound_ids, png_file
             )
 
             # Merge boxes into text bubbles

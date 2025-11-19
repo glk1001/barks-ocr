@@ -44,7 +44,7 @@ def get_cleaned_text(text: str) -> str:
 
 
 def get_ai_predicted_groups(
-    ocr_name: str, image: Image.Image, ocr_results: list[dict[str, Any]]
+    svg_stem: str, ocr_type: str, image: Image.Image, ocr_results: list[dict[str, Any]]
 ) -> list[Any]:
     # Make the data AI-friendly.
     width, height = image.size
@@ -66,7 +66,7 @@ def get_ai_predicted_groups(
 
     cleaned = get_cleaned_text(response.text)
 
-    temp_cleaned_file = Path(f"/tmp/{ocr_name}-gemini-cleaned-response.json")  # noqa: S108
+    temp_cleaned_file = Path(f"/tmp/{svg_stem}-{ocr_type}-gemini-cleaned-response.json")  # noqa: S108
     logger.info(f'Writing gemini cleaned response to "{temp_cleaned_file}".')
     with temp_cleaned_file.open("w") as f:
         f.write(cleaned)

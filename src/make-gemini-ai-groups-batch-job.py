@@ -13,7 +13,7 @@ from loguru_config import LoguruConfig
 from PIL import Image
 
 from ocr_file_paths import (
-    OCR_RESULTS_DIR,
+    BATCH_JOBS_OUTPUT_DIR,
     UNPROCESSED_BATCH_JOBS_DIR,
     get_batch_details_file,
     get_batch_requests_file,
@@ -26,7 +26,9 @@ from utils.preprocessing import preprocess_image
 APP_LOGGING_NAME = "gemb"
 
 
-def make_gemini_ai_groups_for_titles_batch_job(title_list: list[str]) -> None:
+def make_gemini_ai_groups_for_titles_batch_job(
+    title_list: list[str]
+) -> None:
     for title in title_list:
         if is_non_comic_title(title):
             logger.warning(f'Not a comic title "{title}" - skipping.')
@@ -37,10 +39,10 @@ def make_gemini_ai_groups_for_titles_batch_job(title_list: list[str]) -> None:
 
 def make_gemini_ai_groups_for_title(title: str) -> None:
     out_title_dir = UNPROCESSED_BATCH_JOBS_DIR / title
-    vol_title = comics_database.get_fantagraphics_volume_title(
+    volume_dirname = comics_database.get_fantagraphics_volume_title(
         comics_database.get_fanta_volume_int(title)
     )
-    title_prev_results_dir = OCR_RESULTS_DIR / vol_title
+    title_prev_results_dir = BATCH_JOBS_OUTPUT_DIR / volume_dirname
 
     logger.info(f'Making OCR groups for all pages in "{title}". To directory "{out_title_dir}"...')
 
@@ -61,12 +63,12 @@ def make_gemini_ai_groups_for_title(title: str) -> None:
             ocr_final_groups_json_file = get_ocr_final_groups_json_filename(
                 svg_stem, ocr_type, out_title_dir
             )
-            prev_ocr_final_groups_json_file = (
+            prev_ocr_predicted_groups_json_file = (
                 title_prev_results_dir / ocr_final_groups_json_file.name
             )
-            if prev_ocr_final_groups_json_file.is_file():
+            if prev_ocr_predicted_groups_json_file.is_file():
                 logger.info(
-                    f'Found final groups file "{prev_ocr_final_groups_json_file}" - skipping.'
+                    f'Found final groups file "{prev_ocr_predicted_groups_json_file}" - skipping.'
                 )
                 continue
 

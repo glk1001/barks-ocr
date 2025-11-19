@@ -8,22 +8,27 @@ from loguru import logger
 from loguru_config import LoguruConfig
 
 from gemini_ai_ocr_grouper import GeminiAiGrouper
-from ocr_file_paths import BATCH_JOBS_OUTPUT_DIR, OCR_RESULTS_DIR
-from utils.gemini_ai_for_grouping import get_cleaned_text
+from ocr_file_paths import BATCH_JOBS_OUTPUT_DIR, OCR_RESULTS_DIR, get_ocr_predicted_groups_filename
 
 APP_LOGGING_NAME = "gemg"
 
 
 def get_ai_predicted_groups(
-    ocr_name: str, prelim_dir: Path, _ocr_bound_ids: list[dict[str, Any]], _png_file: Path
+    svg_stem: str,
+    ocr_type: str,
+    prelim_dir: Path,
+    _ocr_bound_ids: list[dict[str, Any]],
+    _png_file: Path,
 ) -> Any:  # noqa: ANN401
-    temp_ai_predicted_groups_file = prelim_dir / f"{ocr_name}-ocr-ai-predicted-groups.json"
+    ai_predicted_groups_file = prelim_dir / get_ocr_predicted_groups_filename(
+        svg_stem, ocr_type
+    )
 
-    logger.info(f'Reading gemini ai predicted groups from "{temp_ai_predicted_groups_file}".')
+    logger.info(f'Reading gemini ai predicted groups from "{ai_predicted_groups_file}".')
 
-    with temp_ai_predicted_groups_file.open("r") as f:
+    with ai_predicted_groups_file.open("r") as f:
         predicted_groups = f.read()
-        #predicted_groups = get_cleaned_text(predicted_groups)
+        # predicted_groups = get_cleaned_text(predicted_groups)
         return json.loads(predicted_groups)
 
 
@@ -53,7 +58,7 @@ if __name__ == "__main__":
         assert len(cmd_args.get_titles()) == 1
         volume = comics_database.get_fanta_volume_int(cmd_args.get_title())
 
-    volume_dirname = comics_database.get_fantagraphics_volume_dir(volume).name
+    volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
 
     prelim_results_dir = BATCH_JOBS_OUTPUT_DIR / volume_dirname
     logger.info(

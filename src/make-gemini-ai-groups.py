@@ -9,7 +9,8 @@ from loguru import logger
 from loguru_config import LoguruConfig
 from PIL import Image
 
-from src.gemini_ai_ocr_grouper import GeminiAiGrouper
+from gemini_ai_ocr_grouper import GeminiAiGrouper
+from ocr_file_paths import get_ocr_predicted_groups_filename
 from utils.gemini_ai_for_grouping import get_ai_predicted_groups
 from utils.preprocessing import preprocess_image
 
@@ -17,15 +18,21 @@ APP_LOGGING_NAME = "gemg"
 
 
 def get_predicted_groups_from_ai(
-    ocr_name: str, prelim_dir: Path, ocr_bound_ids: list[dict[str, Any]], png_file: Path
+    svg_stem: str,
+    ocr_type: str,
+    prelim_dir: Path,
+    ocr_bound_ids: list[dict[str, Any]],
+    png_file: Path,
 ) -> list[Any]:
     bw_image = get_bw_image_from_alpha(png_file)
     bw_image = preprocess_image(bw_image)
 
     ai_predicted_groups = get_ai_predicted_groups(
-        ocr_name, Image.fromarray(bw_image), ocr_bound_ids
+        svg_stem, ocr_type, Image.fromarray(bw_image), ocr_bound_ids
     )
-    temp_ai_predicted_groups_file = prelim_dir / f"{ocr_name}-ocr-ai-predicted-groups.json"
+    temp_ai_predicted_groups_file = prelim_dir / get_ocr_predicted_groups_filename(
+        svg_stem, ocr_type
+    )
 
     logger.info(f'Writing gemini ai predicted groups to "{temp_ai_predicted_groups_file}".')
 
