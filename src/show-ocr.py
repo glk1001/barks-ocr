@@ -14,6 +14,7 @@ from loguru import logger
 from loguru_config import LoguruConfig
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 
+from ocr_file_paths import OCR_RESULTS_DIR
 from utils.ocr_box import OcrBox
 
 APP_LOGGING_NAME = "socr"
@@ -52,8 +53,6 @@ def ocr_annotate_titles(title_list: list[str], out_dir: Path) -> None:
 
 
 def ocr_annotate_title(title: str, out_dir: Path) -> None:
-    out_dir /= title
-
     logger.info(f'OCR annotating all pages in "{title}" to directory "{out_dir}"...')
 
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -78,7 +77,7 @@ def ocr_annotate_title(title: str, out_dir: Path) -> None:
 
             if final_text_annotated_image_file.is_file():
                 logger.info(
-                    f'Found annotation file - skipping: "{final_text_annotated_image_file}".'
+                    f'Found final annotated file - skipping: "{final_text_annotated_image_file}".'
                 )
                 continue
 
@@ -308,18 +307,31 @@ if __name__ == "__main__":
     # noinspection PyTypeChecker
     cmd_args = CmdArgs(
         "OCR annotate titles",
-        CmdArgNames.VOLUME | CmdArgNames.TITLE | CmdArgNames.WORK_DIR,
+        CmdArgNames.VOLUME | CmdArgNames.TITLE,
     )
     args_ok, error_msg = cmd_args.args_are_valid()
     if not args_ok:
         logger.error(error_msg)
         sys.exit(1)
 
+    comics_database = cmd_args.get_comics_database()
+
+    assert (cmd_args.get_num_volumes() <= 1) or (len(cmd_args.get_titles()) <= 1)
+    if cmd_args.one_or_more_volumes():
+        volume = int(cmd_args.get_volume())
+    else:
+        assert len(cmd_args.get_titles()) == 1
+        volume = comics_database.get_fanta_volume_int(cmd_args.get_title())
+
+    volume_dirname = comics_database.get_fantagraphics_volume_dir(volume).name
+
     # Global variables accessed by loguru-config.
     log_level = cmd_args.get_log_level()
     log_filename = "show-ocr.log"
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
-    comics_database = cmd_args.get_comics_database()
+    output_dir = OCR_RESULTS_DIR / volume_dirname
+    output_dir.mkdir(parents=True, exist_ok=True)
+    logger.info(f'Writing final annotated files to volume directory "{output_dir}"...')
 
-    ocr_annotate_titles(cmd_args.get_titles(), cmd_args.get_work_dir())
+    ocr_annotate_titles(cmd_args.get_titles(), output_dir)

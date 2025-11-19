@@ -6,6 +6,7 @@ from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from loguru import logger
 from loguru_config import LoguruConfig
 
+from ocr_file_paths import BATCH_JOBS_OUTPUT_DIR, UNPROCESSED_BATCH_JOBS_DIR
 from utils.gemini_ai import CLIENT
 
 APP_LOGGING_NAME = "gemr"
@@ -16,7 +17,7 @@ if __name__ == "__main__":
     # noinspection PyTypeChecker
     cmd_args = CmdArgs(
         "Make Gemini AI OCR groups for title",
-        CmdArgNames.VOLUME | CmdArgNames.TITLE | CmdArgNames.WORK_DIR,
+        CmdArgNames.VOLUME | CmdArgNames.TITLE,
     )
     args_ok, error_msg = cmd_args.args_are_valid()
     if not args_ok:
@@ -28,17 +29,19 @@ if __name__ == "__main__":
     log_filename = "make-gemini-ai-groups-get-batch-results.log"
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
-    out_dir = cmd_args.get_work_dir() / "prelim"
-    out_dir.mkdir(parents=True, exist_ok=True)
+    comics_database = cmd_args.get_comics_database()
 
     assert (cmd_args.get_num_volumes() <= 1) or (len(cmd_args.get_titles()) <= 1)
     if cmd_args.one_or_more_volumes():
-        batch_suffix = f"{cmd_args.get_volume()}"
+        volume = int(cmd_args.get_volume())
+        batch_suffix = f"{volume}"
     else:
         assert len(cmd_args.get_titles()) == 1
-        batch_suffix = f"{cmd_args.get_title()}"
+        title = cmd_args.get_title()
+        volume = comics_database.get_fanta_volume_int(title)
+        batch_suffix = f"{title}"
 
-    batch_details_file = Path("/tmp") / f"batch-job-details-{batch_suffix}.json"  # noqa: S108
+    batch_details_file = UNPROCESSED_BATCH_JOBS_DIR / f"batch-job-details-{batch_suffix}.json"
     logger.info(f'Getting batch details from file: "{batch_details_file}".')
 
     with Path(batch_details_file).open("r") as f:
@@ -62,6 +65,11 @@ if __name__ == "__main__":
         logger.info("Downloading and parsing result file content...")
         file_content_bytes = CLIENT.files.download(file=result_file_name)
         file_content = file_content_bytes.decode("utf-8")
+
+        volume_dirname = comics_database.get_fantagraphics_volume_dir(volume).name
+        out_dir = BATCH_JOBS_OUTPUT_DIR / volume_dirname
+        out_dir.mkdir(parents=True, exist_ok=True)
+        logger.info(f'Writing downloaded data to volume directory "{out_dir}"...')
 
         # The result file is also a JSONL file. Parse and save each line.
         file_index = 0

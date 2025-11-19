@@ -39,12 +39,12 @@ class GeminiAiGrouper:
             self._make_groups_for_title(title)
 
     def _make_groups_for_title(self, title: str) -> None:
-        group_dir = self._out_dir / title
-
-        logger.info(f'Making OCR groups for all pages in "{title}". To directory "{group_dir}"...')
+        logger.info(
+            f'Making OCR groups for all pages in "{title}". To directory "{self._out_dir}"...'
+        )
         logger.info(f'Using directory "{self._prelim_dir}" for prelim results.')
 
-        group_dir.mkdir(parents=True, exist_ok=True)
+        self._out_dir.mkdir(parents=True, exist_ok=True)
         comic = self._comics_database.get_comic_book(title)
         svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
         ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
@@ -60,13 +60,13 @@ class GeminiAiGrouper:
                 ocr_type = get_ocr_type(ocr_type_file)
 
                 ocr_final_groups_json_file = self._get_ocr_final_groups_json_filename(
-                    svg_stem, ocr_type, group_dir
+                    svg_stem, ocr_type, self._out_dir
                 )
                 ocr_groups_json_file = self._get_ocr_groups_json_filename(
-                    svg_stem, ocr_type, group_dir
+                    svg_stem, ocr_type, self._out_dir
                 )
                 ocr_groups_txt_file = self._get_ocr_groups_txt_filename(
-                    svg_stem, ocr_type, group_dir
+                    svg_stem, ocr_type, self._out_dir
                 )
 
                 result = self._make_groups(
