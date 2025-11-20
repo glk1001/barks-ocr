@@ -10,6 +10,7 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
 from loguru import logger
 
+from ocr_file_paths import BATCH_JOBS_OUTPUT_DIR, OCR_RESULTS_DIR
 from utils.common import ProcessResult
 from utils.geometry import Rect
 from utils.ocr_box import (
@@ -25,18 +26,12 @@ class GeminiAiGrouper:
     def __init__(
         self,
         comics_database: ComicsDatabase,
-        prelim_dir: Path,
-        out_dir: Path,
         get_ai_predicted_groups_func: Callable[[str, str, Path, list[dict[str, Any]], Path], Any],
     ) -> None:
         self._comics_database = comics_database
-        self._prelim_dir = prelim_dir
-        self._out_dir = out_dir
         self._get_ai_predicted_groups = get_ai_predicted_groups_func
 
     def make_groups_for_titles(self, title_list: list[str]) -> None:
-        self._out_dir.mkdir(parents=True, exist_ok=True)
-
         for title in title_list:
             if is_non_comic_title(title):
                 logger.warning(f'Not a comic title "{title}" - skipping.')
@@ -45,10 +40,19 @@ class GeminiAiGrouper:
             self._make_groups_for_title(title)
 
     def _make_groups_for_title(self, title: str) -> None:
+        volume = self._comics_database.get_fanta_volume_int(title)
+        volume_dirname = self._comics_database.get_fantagraphics_volume_title(volume)
+
+        prelim_results_dir = BATCH_JOBS_OUTPUT_DIR / volume_dirname
         logger.info(
-            f'Making OCR groups for all pages in "{title}". To directory "{self._out_dir}"...'
+            f'Looking for preliminary predicted group data in directory "{prelim_results_dir}"...'
         )
-        logger.info(f'Using directory "{self._prelim_dir}" for prelim results.')
+        assert prelim_results_dir.is_dir()
+
+        out_dir = OCR_RESULTS_DIR / volume_dirname
+        out_dir.mkdir(parents=True, exist_ok=True)
+
+        logger.info(f'Making OCR groups for all pages in "{title}". To directory "{out_dir}"...')
 
         comic = self._comics_database.get_comic_book(title)
         svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
@@ -64,16 +68,21 @@ class GeminiAiGrouper:
             for ocr_type_file in ocr_file:
                 ocr_type = get_ocr_type(ocr_type_file)
 
-                ocr_final_groups_json_file = self._get_ocr_final_groups_json_filename(
+                ocr_final_groups_json_file = out_dir / self._get_ocr_final_groups_json_filename(
                     svg_stem, ocr_type
                 )
-                ocr_groups_json_file = self._get_ocr_groups_json_filename(svg_stem, ocr_type)
-                ocr_groups_txt_file = self._get_ocr_groups_txt_filename(svg_stem, ocr_type)
+                ocr_groups_json_file = out_dir / self._get_ocr_groups_json_filename(
+                    svg_stem, ocr_type
+                )
+                ocr_groups_txt_file = out_dir / self._get_ocr_groups_txt_filename(
+                    svg_stem, ocr_type
+                )
 
                 result = self._make_groups(
                     svg_file,
                     ocr_type_file,
                     ocr_type,
+                    prelim_results_dir,
                     panel_segments_file,
                     ocr_final_groups_json_file,
                     ocr_groups_json_file,
@@ -93,6 +102,7 @@ class GeminiAiGrouper:
         svg_file: Path,
         ocr_file: Path,
         ocr_type: str,
+        prelim_dir: Path,
         panel_segments_file: Path,
         ocr_final_data_groups_json_file: Path,
         ocr_groups_json_file: Path,
@@ -121,7 +131,7 @@ class GeminiAiGrouper:
             ocr_bound_ids = self._assign_ids_to_ocr_boxes(ocr_data)
 
             ai_predicted_groups = self._get_ai_predicted_groups(
-                svg_stem, ocr_type, self._prelim_dir, ocr_bound_ids, png_file
+                svg_stem, ocr_type, prelim_dir, ocr_bound_ids, png_file
             )
 
             # Merge boxes into text bubbles
@@ -249,14 +259,17 @@ class GeminiAiGrouper:
     def _assign_ids_to_ocr_boxes(bounds: list[dict[str, Any]]) -> list[dict[str, Any]]:
         return [{**bound, "text_id": str(i)} for i, bound in enumerate(bounds)]
 
-    def _get_ocr_groups_txt_filename(self, svg_stem: str, ocr_type: str) -> Path:
-        return self._out_dir / (svg_stem + f"-{ocr_type}-gemini-groups.txt")
+    @staticmethod
+    def _get_ocr_groups_txt_filename(svg_stem: str, ocr_type: str) -> str:
+        return svg_stem + f"-{ocr_type}-gemini-groups.txt"
 
-    def _get_ocr_groups_json_filename(self, svg_stem: str, ocr_type: str) -> Path:
-        return self._out_dir / (svg_stem + f"-{ocr_type}-gemini-groups.json")
+    @staticmethod
+    def _get_ocr_groups_json_filename(svg_stem: str, ocr_type: str) -> str:
+        return svg_stem + f"-{ocr_type}-gemini-groups.json"
 
-    def _get_ocr_final_groups_json_filename(self, svg_stem: str, ocr_type: str) -> Path:
-        return self._out_dir / (svg_stem + f"-{ocr_type}-gemini-final-groups.json")
+    @staticmethod
+    def _get_ocr_final_groups_json_filename(svg_stem: str, ocr_type: str) -> str:
+        return svg_stem + f"-{ocr_type}-gemini-final-groups.json"
 
     @staticmethod
     def _get_enclosing_box(boxes: list[PointList]) -> PointList:

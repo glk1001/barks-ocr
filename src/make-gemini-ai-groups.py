@@ -61,9 +61,5 @@ if __name__ == "__main__":
 
     comics_database = cmd_args.get_comics_database()
 
-    output_dir = cmd_args.get_work_dir()
-    prelim_results_dir = output_dir / "prelim"
-    gemini_ai_grouper = GeminiAiGrouper(
-        comics_database, prelim_results_dir, output_dir, get_predicted_groups_from_ai
-    )
+    gemini_ai_grouper = GeminiAiGrouper(comics_database, get_predicted_groups_from_ai)
     gemini_ai_grouper.make_groups_for_titles(cmd_args.get_titles())
