@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 import cv2 as cv
+from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import PNG_FILE_EXT, RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
@@ -49,6 +50,10 @@ def get_color(group_id: int) -> str:
 
 def ocr_annotate_titles(title_list: list[str]) -> None:
     for title in title_list:
+        if is_non_comic_title(title):
+            logger.warning(f'Not a comic title "{title}" - skipping.')
+            continue
+
         ocr_annotate_title(title)
 
 
@@ -161,8 +166,18 @@ def write_bounds_to_image_file(
         panel_segment_info = json.load(f)
 
     pil_image = Image.open(str(png_file))
-    assert pil_image.size[0] == panel_segment_info["size"][0]
-    assert pil_image.size[1] == panel_segment_info["size"][1]
+    if pil_image.size[0] != panel_segment_info["size"][0]:
+        msg = (
+            f'For image "{png_file}", image size[0] {pil_image.size[0]}'
+            f" does not match panel segment info size[0] {panel_segment_info['size'][0]}."
+        )
+        raise RuntimeError(msg)
+    if pil_image.size[1] != panel_segment_info["size"][1]:
+        msg = (
+            f'For image "{png_file}", image size[1] {pil_image.size[1]}'
+            f" does not match panel segment info size[1] {panel_segment_info['size'][1]}."
+        )
+        raise RuntimeError(msg)
 
     img_rects = ImageDraw.Draw(pil_image)
     for box in panel_segment_info["panels"]:
@@ -288,12 +303,22 @@ def ocr_annotate_image_with_individual_boxes(
 
         for box_id in json_text_data_boxes[group]["cleaned_box_texts"]:
             text_data = json_text_data_boxes[group]["cleaned_box_texts"][box_id]
-            ocr_box = OcrBox(
-                text_data["text_box"],
-                text_data["text_frag"],
-                0.0,
-                "N/A",
-            )
+
+            text_box = text_data["text_box"]
+            if text_box is None:
+                logger.warning(f"No text box found for group {group_id} and box_id {box_id}.")
+                continue
+
+            try:
+                ocr_box = OcrBox(
+                    text_box,
+                    text_data["text_frag"],
+                    0.0,
+                    "N/A",
+                )
+            except Exception as e:
+                logger.error(f"OcrBox error occurred for text_data: {text_data}")
+                raise e from e
 
             if ocr_box.is_approx_rect:
                 img_rects_draw.rectangle(
