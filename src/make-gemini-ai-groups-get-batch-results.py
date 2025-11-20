@@ -28,6 +28,9 @@ def process_batch_jobs(titles: list[str]):
 
 
 def process_batch_job(title: str):
+    # noinspection PyBroadException
+    num_errors = 0
+    # noinspection PyBroadException
     try:
         batch_details_file = get_batch_details_file(title)
         finished_batch_details_file = FINISHED_BATCH_JOBS_DIR / batch_details_file.name
@@ -36,7 +39,9 @@ def process_batch_job(title: str):
             if not finished_batch_details_file.exists():
                 msg = f'Batch details file not found and no finished batch details file: "{batch_details_file}"'
                 raise FileNotFoundError(msg)
-            logger.info(f'Found finished batch details file: "{finished_batch_details_file}" - skipping.')
+            logger.info(
+                f'Found finished batch details file: "{finished_batch_details_file}" - skipping.'
+            )
             return
 
         logger.info(f'Getting batch details from file: "{batch_details_file}".')
@@ -80,14 +85,23 @@ def process_batch_job(title: str):
                     logger.error(parsed_response["error"])
                     continue
 
-                for part in parsed_response["response"]["candidates"][0]["content"]["parts"]:
-                    if part.get("text"):
-                        out_file = out_dir / gemini_output_files[file_index]
-                        file_index += 1
+                # noinspection PyBroadException
+                try:
+                    for part in parsed_response["response"]["candidates"][0]["content"]["parts"]:
+                        if part.get("text"):
+                            out_file = out_dir / gemini_output_files[file_index]
+                            file_index += 1
 
-                        logger.info(f'Writing line {file_index} to file: "{out_file}"...')
-                        with out_file.open("w") as f:
-                            f.write(part["text"])
+                            logger.info(f'Writing line {file_index} to file: "{out_file}"...')
+                            with out_file.open("w") as f:
+                                f.write(part["text"])
+                except Exception:
+                    logger.error(
+                        f"Error parsing line {file_index}:"
+                        f" {parsed_response['response']['candidates'][0]}"
+                    )
+                    num_errors += 1
+                    logger.exception(f"Error parsing line {file_index} but continuing")
 
         batch_details_file.rename(finished_batch_details_file)
         logger.info(f'Moved "{batch_details_file}" to finished "{finished_batch_details_file}".')
@@ -98,7 +112,12 @@ def process_batch_job(title: str):
         logger.info(f'Moved "{batch_requests_file}" to finished "{finished_batch_requests_file}".')
 
     except:
-        logger.exception(f'Could not process batch result for title: "{title}".')
+        logger.exception(f'Could not fully process batch result for title: "{title}".')
+
+    if num_errors > 0:
+        logger.error(
+            f"There were {num_errors} errors while processing batch results for title: '{title}'."
+        )
 
 
 if __name__ == "__main__":

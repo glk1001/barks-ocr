@@ -17,15 +17,22 @@ APP_LOGGING_NAME = "chkr"
 
 
 def check_gemini_ai_groups_for_titles(titles: list[str]) -> None:
+    total_errors = 0
+
     for title in titles:
         if is_non_comic_title(title):
             logger.warning(f'Not a comic title "{title}" - skipping.')
             continue
 
-        check_gemini_ai_groups_for_title(title)
+        total_errors += check_gemini_ai_groups_for_title(title)
+
+    if total_errors == 0:
+        logger.success("All comic titles checked - no errors found.")
+    else:
+        logger.error(f"There were {total_errors} errors found.")
 
 
-def check_gemini_ai_groups_for_title(title: str) -> None:
+def check_gemini_ai_groups_for_title(title: str) -> int:
     volume_dirname = comics_database.get_fantagraphics_volume_title(
         comics_database.get_fanta_volume_int(title)
     )
@@ -53,6 +60,8 @@ def check_gemini_ai_groups_for_title(title: str) -> None:
 
     if num_errors > 0:
         logger.error(f'There were {num_errors} errors for title "{title}".')
+
+    return num_errors
 
 
 if __name__ == "__main__":

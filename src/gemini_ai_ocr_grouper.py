@@ -206,7 +206,7 @@ class GeminiAiGrouper:
                 logger.exception(f"Could not get enclosing panel number for group '{group_id}':")
                 continue
 
-            ai_text = get_cleaned_text(group["cleaned_text"])
+            ai_text = group["cleaned_text"]
 
             try:
                 merged_groups[group_id] = {

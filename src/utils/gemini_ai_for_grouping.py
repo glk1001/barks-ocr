@@ -68,7 +68,9 @@ def get_ai_predicted_groups(
         },
     )
 
-    cleaned = get_cleaned_text(response.text)
+    cleaned, reason_changed = get_cleaned_text(response.text)
+    if reason_changed:
+        logger.warning(f"Fixed json in model response: {reason_changed}.")
 
     temp_cleaned_file = Path(f"/tmp/{svg_stem}-{ocr_type}-gemini-cleaned-response.json")  # noqa: S108
     logger.info(f'Writing gemini cleaned response to "{temp_cleaned_file}".')
