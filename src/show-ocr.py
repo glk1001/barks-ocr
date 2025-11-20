@@ -15,7 +15,12 @@ from loguru import logger
 from loguru_config import LoguruConfig
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 
-from ocr_file_paths import OCR_RESULTS_DIR
+from ocr_file_paths import (
+    OCR_RESULTS_DIR,
+    get_ocr_boxes_annotated_filename,
+    get_ocr_final_text_annotated_filename,
+    get_ocr_group_filename,
+)
 from utils.ocr_box import OcrBox
 
 APP_LOGGING_NAME = "socr"
@@ -58,6 +63,10 @@ def ocr_annotate_titles(title_list: list[str]) -> None:
 
 
 def ocr_annotate_title(title: str) -> None:
+    # Special case. Because "Silent Night" is a restored comic, the panel bounds
+    # are out of whack.
+    annotate_with_panels_bounds = title != "Silent Night"
+
     volume = comics_database.get_fanta_volume_int(title)
     volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
     out_dir = OCR_RESULTS_DIR / volume_dirname
@@ -80,9 +89,9 @@ def ocr_annotate_title(title: str) -> None:
         for ocr_type_file in ocr_file:
             ocr_type = get_ocr_type(ocr_type_file)
 
-            ocr_group_file = get_ocr_group_filename(svg_stem, ocr_type, out_dir)
-            final_text_annotated_image_file = get_final_text_annotated_filename(
-                svg_stem, ocr_type, out_dir
+            ocr_group_file = out_dir / get_ocr_group_filename(svg_stem, ocr_type)
+            final_text_annotated_image_file = out_dir / get_ocr_final_text_annotated_filename(
+                svg_stem, ocr_type
             )
 
             if final_text_annotated_image_file.is_file():
@@ -91,7 +100,9 @@ def ocr_annotate_title(title: str) -> None:
                 )
                 continue
 
-            boxes_annotated_image_file = get_boxes_annotated_filename(svg_stem, ocr_type, out_dir)
+            boxes_annotated_image_file = out_dir / get_ocr_boxes_annotated_filename(
+                svg_stem, ocr_type
+            )
 
             ocr_annotate_image_with_final_text(
                 png_file, ocr_group_file, final_text_annotated_image_file
@@ -100,24 +111,13 @@ def ocr_annotate_title(title: str) -> None:
                 png_file, ocr_group_file, boxes_annotated_image_file
             )
 
-            annotate_image_with_panel_bounds(panel_segments_file, final_text_annotated_image_file)
-            annotate_image_with_panel_bounds(panel_segments_file, boxes_annotated_image_file)
-
-
-def get_final_text_annotated_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-{ocr_type}-ocr-gemini-final-text-annotated.png")
-    # return out_dir / (svg_stem + f"-{ocr_type}-ocr-calculated-annotated.png")
-
-
-def get_boxes_annotated_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
-    return out_dir / (svg_stem + f"-{ocr_type}-ocr-gemini-boxes-annotated.png")
-    # return out_dir / (svg_stem + f"-{ocr_type}-ocr-calculated-boxes-annotated.png")
-
-
-def get_ocr_group_filename(svg_stem: str, ocr_type: str, out_dir: Path) -> Path:
-    # return os.path.join(out_dir, svg_stem + f"-gemini-groups{ocr_suffix}.json")
-    return out_dir / (svg_stem + f"-{ocr_type}-gemini-final-groups.json")
-    # return out_dir / (svg_stem + f"-{ocr_type}-calculated-groups.json")
+            if not annotate_with_panels_bounds:
+                logger.warning(f'"{title}": special case - not annotating with panel bounds.')
+            else:
+                annotate_image_with_panel_bounds(
+                    panel_segments_file, final_text_annotated_image_file
+                )
+                annotate_image_with_panel_bounds(panel_segments_file, boxes_annotated_image_file)
 
 
 def get_image_to_annotate(png_file: Path) -> cv.typing.MatLike:

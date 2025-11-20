@@ -11,6 +11,7 @@ from loguru_config import LoguruConfig
 from ocr_file_paths import (
     OCR_RESULTS_DIR,
     get_ocr_final_groups_json_filename,
+    get_ocr_final_text_annotated_filename,
 )
 
 APP_LOGGING_NAME = "chkr"
@@ -51,12 +52,22 @@ def check_gemini_ai_groups_for_title(title: str) -> int:
         for ocr_type_file in ocr_file:
             svg_stem = ocr_type_file.stem[:3]
             ocr_type = get_ocr_type(ocr_type_file)
+
             ocr_final_groups_json_file = title_results_dir / get_ocr_final_groups_json_filename(
                 svg_stem, ocr_type
             )
             if not ocr_final_groups_json_file.is_file():
-                logger.error(f'Missing final groups file: "{ocr_final_groups_json_file}".')
+                logger.error(f'Missing final groups json file: "{ocr_final_groups_json_file}".')
                 num_errors += 1
+            else:
+                ocr_final_groups_annotated_file = (
+                    title_results_dir / get_ocr_final_text_annotated_filename(svg_stem, ocr_type)
+                )
+                if not ocr_final_groups_annotated_file.is_file():
+                    logger.error(
+                        f'Missing final groups annotated file: "{ocr_final_groups_json_file}".'
+                    )
+                    num_errors += 1
 
     if num_errors > 0:
         logger.error(f'There were {num_errors} errors for title "{title}".')

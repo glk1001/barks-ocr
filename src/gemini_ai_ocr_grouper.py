@@ -11,7 +11,6 @@ from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
 from loguru import logger
 
 from utils.common import ProcessResult
-from utils.gemini_ai_for_grouping import get_cleaned_text
 from utils.geometry import Rect
 from utils.ocr_box import (
     OcrBox,
