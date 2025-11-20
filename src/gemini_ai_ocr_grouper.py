@@ -173,9 +173,22 @@ class GeminiAiGrouper:
             box_bounds: list[PointList] = []
             box_texts = {}
             for box_id in box_ids:
+                if box_id not in cleaned_box_texts:
+                    logger.warning(
+                        f'For group {group_id}, could not find box_id "{box_id}"'
+                        f" in cleaned_box_texts: {cleaned_box_texts.keys()}."
+                    )
+                    continue
+
                 cleaned_box_text = cleaned_box_texts[box_id]
                 if not cleaned_box_text:
                     logger.warning(f'Ignoring empty text fragment for box "{box_id}".')
+                elif box_id not in id_to_bound:
+                    logger.warning(
+                        f'For group {group_id}, could not find box_id "{box_id}"'
+                        f" in id_to_bound: {id_to_bound.keys()}."
+                    )
+                    # box_texts[box_id] = {"text_frag": cleaned_box_text, "text_box": None}
                 else:
                     box = id_to_bound[box_id]["text_box"]
                     box_texts[box_id] = {"text_frag": cleaned_box_text, "text_box": box}
@@ -195,17 +208,21 @@ class GeminiAiGrouper:
 
             ai_text = get_cleaned_text(group["cleaned_text"])
 
-            merged_groups[group_id] = {
-                "panel_id": group["panel_id"],
-                "panel_num": panel_num,
-                "text_box": enclosing_box,
-                "ocr_text": group["original_text"],
-                "ai_text": ai_text,
-                "type": group["type"],
-                "style": group["style"],
-                "notes": group["notes"],
-                "cleaned_box_texts": box_texts,
-            }
+            try:
+                merged_groups[group_id] = {
+                    "panel_id": group["panel_id"],
+                    "panel_num": panel_num,
+                    "text_box": enclosing_box,
+                    "ocr_text": group["original_text"],
+                    "ai_text": ai_text,
+                    "type": group["type"],
+                    "style": group["style"],
+                    "notes": group["notes"],
+                    "cleaned_box_texts": box_texts,
+                }
+            except Exception as e:
+                logger.error(f"Could not set merged_group '{group_id}': {group}")
+                raise e from e
 
         return merged_groups
 

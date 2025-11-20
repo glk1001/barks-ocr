@@ -9,6 +9,7 @@ from loguru_config import LoguruConfig
 
 from gemini_ai_ocr_grouper import GeminiAiGrouper
 from ocr_file_paths import BATCH_JOBS_OUTPUT_DIR, OCR_RESULTS_DIR, get_ocr_predicted_groups_filename
+from utils.gemini_ai_for_grouping import get_cleaned_text
 
 APP_LOGGING_NAME = "gemg"
 
@@ -28,7 +29,11 @@ def get_ai_predicted_groups(
 
     with ai_predicted_groups_file.open("r") as f:
         predicted_groups = f.read()
-        # predicted_groups = get_cleaned_text(predicted_groups)
+
+        predicted_groups, reason_changed = get_cleaned_text(predicted_groups)
+        if reason_changed:
+            logger.warning(f'Fixed json in "{ai_predicted_groups_file}": {reason_changed}.')
+
         return json.loads(predicted_groups)
 
 

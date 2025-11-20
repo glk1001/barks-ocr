@@ -32,15 +32,19 @@ class OcrOutput(BaseModel):
     groups: list[Group]
 
 
-def get_cleaned_text(text: str) -> str:
-    if r"\n" in text:
-        text = text.replace(r"\n", "\n")
-        logger.warning(f'Replaced escaped newline in "{text}".')
+def get_cleaned_text(text: str) -> tuple[str, str]:
+    reason = ""
+    if r"\\n" in text:
+        text = text.replace(r"\\n", "\\n")
+        reason = "Double backslash newline"
+    if r"\\'" in text:
+        text = text.replace(r"\\'", "'")
+        reason = "Double backslash single quote"
     if r"\'" in text:
         text = text.replace(r"\'", "'")
-        logger.warning(f'Replaced escaped single quote in "{text}".')
+        reason = "Single backslash single quote"
 
-    return text
+    return text, reason
 
 
 def get_ai_predicted_groups(
