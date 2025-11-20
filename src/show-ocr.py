@@ -47,12 +47,17 @@ def get_color(group_id: int) -> str:
     return COLORS[group_id]
 
 
-def ocr_annotate_titles(title_list: list[str], out_dir: Path) -> None:
+def ocr_annotate_titles(title_list: list[str]) -> None:
     for title in title_list:
-        ocr_annotate_title(title, out_dir)
+        ocr_annotate_title(title)
 
 
-def ocr_annotate_title(title: str, out_dir: Path) -> None:
+def ocr_annotate_title(title: str) -> None:
+    volume = comics_database.get_fanta_volume_int(title)
+    volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
+    out_dir = OCR_RESULTS_DIR / volume_dirname
+    out_dir.mkdir(parents=True, exist_ok=True)
+
     logger.info(f'OCR annotating all pages in "{title}" to directory "{out_dir}"...')
 
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -316,22 +321,9 @@ if __name__ == "__main__":
 
     comics_database = cmd_args.get_comics_database()
 
-    assert (cmd_args.get_num_volumes() <= 1) or (len(cmd_args.get_titles()) <= 1)
-    if cmd_args.one_or_more_volumes():
-        volume = int(cmd_args.get_volume())
-    else:
-        assert len(cmd_args.get_titles()) == 1
-        volume = comics_database.get_fanta_volume_int(cmd_args.get_title())
-
-    volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
-
     # Global variables accessed by loguru-config.
     log_level = cmd_args.get_log_level()
     log_filename = "show-ocr.log"
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
-    output_dir = OCR_RESULTS_DIR / volume_dirname
-    output_dir.mkdir(parents=True, exist_ok=True)
-    logger.info(f'Writing final annotated files to volume directory "{output_dir}"...')
-
-    ocr_annotate_titles(cmd_args.get_titles(), output_dir)
+    ocr_annotate_titles(cmd_args.get_titles())
