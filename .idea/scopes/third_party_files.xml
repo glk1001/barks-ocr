@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="third_party_files" pattern="file:src/utils/geometry.py" />
+</component>
