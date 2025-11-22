@@ -1,11 +1,13 @@
 from pathlib import Path
 
-OCR_ROOT = Path.home() / "Books" / "Carl Barks" / "Projects" / "OCR"
+BARKS_ROOT = Path.home() / "Books" / "Carl Barks"
 
-OCR_RESULTS_DIR = OCR_ROOT / "Results"
-
+OCR_RESULTS_DIR = BARKS_ROOT / "Fantagraphics-restored-ocr"
+OCR_ANNOTATIONS_DIR = OCR_RESULTS_DIR / "Annotations"
 OCR_FIXES_DIR = OCR_RESULTS_DIR / "Fixes"
+OCR_FIXES_BACKUP_DIR = OCR_RESULTS_DIR / "Fixes-bak"
 
+OCR_ROOT = BARKS_ROOT / "Projects" / "OCR"
 BATCH_JOBS_DIR = OCR_ROOT / "batch-jobs"
 UNPROCESSED_BATCH_JOBS_DIR = BATCH_JOBS_DIR / "unprocessed"
 FINISHED_BATCH_JOBS_DIR = BATCH_JOBS_DIR / "finished"

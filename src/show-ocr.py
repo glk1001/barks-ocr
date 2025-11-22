@@ -16,6 +16,7 @@ from loguru_config import LoguruConfig
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 
 from ocr_file_paths import (
+    OCR_ANNOTATIONS_DIR,
     OCR_RESULTS_DIR,
     get_ocr_boxes_annotated_filename,
     get_ocr_final_text_annotated_filename,
@@ -69,12 +70,12 @@ def ocr_annotate_title(title: str) -> None:
 
     volume = comics_database.get_fanta_volume_int(title)
     volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
-    out_dir = OCR_RESULTS_DIR / volume_dirname
-    out_dir.mkdir(parents=True, exist_ok=True)
+    gemini_groups_dir = OCR_RESULTS_DIR / volume_dirname
+    out_image_dir = OCR_ANNOTATIONS_DIR / volume_dirname
+    out_image_dir.mkdir(parents=True, exist_ok=True)
 
-    logger.info(f'OCR annotating all pages in "{title}" to directory "{out_dir}"...')
+    logger.info(f'OCR annotating all pages in "{title}" to directory "{out_image_dir}"...')
 
-    out_dir.mkdir(parents=True, exist_ok=True)
     comic = comics_database.get_comic_book(title)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
     ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
@@ -89,8 +90,8 @@ def ocr_annotate_title(title: str) -> None:
         for ocr_type_file in ocr_file:
             ocr_type = get_ocr_type(ocr_type_file)
 
-            ocr_group_file = out_dir / get_ocr_group_filename(svg_stem, ocr_type)
-            final_text_annotated_image_file = out_dir / get_ocr_final_text_annotated_filename(
+            ocr_group_file = gemini_groups_dir / get_ocr_group_filename(svg_stem, ocr_type)
+            final_text_annotated_image_file = out_image_dir / get_ocr_final_text_annotated_filename(
                 svg_stem, ocr_type
             )
 
@@ -100,7 +101,7 @@ def ocr_annotate_title(title: str) -> None:
                 )
                 continue
 
-            boxes_annotated_image_file = out_dir / get_ocr_boxes_annotated_filename(
+            boxes_annotated_image_file = out_image_dir / get_ocr_boxes_annotated_filename(
                 svg_stem, ocr_type
             )
 

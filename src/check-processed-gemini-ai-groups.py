@@ -1,5 +1,4 @@
 import json
-import subprocess
 import sys
 from pathlib import Path
 
@@ -13,6 +12,7 @@ from thefuzz import fuzz, process
 
 from ocr_file_paths import (
     BATCH_JOBS_OUTPUT_DIR,
+    OCR_ANNOTATIONS_DIR,
     OCR_FIXES_DIR,
     OCR_RESULTS_DIR,
     get_ocr_boxes_annotated_filename,
@@ -22,18 +22,6 @@ from ocr_file_paths import (
 )
 
 APP_LOGGING_NAME = "chkr"
-
-
-# TODO: duplicated in show-title-images
-VIEWER_EXE = ["/usr/bin/eog"]
-
-
-def open_viewer(image_file: Path) -> None:
-    command = [*VIEWER_EXE, str(image_file)]
-
-    _proc = subprocess.Popen(command)  # noqa: S603
-
-    print(f'Image Viewer should now be showing image "{image_file}".')
 
 
 def get_fix_command(
@@ -60,7 +48,7 @@ def get_fix_command(
     )
 
     file1_image = (
-        OCR_RESULTS_DIR / volume_dirname / get_ocr_boxes_annotated_filename(svg_stem, ocr_type1)
+        OCR_ANNOTATIONS_DIR / volume_dirname / get_ocr_boxes_annotated_filename(svg_stem, ocr_type1)
     )
 
     target_key = "cleaned_text"
@@ -134,6 +122,7 @@ def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close:
         comics_database.get_fanta_volume_int(title)
     )
     title_results_dir = OCR_RESULTS_DIR / volume_dirname
+    title_annotated_images_dir = OCR_ANNOTATIONS_DIR / volume_dirname
 
     logger.info(
         f'Checking processed OCR groups for all pages in "{title}".'
@@ -160,7 +149,8 @@ def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close:
                 missing_ocr_file = True
             else:
                 ocr_final_groups_annotated_file = (
-                    title_results_dir / get_ocr_final_text_annotated_filename(svg_stem, ocr_type)
+                    title_annotated_images_dir
+                    / get_ocr_final_text_annotated_filename(svg_stem, ocr_type)
                 )
                 if not ocr_final_groups_annotated_file.is_file():
                     logger.error(
@@ -257,7 +247,7 @@ def compare_ai_texts(
                 f"\n\nin other:\n\n{ocr_group_2_ai_texts}."
             )
 
-        logger.warning(f"Appending {group_id}")
+        logger.debug(f"Appending fixes info for group {group_id}")
         fix_objects[int(group_id)] = get_fix_command(
             volume_dirname,
             ocr_type_file,
