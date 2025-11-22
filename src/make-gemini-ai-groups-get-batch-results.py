@@ -18,7 +18,7 @@ from utils.gemini_ai import CLIENT
 APP_LOGGING_NAME = "gemr"
 
 
-def process_batch_jobs(titles: list[str]):
+def process_batch_jobs(titles: list[str]) -> None:
     for title in titles:
         if is_non_comic_title(title):
             logger.warning(f'Not a comic title "{title}" - skipping.')
@@ -27,7 +27,7 @@ def process_batch_jobs(titles: list[str]):
         process_batch_job(title)
 
 
-def process_batch_job(title: str):
+def process_batch_job(title: str) -> None:  # noqa: PLR0915
     # noinspection PyBroadException
     num_errors = 0
     # noinspection PyBroadException
@@ -37,7 +37,8 @@ def process_batch_job(title: str):
 
         if not batch_details_file.is_file():
             if not finished_batch_details_file.exists():
-                msg = f'Batch details file not found and no finished batch details file: "{batch_details_file}"'
+                msg = (f'Batch details file not found and'
+                       f' no finished batch details file: "{batch_details_file}"')
                 raise FileNotFoundError(msg)
             logger.info(
                 f'Found finished batch details file: "{finished_batch_details_file}" - skipping.'
@@ -52,20 +53,23 @@ def process_batch_job(title: str):
         gemini_output_files = details["gemini_output_files"]
         logger.info(f'Gemini batch job name: {batch_job_name}".')
 
-        # CLIENT.batches.delete(name=batch_job_name)
-        # sys.exit(0)
+        # CLIENT.batches.delete(name=batch_job_name)  # noqa: ERA001
+        # sys.exit(0)  # noqa: ERA001
 
         batch_job_from_file = CLIENT.batches.get(name=batch_job_name)
-        if batch_job_from_file.state.name != "JOB_STATE_SUCCEEDED":
-            logger.error(f"Job did not succeed. Final state: {batch_job_from_file.state.name}")
+        assert batch_details_file
+        job_state = batch_job_from_file.state.name  # ty: ignore[possibly-missing-attribute]
+        if job_state != "JOB_STATE_SUCCEEDED":
+            logger.error(f"Job did not succeed. Final state: {job_state}")
             return
 
-        logger.info(f"Job status: {batch_job_from_file.state.name}.")
+        logger.info(f"Job status: {job_state}.")
         # The output is in another file.
-        result_file_name = batch_job_from_file.dest.file_name
+        result_file_name = batch_job_from_file.dest.file_name  # ty: ignore[possibly-missing-attribute]
         logger.info(f'Results are in Gemini file: "{result_file_name}".')
 
         logger.info("Downloading and parsing result file content...")
+        assert result_file_name
         file_content_bytes = CLIENT.files.download(file=result_file_name)
         file_content = file_content_bytes.decode("utf-8")
 
@@ -95,7 +99,7 @@ def process_batch_job(title: str):
                             logger.info(f'Writing line {file_index} to file: "{out_file}"...')
                             with out_file.open("w") as f:
                                 f.write(part["text"])
-                except Exception:
+                except Exception:  # noqa: BLE001
                     logger.error(
                         f"Error parsing line {file_index}:"
                         f" {parsed_response['response']['candidates'][0]}"
@@ -111,7 +115,7 @@ def process_batch_job(title: str):
         batch_requests_file.rename(finished_batch_requests_file)
         logger.info(f'Moved "{batch_requests_file}" to finished "{finished_batch_requests_file}".')
 
-    except:
+    except:  # noqa: E722
         logger.exception(f'Could not fully process batch result for title: "{title}".')
 
     if num_errors > 0:

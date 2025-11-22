@@ -152,7 +152,6 @@ class GeminiAiGrouper:
         except:  # noqa: E722
             logger.exception(f'Could not process file "{png_file}":')
             sys.exit(1)
-            return ProcessResult.FAILURE
         else:
             return ProcessResult.SUCCESS
 
@@ -197,7 +196,6 @@ class GeminiAiGrouper:
                         f'For group {group_id}, could not find box_id "{box_id}"'
                         f" in id_to_bound: {id_to_bound.keys()}."
                     )
-                    # box_texts[box_id] = {"text_frag": cleaned_box_text, "text_box": None}
                 else:
                     box = id_to_bound[box_id]["text_box"]
                     box_texts[box_id] = {"text_frag": cleaned_box_text, "text_box": box}
@@ -347,5 +345,6 @@ class GeminiAiGrouper:
                         f"text: '{ocr_box.ocr_text:<{max_text_len}}', "
                         f"acc: '{ocr_box.accepted_text:<{max_acc_text_len}}', "
                         f"P: {ocr_box.ocr_prob:4.2f}, "
-                        f"box: {get_box_str(ocr_box._box_points)}, rect: {ocr_box.is_approx_rect}\n"  # noqa: SLF001
+                        f"box: {get_box_str(ocr_box._box_points)},"  # noqa: SLF001
+                        f" rect: {ocr_box.is_approx_rect}\n"
                     )

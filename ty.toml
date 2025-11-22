@@ -15,4 +15,8 @@ exclude = [
     "**/scraps",
     "**/tools",
     "src/utils/geometry.py",
+    "src/nano-banana-panels-ai.py",
+    "src/nano-banana-test.py",
+    "src/nano-banana-batch.py",
+    "src/nano-banana-batch-results.py",
 ]

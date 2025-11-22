@@ -68,6 +68,7 @@ def get_ai_predicted_groups(
         },
     )
 
+    assert response.text
     cleaned, reason_changed = get_cleaned_text(response.text)
     if reason_changed:
         logger.warning(f"Fixed json in model response: {reason_changed}.")

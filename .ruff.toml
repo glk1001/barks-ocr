@@ -2,7 +2,11 @@ line-length = 100
 
 exclude = [
         "scraps",
-    	"src/utils/geomtery.py",
+        "tools",
+        "**/src/utils/geometry.py",
+        "**/src/make-ocr-groups.py",
+        "**/src/nano-banana-batch.py",
+        "**/src/nano-banana-batch-results.py",
     ]
 
 [lint]
@@ -18,11 +22,6 @@ exclude = [
         "PLR0913",
         "S101", "S311",
         "TD002", "TD003",
-    ]
-
-    exclude = [
-        "scraps/*",
-    	"src/utils/geomtery.py",
     ]
 
     [lint.per-file-ignores]

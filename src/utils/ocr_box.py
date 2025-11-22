@@ -22,11 +22,10 @@ class OcrBox:
         self.ocr_prob = ocr_prob
         self.accepted_text = accepted_text
 
-        # print(f"minimum_rotated_rectangle: {MultiPoint(self._box_points).minimum_rotated_rectangle}")
         min_rotated_rectangle_azimuth = self._get_min_rotated_rectangle_azimuth(
             MultiPoint(self._box_points).minimum_rotated_rectangle
         )
-        # print(f"azimuth: {min_rotated_rectangle_azimuth}")
+        # print(f"azimuth: {min_rotated_rectangle_azimuth}")  # noqa: ERA001
         self.is_approx_rect = (
             abs(min_rotated_rectangle_azimuth) < 5.0  # noqa: PLR2004
             or abs(min_rotated_rectangle_azimuth - 180) < 5.0  # noqa: PLR2004
@@ -57,7 +56,7 @@ class OcrBox:
         coords = rect.exterior.coords
         return [coords[0], coords[1], coords[2], coords[3]]
 
-    def _get_min_rotated_rectangle_azimuth(self, rotated_rect):
+    def _get_min_rotated_rectangle_azimuth(self, rotated_rect) -> float:  # noqa: ANN001
         bbox = list(rotated_rect.exterior.coords)
         axis1 = self._get_dist_between_points(bbox[0], bbox[3])
         axis2 = self._get_dist_between_points(bbox[0], bbox[1])
@@ -70,12 +69,12 @@ class OcrBox:
         return az
 
     @staticmethod
-    def _get_azimuth_between_points(point1, point2):
+    def _get_azimuth_between_points(point1, point2) -> float:  # noqa: ANN001
         angle = np.arctan2(point2[1] - point1[1], point2[0] - point1[0])
         return np.degrees(angle) if angle > 0 else np.degrees(angle) + 180
 
     @staticmethod
-    def _get_dist_between_points(a, b):
+    def _get_dist_between_points(a, b):  # noqa: ANN001, ANN205
         return math.hypot(b[0] - a[0], b[1] - a[1])
 
 
@@ -104,7 +103,7 @@ def load_groups_from_json(file: Path) -> dict[int, list[tuple[OcrBox, float]]]:
 
 
 def save_groups_as_json(groups: dict[int, list[tuple[OcrBox, float]]], file: Path) -> None:
-    def custom_ocr_box(obj):
+    def custom_ocr_box(obj):  # noqa: ANN001, ANN202
         if isinstance(obj, OcrBox):
             return obj.get_state()
         return obj

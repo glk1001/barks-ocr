@@ -33,14 +33,11 @@ def get_ocr_final_groups_json_filename(svg_stem: str, ocr_type: str) -> str:
 
 def get_ocr_final_text_annotated_filename(svg_stem: str, ocr_type: str) -> str:
     return svg_stem + f"-{ocr_type}-ocr-gemini-final-text-annotated.png"
-    # return out_dir / (svg_stem + f"-{ocr_type}-ocr-calculated-annotated.png")
 
 
 def get_ocr_boxes_annotated_filename(svg_stem: str, ocr_type: str) -> str:
     return svg_stem + f"-{ocr_type}-ocr-gemini-boxes-annotated.png"
-    # return out_dir / (svg_stem + f"-{ocr_type}-ocr-calculated-boxes-annotated.png")
 
 
 def get_ocr_group_filename(svg_stem: str, ocr_type: str) -> str:
     return svg_stem + f"-{ocr_type}-gemini-final-groups.json"
-    # return out_dir / (svg_stem + f"-{ocr_type}-calculated-groups.json")

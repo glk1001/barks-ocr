@@ -37,7 +37,7 @@ def make_gemini_ai_groups_for_titles_batch_job(title_list: list[str]) -> None:
         make_gemini_ai_groups_for_title(title)
 
 
-def make_gemini_ai_groups_for_title(title: str) -> None:
+def make_gemini_ai_groups_for_title(title: str) -> None:  # noqa: PLR0915
     out_title_dir = UNPROCESSED_BATCH_JOBS_DIR / title
     volume_dirname = comics_database.get_fantagraphics_volume_title(
         comics_database.get_fanta_volume_int(title)
@@ -80,12 +80,6 @@ def make_gemini_ai_groups_for_title(title: str) -> None:
                 gemini_output_files.append(ocr_prelim_filename)
                 num_files_processed += 1
 
-        #     if num_files_processed >= 2:
-        #         break
-        #
-        # if num_files_processed >= 2:
-        #     break
-
     if num_files_processed == 0:
         logger.warning(f'No request to process for title "{title}".')
         return
@@ -103,6 +97,7 @@ def make_gemini_ai_groups_for_title(title: str) -> None:
 
     logger.info(f'Uploading JSONL file: "{json_file_path}"...')
     batch_input_file = CLIENT.files.upload(file=json_file_path)
+    assert batch_input_file.name
     logger.info(f'Uploaded JSONL file: "{batch_input_file.name}".')
 
     logger.info("\nCreating batch job...")
@@ -169,7 +164,6 @@ def get_gemini_ai_groups_request(svg_file: Path, ocr_file: Path) -> dict | None:
     except:  # noqa: E722
         logger.exception(f'Could not process file "{png_file}":')
         sys.exit(1)
-        return None
 
 
 def get_ai_predicted_groups_request(

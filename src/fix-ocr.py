@@ -27,7 +27,7 @@ def open_viewer(image_file: Path) -> None:
 
     _proc = subprocess.Popen(command)  # noqa: S603
 
-    print(f'Image Viewer should now be showing image "{image_file}".')
+    logger.debug(f'Image Viewer should now be showing image "{image_file}".')
 
 
 def edit_file(file: Path, line: int) -> None:
@@ -35,7 +35,7 @@ def edit_file(file: Path, line: int) -> None:
 
     _proc = subprocess.Popen(command)  # noqa: S603
 
-    print(f'Editor should now have opened "{file}".')
+    logger.debug(f'Editor should now have opened "{file}".')
 
 
 def edit_title_for_fixing(title: str, page: str, group_id: str) -> None:
