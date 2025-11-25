@@ -10,7 +10,7 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
 from loguru import logger
 
-from ocr_file_paths import BATCH_JOBS_OUTPUT_DIR, OCR_RESULTS_DIR
+from ocr_file_paths import BATCH_JOBS_OUTPUT_DIR, OCR_RESULTS_DIR, get_ocr_predicted_groups_filename
 from utils.common import ProcessResult
 from utils.geometry import Rect
 from utils.ocr_box import (
@@ -120,7 +120,12 @@ class GeminiAiGrouper:
                 logger.error(f'Could not find ocr file "{ocr_file}".')
                 return ProcessResult.FAILURE
 
-            if ocr_groups_json_file.is_file():
+            ai_predicted_groups_file = prelim_dir / get_ocr_predicted_groups_filename(
+                svg_stem, ocr_type
+            )
+            if ocr_groups_json_file.is_file() and (
+                ocr_groups_json_file.stat().st_mtime > ai_predicted_groups_file.stat().st_mtime
+            ):
                 logger.info(f'Found groups file - skipping: "{ocr_groups_json_file}".')
                 return ProcessResult.SKIPPED
 

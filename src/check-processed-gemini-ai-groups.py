@@ -60,10 +60,12 @@ def get_fix_command(
         file2_line = find_line_number_in_json_string(file2_to_edit, other_group_id + 1, target_key)
 
     logger.info(
-        f'Setting up fix command. Group {group_id} in "{file1_to_edit}", line {file1_line}.'
+        f'Setting up fix command. Page {svg_stem},'
+        f' group {group_id} in "{file1_to_edit}", line {file1_line}.'
     )
     logger.info(
-        f'Setting up fix command. Group {other_group_id} in "{file2_to_edit}", line {file2_line}.'
+        f'Setting up fix command. Page {svg_stem},'
+        f' group {other_group_id} in "{file2_to_edit}", line {file2_line}.'
     )
     logger.info(f'Setting up fix command. Image to view: "{file1_image}".')
 
@@ -218,7 +220,8 @@ def compare_ai_texts(
                     other_ai_text = ai_text2
                     logger.warning(
                         f'Group {group_id}: Could not find this ai_text in other:\n\n"{ai_text}"'
-                        f'\n\nBUT from OTHER\n\n"{other_ai_text}"\n\nis close'
+                        f'\n\nBUT from OTHER group {other_group_id},'
+                        f'\n\n"{other_ai_text}"\n\nis close'
                         f" (partial ratio > {required_score})."
                     )
                 close = True
@@ -226,16 +229,17 @@ def compare_ai_texts(
 
         if not close:
             required_score = 80
-            similarity_scores = process.extract(ai_text, ocr_group_2_ai_texts, scorer=fuzz.ratio)
-            for index, score in enumerate(similarity_scores):
-                if score[1] > required_score:
+            other_ai_texts = {str(index): text for index, text in enumerate(ocr_group_2_ai_texts)}
+            similarity_scores = process.extract(ai_text, other_ai_texts, scorer=fuzz.ratio)
+            for (value,score,other_group_id) in similarity_scores:
+                if score > required_score:
                     if show_close:
-                        other_group_id = index
-                        other_ai_text = score[0]
+                        other_ai_text = value
                         logger.warning(
                             f"Group {group_id}: Could not find this ai_text in other:"
                             f'\n\n"{ai_text}"'
-                            f'\n\nBUT from OTHER\n\n"{other_ai_text}"\n\nis close'
+                            f'\n\nBUT from OTHER group {other_group_id}'
+                            f'\n\n"{other_ai_text}"\n\nis close'
                             f" (similarity > {required_score})."
                         )
                     close = True
