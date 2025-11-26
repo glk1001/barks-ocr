@@ -1,4 +1,5 @@
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -23,6 +24,13 @@ from ocr_file_paths import (
 
 APP_LOGGING_NAME = "chkr"
 
+BAD_PATTERNS = [
+    r"--",
+    r" +\-[^ \n!]",
+    r"[^ ]\- +",
+    r" +—[^ \n!]",
+    r"[^ ]— +",
+]
 
 def get_fix_command(
     volume_dirname: str,
@@ -54,7 +62,7 @@ def get_fix_command(
     target_key = "cleaned_text"
     file1_line = -1
     file2_line = -1
-    if file1_to_edit.is_file():
+    if (group_id != -1) and file1_to_edit.is_file():
         file1_line = find_line_number_in_json_string(file1_to_edit, group_id + 1, target_key)
     if (other_group_id != -1) and file2_to_edit.is_file():
         file2_line = find_line_number_in_json_string(file2_to_edit, other_group_id + 1, target_key)
@@ -160,6 +168,10 @@ def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close:
                     )
                     num_errors += 1
 
+        fix_objs = check_for_bad_patterns(volume_dirname, title_results_dir, ocr_file)
+        if fix_objs:
+            fix_objects[svg_stem] = fix_objs
+
         if compare_text and not missing_ocr_file:
             fix_objects[svg_stem] = compare_ai_texts(
                 volume_dirname, title_results_dir, ocr_file, show_close
@@ -177,6 +189,62 @@ def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close:
         logger.info(f'Fixes file saved to "{fixes_file}".')
 
     return num_errors
+
+
+def check_for_bad_patterns(    volume_dirname: str,
+    title_results_dir: Path,
+    ocr_type_file: tuple[Path, Path],
+
+) -> dict:
+    ocr_type1 = get_ocr_type(ocr_type_file[0])
+    ocr_type2 = get_ocr_type(ocr_type_file[1])
+    svg_stem = ocr_type_file[0].stem[:3]
+
+    ocr_final_groups_json_file1 = title_results_dir / get_ocr_final_groups_json_filename(
+        svg_stem, ocr_type1
+    )
+    ocr_final_groups_json_file2 = title_results_dir / get_ocr_final_groups_json_filename(
+        svg_stem, ocr_type2
+    )
+
+    ocr_group_data1 = json.loads(ocr_final_groups_json_file1.read_text())
+    ocr_group_data2 = json.loads(ocr_final_groups_json_file2.read_text())
+
+    fix_objects = {}
+    for group_id, group in ocr_group_data1.items():
+        ai_text = group["ai_text"]
+        for pat in BAD_PATTERNS:
+            if re.search(pat, ai_text):
+                logger.error(f'Page {svg_stem}, group: {group_id};'
+                             f' bad pattern "{pat}" found in "{ai_text}".')
+
+                logger.debug(f"Appending fixes info for group {group_id}")
+                fix_objects[int(group_id)] = get_fix_command(
+                    volume_dirname,
+                    ocr_type_file,
+                    int(group_id),
+                    -1,
+                    ai_text,
+                    "",
+                )
+    for group_id, group in ocr_group_data2.items():
+        ai_text = group["ai_text"]
+        for pat in BAD_PATTERNS:
+            if re.search(pat, ai_text):
+                logger.error(f'Page {svg_stem}, other group: {group_id};'
+                             f' bad pattern "{pat}" found in "{ai_text}".')
+
+                logger.debug(f"Appending fixes info for other group {group_id}")
+                fix_objects[int(group_id)] = get_fix_command(
+                    volume_dirname,
+                    ocr_type_file,
+                    -1,
+                    int(group_id),
+                    "",
+                    ai_text,
+                )
+
+    return fix_objects
 
 
 def compare_ai_texts(

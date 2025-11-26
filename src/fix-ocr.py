@@ -35,7 +35,8 @@ def edit_file(file: Path, line: int) -> None:
     command = [*EDITOR_EXE, "--goto", f"{file}:{line}"]
     logger.debug(f"Running command: {command}.")
 
-    _proc = subprocess.Popen(command, shell=False)  # noqa: S603
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, text=True)  # noqa: S603
+    _output = process.stdout.readline()
 
     logger.debug(f'Editor should now have opened "{file}" at line {line}.')
 
