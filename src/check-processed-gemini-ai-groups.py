@@ -32,32 +32,271 @@ BAD_PATTERNS = [
     r"[^ ]— +",
 ]
 
+
+class JsonFiles:
+    def __init__(
+        self,
+        title: str,
+    ) -> None:
+        self.title = title
+        self.volume_dirname = comics_database.get_fantagraphics_volume_title(
+            comics_database.get_fanta_volume_int(title)
+        )
+        self.title_results_dir = OCR_RESULTS_DIR / self.volume_dirname
+        self.title_annotated_images_dir = OCR_ANNOTATIONS_DIR / self.volume_dirname
+
+        self.page: str = ""
+        self.ocr_file: tuple[Path, Path] | None = None
+        self.ocr_type: list[str] = []
+        self.ocr_final_groups_json_file: list[Path] = []
+        self.ocr_final_groups_annotated_file: list[Path] = []
+        self.ocr_predicted_groups_file: list[Path] = []
+        self.ocr_boxes_annotated_file: list[Path] = []
+
+    def set_ocr_file(self, ocr_file: tuple[Path, Path]) -> None:
+        self.page = ocr_file[0].stem[:3]
+        self.ocr_file = ocr_file
+
+        self.ocr_type = []
+        self.ocr_final_groups_json_file = []
+        self.ocr_final_groups_annotated_file = []
+        self.ocr_predicted_groups_file = []
+        self.ocr_boxes_annotated_file = []
+
+        for ocr_type_file in ocr_file:
+            ocr_type = get_ocr_type(ocr_type_file)
+            self.ocr_type.append(ocr_type)
+
+            self.ocr_final_groups_json_file.append(
+                self.title_results_dir / get_ocr_final_groups_json_filename(self.page, ocr_type)
+            )
+            self.ocr_final_groups_annotated_file.append(
+                self.title_annotated_images_dir
+                / get_ocr_final_text_annotated_filename(self.page, ocr_type)
+            )
+            self.ocr_predicted_groups_file.append(
+                BATCH_JOBS_OUTPUT_DIR
+                / self.volume_dirname
+                / get_ocr_predicted_groups_filename(self.page, ocr_type)
+            )
+            self.ocr_boxes_annotated_file.append(
+                OCR_ANNOTATIONS_DIR
+                / self.volume_dirname
+                / get_ocr_boxes_annotated_filename(self.page, ocr_type)
+            )
+
+
+def check_gemini_ai_groups_for_titles(
+    titles: list[str], compare_text: bool, show_close: bool
+) -> None:
+    total_errors = 0
+
+    for title in titles:
+        if is_non_comic_title(title):
+            logger.warning(f'Not a comic title "{title}" - skipping.')
+            continue
+
+        total_errors += check_gemini_ai_groups_for_title(title, compare_text, show_close)
+
+    if total_errors == 0:
+        logger.success("All comic titles checked - no errors found.")
+    else:
+        logger.error(f"There were {total_errors} errors found.")
+
+
+def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close: bool) -> int:
+    json_files = JsonFiles(title)
+
+    logger.info(
+        f'Checking processed OCR groups for all pages in "{title}".'
+        f' Looking in directory "{json_files.title_results_dir}"...'
+    )
+
+    comic = comics_database.get_comic_book(title)
+    ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
+
+    fix_objects = {0: {}, 1: {}}
+    num_errors = 0
+    for ocr_file in ocr_files:
+        json_files.set_ocr_file(ocr_file)
+        missing_ocr_file = False
+        for index in range(len(ocr_file)):
+            if not json_files.ocr_final_groups_json_file[index].is_file():
+                logger.error(
+                    f"Missing final groups json file:"
+                    f' "{json_files.ocr_final_groups_json_file[index]}".'
+                )
+                num_errors += 1
+                missing_ocr_file = True
+            elif not json_files.ocr_final_groups_annotated_file[index].is_file():
+                logger.error(
+                    f"Missing final groups annotated file:"
+                    f' "{json_files.ocr_final_groups_annotated_file[index]}".'
+                )
+                num_errors += 1
+
+        fix_objs = check_ocr_for_bad_patterns(json_files)
+        if fix_objs:
+            for index, fix_obj in enumerate(fix_objs):
+                if not fix_obj:
+                    continue
+                if json_files.page not in fix_objects[index]:
+                    fix_objects[index][json_files.page] = []
+                fix_objects[index][json_files.page].append(fix_obj)
+
+        if compare_text and not missing_ocr_file:
+            fix_objs = compare_ocr_ai_texts(json_files, show_close)
+            for index, fix_obj in enumerate(fix_objs):
+                if not fix_obj:
+                    continue
+                if json_files.page not in fix_objects[index]:
+                    fix_objects[index][json_files.page] = []
+                fix_objects[index][json_files.page].append(fix_obj)
+
+    if num_errors > 0:
+        logger.error(f'There were {num_errors} errors for title "{title}".')
+
+    if fix_objects:
+        OCR_FIXES_DIR.mkdir(parents=True, exist_ok=True)
+        fixes_file = OCR_FIXES_DIR / (title + ".json")
+        with fixes_file.open("w") as f:
+            json.dump(fix_objects, f, indent=4)
+
+        logger.info(f'Fixes file saved to "{fixes_file}".')
+
+    return num_errors
+
+
+def check_ocr_for_bad_patterns(json_files: JsonFiles) -> tuple[dict, dict]:
+    return check_for_bad_patterns(json_files, 0, 1), check_for_bad_patterns(json_files, 1, 0)
+
+
+def check_for_bad_patterns(json_files: JsonFiles, index1: int, index2: int) -> dict:
+    ocr_final_groups_json_file1 = json_files.ocr_final_groups_json_file[index1]
+    ocr_group_data1 = json.loads(ocr_final_groups_json_file1.read_text())
+
+    fix_objects1 = {}
+    for group_id, group in ocr_group_data1.items():
+        ai_text = group["ai_text"]
+        for pat in BAD_PATTERNS:
+            if re.search(pat, ai_text):
+                logger.error(
+                    f"Page {json_files.page}, group: {group_id};"
+                    f' bad pattern "{pat}" found in "{ai_text}".'
+                )
+
+                logger.debug(f"Appending fixes info for group {group_id}")
+                fix_objects1[int(group_id)] = get_fix_command(
+                    json_files,
+                    index1,
+                    index2,
+                    int(group_id),
+                    -1,
+                    ai_text,
+                    "",
+                )
+
+    return fix_objects1
+
+
+def compare_ocr_ai_texts(
+    json_files: JsonFiles,
+    show_close: bool,
+) -> tuple[dict, dict]:
+    fix_objects1 = compare_ai_texts(json_files, 0, 1, show_close)
+    fix_objects2 = compare_ai_texts(json_files, 1, 0, show_close)
+
+    return fix_objects1, fix_objects2
+
+
+def compare_ai_texts(
+    json_files: JsonFiles,
+    index1: int,
+    index2: int,
+    show_close: bool,
+) -> dict:
+    ocr_group_data1 = json.loads(json_files.ocr_final_groups_json_file[index1].read_text())
+    ocr_group_data2 = json.loads(json_files.ocr_final_groups_json_file[index2].read_text())
+
+    ocr_group_2_ai_texts = [group["ai_text"] for group in ocr_group_data2.values()]
+
+    logger.info(f'Checking ai_text in "{json_files.ocr_final_groups_json_file[index1]}"...')
+
+    fix_objects = {}
+    for group_id, group in ocr_group_data1.items():
+        ai_text = group["ai_text"]
+        if ai_text in ocr_group_2_ai_texts:
+            continue
+
+        close = False
+        other_group_id = -1
+        other_ai_text = ""
+        required_score = 95
+        for index, ai_text2 in enumerate(ocr_group_2_ai_texts):
+            if fuzz.partial_ratio(ai_text, ai_text2) > required_score:
+                if show_close:
+                    other_group_id = index
+                    other_ai_text = ai_text2
+                    logger.warning(
+                        f'Group {group_id}: Could not find this ai_text in other:\n\n"{ai_text}"'
+                        f"\n\nBUT from OTHER group {other_group_id},"
+                        f'\n\n"{other_ai_text}"\n\nis close'
+                        f" (partial ratio > {required_score})."
+                    )
+                close = True
+                break
+
+        if not close:
+            required_score = 80
+            other_ai_texts = {str(index): text for index, text in enumerate(ocr_group_2_ai_texts)}
+            similarity_scores = process.extract(ai_text, other_ai_texts, scorer=fuzz.ratio)
+            for value, score, other_group_id in similarity_scores:
+                if score > required_score:
+                    if show_close:
+                        other_ai_text = value
+                        logger.warning(
+                            f"Group {group_id}: Could not find this ai_text in other:"
+                            f'\n\n"{ai_text}"'
+                            f"\n\nBUT from OTHER group {other_group_id}"
+                            f'\n\n"{other_ai_text}"\n\nis close'
+                            f" (similarity > {required_score})."
+                        )
+                    close = True
+                    break
+
+        if not close:
+            logger.error(
+                f'Group {group_id}: Could not find ai_text:\n\n"{ai_text}"'
+                f"\n\nin other:\n\n{ocr_group_2_ai_texts}."
+            )
+
+        logger.debug(f"Appending fixes info for group {group_id}")
+        fix_objects[int(group_id)] = get_fix_command(
+            json_files,
+            index1,
+            index2,
+            int(group_id),
+            int(other_group_id),
+            ai_text,
+            other_ai_text,
+        )
+
+    return fix_objects
+
+
 def get_fix_command(
-    volume_dirname: str,
-    ocr_type_file: tuple[Path, Path],
+    json_files: JsonFiles,
+    index1: int,
+    index2: int,
     group_id: int,
     other_group_id: int,
     ai_text: str,
     other_ai_text: str,
 ) -> dict:
-    ocr_type1 = get_ocr_type(ocr_type_file[0])
-    ocr_type2 = get_ocr_type(ocr_type_file[1])
-    svg_stem = ocr_type_file[0].stem[:3]
+    file1_to_edit = json_files.ocr_predicted_groups_file[index1]
+    file2_to_edit = json_files.ocr_predicted_groups_file[index2]
 
-    file1_to_edit = (
-        BATCH_JOBS_OUTPUT_DIR
-        / volume_dirname
-        / get_ocr_predicted_groups_filename(svg_stem, ocr_type1)
-    )
-    file2_to_edit = (
-        BATCH_JOBS_OUTPUT_DIR
-        / volume_dirname
-        / get_ocr_predicted_groups_filename(svg_stem, ocr_type2)
-    )
-
-    file1_image = (
-        OCR_ANNOTATIONS_DIR / volume_dirname / get_ocr_boxes_annotated_filename(svg_stem, ocr_type1)
-    )
+    file1_image = json_files.ocr_boxes_annotated_file[index1]
 
     target_key = "cleaned_text"
     file1_line = -1
@@ -68,11 +307,11 @@ def get_fix_command(
         file2_line = find_line_number_in_json_string(file2_to_edit, other_group_id + 1, target_key)
 
     logger.info(
-        f'Setting up fix command. Page {svg_stem},'
+        f"Setting up fix command. Page {json_files.page},"
         f' group {group_id} in "{file1_to_edit}", line {file1_line}.'
     )
     logger.info(
-        f'Setting up fix command. Page {svg_stem},'
+        f"Setting up fix command. Page {json_files.page},"
         f' group {other_group_id} in "{file2_to_edit}", line {file2_line}.'
     )
     logger.info(f'Setting up fix command. Image to view: "{file1_image}".')
@@ -107,229 +346,6 @@ def find_line_number_in_json_string(json_file: Path, n: int, target_key: str) ->
                 return line_number
 
     return -1
-
-
-def check_gemini_ai_groups_for_titles(
-    titles: list[str], compare_text: bool, show_close: bool
-) -> None:
-    total_errors = 0
-
-    for title in titles:
-        if is_non_comic_title(title):
-            logger.warning(f'Not a comic title "{title}" - skipping.')
-            continue
-
-        total_errors += check_gemini_ai_groups_for_title(title, compare_text, show_close)
-
-    if total_errors == 0:
-        logger.success("All comic titles checked - no errors found.")
-    else:
-        logger.error(f"There were {total_errors} errors found.")
-
-
-def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close: bool) -> int:
-    volume_dirname = comics_database.get_fantagraphics_volume_title(
-        comics_database.get_fanta_volume_int(title)
-    )
-    title_results_dir = OCR_RESULTS_DIR / volume_dirname
-    title_annotated_images_dir = OCR_ANNOTATIONS_DIR / volume_dirname
-
-    logger.info(
-        f'Checking processed OCR groups for all pages in "{title}".'
-        f' Looking in directory "{title_results_dir}"...'
-    )
-
-    comic = comics_database.get_comic_book(title)
-    ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
-
-    fix_objects = {}
-    num_errors = 0
-    for ocr_file in ocr_files:
-        missing_ocr_file = False
-        svg_stem = ocr_file[0].stem[:3]
-        for ocr_type_file in ocr_file:
-            ocr_type = get_ocr_type(ocr_type_file)
-
-            ocr_final_groups_json_file = title_results_dir / get_ocr_final_groups_json_filename(
-                svg_stem, ocr_type
-            )
-            if not ocr_final_groups_json_file.is_file():
-                logger.error(f'Missing final groups json file: "{ocr_final_groups_json_file}".')
-                num_errors += 1
-                missing_ocr_file = True
-            else:
-                ocr_final_groups_annotated_file = (
-                    title_annotated_images_dir
-                    / get_ocr_final_text_annotated_filename(svg_stem, ocr_type)
-                )
-                if not ocr_final_groups_annotated_file.is_file():
-                    logger.error(
-                        f'Missing final groups annotated file: "{ocr_final_groups_json_file}".'
-                    )
-                    num_errors += 1
-
-        fix_objs = check_for_bad_patterns(volume_dirname, title_results_dir, ocr_file)
-        if fix_objs:
-            fix_objects[svg_stem] = fix_objs
-
-        if compare_text and not missing_ocr_file:
-            fix_objects[svg_stem] = compare_ai_texts(
-                volume_dirname, title_results_dir, ocr_file, show_close
-            )
-
-    if num_errors > 0:
-        logger.error(f'There were {num_errors} errors for title "{title}".')
-
-    if fix_objects:
-        OCR_FIXES_DIR.mkdir(parents=True, exist_ok=True)
-        fixes_file = OCR_FIXES_DIR / (title + ".json")
-        with fixes_file.open("w") as f:
-            json.dump(fix_objects, f, indent=4)
-
-        logger.info(f'Fixes file saved to "{fixes_file}".')
-
-    return num_errors
-
-
-def check_for_bad_patterns(    volume_dirname: str,
-    title_results_dir: Path,
-    ocr_type_file: tuple[Path, Path],
-
-) -> dict:
-    ocr_type1 = get_ocr_type(ocr_type_file[0])
-    ocr_type2 = get_ocr_type(ocr_type_file[1])
-    svg_stem = ocr_type_file[0].stem[:3]
-
-    ocr_final_groups_json_file1 = title_results_dir / get_ocr_final_groups_json_filename(
-        svg_stem, ocr_type1
-    )
-    ocr_final_groups_json_file2 = title_results_dir / get_ocr_final_groups_json_filename(
-        svg_stem, ocr_type2
-    )
-
-    ocr_group_data1 = json.loads(ocr_final_groups_json_file1.read_text())
-    ocr_group_data2 = json.loads(ocr_final_groups_json_file2.read_text())
-
-    fix_objects = {}
-    for group_id, group in ocr_group_data1.items():
-        ai_text = group["ai_text"]
-        for pat in BAD_PATTERNS:
-            if re.search(pat, ai_text):
-                logger.error(f'Page {svg_stem}, group: {group_id};'
-                             f' bad pattern "{pat}" found in "{ai_text}".')
-
-                logger.debug(f"Appending fixes info for group {group_id}")
-                fix_objects[int(group_id)] = get_fix_command(
-                    volume_dirname,
-                    ocr_type_file,
-                    int(group_id),
-                    -1,
-                    ai_text,
-                    "",
-                )
-    for group_id, group in ocr_group_data2.items():
-        ai_text = group["ai_text"]
-        for pat in BAD_PATTERNS:
-            if re.search(pat, ai_text):
-                logger.error(f'Page {svg_stem}, other group: {group_id};'
-                             f' bad pattern "{pat}" found in "{ai_text}".')
-
-                logger.debug(f"Appending fixes info for other group {group_id}")
-                fix_objects[int(group_id)] = get_fix_command(
-                    volume_dirname,
-                    ocr_type_file,
-                    -1,
-                    int(group_id),
-                    "",
-                    ai_text,
-                )
-
-    return fix_objects
-
-
-def compare_ai_texts(
-    volume_dirname: str,
-    title_results_dir: Path,
-    ocr_type_file: tuple[Path, Path],
-    show_close: bool,
-) -> dict:
-    ocr_type1 = get_ocr_type(ocr_type_file[0])
-    ocr_type2 = get_ocr_type(ocr_type_file[1])
-    svg_stem = ocr_type_file[0].stem[:3]
-
-    ocr_final_groups_json_file1 = title_results_dir / get_ocr_final_groups_json_filename(
-        svg_stem, ocr_type1
-    )
-    ocr_final_groups_json_file2 = title_results_dir / get_ocr_final_groups_json_filename(
-        svg_stem, ocr_type2
-    )
-
-    ocr_group_data1 = json.loads(ocr_final_groups_json_file1.read_text())
-    ocr_group_data2 = json.loads(ocr_final_groups_json_file2.read_text())
-
-    ocr_group_2_ai_texts = [group["ai_text"] for group in ocr_group_data2.values()]
-
-    logger.info(f'Checking ai_text in "{ocr_final_groups_json_file1}"...')
-
-    fix_objects = {}
-    for group_id, group in ocr_group_data1.items():
-        ai_text = group["ai_text"]
-        if ai_text in ocr_group_2_ai_texts:
-            continue
-
-        close = False
-        other_group_id = -1
-        other_ai_text = ""
-        required_score = 95
-        for index, ai_text2 in enumerate(ocr_group_2_ai_texts):
-            if fuzz.partial_ratio(ai_text, ai_text2) > required_score:
-                if show_close:
-                    other_group_id = index
-                    other_ai_text = ai_text2
-                    logger.warning(
-                        f'Group {group_id}: Could not find this ai_text in other:\n\n"{ai_text}"'
-                        f'\n\nBUT from OTHER group {other_group_id},'
-                        f'\n\n"{other_ai_text}"\n\nis close'
-                        f" (partial ratio > {required_score})."
-                    )
-                close = True
-                break
-
-        if not close:
-            required_score = 80
-            other_ai_texts = {str(index): text for index, text in enumerate(ocr_group_2_ai_texts)}
-            similarity_scores = process.extract(ai_text, other_ai_texts, scorer=fuzz.ratio)
-            for (value,score,other_group_id) in similarity_scores:
-                if score > required_score:
-                    if show_close:
-                        other_ai_text = value
-                        logger.warning(
-                            f"Group {group_id}: Could not find this ai_text in other:"
-                            f'\n\n"{ai_text}"'
-                            f'\n\nBUT from OTHER group {other_group_id}'
-                            f'\n\n"{other_ai_text}"\n\nis close'
-                            f" (similarity > {required_score})."
-                        )
-                    close = True
-                    break
-
-        if not close:
-            logger.error(
-                f'Group {group_id}: Could not find ai_text:\n\n"{ai_text}"'
-                f"\n\nin other:\n\n{ocr_group_2_ai_texts}."
-            )
-
-        logger.debug(f"Appending fixes info for group {group_id}")
-        fix_objects[int(group_id)] = get_fix_command(
-            volume_dirname,
-            ocr_type_file,
-            int(group_id),
-            int(other_group_id),
-            ai_text,
-            other_ai_text,
-        )
-
-    return fix_objects
 
 
 if __name__ == "__main__":
