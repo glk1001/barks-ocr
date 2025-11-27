@@ -245,43 +245,56 @@ def compare_ai_texts(
         other_group_id = -1
         other_ai_text = ""
         required_score = 95
+        best_score = 0
+        closest_group = -1
+        closest_ai_text = ""
         for index, ai_text2 in enumerate(ocr_group_2_ai_texts):
-            if fuzz.partial_ratio(ai_text, ai_text2) > required_score:
-                if show_close:
-                    other_group_id = index
-                    other_ai_text = ai_text2
-                    logger.warning(
-                        f'Group {group_id}: Could not find this ai_text in other:\n\n"{ai_text}"'
-                        f"\n\nBUT from OTHER group {other_group_id},"
-                        f'\n\n"{other_ai_text}"\n\nis close'
-                        f" (partial ratio > {required_score})."
-                    )
-                close = True
-                break
+            score = fuzz.partial_ratio(ai_text, ai_text2)
+            if score > best_score:
+                best_score = score
+                closest_group = index
+                closest_ai_text = ai_text2
+
+        if best_score > required_score:
+            other_group_id = closest_group
+            other_ai_text = closest_ai_text
+            if show_close:
+                logger.warning(
+                    f'Group {group_id}: Could not find this ai_text in other:\n\n"{ai_text}"'
+                    f"\n\nBUT from OTHER group {other_group_id},"
+                    f'\n\n"{other_ai_text}"\n\nis close'
+                    f" (partial ratio > {required_score})."
+                )
+            close = True
 
         if not close:
+            best_score = 0
+            closest_group = -1
+            closest_ai_text = ""
             required_score = 80
             other_ai_texts = {str(index): text for index, text in enumerate(ocr_group_2_ai_texts)}
             similarity_scores = process.extract(ai_text, other_ai_texts, scorer=fuzz.ratio)
             for value, score, other_group_id in similarity_scores:
-                if score > required_score:
-                    if show_close:
-                        other_ai_text = value
-                        logger.warning(
+                if score > best_score:
+                    best_score = score
+                    closest_group = other_group_id
+                    closest_ai_text = value
+
+            if best_score > required_score:
+                other_group_id = closest_group
+                other_ai_text = closest_ai_text
+                if show_close:
+                    logger.warning(
                             f"Group {group_id}: Could not find this ai_text in other:"
                             f'\n\n"{ai_text}"'
                             f"\n\nBUT from OTHER group {other_group_id}"
                             f'\n\n"{other_ai_text}"\n\nis close'
                             f" (similarity > {required_score})."
-                        )
-                    close = True
-                    break
+                    )
+                close = True
 
         if not close:
-            logger.error(
-                f'Group {group_id}: Could not find ai_text:\n\n"{ai_text}"'
-                f"\n\nin other:\n\n{ocr_group_2_ai_texts}."
-            )
+            logger.error(f'Group {group_id}: Could not find ai_text:\n\n"{ai_text}"\n\nin other.')
 
         logger.debug(f"Appending fixes info for group {group_id}")
         fix_objects[int(group_id)] = get_fix_command(
@@ -309,8 +322,6 @@ def get_fix_command(
     file1_to_edit = json_files.ocr_predicted_groups_file[index1]
     file2_to_edit = json_files.ocr_predicted_groups_file[index2]
 
-    file1_image = json_files.ocr_boxes_annotated_file[index1]
-
     target_key = "cleaned_text"
     file1_line = -1
     file2_line = -1
@@ -320,14 +331,13 @@ def get_fix_command(
         file2_line = find_line_number_in_json_string(file2_to_edit, other_group_id + 1, target_key)
 
     logger.info(
-        f"Setting up fix command. Page {json_files.page},"
-        f' group {group_id} in "{file1_to_edit}", line {file1_line}.'
+        f"Setting up fix command for {json_files.ocr_type[index1]}:"
+        f" page {json_files.page}, group {group_id}, line {file1_line}."
     )
     logger.info(
-        f"Setting up fix command. Page {json_files.page},"
-        f' group {other_group_id} in "{file2_to_edit}", line {file2_line}.'
+        f"Setting up fix command for {json_files.ocr_type[index2]}:"
+        f" page {json_files.page}, group {other_group_id}, line {file2_line}."
     )
-    logger.info(f'Setting up fix command. Image to view: "{file1_image}".')
 
     return {
         "group_id": group_id,
