@@ -95,7 +95,10 @@ def ocr_annotate_title(title: str) -> None:
                 svg_stem, ocr_type
             )
 
-            if final_text_annotated_image_file.is_file():
+            if (
+                final_text_annotated_image_file.is_file()
+                and final_text_annotated_image_file.stat().st_mtime > ocr_group_file.stat().st_mtime
+            ):
                 logger.info(
                     f'Found final annotated file - skipping: "{final_text_annotated_image_file}".'
                 )

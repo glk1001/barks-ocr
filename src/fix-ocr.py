@@ -41,10 +41,10 @@ def edit_file(file: Path, line: int) -> None:
     logger.debug(f'Editor should now have opened "{file}" at line {line}.')
 
 
-def just_show(title: str, page: str, group_id: str) -> None:
+def just_show(title: str, ocr_index: int, page: str) -> None:
     fixes_file = OCR_FIXES_DIR / (title + ".json")
     fix_objects = json.loads(fixes_file.read_text())
-    file1_image = Path(fix_objects[page][group_id]["image_file"])
+    file1_image = Path(fix_objects[str(ocr_index)]["errors"][page]["image1"])
     open_viewer(file1_image)
 
 
@@ -129,7 +129,8 @@ if __name__ == "__main__":
         ExtraArg("--group", action="store", type=str, default=""),
         ExtraArg("--rep-left", action="store", type=str, default="", nargs="+"),
         ExtraArg("--rep-right", action="store", type=str, default="", nargs="+"),
-        ExtraArg("--show", action="store_true", type=None, default=None),
+        ExtraArg("--show-left", action="store_true", type=None, default=None),
+        ExtraArg("--show-right", action="store_true", type=None, default=None),
     ]
 
     # TODO(glk): Some issue with type checking inspection?
@@ -151,7 +152,8 @@ if __name__ == "__main__":
 
     pg = str(cmd_args.get_pages()[0])
     grp = cmd_args.get_extra_arg("--group")
-    show = cmd_args.get_extra_arg("--show")
+    show_left = cmd_args.get_extra_arg("--show_left")
+    show_right = cmd_args.get_extra_arg("--show_right")
     rep_left = cmd_args.get_extra_arg("--rep_left")
     rep_right = cmd_args.get_extra_arg("--rep_right")
 
@@ -159,7 +161,9 @@ if __name__ == "__main__":
         replace_left_text(cmd_args.get_title(), pg, grp, rep_left)
     elif rep_right:
         replace_right_text(cmd_args.get_title(), pg, grp, rep_right)
-    elif show:
-        just_show(cmd_args.get_title(), pg, grp)
+    elif show_left:
+        just_show(cmd_args.get_title(), 0, pg)
+    elif show_right:
+        just_show(cmd_args.get_title(), 1, pg)
     else:
         edit_title_for_fixing(cmd_args.get_title(), pg, grp)

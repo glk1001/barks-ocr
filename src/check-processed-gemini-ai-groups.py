@@ -115,10 +115,21 @@ def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close:
     comic = comics_database.get_comic_book(title)
     ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
-    fix_objects = {0: {}, 1: {}}
+    fix_objects = {
+        0: {
+            "bad-pats": {},
+            "errors": {},
+        },
+        1: {
+            "bad-pats": {},
+            "errors": {},
+        },
+    }
+
     num_errors = 0
     for ocr_file in ocr_files:
         json_files.set_ocr_file(ocr_file)
+
         missing_ocr_file = False
         for index in range(len(ocr_file)):
             if not json_files.ocr_final_groups_json_file[index].is_file():
@@ -140,18 +151,14 @@ def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close:
             for index, fix_obj in enumerate(fix_objs):
                 if not fix_obj:
                     continue
-                if json_files.page not in fix_objects[index]:
-                    fix_objects[index][json_files.page] = []
-                fix_objects[index][json_files.page].append(fix_obj)
+                fix_objects[index]["bad-pats"][json_files.page] = fix_obj
 
         if compare_text and not missing_ocr_file:
             fix_objs = compare_ocr_ai_texts(json_files, show_close)
             for index, fix_obj in enumerate(fix_objs):
                 if not fix_obj:
                     continue
-                if json_files.page not in fix_objects[index]:
-                    fix_objects[index][json_files.page] = []
-                fix_objects[index][json_files.page].append(fix_obj)
+                fix_objects[index]["errors"][json_files.page] = fix_obj
 
     if num_errors > 0:
         logger.error(f'There were {num_errors} errors for title "{title}".')
@@ -222,7 +229,13 @@ def compare_ai_texts(
 
     logger.info(f'Checking ai_text in "{json_files.ocr_final_groups_json_file[index1]}"...')
 
-    fix_objects = {}
+    fix_objects = {
+        "file1": str(json_files.ocr_predicted_groups_file[index1]),
+        "file2": str(json_files.ocr_predicted_groups_file[index2]),
+        "image1": str(json_files.ocr_boxes_annotated_file[index1]),
+    }
+    zero_groups_len = len(fix_objects)
+
     for group_id, group in ocr_group_data1.items():
         ai_text = group["ai_text"]
         if ai_text in ocr_group_2_ai_texts:
@@ -281,7 +294,7 @@ def compare_ai_texts(
             other_ai_text,
         )
 
-    return fix_objects
+    return fix_objects if len(fix_objects) > zero_groups_len else {}
 
 
 def get_fix_command(
@@ -319,13 +332,10 @@ def get_fix_command(
     return {
         "group_id": group_id,
         "other_group_id": other_group_id,
-        "file1": str(file1_to_edit),
-        "file2": str(file2_to_edit),
         "line1": file1_line,
         "line2": file2_line,
         "cleaned_text1": ai_text,
         "cleaned_text2": other_ai_text,
-        "image_file": str(file1_image),
     }
 
 
