@@ -102,7 +102,7 @@ def load_groups_from_json(file: Path) -> dict[int, list[tuple[OcrBox, float]]]:
     return groups
 
 
-def save_groups_as_json(groups: dict[int, list[tuple[OcrBox, float]]], file: Path) -> None:
+def save_box_groups_as_json(groups: dict[int, list[tuple[OcrBox, float]]], file: Path) -> None:
     def custom_ocr_box(obj):  # noqa: ANN001, ANN202
         if isinstance(obj, OcrBox):
             return obj.get_state()

@@ -17,8 +17,8 @@ from ocr_file_paths import (
     UNPROCESSED_BATCH_JOBS_DIR,
     get_batch_details_file,
     get_batch_requests_file,
-    get_ocr_final_groups_json_filename,
     get_ocr_predicted_groups_filename,
+    get_ocr_prelim_groups_json_filename,
 )
 from utils.gemini_ai import AI_PRO_MODEL, CLIENT
 from utils.gemini_ai_comic_prompts import comic_prompt
@@ -48,7 +48,7 @@ def make_gemini_ai_groups_for_title(title: str) -> None:  # noqa: PLR0915
 
     comic = comics_database.get_comic_book(title)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-    ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
+    ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
     gemini_requests_data = []
     gemini_output_files = []
@@ -58,26 +58,28 @@ def make_gemini_ai_groups_for_title(title: str) -> None:  # noqa: PLR0915
 
         for ocr_type_file in ocr_file:
             ocr_type = get_ocr_type(ocr_type_file)
-            ocr_prelim_filename = get_ocr_predicted_groups_filename(svg_stem, ocr_type)
+            ocr_batch_results_filename = get_ocr_predicted_groups_filename(svg_stem, ocr_type)
 
-            ocr_predicted_groups_json_file = title_prev_results_dir / ocr_prelim_filename
+            ocr_predicted_groups_json_file = title_prev_results_dir / ocr_batch_results_filename
             if ocr_predicted_groups_json_file.is_file():
                 logger.info(
                     f'Found predicted groups file "{ocr_predicted_groups_json_file}" - skipping.'
                 )
                 continue
 
-            ocr_final_groups_json_file = out_title_dir / get_ocr_final_groups_json_filename(
+            ocr_prelim_groups_json_file = out_title_dir / get_ocr_prelim_groups_json_filename(
                 svg_stem, ocr_type
             )
-            if ocr_final_groups_json_file.is_file():
-                logger.error(f'Found final groups file - skipping: "{ocr_final_groups_json_file}".')
+            if ocr_prelim_groups_json_file.is_file():
+                logger.error(
+                    f'Found prelim groups file - skipping: "{ocr_prelim_groups_json_file}".'
+                )
                 return
 
             result = get_gemini_ai_groups_request(svg_file, ocr_type_file)
             if result is not None:
                 gemini_requests_data.append(result)
-                gemini_output_files.append(ocr_prelim_filename)
+                gemini_output_files.append(ocr_batch_results_filename)
                 num_files_processed += 1
 
     if num_files_processed == 0:

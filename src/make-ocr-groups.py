@@ -13,7 +13,7 @@ from utils.ocr_box import (
     OcrBox,
     get_box_str,
     load_groups_from_json,
-    save_groups_as_json,
+    save_box_groups_as_json,
 )
 
 
@@ -30,7 +30,7 @@ def make_ocr_groups_for_title(title: str, out_dir: Path) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     comic = comics_database.get_comic_book(title)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-    ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
+    ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
     for svg_file, ocr_file in zip(svg_files, ocr_files, strict=True):
         svg_stem = Path(svg_file).stem
@@ -80,7 +80,7 @@ def make_ocr_groups(ocr_file: Path, ocr_groups_json_file: Path, ocr_groups_txt_f
 
     groups = make_box_groups(text_data_polygons)
 
-    save_groups_as_json(groups, ocr_groups_json_file)
+    save_box_groups_as_json(groups, ocr_groups_json_file)
     groups = load_groups_from_json(ocr_groups_json_file)
 
     max_text_len = max([len(t[1]) for t in jsn_text_data_boxes])

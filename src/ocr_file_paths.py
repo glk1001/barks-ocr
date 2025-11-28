@@ -2,13 +2,16 @@ from pathlib import Path
 
 BARKS_ROOT = Path.home() / "Books" / "Carl Barks"
 
-OCR_RESULTS_DIR = BARKS_ROOT / "Fantagraphics-restored-ocr"
-OCR_ANNOTATIONS_DIR = OCR_RESULTS_DIR / "Annotations"
-OCR_FIXES_DIR = OCR_RESULTS_DIR / "Fixes"
-OCR_FIXES_BACKUP_DIR = OCR_RESULTS_DIR / "Fixes-bak"
+OCR_ROOT_DIR = BARKS_ROOT / "Fantagraphics-restored-ocr"
+OCR_ANNOTATIONS_DIR = OCR_ROOT_DIR / "Annotations"
+OCR_FINAL_DIR = OCR_ROOT_DIR / "Final"
+OCR_FIXES_DIR = OCR_ROOT_DIR / "Fixes"
+OCR_FIXES_BACKUP_DIR = OCR_ROOT_DIR / "Fixes-bak"
+OCR_PRELIM_DIR = OCR_ROOT_DIR / "Prelim"
+OCR_RAW_DIR = OCR_ROOT_DIR / "Raw"
 
-OCR_ROOT = BARKS_ROOT / "Projects" / "OCR"
-BATCH_JOBS_DIR = OCR_ROOT / "batch-jobs"
+OCR_PROJECT_ROOT = BARKS_ROOT / "Projects" / "OCR"
+BATCH_JOBS_DIR = OCR_PROJECT_ROOT / "batch-jobs"
 UNPROCESSED_BATCH_JOBS_DIR = BATCH_JOBS_DIR / "unprocessed"
 FINISHED_BATCH_JOBS_DIR = BATCH_JOBS_DIR / "finished"
 BATCH_JOBS_OUTPUT_DIR = BATCH_JOBS_DIR / "output"
@@ -27,17 +30,13 @@ def get_ocr_predicted_groups_filename(svg_stem: str, ocr_type: str) -> str:
     return f"{svg_stem}-{ocr_type}-json-ocr-ai-predicted-groups.json"
 
 
-def get_ocr_final_groups_json_filename(svg_stem: str, ocr_type: str) -> str:
-    return svg_stem + f"-{ocr_type}-gemini-final-groups.json"
+def get_ocr_prelim_groups_json_filename(svg_stem: str, ocr_type: str) -> str:
+    return svg_stem + f"-{ocr_type}-gemini-prelim-groups.json"
 
 
-def get_ocr_final_text_annotated_filename(svg_stem: str, ocr_type: str) -> str:
-    return svg_stem + f"-{ocr_type}-ocr-gemini-final-text-annotated.png"
+def get_ocr_prelim_text_annotated_filename(svg_stem: str, ocr_type: str) -> str:
+    return svg_stem + f"-{ocr_type}-ocr-gemini-prelim-text-annotated.png"
 
 
 def get_ocr_boxes_annotated_filename(svg_stem: str, ocr_type: str) -> str:
     return svg_stem + f"-{ocr_type}-ocr-gemini-boxes-annotated.png"
-
-
-def get_ocr_group_filename(svg_stem: str, ocr_type: str) -> str:
-    return svg_stem + f"-{ocr_type}-gemini-final-groups.json"

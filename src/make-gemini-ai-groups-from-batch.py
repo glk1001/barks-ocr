@@ -17,11 +17,13 @@ APP_LOGGING_NAME = "gemg"
 def get_ai_predicted_groups(
     svg_stem: str,
     ocr_type: str,
-    prelim_dir: Path,
+    batch_results_dir: Path,
     _ocr_bound_ids: list[dict[str, Any]],
     _png_file: Path,
 ) -> Any:  # noqa: ANN401
-    ai_predicted_groups_file = prelim_dir / get_ocr_predicted_groups_filename(svg_stem, ocr_type)
+    ai_predicted_groups_file = batch_results_dir / get_ocr_predicted_groups_filename(
+        svg_stem, ocr_type
+    )
 
     logger.info(f'Reading gemini ai predicted groups from "{ai_predicted_groups_file}".')
 

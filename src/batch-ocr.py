@@ -40,13 +40,10 @@ if not BARKS_OCR_SPELL_DICT.is_file():
 
 spell_dict = enchant.DictWithPWL("en_US", str(BARKS_OCR_SPELL_DICT))
 
-num_files_processed = 0
-
 
 def ocr_titles(title_list: list[str]) -> None:
     timing = Timing()
 
-    global num_files_processed
     num_files_processed = 0
 
     for title in title_list:
@@ -59,23 +56,18 @@ def ocr_titles(title_list: list[str]) -> None:
         comic = comics_database.get_comic_book(title)
 
         srce_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-        dest_file_groups = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
+        dest_file_groups = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
         for srce_file, dest_files in zip(srce_files, dest_file_groups, strict=True):
-            ocr_page(srce_file, dest_files)
+            result = ocr_comic_page(srce_file, dest_files)
+            if result == ProcessResult.FAILURE:
+                logger.error(f'"{srce_file}": There were process errors.')
+            else:
+                num_files_processed += 1
 
     logger.info(
         f"Time taken to OCR all {num_files_processed} files: {timing.get_elapsed_time_with_unit()}."
     )
-
-
-def ocr_page(srce_file: Path, dest_files: tuple[Path, Path]) -> None:
-    result = ocr_comic_page(srce_file, dest_files)
-    if result == ProcessResult.FAILURE:
-        logger.error(f'"{srce_file}": There were process errors.')
-    if result == ProcessResult.SUCCESS:
-        global num_files_processed
-        num_files_processed += 1
 
 
 def ocr_comic_page(svg_file: Path, ocr_json_files: tuple[Path, Path]) -> ProcessResult:

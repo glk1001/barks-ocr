@@ -17,10 +17,10 @@ from PIL import Image, ImageColor, ImageDraw, ImageFont
 
 from ocr_file_paths import (
     OCR_ANNOTATIONS_DIR,
-    OCR_RESULTS_DIR,
+    OCR_PRELIM_DIR,
     get_ocr_boxes_annotated_filename,
-    get_ocr_final_text_annotated_filename,
-    get_ocr_group_filename,
+    get_ocr_prelim_groups_json_filename,
+    get_ocr_prelim_text_annotated_filename,
 )
 from utils.ocr_box import OcrBox
 
@@ -70,7 +70,7 @@ def ocr_annotate_title(title: str) -> None:
 
     volume = comics_database.get_fanta_volume_int(title)
     volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
-    gemini_groups_dir = OCR_RESULTS_DIR / volume_dirname
+    gemini_groups_dir = OCR_PRELIM_DIR / volume_dirname
     out_image_dir = OCR_ANNOTATIONS_DIR / volume_dirname
     out_image_dir.mkdir(parents=True, exist_ok=True)
 
@@ -78,7 +78,7 @@ def ocr_annotate_title(title: str) -> None:
 
     comic = comics_database.get_comic_book(title)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-    ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
+    ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
     panel_segments_files = comic.get_srce_panel_segments_files(RESTORABLE_PAGE_TYPES)
 
     for svg_file, ocr_file, panel_segments_file in zip(
@@ -90,17 +90,20 @@ def ocr_annotate_title(title: str) -> None:
         for ocr_type_file in ocr_file:
             ocr_type = get_ocr_type(ocr_type_file)
 
-            ocr_group_file = gemini_groups_dir / get_ocr_group_filename(svg_stem, ocr_type)
-            final_text_annotated_image_file = out_image_dir / get_ocr_final_text_annotated_filename(
+            ocr_group_file = gemini_groups_dir / get_ocr_prelim_groups_json_filename(
                 svg_stem, ocr_type
+            )
+            prelim_text_annotated_image_file = (
+                out_image_dir / get_ocr_prelim_text_annotated_filename(svg_stem, ocr_type)
             )
 
             if (
-                final_text_annotated_image_file.is_file()
-                and final_text_annotated_image_file.stat().st_mtime > ocr_group_file.stat().st_mtime
+                prelim_text_annotated_image_file.is_file()
+                and prelim_text_annotated_image_file.stat().st_mtime
+                > ocr_group_file.stat().st_mtime
             ):
                 logger.info(
-                    f'Found final annotated file - skipping: "{final_text_annotated_image_file}".'
+                    f'Found prelim annotated file - skipping: "{prelim_text_annotated_image_file}".'
                 )
                 continue
 
@@ -108,8 +111,8 @@ def ocr_annotate_title(title: str) -> None:
                 svg_stem, ocr_type
             )
 
-            ocr_annotate_image_with_final_text(
-                png_file, ocr_group_file, final_text_annotated_image_file
+            ocr_annotate_image_with_prelim_text(
+                png_file, ocr_group_file, prelim_text_annotated_image_file
             )
             ocr_annotate_image_with_individual_boxes(
                 png_file, ocr_group_file, boxes_annotated_image_file
@@ -119,7 +122,7 @@ def ocr_annotate_title(title: str) -> None:
                 logger.warning(f'"{title}": special case - not annotating with panel bounds.')
             else:
                 annotate_image_with_panel_bounds(
-                    panel_segments_file, final_text_annotated_image_file
+                    panel_segments_file, prelim_text_annotated_image_file
                 )
                 annotate_image_with_panel_bounds(panel_segments_file, boxes_annotated_image_file)
 
@@ -202,7 +205,7 @@ def write_bounds_to_image_file(
     return True
 
 
-def ocr_annotate_image_with_final_text(
+def ocr_annotate_image_with_prelim_text(
     png_file: Path,
     ocr_file: Path,
     annotated_img_file: Path,

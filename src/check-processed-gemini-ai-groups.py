@@ -15,11 +15,11 @@ from ocr_file_paths import (
     BATCH_JOBS_OUTPUT_DIR,
     OCR_ANNOTATIONS_DIR,
     OCR_FIXES_DIR,
-    OCR_RESULTS_DIR,
+    OCR_PRELIM_DIR,
     get_ocr_boxes_annotated_filename,
-    get_ocr_final_groups_json_filename,
-    get_ocr_final_text_annotated_filename,
     get_ocr_predicted_groups_filename,
+    get_ocr_prelim_groups_json_filename,
+    get_ocr_prelim_text_annotated_filename,
 )
 
 APP_LOGGING_NAME = "chkr"
@@ -42,14 +42,14 @@ class JsonFiles:
         self.volume_dirname = comics_database.get_fantagraphics_volume_title(
             comics_database.get_fanta_volume_int(title)
         )
-        self.title_results_dir = OCR_RESULTS_DIR / self.volume_dirname
+        self.title_prelim_results_dir = OCR_PRELIM_DIR / self.volume_dirname
         self.title_annotated_images_dir = OCR_ANNOTATIONS_DIR / self.volume_dirname
 
         self.page: str = ""
         self.ocr_file: tuple[Path, Path] | None = None
         self.ocr_type: list[str] = []
-        self.ocr_final_groups_json_file: list[Path] = []
-        self.ocr_final_groups_annotated_file: list[Path] = []
+        self.ocr_prelim_groups_json_file: list[Path] = []
+        self.ocr_prelim_groups_annotated_file: list[Path] = []
         self.ocr_predicted_groups_file: list[Path] = []
         self.ocr_boxes_annotated_file: list[Path] = []
 
@@ -58,8 +58,8 @@ class JsonFiles:
         self.ocr_file = ocr_file
 
         self.ocr_type = []
-        self.ocr_final_groups_json_file = []
-        self.ocr_final_groups_annotated_file = []
+        self.ocr_prelim_groups_json_file = []
+        self.ocr_prelim_groups_annotated_file = []
         self.ocr_predicted_groups_file = []
         self.ocr_boxes_annotated_file = []
 
@@ -67,12 +67,13 @@ class JsonFiles:
             ocr_type = get_ocr_type(ocr_type_file)
             self.ocr_type.append(ocr_type)
 
-            self.ocr_final_groups_json_file.append(
-                self.title_results_dir / get_ocr_final_groups_json_filename(self.page, ocr_type)
+            self.ocr_prelim_groups_json_file.append(
+                self.title_prelim_results_dir
+                / get_ocr_prelim_groups_json_filename(self.page, ocr_type)
             )
-            self.ocr_final_groups_annotated_file.append(
+            self.ocr_prelim_groups_annotated_file.append(
                 self.title_annotated_images_dir
-                / get_ocr_final_text_annotated_filename(self.page, ocr_type)
+                / get_ocr_prelim_text_annotated_filename(self.page, ocr_type)
             )
             self.ocr_predicted_groups_file.append(
                 BATCH_JOBS_OUTPUT_DIR
@@ -109,11 +110,11 @@ def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close:
 
     logger.info(
         f'Checking processed OCR groups for all pages in "{title}".'
-        f' Looking in directory "{json_files.title_results_dir}"...'
+        f' Looking in directory "{json_files.title_prelim_results_dir}"...'
     )
 
     comic = comics_database.get_comic_book(title)
-    ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
+    ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
     fix_objects = {
         0: {
@@ -132,26 +133,27 @@ def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close:
 
         missing_ocr_file = False
         for index in range(len(ocr_file)):
-            if not json_files.ocr_final_groups_json_file[index].is_file():
+            if not json_files.ocr_prelim_groups_json_file[index].is_file():
                 logger.error(
-                    f"Missing final groups json file:"
-                    f' "{json_files.ocr_final_groups_json_file[index]}".'
+                    f"Missing prelim groups json file:"
+                    f' "{json_files.ocr_prelim_groups_json_file[index]}".'
                 )
                 num_errors += 1
                 missing_ocr_file = True
-            elif not json_files.ocr_final_groups_annotated_file[index].is_file():
+            elif not json_files.ocr_prelim_groups_annotated_file[index].is_file():
                 logger.error(
-                    f"Missing final groups annotated file:"
-                    f' "{json_files.ocr_final_groups_annotated_file[index]}".'
+                    f"Missing prelim groups annotated file:"
+                    f' "{json_files.ocr_prelim_groups_annotated_file[index]}".'
                 )
                 num_errors += 1
 
-        fix_objs = check_ocr_for_bad_patterns(json_files)
-        if fix_objs:
-            for index, fix_obj in enumerate(fix_objs):
-                if not fix_obj:
-                    continue
-                fix_objects[index]["bad-pats"][json_files.page] = fix_obj
+        if not missing_ocr_file:
+            fix_objs = check_ocr_for_bad_patterns(json_files)
+            if fix_objs:
+                for index, fix_obj in enumerate(fix_objs):
+                    if not fix_obj:
+                        continue
+                    fix_objects[index]["bad-pats"][json_files.page] = fix_obj
 
         if compare_text and not missing_ocr_file:
             fix_objs = compare_ocr_ai_texts(json_files, show_close)
@@ -179,8 +181,8 @@ def check_ocr_for_bad_patterns(json_files: JsonFiles) -> tuple[dict, dict]:
 
 
 def check_for_bad_patterns(json_files: JsonFiles, index1: int, index2: int) -> dict:
-    ocr_final_groups_json_file1 = json_files.ocr_final_groups_json_file[index1]
-    ocr_group_data1 = json.loads(ocr_final_groups_json_file1.read_text())
+    ocr_prelim_groups_json_file1 = json_files.ocr_prelim_groups_json_file[index1]
+    ocr_group_data1 = json.loads(ocr_prelim_groups_json_file1.read_text())
 
     fix_objects1 = {}
     for group_id, group in ocr_group_data1.items():
@@ -222,12 +224,12 @@ def compare_ai_texts(
     index2: int,
     show_close: bool,
 ) -> dict:
-    ocr_group_data1 = json.loads(json_files.ocr_final_groups_json_file[index1].read_text())
-    ocr_group_data2 = json.loads(json_files.ocr_final_groups_json_file[index2].read_text())
+    ocr_group_data1 = json.loads(json_files.ocr_prelim_groups_json_file[index1].read_text())
+    ocr_group_data2 = json.loads(json_files.ocr_prelim_groups_json_file[index2].read_text())
 
     ocr_group_2_ai_texts = [group["ai_text"] for group in ocr_group_data2.values()]
 
-    logger.info(f'Checking ai_text in "{json_files.ocr_final_groups_json_file[index1]}"...')
+    logger.info(f'Checking ai_text in "{json_files.ocr_prelim_groups_json_file[index1]}"...')
 
     fix_objects = {
         "file1": str(json_files.ocr_predicted_groups_file[index1]),
@@ -285,11 +287,11 @@ def compare_ai_texts(
                 other_ai_text = closest_ai_text
                 if show_close:
                     logger.warning(
-                            f"Group {group_id}: Could not find this ai_text in other:"
-                            f'\n\n"{ai_text}"'
-                            f"\n\nBUT from OTHER group {other_group_id}"
-                            f'\n\n"{other_ai_text}"\n\nis close'
-                            f" (similarity > {required_score})."
+                        f"Group {group_id}: Could not find this ai_text in other:"
+                        f'\n\n"{ai_text}"'
+                        f"\n\nBUT from OTHER group {other_group_id}"
+                        f'\n\n"{other_ai_text}"\n\nis close'
+                        f" (similarity > {required_score})."
                     )
                 close = True
 

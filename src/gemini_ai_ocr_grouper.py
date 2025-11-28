@@ -10,7 +10,12 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
 from loguru import logger
 
-from ocr_file_paths import BATCH_JOBS_OUTPUT_DIR, OCR_RESULTS_DIR, get_ocr_predicted_groups_filename
+from ocr_file_paths import (
+    BATCH_JOBS_OUTPUT_DIR,
+    OCR_PRELIM_DIR,
+    get_ocr_predicted_groups_filename,
+    get_ocr_prelim_groups_json_filename,
+)
 from utils.common import ProcessResult
 from utils.geometry import Rect
 from utils.ocr_box import (
@@ -18,7 +23,7 @@ from utils.ocr_box import (
     PointList,
     get_box_str,
     load_groups_from_json,
-    save_groups_as_json,
+    save_box_groups_as_json,
 )
 
 
@@ -43,20 +48,20 @@ class GeminiAiGrouper:
         volume = self._comics_database.get_fanta_volume_int(title)
         volume_dirname = self._comics_database.get_fantagraphics_volume_title(volume)
 
-        prelim_results_dir = BATCH_JOBS_OUTPUT_DIR / volume_dirname
+        batch_results_dir = BATCH_JOBS_OUTPUT_DIR / volume_dirname
         logger.info(
-            f'Looking for preliminary predicted group data in directory "{prelim_results_dir}"...'
+            f'Making groups from predicted group data in directory "{batch_results_dir}"...'
         )
-        assert prelim_results_dir.is_dir()
+        assert batch_results_dir.is_dir()
 
-        out_dir = OCR_RESULTS_DIR / volume_dirname
+        out_dir = OCR_PRELIM_DIR / volume_dirname
         out_dir.mkdir(parents=True, exist_ok=True)
 
         logger.info(f'Making OCR groups for all pages in "{title}". To directory "{out_dir}"...')
 
         comic = self._comics_database.get_comic_book(title)
         svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-        ocr_files = comic.get_srce_restored_ocr_story_files(RESTORABLE_PAGE_TYPES)
+        ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
         panel_segments_files = comic.get_srce_panel_segments_files(RESTORABLE_PAGE_TYPES)
 
         num_files_processed = 0
@@ -68,10 +73,10 @@ class GeminiAiGrouper:
             for ocr_type_file in ocr_file:
                 ocr_type = get_ocr_type(ocr_type_file)
 
-                ocr_final_groups_json_file = out_dir / self._get_ocr_final_groups_json_filename(
+                ocr_prelim_groups_json_file = out_dir / get_ocr_prelim_groups_json_filename(
                     svg_stem, ocr_type
                 )
-                ocr_groups_json_file = out_dir / self._get_ocr_groups_json_filename(
+                ocr_box_groups_json_file = out_dir / self._get_ocr_box_groups_json_filename(
                     svg_stem, ocr_type
                 )
                 ocr_groups_txt_file = out_dir / self._get_ocr_groups_txt_filename(
@@ -82,10 +87,10 @@ class GeminiAiGrouper:
                     svg_file,
                     ocr_type_file,
                     ocr_type,
-                    prelim_results_dir,
+                    batch_results_dir,
                     panel_segments_file,
-                    ocr_final_groups_json_file,
-                    ocr_groups_json_file,
+                    ocr_prelim_groups_json_file,
+                    ocr_box_groups_json_file,
                     ocr_groups_txt_file,
                 )
 
@@ -102,10 +107,10 @@ class GeminiAiGrouper:
         svg_file: Path,
         ocr_file: Path,
         ocr_type: str,
-        prelim_dir: Path,
+        batch_results_dir: Path,
         panel_segments_file: Path,
-        ocr_final_data_groups_json_file: Path,
-        ocr_groups_json_file: Path,
+        ocr_prelim_data_groups_json_file: Path,
+        ocr_box_groups_json_file: Path,
         ocr_groups_txt_file: Path,
     ) -> ProcessResult:
         svg_stem = svg_file.stem
@@ -120,13 +125,14 @@ class GeminiAiGrouper:
                 logger.error(f'Could not find ocr file "{ocr_file}".')
                 return ProcessResult.FAILURE
 
-            ai_predicted_groups_file = prelim_dir / get_ocr_predicted_groups_filename(
+            ai_predicted_groups_file = batch_results_dir / get_ocr_predicted_groups_filename(
                 svg_stem, ocr_type
             )
-            if ocr_groups_json_file.is_file() and (
-                ocr_groups_json_file.stat().st_mtime > ai_predicted_groups_file.stat().st_mtime
+            if ocr_prelim_data_groups_json_file.is_file() and (
+                ocr_prelim_data_groups_json_file.stat().st_mtime
+                > ai_predicted_groups_file.stat().st_mtime
             ):
-                logger.info(f'Found groups file - skipping: "{ocr_groups_json_file}".')
+                logger.info(f'Found groups file - skipping: "{ocr_prelim_data_groups_json_file}".')
                 return ProcessResult.SKIPPED
 
             logger.info(f'Making Gemini AI OCR groups for file "{get_abbrev_path(png_file)}"...')
@@ -136,22 +142,21 @@ class GeminiAiGrouper:
             ocr_bound_ids = self._assign_ids_to_ocr_boxes(ocr_data)
 
             ai_predicted_groups = self._get_ai_predicted_groups(
-                svg_stem, ocr_type, prelim_dir, ocr_bound_ids, png_file
+                svg_stem, ocr_type, batch_results_dir, ocr_bound_ids, png_file
             )
 
             # Merge boxes into text bubbles
-            ai_final_data = self._get_final_ai_data(
+            ai_prelim_data = self._get_prelim_ai_data(
                 ai_predicted_groups, ocr_bound_ids, panel_segments_file
             )
-            with ocr_final_data_groups_json_file.open("w") as f:
-                json.dump(ai_final_data, f, indent=4)
-            logger.info(f'Wrote final ai group data to "{ocr_final_data_groups_json_file}"...')
+            with ocr_prelim_data_groups_json_file.open("w") as f:
+                json.dump(ai_prelim_data, f, indent=4)
+            logger.info(f'Wrote prelim ai group data to "{ocr_prelim_data_groups_json_file}"...')
 
-            groups = self._get_text_groups(ai_final_data, ocr_bound_ids)
+            groups = self._get_text_groups(ai_prelim_data, ocr_bound_ids)
+            save_box_groups_as_json(groups, ocr_box_groups_json_file)
 
-            save_groups_as_json(groups, ocr_groups_json_file)
-            groups = load_groups_from_json(ocr_groups_json_file)
-
+            groups = load_groups_from_json(ocr_box_groups_json_file)
             self._write_groups_to_text_file(ocr_groups_txt_file, groups)
 
         except:  # noqa: E722
@@ -160,7 +165,7 @@ class GeminiAiGrouper:
         else:
             return ProcessResult.SUCCESS
 
-    def _get_final_ai_data(
+    def _get_prelim_ai_data(
         self,
         groups: list[Any],
         ocr_boxes_with_ids: list[dict[str, Any]],
@@ -267,12 +272,8 @@ class GeminiAiGrouper:
         return svg_stem + f"-{ocr_type}-gemini-groups.txt"
 
     @staticmethod
-    def _get_ocr_groups_json_filename(svg_stem: str, ocr_type: str) -> str:
+    def _get_ocr_box_groups_json_filename(svg_stem: str, ocr_type: str) -> str:
         return svg_stem + f"-{ocr_type}-gemini-groups.json"
-
-    @staticmethod
-    def _get_ocr_final_groups_json_filename(svg_stem: str, ocr_type: str) -> str:
-        return svg_stem + f"-{ocr_type}-gemini-final-groups.json"
 
     @staticmethod
     def _get_enclosing_box(boxes: list[PointList]) -> PointList:
