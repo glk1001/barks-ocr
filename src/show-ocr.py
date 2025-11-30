@@ -19,8 +19,8 @@ from ocr_file_paths import (
     OCR_ANNOTATIONS_DIR,
     OCR_PRELIM_DIR,
     get_ocr_boxes_annotated_filename,
+    get_ocr_prelim_annotated_filename,
     get_ocr_prelim_groups_json_filename,
-    get_ocr_prelim_text_annotated_filename,
 )
 from utils.ocr_box import OcrBox
 
@@ -93,8 +93,8 @@ def ocr_annotate_title(title: str) -> None:
             ocr_group_file = gemini_groups_dir / get_ocr_prelim_groups_json_filename(
                 svg_stem, ocr_type
             )
-            prelim_text_annotated_image_file = (
-                out_image_dir / get_ocr_prelim_text_annotated_filename(svg_stem, ocr_type)
+            prelim_text_annotated_image_file = out_image_dir / get_ocr_prelim_annotated_filename(
+                svg_stem, ocr_type
             )
 
             if (
@@ -212,7 +212,7 @@ def ocr_annotate_image_with_prelim_text(
 ) -> None:
     logger.info(f'Annotating image "{png_file}" from ocr file "{ocr_file}"...')
 
-    json_text_data_boxes = get_json_text_data_boxes(ocr_file)
+    json_text_data_boxes = get_json_text_data_boxes(ocr_file)["groups"]
     bw_image = get_image_to_annotate(png_file)
 
     pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
@@ -223,11 +223,9 @@ def ocr_annotate_image_with_prelim_text(
     font = ImageFont.truetype(font_file, font_size)
 
     color_index = 0
-    for group in json_text_data_boxes:
-        group_id = int(group)
+    for group_id, text_data in json_text_data_boxes.items():
         logger.info(f'Annotating group {group_id}"...')
 
-        text_data = json_text_data_boxes[group]
         ocr_box = OcrBox(
             text_data["text_box"],
             text_data["ocr_text"],
@@ -299,7 +297,7 @@ def ocr_annotate_image_with_individual_boxes(
         f'Annotating image with individual boxes "{png_file}" from ocr file "{ocr_file}"...'
     )
 
-    json_text_data_boxes = get_json_text_data_boxes(ocr_file)
+    json_text_data_boxes = get_json_text_data_boxes(ocr_file)["groups"]
     bw_image = get_image_to_annotate(png_file)
 
     pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image]))

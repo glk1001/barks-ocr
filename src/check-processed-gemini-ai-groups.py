@@ -6,21 +6,12 @@ from pathlib import Path
 from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs, ExtraArg
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
-from barks_fantagraphics.comics_utils import get_ocr_type
 from loguru import logger
 from loguru_config import LoguruConfig
 from thefuzz import fuzz, process
 
-from ocr_file_paths import (
-    BATCH_JOBS_OUTPUT_DIR,
-    OCR_ANNOTATIONS_DIR,
-    OCR_FIXES_DIR,
-    OCR_PRELIM_DIR,
-    get_ocr_boxes_annotated_filename,
-    get_ocr_predicted_groups_filename,
-    get_ocr_prelim_groups_json_filename,
-    get_ocr_prelim_text_annotated_filename,
-)
+from ocr_file_paths import OCR_FIXES_DIR
+from ocr_json_files import JsonFiles
 
 APP_LOGGING_NAME = "chkr"
 
@@ -31,60 +22,6 @@ BAD_PATTERNS = [
     r" +—[^ \n!]",
     r"[^ ]— +",
 ]
-
-
-class JsonFiles:
-    def __init__(
-        self,
-        title: str,
-    ) -> None:
-        self.title = title
-        self.volume_dirname = comics_database.get_fantagraphics_volume_title(
-            comics_database.get_fanta_volume_int(title)
-        )
-        self.title_prelim_results_dir = OCR_PRELIM_DIR / self.volume_dirname
-        self.title_annotated_images_dir = OCR_ANNOTATIONS_DIR / self.volume_dirname
-
-        self.page: str = ""
-        self.ocr_file: tuple[Path, Path] | None = None
-        self.ocr_type: list[str] = []
-        self.ocr_prelim_groups_json_file: list[Path] = []
-        self.ocr_prelim_groups_annotated_file: list[Path] = []
-        self.ocr_predicted_groups_file: list[Path] = []
-        self.ocr_boxes_annotated_file: list[Path] = []
-
-    def set_ocr_file(self, ocr_file: tuple[Path, Path]) -> None:
-        self.page = ocr_file[0].stem[:3]
-        self.ocr_file = ocr_file
-
-        self.ocr_type = []
-        self.ocr_prelim_groups_json_file = []
-        self.ocr_prelim_groups_annotated_file = []
-        self.ocr_predicted_groups_file = []
-        self.ocr_boxes_annotated_file = []
-
-        for ocr_type_file in ocr_file:
-            ocr_type = get_ocr_type(ocr_type_file)
-            self.ocr_type.append(ocr_type)
-
-            self.ocr_prelim_groups_json_file.append(
-                self.title_prelim_results_dir
-                / get_ocr_prelim_groups_json_filename(self.page, ocr_type)
-            )
-            self.ocr_prelim_groups_annotated_file.append(
-                self.title_annotated_images_dir
-                / get_ocr_prelim_text_annotated_filename(self.page, ocr_type)
-            )
-            self.ocr_predicted_groups_file.append(
-                BATCH_JOBS_OUTPUT_DIR
-                / self.volume_dirname
-                / get_ocr_predicted_groups_filename(self.page, ocr_type)
-            )
-            self.ocr_boxes_annotated_file.append(
-                OCR_ANNOTATIONS_DIR
-                / self.volume_dirname
-                / get_ocr_boxes_annotated_filename(self.page, ocr_type)
-            )
 
 
 def check_gemini_ai_groups_for_titles(
@@ -100,13 +37,13 @@ def check_gemini_ai_groups_for_titles(
         total_errors += check_gemini_ai_groups_for_title(title, compare_text, show_close)
 
     if total_errors == 0:
-        logger.success("All comic titles checked - no errors found.")
+        logger.success("All comic titles checked - no file errors found.")
     else:
-        logger.error(f"There were {total_errors} errors found.")
+        logger.error(f"There were {total_errors} file errors found.")
 
 
 def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close: bool) -> int:
-    json_files = JsonFiles(title)
+    json_files = JsonFiles(comics_database, title)
 
     logger.info(
         f'Checking processed OCR groups for all pages in "{title}".'
@@ -185,7 +122,7 @@ def check_for_bad_patterns(json_files: JsonFiles, index1: int, index2: int) -> d
     ocr_group_data1 = json.loads(ocr_prelim_groups_json_file1.read_text())
 
     fix_objects1 = {}
-    for group_id, group in ocr_group_data1.items():
+    for group_id, group in ocr_group_data1["groups"].items():
         ai_text = group["ai_text"]
         for pat in BAD_PATTERNS:
             if re.search(pat, ai_text):
@@ -227,18 +164,18 @@ def compare_ai_texts(
     ocr_group_data1 = json.loads(json_files.ocr_prelim_groups_json_file[index1].read_text())
     ocr_group_data2 = json.loads(json_files.ocr_prelim_groups_json_file[index2].read_text())
 
-    ocr_group_2_ai_texts = [group["ai_text"] for group in ocr_group_data2.values()]
+    ocr_group_2_ai_texts = [group["ai_text"] for group in ocr_group_data2["groups"].values()]
 
     logger.info(f'Checking ai_text in "{json_files.ocr_prelim_groups_json_file[index1]}"...')
 
     fix_objects = {
-        "file1": str(json_files.ocr_predicted_groups_file[index1]),
-        "file2": str(json_files.ocr_predicted_groups_file[index2]),
+        "file1": str(json_files.ocr_prelim_groups_json_file[index1]),
+        "file2": str(json_files.ocr_prelim_groups_json_file[index2]),
         "image1": str(json_files.ocr_boxes_annotated_file[index1]),
     }
     zero_groups_len = len(fix_objects)
 
-    for group_id, group in ocr_group_data1.items():
+    for group_id, group in ocr_group_data1["groups"].items():
         ai_text = group["ai_text"]
         if ai_text in ocr_group_2_ai_texts:
             continue
@@ -321,10 +258,10 @@ def get_fix_command(
     ai_text: str,
     other_ai_text: str,
 ) -> dict:
-    file1_to_edit = json_files.ocr_predicted_groups_file[index1]
-    file2_to_edit = json_files.ocr_predicted_groups_file[index2]
+    file1_to_edit = json_files.ocr_prelim_groups_json_file[index1]
+    file2_to_edit = json_files.ocr_prelim_groups_json_file[index2]
 
-    target_key = "cleaned_text"
+    target_key = "ai_text"
     file1_line = -1
     file2_line = -1
     if (group_id != -1) and file1_to_edit.is_file():
@@ -346,8 +283,8 @@ def get_fix_command(
         "other_group_id": other_group_id,
         "line1": file1_line,
         "line2": file2_line,
-        "cleaned_text1": ai_text,
-        "cleaned_text2": other_ai_text,
+        "ai_text1": ai_text,
+        "ai_text2": other_ai_text,
     }
 
 

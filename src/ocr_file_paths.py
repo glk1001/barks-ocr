@@ -34,8 +34,16 @@ def get_ocr_prelim_groups_json_filename(svg_stem: str, ocr_type: str) -> str:
     return svg_stem + f"-{ocr_type}-gemini-prelim-groups.json"
 
 
-def get_ocr_prelim_text_annotated_filename(svg_stem: str, ocr_type: str) -> str:
-    return svg_stem + f"-{ocr_type}-ocr-gemini-prelim-text-annotated.png"
+def get_ocr_final_groups_json_filename(svg_stem: str) -> str:
+    return svg_stem + "-gemini-final-groups.json"
+
+
+def get_ocr_prelim_annotated_filename(svg_stem: str, ocr_type: str) -> str:
+    return svg_stem + f"-{ocr_type}-ocr-gemini-prelim-annotated.png"
+
+
+def get_ocr_final_annotated_filename(svg_stem: str) -> str:
+    return svg_stem + "-ocr-gemini-final-annotated.png"
 
 
 def get_ocr_boxes_annotated_filename(svg_stem: str, ocr_type: str) -> str:

@@ -170,7 +170,7 @@ class GeminiAiGrouper:
         groups: list[Any],
         ocr_boxes_with_ids: list[dict[str, Any]],
         panel_segments_file: Path,
-    ) -> dict[int, Any]:
+    ) -> dict[str, Any]:
         id_to_bound: dict[Any, dict[str, Any]] = {
             bound["text_id"]: bound for bound in ocr_boxes_with_ids
         }
@@ -241,7 +241,7 @@ class GeminiAiGrouper:
                 logger.error(f"Could not set merged_group '{group_id}': {group}")
                 raise e from e
 
-        return merged_groups
+        return {"use_as_final": False, "groups": merged_groups}
 
     @staticmethod
     def _get_ocr_data(ocr_file: Path) -> list[dict[str, Any]]:
@@ -310,11 +310,11 @@ class GeminiAiGrouper:
 
     @staticmethod
     def _get_text_groups(
-        ocr_merged_data: dict[int, Any], ocr_bound_ids: list[dict[str, Any]]
+        ocr_merged_data: dict[str, Any], ocr_bound_ids: list[dict[str, Any]]
     ) -> dict[int, list[tuple[Any, float]]]:
         groups = {}
 
-        for group_id, ocr_data in ocr_merged_data.items():
+        for group_id, ocr_data in ocr_merged_data["groups"].items():
             dist = 0.0
 
             group = []
