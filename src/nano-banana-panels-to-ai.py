@@ -35,44 +35,42 @@ EXTRACT_TEXT_DEST_SUFFIX = "-just-text.txt"
 
 PROMPT_TEXT = {
     Prompts.CLEAN_AND_SHARPEN: (
-        "Enhance the image by cleaning, sharpening, and smoothing black ink lines in input image",
+        "Enhance this comic book panel by cleaning, sharpening, and smoothing black ink lines",
         CLEAN_DEST_SUFFIX,
     ),
     Prompts.COLORIZE_WITH_GRADIENTS: (
-        "colorize the input image using color gradients",
+        "Colorize this comic book panel using color gradients",
         RECOLOR_DEST_SUFFIX,
     ),
     Prompts.COLORIZE_WITH_HALFTONES: (
-        "colorize the input image using half-tones",
+        "Colorize this comic book panel using half-tones",
         HALFTONE_DEST_SUFFIX,
     ),
     Prompts.MAKE_PHOTO_REALISTIC: (
-        "make the input image look like a super-realistic 3D photograph",
+        "Make this comic book panel look like a super-realistic 3D photograph",
         PHOTO_DEST_SUFFIX,
     ),
     Prompts.MAKE_OIL_PAINTING: (
-        "make the input image look like a very realistic and beautiful oil painting",
+        "Make this comic book panel look like a very realistic and beautiful oil painting",
         OIL_DEST_SUFFIX,
     ),
     Prompts.MAKE_IMPRESSIONIST_PAINTING: (
-        "make the input image look like a very beautiful impressionist painting",
+        "Make this comic book panel look like a very beautiful impressionist painting",
         IMPRES_DEST_SUFFIX,
     ),
     Prompts.MAKE_WATER_COLOR_PAINTING: (
-        "make the input image look like a very beautiful water color painting",
+        "Make this comic book panel look like a very beautiful water color painting",
         WATER_COLOR_DEST_SUFFIX,
     ),
     Prompts.MAKE_PASTEL_PAINTING: (
-        "make the input image look like a very beautiful pastel painting",
+        "Make this comic book panel look like a very beautiful pastel painting",
         PASTEL_COLOR_DEST_SUFFIX,
     ),
     Prompts.MAKE_ANSEL_ADAMS: (
-        "make the input image like a very detailed black and white Ansel Adams photograph",
+        "Make this comic book panel like a very detailed black and white Ansel Adams photograph",
         ANSEL_DEST_SUFFIX,
     ),
 }
-# PROMPT = "Remove the smaller inner panel."
-# PROMPT = "Improve this comic book cover."  # bit of a dud
 
 CANDIDATE_COUNT = 1
 AI_TOP_P = None
@@ -92,16 +90,16 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "The Persistent Postman"
+TITLE = "The Mines of King Solomon"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "112-3.png"
-AI_TEMPERATURE = 0.0
+IMAGE_FILENAME = "011-3.png"
+AI_TEMPERATURE = 0.9
 
 EXTRA_PROHIBITION = ""
-EXTRA_PROHIBITION += "- **DO NOT** change character's expressions.\n"
-EXTRA_PROHIBITION += "- **Keep** the character's EYES EXACTLY as in input image.\n"
-EXTRA_PROHIBITION += "- **DO NOT** add glasses to characters.\n"
+EXTRA_PROHIBITION += "- **VERY IMPORTANT:** **DO NOT** change any characters' expressions.\n"
+EXTRA_PROHIBITION += "- **Keep** all characters' **EYES EXACTLY** as in input image.\n"
+EXTRA_PROHIBITION += "- **DO NOT** add glasses to any characters.\n"
 EXTRA_PROHIBITION += "- **DO NOT** add extra clothing or hats.\n"
 EXTRA_PROHIBITION += "- **DO NOT** change clothing or hats.\n"
 EXTRA_PROHIBITION += "- **DO NOT** add extra pupils to characters' eyes.\n"
@@ -183,7 +181,7 @@ for prompt_type, dest_image in zip(PROMPT_TYPES, dest_files, strict=True):
     #    Use the image's black ink lines to reinforce the structure of the output image.
 
     final_prompt = f"""
-    **Primary Command:** Your most important task is to {prompt_str}.
+    {prompt_str}.
 
     **Strict Prohibitions (DO NOT):**
     - **DO NOT** alter the characters' eyes or pupils in any way.

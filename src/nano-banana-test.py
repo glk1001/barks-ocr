@@ -89,12 +89,12 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Forbidden Valley"
+TITLE = "Fishing Mystery"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "027-1.png"
+IMAGE_FILENAME = "154-7.png"
 
-AI_TEMPERATURE = 0.0
+AI_TEMPERATURE = 1.0
 PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
 
 DEST_SUFFIX = DEST_SUFFIX_PRE + PROMPT_TEXT[PROMPT_TO_USE][1]
@@ -182,6 +182,7 @@ final_prompt = f"""
 #                " Make a dark cloudy sky. Crucially make color and structure match.")
 # PROMPT_STR += " Outpaint the top and bottom of the image to give a consistent scene that seamlessly matches the middle. Crucially make color and structure match."
 # SYSTEM_INSTRUCTION += " Change the shape of the output image so that it's 1000 pixels wide and 1600 pixels high."
+PROMPT_STR += " The character is holding onto a fishing rod with one and fishing line with the other hand. Make sure you connect the line to the fishing rod."
 
 # SRCE_IMAGE="/home/greg/Books/Carl Barks/Fantagraphics-fixes-and-additions/Carl Barks Vol. 8 - Donald Duck - Trail of the Unicorn (Digital-Empire)/images/245.png"
 if PANEL_TYPE == "Insets":
