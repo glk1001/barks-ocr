@@ -1,0 +1,113 @@
+import csv
+from pathlib import Path
+
+import polars as pl
+from great_tables import GT, html, loc, md, style
+
+
+def get_censorship_fixes_table(file: Path) -> GT:
+    df = pl.read_csv(file)
+
+    table = (
+        GT(df)
+        .tab_header(title=md("**Censorship Fixes**"))
+        .opt_row_striping(row_striping=True)
+        .tab_spanner(label=md("**Changes**"), columns=["Change_From", "Change_To"])
+        .tab_stub(rowname_col="Story")
+        .tab_stubhead(label="Story")
+        .tab_style(style=style.text(weight="bold"), locations=loc.stubhead())
+        .cols_label(
+            Change_From=html("From"),
+            Change_To=html("To"),
+            Page_Panel=html("Panel"),
+        )
+        .tab_style(
+            style=style.text(style="italic", weight=500),  # Apply italic style
+            locations=loc.body(columns="Story"),  # Target the 'species' column
+        )
+        .cols_width(
+            cases={
+                "Story": "150px",
+                "Change_From": "335px",
+                "Change_To": "335px",
+                "Page_Panel": "50px",
+            }
+        )
+    )
+
+    table = table.tab_style(style=style.text(weight="bold"), locations=loc.column_labels())
+    # Apply the conditional centering style
+    required_columns = df.drop("Page_Panel").columns
+    table = table.tab_style(
+        style=style.text(align="left"),
+        locations=[
+            loc.body(columns=col_name, rows=pl.col(col_name) == '"')
+            for col_name in required_columns
+        ],
+    )
+    return table.tab_style(
+        style=style.fill(color="lightyellow"),  # Set the fill color
+        locations=loc.body(columns="Story"),  # Target the body of "col_b"
+    )
+
+
+
+def split_rows_into_pages(pg_size: int, rows: list) -> dict:
+    pages = {}
+    page_num = 1
+    row_list = []
+    row_count = 0
+    prev_non_empty_cols = list(rows[0])
+    for index, row in enumerate(rows):
+        if row_count == 0:
+            for i, col in enumerate(row):
+                if col == '"':
+                    row[i] = prev_non_empty_cols[i]
+
+        row_list.append(row)
+        row_count += 1
+
+        prev_non_empty_cols = [
+            col if col != '"' else prev_non_empty_col
+            for col, prev_non_empty_col in zip(row, prev_non_empty_cols, strict=True)
+        ]
+
+        if (row_count == pg_size) or (index + 1 == len(rows)):
+            pages[page_num] = row_list
+            row_list = []
+            row_count = 0
+            page_num += 1
+
+    return pages
+
+
+page_size = 32
+file = Path("../censorship-fixes-simple.csv")
+with file.open("r", newline="") as csvfile:
+    csv_reader = csv.reader(csvfile)
+    header = next(csv_reader)
+    csv_rows = list(csv_reader)
+
+num_pages = len(csv_rows) // page_size
+if len(csv_rows) % page_size != 0:
+    num_pages += 1
+
+pages = split_rows_into_pages(page_size, csv_rows)
+
+for page in range(1, num_pages + 1):
+    page_rows = pages[page]
+
+    temp_file = Path("/tmp/temp.csv")
+    with temp_file.open("w", newline="") as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerow(header)
+        csv_writer.writerows(page_rows)  # Writes all rows at once
+
+    gt_table = get_censorship_fixes_table(temp_file)
+    gt_table.show()
+
+    image_file = Path(f"/tmp/censorship-fixes-page-{page}.jpg")
+    gt_table.save(str(image_file), scale=2.5, expand=10)
+
+    # if page == 1:
+    #     break

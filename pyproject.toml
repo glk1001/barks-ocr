@@ -8,14 +8,17 @@ dependencies = [
     "easyocr>=1.7.2",
     "google-genai>=1.32.0",
     "google-generativeai>=0.8.5",
+    "great-tables[extra]>=0.20.0",
     "intspan>=1.6.1",
     "loguru-config>=0.1.0",
     "opencv-python>=4.12.0.88",
     "paddleocr>=3.3.2",
     "paddlepaddle>=3.2.1",
     "pillow>=11.3.0",
+    "polars>=1.35.2",
     "pydantic>=2.11.7",
     "pyenchant>=3.3.0",
+    "selenium>=4.38.0",
     "thefuzz>=0.22.1",
 ]
 
