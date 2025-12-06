@@ -4,14 +4,21 @@ from pathlib import Path
 import polars as pl
 from great_tables import GT, html, loc, md, style
 
+ROOT_DIR = Path("/home/greg/Books/Carl Barks")
+CSV_DIR = ROOT_DIR / "Projects/Barks Reader"
+
 
 def get_censorship_fixes_table(file: Path) -> GT:
     df = pl.read_csv(file)
 
     table = (
         GT(df)
-        .tab_header(title=md("**Censorship Fixes**"))
-        .opt_row_striping(row_striping=True)
+        .tab_header(
+            title=md("**Censorship Fixes and Other Changes**"),
+            subtitle=md("Includes fixes for Fantagraphics printing and coloring glitches"),
+        )
+        .tab_options(heading_padding="1%")
+        #        .opt_row_striping(row_striping=True)
         .tab_spanner(label=md("**Changes**"), columns=["Change_From", "Change_To"])
         .tab_stub(rowname_col="Story")
         .tab_stubhead(label="Story")
@@ -22,8 +29,8 @@ def get_censorship_fixes_table(file: Path) -> GT:
             Page_Panel=html("Panel"),
         )
         .tab_style(
-            style=style.text(style="italic", weight=500),  # Apply italic style
-            locations=loc.body(columns="Story"),  # Target the 'species' column
+            style=style.text(weight=500),  # ty: ignore[invalid-argument-type]
+            locations=loc.body(columns="Story"),
         )
         .cols_width(
             cases={
@@ -45,11 +52,16 @@ def get_censorship_fixes_table(file: Path) -> GT:
             for col_name in required_columns
         ],
     )
-    return table.tab_style(
-        style=style.fill(color="lightyellow"),  # Set the fill color
-        locations=loc.body(columns="Story"),  # Target the body of "col_b"
+    required_columns = df.drop("Story").columns
+    table = table.tab_style(
+        style=style.text(style="italic", weight=500),  # ty: ignore[invalid-argument-type]
+        locations=[loc.body(columns=col_name) for col_name in required_columns],
     )
-
+    # table = table.tab_style(
+    #     style=style.fill(color="lightyellow"),  # Set the fill color
+    #     locations=loc.body(columns="Story"),  # Target the body of "col_b"
+    # )
+    return table
 
 
 def split_rows_into_pages(pg_size: int, rows: list) -> dict:
@@ -82,7 +94,7 @@ def split_rows_into_pages(pg_size: int, rows: list) -> dict:
 
 
 page_size = 32
-file = Path("../censorship-fixes-simple.csv")
+file = CSV_DIR / "censorship-fixes-simple.csv"
 with file.open("r", newline="") as csvfile:
     csv_reader = csv.reader(csvfile)
     header = next(csv_reader)
@@ -106,7 +118,7 @@ for page in range(1, num_pages + 1):
     gt_table = get_censorship_fixes_table(temp_file)
     gt_table.show()
 
-    image_file = Path(f"/tmp/censorship-fixes-page-{page}.jpg")
+    image_file = Path(f"/tmp/censorship-fixes-page-{page}.png")
     gt_table.save(str(image_file), scale=2.5, expand=10)
 
     # if page == 1:
