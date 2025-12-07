@@ -90,11 +90,11 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "The Mines of King Solomon"
+TITLE = "You Can't Win"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "011-3.png"
-AI_TEMPERATURE = 0.9
+IMAGE_FILENAME = "172-2.png"
+AI_TEMPERATURE = 1.0
 
 EXTRA_PROHIBITION = ""
 EXTRA_PROHIBITION += "- **VERY IMPORTANT:** **DO NOT** change any characters' expressions.\n"

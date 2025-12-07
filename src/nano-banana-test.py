@@ -84,17 +84,17 @@ FANTA_RESTORED_DIR = ROOT_DIR / "Fantagraphics-restored"
 # PANEL_TYPE = "Closeups"
 PANEL_TYPE = "Favourites"
 # PANEL_TYPE = "Insets"
-# PANEL_TYPE = "Splash"
+PANEL_TYPE = "Splash"
 # PANEL_TYPE = "Silhouettes"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Fishing Mystery"
+TITLE = "Billions in the Hole"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "154-7.png"
+IMAGE_FILENAME = "064-1.png"
 
-AI_TEMPERATURE = 1.0
+AI_TEMPERATURE = 0.0
 PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
 
 DEST_SUFFIX = DEST_SUFFIX_PRE + PROMPT_TEXT[PROMPT_TO_USE][1]
