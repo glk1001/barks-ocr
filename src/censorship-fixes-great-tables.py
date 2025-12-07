@@ -61,7 +61,7 @@ def get_censorship_fixes_table(file: Path) -> GT:
     #     style=style.fill(color="lightyellow"),  # Set the fill color
     #     locations=loc.body(columns="Story"),  # Target the body of "col_b"
     # )
-    return table
+    return table  # noqa: RET504
 
 
 def split_rows_into_pages(pg_size: int, rows: list) -> dict:
@@ -106,10 +106,13 @@ if len(csv_rows) % page_size != 0:
 
 pages = split_rows_into_pages(page_size, csv_rows)
 
+# Break a censorship fixes list into pages with white backgrounds.
+# These can be added to the Gimp project where the background is
+# easily removed. Then apply contrast = -70% to the remaining black text.
 for page in range(1, num_pages + 1):
     page_rows = pages[page]
 
-    temp_file = Path("/tmp/temp.csv")
+    temp_file = Path("/tmp/temp.csv")  # noqa: S108
     with temp_file.open("w", newline="") as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(header)
@@ -118,8 +121,8 @@ for page in range(1, num_pages + 1):
     gt_table = get_censorship_fixes_table(temp_file)
     gt_table.show()
 
-    image_file = Path(f"/tmp/censorship-fixes-page-{page}.png")
+    image_file = Path(f"/tmp/censorship-fixes-page-{page}.png")  # noqa: S108
     gt_table.save(str(image_file), scale=2.5, expand=10)
 
     # if page == 1:
-    #     break
+    #     break  # noqa: ERA001
