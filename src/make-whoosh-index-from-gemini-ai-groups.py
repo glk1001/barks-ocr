@@ -1,10 +1,11 @@
 import json
 import re
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 from barks_fantagraphics.barks_titles import is_non_comic_title
-from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
+from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs, ExtraArg
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from loguru import logger
 from loguru_config import LoguruConfig
@@ -12,6 +13,7 @@ from whoosh.fields import ID, TEXT, Schema
 from whoosh.index import create_in, open_dir
 from whoosh.qparser import QueryParser
 
+from barks_fantagraphics.pages import get_sorted_srce_and_dest_pages
 from ocr_json_files import JsonFiles
 
 APP_LOGGING_NAME = "gemi"
@@ -218,12 +220,28 @@ def print_index(search_engine: SearchEngine, title: str) -> None:
         print(f"Field: {fieldname}, Term: {text}")
 
 
-def find_words(search_engine: SearchEngine, words: str) -> None:
+def find_words(search_engine: SearchEngine, words: str) -> dict[str, list[str]]:
+    prelim_results = defaultdict(list)
     with search_engine.index.searcher() as searcher:
         query = QueryParser("content", search_engine.index.schema).parse(words)
         results = searcher.search(query)
         for hit in results:
-            print(f"Title: {hit['title']}, Page: {hit['page']}")
+            prelim_results[hit["title"]].append(hit["page"])
+
+    title_results = {}
+    for title in sorted(prelim_results.keys()):
+        title_results[title] = sorted(prelim_results[title])
+
+    return title_results
+
+
+def map_to_tite_pages(title: str, fanta_pages: list[str]) -> list[str]:
+    comic = comics_database.get_comic_book(title)
+    srce_and_dest_pages = get_sorted_srce_and_dest_pages(comic, get_full_paths=True)
+    for srce, dest in zip(srce_and_dest_pages.srce_pages, srce_and_dest_pages.dest_pages):
+        print(srce.page_num, srce.page_filename, dest.page_num, dest.page_filename)
+
+    return fanta_pages
 
 
 def get_content(title: str) -> dict[str, str]:
@@ -265,10 +283,14 @@ def normalize_string(text: str) -> list[str]:
 
 
 if __name__ == "__main__":
+    extra_args: list[ExtraArg] = [
+        ExtraArg("--words", action="store", type=str, default=""),
+    ]
+
     # TODO(glk): Some issue with type checking inspection?
     # noinspection PyTypeChecker
     cmd_args = CmdArgs(
-        "Make Gemini AI OCR groups for title", CmdArgNames.VOLUME | CmdArgNames.TITLE
+        "Make Gemini AI OCR groups for title", CmdArgNames.VOLUME | CmdArgNames.TITLE, extra_args
     )
     args_ok, error_msg = cmd_args.args_are_valid()
     if not args_ok:
@@ -286,5 +308,8 @@ if __name__ == "__main__":
 
     search_engine = SearchEngine()
     # print_index(search_engine, "")
-    words = "313"
-    find_words(search_engine, words)
+    words = cmd_args.get_extra_arg("--words")
+    found = find_words(search_engine, words)
+    for title, fanta_pages in found.items():
+        pages = map_to_tite_pages(title, fanta_pages)
+        print(f"Title: {title}, Page: {', '.join(pages)}")
