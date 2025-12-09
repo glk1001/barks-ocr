@@ -1,12 +1,11 @@
 line-length = 100
 
 exclude = [
+    	"experiments",
         "scraps",
         "tools",
         "**/src/utils/geometry.py",
         "**/src/make-ocr-groups.py",
-        "**/src/nano-banana-batch.py",
-        "**/src/nano-banana-batch-results.py",
     ]
 
 [lint]
