@@ -20,6 +20,7 @@ dependencies = [
     "pyenchant>=3.3.0",
     "selenium>=4.38.0",
     "thefuzz>=0.22.1",
+    "whoosh-reloaded>=2.7.5",
 ]
 
 [tool.uv]

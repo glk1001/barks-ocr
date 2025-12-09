@@ -88,6 +88,7 @@ dependencies = [
     { name = "pyenchant" },
     { name = "selenium" },
     { name = "thefuzz" },
+    { name = "whoosh-reloaded" },
 ]
 
 [package.metadata]
@@ -107,6 +108,7 @@ requires-dist = [
     { name = "pyenchant", specifier = ">=3.3.0" },
     { name = "selenium", specifier = ">=4.38.0" },
     { name = "thefuzz", specifier = ">=0.22.1" },
+    { name = "whoosh-reloaded", specifier = ">=2.7.5" },
 ]
 
 [[package]]
@@ -121,6 +123,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/83/0a/e49d7774ce186fd51c611a2533baff8e7db0d22baef12223773f389b06b1/bce_python_sdk-0.9.52.tar.gz", hash = "sha256:dd54213ac25b8b1260fb45f1fbc0f2b1c53bb0f9f594258ca0479f1fc85f7405", size = 275614, upload-time = "2025-11-12T09:09:28.227Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a3/d0/f57f75c96e8bb72144845f7208f712a54454f1d063d5ef02f1e9ea476b79/bce_python_sdk-0.9.52-py3-none-any.whl", hash = "sha256:f1ed39aa61c2d4a002cd2345e01dd92ac55c75960440d76163ead419b3b550e7", size = 390401, upload-time = "2025-11-12T09:09:26.663Z" },
+]
+
+[[package]]
+name = "cached-property"
+version = "2.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/76/4b/3d870836119dbe9a5e3c9a61af8cc1a8b69d75aea564572e385882d5aefb/cached_property-2.0.1.tar.gz", hash = "sha256:484d617105e3ee0e4f1f58725e72a8ef9e93deee462222dbd51cd91230897641", size = 10574, upload-time = "2024-10-25T15:43:55.667Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/0e/7d8225aab3bc1a0f5811f8e1b557aa034ac04bdf641925b30d3caf586b28/cached_property-2.0.1-py3-none-any.whl", hash = "sha256:f617d70ab1100b7bcf6e42228f9ddcb78c676ffa167278d9f730d1c2fba69ccb", size = 7428, upload-time = "2024-10-25T15:43:54.711Z" },
 ]
 
 [[package]]
@@ -2250,6 +2261,18 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/86/eb/20b6cdf273913d0ad05a6a14aed4b9a85591c18a987a3d47f20fa13dcc47/websockets-15.0.1-cp313-cp313-win32.whl", hash = "sha256:ba9e56e8ceeeedb2e080147ba85ffcd5cd0711b89576b83784d8605a7df455fa", size = 176393, upload-time = "2025-03-05T20:02:53.814Z" },
     { url = "https://files.pythonhosted.org/packages/1b/6c/c65773d6cab416a64d191d6ee8a8b1c68a09970ea6909d16965d26bfed1e/websockets-15.0.1-cp313-cp313-win_amd64.whl", hash = "sha256:e09473f095a819042ecb2ab9465aee615bd9c2028e4ef7d933600a8401c79561", size = 176837, upload-time = "2025-03-05T20:02:55.237Z" },
     { url = "https://files.pythonhosted.org/packages/fa/a8/5b41e0da817d64113292ab1f8247140aac61cbf6cfd085d6a0fa77f4984f/websockets-15.0.1-py3-none-any.whl", hash = "sha256:f7a866fbc1e97b5c617ee4116daaa09b722101d4a3c170c787450ba409f9736f", size = 169743, upload-time = "2025-03-05T20:03:39.41Z" },
+]
+
+[[package]]
+name = "whoosh-reloaded"
+version = "2.7.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cached-property" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/17/51/3fb4b9fdeaaf96512514ccf2871186333ce41a0de2ea48236a4056a5f6af/Whoosh-Reloaded-2.7.5.tar.gz", hash = "sha256:39ed7dfbd1fec97af33933107bdf78110728375ed0f2abb25dec6dbfdcb279d8", size = 1061606, upload-time = "2024-02-02T20:06:42.285Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/69/90/866dfe421f188217ecd7339585e961034a7f4fdc96b62cec3b40a50dbdef/Whoosh_Reloaded-2.7.5-py2.py3-none-any.whl", hash = "sha256:2ab6aeeafb359fbff4beb3c704b960fd88240354f3363f1c5bdb5c2325cae80e", size = 551793, upload-time = "2024-02-02T20:06:39.868Z" },
 ]
 
 [[package]]
