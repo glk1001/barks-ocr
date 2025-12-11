@@ -8,14 +8,14 @@ from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
-from loguru import logger
-
-from ocr_file_paths import (
+from barks_fantagraphics.ocr_file_paths import (
     BATCH_JOBS_OUTPUT_DIR,
     OCR_PRELIM_DIR,
     get_ocr_predicted_groups_filename,
     get_ocr_prelim_groups_json_filename,
 )
+from loguru import logger
+
 from utils.common import ProcessResult
 from utils.geometry import Rect
 from utils.ocr_box import (

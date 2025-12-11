@@ -6,13 +6,12 @@ from pathlib import Path
 
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs, ExtraArg
 from barks_fantagraphics.comics_utils import get_timestamp_str
-from loguru import logger
-from loguru_config import LoguruConfig
-
-from ocr_file_paths import (
+from barks_fantagraphics.ocr_file_paths import (
     OCR_FIXES_BACKUP_DIR,
     OCR_FIXES_DIR,
 )
+from loguru import logger
+from loguru_config import LoguruConfig
 
 APP_LOGGING_NAME = "chkr"
 

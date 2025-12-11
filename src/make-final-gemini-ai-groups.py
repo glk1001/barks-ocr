@@ -5,10 +5,9 @@ from pathlib import Path
 from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.ocr_json_files import JsonFiles
 from loguru import logger
 from loguru_config import LoguruConfig
-
-from ocr_json_files import JsonFiles
 
 APP_LOGGING_NAME = "gemf"
 

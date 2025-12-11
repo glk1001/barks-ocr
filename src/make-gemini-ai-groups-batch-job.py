@@ -7,12 +7,7 @@ from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type, get_timestamp_str
-from comic_utils.cv_image_utils import get_bw_image_from_alpha
-from loguru import logger
-from loguru_config import LoguruConfig
-from PIL import Image
-
-from ocr_file_paths import (
+from barks_fantagraphics.ocr_file_paths import (
     BATCH_JOBS_OUTPUT_DIR,
     UNPROCESSED_BATCH_JOBS_DIR,
     get_batch_details_file,
@@ -20,6 +15,11 @@ from ocr_file_paths import (
     get_ocr_predicted_groups_filename,
     get_ocr_prelim_groups_json_filename,
 )
+from comic_utils.cv_image_utils import get_bw_image_from_alpha
+from loguru import logger
+from loguru_config import LoguruConfig
+from PIL import Image
+
 from utils.gemini_ai import AI_PRO_MODEL, CLIENT
 from utils.gemini_ai_comic_prompts import comic_prompt
 from utils.gemini_ai_for_grouping import norm2ai

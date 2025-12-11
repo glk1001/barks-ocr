@@ -4,15 +4,15 @@ from pathlib import Path
 
 from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
-from loguru import logger
-from loguru_config import LoguruConfig
-
-from ocr_file_paths import (
+from barks_fantagraphics.ocr_file_paths import (
     BATCH_JOBS_OUTPUT_DIR,
     FINISHED_BATCH_JOBS_DIR,
     get_batch_details_file,
     get_batch_requests_file,
 )
+from loguru import logger
+from loguru_config import LoguruConfig
+
 from utils.gemini_ai import CLIENT
 
 APP_LOGGING_NAME = "gemr"
@@ -37,8 +37,10 @@ def process_batch_job(title: str) -> None:  # noqa: PLR0915
 
         if not batch_details_file.is_file():
             if not finished_batch_details_file.exists():
-                msg = (f'Batch details file not found and'
-                       f' no finished batch details file: "{batch_details_file}"')
+                msg = (
+                    f"Batch details file not found and"
+                    f' no finished batch details file: "{batch_details_file}"'
+                )
                 raise FileNotFoundError(msg)
             logger.info(
                 f'Found finished batch details file: "{finished_batch_details_file}" - skipping.'

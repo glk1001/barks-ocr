@@ -4,11 +4,11 @@ from pathlib import Path
 from typing import Any
 
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
+from barks_fantagraphics.ocr_file_paths import get_ocr_predicted_groups_filename
 from loguru import logger
 from loguru_config import LoguruConfig
 
 from gemini_ai_ocr_grouper import GeminiAiGrouper
-from ocr_file_paths import get_ocr_predicted_groups_filename
 from utils.gemini_ai_for_grouping import get_cleaned_text
 
 APP_LOGGING_NAME = "gemg"

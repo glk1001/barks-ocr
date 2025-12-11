@@ -4,13 +4,13 @@ from pathlib import Path
 from typing import Any
 
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
+from barks_fantagraphics.ocr_file_paths import get_ocr_predicted_groups_filename
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
 from loguru import logger
 from loguru_config import LoguruConfig
 from PIL import Image
 
 from gemini_ai_ocr_grouper import GeminiAiGrouper
-from ocr_file_paths import get_ocr_predicted_groups_filename
 from utils.gemini_ai_for_grouping import get_ai_predicted_groups
 from utils.preprocessing import preprocess_image
 
