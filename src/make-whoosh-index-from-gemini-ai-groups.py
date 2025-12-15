@@ -2,7 +2,7 @@
 
 import sys
 import textwrap
-from dataclasses import dataclass, field
+from collections import defaultdict
 from pathlib import Path
 
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs, ExtraArg
@@ -13,12 +13,6 @@ from loguru_config import LoguruConfig
 APP_LOGGING_NAME = "gemi"
 
 
-@dataclass
-class TitleInfo:
-    fanta_vol: int = 0
-    pages: list[tuple[str, str, str]] = field(default_factory=list)
-
-
 def print_index(search_eng: SearchEngine, title: str) -> None:
     with search_eng._index.reader() as reader:
         all_terms = list(reader.all_terms())
@@ -26,6 +20,29 @@ def print_index(search_eng: SearchEngine, title: str) -> None:
     print("All terms in the index:")
     for field_name, text in all_terms:
         print(f"Field: {field_name}, Term: {text}")
+
+
+def print_unstemmed_terms(search_eng: SearchEngine) -> None:
+    with search_eng._index.reader() as reader:
+        all_terms = list(reader.terms_from("unstemmed", ""))
+
+    print("All terms in the index:")
+    for _field_name, text in all_terms:
+        print(f"{text}")
+
+
+def print_unstemmed_terms_summary(search_eng: SearchEngine) -> None:
+    unstemmed_terms = search_eng.get_cleaned_unstemmed_terms()
+
+    counts = defaultdict(int)
+    for term in unstemmed_terms:
+        first_letter = term[0].lower()
+        counts[first_letter] += 1
+
+    for letter, num in counts.items():
+        print(f"{letter}: {num}")
+
+    print(f"Total: {len(unstemmed_terms)}")
 
 
 if __name__ == "__main__":
@@ -52,7 +69,7 @@ if __name__ == "__main__":
 
     comics_database = cmd_args.get_comics_database()
 
-    volumes_index_dir = Path("/tmp/index_dir")
+    volumes_index_dir = Path("/tmp/index_dir2")
     create_index = cmd_args.get_extra_arg("--create_index")
     if not create_index:
         search_engine = SearchEngine(volumes_index_dir)
@@ -61,6 +78,9 @@ if __name__ == "__main__":
         search_engine.index_volumes(cmd_args.get_volumes())
 
     # print_index(search_engine, "")
+    # print_unstemmed_terms(search_engine)
+    print_unstemmed_terms_summary(search_engine)
+
     unstemmed = cmd_args.get_extra_arg("--unstemmed")
     words = cmd_args.get_extra_arg("--words")
     found = search_engine.find_words(words, unstemmed)

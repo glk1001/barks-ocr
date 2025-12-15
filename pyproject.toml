@@ -18,6 +18,7 @@ dependencies = [
     "polars>=1.35.2",
     "pydantic>=2.11.7",
     "pyenchant>=3.3.0",
+    "pyuca>=1.2",
     "selenium>=4.38.0",
     "thefuzz>=0.22.1",
     "whoosh-reloaded>=2.7.5",
