@@ -7,7 +7,8 @@ from loguru_config import LoguruConfig
 
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.ocr_file_paths import (
-    OCR_PRELIM_DIR, get_ocr_prelim_groups_json_filename,
+    OCR_PRELIM_DIR,
+    get_ocr_prelim_groups_json_filename,
 )
 
 APP_LOGGING_NAME = "opno"
@@ -55,9 +56,7 @@ def open_prelim_files(volume: int, page: str) -> None:
 if __name__ == "__main__":
     # TODO(glk): Some issue with type checking inspection?
     # noinspection PyTypeChecker
-    cmd_args = CmdArgs(
-            "Edit page and group for title", CmdArgNames.VOLUME | CmdArgNames.PAGE
-    )
+    cmd_args = CmdArgs("Edit page and group for title", CmdArgNames.VOLUME | CmdArgNames.PAGE)
     args_ok, error_msg = cmd_args.args_are_valid()
     if not args_ok:
         logger.error(error_msg)

@@ -1,4 +1,3 @@
-
 import sys
 from pathlib import Path
 
@@ -12,16 +11,14 @@ APP_LOGGING_NAME = "clni"
 
 if __name__ == "__main__":
     extra_args: list[ExtraArg] = [
-            ExtraArg("--create-index", action="store_true", type=bool, default=False),
-            ExtraArg("--unstemmed", action="store_true", type=bool, default=False),
-            ExtraArg("--words", action="store", type=str, default=""),
+        ExtraArg("--create-index", action="store_true", type=bool, default=False),
+        ExtraArg("--unstemmed", action="store_true", type=bool, default=False),
+        ExtraArg("--words", action="store", type=str, default=""),
     ]
 
     # TODO(glk): Some issue with type checking inspection?
     # noinspection PyTypeChecker
-    cmd_args = CmdArgs(
-            "Clean unstemmed words in Whoosh index", CmdArgNames.VOLUME, extra_args
-    )
+    cmd_args = CmdArgs("Clean unstemmed words in Whoosh index", CmdArgNames.VOLUME, extra_args)
     args_ok, error_msg = cmd_args.args_are_valid()
     if not args_ok:
         logger.error(error_msg)
@@ -35,5 +32,6 @@ if __name__ == "__main__":
     comics_database = cmd_args.get_comics_database()
 
     search_engine = SearchEngine(
-            Path("/home/greg/Books/Carl Barks/Compleat Barks Disney Reader/Reader Files/Indexes"))
+        Path("/home/greg/Books/Carl Barks/Compleat Barks Disney Reader/Reader Files/Indexes")
+    )
     unstemmed_words = search_engine.get_unstemmed_terms()
