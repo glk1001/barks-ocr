@@ -3,12 +3,13 @@
   <component name="Black">
     <option name="sdkName" value="uv (barks-ocr)" />
   </component>
-  <component name="MaterialThemeProjectNewConfig">
-    <option name="metadata">
-      <MTProjectMetadataState>
-        <option name="userId" value="188657b2:1989c485a25:-7ffd" />
-      </MTProjectMetadataState>
-    </option>
-  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="uv (barks-ocr)" project-jdk-type="Python SDK" />
+  <component name="RuffConfiguration">
+    <option name="enabled" value="true" />
+    <option name="executableDiscoveryMode" value="PATH" />
+  </component>
+  <component name="TyConfiguration">
+    <option name="enabled" value="true" />
+    <option name="executableDiscoveryMode" value="PATH" />
+  </component>
 </project>
