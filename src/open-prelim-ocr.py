@@ -2,14 +2,13 @@ import subprocess
 import sys
 from pathlib import Path
 
-from loguru import logger
-from loguru_config import LoguruConfig
-
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.ocr_file_paths import (
     OCR_PRELIM_DIR,
     get_ocr_prelim_groups_json_filename,
 )
+from loguru import logger
+from loguru_config import LoguruConfig
 
 APP_LOGGING_NAME = "opno"
 
@@ -32,7 +31,7 @@ def edit_file(file: Path, line: int) -> None:
     logger.debug(f"Running command: {command}.")
 
     process = subprocess.Popen(command, stdout=subprocess.PIPE, text=True)  # noqa: S603
-    _output = process.stdout.readline()
+    _output = process.stdout.readline()  # ty:ignore[possibly-missing-attribute]
 
     logger.debug(f'Editor should now have opened "{file}" at line {line}.')
 
