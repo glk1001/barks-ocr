@@ -6,6 +6,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs, ExtraArg
+from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.whoosh_search_engine import SearchEngine, SearchEngineCreator
 from loguru import logger
 from loguru_config import LoguruConfig
@@ -69,7 +70,7 @@ if __name__ == "__main__":
 
     comics_database = cmd_args.get_comics_database()
 
-    volumes_index_dir = Path("/tmp/index_dir2")
+    volumes_index_dir = BARKS_ROOT_DIR / "Compleat Barks Disney Reader/Reader Files/Indexes"
     create_index = cmd_args.get_extra_arg("--create_index")
     if not create_index:
         search_engine = SearchEngine(volumes_index_dir)
@@ -85,9 +86,9 @@ if __name__ == "__main__":
     words = cmd_args.get_extra_arg("--words")
     found = search_engine.find_words(words, unstemmed)
     for comic_title, title_info in found.items():
-        print(f'"{comic_title}" [Fanta volume {title_info.fanta_vol}]')
+        print(f'"{comic_title}"')
         for page in title_info.pages:
-            print(f"   Page: {page[1]}, Fanta page: {page[0]}")
+            print(f"   Fanta vol {title_info.fanta_vol}, Fanta page: {page[0]}, Page: {page[1]}")
             indented_text = textwrap.indent(page[2], "        ")
             print(indented_text)
             print()
