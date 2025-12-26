@@ -1,42 +1,189 @@
-import csv
-import re
+# ruff: noqa: T201
+import json
+from argparse import ArgumentParser
+from collections import defaultdict
+from enum import Enum
+from pathlib import Path
 
 import nltk
 import pycountry
+
+from barks_fantagraphics.barks_words import BARKSIAN_SPELLING
+from barks_fantagraphics.whoosh_search_engine import US_STATES
 from spellchecker import SpellChecker
 
-# --- Download NLTK data (Names corpus) ---
-try:
-    nltk.data.find("corpora/names")
-except LookupError:
-    print("Downloading name datasets...")
-    nltk.download("names")
 
-from nltk.corpus import names
+def is_float(value: str) -> bool:
+    try:
+        float(value)
+    except (ValueError, TypeError):
+        return False
+    else:
+        return True
 
 
-class WordCategorizer:
+def is_int(value: str) -> bool:
+    try:
+        int(value)
+    except (ValueError, TypeError):
+        return False
+    else:
+        return True
+
+
+# --- NLTK Setup and Downloads ---
+def setup_nltk() -> None:
+    """Ensure necessary NLTK data is downloaded."""
+    print("Initializing dictionaries (this may take a moment)...")
+    try:
+        nltk.data.find("corpora/names")
+    except LookupError:
+        print("Downloading NLTK names corpus...")
+        nltk.download("names", quiet=True)
+
+
+class Categories(Enum):
+    EMPTY = "Empty"
+    SYMBOL_OR_PUNC = "Symbol/Punctuation"
+    ABBREVIATION = "Abbreviation"
+    DOT_ABBREVIATION = "Dot Abbreviation"
+    NUMBER = "Number"
+    DECIMAL = "Decimal"
+    CORRECTLY_SPELLED = "Correctly Spelled"
+    BARKSIAN_SPELLED = "Barksian Spelled"
+    COMMON_SLANG = "Common Slang"
+    KNOWN_PLACE_NAMES = "Known Place Names"
+    POSSIBLE_PLACE_NAMES = "Possible Place Names"
+    KNOWN_PEOPLE_NAMES = "Known People Names"
+    POSSIBLE_PEOPLE_NAMES = "Possible People Names"
+    POSSIBLE_SLANG = "Possible Slang"
+    UNCATEGORIZED = "Uncategorized"
+
+
+class BarksCategorizer:
     def __init__(self) -> None:
-        print("Initializing dictionaries and databases...")
+        setup_nltk()
 
-        # 1. English Dictionary
+        # English Dictionary
         self.spell = SpellChecker()
 
-        # 2. Known People Names (English)
-        # We combine male and female names from NLTK
-        self.known_names = set(names.words("male.txt")) | set(names.words("female.txt"))
-        # Add some common Spanish names manually or load a file here if needed
-        self.known_names.update(["Juan", "Jose", "Maria", "Carlos", "Luis", "Ana", "Pedro"])
+        self.spell.word_frequency.load_words(
+            [
+                "boomtown",
+            ]
+        )
 
-        # 3. Known Place Names (Countries and Subdivisions)
+        # Known People Names (English + manual Spanish/Comic additions)
+        self.known_names = set(nltk.corpus.names.words("male.txt")) | set(
+            nltk.corpus.names.words("female.txt")
+        )
+        self.known_names.update(
+            [
+                "Ana",
+                "Antonio",
+                "Beagle",
+                "Biglook",
+                "Bombastro",
+                "Bombie",
+                "Booneheads",
+                "Bosco",
+                "Carlos",
+                "Diamondtubs",
+                "Ellic",
+                "Edgars",
+                "Fizzlebudget",
+                "Flinthide",
+                "Gearloose",
+                "Gilfinkle",
+                "Giltwhiskers",
+                "Gladstone",
+                "Glomgold",
+                "Gnapoleon",
+                "Gnatbugg-Mothley",
+                "Gnostradamus",
+                "Gobblechin",
+                "Goldbeak",
+                "Goofy",
+                "Groanbalm",
+                "Gyro",
+                "Iglook",
+                "Jesus",
+                "Jorge",
+                "Jose",
+                "Juan",
+                "Lazy-K",
+                "Luis",
+                "Magica",
+                "Manuel",
+                "Maria",
+                "Miguel",
+                "Morganbilt",
+                "Nevvawaza",
+                "Pedro",
+                "Philo",
+                "Sevenchins",
+                "Smoogle-Snaghles",
+                "Smorgie",
+                "Snootsbury",
+                "Socrapossi",
+                "Squattie",
+                "Swansdown-Swoonsudden",
+                "Tweeksdale",
+                "Wormsley",
+            ]
+        )
+        self.known_names = {n.lower() for n in self.known_names}
+        self.known_names -= {
+            "bay",
+            "canada",
+            "derby",
+            "derrick",
+            "florida",
+            "georgia",
+            "guy",
+            "hagtooth",
+            "valencia",
+            "venus",
+        }
+
+        # Known Place Names (Countries and States)
         self.known_places = set()
         for country in pycountry.countries:
-            self.known_places.add(country.name)
-        for sub in pycountry.subdivisions:
-            self.known_places.add(sub.name)
+            self.known_places.add(country.name.lower())
+            # Add 3-letter codes like USA, GBR if available
+            if hasattr(country, "alpha_3"):
+                self.known_places.add(country.alpha_3.lower())
+        for place in pycountry.subdivisions:
+            self.known_places.add(place.name.lower())
+        self.known_places.update(
+            [
+                "Burma",
+                "Calcutta",
+                "Floodout",
+                "Frozenbear",
+                "Venus",
+                "Scroogeville-on-the-Latex",
+                "Timbuctoo",
+                "Volcanovia",
+                "Volcanovian",
+                "Waha-Go-Gaga",
+            ]
+        )
+        self.known_places.update(US_STATES)
+        self.known_places = {n.lower() for n in self.known_places}
+        self.place_suffixes = (
+            "burg",
+            "ville",
+            "town",
+            "land",
+            "sota",
+            "ia",
+            "ford",
+            "shire",
+            "stan",
+        )
 
-        # 4. Common Slang (Carl Barks / Comic Book Specifics)
-        # You should expand this list based on what you see in the results
+        # Common Slang / Exclamations (Carl Barks style)
         self.common_slang = {
             "gosh",
             "gee",
@@ -56,125 +203,158 @@ class WordCategorizer:
             "uh",
             "um",
             "shucks",
+            "sheesh",
+            "swell",
+            "feller",
+            "kinda",
+            "oughta",
+            "gonna",
+            "wanna",
+            "yow",
+            "ulp",
+            "awk",
+            "quack",
         }
 
-    def get_category(self, word):
-        """Analyzes a single word and returns a category ID and Name.
-        Priority is important here.
-        """  # noqa: D205
-        clean_word = word.strip()
+    def get_category(self, original_word: str) -> Categories:  # noqa: PLR0911
+        """Analyse a single word and return (Category ID, Category Name)."""
+        word = original_word.strip()
 
-        # --- CHECK 4: Abbreviated ---
-        # Starts or ends with apostrophe (e.g., 'lo, knockin')
-        if clean_word.startswith("'") or clean_word.endswith("'"):
-            return 4, "Abbreviated"
+        is_in_dictionary = len(self.spell.known([word])) > 0
 
-        # Remove punctuation for the remaining checks (so "Hello?" becomes "Hello")
-        # We keep internal apostrophes for names like O'Hara
-        stripped_word = re.sub(r"[^\w\']", "", clean_word)
+        cat_id = self.check_easy_categories(word, is_in_dictionary)
+        if cat_id != Categories.UNCATEGORIZED:
+            return cat_id
 
-        if not stripped_word:
-            return 0, "Symbol/Empty"
+        if word.lower() in BARKSIAN_SPELLING:
+            return Categories.BARKSIAN_SPELLED
 
-        # --- CHECK 5: Known Place Names ---
-        if stripped_word in self.known_places:
-            return 5, "Known Place Name"
+        cat_id = self.check_people_names(word, is_in_dictionary)
+        if cat_id != Categories.UNCATEGORIZED:
+            return cat_id
 
-        # --- CHECK 7: Known People Names ---
-        if stripped_word in self.known_names:
-            return 7, "Known People Name"
+        cat_id = self.check_places(word, is_in_dictionary)
+        if cat_id != Categories.UNCATEGORIZED:
+            return cat_id
 
-        # --- CHECK 2: Common Slang ---
-        if stripped_word.lower() in self.common_slang:
-            return 2, "Common Slang"
+        cat_id = self.check_slang(word, is_in_dictionary)
+        if cat_id != Categories.UNCATEGORIZED:
+            return cat_id
 
-        # --- CHECK 1: Correctly Spelled (Standard English) ---
-        # known() returns a set of words that are found in the dictionary
-        if self.spell.known([stripped_word]):
-            # If it's capitalized, it might be a name (like "Baker"),
-            # but if it's in the dictionary, we usually classify as Correctly Spelled
-            # unless we want to prioritize names. Here we prioritize Dictionary.
-            return 1, "Correctly Spelled"
+        cat_id = self.check_possibilities(word, is_in_dictionary)
+        if cat_id != Categories.UNCATEGORIZED:
+            return cat_id
 
-        # --- HEURISTICS FOR "POSSIBLE" CATEGORIES ---
+        # --- CHECK: Correctly Spelled ---
+        if is_in_dictionary:
+            return Categories.CORRECTLY_SPELLED
 
-        # --- CHECK 6: Possible Place Names ---
-        # Logic: Capitalized + Suffixes common in comics (Duckburg, etc)
-        place_suffixes = ("burg", "ville", "town", "land", "sota", "ia", "ford", "shire")
-        if stripped_word[0].isupper() and stripped_word.lower().endswith(place_suffixes):
-            return 6, "Possible Place Name"
+        return Categories.UNCATEGORIZED
 
-        # --- CHECK 8: Possible People Names ---
-        # Logic: Capitalized, not in dictionary, not a known place
-        if stripped_word[0].isupper():
-            return 8, "Possible People Name"
+    @staticmethod
+    def check_easy_categories(word: str, is_in_dictionary: bool) -> Categories:  # noqa: PLR0911
+        if is_in_dictionary:
+            return Categories.UNCATEGORIZED
 
-        # --- CHECK 3: Possible Slang ---
-        # Logic: Lowercase, not in dictionary, usually phonetic spellings
-        if stripped_word[0].islower():
-            return 3, "Possible Slang"
+        if not word:
+            return Categories.EMPTY
 
-        # Fallback
-        return 9, "Uncategorized"
+        # --- CHECK: Abbreviated ---
+        # CHECK Abbreviation: Starts/Ends with apostrophe ('lo, knockin')
+        if word.startswith("'") or word.endswith("'"):
+            return Categories.ABBREVIATION
+
+        # --- CHECK: Number or decimal ---
+        if is_int(word):
+            return Categories.NUMBER
+        if is_float(word):
+            return Categories.DECIMAL
+
+        # CHECK Abbreviation: Contains dots: (a.d., g.i., Mr.)
+        if "." in word:
+            return Categories.DOT_ABBREVIATION
+
+        return Categories.UNCATEGORIZED
+
+    def check_places(self, word: str, is_in_dictionary: bool) -> Categories:
+        # --- CHECK: Known Place Names ---
+        if word.lower() in self.known_places:
+            return Categories.KNOWN_PLACE_NAMES
+
+        return Categories.UNCATEGORIZED
+
+    def check_people_names(self, word: str, is_in_dictionary: bool) -> Categories:
+        if word.lower() in self.known_names:
+            return Categories.KNOWN_PEOPLE_NAMES
+
+        if word.endswith("'s") and word.removesuffix("'s") in self.known_names:
+            return Categories.KNOWN_PEOPLE_NAMES
+
+        return Categories.UNCATEGORIZED
+
+    def check_slang(self, word: str, is_in_dictionary: bool) -> Categories:
+        # --- CHECK: Common Slang ---
+        if word.lower() in self.common_slang:
+            return Categories.COMMON_SLANG
+
+        return Categories.UNCATEGORIZED
+
+    def check_possibilities(self, word: str, is_in_dictionary: bool) -> Categories:
+        # --- CHECK: Possible Place Names ---
+        # Has common place suffixes
+        if not is_in_dictionary and word.lower().endswith(self.place_suffixes):
+            return Categories.POSSIBLE_PLACE_NAMES
+
+        # --- CHECK: Possible People Names ---
+        # Capitalized + Not in dictionary + Not a known place
+        if not is_in_dictionary and word[0].isupper():
+            return Categories.POSSIBLE_PEOPLE_NAMES
+
+        # --- CHECK: Possible Slang ---
+        # Lowercase not in dictionary
+        if not is_in_dictionary and word[0].islower():
+            return Categories.POSSIBLE_SLANG
+
+        return Categories.UNCATEGORIZED
 
 
-def process_file(input_file, output_file):
-    categorizer = WordCategorizer()
+def get_categorized_word_lists(input_path: Path) -> dict[Categories, list[str]]:
+    if not input_path.exists():
+        msg = f'The file "{input_path}" does not exist.'
+        raise FileNotFoundError(msg)
 
-    results = []
+    categorizer = BarksCategorizer()
 
-    print(f"Reading {input_file}...")
-    try:
-        with open(input_file, "r", encoding="utf-8") as f:
-            words = f.read().splitlines()
-    except FileNotFoundError:
-        print("Error: Input file not found.")
-        return
+    print(f'Reading Barks words from: "{input_path}".')
+    words: list[str] = json.loads(input_path.read_text(encoding="utf-8"))
 
-    print(f"Categorizing {len(words)} words...")
+    print(f"Processing {len(words)} words...")
+    categorized_words_dict = defaultdict(list)
+    for w in words:
+        if not w.strip():
+            continue
 
-    for word in words:
-        if not word.strip():
-            continue  # Skip empty lines
+        cat_id = categorizer.get_category(w)
+        categorized_words_dict[cat_id.value].append(w)
 
-        cat_id, cat_name = categorizer.get_category(word)
-        results.append([word, cat_id, cat_name])
-
-    # Write to CSV
-    print(f"Writing results to {output_file}...")
-    with open(output_file, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["Word", "Category ID", "Category Name"])
-        writer.writerows(results)
-
-    print("Done!")
+    return categorized_words_dict
 
 
-# --- EXECUTION ---
-# Create a dummy file for testing if you don't have one ready
-# remove this block if you have your own 'words.txt'
 if __name__ == "__main__":
-    # Example usage:
-    # 1. Create a text file named 'words.txt' with your 15,000 words (one per line)
-    # 2. Run this script
+    args = ArgumentParser("Barks Word Categorizer.")
+    args.add_argument("-i", "--input_file", required=True, type=Path, help="Input file")
+    args.add_argument("-o", "--output_file", required=True, type=Path, help="Output file")
+    args = args.parse_args()
+    input_file = args.input_file
+    output_file = args.output_file
 
-    # Just for demonstration, let's create a dummy input file
-    sample_data = """Hello
-'lo
-Duckburg
-Scrooge
-Donald
-runnin'
-gosh
-flibberflabber
-Paris
-Mickey
-Calisota
-bork
-Spain"""
+    word_lists = get_categorized_word_lists(input_file)
+    for cat in word_lists:
+        word_lists[cat].sort()
 
-    with open("words_input.txt", "w") as f:
-        f.write(sample_data)
+    # Write to JSON file with indentation for readability.
+    print(f'Writing word list to JSON file: "{output_file}".')
+    with output_file.open("w", encoding="utf-8") as f:
+        json.dump(word_lists, f, indent=4, ensure_ascii=False)
 
-    # Run the processor
-    process_file("words_input.txt", "categorized_words.csv")
+    print("Done.")
