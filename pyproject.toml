@@ -23,6 +23,7 @@ dependencies = [
     "pyspellchecker>=0.8.4",
     "pyuca>=1.2",
     "selenium>=4.38.0",
+    "simplemma>=1.1.2",
     "thefuzz>=0.22.1",
     "whoosh-reloaded>=2.7.5",
 ]
