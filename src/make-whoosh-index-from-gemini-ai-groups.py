@@ -13,7 +13,6 @@ from barks_fantagraphics.whoosh_barks_terms import (
 from barks_fantagraphics.whoosh_search_engine import NAME_MAP, SearchEngine, SearchEngineCreator
 from loguru import logger
 from loguru_config import LoguruConfig
-from spellchecker import SpellChecker
 
 APP_LOGGING_NAME = "gemi"
 
@@ -60,12 +59,13 @@ def check_all_barksian_terms() -> None:
             msg = f'"{key}" not found'
             raise ValueError(msg)
 
-        for _comic_title, title_info in found.items():
-            for page in title_info.pages:
-                text = page[2].lower().replace("\n", " ")
-                if f"{value.lower()}" not in text:
-                    msg = f"{value.lower()}:\n{text}"
-                    raise ValueError(msg)
+        for title_info in found.values():
+            for page_info in title_info.fanta_pages.values():
+                for speech_bubble in page_info.speech_bubbles:
+                    speech_lower = speech_bubble.lower().replace("\n", " ")
+                    if f"{value.lower()}" not in speech_lower:
+                        msg = f"{value.lower()}:\n{speech_lower}"
+                        raise ValueError(msg)
 
     for term in BARKSIAN_EXTRA_TERMS:
         found = search_engine.find_words(term, use_unstemmed_terms=True)
@@ -137,8 +137,14 @@ if __name__ == "__main__":
     found = search_engine.find_words(words, unstemmed)
     for comic_title, title_info in found.items():
         print(f'"{comic_title}"')
-        for page in title_info.pages:
-            print(f"   Fanta vol {title_info.fanta_vol}, Fanta page: {page[0]}, Page: {page[1]}")
-            indented_text = textwrap.indent(page[2], "        ")
-            print(indented_text)
+
+        for fanta_page, page_info in title_info.fanta_pages.items():
+            print(
+                f"     Fanta vol {title_info.fanta_vol}, page {fanta_page},"
+                f" Comic page {page_info.comic_page}"
+            )
+            for speech_bubble in page_info.speech_bubbles:
+                indented_text = textwrap.indent(speech_bubble, "         ")
+                print(indented_text)
+                print()
             print()
