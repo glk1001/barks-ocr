@@ -144,7 +144,9 @@ if __name__ == "__main__":
                 f" Comic page {page_info.comic_page}"
             )
             for speech_bubble in page_info.speech_bubbles:
-                indented_text = textwrap.indent(speech_bubble, "         ")
+                sp_id = speech_bubble[0]
+                text = speech_bubble[1]
+                indented_text = textwrap.indent(f'"{sp_id}": {text}', "         ")
                 print(indented_text)
                 print()
             print()
