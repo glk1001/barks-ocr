@@ -62,7 +62,7 @@ def check_all_barksian_terms() -> None:
         for title_info in found.values():
             for page_info in title_info.fanta_pages.values():
                 for speech_bubble in page_info.speech_bubbles:
-                    speech_lower = speech_bubble.lower().replace("\n", " ")
+                    speech_lower = speech_bubble[1].lower().replace("\n", " ")
                     if f"{value.lower()}" not in speech_lower:
                         msg = f"{value.lower()}:\n{speech_lower}"
                         raise ValueError(msg)
@@ -80,7 +80,7 @@ def check_all_barksian_terms() -> None:
     #            raise ValueError(f'Barksian term to capitalize "{term}" not found')
 
     # spell = SpellChecker()
-    for term in search_engine.get_cleaned_unstemmed_terms():
+    for term in search_engine.get_cleaned_lemmatized_terms():
         if "-" in term:
             term_with_no_hyphen = term.replace("-", "")
             if (
@@ -88,6 +88,9 @@ def check_all_barksian_terms() -> None:
                 and term not in BARKSIAN_WORDS_WITH_OPTIONAL_HYPHENS
             ):
                 logger.error(f'Hyphenated term has non-hyphenated term as well: "{term}"')
+
+        if not search_engine.find_all_words(term):
+            logger.error(f'Could not find any content for term: "{term}"')
 
 
 if __name__ == "__main__":
@@ -134,6 +137,7 @@ if __name__ == "__main__":
     if do_checks:
         check_all_barksian_terms()
 
+    text_indenter = textwrap.TextWrapper(initial_indent="       ", subsequent_indent="            ")
     found = search_engine.find_words(words, unstemmed)
     for comic_title, title_info in found.items():
         print(f'"{comic_title}"')
@@ -146,7 +150,7 @@ if __name__ == "__main__":
             for speech_bubble in page_info.speech_bubbles:
                 sp_id = speech_bubble[0]
                 text = speech_bubble[1]
-                indented_text = textwrap.indent(f'"{sp_id}": {text}', "         ")
+                indented_text = text_indenter.fill(f'"{sp_id}": {text}')
                 print(indented_text)
                 print()
             print()
