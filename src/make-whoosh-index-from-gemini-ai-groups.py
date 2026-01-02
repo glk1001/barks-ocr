@@ -93,6 +93,15 @@ def check_all_barksian_terms() -> None:
             logger.error(f'Could not find any content for term: "{term}"')
 
 
+class ParagraphWrapper(textwrap.TextWrapper):
+    def wrap(self, text):
+        paragraphs = text.split("\n")
+        wrapped_lines = []
+        for paragraph in paragraphs:
+            wrapped_lines.extend(textwrap.TextWrapper.wrap(self, paragraph))
+        return wrapped_lines
+
+
 if __name__ == "__main__":
     extra_args: list[ExtraArg] = [
         ExtraArg("--create-index", action="store_true", type=bool, default=False),
@@ -137,7 +146,7 @@ if __name__ == "__main__":
     if do_checks:
         check_all_barksian_terms()
 
-    text_indenter = textwrap.TextWrapper(initial_indent="       ", subsequent_indent="            ")
+    text_indenter = ParagraphWrapper(initial_indent="       ", subsequent_indent="            ")
     found = search_engine.find_words(words, unstemmed)
     for comic_title, title_info in found.items():
         print(f'"{comic_title}"')
@@ -150,7 +159,9 @@ if __name__ == "__main__":
             for speech_bubble in page_info.speech_bubbles:
                 sp_id = speech_bubble[0]
                 text = speech_bubble[1]
+                # text = text.replace("\u00AD\n", "\n")
                 indented_text = text_indenter.fill(f'"{sp_id}": {text}')
+                # indented_text = text
                 print(indented_text)
                 print()
             print()
