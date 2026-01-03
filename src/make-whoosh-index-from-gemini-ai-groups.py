@@ -1,6 +1,5 @@
 # ruff: noqa: T201
 import sys
-import textwrap
 from collections import defaultdict
 from pathlib import Path
 
@@ -13,6 +12,8 @@ from barks_fantagraphics.whoosh_barks_terms import (
 from barks_fantagraphics.whoosh_search_engine import NAME_MAP, SearchEngine, SearchEngineCreator
 from loguru import logger
 from loguru_config import LoguruConfig
+
+from utils.paragraph_wrap import ParagraphWrapper
 
 APP_LOGGING_NAME = "gemi"
 
@@ -49,36 +50,65 @@ def print_unstemmed_terms_summary(search_eng: SearchEngine) -> None:
     print(f"Total: {len(unstemmed_terms)}")
 
 
-def check_all_barksian_terms() -> None:
+def check_index_integrity(volumes: list[int]) -> None:
     volumes_index_dir = BARKS_ROOT_DIR / "Compleat Barks Disney Reader/Reader Files/Indexes"
     search_engine = SearchEngine(volumes_index_dir)
 
+    print("Checking NAME_MAP...")
+    check_name_map(search_engine)
+
+    print("Checking BARKSIAN_EXTRA_TERMS...")
+    check_barksian_terms(search_engine)
+
+    print("Checking all titles included in index...")
+    check_all_titles_included(search_engine, volumes)
+
+    print("Checking lemmatized terms...")
+    check_lemmatized_terms(search_engine)
+
+    print()
+
+
+def check_all_titles_included(search_engine: SearchEngine, volumes: list[int]) -> None:
+    all_indexed_titles = search_engine.get_all_titles()
+    all_volume_titles = {
+        t[0] for t in comics_database.get_all_titles_in_fantagraphics_volumes(volumes)
+    }
+
+    not_indexed = all_volume_titles - all_indexed_titles
+    if not_indexed:
+        print("Titles not indexed:")
+        for title in not_indexed:
+            print(f'    "{title}"')
+
+
+def check_name_map(search_engine: SearchEngine) -> None:
     for key, value in NAME_MAP.items():
         found = search_engine.find_words(key, use_unstemmed_terms=True)
         if not found:
             msg = f'"{key}" not found'
             raise ValueError(msg)
 
-        for title_info in found.values():
-            for page_info in title_info.fanta_pages.values():
-                for speech_bubble in page_info.speech_bubbles:
-                    speech_lower = speech_bubble[1].lower().replace("\n", " ")
+        for ttl_info in found.values():
+            for pg_info in ttl_info.fanta_pages.values():
+                for speech_text in pg_info.speech_bubbles:
+                    speech_lower = speech_text[1].lower()
+                    speech_lower = speech_lower.replace("-\n", "-")
+                    speech_lower = speech_lower.replace("\n", " ")
                     if f"{value.lower()}" not in speech_lower:
-                        msg = f"{value.lower()}:\n{speech_lower}"
+                        msg = f'"{value.lower()}":\n{speech_lower}\n\n{speech_text[1]}'
                         raise ValueError(msg)
 
+
+def check_barksian_terms(search_engine: SearchEngine) -> None:
     for term in BARKSIAN_EXTRA_TERMS:
         found = search_engine.find_words(term, use_unstemmed_terms=True)
         if not found:
             logger.error(f'Barksian extra term "{term}" not found')
     #            raise ValueError(f'Barksian extra term "{term}" not found')
 
-    for term in BARKSIAN_EXTRA_TERMS:
-        found = search_engine.find_words(term, use_unstemmed_terms=True)
-        if not found:
-            logger.error(f'Barksian term to capitalize "{term}" not found')
-    #            raise ValueError(f'Barksian term to capitalize "{term}" not found')
 
+def check_lemmatized_terms(search_engine: SearchEngine) -> None:
     # spell = SpellChecker()
     for term in search_engine.get_cleaned_lemmatized_terms():
         if "-" in term:
@@ -91,15 +121,6 @@ def check_all_barksian_terms() -> None:
 
         if not search_engine.find_all_words(term):
             logger.error(f'Could not find any content for term: "{term}"')
-
-
-class ParagraphWrapper(textwrap.TextWrapper):
-    def wrap(self, text):
-        paragraphs = text.split("\n")
-        wrapped_lines = []
-        for paragraph in paragraphs:
-            wrapped_lines.extend(textwrap.TextWrapper.wrap(self, paragraph))
-        return wrapped_lines
 
 
 if __name__ == "__main__":
@@ -130,10 +151,10 @@ if __name__ == "__main__":
     volumes_index_dir = BARKS_ROOT_DIR / "Compleat Barks Disney Reader/Reader Files/Indexes"
     create_index = cmd_args.get_extra_arg("--create_index")
     if not create_index:
-        search_engine = SearchEngine(volumes_index_dir)
+        whoosh_search = SearchEngine(volumes_index_dir)
     else:
-        search_engine = SearchEngineCreator(comics_database, volumes_index_dir)
-        search_engine.index_volumes(cmd_args.get_volumes())
+        whoosh_search = SearchEngineCreator(comics_database, volumes_index_dir)
+        whoosh_search.index_volumes(cmd_args.get_volumes())
 
     # print_index(search_engine, "")
     # print_unstemmed_terms(search_engine)
@@ -144,11 +165,11 @@ if __name__ == "__main__":
     words = cmd_args.get_extra_arg("--words")
 
     if do_checks:
-        check_all_barksian_terms()
+        check_index_integrity(cmd_args.get_volumes())
 
     text_indenter = ParagraphWrapper(initial_indent="       ", subsequent_indent="            ")
-    found = search_engine.find_words(words, unstemmed)
-    for comic_title, title_info in found.items():
+    found_text = whoosh_search.find_words(words, unstemmed)
+    for comic_title, title_info in found_text.items():
         print(f'"{comic_title}"')
 
         for fanta_page, page_info in title_info.fanta_pages.items():
@@ -158,10 +179,8 @@ if __name__ == "__main__":
             )
             for speech_bubble in page_info.speech_bubbles:
                 sp_id = speech_bubble[0]
-                text = speech_bubble[1]
-                # text = text.replace("\u00AD\n", "\n")
-                indented_text = text_indenter.fill(f'"{sp_id}": {text}')
-                # indented_text = text
+                text_lines = speech_bubble[1]
+                indented_text = text_indenter.fill(f'"{sp_id}": {text_lines}')
                 print(indented_text)
                 print()
             print()
