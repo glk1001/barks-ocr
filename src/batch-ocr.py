@@ -33,7 +33,7 @@ AUTO_CORRECTIONS = {
     "G0": "GO",
 }
 
-BARKS_OCR_SPELL_DICT = Path(__file__).parent.parent / "barks_words.txt"
+BARKS_OCR_SPELL_DICT = Path(__file__).parent / "batch-ocr-barks-words.txt"
 if not BARKS_OCR_SPELL_DICT.is_file():
     msg = f'Could not find Barks spelling dict: "{BARKS_OCR_SPELL_DICT}".'
     raise FileNotFoundError(msg)
