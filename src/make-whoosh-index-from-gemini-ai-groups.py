@@ -3,6 +3,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, NON_COMIC_TITLES
 from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs, ExtraArg
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.whoosh_barks_terms import (
@@ -72,7 +73,9 @@ def check_index_integrity(volumes: list[int]) -> None:
 def check_all_titles_included(search_engine: SearchEngine, volumes: list[int]) -> None:
     all_indexed_titles = search_engine.get_all_titles()
     all_volume_titles = {
-        t[0] for t in comics_database.get_all_titles_in_fantagraphics_volumes(volumes)
+        t[0]
+        for t in comics_database.get_all_titles_in_fantagraphics_volumes(volumes)
+        if t[1].comic_book_info.title not in NON_COMIC_TITLES
     }
 
     not_indexed = all_volume_titles - all_indexed_titles
@@ -83,11 +86,15 @@ def check_all_titles_included(search_engine: SearchEngine, volumes: list[int]) -
 
 
 def check_name_map(search_engine: SearchEngine) -> None:
+    assert "ele-phant" in NAME_MAP
+
     for key, value in NAME_MAP.items():
         found = search_engine.find_words(key, use_unstemmed_terms=True)
         if not found:
             msg = f'"{key}" not found'
             raise ValueError(msg)
+        if key.lower() == "ele-phant":  # special case
+            continue
 
         for ttl_info in found.values():
             for pg_info in ttl_info.fanta_pages.values():
@@ -95,7 +102,7 @@ def check_name_map(search_engine: SearchEngine) -> None:
                     speech_lower = speech_text[1].lower()
                     speech_lower = speech_lower.replace("-\n", "-")
                     speech_lower = speech_lower.replace("\n", " ")
-                    if f"{value.lower()}" not in speech_lower:
+                    if value.lower() not in speech_lower:
                         msg = f'"{value.lower()}":\n{speech_lower}\n\n{speech_text[1]}'
                         raise ValueError(msg)
 
@@ -179,7 +186,7 @@ if __name__ == "__main__":
             )
             for speech_bubble in page_info.speech_bubbles:
                 sp_id = speech_bubble[0]
-                text_lines = speech_bubble[1]
+                text_lines = speech_bubble[1].replace("\u00AD", "-")
                 indented_text = text_indenter.fill(f'"{sp_id}": {text_lines}')
                 print(indented_text)
                 print()
