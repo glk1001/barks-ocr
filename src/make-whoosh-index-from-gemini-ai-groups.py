@@ -186,7 +186,7 @@ if __name__ == "__main__":
             )
             for speech_bubble in page_info.speech_bubbles:
                 sp_id = speech_bubble[0]
-                text_lines = speech_bubble[1].replace("\u00AD", "-")
+                text_lines = speech_bubble[1].replace("\u00ad", "-")
                 indented_text = text_indenter.fill(f'"{sp_id}": {text_lines}')
                 print(indented_text)
                 print()
