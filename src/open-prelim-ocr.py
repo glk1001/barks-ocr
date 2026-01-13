@@ -1,12 +1,14 @@
 import subprocess
-import sys
 from pathlib import Path
 
-from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
+import typer
+from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.ocr_file_paths import (
     OCR_PRELIM_DIR,
     get_ocr_prelim_groups_json_filename,
 )
+from comic_utils.common_typer_options import LogLevelArg, PagesArg, VolumesArg
+from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 
@@ -36,7 +38,7 @@ def edit_file(file: Path, line: int) -> None:
     logger.debug(f'Editor should now have opened "{file}" at line {line}.')
 
 
-def open_prelim_files(volume: int, page: str) -> None:
+def open_prelim_files(comics_database: ComicsDatabase, volume: int, page: str) -> None:
     volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
 
     prelim_dir = OCR_PRELIM_DIR / volume_dirname
@@ -52,23 +54,30 @@ def open_prelim_files(volume: int, page: str) -> None:
     edit_file(paddle_ocr, 1)
 
 
-if __name__ == "__main__":
-    # TODO(glk): Some issue with type checking inspection?
-    # noinspection PyTypeChecker
-    cmd_args = CmdArgs("Edit page and group for title", CmdArgNames.VOLUME | CmdArgNames.PAGE)
-    args_ok, error_msg = cmd_args.args_are_valid()
-    if not args_ok:
-        logger.error(error_msg)
-        sys.exit(1)
+app = typer.Typer()
+log_level = ""
 
-    # Global variables accessed by loguru-config.
-    log_level = cmd_args.get_log_level()
-    log_filename = Path(__file__).stem + ".log"
+
+@app.command(help="Make final ai groups")
+def main(
+    volumes_str: VolumesArg = "",
+    pages: PagesArg = "",
+    log_level_str: LogLevelArg = "DEBUG",
+) -> None:
+    # Global variable accessed by loguru-config.
+    global log_level  # noqa: PLW0603
+    log_level = log_level_str
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
-    comics_database = cmd_args.get_comics_database()
+    volumes = list(intspan(volumes_str))
+    assert len(volumes) == 1
+    comics_database = ComicsDatabase()
 
-    vol = cmd_args.get_volume()
-    pg = f"{cmd_args.get_pages()[0]:03d}"
+    vol = volumes[0]
+    pg = f"{pages[0]:03d}"
 
-    open_prelim_files(vol, pg)
+    open_prelim_files(comics_database, vol, pg)
+
+
+if __name__ == "__main__":
+    app()

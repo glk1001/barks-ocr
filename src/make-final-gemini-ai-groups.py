@@ -1,27 +1,32 @@
 import json
-import sys
 from pathlib import Path
 
+import typer
 from barks_fantagraphics.barks_titles import is_non_comic_title
-from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.ocr_json_files import JsonFiles
+from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
+from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 
 APP_LOGGING_NAME = "gemf"
 
 
-def make_final_gemini_ai_groups_for_titles(titles: list[str]) -> None:
+def make_final_gemini_ai_groups_for_titles(
+    comics_database: ComicsDatabase, titles: list[str]
+) -> None:
     for title in titles:
         if is_non_comic_title(title):
             logger.warning(f'Not a comic title "{title}" - skipping.')
             continue
 
-        make_final_gemini_ai_groups_for_title(title)
+        make_final_gemini_ai_groups_for_title(comics_database, title)
 
 
-def make_final_gemini_ai_groups_for_title(title: str) -> None:
+def make_final_gemini_ai_groups_for_title(comics_database: ComicsDatabase, title: str) -> None:
     json_files = JsonFiles(comics_database, title)
     json_files.title_final_results_dir.mkdir(parents=True, exist_ok=True)
 
@@ -44,22 +49,33 @@ def make_final_gemini_ai_groups_for_title(title: str) -> None:
             logger.warning(f'"{title}, {json_files.page}": Not ready for final yet.')
 
 
-if __name__ == "__main__":
-    # TODO(glk): Some issue with type checking inspection?
-    # noinspection PyTypeChecker
-    cmd_args = CmdArgs(
-        "Make Gemini AI OCR groups for title", CmdArgNames.VOLUME | CmdArgNames.TITLE
-    )
-    args_ok, error_msg = cmd_args.args_are_valid()
-    if not args_ok:
-        logger.error(error_msg)
-        sys.exit(1)
+app = typer.Typer()
+log_level = ""
+log_filename = "make-final-gemini-ai-groups.log"
 
-    # Global variables accessed by loguru-config.
-    log_level = cmd_args.get_log_level()
-    log_filename = "make-gemini-ai-groups-batch-job.log"
+
+@app.command(help="Make final ai groups")
+def main(
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    log_level_str: LogLevelArg = "DEBUG",
+) -> None:
+    # Global variable accessed by loguru-config.
+    global log_level  # noqa: PLW0603
+    log_level = log_level_str
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
-    comics_database = cmd_args.get_comics_database()
+    if volumes_str and title_str:
+        err_msg = "Options --volume and --title are mutually exclusive."
+        raise typer.BadParameter(err_msg)
 
-    make_final_gemini_ai_groups_for_titles(cmd_args.get_titles())
+    volumes = list(intspan(volumes_str))
+    comics_database = ComicsDatabase()
+
+    make_final_gemini_ai_groups_for_titles(
+        comics_database, get_titles(comics_database, volumes, title_str)
+    )
+
+
+if __name__ == "__main__":
+    app()

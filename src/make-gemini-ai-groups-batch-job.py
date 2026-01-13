@@ -3,9 +3,11 @@ import sys
 from pathlib import Path
 from typing import Any
 
+import typer
 from barks_fantagraphics.barks_titles import is_non_comic_title
-from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type, get_timestamp_str
 from barks_fantagraphics.ocr_file_paths import (
     BATCH_JOBS_OUTPUT_DIR,
@@ -15,7 +17,9 @@ from barks_fantagraphics.ocr_file_paths import (
     get_ocr_predicted_groups_filename,
     get_ocr_prelim_groups_json_filename,
 )
+from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
+from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 from PIL import Image
@@ -28,16 +32,18 @@ from utils.preprocessing import preprocess_image
 APP_LOGGING_NAME = "gemb"
 
 
-def make_gemini_ai_groups_for_titles_batch_job(title_list: list[str]) -> None:
+def make_gemini_ai_groups_for_titles_batch_job(
+    comics_database: ComicsDatabase, title_list: list[str]
+) -> None:
     for title in title_list:
         if is_non_comic_title(title):
             logger.warning(f'Not a comic title "{title}" - skipping.')
             continue
 
-        make_gemini_ai_groups_for_title(title)
+        make_gemini_ai_groups_for_title(comics_database, title)
 
 
-def make_gemini_ai_groups_for_title(title: str) -> None:  # noqa: PLR0915
+def make_gemini_ai_groups_for_title(comics_database: ComicsDatabase, title: str) -> None:  # noqa: PLR0915
     out_title_dir = UNPROCESSED_BATCH_JOBS_DIR / title
     volume_dirname = comics_database.get_fantagraphics_volume_title(
         comics_database.get_fanta_volume_int(title)
@@ -221,23 +227,33 @@ def assign_ids_to_ocr_boxes(bounds: list[dict[str, Any]]) -> list[dict[str, Any]
     return [{**bound, "text_id": str(i)} for i, bound in enumerate(bounds)]
 
 
-if __name__ == "__main__":
-    # TODO(glk): Some issue with type checking inspection?
-    # noinspection PyTypeChecker
-    cmd_args = CmdArgs(
-        "Make Gemini AI OCR groups for title",
-        CmdArgNames.VOLUME | CmdArgNames.TITLE,
-    )
-    args_ok, error_msg = cmd_args.args_are_valid()
-    if not args_ok:
-        logger.error(error_msg)
-        sys.exit(1)
+app = typer.Typer()
+log_level = ""
+log_filename = "make-gemini-ai-groups-batch-job.log"
 
-    # Global variables accessed by loguru-config.
-    log_level = cmd_args.get_log_level()
-    log_filename = "make-gemini-ai-groups-batch-job.log"
+
+@app.command(help="Make gemini ai groups batch job")
+def main(
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    log_level_str: LogLevelArg = "DEBUG",
+) -> None:
+    # Global variable accessed by loguru-config.
+    global log_level  # noqa: PLW0603
+    log_level = log_level_str
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
-    comics_database = cmd_args.get_comics_database()
+    if volumes_str and title_str:
+        err_msg = "Options --volume and --title are mutually exclusive."
+        raise typer.BadParameter(err_msg)
 
-    make_gemini_ai_groups_for_titles_batch_job(cmd_args.get_titles())
+    volumes = list(intspan(volumes_str))
+    comics_database = ComicsDatabase()
+
+    make_gemini_ai_groups_for_titles_batch_job(
+        comics_database, get_titles(comics_database, volumes, title_str)
+    )
+
+
+if __name__ == "__main__":
+    app()

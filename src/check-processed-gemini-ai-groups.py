@@ -1,18 +1,19 @@
 import json
 import re
-import sys
 from pathlib import Path
 
+import typer
 from barks_fantagraphics.barks_titles import is_non_comic_title
-from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs, ExtraArg
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.ocr_file_paths import OCR_FIXES_DIR
 from barks_fantagraphics.ocr_json_files import JsonFiles
+from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
+from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 from thefuzz import fuzz, process
-
-APP_LOGGING_NAME = "chkr"
 
 BAD_PATTERNS = [
     r"--",
@@ -24,7 +25,7 @@ BAD_PATTERNS = [
 
 
 def check_gemini_ai_groups_for_titles(
-    titles: list[str], compare_text: bool, show_close: bool
+    comics_database: ComicsDatabase, titles: list[str], compare_text: bool, show_close: bool
 ) -> None:
     total_errors = 0
 
@@ -33,7 +34,9 @@ def check_gemini_ai_groups_for_titles(
             logger.warning(f'Not a comic title "{title}" - skipping.')
             continue
 
-        total_errors += check_gemini_ai_groups_for_title(title, compare_text, show_close)
+        total_errors += check_gemini_ai_groups_for_title(
+            comics_database, title, compare_text, show_close
+        )
 
     if total_errors == 0:
         logger.success("All comic titles checked - no file errors found.")
@@ -41,7 +44,9 @@ def check_gemini_ai_groups_for_titles(
         logger.error(f"There were {total_errors} file errors found.")
 
 
-def check_gemini_ai_groups_for_title(title: str, compare_text: bool, show_close: bool) -> int:
+def check_gemini_ai_groups_for_title(
+    comics_database: ComicsDatabase, title: str, compare_text: bool, show_close: bool
+) -> int:
     json_files = JsonFiles(comics_database, title)
 
     logger.info(
@@ -235,6 +240,7 @@ def compare_ai_texts(
             logger.error(f'Group {group_id}: Could not find ai_text:\n\n"{ai_text}"\n\nin other.')
 
         logger.debug(f"Appending fixes info for group {group_id}")
+        # noinspection PyTypeChecker
         fix_objects[int(group_id)] = get_fix_command(
             json_files,
             index1,
@@ -306,31 +312,38 @@ def find_line_number_in_json_string(json_file: Path, n: int, target_key: str) ->
     return -1
 
 
-if __name__ == "__main__":
-    extra_args: list[ExtraArg] = [
-        ExtraArg("--compare-text", action="store_true", type=None, default=None),
-        ExtraArg("--show-close", action="store_true", type=None, default=None),
-    ]
+app = typer.Typer()
+log_level = ""
+log_filename = "check-gemini-ai-groups.log"
 
-    # TODO(glk): Some issue with type checking inspection?
-    # noinspection PyTypeChecker
-    cmd_args = CmdArgs(
-        "Make Gemini AI OCR groups for title", CmdArgNames.VOLUME | CmdArgNames.TITLE, extra_args
-    )
-    args_ok, error_msg = cmd_args.args_are_valid()
-    if not args_ok:
-        logger.error(error_msg)
-        sys.exit(1)
 
-    # Global variables accessed by loguru-config.
-    log_level = cmd_args.get_log_level()
-    log_filename = "make-gemini-ai-groups-batch-job.log"
+@app.command(help="Check gemini ai group files")
+def main(
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    compare_text: bool = True,
+    show_close: bool = True,
+    log_level_str: LogLevelArg = "DEBUG",
+) -> None:
+    # Global variable accessed by loguru-config.
+    global log_level  # noqa: PLW0603
+    log_level = log_level_str
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
-    comics_database = cmd_args.get_comics_database()
+    if volumes_str and title_str:
+        err_msg = "Options --volume and --title are mutually exclusive."
+        raise typer.BadParameter(err_msg)
+
+    volumes = list(intspan(volumes_str))
+    comics_database = ComicsDatabase()
 
     check_gemini_ai_groups_for_titles(
-        cmd_args.get_titles(),
-        compare_text=cmd_args.get_extra_arg("--compare_text"),
-        show_close=cmd_args.get_extra_arg("--show_close"),
+        comics_database,
+        get_titles(comics_database, volumes, title_str),
+        compare_text,
+        show_close,
     )
+
+
+if __name__ == "__main__":
+    app()

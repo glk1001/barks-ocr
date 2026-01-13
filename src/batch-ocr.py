@@ -1,19 +1,22 @@
 # ruff: noqa: ERA001
 
 import json
-import sys
 import tempfile
 from pathlib import Path
 
 import cv2 as cv
 import easyocr
 import enchant
+import typer
 from barks_fantagraphics.barks_titles import is_non_comic_title
-from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
+from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
 from comic_utils.timing import Timing
+from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 from paddleocr import PaddleOCR
@@ -41,7 +44,7 @@ if not BARKS_OCR_SPELL_DICT.is_file():
 spell_dict = enchant.DictWithPWL("en_US", str(BARKS_OCR_SPELL_DICT))
 
 
-def ocr_titles(title_list: list[str]) -> None:
+def ocr_titles(comics_database: ComicsDatabase, title_list: list[str], work_dir: Path) -> None:
     timing = Timing()
 
     num_files_processed = 0
@@ -59,7 +62,7 @@ def ocr_titles(title_list: list[str]) -> None:
         dest_file_groups = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
         for srce_file, dest_files in zip(srce_files, dest_file_groups, strict=True):
-            result = ocr_comic_page(srce_file, dest_files)
+            result = ocr_comic_page(work_dir, srce_file, dest_files)
             if result == ProcessResult.FAILURE:
                 logger.error(f'"{srce_file}": There were process errors.')
             else:
@@ -70,7 +73,9 @@ def ocr_titles(title_list: list[str]) -> None:
     )
 
 
-def ocr_comic_page(svg_file: Path, ocr_json_files: tuple[Path, Path]) -> ProcessResult:
+def ocr_comic_page(
+    work_dir: Path, svg_file: Path, ocr_json_files: tuple[Path, Path]
+) -> ProcessResult:
     png_file = Path(str(svg_file) + ".png")
 
     if not png_file.is_file():
@@ -280,22 +285,32 @@ def get_box_str(box: list[int]) -> str:
     )
 
 
-if __name__ == "__main__":
-    # TODO(glk): Some issue with type checking inspection?
-    # noinspection PyTypeChecker
-    cmd_args = CmdArgs("Ocr titles", CmdArgNames.TITLE | CmdArgNames.VOLUME)
-    args_ok, error_msg = cmd_args.args_are_valid()
-    if not args_ok:
-        logger.error(error_msg)
-        sys.exit(1)
+app = typer.Typer()
+log_level = ""
+log_filename = "batch-ocr.log"
 
-    # Global variables accessed by loguru-config.
-    log_level = cmd_args.get_log_level()
-    log_filename = "batch-ocr.log"
+
+@app.command(help="Run easyocr and paddleocr on restored titles")
+def main(
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    log_level_str: LogLevelArg = "DEBUG",
+) -> None:
+    # Global variable accessed by loguru-config.
+    global log_level  # noqa: PLW0603
+    log_level = log_level_str
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
+    if volumes_str and title_str:
+        err_msg = "Options --volume and --title are mutually exclusive."
+        raise typer.BadParameter(err_msg)
+
+    volumes = list(intspan(volumes_str))
+    comics_database = ComicsDatabase()
     work_dir = Path(tempfile.gettempdir())
 
-    comics_database = cmd_args.get_comics_database()
+    ocr_titles(comics_database, get_titles(comics_database, volumes, title_str), work_dir)
 
-    ocr_titles(cmd_args.get_titles())
+
+if __name__ == "__main__":
+    app()

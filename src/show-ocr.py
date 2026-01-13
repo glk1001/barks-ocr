@@ -1,14 +1,15 @@
 # ruff: noqa: ERA001
 
 import json
-import sys
 from pathlib import Path
 from typing import Any
 
 import cv2 as cv
+import typer
 from barks_fantagraphics.barks_titles import is_non_comic_title
-from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
 from barks_fantagraphics.comics_consts import PNG_FILE_EXT, RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
 from barks_fantagraphics.ocr_file_paths import (
     OCR_ANNOTATIONS_DIR,
@@ -17,7 +18,9 @@ from barks_fantagraphics.ocr_file_paths import (
     get_ocr_prelim_annotated_filename,
     get_ocr_prelim_groups_json_filename,
 )
+from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
+from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 from PIL import Image, ImageColor, ImageDraw, ImageFont
@@ -54,16 +57,16 @@ def get_color(group_id: int) -> str:
     return COLORS[group_id]
 
 
-def ocr_annotate_titles(title_list: list[str]) -> None:
+def ocr_annotate_titles(comics_database: ComicsDatabase, title_list: list[str]) -> None:
     for title in title_list:
         if is_non_comic_title(title):
             logger.warning(f'Not a comic title "{title}" - skipping.')
             continue
 
-        ocr_annotate_title(title)
+        ocr_annotate_title(comics_database, title)
 
 
-def ocr_annotate_title(title: str) -> None:
+def ocr_annotate_title(comics_database: ComicsDatabase, title: str) -> None:
     # Special case. Because "Silent Night" is a restored comic, the panel bounds
     # are out of whack.
     annotate_with_panels_bounds = title != "Silent Night"
@@ -364,23 +367,31 @@ def ocr_annotate_image_with_individual_boxes(
     img_rects_draw._image.save(annotated_img_file)  # noqa: SLF001
 
 
-if __name__ == "__main__":
-    # TODO(glk): Some issue with type checking inspection?
-    # noinspection PyTypeChecker
-    cmd_args = CmdArgs(
-        "OCR annotate titles",
-        CmdArgNames.VOLUME | CmdArgNames.TITLE,
-    )
-    args_ok, error_msg = cmd_args.args_are_valid()
-    if not args_ok:
-        logger.error(error_msg)
-        sys.exit(1)
+app = typer.Typer()
+log_level = ""
+log_filename = "show-ocr.log"
 
-    comics_database = cmd_args.get_comics_database()
 
-    # Global variables accessed by loguru-config.
-    log_level = cmd_args.get_log_level()
-    log_filename = "show-ocr.log"
+@app.command(help="Make final ai groups")
+def main(
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    log_level_str: LogLevelArg = "DEBUG",
+) -> None:
+    # Global variable accessed by loguru-config.
+    global log_level  # noqa: PLW0603
+    log_level = log_level_str
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
-    ocr_annotate_titles(cmd_args.get_titles())
+    if volumes_str and title_str:
+        err_msg = "Options --volume and --title are mutually exclusive."
+        raise typer.BadParameter(err_msg)
+
+    volumes = list(intspan(volumes_str))
+    comics_database = ComicsDatabase()
+
+    ocr_annotate_titles(comics_database, get_titles(comics_database, volumes, title_str))
+
+
+if __name__ == "__main__":
+    app()

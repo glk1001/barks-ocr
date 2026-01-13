@@ -1,16 +1,19 @@
 # ruff: noqa: T201
-import sys
 from collections import defaultdict
 from pathlib import Path
 
-from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, NON_COMIC_TITLES
-from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs, ExtraArg
+import typer
+from barks_fantagraphics.barks_titles import NON_COMIC_TITLES
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
+from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.whoosh_barks_terms import (
     BARKSIAN_EXTRA_TERMS,
     BARKSIAN_WORDS_WITH_OPTIONAL_HYPHENS,
+    NAME_MAP,
 )
-from barks_fantagraphics.whoosh_search_engine import NAME_MAP, SearchEngine, SearchEngineCreator
+from barks_fantagraphics.whoosh_search_engine import SearchEngine, SearchEngineCreator
+from comic_utils.common_typer_options import LogLevelArg, VolumesArg
+from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 
@@ -51,7 +54,7 @@ def print_unstemmed_terms_summary(search_eng: SearchEngine) -> None:
     print(f"Total: {len(unstemmed_terms)}")
 
 
-def check_index_integrity(volumes: list[int]) -> None:
+def check_index_integrity(comics_database: ComicsDatabase, volumes: list[int]) -> None:
     volumes_index_dir = BARKS_ROOT_DIR / "Compleat Barks Disney Reader/Reader Files/Indexes"
     search_engine = SearchEngine(volumes_index_dir)
 
@@ -62,7 +65,7 @@ def check_index_integrity(volumes: list[int]) -> None:
     check_barksian_terms(search_engine)
 
     print("Checking all titles included in index...")
-    check_all_titles_included(search_engine, volumes)
+    check_all_titles_included(comics_database, search_engine, volumes)
 
     print("Checking lemmatized terms...")
     check_lemmatized_terms(search_engine)
@@ -70,7 +73,9 @@ def check_index_integrity(volumes: list[int]) -> None:
     print()
 
 
-def check_all_titles_included(search_engine: SearchEngine, volumes: list[int]) -> None:
+def check_all_titles_included(
+    comics_database: ComicsDatabase, search_engine: SearchEngine, volumes: list[int]
+) -> None:
     all_indexed_titles = search_engine.get_all_titles()
     all_volume_titles = {
         t[0]
@@ -130,49 +135,41 @@ def check_lemmatized_terms(search_engine: SearchEngine) -> None:
             logger.error(f'Could not find any content for term: "{term}"')
 
 
-if __name__ == "__main__":
-    extra_args: list[ExtraArg] = [
-        ExtraArg("--create-index", action="store_true", type=bool, default=False),
-        ExtraArg("--unstemmed", action="store_true", type=bool, default=False),
-        ExtraArg("--do-checks", action="store_true", type=bool, default=False),
-        ExtraArg("--words", action="store", type=str, default=""),
-    ]
+app = typer.Typer()
+log_level = ""
+log_filename = "make-whoosh-index-from-gemini-ai-groups.log"
 
-    # TODO(glk): Some issue with type checking inspection?
-    # noinspection PyTypeChecker
-    cmd_args = CmdArgs(
-        "Make Whoosh index from Gemini AI OCR groups", CmdArgNames.VOLUME, extra_args
-    )
-    args_ok, error_msg = cmd_args.args_are_valid()
-    if not args_ok:
-        logger.error(error_msg)
-        sys.exit(1)
 
-    # Global variables accessed by loguru-config.
-    log_level = cmd_args.get_log_level()
-    log_filename = "make-whoosh-index-from-gemini-ai-groups.log"
+@app.command(help="Make whoosh index from gemini ai groups")
+def main(
+    volumes_str: VolumesArg = "",
+    words: str = "",
+    create_index: bool = False,
+    unstemmed: bool = False,
+    do_checks: bool = False,
+    log_level_str: LogLevelArg = "DEBUG",
+) -> None:
+    # Global variable accessed by loguru-config.
+    global log_level  # noqa: PLW0603
+    log_level = log_level_str
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
-    comics_database = cmd_args.get_comics_database()
+    volumes = list(intspan(volumes_str))
+    comics_database = ComicsDatabase()
 
     volumes_index_dir = BARKS_ROOT_DIR / "Compleat Barks Disney Reader/Reader Files/Indexes"
-    create_index = cmd_args.get_extra_arg("--create_index")
     if not create_index:
         whoosh_search = SearchEngine(volumes_index_dir)
     else:
         whoosh_search = SearchEngineCreator(comics_database, volumes_index_dir)
-        whoosh_search.index_volumes(cmd_args.get_volumes())
+        whoosh_search.index_volumes(volumes)
 
     # print_index(search_engine, "")
     # print_unstemmed_terms(search_engine)
     # print_unstemmed_terms_summary(search_engine)
 
-    unstemmed = cmd_args.get_extra_arg("--unstemmed")
-    do_checks = cmd_args.get_extra_arg("--do_checks")
-    words = cmd_args.get_extra_arg("--words")
-
     if do_checks:
-        check_index_integrity(cmd_args.get_volumes())
+        check_index_integrity(comics_database, volumes)
 
     text_indenter = ParagraphWrapper(initial_indent="       ", subsequent_indent="            ")
     found_text = whoosh_search.find_words(words, unstemmed)
@@ -191,3 +188,7 @@ if __name__ == "__main__":
                 print(indented_text)
                 print()
             print()
+
+
+if __name__ == "__main__":
+    app()

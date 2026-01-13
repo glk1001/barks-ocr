@@ -1,15 +1,18 @@
 import json
-import sys
 from pathlib import Path
 
+import typer
 from barks_fantagraphics.barks_titles import is_non_comic_title
-from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
+from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.ocr_file_paths import (
     BATCH_JOBS_OUTPUT_DIR,
     FINISHED_BATCH_JOBS_DIR,
     get_batch_details_file,
     get_batch_requests_file,
 )
+from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
+from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 
@@ -18,16 +21,16 @@ from utils.gemini_ai import CLIENT
 APP_LOGGING_NAME = "gemr"
 
 
-def process_batch_jobs(titles: list[str]) -> None:
+def process_batch_jobs(comics_database: ComicsDatabase, titles: list[str]) -> None:
     for title in titles:
         if is_non_comic_title(title):
             logger.warning(f'Not a comic title "{title}" - skipping.')
             continue
 
-        process_batch_job(title)
+        process_batch_job(comics_database, title)
 
 
-def process_batch_job(title: str) -> None:  # noqa: PLR0915
+def process_batch_job(comics_database: ComicsDatabase, title: str) -> None:  # noqa: PLR0915
     # noinspection PyBroadException
     num_errors = 0
     # noinspection PyBroadException
@@ -126,29 +129,37 @@ def process_batch_job(title: str) -> None:  # noqa: PLR0915
         )
 
 
-if __name__ == "__main__":
-    # TODO(glk): Some issue with type checking inspection?
-    # noinspection PyTypeChecker
-    cmd_args = CmdArgs(
-        "Make Gemini AI OCR groups for title",
-        CmdArgNames.VOLUME | CmdArgNames.TITLE,
-    )
-    args_ok, error_msg = cmd_args.args_are_valid()
-    if not args_ok:
-        logger.error(error_msg)
-        sys.exit(1)
+app = typer.Typer()
+log_level = ""
+log_filename = "make-gemini-ai-groups-get-batch-results.log"
 
-    # Global variables accessed by loguru-config.
-    log_level = cmd_args.get_log_level()
-    log_filename = "make-gemini-ai-groups-get-batch-results.log"
+
+@app.command(help="Get gemini ai groups results from batch job")
+def main(
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    log_level_str: LogLevelArg = "DEBUG",
+) -> None:
+    # Global variable accessed by loguru-config.
+    global log_level  # noqa: PLW0603
+    log_level = log_level_str
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
-    comics_database = cmd_args.get_comics_database()
+    if volumes_str and title_str:
+        err_msg = "Options --volume and --title are mutually exclusive."
+        raise typer.BadParameter(err_msg)
 
-    if cmd_args.one_or_more_volumes():
-        batch_job_titles = cmd_args.get_titles()
+    volumes = list(intspan(volumes_str))
+    comics_database = ComicsDatabase()
+
+    if volumes:
+        batch_job_titles = get_titles(comics_database, volumes, title_str)
     else:
-        assert len(cmd_args.get_titles()) == 1
-        batch_job_titles = [cmd_args.get_title()]
+        assert len(volumes) == 0
+        batch_job_titles = [title_str]
 
-    process_batch_jobs(batch_job_titles)
+    process_batch_jobs(comics_database, batch_job_titles)
+
+
+if __name__ == "__main__":
+    app()

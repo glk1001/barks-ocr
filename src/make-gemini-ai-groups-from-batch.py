@@ -1,10 +1,13 @@
 import json
-import sys
 from pathlib import Path
 from typing import Any
 
-from barks_fantagraphics.comics_cmd_args import CmdArgNames, CmdArgs
+import typer
+from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.ocr_file_paths import get_ocr_predicted_groups_filename
+from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
+from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 
@@ -37,24 +40,32 @@ def get_ai_predicted_groups(
         return json.loads(predicted_groups)
 
 
-if __name__ == "__main__":
-    # TODO(glk): Some issue with type checking inspection?
-    # noinspection PyTypeChecker
-    cmd_args = CmdArgs(
-        "Make Gemini AI OCR groups for title",
-        CmdArgNames.VOLUME | CmdArgNames.TITLE,
-    )
-    args_ok, error_msg = cmd_args.args_are_valid()
-    if not args_ok:
-        logger.error(error_msg)
-        sys.exit(1)
+app = typer.Typer()
+log_level = ""
+log_filename = "make-gemini-ai-groups-from-batch.log"
 
-    # Global variables accessed by loguru-config.
-    log_level = cmd_args.get_log_level()
-    log_filename = "make-gemini-ai-groups-from-batch.log"
+
+@app.command(help="Make gemini ai groups from batch job results")
+def main(
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    log_level_str: LogLevelArg = "DEBUG",
+) -> None:
+    # Global variable accessed by loguru-config.
+    global log_level  # noqa: PLW0603
+    log_level = log_level_str
     LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
 
-    comics_database = cmd_args.get_comics_database()
+    if volumes_str and title_str:
+        err_msg = "Options --volume and --title are mutually exclusive."
+        raise typer.BadParameter(err_msg)
+
+    volumes = list(intspan(volumes_str))
+    comics_database = ComicsDatabase()
 
     gemini_ai_grouper = GeminiAiGrouper(comics_database, get_ai_predicted_groups)
-    gemini_ai_grouper.make_groups_for_titles(cmd_args.get_titles())
+    gemini_ai_grouper.make_groups_for_titles(get_titles(comics_database, volumes, title_str))
+
+
+if __name__ == "__main__":
+    app()
