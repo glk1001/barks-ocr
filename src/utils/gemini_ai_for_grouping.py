@@ -1,35 +1,5 @@
 import copy
-import json
-from pathlib import Path
 from typing import Any
-
-from loguru import logger
-from PIL import Image
-from pydantic import BaseModel, Field
-
-from .gemini_ai import AI_FLASH_MODEL, CLIENT
-from .gemini_ai_comic_prompts import comic_prompt
-
-
-class Group(BaseModel):
-    panel_id: str = Field(description="Panel id.")
-    text_bubble_id: str = Field(description="Text bubble id.")
-    box_ids: list[str] = Field(description="List of cleaned text box ids.")
-    split_cleaned_box_texts: dict[str, str] = Field(
-        description="Dict of box ids and corresponding text"
-    )
-    original_text: str = Field(description="The OCR output before cleaning")
-    cleaned_text: str = Field(description="The corrected and cleaned text")
-    type: str = Field(description="dialogue|thought|narration|sound_effect|background")
-    style: str = Field(description="normal|emphasized|angled|split")
-    notes: str = Field(
-        description="Justification for inclusion if background or sound effect, any corrections"
-        " or uncertainties|none"
-    )
-
-
-class OcrOutput(BaseModel):
-    groups: list[Group]
 
 
 def get_cleaned_text(text: str) -> tuple[str, str]:
@@ -45,40 +15,6 @@ def get_cleaned_text(text: str) -> tuple[str, str]:
         reason = "Single backslash single quote"
 
     return text, reason
-
-
-def get_ai_predicted_groups(
-    svg_stem: str, ocr_type: str, image: Image.Image, ocr_results: list[dict[str, Any]]
-) -> list[Any]:
-    # Make the data AI-friendly.
-    width, height = image.size
-    norm_ocr_results = norm2ai(ocr_results, height, width)
-    prompt = comic_prompt.format(norm_ocr_results)
-
-    """Process OCR results with AI."""
-    response = CLIENT.models.generate_content(
-        model=AI_FLASH_MODEL,
-        contents=[
-            image,
-            prompt,
-        ],
-        config={
-            "response_mime_type": "application/json",
-            "response_json_schema": OcrOutput.model_json_schema(),
-        },
-    )
-
-    assert response.text
-    cleaned, reason_changed = get_cleaned_text(response.text)
-    if reason_changed:
-        logger.warning(f"Fixed json in model response: {reason_changed}.")
-
-    temp_cleaned_file = Path(f"/tmp/{svg_stem}-{ocr_type}-gemini-cleaned-response.json")  # noqa: S108
-    logger.info(f'Writing gemini cleaned response to "{temp_cleaned_file}".')
-    with temp_cleaned_file.open("w") as f:
-        f.write(cleaned)
-
-    return json.loads(cleaned, strict=False)
 
 
 def norm2ai(bounds: list[dict[str, Any]], height: int, width: int) -> list[dict[str, Any]]:

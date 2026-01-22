@@ -2,6 +2,7 @@ import subprocess
 from pathlib import Path
 
 import typer
+from barks_fantagraphics.comic_book import get_page_str
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.ocr_file_paths import (
     OCR_PRELIM_DIR,
@@ -56,6 +57,7 @@ def open_prelim_files(comics_database: ComicsDatabase, volume: int, page: str) -
 
 app = typer.Typer()
 log_level = ""
+log_filename = "open-prelim-ocr.log"
 
 
 @app.command(help="Make final ai groups")
@@ -74,7 +76,7 @@ def main(
     comics_database = ComicsDatabase()
 
     vol = volumes[0]
-    pg = f"{pages[0]:03d}"
+    pg = get_page_str(int(pages))
 
     open_prelim_files(comics_database, vol, pg)
 

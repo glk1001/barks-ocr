@@ -7,7 +7,7 @@ from pathlib import Path
 from google.genai.types import GenerateContentConfig
 from PIL import Image
 
-from utils.gemini_ai import AI_FLASH_IMAGE_MODEL, CLIENT
+from utils.gemini_ai import AI_PRO_IMAGE_MODEL, CLIENT
 
 
 class Prompts(Enum):
@@ -90,10 +90,10 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "You Can't Win"
+TITLE = "A Sticky Situation"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "172-2.png"
+IMAGE_FILENAME = "093-5.png"
 AI_TEMPERATURE = 1.0
 
 EXTRA_PROHIBITION = ""
@@ -206,7 +206,7 @@ for prompt_type, dest_image in zip(PROMPT_TYPES, dest_files, strict=True):
     print(f'Saving edited content to "{dest_image}"...')
 
     response = CLIENT.models.generate_content(
-        model=AI_FLASH_IMAGE_MODEL,
+        model=AI_PRO_IMAGE_MODEL,
         contents=[
             final_prompt,
             srce_image1,

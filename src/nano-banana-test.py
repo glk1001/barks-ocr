@@ -1,13 +1,13 @@
 # ruff: noqa: ERA001,T201,E501
-
 from enum import Enum, auto
 from io import BytesIO
 from pathlib import Path
 
+from comic_utils.comic_consts import PNG_FILE_EXT
 from google.genai.types import GenerateContentConfig
 from PIL import Image
 
-from utils.gemini_ai import AI_FLASH_IMAGE_MODEL, CLIENT
+from utils.gemini_ai import AI_PRO_IMAGE_MODEL, CLIENT
 
 
 class Prompts(Enum):
@@ -36,7 +36,7 @@ PROMPT_TEXT = {
         REMOVE_BUBBLE_DEST_SUFFIX,
     ),
     Prompts.REMOVE_NARRATION_AND_SPEECH_BUBBLES: (
-        "Remove all speech bubbles and narrator box.",
+        "Remove all speech bubbles and narrator boxes.",
         REMOVE_BUBBLE_DEST_SUFFIX,
     ),
     Prompts.REMOVE_NARRATION_BOX_ONLY: (
@@ -84,17 +84,17 @@ FANTA_RESTORED_DIR = ROOT_DIR / "Fantagraphics-restored"
 # PANEL_TYPE = "Closeups"
 PANEL_TYPE = "Favourites"
 # PANEL_TYPE = "Insets"
-PANEL_TYPE = "Splash"
+# PANEL_TYPE = "Splash"
 # PANEL_TYPE = "Silhouettes"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Billions in the Hole"
+TITLE = "Stranger Than Fiction"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "064-1.png"
+IMAGE_FILENAME = "057-4.png"
 
-AI_TEMPERATURE = 0.0
+AI_TEMPERATURE = 1.0
 PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
 
 DEST_SUFFIX = DEST_SUFFIX_PRE + PROMPT_TEXT[PROMPT_TO_USE][1]
@@ -105,6 +105,7 @@ EXTRA_PROHIBITION = ""
 # EXTRA_PROHIBITION = " Make sure you remove the yellow narration box."
 # EXTRA_PROHIBITION = " Do not crop the righthand side of the image. Slightly extend the width to the right"
 # EXTRA_PROHIBITION += " Under the narration box are the legs and shoes of two people lying down."
+EXTRA_PROHIBITION += " **IMPORTANT**: Make sure you remove the bubbles and boxes as well as text."
 
 final_prompt = f"""
 **Primary Command:** Your most important task is to {PROMPT_STR}.
@@ -182,11 +183,11 @@ final_prompt = f"""
 #                " Make a dark cloudy sky. Crucially make color and structure match.")
 # PROMPT_STR += " Outpaint the top and bottom of the image to give a consistent scene that seamlessly matches the middle. Crucially make color and structure match."
 # SYSTEM_INSTRUCTION += " Change the shape of the output image so that it's 1000 pixels wide and 1600 pixels high."
-PROMPT_STR += " The character is holding onto a fishing rod with one and fishing line with the other hand. Make sure you connect the line to the fishing rod."
+# PROMPT_STR += " The character is holding onto a fishing rod with one and fishing line with the other hand. Make sure you connect the line to the fishing rod."
 
 # SRCE_IMAGE="/home/greg/Books/Carl Barks/Fantagraphics-fixes-and-additions/Carl Barks Vol. 8 - Donald Duck - Trail of the Unicorn (Digital-Empire)/images/245.png"
 if PANEL_TYPE == "Insets":
-    SRCE_IMAGE1 = ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / EDITED / IMAGE_FILENAME
+    SRCE_IMAGE1 = ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / EDITED / (TITLE + PNG_FILE_EXT)
 else:
     SRCE_IMAGE1 = ROOT_DIR / BARKS_PANELS_PNG / PANEL_TYPE / TITLE / EDITED / IMAGE_FILENAME
 
@@ -212,7 +213,7 @@ srce_image1 = Image.open(SRCE_IMAGE1, mode="r")
 # srce_image2 = Image.open(SRCE_IMAGE2, mode="r")
 
 response = CLIENT.models.generate_content(
-    model=AI_FLASH_IMAGE_MODEL,
+    model=AI_PRO_IMAGE_MODEL,
     contents=[
         final_prompt,
         srce_image1,
