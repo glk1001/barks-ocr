@@ -78,9 +78,9 @@ def replace_string_in_files(
                     lines_process_count += 1
                     print(
                         f'Modified "{file_path.name}", ai_text:\n'
-                        f'{textwrap.indent(ai_text, " " * 4)} ->\n'
-                        f'====\n'
-                        f'{textwrap.indent(group["ai_text"], " " * 4)}\n'
+                        f"{textwrap.indent(ai_text, ' ' * 4)} ->\n"
+                        f"====\n"
+                        f"{textwrap.indent(group['ai_text'], ' ' * 4)}\n"
                     )
 
             # Write back if changes were made.
@@ -132,9 +132,4 @@ def main(
 
 
 if __name__ == "__main__":
-    # Check that output matches:
-    #
-    # grep -r " \- " Carl\ Barks\ Vol.\ 16\ -\ Uncle\ Scrooge\ -\ The\ Lost\ Crown\ of\ Genghis\ Khan\ \(Digital-Empire\) | grep ai_text | wc -l
-    #
-
     app()

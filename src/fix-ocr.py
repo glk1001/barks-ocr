@@ -33,7 +33,7 @@ def edit_file(file: Path, line: int) -> None:
     logger.debug(f"Running command: {command}.")
 
     process = subprocess.Popen(command, stdout=subprocess.PIPE, text=True)  # noqa: S603
-    _output = process.stdout.readline()
+    _output = process.stdout.readline()  # ty:ignore[possibly-missing-attribute]
 
     logger.debug(f'Editor should now have opened "{file}" at line {line}.')
 
@@ -67,16 +67,18 @@ def replace_text(
 ) -> None:
     assert len(rep_text) == 2  # noqa: PLR2004
 
-    ocr_index = str(ocr_index)
+    ocr_index_str = str(ocr_index)
 
     fixes_file = OCR_FIXES_DIR / (title + ".json")
     logger.info(f'Loading fix info from "{fixes_file}".')
 
     fix_objects = json.loads(fixes_file.read_text())
 
-    file_to_edit = Path(fix_objects[ocr_index]["errors"][page]["file1"])
+    file_to_edit = Path(fix_objects[ocr_index_str]["errors"][page]["file1"])
 
-    logger.info(f"Replacing text for ocr {ocr_index}, page {page}, group {group_id}: {rep_text}.")
+    logger.info(
+        f"Replacing text for ocr {ocr_index_str}, page {page}, group {group_id}: {rep_text}."
+    )
 
     backup_file(comics_database, title, file_to_edit)
 
@@ -103,20 +105,20 @@ def backup_file(comics_database: ComicsDatabase, title: str, file: Path) -> None
 def edit_title_for_fixing(
     comics_database: ComicsDatabase, title: str, ocr_index: int, page: str, group_id: str
 ) -> None:
-    ocr_index = str(ocr_index)
+    ocr_index_str = str(ocr_index)
 
     fixes_file = OCR_FIXES_DIR / (title + ".json")
     logger.info(f'Loading fix info from "{fixes_file}".')
 
     fix_objects = json.loads(fixes_file.read_text())
 
-    file1_image = Path(fix_objects[ocr_index]["errors"][page]["image1"])
-    other_group_id = fix_objects[ocr_index]["errors"][page][group_id]["other_group_id"]
+    file1_image = Path(fix_objects[ocr_index_str]["errors"][page]["image1"])
+    other_group_id = fix_objects[ocr_index_str]["errors"][page][group_id]["other_group_id"]
 
-    file1_to_edit = Path(fix_objects[ocr_index]["errors"][page]["file1"])
-    file2_to_edit = Path(fix_objects[ocr_index]["errors"][page]["file2"])
-    line1 = fix_objects[ocr_index]["errors"][page][group_id]["line1"]
-    line2 = fix_objects[ocr_index]["errors"][page][group_id]["line2"]
+    file1_to_edit = Path(fix_objects[ocr_index_str]["errors"][page]["file1"])
+    file2_to_edit = Path(fix_objects[ocr_index_str]["errors"][page]["file2"])
+    line1 = fix_objects[ocr_index_str]["errors"][page][group_id]["line1"]
+    line2 = fix_objects[ocr_index_str]["errors"][page][group_id]["line2"]
 
     backup_file(comics_database, title, file1_to_edit)
     backup_file(comics_database, title, file2_to_edit)

@@ -1,3 +1,5 @@
+# ruff: noqa: T201
+
 import subprocess
 from pathlib import Path
 

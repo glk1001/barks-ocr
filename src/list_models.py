@@ -8,7 +8,7 @@ def main() -> None:
     print("-" * 80)
 
     for model in CLIENT.models.list():
-        if "gemini" in model.name.lower():
+        if "gemini" in model.name.lower():  # ty:ignore[possibly-missing-attribute]
             print(f"{model.name:<50} | {model.display_name}")
 
 

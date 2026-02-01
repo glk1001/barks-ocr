@@ -39,4 +39,4 @@ if __name__ == "__main__":
     text_lines = "line 1\nline 2\nline 3\nline 4 is longer to demonstrate wrapping behavior."
     indented_text = text_indenter.fill(f'"{12}": {text_lines}')
 
-    print(indented_text)
+    print(indented_text)  # noqa: T201

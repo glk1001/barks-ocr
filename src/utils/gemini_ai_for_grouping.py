@@ -1,4 +1,5 @@
 import copy
+import re
 from typing import Any
 
 
@@ -13,6 +14,11 @@ def get_cleaned_text(text: str) -> tuple[str, str]:
     if r"\'" in text:
         text = text.replace(r"\'", "'")
         reason = "Single backslash single quote"
+
+    new_text = re.sub(r"(?:\n\s*]){2,}\s*$", "\n]", text)
+    if new_text != text:
+        text = new_text
+        reason = "Stripped excess trailing ']' lines"
 
     return text, reason
 

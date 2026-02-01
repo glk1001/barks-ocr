@@ -15,13 +15,25 @@ from loguru import logger
 from loguru_config import LoguruConfig
 from thefuzz import fuzz, process
 
+APP_LOGGING_NAME = "chkg"
+
+# CHECK OCR NOISE_NULLIFIER
+
 BAD_PATTERNS = [
-    r"--",
+    r"(?<!-)(?:(?<![a-zA-Z0-9])-|-(?![a-zA-Z0-9\n]))(?!-)",
+    r"(?:^|[^-])(--)(?:[^-]|$)",
     r" +\-[^ \n!]",
     r"[^ ]\- +",
-    r" +—[^ \n!]",
-    r"[^ ]— +",
+    r" +—[^ \n]",
+    r"[^ ]\u2014 +",
+    r"[A-Za-z0-9]+\u2014[A-Za-z0-9]+",
 ]
+
+LONG_LINE_SKIPS = {(1, "051", 0), (1, "051", 1)}
+
+
+def skip_long_line_check(json_files: JsonFiles, index: int) -> bool:
+    return (json_files.volume, json_files.page, index) in LONG_LINE_SKIPS
 
 
 def check_gemini_ai_groups_for_titles(
@@ -95,6 +107,12 @@ def check_gemini_ai_groups_for_title(
                     if not fix_obj:
                         continue
                     fix_objects[index]["bad-pats"][json_files.page] = fix_obj
+            fix_objs = check_ocr_for_long_lines(json_files)
+            if fix_objs:
+                for index, fix_obj in enumerate(fix_objs):
+                    if not fix_obj:
+                        continue
+                    fix_objects[index]["bad-pats"][json_files.page] = fix_obj
 
         if compare_text and not missing_ocr_file:
             fix_objs = compare_ocr_ai_texts(json_files, show_close)
@@ -131,8 +149,8 @@ def check_for_bad_patterns(json_files: JsonFiles, index1: int, index2: int) -> d
         for pat in BAD_PATTERNS:
             if re.search(pat, ai_text):
                 logger.error(
-                    f"Page {json_files.page}, group: {group_id};"
-                    f' bad pattern "{pat}" found in "{ai_text}".'
+                    f"Volume {json_files.volume}, index {index1}, page {json_files.page},"
+                    f' group: {group_id}; bad pattern "{pat}" found in "{ai_text}".'
                 )
 
                 logger.debug(f"Appending fixes info for group {group_id}")
@@ -145,6 +163,47 @@ def check_for_bad_patterns(json_files: JsonFiles, index1: int, index2: int) -> d
                     ai_text,
                     "",
                 )
+
+    return fix_objects1
+
+
+def check_ocr_for_long_lines(json_files: JsonFiles) -> tuple[dict, dict]:
+    return check_for_long_lines(json_files, 0, 1), check_for_long_lines(json_files, 1, 0)
+
+
+def check_for_long_lines(json_files: JsonFiles, index1: int, index2: int) -> dict:
+    if skip_long_line_check(json_files, index1):
+        logger.warning(
+            f"Skipping long line check for volume {json_files.volume},"
+            f" page {json_files.page}, and index {index1}."
+        )
+        return {}
+
+    ocr_prelim_groups_json_file1 = json_files.ocr_prelim_groups_json_file[index1]
+    ocr_group_data1 = json.loads(ocr_prelim_groups_json_file1.read_text())
+
+    fix_objects1 = {}
+    for group_id, group in ocr_group_data1["groups"].items():
+        ai_text = group["ai_text"]
+        ai_text_lines = ai_text.splitlines()
+        for line in ai_text_lines:
+            if len(line) > 50:
+                logger.error(
+                    f"Volume {json_files.volume}, index {index1}, page {json_files.page},"
+                    f' group: {group_id}; long line found in "{ai_text}".'
+                )
+
+                logger.debug(f"Appending fixes info for group {group_id}")
+                fix_objects1[int(group_id)] = get_fix_command(
+                    json_files,
+                    index1,
+                    index2,
+                    int(group_id),
+                    -1,
+                    ai_text,
+                    "",
+                )
+                break
 
     return fix_objects1
 
@@ -321,7 +380,7 @@ log_filename = "check-gemini-ai-groups.log"
 def main(
     volumes_str: VolumesArg = "",
     title_str: TitleArg = "",
-    compare_text: bool = True,
+    compare_text: bool = False,
     show_close: bool = True,
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:

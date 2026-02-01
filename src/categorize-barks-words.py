@@ -1,4 +1,5 @@
 # ruff: noqa: T201
+
 import json
 from argparse import ArgumentParser
 from collections import defaultdict
@@ -7,9 +8,7 @@ from pathlib import Path
 
 import nltk
 import pycountry
-
 from barks_fantagraphics.barks_words import BARKSIAN_SPELLING
-from barks_fantagraphics.whoosh_search_engine import US_STATES
 from spellchecker import SpellChecker
 
 
@@ -150,7 +149,7 @@ class BarksCategorizer:
         self.known_places = set()
         for country in pycountry.countries:
             self.known_places.add(country.name.lower())
-            # Add 3-letter codes like USA, GBR if available
+            # Add 3-letter codes, like 'USA' or 'GBR' if available
             if hasattr(country, "alpha_3"):
                 self.known_places.add(country.alpha_3.lower())
         for place in pycountry.subdivisions:
@@ -169,7 +168,6 @@ class BarksCategorizer:
                 "Waha-Go-Gaga",
             ]
         )
-        self.known_places.update(US_STATES)
         self.known_places = {n.lower() for n in self.known_places}
         self.place_suffixes = (
             "burg",
@@ -276,14 +274,14 @@ class BarksCategorizer:
 
         return Categories.UNCATEGORIZED
 
-    def check_places(self, word: str, is_in_dictionary: bool) -> Categories:
+    def check_places(self, word: str, _is_in_dictionary: bool) -> Categories:
         # --- CHECK: Known Place Names ---
         if word.lower() in self.known_places:
             return Categories.KNOWN_PLACE_NAMES
 
         return Categories.UNCATEGORIZED
 
-    def check_people_names(self, word: str, is_in_dictionary: bool) -> Categories:
+    def check_people_names(self, word: str, _is_in_dictionary: bool) -> Categories:
         if word.lower() in self.known_names:
             return Categories.KNOWN_PEOPLE_NAMES
 
@@ -292,7 +290,7 @@ class BarksCategorizer:
 
         return Categories.UNCATEGORIZED
 
-    def check_slang(self, word: str, is_in_dictionary: bool) -> Categories:
+    def check_slang(self, word: str, _is_in_dictionary: bool) -> Categories:
         # --- CHECK: Common Slang ---
         if word.lower() in self.common_slang:
             return Categories.COMMON_SLANG

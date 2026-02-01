@@ -159,6 +159,10 @@ class GeminiAiGrouper:
             groups = load_groups_from_json(ocr_box_groups_json_file)
             self._write_groups_to_text_file(ocr_groups_txt_file, groups)
 
+        except json.decoder.JSONDecodeError:
+            logger.exception(f'Could not process file "{ocr_file}":')
+            logger.error(f'Check JSON file: "{ocr_file}".')
+            sys.exit(1)
         except:  # noqa: E722
             logger.exception(f'Could not process file "{png_file}":')
             sys.exit(1)
@@ -245,8 +249,7 @@ class GeminiAiGrouper:
 
     @staticmethod
     def _get_ocr_data(ocr_file: Path) -> list[dict[str, Any]]:
-        with ocr_file.open("r") as f:
-            ocr_raw_results = json.load(f)
+        ocr_raw_results = json.loads(ocr_file.read_text(encoding="utf-8"))
 
         ocr_data = []
         for result in ocr_raw_results:

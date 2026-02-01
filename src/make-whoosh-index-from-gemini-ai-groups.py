@@ -7,6 +7,7 @@ from barks_fantagraphics.barks_titles import NON_COMIC_TITLES
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.whoosh_barks_terms import (
+    ALL_CAPS,
     BARKSIAN_EXTRA_TERMS,
     BARKSIAN_WORDS_WITH_OPTIONAL_HYPHENS,
     NAME_MAP,
@@ -22,8 +23,8 @@ from utils.paragraph_wrap import ParagraphWrapper
 APP_LOGGING_NAME = "gemi"
 
 
-def print_index(search_eng: SearchEngine, title: str) -> None:
-    with search_eng._index.reader() as reader:
+def print_index(search_eng: SearchEngine, _title: str) -> None:
+    with search_eng._index.reader() as reader:  # noqa: SLF001
         all_terms = list(reader.all_terms())
 
     print("All terms in the index:")
@@ -32,7 +33,7 @@ def print_index(search_eng: SearchEngine, title: str) -> None:
 
 
 def print_unstemmed_terms(search_eng: SearchEngine) -> None:
-    with search_eng._index.reader() as reader:
+    with search_eng._index.reader() as reader:  # noqa: SLF001
         all_terms = list(reader.terms_from("unstemmed", ""))
 
     print("All terms in the index:")
@@ -60,6 +61,9 @@ def check_index_integrity(comics_database: ComicsDatabase, volumes: list[int]) -
 
     print("Checking NAME_MAP...")
     check_name_map(search_engine)
+
+    print("Checking ALL_CAPS...")
+    check_all_caps(search_engine)
 
     print("Checking BARKSIAN_EXTRA_TERMS...")
     check_barksian_terms(search_engine)
@@ -105,10 +109,29 @@ def check_name_map(search_engine: SearchEngine) -> None:
             for pg_info in ttl_info.fanta_pages.values():
                 for speech_text in pg_info.speech_bubbles:
                     speech_lower = speech_text[1].lower()
+                    speech_lower = speech_lower.replace("\u00ad\n", "")
                     speech_lower = speech_lower.replace("-\n", "-")
                     speech_lower = speech_lower.replace("\n", " ")
                     if value.lower() not in speech_lower:
                         msg = f'"{value.lower()}":\n{speech_lower}\n\n{speech_text[1]}'
+                        raise ValueError(msg)
+
+
+def check_all_caps(search_engine: SearchEngine) -> None:
+    for word in ALL_CAPS:
+        found = search_engine.find_words(word, use_unstemmed_terms=True)
+        if not found:
+            msg = f'"{word}" not found'
+            raise ValueError(msg)
+
+        for ttl_info in found.values():
+            for pg_info in ttl_info.fanta_pages.values():
+                for speech_text in pg_info.speech_bubbles:
+                    speech_lower = speech_text[1].lower()
+                    speech_lower = speech_lower.replace("-\n", "-")
+                    speech_lower = speech_lower.replace("\n", " ")
+                    if word.lower() not in speech_lower:
+                        msg = f'"{word.lower()}":\n{speech_lower}\n\n{speech_text[1]}'
                         raise ValueError(msg)
 
 
@@ -117,11 +140,10 @@ def check_barksian_terms(search_engine: SearchEngine) -> None:
         found = search_engine.find_words(term, use_unstemmed_terms=True)
         if not found:
             logger.error(f'Barksian extra term "{term}" not found')
-    #            raise ValueError(f'Barksian extra term "{term}" not found')
 
 
 def check_lemmatized_terms(search_engine: SearchEngine) -> None:
-    # spell = SpellChecker()
+    # spell = SpellChecker()  # noqa: ERA001
     for term in search_engine.get_cleaned_lemmatized_terms():
         if "-" in term:
             term_with_no_hyphen = term.replace("-", "")
@@ -164,9 +186,9 @@ def main(
         whoosh_search = SearchEngineCreator(comics_database, volumes_index_dir)
         whoosh_search.index_volumes(volumes)
 
-    # print_index(search_engine, "")
-    # print_unstemmed_terms(search_engine)
-    # print_unstemmed_terms_summary(search_engine)
+    # print_index(search_engine, "")  # noqa: ERA001
+    # print_unstemmed_terms(search_engine)  # noqa: ERA001
+    # print_unstemmed_terms_summary(search_engine)  # noqa: ERA001
 
     if do_checks:
         check_index_integrity(comics_database, volumes)
