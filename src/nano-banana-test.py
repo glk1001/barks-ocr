@@ -4,7 +4,7 @@ from io import BytesIO
 from pathlib import Path
 
 from comic_utils.comic_consts import PNG_FILE_EXT
-from google.genai.types import GenerateContentConfig
+from google.genai.types import GenerateContentConfig, HarmBlockThreshold, HarmCategory
 from PIL import Image
 
 from utils.gemini_ai import AI_PRO_IMAGE_MODEL, CLIENT
@@ -89,10 +89,10 @@ PANEL_TYPE = "Favourites"
 DEST_SUFFIX_PRE = ""
 # DEST_SUFFIX_PRE = "-cl"
 
-TITLE = "Stranger Than Fiction"
+TITLE = "Boxed-In"
 EDITED = ""
 # EDITED = "edited"
-IMAGE_FILENAME = "057-4.png"
+IMAGE_FILENAME = "068-4.png"
 
 AI_TEMPERATURE = 1.0
 PROMPT_TO_USE = Prompts.REMOVE_SPEECH_BUBBLES
@@ -226,12 +226,34 @@ response = CLIENT.models.generate_content(
         top_p=AI_TOP_P,
         top_k=AI_TOP_K,
         seed=SEED,
+        safety_settings=[
+            {"category": category, "threshold": HarmBlockThreshold.BLOCK_NONE}
+            for category in [
+                HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+                HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+                HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+                HarmCategory.HARM_CATEGORY_HARASSMENT,
+                HarmCategory.HARM_CATEGORY_CIVIC_INTEGRITY,
+            ]
+        ],
     ),
 )
 
-for part in response.candidates[0].content.parts:
-    if part.text is not None:
-        print(part.text)
-    elif part.inline_data is not None:
-        srce_image1 = Image.open(BytesIO(part.inline_data.data))
-        srce_image1.save(dest_image)
+print("response", response)
+candidate = response.candidates[0]
+print("content", candidate.content)
+
+if candidate.finish_reason != "STOP":
+    print(f"\nWARNING: Generation stopped with reason: {candidate.finish_reason}")
+    if candidate.safety_ratings:
+        print(f"Safety Ratings: {candidate.safety_ratings}")
+
+if candidate.content and candidate.content.parts:
+    for part in candidate.content.parts:
+        if part.text is not None:
+            print(part.text)
+        elif part.inline_data is not None:
+            srce_image1 = Image.open(BytesIO(part.inline_data.data))
+            srce_image1.save(dest_image)
+else:
+    print("No content parts returned.")
