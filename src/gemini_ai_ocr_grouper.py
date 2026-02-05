@@ -61,7 +61,7 @@ class GeminiAiGrouper:
 
         comic = self._comics_database.get_comic_book(title)
         svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-        ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
+        ocr_files = comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES)
         panel_segments_files = comic.get_srce_panel_segments_files(RESTORABLE_PAGE_TYPES)
 
         num_files_processed = 0

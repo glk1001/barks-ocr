@@ -54,7 +54,7 @@ def make_gemini_ai_groups_for_title(comics_database: ComicsDatabase, title: str)
 
     comic = comics_database.get_comic_book(title)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-    ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
+    ocr_files = comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES)
 
     gemini_requests_data = []
     gemini_output_files = []

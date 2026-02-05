@@ -59,7 +59,7 @@ def ocr_titles(comics_database: ComicsDatabase, title_list: list[str], work_dir:
         comic = comics_database.get_comic_book(title)
 
         srce_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-        dest_file_groups = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
+        dest_file_groups = comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES)
 
         for srce_file, dest_files in zip(srce_files, dest_file_groups, strict=True):
             result = ocr_comic_page(work_dir, srce_file, dest_files)

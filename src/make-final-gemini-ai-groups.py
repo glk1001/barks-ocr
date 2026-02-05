@@ -31,7 +31,7 @@ def make_final_gemini_ai_groups_for_title(comics_database: ComicsDatabase, title
     json_files.title_final_results_dir.mkdir(parents=True, exist_ok=True)
 
     comic = comics_database.get_comic_book(title)
-    ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
+    ocr_files = comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES)
 
     for ocr_file in ocr_files:
         json_files.set_ocr_file(ocr_file)

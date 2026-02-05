@@ -6,18 +6,13 @@ from typing import Any
 
 import cv2 as cv
 import typer
-from barks_fantagraphics.barks_titles import is_non_comic_title
-from barks_fantagraphics.comics_consts import PNG_FILE_EXT, RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, is_non_comic_title
+from barks_fantagraphics.comics_consts import PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
-from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
-from barks_fantagraphics.ocr_file_paths import (
-    OCR_ANNOTATIONS_DIR,
-    OCR_PRELIM_DIR,
-    get_ocr_boxes_annotated_filename,
-    get_ocr_prelim_annotated_filename,
-    get_ocr_prelim_groups_json_filename,
-)
+from barks_fantagraphics.comics_utils import get_abbrev_path
+from barks_fantagraphics.ocr_file_paths import OCR_ANNOTATIONS_DIR
+from barks_fantagraphics.speech_groupers import OCR_TYPES, SpeechGroups, SpeechPageGroup
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
 from intspan import intspan
@@ -57,76 +52,68 @@ def get_color(group_id: int) -> str:
     return COLORS[group_id]
 
 
-def ocr_annotate_titles(comics_database: ComicsDatabase, title_list: list[str]) -> None:
+def ocr_annotate_titles(
+    all_speech_groups: SpeechGroups, comics_database: ComicsDatabase, title_list: list[str]
+) -> None:
     for title in title_list:
         if is_non_comic_title(title):
             logger.warning(f'Not a comic title "{title}" - skipping.')
             continue
 
-        ocr_annotate_title(comics_database, title)
+        ocr_annotate_title(all_speech_groups, comics_database, title)
 
 
-def ocr_annotate_title(comics_database: ComicsDatabase, title: str) -> None:
+def ocr_annotate_title(
+    all_speech_groups: SpeechGroups, comics_database: ComicsDatabase, title_str: str
+) -> None:
     # Special case. Because "Silent Night" is a restored comic, the panel bounds
     # are out of whack.
-    annotate_with_panels_bounds = title != "Silent Night"
+    annotate_with_panels_bounds = title_str != "Silent Night"
 
-    volume = comics_database.get_fanta_volume_int(title)
+    volume = comics_database.get_fanta_volume_int(title_str)
     volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
-    gemini_groups_dir = OCR_PRELIM_DIR / volume_dirname
     out_image_dir = OCR_ANNOTATIONS_DIR / volume_dirname
     out_image_dir.mkdir(parents=True, exist_ok=True)
 
-    logger.info(f'OCR annotating all pages in "{title}" to directory "{out_image_dir}"...')
+    logger.info(f'OCR annotating all pages in "{title_str}" to directory "{out_image_dir}"...')
 
-    comic = comics_database.get_comic_book(title)
-    svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-    raw_ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
+    comic = comics_database.get_comic_book(title_str)
 
-    for svg_file1, raw_ocr_file in zip(svg_files, raw_ocr_files, strict=True):
-        fanta_page = Path(svg_file1).stem
+    title = BARKS_TITLE_DICT[title_str]
+    title_speech_page_groups = all_speech_groups.all_speech_page_groups[title]
+    #    speech_text = speech_page_group["group"]
+    for speech_page_group in title_speech_page_groups:
+        fanta_page = speech_page_group["fanta_page"]
+        ocr_type = OCR_TYPES[speech_page_group["ocr_index"]]
+
         svg_file = comic.get_srce_restored_svg_story_file(fanta_page)
         panel_segments_file = comic.get_srce_panel_segments_file(fanta_page)
         png_file = Path(str(svg_file) + PNG_FILE_EXT)
+        ocr_group_file = comic.get_ocr_prelim_groups_json_file(fanta_page, ocr_type)
+        prelim_text_annotated_image_file = comic.get_ocr_prelim_annotated_file(fanta_page, ocr_type)
+        boxes_annotated_image_file = comic.get_ocr_boxes_annotated_file(fanta_page, ocr_type)
 
-        for ocr_type_file in raw_ocr_file:
-            ocr_type = get_ocr_type(ocr_type_file)
-
-            ocr_group_file = gemini_groups_dir / get_ocr_prelim_groups_json_filename(
-                fanta_page, ocr_type
+        if (
+            prelim_text_annotated_image_file.is_file()
+            and prelim_text_annotated_image_file.stat().st_mtime > ocr_group_file.stat().st_mtime
+        ):
+            logger.info(
+                f'Found prelim annotated file - skipping: "{prelim_text_annotated_image_file}".'
             )
-            prelim_text_annotated_image_file = out_image_dir / get_ocr_prelim_annotated_filename(
-                fanta_page, ocr_type
-            )
+            continue
 
-            if (
-                prelim_text_annotated_image_file.is_file()
-                and prelim_text_annotated_image_file.stat().st_mtime
-                > ocr_group_file.stat().st_mtime
-            ):
-                logger.info(
-                    f'Found prelim annotated file - skipping: "{prelim_text_annotated_image_file}".'
-                )
-                continue
+        ocr_annotate_image_with_prelim_text(
+            speech_page_group, png_file, prelim_text_annotated_image_file
+        )
+        ocr_annotate_image_with_individual_boxes(
+            png_file, ocr_group_file, boxes_annotated_image_file
+        )
 
-            boxes_annotated_image_file = out_image_dir / get_ocr_boxes_annotated_filename(
-                fanta_page, ocr_type
-            )
-
-            ocr_annotate_image_with_prelim_text(
-                png_file, ocr_group_file, prelim_text_annotated_image_file
-            )
-            ocr_annotate_image_with_individual_boxes(
-                png_file, ocr_group_file, boxes_annotated_image_file
-            )
-
-            if not annotate_with_panels_bounds:
-                logger.warning(f'"{title}": special case - not annotating with panel bounds.')
-            else:
-                annotate_image_with_panel_bounds(
-                    panel_segments_file, prelim_text_annotated_image_file
-                )
-                annotate_image_with_panel_bounds(panel_segments_file, boxes_annotated_image_file)
+        if not annotate_with_panels_bounds:
+            logger.warning(f'"{title_str}": special case - not annotating with panel bounds.')
+        else:
+            annotate_image_with_panel_bounds(panel_segments_file, prelim_text_annotated_image_file)
+            annotate_image_with_panel_bounds(panel_segments_file, boxes_annotated_image_file)
 
 
 def get_image_to_annotate(png_file: Path) -> cv.typing.MatLike:
@@ -135,15 +122,6 @@ def get_image_to_annotate(png_file: Path) -> cv.typing.MatLike:
         raise FileNotFoundError(msg)
 
     return get_bw_image_from_alpha(png_file)
-
-
-def get_json_ocr_groups(ocr_file: Path) -> dict[str, Any]:
-    if not ocr_file.is_file():
-        msg = f'Could not find ocr file "{ocr_file}".'
-        raise RuntimeError(msg)
-
-    with ocr_file.open("r") as f:
-        return json.load(f)
 
 
 def annotate_image_with_panel_bounds(panel_segments_file: Path, annotated_img_file: Path) -> None:
@@ -205,12 +183,13 @@ def write_bounds_to_image_file(
 
 
 def ocr_annotate_image_with_prelim_text(
+    speech_page_group: SpeechPageGroup,
     png_file: Path,
-    ocr_file: Path,
     annotated_img_file: Path,
 ) -> None:
-    logger.info(f'Annotating image "{png_file}" from ocr file "{ocr_file}"...')
+    logger.info(f'Annotating image "{png_file}"...')
 
+    # Hack for Good Deeds...
     # json_text_data_box_groups = get_json_text_data_boxes(ocr_file)
     # scale = 8700 / 9900
     # for group_id, group in json_text_data_box_groups["groups"].items():
@@ -221,7 +200,7 @@ def ocr_annotate_image_with_prelim_text(
     # with ocr_file.open("w") as f:
     #     json.dump(json_text_data_box_groups, f, indent=4)
 
-    json_ocr_groups = get_json_ocr_groups(ocr_file)["groups"]
+    speech_groups = speech_page_group["speech_groups"]
     bw_image = get_image_to_annotate(png_file)
 
     pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
@@ -232,16 +211,18 @@ def ocr_annotate_image_with_prelim_text(
     font = ImageFont.truetype(font_file, font_size)
 
     color_index = 0
-    for group_id, group in json_ocr_groups.items():
+    for speech_text in speech_groups:
+        group_id = speech_text["groupid"]
+
         logger.info(f'Annotating group "{group_id}"...')
 
-        text_box = group["text_box"]
+        text_box = speech_text["text_box"]
 
         ocr_box = OcrBox(
             text_box,
-            group["ocr_text"],
+            speech_text["raw_ai_text"],
             1.0,
-            group["ai_text"],
+            speech_text["raw_ai_text"],
         )
         # print(
         #     f'group: {group_id:02} - text: "{group["ai_text"]}",'
@@ -256,7 +237,7 @@ def ocr_annotate_image_with_prelim_text(
         text_box_color = (*ImageColor.getrgb(COLORS[color_index]), 120)
         img_rects_draw.rectangle(ocr_box.min_rotated_rectangle, outline=bbox_color, width=7)
 
-        text = f"{group['ai_text']}"
+        text = f"{speech_text['ai_text']}"
         top_left = ocr_box.min_rotated_rectangle[0]
         top_left = (top_left[0] + 60, top_left[1] + 5)
         text_box = img_rects_draw.textbbox(top_left, text, font=font, align="left")
@@ -265,9 +246,9 @@ def ocr_annotate_image_with_prelim_text(
             top_left, text, fill=text_color, font=font, align="left", stroke_width=1
         )
 
-        panel_num = group["panel_num"]
+        panel_num = speech_text["panel_num"]
         if panel_num != -1:
-            info_text = f"{panel_num}:{get_text_type_abbrev(group['type'])}"
+            info_text = f"{panel_num}:{get_text_type_abbrev(speech_text['type'])}"
             top_left = ocr_box.min_rotated_rectangle[0]
             top_left = (top_left[0] + 10, top_left[1] - 15)
             info_box = img_rects_draw.textbbox(top_left, info_text, font=font, align="left")
@@ -311,6 +292,7 @@ def ocr_annotate_image_with_individual_boxes(
         f'Annotating image with individual boxes "{png_file}" from ocr file "{ocr_file}"...'
     )
 
+    # Hack for Good Deeds...
     # scale = 8700 / 9900
     # json_ocr_groups = get_json_text_data_boxes(ocr_file)
     # for group in json_ocr_groups["groups"]:
@@ -363,6 +345,15 @@ def ocr_annotate_image_with_individual_boxes(
     img_rects_draw._image.save(annotated_img_file)  # noqa: SLF001
 
 
+def get_json_ocr_groups(ocr_file: Path) -> dict[str, Any]:
+    if not ocr_file.is_file():
+        msg = f'Could not find ocr file "{ocr_file}".'
+        raise RuntimeError(msg)
+
+    with ocr_file.open("r") as f:
+        return json.load(f)
+
+
 app = typer.Typer()
 log_level = ""
 log_filename = "show-ocr.log"
@@ -386,7 +377,12 @@ def main(
     volumes = list(intspan(volumes_str))
     comics_database = ComicsDatabase()
 
-    ocr_annotate_titles(comics_database, get_titles(comics_database, volumes, title_str))
+    all_speech_groups = SpeechGroups(comics_database, volumes)
+    all_speech_groups.load_groups()
+
+    ocr_annotate_titles(
+        all_speech_groups, comics_database, get_titles(comics_database, volumes, title_str)
+    )
 
 
 if __name__ == "__main__":

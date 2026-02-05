@@ -67,7 +67,7 @@ def check_gemini_ai_groups_for_title(
     )
 
     comic = comics_database.get_comic_book(title)
-    ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
+    ocr_files = comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES)
 
     fix_objects = {
         0: {
