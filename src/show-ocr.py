@@ -81,23 +81,22 @@ def ocr_annotate_title(comics_database: ComicsDatabase, title: str) -> None:
 
     comic = comics_database.get_comic_book(title)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-    ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
-    panel_segments_files = comic.get_srce_panel_segments_files(RESTORABLE_PAGE_TYPES)
+    raw_ocr_files = comic.get_srce_restored_raw_ocr_story_files(RESTORABLE_PAGE_TYPES)
 
-    for svg_file, ocr_file, panel_segments_file in zip(
-        svg_files, ocr_files, panel_segments_files, strict=True
-    ):
-        svg_stem = Path(svg_file).stem
+    for svg_file1, raw_ocr_file in zip(svg_files, raw_ocr_files, strict=True):
+        fanta_page = Path(svg_file1).stem
+        svg_file = comic.get_srce_restored_svg_story_file(fanta_page)
+        panel_segments_file = comic.get_srce_panel_segments_file(fanta_page)
         png_file = Path(str(svg_file) + PNG_FILE_EXT)
 
-        for ocr_type_file in ocr_file:
+        for ocr_type_file in raw_ocr_file:
             ocr_type = get_ocr_type(ocr_type_file)
 
             ocr_group_file = gemini_groups_dir / get_ocr_prelim_groups_json_filename(
-                svg_stem, ocr_type
+                fanta_page, ocr_type
             )
             prelim_text_annotated_image_file = out_image_dir / get_ocr_prelim_annotated_filename(
-                svg_stem, ocr_type
+                fanta_page, ocr_type
             )
 
             if (
@@ -111,7 +110,7 @@ def ocr_annotate_title(comics_database: ComicsDatabase, title: str) -> None:
                 continue
 
             boxes_annotated_image_file = out_image_dir / get_ocr_boxes_annotated_filename(
-                svg_stem, ocr_type
+                fanta_page, ocr_type
             )
 
             ocr_annotate_image_with_prelim_text(
@@ -138,7 +137,7 @@ def get_image_to_annotate(png_file: Path) -> cv.typing.MatLike:
     return get_bw_image_from_alpha(png_file)
 
 
-def get_json_text_data_boxes(ocr_file: Path) -> dict[str, Any]:
+def get_json_ocr_groups(ocr_file: Path) -> dict[str, Any]:
     if not ocr_file.is_file():
         msg = f'Could not find ocr file "{ocr_file}".'
         raise RuntimeError(msg)
@@ -147,10 +146,7 @@ def get_json_text_data_boxes(ocr_file: Path) -> dict[str, Any]:
         return json.load(f)
 
 
-def annotate_image_with_panel_bounds(
-    panel_segments_file: Path,
-    annotated_img_file: Path,
-) -> None:
+def annotate_image_with_panel_bounds(panel_segments_file: Path, annotated_img_file: Path) -> None:
     if not annotated_img_file.is_file():
         msg = f'Could not find image file "{annotated_img_file}".'
         raise FileNotFoundError(msg)
@@ -217,15 +213,15 @@ def ocr_annotate_image_with_prelim_text(
 
     # json_text_data_box_groups = get_json_text_data_boxes(ocr_file)
     # scale = 8700 / 9900
-    # for group_id, text_data in json_text_data_box_groups["groups"].items():
+    # for group_id, group in json_text_data_box_groups["groups"].items():
     #     logger.info(f'Annotating group "{group_id}"...')
     #
-    #     text_box = text_data["text_box"]
-    #     text_data["text_box"] = [(item[0] * scale, item[1] * scale) for item in text_box]
+    #     text_box = group["text_box"]
+    #     group["text_box"] = [(item[0] * scale, item[1] * scale) for item in text_box]
     # with ocr_file.open("w") as f:
     #     json.dump(json_text_data_box_groups, f, indent=4)
 
-    json_text_data_boxes = get_json_text_data_boxes(ocr_file)["groups"]
+    json_ocr_groups = get_json_ocr_groups(ocr_file)["groups"]
     bw_image = get_image_to_annotate(png_file)
 
     pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
@@ -236,19 +232,19 @@ def ocr_annotate_image_with_prelim_text(
     font = ImageFont.truetype(font_file, font_size)
 
     color_index = 0
-    for group_id, text_data in json_text_data_boxes.items():
+    for group_id, group in json_ocr_groups.items():
         logger.info(f'Annotating group "{group_id}"...')
 
-        text_box = text_data["text_box"]
+        text_box = group["text_box"]
 
         ocr_box = OcrBox(
             text_box,
-            text_data["ocr_text"],
+            group["ocr_text"],
             1.0,
-            text_data["ai_text"],
+            group["ai_text"],
         )
         # print(
-        #     f'group: {group_id:02} - text: "{text_data["ai_text"]}",'
+        #     f'group: {group_id:02} - text: "{group["ai_text"]}",'
         #     f" box: {text_box, approx: {ocr_box.is_approx_rect},"
         #     f" rect: {ocr_box.min_rotated_rectangle}"
         # )
@@ -260,7 +256,7 @@ def ocr_annotate_image_with_prelim_text(
         text_box_color = (*ImageColor.getrgb(COLORS[color_index]), 120)
         img_rects_draw.rectangle(ocr_box.min_rotated_rectangle, outline=bbox_color, width=7)
 
-        text = f"{text_data['ai_text']}"
+        text = f"{group['ai_text']}"
         top_left = ocr_box.min_rotated_rectangle[0]
         top_left = (top_left[0] + 60, top_left[1] + 5)
         text_box = img_rects_draw.textbbox(top_left, text, font=font, align="left")
@@ -269,9 +265,9 @@ def ocr_annotate_image_with_prelim_text(
             top_left, text, fill=text_color, font=font, align="left", stroke_width=1
         )
 
-        panel_num = text_data["panel_num"]
+        panel_num = group["panel_num"]
         if panel_num != -1:
-            info_text = f"{panel_num}:{get_text_type_abbrev(text_data['type'])}"
+            info_text = f"{panel_num}:{get_text_type_abbrev(group['type'])}"
             top_left = ocr_box.min_rotated_rectangle[0]
             top_left = (top_left[0] + 10, top_left[1] - 15)
             info_box = img_rects_draw.textbbox(top_left, info_text, font=font, align="left")
@@ -316,28 +312,28 @@ def ocr_annotate_image_with_individual_boxes(
     )
 
     # scale = 8700 / 9900
-    # json_text_data_boxes = get_json_text_data_boxes(ocr_file)
-    # for group in json_text_data_boxes["groups"]:
-    #     for box_id in json_text_data_boxes["groups"][group]["cleaned_box_texts"]:
-    #         text_data = json_text_data_boxes["groups"][group]["cleaned_box_texts"][box_id]
+    # json_ocr_groups = get_json_text_data_boxes(ocr_file)
+    # for group in json_ocr_groups["groups"]:
+    #     for box_id in json_ocr_groups["groups"][group]["cleaned_box_texts"]:
+    #         text_data = json_ocr_groups["groups"][group]["cleaned_box_texts"][box_id]
     #         text_box = text_data["text_box"]
     #         if text_box is None:
     #             continue
     #         text_data["text_box"] = [(item[0] * scale, item[1] * scale) for item in text_box]
     # with ocr_file.open("w") as f:
-    #     json.dump(json_text_data_boxes, f, indent=4)
+    #     json.dump(json_ocr_groups, f, indent=4)
 
-    json_text_data_boxes = get_json_text_data_boxes(ocr_file)["groups"]
+    json_ocr_groups = get_json_ocr_groups(ocr_file)["groups"]
     bw_image = get_image_to_annotate(png_file)
 
     pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image]))
     img_rects_draw = ImageDraw.Draw(pil_image)
 
-    for group in json_text_data_boxes:
+    for group in json_ocr_groups:
         group_id = int(group)
 
-        for box_id in json_text_data_boxes[group]["cleaned_box_texts"]:
-            text_data = json_text_data_boxes[group]["cleaned_box_texts"][box_id]
+        for box_id in json_ocr_groups[group]["cleaned_box_texts"]:
+            text_data = json_ocr_groups[group]["cleaned_box_texts"][box_id]
 
             text_box = text_data["text_box"]
             if text_box is None:
@@ -372,7 +368,7 @@ log_level = ""
 log_filename = "show-ocr.log"
 
 
-@app.command(help="Make final ai groups")
+@app.command(help="Annotate prelim ocr groups")
 def main(
     volumes_str: VolumesArg = "",
     title_str: TitleArg = "",
