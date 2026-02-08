@@ -3,12 +3,13 @@ import re
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import is_non_comic_title
+from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, is_non_comic_title
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.ocr_file_paths import OCR_FIXES_DIR
 from barks_fantagraphics.ocr_json_files import JsonFiles
+from barks_fantagraphics.speech_groupers import SpeechGroups, SpeechPageGroup, OCR_TYPES
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from intspan import intspan
 from loguru import logger
@@ -37,17 +38,26 @@ def skip_long_line_check(json_files: JsonFiles, index: int) -> bool:
 
 
 def check_gemini_ai_groups_for_titles(
-    comics_database: ComicsDatabase, titles: list[str], compare_text: bool, show_close: bool
+    all_speech_groups: SpeechGroups,
+    comics_database: ComicsDatabase,
+    titles: list[str],
+    compare_text: bool,
+    show_close: bool,
 ) -> None:
     total_errors = 0
 
-    for title in titles:
-        if is_non_comic_title(title):
-            logger.warning(f'Not a comic title "{title}" - skipping.')
+    for title_str in titles:
+        if is_non_comic_title(title_str):
+            logger.warning(f'Not a comic title "{title_str}" - skipping.')
             continue
 
+        title = BARKS_TITLE_DICT[title_str]
         total_errors += check_gemini_ai_groups_for_title(
-            comics_database, title, compare_text, show_close
+            all_speech_groups.all_speech_page_groups[title],
+            comics_database,
+            title_str,
+            compare_text,
+            show_close,
         )
 
     if total_errors == 0:
@@ -57,7 +67,11 @@ def check_gemini_ai_groups_for_titles(
 
 
 def check_gemini_ai_groups_for_title(
-    comics_database: ComicsDatabase, title: str, compare_text: bool, show_close: bool
+    speech_page_groups: list[SpeechPageGroup],
+    comics_database: ComicsDatabase,
+    title: str,
+    compare_text: bool,
+    show_close: bool,
 ) -> int:
     json_files = JsonFiles(comics_database, title)
 
@@ -67,7 +81,6 @@ def check_gemini_ai_groups_for_title(
     )
 
     comic = comics_database.get_comic_book(title)
-    ocr_files = comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES)
 
     fix_objects = {
         0: {
@@ -81,33 +94,41 @@ def check_gemini_ai_groups_for_title(
     }
 
     num_errors = 0
-    for ocr_file in ocr_files:
-        json_files.set_ocr_file(ocr_file)
+    for page_group_ocr0, page_group_ocr1 in zip(
+        speech_page_groups, speech_page_groups, strict=True
+    ):
+        fanta_page = page_group_ocr0["fanta_page"]
+        assert page_group_ocr1["fanta_page"] == fanta_page
+        assert page_group_ocr0["ocr_index"] == 0
+        assert page_group_ocr1["ocr_index"] == 1
 
         missing_ocr_file = False
-        for index in range(len(ocr_file)):
-            if not json_files.ocr_prelim_groups_json_file[index].is_file():
-                logger.error(
-                    f"Missing prelim groups json file:"
-                    f' "{json_files.ocr_prelim_groups_json_file[index]}".'
-                )
+        for ocr_index in [0, 1]:
+            ocr_type = OCR_TYPES[ocr_index]
+            ocr_prelim_groups_json_file = comic.get_ocr_prelim_groups_json_file(
+                fanta_page, ocr_type
+            )
+            ocr_prelim_groups_annotated_file = comic.get_ocr_prelim_annotated_file(
+                fanta_page, ocr_type
+            )
+            if not ocr_prelim_groups_json_file.is_file():
+                logger.error(f'Missing prelim groups json file: "{ocr_prelim_groups_json_file}".')
                 num_errors += 1
                 missing_ocr_file = True
-            elif not json_files.ocr_prelim_groups_annotated_file[index].is_file():
+            elif not ocr_prelim_groups_annotated_file.is_file():
                 logger.error(
-                    f"Missing prelim groups annotated file:"
-                    f' "{json_files.ocr_prelim_groups_annotated_file[index]}".'
+                    f'Missing prelim groups annotated file: "{ocr_prelim_groups_annotated_file}".'
                 )
                 num_errors += 1
 
         if not missing_ocr_file:
-            fix_objs = check_ocr_for_bad_patterns(json_files)
+            fix_objs = check_ocr_for_bad_patterns(page_group_ocr0, page_group_ocr1)
             if fix_objs:
                 for index, fix_obj in enumerate(fix_objs):
                     if not fix_obj:
                         continue
                     fix_objects[index]["bad-pats"][json_files.page] = fix_obj
-            fix_objs = check_ocr_for_long_lines(json_files)
+            fix_objs = check_ocr_for_long_lines(page_group_ocr0, page_group_ocr1)
             if fix_objs:
                 for index, fix_obj in enumerate(fix_objs):
                     if not fix_obj:
@@ -115,7 +136,7 @@ def check_gemini_ai_groups_for_title(
                     fix_objects[index]["bad-pats"][json_files.page] = fix_obj
 
         if compare_text and not missing_ocr_file:
-            fix_objs = compare_ocr_ai_texts(json_files, show_close)
+            fix_objs = compare_ocr_ai_texts(page_group_ocr0, page_group_ocr1, show_close)
             for index, fix_obj in enumerate(fix_objs):
                 if not fix_obj:
                     continue
@@ -135,11 +156,18 @@ def check_gemini_ai_groups_for_title(
     return num_errors
 
 
-def check_ocr_for_bad_patterns(json_files: JsonFiles) -> tuple[dict, dict]:
-    return check_for_bad_patterns(json_files, 0, 1), check_for_bad_patterns(json_files, 1, 0)
+def check_ocr_for_bad_patterns(
+    page_group_ocr0: SpeechPageGroup, page_group_ocr1: SpeechPageGroup
+) -> tuple[dict, dict]:
+    return (
+        check_for_bad_patterns(page_group_ocr0, page_group_ocr1),
+        check_for_bad_patterns(page_group_ocr1, page_group_ocr0),
+    )
 
 
-def check_for_bad_patterns(json_files: JsonFiles, index1: int, index2: int) -> dict:
+def check_for_bad_patterns(
+    page_group_ocr0: SpeechPageGroup, page_group_ocr1: SpeechPageGroup
+) -> dict:
     ocr_prelim_groups_json_file1 = json_files.ocr_prelim_groups_json_file[index1]
     ocr_group_data1 = json.loads(ocr_prelim_groups_json_file1.read_text())
 
@@ -396,7 +424,11 @@ def main(
     volumes = list(intspan(volumes_str))
     comics_database = ComicsDatabase()
 
+    all_speech_groups = SpeechGroups(comics_database, volumes)
+    all_speech_groups.load_groups()
+
     check_gemini_ai_groups_for_titles(
+        all_speech_groups,
         comics_database,
         get_titles(comics_database, volumes, title_str),
         compare_text,
