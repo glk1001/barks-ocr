@@ -11,6 +11,7 @@ dependencies = [
     "google-generativeai>=0.8.5",
     "great-tables[extra]>=0.20.0",
     "intspan>=1.6.1",
+    "kivy>=2.3.1",
     "loguru-config>=0.1.0",
     "nltk>=3.9.2",
     "opencv-python>=4.12.0.88",
