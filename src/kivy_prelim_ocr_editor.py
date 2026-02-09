@@ -225,13 +225,21 @@ def create_editor_widget(
 
 
 class EditorApp(App):
-    def __init__(self, volume: int, fanta_page: int, group_id: int, panel_num: int) -> None:
+    def __init__(
+        self,
+        volume: int,
+        fanta_page: int,
+        panel_num: int,
+        easyocr_group_id: int,
+        paddleocr_group_id: int,
+    ) -> None:
         super().__init__()
 
         self._volume = volume
         self._fanta_page = get_page_str(fanta_page)
-        self._group_id = str(group_id)
         self._panel_num = panel_num
+        self._easyocr_group_id = str(easyocr_group_id)
+        self._paddleocr_group_id = str(paddleocr_group_id)
 
         self._comics_database = ComicsDatabase()
 
@@ -250,8 +258,8 @@ class EditorApp(App):
             self._fanta_page, "paddleocr"
         )
 
-        self._easyocr_text = get_ai_text(self._easyocr_file, self._group_id)
-        self._paddleocr_text = get_ai_text(self._paddleocr_file, self._group_id)
+        self._easyocr_text = get_ai_text(self._easyocr_file, self._easyocr_group_id)
+        self._paddleocr_text = get_ai_text(self._paddleocr_file, self._paddleocr_group_id)
 
         panel_segments_dir = Path(
             self._comics_database.get_fantagraphics_panel_segments_volume_dir(self._volume)
@@ -262,8 +270,9 @@ class EditorApp(App):
         return (
             f"Volume: {self._volume}\n"
             f"Fanta Page: {self._fanta_page}\n"
-            f"Group ID: {self._group_id}\n"
             f"Panel: {self._panel_num}\n"
+            f"EasyOCR group ID: {self._easyocr_group_id}\n"
+            f"PaddleOCR group ID: {self._paddleocr_group_id}\n"
             f'EasyOCR file: {get_abbrev_path(self._easyocr_file)}"\n'
             f'PaddleOCR file: {get_abbrev_path(self._paddleocr_file)}"\n'
             f'Image file: {get_abbrev_path(self._srce_image_file)}"\n'
@@ -290,12 +299,12 @@ class EditorApp(App):
 
     def handle_result(self, new_easyocr_text: str, new_paddleocr_text: str) -> None:
         if self._easyocr_text != new_easyocr_text:
-            save_ai_text(self._easyocr_file, self._group_id, new_easyocr_text)
+            save_ai_text(self._easyocr_file, self._easyocr_group_id, new_easyocr_text)
             print(
                 f'Saved new easyocr text to file "{self._easyocr_file}". Text:\n{new_easyocr_text}'
             )
         if self._paddleocr_text != new_paddleocr_text:
-            save_ai_text(self._paddleocr_file, self._group_id, new_paddleocr_text)
+            save_ai_text(self._paddleocr_file, self._paddleocr_group_id, new_paddleocr_text)
             print(
                 f'Saved new paddleocr text to file "{self._paddleocr_file}".'
                 f" Text:\n{new_paddleocr_text}"
@@ -332,10 +341,11 @@ app = typer.Typer()
 def main(
     volume: int,
     fanta_page: int,
-    group_id: int,
     panel_num: int,
+    easyocr_group_id: int,
+    paddleocr_group_id: int,
 ) -> None:
-    EditorApp(volume, fanta_page, group_id, panel_num).run()
+    EditorApp(volume, fanta_page, panel_num, easyocr_group_id, paddleocr_group_id).run()
 
 
 if __name__ == "__main__":
