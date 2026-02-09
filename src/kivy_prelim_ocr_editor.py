@@ -4,6 +4,7 @@ from pathlib import Path
 
 import typer
 from barks_fantagraphics.comic_book import get_page_str
+from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_utils import get_abbrev_path
 from barks_fantagraphics.ocr_file_paths import get_ocr_prelim_groups_json_filename
@@ -25,12 +26,24 @@ Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty: ignore[possibly-miss
 
 from kivy.app import App  # noqa: E402
 from kivy.core.image import Image as CoreImage  # noqa: E402
+from kivy.core.text import LabelBase  # noqa: E402
 from kivy.uix.boxlayout import BoxLayout  # noqa: E402
 from kivy.uix.button import Button  # noqa: E402
+from kivy.uix.checkbox import CheckBox  # noqa: E402
 from kivy.uix.image import Image  # noqa: E402
 from kivy.uix.label import Label  # noqa: E402
 from kivy.uix.textinput import TextInput  # noqa: E402
 from kivy.uix.widget import Widget  # noqa: E402
+
+# TODO: Duplicated in 'font_manager.py'.
+# Set up custom fonts.
+LabelBase.register(
+    name=OPEN_SANS_FONT,
+    fn_regular=str(FONT_DIR / "OpenSans-Medium.ttf"),
+    fn_bold=str(FONT_DIR / "OpenSans-Bold.ttf"),
+    fn_italic=str(FONT_DIR / "OpenSans-MediumItalic.ttf"),
+    fn_bolditalic=str(FONT_DIR / "OpenSans-BoldItalic.ttf"),
+)
 
 
 # TODO: Duplicated in 'edit-page.py'.
@@ -112,6 +125,7 @@ def create_editor_widget(
     label_1 = Label(text=edit_label1, size_hint_y=None, height=30)
     text_input_1 = TextInput(
         text=_encode_for_display(text_to_edit_1),
+        font_name=OPEN_SANS_FONT,
         font_size="20sp",
         multiline=True,
         size_hint_y=1,
@@ -122,6 +136,7 @@ def create_editor_widget(
     text_input_2 = TextInput(
         text=_encode_for_display(text_to_edit_2),
         font_size="20sp",
+        font_name=OPEN_SANS_FONT,
         multiline=True,
         size_hint_y=1,
         padding=10,
@@ -134,6 +149,17 @@ def create_editor_widget(
 
     # Right side (Image + Extra Info)
     right_layout = BoxLayout(orientation="vertical", size_hint_x=0.5)
+
+    right_layout.add_widget(Widget(size_hint_y=None, height=35))
+
+    # Checkbox for Unicode decoding
+    checkbox_layout = BoxLayout(orientation="horizontal", size_hint_y=None, height=30)
+    decode_checkbox = CheckBox(active=False, size_hint_x=None, width=30)
+    decode_label = Label(text="Decode Unicode", halign="left", valign="middle")
+    decode_label.bind(size=decode_label.setter("text_size"))
+    checkbox_layout.add_widget(decode_checkbox)
+    checkbox_layout.add_widget(decode_label)
+    right_layout.add_widget(checkbox_layout)
 
     img_widget = Image(
         texture=cim.texture,
@@ -159,11 +185,32 @@ def create_editor_widget(
     content_layout.add_widget(editor_area)
     content_layout.add_widget(save_btn)
 
+    def on_checkbox_active(_instance: CheckBox, value: bool) -> None:
+        try:
+            t1 = text_input_1.text
+            t2 = text_input_2.text
+            if value:
+                # Encoded -> Decoded
+                text_input_1.text = _decode_from_display(t1)
+                text_input_2.text = _decode_from_display(t2)
+            else:
+                # Decoded -> Encoded
+                text_input_1.text = _encode_for_display(t1)
+                text_input_2.text = _encode_for_display(t2)
+        except UnicodeDecodeError as e:
+            print(f"Error converting text: {e}")
+
+    decode_checkbox.bind(active=on_checkbox_active)
+
     # 5. Define the save action
     def on_save(_instance: Button) -> None:
         try:
-            edited_text_1 = _decode_from_display(text_input_1.text)
-            edited_text_2 = _decode_from_display(text_input_2.text)
+            if decode_checkbox.active:
+                edited_text_1 = text_input_1.text
+                edited_text_2 = text_input_2.text
+            else:
+                edited_text_1 = _decode_from_display(text_input_1.text)
+                edited_text_2 = _decode_from_display(text_input_2.text)
         except UnicodeDecodeError as e:
             print(f"Error decoding text: {e}")
             return
