@@ -1,15 +1,33 @@
-import os
 from collections.abc import Callable
 
-from kivy.app import App
-from kivy.core.image import Image as CoreImage
-from kivy.core.window import Window
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.button import Button
-from kivy.uix.image import Image
-from kivy.uix.popup import Popup
-from kivy.uix.textinput import TextInput
-from kivy.uix.widget import Widget
+import typer
+from barks_fantagraphics.comic_book import get_page_str
+from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.ocr_file_paths import get_ocr_prelim_groups_json_filename
+from kivy.config import Config
+from kivy.uix.label import Label
+
+# Set the main window size using variables
+MAIN_WINDOW_X = 2100
+MAIN_WINDOW_Y = 20
+MAIN_WINDOW_WIDTH = 2000
+MAIN_WINDOW_HEIGHT = 1300
+
+Config.set("graphics", "position", "custom")  # ty:ignore[possibly-missing-attribute]
+Config.set("graphics", "left", MAIN_WINDOW_X)  # ty: ignore[possibly-missing-attribute]
+Config.set("graphics", "top", MAIN_WINDOW_Y)  # ty: ignore[possibly-missing-attribute]
+Config.set("graphics", "width", MAIN_WINDOW_WIDTH)  # ty: ignore[possibly-missing-attribute]
+Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty: ignore[possibly-missing-attribute]
+
+from kivy.app import App  # noqa: E402
+from kivy.core.image import Image as CoreImage  # noqa: E402
+from kivy.core.window import Window  # noqa: E402
+from kivy.uix.boxlayout import BoxLayout  # noqa: E402
+from kivy.uix.button import Button  # noqa: E402
+from kivy.uix.image import Image  # noqa: E402
+from kivy.uix.popup import Popup  # noqa: E402
+from kivy.uix.textinput import TextInput  # noqa: E402
+from kivy.uix.widget import Widget  # noqa: E402
 
 
 def edit_panel_text(
@@ -96,13 +114,37 @@ def edit_panel_text(
 
 
 class EditorApp(App):
-    """Example Application to demonstrate the function."""
+    def __init__(self, volume: int, fanta_page: int, group_id: int) -> None:
+        super().__init__()
+
+        self._volume = volume
+        self._fanta_page = get_page_str(fanta_page)
+        self._group_id = group_id
+
+        self._comics_database = ComicsDatabase()
 
     def build(self) -> Widget:
+        box_layout = BoxLayout(orientation="vertical", spacing=10, padding=10)
+        ocr_prelim_dir = self._comics_database.get_fantagraphics_restored_ocr_prelim_volume_dir(
+            self._volume
+        )
+        easy_ocr_file = ocr_prelim_dir / get_ocr_prelim_groups_json_filename(
+            self._fanta_page, "easyocr"
+        )
+        paddle_ocr_file = ocr_prelim_dir / get_ocr_prelim_groups_json_filename(
+            self._fanta_page, "paddleocr"
+        )
+        easy_ocr_file_label = Label(text=str(easy_ocr_file))
+        paddle_ocr_file_label = Label(text=str(paddle_ocr_file))
         # Main button to trigger the editor
         btn = Button(text="Click to Edit Panel")
         btn.bind(on_press=self.trigger_edit)
-        return btn
+
+        box_layout.add_widget(easy_ocr_file_label)
+        box_layout.add_widget(paddle_ocr_file_label)
+        box_layout.add_widget(btn)
+
+        return box_layout
 
     def trigger_edit(self, _instance: Button) -> None:
         # Example usage:
@@ -117,9 +159,17 @@ class EditorApp(App):
         print(f"User finished editing. New text:\n{new_text}")
 
 
+app = typer.Typer()
+
+
+@app.command(help="Prelim OCR Text Editor")
+def main(
+    volume: int,
+    fanta_page: int,
+    group_id: int,
+) -> None:
+    EditorApp(volume, fanta_page, group_id).run()
+
+
 if __name__ == "__main__":
-    # Set the main window size using variables
-    MAIN_WINDOW_WIDTH = 1200
-    MAIN_WINDOW_HEIGHT = 900
-    Window.size = (MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT)
-    EditorApp().run()
+    app()
