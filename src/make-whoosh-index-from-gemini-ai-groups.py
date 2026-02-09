@@ -24,6 +24,7 @@ APP_LOGGING_NAME = "gemi"
 
 
 def print_index(search_eng: SearchEngine, _title: str) -> None:
+    # noinspection PyProtectedMember
     with search_eng._index.reader() as reader:  # noqa: SLF001
         all_terms = list(reader.all_terms())
 
@@ -33,6 +34,7 @@ def print_index(search_eng: SearchEngine, _title: str) -> None:
 
 
 def print_unstemmed_terms(search_eng: SearchEngine) -> None:
+    # noinspection PyProtectedMember
     with search_eng._index.reader() as reader:  # noqa: SLF001
         all_terms = list(reader.terms_from("unstemmed", ""))
 
@@ -107,13 +109,13 @@ def check_name_map(search_engine: SearchEngine) -> None:
 
         for ttl_info in found.values():
             for pg_info in ttl_info.fanta_pages.values():
-                for speech_text in pg_info.speech_bubbles:
-                    speech_lower = speech_text[1].lower()
+                for speech_info in pg_info.speech_info_list:
+                    speech_lower = speech_info.speech_text.lower()
                     speech_lower = speech_lower.replace("\u00ad\n", "")
                     speech_lower = speech_lower.replace("-\n", "-")
                     speech_lower = speech_lower.replace("\n", " ")
                     if value.lower() not in speech_lower:
-                        msg = f'"{value.lower()}":\n{speech_lower}\n\n{speech_text[1]}'
+                        msg = f'"{value.lower()}":\n{speech_lower}\n\n{speech_info.speech_text}'
                         raise ValueError(msg)
 
 
@@ -126,12 +128,12 @@ def check_all_caps(search_engine: SearchEngine) -> None:
 
         for ttl_info in found.values():
             for pg_info in ttl_info.fanta_pages.values():
-                for speech_text in pg_info.speech_bubbles:
-                    speech_lower = speech_text[1].lower()
+                for speech_info in pg_info.speech_info_list:
+                    speech_lower = speech_info.speech_text.lower()
                     speech_lower = speech_lower.replace("-\n", "-")
                     speech_lower = speech_lower.replace("\n", " ")
                     if word.lower() not in speech_lower:
-                        msg = f'"{word.lower()}":\n{speech_lower}\n\n{speech_text[1]}'
+                        msg = f'"{word.lower()}":\n{speech_lower}\n\n{speech_info.speech_text}'
                         raise ValueError(msg)
 
 
@@ -203,9 +205,9 @@ def main(
                 f"     Fanta vol {title_info.fanta_vol}, page {fanta_page},"
                 f" Comic page {page_info.comic_page}"
             )
-            for speech_bubble in page_info.speech_bubbles:
-                sp_id = speech_bubble[0]
-                text_lines = speech_bubble[1].replace("\u00ad", "-")
+            for speech_info in page_info.speech_info_list:
+                sp_id = speech_info.group_id
+                text_lines = speech_info.speech_text.replace("\u00ad", "-")
                 indented_text = text_indenter.fill(f'"{sp_id}": {text_lines}')
                 print(indented_text)
                 print()

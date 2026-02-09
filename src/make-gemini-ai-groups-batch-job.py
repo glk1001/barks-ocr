@@ -60,11 +60,13 @@ def make_gemini_ai_groups_for_title(comics_database: ComicsDatabase, title: str)
     gemini_output_files = []
     num_files_processed = 0
     for svg_file, ocr_file in zip(svg_files, ocr_files, strict=True):
-        svg_stem = Path(svg_file).stem
+        fanta_page = Path(svg_file).stem
+        # if fanta_page < "029" or fanta_page > "043":
+        #    continue  # noqa: ERA001
 
         for ocr_type_file in ocr_file:
             ocr_type = get_ocr_type(ocr_type_file)
-            ocr_batch_results_filename = get_ocr_predicted_groups_filename(svg_stem, ocr_type)
+            ocr_batch_results_filename = get_ocr_predicted_groups_filename(fanta_page, ocr_type)
 
             ocr_predicted_groups_json_file = title_prev_results_dir / ocr_batch_results_filename
             if ocr_predicted_groups_json_file.is_file():
@@ -74,7 +76,7 @@ def make_gemini_ai_groups_for_title(comics_database: ComicsDatabase, title: str)
                 continue
 
             ocr_prelim_groups_json_file = out_title_dir / get_ocr_prelim_groups_json_filename(
-                svg_stem, ocr_type
+                fanta_page, ocr_type
             )
             if ocr_prelim_groups_json_file.is_file():
                 logger.error(

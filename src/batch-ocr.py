@@ -87,8 +87,8 @@ def ocr_comic_page(
             logger.info(f'OCR file exists - skipping: "{get_abbrev_path(ocr_json_file)}".')
         return ProcessResult.SKIPPED
 
-    svg_stem = Path(svg_file).stem
-    grey_image_file = work_dir / (svg_stem + "-grey.png")
+    fanta_page = Path(svg_file).stem
+    grey_image_file = work_dir / (fanta_page + "-grey.png")
     make_grey_image(png_file, grey_image_file)
 
     try:

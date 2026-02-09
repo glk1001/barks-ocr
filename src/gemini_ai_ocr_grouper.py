@@ -68,19 +68,19 @@ class GeminiAiGrouper:
         for svg_file, ocr_file, panel_segments_file in zip(
             svg_files, ocr_files, panel_segments_files, strict=True
         ):
-            svg_stem = svg_file.stem
+            fanta_page = svg_file.stem
 
             for ocr_type_file in ocr_file:
                 ocr_type = get_ocr_type(ocr_type_file)
 
                 ocr_prelim_groups_json_file = out_dir / get_ocr_prelim_groups_json_filename(
-                    svg_stem, ocr_type
+                    fanta_page, ocr_type
                 )
                 ocr_box_groups_json_file = out_dir / self._get_ocr_box_groups_json_filename(
-                    svg_stem, ocr_type
+                    fanta_page, ocr_type
                 )
                 ocr_groups_txt_file = out_dir / self._get_ocr_groups_txt_filename(
-                    svg_stem, ocr_type
+                    fanta_page, ocr_type
                 )
 
                 result = self._make_groups(
@@ -113,7 +113,7 @@ class GeminiAiGrouper:
         ocr_box_groups_json_file: Path,
         ocr_groups_txt_file: Path,
     ) -> ProcessResult:
-        svg_stem = svg_file.stem
+        fanta_page = svg_file.stem
         png_file = Path(str(svg_file) + ".png")
 
         # noinspection PyBroadException
@@ -126,7 +126,7 @@ class GeminiAiGrouper:
                 return ProcessResult.FAILURE
 
             ai_predicted_groups_file = batch_results_dir / get_ocr_predicted_groups_filename(
-                svg_stem, ocr_type
+                fanta_page, ocr_type
             )
             if ocr_prelim_data_groups_json_file.is_file() and (
                 ocr_prelim_data_groups_json_file.stat().st_mtime
@@ -142,7 +142,7 @@ class GeminiAiGrouper:
             ocr_bound_ids = self._assign_ids_to_ocr_boxes(ocr_data)
 
             ai_predicted_groups = self._get_ai_predicted_groups(
-                svg_stem, ocr_type, batch_results_dir, ocr_bound_ids, png_file
+                fanta_page, ocr_type, batch_results_dir, ocr_bound_ids, png_file
             )
 
             # Merge boxes into text bubbles
@@ -271,12 +271,12 @@ class GeminiAiGrouper:
         return [{**bound, "text_id": str(i)} for i, bound in enumerate(bounds)]
 
     @staticmethod
-    def _get_ocr_groups_txt_filename(svg_stem: str, ocr_type: str) -> str:
-        return svg_stem + f"-{ocr_type}-gemini-groups.txt"
+    def _get_ocr_groups_txt_filename(fanta_page: str, ocr_type: str) -> str:
+        return fanta_page + f"-{ocr_type}-gemini-groups.txt"
 
     @staticmethod
-    def _get_ocr_box_groups_json_filename(svg_stem: str, ocr_type: str) -> str:
-        return svg_stem + f"-{ocr_type}-gemini-groups.json"
+    def _get_ocr_box_groups_json_filename(fanta_page: str, ocr_type: str) -> str:
+        return fanta_page + f"-{ocr_type}-gemini-groups.json"
 
     @staticmethod
     def _get_enclosing_box(boxes: list[PointList]) -> PointList:

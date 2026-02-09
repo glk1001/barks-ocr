@@ -11,6 +11,7 @@ from barks_fantagraphics.comics_consts import PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.comics_utils import get_abbrev_path
+from barks_fantagraphics.fanta_comics_info import FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER
 from barks_fantagraphics.ocr_file_paths import OCR_ANNOTATIONS_DIR
 from barks_fantagraphics.speech_groupers import OCR_TYPES, SpeechGroups, SpeechPageGroup
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
@@ -377,7 +378,8 @@ def main(
     volumes = list(intspan(volumes_str))
     comics_database = ComicsDatabase()
 
-    all_speech_groups = SpeechGroups(comics_database, volumes)
+    all_volumes = list(range(FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER + 1))
+    all_speech_groups = SpeechGroups(comics_database, all_volumes)
     all_speech_groups.load_groups()
 
     ocr_annotate_titles(
