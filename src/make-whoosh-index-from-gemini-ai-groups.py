@@ -207,8 +207,9 @@ def main(
             )
             for speech_info in page_info.speech_info_list:
                 sp_id = speech_info.group_id
+                panel = speech_info.panel_num
                 text_lines = speech_info.speech_text.replace("\u00ad", "-")
-                indented_text = text_indenter.fill(f'"{sp_id}": {text_lines}')
+                indented_text = text_indenter.fill(f'"{sp_id} ({panel})": {text_lines}')
                 print(indented_text)
                 print()
             print()
