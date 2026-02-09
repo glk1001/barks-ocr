@@ -154,8 +154,8 @@ def create_editor_widget(
 
     # Checkbox for Unicode decoding
     checkbox_layout = BoxLayout(orientation="horizontal", size_hint_y=None, height=30)
-    decode_checkbox = CheckBox(active=False, size_hint_x=None, width=30)
-    decode_label = Label(text="Decode Unicode", halign="left", valign="middle")
+    decode_checkbox = CheckBox(active=True, size_hint_x=None, width=30)
+    decode_label = Label(text="Show Unicode", halign="left", valign="middle")
     decode_label.bind(size=decode_label.setter("text_size"))
     checkbox_layout.add_widget(decode_checkbox)
     checkbox_layout.add_widget(decode_label)
@@ -168,7 +168,7 @@ def create_editor_widget(
         keep_ratio=True,
     )
     info_label = Label(
-        text=extra_info, size_hint_y=0.2, font_size="15sp", halign="left", valign="top"
+        text=extra_info, size_hint_y=0.2, font_size="17sp", halign="left", valign="top", padding=10,
     )
     info_label.bind(size=info_label.setter("text_size"))
 
@@ -185,32 +185,63 @@ def create_editor_widget(
     content_layout.add_widget(editor_area)
     content_layout.add_widget(save_btn)
 
+    def update_diff_labels(*_args) -> None:  # noqa: ANN002
+        try:
+            t1 = text_input_1.text
+            t2 = text_input_2.text
+            if decode_checkbox.active:  # If True, text is encoded for display
+                t1 = _decode_from_display(t1)
+                t2 = _decode_from_display(t2)
+
+            are_different = t1 != t2
+
+            if are_different:
+                label_1.text = f"{edit_label1}  -- DIFFS"
+                label_2.text = f"{edit_label2}  -- DIFFS"
+                label_1.color = (1, 0, 0, 1)  # Red
+                label_2.color = (1, 0, 0, 1)  # Red
+            else:
+                label_1.text = edit_label1
+                label_2.text = edit_label2
+                label_1.color = (1, 1, 1, 1)  # Default/White
+                label_2.color = (1, 1, 1, 1)  # Default/White
+        except UnicodeDecodeError:
+            # During typing, an invalid escape sequence might exist temporarily.
+            # We can just ignore the update in this case.
+            pass
+
+    text_input_1.bind(text=update_diff_labels)
+    text_input_2.bind(text=update_diff_labels)
+
     def on_checkbox_active(_instance: CheckBox, value: bool) -> None:
         try:
             t1 = text_input_1.text
             t2 = text_input_2.text
             if value:
-                # Encoded -> Decoded
-                text_input_1.text = _decode_from_display(t1)
-                text_input_2.text = _decode_from_display(t2)
-            else:
                 # Decoded -> Encoded
                 text_input_1.text = _encode_for_display(t1)
                 text_input_2.text = _encode_for_display(t2)
+            else:
+                # Encoded -> Decoded
+                text_input_1.text = _decode_from_display(t1)
+                text_input_2.text = _decode_from_display(t2)
         except UnicodeDecodeError as e:
             print(f"Error converting text: {e}")
 
     decode_checkbox.bind(active=on_checkbox_active)
 
+    # Set initial state of diff labels
+    update_diff_labels()
+
     # 5. Define the save action
     def on_save(_instance: Button) -> None:
         try:
             if decode_checkbox.active:
-                edited_text_1 = text_input_1.text
-                edited_text_2 = text_input_2.text
-            else:
                 edited_text_1 = _decode_from_display(text_input_1.text)
                 edited_text_2 = _decode_from_display(text_input_2.text)
+            else:
+                edited_text_1 = text_input_1.text
+                edited_text_2 = text_input_2.text
         except UnicodeDecodeError as e:
             print(f"Error decoding text: {e}")
             return
