@@ -65,6 +65,14 @@ def write_cropped_image_file(
         subimage.save(target_image_file, optimize=True, compress_level=5)
 
 
+def _encode_for_display(text: str) -> str:
+    return text.encode("unicode_escape").decode("utf-8").replace(r"\n", "\n")
+
+
+def _decode_from_display(text: str) -> str:
+    return text.replace("\n", r"\n").encode("utf-8").decode("unicode_escape")
+
+
 def create_editor_widget(
     text_to_edit_1: str,
     edit_label1: str,
@@ -103,7 +111,7 @@ def create_editor_widget(
 
     label_1 = Label(text=edit_label1, size_hint_y=None, height=30)
     text_input_1 = TextInput(
-        text=text_to_edit_1,
+        text=_encode_for_display(text_to_edit_1),
         font_size="20sp",
         multiline=True,
         size_hint_y=1,
@@ -112,7 +120,7 @@ def create_editor_widget(
     )
     label_2 = Label(text=edit_label2, size_hint_y=None, height=30)
     text_input_2 = TextInput(
-        text=text_to_edit_2,
+        text=_encode_for_display(text_to_edit_2),
         font_size="20sp",
         multiline=True,
         size_hint_y=1,
@@ -153,8 +161,13 @@ def create_editor_widget(
 
     # 5. Define the save action
     def on_save(_instance: Button) -> None:
-        edited_text_1 = text_input_1.text
-        edited_text_2 = text_input_2.text
+        try:
+            edited_text_1 = _decode_from_display(text_input_1.text)
+            edited_text_2 = _decode_from_display(text_input_2.text)
+        except UnicodeDecodeError as e:
+            print(f"Error decoding text: {e}")
+            return
+
         if on_save_callback:
             on_save_callback(edited_text_1, edited_text_2)
         App.get_running_app().stop()
