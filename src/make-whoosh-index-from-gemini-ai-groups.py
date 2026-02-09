@@ -169,7 +169,7 @@ def main(
     volumes_str: VolumesArg = "",
     words: str = "",
     create_index: bool = False,
-    ocr_index_to_use: int = 1,  # paddleocr
+    ocr_index: int = 1,  # paddleocr
     unstemmed: bool = False,
     do_checks: bool = False,
     log_level_str: LogLevelArg = "DEBUG",
@@ -182,14 +182,14 @@ def main(
     volumes = list(intspan(volumes_str))
     comics_database = ComicsDatabase()
 
-    indexes_dirname = "Indexes" if ocr_index_to_use == 1 else "Indexes-easyocr"
+    indexes_dirname = "Indexes" if ocr_index == 1 else "Indexes-easyocr"
     volumes_index_dir = BARKS_ROOT_DIR / (
         "Compleat Barks Disney Reader/Reader Files/" + indexes_dirname
     )
     if not create_index:
         whoosh_search = SearchEngine(volumes_index_dir)
     else:
-        whoosh_search = SearchEngineCreator(comics_database, volumes_index_dir, ocr_index_to_use)
+        whoosh_search = SearchEngineCreator(comics_database, volumes_index_dir, ocr_index)
         whoosh_search.index_volumes(volumes)
 
     # print_index(search_engine, "")  # noqa: ERA001
