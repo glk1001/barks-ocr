@@ -323,15 +323,20 @@ class EditorApp(App):
         return content_layout
 
     def _get_right_layout(self) -> BoxLayout:
-        right_layout = BoxLayout(orientation="vertical", size_hint_x=0.5)
+        right_layout = BoxLayout(orientation="vertical", spacing=10, size_hint_x=0.5)
 
-        # Add spacer widget to move CheckBox down.
-        right_layout.add_widget(Widget(size_hint_y=None, height=35))
+        # Add spacer to align the checkbox below with the top of the text input
+        # on the left. The spacer's height matches the label on the left.
+        right_layout.add_widget(Widget(size_hint_y=None, height=30))
+
+        # Top part: Checkbox
         checkbox_layout, self._decode_checkbox = self._add_decode_checkbox()
         right_layout.add_widget(checkbox_layout)
 
-        # Add spacer widget to move panel heading down.
-        right_layout.add_widget(Widget(size_hint_y=None, height=235))
+        # Top Spacer to center the image and heading
+        right_layout.add_widget(Widget(size_hint_y=1))
+
+        # Heading
         panel_heading = Label(
             text=self.panel_heading_text,
             size_hint_y=None,
@@ -342,13 +347,17 @@ class EditorApp(App):
         self.bind(panel_heading_text=panel_heading.setter("text"))
         right_layout.add_widget(panel_heading)
 
-        # Add the panel image.
+        # Image (takes up the most space in the center)
+        self._panel_image_widget.size_hint_y = 8
         right_layout.add_widget(self._panel_image_widget)
 
-        # Add the extra info.
+        # Bottom Spacer to center the image and heading
+        right_layout.add_widget(Widget(size_hint_y=1))
+
+        # Bottom Info
         extra_info_label = Label(
             text=self._get_editor_info(),
-            size_hint_y=0.2,
+            size_hint_y=2,  # Relative weight for the bottom area
             font_size="17sp",
             halign="left",
             valign="top",
