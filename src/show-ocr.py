@@ -11,7 +11,6 @@ from barks_fantagraphics.comics_consts import PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.comics_utils import get_abbrev_path
-from barks_fantagraphics.fanta_comics_info import FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER
 from barks_fantagraphics.ocr_file_paths import OCR_ANNOTATIONS_DIR
 from barks_fantagraphics.speech_groupers import SpeechGroups, SpeechPageGroup
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
@@ -81,8 +80,7 @@ def ocr_annotate_title(
     comic = comics_database.get_comic_book(title_str)
 
     title = BARKS_TITLE_DICT[title_str]
-    title_speech_page_groups = all_speech_groups.all_speech_page_groups[title]
-    #    speech_text = speech_page_group["group"]
+    title_speech_page_groups = all_speech_groups.get_speech_page_groups(title)
     for speech_page_group in title_speech_page_groups:
         fanta_page = speech_page_group["fanta_page"]
         ocr_type = speech_page_group["ocr_index"]
@@ -376,9 +374,7 @@ def main(
     volumes = list(intspan(volumes_str))
     comics_database = ComicsDatabase()
 
-    all_volumes = list(range(FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER + 1))
-    all_speech_groups = SpeechGroups(comics_database, all_volumes)
-    all_speech_groups.load_groups()
+    all_speech_groups = SpeechGroups(comics_database)
 
     ocr_annotate_titles(
         all_speech_groups, comics_database, get_titles(comics_database, volumes, title_str)
