@@ -212,9 +212,7 @@ def ocr_annotate_image_with_prelim_text(
     font = ImageFont.truetype(font_file, font_size)
 
     color_index = 0
-    for speech_text in speech_groups:
-        group_id = speech_text["groupid"]
-
+    for group_id, speech_text in speech_groups.items():
         logger.info(f'Annotating group "{group_id}"...')
 
         text_box = speech_text["text_box"]

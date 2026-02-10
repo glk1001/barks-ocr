@@ -3,11 +3,13 @@ from collections.abc import Callable
 from pathlib import Path
 
 import typer
+from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, BARKS_TITLES
 from barks_fantagraphics.comic_book import get_page_str
 from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT
 from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.comics_helpers import get_title_from_volume_page
 from barks_fantagraphics.comics_utils import get_abbrev_path
-from barks_fantagraphics.ocr_file_paths import get_ocr_prelim_groups_json_filename
+from barks_fantagraphics.speech_groupers import get_speech_page_group_with_json
 from comic_utils.comic_consts import PNG_FILE_EXT
 from comic_utils.pil_image_utils import load_pil_image_for_reading
 from kivy.config import Config
@@ -168,7 +170,12 @@ def create_editor_widget(
         keep_ratio=True,
     )
     info_label = Label(
-        text=extra_info, size_hint_y=0.2, font_size="17sp", halign="left", valign="top", padding=10,
+        text=extra_info,
+        size_hint_y=0.2,
+        font_size="17sp",
+        halign="left",
+        valign="top",
+        padding=10,
     )
     info_label.bind(size=info_label.setter("text_size"))
 
@@ -273,24 +280,23 @@ class EditorApp(App):
         self._paddleocr_group_id = str(paddleocr_group_id)
 
         self._comics_database = ComicsDatabase()
+        title_str, dest_page = get_title_from_volume_page(
+            self._comics_database, volume, self._fanta_page
+        )
+        self._title = BARKS_TITLE_DICT[title_str]
+        self._dest_page = get_page_str(dest_page)
 
         restored_images_dir = self._comics_database.get_fantagraphics_restored_volume_image_dir(
             self._volume
         )
         self._srce_image_file = restored_images_dir / (self._fanta_page + PNG_FILE_EXT)
 
-        ocr_prelim_dir = self._comics_database.get_fantagraphics_restored_ocr_prelim_volume_dir(
-            self._volume
+        self._easyocr_speech_page_group_with_json = get_speech_page_group_with_json(
+            self._comics_database, volume, self._title, 0, self._fanta_page, self._dest_page
         )
-        self._easyocr_file = ocr_prelim_dir / get_ocr_prelim_groups_json_filename(
-            self._fanta_page, "easyocr"
+        self._paddleocr_speech_page_group_with_json = get_speech_page_group_with_json(
+            self._comics_database, volume, self._title, 1, self._fanta_page, self._dest_page
         )
-        self._paddleocr_file = ocr_prelim_dir / get_ocr_prelim_groups_json_filename(
-            self._fanta_page, "paddleocr"
-        )
-
-        self._easyocr_text = get_ai_text(self._easyocr_file, self._easyocr_group_id)
-        self._paddleocr_text = get_ai_text(self._paddleocr_file, self._paddleocr_group_id)
 
         panel_segments_dir = Path(
             self._comics_database.get_fantagraphics_panel_segments_volume_dir(self._volume)
@@ -298,23 +304,33 @@ class EditorApp(App):
         self._panel_segments_file = panel_segments_dir / (self._fanta_page + ".json")
 
     def _get_editor_info(self) -> str:
+        easyocr_file = self._easyocr_speech_page_group_with_json.ocr_prelim_groups_json_file
+        paddleocr_file = self._paddleocr_speech_page_group_with_json.ocr_prelim_groups_json_file
         return (
+            f"Title: {BARKS_TITLES[self._title]}\n"
             f"Volume: {self._volume}\n"
             f"Fanta Page: {self._fanta_page}\n"
             f"Panel: {self._panel_num}\n"
             f"EasyOCR group ID: {self._easyocr_group_id}\n"
             f"PaddleOCR group ID: {self._paddleocr_group_id}\n"
-            f'EasyOCR file: {get_abbrev_path(self._easyocr_file)}"\n'
-            f'PaddleOCR file: {get_abbrev_path(self._paddleocr_file)}"\n'
+            f'EasyOCR file: {get_abbrev_path(easyocr_file)}"\n'
+            f'PaddleOCR file: {get_abbrev_path(paddleocr_file)}"\n'
             f'Image file: {get_abbrev_path(self._srce_image_file)}"\n'
             f'Segments file: {get_abbrev_path(self._panel_segments_file)}"\n'
         )
 
     def build(self) -> Widget:
+        easyocr_text = self._easyocr_speech_page_group_with_json.speech_page_group["speech_groups"][
+            self._easyocr_group_id
+        ]["raw_ai_text"]
+        paddleocr_text = self._paddleocr_speech_page_group_with_json.speech_page_group[
+            "speech_groups"
+        ][self._paddleocr_group_id]["raw_ai_text"]
+
         return create_editor_widget(
-            text_to_edit_1=self._easyocr_text,
+            text_to_edit_1=easyocr_text,
             edit_label1="EasyOCR",
-            text_to_edit_2=self._paddleocr_text,
+            text_to_edit_2=paddleocr_text,
             edit_label2="PaddleOCR",
             image=self.get_panel_image_file(),
             extra_info=self._get_editor_info(),
@@ -329,40 +345,29 @@ class EditorApp(App):
         return panel_image_file
 
     def handle_result(self, new_easyocr_text: str, new_paddleocr_text: str) -> None:
-        if self._easyocr_text != new_easyocr_text:
-            save_ai_text(self._easyocr_file, self._easyocr_group_id, new_easyocr_text)
-            print(
-                f'Saved new easyocr text to file "{self._easyocr_file}". Text:\n{new_easyocr_text}'
-            )
-        if self._paddleocr_text != new_paddleocr_text:
-            save_ai_text(self._paddleocr_file, self._paddleocr_group_id, new_paddleocr_text)
-            print(
-                f'Saved new paddleocr text to file "{self._paddleocr_file}".'
-                f" Text:\n{new_paddleocr_text}"
-            )
+        easyocr_text = self._easyocr_speech_page_group_with_json.speech_page_group["speech_groups"][
+            self._easyocr_group_id
+        ]["raw_ai_text"]
+        paddleocr_text = self._paddleocr_speech_page_group_with_json.speech_page_group[
+            "speech_groups"
+        ][self._paddleocr_group_id]["raw_ai_text"]
 
-
-def get_ai_text(ocr_file: Path, group_id: str) -> str:
-    ocr_page = json.loads(ocr_file.read_text())
-    if group_id not in ocr_page["groups"]:
-        return ""
-    # if group_id not in ocr_page["groups"]:
-    #     msg = f"Could not find group id '{group_id}' in OCR file '{ocr_file}'."
-    #     raise RuntimeError(msg)
-    return ocr_page["groups"][group_id]["ai_text"]
-
-
-def save_ai_text(ocr_file: Path, group_id: str, text: str) -> None:
-    ocr_page = json.loads(ocr_file.read_text())
-    if group_id not in ocr_page["groups"]:
-        msg = f"Could not find group id '{group_id}' in OCR file '{ocr_file}'."
-        raise RuntimeError(msg)
-    ocr_page["groups"][group_id]["ai_text"] = text
-
-    tmp_ocr_file = Path("/tmp") / ocr_file.name
-
-    with tmp_ocr_file.open("w") as f:
-        json.dump(ocr_page, f, indent=4)
+        if easyocr_text != new_easyocr_text:
+            self._easyocr_speech_page_group_with_json.speech_page_group["speech_groups"][
+                self._easyocr_group_id
+            ]["raw_ai_text"] = new_easyocr_text
+            ocr_file = self._easyocr_speech_page_group_with_json.ocr_prelim_groups_json_file
+            tmp_ocr_file = Path("/tmp") / ocr_file.name
+            self._easyocr_speech_page_group_with_json.save_group(tmp_ocr_file)
+            print(f'Saved new easyocr text to file "{tmp_ocr_file}". Text:\n{new_easyocr_text}')
+        if paddleocr_text != new_paddleocr_text:
+            self._paddleocr_speech_page_group_with_json.speech_page_group["speech_groups"][
+                self._paddleocr_group_id
+            ]["raw_ai_text"] = new_paddleocr_text
+            ocr_file = self._paddleocr_speech_page_group_with_json.ocr_prelim_groups_json_file
+            tmp_ocr_file = Path("/tmp") / ocr_file.name
+            self._paddleocr_speech_page_group_with_json.save_group(tmp_ocr_file)
+            print(f'Saved new paddleocr text to file "{tmp_ocr_file}". Text:\n{new_paddleocr_text}')
 
 
 app = typer.Typer()
