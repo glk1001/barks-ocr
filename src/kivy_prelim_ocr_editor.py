@@ -1,10 +1,11 @@
 # ruff: noqa: E402
-from attr import dataclass
 
 import json
+from collections.abc import Callable
 from pathlib import Path
 
 import typer
+from attr import dataclass
 from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, BARKS_TITLES
 from barks_fantagraphics.comic_book import get_page_str
 from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT
@@ -29,15 +30,10 @@ Config.set("graphics", "width", MAIN_WINDOW_WIDTH)  # ty: ignore[possibly-missin
 Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty: ignore[possibly-missing-attribute]
 
 from kivy.app import App
-from kivy.core.image import Image as CoreImage
-
-# noinspection PyProtectedMember
-from kivy.core.image import Texture
 from kivy.core.text import LabelBase
 
 # noinspection PyUnresolvedReferences
 from kivy.properties import (  # ty:ignore[unresolved-import]
-    ObjectProperty,
     StringProperty,
 )
 from kivy.uix.boxlayout import BoxLayout
@@ -45,6 +41,8 @@ from kivy.uix.button import Button
 from kivy.uix.checkbox import CheckBox
 from kivy.uix.image import Image
 from kivy.uix.label import Label
+from kivy.uix.popup import Popup
+from kivy.uix.scrollview import ScrollView
 from kivy.uix.textinput import TextInput
 from kivy.uix.widget import Widget
 
@@ -60,13 +58,14 @@ LabelBase.register(
 
 EASY_OCR = "EasyOCR"
 PADDLE_OCR = "PaddleOCR"
+MAX_NUM_PANELS = 8
 
 
 # TODO: Duplicated in 'edit-page.py'.
 def write_cropped_image_file(
     srce_image_file: Path, segments_file: Path, target_image_file: Path, panel: int
 ) -> None:
-    if panel <= 0 or panel >= 9:
+    if not (1 <= panel <= MAX_NUM_PANELS):
         msg = f'Srce image file: "{srce_image_file}" - invalid panel number "{panel}".'
         raise ValueError(msg)
 
@@ -78,7 +77,7 @@ def write_cropped_image_file(
         with segments_file.open() as f:
             panel_segment_info = json.load(f)
 
-        if panel <= 0 or panel > len(panel_segment_info["panels"]):
+        if not (0 < panel <= len(panel_segment_info["panels"])):
             msg = f'Segments file: "{segments_file}" - invalid panel number "{panel}".'
             raise ValueError(msg)
 
@@ -106,7 +105,6 @@ class EditorApp(App):
     edit_label_easyocr = StringProperty("EasyOCR")
     edit_label_paddleocr = StringProperty("PaddleOCR")
     panel_heading_text = StringProperty()
-    panel_image_texture = ObjectProperty(allownone=True)
 
     def __init__(
         self,
@@ -120,8 +118,7 @@ class EditorApp(App):
 
         self._volume = volume
         self._fanta_page = get_page_str(fanta_page)
-        self._easyocr_group_id = str(easyocr_group_id)
-        self._paddleocr_group_id = str(paddleocr_group_id)
+        self._displayed_panel_num = -1
 
         self._comics_database = ComicsDatabase()
         title_str, dest_page = get_title_from_volume_page(
@@ -134,9 +131,8 @@ class EditorApp(App):
             self._volume
         )
         self._srce_image_file = restored_images_dir / (self._fanta_page + PNG_FILE_EXT)
+        self._panel_image_widget = Image(size_hint_y=0.8, fit_mode="contain")
         self._decode_checkbox: CheckBox | None = None
-        self._easyocr_label = self._get_ocr_label(EASY_OCR, self._easyocr_group_id)
-        self._paddleocr_label = self._get_ocr_label(PADDLE_OCR, self._paddleocr_group_id)
 
         self._easyocr_speech_page_group_with_json = get_speech_page_group_with_json(
             self._comics_database, volume, self._title, 0, self._fanta_page, self._dest_page
@@ -150,6 +146,8 @@ class EditorApp(App):
         )
         self._panel_segments_file = panel_segments_dir / (self._fanta_page + ".json")
 
+        self._set_easyocr_group_id(str(easyocr_group_id))
+        self._set_paddleocr_group_id(str(paddleocr_group_id))
         self._set_panel_num(panel_num)
 
     def build(self) -> Widget:
@@ -162,13 +160,49 @@ class EditorApp(App):
 
         return self._create_editor_widget()
 
+    def _set_easyocr_group_id(self, group_id: str) -> None:
+        self._easyocr_group_id = group_id
+
+        speech_group = self._easyocr_speech_page_group_with_json.speech_page_group["speech_groups"][
+            self._easyocr_group_id
+        ]
+        panel_num = speech_group["panel_num"]
+
+        self._easyocr_label = self._get_ocr_label(EASY_OCR, self._easyocr_group_id, panel_num)
+
+        self.text_str_easyocr = self._encode_for_display(speech_group["raw_ai_text"])
+        panel_num = speech_group["panel_num"]
+        self._set_panel_num(panel_num)
+
+    def _set_paddleocr_group_id(self, group_id: str) -> None:
+        self._paddleocr_group_id = group_id
+
+        speech_group = self._paddleocr_speech_page_group_with_json.speech_page_group[
+            "speech_groups"
+        ][self._paddleocr_group_id]
+        panel_num = speech_group["panel_num"]
+
+        self._paddleocr_label = self._get_ocr_label(PADDLE_OCR, self._paddleocr_group_id, panel_num)
+
+        self.text_str_paddleocr = self._encode_for_display(speech_group["raw_ai_text"])
+        self._set_panel_num(panel_num)
+
     @staticmethod
-    def _get_ocr_label(ocr_name: str, group_id: str) -> str:
-        return f"{ocr_name}: group_id: {group_id}"
+    def _get_ocr_label(ocr_name: str, group_id: str, panel_num: int) -> str:
+        return f"{ocr_name}: group_id: {group_id}; panel: {panel_num}"
 
     def _set_panel_num(self, panel_num: int) -> None:
-        self.panel_heading_text = f"Panel {panel_num}"
-        self.panel_image_texture = self.get_panel_image_texture(panel_num)
+        if self._displayed_panel_num == panel_num:
+            return
+
+        self._displayed_panel_num = panel_num
+
+        self.panel_heading_text = f"Panel {self._displayed_panel_num}"
+
+        new_source = str(self.get_panel_image_file(self._displayed_panel_num))
+        if self._panel_image_widget.source:
+            Path(self._panel_image_widget.source).unlink(missing_ok=True)
+        self._panel_image_widget.source = new_source
 
     def _get_editor_info(self) -> str:
         easyocr_file = self._easyocr_speech_page_group_with_json.ocr_prelim_groups_json_file
@@ -205,7 +239,7 @@ class EditorApp(App):
 
         # Add widgets to content layout
         content_layout.add_widget(editor_area)
-        content_layout.add_widget(self._get_save_button())
+        content_layout.add_widget(self._get_bottom_layout())
 
         return content_layout
 
@@ -227,19 +261,10 @@ class EditorApp(App):
             bold=True,
         )
         self.bind(panel_heading_text=panel_heading.setter("text"))
-        panel_heading.bind(text=self.setter("panel_heading_text"))
         right_layout.add_widget(panel_heading)
 
         # Add the panel image.
-        panel_image_widget = Image(
-            texture=self.panel_image_texture,
-            size_hint_y=0.8,
-            allow_stretch=True,
-            keep_ratio=True,
-        )
-        self.bind(panel_image_texture=panel_image_widget.setter("texture"))
-        panel_image_widget.bind(texture=self.setter("panel_image_texture"))
-        right_layout.add_widget(panel_image_widget)
+        right_layout.add_widget(self._panel_image_widget)
 
         # Add the extra info.
         extra_info_label = Label(
@@ -359,12 +384,98 @@ class EditorApp(App):
         return checkbox_layout, decode_checkbox
 
     # noinspection PyTypeHints
-    def get_panel_image_texture(self, panel_num: int) -> Texture:
-        panel_image_file = Path("/tmp") / (f"{self._volume}-{self._fanta_page}" + PNG_FILE_EXT)
+    def get_panel_image_file(self, panel_num: int) -> Path:
+        panel_image_file = Path("/tmp") / (
+            f"{self._volume}-{self._fanta_page}-{panel_num}" + PNG_FILE_EXT
+        )
         write_cropped_image_file(
             self._srce_image_file, self._panel_segments_file, panel_image_file, panel_num
         )
-        return CoreImage(str(panel_image_file)).texture
+        return panel_image_file
+
+    def _get_bottom_layout(self) -> BoxLayout:
+        layout = BoxLayout(orientation="horizontal", size_hint_y=None, height=50, spacing=10)
+
+        select_btn = Button(text="Select EasyOCR Speech Item", size_hint_y=None, height=50)
+        select_btn.bind(on_press=self._show_easyocr_speech_item_popup)
+        layout.add_widget(select_btn)
+
+        select_btn = Button(text="Select PaddleOCR Speech Item", size_hint_y=None, height=50)
+        select_btn.bind(on_press=self._show_paddleocr_speech_item_popup)
+        layout.add_widget(select_btn)
+
+        layout.add_widget(self._get_save_button())
+
+        return layout
+
+    def _show_easyocr_speech_item_popup(self, _instance: Button) -> None:
+        self._show_speech_item_popup(
+            "Select EasyOCR Speech Item",
+            self._get_easyocr_speech_items(),
+            self._on_easyocr_speech_item_selected,
+        )
+
+    def _show_paddleocr_speech_item_popup(self, _instance: Button) -> None:
+        self._show_speech_item_popup(
+            "Select PaddleOCR Speech Item",
+            self._get_paddleocr_speech_items(),
+            self._on_paddleocr_speech_item_selected,
+        )
+
+    @staticmethod
+    def _show_speech_item_popup(
+        popup_title: str,
+        items: list[SpeechItem],
+        on_speech_item_selected: Callable[[SpeechItem], None],
+    ) -> None:
+        content = BoxLayout(orientation="vertical", spacing=10, padding=10)
+
+        scroll = ScrollView()
+        list_layout = BoxLayout(orientation="vertical", size_hint_y=None, spacing=5)
+        list_layout.bind(minimum_height=list_layout.setter("height"))
+
+        popup = Popup(title=popup_title, content=content, size_hint=(0.9, 0.8))
+
+        def select_item(selected_item: SpeechItem) -> None:
+            popup.dismiss()
+            on_speech_item_selected(selected_item)
+
+        for item in items:
+            btn_text = f"{item.group_id}: {item.text.replace('\n', ' ')}"
+            btn = Button(text=btn_text, font_name=OPEN_SANS_FONT, size_hint_y=None, height=40)
+            # Use default argument i=item to capture the current item in the loop
+            btn.bind(on_release=lambda _inst, i=item: select_item(i))
+            list_layout.add_widget(btn)
+
+        scroll.add_widget(list_layout)
+        content.add_widget(scroll)
+
+        # Close button
+        close_btn = Button(text="Close", size_hint_y=None, height=40)
+        close_btn.bind(on_press=popup.dismiss)
+        content.add_widget(close_btn)
+
+        popup.open()
+
+    def _get_easyocr_speech_items(self) -> list[SpeechItem]:
+        groups = self._easyocr_speech_page_group_with_json.speech_page_group["speech_groups"]
+        return [
+            SpeechItem(group_id=group_id, text=data.get("raw_ai_text", ""))
+            for group_id, data in groups.items()
+        ]
+
+    def _on_easyocr_speech_item_selected(self, speech_item: SpeechItem) -> None:
+        self._set_easyocr_group_id(speech_item.group_id)
+
+    def _get_paddleocr_speech_items(self) -> list[SpeechItem]:
+        groups = self._paddleocr_speech_page_group_with_json.speech_page_group["speech_groups"]
+        return [
+            SpeechItem(group_id=group_id, text=data.get("raw_ai_text", ""))
+            for group_id, data in groups.items()
+        ]
+
+    def _on_paddleocr_speech_item_selected(self, speech_item: SpeechItem) -> None:
+        self._set_paddleocr_group_id(speech_item.group_id)
 
     def _get_save_button(self) -> Button:
         save_btn = Button(text="Save & Exit", size_hint_y=None, height=50)
