@@ -1,5 +1,4 @@
 # ruff: noqa: E402
-
 import json
 from collections.abc import Callable
 from pathlib import Path
@@ -11,11 +10,17 @@ from barks_fantagraphics.comic_book import get_page_str
 from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
-from barks_fantagraphics.comics_utils import get_abbrev_path
+from barks_fantagraphics.comics_utils import get_abbrev_path, get_backup_file
+from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM_DIR
 from barks_fantagraphics.speech_groupers import get_speech_page_group_with_json
 from comic_utils.comic_consts import PNG_FILE_EXT
+from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
 from kivy.config import Config
+from loguru import logger
+from loguru_config import LoguruConfig
+
+APP_LOGGING_NAME = "kpoe"
 
 # Set the main window size using variables
 MAIN_WINDOW_X = 2100
@@ -31,6 +36,7 @@ Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty: ignore[possibly-miss
 
 from kivy.app import App
 from kivy.core.text import LabelBase
+from kivy.core.window import Window
 
 # noinspection PyUnresolvedReferences
 from kivy.properties import (  # ty:ignore[unresolved-import]
@@ -70,7 +76,7 @@ def write_cropped_image_file(
         raise ValueError(msg)
 
     if not segments_file.is_file():
-        print(f'WARN: Could not find segments file "{segments_file}". Returning full page.')
+        logger.warning(f'Could not find segments file "{segments_file}". Returning full page.')
         image = load_pil_image_for_reading(srce_image_file)
         image.save(target_image_file, optimize=True, compress_level=9)
     else:
@@ -110,9 +116,9 @@ class EditorApp(App):
         self,
         volume: int,
         fanta_page: int,
-        panel_num: int,
         easyocr_group_id: int,
         paddleocr_group_id: int,
+        panel_num: int,
     ) -> None:
         super().__init__()
 
@@ -133,12 +139,20 @@ class EditorApp(App):
         self._srce_image_file = restored_images_dir / (self._fanta_page + PNG_FILE_EXT)
         self._panel_image_widget = Image(size_hint_y=0.8, fit_mode="contain")
         self._decode_checkbox: CheckBox | None = None
+        self._popup: Popup | None = None
 
         self._easyocr_speech_page_group_with_json = get_speech_page_group_with_json(
             self._comics_database, volume, self._title, 0, self._fanta_page, self._dest_page
         )
         self._paddleocr_speech_page_group_with_json = get_speech_page_group_with_json(
             self._comics_database, volume, self._title, 1, self._fanta_page, self._dest_page
+        )
+
+        self._easyocr_speech_groups = self._easyocr_speech_page_group_with_json.speech_page_group[
+            "speech_groups"
+        ]
+        self._paddleocr_speech_groups = (
+            self._paddleocr_speech_page_group_with_json.speech_page_group["speech_groups"]
         )
 
         panel_segments_dir = Path(
@@ -148,24 +162,87 @@ class EditorApp(App):
 
         self._set_easyocr_group_id(str(easyocr_group_id))
         self._set_paddleocr_group_id(str(paddleocr_group_id))
-        self._set_panel_num(panel_num)
+
+        if panel_num != -1:
+            self._set_panel_num(panel_num)
+
+        Window.bind(on_request_close=self.on_request_close)
 
     def build(self) -> Widget:
-        self.text_str_easyocr = self._easyocr_speech_page_group_with_json.speech_page_group[
-            "speech_groups"
-        ][self._easyocr_group_id]["raw_ai_text"]
-        self.text_str_paddleocr = self._paddleocr_speech_page_group_with_json.speech_page_group[
-            "speech_groups"
-        ][self._paddleocr_group_id]["raw_ai_text"]
+        self.text_str_easyocr = self._easyocr_speech_groups[self._easyocr_group_id]["raw_ai_text"]
+        self.text_str_paddleocr = self._paddleocr_speech_groups[self._paddleocr_group_id][
+            "raw_ai_text"
+        ]
 
         return self._create_editor_widget()
 
+    def on_request_close(self, *_args) -> bool:  # noqa: ANN002
+        if (
+            not self._easyocr_speech_page_group_with_json.has_group_changed()
+            and not self._paddleocr_speech_page_group_with_json.has_group_changed()
+        ):
+            return False
+
+        self._show_exit_popup()
+
+        # Returning True prevents the window from closing immediately
+        return True
+
+    def _show_exit_popup(self) -> None:
+        content = BoxLayout(orientation="vertical", padding=10, spacing=10)
+        content.add_widget(
+            Label(text="Some speech items have changed.\nAre you sure you want to exit?")
+        )
+
+        button_layout = BoxLayout(spacing=10)
+
+        yes_button = Button(text="Yes")
+        yes_button.bind(on_press=self._stop_app)
+        button_layout.add_widget(yes_button)
+
+        no_button = Button(text="No")
+        no_button.bind(on_press=lambda _btn: self._popup.dismiss())
+        button_layout.add_widget(no_button)
+
+        content.add_widget(button_layout)
+
+        self._popup = Popup(
+            title="Data Changed Without Save",
+            content=content,
+            size_hint=(None, None),
+            size=(400, 200),
+            auto_dismiss=False,
+        )
+        self._popup.open()
+
+    def _stop_app(self, *_args) -> None:  # noqa: ANN002
+        self._popup.dismiss()
+        self.stop()
+
+    def _on_easyocr_text_changed(self, instance: TextInput, _value: str) -> None:
+        if not instance.focus:
+            return
+
+        self._easyocr_speech_groups[self._easyocr_group_id]["raw_ai_text"] = (
+            self._get_current_easyocr_text()
+        )
+
+    def _on_paddleocr_text_changed(self, instance: TextInput, _value: str) -> None:
+        if not instance.focus:
+            return
+
+        self._paddleocr_speech_groups[self._paddleocr_group_id]["raw_ai_text"] = (
+            self._get_current_paddleocr_text()
+        )
+
     def _set_easyocr_group_id(self, group_id: str) -> None:
+        if group_id not in self._easyocr_speech_groups:
+            msg = f"Unknown easyocr group id '{group_id}'."
+            raise ValueError(msg)
+
         self._easyocr_group_id = group_id
 
-        speech_group = self._easyocr_speech_page_group_with_json.speech_page_group["speech_groups"][
-            self._easyocr_group_id
-        ]
+        speech_group = self._easyocr_speech_groups[self._easyocr_group_id]
         panel_num = speech_group["panel_num"]
 
         self._easyocr_label = self._get_ocr_label(EASY_OCR, self._easyocr_group_id, panel_num)
@@ -175,11 +252,13 @@ class EditorApp(App):
         self._set_panel_num(panel_num)
 
     def _set_paddleocr_group_id(self, group_id: str) -> None:
+        if group_id not in self._paddleocr_speech_groups:
+            msg = f"Unknown paddleocr group id '{group_id}'."
+            raise ValueError(msg)
+
         self._paddleocr_group_id = group_id
 
-        speech_group = self._paddleocr_speech_page_group_with_json.speech_page_group[
-            "speech_groups"
-        ][self._paddleocr_group_id]
+        speech_group = self._paddleocr_speech_groups[self._paddleocr_group_id]
         panel_num = speech_group["panel_num"]
 
         self._paddleocr_label = self._get_ocr_label(PADDLE_OCR, self._paddleocr_group_id, panel_num)
@@ -298,6 +377,7 @@ class EditorApp(App):
         )
         self.bind(text_str_easyocr=text_input_1.setter("text"))
         text_input_1.bind(text=self.setter("text_str_easyocr"))
+        text_input_1.bind(text=self._on_easyocr_text_changed)
         self.text_str_easyocr = self._encode_for_display(self.text_str_easyocr)
 
         label_2 = Label(text=self.edit_label_paddleocr, bold=True, size_hint_y=None, height=30)
@@ -315,6 +395,7 @@ class EditorApp(App):
         )
         self.bind(text_str_paddleocr=text_input_2.setter("text"))
         text_input_2.bind(text=self.setter("text_str_paddleocr"))
+        text_input_2.bind(text=self._on_paddleocr_text_changed)
         self.text_str_paddleocr = self._encode_for_display(self.text_str_paddleocr)
 
         def update_diff_labels(*_args) -> None:  # noqa: ANN002
@@ -374,7 +455,7 @@ class EditorApp(App):
                     self.text_str_easyocr = self._decode_from_display(t1)
                     self.text_str_paddleocr = self._decode_from_display(t2)
             except UnicodeDecodeError as e:
-                print(f"Error converting text: {e}")
+                logger.exception(f"Error converting text: {e}")
 
         decode_checkbox.bind(active=on_checkbox_active)
 
@@ -385,7 +466,7 @@ class EditorApp(App):
 
     # noinspection PyTypeHints
     def get_panel_image_file(self, panel_num: int) -> Path:
-        panel_image_file = Path("/tmp") / (
+        panel_image_file = Path("/tmp") / (  # noqa: S108
             f"{self._volume}-{self._fanta_page}-{panel_num}" + PNG_FILE_EXT
         )
         write_cropped_image_file(
@@ -458,20 +539,18 @@ class EditorApp(App):
         popup.open()
 
     def _get_easyocr_speech_items(self) -> list[SpeechItem]:
-        groups = self._easyocr_speech_page_group_with_json.speech_page_group["speech_groups"]
         return [
             SpeechItem(group_id=group_id, text=data.get("raw_ai_text", ""))
-            for group_id, data in groups.items()
+            for group_id, data in self._easyocr_speech_groups.items()
         ]
 
     def _on_easyocr_speech_item_selected(self, speech_item: SpeechItem) -> None:
         self._set_easyocr_group_id(speech_item.group_id)
 
     def _get_paddleocr_speech_items(self) -> list[SpeechItem]:
-        groups = self._paddleocr_speech_page_group_with_json.speech_page_group["speech_groups"]
         return [
             SpeechItem(group_id=group_id, text=data.get("raw_ai_text", ""))
-            for group_id, data in groups.items()
+            for group_id, data in self._paddleocr_speech_groups.items()
         ]
 
     def _on_paddleocr_speech_item_selected(self, speech_item: SpeechItem) -> None:
@@ -481,62 +560,75 @@ class EditorApp(App):
         save_btn = Button(text="Save & Exit", size_hint_y=None, height=50)
 
         def on_save(_instance: Button) -> None:
-            try:
-                if self._decode_checkbox.active:
-                    edited_text_1 = self._decode_from_display(self.text_str_easyocr)
-                    edited_text_2 = self._decode_from_display(self.text_str_paddleocr)
-                else:
-                    edited_text_1 = self.text_str_easyocr
-                    edited_text_2 = self.text_str_paddleocr
-            except UnicodeDecodeError as e:
-                print(f"Error decoding text: {e}")
-                return
-
-            self._handle_result(edited_text_1, edited_text_2)
+            self._handle_save()
             self.stop()
 
         save_btn.bind(on_press=on_save)
 
         return save_btn
 
-    def _handle_result(self, new_easyocr_text: str, new_paddleocr_text: str) -> None:
-        easyocr_text = self._easyocr_speech_page_group_with_json.speech_page_group["speech_groups"][
-            self._easyocr_group_id
-        ]["raw_ai_text"]
-        paddleocr_text = self._paddleocr_speech_page_group_with_json.speech_page_group[
-            "speech_groups"
-        ][self._paddleocr_group_id]["raw_ai_text"]
+    def _get_current_easyocr_text(self) -> str:
+        return (
+            self._decode_from_display(self.text_str_easyocr)
+            if self._decode_checkbox.active
+            else self.text_str_easyocr
+        )
 
-        if easyocr_text != new_easyocr_text:
-            self._easyocr_speech_page_group_with_json.speech_page_group["speech_groups"][
-                self._easyocr_group_id
-            ]["raw_ai_text"] = new_easyocr_text
-            ocr_file = self._easyocr_speech_page_group_with_json.ocr_prelim_groups_json_file
-            tmp_ocr_file = Path("/tmp") / ocr_file.name
-            self._easyocr_speech_page_group_with_json.save_group(tmp_ocr_file)
-            print(f'Saved new easyocr text to file "{tmp_ocr_file}". Text:\n{new_easyocr_text}')
-        if paddleocr_text != new_paddleocr_text:
-            self._paddleocr_speech_page_group_with_json.speech_page_group["speech_groups"][
-                self._paddleocr_group_id
-            ]["raw_ai_text"] = new_paddleocr_text
-            ocr_file = self._paddleocr_speech_page_group_with_json.ocr_prelim_groups_json_file
-            tmp_ocr_file = Path("/tmp") / ocr_file.name
-            self._paddleocr_speech_page_group_with_json.save_group(tmp_ocr_file)
-            print(f'Saved new paddleocr text to file "{tmp_ocr_file}". Text:\n{new_paddleocr_text}')
+    def _get_current_paddleocr_text(self) -> str:
+        return (
+            self._decode_from_display(self.text_str_paddleocr)
+            if self._decode_checkbox.active
+            else self.text_str_paddleocr
+        )
+
+    def _handle_save(self) -> None:
+        ocr_file = self._easyocr_speech_page_group_with_json.ocr_prelim_groups_json_file
+        ocr_backup_file = self._get_prelim_ocr_backup_file(ocr_file)
+        if not self._easyocr_speech_page_group_with_json.save_group(backup_file=ocr_backup_file):
+            logger.debug(f'Nothing changed in easyocr file "{ocr_file}".')
+        else:
+            logger.info(
+                f'Saved new easyocr text to file "{ocr_file}".'
+                f' Backed up up old file to "{ocr_backup_file}".'
+            )
+
+        ocr_file = self._paddleocr_speech_page_group_with_json.ocr_prelim_groups_json_file
+        ocr_backup_file = self._get_prelim_ocr_backup_file(ocr_file)
+        if not self._paddleocr_speech_page_group_with_json.save_group(backup_file=ocr_backup_file):
+            logger.debug(f'Nothing changed in paddleocr file "{ocr_file}".')
+        else:
+            logger.info(
+                f'Saved new paddleocr text to file "{ocr_file}".'
+                f' Backed up old file to "{ocr_backup_file}".'
+            )
+
+    @staticmethod
+    def _get_prelim_ocr_backup_file(ocr_file: Path) -> Path:
+        return Path(
+            str(get_backup_file(ocr_file)).replace(str(OCR_PRELIM_DIR), str(OCR_PRELIM_BACKUP_DIR))
+        )
 
 
 app = typer.Typer()
+log_level = ""
+log_filename = "kivy-prelim-ocr-editor.log"
 
 
 @app.command(help="Prelim OCR Text Editor")
 def main(
     volume: int,
     fanta_page: int,
-    panel_num: int,
     easyocr_group_id: int,
     paddleocr_group_id: int,
+    panel_num: int = -1,
+    log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    EditorApp(volume, fanta_page, panel_num, easyocr_group_id, paddleocr_group_id).run()
+    # Global variable accessed by loguru-config.
+    global log_level  # noqa: PLW0603
+    log_level = log_level_str
+    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+
+    EditorApp(volume, fanta_page, easyocr_group_id, paddleocr_group_id, panel_num).run()
 
 
 if __name__ == "__main__":
