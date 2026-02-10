@@ -12,7 +12,7 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_backup_file
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM_DIR
-from barks_fantagraphics.speech_groupers import get_speech_page_group_with_json
+from barks_fantagraphics.speech_groupers import OcrTypes, get_speech_page_group_with_json
 from comic_utils.comic_consts import PNG_FILE_EXT
 from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
@@ -142,10 +142,20 @@ class EditorApp(App):
         self._popup: Popup | None = None
 
         self._easyocr_speech_page_group_with_json = get_speech_page_group_with_json(
-            self._comics_database, volume, self._title, 0, self._fanta_page, self._dest_page
+            self._comics_database,
+            volume,
+            self._title,
+            OcrTypes.EASYOCR,
+            self._fanta_page,
+            self._dest_page,
         )
         self._paddleocr_speech_page_group_with_json = get_speech_page_group_with_json(
-            self._comics_database, volume, self._title, 1, self._fanta_page, self._dest_page
+            self._comics_database,
+            volume,
+            self._title,
+            OcrTypes.PADDLEOCR,
+            self._fanta_page,
+            self._dest_page,
         )
 
         self._easyocr_speech_groups = self._easyocr_speech_page_group_with_json.speech_page_group[

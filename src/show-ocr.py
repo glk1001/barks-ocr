@@ -13,7 +13,7 @@ from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.comics_utils import get_abbrev_path
 from barks_fantagraphics.fanta_comics_info import FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER
 from barks_fantagraphics.ocr_file_paths import OCR_ANNOTATIONS_DIR
-from barks_fantagraphics.speech_groupers import OCR_TYPES, SpeechGroups, SpeechPageGroup
+from barks_fantagraphics.speech_groupers import SpeechGroups, SpeechPageGroup
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
 from intspan import intspan
@@ -85,7 +85,7 @@ def ocr_annotate_title(
     #    speech_text = speech_page_group["group"]
     for speech_page_group in title_speech_page_groups:
         fanta_page = speech_page_group["fanta_page"]
-        ocr_type = OCR_TYPES[speech_page_group["ocr_index"]]
+        ocr_type = speech_page_group["ocr_index"]
 
         svg_file = comic.get_srce_restored_svg_story_file(fanta_page)
         panel_segments_file = comic.get_srce_panel_segments_file(fanta_page)

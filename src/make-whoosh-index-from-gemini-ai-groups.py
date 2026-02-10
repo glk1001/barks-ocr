@@ -6,6 +6,7 @@ import typer
 from barks_fantagraphics.barks_titles import NON_COMIC_TITLES
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT
 from barks_fantagraphics.whoosh_barks_terms import (
     ALL_CAPS,
     BARKSIAN_EXTRA_TERMS,
@@ -181,6 +182,7 @@ def main(
 
     volumes = list(intspan(volumes_str))
     comics_database = ComicsDatabase()
+    assert ocr_index in OCR_TYPE_DICT
 
     indexes_dirname = "Indexes" if ocr_index == 1 else "Indexes-easyocr"
     volumes_index_dir = BARKS_ROOT_DIR / (
@@ -189,7 +191,9 @@ def main(
     if not create_index:
         whoosh_search = SearchEngine(volumes_index_dir)
     else:
-        whoosh_search = SearchEngineCreator(comics_database, volumes_index_dir, ocr_index)
+        whoosh_search = SearchEngineCreator(
+            comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]
+        )
         whoosh_search.index_volumes(volumes)
 
     # print_index(search_engine, "")  # noqa: ERA001
