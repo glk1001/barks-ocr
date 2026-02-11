@@ -82,8 +82,8 @@ def ocr_annotate_title(
     title = BARKS_TITLE_DICT[title_str]
     title_speech_page_groups = all_speech_groups.get_speech_page_groups(title)
     for speech_page_group in title_speech_page_groups:
-        fanta_page = speech_page_group["fanta_page"]
-        ocr_type = speech_page_group["ocr_index"]
+        fanta_page = speech_page_group.fanta_page
+        ocr_type = speech_page_group.ocr_index
 
         svg_file = comic.get_srce_restored_svg_story_file(fanta_page)
         panel_segments_file = comic.get_srce_panel_segments_file(fanta_page)
@@ -188,7 +188,7 @@ def ocr_annotate_image_with_prelim_text(
 ) -> None:
     logger.info(f'Annotating image "{png_file}"...')
 
-    # Hack for Good Deeds...
+    # Hack for Good Deeds...  # noqa: FIX004
     # json_text_data_box_groups = get_json_text_data_boxes(ocr_file)
     # scale = 8700 / 9900
     # for group_id, group in json_text_data_box_groups["groups"].items():
@@ -199,7 +199,7 @@ def ocr_annotate_image_with_prelim_text(
     # with ocr_file.open("w") as f:
     #     json.dump(json_text_data_box_groups, f, indent=4)
 
-    speech_groups = speech_page_group["speech_groups"]
+    speech_groups = speech_page_group.speech_groups
     bw_image = get_image_to_annotate(png_file)
 
     pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
@@ -213,13 +213,13 @@ def ocr_annotate_image_with_prelim_text(
     for group_id, speech_text in speech_groups.items():
         logger.info(f'Annotating group "{group_id}"...')
 
-        text_box = speech_text["text_box"]
+        text_box = speech_text.text_box
 
         ocr_box = OcrBox(
             text_box,
-            speech_text["raw_ai_text"],
+            speech_text.raw_ai_text,
             1.0,
-            speech_text["raw_ai_text"],
+            speech_text.raw_ai_text,
         )
         # print(
         #     f'group: {group_id:02} - text: "{group["ai_text"]}",'
@@ -234,7 +234,7 @@ def ocr_annotate_image_with_prelim_text(
         text_box_color = (*ImageColor.getrgb(COLORS[color_index]), 120)
         img_rects_draw.rectangle(ocr_box.min_rotated_rectangle, outline=bbox_color, width=7)
 
-        text = f"{speech_text['ai_text']}"
+        text = f"{speech_text.ai_text}"
         top_left = ocr_box.min_rotated_rectangle[0]
         top_left = (top_left[0] + 60, top_left[1] + 5)
         text_box = img_rects_draw.textbbox(top_left, text, font=font, align="left")
@@ -243,9 +243,9 @@ def ocr_annotate_image_with_prelim_text(
             top_left, text, fill=text_color, font=font, align="left", stroke_width=1
         )
 
-        panel_num = speech_text["panel_num"]
+        panel_num = speech_text.panel_num
         if panel_num != -1:
-            info_text = f"{panel_num}:{get_text_type_abbrev(speech_text['type'])}"
+            info_text = f"{panel_num}:{get_text_type_abbrev(speech_text.type)}"
             top_left = ocr_box.min_rotated_rectangle[0]
             top_left = (top_left[0] + 10, top_left[1] - 15)
             info_box = img_rects_draw.textbbox(top_left, info_text, font=font, align="left")
@@ -289,7 +289,7 @@ def ocr_annotate_image_with_individual_boxes(
         f'Annotating image with individual boxes "{png_file}" from ocr file "{ocr_file}"...'
     )
 
-    # Hack for Good Deeds...
+    # Hack for Good Deeds...  # noqa: FIX004
     # scale = 8700 / 9900
     # json_ocr_groups = get_json_text_data_boxes(ocr_file)
     # for group in json_ocr_groups["groups"]:
