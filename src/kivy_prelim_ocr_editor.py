@@ -101,6 +101,7 @@ def write_cropped_image_file(
 
 @dataclass
 class SpeechItem:
+    panel_num: int
     group_id: str
     text: str
 
@@ -537,7 +538,7 @@ class EditorApp(App):
             on_speech_item_selected(selected_item)
 
         for item in items:
-            btn_text = f"{item.group_id}: {item.text.replace('\n', ' ')}"
+            btn_text = f"{item.panel_num}({item.group_id}): {item.text.replace('\n', ' ')}"
             btn = Button(text=btn_text, font_name=OPEN_SANS_FONT, size_hint_y=None, height=40)
             # Use default argument i=item to capture the current item in the loop
             btn.bind(on_release=lambda _inst, i=item: select_item(i))
@@ -555,7 +556,7 @@ class EditorApp(App):
 
     def _get_easyocr_speech_items(self) -> list[SpeechItem]:
         return [
-            SpeechItem(group_id=group_id, text=data.raw_ai_text or "")
+            SpeechItem(panel_num=data.panel_num, group_id=group_id, text=data.raw_ai_text or "")
             for group_id, data in self._easyocr_speech_groups.items()
         ]
 
@@ -564,7 +565,7 @@ class EditorApp(App):
 
     def _get_paddleocr_speech_items(self) -> list[SpeechItem]:
         return [
-            SpeechItem(group_id=group_id, text=data.raw_ai_text or "")
+            SpeechItem(panel_num=data.panel_num, group_id=group_id, text=data.raw_ai_text or "")
             for group_id, data in self._paddleocr_speech_groups.items()
         ]
 
