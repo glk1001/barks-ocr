@@ -7,10 +7,14 @@ import textwrap
 from pathlib import Path
 
 import typer
+
+from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_DIR
 from comic_utils.common_typer_options import VolumesArg
 from intspan import intspan
+
+PANEL_SEGMENTS_ROOT_DIR = BARKS_ROOT_DIR / "Fantagraphics-restored-panel-segments"
 
 SKIP_PREFIXES = {
     (" - ", 12): [105],
@@ -18,8 +22,20 @@ SKIP_PREFIXES = {
 }
 
 
+def _is_page_number(group: dict) -> bool:
+    panel_num = int(group["panel_num"])
+
+    if panel_num == -1:
+        if group["notes"] and "page number" in group["notes"].lower():
+            return True
+        if not (group["notes"] and "page number" in group["notes"].lower()):
+            return group["ai_text"].upper() in ["W"]
+
+    return False
+
+
 def replace_string_in_files(
-    dir_path: Path,
+    volume_dirname: str,
     target_string: str,
     replacement_string: str,
     file_pattern: str,
@@ -29,7 +45,7 @@ def replace_string_in_files(
     """Recursively replaces a target string with a replacement string in a directory.
 
     Args:
-        dir_path (str or Path): The root directory to start searching from.
+        volume_dirname (str or Path): Volume dir name.
         target_string (str): The string to find.
         replacement_string (str): The string to use as a replacement.
         file_pattern (str): A glob pattern for files to process (e.g., "*.txt", "*.py", "*").
@@ -37,11 +53,14 @@ def replace_string_in_files(
         dry_run: If True, do not change any files.
 
     """
-    if not dir_path.is_dir():
-        print(f"Error: Directory not found at '{dir_path}'")
+    prelim_dir = OCR_PRELIM_DIR / volume_dirname
+    segments_dir = PANEL_SEGMENTS_ROOT_DIR / volume_dirname
+
+    if not prelim_dir.is_dir():
+        print(f"Error: Directory not found at '{prelim_dir}'")
         return
 
-    print(f"Starting replacement process in: {dir_path.resolve()}")
+    print(f"Starting replacement process in: {prelim_dir.resolve()}")
     print(f"Target: '{target_string}', Replacement: '{replacement_string}'\n")
 
     try:
@@ -55,12 +74,18 @@ def replace_string_in_files(
     lines_process_count = 0
 
     # Use rglob to recursively find files matching the pattern
-    for file_path in dir_path.rglob(file_pattern):
+    for file_path in prelim_dir.rglob(file_pattern):
         if not file_path.is_file():
             continue
-        if int(file_path.stem[0:3]) in skip_prefixes:
+
+        fanta_page = file_path.stem[0:3]
+        if int(fanta_page) in skip_prefixes:
             print(f'FILE IN SKIP LIST. SKIPPING "{file_path.name}".')
             continue
+
+        panel_segments_file = segments_dir / (fanta_page + ".json")
+        if not panel_segments_file.is_file():
+            raise FileNotFoundError(f'Could not find panel segments file "{panel_segments_file}".')
 
         files_checked_count += 1
         try:
@@ -69,8 +94,18 @@ def replace_string_in_files(
 
             # Perform the replacement over all the OCR groups.
             dirty_content = False
-            for group in content["groups"].values():
+            remove_groups = []
+            for group_id, group in content["groups"].items():
                 ai_text = group["ai_text"]
+
+                if _is_page_number(group):
+                    dirty_content = True
+                    remove_groups.append(group_id)
+                    print(
+                        f'Panel num: {group["panel_num"]} (Panel id: {group["panel_id"]}): "{ai_text!r}"'
+                    )
+                    continue
+
                 new_ai_text = target_regex.sub(replacement_string, ai_text)
                 if new_ai_text != ai_text:
                     dirty_content = True
@@ -87,7 +122,10 @@ def replace_string_in_files(
             if dirty_content:
                 if dry_run:
                     print(f'DRY RUN: Would have modified "{file_path.name}".\n')
+                    print(f'DRY RUN: Would have removed {len(remove_groups)} groups".\n')
                 else:
+                    for group_id in remove_groups:
+                        del content["groups"][group_id]
                     with file_path.open("w", encoding="utf-8") as f:
                         json.dump(content, f, indent=4)
                     print(f'Modified "{file_path.name}", wrote new json to file.')
@@ -124,10 +162,9 @@ def main(
 
     for volume in volumes:
         volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
-        prelim_dir = OCR_PRELIM_DIR / volume_dirname
         skip_prefixes = SKIP_PREFIXES.get((target_str, volume), [])
         replace_string_in_files(
-            prelim_dir, target_str, replacement_str, FILE_GLOB_PATTERN, skip_prefixes, dry_run
+            volume_dirname, target_str, replacement_str, FILE_GLOB_PATTERN, skip_prefixes, dry_run
         )
 
 

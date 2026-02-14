@@ -1,8 +1,8 @@
 #VOLUMES=1-16
-VOLUMES=21
+VOLUMES=1
 
 DRY_RUN=""
-#DRY_RUN="--dry-run"
+DRY_RUN="--dry-run"
 
 export UV_ENV_FILE=.env
 
