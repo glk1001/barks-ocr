@@ -46,6 +46,17 @@ COLORS = [
     "hotpink",
 ]
 
+DEFAULT_FONT_PATH = Path("/home/greg/Prj/fonts/verdana.ttf")
+DEFAULT_FONT_SIZE = 28
+TEXT_TYPE_ABBREV_MAP = {
+    "narration": "N",
+    "background": "B",
+    "dialogue": "D",
+    "thought": "T",
+    "sound effect": "S",
+    "sound_effect": "S",
+}
+
 
 def get_color(group_id: int) -> str:
     group_id %= len(COLORS)
@@ -101,18 +112,20 @@ def ocr_annotate_title(
             )
             continue
 
-        ocr_annotate_image_with_prelim_text(
-            speech_page_group, png_file, prelim_text_annotated_image_file
-        )
-        ocr_annotate_image_with_individual_boxes(
-            png_file, ocr_group_file, boxes_annotated_image_file
-        )
+        bw_image = get_image_to_annotate(png_file)
+        pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
 
         if not annotate_with_panels_bounds:
             logger.warning(f'"{title_str}": special case - not annotating with panel bounds.')
         else:
-            annotate_image_with_panel_bounds(panel_segments_file, prelim_text_annotated_image_file)
-            annotate_image_with_panel_bounds(panel_segments_file, boxes_annotated_image_file)
+            write_bounds_to_pil_image(pil_image, panel_segments_file)
+
+        ocr_annotate_image_with_prelim_text(
+            speech_page_group, pil_image, prelim_text_annotated_image_file
+        )
+        ocr_annotate_image_with_individual_boxes(
+            pil_image, ocr_group_file, boxes_annotated_image_file
+        )
 
 
 def get_image_to_annotate(png_file: Path) -> cv.typing.MatLike:
@@ -123,23 +136,12 @@ def get_image_to_annotate(png_file: Path) -> cv.typing.MatLike:
     return get_bw_image_from_alpha(png_file)
 
 
-def annotate_image_with_panel_bounds(panel_segments_file: Path, annotated_img_file: Path) -> None:
-    if not annotated_img_file.is_file():
-        msg = f'Could not find image file "{annotated_img_file}".'
-        raise FileNotFoundError(msg)
-
-    write_bounds_to_image_file(annotated_img_file, panel_segments_file, annotated_img_file)
-
-
 # TODO: Duplicated from show-panel-bounds
-def write_bounds_to_image_file(
-    png_file: Path, panel_segments_file: Path, bounds_img_file: Path
-) -> bool:
-    logger.info(f'Writing bounds for image "{get_abbrev_path(png_file)}"...')
+def write_bounds_to_pil_image(pil_image: Image.Image, panel_segments_file: Path) -> bool:
+    logger.info(
+        f'Writing bounds using segments info file "{get_abbrev_path(panel_segments_file)}"...'
+    )
 
-    if not png_file.is_file():
-        logger.error(f'Could not find image file "{png_file}".')
-        return False
     if not panel_segments_file.is_file():
         logger.error(f'Could not find panel segments file "{panel_segments_file}".')
         return False
@@ -148,21 +150,20 @@ def write_bounds_to_image_file(
     with panel_segments_file.open("r") as f:
         panel_segment_info = json.load(f)
 
-    pil_image = Image.open(str(png_file))
     if pil_image.size[0] != panel_segment_info["size"][0]:
         msg = (
-            f'For image "{png_file}", image size[0] {pil_image.size[0]}'
+            f"Image size[0] {pil_image.size[0]}"
             f" does not match panel segment info size[0] {panel_segment_info['size'][0]}."
         )
         raise RuntimeError(msg)
     if pil_image.size[1] != panel_segment_info["size"][1]:
         msg = (
-            f'For image "{png_file}", image size[1] {pil_image.size[1]}'
+            f"Image size[1] {pil_image.size[1]}"
             f" does not match panel segment info size[1] {panel_segment_info['size'][1]}."
         )
         raise RuntimeError(msg)
 
-    img_rects = ImageDraw.Draw(pil_image)
+    draw = ImageDraw.Draw(pil_image)
     for box in panel_segment_info["panels"]:
         x0 = box[0]
         y0 = box[1]
@@ -170,23 +171,20 @@ def write_bounds_to_image_file(
         h = box[3]
         x1 = x0 + (w - 1)
         y1 = y0 + (h - 1)
-        img_rects.rectangle([x0, y0, x1, y1], outline="green", width=10)
+        draw.rectangle([x0, y0, x1, y1], outline="green", width=10)
 
     # x_min, y_min, x_max, y_max = get_min_max_panel_values(panel_segment_info)
-    # img_rects.rectangle([x_min, y_min, x_max, y_max], outline="red", width=2)
-
-    # noinspection PyProtectedMember
-    img_rects._image.save(bounds_img_file)  # noqa: SLF001
+    # draw.rectangle([x_min, y_min, x_max, y_max], outline="red", width=2)
 
     return True
 
 
 def ocr_annotate_image_with_prelim_text(
     speech_page_group: SpeechPageGroup,
-    png_file: Path,
+    pil_image: Image.Image,
     annotated_img_file: Path,
 ) -> None:
-    logger.info(f'Annotating image "{png_file}"...')
+    logger.info(f'Annotating image "{annotated_img_file}"...')
 
     # Hack for Good Deeds...  # noqa: FIX004
     # json_text_data_box_groups = get_json_text_data_boxes(ocr_file)
@@ -200,14 +198,10 @@ def ocr_annotate_image_with_prelim_text(
     #     json.dump(json_text_data_box_groups, f, indent=4)
 
     speech_groups = speech_page_group.speech_groups
-    bw_image = get_image_to_annotate(png_file)
 
-    pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
     overlay = Image.new("RGBA", pil_image.size, (0, 0, 0, 0))
-    img_rects_draw = ImageDraw.Draw(overlay)
-    font_file = "/home/greg/Prj/fonts/verdana.ttf"
-    font_size = 25
-    font = ImageFont.truetype(font_file, font_size)
+    draw = ImageDraw.Draw(overlay)
+    font = ImageFont.truetype(str(DEFAULT_FONT_PATH), DEFAULT_FONT_SIZE)
 
     color_index = 0
     for group_id, speech_text in speech_groups.items():
@@ -221,36 +215,35 @@ def ocr_annotate_image_with_prelim_text(
             1.0,
             speech_text.raw_ai_text,
         )
-        # print(
-        #     f'group: {group_id:02} - text: "{group["ai_text"]}",'
-        #     f" box: {text_box, approx: {ocr_box.is_approx_rect},"
-        #     f" rect: {ocr_box.min_rotated_rectangle}"
-        # )
-        # img_rects_draw.rectangle(
-        #     ocr_box.min_rotated_rectangle, outline="orchid", width=7, fill=(0,255,255,100)
-        # )
         bbox_color = (*ImageColor.getrgb(COLORS[color_index]), 255)
         text_color = "red"
-        text_box_color = (*ImageColor.getrgb(COLORS[color_index]), 120)
-        img_rects_draw.rectangle(ocr_box.min_rotated_rectangle, outline=bbox_color, width=7)
+        text_box_color = (*ImageColor.getrgb(COLORS[color_index]), 170)
+        draw.rectangle(ocr_box.min_rotated_rectangle, outline=bbox_color, width=7)
 
-        text = f"{speech_text.ai_text}"
+        text = f"{speech_text.raw_ai_text}"
         top_left = ocr_box.min_rotated_rectangle[0]
-        top_left = (top_left[0] + 60, top_left[1] + 5)
-        text_box = img_rects_draw.textbbox(top_left, text, font=font, align="left")
-        img_rects_draw.rectangle(text_box, fill=text_box_color)
-        img_rects_draw.text(
-            top_left, text, fill=text_color, font=font, align="left", stroke_width=1
-        )
+        top_left = (top_left[0] + 100, top_left[1] + 10)
+        text_box = draw.textbbox(top_left, text, font=font, align="left")
+        draw.rectangle(text_box, fill=text_box_color)
+        draw.text(top_left, text, fill=text_color, font=font, align="left", stroke_width=1)
 
         panel_num = speech_text.panel_num
         if panel_num != -1:
             info_text = f"{panel_num}:{get_text_type_abbrev(speech_text.type)}"
             top_left = ocr_box.min_rotated_rectangle[0]
-            top_left = (top_left[0] + 10, top_left[1] - 15)
-            info_box = img_rects_draw.textbbox(top_left, info_text, font=font, align="left")
-            img_rects_draw.rectangle(info_box, fill=(0, 255, 255, 100))
-            img_rects_draw.text(top_left, info_text, fill=text_color, font=font, align="left")
+            top_left = (top_left[0] + 10, top_left[1] - 25)
+            info_box = draw.textbbox(top_left, info_text, font=font, align="left")
+            draw.rectangle(info_box, fill=(0, 255, 255, 80))
+            info_font = ImageFont.truetype(str(DEFAULT_FONT_PATH), int(1.35 * DEFAULT_FONT_SIZE))
+            info_text_color = "blue"
+            draw.text(
+                top_left,
+                info_text,
+                fill=info_text_color,
+                font=info_font,
+                align="left",
+                stroke_width=1.5,
+            )
 
         color_index += 1
         if color_index == len(COLORS):
@@ -261,22 +254,11 @@ def ocr_annotate_image_with_prelim_text(
 
 
 def get_text_type_abbrev(text_type: str) -> str:
-    if text_type == "narration":
-        return "n"
-    if text_type == "background":
-        return "b"
-    if text_type == "dialogue":
-        return "s"
-    if text_type == "think":
-        return "t"
-
-    return "?"
+    return TEXT_TYPE_ABBREV_MAP.get(text_type, "?")
 
 
 def ocr_annotate_image_with_individual_boxes(
-    png_file: Path,
-    ocr_file: Path,
-    annotated_img_file: Path,
+    pil_image: Image.Image, ocr_file: Path, annotated_img_file: Path
 ) -> None:
     if (
         annotated_img_file.is_file()
@@ -286,7 +268,8 @@ def ocr_annotate_image_with_individual_boxes(
         return
 
     logger.info(
-        f'Annotating image with individual boxes "{png_file}" from ocr file "{ocr_file}"...'
+        f"Annotating image with individual boxes"
+        f' "{annotated_img_file}" from ocr file "{ocr_file}"...'
     )
 
     # Hack for Good Deeds...  # noqa: FIX004
@@ -303,10 +286,8 @@ def ocr_annotate_image_with_individual_boxes(
     #     json.dump(json_ocr_groups, f, indent=4)
 
     json_ocr_groups = get_json_ocr_groups(ocr_file)["groups"]
-    bw_image = get_image_to_annotate(png_file)
 
-    pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image]))
-    img_rects_draw = ImageDraw.Draw(pil_image)
+    draw = ImageDraw.Draw(pil_image)
 
     for group in json_ocr_groups:
         group_id = int(group)
@@ -331,15 +312,12 @@ def ocr_annotate_image_with_individual_boxes(
                 raise e from e
 
             if ocr_box.is_approx_rect:
-                img_rects_draw.rectangle(
-                    ocr_box.min_rotated_rectangle, outline=get_color(group_id), width=4
-                )
+                draw.rectangle(ocr_box.min_rotated_rectangle, outline=get_color(group_id), width=4)
             else:
                 box = [item for point in ocr_box.min_rotated_rectangle for item in point]
-                img_rects_draw.polygon(box, outline=get_color(group_id), width=2)
+                draw.polygon(box, outline=get_color(group_id), width=2)
 
-    # noinspection PyProtectedMember
-    img_rects_draw._image.save(annotated_img_file)  # noqa: SLF001
+    pil_image.save(annotated_img_file)
 
 
 def get_json_ocr_groups(ocr_file: Path) -> dict[str, Any]:
