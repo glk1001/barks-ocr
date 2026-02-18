@@ -116,9 +116,11 @@ def ocr_annotate_title(
         pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
 
         if not annotate_with_panels_bounds:
+            panel_boxes = None
             logger.warning(f'"{title_str}": special case - not annotating with panel bounds.')
         else:
-            write_bounds_to_pil_image(pil_image, panel_segments_file)
+            panel_boxes = _get_panel_boxes(pil_image.size, panel_segments_file)
+            write_bounds_to_pil_image(pil_image, panel_boxes)
 
         ocr_annotate_image_with_prelim_text(
             speech_page_group, pil_image, prelim_text_annotated_image_file
@@ -137,33 +139,31 @@ def get_image_to_annotate(png_file: Path) -> cv.typing.MatLike:
 
 
 # TODO: Duplicated from show-panel-bounds
-def write_bounds_to_pil_image(pil_image: Image.Image, panel_segments_file: Path) -> bool:
-    logger.info(
-        f'Writing bounds using segments info file "{get_abbrev_path(panel_segments_file)}"...'
-    )
-
+def _get_panel_boxes(
+    page_size: tuple[int, int], panel_segments_file: Path
+) -> list[tuple[int, int, int, int]]:
     if not panel_segments_file.is_file():
-        logger.error(f'Could not find panel segments file "{panel_segments_file}".')
-        return False
+        msg = f'Could not find panel segments file "{panel_segments_file}".'
+        raise RuntimeError(msg)
 
     logger.info(f'Loading panel segments file "{get_abbrev_path(panel_segments_file)}".')
     with panel_segments_file.open("r") as f:
         panel_segment_info = json.load(f)
 
-    if pil_image.size[0] != panel_segment_info["size"][0]:
+    if page_size[0] != panel_segment_info["size"][0]:
         msg = (
-            f"Image size[0] {pil_image.size[0]}"
+            f"Image size[0] {page_size[0]}"
             f" does not match panel segment info size[0] {panel_segment_info['size'][0]}."
         )
         raise RuntimeError(msg)
-    if pil_image.size[1] != panel_segment_info["size"][1]:
+    if page_size[1] != panel_segment_info["size"][1]:
         msg = (
-            f"Image size[1] {pil_image.size[1]}"
+            f"Image size[1] {page_size[1]}"
             f" does not match panel segment info size[1] {panel_segment_info['size'][1]}."
         )
         raise RuntimeError(msg)
 
-    draw = ImageDraw.Draw(pil_image)
+    panel_boxes = []
     for box in panel_segment_info["panels"]:
         x0 = box[0]
         y0 = box[1]
@@ -171,7 +171,19 @@ def write_bounds_to_pil_image(pil_image: Image.Image, panel_segments_file: Path)
         h = box[3]
         x1 = x0 + (w - 1)
         y1 = y0 + (h - 1)
-        draw.rectangle([x0, y0, x1, y1], outline="green", width=10)
+
+        panel_boxes.append((x0, y0, x1, y1))
+
+    return panel_boxes
+
+
+# TODO: Duplicated from show-panel-bounds
+def write_bounds_to_pil_image(
+    pil_image: Image.Image, panel_boxes: list[tuple[int, int, int, int]]
+) -> bool:
+    draw = ImageDraw.Draw(pil_image)
+    for box in panel_boxes:
+        draw.rectangle(box, outline="green", width=10)
 
     # x_min, y_min, x_max, y_max = get_min_max_panel_values(panel_segment_info)
     # draw.rectangle([x_min, y_min, x_max, y_max], outline="red", width=2)
@@ -208,6 +220,7 @@ def ocr_annotate_image_with_prelim_text(
         logger.info(f'Annotating group "{group_id}"...')
 
         text_box = speech_text.text_box
+        panel_num = speech_text.panel_num
 
         ocr_box = OcrBox(
             text_box,
@@ -216,18 +229,17 @@ def ocr_annotate_image_with_prelim_text(
             speech_text.raw_ai_text,
         )
         bbox_color = (*ImageColor.getrgb(COLORS[color_index]), 255)
-        text_color = "red"
-        text_box_color = (*ImageColor.getrgb(COLORS[color_index]), 170)
+        text_box_color = (*ImageColor.getrgb(COLORS[color_index]), 50)
         draw.rectangle(ocr_box.min_rotated_rectangle, outline=bbox_color, width=7)
 
+        text_color = "red"
         text = f"{speech_text.raw_ai_text}"
         top_left = ocr_box.min_rotated_rectangle[0]
-        top_left = (top_left[0] + 100, top_left[1] + 10)
+        top_left = (top_left[0] + 30, ocr_box.min_rotated_rectangle[1][1] + 5)
         text_box = draw.textbbox(top_left, text, font=font, align="left")
         draw.rectangle(text_box, fill=text_box_color)
         draw.text(top_left, text, fill=text_color, font=font, align="left", stroke_width=1)
 
-        panel_num = speech_text.panel_num
         if panel_num != -1:
             info_text = f"{panel_num}:{get_text_type_abbrev(speech_text.type)}"
             top_left = ocr_box.min_rotated_rectangle[0]
