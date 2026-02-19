@@ -1,6 +1,4 @@
 # ruff: noqa: T201
-from future.moves.itertools import zip_longest
-from Crypto.Util.Padding import pad
 from collections import defaultdict
 from difflib import SequenceMatcher
 
@@ -8,6 +6,7 @@ import typer
 from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, Titles
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups, SpeechPageGroup
+from future.moves.itertools import zip_longest
 
 app = typer.Typer()
 

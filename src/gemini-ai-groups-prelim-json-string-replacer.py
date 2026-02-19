@@ -127,6 +127,7 @@ class PageCleaner:
             if not can_do:
                 break
 
+            assert reduced_box
             new_panel_num = self._get_enclosing_panel_num(reduced_box)
 
             if new_panel_num != -1:
@@ -190,6 +191,7 @@ class PageCleaner:
 
     def _get_replace_text(self, _group_id: str, group: dict) -> tuple[bool, str]:
         ai_text = group["ai_text"]
+        assert self._target_regex is not None
         new_ai_text = self._target_regex.sub(self._replacement_string, ai_text)
         if new_ai_text != ai_text:
             print(

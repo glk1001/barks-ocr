@@ -63,14 +63,14 @@ def process_batch_job(comics_database: ComicsDatabase, title: str) -> None:  # n
 
         batch_job_from_file = CLIENT.batches.get(name=batch_job_name)
         assert batch_details_file
-        job_state = batch_job_from_file.state.name  # ty: ignore[possibly-missing-attribute]
+        job_state = batch_job_from_file.state.name  # ty:ignore[unresolved-attribute]
         if job_state != "JOB_STATE_SUCCEEDED":
             logger.error(f"Job did not succeed. Final state: {job_state}")
             return
 
         logger.info(f"Job status: {job_state}.")
         # The output is in another file.
-        result_file_name = batch_job_from_file.dest.file_name  # ty: ignore[possibly-missing-attribute]
+        result_file_name = batch_job_from_file.dest.file_name  # ty:ignore[unresolved-attribute]
         logger.info(f'Results are in Gemini file: "{result_file_name}".')
 
         logger.info("Downloading and parsing result file content...")

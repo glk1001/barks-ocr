@@ -28,11 +28,11 @@ MAIN_WINDOW_Y = 20
 MAIN_WINDOW_WIDTH = 2000
 MAIN_WINDOW_HEIGHT = 1300
 
-Config.set("graphics", "position", "custom")  # ty:ignore[possibly-missing-attribute]
-Config.set("graphics", "left", MAIN_WINDOW_X)  # ty: ignore[possibly-missing-attribute]
-Config.set("graphics", "top", MAIN_WINDOW_Y)  # ty: ignore[possibly-missing-attribute]
-Config.set("graphics", "width", MAIN_WINDOW_WIDTH)  # ty: ignore[possibly-missing-attribute]
-Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty: ignore[possibly-missing-attribute]
+Config.set("graphics", "position", "custom")  # ty:ignore[unresolved-attribute]
+Config.set("graphics", "left", MAIN_WINDOW_X)  # ty:ignore[unresolved-attribute]
+Config.set("graphics", "top", MAIN_WINDOW_Y)  # ty:ignore[unresolved-attribute]
+Config.set("graphics", "width", MAIN_WINDOW_WIDTH)  # ty:ignore[unresolved-attribute]
+Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty:ignore[unresolved-attribute]
 
 from kivy.app import App
 from kivy.core.text import LabelBase
