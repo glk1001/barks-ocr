@@ -82,11 +82,11 @@ def replace_string_in_files(
             lines_changed_in_file = 0
             remove_groups = []
             for group_id, group in json_ocr["groups"].items():
-                # if remove_group(group_id, group):
-                #     dirty_content = True
-                #     print(f"For page {file_path.name}, remove group {group_id}.")
-                #     remove_groups.append(group_id)
-                #     continue
+                if remove_group(group_id, group):
+                    dirty_content = True
+                    print(f"For page {file_path.name}, remove group {group_id}.")
+                    remove_groups.append(group_id)
+                    continue
 
                 replace_panel, new_panel_num = replace_missing_panel_num(
                     group_id, group, panel_segment_info
@@ -145,6 +145,14 @@ def remove_group(group_id: int, group: dict) -> bool:
 
 
 def _is_page_number_or_dodgy_char(group: dict) -> bool:
+    # panel_id = group["panel_id"]
+    # if panel_id in ["title", "header"]:
+    #     return True
+    # if "the comic title" in group["notes"]:
+    #     return True
+
+    return False
+
     panel_num = int(group["panel_num"])
 
     if panel_num == -1:

@@ -7,11 +7,12 @@ from typing import Any
 import cv2 as cv
 import typer
 from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, is_non_comic_title
+from barks_fantagraphics.comic_book import ComicBook
 from barks_fantagraphics.comics_consts import PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
-from barks_fantagraphics.comics_utils import get_abbrev_path
 from barks_fantagraphics.ocr_file_paths import OCR_ANNOTATIONS_DIR
+from barks_fantagraphics.panel_boxes import PagePanelBoxes, PanelBox, TitlePanelBoxes
 from barks_fantagraphics.speech_groupers import SpeechGroups, SpeechPageGroup
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
@@ -64,40 +65,47 @@ def get_color(group_id: int) -> str:
 
 
 def ocr_annotate_titles(
-    all_speech_groups: SpeechGroups, comics_database: ComicsDatabase, title_list: list[str]
+    speech_groups: SpeechGroups,
+    title_panel_boxes: TitlePanelBoxes,
+    comics_database: ComicsDatabase,
+    title_list: list[str],
 ) -> None:
-    for title in title_list:
-        if is_non_comic_title(title):
-            logger.warning(f'Not a comic title "{title}" - skipping.')
+    for title_str in title_list:
+        if is_non_comic_title(title_str):
+            logger.warning(f'Not a comic title "{title_str}" - skipping.')
             continue
 
-        ocr_annotate_title(all_speech_groups, comics_database, title)
+        volume = comics_database.get_fanta_volume_int(title_str)
+        volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
+        out_image_dir = OCR_ANNOTATIONS_DIR / volume_dirname
+        comic = comics_database.get_comic_book(title_str)
+
+        ocr_annotate_title(speech_groups, title_panel_boxes, comic, out_image_dir)
 
 
 def ocr_annotate_title(
-    all_speech_groups: SpeechGroups, comics_database: ComicsDatabase, title_str: str
+    speech_groups: SpeechGroups,
+    title_panel_boxes: TitlePanelBoxes,
+    comic: ComicBook,
+    out_image_dir: Path,
 ) -> None:
+    title_str = comic.get_ini_title()
+
     # Special case. Because "Silent Night" is a restored comic, the panel bounds
     # are out of whack.
     annotate_with_panels_bounds = title_str != "Silent Night"
 
-    volume = comics_database.get_fanta_volume_int(title_str)
-    volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
-    out_image_dir = OCR_ANNOTATIONS_DIR / volume_dirname
     out_image_dir.mkdir(parents=True, exist_ok=True)
-
     logger.info(f'OCR annotating all pages in "{title_str}" to directory "{out_image_dir}"...')
 
-    comic = comics_database.get_comic_book(title_str)
-
     title = BARKS_TITLE_DICT[title_str]
-    title_speech_page_groups = all_speech_groups.get_speech_page_groups(title)
+    title_speech_page_groups = speech_groups.get_speech_page_groups(title)
+    page_panel_boxes = title_panel_boxes.get_page_panel_boxes(title)
     for speech_page_group in title_speech_page_groups:
         fanta_page = speech_page_group.fanta_page
         ocr_type = speech_page_group.ocr_index
 
         svg_file = comic.get_srce_restored_svg_story_file(fanta_page)
-        panel_segments_file = comic.get_srce_panel_segments_file(fanta_page)
         png_file = Path(str(svg_file) + PNG_FILE_EXT)
         ocr_group_file = comic.get_ocr_prelim_groups_json_file(fanta_page, ocr_type)
         prelim_text_annotated_image_file = comic.get_ocr_prelim_annotated_file(fanta_page, ocr_type)
@@ -116,10 +124,9 @@ def ocr_annotate_title(
         pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
 
         if not annotate_with_panels_bounds:
-            panel_boxes = None
             logger.warning(f'"{title_str}": special case - not annotating with panel bounds.')
         else:
-            panel_boxes = _get_panel_boxes(pil_image.size, panel_segments_file)
+            panel_boxes = _get_panel_boxes(pil_image.size, page_panel_boxes.pages[fanta_page])
             write_bounds_to_pil_image(pil_image, panel_boxes)
 
         ocr_annotate_image_with_prelim_text(
@@ -140,50 +147,29 @@ def get_image_to_annotate(png_file: Path) -> cv.typing.MatLike:
 
 # TODO: Duplicated from show-panel-bounds
 def _get_panel_boxes(
-    page_size: tuple[int, int], panel_segments_file: Path
-) -> list[tuple[int, int, int, int]]:
-    if not panel_segments_file.is_file():
-        msg = f'Could not find panel segments file "{panel_segments_file}".'
-        raise RuntimeError(msg)
-
-    logger.info(f'Loading panel segments file "{get_abbrev_path(panel_segments_file)}".')
-    with panel_segments_file.open("r") as f:
-        panel_segment_info = json.load(f)
-
-    if page_size[0] != panel_segment_info["size"][0]:
+    page_size: tuple[int, int], page_panel_boxes: PagePanelBoxes
+) -> list[PanelBox]:
+    if page_size[0] != page_panel_boxes.page_width:
         msg = (
-            f"Image size[0] {page_size[0]}"
-            f" does not match panel segment info size[0] {panel_segment_info['size'][0]}."
+            f"Image width {page_size[0]}"
+            f" does not match panel segment info size[0] {page_panel_boxes.page_width}."
         )
         raise RuntimeError(msg)
-    if page_size[1] != panel_segment_info["size"][1]:
+    if page_size[1] != page_panel_boxes.page_height:
         msg = (
-            f"Image size[1] {page_size[1]}"
-            f" does not match panel segment info size[1] {panel_segment_info['size'][1]}."
+            f"Image height {page_size[1]}"
+            f" does not match panel segment info size[1] {page_panel_boxes.page_height}."
         )
         raise RuntimeError(msg)
 
-    panel_boxes = []
-    for box in panel_segment_info["panels"]:
-        x0 = box[0]
-        y0 = box[1]
-        w = box[2]
-        h = box[3]
-        x1 = x0 + (w - 1)
-        y1 = y0 + (h - 1)
-
-        panel_boxes.append((x0, y0, x1, y1))
-
-    return panel_boxes
+    return page_panel_boxes.panel_boxes
 
 
 # TODO: Duplicated from show-panel-bounds
-def write_bounds_to_pil_image(
-    pil_image: Image.Image, panel_boxes: list[tuple[int, int, int, int]]
-) -> bool:
+def write_bounds_to_pil_image(pil_image: Image.Image, panel_boxes: list[PanelBox]) -> bool:
     draw = ImageDraw.Draw(pil_image)
-    for box in panel_boxes:
-        draw.rectangle(box, outline="green", width=10)
+    for panel in panel_boxes:
+        draw.rectangle(panel.box, outline="green", width=10)
 
     # x_min, y_min, x_max, y_max = get_min_max_panel_values(panel_segment_info)
     # draw.rectangle([x_min, y_min, x_max, y_max], outline="red", width=2)
@@ -364,10 +350,14 @@ def main(
     volumes = list(intspan(volumes_str))
     comics_database = ComicsDatabase()
 
-    all_speech_groups = SpeechGroups(comics_database)
+    speech_groups = SpeechGroups(comics_database)
+    title_panel_boxes = TitlePanelBoxes(comics_database)
 
     ocr_annotate_titles(
-        all_speech_groups, comics_database, get_titles(comics_database, volumes, title_str)
+        speech_groups,
+        title_panel_boxes,
+        comics_database,
+        get_titles(comics_database, volumes, title_str),
     )
 
 
