@@ -238,7 +238,7 @@ class PrelimOCRCleaner:
 
     def clean_titles(
         self,
-        titles: list[str],
+        title_list: list[str],
         target_string: str,
         replacement_string: str,
     ) -> None:
@@ -246,7 +246,7 @@ class PrelimOCRCleaner:
         self._files_processed_count = 0
         self._lines_process_count = 0
 
-        for title_str in titles:
+        for title_str in title_list:
             print("-" * 80)
 
             title = BARKS_TITLE_DICT[title_str]
@@ -336,10 +336,10 @@ def main(
 
     volumes = list(intspan(volumes_str))
     comics_database = ComicsDatabase()
-    titles = get_titles(comics_database, volumes, title_str, exclude_non_comics=True)
+    title_list = get_titles(comics_database, volumes, title_str, exclude_non_comics=True)
 
     prelim_ocr_cleaner = PrelimOCRCleaner(dry_run, comics_database)
-    prelim_ocr_cleaner.clean_titles(titles, target_str, replacement_str)
+    prelim_ocr_cleaner.clean_titles(title_list, target_str, replacement_str)
 
 
 if __name__ == "__main__":

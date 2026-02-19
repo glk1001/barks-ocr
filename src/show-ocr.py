@@ -6,13 +6,13 @@ from typing import Any
 
 import cv2 as cv
 import typer
-from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, is_non_comic_title
+from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT
 from barks_fantagraphics.comic_book import ComicBook
 from barks_fantagraphics.comics_consts import PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
-from barks_fantagraphics.comics_helpers import get_titles
+from barks_fantagraphics.comics_helpers import draw_panel_bounds_on_image, get_titles
 from barks_fantagraphics.ocr_file_paths import OCR_ANNOTATIONS_DIR
-from barks_fantagraphics.panel_boxes import PagePanelBoxes, PanelBox, TitlePanelBoxes
+from barks_fantagraphics.panel_boxes import TitlePanelBoxes, check_page_panel_boxes
 from barks_fantagraphics.speech_groupers import SpeechGroups, SpeechPageGroup
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
@@ -71,10 +71,6 @@ def ocr_annotate_titles(
     title_list: list[str],
 ) -> None:
     for title_str in title_list:
-        if is_non_comic_title(title_str):
-            logger.warning(f'Not a comic title "{title_str}" - skipping.')
-            continue
-
         volume = comics_database.get_fanta_volume_int(title_str)
         volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
         out_image_dir = OCR_ANNOTATIONS_DIR / volume_dirname
@@ -100,7 +96,7 @@ def ocr_annotate_title(
 
     title = BARKS_TITLE_DICT[title_str]
     title_speech_page_groups = speech_groups.get_speech_page_groups(title)
-    page_panel_boxes = title_panel_boxes.get_page_panel_boxes(title)
+    title_pages_panel_boxes = title_panel_boxes.get_page_panel_boxes(title)
     for speech_page_group in title_speech_page_groups:
         fanta_page = speech_page_group.fanta_page
         ocr_type = speech_page_group.ocr_index
@@ -126,8 +122,9 @@ def ocr_annotate_title(
         if not annotate_with_panels_bounds:
             logger.warning(f'"{title_str}": special case - not annotating with panel bounds.')
         else:
-            panel_boxes = _get_panel_boxes(pil_image.size, page_panel_boxes.pages[fanta_page])
-            write_bounds_to_pil_image(pil_image, panel_boxes)
+            page_panel_boxes = title_pages_panel_boxes.pages[fanta_page]
+            check_page_panel_boxes(pil_image.size, page_panel_boxes)
+            draw_panel_bounds_on_image(pil_image, page_panel_boxes)
 
         ocr_annotate_image_with_prelim_text(
             speech_page_group, pil_image, prelim_text_annotated_image_file
@@ -143,38 +140,6 @@ def get_image_to_annotate(png_file: Path) -> cv.typing.MatLike:
         raise FileNotFoundError(msg)
 
     return get_bw_image_from_alpha(png_file)
-
-
-# TODO: Duplicated from show-panel-bounds
-def _get_panel_boxes(
-    page_size: tuple[int, int], page_panel_boxes: PagePanelBoxes
-) -> list[PanelBox]:
-    if page_size[0] != page_panel_boxes.page_width:
-        msg = (
-            f"Image width {page_size[0]}"
-            f" does not match panel segment info size[0] {page_panel_boxes.page_width}."
-        )
-        raise RuntimeError(msg)
-    if page_size[1] != page_panel_boxes.page_height:
-        msg = (
-            f"Image height {page_size[1]}"
-            f" does not match panel segment info size[1] {page_panel_boxes.page_height}."
-        )
-        raise RuntimeError(msg)
-
-    return page_panel_boxes.panel_boxes
-
-
-# TODO: Duplicated from show-panel-bounds
-def write_bounds_to_pil_image(pil_image: Image.Image, panel_boxes: list[PanelBox]) -> bool:
-    draw = ImageDraw.Draw(pil_image)
-    for panel in panel_boxes:
-        draw.rectangle(panel.box, outline="green", width=10)
-
-    # x_min, y_min, x_max, y_max = get_min_max_panel_values(panel_segment_info)
-    # draw.rectangle([x_min, y_min, x_max, y_max], outline="red", width=2)
-
-    return True
 
 
 def ocr_annotate_image_with_prelim_text(
@@ -352,13 +317,9 @@ def main(
 
     speech_groups = SpeechGroups(comics_database)
     title_panel_boxes = TitlePanelBoxes(comics_database)
+    title_list = get_titles(comics_database, volumes, title_str, exclude_non_comics=True)
 
-    ocr_annotate_titles(
-        speech_groups,
-        title_panel_boxes,
-        comics_database,
-        get_titles(comics_database, volumes, title_str),
-    )
+    ocr_annotate_titles(speech_groups, title_panel_boxes, comics_database, title_list)
 
 
 if __name__ == "__main__":
