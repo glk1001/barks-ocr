@@ -27,4 +27,4 @@ open-show volume page:
 # Check OCR files
 [group('OCR')]
 check-ocr volume:
-    {{uv_run}} "{{source_dir()}}/src/gemini-ai-groups-prelim-json-string-replacer.py" --dry-run --volume {{volume}} "x" "x"
+    {{uv_run}} "{{source_dir()}}/src/gemini-ai-groups-prelim-json-string-replacer.py" --dry-run --volume {{volume}}

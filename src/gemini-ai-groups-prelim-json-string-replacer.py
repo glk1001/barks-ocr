@@ -6,11 +6,15 @@ import textwrap
 from pathlib import Path
 
 import typer
+from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, is_non_comic_title
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.comics_database import ComicsDatabase
-from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_DIR
-from comic_utils.common_typer_options import VolumesArg
+from barks_fantagraphics.comics_helpers import get_titles
+from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePagesPanelBoxes, TitlePanelBoxes
+from barks_fantagraphics.speech_groupers import SpeechGroups, SpeechPageGroup
+from comic_utils.common_typer_options import TitleArg, VolumesArg
 from intspan import intspan
+from loguru import logger
 
 from utils.geometry import Rect
 from utils.ocr_box import OcrBox, PointList
@@ -23,75 +27,85 @@ SKIP_PREFIXES = {
 }
 
 
-def replace_string_in_files(
-    volume_dirname: str,
+def replace_string_in_titles(
+    comics_database: ComicsDatabase,
+    titles: list[str],
     target_string: str,
     replacement_string: str,
-    file_pattern: str,
-    skip_prefixes: list[int],
     dry_run: bool = False,
 ) -> None:
-    """Recursively replaces a target string with a replacement string in a directory.
+    for title_str in titles:
+        if is_non_comic_title(title_str):
+            logger.warning(f'Not a comic title "{title_str}" - skipping.')
+            continue
 
-    Args:
-        volume_dirname (str or Path): Volume dir name.
-        target_string (str): The string to find.
-        replacement_string (str): The string to use as a replacement.
-        file_pattern (str): A glob pattern for files to process (e.g., "*.txt", "*.py", "*").
-        skip_prefixes: List of integer file prefixes to skip.
-        dry_run: If True, do not change any files.
+        title = BARKS_TITLE_DICT[title_str]
+        volume = comics_database.get_fanta_volume_int(title_str)
+        skip_pages = SKIP_PREFIXES.get((target_string, volume), [])
+        speech_groups = SpeechGroups(comics_database)
+        title_panel_boxes = TitlePanelBoxes(comics_database)
+        speech_page_groups = speech_groups.get_speech_page_groups(title)
+        page_panel_boxes = title_panel_boxes.get_page_panel_boxes(title)
 
-    """
-    prelim_dir = OCR_PRELIM_DIR / volume_dirname
-    segments_dir = PANEL_SEGMENTS_ROOT_DIR / volume_dirname
+        replace_string_in_title(
+            title_str,
+            speech_page_groups,
+            page_panel_boxes,
+            skip_pages,
+            target_string,
+            replacement_string,
+            dry_run,
+        )
 
-    if not prelim_dir.is_dir():
-        print(f"Error: Directory not found at '{prelim_dir}'")
-        return
 
-    print(f"Starting replacement process in: {prelim_dir.resolve()}")
+def replace_string_in_title(
+    title_str: str,
+    speech_page_groups: list[SpeechPageGroup],
+    page_panel_boxes: TitlePagesPanelBoxes,
+    skip_pages: list[int],
+    target_string: str,
+    replacement_string: str,
+    dry_run: bool = False,
+) -> None:
+    print("-" * 80)
+    print(f'Starting replacement process for "{title_str}"...')
     print(f"Target: '{target_string}', Replacement: '{replacement_string}'\n")
 
-    try:
-        target_regex = re.compile(target_string)
-    except re.error as e:
-        print(f"Error: Invalid regex pattern '{target_string}': {e}")
-        return
+    if not target_string:
+        print("NO TARGET STRING SPECIFIED. SKIPPING STRING REPLACEMENT.\n")
+        target_regex = None
+    else:
+        try:
+            target_regex = re.compile(target_string)
+        except re.error as e:
+            print(f"Error: Invalid regex pattern '{target_string}': {e}")
+            return
 
     files_checked_count = 0
     files_processed_count = 0
     lines_process_count = 0
 
-    ocr_files = sorted([f for f in prelim_dir.rglob(file_pattern) if f.is_file()])
-
-    for file_path in ocr_files:
-        fanta_page = file_path.stem[0:3]
-
-        panel_segments_file = segments_dir / (fanta_page + ".json")
-        if not panel_segments_file.is_file():
-            msg = f'Could not find panel segments file "{panel_segments_file}".'
-            raise FileNotFoundError(msg)
-        with panel_segments_file.open("r") as f:
-            panel_segment_info = json.load(f)
+    for speech_page_group in speech_page_groups:
+        fanta_page = speech_page_group.fanta_page
+        file_path = speech_page_group.ocr_prelim_groups_json_file
+        json_ocr = speech_page_group.speech_page_json
 
         files_checked_count += 1
         try:
-            json_ocr = json.loads(file_path.read_text(encoding="utf-8"))
-
             dirty_content = False
             lines_changed_in_file = 0
             remove_groups = []
             for group_id, group in json_ocr["groups"].items():
                 if remove_group(group_id, group):
                     dirty_content = True
-                    print(f"For page {file_path.name}, remove group {group_id}.")
+                    print(f"For page {file_path}, remove group {group_id}.")
                     remove_groups.append(group_id)
                     continue
 
-                replace_panel, new_panel_num = replace_missing_panel_num(
-                    group_id, group, panel_segment_info
+                replace_panel_num, new_panel_num = replace_missing_panel_num(
+                    group_id, group, page_panel_boxes.pages[fanta_page]
                 )
-                if replace_panel:
+                if replace_panel_num:
                     if new_panel_num == -1:
                         print(
                             f"For page {file_path.name},"
@@ -107,18 +121,17 @@ def replace_string_in_files(
                         lines_process_count += 1
                         lines_changed_in_file += 1
 
-                if int(fanta_page) in skip_prefixes:
-                    print(f'FILE IN SKIP LIST. SKIPPING "{file_path.name}".')
-                    continue
-
-                replace_text, new_ai_text = get_replace_text(
-                    group_id, group, target_regex, replacement_string
-                )
-                if replace_text:
-                    dirty_content = True
-                    group["ai_text"] = new_ai_text
-                    lines_process_count += 1
-                    lines_changed_in_file += 1
+                if int(fanta_page) in skip_pages:
+                    print(f'PAGE IN SKIP LIST. SKIPPING "{file_path.name}".')
+                elif target_string:
+                    replace_text, new_ai_text = get_replace_text(
+                        group_id, group, target_regex, replacement_string
+                    )
+                    if replace_text:
+                        dirty_content = True
+                        group["ai_text"] = new_ai_text
+                        lines_process_count += 1
+                        lines_changed_in_file += 1
 
             if dirty_content:
                 replace_json(dry_run, file_path, lines_changed_in_file, remove_groups, json_ocr)
@@ -170,7 +183,7 @@ def _is_page_number_or_dodgy_char(group: dict) -> bool:
 
 
 def replace_missing_panel_num(
-    _group_id: str, group: dict, panel_segment_info: dict
+    _group_id: str, group: dict, page_panel_boxes: PagePanelBoxes
 ) -> tuple[bool, int]:
     panel_num = int(group["panel_num"])
 
@@ -190,7 +203,7 @@ def replace_missing_panel_num(
         if not can_do:
             return True, -1
 
-        new_panel_num = _get_enclosing_panel_num(reduced_box, panel_segment_info)
+        new_panel_num = _get_enclosing_panel_num(reduced_box, page_panel_boxes)
 
         # print(
         #     f'New panel num: {new_panel_num} (Panel id: {group["panel_id"]}): "{group["ai_text"]!r}"'
@@ -221,7 +234,7 @@ def get_reduced_text_box(text_box: PointList, reduce_by: int) -> tuple[bool, Poi
     return True, [(p0_x, p0_y), (p1_x, p1_y), (p2_x, p2_y), (p3_x, p3_y)]
 
 
-def _get_enclosing_panel_num(box: PointList, panel_segment_info) -> int:  # noqa: ANN001
+def _get_enclosing_panel_num(box: PointList, page_panel_boxes: PagePanelBoxes) -> int:
     ocr_box = OcrBox(box, "", 0, "")
     box = ocr_box.min_rotated_rectangle
     bottom_left = box[0]
@@ -234,11 +247,11 @@ def _get_enclosing_panel_num(box: PointList, panel_segment_info) -> int:  # noqa
     )
     # print("box_rect", "XX", box_rect, "XX")
 
-    for i, panel_box in enumerate(panel_segment_info["panels"]):
-        top_left_x = panel_box[0]
-        top_left_y = panel_box[1]
-        w = panel_box[2]
-        h = panel_box[3]
+    for i, panel_box in enumerate(page_panel_boxes.panel_boxes):
+        top_left_x = panel_box.x0
+        top_left_y = panel_box.y1
+        w = panel_box.w
+        h = panel_box.h
         panel_rect = Rect(top_left_x, top_left_y, w, h)
         # print("panel_rect", i, "YY", panel_rect, "YY")
         if panel_rect.is_rect_inside_rect(box_rect):
@@ -286,33 +299,36 @@ def replace_json(
         print(f'Modified "{file_path.name}", wrote new json to file.')
 
 
-FILE_GLOB_PATTERN = "*-gemini-prelim-groups.json"
 app = typer.Typer()
 
 
 @app.command(help="Replace string in JSON files")
 def main(
-    volumes_str: VolumesArg,
-    target_str: str,
-    replacement_str: str,
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    target: str = "",
+    replace: str = "",
     dry_run: bool = False,
 ) -> None:
     # Decode escape sequences (like \n or \u2014) in the input strings
-    target_str = codecs.decode(target_str, "unicode_escape")
-    replacement_str = codecs.decode(replacement_str, "unicode_escape")
+    target_str = codecs.decode(target, "unicode_escape")
+    replacement_str = codecs.decode(replace, "unicode_escape")
+
+    if volumes_str and title_str:
+        err_msg = "Options --volume and --title are mutually exclusive."
+        raise typer.BadParameter(err_msg)
 
     volumes = list(intspan(volumes_str))
-    assert len(volumes) >= 1
-
     comics_database = ComicsDatabase()
+    titles = get_titles(comics_database, volumes, title_str)
 
-    for volume in volumes:
-        volume_dirname = comics_database.get_fantagraphics_volume_title(volume)
-        skip_prefixes = SKIP_PREFIXES.get((target_str, volume), [])
-        print("-" * 80)
-        replace_string_in_files(
-            volume_dirname, target_str, replacement_str, FILE_GLOB_PATTERN, skip_prefixes, dry_run
-        )
+    replace_string_in_titles(
+        comics_database,
+        titles,
+        target_str,
+        replacement_str,
+        dry_run,
+    )
 
 
 if __name__ == "__main__":
