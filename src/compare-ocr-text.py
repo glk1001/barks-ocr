@@ -1,4 +1,5 @@
 # ruff: noqa: T201
+
 from collections import defaultdict
 from difflib import SequenceMatcher
 
@@ -76,14 +77,16 @@ def main(title_name: str, verbose: bool = True) -> None:
             for txt_easy, txt_paddle in zip_longest(pt_easy_speech_list, pt_paddle_speech_list):
                 if not txt_easy:
                     print(
-                        f'Panel {panel_num:<2}, group {txt_paddle.group_id}: ONLY IN PADDLE: "{txt_paddle.raw_ai_text!r}".'
+                        f"Panel {panel_num:<2}, group {txt_paddle.group_id}:"
+                        f' ONLY IN PADDLE: "{txt_paddle.raw_ai_text!r}".'
                     )
                     mismatches += 1
                     continue
 
                 if not txt_paddle:
                     print(
-                        f'Panel {panel_num:<2}, group {txt_easy.group_id}: ONLY IN EASY: "{txt_easy.raw_ai_text!r}".'
+                        f"Panel {panel_num:<2}, group {txt_easy.group_id}:"
+                        f' ONLY IN EASY: "{txt_easy.raw_ai_text!r}".'
                     )
                     mismatches += 1
                     continue
@@ -95,7 +98,9 @@ def main(title_name: str, verbose: bool = True) -> None:
                     perfect_matches += 1
                     if verbose:
                         print(
-                            f"Panel {panel_num:<2}, groups {txt_easy.group_id}, {txt_paddle.group_id}  | MATCH: {txt_easy.raw_ai_text!r}"
+                            f"Panel {panel_num:<2},"
+                            f" groups {txt_easy.group_id}, {txt_paddle.group_id}"
+                            f"  | MATCH: {txt_easy.raw_ai_text!r}"
                         )
                 else:
                     mismatches += 1

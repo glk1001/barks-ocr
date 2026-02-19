@@ -6,7 +6,7 @@ _default2:
 # Find titles containing words.
 [group('OCR')]
 find-words words:
-    {{uv_run}} "{{source_dir()}}/src/make-whoosh-index-from-gemini-ai-groups.py" --volume 2-14 --unstemmed --words "{{words}}"
+    {{uv_run}} "{{source_dir()}}/src/make-whoosh-index-from-gemini-ai-groups.py" --volume 1-27 --unstemmed --words "{{words}}"
 
 # Open Vol/Page OCR files in editor
 [group('OCR')]
@@ -15,8 +15,13 @@ open-prelim volume page:
 
 # Show Vol/Page OCR annotations
 [group('OCR')]
+annotate-ocr volume:
+    {{uv_run}} "{{source_dir()}}/src/annotate-ocr.py" --volume {{volume}}
+
+# Show Vol/Page OCR annotations
+[group('OCR')]
 show-annotations volume page:
-    {{uv_run}} "{{source_dir()}}/src/show-annotation-page.py" --volume {{volume}} --page {{page}}
+    {{uv_run}} "{{source_dir()}}/src/show-annotated-page.py" --volume {{volume}} --page {{page}}
 
 # Open editor and show Vol/Page OCR
 [group('OCR')]
