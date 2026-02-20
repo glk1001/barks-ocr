@@ -87,10 +87,6 @@ def ocr_annotate_title(
 ) -> None:
     title_str = comic.get_ini_title()
 
-    # Special case. Because "Silent Night" is a restored comic, the panel bounds
-    # are out of whack.
-    annotate_with_panels_bounds = title_str != "Silent Night"
-
     out_image_dir.mkdir(parents=True, exist_ok=True)
     logger.info(f'OCR annotating all pages in "{title_str}" to directory "{out_image_dir}"...')
 
@@ -119,12 +115,9 @@ def ocr_annotate_title(
         bw_image = get_image_to_annotate(png_file)
         pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
 
-        if not annotate_with_panels_bounds:
-            logger.warning(f'"{title_str}": special case - not annotating with panel bounds.')
-        else:
-            page_panel_boxes = title_pages_panel_boxes.pages[fanta_page]
-            check_page_panel_boxes(pil_image.size, page_panel_boxes)
-            draw_panel_bounds_on_image(pil_image, page_panel_boxes)
+        page_panel_boxes = title_pages_panel_boxes.pages[fanta_page]
+        check_page_panel_boxes(pil_image.size, page_panel_boxes)
+        draw_panel_bounds_on_image(pil_image, page_panel_boxes)
 
         ocr_annotate_image_with_prelim_text(
             speech_page_group, pil_image, prelim_text_annotated_image_file
