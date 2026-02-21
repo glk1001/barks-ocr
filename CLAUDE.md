@@ -24,7 +24,7 @@ just check-ocr volume
 
 **Type-check (ty):**
 ```bash
-uvx ty check
+uv run ty check
 ```
 
 **Lint (ruff):**

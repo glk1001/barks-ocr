@@ -47,4 +47,5 @@ required-environments = [
 dev = [
     "pip>=26.0",
     "ruff>=0.12.7",
+    "ty>=0.0.17",
 ]
