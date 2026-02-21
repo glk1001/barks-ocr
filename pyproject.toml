@@ -5,6 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "barks-fantagraphics",
+    "comic-utils",
     "dotenv>=0.9.9",
     "easyocr>=1.7.2",
     "google-genai>=1.32.0",
@@ -31,6 +33,10 @@ dependencies = [
     "typer>=0.21.1",
     "whoosh-reloaded>=2.7.5",
 ]
+
+[tool.uv.sources]
+barks-fantagraphics = { path = "../barks-compleat-reader/src/barks-fantagraphics", editable = true }
+comic-utils = { path = "../barks-compleat-reader/src/comic-utils", editable = true }
 
 [tool.uv]
 required-environments = [

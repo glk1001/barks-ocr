@@ -68,10 +68,23 @@ wheels = [
 ]
 
 [[package]]
+name = "barks-fantagraphics"
+version = "0.1.0"
+source = { editable = "../barks-compleat-reader/src/barks-fantagraphics" }
+dependencies = [
+    { name = "comic-utils" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "comic-utils", editable = "../barks-compleat-reader/src/comic-utils" }]
+
+[[package]]
 name = "barks-ocr"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "barks-fantagraphics" },
+    { name = "comic-utils" },
     { name = "dotenv" },
     { name = "easyocr" },
     { name = "google-genai" },
@@ -107,6 +120,8 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "barks-fantagraphics", editable = "../barks-compleat-reader/src/barks-fantagraphics" },
+    { name = "comic-utils", editable = "../barks-compleat-reader/src/comic-utils" },
     { name = "dotenv", specifier = ">=0.9.9" },
     { name = "easyocr", specifier = ">=1.7.2" },
     { name = "google-genai", specifier = ">=1.32.0" },
@@ -313,6 +328,11 @@ sdist = { url = "https://files.pythonhosted.org/packages/a2/61/f083b5ac52e505dfc
 wheels = [
     { url = "https://files.pythonhosted.org/packages/6d/c1/e419ef3723a074172b68aaa89c9f3de486ed4c2399e2dbd8113a4fdcaf9e/colorlog-6.10.1-py3-none-any.whl", hash = "sha256:2d7e8348291948af66122cff006c9f8da6255d224e7cf8e37d8de2df3bad8c9c", size = 11743, upload-time = "2025-10-16T16:14:10.512Z" },
 ]
+
+[[package]]
+name = "comic-utils"
+version = "0.1.0"
+source = { editable = "../barks-compleat-reader/src/comic-utils" }
 
 [[package]]
 name = "commonmark"
