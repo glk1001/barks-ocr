@@ -1,7 +1,7 @@
 [project]
 name = "barks-ocr"
 version = "0.1.0"
-description = "Add your description here"
+description = "Scripts for OCR processing of Fantagraphics Carl Barks comic pages."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -46,4 +46,5 @@ required-environments = [
 [dependency-groups]
 dev = [
     "pip>=26.0",
+    "ruff>=0.12.7",
 ]

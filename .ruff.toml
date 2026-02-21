@@ -5,7 +5,6 @@ exclude = [
         "scraps",
         "tools",
         "**/src/utils/geometry.py",
-        "**/src/make-ocr-groups.py",
     ]
 
 [lint]
@@ -23,6 +22,4 @@ exclude = [
         "TD002", "TD003",
     ]
 
-    [lint.per-file-ignores]
-        "scripts/*" = ["INP001"]
 
