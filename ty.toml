@@ -1,12 +1,10 @@
 [environment]
 python = "./.venv"
-root = [
-    "./src",
-]
+root = ["./src"]
 
 [src]
 exclude = [
-   	"**/experiments",
+    "**/experiments",
     "**/scraps",
     "**/tools",
     "src/barks_ocr/utils/geometry.py",
