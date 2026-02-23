@@ -69,8 +69,4 @@ Path dependencies are declared in `pyproject.toml` under `[tool.uv.sources]` poi
 
 ## Code Style
 
-- Python 3.13+ syntax.
-- Type hints required on all function signatures; use `str | None` not `Optional[str]`.
-- Formatter: `ruff` (line length 100, config in `.ruff.toml`).
-- Type checker: `ty` (config in `ty.toml`).
 - `src/tools/`, `**/experiments/`, and `**/scraps/` are excluded from linting and type checking.
