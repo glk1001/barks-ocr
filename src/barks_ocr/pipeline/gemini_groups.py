@@ -11,8 +11,11 @@ from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 
-from gemini_ai_ocr_grouper import GeminiAiGrouper
-from utils.gemini_ai_for_grouping import get_cleaned_text
+import barks_ocr.log_setup as _log_setup
+from barks_ocr.pipeline.gemini_grouper import GeminiAiGrouper
+from barks_ocr.utils.gemini_ai_for_grouping import get_cleaned_text
+
+_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "gemg"
 
@@ -41,8 +44,6 @@ def get_ai_predicted_groups(
 
 
 app = typer.Typer()
-log_level = ""
-log_filename = "make-gemini-ai-groups-from-batch.log"
 
 
 @app.command(help="Make gemini ai groups from batch job results")
@@ -51,10 +52,10 @@ def main(
     title_str: TitleArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    # Global variable accessed by loguru-config.
-    global log_level  # noqa: PLW0603
-    log_level = log_level_str
-    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+    _log_setup.log_level = log_level_str
+    _log_setup.log_filename = "make-gemini-ai-groups-from-batch.log"
+    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
+    LoguruConfig.load(_RESOURCES / "log-config.yaml")
 
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."

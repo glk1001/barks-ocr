@@ -1,11 +1,12 @@
 line-length = 100
 
 exclude = [
-    	"experiments",
-        "scraps",
-        "tools",
-        "**/src/utils/geometry.py",
-    ]
+    "experiments",
+    "scraps",
+    "tools",
+    "**/src/barks_ocr/utils/geometry.py",
+    "**/src/barks_ocr/utils/ocr_box.py",
+]
 
 [lint]
     select = ["ALL"]

@@ -18,6 +18,7 @@ from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
 from kivy.config import Config
 from loguru import logger
+import barks_ocr.log_setup as _log_setup
 from loguru_config import LoguruConfig
 
 APP_LOGGING_NAME = "kpoe"
@@ -51,6 +52,8 @@ from kivy.uix.popup import Popup
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.textinput import TextInput
 from kivy.uix.widget import Widget
+
+_RESOURCES = Path(__file__).parent.parent / "resources"
 
 # TODO: Duplicated in 'font_manager.py'.
 # Set up custom fonts.
@@ -626,8 +629,6 @@ class EditorApp(App):
 
 
 app = typer.Typer()
-log_level = ""
-log_filename = "kivy-prelim-ocr-editor.log"
 
 
 @app.command(help="Prelim OCR Text Editor")
@@ -639,10 +640,10 @@ def main(
     panel_num: int = -1,
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    # Global variable accessed by loguru-config.
-    global log_level  # noqa: PLW0603
-    log_level = log_level_str
-    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+    _log_setup.log_level = log_level_str
+    _log_setup.log_filename = "kivy-prelim-ocr-editor.log"
+    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
+    LoguruConfig.load(_RESOURCES / "log-config.yaml")
 
     EditorApp(volume, fanta_page, easyocr_group_id, paddleocr_group_id, panel_num).run()
 

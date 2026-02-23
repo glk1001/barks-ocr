@@ -1,3 +1,10 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/barks_ocr"]
+
 [project]
 name = "barks-ocr"
 version = "0.1.0"
@@ -33,6 +40,26 @@ dependencies = [
     "typer>=0.21.1",
     "whoosh-reloaded>=2.7.5",
 ]
+
+[project.scripts]
+barks-ocr-batch                = "barks_ocr.pipeline.batch_ocr:app"
+barks-ocr-gemini-batch-job     = "barks_ocr.pipeline.gemini_batch_job:app"
+barks-ocr-gemini-batch-results = "barks_ocr.pipeline.gemini_batch_results:app"
+barks-ocr-gemini-groups        = "barks_ocr.pipeline.gemini_groups:app"
+barks-ocr-final-groups         = "barks_ocr.pipeline.final_groups:app"
+barks-ocr-whoosh-index         = "barks_ocr.pipeline.whoosh_index:app"
+barks-ocr-annotate             = "barks_ocr.tools.annotate:app"
+barks-ocr-fix                  = "barks_ocr.tools.fix_ocr:app"
+barks-ocr-kivy-editor          = "barks_ocr.tools.kivy_editor:app"
+barks-ocr-open-prelim          = "barks_ocr.tools.open_prelim:app"
+barks-ocr-show-annotated       = "barks_ocr.tools.show_annotated:app"
+barks-ocr-compare              = "barks_ocr.tools.compare:app"
+barks-ocr-quick-fix            = "barks_ocr.tools.quick_fix:main"
+barks-ocr-string-replacer      = "barks_ocr.tools.string_replacer:app"
+barks-ocr-censorship-table     = "barks_ocr.tools.censorship_table:main"
+barks-ocr-list-models          = "barks_ocr.tools.list_models:main"
+barks-ocr-nano-test            = "barks_ocr.nano.nano_banana_test:main"
+barks-ocr-nano-panels          = "barks_ocr.nano.nano_banana_panels:main"
 
 [tool.uv.sources]
 barks-fantagraphics = { path = "../barks-compleat-reader/src/barks-fantagraphics", editable = true }

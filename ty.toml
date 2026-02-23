@@ -9,7 +9,8 @@ exclude = [
    	"**/experiments",
     "**/scraps",
     "**/tools",
-    "src/utils/geometry.py",
-    "src/nano-banana-panels-to-ai.py",
-    "src/nano-banana-test.py",
+    "src/barks_ocr/utils/geometry.py",
+    "src/barks_ocr/utils/ocr_box.py",
+    "src/barks_ocr/nano/nano_banana_panels.py",
+    "src/barks_ocr/nano/nano_banana_test.py",
 ]

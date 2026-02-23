@@ -1,14 +1,14 @@
 extra:
-  sys_name: ext://__main__.APP_LOGGING_NAME
+  sys_name: ext://barks_ocr.log_setup.APP_LOGGING_NAME
 
 handlers:
   - sink: ext://sys.stdout
-    level: ext://__main__.log_level
+    level: ext://barks_ocr.log_setup.log_level
     format: ext://comic_utils.loguru_setup.log_to_console_formatter
     backtrace: True
     diagnose: True
     enqueue: True
-  - sink: fmt://{env://HOME}/Prj/github/barks-compleat-digital/barks-ocr/logs/{ext://__main__.log_filename}
+  - sink: fmt://{env://HOME}/Prj/github/barks-compleat-digital/barks-ocr/logs/{ext://barks_ocr.log_setup.log_filename}
     level: "DEBUG"
     format: ext://comic_utils.loguru_setup.log_to_file_formatter
     rotation: "10 MB"

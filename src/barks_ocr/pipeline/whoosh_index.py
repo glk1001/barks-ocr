@@ -19,7 +19,10 @@ from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 
-from utils.paragraph_wrap import ParagraphWrapper
+import barks_ocr.log_setup as _log_setup
+from barks_ocr.utils.paragraph_wrap import ParagraphWrapper
+
+_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "gemi"
 
@@ -161,8 +164,6 @@ def check_lemmatized_terms(search_engine: SearchEngine) -> None:
 
 
 app = typer.Typer()
-log_level = ""
-log_filename = "make-whoosh-index-from-gemini-ai-groups.log"
 
 
 @app.command(help="Make whoosh index from gemini ai groups")
@@ -175,10 +176,10 @@ def main(
     do_checks: bool = False,
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    # Global variable accessed by loguru-config.
-    global log_level  # noqa: PLW0603
-    log_level = log_level_str
-    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+    _log_setup.log_level = log_level_str
+    _log_setup.log_filename = "make-whoosh-index-from-gemini-ai-groups.log"
+    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
+    LoguruConfig.load(_RESOURCES / "log-config.yaml")
 
     volumes = list(intspan(volumes_str))
     comics_database = ComicsDatabase()

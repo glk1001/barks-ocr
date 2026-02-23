@@ -13,8 +13,8 @@ from barks_fantagraphics.speech_groupers import SpeechGroups, SpeechPageGroup
 from comic_utils.common_typer_options import TitleArg, VolumesArg
 from intspan import intspan
 
-from utils.geometry import Rect
-from utils.ocr_box import OcrBox, PointList
+from barks_ocr.utils.geometry import Rect
+from barks_ocr.utils.ocr_box import OcrBox, PointList
 
 SKIP_PREFIXES = {
     (" - ", 12): [105],

@@ -12,6 +12,10 @@ from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 
+import barks_ocr.log_setup as _log_setup
+
+_RESOURCES = Path(__file__).parent.parent / "resources"
+
 APP_LOGGING_NAME = "gemf"
 
 
@@ -50,8 +54,6 @@ def make_final_gemini_ai_groups_for_title(comics_database: ComicsDatabase, title
 
 
 app = typer.Typer()
-log_level = ""
-log_filename = "make-final-gemini-ai-groups.log"
 
 
 @app.command(help="Make final ai groups")
@@ -60,10 +62,10 @@ def main(
     title_str: TitleArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    # Global variable accessed by loguru-config.
-    global log_level  # noqa: PLW0603
-    log_level = log_level_str
-    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+    _log_setup.log_level = log_level_str
+    _log_setup.log_filename = "make-final-gemini-ai-groups.log"
+    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
+    LoguruConfig.load(_RESOURCES / "log-config.yaml")
 
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."

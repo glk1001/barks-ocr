@@ -21,8 +21,11 @@ from loguru import logger
 from loguru_config import LoguruConfig
 from paddleocr import PaddleOCR
 
-from utils.common import ProcessResult
-from utils.preprocessing import preprocess_image
+import barks_ocr.log_setup as _log_setup
+from barks_ocr.utils.common import ProcessResult
+from barks_ocr.utils.preprocessing import preprocess_image
+
+_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "bocr"
 
@@ -36,7 +39,7 @@ AUTO_CORRECTIONS = {
     "G0": "GO",
 }
 
-BARKS_OCR_SPELL_DICT = Path(__file__).parent / "batch-ocr-barks-words.txt"
+BARKS_OCR_SPELL_DICT = _RESOURCES / "batch-ocr-barks-words.txt"
 if not BARKS_OCR_SPELL_DICT.is_file():
     msg = f'Could not find Barks spelling dict: "{BARKS_OCR_SPELL_DICT}".'
     raise FileNotFoundError(msg)
@@ -286,8 +289,6 @@ def get_box_str(box: list[int]) -> str:
 
 
 app = typer.Typer()
-log_level = ""
-log_filename = "batch-ocr.log"
 
 
 @app.command(help="Run easyocr and paddleocr on restored titles")
@@ -296,10 +297,10 @@ def main(
     title_str: TitleArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    # Global variable accessed by loguru-config.
-    global log_level  # noqa: PLW0603
-    log_level = log_level_str
-    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+    _log_setup.log_level = log_level_str
+    _log_setup.log_filename = "batch-ocr.log"
+    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
+    LoguruConfig.load(_RESOURCES / "log-config.yaml")
 
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."

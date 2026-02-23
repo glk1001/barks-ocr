@@ -1,6 +1,6 @@
 # ruff: noqa: T201
 
-from utils.gemini_ai import CLIENT
+from barks_ocr.utils.gemini_ai import CLIENT
 
 
 def main() -> None:

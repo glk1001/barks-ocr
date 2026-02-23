@@ -16,9 +16,9 @@ from barks_fantagraphics.ocr_file_paths import (
 )
 from loguru import logger
 
-from utils.common import ProcessResult
-from utils.geometry import Rect
-from utils.ocr_box import (
+from barks_ocr.utils.common import ProcessResult
+from barks_ocr.utils.geometry import Rect
+from barks_ocr.utils.ocr_box import (
     OcrBox,
     PointList,
     get_box_str,

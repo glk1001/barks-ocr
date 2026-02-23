@@ -24,10 +24,13 @@ from loguru import logger
 from loguru_config import LoguruConfig
 from PIL import Image
 
-from utils.gemini_ai import AI_PRO_MODEL, CLIENT
-from utils.gemini_ai_comic_prompts import comic_prompt
-from utils.gemini_ai_for_grouping import norm2ai
-from utils.preprocessing import preprocess_image
+import barks_ocr.log_setup as _log_setup
+from barks_ocr.utils.gemini_ai import AI_PRO_MODEL, CLIENT
+from barks_ocr.utils.gemini_ai_comic_prompts import comic_prompt
+from barks_ocr.utils.gemini_ai_for_grouping import norm2ai
+from barks_ocr.utils.preprocessing import preprocess_image
+
+_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "gemb"
 
@@ -230,8 +233,6 @@ def assign_ids_to_ocr_boxes(bounds: list[dict[str, Any]]) -> list[dict[str, Any]
 
 
 app = typer.Typer()
-log_level = ""
-log_filename = "make-gemini-ai-groups-batch-job.log"
 
 
 @app.command(help="Make gemini ai groups batch job")
@@ -240,10 +241,10 @@ def main(
     title_str: TitleArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    # Global variable accessed by loguru-config.
-    global log_level  # noqa: PLW0603
-    log_level = log_level_str
-    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+    _log_setup.log_level = log_level_str
+    _log_setup.log_filename = "make-gemini-ai-groups-batch-job.log"
+    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
+    LoguruConfig.load(_RESOURCES / "log-config.yaml")
 
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."

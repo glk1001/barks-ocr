@@ -10,7 +10,10 @@ from barks_fantagraphics.ocr_file_paths import get_ocr_prelim_annotated_filename
 from barks_fantagraphics.speech_groupers import OcrTypes
 from comic_utils.common_typer_options import LogLevelArg, PagesArg, VolumesArg
 from intspan import intspan
+import barks_ocr.log_setup as _log_setup
 from loguru_config import LoguruConfig
+
+_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "sapg"
 
@@ -26,8 +29,6 @@ def open_viewer(image_file: Path) -> None:
 
 
 app = typer.Typer()
-log_level = ""
-log_filename = "show-annotations.log"
 
 
 @app.command(help="Open image viewer for Fanta volume annotations page")
@@ -36,10 +37,10 @@ def main(
     page_num_str: PagesArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    # Global variable accessed by loguru-config.
-    global log_level  # noqa: PLW0603
-    log_level = log_level_str
-    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+    _log_setup.log_level = log_level_str
+    _log_setup.log_filename = "show-annotations.log"
+    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
+    LoguruConfig.load(_RESOURCES / "log-config.yaml")
 
     volumes = list(intspan(volumes_str))
     assert volumes

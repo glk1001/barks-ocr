@@ -16,7 +16,10 @@ from intspan import intspan
 from loguru import logger
 from loguru_config import LoguruConfig
 
-from utils.gemini_ai import CLIENT
+import barks_ocr.log_setup as _log_setup
+from barks_ocr.utils.gemini_ai import CLIENT
+
+_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "gemr"
 
@@ -130,8 +133,6 @@ def process_batch_job(comics_database: ComicsDatabase, title: str) -> None:  # n
 
 
 app = typer.Typer()
-log_level = ""
-log_filename = "make-gemini-ai-groups-get-batch-results.log"
 
 
 @app.command(help="Get gemini ai groups results from batch job")
@@ -140,10 +141,10 @@ def main(
     title_str: TitleArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    # Global variable accessed by loguru-config.
-    global log_level  # noqa: PLW0603
-    log_level = log_level_str
-    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+    _log_setup.log_level = log_level_str
+    _log_setup.log_filename = "make-gemini-ai-groups-get-batch-results.log"
+    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
+    LoguruConfig.load(_RESOURCES / "log-config.yaml")
 
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."

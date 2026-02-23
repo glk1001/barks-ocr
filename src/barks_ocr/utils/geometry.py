@@ -8,7 +8,7 @@
 #      grows from top to bottom). You can still use negative numbers.
 #
 
-from math import sqrt, acos, pi
+from math import acos, pi, sqrt
 
 
 class Point:
@@ -247,8 +247,7 @@ def angle(a, b, c):
         if result <= 1.0 and result >= -1.0:
             return acos(result)
         return 0
-    else:
-        return 0
+    return 0
 
 
 # Checks if point faces edge

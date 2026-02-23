@@ -93,36 +93,41 @@ def split_rows_into_pages(pg_size: int, rows: list) -> dict:
     return pages
 
 
-page_size = 32
-file = CSV_DIR / "censorship-fixes-simple.csv"
-with file.open("r", newline="") as csvfile:
-    csv_reader = csv.reader(csvfile)
-    header = next(csv_reader)
-    csv_rows = list(csv_reader)
+def main() -> None:
+    page_size = 32
+    file = CSV_DIR / "censorship-fixes-simple.csv"
+    with file.open("r", newline="") as csvfile:
+        csv_reader = csv.reader(csvfile)
+        header = next(csv_reader)
+        csv_rows = list(csv_reader)
 
-num_pages = len(csv_rows) // page_size
-if len(csv_rows) % page_size != 0:
-    num_pages += 1
+    num_pages = len(csv_rows) // page_size
+    if len(csv_rows) % page_size != 0:
+        num_pages += 1
 
-pages = split_rows_into_pages(page_size, csv_rows)
+    pages = split_rows_into_pages(page_size, csv_rows)
 
-# Break a censorship fixes list into pages with white backgrounds.
-# These can be added to the Gimp project where the background is
-# easily removed. Then apply contrast = -70% to the remaining black text.
-for page in range(1, num_pages + 1):
-    page_rows = pages[page]
+    # Break a censorship fixes list into pages with white backgrounds.
+    # These can be added to the Gimp project where the background is
+    # easily removed. Then apply contrast = -70% to the remaining black text.
+    for page in range(1, num_pages + 1):
+        page_rows = pages[page]
 
-    temp_file = Path("/tmp/temp.csv")  # noqa: S108
-    with temp_file.open("w", newline="") as csvfile:
-        csv_writer = csv.writer(csvfile)
-        csv_writer.writerow(header)
-        csv_writer.writerows(page_rows)  # Writes all rows at once
+        temp_file = Path("/tmp/temp.csv")  # noqa: S108
+        with temp_file.open("w", newline="") as csvfile:
+            csv_writer = csv.writer(csvfile)
+            csv_writer.writerow(header)
+            csv_writer.writerows(page_rows)  # Writes all rows at once
 
-    gt_table = get_censorship_fixes_table(temp_file)
-    gt_table.show()
+        gt_table = get_censorship_fixes_table(temp_file)
+        gt_table.show()
 
-    image_file = Path(f"/tmp/censorship-fixes-page-{page}.png")  # noqa: S108
-    gt_table.save(str(image_file), scale=2.5, expand=10)
+        image_file = Path(f"/tmp/censorship-fixes-page-{page}.png")  # noqa: S108
+        gt_table.save(str(image_file), scale=2.5, expand=10)
 
-    # if page == 1:
-    #     break  # noqa: ERA001
+        # if page == 1:
+        #     break  # noqa: ERA001
+
+
+if __name__ == "__main__":
+    main()

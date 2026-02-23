@@ -81,7 +81,7 @@ requires-dist = [{ name = "comic-utils", editable = "../barks-compleat-reader/sr
 [[package]]
 name = "barks-ocr"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "barks-fantagraphics" },
     { name = "comic-utils" },

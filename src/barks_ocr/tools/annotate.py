@@ -2,6 +2,7 @@
 
 import json
 from pathlib import Path
+
 from typing import Any
 
 import cv2 as cv
@@ -18,10 +19,13 @@ from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
 from intspan import intspan
 from loguru import logger
+import barks_ocr.log_setup as _log_setup
 from loguru_config import LoguruConfig
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 
-from utils.ocr_box import OcrBox
+from barks_ocr.utils.ocr_box import OcrBox
+
+_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "socr"
 
@@ -262,8 +266,6 @@ def get_json_ocr_groups(ocr_file: Path) -> dict[str, Any]:
 
 
 app = typer.Typer()
-log_level = ""
-log_filename = "show-ocr.log"
 
 
 @app.command(help="Annotate prelim ocr groups")
@@ -272,10 +274,10 @@ def main(
     title_str: TitleArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    # Global variable accessed by loguru-config.
-    global log_level  # noqa: PLW0603
-    log_level = log_level_str
-    LoguruConfig.load(Path(__file__).parent / "log-config.yaml")
+    _log_setup.log_level = log_level_str
+    _log_setup.log_filename = "show-ocr.log"
+    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
+    LoguruConfig.load(_RESOURCES / "log-config.yaml")
 
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."
