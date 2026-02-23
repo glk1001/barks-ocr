@@ -102,7 +102,7 @@ class GeminiAiGrouper:
 
             # break  # Break early for testing  # noqa: ERA001
 
-    def _make_groups(
+    def _make_groups(  # noqa: PLR0913
         self,
         svg_file: Path,
         ocr_file: Path,

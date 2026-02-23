@@ -167,7 +167,7 @@ app = typer.Typer()
 
 
 @app.command(help="Make whoosh index from gemini ai groups")
-def main(
+def main(  # noqa: PLR0913
     volumes_str: VolumesArg = "",
     words: str = "",
     create_index: bool = False,

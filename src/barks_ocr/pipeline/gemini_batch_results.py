@@ -33,7 +33,7 @@ def process_batch_jobs(comics_database: ComicsDatabase, titles: list[str]) -> No
         process_batch_job(comics_database, title)
 
 
-def process_batch_job(comics_database: ComicsDatabase, title: str) -> None:  # noqa: PLR0915
+def process_batch_job(comics_database: ComicsDatabase, title: str) -> None:  # noqa: C901, PLR0915
     # noinspection PyBroadException
     num_errors = 0
     # noinspection PyBroadException
