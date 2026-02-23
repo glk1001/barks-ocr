@@ -5,7 +5,7 @@ import polars as pl
 from great_tables import GT, html, loc, md, style
 
 ROOT_DIR = Path("/home/greg/Books/Carl Barks")
-CSV_DIR = ROOT_DIR / "Projects/Barks Reader"
+CSV_DIR = ROOT_DIR / "Projects" / "Barks Reader"
 
 
 def get_censorship_fixes_table(file: Path) -> GT:
@@ -13,13 +13,13 @@ def get_censorship_fixes_table(file: Path) -> GT:
 
     table = (
         GT(df)
-        .tab_header(
-            title=md("**Censorship Fixes and Other Changes**"),
-            subtitle=md("Includes fixes for Fantagraphics printing and coloring glitches"),
-        )
-        .tab_options(heading_padding="1%")
+        # .tab_header(
+        #     title=md("**Censorship Fixes and Other Changes**"),
+        #     subtitle=md("Includes fixes for Fantagraphics printing and coloring glitches"),
+        # )
+        # .tab_options(heading_padding="1%")
         #        .opt_row_striping(row_striping=True)
-        .tab_spanner(label=md("**Changes**"), columns=["Change_From", "Change_To"])
+#        .tab_spanner(label=md("**Changes**"), columns=["Change_From", "Change_To"])
         .tab_stub(rowname_col="Story")
         .tab_stubhead(label="Story")
         .tab_style(style=style.text(weight="bold"), locations=loc.stubhead())
@@ -64,11 +64,12 @@ def get_censorship_fixes_table(file: Path) -> GT:
     return table  # noqa: RET504
 
 
-def split_rows_into_pages(pg_size: int, rows: list) -> dict:
+def split_rows_into_pages(pg_size: int, rows: list, first_page_reduction: int = 0) -> dict:
     pages = {}
     page_num = 1
     row_list = []
     row_count = 0
+    current_pg_size = pg_size - first_page_reduction
     prev_non_empty_cols = list(rows[0])
     for index, row in enumerate(rows):
         if row_count == 0:
@@ -84,11 +85,12 @@ def split_rows_into_pages(pg_size: int, rows: list) -> dict:
             for col, prev_non_empty_col in zip(row, prev_non_empty_cols, strict=True)
         ]
 
-        if (row_count == pg_size) or (index + 1 == len(rows)):
+        if (row_count == current_pg_size) or (index + 1 == len(rows)):
             pages[page_num] = row_list
             row_list = []
             row_count = 0
             page_num += 1
+            current_pg_size = pg_size  # remaining pages use full size
 
     return pages
 
@@ -101,11 +103,8 @@ def main() -> None:
         header = next(csv_reader)
         csv_rows = list(csv_reader)
 
-    num_pages = len(csv_rows) // page_size
-    if len(csv_rows) % page_size != 0:
-        num_pages += 1
-
-    pages = split_rows_into_pages(page_size, csv_rows)
+    pages = split_rows_into_pages(page_size, csv_rows, first_page_reduction=0)
+    num_pages = len(pages)
 
     # Break a censorship fixes list into pages with white backgrounds.
     # These can be added to the Gimp project where the background is
@@ -125,8 +124,8 @@ def main() -> None:
         image_file = Path(f"/tmp/censorship-fixes-page-{page}.png")  # noqa: S108
         gt_table.save(str(image_file), scale=2.5, expand=10)
 
-        # if page == 1:
-        #     break  # noqa: ERA001
+        if page == 1:
+            break  # noqa: ERA001
 
 
 if __name__ == "__main__":
