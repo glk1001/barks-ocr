@@ -142,17 +142,6 @@ def ocr_annotate_image_with_prelim_text(
 ) -> None:
     logger.info(f'Annotating image "{annotated_img_file}"...')
 
-    # Hack for Good Deeds...  # noqa: FIX004
-    # json_text_data_box_groups = get_json_text_data_boxes(ocr_file)
-    # scale = 8700 / 9900
-    # for group_id, group in json_text_data_box_groups["groups"].items():
-    #     logger.info(f'Annotating group "{group_id}"...')
-    #
-    #     text_box = group["text_box"]
-    #     group["text_box"] = [(item[0] * scale, item[1] * scale) for item in text_box]
-    # with ocr_file.open("w") as f:
-    #     json.dump(json_text_data_box_groups, f, indent=4)
-
     speech_groups = speech_page_group.speech_groups
 
     overlay = Image.new("RGBA", pil_image.size, (0, 0, 0, 0))
@@ -227,19 +216,6 @@ def ocr_annotate_image_with_individual_boxes(
         f"Annotating image with individual boxes"
         f' "{annotated_img_file}" from ocr file "{ocr_file}"...'
     )
-
-    # Hack for Good Deeds...  # noqa: FIX004
-    # scale = 8700 / 9900
-    # json_ocr_groups = get_json_text_data_boxes(ocr_file)
-    # for group in json_ocr_groups["groups"]:
-    #     for box_id in json_ocr_groups["groups"][group]["cleaned_box_texts"]:
-    #         text_data = json_ocr_groups["groups"][group]["cleaned_box_texts"][box_id]
-    #         text_box = text_data["text_box"]
-    #         if text_box is None:
-    #             continue
-    #         text_data["text_box"] = [(item[0] * scale, item[1] * scale) for item in text_box]
-    # with ocr_file.open("w") as f:
-    #     json.dump(json_ocr_groups, f, indent=4)
 
     json_ocr_groups = get_json_ocr_groups(ocr_file)["groups"]
 
