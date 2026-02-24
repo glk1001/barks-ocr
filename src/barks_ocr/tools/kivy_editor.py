@@ -11,7 +11,7 @@ from barks_fantagraphics.comic_book import get_page_str
 from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
-from barks_fantagraphics.comics_utils import get_abbrev_path, get_backup_file
+from barks_fantagraphics.comics_utils import get_backup_file
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM_DIR
 from barks_fantagraphics.speech_groupers import OcrTypes, get_speech_page_group
 from comic_utils.comic_consts import PNG_FILE_EXT
@@ -852,16 +852,7 @@ class EditorApp(App):
     # ── info text ─────────────────────────────────────────────────────────────
 
     def _get_editor_info(self) -> str:
-        easyocr_file = self._easyocr_speech_page_group.ocr_prelim_groups_json_file
-        paddleocr_file = self._paddleocr_speech_page_group.ocr_prelim_groups_json_file
-        return (
-            f"Title: {BARKS_TITLES[self._title]}\n"
-            f"Volume: {self._volume}\n"
-            f"Fanta Page: {self._fanta_page}\n"
-            f'EasyOCR: "{get_abbrev_path(easyocr_file)}"\n'
-            f'PaddleOCR: "{get_abbrev_path(paddleocr_file)}"\n'
-            f'Image file: "{get_abbrev_path(self._srce_image_file)}"\n'
-        )
+        return f"{BARKS_TITLES[self._title]}  |  Volume {self._volume}  |  Page {self._fanta_page}"
 
     # ── text encode/decode ────────────────────────────────────────────────────
 
@@ -878,6 +869,17 @@ class EditorApp(App):
     def _create_editor_widget(self) -> BoxLayout:
         # Build bottom first so self._decode_checkbox is set before the diff closure runs
         bottom = self._get_bottom_layout()
+
+        # Subtitle row — one line at the top of the window
+        self._info_label = Label(
+            text=self._get_editor_info(),
+            size_hint_y=None,
+            height=28,
+            font_size="13sp",
+            halign="left",
+            valign="middle",
+        )
+        self._info_label.bind(size=self._info_label.setter("text_size"))
 
         easy_col, label_easy, ti_easy = self._get_easyocr_column()
         pad_col, label_pad, ti_pad = self._get_paddleocr_column()
@@ -912,6 +914,7 @@ class EditorApp(App):
         columns.add_widget(pad_col)
 
         content = BoxLayout(orientation="vertical", spacing=10, padding=10)
+        content.add_widget(self._info_label)
         content.add_widget(columns)
         content.add_widget(bottom)
         return content
@@ -1041,7 +1044,7 @@ class EditorApp(App):
         return col, label_paddleocr, text_input_paddleocr
 
     def _get_bottom_layout(self) -> BoxLayout:
-        outer = BoxLayout(orientation="vertical", size_hint_y=None, height=130, spacing=6)
+        outer = BoxLayout(orientation="vertical", size_hint_y=None, height=56, spacing=6)
 
         # Button row
         btn_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=50, spacing=10)
@@ -1072,37 +1075,20 @@ class EditorApp(App):
             skip_btn = Button(text="Skip", size_hint_y=None, height=50)
             skip_btn.bind(on_press=lambda _: self._handle_skip())
             btn_row.add_widget(skip_btn)
-        else:
-            btn_row.add_widget(self._get_save_exit_button())
 
-        outer.add_widget(btn_row)
-
-        # Info row: queue progress (if any) + info label
-        info_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=74, spacing=10)
-
-        if self._queue:
             queue_label = Label(
                 text=self.queue_progress_text,
                 size_hint_x=None,
-                width=130,
+                width=100,
                 font_size="16sp",
                 bold=True,
             )
             self.bind(queue_progress_text=queue_label.setter("text"))
-            info_row.add_widget(queue_label)
+            btn_row.add_widget(queue_label)
+        else:
+            btn_row.add_widget(self._get_save_exit_button())
 
-        self._info_label = Label(
-            text=self._get_editor_info(),
-            size_hint_x=1,
-            font_size="14sp",
-            halign="left",
-            valign="top",
-            padding=(6, 4),
-        )
-        self._info_label.bind(size=self._info_label.setter("text_size"))
-        info_row.add_widget(self._info_label)
-
-        outer.add_widget(info_row)
+        outer.add_widget(btn_row)
         return outer
 
     def _add_decode_checkbox(self) -> tuple[BoxLayout, CheckBox]:
