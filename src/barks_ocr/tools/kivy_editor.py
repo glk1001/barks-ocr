@@ -27,10 +27,10 @@ import barks_ocr.log_setup as _log_setup
 APP_LOGGING_NAME = "kpoe"
 
 # Set the main window size using variables
-MAIN_WINDOW_X = 2100
+MAIN_WINDOW_X = 200
 MAIN_WINDOW_Y = 20
 MAIN_WINDOW_WIDTH = 2000
-MAIN_WINDOW_HEIGHT = 1300
+MAIN_WINDOW_HEIGHT = 1480
 
 Config.set("graphics", "position", "custom")  # ty:ignore[unresolved-attribute]
 Config.set("graphics", "left", MAIN_WINDOW_X)  # ty:ignore[unresolved-attribute]
@@ -40,7 +40,8 @@ Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty:ignore[unresolved-att
 
 from kivy.app import App
 from kivy.core.image import Image as CoreImage
-from kivy.core.text import Label as CoreLabel, LabelBase
+from kivy.core.text import Label as CoreLabel
+from kivy.core.text import LabelBase
 from kivy.core.window import Window
 from kivy.graphics import Color, Ellipse, InstructionGroup, Line, Rectangle
 
@@ -71,6 +72,7 @@ if not hasattr(_TextInput, "_kivy_patch_applied"):
     # Kivy 2.3.1 bug: TextInput._update_graphics_selection calls
     # canvas._remove_group() but Canvas (Cython) only exposes remove_group().
     # Re-compile the method with the correct name.
+    # noinspection PyProtectedMember
     _src = _textwrap.dedent(_inspect.getsource(_TextInput._update_graphics_selection))  # noqa: SLF001
     _src = _src.replace("._remove_group(", ".remove_group(")
     _ns: dict = vars(_ki_textinput).copy()
@@ -253,35 +255,35 @@ class BoundingBoxCanvas(Widget):
     def set_content(
         self,
         pil_image: PilImage.Image,
-        text_box_fullpage: list,
+        text_box_full_page: list,
         crop_offset: tuple[int, int],
-        panel_bounds_fullpage: tuple[int, int, int, int] | None,
-        all_panel_bounds_fullpage: list[tuple[int, int, int, int]] | None = None,
+        panel_bounds_full_page: tuple[int, int, int, int] | None,
+        all_panel_bounds_full_page: list[tuple[int, int, int, int]] | None = None,
     ) -> None:
         """Load a new image + bounding box.  All coords in full-page PIL space.
 
-        When all_panel_bounds_fullpage is provided the canvas shows numbered
+        When all_panel_bounds_full_page is provided the canvas shows numbered
         outlines for every panel instead of a single highlighted panel boundary.
         This is used when panel_num is -1 so the user can identify the panel.
         """
         self._img_w, self._img_h = pil_image.size
         self._crop_offset = crop_offset
         ox, oy = crop_offset
-        raw = [[float(p[0]) - ox, float(p[1]) - oy] for p in text_box_fullpage]
+        raw = [[float(p[0]) - ox, float(p[1]) - oy] for p in text_box_full_page]
         # Normalize to axis-aligned rectangle: corners in TL, TR, BR, BL order.
         xs = [p[0] for p in raw]
         ys = [p[1] for p in raw]
         x0, y0, x1, y1 = min(xs), min(ys), max(xs), max(ys)
         self._text_box = [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
-        if panel_bounds_fullpage:
-            pl, pt, pr, pb = panel_bounds_fullpage
+        if panel_bounds_full_page:
+            pl, pt, pr, pb = panel_bounds_full_page
             self._panel_bounds_local = (pl - ox, pt - oy, pr - ox, pb - oy)
         else:
             self._panel_bounds_local = None
-        if all_panel_bounds_fullpage:
+        if all_panel_bounds_full_page:
             self._all_panel_bounds_local = [
                 (pl - ox, pt - oy, pr - ox, pb - oy)
-                for pl, pt, pr, pb in all_panel_bounds_fullpage
+                for pl, pt, pr, pb in all_panel_bounds_full_page
             ]
         else:
             self._all_panel_bounds_local = None
@@ -292,7 +294,7 @@ class BoundingBoxCanvas(Widget):
         self._texture = CoreImage(buf, ext="png").texture
         self._redraw()
 
-    def get_text_box_fullpage(self) -> list:
+    def get_text_box_full_page(self) -> list:
         """Return current text box in full-page PIL coords (rounded to int)."""
         if self._text_box is None:
             return []
@@ -362,10 +364,8 @@ class BoundingBoxCanvas(Widget):
             br = self._local_to_screen(pr, pb)
             bl = self._local_to_screen(pl, pb)
             g.add(Color(0.2, 0.8, 0.8, 0.7))
-            g.add(
-                Line(points=[*tl, *tr, *br, *bl, *tl], width=1.5, dash_offset=4, dash_length=8)
-            )
-            # Draw panel number at the top-left corner of each panel
+            g.add(Line(points=[*tl, *tr, *br, *bl, *tl], width=1.5, dash_offset=4, dash_length=8))
+            # Draw panel number in the top-left corner of each panel
             lbl = CoreLabel(text=str(i + 1), font_size=18, bold=True)
             lbl.refresh()
             texture = lbl.texture
@@ -455,7 +455,7 @@ class BoundingBoxCanvas(Widget):
         if self._dragging:
             self._dragging = False
             self._drag_corner = -1
-            self._on_box_changed(self.get_text_box_fullpage())
+            self._on_box_changed(self.get_text_box_full_page())
         return True
 
     @staticmethod
@@ -488,7 +488,6 @@ class EditorApp(App):
         fanta_page: int,
         easyocr_group_id: int,
         paddleocr_group_id: int,
-        panel_num: int,
         queue: list[QueueEntry] | None = None,
         queue_index: int = 0,
         initial_engine: str = "easyocr",
@@ -530,9 +529,7 @@ class EditorApp(App):
         self._volume = volume
         self._fanta_page = fanta_page
 
-        title_str, dest_page = get_title_from_volume_page(
-            self._comics_database, volume, fanta_page
-        )
+        title_str, dest_page = get_title_from_volume_page(self._comics_database, volume, fanta_page)
         self._title = BARKS_TITLE_DICT[title_str]
         dest_page_str = get_page_str(dest_page)
 
@@ -655,10 +652,10 @@ class EditorApp(App):
             cropped = full_img.crop((crop_l, crop_t, crop_r, crop_b))
             canvas.set_content(
                 pil_image=cropped,
-                text_box_fullpage=text_box,
+                text_box_full_page=text_box,
                 crop_offset=(crop_l, crop_t),
-                panel_bounds_fullpage=None,
-                all_panel_bounds_fullpage=all_panel_bounds or None,
+                panel_bounds_full_page=None,
+                all_panel_bounds_full_page=all_panel_bounds or None,
             )
         else:
             panel_bounds = get_panel_bounds_from_file(self._panel_segments_file, panel_num)
@@ -668,9 +665,9 @@ class EditorApp(App):
             cropped = full_img.crop((crop_l, crop_t, crop_r, crop_b))
             canvas.set_content(
                 pil_image=cropped,
-                text_box_fullpage=text_box,
+                text_box_full_page=text_box,
                 crop_offset=(crop_l, crop_t),
-                panel_bounds_fullpage=panel_bounds,
+                panel_bounds_full_page=panel_bounds,
             )
 
     # ── App lifecycle ─────────────────────────────────────────────────────────
@@ -697,9 +694,7 @@ class EditorApp(App):
 
     def _show_exit_popup(self) -> None:
         content = BoxLayout(orientation="vertical", padding=10, spacing=10)
-        content.add_widget(
-            Label(text="There are unsaved changes.\nAre you sure you want to exit?")
-        )
+        content.add_widget(Label(text="There are unsaved changes.\nAre you sure you want to exit?"))
         button_layout = BoxLayout(spacing=10)
 
         yes_button = Button(text="Yes, exit")
@@ -811,7 +806,11 @@ class EditorApp(App):
         self._easyocr_group_id = group_id
         speech_group = self._easyocr_speech_groups[group_id]
         self._easyocr_label = self._get_ocr_label(EASY_OCR, group_id, speech_group.panel_num)
-        self.text_str_easyocr = self._encode_for_display(speech_group.raw_ai_text)
+        self.text_str_easyocr = (
+            self._encode_for_display(speech_group.raw_ai_text)
+            if self._decode_checkbox and self._decode_checkbox.active
+            else speech_group.raw_ai_text
+        )
         self._set_easyocr_panel_num(speech_group.panel_num)
 
     def _set_easyocr_panel_num(self, panel_num: int) -> None:
@@ -829,10 +828,12 @@ class EditorApp(App):
             raise ValueError(msg)
         self._paddleocr_group_id = group_id
         speech_group = self._paddleocr_speech_groups[group_id]
-        self._paddleocr_label = self._get_ocr_label(
-            PADDLE_OCR, group_id, speech_group.panel_num
+        self._paddleocr_label = self._get_ocr_label(PADDLE_OCR, group_id, speech_group.panel_num)
+        self.text_str_paddleocr = (
+            self._encode_for_display(speech_group.raw_ai_text)
+            if self._decode_checkbox and self._decode_checkbox.active
+            else speech_group.raw_ai_text
         )
-        self.text_str_paddleocr = self._encode_for_display(speech_group.raw_ai_text)
         self._set_paddleocr_panel_num(speech_group.panel_num)
 
     def _set_paddleocr_panel_num(self, panel_num: int) -> None:
@@ -916,53 +917,47 @@ class EditorApp(App):
         return content
 
     def _get_easyocr_column(self) -> tuple[BoxLayout, Label, TextInput]:
-        """Build the EasyOCR column: panel_num row + (text col | canvas)."""
-        col = BoxLayout(orientation="vertical", spacing=6)
+        """Build the EasyOCR column: panel_num row → label → text → canvas (stacked)."""
+        col = BoxLayout(orientation="vertical", spacing=4)
 
-        # Panel num row
-        panel_num_row = BoxLayout(
-            orientation="horizontal", size_hint_y=None, height=40, spacing=6
-        )
+        # Compact panel_num row
+        panel_num_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=28, spacing=6)
         panel_num_row.add_widget(
-            Label(text="EasyOCR  Panel:", size_hint_x=0.7, font_size="16sp")
+            Label(text="EasyOCR  Panel:", size_hint_x=None, width=130, font_size="13sp")
         )
         json_groups = self._easyocr_speech_page_group.speech_page_json.get("groups", {})
         initial_panel_num = json_groups.get(self._easyocr_group_id, {}).get("panel_num", -1)
         self._easyocr_panel_num_input = TextInput(
             text=str(initial_panel_num),
             multiline=False,
-            font_size="16sp",
-            size_hint_x=0.3,
+            font_size="14sp",
+            size_hint_x=None,
+            width=55,
+            size_hint_y=None,
+            height=28,
         )
-        self._easyocr_panel_num_input.bind(
-            on_text_validate=self._on_easyocr_panel_num_confirmed
-        )
+        self._easyocr_panel_num_input.bind(on_text_validate=self._on_easyocr_panel_num_confirmed)
         self._easyocr_panel_num_input.bind(focus=self._on_easyocr_panel_num_focus)
-        self._easyocr_panel_num_input.bind(
-            text=lambda inst, val: self._update_panel_num_input_color(inst, val)
-        )
+        self._easyocr_panel_num_input.bind(text=self._update_panel_num_input_color)
         self._update_panel_num_input_color(self._easyocr_panel_num_input, str(initial_panel_num))
         panel_num_row.add_widget(self._easyocr_panel_num_input)
+        panel_num_row.add_widget(Widget())  # spacer
         col.add_widget(panel_num_row)
 
-        # Text + canvas row
-        text_canvas_row = BoxLayout(orientation="horizontal", spacing=6)
-
-        # Text column
-        text_col = BoxLayout(orientation="vertical", size_hint_x=0.45, spacing=4)
-
-        label_easyocr = Label(
-            text=self.edit_label_easyocr, bold=True, size_hint_y=None, height=30
-        )
+        # Engine label (goes red when texts differ)
+        label_easyocr = Label(text=self.edit_label_easyocr, bold=True, size_hint_y=None, height=26)
         self.bind(edit_label_easyocr=label_easyocr.setter("text"))
         label_easyocr.bind(text=self.setter("edit_label_easyocr"))
+        col.add_widget(label_easyocr)
 
+        # Short text input
         text_input_easyocr = TextInput(
             text=self.text_str_easyocr,
             font_name=OPEN_SANS_FONT,
             font_size="20sp",
             multiline=True,
-            size_hint_y=1,
+            size_hint_y=None,
+            height=350,
             padding=10,
             hint_text="Edit EasyOCR text here...",
         )
@@ -970,72 +965,63 @@ class EditorApp(App):
         text_input_easyocr.bind(text=self.setter("text_str_easyocr"))
         text_input_easyocr.bind(text=self._on_easyocr_text_changed)
         self.text_str_easyocr = self._encode_for_display(self.text_str_easyocr)
+        col.add_widget(text_input_easyocr)
 
-        text_col.add_widget(label_easyocr)
-        text_col.add_widget(text_input_easyocr)
-
-        # Canvas
+        # Canvas below text — full column width, takes all remaining vertical space
         self._easyocr_canvas = BoundingBoxCanvas(
             on_box_changed=self._on_easyocr_box_changed,
-            size_hint_x=0.55,
+            size_hint_y=1,
         )
-
-        text_canvas_row.add_widget(text_col)
-        text_canvas_row.add_widget(self._easyocr_canvas)
-        col.add_widget(text_canvas_row)
+        col.add_widget(self._easyocr_canvas)
 
         return col, label_easyocr, text_input_easyocr
 
     def _get_paddleocr_column(self) -> tuple[BoxLayout, Label, TextInput]:
-        """Build the PaddleOCR column: panel_num row + (text col | canvas)."""
-        col = BoxLayout(orientation="vertical", spacing=6)
+        """Build the PaddleOCR column: panel_num row → label → text → canvas (stacked)."""
+        col = BoxLayout(orientation="vertical", spacing=4)
 
-        # Panel num row
-        panel_num_row = BoxLayout(
-            orientation="horizontal", size_hint_y=None, height=40, spacing=6
-        )
+        # Compact panel_num row
+        panel_num_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=28, spacing=6)
         panel_num_row.add_widget(
-            Label(text="PaddleOCR  Panel:", size_hint_x=0.7, font_size="16sp")
+            Label(text="PaddleOCR  Panel:", size_hint_x=None, width=140, font_size="13sp")
         )
         json_groups = self._paddleocr_speech_page_group.speech_page_json.get("groups", {})
         initial_panel_num = json_groups.get(self._paddleocr_group_id, {}).get("panel_num", -1)
         self._paddleocr_panel_num_input = TextInput(
             text=str(initial_panel_num),
             multiline=False,
-            font_size="16sp",
-            size_hint_x=0.3,
+            font_size="14sp",
+            size_hint_x=None,
+            width=55,
+            size_hint_y=None,
+            height=28,
         )
         self._paddleocr_panel_num_input.bind(
             on_text_validate=self._on_paddleocr_panel_num_confirmed
         )
         self._paddleocr_panel_num_input.bind(focus=self._on_paddleocr_panel_num_focus)
-        self._paddleocr_panel_num_input.bind(
-            text=lambda inst, val: self._update_panel_num_input_color(inst, val)
-        )
-        self._update_panel_num_input_color(
-            self._paddleocr_panel_num_input, str(initial_panel_num)
-        )
+        self._paddleocr_panel_num_input.bind(text=self._update_panel_num_input_color)
+        self._update_panel_num_input_color(self._paddleocr_panel_num_input, str(initial_panel_num))
         panel_num_row.add_widget(self._paddleocr_panel_num_input)
+        panel_num_row.add_widget(Widget())  # spacer
         col.add_widget(panel_num_row)
 
-        # Text + canvas row
-        text_canvas_row = BoxLayout(orientation="horizontal", spacing=6)
-
-        # Text column
-        text_col = BoxLayout(orientation="vertical", size_hint_x=0.45, spacing=4)
-
+        # Engine label (goes red when texts differ)
         label_paddleocr = Label(
-            text=self.edit_label_paddleocr, bold=True, size_hint_y=None, height=30
+            text=self.edit_label_paddleocr, bold=True, size_hint_y=None, height=26
         )
         self.bind(edit_label_paddleocr=label_paddleocr.setter("text"))
         label_paddleocr.bind(text=self.setter("edit_label_paddleocr"))
+        col.add_widget(label_paddleocr)
 
+        # Short text input
         text_input_paddleocr = TextInput(
             text=self.text_str_paddleocr,
             font_name=OPEN_SANS_FONT,
             font_size="20sp",
             multiline=True,
-            size_hint_y=1,
+            size_hint_y=None,
+            height=350,
             padding=10,
             hint_text="Edit PaddleOCR text here...",
         )
@@ -1043,31 +1029,22 @@ class EditorApp(App):
         text_input_paddleocr.bind(text=self.setter("text_str_paddleocr"))
         text_input_paddleocr.bind(text=self._on_paddleocr_text_changed)
         self.text_str_paddleocr = self._encode_for_display(self.text_str_paddleocr)
+        col.add_widget(text_input_paddleocr)
 
-        text_col.add_widget(label_paddleocr)
-        text_col.add_widget(text_input_paddleocr)
-
-        # Canvas
+        # Canvas below text — full column width, takes all remaining vertical space
         self._paddleocr_canvas = BoundingBoxCanvas(
             on_box_changed=self._on_paddleocr_box_changed,
-            size_hint_x=0.55,
+            size_hint_y=1,
         )
-
-        text_canvas_row.add_widget(text_col)
-        text_canvas_row.add_widget(self._paddleocr_canvas)
-        col.add_widget(text_canvas_row)
+        col.add_widget(self._paddleocr_canvas)
 
         return col, label_paddleocr, text_input_paddleocr
 
     def _get_bottom_layout(self) -> BoxLayout:
-        outer = BoxLayout(
-            orientation="vertical", size_hint_y=None, height=130, spacing=6
-        )
+        outer = BoxLayout(orientation="vertical", size_hint_y=None, height=130, spacing=6)
 
         # Button row
-        btn_row = BoxLayout(
-            orientation="horizontal", size_hint_y=None, height=50, spacing=10
-        )
+        btn_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=50, spacing=10)
 
         # Decode checkbox
         checkbox_layout, self._decode_checkbox = self._add_decode_checkbox()
@@ -1101,9 +1078,7 @@ class EditorApp(App):
         outer.add_widget(btn_row)
 
         # Info row: queue progress (if any) + info label
-        info_row = BoxLayout(
-            orientation="horizontal", size_hint_y=None, height=74, spacing=10
-        )
+        info_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=74, spacing=10)
 
         if self._queue:
             queue_label = Label(
@@ -1293,7 +1268,7 @@ class EditorApp(App):
         # Sync text_box from canvas (panel_num already updated in json_group)
         json_group = json_groups.get(group_id)
         if json_group is not None and canvas is not None:
-            new_text_box = canvas.get_text_box_fullpage()
+            new_text_box = canvas.get_text_box_full_page()
             if new_text_box and new_text_box != json_group.get("text_box"):
                 json_group["text_box"] = new_text_box
                 changed = True
@@ -1318,9 +1293,7 @@ class EditorApp(App):
         """Prompt for confirmation, then delete the active engine's current group."""
         engine_label = "EasyOCR" if self._active_engine == "easyocr" else "PaddleOCR"
         group_id = (
-            self._easyocr_group_id
-            if self._active_engine == "easyocr"
-            else self._paddleocr_group_id
+            self._easyocr_group_id if self._active_engine == "easyocr" else self._paddleocr_group_id
         )
         self._show_confirm_popup(
             title="Delete Group",
@@ -1336,9 +1309,7 @@ class EditorApp(App):
             else self._paddleocr_speech_page_group
         )
         primary_group_id = (
-            self._easyocr_group_id
-            if self._active_engine == "easyocr"
-            else self._paddleocr_group_id
+            self._easyocr_group_id if self._active_engine == "easyocr" else self._paddleocr_group_id
         )
 
         json_groups = primary_page_group.speech_page_json.get("groups", {})
@@ -1348,8 +1319,7 @@ class EditorApp(App):
             backup_file = self._get_prelim_ocr_backup_file(ocr_file)
             primary_page_group.save_json(backup_file=backup_file)
             logger.info(
-                f'Deleted group {primary_group_id} from "{ocr_file}".'
-                f' Backup at "{backup_file}".'
+                f'Deleted group {primary_group_id} from "{ocr_file}". Backup at "{backup_file}".'
             )
 
         self._has_changes = False
@@ -1382,9 +1352,8 @@ class EditorApp(App):
                 on_confirm=self.stop,
             )
 
-    def _show_confirm_popup(
-        self, title: str, message: str, on_confirm: Callable[[], None]
-    ) -> None:
+    @staticmethod
+    def _show_confirm_popup(title: str, message: str, on_confirm: Callable[[], None]) -> None:
         content = BoxLayout(orientation="vertical", padding=10, spacing=10)
         content.add_widget(Label(text=message))
         button_layout = BoxLayout(spacing=10, size_hint_y=None, height=44)
@@ -1443,7 +1412,6 @@ def main(  # noqa: PLR0913
     fanta_page: int = typer.Option(0, help="Fanta page number (single mode)"),
     easyocr_group_id: int = typer.Option(0, help="EasyOCR group ID (single mode)"),
     paddleocr_group_id: int = typer.Option(0, help="PaddleOCR group ID (single mode)"),
-    panel_num: int = typer.Option(-1, help="Panel number override (single mode)"),
     queue_file: Path = typer.Option(  # noqa: B008
         None,
         "--queue-file",
@@ -1472,7 +1440,6 @@ def main(  # noqa: PLR0913
             fanta_page=first.fanta_page,
             easyocr_group_id=first.group_id if first.engine == "easyocr" else 0,
             paddleocr_group_id=first.group_id if first.engine == "paddleocr" else 0,
-            panel_num=-1,
             queue=queue,
             queue_index=0,
             initial_engine=first.engine,
@@ -1486,7 +1453,6 @@ def main(  # noqa: PLR0913
             fanta_page=fanta_page,
             easyocr_group_id=easyocr_group_id,
             paddleocr_group_id=paddleocr_group_id,
-            panel_num=panel_num,
             initial_engine=primary_engine,
         ).run()
 
