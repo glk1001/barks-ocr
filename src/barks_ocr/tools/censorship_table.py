@@ -3,7 +3,7 @@ from pathlib import Path
 
 import polars as pl
 from great_tables import GT, html, loc, md, style
-from PIL import Image
+from PIL import Image, ImageChops
 
 ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 CSV_DIR = ROOT_DIR / "Projects" / "Barks Reader"
@@ -96,6 +96,23 @@ def split_rows_into_pages(pg_size: int, rows: list, first_page_reduction: int = 
     return pages
 
 
+def _remove_white_background(image_file: Path, threshold: int = 127) -> None:
+    """Replace near-white pixels with transparency in-place."""
+    img = Image.open(image_file).convert("RGBA")
+    r, g, b, _ = img.split()
+    # Build a mask that is 255 where all three channels exceed the threshold.
+    is_white = ImageChops.multiply(
+        ImageChops.multiply(
+            r.point(lambda v: 255 if v > threshold else 0),
+            g.point(lambda v: 255 if v > threshold else 0),
+        ),
+        b.point(lambda v: 255 if v > threshold else 0),
+    )
+    # Invert: white pixels → alpha=0 (transparent), others → alpha=255 (opaque).
+    img.putalpha(is_white.point(lambda v: 255 - v))
+    img.save(image_file)
+
+
 def main() -> None:
     page_size = 36
     file = CSV_DIR / "censorship-fixes-simple.csv"
@@ -124,7 +141,7 @@ def main() -> None:
 
         image_file = Path(f"/tmp/censorship-fixes-page-{page}.png")  # noqa: S108
         gt_table.save(str(image_file), scale=2.5, expand=10)
-        Image.open(image_file).convert("RGBA").save(image_file)
+        _remove_white_background(image_file)
 
         if page == 1:
             break  # noqa: ERA001
