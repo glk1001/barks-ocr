@@ -40,7 +40,7 @@ Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty:ignore[unresolved-att
 
 from kivy.app import App
 from kivy.core.image import Image as CoreImage
-from kivy.core.text import LabelBase
+from kivy.core.text import Label as CoreLabel, LabelBase
 from kivy.core.window import Window
 from kivy.graphics import Color, Ellipse, InstructionGroup, Line, Rectangle
 
@@ -94,6 +94,8 @@ MAX_NUM_PANELS = 8
 
 # Pixels of context padding around the enlarged crop region
 CROP_PADDING = 150
+# Extra padding used when panel_num is -1 (unassigned) — shows more page context
+CROP_PADDING_UNKNOWN = 400
 # Screen-space radius (px) for corner drag handles on the bounding box
 HANDLE_RADIUS = 14
 
@@ -160,6 +162,22 @@ def get_panel_bounds_from_file(
     return left, top, left + pb[2], top + pb[3]
 
 
+def get_all_panel_bounds_from_file(
+    segments_file: Path,
+) -> list[tuple[int, int, int, int]]:
+    """Return (left, top, right, bottom) for every panel in the segments file."""
+    if not segments_file.is_file():
+        return []
+    with segments_file.open() as f:
+        info = json.load(f)
+    panels = info.get("panels", [])
+    result = []
+    for pb in panels:
+        left, top = pb[0], pb[1]
+        result.append((left, top, left + pb[2], top + pb[3]))
+    return result
+
+
 def compute_crop_region(
     img_w: int,
     img_h: int,
@@ -208,6 +226,8 @@ class BoundingBoxCanvas(Widget):
         self._crop_offset: tuple[int, int] = (0, 0)
         self._text_box: list | None = None  # crop-local PIL coords
         self._panel_bounds_local: tuple[int, int, int, int] | None = None
+        # Set when panel_num is -1: all panels drawn as numbered overlays
+        self._all_panel_bounds_local: list[tuple[int, int, int, int]] | None = None
 
         self._on_box_changed = on_box_changed
 
@@ -236,8 +256,14 @@ class BoundingBoxCanvas(Widget):
         text_box_fullpage: list,
         crop_offset: tuple[int, int],
         panel_bounds_fullpage: tuple[int, int, int, int] | None,
+        all_panel_bounds_fullpage: list[tuple[int, int, int, int]] | None = None,
     ) -> None:
-        """Load a new image + bounding box.  All coords in full-page PIL space."""
+        """Load a new image + bounding box.  All coords in full-page PIL space.
+
+        When all_panel_bounds_fullpage is provided the canvas shows numbered
+        outlines for every panel instead of a single highlighted panel boundary.
+        This is used when panel_num is -1 so the user can identify the panel.
+        """
         self._img_w, self._img_h = pil_image.size
         self._crop_offset = crop_offset
         ox, oy = crop_offset
@@ -252,6 +278,13 @@ class BoundingBoxCanvas(Widget):
             self._panel_bounds_local = (pl - ox, pt - oy, pr - ox, pb - oy)
         else:
             self._panel_bounds_local = None
+        if all_panel_bounds_fullpage:
+            self._all_panel_bounds_local = [
+                (pl - ox, pt - oy, pr - ox, pb - oy)
+                for pl, pt, pr, pb in all_panel_bounds_fullpage
+            ]
+        else:
+            self._all_panel_bounds_local = None
 
         buf = BytesIO()
         pil_image.save(buf, format="png")
@@ -305,7 +338,9 @@ class BoundingBoxCanvas(Widget):
                 size=(self._img_w * self._scale, self._img_h * self._scale),
             )
         )
-        if self._panel_bounds_local:
+        if self._all_panel_bounds_local:
+            self._draw_all_panel_bounds(g)
+        elif self._panel_bounds_local:
             self._draw_panel_bounds(g)
         if self._text_box:
             self._draw_text_box(g)
@@ -318,6 +353,31 @@ class BoundingBoxCanvas(Widget):
         bl = self._local_to_screen(pl, pb)
         g.add(Color(0.2, 0.5, 1.0, 0.8))
         g.add(Line(points=[*tl, *tr, *br, *bl, *tl], width=2, dash_offset=6, dash_length=12))
+
+    def _draw_all_panel_bounds(self, g: InstructionGroup) -> None:
+        """Draw all panel outlines with numbered labels (used when panel_num is -1)."""
+        for i, (pl, pt, pr, pb) in enumerate(self._all_panel_bounds_local):
+            tl = self._local_to_screen(pl, pt)
+            tr = self._local_to_screen(pr, pt)
+            br = self._local_to_screen(pr, pb)
+            bl = self._local_to_screen(pl, pb)
+            g.add(Color(0.2, 0.8, 0.8, 0.7))
+            g.add(
+                Line(points=[*tl, *tr, *br, *bl, *tl], width=1.5, dash_offset=4, dash_length=8)
+            )
+            # Draw panel number at the top-left corner of each panel
+            lbl = CoreLabel(text=str(i + 1), font_size=18, bold=True)
+            lbl.refresh()
+            texture = lbl.texture
+            if texture:
+                # tl is the visual top of the panel (high Kivy y); place label inside
+                tx = tl[0] + 4
+                ty = tl[1] - texture.height - 4
+                # Dark background for readability
+                g.add(Color(0, 0, 0, 0.6))
+                g.add(Rectangle(pos=(tx - 2, ty - 2), size=(texture.width + 4, texture.height + 4)))
+                g.add(Color(0.2, 1.0, 1.0, 1.0))
+                g.add(Rectangle(texture=texture, pos=(tx, ty), size=texture.size))
 
     def _draw_text_box(self, g: InstructionGroup) -> None:
         pts = [self._local_to_screen(p[0], p[1]) for p in self._text_box]
@@ -586,18 +646,32 @@ class EditorApp(App):
         full_img = load_pil_image_for_reading(self._srce_image_file)
         img_w, img_h = full_img.size
 
-        panel_bounds = get_panel_bounds_from_file(self._panel_segments_file, panel_num)
-        crop_l, crop_t, crop_r, crop_b = compute_crop_region(
-            img_w, img_h, panel_bounds, text_box
-        )
-        cropped = full_img.crop((crop_l, crop_t, crop_r, crop_b))
-
-        canvas.set_content(
-            pil_image=cropped,
-            text_box_fullpage=text_box,
-            crop_offset=(crop_l, crop_t),
-            panel_bounds_fullpage=panel_bounds,
-        )
+        if panel_num <= 0:
+            # Unknown panel: show wider crop and overlay all panel outlines
+            all_panel_bounds = get_all_panel_bounds_from_file(self._panel_segments_file)
+            crop_l, crop_t, crop_r, crop_b = compute_crop_region(
+                img_w, img_h, None, text_box, padding=CROP_PADDING_UNKNOWN
+            )
+            cropped = full_img.crop((crop_l, crop_t, crop_r, crop_b))
+            canvas.set_content(
+                pil_image=cropped,
+                text_box_fullpage=text_box,
+                crop_offset=(crop_l, crop_t),
+                panel_bounds_fullpage=None,
+                all_panel_bounds_fullpage=all_panel_bounds or None,
+            )
+        else:
+            panel_bounds = get_panel_bounds_from_file(self._panel_segments_file, panel_num)
+            crop_l, crop_t, crop_r, crop_b = compute_crop_region(
+                img_w, img_h, panel_bounds, text_box
+            )
+            cropped = full_img.crop((crop_l, crop_t, crop_r, crop_b))
+            canvas.set_content(
+                pil_image=cropped,
+                text_box_fullpage=text_box,
+                crop_offset=(crop_l, crop_t),
+                panel_bounds_fullpage=panel_bounds,
+            )
 
     # ── App lifecycle ─────────────────────────────────────────────────────────
 
@@ -710,6 +784,15 @@ class EditorApp(App):
             json_group["panel_num"] = new_num
             self._load_paddleocr_canvas_content()
             self._has_changes = True
+
+    @staticmethod
+    def _update_panel_num_input_color(instance: TextInput, value: str) -> None:
+        """Color the panel_num TextInput background red when the value is -1."""
+        try:
+            is_unassigned = int(value.strip()) < 0
+        except ValueError:
+            is_unassigned = True
+        instance.background_color = (1.0, 0.4, 0.4, 1) if is_unassigned else (1, 1, 1, 1)
 
     def _on_easyocr_panel_num_focus(self, instance: TextInput, focused: bool) -> None:
         if not focused:
@@ -855,6 +938,10 @@ class EditorApp(App):
             on_text_validate=self._on_easyocr_panel_num_confirmed
         )
         self._easyocr_panel_num_input.bind(focus=self._on_easyocr_panel_num_focus)
+        self._easyocr_panel_num_input.bind(
+            text=lambda inst, val: self._update_panel_num_input_color(inst, val)
+        )
+        self._update_panel_num_input_color(self._easyocr_panel_num_input, str(initial_panel_num))
         panel_num_row.add_widget(self._easyocr_panel_num_input)
         col.add_widget(panel_num_row)
 
@@ -922,6 +1009,12 @@ class EditorApp(App):
             on_text_validate=self._on_paddleocr_panel_num_confirmed
         )
         self._paddleocr_panel_num_input.bind(focus=self._on_paddleocr_panel_num_focus)
+        self._paddleocr_panel_num_input.bind(
+            text=lambda inst, val: self._update_panel_num_input_color(inst, val)
+        )
+        self._update_panel_num_input_color(
+            self._paddleocr_panel_num_input, str(initial_panel_num)
+        )
         panel_num_row.add_widget(self._paddleocr_panel_num_input)
         col.add_widget(panel_num_row)
 
