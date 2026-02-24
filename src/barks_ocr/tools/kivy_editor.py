@@ -490,14 +490,12 @@ class EditorApp(App):
         paddleocr_group_id: int,
         queue: list[QueueEntry] | None = None,
         queue_index: int = 0,
-        initial_engine: str = "easyocr",
     ) -> None:
         super().__init__()
 
         self._comics_database = ComicsDatabase()
         self._queue = queue
         self._queue_index = queue_index
-        self._active_engine = initial_engine  # used for delete tracking
 
         # Mutable UI references — set during build()
         self._easyocr_canvas: BoundingBoxCanvas | None = None
@@ -563,7 +561,6 @@ class EditorApp(App):
         """Load the queue entry at *index* and refresh the entire UI."""
         entry = self._queue[index]
         self._queue_index = index
-        self._active_engine = entry.engine
         self._has_changes = False
 
         fanta_page_str = get_page_str(entry.fanta_page)
@@ -874,10 +871,11 @@ class EditorApp(App):
         self._info_label = Label(
             text=self._get_editor_info(),
             size_hint_y=None,
-            height=28,
-            font_size="13sp",
-            halign="left",
+            height=38,
+            font_size="16sp",
+            halign="center",
             valign="middle",
+            color=(1, 1, 0, 1),
         )
         self._info_label.bind(size=self._info_label.setter("text_size"))
 
@@ -913,7 +911,7 @@ class EditorApp(App):
         columns.add_widget(easy_col)
         columns.add_widget(pad_col)
 
-        content = BoxLayout(orientation="vertical", spacing=10, padding=10)
+        content = BoxLayout(orientation="vertical", spacing=18, padding=10)
         content.add_widget(self._info_label)
         content.add_widget(columns)
         content.add_widget(bottom)
@@ -970,7 +968,17 @@ class EditorApp(App):
         self.text_str_easyocr = self._encode_for_display(self.text_str_easyocr)
         col.add_widget(text_input_easyocr)
 
-        # Canvas below text — full column width, takes all remaining vertical space
+        # Per-engine action buttons
+        easy_btn_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=36, spacing=6)
+        select_easy_btn = Button(text="Select EasyOCR Item", size_hint_y=None, height=36)
+        select_easy_btn.bind(on_press=self._show_easyocr_speech_item_popup)
+        easy_btn_row.add_widget(select_easy_btn)
+        delete_easy_btn = Button(text="Delete EasyOCR", size_hint_y=None, height=36)
+        delete_easy_btn.bind(on_press=self._handle_easyocr_delete)
+        easy_btn_row.add_widget(delete_easy_btn)
+        col.add_widget(easy_btn_row)
+
+        # Canvas below buttons — full column width, takes all remaining vertical space
         self._easyocr_canvas = BoundingBoxCanvas(
             on_box_changed=self._on_easyocr_box_changed,
             size_hint_y=1,
@@ -1034,7 +1042,17 @@ class EditorApp(App):
         self.text_str_paddleocr = self._encode_for_display(self.text_str_paddleocr)
         col.add_widget(text_input_paddleocr)
 
-        # Canvas below text — full column width, takes all remaining vertical space
+        # Per-engine action buttons
+        pad_btn_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=36, spacing=6)
+        select_pad_btn = Button(text="Select PaddleOCR Item", size_hint_y=None, height=36)
+        select_pad_btn.bind(on_press=self._show_paddleocr_speech_item_popup)
+        pad_btn_row.add_widget(select_pad_btn)
+        delete_pad_btn = Button(text="Delete PaddleOCR", size_hint_y=None, height=36)
+        delete_pad_btn.bind(on_press=self._handle_paddleocr_delete)
+        pad_btn_row.add_widget(delete_pad_btn)
+        col.add_widget(pad_btn_row)
+
+        # Canvas below buttons — full column width, takes all remaining vertical space
         self._paddleocr_canvas = BoundingBoxCanvas(
             on_box_changed=self._on_paddleocr_box_changed,
             size_hint_y=1,
@@ -1044,52 +1062,40 @@ class EditorApp(App):
         return col, label_paddleocr, text_input_paddleocr
 
     def _get_bottom_layout(self) -> BoxLayout:
-        outer = BoxLayout(orientation="vertical", size_hint_y=None, height=56, spacing=6)
+        # Single global bar: checkbox on the left, save/skip on the right
+        row = BoxLayout(orientation="horizontal", size_hint_y=None, height=44, spacing=10)
 
-        # Button row
-        btn_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=50, spacing=10)
-
-        # Decode checkbox
         checkbox_layout, self._decode_checkbox = self._add_decode_checkbox()
         checkbox_layout.size_hint_x = None
-        checkbox_layout.width = 200
-        btn_row.add_widget(checkbox_layout)
+        checkbox_layout.width = 160
+        row.add_widget(checkbox_layout)
 
-        select_btn = Button(text="Select EasyOCR Item", size_hint_y=None, height=50)
-        select_btn.bind(on_press=self._show_easyocr_speech_item_popup)
-        btn_row.add_widget(select_btn)
-
-        select_btn2 = Button(text="Select PaddleOCR Item", size_hint_y=None, height=50)
-        select_btn2.bind(on_press=self._show_paddleocr_speech_item_popup)
-        btn_row.add_widget(select_btn2)
-
-        delete_btn = Button(text="Delete Group", size_hint_y=None, height=50)
-        delete_btn.bind(on_press=self._handle_delete)
-        btn_row.add_widget(delete_btn)
+        row.add_widget(Widget())  # spacer
 
         if self._queue:
-            save_next_btn = Button(text="Save & Next", size_hint_y=None, height=50)
+            save_next_btn = Button(
+                text="Save & Next", size_hint_x=None, width=150, size_hint_y=None, height=44
+            )
             save_next_btn.bind(on_press=lambda _: self._handle_save_and_next())
-            btn_row.add_widget(save_next_btn)
+            row.add_widget(save_next_btn)
 
-            skip_btn = Button(text="Skip", size_hint_y=None, height=50)
+            skip_btn = Button(text="Skip", size_hint_x=None, width=90, size_hint_y=None, height=44)
             skip_btn.bind(on_press=lambda _: self._handle_skip())
-            btn_row.add_widget(skip_btn)
+            row.add_widget(skip_btn)
 
             queue_label = Label(
                 text=self.queue_progress_text,
                 size_hint_x=None,
                 width=100,
-                font_size="16sp",
+                font_size="15sp",
                 bold=True,
             )
             self.bind(queue_progress_text=queue_label.setter("text"))
-            btn_row.add_widget(queue_label)
+            row.add_widget(queue_label)
         else:
-            btn_row.add_widget(self._get_save_exit_button())
+            row.add_widget(self._get_save_exit_button())
 
-        outer.add_widget(btn_row)
-        return outer
+        return row
 
     def _add_decode_checkbox(self) -> tuple[BoxLayout, CheckBox]:
         checkbox_layout = BoxLayout(orientation="horizontal", size_hint_y=None, height=30)
@@ -1167,7 +1173,6 @@ class EditorApp(App):
         ]
 
     def _on_easyocr_speech_item_selected(self, speech_item: SpeechItem) -> None:
-        self._active_engine = "easyocr"
         self._set_easyocr_group_id(speech_item.group_id)
         self._load_easyocr_canvas_content()
 
@@ -1178,14 +1183,13 @@ class EditorApp(App):
         ]
 
     def _on_paddleocr_speech_item_selected(self, speech_item: SpeechItem) -> None:
-        self._active_engine = "paddleocr"
         self._set_paddleocr_group_id(speech_item.group_id)
         self._load_paddleocr_canvas_content()
 
     # ── save / delete / navigation ────────────────────────────────────────────
 
     def _get_save_exit_button(self) -> Button:
-        btn = Button(text="Save & Exit", size_hint_y=None, height=50)
+        btn = Button(text="Save & Exit", size_hint_x=None, width=150, size_hint_y=None, height=46)
 
         def on_save(_instance: Button) -> None:
             self._handle_save()
@@ -1275,66 +1279,69 @@ class EditorApp(App):
         self._has_changes = False
         self._advance_queue()
 
-    def _handle_delete(self, _instance: object = None) -> None:
-        """Prompt for confirmation, then delete the active engine's current group."""
-        engine_label = "EasyOCR" if self._active_engine == "easyocr" else "PaddleOCR"
-        group_id = (
-            self._easyocr_group_id if self._active_engine == "easyocr" else self._paddleocr_group_id
-        )
-        self._show_confirm_popup(
-            title="Delete Group",
-            message=f"Delete {engine_label} group {group_id}?\nThis cannot be undone.",
-            on_confirm=self._do_delete,
+    def _handle_easyocr_delete(self, _instance: object = None) -> None:
+        self._do_easyocr_delete()
+
+    def _handle_paddleocr_delete(self, _instance: object = None) -> None:
+        self._do_paddleocr_delete()
+
+    def _do_easyocr_delete(self) -> None:
+        self._do_delete(
+            page_group=self._easyocr_speech_page_group,
+            speech_groups=self._easyocr_speech_groups,
+            group_id=self._easyocr_group_id,
+            load_next=self._load_next_easyocr_group_after_delete,
         )
 
-    def _do_delete(self) -> None:
-        """Perform the deletion after user confirmation."""
-        primary_page_group = (
-            self._easyocr_speech_page_group
-            if self._active_engine == "easyocr"
-            else self._paddleocr_speech_page_group
-        )
-        primary_group_id = (
-            self._easyocr_group_id if self._active_engine == "easyocr" else self._paddleocr_group_id
+    def _do_paddleocr_delete(self) -> None:
+        self._do_delete(
+            page_group=self._paddleocr_speech_page_group,
+            speech_groups=self._paddleocr_speech_groups,
+            group_id=self._paddleocr_group_id,
+            load_next=self._load_next_paddleocr_group_after_delete,
         )
 
-        json_groups = primary_page_group.speech_page_json.get("groups", {})
-        if primary_group_id in json_groups:
-            del json_groups[primary_group_id]
-            ocr_file = primary_page_group.ocr_prelim_groups_json_file
-            backup_file = self._get_prelim_ocr_backup_file(ocr_file)
-            primary_page_group.save_json(backup_file=backup_file)
-            logger.info(
-                f'Deleted group {primary_group_id} from "{ocr_file}". Backup at "{backup_file}".'
-            )
+    def _do_delete(
+        self, page_group: object, speech_groups: dict, group_id: str, load_next: Callable[[], None]
+    ) -> None:
+        """Remove group from in-memory JSON and speech_groups; save happens via normal save path."""
+        json_groups = page_group.speech_page_json.get("groups", {})
+        if group_id in json_groups:
+            del json_groups[group_id]
+        speech_groups.pop(group_id, None)
+        logger.info(f"Deleted group {group_id} from in-memory data (not yet saved).")
 
-        self._has_changes = False
+        self._has_changes = True
 
         if self._queue:
-            self._advance_queue()
+            # Must save before advancing — the next entry loads a fresh page and resets state.
+            self._handle_save_and_next()
         else:
-            self._load_next_group_after_delete(primary_group_id)
+            load_next()
 
-    def _load_next_group_after_delete(self, deleted_group_id: str) -> None:
-        """After a non-queue delete, load the next available group or close."""
-        groups = (
-            self._easyocr_speech_groups
-            if self._active_engine == "easyocr"
-            else self._paddleocr_speech_groups
-        )
-        remaining = [gid for gid in groups if gid != deleted_group_id]
+    def _load_next_easyocr_group_after_delete(self) -> None:
+        remaining = [gid for gid in self._easyocr_speech_groups if gid != self._easyocr_group_id]
         if remaining:
-            next_id = remaining[0]
-            if self._active_engine == "easyocr":
-                self._set_easyocr_group_id(next_id)
-                self._load_easyocr_canvas_content()
-            else:
-                self._set_paddleocr_group_id(next_id)
-                self._load_paddleocr_canvas_content()
+            self._set_easyocr_group_id(remaining[0])
+            self._load_easyocr_canvas_content()
         else:
             self._show_confirm_popup(
                 title="No Groups Remaining",
-                message="All groups have been deleted.\nClose the editor?",
+                message="All EasyOCR groups have been deleted.\nClose the editor?",
+                on_confirm=self.stop,
+            )
+
+    def _load_next_paddleocr_group_after_delete(self) -> None:
+        remaining = [
+            gid for gid in self._paddleocr_speech_groups if gid != self._paddleocr_group_id
+        ]
+        if remaining:
+            self._set_paddleocr_group_id(remaining[0])
+            self._load_paddleocr_canvas_content()
+        else:
+            self._show_confirm_popup(
+                title="No Groups Remaining",
+                message="All PaddleOCR groups have been deleted.\nClose the editor?",
                 on_confirm=self.stop,
             )
 
@@ -1403,11 +1410,6 @@ def main(  # noqa: PLR0913
         "--queue-file",
         help="Queue file: one 'volume page engine group_id' per line",
     ),
-    primary_engine: str = typer.Option(
-        "easyocr",
-        "--primary",
-        help="Initial active engine for delete operations: easyocr or paddleocr",
-    ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
     _log_setup.log_level = log_level_str
@@ -1428,7 +1430,6 @@ def main(  # noqa: PLR0913
             paddleocr_group_id=first.group_id if first.engine == "paddleocr" else 0,
             queue=queue,
             queue_index=0,
-            initial_engine=first.engine,
         ).run()
     else:
         if not volume or not fanta_page:
@@ -1439,7 +1440,6 @@ def main(  # noqa: PLR0913
             fanta_page=fanta_page,
             easyocr_group_id=easyocr_group_id,
             paddleocr_group_id=paddleocr_group_id,
-            initial_engine=primary_engine,
         ).run()
 
 
