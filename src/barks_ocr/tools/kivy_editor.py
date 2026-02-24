@@ -802,7 +802,7 @@ class EditorApp(App):
             raise ValueError(msg)
         self._easyocr_group_id = group_id
         speech_group = self._easyocr_speech_groups[group_id]
-        self._easyocr_label = self._get_ocr_label(EASY_OCR, group_id, speech_group.panel_num)
+        self._easyocr_label = self._get_ocr_label(EASY_OCR, group_id)
         self.text_str_easyocr = (
             self._encode_for_display(speech_group.raw_ai_text)
             if self._decode_checkbox and self._decode_checkbox.active
@@ -825,7 +825,7 @@ class EditorApp(App):
             raise ValueError(msg)
         self._paddleocr_group_id = group_id
         speech_group = self._paddleocr_speech_groups[group_id]
-        self._paddleocr_label = self._get_ocr_label(PADDLE_OCR, group_id, speech_group.panel_num)
+        self._paddleocr_label = self._get_ocr_label(PADDLE_OCR, group_id)
         self.text_str_paddleocr = (
             self._encode_for_display(speech_group.raw_ai_text)
             if self._decode_checkbox and self._decode_checkbox.active
@@ -843,8 +843,8 @@ class EditorApp(App):
             self._paddleocr_panel_num_input.text = str(panel_num)
 
     @staticmethod
-    def _get_ocr_label(ocr_name: str, group_id: str, panel_num: int) -> str:
-        return f"{ocr_name}: group_id: {group_id}; panel: {panel_num}"
+    def _get_ocr_label(ocr_name: str, group_id: str) -> str:
+        return f"{ocr_name}: group_id: {group_id}"
 
     # ── info text ─────────────────────────────────────────────────────────────
 
@@ -921,11 +921,20 @@ class EditorApp(App):
         """Build the EasyOCR column: panel_num row → label → text → canvas (stacked)."""
         col = BoxLayout(orientation="vertical", spacing=4)
 
-        # Compact panel_num row
-        panel_num_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=28, spacing=6)
-        panel_num_row.add_widget(
-            Label(text="EasyOCR  Panel:", size_hint_x=None, width=130, font_size="13sp")
+        # Header row: engine label (left) + panel_num input (right)
+        header_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=28, spacing=6)
+        label_easyocr = Label(
+            text=self.edit_label_easyocr,
+            bold=True,
+            size_hint_x=1,
+            halign="left",
+            valign="middle",
         )
+        label_easyocr.bind(size=label_easyocr.setter("text_size"))
+        self.bind(edit_label_easyocr=label_easyocr.setter("text"))
+        label_easyocr.bind(text=self.setter("edit_label_easyocr"))
+        header_row.add_widget(label_easyocr)
+        header_row.add_widget(Label(text="panel:", size_hint_x=None, width=50, font_size="13sp"))
         json_groups = self._easyocr_speech_page_group.speech_page_json.get("groups", {})
         initial_panel_num = json_groups.get(self._easyocr_group_id, {}).get("panel_num", -1)
         self._easyocr_panel_num_input = TextInput(
@@ -941,15 +950,8 @@ class EditorApp(App):
         self._easyocr_panel_num_input.bind(focus=self._on_easyocr_panel_num_focus)
         self._easyocr_panel_num_input.bind(text=self._update_panel_num_input_color)
         self._update_panel_num_input_color(self._easyocr_panel_num_input, str(initial_panel_num))
-        panel_num_row.add_widget(self._easyocr_panel_num_input)
-        panel_num_row.add_widget(Widget())  # spacer
-        col.add_widget(panel_num_row)
-
-        # Engine label (goes red when texts differ)
-        label_easyocr = Label(text=self.edit_label_easyocr, bold=True, size_hint_y=None, height=26)
-        self.bind(edit_label_easyocr=label_easyocr.setter("text"))
-        label_easyocr.bind(text=self.setter("edit_label_easyocr"))
-        col.add_widget(label_easyocr)
+        header_row.add_widget(self._easyocr_panel_num_input)
+        col.add_widget(header_row)
 
         # Short text input
         text_input_easyocr = TextInput(
@@ -991,11 +993,20 @@ class EditorApp(App):
         """Build the PaddleOCR column: panel_num row → label → text → canvas (stacked)."""
         col = BoxLayout(orientation="vertical", spacing=4)
 
-        # Compact panel_num row
-        panel_num_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=28, spacing=6)
-        panel_num_row.add_widget(
-            Label(text="PaddleOCR  Panel:", size_hint_x=None, width=140, font_size="13sp")
+        # Header row: engine label (left) + panel_num input (right)
+        header_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=28, spacing=6)
+        label_paddleocr = Label(
+            text=self.edit_label_paddleocr,
+            bold=True,
+            size_hint_x=1,
+            halign="left",
+            valign="middle",
         )
+        label_paddleocr.bind(size=label_paddleocr.setter("text_size"))
+        self.bind(edit_label_paddleocr=label_paddleocr.setter("text"))
+        label_paddleocr.bind(text=self.setter("edit_label_paddleocr"))
+        header_row.add_widget(label_paddleocr)
+        header_row.add_widget(Label(text="panel:", size_hint_x=None, width=50, font_size="13sp"))
         json_groups = self._paddleocr_speech_page_group.speech_page_json.get("groups", {})
         initial_panel_num = json_groups.get(self._paddleocr_group_id, {}).get("panel_num", -1)
         self._paddleocr_panel_num_input = TextInput(
@@ -1013,17 +1024,8 @@ class EditorApp(App):
         self._paddleocr_panel_num_input.bind(focus=self._on_paddleocr_panel_num_focus)
         self._paddleocr_panel_num_input.bind(text=self._update_panel_num_input_color)
         self._update_panel_num_input_color(self._paddleocr_panel_num_input, str(initial_panel_num))
-        panel_num_row.add_widget(self._paddleocr_panel_num_input)
-        panel_num_row.add_widget(Widget())  # spacer
-        col.add_widget(panel_num_row)
-
-        # Engine label (goes red when texts differ)
-        label_paddleocr = Label(
-            text=self.edit_label_paddleocr, bold=True, size_hint_y=None, height=26
-        )
-        self.bind(edit_label_paddleocr=label_paddleocr.setter("text"))
-        label_paddleocr.bind(text=self.setter("edit_label_paddleocr"))
-        col.add_widget(label_paddleocr)
+        header_row.add_widget(self._paddleocr_panel_num_input)
+        col.add_widget(header_row)
 
         # Short text input
         text_input_paddleocr = TextInput(
