@@ -96,14 +96,14 @@ def split_rows_into_pages(pg_size: int, rows: list, first_page_reduction: int = 
 
 
 def main() -> None:
-    page_size = 32
+    page_size = 36
     file = CSV_DIR / "censorship-fixes-simple.csv"
     with file.open("r", newline="") as csvfile:
         csv_reader = csv.reader(csvfile)
         header = next(csv_reader)
         csv_rows = list(csv_reader)
 
-    pages = split_rows_into_pages(page_size, csv_rows, first_page_reduction=0)
+    pages = split_rows_into_pages(page_size, csv_rows, first_page_reduction=4)
     num_pages = len(pages)
 
     # Break a censorship fixes list into pages with white backgrounds.
