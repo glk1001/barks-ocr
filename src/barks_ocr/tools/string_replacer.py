@@ -1,4 +1,4 @@
-# ruff: noqa: T201
+# ruff: noqa: T201, ERA001
 
 import codecs
 import re
@@ -23,7 +23,7 @@ SKIP_PREFIXES = {
 
 
 class PageCleaner:
-    def __init__(
+    def __init__(  # noqa: PLR0913
         self,
         dry_run: bool,
         speech_page_group: SpeechPageGroup,
@@ -276,7 +276,7 @@ class PrelimOCRCleaner:
             f" lines modified: {self._lines_process_count}.\n"
         )
 
-    def _replace_string_in_title(
+    def _replace_string_in_title(  # noqa: PLR0913
         self,
         title_str: str,
         speech_page_groups: list[SpeechPageGroup],

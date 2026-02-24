@@ -10,8 +10,9 @@ from barks_fantagraphics.comics_utils import get_timestamp_str
 from barks_fantagraphics.ocr_file_paths import OCR_FIXES_BACKUP_DIR, OCR_FIXES_DIR
 from comic_utils.common_typer_options import LogLevelArg, PagesArg, TitleArg
 from loguru import logger
-import barks_ocr.log_setup as _log_setup
 from loguru_config import LoguruConfig
+
+import barks_ocr.log_setup as _log_setup
 
 _RESOURCES = Path(__file__).parent.parent / "resources"
 
@@ -60,7 +61,7 @@ def replace_right_text(
     replace_text(comics_database, title, 1, page, group_id, rep_text=rep_text)
 
 
-def replace_text(
+def replace_text(  # noqa: PLR0913
     comics_database: ComicsDatabase,
     title: str,
     ocr_index: int,
@@ -141,7 +142,7 @@ app = typer.Typer()
 
 
 @app.command(help="Run easyocr and paddleocr on restored titles")
-def main(
+def main(  # noqa: PLR0913
     title_str: TitleArg = "",
     page: PagesArg = "",
     group: str = "",

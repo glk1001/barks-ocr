@@ -10,8 +10,9 @@ from barks_fantagraphics.ocr_file_paths import get_ocr_prelim_annotated_filename
 from barks_fantagraphics.speech_groupers import OcrTypes
 from comic_utils.common_typer_options import LogLevelArg, PagesArg, VolumesArg
 from intspan import intspan
-import barks_ocr.log_setup as _log_setup
 from loguru_config import LoguruConfig
+
+import barks_ocr.log_setup as _log_setup
 
 _RESOURCES = Path(__file__).parent.parent / "resources"
 

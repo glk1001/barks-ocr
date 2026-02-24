@@ -13,7 +13,7 @@ app = typer.Typer()
 
 
 @app.command()
-def main(title_name: str, verbose: bool = True) -> None:
+def main(title_name: str, verbose: bool = True) -> None:  # noqa: C901, PLR0912, PLR0915
     """Compare EasyOCR and PaddleOCR text for a given title."""
     try:
         title = BARKS_TITLE_DICT[title_name]
@@ -69,10 +69,6 @@ def main(title_name: str, verbose: bool = True) -> None:
 
             pt_easy_speech_list = easy_panel_groups[panel_num]
             pt_paddle_speech_list = paddle_panel_groups[panel_num]
-
-            # print("easy", pt_easy_speech_list)
-            # print("paddle", pt_paddle_speech_list)
-            # print("zip", list(zip_longest(pt_easy_speech_list, pt_paddle_speech_list)))
 
             for txt_easy, txt_paddle in zip_longest(pt_easy_speech_list, pt_paddle_speech_list):
                 if not txt_easy:

@@ -2,7 +2,7 @@ import csv
 from pathlib import Path
 
 import polars as pl
-from great_tables import GT, html, loc, md, style
+from great_tables import GT, html, loc, style
 from PIL import Image, ImageChops
 
 ROOT_DIR = Path("/home/greg/Books/Carl Barks")
@@ -51,10 +51,6 @@ def get_censorship_fixes_table(file: Path) -> GT:
         style=style.text(style="italic", weight=500),  # ty: ignore[invalid-argument-type]
         locations=[loc.body(columns=col_name) for col_name in required_columns],
     )
-    # table = table.tab_style(
-    #     style=style.fill(color="lightyellow"),  # Set the fill color
-    #     locations=loc.body(columns="Story"),  # Target the body of "col_b"
-    # )
     return table  # noqa: RET504
 
 
@@ -136,8 +132,8 @@ def main() -> None:
         gt_table.save(str(image_file), scale=2.5, expand=10)
         _remove_white_background(image_file)
 
-        if page == 1:
-            break  # noqa: ERA001
+        # if page == 1:
+        #     break  # noqa: ERA001
 
 
 if __name__ == "__main__":

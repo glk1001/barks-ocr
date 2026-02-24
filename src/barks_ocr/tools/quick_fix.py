@@ -1,13 +1,13 @@
+# ruff: noqa: ERA001
+
 import json
 from pathlib import Path
-from typing import Tuple
 
 
-def scale_rect(
+def scale_rect(  # noqa: D417
     scale: float, x0: float, y0: float, x1: float, y1: float
-) -> Tuple[int, int, int, int]:
-    """
-    Scales a rectangle from its center point.
+) -> tuple[int, int, int, int]:
+    """Scales a rectangle from its center point.
 
     Args:
         scale: The scaling factor (e.g., 2.0 makes it twice as big, 0.5 makes it half size).
@@ -16,6 +16,7 @@ def scale_rect(
 
     Returns:
         (new_x0, new_y0, new_x1, new_y1)
+
     """
     # 1. Calculate current dimensions
     width = x1 - x0
@@ -42,10 +43,12 @@ def scale_rect(
 
 def main() -> None:
     prelim_dir = Path(
-        "/home/greg/Books/Carl Barks/Fantagraphics-restored-ocr/Prelim/Carl Barks Vol. 3 - Donald Duck - Mystery of the Swamp (Salem-Empire)"
+        "/home/greg/Books/Carl Barks/Fantagraphics-restored-ocr/Prelim/"
+        "Carl Barks Vol. 3 - Donald Duck - Mystery of the Swamp (Salem-Empire)"
     )
     prelim_backup_dir = Path(
-        "/home/greg/Books/Carl Barks/Fantagraphics-restored-ocr/Prelim-backups/Carl Barks Vol. 3 - Donald Duck - Mystery of the Swamp (Salem-Empire)"
+        "/home/greg/Books/Carl Barks/Fantagraphics-restored-ocr/Prelim-backups/"
+        "Carl Barks Vol. 3 - Donald Duck - Mystery of the Swamp (Salem-Empire)"
     )
 
     files = [
@@ -96,8 +99,8 @@ def main() -> None:
         for group in ocr_json["groups"].values():
             text_box = group["text_box"]
             for i in range(4):
-                text_box[i][0] = round((x_scale * (xlat + text_box[i][0])))
-                text_box[i][1] = round((y_scale * (ylat + text_box[i][1])))
+                text_box[i][0] = round(x_scale * (xlat + text_box[i][0]))
+                text_box[i][1] = round(y_scale * (ylat + text_box[i][1]))
                 # text_box[i][0] = round((x_scale * text_box[i][0]) + xlat)
                 # text_box[i][1] = round((y_scale * text_box[i][1]) + ylat)
 

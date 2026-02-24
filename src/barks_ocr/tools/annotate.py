@@ -1,8 +1,5 @@
-# ruff: noqa: ERA001
-
 import json
 from pathlib import Path
-
 from typing import Any
 
 import cv2 as cv
@@ -19,10 +16,10 @@ from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
 from intspan import intspan
 from loguru import logger
-import barks_ocr.log_setup as _log_setup
 from loguru_config import LoguruConfig
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 
+import barks_ocr.log_setup as _log_setup
 from barks_ocr.utils.ocr_box import OcrBox
 
 _RESOURCES = Path(__file__).parent.parent / "resources"

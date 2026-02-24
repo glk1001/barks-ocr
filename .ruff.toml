@@ -3,7 +3,6 @@ extend = "../barks-compleat-reader/.ruff-base.toml"
 exclude = [
     "experiments",
     "scraps",
-    "tools",
     "**/src/barks_ocr/utils/geometry.py",
     "**/src/barks_ocr/utils/ocr_box.py",
 ]
