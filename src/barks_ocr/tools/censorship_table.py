@@ -3,6 +3,7 @@ from pathlib import Path
 
 import polars as pl
 from great_tables import GT, html, loc, md, style
+from PIL import Image
 
 ROOT_DIR = Path("/home/greg/Books/Carl Barks")
 CSV_DIR = ROOT_DIR / "Projects" / "Barks Reader"
@@ -19,7 +20,7 @@ def get_censorship_fixes_table(file: Path) -> GT:
         # )
         # .tab_options(heading_padding="1%")
         #        .opt_row_striping(row_striping=True)
-#        .tab_spanner(label=md("**Changes**"), columns=["Change_From", "Change_To"])
+        #        .tab_spanner(label=md("**Changes**"), columns=["Change_From", "Change_To"])
         .tab_stub(rowname_col="Story")
         .tab_stubhead(label="Story")
         .tab_style(style=style.text(weight="bold"), locations=loc.stubhead())
@@ -123,6 +124,7 @@ def main() -> None:
 
         image_file = Path(f"/tmp/censorship-fixes-page-{page}.png")  # noqa: S108
         gt_table.save(str(image_file), scale=2.5, expand=10)
+        Image.open(image_file).convert("RGBA").save(image_file)
 
         if page == 1:
             break  # noqa: ERA001
