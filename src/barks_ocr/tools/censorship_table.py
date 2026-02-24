@@ -14,19 +14,12 @@ def get_censorship_fixes_table(file: Path) -> GT:
 
     table = (
         GT(df)
-        # .tab_header(
-        #     title=md("**Censorship Fixes and Other Changes**"),
-        #     subtitle=md("Includes fixes for Fantagraphics printing and coloring glitches"),
-        # )
-        # .tab_options(heading_padding="1%")
-        #        .opt_row_striping(row_striping=True)
-        #        .tab_spanner(label=md("**Changes**"), columns=["Change_From", "Change_To"])
         .tab_stub(rowname_col="Story")
         .tab_stubhead(label="Story")
         .tab_style(style=style.text(weight="bold"), locations=loc.stubhead())
         .cols_label(
-            Change_From=html("From"),
-            Change_To=html("To"),
+            Change_From=html("Change From"),
+            Change_To=html("Change To"),
             Page_Panel=html("Panel"),
         )
         .tab_style(
