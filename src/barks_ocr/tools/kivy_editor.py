@@ -1,6 +1,7 @@
 # ruff: noqa: E402
 import json
 from collections.abc import Callable
+from dataclasses import replace
 from io import BytesIO
 from pathlib import Path
 
@@ -722,17 +723,21 @@ class EditorApp(App):
     def _on_easyocr_text_changed(self, instance: TextInput, _value: str) -> None:
         if not instance.focus:
             return
-        self._easyocr_speech_groups[
-            self._easyocr_group_id
-        ].raw_ai_text = self._get_current_easyocr_text()
+
+        self._easyocr_speech_groups[self._easyocr_group_id] = replace(
+            self._easyocr_speech_groups[self._easyocr_group_id],
+            raw_ai_text=self._get_current_easyocr_text(),
+        )
         self._has_changes = True
 
     def _on_paddleocr_text_changed(self, instance: TextInput, _value: str) -> None:
         if not instance.focus:
             return
-        self._paddleocr_speech_groups[
-            self._paddleocr_group_id
-        ].raw_ai_text = self._get_current_paddleocr_text()
+
+        self._paddleocr_speech_groups[self._paddleocr_group_id] = replace(
+            self._paddleocr_speech_groups[self._paddleocr_group_id],
+            raw_ai_text=self._get_current_paddleocr_text(),
+        )
         self._has_changes = True
 
     # ── canvas / panel_num callbacks ──────────────────────────────────────────
