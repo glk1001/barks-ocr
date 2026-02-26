@@ -31,7 +31,7 @@ open-show volume page:
     just open-prelim {{volume}} {{page}}
     just show-annotations {{volume}} {{page}}
 
-# Check OCR files
+# Check OCR files for issues and write a kivy-editor queue file
 [group('OCR')]
-check-ocr volume:
-    {{_ocr_uv_run}} "barks-ocr-string-replacer" --dry-run --volume {{volume}}
+check-ocr volume queue_file:
+    {{_ocr_uv_run}} "barks-ocr-check" --volume {{volume}} -o {{queue_file}}
