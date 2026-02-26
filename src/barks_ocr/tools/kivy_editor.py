@@ -232,6 +232,7 @@ class BoundingBoxCanvas(Widget):
         self._crop_offset: tuple[int, int] = (0, 0)
         self._text_box: list | None = None  # crop-local PIL coords
         self._panel_bounds_local: tuple[int, int, int, int] | None = None
+        self._panel_num: int | None = None
         # Set when panel_num is -1: all panels drawn as numbered overlays
         self._all_panel_bounds_local: list[tuple[int, int, int, int]] | None = None
 
@@ -256,13 +257,14 @@ class BoundingBoxCanvas(Widget):
 
         self.bind(size=self._redraw, pos=self._redraw)
 
-    def set_content(
+    def set_content(  # noqa: PLR0913
         self,
         pil_image: PilImage.Image,
         text_box_full_page: list,
         crop_offset: tuple[int, int],
         panel_bounds_full_page: tuple[int, int, int, int] | None,
         all_panel_bounds_full_page: list[tuple[int, int, int, int]] | None = None,
+        panel_num: int | None = None,
     ) -> None:
         """Load a new image + bounding box.  All coords in full-page PIL space.
 
@@ -291,6 +293,7 @@ class BoundingBoxCanvas(Widget):
             ]
         else:
             self._all_panel_bounds_local = None
+        self._panel_num = panel_num
 
         buf = BytesIO()
         pil_image.save(buf, format="png")
@@ -359,6 +362,17 @@ class BoundingBoxCanvas(Widget):
         bl = self._local_to_screen(pl, pb)
         g.add(Color(0.2, 0.5, 1.0, 0.8))
         g.add(Line(points=[*tl, *tr, *br, *bl, *tl], width=2, dash_offset=6, dash_length=12))
+        if self._panel_num is not None:
+            lbl = CoreLabel(text=str(self._panel_num), font_size=26, bold=True)
+            lbl.refresh()
+            texture = lbl.texture
+            if texture:
+                tx = tl[0] + 4
+                ty = tl[1] - texture.height - 4
+                g.add(Color(0, 0, 0.6, 0.6))
+                g.add(Rectangle(pos=(tx - 2, ty - 2), size=(texture.width + 4, texture.height + 4)))
+                g.add(Color(0.2, 1.0, 0.5, 1.0))
+                g.add(Rectangle(texture=texture, pos=(tx, ty), size=texture.size))
 
     def _draw_all_panel_bounds(self, g: InstructionGroup) -> None:
         """Draw all panel outlines with numbered labels (used when panel_num is -1)."""
@@ -676,6 +690,7 @@ class EditorApp(App):
                 text_box_full_page=text_box,
                 crop_offset=(crop_l, crop_t),
                 panel_bounds_full_page=panel_bounds,
+                panel_num=panel_num,
             )
 
     # ── App lifecycle ─────────────────────────────────────────────────────────
