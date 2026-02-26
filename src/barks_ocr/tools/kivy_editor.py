@@ -754,11 +754,19 @@ class EditorApp(App):
 
     def _on_easyocr_box_changed(self, new_text_box: list) -> None:
         """Handle a bounding box change reported by the EasyOCR canvas."""
+        json_groups = self._easyocr_speech_page_group.speech_page_json.get("groups", {})
+        json_group = json_groups.get(self._easyocr_group_id)
+        if json_group is not None:
+            json_group["text_box"] = new_text_box
         self._has_changes = True
         logger.debug(f"EasyOCR text box updated to: {new_text_box}")
 
     def _on_paddleocr_box_changed(self, new_text_box: list) -> None:
         """Handle a bounding box change reported by the PaddleOCR canvas."""
+        json_groups = self._paddleocr_speech_page_group.speech_page_json.get("groups", {})
+        json_group = json_groups.get(self._paddleocr_group_id)
+        if json_group is not None:
+            json_group["text_box"] = new_text_box
         self._has_changes = True
         logger.debug(f"PaddleOCR text box updated to: {new_text_box}")
 
@@ -1125,6 +1133,18 @@ class EditorApp(App):
 
         row.add_widget(Widget())  # spacer
 
+        prev_both_btn = Button(
+            text="Both Prev", size_hint_x=None, width=100, size_hint_y=None, height=44
+        )
+        prev_both_btn.bind(on_press=self._handle_both_prev)
+        row.add_widget(prev_both_btn)
+
+        next_both_btn = Button(
+            text="Both Next", size_hint_x=None, width=100, size_hint_y=None, height=44
+        )
+        next_both_btn.bind(on_press=self._handle_both_next)
+        row.add_widget(next_both_btn)
+
         if self._queue:
             save_next_btn = Button(
                 text="Save & Next", size_hint_x=None, width=150, size_hint_y=None, height=44
@@ -1344,6 +1364,14 @@ class EditorApp(App):
     def _do_skip(self) -> None:
         self._has_changes = False
         self._advance_queue()
+
+    def _handle_both_prev(self, _instance: object = None) -> None:
+        self._handle_easyocr_prev()
+        self._handle_paddleocr_prev()
+
+    def _handle_both_next(self, _instance: object = None) -> None:
+        self._handle_easyocr_next()
+        self._handle_paddleocr_next()
 
     def _handle_easyocr_prev(self, _instance: object = None) -> None:
         group_ids = list(self._easyocr_speech_groups.keys())
