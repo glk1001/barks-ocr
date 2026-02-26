@@ -14,7 +14,7 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
 from barks_fantagraphics.comics_utils import get_backup_file
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM_DIR
-from barks_fantagraphics.speech_groupers import OcrTypes, get_speech_page_group
+from barks_fantagraphics.speech_groupers import OcrTypes, SpeechPageGroup, get_speech_page_group
 from comic_utils.comic_consts import PNG_FILE_EXT
 from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
@@ -28,10 +28,10 @@ import barks_ocr.log_setup as _log_setup
 APP_LOGGING_NAME = "kpoe"
 
 # Set the main window size using variables
-MAIN_WINDOW_X = 200
+MAIN_WINDOW_X = 2120
 MAIN_WINDOW_Y = 20
 MAIN_WINDOW_WIDTH = 2000
-MAIN_WINDOW_HEIGHT = 1480
+MAIN_WINDOW_HEIGHT = 1330
 
 Config.set("graphics", "position", "custom")  # ty:ignore[unresolved-attribute]
 Config.set("graphics", "left", MAIN_WINDOW_X)  # ty:ignore[unresolved-attribute]
@@ -45,6 +45,7 @@ from kivy.core.text import Label as CoreLabel
 from kivy.core.text import LabelBase
 from kivy.core.window import Window
 from kivy.graphics import Color, Ellipse, InstructionGroup, Line, Rectangle
+from kivy.input.motionevent import MotionEvent
 
 # noinspection PyUnresolvedReferences
 from kivy.properties import (  # ty:ignore[unresolved-import]
@@ -79,7 +80,7 @@ if not hasattr(_TextInput, "_kivy_patch_applied"):
     _ns: dict = vars(_ki_textinput).copy()
     exec(compile(_src, "<kivy_patch>", "exec"), _ns)  # noqa: S102
     _TextInput._update_graphics_selection = _ns["_update_graphics_selection"]  # noqa: SLF001
-    _TextInput._kivy_patch_applied = True  # type: ignore[attr-defined]  # noqa: SLF001
+    _TextInput._kivy_patch_applied = True  # noqa: SLF001
 
 # TODO: Duplicated in 'font_manager.py'.
 # Set up custom fonts.
@@ -119,6 +120,7 @@ class QueueEntry:
     fanta_page: int
     engine: str  # "easyocr" or "paddleocr"
     group_id: int
+    issue_type: str
 
 
 # ── Helper functions ──────────────────────────────────────────────────────────
@@ -132,7 +134,7 @@ def load_queue_file(queue_file: Path) -> list[QueueEntry]:
         if not line or line.startswith("#"):
             continue
         parts = line.split()
-        if len(parts) != 4:  # noqa: PLR2004
+        if len(parts) != 5:  # noqa: PLR2004
             logger.warning(f"Skipping invalid queue line: {line!r}")
             continue
         try:
@@ -142,6 +144,7 @@ def load_queue_file(queue_file: Path) -> list[QueueEntry]:
                     fanta_page=int(parts[1]),
                     engine=parts[2].lower(),
                     group_id=int(parts[3]),
+                    issue_type=parts[4],
                 )
             )
         except ValueError:
@@ -249,7 +252,7 @@ class BoundingBoxCanvas(Widget):
         # Use a managed InstructionGroup so we never call canvas.clear(),
         # which would corrupt Kivy's internal canvas groups used by TextInput.
         self._draw_group = InstructionGroup()
-        self.canvas.add(self._draw_group)
+        self.canvas.add(self._draw_group)  # ty:ignore[unresolved-attribute]
 
         self.bind(size=self._redraw, pos=self._redraw)
 
@@ -394,38 +397,38 @@ class BoundingBoxCanvas(Widget):
 
     # ── touch events ─────────────────────────────────────────────────────────
 
-    def on_touch_down(self, touch: object) -> bool:
-        if not self.collide_point(*touch.pos) or self._text_box is None:  # type: ignore[arg-type]
+    def on_touch_down(self, touch: MotionEvent) -> bool:
+        if not self.collide_point(*touch.pos) or self._text_box is None:
             return False
         pts = [self._local_to_screen(p[0], p[1]) for p in self._text_box]
 
         # Corner handle hit-test first
         for i, pt in enumerate(pts):
-            dist = ((touch.x - pt[0]) ** 2 + (touch.y - pt[1]) ** 2) ** 0.5  # type: ignore[attr-defined]
+            dist = ((touch.x - pt[0]) ** 2 + (touch.y - pt[1]) ** 2) ** 0.5
             if dist <= HANDLE_RADIUS:
                 self._dragging = True
                 self._drag_corner = i
                 self._drag_start_box = [list(p) for p in self._text_box]
-                touch.grab(self)  # type: ignore[attr-defined]
+                touch.grab(self)
                 return True
 
         # Body drag
-        if self._point_in_polygon(touch.x, touch.y, pts):  # type: ignore[attr-defined]
+        if self._point_in_polygon(touch.x, touch.y, pts):
             self._dragging = True
             self._drag_corner = -1
-            self._drag_start_tx = touch.x  # type: ignore[attr-defined]
-            self._drag_start_ty = touch.y  # type: ignore[attr-defined]
+            self._drag_start_tx = touch.x
+            self._drag_start_ty = touch.y
             self._drag_start_box = [list(p) for p in self._text_box]
-            touch.grab(self)  # type: ignore[attr-defined]
+            touch.grab(self)
             return True
 
         return False
 
-    def on_touch_move(self, touch: object) -> bool:
-        if touch.grab_current is not self or not self._dragging:  # type: ignore[attr-defined]
+    def on_touch_move(self, touch: MotionEvent) -> bool:
+        if touch.grab_current is not self or not self._dragging:
             return False
         if self._drag_corner >= 0:
-            lx, ly = self._screen_to_local(touch.x, touch.y)  # type: ignore[attr-defined]
+            lx, ly = self._screen_to_local(touch.x, touch.y)
             # Corners are in order TL(0), TR(1), BR(2), BL(3).
             # Each corner controls one x-side and one y-side; update those and
             # reconstruct all 4 points so the box stays an axis-aligned rectangle.
@@ -441,18 +444,18 @@ class BoundingBoxCanvas(Widget):
                 y1 = ly
             self._text_box = [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
         else:
-            dx = (touch.x - self._drag_start_tx) / self._scale  # type: ignore[attr-defined]
+            dx = (touch.x - self._drag_start_tx) / self._scale
             # flip Y axis (Kivy y=0 at bottom, PIL y=0 at top)
-            dy = -(touch.y - self._drag_start_ty) / self._scale  # type: ignore[attr-defined]
+            dy = -(touch.y - self._drag_start_ty) / self._scale
             for i, p in enumerate(self._drag_start_box):
                 self._text_box[i] = [p[0] + dx, p[1] + dy]
         self._redraw()
         return True
 
-    def on_touch_up(self, touch: object) -> bool:
-        if touch.grab_current is not self:  # type: ignore[attr-defined]
+    def on_touch_up(self, touch: MotionEvent) -> bool:
+        if touch.grab_current is not self:
             return False
-        touch.ungrab(self)  # type: ignore[attr-defined]
+        touch.ungrab(self)
         if self._dragging:
             self._dragging = False
             self._drag_corner = -1
@@ -513,8 +516,15 @@ class EditorApp(App):
         self._fanta_page = get_page_str(fanta_page)
         self._load_page_data(volume, self._fanta_page)
 
-        self._set_easyocr_group_id(str(easyocr_group_id))
-        self._set_paddleocr_group_id(str(paddleocr_group_id))
+        easy_id = str(easyocr_group_id)
+        if easy_id not in self._easyocr_speech_groups:
+            easy_id = next(iter(self._easyocr_speech_groups), easy_id)
+        self._set_easyocr_group_id(easy_id)
+
+        pad_id = str(paddleocr_group_id)
+        if pad_id not in self._paddleocr_speech_groups:
+            pad_id = next(iter(self._paddleocr_speech_groups), pad_id)
+        self._set_paddleocr_group_id(pad_id)
 
         if self._queue:
             self.queue_progress_text = f"{queue_index + 1} / {len(self._queue)}"
@@ -581,11 +591,11 @@ class EditorApp(App):
 
         self.queue_progress_text = f"{index + 1} / {len(self._queue)}"
 
-        if self._easyocr_canvas:
+        if self._easyocr_canvas is not None:
             self._load_easyocr_canvas_content()
-        if self._paddleocr_canvas:
+        if self._paddleocr_canvas is not None:
             self._load_paddleocr_canvas_content()
-        if self._info_label:
+        if self._info_label is not None:
             self._info_label.text = self._get_editor_info()
 
     # ── canvas / image helpers ────────────────────────────────────────────────
@@ -616,14 +626,14 @@ class EditorApp(App):
         self,
         canvas: BoundingBoxCanvas | None,
         group_id: str,
-        page_group: object,
+        page_group: SpeechPageGroup,
         panel_num: int,
     ) -> None:
         """Parameterized canvas refresh for one engine."""
         if canvas is None:
             return
 
-        raw_json_groups = page_group.speech_page_json.get("groups", {})  # type: ignore[attr-defined]
+        raw_json_groups = page_group.speech_page_json.get("groups", {})
         group_json = raw_json_groups.get(group_id)
         if group_json is None:
             logger.warning(f"Group {group_id} not found in JSON for canvas refresh.")
@@ -801,6 +811,17 @@ class EditorApp(App):
 
     # ── group / panel helpers ─────────────────────────────────────────────────
 
+    def _commit_panel_nums(self) -> None:
+        """Flush any pending panel_num TextInput edits to the in-memory JSON.
+
+        Must be called before any navigation or save that changes the current group_id,
+        because the focus-loss callback is not guaranteed to fire before on_press.
+        """
+        if self._easyocr_panel_num_input is not None:
+            self._on_easyocr_panel_num_confirmed(self._easyocr_panel_num_input)
+        if self._paddleocr_panel_num_input is not None:
+            self._on_paddleocr_panel_num_confirmed(self._paddleocr_panel_num_input)
+
     def _set_easyocr_group_id(self, group_id: str) -> None:
         if group_id not in self._easyocr_speech_groups:
             msg = f"Unknown easyocr group id '{group_id}'."
@@ -813,7 +834,11 @@ class EditorApp(App):
             if self._decode_checkbox and self._decode_checkbox.active
             else speech_group.raw_ai_text
         )
-        self._set_easyocr_panel_num(speech_group.panel_num)
+        # Read from live JSON, not SpeechText — the dataclass is never updated after load,
+        # so returning to a previously-edited group would restore the stale original value.
+        json_groups = self._easyocr_speech_page_group.speech_page_json.get("groups", {})
+        panel_num = json_groups.get(group_id, {}).get("panel_num", speech_group.panel_num)
+        self._set_easyocr_panel_num(panel_num)
 
     def _set_easyocr_panel_num(self, panel_num: int) -> None:
         """Update easyocr panel_num in the JSON dict and the panel_num input widget."""
@@ -836,7 +861,11 @@ class EditorApp(App):
             if self._decode_checkbox and self._decode_checkbox.active
             else speech_group.raw_ai_text
         )
-        self._set_paddleocr_panel_num(speech_group.panel_num)
+        # Read from live JSON, not SpeechText — the dataclass is never updated after load,
+        # so returning to a previously-edited group would restore the stale original value.
+        json_groups = self._paddleocr_speech_page_group.speech_page_json.get("groups", {})
+        panel_num = json_groups.get(group_id, {}).get("panel_num", speech_group.panel_num)
+        self._set_paddleocr_panel_num(panel_num)
 
     def _set_paddleocr_panel_num(self, panel_num: int) -> None:
         """Update paddleocr panel_num in the JSON dict and the panel_num input widget."""
@@ -854,7 +883,12 @@ class EditorApp(App):
     # ── info text ─────────────────────────────────────────────────────────────
 
     def _get_editor_info(self) -> str:
-        return f"{BARKS_TITLES[self._title]}  |  Volume {self._volume}  |  Page {self._fanta_page}"
+        info = f'"{BARKS_TITLES[self._title]}"  |  Volume {self._volume} |  Page {self._fanta_page}'
+        if self._queue:
+            engine = self._queue[self._queue_index].engine
+            issue_type = self._queue[self._queue_index].issue_type
+            info += f"  |  {engine} - {issue_type}"
+        return info
 
     # ── text encode/decode ────────────────────────────────────────────────────
 
@@ -977,10 +1011,16 @@ class EditorApp(App):
 
         # Per-engine action buttons
         easy_btn_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=36, spacing=6)
-        select_easy_btn = Button(text="Select EasyOCR Item", size_hint_y=None, height=36)
+        prev_easy_btn = Button(text="Prev", size_hint_y=None, height=36)
+        prev_easy_btn.bind(on_press=self._handle_easyocr_prev)
+        easy_btn_row.add_widget(prev_easy_btn)
+        next_easy_btn = Button(text="Next", size_hint_y=None, height=36)
+        next_easy_btn.bind(on_press=self._handle_easyocr_next)
+        easy_btn_row.add_widget(next_easy_btn)
+        select_easy_btn = Button(text="Select", size_hint_y=None, height=36)
         select_easy_btn.bind(on_press=self._show_easyocr_speech_item_popup)
         easy_btn_row.add_widget(select_easy_btn)
-        delete_easy_btn = Button(text="Delete EasyOCR", size_hint_y=None, height=36)
+        delete_easy_btn = Button(text="Delete", size_hint_y=None, height=36)
         delete_easy_btn.bind(on_press=self._handle_easyocr_delete)
         easy_btn_row.add_widget(delete_easy_btn)
         col.add_widget(easy_btn_row)
@@ -1051,10 +1091,16 @@ class EditorApp(App):
 
         # Per-engine action buttons
         pad_btn_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=36, spacing=6)
-        select_pad_btn = Button(text="Select PaddleOCR Item", size_hint_y=None, height=36)
+        prev_pad_btn = Button(text="Prev", size_hint_y=None, height=36)
+        prev_pad_btn.bind(on_press=self._handle_paddleocr_prev)
+        pad_btn_row.add_widget(prev_pad_btn)
+        next_pad_btn = Button(text="Next", size_hint_y=None, height=36)
+        next_pad_btn.bind(on_press=self._handle_paddleocr_next)
+        pad_btn_row.add_widget(next_pad_btn)
+        select_pad_btn = Button(text="Select", size_hint_y=None, height=36)
         select_pad_btn.bind(on_press=self._show_paddleocr_speech_item_popup)
         pad_btn_row.add_widget(select_pad_btn)
-        delete_pad_btn = Button(text="Delete PaddleOCR", size_hint_y=None, height=36)
+        delete_pad_btn = Button(text="Delete", size_hint_y=None, height=36)
         delete_pad_btn.bind(on_press=self._handle_paddleocr_delete)
         pad_btn_row.add_widget(delete_pad_btn)
         col.add_widget(pad_btn_row)
@@ -1180,6 +1226,7 @@ class EditorApp(App):
         ]
 
     def _on_easyocr_speech_item_selected(self, speech_item: SpeechItem) -> None:
+        self._commit_panel_nums()
         self._set_easyocr_group_id(speech_item.group_id)
         self._load_easyocr_canvas_content()
 
@@ -1190,6 +1237,7 @@ class EditorApp(App):
         ]
 
     def _on_paddleocr_speech_item_selected(self, speech_item: SpeechItem) -> None:
+        self._commit_panel_nums()
         self._set_paddleocr_group_id(speech_item.group_id)
         self._load_paddleocr_canvas_content()
 
@@ -1221,6 +1269,7 @@ class EditorApp(App):
 
     def _handle_save(self) -> None:
         """Save text, panel_num, and text_box changes to both OCR JSON files."""
+        self._commit_panel_nums()
         self._save_page_group(
             self._easyocr_speech_page_group,
             self._easyocr_group_id,
@@ -1237,7 +1286,7 @@ class EditorApp(App):
 
     def _save_page_group(
         self,
-        page_group: object,
+        page_group: SpeechPageGroup,
         group_id: str,
         speech_groups: dict,
         canvas: BoundingBoxCanvas | None,
@@ -1247,10 +1296,10 @@ class EditorApp(App):
         panel_num is already synced to speech_page_json via _set_*_panel_num /
         _on_*_panel_num_confirmed, so only text and text_box need updating here.
         """
-        ocr_file = page_group.ocr_prelim_groups_json_file  # type: ignore[attr-defined]
+        ocr_file = page_group.ocr_prelim_groups_json_file
         backup_file = self._get_prelim_ocr_backup_file(ocr_file)
 
-        json_groups = page_group.speech_page_json.get("groups", {})  # type: ignore[attr-defined]
+        json_groups = page_group.speech_page_json.get("groups", {})
 
         # Sync text for all groups whose raw_ai_text has changed
         changed = False
@@ -1273,7 +1322,7 @@ class EditorApp(App):
         # panel_num changes are tracked via _has_changes but already in json_group;
         # save if anything changed or if we have pending panel_num edits.
         if changed or self._has_changes:
-            page_group.save_json(backup_file=backup_file)  # type: ignore[attr-defined]
+            page_group.save_json(backup_file=backup_file)
             logger.info(f'Saved changes to "{ocr_file}". Backup at "{backup_file}".')
         else:
             logger.debug(f'No changes in "{ocr_file}".')
@@ -1283,8 +1332,66 @@ class EditorApp(App):
         self._advance_queue()
 
     def _handle_skip(self) -> None:
+        if self._has_changes:
+            self._show_confirm_popup(
+                title="Unsaved Changes",
+                message="You have unsaved changes.\nSkip and discard them?",
+                on_confirm=self._do_skip,
+            )
+        else:
+            self._do_skip()
+
+    def _do_skip(self) -> None:
         self._has_changes = False
         self._advance_queue()
+
+    def _handle_easyocr_prev(self, _instance: object = None) -> None:
+        group_ids = list(self._easyocr_speech_groups.keys())
+        if not group_ids:
+            return
+        self._commit_panel_nums()
+        try:
+            idx = group_ids.index(self._easyocr_group_id)
+        except ValueError:
+            idx = 0
+        self._set_easyocr_group_id(group_ids[(idx - 1) % len(group_ids)])
+        self._load_easyocr_canvas_content()
+
+    def _handle_easyocr_next(self, _instance: object = None) -> None:
+        group_ids = list(self._easyocr_speech_groups.keys())
+        if not group_ids:
+            return
+        self._commit_panel_nums()
+        try:
+            idx = group_ids.index(self._easyocr_group_id)
+        except ValueError:
+            idx = -1
+        self._set_easyocr_group_id(group_ids[(idx + 1) % len(group_ids)])
+        self._load_easyocr_canvas_content()
+
+    def _handle_paddleocr_prev(self, _instance: object = None) -> None:
+        group_ids = list(self._paddleocr_speech_groups.keys())
+        if not group_ids:
+            return
+        self._commit_panel_nums()
+        try:
+            idx = group_ids.index(self._paddleocr_group_id)
+        except ValueError:
+            idx = 0
+        self._set_paddleocr_group_id(group_ids[(idx - 1) % len(group_ids)])
+        self._load_paddleocr_canvas_content()
+
+    def _handle_paddleocr_next(self, _instance: object = None) -> None:
+        group_ids = list(self._paddleocr_speech_groups.keys())
+        if not group_ids:
+            return
+        self._commit_panel_nums()
+        try:
+            idx = group_ids.index(self._paddleocr_group_id)
+        except ValueError:
+            idx = -1
+        self._set_paddleocr_group_id(group_ids[(idx + 1) % len(group_ids)])
+        self._load_paddleocr_canvas_content()
 
     def _handle_easyocr_delete(self, _instance: object = None) -> None:
         self._do_easyocr_delete()
@@ -1309,7 +1416,11 @@ class EditorApp(App):
         )
 
     def _do_delete(
-        self, page_group: object, speech_groups: dict, group_id: str, load_next: Callable[[], None]
+        self,
+        page_group: SpeechPageGroup,
+        speech_groups: dict,
+        group_id: str,
+        load_next: Callable[[], None],
     ) -> None:
         """Remove group from in-memory JSON and speech_groups; save happens via normal save path."""
         json_groups = page_group.speech_page_json.get("groups", {})
