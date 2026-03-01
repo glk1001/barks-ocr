@@ -1146,8 +1146,6 @@ class EditorApp(App):
         checkbox_layout.width = 160
         row.add_widget(checkbox_layout)
 
-        row.add_widget(Widget())  # spacer
-
         prev_both_btn = Button(
             text="Both Prev", size_hint_x=None, width=100, size_hint_y=None, height=44
         )
@@ -1160,12 +1158,14 @@ class EditorApp(App):
         next_both_btn.bind(on_press=self._handle_both_next)
         row.add_widget(next_both_btn)
 
-        if self._queue:
-            save_next_btn = Button(
-                text="Save & Next", size_hint_x=None, width=150, size_hint_y=None, height=44
-            )
-            save_next_btn.bind(on_press=lambda _: self._handle_save_and_next())
-            row.add_widget(save_next_btn)
+        row.add_widget(Widget())  # spacer
+
+        row.add_widget(self._get_save_button())
+
+        if not self._queue:
+            row.add_widget(self._get_save_exit_button())
+        else:
+            row.add_widget(self._get_save_next_queue_item_button())
 
             skip_btn = Button(text="Skip", size_hint_x=None, width=90, size_hint_y=None, height=44)
             skip_btn.bind(on_press=lambda _: self._handle_skip())
@@ -1180,8 +1180,6 @@ class EditorApp(App):
             )
             self.bind(queue_progress_text=queue_label.setter("text"))
             row.add_widget(queue_label)
-        else:
-            row.add_widget(self._get_save_exit_button())
 
         return row
 
@@ -1278,6 +1276,17 @@ class EditorApp(App):
 
     # ── save / delete / navigation ────────────────────────────────────────────
 
+    def _get_save_button(self) -> Button:
+        btn = Button(text="Save", size_hint_x=None, width=150, size_hint_y=None, height=46)
+
+        def on_save(_instance: Button) -> None:
+            self._handle_save()
+            self._load_easyocr_canvas_content()
+            self._load_paddleocr_canvas_content()
+
+        btn.bind(on_press=on_save)
+        return btn
+
     def _get_save_exit_button(self) -> Button:
         btn = Button(text="Save & Exit", size_hint_x=None, width=150, size_hint_y=None, height=46)
 
@@ -1286,6 +1295,12 @@ class EditorApp(App):
             self.stop()
 
         btn.bind(on_press=on_save)
+        return btn
+
+    def _get_save_next_queue_item_button(self) -> Button:
+        btn = Button(text="Save & Next", size_hint_x=None, width=150, size_hint_y=None, height=46)
+        btn.bind(on_press=lambda _: self._handle_save_and_next())
+
         return btn
 
     def _get_current_easyocr_text(self) -> str:
@@ -1474,11 +1489,7 @@ class EditorApp(App):
 
         self._has_changes = True
 
-        if self._queue:
-            # Must save before advancing — the next entry loads a fresh page and resets state.
-            self._handle_save_and_next()
-        else:
-            load_next()
+        load_next()
 
     def _load_next_easyocr_group_after_delete(self) -> None:
         remaining = [gid for gid in self._easyocr_speech_groups if gid != self._easyocr_group_id]
