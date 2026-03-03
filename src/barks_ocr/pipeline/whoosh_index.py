@@ -1,5 +1,5 @@
 # ruff: noqa: T201
-from collections import defaultdict
+
 from pathlib import Path
 
 import typer
@@ -20,45 +20,10 @@ from loguru import logger
 from loguru_config import LoguruConfig
 
 import barks_ocr.log_setup as _log_setup
-from barks_ocr.utils.paragraph_wrap import ParagraphWrapper
 
 _RESOURCES = Path(__file__).parent.parent / "resources"
 
-APP_LOGGING_NAME = "gemi"
-
-
-def print_index(search_eng: SearchEngine, _title: str) -> None:
-    # noinspection PyProtectedMember
-    with search_eng._index.reader() as reader:  # noqa: SLF001
-        all_terms = list(reader.all_terms())
-
-    print("All terms in the index:")
-    for field_name, text in all_terms:
-        print(f"Field: {field_name}, Term: {text}")
-
-
-def print_unstemmed_terms(search_eng: SearchEngine) -> None:
-    # noinspection PyProtectedMember
-    with search_eng._index.reader() as reader:  # noqa: SLF001
-        all_terms = list(reader.terms_from("unstemmed", ""))
-
-    print("All terms in the index:")
-    for _field_name, text in all_terms:
-        print(f"{text}")
-
-
-def print_unstemmed_terms_summary(search_eng: SearchEngine) -> None:
-    unstemmed_terms = search_eng.get_cleaned_unstemmed_terms()
-
-    counts = defaultdict(int)
-    for term in unstemmed_terms:
-        first_letter = term[0].lower()
-        counts[first_letter] += 1
-
-    for letter, num in counts.items():
-        print(f"{letter}: {num}")
-
-    print(f"Total: {len(unstemmed_terms)}")
+APP_LOGGING_NAME = "whoi"
 
 
 def check_index_integrity(comics_database: ComicsDatabase, volumes: list[int]) -> None:
@@ -166,13 +131,10 @@ def check_lemmatized_terms(search_engine: SearchEngine) -> None:
 app = typer.Typer()
 
 
-@app.command(help="Make whoosh index from gemini ai groups")
-def main(  # noqa: PLR0913
+@app.command(help="Build Whoosh index from Gemini AI groups")
+def main(
     volumes_str: VolumesArg = "",
-    words: str = "",
-    create_index: bool = False,
-    ocr_index: int = 1,  # paddleocr
-    unstemmed: bool = False,
+    ocr_index: int = 1,
     do_checks: bool = False,
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
@@ -189,39 +151,13 @@ def main(  # noqa: PLR0913
     volumes_index_dir = BARKS_ROOT_DIR / (
         "Compleat Barks Disney Reader/Reader Files/" + indexes_dirname
     )
-    if not create_index:
-        whoosh_search = SearchEngine(volumes_index_dir)
-    else:
-        whoosh_search = SearchEngineCreator(
-            comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]
-        )
-        whoosh_search.index_volumes(volumes)
-
-    # print_index(search_engine, "")  # noqa: ERA001
-    # print_unstemmed_terms(search_engine)  # noqa: ERA001
-    # print_unstemmed_terms_summary(search_engine)  # noqa: ERA001
+    whoosh_search = SearchEngineCreator(
+        comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]
+    )
+    whoosh_search.index_volumes(volumes)
 
     if do_checks:
         check_index_integrity(comics_database, volumes)
-
-    text_indenter = ParagraphWrapper(initial_indent="       ", subsequent_indent="            ")
-    found_text = whoosh_search.find_words(words, unstemmed)
-    for comic_title, title_info in found_text.items():
-        print(f'"{comic_title}"')
-
-        for fanta_page, page_info in title_info.fanta_pages.items():
-            print(
-                f"     Fanta vol {title_info.fanta_vol}, page {fanta_page},"
-                f" Comic page {page_info.comic_page}"
-            )
-            for speech_info in page_info.speech_info_list:
-                sp_id = speech_info.group_id
-                panel = speech_info.panel_num
-                text_lines = speech_info.speech_text.replace("\u00ad", "-")
-                indented_text = text_indenter.fill(f'"{sp_id} ({panel})": {text_lines}')
-                print(indented_text)
-                print()
-            print()
 
 
 if __name__ == "__main__":
