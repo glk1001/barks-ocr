@@ -7,8 +7,8 @@ _default2:
 
 # Find titles containing words.
 [group('OCR')]
-find-words words:
-    {{_ocr_uv_run}} "barks-ocr-whoosh-find" --unstemmed --words "{{words}}"
+find-words words *extras:
+    {{_ocr_uv_run}} "barks-ocr-whoosh-find" --unstemmed --words "{{words}}" {{extras}}
 
 # Open Vol/Page OCR files in editor
 [group('OCR')]

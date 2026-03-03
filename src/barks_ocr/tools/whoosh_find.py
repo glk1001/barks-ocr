@@ -1,7 +1,9 @@
 # ruff: noqa: T201
+import contextlib
 from pathlib import Path
 
 import typer
+from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT
 from barks_fantagraphics.whoosh_search_engine import SearchEngine
@@ -23,6 +25,11 @@ def main(
     words: str = "",
     ocr_index: int = 1,
     unstemmed: bool = False,
+    add_to_queue: Path | None = typer.Option(  # noqa: B008
+        None,
+        "--add-to-queue",
+        help="Append found items to queue file (format: volume fanta_page engine group_id)",
+    ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
     _log_setup.log_level = log_level_str
@@ -38,24 +45,32 @@ def main(
     )
     whoosh_search = SearchEngine(volumes_index_dir)
 
+    engine = OCR_TYPE_DICT[ocr_index]
     text_indenter = ParagraphWrapper(initial_indent="       ", subsequent_indent="            ")
     found_text = whoosh_search.find_words(words, unstemmed)
-    for comic_title, title_info in found_text.items():
-        print(f'"{comic_title}"')
+    with add_to_queue.open("a") if add_to_queue else contextlib.nullcontext() as queue_file:
+        for comic_title, title_info in found_text.items():
+            print(f'"{comic_title}"')
+            title = BARKS_TITLE_DICT[comic_title]
 
-        for fanta_page, page_info in title_info.fanta_pages.items():
-            print(
-                f"     Fanta vol {title_info.fanta_vol}, page {fanta_page},"
-                f" Comic page {page_info.comic_page}"
-            )
-            for speech_info in page_info.speech_info_list:
-                sp_id = speech_info.group_id
-                panel = speech_info.panel_num
-                text_lines = speech_info.speech_text.replace("\u00ad", "-")
-                indented_text = text_indenter.fill(f'"{sp_id} ({panel})": {text_lines}')
-                print(indented_text)
+            for fanta_page, page_info in title_info.fanta_pages.items():
+                print(
+                    f"     Fanta vol {title_info.fanta_vol}, page {fanta_page},"
+                    f" Comic page {page_info.comic_page}"
+                )
+                for speech_info in page_info.speech_info_list:
+                    sp_id = speech_info.group_id
+                    panel = speech_info.panel_num
+                    text_lines = speech_info.speech_text.replace("\u00ad", "-")
+                    indented_text = text_indenter.fill(f'"{sp_id} ({panel})": {text_lines}')
+                    print(indented_text)
+                    print()
+                    if queue_file is not None:
+                        queue_file.write(
+                            f'"{words}" {title.name} {page_info.comic_page}'
+                            f"  {title_info.fanta_vol} {fanta_page} {engine} {sp_id}\n"
+                        )
                 print()
-            print()
 
 
 if __name__ == "__main__":
