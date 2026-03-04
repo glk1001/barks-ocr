@@ -83,6 +83,7 @@ def check_name_map(search_engine: SearchEngine) -> None:
                     speech_lower = speech_lower.replace("\u00ad\n", "")
                     speech_lower = speech_lower.replace("-\n", "-")
                     speech_lower = speech_lower.replace("\n", " ")
+                    speech_lower = speech_lower.replace("$crooge", "scrooge")
                     if value.lower() not in speech_lower:
                         msg = f'"{value.lower()}":\n{speech_lower}\n\n{speech_info.speech_text}'
                         raise ValueError(msg)
@@ -151,13 +152,14 @@ def main(
     volumes_index_dir = BARKS_ROOT_DIR / (
         "Compleat Barks Disney Reader/Reader Files/" + indexes_dirname
     )
-    whoosh_search = SearchEngineCreator(
-        comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]
-    )
-    whoosh_search.index_volumes(volumes)
 
     if do_checks:
         check_index_integrity(comics_database, volumes)
+    else:
+        whoosh_search = SearchEngineCreator(
+            comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]
+        )
+        whoosh_search.index_volumes(volumes)
 
 
 if __name__ == "__main__":

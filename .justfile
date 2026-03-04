@@ -5,6 +5,11 @@ _ocr_uv_run := "uv run --project " + justfile_directory()
 _default2:
     just --list --unsorted
 
+# Create whoosh index.
+[group('OCR')]
+create-index ocr_index *extras:
+    {{_ocr_uv_run}} "barks-ocr-whoosh-index" --volume 1-27 --ocr-index {{ocr_index}} {{extras}}
+
 # Find titles containing words.
 [group('OCR')]
 find-words words *extras:
