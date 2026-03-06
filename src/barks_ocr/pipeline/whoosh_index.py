@@ -6,14 +6,14 @@ import typer
 from barks_fantagraphics.barks_titles import NON_COMIC_TITLES
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.comics_database import ComicsDatabase
-from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT
+from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT, OcrTypes
 from barks_fantagraphics.whoosh_barks_terms import (
     ALL_CAPS,
     BARKSIAN_EXTRA_TERMS,
     BARKSIAN_WORDS_WITH_OPTIONAL_HYPHENS,
     NAME_MAP,
 )
-from barks_fantagraphics.whoosh_search_engine import SearchEngine, SearchEngineCreator
+from barks_fantagraphics.whoosh_search_engine import SearchEngine, SearchEngineCreator, TitleDict
 from comic_utils.common_typer_options import LogLevelArg, VolumesArg
 from intspan import intspan
 from loguru import logger
@@ -26,7 +26,9 @@ _RESOURCES = Path(__file__).parent.parent / "resources"
 APP_LOGGING_NAME = "whoi"
 
 
-def check_index_integrity(comics_database: ComicsDatabase, volumes: list[int]) -> None:
+def check_index_integrity(
+    comics_database: ComicsDatabase, volumes: list[int], checks_output: Path | None
+) -> None:
     volumes_index_dir = BARKS_ROOT_DIR / "Compleat Barks Disney Reader/Reader Files/Indexes"
     search_engine = SearchEngine(volumes_index_dir)
 
@@ -43,7 +45,7 @@ def check_index_integrity(comics_database: ComicsDatabase, volumes: list[int]) -
     check_all_titles_included(comics_database, search_engine, volumes)
 
     print("Checking lemmatized terms...")
-    check_lemmatized_terms(search_engine)
+    check_lemmatized_terms(search_engine, checks_output)
 
     print()
 
@@ -114,9 +116,11 @@ def check_barksian_terms(search_engine: SearchEngine) -> None:
             logger.error(f'Barksian extra term "{term}" not found')
 
 
-def check_lemmatized_terms(search_engine: SearchEngine) -> None:
+def check_lemmatized_terms(search_engine: SearchEngine, checks_output: Path | None) -> None:
     # spell = SpellChecker()  # noqa: ERA001
+    all_issues: list[tuple[str, TitleDict]] = []
     for term in search_engine.get_cleaned_lemmatized_terms():
+        error = False
         if "-" in term:
             term_with_no_hyphen = term.replace("-", "")
             if (
@@ -124,9 +128,42 @@ def check_lemmatized_terms(search_engine: SearchEngine) -> None:
                 and term not in BARKSIAN_WORDS_WITH_OPTIONAL_HYPHENS
             ):
                 logger.error(f'Hyphenated term has non-hyphenated term as well: "{term}"')
+                error = True
 
-        if not search_engine.find_all_words(term):
+        found = search_engine.find_all_words(term)
+        if not found:
             logger.error(f'Could not find any content for term: "{term}"')
+
+        if error:
+            all_issues.append((term, found))
+
+    if all_issues and checks_output:
+        _write_queue_file(all_issues, checks_output)
+
+
+def _write_queue_file(all_issues: list[tuple[str, TitleDict]], output_file: Path) -> None:
+    """Write de-duplicated queue file: one entry per unique (vol, page, engine, group_id)."""
+    seen: set[tuple[int, str, str, str]] = set()
+    queue_lines: list[str] = []
+    for term, issue in all_issues:
+        for item in issue.values():
+            for fanta_page, page_info in item.fanta_pages.items():
+                for speech_info in page_info.speech_info_list:
+                    key = item.fanta_vol, fanta_page, speech_info.group_id, speech_info.group_id
+                    if key not in seen:
+                        seen.add(key)
+                        queue_lines.append(
+                            f"{item.fanta_vol}"
+                            f" {int(fanta_page)}"
+                            f" {OcrTypes.PADDLEOCR.value}"
+                            f" {speech_info.group_id}"
+                            f" hyphen"
+                            f' "{term}"'
+                        )
+
+    queue_lines.sort()
+    output_file.write_text("\n".join(queue_lines) + ("\n" if queue_lines else ""))
+    print(f'\nQueue file: "{output_file}" ({len(queue_lines)} entries).')
 
 
 app = typer.Typer()
@@ -137,6 +174,12 @@ def main(
     volumes_str: VolumesArg = "",
     ocr_index: int = 1,
     do_checks: bool = False,
+    checks_output: Path | None = typer.Option(  # noqa: B008
+        None,
+        "--output",
+        "-o",
+        help="Queue file path (default: auto-named ocr-check-vol-N-DATE.txt in CWD)",
+    ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
     _log_setup.log_level = log_level_str
@@ -154,7 +197,7 @@ def main(
     )
 
     if do_checks:
-        check_index_integrity(comics_database, volumes)
+        check_index_integrity(comics_database, volumes, checks_output)
     else:
         whoosh_search = SearchEngineCreator(
             comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]

@@ -40,3 +40,8 @@ open-show volume page:
 [group('OCR')]
 check-ocr volume queue_file:
     {{_ocr_uv_run}} "barks-ocr-check" --volume {{volume}} -o {{queue_file}}
+
+# Invoke the kivy editor for one page only
+[group('OCR')]
+kivy_editor volume fanta_page easy_id='0' paddle_id='0':
+    KIVY_NO_ARGS=1 {{_ocr_uv_run}} "barks-ocr-kivy-editor" --volume {{volume}} --fanta-page {{fanta_page}} --easyocr-group-id {{easy_id}} --paddleocr-group-id {{paddle_id}}

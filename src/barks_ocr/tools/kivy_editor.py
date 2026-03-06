@@ -134,7 +134,7 @@ def load_queue_file(queue_file: Path) -> list[QueueEntry]:
         if not line or line.startswith("#"):
             continue
         parts = line.split()
-        if len(parts) != 5:  # noqa: PLR2004
+        if len(parts) < 5:  # noqa: PLR2004
             logger.warning(f"Skipping invalid queue line: {line!r}")
             continue
         try:
@@ -951,8 +951,7 @@ class EditorApp(App):
                 if self._decode_checkbox.active:
                     t1 = self._decode_from_display(t1)
                     t2 = self._decode_from_display(t2)
-                are_different = t1 != t2
-                if are_different:
+                if t1 != t2:
                     self.edit_label_easyocr = f"DIFFS -- {self._easyocr_label}"
                     self.edit_label_paddleocr = f"DIFFS -- {self._paddleocr_label}"
                     label_easy.color = (1, 0, 0, 1)
