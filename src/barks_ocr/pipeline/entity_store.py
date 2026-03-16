@@ -3,7 +3,7 @@ from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
 
-from barks_ocr.pipeline.entity_tagger import ALL_ENTITY_TYPES
+from barks_fantagraphics.entity_types import EntityType
 
 
 def _entity_filename(volume: int) -> str:
@@ -44,7 +44,7 @@ def _apply_corrections(
     auto_entities: dict[str, set[str]], corrections: dict
 ) -> dict[str, set[str]]:
     result: dict[str, set[str]] = {}
-    for entity_type in ALL_ENTITY_TYPES:
+    for entity_type in EntityType:
         auto_set = set(auto_entities.get(entity_type, set()))
         type_corrections = corrections.get(entity_type, {}) if isinstance(corrections, dict) else {}
 
@@ -83,6 +83,6 @@ def get_merged_entity_provider(
                 auto_sets = {k: set(v) for k, v in group_entities.items()}
                 return merge_entities(auto_sets, group_corrections)
 
-        return {t: set() for t in ALL_ENTITY_TYPES}
+        return {t: set() for t in EntityType}
 
     return provider

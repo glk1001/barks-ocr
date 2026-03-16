@@ -1,35 +1,28 @@
 from collections.abc import Callable
 
 import spacy.tokens
+from barks_fantagraphics.entity_types import EntityType
 from barks_fantagraphics.whoosh_barks_terms import (
     BARKSIAN_ENTITY_TYPE_MAP,
     CAPITALIZATION_MAP,
 )
 
-ENTITY_PERSON = "person"
-ENTITY_LOCATION = "location"
-ENTITY_ORG = "org"
-ENTITY_WORK = "work"
-ENTITY_MISC = "misc"
-
-ALL_ENTITY_TYPES = [ENTITY_PERSON, ENTITY_LOCATION, ENTITY_ORG, ENTITY_WORK, ENTITY_MISC]
-
 # spaCy label → our entity category
-SPACY_LABEL_MAP: dict[str, str] = {
-    "PERSON": ENTITY_PERSON,
-    "GPE": ENTITY_LOCATION,
-    "LOC": ENTITY_LOCATION,
-    "ORG": ENTITY_ORG,
-    "WORK_OF_ART": ENTITY_WORK,
-    "NORP": ENTITY_MISC,
-    "EVENT": ENTITY_MISC,
-    "FAC": ENTITY_MISC,
-    "PRODUCT": ENTITY_MISC,
-    "LAW": ENTITY_MISC,
-    "LANGUAGE": ENTITY_MISC,
+SPACY_LABEL_MAP: dict[str, EntityType] = {
+    "PERSON": EntityType.PERSON,
+    "GPE": EntityType.LOCATION,
+    "LOC": EntityType.LOCATION,
+    "ORG": EntityType.ORG,
+    "WORK_OF_ART": EntityType.WORK,
+    "NORP": EntityType.MISC,
+    "EVENT": EntityType.MISC,
+    "FAC": EntityType.MISC,
+    "PRODUCT": EntityType.MISC,
+    "LAW": EntityType.MISC,
+    "LANGUAGE": EntityType.MISC,
 }
 
-type EntityDict = dict[str, set[str]]
+type EntityDict = dict[EntityType, set[str]]
 type EntityTaggerFn = Callable[[str], EntityDict]
 
 
@@ -41,8 +34,8 @@ class EntityTagger:
     def __init__(self) -> None:
         self._nlp = spacy.load("en_core_web_sm")
 
-        self._single_word_entities: dict[str, str] = {}  # lowercase → entity_type
-        self._multi_word_entities: dict[str, str] = {}  # lowercase → entity_type
+        self._single_word_entities: dict[str, EntityType] = {}  # lowercase → entity_type
+        self._multi_word_entities: dict[str, EntityType] = {}  # lowercase → entity_type
         for term_set, entity_type in BARKSIAN_ENTITY_TYPE_MAP.items():
             for term in term_set:
                 key = term.lower()
@@ -54,7 +47,7 @@ class EntityTagger:
         self._capitalization_map = _build_lower_map(CAPITALIZATION_MAP)
 
     def tag(self, text: str) -> EntityDict:
-        result: EntityDict = {t: set() for t in ALL_ENTITY_TYPES}
+        result: EntityDict = {t: set() for t in EntityType}
         text_lower = text.lower().replace("\n", " ")
         doc = self._nlp(text)
 
@@ -68,7 +61,7 @@ class EntityTagger:
     def _match_curated_full_names(self, text_lower: str, result: EntityDict) -> None:
         for name, category in self._multi_word_entities.items():
             if name in text_lower:
-                result[category].add(name.title() if category != ENTITY_WORK else name)
+                result[category].add(name.title() if category != EntityType.WORK else name)
 
     def _find_curated_spans(self, text_lower: str) -> set[tuple[int, int]]:
         spans: set[tuple[int, int]] = set()
@@ -112,10 +105,10 @@ class EntityTagger:
                 if cat:
                     result[cat].add(canonical)
 
-    def _classify_capitalization_entry(self, canonical: str) -> str:
+    def _classify_capitalization_entry(self, canonical: str) -> EntityType:
         canonical_lower = canonical.lower()
         if canonical_lower in self._multi_word_entities:
             return self._multi_word_entities[canonical_lower]
         if canonical_lower in self._single_word_entities:
             return self._single_word_entities[canonical_lower]
-        return ENTITY_PERSON
+        return EntityType.PERSON
