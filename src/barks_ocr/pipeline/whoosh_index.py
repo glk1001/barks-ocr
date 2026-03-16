@@ -3,15 +3,16 @@
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import NON_COMIC_TITLES
+from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, NON_COMIC_TITLES
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.comics_database import ComicsDatabase
-from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT, OcrTypes
+from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT, OcrTypes, SpeechGroups
 from barks_fantagraphics.whoosh_barks_terms import (
     ALL_CAPS,
     BARKSIAN_EXTRA_TERMS,
     BARKSIAN_WORDS_WITH_OPTIONAL_HYPHENS,
-    NAME_MAP,
+    CAPITALIZATION_MAP,
+    FRAGMENTS_TO_SUPPRESS,
 )
 from barks_fantagraphics.whoosh_search_engine import SearchEngine, SearchEngineCreator, TitleDict
 from comic_utils.common_typer_options import LogLevelArg, VolumesArg
@@ -20,6 +21,8 @@ from loguru import logger
 from loguru_config import LoguruConfig
 
 import barks_ocr.log_setup as _log_setup
+from barks_ocr.pipeline.entity_store import get_merged_entity_provider, save_auto_entities
+from barks_ocr.pipeline.entity_tagger import EntityTagger
 
 _RESOURCES = Path(__file__).parent.parent / "resources"
 
@@ -32,8 +35,11 @@ def check_index_integrity(
     volumes_index_dir = BARKS_ROOT_DIR / "Compleat Barks Disney Reader/Reader Files/Indexes"
     search_engine = SearchEngine(volumes_index_dir)
 
-    print("Checking NAME_MAP...")
-    check_name_map(search_engine)
+    print("Checking CAPITALIZATION_MAP...")
+    check_capitalization_map(search_engine)
+
+    print("Checking FRAGMENTS_TO_SUPPRESS...")
+    check_fragments_to_suppress(search_engine)
 
     print("Checking ALL_CAPS...")
     check_all_caps(search_engine)
@@ -67,10 +73,10 @@ def check_all_titles_included(
             print(f'    "{title}"')
 
 
-def check_name_map(search_engine: SearchEngine) -> None:
-    assert "ele-phant" in NAME_MAP
+def check_capitalization_map(search_engine: SearchEngine) -> None:
+    assert "ele-phant" in CAPITALIZATION_MAP
 
-    for key, value in NAME_MAP.items():
+    for key, value in CAPITALIZATION_MAP.items():
         found = search_engine.find_words(key, use_unstemmed_terms=True)
         if not found:
             msg = f'"{key}" not found'
@@ -89,6 +95,14 @@ def check_name_map(search_engine: SearchEngine) -> None:
                     if value.lower() not in speech_lower:
                         msg = f'"{value.lower()}":\n{speech_lower}\n\n{speech_info.speech_text}'
                         raise ValueError(msg)
+
+
+def check_fragments_to_suppress(search_engine: SearchEngine) -> None:
+    for key in FRAGMENTS_TO_SUPPRESS:
+        found = search_engine.find_words(key, use_unstemmed_terms=True)
+        if not found:
+            msg = f'Fragment "{key}" not found'
+            raise ValueError(msg)
 
 
 def check_all_caps(search_engine: SearchEngine) -> None:
@@ -169,8 +183,43 @@ def _write_queue_file(all_issues: list[tuple[str, TitleDict]], output_file: Path
 app = typer.Typer()
 
 
+def _tag_volumes(
+    comics_database: ComicsDatabase,
+    volumes: list[int],
+    ocr_index_to_use: OcrTypes,
+    entities_dir: Path,
+) -> None:
+    tagger = EntityTagger()
+    all_speech_groups = SpeechGroups(comics_database)
+
+    for vol in volumes:
+        print(f"Tagging volume {vol}...")
+        volume_entities: dict = {}
+
+        titles = comics_database.get_configured_titles_in_fantagraphics_volumes(
+            [vol], exclude_non_comics=True
+        )
+        for title_str, _ in titles:
+            title = BARKS_TITLE_DICT[title_str]
+            speech_page_groups = all_speech_groups.get_speech_page_groups(title)
+            for speech_page in speech_page_groups:
+                if speech_page.ocr_index != ocr_index_to_use:
+                    continue
+                for group_id, speech_text in speech_page.speech_groups.items():
+                    entities = tagger.tag(speech_text.ai_text)
+                    # Only store non-empty entity lists
+                    non_empty = {k: sorted(v) for k, v in entities.items() if v}
+                    if non_empty:
+                        volume_entities.setdefault(title_str, {}).setdefault(
+                            speech_page.fanta_page, {}
+                        )[group_id] = non_empty
+
+        save_auto_entities(entities_dir, vol, volume_entities)
+        print(f"  Saved {entities_dir / f'entities-vol-{vol:02d}.json'}")
+
+
 @app.command(help="Build Whoosh index from Gemini AI groups")
-def main(
+def main(  # noqa: PLR0913
     volumes_str: VolumesArg = "",
     ocr_index: int = 1,
     do_checks: bool = False,
@@ -179,6 +228,14 @@ def main(
         "--output",
         "-o",
         help="Queue file path (default: auto-named ocr-check-vol-N-DATE.txt in CWD)",
+    ),
+    tag: bool = typer.Option(
+        default=False,
+        help="Run spaCy tagging, save entity JSONs, then build index",
+    ),
+    tag_only: bool = typer.Option(
+        default=False,
+        help="Run spaCy tagging and save entity JSONs only (no index build)",
     ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
@@ -198,11 +255,20 @@ def main(
 
     if do_checks:
         check_index_integrity(comics_database, volumes, checks_output)
+    elif tag or tag_only:
+        _tag_volumes(comics_database, volumes, OCR_TYPE_DICT[ocr_index], volumes_index_dir)
+        if not tag_only:
+            entity_provider = get_merged_entity_provider(volumes_index_dir, volumes)
+            whoosh_search = SearchEngineCreator(
+                comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]
+            )
+            whoosh_search.index_volumes(volumes, entity_provider=entity_provider)
     else:
+        entity_provider = get_merged_entity_provider(volumes_index_dir, volumes)
         whoosh_search = SearchEngineCreator(
             comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]
         )
-        whoosh_search.index_volumes(volumes)
+        whoosh_search.index_volumes(volumes, entity_provider=entity_provider)
 
 
 if __name__ == "__main__":

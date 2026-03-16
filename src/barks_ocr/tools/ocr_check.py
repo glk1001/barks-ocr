@@ -91,11 +91,11 @@ class OcrChecker:
         fanta_page = page_group.fanta_page
         engine = str(page_group.ocr_index)
         json_groups = page_group.speech_page_json.get("groups", {})
-        page_panel_boxes = page_panel_boxes.pages[fanta_page]
+        per_page_boxes = page_panel_boxes.pages[fanta_page]
         issues: list[IssueFound] = []
         for group_id, group in json_groups.items():
             issues.extend(
-                self._check_group(volume, fanta_page, engine, group_id, group, page_panel_boxes)
+                self._check_group(volume, fanta_page, engine, group_id, group, per_page_boxes)
             )
         return issues
 
@@ -211,7 +211,7 @@ class OcrChecker:
             top_right[1] - bottom_left[1],
         )
 
-        for i, panel_box in enumerate(page_panel_boxes.panel_boxes):  # type: ignore[union-attr]
+        for i, panel_box in enumerate(page_panel_boxes.panel_boxes):
             top_left_x = panel_box.x0
             top_left_y = panel_box.y0
             w = panel_box.w

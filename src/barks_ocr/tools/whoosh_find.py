@@ -6,7 +6,7 @@ import typer
 from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT
-from barks_fantagraphics.whoosh_search_engine import SearchEngine
+from barks_fantagraphics.whoosh_search_engine import ENTITY_TYPES, SearchEngine
 from comic_utils.common_typer_options import LogLevelArg
 from loguru_config import LoguruConfig
 
@@ -21,10 +21,15 @@ app = typer.Typer()
 
 
 @app.command(help="Find words in the Whoosh index")
-def main(
+def main(  # noqa: PLR0913
     words: str = "",
     ocr_index: int = 1,
     unstemmed: bool = False,
+    entity_type: str | None = typer.Option(
+        None,
+        "--entity-type",
+        help=f"Search by entity type ({', '.join(ENTITY_TYPES)})",
+    ),
     add_to_queue: Path | None = typer.Option(  # noqa: B008
         None,
         "--add-to-queue",
@@ -45,9 +50,16 @@ def main(
     )
     whoosh_search = SearchEngine(volumes_index_dir)
 
+    if entity_type is not None and entity_type not in ENTITY_TYPES:
+        print(f"Invalid entity type '{entity_type}'. Must be one of: {', '.join(ENTITY_TYPES)}")
+        raise typer.Exit(code=1)
+
     engine = OCR_TYPE_DICT[ocr_index]
     text_indenter = ParagraphWrapper(initial_indent="       ", subsequent_indent="            ")
-    found_text = whoosh_search.find_words(words, unstemmed)
+    if entity_type is not None:
+        found_text = whoosh_search.find_entities(entity_type, words)
+    else:
+        found_text = whoosh_search.find_words(words, unstemmed)
     with add_to_queue.open("a") if add_to_queue else contextlib.nullcontext() as queue_file:
         for comic_title, title_info in found_text.items():
             print(f'"{comic_title}"')
@@ -62,7 +74,14 @@ def main(
                     sp_id = speech_info.group_id
                     panel = speech_info.panel_num
                     text_lines = speech_info.speech_text.replace("\u00ad", "-")
-                    indented_text = text_indenter.fill(f'"{sp_id} ({panel})": {text_lines}')
+                    entity_suffix = (
+                        f" [{','.join(speech_info.entity_types)}]"
+                        if speech_info.entity_types
+                        else ""
+                    )
+                    indented_text = text_indenter.fill(
+                        f'"{sp_id} ({panel}){entity_suffix}": {text_lines}'
+                    )
                     print(indented_text)
                     print()
                     if queue_file is not None:
