@@ -1,14 +1,18 @@
 # ruff: noqa: T201
 
+import json
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import typer
 from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, NON_COMIC_TITLES
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.entity_types import EntityType
 from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT, OcrTypes, SpeechGroups
 from barks_fantagraphics.whoosh_barks_terms import (
     ALL_CAPS,
+    BARKSIAN_ENTITY_TYPE_MAP,
     BARKSIAN_EXTRA_TERMS,
     BARKSIAN_WORDS_WITH_OPTIONAL_HYPHENS,
     CAPITALIZATION_MAP,
@@ -269,6 +273,138 @@ def main(  # noqa: PLR0913
             comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]
         )
         whoosh_search.index_volumes(volumes, entity_provider=entity_provider)
+
+
+def _build_curated_sets() -> dict[EntityType, set[str]]:
+    """Build mapping from EntityType to set of lowercase curated names."""
+    curated: dict[EntityType, set[str]] = {t: set() for t in EntityType}
+    for term_set, entity_type in BARKSIAN_ENTITY_TYPE_MAP.items():
+        for term in term_set:
+            curated[entity_type].add(term.lower())
+    return curated
+
+
+def _collect_uncurated_from_group(  # noqa: PLR0913
+    entities: dict[EntityType, set[str]],
+    curated_sets: dict[EntityType, set[str]],
+    candidates: dict[str, dict],
+    title_str: str,
+    fanta_page: str,
+    group_id: str,
+    speech_text_snippet: str,
+    max_examples: int,
+) -> None:
+    """Record any entity names not in the curated sets as candidates."""
+    for entity_type in EntityType:
+        curated = curated_sets.get(entity_type, set())
+        for name in entities.get(entity_type, set()):
+            if name.lower() not in curated:
+                info = candidates[name]
+                info["types"][entity_type.value] += 1
+                info["count"] += 1
+                if len(info["examples"]) < max_examples:
+                    info["examples"].append(
+                        {
+                            "title": title_str,
+                            "page": fanta_page,
+                            "group": group_id,
+                            "text": speech_text_snippet,
+                        }
+                    )
+
+
+def _discover_entities(
+    comics_database: ComicsDatabase,
+    volumes: list[int],
+    ocr_index_to_use: OcrTypes,
+    output_path: Path,
+) -> None:
+    """Run spaCy tagging and output uncurated entity candidates with context."""
+    tagger = EntityTagger()
+    all_speech_groups = SpeechGroups(comics_database)
+    curated_sets = _build_curated_sets()
+
+    candidates: dict[str, dict] = defaultdict(
+        lambda: {"types": Counter(), "count": 0, "examples": []}
+    )
+    max_examples = 3
+
+    titles = comics_database.get_configured_titles_in_fantagraphics_volumes(
+        volumes, exclude_non_comics=True
+    )
+    for title_str, _ in titles:
+        title = BARKS_TITLE_DICT[title_str]
+        speech_page_groups = all_speech_groups.get_speech_page_groups(title)
+        for speech_page in speech_page_groups:
+            if speech_page.ocr_index != ocr_index_to_use:
+                continue
+            for group_id, speech_text in speech_page.speech_groups.items():
+                entities = tagger.tag(speech_text.ai_text)
+                _collect_uncurated_from_group(
+                    entities,
+                    curated_sets,
+                    candidates,
+                    title_str,
+                    speech_page.fanta_page,
+                    group_id,
+                    speech_text.ai_text[:200],
+                    max_examples,
+                )
+
+    _write_discover_output(candidates, output_path)
+
+
+def _write_discover_output(candidates: dict[str, dict], output_path: Path) -> None:
+    """Group candidates by type, sort by frequency, and write to JSON."""
+    by_type: dict[str, list[dict]] = defaultdict(list)
+    for name, info in sorted(candidates.items(), key=lambda x: x[0].lower()):
+        primary_type = info["types"].most_common(1)[0][0]
+        by_type[primary_type].append(
+            {
+                "name": name,
+                "count": info["count"],
+                "spacy_types": dict(info["types"]),
+                "examples": info["examples"],
+            }
+        )
+
+    result = {}
+    for entity_type in EntityType:
+        type_candidates = by_type.get(entity_type.value, [])
+        if type_candidates:
+            type_candidates.sort(key=lambda x: x["count"], reverse=True)
+            result[entity_type.value] = type_candidates
+
+    output_path.write_text(json.dumps(result, indent=4) + "\n")
+    total = sum(len(v) for v in result.values())
+    print(f"Discovered {total} uncurated entity candidates.")
+    for entity_type, entries in result.items():
+        print(f"  {entity_type}: {len(entries)} candidates")
+    print(f'\nOutput: "{output_path}"')
+
+
+@app.command(help="Discover uncurated spaCy entity candidates for review")
+def discover(
+    volumes_str: VolumesArg = "",
+    ocr_index: int = 1,
+    output: Path = typer.Option(  # noqa: B008
+        "entity-candidates.json",
+        "--output",
+        "-o",
+        help="Output file for discovered candidates",
+    ),
+    log_level_str: LogLevelArg = "DEBUG",
+) -> None:
+    _log_setup.log_level = log_level_str
+    _log_setup.log_filename = "discover-entities.log"
+    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
+    LoguruConfig.load(_RESOURCES / "log-config.yaml")
+
+    volumes = list(intspan(volumes_str))
+    comics_database = ComicsDatabase()
+    assert ocr_index in OCR_TYPE_DICT
+
+    _discover_entities(comics_database, volumes, OCR_TYPE_DICT[ocr_index], output)
 
 
 if __name__ == "__main__":

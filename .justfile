@@ -8,7 +8,7 @@ _default2:
 # Create whoosh index.
 [group('OCR')]
 create-index ocr_index *extras:
-    {{_ocr_uv_run}} "barks-ocr-whoosh-index" --volume 1-27 --ocr-index {{ocr_index}} {{extras}}
+    {{_ocr_uv_run}} "barks-ocr-whoosh-index" main --volume 1-27 --ocr-index {{ocr_index}} {{extras}}
 
 # Find titles containing words.
 [group('OCR')]
