@@ -54,8 +54,8 @@ def check_index_integrity(
     print("Checking all titles included in index...")
     check_all_titles_included(comics_database, search_engine, volumes)
 
-    print("Checking lemmatized terms...")
-    check_lemmatized_terms(search_engine, checks_output)
+    print("Checking cleaned terms...")
+    check_cleaned_terms(search_engine, checks_output)
 
     print()
 
@@ -81,7 +81,7 @@ def check_capitalization_map(search_engine: SearchEngine) -> None:
     assert "ele-phant" in CAPITALIZATION_MAP
 
     for key, value in CAPITALIZATION_MAP.items():
-        found = search_engine.find_words(key, use_unstemmed_terms=True)
+        found = search_engine.find_words(key)
         if not found:
             msg = f'"{key}" not found'
             raise ValueError(msg)
@@ -103,7 +103,7 @@ def check_capitalization_map(search_engine: SearchEngine) -> None:
 
 def check_fragments_to_suppress(search_engine: SearchEngine) -> None:
     for key in FRAGMENTS_TO_SUPPRESS:
-        found = search_engine.find_words(key, use_unstemmed_terms=True)
+        found = search_engine.find_words(key)
         if not found:
             msg = f'Fragment "{key}" not found'
             raise ValueError(msg)
@@ -111,7 +111,7 @@ def check_fragments_to_suppress(search_engine: SearchEngine) -> None:
 
 def check_all_caps(search_engine: SearchEngine) -> None:
     for word in ALL_CAPS:
-        found = search_engine.find_words(word, use_unstemmed_terms=True)
+        found = search_engine.find_words(word)
         if not found:
             msg = f'"{word}" not found'
             raise ValueError(msg)
@@ -129,26 +129,26 @@ def check_all_caps(search_engine: SearchEngine) -> None:
 
 def check_barksian_terms(search_engine: SearchEngine) -> None:
     for term in BARKSIAN_EXTRA_TERMS:
-        found = search_engine.find_words(term, use_unstemmed_terms=True)
+        found = search_engine.find_words(term)
         if not found:
             logger.error(f'Barksian extra term "{term}" not found')
 
 
-def check_lemmatized_terms(search_engine: SearchEngine, checks_output: Path | None) -> None:
+def check_cleaned_terms(search_engine: SearchEngine, checks_output: Path | None) -> None:
     # spell = SpellChecker()  # noqa: ERA001
     all_issues: list[tuple[str, TitleDict]] = []
-    for term in search_engine.get_cleaned_lemmatized_terms():
+    for term in search_engine.get_cleaned_terms():
         error = False
         if "-" in term:
             term_with_no_hyphen = term.replace("-", "")
             if (
-                search_engine.find_words(term_with_no_hyphen, use_unstemmed_terms=True)
+                search_engine.find_words(term_with_no_hyphen)
                 and term not in BARKSIAN_WORDS_WITH_OPTIONAL_HYPHENS
             ):
                 logger.error(f'Hyphenated term has non-hyphenated term as well: "{term}"')
                 error = True
 
-        found = search_engine.find_all_words(term)
+        found = search_engine.find_words(term)
         if not found:
             logger.error(f'Could not find any content for term: "{term}"')
 

@@ -21,10 +21,9 @@ app = typer.Typer()
 
 
 @app.command(help="Find words in the Whoosh index")
-def main(  # noqa: PLR0913
+def main(
     words: str = "",
     ocr_index: int = 1,
-    unstemmed: bool = False,
     entity_type: str | None = typer.Option(
         None,
         "--entity-type",
@@ -59,7 +58,7 @@ def main(  # noqa: PLR0913
     if entity_type is not None:
         found_text = whoosh_search.find_entities(entity_type, words)
     else:
-        found_text = whoosh_search.find_words(words, unstemmed)
+        found_text = whoosh_search.find_words(words)
     with add_to_queue.open("a") if add_to_queue else contextlib.nullcontext() as queue_file:
         for comic_title, title_info in found_text.items():
             print(f'"{comic_title}"')
