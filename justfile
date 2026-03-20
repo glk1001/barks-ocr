@@ -1,4 +1,4 @@
-import '../barks-comic-building/.justfile'
+import '../barks-comic-building/justfile'
 
 _ocr_uv_run := "uv run --project " + justfile_directory()
 
