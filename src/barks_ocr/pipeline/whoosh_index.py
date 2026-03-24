@@ -275,44 +275,6 @@ def main(  # noqa: PLR0913
         whoosh_search.index_volumes(volumes, entity_provider=entity_provider)
 
 
-def _build_curated_sets() -> dict[EntityType, set[str]]:
-    """Build mapping from EntityType to set of lowercase curated names."""
-    curated: dict[EntityType, set[str]] = {t: set() for t in EntityType}
-    for term_set, entity_type in BARKSIAN_ENTITY_TYPE_MAP.items():
-        for term in term_set:
-            curated[entity_type].add(term.lower())
-    return curated
-
-
-def _collect_uncurated_from_group(  # noqa: PLR0913
-    entities: dict[EntityType, set[str]],
-    curated_sets: dict[EntityType, set[str]],
-    candidates: dict[str, dict],
-    title_str: str,
-    fanta_page: str,
-    group_id: str,
-    speech_text_snippet: str,
-    max_examples: int,
-) -> None:
-    """Record any entity names not in the curated sets as candidates."""
-    for entity_type in EntityType:
-        curated = curated_sets.get(entity_type, set())
-        for name in entities.get(entity_type, set()):
-            if name.lower() not in curated:
-                info = candidates[name]
-                info["types"][entity_type.value] += 1
-                info["count"] += 1
-                if len(info["examples"]) < max_examples:
-                    info["examples"].append(
-                        {
-                            "title": title_str,
-                            "page": fanta_page,
-                            "group": group_id,
-                            "text": speech_text_snippet,
-                        }
-                    )
-
-
 def _discover_entities(
     comics_database: ComicsDatabase,
     volumes: list[int],
@@ -352,6 +314,44 @@ def _discover_entities(
                 )
 
     _write_discover_output(candidates, output_path)
+
+
+def _build_curated_sets() -> dict[EntityType, set[str]]:
+    """Build mapping from EntityType to set of lowercase curated names."""
+    curated: dict[EntityType, set[str]] = {t: set() for t in EntityType}
+    for term_set, entity_type in BARKSIAN_ENTITY_TYPE_MAP.items():
+        for term in term_set:
+            curated[entity_type].add(term.lower())
+    return curated
+
+
+def _collect_uncurated_from_group(  # noqa: PLR0913
+    entities: dict[EntityType, set[str]],
+    curated_sets: dict[EntityType, set[str]],
+    candidates: dict[str, dict],
+    title_str: str,
+    fanta_page: str,
+    group_id: str,
+    speech_text_snippet: str,
+    max_examples: int,
+) -> None:
+    """Record any entity names not in the curated sets as candidates."""
+    for entity_type in EntityType:
+        curated = curated_sets.get(entity_type, set())
+        for name in entities.get(entity_type, set()):
+            if name.lower() not in curated:
+                info = candidates[name]
+                info["types"][entity_type.value] += 1
+                info["count"] += 1
+                if len(info["examples"]) < max_examples:
+                    info["examples"].append(
+                        {
+                            "title": title_str,
+                            "page": fanta_page,
+                            "group": group_id,
+                            "text": speech_text_snippet,
+                        }
+                    )
 
 
 def _write_discover_output(candidates: dict[str, dict], output_path: Path) -> None:
