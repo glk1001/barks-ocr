@@ -284,7 +284,7 @@ def _discover_entities(
     """Run spaCy tagging and output uncurated entity candidates with context."""
     tagger = EntityTagger()
     all_speech_groups = SpeechGroups(comics_database)
-    curated_sets = _build_curated_sets()
+    curated_names = _build_curated_set()
 
     candidates: dict[str, dict] = defaultdict(
         lambda: {"types": Counter(), "count": 0, "examples": []}
@@ -304,7 +304,7 @@ def _discover_entities(
                 entities = tagger.tag(speech_text.ai_text)
                 _collect_uncurated_from_group(
                     entities,
-                    curated_sets,
+                    curated_names,
                     candidates,
                     title_str,
                     speech_page.fanta_page,
@@ -316,18 +316,19 @@ def _discover_entities(
     _write_discover_output(candidates, output_path)
 
 
-def _build_curated_sets() -> dict[EntityType, set[str]]:
-    """Build mapping from EntityType to set of lowercase curated names."""
-    curated: dict[EntityType, set[str]] = {t: set() for t in EntityType}
-    for term_set, entity_type in BARKSIAN_ENTITY_TYPE_MAP.items():
+def _build_curated_set() -> set[str]:
+    """Build flat set of all lowercase curated entity names (across all types)."""
+    curated: set[str] = set()
+    for term_set in BARKSIAN_ENTITY_TYPE_MAP:
         for term in term_set:
-            curated[entity_type].add(term.lower())
+            curated.add(term.lower())
+    curated.update(k.lower() for k in CAPITALIZATION_MAP)
     return curated
 
 
 def _collect_uncurated_from_group(  # noqa: PLR0913
     entities: dict[EntityType, set[str]],
-    curated_sets: dict[EntityType, set[str]],
+    curated_names: set[str],
     candidates: dict[str, dict],
     title_str: str,
     fanta_page: str,
@@ -335,11 +336,10 @@ def _collect_uncurated_from_group(  # noqa: PLR0913
     speech_text_snippet: str,
     max_examples: int,
 ) -> None:
-    """Record any entity names not in the curated sets as candidates."""
+    """Record any entity names not in any curated list as candidates."""
     for entity_type in EntityType:
-        curated = curated_sets.get(entity_type, set())
         for name in entities.get(entity_type, set()):
-            if name.lower() not in curated:
+            if name.lower() not in curated_names:
                 info = candidates[name]
                 info["types"][entity_type.value] += 1
                 info["count"] += 1

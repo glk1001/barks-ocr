@@ -1,3 +1,4 @@
+import re
 from collections.abc import Callable
 
 import spacy.tokens
@@ -5,6 +6,7 @@ from barks_fantagraphics.entity_types import EntityType
 from barks_fantagraphics.whoosh_barks_terms import (
     BARKSIAN_ENTITY_TYPE_MAP,
     CAPITALIZATION_MAP,
+    CONTEXT_SENSITIVE_WORDS,
 )
 
 # spaCy label → our entity category
@@ -24,6 +26,8 @@ SPACY_LABEL_MAP: dict[str, EntityType] = {
 
 type EntityDict = dict[EntityType, set[str]]
 type EntityTaggerFn = Callable[[str], EntityDict]
+type _CompiledContextRule = tuple[re.Pattern[str], EntityType, str]
+type _CompiledContextEntry = tuple[EntityType, str, list[_CompiledContextRule]]
 
 
 def _build_lower_map(mapping: dict[str, str]) -> dict[str, str]:
@@ -46,15 +50,27 @@ class EntityTagger:
 
         self._capitalization_map = _build_lower_map(CAPITALIZATION_MAP)
 
+        self._context_sensitive: dict[str, _CompiledContextEntry] = {
+            word: (
+                fallback_type,
+                fallback_canonical,
+                [(re.compile(pat), etype, canon) for pat, etype, canon in rules],
+            )
+            for word, (fallback_type, fallback_canonical, rules) in CONTEXT_SENSITIVE_WORDS.items()
+        }
+
     def tag(self, text: str) -> EntityDict:
         result: EntityDict = {t: set() for t in EntityType}
         text_lower = text.lower().replace("\n", " ")
-        doc = self._nlp(text)
+        # Run spaCy on lowercased text — ALL-CAPS input causes the tagger to
+        # label almost every token as PROPN (NNP), producing noisy NER results.
+        doc = self._nlp(text_lower)
 
         self._match_curated_full_names(text_lower, result)
         curated_spans = self._find_curated_spans(text_lower)
         self._match_spacy_entities(doc, curated_spans, result)
         self._match_curated_tokens(doc, result)
+        self._match_context_sensitive(text_lower, result)
 
         return result
 
@@ -87,11 +103,12 @@ class EntityTagger:
             # Skip if overlapping with a curated multi-word match
             if any(not (ent.end_char <= cs[0] or ent.start_char >= cs[1]) for cs in curated_spans):
                 continue
-            # Skip if entity text is in any curated single-word list
+            # Skip if entity text is in any curated single-word list or context-sensitive list
             ent_lower = ent.text.lower()
-            if ent_lower in self._single_word_entities:
+            if ent_lower in self._single_word_entities or ent_lower in self._context_sensitive:
                 continue
-            result[SPACY_LABEL_MAP[ent.label_]].add(ent.text)
+
+            result[SPACY_LABEL_MAP[ent.label_]].add(ent.text.title())
 
     def _match_curated_tokens(self, doc: spacy.tokens.Doc, result: EntityDict) -> None:
         for token in doc:
@@ -104,6 +121,25 @@ class EntityTagger:
                 cat = self._classify_capitalization_entry(canonical)
                 if cat:
                     result[cat].add(canonical)
+
+    def _match_context_sensitive(self, text_lower: str, result: EntityDict) -> None:
+        for word, (fallback_type, fallback_canonical, rules) in self._context_sensitive.items():
+            if word not in text_lower:
+                continue
+
+            # Apply specific patterns first, recording which word positions they cover
+            specific_positions: set[int] = set()
+            for pattern, entity_type, canonical in rules:
+                for m in pattern.finditer(text_lower):
+                    word_offset = m.group(0).rfind(word)
+                    if word_offset != -1:
+                        specific_positions.add(m.start() + word_offset)
+                        result[entity_type].add(canonical)
+
+            # Any occurrence not covered by a specific pattern → fallback
+            for m in re.finditer(r"\b" + re.escape(word) + r"\b", text_lower):
+                if m.start() not in specific_positions:
+                    result[fallback_type].add(fallback_canonical)
 
     def _classify_capitalization_entry(self, canonical: str) -> EntityType:
         canonical_lower = canonical.lower()
