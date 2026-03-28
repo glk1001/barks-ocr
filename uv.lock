@@ -116,6 +116,7 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "en-core-web-sm" },
+    { name = "llama-cloud" },
     { name = "prek" },
     { name = "ruff" },
     { name = "ty" },
@@ -155,6 +156,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "en-core-web-sm", url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" },
+    { name = "llama-cloud", specifier = ">=1.6.0" },
     { name = "prek", specifier = ">=0.3.8" },
     { name = "ruff", specifier = ">=0.12.7" },
     { name = "ty", specifier = ">=0.0.17" },
@@ -421,6 +423,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5a/01/ffe51729a8f961a437920560659073e47f575d4627445216c1177ecd4a41/cymem-2.0.13-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:666ce6146bc61b9318aa70d91ce33f126b6344a25cf0b925621baed0c161e9cc", size = 290465, upload-time = "2025-11-14T14:58:21.815Z" },
     { url = "https://files.pythonhosted.org/packages/fd/ac/c9e7d68607f71ef978c81e334ab2898b426944c71950212b1467186f69f9/cymem-2.0.13-cp314-cp314t-win_amd64.whl", hash = "sha256:84c1168c563d9d1e04546cb65e3e54fde2bf814f7c7faf11fc06436598e386d1", size = 46665, upload-time = "2025-11-14T14:58:23.512Z" },
     { url = "https://files.pythonhosted.org/packages/66/66/150e406a2db5535533aa3c946de58f0371f2e412e23f050c704588023e6e/cymem-2.0.13-cp314-cp314t-win_arm64.whl", hash = "sha256:e9027764dc5f1999fb4b4cabee1d0322c59e330c0a6485b436a68275f614277f", size = 39715, upload-time = "2025-11-14T14:58:24.773Z" },
+]
+
+[[package]]
+name = "distro"
+version = "1.9.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fc/f8/98eea607f65de6527f8a2e8885fc8015d3e6f5775df186e443e0964a11c3/distro-1.9.0.tar.gz", hash = "sha256:2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed", size = 60722, upload-time = "2023-12-24T09:54:32.31Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/12/b3/231ffd4ab1fc9d679809f356cebee130ac7daa00d6d6f3206dd4fd137e9e/distro-1.9.0-py3-none-any.whl", hash = "sha256:7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2", size = 20277, upload-time = "2023-12-24T09:54:30.421Z" },
 ]
 
 [[package]]
@@ -970,6 +981,23 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/6f/6b/c875b30a1ba490860c93da4cabf479e03f584eba06fe5963f6f6644653d8/lazy_loader-0.4.tar.gz", hash = "sha256:47c75182589b91a4e1a85a136c074285a5ad4d9f39c63e0d7fb76391c4574cd1", size = 15431, upload-time = "2024-04-05T13:03:12.261Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/83/60/d497a310bde3f01cb805196ac61b7ad6dc5dcf8dce66634dc34364b20b4f/lazy_loader-0.4-py3-none-any.whl", hash = "sha256:342aa8e14d543a154047afb4ba8ef17f5563baad3fc610d7b15b213b0f119efc", size = 12097, upload-time = "2024-04-05T13:03:10.514Z" },
+]
+
+[[package]]
+name = "llama-cloud"
+version = "1.6.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "anyio" },
+    { name = "distro" },
+    { name = "httpx" },
+    { name = "pydantic" },
+    { name = "sniffio" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/15/bc/72256200ae875bfb352a1043a6008472829517e1bff4e3b1311639def2f8/llama_cloud-1.6.0.tar.gz", hash = "sha256:b00c75df76b59becca72f262c755a59529f0c09f0cda79e086eedefc62d59ac8", size = 2274742, upload-time = "2026-03-05T23:55:34.405Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e2/e1/c40aff3fe70c6b457ee89f6cdaee8678fb63986b12734e7d6e4fc481d6dc/llama_cloud-1.6.0-py3-none-any.whl", hash = "sha256:3b880587ef82f23dc9f1998395b31f8a4afd77eb88f99689358a67375d16d413", size = 394869, upload-time = "2026-03-05T23:55:33.172Z" },
 ]
 
 [[package]]

@@ -76,6 +76,7 @@ required-environments = [
 [dependency-groups]
 dev = [
     "en-core-web-sm",
+    "llama-cloud>=1.6.0",
     "prek>=0.3.8",
     "ruff>=0.12.7",
     "ty>=0.0.17",
