@@ -3,19 +3,13 @@ from pathlib import Path
 from typing import Any
 
 import typer
-from barks_fantagraphics.comics_database import ComicsDatabase
-from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.ocr_file_paths import get_ocr_predicted_groups_filename
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
-from intspan import intspan
 from loguru import logger
-from loguru_config import LoguruConfig
 
-import barks_ocr.log_setup as _log_setup
+from barks_ocr.cli_setup import get_comic_titles, init_logging
 from barks_ocr.pipeline.gemini_grouper import GeminiAiGrouper
 from barks_ocr.utils.gemini_ai_for_grouping import get_cleaned_text
-
-_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "gemg"
 
@@ -52,20 +46,12 @@ def main(
     title_str: TitleArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    _log_setup.log_level = log_level_str
-    _log_setup.log_filename = "make-gemini-ai-groups-from-batch.log"
-    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
-    LoguruConfig.load(_RESOURCES / "log-config.yaml")
+    init_logging(APP_LOGGING_NAME, "make-gemini-ai-groups-from-batch.log", log_level_str)
 
-    if volumes_str and title_str:
-        err_msg = "Options --volume and --title are mutually exclusive."
-        raise typer.BadParameter(err_msg)
-
-    volumes = list(intspan(volumes_str))
-    comics_database = ComicsDatabase()
+    comics_database, titles = get_comic_titles(volumes_str, title_str)
 
     gemini_ai_grouper = GeminiAiGrouper(comics_database, get_ai_predicted_groups)
-    gemini_ai_grouper.make_groups_for_titles(get_titles(comics_database, volumes, title_str))
+    gemini_ai_grouper.make_groups_for_titles(titles)
 
 
 if __name__ == "__main__":

@@ -10,11 +10,8 @@ from barks_fantagraphics.comics_utils import get_timestamp_str
 from barks_fantagraphics.ocr_file_paths import OCR_FIXES_BACKUP_DIR, OCR_FIXES_DIR
 from comic_utils.common_typer_options import LogLevelArg, PagesArg, TitleArg
 from loguru import logger
-from loguru_config import LoguruConfig
 
-import barks_ocr.log_setup as _log_setup
-
-_RESOURCES = Path(__file__).parent.parent / "resources"
+from barks_ocr.cli_setup import init_logging
 
 APP_LOGGING_NAME = "chkr"
 
@@ -154,10 +151,7 @@ def main(  # noqa: PLR0913
     edit_right: bool = False,
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    _log_setup.log_level = log_level_str
-    _log_setup.log_filename = "fix-ocr.log"
-    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
-    LoguruConfig.load(_RESOURCES / "log-config.yaml")
+    init_logging(APP_LOGGING_NAME, "fix-ocr.log", log_level_str)
 
     comics_database = ComicsDatabase()
 

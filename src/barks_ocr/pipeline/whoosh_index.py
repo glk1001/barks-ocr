@@ -22,13 +22,10 @@ from barks_fantagraphics.whoosh_search_engine import SearchEngine, SearchEngineC
 from comic_utils.common_typer_options import LogLevelArg, VolumesArg
 from intspan import intspan
 from loguru import logger
-from loguru_config import LoguruConfig
 
-import barks_ocr.log_setup as _log_setup
+from barks_ocr.cli_setup import init_logging
 from barks_ocr.pipeline.entity_store import get_merged_entity_provider, save_auto_entities
 from barks_ocr.pipeline.entity_tagger import EntityTagger
-
-_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "whoi"
 
@@ -243,10 +240,7 @@ def main(  # noqa: PLR0913
     ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    _log_setup.log_level = log_level_str
-    _log_setup.log_filename = "make-whoosh-index-from-gemini-ai-groups.log"
-    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
-    LoguruConfig.load(_RESOURCES / "log-config.yaml")
+    init_logging(APP_LOGGING_NAME, "make-whoosh-index-from-gemini-ai-groups.log", log_level_str)
 
     volumes = list(intspan(volumes_str))
     comics_database = ComicsDatabase()
@@ -395,10 +389,7 @@ def discover(
     ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    _log_setup.log_level = log_level_str
-    _log_setup.log_filename = "discover-entities.log"
-    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
-    LoguruConfig.load(_RESOURCES / "log-config.yaml")
+    init_logging(APP_LOGGING_NAME, "discover-entities.log", log_level_str)
 
     volumes = list(intspan(volumes_str))
     comics_database = ComicsDatabase()

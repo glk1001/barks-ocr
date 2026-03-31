@@ -10,11 +10,8 @@ from barks_fantagraphics.ocr_file_paths import get_ocr_prelim_annotated_filename
 from barks_fantagraphics.speech_groupers import OcrTypes
 from comic_utils.common_typer_options import LogLevelArg, PagesArg, VolumesArg
 from intspan import intspan
-from loguru_config import LoguruConfig
 
-import barks_ocr.log_setup as _log_setup
-
-_RESOURCES = Path(__file__).parent.parent / "resources"
+from barks_ocr.cli_setup import init_logging
 
 APP_LOGGING_NAME = "sapg"
 
@@ -38,10 +35,7 @@ def main(
     page_num_str: PagesArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    _log_setup.log_level = log_level_str
-    _log_setup.log_filename = "show-annotations.log"
-    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
-    LoguruConfig.load(_RESOURCES / "log-config.yaml")
+    init_logging(APP_LOGGING_NAME, "show-annotations.log", log_level_str)
 
     volumes = list(intspan(volumes_str))
     assert volumes

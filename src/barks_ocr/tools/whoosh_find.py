@@ -8,12 +8,9 @@ from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT
 from barks_fantagraphics.whoosh_search_engine import ENTITY_TYPES, SearchEngine
 from comic_utils.common_typer_options import LogLevelArg
-from loguru_config import LoguruConfig
 
-import barks_ocr.log_setup as _log_setup
+from barks_ocr.cli_setup import init_logging
 from barks_ocr.utils.paragraph_wrap import ParagraphWrapper
-
-_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "whof"
 
@@ -36,10 +33,7 @@ def main(
     ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    _log_setup.log_level = log_level_str
-    _log_setup.log_filename = "whoosh-find.log"
-    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
-    LoguruConfig.load(_RESOURCES / "log-config.yaml")
+    init_logging(APP_LOGGING_NAME, "whoosh-find.log", log_level_str)
 
     assert ocr_index in OCR_TYPE_DICT
 

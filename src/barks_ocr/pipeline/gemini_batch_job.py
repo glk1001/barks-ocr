@@ -7,7 +7,6 @@ import typer
 from barks_fantagraphics.barks_titles import is_non_comic_title
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_database import ComicsDatabase
-from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type, get_timestamp_str
 from barks_fantagraphics.ocr_file_paths import (
     BATCH_JOBS_OUTPUT_DIR,
@@ -19,18 +18,14 @@ from barks_fantagraphics.ocr_file_paths import (
 )
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
-from intspan import intspan
 from loguru import logger
-from loguru_config import LoguruConfig
 from PIL import Image
 
-import barks_ocr.log_setup as _log_setup
+from barks_ocr.cli_setup import get_comic_titles, init_logging
 from barks_ocr.utils.gemini_ai import AI_PRO_MODEL, CLIENT
 from barks_ocr.utils.gemini_ai_comic_prompts import comic_prompt
 from barks_ocr.utils.gemini_ai_for_grouping import norm2ai
 from barks_ocr.utils.preprocessing import preprocess_image
-
-_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "gemb"
 
@@ -241,21 +236,11 @@ def main(
     title_str: TitleArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    _log_setup.log_level = log_level_str
-    _log_setup.log_filename = "make-gemini-ai-groups-batch-job.log"
-    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
-    LoguruConfig.load(_RESOURCES / "log-config.yaml")
+    init_logging(APP_LOGGING_NAME, "make-gemini-ai-groups-batch-job.log", log_level_str)
 
-    if volumes_str and title_str:
-        err_msg = "Options --volume and --title are mutually exclusive."
-        raise typer.BadParameter(err_msg)
+    comics_database, titles = get_comic_titles(volumes_str, title_str)
 
-    volumes = list(intspan(volumes_str))
-    comics_database = ComicsDatabase()
-
-    make_gemini_ai_groups_for_titles_batch_job(
-        comics_database, get_titles(comics_database, volumes, title_str)
-    )
+    make_gemini_ai_groups_for_titles_batch_job(comics_database, titles)
 
 
 if __name__ == "__main__":

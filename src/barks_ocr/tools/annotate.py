@@ -8,21 +8,17 @@ from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT
 from barks_fantagraphics.comic_book import ComicBook
 from barks_fantagraphics.comics_consts import PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
-from barks_fantagraphics.comics_helpers import draw_panel_bounds_on_image, get_titles
+from barks_fantagraphics.comics_helpers import draw_panel_bounds_on_image
 from barks_fantagraphics.ocr_file_paths import OCR_ANNOTATIONS_DIR
 from barks_fantagraphics.panel_boxes import TitlePanelBoxes, check_page_panel_boxes
 from barks_fantagraphics.speech_groupers import SpeechGroups, SpeechPageGroup
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
-from intspan import intspan
 from loguru import logger
-from loguru_config import LoguruConfig
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 
-import barks_ocr.log_setup as _log_setup
+from barks_ocr.cli_setup import get_comic_titles, init_logging
 from barks_ocr.utils.ocr_box import OcrBox
-
-_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "socr"
 
@@ -271,21 +267,12 @@ def main(
     title_str: TitleArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    _log_setup.log_level = log_level_str
-    _log_setup.log_filename = "show-ocr.log"
-    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
-    LoguruConfig.load(_RESOURCES / "log-config.yaml")
+    init_logging(APP_LOGGING_NAME, "show-ocr.log", log_level_str)
 
-    if volumes_str and title_str:
-        err_msg = "Options --volume and --title are mutually exclusive."
-        raise typer.BadParameter(err_msg)
-
-    volumes = list(intspan(volumes_str))
-    comics_database = ComicsDatabase()
+    comics_database, title_list = get_comic_titles(volumes_str, title_str)
 
     speech_groups = SpeechGroups(comics_database)
     title_panel_boxes = TitlePanelBoxes(comics_database)
-    title_list = get_titles(comics_database, volumes, title_str, exclude_non_comics=True)
 
     ocr_annotate_titles(speech_groups, title_panel_boxes, comics_database, title_list)
 

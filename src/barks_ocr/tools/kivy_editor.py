@@ -20,10 +20,9 @@ from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
 from kivy.config import Config
 from loguru import logger
-from loguru_config import LoguruConfig
 from PIL import Image as PilImage
 
-import barks_ocr.log_setup as _log_setup
+from barks_ocr.cli_setup import init_logging
 
 APP_LOGGING_NAME = "kpoe"
 
@@ -39,6 +38,12 @@ Config.set("graphics", "top", MAIN_WINDOW_Y)  # ty:ignore[unresolved-attribute]
 Config.set("graphics", "width", MAIN_WINDOW_WIDTH)  # ty:ignore[unresolved-attribute]
 Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty:ignore[unresolved-attribute]
 
+# Kivy 2.3.1 bug: textinput.py calls canvas._remove_group() but Canvas only
+# exposes remove_group() (no leading underscore). Patch the alias in.
+import inspect as _inspect
+import textwrap as _textwrap
+
+import kivy.uix.textinput as _ki_textinput
 from kivy.app import App
 from kivy.core.image import Image as CoreImage
 from kivy.core.text import Label as CoreLabel
@@ -58,17 +63,8 @@ from kivy.uix.label import Label
 from kivy.uix.popup import Popup
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.textinput import TextInput
-from kivy.uix.widget import Widget
-
-_RESOURCES = Path(__file__).parent.parent / "resources"
-
-# Kivy 2.3.1 bug: textinput.py calls canvas._remove_group() but Canvas only
-# exposes remove_group() (no leading underscore). Patch the alias in.
-import inspect as _inspect
-import textwrap as _textwrap
-
-import kivy.uix.textinput as _ki_textinput
 from kivy.uix.textinput import TextInput as _TextInput
+from kivy.uix.widget import Widget
 
 if not hasattr(_TextInput, "_kivy_patch_applied"):
     # Kivy 2.3.1 bug: TextInput._update_graphics_selection calls
@@ -1583,10 +1579,7 @@ def main(  # noqa: PLR0913
     ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    _log_setup.log_level = log_level_str
-    _log_setup.log_filename = "kivy-prelim-ocr-editor.log"
-    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
-    LoguruConfig.load(_RESOURCES / "log-config.yaml")
+    init_logging(APP_LOGGING_NAME, "kivy-prelim-ocr-editor.log", log_level_str)
 
     if queue_file is not None:
         queue = load_queue_file(queue_file)

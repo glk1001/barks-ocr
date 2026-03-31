@@ -14,12 +14,9 @@ from barks_fantagraphics.ocr_file_paths import (
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from intspan import intspan
 from loguru import logger
-from loguru_config import LoguruConfig
 
-import barks_ocr.log_setup as _log_setup
+from barks_ocr.cli_setup import init_logging
 from barks_ocr.utils.gemini_ai import CLIENT
-
-_RESOURCES = Path(__file__).parent.parent / "resources"
 
 APP_LOGGING_NAME = "gemr"
 
@@ -142,10 +139,7 @@ def main(
     title_str: TitleArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    _log_setup.log_level = log_level_str
-    _log_setup.log_filename = "make-gemini-ai-groups-get-batch-results.log"
-    _log_setup.APP_LOGGING_NAME = APP_LOGGING_NAME
-    LoguruConfig.load(_RESOURCES / "log-config.yaml")
+    init_logging(APP_LOGGING_NAME, "make-gemini-ai-groups-get-batch-results.log", log_level_str)
 
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."
