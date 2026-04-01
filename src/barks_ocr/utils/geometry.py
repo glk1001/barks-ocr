@@ -94,7 +94,7 @@ class Rect:
     def copy(self):
         return Rect(self.l_top.x, self.l_top.y, self.width, self.height)
 
-    # Check to see if two croner points belong to the same edge
+    # Check to see if two corner points belong to the same edge
     def corners_belong_to_edge(self, c1, c2):
         return True in [
             (c1 == self.l_top and c2 == self.r_top)
@@ -207,7 +207,7 @@ class Rect:
         assert edge1
         assert edge2
 
-        # 4. find shortest distance between these two edges
+        # 4. find the shortest distance between these two edges
         distances = [
             distance_between_edge_and_point(edge1, edge2[0]),
             distance_between_edge_and_point(edge1, edge2[1]),
@@ -316,7 +316,7 @@ def lines_overlap_on_y_axis(line1, line2):
 
 
 # Gives distance if the point is facing edge, else False
-def distance_between_edge_and_point(edge, point):  # edge is a tupple of points
+def distance_between_edge_and_point(edge, point):  # edge is a tuple of points
     if point_faces_edge(edge, point):
         area = triangle_area_at_points(edge[0], edge[1], point)
         base = edge[0].distance_to_point(edge[1])

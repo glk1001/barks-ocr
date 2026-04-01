@@ -51,8 +51,6 @@ from kivy.core.text import LabelBase
 from kivy.core.window import Window
 from kivy.graphics import Color, Ellipse, InstructionGroup, Line, Rectangle
 from kivy.input.motionevent import MotionEvent
-
-# noinspection PyUnresolvedReferences
 from kivy.properties import (  # ty:ignore[unresolved-import]
     StringProperty,
 )
@@ -70,7 +68,6 @@ if not hasattr(_TextInput, "_kivy_patch_applied"):
     # Kivy 2.3.1 bug: TextInput._update_graphics_selection calls
     # canvas._remove_group() but Canvas (Cython) only exposes remove_group().
     # Re-compile the method with the correct name.
-    # noinspection PyProtectedMember
     _src = _textwrap.dedent(_inspect.getsource(_TextInput._update_graphics_selection))  # noqa: SLF001
     _src = _src.replace("._remove_group(", ".remove_group(")
     _ns: dict = vars(_ki_textinput).copy()

@@ -33,7 +33,7 @@ def process_batch_jobs(comics_database: ComicsDatabase, titles: list[str]) -> No
 def process_batch_job(comics_database: ComicsDatabase, title: str) -> None:  # noqa: C901, PLR0915
     # noinspection PyBroadException
     num_errors = 0
-    # noinspection PyBroadException
+    # noinspection PyBroadException,GrazieInspectionRunner
     try:
         batch_details_file = get_batch_details_file(title)
         finished_batch_details_file = FINISHED_BATCH_JOBS_DIR / batch_details_file.name

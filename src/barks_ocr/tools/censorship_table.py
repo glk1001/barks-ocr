@@ -12,6 +12,7 @@ CSV_DIR = ROOT_DIR / "Projects" / "Barks Reader"
 def get_censorship_fixes_table(file: Path) -> GT:
     df = pl.read_csv(file)
 
+    # noinspection PyArgumentList
     table = (
         GT(df)
         .tab_stub(rowname_col="Story")
@@ -102,6 +103,7 @@ def _remove_white_background(image_file: Path, threshold: int = 127) -> None:
     img.save(image_file)
 
 
+# noinspection PyArgumentList
 def main() -> None:
     page_size = 36
     file = CSV_DIR / "censorship-fixes-simple.csv"

@@ -348,7 +348,6 @@ class GeminiAiGrouper:
         with file.open("w") as f:
             for group_id, group in groups.items():
                 for ocr_box, _dist in group:
-                    # noinspection PyProtectedMember
                     f.write(
                         f"Group: {group_id:03d}, "
                         f"text: '{ocr_box.ocr_text:<{max_text_len}}', "

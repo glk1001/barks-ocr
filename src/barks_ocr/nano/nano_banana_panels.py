@@ -109,7 +109,7 @@ def main() -> None:
     #     "- Keep the character's EYES CLOSED EXACTLY as in input image. Do not add glasses to characters"
     # )
     # EXTRA_PROHIBITION += "- Add a few clouds to the sky.\n"
-    # EXTRA_PROHIBITION += "- The character on the tv set is bending over with his tail up and his head is not visible.\n"
+    # EXTRA_PROHIBITION += "- The character on the TV set is bending over with his tail up and his head is not visible.\n"
     # EXTRA_PROHIBITION += "- Carefully horizontally squeeze the image to make it not as wide. Make it look like a landscape photograph\n"
     # EXTRA_PROHIBITION += "- EXTREMELY IMPORTANT - Keep the character jumping up and down in the trailer's eyes closed exactly as in input image.\n"
     # EXTRA_PROHIBITION += "- Give the feeling of a mysterious temple in a dark South American jungle. Make it look like a realistic nature photograph"\n
@@ -118,7 +118,7 @@ def main() -> None:
     #                      " and position of the egg the same as the input image. The egg should be resting between the penguin's leg just as in"
     #                      " the input image. The penguin is not wearing a hat. Keep the output image very realistic. Like a photo\n")
     # EXTRA_PROHIBITION += "- Give the feeling of a mysterious lost city high in the Andes. Make it look like a realistic nature photograph\n"
-    # EXTRA_PROHIBITION += "- It's a scary halloween scene with a witch on a broomstick. MAke it super-realistic.\n"
+    # EXTRA_PROHIBITION += "- It's a scary Halloween scene with a witch on a broomstick. MAke it super-realistic.\n"
     # EXTRA_PROHIBITION += "- It's an inside view of a pumpkin and a sword is coming through a triangular hole. Keep yellow background with black shadow at top. Just as in input image. Do not cover eyes with anything\n"
     # EXTRA_PROHIBITION += "- Note: the duck character's eyes are closed. No eyelids are visible though. Just single lines as in the input image\n"
     # EXTRA_PROHIBITION += "- The lemming in the hat is eating a piece of cheese\n"

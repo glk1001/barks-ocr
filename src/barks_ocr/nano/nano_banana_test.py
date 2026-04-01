@@ -102,10 +102,10 @@ def main() -> None:
     DEST_SUFFIX = DEST_SUFFIX_PRE + PROMPT_TEXT[PROMPT_TO_USE][1]
     PROMPT_STR = PROMPT_TEXT[PROMPT_TO_USE][0]
     EXTRA_PROHIBITION = ""
-    # EXTRA_PROHIBITION = " Do not remove any black ink hatching on the back wall. And make sure you inpaint the black ink hatching under the righthand speech bubble."
+    # EXTRA_PROHIBITION = " Do not remove any black ink hatching on the back wall. And make sure you inpaint the black ink hatching under the right-hand speech bubble."
     # EXTRA_PROHIBITION = " Do not remove the chicken wire in the background."
     # EXTRA_PROHIBITION = " Make sure you remove the yellow narration box."
-    # EXTRA_PROHIBITION = " Do not crop the righthand side of the image. Slightly extend the width to the right"
+    # EXTRA_PROHIBITION = " Do not crop the right-hand side of the image. Slightly extend the width to the right"
     # EXTRA_PROHIBITION += " Under the narration box are the legs and shoes of two people lying down."
     EXTRA_PROHIBITION += (
         " **IMPORTANT**: Make sure you remove the bubbles and boxes as well as text."
@@ -146,7 +146,7 @@ def main() -> None:
     # PROMPT_STR += " Just remove the speech bubbles. Do not change anything else."
     # PROMPT_STR += "No clouds."
     # PROMPT_STR += " Do not put a hat on Donald."
-    # PROMPT_STR += " Show grey smoke and more blackened background. It's the aftermath of a bushfire."
+    # PROMPT_STR += " Show gray smoke and more blackened background. It's the aftermath of a bushfire."
     # PROMPT_STR += " Clearly show the '313' number plate"
     # PROMPT_STR = ("The first image is a black and white comic book page."
     #               # " It consists of black lines on a white page forming panels (rectangular sections),"
