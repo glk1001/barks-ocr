@@ -31,8 +31,6 @@ EASYOCR_BATCH_SIZE = 16
 REJECTED_WORDS = ["F", "H", "M", "W", "OO", "VV", "|", "L", "\\", "IY"]
 # noinspection SpellCheckingInspection
 AUTO_CORRECTIONS = {
-    "AOINT MARROW": "POINT MARROW",
-    "FIZZLEBUDEET": "FIZZLEBUDGET",
     "G0": "GO",
 }
 

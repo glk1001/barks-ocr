@@ -1,0 +1,24 @@
+version: "0.2"
+language: "en"
+
+# Python source files only — same scope as ruff and ty
+files:
+  - "**/*.py"
+
+# Respect .gitignore, then add ruff/ty-specific excludes
+useGitignore: true
+ignorePaths:
+  - "**/experiments/**"
+  - "**/scraps/**"
+  - "src/barks_ocr/nano/nano_banana_panels.py"
+  - "src/barks_ocr/nano/nano_banana_test.py"
+
+# Enable Python built-in dictionary plus word lists
+dictionaryDefinitions:
+  - name: project
+    path: "./cspell-words.txt"
+    addWords: true
+
+dictionaries:
+  - python
+  - project
