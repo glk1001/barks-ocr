@@ -5,7 +5,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT
+from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePagesPanelBoxes, TitlePanelBoxes
@@ -144,6 +144,9 @@ class OcrChecker:
 
     @staticmethod
     def _is_ai_detected_error(group: dict) -> bool:
+        if group.get("notes", "") is None:
+            return False
+        print(f"notes = '{group.get('notes', '')}'")
         notes = group.get("notes", "").strip().lower() or ""
         return "error" in notes and "art" in notes and "background" in notes
 

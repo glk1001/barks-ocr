@@ -7,8 +7,9 @@ from pathlib import Path
 
 import typer
 from attr import dataclass
-from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, BARKS_TITLES
+from barks_fantagraphics.barks_titles import BARKS_TITLES
 from barks_fantagraphics.comic_book import get_page_str
+from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
 from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page

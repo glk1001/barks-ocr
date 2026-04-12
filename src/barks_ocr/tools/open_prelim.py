@@ -61,7 +61,7 @@ def open_prelim_files(comics_database: ComicsDatabase, volume: int, page: str) -
 app = typer.Typer()
 
 
-@app.command(help="Make final ai groups")
+@app.command(help="Open OCR prelim page files")
 def main(
     volumes_str: VolumesArg = "",
     pages: PagesArg = "",

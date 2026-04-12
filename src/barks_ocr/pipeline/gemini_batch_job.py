@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Any
 
 import typer
-from barks_fantagraphics.barks_titles import is_non_comic_title
+from barks_fantagraphics.comic_book_info import is_non_comic_title
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type, get_timestamp_str
@@ -59,7 +59,7 @@ def make_gemini_ai_groups_for_title(comics_database: ComicsDatabase, title: str)
     num_files_processed = 0
     for svg_file, ocr_file in zip(svg_files, ocr_files, strict=True):
         fanta_page = Path(svg_file).stem
-        # if fanta_page < "029" or fanta_page > "043":
+        # if fanta_page < "186" or fanta_page > "189":
         #    continue  # noqa: ERA001
 
         for ocr_type_file in ocr_file:

@@ -25,6 +25,9 @@ open-prelim volume page:
 annotate-ocr volume:
     {{_ocr_uv_run}} "barks-ocr-annotate" --volume {{volume}}
 
+annotate-ocr-title title:
+    {{_ocr_uv_run}} "barks-ocr-annotate" --title "{{title}}"
+
 # Show Vol/Page OCR annotations
 [group('OCR')]
 show-annotations volume page:

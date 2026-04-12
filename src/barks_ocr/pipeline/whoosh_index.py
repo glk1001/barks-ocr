@@ -5,7 +5,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT, NON_COMIC_TITLES
+from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT, NON_COMIC_TITLES
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.entity_types import EntityType

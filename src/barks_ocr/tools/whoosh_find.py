@@ -3,7 +3,7 @@ import contextlib
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT
+from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT
 from barks_fantagraphics.whoosh_search_engine import ENTITY_TYPES, SearchEngine

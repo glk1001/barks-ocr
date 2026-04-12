@@ -10,4 +10,5 @@ exclude = [
     "src/barks_ocr/utils/ocr_box.py",
     "src/barks_ocr/nano/nano_banana_panels.py",
     "src/barks_ocr/nano/nano_banana_test.py",
+    "src/barks_ocr/nano/nano_banana_create_cover.py",
 ]

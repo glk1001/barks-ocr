@@ -4,8 +4,8 @@ from typing import Any
 
 import cv2 as cv
 import typer
-from barks_fantagraphics.barks_titles import BARKS_TITLE_DICT
 from barks_fantagraphics.comic_book import ComicBook
+from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
 from barks_fantagraphics.comics_consts import PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import draw_panel_bounds_on_image

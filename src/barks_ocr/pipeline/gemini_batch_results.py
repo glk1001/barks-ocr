@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import is_non_comic_title
+from barks_fantagraphics.comic_book_info import is_non_comic_title
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.ocr_file_paths import (
