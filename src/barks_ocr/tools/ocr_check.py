@@ -55,9 +55,15 @@ class PanelNumState(Enum):
 class OcrChecker:
     """Checks prelim OCR JSON files for issues and writes a kivy-editor queue file."""
 
-    def __init__(self, comics_database: ComicsDatabase, fix_panel_nums: bool) -> None:
+    def __init__(
+        self,
+        comics_database: ComicsDatabase,
+        fix_panel_nums: bool,
+        fix_groups_order: bool,
+    ) -> None:
         self._comics_database = comics_database
         self._fix_panel_nums = fix_panel_nums
+        self._fix_groups_order = fix_groups_order
         self._speech_groups = SpeechGroups(comics_database)
         self._title_panel_boxes = TitlePanelBoxes(self._comics_database)
 
@@ -116,10 +122,29 @@ class OcrChecker:
             if there_were_group_fixes:
                 there_were_fixes = True
 
+        if self._fix_groups_order and self._renumber_groups_if_needed(page_group):
+            there_were_fixes = True
+
         if there_were_fixes:
             page_group.save_json()
 
         return issues
+
+    def _renumber_groups_if_needed(self, page_group: SpeechPageGroup) -> bool:
+        groups = page_group.speech_page_json.get("groups", {})
+        expected = [str(i) for i in range(len(groups))]
+        actual = list(groups.keys())
+        if actual == expected:
+            return False
+
+        renumbered = {str(i): value for i, value in enumerate(groups.values())}
+        page_group.speech_page_json["groups"] = renumbered
+        logger.warning(
+            f"Renumbered groups for vol {page_group.fanta_vol}"
+            f" page {page_group.fanta_page} engine {page_group.ocr_index}:"
+            f" {actual} -> {expected}."
+        )
+        return True
 
     def _check_group(  # noqa: PLR0913
         self,
@@ -316,6 +341,7 @@ def main(
         help="Queue file path (default: auto-named ocr-check-vol-N-DATE.txt in CWD)",
     ),
     fix_panel_nums: bool = False,
+    fix_groups_order: bool = False,
 ) -> None:
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."
@@ -326,7 +352,9 @@ def main(
     title_list = get_titles(comics_database, volumes, title_str, exclude_non_comics=True)
 
     output_file = output or _default_output_file(volumes_str)
-    OcrChecker(comics_database, fix_panel_nums).check_titles(title_list, output_file)
+    OcrChecker(comics_database, fix_panel_nums, fix_groups_order).check_titles(
+        title_list, output_file
+    )
 
 
 if __name__ == "__main__":
