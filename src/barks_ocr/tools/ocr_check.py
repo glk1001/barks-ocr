@@ -33,6 +33,16 @@ class IssueFound:
     notes: str
 
 
+def _rect_from_points(points: PointList) -> Rect:
+    bottom_left, top_right = points[0], points[1]
+    return Rect(
+        bottom_left[0],
+        bottom_left[1],
+        top_right[0] - bottom_left[0],
+        top_right[1] - bottom_left[1],
+    )
+
+
 class PanelNumState(Enum):
     PANEL_NUM_SET = auto()
     PANEL_NUM_NOT_SET_FIXABLE = auto()
@@ -120,9 +130,9 @@ class OcrChecker:
         group: dict,
         page_panel_boxes: PagePanelBoxes,
     ) -> tuple[list[IssueFound], bool]:
-        panel_num = int(group.get("panel_num", -1))
-        ai_text = group.get("ai_text", "") or ""
-        notes = group.get("notes", "") or ""
+        ai_text = (group.get("ai_text") or "").strip()
+        notes = (group.get("notes") or "").strip()
+        panel_num_state, panel_num = self._get_panel_num_state(group, page_panel_boxes)
 
         issues: list[IssueFound] = []
         there_were_fixes = False
@@ -141,15 +151,12 @@ class OcrChecker:
                 )
             )
 
-        panel_num_state, panel_num = self._get_panel_num_state(group, page_panel_boxes)
-
         if panel_num_state == PanelNumState.PANEL_NUM_NOT_SET_UNFIXABLE:
             add("panel_unassigned")
         elif panel_num_state == PanelNumState.PANEL_NUM_NOT_SET_FIXABLE:
-            fixed = self._deal_with_fixable_panel_num(group, group_id, panel_num)
-            if fixed:
-                there_were_fixes = True
-        if ai_text.strip() == "":
+            there_were_fixes = self._deal_with_fixable_panel_num(group, group_id, panel_num)
+
+        if ai_text == "":
             add("empty_text")
         elif self._is_short_text(group):
             add("short_text")
@@ -164,15 +171,12 @@ class OcrChecker:
 
     @staticmethod
     def _is_ai_detected_error(group: dict) -> bool:
-        if group.get("notes", "") is None:
-            return False
-        # print(f"notes = '{group.get('notes', '')}'")  # noqa: ERA001
-        notes = group.get("notes", "").strip().lower() or ""
+        notes = (group.get("notes") or "").strip().lower()
         return "error" in notes and "art" in notes and "background" in notes
 
     @staticmethod
     def _is_short_text(group: dict) -> bool:
-        ai_text = group.get("ai_text", "").strip().lower() or ""
+        ai_text = (group.get("ai_text") or "").strip().lower()
         return (len(ai_text) == 1) and (ai_text not in ("?", "!"))
 
     def _get_panel_num_state(
@@ -237,23 +241,10 @@ class OcrChecker:
 
     @staticmethod
     def _get_enclosing_panel_num(box: PointList, page_panel_boxes: PagePanelBoxes) -> int:
-        ocr_box = OcrBox(box, "", 0, "")
-        box = ocr_box.min_rotated_rectangle
-        bottom_left = box[0]
-        top_right = box[1]
-        box_rect = Rect(
-            bottom_left[0],
-            bottom_left[1],
-            top_right[0] - bottom_left[0],
-            top_right[1] - bottom_left[1],
-        )
+        box_rect = _rect_from_points(OcrBox(box, "", 0, "").min_rotated_rectangle)
 
         for i, panel_box in enumerate(page_panel_boxes.panel_boxes):
-            top_left_x = panel_box.x0
-            top_left_y = panel_box.y0
-            w = panel_box.w
-            h = panel_box.h
-            panel_rect = Rect(top_left_x, top_left_y, w, h)
+            panel_rect = Rect(panel_box.x0, panel_box.y0, panel_box.w, panel_box.h)
             if panel_rect.is_rect_inside_rect(box_rect):
                 return i + 1
 
