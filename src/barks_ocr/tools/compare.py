@@ -14,7 +14,7 @@ app = typer.Typer()
 
 
 @app.command()
-def main(title_name: str, verbose: bool = True) -> None:  # noqa: C901, PLR0912, PLR0915
+def main(title_name: str, verbose: bool = False) -> None:  # noqa: C901, PLR0912, PLR0915
     """Compare EasyOCR and PaddleOCR text for a given title."""
     try:
         title = BARKS_TITLE_DICT[title_name]
@@ -60,10 +60,14 @@ def main(title_name: str, verbose: bool = True) -> None:  # noqa: C901, PLR0912,
 
         sorted_panel_nums = list(range(1, sorted_panel_nums[-1] + 1))
         for panel_num in sorted_panel_nums:
-            print(f"\nProcessing panel {panel_num}...")
-            if panel_num not in easy_panel_groups:
+            if verbose:
+                print(f"\nProcessing panel {panel_num}...")
+            if (panel_num not in easy_panel_groups) and (panel_num not in paddle_panel_groups):
+                if verbose:
+                    print(f"Panel {panel_num:<2} NOT IN EASYOCR OR PADDLEOCR")
+            elif panel_num not in easy_panel_groups:
                 print(f"Panel {panel_num:<2} NOT IN EASYOCR")
-            if panel_num not in paddle_panel_groups:
+            elif panel_num not in paddle_panel_groups:
                 print(f"Panel {panel_num:<2} NOT IN PADDLEOCR")
             if panel_num not in easy_panel_groups or panel_num not in paddle_panel_groups:
                 continue
@@ -102,7 +106,7 @@ def main(title_name: str, verbose: bool = True) -> None:  # noqa: C901, PLR0912,
                 else:
                     mismatches += 1
                     print(f"Panel {panel_num:<2} | SIM: {ratio:.2f}")
-                    print(f"  Easy, group {txt_easy.group_id}:   {txt_easy.raw_ai_text!r}")
+                    print(f"  Easy,   group {txt_easy.group_id}:   {txt_easy.raw_ai_text!r}")
                     print(f"  Paddle, group {txt_paddle.group_id}: {txt_paddle.raw_ai_text!r}")
 
             print()
