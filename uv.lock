@@ -149,8 +149,8 @@ requires-dist = [
     { name = "loguru-config", specifier = ">=0.1.0" },
     { name = "nltk", specifier = ">=3.9.2" },
     { name = "opencv-python", specifier = ">=4.12.0.88" },
-    { name = "paddleocr", specifier = ">=3.3.2" },
-    { name = "paddlepaddle", specifier = ">=3.2.1" },
+    { name = "paddleocr", specifier = "==3.3.2" },
+    { name = "paddlepaddle", specifier = "==3.2.1" },
     { name = "pillow", specifier = ">=11.3.0" },
     { name = "polars", specifier = ">=1.35.2" },
     { name = "pycountry", specifier = ">=24.6.1" },
@@ -1747,7 +1747,7 @@ wheels = [
 
 [[package]]
 name = "paddleocr"
-version = "3.4.0"
+version = "3.3.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "paddlex", extra = ["ocr-core"] },
@@ -1755,14 +1755,14 @@ dependencies = [
     { name = "requests" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b2/78/15f43c2fd98d12320f9d771df27beaf49464fd151bf8dffd58ede0a4f019/paddleocr-3.4.0.tar.gz", hash = "sha256:8002a03ae88b5cd9366b7969897e6f76ae23a45a6314f4f6da35c081a979bb54", size = 2504177, upload-time = "2026-01-29T10:15:25.251Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/eb/8c/b610e1796e1279b7a1e314495ed169a6bdcc1b48b62b9fc7603f25489f3e/paddleocr-3.3.2.tar.gz", hash = "sha256:2d14af4d12d9f85953645325ce4a2c6ea0d45aca4bb5f5fcd2400b19d2fd2838", size = 2502499, upload-time = "2025-11-13T14:46:38.722Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/32/25/75a7aa8409d9a6ece6bd7ff9a896a25b75c5a78b2948d2119ab7a99db2f2/paddleocr-3.4.0-py3-none-any.whl", hash = "sha256:67b28a98c8ce58668473702fa22a6053d959df1105ec430a578280356b889ba1", size = 87786, upload-time = "2026-01-29T10:15:22.356Z" },
+    { url = "https://files.pythonhosted.org/packages/3d/85/6ddc745473e1f586db1e0b27c395b1e59b2b49b5a5dc76bba19487692468/paddleocr-3.3.2-py3-none-any.whl", hash = "sha256:b7536b7e8ee531ec8f6073555986c7eaa9ed2b50e00605b796b167635fd799ac", size = 86991, upload-time = "2025-11-13T14:46:37.252Z" },
 ]
 
 [[package]]
 name = "paddlepaddle"
-version = "3.3.1"
+version = "3.2.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
@@ -1772,18 +1772,18 @@ dependencies = [
     { name = "pillow" },
     { name = "protobuf" },
     { name = "safetensors" },
-    { name = "setuptools" },
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/65/f8/bebb829227ac5574454b4342bcf512dbb02268118b62222fc7c1b420a3ef/paddlepaddle-3.3.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:2ce30bfb0023d8c9314b1413ca7a775a4ddd076e4551e74fbed2366cf1395c98", size = 104538799, upload-time = "2026-03-26T11:18:41.158Z" },
-    { url = "https://files.pythonhosted.org/packages/56/8d/5a700dc20c0d3d581f1d429f95f5064eb766c2818c5a05992dfef66b0765/paddlepaddle-3.3.1-cp313-cp313-manylinux1_x86_64.whl", hash = "sha256:4f28038427649bb2fcfd4d52efa85ed8311df19122b4ebedc942484a0b57b032", size = 194837642, upload-time = "2026-03-24T08:02:36.024Z" },
-    { url = "https://files.pythonhosted.org/packages/f4/c8/408b9e94ac2e10a55c1122b787359f7a6f79ef894ee1d57d78c5cca838d0/paddlepaddle-3.3.1-cp313-cp313-win_amd64.whl", hash = "sha256:1203e2e1114b49e73a8440b68837ce5c93fdab51fe4838c5e5874ab40f58f747", size = 104794530, upload-time = "2026-03-26T11:11:52.214Z" },
+    { url = "https://files.pythonhosted.org/packages/e2/c8/f2a289e835e04a225fb593b5816a01145b83cdbda1d9b0c51d06b4069f87/paddlepaddle-3.2.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:8411ccb1e4e89426459529d76cf6cb3b07877a950a6685dadda2d8ca2a087b5a", size = 99489975, upload-time = "2025-10-30T13:38:11.586Z" },
+    { url = "https://files.pythonhosted.org/packages/cc/b0/6e7be06af2678209102cd251af0314c9b2a5eba68cba3545576691e37b01/paddlepaddle-3.2.1-cp313-cp313-manylinux1_x86_64.whl", hash = "sha256:49ba669e91e91878b344e849adfc56eabfef78e072f52a4ef697f16ba75e0a3c", size = 189263243, upload-time = "2025-10-31T03:16:44.372Z" },
+    { url = "https://files.pythonhosted.org/packages/4e/a2/2e8a73e16168729b201ea13d58008a365c08ec706f805f636e3c7f5b3e22/paddlepaddle-3.2.1-cp313-cp313-manylinux2014_aarch64.whl", hash = "sha256:4e80019c1ceea3784a3e478bc2f0ec6ccee3c2520b4e1372a6adad089c6b537c", size = 88124112, upload-time = "2025-10-30T14:00:04.442Z" },
+    { url = "https://files.pythonhosted.org/packages/a3/6f/042d73453ad01a2e3dd4adeae4870e25679d9eaa340d70bd54cd409cb982/paddlepaddle-3.2.1-cp313-cp313-win_amd64.whl", hash = "sha256:d16fd322246c4a580ca512971840ac8c16126a77d59a7bceee165d8f2196a6b2", size = 101708504, upload-time = "2025-10-30T13:21:18.125Z" },
 ]
 
 [[package]]
 name = "paddlex"
-version = "3.4.3"
+version = "3.3.13"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aistudio-sdk" },
@@ -1805,9 +1805,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "ujson" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/73/f6/a1ab1c812ceec3c505806015483b064e1a733c98edcace2aa85aa8186a75/paddlex-3.4.3.tar.gz", hash = "sha256:acecc48f589169607a49b846bfb108817aee47c5e1610aed59cfc3e451b1a825", size = 4173136, upload-time = "2026-03-27T02:31:18.457Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a4/a9/dba9d37f7ab9f84337a33765cad751c8bea0d43cc8d31f338f85310e54f8/paddlex-3.3.13.tar.gz", hash = "sha256:42379eebab3be484e5fa2d7e13170dbb2c4ccac060ab181a7d06ea19b49851c3", size = 3888132, upload-time = "2026-01-12T11:23:28.795Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/10/39/8fd9fd72ae51e1a0b21cb5596f1125f42286d688cf28797f883b42f2c8ce/paddlex-3.4.3-py3-none-any.whl", hash = "sha256:78aa8313e672ecbf27473b7afe7188b68716517b1b522060985d6d7dab1ed17c", size = 2022071, upload-time = "2026-03-27T02:31:15.751Z" },
+    { url = "https://files.pythonhosted.org/packages/7d/b3/8dc0c78be3b07deb496d9ab13e4f4aebeb172b62f838a45caaf986b50f2f/paddlex-3.3.13-py3-none-any.whl", hash = "sha256:e6745436cb304d76717288bcee8cfd0f6a94a7b055ae3249e4048d343be7683e", size = 1860380, upload-time = "2026-01-12T11:23:25.135Z" },
 ]
 
 [package.optional-dependencies]
