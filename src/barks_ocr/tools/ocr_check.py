@@ -2,6 +2,7 @@
 from collections import Counter
 from dataclasses import dataclass
 from datetime import UTC, datetime
+from enum import Enum, auto
 from pathlib import Path
 
 import typer
@@ -32,14 +33,21 @@ class IssueFound:
     notes: str
 
 
+class PanelNumState(Enum):
+    PANEL_NUM_SET = auto()
+    PANEL_NUM_NOT_SET_FIXABLE = auto()
+    PANEL_NUM_NOT_SET_UNFIXABLE = auto()
+
+
 # ── Checker ───────────────────────────────────────────────────────────────────
 
 
 class OcrChecker:
     """Checks prelim OCR JSON files for issues and writes a kivy-editor queue file."""
 
-    def __init__(self, comics_database: ComicsDatabase) -> None:
+    def __init__(self, comics_database: ComicsDatabase, fix_panel_nums: bool) -> None:
         self._comics_database = comics_database
+        self._fix_panel_nums = fix_panel_nums
         self._speech_groups = SpeechGroups(comics_database)
         self._title_panel_boxes = TitlePanelBoxes(self._comics_database)
 
@@ -73,13 +81,7 @@ class OcrChecker:
 
             all_issues.extend(title_issues)
 
-        print()
-        print("=" * 80)
-        counts: Counter[str] = Counter(issue.issue_type for issue in all_issues)
-        print(f"Total issues: {len(all_issues)}")
-        for issue_type, count in sorted(counts.items()):
-            print(f"  {issue_type}: {count}")
-
+        self._print_issues_summary(all_issues)
         self._write_queue_file(all_issues, output_file)
 
     # ── Per-page / per-group checks ───────────────────────────────────────────
@@ -92,11 +94,21 @@ class OcrChecker:
         engine = str(page_group.ocr_index)
         json_groups = page_group.speech_page_json.get("groups", {})
         per_page_boxes = page_panel_boxes.pages[fanta_page]
+
         issues: list[IssueFound] = []
+        there_were_fixes = False
+
         for group_id, group in json_groups.items():
-            issues.extend(
-                self._check_group(volume, fanta_page, engine, group_id, group, per_page_boxes)
+            group_issues, there_were_group_fixes = self._check_group(
+                volume, fanta_page, engine, group_id, group, per_page_boxes
             )
+            issues.extend(group_issues)
+            if there_were_group_fixes:
+                there_were_fixes = True
+
+        if there_were_fixes:
+            page_group.save_json()
+
         return issues
 
     def _check_group(  # noqa: PLR0913
@@ -107,11 +119,13 @@ class OcrChecker:
         group_id: str,
         group: dict,
         page_panel_boxes: PagePanelBoxes,
-    ) -> list[IssueFound]:
+    ) -> tuple[list[IssueFound], bool]:
         panel_num = int(group.get("panel_num", -1))
         ai_text = group.get("ai_text", "") or ""
         notes = group.get("notes", "") or ""
+
         issues: list[IssueFound] = []
+        there_were_fixes = False
 
         def add(issue_type: str) -> None:
             issues.append(
@@ -127,8 +141,14 @@ class OcrChecker:
                 )
             )
 
-        if self._is_unfixable_panel_num(group, page_panel_boxes):
+        panel_num_state, panel_num = self._get_panel_num_state(group, page_panel_boxes)
+
+        if panel_num_state == PanelNumState.PANEL_NUM_NOT_SET_UNFIXABLE:
             add("panel_unassigned")
+        elif panel_num_state == PanelNumState.PANEL_NUM_NOT_SET_FIXABLE:
+            fixed = self._deal_with_fixable_panel_num(group, group_id, panel_num)
+            if fixed:
+                there_were_fixes = True
         if ai_text.strip() == "":
             add("empty_text")
         elif self._is_short_text(group):
@@ -138,7 +158,7 @@ class OcrChecker:
         if "page number" in notes.lower():
             add("page_number_notes")
 
-        return issues
+        return issues, there_were_fixes
 
     # ── Predicates ────────────────────────────────────────────────────────────
 
@@ -146,27 +166,41 @@ class OcrChecker:
     def _is_ai_detected_error(group: dict) -> bool:
         if group.get("notes", "") is None:
             return False
-        print(f"notes = '{group.get('notes', '')}'")
+        # print(f"notes = '{group.get('notes', '')}'")  # noqa: ERA001
         notes = group.get("notes", "").strip().lower() or ""
         return "error" in notes and "art" in notes and "background" in notes
 
     @staticmethod
     def _is_short_text(group: dict) -> bool:
         ai_text = group.get("ai_text", "").strip().lower() or ""
-        return len(ai_text) == 1 and "?" not in ai_text
+        return (len(ai_text) == 1) and (ai_text not in ("?", "!"))
 
-    def _is_unfixable_panel_num(self, group: dict, page_panel_boxes: PagePanelBoxes) -> bool:
+    def _get_panel_num_state(
+        self, group: dict, page_panel_boxes: PagePanelBoxes
+    ) -> tuple[PanelNumState, int]:
         panel_num = int(group.get("panel_num", -1))
         if panel_num != -1:
-            return False
-        can_fix, _new_panel_num = self._can_replace_missing_panel_num(group, page_panel_boxes)
-        return not can_fix
+            return PanelNumState.PANEL_NUM_SET, panel_num
+        return self._can_replace_missing_panel_num(group, page_panel_boxes)
+
+    def _deal_with_fixable_panel_num(self, group: dict, group_id: str, panel_num: int) -> bool:
+        if self._fix_panel_nums:
+            group["panel_num"] = panel_num
+            logger.warning(f"For group {group_id}, fixed panel_num = {panel_num}.")
+            return True
+
+        logger.warning(
+            f"For group {group_id}, panel_num is not set"
+            f" (and should be {panel_num})"
+            f" but fix panel nums = {self._fix_panel_nums}."
+        )
+        return False
 
     # ── Panel-num fix helpers ─────────────────────────────────────────────────
     # TODO: Duplicated code from string_replacers
     def _can_replace_missing_panel_num(
         self, group: dict, page_panel_boxes: PagePanelBoxes
-    ) -> tuple[bool, int]:
+    ) -> tuple[PanelNumState, int]:
         panel_num = int(group["panel_num"])
         assert panel_num == -1
 
@@ -179,11 +213,11 @@ class OcrChecker:
             assert reduced_box
             new_panel_num = self._get_enclosing_panel_num(reduced_box, page_panel_boxes)
             if new_panel_num != -1:
-                return True, new_panel_num
+                return PanelNumState.PANEL_NUM_NOT_SET_FIXABLE, new_panel_num
 
         logger.warning(f"Could not find enclosing panel for box: {text_box}")
 
-        return False, -1
+        return PanelNumState.PANEL_NUM_NOT_SET_UNFIXABLE, -1
 
     @staticmethod
     def _get_reduced_text_box(text_box: PointList, reduce_by: int) -> tuple[bool, PointList | None]:
@@ -228,17 +262,6 @@ class OcrChecker:
     # ── Output helpers ────────────────────────────────────────────────────────
 
     @staticmethod
-    def _print_issue(issue: IssueFound) -> None:
-        text_preview = issue.text.replace("\n", "\\n")[:60]
-        notes_str = f", notes={issue.notes!r}" if issue.notes else ""
-        print(
-            f"  [{issue.issue_type}]"
-            f" page={issue.fanta_page} {issue.engine} group={issue.group_id}"
-            f" panel={issue.panel_num}"
-            f" text={text_preview!r}{notes_str}"
-        )
-
-    @staticmethod
     def _write_queue_file(all_issues: list[IssueFound], output_file: Path) -> None:
         """Write de-duplicated queue file: one entry per unique (vol, page, engine, group_id)."""
         seen: set[tuple[int, str, str, str]] = set()
@@ -256,6 +279,26 @@ class OcrChecker:
                 )
         output_file.write_text("\n".join(queue_lines) + ("\n" if queue_lines else ""))
         print(f'\nQueue file: "{output_file}" ({len(queue_lines)} entries).')
+
+    @staticmethod
+    def _print_issues_summary(all_issues: list[IssueFound]) -> None:
+        print()
+        print("=" * 80)
+        counts: Counter[str] = Counter(issue.issue_type for issue in all_issues)
+        print(f"Total issues: {len(all_issues)}")
+        for issue_type, count in sorted(counts.items()):
+            print(f"  {issue_type}: {count}")
+
+    @staticmethod
+    def _print_issue(issue: IssueFound) -> None:
+        text_preview = issue.text.replace("\n", "\\n")[:60]
+        notes_str = f", notes={issue.notes!r}" if issue.notes else ""
+        print(
+            f"  [{issue.issue_type}]"
+            f" page={issue.fanta_page} {issue.engine} group={issue.group_id}"
+            f" panel={issue.panel_num}"
+            f" text={text_preview!r}{notes_str}"
+        )
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
@@ -281,6 +324,7 @@ def main(
         "-o",
         help="Queue file path (default: auto-named ocr-check-vol-N-DATE.txt in CWD)",
     ),
+    fix_panel_nums: bool = False,
 ) -> None:
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."
@@ -291,7 +335,7 @@ def main(
     title_list = get_titles(comics_database, volumes, title_str, exclude_non_comics=True)
 
     output_file = output or _default_output_file(volumes_str)
-    OcrChecker(comics_database).check_titles(title_list, output_file)
+    OcrChecker(comics_database, fix_panel_nums).check_titles(title_list, output_file)
 
 
 if __name__ == "__main__":

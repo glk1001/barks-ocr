@@ -41,8 +41,8 @@ open-show volume page:
 
 # Check OCR files for issues and write a kivy-editor queue file
 [group('OCR')]
-check-ocr volume queue_file:
-    {{_ocr_uv_run}} "barks-ocr-check" --volume {{volume}} -o {{queue_file}}
+check-ocr volume queue_file *extras:
+    {{_ocr_uv_run}} "barks-ocr-check" --volume {{volume}} -o {{queue_file}} {{extras}}
 
 # Invoke the kivy editor for one page only
 [group('OCR')]
