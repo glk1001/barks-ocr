@@ -4,8 +4,8 @@ from typing import Any
 
 import cv2 as cv
 import typer
+from barks_fantagraphics.barks_titles import BARKS_TITLES
 from barks_fantagraphics.comic_book import ComicBook
-from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
 from barks_fantagraphics.comics_consts import PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import draw_panel_bounds_on_image
@@ -82,12 +82,13 @@ def ocr_annotate_title(
     comic: ComicBook,
     out_image_dir: Path,
 ) -> None:
-    title_str = comic.get_ini_title()
+    title = comic.get_title_enum()
 
     out_image_dir.mkdir(parents=True, exist_ok=True)
-    logger.info(f'OCR annotating all pages in "{title_str}" to directory "{out_image_dir}"...')
+    logger.info(
+        f'OCR annotating all pages in "{BARKS_TITLES[title]}" to directory "{out_image_dir}"...'
+    )
 
-    title = BARKS_TITLE_DICT[title_str]
     title_speech_page_groups = speech_groups.get_speech_page_groups(title)
     title_pages_panel_boxes = title_panel_boxes.get_page_panel_boxes(title)
     for speech_page_group in title_speech_page_groups:
@@ -269,7 +270,7 @@ def main(
 ) -> None:
     init_logging(APP_LOGGING_NAME, "show-ocr.log", log_level_str)
 
-    comics_database, title_list = get_comic_titles(volumes_str, title_str)
+    comics_database, title_list = get_comic_titles(volumes_str, title_str, exclude_non_comics=True)
 
     speech_groups = SpeechGroups(comics_database)
     title_panel_boxes = TitlePanelBoxes(comics_database)
