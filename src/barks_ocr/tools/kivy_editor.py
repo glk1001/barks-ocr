@@ -1,4 +1,5 @@
 # ruff: noqa: E402
+import copy
 import json
 from collections.abc import Callable
 from dataclasses import replace
@@ -15,7 +16,12 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
 from barks_fantagraphics.comics_utils import get_backup_file
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM_DIR
-from barks_fantagraphics.speech_groupers import OcrTypes, SpeechPageGroup, get_speech_page_group
+from barks_fantagraphics.speech_groupers import (
+    OcrTypes,
+    SpeechPageGroup,
+    SpeechText,
+    get_speech_page_group,
+)
 from comic_utils.comic_consts import PNG_FILE_EXT
 from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
@@ -588,14 +594,22 @@ class EditorApp(App):
         primary_id = str(entry.group_id)
         if entry.engine == "easyocr":
             self._set_easyocr_group_id(primary_id)
-            fallback = next(iter(self._paddleocr_speech_groups), None)
-            if fallback:
-                self._set_paddleocr_group_id(fallback)
+            pad_id = (
+                primary_id
+                if primary_id in self._paddleocr_speech_groups
+                else next(iter(self._paddleocr_speech_groups), None)
+            )
+            if pad_id:
+                self._set_paddleocr_group_id(pad_id)
         else:
             self._set_paddleocr_group_id(primary_id)
-            fallback = next(iter(self._easyocr_speech_groups), None)
-            if fallback:
-                self._set_easyocr_group_id(fallback)
+            easy_id = (
+                primary_id
+                if primary_id in self._easyocr_speech_groups
+                else next(iter(self._easyocr_speech_groups), None)
+            )
+            if easy_id:
+                self._set_easyocr_group_id(easy_id)
 
         self.queue_progress_text = f"{index + 1} / {len(self._queue)}"
 
@@ -1039,6 +1053,9 @@ class EditorApp(App):
         delete_easy_btn = Button(text="Delete", size_hint_y=None, height=36)
         delete_easy_btn.bind(on_press=self._handle_easyocr_delete)
         easy_btn_row.add_widget(delete_easy_btn)
+        copy_in_easy_btn = Button(text="Copy In", size_hint_y=None, height=36)
+        copy_in_easy_btn.bind(on_press=self._handle_easyocr_copy_in)
+        easy_btn_row.add_widget(copy_in_easy_btn)
         col.add_widget(easy_btn_row)
 
         # Canvas below buttons — full column width, takes all remaining vertical space
@@ -1119,6 +1136,9 @@ class EditorApp(App):
         delete_pad_btn = Button(text="Delete", size_hint_y=None, height=36)
         delete_pad_btn.bind(on_press=self._handle_paddleocr_delete)
         pad_btn_row.add_widget(delete_pad_btn)
+        copy_in_pad_btn = Button(text="Copy In", size_hint_y=None, height=36)
+        copy_in_pad_btn.bind(on_press=self._handle_paddleocr_copy_in)
+        pad_btn_row.add_widget(copy_in_pad_btn)
         col.add_widget(pad_btn_row)
 
         # Canvas below buttons — full column width, takes all remaining vertical space
@@ -1284,7 +1304,7 @@ class EditorApp(App):
         btn = Button(text="Save & Exit", size_hint_x=None, width=150, size_hint_y=None, height=46)
 
         def on_save(_instance: Button) -> None:
-            self._handle_save()
+            self._handle_save(renumber=True)
             self.stop()
 
         btn.bind(on_press=on_save)
@@ -1292,7 +1312,7 @@ class EditorApp(App):
 
     def _get_save_next_queue_item_button(self) -> Button:
         btn = Button(text="Save & Next", size_hint_x=None, width=150, size_hint_y=None, height=46)
-        btn.bind(on_press=lambda _: self._handle_save_and_next())
+        btn.bind(on_press=lambda _: self._handle_save_and_next(renumber=True))
 
         return btn
 
@@ -1310,7 +1330,7 @@ class EditorApp(App):
             else self.text_str_paddleocr
         )
 
-    def _handle_save(self) -> None:
+    def _handle_save(self, *, renumber: bool = False) -> None:
         """Save text, panel_num, and text_box changes to both OCR JSON files."""
         self._commit_panel_nums()
         self._save_page_group(
@@ -1318,12 +1338,14 @@ class EditorApp(App):
             self._easyocr_group_id,
             self._easyocr_speech_groups,
             self._easyocr_canvas,
+            renumber=renumber,
         )
         self._save_page_group(
             self._paddleocr_speech_page_group,
             self._paddleocr_group_id,
             self._paddleocr_speech_groups,
             self._paddleocr_canvas,
+            renumber=renumber,
         )
         self._has_changes = False
 
@@ -1333,6 +1355,8 @@ class EditorApp(App):
         group_id: str,
         speech_groups: dict,
         canvas: BoundingBoxCanvas | None,
+        *,
+        renumber: bool = False,
     ) -> None:
         """Sync in-memory edits to speech_page_json and write to disk.
 
@@ -1362,6 +1386,9 @@ class EditorApp(App):
                 json_group["text_box"] = new_text_box
                 changed = True
 
+        if renumber and page_group.renumber_groups():
+            changed = True
+
         # panel_num changes are tracked via _has_changes but already in json_group;
         # save if anything changed or if we have pending panel_num edits.
         if changed or self._has_changes:
@@ -1370,8 +1397,8 @@ class EditorApp(App):
         else:
             logger.debug(f'No changes in "{ocr_file}".')
 
-    def _handle_save_and_next(self) -> None:
-        self._handle_save()
+    def _handle_save_and_next(self, *, renumber: bool = False) -> None:
+        self._handle_save(renumber=renumber)
         self._advance_queue()
 
     def _handle_skip(self) -> None:
@@ -1443,6 +1470,99 @@ class EditorApp(App):
             idx = -1
         self._set_paddleocr_group_id(group_ids[(idx + 1) % len(group_ids)])
         self._load_paddleocr_canvas_content()
+
+    def _handle_easyocr_copy_in(self, _instance: object = None) -> None:
+        """Copy current PaddleOCR group into a new EasyOCR group."""
+        self._copy_group_from_other_engine(
+            source_page_group=self._paddleocr_speech_page_group,
+            source_group_id=self._paddleocr_group_id,
+            target_page_group=self._easyocr_speech_page_group,
+            target_speech_groups=self._easyocr_speech_groups,
+            insert_after_group_id=self._easyocr_group_id,
+            set_target_group_id=self._set_easyocr_group_id,
+            load_target_canvas=self._load_easyocr_canvas_content,
+        )
+
+    def _handle_paddleocr_copy_in(self, _instance: object = None) -> None:
+        """Copy current EasyOCR group into a new PaddleOCR group."""
+        self._copy_group_from_other_engine(
+            source_page_group=self._easyocr_speech_page_group,
+            source_group_id=self._easyocr_group_id,
+            target_page_group=self._paddleocr_speech_page_group,
+            target_speech_groups=self._paddleocr_speech_groups,
+            insert_after_group_id=self._paddleocr_group_id,
+            set_target_group_id=self._set_paddleocr_group_id,
+            load_target_canvas=self._load_paddleocr_canvas_content,
+        )
+
+    def _copy_group_from_other_engine(  # noqa: PLR0913
+        self,
+        source_page_group: SpeechPageGroup,
+        source_group_id: str,
+        target_page_group: SpeechPageGroup,
+        target_speech_groups: dict,
+        insert_after_group_id: str,
+        set_target_group_id: Callable[[str], None],
+        load_target_canvas: Callable[[], None],
+    ) -> None:
+        """Copy a group from one engine into a new group in the other engine.
+
+        The new group is inserted immediately after *insert_after_group_id* in
+        both the JSON groups dict and the in-memory speech_groups dict so that
+        positional ordering is preserved.
+        """
+        source_json_groups = source_page_group.speech_page_json.get("groups", {})
+        source_group = source_json_groups.get(source_group_id)
+        if source_group is None:
+            logger.warning(f"Source group {source_group_id} not found.")
+            return
+
+        target_json_groups = target_page_group.speech_page_json.get("groups", {})
+        new_id = str(max((int(k) for k in target_json_groups), default=-1) + 1)
+
+        new_group = copy.deepcopy(source_group)
+        new_group["ocr_text"] = ""
+        new_group["cleaned_box_texts"] = {}
+
+        ai_text = new_group.get("ai_text", "")
+        new_speech_text = SpeechText(
+            group_id=new_id,
+            panel_num=new_group.get("panel_num", -1),
+            raw_ai_text=ai_text,
+            ai_text=ai_text.replace("-\n", "-").replace("\u00ad\n", "").replace("\u200b\n", ""),
+            type=new_group.get("type", "dialogue"),
+            text_box=new_group.get("text_box", []),
+        )
+
+        # Rebuild both dicts with the new entry inserted after insert_after_group_id.
+        target_page_group.speech_page_json["groups"] = self._insert_after(
+            target_json_groups, insert_after_group_id, new_id, new_group
+        )
+        rebuilt = self._insert_after(
+            target_speech_groups, insert_after_group_id, new_id, new_speech_text
+        )
+        target_speech_groups.clear()
+        target_speech_groups.update(rebuilt)
+
+        self._commit_panel_nums()
+        set_target_group_id(new_id)
+        load_target_canvas()
+        self._has_changes = True
+        logger.info(f"Copied group {source_group_id} as new group {new_id}.")
+
+    @staticmethod
+    def _insert_after(d: dict, after_key: str, new_key: str, new_value: object) -> dict:
+        """Return a new dict with *new_key* inserted right after *after_key*."""
+        result: dict = {}
+        inserted = False
+        for k, v in d.items():
+            result[k] = v
+            if k == after_key:
+                result[new_key] = new_value
+                inserted = True
+        if not inserted:
+            result[new_key] = new_value
+        return result
 
     def _handle_easyocr_delete(self, _instance: object = None) -> None:
         self._do_easyocr_delete()
