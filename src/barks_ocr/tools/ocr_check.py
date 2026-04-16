@@ -122,29 +122,13 @@ class OcrChecker:
             if there_were_group_fixes:
                 there_were_fixes = True
 
-        if self._fix_groups_order and self._renumber_groups_if_needed(page_group):
+        if self._fix_groups_order and page_group.renumber_groups():
             there_were_fixes = True
 
         if there_were_fixes:
             page_group.save_json()
 
         return issues
-
-    def _renumber_groups_if_needed(self, page_group: SpeechPageGroup) -> bool:
-        groups = page_group.speech_page_json.get("groups", {})
-        expected = [str(i) for i in range(len(groups))]
-        actual = list(groups.keys())
-        if actual == expected:
-            return False
-
-        renumbered = {str(i): value for i, value in enumerate(groups.values())}
-        page_group.speech_page_json["groups"] = renumbered
-        logger.warning(
-            f"Renumbered groups for vol {page_group.fanta_vol}"
-            f" page {page_group.fanta_page} engine {page_group.ocr_index}:"
-            f" {actual} -> {expected}."
-        )
-        return True
 
     def _check_group(  # noqa: PLR0913
         self,
