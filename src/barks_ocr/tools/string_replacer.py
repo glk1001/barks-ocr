@@ -95,13 +95,13 @@ class PageCleaner:
         # if "the comic title" in group["notes"]:
         #     return True
 
-        return False
+        # return False
 
         panel_num = int(group["panel_num"])
 
         if panel_num == -1:
-            if group["notes"] and "error" in group["notes"].lower():
-                return True
+            # if group["notes"] and "error" in group["notes"].lower():
+            #     return True
             if group["notes"] and "page number" in group["notes"].lower():
                 return True
             return (
