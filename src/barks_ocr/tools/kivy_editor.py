@@ -1050,12 +1050,12 @@ class EditorApp(App):
         select_easy_btn = Button(text="Select", size_hint_y=None, height=36)
         select_easy_btn.bind(on_press=self._show_easyocr_speech_item_popup)
         easy_btn_row.add_widget(select_easy_btn)
-        delete_easy_btn = Button(text="Delete", size_hint_y=None, height=36)
-        delete_easy_btn.bind(on_press=self._handle_easyocr_delete)
-        easy_btn_row.add_widget(delete_easy_btn)
         copy_in_easy_btn = Button(text="Copy In", size_hint_y=None, height=36)
         copy_in_easy_btn.bind(on_press=self._handle_easyocr_copy_in)
         easy_btn_row.add_widget(copy_in_easy_btn)
+        delete_easy_btn = Button(text="Delete", size_hint_y=None, height=36)
+        delete_easy_btn.bind(on_press=self._handle_easyocr_delete)
+        easy_btn_row.add_widget(delete_easy_btn)
         col.add_widget(easy_btn_row)
 
         # Canvas below buttons — full column width, takes all remaining vertical space
@@ -1133,12 +1133,12 @@ class EditorApp(App):
         select_pad_btn = Button(text="Select", size_hint_y=None, height=36)
         select_pad_btn.bind(on_press=self._show_paddleocr_speech_item_popup)
         pad_btn_row.add_widget(select_pad_btn)
-        delete_pad_btn = Button(text="Delete", size_hint_y=None, height=36)
-        delete_pad_btn.bind(on_press=self._handle_paddleocr_delete)
-        pad_btn_row.add_widget(delete_pad_btn)
         copy_in_pad_btn = Button(text="Copy In", size_hint_y=None, height=36)
         copy_in_pad_btn.bind(on_press=self._handle_paddleocr_copy_in)
         pad_btn_row.add_widget(copy_in_pad_btn)
+        delete_pad_btn = Button(text="Delete", size_hint_y=None, height=36)
+        delete_pad_btn.bind(on_press=self._handle_paddleocr_delete)
+        pad_btn_row.add_widget(delete_pad_btn)
         col.add_widget(pad_btn_row)
 
         # Canvas below buttons — full column width, takes all remaining vertical space
@@ -1591,9 +1591,22 @@ class EditorApp(App):
         page_group: SpeechPageGroup,
         speech_groups: dict,
         group_id: str,
-        load_next: Callable[[], None],
+        load_next: Callable[[str | None], None],
     ) -> None:
         """Remove group from in-memory JSON and speech_groups; save happens via normal save path."""
+        # Find the best neighbor (previous, or next if first) before removing.
+        group_ids = list(speech_groups.keys())
+        try:
+            idx = group_ids.index(group_id)
+        except ValueError:
+            idx = -1
+        if idx > 0:
+            neighbor_id = group_ids[idx - 1]
+        elif idx == 0 and len(group_ids) > 1:
+            neighbor_id = group_ids[1]
+        else:
+            neighbor_id = None
+
         json_groups = page_group.speech_page_json.get("groups", {})
         if group_id in json_groups:
             del json_groups[group_id]
@@ -1602,12 +1615,11 @@ class EditorApp(App):
 
         self._has_changes = True
 
-        load_next()
+        load_next(neighbor_id)
 
-    def _load_next_easyocr_group_after_delete(self) -> None:
-        remaining = [gid for gid in self._easyocr_speech_groups if gid != self._easyocr_group_id]
-        if remaining:
-            self._set_easyocr_group_id(remaining[0])
+    def _load_next_easyocr_group_after_delete(self, neighbor_id: str | None) -> None:
+        if neighbor_id is not None:
+            self._set_easyocr_group_id(neighbor_id)
             self._load_easyocr_canvas_content()
         else:
             self._show_confirm_popup(
@@ -1616,12 +1628,9 @@ class EditorApp(App):
                 on_confirm=self.stop,
             )
 
-    def _load_next_paddleocr_group_after_delete(self) -> None:
-        remaining = [
-            gid for gid in self._paddleocr_speech_groups if gid != self._paddleocr_group_id
-        ]
-        if remaining:
-            self._set_paddleocr_group_id(remaining[0])
+    def _load_next_paddleocr_group_after_delete(self, neighbor_id: str | None) -> None:
+        if neighbor_id is not None:
+            self._set_paddleocr_group_id(neighbor_id)
             self._load_paddleocr_canvas_content()
         else:
             self._show_confirm_popup(
