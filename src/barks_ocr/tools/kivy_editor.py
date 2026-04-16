@@ -1708,8 +1708,8 @@ def main(  # noqa: PLR0913
         EditorApp(
             volume=first.volume,
             fanta_page=first.fanta_page,
-            easyocr_group_id=first.group_id if first.engine == "easyocr" else 0,
-            paddleocr_group_id=first.group_id if first.engine == "paddleocr" else 0,
+            easyocr_group_id=first.group_id,
+            paddleocr_group_id=first.group_id,
             queue=queue,
             queue_index=0,
         ).run()
