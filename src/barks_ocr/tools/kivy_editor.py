@@ -22,7 +22,7 @@ from barks_fantagraphics.speech_groupers import (
     SpeechText,
     get_speech_page_group,
 )
-from comic_utils.comic_consts import PNG_FILE_EXT
+from comic_utils.comic_consts import JPG_FILE_EXT, PNG_FILE_EXT
 from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
 from kivy.config import Config
@@ -121,6 +121,23 @@ class QueueEntry:
     engine: str  # "easyocr" or "paddleocr"
     group_id: int
     issue_type: str
+
+
+class EnginePane:
+    """Per-engine mutable state for one OCR column in the editor."""
+
+    def __init__(self, name: str, ocr_type: OcrTypes, text_prop: str, label_prop: str) -> None:
+        self.name = name
+        self.ocr_type = ocr_type
+        self.text_prop = text_prop  # StringProperty name on EditorApp
+        self.label_prop = label_prop  # StringProperty name on EditorApp
+        self.group_id: str = ""
+        self.label: str = ""
+        # Always set by _load_page_data() before any method accesses it.
+        self.page_group: SpeechPageGroup = None  # ty:ignore[invalid-assignment]
+        self.speech_groups: dict[str, SpeechText] = {}
+        self.canvas: BoundingBoxCanvas | None = None
+        self.panel_num_input: TextInput | None = None
 
 
 # ── Helper functions ──────────────────────────────────────────────────────────
@@ -319,14 +336,14 @@ class BoundingBoxCanvas(Widget):
         self._img_offset_y = self.y + (h - disp_h) / 2
 
     def _local_to_screen(self, x: float, y: float) -> tuple[float, float]:
-        """Crop-local PIL coords → Kivy screen coords."""
+        """Crop-local PIL coords -> Kivy screen coords."""
         sx = x * self._scale + self._img_offset_x
         # Flip Y: PIL y=0 is top; Kivy y=0 is bottom
         sy = (self._img_h - y) * self._scale + self._img_offset_y
         return sx, sy
 
     def _screen_to_local(self, sx: float, sy: float) -> tuple[float, float]:
-        """Kivy screen coords → crop-local PIL coords."""
+        """Kivy screen coords -> crop-local PIL coords."""
         x = (sx - self._img_offset_x) / self._scale
         y = self._img_h - (sy - self._img_offset_y) / self._scale
         return x, y
@@ -515,11 +532,14 @@ class EditorApp(App):
         self._queue = queue
         self._queue_index = queue_index
 
-        # Mutable UI references — set during build()
-        self._easyocr_canvas: BoundingBoxCanvas | None = None
-        self._paddleocr_canvas: BoundingBoxCanvas | None = None
-        self._easyocr_panel_num_input: TextInput | None = None
-        self._paddleocr_panel_num_input: TextInput | None = None
+        self._easy_pane = EnginePane(
+            EASY_OCR, OcrTypes.EASYOCR, "text_str_easyocr", "edit_label_easyocr"
+        )
+        self._pad_pane = EnginePane(
+            PADDLE_OCR, OcrTypes.PADDLEOCR, "text_str_paddleocr", "edit_label_paddleocr"
+        )
+        self._panes: tuple[EnginePane, EnginePane] = (self._easy_pane, self._pad_pane)
+
         self._info_label: Label | None = None
         self._decode_checkbox: CheckBox | None = None
         self._popup: Popup | None = None
@@ -530,20 +550,24 @@ class EditorApp(App):
         self._fanta_page = get_page_str(fanta_page)
         self._load_page_data(volume, self._fanta_page)
 
-        easy_id = str(easyocr_group_id)
-        if easy_id not in self._easyocr_speech_groups:
-            easy_id = next(iter(self._easyocr_speech_groups), easy_id)
-        self._set_easyocr_group_id(easy_id)
-
-        pad_id = str(paddleocr_group_id)
-        if pad_id not in self._paddleocr_speech_groups:
-            pad_id = next(iter(self._paddleocr_speech_groups), pad_id)
-        self._set_paddleocr_group_id(pad_id)
+        init_group_ids = (
+            (self._easy_pane, easyocr_group_id),
+            (self._pad_pane, paddleocr_group_id),
+        )
+        for pane, gid in init_group_ids:
+            sid = str(gid)
+            if sid not in pane.speech_groups:
+                sid = next(iter(pane.speech_groups), sid)
+            self._set_group_id(pane, sid)
 
         if self._queue:
             self.queue_progress_text = f"{queue_index + 1} / {len(self._queue)}"
 
         Window.bind(on_request_close=self.on_request_close)
+
+    def _other_pane(self, pane: EnginePane) -> EnginePane:
+        """Return the opposite engine pane."""
+        return self._pad_pane if pane is self._easy_pane else self._easy_pane
 
     # ── page / queue loading ──────────────────────────────────────────────────
 
@@ -556,31 +580,30 @@ class EditorApp(App):
         self._title = BARKS_TITLE_DICT[title_str]
         dest_page_str = get_page_str(dest_page)
 
-        self._easyocr_speech_page_group = get_speech_page_group(
-            self._comics_database,
-            volume,
-            self._title,
-            OcrTypes.EASYOCR,
-            fanta_page,
-            dest_page_str,
-        )
-        self._paddleocr_speech_page_group = get_speech_page_group(
-            self._comics_database,
-            volume,
-            self._title,
-            OcrTypes.PADDLEOCR,
-            fanta_page,
-            dest_page_str,
-        )
-        self._easyocr_speech_groups = self._easyocr_speech_page_group.speech_groups
-        self._paddleocr_speech_groups = self._paddleocr_speech_page_group.speech_groups
+        for pane in self._panes:
+            pane.page_group = get_speech_page_group(
+                self._comics_database,
+                volume,
+                self._title,
+                pane.ocr_type,
+                fanta_page,
+                dest_page_str,
+            )
+            pane.speech_groups = pane.page_group.speech_groups
 
         restored_dir = self._comics_database.get_fantagraphics_restored_volume_image_dir(volume)
-        self._srce_image_file = restored_dir / (fanta_page + PNG_FILE_EXT)
+        self._srce_image_file = self._get_srce_image_file(restored_dir, fanta_page)
         segments_dir = Path(
             self._comics_database.get_fantagraphics_panel_segments_volume_dir(volume)
         )
         self._panel_segments_file = segments_dir / (fanta_page + ".json")
+
+    @staticmethod
+    def _get_srce_image_file(restored_dir: Path, fanta_page: str) -> Path:
+        srce_image_file = restored_dir / (fanta_page + PNG_FILE_EXT)
+        if not srce_image_file.is_file():
+            srce_image_file = restored_dir / (fanta_page + JPG_FILE_EXT)
+        return srce_image_file
 
     def _load_queue_entry(self, index: int) -> None:
         """Load the queue entry at *index* and refresh the entire UI."""
@@ -593,54 +616,33 @@ class EditorApp(App):
 
         primary_id = str(entry.group_id)
         if entry.engine == "easyocr":
-            self._set_easyocr_group_id(primary_id)
-            pad_id = (
-                primary_id
-                if primary_id in self._paddleocr_speech_groups
-                else next(iter(self._paddleocr_speech_groups), None)
-            )
-            if pad_id:
-                self._set_paddleocr_group_id(pad_id)
+            primary, secondary = self._easy_pane, self._pad_pane
         else:
-            self._set_paddleocr_group_id(primary_id)
-            easy_id = (
-                primary_id
-                if primary_id in self._easyocr_speech_groups
-                else next(iter(self._easyocr_speech_groups), None)
-            )
-            if easy_id:
-                self._set_easyocr_group_id(easy_id)
+            primary, secondary = self._pad_pane, self._easy_pane
+
+        for pane, gid in ((primary, primary_id), (secondary, primary_id)):
+            resolved = gid if gid in pane.speech_groups else next(iter(pane.speech_groups), None)
+            if resolved:
+                self._set_group_id(pane, resolved)
 
         self.queue_progress_text = f"{index + 1} / {len(self._queue)}"
 
-        if self._easyocr_canvas is not None:
-            self._load_easyocr_canvas_content()
-        if self._paddleocr_canvas is not None:
-            self._load_paddleocr_canvas_content()
+        for pane in self._panes:
+            if pane.canvas is not None:
+                self._load_canvas_content(pane)
         if self._info_label is not None:
             self._info_label.text = self._get_editor_info()
 
     # ── canvas / image helpers ────────────────────────────────────────────────
 
-    def _load_easyocr_canvas_content(self) -> None:
-        """Refresh the EasyOCR BoundingBoxCanvas for the current easyocr group."""
-        json_groups = self._easyocr_speech_page_group.speech_page_json.get("groups", {})
-        panel_num = json_groups.get(self._easyocr_group_id, {}).get("panel_num", -1)
+    def _load_canvas_content(self, pane: EnginePane) -> None:
+        """Refresh the BoundingBoxCanvas for the given engine pane."""
+        json_groups = pane.page_group.speech_page_json.get("groups", {})
+        panel_num = json_groups.get(pane.group_id, {}).get("panel_num", -1)
         self._load_engine_canvas_content(
-            canvas=self._easyocr_canvas,
-            group_id=self._easyocr_group_id,
-            page_group=self._easyocr_speech_page_group,
-            panel_num=panel_num,
-        )
-
-    def _load_paddleocr_canvas_content(self) -> None:
-        """Refresh the PaddleOCR BoundingBoxCanvas for the current paddleocr group."""
-        json_groups = self._paddleocr_speech_page_group.speech_page_json.get("groups", {})
-        panel_num = json_groups.get(self._paddleocr_group_id, {}).get("panel_num", -1)
-        self._load_engine_canvas_content(
-            canvas=self._paddleocr_canvas,
-            group_id=self._paddleocr_group_id,
-            page_group=self._paddleocr_speech_page_group,
+            canvas=pane.canvas,
+            group_id=pane.group_id,
+            page_group=pane.page_group,
             panel_num=panel_num,
         )
 
@@ -675,6 +677,7 @@ class EditorApp(App):
 
         if panel_num <= 0:
             # Unknown panel: show wider crop and overlay all panel outlines
+            logger.warning(f'Panel num not known for group: "{group_id}".')
             all_panel_bounds = get_all_panel_bounds_from_file(self._panel_segments_file)
             crop_l, crop_t, crop_r, crop_b = compute_crop_region(
                 img_w, img_h, None, text_box, padding=CROP_PADDING_UNKNOWN
@@ -700,20 +703,20 @@ class EditorApp(App):
                 panel_bounds_full_page=panel_bounds,
                 panel_num=panel_num,
             )
+            logger.debug(
+                f"Panel {panel_num}: text_box = {text_box}, panel_bounds = {panel_bounds}."
+            )
 
     # ── App lifecycle ─────────────────────────────────────────────────────────
 
     def build(self) -> Widget:
-        self.text_str_easyocr = self._easyocr_speech_groups[self._easyocr_group_id].raw_ai_text
-        self.text_str_paddleocr = self._paddleocr_speech_groups[
-            self._paddleocr_group_id
-        ].raw_ai_text
+        for pane in self._panes:
+            setattr(self, pane.text_prop, pane.speech_groups[pane.group_id].raw_ai_text)
 
         widget = self._create_editor_widget()
 
-        # Populate canvases now that self._easyocr_canvas / _paddleocr_canvas are set
-        self._load_easyocr_canvas_content()
-        self._load_paddleocr_canvas_content()
+        for pane in self._panes:
+            self._load_canvas_content(pane)
 
         return widget
 
@@ -751,52 +754,31 @@ class EditorApp(App):
             self._popup.dismiss()
         self.stop()
 
-    # ── text change callbacks ─────────────────────────────────────────────────
+    # ── pane callbacks (text, box, panel_num) ────────────────────────────────
 
-    def _on_easyocr_text_changed(self, instance: TextInput, _value: str) -> None:
+    def _on_text_changed(self, pane: EnginePane, instance: TextInput, _value: str) -> None:
+        """Handle text edit in a pane's TextInput."""
         if not instance.focus:
             return
-
-        self._easyocr_speech_groups[self._easyocr_group_id] = replace(
-            self._easyocr_speech_groups[self._easyocr_group_id],
-            raw_ai_text=self._get_current_easyocr_text(),
+        pane.speech_groups[pane.group_id] = replace(
+            pane.speech_groups[pane.group_id],
+            raw_ai_text=self._get_current_text(pane),
         )
         self._has_changes = True
 
-    def _on_paddleocr_text_changed(self, instance: TextInput, _value: str) -> None:
-        if not instance.focus:
-            return
-
-        self._paddleocr_speech_groups[self._paddleocr_group_id] = replace(
-            self._paddleocr_speech_groups[self._paddleocr_group_id],
-            raw_ai_text=self._get_current_paddleocr_text(),
-        )
-        self._has_changes = True
-
-    # ── canvas / panel_num callbacks ──────────────────────────────────────────
-
-    def _on_easyocr_box_changed(self, new_text_box: list) -> None:
-        """Handle a bounding box change reported by the EasyOCR canvas."""
-        json_groups = self._easyocr_speech_page_group.speech_page_json.get("groups", {})
-        json_group = json_groups.get(self._easyocr_group_id)
+    def _on_box_changed(self, pane: EnginePane, new_text_box: list) -> None:
+        """Handle a bounding box change reported by a canvas."""
+        json_groups = pane.page_group.speech_page_json.get("groups", {})
+        json_group = json_groups.get(pane.group_id)
         if json_group is not None:
             json_group["text_box"] = new_text_box
         self._has_changes = True
-        logger.debug(f"EasyOCR text box updated to: {new_text_box}")
+        logger.debug(f"{pane.name} text box updated to: {new_text_box}")
 
-    def _on_paddleocr_box_changed(self, new_text_box: list) -> None:
-        """Handle a bounding box change reported by the PaddleOCR canvas."""
-        json_groups = self._paddleocr_speech_page_group.speech_page_json.get("groups", {})
-        json_group = json_groups.get(self._paddleocr_group_id)
-        if json_group is not None:
-            json_group["text_box"] = new_text_box
-        self._has_changes = True
-        logger.debug(f"PaddleOCR text box updated to: {new_text_box}")
-
-    def _on_easyocr_panel_num_confirmed(self, instance: TextInput) -> None:
-        """Validate and apply the EasyOCR panel_num TextInput value."""
-        json_groups = self._easyocr_speech_page_group.speech_page_json.get("groups", {})
-        json_group = json_groups.get(self._easyocr_group_id)
+    def _on_panel_num_confirmed(self, pane: EnginePane, instance: TextInput) -> None:
+        """Validate and apply a panel_num TextInput value."""
+        json_groups = pane.page_group.speech_page_json.get("groups", {})
+        json_group = json_groups.get(pane.group_id)
         current = json_group.get("panel_num", -1) if json_group else -1
         try:
             new_num = int(instance.text.strip())
@@ -805,22 +787,7 @@ class EditorApp(App):
             return
         if new_num != current and json_group is not None:
             json_group["panel_num"] = new_num
-            self._load_easyocr_canvas_content()
-            self._has_changes = True
-
-    def _on_paddleocr_panel_num_confirmed(self, instance: TextInput) -> None:
-        """Validate and apply the PaddleOCR panel_num TextInput value."""
-        json_groups = self._paddleocr_speech_page_group.speech_page_json.get("groups", {})
-        json_group = json_groups.get(self._paddleocr_group_id)
-        current = json_group.get("panel_num", -1) if json_group else -1
-        try:
-            new_num = int(instance.text.strip())
-        except ValueError:
-            instance.text = str(current)
-            return
-        if new_num != current and json_group is not None:
-            json_group["panel_num"] = new_num
-            self._load_paddleocr_canvas_content()
+            self._load_canvas_content(pane)
             self._has_changes = True
 
     @staticmethod
@@ -832,14 +799,6 @@ class EditorApp(App):
             is_unassigned = True
         instance.background_color = (1.0, 0.4, 0.4, 1) if is_unassigned else (1, 1, 1, 1)
 
-    def _on_easyocr_panel_num_focus(self, instance: TextInput, focused: bool) -> None:
-        if not focused:
-            self._on_easyocr_panel_num_confirmed(instance)
-
-    def _on_paddleocr_panel_num_focus(self, instance: TextInput, focused: bool) -> None:
-        if not focused:
-            self._on_paddleocr_panel_num_confirmed(instance)
-
     # ── group / panel helpers ─────────────────────────────────────────────────
 
     def _commit_panel_nums(self) -> None:
@@ -848,64 +807,42 @@ class EditorApp(App):
         Must be called before any navigation or save that changes the current group_id,
         because the focus-loss callback is not guaranteed to fire before on_press.
         """
-        if self._easyocr_panel_num_input is not None:
-            self._on_easyocr_panel_num_confirmed(self._easyocr_panel_num_input)
-        if self._paddleocr_panel_num_input is not None:
-            self._on_paddleocr_panel_num_confirmed(self._paddleocr_panel_num_input)
+        for pane in self._panes:
+            if pane.panel_num_input is not None:
+                self._on_panel_num_confirmed(pane, pane.panel_num_input)
 
-    def _set_easyocr_group_id(self, group_id: str) -> None:
-        if group_id not in self._easyocr_speech_groups:
-            msg = f"Unknown easyocr group id '{group_id}'."
+    def _set_group_id(self, pane: EnginePane, group_id: str) -> None:
+        """Switch a pane to show a different group."""
+        if group_id not in pane.speech_groups:
+            msg = f"Unknown {pane.name} group id '{group_id}'."
             raise ValueError(msg)
-        self._easyocr_group_id = group_id
-        speech_group = self._easyocr_speech_groups[group_id]
-        self._easyocr_label = self._get_ocr_label(EASY_OCR, group_id)
-        self.text_str_easyocr = (
+        pane.group_id = group_id
+        speech_group = pane.speech_groups[group_id]
+        pane.label = self._get_ocr_label(pane.name, group_id)
+        # Always push the label to the StringProperty so the header updates even
+        # when the text value doesn't change (Kivy skips dispatch for same values).
+        setattr(self, pane.label_prop, pane.label)
+        setattr(
+            self,
+            pane.text_prop,
             self._encode_for_display(speech_group.raw_ai_text)
             if self._decode_checkbox and self._decode_checkbox.active
-            else speech_group.raw_ai_text
+            else speech_group.raw_ai_text,
         )
         # Read from live JSON, not SpeechText — the dataclass is never updated after load,
         # so returning to a previously-edited group would restore the stale original value.
-        json_groups = self._easyocr_speech_page_group.speech_page_json.get("groups", {})
+        json_groups = pane.page_group.speech_page_json.get("groups", {})
         panel_num = json_groups.get(group_id, {}).get("panel_num", speech_group.panel_num)
-        self._set_easyocr_panel_num(panel_num)
+        self._set_panel_num(pane, panel_num)
 
-    def _set_easyocr_panel_num(self, panel_num: int) -> None:
-        """Update easyocr panel_num in the JSON dict and the panel_num input widget."""
-        json_groups = self._easyocr_speech_page_group.speech_page_json.get("groups", {})
-        json_group = json_groups.get(self._easyocr_group_id)
+    def _set_panel_num(self, pane: EnginePane, panel_num: int) -> None:
+        """Update panel_num in the JSON dict and the panel_num input widget."""
+        json_groups = pane.page_group.speech_page_json.get("groups", {})
+        json_group = json_groups.get(pane.group_id)
         if json_group is not None:
             json_group["panel_num"] = panel_num
-        if self._easyocr_panel_num_input is not None:
-            self._easyocr_panel_num_input.text = str(panel_num)
-
-    def _set_paddleocr_group_id(self, group_id: str) -> None:
-        if group_id not in self._paddleocr_speech_groups:
-            msg = f"Unknown paddleocr group id '{group_id}'."
-            raise ValueError(msg)
-        self._paddleocr_group_id = group_id
-        speech_group = self._paddleocr_speech_groups[group_id]
-        self._paddleocr_label = self._get_ocr_label(PADDLE_OCR, group_id)
-        self.text_str_paddleocr = (
-            self._encode_for_display(speech_group.raw_ai_text)
-            if self._decode_checkbox and self._decode_checkbox.active
-            else speech_group.raw_ai_text
-        )
-        # Read from live JSON, not SpeechText — the dataclass is never updated after load,
-        # so returning to a previously-edited group would restore the stale original value.
-        json_groups = self._paddleocr_speech_page_group.speech_page_json.get("groups", {})
-        panel_num = json_groups.get(group_id, {}).get("panel_num", speech_group.panel_num)
-        self._set_paddleocr_panel_num(panel_num)
-
-    def _set_paddleocr_panel_num(self, panel_num: int) -> None:
-        """Update paddleocr panel_num in the JSON dict and the panel_num input widget."""
-        json_groups = self._paddleocr_speech_page_group.speech_page_json.get("groups", {})
-        json_group = json_groups.get(self._paddleocr_group_id)
-        if json_group is not None:
-            json_group["panel_num"] = panel_num
-        if self._paddleocr_panel_num_input is not None:
-            self._paddleocr_panel_num_input.text = str(panel_num)
+        if pane.panel_num_input is not None:
+            pane.panel_num_input.text = str(panel_num)
 
     @staticmethod
     def _get_ocr_label(ocr_name: str, group_id: str) -> str:
@@ -949,8 +886,10 @@ class EditorApp(App):
         )
         self._info_label.bind(size=self._info_label.setter("text_size"))
 
-        easy_col, label_easy, ti_easy = self._get_easyocr_column()
-        pad_col, label_pad, ti_pad = self._get_paddleocr_column()
+        easy_col, label_easy, ti_easy = self._build_engine_column(self._easy_pane)
+        pad_col, label_pad, ti_pad = self._build_engine_column(self._pad_pane)
+
+        pane_labels = ((self._easy_pane, label_easy), (self._pad_pane, label_pad))
 
         def update_diff_labels(*_args: object) -> None:
             try:
@@ -960,15 +899,13 @@ class EditorApp(App):
                     t1 = self._decode_from_display(t1)
                     t2 = self._decode_from_display(t2)
                 if t1 != t2:
-                    self.edit_label_easyocr = f"DIFFS -- {self._easyocr_label}"
-                    self.edit_label_paddleocr = f"DIFFS -- {self._paddleocr_label}"
-                    label_easy.color = (1, 0, 0, 1)
-                    label_pad.color = (1, 0, 0, 1)
+                    for pane, lbl in pane_labels:
+                        setattr(self, pane.label_prop, f"DIFFS -- {pane.label}")
+                        lbl.color = (1, 0, 0, 1)
                 else:
-                    self.edit_label_easyocr = self._easyocr_label
-                    self.edit_label_paddleocr = self._paddleocr_label
-                    label_easy.color = (1, 1, 1, 1)
-                    label_pad.color = (1, 1, 1, 1)
+                    for pane, lbl in pane_labels:
+                        setattr(self, pane.label_prop, pane.label)
+                        lbl.color = (1, 1, 1, 1)
             except UnicodeDecodeError:
                 pass
 
@@ -986,27 +923,27 @@ class EditorApp(App):
         content.add_widget(bottom)
         return content
 
-    def _get_easyocr_column(self) -> tuple[BoxLayout, Label, TextInput]:
-        """Build the EasyOCR column: panel_num row → label → text → canvas (stacked)."""
+    def _build_engine_column(self, pane: EnginePane) -> tuple[BoxLayout, Label, TextInput]:
+        """Build one engine column: header -> text input -> buttons -> canvas."""
         col = BoxLayout(orientation="vertical", spacing=4)
 
         # Header row: engine label (left) + panel_num input (right)
         header_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=28, spacing=6)
-        label_easyocr = Label(
-            text=self.edit_label_easyocr,
+        label_widget = Label(
+            text=getattr(self, pane.label_prop),
             bold=True,
             size_hint_x=1,
             halign="left",
             valign="middle",
         )
-        label_easyocr.bind(size=label_easyocr.setter("text_size"))
-        self.bind(edit_label_easyocr=label_easyocr.setter("text"))
-        label_easyocr.bind(text=self.setter("edit_label_easyocr"))
-        header_row.add_widget(label_easyocr)
+        label_widget.bind(size=label_widget.setter("text_size"))
+        self.bind(**{pane.label_prop: label_widget.setter("text")})
+        label_widget.bind(text=self.setter(pane.label_prop))
+        header_row.add_widget(label_widget)
         header_row.add_widget(Label(text="panel:", size_hint_x=None, width=50, font_size="13sp"))
-        json_groups = self._easyocr_speech_page_group.speech_page_json.get("groups", {})
-        initial_panel_num = json_groups.get(self._easyocr_group_id, {}).get("panel_num", -1)
-        self._easyocr_panel_num_input = TextInput(
+        json_groups = pane.page_group.speech_page_json.get("groups", {})
+        initial_panel_num = json_groups.get(pane.group_id, {}).get("panel_num", -1)
+        pane.panel_num_input = TextInput(
             text=str(initial_panel_num),
             multiline=False,
             font_size="14sp",
@@ -1015,140 +952,58 @@ class EditorApp(App):
             size_hint_y=None,
             height=28,
         )
-        self._easyocr_panel_num_input.bind(on_text_validate=self._on_easyocr_panel_num_confirmed)
-        self._easyocr_panel_num_input.bind(focus=self._on_easyocr_panel_num_focus)
-        self._easyocr_panel_num_input.bind(text=self._update_panel_num_input_color)
-        self._update_panel_num_input_color(self._easyocr_panel_num_input, str(initial_panel_num))
-        header_row.add_widget(self._easyocr_panel_num_input)
+        pane.panel_num_input.bind(
+            on_text_validate=lambda inst, p=pane: self._on_panel_num_confirmed(p, inst)
+        )
+        pane.panel_num_input.bind(
+            focus=lambda inst, focused, p=pane: (
+                self._on_panel_num_confirmed(p, inst) if not focused else None
+            )
+        )
+        pane.panel_num_input.bind(text=self._update_panel_num_input_color)
+        self._update_panel_num_input_color(pane.panel_num_input, str(initial_panel_num))
+        header_row.add_widget(pane.panel_num_input)
         col.add_widget(header_row)
 
-        # Short text input
-        text_input_easyocr = TextInput(
-            text=self.text_str_easyocr,
+        # Text input
+        text_input = TextInput(
+            text=getattr(self, pane.text_prop),
             font_name=OPEN_SANS_FONT,
             font_size="20sp",
             multiline=True,
             size_hint_y=None,
             height=350,
             padding=10,
-            hint_text="Edit EasyOCR text here...",
+            hint_text=f"Edit {pane.name} text here...",
         )
-        self.bind(text_str_easyocr=text_input_easyocr.setter("text"))
-        text_input_easyocr.bind(text=self.setter("text_str_easyocr"))
-        text_input_easyocr.bind(text=self._on_easyocr_text_changed)
-        self.text_str_easyocr = self._encode_for_display(self.text_str_easyocr)
-        col.add_widget(text_input_easyocr)
+        self.bind(**{pane.text_prop: text_input.setter("text")})
+        text_input.bind(text=self.setter(pane.text_prop))
+        text_input.bind(text=lambda inst, val, p=pane: self._on_text_changed(p, inst, val))
+        setattr(self, pane.text_prop, self._encode_for_display(getattr(self, pane.text_prop)))
+        col.add_widget(text_input)
 
         # Per-engine action buttons
-        easy_btn_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=36, spacing=6)
-        prev_easy_btn = Button(text="Prev", size_hint_y=None, height=36)
-        prev_easy_btn.bind(on_press=self._handle_easyocr_prev)
-        easy_btn_row.add_widget(prev_easy_btn)
-        next_easy_btn = Button(text="Next", size_hint_y=None, height=36)
-        next_easy_btn.bind(on_press=self._handle_easyocr_next)
-        easy_btn_row.add_widget(next_easy_btn)
-        select_easy_btn = Button(text="Select", size_hint_y=None, height=36)
-        select_easy_btn.bind(on_press=self._show_easyocr_speech_item_popup)
-        easy_btn_row.add_widget(select_easy_btn)
-        copy_in_easy_btn = Button(text="Copy In", size_hint_y=None, height=36)
-        copy_in_easy_btn.bind(on_press=self._handle_easyocr_copy_in)
-        easy_btn_row.add_widget(copy_in_easy_btn)
-        delete_easy_btn = Button(text="Delete", size_hint_y=None, height=36)
-        delete_easy_btn.bind(on_press=self._handle_easyocr_delete)
-        easy_btn_row.add_widget(delete_easy_btn)
-        col.add_widget(easy_btn_row)
+        btn_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=36, spacing=6)
+        for btn_text, handler in (
+            ("Prev", lambda _inst, p=pane: self._handle_prev(p)),
+            ("Next", lambda _inst, p=pane: self._handle_next(p)),
+            ("Select", lambda _inst, p=pane: self._show_speech_item_popup_for(p)),
+            ("Copy In", lambda _inst, p=pane: self._handle_copy_in(p)),
+            ("Delete", lambda _inst, p=pane: self._handle_delete(p)),
+        ):
+            btn = Button(text=btn_text, size_hint_y=None, height=36)
+            btn.bind(on_press=handler)
+            btn_row.add_widget(btn)
+        col.add_widget(btn_row)
 
-        # Canvas below buttons — full column width, takes all remaining vertical space
-        self._easyocr_canvas = BoundingBoxCanvas(
-            on_box_changed=self._on_easyocr_box_changed,
+        # Canvas below buttons
+        pane.canvas = BoundingBoxCanvas(
+            on_box_changed=lambda tb, p=pane: self._on_box_changed(p, tb),
             size_hint_y=1,
         )
-        col.add_widget(self._easyocr_canvas)
+        col.add_widget(pane.canvas)
 
-        return col, label_easyocr, text_input_easyocr
-
-    def _get_paddleocr_column(self) -> tuple[BoxLayout, Label, TextInput]:
-        """Build the PaddleOCR column: panel_num row → label → text → canvas (stacked)."""
-        col = BoxLayout(orientation="vertical", spacing=4)
-
-        # Header row: engine label (left) + panel_num input (right)
-        header_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=28, spacing=6)
-        label_paddleocr = Label(
-            text=self.edit_label_paddleocr,
-            bold=True,
-            size_hint_x=1,
-            halign="left",
-            valign="middle",
-        )
-        label_paddleocr.bind(size=label_paddleocr.setter("text_size"))
-        self.bind(edit_label_paddleocr=label_paddleocr.setter("text"))
-        label_paddleocr.bind(text=self.setter("edit_label_paddleocr"))
-        header_row.add_widget(label_paddleocr)
-        header_row.add_widget(Label(text="panel:", size_hint_x=None, width=50, font_size="13sp"))
-        json_groups = self._paddleocr_speech_page_group.speech_page_json.get("groups", {})
-        initial_panel_num = json_groups.get(self._paddleocr_group_id, {}).get("panel_num", -1)
-        self._paddleocr_panel_num_input = TextInput(
-            text=str(initial_panel_num),
-            multiline=False,
-            font_size="14sp",
-            size_hint_x=None,
-            width=55,
-            size_hint_y=None,
-            height=28,
-        )
-        self._paddleocr_panel_num_input.bind(
-            on_text_validate=self._on_paddleocr_panel_num_confirmed
-        )
-        self._paddleocr_panel_num_input.bind(focus=self._on_paddleocr_panel_num_focus)
-        self._paddleocr_panel_num_input.bind(text=self._update_panel_num_input_color)
-        self._update_panel_num_input_color(self._paddleocr_panel_num_input, str(initial_panel_num))
-        header_row.add_widget(self._paddleocr_panel_num_input)
-        col.add_widget(header_row)
-
-        # Short text input
-        text_input_paddleocr = TextInput(
-            text=self.text_str_paddleocr,
-            font_name=OPEN_SANS_FONT,
-            font_size="20sp",
-            multiline=True,
-            size_hint_y=None,
-            height=350,
-            padding=10,
-            hint_text="Edit PaddleOCR text here...",
-        )
-        self.bind(text_str_paddleocr=text_input_paddleocr.setter("text"))
-        text_input_paddleocr.bind(text=self.setter("text_str_paddleocr"))
-        text_input_paddleocr.bind(text=self._on_paddleocr_text_changed)
-        self.text_str_paddleocr = self._encode_for_display(self.text_str_paddleocr)
-        col.add_widget(text_input_paddleocr)
-
-        # Per-engine action buttons
-        pad_btn_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=36, spacing=6)
-        prev_pad_btn = Button(text="Prev", size_hint_y=None, height=36)
-        prev_pad_btn.bind(on_press=self._handle_paddleocr_prev)
-        pad_btn_row.add_widget(prev_pad_btn)
-        next_pad_btn = Button(text="Next", size_hint_y=None, height=36)
-        next_pad_btn.bind(on_press=self._handle_paddleocr_next)
-        pad_btn_row.add_widget(next_pad_btn)
-        select_pad_btn = Button(text="Select", size_hint_y=None, height=36)
-        select_pad_btn.bind(on_press=self._show_paddleocr_speech_item_popup)
-        pad_btn_row.add_widget(select_pad_btn)
-        copy_in_pad_btn = Button(text="Copy In", size_hint_y=None, height=36)
-        copy_in_pad_btn.bind(on_press=self._handle_paddleocr_copy_in)
-        pad_btn_row.add_widget(copy_in_pad_btn)
-        delete_pad_btn = Button(text="Delete", size_hint_y=None, height=36)
-        delete_pad_btn.bind(on_press=self._handle_paddleocr_delete)
-        pad_btn_row.add_widget(delete_pad_btn)
-        col.add_widget(pad_btn_row)
-
-        # Canvas below buttons — full column width, takes all remaining vertical space
-        self._paddleocr_canvas = BoundingBoxCanvas(
-            on_box_changed=self._on_paddleocr_box_changed,
-            size_hint_y=1,
-        )
-        col.add_widget(self._paddleocr_canvas)
-
-        return col, label_paddleocr, text_input_paddleocr
+        return col, label_widget, text_input
 
     def _get_bottom_layout(self) -> BoxLayout:
         # Single global bar: checkbox on the left, save/skip on the right
@@ -1204,14 +1059,12 @@ class EditorApp(App):
 
         def on_checkbox_active(_instance: CheckBox, value: bool) -> None:
             try:
-                t1 = self.text_str_easyocr
-                t2 = self.text_str_paddleocr
-                if value:
-                    self.text_str_easyocr = self._encode_for_display(t1)
-                    self.text_str_paddleocr = self._encode_for_display(t2)
-                else:
-                    self.text_str_easyocr = self._decode_from_display(t1)
-                    self.text_str_paddleocr = self._decode_from_display(t2)
+                for pane in self._panes:
+                    text = getattr(self, pane.text_prop)
+                    if value:
+                        setattr(self, pane.text_prop, self._encode_for_display(text))
+                    else:
+                        setattr(self, pane.text_prop, self._decode_from_display(text))
             except UnicodeDecodeError as e:
                 logger.exception(f"Error converting text: {e}")
 
@@ -1222,19 +1075,22 @@ class EditorApp(App):
 
     # ── speech item popups ────────────────────────────────────────────────────
 
-    def _show_easyocr_speech_item_popup(self, _instance: Button) -> None:
+    def _show_speech_item_popup_for(self, pane: EnginePane) -> None:
+        """Show the group selection popup for a pane."""
+        items = [
+            SpeechItem(panel_num=data.panel_num, group_id=gid, text=data.raw_ai_text or "")
+            for gid, data in pane.speech_groups.items()
+        ]
         self._show_speech_item_popup(
-            "Select EasyOCR Speech Item",
-            self._get_easyocr_speech_items(),
-            self._on_easyocr_speech_item_selected,
+            f"Select {pane.name} Speech Item",
+            items,
+            lambda item, p=pane: self._on_speech_item_selected(p, item),
         )
 
-    def _show_paddleocr_speech_item_popup(self, _instance: Button) -> None:
-        self._show_speech_item_popup(
-            "Select PaddleOCR Speech Item",
-            self._get_paddleocr_speech_items(),
-            self._on_paddleocr_speech_item_selected,
-        )
+    def _on_speech_item_selected(self, pane: EnginePane, speech_item: SpeechItem) -> None:
+        self._commit_panel_nums()
+        self._set_group_id(pane, speech_item.group_id)
+        self._load_canvas_content(pane)
 
     @staticmethod
     def _show_speech_item_popup(
@@ -1265,28 +1121,6 @@ class EditorApp(App):
         content.add_widget(close_btn)
         popup.open()
 
-    def _get_easyocr_speech_items(self) -> list[SpeechItem]:
-        return [
-            SpeechItem(panel_num=data.panel_num, group_id=gid, text=data.raw_ai_text or "")
-            for gid, data in self._easyocr_speech_groups.items()
-        ]
-
-    def _on_easyocr_speech_item_selected(self, speech_item: SpeechItem) -> None:
-        self._commit_panel_nums()
-        self._set_easyocr_group_id(speech_item.group_id)
-        self._load_easyocr_canvas_content()
-
-    def _get_paddleocr_speech_items(self) -> list[SpeechItem]:
-        return [
-            SpeechItem(panel_num=data.panel_num, group_id=gid, text=data.raw_ai_text or "")
-            for gid, data in self._paddleocr_speech_groups.items()
-        ]
-
-    def _on_paddleocr_speech_item_selected(self, speech_item: SpeechItem) -> None:
-        self._commit_panel_nums()
-        self._set_paddleocr_group_id(speech_item.group_id)
-        self._load_paddleocr_canvas_content()
-
     # ── save / delete / navigation ────────────────────────────────────────────
 
     def _get_save_button(self) -> Button:
@@ -1294,8 +1128,8 @@ class EditorApp(App):
 
         def on_save(_instance: Button) -> None:
             self._handle_save()
-            self._load_easyocr_canvas_content()
-            self._load_paddleocr_canvas_content()
+            for pane in self._panes:
+                self._load_canvas_content(pane)
 
         btn.bind(on_press=on_save)
         return btn
@@ -1316,61 +1150,32 @@ class EditorApp(App):
 
         return btn
 
-    def _get_current_easyocr_text(self) -> str:
-        return (
-            self._decode_from_display(self.text_str_easyocr)
-            if self._decode_checkbox.active
-            else self.text_str_easyocr
-        )
-
-    def _get_current_paddleocr_text(self) -> str:
-        return (
-            self._decode_from_display(self.text_str_paddleocr)
-            if self._decode_checkbox.active
-            else self.text_str_paddleocr
-        )
+    def _get_current_text(self, pane: EnginePane) -> str:
+        """Return the current decoded text for a pane."""
+        text = getattr(self, pane.text_prop)
+        return self._decode_from_display(text) if self._decode_checkbox.active else text
 
     def _handle_save(self, *, renumber: bool = False) -> None:
         """Save text, panel_num, and text_box changes to both OCR JSON files."""
         self._commit_panel_nums()
-        self._save_page_group(
-            self._easyocr_speech_page_group,
-            self._easyocr_group_id,
-            self._easyocr_speech_groups,
-            self._easyocr_canvas,
-            renumber=renumber,
-        )
-        self._save_page_group(
-            self._paddleocr_speech_page_group,
-            self._paddleocr_group_id,
-            self._paddleocr_speech_groups,
-            self._paddleocr_canvas,
-            renumber=renumber,
-        )
+        for pane in self._panes:
+            self._save_pane(pane, renumber=renumber)
         self._has_changes = False
 
-    def _save_page_group(
-        self,
-        page_group: SpeechPageGroup,
-        group_id: str,
-        speech_groups: dict,
-        canvas: BoundingBoxCanvas | None,
-        *,
-        renumber: bool = False,
-    ) -> None:
+    def _save_pane(self, pane: EnginePane, *, renumber: bool = False) -> None:
         """Sync in-memory edits to speech_page_json and write to disk.
 
-        panel_num is already synced to speech_page_json via _set_*_panel_num /
-        _on_*_panel_num_confirmed, so only text and text_box need updating here.
+        panel_num is already synced to speech_page_json via _set_panel_num /
+        _on_panel_num_confirmed, so only text and text_box need updating here.
         """
-        ocr_file = page_group.ocr_prelim_groups_json_file
+        ocr_file = pane.page_group.ocr_prelim_groups_json_file
         backup_file = self._get_prelim_ocr_backup_file(ocr_file)
 
-        json_groups = page_group.speech_page_json.get("groups", {})
+        json_groups = pane.page_group.speech_page_json.get("groups", {})
 
         # Sync text for all groups whose raw_ai_text has changed
         changed = False
-        for gid, speech_text in speech_groups.items():
+        for gid, speech_text in pane.speech_groups.items():
             json_group = json_groups.get(gid)
             if json_group is None:
                 continue
@@ -1379,20 +1184,20 @@ class EditorApp(App):
                 changed = True
 
         # Sync text_box from canvas (panel_num already updated in json_group)
-        json_group = json_groups.get(group_id)
-        if json_group is not None and canvas is not None:
-            new_text_box = canvas.get_text_box_full_page()
+        json_group = json_groups.get(pane.group_id)
+        if json_group is not None and pane.canvas is not None:
+            new_text_box = pane.canvas.get_text_box_full_page()
             if new_text_box and new_text_box != json_group.get("text_box"):
                 json_group["text_box"] = new_text_box
                 changed = True
 
-        if renumber and page_group.renumber_groups():
+        if renumber and pane.page_group.renumber_groups():
             changed = True
 
         # panel_num changes are tracked via _has_changes but already in json_group;
         # save if anything changed or if we have pending panel_num edits.
         if changed or self._has_changes:
-            page_group.save_json(backup_file=backup_file)
+            pane.page_group.save_json(backup_file=backup_file)
             logger.info(f'Saved changes to "{ocr_file}". Backup at "{backup_file}".')
         else:
             logger.debug(f'No changes in "{ocr_file}".')
@@ -1416,108 +1221,58 @@ class EditorApp(App):
         self._advance_queue()
 
     def _handle_both_prev(self, _instance: object = None) -> None:
-        self._handle_easyocr_prev()
-        self._handle_paddleocr_prev()
+        for pane in self._panes:
+            self._handle_prev(pane)
 
     def _handle_both_next(self, _instance: object = None) -> None:
-        self._handle_easyocr_next()
-        self._handle_paddleocr_next()
+        for pane in self._panes:
+            self._handle_next(pane)
 
-    def _handle_easyocr_prev(self, _instance: object = None) -> None:
-        group_ids = list(self._easyocr_speech_groups.keys())
+    def _handle_prev(self, pane: EnginePane) -> None:
+        """Navigate to the previous group in a pane."""
+        group_ids = list(pane.speech_groups.keys())
         if not group_ids:
             return
         self._commit_panel_nums()
         try:
-            idx = group_ids.index(self._easyocr_group_id)
+            idx = group_ids.index(pane.group_id)
         except ValueError:
             idx = 0
-        self._set_easyocr_group_id(group_ids[(idx - 1) % len(group_ids)])
-        self._load_easyocr_canvas_content()
+        self._set_group_id(pane, group_ids[(idx - 1) % len(group_ids)])
+        self._load_canvas_content(pane)
 
-    def _handle_easyocr_next(self, _instance: object = None) -> None:
-        group_ids = list(self._easyocr_speech_groups.keys())
+    def _handle_next(self, pane: EnginePane) -> None:
+        """Navigate to the next group in a pane."""
+        group_ids = list(pane.speech_groups.keys())
         if not group_ids:
             return
         self._commit_panel_nums()
         try:
-            idx = group_ids.index(self._easyocr_group_id)
+            idx = group_ids.index(pane.group_id)
         except ValueError:
             idx = -1
-        self._set_easyocr_group_id(group_ids[(idx + 1) % len(group_ids)])
-        self._load_easyocr_canvas_content()
+        self._set_group_id(pane, group_ids[(idx + 1) % len(group_ids)])
+        self._load_canvas_content(pane)
 
-    def _handle_paddleocr_prev(self, _instance: object = None) -> None:
-        group_ids = list(self._paddleocr_speech_groups.keys())
-        if not group_ids:
-            return
-        self._commit_panel_nums()
-        try:
-            idx = group_ids.index(self._paddleocr_group_id)
-        except ValueError:
-            idx = 0
-        self._set_paddleocr_group_id(group_ids[(idx - 1) % len(group_ids)])
-        self._load_paddleocr_canvas_content()
+    def _handle_copy_in(self, target: EnginePane) -> None:
+        """Copy the current group from the other engine into a new group in target."""
+        source = self._other_pane(target)
+        self._copy_group_from_other_engine(source, target)
 
-    def _handle_paddleocr_next(self, _instance: object = None) -> None:
-        group_ids = list(self._paddleocr_speech_groups.keys())
-        if not group_ids:
-            return
-        self._commit_panel_nums()
-        try:
-            idx = group_ids.index(self._paddleocr_group_id)
-        except ValueError:
-            idx = -1
-        self._set_paddleocr_group_id(group_ids[(idx + 1) % len(group_ids)])
-        self._load_paddleocr_canvas_content()
-
-    def _handle_easyocr_copy_in(self, _instance: object = None) -> None:
-        """Copy current PaddleOCR group into a new EasyOCR group."""
-        self._copy_group_from_other_engine(
-            source_page_group=self._paddleocr_speech_page_group,
-            source_group_id=self._paddleocr_group_id,
-            target_page_group=self._easyocr_speech_page_group,
-            target_speech_groups=self._easyocr_speech_groups,
-            insert_after_group_id=self._easyocr_group_id,
-            set_target_group_id=self._set_easyocr_group_id,
-            load_target_canvas=self._load_easyocr_canvas_content,
-        )
-
-    def _handle_paddleocr_copy_in(self, _instance: object = None) -> None:
-        """Copy current EasyOCR group into a new PaddleOCR group."""
-        self._copy_group_from_other_engine(
-            source_page_group=self._easyocr_speech_page_group,
-            source_group_id=self._easyocr_group_id,
-            target_page_group=self._paddleocr_speech_page_group,
-            target_speech_groups=self._paddleocr_speech_groups,
-            insert_after_group_id=self._paddleocr_group_id,
-            set_target_group_id=self._set_paddleocr_group_id,
-            load_target_canvas=self._load_paddleocr_canvas_content,
-        )
-
-    def _copy_group_from_other_engine(  # noqa: PLR0913
-        self,
-        source_page_group: SpeechPageGroup,
-        source_group_id: str,
-        target_page_group: SpeechPageGroup,
-        target_speech_groups: dict,
-        insert_after_group_id: str,
-        set_target_group_id: Callable[[str], None],
-        load_target_canvas: Callable[[], None],
-    ) -> None:
+    def _copy_group_from_other_engine(self, source: EnginePane, target: EnginePane) -> None:
         """Copy a group from one engine into a new group in the other engine.
 
-        The new group is inserted immediately after *insert_after_group_id* in
+        The new group is inserted immediately after the target's current group_id in
         both the JSON groups dict and the in-memory speech_groups dict so that
         positional ordering is preserved.
         """
-        source_json_groups = source_page_group.speech_page_json.get("groups", {})
-        source_group = source_json_groups.get(source_group_id)
+        source_json_groups = source.page_group.speech_page_json.get("groups", {})
+        source_group = source_json_groups.get(source.group_id)
         if source_group is None:
-            logger.warning(f"Source group {source_group_id} not found.")
+            logger.warning(f"Source group {source.group_id} not found.")
             return
 
-        target_json_groups = target_page_group.speech_page_json.get("groups", {})
+        target_json_groups = target.page_group.speech_page_json.get("groups", {})
         new_id = str(max((int(k) for k in target_json_groups), default=-1) + 1)
 
         new_group = copy.deepcopy(source_group)
@@ -1534,21 +1289,19 @@ class EditorApp(App):
             text_box=new_group.get("text_box", []),
         )
 
-        # Rebuild both dicts with the new entry inserted after insert_after_group_id.
-        target_page_group.speech_page_json["groups"] = self._insert_after(
-            target_json_groups, insert_after_group_id, new_id, new_group
+        # Rebuild both dicts with the new entry inserted after the target's current group.
+        target.page_group.speech_page_json["groups"] = self._insert_after(
+            target_json_groups, target.group_id, new_id, new_group
         )
-        rebuilt = self._insert_after(
-            target_speech_groups, insert_after_group_id, new_id, new_speech_text
-        )
-        target_speech_groups.clear()
-        target_speech_groups.update(rebuilt)
+        rebuilt = self._insert_after(target.speech_groups, target.group_id, new_id, new_speech_text)
+        target.speech_groups.clear()
+        target.speech_groups.update(rebuilt)
 
         self._commit_panel_nums()
-        set_target_group_id(new_id)
-        load_target_canvas()
+        self._set_group_id(target, new_id)
+        self._load_canvas_content(target)
         self._has_changes = True
-        logger.info(f"Copied group {source_group_id} as new group {new_id}.")
+        logger.info(f"Copied group {source.group_id} as new group {new_id}.")
 
     @staticmethod
     def _insert_after(d: dict, after_key: str, new_key: str, new_value: object) -> dict:
@@ -1564,40 +1317,12 @@ class EditorApp(App):
             result[new_key] = new_value
         return result
 
-    def _handle_easyocr_delete(self, _instance: object = None) -> None:
-        self._do_easyocr_delete()
-
-    def _handle_paddleocr_delete(self, _instance: object = None) -> None:
-        self._do_paddleocr_delete()
-
-    def _do_easyocr_delete(self) -> None:
-        self._do_delete(
-            page_group=self._easyocr_speech_page_group,
-            speech_groups=self._easyocr_speech_groups,
-            group_id=self._easyocr_group_id,
-            load_next=self._load_next_easyocr_group_after_delete,
-        )
-
-    def _do_paddleocr_delete(self) -> None:
-        self._do_delete(
-            page_group=self._paddleocr_speech_page_group,
-            speech_groups=self._paddleocr_speech_groups,
-            group_id=self._paddleocr_group_id,
-            load_next=self._load_next_paddleocr_group_after_delete,
-        )
-
-    def _do_delete(
-        self,
-        page_group: SpeechPageGroup,
-        speech_groups: dict,
-        group_id: str,
-        load_next: Callable[[str | None], None],
-    ) -> None:
-        """Remove group from in-memory JSON and speech_groups; save happens via normal save path."""
+    def _handle_delete(self, pane: EnginePane) -> None:
+        """Delete the current group from a pane and navigate to the neighbor."""
         # Find the best neighbor (previous, or next if first) before removing.
-        group_ids = list(speech_groups.keys())
+        group_ids = list(pane.speech_groups.keys())
         try:
-            idx = group_ids.index(group_id)
+            idx = group_ids.index(pane.group_id)
         except ValueError:
             idx = -1
         if idx > 0:
@@ -1607,35 +1332,21 @@ class EditorApp(App):
         else:
             neighbor_id = None
 
-        json_groups = page_group.speech_page_json.get("groups", {})
-        if group_id in json_groups:
-            del json_groups[group_id]
-        speech_groups.pop(group_id, None)
-        logger.info(f"Deleted group {group_id} from in-memory data (not yet saved).")
+        json_groups = pane.page_group.speech_page_json.get("groups", {})
+        if pane.group_id in json_groups:
+            del json_groups[pane.group_id]
+        pane.speech_groups.pop(pane.group_id, None)
+        logger.info(f"Deleted group {pane.group_id} from in-memory data (not yet saved).")
 
         self._has_changes = True
 
-        load_next(neighbor_id)
-
-    def _load_next_easyocr_group_after_delete(self, neighbor_id: str | None) -> None:
         if neighbor_id is not None:
-            self._set_easyocr_group_id(neighbor_id)
-            self._load_easyocr_canvas_content()
+            self._set_group_id(pane, neighbor_id)
+            self._load_canvas_content(pane)
         else:
             self._show_confirm_popup(
                 title="No Groups Remaining",
-                message="All EasyOCR groups have been deleted.\nClose the editor?",
-                on_confirm=self.stop,
-            )
-
-    def _load_next_paddleocr_group_after_delete(self, neighbor_id: str | None) -> None:
-        if neighbor_id is not None:
-            self._set_paddleocr_group_id(neighbor_id)
-            self._load_paddleocr_canvas_content()
-        else:
-            self._show_confirm_popup(
-                title="No Groups Remaining",
-                message="All PaddleOCR groups have been deleted.\nClose the editor?",
+                message=f"All {pane.name} groups have been deleted.\nClose the editor?",
                 on_confirm=self.stop,
             )
 
