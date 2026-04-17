@@ -55,13 +55,26 @@ def _compare_title(
 
     for page_name in sorted(pages.keys()):
         ocr_variants = pages[page_name]
+        if OcrTypes.EASYOCR not in ocr_variants or OcrTypes.PADDLEOCR not in ocr_variants:
+            print(f"\nPage: {page_name} — skipping (missing OCR variant)")
+            continue
+
         easy = ocr_variants[OcrTypes.EASYOCR]
         paddle = ocr_variants[OcrTypes.PADDLEOCR]
+
+        if easy.renumber_groups():
+            easy.save_json()
+        if paddle.renumber_groups():
+            paddle.save_json()
 
         easy_panel_groups = easy.get_panel_groups()
         paddle_panel_groups = paddle.get_panel_groups()
 
         all_panel_nums = set(easy_panel_groups.keys()) | set(paddle_panel_groups.keys())
+        if not all_panel_nums:
+            print(f"\nPage: {page_name} (Comic Page: {easy.comic_page}) — no speech groups")
+            continue
+
         sorted_panel_nums = sorted(all_panel_nums)
 
         print(f"\nPage: {page_name} (Comic Page: {easy.comic_page})")
