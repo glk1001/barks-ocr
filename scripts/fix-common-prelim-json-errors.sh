@@ -1,5 +1,5 @@
 #VOLUMES=1-16
-VOLUMES=1
+VOLUMES=2
 
 DRY_RUN=""
 #DRY_RUN="--dry-run"

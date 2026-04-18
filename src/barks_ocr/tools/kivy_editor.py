@@ -908,9 +908,16 @@ class EditorApp(App):
                         lbl.color = (1, 1, 1, 1)
             except UnicodeDecodeError:
                 pass
+            self._update_diff_highlight(ti_easy, ti_pad)
+
+        def refresh_on_unfocus(_instance: TextInput, focused: bool) -> None:
+            if not focused:
+                update_diff_labels()
 
         ti_easy.bind(text=update_diff_labels)
         ti_pad.bind(text=update_diff_labels)
+        ti_easy.bind(focus=refresh_on_unfocus)
+        ti_pad.bind(focus=refresh_on_unfocus)
         update_diff_labels()
 
         columns = BoxLayout(orientation="horizontal", spacing=10)
@@ -989,6 +996,7 @@ class EditorApp(App):
             ("Next", lambda _inst, p=pane: self._handle_next(p)),
             ("Select", lambda _inst, p=pane: self._show_speech_item_popup_for(p)),
             ("Copy In", lambda _inst, p=pane: self._handle_copy_in(p)),
+            ("Copy Fmt", lambda _inst, p=pane: self._handle_copy_fmt(p)),
             ("Delete", lambda _inst, p=pane: self._handle_delete(p)),
         ):
             btn = Button(text=btn_text, size_hint_y=None, height=36)
@@ -1258,6 +1266,104 @@ class EditorApp(App):
         """Copy the current group from the other engine into a new group in target."""
         source = self._other_pane(target)
         self._copy_group_from_other_engine(source, target)
+
+    def _handle_copy_fmt(self, target: EnginePane) -> None:
+        """Re-wrap *target* pane's text to match the opposite pane's line pattern."""
+        source = self._other_pane(target)
+        pattern_text = getattr(self, source.text_prop)
+        current_text = getattr(self, target.text_prop)
+        new_text = self._apply_line_pattern(current_text, pattern_text)
+        if new_text == current_text:
+            return
+        setattr(self, target.text_prop, new_text)
+        # _on_text_changed only fires when the TextInput is focused, so sync
+        # raw_ai_text and the change flag explicitly.
+        decoded = self._decode_from_display(new_text) if self._decode_checkbox.active else new_text
+        target.speech_groups[target.group_id] = replace(
+            target.speech_groups[target.group_id],
+            raw_ai_text=decoded,
+        )
+        self._has_changes = True
+
+    @staticmethod
+    def _apply_line_pattern(source_text: str, pattern_text: str) -> str:
+        """Re-wrap source_text so each line holds the same word count as pattern_text.
+
+        Trailing blank lines in pattern_text are ignored. The final pattern line
+        absorbs any leftover words from source_text. If source_text has fewer
+        words than the pattern expects, unfilled trailing lines are dropped.
+        """
+        pattern_lines = pattern_text.rstrip("\n").split("\n")
+        line_counts = [len(ln.split()) for ln in pattern_lines]
+        if not line_counts:
+            return source_text
+
+        words = source_text.split()
+        if not words:
+            return ""
+
+        out: list[str] = []
+        i = 0
+        last_idx = len(line_counts) - 1
+        for idx, count in enumerate(line_counts):
+            if idx == last_idx:
+                out.append(" ".join(words[i:]))
+                break
+            if i >= len(words):
+                break
+            out.append(" ".join(words[i : i + count]))
+            i += count
+        return "\n".join(out)
+
+    # ── diff highlighting ────────────────────────────────────────────────────
+
+    @staticmethod
+    def _first_diff_index(a: str, b: str) -> int | None:
+        """Return the first index where a and b differ, or None if equal."""
+        min_len = min(len(a), len(b))
+        for i in range(min_len):
+            if a[i] != b[i]:
+                return i
+        return min_len if len(a) != len(b) else None
+
+    @staticmethod
+    def _diff_highlight_range(text: str, start: int, max_chars: int = 30) -> tuple[int, int]:
+        """Return (start, end) for a highlight running to end-of-line or max_chars."""
+        n = len(text)
+        if start >= n:
+            return n, n
+        nl = text.find("\n", start)
+        end = n if nl == -1 else nl
+        end = min(end, start + max_chars)
+        if end == start:
+            end = min(start + 1, n)
+        return start, end
+
+    def _update_diff_highlight(self, ti_a: TextInput, ti_b: TextInput) -> None:
+        """Select the first diff range in both TextInputs, or clear if equal.
+
+        Skips the update while either input has focus so the user's cursor
+        and in-progress selection are not disturbed while editing.
+        """
+        if ti_a.focus or ti_b.focus:
+            return
+        text_a = ti_a.text
+        text_b = ti_b.text
+        diff_idx = self._first_diff_index(text_a, text_b)
+        if diff_idx is None:
+            ti_a.cancel_selection()
+            ti_b.cancel_selection()
+            return
+        start_a, end_a = self._diff_highlight_range(text_a, diff_idx)
+        start_b, end_b = self._diff_highlight_range(text_b, diff_idx)
+        if start_a < end_a:
+            ti_a.select_text(start_a, end_a)
+        else:
+            ti_a.cancel_selection()
+        if start_b < end_b:
+            ti_b.select_text(start_b, end_b)
+        else:
+            ti_b.cancel_selection()
 
     def _copy_group_from_other_engine(self, source: EnginePane, target: EnginePane) -> None:
         """Copy a group from one engine into a new group in the other engine.
