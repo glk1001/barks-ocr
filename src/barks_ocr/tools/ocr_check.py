@@ -23,7 +23,7 @@ from barks_ocr.utils.ocr_box import OcrBox, PointList
 # ── Text-fit constants ────────────────────────────────────────────────────────
 
 FIT_FONT_PATH = Path("/home/greg/Prj/fonts/verdana.ttf")
-FIT_WIDTH_TOLERANCE = 1.1  # allow 10% overflow (Verdana is not the comic's font)
+FIT_WIDTH_TOLERANCE = 1.5  # allow 10% overflow (Verdana is not the comic's font)
 FIT_HEIGHT_FRACTION = 0.75  # derived font size ≈ box line height * this
 FIT_MIN_FONT_SIZE = 8
 MIN_MATCH_RATIO = 0.7  # SequenceMatcher threshold for cross-engine pairing
