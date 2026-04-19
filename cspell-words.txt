@@ -62,9 +62,11 @@ scrollview
 socr
 srce
 stubhead
+sysfs
 textbbox
 textline
 timespec
+touchpads
 uncurated
 ungrab
 unwarping

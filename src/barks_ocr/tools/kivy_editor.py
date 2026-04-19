@@ -44,6 +44,13 @@ Config.set("graphics", "left", MAIN_WINDOW_X)  # ty:ignore[unresolved-attribute]
 Config.set("graphics", "top", MAIN_WINDOW_Y)  # ty:ignore[unresolved-attribute]
 Config.set("graphics", "width", MAIN_WINDOW_WIDTH)  # ty:ignore[unresolved-attribute]
 Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty:ignore[unresolved-attribute]
+# Disable Kivy's right-click/ctrl-click multitouch emulation — laptop touchpads
+# can emit spurious events that fire phantom touches (buttons, highlights).
+Config.set("input", "mouse", "mouse,disable_multitouch")  # ty:ignore[unresolved-attribute]
+# Stop ProbeSysfs from attaching MTD readers to /dev/input/event* for the
+# touchpad/touchscreen. Those raw touch events duplicate SDL2's mouse events
+# and cause phantom clicks and drag-selects on laptops.
+Config.remove_option("input", "%(name)s")  # ty:ignore[unresolved-attribute]
 
 # Kivy 2.3.1 bug: textinput.py calls canvas._remove_group() but Canvas only
 # exposes remove_group() (no leading underscore). Patch the alias in.
