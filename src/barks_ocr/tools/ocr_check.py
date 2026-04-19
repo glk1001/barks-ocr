@@ -1,7 +1,8 @@
 # ruff: noqa: T201
-from collections import Counter
+from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import UTC, datetime
+from difflib import SequenceMatcher
 from enum import Enum, auto
 from pathlib import Path
 
@@ -10,13 +11,25 @@ from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePagesPanelBoxes, TitlePanelBoxes
-from barks_fantagraphics.speech_groupers import SpeechGroups, SpeechPageGroup
+from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups, SpeechPageGroup
 from comic_utils.common_typer_options import TitleArg, VolumesArg
 from intspan import intspan
 from loguru import logger
+from PIL import Image, ImageDraw, ImageFont
 
 from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.ocr_box import OcrBox, PointList
+
+# ── Text-fit constants ────────────────────────────────────────────────────────
+
+FIT_FONT_PATH = Path("/home/greg/Prj/fonts/verdana.ttf")
+FIT_WIDTH_TOLERANCE = 1.1  # allow 10% overflow (Verdana is not the comic's font)
+FIT_HEIGHT_FRACTION = 0.75  # derived font size ≈ box line height * this
+FIT_MIN_FONT_SIZE = 8
+MIN_MATCH_RATIO = 0.7  # SequenceMatcher threshold for cross-engine pairing
+
+_FIT_FONT_MISSING_WARNED: list[bool] = [False]
+_FIT_MEASURE_DRAW = ImageDraw.Draw(Image.new("RGB", (1, 1)))
 
 # ── Issue data ────────────────────────────────────────────────────────────────
 
@@ -43,6 +56,118 @@ def _rect_from_points(points: PointList) -> Rect:
     )
 
 
+def _box_wh(text_box: PointList) -> tuple[int, int]:
+    """Return (width, height) in pixels from the text_box's min rotated rect."""
+    bottom_left, top_right = OcrBox(text_box, "", 0, "").min_rotated_rectangle
+    return int(top_right[0] - bottom_left[0]), int(top_right[1] - bottom_left[1])
+
+
+def _text_fits_in_box(ai_text: str, text_box: PointList) -> bool:
+    """Render ai_text at a box-calibrated font size; check it fits text_box width.
+
+    Derives the font size from the box height divided by the number of lines so
+    that fewer lines means a larger font — which is exactly the Gemini failure
+    mode (multiple lines collapsed into one). The widest rendered line must fit
+    within box width * FIT_WIDTH_TOLERANCE.
+    """
+    if not ai_text.strip() or not text_box:
+        return True
+
+    box_w, box_h = _box_wh(text_box)
+    if box_w <= 0 or box_h <= 0:
+        return True
+
+    lines = ai_text.split("\n")
+    n_lines = max(1, len(lines))
+    font_size = max(FIT_MIN_FONT_SIZE, int(box_h / n_lines * FIT_HEIGHT_FRACTION))
+
+    try:
+        font = ImageFont.truetype(str(FIT_FONT_PATH), font_size)
+    except OSError:
+        if not _FIT_FONT_MISSING_WARNED[0]:
+            logger.warning(f'Fit-check font not found: "{FIT_FONT_PATH}". Skipping fit checks.')
+            _FIT_FONT_MISSING_WARNED[0] = True
+        return True
+
+    max_line_w = 0
+    for line in lines:
+        if not line:
+            continue
+        left, _top, right, _bottom = _FIT_MEASURE_DRAW.textbbox((0, 0), line, font=font)
+        max_line_w = max(max_line_w, right - left)
+
+    return max_line_w <= box_w * FIT_WIDTH_TOLERANCE
+
+
+def _apply_line_pattern(source_text: str, pattern_text: str) -> str:
+    """Re-wrap source_text so each line holds the same word count as pattern_text.
+
+    Duplicated from EditorApp._apply_line_pattern in kivy_editor.py — inlined
+    here to avoid importing Kivy just for a 15-line text helper.
+    """
+    pattern_lines = pattern_text.rstrip("\n").split("\n")
+    line_counts = [len(ln.split()) for ln in pattern_lines]
+    if not line_counts:
+        return source_text
+
+    words = source_text.split()
+    if not words:
+        return ""
+
+    out: list[str] = []
+    i = 0
+    last_idx = len(line_counts) - 1
+    for idx, count in enumerate(line_counts):
+        if idx == last_idx:
+            out.append(" ".join(words[i:]))
+            break
+        if i >= len(words):
+            break
+        out.append(" ".join(words[i : i + count]))
+        i += count
+    return "\n".join(out)
+
+
+def _find_matching_group(
+    group: dict,
+    other_page_group: SpeechPageGroup | None,
+    min_ratio: float = MIN_MATCH_RATIO,
+) -> dict | None:
+    """Best-matching group in the other engine, restricted to same panel_num.
+
+    Returns the other engine's json_group dict, or None if no candidate clears
+    min_ratio. Matches the pairing approach used in compare.py.
+    """
+    if other_page_group is None:
+        return None
+
+    panel_num = int(group.get("panel_num", -1))
+    ai_text = (group.get("ai_text") or "").strip()
+    if not ai_text:
+        return None
+
+    other_groups = other_page_group.speech_page_json.get("groups", {})
+
+    best_ratio = 0.0
+    best_group: dict | None = None
+    for other in other_groups.values():
+        if int(other.get("panel_num", -1)) != panel_num:
+            continue
+        other_text = (other.get("ai_text") or "").strip()
+        if not other_text:
+            continue
+        ratio = SequenceMatcher(None, ai_text, other_text).ratio()
+        if ratio > best_ratio:
+            best_ratio = ratio
+            best_group = other
+
+    return best_group if best_ratio >= min_ratio else None
+
+
+def _other_ocr_type(ocr_type: OcrTypes) -> OcrTypes:
+    return OcrTypes.PADDLEOCR if ocr_type == OcrTypes.EASYOCR else OcrTypes.EASYOCR
+
+
 class PanelNumState(Enum):
     PANEL_NUM_SET = auto()
     PANEL_NUM_NOT_SET_FIXABLE = auto()
@@ -60,10 +185,12 @@ class OcrChecker:
         comics_database: ComicsDatabase,
         fix_panel_nums: bool,
         fix_groups_order: bool,
+        fix_newlines: bool,
     ) -> None:
         self._comics_database = comics_database
         self._fix_panel_nums = fix_panel_nums
         self._fix_groups_order = fix_groups_order
+        self._fix_newlines = fix_newlines
         self._speech_groups = SpeechGroups(comics_database)
         self._title_panel_boxes = TitlePanelBoxes(self._comics_database)
 
@@ -84,9 +211,16 @@ class OcrChecker:
             page_groups = self._speech_groups.get_speech_page_groups(title)
             page_panel_boxes = self._title_panel_boxes.get_page_panel_boxes(title)
 
+            pages: dict[str, dict[OcrTypes, SpeechPageGroup]] = defaultdict(dict)
+            for pg in page_groups:
+                pages[pg.fanta_page][pg.ocr_index] = pg
+
             title_issues: list[IssueFound] = []
-            for page_group in page_groups:
-                title_issues.extend(self._check_page_group(page_group, page_panel_boxes))
+            for fanta_page in sorted(pages):
+                variants = pages[fanta_page]
+                for ocr_index, page_group in variants.items():
+                    other = variants.get(_other_ocr_type(ocr_index))
+                    title_issues.extend(self._check_page_group(page_group, page_panel_boxes, other))
 
             if title_issues:
                 print(f'Issues in "{title_str}" (Vol. {volume}):')
@@ -103,7 +237,10 @@ class OcrChecker:
     # ── Per-page / per-group checks ───────────────────────────────────────────
 
     def _check_page_group(
-        self, page_group: SpeechPageGroup, page_panel_boxes: TitlePagesPanelBoxes
+        self,
+        page_group: SpeechPageGroup,
+        page_panel_boxes: TitlePagesPanelBoxes,
+        other_page_group: SpeechPageGroup | None = None,
     ) -> list[IssueFound]:
         volume = page_group.fanta_vol
         fanta_page = page_group.fanta_page
@@ -116,7 +253,7 @@ class OcrChecker:
 
         for group_id, group in json_groups.items():
             group_issues, there_were_group_fixes = self._check_group(
-                volume, fanta_page, engine, group_id, group, per_page_boxes
+                volume, fanta_page, engine, group_id, group, per_page_boxes, other_page_group
             )
             issues.extend(group_issues)
             if there_were_group_fixes:
@@ -130,7 +267,7 @@ class OcrChecker:
 
         return issues
 
-    def _check_group(  # noqa: PLR0913
+    def _check_group(  # noqa: C901, PLR0913
         self,
         volume: int,
         fanta_page: str,
@@ -138,6 +275,7 @@ class OcrChecker:
         group_id: str,
         group: dict,
         page_panel_boxes: PagePanelBoxes,
+        other_page_group: SpeechPageGroup | None = None,
     ) -> tuple[list[IssueFound], bool]:
         ai_text = (group.get("ai_text") or "").strip()
         notes = (group.get("notes") or "").strip()
@@ -174,7 +312,61 @@ class OcrChecker:
         if "page number" in notes.lower():
             add("page_number_notes")
 
+        if ai_text:
+            fit_fixed, fit_issue = self._check_text_fits(group, group_id, other_page_group)
+            if fit_fixed:
+                there_were_fixes = True
+            if fit_issue:
+                add(fit_issue)
+
         return issues, there_were_fixes
+
+    # ── Text-fit check + optional fix ─────────────────────────────────────────
+
+    def _check_text_fits(
+        self,
+        group: dict,
+        group_id: str,
+        other_page_group: SpeechPageGroup | None,
+    ) -> tuple[bool, str | None]:
+        """Return (fix_applied, issue_type_to_add).
+
+        - fits already → (False, None).
+        - doesn't fit, no fix flag → (False, "text_does_not_fit").
+        - doesn't fit, flag set, match found → rewrap in place → (True, None).
+        - doesn't fit, flag set, no match → warn → (False, "text_does_not_fit").
+        """
+        ai_text = (group.get("ai_text") or "").strip()
+        text_box = group.get("text_box") or []
+        if not ai_text or not text_box:
+            return False, None
+
+        if _text_fits_in_box(ai_text, text_box):
+            return False, None
+
+        if not self._fix_newlines:
+            return False, "text_does_not_fit"
+
+        match = _find_matching_group(group, other_page_group)
+        if match is None:
+            logger.warning(
+                f"Group {group_id}: text does not fit text_box and no matching"
+                f" group found in the other engine to transplant newlines from."
+            )
+            return False, "text_does_not_fit"
+
+        pattern_text = (match.get("ai_text") or "").strip()
+        new_text = _apply_line_pattern(ai_text, pattern_text)
+        if new_text == ai_text:
+            logger.warning(
+                f"Group {group_id}: text does not fit but line-pattern transplant"
+                f" produced no change."
+            )
+            return False, "text_does_not_fit"
+
+        group["ai_text"] = new_text
+        logger.info(f"Group {group_id}: rewrapped ai_text using other-engine pattern.")
+        return True, None
 
     # ── Predicates ────────────────────────────────────────────────────────────
 
@@ -315,7 +507,7 @@ def _default_output_file(volumes_str: str) -> Path:
 
 
 @app.command(help="Check prelim OCR JSON files for issues and write a kivy-editor queue file.")
-def main(
+def main(  # noqa: PLR0913
     volumes_str: VolumesArg = "",
     title_str: TitleArg = "",
     output: Path = typer.Option(  # noqa: B008
@@ -326,6 +518,7 @@ def main(
     ),
     fix_panel_nums: bool = False,
     fix_groups_order: bool = False,
+    fix_newlines: bool = False,
 ) -> None:
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."
@@ -336,7 +529,7 @@ def main(
     title_list = get_titles(comics_database, volumes, title_str, exclude_non_comics=True)
 
     output_file = output or _default_output_file(volumes_str)
-    OcrChecker(comics_database, fix_panel_nums, fix_groups_order).check_titles(
+    OcrChecker(comics_database, fix_panel_nums, fix_groups_order, fix_newlines).check_titles(
         title_list, output_file
     )
 
