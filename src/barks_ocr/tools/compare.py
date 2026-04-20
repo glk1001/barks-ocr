@@ -30,6 +30,14 @@ class MismatchFound:
     issue_type: str
 
 
+@dataclass
+class MissingPanel:
+    volume: int
+    fanta_page: str
+    panel_num: int
+    missing_in: str  # "easyocr", "paddleocr", or "both"
+
+
 # ── Comparison logic ────────────────────────────────────────────────────────
 
 
@@ -37,7 +45,7 @@ def _compare_title(
     comics_database: ComicsDatabase,
     title_str: str,
     verbose: bool,
-) -> tuple[list[MismatchFound], int, int, int]:
+) -> tuple[list[MismatchFound], list[MissingPanel], int, int, int]:
     """Compare EasyOCR vs PaddleOCR for one title. Return mismatches and counts."""
     title = BARKS_TITLE_DICT[title_str]
     volume = comics_database.get_fanta_volume_int(title_str)
@@ -49,6 +57,7 @@ def _compare_title(
         pages[g.fanta_page][g.ocr_index] = g
 
     all_mismatches: list[MismatchFound] = []
+    all_missing_panels: list[MissingPanel] = []
     total_panels = 0
     total_perfect_matches = 0
     total_mismatches = 0
@@ -82,7 +91,13 @@ def _compare_title(
 
         sorted_panel_nums = list(range(1, sorted_panel_nums[-1] + 1))
         for panel_num in sorted_panel_nums:
-            skip, panel_mismatches, panel_perfect_matches, panel_mismatch_records = _check_panel(
+            (
+                skip,
+                panel_mismatches,
+                panel_perfect_matches,
+                panel_mismatch_records,
+                missing_panel,
+            ) = _check_panel(
                 easy_panel_groups,
                 paddle_panel_groups,
                 panel_num,
@@ -90,6 +105,9 @@ def _compare_title(
                 page_name,
                 verbose,
             )
+
+            if missing_panel is not None:
+                all_missing_panels.append(missing_panel)
 
             if skip:
                 continue
@@ -99,7 +117,13 @@ def _compare_title(
             total_panels += 1
             all_mismatches.extend(panel_mismatch_records)
 
-    return all_mismatches, total_panels, total_mismatches, total_perfect_matches
+    return (
+        all_mismatches,
+        all_missing_panels,
+        total_panels,
+        total_mismatches,
+        total_perfect_matches,
+    )
 
 
 def _check_panel(  # noqa: C901, PLR0913
@@ -109,17 +133,21 @@ def _check_panel(  # noqa: C901, PLR0913
     volume: int,
     fanta_page: str,
     verbose: bool,
-) -> tuple[bool, int, int, list[MismatchFound]]:
-    """Check one panel. Return (skip, mismatches, perfect_matches, mismatch_records)."""
+) -> tuple[bool, int, int, list[MismatchFound], MissingPanel | None]:
+    """Check one panel. Return (skip, mismatches, perfect_matches, records, missing_panel)."""
+    missing: MissingPanel | None = None
     if (panel_num not in easy_panel_groups) and (panel_num not in paddle_panel_groups):
         if verbose:
             print(f"Panel {panel_num:<2} NOT IN EASYOCR OR PADDLEOCR")
+        missing = MissingPanel(volume, fanta_page, panel_num, "both")
     elif panel_num not in easy_panel_groups:
         print(f"Panel {panel_num:<2} NOT IN EASYOCR")
+        missing = MissingPanel(volume, fanta_page, panel_num, "easyocr")
     elif panel_num not in paddle_panel_groups:
         print(f"Panel {panel_num:<2} NOT IN PADDLEOCR")
+        missing = MissingPanel(volume, fanta_page, panel_num, "paddleocr")
     if panel_num not in easy_panel_groups or panel_num not in paddle_panel_groups:
-        return True, 0, 0, []
+        return True, 0, 0, [], missing
 
     pt_easy_speech_list = easy_panel_groups[panel_num]
     pt_paddle_speech_list = paddle_panel_groups[panel_num]
@@ -175,10 +203,28 @@ def _check_panel(  # noqa: C901, PLR0913
                 MismatchFound(volume, fanta_page, "easyocr", txt_easy.group_id, "text_mismatch")
             )
 
-    return False, panel_mismatches, panel_perfect_matches, records
+    return False, panel_mismatches, panel_perfect_matches, records, None
 
 
 # ── Output helpers ──────────────────────────────────────────────────────────
+
+
+def _print_missing_panels_warning(missing_panels: list[MissingPanel]) -> None:
+    """Print a consolidated warning listing pages whose panels have no OCR text."""
+    if not missing_panels:
+        return
+
+    grouped: dict[tuple[int, str], list[MissingPanel]] = defaultdict(list)
+    for mp in missing_panels:
+        grouped[(mp.volume, mp.fanta_page)].append(mp)
+
+    print("\n" + "=" * 80)
+    print(f"WARNING: {len(missing_panels)} panel(s) without text across {len(grouped)} page(s):")
+    for volume, fanta_page in sorted(grouped.keys()):
+        entries = sorted(grouped[(volume, fanta_page)], key=lambda m: m.panel_num)
+        parts = [f"panel {m.panel_num} ({m.missing_in})" for m in entries if m.missing_in != "both"]
+        if parts:
+            print(f"  Vol {volume}, page {fanta_page}: {', '.join(parts)}")
 
 
 def _write_queue_file(all_mismatches: list[MismatchFound], output_file: Path) -> None:
@@ -229,6 +275,7 @@ def main(
     title_list = get_titles(comics_database, volumes, title_str, exclude_non_comics=True)
 
     all_mismatches: list[MismatchFound] = []
+    all_missing_panels: list[MissingPanel] = []
     grand_total_panels = 0
     grand_total_mismatches = 0
     grand_total_perfect_matches = 0
@@ -236,8 +283,11 @@ def main(
     for title_name in title_list:
         print("=" * 80)
         print(f"Loading groups for {title_name}...")
-        mismatches, panels, mis, perfect = _compare_title(comics_database, title_name, verbose)
+        mismatches, missing_panels, panels, mis, perfect = _compare_title(
+            comics_database, title_name, verbose
+        )
         all_mismatches.extend(mismatches)
+        all_missing_panels.extend(missing_panels)
         grand_total_panels += panels
         grand_total_mismatches += mis
         grand_total_perfect_matches += perfect
@@ -246,6 +296,8 @@ def main(
     print(f"Total Panels Compared: {grand_total_panels}")
     print(f"Mismatches:            {grand_total_mismatches}")
     print(f"Perfect Matches:       {grand_total_perfect_matches}")
+
+    _print_missing_panels_warning(all_missing_panels)
 
     output_file = output or _default_output_file(volumes_str)
     _write_queue_file(all_mismatches, output_file)
