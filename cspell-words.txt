@@ -18,6 +18,7 @@ divid
 divis
 denoise
 denoising
+dismissable
 dotenv
 easyocr
 ents

@@ -18,12 +18,19 @@ from loguru import logger
 from PIL import Image, ImageDraw, ImageFont
 
 from barks_ocr.utils.geometry import Rect
+from barks_ocr.utils.group_checks import (
+    has_page_number_notes,
+    is_acknowledged,
+    is_ai_detected_error,
+    is_short_text,
+)
 from barks_ocr.utils.ocr_box import OcrBox, PointList
 
 # ── Text-fit constants ────────────────────────────────────────────────────────
 
 FIT_FONT_PATH = Path("/home/greg/Prj/fonts/verdana.ttf")
 FIT_WIDTH_TOLERANCE = 1.5  # allow 10% overflow (Verdana is not the comic's font)
+FIT_WIDTH_TOLERANCE_SFX = 4.0  # sound-effect lettering is stylized and often wider
 FIT_HEIGHT_FRACTION = 0.75  # derived font size ≈ box line height * this
 FIT_MIN_FONT_SIZE = 8
 MIN_MATCH_RATIO = 0.7  # SequenceMatcher threshold for cross-engine pairing
@@ -62,13 +69,26 @@ def _box_wh(text_box: PointList) -> tuple[int, int]:
     return int(top_right[0] - bottom_left[0]), int(top_right[1] - bottom_left[1])
 
 
-def _text_fits_in_box(ai_text: str, text_box: PointList) -> bool:
+def _text_fits_in_box(  # noqa: C901
+    ai_text: str,
+    text_box: PointList,
+    fanta_page: str = "",
+    *,
+    strict: bool = True,
+    width_tolerance: float = FIT_WIDTH_TOLERANCE,
+) -> bool:
     """Render ai_text at a box-calibrated font size; check it fits text_box width.
 
     Derives the font size from the box height divided by the number of lines so
     that fewer lines means a larger font — which is exactly the Gemini failure
     mode (multiple lines collapsed into one). The widest rendered line must fit
     within box width * FIT_WIDTH_TOLERANCE.
+
+    When ``strict`` is False the check is run twice — once in each orientation
+    (swapping w and h) — and the text is considered to fit if either passes.
+    This avoids false positives for groups whose text may be rotated (e.g.
+    sound effects), since ``text_box`` itself is always axis-aligned and
+    carries no rotation information.
     """
     if not ai_text.strip() or not text_box:
         return True
@@ -79,24 +99,55 @@ def _text_fits_in_box(ai_text: str, text_box: PointList) -> bool:
 
     lines = ai_text.split("\n")
     n_lines = max(1, len(lines))
-    font_size = max(FIT_MIN_FONT_SIZE, int(box_h / n_lines * FIT_HEIGHT_FRACTION))
 
-    try:
-        font = ImageFont.truetype(str(FIT_FONT_PATH), font_size)
-    except OSError:
-        if not _FIT_FONT_MISSING_WARNED[0]:
-            logger.warning(f'Fit-check font not found: "{FIT_FONT_PATH}". Skipping fit checks.')
-            _FIT_FONT_MISSING_WARNED[0] = True
+    def _fits_one_orientation(w: int, h: int) -> tuple[bool, str]:
+        """Return (fits, debug_msg). Font derives from h; widest line compared to w."""
+        font_size = max(FIT_MIN_FONT_SIZE, int(h / n_lines * FIT_HEIGHT_FRACTION))
+        try:
+            font = ImageFont.truetype(str(FIT_FONT_PATH), font_size)
+        except OSError:
+            if not _FIT_FONT_MISSING_WARNED[0]:
+                logger.warning(f'Fit-check font not found: "{FIT_FONT_PATH}". Skipping fit checks.')
+                _FIT_FONT_MISSING_WARNED[0] = True
+            return True, ""
+
+        max_line_w = 0
+        widest_line = ""
+        for line in lines:
+            if not line:
+                continue
+            left, _top, right, _bottom = _FIT_MEASURE_DRAW.textbbox((0, 0), line, font=font)
+            line_w = right - left
+            if line_w > max_line_w:
+                max_line_w = line_w
+                widest_line = line
+
+        allowed_w = w * width_tolerance
+        msg = (
+            f"w={w}px h={h}px n_lines={n_lines} font_size={font_size}"
+            f" widest_line_w={max_line_w}px allowed={allowed_w:.1f}px"
+            f" (tolerance={width_tolerance}) widest_line={widest_line!r}"
+        )
+        return max_line_w <= allowed_w, msg
+
+    page_prefix = f"page={fanta_page}: " if fanta_page else ""
+
+    ok_h, msg_h = _fits_one_orientation(box_w, box_h)
+    if ok_h:
+        return True
+    if strict:
+        logger.debug(f"{page_prefix}Text does not fit (strict): {msg_h}")
+        return False
+
+    ok_v, msg_v = _fits_one_orientation(box_h, box_w)
+    if ok_v:
         return True
 
-    max_line_w = 0
-    for line in lines:
-        if not line:
-            continue
-        left, _top, right, _bottom = _FIT_MEASURE_DRAW.textbbox((0, 0), line, font=font)
-        max_line_w = max(max_line_w, right - left)
-
-    return max_line_w <= box_w * FIT_WIDTH_TOLERANCE
+    logger.debug(
+        f"{page_prefix}Text does not fit (lenient, neither orientation):"
+        f" horizontal=[{msg_h}] vertical=[{msg_v}]"
+    )
+    return False
 
 
 def _apply_line_pattern(source_text: str, pattern_text: str) -> str:
@@ -251,16 +302,17 @@ class OcrChecker:
         issues: list[IssueFound] = []
         there_were_fixes = False
 
-        for group_id, group in json_groups.items():
-            group_issues, there_were_group_fixes = self._check_group(
-                volume, fanta_page, engine, group_id, group, per_page_boxes, other_page_group
-            )
-            issues.extend(group_issues)
-            if there_were_group_fixes:
+        if self._fix_groups_order:
+            if page_group.renumber_groups():
                 there_were_fixes = True
-
-        if self._fix_groups_order and page_group.renumber_groups():
-            there_were_fixes = True
+        else:
+            for group_id, group in json_groups.items():
+                group_issues, there_were_group_fixes = self._check_group(
+                    volume, fanta_page, engine, group_id, group, per_page_boxes, other_page_group
+                )
+                issues.extend(group_issues)
+                if there_were_group_fixes:
+                    there_were_fixes = True
 
         if there_were_fixes:
             page_group.save_json()
@@ -305,15 +357,17 @@ class OcrChecker:
 
         if ai_text == "":
             add("empty_text")
-        elif self._is_short_text(group):
+        elif is_short_text(group) and not is_acknowledged(group, "short_text"):
             add("short_text")
-        if self._is_ai_detected_error(group):
+        if is_ai_detected_error(group) and not is_acknowledged(group, "error_notes"):
             add("error_notes")
-        if "page number" in notes.lower():
+        if has_page_number_notes(group) and not is_acknowledged(group, "page_number_notes"):
             add("page_number_notes")
 
         if ai_text:
-            fit_fixed, fit_issue = self._check_text_fits(group, group_id, other_page_group)
+            fit_fixed, fit_issue = self._check_text_fits(
+                group, group_id, fanta_page, other_page_group
+            )
             if fit_fixed:
                 there_were_fixes = True
             if fit_issue:
@@ -327,6 +381,7 @@ class OcrChecker:
         self,
         group: dict,
         group_id: str,
+        fanta_page: str,
         other_page_group: SpeechPageGroup | None,
     ) -> tuple[bool, str | None]:
         """Return (fix_applied, issue_type_to_add).
@@ -341,7 +396,16 @@ class OcrChecker:
         if not ai_text or not text_box:
             return False, None
 
-        if _text_fits_in_box(ai_text, text_box):
+        group_type = (group.get("type") or "").strip().lower()
+        stylized_types = ("sound_effect", "background")
+        strict = group_type not in ("dialogue", "narration", *stylized_types)
+        width_tolerance = (
+            FIT_WIDTH_TOLERANCE_SFX if group_type in stylized_types else FIT_WIDTH_TOLERANCE
+        )
+
+        if _text_fits_in_box(
+            ai_text, text_box, fanta_page, strict=strict, width_tolerance=width_tolerance
+        ):
             return False, None
 
         if not self._fix_newlines:
@@ -369,16 +433,6 @@ class OcrChecker:
         return True, None
 
     # ── Predicates ────────────────────────────────────────────────────────────
-
-    @staticmethod
-    def _is_ai_detected_error(group: dict) -> bool:
-        notes = (group.get("notes") or "").strip().lower()
-        return "error" in notes and "art" in notes and "background" in notes
-
-    @staticmethod
-    def _is_short_text(group: dict) -> bool:
-        ai_text = (group.get("ai_text") or "").strip().lower()
-        return (len(ai_text) == 1) and (ai_text not in ("?", "!"))
 
     def _get_panel_num_state(
         self, group: dict, page_panel_boxes: PagePanelBoxes

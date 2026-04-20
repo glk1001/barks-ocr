@@ -30,6 +30,10 @@ from loguru import logger
 from PIL import Image as PilImage
 
 from barks_ocr.cli_setup import init_logging
+from barks_ocr.utils.group_checks import (
+    DISMISSABLE_ISSUE_TYPES,
+    DISMISSABLE_PREDICATES,
+)
 
 APP_LOGGING_NAME = "kpoe"
 
@@ -1004,6 +1008,7 @@ class EditorApp(App):
             ("Select", lambda _inst, p=pane: self._show_speech_item_popup_for(p)),
             ("Copy In", lambda _inst, p=pane: self._handle_copy_in(p)),
             ("Copy Fmt", lambda _inst, p=pane: self._handle_copy_fmt(p)),
+            ("Mark OK", lambda _inst, p=pane: self._show_acknowledge_popup(p)),
             ("Delete", lambda _inst, p=pane: self._handle_delete(p)),
         ):
             btn = Button(text=btn_text, size_hint_y=None, height=36)
@@ -1462,6 +1467,72 @@ class EditorApp(App):
                 message=f"All {pane.name} groups have been deleted.\nClose the editor?",
                 on_confirm=self.stop,
             )
+
+    def _show_acknowledge_popup(self, pane: EnginePane) -> None:
+        """Toggle which dismissable ocr_check issues are acknowledged on this group.
+
+        Acknowledged types are skipped on future ocr_check runs. The popup
+        shows whether each type is currently firing on the live group, but
+        does not gate the checkbox — the user may pre-acknowledge or clear a
+        stale entry.
+        """
+        json_groups = pane.page_group.speech_page_json.get("groups", {})
+        group = json_groups.get(pane.group_id)
+        if group is None:
+            logger.warning(f"Group {pane.group_id} not found for acknowledge popup.")
+            return
+
+        current = set(group.get("acknowledged_issues") or [])
+        checkboxes: dict[str, CheckBox] = {}
+
+        content = BoxLayout(orientation="vertical", padding=10, spacing=8)
+        content.add_widget(
+            Label(
+                text=f"Mark OK — {pane.name} group {pane.group_id}",
+                size_hint_y=None,
+                height=28,
+                bold=True,
+            )
+        )
+
+        for issue_type in DISMISSABLE_ISSUE_TYPES:
+            row = BoxLayout(orientation="horizontal", size_hint_y=None, height=34, spacing=8)
+            firing = DISMISSABLE_PREDICATES[issue_type](group)
+            cb = CheckBox(active=firing or issue_type in current, size_hint_x=None, width=30)
+            checkboxes[issue_type] = cb
+            status = "firing" if firing else "not firing"
+            lbl = Label(text=f"{issue_type}  ({status})", halign="left", valign="middle")
+            lbl.bind(size=lbl.setter("text_size"))
+            row.add_widget(cb)
+            row.add_widget(lbl)
+            content.add_widget(row)
+
+        button_layout = BoxLayout(spacing=10, size_hint_y=None, height=44)
+        popup = Popup(
+            title="Acknowledge issues",
+            content=content,
+            size_hint=(None, None),
+            size=(440, 280),
+            auto_dismiss=False,
+        )
+
+        def on_save(_inst: Button) -> None:
+            new_list = [t for t in DISMISSABLE_ISSUE_TYPES if checkboxes[t].active]
+            if new_list:
+                group["acknowledged_issues"] = new_list
+            elif "acknowledged_issues" in group:
+                del group["acknowledged_issues"]
+            self._has_changes = True
+            popup.dismiss()
+
+        save_btn = Button(text="Save")
+        save_btn.bind(on_press=on_save)
+        cancel_btn = Button(text="Cancel")
+        cancel_btn.bind(on_press=lambda _: popup.dismiss())
+        button_layout.add_widget(save_btn)
+        button_layout.add_widget(cancel_btn)
+        content.add_widget(button_layout)
+        popup.open()
 
     @staticmethod
     def _show_confirm_popup(title: str, message: str, on_confirm: Callable[[], None]) -> None:
