@@ -1,0 +1,253 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "Donald AulT / 1973 43",
+              "value": "Donald AulT / 1973 43",
+              "bbox": [
+                {
+                  "h": 10.069377003144055,
+                  "w": 77.99618461794967,
+                  "x": 629.2134024152059,
+                  "y": 43.291640248070706,
+                  "confidence": 0.95,
+                  "end_index": 20,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Donald AulT / 1973 43",
+          "bbox": [
+            {
+              "h": 10.07,
+              "w": 78.0,
+              "x": 629.21,
+              "y": 43.29,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# 42 CARL BARKs: CONVeRSatIONS",
+          "value": "42 CARL BARKs: CONVeRSatIONS",
+          "bbox": [
+            {
+              "h": 10.247784564357852,
+              "w": 120.43801205816503,
+              "x": 104.41698798947219,
+              "y": 41.242187045064796,
+              "confidence": 0.93,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "told the in-betweener how many drawings had to be done and what divisions had to be made on them. So the in-betweener would have adequate instructions, not only on the exposure sheet, but also little marks put on the original extreme drawings to how far apart the drawings were to be. The in-betweener would take the first extreme and the second extreme and put them one on top of another over a light board, and by flipping these he could see the hand move, like that \\[shows by drawing]. Then he puts a third sheet of paper over the top of those, and being able to see through there he figures out which was going to be the middle. ... It's not all just roughed in in one big mass, although some of the in-betweeners became so expert after a number of years that they could almost do it that way. But us beginners, oh, boy—we had to figure it out a line at a time, very carefully.",
+          "value": "told the in-betweener how many drawings had to be done and what divisions had to be made on them. So the in-betweener would have adequate instructions, not only on the exposure sheet, but also little marks put on the original extreme drawings to how far apart the drawings were to be. The in-betweener would take the first extreme and the second extreme and put them one on top of another over a light board, and by flipping these he could see the hand move, like that [shows by drawing]. Then he puts a third sheet of paper over the top of those, and being able to see through there he figures out which was going to be the middle. ... It's not all just roughed in in one big mass, although some of the in-betweeners became so expert after a number of years that they could almost do it that way. But us beginners, oh, boy—we had to figure it out a line at a time, very carefully.",
+          "bbox": [
+            {
+              "h": 166.20451771031827,
+              "w": 285.5680237382098,
+              "x": 102.37391502417589,
+              "y": 65.1338287978754,
+              "confidence": 0.99,
+              "end_index": 881,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "DA: And the animation had to look smooth?",
+          "value": "DA: And the animation had to look smooth?",
+          "bbox": [
+            {
+              "h": 11.344476505335349,
+              "w": 172.68876365996576,
+              "x": 101.23715471370048,
+              "y": 239.42959521722568,
+              "confidence": 0.81,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: Yes. One of the first problems we had there in the in-between department in our testing to see how well qualified we were to be potential animators was to animate a flag which was waving in the breeze, and two or three of the guys just made that flag wave so beautifully. My flag waved like it was made out of leather. It was the stiffest looking flag you ever saw. (laughs) Then we had to show a ball bounce. We went through the instruction stage where we learned that with each bounce it diminishes the height of its bounce. Some of the guys made their ball look very realistic in its bounce. Others exaggerated it too much. I had a very good bouncing ball, I thought, but I was running out of time on the number of frames I had to get the ball off the stage and into the wings. So I just invented the idea of having a hook come out there and just hook the ball in mid-air and just snap it back. I did a good job on it, but, brother, did I get cussed out for that. That was not in the test. Somebody was just trying to be funny.",
+          "value": "CB: Yes. One of the first problems we had there in the in-between department in our testing to see how well qualified we were to be potential animators was to animate a flag which was waving in the breeze, and two or three of the guys just made that flag wave so beautifully. My flag waved like it was made out of leather. It was the stiffest looking flag you ever saw. (laughs) Then we had to show a ball bounce. We went through the instruction stage where we learned that with each bounce it diminishes the height of its bounce. Some of the guys made their ball look very realistic in its bounce. Others exaggerated it too much. I had a very good bouncing ball, I thought, but I was running out of time on the number of frames I had to get the ball off the stage and into the wings. So I just invented the idea of having a hook come out there and just hook the ball in mid-air and just snap it back. I did a good job on it, but, brother, did I get cussed out for that. That was not in the test. Somebody was just trying to be funny.",
+          "bbox": [
+            {
+              "h": 191.61592560737427,
+              "w": 284.60748184427405,
+              "x": 99.87167487018866,
+              "y": 252.48883014243526,
+              "confidence": 0.9,
+              "end_index": 1033,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "DA: Were the kinds of gags you used in an animated cartoon the same kinds of gags you would use in a comic book? Wouldn't looking at a storyboard be a very different experience from reading a comic book?",
+          "value": "DA: Were the kinds of gags you used in an animated cartoon the same kinds of gags you would use in a comic book? Wouldn't looking at a storyboard be a very different experience from reading a comic book?",
+          "bbox": [
+            {
+              "h": 39.696000000000026,
+              "w": 274.4415000000001,
+              "x": 97.26375000000002,
+              "y": 451.640582781457,
+              "confidence": 0.72,
+              "end_index": 202,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: Oh, yes. The gags were all keyed to animation. Little things had to be put onto that storyboard that you wouldn't even consider in a comic book—such as the way the character would roll his eyes, whether he would lift an eyebrow or tip his hat—little tiny things that wouldn't even be considered in a comic book. The minute actions—all of the actions—clear down to the most microscopic little things that a person might do",
+          "value": "CB: Oh, yes. The gags were all keyed to animation. Little things had to be put onto that storyboard that you wouldn't even consider in a comic book—such as the way the character would roll his eyes, whether he would lift an eyebrow or tip his hat—little tiny things that wouldn't even be considered in a comic book. The minute actions—all of the actions—clear down to the most microscopic little things that a person might do",
+          "bbox": [
+            {
+              "h": 78.86622516556298,
+              "w": 283.37925000000007,
+              "x": 96.73800000000001,
+              "y": 490.8108079470199,
+              "confidence": 0.85,
+              "end_index": 424,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_break>",
+          "value": "<page_break>",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "have to be considered when you're thinking up stuff for animation. That's one thing that bored me very much with the story department. I was a plot man. You just had to get a little vehicle, as I called it, for carrying your story gags, and it had to be very simple so as not to take up too much time to explain how it got started but just provide plenty of opportunity for action gags.",
+          "value": "have to be considered when you're thinking up stuff for animation. That's one thing that bored me very much with the story department. I was a plot man. You just had to get a little vehicle, as I called it, for carrying your story gags, and it had to be very simple so as not to take up too much time to explain how it got started but just provide plenty of opportunity for action gags.",
+          "bbox": [
+            {
+              "h": 74.66002649006624,
+              "w": 283.11637500000006,
+              "x": 443.47012500000005,
+              "y": 67.29917880794703,
+              "confidence": 0.97,
+              "end_index": 385,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "DA: Do you think that when you worked in the story department that you changed Donald's character, or were you too limited by the studio? Obviously you changed his character when you started doing the comics.",
+          "value": "DA: Do you think that when you worked in the story department that you changed Donald's character, or were you too limited by the studio? Obviously you changed his character when you started doing the comics.",
+          "bbox": [
+            {
+              "h": 34.701139072847695,
+              "w": 281.27625,
+              "x": 443.47012500000005,
+              "y": 151.4231523178808,
+              "confidence": 0.6,
+              "end_index": 207,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "CB: I think I had something to do with that. To go back to that original one of \"Modern Inventions\"—up to that time, Donald had been treated just as sort of a firebrand, a goofy, rather silly character, and Jack King and I made him a kind of a mischievous, sly-looking son-of-a-gun. Of course, he was quick-tempered and wanted to have his way and everything. We were just transposing him a little at a time from what he had been in his first cartoons into a more rounded character that could be used in more situations. After that cartoon was done, Jack King went right on into directing. He didn't do any more story work, and Harry Reeves and I were put together in the story unit. Harry had a lot of experience in stories. He'd been around for years with Felix the Cat and so on.",
+          "value": "CB: I think I had something to do with that. To go back to that original one of \"Modern Inventions\"—up to that time, Donald had been treated just as sort of a firebrand, a goofy, rather silly character, and Jack King and I made him a kind of a mischievous, sly-looking son-of-a-gun. Of course, he was quick-tempered and wanted to have his way and everything. We were just transposing him a little at a time from what he had been in his first cartoons into a more rounded character that could be used in more situations. After that cartoon was done, Jack King went right on into directing. He didn't do any more story work, and Harry Reeves and I were put together in the story unit. Harry had a lot of experience in stories. He'd been around for years with Felix the Cat and so on.",
+          "bbox": [
+            {
+              "h": 138.8,
+              "w": 283.38,
+              "x": 444.0,
+              "y": 190.07,
+              "confidence": 1.0,
+              "end_index": 780,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "DA: Mike Barrier sent me some pictures of you that some guys drew at the studio, making reference to \"the perils of Barksism.\" What was that about?",
+          "value": "DA: Mike Barrier sent me some pictures of you that some guys drew at the studio, making reference to \"the perils of Barksism.\" What was that about?",
+          "bbox": [
+            {
+              "h": 34.70113907284764,
+              "w": 277.85887500000007,
+              "x": 444.25875,
+              "y": 338.861880794702,
+              "confidence": 0.85,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "CB: (laughs) That was my ultra-conservatism. I was very conservative in art and in music—in music especially. I was notorious. I considered anything that wasn't straight hillbilly as being very debased. The only music I would consider worthwhile was the kind Roy Rogers or Gene Autry would sing, or the old turkey-in-the-straw type of music. All that stuff that they were playing for *Fantasia*—I considered that a bunch of hogwash. Of course, it was all a put-on. Anyway, I was having lots of joyous arguments with the guys around there about the qualities of music. That also led over into art. I considered the old masters as being the old tobacco juice school and modernism as being absolute junk. The only type of art that I said was worth anything at all was Prince Valiant or Flash Gordon, that sort of thing. Any other kind of art was junk, just plain junk. I had these guys foaming at the mouth, they were so mad at me—especially those who liked modern art—you know, that slap-dab Picasso type of stuff. Oh, they would really get incensed that I couldn't see anything good about that. I",
+          "value": "CB: (laughs) That was my ultra-conservatism. I was very conservative in art and in music—in music especially. I was notorious. I considered anything that wasn't straight hillbilly as being very debased. The only music I would consider worthwhile was the kind Roy Rogers or Gene Autry would sing, or the old turkey-in-the-straw type of music. All that stuff that they were playing for Fantasia—I considered that a bunch of hogwash. Of course, it was all a put-on. Anyway, I was having lots of joyous arguments with the guys around there about the qualities of music. That also led over into art. I considered the old masters as being the old tobacco juice school and modernism as being absolute junk. The only type of art that I said was worth anything at all was Prince Valiant or Flash Gordon, that sort of thing. Any other kind of art was junk, just plain junk. I had these guys foaming at the mouth, they were so mad at me—especially those who liked modern art—you know, that slap-dab Picasso type of stuff. Oh, they would really get incensed that I couldn't see anything good about that. I",
+          "bbox": [
+            {
+              "h": 192.9730711366235,
+              "w": 286.0500259384527,
+              "x": 444.1613740472562,
+              "y": 377.11591201886444,
+              "confidence": 0.89,
+              "end_index": 1094,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

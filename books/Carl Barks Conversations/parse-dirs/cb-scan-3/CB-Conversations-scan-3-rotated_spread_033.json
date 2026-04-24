@@ -1,0 +1,383 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "144 CARL BARKS: CONVERSATIONS",
+              "value": "144 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 7.097960264900664,
+                  "w": 16.561125000000004,
+                  "x": 125.39137500000001,
+                  "y": 37.330013245033115,
+                  "confidence": 0.91,
+                  "end_index": 2,
+                  "label": "header",
+                  "start_index": 0
+                },
+                {
+                  "h": 10.476580051329078,
+                  "w": 101.80576966820696,
+                  "x": 148.1406441203792,
+                  "y": 37.23046340689311,
+                  "confidence": 0.92,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 4
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "144 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.48,
+              "w": 124.56,
+              "x": 125.39,
+              "y": 37.23,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** But one with whom one could identify and whom one could love.",
+          "value": "H: But one with whom one could identify and whom one could love.",
+          "bbox": [
+            {
+              "h": 12.432450612733415,
+              "w": 263.9134889898533,
+              "x": 123.57402865972753,
+              "y": 61.020163680211525,
+              "confidence": 0.92,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** There were many other characters in Disney, but I cannot remember a single one who has survived.",
+          "value": "B: There were many other characters in Disney, but I cannot remember a single one who has survived.",
+          "bbox": [
+            {
+              "h": 24.008200118497534,
+              "w": 281.79165630954657,
+              "x": 123.09357300400154,
+              "y": 73.74028950493046,
+              "confidence": 0.95,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** What about Pegleg Pete?",
+          "value": "H: What about Pegleg Pete?",
+          "bbox": [
+            {
+              "h": 11.50690211032774,
+              "w": 110.91128531107091,
+              "x": 122.90180148389865,
+              "y": 106.2270813845751,
+              "confidence": 0.87,
+              "end_index": 29,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Yes, he was a good villain. But they also had Jose Carioca, a parrot, for a while, who came out of the *Saludos Amigos* animated movie. I don't think he ever became very popular with the people, because he was such an overbearing little snob—such a little know-it-all snob, I don't think he went over very well with the public. Pluto was in a lot of their comic strips, but he was a very artificial dog, so different from any idea one might have of a dog. I never liked him very much. He was a dumb dog, you might say. No, when I think of all the characters Disney ever had, Donald was the best of all.",
+          "value": "B: Yes, he was a good villain. But they also had Jose Carioca, a parrot, for a while, who came out of the Saludos Amigos animated movie. I don't think he ever became very popular with the people, because he was such an overbearing little snob—such a little know-it-all snob, I don't think he went over very well with the public. Pluto was in a lot of their comic strips, but he was a very artificial dog, so different from any idea one might have of a dog. I never liked him very much. He was a dumb dog, you might say. No, when I think of all the characters Disney ever had, Donald was the best of all.",
+          "bbox": [
+            {
+              "h": 113.70368515386818,
+              "w": 284.47452910632626,
+              "x": 121.46295156488188,
+              "y": 119.40331344798021,
+              "confidence": 0.96,
+              "end_index": 608,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** But before you took him on, he didn't have a personality. Only in your stories did he become a real human being.",
+          "value": "H: But before you took him on, he didn't have a personality. Only in your stories did he become a real human being.",
+          "bbox": [
+            {
+              "h": 25.142586606802602,
+              "w": 283.69053747856333,
+              "x": 119.40578438214558,
+              "y": 242.29117201314793,
+              "confidence": 0.93,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** That's right, he was just a quarrelsome comedian for their animated movies.",
+          "value": "B: That's right, he was just a quarrelsome comedian for their animated movies.",
+          "bbox": [
+            {
+              "h": 22.102575657393302,
+              "w": 272.4009002536681,
+              "x": 119.46760859494094,
+              "y": 268.0811386480564,
+              "confidence": 0.94,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** And you made a real personality out of him.",
+          "value": "H: And you made a real personality out of him.",
+          "bbox": [
+            {
+              "h": 11.992902496188977,
+              "w": 181.6089193680926,
+              "x": 119.04845120164826,
+              "y": 300.6592971465321,
+              "confidence": 0.86,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** It seems that way. If you have a story to tell—a story that somebody's going to be able to read over and over again and again—you have to put some substance into it. It takes more than just a bunch of pratfalls and bumps on the head. There had to be motivation for the different things the characters did and revenge for their mistakes. (Laughs) It took a lot to write a ten-page story. A lot of the guys didn't take the time to go into it that far, and as a result there was a lot of the comic book stories that never lasted for very long. They came out and sold on the newsstand and were never heard of again. But with my stories, because I worked so hard to make the story plausible and give it a reason for having been written, people would read it over and over again. They didn't throw the comic book away. So those stories are still alive today, while many others are gone and forgotten.",
+          "value": "B: It seems that way. If you have a story to tell—a story that somebody's going to be able to read over and over again and again—you have to put some substance into it. It takes more than just a bunch of pratfalls and bumps on the head. There had to be motivation for the different things the characters did and revenge for their mistakes. (Laughs) It took a lot to write a ten-page story. A lot of the guys didn't take the time to go into it that far, and as a result there was a lot of the comic book stories that never lasted for very long. They came out and sold on the newsstand and were never heard of again. But with my stories, because I worked so hard to make the story plausible and give it a reason for having been written, people would read it over and over again. They didn't throw the comic book away. So those stories are still alive today, while many others are gone and forgotten.",
+          "bbox": [
+            {
+              "h": 166.20337424256863,
+              "w": 285.04906726371956,
+              "x": 117.37336191168066,
+              "y": 314.2589757050306,
+              "confidence": 0.96,
+              "end_index": 900,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Did you have contact with other comic artists?",
+          "value": "H: Did you have contact with other comic artists?",
+          "bbox": [
+            {
+              "h": 11.552321713033542,
+              "w": 191.49004900080988,
+              "x": 115.48989609732281,
+              "y": 488.82416617282786,
+              "confidence": 0.88,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Very few. I remember one who was pretty successful with doing stories for Western Publishing. He told me I was foolish to put so much work into my duck stories. He had just started to work for a New York publisher who was putting out some stories about a couple of crows. And he says, \"Oh, you can get twice as much per page than you're getting from Western",
+          "value": "B: Very few. I remember one who was pretty successful with doing stories for Western Publishing. He told me I was foolish to put so much work into my duck stories. He had just started to work for a New York publisher who was putting out some stories about a couple of crows. And he says, \"Oh, you can get twice as much per page than you're getting from Western",
+          "bbox": [
+            {
+              "h": 66.06839651295729,
+              "w": 283.61530153153586,
+              "x": 114.37942704363569,
+              "y": 501.371535294398,
+              "confidence": 0.96,
+              "end_index": 363,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nGOTTFRIED HELNWEIN / 1992 145\n\\</page_header>",
+          "value": "<page_header>\nGOTTFRIED HELNWEIN / 1992 145\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.94,
+              "w": 126.97,
+              "x": 620.39,
+              "y": 40.75,
+              "confidence": 1.0,
+              "end_index": 43,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Publishing.\" But I just couldn't see myself writing for that bunch of crows—I didn't like their style or their reason for being there. They were just a couple of pushy jerks, and so little chance to make up stories that had any character in there or any plots. Well, I said, \"Oh, I'd rather keep on like I am, on peanut wages but getting some personal satisfaction out of the stories that I write.\"",
+          "value": "Publishing.\" But I just couldn't see myself writing for that bunch of crows—I didn't like their style or their reason for being there. They were just a couple of pushy jerks, and so little chance to make up stories that had any character in there or any plots. Well, I said, \"Oh, I'd rather keep on like I am, on peanut wages but getting some personal satisfaction out of the stories that I write.\"",
+          "bbox": [
+            {
+              "h": 75.62088,
+              "w": 280.9608,
+              "x": 464.34240000000005,
+              "y": 64.30752000000001,
+              "confidence": 0.88,
+              "end_index": 397,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** And over the years you have developed the story about Duckburg with all its different personalities.",
+          "value": "H: And over the years you have developed the story about Duckburg with all its different personalities.",
+          "bbox": [
+            {
+              "h": 24.046843123570888,
+              "w": 284.18746038967225,
+              "x": 464.53814369759914,
+              "y": 149.96322477610522,
+              "confidence": 0.95,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oh, yeah. That just evolved out of the fact that I had to keep getting some material—to create new interest in each new story I wrote—expanding a little bit, making more of the city of Duckburg, the places where these events take place, and a little more about the people that Donald had to contact and do business with. The whole family just gradually grew and so did Duckburg.",
+          "value": "B: Oh, yeah. That just evolved out of the fact that I had to keep getting some material—to create new interest in each new story I wrote—expanding a little bit, making more of the city of Duckburg, the places where these events take place, and a little more about the people that Donald had to contact and do business with. The whole family just gradually grew and so did Duckburg.",
+          "bbox": [
+            {
+              "h": 76.82926126143293,
+              "w": 283.780725443026,
+              "x": 464.90866320503056,
+              "y": 176.17907553115478,
+              "confidence": 0.96,
+              "end_index": 384,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** It's funny, but I and many others of my generation have learned a lot from these stories, because they always contained some real information. Seriously—I've learned more from Donald Duck than I have in all the schools I went to.",
+          "value": "H: It's funny, but I and many others of my generation have learned a lot from these stories, because they always contained some real information. Seriously—I've learned more from Donald Duck than I have in all the schools I went to.",
+          "bbox": [
+            {
+              "h": 50.11257163205034,
+              "w": 283.3122288967226,
+              "x": 465.3333806450077,
+              "y": 261.77089857564795,
+              "confidence": 0.93,
+              "end_index": 235,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Well, I don't know exactly why I did so much research for my stories, but I had the feeling the ducks had to go to real places. Otherwise the stories would look silly. I know in the other duck stories in the comics they went to islands like Booga Booga or something like that, places that didn't have any relation to reality. And they made their drawings in little squiggly backgrounds that didn't have the right character—for example the South Seas. When I sent the ducks to an island in the South Seas, I gave it a name that sounded very much like it could actually be on the map. And I would go and look at pictures of plants and trees there, and islands and the mountains, and all the rest, and I made my background look like the ducks went to just such a place.",
+          "value": "B: Well, I don't know exactly why I did so much research for my stories, but I had the feeling the ducks had to go to real places. Otherwise the stories would look silly. I know in the other duck stories in the comics they went to islands like Booga Booga or something like that, places that didn't have any relation to reality. And they made their drawings in little squiggly backgrounds that didn't have the right character—for example the South Seas. When I sent the ducks to an island in the South Seas, I gave it a name that sounded very much like it could actually be on the map. And I would go and look at pictures of plants and trees there, and islands and the mountains, and all the rest, and I made my background look like the ducks went to just such a place.",
+          "bbox": [
+            {
+              "h": 142.7645900390625,
+              "w": 284.69848377953514,
+              "x": 465.88723142149394,
+              "y": 314.1574641339559,
+              "confidence": 0.96,
+              "end_index": 772,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** At one point you became a little too realistic—do you remember the story about this chemical formula, which existed in reality, but which was a military secret of the U.S.",
+          "value": "H: At one point you became a little too realistic—do you remember the story about this chemical formula, which existed in reality, but which was a military secret of the U.S.",
+          "bbox": [
+            {
+              "h": 37.41692399485515,
+              "w": 284.0962956602516,
+              "x": 466.6429469559833,
+              "y": 465.76650242949705,
+              "confidence": 0.95,
+              "end_index": 177,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Well—I'll tell you—I just stole that out of the *Encyclopedia Britannica*. It was a big article on chemistry with all different chemical formulas, and it was written in this gibberish—NH<sub>4</sub>CH<sub>2</sub> and so on. And I just looked at a whole string of those things and looked at about the middle of that. And I thought, \"Well, maybe it's harmless enough if I just take these bunch of",
+          "value": "B: Well—I'll tell you—I just stole that out of the Encyclopedia Britannica. It was a big article on chemistry with all different chemical formulas, and it was written in this gibberish—NH<sub>4</sub>CH<sub>2</sub> and so on. And I just looked at a whole string of those things and looked at about the middle of that. And I thought, \"Well, maybe it's harmless enough if I just take these bunch of",
+          "bbox": [
+            {
+              "h": 64.26724866139487,
+              "w": 284.30792806783535,
+              "x": 467.2787458079269,
+              "y": 505.107146927401,
+              "confidence": 0.96,
+              "end_index": 400,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "144, 145"
+    }
+  ]
+}

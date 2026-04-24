@@ -1,0 +1,425 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "20 CARL BARKS: CONVERSATIONS",
+              "value": "20 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.936238574516482,
+                  "w": 111.44458645555451,
+                  "x": 110.86624141935025,
+                  "y": 35.94267274229469,
+                  "confidence": 0.83,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "20 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.94,
+              "w": 111.44,
+              "x": 110.87,
+              "y": 35.94,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**FOSTER:** It must have been the fanny gag that got Walt.\n**BARKS:** It was. Oh, he liked fanny gags. Pratfalls and fanny gags.",
+          "value": "FOSTER: It must have been the fanny gag that got Walt.\nBARKS: It was. Oh, he liked fanny gags. Pratfalls and fanny gags.",
+          "bbox": [
+            {
+              "h": 14.136869070360138,
+              "w": 218.5633125803878,
+              "x": 100.97319650640722,
+              "y": 59.69386518792875,
+              "confidence": 0.78,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.67,
+              "w": 218.45,
+              "x": 100.94,
+              "y": 59.15,
+              "confidence": 1.0,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Of course, you'd already been doing gag cartoons for different magazines in the early thirties . . .",
+          "value": "BARRIER: Of course, you'd already been doing gag cartoons for different magazines in the early thirties . . .",
+          "bbox": [
+            {
+              "h": 24.621927624809466,
+              "w": 282.44491170445883,
+              "x": 100.02827032917303,
+              "y": 93.50170358588989,
+              "confidence": 0.97,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I had a little groundwork in humor, and I got into the story department, and of course there was the trouble of trying to get a situation that the animators could work on for a long period of time. That wasn't my cup of tea; I was a plot man. One of the first things Ted Sears told me was \"Don't be working on plot gags all the time; try to find a good action gag and use it to death.\" I wasn't getting anywhere in the story department until I was put with Harry Reeves. Harry had been in the story department for a long time, and he guided me into the right channels of thinking.",
+          "value": "BARKS: I had a little groundwork in humor, and I got into the story department, and of course there was the trouble of trying to get a situation that the animators could work on for a long period of time. That wasn't my cup of tea; I was a plot man. One of the first things Ted Sears told me was \"Don't be working on plot gags all the time; try to find a good action gag and use it to death.\" I wasn't getting anywhere in the story department until I was put with Harry Reeves. Harry had been in the story department for a long time, and he guided me into the right channels of thinking.",
+          "bbox": [
+            {
+              "h": 114.1525095417302,
+              "w": 282.6085198349371,
+              "x": 98.64102615877479,
+              "y": 119.93212739376908,
+              "confidence": 0.98,
+              "end_index": 590,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** This interests me when you talk about the distinction between the plot gags and the action gags; I'd like some examples of the different kinds of gags.",
+          "value": "BARRIER: This interests me when you talk about the distinction between the plot gags and the action gags; I'd like some examples of the different kinds of gags.",
+          "bbox": [
+            {
+              "h": 37.459436175686015,
+              "w": 281.3685855951077,
+              "x": 97.49094177246094,
+              "y": 243.42584658441316,
+              "confidence": 0.97,
+              "end_index": 163,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Well, I could illustrate that better with a Pluto story. Did you ever see the Pluto cartoon where he got a plumber's friend stuck on his fanny? Now, that was an animation gag. It went on for practically six minutes of the seven. A plot gag would have been merely the planning that went into this situation, by which he happened to get where this plumber's friend was and the method that was used to get the plumber's friend stuck on his fanny. Then, it immediately came to the animation gag, and it just went on—all the funny animation problems he could get into with this plumber's friend.",
+          "value": "BARKS: Well, I could illustrate that better with a Pluto story. Did you ever see the Pluto cartoon where he got a plumber's friend stuck on his fanny? Now, that was an animation gag. It went on for practically six minutes of the seven. A plot gag would have been merely the planning that went into this situation, by which he happened to get where this plumber's friend was and the method that was used to get the plumber's friend stuck on his fanny. Then, it immediately came to the animation gag, and it just went on—all the funny animation problems he could get into with this plumber's friend.",
+          "bbox": [
+            {
+              "h": 114.3658150295351,
+              "w": 284.10540587187984,
+              "x": 95.75039670767437,
+              "y": 281.9858483088796,
+              "confidence": 0.98,
+              "end_index": 600,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** About how many cartoons did you actually work on?\n**BARKS:** There were thirty-six altogether.",
+          "value": "BARRIER: About how many cartoons did you actually work on?\nBARKS: There were thirty-six altogether.",
+          "bbox": [
+            {
+              "h": 25.36441935022865,
+              "w": 246.16287715558312,
+              "x": 94.44212648866235,
+              "y": 406.17296988852905,
+              "confidence": 0.96,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.2,
+              "w": 246.31,
+              "x": 94.37,
+              "y": 405.64,
+              "confidence": 0.96,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.14,
+              "w": 157.73,
+              "x": 94.11,
+              "y": 418.25,
+              "confidence": 1.0,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 63
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** They were all Donald Duck cartoons?",
+          "value": "BARRIER: They were all Donald Duck cartoons?",
+          "bbox": [
+            {
+              "h": 11.991129677972566,
+              "w": 185.39782820836507,
+              "x": 94.04976751857852,
+              "y": 440.0429101086129,
+              "confidence": 0.9,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I think I worked on one Pluto, but I can't remember now.",
+          "value": "BARKS: I think I worked on one Pluto, but I can't remember now.",
+          "bbox": [
+            {
+              "h": 13.354816906440501,
+              "w": 253.7405508259099,
+              "x": 93.88461284358328,
+              "y": 453.18711621093763,
+              "confidence": 0.89,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Did you have much contact with Walt while you were at the studio?",
+          "value": "BARRIER: Did you have much contact with Walt while you were at the studio?",
+          "bbox": [
+            {
+              "h": 22.535001476753063,
+              "w": 274.11871048792403,
+              "x": 93.15540771186645,
+              "y": 473.4737587128431,
+              "confidence": 0.95,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Just on story conferences. We'd have a \"showing,\" and when we had these showings, everybody was nervous and worried for days in advance. Walt would come down, and one of the story men would get up and talk the storyboard through for Walt. He would sit there with one eyebrow cocked up high, and when you got through, there was dead silence for about five minutes. Then he would say something. Usually, he would start in and say something fairly pleasant—you know, \"Well, that's a good gag up there . . . pretty good stuff . . . but this down here, I think I would change that.\" He was very helpful. Very seldom did he ever say a real hurtful thing to any of the story men, something that would cause him \\[the story man] great discouragement. If he turned down a story completely, he would do it as gently as he could. As he walked out of the door, he would say, \"Well, I think the best thing to do with that is just to shelve it for a while.\" So you knew that that was the end.",
+          "value": "BARKS: Just on story conferences. We'd have a \"showing,\" and when we had these showings, everybody was nervous and worried for days in advance. Walt would come down, and one of the story men would get up and talk the storyboard through for Walt. He would sit there with one eyebrow cocked up high, and when you got through, there was dead silence for about five minutes. Then he would say something. Usually, he would start in and say something fairly pleasant—you know, \"Well, that's a good gag up there . . . pretty good stuff . . . but this down here, I think I would change that.\" He was very helpful. Very seldom did he ever say a real hurtful thing to any of the story men, something that would cause him [the story man] great discouragement. If he turned down a story completely, he would do it as gently as he could. As he walked out of the door, he would say, \"Well, I think the best thing to do with that is just to shelve it for a while.\" So you knew that that was the end.",
+          "bbox": [
+            {
+              "h": 115.4075761589404,
+              "w": 283.905,
+              "x": 443.47012500000005,
+              "y": 65.45896688741723,
+              "confidence": 0.98,
+              "end_index": 988,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\\<page_header>\nBARRIER, BRAY, FOSTER, AND SPICER / 1971 21\n\\</page_header>",
+          "value": "<page_header>\nBARRIER, BRAY, FOSTER, AND SPICER / 1971 21\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.94,
+              "w": 168.24,
+              "x": 557.3,
+              "y": 43.38,
+              "confidence": 1.0,
+              "end_index": 57,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**GLENN BRAY:** Did you ever hear any of his comments on your work? Did he ever say anything to you personally?",
+          "value": "GLENN BRAY: Did you ever hear any of his comments on your work? Did he ever say anything to you personally?",
+          "bbox": [
+            {
+              "h": 23.134092715231787,
+              "w": 281.53912499999996,
+              "x": 444.25875,
+              "y": 191.6449271523179,
+              "confidence": 0.93,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Just in the room while the conference was going on.",
+          "value": "BARKS: Just in the room while the conference was going on.",
+          "bbox": [
+            {
+              "h": 11.551435303925308,
+              "w": 234.53809684641772,
+              "x": 444.54080966558695,
+              "y": 218.20842932069365,
+              "confidence": 0.86,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BRAY:** About any of your comic book work or anything?\n**BARKS:** Oh, no. After I left the studio, I never met Walt face to face again. . . . I don't think the Disney studio ever even read my comic book stories. I would turn in my stories to Western, and Western supposedly sent them over to the Disney studio for checking, but I know that there were times when I was so close to their deadline they didn't have time; they would just have had to shoot the stories right on through to New York.",
+          "value": "BRAY: About any of your comic book work or anything?\nBARKS: Oh, no. After I left the studio, I never met Walt face to face again. . . . I don't think the Disney studio ever even read my comic book stories. I would turn in my stories to Western, and Western supposedly sent them over to the Disney studio for checking, but I know that there were times when I was so close to their deadline they didn't have time; they would just have had to shoot the stories right on through to New York.",
+          "bbox": [
+            {
+              "h": 101.8659574361662,
+              "w": 279.49523180259155,
+              "x": 443.9547006002287,
+              "y": 238.7743616044208,
+              "confidence": 0.98,
+              "end_index": 494,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.36,
+              "w": 218.97,
+              "x": 443.47,
+              "y": 238.44,
+              "confidence": 1.0,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 88.59,
+              "w": 279.17,
+              "x": 443.21,
+              "y": 252.37,
+              "confidence": 0.98,
+              "end_index": 494,
+              "label": "text",
+              "start_index": 57
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BRAY:** Would you have liked to have had the privilege of signing your own stories back then?",
+          "value": "BRAY: Would you have liked to have had the privilege of signing your own stories back then?",
+          "bbox": [
+            {
+              "h": 22.765326019436028,
+              "w": 270.3486043730945,
+              "x": 444.32727381859763,
+              "y": 352.00532478086893,
+              "confidence": 0.96,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Well, I guess so, it would have been . . . I think that what he \\[Walt Disney] wanted was to create the feeling with the public that he supervised everything, that whatever went out had to have his intellectual approval. I think that was one reason that one name was on there. Then, after the Disney strike, the screen cartoonists guild got the right to have their names on the screen. Then Walt began to kind of loosen up; he had to. It began to be noised around that there were some other people working at the studio besides Walt, at least among the animators and so on. But you know, Floyd Gottfredson and those people on the comic strips, they were still signing Walt Disney's name down at the bottom. No recognition for them.",
+          "value": "BARKS: Well, I guess so, it would have been . . . I think that what he [Walt Disney] wanted was to create the feeling with the public that he supervised everything, that whatever went out had to have his intellectual approval. I think that was one reason that one name was on there. Then, after the Disney strike, the screen cartoonists guild got the right to have their names on the screen. Then Walt began to kind of loosen up; he had to. It began to be noised around that there were some other people working at the studio besides Walt, at least among the animators and so on. But you know, Floyd Gottfredson and those people on the comic strips, they were still signing Walt Disney's name down at the bottom. No recognition for them.",
+          "bbox": [
+            {
+              "h": 142.73913236947408,
+              "w": 283.86788293159304,
+              "x": 443.8629848751906,
+              "y": 377.99246425781257,
+              "confidence": 0.98,
+              "end_index": 741,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** When you started doing the comic books, how much did you call on your Disney background as a gag-man?\n**BARKS:** A great deal of the time, during those first few years.",
+          "value": "BARRIER: When you started doing the comic books, how much did you call on your Disney background as a gag-man?\nBARKS: A great deal of the time, during those first few years.",
+          "bbox": [
+            {
+              "h": 38.3179765815549,
+              "w": 278.3047306354802,
+              "x": 443.77222086985523,
+              "y": 531.713389981898,
+              "confidence": 0.87,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 24.71,
+              "w": 279.7,
+              "x": 442.42,
+              "y": 530.77,
+              "confidence": 1.0,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.14,
+              "w": 238.43,
+              "x": 442.42,
+              "y": 556.53,
+              "confidence": 1.0,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 115
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "20, 21"
+    }
+  ]
+}

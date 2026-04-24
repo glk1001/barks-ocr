@@ -1,0 +1,410 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# Carl Barks: Conversations",
+          "value": "Carl Barks: Conversations",
+          "bbox": [
+            {
+              "h": 11.898981620379192,
+              "w": 107.66043621379575,
+              "x": 117.23278289348325,
+              "y": 13.894016121022297,
+              "confidence": 0.89,
+              "end_index": 26,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "somebody else. Now that story where Gladstone and Donald were up in the *Bering Sea* and they found that old Viking boat—that story came to me from Dana Coly, who used to be an editor on *Judge* magazine years ago. He worked for Disney, too, for a while. He had this idea for a story with quite a number of gags in it in which Gladstone goes up to the North as the result of some trick that Donald had played on him. So I bought the idea from him and developed it, added a lot more to it. But most of the longer stories originated with me. And 90% of the shorter-length gyro stories, too.",
+          "value": "somebody else. Now that story where Gladstone and Donald were up in the Bering Sea and they found that old Viking boat—that story came to me from Dana Coly, who used to be an editor on Judge magazine years ago. He worked for Disney, too, for a while. He had this idea for a story with quite a number of gags in it in which Gladstone goes up to the North as the result of some trick that Donald had played on him. So I bought the idea from him and developed it, added a lot more to it. But most of the longer stories originated with me. And 90% of the shorter-length gyro stories, too.",
+          "bbox": [
+            {
+              "h": 114.18624,
+              "w": 284.3256,
+              "x": 100.944,
+              "y": 38.06208,
+              "confidence": 0.93,
+              "end_index": 587,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** You had Donald ranging over the entire world. Where did you get the story ideas?",
+          "value": "Q: You had Donald ranging over the entire world. Where did you get the story ideas?",
+          "bbox": [
+            {
+              "h": 24.445560894626524,
+              "w": 284.0089628548971,
+              "x": 99.45040115282013,
+              "y": 158.8654334651296,
+              "confidence": 0.92,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** The first thing I did was to kind of feel around to see what I would like to draw. I would think, \"Do I want to draw a jungle? Do I want to draw the West? Or would it be easier for me this time to draw them at the North Pole?\" You know, sometimes, if you feel you would like to draw something—a locale, a certain type of terrain—it is easier to do it. So I would feel around and see where I would like to have my stories staged. And then, it was fairly easy to go from there to thinking of a situation dealing with that particular spot.",
+          "value": "A: The first thing I did was to kind of feel around to see what I would like to draw. I would think, \"Do I want to draw a jungle? Do I want to draw the West? Or would it be easier for me this time to draw them at the North Pole?\" You know, sometimes, if you feel you would like to draw something—a locale, a certain type of terrain—it is easier to do it. So I would feel around and see where I would like to have my stories staged. And then, it was fairly easy to go from there to thinking of a situation dealing with that particular spot.",
+          "bbox": [
+            {
+              "h": 103.71049736089938,
+              "w": 283.8179364311405,
+              "x": 98.12353483172161,
+              "y": 184.63069580316312,
+              "confidence": 0.94,
+              "end_index": 542,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** How do you derive your story backgrounds? Through extensive reading?",
+          "value": "Q: How do you derive your story backgrounds? Through extensive reading?",
+          "bbox": [
+            {
+              "h": 24.524302791539633,
+              "w": 259.36634756693024,
+              "x": 96.67717759741808,
+              "y": 292.9974120617378,
+              "confidence": 0.9,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** I've read very little. I used to read some Zane Grey stories. When I was a kid in school, I read a few stories. I didn't read very many, but I guess what I did stick to me. I just sort of built up a background on places like Australia from a few old pulp magazines I had read stories in, like the Max Brand stories, you know. Most reference material for my scripts came from *National Geographic* and *Encyclopedia Britannica*. Art references came from four file drawers of clippings, plus numerous art and drawing books.",
+          "value": "A: I've read very little. I used to read some Zane Grey stories. When I was a kid in school, I read a few stories. I didn't read very many, but I guess what I did stick to me. I just sort of built up a background on places like Australia from a few old pulp magazines I had read stories in, like the Max Brand stories, you know. Most reference material for my scripts came from National Geographic and Encyclopedia Britannica. Art references came from four file drawers of clippings, plus numerous art and drawing books.",
+          "bbox": [
+            {
+              "h": 93.37104,
+              "w": 286.00800000000004,
+              "x": 94.21440000000001,
+              "y": 318.76992,
+              "confidence": 0.93,
+              "end_index": 527,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Have you travelled abroad?",
+          "value": "Q: Have you travelled abroad?",
+          "bbox": [
+            {
+              "h": 12.313093702362828,
+              "w": 117.47284792718658,
+              "x": 93.68678037168922,
+              "y": 414.47889492187505,
+              "confidence": 0.9,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** Never been anywhere.",
+          "value": "A: Never been anywhere.",
+          "bbox": [
+            {
+              "h": 11.943589338795723,
+              "w": 99.78984575969416,
+              "x": 92.95072536263817,
+              "y": 427.5618425019056,
+              "confidence": 0.91,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Have your hobbies come into your work? You seem quite interested in the Old West, for instance.",
+          "value": "Q: Have your hobbies come into your work? You seem quite interested in the Old West, for instance.",
+          "bbox": [
+            {
+              "h": 24.66177796303352,
+              "w": 283.6734440917969,
+              "x": 92.64531725776489,
+              "y": 445.3776260670732,
+              "confidence": 0.94,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** I love to go around those old ghost towns and explore. That's one of the things I liked to draw—the deserts and the ghost town atmosphere. \"Donald Duck in Old California\" was laid right in this area.",
+          "value": "A: I love to go around those old ghost towns and explore. That's one of the things I liked to draw—the deserts and the ghost town atmosphere. \"Donald Duck in Old California\" was laid right in this area.",
+          "bbox": [
+            {
+              "h": 41.033895160061014,
+              "w": 279.1619232832746,
+              "x": 91.81869234410729,
+              "y": 471.29470604039636,
+              "confidence": 0.95,
+              "end_index": 205,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** When you wrote a story, what did you attempt to do—educate, entertain, or a little of both?",
+          "value": "Q: When you wrote a story, what did you attempt to do—educate, entertain, or a little of both?",
+          "bbox": [
+            {
+              "h": 24.12328042111283,
+              "w": 283.0633479331412,
+              "x": 90.99873572968275,
+              "y": 515.5622778772866,
+              "confidence": 0.94,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# Willits, D. Thompson, and M. Thompson / 1962",
+          "value": "Willits, D. Thompson, and M. Thompson / 1962",
+          "bbox": [
+            {
+              "h": 11.11554224228278,
+              "w": 187.4947923018293,
+              "x": 524.6776623475611,
+              "y": 23.327056772818217,
+              "confidence": 0.95,
+              "end_index": 45,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** A little of both, I suppose, but mostly just to entertain. I tried to draw twelve cents' worth for the kids. I was always struggling to get something original, something new.",
+          "value": "A: A little of both, I suppose, but mostly just to entertain. I tried to draw twelve cents' worth for the kids. I was always struggling to get something original, something new.",
+          "bbox": [
+            {
+              "h": 37.46736,
+              "w": 283.4844000000001,
+              "x": 444.15360000000004,
+              "y": 45.793440000000004,
+              "confidence": 0.88,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** What particular problems did you face when you began a page?",
+          "value": "Q: What particular problems did you face when you began a page?",
+          "bbox": [
+            {
+              "h": 16.037984084880634,
+              "w": 262.3492500000001,
+              "x": 443.20725000000004,
+              "y": 86.76286472148541,
+              "confidence": 0.62,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** The first problem was to cram all the dialog into the smallest possible space to leave as much room as I could for the drawing. The composition sort of followed automatically. If you have a situation in which two or three characters are going to be busy doing something, you don't have much trouble staging that because there are only so many places you've room to put those guys.",
+          "value": "A: The first problem was to cram all the dialog into the smallest possible space to leave as much room as I could for the drawing. The composition sort of followed automatically. If you have a situation in which two or three characters are going to be busy doing something, you don't have much trouble staging that because there are only so many places you've room to put those guys.",
+          "bbox": [
+            {
+              "h": 75.72031830238727,
+              "w": 284.43075000000005,
+              "x": 441.63000000000005,
+              "y": 102.27501326259947,
+              "confidence": 0.87,
+              "end_index": 386,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Did they ever tell you to write your stories to a particular age group—say 10, 12?",
+          "value": "Q: Did they ever tell you to write your stories to a particular age group—say 10, 12?",
+          "bbox": [
+            {
+              "h": 23.88048552782015,
+              "w": 283.51850161966473,
+              "x": 443.32771767816314,
+              "y": 184.15119713700457,
+              "confidence": 0.92,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** No, they never did. They never told me what age group I was writing for, but I just assumed I was writing for about age 12 or 13.",
+          "value": "A: No, they never did. They never told me what age group I was writing for, but I just assumed I was writing for about age 12 or 13.",
+          "bbox": [
+            {
+              "h": 25.274289700838388,
+              "w": 280.8388596608232,
+              "x": 443.071254263529,
+              "y": 209.94799518864332,
+              "confidence": 0.92,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** You have spoken about censorship of your work, such as one story about counterspies where you drew a human character.",
+          "value": "Q: You have spoken about censorship of your work, such as one story about counterspies where you drew a human character.",
+          "bbox": [
+            {
+              "h": 24.58655970846039,
+              "w": 271.36318766673025,
+              "x": 443.0454075600229,
+              "y": 240.41850640243905,
+              "confidence": 0.91,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** They accepted it, I guess because they were too close to the deadline to send it back. But they told me not to use any human characters after that. They said it was incongruous for a duck to be running around among humans. I was just spoofing the old spy thrillers that were always on the movies at that time.",
+          "value": "A: They accepted it, I guess because they were too close to the deadline to send it back. But they told me not to use any human characters after that. They said it was incongruous for a duck to be running around among humans. I was just spoofing the old spy thrillers that were always on the movies at that time.",
+          "bbox": [
+            {
+              "h": 61.48446015148626,
+              "w": 284.35581459603657,
+              "x": 442.6036593464177,
+              "y": 266.00218606612043,
+              "confidence": 0.94,
+              "end_index": 315,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Were your stories usually printed exactly as you sent them to the office?",
+          "value": "Q: Were your stories usually printed exactly as you sent them to the office?",
+          "bbox": [
+            {
+              "h": 22.7687498094512,
+              "w": 277.42238629001525,
+              "x": 442.5326810927973,
+              "y": 334.75696506288114,
+              "confidence": 0.9,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Oh, most always, exactly as I sent them. It's just when they had some ad or some particular reason that they took out a panel or two here and there. I got paid for the full story, though. Whatever mutilating they did was out of their own pockets.",
+          "value": "A: Oh, most always, exactly as I sent them. It's just when they had some ad or some particular reason that they took out a panel or two here and there. I got paid for the full story, though. Whatever mutilating they did was out of their own pockets.",
+          "bbox": [
+            {
+              "h": 48.63978779840846,
+              "w": 281.802,
+              "x": 442.15575,
+              "y": 359.6715119363395,
+              "confidence": 0.87,
+              "end_index": 252,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Comic strip panel showing characters in a spy thriller parody with repeated dialogue about shooting various counter-spy operatives",
+          "value": "Comic strip panel showing characters in a spy thriller parody with repeated dialogue about shooting various counter-spy operatives",
+          "bbox": [
+            {
+              "h": 126.52057471417689,
+              "w": 350.7480315120046,
+              "x": 409.7616657536205,
+              "y": 423.49952555259154,
+              "confidence": 0.99,
+              "end_index": 129,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

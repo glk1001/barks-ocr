@@ -1,0 +1,427 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "16 CARL BARKS: CONVERSATIONS",
+              "value": "16 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.196488007633862,
+                  "w": 120.23227780821269,
+                  "x": 105.40170481612043,
+                  "y": 18.27560229045589,
+                  "confidence": 0.9,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "16 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.2,
+              "w": 120.23,
+              "x": 105.4,
+              "y": 18.28,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Barney Bear or Benny Burro until the office sent me a model sheet of \"Benny, the Lonesome Burro\" and asked me to do a finished 8-page story for the MGM *Our Gang* #8. They must have liked the yarn, for they asked me to do another for *Our Gang* #9 and also sent a model sheet of a nameless dog whom I called Happy Hound. I did an 8-pager of him for *Our Gang* #9. Later I saw him in an MGM movie short as Droopy. Then I was asked for another Benny for *Our Gang* #10. Next, I was asked to combine Benny with Barney Bear into an 8-page, 8-panel format as a regular feature, starting with *Our Gang* #11.",
+          "value": "Barney Bear or Benny Burro until the office sent me a model sheet of \"Benny, the Lonesome Burro\" and asked me to do a finished 8-page story for the MGM Our Gang #8. They must have liked the yarn, for they asked me to do another for Our Gang #9 and also sent a model sheet of a nameless dog whom I called Happy Hound. I did an 8-pager of him for Our Gang #9. Later I saw him in an MGM movie short as Droopy. Then I was asked for another Benny for Our Gang #10. Next, I was asked to combine Benny with Barney Bear into an 8-page, 8-panel format as a regular feature, starting with Our Gang #11.",
+          "bbox": [
+            {
+              "h": 115.02562118426069,
+              "w": 285.06327418480856,
+              "x": 104.00274572753908,
+              "y": 42.158964057736284,
+              "confidence": 0.98,
+              "end_index": 601,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: What happened in 1950, when you did only three of the *Donald Duck* monthly stories?**",
+          "value": "Q: What happened in 1950, when you did only three of the Donald Duck monthly stories?",
+          "bbox": [
+            {
+              "h": 24.36655339653199,
+              "w": 283.81411702970183,
+              "x": 103.75655086759244,
+              "y": 165.92500662633387,
+              "confidence": 0.84,
+              "end_index": 90,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** I was doing those big long books, the 25¢ ones. They started doing one of those every two months, and that's why I didn't do any 10-page comics. They wrote me from the office that they had received a lot of complaints and wanted me to go back on the 10-pagers because, after all, *Disney Comics* was their biggest selling book at that time. The most pages that I ever turned out was in 1959. I was doing a lot of artwork for *Grandma Duck's Farm Friends* and the *Duck Album* and was illustrating a lot of the other guys' stories, too. I think my work was sort of dropping down in quality a bit because of the quantity.",
+          "value": "A: I was doing those big long books, the 25¢ ones. They started doing one of those every two months, and that's why I didn't do any 10-page comics. They wrote me from the office that they had received a lot of complaints and wanted me to go back on the 10-pagers because, after all, Disney Comics was their biggest selling book at that time. The most pages that I ever turned out was in 1959. I was doing a lot of artwork for Grandma Duck's Farm Friends and the Duck Album and was illustrating a lot of the other guys' stories, too. I think my work was sort of dropping down in quality a bit because of the quantity.",
+          "bbox": [
+            {
+              "h": 116.03641074695119,
+              "w": 284.34456927639104,
+              "x": 103.46911273342228,
+              "y": 192.26802236089944,
+              "confidence": 0.97,
+              "end_index": 625,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: Why didn't the 25¢ Dell comics succeed?**",
+          "value": "Q: Why didn't the 25¢ Dell comics succeed?",
+          "bbox": [
+            {
+              "h": 11.30546419098141,
+              "w": 173.49750000000006,
+              "x": 102.52125000000001,
+              "y": 316.02716180371357,
+              "confidence": 0.86,
+              "end_index": 45,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** They didn't know themselves why they failed. They just figured kids were smart enough to see that they were getting more for their money in the 25¢ comics, but the kids preferred to pay 12¢ and keep the other 12¢ or 13¢ to put in their own pockets. They didn't count the pages they were getting. So they dropped the 25-centers. Actually, they—Dell and, later, Gold Key—cut down their output a tremendous lot; they used to put out about four or five comics covering Porky Pig, Elmer Fudd, Daffy Duck, and the whole bunch. And there used to be a *Bugs Bunny* and *Looney Tunes* and all those. They've dropped those the same way they dropped the *Duck Album*, *Grandma Duck's Farm Friends*, *Daisy Duck's Diary*, *Gyro Gearloose*. They dropped a whole swarm of them. The only things they have left now that are steady are *Disney's Comics*, *Donald Duck Comics*, and *Uncle Scrooge*.",
+          "value": "A: They didn't know themselves why they failed. They just figured kids were smart enough to see that they were getting more for their money in the 25¢ comics, but the kids preferred to pay 12¢ and keep the other 12¢ or 13¢ to put in their own pockets. They didn't count the pages they were getting. So they dropped the 25-centers. Actually, they—Dell and, later, Gold Key—cut down their output a tremendous lot; they used to put out about four or five comics covering Porky Pig, Elmer Fudd, Daffy Duck, and the whole bunch. And there used to be a Bugs Bunny and Looney Tunes and all those. They've dropped those the same way they dropped the Duck Album, Grandma Duck's Farm Friends, Daisy Duck's Diary, Gyro Gearloose. They dropped a whole swarm of them. The only things they have left now that are steady are Disney's Comics, Donald Duck Comics, and Uncle Scrooge.",
+          "bbox": [
+            {
+              "h": 167.11632000000003,
+              "w": 286.00800000000004,
+              "x": 102.6264,
+              "y": 330.66432000000003,
+              "confidence": 0.86,
+              "end_index": 886,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: Why? Have sales dwindled?**",
+          "value": "Q: Why? Have sales dwindled?",
+          "bbox": [
+            {
+              "h": 11.693817987804888,
+              "w": 121.14094471703508,
+              "x": 102.7353869331174,
+              "y": 506.9505314119665,
+              "confidence": 0.85,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** Well, they had a bunch of lemons that weren't carrying their own weight, and so they just weeded out every one that was a doubtful book.",
+          "value": "A: Well, they had a bunch of lemons that weren't carrying their own weight, and so they just weeded out every one that was a doubtful book.",
+          "bbox": [
+            {
+              "h": 25.77,
+              "w": 283.38,
+              "x": 101.21,
+              "y": 519.53,
+              "confidence": 1.0,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nWILLITS, D. THOMPSON, AND M. THOMPSON / 1962 17\n\\</page_header>",
+          "value": "<page_header>\nWILLITS, D. THOMPSON, AND M. THOMPSON / 1962 17\n</page_header>",
+          "bbox": [
+            {
+              "h": 14.2,
+              "w": 205.04,
+              "x": 517.08,
+              "y": 18.67,
+              "confidence": 1.0,
+              "end_index": 61,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "They tried to switch out all of those characters on which they had to pay royalties and get their own characters. That's why they developed *Magnus, Robot Fighter* and *Space Family Robinson*. That is Gold Key's own stuff. They don't have to pay royalties, which they had to do on all the Disney, Walt Lantz, and Warner Brothers comics.",
+          "value": "They tried to switch out all of those characters on which they had to pay royalties and get their own characters. That's why they developed Magnus, Robot Fighter and Space Family Robinson. That is Gold Key's own stuff. They don't have to pay royalties, which they had to do on all the Disney, Walt Lantz, and Warner Brothers comics.",
+          "bbox": [
+            {
+              "h": 63.58202334818027,
+              "w": 280.574031130907,
+              "x": 438.41514093464184,
+              "y": 44.78811031226182,
+              "confidence": 0.98,
+              "end_index": 335,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Do you feel that comics are on thin ice?**",
+          "value": "Q: Do you feel that comics are on thin ice?",
+          "bbox": [
+            {
+              "h": 9.990875331564979,
+              "w": 166.399875,
+              "x": 438.47550000000007,
+              "y": 115.94673740053051,
+              "confidence": 0.85,
+              "end_index": 46,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Well, they are not making the go of it they used to. *Superman* probably is making it pretty good now, but comics are not as well accepted as they used to be. The comics with these animal movie characters are definitely on the downgrade. There's too much of it on television. You know, the kids can sit for hours and watch these cartoons—Popeye and Yogi Bear and even old Disney characters. They're seeing so much of them that there's no point in their going to the newsstand and paying 12¢ to see some more of it. The day of the animal characters, I believe, is past. The human characters are the coming thing. They're not easier to draw, but they're easier to find new and original ideas for.",
+          "value": "A: Well, they are not making the go of it they used to. Superman probably is making it pretty good now, but comics are not as well accepted as they used to be. The comics with these animal movie characters are definitely on the downgrade. There's too much of it on television. You know, the kids can sit for hours and watch these cartoons—Popeye and Yogi Bear and even old Disney characters. They're seeing so much of them that there's no point in their going to the newsstand and paying 12¢ to see some more of it. The day of the animal characters, I believe, is past. The human characters are the coming thing. They're not easier to draw, but they're easier to find new and original ideas for.",
+          "bbox": [
+            {
+              "h": 127.76325181497714,
+              "w": 284.7306919778964,
+              "x": 438.04867875857474,
+              "y": 129.20518292206557,
+              "confidence": 0.95,
+              "end_index": 700,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Have you any philosophy of writing and drawing?**",
+          "value": "Q: Have you any philosophy of writing and drawing?",
+          "bbox": [
+            {
+              "h": 12.018382631478662,
+              "w": 205.67133627096035,
+              "x": 438.2707299923781,
+              "y": 264.47343878620427,
+              "confidence": 0.83,
+              "end_index": 53,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Philosophy of writing and drawing? Philosophy is at least four syllables long. I could never guess what the word means.",
+          "value": "A: Philosophy of writing and drawing? Philosophy is at least four syllables long. I could never guess what the word means.",
+          "bbox": [
+            {
+              "h": 23.662599469496058,
+              "w": 282.8535,
+              "x": 437.161125,
+              "y": 277.1153315649867,
+              "confidence": 0.88,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Have you any favorite comic artist?**",
+          "value": "Q: Have you any favorite comic artist?",
+          "bbox": [
+            {
+              "h": 9.990875331565007,
+              "w": 147.998625,
+              "x": 438.47550000000007,
+              "y": 310.24297082228117,
+              "confidence": 0.85,
+              "end_index": 41,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Hal Foster, Alex Raymond. The new generation artists like Wallace Wood and Russ Manning. There haven't been many funny artists around since the old days of *Life* and *Judge*.",
+          "value": "A: Hal Foster, Alex Raymond. The new generation artists like Wallace Wood and Russ Manning. There haven't been many funny artists around since the old days of Life and Judge.",
+          "bbox": [
+            {
+              "h": 36.55,
+              "w": 280.49,
+              "x": 437.42,
+              "y": 322.07,
+              "confidence": 1.0,
+              "end_index": 181,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Whose work influenced your art and story?**",
+          "value": "Q: Whose work influenced your art and story?",
+          "bbox": [
+            {
+              "h": 11.30546419098141,
+              "w": 179.28074999999995,
+              "x": 437.68687500000004,
+              "y": 367.03320954907167,
+              "confidence": 0.83,
+              "end_index": 47,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Many techniques from Billy De Beck to Hal Foster. I'd idolize one style awhile, then worship another. For story formats, I got most training by analyzing *Thimble Theatre* and the Popeye scripts. Also 6 1/2 years in Disney's story department taught me to condense, condense, condense, polish, polish, polish.",
+          "value": "A: Many techniques from Billy De Beck to Hal Foster. I'd idolize one style awhile, then worship another. For story formats, I got most training by analyzing Thimble Theatre and the Popeye scripts. Also 6 1/2 years in Disney's story department taught me to condense, condense, condense, polish, polish, polish.",
+          "bbox": [
+            {
+              "h": 63.04032000000001,
+              "w": 283.4844,
+              "x": 437.42400000000004,
+              "y": 380.62080000000003,
+              "confidence": 0.89,
+              "end_index": 314,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Have you any advice for beginning artists?**",
+          "value": "Q: Have you any advice for beginning artists?",
+          "bbox": [
+            {
+              "h": 11.30546419098141,
+              "w": 176.914875,
+              "x": 437.42400000000004,
+              "y": 451.1668965517242,
+              "confidence": 0.83,
+              "end_index": 48,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** My only advice to beginning artists is to have patience. Be critical of your output. Have the patience to draw and redraw and redraw.",
+          "value": "A: My only advice to beginning artists is to have patience. Be critical of your output. Have the patience to draw and redraw and redraw.",
+          "bbox": [
+            {
+              "h": 24.19,
+              "w": 274.44,
+              "x": 436.37,
+              "y": 464.84,
+              "confidence": 1.0,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: What are your retirement plans?**",
+          "value": "Q: What are your retirement plans?",
+          "bbox": [
+            {
+              "h": 10.77962864721485,
+              "w": 137.48362500000002,
+              "x": 437.42400000000004,
+              "y": 497.44042440318304,
+              "confidence": 0.84,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** To do as little of anything as I can. I like to paint pictures of different subjects from time to time, but quickly tire of a painting if I make a few mistakes. Also, I like to manage an imaginary portfolio of stocks on the",
+          "value": "A: To do as little of anything as I can. I like to paint pictures of different subjects from time to time, but quickly tire of a painting if I make a few mistakes. Also, I like to manage an imaginary portfolio of stocks on the",
+          "bbox": [
+            {
+              "h": 38.12,
+              "w": 276.02,
+              "x": 436.64,
+              "y": 510.06,
+              "confidence": 1.0,
+              "end_index": 229,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "16, 17"
+    }
+  ]
+}

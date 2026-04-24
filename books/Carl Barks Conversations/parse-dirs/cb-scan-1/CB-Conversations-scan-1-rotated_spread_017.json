@@ -1,0 +1,249 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# Chronology",
+          "value": "Chronology",
+          "bbox": [
+            {
+              "h": 22.498757355182928,
+              "w": 98.82582257526687,
+              "x": 546.3798770007622,
+              "y": 203.01851348608997,
+              "confidence": 0.92,
+              "end_index": 11,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**1858** Father William Barks is born (4 Mar.; d. 1940).",
+          "value": "1858 Father William Barks is born (4 Mar.; d. 1940).",
+          "bbox": [
+            {
+              "h": 14.197559681697612,
+              "w": 230.54137500000002,
+              "x": 451.35637500000007,
+              "y": 268.17612732095495,
+              "confidence": 0.52,
+              "end_index": 55,
+              "label": "reference",
+              "start_index": 0
+            },
+            {
+              "h": 14.2,
+              "w": 183.22,
+              "x": 498.67,
+              "y": 268.18,
+              "confidence": 1.0,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 9
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1860** Mother Arminta Johnson is born (15 Mar.; d. 1916).",
+          "value": "1860 Mother Arminta Johnson is born (15 Mar.; d. 1916).",
+          "bbox": [
+            {
+              "h": 14.2,
+              "w": 204.25,
+              "x": 499.46,
+              "y": 287.63,
+              "confidence": 1.0,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 9
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1899** Brother Clyde Barks born (15 Aug.; d. 1980s).",
+          "value": "1899 Brother Clyde Barks born (15 Aug.; d. 1980s).",
+          "bbox": [
+            {
+              "h": 12.620053050397871,
+              "w": 224.758125,
+              "x": 453.19650000000007,
+              "y": 308.13962864721486,
+              "confidence": 0.52,
+              "end_index": 53,
+              "label": "reference",
+              "start_index": 0
+            },
+            {
+              "h": 12.36,
+              "w": 177.44,
+              "x": 500.51,
+              "y": 308.4,
+              "confidence": 1.0,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 9
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1901** Carl Barks is born at home on the Barks family ranch near Merrill, Oregon (27 Mar.).",
+          "value": "1901 Carl Barks is born at home on the Barks family ranch near Merrill, Oregon (27 Mar.).",
+          "bbox": [
+            {
+              "h": 24.97718832891246,
+              "w": 269.184,
+              "x": 452.67075000000006,
+              "y": 327.332625994695,
+              "confidence": 0.54,
+              "end_index": 92,
+              "label": "reference",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1908** Barks family moves to Midland, Oregon, to venture into the feed lot business; Carl attends one-room schoolhouse in the Lone Pine School District.",
+          "value": "1908 Barks family moves to Midland, Oregon, to venture into the feed lot business; Carl attends one-room schoolhouse in the Lone Pine School District.",
+          "bbox": [
+            {
+              "h": 38.12307692307695,
+              "w": 279.436125,
+              "x": 452.40787500000005,
+              "y": 357.5681697612732,
+              "confidence": 0.57,
+              "end_index": 153,
+              "label": "reference",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1911–12** Lives in Santa Rosa, California, with parents and brother.",
+          "value": "1911–12 Lives in Santa Rosa, California, with parents and brother.",
+          "bbox": [
+            {
+              "h": 14.460477453580893,
+              "w": 267.86962500000004,
+              "x": 450.30487500000004,
+              "y": 401.7383554376658,
+              "confidence": 0.53,
+              "end_index": 69,
+              "label": "reference",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1912–14** Family moves back to Midland.",
+          "value": "1912–14 Family moves back to Midland.",
+          "bbox": [
+            {
+              "h": 13.934641909814388,
+              "w": 169.55437500000005,
+              "x": 450.30487500000004,
+              "y": 420.40551724137936,
+              "confidence": 0.52,
+              "end_index": 40,
+              "label": "reference",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1914** Family moves back to the ranch near Merrill.",
+          "value": "1914 Family moves back to the ranch near Merrill.",
+          "bbox": [
+            {
+              "h": 12.094217506631253,
+              "w": 218.974875,
+              "x": 451.8821250000001,
+              "y": 441.4389389920425,
+              "confidence": 0.53,
+              "end_index": 52,
+              "label": "reference",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1916** Leaves school after completing the eighth grade at age 15; mother dies.",
+          "value": "1916 Leaves school after completing the eighth grade at age 15; mother dies.",
+          "bbox": [
+            {
+              "h": 24.4513527851459,
+              "w": 274.704375,
+              "x": 451.6192500000001,
+              "y": 460.63193633952255,
+              "confidence": 0.54,
+              "end_index": 79,
+              "label": "reference",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1917** Subscribes to Landon Correspondence School of Cartooning, which he abandons after a few lessons.",
+          "value": "1917 Subscribes to Landon Correspondence School of Cartooning, which he abandons after a few lessons.",
+          "bbox": [
+            {
+              "h": 27.3434482758621,
+              "w": 281.013375,
+              "x": 451.6192500000001,
+              "y": 490.3416445623343,
+              "confidence": 0.55,
+              "end_index": 104,
+              "label": "reference",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1918–20** Moves to San Francisco in Dec. 1918; works in a print shop as an errand boy; tries unsuccessfully to sell cartoons to San Francisco newspapers.",
+          "value": "1918–20 Moves to San Francisco in Dec. 1918; works in a print shop as an errand boy; tries unsuccessfully to sell cartoons to San Francisco newspapers.",
+          "bbox": [
+            {
+              "h": 40.75225464190976,
+              "w": 278.384625,
+              "x": 450.30487500000004,
+              "y": 522.1546949602123,
+              "confidence": 0.57,
+              "end_index": 154,
+              "label": "reference",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

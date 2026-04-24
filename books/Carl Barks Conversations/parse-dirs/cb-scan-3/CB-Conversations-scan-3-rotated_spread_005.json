@@ -1,0 +1,409 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "88 CARL BARKS: CONVERSATIONS",
+              "value": "88 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.964709815644051,
+                  "w": 120.40923505978469,
+                  "x": 117.58170086818791,
+                  "y": 41.33566774961891,
+                  "confidence": 0.83,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "88 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.96,
+              "w": 120.41,
+              "x": 117.58,
+              "y": 41.34,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "them a favor. They don't turn around and do you a favor in return. They remain villains right through to the end.",
+          "value": "them a favor. They don't turn around and do you a favor in return. They remain villains right through to the end.",
+          "bbox": [
+            {
+              "h": 24.767781811523438,
+              "w": 279.95244546136627,
+              "x": 117.08137180235329,
+              "y": 64.9591574510528,
+              "confidence": 0.97,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** One of my favorite stories is the one about the micro-ducks from outer space \\[*Uncle Scrooge* #65], because it also showed Uncle Scrooge's integrity. There's that marvelous scene where he weighs out each grain of corn and takes that much money.",
+          "value": "Q: One of my favorite stories is the one about the micro-ducks from outer space [Uncle Scrooge #65], because it also showed Uncle Scrooge's integrity. There's that marvelous scene where he weighs out each grain of corn and takes that much money.",
+          "bbox": [
+            {
+              "h": 49.9157267613853,
+              "w": 283.5720108076887,
+              "x": 116.11798101062311,
+              "y": 98.81652395793638,
+              "confidence": 0.96,
+              "end_index": 251,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I liked that story myself. I felt that I had touched on something that was a little different than just about any other space-type story that's come around. Creatures from outer space are villainous characters usually, and they have not rung a bell with me because I have felt that out in outer space there are good people as well as bad, and here on earth there are good people as well as bad, so in that story I did a little preaching, I guess. Those micro-ducks were implausible little fellows, but for all we know, in outer space there are little planets no bigger than walnuts completely populated with people like us. Anyway, they are good little guys, they come down here just trying to strike a bargain to buy some corn and they happen to meet up with Uncle Scrooge, who in this story was scrupulously honest. Well, he usually is honest; I play on that in most of his stories, that he is honest. He's just driven to the wall a few times by people who are dishonest. So I used him as being representative of the better type of people we have on earth, the people who believe in doing the square deal by their fellow man or their fellow creatures, wherever they come from. And I felt the honesty of old Uncle Scrooge spoke well for the earth people. Of course, that micro-duck story is something that I just grasped out of thin air—it's a fable, you might say. It's not based on anything on earth as we know it now.",
+          "value": "CB: I liked that story myself. I felt that I had touched on something that was a little different than just about any other space-type story that's come around. Creatures from outer space are villainous characters usually, and they have not rung a bell with me because I have felt that out in outer space there are good people as well as bad, and here on earth there are good people as well as bad, so in that story I did a little preaching, I guess. Those micro-ducks were implausible little fellows, but for all we know, in outer space there are little planets no bigger than walnuts completely populated with people like us. Anyway, they are good little guys, they come down here just trying to strike a bargain to buy some corn and they happen to meet up with Uncle Scrooge, who in this story was scrupulously honest. Well, he usually is honest; I play on that in most of his stories, that he is honest. He's just driven to the wall a few times by people who are dishonest. So I used him as being representative of the better type of people we have on earth, the people who believe in doing the square deal by their fellow man or their fellow creatures, wherever they come from. And I felt the honesty of old Uncle Scrooge spoke well for the earth people. Of course, that micro-duck story is something that I just grasped out of thin air—it's a fable, you might say. It's not based on anything on earth as we know it now.",
+          "bbox": [
+            {
+              "h": 257.86605371570124,
+              "w": 286.2908235458747,
+              "x": 113.40640635122905,
+              "y": 150.42231378144058,
+              "confidence": 0.94,
+              "end_index": 1428,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** There's a certain fable-like quality to many of your stories. Did you ever consciously try to work in the format of a fable?",
+          "value": "Q: There's a certain fable-like quality to many of your stories. Did you ever consciously try to work in the format of a fable?",
+          "bbox": [
+            {
+              "h": 24.757370936547243,
+              "w": 270.6201825993236,
+              "x": 111.24660371212845,
+              "y": 418.8852465605946,
+              "confidence": 0.95,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I wouldn't know whether I was or not. I'm not familiar enough with the construction of fables to know how they were put together. The few fables that I have read, that is, condensations of the Aesop's fables, have been in children's books, where they were only two or three paragraphs long. I'm certainly no expert on fables.",
+          "value": "CB: I wouldn't know whether I was or not. I'm not familiar enough with the construction of fables to know how they were put together. The few fables that I have read, that is, condensations of the Aesop's fables, have been in children's books, where they were only two or three paragraphs long. I'm certainly no expert on fables.",
+          "bbox": [
+            {
+              "h": 64.00267327076983,
+              "w": 280.91874150271536,
+              "x": 110.58751277272296,
+              "y": 444.8967445598324,
+              "confidence": 0.96,
+              "end_index": 332,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** When you were a child, were there any storytellers that you particularly liked?",
+          "value": "Q: When you were a child, were there any storytellers that you particularly liked?",
+          "bbox": [
+            {
+              "h": 23.15247406154721,
+              "w": 276.5881413574219,
+              "x": 109.67842009455984,
+              "y": 518.5768779106328,
+              "confidence": 0.96,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, I remember Old Mother West Wind, and the little foxes and the rabbits that lived out in the meadow. These were a little section in the",
+          "value": "CB: Oh, I remember Old Mother West Wind, and the little foxes and the rabbits that lived out in the meadow. These were a little section in the",
+          "bbox": [
+            {
+              "h": 25.891549118711904,
+              "w": 281.26425332269446,
+              "x": 109.46995591177593,
+              "y": 544.6032675828887,
+              "confidence": 0.96,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nEDWARD SUMMER / 1975 89\n\\</page_header>",
+          "value": "<page_header>\nEDWARD SUMMER / 1975 89\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 109.36,
+              "x": 632.74,
+              "y": 38.91,
+              "confidence": 1.0,
+              "end_index": 37,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "children's pages of a newspaper. Now, who wrote them? It wasn't Harrison Cady or any name like that—they weren't illustrated very much except just one little black and white drawing. But that was about the limit of the children's type of reading that I ever did. Then, as I grew older, I graduated to the western pulps, and so on. Now, I have never read *Treasure Island*, or any of the children's classics. I've only read one story by Mark Twain that I know of.",
+          "value": "children's pages of a newspaper. Now, who wrote them? It wasn't Harrison Cady or any name like that—they weren't illustrated very much except just one little black and white drawing. But that was about the limit of the children's type of reading that I ever did. Then, as I grew older, I graduated to the western pulps, and so on. Now, I have never read Treasure Island, or any of the children's classics. I've only read one story by Mark Twain that I know of.",
+          "bbox": [
+            {
+              "h": 87.52967999999998,
+              "w": 281.8020000000001,
+              "x": 459.2952000000001,
+              "y": 64.30752000000001,
+              "confidence": 0.9,
+              "end_index": 461,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Did you used to like to go to the movies?",
+          "value": "Q: Did you used to like to go to the movies?",
+          "bbox": [
+            {
+              "h": 11.041271523178807,
+              "w": 172.97175,
+              "x": 459.76837500000005,
+              "y": 159.04688741721856,
+              "confidence": 0.92,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yes, but I had very little chance to go to the movies until I was way up into my twenties. I lived on a ranch way out in the sagebrush in Oregon. There weren't many places to go.",
+          "value": "CB: Yes, but I had very little chance to go to the movies until I was way up into my twenties. I lived on a ranch way out in the sagebrush in Oregon. There weren't many places to go.",
+          "bbox": [
+            {
+              "h": 37.46681109946646,
+              "w": 278.9663261004193,
+              "x": 460.1853785013339,
+              "y": 172.2086718535633,
+              "confidence": 0.97,
+              "end_index": 185,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** What about comic strips?",
+          "value": "Q: What about comic strips?",
+          "bbox": [
+            {
+              "h": 10.614961809260672,
+              "w": 112.0639430973705,
+              "x": 460.40161923589943,
+              "y": 216.64308402010295,
+              "confidence": 0.92,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Winsor McCay was certainly one of the influences in my life, because *Little Nemo* was one of the first comic strips I can remember. It used to be published in the *San Francisco Examiner*, which we got on our farm. Those characters had a great influence on me. I wasn't so much an admirer of the drawings as I was of the story construction. And my favorite of the characters was old Doctor Pill, because he seemed to be a good guy. He was protective and trying to do the best he could, while the clown-like guy with the cigar was just fouling things up and making trouble and leading the kids astray. So, you can see I was a kind of a preacher at heart even in those days.",
+          "value": "CB: Winsor McCay was certainly one of the influences in my life, because Little Nemo was one of the first comic strips I can remember. It used to be published in the San Francisco Examiner, which we got on our farm. Those characters had a great influence on me. I wasn't so much an admirer of the drawings as I was of the story construction. And my favorite of the characters was old Doctor Pill, because he seemed to be a good guy. He was protective and trying to do the best he could, while the clown-like guy with the cigar was just fouling things up and making trouble and leading the kids astray. So, you can see I was a kind of a preacher at heart even in those days.",
+          "bbox": [
+            {
+              "h": 127.86394656059456,
+              "w": 287.34236111375776,
+              "x": 460.29733079268294,
+              "y": 228.5619358993903,
+              "confidence": 0.97,
+              "end_index": 680,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** How about the adventure strips, like *Tarzan* and *Prince Valiant*?\n**CB:** Oh, I liked them. I liked them for their illustrations more than for their scripts. I could follow *Prince Valiant*—it aroused quite a bit of sympathy in me—but as for *Tarzan*, I just liked it for the drawings and that's about all.",
+          "value": "Q: How about the adventure strips, like Tarzan and Prince Valiant?\nCB: Oh, I liked them. I liked them for their illustrations more than for their scripts. I could follow Prince Valiant—it aroused quite a bit of sympathy in me—but as for Tarzan, I just liked it for the drawings and that's about all.",
+          "bbox": [
+            {
+              "h": 49.8781341511052,
+              "w": 284.36322799161593,
+              "x": 461.72125373951985,
+              "y": 362.2084963748095,
+              "confidence": 0.95,
+              "end_index": 314,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Do you still write occasional stories?",
+          "value": "Q: Do you still write occasional stories?",
+          "bbox": [
+            {
+              "h": 9.989721854304662,
+              "w": 152.20462499999996,
+              "x": 462.9228750000001,
+              "y": 419.04254304635765,
+              "confidence": 0.93,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** No. I quit a couple of years ago. I finally begged off on it. It became such a grind to try to write stories.",
+          "value": "CB: No. I quit a couple of years ago. I finally begged off on it. It became such a grind to try to write stories.",
+          "bbox": [
+            {
+              "h": 25.06764958079271,
+              "w": 279.7703789777059,
+              "x": 462.8843053067836,
+              "y": 431.14166075647876,
+              "confidence": 0.96,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Do you mean, to do it on schedule, or even at all?",
+          "value": "Q: Do you mean, to do it on schedule, or even at all?",
+          "bbox": [
+            {
+              "h": 11.730489943788102,
+              "w": 206.8519195169589,
+              "x": 463.22251643483236,
+              "y": 462.3208884003431,
+              "confidence": 0.92,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, just to do it at all. After 25 years I had used up practically every locale in the world and practically every emotional reason the ducks might have for staging a fight or having an adventure. I had used so many plots and situations that I felt that I was beginning to repeat myself, and I'm sure I was. So I felt it was time for me to get out while I was ahead.",
+          "value": "CB: Oh, just to do it at all. After 25 years I had used up practically every locale in the world and practically every emotional reason the ducks might have for staging a fight or having an adventure. I had used so many plots and situations that I felt that I was beginning to repeat myself, and I'm sure I was. So I felt it was time for me to get out while I was ahead.",
+          "bbox": [
+            {
+              "h": 63.04141577743907,
+              "w": 285.05217287538113,
+              "x": 463.0632787014101,
+              "y": 474.66165328696655,
+              "confidence": 0.96,
+              "end_index": 373,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** That's a shame. I'll bet you've got a couple of good stories left.",
+          "value": "Q: That's a shame. I'll bet you've got a couple of good stories left.",
+          "bbox": [
+            {
+              "h": 11.628411070884214,
+              "w": 257.55664002953506,
+              "x": 463.89478117854424,
+              "y": 544.0272434879955,
+              "confidence": 0.91,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Not long ago I came up with a pretty good idea, and I sent it to",
+          "value": "CB: Not long ago I came up with a pretty good idea, and I sent it to",
+          "bbox": [
+            {
+              "h": 11.304158940397429,
+              "w": 262.34925000000004,
+              "x": 463.71150000000006,
+              "y": 556.7955496688742,
+              "confidence": 0.93,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "88, 89"
+    }
+  ]
+}

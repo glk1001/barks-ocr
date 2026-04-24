@@ -1,0 +1,348 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "100 Carl Barks: Conversations",
+              "value": "100 Carl Barks: Conversations",
+              "bbox": [
+                {
+                  "h": 9.726834437086097,
+                  "w": 18.401250000000005,
+                  "x": 120.13387500000002,
+                  "y": 35.48980132450332,
+                  "confidence": 0.87,
+                  "end_index": 2,
+                  "label": "header",
+                  "start_index": 0
+                },
+                {
+                  "h": 11.155558348120714,
+                  "w": 103.58534776343372,
+                  "x": 141.9522996379573,
+                  "y": 37.11875591505098,
+                  "confidence": 0.86,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 4
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "100 Carl Barks: Conversations",
+          "bbox": [
+            {
+              "h": 12.78,
+              "w": 125.4,
+              "x": 120.13,
+              "y": 35.49,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nAULt, AnDrAE, AND GonG / 1975 101\n\\</page_header>",
+          "value": "<page_header>\nAULt, AnDrAE, AND GonG / 1975 101\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.956145107064598,
+              "w": 121.51171467701977,
+              "x": 601.1693784775154,
+              "y": 42.92414389588892,
+              "confidence": 0.94,
+              "end_index": 63,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "sents something that nearly everybody wishes he could be at some time in his life—just a little bit too rich.",
+          "value": "sents something that nearly everybody wishes he could be at some time in his life—just a little bit too rich.",
+          "bbox": [
+            {
+              "h": 24.47008574456937,
+              "w": 277.566496689215,
+              "x": 119.00022656250002,
+              "y": 61.05687874547448,
+              "confidence": 0.95,
+              "end_index": 108,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Do you have a sense from all your fan mail why people particularly like your comics?",
+          "value": "Q: Do you have a sense from all your fan mail why people particularly like your comics?",
+          "bbox": [
+            {
+              "h": 23.8176,
+              "w": 283.48440000000005,
+              "x": 117.76800000000001,
+              "y": 92.88864000000001,
+              "confidence": 0.87,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** They seem to be interested because what I was writing about was a very real world. The characters were involved in things that they themselves get involved in. The people that wrote the letters had had situations just like those old Donald has had. It's so close to real life: my villains always had a slight good streak in them—even the Beagle Boys once in a while show some sign of humanity—and my good guys, they all had bad streaks. Donald could be a selfish and *arrogant* little coot. It was the fact that my characters were like human characters: they weren't just one-dimensional. They had a whole lot to them.",
+          "value": "BARKS: They seem to be interested because what I was writing about was a very real world. The characters were involved in things that they themselves get involved in. The people that wrote the letters had had situations just like those old Donald has had. It's so close to real life: my villains always had a slight good streak in them—even the Beagle Boys once in a while show some sign of humanity—and my good guys, they all had bad streaks. Donald could be a selfish and arrogant little coot. It was the fact that my characters were like human characters: they weren't just one-dimensional. They had a whole lot to them.",
+          "bbox": [
+            {
+              "h": 116.11080000000001,
+              "w": 281.802,
+              "x": 116.92680000000001,
+              "y": 119.08800000000002,
+              "confidence": 0.93,
+              "end_index": 628,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Did you have any problems humanizing ducks?",
+          "value": "Q: Did you have any problems humanizing ducks?",
+          "bbox": [
+            {
+              "h": 14.458807947019892,
+              "w": 194.26462500000002,
+              "x": 114.87637500000001,
+              "y": 241.067761589404,
+              "confidence": 0.7,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I never thought of them as ducks that lived in a world of animal people and dog-faces. I just thought of them as being humans. They just happened to be humans who looked like ducks.",
+          "value": "BARKS: I never thought of them as ducks that lived in a world of animal people and dog-faces. I just thought of them as being humans. They just happened to be humans who looked like ducks.",
+          "bbox": [
+            {
+              "h": 12.618596026490081,
+              "w": 183.74962500000004,
+              "x": 113.56200000000001,
+              "y": 280.763761589404,
+              "confidence": 0.86,
+              "end_index": 191,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** There's one atypical story—\"*Dangerous Disguise*\"—in which Donald and the kids confront human beings. Did this pose any particular problem?",
+          "value": "Q: There's one atypical story—\"Dangerous Disguise\"—in which Donald and the kids confront human beings. Did this pose any particular problem?",
+          "bbox": [
+            {
+              "h": 120.13954966887417,
+              "w": 282.32775000000004,
+              "x": 110.40750000000001,
+              "y": 299.16588079470205,
+              "confidence": 0.65,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** That was a situation in which I somehow couldn't visualize all those master spies from all the different nations as being dog-faces or pig-faces. I visualized them looking like they did in the movies: these suave-looking characters and the beautiful girl spies. To me they just had to look like human beings; I couldn't see them any other way. So I went ahead and drew them like that. I got called on the carpet for it. They said that Donald and the ducks just didn't look right working alongside human beings. And when I look back at the old Mickey strips and the others, I realize that always the other characters that were working with Mickey or the ducks were dog-faces or pig-faces, never human.",
+          "value": "BARKS: That was a situation in which I somehow couldn't visualize all those master spies from all the different nations as being dog-faces or pig-faces. I visualized them looking like they did in the movies: these suave-looking characters and the beautiful girl spies. To me they just had to look like human beings; I couldn't see them any other way. So I went ahead and drew them like that. I got called on the carpet for it. They said that Donald and the ducks just didn't look right working alongside human beings. And when I look back at the old Mickey strips and the others, I realize that always the other characters that were working with Mickey or the ducks were dog-faces or pig-faces, never human.",
+          "bbox": [
+            {
+              "h": 53.891920529801325,
+              "w": 283.37925000000007,
+              "x": 109.35600000000001,
+              "y": 402.743523178808,
+              "confidence": 0.88,
+              "end_index": 710,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.04,
+              "w": 29.97,
+              "x": 107.52,
+              "y": 473.72,
+              "confidence": 1.0,
+              "end_index": 241,
+              "label": "text",
+              "start_index": 236
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Would you have preferred creating comics featuring real human characters?",
+          "value": "Q: Would you have preferred creating comics featuring real human characters?",
+          "bbox": [
+            {
+              "h": 22.03127999999998,
+              "w": 282.6432,
+              "x": 108.51480000000001,
+              "y": 462.06144000000006,
+              "confidence": 0.89,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I would have liked to have gotten out of the funny animal field—and I like to draw humans. I like to draw faces and figures. I would have liked to have done that in the beginning. My first love would have been to have drawn stuff for human characters, almost like *Prince Valiant*, you might say. Of course, I could never draw 'em that well, but that would have been the kind of thing. I would have gone into it and probably gone broke. I couldn't have sold my stuff—as I just was a comedian, I guess, and a writer of comedy. I don't know whether I would have found a way of drawing human characters in a situation like I did with the ducks, being comedians solving a serious problem. Now I might have been able to invent a set of characters that would fit like that, human characters; but I didn't have the time to work it out, and so I just stayed in the old duck rut and look what happened.",
+          "value": "BARKS: I would have liked to have gotten out of the funny animal field—and I like to draw humans. I like to draw faces and figures. I would have liked to have done that in the beginning. My first love would have been to have drawn stuff for human characters, almost like Prince Valiant, you might say. Of course, I could never draw 'em that well, but that would have been the kind of thing. I would have gone into it and probably gone broke. I couldn't have sold my stuff—as I just was a comedian, I guess, and a writer of comedy. I don't know whether I would have found a way of drawing human characters in a situation like I did with the ducks, being comedians solving a serious problem. Now I might have been able to invent a set of characters that would fit like that, human characters; but I didn't have the time to work it out, and so I just stayed in the old duck rut and look what happened.",
+          "bbox": [
+            {
+              "h": 81.989722351372,
+              "w": 283.87828923518487,
+              "x": 107.74898371403393,
+              "y": 487.8144752858233,
+              "confidence": 0.97,
+              "end_index": 903,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 92.27,
+              "w": 285.22,
+              "x": 463.19,
+              "y": 66.51,
+              "confidence": 1.0,
+              "end_index": 903,
+              "label": "text",
+              "start_index": 441
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Do you feel you could have made some more serious statement in a more realistic medium?",
+          "value": "Q: Do you feel you could have made some more serious statement in a more realistic medium?",
+          "bbox": [
+            {
+              "h": 25.603919999999988,
+              "w": 276.75480000000005,
+              "x": 465.18360000000007,
+              "y": 165.53232000000003,
+              "confidence": 0.87,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Undoubtedly I could have made more serious statements and gotten into philosophy and psychology, but that's not what I really wanted to do. I would have gotten into it accidentally—perhaps I did anyway. But I would have loved to have worked on human characters because I felt that I could take a town like Duckburg and people it with a thousand different faces. So many artists' girls all look alike, their heroes all have the same profile, the same chins. It's almost as if they stamped their stuff out with a rubber stamp. And they have a certain set of frozen smiles and leers and sidelong glances. You look at their strips one week and look at them again the next week, and it's just like it was all done with no imagination and no new interest at all. I would have drawn a thousand faces, as I say, had every expression related directly to what was being said. I have read in my fan mail that my ducks always seem to be thinking exactly what they were saying; their expressions always were fitted right to that balloon of dialogue. I tried to make my drawing fit the dialogue. The fact that I did my dialogue first always helped that along. I started with a written script, and of course the dialogue was the key, the thing that hung it all together.",
+          "value": "BARKS: Undoubtedly I could have made more serious statements and gotten into philosophy and psychology, but that's not what I really wanted to do. I would have gotten into it accidentally—perhaps I did anyway. But I would have loved to have worked on human characters because I felt that I could take a town like Duckburg and people it with a thousand different faces. So many artists' girls all look alike, their heroes all have the same profile, the same chins. It's almost as if they stamped their stuff out with a rubber stamp. And they have a certain set of frozen smiles and leers and sidelong glances. You look at their strips one week and look at them again the next week, and it's just like it was all done with no imagination and no new interest at all. I would have drawn a thousand faces, as I say, had every expression related directly to what was being said. I have read in my fan mail that my ducks always seem to be thinking exactly what they were saying; their expressions always were fitted right to that balloon of dialogue. I tried to make my drawing fit the dialogue. The fact that I did my dialogue first always helped that along. I started with a written script, and of course the dialogue was the key, the thing that hung it all together.",
+          "bbox": [
+            {
+              "h": 235.19880000000003,
+              "w": 287.6904,
+              "x": 466.0248000000001,
+              "y": 191.13624000000002,
+              "confidence": 0.95,
+              "end_index": 1265,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Which do you feel to be more important, the image or the text?",
+          "value": "Q: Which do you feel to be more important, the image or the text?",
+          "bbox": [
+            {
+              "h": 13.144370860927154,
+              "w": 260.50912500000004,
+              "x": 469.7576250000001,
+              "y": 433.7642384105961,
+              "confidence": 0.61,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** When you first open the comic book, the image is the thing. If you're attracted to the image, then you're interested enough to read the script. Therefore the script would be secondary. The visual gag is more important than the dialogue gag, for which you have to depend on people's ability to read and to understand what little idioms you're using; and you've also got to figure on it being translated into foreign languages. So if you're leaning heavily on dialogue gags, it's a really flimsy prop.",
+          "value": "BARKS: When you first open the comic book, the image is the thing. If you're attracted to the image, then you're interested enough to read the script. Therefore the script would be secondary. The visual gag is more important than the dialogue gag, for which you have to depend on people's ability to read and to understand what little idioms you're using; and you've also got to figure on it being translated into foreign languages. So if you're leaning heavily on dialogue gags, it's a really flimsy prop.",
+          "bbox": [
+            {
+              "h": 40.74754966887417,
+              "w": 285.48225,
+              "x": 469.7576250000001,
+              "y": 472.4086887417219,
+              "confidence": 0.88,
+              "end_index": 509,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Your splash panels are one of the most spectacular features of your comics.",
+          "value": "Q: Your splash panels are one of the most spectacular features of your comics.",
+          "bbox": [
+            {
+              "h": 25.603920000000016,
+              "w": 273.39000000000004,
+              "x": 471.07200000000006,
+              "y": 546.6139200000001,
+              "confidence": 0.9,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

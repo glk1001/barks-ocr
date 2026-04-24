@@ -1,0 +1,509 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "116 CARL BARKS: CONVERSATIONS 117",
+              "value": "116 CARL BARKS: CONVERSATIONS 117",
+              "bbox": [
+                {
+                  "h": 11.829933774834437,
+                  "w": 127.23150000000001,
+                  "x": 116.45362500000002,
+                  "y": 39.696000000000005,
+                  "confidence": 0.82,
+                  "end_index": 28,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                },
+                {
+                  "h": 9.72683443708609,
+                  "w": 100.94400000000007,
+                  "x": 644.04375,
+                  "y": 42.32487417218543,
+                  "confidence": 0.82,
+                  "end_index": 32,
+                  "label": "header",
+                  "start_index": 30
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "116 CARL BARKS: CONVERSATIONS 117",
+          "bbox": [
+            {
+              "h": 12.36,
+              "w": 628.53,
+              "x": 116.45,
+              "y": 39.7,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "md": "to life and not exclusively, like say Superman, residents of the imagination. Simply because they were closer to actual life, one could relate to them as a reader. What happens to Donald could happen to anyone in real life and the problems one has are similar. And then, of course, the role of the nephews, who are often superior to Donald—every child dreams of outsmarting his parents, knowing more than they do. I remember as a child thinking similarly to the way the nephews do. As a child one tends perhaps to identify more with the nephews, as a grownup more with Donald, and therein lies, I would guess, the popularity which the old stories still have today.",
+          "value": "to life and not exclusively, like say Superman, residents of the imagination. Simply because they were closer to actual life, one could relate to them as a reader. What happens to Donald could happen to anyone in real life and the problems one has are similar. And then, of course, the role of the nephews, who are often superior to Donald—every child dreams of outsmarting his parents, knowing more than they do. I remember as a child thinking similarly to the way the nephews do. As a child one tends perhaps to identify more with the nephews, as a grownup more with Donald, and therein lies, I would guess, the popularity which the old stories still have today.",
+          "bbox": [
+            {
+              "h": 127.15673834972849,
+              "w": 284.229824439072,
+              "x": 116.43427754025345,
+              "y": 65.40417027974945,
+              "confidence": 0.96,
+              "end_index": 663,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** When you received your first fan letter years ago, you thought it was a joke.",
+          "value": "KS: When you received your first fan letter years ago, you thought it was a joke.",
+          "bbox": [
+            {
+              "h": 22.717247189405505,
+              "w": 282.9017997749143,
+              "x": 115.31470453625192,
+              "y": 201.45767275152443,
+              "confidence": 0.95,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh yes, I sure did. I thought somebody was trying to put one over on me.",
+          "value": "CB: Oh yes, I sure did. I thought somebody was trying to put one over on me.",
+          "bbox": [
+            {
+              "h": 21.567627760575466,
+              "w": 282.8819764553163,
+              "x": 115.27391833793828,
+              "y": 227.03679811594898,
+              "confidence": 0.95,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** Who was that first letter from?",
+          "value": "KS: Who was that first letter from?",
+          "bbox": [
+            {
+              "h": 9.219115658346013,
+              "w": 134.9963180795065,
+              "x": 115.53520296422448,
+              "y": 259.3136129739902,
+              "confidence": 0.9,
+              "end_index": 38,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** It was from a young man, John Spicer. He wrote a very nice letter about the ducks, how much he liked my stories, etc.",
+          "value": "CB: It was from a young man, John Spicer. He wrote a very nice letter about the ducks, how much he liked my stories, etc.",
+          "bbox": [
+            {
+              "h": 23.65986754966889,
+              "w": 269.70975000000004,
+              "x": 115.13925000000002,
+              "y": 272.3513642384106,
+              "confidence": 0.96,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** When was that?",
+          "value": "KS: When was that?",
+          "bbox": [
+            {
+              "h": 9.046514076791148,
+              "w": 79.12545013576602,
+              "x": 115.44197200123858,
+              "y": 304.9114370950839,
+              "confidence": 0.88,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I believe 1959. I read the letter with a great deal of caution, as I lived then near Bob Harmon, who wrote gags for Hank Ketcham's *Dennis the Menace*, and Ketcham still lived at that time in Carmel, and it was from there that the letter had come from Spicer. I was convinced that Bob Harmon had written the letter, probably to tease me a little, and that's why I ran right over to him and confronted him with the letter and thought myself very clever to have found out the evil-doer so quickly. But as I saw his astonishment over the letter, I realized that he had nothing to do with it.",
+          "value": "CB: I believe 1959. I read the letter with a great deal of caution, as I lived then near Bob Harmon, who wrote gags for Hank Ketcham's Dennis the Menace, and Ketcham still lived at that time in Carmel, and it was from there that the letter had come from Spicer. I was convinced that Bob Harmon had written the letter, probably to tease me a little, and that's why I ran right over to him and confronted him with the letter and thought myself very clever to have found out the evil-doer so quickly. But as I saw his astonishment over the letter, I realized that he had nothing to do with it.",
+          "bbox": [
+            {
+              "h": 112.572680316311,
+              "w": 284.3247710020484,
+              "x": 113.90210204482662,
+              "y": 317.9385308260291,
+              "confidence": 0.96,
+              "end_index": 595,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** According to Disney regulations, the names of artists and authors were not to be revealed under any circumstances, so this is probably why you were surprised by the letter. Didn't this anonymity bother you?",
+          "value": "KS: According to Disney regulations, the names of artists and authors were not to be revealed under any circumstances, so this is probably why you were surprised by the letter. Didn't this anonymity bother you?",
+          "bbox": [
+            {
+              "h": 39.96,
+              "w": 284.17,
+              "x": 111.2,
+              "y": 439.55,
+              "confidence": 1.0,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Not at all. I was seven years at Disney's studio and saw there how all the animators, however brilliant they were, were never credited by name—the public only ever heard of Walt Disney. For me it was therefore only natural to expect that later, when I was drawing and writing my own stories, that \\[anonymity] would be continued. I never expected otherwise, after those seven years. Today I must say that I am quite glad of it, for if my name had been known then I would have received more letters and",
+          "value": "CB: Not at all. I was seven years at Disney's studio and saw there how all the animators, however brilliant they were, were never credited by name—the public only ever heard of Walt Disney. For me it was therefore only natural to expect that later, when I was drawing and writing my own stories, that [anonymity] would be continued. I never expected otherwise, after those seven years. Today I must say that I am quite glad of it, for if my name had been known then I would have received more letters and",
+          "bbox": [
+            {
+              "h": 90.37451430068604,
+              "w": 283.56667616830225,
+              "x": 112.34987225490666,
+              "y": 479.5253446074696,
+              "confidence": 0.86,
+              "end_index": 508,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nKLAUS STRZYZ / 1980 117\n\\</page_header>",
+          "value": "<page_header>\nKLAUS STRZYZ / 1980 117\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.001903541825461,
+              "w": 77.1716948123095,
+              "x": 644.2695580221038,
+              "y": 42.516050006550124,
+              "confidence": 0.92,
+              "end_index": 53,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "might never have gotten back to work. Who knows, that might even have influenced my work, for then I might not have drawn and written what I thought was right, but to please the letter writers. It's quite good to be fully isolated that way when you're working.",
+          "value": "might never have gotten back to work. Who knows, that might even have influenced my work, for then I might not have drawn and written what I thought was right, but to please the letter writers. It's quite good to be fully isolated that way when you're working.",
+          "bbox": [
+            {
+              "h": 50.51993866592037,
+              "w": 283.27556264291155,
+              "x": 462.09442804401687,
+              "y": 66.63940353229803,
+              "confidence": 0.94,
+              "end_index": 259,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** Who's your favorite character among all the duck clan?",
+          "value": "KS: Who's your favorite character among all the duck clan?",
+          "bbox": [
+            {
+              "h": 10.252609271523184,
+              "w": 230.2785,
+              "x": 462.13425000000007,
+              "y": 123.2941986754967,
+              "confidence": 0.83,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** My favorite was always Donald, because I could do the most with him. Everybody suffers changes in mood, and I too am euphoric one day and rather depressed the next—and Donald was the same way. The stories I wrote for him always came off best, because I could always feel for him. He was a part of myself and acted the way I do. On the other hand, I had nothing to do with Scrooge's problems.",
+          "value": "CB: My favorite was always Donald, because I could do the most with him. Everybody suffers changes in mood, and I too am euphoric one day and rather depressed the next—and Donald was the same way. The stories I wrote for him always came off best, because I could always feel for him. He was a part of myself and acted the way I do. On the other hand, I had nothing to do with Scrooge's problems.",
+          "bbox": [
+            {
+              "h": 76.67062062333272,
+              "w": 281.59838207412355,
+              "x": 462.487037466654,
+              "y": 135.963536379335,
+              "confidence": 0.93,
+              "end_index": 398,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**GB:** (Laughing) That's what you used to think, but nowadays?",
+          "value": "GB: (Laughing) That's what you used to think, but nowadays?",
+          "bbox": [
+            {
+              "h": 11.34007991615855,
+              "w": 241.46706709698935,
+              "x": 463.15143800019064,
+              "y": 214.04705766482473,
+              "confidence": 0.91,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** He sprang from the imagination and had really little to do with my own personality.",
+          "value": "CB: He sprang from the imagination and had really little to do with my own personality.",
+          "bbox": [
+            {
+              "h": 24.13053787157015,
+              "w": 273.37377067454275,
+              "x": 463.1423716177592,
+              "y": 227.37863292444746,
+              "confidence": 0.94,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** Do you have any favorite stories?",
+          "value": "KS: Do you have any favorite stories?",
+          "bbox": [
+            {
+              "h": 11.295830373475626,
+              "w": 145.36271205697417,
+              "x": 463.5842200123857,
+              "y": 258.4522892435214,
+              "confidence": 0.9,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** There are lots of them! Of the 10-pagers, the story I like best is the one in which Donald has a chicken farm and stacks the eggs so high that when an earthquake shakes them loose they cover the town on the valley floor and have to be burned. And then there's the one where the ducks move into a quiet neighborhood and Donald is naturally the loudest one of all. That's really good, and even the secondary figures are well done, for example the cheese-taster who blows his alpenhorn \\[WDC 178].",
+          "value": "CB: There are lots of them! Of the 10-pagers, the story I like best is the one in which Donald has a chicken farm and stacks the eggs so high that when an earthquake shakes them loose they cover the town on the valley floor and have to be burned. And then there's the one where the ducks move into a quiet neighborhood and Donald is naturally the loudest one of all. That's really good, and even the secondary figures are well done, for example the cheese-taster who blows his alpenhorn [WDC 178].",
+          "bbox": [
+            {
+              "h": 91.22,
+              "w": 285.48,
+              "x": 461.87,
+              "y": 269.46,
+              "confidence": 1.0,
+              "end_index": 501,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**GB:** At the time Carl was writing that story, we lived in an apartment house with awfully loud neighbors. Only upstairs it was quiet.",
+          "value": "GB: At the time Carl was writing that story, we lived in an apartment house with awfully loud neighbors. Only upstairs it was quiet.",
+          "bbox": [
+            {
+              "h": 23.39698013245038,
+              "w": 267.343875,
+              "x": 463.1857500000001,
+              "y": 362.52174834437085,
+              "confidence": 0.84,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** The woman that lived there was drunk all day, and the only noise that one heard from her was when another empty wine bottle fell to the floor. But next door—frightful!",
+          "value": "CB: The woman that lived there was drunk all day, and the only noise that one heard from her was when another empty wine bottle fell to the floor. But next door—frightful!",
+          "bbox": [
+            {
+              "h": 36.95811864043445,
+              "w": 284.20789731802597,
+              "x": 463.82109803734767,
+              "y": 388.30253679020586,
+              "confidence": 0.89,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** What are your plans for the future?",
+          "value": "KS: What are your plans for the future?",
+          "bbox": [
+            {
+              "h": 11.078270121951249,
+              "w": 153.3339656535823,
+              "x": 464.48224268769064,
+              "y": 432.3935895245809,
+              "confidence": 0.91,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** The future? Well, I really will retire sometime, sit around and do nothing, but I don't know . . . guess that will be a while yet.",
+          "value": "CB: The future? Well, I really will retire sometime, sit around and do nothing, but I don't know . . . guess that will be a while yet.",
+          "bbox": [
+            {
+              "h": 24.578280840320133,
+              "w": 282.98824347370436,
+              "x": 464.3504545541159,
+              "y": 444.98719374523637,
+              "confidence": 0.96,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** What about the Waterfowl series?",
+          "value": "KS: What about the Waterfowl series?",
+          "bbox": [
+            {
+              "h": 9.550987228467983,
+              "w": 148.4200364662729,
+              "x": 464.9065093130717,
+              "y": 476.6847934355946,
+              "confidence": 0.89,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I will continue to make them. At present I have drawn about 50 little paintings with watercolors, four large ones in oils, and a few more in the Kings and Queens series, all in all about 60 works without Disney figures. I began them in 1976.",
+          "value": "CB: I will continue to make them. At present I have drawn about 50 little paintings with watercolors, four large ones in oils, and a few more in the Kings and Queens series, all in all about 60 works without Disney figures. I began them in 1976.",
+          "bbox": [
+            {
+              "h": 50.96568721417683,
+              "w": 283.16897003620426,
+              "x": 464.35841894531256,
+              "y": 489.27673120712666,
+              "confidence": 0.96,
+              "end_index": 248,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** How long did you take for one of your duck paintings?",
+          "value": "KS: How long did you take for one of your duck paintings?",
+          "bbox": [
+            {
+              "h": 8.938172185430517,
+              "w": 227.91262500000005,
+              "x": 465.28875000000005,
+              "y": 547.5944900662253,
+              "confidence": 0.9,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Between 10 days and three weeks, depending on size, of course. I",
+          "value": "CB: Between 10 days and three weeks, depending on size, of course. I",
+          "bbox": [
+            {
+              "h": 11.45279569836123,
+              "w": 272.0767269912348,
+              "x": 465.0316354087272,
+              "y": 559.7459362042684,
+              "confidence": 0.92,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "116, 117, 117"
+    }
+  ]
+}

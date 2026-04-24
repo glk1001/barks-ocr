@@ -1,0 +1,302 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "136 CARL BARKS: CONVERSATIONS",
+              "value": "136 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 11.32397386266197,
+                  "w": 124.82209634622713,
+                  "x": 118.85506426257624,
+                  "y": 39.66248634896628,
+                  "confidence": 0.76,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "136 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.32,
+              "w": 124.82,
+              "x": 118.86,
+              "y": 39.66,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH**: But you'd still try to have little mini-cliffhangers at the end of each page.",
+          "value": "BH: But you'd still try to have little mini-cliffhangers at the end of each page.",
+          "bbox": [
+            {
+              "h": 25.008480000000006,
+              "w": 273.39000000000004,
+              "x": 117.76800000000001,
+              "y": 63.116640000000004,
+              "confidence": 0.89,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Yes, of course. It is pretty hard to do, but somehow, because of my training in the animation story department \\[at Disney], it did come naturally to me. I expected to give some little twist every few seconds.",
+          "value": "CB: Yes, of course. It is pretty hard to do, but somehow, because of my training in the animation story department [at Disney], it did come naturally to me. I expected to give some little twist every few seconds.",
+          "bbox": [
+            {
+              "h": 40.48992000000001,
+              "w": 278.4372,
+              "x": 116.92680000000001,
+              "y": 89.316,
+              "confidence": 0.9,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH**: How did you feel about anthropomorphic animals talking like humans and having other animals as pets, such as Pluto or Bolivar? Did this seem to be a conflict, or did it ever make you uncomfortable?",
+          "value": "BH: How did you feel about anthropomorphic animals talking like humans and having other animals as pets, such as Pluto or Bolivar? Did this seem to be a conflict, or did it ever make you uncomfortable?",
+          "bbox": [
+            {
+              "h": 39.894480000000016,
+              "w": 284.3256,
+              "x": 115.24440000000001,
+              "y": 134.56944000000001,
+              "confidence": 0.9,
+              "end_index": 204,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: \\[Only] to the extent that I did not show Donald having ducks in his backyard or shooting ducks or anything in which a real live natural duck would be in the same story with him. But as for dogs or wolves or lions or any other animals, he could handle them the same as a human would.\n**FG**: We just never gave any thought to it.",
+          "value": "CB: [Only] to the extent that I did not show Donald having ducks in his backyard or shooting ducks or anything in which a real live natural duck would be in the same story with him. But as for dogs or wolves or lions or any other animals, he could handle them the same as a human would.\nFG: We just never gave any thought to it.",
+          "bbox": [
+            {
+              "h": 64.30752000000001,
+              "w": 284.3256,
+              "x": 114.40320000000001,
+              "y": 173.86848,
+              "confidence": 0.9,
+              "end_index": 336,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH**: Let's close with a question about what you think of fandom and the cult that's built up around the mouse and the duck.",
+          "value": "BH: Let's close with a question about what you think of fandom and the cult that's built up around the mouse and the duck.",
+          "bbox": [
+            {
+              "h": 26.199360000000013,
+              "w": 279.27840000000003,
+              "x": 113.56200000000001,
+              "y": 244.72584,
+              "confidence": 0.92,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**FG**: I think it's a very important thing and certainly appreciated by all the artists and writers. Very important. It's the only reaction, the only meter we've got.",
+          "value": "FG: I think it's a very important thing and certainly appreciated by all the artists and writers. Very important. It's the only reaction, the only meter we've got.",
+          "bbox": [
+            {
+              "h": 37.51272,
+              "w": 281.802,
+              "x": 112.72080000000001,
+              "y": 270.9252,
+              "confidence": 0.9,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: If it weren't for the fans, we wouldn't be here today being interviewed, that's for sure.",
+          "value": "CB: If it weren't for the fans, we wouldn't be here today being interviewed, that's for sure.",
+          "bbox": [
+            {
+              "h": 23.817600000000027,
+              "w": 265.8192,
+              "x": 111.87960000000001,
+              "y": 310.22424000000007,
+              "confidence": 0.86,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**FG**: Absolutely.",
+          "value": "FG: Absolutely.",
+          "bbox": [
+            {
+              "h": 11.908799999999985,
+              "w": 58.884000000000015,
+              "x": 111.87960000000001,
+              "y": 335.23272,
+              "confidence": 0.84,
+              "end_index": 18,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: And while I can't understand their great attraction or great attachment to these things that we've done and the valuation they have put on our work, good for them! I'm all for them.",
+          "value": "CB: And while I can't understand their great attraction or great attachment to these things that we've done and the valuation they have put on our work, good for them! I'm all for them.",
+          "bbox": [
+            {
+              "h": 38.10816,
+              "w": 283.48440000000005,
+              "x": 111.03840000000001,
+              "y": 348.92784,
+              "confidence": 0.86,
+              "end_index": 188,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH**: Gentlemen, thank you.",
+          "value": "BH: Gentlemen, thank you.",
+          "bbox": [
+            {
+              "h": 11.829933774834444,
+              "w": 106.20150000000001,
+              "x": 110.670375,
+              "y": 394.06823841059605,
+              "confidence": 0.86,
+              "end_index": 28,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Carl Barks Interview Bruce Hamilton / 1984",
+          "md": "![Carl Barks Interview Bruce Hamilton / 1984](CB-Conversations-scan-3-rotated_spread_029_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-3-rotated_spread_029_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 187.96138495141008,
+              "w": 305.40449835651685,
+              "x": 449.7335426352897,
+              "y": 108.48300142911589,
+              "confidence": 0.85,
+              "end_index": 67,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "Unpublished interview conducted on 24 June 1984 in Grants Pass, Oregon. The interview was conducted by Hamilton; some questions were composed by Thomas Andrae. Reprinted by permission of Bruce Hamilton.",
+          "value": "Unpublished interview conducted on 24 June 1984 in Grants Pass, Oregon. The interview was conducted by Hamilton; some questions were composed by Thomas Andrae. Reprinted by permission of Bruce Hamilton.",
+          "bbox": [
+            {
+              "h": 65.92408911013723,
+              "w": 164.15056061833076,
+              "x": 490.21333729516016,
+              "y": 317.86939091558696,
+              "confidence": 0.96,
+              "end_index": 201,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q**: Could you please explain what you were saying earlier about the Celotex boards?",
+          "value": "Q: Could you please explain what you were saying earlier about the Celotex boards?",
+          "bbox": [
+            {
+              "h": 25.00848000000002,
+              "w": 284.32560000000007,
+              "x": 466.86600000000004,
+              "y": 403.1128800000001,
+              "confidence": 0.82,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: That is a throwback to the Disney Studio, where we worked up our stories by putting all the little story sketches in continuity up on celotex boards. When I made my \\[blue pencil comic book] drawings, I'd put up a page—that was eight panels—then alongside it another eight panels. I could put about eight pages on one of those big storyboards and see whether I needed to enlarge on a sequence or cut down on it. Then, when I got it all inked, I would read it again; and oftentimes I would take a whole page and throw it away. I tried to boil those stories down to where only the necessary things were in. That's why they always appeared so tight and read so quickly. I also tried to strengthen the end of each page with a little cliffhanger.",
+          "value": "BARKS: That is a throwback to the Disney Studio, where we worked up our stories by putting all the little story sketches in continuity up on celotex boards. When I made my [blue pencil comic book] drawings, I'd put up a page—that was eight panels—then alongside it another eight panels. I could put about eight pages on one of those big storyboards and see whether I needed to enlarge on a sequence or cut down on it. Then, when I got it all inked, I would read it again; and oftentimes I would take a whole page and throw it away. I tried to boil those stories down to where only the necessary things were in. That's why they always appeared so tight and read so quickly. I also tried to strengthen the end of each page with a little cliffhanger.",
+          "bbox": [
+            {
+              "h": 142.1978555116235,
+              "w": 285.46111180449697,
+              "x": 467.5206829744665,
+              "y": 429.3182817644818,
+              "confidence": 0.97,
+              "end_index": 751,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "136"
+    }
+  ]
+}

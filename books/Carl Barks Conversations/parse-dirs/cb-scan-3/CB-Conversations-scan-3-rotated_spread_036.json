@@ -1,0 +1,648 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "150 CARL BARKS: CONVERSATIONS",
+              "value": "150 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.989721854304634,
+                  "w": 16.035375000000002,
+                  "x": 125.65425,
+                  "y": 37.06712582781457,
+                  "confidence": 0.92,
+                  "end_index": 2,
+                  "label": "header",
+                  "start_index": 0
+                },
+                {
+                  "h": 11.829933774834437,
+                  "w": 100.94400000000002,
+                  "x": 149.57587500000002,
+                  "y": 37.8557880794702,
+                  "confidence": 0.92,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 4
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "150 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 12.62,
+              "w": 124.87,
+              "x": 125.65,
+              "y": 37.07,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "thing there. The Disney studios were a place where there were no time clocks—you could come to work when you felt like it in the morning, and if you attended to your job and worked well and did plenty, you got paid pretty darn well. If you were one of the shirkers and a complainer and all, why, you would never get a raise. So it was the shirkers and complainers mostly who had organized this strike.",
+          "value": "thing there. The Disney studios were a place where there were no time clocks—you could come to work when you felt like it in the morning, and if you attended to your job and worked well and did plenty, you got paid pretty darn well. If you were one of the shirkers and a complainer and all, why, you would never get a raise. So it was the shirkers and complainers mostly who had organized this strike.",
+          "bbox": [
+            {
+              "h": 76.82921694097753,
+              "w": 283.98853844917113,
+              "x": 123.42991826052783,
+              "y": 60.579139692501926,
+              "confidence": 0.96,
+              "end_index": 400,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Do you think that Disney was fair to the artists employed by him?",
+          "value": "H: Do you think that Disney was fair to the artists employed by him?",
+          "bbox": [
+            {
+              "h": 14.984582781456936,
+              "w": 265.50375,
+              "x": 122.49975000000002,
+              "y": 142.48498013245035,
+              "confidence": 0.58,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Oh, he was fair, yes. Of course, he could have been a little more humane to his employees, but after all, those were hard times and he took a whole bunch of us guys in, who were lucky to make ten dollars a week at a job, and gave us twenty dollars a week. I know that a lot of the guys weren't grateful for that. They felt that if one of Disney's films made $100,000, that they should get half of that. Walt would take and spend the whole hundred thousand dollars on making a whole new movie.",
+          "value": "B: Oh, he was fair, yes. Of course, he could have been a little more humane to his employees, but after all, those were hard times and he took a whole bunch of us guys in, who were lucky to make ten dollars a week at a job, and gave us twenty dollars a week. I know that a lot of the guys weren't grateful for that. They felt that if one of Disney's films made $100,000, that they should get half of that. Walt would take and spend the whole hundred thousand dollars on making a whole new movie.",
+          "bbox": [
+            {
+              "h": 27.866066225165525,
+              "w": 282.32775,
+              "x": 120.65962500000002,
+              "y": 218.19655629139078,
+              "confidence": 0.83,
+              "end_index": 498,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Did Disney ever comment on your comic stories of the ducks?",
+          "value": "H: Did Disney ever comment on your comic stories of the ducks?",
+          "bbox": [
+            {
+              "h": 14.195920529801299,
+              "w": 250.51987500000007,
+              "x": 120.39675000000001,
+              "y": 248.69149668874178,
+              "confidence": 0.62,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** I don't even know whether or not he ever read my stories. It was the people from the publication department who took care of these things and who represented Disney's interests regarding the comic books. They knew what I did and the fact that they didn't lose their jobs and were all in there for the long term, getting good salaries, shows that Disney was satisfied with what they were doing. So I guess he was satisfied with what I was doing.",
+          "value": "B: I don't even know whether or not he ever read my stories. It was the people from the publication department who took care of these things and who represented Disney's interests regarding the comic books. They knew what I did and the fact that they didn't lose their jobs and were all in there for the long term, getting good salaries, shows that Disney was satisfied with what they were doing. So I guess he was satisfied with what I was doing.",
+          "bbox": [
+            {
+              "h": 99.52672379954272,
+              "w": 281.562604926877,
+              "x": 119.30301117687692,
+              "y": 249.78051348132627,
+              "confidence": 0.87,
+              "end_index": 450,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Did you learn about all the places you describe in your stories mainly from *National Geographic* magazines?",
+          "value": "H: Did you learn about all the places you describe in your stories mainly from National Geographic magazines?",
+          "bbox": [
+            {
+              "h": 50.016960000000005,
+              "w": 280.9608,
+              "x": 116.92680000000001,
+              "y": 355.47768,
+              "confidence": 0.79,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 15.25,
+              "w": 151.68,
+              "x": 115.67,
+              "y": 365.94,
+              "confidence": 1.0,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 76
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Well, that was the biggest source of my information on world geography and nations and people and places.",
+          "value": "B: Well, that was the biggest source of my information on world geography and nations and people and places.",
+          "bbox": [
+            {
+              "h": 50.016960000000005,
+              "w": 280.9608,
+              "x": 116.92680000000001,
+              "y": 355.47768,
+              "confidence": 0.78,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.36,
+              "w": 152.2,
+              "x": 117.24,
+              "y": 393.81,
+              "confidence": 1.0,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 74
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Have you ever been to any of these places?",
+          "value": "H: Have you ever been to any of these places?",
+          "bbox": [
+            {
+              "h": 12.88,
+              "w": 179.81,
+              "x": 116.98,
+              "y": 411.42,
+              "confidence": 1.0,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** (Laughs) No, I've been in Tijuana, Mexico, and in Victoria, British Columbia.",
+          "value": "B: (Laughs) No, I've been in Tijuana, Mexico, and in Victoria, British Columbia.",
+          "bbox": [
+            {
+              "h": 34.535520000000005,
+              "w": 278.4372,
+              "x": 116.08560000000001,
+              "y": 411.44904,
+              "confidence": 0.8,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Do you remember when you drew the first duck in your life?",
+          "value": "H: Do you remember when you drew the first duck in your life?",
+          "bbox": [
+            {
+              "h": 14.46,
+              "w": 245.26,
+              "x": 115.93,
+              "y": 454.53,
+              "confidence": 1.0,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** I think in grammar school I scribbled one into a notebook. I saw the first of Donald Duck in 1935, when I came to Disney.",
+          "value": "B: I think in grammar school I scribbled one into a notebook. I saw the first of Donald Duck in 1935, when I came to Disney.",
+          "bbox": [
+            {
+              "h": 26.81451655629138,
+              "w": 271.54987500000004,
+              "x": 114.87637500000001,
+              "y": 466.8880529801325,
+              "confidence": 0.79,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.98,
+              "w": 271.29,
+              "x": 115.14,
+              "y": 466.89,
+              "confidence": 1.0,
+              "end_index": 108,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.67,
+              "w": 85.17,
+              "x": 111.98,
+              "y": 551.8,
+              "confidence": 1.0,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 82
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** This was for animated films?",
+          "value": "H: This was for animated films?",
+          "bbox": [
+            {
+              "h": 11.04,
+              "w": 121.45,
+              "x": 115.14,
+              "y": 497.91,
+              "confidence": 1.0,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Yes.",
+          "value": "B: Yes.",
+          "bbox": [
+            {
+              "h": 9.197700014291124,
+              "w": 25.88627500952743,
+              "x": 114.64501945383958,
+              "y": 510.31292125095285,
+              "confidence": 0.9,
+              "end_index": 10,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** So your Donald was the first duck for a comic strip?",
+          "value": "H: So your Donald was the first duck for a comic strip?",
+          "bbox": [
+            {
+              "h": 14.46,
+              "w": 211.09,
+              "x": 114.35,
+              "y": 528.14,
+              "confidence": 1.0,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** No, I think it came out in the newspaper first. They had a newspaper strip of Donald Duck.",
+          "value": "B: No, I think it came out in the newspaper first. They had a newspaper strip of Donald Duck.",
+          "bbox": [
+            {
+              "h": 35.726400000000005,
+              "w": 275.91360000000003,
+              "x": 113.56200000000001,
+              "y": 528.75072,
+              "confidence": 0.81,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.67,
+              "w": 85.17,
+              "x": 111.98,
+              "y": 551.8,
+              "confidence": 1.0,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 76
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nGOTTFRIED HELNWEIN / 1992 151\n\\</page_header>",
+          "value": "<page_header>\nGOTTFRIED HELNWEIN / 1992 151\n</page_header>",
+          "bbox": [
+            {
+              "h": 9.732426308831942,
+              "w": 104.0436008003048,
+              "x": 618.921405368712,
+              "y": 42.087821334317844,
+              "confidence": 0.94,
+              "end_index": 59,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** But those newspaper strips were very short, right?",
+          "value": "H: But those newspaper strips were very short, right?",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 205.83,
+              "x": 463.97,
+              "y": 66.77,
+              "confidence": 1.0,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Yeah. And then they decided they could use a complete story just for Donald Duck. It happened that I was ready to leave the studio at that time and try that kind of business. And it worked out just right. The very first ten-page story was sent to me by the office, the editors. It was, well, not very well written and I revised the story a little bit. Made it gain a little character. And then, after that, I wrote the stories *and drew them*.",
+          "value": "B: Yeah. And then they decided they could use a complete story just for Donald Duck. It happened that I was ready to leave the studio at that time and try that kind of business. And it worked out just right. The very first ten-page story was sent to me by the office, the editors. It was, well, not very well written and I revised the story a little bit. Made it gain a little character. And then, after that, I wrote the stories and drew them.",
+          "bbox": [
+            {
+              "h": 75.7115761589404,
+              "w": 283.116375,
+              "x": 463.97437500000007,
+              "y": 79.12911258278146,
+              "confidence": 0.87,
+              "end_index": 449,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** That's an incredible talent, to be able to draw it and really create the whole story.",
+          "value": "H: That's an incredible talent, to be able to draw it and really create the whole story.",
+          "bbox": [
+            {
+              "h": 25.63617465463033,
+              "w": 277.3894768245046,
+              "x": 464.54700971798786,
+              "y": 164.88948547780112,
+              "confidence": 0.97,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Well, that was why they were a little better than the others. Sometimes, I would write the story and another fellow would make the pencil drawings and another guy would do the inking—all the spontaneity goes out of it.",
+          "value": "B: Well, that was why they were a little better than the others. Sometimes, I would write the story and another fellow would make the pencil drawings and another guy would do the inking—all the spontaneity goes out of it.",
+          "bbox": [
+            {
+              "h": 49.79640723132623,
+              "w": 283.67132776772104,
+              "x": 464.73855583079273,
+              "y": 191.2370566263339,
+              "confidence": 0.97,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Was there censorship at Disney?",
+          "value": "H: Was there censorship at Disney?",
+          "bbox": [
+            {
+              "h": 11.04,
+              "w": 136.96,
+              "x": 466.08,
+              "y": 252.11,
+              "confidence": 1.0,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Yes, there was.",
+          "value": "B: Yes, there was.",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 70.18762500000003,
+              "x": 465.28875000000005,
+              "y": 265.77917880794706,
+              "confidence": 0.94,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Was your work ever censored?",
+          "value": "H: Was your work ever censored?",
+          "bbox": [
+            {
+              "h": 11.04,
+              "w": 131.17,
+              "x": 466.34,
+              "y": 286.02,
+              "confidence": 1.0,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** They didn't censor it very often. Well, I'd worked for seven years at the Disney studios and had a pretty good idea of what they could use and what they couldn't.",
+          "value": "B: They didn't censor it very often. Well, I'd worked for seven years at the Disney studios and had a pretty good idea of what they could use and what they couldn't.",
+          "bbox": [
+            {
+              "h": 38.73334788967228,
+              "w": 284.3726950981326,
+              "x": 465.9503454649391,
+              "y": 298.1805072599086,
+              "confidence": 0.97,
+              "end_index": 168,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** I'm thinking of the espionage story with all the spies and counter-spies and counter-counter-spies, where you drew beautiful human girls with real breasts.",
+          "value": "H: I'm thinking of the espionage story with all the spies and counter-spies and counter-counter-spies, where you drew beautiful human girls with real breasts.",
+          "bbox": [
+            {
+              "h": 38.91,
+              "w": 285.75,
+              "x": 465.29,
+              "y": 343.86,
+              "confidence": 1.0,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Well, I got in trouble in about the second or third story that I wrote for them. I had Donald as being a lifeguard and I had this lovely duck woman—I sure got told off about that. The guy who was the art editor at the publisher made me spend a few hours down at his office just flattening the breasts of this gal.",
+          "value": "B: Well, I got in trouble in about the second or third story that I wrote for them. I had Donald as being a lifeguard and I had this lovely duck woman—I sure got told off about that. The guy who was the art editor at the publisher made me spend a few hours down at his office just flattening the breasts of this gal.",
+          "bbox": [
+            {
+              "h": 64.99002664824697,
+              "w": 285.30187407107474,
+              "x": 466.64865727419976,
+              "y": 384.7977460889864,
+              "confidence": 0.97,
+              "end_index": 319,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Would you have liked to write more erotic stories with attractive girls, if it had been allowed?",
+          "value": "H: Would you have liked to write more erotic stories with attractive girls, if it had been allowed?",
+          "bbox": [
+            {
+              "h": 23.66,
+              "w": 281.01,
+              "x": 467.65,
+              "y": 458.21,
+              "confidence": 1.0,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oh, I would have loved to draw them.",
+          "value": "B: Oh, I would have loved to draw them.",
+          "bbox": [
+            {
+              "h": 11.259523056402413,
+              "w": 159.55400490663115,
+              "x": 468.4489102277058,
+              "y": 485.4987492187501,
+              "confidence": 0.95,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** So without these censorships you would have brought more sex into these stories?",
+          "value": "H: So without these censorships you would have brought more sex into these stories?",
+          "bbox": [
+            {
+              "h": 24.19,
+              "w": 277.07,
+              "x": 467.92,
+              "y": 505.8,
+              "confidence": 1.0,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** I would have liked that. There wouldn't have to be more sex, necessarily, but just pretty girls. These girls that I had in the spy story, they were not \"sexy,\" but the fact that they had human faces, that is what the",
+          "value": "B: I would have liked that. There wouldn't have to be more sex, necessarily, but just pretty girls. These girls that I had in the spy story, they were not \"sexy,\" but the fact that they had human faces, that is what the",
+          "bbox": [
+            {
+              "h": 38.395696932164654,
+              "w": 283.44642137480946,
+              "x": 468.4767104611281,
+              "y": 532.9249694073934,
+              "confidence": 0.97,
+              "end_index": 222,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

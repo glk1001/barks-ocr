@@ -1,0 +1,387 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "152 CARL BARKS: CONVERSATIONS",
+              "value": "152 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.74659999047256,
+                  "w": 101.53925058355567,
+                  "x": 148.5670771603468,
+                  "y": 41.48586977300877,
+                  "confidence": 0.94,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "152 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.75,
+              "w": 101.54,
+              "x": 148.57,
+              "y": 41.49,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "editors were objecting to. Because they didn't want to cross the line here where we've got these ducks working with people—real people.",
+          "value": "editors were objecting to. Because they didn't want to cross the line here where we've got these ducks working with people—real people.",
+          "bbox": [
+            {
+              "h": 25.500079470198685,
+              "w": 280.7505,
+              "x": 124.33987500000002,
+              "y": 64.6703046357616,
+              "confidence": 0.97,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** But Donald liked these girls. He thought they were sexy.\n**B:** Oh, yeah. Well, I'll tell you, at about the same time Disney had put out this animation movie *Saludos Amigos* in which the ducks were traveling down in South America. And Donald behaved like a real wolf. He was a lecher! He was just chasing all these pretty girls. Yeah, I think that was one of the reasons why I thought I could get away with it. But no. The comic books were for kids.",
+          "value": "H: But Donald liked these girls. He thought they were sexy.\nB: Oh, yeah. Well, I'll tell you, at about the same time Disney had put out this animation movie Saludos Amigos in which the ducks were traveling down in South America. And Donald behaved like a real wolf. He was a lecher! He was just chasing all these pretty girls. Yeah, I think that was one of the reasons why I thought I could get away with it. But no. The comic books were for kids.",
+          "bbox": [
+            {
+              "h": 88.12512,
+              "w": 283.48440000000005,
+              "x": 122.8152,
+              "y": 98.24760000000002,
+              "confidence": 0.91,
+              "end_index": 456,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Was \"The Milkman\" the only story they didn't print because of too much brutality?\n**B:** No.",
+          "value": "H: Was \"The Milkman\" the only story they didn't print because of too much brutality?\nB: No.",
+          "bbox": [
+            {
+              "h": 34.53551999999999,
+              "w": 272.5488,
+              "x": 121.974,
+              "y": 197.09064000000004,
+              "confidence": 0.79,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 23.92,
+              "w": 271.81,
+              "x": 121.45,
+              "y": 196.38,
+              "confidence": 1.0,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.72,
+              "w": 29.7,
+              "x": 118.82,
+              "y": 219.51,
+              "confidence": 0.79,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 89
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** \"Holy Night\" was another one?",
+          "value": "H: \"Holy Night\" was another one?",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 136.27439999999999,
+              "x": 121.1328,
+              "y": 243.53496,
+              "confidence": 0.78,
+              "end_index": 35,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Yeah, that was another, and then there was one I made in which Donald was in a footrace at some fair or festival. It was a parody of the old story \"The Golden Apples\"—in mythology there was some guy who had to race against one of the goddesses. And another goddess gave him a bunch of golden apples, and he would throw these over his shoulder whenever she got close to him, and she would stop to pick them up, and he'd get further ahead. And he managed to win the race. That was the old myth. So I based it on that, and I can't remember the details, but Donald would throw these apples over his shoulder—symbolic apples—and this beautiful duck girl that was racing against him would stop to pick up the apples and Daisy was so jealous.",
+          "value": "B: Yeah, that was another, and then there was one I made in which Donald was in a footrace at some fair or festival. It was a parody of the old story \"The Golden Apples\"—in mythology there was some guy who had to race against one of the goddesses. And another goddess gave him a bunch of golden apples, and he would throw these over his shoulder whenever she got close to him, and she would stop to pick them up, and he'd get further ahead. And he managed to win the race. That was the old myth. So I based it on that, and I can't remember the details, but Donald would throw these apples over his shoulder—symbolic apples—and this beautiful duck girl that was racing against him would stop to pick up the apples and Daisy was so jealous.",
+          "bbox": [
+            {
+              "h": 141.71472,
+              "w": 283.48440000000005,
+              "x": 120.2916,
+              "y": 256.63464000000005,
+              "confidence": 0.8,
+              "end_index": 741,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** I believe it.",
+          "value": "H: I believe it.",
+          "bbox": [
+            {
+              "h": 9.52704,
+              "w": 53.83680000000001,
+              "x": 119.4504,
+              "y": 406.68552000000005,
+              "confidence": 0.77,
+              "end_index": 19,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** She started throwing things at Donald. And so they scratched the story. They said that Daisy was too unladylike. All of that stuff disappeared. I never read anything more of it. Never heard what became of the drawing.",
+          "value": "B: She started throwing things at Donald. And so they scratched the story. They said that Daisy was too unladylike. All of that stuff disappeared. I never read anything more of it. Never heard what became of the drawing.",
+          "bbox": [
+            {
+              "h": 38.703599999999994,
+              "w": 282.64320000000004,
+              "x": 118.6092,
+              "y": 419.78520000000003,
+              "confidence": 0.8,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** When you retired, you began to paint in oil. But you were not allowed to paint your ducks, since the copyright belonged to Disney, didn't it?\n**B:** Yeah. For five years I was just painting and drawing little landscapes and things. Selling them at art shows. And I wrote a bunch of scripts for the Junior Woodchucks. I did about fifteen of those I think. Those were pretty lean years. I wasn't making very much money out of it. But then, in 1971 I think it was, some guy came by and asked if I could paint him a picture of that little old sailboat cover—September 1949, Disney Comics.",
+          "value": "H: When you retired, you began to paint in oil. But you were not allowed to paint your ducks, since the copyright belonged to Disney, didn't it?\nB: Yeah. For five years I was just painting and drawing little landscapes and things. Selling them at art shows. And I wrote a bunch of scripts for the Junior Woodchucks. I did about fifteen of those I think. Those were pretty lean years. I wasn't making very much money out of it. But then, in 1971 I think it was, some guy came by and asked if I could paint him a picture of that little old sailboat cover—September 1949, Disney Comics.",
+          "bbox": [
+            {
+              "h": 104.79744,
+              "w": 284.3256,
+              "x": 117.76800000000001,
+              "y": 466.22952000000004,
+              "confidence": 0.85,
+              "end_index": 590,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nGOTTFRIED HELNWEIN / 1992 153\n\\</page_header>",
+          "value": "<page_header>\nGOTTFRIED HELNWEIN / 1992 153\n</page_header>",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 127.23,
+              "x": 618.54,
+              "y": 38.91,
+              "confidence": 1.0,
+              "end_index": 43,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Well, I told him, \"Hell, no. I can't paint anything like that—with Disney ducks. I'd have to get permission.\" So he said if I could get permission, he would buy a painting. Well, I thought that might be a good way to make a few dollars, because I wasn't having much luck selling my other kind of paintings. I wrote George Sherman, who was in charge of the Disney publications department, and asked if it'd be all right if I painted this painting. He wrote back and said, \"Sure. Go ahead.\" He could give me that permission for one year, so that started me off. I had permission to paint these ducks and sell them. He said they had to be paintings that were good enough that the Disney studio would not be ashamed of them, of course. So when I sent him a photograph of the painting, why, I got no complaint at all.",
+          "value": "Well, I told him, \"Hell, no. I can't paint anything like that—with Disney ducks. I'd have to get permission.\" So he said if I could get permission, he would buy a painting. Well, I thought that might be a good way to make a few dollars, because I wasn't having much luck selling my other kind of paintings. I wrote George Sherman, who was in charge of the Disney publications department, and asked if it'd be all right if I painted this painting. He wrote back and said, \"Sure. Go ahead.\" He could give me that permission for one year, so that started me off. I had permission to paint these ducks and sell them. He said they had to be paintings that were good enough that the Disney studio would not be ashamed of them, of course. So when I sent him a photograph of the painting, why, I got no complaint at all.",
+          "bbox": [
+            {
+              "h": 154.26958193776204,
+              "w": 286.0537827267532,
+              "x": 463.42448137385674,
+              "y": 64.8663149610566,
+              "confidence": 0.95,
+              "end_index": 811,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** So you have been painting since then?",
+          "value": "H: So you have been painting since then?",
+          "bbox": [
+            {
+              "h": 12.314137157012214,
+              "w": 161.54545333936744,
+              "x": 466.56821191406254,
+              "y": 228.70966484136818,
+              "confidence": 0.9,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oil paintings. Yeah, sure.",
+          "value": "B: Oil paintings. Yeah, sure.",
+          "bbox": [
+            {
+              "h": 10.515496688741734,
+              "w": 106.46437499999996,
+              "x": 467.39175000000006,
+              "y": 243.17086092715235,
+              "confidence": 0.9,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** And you were able to keep the permission to paint and sell this artwork?",
+          "value": "H: And you were able to keep the permission to paint and sell this artwork?",
+          "bbox": [
+            {
+              "h": 26.202395064786568,
+              "w": 272.46958686642535,
+              "x": 466.9133856230946,
+              "y": 261.3069165920351,
+              "confidence": 0.92,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** That's right. By the time a year had gone by, I had orders for enough paintings to keep me painting for another two or three years. And Garé called them up and said, \"Hell, the year is up and I've got all these orders from people that want these paintings and what should I do?\" And George said, \"Well, as long as you don't say anything about it.\" Don't pester us, in other words, about the things, but just keep on doing it—act as if it was all right, and as long as I keep doing good high quality work, why, it is all right with them.",
+          "value": "B: That's right. By the time a year had gone by, I had orders for enough paintings to keep me painting for another two or three years. And Garé called them up and said, \"Hell, the year is up and I've got all these orders from people that want these paintings and what should I do?\" And George said, \"Well, as long as you don't say anything about it.\" Don't pester us, in other words, about the things, but just keep on doing it—act as if it was all right, and as long as I keep doing good high quality work, why, it is all right with them.",
+          "bbox": [
+            {
+              "h": 104.79744,
+              "w": 285.16679999999997,
+              "x": 467.70720000000006,
+              "y": 288.19296,
+              "confidence": 0.79,
+              "end_index": 542,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Were you allowed to reproduce them? To print them?\n**B:** Oh, no. No, I could paint something which is sold to somebody and he could keep that painting to hang on his wall—now that was as far as it could go.",
+          "value": "H: Were you allowed to reproduce them? To print them?\nB: Oh, no. No, I could paint something which is sold to somebody and he could keep that painting to hang on his wall—now that was as far as it could go.",
+          "bbox": [
+            {
+              "h": 52.99416000000008,
+              "w": 284.3256,
+              "x": 469.3896000000001,
+              "y": 400.13568000000004,
+              "confidence": 0.79,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.88,
+              "w": 220.29,
+              "x": 469.49,
+              "y": 399.85,
+              "confidence": 1.0,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.67,
+              "w": 283.38,
+              "x": 469.49,
+              "y": 412.21,
+              "confidence": 1.0,
+              "end_index": 168,
+              "label": "text",
+              "start_index": 58
+            },
+            {
+              "h": 40.75,
+              "w": 283.64,
+              "x": 469.23,
+              "y": 412.21,
+              "confidence": 0.79,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 58
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "So along in 1976, there was a guy up in San Francisco who took one of those paintings and made reproductions of it. And he took the reproductions and sold them for about $70 a piece, and he brashly sent me a royalty of I think about $5 for each one that he sold. And I thought, \"Good God! This is not right. This can't go on. He should pay a royalty to Disney's for the use of their characters.\" So I let Disney's know what was happening. Oh, Disney's right away just stopped. No more. Don't paint any more paintings, because we were afraid this kind of thing would start to happen. So we just had to stop it. And I was so glad—I was tickled to",
+          "value": "So along in 1976, there was a guy up in San Francisco who took one of those paintings and made reproductions of it. And he took the reproductions and sold them for about $70 a piece, and he brashly sent me a royalty of I think about $5 for each one that he sold. And I thought, \"Good God! This is not right. This can't go on. He should pay a royalty to Disney's for the use of their characters.\" So I let Disney's know what was happening. Oh, Disney's right away just stopped. No more. Don't paint any more paintings, because we were afraid this kind of thing would start to happen. So we just had to stop it. And I was so glad—I was tickled to",
+          "bbox": [
+            {
+              "h": 118.07504712747713,
+              "w": 285.25874614138723,
+              "x": 470.23032914919975,
+              "y": 452.44373807641017,
+              "confidence": 0.98,
+              "end_index": 643,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "152, 153"
+    }
+  ]
+}

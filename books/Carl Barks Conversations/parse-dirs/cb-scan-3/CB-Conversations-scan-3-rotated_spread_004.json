@@ -1,0 +1,258 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "86 CARL BARKS: CONVERSATIONS",
+              "value": "86 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.245732527272297,
+                  "w": 121.02795304758956,
+                  "x": 114.63014257217037,
+                  "y": 38.34476386480565,
+                  "confidence": 0.87,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "86 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.25,
+              "w": 121.03,
+              "x": 114.63,
+              "y": 38.34,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Their hats have to react—they fly off of their heads. Their coattails have to fly back in the air. In other words, every part of the ducks and their clothing has to show some bit of the action. It has to flow with the action. And their eagerness as they think they're going to land in a big lake full of water must show, too, in their expressions.",
+          "value": "Their hats have to react—they fly off of their heads. Their coattails have to fly back in the air. In other words, every part of the ducks and their clothing has to show some bit of the action. It has to flow with the action. And their eagerness as they think they're going to land in a big lake full of water must show, too, in their expressions.",
+          "bbox": [
+            {
+              "h": 64.37153469297829,
+              "w": 283.87484551257626,
+              "x": 113.21983172160824,
+              "y": 62.1016359768007,
+              "confidence": 0.99,
+              "end_index": 346,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: Do you ever skip the preliminary process and just go direct without drawing the circles?**",
+          "value": "Q: Do you ever skip the preliminary process and just go direct without drawing the circles?",
+          "bbox": [
+            {
+              "h": 23.134092715231816,
+              "w": 272.8642500000001,
+              "x": 112.24762500000001,
+              "y": 133.80969536423842,
+              "confidence": 0.86,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Not very much. It's very much better to draw the circles, because then you get the construction, the basic construction of the guy—like the skeleton, in other words. In the next stage their expressions have to be refined, which is done mostly with patient redrawing and erasing. When I'm drawing the faces I think about what their basic emotion is, what they are doing there. These little guys are really happy, they think they have seen a lake of water out in this desert, so I try to show that emotion in their faces and in their poses, their eagerness as they look out across the sand and think they see this lake. They really lean into it. Even their fingers have to express a certain amount of emotion.",
+          "value": "CB: Not very much. It's very much better to draw the circles, because then you get the construction, the basic construction of the guy—like the skeleton, in other words. In the next stage their expressions have to be refined, which is done mostly with patient redrawing and erasing. When I'm drawing the faces I think about what their basic emotion is, what they are doing there. These little guys are really happy, they think they have seen a lake of water out in this desert, so I try to show that emotion in their faces and in their poses, their eagerness as they look out across the sand and think they see this lake. They really lean into it. Even their fingers have to express a certain amount of emotion.",
+          "bbox": [
+            {
+              "h": 128.61504000000002,
+              "w": 284.3256,
+              "x": 111.87960000000001,
+              "y": 158.98248,
+              "confidence": 0.86,
+              "end_index": 714,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "In drawing the duck's faces, I used to act out the expressions on my own face, all unconsciously. If I had the ducks angry, I would strain myself to draw their anger and get the feeling so much that I was grimacing, and if I had them scared, which they were so much of the time, or popeyed, I would draw that with my eyes wide open and practically imitating the ducks' expressions, except that I didn't have a beak. And the result was that I would end up with a headache, because when you look at those ducks they have big round eyes, and somehow I was trying to imitate that, and my physical eyelids just couldn't make it. And my jaws would get so tired from going up and down like that all day long grimacing, making frowns, my forehead would be all kinked up. I would really be tired when the day's work was done. Oh, it was work.",
+          "value": "In drawing the duck's faces, I used to act out the expressions on my own face, all unconsciously. If I had the ducks angry, I would strain myself to draw their anger and get the feeling so much that I was grimacing, and if I had them scared, which they were so much of the time, or popeyed, I would draw that with my eyes wide open and practically imitating the ducks' expressions, except that I didn't have a beak. And the result was that I would end up with a headache, because when you look at those ducks they have big round eyes, and somehow I was trying to imitate that, and my physical eyelids just couldn't make it. And my jaws would get so tired from going up and down like that all day long grimacing, making frowns, my forehead would be all kinked up. I would really be tired when the day's work was done. Oh, it was work.",
+          "bbox": [
+            {
+              "h": 154.50626646579653,
+              "w": 285.1446775259623,
+              "x": 109.40868269459796,
+              "y": 289.1307843821457,
+              "confidence": 0.98,
+              "end_index": 832,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: When you were doing the dialogue, how did you work the words out to fit in the panels?**",
+          "value": "Q: When you were doing the dialogue, how did you work the words out to fit in the panels?",
+          "bbox": [
+            {
+              "h": 23.65986754966889,
+              "w": 282.59062500000005,
+              "x": 107.51587500000001,
+              "y": 450.5890331125828,
+              "confidence": 0.88,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I tried to make it as brief as possible. If I could find a word that would express what four words say, I would use that one word. So I had a sort of short, very crisp dialogue in my stories as a result of that contracting them down. And, in order to get dialogue as short as possible, sometimes it was necessary to even count the syllables, and I would do that if it got down to it, and that also helped to create an even flow, so that it was almost like prose poetry the way the ducks voices would come in.",
+          "value": "CB: I tried to make it as brief as possible. If I could find a word that would express what four words say, I would use that one word. So I had a sort of short, very crisp dialogue in my stories as a result of that contracting them down. And, in order to get dialogue as short as possible, sometimes it was necessary to even count the syllables, and I would do that if it got down to it, and that also helped to create an even flow, so that it was almost like prose poetry the way the ducks voices would come in.",
+          "bbox": [
+            {
+              "h": 90.50687999999997,
+              "w": 285.1668,
+              "x": 107.67360000000001,
+              "y": 476.9474400000001,
+              "confidence": 0.89,
+              "end_index": 515,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nEDWARD SUMMER / 1975 87\n\\</page_header>",
+          "value": "<page_header>\nEDWARD SUMMER / 1975 87\n</page_header>",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 111.46,
+              "x": 626.43,
+              "y": 42.59,
+              "confidence": 1.0,
+              "end_index": 37,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: What are some of the other stories \\[besides the square egg story] that you're particularly fond of?**",
+          "value": "Q: What are some of the other stories [besides the square egg story] that you're particularly fond of?",
+          "bbox": [
+            {
+              "h": 25.603920000000002,
+              "w": 284.32560000000007,
+              "x": 453.40680000000003,
+              "y": 67.88016,
+              "confidence": 0.88,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, I liked \"Land of the Totem Poles,\" and also the forest fire story in the 1950 25¢ Vacation annual. And the first issue of Uncle Scrooge. Of the ten-pagers in Comics and Stories, I think the March 1951 story about the cyclone distributing Uncle Scrooge's wealth is the best. I also liked the story about Uncle Scrooge's search for the horseradish down under the sea in the sunken ship. That gave me a chance to show his character where he was up against a situation where he could dissolve all of his troubles by just leaving a guy to drown out there in the ocean, but he perpetuated his troubles by rescuing the guy and saving his life. It gave me a chance, too, to show that villains don't reform just because you do",
+          "value": "CB: Well, I liked \"Land of the Totem Poles,\" and also the forest fire story in the 1950 25¢ Vacation annual. And the first issue of Uncle Scrooge. Of the ten-pagers in Comics and Stories, I think the March 1951 story about the cyclone distributing Uncle Scrooge's wealth is the best. I also liked the story about Uncle Scrooge's search for the horseradish down under the sea in the sunken ship. That gave me a chance to show his character where he was up against a situation where he could dissolve all of his troubles by just leaving a guy to drown out there in the ocean, but he perpetuated his troubles by rescuing the guy and saving his life. It gave me a chance, too, to show that villains don't reform just because you do",
+          "bbox": [
+            {
+              "h": 130.9968,
+              "w": 285.1668,
+              "x": 453.40680000000003,
+              "y": 94.07952000000002,
+              "confidence": 0.89,
+              "end_index": 730,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "caption": "Comic panel showing a cyclone sucking up Uncle Scrooge's money from a bin, with a caption box.",
+          "md": "![Comic panel showing a cyclone sucking up Uncle Scrooge's money from a bin, with a caption box.](CB-Conversations-scan-3-rotated_spread_004_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-3-rotated_spread_004_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 329.84348381049927,
+              "w": 276.25703055926067,
+              "x": 461.9380454697028,
+              "y": 242.06774373332703,
+              "confidence": 0.99,
+              "end_index": 119,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "THE HUGE FUNNEL DIPS ONCE, AND UNCLE SCROOGE'S VAST FORTUNE IS SUCKED UP INTO THE SKY!",
+          "value": "THE HUGE FUNNEL DIPS ONCE, AND UNCLE SCROOGE'S VAST FORTUNE IS SUCKED UP INTO THE SKY!",
+          "bbox": [
+            {
+              "h": 66.81925594035825,
+              "w": 99.96107390910826,
+              "x": 518.0418217654345,
+              "y": 251.0081900962272,
+              "confidence": 0.76,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 46.79,
+              "w": 100.42,
+              "x": 516.55,
+              "y": 271.3,
+              "confidence": 1.0,
+              "end_index": 85,
+              "label": "image",
+              "start_index": 21
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "86, 87"
+    }
+  ]
+}

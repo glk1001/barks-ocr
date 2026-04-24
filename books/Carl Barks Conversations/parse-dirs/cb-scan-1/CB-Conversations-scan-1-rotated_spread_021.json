@@ -1,0 +1,440 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# CHRONOLOGY",
+          "value": "CHRONOLOGY",
+          "bbox": [
+            {
+              "h": 15.51,
+              "w": 75.71,
+              "x": 93.58,
+              "y": 13.93,
+              "confidence": 1.0,
+              "end_index": 11,
+              "label": "header",
+              "start_index": 2
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "graphic reproduction and sale; a historic meeting of Carl Barks and Floyd Gottfredson (the Mickey Mouse comic strip artist from 1930–1975) occurs at the home of Willits (5 Dec.).",
+          "value": "graphic reproduction and sale; a historic meeting of Carl Barks and Floyd Gottfredson (the Mickey Mouse comic strip artist from 1930–1975) occurs at the home of Willits (5 Dec.).",
+          "bbox": [
+            {
+              "h": 72.55584,
+              "w": 283.48440000000005,
+              "x": 95.05560000000001,
+              "y": 42.81984,
+              "confidence": 0.88,
+              "end_index": 177,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1982–93** Barks produces 17 large original Disney paintings for Another Rainbow Publishing's lithograph series.",
+          "value": "1982–93 Barks produces 17 large original Disney paintings for Another Rainbow Publishing's lithograph series.",
+          "bbox": [
+            {
+              "h": 16.057440000000014,
+              "w": 270.8664,
+              "x": 92.53200000000001,
+              "y": 174.84768,
+              "confidence": 0.75,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.93,
+              "w": 149.84,
+              "x": 141.69,
+              "y": 101.22,
+              "confidence": 1.0,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 74
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1983** Carl and Garé move to Grants Pass, Oregon.",
+          "value": "1983 Carl and Garé move to Grants Pass, Oregon.",
+          "bbox": [
+            {
+              "h": 16.05744,
+              "w": 219.5532,
+              "x": 94.21440000000001,
+              "y": 120.72816000000002,
+              "confidence": 0.79,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1983–90** Carl Barks Library (30 volumes), edited by Hamilton, et al., is published by Another Rainbow.",
+          "value": "1983–90 Carl Barks Library (30 volumes), edited by Hamilton, et al., is published by Another Rainbow.",
+          "bbox": [
+            {
+              "h": 28.658037135278505,
+              "w": 170.60587499999997,
+              "x": 92.26912500000002,
+              "y": 140.3980901856764,
+              "confidence": 0.62,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 16.04,
+              "w": 124.6,
+              "x": 138.27,
+              "y": 153.02,
+              "confidence": 1.0,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 76
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1984** Western Publishing ceases Disney comic book production.",
+          "value": "1984 Western Publishing ceases Disney comic book production.",
+          "bbox": [
+            {
+              "h": 26.63058213366998,
+              "w": 283.1820624434309,
+              "x": 93.43684124606995,
+              "y": 141.5856065239139,
+              "confidence": 0.55,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1985** Ault is interviewed on *Entertainment This Week* (5 Oct.) about the university courses he has been teaching on Barks.",
+          "value": "1985 Ault is interviewed on Entertainment This Week (5 Oct.) about the university courses he has been teaching on Barks.",
+          "bbox": [
+            {
+              "h": 29.141280000000023,
+              "w": 276.75480000000005,
+              "x": 92.53200000000001,
+              "y": 195.06816,
+              "confidence": 0.79,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 15.78,
+              "w": 218.45,
+              "x": 138.8,
+              "y": 195.61,
+              "confidence": 1.0,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 9
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1986–98** Disney Comics are published again on a regular basis in the USA, first by Gladstone Publishing (Oct. 1986–May 1990), then by Disney Comics (June 1990–July 1993), and by Gladstone Publishing again (Aug. 1993–Feb. 1999).",
+          "value": "1986–98 Disney Comics are published again on a regular basis in the USA, first by Gladstone Publishing (Oct. 1986–May 1990), then by Disney Comics (June 1990–July 1993), and by Gladstone Publishing again (Aug. 1993–Feb. 1999).",
+          "bbox": [
+            {
+              "h": 54.119519999999994,
+              "w": 280.9608,
+              "x": 91.69080000000001,
+              "y": 228.37248000000002,
+              "confidence": 0.8,
+              "end_index": 229,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1986–96** As Barks's original paintings produced for Another Rainbow's lithograph series begin to be auctioned, the prices soar past the $75,000 mark and break into six figures, reaching a high of over $200,000.",
+          "value": "1986–96 As Barks's original paintings produced for Another Rainbow's lithograph series begin to be auctioned, the prices soar past the $75,000 mark and break into six figures, reaching a high of over $200,000.",
+          "bbox": [
+            {
+              "h": 51.740639999999985,
+              "w": 286.84920000000005,
+              "x": 90.00840000000001,
+              "y": 287.84448000000003,
+              "confidence": 0.8,
+              "end_index": 212,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1987** In Italy, a monthly comics magazine *Zio Paperone* (*Uncle Scrooge*), specifically devoted to Barks's stories, is launched in Dec. and will eventually print the complete works of Barks (issues 1 to 69).",
+          "value": "1987 In Italy, a monthly comics magazine Zio Paperone (Uncle Scrooge), specifically devoted to Barks's stories, is launched in Dec. and will eventually print the complete works of Barks (issues 1 to 69).",
+          "bbox": [
+            {
+              "h": 51.14591999999999,
+              "w": 280.1196000000001,
+              "x": 89.16720000000001,
+              "y": 347.31648,
+              "confidence": 0.81,
+              "end_index": 210,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1988** *Mickey Mouse in Color*, containing some of the best Mickey Mouse work of Gottfredson and Barks, is published by Another Rainbow.",
+          "value": "1988 Mickey Mouse in Color, containing some of the best Mickey Mouse work of Gottfredson and Barks, is published by Another Rainbow.",
+          "bbox": [
+            {
+              "h": 38.06207999999998,
+              "w": 282.64320000000004,
+              "x": 87.4848,
+              "y": 406.19376000000005,
+              "confidence": 0.79,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1991** Receives the Disney Legends award, the only comic book artist ever to be so honored.",
+          "value": "1991 Receives the Disney Legends award, the only comic book artist ever to be so honored.",
+          "bbox": [
+            {
+              "h": 25.572960000000023,
+              "w": 281.802,
+              "x": 85.8024,
+              "y": 452.58192,
+              "confidence": 0.78,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1992** Gottfried Helnwein conducts an extensive interview with Barks (11 July) at Grants Pass.",
+          "value": "1992 Gottfried Helnwein conducts an extensive interview with Barks (11 July) at Grants Pass.",
+          "bbox": [
+            {
+              "h": 26.16768000000002,
+              "w": 266.66040000000004,
+              "x": 84.9612,
+              "y": 485.29152,
+              "confidence": 0.8,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1992–98** Gladstone Publishing produces the Carl Barks Library in Color in prestige comic book format.",
+          "value": "1992–98 Gladstone Publishing produces the Carl Barks Library in Color in prestige comic book format.",
+          "bbox": [
+            {
+              "h": 26.762399999999957,
+              "w": 263.29560000000004,
+              "x": 84.12,
+              "y": 519.19056,
+              "confidence": 0.81,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# CHRONOLOGY",
+          "value": "CHRONOLOGY",
+          "bbox": [
+            {
+              "h": 8.676286472148544,
+              "w": 69.13612499999999,
+              "x": 669.542625,
+              "y": 25.765941644562336,
+              "confidence": 0.9,
+              "end_index": 11,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**1993** Garé Barks dies (10 Mar.); a large collection of Barks oil paintings is exhibited at the Diamond International Convention in Atlanta, Georgia, where the Carl Barks Lifetime Achievement Award (the Barkster) for comic book excellence is established; Kivekas interviews Barks in Grants Pass (Oct.); *Wer ist Carl Barks* by Helnwein et al. is published as the catalogue for *Die Ente ist Mensch geworden*, the first retrospective traveling exhibition of Barks's work, which begins in 1994.",
+          "value": "1993 Garé Barks dies (10 Mar.); a large collection of Barks oil paintings is exhibited at the Diamond International Convention in Atlanta, Georgia, where the Carl Barks Lifetime Achievement Award (the Barkster) for comic book excellence is established; Kivekas interviews Barks in Grants Pass (Oct.); Wer ist Carl Barks by Helnwein et al. is published as the catalogue for Die Ente ist Mensch geworden, the first retrospective traveling exhibition of Barks's work, which begins in 1994.",
+          "bbox": [
+            {
+              "h": 102.88656,
+              "w": 284.3256,
+              "x": 455.9304000000001,
+              "y": 48.172320000000006,
+              "confidence": 0.78,
+              "end_index": 493,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1993–96** Under the management of the \"Carl Barks Studio,\" Barks produces a new Disney money bin painting, which is made into a serigraph, as well as eleven small paintings, several watercolors, and numerous other small drawings, figurines, bronze figures, tiles, and other merchandise for reproduction and marketing, primarily at Disney conventions.",
+          "value": "1993–96 Under the management of the \"Carl Barks Studio,\" Barks produces a new Disney money bin painting, which is made into a serigraph, as well as eleven small paintings, several watercolors, and numerous other small drawings, figurines, bronze figures, tiles, and other merchandise for reproduction and marketing, primarily at Disney conventions.",
+          "bbox": [
+            {
+              "h": 76.71887999999998,
+              "w": 284.32559999999995,
+              "x": 455.08920000000006,
+              "y": 157.60080000000002,
+              "confidence": 0.8,
+              "end_index": 351,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1994–97** Helnwein organizes the first retrospective museum show, *Die Ente ist Mensch geworden—das zeichnerische Werk von Carl Barks* (And the Duck Became Flesh—The Art of Carl Barks), consisting of more than 400 original art works, 290 from the collection of Helnwein, which opens in Münchner Stadtmuseum, in Munich; the exhibit appears in ten different museums in Europe and is seen by more than 400,000 people.",
+          "value": "1994–97 Helnwein organizes the first retrospective museum show, Die Ente ist Mensch geworden—das zeichnerische Werk von Carl Barks (And the Duck Became Flesh—The Art of Carl Barks), consisting of more than 400 original art works, 290 from the collection of Helnwein, which opens in Münchner Stadtmuseum, in Munich; the exhibit appears in ten different museums in Europe and is seen by more than 400,000 people.",
+          "bbox": [
+            {
+              "h": 102.29184000000001,
+              "w": 285.1668,
+              "x": 455.08920000000006,
+              "y": 241.45632000000003,
+              "confidence": 0.79,
+              "end_index": 415,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1994** Barks tours Europe with the managers of the Carl Barks Studio, beginning in late May and ending after seven weeks, during which time he visits and is interviewed in eleven countries.",
+          "value": "1994 Barks tours Europe with the managers of the Carl Barks Studio, beginning in late May and ending after seven weeks, during which time he visits and is interviewed in eleven countries.",
+          "bbox": [
+            {
+              "h": 51.27,
+              "w": 282.85,
+              "x": 454.77,
+              "y": 350.47,
+              "confidence": 1.0,
+              "end_index": 190,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1996** *Animal Quackers* is published, containing many of Barks's non-Disney paintings from 1968 to 1996.",
+          "value": "1996 Animal Quackers is published, containing many of Barks's non-Disney paintings from 1968 to 1996.",
+          "bbox": [
+            {
+              "h": 23.92551724137934,
+              "w": 272.07562500000006,
+              "x": 454.51087500000006,
+              "y": 409.10005305039795,
+              "confidence": 0.79,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1996–97** Barks produces 79 colored pencil drawings in six months (Oct. 1996–Mar. 1997) for display and sale at his 96th birthday celebration at Disney World, 40 of which are published in *Barks Treasury*; *The Unexpurgated Carl Barks* is published (1997), reprinting some of Barks's 1931–35 *Calgary Eye-Opener* work; Barks produces his last oil paintings.",
+          "value": "1996–97 Barks produces 79 colored pencil drawings in six months (Oct. 1996–Mar. 1997) for display and sale at his 96th birthday celebration at Disney World, 40 of which are published in Barks Treasury; The Unexpurgated Carl Barks is published (1997), reprinting some of Barks's 1931–35 Calgary Eye-Opener work; Barks produces his last oil paintings.",
+          "bbox": [
+            {
+              "h": 78.88,
+              "w": 283.91,
+              "x": 453.99,
+              "y": 439.86,
+              "confidence": 1.0,
+              "end_index": 358,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1997–98** Barks is entangled in a series of very complex and painful lawsuits, and the \"Carl Barks Studio\" is dissolved.",
+          "value": "1997–98 Barks is entangled in a series of very complex and painful lawsuits, and the \"Carl Barks Studio\" is dissolved.",
+          "bbox": [
+            {
+              "h": 24.19,
+              "w": 267.34,
+              "x": 455.56,
+              "y": 525.57,
+              "confidence": 1.0,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

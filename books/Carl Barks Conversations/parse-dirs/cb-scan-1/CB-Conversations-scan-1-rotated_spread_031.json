@@ -1,0 +1,194 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "18 CARL BARKS: CONVERSATIONS",
+              "value": "18 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.577125972691979,
+                  "w": 120.03766365162923,
+                  "x": 107.32288878501335,
+                  "y": 15.027341895424449,
+                  "confidence": 0.82,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "18 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.58,
+              "w": 120.04,
+              "x": 107.32,
+              "y": 15.03,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "N.Y. exchange and pick (bet-less) horses on several race tracks. TV annoys me. Football and baseball are too draggy. Most movies, I think you'll agree, have become too morbid. So what's an old retiree to do but die grouchily? Oh, yes! Travel! I'd like to travel, but HOW? I haven't been able to save enough money to go to any romantic place, and this climate suits me very well. We have just returned from two weeks of painting in Oregon and the Redwoods and I'm behind with a job I took on before we left. The job is to dash off a 24 x 12 oil painting of the local high school. It's a complicated old Spanish type building, and I have to put in every arch and cornice and piece of molding in 3 p.m. equinoctial lighting. Plus ivy-covered cell tower and a whitewashed \"S\" on a distant purple mountain. The old school is being abandoned and the last graduating class raised $300 to tempt some artist to paint it \"like it is.\" Somehow, all fingers suddenly pointed at me. And to an old retired hack, that $300 looks as big as Uncle Scrooge's money bin.",
+          "value": "N.Y. exchange and pick (bet-less) horses on several race tracks. TV annoys me. Football and baseball are too draggy. Most movies, I think you'll agree, have become too morbid. So what's an old retiree to do but die grouchily? Oh, yes! Travel! I'd like to travel, but HOW? I haven't been able to save enough money to go to any romantic place, and this climate suits me very well. We have just returned from two weeks of painting in Oregon and the Redwoods and I'm behind with a job I took on before we left. The job is to dash off a 24 x 12 oil painting of the local high school. It's a complicated old Spanish type building, and I have to put in every arch and cornice and piece of molding in 3 p.m. equinoctial lighting. Plus ivy-covered cell tower and a whitewashed \"S\" on a distant purple mountain. The old school is being abandoned and the last graduating class raised $300 to tempt some artist to paint it \"like it is.\" Somehow, all fingers suddenly pointed at me. And to an old retired hack, that $300 looks as big as Uncle Scrooge's money bin.",
+          "bbox": [
+            {
+              "h": 192.4033328827649,
+              "w": 285.0691786037538,
+              "x": 104.84432265863187,
+              "y": 39.016021171160446,
+              "confidence": 0.99,
+              "end_index": 1049,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# A Conversation with Carl Barks",
+          "value": "A Conversation with Carl Barks",
+          "bbox": [
+            {
+              "h": 57.41762798208842,
+              "w": 194.07127562881095,
+              "x": 485.20002853468,
+              "y": 124.05108575647867,
+              "confidence": 0.94,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**J. MICHAEL BARRIER, GLENN BRAY, BOB FOSTER, AND BILL SPICER / 1971**",
+          "value": "J. MICHAEL BARRIER, GLENN BRAY, BOB FOSTER, AND BILL SPICER / 1971",
+          "bbox": [
+            {
+              "h": 29.73600000000002,
+              "w": 200.20559999999995,
+              "x": 482.00759999999997,
+              "y": 198.63648000000003,
+              "confidence": 0.84,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Unpublished interview conducted on 30 May 1971 in Goleta, California. Portions of this interview appeared in altered form in J. Michael Barrier's *Carl Barks and the Art of the Comic Book*. Reprinted by permission of J. Michael Barrier.",
+          "value": "Unpublished interview conducted on 30 May 1971 in Goleta, California. Portions of this interview appeared in altered form in J. Michael Barrier's Carl Barks and the Art of the Comic Book. Reprinted by permission of J. Michael Barrier.",
+          "bbox": [
+            {
+              "h": 66.13719082031247,
+              "w": 162.04350328696643,
+              "x": 468.5887128429879,
+              "y": 290.20018895293447,
+              "confidence": 0.97,
+              "end_index": 235,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** I want to hear some more about your experiences in the Disney story department. I believe you said in the *Comic Art* #7 interview that you started off as an in-betweener; how did you get in the story department after that?",
+          "value": "BARRIER: I want to hear some more about your experiences in the Disney story department. I believe you said in the Comic Art #7 interview that you started off as an in-betweener; how did you get in the story department after that?",
+          "bbox": [
+            {
+              "h": 49.55944518864329,
+              "w": 283.36527474752285,
+              "x": 445.92926853086897,
+              "y": 375.1521779153964,
+              "confidence": 0.97,
+              "end_index": 235,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I got in the story department through one gag. It made a big hit with Walt; he paid me fifty dollars for that gag. That was the gag of Donald in a barber chair in the museum of modern science; he put a nickel in a slot on the arm of a barber chair, and he got a haircut. He was kind of smart-alecky, and he put his nickel in the slot and pulled it back out, and he got turned upside down and got his hair cut on his fanny, and his beak was clamped into the shoeshine device down on the foot pedals of the barber chair, and he got his beak shined up. That was quite a gag.",
+          "value": "BARKS: I got in the story department through one gag. It made a big hit with Walt; he paid me fifty dollars for that gag. That was the gag of Donald in a barber chair in the museum of modern science; he put a nickel in a slot on the arm of a barber chair, and he got a haircut. He was kind of smart-alecky, and he put his nickel in the slot and pulled it back out, and he got turned upside down and got his hair cut on his fanny, and his beak was clamped into the shoeshine device down on the foot pedals of the barber chair, and he got his beak shined up. That was quite a gag.",
+          "bbox": [
+            {
+              "h": 103.04869004382626,
+              "w": 284.811688333651,
+              "x": 446.38619416920733,
+              "y": 426.83119135861284,
+              "confidence": 0.98,
+              "end_index": 581,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "19",
+              "value": "19",
+              "bbox": [
+                {
+                  "h": 8.8376845369664,
+                  "w": 10.023762361852121,
+                  "x": 584.2209035584987,
+                  "y": 567.3343579744666,
+                  "confidence": 0.91,
+                  "end_index": 1,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "19",
+          "bbox": [
+            {
+              "h": 8.84,
+              "w": 10.02,
+              "x": 584.22,
+              "y": 567.33,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "18, 19"
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "14 CARL BARKS: CONVERSATIONS",
+              "value": "14 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.076391385408728,
+                  "w": 120.14117569193027,
+                  "x": 102.96378713914827,
+                  "y": 23.866742880025726,
+                  "confidence": 0.89,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "14 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.08,
+              "w": 120.14,
+              "x": 102.96,
+              "y": 23.87,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "use for him. If I had known he was eventually going to have a book of his own, I would have made him a character that was easier to draw. He is quite tall, and it's awkward to use a tall character along with the ducks, who are only about two feet high. I would have made him a funnier looking character and put more thought about the development of his character into the actual drawing of him. I invented the little light bulb character one time to take the bareness out of the Gyro stories. It looked a little thin, just one character sitting there, talking to himself all the time.",
+          "value": "use for him. If I had known he was eventually going to have a book of his own, I would have made him a character that was easier to draw. He is quite tall, and it's awkward to use a tall character along with the ducks, who are only about two feet high. I would have made him a funnier looking character and put more thought about the development of his character into the actual drawing of him. I invented the little light bulb character one time to take the bareness out of the Gyro stories. It looked a little thin, just one character sitting there, talking to himself all the time.",
+          "bbox": [
+            {
+              "h": 102.12733282560023,
+              "w": 284.1841043254573,
+              "x": 101.73525475181022,
+              "y": 46.94990030130526,
+              "confidence": 0.98,
+              "end_index": 583,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: How about the Beagle Boys?**",
+          "value": "Q: How about the Beagle Boys?",
+          "bbox": [
+            {
+              "h": 11.14976052782011,
+              "w": 124.23134138600422,
+              "x": 102.08449831483424,
+              "y": 158.58740214843752,
+              "confidence": 0.82,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** I used them when I had to have a gang of villains. And I could use the Junior Woodchucks about once every year or 18 months without using them to death.",
+          "value": "A: I used them when I had to have a gang of villains. And I could use the Junior Woodchucks about once every year or 18 months without using them to death.",
+          "bbox": [
+            {
+              "h": 35.088480000000004,
+              "w": 282.6432,
+              "x": 101.7852,
+              "y": 171.27936,
+              "confidence": 0.87,
+              "end_index": 158,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: Were you satirizing the Boy Scouts with them?**\n**A:** Oh, no! I never heard of the Boy Scouts.",
+          "value": "Q: Were you satirizing the Boy Scouts with them?\nA: Oh, no! I never heard of the Boy Scouts.",
+          "bbox": [
+            {
+              "h": 22.87384615384616,
+              "w": 193.738875,
+              "x": 100.68112500000001,
+              "y": 216.90716180371356,
+              "confidence": 0.79,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.31,
+              "w": 193.74,
+              "x": 100.68,
+              "y": 216.91,
+              "confidence": 1.0,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 8.68,
+              "w": 167.19,
+              "x": 101.73,
+              "y": 231.1,
+              "confidence": 1.0,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 53
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: You once mentioned doing a sort of take-off on the Peace Corps . . .**\n**A:** I was a little afraid to draw or write any stories that might get the publishers in trouble with the government or tread on some politician's toes. And, you know, our foreign policy is \"Always Be Nice.\" Anything that gets published under the Disney name in a foreign country is accepted as part of the American foreign policy, I imagine, by the people who read it. So I felt I'd better not kid about it. I did do a very mild take-off of the Peace Corps under another name. It was a foolproof way of kidding the Peace Corps without hurting anyone's feelings. Most of my censorship was self-censorship because of the fear of having to redo something after I'd sent it in, been paid for it, and spent the money.",
+          "value": "Q: You once mentioned doing a sort of take-off on the Peace Corps . . .\nA: I was a little afraid to draw or write any stories that might get the publishers in trouble with the government or tread on some politician's toes. And, you know, our foreign policy is \"Always Be Nice.\" Anything that gets published under the Disney name in a foreign country is accepted as part of the American foreign policy, I imagine, by the people who read it. So I felt I'd better not kid about it. I did do a very mild take-off of the Peace Corps under another name. It was a foolproof way of kidding the Peace Corps without hurting anyone's feelings. Most of my censorship was self-censorship because of the fear of having to redo something after I'd sent it in, been paid for it, and spent the money.",
+          "bbox": [
+            {
+              "h": 140.13316646341463,
+              "w": 281.0979152593846,
+              "x": 101.14207040181975,
+              "y": 251.49715664062504,
+              "confidence": 0.91,
+              "end_index": 790,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.31,
+              "w": 273.39,
+              "x": 100.68,
+              "y": 250.56,
+              "confidence": 1.0,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 126.99,
+              "w": 281.28,
+              "x": 99.89,
+              "y": 263.97,
+              "confidence": 0.91,
+              "end_index": 790,
+              "label": "text",
+              "start_index": 76
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: Did you feel that Magica DeSpell filled a need?**",
+          "value": "Q: Did you feel that Magica DeSpell filled a need?",
+          "bbox": [
+            {
+              "h": 11.25603641387195,
+              "w": 194.00485561166164,
+              "x": 101.92567382812501,
+              "y": 400.7839668064025,
+              "confidence": 0.81,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** Yes. I was running out of villains. I couldn't use the Beagle Boys all the time and so I thought of this character. She is capable of so many things and it brought in an opportunity to kid this Superman stuff—the super witches and the weird things that you find in some of the other comics.",
+          "value": "A: Yes. I was running out of villains. I couldn't use the Beagle Boys all the time and so I thought of this character. She is capable of so many things and it brought in an opportunity to kid this Superman stuff—the super witches and the weird things that you find in some of the other comics.",
+          "bbox": [
+            {
+              "h": 48.9027055702918,
+              "w": 282.3277499999999,
+              "x": 101.46975,
+              "y": 413.8325729442971,
+              "confidence": 0.88,
+              "end_index": 296,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: Could you tell us something about the pay?**",
+          "value": "Q: Could you tell us something about the pay?",
+          "bbox": [
+            {
+              "h": 11.323888662347564,
+              "w": 181.44015817632916,
+              "x": 101.63762208519913,
+              "y": 473.0354915967988,
+              "confidence": 0.84,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** Well, I got, oh, let's see, it was $11.50 a page for writing the script and $34 a page for art. That's just about the median of the scale that Whitman paid. There were lots of guys that got $38 to $40 a page for the art, and I don't know what the top was for stories, but a lot of the guys were writing stories, I understand, for $10 a page. One guy was getting $33 a",
+          "value": "A: Well, I got, oh, let's see, it was $11.50 a page for writing the script and $34 a page for art. That's just about the median of the scale that Whitman paid. There were lots of guys that got $38 to $40 a page for the art, and I don't know what the top was for stories, but a lot of the guys were writing stories, I understand, for $10 a page. One guy was getting $33 a",
+          "bbox": [
+            {
+              "h": 63.04031999999995,
+              "w": 284.3256,
+              "x": 100.944,
+              "y": 486.48096,
+              "confidence": 0.86,
+              "end_index": 373,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nWILLITS, D. THOMPSON, AND M. THOMPSON / 1962 15\n\\</page_header>",
+          "value": "<page_header>\nWILLITS, D. THOMPSON, AND M. THOMPSON / 1962 15\n</page_header>",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 204.25,
+              "x": 520.49,
+              "y": 21.3,
+              "confidence": 1.0,
+              "end_index": 61,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "page for doing illustration-type drawing at Whitman. Now, I don't know whether that was just for one particular page of that drawing or not. It may be that he was only doing the pencil art and getting that much. I thought he was doing the whole thing, except the lettering and dialog. My wife's pay came out of mine.",
+          "value": "page for doing illustration-type drawing at Whitman. Now, I don't know whether that was just for one particular page of that drawing or not. It may be that he was only doing the pencil art and getting that much. I thought he was doing the whole thing, except the lettering and dialog. My wife's pay came out of mine.",
+          "bbox": [
+            {
+              "h": 63.635040000000004,
+              "w": 280.1196,
+              "x": 440.78880000000004,
+              "y": 45.793440000000004,
+              "confidence": 0.93,
+              "end_index": 315,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: I understand they get a lot more for doing superheroes at DC.**\n**A:** Well, I'll tell you, there's so much going on in one of those *Superman* things compared to what there is in a duck page that they are not getting much more per pencil line than I was. Also, I get a pension.",
+          "value": "Q: I understand they get a lot more for doing superheroes at DC.\nA: Well, I'll tell you, there's so much going on in one of those Superman things compared to what there is in a duck page that they are not getting much more per pencil line than I was. Also, I get a pension.",
+          "bbox": [
+            {
+              "h": 48.902705570291786,
+              "w": 282.8535000000001,
+              "x": 440.841375,
+              "y": 118.57591511936342,
+              "confidence": 0.86,
+              "end_index": 282,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: What sort of schedule did you have?**",
+          "value": "Q: What sort of schedule did you have?",
+          "bbox": [
+            {
+              "h": 11.095666420541148,
+              "w": 154.2764186118522,
+              "x": 442.38967268483236,
+              "y": 178.11553423685217,
+              "confidence": 0.82,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** I generally started working around one o'clock in the afternoon and worked through until around ten o'clock at night, with a lot of time off to eat and so on, but I tried to do a page and a half in that time, or even two pages. I could do two pages all right if I concentrated and stayed right at it. But I generally goofed off so much that I hardly ever got more than a page and a half done during that particular work-time. As for the writing of a story, that took me, sometimes, a week to do a 10-page story. And that's only $115.",
+          "value": "A: I generally started working around one o'clock in the afternoon and worked through until around ten o'clock at night, with a lot of time off to eat and so on, but I tried to do a page and a half in that time, or even two pages. I could do two pages all right if I concentrated and stayed right at it. But I generally goofed off so much that I hardly ever got more than a page and a half done during that particular work-time. As for the writing of a story, that took me, sometimes, a week to do a 10-page story. And that's only $115.",
+          "bbox": [
+            {
+              "h": 101.69712000000004,
+              "w": 284.32559999999995,
+              "x": 441.63000000000005,
+              "y": 190.90512,
+              "confidence": 0.9,
+              "end_index": 539,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: And you still could turn out a *Scrooge* story every two months and a 10-page *Donald* story every month?**",
+          "value": "Q: And you still could turn out a Scrooge story every two months and a 10-page Donald story every month?",
+          "bbox": [
+            {
+              "h": 24.45,
+              "w": 276.28,
+              "x": 442.94,
+              "y": 301.3,
+              "confidence": 1.0,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Well, that figures out to around 26 pages a month. I worked six or eight months in advance. They can get them colored and printed in three or four months, but I tried to keep well ahead so they wouldn't send me a letter saying \"Hurry up that story,\" because I sure hate to have to be prodded.",
+          "value": "A: Well, that figures out to around 26 pages a month. I worked six or eight months in advance. They can get them colored and printed in three or four months, but I tried to keep well ahead so they wouldn't send me a letter saying \"Hurry up that story,\" because I sure hate to have to be prodded.",
+          "bbox": [
+            {
+              "h": 62.84,
+              "w": 282.59,
+              "x": 442.42,
+              "y": 328.38,
+              "confidence": 1.0,
+              "end_index": 298,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: How did you come to do the Little Golden Books with the ducks?**\n**A:** The Little Golden Books I did because I was asked to give them a try. I didn't eagerly ask to do any more, and that may be one of the reasons I wasn't asked to do more as the few duck Goldens came along. The work was not interesting. I only made cleaned-up pencil drawings on tracing paper. A water color \\[gouache] artist then made the color separations, or whatever.",
+          "value": "Q: How did you come to do the Little Golden Books with the ducks?\nA: The Little Golden Books I did because I was asked to give them a try. I didn't eagerly ask to do any more, and that may be one of the reasons I wasn't asked to do more as the few duck Goldens came along. The work was not interesting. I only made cleaned-up pencil drawings on tracing paper. A water color [gouache] artist then made the color separations, or whatever.",
+          "bbox": [
+            {
+              "h": 89.20800000000003,
+              "w": 284.3256,
+              "x": 442.47120000000007,
+              "y": 399.65184000000005,
+              "confidence": 0.91,
+              "end_index": 444,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Would you give us some details on your Barney Bear work? How did you get the assignment?**",
+          "value": "Q: Would you give us some details on your Barney Bear work? How did you get the assignment?",
+          "bbox": [
+            {
+              "h": 24.70880707888716,
+              "w": 278.0358447741997,
+              "x": 443.9124742997333,
+              "y": 498.3397056974086,
+              "confidence": 0.91,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** The Barney Bear stories were assigned to me for no particular reason that I know of (artists were in short supply, perhaps). I had never heard of",
+          "value": "A: The Barney Bear stories were assigned to me for no particular reason that I know of (artists were in short supply, perhaps). I had never heard of",
+          "bbox": [
+            {
+              "h": 23.136763925729497,
+              "w": 285.74512500000003,
+              "x": 442.418625,
+              "y": 524.7838726790451,
+              "confidence": 0.9,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "14, 15"
+    }
+  ]
+}

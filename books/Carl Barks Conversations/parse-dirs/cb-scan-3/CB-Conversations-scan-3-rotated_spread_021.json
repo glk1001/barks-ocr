@@ -1,0 +1,270 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "E. B. BOATNER / 1981 121",
+              "value": "E. B. BOATNER / 1981 121",
+              "bbox": [
+                {
+                  "h": 13.41,
+                  "w": 104.36,
+                  "x": 641.42,
+                  "y": 37.07,
+                  "confidence": 1.0,
+                  "end_index": 23,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "E. B. BOATNER / 1981 121",
+          "bbox": [
+            {
+              "h": 13.41,
+              "w": 104.36,
+              "x": 641.42,
+              "y": 37.07,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "caption": "Views from Carl Barks E. B. Boatner / 1981",
+          "md": "![Views from Carl Barks E. B. Boatner / 1981](CB-Conversations-scan-3-rotated_spread_021_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-3-rotated_spread_021_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 186.18743213128818,
+              "w": 303.538138451553,
+              "x": 100.3257203041635,
+              "y": 107.27961242378052,
+              "confidence": 0.82,
+              "end_index": 67,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "md": "Excerpts from the Introduction to *The Fine Art of Walt Disney's Donald Duck* by Carl Barks. Scottsdale, AZ & West Plains, Mo: Another Rainbow Publishing: 1981. 29-30, 35-36, 38-39, 40. Reprinted by permission of E. B. Boatner, Bruce Hamilton, and Another Rainbow Publishing, Inc.",
+          "value": "Excerpts from the Introduction to The Fine Art of Walt Disney's Donald Duck by Carl Barks. Scottsdale, AZ & West Plains, Mo: Another Rainbow Publishing: 1981. 29-30, 35-36, 38-39, 40. Reprinted by permission of E. B. Boatner, Bruce Hamilton, and Another Rainbow Publishing, Inc.",
+          "bbox": [
+            {
+              "h": 88.21986649676069,
+              "w": 164.72408444288303,
+              "x": 136.84901579768487,
+              "y": 316.0707250095275,
+              "confidence": 0.98,
+              "end_index": 279,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## On Walt Disney",
+          "value": "On Walt Disney",
+          "bbox": [
+            {
+              "h": 13.241888386051825,
+              "w": 81.74654881026106,
+              "x": 112.86778308998667,
+              "y": 420.6329616711129,
+              "confidence": 0.97,
+              "end_index": 16,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "Disney liked to feel that everyone was an extension of his own intellect. He was a sort of dreamer who came up with these quick and brilliant ideas and who had the aggressiveness to carry them out. Some of the things he did looked so stupid at first sight that I guess people got the idea he wasn't very damned intelligent for even thinking of such kooky ideas. Like Disneyland. Now, I swore the guy was nuts there, but he was nearly always right. His general batting average was well up there, about .750.",
+          "value": "Disney liked to feel that everyone was an extension of his own intellect. He was a sort of dreamer who came up with these quick and brilliant ideas and who had the aggressiveness to carry them out. Some of the things he did looked so stupid at first sight that I guess people got the idea he wasn't very damned intelligent for even thinking of such kooky ideas. Like Disneyland. Now, I swore the guy was nuts there, but he was nearly always right. His general batting average was well up there, about .750.",
+          "bbox": [
+            {
+              "h": 90.15876232374244,
+              "w": 284.22142175590704,
+              "x": 111.15940865567838,
+              "y": 440.7056604706556,
+              "confidence": 0.98,
+              "end_index": 505,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I felt that it was Disney's genius and aggressiveness that provided jobs for guys like me, the mice men of the world. Of course, I was a duck man, not a mouse man, but I was a mouse by personality. I didn't have the",
+          "value": "I felt that it was Disney's genius and aggressiveness that provided jobs for guys like me, the mice men of the world. Of course, I was a duck man, not a mouse man, but I was a mouse by personality. I didn't have the",
+          "bbox": [
+            {
+              "h": 38.66211605373475,
+              "w": 283.26566976705413,
+              "x": 110.88173190977517,
+              "y": 531.9054571074696,
+              "confidence": 0.97,
+              "end_index": 214,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "aggressiveness to ever produce a strip of my own. Disney gave me a stage on which to perform my little vaudeville act, and I did all right with it. I would never have had that opportunity in any other circumstances; he gave me that break, and a great many other artists too, who would have been waiters and truck drivers and trash picker-uppers. Disney's aggressiveness, and the fact that he was such a genius and an unbelievable optimist got all those jobs for thousands of artists. He wasn't living like Norton Simon and some of those other millionaires—he was a millionaire for just a few moments until he could find some place to dump it all and get into debt again. I don't think the guy was ever comfortable unless he had the bankers pounding on his door.",
+          "value": "aggressiveness to ever produce a strip of my own. Disney gave me a stage on which to perform my little vaudeville act, and I did all right with it. I would never have had that opportunity in any other circumstances; he gave me that break, and a great many other artists too, who would have been waiters and truck drivers and trash picker-uppers. Disney's aggressiveness, and the fact that he was such a genius and an unbelievable optimist got all those jobs for thousands of artists. He wasn't living like Norton Simon and some of those other millionaires—he was a millionaire for just a few moments until he could find some place to dump it all and get into debt again. I don't think the guy was ever comfortable unless he had the bankers pounding on his door.",
+          "bbox": [
+            {
+              "h": 143.07800213950557,
+              "w": 284.16692328029734,
+              "x": 463.4864934260671,
+              "y": 63.79649894424068,
+              "confidence": 0.99,
+              "end_index": 760,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## On His Own Solitariness:",
+          "value": "On His Own Solitariness:",
+          "bbox": [
+            {
+              "h": 11.199176324314013,
+              "w": 131.89587826314784,
+              "x": 465.8900865806022,
+              "y": 232.08119279725616,
+              "confidence": 0.95,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "Isolation? It was an isolation that I chose. I preferred it that way. I was never interested in people around me much, or in myself—was never way out there trying to change the whole structure of the universe. I guess that's why when I did write those duck stories I could get completely lost, lose all contact with where I was and just go ahead and write those things and really live them. Some people don't have that ability to create their own work which they can depart into.",
+          "value": "Isolation? It was an isolation that I chose. I preferred it that way. I was never interested in people around me much, or in myself—was never way out there trying to change the whole structure of the universe. I guess that's why when I did write those duck stories I could get completely lost, lose all contact with where I was and just go ahead and write those things and really live them. Some people don't have that ability to create their own work which they can depart into.",
+          "bbox": [
+            {
+              "h": 91.59144763719513,
+              "w": 285.87866630144816,
+              "x": 466.0005862471418,
+              "y": 253.12738153582322,
+              "confidence": 0.99,
+              "end_index": 478,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## Duck Philosophy",
+          "value": "Duck Philosophy",
+          "bbox": [
+            {
+              "h": 12.355708609271517,
+              "w": 89.3775,
+              "x": 467.12887500000005,
+              "y": 370.40837086092716,
+              "confidence": 0.96,
+              "end_index": 17,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "I think one of the duck's philosophies, as near as I could ever figure it out, was that nothing was ever so damned important that you should worry about it a hell of a lot.",
+          "value": "I think one of the duck's philosophies, as near as I could ever figure it out, was that nothing was ever so damned important that you should worry about it a hell of a lot.",
+          "bbox": [
+            {
+              "h": 37.59290066225162,
+              "w": 282.85350000000005,
+              "x": 467.9175,
+              "y": 391.43936423841063,
+              "confidence": 0.98,
+              "end_index": 171,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## On the Desire for Travel and Wealth",
+          "value": "On the Desire for Travel and Wealth",
+          "bbox": [
+            {
+              "h": 12.32310761718755,
+              "w": 189.6534428591845,
+              "x": 468.94485637385674,
+              "y": 455.55106293349854,
+              "confidence": 0.95,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "I don't think I ever had any great desire to travel. . . . No, I can't recall ever having any great desire. I guess it was that I satisfied myself in my imagination. I didn't ever feel I wanted to travel a lot, or that I wanted to be rich or anything. Just so long as I was comfortable, I was all right. That's how I could find so much fun with old Uncle Scrooge. He was just a fictional character that loved all that kind of stuff. It wouldn't have appealed to me at all.",
+          "value": "I don't think I ever had any great desire to travel. . . . No, I can't recall ever having any great desire. I guess it was that I satisfied myself in my imagination. I didn't ever feel I wanted to travel a lot, or that I wanted to be rich or anything. Just so long as I was comfortable, I was all right. That's how I could find so much fun with old Uncle Scrooge. He was just a fictional character that loved all that kind of stuff. It wouldn't have appealed to me at all.",
+          "bbox": [
+            {
+              "h": 92.52714109184451,
+              "w": 284.54185075266764,
+              "x": 469.52610665967995,
+              "y": 477.55340344893307,
+              "confidence": 0.99,
+              "end_index": 471,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "121"
+    }
+  ]
+}

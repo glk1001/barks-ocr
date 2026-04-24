@@ -1,0 +1,255 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "40 CARL BARKS: CONVERSATIONS",
+              "value": "40 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 11.191163185975615,
+                  "w": 120.39131517959225,
+                  "x": 103.74811687785824,
+                  "y": 40.36058670624524,
+                  "confidence": 0.84,
+                  "end_index": 27,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "40 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.19,
+              "w": 120.39,
+              "x": 103.75,
+              "y": 40.36,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** (laughs) I know it did. Oh, Walt built up some of that stuff himself. Oh, yeah, on the story conferences Walt would come in there to talk about the story with us. Why he was the one who would get that hot business in. Jack King and I were scared to death. We were afraid we were getting too risqué with some of that. But, oh no, Walt said, \"Part his hair right down the middle and use hot towels.\" He said, \"By all means, make him glow.\" (laughs) The hot towel was part of my original gag. I was just using the heat to make the duck uncomfortable, but Walt could see the visual possibilities.",
+          "value": "CB: (laughs) I know it did. Oh, Walt built up some of that stuff himself. Oh, yeah, on the story conferences Walt would come in there to talk about the story with us. Why he was the one who would get that hot business in. Jack King and I were scared to death. We were afraid we were getting too risqué with some of that. But, oh no, Walt said, \"Part his hair right down the middle and use hot towels.\" He said, \"By all means, make him glow.\" (laughs) The hot towel was part of my original gag. I was just using the heat to make the duck uncomfortable, but Walt could see the visual possibilities.",
+          "bbox": [
+            {
+              "h": 114.91992000000002,
+              "w": 283.48440000000005,
+              "x": 101.7852,
+              "y": 64.30752000000001,
+              "confidence": 0.91,
+              "end_index": 599,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Did Walt come in and talk to you about most of the cartoons?\n**CB:** Oh, no. At the time we worked on that \"Modern Inventions\" cartoon, that was 1936, he was still one of the boys around there. He hadn't become so busy that he just had to have his time all laid out for him and a bunch of flunkies delegated to do his thinking for him or run his errands for him. He would get around to the different story units, just drop in and talk about things like one of the creative men himself. So that was an exception to the rule. Later stories that we worked on, oh, he would come in—on a formal story conference—no, he never worked on any stories after that that I remember of in that same way of being informal about it.",
+          "value": "DA: Did Walt come in and talk to you about most of the cartoons?\nCB: Oh, no. At the time we worked on that \"Modern Inventions\" cartoon, that was 1936, he was still one of the boys around there. He hadn't become so busy that he just had to have his time all laid out for him and a bunch of flunkies delegated to do his thinking for him or run his errands for him. He would get around to the different story units, just drop in and talk about things like one of the creative men himself. So that was an exception to the rule. Later stories that we worked on, oh, he would come in—on a formal story conference—no, he never worked on any stories after that that I remember of in that same way of being informal about it.",
+          "bbox": [
+            {
+              "h": 130.99680000000004,
+              "w": 284.3256,
+              "x": 99.2616,
+              "y": 188.75448000000003,
+              "confidence": 0.91,
+              "end_index": 723,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** What was your function on the animated cartoons? Were you ever a director?",
+          "value": "DA: What was your function on the animated cartoons? Were you ever a director?",
+          "bbox": [
+            {
+              "h": 22.626719999999978,
+              "w": 283.48440000000005,
+              "x": 97.57920000000001,
+              "y": 326.8965600000001,
+              "confidence": 0.8,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, no, I wasn't a director. That required too much knowledge of animation and music and a wide range of skills and talents. I was just a gagman who was able to connect gags together and make stories out of them. That was my function in the story department—to think up gags and hook them into stories and work with other gagmen in improving stories.",
+          "value": "CB: Oh, no, I wasn't a director. That required too much knowledge of animation and music and a wide range of skills and talents. I was just a gagman who was able to connect gags together and make stories out of them. That was my function in the story department—to think up gags and hook them into stories and work with other gagmen in improving stories.",
+          "bbox": [
+            {
+              "h": 74.43,
+              "w": 280.9608,
+              "x": 96.73800000000001,
+              "y": 353.09592000000004,
+              "confidence": 0.83,
+              "end_index": 357,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** What kind of drawing did you do in the story department?\n**CB:** The drawing in the story department was mostly done with these big blue pencils—you know, a big pencil that has a red half and a blue half. We would sharpen those and use a common note pad, a memo pad that's about five by seven inches. We'd take these blue pencils and make the story sketch and letter down at the bottom of the story sketch what dialogue would be said or \\[what else would be happening on] the sound track. We'd tear those things off when we got them finished and stick them up with pushpins on the storyboard until finally we had a whole story laid out. It was practically in the form of a comic strip—like a comic",
+          "value": "DA: What kind of drawing did you do in the story department?\nCB: The drawing in the story department was mostly done with these big blue pencils—you know, a big pencil that has a red half and a blue half. We would sharpen those and use a common note pad, a memo pad that's about five by seven inches. We'd take these blue pencils and make the story sketch and letter down at the bottom of the story sketch what dialogue would be said or [what else would be happening on] the sound track. We'd tear those things off when we got them finished and stick them up with pushpins on the storyboard until finally we had a whole story laid out. It was practically in the form of a comic strip—like a comic",
+          "bbox": [
+            {
+              "h": 131.59224000000006,
+              "w": 283.48440000000005,
+              "x": 95.05560000000001,
+              "y": 438.83928000000003,
+              "confidence": 0.77,
+              "end_index": 704,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 17.88,
+              "w": 247.37,
+              "x": 93.58,
+              "y": 435.87,
+              "confidence": 1.0,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 122.24,
+              "w": 284.17,
+              "x": 93.58,
+              "y": 435.87,
+              "confidence": 0.77,
+              "end_index": 704,
+              "label": "text",
+              "start_index": 65
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nDONALD AULT / 1973 41\n\\</page_header>",
+          "value": "<page_header>\nDONALD AULT / 1973 41\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.94,
+              "w": 96.48,
+              "x": 626.43,
+              "y": 45.22,
+              "confidence": 1.0,
+              "end_index": 35,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "41",
+          "value": "41",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "book comic strip. The progress of the characters and what they said was all right there on the little rough sketches on the storyboard. We used the red end of the pencils once in a while for emphasizing some particular sound effect or special effect we wanted to get like a splash of water or raindrops.",
+          "value": "book comic strip. The progress of the characters and what they said was all right there on the little rough sketches on the storyboard. We used the red end of the pencils once in a while for emphasizing some particular sound effect or special effect we wanted to get like a splash of water or raindrops.",
+          "bbox": [
+            {
+              "h": 62.94091471274773,
+              "w": 283.6314056307164,
+              "x": 440.8266483898629,
+              "y": 68.77055263076412,
+              "confidence": 0.94,
+              "end_index": 302,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** Were you put through any kind of course in how to draw Donald Duck, or did you just sort of look at model sheets and improvise?\n**CB:** Well, it depends on what you might call a \"course.\" All of the in-betweener trainees had to take a certain amount of drawing instruction. It seemed to me that very little of that was concerned with the construction of the ducks. However, we were each given a model sheet, and the foremen around there would come around and give us specific instructions on how to draw the little circles and make the actions lines, and so on, on Mickey and Donald and whatever characters we were supposed to work on in the in-between work. They would tell us, \"Whenever you've got the time, just practice on these ducks or on these Mickeys.\" There was no formal judgment ever made on them that I can recall, because those things would come out when the guy got into actual production in-betweening, which was right at the end of the month of training, when a guy had to go through his testing period. And once he got into in-betweening, if he couldn't draw the duck or Mickey, it showed up very quickly in his work, and he was just handed his walking papers and told to get out.",
+          "value": "DA: Were you put through any kind of course in how to draw Donald Duck, or did you just sort of look at model sheets and improvise?\nCB: Well, it depends on what you might call a \"course.\" All of the in-betweener trainees had to take a certain amount of drawing instruction. It seemed to me that very little of that was concerned with the construction of the ducks. However, we were each given a model sheet, and the foremen around there would come around and give us specific instructions on how to draw the little circles and make the actions lines, and so on, on Mickey and Donald and whatever characters we were supposed to work on in the in-between work. They would tell us, \"Whenever you've got the time, just practice on these ducks or on these Mickeys.\" There was no formal judgment ever made on them that I can recall, because those things would come out when the guy got into actual production in-betweening, which was right at the end of the month of training, when a guy had to go through his testing period. And once he got into in-betweening, if he couldn't draw the duck or Mickey, it showed up very quickly in his work, and he was just handed his walking papers and told to get out.",
+          "bbox": [
+            {
+              "h": 231.03072000000003,
+              "w": 284.32559999999995,
+              "x": 441.63000000000005,
+              "y": 139.9284,
+              "confidence": 0.83,
+              "end_index": 1204,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** The kinds of drawings you did as an in-betweener—they were not finished drawings that appeared in the cartoons?",
+          "value": "DA: The kinds of drawings you did as an in-betweener—they were not finished drawings that appeared in the cartoons?",
+          "bbox": [
+            {
+              "h": 21.030993377483412,
+              "w": 274.178625,
+              "x": 443.47012500000005,
+              "y": 379.3465430463577,
+              "confidence": 0.82,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, no, they were just pencil drawings. The in-betweener was told to take these \"extremes,\" as they called them, that the animator turned out. An animator would take a sequence of action from the director, which was all timed out to be so many frames for each action, like picking up a glass. The animator would draw Mickey, for instance, with his hand on this glass. That would be one extreme. Then he would maybe draw the glass up in the air where Mickey has picked it up, and that would be the second extreme. That's what the animator would do. Then he would hand it over to his assistant who would figure out the number of drawings that would have to go between the drawing where Mickey had his hand on the glass down here and where he had picked it up in order to time with the music and all that. When the assistant had figured that out, he would make out a sheet of paper—it was called the \"exposure sheet\"—and it",
+          "value": "CB: Oh, no, they were just pencil drawings. The in-betweener was told to take these \"extremes,\" as they called them, that the animator turned out. An animator would take a sequence of action from the director, which was all timed out to be so many frames for each action, like picking up a glass. The animator would draw Mickey, for instance, with his hand on this glass. That would be one extreme. Then he would maybe draw the glass up in the air where Mickey has picked it up, and that would be the second extreme. That's what the animator would do. Then he would hand it over to his assistant who would figure out the number of drawings that would have to go between the drawing where Mickey had his hand on the glass down here and where he had picked it up in order to time with the music and all that. When the assistant had figured that out, he would make out a sheet of paper—it was called the \"exposure sheet\"—and it",
+          "bbox": [
+            {
+              "h": 166.72319999999996,
+              "w": 284.3256,
+              "x": 443.3124,
+              "y": 405.49464000000006,
+              "confidence": 0.82,
+              "end_index": 927,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "40, 41"
+    }
+  ]
+}

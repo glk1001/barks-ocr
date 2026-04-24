@@ -1,0 +1,330 @@
+{
+  "pdf": "CB-Conversations-scan-3-rotated.pdf",
+  "num_spreads": 38,
+  "spreads": [
+    {
+      "spread_num": 1,
+      "image": "CB-Conversations-scan-3-rotated_spread_001.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_001.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_001.json",
+      "printed_page_numbers_detected": {
+        "1": "80, 81"
+      }
+    },
+    {
+      "spread_num": 2,
+      "image": "CB-Conversations-scan-3-rotated_spread_002.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_002.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_002.json",
+      "printed_page_numbers_detected": {
+        "1": "82, 83"
+      }
+    },
+    {
+      "spread_num": 3,
+      "image": "CB-Conversations-scan-3-rotated_spread_003.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_003.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_003.json",
+      "printed_page_numbers_detected": {
+        "1": "84, 85"
+      }
+    },
+    {
+      "spread_num": 4,
+      "image": "CB-Conversations-scan-3-rotated_spread_004.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_004.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_004.json",
+      "printed_page_numbers_detected": {
+        "1": "86, 87"
+      }
+    },
+    {
+      "spread_num": 5,
+      "image": "CB-Conversations-scan-3-rotated_spread_005.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_005.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_005.json",
+      "printed_page_numbers_detected": {
+        "1": "88, 89"
+      }
+    },
+    {
+      "spread_num": 6,
+      "image": "CB-Conversations-scan-3-rotated_spread_006.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_006.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_006.json",
+      "printed_page_numbers_detected": {
+        "1": "90"
+      }
+    },
+    {
+      "spread_num": 7,
+      "image": "CB-Conversations-scan-3-rotated_spread_007.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_007.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_007.json",
+      "printed_page_numbers_detected": {
+        "1": "92, 93"
+      }
+    },
+    {
+      "spread_num": 8,
+      "image": "CB-Conversations-scan-3-rotated_spread_008.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_008.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_008.json",
+      "printed_page_numbers_detected": {
+        "1": "94, 95"
+      }
+    },
+    {
+      "spread_num": 9,
+      "image": "CB-Conversations-scan-3-rotated_spread_009.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_009.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_009.json"
+    },
+    {
+      "spread_num": 10,
+      "image": "CB-Conversations-scan-3-rotated_spread_010.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_010.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_010.json",
+      "printed_page_numbers_detected": {
+        "1": "98, 99"
+      }
+    },
+    {
+      "spread_num": 11,
+      "image": "CB-Conversations-scan-3-rotated_spread_011.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_011.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_011.json"
+    },
+    {
+      "spread_num": 12,
+      "image": "CB-Conversations-scan-3-rotated_spread_012.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_012.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_012.json",
+      "printed_page_numbers_detected": {
+        "1": "102"
+      }
+    },
+    {
+      "spread_num": 13,
+      "image": "CB-Conversations-scan-3-rotated_spread_013.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_013.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_013.json"
+    },
+    {
+      "spread_num": 14,
+      "image": "CB-Conversations-scan-3-rotated_spread_014.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_014.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_014.json",
+      "printed_page_numbers_detected": {
+        "1": "106, 107"
+      }
+    },
+    {
+      "spread_num": 15,
+      "image": "CB-Conversations-scan-3-rotated_spread_015.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_015.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_015.json",
+      "printed_page_numbers_detected": {
+        "1": "108"
+      }
+    },
+    {
+      "spread_num": 16,
+      "image": "CB-Conversations-scan-3-rotated_spread_016.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_016.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_016.json"
+    },
+    {
+      "spread_num": 17,
+      "image": "CB-Conversations-scan-3-rotated_spread_017.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_017.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_017.json",
+      "printed_page_numbers_detected": {
+        "1": "112, 113"
+      }
+    },
+    {
+      "spread_num": 18,
+      "image": "CB-Conversations-scan-3-rotated_spread_018.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_018.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_018.json",
+      "printed_page_numbers_detected": {
+        "1": "114, 115"
+      }
+    },
+    {
+      "spread_num": 19,
+      "image": "CB-Conversations-scan-3-rotated_spread_019.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_019.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_019.json",
+      "printed_page_numbers_detected": {
+        "1": "116, 117, 117"
+      }
+    },
+    {
+      "spread_num": 20,
+      "image": "CB-Conversations-scan-3-rotated_spread_020.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_020.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_020.json",
+      "printed_page_numbers_detected": {
+        "1": "118, 119"
+      }
+    },
+    {
+      "spread_num": 21,
+      "image": "CB-Conversations-scan-3-rotated_spread_021.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_021.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_021.json",
+      "printed_page_numbers_detected": {
+        "1": "121"
+      }
+    },
+    {
+      "spread_num": 22,
+      "image": "CB-Conversations-scan-3-rotated_spread_022.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_022.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_022.json",
+      "printed_page_numbers_detected": {
+        "1": "122"
+      }
+    },
+    {
+      "spread_num": 23,
+      "image": "CB-Conversations-scan-3-rotated_spread_023.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_023.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_023.json",
+      "printed_page_numbers_detected": {
+        "1": "124, 125"
+      }
+    },
+    {
+      "spread_num": 24,
+      "image": "CB-Conversations-scan-3-rotated_spread_024.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_024.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_024.json"
+    },
+    {
+      "spread_num": 25,
+      "image": "CB-Conversations-scan-3-rotated_spread_025.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_025.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_025.json",
+      "printed_page_numbers_detected": {
+        "1": "128, 129"
+      }
+    },
+    {
+      "spread_num": 26,
+      "image": "CB-Conversations-scan-3-rotated_spread_026.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_026.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_026.json",
+      "printed_page_numbers_detected": {
+        "1": "130, 131"
+      }
+    },
+    {
+      "spread_num": 27,
+      "image": "CB-Conversations-scan-3-rotated_spread_027.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_027.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_027.json",
+      "printed_page_numbers_detected": {
+        "1": "133"
+      }
+    },
+    {
+      "spread_num": 28,
+      "image": "CB-Conversations-scan-3-rotated_spread_028.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_028.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_028.json",
+      "printed_page_numbers_detected": {
+        "1": "134, 135"
+      }
+    },
+    {
+      "spread_num": 29,
+      "image": "CB-Conversations-scan-3-rotated_spread_029.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_029.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_029.json",
+      "printed_page_numbers_detected": {
+        "1": "136"
+      }
+    },
+    {
+      "spread_num": 30,
+      "image": "CB-Conversations-scan-3-rotated_spread_030.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_030.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_030.json",
+      "printed_page_numbers_detected": {
+        "1": "138, 139"
+      }
+    },
+    {
+      "spread_num": 31,
+      "image": "CB-Conversations-scan-3-rotated_spread_031.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_031.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_031.json",
+      "printed_page_numbers_detected": {
+        "1": "141"
+      }
+    },
+    {
+      "spread_num": 32,
+      "image": "CB-Conversations-scan-3-rotated_spread_032.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_032.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_032.json",
+      "printed_page_numbers_detected": {
+        "1": "142, 143"
+      }
+    },
+    {
+      "spread_num": 33,
+      "image": "CB-Conversations-scan-3-rotated_spread_033.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_033.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_033.json",
+      "printed_page_numbers_detected": {
+        "1": "144, 145"
+      }
+    },
+    {
+      "spread_num": 34,
+      "image": "CB-Conversations-scan-3-rotated_spread_034.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_034.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_034.json",
+      "printed_page_numbers_detected": {
+        "1": "146, 147"
+      }
+    },
+    {
+      "spread_num": 35,
+      "image": "CB-Conversations-scan-3-rotated_spread_035.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_035.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_035.json",
+      "printed_page_numbers_detected": {
+        "1": "148, 149"
+      }
+    },
+    {
+      "spread_num": 36,
+      "image": "CB-Conversations-scan-3-rotated_spread_036.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_036.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_036.json"
+    },
+    {
+      "spread_num": 37,
+      "image": "CB-Conversations-scan-3-rotated_spread_037.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_037.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_037.json",
+      "printed_page_numbers_detected": {
+        "1": "152, 153"
+      }
+    },
+    {
+      "spread_num": 38,
+      "image": "CB-Conversations-scan-3-rotated_spread_038.jpg",
+      "md": "CB-Conversations-scan-3-rotated_spread_038.md",
+      "json": "CB-Conversations-scan-3-rotated_spread_038.json",
+      "printed_page_numbers_detected": {
+        "1": "154"
+      }
+    }
+  ]
+}

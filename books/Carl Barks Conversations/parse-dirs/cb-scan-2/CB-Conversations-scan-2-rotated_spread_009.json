@@ -1,0 +1,330 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "36 CARL BARKS: CONVERSATIONS",
+              "value": "36 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.712608636623472,
+                  "w": 120.46840447551449,
+                  "x": 98.36797026248095,
+                  "y": 38.978750251286215,
+                  "confidence": 0.86,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "36 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.71,
+              "w": 120.47,
+              "x": 98.37,
+              "y": 38.98,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "school for two years, in Santa Rosa, in the fifth grade. But anyway, there was a lot of California culture hooked on to us kids, even in those years. I think that's when I first began reading about it. I'd always had a desire to go along that old El Camino Real and just follow it from one mission to another and maybe make photographs and drawings of it. I've always been fascinated by California history. I'm a little bit interested in the history of the east coast too, but not a great deal. I probably would've been if I had been born and lived back there. I was right here, you know, where California scenes took place.",
+          "value": "school for two years, in Santa Rosa, in the fifth grade. But anyway, there was a lot of California culture hooked on to us kids, even in those years. I think that's when I first began reading about it. I'd always had a desire to go along that old El Camino Real and just follow it from one mission to another and maybe make photographs and drawings of it. I've always been fascinated by California history. I'm a little bit interested in the history of the east coast too, but not a great deal. I probably would've been if I had been born and lived back there. I was right here, you know, where California scenes took place.",
+          "bbox": [
+            {
+              "h": 115.89533167397104,
+              "w": 283.7445413103802,
+              "x": 96.44013051698266,
+              "y": 62.59792757240855,
+              "confidence": 0.98,
+              "end_index": 623,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** I always assumed that Donald Duck came from Ohio, and I just thought it was a little more midwest than Pennsylvania, where I come from.",
+          "value": "PC: I always assumed that Donald Duck came from Ohio, and I just thought it was a little more midwest than Pennsylvania, where I come from.",
+          "bbox": [
+            {
+              "h": 36.32184000000001,
+              "w": 270.02520000000004,
+              "x": 95.05560000000001,
+              "y": 185.18184000000002,
+              "confidence": 0.85,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yeah, the town of Duckburg was a real strange place. It was on an ocean, it was on a lake, and it was out in the plains and close to tremendous mountains and a black forest and all of that. It had snow in the winter, terrific snows, and all these palm trees and so on. It was really a strange place. It's always very close to the desert. You remember, he would leave Duckburg and go right out into the Mojave Desert, just a short ride.",
+          "value": "CB: Yeah, the town of Duckburg was a real strange place. It was on an ocean, it was on a lake, and it was out in the plains and close to tremendous mountains and a black forest and all of that. It had snow in the winter, terrific snows, and all these palm trees and so on. It was really a strange place. It's always very close to the desert. You remember, he would leave Duckburg and go right out into the Mojave Desert, just a short ride.",
+          "bbox": [
+            {
+              "h": 87.52967999999998,
+              "w": 279.27840000000003,
+              "x": 94.21440000000001,
+              "y": 224.48088,
+              "confidence": 0.87,
+              "end_index": 442,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** Then he might be in the mountains of Yellowstone.",
+          "value": "PC: Then he might be in the mountains of Yellowstone.",
+          "bbox": [
+            {
+              "h": 12.504239999999982,
+              "w": 213.6648,
+              "x": 93.37320000000001,
+              "y": 321.53760000000005,
+              "confidence": 0.86,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yeah, very close by. He was living in a very unique community. Anyway, I don't come up with very lucid answers to things just offhand, not being used to interviews. Questions catch me off-balance and I'm liable to say anything, and then regret it afterwards.",
+          "value": "CB: Yeah, very close by. He was living in a very unique community. Anyway, I don't come up with very lucid answers to things just offhand, not being used to interviews. Questions catch me off-balance and I'm liable to say anything, and then regret it afterwards.",
+          "bbox": [
+            {
+              "h": 51.80328000000003,
+              "w": 281.802,
+              "x": 92.53200000000001,
+              "y": 334.04184000000004,
+              "confidence": 0.89,
+              "end_index": 265,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** I'm sure that happens to anybody who's not asked questions continually. They don't have these sophisticated replies that you see politicians are able to give.",
+          "value": "PC: I'm sure that happens to anybody who's not asked questions continually. They don't have these sophisticated replies that you see politicians are able to give.",
+          "bbox": [
+            {
+              "h": 36.917280000000005,
+              "w": 282.64320000000004,
+              "x": 91.69080000000001,
+              "y": 392.39496,
+              "confidence": 0.89,
+              "end_index": 165,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** They get their built-in reflexes, and they have a knowledge of what is usable, and what not.",
+          "value": "CB: They get their built-in reflexes, and they have a knowledge of what is usable, and what not.",
+          "bbox": [
+            {
+              "h": 23.817600000000027,
+              "w": 277.596,
+              "x": 91.69080000000001,
+              "y": 431.09856,
+              "confidence": 0.88,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** In one of your letters in answer to a guy who wrote a fan letter, you said that you hoped that more people who read your stories as a child ended up in the Senate chamber than the gas chamber. You said that as far as you knew, so far, you'd heard from guys that were engineers, and stuff like that, but you hadn't heard from anyone who was in jail yet.",
+          "value": "PC: In one of your letters in answer to a guy who wrote a fan letter, you said that you hoped that more people who read your stories as a child ended up in the Senate chamber than the gas chamber. You said that as far as you knew, so far, you'd heard from guys that were engineers, and stuff like that, but you hadn't heard from anyone who was in jail yet.",
+          "bbox": [
+            {
+              "h": 53.62903311258276,
+              "w": 279.961875,
+              "x": 90.16612500000001,
+              "y": 463.73340397351,
+              "confidence": 0.86,
+              "end_index": 359,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 27.87,
+              "w": 278.12,
+              "x": 90.17,
+              "y": 489.5,
+              "confidence": 1.0,
+              "end_index": 357,
+              "label": "text",
+              "start_index": 148
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yeah, that's right.",
+          "value": "CB: Yeah, that's right.",
+          "bbox": [
+            {
+              "h": 11.567046357615936,
+              "w": 84.90862500000001,
+              "x": 90.16612500000001,
+              "y": 528.1408211920531,
+              "confidence": 0.55,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Carl Barks, Telling It Like It Is - Donald Ault / 1973",
+          "md": "![Carl Barks, Telling It Like It Is - Donald Ault / 1973](CB-Conversations-scan-2-rotated_spread_009_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-2-rotated_spread_009_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 187.57624019388345,
+              "w": 301.21582967320893,
+              "x": 427.7394004858994,
+              "y": 108.58683539205414,
+              "confidence": 0.78,
+              "end_index": 79,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "Unpublished interview conducted on 29 May 1973 in Goleta, California. Transcribed from the original audiotape and printed by permission of Donald Ault.",
+          "value": "Unpublished interview conducted on 29 May 1973 in Goleta, California. Transcribed from the original audiotape and printed by permission of Donald Ault.",
+          "bbox": [
+            {
+              "h": 44.56152323266007,
+              "w": 162.06449121093746,
+              "x": 464.13942323266014,
+              "y": 318.26802681974095,
+              "confidence": 0.94,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** A long time ago you mentioned \"Modern Inventions\"—remember, the first time I was here \\[in August 1970]—that had this gag with the barber chair?",
+          "value": "DA: A long time ago you mentioned \"Modern Inventions\"—remember, the first time I was here [in August 1970]—that had this gag with the barber chair?",
+          "bbox": [
+            {
+              "h": 36.917280000000005,
+              "w": 278.4372,
+              "x": 441.63000000000005,
+              "y": 404.30376000000007,
+              "confidence": 0.89,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** That was an old movie short.",
+          "value": "CB: That was an old movie short.",
+          "bbox": [
+            {
+              "h": 9.201059602649025,
+              "w": 128.020125,
+              "x": 442.15575,
+              "y": 445.06839735099345,
+              "confidence": 0.79,
+              "end_index": 35,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** That was the gag that moved you out of the in-between department into the story department?",
+          "value": "DA: That was the gag that moved you out of the in-between department into the story department?",
+          "bbox": [
+            {
+              "h": 25.00848000000002,
+              "w": 283.48440000000005,
+              "x": 442.47120000000007,
+              "y": 465.63408000000004,
+              "confidence": 0.79,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah, that's right. I had sold a few gags before that, but that was the main gag that caused Walt to think I might have story-man possibilities. Anyway, he paid me fifty dollars for the gag, which was a fantastic sum of money for anything around Disney's or anything that I had ever been paid for before.",
+          "value": "CB: Yeah, that's right. I had sold a few gags before that, but that was the main gag that caused Walt to think I might have story-man possibilities. Anyway, he paid me fifty dollars for the gag, which was a fantastic sum of money for anything around Disney's or anything that I had ever been paid for before.",
+          "bbox": [
+            {
+              "h": 65.4984,
+              "w": 283.48440000000005,
+              "x": 442.47120000000007,
+              "y": 492.42888,
+              "confidence": 0.87,
+              "end_index": 311,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "36"
+    }
+  ]
+}

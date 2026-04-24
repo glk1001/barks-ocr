@@ -1,0 +1,502 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# xxxii INTRODUCTION",
+          "value": "xxxii INTRODUCTION",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 81.49,
+              "x": 98.05,
+              "y": 21.3,
+              "confidence": 1.0,
+              "end_index": 19,
+              "label": "header",
+              "start_index": 2
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "In addition to the extraordinary cooperation I've received from many of the interviewers themselves, I wish to acknowledge (in alphabetical order) some of the people who helped in so many different ways to make this book possible: Paula Antila, Jamie Ault, Lara Ault, Alberto Becattini, Robert Beerbohm, Anders Berglund, Olivier Bordier, Alfredo Castelli, Mark Evanier, Harry Fluks, Dana Gabbard, David Gerstein, Joakim Gunnarsson, Klaus Harms, Cyril Helnwein, Mercedes Helnwein, Renate Helnwein, Juka Heiskanen, Eric Hill, Tero Hyvärinen, M. Thomas Inge, Leonard Maltin, Bernard O'Donnell, Riku Perala, Marin Rankin, Carla Riley, Robyn Sammons, Germund Silvegren, Gerd Syllwasschy, Gerry Tank, Maggie Thompson, Christina Underill, Daniël van Eijmeren, Willem van Helden, John Van Hook, François Willot, Joseph Witek, Matthias Wivel, Alan Zak, and Jesse Ziegler. Thanks are also due to Anne Stascavage, my patient and cooperative editor at the University Press of Mississippi, and to Seetha Srinivasan, director of the University Press of Mississippi, for her sustained belief that I could actually get this complex project done. Special thanks go to Professor John P. Leavey, Jr., chair of the Department of English, University of Florida, and to the English Department, for their financial support for transcriptions made from original audio and videotape interviews.",
+          "value": "In addition to the extraordinary cooperation I've received from many of the interviewers themselves, I wish to acknowledge (in alphabetical order) some of the people who helped in so many different ways to make this book possible: Paula Antila, Jamie Ault, Lara Ault, Alberto Becattini, Robert Beerbohm, Anders Berglund, Olivier Bordier, Alfredo Castelli, Mark Evanier, Harry Fluks, Dana Gabbard, David Gerstein, Joakim Gunnarsson, Klaus Harms, Cyril Helnwein, Mercedes Helnwein, Renate Helnwein, Juka Heiskanen, Eric Hill, Tero Hyvärinen, M. Thomas Inge, Leonard Maltin, Bernard O'Donnell, Riku Perala, Marin Rankin, Carla Riley, Robyn Sammons, Germund Silvegren, Gerd Syllwasschy, Gerry Tank, Maggie Thompson, Christina Underill, Daniël van Eijmeren, Willem van Helden, John Van Hook, François Willot, Joseph Witek, Matthias Wivel, Alan Zak, and Jesse Ziegler. Thanks are also due to Anne Stascavage, my patient and cooperative editor at the University Press of Mississippi, and to Seetha Srinivasan, director of the University Press of Mississippi, for her sustained belief that I could actually get this complex project done. Special thanks go to Professor John P. Leavey, Jr., chair of the Department of English, University of Florida, and to the English Department, for their financial support for transcriptions made from original audio and videotape interviews.",
+          "bbox": [
+            {
+              "h": 244.2175948742378,
+              "w": 284.6238363960081,
+              "x": 99.15265063476564,
+              "y": 46.0822830554497,
+              "confidence": 0.99,
+              "end_index": 1368,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## Notes",
+          "value": "Notes",
+          "bbox": [
+            {
+              "h": 7.57760170541159,
+              "w": 21.191109866258582,
+              "x": 99.47175849430737,
+              "y": 315.002682421875,
+              "confidence": 0.95,
+              "end_index": 7,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "items": [
+            {
+              "md": "\"The Carl Barks Story: The Creator of Scrooge McDuck Moves into the Limelight,\" *Disney News*, 19, no. 1 (Winter 1983–84).",
+              "value": "\"The Carl Barks Story: The Creator of Scrooge McDuck Moves into the Limelight,\" Disney News, 19, no. 1 (Winter 1983–84).",
+              "bbox": [
+                {
+                  "h": 20.590784708460344,
+                  "w": 272.2787545433975,
+                  "x": 98.83222163800497,
+                  "y": 330.4936411394817,
+                  "confidence": 0.97,
+                  "end_index": 121,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "AP News release.",
+              "value": "AP News release.",
+              "bbox": [
+                {
+                  "h": 7.361697612732144,
+                  "w": 66.50737500000002,
+                  "x": 111.72187500000001,
+                  "y": 352.5727320954907,
+                  "confidence": 0.92,
+                  "end_index": 15,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "David R. Smith, \"The Man Who Drew the Mouse,\" *Mickey Mouse in Color* (Another Rainbow Publishing, Inc., 1988), trade edition 111; limited edition 167.",
+              "value": "David R. Smith, \"The Man Who Drew the Mouse,\" Mickey Mouse in Color (Another Rainbow Publishing, Inc., 1988), trade edition 111; limited edition 167.",
+              "bbox": [
+                {
+                  "h": 20.29926085175305,
+                  "w": 283.8916383562786,
+                  "x": 98.78596305140054,
+                  "y": 363.3344835365854,
+                  "confidence": 0.97,
+                  "end_index": 150,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Email from Maggie Thompson, 30 June 2002.",
+              "value": "Email from Maggie Thompson, 30 June 2002.",
+              "bbox": [
+                {
+                  "h": 8.413368700265266,
+                  "w": 158.51362500000002,
+                  "x": 110.93325000000002,
+                  "y": 384.648700265252,
+                  "confidence": 0.95,
+                  "end_index": 40,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "He completed both the revised story and his own new story between 6 November 1942, when he submitted his resignation to Disney and walked away from a $100-per-week job with no promise of any comic book work whatsoever, and 23 December 1942, when his records show he submitted his second story.",
+              "value": "He completed both the revised story and his own new story between 6 November 1942, when he submitted his resignation to Disney and walked away from a $100-per-week job with no promise of any comic book work whatsoever, and 23 December 1942, when his records show he submitted his second story.",
+              "bbox": [
+                {
+                  "h": 42.14123960556406,
+                  "w": 283.30646848799546,
+                  "x": 99.26862268959604,
+                  "y": 396.09844324504576,
+                  "confidence": 0.97,
+                  "end_index": 292,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Ault phone conversation 6 January 2001.",
+              "value": "Ault phone conversation 6 January 2001.",
+              "bbox": [
+                {
+                  "h": 8.676286472148547,
+                  "w": 144.58125,
+                  "x": 110.40750000000001,
+                  "y": 439.07267904509285,
+                  "confidence": 0.95,
+                  "end_index": 38,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Some of the editorial censorship he did encounter—such as the deletion of the complete \"barroom brawl\" sequence from the original publication of \"Back to the Klondike\"—became legendary among comic book aficionados.",
+              "value": "Some of the editorial censorship he did encounter—such as the deletion of the complete \"barroom brawl\" sequence from the original publication of \"Back to the Klondike\"—became legendary among comic book aficionados.",
+              "bbox": [
+                {
+                  "h": 31.17545216272862,
+                  "w": 283.321670957984,
+                  "x": 99.15837347560978,
+                  "y": 450.8354470369665,
+                  "confidence": 0.97,
+                  "end_index": 213,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "J. Michael Barrier, *Carl Barks and the Art of the Comic Book* (M. Lilien, 1981) 173, 209.",
+              "value": "J. Michael Barrier, Carl Barks and the Art of the Comic Book (M. Lilien, 1981) 173, 209.",
+              "bbox": [
+                {
+                  "h": 18.9814540301067,
+                  "w": 273.16010333996286,
+                  "x": 99.32948892137483,
+                  "y": 483.6096058307927,
+                  "confidence": 0.96,
+                  "end_index": 89,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Unpublished interview with J. Michael Barrier, 13 August 1978.",
+              "value": "Unpublished interview with J. Michael Barrier, 13 August 1978.",
+              "bbox": [
+                {
+                  "h": 9.202122015915052,
+                  "w": 215.03175,
+                  "x": 110.40750000000001,
+                  "y": 505.06503978779847,
+                  "confidence": 0.95,
+                  "end_index": 61,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Willits, *Vanguard* #2, 1968.",
+              "value": "Willits, Vanguard #2, 1968.",
+              "bbox": [
+                {
+                  "h": 8.150450928381929,
+                  "w": 104.09850000000002,
+                  "x": 111.98475,
+                  "y": 516.8963395225464,
+                  "confidence": 0.92,
+                  "end_index": 28,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "This past year in Finland, for example, with a total population of 5.1 million people, \"the official circulation of the *Aku Ankka* \\[Donald Duck] *Weekly* was 287,500",
+              "value": "This past year in Finland, for example, with a total population of 5.1 million people, \"the official circulation of the Aku Ankka [Donald Duck] Weekly was 287,500",
+              "bbox": [
+                {
+                  "h": 20.753013910060947,
+                  "w": 277.9999674459318,
+                  "x": 99.25568681521533,
+                  "y": 527.7142047827745,
+                  "confidence": 0.96,
+                  "end_index": 166,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "1. \"The Carl Barks Story: The Creator of Scrooge McDuck Moves into the Limelight,\" *Disney News*, 19, no. 1 (Winter 1983–84).\n\n2. AP News release.\n\n3. David R. Smith, \"The Man Who Drew the Mouse,\" *Mickey Mouse in Color* (Another Rainbow Publishing, Inc., 1988), trade edition 111; limited edition 167.\n\n4. Email from Maggie Thompson, 30 June 2002.\n\n5. He completed both the revised story and his own new story between 6 November 1942, when he submitted his resignation to Disney and walked away from a $100-per-week job with no promise of any comic book work whatsoever, and 23 December 1942, when his records show he submitted his second story.\n\n6. Ault phone conversation 6 January 2001.\n\n7. Some of the editorial censorship he did encounter—such as the deletion of the complete \"barroom brawl\" sequence from the original publication of \"Back to the Klondike\"—became legendary among comic book aficionados.\n\n8. J. Michael Barrier, *Carl Barks and the Art of the Comic Book* (M. Lilien, 1981) 173, 209.\n\n9. Unpublished interview with J. Michael Barrier, 13 August 1978.\n\n10. Willits, *Vanguard* #2, 1968.\n\n11. This past year in Finland, for example, with a total population of 5.1 million people, \"the official circulation of the *Aku Ankka* \\[Donald Duck] *Weekly* was 287,500",
+          "ordered": true,
+          "bbox": [
+            {
+              "h": 217.97,
+              "w": 283.89,
+              "x": 98.79,
+              "y": 330.49,
+              "confidence": 0.95,
+              "end_index": 1278,
+              "label": "list",
+              "start_index": 0
+            }
+          ],
+          "type": "list",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# INTRODUCTION xxxiii",
+          "value": "INTRODUCTION xxxiii",
+          "bbox": [
+            {
+              "h": 14.197559681697614,
+              "w": 84.38287500000001,
+              "x": 650.0898750000001,
+              "y": 14.986312997347481,
+              "confidence": 0.78,
+              "end_index": 20,
+              "label": "header",
+              "start_index": 2
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "copies. Of this circulation, about 98 percent is subscription-based. . . . The number of readers of the *Weekly* is approximately 1.3 million people every week. *This figure is not an estimate, it's an official figure achieved by two different surveys (one for people under 12 years of age, the other for people over 12 years).* The total number of *Aku Ankka* readers according to our reader surveys consists of these two groups: 0–11 year olds: 353,000; and 12 + year olds: 949,000 (email from Riku Perala, *Sonoma Magazine*, Helsinki, Finland, June 5 and 7, 2002; my emphasis). These figures indicate that over four people read each magazine sold, and over 25 percent of the total population of Finland currently reads the *Donald Duck Weekly*. How many people were actually reading the 3,000,000 copies of *Walt Disney's Comics and Stories* in 1953 can only be conjecture, because no one took a survey like the one in Finland.",
+          "value": "copies. Of this circulation, about 98 percent is subscription-based. . . . The number of readers of the Weekly is approximately 1.3 million people every week. This figure is not an estimate, it's an official figure achieved by two different surveys (one for people under 12 years of age, the other for people over 12 years). The total number of Aku Ankka readers according to our reader surveys consists of these two groups: 0–11 year olds: 353,000; and 12 + year olds: 949,000 (email from Riku Perala, Sonoma Magazine, Helsinki, Finland, June 5 and 7, 2002; my emphasis). These figures indicate that over four people read each magazine sold, and over 25 percent of the total population of Finland currently reads the Donald Duck Weekly. How many people were actually reading the 3,000,000 copies of Walt Disney's Comics and Stories in 1953 can only be conjecture, because no one took a survey like the one in Finland.",
+          "bbox": [
+            {
+              "h": 121.32288,
+              "w": 284.3256,
+              "x": 449.2008000000001,
+              "y": 41.035680000000006,
+              "confidence": 0.93,
+              "end_index": 929,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "Smith, trade 111; limited 167.",
+              "value": "Smith, trade 111; limited 167.",
+              "bbox": [
+                {
+                  "h": 9.41145391577745,
+                  "w": 110.18179215891776,
+                  "x": 464.8111369807546,
+                  "y": 163.2863120093369,
+                  "confidence": 0.95,
+                  "end_index": 29,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Letter to Dick Blackburn, 8 March 1968; WDC&S Library in Color #22.",
+              "value": "Letter to Dick Blackburn, 8 March 1968; WDC&S Library in Color #22.",
+              "bbox": [
+                {
+                  "h": 10.694785704077773,
+                  "w": 245.0962247761052,
+                  "x": 464.79044959984765,
+                  "y": 172.66497303258384,
+                  "confidence": 0.95,
+                  "end_index": 66,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "The McKimson letter informing Barks that he was being \"demoted\" (referred to earlier) was addressed to the \"Carl Barks c/o Scripps Memorial Hospital, La Jolla, California.\" The 1997 interview material included here clarifies and brings into alignment several previously unknown facts about the crucial period when Barks was reassigned to ten-pagers. McKimson's letter concludes with, \"Glad to hear Clara is doing so well. We all wish you both the Scripps address and McKimson's reference to Clara's health suddenly become quite clear. Mike Barrier's note in his 1978 interview that \"Carl confirmed that he had built an artificial leg for his second wife\" also fits neatly into the scheme.",
+              "value": "The McKimson letter informing Barks that he was being \"demoted\" (referred to earlier) was addressed to the \"Carl Barks c/o Scripps Memorial Hospital, La Jolla, California.\" The 1997 interview material included here clarifies and brings into alignment several previously unknown facts about the crucial period when Barks was reassigned to ten-pagers. McKimson's letter concludes with, \"Glad to hear Clara is doing so well. We all wish you both the Scripps address and McKimson's reference to Clara's health suddenly become quite clear. Mike Barrier's note in his 1978 interview that \"Carl confirmed that he had built an artificial leg for his second wife\" also fits neatly into the scheme.",
+              "bbox": [
+                {
+                  "h": 99.27856980754572,
+                  "w": 284.69081993140253,
+                  "x": 452.76822613376527,
+                  "y": 183.5904245093369,
+                  "confidence": 0.96,
+                  "end_index": 687,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Letter to Ault, 15 September 1972.",
+              "value": "Letter to Ault, 15 September 1972.",
+              "bbox": [
+                {
+                  "h": 9.532072265624988,
+                  "w": 127.56750714557926,
+                  "x": 466.7410241758766,
+                  "y": 283.46510960842227,
+                  "confidence": 0.93,
+                  "end_index": 33,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Phone conversation with Ault, 20 May 1996.",
+              "value": "Phone conversation with Ault, 20 May 1996.",
+              "bbox": [
+                {
+                  "h": 9.81456568216465,
+                  "w": 160.02485570693594,
+                  "x": 466.4314147294208,
+                  "y": 293.69686391958845,
+                  "confidence": 0.95,
+                  "end_index": 41,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "George Lucas, \"An Appreciation,\" in *Uncle Scrooge McDuck: His Life and Times*, edited by Edward Summer (Celestial Arts Publishing Company, 1981) 9.",
+              "value": "George Lucas, \"An Appreciation,\" in Uncle Scrooge McDuck: His Life and Times, edited by Edward Summer (Celestial Arts Publishing Company, 1981) 9.",
+              "bbox": [
+                {
+                  "h": 21.548861290015218,
+                  "w": 267.54188278868145,
+                  "x": 454.5710337033156,
+                  "y": 303.9868203029726,
+                  "confidence": 0.96,
+                  "end_index": 147,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "The exception was a couple of highly critical letters from irate mothers, who, as Barks would later say, \"missed the point\" of his stories entirely.",
+              "value": "The exception was a couple of highly critical letters from irate mothers, who, as Barks would later say, \"missed the point\" of his stories entirely.",
+              "bbox": [
+                {
+                  "h": 21.809646236661603,
+                  "w": 283.760789419779,
+                  "x": 454.1806783536586,
+                  "y": 325.7356261623476,
+                  "confidence": 0.97,
+                  "end_index": 147,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "This story is partially chronicled in the series of \"Letters from the Duck Man,\" edited by Geoffrey Blum and contained in eighteen issues of *The Carl Barks Library of Walt Disney's Comics and Stories in Color*: issues 4, 6, 8, 13, 15, 20, 22, 27, 29, 31, 33, 34, 40, 41, 42, 43, 44, and 45.",
+              "value": "This story is partially chronicled in the series of \"Letters from the Duck Man,\" edited by Geoffrey Blum and contained in eighteen issues of The Carl Barks Library of Walt Disney's Comics and Stories in Color: issues 4, 6, 8, 13, 15, 20, 22, 27, 29, 31, 33, 34, 40, 41, 42, 43, 44, and 45.",
+              "bbox": [
+                {
+                  "h": 43.87696103277444,
+                  "w": 284.53954658917695,
+                  "x": 454.9004289014863,
+                  "y": 347.5503719416921,
+                  "confidence": 0.97,
+                  "end_index": 290,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Email from Castelli 10 July 1999.",
+              "value": "Email from Castelli 10 July 1999.",
+              "bbox": [
+                {
+                  "h": 9.838823923399431,
+                  "w": 119.78729875666927,
+                  "x": 468.09802620045735,
+                  "y": 392.4856651486281,
+                  "confidence": 0.95,
+                  "end_index": 32,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Letter to Ault, 17 June 1971.",
+              "value": "Letter to Ault, 17 June 1971.",
+              "bbox": [
+                {
+                  "h": 9.677125924161562,
+                  "w": 107.71082726753048,
+                  "x": 468.3696169493141,
+                  "y": 403.60645744092994,
+                  "confidence": 0.93,
+                  "end_index": 28,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "12. Smith, trade 111; limited 167.\n\n13. Letter to Dick Blackburn, 8 March 1968; WDC&S Library in Color #22.\n\n14. The McKimson letter informing Barks that he was being \"demoted\" (referred to earlier) was addressed to the \"Carl Barks c/o Scripps Memorial Hospital, La Jolla, California.\" The 1997 interview material included here clarifies and brings into alignment several previously unknown facts about the crucial period when Barks was reassigned to ten-pagers. McKimson's letter concludes with, \"Glad to hear Clara is doing so well. We all wish you both the Scripps address and McKimson's reference to Clara's health suddenly become quite clear. Mike Barrier's note in his 1978 interview that \"Carl confirmed that he had built an artificial leg for his second wife\" also fits neatly into the scheme.\n\n15. Letter to Ault, 15 September 1972.\n\n16. Phone conversation with Ault, 20 May 1996.\n\n17. George Lucas, \"An Appreciation,\" in *Uncle Scrooge McDuck: His Life and Times*, edited by Edward Summer (Celestial Arts Publishing Company, 1981) 9.\n\n18. The exception was a couple of highly critical letters from irate mothers, who, as Barks would later say, \"missed the point\" of his stories entirely.\n\n19. This story is partially chronicled in the series of \"Letters from the Duck Man,\" edited by Geoffrey Blum and contained in eighteen issues of *The Carl Barks Library of Walt Disney's Comics and Stories in Color*: issues 4, 6, 8, 13, 15, 20, 22, 27, 29, 31, 33, 34, 40, 41, 42, 43, 44, and 45.\n\n20. Email from Castelli 10 July 1999.\n\n21. Letter to Ault, 17 June 1971.",
+          "ordered": true,
+          "bbox": [
+            {
+              "h": 250.0,
+              "w": 286.67,
+              "x": 452.77,
+              "y": 163.29,
+              "confidence": 0.95,
+              "end_index": 1567,
+              "label": "list",
+              "start_index": 0
+            }
+          ],
+          "type": "list",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

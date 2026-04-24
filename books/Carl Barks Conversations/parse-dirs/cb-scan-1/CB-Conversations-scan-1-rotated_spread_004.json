@@ -1,0 +1,104 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# Introduction",
+          "value": "Introduction",
+          "bbox": [
+            {
+              "h": 17.615490716180375,
+              "w": 110.67037500000004,
+              "x": 548.0943750000001,
+              "y": 163.53485411140588,
+              "confidence": 0.93,
+              "end_index": 13,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "Who is Carl Barks? The purpose of this book is twofold: to introduce Carl Barks to an audience who may never have heard his name before and simultaneously to tell the millions of readers and fans around the world who are already familiar with his work something new about him, to reveal the man as he emerges in his own words through interviews and conversations rather than through his work itself. Consequently, two editorial principles have guided my selection of material for this collection—to include the first and best articulations by Carl Barks of the details of his own life and his opinions toward his work and the world and to include as much original, previously unpublished material as is possible within the scope of this book. Underlying all of the voices speaking to Carl Barks in these interviews and conversations is a desire to get to know the man behind the stories he created, somehow, perhaps, to understand the mystery of his creativity. All of these interviewers are people whose lives have been so deeply and unalterably changed by Barks's work that they wanted to get things into the record about their own interactions with this man—the way he showed up in relation to them personally—and this book has provided a unique opportunity to make some of these voices heard.",
+          "value": "Who is Carl Barks? The purpose of this book is twofold: to introduce Carl Barks to an audience who may never have heard his name before and simultaneously to tell the millions of readers and fans around the world who are already familiar with his work something new about him, to reveal the man as he emerges in his own words through interviews and conversations rather than through his work itself. Consequently, two editorial principles have guided my selection of material for this collection—to include the first and best articulations by Carl Barks of the details of his own life and his opinions toward his work and the world and to include as much original, previously unpublished material as is possible within the scope of this book. Underlying all of the voices speaking to Carl Barks in these interviews and conversations is a desire to get to know the man behind the stories he created, somehow, perhaps, to understand the mystery of his creativity. All of these interviewers are people whose lives have been so deeply and unalterably changed by Barks's work that they wanted to get things into the record about their own interactions with this man—the way he showed up in relation to them personally—and this book has provided a unique opportunity to make some of these voices heard.",
+          "bbox": [
+            {
+              "h": 233.58026755907017,
+              "w": 286.7361156631098,
+              "x": 463.7631934070123,
+              "y": 237.68805543064028,
+              "confidence": 0.99,
+              "end_index": 1295,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Because I started with over 170,000 words of raw interview material, which for the purposes of this book had to be cut in half, most of these interviews are not published in their entirety, which I deeply regret. I have taken the greatest care, however, to edit them (often surgically, line-by-",
+          "value": "Because I started with over 170,000 words of raw interview material, which for the purposes of this book had to be cut in half, most of these interviews are not published in their entirety, which I deeply regret. I have taken the greatest care, however, to edit them (often surgically, line-by-",
+          "bbox": [
+            {
+              "h": 52.096538500381115,
+              "w": 284.76745841272873,
+              "x": 466.68477253239337,
+              "y": 470.97329319740857,
+              "confidence": 0.96,
+              "end_index": 293,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "ix",
+              "value": "ix",
+              "bbox": [
+                {
+                  "h": 8.900578896722486,
+                  "w": 7.278551924542631,
+                  "x": 605.7998454649392,
+                  "y": 547.9029755430641,
+                  "confidence": 0.88,
+                  "end_index": 1,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "ix",
+          "bbox": [
+            {
+              "h": 8.9,
+              "w": 7.28,
+              "x": 605.8,
+              "y": 547.9,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "ix"
+    }
+  ]
+}

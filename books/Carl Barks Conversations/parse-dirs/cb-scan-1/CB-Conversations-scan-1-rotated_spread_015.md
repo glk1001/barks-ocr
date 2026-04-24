@@ -1,0 +1,27 @@
+# xxX INTRODUCTION
+
+print, Western Publishing was winding down its publication of comic books in the USA, the last appearing with a 1984 copyright date but dis­tributed in such a way that the actual date of publication is in question. But one thing is certain: Barks's work was never out of circulation in the USA until the end of 1998, when Gladstone Publishing lost its license to produce Disney comics.
+
+Although Barks himself dropped out of public view after the 1982 media blitz, he was allowed to paint the Disney ducks again—this time specifically for lithographic reproduction—and between 1982 and 1993 he produced seventeen new large oil paintings that began to command prices exceeding $75,000 at Sotheby's and other public auctions. Meanwhile, the black and white hardbound *Barks Library* was being published, and Gladstone Publishing, run by Bruce Hamilton, gained a license to publish regular Disney comic books again, including *Walt Disney's Comics and Stories* and *Uncle Scrooge* after a two-year hiatus. From 1991–1998 Gladstone Publishing went on to produce *The Carl Barks Library in Color*, approximately 140 volumes of Barks's stories in high quality graphic novel format. Thus Barks saw one of his earliest post-retirement dreams ("in the back of [his] head"), which he described to Paul Ciotti in his 1972 interview, of having his work collected in permanent, high-quality form. At the same time, he was producing paintings whose sale prices rivaled those of "real" living painters. For over thirty years after his official "retirement" in 1966 Barks kept breaking new ground, producing his last major creative outburst in 1996–97 when in less than six months he created a series of seventy-nine colored-pencil drawings for his ninety-sixth birthday celebration at Disney World, work which, unfortunately, almost "wrecked [his] health" (Ault and Ault).
+
+During the years following the death of his wife Garé in 1993, Barks found himself under the control of two people (referred to here as "the Carl Barks Studio"), who had been hired to manage his business affairs and take care of him in his twilight years. Perhaps the less said about them here the better. Barks's saviors during the end of this period were Helen and Serene Hunicke, women hired to care for Barks, even well into his ninety-eighth year he was able to navigate the steep steps of his art studio in Grants Pass, Oregon, better than people a third his age. Also Gerhard ("Gerry") Tank, who had been Garé's physician, became one of Carl's closest friends and gave him help and support until life's end. It is important to realize that on the positive side, however, that the Carl Barks Studio kept Barks productive into his ninety-sixth year (even though
+
+---
+
+# INTRODUCTION xxxi
+
+he himself would have preferred finally to retire), and they organized a European tour for Barks in 1994 that allowed Barks's many readers outside the USA to have direct experience with the man whose work they so admired. Without this tour, Barks would have remained, in many ways, an abstraction for many of his European admirers.
+
+At the same time that Barks was touring Europe in 1994 with his Carl Barks Studio managers, Gottfried Helnwein's traveling retrospective exhibition of Barks's artwork was beginning its four-year journey through Europe. One elegant answer to the question with which I opened this essay—"Who is Carl Barks?"—appears in Helnwein's catalogue for the exhibition. *Wer ist Carl Barks* reproduces page after page of Barks's drawings—revealing an astonishing variety of the expressions and bodily postures that Barks concocted and executed for the situations he put his characters into—often blown up to full-page size to reveal the energy of Barks's pencil work and the intricacy of his variable pen line and brush strokes. For those wanting to see immediately Barks's genius as a visual artist, the drawings in this book speak for themselves across all linguistic barriers.
+
+Perhaps, since, at the time of this writing, Barks's comics are no longer published in their native United States, the last words of the answer to the question with which I opened, "Who is Carl Barks?" should go to two European artists whose lives and work have been irreversibly transformed by Carl Barks, and who have answered the question better than I ever could.
+
+First, Romano Scarpa, one of the most famous Italian Disney comic-book artists, wrote, at the time of Barks's passing on 25 August 2000:
+
+> So, we are left on our own, and lost. We have lost the star that was guiding us through the streets of the Disney comic: the unique, unreachable Carl Barks. But with days passing by, we will realize more and more that the artistic and literary patrimony whose heirs we are ourselves, is such as to keep inspiring us always with new stories, on the track of his star, which will keep on shining, showing us the right paths to take.
+
+And finally, from Gottfried Helnwein, artist extraordinaire:
+
+> In the Donald Duck of Carl Barks we recognize our fears, our uncertainties and weaknesses—our stupidity, our vanity, our depravity, our jealousy and our simple-mindedness. But also the very same stubbornness with which we stand up again and begin freshly after every defeat and every catastrophe.
+
+> In retrospect I would say that from Donald Duck I have learned more about life than from all the schools I ever attended.

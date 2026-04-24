@@ -1,0 +1,463 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "46 CARL BARKS: CONVERSATIONS",
+              "value": "46 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.8393208186452,
+                  "w": 120.85009416682549,
+                  "x": 98.81099578410824,
+                  "y": 40.85081969559833,
+                  "confidence": 0.86,
+                  "end_index": 27,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "46 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.84,
+              "w": 120.85,
+              "x": 98.81,
+              "y": 40.85,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "as to whether he got it back from this previous episode or not. The episodes were not even connected; they were different comic books. Each one sold for a dime.",
+          "value": "as to whether he got it back from this previous episode or not. The episodes were not even connected; they were different comic books. Each one sold for a dime.",
+          "bbox": [
+            {
+              "h": 36.32184000000001,
+              "w": 275.91360000000003,
+              "x": 97.57920000000001,
+              "y": 64.90296000000001,
+              "confidence": 0.91,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** When you were first asked to do an *Uncle Scrooge* comic book, did you feel flattered, did you feel exploited, or didn't you care?",
+          "value": "DA: When you were first asked to do an Uncle Scrooge comic book, did you feel flattered, did you feel exploited, or didn't you care?",
+          "bbox": [
+            {
+              "h": 25.603919999999988,
+              "w": 279.27840000000003,
+              "x": 97.57920000000001,
+              "y": 111.34728000000001,
+              "confidence": 0.88,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** No, all I thought about was, well, it's so many pages at so much per page, it's so much money, and I can do it in so many days. That's all I thought about. I was strictly a hack and hacking them out.",
+          "value": "CB: No, all I thought about was, well, it's so many pages at so much per page, it's so much money, and I can do it in so many days. That's all I thought about. I was strictly a hack and hacking them out.",
+          "bbox": [
+            {
+              "h": 38.703599999999994,
+              "w": 280.11960000000005,
+              "x": 96.73800000000001,
+              "y": 136.95120000000003,
+              "confidence": 0.9,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** You didn't feel that you were being exploited because they didn't use your name or give you royalties on reprints.",
+          "value": "DA: You didn't feel that you were being exploited because they didn't use your name or give you royalties on reprints.",
+          "bbox": [
+            {
+              "h": 24.413039999999995,
+              "w": 282.64320000000004,
+              "x": 96.73800000000001,
+              "y": 183.99096,
+              "confidence": 0.89,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** No, I never thought anything about that with any resentment. I knew that if I were doing this with characters of my own, I could be expecting future residual rights and all those things, but I was doing it with Disney's characters for this publishing outfit. There weren't any of the names of the creators on any of those \\[other] comics. I was just one of a whole bunch of guys who were being exploited.",
+          "value": "CB: No, I never thought anything about that with any resentment. I knew that if I were doing this with characters of my own, I could be expecting future residual rights and all those things, but I was doing it with Disney's characters for this publishing outfit. There weren't any of the names of the creators on any of those [other] comics. I was just one of a whole bunch of guys who were being exploited.",
+          "bbox": [
+            {
+              "h": 76.21632000000002,
+              "w": 284.3256,
+              "x": 95.89680000000001,
+              "y": 210.19032,
+              "confidence": 0.91,
+              "end_index": 411,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Did you have some idea of how your comics were selling in the 1950s?",
+          "value": "DA: Did you have some idea of how your comics were selling in the 1950s?",
+          "bbox": [
+            {
+              "h": 22.03127999999998,
+              "w": 262.4544,
+              "x": 95.05560000000001,
+              "y": 294.74280000000005,
+              "confidence": 0.88,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I had very little idea of how my comics were selling, other than that I would see a tremendous pile of *Walt Disney's Comics* and *Uncle Scrooge* comics; but even with these huge piles of them in the stores and on all the news counters, I never saw a kid buy one. Never. I would see kids walk out with *Superman* and *Archie* and all the other comics, but never did I see a kid buy a *Scrooge* or a *Walt Disney's Comics*. Never. I used to wonder what becomes of those great big piles of them? Does the stupid company print all those big masses just to have the covers torn off and have the things shipped back to them? Yeah, I used to think that the company must be crazy.",
+          "value": "CB: I had very little idea of how my comics were selling, other than that I would see a tremendous pile of Walt Disney's Comics and Uncle Scrooge comics; but even with these huge piles of them in the stores and on all the news counters, I never saw a kid buy one. Never. I would see kids walk out with Superman and Archie and all the other comics, but never did I see a kid buy a Scrooge or a Walt Disney's Comics. Never. I used to wonder what becomes of those great big piles of them? Does the stupid company print all those big masses just to have the covers torn off and have the things shipped back to them? Yeah, I used to think that the company must be crazy.",
+          "bbox": [
+            {
+              "h": 127.42416000000003,
+              "w": 285.1668,
+              "x": 93.37320000000001,
+              "y": 320.94216000000006,
+              "confidence": 0.91,
+              "end_index": 680,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** But they did disappear, right?",
+          "value": "DA: But they did disappear, right?",
+          "bbox": [
+            {
+              "h": 11.908799999999985,
+              "w": 132.0684,
+              "x": 93.37320000000001,
+              "y": 457.29792000000003,
+              "confidence": 0.86,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, yes, it seemed that the pile would get a little lower each time. By the end of the month, I didn't see very many of them around.",
+          "value": "CB: Well, yes, it seemed that the pile would get a little lower each time. By the end of the month, I didn't see very many of them around.",
+          "bbox": [
+            {
+              "h": 26.199360000000013,
+              "w": 275.0724,
+              "x": 92.53200000000001,
+              "y": 470.39760000000007,
+              "confidence": 0.92,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** You know now that they sold fantastically—much better circulation than *Superman* in those years.",
+          "value": "DA: You know now that they sold fantastically—much better circulation than Superman in those years.",
+          "bbox": [
+            {
+              "h": 25.00848000000002,
+              "w": 277.596,
+              "x": 92.53200000000001,
+              "y": 504.33768000000003,
+              "confidence": 0.91,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yeah, that's right, but I never saw a kid buy one. I guess that would have been the biggest thrill of my life to have seen some kid pay ten cents for an *Uncle Scrooge*.",
+          "value": "CB: Yeah, that's right, but I never saw a kid buy one. I guess that would have been the biggest thrill of my life to have seen some kid pay ten cents for an Uncle Scrooge.",
+          "bbox": [
+            {
+              "h": 37.51272000000006,
+              "w": 282.64320000000004,
+              "x": 91.69080000000001,
+              "y": 530.53704,
+              "confidence": 0.92,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nDONALD AULT / 1973 47\n\\</page_header>",
+          "value": "<page_header>\nDONALD AULT / 1973 47\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.68,
+              "w": 97.26,
+              "x": 623.8,
+              "y": 42.59,
+              "confidence": 1.0,
+              "end_index": 35,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "47",
+          "value": "47",
+          "bbox": [
+            {
+              "h": 8.271269534822787,
+              "w": 10.09113409870424,
+              "x": 710.6277133908156,
+              "y": 42.55074849109186,
+              "confidence": 0.88,
+              "end_index": 1,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** You were obviously there at the wrong time, and somehow you missed it. It's really weird, though. You did have to go in and buy copies for yourself. The company didn't even send you copies.",
+          "value": "DA: You were obviously there at the wrong time, and somehow you missed it. It's really weird, though. You did have to go in and buy copies for yourself. The company didn't even send you copies.",
+          "bbox": [
+            {
+              "h": 34.70113907284768,
+              "w": 276.8073750000001,
+              "x": 439.00125,
+              "y": 67.29917880794703,
+              "confidence": 0.85,
+              "end_index": 196,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I was the only guy that ever bought any of them that I knew of. (laughs) It's weird, but that's the way it was.",
+          "value": "CB: I was the only guy that ever bought any of them that I knew of. (laughs) It's weird, but that's the way it was.",
+          "bbox": [
+            {
+              "h": 23.922754966887425,
+              "w": 263.66362499999997,
+              "x": 438.21262500000006,
+              "y": 106.2065165562914,
+              "confidence": 0.84,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** How did you get the job of doing the duck stories?",
+          "value": "DA: How did you get the job of doing the duck stories?",
+          "bbox": [
+            {
+              "h": 9.463947019867561,
+              "w": 215.03175,
+              "x": 439.26412500000004,
+              "y": 139.59321854304636,
+              "confidence": 0.83,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I had no promise of anything at the time I left the Disney Studio. I was just gambling on my future. I felt that if I didn't get on with Western Publishing on the duck comic books that I would have to develop something of my own and try to peddle it to the other comic book \\[companies] back east, which I realized was a pretty hard proposition.",
+          "value": "CB: I had no promise of anything at the time I left the Disney Studio. I was just gambling on my future. I felt that if I didn't get on with Western Publishing on the duck comic books that I would have to develop something of my own and try to peddle it to the other comic book [companies] back east, which I realized was a pretty hard proposition.",
+          "bbox": [
+            {
+              "h": 62.304317880794684,
+              "w": 282.8535,
+              "x": 438.21262500000006,
+              "y": 152.47470198675498,
+              "confidence": 0.89,
+              "end_index": 352,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** They sent you a script?",
+          "value": "DA: They sent you a script?",
+          "bbox": [
+            {
+              "h": 9.201059602648996,
+              "w": 107.25299999999993,
+              "x": 439.52700000000004,
+              "y": 226.34606622516557,
+              "confidence": 0.83,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah. They had one script, the \"Victory Garden\" story. It was a rather indefinite sort of script. I worked it over and made more sense out of it. It was one of those things they dashed out real fast. I think Eleanor Packer, who was the editor down there, just did it with her left hand while she was doing something else with her right hand. She was one of those geniuses in a way. She could think real fast and put her stuff right through without ever second-guessing it. She expected me to turn out stories like that. She was quite surprised when I turned in the next story—the one about the \"rabbit's foot\"—she was quite surprised that I could just go ahead and do something like that without doing it her way.",
+          "value": "CB: Yeah. They had one script, the \"Victory Garden\" story. It was a rather indefinite sort of script. I worked it over and made more sense out of it. It was one of those things they dashed out real fast. I think Eleanor Packer, who was the editor down there, just did it with her left hand while she was doing something else with her right hand. She was one of those geniuses in a way. She could think real fast and put her stuff right through without ever second-guessing it. She expected me to turn out stories like that. She was quite surprised when I turned in the next story—the one about the \"rabbit's foot\"—she was quite surprised that I could just go ahead and do something like that without doing it her way.",
+          "bbox": [
+            {
+              "h": 129.21048000000002,
+              "w": 285.1668,
+              "x": 439.10640000000006,
+              "y": 239.36688000000004,
+              "confidence": 0.91,
+              "end_index": 720,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** What do you mean?",
+          "value": "DA: What do you mean?",
+          "bbox": [
+            {
+              "h": 7.886622516556258,
+              "w": 96.47512499999999,
+              "x": 441.10425000000004,
+              "y": 379.8723178807947,
+              "confidence": 0.83,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Her way, I guess, was just more simple, without any deep thinking in it—real shallow stories.",
+          "value": "CB: Her way, I guess, was just more simple, without any deep thinking in it—real shallow stories.",
+          "bbox": [
+            {
+              "h": 22.608317880794743,
+              "w": 281.80199999999996,
+              "x": 440.5785,
+              "y": 391.96513907284765,
+              "confidence": 0.9,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** Didn't you tell me one time about George Delacorte or Oscar LeBeck looking at the \"rabbit's foot\" story and liking it?",
+          "value": "DA: Didn't you tell me one time about George Delacorte or Oscar LeBeck looking at the \"rabbit's foot\" story and liking it?",
+          "bbox": [
+            {
+              "h": 24.413040000000024,
+              "w": 284.32560000000007,
+              "x": 439.9476,
+              "y": 425.14416,
+              "confidence": 0.91,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yes. I think when he was looking through all the comics that they had been getting from Western Publishing, he said that was the first story he'd seen that stood by itself. It had meaning and plot and held together. When Eleanor Packer had me do that \"Mummy\" story, she thought I had gotten too darned involved there toward the last, and she asked me to redo it. Well, I went ahead and redid it the way she wanted me to, and I sent it back to the office. In a few days there came the word back from the office to go ahead and do it the way I had in the first place. She could see that I had been aiming at some particular tie-in with the earlier parts of the",
+          "value": "CB: Yes. I think when he was looking through all the comics that they had been getting from Western Publishing, he said that was the first story he'd seen that stood by itself. It had meaning and plot and held together. When Eleanor Packer had me do that \"Mummy\" story, she thought I had gotten too darned involved there toward the last, and she asked me to redo it. Well, I went ahead and redid it the way she wanted me to, and I sent it back to the office. In a few days there came the word back from the office to go ahead and do it the way I had in the first place. She could see that I had been aiming at some particular tie-in with the earlier parts of the",
+          "bbox": [
+            {
+              "h": 115.40757615894046,
+              "w": 286.00800000000004,
+              "x": 439.00125,
+              "y": 452.69213245033114,
+              "confidence": 0.92,
+              "end_index": 665,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "46, 47"
+    }
+  ]
+}

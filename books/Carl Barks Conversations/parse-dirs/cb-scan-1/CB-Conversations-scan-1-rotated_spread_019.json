@@ -1,0 +1,435 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# CHRONOLOGY",
+          "value": "CHRONOLOGY",
+          "bbox": [
+            {
+              "h": 15.25,
+              "w": 87.01,
+              "x": 101.47,
+              "y": 17.62,
+              "confidence": 1.0,
+              "end_index": 11,
+              "label": "header",
+              "start_index": 2
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**1945** Produces his only Mickey Mouse comic, \"The Riddle of the Red Hat\" (*FC* #79; submitted 27 Apr.).",
+          "value": "1945 Produces his only Mickey Mouse comic, \"The Riddle of the Red Hat\" (FC #79; submitted 27 Apr.).",
+          "bbox": [
+            {
+              "h": 30.33072,
+              "w": 275.91360000000003,
+              "x": 103.4676,
+              "y": 44.604,
+              "confidence": 0.81,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1945–47** Second wife Clara helps Barks with his comic book work (inking panel borders, logos, and blacking in backgrounds).",
+          "value": "1945–47 Second wife Clara helps Barks with his comic book work (inking panel borders, logos, and blacking in backgrounds).",
+          "bbox": [
+            {
+              "h": 32.269445722179874,
+              "w": 281.2416061505574,
+              "x": 103.03793987888244,
+              "y": 77.4106064048209,
+              "confidence": 0.84,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1945** In just over a month's time (July–Aug.) Barks invents Scrooge McDuck (\"Christmas on Bear Mountain,\" *FC* #178) and Gladstone Gander (*WDC&S* #88).",
+          "value": "1945 In just over a month's time (July–Aug.) Barks invents Scrooge McDuck (\"Christmas on Bear Mountain,\" FC #178) and Gladstone Gander (WDC&S #88).",
+          "bbox": [
+            {
+              "h": 42.225120000000004,
+              "w": 282.6432,
+              "x": 101.7852,
+              "y": 110.61792,
+              "confidence": 0.83,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1948–49** Clara Barks gradually becomes hostile and violent, tears up many of Barks's comic book file copies, and attempts to destroy his original art.",
+          "value": "1948–49 Clara Barks gradually becomes hostile and violent, tears up many of Barks's comic book file copies, and attempts to destroy his original art.",
+          "bbox": [
+            {
+              "h": 41.03568000000001,
+              "w": 276.75480000000005,
+              "x": 100.1028,
+              "y": 156.41136,
+              "confidence": 0.83,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1949–50** Barks is reassigned by Western Publishing from the monthly 10-page *WDC&S* stories to regular production of full-length Donald Duck adventure and seasonal stories, which he both writes and draws monthly from Nov. 1949 through July 1950.",
+          "value": "1949–50 Barks is reassigned by Western Publishing from the monthly 10-page WDC&S stories to regular production of full-length Donald Duck adventure and seasonal stories, which he both writes and draws monthly from Nov. 1949 through July 1950.",
+          "bbox": [
+            {
+              "h": 65.41919999999999,
+              "w": 279.27840000000003,
+              "x": 98.42040000000001,
+              "y": 202.79952000000003,
+              "confidence": 0.82,
+              "end_index": 247,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1950** In July Clara Barks undergoes cancer surgery and has half of one of her legs amputated; in just over a month's time (Aug.–Sept.) Barks invents Scrooge's money swim (*WDC&S* #124) and the Junior Woodchucks (*WDC&S* #125); Barks invents an artificial leg for Clara.",
+          "value": "1950 In July Clara Barks undergoes cancer surgery and has half of one of her legs amputated; in just over a month's time (Aug.–Sept.) Barks invents Scrooge's money swim (WDC&S #124) and the Junior Woodchucks (WDC&S #125); Barks invents an artificial leg for Clara.",
+          "bbox": [
+            {
+              "h": 66.60863999999998,
+              "w": 282.64320000000004,
+              "x": 95.05560000000001,
+              "y": 274.76064,
+              "confidence": 0.8,
+              "end_index": 271,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1950–51** As his second marriage breaks up, Barks moves across the street to a two-room apartment in a remodeled warehouse that serves as both home and studio, with his only remaining possessions—a drawing board, his clothes, two blankets, and his *National Geographic* magazines; in eight months' time (Feb. to Oct. 1951) he invents the Beagle Boys, the money bin, and Gyro Gearloose; divorce from Clara Balken Barks is declared final in Dec. 1951.",
+          "value": "1950–51 As his second marriage breaks up, Barks moves across the street to a two-room apartment in a remodeled warehouse that serves as both home and studio, with his only remaining possessions—a drawing board, his clothes, two blankets, and his National Geographic magazines; in eight months' time (Feb. to Oct. 1951) he invents the Beagle Boys, the money bin, and Gyro Gearloose; divorce from Clara Balken Barks is declared final in Dec. 1951.",
+          "bbox": [
+            {
+              "h": 105.86016000000001,
+              "w": 281.802,
+              "x": 92.53200000000001,
+              "y": 346.72176,
+              "confidence": 0.83,
+              "end_index": 450,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1951–66** Completes the first full-length (32-page) *Uncle Scrooge* one-shot comic book in a motel in Los Angeles (*FC* #386, 27 Sept. 1951), and then produces the full-length or lead stories for 70 consecutive issues of *Uncle Scrooge* comics and more than 63 back-up *Uncle Scrooge* and Gyro Gearloose stories, as well as many other Disney comic book stories for \"Giant\" 25¢ comics and other one-shots; during these years Barks also produces approximately 175 monthly 10-page Donald Duck stories for *WDC&S*.",
+          "value": "1951–66 Completes the first full-length (32-page) Uncle Scrooge one-shot comic book in a motel in Los Angeles (FC #386, 27 Sept. 1951), and then produces the full-length or lead stories for 70 consecutive issues of Uncle Scrooge comics and more than 63 back-up Uncle Scrooge and Gyro Gearloose stories, as well as many other Disney comic book stories for \"Giant\" 25¢ comics and other one-shots; during these years Barks also produces approximately 175 monthly 10-page Donald Duck stories for WDC&S.",
+          "bbox": [
+            {
+              "h": 101.10240000000005,
+              "w": 285.1668,
+              "x": 84.9612,
+              "y": 453.77136,
+              "confidence": 1.0,
+              "end_index": 511,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 23.14,
+              "w": 232.64,
+              "x": 505.25,
+              "y": 56.0,
+              "confidence": 1.0,
+              "end_index": 511,
+              "label": "text",
+              "start_index": 437
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1952** Garé Williams begins working on backgrounds (and later lettering) for the duck comics (her first work appears in *WDC&S* #153, Nov. 27).",
+          "value": "1952 Garé Williams begins working on backgrounds (and later lettering) for the duck comics (her first work appears in WDC&S #153, Nov. 27).",
+          "bbox": [
+            {
+              "h": 37.86,
+              "w": 218.97,
+              "x": 504.72,
+              "y": 87.29,
+              "confidence": 1.0,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 9
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1954** Barks marries Garé Williams in Reno, Nevada, in July.",
+          "value": "1954 Barks marries Garé Williams in Reno, Nevada, in July.",
+          "bbox": [
+            {
+              "h": 8.939204244031828,
+              "w": 22.870124999999973,
+              "x": 456.61387500000006,
+              "y": 132.773474801061,
+              "confidence": 0.76,
+              "end_index": 5,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.49637082698172,
+              "w": 205.74121253334613,
+              "x": 504.93809408346044,
+              "y": 132.8550832102706,
+              "confidence": 0.75,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 6
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1955** Barks is mentioned by name in \"The Comic World,\" an essay by Charles Beaumont (*Fortnight*, May).",
+          "value": "1955 Barks is mentioned by name in \"The Comic World,\" an essay by Charles Beaumont (Fortnight, May).",
+          "bbox": [
+            {
+              "h": 27.35712000000001,
+              "w": 281.80199999999996,
+              "x": 457.61280000000005,
+              "y": 150.46416000000002,
+              "confidence": 0.77,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1956** Invents Flintheart Glomgold (2 Feb.).",
+          "value": "1956 Invents Flintheart Glomgold (2 Feb.).",
+          "bbox": [
+            {
+              "h": 12.35713527851459,
+              "w": 190.84724999999997,
+              "x": 456.08812500000005,
+              "y": 184.3053580901857,
+              "confidence": 0.76,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.36,
+              "w": 143.27,
+              "x": 503.67,
+              "y": 184.31,
+              "confidence": 1.0,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 9
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1957** Malcolm Willits, one of the most important Barks collectors of all time, is the first fan to learn Barks's name and address from Frank Reilly in the comic strip department at Walt Disney Productions.",
+          "value": "1957 Malcolm Willits, one of the most important Barks collectors of all time, is the first fan to learn Barks's name and address from Frank Reilly in the comic strip department at Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 13.408806366047742,
+              "w": 25.23599999999999,
+              "x": 453.98512500000004,
+              "y": 200.8691777188329,
+              "confidence": 0.79,
+              "end_index": 5,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 50.72446050400152,
+              "w": 231.90989784203506,
+              "x": 502.6270181021342,
+              "y": 203.96690447789638,
+              "confidence": 0.8,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 6
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1960** Barks receives first \"fan\" letters from John Spicer and Willits.",
+          "value": "1960 Barks receives first \"fan\" letters from John Spicer and Willits.",
+          "bbox": [
+            {
+              "h": 14.27328,
+              "w": 280.96079999999995,
+              "x": 455.9304000000001,
+              "y": 261.6768,
+              "confidence": 0.76,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.46,
+              "w": 234.48,
+              "x": 502.35,
+              "y": 261.34,
+              "confidence": 1.0,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 32
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1961** Invents Magica DeSpell (17 Apr.); Carl and Garé visit Willits in Seattle, Washington (25 July); *Comic Art* #2, Aug. (125 copies), edited by Don and Maggie Thompson, contains the first appearance in a fan magazine of Barks's name (in a letter written to Don Thompson).",
+          "value": "1961 Invents Magica DeSpell (17 Apr.); Carl and Garé visit Willits in Seattle, Washington (25 July); Comic Art #2, Aug. (125 copies), edited by Don and Maggie Thompson, contains the first appearance in a fan magazine of Barks's name (in a letter written to Don Thompson).",
+          "bbox": [
+            {
+              "h": 64.22976000000006,
+              "w": 281.8019999999999,
+              "x": 455.9304000000001,
+              "y": 281.30255999999997,
+              "confidence": 0.75,
+              "end_index": 276,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 51.01,
+              "w": 238.69,
+              "x": 499.46,
+              "y": 294.2,
+              "confidence": 1.0,
+              "end_index": 276,
+              "label": "text",
+              "start_index": 71
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1962** Willits and Steve Edrington visit Barks's home in San Jacinto, and conduct the first fan interview with Barks in Dec.; *Comic Art* #3, Apr. (200 copies), contains three different references to Barks.",
+          "value": "1962 Willits and Steve Edrington visit Barks's home in San Jacinto, and conduct the first fan interview with Barks in Dec.; Comic Art #3, Apr. (200 copies), contains three different references to Barks.",
+          "bbox": [
+            {
+              "h": 51.14591999999999,
+              "w": 283.48440000000005,
+              "x": 454.24800000000005,
+              "y": 351.47952,
+              "confidence": 0.8,
+              "end_index": 207,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1963** Daughter Peggy dies of cervical cancer.",
+          "value": "1963 Daughter Peggy dies of cervical cancer.",
+          "bbox": [
+            {
+              "h": 13.052952353277417,
+              "w": 199.96737954935213,
+              "x": 453.80815522580036,
+              "y": 410.01697214176835,
+              "confidence": 0.78,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 15.25,
+              "w": 154.31,
+              "x": 499.46,
+              "y": 408.84,
+              "confidence": 1.0,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 9
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1966** A special Disney issue of the fanzine *Comics Club 104* (*Guida a Topolino* \\[\"A Guide to Topolino Magazine\"]) is published, in which the name of Carl Barks (as well as other Disney artists) is mentioned for the first time in Italy by Alfredo Castelli; Barks completes his final 10-page Donald Duck comic book story (*WDC&S* #312) and completes his final *Uncle Scrooge* comic book story both written and drawn by him, published in *Uncle Scrooge* #69, then officially retires from comic book work on 30 June; Chase Craig, editor at Western Publishing, rescues over 100 pages of Barks's original artwork from rou-",
+          "value": "1966 A special Disney issue of the fanzine Comics Club 104 (Guida a Topolino [\"A Guide to Topolino Magazine\"]) is published, in which the name of Carl Barks (as well as other Disney artists) is mentioned for the first time in Italy by Alfredo Castelli; Barks completes his final 10-page Donald Duck comic book story (WDC&S #312) and completes his final Uncle Scrooge comic book story both written and drawn by him, published in Uncle Scrooge #69, then officially retires from comic book work on 30 June; Chase Craig, editor at Western Publishing, rescues over 100 pages of Barks's original artwork from rou-",
+          "bbox": [
+            {
+              "h": 130.83839999999998,
+              "w": 283.4844,
+              "x": 453.40680000000003,
+              "y": 429.38784,
+              "confidence": 0.77,
+              "end_index": 621,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 67.83,
+              "w": 236.85,
+              "x": 498.41,
+              "y": 467.2,
+              "confidence": 1.0,
+              "end_index": 546,
+              "label": "text",
+              "start_index": 203
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

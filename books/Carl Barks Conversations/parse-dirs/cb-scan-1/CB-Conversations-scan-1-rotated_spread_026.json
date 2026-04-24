@@ -1,0 +1,445 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "8\nCARL BARKS: CONVERSATIONS",
+              "value": "8\nCARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.47995910049066,
+                  "w": 116.09265399616524,
+                  "x": 92.88168811630622,
+                  "y": 20.33628786978373,
+                  "confidence": 0.82,
+                  "end_index": 26,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "8\nCARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.48,
+              "w": 116.09,
+              "x": 92.88,
+              "y": 20.34,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "studio home in San Jacinto, I ventured into the big city sanctum for no more than a few minutes once or twice a month.",
+          "value": "studio home in San Jacinto, I ventured into the big city sanctum for no more than a few minutes once or twice a month.",
+          "bbox": [
+            {
+              "h": 23.7542497129859,
+              "w": 271.99722082817266,
+              "x": 92.40575939048209,
+              "y": 44.225412076028974,
+              "confidence": 0.92,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: What is the layout of your studio? Did you find it especially helpful in your work and would you have made any changes in it?**",
+          "value": "Q: What is the layout of your studio? Did you find it especially helpful in your work and would you have made any changes in it?",
+          "bbox": [
+            {
+              "h": 24.259365613090697,
+              "w": 280.59854417456654,
+              "x": 91.97274570967512,
+              "y": 76.49134300924163,
+              "confidence": 0.87,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** My studio layout is simply a drawing board with a glass light panel surrounded by bookcases, paper shelves, and filing cabinets. If I could have afforded a studio made to order, it would have been nearly half an acre in area with endless cupboards and bins for storing such things as the old Benny Burro and Barney Bear model sheets, which seem to have been thrown away because of overcrowding. Also, I would have had only one small window far behind me. I found that windows with a view are distracting. In my present home, the drawing board had to sit beside a window that looked out upon a lovely mountain. That mountain cost me hundreds of hours of production time.",
+          "value": "A: My studio layout is simply a drawing board with a glass light panel surrounded by bookcases, paper shelves, and filing cabinets. If I could have afforded a studio made to order, it would have been nearly half an acre in area with endless cupboards and bins for storing such things as the old Benny Burro and Barney Bear model sheets, which seem to have been thrown away because of overcrowding. Also, I would have had only one small window far behind me. I found that windows with a view are distracting. In my present home, the drawing board had to sit beside a window that looked out upon a lovely mountain. That mountain cost me hundreds of hours of production time.",
+          "bbox": [
+            {
+              "h": 127.49840317025537,
+              "w": 284.1043164032727,
+              "x": 92.04120691513434,
+              "y": 102.43960456126143,
+              "confidence": 0.9,
+              "end_index": 675,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: What was your work procedure? What tools did you use?**",
+          "value": "Q: What was your work procedure? What tools did you use?",
+          "bbox": [
+            {
+              "h": 11.262711856897878,
+              "w": 235.96684726622047,
+              "x": 92.25588232124144,
+              "y": 238.09164527915397,
+              "confidence": 0.82,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** I penciled my scripts in longhand on common writing paper. Nobody but me ever saw them. The plot was broken down into brief panel descriptions of action and characters. Dialog was included in each panel. For drawing I used paper furnished by the publishers. It was formerly full sheets of two-ply Strathmore medium rough. In later years, the company imported paper from West Germany—not quite as good as the Strath, but fairly easy to ink on with a #356 Esterbrook pen. I roughed the art directly onto the paper with a Scripto light blue pencil, inked the characters, then turned the page over to my wife, who inked the dialog, backgrounds, and brushed in the solid blacks. Page sizes were 16 x 24. I cut the pages in half and drew the top four and bottom four panels separately. The engravers back East taped the parts together before shooting. The ink I used was black India. Brush sizes were from 000 to #3.",
+          "value": "A: I penciled my scripts in longhand on common writing paper. Nobody but me ever saw them. The plot was broken down into brief panel descriptions of action and characters. Dialog was included in each panel. For drawing I used paper furnished by the publishers. It was formerly full sheets of two-ply Strathmore medium rough. In later years, the company imported paper from West Germany—not quite as good as the Strath, but fairly easy to ink on with a #356 Esterbrook pen. I roughed the art directly onto the paper with a Scripto light blue pencil, inked the characters, then turned the page over to my wife, who inked the dialog, backgrounds, and brushed in the solid blacks. Page sizes were 16 x 24. I cut the pages in half and drew the top four and bottom four panels separately. The engravers back East taped the parts together before shooting. The ink I used was black India. Brush sizes were from 000 to #3.",
+          "bbox": [
+            {
+              "h": 164.58652519893903,
+              "w": 285.21937500000007,
+              "x": 90.16612500000001,
+              "y": 250.56063660477454,
+              "confidence": 0.88,
+              "end_index": 916,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: Your wife must be quite an artist in her own right.**",
+          "value": "Q: Your wife must be quite an artist in her own right.",
+          "bbox": [
+            {
+              "h": 10.77962864721485,
+              "w": 205.0425,
+              "x": 90.69187500000001,
+              "y": 424.08636604774534,
+              "confidence": 0.88,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** Oh, yes, she's very good. She's not really a cartoonist. That requires a lot of feeling that goes into the action. You've got to feel the action before you can draw it. I sent the pages to the Beverly Hills office and they sent them back to Poughkeepsie, N.Y., or Racine, Wisconsin—whichever one of the offices handled that book—to the artists back there who did the coloring.",
+          "value": "A: Oh, yes, she's very good. She's not really a cartoonist. That requires a lot of feeling that goes into the action. You've got to feel the action before you can draw it. I sent the pages to the Beverly Hills office and they sent them back to Poughkeepsie, N.Y., or Racine, Wisconsin—whichever one of the offices handled that book—to the artists back there who did the coloring.",
+          "bbox": [
+            {
+              "h": 75.34468073551835,
+              "w": 283.1519455238901,
+              "x": 91.02459495581651,
+              "y": 438.38583432736283,
+              "confidence": 0.95,
+              "end_index": 382,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: Did you ever indicate colors that you wanted for a certain thing?**",
+          "value": "Q: Did you ever indicate colors that you wanted for a certain thing?",
+          "bbox": [
+            {
+              "h": 13.40880636604777,
+              "w": 262.875,
+              "x": 90.16612500000001,
+              "y": 520.3142705570292,
+              "confidence": 0.91,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** Well, whenever there was a gag that demanded a certain color, I wrote",
+          "value": "A: Well, whenever there was a gag that demanded a certain color, I wrote",
+          "bbox": [
+            {
+              "h": 14.2,
+              "w": 284.69,
+              "x": 89.38,
+              "y": 532.67,
+              "confidence": 1.0,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nWILLITS, D. THOMPSON, AND M. THOMPSON / 1962\n9\n\\</page_header>",
+          "value": "<page_header>\nWILLITS, D. THOMPSON, AND M. THOMPSON / 1962\n9\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.999206711485327,
+              "w": 186.16569069169202,
+              "x": 517.8031404820885,
+              "y": 19.953862008741428,
+              "confidence": 0.93,
+              "end_index": 76,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "on the side of the sheet, \"Put yellow eyes or big yellow feet,\" or something like that. But they never did—it would come out with green eyes.",
+          "value": "on the side of the sheet, \"Put yellow eyes or big yellow feet,\" or something like that. But they never did—it would come out with green eyes.",
+          "bbox": [
+            {
+              "h": 25.572960000000002,
+              "w": 275.91360000000003,
+              "x": 433.218,
+              "y": 44.00928,
+              "confidence": 0.87,
+              "end_index": 140,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Are you satisfied with the way they were colored?**",
+          "value": "Q: Are you satisfied with the way they were colored?",
+          "bbox": [
+            {
+              "h": 11.691064588891015,
+              "w": 206.08538443216463,
+              "x": 434.03587785823174,
+              "y": 76.5837191001334,
+              "confidence": 0.87,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** I am more dissatisfied, but in later years they improved. I think maybe the same girl had been doing the color overlays for enough years that she'd learned quite a lot about it.",
+          "value": "A: I am more dissatisfied, but in later years they improved. I think maybe the same girl had been doing the color overlays for enough years that she'd learned quite a lot about it.",
+          "bbox": [
+            {
+              "h": 38.06208000000001,
+              "w": 281.80199999999996,
+              "x": 433.218,
+              "y": 89.208,
+              "confidence": 0.91,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: How long did it take you to do the lead stories in *Walt Disney's Comics*?**",
+          "value": "Q: How long did it take you to do the lead stories in Walt Disney's Comics?",
+          "bbox": [
+            {
+              "h": 24.327510022865862,
+              "w": 258.47094212080793,
+              "x": 434.2519182307546,
+              "y": 134.3777305163872,
+              "confidence": 0.93,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** The lead stories—10 pages, 8 panels to the page—took an average of four days to write, six days to draw.",
+          "value": "A: The lead stories—10 pages, 8 panels to the page—took an average of four days to write, six days to draw.",
+          "bbox": [
+            {
+              "h": 25.408471417682954,
+              "w": 282.4055405630717,
+              "x": 434.1161729468369,
+              "y": 159.97647862042683,
+              "confidence": 0.94,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: What parts of your work became easier over the years?**",
+          "value": "Q: What parts of your work became easier over the years?",
+          "bbox": [
+            {
+              "h": 12.09,
+              "w": 226.34,
+              "x": 435.32,
+              "y": 191.93,
+              "confidence": 1.0,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** The writing became harder. Nothing became easier.",
+          "value": "A: The writing became harder. Nothing became easier.",
+          "bbox": [
+            {
+              "h": 13.41,
+              "w": 213.72,
+              "x": 433.74,
+              "y": 203.5,
+              "confidence": 1.0,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Why did you reuse old stories from time to time?**",
+          "value": "Q: Why did you reuse old stories from time to time?",
+          "bbox": [
+            {
+              "h": 11.614491768292703,
+              "w": 202.36982062214182,
+              "x": 435.58572834889486,
+              "y": 224.99672793921496,
+              "confidence": 0.89,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** I reused old story plot formulas—not stories in the full sense. I thought I was revising the locale and characters enough to look fresh to the new generation of readers. Neither I nor the editors guessed that readers of the first versions were still buying comics.",
+          "value": "A: I reused old story plot formulas—not stories in the full sense. I thought I was revising the locale and characters enough to look fresh to the new generation of readers. Neither I nor the editors guessed that readers of the first versions were still buying comics.",
+          "bbox": [
+            {
+              "h": 50.936410246760666,
+              "w": 284.34229015815555,
+              "x": 435.1485884622714,
+              "y": 237.59945087652443,
+              "confidence": 0.94,
+              "end_index": 270,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Did you do all of your story plots?**",
+          "value": "Q: Did you do all of your story plots?",
+          "bbox": [
+            {
+              "h": 11.2812862328506,
+              "w": 144.3216308831936,
+              "x": 436.7760291539635,
+              "y": 296.6968115567836,
+              "confidence": 0.85,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** No, I occasionally got one from the office, and I just revised it a little bit—jazzed it up so it would look a little more like my stuff. Some of those stories they sent me were just pathetic. They were built up to the stage where I would have thrown them in the wastebasket. I wrote and told the guys at the office, \"Why do you buy this stuff without sending it back to the fellows and telling them, 'Give it one more trip through the mill and see if you can't polish it up a bit'?\" But they seemed to think the stories were all right. You know yourself, when you write a letter, you will get your first draft done, and if you read back through it, you will see how you could have said something so much more clearly. And that's the way it was with the stories they sent me. The guy missed the boat on a lot of gags because he didn't time them right or didn't set them in the right place or didn't word the dialog correctly.",
+          "value": "A: No, I occasionally got one from the office, and I just revised it a little bit—jazzed it up so it would look a little more like my stuff. Some of those stories they sent me were just pathetic. They were built up to the stage where I would have thrown them in the wastebasket. I wrote and told the guys at the office, \"Why do you buy this stuff without sending it back to the fellows and telling them, 'Give it one more trip through the mill and see if you can't polish it up a bit'?\" But they seemed to think the stories were all right. You know yourself, when you write a letter, you will get your first draft done, and if you read back through it, you will see how you could have said something so much more clearly. And that's the way it was with the stories they sent me. The guy missed the boat on a lot of gags because he didn't time them right or didn't set them in the right place or didn't word the dialog correctly.",
+          "bbox": [
+            {
+              "h": 167.71103999999997,
+              "w": 285.1668000000001,
+              "x": 436.5828,
+              "y": 308.65968000000004,
+              "confidence": 0.9,
+              "end_index": 931,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Or wasn't an artist who can see what can actually be drawn?**\n**A:** Well, that's right. They didn't write stuff that was easy to stage, and so I took the liberty of rehashing their stuff quite a bit. Some of the stories I changed so completely that, after two years went by, I thought I wrote the whole thing. On those long stories, occasionally the idea came from",
+          "value": "Q: Or wasn't an artist who can see what can actually be drawn?\nA: Well, that's right. They didn't write stuff that was easy to stage, and so I took the liberty of rehashing their stuff quite a bit. Some of the stories I changed so completely that, after two years went by, I thought I wrote the whole thing. On those long stories, occasionally the idea came from",
+          "bbox": [
+            {
+              "h": 64.22976,
+              "w": 284.3256,
+              "x": 438.26520000000005,
+              "y": 483.50736,
+              "confidence": 0.91,
+              "end_index": 369,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "8, 9"
+    }
+  ]
+}

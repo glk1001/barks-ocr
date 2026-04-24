@@ -1,0 +1,248 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "90 CARL BARKS: CONVERSATIONS",
+              "value": "90 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.322229633312693,
+                  "w": 121.09438558736663,
+                  "x": 107.82067575743142,
+                  "y": 38.3390731183308,
+                  "confidence": 0.84,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "90 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.32,
+              "w": 121.09,
+              "x": 107.82,
+              "y": 38.34,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Disney's and asked them to relay it on to the publisher over in Denmark. . . . I had sent just the bare outline of this story, but evidently the publisher over there didn't like it.",
+          "value": "Disney's and asked them to relay it on to the publisher over in Denmark. . . . I had sent just the bare outline of this story, but evidently the publisher over there didn't like it.",
+          "bbox": [
+            {
+              "h": 35.48980132450331,
+              "w": 282.59062500000005,
+              "x": 107.25300000000001,
+              "y": 62.304317880794706,
+              "confidence": 0.95,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: What happened to all your original artwork?**",
+          "value": "Q: What happened to all your original artwork?",
+          "bbox": [
+            {
+              "h": 12.048568988185979,
+              "w": 184.4640283858137,
+              "x": 107.21351615496381,
+              "y": 107.443988128811,
+              "confidence": 0.87,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** The original artwork was destroyed at the publishing house. They simply couldn't store all the drawings that came in for all their 15 or 20 comic books and none of the editors, none of the artists, felt that the stuff was ever going to be worth anything anyway, so all these thousands of pages of drawings were taken out to the incinerator and burned.",
+          "value": "CB: The original artwork was destroyed at the publishing house. They simply couldn't store all the drawings that came in for all their 15 or 20 comic books and none of the editors, none of the artists, felt that the stuff was ever going to be worth anything anyway, so all these thousands of pages of drawings were taken out to the incinerator and burned.",
+          "bbox": [
+            {
+              "h": 64.30752000000001,
+              "w": 284.3256,
+              "x": 105.9912,
+              "y": 120.27888000000002,
+              "confidence": 0.9,
+              "end_index": 358,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: How did you come to do the non-duck stories?**",
+          "value": "Q: How did you come to do the non-duck stories?",
+          "bbox": [
+            {
+              "h": 11.304158940397343,
+              "w": 195.05325000000002,
+              "x": 105.41287500000001,
+              "y": 191.38203973509934,
+              "confidence": 0.86,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** The publishing company sent me a script one time for a story with Bugs Bunny, Porky Pig, and Petunia Pig. Well, I didn't do too badly on Porky and Petunia, but my Bugs was so bad that the staff artist had to draw all new faces on him. The ones he couldn't change he drew on another piece of paper and cut it out and pasted it over the faces that I had drawn. Oh, I didn't get any praise out of it, but I was happy that it came out that way because I had no intention of ever being that much of a cartoonist that I could draw Bugs Bunny. It was over my head.",
+          "value": "CB: The publishing company sent me a script one time for a story with Bugs Bunny, Porky Pig, and Petunia Pig. Well, I didn't do too badly on Porky and Petunia, but my Bugs was so bad that the staff artist had to draw all new faces on him. The ones he couldn't change he drew on another piece of paper and cut it out and pasted it over the faces that I had drawn. Oh, I didn't get any praise out of it, but I was happy that it came out that way because I had no intention of ever being that much of a cartoonist that I could draw Bugs Bunny. It was over my head.",
+          "bbox": [
+            {
+              "h": 104.202,
+              "w": 283.48440000000005,
+              "x": 104.3088,
+              "y": 204.23592000000002,
+              "confidence": 0.89,
+              "end_index": 564,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# An Interview with Carl Barks, Duckburg's True Founding Father",
+          "value": "An Interview with Carl Barks, Duckburg's True Founding Father",
+          "bbox": [
+            {
+              "h": 61.3244945193407,
+              "w": 222.8708648294589,
+              "x": 482.2342695788873,
+              "y": 148.6775592773438,
+              "confidence": 0.91,
+              "end_index": 62,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "DONALD AULT, THOMAS ANDRAE, AND STEPHEN GONG / 1975",
+          "value": "DONALD AULT, THOMAS ANDRAE, AND STEPHEN GONG / 1975",
+          "bbox": [
+            {
+              "h": 28.91509058689026,
+              "w": 195.39907488567079,
+              "x": 496.37992997332327,
+              "y": 225.93227918254578,
+              "confidence": 0.92,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Videotape interview conducted on 4 August 1975 Transcribed from the original videotape and reprinted by permission of Donald Ault.",
+          "value": "Videotape interview conducted on 4 August 1975 Transcribed from the original videotape and reprinted by permission of Donald Ault.",
+          "bbox": [
+            {
+              "h": 44.66083650914636,
+              "w": 141.35567156535822,
+              "x": 479.692426614901,
+              "y": 319.9829093368903,
+              "confidence": 0.97,
+              "end_index": 129,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "*Portions of this interview appeared in altered form in \"A Career with Ducks\" in The Carl Barks Library of Walt Disney's Comics and Stories in Color #3 and in \"I Never Followed the Rules Very Closely\" in the Carl Barks memorial issue of the Comics Journal #227, September 2000: 61-72; much of the interview was released as the video production: The Duck Man: An Interview with Carl Barks in 1996.*",
+          "value": "Portions of this interview appeared in altered form in \"A Career with Ducks\" in The Carl Barks Library of Walt Disney's Comics and Stories in Color #3 and in \"I Never Followed the Rules Very Closely\" in the Carl Barks memorial issue of the Comics Journal #227, September 2000: 61-72; much of the interview was released as the video production: The Duck Man: An Interview with Carl Barks in 1996.",
+          "bbox": [
+            {
+              "h": 76.0474838843369,
+              "w": 260.22175574028205,
+              "x": 480.7419229944742,
+              "y": 405.4404768578507,
+              "confidence": 0.97,
+              "end_index": 396,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Carl, could you tell us what you feel were your most important early influences, especially in terms of artists?**",
+          "value": "Q: Carl, could you tell us what you feel were your most important early influences, especially in terms of artists?",
+          "bbox": [
+            {
+              "h": 25.60391999999996,
+              "w": 277.596,
+              "x": 458.45400000000006,
+              "y": 495.40608000000003,
+              "confidence": 0.88,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** It was reading the newspaper comic strips, and I can go clear back to start with Winsor McCay as one of the influences, but I would say that Barney Google and Happy Hooligan and, later on, the Disney comics of Mickey Mouse were influences. I liked the Mickey Mouse stories be-",
+          "value": "BARKS: It was reading the newspaper comic strips, and I can go clear back to start with Winsor McCay as one of the influences, but I would say that Barney Google and Happy Hooligan and, later on, the Disney comics of Mickey Mouse were influences. I liked the Mickey Mouse stories be-",
+          "bbox": [
+            {
+              "h": 51.799833641387146,
+              "w": 284.99962792968756,
+              "x": 458.7501851895961,
+              "y": 522.005189233994,
+              "confidence": 0.93,
+              "end_index": 286,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "90"
+    }
+  ]
+}

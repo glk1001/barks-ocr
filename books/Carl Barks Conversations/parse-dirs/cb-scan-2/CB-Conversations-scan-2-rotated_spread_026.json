@@ -1,0 +1,463 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "70 CARL BARKS: CONVERSATIONS",
+              "value": "70 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.333877048994857,
+                  "w": 120.0933517768674,
+                  "x": 105.58433481802594,
+                  "y": 42.06707936118522,
+                  "confidence": 0.85,
+                  "end_index": 27,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "70 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.33,
+              "w": 120.09,
+              "x": 105.58,
+              "y": 42.07,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Did people dare to disagree with him? Was there really much give-and-take with Walt?",
+          "value": "BARRIER: Did people dare to disagree with him? Was there really much give-and-take with Walt?",
+          "bbox": [
+            {
+              "h": 23.70313799185405,
+              "w": 277.25277355957036,
+              "x": 104.70958544624145,
+              "y": 66.0622448337462,
+              "confidence": 0.97,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** There wasn't much in the way of give-and-take. If a guy disputed what Walt said, he had to have a very good reason for it. And if he could see some angle there that Walt might have glossed over, or missed, and if he had a good suggestion, Walt would back right down. Walt was a fellow who was looking at the final product.",
+          "value": "BARKS: There wasn't much in the way of give-and-take. If a guy disputed what Walt said, he had to have a very good reason for it. And if he could see some angle there that Walt might have glossed over, or missed, and if he had a good suggestion, Walt would back right down. Walt was a fellow who was looking at the final product.",
+          "bbox": [
+            {
+              "h": 63.37225024890437,
+              "w": 283.1310014291159,
+              "x": 103.95378851467228,
+              "y": 92.39750375976564,
+              "confidence": 0.98,
+              "end_index": 332,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** He was always thinking about what the cartoon was going to look like on the screen.",
+          "value": "BARRIER: He was always thinking about what the cartoon was going to look like on the screen.",
+          "bbox": [
+            {
+              "h": 22.837107429020588,
+              "w": 278.2296825278678,
+              "x": 103.5839577517626,
+              "y": 162.52392549066315,
+              "confidence": 0.96,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Oh, yeah.",
+          "value": "BARKS: Oh, yeah.",
+          "bbox": [
+            {
+              "h": 11.010229358803361,
+              "w": 71.66265279034869,
+              "x": 103.76439629382624,
+              "y": 188.26689471465323,
+              "confidence": 0.91,
+              "end_index": 19,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Were Walt's reactions predictable? Could you anticipate that he would like or dislike something and shape a story to fit his reactions?\n**BARKS:** No, he wasn't that predictable.",
+          "value": "BARRIER: Were Walt's reactions predictable? Could you anticipate that he would like or dislike something and shape a story to fit his reactions?\nBARKS: No, he wasn't that predictable.",
+          "bbox": [
+            {
+              "h": 37.70878305783159,
+              "w": 276.1686646371237,
+              "x": 102.84644385658824,
+              "y": 206.76361130430644,
+              "confidence": 0.98,
+              "end_index": 190,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** So you couldn't make a story Walt-proof.",
+          "value": "BARRIER: So you couldn't make a story Walt-proof.",
+          "bbox": [
+            {
+              "h": 12.531254203982458,
+              "w": 200.36038343476085,
+              "x": 102.98329113174067,
+              "y": 251.03214087033163,
+              "confidence": 0.96,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** No, you couldn't. But if you had something that had a lot of good action in it and a fairly new gag, you knew you were at least more than halfway there.",
+          "value": "BARKS: No, you couldn't. But if you had something that had a lot of good action in it and a fairly new gag, you knew you were at least more than halfway there.",
+          "bbox": [
+            {
+              "h": 37.24935721703504,
+              "w": 283.2507302722466,
+              "x": 102.29845993116427,
+              "y": 263.8207373666159,
+              "confidence": 0.97,
+              "end_index": 162,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** What differences did you find between timing for cartoons and timing for comic books? You mentioned \\[in the 1973 interview] what Floyd Gottfredson had told you about violent action, but were there other things that struck you immediately, that had to be approached differently?\n**BARKS:** Well, I guess it was a gradual thing, but in drawing comic books, you've got to be darned sure that your idea is presented. If it's going to take three or four drawings to present that idea, the timing of it comes in in how much development you do in the first panel, how much you do in the second, how much in the third, and if you can keep the development just enough that the reader can figure out what is coming, and then in the fourth panel, give it to him with a big sock right in the face.",
+          "value": "BARRIER: What differences did you find between timing for cartoons and timing for comic books? You mentioned [in the 1973 interview] what Floyd Gottfredson had told you about violent action, but were there other things that struck you immediately, that had to be approached differently?\nBARKS: Well, I guess it was a gradual thing, but in drawing comic books, you've got to be darned sure that your idea is presented. If it's going to take three or four drawings to present that idea, the timing of it comes in in how much development you do in the first panel, how much you do in the second, how much in the third, and if you can keep the development just enough that the reader can figure out what is coming, and then in the fourth panel, give it to him with a big sock right in the face.",
+          "bbox": [
+            {
+              "h": 142.097974933308,
+              "w": 284.35668491865954,
+              "x": 101.02092024044876,
+              "y": 308.03152624333086,
+              "confidence": 0.99,
+              "end_index": 798,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** You have to be careful not to tell him too much at one time.\n**BARKS:** That's right. That's what I consider timing.",
+          "value": "BARRIER: You have to be careful not to tell him too much at one time.\nBARKS: That's right. That's what I consider timing.",
+          "bbox": [
+            {
+              "h": 25.908284522675302,
+              "w": 272.5701310439692,
+              "x": 99.93969778367952,
+              "y": 455.96721428163124,
+              "confidence": 0.97,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Did you think of comic-book panels as frames of film, or as scenes, taking up a longer amount of time?",
+          "value": "BARRIER: Did you think of comic-book panels as frames of film, or as scenes, taking up a longer amount of time?",
+          "bbox": [
+            {
+              "h": 24.594555311547257,
+              "w": 269.81507782131297,
+              "x": 99.47498307093178,
+              "y": 487.3891761956937,
+              "confidence": 0.97,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** As a scene. You've got your characters on a sort of a stage.",
+          "value": "BARKS: As a scene. You've got your characters on a sort of a stage.",
+          "bbox": [
+            {
+              "h": 13.256283669969497,
+              "w": 260.98192306890724,
+              "x": 99.6754891238329,
+              "y": 513.7644919493141,
+              "confidence": 0.96,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** But as far as individual panels are concerned, does the action within them take place in an instant of time, or over several minutes, or a longer period of time?",
+          "value": "BARRIER: But as far as individual panels are concerned, does the action within them take place in an instant of time, or over several minutes, or a longer period of time?",
+          "bbox": [
+            {
+              "h": 36.66340534012958,
+              "w": 281.64557985780306,
+              "x": 98.9903824254478,
+              "y": 532.0289161680641,
+              "confidence": 0.98,
+              "end_index": 173,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nJ. MICHAEL BARRIER / 1974 71\n\\</page_header>",
+          "value": "<page_header>\nJ. MICHAEL BARRIER / 1974 71\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.68,
+              "w": 116.72,
+              "x": 615.92,
+              "y": 42.59,
+              "confidence": 1.0,
+              "end_index": 42,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** That depends on the story itself. But usually it's like a movie scene; you tell as much as you can in that one panel, then you make a cut to the next. But if it has to be right back into the same scene, just two heads talking to each other, you've got to have a terrific change in the dialogue, a terrific buildup in the dialogue to justify that monotonous presentation.",
+          "value": "BARKS: That depends on the story itself. But usually it's like a movie scene; you tell as much as you can in that one panel, then you make a cut to the next. But if it has to be right back into the same scene, just two heads talking to each other, you've got to have a terrific change in the dialogue, a terrific buildup in the dialogue to justify that monotonous presentation.",
+          "bbox": [
+            {
+              "h": 75.10524873046877,
+              "w": 283.5613290062882,
+              "x": 450.66081816882627,
+              "y": 66.73595121236663,
+              "confidence": 0.98,
+              "end_index": 380,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Thinking about your longhand scripts . . . you must have done preliminary work before those, you must have made some rough sketches, or taken notes.",
+          "value": "BARRIER: Thinking about your longhand scripts . . . you must have done preliminary work before those, you must have made some rough sketches, or taken notes.",
+          "bbox": [
+            {
+              "h": 36.48201058022102,
+              "w": 282.5347740806021,
+              "x": 451.474738876715,
+              "y": 148.99579787538113,
+              "confidence": 0.98,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Well, yes, at times I would.",
+          "value": "BARKS: Well, yes, at times I would.",
+          "bbox": [
+            {
+              "h": 10.515496688741734,
+              "w": 137.22075,
+              "x": 452.14500000000004,
+              "y": 188.22739072847685,
+              "confidence": 0.94,
+              "end_index": 38,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Would you normally sit down and just write your longhand script without other preparation?",
+          "value": "BARRIER: Would you normally sit down and just write your longhand script without other preparation?",
+          "bbox": [
+            {
+              "h": 24.497759436928344,
+              "w": 270.0471596798781,
+              "x": 452.22349183022106,
+              "y": 205.17193965320126,
+              "confidence": 0.97,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Oh no, I was never able to just sit down and write a longhand script. First, I just jotted down a bunch of gags that would come to my mind. Then I would start hooking the gags together, and pretty soon I'd have a sort of a little synopsis. From that, I'd break it down into a longer synopsis. Make a mark every two or three lines and think, \"Well, that will make one page,\" and \"This'll make another page.\" By the time I'd get to the bottom of my synopsis, I'd know whether I was going to have enough material.",
+          "value": "BARKS: Oh no, I was never able to just sit down and write a longhand script. First, I just jotted down a bunch of gags that would come to my mind. Then I would start hooking the gags together, and pretty soon I'd have a sort of a little synopsis. From that, I'd break it down into a longer synopsis. Make a mark every two or three lines and think, \"Well, that will make one page,\" and \"This'll make another page.\" By the time I'd get to the bottom of my synopsis, I'd know whether I was going to have enough material.",
+          "bbox": [
+            {
+              "h": 101.04290885099086,
+              "w": 283.9367072932545,
+              "x": 452.6541700409681,
+              "y": 231.1296858041159,
+              "confidence": 0.98,
+              "end_index": 520,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** When you had new characters like Scrooge and Gladstone, would you do anything in the way of preparation, like character designs?\n**BARKS:** No, I didn't, and that was bad. I told you before, I got into trouble with that darned Gyro Gearloose \\[i.e., because Gyro was twice as tall as the ducks and created difficulties in panel composition].",
+          "value": "BARRIER: When you had new characters like Scrooge and Gladstone, would you do anything in the way of preparation, like character designs?\nBARKS: No, I didn't, and that was bad. I told you before, I got into trouble with that darned Gyro Gearloose [i.e., because Gyro was twice as tall as the ducks and created difficulties in panel composition].",
+          "bbox": [
+            {
+              "h": 62.313212966844524,
+              "w": 283.04219095369666,
+              "x": 453.8847937071266,
+              "y": 339.072686804497,
+              "confidence": 0.98,
+              "end_index": 353,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** So you essentially just had a rough idea for a character, and let him work himself out.",
+          "value": "BARRIER: So you essentially just had a rough idea for a character, and let him work himself out.",
+          "bbox": [
+            {
+              "h": 23.996016425304852,
+              "w": 283.47918056878814,
+              "x": 454.27339588891016,
+              "y": 407.5739926686358,
+              "confidence": 0.97,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I just fitted the character to the situation, the particular bunch of gags that I had to have him act in, for the story. Like with Scrooge, when I wanted to use him again later on in another story that called for another bunch of gags, I developed the character a little further. So it was with Gladstone.",
+          "value": "BARKS: I just fitted the character to the situation, the particular bunch of gags that I had to have him act in, for the story. Like with Scrooge, when I wanted to use him again later on in another story that called for another bunch of gags, I developed the character a little further. So it was with Gladstone.",
+          "bbox": [
+            {
+              "h": 62.045836523437536,
+              "w": 284.3085792444741,
+              "x": 454.5893167397104,
+              "y": 433.44362975419216,
+              "confidence": 0.98,
+              "end_index": 315,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** In effect, you're talking about fitting the character to the gag.\n**BARKS:** Yeah.",
+          "value": "BARRIER: In effect, you're talking about fitting the character to the gag.\nBARKS: Yeah.",
+          "bbox": [
+            {
+              "h": 23.608762014100627,
+              "w": 279.50995841272874,
+              "x": 455.3900135527821,
+              "y": 502.7001916349086,
+              "confidence": 0.96,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** As Gladstone and Scrooge emerged, did you find that gags just flowed from them, that as you sat each character down in a different situation, that this would sort of automatically produce gags?",
+          "value": "BARRIER: As Gladstone and Scrooge emerged, did you find that gags just flowed from them, that as you sat each character down in a different situation, that this would sort of automatically produce gags?",
+          "bbox": [
+            {
+              "h": 37.15068215510679,
+              "w": 283.97988531345277,
+              "x": 455.46194352610524,
+              "y": 533.7904947170351,
+              "confidence": 0.98,
+              "end_index": 205,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "70, 71"
+    }
+  ]
+}

@@ -1,0 +1,553 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "146 CARL BARKS: CONVERSATIONS",
+              "value": "146 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.822715940596424,
+                  "w": 125.23500494831366,
+                  "x": 119.97622764029155,
+                  "y": 39.48176525998,
+                  "confidence": 0.81,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "146 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.82,
+              "w": 125.24,
+              "x": 119.98,
+              "y": 39.48,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "chemicals and sort of jumble them up and stick them on a piece of paper.\" Well, that is what I did, and it turned out that it was a chemical formula.",
+          "value": "chemicals and sort of jumble them up and stick them on a piece of paper.\" Well, that is what I did, and it turned out that it was a chemical formula.",
+          "bbox": [
+            {
+              "h": 25.547254524938076,
+              "w": 283.0852687928735,
+              "x": 118.81368950076221,
+              "y": 62.99951965093847,
+              "confidence": 0.96,
+              "end_index": 148,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** A secret formula, wasn't it?",
+          "value": "H: A secret formula, wasn't it?",
+          "bbox": [
+            {
+              "h": 10.122479999999996,
+              "w": 118.6092,
+              "x": 118.6092,
+              "y": 97.05672000000001,
+              "confidence": 0.8,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Yeah, it was a formula that would make some very powerful chemical substance.",
+          "value": "B: Yeah, it was a formula that would make some very powerful chemical substance.",
+          "bbox": [
+            {
+              "h": 21.67550374904726,
+              "w": 279.25060227110333,
+              "x": 118.27287477967798,
+              "y": 109.76489082507624,
+              "confidence": 0.95,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** How did you find out? Did the FBI or CIA contact you?",
+          "value": "H: How did you find out? Did the FBI or CIA contact you?",
+          "bbox": [
+            {
+              "h": 12.8948148997237,
+              "w": 224.39614592463798,
+              "x": 118.03793776200459,
+              "y": 143.3714523068312,
+              "confidence": 0.9,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** No, no, some fans wrote about it. They said that it was actually a formula for some chemical—but I don't remember what exactly it would do.",
+          "value": "B: No, no, some fans wrote about it. They said that it was actually a formula for some chemical—but I don't remember what exactly it would do.",
+          "bbox": [
+            {
+              "h": 34.455253882431414,
+              "w": 279.662258610423,
+              "x": 117.42801065882243,
+              "y": 156.51548999142534,
+              "confidence": 0.97,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** You are one of those few people after whom a planet was named.",
+          "value": "H: You are one of those few people after whom a planet was named.",
+          "bbox": [
+            {
+              "h": 11.834501188548023,
+              "w": 265.494633527058,
+              "x": 116.66878878858614,
+              "y": 202.94813421065172,
+              "confidence": 0.85,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Well, it was an asteroid. That came from one of my later stories, called \"Island in the Sky,\" where the ducks tried to find a place for Uncle Scrooge to hide his money. And they passed a bunch of these small asteroids on the way there and some of these asteroids—they looked real, just like a jumble of rocks up in the sky—but when Donald stepped on one of them they went right down through them. And some of the men there at Cornell University where they had a whole laboratory for studying asteroids—with telescopes and everything—studying those things for generations I guess—somebody there read that comic book and thought that was quite a thing that these ducks could run onto a bunch of peculiar asteroids on their way to the asteroid belt—little wandering objects in the sky, and they have little worlds instead of being just a bunch of blank rocks like we're taught to think of these objects in the sky. Anyway, they thought that was pretty good. My stories made the asteroids interesting and opened a possibility that there might even be some among them that would have a few vegetables growing on it.",
+          "value": "B: Well, it was an asteroid. That came from one of my later stories, called \"Island in the Sky,\" where the ducks tried to find a place for Uncle Scrooge to hide his money. And they passed a bunch of these small asteroids on the way there and some of these asteroids—they looked real, just like a jumble of rocks up in the sky—but when Donald stepped on one of them they went right down through them. And some of the men there at Cornell University where they had a whole laboratory for studying asteroids—with telescopes and everything—studying those things for generations I guess—somebody there read that comic book and thought that was quite a thing that these ducks could run onto a bunch of peculiar asteroids on their way to the asteroid belt—little wandering objects in the sky, and they have little worlds instead of being just a bunch of blank rocks like we're taught to think of these objects in the sky. Anyway, they thought that was pretty good. My stories made the asteroids interesting and opened a possibility that there might even be some among them that would have a few vegetables growing on it.",
+          "bbox": [
+            {
+              "h": 209.05363150724088,
+              "w": 284.964489436452,
+              "x": 114.91203944359756,
+              "y": 213.03371477229427,
+              "confidence": 0.92,
+              "end_index": 1116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** And so they named one of their asteroids after you?",
+          "value": "H: And so they named one of their asteroids after you?",
+          "bbox": [
+            {
+              "h": 12.939445598323179,
+              "w": 213.57158656869285,
+              "x": 113.15674272341846,
+              "y": 430.81649043921504,
+              "confidence": 0.84,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** And so they named one of their discoveries after me: 2730 Barks. He wrote, telling me that they had named an asteroid after me and why and explaining what size it was. I guess there must have been about a hundred or two hundred acres of soil on it. In *Uncle Scrooge's Life and Times* on the very back page, there is a picture of it—a little dot on a big photo of the sky.",
+          "value": "B: And so they named one of their discoveries after me: 2730 Barks. He wrote, telling me that they had named an asteroid after me and why and explaining what size it was. I guess there must have been about a hundred or two hundred acres of soil on it. In Uncle Scrooge's Life and Times on the very back page, there is a picture of it—a little dot on a big photo of the sky.",
+          "bbox": [
+            {
+              "h": 75.96845164824695,
+              "w": 283.4832504227801,
+              "x": 112.52714257217036,
+              "y": 443.8091560403965,
+              "confidence": 0.97,
+              "end_index": 378,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** There you have a place to escape when this world is destroyed one day.",
+          "value": "H: There you have a place to escape when this world is destroyed one day.",
+          "bbox": [
+            {
+              "h": 22.84811663014488,
+              "w": 270.0947581876429,
+              "x": 111.72394123356517,
+              "y": 529.7111336318599,
+              "confidence": 0.96,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Yeah, it's big enough to put his money bin on.",
+          "value": "B: Yeah, it's big enough to put his money bin on.",
+          "bbox": [
+            {
+              "h": 12.868036480563966,
+              "w": 188.48287771532014,
+              "x": 111.4931867735328,
+              "y": 555.1800783441313,
+              "confidence": 0.94,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nGOTTFRIED HELNWEIN / 1992 147\n\\</page_header>",
+          "value": "<page_header>\nGOTTFRIED HELNWEIN / 1992 147\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 127.76,
+              "x": 616.97,
+              "y": 38.91,
+              "confidence": 1.0,
+              "end_index": 43,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** But first you need to get there. You'd need Gyro Gearloose to make you a rocket.",
+          "value": "H: But first you need to get there. You'd need Gyro Gearloose to make you a rocket.",
+          "bbox": [
+            {
+              "h": 24.413039999999995,
+              "w": 275.07239999999996,
+              "x": 461.81880000000007,
+              "y": 64.30752000000001,
+              "confidence": 0.85,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Yeah, that's right.",
+          "value": "B: Yeah, that's right.",
+          "bbox": [
+            {
+              "h": 11.157958300781264,
+              "w": 79.21679018197406,
+              "x": 462.65599275914644,
+              "y": 90.69488914467418,
+              "confidence": 0.93,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Did you meet Disney personally?",
+          "value": "H: Did you meet Disney personally?",
+          "bbox": [
+            {
+              "h": 11.262430478277446,
+              "w": 139.38205535442077,
+              "x": 462.78903315548786,
+              "y": 110.67311446146154,
+              "confidence": 0.92,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oh, yes—I went to story meetings with Walt. Well, we were working in the story department—he was the guy who'd come in at the last session and a couple of times he also joined the production of one of these stories.",
+          "value": "B: Oh, yes—I went to story meetings with Walt. Well, we were working in the story department—he was the guy who'd come in at the last session and a couple of times he also joined the production of one of these stories.",
+          "bbox": [
+            {
+              "h": 37.165369954030105,
+              "w": 283.93470367282777,
+              "x": 462.72631983612814,
+              "y": 123.55329474680833,
+              "confidence": 0.97,
+              "end_index": 221,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** For the animated movies.",
+          "value": "H: For the animated movies.",
+          "bbox": [
+            {
+              "h": 8.675284768211924,
+              "w": 110.14462499999996,
+              "x": 463.18575000000004,
+              "y": 170.876821192053,
+              "confidence": 0.81,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** For the storyboards. All the drawings were up there and that's how we worked out the story.",
+          "value": "B: For the storyboards. All the drawings were up there and that's how we worked out the story.",
+          "bbox": [
+            {
+              "h": 23.65986754966886,
+              "w": 283.116375,
+              "x": 463.18575000000004,
+              "y": 182.18098013245037,
+              "confidence": 0.97,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** How was it to work with him? There are people who claim that he was a dictator.",
+          "value": "H: How was it to work with him? There are people who claim that he was a dictator.",
+          "bbox": [
+            {
+              "h": 24.016652029344517,
+              "w": 284.03473442263726,
+              "x": 463.1991742568598,
+              "y": 215.22720502334226,
+              "confidence": 0.96,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Well, I'll tell you, if you had a really good story, he was a very pleasant guy to have in the room. He would laugh and contribute more gags. But if the story wasn't good, he was a very critical guy. Well, he had to be. After all, it was his money that was paying us our wages, so if the story wasn't good, he would let us know. But generally we were very careful to have the story in pretty good shape before we ever showed it to him.",
+          "value": "B: Well, I'll tell you, if you had a really good story, he was a very pleasant guy to have in the room. He would laugh and contribute more gags. But if the story wasn't good, he was a very critical guy. Well, he had to be. After all, it was his money that was paying us our wages, so if the story wasn't good, he would let us know. But generally we were very careful to have the story in pretty good shape before we ever showed it to him.",
+          "bbox": [
+            {
+              "h": 76.7766972013148,
+              "w": 285.3488589700838,
+              "x": 462.89402286585374,
+              "y": 241.5543001214749,
+              "confidence": 0.97,
+              "end_index": 441,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Was he really competent?",
+          "value": "H: Was he really competent?",
+          "bbox": [
+            {
+              "h": 11.025652877286566,
+              "w": 112.6244058212653,
+              "x": 464.2083978658537,
+              "y": 327.4265120950839,
+              "confidence": 0.89,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oh, yes—he knew exactly when a gag was going to fall flat. He would tell you that it needs more work or it needs to be shortened or something.",
+          "value": "B: Oh, yes—he knew exactly when a gag was going to fall flat. He would tell you that it needs more work or it needs to be shortened or something.",
+          "bbox": [
+            {
+              "h": 25.115338390815563,
+              "w": 283.89017320884153,
+              "x": 464.16281550114337,
+              "y": 339.46664246855954,
+              "confidence": 0.96,
+              "end_index": 148,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Did he also care about the drawing, or was he more interested in the gag?",
+          "value": "H: Did he also care about the drawing, or was he more interested in the gag?",
+          "bbox": [
+            {
+              "h": 25.316375976562504,
+              "w": 279.4839614376906,
+              "x": 464.3726446503431,
+              "y": 372.9899258145961,
+              "confidence": 0.95,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Well he didn't care much about the drawings. They just had to be enough of a drawing to put over the story. If we had made sharp, detailed drawings, high-class art, he would have gotten mad at us. He'd say: \"I'm paying you guys to think of ideas and stories and to get something moving.\"",
+          "value": "B: Well he didn't care much about the drawings. They just had to be enough of a drawing to put over the story. If we had made sharp, detailed drawings, high-class art, he would have gotten mad at us. He'd say: \"I'm paying you guys to think of ideas and stories and to get something moving.\"",
+          "bbox": [
+            {
+              "h": 64.29022438548024,
+              "w": 284.65119833746195,
+              "x": 464.46766634908545,
+              "y": 398.95118214557937,
+              "confidence": 0.96,
+              "end_index": 293,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** How many artists were involved with the story process?",
+          "value": "H: How many artists were involved with the story process?",
+          "bbox": [
+            {
+              "h": 11.56455415872716,
+              "w": 228.03990498761436,
+              "x": 465.3551700171494,
+              "y": 471.6359135241998,
+              "confidence": 0.82,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Well, there were two guys on the story crew. And they'd just make very crude sketches, letter the dialogue—big type, so that you could sit like here, and read the whole thing up on this wall in front of you on these storyboards without having high-powered glasses on.",
+          "value": "B: Well, there were two guys on the story crew. And they'd just make very crude sketches, letter the dialogue—big type, so that you could sit like here, and read the whole thing up on this wall in front of you on these storyboards without having high-powered glasses on.",
+          "bbox": [
+            {
+              "h": 50.89012970179119,
+              "w": 284.5397469512195,
+              "x": 464.8339281631098,
+              "y": 484.53341424352146,
+              "confidence": 0.93,
+              "end_index": 273,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** How many people were in the sessions?",
+          "value": "H: How many people were in the sessions?",
+          "bbox": [
+            {
+              "h": 11.041271523178807,
+              "w": 166.66275000000002,
+              "x": 466.077375,
+              "y": 544.1769536423842,
+              "confidence": 0.82,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** For a story conference there'd be Walt and the guy who was going to",
+          "value": "B: For a story conference there'd be Walt and the guy who was going to",
+          "bbox": [
+            {
+              "h": 11.304158940397315,
+              "w": 280.22475000000003,
+              "x": 465.8145,
+              "y": 557.0584370860928,
+              "confidence": 0.92,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "146, 147"
+    }
+  ]
+}

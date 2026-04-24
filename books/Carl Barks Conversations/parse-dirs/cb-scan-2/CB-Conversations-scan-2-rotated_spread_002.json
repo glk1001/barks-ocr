@@ -1,0 +1,375 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "22 CARL BARKS: CONVERSATIONS",
+              "value": "22 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.81348864120856,
+                  "w": 120.20226106969324,
+                  "x": 109.67959722156061,
+                  "y": 35.13945312887053,
+                  "confidence": 0.8,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "22 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.81,
+              "w": 120.2,
+              "x": 109.68,
+              "y": 35.14,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Did you conceive of your stories as storyboards?",
+          "value": "BARRIER: Did you conceive of your stories as storyboards?",
+          "bbox": [
+            {
+              "h": 14.267472588367001,
+              "w": 227.61700332864902,
+              "x": 109.10566015029536,
+              "y": 58.96893765898915,
+              "confidence": 0.78,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I practically considered the formation of a story like I was working on a storyboard. Of course, I wrote it out in longhand, but as I sketched it out, I found—I bought a sheet of Celotex, four by eight, and I put that up in front of my drawing board, and when I'd get a half sheet or a comic page done in pencil, I'd stick it up there, and then the next one, and the next one, and after I got about five of them done, would sit back and look at that display, read that continuity. Sometimes I would take down two or three sheets and do a lot of erasing and changing. I was able to visualize my story progress much better that way. Then later, I finally got so polished, you might say, at writing those stories that I didn't need to work by that method. I could just do a half page and stick it up on the shelf. . . . I was able to visualize it more or less from my longhand \\[script], rather than having to have it up there in pencil drawings. But I think that my best work was done back in those years, when I had, say, five pages all laid out in blue pencil to criticize.",
+          "value": "BARKS: I practically considered the formation of a story like I was working on a storyboard. Of course, I wrote it out in longhand, but as I sketched it out, I found—I bought a sheet of Celotex, four by eight, and I put that up in front of my drawing board, and when I'd get a half sheet or a comic page done in pencil, I'd stick it up there, and then the next one, and the next one, and after I got about five of them done, would sit back and look at that display, read that continuity. Sometimes I would take down two or three sheets and do a lot of erasing and changing. I was able to visualize my story progress much better that way. Then later, I finally got so polished, you might say, at writing those stories that I didn't need to work by that method. I could just do a half page and stick it up on the shelf. . . . I was able to visualize it more or less from my longhand [script], rather than having to have it up there in pencil drawings. But I think that my best work was done back in those years, when I had, say, five pages all laid out in blue pencil to criticize.",
+          "bbox": [
+            {
+              "h": 206.778799924376,
+              "w": 286.22223711413875,
+              "x": 106.60137254668447,
+              "y": 58.30741054151583,
+              "confidence": 0.98,
+              "end_index": 1083,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** I'm intrigued by your stories in the early forties, and the way they changed, and the way you changed from the storyboard approach to the later approach. A lot of the panels in your early stories seem to be almost like individual frames from a cartoon, whereas in your later stories, you seem to have more time within a panel.",
+          "value": "BARRIER: I'm intrigued by your stories in the early forties, and the way they changed, and the way you changed from the storyboard approach to the later approach. A lot of the panels in your early stories seem to be almost like individual frames from a cartoon, whereas in your later stories, you seem to have more time within a panel.",
+          "bbox": [
+            {
+              "h": 64.18709954982853,
+              "w": 281.91285030011437,
+              "x": 105.03306370283919,
+              "y": 272.84837092940177,
+              "confidence": 0.98,
+              "end_index": 338,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Yeah, using more dialogue to carry some of the story points. In the early stories, I carried the progression with action a great deal more, and then in later stories, I was allowing the dialogue to carry a great deal of the story progress.",
+          "value": "BARKS: Yeah, using more dialogue to carry some of the story points. In the early stories, I carried the progression with action a great deal more, and then in later stories, I was allowing the dialogue to carry a great deal of the story progress.",
+          "bbox": [
+            {
+              "h": 50.27591910251527,
+              "w": 279.84203971453417,
+              "x": 104.19193758634243,
+              "y": 337.7088222942074,
+              "confidence": 0.97,
+              "end_index": 249,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** You mentioned the last time I was here that you almost left Western at one time, I believe in the early fifties.",
+          "value": "BARRIER: You mentioned the last time I was here that you almost left Western at one time, I believe in the early fifties.",
+          "bbox": [
+            {
+              "h": 25.48770112900155,
+              "w": 270.4977175620475,
+              "x": 103.29247480885577,
+              "y": 395.8793136528202,
+              "confidence": 0.96,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Oh, I didn't almost leave; I investigated the idea. One of Western's artists contacted me outside the building one day and said, \"Say, why don't you do some comic books for this outfit\"—I think they were publishing comic books with Heckle and Jeckle, or some of those fellows. He said I'd make more money, and so on. I thought, well, I'll wait a while before I make any changes. I want first to see how permanent this outfit is and see if I can find out from somebody else if their checks bounce, and all that sort of thing. One thing I respected Western for was that their checks never bounced. So, I guess it was a good thing that I was hesitant about it. . . . Anyway, it was not too long after that that I was talking with Bob Karp, who does the gags for the duck newspaper strip. His brother",
+          "value": "BARKS: Oh, I didn't almost leave; I investigated the idea. One of Western's artists contacted me outside the building one day and said, \"Say, why don't you do some comic books for this outfit\"—I think they were publishing comic books with Heckle and Jeckle, or some of those fellows. He said I'd make more money, and so on. I thought, well, I'll wait a while before I make any changes. I want first to see how permanent this outfit is and see if I can find out from somebody else if their checks bounce, and all that sort of thing. One thing I respected Western for was that their checks never bounced. So, I guess it was a good thing that I was hesitant about it. . . . Anyway, it was not too long after that that I was talking with Bob Karp, who does the gags for the duck newspaper strip. His brother",
+          "bbox": [
+            {
+              "h": 142.9899861471037,
+              "w": 283.60651064691314,
+              "x": 101.45562447599087,
+              "y": 422.4373360518294,
+              "confidence": 0.97,
+              "end_index": 806,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nBARRIER, BRAY, FOSTER, AND SPICER / 1971 23\n\\</page_header>",
+          "value": "<page_header>\nBARRIER, BRAY, FOSTER, AND SPICER / 1971 23\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.68,
+              "w": 169.03,
+              "x": 562.55,
+              "y": 44.43,
+              "confidence": 1.0,
+              "end_index": 57,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Lynn was doing some comic-book work in New York, and he knew of this outfit that the Western artist had tried to get me to go with. \"Watch out for them,\" Bob told me, \"because they're just liable to fold up and disappear some night.\" He said, \"Don't make any changes,\" so I didn't, and I never regretted it, because that outfit did fold up later.",
+          "value": "Lynn was doing some comic-book work in New York, and he knew of this outfit that the Western artist had tried to get me to go with. \"Watch out for them,\" Bob told me, \"because they're just liable to fold up and disappear some night.\" He said, \"Don't make any changes,\" so I didn't, and I never regretted it, because that outfit did fold up later.",
+          "bbox": [
+            {
+              "h": 61.77854304635761,
+              "w": 283.116375,
+              "x": 448.72762500000005,
+              "y": 67.29917880794702,
+              "confidence": 0.98,
+              "end_index": 345,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Did you ever get so tired of the ducks that you wanted to drop them?",
+          "value": "BARRIER: Did you ever get so tired of the ducks that you wanted to drop them?",
+          "bbox": [
+            {
+              "h": 22.842523388671868,
+              "w": 282.47070831745424,
+              "x": 449.7239753477516,
+              "y": 139.63578748928168,
+              "confidence": 0.95,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Oh, lord, yes. Every time I started a story, I was that tired of them. At the very beginning, it was a matter of economics; I was desperately in need of having a steady income. So I worked on them very willingly, trying to build myself up so I could do a lot of them.",
+          "value": "BARKS: Oh, lord, yes. Every time I started a story, I was that tired of them. At the very beginning, it was a matter of economics; I was desperately in need of having a steady income. So I worked on them very willingly, trying to build myself up so I could do a lot of them.",
+          "bbox": [
+            {
+              "h": 50.460558119759895,
+              "w": 280.7898210508765,
+              "x": 450.04365298685224,
+              "y": 165.92245346798785,
+              "confidence": 0.96,
+              "end_index": 277,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Did you get tired of the ducks as personalities?\n**BARKS:** I believe I was beginning to get a little tired of Donald there toward the last. Scrooge was still enough of a character that I could think of ideas for him. And the little nephews. Now this Junior Woodchuck idea comes along and ties right in with all this ecological bushwah that's going on. I can see two sides of the ecological problem. You know, the human race has got to have all these luxuries they've built up for themselves and become used to.",
+          "value": "BARRIER: Did you get tired of the ducks as personalities?\nBARKS: I believe I was beginning to get a little tired of Donald there toward the last. Scrooge was still enough of a character that I could think of ideas for him. And the little nephews. Now this Junior Woodchuck idea comes along and ties right in with all this ecological bushwah that's going on. I can see two sides of the ecological problem. You know, the human race has got to have all these luxuries they've built up for themselves and become used to.",
+          "bbox": [
+            {
+              "h": 102.43278060451604,
+              "w": 283.9537380668827,
+              "x": 450.09459503620434,
+              "y": 225.5570622070313,
+              "confidence": 0.98,
+              "end_index": 523,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SPICER:** Would you be interested in writing stories using more realistic characters today?",
+          "value": "SPICER: Would you be interested in writing stories using more realistic characters today?",
+          "bbox": [
+            {
+              "h": 22.87120529801325,
+              "w": 271.28700000000003,
+              "x": 450.83062500000005,
+              "y": 338.59899337748345,
+              "confidence": 0.96,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** No, I'm too old to start with it now, but if I did ever go back to drawing, I would like to do human characters. Girls, musclemen . . .",
+          "value": "BARKS: No, I'm too old to start with it now, but if I did ever go back to drawing, I would like to do human characters. Girls, musclemen . . .",
+          "bbox": [
+            {
+              "h": 24.216980487804896,
+              "w": 276.66797310880344,
+              "x": 450.70209274961894,
+              "y": 364.54042600038116,
+              "confidence": 0.95,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BRAY:** Right after \"Dangerous Disguise,\" did they tell you to start drawing more dog characters \\[instead of realistic humans]?\n**BARKS:** Oh, they told me it was completely out of line having human characters with ducks.",
+          "value": "BRAY: Right after \"Dangerous Disguise,\" did they tell you to start drawing more dog characters [instead of realistic humans]?\nBARKS: Oh, they told me it was completely out of line having human characters with ducks.",
+          "bbox": [
+            {
+              "h": 47.31973509933778,
+              "w": 279.69900000000007,
+              "x": 450.30487500000004,
+              "y": 399.58887417218546,
+              "confidence": 0.96,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 22.08,
+              "w": 278.65,
+              "x": 451.36,
+              "y": 399.59,
+              "confidence": 1.0,
+              "end_index": 129,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 22.61,
+              "w": 269.18,
+              "x": 450.3,
+              "y": 424.3,
+              "confidence": 1.0,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 131
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** You found drawing in a realistic style more satisfying than drawing in a cartoon style?",
+          "value": "BARRIER: You found drawing in a realistic style more satisfying than drawing in a cartoon style?",
+          "bbox": [
+            {
+              "h": 21.81965562913905,
+              "w": 262.875,
+              "x": 451.35637500000007,
+              "y": 459.7900927152318,
+              "confidence": 0.96,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Yes. I guess it was just a lifelong desire to draw stuff like Superman. Not that I liked the Superman stories, or the problems of Superman, but I just liked to draw the human characters. I believe I could have done all right drawing them.",
+          "value": "BARKS: Yes. I guess it was just a lifelong desire to draw stuff like Superman. Not that I liked the Superman stories, or the problems of Superman, but I just liked to draw the human characters. I believe I could have done all right drawing them.",
+          "bbox": [
+            {
+              "h": 49.68572185430463,
+              "w": 282.85350000000005,
+              "x": 450.30487500000004,
+              "y": 486.3417218543047,
+              "confidence": 0.96,
+              "end_index": 248,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Did you feel that way from the very start of your comic-book career?",
+          "value": "BARRIER: Did you feel that way from the very start of your comic-book career?",
+          "bbox": [
+            {
+              "h": 22.53680975133376,
+              "w": 278.4170836509147,
+              "x": 451.1282127238949,
+              "y": 545.921641577744,
+              "confidence": 0.96,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "22, 23"
+    }
+  ]
+}

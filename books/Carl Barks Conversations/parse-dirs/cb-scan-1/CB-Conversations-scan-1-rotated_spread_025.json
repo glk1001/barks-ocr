@@ -1,0 +1,463 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "WILLITS, D. THOMPSON, AND M. THOMPSON / 1962 7",
+              "value": "WILLITS, D. THOMPSON, AND M. THOMPSON / 1962 7",
+              "bbox": [
+                {
+                  "h": 11.934262310642149,
+                  "w": 185.76256226181408,
+                  "x": 544.1928251238568,
+                  "y": 30.737011012528587,
+                  "confidence": 0.94,
+                  "end_index": 45,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "WILLITS, D. THOMPSON, AND M. THOMPSON / 1962 7",
+          "bbox": [
+            {
+              "h": 11.93,
+              "w": 185.76,
+              "x": 544.19,
+              "y": 30.74,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# 6 CARL BARKS: CONVERSATIONS",
+          "value": "6 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 12.473845497391864,
+              "w": 115.91694274604612,
+              "x": 113.90736154844704,
+              "y": 18.01051017798447,
+              "confidence": 0.88,
+              "end_index": 28,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** I understand \"Pirate's Gold\" was intended to be a full-length movie.",
+          "value": "Q: I understand \"Pirate's Gold\" was intended to be a full-length movie.",
+          "bbox": [
+            {
+              "h": 63.70813078911014,
+              "w": 282.5832992628144,
+              "x": 112.61485105635481,
+              "y": 41.83885708722371,
+              "confidence": 0.68,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** That was the hope of the story crew that wrote it up, but it got lost in the shuffle. They never had a full-length movie of any one Disney character like Donald or Mickey. Whenever they used any of those characters, they ran in the whole mob.",
+          "value": "A: That was the hope of the story crew that wrote it up, but it got lost in the shuffle. They never had a full-length movie of any one Disney character like Donald or Mickey. Whenever they used any of those characters, they ran in the whole mob.",
+          "bbox": [
+            {
+              "h": 15.249230769230763,
+              "w": 108.3045,
+              "x": 110.144625,
+              "y": 90.96954907161805,
+              "confidence": 0.88,
+              "end_index": 248,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** What was the name of the other person who did art in the \"Pirate's Gold\" comic book?",
+          "value": "Q: What was the name of the other person who did art in the \"Pirate's Gold\" comic book?",
+          "bbox": [
+            {
+              "h": 24.12991159727516,
+              "w": 275.4582497082222,
+              "x": 110.95071906559643,
+              "y": 112.78245984660825,
+              "confidence": 0.93,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** Jack Hannah. The last I heard of him, he was working for Walt Lantz. He was one of those in the big Disney layoff a few years ago. Disney laid off practically all of his old-time animators except just a few that were working on *300 Dalmatians*, or whatever it was called. That was about 1960 or 1961. \\[Barks did pages 1, 2, 5, 12–40 of \"Pirate's Gold.\"]",
+          "value": "A: Jack Hannah. The last I heard of him, he was working for Walt Lantz. He was one of those in the big Disney layoff a few years ago. Disney laid off practically all of his old-time animators except just a few that were working on 300 Dalmatians, or whatever it was called. That was about 1960 or 1961. [Barks did pages 1, 2, 5, 12–40 of \"Pirate's Gold.\"]",
+          "bbox": [
+            {
+              "h": 68.12785396817836,
+              "w": 283.05592827624815,
+              "x": 109.03615956673973,
+              "y": 138.5241722132241,
+              "confidence": 0.86,
+              "end_index": 361,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** The studio still puts out one feature-length cartoon every three years.",
+          "value": "Q: The studio still puts out one feature-length cartoon every three years.",
+          "bbox": [
+            {
+              "h": 41.449100633574695,
+              "w": 281.39798246355764,
+              "x": 107.59227555140055,
+              "y": 209.4204050019055,
+              "confidence": 0.7,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** Yes, but it doesn't take the crew it used to. They used to have around one thousand artists and technicians working there.",
+          "value": "A: Yes, but it doesn't take the crew it used to. They used to have around one thousand artists and technicians working there.",
+          "bbox": [
+            {
+              "h": 41.449100633574695,
+              "w": 281.39798246355764,
+              "x": 107.59227555140055,
+              "y": 209.4204050019055,
+              "confidence": 0.79,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Whose idea was it to draw a monthly feature for *Walt Disney's Comics and Stories*?",
+          "value": "Q: Whose idea was it to draw a monthly feature for Walt Disney's Comics and Stories?",
+          "bbox": [
+            {
+              "h": 22.967313252667722,
+              "w": 283.42012385670733,
+              "x": 106.56044859946647,
+              "y": 254.71649085365854,
+              "confidence": 0.95,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** It must have originated with Whitman people. They couldn't find enough of the old newspaper comics to fill the book, so they had to start buying original stuff.",
+          "value": "A: It must have originated with Whitman people. They couldn't find enough of the old newspaper comics to fill the book, so they had to start buying original stuff.",
+          "bbox": [
+            {
+              "h": 37.92297934927597,
+              "w": 281.6466568037824,
+              "x": 105.51018833960558,
+              "y": 280.6087282631479,
+              "confidence": 0.95,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Since you took over drawing the Disney characters, you definitely helped mold them both in appearance and personality. Is there anything you can tell us on how you developed the psychological outlook of the characters?",
+          "value": "Q: Since you took over drawing the Disney characters, you definitely helped mold them both in appearance and personality. Is there anything you can tell us on how you developed the psychological outlook of the characters?",
+          "bbox": [
+            {
+              "h": 49.758008631859745,
+              "w": 279.6610752221085,
+              "x": 104.1528544653916,
+              "y": 325.3357370236281,
+              "confidence": 0.96,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** I probably crammed some of my own experiences into them as I developed the stories. I never had much love for a lot of the foolish customs we have in this world, and so I poked fun at a lot of that stuff. They call that satire in the dictionary.",
+          "value": "A: I probably crammed some of my own experiences into them as I developed the stories. I never had much love for a lot of the foolish customs we have in this world, and so I poked fun at a lot of that stuff. They call that satire in the dictionary.",
+          "bbox": [
+            {
+              "h": 51.33376732088418,
+              "w": 284.6110445318455,
+              "x": 102.4113827261576,
+              "y": 377.2246462271342,
+              "confidence": 0.96,
+              "end_index": 251,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** How would you compare drawing for comics now and when you started in 1942?",
+          "value": "Q: How would you compare drawing for comics now and when you started in 1942?",
+          "bbox": [
+            {
+              "h": 24.12200553544205,
+              "w": 264.8453415438024,
+              "x": 101.20546620438739,
+              "y": 434.86187326600617,
+              "confidence": 0.94,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** It's not as good, not as wide open as it was. I think it's sort of an ingrown process, like relatives marrying each other—they've got things down to where there's only a few guys who run everything, and they're just reusing their own stuff all the time.",
+          "value": "A: It's not as good, not as wide open as it was. I think it's sort of an ingrown process, like relatives marrying each other—they've got things down to where there's only a few guys who run everything, and they're just reusing their own stuff all the time.",
+          "bbox": [
+            {
+              "h": 52.71510594512198,
+              "w": 277.8815159108232,
+              "x": 100.02566562261816,
+              "y": 460.9104081173781,
+              "confidence": 0.96,
+              "end_index": 259,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** How do you feel your work changed over the years?",
+          "value": "Q: How do you feel your work changed over the years?",
+          "bbox": [
+            {
+              "h": 16.110942701981685,
+              "w": 216.28761302222279,
+              "x": 98.96826120367285,
+              "y": 518.9635311928354,
+              "confidence": 0.94,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** I think it got more sedate and came to have less spontaneous humor,",
+          "value": "A: I think it got more sedate and came to have less spontaneous humor,",
+          "bbox": [
+            {
+              "h": 18.032089167301873,
+              "w": 278.2764733261481,
+              "x": 98.48305947206079,
+              "y": 532.0461246379574,
+              "confidence": 0.95,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "less satire. I was not allowed to poke fun at countries and customs and people as I used to.",
+          "value": "less satire. I was not allowed to poke fun at countries and customs and people as I used to.",
+          "bbox": [
+            {
+              "h": 24.310338906488184,
+              "w": 272.75575395388734,
+              "x": 458.99963593273634,
+              "y": 52.9556653618045,
+              "confidence": 0.94,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** I recall some of your really classic stories in '43 and '44 had little dialog and were mostly sight gags—when Donald would fight with Mr. Jones and whatnot? Do you feel that the amount of gags dwindled in the '50s because you had got further and further away from your training at Disney or your experience at the Disney Studio?",
+          "value": "Q: I recall some of your really classic stories in '43 and '44 had little dialog and were mostly sight gags—when Donald would fight with Mr. Jones and whatnot? Do you feel that the amount of gags dwindled in the '50s because you had got further and further away from your training at Disney or your experience at the Disney Studio?",
+          "bbox": [
+            {
+              "h": 64.60646923828125,
+              "w": 283.9856457221799,
+              "x": 458.35457033631866,
+              "y": 84.65278923161206,
+              "confidence": 0.94,
+              "end_index": 334,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** True, I got further away from that. However, those sight gags are quite limited. You know, there are only so many things you can do with a human body or a duck body and then you start repeating yourself, otherwise you'd kill him. You've only a few that are safe.",
+          "value": "A: True, I got further away from that. However, those sight gags are quite limited. You know, there are only so many things you can do with a human body or a duck body and then you start repeating yourself, otherwise you'd kill him. You've only a few that are safe.",
+          "bbox": [
+            {
+              "h": 51.364612471417686,
+              "w": 284.70569681307165,
+              "x": 457.1507951838796,
+              "y": 149.36948296017533,
+              "confidence": 0.87,
+              "end_index": 268,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Do you think you drew in a simpler style in the '60s? Less detailed, larger pictures?",
+          "value": "Q: Do you think you drew in a simpler style in the '60s? Less detailed, larger pictures?",
+          "bbox": [
+            {
+              "h": 24.51964591749239,
+              "w": 271.1818099275915,
+              "x": 456.79224730849853,
+              "y": 207.18395452076984,
+              "confidence": 0.92,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Well, I had some unfortunate experiences in the way they—whenever they had to cut anything out of one of my stories to make room for an ad, they'd always cut one of my big, four-panel splash panels that I had drawn that I was so proud of, so I got discouraged and stopped doing them. As for Donald, I sort of slicked him up a bit. He is not such a gawky-looking fellow as he was. I tried to follow the model sheet that came out around 1945 or so. I didn't see it until a number of years later. Happened to pick it up down at the studio.",
+          "value": "A: Well, I had some unfortunate experiences in the way they—whenever they had to cut anything out of one of my stories to make room for an ad, they'd always cut one of my big, four-panel splash panels that I had drawn that I was so proud of, so I got discouraged and stopped doing them. As for Donald, I sort of slicked him up a bit. He is not such a gawky-looking fellow as he was. I tried to follow the model sheet that came out around 1945 or so. I didn't see it until a number of years later. Happened to pick it up down at the studio.",
+          "bbox": [
+            {
+              "h": 102.31079684165398,
+              "w": 285.0979055116235,
+              "x": 455.9292379001525,
+              "y": 232.72427036490095,
+              "confidence": 0.91,
+              "end_index": 542,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Have you any reminiscences about the people you worked with or the work you did? Anecdotes?",
+          "value": "Q: Have you any reminiscences about the people you worked with or the work you did? Anecdotes?",
+          "bbox": [
+            {
+              "h": 24.398407831554888,
+              "w": 284.50062626238577,
+              "x": 455.1995193407013,
+              "y": 342.68792258003054,
+              "confidence": 0.94,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** No anecdotes. I saw very little of the other writers and artists. From my",
+          "value": "A: No anecdotes. I saw very little of the other writers and artists. From my",
+          "bbox": [
+            {
+              "h": 14.775535375381144,
+              "w": 284.38832333746194,
+              "x": 454.8269962128431,
+              "y": 368.39889603658537,
+              "confidence": 0.93,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "A cartoon illustration showing a character in black clothing saying \"WITH PLEASURE!\" while interacting with other cartoon characters in what appears to be a domestic scene",
+          "value": "A cartoon illustration showing a character in black clothing saying \"WITH PLEASURE!\" while interacting with other cartoon characters in what appears to be a domestic scene",
+          "bbox": [
+            {
+              "h": 164.11280976562503,
+              "w": 356.7500768626144,
+              "x": 423.80268707126527,
+              "y": 393.36537167492384,
+              "confidence": 0.99,
+              "end_index": 170,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

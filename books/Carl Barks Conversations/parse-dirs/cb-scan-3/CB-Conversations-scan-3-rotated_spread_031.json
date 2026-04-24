@@ -1,0 +1,464 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "GOTTFRIED HELNWEIN / 1992 141",
+              "value": "GOTTFRIED HELNWEIN / 1992 141",
+              "bbox": [
+                {
+                  "h": 10.626099539705605,
+                  "w": 103.03663126429107,
+                  "x": 621.6436242616236,
+                  "y": 40.57605060022867,
+                  "confidence": 0.91,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "GOTTFRIED HELNWEIN / 1992 141",
+          "bbox": [
+            {
+              "h": 10.63,
+              "w": 103.04,
+              "x": 621.64,
+              "y": 40.58,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "caption": "Conversation with Carl Barks, Gottfried Helnwein / 1992",
+          "md": "![Conversation with Carl Barks, Gottfried Helnwein / 1992](CB-Conversations-scan-3-rotated_spread_031_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-3-rotated_spread_031_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 185.07746178186935,
+              "w": 302.2137453494189,
+              "x": 106.00548330911776,
+              "y": 107.7885087569074,
+              "confidence": 0.79,
+              "end_index": 80,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "md": "First published in an edited form as \"Gespräch mit Carls Barks, 11 Juli 1992, Oregon\" in *Wer ist Carl Barks*, 1992. This expanded version of the interview is printed here by permission of Gottfried Helnwein.",
+          "value": "First published in an edited form as \"Gespräch mit Carls Barks, 11 Juli 1992, Oregon\" in Wer ist Carl Barks, 1992. This expanded version of the interview is printed here by permission of Gottfried Helnwein.",
+          "bbox": [
+            {
+              "h": 65.66018739043449,
+              "w": 164.10966171636815,
+              "x": 143.28678597799166,
+              "y": 314.4485963414635,
+              "confidence": 0.96,
+              "end_index": 207,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Originally translated from the German by Roswitha Mueller, revised by Gottfried Helnwein. The quotations from Carl Barks contained in this interview are taken from the audiotape interview as transcribed by the Helnwein Studio and are thus Barks's original words.",
+          "value": "Originally translated from the German by Roswitha Mueller, revised by Gottfried Helnwein. The quotations from Carl Barks contained in this interview are taken from the audiotape interview as transcribed by the Helnwein Studio and are thus Barks's original words.",
+          "bbox": [
+            {
+              "h": 47.84550993377485,
+              "w": 258.406125,
+              "x": 142.741125,
+              "y": 400.64042384105966,
+              "confidence": 0.95,
+              "end_index": 261,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** How would you like the idea of building an actual Duckburg one day?",
+          "value": "H: How would you like the idea of building an actual Duckburg one day?",
+          "bbox": [
+            {
+              "h": 12.88148344370859,
+              "w": 281.539125,
+              "x": 118.55662500000003,
+              "y": 459.00143046357624,
+              "confidence": 0.86,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Who can tell what Duckburg really looks like?",
+          "value": "B: Who can tell what Duckburg really looks like?",
+          "bbox": [
+            {
+              "h": 10.515496688741678,
+              "w": 187.69274999999996,
+              "x": 118.29375000000002,
+              "y": 472.1458013245034,
+              "confidence": 0.87,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** If one studies your work carefully, there are a lot of indications. The money bin, for example.",
+          "value": "H: If one studies your work carefully, there are a lot of indications. The money bin, for example.",
+          "bbox": [
+            {
+              "h": 23.134092715231816,
+              "w": 272.60137499999996,
+              "x": 118.03087500000001,
+              "y": 488.9705960264901,
+              "confidence": 0.76,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Yeah, the money bin is probably the outstanding building in Duckburg.",
+          "value": "B: Yeah, the money bin is probably the outstanding building in Duckburg.",
+          "bbox": [
+            {
+              "h": 12.93079424542685,
+              "w": 281.9706547494284,
+              "x": 118.10185325362043,
+              "y": 514.2436492568598,
+              "confidence": 0.88,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** But I remember one in which the opening panel was a picture of the ducks up on top of a skyscraper, looking down onto a big busy city with tall, mighty buildings, a wide river and steamboats.",
+          "value": "H: But I remember one in which the opening panel was a picture of the ducks up on top of a skyscraper, looking down onto a big busy city with tall, mighty buildings, a wide river and steamboats.",
+          "bbox": [
+            {
+              "h": 37.76801291444361,
+              "w": 279.2293388493236,
+              "x": 117.71656956816885,
+              "y": 531.0107866663492,
+              "confidence": 0.76,
+              "end_index": 197,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** I remember, yes. But that wouldn't be the Duckburg that people should remember. It would have to be a smaller Duckburg, with Daisy and Donald's house in it and a few blocks further, Gladstone Gander's home; and naturally there would have to be Gyro Gearloose's workshop.",
+          "value": "B: I remember, yes. But that wouldn't be the Duckburg that people should remember. It would have to be a smaller Duckburg, with Daisy and Donald's house in it and a few blocks further, Gladstone Gander's home; and naturally there would have to be Gyro Gearloose's workshop.",
+          "bbox": [
+            {
+              "h": 53.164012826910266,
+              "w": 283.4186211413872,
+              "x": 466.2234890196266,
+              "y": 64.0122331930021,
+              "confidence": 0.8,
+              "end_index": 276,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** With all his absurd inventions, crazy machines, and robots all around...",
+          "value": "H: With all his absurd inventions, crazy machines, and robots all around...",
+          "bbox": [
+            {
+              "h": 26.643294955221023,
+              "w": 247.59203456078507,
+              "x": 467.38754239710374,
+              "y": 124.7184351991235,
+              "confidence": 0.8,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** And then up on the hill—the gigantic money bin...",
+          "value": "B: And then up on the hill—the gigantic money bin...",
+          "bbox": [
+            {
+              "h": 12.09282119205298,
+              "w": 214.50600000000003,
+              "x": 467.39175000000006,
+              "y": 151.4231523178808,
+              "confidence": 0.79,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** And on one side we could be drilling a hole into the exterior walls like the Beagle Boys and the money would roll out. And all these traps around and in the money bin—I would construct them in such a way that they could actually function when you walk in. These old cannons, for example, that suddenly pop out of the ground.",
+          "value": "H: And on one side we could be drilling a hole into the exterior walls like the Beagle Boys and the money would roll out. And all these traps around and in the money bin—I would construct them in such a way that they could actually function when you walk in. These old cannons, for example, that suddenly pop out of the ground.",
+          "bbox": [
+            {
+              "h": 66.14982205363953,
+              "w": 284.34930282964933,
+              "x": 468.7577683165016,
+              "y": 172.47301677782013,
+              "confidence": 0.84,
+              "end_index": 330,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oh yeah, one could have a lot of fun with that money bin.",
+          "value": "B: Oh yeah, one could have a lot of fun with that money bin.",
+          "bbox": [
+            {
+              "h": 12.88148344370859,
+              "w": 237.639,
+              "x": 468.96900000000005,
+              "y": 238.17600000000004,
+              "confidence": 0.78,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** I always dreamed of diving through the money like a porpoise with Scrooge McDuck and burrowing through it like a gopher and tossing it up and letting it hit us on our heads.",
+          "value": "H: I always dreamed of diving through the money like a porpoise with Scrooge McDuck and burrowing through it like a gopher and tossing it up and letting it hit us on our heads.",
+          "bbox": [
+            {
+              "h": 40.03190177686738,
+              "w": 284.18144952839174,
+              "x": 469.5717892054117,
+              "y": 259.6946093368903,
+              "confidence": 0.77,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** In Germany they are still printing a lot of these duck stories, aren't they?",
+          "value": "B: In Germany they are still printing a lot of these duck stories, aren't they?",
+          "bbox": [
+            {
+              "h": 27.560444731326264,
+              "w": 267.89356826410057,
+              "x": 470.0603219559833,
+              "y": 299.0307154201601,
+              "confidence": 0.78,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Yes, I think Germany is the greatest market for *Donald Duck* comics worldwide. You also find the most numerous and most fantastic fans there. Have you ever heard of the Donaldists?",
+          "value": "H: Yes, I think Germany is the greatest market for Donald Duck comics worldwide. You also find the most numerous and most fantastic fans there. Have you ever heard of the Donaldists?",
+          "bbox": [
+            {
+              "h": 39.1702251655629,
+              "w": 274.704375,
+              "x": 469.49475000000007,
+              "y": 333.86701986754974,
+              "confidence": 0.82,
+              "end_index": 187,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** The Donaldists?",
+          "value": "B: The Donaldists?",
+          "bbox": [
+            {
+              "h": 12.18624605087655,
+              "w": 73.20642980659298,
+              "x": 471.4065044302592,
+              "y": 375.1495729658918,
+              "confidence": 0.76,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** It is an association. Or better, an order, which sees itself as the keeper of the holy grail of the eternal and pure spirit of Donald. They believe that Duckburg actually exists.",
+          "value": "H: It is an association. Or better, an order, which sees itself as the keeper of the holy grail of the eternal and pure spirit of Donald. They believe that Duckburg actually exists.",
+          "bbox": [
+            {
+              "h": 40.56690285823168,
+              "w": 283.7960531392912,
+              "x": 471.6684778010671,
+              "y": 394.82962798685224,
+              "confidence": 0.8,
+              "end_index": 184,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oh, I remember. I believe I did get one of their magazines.",
+          "value": "B: Oh, I remember. I believe I did get one of their magazines.",
+          "bbox": [
+            {
+              "h": 12.355708609271574,
+              "w": 237.639,
+              "x": 471.860625,
+              "y": 434.8157880794702,
+              "confidence": 0.79,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Do you know, by the way, that your stories were translated into German quite brilliantly by a woman named Erika Fuchs?",
+          "value": "H: Do you know, by the way, that your stories were translated into German quite brilliantly by a woman named Erika Fuchs?",
+          "bbox": [
+            {
+              "h": 27.003177053163128,
+              "w": 280.2297590510671,
+              "x": 472.336484851372,
+              "y": 455.9006981421495,
+              "confidence": 0.79,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** She must have been very good, because in my conversation with fans, I always had the impression that the German readers best understood my humor, in contrast to the Italians, for example, where the spirit of my stories apparently was lost in the translation.",
+          "value": "B: She must have been very good, because in my conversation with fans, I always had the impression that the German readers best understood my humor, in contrast to the Italians, for example, where the spirit of my stories apparently was lost in the translation.",
+          "bbox": [
+            {
+              "h": 53.517978144054865,
+              "w": 284.3398858136433,
+              "x": 472.8013748809071,
+              "y": 482.72439507907785,
+              "confidence": 0.78,
+              "end_index": 264,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** The Italians?",
+          "value": "H: The Italians?",
+          "bbox": [
+            {
+              "h": 9.463947019867533,
+              "w": 61.77562499999999,
+              "x": 473.17500000000007,
+              "y": 547.3316026490066,
+              "confidence": 0.8,
+              "end_index": 19,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Yeah, the Italians, they really butchered the stories.",
+          "value": "B: Yeah, the Italians, they really butchered the stories.",
+          "bbox": [
+            {
+              "h": 12.233048451791197,
+              "w": 207.65662357088416,
+              "x": 474.196996689215,
+              "y": 558.4531617044589,
+              "confidence": 0.75,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "141"
+    }
+  ]
+}

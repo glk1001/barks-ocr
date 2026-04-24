@@ -1,0 +1,230 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 126 CARL BARKs: CONveRSationS",
+          "value": "126 CARL BARKs: CONveRSationS",
+          "bbox": [
+            {
+              "h": 9.039662134384528,
+              "w": 101.70567630525916,
+              "x": 148.22408238852898,
+              "y": 45.67760537288016,
+              "confidence": 0.93,
+              "end_index": 30,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "anyway, the bucks in this business were so small that I wasn't throwing much away.",
+          "value": "anyway, the bucks in this business were so small that I wasn't throwing much away.",
+          "bbox": [
+            {
+              "h": 23.98804317537635,
+              "w": 275.04594219226374,
+              "x": 123.29170601895963,
+              "y": 69.15485086759243,
+              "confidence": 0.97,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I worked hard at trying to make something as good as I could possibly make it. When I took the finished art into the office and turned it over to the editor, I was satisfied that I had done the very best I possibly could, and I just dared anybody to see if they could improve on it. I had a sour-puss temperament, so when somebody would find some fault with a script, I would blow my marbles in all directions. It actually happened very seldom. If it had happened very many times, I would have gone into another occupation. Once those editors started telling me how to do some-thing, why, I would rather have gone down to the shipyards and gotten a job on a riveting gang.",
+          "value": "I worked hard at trying to make something as good as I could possibly make it. When I took the finished art into the office and turned it over to the editor, I was satisfied that I had done the very best I possibly could, and I just dared anybody to see if they could improve on it. I had a sour-puss temperament, so when somebody would find some fault with a script, I would blow my marbles in all directions. It actually happened very seldom. If it had happened very many times, I would have gone into another occupation. Once those editors started telling me how to do some-thing, why, I would rather have gone down to the shipyards and gotten a job on a riveting gang.",
+          "bbox": [
+            {
+              "h": 127.7572406321456,
+              "w": 282.55233080459226,
+              "x": 122.82939565072411,
+              "y": 95.45165293445125,
+              "confidence": 0.99,
+              "end_index": 671,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I always tried to write a story that I wouldn't mind buying myself. *Maybe that's what distinguishes it from the writing of those who only try to get the story past the editors.* I was always thinking that other people valued their dimes as much as I did: if I wrote a story that was good enough so that I would want to buy it, then probably a lot of other people would. I wasn't thinking so much of getting it by the editor as I was of getting it by my own critical analysis of value. I think writers should be their own editors and really polish stuff and not fall completely in love with their stuff at first draft.",
+          "value": "I always tried to write a story that I wouldn't mind buying myself. Maybe that's what distinguishes it from the writing of those who only try to get the story past the editors. I was always thinking that other people valued their dimes as much as I did: if I wrote a story that was good enough so that I would want to buy it, then probably a lot of other people would. I wasn't thinking so much of getting it by the editor as I was of getting it by my own critical analysis of value. I think writers should be their own editors and really polish stuff and not fall completely in love with their stuff at first draft.",
+          "bbox": [
+            {
+              "h": 113.62557478325078,
+              "w": 283.76885399199693,
+              "x": 121.69464522198933,
+              "y": 225.02865600943224,
+              "confidence": 0.99,
+              "end_index": 617,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Some of the main people who influenced my drawing style were Winsor McCay, Opper, and Hal Foster. Roy Crane, who drew *Buzz Sawyer*, also had a direct, simple style. There were a number of real good artists who didn't use much crosshatching or managed to put their story over with good clean lines and just blacks and whites. I knew I couldn't meddle much with crosshatching and pen shading or the benday process they used in comic-book work.",
+          "value": "Some of the main people who influenced my drawing style were Winsor McCay, Opper, and Hal Foster. Roy Crane, who drew Buzz Sawyer, also had a direct, simple style. There were a number of real good artists who didn't use much crosshatching or managed to put their story over with good clean lines and just blacks and whites. I knew I couldn't meddle much with crosshatching and pen shading or the benday process they used in comic-book work.",
+          "bbox": [
+            {
+              "h": 87.40032809165395,
+              "w": 280.7841483005431,
+              "x": 120.51505126357661,
+              "y": 367.03467486185224,
+              "confidence": 0.99,
+              "end_index": 441,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Another influence was a book called *Creative Illustration* by Andrew Loomis. It was an art book, a constructive book with some good pointers in it on illustrating. It explained color balance, drawing and perspective, the handling of groups of people, and drawing individual persons: muscles, hands, heads, and expressions. It was a good book.",
+          "value": "Another influence was a book called Creative Illustration by Andrew Loomis. It was an art book, a constructive book with some good pointers in it on illustrating. It explained color balance, drawing and perspective, the handling of groups of people, and drawing individual persons: muscles, hands, heads, and expressions. It was a good book.",
+          "bbox": [
+            {
+              "h": 63.14611842130334,
+              "w": 281.31252805235334,
+              "x": 120.30882863114522,
+              "y": 458.1919947741998,
+              "confidence": 0.99,
+              "end_index": 342,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Western Publishing used very large sheets of drawing paper. I don't know how the other artists could draw detailed stuff on those big sheets. I cut them in half so that I could reach the top panels and still keep my paper flat. Otherwise, you've got to tuck the lower end down under the",
+          "value": "Western Publishing used very large sheets of drawing paper. I don't know how the other artists could draw detailed stuff on those big sheets. I cut them in half so that I could reach the top panels and still keep my paper flat. Otherwise, you've got to tuck the lower end down under the",
+          "bbox": [
+            {
+              "h": 50.261913838605174,
+              "w": 281.02396914300687,
+              "x": 120.43409247570504,
+              "y": 523.3647989805642,
+              "confidence": 0.98,
+              "end_index": 285,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# EDWARD SUMMER / 1981 127",
+          "value": "EDWARD SUMMER / 1981 127",
+          "bbox": [
+            {
+              "h": 10.496160828529918,
+              "w": 89.8473489900914,
+              "x": 637.0714514576982,
+              "y": 39.56485724978564,
+              "confidence": 0.92,
+              "end_index": 25,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "edge of the drawing board and work on the upper half. That paper always had a flex to it, so it was hard to bend.",
+          "value": "edge of the drawing board and work on the upper half. That paper always had a flex to it, so it was hard to bend.",
+          "bbox": [
+            {
+              "h": 27.73887445276772,
+              "w": 283.9634055354422,
+              "x": 469.30766194264487,
+              "y": 62.72851779427879,
+              "confidence": 0.97,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Sometimes there was a difficulty in keeping the ducks consistent when there was a time lag between publication of the stories. One time Western Publishing changed the drawing paper on me. I had been drawing on a real good quality of Strathmore drawing paper. Whenever I made my pencil drawing, the pencil didn't dig into the paper and leave a trench. When I inked, it was over the top of nice, smooth paper. They changed to cheap paper with a kind of chalk face on it. I discovered that whenever I made a drawing of a duck, my pencil made a little groove in this stuff, and when I started to ink it, the pen would follow this groove, even though I had erased and redrawn it and cut another groove. I was making my ducks on the model sheet. Also, the model sheet for the newspaper duck were not the same as the animation duck that I'd drawn in the story department. I would sort of subconsciously try to make my duck look a little bit more like the animation ducks. I would draw the ducks in roughly and then I'd erase them and draw them over again to shorten them up. I drew every duck twice before I got him right. But on this paper I would draw them over and still wouldn't get them right because my pencil would be inclined to go back into the old grooves again. The company that made this new paper was in West Germany. They themselves discovered that the paper was too soft on the surface and started turning out a good product. So all of a sudden my paper was nice and firm again, and I was able to draw like I wanted to.",
+          "value": "Sometimes there was a difficulty in keeping the ducks consistent when there was a time lag between publication of the stories. One time Western Publishing changed the drawing paper on me. I had been drawing on a real good quality of Strathmore drawing paper. Whenever I made my pencil drawing, the pencil didn't dig into the paper and leave a trench. When I inked, it was over the top of nice, smooth paper. They changed to cheap paper with a kind of chalk face on it. I discovered that whenever I made a drawing of a duck, my pencil made a little groove in this stuff, and when I started to ink it, the pen would follow this groove, even though I had erased and redrawn it and cut another groove. I was making my ducks on the model sheet. Also, the model sheet for the newspaper duck were not the same as the animation duck that I'd drawn in the story department. I would sort of subconsciously try to make my duck look a little bit more like the animation ducks. I would draw the ducks in roughly and then I'd erase them and draw them over again to shorten them up. I drew every duck twice before I got him right. But on this paper I would draw them over and still wouldn't get them right because my pencil would be inclined to go back into the old grooves again. The company that made this new paper was in West Germany. They themselves discovered that the paper was too soft on the surface and started turning out a good product. So all of a sudden my paper was nice and firm again, and I was able to draw like I wanted to.",
+          "bbox": [
+            {
+              "h": 327.4920000000001,
+              "w": 289.3728,
+              "x": 470.23080000000004,
+              "y": 88.72056,
+              "confidence": 0.77,
+              "end_index": 1526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Writing was a mental strain. Once I had gotten the general idea, then that was a moment of joy. I'd think, \"Oh, boy! I've got the essence of a plot here! All I need to do now is break it down into panels, and then I can start drawing.\"",
+          "value": "Writing was a mental strain. Once I had gotten the general idea, then that was a moment of joy. I'd think, \"Oh, boy! I've got the essence of a plot here! All I need to do now is break it down into panels, and then I can start drawing.\"",
+          "bbox": [
+            {
+              "h": 54.340601252858214,
+              "w": 284.7274861852134,
+              "x": 478.0229599847562,
+              "y": 439.1749737661968,
+              "confidence": 0.98,
+              "end_index": 234,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "A *Donald* gag is really a sequence of jokes or pantomime. In animation it was sometimes an excuse for animators to really do their stuff: I could never have been an animator. I became bored with thinking up animation gags in which the characters just moved endlessly. I wanted to keep things moving on to some new situation. I didn't want to stay for seven hundred drawings on one spot. I might have felt differently about it if I had worked",
+          "value": "A Donald gag is really a sequence of jokes or pantomime. In animation it was sometimes an excuse for animators to really do their stuff: I could never have been an animator. I became bored with thinking up animation gags in which the characters just moved endlessly. I wanted to keep things moving on to some new situation. I didn't want to stay for seven hundred drawings on one spot. I might have felt differently about it if I had worked",
+          "bbox": [
+            {
+              "h": 80.73453159775154,
+              "w": 284.4374120379192,
+              "x": 479.7729220655488,
+              "y": 491.0822401915016,
+              "confidence": 0.99,
+              "end_index": 441,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

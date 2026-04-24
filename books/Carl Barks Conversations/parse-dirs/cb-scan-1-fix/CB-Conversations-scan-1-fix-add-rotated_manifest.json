@@ -1,0 +1,12 @@
+{
+  "pdf": "CB-Conversations-scan-1-fix-add-rotated.pdf",
+  "num_spreads": 1,
+  "spreads": [
+    {
+      "spread_num": 1,
+      "image": "CB-Conversations-scan-1-fix-add-rotated_spread_001.jpg",
+      "md": "CB-Conversations-scan-1-fix-add-rotated_spread_001.md",
+      "json": "CB-Conversations-scan-1-fix-add-rotated_spread_001.json"
+    }
+  ]
+}

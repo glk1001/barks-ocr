@@ -1,0 +1,25 @@
+# 126 CARL BARKs: CONveRSationS
+
+anyway, the bucks in this business were so small that I wasn't throwing much away.
+
+I worked hard at trying to make something as good as I could possibly make it. When I took the finished art into the office and turned it over to the editor, I was satisfied that I had done the very best I possibly could, and I just dared anybody to see if they could improve on it. I had a sour-puss temperament, so when somebody would find some fault with a script, I would blow my marbles in all directions. It actually happened very seldom. If it had happened very many times, I would have gone into another occupation. Once those editors started telling me how to do some-thing, why, I would rather have gone down to the shipyards and gotten a job on a riveting gang.
+
+I always tried to write a story that I wouldn't mind buying myself. *Maybe that's what distinguishes it from the writing of those who only try to get the story past the editors.* I was always thinking that other people valued their dimes as much as I did: if I wrote a story that was good enough so that I would want to buy it, then probably a lot of other people would. I wasn't thinking so much of getting it by the editor as I was of getting it by my own critical analysis of value. I think writers should be their own editors and really polish stuff and not fall completely in love with their stuff at first draft.
+
+Some of the main people who influenced my drawing style were Winsor McCay, Opper, and Hal Foster. Roy Crane, who drew *Buzz Sawyer*, also had a direct, simple style. There were a number of real good artists who didn't use much crosshatching or managed to put their story over with good clean lines and just blacks and whites. I knew I couldn't meddle much with crosshatching and pen shading or the benday process they used in comic-book work.
+
+Another influence was a book called *Creative Illustration* by Andrew Loomis. It was an art book, a constructive book with some good pointers in it on illustrating. It explained color balance, drawing and perspective, the handling of groups of people, and drawing individual persons: muscles, hands, heads, and expressions. It was a good book.
+
+Western Publishing used very large sheets of drawing paper. I don't know how the other artists could draw detailed stuff on those big sheets. I cut them in half so that I could reach the top panels and still keep my paper flat. Otherwise, you've got to tuck the lower end down under the
+
+---
+
+# EDWARD SUMMER / 1981 127
+
+edge of the drawing board and work on the upper half. That paper always had a flex to it, so it was hard to bend.
+
+Sometimes there was a difficulty in keeping the ducks consistent when there was a time lag between publication of the stories. One time Western Publishing changed the drawing paper on me. I had been drawing on a real good quality of Strathmore drawing paper. Whenever I made my pencil drawing, the pencil didn't dig into the paper and leave a trench. When I inked, it was over the top of nice, smooth paper. They changed to cheap paper with a kind of chalk face on it. I discovered that whenever I made a drawing of a duck, my pencil made a little groove in this stuff, and when I started to ink it, the pen would follow this groove, even though I had erased and redrawn it and cut another groove. I was making my ducks on the model sheet. Also, the model sheet for the newspaper duck were not the same as the animation duck that I'd drawn in the story department. I would sort of subconsciously try to make my duck look a little bit more like the animation ducks. I would draw the ducks in roughly and then I'd erase them and draw them over again to shorten them up. I drew every duck twice before I got him right. But on this paper I would draw them over and still wouldn't get them right because my pencil would be inclined to go back into the old grooves again. The company that made this new paper was in West Germany. They themselves discovered that the paper was too soft on the surface and started turning out a good product. So all of a sudden my paper was nice and firm again, and I was able to draw like I wanted to.
+
+Writing was a mental strain. Once I had gotten the general idea, then that was a moment of joy. I'd think, "Oh, boy! I've got the essence of a plot here! All I need to do now is break it down into panels, and then I can start drawing."
+
+A *Donald* gag is really a sequence of jokes or pantomime. In animation it was sometimes an excuse for animators to really do their stuff: I could never have been an animator. I became bored with thinking up animation gags in which the characters just moved endlessly. I wanted to keep things moving on to some new situation. I didn't want to stay for seven hundred drawings on one spot. I might have felt differently about it if I had worked

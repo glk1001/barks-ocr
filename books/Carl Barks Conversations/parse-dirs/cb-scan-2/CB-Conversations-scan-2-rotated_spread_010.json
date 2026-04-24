@@ -1,0 +1,412 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "DONALD AULT / 1973",
+              "value": "DONALD AULT / 1973",
+              "bbox": [
+                {
+                  "h": 10.27183284346418,
+                  "w": 81.28142085080034,
+                  "x": 641.8314024152058,
+                  "y": 43.41371207841084,
+                  "confidence": 0.91,
+                  "end_index": 17,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "DONALD AULT / 1973",
+          "bbox": [
+            {
+              "h": 10.27,
+              "w": 81.28,
+              "x": 641.83,
+              "y": 43.41,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# CARL BARKS: CONVERSATIONS",
+          "value": "CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.682297877167493,
+              "w": 104.02644480040016,
+              "x": 128.57202224657016,
+              "y": 39.812621891673025,
+              "confidence": 0.88,
+              "end_index": 26,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Was that the only thing you did for the cartoon?",
+          "value": "DA: Was that the only thing you did for the cartoon?",
+          "bbox": [
+            {
+              "h": 13.670145695364234,
+              "w": 204.77962500000007,
+              "x": 111.45900000000002,
+              "y": 62.83009271523179,
+              "confidence": 0.86,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, no. I was put right over in the story department to work on that story with Jack King as the director, and I was the story man on it. We worked up the story and put in a lot of other gags that filled out the rest of the story so it would make a seven-minute short.",
+          "value": "CB: Oh, no. I was put right over in the story department to work on that story with Jack King as the director, and I was the story man on it. We worked up the story and put in a lot of other gags that filled out the rest of the story so it would make a seven-minute short.",
+          "bbox": [
+            {
+              "h": 53.278931335746954,
+              "w": 282.4879269304974,
+              "x": 110.65521009789444,
+              "y": 74.95268885885102,
+              "confidence": 0.89,
+              "end_index": 275,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Do you remember the robot with the hats? Was that your gag?",
+          "value": "DA: Do you remember the robot with the hats? Was that your gag?",
+          "bbox": [
+            {
+              "h": 13.54743360565928,
+              "w": 262.8833776379097,
+              "x": 110.05507568954842,
+              "y": 135.27365303448937,
+              "confidence": 0.79,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** The robot butler developed out of conversations I had with Jack King. We had to have a vehicle to carry this barber chair gag—there had to be a reason for that to happen. So we thought of this idea of Donald going into this museum of modern inventions, and there were a bunch of other types of modern inventions in there, and instead of having a museum guard being a dog face or anything, it was conceived to be a good idea that he be a mechanical guy, a robot, who was the museum guard, so whenever Donald tried anything smart he couldn't outsmart this robot. He was always one up on him.",
+          "value": "CB: The robot butler developed out of conversations I had with Jack King. We had to have a vehicle to carry this barber chair gag—there had to be a reason for that to happen. So we thought of this idea of Donald going into this museum of modern inventions, and there were a bunch of other types of modern inventions in there, and instead of having a museum guard being a dog face or anything, it was conceived to be a good idea that he be a mechanical guy, a robot, who was the museum guard, so whenever Donald tried anything smart he couldn't outsmart this robot. He was always one up on him.",
+          "bbox": [
+            {
+              "h": 129.1581747713415,
+              "w": 284.9484980409204,
+              "x": 108.24918755359187,
+              "y": 134.92215636671116,
+              "confidence": 0.93,
+              "end_index": 596,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** He kept saying, \"Your hat, sir.\"",
+          "value": "DA: He kept saying, \"Your hat, sir.\"",
+          "bbox": [
+            {
+              "h": 11.908799999999985,
+              "w": 139.63920000000002,
+              "x": 107.67360000000001,
+              "y": 272.11608,
+              "confidence": 0.86,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** That's right. He was taking Donald's hats—he kept insisting on it.",
+          "value": "CB: That's right. He was taking Donald's hats—he kept insisting on it.",
+          "bbox": [
+            {
+              "h": 15.48144000000002,
+              "w": 269.184,
+              "x": 107.67360000000001,
+              "y": 284.62032,
+              "confidence": 0.85,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** And Donald would come up with a different kind of hat every time.",
+          "value": "DA: And Donald would come up with a different kind of hat every time.",
+          "bbox": [
+            {
+              "h": 15.51,
+              "w": 278.65,
+              "x": 106.73,
+              "y": 304.95,
+              "confidence": 1.0,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 8
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** That was what we called a \"running gag.\"",
+          "value": "CB: That was what we called a \"running gag.\"",
+          "bbox": [
+            {
+              "h": 14.182262080792636,
+              "w": 180.94377999952366,
+              "x": 106.801033322218,
+              "y": 318.14942528105956,
+              "confidence": 0.82,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Did you generally try to work in some kind of running gag like that?",
+          "value": "DA: Did you generally try to work in some kind of running gag like that?",
+          "bbox": [
+            {
+              "h": 63.555497603849076,
+              "w": 284.52286644912346,
+              "x": 105.81061869998095,
+              "y": 338.00240099085374,
+              "confidence": 0.67,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yes. That was the thing that hooked all things together. If you develop a running gag, then when you brought some sequence to a climax; you brought in your running gag to connect up to where you start your next sequence.",
+          "value": "CB: Yes. That was the thing that hooked all things together. If you develop a running gag, then when you brought some sequence to a climax; you brought in your running gag to connect up to where you start your next sequence.",
+          "bbox": [
+            {
+              "h": 37.33001324503317,
+              "w": 277.59600000000006,
+              "x": 103.83562500000001,
+              "y": 364.3619602649007,
+              "confidence": 0.85,
+              "end_index": 227,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 37.33,
+              "w": 277.6,
+              "x": 103.84,
+              "y": 364.36,
+              "confidence": 1.0,
+              "end_index": 170,
+              "label": "text",
+              "start_index": 80
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** I guess your basic conception was that Donald would get into the barber chair upside down.",
+          "value": "DA: I guess your basic conception was that Donald would get into the barber chair upside down.",
+          "bbox": [
+            {
+              "h": 25.00848000000002,
+              "w": 272.5488,
+              "x": 105.15,
+              "y": 410.25816000000003,
+              "confidence": 0.91,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** My original gag was that he was trying to cheat this barber chair, and he got flipped upside down and the barber chair didn't know his head from his hind end and gave him his hair cut on his bottom and shoeshine on his beak.",
+          "value": "CB: My original gag was that he was trying to cheat this barber chair, and he got flipped upside down and the barber chair didn't know his head from his hind end and gave him his hair cut on his bottom and shoeshine on his beak.",
+          "bbox": [
+            {
+              "h": 50.61240000000004,
+              "w": 283.48440000000005,
+              "x": 104.3088,
+              "y": 435.86208000000005,
+              "confidence": 0.92,
+              "end_index": 231,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** The whole cartoon was built up to that. Would it have been a little too much for Donald to have his hind end shaved?",
+          "value": "DA: The whole cartoon was built up to that. Would it have been a little too much for Donald to have his hind end shaved?",
+          "bbox": [
+            {
+              "h": 14.984582781456936,
+              "w": 196.6305,
+              "x": 101.46975,
+              "y": 506.84694039735103,
+              "confidence": 0.91,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.98,
+              "w": 196.63,
+              "x": 101.47,
+              "y": 506.85,
+              "confidence": 1.0,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 76
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, yeah.",
+          "value": "CB: Oh, yeah.",
+          "bbox": [
+            {
+              "h": 12.618596026489968,
+              "w": 56.78099999999999,
+              "x": 101.9955,
+              "y": 520.2541986754968,
+              "confidence": 0.64,
+              "end_index": 16,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** It really got pretty close, when he was getting his \"hair\" parted down the middle and having those hot towels put on his rear end, glowing red.",
+          "value": "DA: It really got pretty close, when he was getting his \"hair\" parted down the middle and having those hot towels put on his rear end, glowing red.",
+          "bbox": [
+            {
+              "h": 29.414989867568647,
+              "w": 282.7807685785061,
+              "x": 102.67560390863187,
+              "y": 541.4280792444741,
+              "confidence": 0.95,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "39",
+          "value": "39",
+          "bbox": [
+            {
+              "h": 8.74141206173781,
+              "w": 10.297957817263729,
+              "x": 728.5090238900534,
+              "y": 43.661804691668266,
+              "confidence": 0.85,
+              "end_index": 1,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Cartoon scene showing Donald Duck in a barber chair being operated on by a mechanical robot butler, with various tools and equipment visible",
+          "value": "Cartoon scene showing Donald Duck in a barber chair being operated on by a mechanical robot butler, with various tools and equipment visible",
+          "bbox": [
+            {
+              "h": 230.93401099347375,
+              "w": 304.0517039348324,
+              "x": 457.2404071074696,
+              "y": 70.79699022127478,
+              "confidence": 0.95,
+              "end_index": 139,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Close-up cartoon scene showing the robot butler working on Donald Duck's rear end with grooming tools",
+          "value": "Close-up cartoon scene showing the robot butler working on Donald Duck's rear end with grooming tools",
+          "bbox": [
+            {
+              "h": 229.47075342987816,
+              "w": 305.4356045636434,
+              "x": 459.75009196360526,
+              "y": 340.36046195693604,
+              "confidence": 0.97,
+              "end_index": 100,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "39"
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "EDWARD SUMMER / 1975 81",
+              "value": "EDWARD SUMMER / 1975 81",
+              "bbox": [
+                {
+                  "h": 8.94,
+                  "w": 108.57,
+                  "x": 616.97,
+                  "y": 35.49,
+                  "confidence": 1.0,
+                  "end_index": 22,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "EDWARD SUMMER / 1975 81",
+          "bbox": [
+            {
+              "h": 8.94,
+              "w": 108.57,
+              "x": 616.97,
+              "y": 35.49,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "caption": "Of Ducks and Men: Carl Barks Interviewed EDWARD SUMMER / 1975",
+          "md": "![Of Ducks and Men: Carl Barks Interviewed EDWARD SUMMER / 1975](CB-Conversations-scan-3-rotated_spread_001_page_1_seal_1_v2.jpg)",
+          "url": "CB-Conversations-scan-3-rotated_spread_001_page_1_seal_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 185.77728000000002,
+              "w": 304.5144,
+              "x": 86.6436,
+              "y": 98.24760000000002,
+              "confidence": 0.76,
+              "end_index": 85,
+              "label": "seal",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "md": "Previously published in a slightly altered version in *Panels* #2, Spring 1981: 3-10. Reprinted by permission of Edward Summer.",
+          "value": "Previously published in a slightly altered version in Panels #2, Spring 1981: 3-10. Reprinted by permission of Edward Summer.",
+          "bbox": [
+            {
+              "h": 42.85727762480946,
+              "w": 159.11196867258954,
+              "x": 124.15918600538302,
+              "y": 306.23154845179124,
+              "confidence": 0.97,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "This interview was recorded in April 1975 in connection with a film series by Edward Summer entitled *The Men Who Made the Comics*, a project supported by a grant from the National Endowment for the Arts, a Federal Agency in Washington, D.C. Other films in the series include those on Milton Caniff and Jack Kirby, portions of which have been seen on CBS's *Camera Three*. Summer is currently working on a feature film titled *Teefr*. The recording engineer for this interview was Sam Grossman. The transcript for the *Panels* version was edited and prepared for publication by John Benson.",
+          "value": "This interview was recorded in April 1975 in connection with a film series by Edward Summer entitled The Men Who Made the Comics, a project supported by a grant from the National Endowment for the Arts, a Federal Agency in Washington, D.C. Other films in the series include those on Milton Caniff and Jack Kirby, portions of which have been seen on CBS's Camera Three. Summer is currently working on a feature film titled Teefr. The recording engineer for this interview was Sam Grossman. The transcript for the Panels version was edited and prepared for publication by John Benson.",
+          "bbox": [
+            {
+              "h": 113.42834875666921,
+              "w": 260.652208543731,
+              "x": 121.22937951362425,
+              "y": 392.5643917825839,
+              "confidence": 0.98,
+              "end_index": 589,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** How I came to be a cartoonist is as much a mystery to me as it would be to anybody else. I have no cartoonists in my ancestral tree whatsoever, no artists that I know of, no writers that I know of—I was just a sort of a",
+          "value": "CB: How I came to be a cartoonist is as much a mystery to me as it would be to anybody else. I have no cartoonists in my ancestral tree whatsoever, no artists that I know of, no writers that I know of—I was just a sort of a",
+          "bbox": [
+            {
+              "h": 40.489919999999984,
+              "w": 284.3256,
+              "x": 96.73800000000001,
+              "y": 521.60544,
+              "confidence": 0.91,
+              "end_index": 226,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "mutant that came along and I was born up in eastern Oregon on a little homestead. My parents had no cultural background, no education much, and I got through the eighth grade in a little one-room schoolhouse, no art training whatever, but I did have a desire to be a cartoonist. And I would draw pictures with charcoal on the walls of any kind of a building I happened to be in, and I would scrawl all over my schoolbooks and we had slates in those days. Imagine that—slates, those squeaky things. And I would draw on those slates and any kind of paper I could find.",
+          "value": "mutant that came along and I was born up in eastern Oregon on a little homestead. My parents had no cultural background, no education much, and I got through the eighth grade in a little one-room schoolhouse, no art training whatever, but I did have a desire to be a cartoonist. And I would draw pictures with charcoal on the walls of any kind of a building I happened to be in, and I would scrawl all over my schoolbooks and we had slates in those days. Imagine that—slates, those squeaky things. And I would draw on those slates and any kind of paper I could find.",
+          "bbox": [
+            {
+              "h": 100.42299337748346,
+              "w": 284.1678749999999,
+              "x": 441.63000000000005,
+              "y": 59.412556291390736,
+              "confidence": 0.96,
+              "end_index": 565,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "By the time I was 16, I had become pretty well assured that I wanted to be an artist or cartoonist more than I wanted to be a farmer. But I lacked the opportunities to meet with people with the same sort of ideas, and I had to go out and be a cowhand and a farmer, a muleskinner, lumberjack, anything that happened to come along that would furnish me with a living. I'd worked in a printing shop, been a cowboy and a whole bunch of other things, with practically no success whatever—I was a failure at all of those enterprises. In 1928 I was working at riveting, not as a riveter, but as a rivet heater on a riveting gang in railroad car shops, when I decided I could sell cartoons to the comic books. Not comic books, but comic magazines, like *Whiz-Bang* and those old joke magazines. And so I drew a few cartoons. Surprisingly, they sold, and I discovered that I had to write jokes to fit the cartoons so I could sell more cartoons, and that way I got to writing one-line gags and illustrating them and selling them and even sold a couple to *Judge*, which was the real good joke magazine in those days. And I even think I had one published in *College Humor*. I can't recall for sure now. I was doing that, and then I got a chance to go on the staff of *Calgary Eye-Opener* back in Minneapolis. I went there and worked four years.",
+          "value": "By the time I was 16, I had become pretty well assured that I wanted to be an artist or cartoonist more than I wanted to be a farmer. But I lacked the opportunities to meet with people with the same sort of ideas, and I had to go out and be a cowhand and a farmer, a muleskinner, lumberjack, anything that happened to come along that would furnish me with a living. I'd worked in a printing shop, been a cowboy and a whole bunch of other things, with practically no success whatever—I was a failure at all of those enterprises. In 1928 I was working at riveting, not as a riveter, but as a rivet heater on a riveting gang in railroad car shops, when I decided I could sell cartoons to the comic books. Not comic books, but comic magazines, like Whiz-Bang and those old joke magazines. And so I drew a few cartoons. Surprisingly, they sold, and I discovered that I had to write jokes to fit the cartoons so I could sell more cartoons, and that way I got to writing one-line gags and illustrating them and selling them and even sold a couple to Judge, which was the real good joke magazine in those days. And I even think I had one published in College Humor. I can't recall for sure now. I was doing that, and then I got a chance to go on the staff of Calgary Eye-Opener back in Minneapolis. I went there and worked four years.",
+          "bbox": [
+            {
+              "h": 246.97073843368906,
+              "w": 285.9813518483232,
+              "x": 442.04875666920736,
+              "y": 162.67496960270583,
+              "confidence": 0.97,
+              "end_index": 1333,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "But the wages were getting smaller by the hour, and I read in the paper that Walt Disney's was looking for cartoonists, and I had been making a living as a cartoonist, so I drew up a few samples and sent them out there. This was along about October of 1935. And I quite soon got an answer back from George Drake, who was the hiring guy there at Disney's, and he suggested that I come and try out. Twenty dollars a week. So I did it. I quit my job at the *Eye-Opener*, and I went out there on a wild gamble that I could make it. I started working with the in-betweeners. I think that the first in-betweens I did were on the shorts.",
+          "value": "But the wages were getting smaller by the hour, and I read in the paper that Walt Disney's was looking for cartoonists, and I had been making a living as a cartoonist, so I drew up a few samples and sent them out there. This was along about October of 1935. And I quite soon got an answer back from George Drake, who was the hiring guy there at Disney's, and he suggested that I come and try out. Twenty dollars a week. So I did it. I quit my job at the Eye-Opener, and I went out there on a wild gamble that I could make it. I started working with the in-betweeners. I think that the first in-betweens I did were on the shorts.",
+          "bbox": [
+            {
+              "h": 116.5342908155488,
+              "w": 285.90751843559457,
+              "x": 441.94717311356715,
+              "y": 411.63977396627297,
+              "confidence": 0.98,
+              "end_index": 629,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Was there a particular animator that you worked with?",
+          "value": "Q: Was there a particular animator that you worked with?",
+          "bbox": [
+            {
+              "h": 8.938172185430517,
+              "w": 225.28387500000008,
+              "x": 442.418625,
+              "y": 537.8676556291391,
+              "confidence": 0.77,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** No. The in-betweeners who were in training, they just took whatever",
+          "value": "CB: No. The in-betweeners who were in training, they just took whatever",
+          "bbox": [
+            {
+              "h": 10.25260927152317,
+              "w": 283.11637499999995,
+              "x": 442.6815,
+              "y": 551.800688741722,
+              "confidence": 0.75,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "80",
+              "value": "80",
+              "bbox": [
+                {
+                  "h": 7.8662780773627174,
+                  "w": 11.439896234279745,
+                  "x": 232.08576562500002,
+                  "y": 586.0273989615093,
+                  "confidence": 0.9,
+                  "end_index": 1,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "80",
+          "bbox": [
+            {
+              "h": 7.87,
+              "w": 11.44,
+              "x": 232.09,
+              "y": 586.03,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer",
+          "book_side": "left"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "80, 81"
+    }
+  ]
+}

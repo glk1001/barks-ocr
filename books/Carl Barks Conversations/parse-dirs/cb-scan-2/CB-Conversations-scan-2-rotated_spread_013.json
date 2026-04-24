@@ -1,0 +1,319 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "44 CARL BARKS: CONVERSATIONS",
+              "value": "44 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.834474157417114,
+                  "w": 120.5849650938453,
+                  "x": 105.75729735137197,
+                  "y": 39.17820116472943,
+                  "confidence": 0.84,
+                  "end_index": 27,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "44 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.83,
+              "w": 120.58,
+              "x": 105.76,
+              "y": 39.18,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "used to have a lot of fun with them. Anyway, that was the \"Barksism.\" The \"perils of Barksism\" was that we were going to have to get into the rut of having nothing to look at but *Prince Valiant* strips and hear nothing but hillbilly music.",
+          "value": "used to have a lot of fun with them. Anyway, that was the \"Barksism.\" The \"perils of Barksism\" was that we were going to have to get into the rut of having nothing to look at but Prince Valiant strips and hear nothing but hillbilly music.",
+          "bbox": [
+            {
+              "h": 49.642965382645784,
+              "w": 282.9200076755431,
+              "x": 104.84428509074887,
+              "y": 62.98973369438359,
+              "confidence": 0.97,
+              "end_index": 239,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** So it didn't have any political overtones?",
+          "value": "DA: So it didn't have any political overtones?",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 174.12840000000003,
+              "x": 105.15,
+              "y": 121.46976000000001,
+              "confidence": 0.87,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** No. Politics had very little to do with life in those days.",
+          "value": "CB: No. Politics had very little to do with life in those days.",
+          "bbox": [
+            {
+              "h": 13.099680000000006,
+              "w": 225.44160000000002,
+              "x": 105.15,
+              "y": 133.97400000000002,
+              "confidence": 0.77,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Speaking of politics, you don't think that Scrooge is really a capitalist, do you?",
+          "value": "DA: Speaking of politics, you don't think that Scrooge is really a capitalist, do you?",
+          "bbox": [
+            {
+              "h": 23.8176,
+              "w": 282.64320000000004,
+              "x": 104.3088,
+              "y": 153.62352,
+              "confidence": 0.78,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Scrooge is merely a miser. I had to make him a capitalist out investing in mines and so on in order to provide vehicles for story plots, but Scrooge would wreck the capitalistic system, or any system, with the way he hoards all of the rewards of life. Just figure communism, for instance. Suppose that the commissars in charge of everything took all of the produce of everybody and put it into a big bin and just sat there and didn't let it get back out again. There would be universal poverty.",
+          "value": "CB: Scrooge is merely a miser. I had to make him a capitalist out investing in mines and so on in order to provide vehicles for story plots, but Scrooge would wreck the capitalistic system, or any system, with the way he hoards all of the rewards of life. Just figure communism, for instance. Suppose that the commissars in charge of everything took all of the produce of everybody and put it into a big bin and just sat there and didn't let it get back out again. There would be universal poverty.",
+          "bbox": [
+            {
+              "h": 89.31599999999997,
+              "w": 283.48440000000005,
+              "x": 103.4676,
+              "y": 179.82288,
+              "confidence": 0.78,
+              "end_index": 501,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** What do you think was most important about your comics?",
+          "value": "DA: What do you think was most important about your comics?",
+          "bbox": [
+            {
+              "h": 11.908799999999985,
+              "w": 248.154,
+              "x": 103.4676,
+              "y": 276.28416000000004,
+              "confidence": 0.75,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I believe—a thought came to me the other day when you were talking about my influence on the underground comics. The thing that is most important about my comics is this: I told it like it is. I told the kids that the bad guys have a little bit of good in them, and the good guys have a lot of bad in them, and that you just couldn't depend on anything much, that nothing was going to always turn out roses. In fact I laid it right on the line that there was no difference between my comic characters and the life these kids—the readers—were going to have to face. So when Donald had some adventures, and he got buffeted around, I tried to put it over in a way that the kids—the readers—could see, well, that could happen to them. It was the way life goes. I just didn't disguise anything or make things look rosy.",
+          "value": "CB: I believe—a thought came to me the other day when you were talking about my influence on the underground comics. The thing that is most important about my comics is this: I told it like it is. I told the kids that the bad guys have a little bit of good in them, and the good guys have a lot of bad in them, and that you just couldn't depend on anything much, that nothing was going to always turn out roses. In fact I laid it right on the line that there was no difference between my comic characters and the life these kids—the readers—were going to have to face. So when Donald had some adventures, and he got buffeted around, I tried to put it over in a way that the kids—the readers—could see, well, that could happen to them. It was the way life goes. I just didn't disguise anything or make things look rosy.",
+          "bbox": [
+            {
+              "h": 153.78913907284777,
+              "w": 285.74512500000003,
+              "x": 99.89250000000001,
+              "y": 288.38749668874175,
+              "confidence": 0.81,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** And yet the vehicles for those stories were really fantastic—like the Terries and Fermies, or this guy with a huge money bin. Did you have any problem in making a character like Scrooge or the Beagle Boys really real?",
+          "value": "DA: And yet the vehicles for those stories were really fantastic—like the Terries and Fermies, or this guy with a huge money bin. Did you have any problem in making a character like Scrooge or the Beagle Boys really real?",
+          "bbox": [
+            {
+              "h": 39.17022516556301,
+              "w": 283.37924999999996,
+              "x": 99.89250000000001,
+              "y": 450.5890331125828,
+              "confidence": 0.6,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I tried to get inside each character and figure out how he would think in the situation. The Beagle Boys, I figured, had been raised under a certain set of circumstances and their thinking would be a certain way. So I was just trying to make it look as genuine as possible—as if that was the logical way for them to think. The same way with Scrooge. His logical way of thinking is to always try to figure out how he's going to get something",
+          "value": "CB: Well, I tried to get inside each character and figure out how he would think in the situation. The Beagle Boys, I figured, had been raised under a certain set of circumstances and their thinking would be a certain way. So I was just trying to make it look as genuine as possible—as if that was the logical way for them to think. The same way with Scrooge. His logical way of thinking is to always try to figure out how he's going to get something",
+          "bbox": [
+            {
+              "h": 79.13,
+              "w": 283.64,
+              "x": 99.63,
+              "y": 489.23,
+              "confidence": 1.0,
+              "end_index": 453,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nDONALD AULT / 1973 45\n\\</page_header>",
+          "value": "<page_header>\nDONALD AULT / 1973 45\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.68,
+              "w": 98.05,
+              "x": 630.11,
+              "y": 44.43,
+              "confidence": 1.0,
+              "end_index": 35,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "out of each deal that he goes into. And Donald, he was changeable, like humans are changeable. One time he was selfish and another time he was too generous, and generally I was playing on the fact that he was a little bit cocky or overconfident or a little proud. \"Pride goeth before a fall,\" I think, was the main theme of a hell of a lot of my stories. Yeah, I believe the fact that I laid it on the line and never tried to disguise the perils of life was the main thing about my stories. I didn't read enough of other stories, like *Little Lulu*. I never read any of those, so I don't know what their theme was. As for *Superman* and all those type of stories, they were quite an artificial thing. They did have a little bit of the human element in them, where Superman was trying to keep his identity secret from Lois Lane. In most of the fighting and the menaces and all, it was just complete fabrication. It didn't seem to me to have much depth. It certainly had no parallel in human experience. My own stories—they had parallels in human experience.",
+          "value": "out of each deal that he goes into. And Donald, he was changeable, like humans are changeable. One time he was selfish and another time he was too generous, and generally I was playing on the fact that he was a little bit cocky or overconfident or a little proud. \"Pride goeth before a fall,\" I think, was the main theme of a hell of a lot of my stories. Yeah, I believe the fact that I laid it on the line and never tried to disguise the perils of life was the main thing about my stories. I didn't read enough of other stories, like Little Lulu. I never read any of those, so I don't know what their theme was. As for Superman and all those type of stories, they were quite an artificial thing. They did have a little bit of the human element in them, where Superman was trying to keep his identity secret from Lois Lane. In most of the fighting and the menaces and all, it was just complete fabrication. It didn't seem to me to have much depth. It certainly had no parallel in human experience. My own stories—they had parallels in human experience.",
+          "bbox": [
+            {
+              "h": 191.73168000000004,
+              "w": 286.0080000000001,
+              "x": 444.15360000000004,
+              "y": 67.28472000000001,
+              "confidence": 0.77,
+              "end_index": 1055,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** The Beagle Boys first appeared in the final panel of two consecutive stories of *Walt Disney's Comics and Stories*, shoveling Scrooge's money away in one and chipping it from a block of ice in the next, and you never explained how Scrooge gets his money back. The endings were so catastrophically funny that it seemed like they should be continued.",
+          "value": "DA: The Beagle Boys first appeared in the final panel of two consecutive stories of Walt Disney's Comics and Stories, shoveling Scrooge's money away in one and chipping it from a block of ice in the next, and you never explained how Scrooge gets his money back. The endings were so catastrophically funny that it seemed like they should be continued.",
+          "bbox": [
+            {
+              "h": 60.201218543046366,
+              "w": 284.43075000000005,
+              "x": 445.04737500000005,
+              "y": 269.4596026490066,
+              "confidence": 0.8,
+              "end_index": 355,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I never thought of whether they had to be continued. I just had an interesting gag there, an interesting ending for a story. Uncle Scrooge's money had been greatly endangered by Donald's bungling. But these Beagle Boys, I guess the reason I brought them in at the tail end of those two stories was that they were the type of people Uncle Scrooge would not want his money to go to. If I'd just shown a bunch of women and children there picking up the money, there would have been no humor in it. But the fact that I showed a bunch of masked burglars—the very worst type of people—there getting all of his money, it made it much more powerful.",
+          "value": "CB: I never thought of whether they had to be continued. I just had an interesting gag there, an interesting ending for a story. Uncle Scrooge's money had been greatly endangered by Donald's bungling. But these Beagle Boys, I guess the reason I brought them in at the tail end of those two stories was that they were the type of people Uncle Scrooge would not want his money to go to. If I'd just shown a bunch of women and children there picking up the money, there would have been no humor in it. But the fact that I showed a bunch of masked burglars—the very worst type of people—there getting all of his money, it made it much more powerful.",
+          "bbox": [
+            {
+              "h": 113.3,
+              "w": 284.96,
+              "x": 445.05,
+              "y": 334.13,
+              "confidence": 1.0,
+              "end_index": 648,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** In later stories you tended not to end with Scrooge losing all of his money.",
+          "value": "DA: In later stories you tended not to end with Scrooge losing all of his money.",
+          "bbox": [
+            {
+              "h": 23.134092715231816,
+              "w": 274.96725000000004,
+              "x": 446.098875,
+              "y": 457.1612185430464,
+              "confidence": 0.79,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** No, I guess I hadn't thought things out very far on that. I didn't see him as developing into a sort of family character that would go on and on and become quite a member of the whole economy. No—I just built each story as a little story and wound it up with a comical ending without worrying about whether it made any sense. \\[If Uncle Scrooge lost all of his money in one episode,] the next time I wanted to use him and his money I just went ahead and used them. I didn't think it was necessary to worry",
+          "value": "CB: No, I guess I hadn't thought things out very far on that. I didn't see him as developing into a sort of family character that would go on and on and become quite a member of the whole economy. No—I just built each story as a little story and wound it up with a comical ending without worrying about whether it made any sense. [If Uncle Scrooge lost all of his money in one episode,] the next time I wanted to use him and his money I just went ahead and used them. I didn't think it was necessary to worry",
+          "bbox": [
+            {
+              "h": 89.31600000000003,
+              "w": 284.32559999999995,
+              "x": 446.6772,
+              "y": 482.30640000000005,
+              "confidence": 0.81,
+              "end_index": 512,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "44, 45"
+    }
+  ]
+}

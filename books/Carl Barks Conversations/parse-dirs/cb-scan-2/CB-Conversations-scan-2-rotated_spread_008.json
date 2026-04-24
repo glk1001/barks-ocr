@@ -1,0 +1,451 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "34 CARL BARKS: CONVERSATIONS",
+              "value": "34 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.852257959579841,
+                  "w": 120.44567590629765,
+                  "x": 105.98434511361472,
+                  "y": 36.95498075219132,
+                  "confidence": 0.8,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "34 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.85,
+              "w": 120.45,
+              "x": 105.98,
+              "y": 36.95,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "PC: Your stories were always accepted. You almost never had stories rejected, right?",
+          "value": "PC: Your stories were always accepted. You almost never had stories rejected, right?",
+          "bbox": [
+            {
+              "h": 23.134092715231795,
+              "w": 276.5445000000001,
+              "x": 105.15,
+              "y": 60.20121854304636,
+              "confidence": 0.91,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: Very seldom ever had anything rejected—it would be just parts of a story, a couple of times, that I had to revise a little bit. Whenever they rejected a story, it was rejecting the whole thing, and it was only about three stories in all those years.",
+          "value": "CB: Very seldom ever had anything rejected—it would be just parts of a story, a couple of times, that I had to revise a little bit. Whenever they rejected a story, it was rejecting the whole thing, and it was only about three stories in all those years.",
+          "bbox": [
+            {
+              "h": 51.20783999999999,
+              "w": 279.27840000000003,
+              "x": 104.3088,
+              "y": 86.3388,
+              "confidence": 0.77,
+              "end_index": 252,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "PC: There was the one about \"Silent Night,\" where Donald was Christmas caroling.",
+          "value": "PC: There was the one about \"Silent Night,\" where Donald was Christmas caroling.",
+          "bbox": [
+            {
+              "h": 23.8176,
+              "w": 283.48440000000005,
+              "x": 103.4676,
+              "y": 142.90560000000002,
+              "confidence": 0.76,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: Yeah, well, that was when I was just starting up in the business. Surprisingly they paid me for it and then rejected it.",
+          "value": "CB: Yeah, well, that was when I was just starting up in the business. Surprisingly they paid me for it and then rejected it.",
+          "bbox": [
+            {
+              "h": 25.603919999999988,
+              "w": 280.11960000000005,
+              "x": 103.4676,
+              "y": 168.50952,
+              "confidence": 0.77,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "PC: I wonder what the reason was?",
+          "value": "PC: I wonder what the reason was?",
+          "bbox": [
+            {
+              "h": 10.717919999999992,
+              "w": 137.95680000000004,
+              "x": 102.6264,
+              "y": 199.47240000000002,
+              "confidence": 0.83,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: Oh, the reason was that I was having him sing \"Silent Night,\" a sort of sacred song. It apparently looked to the editors as if I was making fun of the song \"Silent Night.\"",
+          "value": "CB: Oh, the reason was that I was having him sing \"Silent Night,\" a sort of sacred song. It apparently looked to the editors as if I was making fun of the song \"Silent Night.\"",
+          "bbox": [
+            {
+              "h": 36.917280000000005,
+              "w": 280.11960000000005,
+              "x": 102.6264,
+              "y": 212.57208,
+              "confidence": 0.76,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "PC: Of course, you were making a joke about Donald Duck being so noisy?",
+          "value": "PC: Of course, you were making a joke about Donald Duck being so noisy?",
+          "bbox": [
+            {
+              "h": 23.341243745236273,
+              "w": 265.92623215093846,
+              "x": 101.61421729408823,
+              "y": 255.6684859827554,
+              "confidence": 0.92,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: Yeah, that's what I was really making fun of—it wasn't what he was singing. *He* was committing the sacrilege. It wasn't me, it was Donald, the way he was singing, how he forced people to listen. And they did kind of have an idea that it might offend people who go around singing Christmas carols. I think the people who go around singing Christmas carols have so damn much fun out of life, they'd laugh like hell over gags about themselves.",
+          "value": "CB: Yeah, that's what I was really making fun of—it wasn't what he was singing. He was committing the sacrilege. It wasn't me, it was Donald, the way he was singing, how he forced people to listen. And they did kind of have an idea that it might offend people who go around singing Christmas carols. I think the people who go around singing Christmas carols have so damn much fun out of life, they'd laugh like hell over gags about themselves.",
+          "bbox": [
+            {
+              "h": 86.40285192216085,
+              "w": 283.30092096393867,
+              "x": 100.99337672089369,
+              "y": 281.3643868830984,
+              "confidence": 0.94,
+              "end_index": 444,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "PC: That's exactly how I felt. I wonder why the editors at Western Publishing felt that way.",
+          "value": "PC: That's exactly how I felt. I wonder why the editors at Western Publishing felt that way.",
+          "bbox": [
+            {
+              "h": 23.929996674923803,
+              "w": 282.2542421755908,
+              "x": 99.86051720893676,
+              "y": 375.9621973799544,
+              "confidence": 0.93,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: They had a different sense of humor, a very cautious sense of humor, I would say. If anything looked like it might offend somebody, well, they were scared to death of it. It just no longer looked funny to them.",
+          "value": "CB: They had a different sense of humor, a very cautious sense of humor, I would say. If anything looked like it might offend somebody, well, they were scared to death of it. It just no longer looked funny to them.",
+          "bbox": [
+            {
+              "h": 39.06685045255337,
+              "w": 282.7923207025296,
+              "x": 99.37791392256575,
+              "y": 401.5481835508766,
+              "confidence": 0.93,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "PC: I have a feeling, myself, after talking and reading the comics, that maybe the publishers thought that their comics really weren't that good, and therefore, it was more important to try not to offend someone than to try to make a story as good and as exciting and as interesting as can be.",
+          "value": "PC: I have a feeling, myself, after talking and reading the comics, that maybe the publishers thought that their comics really weren't that good, and therefore, it was more important to try not to offend someone than to try to make a story as good and as exciting and as interesting as can be.",
+          "bbox": [
+            {
+              "h": 60.57471651105183,
+              "w": 279.92163353598994,
+              "x": 97.99531564703223,
+              "y": 444.7820786775916,
+              "confidence": 0.94,
+              "end_index": 292,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: That's right, play it safe. They didn't take any gambling chances on producing any work of genius. Play it safe.",
+          "value": "CB: That's right, play it safe. They didn't take any gambling chances on producing any work of genius. Play it safe.",
+          "bbox": [
+            {
+              "h": 24.974304635761598,
+              "w": 274.178625,
+              "x": 98.05237500000001,
+              "y": 508.6871523178808,
+              "confidence": 0.93,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "PC: They didn't think their books were having any influence on kids?",
+          "value": "PC: They didn't think their books were having any influence on kids?",
+          "bbox": [
+            {
+              "h": 12.897004330221042,
+              "w": 266.107127768912,
+              "x": 97.7456833257908,
+              "y": 539.3212266196648,
+              "confidence": 0.84,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: Oh, I'm sure they didn't. I'm sure they thought that these little 8- and",
+          "value": "CB: Oh, I'm sure they didn't. I'm sure they thought that these little 8- and",
+          "bbox": [
+            {
+              "h": 27.390240000000002,
+              "w": 281.802,
+              "x": 97.57920000000001,
+              "y": 539.46864,
+              "confidence": 0.75,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nPAUL CIOTTI / 1972 35\n\\</page_header>",
+          "value": "<page_header>\nPAUL CIOTTI / 1972 35\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.122480000000003,
+              "w": 90.00840000000005,
+              "x": 642.6768000000001,
+              "y": 42.87168,
+              "confidence": 0.94,
+              "end_index": 51,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "9-year-olds that read these things don't understand them in the first place, and they throw them away anyway.",
+          "value": "9-year-olds that read these things don't understand them in the first place, and they throw them away anyway.",
+          "bbox": [
+            {
+              "h": 24.413039999999995,
+              "w": 283.48440000000005,
+              "x": 450.04200000000003,
+              "y": 66.09384,
+              "confidence": 0.81,
+              "end_index": 108,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "PC: Just look at the pictures, and throw it away, right?",
+          "value": "PC: Just look at the pictures, and throw it away, right?",
+          "bbox": [
+            {
+              "h": 11.313360000000003,
+              "w": 210.29999999999995,
+              "x": 451.72440000000006,
+              "y": 99.43848000000001,
+              "confidence": 0.76,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "CB: Yeah, just look at the pictures and throw it away, and the only reason they ever bought it in the first place was that they had the name Walt Disney on the cover. My opinion of little kids back in those days is what helped make my comic books memorable, because I didn't feel that even kids of 6 or 7 are stupid. I thought they were smart little guys! Every one that I ever knew was a smart kid. I didn't know any that were as dumb as these editors thought they were! They all had a good knowledge of mechanics and adventure and geography. While they might not be able to read at that level, that is, very fluently and quickly, they could at least understand what they were reading if they read it enough times. They were able to get subtle humor. They were able to understand. They knew a good gag from a bad one. Hey, I wasn't kidding myself that I was writing for a bunch of stupid little nutheads. I was writing for kids who could understand stuff as well as I could—at least, I felt they were that way.",
+          "value": "CB: Yeah, just look at the pictures and throw it away, and the only reason they ever bought it in the first place was that they had the name Walt Disney on the cover. My opinion of little kids back in those days is what helped make my comic books memorable, because I didn't feel that even kids of 6 or 7 are stupid. I thought they were smart little guys! Every one that I ever knew was a smart kid. I didn't know any that were as dumb as these editors thought they were! They all had a good knowledge of mechanics and adventure and geography. While they might not be able to read at that level, that is, very fluently and quickly, they could at least understand what they were reading if they read it enough times. They were able to get subtle humor. They were able to understand. They knew a good gag from a bad one. Hey, I wasn't kidding myself that I was writing for a bunch of stupid little nutheads. I was writing for kids who could understand stuff as well as I could—at least, I felt they were that way.",
+          "bbox": [
+            {
+              "h": 178.23766887417213,
+              "w": 285.745125,
+              "x": 449.51625000000007,
+              "y": 112.77870198675498,
+              "confidence": 0.83,
+              "end_index": 1010,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "PC: That's one of the things that I think always came through in the story. Here's someone who's writing a story, and he liked kids and he respected kids and he didn't think that just because he was older and had been around that he was better than they were. I think you could always get that feeling from the stories.",
+          "value": "PC: That's one of the things that I think always came through in the story. Here's someone who's writing a story, and he liked kids and he respected kids and he didn't think that just because he was older and had been around that he was better than they were. I think you could always get that feeling from the stories.",
+          "bbox": [
+            {
+              "h": 60.72699337748338,
+              "w": 282.3277500000001,
+              "x": 452.14500000000004,
+              "y": 303.1091920529802,
+              "confidence": 0.79,
+              "end_index": 318,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "CB: I can remember back when I was a kid, I had an understanding of things that was almost as complete as I have now. I probably didn't know exactly how things were put together and so on, but then, I had ideas on how things were run. History, and so on, of course, I had to read and pick up out of books, but as far as humor and all those different cultures are concerned, I understood them just as well when I was a kid as I do now. And I felt all other kids were the same. I never wrote down to them. I was just writing something to please myself, and I figured it would please the kids, too.",
+          "value": "CB: I can remember back when I was a kid, I had an understanding of things that was almost as complete as I have now. I probably didn't know exactly how things were put together and so on, but then, I had ideas on how things were run. History, and so on, of course, I had to read and pick up out of books, but as far as humor and all those different cultures are concerned, I understood them just as well when I was a kid as I do now. And I felt all other kids were the same. I never wrote down to them. I was just writing something to please myself, and I figured it would please the kids, too.",
+          "bbox": [
+            {
+              "h": 114.91991999999999,
+              "w": 284.32559999999995,
+              "x": 452.5656000000001,
+              "y": 366.79104,
+              "confidence": 0.84,
+              "end_index": 594,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "PC: So many of your stories have a lot of detail—like \"In Old California.\" Fans and collectors keep pointing out how accurate to detail it is and how there's a tone set at the beginning of the story that accurately goes through the whole story. Have you done a lot of historical reading, for instance, about California, a lot of nonfiction reading?",
+          "value": "PC: So many of your stories have a lot of detail—like \"In Old California.\" Fans and collectors keep pointing out how accurate to detail it is and how there's a tone set at the beginning of the story that accurately goes through the whole story. Have you done a lot of historical reading, for instance, about California, a lot of nonfiction reading?",
+          "bbox": [
+            {
+              "h": 62.30431788079471,
+              "w": 284.6936249999999,
+              "x": 451.35637500000007,
+              "y": 492.38813245033117,
+              "confidence": 0.84,
+              "end_index": 347,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "CB: No, other than what I picked up in school. I went to a California",
+          "value": "CB: No, other than what I picked up in school. I went to a California",
+          "bbox": [
+            {
+              "h": 8.938172185430403,
+              "w": 263.4007500000001,
+              "x": 452.93362500000006,
+              "y": 558.6357615894041,
+              "confidence": 0.76,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "35",
+          "value": "35",
+          "bbox": null,
+          "type": "text"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "34, 35"
+    }
+  ]
+}

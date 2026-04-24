@@ -1,0 +1,168 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# xx INTRODUCTION",
+          "value": "xx INTRODUCTION",
+          "bbox": [
+            {
+              "h": 9.98266466987424,
+              "w": 51.48594463962463,
+              "x": 112.64503058903392,
+              "y": 19.320582471894056,
+              "confidence": 0.88,
+              "end_index": 16,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "These events perhaps opened the door for Barks to make his first bad decision—getting married \"too young\" to a woman who had no sympathy for his aspirations of being a cartoonist and \"accidentally\" having two daughters in the first three years of his marriage. Beginning in 1923, after logging work, he found himself shackled for six and a half years to hard labor on a riveting gang at the railroad car shops as a riveters heater. His early life at hard labor, compounded by bad luck, pounded into his head how resistant physical reality can be to human desire.",
+          "value": "These events perhaps opened the door for Barks to make his first bad decision—getting married \"too young\" to a woman who had no sympathy for his aspirations of being a cartoonist and \"accidentally\" having two daughters in the first three years of his marriage. Beginning in 1923, after logging work, he found himself shackled for six and a half years to hard labor on a riveting gang at the railroad car shops as a riveters heater. His early life at hard labor, compounded by bad luck, pounded into his head how resistant physical reality can be to human desire.",
+          "bbox": [
+            {
+              "h": 511.4592,
+              "w": 298.626,
+              "x": 76.5492,
+              "y": 41.63040000000001,
+              "confidence": 0.71,
+              "end_index": 561,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Nevertheless, there were critical moments in Barks's life when events seemed to pile up in ways that tested his willingness to take tremendous gambles and use his ingenuity to seize the moment and turn negative situations into positive possibilities. At these moments Barks rose to the challenge and mobilized his courage, creativity, and work ethic to move on to new levels of achievement. Once he got into cartooning full time, Barks learned skills at each stage of his work that would serve him well in the next stage, but he also learned what he *did not* want to do.",
+          "value": "Nevertheless, there were critical moments in Barks's life when events seemed to pile up in ways that tested his willingness to take tremendous gambles and use his ingenuity to seize the moment and turn negative situations into positive possibilities. At these moments Barks rose to the challenge and mobilized his courage, creativity, and work ethic to move on to new levels of achievement. Once he got into cartooning full time, Barks learned skills at each stage of his work that would serve him well in the next stage, but he also learned what he did not want to do.",
+          "bbox": [
+            {
+              "h": 511.4592,
+              "w": 298.626,
+              "x": 76.5492,
+              "y": 41.63040000000001,
+              "confidence": 0.71,
+              "end_index": 570,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "1929–31: With his first marriage breaking up disastrously (Barrier 1973; Ault 1997), Barks left his riveter heater job to return to Oregon to draw cartoons, just as the *Calgary Eye-Opener*, the risqué magazine to which he had been regularly selling gags, was on the verge of financial collapse at the beginning of the Great Depression. The editor, who saw Barks as \"a hard working son-of-a-gun,\" offered to pay Barks's way to Minneapolis. He uprooted himself and all his belongings and headed west, where he almost single-handedly rescued the *magazine* from dissolution. To save the *Eye-Opener*, he often worked under different names and used different drawing styles to give the impression that the magazine had a much larger creative staff than just Barks himself (Barrier 1973). These years of experience producing gags in single-panel format would serve him well at the Disney Studio, where he took his second big gamble. 1935–36: With the *Eye-Opener* again in financial shambles, Barks quit his job and headed west, with no promise of any work beyond a one-month period. \"that was a hell of a big gamble, to go to Disney. I don't know what would have happened to me if I hadn't been hired out there. It would have been a hell of a mess because I wouldn't have had money enough to get back to Minneapolis where I could have gotten my old job back if I went back there\" (Ault and Ault 1997). His six months in the \"in-between\" department at the Disney Studio—actually mastering the tedious experience of drawing every minute movement between positions in animation frames—sharpened his desire to get",
+          "value": "1929–31: With his first marriage breaking up disastrously (Barrier 1973; Ault 1997), Barks left his riveter heater job to return to Oregon to draw cartoons, just as the Calgary Eye-Opener, the risqué magazine to which he had been regularly selling gags, was on the verge of financial collapse at the beginning of the Great Depression. The editor, who saw Barks as \"a hard working son-of-a-gun,\" offered to pay Barks's way to Minneapolis. He uprooted himself and all his belongings and headed west, where he almost single-handedly rescued the magazine from dissolution. To save the Eye-Opener, he often worked under different names and used different drawing styles to give the impression that the magazine had a much larger creative staff than just Barks himself (Barrier 1973). These years of experience producing gags in single-panel format would serve him well at the Disney Studio, where he took his second big gamble. 1935–36: With the Eye-Opener again in financial shambles, Barks quit his job and headed west, with no promise of any work beyond a one-month period. \"that was a hell of a big gamble, to go to Disney. I don't know what would have happened to me if I hadn't been hired out there. It would have been a hell of a mess because I wouldn't have had money enough to get back to Minneapolis where I could have gotten my old job back if I went back there\" (Ault and Ault 1997). His six months in the \"in-between\" department at the Disney Studio—actually mastering the tedious experience of drawing every minute movement between positions in animation frames—sharpened his desire to get",
+          "bbox": [
+            {
+              "h": 511.4592,
+              "w": 298.626,
+              "x": 76.5492,
+              "y": 41.63040000000001,
+              "confidence": 0.84,
+              "end_index": 1605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# INTRODUCTION xxi",
+          "value": "INTRODUCTION xxi",
+          "bbox": [
+            {
+              "h": 9.060021499261627,
+              "w": 71.39155042397098,
+              "x": 662.22915998952,
+              "y": 32.94712049649867,
+              "confidence": 0.9,
+              "end_index": 17,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "characters from point A to point B *without filling in everything in between*. At the same time, he made maximum use of the gag skills he learned from years at the *Eye-Opener* and took advantage of the Disney system of suggesting gags for strips and cartoons to move himself out of the in-between department and into the story department on the strength of a gag in which Donald Duck gets \"flipped upside down\" in a barber chair and gets a \"haircut on the wrong end\" (Barrier 1971 and 1973; Ault, Andrae, Gong 1975).",
+          "value": "characters from point A to point B without filling in everything in between. At the same time, he made maximum use of the gag skills he learned from years at the Eye-Opener and took advantage of the Disney system of suggesting gags for strips and cartoons to move himself out of the in-between department and into the story department on the strength of a gag in which Donald Duck gets \"flipped upside down\" in a barber chair and gets a \"haircut on the wrong end\" (Barrier 1971 and 1973; Ault, Andrae, Gong 1975).",
+          "bbox": [
+            {
+              "h": 103.85,
+              "w": 286.8,
+              "x": 447.68,
+              "y": 52.06,
+              "confidence": 1.0,
+              "end_index": 516,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1940–1942:** On 6 May 1940, the new Disney Studio opened in Burbank with an air conditioning system that aggravated Barks's sinus problems and led to a painful sinus operation a few weeks before he quit the studio. In 1940, about the time the new Disney Studio opened, Barks had purchased a piece of land in San Jacinto, California, where, he said in 1997, the hot sun \"cooked \\[enough] sense into \\[his] head\" to make him leave the studio, and, once he left, eventually it \"cooked the bugs out of \\[him].\" Time clocks had come into existence following the Disney strike (29 May–14 September 1941)—a strike in which Barks did not participate but which changed the mood at the studio. Following Pearl Harbor and the entrance into World War II, animation production turned toward wartime training films, and, according to Barks, \"they were starting to put badges on everybody, and we were going to have to check in at the gate every morning, and we couldn't have any gasoline to drive anywhere, and well, you were just going to be locked in there for the duration, and I just didn't think I wanted to be locked into that place\" (Barrier 1973). At this time, the opportunity to do the art for \"Pirate Gold\" (noted earlier) converged with all the negative events congregating in the atmosphere at the Disney Studio, and on 6 November 1942, with no promise whatsoever of work from Western Publishing, Barks had just enough \"reckless daring\" to quit the Disney Studio cold to start a chicken farm on his San Jacinto property and try to get into comic book work somehow. Within that same month, Western Publishing decided independently to start running a new ten-page Donald Duck lead story in *WDC&S*. This series of coincidences led Barks as if by fate to seize the moment and aggressively revise the first ten-page Donald Duck script he had been sent to illustrate. When given the opportunity, he jumped at the chance to do an entire story on his own.",
+          "value": "1940–1942: On 6 May 1940, the new Disney Studio opened in Burbank with an air conditioning system that aggravated Barks's sinus problems and led to a painful sinus operation a few weeks before he quit the studio. In 1940, about the time the new Disney Studio opened, Barks had purchased a piece of land in San Jacinto, California, where, he said in 1997, the hot sun \"cooked [enough] sense into [his] head\" to make him leave the studio, and, once he left, eventually it \"cooked the bugs out of [him].\" Time clocks had come into existence following the Disney strike (29 May–14 September 1941)—a strike in which Barks did not participate but which changed the mood at the studio. Following Pearl Harbor and the entrance into World War II, animation production turned toward wartime training films, and, according to Barks, \"they were starting to put badges on everybody, and we were going to have to check in at the gate every morning, and we couldn't have any gasoline to drive anywhere, and well, you were just going to be locked in there for the duration, and I just didn't think I wanted to be locked into that place\" (Barrier 1973). At this time, the opportunity to do the art for \"Pirate Gold\" (noted earlier) converged with all the negative events congregating in the atmosphere at the Disney Studio, and on 6 November 1942, with no promise whatsoever of work from Western Publishing, Barks had just enough \"reckless daring\" to quit the Disney Studio cold to start a chicken farm on his San Jacinto property and try to get into comic book work somehow. Within that same month, Western Publishing decided independently to start running a new ten-page Donald Duck lead story in WDC&S. This series of coincidences led Barks as if by fate to seize the moment and aggressively revise the first ten-page Donald Duck script he had been sent to illustrate. When given the opportunity, he jumped at the chance to do an entire story on his own.",
+          "bbox": [
+            {
+              "h": 453.53315649867375,
+              "w": 289.4253750000001,
+              "x": 445.04737500000005,
+              "y": 52.057718832891254,
+              "confidence": 0.89,
+              "end_index": 1948,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1949–51:** From 1944 through 1949, Barks had been producing about four long *Donald Duck Adventures* a year in addition to his ten-page lead stories in *WDC&S*. Near the end of 1949, Barks was assigned to the long *Donald Duck* one-shot and seasonal stories full time (he produced one a",
+          "value": "1949–51: From 1944 through 1949, Barks had been producing about four long Donald Duck Adventures a year in addition to his ten-page lead stories in WDC&S. Near the end of 1949, Barks was assigned to the long Donald Duck one-shot and seasonal stories full time (he produced one a",
+          "bbox": [
+            {
+              "h": 52.05771883289117,
+              "w": 283.64212499999996,
+              "x": 445.573125,
+              "y": 505.59087533156503,
+              "confidence": 0.68,
+              "end_index": 287,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 26.29,
+              "w": 283.64,
+              "x": 445.57,
+              "y": 505.59,
+              "confidence": 1.0,
+              "end_index": 212,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

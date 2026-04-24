@@ -1,0 +1,419 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "56 CARL BARKS: CONVERSATIONS",
+              "value": "56 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 8.721576441918355,
+                  "w": 11.736006288109767,
+                  "x": 118.987678889577,
+                  "y": 30.938804685415878,
+                  "confidence": 0.89,
+                  "end_index": 1,
+                  "label": "header",
+                  "start_index": 0
+                },
+                {
+                  "h": 13.144370860927154,
+                  "w": 101.206875,
+                  "x": 138.53512500000002,
+                  "y": 32.072264900662255,
+                  "confidence": 0.87,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 3
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "56 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 14.28,
+              "w": 120.75,
+              "x": 118.99,
+              "y": 30.94,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "as if there was an extension of his vocal chords, or his voice box, that went out into that, so anytime he talked he had a reverberation. He could speak profanity with the loudest basso you ever heard. Just like a tuba.",
+          "value": "as if there was an extension of his vocal chords, or his voice box, that went out into that, so anytime he talked he had a reverberation. He could speak profanity with the loudest basso you ever heard. Just like a tuba.",
+          "bbox": [
+            {
+              "h": 512.67384,
+              "w": 301.9908,
+              "x": 98.42040000000001,
+              "y": 54.780480000000004,
+              "confidence": 0.98,
+              "end_index": 218,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Did these guys tell you stories of life on the trail? Did you talk with them a lot, shoot the breeze?",
+          "value": "BARRIER: Did these guys tell you stories of life on the trail? Did you talk with them a lot, shoot the breeze?",
+          "bbox": [
+            {
+              "h": 14.195920529801327,
+              "w": 132.75187499999998,
+              "x": 115.66500000000002,
+              "y": 114.09313907284769,
+              "confidence": 0.83,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** No, they didn't talk much about that. Their talk about the cattle drives was mostly concerned with when they got past the outer fringes of civilization and had to drive down fenced roads with their cattle, and the cattle breaking down farmers' fences and getting into their yards, and so on. That was what concerned them most, and that was about all I got out of their conversations. I think they did carry guns with them out there, because they were shooting coyotes and rattlesnakes out of necessity.",
+          "value": "BARKS: No, they didn't talk much about that. Their talk about the cattle drives was mostly concerned with when they got past the outer fringes of civilization and had to drive down fenced roads with their cattle, and the cattle breaking down farmers' fences and getting into their yards, and so on. That was what concerned them most, and that was about all I got out of their conversations. I think they did carry guns with them out there, because they were shooting coyotes and rattlesnakes out of necessity.",
+          "bbox": [
+            {
+              "h": 27.173066222846796,
+              "w": 279.1938246772581,
+              "x": 116.13626404701792,
+              "y": 101.41998728563264,
+              "confidence": 0.68,
+              "end_index": 512,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** This would have been long after the Indian wars.",
+          "value": "BARRIER: This would have been long after the Indian wars.",
+          "bbox": [
+            {
+              "h": 27.173066222846796,
+              "w": 279.1938246772581,
+              "x": 116.13626404701792,
+              "y": 101.41998728563264,
+              "confidence": 0.61,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Oh, yeah. The last of the Indian wars was fought there in 1880, something like that, which was close by where I lived.",
+          "value": "BARKS: Oh, yeah. The last of the Indian wars was fought there in 1880, something like that, which was close by where I lived.",
+          "bbox": [
+            {
+              "h": 27.173066222846796,
+              "w": 279.1938246772581,
+              "x": 116.13626404701792,
+              "y": 101.41998728563264,
+              "confidence": 0.62,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** How long was your father in this feedlot business?",
+          "value": "BARRIER: How long was your father in this feedlot business?",
+          "bbox": [
+            {
+              "h": 27.173066222846796,
+              "w": 279.1938246772581,
+              "x": 116.13626404701792,
+              "y": 101.41998728563264,
+              "confidence": 0.61,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** That was about two years, at that stretch, and then we moved to Santa Rosa. He wanted to get away back into California, because all the pleasant years of his life had been spent in California. He'd rented out the big wheat ranch, and he'd rented out the feedlot business, and so we all went off and went to California. My mother wanted to take it easy down there, just sort of rent a little place, and my dad maybe pick up some odd jobs and work a little bit, but in the meantime, just sort of take it easy and size things up. But my dad, he was sure that he had to have some solid income, so he went and spent money to buy a prune orchard in Santa Rosa. Right away the price of prunes went down to nothing, and right away the rains stopped up in Oregon, and the wheat ranch didn't pay off. There wasn't enough income coming in from the wheat ranch, and the only income that was coming in was rent from the feedlot. Hard times began to settle in on us, and my dad, he had a nervous breakdown. He couldn't take it; he worried too much. It was about two years we were there, and he had his nervous breakdown about six months or so before my mother found a way to sell the darned prune orchard. My dad then recovered, and we went back to the feedlot business, back to Midland, back to the feedlot business. In the meantime, my mother had had an operation for cancer, and so her health was bad; she knew she had only a few more",
+          "value": "BARKS: That was about two years, at that stretch, and then we moved to Santa Rosa. He wanted to get away back into California, because all the pleasant years of his life had been spent in California. He'd rented out the big wheat ranch, and he'd rented out the feedlot business, and so we all went off and went to California. My mother wanted to take it easy down there, just sort of rent a little place, and my dad maybe pick up some odd jobs and work a little bit, but in the meantime, just sort of take it easy and size things up. But my dad, he was sure that he had to have some solid income, so he went and spent money to buy a prune orchard in Santa Rosa. Right away the price of prunes went down to nothing, and right away the rains stopped up in Oregon, and the wheat ranch didn't pay off. There wasn't enough income coming in from the wheat ranch, and the only income that was coming in was rent from the feedlot. Hard times began to settle in on us, and my dad, he had a nervous breakdown. He couldn't take it; he worried too much. It was about two years we were there, and he had his nervous breakdown about six months or so before my mother found a way to sell the darned prune orchard. My dad then recovered, and we went back to the feedlot business, back to Midland, back to the feedlot business. In the meantime, my mother had had an operation for cancer, and so her health was bad; she knew she had only a few more",
+          "bbox": [
+            {
+              "h": 27.173066222846796,
+              "w": 279.1938246772581,
+              "x": 116.13626404701792,
+              "y": 101.41998728563264,
+              "confidence": 0.81,
+              "end_index": 1433,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>J. MICHAEL BARRIER / 1973 57\\</page_header>",
+          "value": "<page_header>J. MICHAEL BARRIER / 1973 57</page_header>",
+          "bbox": [
+            {
+              "h": 9.673918875643103,
+              "w": 97.83683553258395,
+              "x": 615.9474315691692,
+              "y": 41.851203286966474,
+              "confidence": 0.93,
+              "end_index": 56,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "years to live. She wanted to get us all back up to Oregon and back on the ranch, if possible. Well, the lease on the ranch had a couple of more years to run, so we went back to the feedlot business. For two years we were there. Then the ranch lease ran out, and we went back to the ranch, and there my mother died.",
+          "value": "years to live. She wanted to get us all back up to Oregon and back on the ranch, if possible. Well, the lease on the ranch had a couple of more years to run, so we went back to the feedlot business. For two years we were there. Then the ranch lease ran out, and we went back to the ranch, and there my mother died.",
+          "bbox": [
+            {
+              "h": 63.654810880335376,
+              "w": 283.6790417063644,
+              "x": 449.60345757907777,
+              "y": 65.60718012576221,
+              "confidence": 0.99,
+              "end_index": 313,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** How old were you when that happened?",
+          "value": "BARRIER: How old were you when that happened?",
+          "bbox": [
+            {
+              "h": 12.36,
+              "w": 201.63,
+              "x": 449.52,
+              "y": 133.81,
+              "confidence": 1.0,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I was fifteen when my mother died.",
+          "value": "BARKS: I was fifteen when my mother died.",
+          "bbox": [
+            {
+              "h": 10.52,
+              "w": 172.71,
+              "x": 449.52,
+              "y": 148.01,
+              "confidence": 1.0,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** How much schooling had you had?",
+          "value": "BARRIER: How much schooling had you had?",
+          "bbox": [
+            {
+              "h": 10.52,
+              "w": 178.76,
+              "x": 450.3,
+              "y": 166.41,
+              "confidence": 1.0,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I got through the eighth grade. I attended school, a little one-room schoolhouse close to the ranch; it was called the Lone Pine School District. There was four years in Midland—well, it couldn't be added up to four years, because the way terms fall, I don't think I had more than three years of classes there. I had to drop back a class when we went from Midland to Santa Rosa, and then drop back a class when we went from Santa Rosa back up to Midland. Each state had that much skepticism about the other state's educational standards. So I was fifteen when I finally got out of the eighth grade.",
+          "value": "BARKS: I got through the eighth grade. I attended school, a little one-room schoolhouse close to the ranch; it was called the Lone Pine School District. There was four years in Midland—well, it couldn't be added up to four years, because the way terms fall, I don't think I had more than three years of classes there. I had to drop back a class when we went from Midland to Santa Rosa, and then drop back a class when we went from Santa Rosa back up to Midland. Each state had that much skepticism about the other state's educational standards. So I was fifteen when I finally got out of the eighth grade.",
+          "bbox": [
+            {
+              "h": 114.94093498713801,
+              "w": 283.35595791253814,
+              "x": 450.6037650771723,
+              "y": 179.61745646198557,
+              "confidence": 0.98,
+              "end_index": 608,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Did you not want to continue your education then?",
+          "value": "BARRIER: Did you not want to continue your education then?",
+          "bbox": [
+            {
+              "h": 10.515496688741734,
+              "w": 240.7935,
+              "x": 451.35637500000007,
+              "y": 300.48031788079476,
+              "confidence": 0.69,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Well, I would have loved to have gone on to high school, but it was five miles to the nearest high school, and my hearing at that time had begun to deteriorate a little bit to where it was kind of difficult for me to pick up things in class. So I wasn't very eager about it, but then I would have loved to have gone to high school.",
+          "value": "BARKS: Well, I would have loved to have gone on to high school, but it was five miles to the nearest high school, and my hearing at that time had begun to deteriorate a little bit to where it was kind of difficult for me to pick up things in class. So I wasn't very eager about it, but then I would have loved to have gone to high school.",
+          "bbox": [
+            {
+              "h": 62.304317880794656,
+              "w": 282.85350000000005,
+              "x": 451.35637500000007,
+              "y": 313.6246887417219,
+              "confidence": 0.93,
+              "end_index": 341,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** So you were fifteen, and back on the wheat ranch at Midland.",
+          "value": "BARRIER: So you were fifteen, and back on the wheat ranch at Midland.",
+          "bbox": [
+            {
+              "h": 11.304158940397372,
+              "w": 281.53912499999996,
+              "x": 452.14500000000004,
+              "y": 382.76407947019874,
+              "confidence": 0.74,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Close to Merrill, Oregon; it was about fifteen miles or so from Midland. We were five miles from Merrill, which was the nearest high school and post office.",
+          "value": "BARKS: Close to Merrill, Oregon; it was about fifteen miles or so from Midland. We were five miles from Merrill, which was the nearest high school and post office.",
+          "bbox": [
+            {
+              "h": 37.07,
+              "w": 272.6,
+              "x": 452.15,
+              "y": 396.17,
+              "confidence": 1.0,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** What did you do when you were through with school? Did you work on the ranch?",
+          "value": "BARRIER: What did you do when you were through with school? Did you work on the ranch?",
+          "bbox": [
+            {
+              "h": 23.149495726943645,
+              "w": 283.42703634717986,
+              "x": 452.8246280487806,
+              "y": 440.6527595750763,
+              "confidence": 0.97,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I helped my dad there on the ranch for a year—a little more than a year. The war was on, World War I, and kids my age could get five dollars a day, which was fantastic wages, working for the farmers, pitching hay, helping to harvest, just about anything, for five bucks a day. I worked for wages anytime I could get time off from working on the home ranch. When I was seventeen, the war ended, and at that time I was eager to go to San Francisco, to get where I could maybe pursue a line of cartooning. I wanted to be a cartoonist.",
+          "value": "BARKS: I helped my dad there on the ranch for a year—a little more than a year. The war was on, World War I, and kids my age could get five dollars a day, which was fantastic wages, working for the farmers, pitching hay, helping to harvest, just about anything, for five bucks a day. I worked for wages anytime I could get time off from working on the home ranch. When I was seventeen, the war ended, and at that time I was eager to go to San Francisco, to get where I could maybe pursue a line of cartooning. I wanted to be a cartoonist.",
+          "bbox": [
+            {
+              "h": 101.2906424685595,
+              "w": 284.60306135670737,
+              "x": 452.8657523580412,
+              "y": 466.8565019817074,
+              "confidence": 0.98,
+              "end_index": 541,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "57",
+          "value": "57",
+          "bbox": [
+            {
+              "h": 8.055477669469322,
+              "w": 10.88757321836898,
+              "x": 720.9977013624239,
+              "y": 42.12158908929593,
+              "confidence": 0.9,
+              "end_index": 1,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "57"
+    }
+  ]
+}

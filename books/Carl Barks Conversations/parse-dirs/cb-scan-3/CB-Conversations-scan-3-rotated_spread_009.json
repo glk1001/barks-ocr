@@ -1,0 +1,535 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "96 CARL BARks: CoNverSationS                                              AULt, AnDRAE, AnD GoNG / 1975 97",
+              "value": "96 CARL BARks: CoNverSationS                                              AULt, AnDRAE, AnD GoNG / 1975 97",
+              "bbox": [
+                {
+                  "h": 10.419739067263722,
+                  "w": 122.86445900819365,
+                  "x": 603.5779806831175,
+                  "y": 41.03075188047829,
+                  "confidence": 0.85,
+                  "end_index": 105,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "96 CARL BARks: CoNverSationS                                              AULt, AnDRAE, AnD GoNG / 1975 97",
+          "bbox": [
+            {
+              "h": 10.42,
+              "w": 122.86,
+              "x": 603.58,
+              "y": 41.03,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# 96 CARL BARks: CoNverSationS",
+          "value": "96 CARL BARks: CoNverSationS",
+          "bbox": [
+            {
+              "h": 12.300601689929504,
+              "w": 121.24391828434642,
+              "x": 113.28075430521152,
+              "y": 37.86105484648915,
+              "confidence": 0.85,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "core, but Uncle Scrooge thought that there was a hole down under there, and he was gonna be darn sure that he knew where that hole was. So once I got down to this mysterious hole, why I'd people it with imaginary little characters. As for the square egg story, that business of the fog—this silly had gotten lost in the impenetrable fog; nobody ever knew what was over beyond—I just used my imagination and got this place that I could go wild on, and nobody could prove that I was crazy about it. It was something that could exist and nobody would ever have known it. So on the imaginary things I went much wilder than I had in stories with familiar locales such as Egypt or Africa.",
+          "value": "core, but Uncle Scrooge thought that there was a hole down under there, and he was gonna be darn sure that he knew where that hole was. So once I got down to this mysterious hole, why I'd people it with imaginary little characters. As for the square egg story, that business of the fog—this silly had gotten lost in the impenetrable fog; nobody ever knew what was over beyond—I just used my imagination and got this place that I could go wild on, and nobody could prove that I was crazy about it. It was something that could exist and nobody would ever have known it. So on the imaginary things I went much wilder than I had in stories with familiar locales such as Egypt or Africa.",
+          "bbox": [
+            {
+              "h": 38.90733774834433,
+              "w": 280.75050000000005,
+              "x": 109.35600000000001,
+              "y": 152.47470198675498,
+              "confidence": 0.95,
+              "end_index": 681,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "<!-- layout: bqeq, ytgt -->",
+          "value": "<!-- layout: bqeq, ytgt -->",
+          "bbox": [
+            {
+              "h": 263.41,
+              "w": 281.28,
+              "x": 105.41,
+              "y": 74.92,
+              "confidence": 0.4,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Why do you think the square egg story is the one people remember most?",
+          "value": "Q: Why do you think the square egg story is the one people remember most?",
+          "bbox": [
+            {
+              "h": 129.93741701838798,
+              "w": 284.91438640315357,
+              "x": 110.41076840582129,
+              "y": 61.78064064643675,
+              "confidence": 0.66,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** When you analyze the structure of the story, you see that it was built on little short sequence gags; almost every page had a gag or two in which the characters moved through a bit of action to a short climax, and then switched to another little action and another climax. It just stepped up and up. All of these little situations had to deal with moving them along the main story plot.",
+          "value": "BARKS: When you analyze the structure of the story, you see that it was built on little short sequence gags; almost every page had a gag or two in which the characters moved through a bit of action to a short climax, and then switched to another little action and another climax. It just stepped up and up. All of these little situations had to deal with moving them along the main story plot.",
+          "bbox": [
+            {
+              "h": 77.07527524533157,
+              "w": 283.92819190644053,
+              "x": 107.25515389195886,
+              "y": 223.80693606373862,
+              "confidence": 0.74,
+              "end_index": 396,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "<!-- layout: wtgo, esmf -->",
+          "value": "<!-- layout: wtgo, esmf -->",
+          "bbox": [
+            {
+              "h": 16.04,
+              "w": 268.92,
+              "x": 113.04,
+              "y": 74.92,
+              "confidence": 0.4,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Where did you get the idea for a square egg?",
+          "value": "Q: Where did you get the idea for a square egg?",
+          "bbox": [
+            {
+              "h": 15.25,
+              "w": 187.96,
+              "x": 105.94,
+              "y": 307.32,
+              "confidence": 1.0,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 7
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "<!-- layout: hszh, esmf -->",
+          "value": "<!-- layout: hszh, esmf -->",
+          "bbox": [
+            {
+              "h": 16.04,
+              "w": 268.92,
+              "x": 113.04,
+              "y": 74.92,
+              "confidence": 0.4,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Oh, square eggs have been a joke for more years than I've been on earth. I remember hearing people talk about getting chickens that would lay square eggs from the time I was a little child.",
+          "value": "BARKS: Oh, square eggs have been a joke for more years than I've been on earth. I remember hearing people talk about getting chickens that would lay square eggs from the time I was a little child.",
+          "bbox": [
+            {
+              "h": 20.768105960264904,
+              "w": 284.16787500000004,
+              "x": 105.93862500000002,
+              "y": 221.35120529801327,
+              "confidence": 0.66,
+              "end_index": 199,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "<!-- layout: tioj, widn -->",
+          "value": "<!-- layout: tioj, widn -->",
+          "bbox": [
+            {
+              "h": 386.97,
+              "w": 282.06,
+              "x": 99.89,
+              "y": 74.92,
+              "confidence": 0.4,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Your creativity seems to come in bursts, periods of particularly good stories and characters. Did you have any sense of this at the time?",
+          "value": "Q: Your creativity seems to come in bursts, periods of particularly good stories and characters. Did you have any sense of this at the time?",
+          "bbox": [
+            {
+              "h": 20.768105960264904,
+              "w": 284.16787500000004,
+              "x": 105.93862500000002,
+              "y": 221.35120529801327,
+              "confidence": 0.65,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I think that once I had developed a set of characters like Scrooge and Gladstone, there were quite a few stories that I could use them in very readily without having to struggle too hard. So I would use them quite extensively. Then, when they began to be a little hard to write about, I'd go ahead and invent some more—a whole new stock for the stable.",
+          "value": "BARKS: I think that once I had developed a set of characters like Scrooge and Gladstone, there were quite a few stories that I could use them in very readily without having to struggle too hard. So I would use them quite extensively. Then, when they began to be a little hard to write about, I'd go ahead and invent some more—a whole new stock for the stable.",
+          "bbox": [
+            {
+              "h": 20.768105960264904,
+              "w": 284.16787500000004,
+              "x": 105.93862500000002,
+              "y": 221.35120529801327,
+              "confidence": 0.69,
+              "end_index": 362,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "<!-- layout: amqj, vadg, ckrm -->",
+          "value": "<!-- layout: amqj, vadg, ckrm -->",
+          "bbox": [
+            {
+              "h": 16.04,
+              "w": 268.92,
+              "x": 113.04,
+              "y": 74.92,
+              "confidence": 0.4,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** How did Gyro Gearloose come about?",
+          "value": "Q: How did Gyro Gearloose come about?",
+          "bbox": [
+            {
+              "h": 13.93,
+              "w": 160.88,
+              "x": 100.42,
+              "y": 475.83,
+              "confidence": 1.0,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 7
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I think that every cartoonist that ever ran anything in comic strips and newspapers always had a crazy inventor at some time in his strips. I was in need of a crazy inventor, so I just deliberately invented Gyro as a crazy inventor. I only figured on using him once in a very great while, so I just made him a big awkward looking chicken. If I had known that I was going to have to do a book of Gyro stories, I would have made him",
+          "value": "BARKS: I think that every cartoonist that ever ran anything in comic strips and newspapers always had a crazy inventor at some time in his strips. I was in need of a crazy inventor, so I just deliberately invented Gyro as a crazy inventor. I only figured on using him once in a very great while, so I just made him a big awkward looking chicken. If I had known that I was going to have to do a book of Gyro stories, I would have made him",
+          "bbox": [
+            {
+              "h": 45.47952317880794,
+              "w": 284.16787500000004,
+              "x": 105.93862500000002,
+              "y": 221.35120529801327,
+              "confidence": 0.71,
+              "end_index": 440,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "<!-- layout: sabi, qdvy -->",
+          "value": "<!-- layout: sabi, qdvy -->",
+          "bbox": [
+            {
+              "h": 263.41,
+              "w": 281.28,
+              "x": 105.41,
+              "y": 74.92,
+              "confidence": 0.4,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "the same size as Donald or Uncle Scrooge, so that he could have been handled much easier. He was this big tall gawky chicken, and it was difficult to work him in the same panels with the ducks.",
+          "value": "the same size as Donald or Uncle Scrooge, so that he could have been handled much easier. He was this big tall gawky chicken, and it was difficult to work him in the same panels with the ducks.",
+          "bbox": [
+            {
+              "h": 37.06712582781458,
+              "w": 282.06487500000003,
+              "x": 461.60850000000005,
+              "y": 65.19607947019868,
+              "confidence": 0.97,
+              "end_index": 192,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "<!-- layout: slxc, wfma -->",
+          "value": "<!-- layout: slxc, wfma -->",
+          "bbox": [
+            {
+              "h": 16.04,
+              "w": 268.92,
+              "x": 113.04,
+              "y": 74.92,
+              "confidence": 0.4,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Don't you like to make pictures of Rube Goldberg-like inventions yourself?",
+          "value": "Q: Don't you like to make pictures of Rube Goldberg-like inventions yourself?",
+          "bbox": [
+            {
+              "h": 24.637528425114333,
+              "w": 284.1459353563262,
+              "x": 461.4228645674543,
+              "y": 109.26430900938456,
+              "confidence": 0.86,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I didn't mind it at all. I'm kind of an inventor at heart. I can think of all kinds of crazy inventions. I would go broke if I ever tried to patent all the things I think of.",
+          "value": "BARKS: I didn't mind it at all. I'm kind of an inventor at heart. I can think of all kinds of crazy inventions. I would go broke if I ever tried to patent all the things I think of.",
+          "bbox": [
+            {
+              "h": 37.855788079470216,
+              "w": 283.64212499999996,
+              "x": 461.87137500000006,
+              "y": 134.8612450331126,
+              "confidence": 0.94,
+              "end_index": 184,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "<!-- layout: zqxt, ymfp -->",
+          "value": "<!-- layout: zqxt, ymfp -->",
+          "bbox": [
+            {
+              "h": 16.04,
+              "w": 268.92,
+              "x": 113.04,
+              "y": 74.92,
+              "confidence": 0.4,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Care to give us any examples?",
+          "value": "Q: Care to give us any examples?",
+          "bbox": [
+            {
+              "h": 11.304158940397343,
+              "w": 130.64887500000003,
+              "x": 462.92287500000003,
+              "y": 179.81499337748346,
+              "confidence": 0.78,
+              "end_index": 35,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Oh no—because I still think I've got some good ones.",
+          "value": "BARKS: Oh no—because I still think I've got some good ones.",
+          "bbox": [
+            {
+              "h": 11.04,
+              "w": 241.06,
+              "x": 462.66,
+              "y": 192.17,
+              "confidence": 1.0,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "<!-- layout: vori, smny -->",
+          "value": "<!-- layout: vori, smny -->",
+          "bbox": [
+            {
+              "h": 386.97,
+              "w": 282.06,
+              "x": 99.89,
+              "y": 74.92,
+              "confidence": 0.4,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Do you think it would be possible to make three-dimensional models of your characters that would actually look as they do from panel to panel in your comics?",
+          "value": "Q: Do you think it would be possible to make three-dimensional models of your characters that would actually look as they do from panel to panel in your comics?",
+          "bbox": [
+            {
+              "h": 39.210732379001556,
+              "w": 284.33487676257624,
+              "x": 463.0572678401296,
+              "y": 210.41476587747718,
+              "confidence": 0.88,
+              "end_index": 163,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I just had to draw my characters in any situation in which the story required them to look a certain way. I had to work on them until they did look that way. Whether they could have been molded into a clay model and still look right in the poses I put them into, I don't know—whether such a clay model could be manipulated so that you could turn the head and it would still look right or not. That is something I never got into, and I never had any desire to make clay models of my characters.",
+          "value": "BARKS: I just had to draw my characters in any situation in which the story required them to look a certain way. I had to work on them until they did look that way. Whether they could have been molded into a clay model and still look right in the poses I put them into, I don't know—whether such a clay model could be manipulated so that you could turn the head and it would still look right or not. That is something I never got into, and I never had any desire to make clay models of my characters.",
+          "bbox": [
+            {
+              "h": 90.25594821836896,
+              "w": 287.47570205316316,
+              "x": 463.25091775438267,
+              "y": 249.53806286204272,
+              "confidence": 0.94,
+              "end_index": 503,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Uncle Scrooge speaking to a character about worms that pull in teams",
+          "value": "Uncle Scrooge speaking to a character about worms that pull in teams",
+          "bbox": [
+            {
+              "h": 212.4905941834986,
+              "w": 298.7070464462653,
+              "x": 467.65392373285067,
+              "y": 355.7905044112043,
+              "confidence": 0.99,
+              "end_index": 67,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

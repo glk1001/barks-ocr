@@ -1,0 +1,247 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "124 CARL BARKS: CONVERSATIONS",
+              "value": "124 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.154093118211705,
+                  "w": 124.72855231754956,
+                  "x": 115.41176742330413,
+                  "y": 44.28502563952936,
+                  "confidence": 0.86,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "124 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.15,
+              "w": 124.73,
+              "x": 115.41,
+              "y": 44.29,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "whole page in which I have a ship wallowing around in the waves. A hurricane is tearing the ship apart, and the villain, who is a real dirty skunk, turns on his own helper. It was a hard-boiled story! I think that might have been one of its charms. If my stuff had charm, it could have been that you didn't know when you picked up a story whether you were going to read a hard-boiled one or one that had a bunch of dripping sentiment. I tried to have a wide range of subjects and methods of handling them.",
+          "value": "whole page in which I have a ship wallowing around in the waves. A hurricane is tearing the ship apart, and the villain, who is a real dirty skunk, turns on his own helper. It was a hard-boiled story! I think that might have been one of its charms. If my stuff had charm, it could have been that you didn't know when you picked up a story whether you were going to read a hard-boiled one or one that had a bunch of dripping sentiment. I tried to have a wide range of subjects and methods of handling them.",
+          "bbox": [
+            {
+              "h": 89.31395682700553,
+              "w": 283.81362238590896,
+              "x": 113.04911073861473,
+              "y": 68.39721041051355,
+              "confidence": 0.99,
+              "end_index": 504,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I did that for several reasons. One is that I couldn't see myself typing each one just alike. I knew that the public liked variety, so I would think back over what I had already done and see if I couldn't come up with something different. That was always one of the first thoughts I had in dreaming up a story: I always looked for plots or formulas that were different, tried to find a different way of doing it, and searched for a different place to stage the business. It is so hard to come up with something new all the time that by the sixties I used some of the old plots again. But I soon found that it was just as hard to do that as it was to think of a whole new plot. I inevitably had to change the locale, the situation, and the gags along a story pattern that originally fitted very nicely in some other location or situation. It involved so much rewriting it was almost as bad as thinking up a whole new plot.",
+          "value": "I did that for several reasons. One is that I couldn't see myself typing each one just alike. I knew that the public liked variety, so I would think back over what I had already done and see if I couldn't come up with something different. That was always one of the first thoughts I had in dreaming up a story: I always looked for plots or formulas that were different, tried to find a different way of doing it, and searched for a different place to stage the business. It is so hard to come up with something new all the time that by the sixties I used some of the old plots again. But I soon found that it was just as hard to do that as it was to think of a whole new plot. I inevitably had to change the locale, the situation, and the gags along a story pattern that originally fitted very nicely in some other location or situation. It involved so much rewriting it was almost as bad as thinking up a whole new plot.",
+          "bbox": [
+            {
+              "h": 166.75574894245432,
+              "w": 283.6061850585938,
+              "x": 111.74038344369285,
+              "y": 158.7781378810976,
+              "confidence": 0.99,
+              "end_index": 920,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "My plots had so many angles in them that once a person read one of them he recognized it when he read it again, even if it was a little different. \\[*Uncle Scrooge* #3], for example, has an angle that would be hard to reuse exactly. Scrooge saves the villain, even though that scamp is totally worthless. It made Scrooge much more likable. If I had had the nephews tie Scrooge down so that they could rescue the crook, you wouldn't have had much sympathy for Scrooge, but the fact that he helped to rescue the darn guy and then got kicked in the face again made him sweet.",
+          "value": "My plots had so many angles in them that once a person read one of them he recognized it when he read it again, even if it was a little different. [Uncle Scrooge #3], for example, has an angle that would be hard to reuse exactly. Scrooge saves the villain, even though that scamp is totally worthless. It made Scrooge much more likable. If I had had the nephews tie Scrooge down so that they could rescue the crook, you wouldn't have had much sympathy for Scrooge, but the fact that he helped to rescue the darn guy and then got kicked in the face again made him sweet.",
+          "bbox": [
+            {
+              "h": 102.12517891577745,
+              "w": 283.29840391577744,
+              "x": 110.46901114710369,
+              "y": 327.4133577839177,
+              "confidence": 0.99,
+              "end_index": 571,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "My tastes in literature ran to anything that kept moving fast: action gags, adventure, and especially anything that had humor. I loved the P. G. Wodehouse stories that appeared in the *Saturday Evening Post* or *Colliers*. I always bought them on the newsstand. You always got a nice, crisp copy: When you got it by mail, the pages were torn or crumpled up.",
+          "value": "My tastes in literature ran to anything that kept moving fast: action gags, adventure, and especially anything that had humor. I loved the P. G. Wodehouse stories that appeared in the Saturday Evening Post or Colliers. I always bought them on the newsstand. You always got a nice, crisp copy: When you got it by mail, the pages were torn or crumpled up.",
+          "bbox": [
+            {
+              "h": 63.328966892149424,
+              "w": 284.1963389326887,
+              "x": 108.78911316811167,
+              "y": 431.0442621236663,
+              "confidence": 0.97,
+              "end_index": 356,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "And I read western pulps and *Argosy*. If they had stories that had good action in them, I read them. They didn't have to be on pretty, slick paper to please me. There were quite a bunch of real good writers that specialized in western stories: Max Brand, Ernest Haycock. In western or sea stories there was always more action, something I could get more involved in. Now, I liked a couple of Jack London's stories, but his stuff didn't move",
+          "value": "And I read western pulps and Argosy. If they had stories that had good action in them, I read them. They didn't have to be on pretty, slick paper to please me. There were quite a bunch of real good writers that specialized in western stories: Max Brand, Ernest Haycock. In western or sea stories there was always more action, something I could get more involved in. Now, I liked a couple of Jack London's stories, but his stuff didn't move",
+          "bbox": [
+            {
+              "h": 76.98087267530487,
+              "w": 283.7921335568312,
+              "x": 109.25926270126718,
+              "y": 495.59186425781263,
+              "confidence": 0.97,
+              "end_index": 440,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nEDWARD SUMMER / 1981 125\n\\</page_header>",
+          "value": "<page_header>\nEDWARD SUMMER / 1981 125\n</page_header>",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 114.09,
+              "x": 632.48,
+              "y": 42.59,
+              "confidence": 1.0,
+              "end_index": 38,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "fast enough for me. I guess that is one of the reasons why I go in for the comic-book style more than stories that are told in type—the action moves so much faster. A fault I found with Zane Grey's writing was that you would have a couple of paragraphs of action, then he would go into two or three pages of describing purple skies and sagebrush and rocks and the way streams trickled down the sides of mountains. I would just glance through that stuff—doing some speed reading. When I came to the end where some action started up again, I would start reading it again. I imagine that in most of Zane Grey's books, I read only about half of the words.",
+          "value": "fast enough for me. I guess that is one of the reasons why I go in for the comic-book style more than stories that are told in type—the action moves so much faster. A fault I found with Zane Grey's writing was that you would have a couple of paragraphs of action, then he would go into two or three pages of describing purple skies and sagebrush and rocks and the way streams trickled down the sides of mountains. I would just glance through that stuff—doing some speed reading. When I came to the end where some action started up again, I would start reading it again. I imagine that in most of Zane Grey's books, I read only about half of the words.",
+          "bbox": [
+            {
+              "h": 116.20510063297925,
+              "w": 284.804375119093,
+              "x": 464.7207736995046,
+              "y": 68.2057903635909,
+              "confidence": 0.99,
+              "end_index": 650,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "The nerve medicine \\[in \"Tralla La,\" *US* #6] was a running gag to help pull parts of the story together. I had learned about running gags before I ever worked at Disney. It was a kind of thread or connecting link in stories, such as Wodehouse's stories, and in the movies: Chaplin and Laurel and Hardy had running gags. I liked those movies more than romantic ones or shoot-'em-up westerns. The running gags were a necessary part of the stories, like a period at the end of a sentence.",
+          "value": "The nerve medicine [in \"Tralla La,\" US #6] was a running gag to help pull parts of the story together. I had learned about running gags before I ever worked at Disney. It was a kind of thread or connecting link in stories, such as Wodehouse's stories, and in the movies: Chaplin and Laurel and Hardy had running gags. I liked those movies more than romantic ones or shoot-'em-up westerns. The running gags were a necessary part of the stories, like a period at the end of a sentence.",
+          "bbox": [
+            {
+              "h": 91.46963729754195,
+              "w": 285.1010111232851,
+              "x": 466.55458729516016,
+              "y": 209.98600979182552,
+              "confidence": 0.99,
+              "end_index": 485,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "I was never temperamental in any way that I can remember. If you were a *prima donna* down at the Disney studio, if you went in thinking that you were a genius and then you had to work with a bunch of geniuses, why you soon got the ego knocked out of you. We served an apprenticeship at the Disney story department. You'd come out of there with humility, so you didn't feel that you had to have a grand opera band playing background music before you could get ideas!",
+          "value": "I was never temperamental in any way that I can remember. If you were a prima donna down at the Disney studio, if you went in thinking that you were a genius and then you had to work with a bunch of geniuses, why you soon got the ego knocked out of you. We served an apprenticeship at the Disney story department. You'd come out of there with humility, so you didn't feel that you had to have a grand opera band playing background music before you could get ideas!",
+          "bbox": [
+            {
+              "h": 91.86648265529729,
+              "w": 284.71972215605945,
+              "x": 468.08199723704274,
+              "y": 300.9017832221799,
+              "confidence": 0.99,
+              "end_index": 465,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "I had very little editorial supervision. I guess they felt that it was better to leave me alone. In the very beginning—on \"The Mummy's Ring\" (1943)—I turned in a script to Eleanor Packer, the editor. She thought that I should change the climax around. I sketched up her changes and sent in the script. Soon she wrote back and said that my original script was better. From that time on they never monkeyed with my scripts much. If I turned in one that was a turkey, they just paid me for it and put it on the shelf.",
+          "value": "I had very little editorial supervision. I guess they felt that it was better to leave me alone. In the very beginning—on \"The Mummy's Ring\" (1943)—I turned in a script to Eleanor Packer, the editor. She thought that I should change the climax around. I sketched up her changes and sent in the script. Soon she wrote back and said that my original script was better. From that time on they never monkeyed with my scripts much. If I turned in one that was a turkey, they just paid me for it and put it on the shelf.",
+          "bbox": [
+            {
+              "h": 90.39919193025914,
+              "w": 284.94593090224856,
+              "x": 469.45417668635673,
+              "y": 392.25173756192845,
+              "confidence": 0.98,
+              "end_index": 513,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Any time that I wrote a script, when I got through with it, I'd lay it aside, pick it up the next morning, and read it. If it didn't read with a lot of rhythm going right on through, I'd work on it another day or so until I got it to where it sounded good, then start drawing. With the drawing, too, I would pick up sheets that I had done two or three days before and look at them. If the business didn't look right, I didn't mind doing it over. I was after a certain quality. I wasn't thinking of getting a fast buck, and",
+          "value": "Any time that I wrote a script, when I got through with it, I'd lay it aside, pick it up the next morning, and read it. If it didn't read with a lot of rhythm going right on through, I'd work on it another day or so until I got it to where it sounded good, then start drawing. With the drawing, too, I would pick up sheets that I had done two or three days before and look at them. If the business didn't look right, I didn't mind doing it over. I was after a certain quality. I wasn't thinking of getting a fast buck, and",
+          "bbox": [
+            {
+              "h": 89.80426959317836,
+              "w": 282.62824297351375,
+              "x": 470.6595046446266,
+              "y": 484.07425432545745,
+              "confidence": 0.98,
+              "end_index": 521,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "124, 125"
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "BARRIER, BRAY, FOSTER, AND SPICER / 1971 25",
+              "value": "BARRIER, BRAY, FOSTER, AND SPICER / 1971 25",
+              "bbox": [
+                {
+                  "h": 10.37720472620522,
+                  "w": 149.92119898056407,
+                  "x": 554.594770841273,
+                  "y": 41.645809000452566,
+                  "confidence": 0.92,
+                  "end_index": 42,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "BARRIER, BRAY, FOSTER, AND SPICER / 1971 25",
+          "bbox": [
+            {
+              "h": 10.38,
+              "w": 149.92,
+              "x": 554.59,
+              "y": 41.65,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# 24 CARL BARks: CONVersatIoNS",
+          "value": "24 CARL BARks: CONVersatIoNS",
+          "bbox": [
+            {
+              "h": 11.931749131812117,
+              "w": 121.12249262516674,
+              "x": 100.84704355528298,
+              "y": 37.173010800543075,
+              "confidence": 0.8,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Yes. I would once in a while try some girls or musclemen, just for a little fun.",
+          "value": "BARKS: Yes. I would once in a while try some girls or musclemen, just for a little fun.",
+          "bbox": [
+            {
+              "h": 23.524765887004584,
+              "w": 282.88470012683405,
+              "x": 100.31654747939693,
+              "y": 61.0407283715225,
+              "confidence": 0.96,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BRAY:** Would you prefer the human characters over, say, fantasy characters like the Gneezles or the Terries and Fermies?",
+          "value": "BRAY: Would you prefer the human characters over, say, fantasy characters like the Gneezles or the Terries and Fermies?",
+          "bbox": [
+            {
+              "h": 26.18789341177593,
+              "w": 280.5491424084175,
+              "x": 99.99487874249715,
+              "y": 92.65546653844324,
+              "confidence": 0.94,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Oh, I guess so; it's hard to say. . . . I'd rather draw humans. Fantasy characters get into another field, but of course in comic books, you have to combine 'em all.",
+          "value": "BARKS: Oh, I guess so; it's hard to say. . . . I'd rather draw humans. Fantasy characters get into another field, but of course in comic books, you have to combine 'em all.",
+          "bbox": [
+            {
+              "h": 37.09763056997905,
+              "w": 271.8698093529678,
+              "x": 99.07236180747428,
+              "y": 119.17750072765818,
+              "confidence": 0.93,
+              "end_index": 175,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** What kind of realistic stories would you have liked to have done?",
+          "value": "BARRIER: What kind of realistic stories would you have liked to have done?",
+          "bbox": [
+            {
+              "h": 22.915643276009913,
+              "w": 267.1994264898533,
+              "x": 98.3569127822504,
+              "y": 162.95222064357853,
+              "confidence": 0.95,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I was really hooked on the Alex Raymond sort of stuff—*Flash Gordon*. Another subject would have been western stories, although I was never good on drawing horses and probably never could \\[draw them well].",
+          "value": "BARKS: I was really hooked on the Alex Raymond sort of stuff—Flash Gordon. Another subject would have been western stories, although I was never good on drawing horses and probably never could [draw them well].",
+          "bbox": [
+            {
+              "h": 49.67186675161966,
+              "w": 283.0704607856565,
+              "x": 97.07178437916828,
+              "y": 188.66476830697414,
+              "confidence": 0.96,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BRAY:** As a kid, did you enjoy reading cartoons?",
+          "value": "BRAY: As a kid, did you enjoy reading cartoons?",
+          "bbox": [
+            {
+              "h": 13.701225585937502,
+              "w": 186.34611671112808,
+              "x": 96.58574989281632,
+              "y": 246.32144376190936,
+              "confidence": 0.89,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Yeah, that's how I happened to take up cartooning. I was fascinated by cartoons.",
+          "value": "BARKS: Yeah, that's how I happened to take up cartooning. I was fascinated by cartoons.",
+          "bbox": [
+            {
+              "h": 37.79885995141008,
+              "w": 276.92385422125096,
+              "x": 96.02985166670636,
+              "y": 246.12329586985524,
+              "confidence": 0.79,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 26.55,
+              "w": 278.65,
+              "x": 94.64,
+              "y": 256.84,
+              "confidence": 1.0,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 73
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BRAY:** Who were some of your favorite cartoonists or strips?",
+          "value": "BRAY: Who were some of your favorite cartoonists or strips?",
+          "bbox": [
+            {
+              "h": 14.859797746760643,
+              "w": 234.29297893245047,
+              "x": 95.83308987947791,
+              "y": 290.54565287252296,
+              "confidence": 0.86,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Well, I will say that *Happy Hooligan* wasn't among my favorites, but *Segar* and his early *Thimble Theatre*, and cartoonists you wouldn't recognize, who drew for the *San Francisco Examiner* \\[were favorites]. Back in those years, in the early 1920s and before that time, the *San Francisco Examiner* had a Sunday section of humor and cartoons, and, really, it was just like a big magazine folder. It was full of cartoonists' stuff; some of those guys were marvelous cartoonists. Those fellows were real draftsmen in pen and ink; they all had distinctive styles. I would read that *Examiner* Sunday section, and not copy their stuff, but try to draw a similar situation using their style.",
+          "value": "BARKS: Well, I will say that Happy Hooligan wasn't among my favorites, but Segar and his early Thimble Theatre, and cartoonists you wouldn't recognize, who drew for the San Francisco Examiner [were favorites]. Back in those years, in the early 1920s and before that time, the San Francisco Examiner had a Sunday section of humor and cartoons, and, really, it was just like a big magazine folder. It was full of cartoonists' stuff; some of those guys were marvelous cartoonists. Those fellows were real draftsmen in pen and ink; they all had distinctive styles. I would read that Examiner Sunday section, and not copy their stuff, but try to draw a similar situation using their style.",
+          "bbox": [
+            {
+              "h": 143.04338343178355,
+              "w": 283.355964173852,
+              "x": 93.25747964998573,
+              "y": 289.74472905868913,
+              "confidence": 0.97,
+              "end_index": 700,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BRAY:** When you were drawing comics, did you ever go out and buy a comic book that wasn't put out by Western, or buy a newspaper for a strip you liked?",
+          "value": "BRAY: When you were drawing comics, did you ever go out and buy a comic book that wasn't put out by Western, or buy a newspaper for a strip you liked?",
+          "bbox": [
+            {
+              "h": 37.59069563643291,
+              "w": 274.0707425626429,
+              "x": 91.49140720869856,
+              "y": 438.35348526105196,
+              "confidence": 0.96,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Oh lord, yes. I've got a whole bible of Hal Fosters.",
+          "value": "BARKS: Oh lord, yes. I've got a whole bible of Hal Fosters.",
+          "bbox": [
+            {
+              "h": 14.898835203887225,
+              "w": 229.0860453029726,
+              "x": 91.00824666539636,
+              "y": 477.31609400247726,
+              "confidence": 0.93,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BRAY:** It kind of shows in your outdoor splash panels.",
+          "value": "BRAY: It kind of shows in your outdoor splash panels.",
+          "bbox": [
+            {
+              "h": 14.834162795350602,
+              "w": 205.89410129454077,
+              "x": 90.5878745772199,
+              "y": 495.93100438262206,
+              "confidence": 0.92,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Hal Foster was a tremendous influence.",
+          "value": "BARKS: Hal Foster was a tremendous influence.",
+          "bbox": [
+            {
+              "h": 13.529794064405532,
+              "w": 184.59438893983426,
+              "x": 90.71199886266199,
+              "y": 508.86828714272116,
+              "confidence": 0.91,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Were you conscious of influences from outside the comics—films you'd seen that made an impression on you, boys' adventure books, things like that?",
+          "value": "BARRIER: Were you conscious of influences from outside the comics—films you'd seen that made an impression on you, boys' adventure books, things like that?",
+          "bbox": [
+            {
+              "h": 36.93461107088423,
+              "w": 281.597874907703,
+              "x": 90.10148945729327,
+              "y": 527.5483308641388,
+              "confidence": 0.97,
+              "end_index": 158,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Oh, sure. All those things, they were all stored up there in my head, like getting out old reels of microfilm and running them through. In fact, I think that's all memory is; a person's own character is just composed of rolls of microfilm that are run through again and again. And I think that's how ideas come about. You run through two or three reels of that old microfilm that's up in the head, and the combination comes out like a new idea.",
+          "value": "BARKS: Oh, sure. All those things, they were all stored up there in my head, like getting out old reels of microfilm and running them through. In fact, I think that's all memory is; a person's own character is just composed of rolls of microfilm that are run through again and again. And I think that's how ideas come about. You run through two or three reels of that old microfilm that's up in the head, and the combination comes out like a new idea.",
+          "bbox": [
+            {
+              "h": 88.9223856034442,
+              "w": 283.76028851467225,
+              "x": 441.50322091749246,
+              "y": 65.59781521353375,
+              "confidence": 0.97,
+              "end_index": 454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

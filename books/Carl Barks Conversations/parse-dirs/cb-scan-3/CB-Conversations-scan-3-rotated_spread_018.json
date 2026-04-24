@@ -1,0 +1,439 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "114 CARL BARKS: CONVeRSAtIONS\n114",
+              "value": "114 CARL BARKS: CONVeRSAtIONS\n114",
+              "bbox": [
+                {
+                  "h": 9.258915427305645,
+                  "w": 125.21407963748095,
+                  "x": 119.68754350466845,
+                  "y": 43.45967682271819,
+                  "confidence": 0.88,
+                  "end_index": 32,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "114 CARL BARKS: CONVeRSAtIONS\n114",
+          "bbox": [
+            {
+              "h": 9.26,
+              "w": 125.21,
+              "x": 119.69,
+              "y": 43.46,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Disney not my possession. As soon as one does something for Disney, it belongs to them, and that could indeed be the reason why young \\[artists and writers] today don't invent any more new characters. Why should they, when the characters belong to Disney afterward?",
+          "value": "Disney not my possession. As soon as one does something for Disney, it belongs to them, and that could indeed be the reason why young [artists and writers] today don't invent any more new characters. Why should they, when the characters belong to Disney afterward?",
+          "bbox": [
+            {
+              "h": 48.63417218543047,
+              "w": 280.7505,
+              "x": 118.29375000000002,
+              "y": 67.56206622516557,
+              "confidence": 0.97,
+              "end_index": 264,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** Your stories are reprinted more than those of other artists. Why do you think your stories are preferred?",
+          "value": "KS: Your stories are reprinted more than those of other artists. Why do you think your stories are preferred?",
+          "bbox": [
+            {
+              "h": 22.608317880794687,
+              "w": 271.8127500000001,
+              "x": 119.08237500000001,
+              "y": 127.76328476821195,
+              "confidence": 0.95,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**GB:** Well, they always wait until a new generation has come along, a generation that doesn't know Carl's stories yet. And his are the best!",
+          "value": "GB: Well, they always wait until a new generation has come along, a generation that doesn't know Carl's stories yet. And his are the best!",
+          "bbox": [
+            {
+              "h": 22.608317880794687,
+              "w": 264.715125,
+              "x": 118.8195,
+              "y": 153.78913907284772,
+              "confidence": 0.96,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** That is, the stories are more or less timeless?",
+          "value": "KS: That is, the stories are more or less timeless?",
+          "bbox": [
+            {
+              "h": 10.77838410596027,
+              "w": 187.42987499999998,
+              "x": 117.505125,
+              "y": 186.91295364238414,
+              "confidence": 0.91,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh yes, that's right. They can be read again and again and are still good years later. I always tried for that, just as I always tried to keep the stories as international as possible. That's why, as far as I could, I avoided particularly American things like baseball, because I hardly think that you, in Germany, would understand a baseball story.",
+          "value": "CB: Oh yes, that's right. They can be read again and again and are still good years later. I always tried for that, just as I always tried to keep the stories as international as possible. That's why, as far as I could, I avoided particularly American things like baseball, because I hardly think that you, in Germany, would understand a baseball story.",
+          "bbox": [
+            {
+              "h": 63.994341025152444,
+              "w": 282.4706331816883,
+              "x": 118.52536852134148,
+              "y": 201.10853393197414,
+              "confidence": 0.97,
+              "end_index": 356,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** Another question: Compared with Europe, American funny-animal comics—including Disney comics—sell much worse than they used to. While in other countries like Holland the *Donald Duck* circulation is increasing, it's tapering off rapidly here. Why is that?",
+          "value": "KS: Another question: Compared with Europe, American funny-animal comics—including Disney comics—sell much worse than they used to. While in other countries like Holland the Donald Duck circulation is increasing, it's tapering off rapidly here. Why is that?",
+          "bbox": [
+            {
+              "h": 50.370144390720284,
+              "w": 273.8792590629764,
+              "x": 117.76371726133766,
+              "y": 274.71770136956945,
+              "confidence": 0.96,
+              "end_index": 262,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**GB:** One of the decisive reasons for this decline of the American comic industry is the terrific popularity of television here. Children simply do not read as much as they used to.",
+          "value": "GB: One of the decisive reasons for this decline of the American comic industry is the terrific popularity of television here. Children simply do not read as much as they used to.",
+          "bbox": [
+            {
+              "h": 35.48980132450333,
+              "w": 282.85350000000005,
+              "x": 117.505125,
+              "y": 327.29483443708614,
+              "confidence": 0.96,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** When did television arise in the U.S.?",
+          "value": "KS: When did television arise in the U.S.?",
+          "bbox": [
+            {
+              "h": 8.412397350993388,
+              "w": 159.565125,
+              "x": 117.768,
+              "y": 374.8774569536424,
+              "confidence": 0.92,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**GB:** During the 1940s, but it didn't reach its full importance until the 1950s. That's when it began to offer programming around the clock, 24 hours a day, on many channels, and why should one keep reading when all one has to do is look? Reading is much more strenuous, even if it's \"only\" a comic book.",
+          "value": "GB: During the 1940s, but it didn't reach its full importance until the 1950s. That's when it began to offer programming around the clock, 24 hours a day, on many channels, and why should one keep reading when all one has to do is look? Reading is much more strenuous, even if it's \"only\" a comic book.",
+          "bbox": [
+            {
+              "h": 63.51482915396341,
+              "w": 279.21749244355,
+              "x": 117.48174525414444,
+              "y": 387.7561187595275,
+              "confidence": 0.96,
+              "end_index": 305,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** We've got broadcasts on Saturday mornings and then again for an hour or two in the evening, when the children can watch nonstop cartoons like *Bugs Bunny* and the *Road Runner*, and so on, and when one hour's up on channel X then they switch to channel Y. They can do that for hours, and naturally they don't feel very much like buying a comic book—after all, TV is free. I would say that children today just don't learn to read well enough that they get pleasure out of it. But we've also heard that comics sell better in countries like Norway, Holland, and Germany—particularly the Disney comics.",
+          "value": "CB: We've got broadcasts on Saturday mornings and then again for an hour or two in the evening, when the children can watch nonstop cartoons like Bugs Bunny and the Road Runner, and so on, and when one hour's up on channel X then they switch to channel Y. They can do that for hours, and naturally they don't feel very much like buying a comic book—after all, TV is free. I would say that children today just don't learn to read well enough that they get pleasure out of it. But we've also heard that comics sell better in countries like Norway, Holland, and Germany—particularly the Disney comics.",
+          "bbox": [
+            {
+              "h": 117.69034557450453,
+              "w": 284.1222926352896,
+              "x": 117.06402796303355,
+              "y": 453.6382275342989,
+              "confidence": 0.96,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nKLAUS STRZYZ / 1980 115\n115\n\\</page_header>",
+          "value": "<page_header>\nKLAUS STRZYZ / 1980 115\n115\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 100.68112499999995,
+              "x": 643.255125,
+              "y": 43.376423841059605,
+              "confidence": 0.92,
+              "end_index": 37,
+              "label": "header",
+              "start_index": 15
+            },
+            {
+              "h": 10.51549668874172,
+              "w": 101.99549999999999,
+              "x": 643.255125,
+              "y": 42.32487417218543,
+              "confidence": 0.92,
+              "end_index": 41,
+              "label": "header",
+              "start_index": 39
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** Are you familiar with European Disney comic artists?\n**CB:** Oh yes, and some are very good. Daan Jippes isn't the only one \\[cf. *TBC* 19 for a look at his work in Holland; he's recently moved to the U.S.]. There are also good artists in Denmark and Germany \\[Freddy Milton and Volker Reiche cf. *TBC* 20], and someone in Spain . . .",
+          "value": "KS: Are you familiar with European Disney comic artists?\nCB: Oh yes, and some are very good. Daan Jippes isn't the only one [cf. TBC 19 for a look at his work in Holland; he's recently moved to the U.S.]. There are also good artists in Denmark and Germany [Freddy Milton and Volker Reiche cf. TBC 20], and someone in Spain . . .",
+          "bbox": [
+            {
+              "h": 60.20121854304638,
+              "w": 283.11637500000006,
+              "x": 460.819875,
+              "y": 67.29917880794702,
+              "confidence": 0.79,
+              "end_index": 341,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.52,
+              "w": 218.45,
+              "x": 462.13,
+              "y": 67.3,
+              "confidence": 1.0,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 47.58,
+              "w": 283.12,
+              "x": 460.82,
+              "y": 79.92,
+              "confidence": 0.79,
+              "end_index": 341,
+              "label": "text",
+              "start_index": 61
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** Vicar.",
+          "value": "KS: Vicar.",
+          "bbox": [
+            {
+              "h": 8.412397350993388,
+              "w": 37.853999999999985,
+              "x": 462.66,
+              "y": 139.85610596026493,
+              "confidence": 0.88,
+              "end_index": 13,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yes, that may be. And then I like some of the Italian artists very well \\[cf. the works of Marco Rota from *AT* 277]. I think that you in Europe are much more conscious of quality, that the stories are better chosen. You care more about the reader.",
+          "value": "CB: Yes, that may be. And then I like some of the Italian artists very well [cf. the works of Marco Rota from AT 277]. I think that you in Europe are much more conscious of quality, that the stories are better chosen. You care more about the reader.",
+          "bbox": [
+            {
+              "h": 49.43542598608994,
+              "w": 283.79294752762956,
+              "x": 462.24139360232476,
+              "y": 151.01955851038494,
+              "confidence": 0.95,
+              "end_index": 255,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** In Holland, and more recently also in Germany, more of your old and very early duck stories are being reprinted.",
+          "value": "KS: In Holland, and more recently also in Germany, more of your old and very early duck stories are being reprinted.",
+          "bbox": [
+            {
+              "h": 24.531903915777445,
+              "w": 283.36046605849845,
+              "x": 462.6245860089559,
+              "y": 208.95516918349853,
+              "confidence": 0.94,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I'm glad of that. But to come back to television again: In Europe the children don't have much time to watch, since the programs don't run all day. In this country, the set is never off, and what is offered is 99% junk. One can't stress the influence of American television on its population enough—it breaks people down and poisons them.",
+          "value": "CB: I'm glad of that. But to come back to television again: In Europe the children don't have much time to watch, since the programs don't run all day. In this country, the set is never off, and what is offered is 99% junk. One can't stress the influence of American television on its population enough—it breaks people down and poisons them.",
+          "bbox": [
+            {
+              "h": 63.58207214891387,
+              "w": 282.83141008479424,
+              "x": 462.81402832031256,
+              "y": 234.9660821527249,
+              "confidence": 0.96,
+              "end_index": 345,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** To change the subject—what do you think of the interest being revived in old Disney comics today, of all the people who keep coming to visit you? What do you think when you hear that old books that you drew decades ago now demand and get monstrous prices?",
+          "value": "KS: To change the subject—what do you think of the interest being revived in old Disney comics today, of all the people who keep coming to visit you? What do you think when you hear that old books that you drew decades ago now demand and get monstrous prices?",
+          "bbox": [
+            {
+              "h": 50.329139105373436,
+              "w": 284.04956121379576,
+              "x": 462.9859890434452,
+              "y": 306.41787164634155,
+              "confidence": 0.96,
+              "end_index": 262,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** This amazes me! Quite seriously, I never dreamed that this would happen, that people today would still remember these old stories and still like them; that completely surprised me, and I really don't know what to make of it! By the way, that goes not just for my *Donald Duck* stories but also for other old comics like *Superman* and so on. But apparently these stories must have made such a strong and lasting impression on children then that today they wish to recapture the feeling—they want to experience a piece of their childhood again, and that's why they collect these old magazines.",
+          "value": "CB: This amazes me! Quite seriously, I never dreamed that this would happen, that people today would still remember these old stories and still like them; that completely surprised me, and I really don't know what to make of it! By the way, that goes not just for my Donald Duck stories but also for other old comics like Superman and so on. But apparently these stories must have made such a strong and lasting impression on children then that today they wish to recapture the feeling—they want to experience a piece of their childhood again, and that's why they collect these old magazines.",
+          "bbox": [
+            {
+              "h": 115.58735769340703,
+              "w": 283.93515448742386,
+              "x": 463.40815186737814,
+              "y": 358.52833849561745,
+              "confidence": 0.96,
+              "end_index": 599,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** But isn't there a difference between children who read *Donald Duck* and those who read *Superman*?",
+          "value": "KS: But isn't there a difference between children who read Donald Duck and those who read Superman?",
+          "bbox": [
+            {
+              "h": 23.922754966887453,
+              "w": 280.48762500000004,
+              "x": 463.44862500000005,
+              "y": 481.0839735099338,
+              "confidence": 0.95,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Among adults who read the magazines today, very definitely. Whoever collects and reads *Superman* today wants to be reminded of the way he thrilled for the unconquerable hero, how he identified with the one who could do practically anything, who was invincible. But the ducks were quite different, more emotional somehow, and above all they were truer",
+          "value": "CB: Among adults who read the magazines today, very definitely. Whoever collects and reads Superman today wants to be reminded of the way he thrilled for the unconquerable hero, how he identified with the one who could do practically anything, who was invincible. But the ducks were quite different, more emotional somehow, and above all they were truer",
+          "bbox": [
+            {
+              "h": 63.54237874904731,
+              "w": 284.5839768721418,
+              "x": 464.18600740758393,
+              "y": 507.7162389529346,
+              "confidence": 0.96,
+              "end_index": 358,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "114, 115"
+    }
+  ]
+}

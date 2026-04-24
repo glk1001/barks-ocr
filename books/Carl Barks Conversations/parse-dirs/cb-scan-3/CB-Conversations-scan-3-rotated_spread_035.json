@@ -1,0 +1,501 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "148 CARL BARKS: CONVERSATIONS",
+              "value": "148 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.662327079959034,
+                  "w": 125.15514815167684,
+                  "x": 126.78677140100993,
+                  "y": 38.23688787633385,
+                  "confidence": 0.8,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "148 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.66,
+              "w": 125.16,
+              "x": 126.79,
+              "y": 38.24,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "be the director of the story and the stenographer. And there would be a couple of other story crews from other story units.",
+          "value": "be the director of the story and the stenographer. And there would be a couple of other story crews from other story units.",
+          "bbox": [
+            {
+              "h": 24.71141721854304,
+              "w": 277.07025,
+              "x": 125.91712500000001,
+              "y": 61.77854304635762,
+              "confidence": 0.97,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** There were several story units?",
+          "value": "H: There were several story units?",
+          "bbox": [
+            {
+              "h": 11.537093204554129,
+              "w": 132.22449705840322,
+              "x": 125.04677733184072,
+              "y": 95.97131027415207,
+              "confidence": 0.85,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Yeah, maybe there'd be as many as eight—eight or ten people in the room. Walt didn't want to sit there and be the sole judge of what was on the storyboards. He wanted to get a kind of general reaction. He liked to hear somebody laugh back behind him or somebody pop up with some spontaneous idea that would help the story.",
+          "value": "B: Yeah, maybe there'd be as many as eight—eight or ten people in the room. Walt didn't want to sit there and be the sole judge of what was on the storyboards. He wanted to get a kind of general reaction. He liked to hear somebody laugh back behind him or somebody pop up with some spontaneous idea that would help the story.",
+          "bbox": [
+            {
+              "h": 64.677859952601,
+              "w": 281.64879817311356,
+              "x": 124.51837253477517,
+              "y": 108.52483107493333,
+              "confidence": 0.96,
+              "end_index": 328,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Were all these story units working on the same film?",
+          "value": "H: Were all these story units working on the same film?",
+          "bbox": [
+            {
+              "h": 12.281978234565548,
+              "w": 214.0601694097752,
+              "x": 123.40531129716084,
+              "y": 181.1569008884337,
+              "confidence": 0.86,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Oh, no. They were just working on their own stories. Some were on the Pluto unit and others on the Mickey unit. And my partner and I would have to go to their story conferences whenever they had a story that would be shown on the wall. Yeah, the Pluto unit, and there was another duck unit, and a Goofy unit. But the Goofy and the Mickey unit didn't come in on our duck stories very often. Just once in a while.",
+          "value": "B: Oh, no. They were just working on their own stories. Some were on the Pluto unit and others on the Mickey unit. And my partner and I would have to go to their story conferences whenever they had a story that would be shown on the wall. Yeah, the Pluto unit, and there was another duck unit, and a Goofy unit. But the Goofy and the Mickey unit didn't come in on our duck stories very often. Just once in a while.",
+          "bbox": [
+            {
+              "h": 77.37376464843754,
+              "w": 283.0677120688834,
+              "x": 122.84254440977517,
+              "y": 194.26930263195507,
+              "confidence": 0.96,
+              "end_index": 417,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Did Walt Disney recognize the quality of your gags and acknowledge it somehow?",
+          "value": "H: Did Walt Disney recognize the quality of your gags and acknowledge it somehow?",
+          "bbox": [
+            {
+              "h": 22.712336482945876,
+              "w": 278.4542382872047,
+              "x": 121.68441423518485,
+              "y": 279.8081006835938,
+              "confidence": 0.94,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Oh, evidently he did. He knew which of the story men was contributing the most to the stories. He could tell.",
+          "value": "B: Oh, evidently he did. He knew which of the story men was contributing the most to the stories. He could tell.",
+          "bbox": [
+            {
+              "h": 23.713110094321667,
+              "w": 283.014177835604,
+              "x": 120.96436314429307,
+              "y": 305.87287187023634,
+              "confidence": 0.95,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** How many people worked on the final drawings?",
+          "value": "H: How many people worked on the final drawings?",
+          "bbox": [
+            {
+              "h": 12.972668211699727,
+              "w": 202.5625689072028,
+              "x": 120.8006798780488,
+              "y": 339.34552352801074,
+              "confidence": 0.86,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** That was all after the story had been accepted and photographed from those big storyboards. Then it went to the director, and the director would break it down into scenes and hand the format to the layout men. The layout men would make detailed drawings of what the place was like where the ducks were going to be doing this thing. It's like when we made sea-scouts, for instance. Donald and the three nephews planned to sail a boat, but I can't remember much about the thing anymore. It's so long ago. But the layout men would make drawings of this boat they were on. If it was a sailboat, why, they would have the rigging all drawn and make still-drawings of the ducks to show their size in relation to whatever it was the background was going to be. Then they would hand the layout over to the background department men, who made beautiful colored paintings of that.",
+          "value": "B: That was all after the story had been accepted and photographed from those big storyboards. Then it went to the director, and the director would break it down into scenes and hand the format to the layout men. The layout men would make detailed drawings of what the place was like where the ducks were going to be doing this thing. It's like when we made sea-scouts, for instance. Donald and the three nephews planned to sail a boat, but I can't remember much about the thing anymore. It's so long ago. But the layout men would make drawings of this boat they were on. If it was a sailboat, why, they would have the rigging all drawn and make still-drawings of the ducks to show their size in relation to whatever it was the background was going to be. Then they would hand the layout over to the background department men, who made beautiful colored paintings of that.",
+          "bbox": [
+            {
+              "h": 167.00511355278203,
+              "w": 284.7911387016483,
+              "x": 118.97757312904918,
+              "y": 352.2257924542684,
+              "confidence": 0.97,
+              "end_index": 875,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** And how many people worked on the final drawings?",
+          "value": "H: And how many people worked on the final drawings?",
+          "bbox": [
+            {
+              "h": 13.1469007860137,
+              "w": 219.13091946336704,
+              "x": 117.39594020936548,
+              "y": 528.9588914062501,
+              "confidence": 0.81,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Well, I guess on a story, counting the two original story men and maybe the guys that furnished one or two of the original gags, and the layout",
+          "value": "B: Well, I guess on a story, counting the two original story men and maybe the guys that furnished one or two of the original gags, and the layout",
+          "bbox": [
+            {
+              "h": 27.463826138529058,
+              "w": 282.4050521805927,
+              "x": 117.17338807045543,
+              "y": 541.4944181021342,
+              "confidence": 0.94,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nGOTTFRIED HELNWEIN / 1992 149\n\\</page_header>",
+          "value": "<page_header>\nGOTTFRIED HELNWEIN / 1992 149\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 127.76,
+              "x": 616.97,
+              "y": 40.75,
+              "confidence": 1.0,
+              "end_index": 43,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "men, and the animators—I would say about fifteen all together. All of whose work went into one of those little movies.",
+          "value": "men, and the animators—I would say about fifteen all together. All of whose work went into one of those little movies.",
+          "bbox": [
+            {
+              "h": 24.8024714319741,
+              "w": 269.28638500381095,
+              "x": 462.37238028772873,
+              "y": 65.63901107683881,
+              "confidence": 0.93,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** And others would draw on the cels?",
+          "value": "H: And others would draw on the cels?",
+          "bbox": [
+            {
+              "h": 9.989721854304634,
+              "w": 151.153125,
+              "x": 462.92287500000003,
+              "y": 97.53123178807948,
+              "confidence": 0.8,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oh, yeah. The ducks were being drawn and painted on cels. Transparent cels that lean over on top of these background paintings.",
+          "value": "B: Oh, yeah. The ducks were being drawn and painted on cels. Transparent cels that lean over on top of these background paintings.",
+          "bbox": [
+            {
+              "h": 24.496092987804886,
+              "w": 281.77404949504574,
+              "x": 462.7379909251144,
+              "y": 109.63980077172258,
+              "confidence": 0.94,
+              "end_index": 133,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Lots of work.",
+          "value": "H: Lots of work.",
+          "bbox": [
+            {
+              "h": 9.561792555497338,
+              "w": 62.48595853182166,
+              "x": 463.52937090320125,
+              "y": 141.97893905416353,
+              "confidence": 0.89,
+              "end_index": 19,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oh yeah.",
+          "value": "B: Oh yeah.",
+          "bbox": [
+            {
+              "h": 9.989721854304634,
+              "w": 48.10612500000002,
+              "x": 461.87137500000006,
+              "y": 154.05202649006625,
+              "confidence": 0.9,
+              "end_index": 14,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** You just showed me an old sketch, which you made during a union meeting. There are different caricatures of people who are pointing at a figure of Hitler; what does that mean? Was there a union speaker holding a speech at the time?",
+          "value": "H: You just showed me an old sketch, which you made during a union meeting. There are different caricatures of people who are pointing at a figure of Hitler; what does that mean? Was there a union speaker holding a speech at the time?",
+          "bbox": [
+            {
+              "h": 50.75743425828888,
+              "w": 284.3504549113948,
+              "x": 463.1865013576601,
+              "y": 171.3337328791921,
+              "confidence": 0.96,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oh, well, that was after work, of course. That was in some building in Hollywood. After the Disney strike, we had a union formed, and all the people were supposed to go there and discuss union business about salaries and working conditions and all, and instead it was a bunch of these warmongers that were trying to get the United States to declare war on Germany and march our boys off to fight. And most of us guys in there didn't want the United States to get into the war at all. We thought, \"Why in the hell?\" We were over there and fought with Germany way back in 1916 and 1917, and it was supposed to have settled and brought peace to the world for all time. And here we are back again sending out guys over there to die, to have another fight with Germany. It just seemed like a repeat of a very dark tragedy to most of us in the studio. They resented the fact that we were being told by Melvin Douglas, a notorious communist, that we had to go to war in order to save Russia from the Nazis, who were standing at the gates of Stalingrad. We didn't give a damn which side won as long as we could stay out of it.",
+          "value": "B: Oh, well, that was after work, of course. That was in some building in Hollywood. After the Disney strike, we had a union formed, and all the people were supposed to go there and discuss union business about salaries and working conditions and all, and instead it was a bunch of these warmongers that were trying to get the United States to declare war on Germany and march our boys off to fight. And most of us guys in there didn't want the United States to get into the war at all. We thought, \"Why in the hell?\" We were over there and fought with Germany way back in 1916 and 1917, and it was supposed to have settled and brought peace to the world for all time. And here we are back again sending out guys over there to die, to have another fight with Germany. It just seemed like a repeat of a very dark tragedy to most of us in the studio. They resented the fact that we were being told by Melvin Douglas, a notorious communist, that we had to go to war in order to save Russia from the Nazis, who were standing at the gates of Stalingrad. We didn't give a damn which side won as long as we could stay out of it.",
+          "bbox": [
+            {
+              "h": 205.2202489495999,
+              "w": 286.40361485327753,
+              "x": 463.83542392339945,
+              "y": 222.53852008622337,
+              "confidence": 0.96,
+              "end_index": 1124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Was Disney present at these meetings?",
+          "value": "H: Was Disney present at these meetings?",
+          "bbox": [
+            {
+              "h": 10.25260927152317,
+              "w": 162.98250000000002,
+              "x": 466.60312500000003,
+              "y": 434.02712582781464,
+              "confidence": 0.85,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oh, no. None of the Disney brass was there at all. This was a labor union.",
+          "value": "B: Oh, no. None of the Disney brass was there at all. This was a labor union.",
+          "bbox": [
+            {
+              "h": 24.054803077362802,
+              "w": 269.5913861232851,
+              "x": 466.3045855564025,
+              "y": 445.87073088795745,
+              "confidence": 0.94,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Were you there when the great Disney strike took place?\n**B:** I was one of those in the story department. I wasn't affected by the strike. The story department wasn't striking. It was the animators and in-betweeners who were striking. The guys in the story department went through the picket lines every morning.",
+          "value": "H: Were you there when the great Disney strike took place?\nB: I was one of those in the story department. I wasn't affected by the strike. The story department wasn't striking. It was the animators and in-betweeners who were striking. The guys in the story department went through the picket lines every morning.",
+          "bbox": [
+            {
+              "h": 62.567205298013334,
+              "w": 281.27625,
+              "x": 466.0773750000001,
+              "y": 477.14066225165567,
+              "confidence": 0.84,
+              "end_index": 319,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.3,
+              "w": 231.59,
+              "x": 467.13,
+              "y": 477.14,
+              "confidence": 1.0,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 49.95,
+              "w": 281.28,
+              "x": 466.08,
+              "y": 489.76,
+              "confidence": 0.84,
+              "end_index": 319,
+              "label": "text",
+              "start_index": 63
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** What was your view of the strike?",
+          "value": "H: What was your view of the strike?",
+          "bbox": [
+            {
+              "h": 11.651528620426848,
+              "w": 144.3256381240473,
+              "x": 468.023241068026,
+              "y": 546.7599363995809,
+              "confidence": 0.9,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** I was against the strike myself. I felt that they were destroying some-",
+          "value": "B: I was against the strike myself. I felt that they were destroying some-",
+          "bbox": [
+            {
+              "h": 12.025415982278936,
+              "w": 276.55937688166927,
+              "x": 468.1072929449315,
+              "y": 559.3235445360139,
+              "confidence": 0.94,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "148, 149"
+    }
+  ]
+}

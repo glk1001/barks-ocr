@@ -1,0 +1,391 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "92 CARL BARKS: CONVERSATIONS",
+              "value": "92 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.297392450100041,
+                  "w": 120.83193635670733,
+                  "x": 110.97347268006861,
+                  "y": 41.39616960330127,
+                  "confidence": 0.81,
+                  "end_index": 27,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "92 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.3,
+              "w": 120.83,
+              "x": 110.97,
+              "y": 41.4,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "cause they had humor in them; and when you look at my later stories in the comic books, you'll see that I was trying to follow in the format that Floyd Gottfredson established, having Mickey and the other guys involved in funny situations at the same time they were having serious problems. And they solved their serious problems by funny means: some outrageous sort of thing would happen. And I guess that that's where I automatically learned the basis for my own story writing.",
+          "value": "cause they had humor in them; and when you look at my later stories in the comic books, you'll see that I was trying to follow in the format that Floyd Gottfredson established, having Mickey and the other guys involved in funny situations at the same time they were having serious problems. And they solved their serious problems by funny means: some outrageous sort of thing would happen. And I guess that that's where I automatically learned the basis for my own story writing.",
+          "bbox": [
+            {
+              "h": 89.50651590963226,
+              "w": 284.38059687619096,
+              "x": 109.54427770698364,
+              "y": 65.71405447194171,
+              "confidence": 0.98,
+              "end_index": 478,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** When you were an in-betweener at the Disney Studio, you submitted a gag that moved you over.",
+          "value": "Q: When you were an in-betweener at the Disney Studio, you submitted a gag that moved you over.",
+          "bbox": [
+            {
+              "h": 24.54738061880717,
+              "w": 282.030663181212,
+              "x": 108.68203217892531,
+              "y": 163.50569449075843,
+              "confidence": 0.91,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** That was a gag that just came to me in the night, you might say. We were trying to think of things that Donald could invent or that he could get involved in, so I happened to come up with the thought of a barber chair that would automatically clip somebody's hair. Donald, being a precocious character, sort of messed up the machinery in it by trying to get his coin back. I had no idea how the gag would be used. I just created a situation in which Donald got in this barber chair and messed up the machinery. It flipped him upside down and gave him a haircut on the wrong end. I also included the little gag about the shoeshine apparatus down where the feet would be, and that was where his beak was in this situation, so he got a shoe shine on his beak. And when the gag was turned in, I had drawn it all in sort of comic-book form—comic strip way—of drawing things, presenting the idea. Walt saw it and liked it. Paid me fifty dollars for the gag, suggested that I should be put in the story department. So that was the opening that got me in there: an upside-down barber chair.",
+          "value": "BARKS: That was a gag that just came to me in the night, you might say. We were trying to think of things that Donald could invent or that he could get involved in, so I happened to come up with the thought of a barber chair that would automatically clip somebody's hair. Donald, being a precocious character, sort of messed up the machinery in it by trying to get his coin back. I had no idea how the gag would be used. I just created a situation in which Donald got in this barber chair and messed up the machinery. It flipped him upside down and gave him a haircut on the wrong end. I also included the little gag about the shoeshine apparatus down where the feet would be, and that was where his beak was in this situation, so he got a shoe shine on his beak. And when the gag was turned in, I had drawn it all in sort of comic-book form—comic strip way—of drawing things, presenting the idea. Walt saw it and liked it. Paid me fifty dollars for the gag, suggested that I should be put in the story department. So that was the opening that got me in there: an upside-down barber chair.",
+          "bbox": [
+            {
+              "h": 205.43658595655492,
+              "w": 285.60151550590706,
+              "x": 106.37068069979041,
+              "y": 189.82057487137962,
+              "confidence": 0.95,
+              "end_index": 1092,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** That cartoon, \"Modern Inventions,\" really developed out of that gag, right?",
+          "value": "Q: That cartoon, \"Modern Inventions,\" really developed out of that gag, right?",
+          "bbox": [
+            {
+              "h": 23.66028011147108,
+              "w": 282.2504540807213,
+              "x": 104.14328717785348,
+              "y": 405.8337943073553,
+              "confidence": 0.91,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Well, that was the gag that caused Walt and the others to think that they could get enough material to make a picture on that subject. It was the climactic gag of the thing.",
+          "value": "BARKS: Well, that was the gag that caused Walt and the others to think that they could get enough material to make a picture on that subject. It was the climactic gag of the thing.",
+          "bbox": [
+            {
+              "h": 38.14736055640244,
+              "w": 279.64297376381484,
+              "x": 103.86733229325459,
+              "y": 432.3092033774772,
+              "confidence": 0.96,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** So it sort of worked backward: you started with the end and then built up the whole cartoon toward it?",
+          "value": "Q: So it sort of worked backward: you started with the end and then built up the whole cartoon toward it?",
+          "bbox": [
+            {
+              "h": 24.372953034489313,
+              "w": 283.6011885301544,
+              "x": 103.04698747737234,
+              "y": 478.7553741996952,
+              "confidence": 0.91,
+              "end_index": 108,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Well, on those stories that we did for animation, we always tried to get a good, interesting climactic situation, and then find the reason for that situation. And that would give us a beginning of a story, and then we'd build up the gags all the way up to that big situation. It was a good way of making stories; it worked good in writing for the comic books, too.",
+          "value": "BARKS: Well, on those stories that we did for animation, we always tried to get a good, interesting climactic situation, and then find the reason for that situation. And that would give us a beginning of a story, and then we'd build up the gags all the way up to that big situation. It was a good way of making stories; it worked good in writing for the comic books, too.",
+          "bbox": [
+            {
+              "h": 66.00287315167681,
+              "w": 283.0587020382765,
+              "x": 102.58849024926162,
+              "y": 505.31726134241626,
+              "confidence": 0.97,
+              "end_index": 374,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nAULT, ANDRAE, AND GONG / 1975 93\n\\</page_header>",
+          "value": "<page_header>\nAULT, ANDRAE, AND GONG / 1975 93\n</page_header>",
+          "bbox": [
+            {
+              "h": 12.36,
+              "w": 140.9,
+              "x": 606.45,
+              "y": 40.75,
+              "confidence": 1.0,
+              "end_index": 46,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "We'd find a good, big climactic gag, a very interesting situation, and then build everything up to that. You automatically write the story that way—automatically.",
+          "value": "We'd find a good, big climactic gag, a very interesting situation, and then build everything up to that. You automatically write the story that way—automatically.",
+          "bbox": [
+            {
+              "h": 37.330013245033115,
+              "w": 283.37924999999996,
+              "x": 464.500125,
+              "y": 66.24762913907286,
+              "confidence": 0.98,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** How did you get your start in comics?",
+          "value": "Q: How did you get your start in comics?",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 160.35,
+              "x": 465.29,
+              "y": 113.04,
+              "confidence": 1.0,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I used to buy the comic books on the newsstands, and I thought, \"Now that's a field I would like to get into,\" 'cause I could write my own stories and draw them the way I saw fit—providing an editor was the kind of a guy who would let me do it.",
+          "value": "BARKS: I used to buy the comic books on the newsstands, and I thought, \"Now that's a field I would like to get into,\" 'cause I could write my own stories and draw them the way I saw fit—providing an editor was the kind of a guy who would let me do it.",
+          "bbox": [
+            {
+              "h": 52.31,
+              "w": 284.96,
+              "x": 463.45,
+              "y": 124.08,
+              "confidence": 1.0,
+              "end_index": 254,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Did any particular comic book titles influence you?",
+          "value": "Q: Did any particular comic book titles influence you?",
+          "bbox": [
+            {
+              "h": 11.759014588891016,
+              "w": 208.15707786299544,
+              "x": 466.26887102229426,
+              "y": 185.43270796017535,
+              "confidence": 0.82,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I can't think of any comic books that influenced me. They stimulated my interest, but they also made me think—well I can do something different. I saw the Superman stuff and all, and there were some of the comic books in those days that weren't Superman. They were about aviation heroes and so on, that were more everyday, and I really related to them more than I did the superhero.",
+          "value": "BARKS: I can't think of any comic books that influenced me. They stimulated my interest, but they also made me think—well I can do something different. I saw the Superman stuff and all, and there were some of the comic books in those days that weren't Superman. They were about aviation heroes and so on, that were more everyday, and I really related to them more than I did the superhero.",
+          "bbox": [
+            {
+              "h": 77.1436351157584,
+              "w": 284.0724525771722,
+              "x": 466.13748361280494,
+              "y": 197.55842999714181,
+              "confidence": 0.94,
+              "end_index": 392,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** What did you want to do that was different?",
+          "value": "Q: What did you want to do that was different?",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 186.38,
+              "x": 467.13,
+              "y": 283.66,
+              "confidence": 1.0,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Well, I wanted to do like I did with the ducks: just create a real world and have them meet their problems with the everyday weapons that we have in our own lives.",
+          "value": "BARKS: Well, I wanted to do like I did with the ducks: just create a real world and have them meet their problems with the everyday weapons that we have in our own lives.",
+          "bbox": [
+            {
+              "h": 38.12,
+              "w": 276.81,
+              "x": 466.08,
+              "y": 296.8,
+              "confidence": 1.0,
+              "end_index": 173,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** There was never any continuity between your stories, but you introduced many of your most famous characters as if they had always existed in the world of the ducks.",
+          "value": "Q: There was never any continuity between your stories, but you introduced many of your most famous characters as if they had always existed in the world of the ducks.",
+          "bbox": [
+            {
+              "h": 36.48835726943603,
+              "w": 284.25868909584614,
+              "x": 467.3860897722942,
+              "y": 343.82352051734,
+              "confidence": 0.95,
+              "end_index": 170,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I guess that it was that I carried around in my head the idea that there was a whole town and a whole family of characters all around these ducks at all times that I wasn't showing. There were cousins and nephews and nieces and villains and bankers and all kinds of people that they had dealings with in their everyday life that I didn't have to show in any of the stories that I had done. And so whenever I needed one, I would just create one that apparently had been around all the time but just hadn't been used. The way I presented them was like it was in my head: they had been there all the time.",
+          "value": "BARKS: I guess that it was that I carried around in my head the idea that there was a whole town and a whole family of characters all around these ducks at all times that I wasn't showing. There were cousins and nephews and nieces and villains and bankers and all kinds of people that they had dealings with in their everyday life that I didn't have to show in any of the stories that I had done. And so whenever I needed one, I would just create one that apparently had been around all the time but just hadn't been used. The way I presented them was like it was in my head: they had been there all the time.",
+          "bbox": [
+            {
+              "h": 114.91991999999999,
+              "w": 286.00800000000004,
+              "x": 467.70720000000006,
+              "y": 382.27248000000003,
+              "confidence": 0.93,
+              "end_index": 612,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Do you remember specific inspirations for characters like Scrooge and Gladstone?",
+          "value": "Q: Do you remember specific inspirations for characters like Scrooge and Gladstone?",
+          "bbox": [
+            {
+              "h": 23.755835013338462,
+              "w": 281.61110506383386,
+              "x": 469.09828360804124,
+              "y": 507.05019114900927,
+              "confidence": 0.92,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Well, I think the reason for bringing in Gladstone was that I had thought of this situation of Donald having to take a midwinter swim in a lake of ice-cold water. It was something, I guess, from reading of the Polar",
+          "value": "BARKS: Well, I think the reason for bringing in Gladstone was that I had thought of this situation of Donald having to take a midwinter swim in a lake of ice-cold water. It was something, I guess, from reading of the Polar",
+          "bbox": [
+            {
+              "h": 37.700078520388765,
+              "w": 285.15325552591463,
+              "x": 469.1850403725229,
+              "y": 533.2038337128431,
+              "confidence": 0.96,
+              "end_index": 225,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "92, 93"
+    }
+  ]
+}

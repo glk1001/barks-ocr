@@ -1,0 +1,193 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "84 CARL BARKS: CONVERSATIONS",
+              "value": "84 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.679981913943413,
+                  "w": 120.47884834698934,
+                  "x": 114.83066740901297,
+                  "y": 40.422910130645015,
+                  "confidence": 0.86,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "84 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.68,
+              "w": 120.48,
+              "x": 114.83,
+              "y": 40.42,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "classic. So I got to thinking of an old rich uncle, and gradually the story just kept building. Donald would have to get into a situation where I could use this rich uncle. And the kids naturally wanted Christmas trees, and they wanted snow, and the different things that go along with Christmas. So all the elements were there, and I just started hooking them together automatically. Now, I can't say where these things come from. I have a situation that has to be solved, and somehow all the parts just commence coming into my head from someplace and I just fit them together, and pretty soon I had fitted together a story of the ducks getting permission from their rich uncle to go up on Bear Mountain and use his cabin overnight. Well, that, of course, meant that the rich uncle had to have a reason for doing that, so I brought in this thought that he wanted to know whether Donald was a real brave duck, and that led to the bear, and the situation of testing Donald's courage. That's the way those stories build. I have a bunch of things that have to go into a story, and so I just keep feeling around for the best gags that fit in. It's like sewing together pieces of a shirt.",
+          "value": "classic. So I got to thinking of an old rich uncle, and gradually the story just kept building. Donald would have to get into a situation where I could use this rich uncle. And the kids naturally wanted Christmas trees, and they wanted snow, and the different things that go along with Christmas. So all the elements were there, and I just started hooking them together automatically. Now, I can't say where these things come from. I have a situation that has to be solved, and somehow all the parts just commence coming into my head from someplace and I just fit them together, and pretty soon I had fitted together a story of the ducks getting permission from their rich uncle to go up on Bear Mountain and use his cabin overnight. Well, that, of course, meant that the rich uncle had to have a reason for doing that, so I brought in this thought that he wanted to know whether Donald was a real brave duck, and that led to the bear, and the situation of testing Donald's courage. That's the way those stories build. I have a bunch of things that have to go into a story, and so I just keep feeling around for the best gags that fit in. It's like sewing together pieces of a shirt.",
+          "bbox": [
+            {
+              "h": 221.2776563143103,
+              "w": 284.9263830804593,
+              "x": 112.38095341677783,
+              "y": 64.3922323456555,
+              "confidence": 0.99,
+              "end_index": 1182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The construction of a story always started with the inspiration of a funny situation that the ducks could get into. Then I would start thinking of gags that would apply to that situation and, oh, I would pick up a piece of paper and just start writing on it, write down all kinds of little gags that I would think of. Even at night I would wake up and grab a piece of paper and note something down that I would happen to think of during the night that would apply to that particular story. After I had quite a few gags put together and I felt that I had enough to really make a story interesting, then I would put them all together in a sort of sequence so that I could write a synopsis, with a beginning, middle, and end. This would be, oh, two pages of just longhand, sort of an outline. Then, with that pretty well polished, I would start breaking it down into panels. That is, write in longhand what the ducks were doing in each one and write the amount of dialogue that each one would have to say, and go on from panel to panel until I had detailed the business of a whole page, and then I would start on the next page. And, in fact, that's when the gags really begin to pop into the story—when I'm breaking it down into panels. I would just begin thinking of all kinds of different new things. Because each panel would suggest something that might happen in the panel just a little later, or a page or two later. Pretty soon I would have a running gag developed. Sometimes I would start with a story that I felt would",
+          "value": "The construction of a story always started with the inspiration of a funny situation that the ducks could get into. Then I would start thinking of gags that would apply to that situation and, oh, I would pick up a piece of paper and just start writing on it, write down all kinds of little gags that I would think of. Even at night I would wake up and grab a piece of paper and note something down that I would happen to think of during the night that would apply to that particular story. After I had quite a few gags put together and I felt that I had enough to really make a story interesting, then I would put them all together in a sort of sequence so that I could write a synopsis, with a beginning, middle, and end. This would be, oh, two pages of just longhand, sort of an outline. Then, with that pretty well polished, I would start breaking it down into panels. That is, write in longhand what the ducks were doing in each one and write the amount of dialogue that each one would have to say, and go on from panel to panel until I had detailed the business of a whole page, and then I would start on the next page. And, in fact, that's when the gags really begin to pop into the story—when I'm breaking it down into panels. I would just begin thinking of all kinds of different new things. Because each panel would suggest something that might happen in the panel just a little later, or a page or two later. Pretty soon I would have a running gag developed. Sometimes I would start with a story that I felt would",
+          "bbox": [
+            {
+              "h": 279.9011204554117,
+              "w": 285.4176457638625,
+              "x": 109.12279110494475,
+              "y": 289.5720211080412,
+              "confidence": 0.99,
+              "end_index": 1522,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nEDWARD SUMMER / 1975 85\n\\</page_header>",
+          "value": "<page_header>\nEDWARD SUMMER / 1975 85\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.94,
+              "w": 109.36,
+              "x": 630.11,
+              "y": 40.75,
+              "confidence": 1.0,
+              "end_index": 37,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "come out 16 pages long, and I would find that it was actually going to be about 20.",
+          "value": "come out 16 pages long, and I would find that it was actually going to be about 20.",
+          "bbox": [
+            {
+              "h": 23.586623946622527,
+              "w": 284.3972394483613,
+              "x": 455.2522646484375,
+              "y": 64.63227636421018,
+              "confidence": 0.97,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Now, one of the main things in the construction of a story is the planting of gags, objects that are going to be used later in the story. For instance, in one story I had the nephews have an animal whistle that would call all sorts of animals that I was going to use for some big climax later in the story. I planted that whistle early in the story. The kids would be blowing the whistle, and here would come a bunch of little animals. It showed what the whistle was for, and the reader could anticipate that it was going to be used sometime later. I remember when I worked in the story department down at Disney's, they had an analysis one time of what it is that makes a story plausible. And one rule was that whenever you're going to have some event happen, don't just drag it in and have it happen. Plant it ahead. Plant it twice. If you're going to have a character pick up a gun and shoot somebody later in the movie—of course, nobody ever did that in Disney movies, that's just an example—plant that gun twice before he ever handles it, somewhere earlier in the story. Show it in a drawer, anything.",
+          "value": "Now, one of the main things in the construction of a story is the planting of gags, objects that are going to be used later in the story. For instance, in one story I had the nephews have an animal whistle that would call all sorts of animals that I was going to use for some big climax later in the story. I planted that whistle early in the story. The kids would be blowing the whistle, and here would come a bunch of little animals. It showed what the whistle was for, and the reader could anticipate that it was going to be used sometime later. I remember when I worked in the story department down at Disney's, they had an analysis one time of what it is that makes a story plausible. And one rule was that whenever you're going to have some event happen, don't just drag it in and have it happen. Plant it ahead. Plant it twice. If you're going to have a character pick up a gun and shoot somebody later in the movie—of course, nobody ever did that in Disney movies, that's just an example—plant that gun twice before he ever handles it, somewhere earlier in the story. Show it in a drawer, anything.",
+          "bbox": [
+            {
+              "h": 207.41147885742194,
+              "w": 284.60781995522115,
+              "x": 456.28017201791164,
+              "y": 90.85997397699126,
+              "confidence": 0.99,
+              "end_index": 1105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "After I had the story laid out page by page, I would go back to the beginning and plan the drawing of each panel, and rough out with light blue pencil where the characters should go. Each panel had to be composed so that the characters were centralized in as tight a little group as I could get them, and so that whatever they were doing was very clear to the reader. Then I would letter in the final dialogue, just in blue pencil, and once I had the whole page all constructed that way in rough, then I would go back and ink these characters. I would ink each one starting with the head usually, and going down to all the different details of the body. And then I would hand the page over to my wife, who would do the lettering and ink in all the background details. She'd ink in all those things. And she would put in the solid blacks—in the duck's jacket, and the eyeballs, and so on. And then she would hand it back to me for whatever finishing was required, like putting the little white dashes in the ducks' eyes, the highlights that showed what direction they were looking.",
+          "value": "After I had the story laid out page by page, I would go back to the beginning and plan the drawing of each panel, and rough out with light blue pencil where the characters should go. Each panel had to be composed so that the characters were centralized in as tight a little group as I could get them, and so that whatever they were doing was very clear to the reader. Then I would letter in the final dialogue, just in blue pencil, and once I had the whole page all constructed that way in rough, then I would go back and ink these characters. I would ink each one starting with the head usually, and going down to all the different details of the body. And then I would hand the page over to my wife, who would do the lettering and ink in all the background details. She'd ink in all those things. And she would put in the solid blacks—in the duck's jacket, and the eyeballs, and so on. And then she would hand it back to me for whatever finishing was required, like putting the little white dashes in the ducks' eyes, the highlights that showed what direction they were looking.",
+          "bbox": [
+            {
+              "h": 195.86925334413118,
+              "w": 284.67669440739326,
+              "x": 457.96481607278974,
+              "y": 299.97420927496194,
+              "confidence": 0.99,
+              "end_index": 1079,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: What were the stages in drawing the art?**",
+          "value": "Q: What were the stages in drawing the art?",
+          "bbox": [
+            {
+              "h": 10.252609271523283,
+              "w": 173.234625,
+              "x": 459.24262500000003,
+              "y": 505.5325033112583,
+              "confidence": 0.8,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I usually draw the head first, which establishes the size of the characters, and then I draw an action line. \\[He uses an example to illustrate.] In a pose like this, the head and the torso is stretched out. The action calls for them to be stretched out much longer than they naturally would be.",
+          "value": "CB: I usually draw the head first, which establishes the size of the characters, and then I draw an action line. [He uses an example to illustrate.] In a pose like this, the head and the torso is stretched out. The action calls for them to be stretched out much longer than they naturally would be.",
+          "bbox": [
+            {
+              "h": 51.18317655297251,
+              "w": 283.2997062690549,
+              "x": 459.30889474561747,
+              "y": 518.3174791491998,
+              "confidence": 0.85,
+              "end_index": 302,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "84, 85"
+    }
+  ]
+}

@@ -1,0 +1,465 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "BRUCE HAMILTON AND BILL BLACKBEARD / 1983 133",
+              "value": "BRUCE HAMILTON AND BILL BLACKBEARD / 1983 133",
+              "bbox": [
+                {
+                  "h": 14.2,
+                  "w": 188.48,
+                  "x": 558.08,
+                  "y": 38.12,
+                  "confidence": 1.0,
+                  "end_index": 44,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "BRUCE HAMILTON AND BILL BLACKBEARD / 1983 133",
+          "bbox": [
+            {
+              "h": 14.2,
+              "w": 188.48,
+              "x": 558.08,
+              "y": 38.12,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "caption": "Interview with Carl Barks and Floyd Gottfredson Bruce Hamilton and BilL BLACKBEARD / 1983",
+          "md": "![Interview with Carl Barks and Floyd Gottfredson Bruce Hamilton and BilL BLACKBEARD / 1983](CB-Conversations-scan-3-rotated_spread_027_page_1_seal_1_v2.jpg)",
+          "url": "CB-Conversations-scan-3-rotated_spread_027_page_1_seal_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 185.2352603313167,
+              "w": 301.3770397204888,
+              "x": 101.32143825921781,
+              "y": 107.17213531940742,
+              "confidence": 0.85,
+              "end_index": 113,
+              "label": "seal",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# Interview with Carl Barks and Floyd Gottfredson",
+          "value": "Interview with Carl Barks and Floyd Gottfredson",
+          "bbox": [
+            {
+              "h": 44.69,
+              "w": 227.91,
+              "x": 140.11,
+              "y": 154.05,
+              "confidence": 1.0,
+              "end_index": 48,
+              "label": "seal",
+              "start_index": 2
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**BRUCE HAMILTON AND**\n**BILL BLACKBEARD / 1983**",
+          "value": "BRUCE HAMILTON AND\nBILL BLACKBEARD / 1983",
+          "bbox": [
+            {
+              "h": 29.77293959365473,
+              "w": 129.5244306938358,
+              "x": 188.2367955590225,
+              "y": 212.95241332888725,
+              "confidence": 0.87,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "From *Mickey Mouse in Color*. Prescott, AZ: Another Rainbow Publishing: 1988. Reprinted by permission of Bruce Hamilton and Another Rainbow Publishing, Inc.",
+          "value": "From Mickey Mouse in Color. Prescott, AZ: Another Rainbow Publishing: 1988. Reprinted by permission of Bruce Hamilton and Another Rainbow Publishing, Inc.",
+          "bbox": [
+            {
+              "h": 55.63631863090708,
+              "w": 154.44494813500387,
+              "x": 137.0982286108994,
+              "y": 314.6988828172638,
+              "confidence": 0.96,
+              "end_index": 155,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The first portion of this interview was conducted by Bruce Hamilton and Bill Blackbeard on 6 December 1982 at the apartment of Floyd Gottfredson in North Hollywood, California. Also present at the interview were Garé Barks, Mattie Gottfredson, Helen Hamilton, Leonard (John) Clark, and Russ Cochran. The second portion of this interview with Barks and Gottfredson was conducted by Bruce Hamilton in a motel in Burbank, California, in the spring of 1983.",
+          "value": "The first portion of this interview was conducted by Bruce Hamilton and Bill Blackbeard on 6 December 1982 at the apartment of Floyd Gottfredson in North Hollywood, California. Also present at the interview were Garé Barks, Mattie Gottfredson, Helen Hamilton, Leonard (John) Clark, and Russ Cochran. The second portion of this interview with Barks and Gottfredson was conducted by Bruce Hamilton in a motel in Burbank, California, in the spring of 1983.",
+          "bbox": [
+            {
+              "h": 88.68360028582323,
+              "w": 260.19188927329463,
+              "x": 135.31331587628623,
+              "y": 401.14110903201225,
+              "confidence": 0.97,
+              "end_index": 452,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH:** Carl, you and Floyd are both perfectionists. What comic strips influenced you in this respect, and what ones did you like during your formative years?",
+          "value": "BH: Carl, you and Floyd are both perfectionists. What comic strips influenced you in this respect, and what ones did you like during your formative years?",
+          "bbox": [
+            {
+              "h": 35.489801324503276,
+              "w": 280.22475,
+              "x": 110.40750000000001,
+              "y": 504.2180662251656,
+              "confidence": 0.91,
+              "end_index": 157,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** It was the *Mickey Mouse* strip that he did that influenced my drawing more than anything else.",
+          "value": "CB: It was the Mickey Mouse strip that he did that influenced my drawing more than anything else.",
+          "bbox": [
+            {
+              "h": 24.413040000000024,
+              "w": 283.48440000000005,
+              "x": 110.19720000000001,
+              "y": 543.6367200000001,
+              "confidence": 0.92,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**FG:** (laughing) That's amazing!",
+          "value": "FG: (laughing) That's amazing!",
+          "bbox": [
+            {
+              "h": 11.9088,
+              "w": 120.29159999999996,
+              "x": 464.34240000000005,
+              "y": 66.09384,
+              "confidence": 0.9,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Other artists were . . . \\[*Wash Tubbs* and] *Buzz Sawyer*—that was Roy Crane, \\[Hal Foster's] *Prince Valiant*, \\[E. C. Segar's] *Popeye* . . . a whole bunch of them. They contributed small things to my drawing style. But it was all to help me adapt myself to Floyd's way of drawing. Especially in the inking.",
+          "value": "CB: Other artists were . . . [Wash Tubbs and] Buzz Sawyer—that was Roy Crane, [Hal Foster's] Prince Valiant, [E. C. Segar's] Popeye . . . a whole bunch of them. They contributed small things to my drawing style. But it was all to help me adapt myself to Floyd's way of drawing. Especially in the inking.",
+          "bbox": [
+            {
+              "h": 66.68928000000001,
+              "w": 282.6432,
+              "x": 465.18360000000007,
+              "y": 76.81176,
+              "confidence": 0.93,
+              "end_index": 317,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**FG:** That's amazing, and I'm very flattered.",
+          "value": "FG: That's amazing, and I'm very flattered.",
+          "bbox": [
+            {
+              "h": 11.818377406869285,
+              "w": 165.4768571598705,
+              "x": 466.2375143626144,
+              "y": 143.28506287514296,
+              "confidence": 0.89,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, look at my ducks and all those other characters. I've been trying to imitate Floyd's work. It's plain to me, and I hope it's plain to other people.",
+          "value": "CB: Well, look at my ducks and all those other characters. I've been trying to imitate Floyd's work. It's plain to me, and I hope it's plain to other people.",
+          "bbox": [
+            {
+              "h": 40.48992000000001,
+              "w": 283.4844000000001,
+              "x": 466.0248000000001,
+              "y": 154.8144,
+              "confidence": 0.92,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BH:** Which strips influenced you, and how? Was it the humor or the style of writing?",
+          "value": "BH: Which strips influenced you, and how? Was it the humor or the style of writing?",
+          "bbox": [
+            {
+              "h": 26.551629139072844,
+              "w": 282.85349999999994,
+              "x": 466.0773750000001,
+              "y": 199.26866225165566,
+              "confidence": 0.91,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** As for humor and the story side of it, that was, I would say, *Popeye* and *Barney Google* and a whole bunch of newspaper strips from years ago. While I didn't ever do that type of humor very much, at least they planted seeds in my head, so that I formed plots and I saw gags in ways that had been implanted into me subconsciously from these guys' works. And also, in \\[Floyd's] strips, the way you would build up to a climax. It always helped my story techniques.",
+          "value": "CB: As for humor and the story side of it, that was, I would say, Popeye and Barney Google and a whole bunch of newspaper strips from years ago. While I didn't ever do that type of humor very much, at least they planted seeds in my head, so that I formed plots and I saw gags in ways that had been implanted into me subconsciously from these guys' works. And also, in [Floyd's] strips, the way you would build up to a climax. It always helped my story techniques.",
+          "bbox": [
+            {
+              "h": 92.88864000000004,
+              "w": 284.32560000000007,
+              "x": 466.86600000000004,
+              "y": 225.67176000000003,
+              "confidence": 0.93,
+              "end_index": 471,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BH:** Let's go back in time \\[for your opinions of comics artists]. One comic writer fans consider an unbridled genius was E. C. Segar. What do you two think?",
+          "value": "BH: Let's go back in time [for your opinions of comics artists]. One comic writer fans consider an unbridled genius was E. C. Segar. What do you two think?",
+          "bbox": [
+            {
+              "h": 39.89447999999999,
+              "w": 283.48440000000005,
+              "x": 469.3896000000001,
+              "y": 322.72848000000005,
+              "confidence": 0.92,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I agree, he was the unbridled genius as far as I was concerned.",
+          "value": "CB: I agree, he was the unbridled genius as far as I was concerned.",
+          "bbox": [
+            {
+              "h": 14.290560000000028,
+              "w": 259.0896,
+              "x": 469.3896000000001,
+              "y": 362.02752000000004,
+              "confidence": 0.89,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BH:** There isn't much you can say beyond that, is there?",
+          "value": "BH: There isn't much you can say beyond that, is there?",
+          "bbox": [
+            {
+              "h": 12.504239999999982,
+              "w": 217.87080000000003,
+              "x": 470.23080000000004,
+              "y": 382.27248000000003,
+              "confidence": 0.88,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**FG:** There isn't, because you've said it all already.",
+          "value": "FG: There isn't, because you've said it all already.",
+          "bbox": [
+            {
+              "h": 11.908799999999985,
+              "w": 190.9524,
+              "x": 470.23080000000004,
+              "y": 395.96760000000006,
+              "confidence": 0.89,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BH:** A couple of other names come to mind because of the conversation we have had. You mentioned *Tarzan* earlier and Foster's contribution. What do you think of the entirely different style of Burne Hogarth's *Tarzan*?",
+          "value": "BH: A couple of other names come to mind because of the conversation we have had. You mentioned Tarzan earlier and Foster's contribution. What do you think of the entirely different style of Burne Hogarth's Tarzan?",
+          "bbox": [
+            {
+              "h": 52.398720000000026,
+              "w": 280.1196,
+              "x": 470.23080000000004,
+              "y": 413.8308,
+              "confidence": 0.92,
+              "end_index": 221,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I loved Hogarth's stuff. There, too, was a style of drawing that had quite a bit of Disney in it.",
+          "value": "CB: I loved Hogarth's stuff. There, too, was a style of drawing that had quite a bit of Disney in it.",
+          "bbox": [
+            {
+              "h": 27.077403973509945,
+              "w": 274.96725,
+              "x": 471.07200000000006,
+              "y": 465.5736158940398,
+              "confidence": 0.91,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**FG:** Yeah, very strong.",
+          "value": "FG: Yeah, very strong.",
+          "bbox": [
+            {
+              "h": 11.0288794064405,
+              "w": 86.29487988281251,
+              "x": 471.896840439215,
+              "y": 494.9719451838797,
+              "confidence": 0.9,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yes. The accented curves!",
+          "value": "CB: Yes. The accented curves!",
+          "bbox": [
+            {
+              "h": 10.778384105960242,
+              "w": 116.71650000000005,
+              "x": 471.33487500000007,
+              "y": 506.84694039735103,
+              "confidence": 0.89,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**FG:** Again, he didn't come up anywhere near Foster, but probably second to him.",
+          "value": "FG: Again, he didn't come up anywhere near Foster, but probably second to him.",
+          "bbox": [
+            {
+              "h": 26.578338895769786,
+              "w": 283.56283172160823,
+              "x": 472.21576672065555,
+              "y": 517.5250294064407,
+              "confidence": 0.93,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Hogarth's stuff was too anatomical. It didn't have the soul. The soul didn't show through the anatomy.",
+          "value": "CB: Hogarth's stuff was too anatomical. It didn't have the soul. The soul didn't show through the anatomy.",
+          "bbox": [
+            {
+              "h": 26.79480000000001,
+              "w": 279.2784000000001,
+              "x": 472.7544000000001,
+              "y": 544.23216,
+              "confidence": 0.92,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "133"
+    }
+  ]
+}

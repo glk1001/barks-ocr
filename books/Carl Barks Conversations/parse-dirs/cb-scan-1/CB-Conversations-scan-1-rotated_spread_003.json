@@ -1,0 +1,544 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "An Interview with Carl Barks, Duckburg's True Founding Father 91\n*Donald Ault, Thomas Andrae, and Stephen Gong*",
+          "value": "An Interview with Carl Barks, Duckburg's True Founding Father 91\nDonald Ault, Thomas Andrae, and Stephen Gong",
+          "bbox": [
+            {
+              "h": 12.58792009813262,
+              "w": 171.06970060618337,
+              "x": 150.26966614067265,
+              "y": 29.286996776152826,
+              "confidence": 0.7,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "An Interview with Carl and Garé Barks 109\n*Klaus Strzyz*",
+          "value": "An Interview with Carl and Garé Barks 109\nKlaus Strzyz",
+          "bbox": [
+            {
+              "h": 15.25,
+              "w": 184.28,
+              "x": 142.74,
+              "y": 53.9,
+              "confidence": 1.0,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            },
+            {
+              "h": 11.04,
+              "w": 43.9,
+              "x": 212.93,
+              "y": 69.15,
+              "confidence": 1.0,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 42
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Views from Carl Barks 120\n*E. B. Boatner*",
+          "value": "Views from Carl Barks 120\nE. B. Boatner",
+          "bbox": [
+            {
+              "h": 14.46,
+              "w": 118.56,
+              "x": 175.07,
+              "y": 93.6,
+              "confidence": 1.0,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            },
+            {
+              "h": 9.73,
+              "w": 48.11,
+              "x": 209.51,
+              "y": 108.85,
+              "confidence": 0.75,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 26
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Fortune Favors the Bold: An Interview with Carl Barks 123\n*Edward Summer*",
+          "value": "Fortune Favors the Bold: An Interview with Carl Barks 123\nEdward Summer",
+          "bbox": [
+            {
+              "h": 14.46,
+              "w": 247.63,
+              "x": 110.41,
+              "y": 134.88,
+              "confidence": 0.87,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.78,
+              "w": 59.67,
+              "x": 203.2,
+              "y": 147.76,
+              "confidence": 1.0,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 58
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Interview with Carl Barks and Floyd Gottfredson 132\n*Bruce Hamilton and Bill Blackbeard*",
+          "value": "Interview with Carl Barks and Floyd Gottfredson 132\nBruce Hamilton and Bill Blackbeard",
+          "bbox": [
+            {
+              "h": 23.788800000000037,
+              "w": 222.91800000000006,
+              "x": 121.974,
+              "y": 175.4424,
+              "confidence": 0.86,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 15.25,
+              "w": 225.55,
+              "x": 119.87,
+              "y": 173.26,
+              "confidence": 0.86,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.78,
+              "w": 57.04,
+              "x": 203.2,
+              "y": 227.42,
+              "confidence": 1.0,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 52
+            },
+            {
+              "h": 10.52,
+              "w": 124.87,
+              "x": 170.61,
+              "y": 188.51,
+              "confidence": 1.0,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 52
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Carl Barks Interview 137\n*Bruce Hamilton*",
+          "value": "Carl Barks Interview 137\nBruce Hamilton",
+          "bbox": [
+            {
+              "h": 14.2,
+              "w": 110.67,
+              "x": 176.91,
+              "y": 213.23,
+              "confidence": 0.81,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.78,
+              "w": 57.04,
+              "x": 203.2,
+              "y": 227.42,
+              "confidence": 1.0,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 25
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Conversation with Carl Barks 140\n*Gottfried Helnwein*",
+          "value": "Conversation with Carl Barks 140\nGottfried Helnwein",
+          "bbox": [
+            {
+              "h": 14.46,
+              "w": 146.42,
+              "x": 158.51,
+              "y": 252.93,
+              "confidence": 0.79,
+              "end_index": 31,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.52,
+              "w": 68.35,
+              "x": 197.68,
+              "y": 268.44,
+              "confidence": 1.0,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 33
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Reluctant Cult Hero: Carl Barks 155\n*Michael Naiman*",
+          "value": "Reluctant Cult Hero: Carl Barks 155\nMichael Naiman",
+          "bbox": [
+            {
+              "h": 22.85197151295733,
+              "w": 153.29037438667112,
+              "x": 154.91470946670162,
+              "y": 295.3849896150915,
+              "confidence": 0.81,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Carl Barks Speaks with the Finnish Press 161\n*Markku Kivekas*",
+          "value": "Carl Barks Speaks with the Finnish Press 161\nMarkku Kivekas",
+          "bbox": [
+            {
+              "h": 23.194079999999985,
+              "w": 188.42880000000002,
+              "x": 136.2744,
+              "y": 334.82736,
+              "confidence": 0.82,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "When Donald Duck Turned 60 165\n*Erik Svane*",
+          "value": "When Donald Duck Turned 60 165\nErik Svane",
+          "bbox": [
+            {
+              "h": 22.59935999999999,
+              "w": 148.8924,
+              "x": 155.622,
+              "y": 375.26832,
+              "confidence": 0.8,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Carl Barks at Disneyland Paris 173\n*Sébastien Durand and Didier Ghez*",
+          "value": "Carl Barks at Disneyland Paris 173\nSébastien Durand and Didier Ghez",
+          "bbox": [
+            {
+              "h": 23.194079999999985,
+              "w": 147.20999999999998,
+              "x": 155.622,
+              "y": 415.11456,
+              "confidence": 0.81,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Carl Barks Remembers \"A Perfect Life\" 181\n*Donald Ault and Lynda Ault*",
+          "value": "Carl Barks Remembers \"A Perfect Life\" 181\nDonald Ault and Lynda Ault",
+          "bbox": [
+            {
+              "h": 24.383519999999976,
+              "w": 184.2228,
+              "x": 136.2744,
+              "y": 454.36608,
+              "confidence": 0.8,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Carl Barks: On Floyd Gottfredson 198\n*Leonardo Gori and Francesco Stajano*",
+          "value": "Carl Barks: On Floyd Gottfredson 198\nLeonardo Gori and Francesco Stajano",
+          "bbox": [
+            {
+              "h": 24.383520000000033,
+              "w": 162.3516,
+              "x": 147.21,
+              "y": 494.80704,
+              "confidence": 0.82,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 15.25,
+              "w": 164.03,
+              "x": 146.16,
+              "y": 491.92,
+              "confidence": 0.82,
+              "end_index": 35,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.62,
+              "w": 131.7,
+              "x": 161.14,
+              "y": 506.12,
+              "confidence": 1.0,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 37
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\"Those Things That Came Along in the 20th Century and Became Obsolete\": Carl Barks on the Past, Present, and Future of Comic Books 205\n*Donald Ault*",
+          "value": "\"Those Things That Came Along in the 20th Century and Became Obsolete\": Carl Barks on the Past, Present, and Future of Comic Books 205\nDonald Ault",
+          "bbox": [
+            {
+              "h": 51.145920000000004,
+              "w": 267.50159999999994,
+              "x": 460.97760000000005,
+              "y": 16.05744,
+              "confidence": 0.84,
+              "end_index": 147,
+              "label": "paragraph_title",
+              "start_index": 0
+            },
+            {
+              "h": 39.7,
+              "w": 265.77,
+              "x": 462.13,
+              "y": 16.3,
+              "confidence": 1.0,
+              "end_index": 133,
+              "label": "paragraph_title",
+              "start_index": 0
+            },
+            {
+              "h": 8.68,
+              "w": 44.16,
+              "x": 573.86,
+              "y": 58.37,
+              "confidence": 1.0,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 135
+            },
+            {
+              "h": 9.73,
+              "w": 45.48,
+              "x": 574.91,
+              "y": 150.39,
+              "confidence": 1.0,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 135
+            },
+            {
+              "h": 9.73,
+              "w": 44.69,
+              "x": 575.7,
+              "y": 190.35,
+              "confidence": 1.0,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 135
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Living the Stories: The Carl Barks Genius 210\n*Donald Ault, Bruce Hamilton, John Ronan, and Nicky Wright*",
+          "value": "Living the Stories: The Carl Barks Genius 210\nDonald Ault, Bruce Hamilton, John Ronan, and Nicky Wright",
+          "bbox": [
+            {
+              "h": 23.78880000000001,
+              "w": 214.50599999999997,
+              "x": 489.5784,
+              "y": 84.45024,
+              "confidence": 0.75,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.15,
+              "w": 191.11,
+              "x": 501.04,
+              "y": 83.61,
+              "confidence": 1.0,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.62,
+              "w": 213.98,
+              "x": 488.95,
+              "y": 95.44,
+              "confidence": 1.0,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 46
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Ideas Flowing Like Waterfalls: Some Reflections from Carl Barks at 98 215\n*Donald Ault*",
+          "value": "Ideas Flowing Like Waterfalls: Some Reflections from Carl Barks at 98 215\nDonald Ault",
+          "bbox": [
+            {
+              "h": 11.83,
+              "w": 122.76,
+              "x": 535.48,
+              "y": 123.83,
+              "confidence": 1.0,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            },
+            {
+              "h": 26.82,
+              "w": 187.69,
+              "x": 502.88,
+              "y": 123.83,
+              "confidence": 0.75,
+              "end_index": 72,
+              "label": "paragraph_title",
+              "start_index": 0
+            },
+            {
+              "h": 9.73,
+              "w": 45.48,
+              "x": 574.91,
+              "y": 150.39,
+              "confidence": 1.0,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 74
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Carl Barks: Spools of Memory 221\n*Donald Ault*",
+          "value": "Carl Barks: Spools of Memory 221\nDonald Ault",
+          "bbox": [
+            {
+              "h": 13.93,
+              "w": 148.26,
+              "x": 524.44,
+              "y": 176.42,
+              "confidence": 0.82,
+              "end_index": 31,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 9.73,
+              "w": 44.69,
+              "x": 575.7,
+              "y": 190.35,
+              "confidence": 1.0,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 33
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Notes on the Interviewers 227",
+          "value": "Notes on the Interviewers 227",
+          "bbox": [
+            {
+              "h": 8.54706372427592,
+              "w": 90.62450326314789,
+              "x": 543.5218126429116,
+              "y": 219.53756125666922,
+              "confidence": 0.76,
+              "end_index": 28,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Index 233",
+          "value": "Index 233",
+          "bbox": [
+            {
+              "h": 11.31,
+              "w": 43.11,
+              "x": 576.48,
+              "y": 231.1,
+              "confidence": 1.0,
+              "end_index": 8,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

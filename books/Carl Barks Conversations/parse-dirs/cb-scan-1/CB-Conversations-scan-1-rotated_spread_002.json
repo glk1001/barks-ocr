@@ -1,0 +1,597 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "[www.upress.state.ms.us](http://www.upress.state.ms.us)",
+          "text": "www.upress.state.ms.us",
+          "url": "http://www.upress.state.ms.us",
+          "bbox": [
+            {
+              "h": 8.766769021532005,
+              "w": 84.59445731707319,
+              "x": 173.42719796827365,
+              "y": 271.36775489234,
+              "confidence": 0.82,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "link",
+          "book_side": "left"
+        },
+        {
+          "md": "The University Press of Mississippi is a member of the Association of American University Presses.",
+          "value": "The University Press of Mississippi is a member of the Association of American University Presses.",
+          "bbox": [
+            {
+              "h": 23.638646798780478,
+              "w": 267.67096603467996,
+              "x": 81.59681575123858,
+              "y": 286.85688981516773,
+              "confidence": 0.93,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Copyright © 2003 by University Press of Mississippi\nAll rights reserved\nManufactured in the United States of America",
+          "value": "Copyright © 2003 by University Press of Mississippi\nAll rights reserved\nManufactured in the United States of America",
+          "bbox": [
+            {
+              "h": 32.92424116806401,
+              "w": 177.80017468559456,
+              "x": 125.17425768149772,
+              "y": 317.71797641958847,
+              "confidence": 0.84,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "11 10 09 08 07 06 05 04 03 4 3 2 1",
+          "value": "11 10 09 08 07 06 05 04 03 4 3 2 1\n",
+          "bbox": [
+            {
+              "h": 17.09,
+              "w": 205.31,
+              "x": 109.36,
+              "y": 354.68,
+              "confidence": 1.0,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Registered trademark symbol",
+          "md": "![Registered trademark symbol](CB-Conversations-scan-1-rotated_spread_002_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-1-rotated_spread_002_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 8.372988709984782,
+              "w": 8.856540759575084,
+              "x": 208.32176293945315,
+              "y": 369.95227339939026,
+              "confidence": 0.76,
+              "end_index": 52,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "md": "Library of Congress Cataloging-in-Publication Data\nBarks, Carl, 1901–\nCarl Barks : conversations / edited by Donald Ault.\np. cm.\nISBN 1-57806-500-3 (cloth : alk. paper)—\nISBN 1-57806-501-1 (pbk : alk. paper)",
+          "value": "Library of Congress Cataloging-in-Publication Data\nBarks, Carl, 1901–\nCarl Barks : conversations / edited by Donald Ault.\np. cm.\nISBN 1-57806-500-3 (cloth : alk. paper)—\nISBN 1-57806-501-1 (pbk : alk. paper)",
+          "bbox": [
+            {
+              "h": 11.383560394435985,
+              "w": 136.05282713057352,
+              "x": 151.65832536799738,
+              "y": 414.0073642911585,
+              "confidence": 0.61,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.78,
+              "w": 64.14,
+              "x": 106.46,
+              "y": 401.21,
+              "confidence": 1.0,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 51
+            },
+            {
+              "h": 13.93,
+              "w": 172.97,
+              "x": 114.09,
+              "y": 411.47,
+              "confidence": 1.0,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 75
+            },
+            {
+              "h": 13.93,
+              "w": 146.16,
+              "x": 113.3,
+              "y": 430.92,
+              "confidence": 1.0,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 129
+            },
+            {
+              "h": 13.67,
+              "w": 133.8,
+              "x": 113.3,
+              "y": 441.18,
+              "confidence": 1.0,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 170
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "items": [
+            {
+              "md": "Barks, Carl, 1901– —Interviews. 2. Cartoonists—United States—Interviews. I. Ault, Donald D. II. Title.\nNC1766.U52 B37 2002\n741.5'092—dc21 2002011790",
+              "value": "Barks, Carl, 1901– —Interviews. 2. Cartoonists—United States—Interviews. I. Ault, Donald D. II. Title.\nNC1766.U52 B37 2002\n741.5'092—dc21 2002011790",
+              "bbox": [
+                {
+                  "h": 109.25741867378049,
+                  "w": 208.870429348085,
+                  "x": 106.9121716427687,
+                  "y": 386.35976867378054,
+                  "confidence": 0.36,
+                  "end_index": 147,
+                  "label": "text",
+                  "start_index": 0
+                },
+                {
+                  "h": 10.78,
+                  "w": 64.14,
+                  "x": 106.46,
+                  "y": 401.21,
+                  "confidence": 1.0,
+                  "end_index": 17,
+                  "label": "text",
+                  "start_index": 0
+                },
+                {
+                  "h": 10.78,
+                  "w": 64.14,
+                  "x": 106.46,
+                  "y": 401.21,
+                  "confidence": 0.36,
+                  "end_index": 101,
+                  "label": "text",
+                  "start_index": 0
+                },
+                {
+                  "h": 10.78,
+                  "w": 82.02,
+                  "x": 112.51,
+                  "y": 471.67,
+                  "confidence": 0.36,
+                  "end_index": 121,
+                  "label": "text",
+                  "start_index": 103
+                },
+                {
+                  "h": 10.52,
+                  "w": 63.09,
+                  "x": 110.41,
+                  "y": 480.61,
+                  "confidence": 1.0,
+                  "end_index": 136,
+                  "label": "text",
+                  "start_index": 123
+                },
+                {
+                  "h": 14.46,
+                  "w": 48.63,
+                  "x": 267.08,
+                  "y": 482.98,
+                  "confidence": 1.0,
+                  "end_index": 147,
+                  "label": "text",
+                  "start_index": 138
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "1. Barks, Carl, 1901– —Interviews. 2. Cartoonists—United States—Interviews. I. Ault, Donald D. II. Title.\n   NC1766.U52 B37 2002\n   741.5'092—dc21 2002011790",
+          "ordered": true,
+          "bbox": [
+            {
+              "h": 111.08,
+              "w": 209.32,
+              "x": 106.46,
+              "y": 386.36,
+              "confidence": 0.68,
+              "end_index": 156,
+              "label": "list",
+              "start_index": 0
+            }
+          ],
+          "type": "list",
+          "book_side": "left"
+        },
+        {
+          "md": "British Library Cataloging-in-Publication Data available",
+          "value": "British Library Cataloging-in-Publication Data available",
+          "bbox": [
+            {
+              "h": 14.00610645960368,
+              "w": 187.67333992711514,
+              "x": 115.16594824218751,
+              "y": 501.7993912728659,
+              "confidence": 0.92,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# Contents",
+          "value": "Contents",
+          "bbox": [
+            {
+              "h": 16.95123401295732,
+              "w": 83.53028441787356,
+              "x": 543.3932803925305,
+              "y": 163.39651879287348,
+              "confidence": 0.95,
+              "end_index": 9,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "Introduction ix\nChronology xxxv",
+          "value": "Introduction ix\nChronology xxxv",
+          "bbox": [
+            {
+              "h": 23.607677701028972,
+              "w": 65.79864436451987,
+              "x": 552.6283175733613,
+              "y": 223.0981929878049,
+              "confidence": 0.85,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 8.94,
+              "w": 57.83,
+              "x": 556.51,
+              "y": 222.17,
+              "confidence": 1.0,
+              "end_index": 14,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.41,
+              "w": 68.61,
+              "x": 550.99,
+              "y": 233.47,
+              "confidence": 1.0,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 16
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**The Duck Man 3**\n*Malcolm Willits, Don Thompson, Maggie Thompson*",
+          "value": "The Duck Man 3\nMalcolm Willits, Don Thompson, Maggie Thompson",
+          "bbox": [
+            {
+              "h": 9.802029306402437,
+              "w": 184.81985885099093,
+              "x": 492.6455321312882,
+              "y": 276.1539590081936,
+              "confidence": 0.88,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.57,
+              "w": 76.23,
+              "x": 547.57,
+              "y": 261.87,
+              "confidence": 1.0,
+              "end_index": 20,
+              "label": "paragraph_title",
+              "start_index": 0
+            },
+            {
+              "h": 11.57,
+              "w": 185.85,
+              "x": 492.36,
+              "y": 274.22,
+              "confidence": 0.88,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 19
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A Conversation with Carl Barks 19**\n*J. Michael Barrier, Glenn Bray, Bob Foster, and Bill Spicer*",
+          "value": "A Conversation with Carl Barks 19\nJ. Michael Barrier, Glenn Bray, Bob Foster, and Bill Spicer",
+          "bbox": [
+            {
+              "h": 22.741162700076185,
+              "w": 203.01193087842992,
+              "x": 484.4242267054117,
+              "y": 302.741681964558,
+              "confidence": 0.77,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 9.99,
+              "w": 148.26,
+              "x": 512.34,
+              "y": 302.36,
+              "confidence": 1.0,
+              "end_index": 36,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.36,
+              "w": 203.2,
+              "x": 483.69,
+              "y": 312.35,
+              "confidence": 1.0,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 38
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Writing to Please Myself: An Interview with Carl Barks 26**\n*Paul Ciotti*",
+          "value": "Writing to Please Myself: An Interview with Carl Barks 26\nPaul Ciotti",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 244.47,
+              "x": 464.5,
+              "y": 340.74,
+              "confidence": 1.0,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 9.73,
+              "w": 39.43,
+              "x": 565.97,
+              "y": 353.1,
+              "confidence": 1.0,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 62
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Carl Barks, Telling It Like It Is 37**\n*Donald Ault*",
+          "value": "Carl Barks, Telling It Like It Is 37\nDonald Ault",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 137.75,
+              "x": 517.86,
+              "y": 380.44,
+              "confidence": 1.0,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 9.73,
+              "w": 45.74,
+              "x": 563.34,
+              "y": 393.06,
+              "confidence": 1.0,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 41
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Carl Barks: On His Life and Career 50**\n*J. Michael Barrier*",
+          "value": "Carl Barks: On His Life and Career 50\nJ. Michael Barrier",
+          "bbox": [
+            {
+              "h": 21.13193826219511,
+              "w": 160.4217729134909,
+              "x": 506.169469107279,
+              "y": 420.5575852134147,
+              "confidence": 0.78,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 9.99,
+              "w": 159.83,
+              "x": 506.56,
+              "y": 420.14,
+              "confidence": 1.0,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 8.94,
+              "w": 63.88,
+              "x": 553.88,
+              "y": 432.76,
+              "confidence": 1.0,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 42
+            },
+            {
+              "h": 10.52,
+              "w": 64.93,
+              "x": 552.83,
+              "y": 470.89,
+              "confidence": 1.0,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 42
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Carl Barks and His Ducks 69**\n*J. Michael Barrier*",
+          "value": "Carl Barks and His Ducks 69\nJ. Michael Barrier",
+          "bbox": [
+            {
+              "h": 9.99,
+              "w": 121.97,
+              "x": 525.75,
+              "y": 459.32,
+              "confidence": 1.0,
+              "end_index": 36,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.52,
+              "w": 64.93,
+              "x": 552.83,
+              "y": 470.89,
+              "confidence": 1.0,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 32
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Of Ducks and Men: Carl Barks Interviewed 80**\n*Edward Summer*",
+          "value": "Of Ducks and Men: Carl Barks Interviewed 80\nEdward Summer",
+          "bbox": [
+            {
+              "h": 11.31,
+              "w": 195.32,
+              "x": 488.95,
+              "y": 497.44,
+              "confidence": 1.0,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 9.73,
+              "w": 58.62,
+              "x": 557.3,
+              "y": 510.59,
+              "confidence": 1.0,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 48
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "v",
+              "value": "v",
+              "bbox": [
+                {
+                  "h": 13.476568530868914,
+                  "w": 173.8903598751906,
+                  "x": 113.71996042540016,
+                  "y": 412.37324416920734,
+                  "confidence": 0.43,
+                  "end_index": 0,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "v",
+          "bbox": [
+            {
+              "h": 13.48,
+              "w": 173.89,
+              "x": 113.72,
+              "y": 412.37,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer",
+          "book_side": "left"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "v"
+    }
+  ]
+}

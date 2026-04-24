@@ -1,0 +1,649 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "134 CARL BARKS: CONVERSATIONS",
+              "value": "134 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.699677924328315,
+                  "w": 124.36385583198366,
+                  "x": 112.48176056950267,
+                  "y": 40.25417772484757,
+                  "confidence": 0.75,
+                  "end_index": 28,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "134 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.7,
+              "w": 124.36,
+              "x": 112.48,
+              "y": 40.25,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**FG**: It was all through Foster's stuff. Inside the skin.",
+          "value": "FG: It was all through Foster's stuff. Inside the skin.",
+          "bbox": [
+            {
+              "h": 11.313360000000003,
+              "w": 197.68199999999996,
+              "x": 111.03840000000001,
+              "y": 64.30752000000001,
+              "confidence": 0.85,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH**: Of course, Foster is often compared with Alex Raymond. What about Raymond?",
+          "value": "BH: Of course, Foster is often compared with Alex Raymond. What about Raymond?",
+          "bbox": [
+            {
+              "h": 23.222160000000002,
+              "w": 282.64320000000004,
+              "x": 111.03840000000001,
+              "y": 85.14792,
+              "confidence": 0.88,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: There was a guy who could combine draftsmanship with emotions . . . and all the gimmicks that went into a good adventure strip. He was a master.",
+          "value": "CB: There was a guy who could combine draftsmanship with emotions . . . and all the gimmicks that went into a good adventure strip. He was a master.",
+          "bbox": [
+            {
+              "h": 35.72640000000001,
+              "w": 280.9608,
+              "x": 110.19720000000001,
+              "y": 111.34728000000001,
+              "confidence": 0.89,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**FG**: He really was. Story and everything.",
+          "value": "FG: He really was. Story and everything.",
+          "bbox": [
+            {
+              "h": 11.908800000000014,
+              "w": 154.7808,
+              "x": 110.19720000000001,
+              "y": 150.64632,
+              "confidence": 0.88,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH**: What movies do you watch, Carl?",
+          "value": "BH: What movies do you watch, Carl?",
+          "bbox": [
+            {
+              "h": 11.56704635761588,
+              "w": 147.998625,
+              "x": 109.88175000000001,
+              "y": 171.66548344370864,
+              "confidence": 0.86,
+              "end_index": 38,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Well, Garé and I have gone to see *Raiders* and *E.T.* and *Star Wars*, and our opinion was that the stories were just a bunch of disconnected incidents that were not tied together. But after you've seen \\[all of one of them], you can go back and put all those things together in your head and then you see what the story was. The story isn't telling itself as it goes along. That is, the little binders between transitions, between what they're doing here and what they're doing in the next scene—those little binders are left out.",
+          "value": "CB: Well, Garé and I have gone to see Raiders and E.T. and Star Wars, and our opinion was that the stories were just a bunch of disconnected incidents that were not tied together. But after you've seen [all of one of them], you can go back and put all those things together in your head and then you see what the story was. The story isn't telling itself as it goes along. That is, the little binders between transitions, between what they're doing here and what they're doing in the next scene—those little binders are left out.",
+          "bbox": [
+            {
+              "h": 101.82024000000001,
+              "w": 283.48440000000005,
+              "x": 108.51480000000001,
+              "y": 185.18184000000002,
+              "confidence": 0.9,
+              "end_index": 539,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**FG**: I've heard that *Star Wars* is really great. I didn't see it, but I know people at the studio who went to see it as many as six times for the special effects.",
+          "value": "FG: I've heard that Star Wars is really great. I didn't see it, but I know people at the studio who went to see it as many as six times for the special effects.",
+          "bbox": [
+            {
+              "h": 35.72640000000001,
+              "w": 282.64320000000004,
+              "x": 107.67360000000001,
+              "y": 289.97928,
+              "confidence": 0.81,
+              "end_index": 165,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: I know it! I think part of it is, they go back and see it a second time to see what that story was really about.\n(Laughter.)",
+          "value": "CB: I know it! I think part of it is, they go back and see it a second time to see what that story was really about.\n(Laughter.)",
+          "bbox": [
+            {
+              "h": 36.54135099337748,
+              "w": 282.06487500000003,
+              "x": 106.990125,
+              "y": 329.3979337748345,
+              "confidence": 0.81,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH**: Do the pictures hold together because of the fact that you can piece them together in the end?",
+          "value": "BH: Do the pictures hold together because of the fact that you can piece them together in the end?",
+          "bbox": [
+            {
+              "h": 23.396980132450267,
+              "w": 281.539125,
+              "x": 105.15,
+              "y": 376.1918940397352,
+              "confidence": 0.89,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Yeah, they hold together. You can finally pick out what the plot was all about by reviewing it in your head. The sequences are so bombastic and so violent and so much happens in them, you remember them! So you put all those little checkers together, and you've got the whole ball game.",
+          "value": "CB: Yeah, they hold together. You can finally pick out what the plot was all about by reviewing it in your head. The sequences are so bombastic and so violent and so much happens in them, you remember them! So you put all those little checkers together, and you've got the whole ball game.",
+          "bbox": [
+            {
+              "h": 63.11664000000002,
+              "w": 280.1196000000001,
+              "x": 105.15,
+              "y": 403.70832000000007,
+              "confidence": 0.88,
+              "end_index": 292,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH**: Do you think editors should listen to isolated complaints, or should they use their own better judgment?",
+          "value": "BH: Do you think editors should listen to isolated complaints, or should they use their own better judgment?",
+          "bbox": [
+            {
+              "h": 24.413040000000024,
+              "w": 274.23120000000006,
+              "x": 105.15,
+              "y": 476.9474400000001,
+              "confidence": 0.88,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: They should use their own better judgment certainly, because some people have very tender skins and they can get offended by things that the great majority of people wouldn't even notice. And an editor, in order to be an editor, has probably had sense enough to realize what the general public likes.",
+          "value": "CB: They should use their own better judgment certainly, because some people have very tender skins and they can get offended by things that the great majority of people wouldn't even notice. And an editor, in order to be an editor, has probably had sense enough to realize what the general public likes.",
+          "bbox": [
+            {
+              "h": 63.712080000000014,
+              "w": 283.48440000000005,
+              "x": 104.3088,
+              "y": 503.74224000000004,
+              "confidence": 0.9,
+              "end_index": 307,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nBRUCE HAMILTON AND BILL BLACKBEARD / 1983 135\n\\</page_header>",
+          "value": "<page_header>\nBRUCE HAMILTON AND BILL BLACKBEARD / 1983 135\n</page_header>",
+          "bbox": [
+            {
+              "h": 12.88,
+              "w": 189.8,
+              "x": 555.98,
+              "y": 40.22,
+              "confidence": 1.0,
+              "end_index": 59,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "135",
+          "value": "135",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "**BB**: Carl, you mentioned that you had taken a correspondence course to study cartooning.",
+          "value": "BB: Carl, you mentioned that you had taken a correspondence course to study cartooning.",
+          "bbox": [
+            {
+              "h": 26.19936,
+              "w": 279.27840000000003,
+              "x": 462.6600000000001,
+              "y": 65.4984,
+              "confidence": 0.91,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: Yes. I had to drop it because I was too far away from it and the post office.",
+          "value": "CB: Yes. I had to drop it because I was too far away from it and the post office.",
+          "bbox": [
+            {
+              "h": 26.19936,
+              "w": 280.1196,
+              "x": 462.6600000000001,
+              "y": 91.10232,
+              "confidence": 0.88,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**FG**: Which one did you study?",
+          "value": "FG: Which one did you study?",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 118.60919999999999,
+              "x": 463.50120000000004,
+              "y": 119.08800000000002,
+              "confidence": 0.86,
+              "end_index": 31,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: The Landon School.",
+          "value": "CB: The Landon School.",
+          "bbox": [
+            {
+              "h": 10.122479999999996,
+              "w": 92.53199999999998,
+              "x": 464.34240000000005,
+              "y": 132.18768,
+              "confidence": 0.85,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**FG**: I took two courses with them. They had a regular course and an advanced course, and I took both.",
+          "value": "FG: I took two courses with them. They had a regular course and an advanced course, and I took both.",
+          "bbox": [
+            {
+              "h": 26.199360000000013,
+              "w": 279.27840000000003,
+              "x": 463.50120000000004,
+              "y": 142.90560000000002,
+              "confidence": 0.91,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: I only got about the first four lessons of the first course.",
+          "value": "CB: I only got about the first four lessons of the first course.",
+          "bbox": [
+            {
+              "h": 12.50424000000001,
+              "w": 230.48880000000003,
+              "x": 464.34240000000005,
+              "y": 169.7004,
+              "confidence": 0.88,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**FG**: But it was a good course!",
+          "value": "FG: But it was a good course!",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 114.40320000000003,
+              "x": 464.34240000000005,
+              "y": 183.99096,
+              "confidence": 0.89,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: Oh, it was all right. I could see that it had all the elements that I would need to learn the cartoons.",
+          "value": "CB: Oh, it was all right. I could see that it had all the elements that I would need to learn the cartoons.",
+          "bbox": [
+            {
+              "h": 25.603919999999988,
+              "w": 283.4844,
+              "x": 464.34240000000005,
+              "y": 194.70888000000002,
+              "confidence": 0.91,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**FG**: It's all that you needed, without any of the distractions of a real school.",
+          "value": "FG: It's all that you needed, without any of the distractions of a real school.",
+          "bbox": [
+            {
+              "h": 25.603919999999988,
+              "w": 263.2956000000001,
+              "x": 464.34240000000005,
+              "y": 220.90824,
+              "confidence": 0.9,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: In 1916 or 1917.",
+          "value": "CB: In 1916 or 1917.",
+          "bbox": [
+            {
+              "h": 10.122480000000024,
+              "w": 82.43759999999997,
+              "x": 465.18360000000007,
+              "y": 248.89392,
+              "confidence": 0.88,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**FG**: About the time I took it.",
+          "value": "FG: About the time I took it.",
+          "bbox": [
+            {
+              "h": 10.122479999999996,
+              "w": 111.03840000000002,
+              "x": 465.18360000000007,
+              "y": 261.9936,
+              "confidence": 0.87,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: At that time, I was just a slickface kid, but I could make $5 a day pitching hay or doing things like that. I just didn't have time to work out those lessons. I got a couple of sharp criticisms on my stuff that I'd sent and I dropped it.",
+          "value": "CB: At that time, I was just a slickface kid, but I could make $5 a day pitching hay or doing things like that. I just didn't have time to work out those lessons. I got a couple of sharp criticisms on my stuff that I'd sent and I dropped it.",
+          "bbox": [
+            {
+              "h": 52.398720000000026,
+              "w": 283.48440000000005,
+              "x": 465.18360000000007,
+              "y": 273.30696000000006,
+              "confidence": 0.92,
+              "end_index": 244,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "The remainder of the interview was recorded in the spring of 1983.",
+          "value": "The remainder of the interview was recorded in the spring of 1983.",
+          "bbox": [
+            {
+              "h": 12.839352281821666,
+              "w": 260.1808317930641,
+              "x": 466.14940515434455,
+              "y": 337.40740774104427,
+              "confidence": 0.93,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BH**: Carl, do you think you could have been comfortable doing *Donald Duck* as a daily or Sunday strip?",
+          "value": "BH: Carl, do you think you could have been comfortable doing Donald Duck as a daily or Sunday strip?",
+          "bbox": [
+            {
+              "h": 25.500079470198727,
+              "w": 275.4930000000001,
+              "x": 466.86600000000004,
+              "y": 363.57329801324505,
+              "confidence": 0.89,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: No, because my stories had to have a continuous reading. That is, you pick up a story and you read for twenty minutes or so. A daily you read for fifteen seconds, and you've finished.",
+          "value": "CB: No, because my stories had to have a continuous reading. That is, you pick up a story and you read for twenty minutes or so. A daily you read for fifteen seconds, and you've finished.",
+          "bbox": [
+            {
+              "h": 38.703599999999994,
+              "w": 283.48440000000005,
+              "x": 467.70720000000006,
+              "y": 390.01320000000004,
+              "confidence": 0.87,
+              "end_index": 190,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**FG**: Right. You throw it away, and that's it.",
+          "value": "FG: Right. You throw it away, and that's it.",
+          "bbox": [
+            {
+              "h": 11.908799999999985,
+              "w": 166.55759999999998,
+              "x": 467.70720000000006,
+              "y": 429.90768,
+              "confidence": 0.85,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BH**: Conversely, Floyd, would you have been comfortable working in comic book stories?",
+          "value": "BH: Conversely, Floyd, would you have been comfortable working in comic book stories?",
+          "bbox": [
+            {
+              "h": 25.603920000000016,
+              "w": 267.5016,
+              "x": 468.5484000000001,
+              "y": 448.36632000000003,
+              "confidence": 0.89,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**FG**: I don't think so, but I think it was more a matter of habit, just the way we had become accustomed to working. There's no way I could have seen the Mickey continuity in that form.",
+          "value": "FG: I don't think so, but I think it was more a matter of habit, just the way we had become accustomed to working. There's no way I could have seen the Mickey continuity in that form.",
+          "bbox": [
+            {
+              "h": 38.70360000000005,
+              "w": 284.32559999999995,
+              "x": 468.5484000000001,
+              "y": 474.56568000000004,
+              "confidence": 0.86,
+              "end_index": 186,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BH**: Carl, did you plot your comic books around the full length of the stories, or did you think in terms of one page to the next?",
+          "value": "BH: Carl, did you plot your comic books around the full length of the stories, or did you think in terms of one page to the next?",
+          "bbox": [
+            {
+              "h": 25.603920000000016,
+              "w": 267.50159999999994,
+              "x": 469.3896000000001,
+              "y": 519.81912,
+              "confidence": 0.89,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: No, there had to be an overall concept, and then the pages were divided up out of that concept.",
+          "value": "CB: No, there had to be an overall concept, and then the pages were divided up out of that concept.",
+          "bbox": [
+            {
+              "h": 25.603920000000016,
+              "w": 267.50159999999994,
+              "x": 469.3896000000001,
+              "y": 546.6139200000001,
+              "confidence": 0.88,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "134, 135"
+    }
+  ]
+}

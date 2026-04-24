@@ -1,0 +1,663 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "142 CARL BARKS: CONVERSATIONS",
+              "value": "142 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.183280573551826,
+                  "w": 124.7929687142721,
+                  "x": 121.80524506955032,
+                  "y": 40.82698415467799,
+                  "confidence": 0.81,
+                  "end_index": 28,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "142 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.18,
+              "w": 124.79,
+              "x": 121.81,
+              "y": 40.83,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Erika Fuchs did translate the whole spirit, the meaning of the words.",
+          "value": "H: Erika Fuchs did translate the whole spirit, the meaning of the words.",
+          "bbox": [
+            {
+              "h": 12.070192938381295,
+              "w": 273.43529434427404,
+              "x": 121.06056197003622,
+              "y": 64.6445531303592,
+              "confidence": 0.85,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** I don't know how she did it—she must have had a very good knowledge of English.",
+          "value": "B: I don't know how she did it—she must have had a very good knowledge of English.",
+          "bbox": [
+            {
+              "h": 22.87120529801325,
+              "w": 275.493,
+              "x": 120.659625,
+              "y": 77.28890066225166,
+              "confidence": 0.89,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** What was the first comic strip you ever saw in your life?\n**B:** Oh, that was a long time ago; it was in my childhood around 1906 or 1907.",
+          "value": "H: What was the first comic strip you ever saw in your life?\nB: Oh, that was a long time ago; it was in my childhood around 1906 or 1907.",
+          "bbox": [
+            {
+              "h": 35.130960000000016,
+              "w": 279.27840000000003,
+              "x": 120.2916,
+              "y": 111.34728000000001,
+              "confidence": 0.81,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.14,
+              "w": 228.18,
+              "x": 120.13,
+              "y": 110.15,
+              "confidence": 1.0,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 24.19,
+              "w": 280.75,
+              "x": 118.29,
+              "y": 123.82,
+              "confidence": 1.0,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 65
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** What was it? *Little Nemo*?",
+          "value": "H: What was it? Little Nemo?",
+          "bbox": [
+            {
+              "h": 10.370561089939013,
+              "w": 116.45178417373286,
+              "x": 119.56485932140818,
+              "y": 157.5005387052211,
+              "confidence": 0.91,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Yes, *Little Nemo* was the first comic that I remember—and then came *Happy Hooligan* and others, but I most clearly remember Winsor McCay's *Little Nemo*—wonderful drawings.",
+          "value": "B: Yes, Little Nemo was the first comic that I remember—and then came Happy Hooligan and others, but I most clearly remember Winsor McCay's Little Nemo—wonderful drawings.",
+          "bbox": [
+            {
+              "h": 38.013051848323194,
+              "w": 282.35067893125955,
+              "x": 119.23889532321839,
+              "y": 170.6736949290206,
+              "confidence": 0.97,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Did you imagine back then that you would be drawing comics yourself?",
+          "value": "H: Did you imagine back then that you would be drawing comics yourself?",
+          "bbox": [
+            {
+              "h": 22.005265665491624,
+              "w": 275.23152753429883,
+              "x": 118.61623270769819,
+              "y": 217.5221536609185,
+              "confidence": 0.96,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** I believe so. I always wanted to know how to make something like this and I had a great desire to try it myself.",
+          "value": "B: I believe so. I always wanted to know how to make something like this and I had a great desire to try it myself.",
+          "bbox": [
+            {
+              "h": 24.991294300209614,
+              "w": 283.0127627786776,
+              "x": 118.46596117568599,
+              "y": 243.47771924542687,
+              "confidence": 0.96,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** These stories used to appear in the Sunday paper in those days, didn't they?",
+          "value": "H: These stories used to appear in the Sunday paper in those days, didn't they?",
+          "bbox": [
+            {
+              "h": 23.317434796589136,
+              "w": 282.1592079542207,
+              "x": 117.83378136313834,
+              "y": 277.70330452791546,
+              "confidence": 0.96,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** In the Sunday papers, yes. We got the paper around Tuesday. In San Francisco the paper appeared on Saturday or Sunday, but we would get it up there at our home ranch at about Tuesday of the following week. We were living on this ranch up in eastern Oregon.",
+          "value": "B: In the Sunday papers, yes. We got the paper around Tuesday. In San Francisco the paper appeared on Saturday or Sunday, but we would get it up there at our home ranch at about Tuesday of the following week. We were living on this ranch up in eastern Oregon.",
+          "bbox": [
+            {
+              "h": 51.18700584032011,
+              "w": 283.12133396055646,
+              "x": 117.15599414062501,
+              "y": 303.77626613471807,
+              "confidence": 0.96,
+              "end_index": 262,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Which comic strip inspired you the most?",
+          "value": "H: Which comic strip inspired you the most?",
+          "bbox": [
+            {
+              "h": 11.372451576791148,
+              "w": 171.3578963593274,
+              "x": 116.80742679949506,
+              "y": 363.984115644055,
+              "confidence": 0.91,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Oh, I've been asked that question many times. I can't think about any less than a dozen of them.",
+          "value": "B: Oh, I've been asked that question many times. I can't think about any less than a dozen of them.",
+          "bbox": [
+            {
+              "h": 22.543652829649393,
+              "w": 281.05920781726377,
+              "x": 116.28504538633767,
+              "y": 376.9144135003812,
+              "confidence": 0.95,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** I guess *Popeye the Sailor* was one of them?",
+          "value": "H: I guess Popeye the Sailor was one of them?",
+          "bbox": [
+            {
+              "h": 10.936480120998478,
+              "w": 180.91496543326028,
+              "x": 116.19532075909872,
+              "y": 410.89476483898636,
+              "confidence": 0.92,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** One of them could have been *Popeye the Sailor*. I loved the stories, but I didn't care much for the drawings.",
+          "value": "B: One of them could have been Popeye the Sailor. I loved the stories, but I didn't care much for the drawings.",
+          "bbox": [
+            {
+              "h": 25.069209660823216,
+              "w": 272.80406625142916,
+              "x": 115.67266384813264,
+              "y": 423.91068981516776,
+              "confidence": 0.95,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** You liked the stories?",
+          "value": "H: You liked the stories?",
+          "bbox": [
+            {
+              "h": 9.820136490091448,
+              "w": 93.8597491663491,
+              "x": 115.54548404153965,
+              "y": 457.492617987805,
+              "confidence": 0.92,
+              "end_index": 28,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Oh, the stories were very funny, yes.",
+          "value": "B: Oh, the stories were very funny, yes.",
+          "bbox": [
+            {
+              "h": 11.72736978372709,
+              "w": 152.91459537561929,
+              "x": 115.20943932807738,
+              "y": 470.9302609613187,
+              "confidence": 0.94,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** And strange.",
+          "value": "H: And strange.",
+          "bbox": [
+            {
+              "h": 10.809759074885678,
+              "w": 61.22435388481326,
+              "x": 115.04882410561167,
+              "y": 491.6411388624239,
+              "confidence": 0.9,
+              "end_index": 18,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Yes, the construction of the stories, and the way the gags were phrased, and the way these absurd characters would be introduced. Weird—and they made no sense. Fascinating (laughs).",
+          "value": "B: Yes, the construction of the stories, and the way the gags were phrased, and the way these absurd characters would be introduced. Weird—and they made no sense. Fascinating (laughs).",
+          "bbox": [
+            {
+              "h": 38.01432827743904,
+              "w": 283.2851674983327,
+              "x": 114.12763456912158,
+              "y": 504.8724967082699,
+              "confidence": 0.95,
+              "end_index": 187,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\[Interruption of tape]",
+          "value": "[Interruption of tape]",
+          "bbox": [
+            {
+              "h": 10.25260927152317,
+              "w": 82.017,
+              "x": 126.70575000000002,
+              "y": 544.4398410596027,
+              "confidence": 0.87,
+              "end_index": 22,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "But I guess I was more influenced by drawings. I liked the art. I was",
+          "value": "But I guess I was more influenced by drawings. I liked the art. I was",
+          "bbox": [
+            {
+              "h": 13.695119999999974,
+              "w": 259.93080000000003,
+              "x": 126.18,
+              "y": 556.7364000000001,
+              "confidence": 0.88,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nGOTTFRIED HELNWEIN / 1992 143\n\\</page_header>",
+          "value": "<page_header>\nGOTTFRIED HELNWEIN / 1992 143\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 128.81,
+              "x": 620.39,
+              "y": 38.91,
+              "confidence": 1.0,
+              "end_index": 43,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "more inspired by that than the stories or gags. So I was quite a collector of comic strips that had good artwork in them, like *Prince Valiant*.",
+          "value": "more inspired by that than the stories or gags. So I was quite a collector of comic strips that had good artwork in them, like Prince Valiant.",
+          "bbox": [
+            {
+              "h": 25.603919999999995,
+              "w": 277.59600000000006,
+              "x": 466.0248000000001,
+              "y": 63.71208000000001,
+              "confidence": 0.92,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** By Hal Foster.",
+          "value": "H: By Hal Foster.",
+          "bbox": [
+            {
+              "h": 11.059540297494282,
+              "w": 65.71915072408538,
+              "x": 466.3408510861281,
+              "y": 97.89549170993715,
+              "confidence": 0.9,
+              "end_index": 20,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Yes, and *Flash Gordon* by Alex Raymond. There was no humor, and their stuff, their stories, were really awful—but I could just sit there and look at the drawings and be inspired. Of course, I couldn't use those drawings very much in doing the duck stories later on, except for the background or the atmosphere of the places the ducks had to go. That inspired me to do some nice drawings in there, and it helped to put those duck stories over and make them popular. You know? Because they appeared to go to real places.",
+          "value": "B: Yes, and Flash Gordon by Alex Raymond. There was no humor, and their stuff, their stories, were really awful—but I could just sit there and look at the drawings and be inspired. Of course, I couldn't use those drawings very much in doing the duck stories later on, except for the background or the atmosphere of the places the ducks had to go. That inspired me to do some nice drawings in there, and it helped to put those duck stories over and make them popular. You know? Because they appeared to go to real places.",
+          "bbox": [
+            {
+              "h": 103.32530593559451,
+              "w": 284.7065483517531,
+              "x": 466.31695791253816,
+              "y": 109.45631408631863,
+              "confidence": 0.96,
+              "end_index": 525,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** What was the first story you wrote yourself?",
+          "value": "H: What was the first story you wrote yourself?",
+          "bbox": [
+            {
+              "h": 11.788088807641017,
+              "w": 184.62670984184456,
+              "x": 468.0213877191312,
+              "y": 219.58523540396345,
+              "confidence": 0.9,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** That one here—that was in spring of 1943. They sent me a script from the studio—or from the editorial office. So then I got to do the second and third story, and as I went along, I was beginning to get pretty well established writing stories. At that time it was OK to make black ducks; in those days it was still possible to draw these black ducks. But today nobody would dare to do that, because it is insulting the Negroes.",
+          "value": "B: That one here—that was in spring of 1943. They sent me a script from the studio—or from the editorial office. So then I got to do the second and third story, and as I went along, I was beginning to get pretty well established writing stories. At that time it was OK to make black ducks; in those days it was still possible to draw these black ducks. But today nobody would dare to do that, because it is insulting the Negroes.",
+          "bbox": [
+            {
+              "h": 77.29083221227138,
+              "w": 284.3092304211129,
+              "x": 468.2137853706175,
+              "y": 232.41288708555646,
+              "confidence": 0.96,
+              "end_index": 432,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Well, I like those black ducks.",
+          "value": "H: Well, I like those black ducks.",
+          "bbox": [
+            {
+              "h": 10.713530502096054,
+              "w": 125.05692066025158,
+              "x": 469.2579220655488,
+              "y": 317.7894722703888,
+              "confidence": 0.92,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** But look at this duck with the earrings; that would be totally impossible today.",
+          "value": "B: But look at this duck with the earrings; that would be totally impossible today.",
+          "bbox": [
+            {
+              "h": 26.09141664443598,
+              "w": 283.6102674352135,
+              "x": 469.22140608326987,
+              "y": 329.5948460556403,
+              "confidence": 0.97,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Apart from Donald was there any other Disney character you liked?",
+          "value": "H: Apart from Donald was there any other Disney character you liked?",
+          "bbox": [
+            {
+              "h": 12.355708609271517,
+              "w": 273.12712500000004,
+              "x": 469.49475,
+              "y": 361.4701986754967,
+              "confidence": 0.94,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** There was one I couldn't stand; it was Disney's Goofy.",
+          "value": "B: There was one I couldn't stand; it was Disney's Goofy.",
+          "bbox": [
+            {
+              "h": 10.734875233422278,
+              "w": 222.08374254477897,
+              "x": 469.82394483612813,
+              "y": 376.03194004859,
+              "confidence": 0.92,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Why?",
+          "value": "H: Why?",
+          "bbox": [
+            {
+              "h": 10.912192511432918,
+              "w": 35.59737240377289,
+              "x": 469.92487721512964,
+              "y": 396.31493054496957,
+              "confidence": 0.9,
+              "end_index": 10,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Goofy was simply a half-wit. I could never understand what was supposed to be funny about a half-wit. I liked Mickey for his purposes. He was good in adventure strips. But the thought of having to draw something like this did not appeal to me. I enjoyed working with the duck—because I could knock him around and have him get hurt. I could let him fall off cliffs and everything, you know. It was lots of fun with Donald. With Mickey it would have been kind of dangerous, because Mickey always had to be right. He always had to come out the winner. With the duck I had a comedian that I could treat badly and who I could make fun of.",
+          "value": "B: Goofy was simply a half-wit. I could never understand what was supposed to be funny about a half-wit. I liked Mickey for his purposes. He was good in adventure strips. But the thought of having to draw something like this did not appeal to me. I enjoyed working with the duck—because I could knock him around and have him get hurt. I could let him fall off cliffs and everything, you know. It was lots of fun with Donald. With Mickey it would have been kind of dangerous, because Mickey always had to be right. He always had to come out the winner. With the duck I had a comedian that I could treat badly and who I could make fun of.",
+          "bbox": [
+            {
+              "h": 128.85275364900917,
+              "w": 282.8676756145198,
+              "x": 469.78552541444367,
+              "y": 407.7315252953507,
+              "confidence": 0.98,
+              "end_index": 639,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**H:** Donald was the loser type.",
+          "value": "H: Donald was the loser type.",
+          "bbox": [
+            {
+              "h": 9.463947019867533,
+              "w": 115.13924999999995,
+              "x": 471.860625,
+              "y": 546.017165562914,
+              "confidence": 0.93,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** That's right, he was a kind of loser.",
+          "value": "B: That's right, he was a kind of loser.",
+          "bbox": [
+            {
+              "h": 10.7783841059603,
+              "w": 146.421375,
+              "x": 471.59775,
+              "y": 558.3728741721854,
+              "confidence": 0.95,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "142, 143"
+    }
+  ]
+}

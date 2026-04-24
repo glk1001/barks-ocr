@@ -1,0 +1,233 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "98\nCARL BARKS: CONVERSATIONS",
+              "value": "98\nCARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 12.95281264767531,
+                  "w": 104.37630197217989,
+                  "x": 141.30738431307168,
+                  "y": 32.40223288276487,
+                  "confidence": 0.79,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "98\nCARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 12.95,
+              "w": 104.38,
+              "x": 141.31,
+              "y": 32.4,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: How did you come up with the story \"Only a Poor Old Man\"?**\n**BARKS:** They wrote a letter from the office and asked if I would do a thirty-two-page Scrooge comic book. And I thought, what little I had used Scrooge up to that time, he didn't have any foundation; nobody knew where he came from, although he had been Donald's uncle all these years. But what was his background? So I thought, well, I'll just work in a little bit about where he came from, how he accumulated his wealth, and how he's out to protect it—I had already invented the Beagle Boys at that time. And so I just turned loose on everything I could think of that would help develop Scrooge's character.",
+          "value": "Q: How did you come up with the story \"Only a Poor Old Man\"?\nBARKS: They wrote a letter from the office and asked if I would do a thirty-two-page Scrooge comic book. And I thought, what little I had used Scrooge up to that time, he didn't have any foundation; nobody knew where he came from, although he had been Donald's uncle all these years. But what was his background? So I thought, well, I'll just work in a little bit about where he came from, how he accumulated his wealth, and how he's out to protect it—I had already invented the Beagle Boys at that time. And so I just turned loose on everything I could think of that would help develop Scrooge's character.",
+          "bbox": [
+            {
+              "h": 129.80592000000001,
+              "w": 284.3256,
+              "x": 120.2916,
+              "y": 55.37592000000001,
+              "confidence": 0.9,
+              "end_index": 675,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: In Duckburg you created a city with a whole history, unlike Metropolis and Gotham City.**\n**BARKS:** Creating a history for Duckburg gave me a little material to write about. The founder of Duckburg would naturally have to be a member of the feathered family, and here we get back to the phonetics again: Cornelius Coot sounds better than George Coot. And the contest that Uncle Scrooge and the Maharajah got into became more and more ridiculous as time went on; and I don't blame that woman for writing a letter afterward saying that she thought that it was a gross misuse of money to build these enormous statues all crusted with diamonds when there were so many things that could have been done with that money—like building hospitals and schools and better jails. I wrote back to the office—I think I did—telling them that the woman missed the point entirely. All that money that had been spent on those statues had just been spent for labor and materials—all that money had gone into circulation, much better than if it had continued lying in the Maharajah's money bin or in Uncle Scrooge's money bin. All that money had created a tremendous amount of work: work for jewelers and goldsmiths and concrete men and the hydraulics experts. Everybody had a job out of that, so that that money hadn't been wasted any more than if it had been used in the building of hospitals.",
+          "value": "Q: In Duckburg you created a city with a whole history, unlike Metropolis and Gotham City.\nBARKS: Creating a history for Duckburg gave me a little material to write about. The founder of Duckburg would naturally have to be a member of the feathered family, and here we get back to the phonetics again: Cornelius Coot sounds better than George Coot. And the contest that Uncle Scrooge and the Maharajah got into became more and more ridiculous as time went on; and I don't blame that woman for writing a letter afterward saying that she thought that it was a gross misuse of money to build these enormous statues all crusted with diamonds when there were so many things that could have been done with that money—like building hospitals and schools and better jails. I wrote back to the office—I think I did—telling them that the woman missed the point entirely. All that money that had been spent on those statues had just been spent for labor and materials—all that money had gone into circulation, much better than if it had continued lying in the Maharajah's money bin or in Uncle Scrooge's money bin. All that money had created a tremendous amount of work: work for jewelers and goldsmiths and concrete men and the hydraulics experts. Everybody had a job out of that, so that that money hadn't been wasted any more than if it had been used in the building of hospitals.",
+          "bbox": [
+            {
+              "h": 23.499733693788126,
+              "w": 271.048731963367,
+              "x": 107.01698603634719,
+              "y": 457.23516932641013,
+              "confidence": 0.66,
+              "end_index": 1379,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: Scrooge is often accused of being the arch-capitalist. Do you agree with that?**\n**BARKS:** No, he is a complete enemy of the capitalist system. He would destroy it in one year's time; there would no longer be any capitalism or free enterprise. He would freeze all the stuff that keeps capitalism going—that is, the spending of money. The faster money is spent, the more prosperity everybody has. Scrooge never spent anything, so everybody would progressively grow poorer as he accumulated more of their money, and in",
+          "value": "Q: Scrooge is often accused of being the arch-capitalist. Do you agree with that?\nBARKS: No, he is a complete enemy of the capitalist system. He would destroy it in one year's time; there would no longer be any capitalism or free enterprise. He would freeze all the stuff that keeps capitalism going—that is, the spending of money. The faster money is spent, the more prosperity everybody has. Scrooge never spent anything, so everybody would progressively grow poorer as he accumulated more of their money, and in",
+          "bbox": [
+            {
+              "h": 85.5149004620808,
+              "w": 282.6924590081937,
+              "x": 105.06121456983614,
+              "y": 483.0882837461891,
+              "confidence": 0.93,
+              "end_index": 521,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nAULT, ANDRAE, AND GONG / 1975 99\n\\</page_header>",
+          "value": "<page_header>\nAULT, ANDRAE, AND GONG / 1975 99\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.846921776748292,
+              "w": 122.11430352038875,
+              "x": 602.6152911585367,
+              "y": 39.49864692144627,
+              "confidence": 0.93,
+              "end_index": 62,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "time nobody would have any money but him. And he wouldn't spend any of it, so that would be the end of capitalism.",
+          "value": "time nobody would have any money but him. And he wouldn't spend any of it, so that would be the end of capitalism.",
+          "bbox": [
+            {
+              "h": 26.361310489710366,
+              "w": 284.3117349466465,
+              "x": 460.45571698742384,
+              "y": 63.14012629573172,
+              "confidence": 0.97,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Where did the money swim come from?**\n**BARKS:** I don't know how I got on that idea. It just seemed like a ridiculous thing for him to physically play with his money, and those were things that he could do with it that would make a good picture in a comic book. The fact that he dives around in it, but the Beagle Boys couldn't had to be explained some way. Scrooge does it, but we know that when you stack up a few dollars and touch them, they're hard; they don't yield or bounce around like water. You can't dive into a pile of money like you would into a snowdrift, so he had to have a trick by which he did it. And I don't explain that trick because I don't understand it myself. Perhaps it has something to do with his character. Often he can do things which other people can't. He can go out in the desert and smell the presence of gold; other prospectors would have to dig mountains of dirt before they could find any nuggets.",
+          "value": "Q: Where did the money swim come from?\nBARKS: I don't know how I got on that idea. It just seemed like a ridiculous thing for him to physically play with his money, and those were things that he could do with it that would make a good picture in a comic book. The fact that he dives around in it, but the Beagle Boys couldn't had to be explained some way. Scrooge does it, but we know that when you stack up a few dollars and touch them, they're hard; they don't yield or bounce around like water. You can't dive into a pile of money like you would into a snowdrift, so he had to have a trick by which he did it. And I don't explain that trick because I don't understand it myself. Perhaps it has something to do with his character. Often he can do things which other people can't. He can go out in the desert and smell the presence of gold; other prospectors would have to dig mountains of dirt before they could find any nuggets.",
+          "bbox": [
+            {
+              "h": 181.6092,
+              "w": 286.00800000000004,
+              "x": 460.97760000000005,
+              "y": 98.24760000000002,
+              "confidence": 0.79,
+              "end_index": 938,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.41,
+              "w": 170.08,
+              "x": 460.82,
+              "y": 96.48,
+              "confidence": 1.0,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 171.4,
+              "w": 284.69,
+              "x": 461.08,
+              "y": 109.1,
+              "confidence": 0.79,
+              "end_index": 938,
+              "label": "text",
+              "start_index": 43
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Are your stories autobiographical, or do they reflect your fantasies?**\n**BARKS:** No, they have no relation to my own life or my own desires in life. I never had any desire to be rich. I always felt myself to be somewhat of an unlucky person, but that's the only attachment I can see between Donald and me. Donald is a victim of so many circumstances, but Donald was also making those circumstances against himself by his own stupidity. I just created those characters out of whole cloth. They had nothing to do with my own psychology. I would identify more with Donald than I would with any of the others, because when you look at Donald, he was everything, he was everybody. There isn't a person in the United States who couldn't identify with him, because he's always been in situations in which nearly every person finds himself at different times. He makes the same mistakes that we all make. I guess he's the most interesting character, because he's more interesting in more different situations. Now Uncle Scrooge is very interesting in situations involving money and the finding of wealth—more interesting than Donald could be—but Donald can spread over a whole bunch of situations. He can be a fireman or a sailor or anything—he has to be interesting in all of them.",
+          "value": "Q: Are your stories autobiographical, or do they reflect your fantasies?\nBARKS: No, they have no relation to my own life or my own desires in life. I never had any desire to be rich. I always felt myself to be somewhat of an unlucky person, but that's the only attachment I can see between Donald and me. Donald is a victim of so many circumstances, but Donald was also making those circumstances against himself by his own stupidity. I just created those characters out of whole cloth. They had nothing to do with my own psychology. I would identify more with Donald than I would with any of the others, because when you look at Donald, he was everything, he was everybody. There isn't a person in the United States who couldn't identify with him, because he's always been in situations in which nearly every person finds himself at different times. He makes the same mistakes that we all make. I guess he's the most interesting character, because he's more interesting in more different situations. Now Uncle Scrooge is very interesting in situations involving money and the finding of wealth—more interesting than Donald could be—but Donald can spread over a whole bunch of situations. He can be a fireman or a sailor or anything—he has to be interesting in all of them.",
+          "bbox": [
+            {
+              "h": 235.79424,
+              "w": 286.84920000000005,
+              "x": 464.34240000000005,
+              "y": 287.00208000000003,
+              "confidence": 0.88,
+              "end_index": 1280,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Why do you think Scrooge outpaced him and became the most popular Disney character?**\n**BARKS:** I think it's because he's most easily understood. I think he repre-",
+          "value": "Q: Why do you think Scrooge outpaced him and became the most popular Disney character?\nBARKS: I think it's because he's most easily understood. I think he repre-",
+          "bbox": [
+            {
+              "h": 26.91208965320118,
+              "w": 283.19105995141007,
+              "x": 468.48482512385675,
+              "y": 530.0561949695124,
+              "confidence": 0.7,
+              "end_index": 168,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 27.87,
+              "w": 284.96,
+              "x": 466.87,
+              "y": 528.14,
+              "confidence": 0.7,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.2,
+              "w": 282.59,
+              "x": 467.92,
+              "y": 555.22,
+              "confidence": 1.0,
+              "end_index": 168,
+              "label": "text",
+              "start_index": 97
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "98, 99"
+    }
+  ]
+}

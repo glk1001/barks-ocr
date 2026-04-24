@@ -1,0 +1,266 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "J. MICHAEL BARRIER / 1973 51",
+              "value": "J. MICHAEL BARRIER / 1973 51",
+              "bbox": [
+                {
+                  "h": 8.68,
+                  "w": 116.45,
+                  "x": 609.87,
+                  "y": 42.59,
+                  "confidence": 1.0,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "J. MICHAEL BARRIER / 1973 51",
+          "bbox": [
+            {
+              "h": 8.68,
+              "w": 116.45,
+              "x": 609.87,
+              "y": 42.59,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "caption": "Carl Barks: On His Life and Career J. MICHAEL BARRIER / 1973",
+          "md": "![Carl Barks: On His Life and Career J. MICHAEL BARRIER / 1973](CB-Conversations-scan-2-rotated_spread_016_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-2-rotated_spread_016_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 184.5864,
+              "w": 304.5144,
+              "x": 83.2788,
+              "y": 107.77464,
+              "confidence": 0.79,
+              "end_index": 85,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "md": "Unpublished interview conducted on 22 November 1973 in Goleta, California. Portions of this interview appeared in altered form in J. Michael Barrier's *Carl Barks and the Art of the Comic Book*. Reprinted by permission of J. Michael Barrier.",
+          "value": "Unpublished interview conducted on 22 November 1973 in Goleta, California. Portions of this interview appeared in altered form in J. Michael Barrier's Carl Barks and the Art of the Comic Book. Reprinted by permission of J. Michael Barrier.",
+          "bbox": [
+            {
+              "h": 74.88770620712654,
+              "w": 155.18001385646912,
+              "x": 121.41825830673592,
+              "y": 314.74557884908546,
+              "confidence": 0.98,
+              "end_index": 240,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** You started as an in-betweener, didn't you? That was your first job at the Disney studio?",
+          "value": "BARRIER: You started as an in-betweener, didn't you? That was your first job at the Disney studio?",
+          "bbox": [
+            {
+              "h": 24.231163033536603,
+              "w": 283.5353069859947,
+              "x": 97.44643009241616,
+              "y": 400.5912871903583,
+              "confidence": 0.96,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** That was the first thing they put me on, and I wasn't making out too well at it. I began turning in scripts, or gags for the comic strip, and I was attracting a little attention that way. I was beginning to turn in some pretty good gags, and finally I turned in the gag of the barber chair that was made into a movie called \"Modern Inventions.\" Walt paid me fifty dollars for the gag. He seemed to get the idea that I should be working in the story department rather than over in animation.",
+          "value": "BARKS: That was the first thing they put me on, and I wasn't making out too well at it. I began turning in scripts, or gags for the comic strip, and I was attracting a little attention that way. I was beginning to turn in some pretty good gags, and finally I turned in the gag of the barber chair that was made into a movie called \"Modern Inventions.\" Walt paid me fifty dollars for the gag. He seemed to get the idea that I should be working in the story department rather than over in animation.",
+          "bbox": [
+            {
+              "h": 91.70724812309453,
+              "w": 283.5926042688882,
+              "x": 96.95492321777344,
+              "y": 427.0069522865855,
+              "confidence": 0.98,
+              "end_index": 500,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** So it was Walt's personal decision to put you in the story department.",
+          "value": "BARRIER: So it was Walt's personal decision to put you in the story department.",
+          "bbox": [
+            {
+              "h": 24.151882602896404,
+              "w": 274.91228192585277,
+              "x": 96.58416578041636,
+              "y": 528.7846233755718,
+              "confidence": 0.97,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Well, yes, he was basically back of it.",
+          "value": "BARKS: Well, yes, he was basically back of it.",
+          "bbox": [
+            {
+              "h": 11.304158940397429,
+              "w": 175.07475,
+              "x": 96.475125,
+              "y": 554.9553377483444,
+              "confidence": 0.94,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** It seems remarkable that he would be that much in control of the whole studio, that he would reach down and put an in-betweener in the story department.",
+          "value": "BARRIER: It seems remarkable that he would be that much in control of the whole studio, that he would reach down and put an in-betweener in the story department.",
+          "bbox": [
+            {
+              "h": 36.01557615894042,
+              "w": 280.2247500000001,
+              "x": 443.47012500000005,
+              "y": 66.51051655629139,
+              "confidence": 0.97,
+              "end_index": 164,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** He was a man who had his fingers on just about everything around there. They say he used to prowl around the studio at night, all by himself, even when the janitors had gone home, and look in the guys' desks and look through their papers to see if they had been thinking up any little private ideas on their own.",
+          "value": "BARKS: He was a man who had his fingers on just about everything around there. They say he used to prowl around the studio at night, all by himself, even when the janitors had gone home, and look in the guys' desks and look through their papers to see if they had been thinking up any little private ideas on their own.",
+          "bbox": [
+            {
+              "h": 60.4641059602649,
+              "w": 284.1678750000001,
+              "x": 442.418625,
+              "y": 106.2065165562914,
+              "confidence": 0.97,
+              "end_index": 322,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** When you went into the story department, did they put you in with some other people right away?",
+          "value": "BARRIER: When you went into the story department, did they put you in with some other people right away?",
+          "bbox": [
+            {
+              "h": 21.55676821192054,
+              "w": 282.3277500000001,
+              "x": 444.25875,
+              "y": 176.92323178807948,
+              "confidence": 0.95,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Oh, yeah, that's right. The first thing that happened to me from animation was to go over to work with Jack King, who was a director. Jack had just been brought back to the studio from Schlesinger's at that point and told to make that \"Modern Inventions\" into a duck movie. So for about two months, I was working with Jack King. When that went into animation, I was put in a little room and told to think up another story. I wasn't getting very far very fast, so one of the guys in the department said, \"Barks is just wasting his time here, he'd better be put with somebody like Harry Reeves, who has had a lot of story experience, and then his wild thoughts will be directed more along usable lines.\" We worked as a team for a number of years. I worked on thirty-six \\[duck cartoons], and I would say about eighteen of those I worked with Harry Reeves. There was a whole swarm of them from 1936 through 1942, and I had a finger in all of them.",
+          "value": "BARKS: Oh, yeah, that's right. The first thing that happened to me from animation was to go over to work with Jack King, who was a director. Jack had just been brought back to the studio from Schlesinger's at that point and told to make that \"Modern Inventions\" into a duck movie. So for about two months, I was working with Jack King. When that went into animation, I was put in a little room and told to think up another story. I wasn't getting very far very fast, so one of the guys in the department said, \"Barks is just wasting his time here, he'd better be put with somebody like Harry Reeves, who has had a lot of story experience, and then his wild thoughts will be directed more along usable lines.\" We worked as a team for a number of years. I worked on thirty-six [duck cartoons], and I would say about eighteen of those I worked with Harry Reeves. There was a whole swarm of them from 1936 through 1942, and I had a finger in all of them.",
+          "bbox": [
+            {
+              "h": 178.87567386385297,
+              "w": 285.7946144245427,
+              "x": 443.80252562881105,
+              "y": 201.63656783774778,
+              "confidence": 0.98,
+              "end_index": 954,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** What were your impressions of Walt? Did you only see him when he came in for the dissection of the story?",
+          "value": "BARRIER: What were your impressions of Walt? Did you only see him when he came in for the dissection of the story?",
+          "bbox": [
+            {
+              "h": 22.34543046357618,
+              "w": 270.7612500000001,
+              "x": 445.04737500000005,
+              "y": 389.86203973509936,
+              "confidence": 0.95,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I had a great respect for him. His ideas were always good; his analysis of things was always so darned keen. He had a tremendous intellect, as far as that kind of stuff went. He could look at a gag, and like Chaplin, he could tell whether a gag was funny or not just by—he could see it moving in his mind. Now, that's one of the things that handicapped me. I don't think I visualized stuff in action like I should have. I was more of a plot man. I could work out the plots, the timing on gags, but all the individual action that was to depict that gag on the screen was something that was a little over my head. I didn't see it. Walt, I think, could see it \\[with] music, whether it was on eight-beat, or four-beat, or whatever. He could hear the music, as he was looking at that storyboard. Now, these guys—Harry Reeves, for instance—he would see everything in action, he",
+          "value": "BARKS: I had a great respect for him. His ideas were always good; his analysis of things was always so darned keen. He had a tremendous intellect, as far as that kind of stuff went. He could look at a gag, and like Chaplin, he could tell whether a gag was funny or not just by—he could see it moving in his mind. Now, that's one of the things that handicapped me. I don't think I visualized stuff in action like I should have. I was more of a plot man. I could work out the plots, the timing on gags, but all the individual action that was to depict that gag on the screen was something that was a little over my head. I didn't see it. Walt, I think, could see it [with] music, whether it was on eight-beat, or four-beat, or whatever. He could hear the music, as he was looking at that storyboard. Now, these guys—Harry Reeves, for instance—he would see everything in action, he",
+          "bbox": [
+            {
+              "h": 154.6211982707698,
+              "w": 285.66908760480186,
+              "x": 444.78845715034305,
+              "y": 415.1852331173782,
+              "confidence": 0.98,
+              "end_index": 882,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "51"
+    }
+  ]
+}

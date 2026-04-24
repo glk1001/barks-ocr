@@ -1,0 +1,248 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# xxX INTRODUCTION",
+          "value": "xxX INTRODUCTION",
+          "bbox": [
+            {
+              "h": 14.460477453580907,
+              "w": 78.33675,
+              "x": 98.84100000000001,
+              "y": 17.615490716180375,
+              "confidence": 0.86,
+              "end_index": 17,
+              "label": "header",
+              "start_index": 2
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "print, Western Publishing was winding down its publication of comic books in the USA, the last appearing with a 1984 copyright date but dis­tributed in such a way that the actual date of publication is in question. But one thing is certain: Barks's work was never out of circulation in the USA until the end of 1998, when Gladstone Publishing lost its license to produce Disney comics.",
+          "value": "print, Western Publishing was winding down its publication of comic books in the USA, the last appearing with a 1984 copyright date but dis­tributed in such a way that the actual date of publication is in question. But one thing is certain: Barks's work was never out of circulation in the USA until the end of 1998, when Gladstone Publishing lost its license to produce Disney comics.",
+          "bbox": [
+            {
+              "h": 13.145888594164461,
+              "w": 92.532,
+              "x": 97.78950000000002,
+              "y": 107.79628647214855,
+              "confidence": 0.71,
+              "end_index": 384,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Although Barks himself dropped out of public view after the 1982 media blitz, he was allowed to paint the Disney ducks again—this time specifically for lithographic reproduction—and between 1982 and 1993 he produced seventeen new large oil paintings that began to command prices exceeding $75,000 at Sotheby's and other public auctions. Meanwhile, the black and white hardbound *Barks Library* was being published, and Gladstone Publishing, run by Bruce Hamilton, gained a license to publish regular Disney comic books again, including *Walt Disney's Comics and Stories* and *Uncle Scrooge* after a two-year hiatus. From 1991–1998 Gladstone Publishing went on to produce *The Carl Barks Library in Color*, approximately 140 volumes of Barks's stories in high quality graphic novel format. Thus Barks saw one of his earliest post-retirement dreams (\"in the back of \\[his] head\"), which he described to Paul Ciotti in his 1972 interview, of having his work collected in permanent, high-quality form. At the same time, he was producing paintings whose sale prices rivaled those of \"real\" living painters. For over thirty years after his official \"retirement\" in 1966 Barks kept breaking new ground, producing his last major creative outburst in 1996–97 when in less than six months he created a series of seventy-nine colored-pencil drawings for his ninety-sixth birthday celebration at Disney World, work which, unfortunately, almost \"wrecked \\[his] health\" (Ault and Ault).",
+          "value": "Although Barks himself dropped out of public view after the 1982 media blitz, he was allowed to paint the Disney ducks again—this time specifically for lithographic reproduction—and between 1982 and 1993 he produced seventeen new large oil paintings that began to command prices exceeding $75,000 at Sotheby's and other public auctions. Meanwhile, the black and white hardbound Barks Library was being published, and Gladstone Publishing, run by Bruce Hamilton, gained a license to publish regular Disney comic books again, including Walt Disney's Comics and Stories and Uncle Scrooge after a two-year hiatus. From 1991–1998 Gladstone Publishing went on to produce The Carl Barks Library in Color, approximately 140 volumes of Barks's stories in high quality graphic novel format. Thus Barks saw one of his earliest post-retirement dreams (\"in the back of [his] head\"), which he described to Paul Ciotti in his 1972 interview, of having his work collected in permanent, high-quality form. At the same time, he was producing paintings whose sale prices rivaled those of \"real\" living painters. For over thirty years after his official \"retirement\" in 1966 Barks kept breaking new ground, producing his last major creative outburst in 1996–97 when in less than six months he created a series of seventy-nine colored-pencil drawings for his ninety-sixth birthday celebration at Disney World, work which, unfortunately, almost \"wrecked [his] health\" (Ault and Ault).",
+          "bbox": [
+            {
+              "h": 76.45237488924352,
+              "w": 279.6969337664348,
+              "x": 99.2812329756574,
+              "y": 44.6936536787824,
+              "confidence": 0.91,
+              "end_index": 1471,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "During the years following the death of his wife Garé in 1993, Barks found himself under the control of two people (referred to here as \"the Carl Barks Studio\"), who had been hired to manage his business affairs and take care of him in his twilight years. Perhaps the less said about them here the better. Barks's saviors during the end of this period were Helen and Serene Hunicke, women hired to care for Barks, even well into his ninety-eighth year he was able to navigate the steep steps of his art studio in Grants Pass, Oregon, better than people a third his age. Also Gerhard (\"Gerry\") Tank, who had been Garé's physician, became one of Carl's closest friends and gave him help and support until life's end. It is important to realize that on the positive side, however, that the Carl Barks Studio kept Barks productive into his ninety-sixth year (even though",
+          "value": "During the years following the death of his wife Garé in 1993, Barks found himself under the control of two people (referred to here as \"the Carl Barks Studio\"), who had been hired to manage his business affairs and take care of him in his twilight years. Perhaps the less said about them here the better. Barks's saviors during the end of this period were Helen and Serene Hunicke, women hired to care for Barks, even well into his ninety-eighth year he was able to navigate the steep steps of his art studio in Grants Pass, Oregon, better than people a third his age. Also Gerhard (\"Gerry\") Tank, who had been Garé's physician, became one of Carl's closest friends and gave him help and support until life's end. It is important to realize that on the positive side, however, that the Carl Barks Studio kept Barks productive into his ninety-sixth year (even though",
+          "bbox": [
+            {
+              "h": 158.40100323932938,
+              "w": 284.96197238829075,
+              "x": 90.88874322956366,
+              "y": 393.6978335270579,
+              "confidence": 0.99,
+              "end_index": 865,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# INTRODUCTION xxxi",
+          "value": "INTRODUCTION xxxi",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 78.86,
+              "x": 654.56,
+              "y": 26.55,
+              "confidence": 1.0,
+              "end_index": 18,
+              "label": "header",
+              "start_index": 2
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "he himself would have preferred finally to retire), and they organized a European tour for Barks in 1994 that allowed Barks's many readers outside the USA to have direct experience with the man whose work they so admired. Without this tour, Barks would have remained, in many ways, an abstraction for many of his European admirers.",
+          "value": "he himself would have preferred finally to retire), and they organized a European tour for Barks in 1994 that allowed Barks's many readers outside the USA to have direct experience with the man whose work they so admired. Without this tour, Barks would have remained, in many ways, an abstraction for many of his European admirers.",
+          "bbox": [
+            {
+              "h": 62.93821051114711,
+              "w": 283.406799780869,
+              "x": 448.80977343750004,
+              "y": 49.85487338271723,
+              "confidence": 0.99,
+              "end_index": 330,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "At the same time that Barks was touring Europe in 1994 with his Carl Barks Studio managers, Gottfried Helnwein's traveling retrospective exhibition of Barks's artwork was beginning its four-year journey through Europe. One elegant answer to the question with which I opened this essay—\"Who is Carl Barks?\"—appears in Helnwein's catalogue for the exhibition. *Wer ist Carl Barks* reproduces page after page of Barks's drawings—revealing an astonishing variety of the expressions and bodily postures that Barks concocted and executed for the situations he put his characters into—often blown up to full-page size to reveal the energy of Barks's pencil work and the intricacy of his variable pen line and brush strokes. For those wanting to see immediately Barks's genius as a visual artist, the drawings in this book speak for themselves across all linguistic barriers.",
+          "value": "At the same time that Barks was touring Europe in 1994 with his Carl Barks Studio managers, Gottfried Helnwein's traveling retrospective exhibition of Barks's artwork was beginning its four-year journey through Europe. One elegant answer to the question with which I opened this essay—\"Who is Carl Barks?\"—appears in Helnwein's catalogue for the exhibition. Wer ist Carl Barks reproduces page after page of Barks's drawings—revealing an astonishing variety of the expressions and bodily postures that Barks concocted and executed for the situations he put his characters into—often blown up to full-page size to reveal the energy of Barks's pencil work and the intricacy of his variable pen line and brush strokes. For those wanting to see immediately Barks's genius as a visual artist, the drawings in this book speak for themselves across all linguistic barriers.",
+          "bbox": [
+            {
+              "h": 163.9305719416921,
+              "w": 283.79219616996954,
+              "x": 448.24550383479425,
+              "y": 114.9031436261433,
+              "confidence": 0.99,
+              "end_index": 866,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Perhaps, since, at the time of this writing, Barks's comics are no longer published in their native United States, the last words of the answer to the question with which I opened, \"Who is Carl Barks?\" should go to two European artists whose lives and work have been irreversibly transformed by Carl Barks, and who have answered the question better than I ever could.",
+          "value": "Perhaps, since, at the time of this writing, Barks's comics are no longer published in their native United States, the last words of the answer to the question with which I opened, \"Who is Carl Barks?\" should go to two European artists whose lives and work have been irreversibly transformed by Carl Barks, and who have answered the question better than I ever could.",
+          "bbox": [
+            {
+              "h": 74.24139113471796,
+              "w": 284.011191882622,
+              "x": 447.8228901962653,
+              "y": 282.55098116901684,
+              "confidence": 0.99,
+              "end_index": 366,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "First, Romano Scarpa, one of the most famous Italian Disney comic-book artists, wrote, at the time of Barks's passing on 25 August 2000:",
+          "value": "First, Romano Scarpa, one of the most famous Italian Disney comic-book artists, wrote, at the time of Barks's passing on 25 August 2000:",
+          "bbox": [
+            {
+              "h": 25.152042330411618,
+              "w": 274.0483896722561,
+              "x": 447.7032740567836,
+              "y": 359.7277611471037,
+              "confidence": 0.97,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "So, we are left on our own, and lost. We have lost the star that was guiding us through the streets of the Disney comic: the unique, unreachable Carl Barks. But with days passing by, we will realize more and more that the artistic and literary patrimony whose heirs we are ourselves, is such as to keep inspiring us always with new stories, on the track of his star, which will keep on shining, showing us the right paths to take.",
+          "value": "So, we are left on our own, and lost. We have lost the star that was guiding us through the streets of the Disney comic: the unique, unreachable Carl Barks. But with days passing by, we will realize more and more that the artistic and literary patrimony whose heirs we are ourselves, is such as to keep inspiring us always with new stories, on the track of his star, which will keep on shining, showing us the right paths to take.",
+          "bbox": [
+            {
+              "h": 65.7081740853659,
+              "w": 260.8614616520579,
+              "x": 470.6871045160062,
+              "y": 390.0023295160061,
+              "confidence": 0.99,
+              "end_index": 429,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "And finally, from Gottfried Helnwein, artist extraordinaire:",
+          "value": "And finally, from Gottfried Helnwein, artist extraordinaire:",
+          "bbox": [
+            {
+              "h": 11.091930297256118,
+              "w": 224.34187285632626,
+              "x": 458.7649117997333,
+              "y": 469.130658441311,
+              "confidence": 0.88,
+              "end_index": 59,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "In the Donald Duck of Carl Barks we recognize our fears, our uncertainties and weaknesses—our stupidity, our vanity, our depravity, our jealousy and our simple-mindedness. But also the very same stubbornness with which we stand up again and begin freshly after every defeat and every catastrophe.",
+          "value": "In the Donald Duck of Carl Barks we recognize our fears, our uncertainties and weaknesses—our stupidity, our vanity, our depravity, our jealousy and our simple-mindedness. But also the very same stubbornness with which we stand up again and begin freshly after every defeat and every catastrophe.",
+          "bbox": [
+            {
+              "h": 43.40164115853658,
+              "w": 260.82950390625,
+              "x": 469.8913666634909,
+              "y": 487.2103433403202,
+              "confidence": 0.96,
+              "end_index": 295,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "In retrospect I would say that from Donald Duck I have learned more about life than from all the schools I ever attended.",
+          "value": "In retrospect I would say that from Donald Duck I have learned more about life than from all the schools I ever attended.",
+          "bbox": [
+            {
+              "h": 20.527182078887243,
+              "w": 251.0294457650533,
+              "x": 470.536983255526,
+              "y": 531.1887994378811,
+              "confidence": 0.95,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

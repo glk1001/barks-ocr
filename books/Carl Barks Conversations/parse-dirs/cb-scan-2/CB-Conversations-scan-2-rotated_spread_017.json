@@ -1,0 +1,409 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "52 CARL BARKS: CONVERSATIONS",
+              "value": "52 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.44628015255812,
+                  "w": 120.70168224502191,
+                  "x": 101.9743304979278,
+                  "y": 39.91608799483137,
+                  "confidence": 0.83,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "52 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.45,
+              "w": 120.7,
+              "x": 101.97,
+              "y": 39.92,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "would see the turning of the feathers, and so on. With me, it was just the beginning of a gag and the climax of it and the ending. I could time those things out in my head, and the dialogue, where it fitted into the action, but ...",
+          "value": "would see the turning of the feathers, and so on. With me, it was just the beginning of a gag and the climax of it and the ending. I could time those things out in my head, and the dialogue, where it fitted into the action, but ...",
+          "bbox": [
+            {
+              "h": 48.14909568049735,
+              "w": 283.1128498803116,
+              "x": 101.2769954536252,
+              "y": 63.763200986089956,
+              "confidence": 0.98,
+              "end_index": 230,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** In other words, you couldn't see it in your mind as if it were already animated, whereas Walt could?",
+          "value": "BARRIER: In other words, you couldn't see it in your mind as if it were already animated, whereas Walt could?",
+          "bbox": [
+            {
+              "h": 23.816403347703883,
+              "w": 273.11243595774584,
+              "x": 100.91295640601183,
+              "y": 123.3708540241521,
+              "confidence": 0.96,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Walt could see the animation possibilities, and I couldn't. I could see a gag, and it looked funny in maybe three or four still pictures, but just how many feet of animation it was going to take to put that over was over my head.",
+          "value": "BARKS: Walt could see the animation possibilities, and I couldn't. I could see a gag, and it looked funny in maybe three or four still pictures, but just how many feet of animation it was going to take to put that over was over my head.",
+          "bbox": [
+            {
+              "h": 49.406050388243166,
+              "w": 282.53068544266864,
+              "x": 100.72831652236567,
+              "y": 149.70297506192838,
+              "confidence": 0.98,
+              "end_index": 239,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Now, after you and Harry Reeves worked together, you didn't go right then to work with Hannah, did you?",
+          "value": "BARRIER: Now, after you and Harry Reeves worked together, you didn't go right then to work with Hannah, did you?",
+          "bbox": [
+            {
+              "h": 24.353097470464935,
+              "w": 281.51359136218565,
+              "x": 100.69836865829842,
+              "y": 208.6669443978659,
+              "confidence": 0.95,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I guess Jack Hannah was the next partner I had after Harry Reeves. I just had those two partners during the years I was in the story department.",
+          "value": "BARKS: I guess Jack Hannah was the next partner I had after Harry Reeves. I just had those two partners during the years I was in the story department.",
+          "bbox": [
+            {
+              "h": 36.27200253429881,
+              "w": 276.51913541765913,
+              "x": 100.44631946991713,
+              "y": 234.76249170874624,
+              "confidence": 0.96,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Was there any significant difference in the way you worked with Harry Reeves and the way you worked with Jack Hannah?",
+          "value": "BARRIER: Was there any significant difference in the way you worked with Harry Reeves and the way you worked with Jack Hannah?",
+          "bbox": [
+            {
+              "h": 25.5,
+              "w": 270.5,
+              "x": 99.89,
+              "y": 280.24,
+              "confidence": 1.0,
+              "end_index": 129,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** There was a difference, because of the personalities of the two guys—Harry was a fireball; he was just full of nervous energy and on the go all the time, while Jack Hannah was a relaxed sort of a fellow who could sit at the coffee bar for half an hour and never miss the time he'd spent.",
+          "value": "BARKS: There was a difference, because of the personalities of the two guys—Harry was a fireball; he was just full of nervous energy and on the go all the time, while Jack Hannah was a relaxed sort of a fellow who could sit at the coffee bar for half an hour and never miss the time he'd spent.",
+          "bbox": [
+            {
+              "h": 63.35586754966886,
+              "w": 283.642125,
+              "x": 97.52662500000001,
+              "y": 306.7896158940398,
+              "confidence": 0.88,
+              "end_index": 297,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Did the difference in personalities show up in the kind of story work they did?",
+          "value": "BARRIER: Did the difference in personalities show up in the kind of story work they did?",
+          "bbox": [
+            {
+              "h": 23.661060151486243,
+              "w": 281.45075281654925,
+              "x": 99.59121810094322,
+              "y": 379.3133911108995,
+              "confidence": 0.96,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Yes, that's right. Jack Hannah's gags were more gentle. Harry just thought in terms of violent action.",
+          "value": "BARKS: Yes, that's right. Jack Hannah's gags were more gentle. Harry just thought in terms of violent action.",
+          "bbox": [
+            {
+              "h": 23.441230692644833,
+              "w": 282.70318463879096,
+              "x": 99.5202961991473,
+              "y": 405.16877473799553,
+              "confidence": 0.96,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Could you tell me again just when you decided to leave the Disney story department?",
+          "value": "BARRIER: Could you tell me again just when you decided to leave the Disney story department?",
+          "bbox": [
+            {
+              "h": 23.396980132450324,
+              "w": 271.024125,
+              "x": 99.10387500000002,
+              "y": 438.49621192052984,
+              "confidence": 0.96,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** It was when they were starting to put badges on everybody, and we were going to have to check in at the gate every morning, and we couldn't have any gasoline to drive anywhere, and well, we were just going to be locked in there for the duration, and I just didn't think I wanted to be locked into that place for the duration. I'd had an operation on my nose just a few weeks before, because the darned sinus trouble was getting me so bad. That draft they had blowing down—they had their 68 degrees in that studio in those days—and boy, it came blowing down",
+          "value": "BARKS: It was when they were starting to put badges on everybody, and we were going to have to check in at the gate every morning, and we couldn't have any gasoline to drive anywhere, and well, we were just going to be locked in there for the duration, and I just didn't think I wanted to be locked into that place for the duration. I'd had an operation on my nose just a few weeks before, because the darned sinus trouble was getting me so bad. That draft they had blowing down—they had their 68 degrees in that studio in those days—and boy, it came blowing down",
+          "bbox": [
+            {
+              "h": 102.70439408346036,
+              "w": 283.6461698087368,
+              "x": 98.66820026081365,
+              "y": 465.1385702172257,
+              "confidence": 0.98,
+              "end_index": 566,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nJ. MICHAEL BARRIER / 1973 53\n\\</page_header>",
+          "value": "<page_header>\nJ. MICHAEL BARRIER / 1973 53\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.94,
+              "w": 115.66,
+              "x": 613.29,
+              "y": 43.38,
+              "confidence": 1.0,
+              "end_index": 42,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "53",
+          "value": "53",
+          "bbox": [
+            {
+              "h": 8.23825079554116,
+              "w": 9.75452586699687,
+              "x": 718.9895226991237,
+              "y": 43.041034664991436,
+              "confidence": 0.9,
+              "end_index": 1,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "from the ceiling, right down your collar. I just felt I had better get out of there while I could.",
+          "value": "from the ceiling, right down your collar. I just felt I had better get out of there while I could.",
+          "bbox": [
+            {
+              "h": 23.25086104051544,
+              "w": 278.03193771436736,
+              "x": 447.3275952267531,
+              "y": 66.19507767066027,
+              "confidence": 0.97,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Did you have to work on any war training films or anything like that before you left?",
+          "value": "BARRIER: Did you have to work on any war training films or anything like that before you left?",
+          "bbox": [
+            {
+              "h": 23.134092715231787,
+              "w": 282.06487500000003,
+              "x": 446.88750000000005,
+              "y": 100.94876821192054,
+              "confidence": 0.97,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Yeah, they were putting that kind of stuff over on us. We were working on one about medicine and the way germs invade the body. They were getting lined up for some war picture on gun barrels, or something like that. I couldn't see myself getting tied up with that sort of thing. The war was a very unpopular subject with me, anyway. I had seen one generation of young men march off to war—World War I—and I was stupid enough that I wanted to get into it, but I was just a little too young. And then comes this Second World War, and I had learned my lesson in the meantime. When I saw how little we had accomplished with World War I, I thought, why in the devil kill off another whole generation of young men to accomplish the same result? I was with the America First type of guys; we despised the darned war and what caused it, and our reasons for getting into it seemed so unjustified. So I didn't have any feeling of wanting to cooperate a hell of a lot with it.",
+          "value": "BARKS: Yeah, they were putting that kind of stuff over on us. We were working on one about medicine and the way germs invade the body. They were getting lined up for some war picture on gun barrels, or something like that. I couldn't see myself getting tied up with that sort of thing. The war was a very unpopular subject with me, anyway. I had seen one generation of young men march off to war—World War I—and I was stupid enough that I wanted to get into it, but I was just a little too young. And then comes this Second World War, and I had learned my lesson in the meantime. When I saw how little we had accomplished with World War I, I thought, why in the devil kill off another whole generation of young men to accomplish the same result? I was with the America First type of guys; we despised the darned war and what caused it, and our reasons for getting into it seemed so unjustified. So I didn't have any feeling of wanting to cooperate a hell of a lot with it.",
+          "bbox": [
+            {
+              "h": 179.98374729778018,
+              "w": 283.76369466939786,
+              "x": 447.5981841653964,
+              "y": 126.02251141506291,
+              "confidence": 0.99,
+              "end_index": 975,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** I want to know more about beginnings. I believe you said you were born in southern Oregon.",
+          "value": "BARRIER: I want to know more about beginnings. I believe you said you were born in southern Oregon.",
+          "bbox": [
+            {
+              "h": 22.345430463576122,
+              "w": 280.22475000000003,
+              "x": 448.72762500000005,
+              "y": 316.25356291390733,
+              "confidence": 0.96,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Yes, my folks had a little wheat ranch in southern Oregon, about two miles over the California line. My dad was a homesteader and moved up there in the 1880s. He'd been a blacksmith and a teamster on those big grain ranches around Stockton, in the San Joaquin Valley, quite a number of years, and he had come there out of Missouri, as an orphan at the age of about fourteen. He had had a little apprenticeship as a blacksmith, and so he went to work on those big ranches. He worked there for many years, and when he heard about the homestead land guys could pick up in Oregon, why he went up there and took up a homestead of a hundred and sixty acres. He was very industrious at it, cleared the sagebrush off, and he got enough income out of his hundred and sixty to buy other hundred and sixties around him, so by the time I came along, he had about a square mile of land, all in wheat, and was doing all right.",
+          "value": "BARKS: Yes, my folks had a little wheat ranch in southern Oregon, about two miles over the California line. My dad was a homesteader and moved up there in the 1880s. He'd been a blacksmith and a teamster on those big grain ranches around Stockton, in the San Joaquin Valley, quite a number of years, and he had come there out of Missouri, as an orphan at the age of about fourteen. He had had a little apprenticeship as a blacksmith, and so he went to work on those big ranches. He worked there for many years, and when he heard about the homestead land guys could pick up in Oregon, why he went up there and took up a homestead of a hundred and sixty acres. He was very industrious at it, cleared the sagebrush off, and he got enough income out of his hundred and sixty to buy other hundred and sixties around him, so by the time I came along, he had about a square mile of land, all in wheat, and was doing all right.",
+          "bbox": [
+            {
+              "h": 168.26980661204274,
+              "w": 284.62980968940553,
+              "x": 448.6748296017531,
+              "y": 341.57345963700465,
+              "confidence": 0.98,
+              "end_index": 922,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** It sounds as if he was not a young man when you were born ... when was your father born?",
+          "value": "BARRIER: It sounds as if he was not a young man when you were born ... when was your father born?",
+          "bbox": [
+            {
+              "h": 23.134092715231873,
+              "w": 274.17862500000007,
+              "x": 449.51625000000007,
+              "y": 519.2026490066226,
+              "confidence": 0.96,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** My father was about 40-some-odd years old when I was born. My mother was 40, too. She and my dad didn't get married until about",
+          "value": "BARKS: My father was about 40-some-odd years old when I was born. My mother was 40, too. She and my dad didn't get married until about",
+          "bbox": [
+            {
+              "h": 24.732409656059385,
+              "w": 275.4932003620427,
+              "x": 449.6024557688644,
+              "y": 545.5567955887959,
+              "confidence": 0.96,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "52, 53"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Conversations with Comic Artists\nM. Thomas Inge, General Editor",
+          "value": "Conversations with Comic Artists\nM. Thomas Inge, General Editor",
+          "bbox": [
+            {
+              "h": 23.55631043254571,
+              "w": 127.85561524032964,
+              "x": 139.89890176614904,
+              "y": 408.834196960747,
+              "confidence": 0.93,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Title graphic: \"Carl Barks CONVERSATIONS\" inside a hand-drawn thought bubble.",
+          "md": "![Title graphic: \"Carl Barks CONVERSATIONS\" inside a hand-drawn thought bubble.](CB-Conversations-scan-1-rotated_spread_001_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-1-rotated_spread_001_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 189.67757862519056,
+              "w": 304.27891449123473,
+              "x": 418.0864080840321,
+              "y": 72.60707623856707,
+              "confidence": 0.8,
+              "end_index": 102,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "Edited by",
+          "value": "Edited by",
+          "bbox": [
+            {
+              "h": 13.237456640625002,
+              "w": 48.37080325838416,
+              "x": 550.2342416158538,
+              "y": 402.63935041920735,
+              "confidence": 0.86,
+              "end_index": 8,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# Donald Ault",
+          "value": "Donald Ault",
+          "bbox": [
+            {
+              "h": 23.492282841082265,
+              "w": 129.21503413205036,
+              "x": 511.4260173875763,
+              "y": 419.3987141387196,
+              "confidence": 0.8,
+              "end_index": 12,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "University Press of Mississippi\nJackson",
+          "value": "University Press of Mississippi\nJackson",
+          "bbox": [
+            {
+              "h": 22.68570517339936,
+              "w": 115.47921429592222,
+              "x": 518.82413536109,
+              "y": 493.8339410156251,
+              "confidence": 0.92,
+              "end_index": 38,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "108 CARL BARKS: CONVERSATIONS",
+              "value": "108 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.420687525009528,
+                  "w": 125.05695822813452,
+                  "x": 119.69930225204843,
+                  "y": 38.83653034191598,
+                  "confidence": 0.87,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "108 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.42,
+              "w": 125.06,
+              "x": 119.7,
+              "y": 38.84,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "him that he's going to just get clobbered good. And when the kids get on some binge in which they get into a helluva problem, you feel superior to them, because you know that they're going to have to think that solution out by very laborious methods. The only one of my characters that you couldn't feel superior to was Gladstone; he was so darn lucky that the reader hated him because he had to look up to Gladstone for that one talent he had. The reader automatically feels superior to those characters; it gives the reader a good feeling. I think that that's one of the tricks of writing. I never thought about it until I was analyzing that *Gasoline Alley* one time, trying to think why I pick that thing up day after day and read it. I don't like those characters: I despise them—and yet I keep on reading about them.",
+          "value": "him that he's going to just get clobbered good. And when the kids get on some binge in which they get into a helluva problem, you feel superior to them, because you know that they're going to have to think that solution out by very laborious methods. The only one of my characters that you couldn't feel superior to was Gladstone; he was so darn lucky that the reader hated him because he had to look up to Gladstone for that one talent he had. The reader automatically feels superior to those characters; it gives the reader a good feeling. I think that that's one of the tricks of writing. I never thought about it until I was analyzing that Gasoline Alley one time, trying to think why I pick that thing up day after day and read it. I don't like those characters: I despise them—and yet I keep on reading about them.",
+          "bbox": [
+            {
+              "h": 152.02344784977615,
+              "w": 285.4204383098324,
+              "x": 116.91182794636053,
+              "y": 62.59550324349754,
+              "confidence": 0.98,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** There often seems to be a moral to your stories.",
+          "value": "Q: There often seems to be a moral to your stories.",
+          "bbox": [
+            {
+              "h": 12.50424000000001,
+              "w": 196.84080000000006,
+              "x": 116.08560000000001,
+              "y": 224.48088,
+              "confidence": 0.81,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** That would come in once in a while deliberately, and often it would be something that developed as I was writing on the story. I would notice that maybe I should just play up this angle a little bit. Yeah, I would put them in once in a while, consciously; and at other times they just slid in without any effort. They were just the stock things, like Crime Does Not Pay, and Pride Goeth before a Fall.",
+          "value": "BARKS: That would come in once in a while deliberately, and often it would be something that developed as I was writing on the story. I would notice that maybe I should just play up this angle a little bit. Yeah, I would put them in once in a while, consciously; and at other times they just slid in without any effort. They were just the stock things, like Crime Does Not Pay, and Pride Goeth before a Fall.",
+          "bbox": [
+            {
+              "h": 76.81176000000002,
+              "w": 284.3256,
+              "x": 115.24440000000001,
+              "y": 236.98512000000002,
+              "confidence": 0.89,
+              "end_index": 411,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** What are your political views, and are they ever reflected in your stories?",
+          "value": "Q: What are your political views, and are they ever reflected in your stories?",
+          "bbox": [
+            {
+              "h": 22.03127999999998,
+              "w": 279.27840000000003,
+              "x": 114.40320000000001,
+              "y": 321.53760000000005,
+              "confidence": 0.78,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I think that what I was trying to put over if I did go into political things at any time was that it's better to just have a free government like we have, where everybody can do as they darn well please, rather than to be locked up in Brutopia where you have to obey a whole bunch of rulers. But I avoided politics mostly, because it's a very uninteresting subject to young kids, and it's a subject that can get you into a lot of hot water. And my own political philosophy is that we've got a pretty good thing the way we've got it now, and we should just leave it damn well alone. We can have Watergates and all kinds of things, but nobody gets hurt, nobody gets destroyed, nobody goes to prison: we just have a lot of fun as we go along. Everybody's robbin' everybody else, but it's something you expect.",
+          "value": "BARKS: I think that what I was trying to put over if I did go into political things at any time was that it's better to just have a free government like we have, where everybody can do as they darn well please, rather than to be locked up in Brutopia where you have to obey a whole bunch of rulers. But I avoided politics mostly, because it's a very uninteresting subject to young kids, and it's a subject that can get you into a lot of hot water. And my own political philosophy is that we've got a pretty good thing the way we've got it now, and we should just leave it damn well alone. We can have Watergates and all kinds of things, but nobody gets hurt, nobody gets destroyed, nobody goes to prison: we just have a lot of fun as we go along. Everybody's robbin' everybody else, but it's something you expect.",
+          "bbox": [
+            {
+              "h": 143.9450033203125,
+              "w": 285.03663229444555,
+              "x": 112.3682554723228,
+              "y": 347.5181445931785,
+              "confidence": 0.96,
+              "end_index": 816,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# An Interview with Carl and Garé Barks",
+          "value": "An Interview with Carl and Garé Barks",
+          "bbox": [
+            {
+              "h": 94.38,
+              "w": 217.4,
+              "x": 492.36,
+              "y": 130.92,
+              "confidence": 1.0,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 2
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "level": 3,
+          "md": "### KLAUS STRZYZ / 1980",
+          "value": "KLAUS STRZYZ / 1980",
+          "bbox": [
+            {
+              "h": 13.878170572122706,
+              "w": 115.06902310403963,
+              "x": 545.7967232755336,
+              "y": 240.63915362995434,
+              "confidence": 0.89,
+              "end_index": 22,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "Text © 1980 by Dr. Klaus Strzyz/Ullstein Verlag. Translation by Stephen Eberhart. Revised by Carl Barks. Published in *The Duckburg Times* #17/18, 1983: 25–35. Checked and revised by Klaus Strzyz, 2 May 2002. Reprinted by permission of Klaus Strzyz.",
+          "value": "Text © 1980 by Dr. Klaus Strzyz/Ullstein Verlag. Translation by Stephen Eberhart. Revised by Carl Barks. Published in The Duckburg Times #17/18, 1983: 25–35. Checked and revised by Klaus Strzyz, 2 May 2002. Reprinted by permission of Klaus Strzyz.",
+          "bbox": [
+            {
+              "h": 77.8128562642912,
+              "w": 158.14210368235527,
+              "x": 489.42461211413877,
+              "y": 318.8777699171114,
+              "confidence": 0.98,
+              "end_index": 248,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "*Interview conducted on 31 October 1980 in Temecula, California, with Andreas C. Knigge present. Previously published informally in German in a limited edition of 100 shortly after the interview and officially in Disney von Innen: Gespräche über das Imperium der Maus, Frankfurt-Berlin: Ullstein Verlag, 1988: 43–58.*",
+          "value": "Interview conducted on 31 October 1980 in Temecula, California, with Andreas C. Knigge present. Previously published informally in German in a limited edition of 100 shortly after the interview and officially in Disney von Innen: Gespräche über das Imperium der Maus, Frankfurt-Berlin: Ullstein Verlag, 1988: 43–58.",
+          "bbox": [
+            {
+              "h": 64.87177967320882,
+              "w": 260.9404543873857,
+              "x": 489.93738867187506,
+              "y": 404.3860400390626,
+              "confidence": 0.97,
+              "end_index": 316,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Klaus Strzyz:** Carl, as you were writing and drawing your stories then in the 40s, 50s, and 60s, were you aware of their exceptionally high quality?\n**Carl Barks:** Well, I think the whole secret lies in the fact that I worked harder at them, gave them my best.",
+          "value": "Klaus Strzyz: Carl, as you were writing and drawing your stories then in the 40s, 50s, and 60s, were you aware of their exceptionally high quality?\nCarl Barks: Well, I think the whole secret lies in the fact that I worked harder at them, gave them my best.",
+          "bbox": [
+            {
+              "h": 52.47960305830796,
+              "w": 283.978783322218,
+              "x": 467.6591331459604,
+              "y": 485.6162870665016,
+              "confidence": 0.98,
+              "end_index": 263,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** But other artists worked hard then, too.\n**Garé Barks:** Hard in that they drove themselves to work very fast.",
+          "value": "KS: But other artists worked hard then, too.\nGaré Barks: Hard in that they drove themselves to work very fast.",
+          "bbox": [
+            {
+              "h": 26.81,
+              "w": 257.09,
+              "x": 466.87,
+              "y": 545.75,
+              "confidence": 1.0,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "108"
+    }
+  ]
+}

@@ -1,0 +1,520 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 12 CARL BARKS: CONVERSATIONS",
+          "value": "12 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.90008718529678,
+              "w": 120.13641709341654,
+              "x": 114.17216503310786,
+              "y": 15.489282110149107,
+              "confidence": 0.82,
+              "end_index": 29,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** What censorship you experienced, was it since the EC comics got into trouble?",
+          "value": "Q: What censorship you experienced, was it since the EC comics got into trouble?",
+          "bbox": [
+            {
+              "h": 23.060087745331554,
+              "w": 281.7878619533632,
+              "x": 112.87787632788682,
+              "y": 39.307589294731336,
+              "confidence": 0.93,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** You know, I've never in my life known what those EC comics were. What were the titles of some of those EC comics?",
+          "value": "A: You know, I've never in my life known what those EC comics were. What were the titles of some of those EC comics?",
+          "bbox": [
+            {
+              "h": 25.57074931283347,
+              "w": 271.01850234017724,
+              "x": 111.98741731969324,
+              "y": 65.55760034894246,
+              "confidence": 0.92,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** *Vault of Horror, Tales from the Crypt, Weird Science.* It was the horror titles that got them into trouble.",
+          "value": "Q: Vault of Horror, Tales from the Crypt, Weird Science. It was the horror titles that got them into trouble.",
+          "bbox": [
+            {
+              "h": 24.930061716368137,
+              "w": 283.31313052591463,
+              "x": 111.59962910870809,
+              "y": 97.59069200647868,
+              "confidence": 0.92,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** Oh, the horror comics. Well, I know that at the time they were the big rage, everybody was getting mad. You know, the teachers and the professors and people and mothers—they were all raising hell. They did tell me from the office to be awfully careful. Don't put in anything that suggests any kind of horror. Don't use the word \"horror.\" I never did use the word \"death.\" But I wasn't allowed to use any kind of word like \"weird\"—in the true sense of the word. I can use it as a slang expression, once in a while. Oh, I was kind of pinned down there for a while. You never hear about it any more. It's just sort of accepted as being unacceptable.",
+          "value": "A: Oh, the horror comics. Well, I know that at the time they were the big rage, everybody was getting mad. You know, the teachers and the professors and people and mothers—they were all raising hell. They did tell me from the office to be awfully careful. Don't put in anything that suggests any kind of horror. Don't use the word \"horror.\" I never did use the word \"death.\" But I wasn't allowed to use any kind of word like \"weird\"—in the true sense of the word. I can use it as a slang expression, once in a while. Oh, I was kind of pinned down there for a while. You never hear about it any more. It's just sort of accepted as being unacceptable.",
+          "bbox": [
+            {
+              "h": 118.34928000000001,
+              "w": 284.3256,
+              "x": 110.19720000000001,
+              "y": 123.10704,
+              "confidence": 0.92,
+              "end_index": 652,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** What changes were made in the last comic story you did, the werewolf story \\[\"Pawns of the Loup Garou,\" script only by Barks, Donald Duck #117, Jan. '68]?",
+          "value": "Q: What changes were made in the last comic story you did, the werewolf story [\"Pawns of the Loup Garou,\" script only by Barks, Donald Duck #117, Jan. '68]?",
+          "bbox": [
+            {
+              "h": 36.88798466558688,
+              "w": 283.97403724633193,
+              "x": 108.05190607731518,
+              "y": 245.9842676924543,
+              "confidence": 0.93,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** No changes of any consequence were made.",
+          "value": "A: No changes of any consequence were made.",
+          "bbox": [
+            {
+              "h": 12.359662442835388,
+              "w": 184.2935703780012,
+              "x": 107.31550043468943,
+              "y": 284.97738961509145,
+              "confidence": 0.91,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Did you ever feel cramped or confined by restrictions?",
+          "value": "Q: Did you ever feel cramped or confined by restrictions?",
+          "bbox": [
+            {
+              "h": 13.999059174923785,
+              "w": 221.51041908226946,
+              "x": 107.24720202338989,
+              "y": 303.9903262385671,
+              "confidence": 0.87,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** Oh, yes, at times I thought, \"There are so many things I'd like to have that duck do—brand new, original stuff.\" But I was a little afraid to try it. I was afraid to write a continuity or synopsis and send it down to the office for fear they might not see it the way I saw it in my own mind. I haven't got the vocabulary to write it out.",
+          "value": "A: Oh, yes, at times I thought, \"There are so many things I'd like to have that duck do—brand new, original stuff.\" But I was a little afraid to try it. I was afraid to write a continuity or synopsis and send it down to the office for fear they might not see it the way I saw it in my own mind. I haven't got the vocabulary to write it out.",
+          "bbox": [
+            {
+              "h": 64.22976,
+              "w": 284.3256,
+              "x": 105.9912,
+              "y": 316.98576,
+              "confidence": 0.92,
+              "end_index": 343,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** In what year do you feel you did your best work? Had the best stories, or best art?",
+          "value": "Q: In what year do you feel you did your best work? Had the best stories, or best art?",
+          "bbox": [
+            {
+              "h": 22.652522732469514,
+              "w": 283.04914101205225,
+              "x": 105.10037282655298,
+              "y": 387.7438695503049,
+              "confidence": 0.91,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** The year of the square eggs, I guess. 1949. That was about the time I hit my peak in stories. I couldn't say for sure whether that was the peak in art, but I remember I felt more interested in art at that time. I mean, I tried a little harder, although some of the stuff since that time has probably been better. Let's see. The art I was doing about the time Scrooge discovered Atlantis under the sea—that was probably as good as I've got—ten, art-wise. That and in the 25¢ books—the forest fire story, for example. My best story, technically, is probably the square egg one \\[\"Lost in the Andes\"]. The one I always liked best for sentimental value was \"In Old California.\" I created an atmosphere and then kept that atmosphere through the whole story. Composing these stories is like writing music. You've got to have the beat and keep the whole thing going.",
+          "value": "A: The year of the square eggs, I guess. 1949. That was about the time I hit my peak in stories. I couldn't say for sure whether that was the peak in art, but I remember I felt more interested in art at that time. I mean, I tried a little harder, although some of the stuff since that time has probably been better. Let's see. The art I was doing about the time Scrooge discovered Atlantis under the sea—that was probably as good as I've got—ten, art-wise. That and in the 25¢ books—the forest fire story, for example. My best story, technically, is probably the square egg one [\"Lost in the Andes\"]. The one I always liked best for sentimental value was \"In Old California.\" I created an atmosphere and then kept that atmosphere through the whole story. Composing these stories is like writing music. You've got to have the beat and keep the whole thing going.",
+          "bbox": [
+            {
+              "h": 132.62256000000008,
+              "w": 284.3256,
+              "x": 102.6264,
+              "y": 413.3304,
+              "confidence": 0.9,
+              "end_index": 865,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# WILLITS, D. THOMPSON, AND M. THOMPSON / 1962 13",
+          "value": "WILLITS, D. THOMPSON, AND M. THOMPSON / 1962 13",
+          "bbox": [
+            {
+              "h": 11.746258727729614,
+              "w": 184.62220169588417,
+              "x": 532.6190619998096,
+              "y": 26.78767859243998,
+              "confidence": 0.95,
+              "end_index": 48,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "through the whole story. Composing these stories is like writing music. You've got to have the beat and keep the whole thing going.",
+          "value": "through the whole story. Composing these stories is like writing music. You've got to have the beat and keep the whole thing going.",
+          "bbox": [
+            {
+              "h": 26.7624,
+              "w": 271.7076,
+              "x": 452.5656000000001,
+              "y": 49.361760000000004,
+              "confidence": 0.89,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Did you receive any comments on the square egg story?",
+          "value": "Q: Did you receive any comments on the square egg story?",
+          "bbox": [
+            {
+              "h": 13.671724137931037,
+              "w": 229.75275000000005,
+              "x": 452.14500000000004,
+              "y": 82.0303448275862,
+              "confidence": 0.68,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Yes, I've heard about it from more people than any other story. People seem to automatically remember that.",
+          "value": "A: Yes, I've heard about it from more people than any other story. People seem to automatically remember that.",
+          "bbox": [
+            {
+              "h": 24.71,
+              "w": 282.59,
+              "x": 451.62,
+              "y": 94.91,
+              "confidence": 1.0,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 7
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Did you ever receive any commendations for the work you did, such as the anti-forest fire story?",
+          "value": "Q: Did you ever receive any commendations for the work you did, such as the anti-forest fire story?",
+          "bbox": [
+            {
+              "h": 25.08837772722941,
+              "w": 277.16702486661586,
+              "x": 451.6410894626525,
+              "y": 128.10613408679498,
+              "confidence": 0.92,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** No commendations. The publishers should have had a noisy publicity man drumming up such things for the benefit of comic book sales. This was the sort of publisher's indifference that helped kill comics.",
+          "value": "A: No commendations. The publishers should have had a noisy publicity man drumming up such things for the benefit of comic book sales. This was the sort of publisher's indifference that helped kill comics.",
+          "bbox": [
+            {
+              "h": 38.85311468654726,
+              "w": 278.9128795255336,
+              "x": 450.8851234756098,
+              "y": 154.39710084317835,
+              "confidence": 0.93,
+              "end_index": 208,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** What gave you the idea for a character like Scrooge?",
+          "value": "Q: What gave you the idea for a character like Scrooge?",
+          "bbox": [
+            {
+              "h": 12.620053050397871,
+              "w": 217.66049999999996,
+              "x": 450.83062500000005,
+              "y": 199.81750663129975,
+              "confidence": 0.85,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** I just needed a rich uncle for the story I was going to do. I thought of this situation of Donald having to do with Christmas and Donald getting involved with a bear up in the mountains. Somebody had to own this cabin he was going to, so I invented Uncle Scrooge as the owner of the cabin.",
+          "value": "A: I just needed a rich uncle for the story I was going to do. I thought of this situation of Donald having to do with Christmas and Donald getting involved with a bear up in the mountains. Somebody had to own this cabin he was going to, so I invented Uncle Scrooge as the owner of the cabin.",
+          "bbox": [
+            {
+              "h": 62.31,
+              "w": 282.33,
+              "x": 448.2,
+              "y": 212.96,
+              "confidence": 1.0,
+              "end_index": 295,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** The next comic you did, \"The Old Castle's Secret,\" used Scrooge again. Had you received favorable comments on him?",
+          "value": "Q: The next comic you did, \"The Old Castle's Secret,\" used Scrooge again. Had you received favorable comments on him?",
+          "bbox": [
+            {
+              "h": 25.370189434070127,
+              "w": 265.376269650343,
+              "x": 449.42588671875006,
+              "y": 284.97880615472565,
+              "confidence": 0.85,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Not a word, but I kind of liked old Scrooge and he filled a gap. We needed somebody to help Donald out.",
+          "value": "A: Not a word, but I kind of liked old Scrooge and he filled a gap. We needed somebody to help Donald out.",
+          "bbox": [
+            {
+              "h": 24.98,
+              "w": 268.92,
+              "x": 448.99,
+              "y": 309.98,
+              "confidence": 1.0,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** When you started Uncle Scrooge, he was really a miser. Did the office tell you to make him more lovable?",
+          "value": "Q: When you started Uncle Scrooge, he was really a miser. Did the office tell you to make him more lovable?",
+          "bbox": [
+            {
+              "h": 24.450571903582336,
+              "w": 283.07550114329274,
+              "x": 449.0487051733994,
+              "y": 344.13580315358234,
+              "confidence": 0.92,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** No, I tried to do that myself. I kind of anticipated that they would tell me that. All these other guys that draw Scrooge stories have him in big limousines and mansions with servants and so on, and the original picture of Scrooge that I had developed had been discarded and changed so much over the years that there was no point in my sticking to the same old Scrooge all the time. I did kind of redeem him a bit once in a while.",
+          "value": "A: No, I tried to do that myself. I kind of anticipated that they would tell me that. All these other guys that draw Scrooge stories have him in big limousines and mansions with servants and so on, and the original picture of Scrooge that I had developed had been discarded and changed so much over the years that there was no point in my sticking to the same old Scrooge all the time. I did kind of redeem him a bit once in a while.",
+          "bbox": [
+            {
+              "h": 78.04906737804876,
+              "w": 283.1762331602515,
+              "x": 448.42147179878054,
+              "y": 369.823120398247,
+              "confidence": 0.94,
+              "end_index": 436,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** How do you like Gladstone Gander as a character?",
+          "value": "Q: How do you like Gladstone Gander as a character?",
+          "bbox": [
+            {
+              "h": 12.620053050397928,
+              "w": 209.24850000000004,
+              "x": 447.15037500000005,
+              "y": 454.58482758620687,
+              "confidence": 0.77,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** He's limited. You've got to be thinking of gags all the time that use his stupendous luck. It's kind of hard to keep thinking of fresh gags.",
+          "value": "A: He's limited. You've got to be thinking of gags all the time that use his stupendous luck. It's kind of hard to keep thinking of fresh gags.",
+          "bbox": [
+            {
+              "h": 13.40880636604777,
+              "w": 282.59062500000005,
+              "x": 447.15037500000005,
+              "y": 467.73071618037136,
+              "confidence": 0.68,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.41,
+              "w": 282.59,
+              "x": 447.15,
+              "y": 467.73,
+              "confidence": 1.0,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Did you prefer Gyro Gearloose?",
+          "value": "Q: Did you prefer Gyro Gearloose?",
+          "bbox": [
+            {
+              "h": 12.36,
+              "w": 135.64,
+              "x": 447.15,
+              "y": 501.38,
+              "confidence": 1.0,
+              "end_index": 36,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** I invented him—I invented him for—Actually, I needed a guy with lots of inventions. I got a lot of favorable mail on him. I had thought I would have old Gyro in one or two stories. Once in a great while I might find a",
+          "value": "A: I invented him—I invented him for—Actually, I needed a guy with lots of inventions. I got a lot of favorable mail on him. I had thought I would have old Gyro in one or two stories. Once in a great while I might find a",
+          "bbox": [
+            {
+              "h": 40.75225464190987,
+              "w": 283.642125,
+              "x": 445.83600000000007,
+              "y": 513.741326259947,
+              "confidence": 0.83,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 27.34,
+              "w": 278.91,
+              "x": 445.84,
+              "y": 527.15,
+              "confidence": 1.0,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 76
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

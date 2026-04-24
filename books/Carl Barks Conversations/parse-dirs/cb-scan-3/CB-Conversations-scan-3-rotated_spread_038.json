@@ -1,0 +1,341 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "154 CARL BARKS: CONVERSATIONS",
+              "value": "154 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 11.173997873594706,
+                  "w": 125.34799661775918,
+                  "x": 124.45778806211892,
+                  "y": 38.96250680437787,
+                  "confidence": 0.8,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "154 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.17,
+              "w": 125.35,
+              "x": 124.46,
+              "y": 38.96,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "death to be out of it, because the guys—the collectors—had begun to get real darn pushy. I could make a whole dozen of them mad because I had painted a painting for somebody that they thought they should have. Somebody that they thought had gotten ahead of them on the list. And it was impossible to keep track of the list.",
+          "value": "death to be out of it, because the guys—the collectors—had begun to get real darn pushy. I could make a whole dozen of them mad because I had painted a painting for somebody that they thought they should have. Somebody that they thought had gotten ahead of them on the list. And it was impossible to keep track of the list.",
+          "bbox": [
+            {
+              "h": 64.43144265255813,
+              "w": 284.71467553710943,
+              "x": 122.74260131835939,
+              "y": 62.31359855480661,
+              "confidence": 0.97,
+              "end_index": 322,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "So that is one of the reasons why I just had to get out of the business. It had just got to be too much trouble to keep all these guys happy. And I was getting tired of painting ducks for that time anyway.",
+          "value": "So that is one of the reasons why I just had to get out of the business. It had just got to be too much trouble to keep all these guys happy. And I was getting tired of painting ducks for that time anyway.",
+          "bbox": [
+            {
+              "h": 39.80297776057547,
+              "w": 280.8874224109184,
+              "x": 122.36923917444743,
+              "y": 127.3485528487043,
+              "confidence": 0.96,
+              "end_index": 204,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** But you started again after a while?",
+          "value": "H: But you started again after a while?",
+          "bbox": [
+            {
+              "h": 11.304158940397372,
+              "w": 149.57587500000002,
+              "x": 121.71112500000001,
+              "y": 172.71703311258278,
+              "confidence": 0.84,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Well, it was 1976–1982. That is six years' rest, six years of painting other things. And then another company got the license to put up lithographs, and they needed new duck paintings to go with those lithographs. That's where I started painting ducks again, for this new order. I could go ahead and paint ducks and sell the paintings. But now I reached a point where I'm used up—don't feel like I ever want to paint another duck again.",
+          "value": "B: Well, it was 1976–1982. That is six years' rest, six years of painting other things. And then another company got the license to put up lithographs, and they needed new duck paintings to go with those lithographs. That's where I started painting ducks again, for this new order. I could go ahead and paint ducks and sell the paintings. But now I reached a point where I'm used up—don't feel like I ever want to paint another duck again.",
+          "bbox": [
+            {
+              "h": 78.34045033112585,
+              "w": 286.270875,
+              "x": 116.97937500000002,
+              "y": 198.48000000000002,
+              "confidence": 0.88,
+              "end_index": 442,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** You will never paint a duck again?",
+          "value": "H: You will never paint a duck again?",
+          "bbox": [
+            {
+              "h": 12.504239999999982,
+              "w": 144.6864,
+              "x": 119.4504,
+              "y": 282.834,
+              "confidence": 0.85,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** I feel like I don't want to ever paint a duck again.",
+          "value": "B: I feel like I don't want to ever paint a duck again.",
+          "bbox": [
+            {
+              "h": 13.144370860927154,
+              "w": 200.57362500000005,
+              "x": 119.34525000000002,
+              "y": 295.22256953642386,
+              "confidence": 0.88,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** You must have drawn and painted millions of them.",
+          "value": "H: You must have drawn and painted millions of them.",
+          "bbox": [
+            {
+              "h": 12.504239999999982,
+              "w": 210.3,
+              "x": 119.4504,
+              "y": 315.58320000000003,
+              "confidence": 0.86,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** I've painted so many of them. Yes, I've grown very tired of the subject.",
+          "value": "B: I've painted so many of them. Yes, I've grown very tired of the subject.",
+          "bbox": [
+            {
+              "h": 14.284270040968009,
+              "w": 282.01534800757435,
+              "x": 119.39417590629765,
+              "y": 328.43751486756867,
+              "confidence": 0.88,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Reluctant Cult Hero: Carl Barks Michael Naiman / 1993 text inside a hand-drawn speech bubble",
+          "md": "![Reluctant Cult Hero: Carl Barks Michael Naiman / 1993 text inside a hand-drawn speech bubble](CB-Conversations-scan-3-rotated_spread_038_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-3-rotated_spread_038_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 581.661753218637,
+              "w": 411.87834046303357,
+              "x": 428.09123623285063,
+              "y": 6.515294199427164,
+              "confidence": 0.8,
+              "end_index": 117,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# Reluctant Cult Hero:",
+          "value": "Reluctant Cult Hero:",
+          "bbox": [
+            {
+              "h": 15.994702784394065,
+              "w": 160.14737709603656,
+              "x": 531.471338128811,
+              "y": 158.59004186833084,
+              "confidence": 0.77,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# Carl Barks",
+          "value": "Carl Barks",
+          "bbox": [
+            {
+              "h": 24.522543435594528,
+              "w": 131.89698025438273,
+              "x": 545.7465826743522,
+              "y": 182.57536819979043,
+              "confidence": 0.78,
+              "end_index": 11,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## Michael Naiman / 1993",
+          "value": "Michael Naiman / 1993",
+          "bbox": [
+            {
+              "h": 13.670145695364255,
+              "w": 133.54049999999995,
+              "x": 545.465625,
+              "y": 225.2945165562914,
+              "confidence": 0.81,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "A video interview conducted on 27 August 1993, Grants Pass, Oregon. Printed by permission of Michael Naiman.",
+          "value": "A video interview conducted on 27 August 1993, Grants Pass, Oregon. Printed by permission of Michael Naiman.",
+          "bbox": [
+            {
+              "h": 34.01020559737046,
+              "w": 164.84256102324701,
+              "x": 497.7512578839559,
+              "y": 316.96482814881864,
+              "confidence": 0.92,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Portions of this interview were previously published in *Overstreet's Golden Age Quarterly* #2, October/November 1993: 75–84. Segments also appeared in two video productions: *Overstreet's Wonderful World of Collecting* and *Happy Birthday, Carl Barks*.",
+          "value": "Portions of this interview were previously published in Overstreet's Golden Age Quarterly #2, October/November 1993: 75–84. Segments also appeared in two video productions: Overstreet's Wonderful World of Collecting and Happy Birthday, Carl Barks.",
+          "bbox": [
+            {
+              "h": 50.65856418635673,
+              "w": 261.10825759813264,
+              "x": 498.0105764576983,
+              "y": 403.0195872141769,
+              "confidence": 0.95,
+              "end_index": 252,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN:** Do you remember the first drawings that you sold?",
+          "value": "MN: Do you remember the first drawings that you sold?",
+          "bbox": [
+            {
+              "h": 11.898056721608244,
+              "w": 219.22748144531252,
+              "x": 475.20436694931414,
+              "y": 467.68972654344526,
+              "confidence": 0.83,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I was trying to think of that recently. It was not a drawing of anything more than the sleeve of a soldier's coat that I did for a poster. This was right after World War I had ended, and all the soldiers and sailors were being discharged. And there was a particular chevron that was given to them when they had been discharged that they could put on their sleeve. I forget whether it was down here or up here, but anyway the chevron was put on a certain way to identify that they could still wear that uniform",
+          "value": "CB: I was trying to think of that recently. It was not a drawing of anything more than the sleeve of a soldier's coat that I did for a poster. This was right after World War I had ended, and all the soldiers and sailors were being discharged. And there was a particular chevron that was given to them when they had been discharged that they could put on their sleeve. I forget whether it was down here or up here, but anyway the chevron was put on a certain way to identify that they could still wear that uniform",
+          "bbox": [
+            {
+              "h": 89.90749668874167,
+              "w": 283.90500000000003,
+              "x": 475.01512500000007,
+              "y": 480.2953112582782,
+              "confidence": 0.87,
+              "end_index": 516,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "154"
+    }
+  ]
+}

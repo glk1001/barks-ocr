@@ -1,0 +1,449 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "CARL BARKS: CONVERSATIONS",
+              "value": "CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 13.25462608493712,
+                  "w": 120.56848531583462,
+                  "x": 118.37637429735139,
+                  "y": 31.822742928258393,
+                  "confidence": 0.87,
+                  "end_index": 24,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 13.25,
+              "w": 120.57,
+              "x": 118.38,
+              "y": 31.82,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "76",
+          "value": "76",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "can make something of that ability, and I just didn't have the ability, so I was where I was. I accepted that, and that was it.",
+          "value": "can make something of that ability, and I just didn't have the ability, so I was where I was. I accepted that, and that was it.",
+          "bbox": [
+            {
+              "h": 98.24760000000002,
+              "w": 283.48440000000005,
+              "x": 114.40320000000001,
+              "y": 55.971360000000004,
+              "confidence": 0.97,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Kunzle mentioned that you had to buy your own copies of the comic books you illustrated.",
+          "value": "BARRIER: Kunzle mentioned that you had to buy your own copies of the comic books you illustrated.",
+          "bbox": [
+            {
+              "h": 18.439525473990106,
+              "w": 216.95541344917115,
+              "x": 114.03932499880908,
+              "y": 158.82596851657777,
+              "confidence": 0.79,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.14,
+              "w": 108.04,
+              "x": 115.4,
+              "y": 100.42,
+              "confidence": 1.0,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 73
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I had to buy my own most of the time. I never attached enough importance to my stories to make any great effort to try to get every issue in which I ever had anything drawn.",
+          "value": "BARKS: I had to buy my own most of the time. I never attached enough importance to my stories to make any great effort to try to get every issue in which I ever had anything drawn.",
+          "bbox": [
+            {
+              "h": 44.08211773056405,
+              "w": 280.44645060022873,
+              "x": 113.34961623475611,
+              "y": 158.88053586128052,
+              "confidence": 0.96,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.83,
+              "w": 29.97,
+              "x": 110.14,
+              "y": 215.83,
+              "confidence": 1.0,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 90
+            },
+            {
+              "h": 29.18,
+              "w": 285.22,
+              "x": 112.77,
+              "y": 124.87,
+              "confidence": 1.0,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 149
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** But you did save all your work over the years.",
+          "value": "BARRIER: But you did save all your work over the years.",
+          "bbox": [
+            {
+              "h": 22.64860366806401,
+              "w": 271.75428185141965,
+              "x": 111.64502363400344,
+              "y": 204.28453776676835,
+              "confidence": 0.95,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Not for collection purposes, or sentimental purposes, but for the fact I had to have a record, so I wouldn't be repeating myself.",
+          "value": "BARKS: Not for collection purposes, or sentimental purposes, but for the fact I had to have a record, so I wouldn't be repeating myself.",
+          "bbox": [
+            {
+              "h": 61.15384303782396,
+              "w": 283.0467867580507,
+              "x": 109.80559990115283,
+              "y": 230.27869760384914,
+              "confidence": 0.97,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Of course, in later years, you did rework some of your early stories.",
+          "value": "BARRIER: Of course, in later years, you did rework some of your early stories.",
+          "bbox": [
+            {
+              "h": 52.92245304878055,
+              "w": 283.3410184177306,
+              "x": 107.80726402319932,
+              "y": 300.95837157964945,
+              "confidence": 0.97,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 47.58,
+              "w": 279.96,
+              "x": 101.47,
+              "y": 434.03,
+              "confidence": 1.0,
+              "end_index": 13,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I found it better to work on one story at a time. It was just that when I was working on one Donald story, until I got that thing finished, my mind just wouldn't jump over and take up the problems of another story. I can recall no time, even at the start, when I worked on two stories at once.",
+          "value": "BARKS: I found it better to work on one story at a time. It was just that when I was working on one Donald story, until I got that thing finished, my mind just wouldn't jump over and take up the problems of another story. I can recall no time, even at the start, when I worked on two stories at once.",
+          "bbox": [
+            {
+              "h": 76.52281190453505,
+              "w": 281.22981609660826,
+              "x": 105.08746199742761,
+              "y": 352.7624954411205,
+              "confidence": 0.97,
+              "end_index": 303,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** What about the deletions from \"Back to the Klondike\"? You confirmed earlier that you had drawn the story as a thirty-two-pager, but your work records list the story as only twenty-seven pages. Were you paid for the other five pages?",
+          "value": "BARRIER: What about the deletions from \"Back to the Klondike\"? You confirmed earlier that you had drawn the story as a thirty-two-pager, but your work records list the story as only twenty-seven pages. Were you paid for the other five pages?",
+          "bbox": [
+            {
+              "h": 66.23628239805645,
+              "w": 278.05942488209797,
+              "x": 102.68433218011624,
+              "y": 436.4833038681403,
+              "confidence": 0.97,
+              "end_index": 244,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 47.58,
+              "w": 279.96,
+              "x": 101.47,
+              "y": 434.03,
+              "confidence": 1.0,
+              "end_index": 13,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Evidently I wasn't. I think they figured I should have had sense enough to know you couldn't get involved in fights in a barroom. It was quite a while afterwards before I found out why they cut it. I got a letter from the office, or was told on my next visit to the office, that I had violated a lot of their taboos and should have had sense enough to know it wouldn't work.",
+          "value": "BARKS: Evidently I wasn't. I think they figured I should have had sense enough to know you couldn't get involved in fights in a barroom. It was quite a while afterwards before I found out why they cut it. I got a letter from the office, or was told on my next visit to the office, that I had violated a lot of their taboos and should have had sense enough to know it wouldn't work.",
+          "bbox": [
+            {
+              "h": 29.5255073551829,
+              "w": 277.2024701642293,
+              "x": 103.64171837187978,
+              "y": 436.64034010575466,
+              "confidence": 0.82,
+              "end_index": 384,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Might Western's editors have been concerned about Scrooge and Goldie being alone on Scrooge's claim for a month?",
+          "value": "BARRIER: Might Western's editors have been concerned about Scrooge and Goldie being alone on Scrooge's claim for a month?",
+          "bbox": [
+            {
+              "h": 25.82014000095275,
+              "w": 282.22316101371956,
+              "x": 101.02957963748095,
+              "y": 508.0070520531632,
+              "confidence": 0.96,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Yeah, that was it. That was kidnaping. He picked her up and carried her out to his claim and made her go to work. It didn't look very much like kidnaping, yet it was.",
+          "value": "BARKS: Yeah, that was it. That was kidnaping. He picked her up and carried her out to his claim and made her go to work. It didn't look very much like kidnaping, yet it was.",
+          "bbox": [
+            {
+              "h": 32.209837785823204,
+              "w": 281.0389524670113,
+              "x": 100.4705883223371,
+              "y": 534.6221591987425,
+              "confidence": 0.75,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** It was your older daughter, Peggy, who provided ideas for several of your comics stories?",
+          "value": "BARRIER: It was your older daughter, Peggy, who provided ideas for several of your comics stories?",
+          "bbox": [
+            {
+              "h": 32.209837785823204,
+              "w": 281.0389524670113,
+              "x": 100.4705883223371,
+              "y": 534.6221591987425,
+              "confidence": 0.7,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 15.25,
+              "w": 106.46,
+              "x": 99.63,
+              "y": 519.2,
+              "confidence": 1.0,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 74
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** She would send some down to me—little synopses and things—and I would pick out the ones I liked. Of course, I hadn't even gotten in",
+          "value": "BARKS: She would send some down to me—little synopses and things—and I would pick out the ones I liked. Of course, I hadn't even gotten in",
+          "bbox": [
+            {
+              "h": 32.209837785823204,
+              "w": 281.0389524670113,
+              "x": 100.4705883223371,
+              "y": 534.6221591987425,
+              "confidence": 0.73,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "77",
+          "value": "77",
+          "bbox": [
+            {
+              "h": 8.675284768211924,
+              "w": 115.66499999999996,
+              "x": 609.0813750000001,
+              "y": 42.587761589403975,
+              "confidence": 0.48,
+              "end_index": 1,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "A chaotic scene depicting a fight in a barroom with multiple figures engaged in combat, with a speech bubble at the top reading \"IT WAS A FIGHT TO BE PROUD OF! I WAS LIKE A BUZZSAW! MEN FELL IN ROWS LIKE DOMINOES!\"",
+          "value": "A chaotic scene depicting a fight in a barroom with multiple figures engaged in combat, with a speech bubble at the top reading \"IT WAS A FIGHT TO BE PROUD OF! I WAS LIKE A BUZZSAW! MEN FELL IN ROWS LIKE DOMINOES!\"",
+          "bbox": [
+            {
+              "h": 246.99772072694364,
+              "w": 344.5852958031632,
+              "x": 417.0025496141388,
+              "y": 65.06271219512196,
+              "confidence": 0.99,
+              "end_index": 213,
+              "label": "image",
+              "start_index": 0
+            },
+            {
+              "h": 49.69,
+              "w": 67.3,
+              "x": 421.39,
+              "y": 72.82,
+              "confidence": 1.0,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 136
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "contact with Dorothy \\[his other daughter] at that time, but I'm sure that Dorothy wasn't the sort to think up story ideas. Peggy would have been quite a theatrical comedienne, I think, if she had lived, or an artist. She could paint pretty well. I noticed some of her drawings and paintings up at Dorothy's place. For an untutored person, she was pretty good. She lived in Washington \\[state] at that time. I think she spent most of her time living in Washington. Her husband was a Navy man, and she stayed around Bremerton when he was out on shipboard, in the South Pacific and places.",
+          "value": "contact with Dorothy [his other daughter] at that time, but I'm sure that Dorothy wasn't the sort to think up story ideas. Peggy would have been quite a theatrical comedienne, I think, if she had lived, or an artist. She could paint pretty well. I noticed some of her drawings and paintings up at Dorothy's place. For an untutored person, she was pretty good. She lived in Washington [state] at that time. I think she spent most of her time living in Washington. Her husband was a Navy man, and she stayed around Bremerton when he was out on shipboard, in the South Pacific and places.",
+          "bbox": [
+            {
+              "h": 117.55532773913876,
+              "w": 284.26034208269823,
+              "x": 442.76830685499243,
+              "y": 337.4191437976373,
+              "confidence": 0.99,
+              "end_index": 586,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** In a 1963 letter to Michael Peak you spoke about Donald's unpredictability, his versatility. You wrote, \"I was always looking for some way of giving him new business to do. Mostly it was new business, and still keeping that duck's characteristics.\" What were those characteristics?",
+          "value": "BARRIER: In a 1963 letter to Michael Peak you spoke about Donald's unpredictability, his versatility. You wrote, \"I was always looking for some way of giving him new business to do. Mostly it was new business, and still keeping that duck's characteristics.\" What were those characteristics?",
+          "bbox": [
+            {
+              "h": 49.69,
+              "w": 284.17,
+              "x": 442.42,
+              "y": 465.31,
+              "confidence": 1.0,
+              "end_index": 293,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** He was just the everyday sort of a guy. It depended on what mood he had when he got up in the morning whether he was going to be a mean son-of-a-gun all day or whether he was going to be a real good-natured fellow. He was flexible, yes.",
+          "value": "BARKS: He was just the everyday sort of a guy. It depended on what mood he had when he got up in the morning whether he was going to be a mean son-of-a-gun all day or whether he was going to be a real good-natured fellow. He was flexible, yes.",
+          "bbox": [
+            {
+              "h": 48.37128476821192,
+              "w": 284.9565,
+              "x": 442.418625,
+              "y": 519.7284238410597,
+              "confidence": 0.79,
+              "end_index": 246,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "76, 77"
+    }
+  ]
+}

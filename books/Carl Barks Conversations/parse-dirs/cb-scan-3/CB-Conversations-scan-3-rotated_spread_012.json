@@ -1,0 +1,257 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "CARL BARKS: CONVERSATIONS",
+              "value": "CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 12.680605274628437,
+                  "w": 101.6595554675591,
+                  "x": 148.03567945526868,
+                  "y": 35.25067752774867,
+                  "confidence": 0.95,
+                  "end_index": 24,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 12.68,
+              "w": 101.66,
+              "x": 148.04,
+              "y": 35.25,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Comic panel showing two cartoon duck characters in conversation, with one saying \"WELL, IF YOU DECIDE TO GIVE IT AWAY, I'LL GLADLY TAKE IT OFF YOUR HANDS!\" and the other responding \"EEP!\"",
+          "value": "Comic panel showing two cartoon duck characters in conversation, with one saying \"WELL, IF YOU DECIDE TO GIVE IT AWAY, I'LL GLADLY TAKE IT OFF YOUR HANDS!\" and the other responding \"EEP!\"",
+          "bbox": [
+            {
+              "h": 203.4806178901487,
+              "w": 268.3236453887195,
+              "x": 126.66760607612426,
+              "y": 58.302477674828516,
+              "confidence": 0.99,
+              "end_index": 186,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** The big splash panel naturally was at the height of some situation—maybe not the climax of the whole story, but of the build-up of sequences, like where the two steam shovels meet. I thought it was worthwhile to put that in a big panel where I could show all that machinery slashing at each other. You try to crowd that into too small a panel, and you lose too much detail. In those splash panels, there was a lot of coins or machinery or people or something that required lots of room in order to put it over. The splash panel was planned for well in advance; I just saved up all these different things so that I had room to draw them finally in one big dramatic situation. I guess I liked to draw them—otherwise I wouldn't have put so many of them in, because it would take me two or three days to draw one of them. I labored for three days on the first view of the square-egg city—and then I got my perspective forced, so that the buildings came out diamond-shaped down in the lower part. But the only real problem with drawing splash panels was that they were so easy to cut out down at the office. I could put in a splash panel and tell a whole lot in that one panel, and then when I got down to the office, if they needed to run an ad, they could look at that splash and say, \"Hell, we could cut out that half a page here and run something about air rifles or chewing gum.\" Nobody told me I couldn't do splash panels, but I got to the point where I thought, why bother? Toward the last there, they were doing so much cutting out and inserting",
+          "value": "BARKS: The big splash panel naturally was at the height of some situation—maybe not the climax of the whole story, but of the build-up of sequences, like where the two steam shovels meet. I thought it was worthwhile to put that in a big panel where I could show all that machinery slashing at each other. You try to crowd that into too small a panel, and you lose too much detail. In those splash panels, there was a lot of coins or machinery or people or something that required lots of room in order to put it over. The splash panel was planned for well in advance; I just saved up all these different things so that I had room to draw them finally in one big dramatic situation. I guess I liked to draw them—otherwise I wouldn't have put so many of them in, because it would take me two or three days to draw one of them. I labored for three days on the first view of the square-egg city—and then I got my perspective forced, so that the buildings came out diamond-shaped down in the lower part. But the only real problem with drawing splash panels was that they were so easy to cut out down at the office. I could put in a splash panel and tell a whole lot in that one panel, and then when I got down to the office, if they needed to run an ad, they could look at that splash and say, \"Hell, we could cut out that half a page here and run something about air rifles or chewing gum.\" Nobody told me I couldn't do splash panels, but I got to the point where I thought, why bother? Toward the last there, they were doing so much cutting out and inserting",
+          "bbox": [
+            {
+              "h": 298.30359402867765,
+              "w": 291.1717931771627,
+              "x": 104.47191223442265,
+              "y": 274.40093421065177,
+              "confidence": 0.98,
+              "end_index": 1558,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nAULT, ANDRAE, AND GONG / 1975\n\\</page_header>",
+          "value": "<page_header>\nAULT, ANDRAE, AND GONG / 1975\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.385461627048402,
+              "w": 121.77453958650916,
+              "x": 601.1916687547638,
+              "y": 41.863675063119295,
+              "confidence": 0.94,
+              "end_index": 59,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "ads. It seems as if they had a bunch of advertising salesmen back in Poughkeepsie who were always out selling these pages to the different advertisers. I would do a story and send it into the office, and maybe Chase Craig and his guys would have the book all planned to go through with a ten-page story, and then here would come word out of Poughkeepsie to cut a page. It got to be so prevalent that toward the last I had a quaky feeling every time I wrote a story, just wondering where they were going to be able to make a cut. It inhibited my thinking quite a bit. There was a time or two when I deliberately put in a page of just plain old padding that could be lifted out and the two sections joined together and make a better story.",
+          "value": "ads. It seems as if they had a bunch of advertising salesmen back in Poughkeepsie who were always out selling these pages to the different advertisers. I would do a story and send it into the office, and maybe Chase Craig and his guys would have the book all planned to go through with a ten-page story, and then here would come word out of Poughkeepsie to cut a page. It got to be so prevalent that toward the last I had a quaky feeling every time I wrote a story, just wondering where they were going to be able to make a cut. It inhibited my thinking quite a bit. There was a time or two when I deliberately put in a page of just plain old padding that could be lifted out and the two sections joined together and make a better story.",
+          "bbox": [
+            {
+              "h": 141.40504677317554,
+              "w": 286.17214660346804,
+              "x": 462.98954546970276,
+              "y": 65.92875605409205,
+              "confidence": 0.99,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Did you have any problems with censorship?**",
+          "value": "Q: Did you have any problems with censorship?",
+          "bbox": [
+            {
+              "h": 11.478873854325464,
+              "w": 186.6304805402059,
+              "x": 465.1041163776677,
+              "y": 216.57931574885674,
+              "confidence": 0.79,
+              "end_index": 48,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** It's pretty well known that I had censorship on that Klondike story and the \"Trick or Treat\" story and the milkman story, and the story of Donald's footrace with Daisy and some girl—the story of the golden apples. There was not much in the way of small censorship, but then I was so careful with my own censorship that I didn't run into that problem much. It was just on the big things like the Klondike story that I got slapped with much censorship. I knew that I couldn't put in much in the way of violence: it had to be comical violence that didn't seem to hurt anybody. I knew that I was not to glorify crime. I could have the Beagle Boys always stealing, but I tried to do it in a very comical way, so that it actually was not a crime that a child could imitate. It had to be a crime that was just in a world of fantasy: kids could read about it but not in any way imitate it.",
+          "value": "BARKS: It's pretty well known that I had censorship on that Klondike story and the \"Trick or Treat\" story and the milkman story, and the story of Donald's footrace with Daisy and some girl—the story of the golden apples. There was not much in the way of small censorship, but then I was so careful with my own censorship that I didn't run into that problem much. It was just on the big things like the Klondike story that I got slapped with much censorship. I knew that I couldn't put in much in the way of violence: it had to be comical violence that didn't seem to hurt anybody. I knew that I was not to glorify crime. I could have the Beagle Boys always stealing, but I tried to do it in a very comical way, so that it actually was not a crime that a child could imitate. It had to be a crime that was just in a world of fantasy: kids could read about it but not in any way imitate it.",
+          "bbox": [
+            {
+              "h": 169.45094674876145,
+              "w": 286.6871271436739,
+              "x": 464.74667049352144,
+              "y": 228.53380127429503,
+              "confidence": 0.93,
+              "end_index": 891,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: What about the problem of death? Was it ever difficult to relate humor to the fact that these characters could die?**",
+          "value": "Q: What about the problem of death? Was it ever difficult to relate humor to the fact that these characters could die?",
+          "bbox": [
+            {
+              "h": 24.325370593559445,
+              "w": 285.40170445884155,
+              "x": 466.01846855945126,
+              "y": 406.4959773675687,
+              "confidence": 0.86,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** The characters had to be in danger of death in order to create suspense in a story; they had to be in real danger. And when you figure that the very ultimate in danger is the fear of death itself, you just about have to use it. But I always dramatized this problem in such a comical way that you didn't think back on it and get morbid about the fact that they had been exposed to deadly dangers.",
+          "value": "BARKS: The characters had to be in danger of death in order to create suspense in a story; they had to be in real danger. And when you figure that the very ultimate in danger is the fear of death itself, you just about have to use it. But I always dramatized this problem in such a comical way that you didn't think back on it and get morbid about the fact that they had been exposed to deadly dangers.",
+          "bbox": [
+            {
+              "h": 77.42531820217225,
+              "w": 285.1607691025153,
+              "x": 466.368250595465,
+              "y": 432.8968926162349,
+              "confidence": 0.93,
+              "end_index": 405,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Yet the \"Vacation Parade\" story in which they bury themselves to escape the forest fire is deadly serious.",
+          "value": "Q: Yet the \"Vacation Parade\" story in which they bury themselves to escape the forest fire is deadly serious.",
+          "bbox": [
+            {
+              "h": 25.344386504382623,
+              "w": 281.8739299733232,
+              "x": 467.19504456459606,
+              "y": 518.9572183307928,
+              "confidence": 0.87,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Well, it was serious. I couldn't create suspense without having them in real danger, and real danger means the fear of death. So all of the",
+          "value": "BARKS: Well, it was serious. I couldn't create suspense without having them in real danger, and real danger means the fear of death. So all of the",
+          "bbox": [
+            {
+              "h": 25.13296020388717,
+              "w": 284.26094316882626,
+              "x": 467.7586129001525,
+              "y": 545.370401481517,
+              "confidence": 0.92,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "102–103",
+          "value": "102–103",
+          "bbox": [
+            {
+              "h": 12.0,
+              "w": 101.0,
+              "x": 148.0,
+              "y": 35.0,
+              "confidence": 0.52,
+              "end_index": 3,
+              "label": "header",
+              "start_index": 0
+            },
+            {
+              "h": 10.0,
+              "w": 121.0,
+              "x": 601.0,
+              "y": 41.0,
+              "confidence": 0.54,
+              "end_index": 6,
+              "label": "header",
+              "start_index": 4
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "102"
+    }
+  ]
+}

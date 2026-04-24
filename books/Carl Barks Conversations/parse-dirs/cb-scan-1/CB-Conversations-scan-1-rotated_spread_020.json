@@ -1,0 +1,279 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "xlii CHRONOLOGY",
+              "value": "xlii CHRONOLOGY",
+              "bbox": [
+                {
+                  "h": 9.195504661895008,
+                  "w": 49.496011444836135,
+                  "x": 112.71850084556023,
+                  "y": 23.389831612042688,
+                  "confidence": 0.84,
+                  "end_index": 14,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "xlii CHRONOLOGY",
+          "bbox": [
+            {
+              "h": 9.2,
+              "w": 49.5,
+              "x": 112.72,
+              "y": 23.39,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "ticle written by Magnus Knutsson and Göran Ribe, well-known figures in the Swedish comics society; *Introduzione a Paperino: la fenomenologia sociale nei fumetti di Carl Barks* by P. Marovelli, E. Paolini, and G. Saccomano is published in Italy.",
+          "value": "ticle written by Magnus Knutsson and Göran Ribe, well-known figures in the Swedish comics society; Introduzione a Paperino: la fenomenologia sociale nei fumetti di Carl Barks by P. Marovelli, E. Paolini, and G. Saccomano is published in Italy.",
+          "bbox": [
+            {
+              "h": 62.65628371046113,
+              "w": 235.08638757621955,
+              "x": 140.4762825600229,
+              "y": 47.03627823218369,
+              "confidence": 0.97,
+              "end_index": 244,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1975**: Edward Summer conducts the first film interviews with Barks in Goleta (Apr.), funded by a grant from the National Endowment for the Arts; E. B. Boatner's essay \"Comics 101b (half term): Why a Duck?\" appears in the May issue (Vol. 77, No. 9) of *The Harvard Magazine*; Ault and Thomas Andrae conduct the first videotape interview with Barks in Goleta (Aug.); Dorfman and Mattelart's *How to Read Donald Duck: Imperialist Ideology in the Disney Comic* (from the 1971 Chilean original *Para Leer al Pato Donald*) is published in English, translated with an introduction by David Kunzle; in *Jag, Farbror Joakim* (*I, Uncle Scrooge*) Sture Hegerfors writes at length about Barks and his work in his foreword; *Les aventures explosives de Donald* (translated from Italian) is published, marking the first mention of Carl Barks's name in France.",
+          "value": "1975: Edward Summer conducts the first film interviews with Barks in Goleta (Apr.), funded by a grant from the National Endowment for the Arts; E. B. Boatner's essay \"Comics 101b (half term): Why a Duck?\" appears in the May issue (Vol. 77, No. 9) of The Harvard Magazine; Ault and Thomas Andrae conduct the first videotape interview with Barks in Goleta (Aug.); Dorfman and Mattelart's How to Read Donald Duck: Imperialist Ideology in the Disney Comic (from the 1971 Chilean original Para Leer al Pato Donald) is published in English, translated with an introduction by David Kunzle; in Jag, Farbror Joakim (I, Uncle Scrooge) Sture Hegerfors writes at length about Barks and his work in his foreword; Les aventures explosives de Donald (translated from Italian) is published, marking the first mention of Carl Barks's name in France.",
+          "bbox": [
+            {
+              "h": 9.202122015915123,
+              "w": 21.818624999999997,
+              "x": 93.05775,
+              "y": 116.99840848806367,
+              "confidence": 0.89,
+              "end_index": 5,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 190.18543464415015,
+              "w": 234.90655012028398,
+              "x": 140.16413102015053,
+              "y": 116.99809065120047,
+              "confidence": 0.96,
+              "end_index": 847,
+              "label": "text",
+              "start_index": 6
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1976**: Paints *Porky of the Mounties* for the cover of the *Overstreet Price Guide*; Kivekas publishes the first index of Barks's comics in Finland; Barks's oil painting *July 4th in Duckburg* sells for a record $6,400 at auction in New York City; Disney withdraws permission for Barks to produce any more Disney oil paintings; Barks paints *King Midas Having Fun*, the first of a new series of non-Disney oils; on 22-24 Oct., makes his first major public appearance at the Newcon convention in Boston, Massachusetts; the Donaldist Society in Sweden (Nationella Ankistförbundet i Sverige \\[kvack]) is founded; Hans von Storch publishes the first issue of *Der Hamburger Donaldist* magazine.",
+          "value": "1976: Paints Porky of the Mounties for the cover of the Overstreet Price Guide; Kivekas publishes the first index of Barks's comics in Finland; Barks's oil painting July 4th in Duckburg sells for a record $6,400 at auction in New York City; Disney withdraws permission for Barks to produce any more Disney oil paintings; Barks paints King Midas Having Fun, the first of a new series of non-Disney oils; on 22-24 Oct., makes his first major public appearance at the Newcon convention in Boston, Massachusetts; the Donaldist Society in Sweden (Nationella Ankistförbundet i Sverige [kvack]) is founded; Hans von Storch publishes the first issue of Der Hamburger Donaldist magazine.",
+          "bbox": [
+            {
+              "h": 9.46503978779839,
+              "w": 21.818624999999997,
+              "x": 93.05775,
+              "y": 314.4496551724138,
+              "confidence": 0.88,
+              "end_index": 5,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 151.6540249618902,
+              "w": 236.01144660465894,
+              "x": 139.2057242342321,
+              "y": 314.7443055926068,
+              "confidence": 0.96,
+              "end_index": 691,
+              "label": "text",
+              "start_index": 6
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1977**: The Donaldist Society in Germany (Deutsche Organisation Nichtkommerzieller Anhänger des Lauteren Donaldismus \\[D.O.N.A.L.D.]) is founded. Carl and Garé move to Temecula, California; attends the San Diego Comic Convention (Aug.); \"The Man Who Drew Ducks\" by Paul Ciotti appears in *\\[PSA] California* magazine (Nov.).",
+          "value": "1977: The Donaldist Society in Germany (Deutsche Organisation Nichtkommerzieller Anhänger des Lauteren Donaldismus [D.O.N.A.L.D.]) is founded. Carl and Garé move to Temecula, California; attends the San Diego Comic Convention (Aug.); \"The Man Who Drew Ducks\" by Paul Ciotti appears in [PSA] California magazine (Nov.).",
+          "bbox": [
+            {
+              "h": 10.253793103448288,
+              "w": 22.344375,
+              "x": 91.743375,
+              "y": 472.72615384615386,
+              "confidence": 0.89,
+              "end_index": 5,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 75.41522440929884,
+              "w": 235.5235775533537,
+              "x": 139.4191974680831,
+              "y": 473.8836801162348,
+              "confidence": 0.97,
+              "end_index": 322,
+              "label": "text",
+              "start_index": 6
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nCHRONOLOGY xliii\n\\</page_header>",
+          "value": "<page_header>\nCHRONOLOGY xliii\n</page_header>",
+          "bbox": [
+            {
+              "h": 13.41,
+              "w": 73.61,
+              "x": 665.07,
+              "y": 15.78,
+              "confidence": 1.0,
+              "end_index": 30,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "xliii",
+          "value": "xliii",
+          "bbox": [
+            {
+              "h": 8.0,
+              "w": 49.0,
+              "x": 666.0,
+              "y": 19.0,
+              "confidence": 0.56,
+              "end_index": 4,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1977-82**: Following the withdrawal of the Disney painting license, prices of Barks's Disney oil paintings sharply increase to five figures, by the early 1980s approaching $50,000; Barks produces a series of non-Disney oil paintings entitled \"Kings and Queens of Myths and Legend,\" two of which are reproduced as lithographs; produces a series of (mostly ink and watercolor) paintings based on his concept of \"famous figures of history as they might have looked if their genes had gotten mixed up with waterfowl\"; completes two oil paintings based on a western theme, *Well-Armed Stranger* and *Worth a Whole Month's Wages* (both 1982).",
+          "value": "1977-82: Following the withdrawal of the Disney painting license, prices of Barks's Disney oil paintings sharply increase to five figures, by the early 1980s approaching $50,000; Barks produces a series of non-Disney oil paintings entitled \"Kings and Queens of Myths and Legend,\" two of which are reproduced as lithographs; produces a series of (mostly ink and watercolor) paintings based on his concept of \"famous figures of history as they might have looked if their genes had gotten mixed up with waterfowl\"; completes two oil paintings based on a western theme, Well-Armed Stranger and Worth a Whole Month's Wages (both 1982).",
+          "bbox": [
+            {
+              "h": 142.24,
+              "w": 237.64,
+              "x": 502.88,
+              "y": 42.59,
+              "confidence": 1.0,
+              "end_index": 637,
+              "label": "text",
+              "start_index": 13
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1978-80**: Summer and Gary Kurtz (producer of *Star Wars*) reach an agreement with Disney to publish a limited edition hardbound collection of Uncle Scrooge stories and gain permission for Barks to produce a new Disney oil painting for lithographic reproduction in conjunction with the Uncle Scrooge book; Hamilton, Cochran, et al. reach an agreement with Disney to publish a hardbound book containing reproductions of Barks's Disney oil paintings.",
+          "value": "1978-80: Summer and Gary Kurtz (producer of Star Wars) reach an agreement with Disney to publish a limited edition hardbound collection of Uncle Scrooge stories and gain permission for Barks to produce a new Disney oil painting for lithographic reproduction in conjunction with the Uncle Scrooge book; Hamilton, Cochran, et al. reach an agreement with Disney to publish a hardbound book containing reproductions of Barks's Disney oil paintings.",
+          "bbox": [
+            {
+              "h": 104.076,
+              "w": 284.32559999999984,
+              "x": 459.2952000000001,
+              "y": 193.28400000000002,
+              "confidence": 0.91,
+              "end_index": 449,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 67.83,
+              "w": 238.43,
+              "x": 504.72,
+              "y": 229.26,
+              "confidence": 1.0,
+              "end_index": 449,
+              "label": "text",
+              "start_index": 187
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1981**: Barrier's *Carl Barks and the Art of the Comic Book*, the first thoroughly researched biographical, critical, and bibliographic account of Barks and his work, is published; Hamilton and Cochran's *The Fine Art of Walt Disney's Donald Duck by Carl Barks* (Another Rainbow Publishing) is published as a signed, limited edition; *Uncle Scrooge McDuck: His Life and Times*, edited by Summer and published by Kurtz, contains a signed, limited edition lithograph of *Wanderers of Wonderland*, Barks's first Disney oil since 1976, as well as \"Go Slowly, Sands of Time,\" a new Uncle Scrooge story by Barks, illustrated in ink and watercolor.",
+          "value": "1981: Barrier's Carl Barks and the Art of the Comic Book, the first thoroughly researched biographical, critical, and bibliographic account of Barks and his work, is published; Hamilton and Cochran's The Fine Art of Walt Disney's Donald Duck by Carl Barks (Another Rainbow Publishing) is published as a signed, limited edition; Uncle Scrooge McDuck: His Life and Times, edited by Summer and published by Kurtz, contains a signed, limited edition lithograph of Wanderers of Wonderland, Barks's first Disney oil since 1976, as well as \"Go Slowly, Sands of Time,\" a new Uncle Scrooge story by Barks, illustrated in ink and watercolor.",
+          "bbox": [
+            {
+              "h": 143.82,
+              "w": 238.16,
+              "x": 507.35,
+              "y": 303.41,
+              "confidence": 1.0,
+              "end_index": 642,
+              "label": "text",
+              "start_index": 10
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1982**: *Uncle Scrooge McDuck* is reviewed in *Time* and *Newsweek*; Barks is interviewed on *Entertainment Tonight*; Summer and Hamilton make many television appearances in the wake of the publication of their books; Another Rainbow Publishing obtains a Disney license to publish the complete works of Carl Barks in hardbound format (*The Carl Barks Library*) and another to allow Barks to produce new oil paintings for litho-",
+          "value": "1982: Uncle Scrooge McDuck is reviewed in Time and Newsweek; Barks is interviewed on Entertainment Tonight; Summer and Hamilton make many television appearances in the wake of the publication of their books; Another Rainbow Publishing obtains a Disney license to publish the complete works of Carl Barks in hardbound format (The Carl Barks Library) and another to allow Barks to produce new oil paintings for litho-",
+          "bbox": [
+            {
+              "h": 9.727957559681727,
+              "w": 21.818624999999997,
+              "x": 463.97437500000007,
+              "y": 459.31734748010615,
+              "confidence": 0.9,
+              "end_index": 7,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 90.77054945693594,
+              "w": 235.36859751333841,
+              "x": 511.8769321646342,
+              "y": 456.31224963795734,
+              "confidence": 0.96,
+              "end_index": 427,
+              "label": "text",
+              "start_index": 10
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "xlii, xliii"
+    }
+  ]
+}

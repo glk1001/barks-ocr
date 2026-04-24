@@ -1,0 +1,222 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# xvi INTRODUCTION",
+          "value": "xvi INTRODUCTION",
+          "bbox": [
+            {
+              "h": 7.578736043790492,
+              "w": 12.262063092487612,
+              "x": 90.09358141792113,
+              "y": 13.138499173792399,
+              "confidence": 0.87,
+              "end_index": 17,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "Only the Dalai Lama of scripters, Carl Barks, is permitted real freedom. Gray-haired and sixtiysh, Barks has a freshness and originality which both inspire and depress colleagues. He invented that wonderful miser, Uncle Scrooge (the only Dell character rivaling Pogo in popularity among the \"intelligentsia\"), the gently mad inventing genius, Gyro Gearloose, and those unvillainous villains, the Beagle Boys. Every month Bark's Donald Duck yarn is featured in *Walt Disney's Comics*, the best-loved story in the comic world. The polished drawing and writing (Barks does both) bring a flood of fan mail, including many protests whenever a non-Barks Donald appears.",
+          "value": "Only the Dalai Lama of scripters, Carl Barks, is permitted real freedom. Gray-haired and sixtiysh, Barks has a freshness and originality which both inspire and depress colleagues. He invented that wonderful miser, Uncle Scrooge (the only Dell character rivaling Pogo in popularity among the \"intelligentsia\"), the gently mad inventing genius, Gyro Gearloose, and those unvillainous villains, the Beagle Boys. Every month Bark's Donald Duck yarn is featured in Walt Disney's Comics, the best-loved story in the comic world. The polished drawing and writing (Barks does both) bring a flood of fan mail, including many protests whenever a non-Barks Donald appears.",
+          "bbox": [
+            {
+              "h": 100.54123118390339,
+              "w": 258.8652295755526,
+              "x": 112.45577611709224,
+              "y": 35.62889119843274,
+              "confidence": 0.99,
+              "end_index": 662,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Beaumont's statement is consistent with (indeed may even be a reference to) a letter that Tom McKimson of the Western Publishing editorial staff sent to Barks dated 4 August 1950: \"Your public is clamoring to see more Donald Duck, à la Barks . . . so we have decided to put your story-art combination back into the monthly magazines.\" Far from \"joyously\" learning over that the company had changed a policy decision because of my stories' popularity,\" Barks was \"more concerned about the extra pressure it would have put on my working time. The long stories were easier to write and more fun to draw. I was really being *demoted* back to a harder job\" (Ault 1999).",
+          "value": "Beaumont's statement is consistent with (indeed may even be a reference to) a letter that Tom McKimson of the Western Publishing editorial staff sent to Barks dated 4 August 1950: \"Your public is clamoring to see more Donald Duck, à la Barks . . . so we have decided to put your story-art combination back into the monthly magazines.\" Far from \"joyously\" learning over that the company had changed a policy decision because of my stories' popularity,\" Barks was \"more concerned about the extra pressure it would have put on my working time. The long stories were easier to write and more fun to draw. I was really being demoted back to a harder job\" (Ault 1999).",
+          "bbox": [
+            {
+              "h": 128.29732267054115,
+              "w": 283.2628333918874,
+              "x": 86.20968218547543,
+              "y": 150.17970821741616,
+              "confidence": 0.99,
+              "end_index": 663,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "In addition to \"demoting\" Barks, the note from McKimson actually asked Barks to submit synopses ahead of time and gave him a schedule by which the first story needed to be produced: \"When you get the plots worked out, we'd enjoy having a brief synopsis of what you have in mind. . . . In order to get this in the earliest issue possible, we'll need a ten-page Donald Duck (story and art) for the February number as soon as you can finish one.\" Instead of sending in synopses for approval, on 10 August 1950—only six days after the McKimson letter was dated—Barks submitted and was paid for a ten-page story.<sup>8</sup> Thus Barks was able to provide the editors at Western with a story so quickly that it appeared in the January 1951 issue instead of the February issue, and the story was not just *any* ten-page story. It was the one in which Barks invented Scrooge's famous \"money swim\"—\"I like to dive around in it like a porpoise! And bore through it like a gopher!\" (*Walt Disney's Comics and Stories* 124). Whether or not Barks already had a ten-pager done and ready to take into the office is uncertain. What is certain is that the sequence of events shows how Barks confounded this attempt to circumscribe his autonomy. He may have seen it as a harder job, but the string of ten-pagers he produced from this point on stands among the greatest he ever did.",
+          "value": "In addition to \"demoting\" Barks, the note from McKimson actually asked Barks to submit synopses ahead of time and gave him a schedule by which the first story needed to be produced: \"When you get the plots worked out, we'd enjoy having a brief synopsis of what you have in mind. . . . In order to get this in the earliest issue possible, we'll need a ten-page Donald Duck (story and art) for the February number as soon as you can finish one.\" Instead of sending in synopses for approval, on 10 August 1950—only six days after the McKimson letter was dated—Barks submitted and was paid for a ten-page story.<sup>8</sup> Thus Barks was able to provide the editors at Western with a story so quickly that it appeared in the January 1951 issue instead of the February issue, and the story was not just any ten-page story. It was the one in which Barks invented Scrooge's famous \"money swim\"—\"I like to dive around in it like a porpoise! And bore through it like a gopher!\" (Walt Disney's Comics and Stories 124). Whether or not Barks already had a ten-pager done and ready to take into the office is uncertain. What is certain is that the sequence of events shows how Barks confounded this attempt to circumscribe his autonomy. He may have seen it as a harder job, but the string of ten-pagers he produced from this point on stands among the greatest he ever did.",
+          "bbox": [
+            {
+              "h": 260.48736,
+              "w": 285.1668,
+              "x": 82.4376,
+              "y": 280.70784,
+              "confidence": 0.86,
+              "end_index": 1363,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 41.02,
+              "w": 281.54,
+              "x": 85.7,
+              "y": 278.96,
+              "confidence": 1.0,
+              "end_index": 274,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Barks was the only \"piecework\" employee of Western to be accorded",
+          "value": "Barks was the only \"piecework\" employee of Western to be accorded",
+          "bbox": [
+            {
+              "h": 260.48736,
+              "w": 285.1668,
+              "x": 82.4376,
+              "y": 280.70784,
+              "confidence": 0.54,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# INTRODUCTION xvii",
+          "value": "INTRODUCTION xvii",
+          "bbox": [
+            {
+              "h": 8.83933126429116,
+              "w": 52.59719009622715,
+              "x": 110.09369547327555,
+              "y": 13.046411924185406,
+              "confidence": 0.88,
+              "end_index": 18,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "Donald Duck diving through a pile of money with the caption \"I LIKE TO DIVE AROUND IN IT LIKE A PORPOISE!\"",
+          "value": "Donald Duck diving through a pile of money with the caption \"I LIKE TO DIVE AROUND IN IT LIKE A PORPOISE!\"",
+          "bbox": [
+            {
+              "h": 207.96542845012388,
+              "w": 299.09374518864337,
+              "x": 453.5292512623857,
+              "y": 37.10292242163682,
+              "confidence": 0.99,
+              "end_index": 105,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "this kind of freedom on a regular basis and allowed to do the work the way he wanted to do it with virtually no editorial interference. Barks literally paid for his freedom, however. He was actually paid *less* than some of the other artists working for Western Publishing at the time, but he valued his autonomy more than the money he could earn by toeing an editorial line:",
+          "value": "this kind of freedom on a regular basis and allowed to do the work the way he wanted to do it with virtually no editorial interference. Barks literally paid for his freedom, however. He was actually paid less than some of the other artists working for Western Publishing at the time, but he valued his autonomy more than the money he could earn by toeing an editorial line:",
+          "bbox": [
+            {
+              "h": 75.76287864900918,
+              "w": 284.01605066215706,
+              "x": 453.7475457078888,
+              "y": 266.35414304496953,
+              "confidence": 0.99,
+              "end_index": 374,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "I know there were a number of guys who were getting higher rates than I was. But they were more under the thumb of the editors. They had to make more corrections, and the work they were doing was not so interesting as what I had. I had that freedom. It was worth $10 a page to me, at least, to have the freedom to write whatever I wanted to write. If they didn't like it, they paid me for it anyway. I got along well enough, and eventually I got on the payroll and got some fringe benefits.<sup>9</sup>",
+          "value": "I know there were a number of guys who were getting higher rates than I was. But they were more under the thumb of the editors. They had to make more corrections, and the work they were doing was not so interesting as what I had. I had that freedom. It was worth $10 a page to me, at least, to have the freedom to write whatever I wanted to write. If they didn't like it, they paid me for it anyway. I got along well enough, and eventually I got on the payroll and got some fringe benefits.<sup>9</sup>",
+          "bbox": [
+            {
+              "h": 76.89274607469508,
+              "w": 260.0222953267912,
+              "x": 479.0338866711129,
+              "y": 348.9659554115854,
+              "confidence": 0.99,
+              "end_index": 501,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Barks himself believed that comic books were a passing fad, occupying one of the lowest and most denigrated levels of the Disney merchandising hierarchy: \"In those days none of us at our drawing boards or in the offices of Western Publishing ever imagined the sale of 'Funny Animal' comic books would last more than a few years. Western Publishing's top brass was quite obviously ashamed to be printing such trash on their mighty printing presses\" (Ault 1999).",
+          "value": "Barks himself believed that comic books were a passing fad, occupying one of the lowest and most denigrated levels of the Disney merchandising hierarchy: \"In those days none of us at our drawing boards or in the offices of Western Publishing ever imagined the sale of 'Funny Animal' comic books would last more than a few years. Western Publishing's top brass was quite obviously ashamed to be printing such trash on their mighty printing presses\" (Ault 1999).",
+          "bbox": [
+            {
+              "h": 90.90852041730187,
+              "w": 284.2385026200458,
+              "x": 455.9816325743141,
+              "y": 439.593328125,
+              "confidence": 0.99,
+              "end_index": 459,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Barks was simply going along with the prevailing attitude in the USA,",
+          "value": "Barks was simply going along with the prevailing attitude in the USA,",
+          "bbox": [
+            {
+              "h": 11.813905135289664,
+              "w": 267.67637580983234,
+              "x": 468.935689810404,
+              "y": 530.6422984470275,
+              "confidence": 0.94,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

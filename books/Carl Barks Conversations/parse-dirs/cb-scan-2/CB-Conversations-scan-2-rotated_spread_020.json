@@ -1,0 +1,339 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 58 CARL BARKS: CONVERSATIONS",
+          "value": "58 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.477920964534114,
+              "w": 102.97196441501525,
+              "x": 139.9837425685976,
+              "y": 36.15742529296875,
+              "confidence": 0.93,
+              "end_index": 29,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** When did you first become interested in becoming a cartoonist?",
+          "value": "BARRIER: When did you first become interested in becoming a cartoonist?",
+          "bbox": [
+            {
+              "h": 22.3799862519055,
+              "w": 261.1113005966559,
+              "x": 121.54050419802783,
+              "y": 59.86010235208652,
+              "confidence": 0.95,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** That was way back when I was going to school in Santa Rosa. There was a kid sat across the aisle from me in the school, in the class, and he was a little older than I was, but he had evidently had some correspondence-school training in cartooning, or his parents or somebody had, because he used to amaze me with little old drawings he'd make of Woodrow Wilson or Theodore Roosevelt or somebody like that, little cartoons. I would look at them and see how he constructed them, and oh, I thought that the most wonderful thing in the world was to draw like that kid could draw. I think I hadn't quite turned 16 yet when I talked my dad into letting me subscribe to that Landon school of cartooning. I got about four of the lessons under my belt when the war work began to get so inconsistent. I didn't have time to work out those problems. I could get five bucks a day out working for Joe Blow down the road, so why should I stay there and work out these cartoon problems. It was a very inconvenient thing for me, a correspondence course with some place back in Cleveland. It took three or four days by train, and only once or twice a week could I find time to get into the post office to take something in. Maybe, if there was snow on the ground, it'd be two or three weeks between trips to the post office. It just didn't work out too well, and being able to earn this money, I just dropped the course. But those little old things did help me. And I was always able to look at cartoons in the newspapers, the comic strips, and the feature pages and so on, and get something out of looking at how other guys did their cartoons. So I had developed a fairly good style; I could draw well enough to get by with quite a lot of things. You can see by my early stuff in the *Eye-Opener* that I had progressed to a point that I could present an idea. I was sort of in between styles there; I would copy one guy's style for a while, and then another, and so when I did something on my own, it was kind of crude looking, because it was neither one thing nor another.",
+          "value": "BARKS: That was way back when I was going to school in Santa Rosa. There was a kid sat across the aisle from me in the school, in the class, and he was a little older than I was, but he had evidently had some correspondence-school training in cartooning, or his parents or somebody had, because he used to amaze me with little old drawings he'd make of Woodrow Wilson or Theodore Roosevelt or somebody like that, little cartoons. I would look at them and see how he constructed them, and oh, I thought that the most wonderful thing in the world was to draw like that kid could draw. I think I hadn't quite turned 16 yet when I talked my dad into letting me subscribe to that Landon school of cartooning. I got about four of the lessons under my belt when the war work began to get so inconsistent. I didn't have time to work out those problems. I could get five bucks a day out working for Joe Blow down the road, so why should I stay there and work out these cartoon problems. It was a very inconvenient thing for me, a correspondence course with some place back in Cleveland. It took three or four days by train, and only once or twice a week could I find time to get into the post office to take something in. Maybe, if there was snow on the ground, it'd be two or three weeks between trips to the post office. It just didn't work out too well, and being able to earn this money, I just dropped the course. But those little old things did help me. And I was always able to look at cartoons in the newspapers, the comic strips, and the feature pages and so on, and get something out of looking at how other guys did their cartoons. So I had developed a fairly good style; I could draw well enough to get by with quite a lot of things. You can see by my early stuff in the Eye-Opener that I had progressed to a point that I could present an idea. I was sort of in between styles there; I would copy one guy's style for a while, and then another, and so when I did something on my own, it was kind of crude looking, because it was neither one thing nor another.",
+          "bbox": [
+            {
+              "h": 377.94781583103094,
+              "w": 290.08485414086323,
+              "x": 113.84970737066503,
+              "y": 86.304770754335,
+              "confidence": 0.99,
+              "end_index": 2066,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** This was when you were seventeen. When did you get to San Francisco?",
+          "value": "BARRIER: This was when you were seventeen. When did you get to San Francisco?",
+          "bbox": [
+            {
+              "h": 23.085851552972557,
+              "w": 280.1580419624143,
+              "x": 112.10295108255526,
+              "y": 471.9645585651678,
+              "confidence": 0.94,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I got there in December of 1918. I had about a hundred dollars in my pocket, something like that. I got there and registered at a hotel and started looking around to see what would happen, and looking at want-ad sections. Of course, with all the soldiers coming back, there weren't many jobs available. After about a month or so, I got on at a little",
+          "value": "BARKS: I got there in December of 1918. I had about a hundred dollars in my pocket, something like that. I got there and registered at a hotel and started looking around to see what would happen, and looking at want-ad sections. Of course, with all the soldiers coming back, there weren't many jobs available. After about a month or so, I got on at a little",
+          "bbox": [
+            {
+              "h": 68.32150664062502,
+              "w": 283.1438746903583,
+              "x": 111.1872589796113,
+              "y": 498.69780631669215,
+              "confidence": 0.97,
+              "end_index": 360,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# J. MICHAEL BARRIER / 1973 59",
+          "value": "J. MICHAEL BARRIER / 1973 59",
+          "bbox": [
+            {
+              "h": 10.177665171851185,
+              "w": 98.18030616425314,
+              "x": 632.5918570884147,
+              "y": 44.08519800221514,
+              "confidence": 0.93,
+              "end_index": 29,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "old printing place as an errand boy at twelve dollars a week. It was enough that I could live on it. I paid two dollars a week for a room on an air-shaft at a little hotel just off of Fourth and Market.",
+          "value": "old printing place as an errand boy at twelve dollars a week. It was enough that I could live on it. I paid two dollars a week for a room on an air-shaft at a little hotel just off of Fourth and Market.",
+          "bbox": [
+            {
+              "h": 37.42759192847275,
+              "w": 284.13321236661585,
+              "x": 465.8552235851754,
+              "y": 68.07499183558025,
+              "confidence": 0.98,
+              "end_index": 201,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Did you try to submit cartoons at this time to the newspapers?",
+          "value": "BARRIER: Did you try to submit cartoons at this time to the newspapers?",
+          "bbox": [
+            {
+              "h": 11.567046357615894,
+              "w": 283.9050000000001,
+              "x": 465.28875000000005,
+              "y": 113.30447682119207,
+              "confidence": 0.73,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I tried it, but I certainly didn't get any place. They didn't buy freelance. They were well stocked with real good artists and didn't need to take on any young kids.",
+          "value": "BARKS: I tried it, but I certainly didn't get any place. They didn't buy freelance. They were well stocked with real good artists and didn't need to take on any young kids.",
+          "bbox": [
+            {
+              "h": 36.02,
+              "w": 277.33,
+              "x": 466.6,
+              "y": 128.03,
+              "confidence": 1.0,
+              "end_index": 175,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** They wouldn't even look at your samples?",
+          "value": "BARRIER: They wouldn't even look at your samples?",
+          "bbox": [
+            {
+              "h": 10.25,
+              "w": 204.78,
+              "x": 467.13,
+              "y": 174.29,
+              "confidence": 1.0,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Oh, they'd glance at them and give them back to me.",
+          "value": "BARKS: Oh, they'd glance at them and give them back to me.",
+          "bbox": [
+            {
+              "h": 9.99,
+              "w": 240.79,
+              "x": 467.13,
+              "y": 187.18,
+              "confidence": 1.0,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** How long did you stay with this?",
+          "value": "BARRIER: How long did you stay with this?",
+          "bbox": [
+            {
+              "h": 12.62,
+              "w": 169.82,
+              "x": 467.13,
+              "y": 206.37,
+              "confidence": 1.0,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I was with the little printing place, the little job printing outfit, for a year and a half, something like that. Then I went back to Oregon and worked up there for a summer on the ranch, then came back to San Francisco for a few months. I was going to study show-card writing. I went to the YMCA show-card school there, their night class, for a few lessons, and I soon found that the lettering came so hard for me, that that wasn't one of my natural talents. I used up all of my money and went back up to Oregon and worked on the ranch again. I stayed with the ranch then for a year and a half, something like that, and then I foolishly got married. It seems as if the climate was against me, wherever I went, trying to ranch; as soon as I tried to raise wheat and potatoes and things there on the ranch, the rains stopped. Nothing would grow, so I had to work at something else. My father-in-law was an old sawmill man, and he had sold out his own sawmill, but he had a logging contract with a logging outfit. So, with my young bride, I went up to the logging camp, and I spent the summer with the loggers.",
+          "value": "BARKS: I was with the little printing place, the little job printing outfit, for a year and a half, something like that. Then I went back to Oregon and worked up there for a summer on the ranch, then came back to San Francisco for a few months. I was going to study show-card writing. I went to the YMCA show-card school there, their night class, for a few lessons, and I soon found that the lettering came so hard for me, that that wasn't one of my natural talents. I used up all of my money and went back up to Oregon and worked on the ranch again. I stayed with the ranch then for a year and a half, something like that, and then I foolishly got married. It seems as if the climate was against me, wherever I went, trying to ranch; as soon as I tried to raise wheat and potatoes and things there on the ranch, the rains stopped. Nothing would grow, so I had to work at something else. My father-in-law was an old sawmill man, and he had sold out his own sawmill, but he had a logging contract with a logging outfit. So, with my young bride, I went up to the logging camp, and I spent the summer with the loggers.",
+          "bbox": [
+            {
+              "h": 205.71562754382626,
+              "w": 285.37545703125005,
+              "x": 467.506156726372,
+              "y": 220.5936853182165,
+              "confidence": 0.98,
+              "end_index": 1118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** What year was this?",
+          "value": "BARRIER: What year was this?",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 122.76,
+              "x": 467.92,
+              "y": 435.08,
+              "confidence": 1.0,
+              "end_index": 31,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** 1923.",
+          "value": "BARKS: 1923.",
+          "bbox": [
+            {
+              "h": 9.726834437086097,
+              "w": 57.83249999999998,
+              "x": 468.70612500000004,
+              "y": 449.2745960264901,
+              "confidence": 0.58,
+              "end_index": 15,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** How did that work out?",
+          "value": "BARRIER: How did that work out?",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 135.91,
+              "x": 468.71,
+              "y": 468.73,
+              "confidence": 1.0,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Oh, I liked the logging and all, but they closed down in the wintertime. It was then coming into about October, November, something like that, of that year. So I was wondering what on earth I could do, and I remembered people that my folks had known in Midland who were in the oil fields, down at Coalinga, I believe, Taft or Coalinga. I thought, well, I'll go down and hunt them up, and see if they put me on any good chances of jobs in the oil fields. I got down there—me and my wife in our little old",
+          "value": "BARKS: Oh, I liked the logging and all, but they closed down in the wintertime. It was then coming into about October, November, something like that, of that year. So I was wondering what on earth I could do, and I remembered people that my folks had known in Midland who were in the oil fields, down at Coalinga, I believe, Taft or Coalinga. I thought, well, I'll go down and hunt them up, and see if they put me on any good chances of jobs in the oil fields. I got down there—me and my wife in our little old",
+          "bbox": [
+            {
+              "h": 89.75611985041922,
+              "w": 284.54711025628814,
+              "x": 469.24454789919974,
+              "y": 481.92662688166934,
+              "confidence": 0.98,
+              "end_index": 513,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "58–59",
+          "value": "58–59",
+          "bbox": [
+            {
+              "h": 8.40872942728182,
+              "w": 10.301914967606697,
+              "x": 738.3372328982471,
+              "y": 44.43209863876716,
+              "confidence": 0.83,
+              "end_index": 4,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "58"
+    }
+  ]
+}

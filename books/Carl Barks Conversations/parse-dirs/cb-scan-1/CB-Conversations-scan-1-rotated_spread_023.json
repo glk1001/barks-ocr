@@ -1,0 +1,140 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "The Duck Man MalcolM Willits, DoN ThoMpson, and MAggie THOMPsoN / 1962",
+          "md": "![The Duck Man MalcolM Willits, DoN ThoMpson, and MAggie THOMPsoN / 1962](CB-Conversations-scan-1-rotated_spread_023_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-1-rotated_spread_023_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 185.38361317883007,
+              "w": 302.6112010289634,
+              "x": 445.7191889291159,
+              "y": 103.78921269769437,
+              "confidence": 0.79,
+              "end_index": 95,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# The Duck Man",
+          "value": "The Duck Man",
+          "bbox": [
+            {
+              "h": 26.514806578696668,
+              "w": 176.04835925590712,
+              "x": 509.3178079744665,
+              "y": 145.28958321265245,
+              "confidence": 0.86,
+              "end_index": 13,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**MALCOLM WILLITS, DON THOMPSON, AND MAGGIE THOMPSON / 1962**",
+          "value": "MALCOLM WILLITS, DON THOMPSON, AND MAGGIE THOMPSON / 1962",
+          "bbox": [
+            {
+              "h": 32.08,
+              "w": 218.45,
+              "x": 487.9,
+              "y": 186.67,
+              "confidence": 1.0,
+              "end_index": 60,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "From *Comic Art* #7, 1968. Reprinted in *The Duckburg Times*, No. 10/11. 27 March 1981.",
+          "value": "From Comic Art #7, 1968. Reprinted in The Duckburg Times, No. 10/11. 27 March 1981.",
+          "bbox": [
+            {
+              "h": 30.761379310344864,
+              "w": 154.833375,
+              "x": 481.84987500000005,
+              "y": 311.8204774535809,
+              "confidence": 0.95,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "*The original interview for this article was conducted in December 1962 in San Jacinto, California, by Malcolm Willits. In 1968 the printed version was transcribed by Maggie Thompson and heavily edited and expanded by Don Thompson. Reprinted by permission of Malcolm Willits and Maggie Thompson.*",
+          "value": "The original interview for this article was conducted in December 1962 in San Jacinto, California, by Malcolm Willits. In 1968 the printed version was transcribed by Maggie Thompson and heavily edited and expanded by Don Thompson. Reprinted by permission of Malcolm Willits and Maggie Thompson.",
+          "bbox": [
+            {
+              "h": 62.43745489710366,
+              "w": 260.70698251714947,
+              "x": 481.1272192025534,
+              "y": 397.3019353182165,
+              "confidence": 0.97,
+              "end_index": 295,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Could you give us who's who type data? Birth, schooling, marriage, children, grandchildren, etc.?",
+          "value": "Q: Could you give us who's who type data? Birth, schooling, marriage, children, grandchildren, etc.?",
+          "bbox": [
+            {
+              "h": 23.92551724137934,
+              "w": 276.01875,
+              "x": 455.56237500000003,
+              "y": 474.3036604774536,
+              "confidence": 0.82,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** I was born March 27, 1901, in the homestead cabin of my parents near Merrill in southern Oregon. Education: 8th grade in one-room schoolhouse (like what the educational system should go back to!). Married three times. Two daughters by first wife. One daughter still living. Four grandchildren. Three great-grandchildren.",
+          "value": "A: I was born March 27, 1901, in the homestead cabin of my parents near Merrill in southern Oregon. Education: 8th grade in one-room schoolhouse (like what the educational system should go back to!). Married three times. Two daughters by first wife. One daughter still living. Four grandchildren. Three great-grandchildren.",
+          "bbox": [
+            {
+              "h": 64.22976,
+              "w": 285.16679999999997,
+              "x": 456.77160000000003,
+              "y": 500.15952,
+              "confidence": 0.9,
+              "end_index": 326,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

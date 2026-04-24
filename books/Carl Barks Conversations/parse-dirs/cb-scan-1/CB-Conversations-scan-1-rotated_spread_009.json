@@ -1,0 +1,192 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "xviii INTRODUCTION",
+              "value": "xviii INTRODUCTION",
+              "bbox": [
+                {
+                  "h": 8.910993783048303,
+                  "w": 51.419036239996196,
+                  "x": 119.51001021222372,
+                  "y": 9.981517051436262,
+                  "confidence": 0.84,
+                  "end_index": 17,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "xviii INTRODUCTION",
+          "bbox": [
+            {
+              "h": 8.91,
+              "w": 51.42,
+              "x": 119.51,
+              "y": 9.98,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "where comic books have always been considered inferior material productions—witness the cheap pulp paper and often misaligned color separations that made comic books one of the most disposable of all mass circulated narrative forms. In the 1950s, however, comic books were extremely profitable and inexpensive to produce. Although circulation figures for Western Publishing have been difficult to obtain with complete accuracy, in 1968 George Sherman at the Disney Studio gave Malcolm Willits a thumbnail sketch of the circulation for several years of *Walt Disney's Comics and Stories*: \"The first issue to sell over a million copies was number 24, September 1942. Let's see, by December 1944, it was 1,300,000, not bad considering the wartime paper shortage. From 1947 on it was two million a month; in August 1951, 2,800,000, in September 1952, 2,850,000. The highest point seems to be 3,038,000 copies in September 1953.\"<sup>10</sup> These numbers establish only the sales. Very likely two to four people read each copy sold (yielding a potential monthly readership of 12,000,000 or even more—considering that comic books were regularly present in barbershops and dentists' offices for kids to read while waiting their turn).<sup>11</sup>",
+          "value": "where comic books have always been considered inferior material productions—witness the cheap pulp paper and often misaligned color separations that made comic books one of the most disposable of all mass circulated narrative forms. In the 1950s, however, comic books were extremely profitable and inexpensive to produce. Although circulation figures for Western Publishing have been difficult to obtain with complete accuracy, in 1968 George Sherman at the Disney Studio gave Malcolm Willits a thumbnail sketch of the circulation for several years of Walt Disney's Comics and Stories: \"The first issue to sell over a million copies was number 24, September 1942. Let's see, by December 1944, it was 1,300,000, not bad considering the wartime paper shortage. From 1947 on it was two million a month; in August 1951, 2,800,000, in September 1952, 2,850,000. The highest point seems to be 3,038,000 copies in September 1953.\"<sup>10</sup> These numbers establish only the sales. Very likely two to four people read each copy sold (yielding a potential monthly readership of 12,000,000 or even more—considering that comic books were regularly present in barbershops and dentists' offices for kids to read while waiting their turn).<sup>11</sup>",
+          "bbox": [
+            {
+              "h": 230.46704544469327,
+              "w": 285.2808548405345,
+              "x": 90.7416962741759,
+              "y": 33.39111935141959,
+              "confidence": 0.99,
+              "end_index": 1242,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Charles Beaumont was probably overstating the case, but not by much, when he wrote in the same May 1955 issue of *Fortnight* in which he first made Barks's name public: \"'Funny animals' have made it the most phenomenally profitable category of publishing. Last year, for example, the top magazine, *Walt Disney's Donald Duck*, outsold every other magazine in the country, including *Life* and *Saturday Evening Post*.\"<sup>12</sup> The same situation was true of the anonymous comic strips of the 1940s as well. Gottfredson recalled that \"Roy Disney \\[senior] came to me in the early '40s and told me that the revenue from the Comic Strip Department was keeping the Studio going at that time.\"<sup>12</sup>",
+          "value": "Charles Beaumont was probably overstating the case, but not by much, when he wrote in the same May 1955 issue of Fortnight in which he first made Barks's name public: \"'Funny animals' have made it the most phenomenally profitable category of publishing. Last year, for example, the top magazine, Walt Disney's Donald Duck, outsold every other magazine in the country, including Life and Saturday Evening Post.\"<sup>12</sup> The same situation was true of the anonymous comic strips of the 1940s as well. Gottfredson recalled that \"Roy Disney [senior] came to me in the early '40s and told me that the revenue from the Comic Strip Department was keeping the Studio going at that time.\"<sup>12</sup>",
+          "bbox": [
+            {
+              "h": 127.18663165015244,
+              "w": 283.59494600026204,
+              "x": 88.67219430318694,
+              "y": 265.9574411204269,
+              "confidence": 0.99,
+              "end_index": 705,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Barks was never told anything like this so directly by his publishers, but he was not impressed by any sales figures he inadvertently got wind of: \"I never got a swelled head over hearing that WDCS was selling millions of copies. I knew it wouldn't last. And besides, Alice Cobb, one of the editors, told me my work wasn't selling those comics—it was Walt Disney's name over the titles\" (Ault 1999).",
+          "value": "Barks was never told anything like this so directly by his publishers, but he was not impressed by any sales figures he inadvertently got wind of: \"I never got a swelled head over hearing that WDCS was selling millions of copies. I knew it wouldn't last. And besides, Alice Cobb, one of the editors, told me my work wasn't selling those comics—it was Walt Disney's name over the titles\" (Ault 1999).",
+          "bbox": [
+            {
+              "h": 76.74910895579272,
+              "w": 284.4791750011909,
+              "x": 86.93585057998287,
+              "y": 394.4568508765244,
+              "confidence": 0.98,
+              "end_index": 398,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "If there is a lesson to be learned from Barks's life and how he made it from an Oregon ranch to become one of the most influential writers and artists of the twentieth century, it is the necessity of taking decisive action, often \"reckless daring,\" to uproot oneself time after time to start life anew. Barks re-created himself several times over in his more than ninety-",
+          "value": "If there is a lesson to be learned from Barks's life and how he made it from an Oregon ranch to become one of the most influential writers and artists of the twentieth century, it is the necessity of taking decisive action, often \"reckless daring,\" to uproot oneself time after time to start life anew. Barks re-created himself several times over in his more than ninety-",
+          "bbox": [
+            {
+              "h": 67.22755449695123,
+              "w": 283.44833107552876,
+              "x": 85.64920693895296,
+              "y": 472.14229253048785,
+              "confidence": 0.99,
+              "end_index": 370,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>INTRODUCTION xix\\</page_header>",
+          "value": "<page_header>INTRODUCTION xix</page_header>",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 75.45,
+              "x": 660.6,
+              "y": 10.52,
+              "confidence": 1.0,
+              "end_index": 30,
+              "label": "header",
+              "start_index": 14
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "nine years. Two aspects of his early life affected him deeply and marked his work from beginning to end—his extended bout with physical labor and his lack of formal education. The former instilled in him a work ethic and a respect for the mechanics of physical reality: \"The perversity of beasts, machines, and nature I knew by heart.\"<sup>3</sup> The latter obliged him to augment his knowledge with research into geography, history, mythology, mathematics, and even English grammar, which Barks found to be both difficult and boring in elementary school. When, in the 1920s, he realized that he needed to know grammar in order to become a successful writer of cartoon gags, he pulled out his old grammar books and set about solving grammar problems as if they were jigsaw puzzles. By making grammatical structure into \"a test, an exercise for the brain,\" he mastered it far beyond anything he could have learned in school (Ault and Ault).",
+          "value": "nine years. Two aspects of his early life affected him deeply and marked his work from beginning to end—his extended bout with physical labor and his lack of formal education. The former instilled in him a work ethic and a respect for the mechanics of physical reality: \"The perversity of beasts, machines, and nature I knew by heart.\"<sup>3</sup> The latter obliged him to augment his knowledge with research into geography, history, mythology, mathematics, and even English grammar, which Barks found to be both difficult and boring in elementary school. When, in the 1920s, he realized that he needed to know grammar in order to become a successful writer of cartoon gags, he pulled out his old grammar books and set about solving grammar problems as if they were jigsaw puzzles. By making grammatical structure into \"a test, an exercise for the brain,\" he mastered it far beyond anything he could have learned in school (Ault and Ault).",
+          "bbox": [
+            {
+              "h": 167.57232712700076,
+              "w": 285.0304836842607,
+              "x": 451.7451274533156,
+              "y": 36.36141261671113,
+              "confidence": 0.99,
+              "end_index": 939,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Making something funny from pretentious sentences like those in Gladstone Gander's thoughts does not come from schoolbooks: \"How awful to be a deposed monarch! How terrible to sit in sackcloth and ashes while ragpickers cheer at my downfall!\" And yet the things Barks *did* read in his youth, precisely because he was not well educated, made lasting impressions on him. When asked in 1997 if he had ever been inspired by the Horatio Alger books, Barks immediately fired back: \"*The Speedwell Boys on Motorcycles*. There were a bunch of imitators \\[of the Alger books] out there.\" Barks was not making this title up, nor was he misremembering at all: The *Speedwell Boys*, who first appeared in 1913 in a book with the exact title Barks remembered, were created by Edward Stratemeyer. Barks clearly remembered a book he had read probably eighty-five years earlier, when he was around age twelve or thirteen, in which a group of boys pulled themselves up by their bootstraps and eventually succeeded in helping not only themselves but others as well (a tale uncannily similar to the earlier stories Barks's older brother Clyde used to \"dream up\" about the \"Flat Butt Man,\" a contemptible white-collar worker who was outwitted time and again in Clyde's stories by his young hard-working heroes) (Ault and Ault).",
+          "value": "Making something funny from pretentious sentences like those in Gladstone Gander's thoughts does not come from schoolbooks: \"How awful to be a deposed monarch! How terrible to sit in sackcloth and ashes while ragpickers cheer at my downfall!\" And yet the things Barks did read in his youth, precisely because he was not well educated, made lasting impressions on him. When asked in 1997 if he had ever been inspired by the Horatio Alger books, Barks immediately fired back: \"The Speedwell Boys on Motorcycles. There were a bunch of imitators [of the Alger books] out there.\" Barks was not making this title up, nor was he misremembering at all: The Speedwell Boys, who first appeared in 1913 in a book with the exact title Barks remembered, were created by Edward Stratemeyer. Barks clearly remembered a book he had read probably eighty-five years earlier, when he was around age twelve or thirteen, in which a group of boys pulled themselves up by their bootstraps and eventually succeeded in helping not only themselves but others as well (a tale uncannily similar to the earlier stories Barks's older brother Clyde used to \"dream up\" about the \"Flat Butt Man,\" a contemptible white-collar worker who was outwitted time and again in Clyde's stories by his young hard-working heroes) (Ault and Ault).",
+          "bbox": [
+            {
+              "h": 244.23792221798786,
+              "w": 285.13367013624236,
+              "x": 454.42446886909306,
+              "y": 205.1190469893293,
+              "confidence": 0.99,
+              "end_index": 1307,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "The different jobs Barks worked at in his early life in Oregon and California were mostly the result of bad timing and wrong decisions by both his parents and by Barks himself. His hard life on the family farm, his father's failed attempts to get ahead in the world (which led to his father's mental breakdown), his forced drop-out from school after the eighth grade when his mother died in 1916, his failure to make any headway toward a career in cartooning after a year and a half in San Francisco—all",
+          "value": "The different jobs Barks worked at in his early life in Oregon and California were mostly the result of bad timing and wrong decisions by both his parents and by Barks himself. His hard life on the family farm, his father's failed attempts to get ahead in the world (which led to his father's mental breakdown), his forced drop-out from school after the eighth grade when his mother died in 1916, his failure to make any headway toward a career in cartooning after a year and a half in San Francisco—all",
+          "bbox": [
+            {
+              "h": 90.21260990853662,
+              "w": 284.7861421732088,
+              "x": 457.9890097894437,
+              "y": 449.6085820598324,
+              "confidence": 0.99,
+              "end_index": 502,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

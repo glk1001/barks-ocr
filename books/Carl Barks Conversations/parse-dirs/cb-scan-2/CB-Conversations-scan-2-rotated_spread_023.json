@@ -1,0 +1,395 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "64 CARL BARKS: CONVERSATIONS",
+              "value": "64 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.24047168921494,
+                  "w": 121.06875802984472,
+                  "x": 95.93182453732375,
+                  "y": 38.19634795576887,
+                  "confidence": 0.84,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "64 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.24,
+              "w": 121.07,
+              "x": 95.93,
+              "y": 38.2,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "bunch, there was four of us that made it. I believe there were four of us. The December class came in, and one of them was Walt Kelly. There were a bunch of real geniuses came in with that class, a whole bunch of guys that had just been laid off and were sort of on WPA and that sort of work, and so they came out there to Disney's. Some of those were real accomplished artists, real good artists.",
+          "value": "bunch, there was four of us that made it. I believe there were four of us. The December class came in, and one of them was Walt Kelly. There were a bunch of real geniuses came in with that class, a whole bunch of guys that had just been laid off and were sort of on WPA and that sort of work, and so they came out there to Disney's. Some of those were real accomplished artists, real good artists.",
+          "bbox": [
+            {
+              "h": 76.84019068573744,
+              "w": 283.57996893757144,
+              "x": 94.67258666694457,
+              "y": 61.8639276462462,
+              "confidence": 0.99,
+              "end_index": 396,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** I've heard this on a couple of occasions, that the Depression was really a great boon to the Disney studio, because there were so many artists who needed work and were available to become animators.\n**BARKS:** Yeah. And the Disney studio was a great boon to those artists. That was the great virtue of that studio: it gave employment to a whole bunch of guys who would have had to have been ditch diggers otherwise.",
+          "value": "BARRIER: I've heard this on a couple of occasions, that the Depression was really a great boon to the Disney studio, because there were so many artists who needed work and were available to become animators.\nBARKS: Yeah. And the Disney studio was a great boon to those artists. That was the great virtue of that studio: it gave employment to a whole bunch of guys who would have had to have been ditch diggers otherwise.",
+          "bbox": [
+            {
+              "h": 78.47538502405678,
+              "w": 283.8122699421209,
+              "x": 93.4836069990949,
+              "y": 146.12015376691124,
+              "confidence": 0.97,
+              "end_index": 427,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** Getting back to your comic-book work, you began writing your stories with the second Donald Duck story. Was there ever a time when they required you to submit scripts in advance?",
+          "value": "BARRIER: Getting back to your comic-book work, you began writing your stories with the second Donald Duck story. Was there ever a time when they required you to submit scripts in advance?",
+          "bbox": [
+            {
+              "h": 38.27120963700457,
+              "w": 283.24915242116055,
+              "x": 92.42709794802782,
+              "y": 230.03316228086896,
+              "confidence": 0.97,
+              "end_index": 190,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** On that \"Mummy's Ring,\" I submitted a sort of script in advance there. I don't remember how detailed a thing it was, but I believe I kind of roughed out the drawings and sent the sheets in, or took the sheets in, and left them there. Eleanor Packer was the editor, and she was also quite a story woman herself. I remember that she suggested some big changes, and I drew up the changes, and I think I sent the roughs of those changes back. She looked them over and sent back word to go ahead with my original version; my original version was better. So after that, I never had any trouble.",
+          "value": "BARKS: On that \"Mummy's Ring,\" I submitted a sort of script in advance there. I don't remember how detailed a thing it was, but I believe I kind of roughed out the drawings and sent the sheets in, or took the sheets in, and left them there. Eleanor Packer was the editor, and she was also quite a story woman herself. I remember that she suggested some big changes, and I drew up the changes, and I think I sent the roughs of those changes back. She looked them over and sent back word to go ahead with my original version; my original version was better. So after that, I never had any trouble.",
+          "bbox": [
+            {
+              "h": 113.5154827720084,
+              "w": 284.6034182515959,
+              "x": 90.664970134456,
+              "y": 269.7436343869094,
+              "confidence": 0.98,
+              "end_index": 598,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** They required you to draw on a certain size of paper?\n**BARKS:** That's right. They told me what size the drawings had to be.",
+          "value": "BARRIER: They required you to draw on a certain size of paper?\nBARKS: That's right. They told me what size the drawings had to be.",
+          "bbox": [
+            {
+              "h": 27.008850071455775,
+              "w": 265.36155556283353,
+              "x": 89.78888084151106,
+              "y": 391.540341068026,
+              "confidence": 0.96,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.46,
+              "w": 248.42,
+              "x": 89.64,
+              "y": 390.65,
+              "confidence": 1.0,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.93,
+              "w": 266.03,
+              "x": 89.11,
+              "y": 404.06,
+              "confidence": 0.96,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 67
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** With the eight-panel pages, you could cut them in half.\n**BARKS:** Yes, I cut them in half. A lot of the guys, though, just drew on full size. I used to think, good Lord, they must have arms on them six feet long.",
+          "value": "BARRIER: With the eight-panel pages, you could cut them in half.\nBARKS: Yes, I cut them in half. A lot of the guys, though, just drew on full size. I used to think, good Lord, they must have arms on them six feet long.",
+          "bbox": [
+            {
+              "h": 49.46535115758386,
+              "w": 282.5670010629049,
+              "x": 88.72931000797924,
+              "y": 423.844492782965,
+              "confidence": 0.97,
+              "end_index": 225,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 28.39,
+              "w": 274.44,
+              "x": 87.54,
+              "y": 423.51,
+              "confidence": 1.0,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 40.22,
+              "w": 275.76,
+              "x": 86.22,
+              "y": 434.03,
+              "confidence": 0.97,
+              "end_index": 225,
+              "label": "text",
+              "start_index": 69
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** You were with your second wife at this time? When did you meet her?",
+          "value": "BARRIER: You were with your second wife at this time? When did you meet her?",
+          "bbox": [
+            {
+              "h": 22.546489338795745,
+              "w": 273.2698579101563,
+              "x": 88.05403357231327,
+              "y": 481.9246058689026,
+              "confidence": 0.96,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I met her while I was living in Minneapolis. She was a telephone operator in the apartment hotel where I lived.",
+          "value": "BARKS: I met her while I was living in Minneapolis. She was a telephone operator in the apartment hotel where I lived.",
+          "bbox": [
+            {
+              "h": 25.096085584984756,
+              "w": 280.38539026772105,
+              "x": 87.69603669254955,
+              "y": 508.0242129334986,
+              "confidence": 0.96,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** And she came out here later?",
+          "value": "BARRIER: And she came out here later?",
+          "bbox": [
+            {
+              "h": 11.340150828887214,
+              "w": 154.59662846262864,
+              "x": 87.83861306985996,
+              "y": 540.2729108946266,
+              "confidence": 0.91,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Well, we came out to California together; it was that way \\[laugh-",
+          "value": "BARKS: Well, we came out to California together; it was that way [laugh-",
+          "bbox": [
+            {
+              "h": 15.65363028772865,
+              "w": 280.58241503013056,
+              "x": 88.09731803484662,
+              "y": 552.9816773866236,
+              "confidence": 0.91,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nJ. MICHAEL BARRIER / 1973 65\n\\</page_header>",
+          "value": "<page_header>\nJ. MICHAEL BARRIER / 1973 65\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 117.51,
+              "x": 615.13,
+              "y": 40.75,
+              "confidence": 1.0,
+              "end_index": 42,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "ing]. I was still married to my first wife. I wasn't going to pay for any darned divorce; let her pay for it. So, eventually, she found some old slob that was willing to come up with the money. I shouldn't say such a name about him; he was a wonderful man. But he was really taken. She just socked him for the amount of money to send her over to Reno to get a divorce, and she never even rewarded him by living with him for one day. Poor old guy. Lost all that money. It must have been about 1938 that I got married. Yeah, because in 1938, with my second wife, I went by Roseville and picked up my two daughters, who were at that time back in Roseville living with their mother, temporarily, and going to school there, and took them with us on a trip back through Montana and Yellowstone and down through the South, Shreveport and Texas.",
+          "value": "ing]. I was still married to my first wife. I wasn't going to pay for any darned divorce; let her pay for it. So, eventually, she found some old slob that was willing to come up with the money. I shouldn't say such a name about him; he was a wonderful man. But he was really taken. She just socked him for the amount of money to send her over to Reno to get a divorce, and she never even rewarded him by living with him for one day. Poor old guy. Lost all that money. It must have been about 1938 that I got married. Yeah, because in 1938, with my second wife, I went by Roseville and picked up my two daughters, who were at that time back in Roseville living with their mother, temporarily, and going to school there, and took them with us on a trip back through Montana and Yellowstone and down through the South, Shreveport and Texas.",
+          "bbox": [
+            {
+              "h": 153.89411233565173,
+              "w": 285.03809744188266,
+              "x": 449.33482217035066,
+              "y": 66.18963955078127,
+              "confidence": 0.99,
+              "end_index": 836,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Was your second wife an artist at all?",
+          "value": "BARRIER: Was your second wife an artist at all?",
+          "bbox": [
+            {
+              "h": 11.442548809070107,
+              "w": 185.91548859089175,
+              "x": 451.6114358803354,
+              "y": 229.41258726419593,
+              "confidence": 0.89,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** No, she had a lot of talent for cooking, sewing, and drinking. I taught her to black in my stuff—that is, put in the solid blacks with the brush—and she did that for me for several years. But as she became more and more of an alcoholic, she got to where she would get on belligerent spells and try to tear up a bunch of my drawings. In fact, that first Uncle Scrooge, *Uncle Scrooge* #1 \\[No. 386], I drew that in a motel down in Los Angeles, where I had taken refuge. She would have torn up my drawings and probably chopped me up with a meat cleaver or something on one of her big drunks. So I had taken all of my drawings and drawing paper and skipped out, in the dark of night, and went down there, Los Angeles, and got into that motel on the corner of Alvarado and Seventh Street, I believe it was.",
+          "value": "BARKS: No, she had a lot of talent for cooking, sewing, and drinking. I taught her to black in my stuff—that is, put in the solid blacks with the brush—and she did that for me for several years. But as she became more and more of an alcoholic, she got to where she would get on belligerent spells and try to tear up a bunch of my drawings. In fact, that first Uncle Scrooge, Uncle Scrooge #1 [No. 386], I drew that in a motel down in Los Angeles, where I had taken refuge. She would have torn up my drawings and probably chopped me up with a meat cleaver or something on one of her big drunks. So I had taken all of my drawings and drawing paper and skipped out, in the dark of night, and went down there, Los Angeles, and got into that motel on the corner of Alvarado and Seventh Street, I believe it was.",
+          "bbox": [
+            {
+              "h": 154.55822776772106,
+              "w": 284.7446672303735,
+              "x": 451.79136099466473,
+              "y": 241.89143696169975,
+              "confidence": 0.98,
+              "end_index": 812,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** I've told you before that I think your stories from the late forties and early fifties are probably your finest, and it's amazing to me that you could have done that kind of work . . .",
+          "value": "BARRIER: I've told you before that I think your stories from the late forties and early fifties are probably your finest, and it's amazing to me that you could have done that kind of work . . .",
+          "bbox": [
+            {
+              "h": 37.40004676543448,
+              "w": 283.2525710985138,
+              "x": 453.36104732755336,
+              "y": 406.06032501905497,
+              "confidence": 0.97,
+              "end_index": 196,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** It seemed like the more difficulties I had, why, the bigger the inspiration that would come when there was just a moment of calmness. When the dishes would stop flying, the bottles breaking, why, I could sit down and the ideas would just flow in on me. I could forget all of the pains and the scratches and so on, and go right to work.",
+          "value": "BARKS: It seemed like the more difficulties I had, why, the bigger the inspiration that would come when there was just a moment of calmness. When the dishes would stop flying, the bottles breaking, why, I could sit down and the ideas would just flow in on me. I could forget all of the pains and the scratches and so on, and go right to work.",
+          "bbox": [
+            {
+              "h": 63.946439476943624,
+              "w": 280.45100883669977,
+              "x": 453.72770986566314,
+              "y": 445.8125469940931,
+              "confidence": 0.97,
+              "end_index": 345,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** What about movies? Did you go to many movies when you were growing up? Did you attend the movies frequently back in the thirties? Some of your stories seem to have the scope that you find in a lot of the adventure movies of the thirties.",
+          "value": "BARRIER: What about movies? Did you go to many movies when you were growing up? Did you attend the movies frequently back in the thirties? Some of your stories seem to have the scope that you find in a lot of the adventure movies of the thirties.",
+          "bbox": [
+            {
+              "h": 50.12476862137958,
+              "w": 283.41050647865865,
+              "x": 454.79533901009916,
+              "y": 519.013452124619,
+              "confidence": 0.98,
+              "end_index": 249,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "64, 65"
+    }
+  ]
+}

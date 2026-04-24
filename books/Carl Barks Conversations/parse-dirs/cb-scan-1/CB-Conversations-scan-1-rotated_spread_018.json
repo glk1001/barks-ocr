@@ -1,0 +1,466 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "xxxvi CHRONOLOGY",
+              "value": "xxxvi CHRONOLOGY",
+              "bbox": [
+                {
+                  "h": 10.35554659513148,
+                  "w": 49.292869378810984,
+                  "x": 126.21356064214942,
+                  "y": 18.423693762504765,
+                  "confidence": 0.84,
+                  "end_index": 15,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "xxxvi CHRONOLOGY",
+          "bbox": [
+            {
+              "h": 10.36,
+              "w": 49.29,
+              "x": 126.21,
+              "y": 18.42,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**1920** Returns to the ranch and works for the summer; returns briefly to San Francisco to attend a YMCA show-card for a few lessons.",
+          "value": "1920 Returns to the ranch and works for the summer; returns briefly to San Francisco to attend a YMCA show-card for a few lessons.",
+          "bbox": [
+            {
+              "h": 38.656800000000004,
+              "w": 279.27840000000003,
+              "x": 96.73800000000001,
+              "y": 41.63040000000001,
+              "confidence": 0.78,
+              "end_index": 133,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 27.34,
+              "w": 235.8,
+              "x": 139.32,
+              "y": 125.41,
+              "confidence": 1.0,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 44
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1920–23** Returns to Oregon and works again at the family ranch.",
+          "value": "1920–23 Returns to Oregon and works again at the family ranch.",
+          "bbox": [
+            {
+              "h": 17.246880000000004,
+              "w": 262.4544,
+              "x": 95.05560000000001,
+              "y": 86.82912,
+              "confidence": 0.76,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1921** Marries Pearl Turner.",
+          "value": "1921 Marries Pearl Turner.",
+          "bbox": [
+            {
+              "h": 12.788307336128048,
+              "w": 128.06520645960367,
+              "x": 94.2819620807927,
+              "y": 106.98475789824697,
+              "confidence": 0.76,
+              "end_index": 29,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1923** Daughter Peggy is born (23 Jan.); works in logging camp during the summer.",
+          "value": "1923 Daughter Peggy is born (23 Jan.); works in logging camp during the summer.",
+          "bbox": [
+            {
+              "h": 25.572959999999995,
+              "w": 281.802,
+              "x": 94.21440000000001,
+              "y": 127.27008000000001,
+              "confidence": 0.77,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1923–29** Considers working in the oil fields near Coalinga, California, but instead moves to Roseville, California, and works in the railroad car shops (for the Pacific Fruit Express) on the riveting gang as \"rivet heater\"; in his spare time he refines his car-tooning style and sharpens his knowledge of grammar.",
+          "value": "1923–29 Considers working in the oil fields near Coalinga, California, but instead moves to Roseville, California, and works in the railroad car shops (for the Pacific Fruit Express) on the riveting gang as \"rivet heater\"; in his spare time he refines his car-tooning style and sharpens his knowledge of grammar.",
+          "bbox": [
+            {
+              "h": 67.79808,
+              "w": 282.6432,
+              "x": 92.53200000000001,
+              "y": 159.97968000000003,
+              "confidence": 0.8,
+              "end_index": 315,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1924** Daughter Dorothy is born.",
+          "value": "1924 Daughter Dorothy is born.",
+          "bbox": [
+            {
+              "h": 13.587501290967996,
+              "w": 148.11769014386437,
+              "x": 91.2630821384337,
+              "y": 231.48453258384149,
+              "confidence": 0.81,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1928–29** Sells gags to *College Humor*, *Captain Billy's Whiz-Bang*, *Judge*, and the *Calgary Eye-Opener*.",
+          "value": "1928–29 Sells gags to College Humor, Captain Billy's Whiz-Bang, Judge, and the Calgary Eye-Opener.",
+          "bbox": [
+            {
+              "h": 28.288863109756107,
+              "w": 266.98560262242756,
+              "x": 90.39962191549162,
+              "y": 251.363824847561,
+              "confidence": 0.78,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1930–31** Separates from Pearl, returns to Oregon, and works briefly in a box factory; continues selling gags, almost exclusively to the *Eye-Opener*.",
+          "value": "1930–31 Separates from Pearl, returns to Oregon, and works briefly in a box factory; continues selling gags, almost exclusively to the Eye-Opener.",
+          "bbox": [
+            {
+              "h": 39.25152000000003,
+              "w": 281.802,
+              "x": 90.00840000000001,
+              "y": 284.27616,
+              "confidence": 0.8,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1931–32** Recruited by *Eye-Opener* and is paid to move to Minneapolis in Nov. to join the staff; meets second wife, Clara Balken, a telephone operator.",
+          "value": "1931–32 Recruited by Eye-Opener and is paid to move to Minneapolis in Nov. to join the staff; meets second wife, Clara Balken, a telephone operator.",
+          "bbox": [
+            {
+              "h": 39.25152000000003,
+              "w": 283.48440000000005,
+              "x": 88.32600000000001,
+              "y": 330.06960000000004,
+              "confidence": 0.79,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1932–35** Assumes full editorship of the *Eye-Opener* and becomes almost the sole contributor to the magazine.",
+          "value": "1932–35 Assumes full editorship of the Eye-Opener and becomes almost the sole contributor to the magazine.",
+          "bbox": [
+            {
+              "h": 29.141279999999995,
+              "w": 276.7548,
+              "x": 87.4848,
+              "y": 375.26832,
+              "confidence": 0.78,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.46,
+              "w": 164.03,
+              "x": 133.8,
+              "y": 389.64,
+              "confidence": 1.0,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 70
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1935** Responds to an advertisement from the Walt Disney Studios for cartoonists (ca. Sept.); sends samples of his work and is invited to a one-month training and trial period at Disney's beginning in Nov. 1935, which he successfully completes; starts working in the in-between department of Disney Studios in Dec.",
+          "value": "1935 Responds to an advertisement from the Walt Disney Studios for cartoonists (ca. Sept.); sends samples of his work and is invited to a one-month training and trial period at Disney's beginning in Nov. 1935, which he successfully completes; starts working in the in-between department of Disney Studios in Dec.",
+          "bbox": [
+            {
+              "h": 77.90831999999995,
+              "w": 279.27840000000003,
+              "x": 86.6436,
+              "y": 408.57264000000004,
+              "confidence": 0.76,
+              "end_index": 315,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1936** Works for six months in the in-between department and animates a sequence for the *Mickey Mouse* cartoon \"Thru the Mirror,\" while submitting various gags for animated cartoons and comic strips, including a barber-chair gag that was adopted for the *Donald Duck* cartoon \"Modern Inventions,\" and is immediately moved by Walt Disney personally to the new *Donald Duck* story unit.",
+          "value": "1936 Works for six months in the in-between department and animates a sequence for the Mickey Mouse cartoon \"Thru the Mirror,\" while submitting various gags for animated cartoons and comic strips, including a barber-chair gag that was adopted for the Donald Duck cartoon \"Modern Inventions,\" and is immediately moved by Walt Disney personally to the new Donald Duck story unit.",
+          "bbox": [
+            {
+              "h": 56.49839999999995,
+              "w": 283.4844,
+              "x": 84.12,
+              "y": 493.02288,
+              "confidence": 0.75,
+              "end_index": 386,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nCHRONOLOGY xxxvii\n\\</page_header>",
+          "value": "<page_header>\nCHRONOLOGY xxxvii\n</page_header>",
+          "bbox": [
+            {
+              "h": 11.31,
+              "w": 83.33,
+              "x": 649.3,
+              "y": 28.4,
+              "confidence": 1.0,
+              "end_index": 31,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "adopted for the *Donald Duck* cartoon \"Modern Inventions,\" and is immediately moved by Walt Disney personally to the new *Donald Duck* story unit.",
+          "value": "adopted for the Donald Duck cartoon \"Modern Inventions,\" and is immediately moved by Walt Disney personally to the new Donald Duck story unit.",
+          "bbox": [
+            {
+              "h": 36.80848806366048,
+              "w": 236.32462500000008,
+              "x": 494.20500000000004,
+              "y": 51.79480106100796,
+              "confidence": 0.84,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1938** Marries Clara Balken and travels with his daughters, from whom he'd been separated since 1931, through southern USA.",
+          "value": "1938 Marries Clara Balken and travels with his daughters, from whom he'd been separated since 1931, through southern USA.",
+          "bbox": [
+            {
+              "h": 37.07,
+              "w": 224.5,
+              "x": 493.15,
+              "y": 98.07,
+              "confidence": 1.0,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 9
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1940** The new Disney Studio opens in Burbank (6 May). Barks purchases property in San Jacinto, California, where he finds the hot, dry climate hospitable to a sinus condition that develops from the new air-conditioning in the new studio.",
+          "value": "1940 The new Disney Studio opens in Burbank (6 May). Barks purchases property in San Jacinto, California, where he finds the hot, dry climate hospitable to a sinus condition that develops from the new air-conditioning in the new studio.",
+          "bbox": [
+            {
+              "h": 51.14591999999999,
+              "w": 283.4844,
+              "x": 448.35960000000006,
+              "y": 143.92224000000002,
+              "confidence": 0.78,
+              "end_index": 239,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1941** Disney strike (29 May–14 September), in which members of the story department, including Barks, do not participate.",
+          "value": "1941 Disney strike (29 May–14 September), in which members of the story department, including Barks, do not participate.",
+          "bbox": [
+            {
+              "h": 25.77,
+              "w": 234.75,
+              "x": 493.42,
+              "y": 201.66,
+              "confidence": 1.0,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 9
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1942** Works on a comic book story script with Jack Hannah and Nick George for \"Pluto Saves the Ship\" (*Large Feature Comic* #7); illustrates 32 pages of the 64-page comic book \"Donald Duck Finds Pirate Gold\" (*Four Color Comics* \\[FC] #9; with Hannah illustrating the other 32 pages); resigns from the Disney Studio on 6 Nov.; is sent a script for the first original *Donald Duck* story to appear in *Walt Disney's Comics and Stories* (WDC&S) #31, which Barks significantly revises and submits in completed form (Nov.); he is then invited to submit a completed story of his own—the first story he both writes and draws for comic books (WDC&S #32, 23 Dec.).",
+          "value": "1942 Works on a comic book story script with Jack Hannah and Nick George for \"Pluto Saves the Ship\" (Large Feature Comic #7); illustrates 32 pages of the 64-page comic book \"Donald Duck Finds Pirate Gold\" (Four Color Comics [FC] #9; with Hannah illustrating the other 32 pages); resigns from the Disney Studio on 6 Nov.; is sent a script for the first original Donald Duck story to appear in Walt Disney's Comics and Stories (WDC&S) #31, which Barks significantly revises and submits in completed form (Nov.); he is then invited to submit a completed story of his own—the first story he both writes and draws for comic books (WDC&S #32, 23 Dec.).",
+          "bbox": [
+            {
+              "h": 13.145888594164461,
+              "w": 26.287500000000023,
+              "x": 445.04737500000005,
+              "y": 233.73389920424407,
+              "confidence": 0.77,
+              "end_index": 5,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 141.70311733993907,
+              "w": 235.1332722942074,
+              "x": 494.6843160966083,
+              "y": 236.34896510099088,
+              "confidence": 0.84,
+              "end_index": 655,
+              "label": "text",
+              "start_index": 6
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1942–66** Writes and draws all but 30 of the *Donald Duck* 10-page stories for WDC&S (over 256 stories out of 286 issues, and nine of these are Barks reprints).",
+          "value": "1942–66 Writes and draws all but 30 of the Donald Duck 10-page stories for WDC&S (over 256 stories out of 286 issues, and nine of these are Barks reprints).",
+          "bbox": [
+            {
+              "h": 36.55,
+              "w": 236.85,
+              "x": 493.42,
+              "y": 385.7,
+              "confidence": 1.0,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 12
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1943–47** Produces non-Disney comic book work for Western Publishing, including stories featuring Andy Panda, Porky Pig, and Happy Hound (MGM's Droopy), as well as writing and drawing Barney Bear and Benny Burro stories monthly for *Our Gang* comics (28 stories); meets Margaret \"Garé\" Williams (later to be his third wife).",
+          "value": "1943–47 Produces non-Disney comic book work for Western Publishing, including stories featuring Andy Panda, Porky Pig, and Happy Hound (MGM's Droopy), as well as writing and drawing Barney Bear and Benny Burro stories monthly for Our Gang comics (28 stories); meets Margaret \"Garé\" Williams (later to be his third wife).",
+          "bbox": [
+            {
+              "h": 9.727957559681727,
+              "w": 38.64262500000001,
+              "x": 446.88750000000005,
+              "y": 430.9222281167109,
+              "confidence": 0.85,
+              "end_index": 8,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 76.7719893899204,
+              "w": 238.42762500000003,
+              "x": 491.5762500000001,
+              "y": 430.133474801061,
+              "confidence": 0.8,
+              "end_index": 323,
+              "label": "text",
+              "start_index": 9
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**1943–67** Writes and draws comic book stories for *Donald Duck Adventures* (primarily 1943–57; over 36 stories, each 22–33 pages long).",
+          "value": "1943–67 Writes and draws comic book stories for Donald Duck Adventures (primarily 1943–57; over 36 stories, each 22–33 pages long).",
+          "bbox": [
+            {
+              "h": 41.02,
+              "w": 240.53,
+              "x": 489.47,
+              "y": 515.06,
+              "confidence": 1.0,
+              "end_index": 136,
+              "label": "text",
+              "start_index": 12
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

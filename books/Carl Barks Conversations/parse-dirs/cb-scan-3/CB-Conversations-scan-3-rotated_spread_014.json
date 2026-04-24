@@ -1,0 +1,211 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "106 CARL BARKS: CONVERSATIONS",
+              "value": "106 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.008657979230186,
+                  "w": 125.06051465439218,
+                  "x": 107.64985459341656,
+                  "y": 41.44201025033347,
+                  "confidence": 0.85,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "106 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.01,
+              "w": 125.06,
+              "x": 107.65,
+              "y": 41.44,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I was very conscious of criticism from my readers or friends. About \\[1949] somebody came up to me at Disney Studios. One of the women that lived up the road was an inker at Disney, and I think she was the first one that told me that \"The word is out all around the studio that you draw that beak too long.\" So I started shortening the duck's beak; and then I got criticism from a letter—no, it wouldn't have been a letter at that time, it would have been from some other person, either in the story department at Disney or in the editorial office—that I was making the beak too short and making the duck look too much like Al Taliaferro's duck. So I would make these changes to try to please someone else. I hadn't noticed anything wrong. And that other change, in which I started making the duck quite tall and the nephews quite tall, the head small in relation to the body, and standing them up straighter, more that, too, came from trying to get a duck that looked a little bit like the comic strip duck. Somehow Al Taliaferro stood that duck up much straighter than I had. And he had a head that was smaller in proportion to his overall height. And another thing that influenced me at that time was the drawing paper. The company got a whole bunch of it in from Germany that was coated with a kind of soft chalk; and whenever I would make my rough drawing, the pencil would make little trenches. I've always drawn that duck too tall, and with good paper I would just erase it and redraw him; but since there was a trench already made there by my pencil from making that tall duck, I was always getting my pen line stuck in that trench and drawing him that way anyway. So I thought, Oh heck with this, I'll just draw that duck the way he comes out in the first rough. If nobody likes it, why they better get me some better paper. So they did. In a couple of years' time they got some better paper—still from West Germany, but it was a better grade of paper.",
+          "value": "BARKS: I was very conscious of criticism from my readers or friends. About [1949] somebody came up to me at Disney Studios. One of the women that lived up the road was an inker at Disney, and I think she was the first one that told me that \"The word is out all around the studio that you draw that beak too long.\" So I started shortening the duck's beak; and then I got criticism from a letter—no, it wouldn't have been a letter at that time, it would have been from some other person, either in the story department at Disney or in the editorial office—that I was making the beak too short and making the duck look too much like Al Taliaferro's duck. So I would make these changes to try to please someone else. I hadn't noticed anything wrong. And that other change, in which I started making the duck quite tall and the nephews quite tall, the head small in relation to the body, and standing them up straighter, more that, too, came from trying to get a duck that looked a little bit like the comic strip duck. Somehow Al Taliaferro stood that duck up much straighter than I had. And he had a head that was smaller in proportion to his overall height. And another thing that influenced me at that time was the drawing paper. The company got a whole bunch of it in from Germany that was coated with a kind of soft chalk; and whenever I would make my rough drawing, the pencil would make little trenches. I've always drawn that duck too tall, and with good paper I would just erase it and redraw him; but since there was a trench already made there by my pencil from making that tall duck, I was always getting my pen line stuck in that trench and drawing him that way anyway. So I thought, Oh heck with this, I'll just draw that duck the way he comes out in the first rough. If nobody likes it, why they better get me some better paper. So they did. In a couple of years' time they got some better paper—still from West Germany, but it was a better grade of paper.",
+          "bbox": [
+            {
+              "h": 365.23296857255156,
+              "w": 288.6232193008051,
+              "x": 101.73057755037635,
+              "y": 64.62439175519246,
+              "confidence": 0.95,
+              "end_index": 1971,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Could you tell the story of your haunting drugstores?\n**BARKS:** I used to go to the drugstores or wherever there was a newsstand, and if I happened to be around when I had a little time on my hands, I would stand around that newsstand pretending I was looking at *Popular Mechanics* or something and watch the kids. At that time kids would always come in where there was a big stack of comic books and just sit down on one stack and pick up comic books out of the next stack and read them or look through them. And I always hoped that I would see some kid buy a *Walt Disney Comics* or an *Uncle Scrooge*. I never did. They always picked up *Superman* or a Harvey comic or an *Oswald Rabbit*,",
+          "value": "Q: Could you tell the story of your haunting drugstores?\nBARKS: I used to go to the drugstores or wherever there was a newsstand, and if I happened to be around when I had a little time on my hands, I would stand around that newsstand pretending I was looking at Popular Mechanics or something and watch the kids. At that time kids would always come in where there was a big stack of comic books and just sit down on one stack and pick up comic books out of the next stack and read them or look through them. And I always hoped that I would see some kid buy a Walt Disney Comics or an Uncle Scrooge. I never did. They always picked up Superman or a Harvey comic or an Oswald Rabbit,",
+          "bbox": [
+            {
+              "h": 132.78312000000005,
+              "w": 281.802,
+              "x": 99.2616,
+              "y": 438.83928000000003,
+              "confidence": 0.87,
+              "end_index": 699,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nAULT, ANDRAE, AND GONG / 1975 107\n\\</page_header>",
+          "value": "<page_header>\nAULT, ANDRAE, AND GONG / 1975 107\n</page_header>",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 146.42,
+              "x": 588.84,
+              "y": 36.28,
+              "confidence": 1.0,
+              "end_index": 47,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "but never did one of them even look at an *Uncle Scrooge* or a *Donald Duck*. I used to wonder what on earth did they do with these big stacks of *Walt Disney Comics*—they'd be two feet high sometimes. Would they tear off all those covers and send all of them back? Was the company crazy? But evidently some kid would buy them always on the sly when I couldn't see him.",
+          "value": "but never did one of them even look at an Uncle Scrooge or a Donald Duck. I used to wonder what on earth did they do with these big stacks of Walt Disney Comics—they'd be two feet high sometimes. Would they tear off all those covers and send all of them back? Was the company crazy? But evidently some kid would buy them always on the sly when I couldn't see him.",
+          "bbox": [
+            {
+              "h": 76.99487793921496,
+              "w": 283.36066642054124,
+              "x": 452.5601000619284,
+              "y": 61.77826507002669,
+              "confidence": 0.97,
+              "end_index": 368,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Does the fact that people will now pay two, three, four thousand dollars for one of your duck paintings make up for the fact that you never saw a child buy your comics?",
+          "value": "Q: Does the fact that people will now pay two, three, four thousand dollars for one of your duck paintings make up for the fact that you never saw a child buy your comics?",
+          "bbox": [
+            {
+              "h": 38.703599999999994,
+              "w": 282.64320000000004,
+              "x": 453.40680000000003,
+              "y": 147.07368000000002,
+              "confidence": 0.86,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** That seems like a whole different thing. I never dwell on the subject very much, but whenever I read about the great Barks and the stuff that he wrote, it seems to me that they're writing about someone else. I can't attach myself to that at all; it's like a totally different person. The painting is more direct, because I can see the person sometimes who buys the painting and see his expression and hear his comments. The comments come in more directly than they ever did on the comic books, on which I went years without hearing a single comment of any kind. I also have more complete control as far as what the drawing is and how it is finished up.",
+          "value": "BARKS: That seems like a whole different thing. I never dwell on the subject very much, but whenever I read about the great Barks and the stuff that he wrote, it seems to me that they're writing about someone else. I can't attach myself to that at all; it's like a totally different person. The painting is more direct, because I can see the person sometimes who buys the painting and see his expression and hear his comments. The comments come in more directly than they ever did on the comic books, on which I went years without hearing a single comment of any kind. I also have more complete control as far as what the drawing is and how it is finished up.",
+          "bbox": [
+            {
+              "h": 130.38152570979423,
+              "w": 285.19933879573176,
+              "x": 454.05925895579276,
+              "y": 186.3326259432165,
+              "confidence": 0.94,
+              "end_index": 662,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Do you therefore prefer doing the paintings?\n**BARKS:** Yes, I would hate to have to go back into comic books again.",
+          "value": "Q: Do you therefore prefer doing the paintings?\nBARKS: Yes, I would hate to have to go back into comic books again.",
+          "bbox": [
+            {
+              "h": 24.022998718559432,
+              "w": 270.12640286775917,
+              "x": 455.73528744283544,
+              "y": 325.4368427543827,
+              "confidence": 0.89,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** It is often noted that the nephews are more parental and authoritative than Donald. Why did you reverse roles like that?",
+          "value": "Q: It is often noted that the nephews are more parental and authoritative than Donald. Why did you reverse roles like that?",
+          "bbox": [
+            {
+              "h": 25.603920000000016,
+              "w": 285.1668000000001,
+              "x": 455.9304000000001,
+              "y": 358.45488,
+              "confidence": 0.85,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** From the very start Donald was the hapless comedian. Any bad things that happened would have to happen to him; I couldn't have the little kids get squashed or kicked around. The kids can get themselves in some pretty bad messes through something they do wrong, and then Donald has a chance to rescue them, so I used that angle once in a while. But mostly it was Donald who was the guy who was going to get clobbered and the kids who were going to rescue him. It worked out better, and it seemed that it appealed to more people that way. Because the readers were kids themselves, they liked to feel a little bit superior to the uncle who was strutting around. And that brings up another point. I think that one of the things that puts over stories in comic strips or anything is—Can you make the reader feel superior to those characters? Like Donald: the reader automatically feels superior to him, because he's so bungling, and when he goes strutting around, you just know way ahead of",
+          "value": "BARKS: From the very start Donald was the hapless comedian. Any bad things that happened would have to happen to him; I couldn't have the little kids get squashed or kicked around. The kids can get themselves in some pretty bad messes through something they do wrong, and then Donald has a chance to rescue them, so I used that angle once in a while. But mostly it was Donald who was the guy who was going to get clobbered and the kids who were going to rescue him. It worked out better, and it seemed that it appealed to more people that way. Because the readers were kids themselves, they liked to feel a little bit superior to the uncle who was strutting around. And that brings up another point. I think that one of the things that puts over stories in comic strips or anything is—Can you make the reader feel superior to those characters? Like Donald: the reader automatically feels superior to him, because he's so bungling, and when he goes strutting around, you just know way ahead of",
+          "bbox": [
+            {
+              "h": 183.99095999999997,
+              "w": 286.8492000000001,
+              "x": 456.77160000000003,
+              "y": 384.0588,
+              "confidence": 0.92,
+              "end_index": 995,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "106, 107"
+    }
+  ]
+}

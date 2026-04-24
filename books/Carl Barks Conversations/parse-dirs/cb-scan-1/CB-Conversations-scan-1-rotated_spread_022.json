@@ -1,0 +1,132 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "xlvi CHRONOLOGY",
+              "value": "xlvi CHRONOLOGY",
+              "bbox": [
+                {
+                  "h": 8.788025969416923,
+                  "w": 49.34000454935214,
+                  "x": 112.10475434093942,
+                  "y": 23.644071702910633,
+                  "confidence": 0.77,
+                  "end_index": 14,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "xlvi CHRONOLOGY",
+          "bbox": [
+            {
+              "h": 8.79,
+              "w": 49.34,
+              "x": 112.1,
+              "y": 23.64,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**1998**: Leonardo Gori and Francesco Stajano conduct an interview with Barks in Grants Pass for their book *Il grande Floyd Gottfredson*.",
+          "value": "1998: Leonardo Gori and Francesco Stajano conduct an interview with Barks in Grants Pass for their book Il grande Floyd Gottfredson.",
+          "bbox": [
+            {
+              "h": 168.30576,
+              "w": 283.48440000000005,
+              "x": 88.32600000000001,
+              "y": 46.38816,
+              "confidence": 0.76,
+              "end_index": 137,
+              "label": "key-value-region",
+              "start_index": 0
+            },
+            {
+              "h": 37.86,
+              "w": 230.8,
+              "x": 133.8,
+              "y": 46.54,
+              "confidence": 1.0,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 10
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**1999**: Ault, Hamilton, Nicky Wright, and John Ronan conduct the last extensive interviews with Barks (28–30 Apr.) in Grants Pass; Barks is diagnosed with chronic lymphocytic leukemia and begins chemotherapy treatment (July).",
+          "value": "1999: Ault, Hamilton, Nicky Wright, and John Ronan conduct the last extensive interviews with Barks (28–30 Apr.) in Grants Pass; Barks is diagnosed with chronic lymphocytic leukemia and begins chemotherapy treatment (July).",
+          "bbox": [
+            {
+              "h": 52.32,
+              "w": 230.54,
+              "x": 134.85,
+              "y": 90.18,
+              "confidence": 1.0,
+              "end_index": 226,
+              "label": "text",
+              "start_index": 10
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**2000**: *Disney Legends* documentary on Carl Barks appears on the Disney Channel; Barks requests that all life-prolonging medication (including chemotherapy) be stopped (June); Ault pays his last visit to Barks (16–20 June); on 25 Aug., Carl Barks dies peacefully at home in his sleep at 12:15 A.M. PDT.",
+          "value": "2000: Disney Legends documentary on Carl Barks appears on the Disney Channel; Barks requests that all life-prolonging medication (including chemotherapy) be stopped (June); Ault pays his last visit to Barks (16–20 June); on 25 Aug., Carl Barks dies peacefully at home in his sleep at 12:15 A.M. PDT.",
+          "bbox": [
+            {
+              "h": 64.41,
+              "w": 236.32,
+              "x": 134.85,
+              "y": 148.55,
+              "confidence": 1.0,
+              "end_index": 304,
+              "label": "text",
+              "start_index": 10
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Carl Barks Conversations logo inside a speech bubble",
+          "md": "![Carl Barks Conversations logo inside a speech bubble](CB-Conversations-scan-1-rotated_spread_022_page_1_image_2_v2.jpg)",
+          "url": "CB-Conversations-scan-1-rotated_spread_022_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 99.31824,
+              "w": 166.55759999999998,
+              "x": 511.44960000000003,
+              "y": 162.35856,
+              "confidence": 0.75,
+              "end_index": 77,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "xlvi"
+    }
+  ]
+}

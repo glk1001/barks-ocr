@@ -1,0 +1,591 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "4 CARL BARKS: CONVERSATIONS",
+              "value": "4 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 11.02298687059356,
+                  "w": 115.78300072051258,
+                  "x": 107.93764962247525,
+                  "y": 21.339910627262768,
+                  "confidence": 0.87,
+                  "end_index": 26,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "4 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.02,
+              "w": 115.78,
+              "x": 107.94,
+              "y": 21.34,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "4",
+          "value": "4",
+          "bbox": [
+            {
+              "h": 7.89,
+              "w": 10.52,
+              "x": 108.3,
+              "y": 22.09,
+              "confidence": 0.4,
+              "end_index": 0,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** What made you decide on a career in art?",
+          "value": "Q: What made you decide on a career in art?",
+          "bbox": [
+            {
+              "h": 11.737473968654728,
+              "w": 175.26917631716842,
+              "x": 107.9948655082889,
+              "y": 45.449005731945505,
+              "confidence": 0.89,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** I was looking for an easier way to make a living.",
+          "value": "A: I was looking for an easier way to make a living.",
+          "bbox": [
+            {
+              "h": 12.274988786204275,
+              "w": 196.69108447265629,
+              "x": 107.51564959270199,
+              "y": 58.70125635837463,
+              "confidence": 0.9,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** What had you been doing?",
+          "value": "Q: What had you been doing?",
+          "bbox": [
+            {
+              "h": 11.30546419098144,
+              "w": 119.08237500000001,
+              "x": 107.25300000000001,
+              "y": 77.03490716180372,
+              "confidence": 0.87,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** I was working in a railroad car shop, on the riveting gang. That was in 1929, and the Depression had just started. I quit the railroad yard and there was no other work available. I freelanced for comics, in drawing and joke-writing. Mostly joke-writing, because I couldn't draw very well at the time.",
+          "value": "A: I was working in a railroad car shop, on the riveting gang. That was in 1929, and the Depression had just started. I quit the railroad yard and there was no other work available. I freelanced for comics, in drawing and joke-writing. Mostly joke-writing, because I couldn't draw very well at the time.",
+          "bbox": [
+            {
+              "h": 60.43071402439026,
+              "w": 284.27243894102514,
+              "x": 106.7018791563453,
+              "y": 91.39903267911586,
+              "confidence": 0.94,
+              "end_index": 306,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** It was probably very difficult in those Depression years to be freelancing.",
+          "value": "Q: It was probably very difficult in those Depression years to be freelancing.",
+          "bbox": [
+            {
+              "h": 23.97176380049541,
+              "w": 278.093373725705,
+              "x": 106.06272424018675,
+              "y": 161.75292556211892,
+              "confidence": 0.92,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** It was.",
+          "value": "A: It was.",
+          "bbox": [
+            {
+              "h": 9.123453701410043,
+              "w": 37.95777501548209,
+              "x": 105.82673532178927,
+              "y": 187.76284200171497,
+              "confidence": 0.89,
+              "end_index": 13,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** And then, in late 1935, you got a job with the Disney Studios?\n**A:** Yes, that's right. I tried out for one month and then got hired at $20 a week.",
+          "value": "Q: And then, in late 1935, you got a job with the Disney Studios?\nA: Yes, that's right. I tried out for one month and then got hired at $20 a week.",
+          "bbox": [
+            {
+              "h": 35.442795517339945,
+              "w": 282.4406289657965,
+              "x": 105.21116051352897,
+              "y": 206.82976649199696,
+              "confidence": 0.87,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.41,
+              "w": 253.94,
+              "x": 105.94,
+              "y": 206.13,
+              "confidence": 1.0,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 7
+            },
+            {
+              "h": 23.14,
+              "w": 283.12,
+              "x": 104.1,
+              "y": 219.54,
+              "confidence": 1.0,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 70
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** You had no formal art training—you just taught yourself in the intervening years?",
+          "value": "Q: You had no formal art training—you just taught yourself in the intervening years?",
+          "bbox": [
+            {
+              "h": 23.136763925729497,
+              "w": 278.3846250000001,
+              "x": 104.36137500000001,
+              "y": 251.08647214854113,
+              "confidence": 0.92,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** Yes, and I was a mighty poor instructor, too.",
+          "value": "A: Yes, and I was a mighty poor instructor, too.",
+          "bbox": [
+            {
+              "h": 11.568381962864692,
+              "w": 181.90950000000004,
+              "x": 105.67575000000001,
+              "y": 277.37824933687006,
+              "confidence": 0.92,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** What sort of work did you do for Disney?",
+          "value": "Q: What sort of work did you do for Disney?",
+          "bbox": [
+            {
+              "h": 12.062968216463364,
+              "w": 173.89763552186554,
+              "x": 105.318141321694,
+              "y": 297.140046808308,
+              "confidence": 0.88,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** I started as an in-betweener \\[drawing frames between action in animated cartoons]. After about six months, I wasn't working out very well as an in-betweener, but in the meantime, I had managed to sell a few gags to the story department and the comic strip department, and they figured I might be all right as a story man, so they put me in the story department.",
+          "value": "A: I started as an in-betweener [drawing frames between action in animated cartoons]. After about six months, I wasn't working out very well as an in-betweener, but in the meantime, I had managed to sell a few gags to the story department and the comic strip department, and they figured I might be all right as a story man, so they put me in the story department.",
+          "bbox": [
+            {
+              "h": 75.65348637576218,
+              "w": 279.2596623922209,
+              "x": 104.22239261683023,
+              "y": 310.1768506097562,
+              "confidence": 0.94,
+              "end_index": 368,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Which means you did no art for awhile?",
+          "value": "Q: Which means you did no art for awhile?",
+          "bbox": [
+            {
+              "h": 11.711985108612787,
+              "w": 167.57315755406825,
+              "x": 103.95432698766199,
+              "y": 393.82022255144824,
+              "confidence": 0.89,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** No drawing, except for the story board, which is just a very rough form and is merely to show the continuity of the story.",
+          "value": "A: No drawing, except for the story board, which is just a very rough form and is merely to show the continuity of the story.",
+          "bbox": [
+            {
+              "h": 25.079090539253052,
+              "w": 283.4624315542826,
+              "x": 103.13099552508099,
+              "y": 406.84526907393297,
+              "confidence": 0.94,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Would you say that working in the Disney story department helped you to write the stories for your own *Donald Duck* and *Uncle Scrooge* comics?",
+          "value": "Q: Would you say that working in the Disney story department helped you to write the stories for your own Donald Duck and Uncle Scrooge comics?",
+          "bbox": [
+            {
+              "h": 35.60128859565552,
+              "w": 273.4678093470132,
+              "x": 103.127075942621,
+              "y": 438.86214577934453,
+              "confidence": 0.94,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** You bet. I learned how to write stories. You had to, or you were cut.",
+          "value": "A: You bet. I learned how to write stories. You had to, or you were cut.",
+          "bbox": [
+            {
+              "h": 12.964772761051822,
+              "w": 275.0441264112519,
+              "x": 102.32871459960938,
+              "y": 478.03966574885675,
+              "confidence": 0.93,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Do you recall offhand any particular cartoons you worked on—did you work on *Snow White* or *Pinocchio*?",
+          "value": "Q: Do you recall offhand any particular cartoons you worked on—did you work on Snow White or Pinocchio?",
+          "bbox": [
+            {
+              "h": 24.310086585365806,
+              "w": 283.0890255811738,
+              "x": 102.57226718511816,
+              "y": 497.2022951981708,
+              "confidence": 0.93,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**A:** No, I didn't do anything on *Snow White* or *Pinocchio*. I was just a duck man—strictly a duck man.",
+          "value": "A: No, I didn't do anything on Snow White or Pinocchio. I was just a duck man—strictly a duck man.",
+          "bbox": [
+            {
+              "h": 24.277187452362877,
+              "w": 283.45137407405207,
+              "x": 101.97501924244952,
+              "y": 523.3993188166921,
+              "confidence": 0.95,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nWILLITS, D. THOMPSON, AND M. THOMPSON / 1962 5\n\\</page_header>",
+          "value": "<page_header>\nWILLITS, D. THOMPSON, AND M. THOMPSON / 1962 5\n</page_header>",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 199.0,
+              "x": 536.27,
+              "y": 24.71,
+              "confidence": 1.0,
+              "end_index": 60,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "5",
+          "value": "5",
+          "bbox": [
+            {
+              "h": 12.0,
+              "w": 255.0,
+              "x": 105.0,
+              "y": 206.0,
+              "confidence": 0.28,
+              "end_index": 0,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Not even any *Silly Symphonies*? Just the Donald Duck cartoons?\n**A:** Just *Donald Duck*. Oh, I helped out on a *Pluto* once in a while as things moved from story unit to story unit—in story conferences we'd submit gags to another guy's story.",
+          "value": "Q: Not even any Silly Symphonies? Just the Donald Duck cartoons?\nA: Just Donald Duck. Oh, I helped out on a Pluto once in a while as things moved from story unit to story unit—in story conferences we'd submit gags to another guy's story.",
+          "bbox": [
+            {
+              "h": 51.318756427448555,
+              "w": 283.33311663967226,
+              "x": 452.6443523008766,
+              "y": 50.4944011873571,
+              "confidence": 0.94,
+              "end_index": 250,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** You never wrote the storyline for a complete cartoon?",
+          "value": "Q: You never wrote the storyline for a complete cartoon?",
+          "bbox": [
+            {
+              "h": 8.939204244031828,
+              "w": 220.815,
+              "x": 453.4593750000001,
+              "y": 111.4771352785146,
+              "confidence": 0.87,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** There was no such thing as an individual doing that. It was a group effort.",
+          "value": "A: There was no such thing as an individual doing that. It was a group effort.",
+          "bbox": [
+            {
+              "h": 23.353231769245433,
+              "w": 271.7579008908156,
+              "x": 452.90672639576985,
+              "y": 124.41809346894055,
+              "confidence": 0.91,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Would you say, in the main, that you enjoyed working at the Disney Studios? Did Disney Productions later control your comic-book work at all?",
+          "value": "Q: Would you say, in the main, that you enjoyed working at the Disney Studios? Did Disney Productions later control your comic-book work at all?",
+          "bbox": [
+            {
+              "h": 36.28744268769054,
+              "w": 276.8330714319741,
+              "x": 453.3362525247714,
+              "y": 157.8949444550305,
+              "confidence": 0.93,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** No. I didn't like the pressure and the fact there were so many straw-bosses looking over your shoulder to see how you were doing, criticizing your work all the time. I can't take criticism. I didn't enjoy working for Disney in the studio. He expected miracles from his gag men and story crews. On comics, Disney Productions, I was told, looked at all finished stories before they were sent East.",
+          "value": "A: No. I didn't like the pressure and the fact there were so many straw-bosses looking over your shoulder to see how you were doing, criticizing your work all the time. I can't take criticism. I didn't enjoy working for Disney in the studio. He expected miracles from his gag men and story crews. On comics, Disney Productions, I was told, looked at all finished stories before they were sent East.",
+          "bbox": [
+            {
+              "h": 76.99795955602134,
+              "w": 280.68322844416923,
+              "x": 453.49478899104423,
+              "y": 197.24329910442077,
+              "confidence": 0.94,
+              "end_index": 401,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** You said that you started working for Whitman in 1942. Did this have anything to do with the fact that Disney was hurt a good bit by the outbreak of the war—that they had to stop doing a good bit of their cartoon work?",
+          "value": "Q: You said that you started working for Whitman in 1942. Did this have anything to do with the fact that Disney was hurt a good bit by the outbreak of the war—that they had to stop doing a good bit of their cartoon work?",
+          "bbox": [
+            {
+              "h": 50.9218021817836,
+              "w": 283.5066802591464,
+              "x": 453.9699475752668,
+              "y": 283.39585852705795,
+              "confidence": 0.93,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Well, yes, we were commencing to do a bunch of war propaganda pictures and educational stuff for the Army and medical propaganda and all that, that I didn't like and it seemed so much better to get out of that studio while I could get out before I got locked in—because once they hung a badge on your desk and told you, \"This is your job,\" you were frozen there. So I got out while I still could.",
+          "value": "A: Well, yes, we were commencing to do a bunch of war propaganda pictures and educational stuff for the Army and medical propaganda and all that, that I didn't like and it seemed so much better to get out of that studio while I could get out before I got locked in—because once they hung a badge on your desk and told you, \"This is your job,\" you were frozen there. So I got out while I still could.",
+          "bbox": [
+            {
+              "h": 77.1653591272866,
+              "w": 281.22640994188265,
+              "x": 454.06647198932933,
+              "y": 336.1068565072409,
+              "confidence": 0.8,
+              "end_index": 402,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** You left the Disney Studio in November 1942, after you did your first *Donald Duck* comic, \"Pirate's Gold\"?",
+          "value": "Q: You left the Disney Studio in November 1942, after you did your first Donald Duck comic, \"Pirate's Gold\"?",
+          "bbox": [
+            {
+              "h": 24.406836242378077,
+              "w": 280.15417247046497,
+              "x": 454.79879525533545,
+              "y": 422.23168716653964,
+              "confidence": 0.91,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Yes, that's right. I was going to raise chickens and do anything that I could down here in San Jacinto, where the air was kind to my sinuses. So I came down here and right away I found out that Whitman was pretty anxious to have a ten-page *Donald Duck* story, so I submitted some. I had done a little bit for them in that \"Pirate's Gold\" story in the summer of 1942, while I was still working at the studio. I happened to be in the Duck unit and they needed somebody who was used to drawing the ducks and the animators were too busy, so it just fell on a story man.",
+          "value": "A: Yes, that's right. I was going to raise chickens and do anything that I could down here in San Jacinto, where the air was kind to my sinuses. So I came down here and right away I found out that Whitman was pretty anxious to have a ten-page Donald Duck story, so I submitted some. I had done a little bit for them in that \"Pirate's Gold\" story in the summer of 1942, while I was still working at the studio. I happened to be in the Duck unit and they needed somebody who was used to drawing the ducks and the animators were too busy, so it just fell on a story man.",
+          "bbox": [
+            {
+              "h": 104.23854792301834,
+              "w": 285.285694836128,
+              "x": 454.5863613995808,
+              "y": 449.32368052591465,
+              "confidence": 0.96,
+              "end_index": 572,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "4, 5"
+    }
+  ]
+}

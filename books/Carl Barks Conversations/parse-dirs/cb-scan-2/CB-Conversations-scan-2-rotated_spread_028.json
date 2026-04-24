@@ -1,0 +1,553 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "74 CARL BARKS: CONVERSATIONS",
+              "value": "74 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.520182515362999,
+                  "w": 120.67302421160444,
+                  "x": 107.40840580935595,
+                  "y": 40.443036049447414,
+                  "confidence": 0.86,
+                  "end_index": 27,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "74 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.52,
+              "w": 120.67,
+              "x": 107.41,
+              "y": 40.44,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "end wealth flowed freely from all quarters of the globe.'' \\[Barks laughs.] Do you see any resemblance to yourself in that description?\n**BARKS**: Oh, heavens, yes. Yeah, that's too true to be funny.",
+          "value": "end wealth flowed freely from all quarters of the globe.'' [Barks laughs.] Do you see any resemblance to yourself in that description?\nBARKS: Oh, heavens, yes. Yeah, that's too true to be funny.",
+          "bbox": [
+            {
+              "h": 38.655574354516006,
+              "w": 277.1283549923781,
+              "x": 107.03177525962272,
+              "y": 64.68883369736092,
+              "confidence": 0.98,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: What particularly struck you about that?",
+          "value": "BARRIER: What particularly struck you about that?",
+          "bbox": [
+            {
+              "h": 11.685318535632625,
+              "w": 197.7056427210366,
+              "x": 106.55561486518675,
+              "y": 109.05656130668828,
+              "confidence": 0.93,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: Well, it's just that working, working, all the time, and never getting far enough ahead—that is, enough reward out of my work—to escape from it.",
+          "value": "BARKS: Well, it's just that working, working, all the time, and never getting far enough ahead—that is, enough reward out of my work—to escape from it.",
+          "bbox": [
+            {
+              "h": 36.050471169969526,
+              "w": 281.20832726753054,
+              "x": 105.77079674399772,
+              "y": 122.00153809784683,
+              "confidence": 0.96,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: In other words, you never could take a month off.\n**BARKS**: No, that's right; I was always working too close to my poverty level.",
+          "value": "BARRIER: In other words, you never could take a month off.\nBARKS: No, that's right; I was always working too close to my poverty level.",
+          "bbox": [
+            {
+              "h": 12.073813919588407,
+              "w": 233.83274732040778,
+              "x": 105.97504080125765,
+              "y": 166.0627897580031,
+              "confidence": 0.75,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: Did you ever consider getting out of comics entirely? Did it ever get to be such a burden that you wanted to do something else?\n**BARKS**: No, because I had a fear I couldn't make a living at anything else \\[laughing].",
+          "value": "BARRIER: Did you ever consider getting out of comics entirely? Did it ever get to be such a burden that you wanted to do something else?\nBARKS: No, because I had a fear I couldn't make a living at anything else [laughing].",
+          "bbox": [
+            {
+              "h": 50.03371667778201,
+              "w": 282.46413393792875,
+              "x": 104.61078817525726,
+              "y": 210.5218440977516,
+              "confidence": 0.98,
+              "end_index": 230,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: Were you ever approached about any jobs other than being in comics?",
+          "value": "BARRIER: Were you ever approached about any jobs other than being in comics?",
+          "bbox": [
+            {
+              "h": 21.524140529725592,
+              "w": 282.30823974609376,
+              "x": 104.13759564357852,
+              "y": 267.95322981373863,
+              "confidence": 0.95,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: No.",
+          "value": "BARKS: No.",
+          "bbox": [
+            {
+              "h": 9.092678263147901,
+              "w": 46.6631801817359,
+              "x": 104.14085152677212,
+              "y": 293.58841169016773,
+              "confidence": 0.88,
+              "end_index": 13,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: Do you think that if you'd lived someplace else you might have followed another career?",
+          "value": "BARRIER: Do you think that if you'd lived someplace else you might have followed another career?",
+          "bbox": [
+            {
+              "h": 22.38374462652439,
+              "w": 282.9362620462557,
+              "x": 103.42977915991807,
+              "y": 312.12031872141773,
+              "confidence": 0.97,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: Oh, yes. If I had been working in some place where there was a lot of logging going on, or shipping . . . for instance, a sea captain might have said, \"Well, come along with me, be a stevedore or something on my ship.\"",
+          "value": "BARKS: Oh, yes. If I had been working in some place where there was a lot of logging going on, or shipping . . . for instance, a sea captain might have said, \"Well, come along with me, be a stevedore or something on my ship.\"",
+          "bbox": [
+            {
+              "h": 49.120006169016804,
+              "w": 279.9709288598038,
+              "x": 102.99416703387006,
+              "y": 338.15301962652444,
+              "confidence": 0.98,
+              "end_index": 228,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: Were there other types of art careers or drawing careers that you might have followed?",
+          "value": "BARRIER: Were there other types of art careers or drawing careers that you might have followed?",
+          "bbox": [
+            {
+              "h": 24.283709365472593,
+              "w": 276.15218485911305,
+              "x": 102.10432789574601,
+              "y": 394.79041324790404,
+              "confidence": 0.97,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: I wasn't qualified for any others I know of.",
+          "value": "BARKS: I wasn't qualified for any others I know of.",
+          "bbox": [
+            {
+              "h": 11.953652300876549,
+              "w": 197.09736234339272,
+              "x": 101.97299057676734,
+              "y": 420.7902461032775,
+              "confidence": 0.94,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: How did you feel about comic books when you were working on them? What kind of work did you think this was?",
+          "value": "BARRIER: How did you feel about comic books when you were working on them? What kind of work did you think this was?",
+          "bbox": [
+            {
+              "h": 25.14242705316307,
+              "w": 279.7271007764863,
+              "x": 101.60702304449316,
+              "y": 439.0802698170733,
+              "confidence": 0.97,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: Well, I felt that the comic books had a great future that was not being properly exploited. I felt that the comic-book people, the publishers who were doing the comic books, were just taking the cheapest approach to what could have been one of the greatest mediums of expression that was ever found. I always thought that some day, comic books could be printed on good glossy paper with high-class illustrations, and they would replace the novel, or even the theater, as a means of mass distribution of ideas.",
+          "value": "BARKS: Well, I felt that the comic books had a great future that was not being properly exploited. I felt that the comic-book people, the publishers who were doing the comic books, were just taking the cheapest approach to what could have been one of the greatest mediums of expression that was ever found. I always thought that some day, comic books could be printed on good glossy paper with high-class illustrations, and they would replace the novel, or even the theater, as a means of mass distribution of ideas.",
+          "bbox": [
+            {
+              "h": 88.59305960264908,
+              "w": 285.48225000000014,
+              "x": 98.31525000000002,
+              "y": 477.40354966887423,
+              "confidence": 0.98,
+              "end_index": 519,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nJ. MICHAEL BARRIER / 1974 75\n\\</page_header>",
+          "value": "<page_header>\nJ. MICHAEL BARRIER / 1974 75\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.94,
+              "w": 117.24,
+              "x": 614.34,
+              "y": 41.54,
+              "confidence": 1.0,
+              "end_index": 42,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: In your own stories, did you feel at the time that you were taking advantage of these opportunities?",
+          "value": "BARRIER: In your own stories, did you feel at the time that you were taking advantage of these opportunities?",
+          "bbox": [
+            {
+              "h": 23.396980132450338,
+              "w": 266.55525000000006,
+              "x": 448.72762500000005,
+              "y": 65.19607947019868,
+              "confidence": 0.97,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: Oh, I knew that I was only able to do it up to the point that the publishers could use it, that's all. No, I could see possibilities that were far beyond.",
+          "value": "BARKS: Oh, I knew that I was only able to do it up to the point that the publishers could use it, that's all. No, I could see possibilities that were far beyond.",
+          "bbox": [
+            {
+              "h": 37.77731134598896,
+              "w": 283.26759825171496,
+              "x": 448.8367221322409,
+              "y": 90.89873664729423,
+              "confidence": 0.97,
+              "end_index": 164,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: We were talking about David Kunzle's description of your career, and of course he sees this in Marxist terms. You agree with his description of your career, and yet your political views are obviously poles apart from his. How do you account for this?",
+          "value": "BARRIER: We were talking about David Kunzle's description of your career, and of course he sees this in Marxist terms. You agree with his description of your career, and yet your political views are obviously poles apart from his. How do you account for this?",
+          "bbox": [
+            {
+              "h": 50.349012397580054,
+              "w": 278.20740477324694,
+              "x": 449.08572206078514,
+              "y": 135.8693554115854,
+              "confidence": 0.98,
+              "end_index": 262,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: I feel that if I had wanted to break away from that rut I was in, I could have done it. Now, under a Marxist system, I couldn't have done it. If I were put into that situation, it would be with me all the days of my life, and I couldn't ever have any other choice. I was in it because it just suited my particular abilities, and I made the best of it.",
+          "value": "BARKS: I feel that if I had wanted to break away from that rut I was in, I could have done it. Now, under a Marxist system, I couldn't have done it. If I were put into that situation, it would be with me all the days of my life, and I couldn't ever have any other choice. I was in it because it just suited my particular abilities, and I made the best of it.",
+          "bbox": [
+            {
+              "h": 63.378499433117376,
+              "w": 282.8246979563644,
+              "x": 449.57475571646347,
+              "y": 187.73317006240478,
+              "confidence": 0.98,
+              "end_index": 361,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: But you still felt you had freedom of choice to . . .",
+          "value": "BARRIER: But you still felt you had freedom of choice to . . .",
+          "bbox": [
+            {
+              "h": 11.12695171017532,
+              "w": 233.47141942168446,
+              "x": 450.37440062881103,
+              "y": 259.13601204506483,
+              "confidence": 0.94,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: Oh, certainly. I knew that I could quit that business and go to work on a farm or the logging woods. There were a great many places I could have gone to work and made a living.",
+          "value": "BARKS: Oh, certainly. I knew that I could quit that business and go to work on a farm or the logging woods. There were a great many places I could have gone to work and made a living.",
+          "bbox": [
+            {
+              "h": 36.27846357615897,
+              "w": 278.9103750000001,
+              "x": 448.72762500000005,
+              "y": 272.8771390728477,
+              "confidence": 0.96,
+              "end_index": 186,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: But you felt the costs of exercising that choice would have been too great.",
+          "value": "BARRIER: But you felt the costs of exercising that choice would have been too great.",
+          "bbox": [
+            {
+              "h": 23.396980132450267,
+              "w": 283.37925,
+              "x": 449.25337500000006,
+              "y": 318.0937748344371,
+              "confidence": 0.97,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: Oh, yes, it wouldn't have gained me anything.",
+          "value": "BARKS: Oh, yes, it wouldn't have gained me anything.",
+          "bbox": [
+            {
+              "h": 11.084829549352161,
+              "w": 212.36422994474086,
+              "x": 450.9447812738187,
+              "y": 343.23771046589184,
+              "confidence": 0.95,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: Did you feel exploited at the time? You couldn't sign your work, the rates you were paid certainly didn't reflect the sales of your work.",
+          "value": "BARRIER: Did you feel exploited at the time? You couldn't sign your work, the rates you were paid certainly didn't reflect the sales of your work.",
+          "bbox": [
+            {
+              "h": 35.87244476467227,
+              "w": 268.1994209222561,
+              "x": 450.9389206840702,
+              "y": 362.4744545636434,
+              "confidence": 0.97,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: No, I didn't think much about that. I would have liked to have received more money, but I also knew that they had to pay such a whopping royalty to Disney's that they didn't have much of a profit margin, either. There were too many fingers cutting into the pie on those comic book sales.",
+          "value": "BARKS: No, I didn't think much about that. I would have liked to have received more money, but I also knew that they had to pay such a whopping royalty to Disney's that they didn't have much of a profit margin, either. There were too many fingers cutting into the pie on those comic book sales.",
+          "bbox": [
+            {
+              "h": 62.18305265339177,
+              "w": 283.4605468988186,
+              "x": 451.02672934927597,
+              "y": 401.21758840987053,
+              "confidence": 0.98,
+              "end_index": 297,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: That's why you were interested in starting your own comic, with your own characters.",
+          "value": "BARRIER: That's why you were interested in starting your own comic, with your own characters.",
+          "bbox": [
+            {
+              "h": 24.09093311261428,
+              "w": 271.8647439500763,
+              "x": 451.6351787823933,
+              "y": 472.5411854182547,
+              "confidence": 0.97,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: Well, I had thought of it, yes. But like Kunzle says, I never got far enough ahead, at any time, that I could buy my way out of that rut.",
+          "value": "BARKS: Well, I had thought of it, yes. But like Kunzle says, I never got far enough ahead, at any time, that I could buy my way out of that rut.",
+          "bbox": [
+            {
+              "h": 24.691670293445146,
+              "w": 283.8308660442073,
+              "x": 451.86644667016014,
+              "y": 498.41153163109766,
+              "confidence": 0.97,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: But you didn't blame that on the economic system, just on your personal circumstances.",
+          "value": "BARRIER: But you didn't blame that on the economic system, just on your personal circumstances.",
+          "bbox": [
+            {
+              "h": 23.97109060118146,
+              "w": 283.9267392816311,
+              "x": 451.8746114233994,
+              "y": 531.2190928067837,
+              "confidence": 0.97,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: No, the economic system is such that a guy that has any ability",
+          "value": "BARKS: No, the economic system is such that a guy that has any ability",
+          "bbox": [
+            {
+              "h": 11.736872089367395,
+              "w": 276.0982937309452,
+              "x": 452.40582128906254,
+              "y": 556.7668215605946,
+              "confidence": 0.96,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "74, 75"
+    }
+  ]
+}

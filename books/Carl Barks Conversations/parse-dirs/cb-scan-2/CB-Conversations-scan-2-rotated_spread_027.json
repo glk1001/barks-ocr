@@ -1,0 +1,445 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "72 CARL BARKS: CONVERSATIONS",
+              "value": "72 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.862114828863382,
+                  "w": 120.39096454601756,
+                  "x": 116.00261004192075,
+                  "y": 39.77308361340035,
+                  "confidence": 0.86,
+                  "end_index": 27,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "72 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.86,
+              "w": 120.39,
+              "x": 116.0,
+              "y": 39.77,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: Yeah, they were characters that would fit into a certain type of action, a certain type of humor, and so when I wanted that type of thing in another story, why, those characters would come to mind. They kept developing.",
+          "value": "BARKS: Yeah, they were characters that would fit into a certain type of action, a certain type of humor, and so when I wanted that type of thing in another story, why, those characters would come to mind. They kept developing.",
+          "bbox": [
+            {
+              "h": 50.203481750190555,
+              "w": 280.66072528225044,
+              "x": 114.69924243164064,
+              "y": 63.76559429068218,
+              "confidence": 0.98,
+              "end_index": 229,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: Did you find that just juxtaposing Scrooge with a certain type of situation would just suggest gags in itself?",
+          "value": "BARRIER: Did you find that just juxtaposing Scrooge with a certain type of situation would just suggest gags in itself?",
+          "bbox": [
+            {
+              "h": 25.398581557259924,
+              "w": 279.5498805497333,
+              "x": 114.1652149747523,
+              "y": 123.3670867854421,
+              "confidence": 0.97,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: Yeah; as their personalities developed, the gags, the business that I could use them in, also became broader. And the places that I could use—like with Scrooge, I could use him anywhere in the world.",
+          "value": "BARKS: Yeah; as their personalities developed, the gags, the business that I could use them in, also became broader. And the places that I could use—like with Scrooge, I could use him anywhere in the world.",
+          "bbox": [
+            {
+              "h": 38.190900971798776,
+              "w": 283.50276067668636,
+              "x": 113.57383388314598,
+              "y": 150.00160629049165,
+              "confidence": 0.97,
+              "end_index": 209,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: The friction of the personality against the setting would produce gags?",
+          "value": "BARRIER: The friction of the personality against the setting would produce gags?",
+          "bbox": [
+            {
+              "h": 24.156350104801838,
+              "w": 274.3375496677306,
+              "x": 112.93162344583652,
+              "y": 195.8017444264482,
+              "confidence": 0.97,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: Yes, that's right. It was a combination of a number of things—the personality of the character and the place where the action was taking place, what the motive was in the story—that made it possible to develop a character much more. Now with Donald, I didn't have to have a great deal of motive for him, because I had these other characters that would furnish the motive, and he just trailed along with them.",
+          "value": "BARKS: Yes, that's right. It was a combination of a number of things—the personality of the character and the place where the action was taking place, what the motive was in the story—that made it possible to develop a character much more. Now with Donald, I didn't have to have a great deal of motive for him, because I had these other characters that would furnish the motive, and he just trailed along with them.",
+          "bbox": [
+            {
+              "h": 77.47064916396727,
+              "w": 283.8071481874048,
+              "x": 112.01515493997715,
+              "y": 221.85052479277826,
+              "confidence": 0.98,
+              "end_index": 418,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: I wanted to ask you about the setting of \"In Old California.\" Did you have specific Southern California locales in mind? Or was this just a generalized...?",
+          "value": "BARRIER: I wanted to ask you about the setting of \"In Old California.\" Did you have specific Southern California locales in mind? Or was this just a generalized...?",
+          "bbox": [
+            {
+              "h": 36.67170212938261,
+              "w": 283.686968529678,
+              "x": 110.70883198956746,
+              "y": 307.1425997332318,
+              "confidence": 0.97,
+              "end_index": 167,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: Well, I was laying it right around San Jacinto, where I lived. Now, this rock \\[the one the ducks' car runs into], that was just a couple of miles from where we lived. There's a Soboba Indian reservation out there, and a road came across from San Jacinto, across a river and up here, where it turned to go down to the Indian reservation. There were some rocks up there on the side of the hill—they weren't exactly like that, they were covered with sagebrush—and the duck could very easily have made a miscue and run his car into one of those rocks.",
+          "value": "BARKS: Well, I was laying it right around San Jacinto, where I lived. Now, this rock [the one the ducks' car runs into], that was just a couple of miles from where we lived. There's a Soboba Indian reservation out there, and a road came across from San Jacinto, across a river and up here, where it turned to go down to the Indian reservation. There were some rocks up there on the side of the hill—they weren't exactly like that, they were covered with sagebrush—and the duck could very easily have made a miscue and run his car into one of those rocks.",
+          "bbox": [
+            {
+              "h": 102.92351441501523,
+              "w": 284.0006979206365,
+              "x": 109.7021504739901,
+              "y": 345.43416132336137,
+              "confidence": 0.98,
+              "end_index": 558,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: This is the story of yours that always looked the most authentic to me, even when I was a kid.",
+          "value": "BARRIER: This is the story of yours that always looked the most authentic to me, even when I was a kid.",
+          "bbox": [
+            {
+              "h": 23.88943459413106,
+              "w": 283.1782493033061,
+              "x": 108.61645117782967,
+              "y": 456.88223667587664,
+              "confidence": 0.97,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: That countryside around there had been wild only a century ago. They had antelopes and that sort of game—cattle, half-wild cattle, brought in there by the Spanish grandees.",
+          "value": "BARKS: That countryside around there had been wild only a century ago. They had antelopes and that sort of game—cattle, half-wild cattle, brought in there by the Spanish grandees.",
+          "bbox": [
+            {
+              "h": 37.817651824504615,
+              "w": 282.1529591630145,
+              "x": 108.09895358946267,
+              "y": 483.2940015720275,
+              "confidence": 0.97,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: And yet you did great stories about Persia and other places that you never went to.",
+          "value": "BARRIER: And yet you did great stories about Persia and other places that you never went to.",
+          "bbox": [
+            {
+              "h": 24.04515894626517,
+              "w": 282.84011331102323,
+              "x": 107.40128043421304,
+              "y": 529.7007449171115,
+              "confidence": 0.97,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: Well, not enough of the readers were familiar with those, either, to catch me on it. But I could look in the *Geographics* and get enough information about those things.",
+          "value": "BARKS: Well, not enough of the readers were familiar with those, either, to catch me on it. But I could look in the Geographics and get enough information about those things.",
+          "bbox": [
+            {
+              "h": 24.711417218543048,
+              "w": 269.972625,
+              "x": 457.40250000000003,
+              "y": 66.51051655629139,
+              "confidence": 0.97,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\\<page_header>\nJ. MICHAEL BARRIER / 1974 73\n\\</page_header>",
+          "value": "<page_header>\nJ. MICHAEL BARRIER / 1974 73\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.52,
+              "w": 117.51,
+              "x": 623.01,
+              "y": 42.59,
+              "confidence": 1.0,
+              "end_index": 42,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "73",
+          "value": "73",
+          "bbox": [
+            {
+              "h": 8.361439501357658,
+              "w": 10.58031802591474,
+              "x": 729.0460442549543,
+              "y": 43.88363300304879,
+              "confidence": 0.86,
+              "end_index": 1,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: In his introduction to *How to Read Donald Duck*, David Kunzle states that your rates reached a peak of $11.50 per page for script and $34 per page for artwork in the sixties and remained at that level until you retired. Is that correct?",
+          "value": "BARRIER: In his introduction to How to Read Donald Duck, David Kunzle states that your rates reached a peak of $11.50 per page for script and $34 per page for artwork in the sixties and remained at that level until you retired. Is that correct?",
+          "bbox": [
+            {
+              "h": 47.05684768211921,
+              "w": 283.11637499999995,
+              "x": 457.40250000000003,
+              "y": 100.94876821192054,
+              "confidence": 0.97,
+              "end_index": 249,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: About the last two years or so that I worked, that's what I got.",
+          "value": "BARKS: About the last two years or so that I worked, that's what I got.",
+          "bbox": [
+            {
+              "h": 9.726834437086097,
+              "w": 274.4415,
+              "x": 457.92825000000005,
+              "y": 152.47470198675498,
+              "confidence": 0.95,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: Your usual working hours were from about 1 in the afternoon till 10 at night?",
+          "value": "BARRIER: Your usual working hours were from about 1 in the afternoon till 10 at night?",
+          "bbox": [
+            {
+              "h": 22.082543046357614,
+              "w": 279.436125,
+              "x": 457.4025000000001,
+              "y": 173.76858278145698,
+              "confidence": 0.96,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: It worked out that was the hours I would work. There was no particular reason for doing it, other than that when I would get up in the morning, I didn't feel like I wanted to sit down at that drawing board and work hard and try to think of a story. I was completely disinterested in it. It would be afternoon before I could ever whip myself into enthusiasm enough to go to work.",
+          "value": "BARKS: It worked out that was the hours I would work. There was no particular reason for doing it, other than that when I would get up in the morning, I didn't feel like I wanted to sit down at that drawing board and work hard and try to think of a story. I was completely disinterested in it. It would be afternoon before I could ever whip myself into enthusiasm enough to go to work.",
+          "bbox": [
+            {
+              "h": 75.66533518959606,
+              "w": 283.6105679782774,
+              "x": 457.9795426829269,
+              "y": 198.97803191215706,
+              "confidence": 0.98,
+              "end_index": 388,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: Kunzle said you described Walt Disney as \"not a man but a machine.\"",
+          "value": "BARRIER: Kunzle said you described Walt Disney as \"not a man but a machine.\"",
+          "bbox": [
+            {
+              "h": 22.703082371855942,
+              "w": 270.46972322789634,
+              "x": 458.4333627096037,
+              "y": 283.9889378834795,
+              "confidence": 0.96,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: In a way, he was. No doubt he \\[Kunzle] twisted my words around so that they sounded disparaging; they're just commentary.",
+          "value": "BARKS: In a way, he was. No doubt he [Kunzle] twisted my words around so that they sounded disparaging; they're just commentary.",
+          "bbox": [
+            {
+              "h": 22.34543046357618,
+              "w": 283.11637500000006,
+              "x": 458.19112500000006,
+              "y": 310.99581456953644,
+              "confidence": 0.96,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: Was Disney really machine-like?",
+          "value": "BARRIER: Was Disney really machine-like?",
+          "bbox": [
+            {
+              "h": 9.201059602649025,
+              "w": 165.61125000000004,
+              "x": 458.7168750000001,
+              "y": 344.1196291390729,
+              "confidence": 0.94,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS**: He was machine-like in the fact that he just always had that one thing in mind, the production of high-class material. He didn't go varying off onto other things. The average human, he has his weak moments in which he wants to go out and get drunk or something, but Disney was always right there. He was just like a machine that you wind it up, and it just keeps going.",
+          "value": "BARKS: He was machine-like in the fact that he just always had that one thing in mind, the production of high-class material. He didn't go varying off onto other things. The average human, he has his weak moments in which he wants to go out and get drunk or something, but Disney was always right there. He was just like a machine that you wind it up, and it just keeps going.",
+          "bbox": [
+            {
+              "h": 76.12882078410829,
+              "w": 282.6704692740092,
+              "x": 458.54962278487045,
+              "y": 356.6233389529345,
+              "confidence": 0.98,
+              "end_index": 379,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER**: Kunzle had an interesting summary of how he saw your career: A \"man who never seemed to have time or money for a vacation, whose life was continuous and seemingly monotonous labor, paid piece-rate at a level which never permitted him to save, who never had and never sought an adventure, who never traveled abroad and little in the United States (only into the California and Oregon forests), who lived, in other words, something of the life of the 'average' U.S. worker (a life presumably shared by the parents of many of his readers)—this man wrote ceaselessly about a world of constant leisure, where 'work' was defined as consumption, the exotic exploit, and fierce competition to avoid work, to which",
+          "value": "BARRIER: Kunzle had an interesting summary of how he saw your career: A \"man who never seemed to have time or money for a vacation, whose life was continuous and seemingly monotonous labor, paid piece-rate at a level which never permitted him to save, who never had and never sought an adventure, who never traveled abroad and little in the United States (only into the California and Oregon forests), who lived, in other words, something of the life of the 'average' U.S. worker (a life presumably shared by the parents of many of his readers)—this man wrote ceaselessly about a world of constant leisure, where 'work' was defined as consumption, the exotic exploit, and fierce competition to avoid work, to which",
+          "bbox": [
+            {
+              "h": 128.33122598609,
+              "w": 284.48730218654725,
+              "x": 458.3792148675687,
+              "y": 442.0106319597943,
+              "confidence": 0.98,
+              "end_index": 717,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "72, 73"
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "94 CARL BARKS: CONVERSATIONS",
+              "value": "94 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 11.026224611161398,
+                  "w": 121.24168299530774,
+                  "x": 103.38525495724564,
+                  "y": 38.064122309093946,
+                  "confidence": 0.84,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "94 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.03,
+              "w": 121.24,
+              "x": 103.39,
+              "y": 38.06,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Bear Club up in San Francisco that go out the Golden Gate and swim around on New Year's Day. And I just thought of Donald: how in the summertime he would get very rash and boast that he would go into the water in the wintertime. And so that's how Gladstone got into it. He had to be somebody that Donald was trying to outdo.",
+          "value": "Bear Club up in San Francisco that go out the Golden Gate and swim around on New Year's Day. And I just thought of Donald: how in the summertime he would get very rash and boast that he would go into the water in the wintertime. And so that's how Gladstone got into it. He had to be somebody that Donald was trying to outdo.",
+          "bbox": [
+            {
+              "h": 65.8822417361376,
+              "w": 280.58990982278965,
+              "x": 102.58170924637959,
+              "y": 61.61110604039636,
+              "confidence": 0.98,
+              "end_index": 323,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: How did you come up with the name?**",
+          "value": "Q: How did you come up with the name?",
+          "bbox": [
+            {
+              "h": 12.247621017530484,
+              "w": 160.73299151760196,
+              "x": 102.34214511778298,
+              "y": 135.3868740698838,
+              "confidence": 0.75,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Well, Gander . . . and Gladstone . . . it's a phonetic thing. Donald Duck is phonetic, you know: you wouldn't say Frank Duck.",
+          "value": "BARKS: Well, Gander . . . and Gladstone . . . it's a phonetic thing. Donald Duck is phonetic, you know: you wouldn't say Frank Duck.",
+          "bbox": [
+            {
+              "h": 26.55,
+              "w": 282.33,
+              "x": 101.73,
+              "y": 147.74,
+              "confidence": 1.0,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: And the idea to give Gladstone his incredible luck?**",
+          "value": "Q: And the idea to give Gladstone his incredible luck?",
+          "bbox": [
+            {
+              "h": 15.2474701986755,
+              "w": 210.29999999999998,
+              "x": 99.89250000000001,
+              "y": 180.6036556291391,
+              "confidence": 1.0,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Well that came the second time I was using him. I established him as an obnoxious character in the first story, and so the second time I used him I thought, what particular thing can make that guy lastingly obnoxious? So I thought of this lucky angle. He was the kind of a guy who got all the breaks, and poor old Donald never got anywhere.",
+          "value": "BARKS: Well that came the second time I was using him. I established him as an obnoxious character in the first story, and so the second time I used him I thought, what particular thing can make that guy lastingly obnoxious? So I thought of this lucky angle. He was the kind of a guy who got all the breaks, and poor old Donald never got anywhere.",
+          "bbox": [
+            {
+              "h": 65.35613133812885,
+              "w": 283.8156823581603,
+              "x": 100.21609096024677,
+              "y": 196.45979682021726,
+              "confidence": 0.91,
+              "end_index": 350,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: What about Scrooge?**",
+          "value": "Q: What about Scrooge?",
+          "bbox": [
+            {
+              "h": 11.304158940397315,
+              "w": 97.526625,
+              "x": 99.89250000000001,
+              "y": 268.67094039735105,
+              "confidence": 0.78,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** The office wanted me to do a Christmas story, and casting around for Christmas stories, I began to think of the great Dickens Christmas story about Scrooge. Somehow it is the classic of all Christmas stories. Now I just was just thief enough to steal some of the idea and have a rich uncle for Donald. I guess the fact that he was rich was the thing that triggered",
+          "value": "BARKS: The office wanted me to do a Christmas story, and casting around for Christmas stories, I began to think of the great Dickens Christmas story about Scrooge. Somehow it is the classic of all Christmas stories. Now I just was just thief enough to steal some of the idea and have a rich uncle for Donald. I guess the fact that he was rich was the thing that triggered",
+          "bbox": [
+            {
+              "h": 66.89000911537728,
+              "w": 283.88617849061546,
+              "x": 98.73229106921686,
+              "y": 282.9043276986472,
+              "confidence": 0.95,
+              "end_index": 374,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 40.75,
+              "w": 281.8,
+              "x": 97.79,
+              "y": 308.63,
+              "confidence": 1.0,
+              "end_index": 374,
+              "label": "text",
+              "start_index": 151
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Comic panel showing Donald Duck looking angry and Gladstone Gander looking smug. Donald says: \"I'M IN ON THIS DAISY FOR DAISY DEAL, TOO!\" and a thought bubble above him says: \"GLADSTONE GANDER! THE PEST THAT ALWAYS GETS THE LUCKY BREAKS!\"",
+          "md": "![Comic panel showing Donald Duck looking angry and Gladstone Gander looking smug. Donald says: \"I'M IN ON THIS DAISY FOR DAISY DEAL, TOO!\" and a thought bubble above him says: \"GLADSTONE GANDER! THE PEST THAT ALWAYS GETS THE LUCKY BREAKS!\"](CB-Conversations-scan-3-rotated_spread_008_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-3-rotated_spread_008_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 200.93671239043454,
+              "w": 292.07888849621287,
+              "x": 97.39143697301354,
+              "y": 367.39597521436747,
+              "confidence": 0.99,
+              "end_index": 263,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nAULT, ANDRAE, AND GONG / 1975 95\n\\</page_header>",
+          "value": "<page_header>\nAULT, ANDRAE, AND GONG / 1975 95\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.52,
+              "w": 141.95,
+              "x": 597.51,
+              "y": 42.59,
+              "confidence": 1.0,
+              "end_index": 46,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "all further developments—as to just how rich and the showing of his wealth. I found that that was quite a fascinating subject—just piles of money would appeal to a lot of people. And I just gradually made him richer and richer, and then I had to develop a place where he could store the money, and all the time there were the Beagle Boys trying to steal it from him. Those things just grew like building brick walls: you just lay one brick on top of another, and finally you've got a whole thing built.",
+          "value": "all further developments—as to just how rich and the showing of his wealth. I found that that was quite a fascinating subject—just piles of money would appeal to a lot of people. And I just gradually made him richer and richer, and then I had to develop a place where he could store the money, and all the time there were the Beagle Boys trying to steal it from him. Those things just grew like building brick walls: you just lay one brick on top of another, and finally you've got a whole thing built.",
+          "bbox": [
+            {
+              "h": 89.34600051626812,
+              "w": 284.06699271150916,
+              "x": 455.54849992854423,
+              "y": 67.06537186130433,
+              "confidence": 0.97,
+              "end_index": 501,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Didn't some characters like the Gneezles come in a flash of inspiration?**\n**BARKS:** Well, that was a story that did come as a sort of a flash. I had been struggling for days trying to think of something that I could use for a long story plot. And there was a whole bunch of company in the house at the time, and I never had time to really sit down and think of anything. Finally I got to the point where I just ignored the company, and I sat by myself out on the lawn in the swing and did some serious thinking. And all of a sudden I got to thinking of the everglades . . . and what could Donald do in the everglades . . . and what sort of creatures besides alligators would he find out in the everglades? And just like that, I thought of all these weird little people, like little gnomies who lived in there. As soon as I thought of them, why, ideas of how to use them just kept poppin' into my head; so I just sat there and let the thoughts pour all over me, and I remembered as many as I could. When I had gotten enough that I knew I had a story, I joined the party and hoisted a few drinks. Next day I was hard at it, writing the Gneezle story.",
+          "value": "Q: Didn't some characters like the Gneezles come in a flash of inspiration?\nBARKS: Well, that was a story that did come as a sort of a flash. I had been struggling for days trying to think of something that I could use for a long story plot. And there was a whole bunch of company in the house at the time, and I never had time to really sit down and think of anything. Finally I got to the point where I just ignored the company, and I sat by myself out on the lawn in the swing and did some serious thinking. And all of a sudden I got to thinking of the everglades . . . and what could Donald do in the everglades . . . and what sort of creatures besides alligators would he find out in the everglades? And just like that, I thought of all these weird little people, like little gnomies who lived in there. As soon as I thought of them, why, ideas of how to use them just kept poppin' into my head; so I just sat there and let the thoughts pour all over me, and I remembered as many as I could. When I had gotten enough that I knew I had a story, I joined the party and hoisted a few drinks. Next day I was hard at it, writing the Gneezle story.",
+          "bbox": [
+            {
+              "h": 207.73750899152063,
+              "w": 285.9777453315549,
+              "x": 456.36712914443603,
+              "y": 165.19930318931023,
+              "confidence": 0.77,
+              "end_index": 1154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Did you often build a story around the idea of a locale?**\n**BARKS:** The locale started me on more stories than anything else. Like I say about the Gneezles, I just thought of the everglades. Often while struggling for a story I would think, What locale do I want to draw? Do I want to draw a forest? The sea with sailboats? Or would it be down in the mines and caves? Soon as I had thought of a locale I would enjoy drawing, it seemed that I could much easier think of a reason for putting those characters in that locale. What would they be doing there? All of those things you just build backward from the big climactic situation, and pretty soon you've got the steps of a story.",
+          "value": "Q: Did you often build a story around the idea of a locale?\nBARKS: The locale started me on more stories than anything else. Like I say about the Gneezles, I just thought of the everglades. Often while struggling for a story I would think, What locale do I want to draw? Do I want to draw a forest? The sea with sailboats? Or would it be down in the mines and caves? Soon as I had thought of a locale I would enjoy drawing, it seemed that I could much easier think of a reason for putting those characters in that locale. What would they be doing there? All of those things you just build backward from the big climactic situation, and pretty soon you've got the steps of a story.",
+          "bbox": [
+            {
+              "h": 130.15885974180642,
+              "w": 284.0227127000763,
+              "x": 458.0211678972942,
+              "y": 381.9258869474086,
+              "confidence": 0.8,
+              "end_index": 687,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: What about the creation of imaginary locales?**\n**BARKS:** When you've got a mysterious place, then you develop something out of whole cloth. It's a mysterious place down under the earth. We don't know what's under the crust. Scientists tell us it's a big molten",
+          "value": "Q: What about the creation of imaginary locales?\nBARKS: When you've got a mysterious place, then you develop something out of whole cloth. It's a mysterious place down under the earth. We don't know what's under the crust. Scientists tell us it's a big molten",
+          "bbox": [
+            {
+              "h": 50.61240000000009,
+              "w": 279.2784000000001,
+              "x": 459.2952000000001,
+              "y": 521.01,
+              "confidence": 0.78,
+              "end_index": 266,
+              "label": "paragraph_title",
+              "start_index": 0
+            },
+            {
+              "h": 12.36,
+              "w": 192.69,
+              "x": 459.24,
+              "y": 519.2,
+              "confidence": 1.0,
+              "end_index": 51,
+              "label": "paragraph_title",
+              "start_index": 0
+            },
+            {
+              "h": 38.12,
+              "w": 280.49,
+              "x": 457.4,
+              "y": 532.61,
+              "confidence": 1.0,
+              "end_index": 266,
+              "label": "text",
+              "start_index": 53
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "94, 95"
+    }
+  ]
+}

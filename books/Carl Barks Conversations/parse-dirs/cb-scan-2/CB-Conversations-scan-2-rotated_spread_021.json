@@ -1,0 +1,122 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 60 Carl Barks: Conversations",
+          "value": "60 Carl Barks: Conversations",
+          "bbox": [
+            {
+              "h": 10.130632304568406,
+              "w": 121.1150854909013,
+              "x": 106.95146764838988,
+              "y": 38.071262334460755,
+              "confidence": 0.84,
+              "end_index": 29,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "Ford we hadn't quite paid for, a secondhand Ford. It was a real rattletrap. But we got down to Coalinga. I just didn't like the looks of the oil fields or the area they were in, and so we drove back up to Roseville, where there was a couple that my wife knew. This guy worked for the railroad, in the car shops. He said, \"Oh, hell, I can get you on at the car shops. All you have to do is just go over there, and I'll tell you who to talk to.\" So I went over, and right away I got put on in the car shops. And there I was for over six years, in those darned car shops. I started out just swinging a sledgehammer, and common labor, and got put on to heating rivets on a riveting gang, and that was piecework. I was on that for five and a half years or so. God, I was getting sick of that. Anyway, I was gradually getting into this sort of stuff \\[indicating the *Eye-Opener* cartoons]. By the time 1928, '29 rolled around, I had begun to sell some stuff to those and also sold a couple of cartoons to *Judge* magazine. That boosted my ego tremendously.",
+          "value": "Ford we hadn't quite paid for, a secondhand Ford. It was a real rattletrap. But we got down to Coalinga. I just didn't like the looks of the oil fields or the area they were in, and so we drove back up to Roseville, where there was a couple that my wife knew. This guy worked for the railroad, in the car shops. He said, \"Oh, hell, I can get you on at the car shops. All you have to do is just go over there, and I'll tell you who to talk to.\" So I went over, and right away I got put on in the car shops. And there I was for over six years, in those darned car shops. I started out just swinging a sledgehammer, and common labor, and got put on to heating rivets on a riveting gang, and that was piecework. I was on that for five and a half years or so. God, I was getting sick of that. Anyway, I was gradually getting into this sort of stuff [indicating the Eye-Opener cartoons]. By the time 1928, '29 rolled around, I had begun to sell some stuff to those and also sold a couple of cartoons to Judge magazine. That boosted my ego tremendously.",
+          "bbox": [
+            {
+              "h": 194.4987141732565,
+              "w": 286.5213964278059,
+              "x": 103.84975678532298,
+              "y": 61.61223177996381,
+              "confidence": 0.99,
+              "end_index": 1050,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** So there was never any time when you actually gave up the idea of becoming a cartoonist.",
+          "value": "BARRIER: So there was never any time when you actually gave up the idea of becoming a cartoonist.",
+          "bbox": [
+            {
+              "h": 24.85452137480945,
+              "w": 272.97096783298406,
+              "x": 103.08271453410823,
+              "y": 265.05229645341086,
+              "confidence": 0.94,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Oh, no, that had always been bugging me. I was always trying to figure out a comic strip or something I could do. That's what used to irritate my wife at that time. She was perfectly satisfied just to be the wife of a laborer on the railroad; that's all she wanted out of life. I was using our evenings and all of our spare time working at this darned stuff, and she would rather have been socializing, and so we gradually got to fighting all the time. We separated in the very first part of 1930. I hadn't been back to *Oregon* for all the years we worked on the railroad, so when we separated, I took fifty dollars and what I could carry on my back and I went up the road, and she stayed down there with the two kids. She kept the two kids and the house we hadn't paid for; of course, it went back to the mortgage holder. I got back up to Oregon, and I had kind of thought maybe I could board with my brother, or somebody like that, but my brother was living in a little, tiny place at that time and working for a lumber yard. There was nothing I could do there, so I was talking with my in-laws. They were fine—oh, the salt of the earth, wonderful people. They said, \"Well, hell, board with us.\" My father-in-law said, \"I'm working here at the box factory,\" that is, making wooden boxes. \"We'll see if we can get you a job there.\" So I got a job at the box factory for a short time before there was a big layoff. See, the *Depression* was just going down, down. One factory after another was laying off production lines, and since",
+          "value": "BARKS: Oh, no, that had always been bugging me. I was always trying to figure out a comic strip or something I could do. That's what used to irritate my wife at that time. She was perfectly satisfied just to be the wife of a laborer on the railroad; that's all she wanted out of life. I was using our evenings and all of our spare time working at this darned stuff, and she would rather have been socializing, and so we gradually got to fighting all the time. We separated in the very first part of 1930. I hadn't been back to Oregon for all the years we worked on the railroad, so when we separated, I took fifty dollars and what I could carry on my back and I went up the road, and she stayed down there with the two kids. She kept the two kids and the house we hadn't paid for; of course, it went back to the mortgage holder. I got back up to Oregon, and I had kind of thought maybe I could board with my brother, or somebody like that, but my brother was living in a little, tiny place at that time and working for a lumber yard. There was nothing I could do there, so I was talking with my in-laws. They were fine—oh, the salt of the earth, wonderful people. They said, \"Well, hell, board with us.\" My father-in-law said, \"I'm working here at the box factory,\" that is, making wooden boxes. \"We'll see if we can get you a job there.\" So I got a job at the box factory for a short time before there was a big layoff. See, the Depression was just going down, down. One factory after another was laying off production lines, and since",
+          "bbox": [
+            {
+              "h": 275.55723716415787,
+              "w": 287.07780182033633,
+              "x": 99.3913757473085,
+              "y": 291.99395671446274,
+              "confidence": 0.99,
+              "end_index": 1543,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# J. Michael Barrier / 1973 61",
+          "value": "J. Michael Barrier / 1973 61",
+          "bbox": [
+            {
+              "h": 9.693176113519439,
+              "w": 99.69424175876519,
+              "x": 623.6513521103278,
+              "y": 43.31267916825458,
+              "confidence": 0.93,
+              "end_index": 29,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "I was one of the newer employees, I was one of the first who got laid off. But my in-laws—my father-in-law and my two brothers-in-law—had been there a long time; they were still on. There I was, I was boarding with my in-laws, and I thought, well, hell, I'm just gonna put in all my time on cartooning. So I was holding up my end on the groceries and everything there. In the meantime, my mother-in-law and I had gone back down to Roseville on the train and picked up my two kids. Brought them back up there, for my mother-in-law to oversee. I just figured the kids were better off with my in-laws, and they did, too. The in-laws were pretty much on my side in the whole thing; they were wonderful people. So for about a year, I just boarded there and sold cartoons, and so on. Eventually, I began thinking, well, this isn't the right thing; I shouldn't be doing this. I'm imposing on these people's hospitality a little too much. And the checks coming in were enough that I felt I could break away. I took the two kids and went over and set up in the little town of Medford, in Oregon, where the climate was a little warmer. I was getting along fine. I had the kids in school and all over there, and one day they didn't come home from school. I expected them home in the evening, and they didn't come. So I went looking along to see what happened to them. I met one of the neighbors that lived down the line, and she said she saw a car pull up and a man and a woman got out of the car and talked to the girls, and the girls got in. I said, \"Did they seem to know who the people were?\" and she said, \"Oh, yes, they seemed very much acquainted with them.\" It was my wife and her boyfriend. They had come up there and picked them up. She took them back over and left them with my in-laws, I found out afterwards. But I spent some pretty hard days there. I had no money; I didn't even have fifty cents to send a telegram or anything, to find out anything. I was so sure that was what had happened, so I just let it blow over, and after two or three weeks, one of my brothers-in-law wrote and told me the kids were over there, all safe and sound. After that, I didn't feel I owed anybody a hell of a lot, because they let me be hurt like I was hurt in those weeks of uncertainty. I've always had a lot of respect and love for my in-laws, but that was a hard thing. I had no money; I took my overcoat down to try to hock it, and nobody wanted an overcoat at the time; it was too warm. But I had a few pieces of stainless steel around that I had bought for the kids and I to eat with, and I got fifty cents for what I had accumulated of that stuff. I went and got a haircut, a hamburger, and a package of cigarettes for fifty cents. And not only that, but I had some left over to",
+          "value": "I was one of the newer employees, I was one of the first who got laid off. But my in-laws—my father-in-law and my two brothers-in-law—had been there a long time; they were still on. There I was, I was boarding with my in-laws, and I thought, well, hell, I'm just gonna put in all my time on cartooning. So I was holding up my end on the groceries and everything there. In the meantime, my mother-in-law and I had gone back down to Roseville on the train and picked up my two kids. Brought them back up there, for my mother-in-law to oversee. I just figured the kids were better off with my in-laws, and they did, too. The in-laws were pretty much on my side in the whole thing; they were wonderful people. So for about a year, I just boarded there and sold cartoons, and so on. Eventually, I began thinking, well, this isn't the right thing; I shouldn't be doing this. I'm imposing on these people's hospitality a little too much. And the checks coming in were enough that I felt I could break away. I took the two kids and went over and set up in the little town of Medford, in Oregon, where the climate was a little warmer. I was getting along fine. I had the kids in school and all over there, and one day they didn't come home from school. I expected them home in the evening, and they didn't come. So I went looking along to see what happened to them. I met one of the neighbors that lived down the line, and she said she saw a car pull up and a man and a woman got out of the car and talked to the girls, and the girls got in. I said, \"Did they seem to know who the people were?\" and she said, \"Oh, yes, they seemed very much acquainted with them.\" It was my wife and her boyfriend. They had come up there and picked them up. She took them back over and left them with my in-laws, I found out afterwards. But I spent some pretty hard days there. I had no money; I didn't even have fifty cents to send a telegram or anything, to find out anything. I was so sure that was what had happened, so I just let it blow over, and after two or three weeks, one of my brothers-in-law wrote and told me the kids were over there, all safe and sound. After that, I didn't feel I owed anybody a hell of a lot, because they let me be hurt like I was hurt in those weeks of uncertainty. I've always had a lot of respect and love for my in-laws, but that was a hard thing. I had no money; I took my overcoat down to try to hock it, and nobody wanted an overcoat at the time; it was too warm. But I had a few pieces of stainless steel around that I had bought for the kids and I to eat with, and I got fifty cents for what I had accumulated of that stuff. I went and got a haircut, a hamburger, and a package of cigarettes for fifty cents. And not only that, but I had some left over to",
+          "bbox": [
+            {
+              "h": 504.20753475550225,
+              "w": 288.90708848609006,
+              "x": 458.4004031535824,
+              "y": 67.11830821324791,
+              "confidence": 0.99,
+              "end_index": 2772,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

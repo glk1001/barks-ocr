@@ -1,0 +1,30 @@
+# xxii INTRODUCTION
+
+month from late November 1949 through July 1950). This reassignment, which Barks welcomed, coincided with the breaking up of his second marriage. His wife's alcoholism had made her abusive—she tore up many of his comic books and tried to destroy his original art, at least one time almost succeeding in mutilating a completed story. However, when she had to undergo cancer surgery in June of 1950, Barks went with her to La Jolla, California, while she was hospitalized at Scripps Memorial Hospital. During this time he produced "No Such Varmint" and paid for all her hospital bills in cash—as a pieceworker he had no health benefits from Western Publishing. While his wife was still in the hospital recovering from the amputation of her leg, Barks got the news that he was being demoted back to ten-page comic format.
+
+During this period of time (1949–1951), when his life was in a shambles, he specifically used his work to escape from his terrible home life. Sometime after his wife's surgery, he moved into a warehouse constructed out of an abandoned, subdivided carnival site, where "ideas flowed like waterfalls," and he could "write stories to beat hell." In the burst of activity at this time of great personal turmoil, he created one of his greatest strings of ten-pagers—containing the emergence of the definitive Uncle Scrooge complete with money swim and the origin of the Junior Woodchucks, the Beagle Boys, the money bin, Cornelius Coot, Gyro Gearloose, and many more. During this period he also produced his own "nostalgically" favorite story, "In Old California"; the first one-shot issue of Uncle Scrooge, "Only a Poor Old Man"; and right around the time his Uncle Scrooge was being finalized in December of 1951, "The Golden Helmet":
+
+The work date on the story ["The Golden Helmet"], November 1951 according to Barried, indicates that it was done at a time when my fortunes were at a very low ebb. I had just given everything I owned to my alcoholic ex-wife in exchange for my freedom. Broke and in debt and facing years of stiff alimony at the age of 50 I chose to keep working, and I can recall one day when all the bad news had struck me and I should have been heading for a bar, and instead I sat like a zombie with a pad of paper and jotted down gags and plots and situations that seemed to pour onto me from somewhere. The Golden Helmet must have been one of those situations. I recall that three nearly complete story plots were on that pad before the ideas finally began to dry up. So under the circumstances there is evidence that the Golden Helmet plot was not hacked out by the same method that built most of my stories, but was at least partly "divine inspiration."<sup>15</sup>
+
+The next year Barks became reacquainted with Garé Williams, the woman he had met back in 1943–44 and who began assisting him in
+
+---
+
+# INTRODUCTION xxiii
+
+lettering and inking the backgrounds of his comics. In July 1954 she became his third wife, and for the most part, with the exception of the death of his daughter in 1963, Barks's life went smoothly until the death of Garé Barks in 1993.
+
+Barks would never be quite as depressed again as he had been in late 1951 until 1997–1998, when a series of complex lawsuits nearly destroyed him at age ninety-seven. On 21 March 1998, he sent the following message: "As much as I have feared those two secretive managers, I never dreamed they could invent so many ways to defame and torture me with outrageous claims. I am sorry I can't divulge the craziness of some of those claims. But, with their two-to-one advantage over me in testimonial clout, they are very dangerous." On 17 April 1998, he sent another message:
+
+I have suffered a long, wearisome year since I finished that big order of pencil drawings for Disney in March 1997. I had hoped this year would be one of gradually slowing down into almost total retirement. Now it looks as if all years until I die will be filled with legalized harassment all night and all day every day.
+
+I am sorry I didn't inherit some of Gladstone Gander's genes.
+
+By 5 July 1998, however, over two months after the lawsuits had been settled in his favor, Barks bounced back with his old sense of humor. He reminisced about "buying the first hearing aid that could be worn in one pocket. It was summer and for the first time in years I could hear the buzzing of bees in the rose bushes outside the window. Now I can't hear a bee if it's stinging my ear, and my hearing aids are many times more powerful than the one I bought long, long ago." He signed this fax: "The fossil of Duckburg, Carl Barks."
+
+> "Life is a long drawn out affair, and today's disasters will by and by be the belly laughs that you sprinkle in your reminiscences."
+> —Carl Barks, Dec. 7, 1977
+
+The body of Barks's work stands at least in part as a form of visual narrative therapy with healing power capable of saving his readers from the monotony and depression of everyday life. At times he accomplished this feat by exaggerating the frustrations he confronted Donald Duck with in order to make Donald's absurdity, pride, tenacity, and—more often than one might expect—heroism show up as infinitely meaningful.
+
+In the process of expanding Donald Duck's character far beyond the

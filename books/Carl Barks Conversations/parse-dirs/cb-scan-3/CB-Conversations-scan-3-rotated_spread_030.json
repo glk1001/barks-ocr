@@ -1,0 +1,293 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "138 CARL BARKS: CONVERSATIONS",
+              "value": "138 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.291304816120427,
+                  "w": 124.90290486256671,
+                  "x": 117.5668239865187,
+                  "y": 43.467884971060414,
+                  "confidence": 0.85,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "138 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.29,
+              "w": 124.9,
+              "x": 117.57,
+              "y": 43.47,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "I also used to balance left and right pages to make a two-page spread. I always tried to keep my action moving toward the center of the book. However, you couldn't always do it that way. Once a very strong action is started in a left-hand panel, for instance, you couldn't reverse it in the right-hand panel.",
+          "value": "I also used to balance left and right pages to make a two-page spread. I always tried to keep my action moving toward the center of the book. However, you couldn't always do it that way. Once a very strong action is started in a left-hand panel, for instance, you couldn't reverse it in the right-hand panel.",
+          "bbox": [
+            {
+              "h": 62.96458626798305,
+              "w": 282.82023990091466,
+              "x": 115.81572234660824,
+              "y": 67.39446010682643,
+              "confidence": 0.99,
+              "end_index": 307,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I would read the storyboards over and over again. Not only that, I would read the script probably ten or twenty times before I ever started drawing it. Then, I'd go over the storyboards up on the wall probably another ten times before I ever got around to inking it. But I never set any definite rules for myself, because I found that it cramped my creativity. If I felt that I wanted to ink, I just went ahead and inked a few pages. In general, though, I think that I would spend four or five days polishing an idea, then another four or five days writing the confounded thing. Then the penciling and the inking would take another ten days—for a ten-page story. All the polishing was in self-defense. I found that if I polished it before I put all that work into it, it was that much easier to make corrections.",
+          "value": "I would read the storyboards over and over again. Not only that, I would read the script probably ten or twenty times before I ever started drawing it. Then, I'd go over the storyboards up on the wall probably another ten times before I ever got around to inking it. But I never set any definite rules for myself, because I found that it cramped my creativity. If I felt that I wanted to ink, I just went ahead and inked a few pages. In general, though, I think that I would spend four or five days polishing an idea, then another four or five days writing the confounded thing. Then the penciling and the inking would take another ten days—for a ten-page story. All the polishing was in self-defense. I found that if I polished it before I put all that work into it, it was that much easier to make corrections.",
+          "bbox": [
+            {
+              "h": 151.41367372808688,
+              "w": 283.76107744021533,
+              "x": 114.77492919326411,
+              "y": 132.24330394435978,
+              "confidence": 0.98,
+              "end_index": 811,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** George Lucas has commented that your comics are particularly American.",
+          "value": "Q: George Lucas has commented that your comics are particularly American.",
+          "bbox": [
+            {
+              "h": 21.893134913300315,
+              "w": 281.95288514076793,
+              "x": 114.01325288800497,
+              "y": 293.95939163014486,
+              "confidence": 0.9,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Well, yes, they are. I can't think of any other country with a lifestyle like the one I depicted. Of course, Scrooge is an excessive example of the possibilities of our lifestyle. But Donald and the kids, Gladstone, and Gyro have their counterparts in American people. You can read about them just about every day in the news. My stories were just about everyday American life. I don't think that life in Norway, Germany, Italy—Russia certainly—or even South America was like that. They don't have the same props to work with, the same little problems like the kids going to school that we have here in America. It's a different system over there. However, they understood; it rang a bell with them. The stories are very popular in those countries because they reflect common human experiences. Even though they approach those experiences from a different viewpoint, they can still read what the script is all about. The human condition was an international thing, but the method of presenting it was American.",
+          "value": "BARKS: Well, yes, they are. I can't think of any other country with a lifestyle like the one I depicted. Of course, Scrooge is an excessive example of the possibilities of our lifestyle. But Donald and the kids, Gladstone, and Gyro have their counterparts in American people. You can read about them just about every day in the news. My stories were just about everyday American life. I don't think that life in Norway, Germany, Italy—Russia certainly—or even South America was like that. They don't have the same props to work with, the same little problems like the kids going to school that we have here in America. It's a different system over there. However, they understood; it rang a bell with them. The stories are very popular in those countries because they reflect common human experiences. Even though they approach those experiences from a different viewpoint, they can still read what the script is all about. The human condition was an international thing, but the method of presenting it was American.",
+          "bbox": [
+            {
+              "h": 190.86976414824696,
+              "w": 284.3848044790873,
+              "x": 112.70957221203317,
+              "y": 320.01939393578516,
+              "confidence": 0.95,
+              "end_index": 1020,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Carl, how did you feel when you had to switch to drawing Uncle Scrooge adventures?",
+          "value": "Q: Carl, how did you feel when you had to switch to drawing Uncle Scrooge adventures?",
+          "bbox": [
+            {
+              "h": 23.81759999999997,
+              "w": 263.29560000000004,
+              "x": 111.87960000000001,
+              "y": 521.01,
+              "confidence": 0.9,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** It was a relief. I was beginning to find it hard to find something new for Donald to do. Suddenly I had another character on whom I could",
+          "value": "BARKS: It was a relief. I was beginning to find it hard to find something new for Donald to do. Suddenly I had another character on whom I could",
+          "bbox": [
+            {
+              "h": 24.801904130144916,
+              "w": 282.5802687869189,
+              "x": 112.00374682617189,
+              "y": 547.1191093702364,
+              "confidence": 0.95,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nBRUCE HAMILTON / 1984 139\n\\</page_header>",
+          "value": "<page_header>\nBRUCE HAMILTON / 1984 139\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.71792,
+              "w": 113.56200000000001,
+              "x": 633.4236000000001,
+              "y": 37.51272,
+              "confidence": 0.93,
+              "end_index": 55,
+              "label": "header",
+              "start_index": 0
+            },
+            {
+              "h": 10.78,
+              "w": 114.09,
+              "x": 632.48,
+              "y": 37.07,
+              "confidence": 1.0,
+              "end_index": 39,
+              "label": "header",
+              "start_index": 25
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "keep expanding for several years. It was like having a new plant coming out of the ground that you could nourish into growing a big lot of tomatoes. And I had the old plant, too: I could always justify anything that Scrooge was going to do by placing Donald in the situation with him.",
+          "value": "keep expanding for several years. It was like having a new plant coming out of the ground that you could nourish into growing a big lot of tomatoes. And I had the old plant, too: I could always justify anything that Scrooge was going to do by placing Donald in the situation with him.",
+          "bbox": [
+            {
+              "h": 52.364139407869665,
+              "w": 280.40302212747713,
+              "x": 464.6296590605946,
+              "y": 61.94760466606328,
+              "confidence": 0.97,
+              "end_index": 283,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** How did the role of the nephews change in the Scrooge stories?\n**BARKS:** They had a great respect for Uncle Scrooge because of his age, but they were competing against two adult minds and feeling that it was their duty to rescue Donald and Scrooge from all the damnable things they would get themselves into. It made a role for those kids which they carried out very well. I don't recall any place where I had the kids feel any contempt for Uncle Scrooge, but they did once in a while for Donald. Their treatment of Scrooge was determined by what the story called for.",
+          "value": "Q: How did the role of the nephews change in the Scrooge stories?\nBARKS: They had a great respect for Uncle Scrooge because of his age, but they were competing against two adult minds and feeling that it was their duty to rescue Donald and Scrooge from all the damnable things they would get themselves into. It made a role for those kids which they carried out very well. I don't recall any place where I had the kids feel any contempt for Uncle Scrooge, but they did once in a while for Donald. Their treatment of Scrooge was determined by what the story called for.",
+          "bbox": [
+            {
+              "h": 103.01112,
+              "w": 283.48440000000005,
+              "x": 465.18360000000007,
+              "y": 120.27888000000002,
+              "confidence": 0.84,
+              "end_index": 575,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Did you find your first duck painting a marked departure from ink work?",
+          "value": "Q: Did you find your first duck painting a marked departure from ink work?",
+          "bbox": [
+            {
+              "h": 25.030987700076203,
+              "w": 267.9143057355183,
+              "x": 466.5031443407013,
+              "y": 230.18592602658163,
+              "confidence": 0.89,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** That's when I made a big decision. I figured, \"I'm going to do away with the outline on the ducks. They won't look like colored cartoons; I'm going to see if I can't make them look like real, round ducks.\" I wouldn't draw outlines if I were painting a bunch of sailors; I would draw them with colors. And I did that with the ducks. I was experimenting with ways to take those white ducks and make them look round. I gave them a shadowed side and a lighted side, and still I had the same problem. They are little devils to paint. It was hard to put personality into their shape, which was basically that of a round ball.",
+          "value": "BARKS: That's when I made a big decision. I figured, \"I'm going to do away with the outline on the ducks. They won't look like colored cartoons; I'm going to see if I can't make them look like real, round ducks.\" I wouldn't draw outlines if I were painting a bunch of sailors; I would draw them with colors. And I did that with the ducks. I was experimenting with ways to take those white ducks and make them look round. I gave them a shadowed side and a lighted side, and still I had the same problem. They are little devils to paint. It was hard to put personality into their shape, which was basically that of a round ball.",
+          "bbox": [
+            {
+              "h": 117.30168000000003,
+              "w": 285.16679999999997,
+              "x": 467.70720000000006,
+              "y": 256.0392,
+              "confidence": 0.79,
+              "end_index": 629,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Do you find it more satisfying to do fewer paintings in more detail \\[for Another Rainbow Lithograph Series]?",
+          "value": "Q: Do you find it more satisfying to do fewer paintings in more detail [for Another Rainbow Lithograph Series]?",
+          "bbox": [
+            {
+              "h": 26.33486004192077,
+              "w": 284.31894798018294,
+              "x": 469.12202651009915,
+              "y": 378.60929862804886,
+              "confidence": 0.92,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Of all my \\[lithograph] paintings, I got the most satisfaction out of \"An Embarrassment of Riches.\" The pleasure came mostly in the refinement of the color. I certainly didn't paint the coins any better than I had in other paintings, nor did I paint the ducks any better. The composition was touch and go; I felt that the first version I did was better than the final one. I had to make the composition as I finally produced it in order to fit so many different elements into the picture. It was like a painting that was set up and approved by a committee. I was alone in my concept of the subject matter, and I could see where I had done a few things that could be improved on very greatly, so I let the opinions of the others lead me into making changes, and finally I got something that sort of pleased everybody.",
+          "value": "BARKS: Of all my [lithograph] paintings, I got the most satisfaction out of \"An Embarrassment of Riches.\" The pleasure came mostly in the refinement of the color. I certainly didn't paint the coins any better than I had in other paintings, nor did I paint the ducks any better. The composition was touch and go; I felt that the first version I did was better than the final one. I had to make the composition as I finally produced it in order to fit so many different elements into the picture. It was like a painting that was set up and approved by a committee. I was alone in my concept of the subject matter, and I could see where I had done a few things that could be improved on very greatly, so I let the opinions of the others lead me into making changes, and finally I got something that sort of pleased everybody.",
+          "bbox": [
+            {
+              "h": 157.79160000000002,
+              "w": 286.00800000000004,
+              "x": 469.3896000000001,
+              "y": 404.89920000000006,
+              "confidence": 0.9,
+              "end_index": 826,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "138, 139"
+    }
+  ]
+}

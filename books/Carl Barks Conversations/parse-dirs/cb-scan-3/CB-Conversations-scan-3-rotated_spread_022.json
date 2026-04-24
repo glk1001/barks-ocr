@@ -1,0 +1,196 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "122 CARL BARKS: CONVERSATIONS",
+              "value": "122 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.434056570955603,
+                  "w": 124.51132229539827,
+                  "x": 107.99107115210558,
+                  "y": 40.505687445217234,
+                  "confidence": 0.9,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "122 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.43,
+              "w": 124.51,
+              "x": 107.99,
+              "y": 40.51,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## Flashes of Inspiration",
+          "value": "Flashes of Inspiration",
+          "bbox": [
+            {
+              "h": 12.88148344370861,
+              "w": 112.247625,
+              "x": 106.990125,
+              "y": 62.567205298013256,
+              "confidence": 0.96,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "I woke up one night thinking, \"Petroglyphica!\" She was the first secretary. She chiseled words in stone as her boss dictated. He was not a fast talker and that was how she was able to chisel whatever he was saying on those big stone tablets. The name stuck, and when I got out of bed the next morning, I could still remember it. I don't know, these crazy names just come to me in the night.",
+          "value": "I woke up one night thinking, \"Petroglyphica!\" She was the first secretary. She chiseled words in stone as her boss dictated. He was not a fast talker and that was how she was able to chisel whatever he was saying on those big stone tablets. The name stuck, and when I got out of bed the next morning, I could still remember it. I don't know, these crazy names just come to me in the night.",
+          "bbox": [
+            {
+              "h": 76.15252336366237,
+              "w": 283.19114760980375,
+              "x": 105.70546619545543,
+              "y": 83.72412359708463,
+              "confidence": 0.99,
+              "end_index": 389,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## On Losing His Disney Oil Painting License in 1976",
+          "value": "On Losing His Disney Oil Painting License in 1976",
+          "bbox": [
+            {
+              "h": 13.399828760956535,
+              "w": 261.634258050686,
+              "x": 105.9112004454078,
+              "y": 179.34337876572033,
+              "confidence": 0.96,
+              "end_index": 51,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "I would prefer that fans accept it with good grace. Disney's move was made from necessity, not from stinginess. It was done with much reluctance. I would prefer that fans realize these things. Let them consider the scope of that original permission Disney gave me. Try to think of any one time that General Motors gave an ex-employee permission to make Chevrolets!",
+          "value": "I would prefer that fans accept it with good grace. Disney's move was made from necessity, not from stinginess. It was done with much reluctance. I would prefer that fans realize these things. Let them consider the scope of that original permission Disney gave me. Try to think of any one time that General Motors gave an ex-employee permission to make Chevrolets!",
+          "bbox": [
+            {
+              "h": 74.67840728849089,
+              "w": 282.6671507776772,
+              "x": 104.73979628548973,
+              "y": 199.8191986995046,
+              "confidence": 0.99,
+              "end_index": 363,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Fortune Favors the Bold: An Interview with Carl Barks by Edward Summer / 1981",
+          "md": "![Fortune Favors the Bold: An Interview with Carl Barks by Edward Summer / 1981](CB-Conversations-scan-3-rotated_spread_022_page_1_seal_1_v2.jpg)",
+          "url": "CB-Conversations-scan-3-rotated_spread_022_page_1_seal_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 186.53115499118712,
+              "w": 302.768735685023,
+              "x": 442.9731770436357,
+              "y": 111.28567633979614,
+              "confidence": 0.78,
+              "end_index": 101,
+              "label": "seal",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "From *Uncle Scrooge McDuck: His Life & Times*. Ed by Edward Summer. Millbrae, CA: Celestial Arts, 1981. 89-91, 117-18, 175-76, 216, 239-40, 292. Reprinted by permission of Edward Summer.",
+          "value": "From Uncle Scrooge McDuck: His Life & Times. Ed by Edward Summer. Millbrae, CA: Celestial Arts, 1981. 89-91, 117-18, 175-76, 216, 239-40, 292. Reprinted by permission of Edward Summer.",
+          "bbox": [
+            {
+              "h": 56.35877751048015,
+              "w": 161.85611468654727,
+              "x": 482.32358095941316,
+              "y": 319.09153633765254,
+              "confidence": 0.98,
+              "end_index": 185,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "*This interview material was recorded between 1975 and 1981, in connection with a film series by Edward Summer entitled The Men Who Made the Comics, a project supported by a grant from the National Endowment for the Arts, a Federal Agency in Washington, D.C.*",
+          "value": "This interview material was recorded between 1975 and 1981, in connection with a film series by Edward Summer entitled The Men Who Made the Comics, a project supported by a grant from the National Endowment for the Arts, a Federal Agency in Washington, D.C.",
+          "bbox": [
+            {
+              "h": 38.90733774834439,
+              "w": 261.29774999999995,
+              "x": 482.6385,
+              "y": 403.0064105960265,
+              "confidence": 0.98,
+              "end_index": 258,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "I liked stories that gave me a chance to draw water and ships sailing into storms and big pictorial panels. It helped take the monotony away from drawing just round-headed ducks all the time. I'd look at pictures of boats or whatever when I was working. While I never copied the layout of any boat, I would always develop one that was so simple I could use it from one scene to another. The reader could always refer to a long-shot view and check it against the close-ups and see where the characters were in relationship to some spot on the boat. In \\[*Uncle Scrooge* #3], there's a",
+          "value": "I liked stories that gave me a chance to draw water and ships sailing into storms and big pictorial panels. It helped take the monotony away from drawing just round-headed ducks all the time. I'd look at pictures of boats or whatever when I was working. While I never copied the layout of any boat, I would always develop one that was so simple I could use it from one scene to another. The reader could always refer to a long-shot view and check it against the close-ups and see where the characters were in relationship to some spot on the boat. In [Uncle Scrooge #3], there's a",
+          "bbox": [
+            {
+              "h": 103.39199935689787,
+              "w": 285.6604720369665,
+              "x": 459.9731950981327,
+              "y": 469.56217714367386,
+              "confidence": 0.99,
+              "end_index": 582,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "122"
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "62 CARL BARKS: CONVERSATIONS",
+              "value": "62 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.549199117520965,
+                  "w": 120.365737712581,
+                  "x": 102.6069110345608,
+                  "y": 38.24723670267245,
+                  "confidence": 0.82,
+                  "end_index": 27,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "62 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.55,
+              "w": 120.37,
+              "x": 102.61,
+              "y": 38.25,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "buy some postage stamps. I wrote back to the *Eye-Opener* and asked them why in hell they hadn't sent me my last check.",
+          "value": "buy some postage stamps. I wrote back to the Eye-Opener and asked them why in hell they hadn't sent me my last check.",
+          "bbox": [
+            {
+              "h": 25.762966887417214,
+              "w": 267.60675000000003,
+              "x": 101.99550000000002,
+              "y": 62.304317880794706,
+              "confidence": 0.97,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** What was their reply?",
+          "value": "BARRIER: What was their reply?",
+          "bbox": [
+            {
+              "h": 11.650863813595665,
+              "w": 126.48667289026773,
+              "x": 101.4453621826172,
+              "y": 94.73125938810024,
+              "confidence": 0.91,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** They sent me a check. They'd just been dawdling around.",
+          "value": "BARKS: They sent me a check. They'd just been dawdling around.",
+          "bbox": [
+            {
+              "h": 13.41,
+              "w": 254.73,
+              "x": 101.47,
+              "y": 107.26,
+              "confidence": 1.0,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** It wasn't too long after this, was it, that you actually went to Minneapolis to work for them?",
+          "value": "BARRIER: It wasn't too long after this, was it, that you actually went to Minneapolis to work for them?",
+          "bbox": [
+            {
+              "h": 23.607707187261816,
+              "w": 275.3025370944884,
+              "x": 100.86665399021057,
+              "y": 127.05744723346993,
+              "confidence": 0.96,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** It was a few months after that. I spent the summer in Medford, freelancing, and my checks kept getting a little bigger and a little bigger. I was selling more and more stuff to them, and finally the editor they had in charge back there, he was drinking a little too much, and he got so careless about when he would come to work and what time the magazine's dummy got pasted together and taken over to the presses, and the assistant editor was also hitting the bottle pretty much, and so the new guy who had bought this *Eye-Opener* was a dredger contractor. He was enough of a businessman, he could see things weren't being run right around there. So he looked over the list of gag men and decided that, hell, I was a hardworking son of a gun, so he sent a telegram to me, asked if I would come back there. I had enough money to send a telegram saying I didn't have enough money to get back there. He sent me money to come back there on, and I closed up my affairs very rapidly and gave away the big stack of joke magazines I had. What I could carry in a valise, I carried with me.",
+          "value": "BARKS: It was a few months after that. I spent the summer in Medford, freelancing, and my checks kept getting a little bigger and a little bigger. I was selling more and more stuff to them, and finally the editor they had in charge back there, he was drinking a little too much, and he got so careless about when he would come to work and what time the magazine's dummy got pasted together and taken over to the presses, and the assistant editor was also hitting the bottle pretty much, and so the new guy who had bought this Eye-Opener was a dredger contractor. He was enough of a businessman, he could see things weren't being run right around there. So he looked over the list of gag men and decided that, hell, I was a hardworking son of a gun, so he sent a telegram to me, asked if I would come back there. I had enough money to send a telegram saying I didn't have enough money to get back there. He sent me money to come back there on, and I closed up my affairs very rapidly and gave away the big stack of joke magazines I had. What I could carry in a valise, I carried with me.",
+          "bbox": [
+            {
+              "h": 203.43913394388346,
+              "w": 284.11830417837746,
+              "x": 98.21337216260957,
+              "y": 153.39236932402824,
+              "confidence": 0.98,
+              "end_index": 1091,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** You left your children with your in-laws?",
+          "value": "BARRIER: You left your children with your in-laws?",
+          "bbox": [
+            {
+              "h": 12.836090296303384,
+              "w": 197.52109675709795,
+              "x": 97.13738416420543,
+              "y": 366.28346087080797,
+              "confidence": 0.93,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Yeah, they were with my in-laws at that time. Whenever I got a little extra money, I would send some to the in-laws to buy their clothes and pay for their food, and so on. They weren't getting any from their mother that I know of.",
+          "value": "BARKS: Yeah, they were with my in-laws at that time. Whenever I got a little extra money, I would send some to the in-laws to buy their clothes and pay for their food, and so on. They weren't getting any from their mother that I know of.",
+          "bbox": [
+            {
+              "h": 49.00821225228658,
+              "w": 280.23407309629863,
+              "x": 95.9767932932784,
+              "y": 379.37171683022115,
+              "confidence": 0.97,
+              "end_index": 240,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** When was it that you went to Minneapolis?",
+          "value": "BARRIER: When was it that you went to Minneapolis?",
+          "bbox": [
+            {
+              "h": 13.436472913490897,
+              "w": 210.95415076279062,
+              "x": 95.61690549673686,
+              "y": 437.1679662633385,
+              "confidence": 0.92,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I got into Minneapolis in November of 1931. I went to work there with the *Eye-Opener*. I was the gagman and illustrator. The new editor was a wonderful poet, and gag writer himself, but he did have that one fault of drinking a little too much. Eventually the *Eye-Opener* changed hands. The new editor was a woman who wanted to put on her own type of heavy drinkers. I never did fit into it, because I just couldn't drink a hell of a lot. I drank socially, but if I had a day's work to do, I just didn't go there drunk. I didn't drink until I had my day's work done. I just didn't fit into the social scheme of things, but I fitted into the workhorse part of it.",
+          "value": "BARKS: I got into Minneapolis in November of 1931. I went to work there with the Eye-Opener. I was the gagman and illustrator. The new editor was a wonderful poet, and gag writer himself, but he did have that one fault of drinking a little too much. Eventually the Eye-Opener changed hands. The new editor was a woman who wanted to put on her own type of heavy drinkers. I never did fit into it, because I just couldn't drink a hell of a lot. I drank socially, but if I had a day's work to do, I just didn't go there drunk. I didn't drink until I had my day's work done. I just didn't fit into the social scheme of things, but I fitted into the workhorse part of it.",
+          "bbox": [
+            {
+              "h": 118.83235961318596,
+              "w": 284.2515073688787,
+              "x": 94.03778962521437,
+              "y": 449.6303110232471,
+              "confidence": 0.97,
+              "end_index": 673,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nJ. MICHAEL BARRIER / 1973 63\n\\</page_header>",
+          "value": "<page_header>\nJ. MICHAEL BARRIER / 1973 63\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 116.45,
+              "x": 617.76,
+              "y": 41.54,
+              "confidence": 1.0,
+              "end_index": 42,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "63",
+          "value": "63",
+          "bbox": [
+            {
+              "h": 8.420243881597754,
+              "w": 9.837776295731697,
+              "x": 723.9048544207318,
+              "y": 42.67359149735615,
+              "confidence": 0.9,
+              "end_index": 1,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Boy, I was there for four years, doing that work. It just got to where I was doing all of it.",
+          "value": "Boy, I was there for four years, doing that work. It just got to where I was doing all of it.",
+          "bbox": [
+            {
+              "h": 25.968990250452556,
+              "w": 282.9837854182546,
+              "x": 452.32151895960374,
+              "y": 66.75576688798115,
+              "confidence": 0.97,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** All of the work for the entire magazine?",
+          "value": "BARRIER: All of the work for the entire magazine?",
+          "bbox": [
+            {
+              "h": 10.515496688741734,
+              "w": 196.36762500000003,
+              "x": 452.14500000000004,
+              "y": 99.89721854304636,
+              "confidence": 0.92,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Just about. Toward the last there, I was practically writing the whole thing. We bought a few gags, at a dollar a gag, and two dollars a gag, and so on. Very little of that.",
+          "value": "BARKS: Just about. Toward the last there, I was practically writing the whole thing. We bought a few gags, at a dollar a gag, and two dollars a gag, and so on. Very little of that.",
+          "bbox": [
+            {
+              "h": 38.28660656321456,
+              "w": 277.5156047303736,
+              "x": 453.05068652343755,
+              "y": 112.50239693811932,
+              "confidence": 0.92,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Was the *Eye-Opener* making enough money to pay you a decent salary?",
+          "value": "BARRIER: Was the Eye-Opener making enough money to pay you a decent salary?",
+          "bbox": [
+            {
+              "h": 25.031182710080053,
+              "w": 264.4877641720656,
+              "x": 453.8065022389482,
+              "y": 157.68813832888722,
+              "confidence": 0.96,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Oh, no, I got a hundred dollars a month, I think. Then, quite a lot of the time, there wasn't enough left after the editor got her fingers into the incoming checks. She would entertain these visiting stars that came to town. She had sort of expensive tastes, and she would just take everything that came in and spend it. The printers and linotypers, those guys were all waiting for their money. The four of us in the office, we would get half of our checks, maybe, and maybe the next month we would get three-quarters of a check. Finally, we were getting pretty well behind and so were the printers and those guys. So they just closed in on the editor one time and told her, \"All right, if you don't want to go into bankruptcy, make an arrangement with us to run the business. And when it's all clear again, then you can have the business back again.\" So that was the status of the thing at the time I left. Disney's sent for me to come to work, and so I told the head of the printers over there that I was going to leave, and right away, the printers called the linotypers, and they called up the engravers and said, \"Barks is gonna leave. He's gonna go out and work for Disney. What are we gonna do about it? Well, we'll raise his salary, we'll give him a hundred and sixty dollars a month to stay on.\" It was tempting, because a hundred and sixty looked like a fortune.",
+          "value": "BARKS: Oh, no, I got a hundred dollars a month, I think. Then, quite a lot of the time, there wasn't enough left after the editor got her fingers into the incoming checks. She would entertain these visiting stars that came to town. She had sort of expensive tastes, and she would just take everything that came in and spend it. The printers and linotypers, those guys were all waiting for their money. The four of us in the office, we would get half of our checks, maybe, and maybe the next month we would get three-quarters of a check. Finally, we were getting pretty well behind and so were the printers and those guys. So they just closed in on the editor one time and told her, \"All right, if you don't want to go into bankruptcy, make an arrangement with us to run the business. And when it's all clear again, then you can have the business back again.\" So that was the status of the thing at the time I left. Disney's sent for me to come to work, and so I told the head of the printers over there that I was going to leave, and right away, the printers called the linotypers, and they called up the engravers and said, \"Barks is gonna leave. He's gonna go out and work for Disney. What are we gonna do about it? Well, we'll raise his salary, we'll give him a hundred and sixty dollars a month to stay on.\" It was tempting, because a hundred and sixty looked like a fortune.",
+          "bbox": [
+            {
+              "h": 244.68814633908164,
+              "w": 287.45045643578516,
+              "x": 453.86901519626525,
+              "y": 183.669587059356,
+              "confidence": 0.98,
+              "end_index": 1382,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** What was Disney going to pay you?",
+          "value": "BARRIER: What was Disney going to pay you?",
+          "bbox": [
+            {
+              "h": 11.52108465605943,
+              "w": 182.60220167206552,
+              "x": 457.8349814691312,
+              "y": 435.9040177877288,
+              "confidence": 0.92,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I'd get twenty dollars a week, just half of that. But I thought there was a future if I went the route to Disney's, and there wasn't any at Minneapolis. I figured, as soon as these guys get all of their bills paid off, then it's going to be handed back to her, and—God knows.",
+          "value": "BARKS: I'd get twenty dollars a week, just half of that. But I thought there was a future if I went the route to Disney's, and there wasn't any at Minneapolis. I figured, as soon as these guys get all of their bills paid off, then it's going to be handed back to her, and—God knows.",
+          "bbox": [
+            {
+              "h": 51.51309802305642,
+              "w": 283.5631322646723,
+              "x": 458.1408842177973,
+              "y": 448.1722034965702,
+              "confidence": 0.97,
+              "end_index": 285,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** You said when you went to work for Disney's, you started in the November class. So you were actually going to school?",
+          "value": "BARRIER: You said when you went to work for Disney's, you started in the November class. So you were actually going to school?",
+          "bbox": [
+            {
+              "h": 24.964719755144845,
+              "w": 275.30636275724095,
+              "x": 458.8615864853278,
+              "y": 506.9597419636053,
+              "confidence": 0.78,
+              "end_index": 129,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Well, it was a tryout. At the end of one month, they picked out the ones that were likely to make the grade, and those that weren't were given their walking papers. Of the seven that went to work with my",
+          "value": "BARKS: Well, it was a tryout. At the end of one month, they picked out the ones that were likely to make the grade, and those that weren't were given their walking papers. Of the seven that went to work with my",
+          "bbox": [
+            {
+              "h": 38.64445033112588,
+              "w": 283.11637500000006,
+              "x": 458.19112500000006,
+              "y": 532.8727947019868,
+              "confidence": 0.97,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "62, 63"
+    }
+  ]
+}

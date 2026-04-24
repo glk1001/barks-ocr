@@ -1,0 +1,373 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 30 CARL BARKS: CONVERSATIONS",
+          "value": "30 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.670295897842037,
+              "w": 120.29035775533538,
+              "x": 106.6681682426639,
+              "y": 39.344868237304695,
+              "confidence": 0.88,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "work being done on my stories. That's why I liked Western Publishing. Just send them the finished drawings and get my check back, without ever any comments as to whether it was a good story, a bad story, or what.",
+          "value": "work being done on my stories. That's why I liked Western Publishing. Just send them the finished drawings and get my check back, without ever any comments as to whether it was a good story, a bad story, or what.",
+          "bbox": [
+            {
+              "h": 40.43130442489997,
+              "w": 283.4389578887196,
+              "x": 105.16637959698934,
+              "y": 63.11797050007147,
+              "confidence": 0.96,
+              "end_index": 211,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** Around 1960, right after Malcolm Willis and John Spicer found out your name and began writing to you, you mentioned that in seventeen years you'd received only three letters. One praised you and the other two panned you, and you said the other two made you feel so bad you could hardly draw for two weeks.",
+          "value": "PC: Around 1960, right after Malcolm Willis and John Spicer found out your name and began writing to you, you mentioned that in seventeen years you'd received only three letters. One praised you and the other two panned you, and you said the other two made you feel so bad you could hardly draw for two weeks.",
+          "bbox": [
+            {
+              "h": 63.93452613852899,
+              "w": 279.0204927263958,
+              "x": 104.17955270757909,
+              "y": 106.51698148342227,
+              "confidence": 0.94,
+              "end_index": 312,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, it was kind of depressing to read these criticisms. I can remember the two that panned me, one was from a woman who blew her top because I had Donald saying, \"Shut up!\" to the kids.",
+          "value": "CB: Well, it was kind of depressing to read these criticisms. I can remember the two that panned me, one was from a woman who blew her top because I had Donald saying, \"Shut up!\" to the kids.",
+          "bbox": [
+            {
+              "h": 39.026447925400156,
+              "w": 280.85981001691124,
+              "x": 103.41405073956746,
+              "y": 170.9166242092226,
+              "confidence": 0.9,
+              "end_index": 194,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** I read your reply to Chase Craig, a very spicy reply, to a woman who sent you a comic book and wrote in the margins, \"I don't like that, and I don't like that, and not only that but my kid doesn't like that, and not only that either.\"",
+          "value": "PC: I read your reply to Chase Craig, a very spicy reply, to a woman who sent you a comic book and wrote in the margins, \"I don't like that, and I don't like that, and not only that but my kid doesn't like that, and not only that either.\"",
+          "bbox": [
+            {
+              "h": 39.82402111280489,
+              "w": 282.1801520489949,
+              "x": 102.4458700427544,
+              "y": 214.56927672684836,
+              "confidence": 0.86,
+              "end_index": 241,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I wrote back and called her kid a nose pickin' crybaby.",
+          "value": "CB: I wrote back and called her kid a nose pickin' crybaby.",
+          "bbox": [
+            {
+              "h": 14.86284699409299,
+              "w": 225.40754847084605,
+              "x": 102.10509803734757,
+              "y": 253.04191396960752,
+              "confidence": 0.82,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** Did you change anything as a result of that?",
+          "value": "PC: Did you change anything as a result of that?",
+          "bbox": [
+            {
+              "h": 12.686428982469508,
+              "w": 187.48856229456462,
+              "x": 101.88764886921209,
+              "y": 271.31816288586134,
+              "confidence": 0.83,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, I was a little more careful after that as to how I had Donald bossing the kids around! I didn't have Donald get quite so blunt and direct with the kids, no more \"Shut ups!\"",
+          "value": "CB: Oh, I was a little more careful after that as to how I had Donald bossing the kids around! I didn't have Donald get quite so blunt and direct with the kids, no more \"Shut ups!\"",
+          "bbox": [
+            {
+              "h": 37.658523661394774,
+              "w": 283.47779055711703,
+              "x": 101.28432745212463,
+              "y": 284.65241510099094,
+              "confidence": 0.85,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** I wonder why she objected to \"shut up\" versus \"quiet\"?",
+          "value": "PC: I wonder why she objected to \"shut up\" versus \"quiet\"?",
+          "bbox": [
+            {
+              "h": 13.933033112582848,
+              "w": 235.536,
+              "x": 100.94400000000002,
+              "y": 327.55772185430465,
+              "confidence": 0.83,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I think she just thought that it wasn't showing proper respect for the child, I guess. She believed in persuading the child to be quiet rather than ordering him to \"Shut up!\"",
+          "value": "CB: I think she just thought that it wasn't showing proper respect for the child, I guess. She believed in persuading the child to be quiet rather than ordering him to \"Shut up!\"",
+          "bbox": [
+            {
+              "h": 25.65902628144056,
+              "w": 283.12789581745426,
+              "x": 452.6694977372333,
+              "y": 67.22290005597372,
+              "confidence": 0.87,
+              "end_index": 181,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "A comic panel showing Uncle Donald in a taxi with children, with dialogue about the taxi being safe and comfortable, and Donald responding \"Shut up! For five dollars I should be entitled to ride in silence!\"",
+          "value": "A comic panel showing Uncle Donald in a taxi with children, with dialogue about the taxi being safe and comfortable, and Donald responding \"Shut up! For five dollars I should be entitled to ride in silence!\"",
+          "bbox": [
+            {
+              "h": 200.673165234375,
+              "w": 273.0024497189406,
+              "x": 100.03856392911587,
+              "y": 368.4136437833461,
+              "confidence": 0.99,
+              "end_index": 206,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "PAUL CIOTTI / 1972 31",
+          "value": "PAUL CIOTTI / 1972 31",
+          "bbox": [
+            {
+              "h": 10.597566030511624,
+              "w": 89.25758331745425,
+              "x": 644.8964407631479,
+              "y": 43.04812150581174,
+              "confidence": 0.93,
+              "end_index": 20,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**PC:** I have a picture in my mind of a brow-beaten little monster, or something, that probably hates her now.",
+          "value": "PC: I have a picture in my mind of a brow-beaten little monster, or something, that probably hates her now.",
+          "bbox": [
+            {
+              "h": 25.255656952648636,
+              "w": 283.058420279154,
+              "x": 453.10132802972566,
+              "y": 99.80655429092037,
+              "confidence": 0.87,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** It might be. That was one of the amusing incidents of my life. The other one was about that big statue, Uncle Scrooge and a Maharajah getting into a contest over who could build the biggest and most lavish statue of Cornelius Coot. And this woman wrote and said, \"What a scandalous waste of money!\" or something like that, that the money could have gone to hospitals or schools and so on. \\[laughter]",
+          "value": "CB: It might be. That was one of the amusing incidents of my life. The other one was about that big statue, Uncle Scrooge and a Maharajah getting into a contest over who could build the biggest and most lavish statue of Cornelius Coot. And this woman wrote and said, \"What a scandalous waste of money!\" or something like that, that the money could have gone to hospitals or schools and so on. [laughter]",
+          "bbox": [
+            {
+              "h": 76.79139386432928,
+              "w": 282.7517661728278,
+              "x": 453.71949502191313,
+              "y": 126.05342050066696,
+              "confidence": 0.89,
+              "end_index": 407,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**PC:** If the contest involved building hospitals and schools, that would've taken away from the impact of the story, right?",
+          "value": "PC: If the contest involved building hospitals and schools, that would've taken away from the impact of the story, right?",
+          "bbox": [
+            {
+              "h": 25.10455965605944,
+              "w": 279.28214677019827,
+              "x": 454.6030415396342,
+              "y": 209.6972708889101,
+              "confidence": 0.85,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I had thought of that angle, and then I thought, well, buildings aren't funny! You've got to have a whole plain just covered with these nasty, big hospitals, more than anybody could ever use. It wouldn't be funny, it would be sort of a tragedy. But these crazy statues of Cornelius Coot, they were so ridiculous, towering up over the city, and Cornelius Coot wasn't a very famous person to begin with!",
+          "value": "CB: I had thought of that angle, and then I thought, well, buildings aren't funny! You've got to have a whole plain just covered with these nasty, big hospitals, more than anybody could ever use. It wouldn't be funny, it would be sort of a tragedy. But these crazy statues of Cornelius Coot, they were so ridiculous, towering up over the city, and Cornelius Coot wasn't a very famous person to begin with!",
+          "bbox": [
+            {
+              "h": 77.14306781392916,
+              "w": 284.94417773437505,
+              "x": 454.93293764291167,
+              "y": 235.84298895531634,
+              "confidence": 0.87,
+              "end_index": 408,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**PC:** Did Western Publishing not really think that comic books were that significant? Did they have a fairly low opinion of them?",
+          "value": "PC: Did Western Publishing not really think that comic books were that significant? Did they have a fairly low opinion of them?",
+          "bbox": [
+            {
+              "h": 24.842927143673755,
+              "w": 276.3346207602897,
+              "x": 456.17833800971806,
+              "y": 319.8225756573934,
+              "confidence": 0.84,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I don't understand what their attitude was. What's always puzzled me is whether they were impressed by their circulation figures at all. Sometimes it seemed to me that they didn't have any idea about what they wanted to do. I think they were just playing it by ear as they went along, a whole new experience to Western Publishing Company. Comics and the success of them, and so on, they just played it by ear and tried to play it safe. I don't think at any time they had much respect for comic books. That is, they didn't look on them with the favor they looked on the Golden Books and stuff, which they considered as being literature.",
+          "value": "CB: I don't understand what their attitude was. What's always puzzled me is whether they were impressed by their circulation figures at all. Sometimes it seemed to me that they didn't have any idea about what they wanted to do. I think they were just playing it by ear as they went along, a whole new experience to Western Publishing Company. Comics and the success of them, and so on, they just played it by ear and tried to play it safe. I don't think at any time they had much respect for comic books. That is, they didn't look on them with the favor they looked on the Golden Books and stuff, which they considered as being literature.",
+          "bbox": [
+            {
+              "h": 102.78898013245032,
+              "w": 284.69362500000005,
+              "x": 456.61387500000006,
+              "y": 357.78977483443714,
+              "confidence": 0.88,
+              "end_index": 642,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**PC:** That's strange that they didn't really see any value in things like *Uncle Scrooge*.",
+          "value": "PC: That's strange that they didn't really see any value in things like Uncle Scrooge.",
+          "bbox": [
+            {
+              "h": 25.801312671493935,
+              "w": 283.4143133574695,
+              "x": 458.52342544778975,
+              "y": 468.29319386432934,
+              "confidence": 0.86,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, of course that's just my idea, based on correspondence I'd had with them. And when I'd go in to the office, the attitude of the editors and everyone around there was that comic books were just a fly-by-night thing, might die any minute, just enjoy it while it's here. I kind of had that same idea myself. How many years are comics going to go on? But at the same time I did have an idea that comics would survive and go on to",
+          "value": "CB: Well, of course that's just my idea, based on correspondence I'd had with them. And when I'd go in to the office, the attitude of the editors and everyone around there was that comic books were just a fly-by-night thing, might die any minute, just enjoy it while it's here. I kind of had that same idea myself. How many years are comics going to go on? But at the same time I did have an idea that comics would survive and go on to",
+          "bbox": [
+            {
+              "h": 76.96108802400916,
+              "w": 284.6503467987805,
+              "x": 458.7653125238187,
+              "y": 494.3790438595657,
+              "confidence": 0.87,
+              "end_index": 438,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

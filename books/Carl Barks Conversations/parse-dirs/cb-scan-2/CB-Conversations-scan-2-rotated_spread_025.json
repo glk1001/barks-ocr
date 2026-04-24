@@ -1,0 +1,176 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "68 CARL BARKS: CONVERSATIONS",
+              "value": "68 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.136398395817457,
+                  "w": 120.6865236042302,
+                  "x": 117.90053949123478,
+                  "y": 40.9462017476896,
+                  "confidence": 0.8,
+                  "end_index": 27,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "68 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.14,
+              "w": 120.69,
+              "x": 117.9,
+              "y": 40.95,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "use of going on like this; we might as well get married and pool the money all in one bundle.",
+          "value": "use of going on like this; we might as well get married and pool the money all in one bundle.",
+          "bbox": [
+            {
+              "h": 22.953630338343185,
+              "w": 283.37757196789255,
+              "x": 117.1809893054497,
+              "y": 64.691373259456,
+              "confidence": 0.96,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** How did you two meet originally?",
+          "value": "BARRIER: How did you two meet originally?",
+          "bbox": [
+            {
+              "h": 11.567046357615908,
+              "w": 172.97175000000004,
+              "x": 116.979375,
+              "y": 96.74256953642384,
+              "confidence": 0.87,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** She came over to see me at a time when my second wife and I were in San Jacinto. I was drawing the comic books and a little article had been printed about me in the newspaper down there, about how I was working on duck comic strips, and I guess Garé had heard about it, and she thought maybe I might have some work that she could do to help out. She came over and talked and asked about it. I thought it all over, and I thought, well, do I want to take on the responsibility of an assistant, and how much work could I provide for this girl if I did? And so I handed her a bunch of duck model sheets and told her to practice on those and see what she could do in the way of inking and so on. She tried it out and let me know that she found it much too difficult. So it was years later that I persuaded her to try out on the lettering. She had been working at an aircraft office during the war, doing drafting of these big bombers and so on, so she had gotten to have a wonderful lettering style.",
+          "value": "BARKS: She came over to see me at a time when my second wife and I were in San Jacinto. I was drawing the comic books and a little article had been printed about me in the newspaper down there, about how I was working on duck comic strips, and I guess Garé had heard about it, and she thought maybe I might have some work that she could do to help out. She came over and talked and asked about it. I thought it all over, and I thought, well, do I want to take on the responsibility of an assistant, and how much work could I provide for this girl if I did? And so I handed her a bunch of duck model sheets and told her to practice on those and see what she could do in the way of inking and so on. She tried it out and let me know that she found it much too difficult. So it was years later that I persuaded her to try out on the lettering. She had been working at an aircraft office during the war, doing drafting of these big bombers and so on, so she had gotten to have a wonderful lettering style.",
+          "bbox": [
+            {
+              "h": 180.13875365853664,
+              "w": 285.5404301281441,
+              "x": 115.34767661490093,
+              "y": 110.6136807307546,
+              "confidence": 0.97,
+              "end_index": 1004,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Title graphic: Carl Barks and His Ducks, J. Michael Barrier / 1974, enclosed in a thought bubble.",
+          "md": "![Title graphic: Carl Barks and His Ducks, J. Michael Barrier / 1974, enclosed in a thought bubble.](CB-Conversations-scan-2-rotated_spread_025_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-2-rotated_spread_025_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 186.96816000000004,
+              "w": 304.5144,
+              "x": 449.2008000000001,
+              "y": 108.37008,
+              "confidence": 0.78,
+              "end_index": 122,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "Interview conducted on 5 October 1974 and 6 October 1974 in Atlanta, Georgia. Portions of this interview appeared in altered form in J. Michael Barrier's *Carl Barks and the Art of the Comic Book*. Reprinted by permission of J. Michael Barrier.",
+          "value": "Interview conducted on 5 October 1974 and 6 October 1974 in Atlanta, Georgia. Portions of this interview appeared in altered form in J. Michael Barrier's Carl Barks and the Art of the Comic Book. Reprinted by permission of J. Michael Barrier.",
+          "bbox": [
+            {
+              "h": 75.13905637385673,
+              "w": 158.19730342511443,
+              "x": 488.5637065072409,
+              "y": 317.4652238185976,
+              "confidence": 0.98,
+              "end_index": 243,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** As far as Walt was concerned, were the story conferences really that important? Did he need them?",
+          "value": "BARRIER: As far as Walt was concerned, were the story conferences really that important? Did he need them?",
+          "bbox": [
+            {
+              "h": 22.08254304635767,
+              "w": 283.37924999999996,
+              "x": 464.500125,
+              "y": 403.269298013245,
+              "confidence": 0.93,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** No, he liked to have the group in there—the director and two or three other gag men. Walt might interrupt \\[the story director as he was telling the story] and say, \"Well, wouldn't that gag have been better a little earlier?\" or \"Wouldn't it be better to put that a little later?\" When he first sat down in the chair and looked up at that storyboard, he could grasp that story in about two minutes, before the conference ever started. He knew what that whole story was about. And so when the guy got to talking it over and pointing out what each little sketch meant, Walt already had an idea formed. He would make his suggestions and look around at the other guys, see how many were nodding their heads.",
+          "value": "BARKS: No, he liked to have the group in there—the director and two or three other gag men. Walt might interrupt [the story director as he was telling the story] and say, \"Well, wouldn't that gag have been better a little earlier?\" or \"Wouldn't it be better to put that a little later?\" When he first sat down in the chair and looked up at that storyboard, he could grasp that story in about two minutes, before the conference ever started. He knew what that whole story was about. And so when the guy got to talking it over and pointing out what each little sketch meant, Walt already had an idea formed. He would make his suggestions and look around at the other guys, see how many were nodding their heads.",
+          "bbox": [
+            {
+              "h": 126.44884768211926,
+              "w": 283.905,
+              "x": 465.02587500000004,
+              "y": 429.03226490066226,
+              "confidence": 0.97,
+              "end_index": 713,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "68"
+    }
+  ]
+}

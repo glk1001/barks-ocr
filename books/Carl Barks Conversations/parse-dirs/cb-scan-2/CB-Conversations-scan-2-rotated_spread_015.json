@@ -1,0 +1,349 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 48 CARL BARKS: CONVERSATIONS",
+          "value": "48 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.620322368342702,
+              "w": 101.65887924566503,
+              "x": 127.3803815203411,
+              "y": 36.20939324296161,
+              "confidence": 0.89,
+              "end_index": 29,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "construction.",
+          "value": "construction.",
+          "bbox": [
+            {
+              "h": 9.726834437086097,
+              "w": 50.73487500000002,
+              "x": 106.990125,
+              "y": 72.55692715231788,
+              "confidence": 0.95,
+              "end_index": 12,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** When you first introduced your characters—Scrooge, Gladstone, Gyro Gearloose, the Beagle Boys—you treated them as if they'd always been around. It really fascinated me. Do you have any thoughts about why you did that, because it seems like a pattern?",
+          "value": "DA: When you first introduced your characters—Scrooge, Gladstone, Gyro Gearloose, the Beagle Boys—you treated them as if they'd always been around. It really fascinated me. Do you have any thoughts about why you did that, because it seems like a pattern?",
+          "bbox": [
+            {
+              "h": 50.2522785715987,
+              "w": 275.225303788348,
+              "x": 106.88234274366427,
+              "y": 91.03196393626146,
+              "confidence": 0.87,
+              "end_index": 257,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I guess I did it so as to save myself a heck of a lot of introducing. I would introduce them in such a way that you knew what they were and then let the story develop their character. As you read more of the story you began to understand more about the guy. Instead of trying to do it all in one series of pages, why it was just sort of fed to you a little bit at a time, like vitamin pills.",
+          "value": "CB: I guess I did it so as to save myself a heck of a lot of introducing. I would introduce them in such a way that you knew what they were and then let the story develop their character. As you read more of the story you began to understand more about the guy. Instead of trying to do it all in one series of pages, why it was just sort of fed to you a little bit at a time, like vitamin pills.",
+          "bbox": [
+            {
+              "h": 74.39997732350423,
+              "w": 281.9393106123762,
+              "x": 106.02679682140817,
+              "y": 142.55026518078319,
+              "confidence": 0.86,
+              "end_index": 398,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I think that what has happened now is that over the years all of these stories have been read and the relation of one story to another has become apparent to all of you readers, and you can see the connection of the characters and the build-up of the characters and all. Now when I was working, I was working from the other end of the line. All of these characters were all strangers to me, and each story had to stand by itself; and when I was developing these characters, I remember having thoughts like, \"Should I mention something about a previous story that had taken place?\" And always I discarded that idea because I felt there's nothing worse in picking up a comic book on the stand and starting to read and finding that you are reading something that is continued from some earlier book that you don't have and have no means of getting. I find a sense of frustration in that. I notice that is used a lot in these Marvel comics, but I wouldn't go in for that stuff. I felt that each story had to be a complete story in itself, and whatever introduction of a character that took place, it was just an incidental part of the story. If I used that character again, he was just introduced in the part that he was going to play in that story, not on the strength of what he had been in the past. Take a character like Gyro. He was an inventor, but I didn't go back and rehash a bunch of his earlier inventions in order to show what a great inventor he was. I let him go ahead and show what he could do in this story in which he was acting.",
+          "value": "I think that what has happened now is that over the years all of these stories have been read and the relation of one story to another has become apparent to all of you readers, and you can see the connection of the characters and the build-up of the characters and all. Now when I was working, I was working from the other end of the line. All of these characters were all strangers to me, and each story had to stand by itself; and when I was developing these characters, I remember having thoughts like, \"Should I mention something about a previous story that had taken place?\" And always I discarded that idea because I felt there's nothing worse in picking up a comic book on the stand and starting to read and finding that you are reading something that is continued from some earlier book that you don't have and have no means of getting. I find a sense of frustration in that. I notice that is used a lot in these Marvel comics, but I wouldn't go in for that stuff. I felt that each story had to be a complete story in itself, and whatever introduction of a character that took place, it was just an incidental part of the story. If I used that character again, he was just introduced in the part that he was going to play in that story, not on the strength of what he had been in the past. Take a character like Gyro. He was an inventor, but I didn't go back and rehash a bunch of his earlier inventions in order to show what a great inventor he was. I let him go ahead and show what he could do in this story in which he was acting.",
+          "bbox": [
+            {
+              "h": 115.93335099337747,
+              "w": 282.8535,
+              "x": 100.94400000000002,
+              "y": 324.14018543046365,
+              "confidence": 0.85,
+              "end_index": 1541,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 27.08,
+              "w": 275.49,
+              "x": 102.78,
+              "y": 324.14,
+              "confidence": 1.0,
+              "end_index": 278,
+              "label": "text",
+              "start_index": 71
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** The sense of reality of the stories—I got the feeling that there were events going on between or outside the stories, and every once in a while you get a glimpse into this world. And yet you rarely made a reference between stories. The ducks would never say, \"Remember when we went to get the Golden Helmet.\" But when you were introducing new characters, quite often there would be this indication that things had been going on that the reader hadn't known about. You never thought about that?",
+          "value": "DA: The sense of reality of the stories—I got the feeling that there were events going on between or outside the stories, and every once in a while you get a glimpse into this world. And yet you rarely made a reference between stories. The ducks would never say, \"Remember when we went to get the Golden Helmet.\" But when you were introducing new characters, quite often there would be this indication that things had been going on that the reader hadn't known about. You never thought about that?",
+          "bbox": [
+            {
+              "h": 77.2889006622517,
+              "w": 283.64212499999996,
+              "x": 103.309875,
+              "y": 235.81001324503313,
+              "confidence": 0.84,
+              "end_index": 500,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# DONALD AULT / 1973 49",
+          "value": "DONALD AULT / 1973 49",
+          "bbox": [
+            {
+              "h": 9.961957515362993,
+              "w": 77.67380209127289,
+              "x": 629.7728132383767,
+              "y": 43.08906031047543,
+              "confidence": 0.92,
+              "end_index": 22,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** But when Scrooge had his own comic, you did sort of assume that people knew who he was, since he was the main character?",
+          "value": "DA: But when Scrooge had his own comic, you did sort of assume that people knew who he was, since he was the main character?",
+          "bbox": [
+            {
+              "h": 23.884980388362234,
+              "w": 274.20953084508386,
+              "x": 443.91387683403207,
+              "y": 65.64560152855852,
+              "confidence": 0.78,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, I tried to guard against it, but occasionally it did get to where, carelessly, I just let things go as if whoever was reading it would know who in the hell he was. That was bad.",
+          "value": "CB: Well, I tried to guard against it, but occasionally it did get to where, carelessly, I just let things go as if whoever was reading it would know who in the hell he was. That was bad.",
+          "bbox": [
+            {
+              "h": 34.96,
+              "w": 277.6,
+              "x": 443.47,
+              "y": 91.48,
+              "confidence": 1.0,
+              "end_index": 190,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So when you were doing the Uncle Scrooge comics—am I putting words in your mouth—you were sort of introducing him every time you wrote the comic, as if this were the first time anyone had ever read an Uncle Scrooge comic?",
+          "value": "DA: So when you were doing the Uncle Scrooge comics—am I putting words in your mouth—you were sort of introducing him every time you wrote the comic, as if this were the first time anyone had ever read an Uncle Scrooge comic?",
+          "bbox": [
+            {
+              "h": 49.343062157012206,
+              "w": 277.5232685785062,
+              "x": 443.7775304639863,
+              "y": 136.58009596274775,
+              "confidence": 0.85,
+              "end_index": 228,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** It wasn't exactly that so much as to say that, well, here is a rich guy and he's got such and such an influence over Donald or over the events in this story. It's hard to put it into words. He was not deliberately introduced as a new character each time, but he was treated as an understandable character; that is, you understood that he was a guy with certain characteristics. I felt he should be handled in such a way that the reader didn't need to ever have known about Uncle Scrooge before, that he could still gather enough out of this role that Scrooge was playing that he would still get sense out of it.",
+          "value": "CB: It wasn't exactly that so much as to say that, well, here is a rich guy and he's got such and such an influence over Donald or over the events in this story. It's hard to put it into words. He was not deliberately introduced as a new character each time, but he was treated as an understandable character; that is, you understood that he was a guy with certain characteristics. I felt he should be handled in such a way that the reader didn't need to ever have known about Uncle Scrooge before, that he could still gather enough out of this role that Scrooge was playing that he would still get sense out of it.",
+          "bbox": [
+            {
+              "h": 114.20649185642155,
+              "w": 283.85380749809457,
+              "x": 443.5850326314787,
+              "y": 188.64110118378434,
+              "confidence": 0.88,
+              "end_index": 618,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** Scrooge wasn't ever exactly the same character in any two stories, was he? There were certain aspects of his character that were added just for one particular story, and he would have those characteristics for that story alone. For example, in the Klondike story he had a bad memory, but he had a noticeably bad memory in only one story. In more subtle ways, in other stories, he would have certain characteristics that were totally developed, explored, and then dropped after that one story.",
+          "value": "DA: Scrooge wasn't ever exactly the same character in any two stories, was he? There were certain aspects of his character that were added just for one particular story, and he would have those characteristics for that story alone. For example, in the Klondike story he had a bad memory, but he had a noticeably bad memory in only one story. In more subtle ways, in other stories, he would have certain characteristics that were totally developed, explored, and then dropped after that one story.",
+          "bbox": [
+            {
+              "h": 88.59,
+              "w": 284.96,
+              "x": 442.42,
+              "y": 310.73,
+              "confidence": 1.0,
+              "end_index": 499,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Each was a gimmick, each was the vehicle or the running gag of the story. Like the story in which he was addicted to nutmeg tea. I'm beginning to get some clippings out of some underground comic called *Creem* that implies that he was a drug addict because he was addicted to nutmeg and that nutmeg taken in sufficient quantities can have an effect on your mind.",
+          "value": "CB: Each was a gimmick, each was the vehicle or the running gag of the story. Like the story in which he was addicted to nutmeg tea. I'm beginning to get some clippings out of some underground comic called Creem that implies that he was a drug addict because he was addicted to nutmeg and that nutmeg taken in sufficient quantities can have an effect on your mind.",
+          "bbox": [
+            {
+              "h": 74.39535913205034,
+              "w": 283.9656596084223,
+              "x": 443.1902693168827,
+              "y": 401.76038989138726,
+              "confidence": 0.84,
+              "end_index": 369,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** That's true, supposedly.",
+          "value": "DA: That's true, supposedly.",
+          "bbox": [
+            {
+              "h": 10.25260927152317,
+              "w": 109.356,
+              "x": 443.20725000000004,
+              "y": 485.55305960264906,
+              "confidence": 0.82,
+              "end_index": 31,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** The reason I chose nutmeg was that it was something that grew in the tropics and gave him an excuse to go to the tropics. God, otherwise I could have said, \"codfish tails,\" and sent him to Iceland.",
+          "value": "CB: The reason I chose nutmeg was that it was something that grew in the tropics and gave him an excuse to go to the tropics. God, otherwise I could have said, \"codfish tails,\" and sent him to Iceland.",
+          "bbox": [
+            {
+              "h": 37.06785608803354,
+              "w": 280.9273695931784,
+              "x": 443.2216760670732,
+              "y": 498.96330357278975,
+              "confidence": 0.88,
+              "end_index": 204,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** But his craving for nutmeg tea never appeared again.",
+          "value": "DA: But his craving for nutmeg tea never appeared again.",
+          "bbox": [
+            {
+              "h": 11.304158940397315,
+              "w": 222.918,
+              "x": 443.20725000000004,
+              "y": 544.1769536423842,
+              "confidence": 0.84,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** No, no. It was just a gimmick to make a story. (laughs)",
+          "value": "CB: No, no. It was just a gimmick to make a story. (laughs)",
+          "bbox": [
+            {
+              "h": 11.866996946455808,
+              "w": 227.48059434546497,
+              "x": 443.30172070312506,
+              "y": 557.40035587843,
+              "confidence": 0.85,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "49",
+          "value": "49",
+          "bbox": [
+            {
+              "h": 8.382438533131667,
+              "w": 10.12644790872724,
+              "x": 716.8405897008384,
+              "y": 43.72878176388625,
+              "confidence": 0.87,
+              "end_index": 1,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "49"
+    }
+  ]
+}

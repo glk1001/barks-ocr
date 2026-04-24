@@ -1,0 +1,138 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "page to page to page,\" adding \"invented great, Indiana Jones-type plots.\" In fact, Roy Disney was covertly referring to just the opposite—that Barks's stories had influenced George Lucas and Steven Spielberg's *Indiana Jones* films. The memorable rolling rock sequence near the beginning of *Raiders of the Lost Ark* was directly inspired by Barks's vision (in Uncle Scrooge #7) of a booby trap attached to \"the most valuable single object in the whole world,\" which, when moved, triggered the rolling of an enormous rock that toppled the mythical Seven Cities of Cibola.",
+          "value": "page to page to page,\" adding \"invented great, Indiana Jones-type plots.\" In fact, Roy Disney was covertly referring to just the opposite—that Barks's stories had influenced George Lucas and Steven Spielberg's Indiana Jones films. The memorable rolling rock sequence near the beginning of Raiders of the Lost Ark was directly inspired by Barks's vision (in Uncle Scrooge #7) of a booby trap attached to \"the most valuable single object in the whole world,\" which, when moved, triggered the rolling of an enormous rock that toppled the mythical Seven Cities of Cibola.",
+          "bbox": [
+            {
+              "h": 104.49545951910252,
+              "w": 284.49588644781346,
+              "x": 80.74465719976658,
+              "y": 6.869522235851754,
+              "confidence": 0.77,
+              "end_index": 570,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "This instance of Barks's explicit influence is probably the most well known and best documented, in part because the Hollywood rumor mill latched onto the fact that both Spielberg and Lucas were paying very high prices for Barks oils in the 1980s. The weight of Barks's effect on the world runs much deeper and often along more indirect paths than this. The massive quantity and range of work Barks produced, which has remained in print all over the world for more than fifty years, fundamentally altered millions of people's lives during their formative years and afterwards, teaching people to love to read, pointing them in the direction their lives should take, defining the codes of morality and excellence by which they would lead their lives, even inspiring them to enter specific professions.",
+          "value": "This instance of Barks's explicit influence is probably the most well known and best documented, in part because the Hollywood rumor mill latched onto the fact that both Spielberg and Lucas were paying very high prices for Barks oils in the 1980s. The weight of Barks's effect on the world runs much deeper and often along more indirect paths than this. The massive quantity and range of work Barks produced, which has remained in print all over the world for more than fifty years, fundamentally altered millions of people's lives during their formative years and afterwards, teaching people to love to read, pointing them in the direction their lives should take, defining the codes of morality and excellence by which they would lead their lives, even inspiring them to enter specific professions.",
+          "bbox": [
+            {
+              "h": 104.49545951910252,
+              "w": 284.49588644781346,
+              "x": 80.74465719976658,
+              "y": 6.869522235851754,
+              "confidence": 0.83,
+              "end_index": 799,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Comic panel showing cartoon characters with text \"JUMPIN' JUGGERNAUTS! RUN FOR YOUR LIVES!\" and action scene with brick wall",
+          "value": "Comic panel showing cartoon characters with text \"JUMPIN' JUGGERNAUTS! RUN FOR YOUR LIVES!\" and action scene with brick wall",
+          "bbox": [
+            {
+              "h": 123.03218650438265,
+              "w": 147.374221739234,
+              "x": 40.53995336318599,
+              "y": 258.4293297684832,
+              "confidence": 0.8,
+              "end_index": 123,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Barks himself was never able to acknowledge or understand consciously the full depth, complexity, and influence of his work. At some fundamental level—\"deep beneath the subconscious\" as he once said—he recognized the power of his talent and the gift life had given him in the opportunity to use that talent to its fullest. And he accepted the awesome responsibility that accompanied this gift, bequeathed in part, but only in part, by Disney. Although he could express his vision of life most fully only through the Disney ducks, Barks created many more characters than he inherited, and those he did inherit underwent a genetic transmutation of epic proportions under the skill of his writing and drawing. In his own homespun terms, \"I always tried to give the guy—whether it was the kid at the newsstand or Walt Disney himself—more than he paid for.\"",
+          "value": "Barks himself was never able to acknowledge or understand consciously the full depth, complexity, and influence of his work. At some fundamental level—\"deep beneath the subconscious\" as he once said—he recognized the power of his talent and the gift life had given him in the opportunity to use that talent to its fullest. And he accepted the awesome responsibility that accompanied this gift, bequeathed in part, but only in part, by Disney. Although he could express his vision of life most fully only through the Disney ducks, Barks created many more characters than he inherited, and those he did inherit underwent a genetic transmutation of epic proportions under the skill of his writing and drawing. In his own homespun terms, \"I always tried to give the guy—whether it was the kid at the newsstand or Walt Disney himself—more than he paid for.\"",
+          "bbox": [
+            {
+              "h": 166.33293573414875,
+              "w": 286.05243028296496,
+              "x": 448.7898875047638,
+              "y": 14.826954657429022,
+              "confidence": 0.99,
+              "end_index": 851,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "If young Roy Disney himself had been such an avid reader of Barks's comic books, and if Barks's work was so exceptionally good, why had his name been kept under wraps? The reasons for Barks's anonymity during the years he was producing his comic book work are neither mysterious nor particularly sinister. Barks was by no means alone in his anonymity. As long as Walt Disney was alive, the company saw no reason to \"dilute the sales value\" of the comics by displaying intrusive signatures of unknown artists. Floyd Gottfredson, who drew the Mickey Mouse comic strip for forty-five years (1930–1975) remembered that \"Around the late '40s Walt \\[Disney] himself proposed that we be allowed to sign our names to the strips. The Syndicate threw up their hands in horror. . . . They said, believe it or not, the bulk of our fans still think Walt does those himself. They said that the addition of an unknown name would just dilute the sales value of the thing and, of course, that made sense.\"<sup>3</sup>",
+          "value": "If young Roy Disney himself had been such an avid reader of Barks's comic books, and if Barks's work was so exceptionally good, why had his name been kept under wraps? The reasons for Barks's anonymity during the years he was producing his comic book work are neither mysterious nor particularly sinister. Barks was by no means alone in his anonymity. As long as Walt Disney was alive, the company saw no reason to \"dilute the sales value\" of the comics by displaying intrusive signatures of unknown artists. Floyd Gottfredson, who drew the Mickey Mouse comic strip for forty-five years (1930–1975) remembered that \"Around the late '40s Walt [Disney] himself proposed that we be allowed to sign our names to the strips. The Syndicate threw up their hands in horror. . . . They said, believe it or not, the bulk of our fans still think Walt does those himself. They said that the addition of an unknown name would just dilute the sales value of the thing and, of course, that made sense.\"<sup>3</sup>",
+          "bbox": [
+            {
+              "h": 179.28492311833082,
+              "w": 284.6496455316311,
+              "x": 448.7153528248857,
+              "y": 182.67147983517532,
+              "confidence": 0.99,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Thus it is not surprising that when Don and Maggie Thompson wrote around 1963 requesting permission to reproduce some of Barks's duck art for the Willits interview, the people at Disney provided virtually the same answer. Not only did Disney not give the Thompsons permission to run Barks's art with the interview, they did not approve of the Thompsons' printing the interview at all. The people at Disney insisted that the children of America thought Walt Disney drew whatever his name appeared on, and they did not want to disappoint the children of America.<sup>4</sup>",
+          "value": "Thus it is not surprising that when Don and Maggie Thompson wrote around 1963 requesting permission to reproduce some of Barks's duck art for the Willits interview, the people at Disney provided virtually the same answer. Not only did Disney not give the Thompsons permission to run Barks's art with the interview, they did not approve of the Thompsons' printing the interview at all. The people at Disney insisted that the children of America thought Walt Disney drew whatever his name appeared on, and they did not want to disappoint the children of America.<sup>4</sup>",
+          "bbox": [
+            {
+              "h": 101.96503722370423,
+              "w": 285.49246846417685,
+              "x": 448.36011092320894,
+              "y": 363.79092802019824,
+              "confidence": 0.98,
+              "end_index": 571,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Perhaps surprisingly, Barks agreed with the policy, at least during the years when he was producing his comic book stories: \"As for the company's policy of never telling me about fan letters, I am glad they didn't. Such letters would have cost me time to read and would have gotten me",
+          "value": "Perhaps surprisingly, Barks agreed with the policy, at least during the years when he was producing his comic book stories: \"As for the company's policy of never telling me about fan letters, I am glad they didn't. Such letters would have cost me time to read and would have gotten me",
+          "bbox": [
+            {
+              "h": 51.51264086318602,
+              "w": 282.4549798971038,
+              "x": 448.6062556926449,
+              "y": 467.2743186642531,
+              "confidence": 0.98,
+              "end_index": 283,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

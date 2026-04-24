@@ -1,0 +1,473 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "KLAUS STRZYZ / 1980 111",
+              "value": "KLAUS STRZYZ / 1980 111",
+              "bbox": [
+                {
+                  "h": 10.52,
+                  "w": 100.68,
+                  "x": 644.04,
+                  "y": 39.96,
+                  "confidence": 1.0,
+                  "end_index": 22,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "KLAUS STRZYZ / 1980 111",
+          "bbox": [
+            {
+              "h": 10.52,
+              "w": 100.68,
+              "x": 644.04,
+              "y": 39.96,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# 110 CARL BARKS: CONVERSATIONS",
+          "value": "110 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.199524020460176,
+              "w": 124.82154535060977,
+              "x": 119.18931824028203,
+              "y": 41.77069517971133,
+              "confidence": 0.79,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** What was it like, as you worked all those years at Western—were there restrictions for you, anything like a kind of censorship? It is well known that some individual panels and even whole stories were not published.",
+          "value": "KS: What was it like, as you worked all those years at Western—were there restrictions for you, anything like a kind of censorship? It is well known that some individual panels and even whole stories were not published.",
+          "bbox": [
+            {
+              "h": 47.6352,
+              "w": 281.802,
+              "x": 117.76800000000001,
+              "y": 65.4984,
+              "confidence": 0.91,
+              "end_index": 222,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Now and then they'd return individual panels because they were too violent, or maybe because they weren't entirely understandable. That goes, by the way, for the foreign market as well, where certain American things wouldn't be understood—I'm thinking of the place you pointed out where the turkey was replaced in the German version by a cornucopia. I suppose turkeys weren't well enough known in Germany then. But that was done by you people in Europe \\[WDC 142, MM 8/1953, and TGDD 2]. A typical example of the way Western \"censored\" things here in the U.S.A. was when I called a dog Bolivar, because that was what he'd been called in the old newspaper strips. That seemed obvious and logical to me, but the problem was that down there in South America they've got a national hero who's named Bolivar, too, and when I go and call a dog after their national hero, that's an insult to the \"real\" Bolivar. But those were restrictions that didn't bother me; I just had to do two or three panels over, and that was that. It was different when my imagination got carried away with me and the ducks got too wild or their opponents too nasty. There are two stories that didn't get published for that reason: the \"Christmas Carol\" story from 1945 and the \"Milkman\" story from 1957.",
+          "value": "CB: Now and then they'd return individual panels because they were too violent, or maybe because they weren't entirely understandable. That goes, by the way, for the foreign market as well, where certain American things wouldn't be understood—I'm thinking of the place you pointed out where the turkey was replaced in the German version by a cornucopia. I suppose turkeys weren't well enough known in Germany then. But that was done by you people in Europe [WDC 142, MM 8/1953, and TGDD 2]. A typical example of the way Western \"censored\" things here in the U.S.A. was when I called a dog Bolivar, because that was what he'd been called in the old newspaper strips. That seemed obvious and logical to me, but the problem was that down there in South America they've got a national hero who's named Bolivar, too, and when I go and call a dog after their national hero, that's an insult to the \"real\" Bolivar. But those were restrictions that didn't bother me; I just had to do two or three panels over, and that was that. It was different when my imagination got carried away with me and the ducks got too wild or their opponents too nasty. There are two stories that didn't get published for that reason: the \"Christmas Carol\" story from 1945 and the \"Milkman\" story from 1957.",
+          "bbox": [
+            {
+              "h": 234.60336,
+              "w": 284.3256,
+              "x": 115.24440000000001,
+              "y": 117.30168000000002,
+              "confidence": 0.91,
+              "end_index": 1281,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** How was it when the ducks got sent to foreign countries—did you do \"research\" on the culture or geography of those countries?",
+          "value": "KS: How was it when the ducks got sent to foreign countries—did you do \"research\" on the culture or geography of those countries?",
+          "bbox": [
+            {
+              "h": 25.603920000000016,
+              "w": 283.48440000000005,
+              "x": 112.72080000000001,
+              "y": 359.05032,
+              "confidence": 0.89,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I didn't know much about it and didn't worry a lot about it. I couldn't do \"research\" on a grand scale since I didn't have the necessary books here in the house. The Disney studios, of course, had whole libraries, but I had no access to them, and that's why a number of errors slipped by me, I'm sure.",
+          "value": "CB: I didn't know much about it and didn't worry a lot about it. I couldn't do \"research\" on a grand scale since I didn't have the necessary books here in the house. The Disney studios, of course, had whole libraries, but I had no access to them, and that's why a number of errors slipped by me, I'm sure.",
+          "bbox": [
+            {
+              "h": 61.33031999999997,
+              "w": 283.48440000000005,
+              "x": 111.87960000000001,
+              "y": 385.24968000000007,
+              "confidence": 0.91,
+              "end_index": 308,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**GB:** And besides, they had their offices over there where people watched out that not too many mistakes were made.",
+          "value": "GB: And besides, they had their offices over there where people watched out that not too many mistakes were made.",
+          "bbox": [
+            {
+              "h": 25.00848000000002,
+              "w": 282.64320000000004,
+              "x": 111.03840000000001,
+              "y": 450.7480800000001,
+              "confidence": 0.93,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** So you just sent the ducks off into fantasyland?",
+          "value": "KS: So you just sent the ducks off into fantasyland?",
+          "bbox": [
+            {
+              "h": 12.504239999999982,
+              "w": 198.52320000000003,
+              "x": 110.19720000000001,
+              "y": 484.68816000000004,
+              "confidence": 0.9,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**GB:** Not quite. Carl did look up things occasionally in encyclopedias or the *National Geographic*.",
+          "value": "GB: Not quite. Carl did look up things occasionally in encyclopedias or the National Geographic.",
+          "bbox": [
+            {
+              "h": 60.13944000000001,
+              "w": 283.48440000000005,
+              "x": 109.35600000000001,
+              "y": 497.1924,
+              "confidence": 0.94,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.67,
+              "w": 85.96,
+              "x": 107.78,
+              "y": 508.42,
+              "confidence": 1.0,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 78
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** Did you, in all the years you worked for Western, draw for a regular salary, or were you a freelance associate paid by the page?",
+          "value": "KS: Did you, in all the years you worked for Western, draw for a regular salary, or were you a freelance associate paid by the page?",
+          "bbox": [
+            {
+              "h": 25.734796532012204,
+              "w": 278.7596276081364,
+              "x": 109.27004468368905,
+              "y": 531.3976865139102,
+              "confidence": 0.92,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** That changed, actually. First I was a free associate and was paid by the page. Then there was a time when in California some strange tax laws were passed, and one of them said that I had to pay a sales tax on each finished story. I didn't concern myself about it and thought that Western would take care of it somehow, but they apparently didn't do anything about it, either. Anyway, all of a sudden the taxmen came to Western and said that they were a couple of thousand dollars in the red and would have to pay back-taxes, whereupon Western turned to us artists and demanded money. Boy, that was a lot of money, because we'd been letting the taxes go for years, and now all of a sudden they wanted it from us artists.",
+          "value": "CB: That changed, actually. First I was a free associate and was paid by the page. Then there was a time when in California some strange tax laws were passed, and one of them said that I had to pay a sales tax on each finished story. I didn't concern myself about it and thought that Western would take care of it somehow, but they apparently didn't do anything about it, either. Anyway, all of a sudden the taxmen came to Western and said that they were a couple of thousand dollars in the red and would have to pay back-taxes, whereupon Western turned to us artists and demanded money. Boy, that was a lot of money, because we'd been letting the taxes go for years, and now all of a sudden they wanted it from us artists.",
+          "bbox": [
+            {
+              "h": 127.42416000000003,
+              "w": 285.16679999999997,
+              "x": 462.6600000000001,
+              "y": 64.90296000000001,
+              "confidence": 0.92,
+              "end_index": 726,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**GB:** That was about $5,000!",
+          "value": "GB: That was about $5,000!",
+          "bbox": [
+            {
+              "h": 9.52704,
+              "w": 110.19720000000001,
+              "x": 464.34240000000005,
+              "y": 195.30432000000002,
+              "confidence": 0.86,
+              "end_index": 29,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I don't remember anymore if it was really that much, but I'm sure it was a four-digit number, and I really couldn't pay it. The other artists put up a howl, too, and we tried to reach an agreement with Western. Then Western made a deal with the tax authorities that they would pay 50% of the tax out of their pockets, and we artists didn't have to pay a single dollar. The result of this whole business was that Western, to avoid anything like this in the future, hired those of us artists who did the most work for them permanently with a regular salary, while the others who continued to freelance had in the future to pay the tax themselves.",
+          "value": "CB: I don't remember anymore if it was really that much, but I'm sure it was a four-digit number, and I really couldn't pay it. The other artists put up a howl, too, and we tried to reach an agreement with Western. Then Western made a deal with the tax authorities that they would pay 50% of the tax out of their pockets, and we artists didn't have to pay a single dollar. The result of this whole business was that Western, to avoid anything like this in the future, hired those of us artists who did the most work for them permanently with a regular salary, while the others who continued to freelance had in the future to pay the tax themselves.",
+          "bbox": [
+            {
+              "h": 115.51535999999999,
+              "w": 287.69040000000007,
+              "x": 463.50120000000004,
+              "y": 207.21312,
+              "confidence": 0.91,
+              "end_index": 651,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** So you received a fixed salary?",
+          "value": "KS: So you received a fixed salary?",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 134.59199999999998,
+              "x": 465.18360000000007,
+              "y": 332.25552000000005,
+              "confidence": 0.88,
+              "end_index": 38,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Not fixed in the sense that I got the same amount every month; I was just now permanently employed, though still paid by the page, while receiving all social benefits like health insurance, vacation pay, bonuses when there were any, a pension plan was set up for me, and so on.",
+          "value": "CB: Not fixed in the sense that I got the same amount every month; I was just now permanently employed, though still paid by the page, while receiving all social benefits like health insurance, vacation pay, bonuses when there were any, a pension plan was set up for me, and so on.",
+          "bbox": [
+            {
+              "h": 50.61239999999998,
+              "w": 284.32560000000007,
+              "x": 464.34240000000005,
+              "y": 344.75976,
+              "confidence": 0.92,
+              "end_index": 284,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** Do you remember how much you were paid per page back then?",
+          "value": "KS: Do you remember how much you were paid per page back then?",
+          "bbox": [
+            {
+              "h": 11.56704635761588,
+              "w": 270.76125,
+              "x": 464.500125,
+              "y": 404.0579602649007,
+              "confidence": 0.72,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh yes! In the beginning it was $10 per page, plus $2.50 for every story page.",
+          "value": "CB: Oh yes! In the beginning it was $10 per page, plus $2.50 for every story page.",
+          "bbox": [
+            {
+              "h": 27.87,
+              "w": 276.54,
+              "x": 463.97,
+              "y": 415.63,
+              "confidence": 1.0,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** And that was including everything—sketches, inking, etc.?",
+          "value": "KS: And that was including everything—sketches, inking, etc.?",
+          "bbox": [
+            {
+              "h": 11.908799999999985,
+              "w": 242.2656,
+              "x": 466.0248000000001,
+              "y": 450.7480800000001,
+              "confidence": 0.81,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Sure, including everything. And I even had to buy the drawing paper myself. It wasn't provided.",
+          "value": "CB: Sure, including everything. And I even had to buy the drawing paper myself. It wasn't provided.",
+          "bbox": [
+            {
+              "h": 24.97,
+              "w": 282.85,
+              "x": 465.29,
+              "y": 464.0,
+              "confidence": 1.0,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** That was . . .",
+          "value": "KS: That was . . .",
+          "bbox": [
+            {
+              "h": 8.931600000000003,
+              "w": 65.61359999999996,
+              "x": 466.0248000000001,
+              "y": 499.57416,
+              "confidence": 0.89,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** 1942 . . . no, 1943.",
+          "value": "CB: 1942 . . . no, 1943.",
+          "bbox": [
+            {
+              "h": 8.938172185430403,
+              "w": 92.26912499999997,
+              "x": 466.34025,
+              "y": 512.3675761589404,
+              "confidence": 0.87,
+              "end_index": 27,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** But that increased over the years, surely. What did you receive toward the end of your career?",
+          "value": "KS: But that increased over the years, surely. What did you receive toward the end of your career?",
+          "bbox": [
+            {
+              "h": 23.66,
+              "w": 283.91,
+              "x": 465.29,
+              "y": 531.82,
+              "confidence": 1.0,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** The drawing paper—it was paid for. But wait, of course, there was",
+          "value": "CB: The drawing paper—it was paid for. But wait, of course, there was",
+          "bbox": [
+            {
+              "h": 11.840865605945083,
+              "w": 274.3229357612424,
+              "x": 466.3336380525915,
+              "y": 557.8337390196266,
+              "confidence": 0.91,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\\<page_break />",
+          "value": "<page_break />",
+          "bbox": [
+            {
+              "h": 16.04,
+              "w": 283.91,
+              "x": 113.04,
+              "y": 284.44,
+              "confidence": 0.4,
+              "end_index": 14,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

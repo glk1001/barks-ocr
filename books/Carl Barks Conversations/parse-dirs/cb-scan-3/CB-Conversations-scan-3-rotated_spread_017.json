@@ -1,0 +1,379 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "112 CARL BARKS: CONVERSATIONS",
+              "value": "112 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.629514211366242,
+                  "w": 124.87424056783537,
+                  "x": 119.73345145769818,
+                  "y": 39.72329844583652,
+                  "confidence": 0.79,
+                  "end_index": 28,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "112 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.63,
+              "w": 124.87,
+              "x": 119.73,
+              "y": 39.72,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "more. As far as I can remember, it was $11.50 per story page and $34 for the drawings, naturally again per page.",
+          "value": "more. As far as I can remember, it was $11.50 per story page and $34 for the drawings, naturally again per page.",
+          "bbox": [
+            {
+              "h": 25.060824230659303,
+              "w": 282.5674581388148,
+              "x": 118.83347525247714,
+              "y": 63.51902186904537,
+              "confidence": 0.96,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** And your wife helped you?",
+          "value": "KS: And your wife helped you?",
+          "bbox": [
+            {
+              "h": 11.313360000000003,
+              "w": 120.2916,
+              "x": 118.6092,
+              "y": 97.65216000000001,
+              "confidence": 0.85,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**GB:** Oh, yes. Of course I was never paid separately, but I often helped. I did a lot of the lettering and always inked the solid blacks and occasionally the backgrounds which Carl had sketched in pencil. I could never draw the ducks, though—I don't know why. I had a lot of difficulties with them.",
+          "value": "GB: Oh, yes. Of course I was never paid separately, but I often helped. I did a lot of the lettering and always inked the solid blacks and occasionally the backgrounds which Carl had sketched in pencil. I could never draw the ducks, though—I don't know why. I had a lot of difficulties with them.",
+          "bbox": [
+            {
+              "h": 51.34920984303545,
+              "w": 281.9850808165016,
+              "x": 118.43750976562501,
+              "y": 110.94134185761244,
+              "confidence": 0.94,
+              "end_index": 299,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** Getting back to your method of writing a story, can you describe for us the entire process?",
+          "value": "KS: Getting back to your method of writing a story, can you describe for us the entire process?",
+          "bbox": [
+            {
+              "h": 23.728923632812517,
+              "w": 279.9513935606422,
+              "x": 117.27579811952174,
+              "y": 171.22314447884912,
+              "confidence": 0.93,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I took a piece of paper and drew a few funny situations on it, just ideas that I had—what could I have the ducks do today? When I had enough individual gags, I'd make a short summary and develop the entire story, as a whole. That was one difference between me and the other artists and writers. I took individual gags, tightened them up and built the highpoint of the story out of them, and then, after this highpoint, I went back—how could the ducks get into such a situation, or more concretely: Why did the bull smash the china—how did he get there \\[WDC 182]? I always proceeded very logically, and the individual logical steps were made as funny as possible.",
+          "value": "CB: Well, I took a piece of paper and drew a few funny situations on it, just ideas that I had—what could I have the ducks do today? When I had enough individual gags, I'd make a short summary and develop the entire story, as a whole. That was one difference between me and the other artists and writers. I took individual gags, tightened them up and built the highpoint of the story out of them, and then, after this highpoint, I went back—how could the ducks get into such a situation, or more concretely: Why did the bull smash the china—how did he get there [WDC 182]? I always proceeded very logically, and the individual logical steps were made as funny as possible.",
+          "bbox": [
+            {
+              "h": 117.24778807947018,
+              "w": 284.9565,
+              "x": 114.61350000000002,
+              "y": 208.99549668874175,
+              "confidence": 0.95,
+              "end_index": 676,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** What gave your stories that special quality was the fact that you both wrote the script and did the drawings yourself. Normally, author and artist are two different people.",
+          "value": "KS: What gave your stories that special quality was the fact that you both wrote the script and did the drawings yourself. Normally, author and artist are two different people.",
+          "bbox": [
+            {
+              "h": 36.27846357615897,
+              "w": 283.116375,
+              "x": 114.87637500000001,
+              "y": 337.02166887417224,
+              "confidence": 0.94,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** That's right, but I think that my way—provided one has talent for both—is really the best. It always seemed to me, after I'd finished a story and sent it off, that I was in a complete vacuum and would never have another idea for a story for the rest of my life. And then I began to think: What would I like to draw? In time, individual ideas would finally come. Why shouldn't Donald be on a sailboat, for then I could draw masts, tackle, or high waves that dash against the ship. So, I'd think to myself: How about a story that takes place on the high seas? Then I'd think again: What climax could I build to—why not introduce the Beagle Boys, who fight with the ducks for gold on shipboard \\[US 31]? And from that situation, as I said, I'd then go back to the beginning of the story.",
+          "value": "CB: That's right, but I think that my way—provided one has talent for both—is really the best. It always seemed to me, after I'd finished a story and sent it off, that I was in a complete vacuum and would never have another idea for a story for the rest of my life. And then I began to think: What would I like to draw? In time, individual ideas would finally come. Why shouldn't Donald be on a sailboat, for then I could draw masts, tackle, or high waves that dash against the ship. So, I'd think to myself: How about a story that takes place on the high seas? Then I'd think again: What climax could I build to—why not introduce the Beagle Boys, who fight with the ducks for gold on shipboard [US 31]? And from that situation, as I said, I'd then go back to the beginning of the story.",
+          "bbox": [
+            {
+              "h": 145.41615878906248,
+              "w": 282.09007052686746,
+              "x": 113.5859182188453,
+              "y": 375.8261158536586,
+              "confidence": 0.94,
+              "end_index": 791,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** You invented several new characters, like Uncle Scrooge, the Beagle Boys, and Gyro Gearloose—who else?",
+          "value": "KS: You invented several new characters, like Uncle Scrooge, the Beagle Boys, and Gyro Gearloose—who else?",
+          "bbox": [
+            {
+              "h": 23.962758355564073,
+              "w": 277.0773878977706,
+              "x": 112.82489309022486,
+              "y": 529.7800253477516,
+              "confidence": 0.9,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Gladstone Gander and Magica DeSpell.",
+          "value": "CB: Gladstone Gander and Magica DeSpell.",
+          "bbox": [
+            {
+              "h": 11.987158565167636,
+              "w": 166.97405000119093,
+              "x": 112.68051971584416,
+              "y": 556.2619583889102,
+              "confidence": 0.86,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nKLAUS STRZYZ / 1980 113\n\\</page_header>",
+          "value": "<page_header>\nKLAUS STRZYZ / 1980 113\n</page_header>",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 101.73,
+              "x": 641.42,
+              "y": 41.54,
+              "confidence": 1.0,
+              "end_index": 37,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "113",
+          "value": "113",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "**KS:** Why did you introduce these new figures? Do you think it would still be possible today?",
+          "value": "KS: Why did you introduce these new figures? Do you think it would still be possible today?",
+          "bbox": [
+            {
+              "h": 24.41304000000001,
+              "w": 281.80199999999996,
+              "x": 460.13640000000004,
+              "y": 66.68928000000001,
+              "confidence": 0.89,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** There were definite reasons for it. When I had used Donald and his three nephews several times in a row, for example, I'd always think one ought to do something else, make up new gags, and at some point the idea came to me that one could also introduce new characters for this purpose. I introduced Gladstone Gander, for example, originally as a foil for Donald, a rival, who in his first story \\[WDC 88] concerning a bet, was just as dumb as Donald. He only later developed into such a lucky duck.",
+          "value": "CB: There were definite reasons for it. When I had used Donald and his three nephews several times in a row, for example, I'd always think one ought to do something else, make up new gags, and at some point the idea came to me that one could also introduce new characters for this purpose. I introduced Gladstone Gander, for example, originally as a foil for Donald, a rival, who in his first story [WDC 88] concerning a bet, was just as dumb as Donald. He only later developed into such a lucky duck.",
+          "bbox": [
+            {
+              "h": 88.72056,
+              "w": 283.4844000000001,
+              "x": 460.13640000000004,
+              "y": 92.88864000000001,
+              "confidence": 0.92,
+              "end_index": 505,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** And how about Scrooge? He changed in the course of the years from a hardhearted and unpleasant old miser to a much more lovable character.",
+          "value": "KS: And how about Scrooge? He changed in the course of the years from a hardhearted and unpleasant old miser to a much more lovable character.",
+          "bbox": [
+            {
+              "h": 23.8176,
+              "w": 283.48440000000005,
+              "x": 460.97760000000005,
+              "y": 191.13624000000002,
+              "confidence": 0.87,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** The more I used him, the more strongly I realized that one can't always draw a character in a bad light, any more than one can show the same character as having exclusively good qualities—that just gets boring.",
+          "value": "CB: The more I used him, the more strongly I realized that one can't always draw a character in a bad light, any more than one can show the same character as having exclusively good qualities—that just gets boring.",
+          "bbox": [
+            {
+              "h": 36.69310004525533,
+              "w": 283.15469424066316,
+              "x": 460.81110916063267,
+              "y": 217.72450313214563,
+              "confidence": 0.89,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** But some of the best gags resulted from just this confrontation, in which Scrooge brutally abuses Donald.",
+          "value": "KS: But some of the best gags resulted from just this confrontation, in which Scrooge brutally abuses Donald.",
+          "bbox": [
+            {
+              "h": 24.504886166158546,
+              "w": 271.06069107278967,
+              "x": 461.3213811928354,
+              "y": 264.0398045136243,
+              "confidence": 0.94,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Of course, and he continued to do that later—maybe not quite so brutally, but still. It's just that simple: One can't always show the same thing; the characters have to be brought into new situations, hence the subtle changes in character. By and large, however, Scrooge remained true to himself; that is, he's still rich and greedy and always takes advantage of Donald and the nephews, just in a somewhat less harsh manner. Look, when I introduced Scrooge then, I didn't do it with the intention of assuring him a permanent place. He just appeared and had something to do with Donald because the story required it \\[FC 178]; only after quite a while, after he'd been seen several times, the readers got used to him. I didn't make him up and put him into the book and say, \"Here's a new regular character\"—that didn't happen till later. Scrooge was created more by chance, in contrast to Magica DeSpell, about whom I had more of an idea that here was a new regular figure to be used. Magica was introduced much more intentionally, as a wicked witch who was always after Scrooge's first-earned dime \\[US 36]. I thought at the time: Disney's always had witches who were ugly and repulsive—why shouldn't I draw one that's not ugly, but outright sexy? That's why she's Italian and, of course, very popular with readers in Italy.",
+          "value": "CB: Of course, and he continued to do that later—maybe not quite so brutally, but still. It's just that simple: One can't always show the same thing; the characters have to be brought into new situations, hence the subtle changes in character. By and large, however, Scrooge remained true to himself; that is, he's still rich and greedy and always takes advantage of Donald and the nephews, just in a somewhat less harsh manner. Look, when I introduced Scrooge then, I didn't do it with the intention of assuring him a permanent place. He just appeared and had something to do with Donald because the story required it [FC 178]; only after quite a while, after he'd been seen several times, the readers got used to him. I didn't make him up and put him into the book and say, \"Here's a new regular character\"—that didn't happen till later. Scrooge was created more by chance, in contrast to Magica DeSpell, about whom I had more of an idea that here was a new regular figure to be used. Magica was introduced much more intentionally, as a wicked witch who was always after Scrooge's first-earned dime [US 36]. I thought at the time: Disney's always had witches who were ugly and repulsive—why shouldn't I draw one that's not ugly, but outright sexy? That's why she's Italian and, of course, very popular with readers in Italy.",
+          "bbox": [
+            {
+              "h": 247.50572178687125,
+              "w": 285.12740882240854,
+              "x": 461.4339846608232,
+              "y": 289.99978441549166,
+              "confidence": 0.95,
+              "end_index": 1331,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** Were you ever paid for the creation of new characters?",
+          "value": "KS: Were you ever paid for the creation of new characters?",
+          "bbox": [
+            {
+              "h": 9.72683443708604,
+              "w": 229.22700000000003,
+              "x": 463.44862500000005,
+              "y": 546.8058278145696,
+              "confidence": 0.82,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh no, no! They were my characters, but since they were drawn for",
+          "value": "CB: Oh no, no! They were my characters, but since they were drawn for",
+          "bbox": [
+            {
+              "h": 10.515496688741678,
+              "w": 280.48762500000004,
+              "x": 462.66,
+              "y": 559.1615364238411,
+              "confidence": 0.83,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "112, 113"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "28 CARL BARKS: CONVERSATIONS",
+              "value": "28 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.074589088700462,
+                  "w": 121.52044294850421,
+                  "x": 80.55676143292683,
+                  "y": 38.813488137147495,
+                  "confidence": 0.81,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "28 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.07,
+              "w": 121.52,
+              "x": 80.56,
+              "y": 38.81,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "that read those, he remembers those stories and the way they were presented, not just as a page of type, but as a combination of pictures and words, and it was a new way of presenting ideas and certainly one I think is going to stick around for a long time.",
+          "value": "that read those, he remembers those stories and the way they were presented, not just as a page of type, but as a combination of pictures and words, and it was a new way of presenting ideas and certainly one I think is going to stick around for a long time.",
+          "bbox": [
+            {
+              "h": 51.549068504668455,
+              "w": 283.06081210103855,
+              "x": 79.99105172803927,
+              "y": 62.002535438500395,
+              "confidence": 0.98,
+              "end_index": 256,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** Do you think that people who read comic books as kids and really pored over and studied the pictures, like your Andes old cities—now that they are adults, is their interest in visual and graphic arts being transferred into an interest in art, more than kids who have never read comic books?\n**CB:** I think so. It seems to me that every kid that comes around wants to be a cartoonist! I wasn't aware of that when I was a kid. A few kids would read *Mutt and Jeff* and the comics that were around in newspapers in those days and try to be cartoonists, but it wasn't so universal as it is now. Right now it seems like every boy, and girls too, when they reach the early teens, they decide that they're going to be cartoonists or that they're going to write stories, and comic books have been the influence of that.",
+          "value": "PC: Do you think that people who read comic books as kids and really pored over and studied the pictures, like your Andes old cities—now that they are adults, is their interest in visual and graphic arts being transferred into an interest in art, more than kids who have never read comic books?\nCB: I think so. It seems to me that every kid that comes around wants to be a cartoonist! I wasn't aware of that when I was a kid. A few kids would read Mutt and Jeff and the comics that were around in newspapers in those days and try to be cartoonists, but it wasn't so universal as it is now. Right now it seems like every boy, and girls too, when they reach the early teens, they decide that they're going to be cartoonists or that they're going to write stories, and comic books have been the influence of that.",
+          "bbox": [
+            {
+              "h": 141.7933870355374,
+              "w": 283.82130501798304,
+              "x": 78.57479889064882,
+              "y": 120.71064278534683,
+              "confidence": 0.95,
+              "end_index": 819,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** I think there's something very much to that, I think that part of the thing is that if you're a cartoonist, if you're a freelance writer, you don't work for anybody, you don't have anyone over your shoulder, and you don't have people telling you deadlines. You can be your own boss, an individual. I think that one thing that kids picked up out of your stories is the idea that \"You can do it, you can take a trip, you can do something exciting with your life.\" Like Donald and Scrooge, for example. They weren't anything if they weren't exciting.",
+          "value": "PC: I think there's something very much to that, I think that part of the thing is that if you're a cartoonist, if you're a freelance writer, you don't work for anybody, you don't have anyone over your shoulder, and you don't have people telling you deadlines. You can be your own boss, an individual. I think that one thing that kids picked up out of your stories is the idea that \"You can do it, you can take a trip, you can do something exciting with your life.\" Like Donald and Scrooge, for example. They weren't anything if they weren't exciting.",
+          "bbox": [
+            {
+              "h": 102.41568000000001,
+              "w": 280.11960000000005,
+              "x": 76.5492,
+              "y": 269.73432,
+              "confidence": 0.94,
+              "end_index": 554,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I kind of think so. I did somehow put over that idea that there was a whole world out there. If you just went out and started digging around in it, you could find all kinds of adventures, make money, lose your life. Also the fact that I was living like that; not having adventures, but I was sitting there with no boss looking over my shoulder. I was just writing those stories as they came into my head and just drawing them the way I liked to draw them and turning them in; I wasn't being pressured one way or another. I was leading the kind of a life that a lot of these fellows think they would like to lead now. They would like to be writers like I was, be able to draw like I was drawing, without having any pressure on me, and doing the kind of adventures that came into my head, without any struggle. I can't express it, but I would get sort of, oh, loose at it, and go ahead and come up with anything I could think of. Of course it didn't get nasty or too violent. After working seven years at the Disney studio, I had a pretty good idea of what was usable and what wasn't.",
+          "value": "CB: Well, I kind of think so. I did somehow put over that idea that there was a whole world out there. If you just went out and started digging around in it, you could find all kinds of adventures, make money, lose your life. Also the fact that I was living like that; not having adventures, but I was sitting there with no boss looking over my shoulder. I was just writing those stories as they came into my head and just drawing them the way I liked to draw them and turning them in; I wasn't being pressured one way or another. I was leading the kind of a life that a lot of these fellows think they would like to lead now. They would like to be writers like I was, be able to draw like I was drawing, without having any pressure on me, and doing the kind of adventures that came into my head, without any struggle. I can't express it, but I would get sort of, oh, loose at it, and go ahead and come up with anything I could think of. Of course it didn't get nasty or too violent. After working seven years at the Disney studio, I had a pretty good idea of what was usable and what wasn't.",
+          "bbox": [
+            {
+              "h": 193.51799999999997,
+              "w": 284.3256,
+              "x": 74.0256,
+              "y": 373.34088,
+              "confidence": 0.91,
+              "end_index": 1095,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nPAUL CIOTTI / 1972 29\n\\</page_header>",
+          "value": "<page_header>\nPAUL CIOTTI / 1972 29\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.938172185430467,
+              "w": 90.16612499999997,
+              "x": 623.0137500000001,
+              "y": 45.21663576158941,
+              "confidence": 0.92,
+              "end_index": 51,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**PC:** What are some of the things that weren't usable?",
+          "value": "PC: What are some of the things that weren't usable?",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 207.67125000000004,
+              "x": 431.11500000000007,
+              "y": 69.13939072847683,
+              "confidence": 0.85,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** You couldn't use death—nothing could be killed—and you couldn't use anything suggestive sexually. You couldn't use horror, that is, to just scare people with unexplainable horrifying things. I really had to put a logical explanation on everything I brought into the story. When I went after the abominable snowman, for instance, I made him a most plausible guy. I never explained how he happened to be there, but he had a mother and father. He was not a fearsome, terrible person.",
+          "value": "CB: You couldn't use death—nothing could be killed—and you couldn't use anything suggestive sexually. You couldn't use horror, that is, to just scare people with unexplainable horrifying things. I really had to put a logical explanation on everything I brought into the story. When I went after the abominable snowman, for instance, I made him a most plausible guy. I never explained how he happened to be there, but he had a mother and father. He was not a fearsome, terrible person.",
+          "bbox": [
+            {
+              "h": 86.48996026490069,
+              "w": 284.9565,
+              "x": 429.27487500000007,
+              "y": 81.7579867549669,
+              "confidence": 0.86,
+              "end_index": 487,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**PC:** If you'd had your druthers, if you could do it any way you wanted to, would you have written stories in which maybe somebody died, or with a monster a little more horrible than cute, or something?",
+          "value": "PC: If you'd had your druthers, if you could do it any way you wanted to, would you have written stories in which maybe somebody died, or with a monster a little more horrible than cute, or something?",
+          "bbox": [
+            {
+              "h": 36.80423841059604,
+              "w": 283.116375,
+              "x": 431.11500000000007,
+              "y": 177.18611920529804,
+              "confidence": 0.86,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I don't think so. I probably would've used death for drama, but not in humor stories. If I had been writing stories for something like *Prince Valiant*, for instance—well, they use death in there, they killed off the villains and so on with great gusto. I would've used it whenever it gave a good dramatic effect. But as for horrible monsters, and so on, it would depend on what my story format was, I guess. I might possibly have used things that were terrifying, ugly, and so on, but it wouldn't have been my nature to do it.",
+          "value": "CB: I don't think so. I probably would've used death for drama, but not in humor stories. If I had been writing stories for something like Prince Valiant, for instance—well, they use death in there, they killed off the villains and so on with great gusto. I would've used it whenever it gave a good dramatic effect. But as for horrible monsters, and so on, it would depend on what my story format was, I guess. I might possibly have used things that were terrifying, ugly, and so on, but it wouldn't have been my nature to do it.",
+          "bbox": [
+            {
+              "h": 100.03392,
+              "w": 283.48440000000005,
+              "x": 431.53560000000004,
+              "y": 217.33560000000003,
+              "confidence": 0.87,
+              "end_index": 534,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**PC:** Did you ever want to draw things other than the ducks? Would you have liked, for instance, to draw stories with real people in them and forget about the ducks occasionally?",
+          "value": "PC: Did you ever want to draw things other than the ducks? Would you have liked, for instance, to draw stories with real people in them and forget about the ducks occasionally?",
+          "bbox": [
+            {
+              "h": 36.917280000000005,
+              "w": 280.96079999999995,
+              "x": 431.53560000000004,
+              "y": 327.4920000000001,
+              "confidence": 0.86,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh my, yes, I would've loved to have drawn human characters, but the drawing would've been harder, and it was such a crowded field. I used to think at times, well, I'll build up a lead on these ducks. Take a bunch of sequences of stuff and decide what to do with them. I was always undecided as to whether I was going to make humor stories, dramatic stories or what I was going to do, and I would just get lost in my own puzzlement as to which kind of thing to do. And my time would be used up before I ever got around to drawing anything. It was just a big self-argument going on for months at a time as to what I should put my talents to. . . . Of course if I had managed to get on with Marvel Comics or one of those other publication outfits, why, it might have been a different thing. The thing I used to dread about those kinds of publishers is that they would have to be contacting these fellows who had very strong ideas about standing over the artist. All of those editors were guys just using blue pencils and sending stuff back all the time, and never letting anything through without adding their marksmanship, and I didn't like that kind of",
+          "value": "CB: Oh my, yes, I would've loved to have drawn human characters, but the drawing would've been harder, and it was such a crowded field. I used to think at times, well, I'll build up a lead on these ducks. Take a bunch of sequences of stuff and decide what to do with them. I was always undecided as to whether I was going to make humor stories, dramatic stories or what I was going to do, and I would just get lost in my own puzzlement as to which kind of thing to do. And my time would be used up before I ever got around to drawing anything. It was just a big self-argument going on for months at a time as to what I should put my talents to. . . . Of course if I had managed to get on with Marvel Comics or one of those other publication outfits, why, it might have been a different thing. The thing I used to dread about those kinds of publishers is that they would have to be contacting these fellows who had very strong ideas about standing over the artist. All of those editors were guys just using blue pencils and sending stuff back all the time, and never letting anything through without adding their marksmanship, and I didn't like that kind of",
+          "bbox": [
+            {
+              "h": 206.61768,
+              "w": 284.3256,
+              "x": 431.53560000000004,
+              "y": 365.60016,
+              "confidence": 0.86,
+              "end_index": 1159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "28, 29"
+    }
+  ]
+}

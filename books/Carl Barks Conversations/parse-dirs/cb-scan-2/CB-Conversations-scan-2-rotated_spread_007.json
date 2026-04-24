@@ -1,0 +1,301 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 32 CARL BARKS: CONVERSATIONS",
+          "value": "32 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.976031695407777,
+              "w": 120.59257885146722,
+              "x": 93.1199123237424,
+              "y": 38.12305078660919,
+              "confidence": 0.9,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "become great literature, as a graphic combination of pictures and words, and eventually would become hardcover books in which novels and stories are presented in that form rather than just flipping pages of type. Of course, I still have that kind of a dream in the back of my head. I think that someday we're going to see novels done that way. It might make them too expensive. I just don't know what the cost would be.",
+          "value": "become great literature, as a graphic combination of pictures and words, and eventually would become hardcover books in which novels and stories are presented in that form rather than just flipping pages of type. Of course, I still have that kind of a dream in the back of my head. I think that someday we're going to see novels done that way. It might make them too expensive. I just don't know what the cost would be.",
+          "bbox": [
+            {
+              "h": 78.82715647865857,
+              "w": 283.0129568794065,
+              "x": 91.59907050007146,
+              "y": 61.703656015386834,
+              "confidence": 0.98,
+              "end_index": 418,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** I've often wondered, when you left Disney studios, you went out in the desert there in San Jacinto, and you had a chicken farm?",
+          "value": "PC: I've often wondered, when you left Disney studios, you went out in the desert there in San Jacinto, and you had a chicken farm?",
+          "bbox": [
+            {
+              "h": 25.603919999999988,
+              "w": 278.4372,
+              "x": 90.00840000000001,
+              "y": 145.28736,
+              "confidence": 0.86,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** When I left the studio, I wanted to get out to a drier climate, because air conditioning was knocking the hell out of my sinuses. I was having hay fever and colds all the time. The only way I could think of to make a living was to have chickens or something around. You couldn't plant an orchard and expect to make something right away, and I knew that chicken business should pay. During all those war years, after all, the country is going to need to have eggs. It seemed like a quick way of getting into something I could make a living in. It didn't last very long, because I was doing so many comic books that I didn't have time to take care of the darn chickens. They made me a little profit before I phased them out, but I just found that I couldn't take care of chickens and write and draw. Comics were the ones that paid me more money.",
+          "value": "CB: When I left the studio, I wanted to get out to a drier climate, because air conditioning was knocking the hell out of my sinuses. I was having hay fever and colds all the time. The only way I could think of to make a living was to have chickens or something around. You couldn't plant an orchard and expect to make something right away, and I knew that chicken business should pay. During all those war years, after all, the country is going to need to have eggs. It seemed like a quick way of getting into something I could make a living in. It didn't last very long, because I was doing so many comic books that I didn't have time to take care of the darn chickens. They made me a little profit before I phased them out, but I just found that I couldn't take care of chickens and write and draw. Comics were the ones that paid me more money.",
+          "bbox": [
+            {
+              "h": 154.4089032893484,
+              "w": 284.49536675876533,
+              "x": 88.6674670112424,
+              "y": 170.6168938333651,
+              "confidence": 0.94,
+              "end_index": 850,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** I wonder if the fact that you worked with ducks at the Disney Studio made you choose a chicken farm as opposed to a cattle ranch or some thing like that?",
+          "value": "PC: I wonder if the fact that you worked with ducks at the Disney Studio made you choose a chicken farm as opposed to a cattle ranch or some thing like that?",
+          "bbox": [
+            {
+              "h": 36.32184000000001,
+              "w": 281.802,
+              "x": 86.6436,
+              "y": 330.46920000000006,
+              "confidence": 0.86,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** It was a matter of economics. I mean, I didn't care much for chicken or dairy business, for instance, because that is really tying you down. You've got to milk cows at a certain hour of every day. With chickens you're pretty much tied down too, but with chickens you needn't be there at a specific hour to get the eggs. You can leave them to lie there until the next day and gather them up. It doesn't cost very much to go into raising a few chickens, but going into any other type of farming is very expensive. Actually there was no physical connection between the Ducks and real life, that I could see. I always felt that the Ducks were human. In fact it just seemed to me that I was drawing humans, just with duck faces. When I wrote the story of Uncle Scrooge, the first one, I called him a poor old man, but I should've called him a poor old duck.",
+          "value": "CB: It was a matter of economics. I mean, I didn't care much for chicken or dairy business, for instance, because that is really tying you down. You've got to milk cows at a certain hour of every day. With chickens you're pretty much tied down too, but with chickens you needn't be there at a specific hour to get the eggs. You can leave them to lie there until the next day and gather them up. It doesn't cost very much to go into raising a few chickens, but going into any other type of farming is very expensive. Actually there was no physical connection between the Ducks and real life, that I could see. I always felt that the Ducks were human. In fact it just seemed to me that I was drawing humans, just with duck faces. When I wrote the story of Uncle Scrooge, the first one, I called him a poor old man, but I should've called him a poor old duck.",
+          "bbox": [
+            {
+              "h": 165.53231999999997,
+              "w": 285.1668,
+              "x": 84.12,
+              "y": 368.57736000000006,
+              "confidence": 0.91,
+              "end_index": 859,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**PC:** I see all your back issues of *National Geographic* and *Popular Science*.",
+          "value": "PC: I see all your back issues of National Geographic and Popular Science.",
+          "bbox": [
+            {
+              "h": 27.985680000000002,
+              "w": 281.802,
+              "x": 82.4376,
+              "y": 541.2549600000001,
+              "confidence": 0.6,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yeah, I subscribed to magazines that I thought would do me some",
+          "value": "CB: Yeah, I subscribed to magazines that I thought would do me some",
+          "bbox": [
+            {
+              "h": 27.985680000000002,
+              "w": 281.802,
+              "x": 82.4376,
+              "y": 541.2549600000001,
+              "confidence": 0.58,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "PAUL CIOTTI / 1972 33",
+          "value": "PAUL CIOTTI / 1972 33",
+          "bbox": [
+            {
+              "h": 10.025499752286583,
+              "w": 72.31747351371953,
+              "x": 636.7854847322791,
+              "y": 41.99220881585843,
+              "confidence": 0.92,
+              "end_index": 20,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "good. Those two certainly do give you a broad base of information. This *\\[National Geographic]* covers history and geography and people's customs, while *\\[Popular Science]* covers all the latest developments of human mechanical ability and inventiveness.",
+          "value": "good. Those two certainly do give you a broad base of information. This [National Geographic] covers history and geography and people's customs, while [Popular Science] covers all the latest developments of human mechanical ability and inventiveness.",
+          "bbox": [
+            {
+              "h": 50.01696,
+              "w": 283.4844000000001,
+              "x": 444.15360000000004,
+              "y": 66.68928000000001,
+              "confidence": 0.93,
+              "end_index": 255,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**PC:** I notice when you draw machines in your work, your machines look like they work, they're much more realistic.",
+          "value": "PC: I notice when you draw machines in your work, your machines look like they work, they're much more realistic.",
+          "bbox": [
+            {
+              "h": 25.00847999999999,
+              "w": 279.27840000000003,
+              "x": 444.99480000000005,
+              "y": 125.63784000000001,
+              "confidence": 0.88,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, I understand enough about machinery from having been a farm boy. I knew what machines should look like, and gear teeth and sprocket wheels and things were just part of my growing up. I've worked on printing presses and threshing machines and engines and so on, so I know a little bit about the principles of mechanics. Reading these kinds of things you see them illustrated, and I just naturally picked up on the way of drawing the darn things. Even though they were completely crazy machines, they would look like they'd work.",
+          "value": "CB: Well, I understand enough about machinery from having been a farm boy. I knew what machines should look like, and gear teeth and sprocket wheels and things were just part of my growing up. I've worked on printing presses and threshing machines and engines and so on, so I know a little bit about the principles of mechanics. Reading these kinds of things you see them illustrated, and I just naturally picked up on the way of drawing the darn things. Even though they were completely crazy machines, they would look like they'd work.",
+          "bbox": [
+            {
+              "h": 103.01112,
+              "w": 283.48440000000005,
+              "x": 444.99480000000005,
+              "y": 151.24176000000003,
+              "confidence": 0.91,
+              "end_index": 540,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**PC:** In the story \"The Golden Christmas Tree\" there's a witch on a mountain, stealing Christmas trees all over the world. Donald Duck is going to batter down the door to her house with a log, and she's got the nephews inside—she's going to put them in a kettle or something—and he's running against the door and she changes herself into a machine, some sort of threshing machine, and the log gets chewed up and turned into pulp, and somehow it gets printed into newspaper with the headline \"Witch Foils Housebreaker.\" That was a tremendous double-gag—it wasn't just one gag, it was two gags in one—and it was interesting that you said you've worked on printing presses and threshers.",
+          "value": "PC: In the story \"The Golden Christmas Tree\" there's a witch on a mountain, stealing Christmas trees all over the world. Donald Duck is going to batter down the door to her house with a log, and she's got the nephews inside—she's going to put them in a kettle or something—and he's running against the door and she changes herself into a machine, some sort of threshing machine, and the log gets chewed up and turned into pulp, and somehow it gets printed into newspaper with the headline \"Witch Foils Housebreaker.\" That was a tremendous double-gag—it wasn't just one gag, it was two gags in one—and it was interesting that you said you've worked on printing presses and threshers.",
+          "bbox": [
+            {
+              "h": 129.21048000000002,
+              "w": 285.1668,
+              "x": 446.6772,
+              "y": 263.18448,
+              "confidence": 0.85,
+              "end_index": 685,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I guess I visualized it as sort of a threshing machine that turned wood chips into fibers, and the fibers into paper. I don't know who was in there setting the type but... yeah, I worked hard on those kinds of gags. I would go ahead and spend the time to polish them up, if they didn't look a little funny to me on re-reading. You know, I would always cool them off overnight. The next morning, when I re-read it, if it didn't strike me as being as funny as it should be, I would've worked on it all day long to try to bring it up to what I thought it should be. I don't know, maybe I worked for days on the gag with the newspapers coming out of the threshing machine, but whatever time it took, I spent it on it.",
+          "value": "CB: I guess I visualized it as sort of a threshing machine that turned wood chips into fibers, and the fibers into paper. I don't know who was in there setting the type but... yeah, I worked hard on those kinds of gags. I would go ahead and spend the time to polish them up, if they didn't look a little funny to me on re-reading. You know, I would always cool them off overnight. The next morning, when I re-read it, if it didn't strike me as being as funny as it should be, I would've worked on it all day long to try to bring it up to what I thought it should be. I don't know, maybe I worked for days on the gag with the newspapers coming out of the threshing machine, but whatever time it took, I spent it on it.",
+          "bbox": [
+            {
+              "h": 129.80592000000001,
+              "w": 285.1668,
+              "x": 448.35960000000006,
+              "y": 393.5858400000001,
+              "confidence": 0.89,
+              "end_index": 720,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**PC:** There wasn't really much incentive though, other than your sense of satisfaction, and what should be, what it should look like.",
+          "value": "PC: There wasn't really much incentive though, other than your sense of satisfaction, and what should be, what it should look like.",
+          "bbox": [
+            {
+              "h": 24.338524904725674,
+              "w": 280.9101384575077,
+              "x": 449.45599111566315,
+              "y": 532.547607321837,
+              "confidence": 0.88,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** There was no other incentive. I was just out there to please myself.",
+          "value": "CB: There was no other incentive. I was just out there to please myself.",
+          "bbox": [
+            {
+              "h": 11.304158940397429,
+              "w": 274.704375,
+              "x": 449.779125,
+              "y": 558.8986490066226,
+              "confidence": 0.85,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

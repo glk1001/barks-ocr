@@ -1,0 +1,391 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "78 Carl Barks: Conversations",
+              "value": "78 Carl Barks: Conversations",
+              "bbox": [
+                {
+                  "h": 11.320375041682546,
+                  "w": 120.72389112519055,
+                  "x": 125.43184813262197,
+                  "y": 39.84269332066979,
+                  "confidence": 0.83,
+                  "end_index": 27,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "78 Carl Barks: Conversations",
+          "bbox": [
+            {
+              "h": 11.32,
+              "w": 120.72,
+              "x": 125.43,
+              "y": 39.84,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "BARRIER: Donald seemed much more flexible in your stories than in the animated cartoons.",
+          "value": "BARRIER: Donald seemed much more flexible in your stories than in the animated cartoons.",
+          "bbox": [
+            {
+              "h": 23.106917065429702,
+              "w": 279.40355364543643,
+              "x": 124.51923659608423,
+              "y": 64.02939407333747,
+              "confidence": 0.96,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "BARKS: Well, yes. There, he was typed as a guy who had to be always squawking all the time and making a lot of noise, and he was cranky and belligerent. I got away from it, because that was too hard to follow. To have a character that can only be cranky and belligerent all the time is very difficult. People would get tired of him, I would have thought.",
+          "value": "BARKS: Well, yes. There, he was typed as a guy who had to be always squawking all the time and making a lot of noise, and he was cranky and belligerent. I got away from it, because that was too hard to follow. To have a character that can only be cranky and belligerent all the time is very difficult. People would get tired of him, I would have thought.",
+          "bbox": [
+            {
+              "h": 65.89981922875381,
+              "w": 280.9010094619379,
+              "x": 123.91143833960558,
+              "y": 90.24222660537349,
+              "confidence": 0.98,
+              "end_index": 353,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "BARRIER: So if he'd been belligerent in the comics the way he was in the cartoons, he would have been tiresome.",
+          "value": "BARRIER: So if he'd been belligerent in the comics the way he was in the cartoons, he would have been tiresome.",
+          "bbox": [
+            {
+              "h": 24.207442725800302,
+              "w": 283.3072198456555,
+              "x": 122.97706247618142,
+              "y": 161.11182259670355,
+              "confidence": 0.96,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "BARKS: I believe he would have. As it was, I was able to make him into a sympathetic character at times, and a hero, and a heel. Like I say in that letter, he was just a whole variety of things, and I believe that was one of the reasons that people would pick up the book. He was still Donald, so he was bumbling and stupid whenever he should have been smart.",
+          "value": "BARKS: I believe he would have. As it was, I was able to make him into a sympathetic character at times, and a hero, and a heel. Like I say in that letter, he was just a whole variety of things, and I believe that was one of the reasons that people would pick up the book. He was still Donald, so he was bumbling and stupid whenever he should have been smart.",
+          "bbox": [
+            {
+              "h": 64.25868594940933,
+              "w": 283.95219778367954,
+              "x": 122.25016150795543,
+              "y": 187.2808532226563,
+              "confidence": 0.98,
+              "end_index": 358,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "BARRIER: How did you want your readers to feel about Scrooge, a very greedy character, especially in his early appearances? Were you ever concerned about your readers understanding your own attitude toward the things that your characters did?",
+          "value": "BARRIER: How did you want your readers to feel about Scrooge, a very greedy character, especially in his early appearances? Were you ever concerned about your readers understanding your own attitude toward the things that your characters did?",
+          "bbox": [
+            {
+              "h": 50.23213049256862,
+              "w": 282.88269024509344,
+              "x": 121.20364551376717,
+              "y": 257.99532762004577,
+              "confidence": 0.97,
+              "end_index": 241,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "BARKS: Well, I guess I was. I was careful to present the idea in such a way that it was clear. I would rewrite that dialogue over and over again and stage the gags to try to put over the idea that it was some event taking place in that particular story. And with Uncle Scrooge, his character started out very simple, but as I had to do more and more things with Scrooge, I had to start making his character more flexible, too. But he did always have that one characteristic, his desire for money. That was the first thought that would come into his head whenever he was in a dangerous situation, how to save his money rather than himself.",
+          "value": "BARKS: Well, I guess I was. I was careful to present the idea in such a way that it was clear. I would rewrite that dialogue over and over again and stage the gags to try to put over the idea that it was some event taking place in that particular story. And with Uncle Scrooge, his character started out very simple, but as I had to do more and more things with Scrooge, I had to start making his character more flexible, too. But he did always have that one characteristic, his desire for money. That was the first thought that would come into his head whenever he was in a dangerous situation, how to save his money rather than himself.",
+          "bbox": [
+            {
+              "h": 116.05055963700465,
+              "w": 283.23323616139487,
+              "x": 119.74877915396343,
+              "y": 310.0833505907013,
+              "confidence": 0.98,
+              "end_index": 637,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "BARRIER: It seemed that after a while his greed came to be taken for granted, as sort of a basic premise . . .",
+          "value": "BARRIER: It seemed that after a while his greed came to be taken for granted, as sort of a basic premise . . .",
+          "bbox": [
+            {
+              "h": 24.584024771341475,
+              "w": 269.2585972930164,
+              "x": 118.3819468666635,
+              "y": 432.54179712747725,
+              "confidence": 0.95,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "BARKS: Well, yes.",
+          "value": "BARKS: Well, yes.",
+          "bbox": [
+            {
+              "h": 11.230200643102162,
+              "w": 69.94089166706367,
+              "x": 118.51196930973705,
+              "y": 458.3377558879574,
+              "confidence": 0.88,
+              "end_index": 16,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "BARRIER: . . . without any real moral judgment attached to it.",
+          "value": "BARRIER: . . . without any real moral judgment attached to it.",
+          "bbox": [
+            {
+              "h": 14.2,
+              "w": 240.0,
+              "x": 117.77,
+              "y": 477.4,
+              "confidence": 1.0,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "BARKS: I used to wonder sometimes in the later years whether I was presenting his character clearly enough and not taking too much for granted. I would think to myself, \"Suppose someone has never seen an Uncle Scrooge comic book, has never heard of Uncle Scrooge, could they read this story and know what was motivating this old duck?\" I used to question myself once in a while on that. I don't know whether I was able",
+          "value": "BARKS: I used to wonder sometimes in the later years whether I was presenting his character clearly enough and not taking too much for granted. I would think to myself, \"Suppose someone has never seen an Uncle Scrooge comic book, has never heard of Uncle Scrooge, could they read this story and know what was motivating this old duck?\" I used to question myself once in a while on that. I don't know whether I was able",
+          "bbox": [
+            {
+              "h": 79.392,
+              "w": 281.539125,
+              "x": 115.665,
+              "y": 490.5479205298014,
+              "confidence": 0.81,
+              "end_index": 417,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nJ. MICHAEL BARRIER / 1974 79\n\\</page_header>",
+          "value": "<page_header>\nJ. MICHAEL BARRIER / 1974 79\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.94,
+              "w": 115.66,
+              "x": 628.27,
+              "y": 41.54,
+              "confidence": 1.0,
+              "end_index": 42,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "79",
+          "value": "79",
+          "bbox": [
+            {
+              "h": 8.114144656297642,
+              "w": 10.379354897103687,
+              "x": 734.1590331316693,
+              "y": 41.34407534001049,
+              "confidence": 0.86,
+              "end_index": 1,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "to put over the idea of his character clearly to newcomers. It seems that people who did come in that way as newcomers, they were sufficiently hooked that they started trying to find some of the previous Scrooge stories, so they could build that guy up in their minds, just who he really was.",
+          "value": "to put over the idea of his character clearly to newcomers. It seems that people who did come in that way as newcomers, they were sufficiently hooked that they started trying to find some of the previous Scrooge stories, so they could build that guy up in their minds, just who he really was.",
+          "bbox": [
+            {
+              "h": 50.16334071372428,
+              "w": 283.00497370426825,
+              "x": 462.52159991901686,
+              "y": 64.9594056456031,
+              "confidence": 0.98,
+              "end_index": 291,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "BARRIER: Did you find the Beagle Boys useful as a way of bringing out Scrooge's character?",
+          "value": "BARRIER: Did you find the Beagle Boys useful as a way of bringing out Scrooge's character?",
+          "bbox": [
+            {
+              "h": 24.30972547279916,
+              "w": 275.78953582317075,
+              "x": 463.2864820169589,
+              "y": 123.02621816287159,
+              "confidence": 0.96,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "BARKS: I think what I used the Beagle Boys for more than anything was just to create some action and plot sequences. Their characters were such that they were, like you say, just as greedy for Scrooge's money as he was himself. They were just professional crooks, and he was the hardest character they could find. The hardest job they could find was to bust into his money bin and get all that money. I didn't have them bothering much with banks and grocery stores. It might be puzzling to some people as to how they made a living \\[laughing].",
+          "value": "BARKS: I think what I used the Beagle Boys for more than anything was just to create some action and plot sequences. Their characters were such that they were, like you say, just as greedy for Scrooge's money as he was himself. They were just professional crooks, and he was the hardest character they could find. The hardest job they could find was to bust into his money bin and get all that money. I didn't have them bothering much with banks and grocery stores. It might be puzzling to some people as to how they made a living [laughing].",
+          "bbox": [
+            {
+              "h": 102.1838060141959,
+              "w": 284.2652008622333,
+              "x": 463.3234989043446,
+              "y": 149.1630987304688,
+              "confidence": 0.98,
+              "end_index": 542,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "BARRIER: It always seemed to me that your disapproval of any of your characters, as expressed in your stories, was strongest for Gladstone. It always seemed to come through that you didn't like Gladstone very much.",
+          "value": "BARRIER: It always seemed to me that your disapproval of any of your characters, as expressed in your stories, was strongest for Gladstone. It always seemed to come through that you didn't like Gladstone very much.",
+          "bbox": [
+            {
+              "h": 38.11867549668875,
+              "w": 283.90500000000003,
+              "x": 462.66,
+              "y": 257.89255629139075,
+              "confidence": 0.77,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "BARKS: I don't think anybody likes a character who gets by with so little effort in the world. They like to feel that other people have just as much of a struggle as they themselves have, and Gladstone was a fellow who would just go along, skimming all the cream out of life, without ever sweating for it.",
+          "value": "BARKS: I don't think anybody likes a character who gets by with so little effort in the world. They like to feel that other people have just as much of a struggle as they themselves have, and Gladstone was a fellow who would just go along, skimming all the cream out of life, without ever sweating for it.",
+          "bbox": [
+            {
+              "h": 65.46,
+              "w": 281.54,
+              "x": 463.45,
+              "y": 297.06,
+              "confidence": 1.0,
+              "end_index": 304,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "BARRIER: You seem to have a lot more sympathy for Scrooge, even though he was greedy.",
+          "value": "BARRIER: You seem to have a lot more sympathy for Scrooge, even though he was greedy.",
+          "bbox": [
+            {
+              "h": 22.87120529801325,
+              "w": 262.086375,
+              "x": 465.28875000000005,
+              "y": 369.6197086092715,
+              "confidence": 0.96,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "BARKS: Oh, yeah. Scrooge was just a peculiar old miser. He had lots of money, but he wasn't a criminal about it. I never thought of Scrooge as I would think of some of the millionaires we have around who have made their money by exploiting other people to a certain extent. I purposely tried to make it look as if Uncle Scrooge made most of his money back in the days before the world got so crowded, back in the days when you could go out in the hills and find the gold. He would find an oil field that hadn't been used up. Now, whenever you find an oil field, you've got to cheat all the other owners out of it, so you can have it all.",
+          "value": "BARKS: Oh, yeah. Scrooge was just a peculiar old miser. He had lots of money, but he wasn't a criminal about it. I never thought of Scrooge as I would think of some of the millionaires we have around who have made their money by exploiting other people to a certain extent. I purposely tried to make it look as if Uncle Scrooge made most of his money back in the days before the world got so crowded, back in the days when you could go out in the hills and find the gold. He would find an oil field that hadn't been used up. Now, whenever you find an oil field, you've got to cheat all the other owners out of it, so you can have it all.",
+          "bbox": [
+            {
+              "h": 115.60770964653206,
+              "w": 283.0180974180641,
+              "x": 465.3547692930641,
+              "y": 394.8489162490473,
+              "confidence": 0.98,
+              "end_index": 636,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "78, 79"
+    }
+  ]
+}
