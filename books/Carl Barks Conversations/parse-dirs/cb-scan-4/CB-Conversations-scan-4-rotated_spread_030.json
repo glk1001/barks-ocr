@@ -237,7 +237,7 @@
           "book_side": "left"
         },
         {
-          "caption": "Ideas Flowing Like Waterfalls: Some Reflections from Carl Barks at 98 Donald Ault / 1999",
+          "caption": "",
           "md": "![Ideas Flowing Like Waterfalls: Some Reflections from Carl Barks at 98 Donald Ault / 1999](CB-Conversations-scan-4-rotated_spread_030_page_1_image_1_v2.jpg)",
           "url": "CB-Conversations-scan-4-rotated_spread_030_page_1_image_1_v2.jpg",
           "bbox": [
@@ -369,7 +369,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "215"
+      "printed_page_number": "214, 215"
     }
   ]
 }

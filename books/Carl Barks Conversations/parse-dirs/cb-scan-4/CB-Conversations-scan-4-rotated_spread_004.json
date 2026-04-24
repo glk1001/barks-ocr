@@ -57,7 +57,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: Do you think you could have developed into a good duck comic artist without the years at Disney?**",
+          "md": "**Q:** Do you think you could have developed into a good duck comic artist without the years at Disney?",
           "value": "Q: Do you think you could have developed into a good duck comic artist without the years at Disney?",
           "bbox": [
             {
@@ -93,8 +93,8 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: Did you ever get any feedback from Walt himself for your comic book art or the new characters you created (Scrooge, Gyro, etc.)?**\n**Barks:** No feedback came from Walt on my comic book work. Don't know if he ever read the comic books.",
-          "value": "Q: Did you ever get any feedback from Walt himself for your comic book art or the new characters you created (Scrooge, Gyro, etc.)?\nBarks: No feedback came from Walt on my comic book work. Don't know if he ever read the comic books.",
+          "md": "**Q:** Did you ever get any feedback from Walt himself for your comic book art or the new characters you created (Scrooge, Gyro, etc.)?",
+          "value": "Q: Did you ever get any feedback from Walt himself for your comic book art or the new characters you created (Scrooge, Gyro, etc.)?",
           "bbox": [
             {
               "h": 49.25199248523249,
@@ -111,7 +111,25 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: We have seen a picture where you and Steven Spielberg are together. Some people say that Spielberg got many ideas from your stories. Do you agree?**",
+          "md": "**Barks:** No feedback came from Walt on my comic book work. Don't know if he ever read the comic books.",
+          "value": "Barks: No feedback came from Walt on my comic book work. Don't know if he ever read the comic books.",
+          "bbox": [
+            {
+              "h": 49.25199248523249,
+              "w": 283.3612800292969,
+              "x": 117.61393411180453,
+              "y": 196.02114840891772,
+              "confidence": 0.92,
+              "end_index": 239,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** We have seen a picture where you and Steven Spielberg are together. Some people say that Spielberg got many ideas from your stories. Do you agree?",
           "value": "Q: We have seen a picture where you and Steven Spielberg are together. Some people say that Spielberg got many ideas from your stories. Do you agree?",
           "bbox": [
             {
@@ -147,7 +165,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: In 1957 you made a Donald Duck one-shot called \"Forbidden Valley,\" where the ducks meet with prehistoric dinosaurs. Could this be a model for Spielberg's *Jurassic Park*?**",
+          "md": "**Q:** In 1957 you made a Donald Duck one-shot called \"Forbidden Valley,\" where the ducks meet with prehistoric dinosaurs. Could this be a model for Spielberg's *Jurassic Park*?",
           "value": "Q: In 1957 you made a Donald Duck one-shot called \"Forbidden Valley,\" where the ducks meet with prehistoric dinosaurs. Could this be a model for Spielberg's Jurassic Park?",
           "bbox": [
             {
@@ -183,8 +201,26 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: When did you start getting fan letters? How did your relatives, friends, and neighbors react to your being a duck artist in the forties and fifties?**\n**Barks:** I had been doing the duck comic book for over fifteen years before I received my first fan letter. My relatives and friends were never sure they understood what I did for a living. Even friends who saw me drawing comic book pages and later saw the pages in comic books would ask me how the ducks got from those onto the movie screen. And I'm sure many of them wondered if Walt Disney himself didn't somehow do most of that drawing.",
-          "value": "Q: When did you start getting fan letters? How did your relatives, friends, and neighbors react to your being a duck artist in the forties and fifties?\nBarks: I had been doing the duck comic book for over fifteen years before I received my first fan letter. My relatives and friends were never sure they understood what I did for a living. Even friends who saw me drawing comic book pages and later saw the pages in comic books would ask me how the ducks got from those onto the movie screen. And I'm sure many of them wondered if Walt Disney himself didn't somehow do most of that drawing.",
+          "md": "**Q:** When did you start getting fan letters? How did your relatives, friends, and neighbors react to your being a duck artist in the forties and fifties?",
+          "value": "Q: When did you start getting fan letters? How did your relatives, friends, and neighbors react to your being a duck artist in the forties and fifties?",
+          "bbox": [
+            {
+              "h": 115.090401290968,
+              "w": 284.55813016863567,
+              "x": 114.84211309070123,
+              "y": 451.86186368140255,
+              "confidence": 0.76,
+              "end_index": 597,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Barks:** I had been doing the duck comic book for over fifteen years before I received my first fan letter. My relatives and friends were never sure they understood what I did for a living. Even friends who saw me drawing comic book pages and later saw the pages in comic books would ask me how the ducks got from those onto the movie screen. And I'm sure many of them wondered if Walt Disney himself didn't somehow do most of that drawing.",
+          "value": "Barks: I had been doing the duck comic book for over fifteen years before I received my first fan letter. My relatives and friends were never sure they understood what I did for a living. Even friends who saw me drawing comic book pages and later saw the pages in comic books would ask me how the ducks got from those onto the movie screen. And I'm sure many of them wondered if Walt Disney himself didn't somehow do most of that drawing.",
           "bbox": [
             {
               "h": 115.090401290968,
@@ -219,8 +255,8 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: How and when did you first begin to realize the fact that your duck comics were much better than those of your colleagues in the early days? Were you proud of your work right from the start or only when readers and fans (in Europe, for example) began to praise your stories?**\n**Barks:** I sensed that my stories and drawings were easier reading than the other tales in Western Publishing's Disney books, but I had no idea the general public found them so until the 1950s when the size of the stacks of Donald Duck and Uncle Scrooge comics on the newsstands told me so. Yes. I was proud of my work, from early in my comic book years.",
-          "value": "Q: How and when did you first begin to realize the fact that your duck comics were much better than those of your colleagues in the early days? Were you proud of your work right from the start or only when readers and fans (in Europe, for example) began to praise your stories?\nBarks: I sensed that my stories and drawings were easier reading than the other tales in Western Publishing's Disney books, but I had no idea the general public found them so until the 1950s when the size of the stacks of Donald Duck and Uncle Scrooge comics on the newsstands told me so. Yes. I was proud of my work, from early in my comic book years.",
+          "md": "**Q:** How and when did you first begin to realize the fact that your duck comics were much better than those of your colleagues in the early days? Were you proud of your work right from the start or only when readers and fans (in Europe, for example) began to praise your stories?",
+          "value": "Q: How and when did you first begin to realize the fact that your duck comics were much better than those of your colleagues in the early days? Were you proud of your work right from the start or only when readers and fans (in Europe, for example) began to praise your stories?",
           "bbox": [
             {
               "h": 114.654877471775,
@@ -237,7 +273,25 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Is it really true that most of your comic originals were destroyed by the publisher?**",
+          "md": "**Barks:** I sensed that my stories and drawings were easier reading than the other tales in Western Publishing's Disney books, but I had no idea the general public found them so until the 1950s when the size of the stacks of Donald Duck and Uncle Scrooge comics on the newsstands told me so. Yes. I was proud of my work, from early in my comic book years.",
+          "value": "Barks: I sensed that my stories and drawings were easier reading than the other tales in Western Publishing's Disney books, but I had no idea the general public found them so until the 1950s when the size of the stacks of Donald Duck and Uncle Scrooge comics on the newsstands told me so. Yes. I was proud of my work, from early in my comic book years.",
+          "bbox": [
+            {
+              "h": 114.654877471775,
+              "w": 284.7060975371571,
+              "x": 474.0293938405107,
+              "y": 66.20298443990569,
+              "confidence": 0.82,
+              "end_index": 637,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Is it really true that most of your comic originals were destroyed by the publisher?",
           "value": "Q: Is it really true that most of your comic originals were destroyed by the publisher?",
           "bbox": [
             {
@@ -273,7 +327,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: What was your relationship with Clarence \"Ducky\" Nash? Did you know any of the \"nine old men\" (Ward Kimball, Wollie Reitherman, Milton Kahl, Frank Thomas, etc.) or other legendary supervising animators at Disney?**",
+          "md": "**Q:** What was your relationship with Clarence \"Ducky\" Nash? Did you know any of the \"nine old men\" (Ward Kimball, Wollie Reitherman, Milton Kahl, Frank Thomas, etc.) or other legendary supervising animators at Disney?",
           "value": "Q: What was your relationship with Clarence \"Ducky\" Nash? Did you know any of the \"nine old men\" (Ward Kimball, Wollie Reitherman, Milton Kahl, Frank Thomas, etc.) or other legendary supervising animators at Disney?",
           "bbox": [
             {
@@ -309,7 +363,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: If you hadn't been a Disney artist, what other profession would you have chosen?**",
+          "md": "**Q:** If you hadn't been a Disney artist, what other profession would you have chosen?",
           "value": "Q: If you hadn't been a Disney artist, what other profession would you have chosen?",
           "bbox": [
             {
@@ -345,8 +399,8 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: What is your favorite non-Disney cartoon and comic character(s)? Prince Valiant, Bugs Bunny, Droopy, Snoopy, etc.?**\n**Barks:** I would say Prince Valiant. The drawing was very inspiring.",
-          "value": "Q: What is your favorite non-Disney cartoon and comic character(s)? Prince Valiant, Bugs Bunny, Droopy, Snoopy, etc.?\nBarks: I would say Prince Valiant. The drawing was very inspiring.",
+          "md": "**Q:** What is your favorite non-Disney cartoon and comic character(s)? Prince Valiant, Bugs Bunny, Droopy, Snoopy, etc.?",
+          "value": "Q: What is your favorite non-Disney cartoon and comic character(s)? Prince Valiant, Bugs Bunny, Droopy, Snoopy, etc.?",
           "bbox": [
             {
               "h": 37.205710432545786,
@@ -363,7 +417,25 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Uncle Scrooge is the best known of your characters. What do you think is the secret of his overwhelming popularity?**",
+          "md": "**Barks:** I would say Prince Valiant. The drawing was very inspiring.",
+          "value": "Barks: I would say Prince Valiant. The drawing was very inspiring.",
+          "bbox": [
+            {
+              "h": 37.205710432545786,
+              "w": 267.34382490948934,
+              "x": 477.12308396055647,
+              "y": 498.30977186547267,
+              "confidence": 0.93,
+              "end_index": 191,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Uncle Scrooge is the best known of your characters. What do you think is the secret of his overwhelming popularity?",
           "value": "Q: Uncle Scrooge is the best known of your characters. What do you think is the secret of his overwhelming popularity?",
           "bbox": [
             {

@@ -183,9 +183,9 @@
           "book_side": "left"
         },
         {
-          "caption": "Reluctant Cult Hero: Carl Barks Michael Naiman / 1993 text inside a hand-drawn speech bubble",
-          "md": "![Reluctant Cult Hero: Carl Barks Michael Naiman / 1993 text inside a hand-drawn speech bubble](CB-Conversations-scan-3-rotated_spread_038_page_1_image_1_v2.jpg)",
-          "url": "CB-Conversations-scan-3-rotated_spread_038_page_1_image_1_v2.jpg",
+          "caption": "",
+          "md": "![Reluctant Cult Hero: Carl Barks Michael Naiman / 1993 text inside a hand-drawn speech bubble](CB-Conversations-scan-3-rotated_spread_038_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-3-rotated_spread_038_page_1_image_1_v2.png",
           "bbox": [
             {
               "h": 581.661753218637,
@@ -199,63 +199,6 @@
             }
           ],
           "type": "image",
-          "book_side": "right"
-        },
-        {
-          "level": 1,
-          "md": "# Reluctant Cult Hero:",
-          "value": "Reluctant Cult Hero:",
-          "bbox": [
-            {
-              "h": 15.994702784394065,
-              "w": 160.14737709603656,
-              "x": 531.471338128811,
-              "y": 158.59004186833084,
-              "confidence": 0.77,
-              "end_index": 21,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "heading",
-          "book_side": "right"
-        },
-        {
-          "level": 1,
-          "md": "# Carl Barks",
-          "value": "Carl Barks",
-          "bbox": [
-            {
-              "h": 24.522543435594528,
-              "w": 131.89698025438273,
-              "x": 545.7465826743522,
-              "y": 182.57536819979043,
-              "confidence": 0.78,
-              "end_index": 11,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading",
-          "book_side": "right"
-        },
-        {
-          "level": 2,
-          "md": "## Michael Naiman / 1993",
-          "value": "Michael Naiman / 1993",
-          "bbox": [
-            {
-              "h": 13.670145695364255,
-              "w": 133.54049999999995,
-              "x": 545.465625,
-              "y": 225.2945165562914,
-              "confidence": 0.81,
-              "end_index": 23,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "heading",
           "book_side": "right"
         },
         {

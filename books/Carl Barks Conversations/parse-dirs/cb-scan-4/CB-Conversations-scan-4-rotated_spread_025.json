@@ -247,43 +247,6 @@
           "book_side": "left"
         },
         {
-          "level": 2,
-          "md": "## \"Those Things That Came Along in the 20th Century and Became Obsolete\": Carl Barks on the Past, Present, and Future of Comic Books",
-          "value": "\"Those Things That Came Along in the 20th Century and Became Obsolete\": Carl Barks on the Past, Present, and Future of Comic Books",
-          "bbox": [
-            {
-              "h": 95.69101986754967,
-              "w": 230.54137499999996,
-              "x": 496.83375000000007,
-              "y": 134.59835761589406,
-              "confidence": 0.85,
-              "end_index": 132,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "heading",
-          "book_side": "right"
-        },
-        {
-          "md": "**DONALD AULT / 1999**",
-          "value": "DONALD AULT / 1999",
-          "bbox": [
-            {
-              "h": 14.333146639195899,
-              "w": 116.06111575838416,
-              "x": 553.8773745474467,
-              "y": 238.03188760718373,
-              "confidence": 0.79,
-              "end_index": 21,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "right"
-        },
-        {
           "md": "Unpublished interview conducted 28 April 1999, Grants Pass, Oregon. Portions of this interview appeared in altered form under the title \"From the Duck's Mouth\" in the Carl Barks memorial issue of the *Comics Journal* #227, September 2000: 59–60. Reprinted by permission of Donald Ault.",
           "value": "Unpublished interview conducted 28 April 1999, Grants Pass, Oregon. Portions of this interview appeared in altered form under the title \"From the Duck's Mouth\" in the Carl Barks memorial issue of the Comics Journal #227, September 2000: 59–60. Reprinted by permission of Donald Ault.",
           "bbox": [
@@ -360,7 +323,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "204"
+      "printed_page_number": "204, 205"
     }
   ]
 }

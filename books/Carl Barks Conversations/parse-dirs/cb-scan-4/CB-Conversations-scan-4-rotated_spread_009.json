@@ -129,7 +129,7 @@
           "book_side": "left"
         },
         {
-          "caption": "Carl Barks at Disneyland Paris Sébastien Durand and Didier Ghez / 1994",
+          "caption": "",
           "md": "![Carl Barks at Disneyland Paris Sébastien Durand and Didier Ghez / 1994](CB-Conversations-scan-4-rotated_spread_009_page_1_image_1_v2.jpg)",
           "url": "CB-Conversations-scan-4-rotated_spread_009_page_1_image_1_v2.jpg",
           "bbox": [
@@ -148,8 +148,8 @@
           "book_side": "right"
         },
         {
-          "md": "Conducted at Disneyland Paris, on 7 July 1994 and published as a link to \"The Ultimate Disney History Network\" (",
-          "value": "Conducted at Disneyland Paris, on 7 July 1994 and published as a link to \"The Ultimate Disney History Network\" (",
+          "md": "Conducted at Disneyland Paris, on 7 July 1994 and published as a link to \"The Ultimate Disney History Network\" (http://www.pizarro.net/didier/_private/interviu/barks.html). Reprinted by permission of Sébastien Durand and Didier Ghez.",
+          "value": "Conducted at Disneyland Paris, on 7 July 1994 and published as a link to \"The Ultimate Disney History Network\" (http://www.pizarro.net/didier/_private/interviu/barks.html). Reprinted by permission of Sébastien Durand and Didier Ghez.",
           "bbox": [
             {
               "h": 20.505218543046396,
@@ -158,43 +158,6 @@
               "y": 314.93912582781456,
               "confidence": 0.78,
               "end_index": 111,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "right"
-        },
-        {
-          "md": "http://www.pizarro.net/didier/_private/interviu/barks.html",
-          "text": "http://www.pizarro.net/didier/_private/interviu/barks.html",
-          "url": "http://www.pizarro.net/didier/_private/interviu/barks.html",
-          "bbox": [
-            {
-              "h": 9.463947019867533,
-              "w": 162.45675,
-              "x": 492.62775000000005,
-              "y": 348.5887152317881,
-              "confidence": 0.7,
-              "end_index": 57,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "link",
-          "book_side": "right"
-        },
-        {
-          "md": "). Reprinted by permission of Sébastien Durand and Didier Ghez.",
-          "value": "). Reprinted by permission of Sébastien Durand and Didier Ghez.",
-          "bbox": [
-            {
-              "h": 11.56704635761588,
-              "w": 136.695,
-              "x": 492.36487500000004,
-              "y": 368.5681589403974,
-              "confidence": 0.71,
-              "end_index": 62,
               "label": "text",
               "start_index": 0
             }
@@ -315,7 +278,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "172"
+      "printed_page_number": "172, 173"
     }
   ]
 }
