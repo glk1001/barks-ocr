@@ -23,6 +23,18 @@ text_starts_with = "Introduction ix"
 as = "paragraph"
 
 [[overrides]]
+spread = "spread_023"
+side = "right"
+text_starts_with = "From Comic Art #7"
+as = "blockquote"
+
+[[overrides]]
+spread = "spread_023"
+side = "right"
+text_starts_with = "The original interview for this article was conducted in December 1962"
+as = "blockquote"
+
+[[overrides]]
 spread = "spread_002"
 side = "right"
 text_starts_with = "Carl Barks, Telling It Like It Is"

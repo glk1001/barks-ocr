@@ -57,40 +57,22 @@
           "book_side": "left"
         },
         {
-          "level": 1,
-          "md": "# A Conversation with Carl Barks",
-          "value": "A Conversation with Carl Barks",
+          "caption": "",
+          "md": "![A Conversation with Carl Barks J. MICHAEL BARRIER, GLENN BRAY, BOB FOSTER, AND BILL SPICER / 1971](CB-Conversations-scan-1-rotated_spread_031_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-1-rotated_spread_031_page_1_image_1_v2.png",
           "bbox": [
             {
-              "h": 57.41762798208842,
-              "w": 194.07127562881095,
-              "x": 485.20002853468,
-              "y": 124.05108575647867,
-              "confidence": 0.94,
-              "end_index": 31,
-              "label": "paragraph_title",
+              "h": 185.38361317883007,
+              "w": 302.6112010289634,
+              "x": 445.7191889291159,
+              "y": 103.78921269769437,
+              "confidence": 0.79,
+              "end_index": 95,
+              "label": "image",
               "start_index": 0
             }
           ],
-          "type": "heading",
-          "book_side": "right"
-        },
-        {
-          "md": "**J. MICHAEL BARRIER, GLENN BRAY, BOB FOSTER, AND BILL SPICER / 1971**",
-          "value": "J. MICHAEL BARRIER, GLENN BRAY, BOB FOSTER, AND BILL SPICER / 1971",
-          "bbox": [
-            {
-              "h": 29.73600000000002,
-              "w": 200.20559999999995,
-              "x": 482.00759999999997,
-              "y": 198.63648000000003,
-              "confidence": 0.84,
-              "end_index": 69,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
+          "type": "image",
           "book_side": "right"
         },
         {
