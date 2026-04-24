@@ -205,6 +205,7 @@ def _annotate_blockquotes(page: BookPage) -> None:
 class _Override:
     """One per-item format override loaded from the overrides sidecar."""
 
+    parse_dir: str
     spread: str
     side: str | None
     text_starts_with: str
@@ -228,12 +229,17 @@ def _load_overrides(path: Path | None) -> list[_Override]:
     entries = data.get("overrides") or []
     out: list[_Override] = []
     for i, entry in enumerate(entries):
+        parse_dir = entry.get("parse_dir")
         spread = entry.get("spread")
         text_starts = entry.get("text_starts_with")
         as_val = entry.get("as")
         side = entry.get("side")
-        if not isinstance(spread, str) or not isinstance(text_starts, str):
-            msg = f"overrides[{i}] requires string 'spread' and 'text_starts_with'"
+        if (
+            not isinstance(parse_dir, str)
+            or not isinstance(spread, str)
+            or not isinstance(text_starts, str)
+        ):
+            msg = f"overrides[{i}] requires string 'parse_dir', 'spread', and 'text_starts_with'"
             raise TypeError(msg)
         if as_val not in {"blockquote", "paragraph"}:
             msg = f"overrides[{i}].as must be 'blockquote' or 'paragraph'"
@@ -241,7 +247,15 @@ def _load_overrides(path: Path | None) -> list[_Override]:
         if side is not None and side not in {"left", "right"}:
             msg = f"overrides[{i}].side must be 'left' or 'right' if given"
             raise ValueError(msg)
-        out.append(_Override(spread=spread, side=side, text_starts_with=text_starts, as_=as_val))
+        out.append(
+            _Override(
+                parse_dir=parse_dir,
+                spread=spread,
+                side=side,
+                text_starts_with=text_starts,
+                as_=as_val,
+            )
+        )
     return out
 
 
@@ -371,7 +385,8 @@ def _apply_format_fixes(pages: list[BookPage], overrides: list[_Override]) -> No
     logger.info(f"Applied {applied}/{len(overrides)} override(s).")
     for ov in unmatched:
         logger.warning(
-            f"Override did not match any item: spread={ov.spread!r} side={ov.side!r} "
+            f"Override did not match any item: parse_dir={ov.parse_dir!r} "
+            f"spread={ov.spread!r} side={ov.side!r} "
             f"text_starts_with={ov.text_starts_with!r}"
         )
 
@@ -382,6 +397,8 @@ def _apply_overrides(pages: list[BookPage], overrides: list[_Override]) -> list[
     for ov in overrides:
         matched = False
         for page in pages:
+            if page.parse_dir.name != ov.parse_dir:
+                continue
             if ov.spread not in page.spread_stem:
                 continue
             if ov.side is not None and page.side != ov.side:

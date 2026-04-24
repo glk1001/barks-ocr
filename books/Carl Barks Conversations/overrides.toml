@@ -9,6 +9,7 @@
 # --- Copyright page (spread 002 left) ---
 
 [[overrides]]
+parse_dir = "cb-scan-1"
 spread = "spread_002"
 side = "left"
 text_starts_with = "Library of Congress"
@@ -17,124 +18,135 @@ as = "paragraph"
 # --- Table of Contents (spread 002 right, spread 003 left/right) ---
 
 [[overrides]]
+parse_dir = "cb-scan-1"
 spread = "spread_002"
 side = "right"
 text_starts_with = "Introduction ix"
 as = "paragraph"
 
 [[overrides]]
+parse_dir = "cb-scan-1"
 spread = "spread_023"
 side = "right"
 text_starts_with = "From Comic Art #7"
 as = "blockquote"
 
 [[overrides]]
+parse_dir = "cb-scan-1"
 spread = "spread_023"
 side = "right"
 text_starts_with = "The original interview for this article was conducted in December 1962"
 as = "blockquote"
 
 [[overrides]]
+parse_dir = "cb-scan-1"
 spread = "spread_002"
 side = "right"
 text_starts_with = "Carl Barks, Telling It Like It Is"
 as = "paragraph"
 
 [[overrides]]
+parse_dir = "cb-scan-1"
 spread = "spread_002"
 side = "right"
 text_starts_with = "Carl Barks and His Ducks"
 as = "paragraph"
 
 [[overrides]]
+parse_dir = "cb-scan-1"
 spread = "spread_003"
 side = "left"
 text_starts_with = "Views from Carl Barks"
 as = "paragraph"
 
 [[overrides]]
+parse_dir = "cb-scan-1"
 spread = "spread_003"
 side = "left"
 text_starts_with = "Carl Barks Interview 137"
 as = "paragraph"
 
 [[overrides]]
+parse_dir = "cb-scan-1"
 spread = "spread_003"
 side = "right"
 text_starts_with = "Index 233"
 as = "paragraph"
 
-# --- Interview byline set in ALL CAPS (spread 031) ---
-
-[[overrides]]
-spread = "spread_031"
-side = "right"
-text_starts_with = "J. MICHAEL BARRIER, GLENN BRAY"
-as = "paragraph"
-
 # --- Running-header leaks LlamaParse emitted as type=text ---
 
 [[overrides]]
+parse_dir = "cb-scan-1"
 spread = "spread_020"
 side = "left"
 text_starts_with = "written by"
 as = "paragraph"
 
 [[overrides]]
+parse_dir = "cb-scan-3"
 spread = "spread_001"
 side = "left"
 text_starts_with = "Previously published in a"
 as = "blockquote"
 
 [[overrides]]
+parse_dir = "cb-scan-3"
 spread = "spread_001"
 side = "left"
 text_starts_with = "This interview was recorded"
 as = "blockquote"
 
 [[overrides]]
+parse_dir = "cb-scan-3"
 spread = "spread_006"
 side = "right"
 text_starts_with = "Videotape interview conducted"
 as = "blockquote"
 
 [[overrides]]
+parse_dir = "cb-scan-3"
 spread = "spread_006"
 side = "right"
 text_starts_with = "Portions of this interview"
 as = "blockquote"
 
 [[overrides]]
+parse_dir = "cb-scan-3"
 spread = "spread_015"
 side = "right"
 text_starts_with = "Text © 1980 by Dr. Klaus"
 as = "blockquote"
 
 [[overrides]]
+parse_dir = "cb-scan-3"
 spread = "spread_015"
 side = "right"
 text_starts_with = "Interview conducted on 31"
 as = "blockquote"
 
 [[overrides]]
+parse_dir = "cb-scan-3"
 spread = "spread_022"
 side = "right"
 text_starts_with = "From Uncle Scrooge McDuck"
 as = "blockquote"
 
 [[overrides]]
+parse_dir = "cb-scan-3"
 spread = "spread_022"
 side = "right"
 text_starts_with = "This interview material was recorded between 1975 and 1981"
 as = "blockquote"
 
 [[overrides]]
+parse_dir = "cb-scan-3"
 spread = "spread_027"
 side = "left"
 text_starts_with = "From Mickey Mouse in Color"
 as = "blockquote"
 
 [[overrides]]
+parse_dir = "cb-scan-3"
 spread = "spread_027"
 side = "left"
 text_starts_with = "The first portion of this interview was conducted by Bruce Hamilton"
