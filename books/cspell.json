@@ -1,0 +1,11 @@
+{
+  "version": "0.2",
+  "dictionaryDefinitions": [
+    {
+      "name": "book-build-words",
+      "path": "./cspell-words.txt"
+    }
+  ],
+  "dictionaries": ["book-build-words"]
+}
+

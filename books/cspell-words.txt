@@ -1,0 +1,14 @@
+# cspell word list — project-specific words
+# One word per line. Case-insensitive.
+
+ault
+blockquotes
+ebooklib
+figcaption
+ivxlcdm
+metas
+mybook
+pagebreak
+pdfium
+spellcheckable
+willits

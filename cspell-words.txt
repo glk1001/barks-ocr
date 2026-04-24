@@ -8,6 +8,7 @@ blueviolet
 bocr
 bolditalic
 boxlayout
+bunx
 chkg
 chkr
 coords
