@@ -165,6 +165,24 @@
           "book_side": "right"
         },
         {
+          "md": "<p style=\"text-align:center\">. . . .</p>",
+          "value": "",
+          "bbox": [
+            {
+              "h": 116.20510063297925,
+              "w": 284.804375119093,
+              "x": 464.7207736995046,
+              "y": 68.2057903635909,
+              "confidence": 0.99,
+              "end_index": 650,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
           "md": "The nerve medicine \\[in \"Tralla La,\" *US* #6] was a running gag to help pull parts of the story together. I had learned about running gags before I ever worked at Disney. It was a kind of thread or connecting link in stories, such as Wodehouse's stories, and in the movies: Chaplin and Laurel and Hardy had running gags. I liked those movies more than romantic ones or shoot-'em-up westerns. The running gags were a necessary part of the stories, like a period at the end of a sentence.",
           "value": "The nerve medicine [in \"Tralla La,\" US #6] was a running gag to help pull parts of the story together. I had learned about running gags before I ever worked at Disney. It was a kind of thread or connecting link in stories, such as Wodehouse's stories, and in the movies: Chaplin and Laurel and Hardy had running gags. I liked those movies more than romantic ones or shoot-'em-up westerns. The running gags were a necessary part of the stories, like a period at the end of a sentence.",
           "bbox": [

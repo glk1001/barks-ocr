@@ -57,7 +57,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: What happened in 1950, when you did only three of the *Donald Duck* monthly stories?**",
+          "md": "**Q:** What happened in 1950, when you did only three of the *Donald Duck* monthly stories?",
           "value": "Q: What happened in 1950, when you did only three of the Donald Duck monthly stories?",
           "bbox": [
             {
@@ -93,7 +93,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: Why didn't the 25¢ Dell comics succeed?**",
+          "md": "**Q:** Why didn't the 25¢ Dell comics succeed?",
           "value": "Q: Why didn't the 25¢ Dell comics succeed?",
           "bbox": [
             {
@@ -129,7 +129,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: Why? Have sales dwindled?**",
+          "md": "**Q:** Why? Have sales dwindled?",
           "value": "Q: Why? Have sales dwindled?",
           "bbox": [
             {
@@ -201,7 +201,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Do you feel that comics are on thin ice?**",
+          "md": "**Q:** Do you feel that comics are on thin ice?",
           "value": "Q: Do you feel that comics are on thin ice?",
           "bbox": [
             {
@@ -237,7 +237,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Have you any philosophy of writing and drawing?**",
+          "md": "**Q:** Have you any philosophy of writing and drawing?",
           "value": "Q: Have you any philosophy of writing and drawing?",
           "bbox": [
             {
@@ -273,7 +273,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Have you any favorite comic artist?**",
+          "md": "**Q:** Have you any favorite comic artist?",
           "value": "Q: Have you any favorite comic artist?",
           "bbox": [
             {
@@ -309,7 +309,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Whose work influenced your art and story?**",
+          "md": "**Q:** Whose work influenced your art and story?",
           "value": "Q: Whose work influenced your art and story?",
           "bbox": [
             {
@@ -345,7 +345,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Have you any advice for beginning artists?**",
+          "md": "**Q:** Have you any advice for beginning artists?",
           "value": "Q: Have you any advice for beginning artists?",
           "bbox": [
             {
@@ -381,7 +381,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: What are your retirement plans?**",
+          "md": "**Q:** What are your retirement plans?",
           "value": "Q: What are your retirement plans?",
           "bbox": [
             {

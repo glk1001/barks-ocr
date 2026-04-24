@@ -309,24 +309,6 @@
           ],
           "type": "text",
           "book_side": "right"
-        },
-        {
-          "md": "58–59",
-          "value": "58–59",
-          "bbox": [
-            {
-              "h": 8.40872942728182,
-              "w": 10.301914967606697,
-              "x": 738.3372328982471,
-              "y": 44.43209863876716,
-              "confidence": 0.83,
-              "end_index": 4,
-              "label": "header",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "right"
         }
       ],
       "page_height": 595.44,

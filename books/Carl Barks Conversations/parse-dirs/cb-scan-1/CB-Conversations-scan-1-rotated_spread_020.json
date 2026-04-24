@@ -39,8 +39,8 @@
           "book_side": "left"
         },
         {
-          "md": "ticle written by Magnus Knutsson and Göran Ribe, well-known figures in the Swedish comics society; *Introduzione a Paperino: la fenomenologia sociale nei fumetti di Carl Barks* by P. Marovelli, E. Paolini, and G. Saccomano is published in Italy.",
-          "value": "ticle written by Magnus Knutsson and Göran Ribe, well-known figures in the Swedish comics society; Introduzione a Paperino: la fenomenologia sociale nei fumetti di Carl Barks by P. Marovelli, E. Paolini, and G. Saccomano is published in Italy.",
+          "md": "written by Magnus Knutsson and Göran Ribe, well-known figures in the Swedish comics society; *Introduzione a Paperino: la fenomenologia sociale nei fumetti di Carl Barks* by P. Marovelli, E. Paolini, and G. Saccomano is published in Italy.",
+          "value": "written by Magnus Knutsson and Göran Ribe, well-known figures in the Swedish comics society; Introduzione a Paperino: la fenomenologia sociale nei fumetti di Carl Barks by P. Marovelli, E. Paolini, and G. Saccomano is published in Italy.",
           "bbox": [
             {
               "h": 62.65628371046113,
@@ -183,7 +183,7 @@
             {
               "h": 142.24,
               "w": 237.64,
-              "x": 502.88,
+              "x": 459.00,
               "y": 42.59,
               "confidence": 1.0,
               "end_index": 637,
@@ -229,7 +229,7 @@
             {
               "h": 143.82,
               "w": 238.16,
-              "x": 507.35,
+              "x": 459.00,
               "y": 303.41,
               "confidence": 1.0,
               "end_index": 642,

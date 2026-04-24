@@ -111,8 +111,46 @@
           "book_side": "left"
         },
         {
-          "md": "**DA:** What kind of drawing did you do in the story department?\n**CB:** The drawing in the story department was mostly done with these big blue pencils—you know, a big pencil that has a red half and a blue half. We would sharpen those and use a common note pad, a memo pad that's about five by seven inches. We'd take these blue pencils and make the story sketch and letter down at the bottom of the story sketch what dialogue would be said or \\[what else would be happening on] the sound track. We'd tear those things off when we got them finished and stick them up with pushpins on the storyboard until finally we had a whole story laid out. It was practically in the form of a comic strip—like a comic",
-          "value": "DA: What kind of drawing did you do in the story department?\nCB: The drawing in the story department was mostly done with these big blue pencils—you know, a big pencil that has a red half and a blue half. We would sharpen those and use a common note pad, a memo pad that's about five by seven inches. We'd take these blue pencils and make the story sketch and letter down at the bottom of the story sketch what dialogue would be said or [what else would be happening on] the sound track. We'd tear those things off when we got them finished and stick them up with pushpins on the storyboard until finally we had a whole story laid out. It was practically in the form of a comic strip—like a comic",
+          "md": "**DA:** What kind of drawing did you do in the story department?",
+          "value": "DA: What kind of drawing did you do in the story department?",
+          "bbox": [
+            {
+              "h": 131.59224000000006,
+              "w": 283.48440000000005,
+              "x": 95.05560000000001,
+              "y": 438.83928000000003,
+              "confidence": 0.77,
+              "end_index": 704,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 17.88,
+              "w": 247.37,
+              "x": 93.58,
+              "y": 435.87,
+              "confidence": 1.0,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 122.24,
+              "w": 284.17,
+              "x": 93.58,
+              "y": 435.87,
+              "confidence": 0.77,
+              "end_index": 704,
+              "label": "text",
+              "start_index": 65
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** The drawing in the story department was mostly done with these big blue pencils—you know, a big pencil that has a red half and a blue half. We would sharpen those and use a common note pad, a memo pad that's about five by seven inches. We'd take these blue pencils and make the story sketch and letter down at the bottom of the story sketch what dialogue would be said or \\[what else would be happening on] the sound track. We'd tear those things off when we got them finished and stick them up with pushpins on the storyboard until finally we had a whole story laid out. It was practically in the form of a comic strip—like a comic",
+          "value": "CB: The drawing in the story department was mostly done with these big blue pencils—you know, a big pencil that has a red half and a blue half. We would sharpen those and use a common note pad, a memo pad that's about five by seven inches. We'd take these blue pencils and make the story sketch and letter down at the bottom of the story sketch what dialogue would be said or [what else would be happening on] the sound track. We'd tear those things off when we got them finished and stick them up with pushpins on the storyboard until finally we had a whole story laid out. It was practically in the form of a comic strip—like a comic",
           "bbox": [
             {
               "h": 131.59224000000006,
@@ -191,8 +229,26 @@
           "book_side": "right"
         },
         {
-          "md": "**DA:** Were you put through any kind of course in how to draw Donald Duck, or did you just sort of look at model sheets and improvise?\n**CB:** Well, it depends on what you might call a \"course.\" All of the in-betweener trainees had to take a certain amount of drawing instruction. It seemed to me that very little of that was concerned with the construction of the ducks. However, we were each given a model sheet, and the foremen around there would come around and give us specific instructions on how to draw the little circles and make the actions lines, and so on, on Mickey and Donald and whatever characters we were supposed to work on in the in-between work. They would tell us, \"Whenever you've got the time, just practice on these ducks or on these Mickeys.\" There was no formal judgment ever made on them that I can recall, because those things would come out when the guy got into actual production in-betweening, which was right at the end of the month of training, when a guy had to go through his testing period. And once he got into in-betweening, if he couldn't draw the duck or Mickey, it showed up very quickly in his work, and he was just handed his walking papers and told to get out.",
-          "value": "DA: Were you put through any kind of course in how to draw Donald Duck, or did you just sort of look at model sheets and improvise?\nCB: Well, it depends on what you might call a \"course.\" All of the in-betweener trainees had to take a certain amount of drawing instruction. It seemed to me that very little of that was concerned with the construction of the ducks. However, we were each given a model sheet, and the foremen around there would come around and give us specific instructions on how to draw the little circles and make the actions lines, and so on, on Mickey and Donald and whatever characters we were supposed to work on in the in-between work. They would tell us, \"Whenever you've got the time, just practice on these ducks or on these Mickeys.\" There was no formal judgment ever made on them that I can recall, because those things would come out when the guy got into actual production in-betweening, which was right at the end of the month of training, when a guy had to go through his testing period. And once he got into in-betweening, if he couldn't draw the duck or Mickey, it showed up very quickly in his work, and he was just handed his walking papers and told to get out.",
+          "md": "**DA:** Were you put through any kind of course in how to draw Donald Duck, or did you just sort of look at model sheets and improvise?",
+          "value": "DA: Were you put through any kind of course in how to draw Donald Duck, or did you just sort of look at model sheets and improvise?",
+          "bbox": [
+            {
+              "h": 231.03072000000003,
+              "w": 284.32559999999995,
+              "x": 441.63000000000005,
+              "y": 139.9284,
+              "confidence": 0.83,
+              "end_index": 1204,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, it depends on what you might call a \"course.\" All of the in-betweener trainees had to take a certain amount of drawing instruction. It seemed to me that very little of that was concerned with the construction of the ducks. However, we were each given a model sheet, and the foremen around there would come around and give us specific instructions on how to draw the little circles and make the actions lines, and so on, on Mickey and Donald and whatever characters we were supposed to work on in the in-between work. They would tell us, \"Whenever you've got the time, just practice on these ducks or on these Mickeys.\" There was no formal judgment ever made on them that I can recall, because those things would come out when the guy got into actual production in-betweening, which was right at the end of the month of training, when a guy had to go through his testing period. And once he got into in-betweening, if he couldn't draw the duck or Mickey, it showed up very quickly in his work, and he was just handed his walking papers and told to get out.",
+          "value": "CB: Well, it depends on what you might call a \"course.\" All of the in-betweener trainees had to take a certain amount of drawing instruction. It seemed to me that very little of that was concerned with the construction of the ducks. However, we were each given a model sheet, and the foremen around there would come around and give us specific instructions on how to draw the little circles and make the actions lines, and so on, on Mickey and Donald and whatever characters we were supposed to work on in the in-between work. They would tell us, \"Whenever you've got the time, just practice on these ducks or on these Mickeys.\" There was no formal judgment ever made on them that I can recall, because those things would come out when the guy got into actual production in-betweening, which was right at the end of the month of training, when a guy had to go through his testing period. And once he got into in-betweening, if he couldn't draw the duck or Mickey, it showed up very quickly in his work, and he was just handed his walking papers and told to get out.",
           "bbox": [
             {
               "h": 231.03072000000003,

@@ -193,8 +193,26 @@
           "book_side": "right"
         },
         {
-          "md": "**Q:** How did the role of the nephews change in the Scrooge stories?\n**BARKS:** They had a great respect for Uncle Scrooge because of his age, but they were competing against two adult minds and feeling that it was their duty to rescue Donald and Scrooge from all the damnable things they would get themselves into. It made a role for those kids which they carried out very well. I don't recall any place where I had the kids feel any contempt for Uncle Scrooge, but they did once in a while for Donald. Their treatment of Scrooge was determined by what the story called for.",
-          "value": "Q: How did the role of the nephews change in the Scrooge stories?\nBARKS: They had a great respect for Uncle Scrooge because of his age, but they were competing against two adult minds and feeling that it was their duty to rescue Donald and Scrooge from all the damnable things they would get themselves into. It made a role for those kids which they carried out very well. I don't recall any place where I had the kids feel any contempt for Uncle Scrooge, but they did once in a while for Donald. Their treatment of Scrooge was determined by what the story called for.",
+          "md": "**Q:** How did the role of the nephews change in the Scrooge stories?",
+          "value": "Q: How did the role of the nephews change in the Scrooge stories?",
+          "bbox": [
+            {
+              "h": 103.01112,
+              "w": 283.48440000000005,
+              "x": 465.18360000000007,
+              "y": 120.27888000000002,
+              "confidence": 0.84,
+              "end_index": 575,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** They had a great respect for Uncle Scrooge because of his age, but they were competing against two adult minds and feeling that it was their duty to rescue Donald and Scrooge from all the damnable things they would get themselves into. It made a role for those kids which they carried out very well. I don't recall any place where I had the kids feel any contempt for Uncle Scrooge, but they did once in a while for Donald. Their treatment of Scrooge was determined by what the story called for.",
+          "value": "BARKS: They had a great respect for Uncle Scrooge because of his age, but they were competing against two adult minds and feeling that it was their duty to rescue Donald and Scrooge from all the damnable things they would get themselves into. It made a role for those kids which they carried out very well. I don't recall any place where I had the kids feel any contempt for Uncle Scrooge, but they did once in a while for Donald. Their treatment of Scrooge was determined by what the story called for.",
           "bbox": [
             {
               "h": 103.01112,

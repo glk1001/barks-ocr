@@ -93,8 +93,26 @@
           "book_side": "left"
         },
         {
-          "md": "**CB**: \\[Only] to the extent that I did not show Donald having ducks in his backyard or shooting ducks or anything in which a real live natural duck would be in the same story with him. But as for dogs or wolves or lions or any other animals, he could handle them the same as a human would.\n**FG**: We just never gave any thought to it.",
-          "value": "CB: [Only] to the extent that I did not show Donald having ducks in his backyard or shooting ducks or anything in which a real live natural duck would be in the same story with him. But as for dogs or wolves or lions or any other animals, he could handle them the same as a human would.\nFG: We just never gave any thought to it.",
+          "md": "**CB**: \\[Only] to the extent that I did not show Donald having ducks in his backyard or shooting ducks or anything in which a real live natural duck would be in the same story with him. But as for dogs or wolves or lions or any other animals, he could handle them the same as a human would.",
+          "value": "CB: [Only] to the extent that I did not show Donald having ducks in his backyard or shooting ducks or anything in which a real live natural duck would be in the same story with him. But as for dogs or wolves or lions or any other animals, he could handle them the same as a human would.",
+          "bbox": [
+            {
+              "h": 64.30752000000001,
+              "w": 284.3256,
+              "x": 114.40320000000001,
+              "y": 173.86848,
+              "confidence": 0.9,
+              "end_index": 336,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**FG**: We just never gave any thought to it.",
+          "value": "FG: We just never gave any thought to it.",
           "bbox": [
             {
               "h": 64.30752000000001,
@@ -219,7 +237,7 @@
           "book_side": "left"
         },
         {
-          "caption": "Carl Barks Interview Bruce Hamilton / 1984",
+          "caption": "",
           "md": "![Carl Barks Interview Bruce Hamilton / 1984](CB-Conversations-scan-3-rotated_spread_029_page_1_image_1_v2.jpg)",
           "url": "CB-Conversations-scan-3-rotated_spread_029_page_1_image_1_v2.jpg",
           "bbox": [
@@ -296,7 +314,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "136"
+      "printed_page_number": "136, 137"
     }
   ]
 }

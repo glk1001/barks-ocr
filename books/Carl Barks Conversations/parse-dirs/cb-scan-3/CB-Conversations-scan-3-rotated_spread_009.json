@@ -76,24 +76,6 @@
           "book_side": "left"
         },
         {
-          "md": "<!-- layout: bqeq, ytgt -->",
-          "value": "<!-- layout: bqeq, ytgt -->",
-          "bbox": [
-            {
-              "h": 263.41,
-              "w": 281.28,
-              "x": 105.41,
-              "y": 74.92,
-              "confidence": 0.4,
-              "end_index": 26,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
           "md": "**Q:** Why do you think the square egg story is the one people remember most?",
           "value": "Q: Why do you think the square egg story is the one people remember most?",
           "bbox": [
@@ -130,24 +112,6 @@
           "book_side": "left"
         },
         {
-          "md": "<!-- layout: wtgo, esmf -->",
-          "value": "<!-- layout: wtgo, esmf -->",
-          "bbox": [
-            {
-              "h": 16.04,
-              "w": 268.92,
-              "x": 113.04,
-              "y": 74.92,
-              "confidence": 0.4,
-              "end_index": 26,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
           "md": "**Q:** Where did you get the idea for a square egg?",
           "value": "Q: Where did you get the idea for a square egg?",
           "bbox": [
@@ -166,24 +130,6 @@
           "book_side": "left"
         },
         {
-          "md": "<!-- layout: hszh, esmf -->",
-          "value": "<!-- layout: hszh, esmf -->",
-          "bbox": [
-            {
-              "h": 16.04,
-              "w": 268.92,
-              "x": 113.04,
-              "y": 74.92,
-              "confidence": 0.4,
-              "end_index": 26,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
           "md": "**BARKS:** Oh, square eggs have been a joke for more years than I've been on earth. I remember hearing people talk about getting chickens that would lay square eggs from the time I was a little child.",
           "value": "BARKS: Oh, square eggs have been a joke for more years than I've been on earth. I remember hearing people talk about getting chickens that would lay square eggs from the time I was a little child.",
           "bbox": [
@@ -194,24 +140,6 @@
               "y": 221.35120529801327,
               "confidence": 0.66,
               "end_index": 199,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
-          "md": "<!-- layout: tioj, widn -->",
-          "value": "<!-- layout: tioj, widn -->",
-          "bbox": [
-            {
-              "h": 386.97,
-              "w": 282.06,
-              "x": 99.89,
-              "y": 74.92,
-              "confidence": 0.4,
-              "end_index": 26,
               "label": "text",
               "start_index": 0
             }
@@ -256,24 +184,6 @@
           "book_side": "left"
         },
         {
-          "md": "<!-- layout: amqj, vadg, ckrm -->",
-          "value": "<!-- layout: amqj, vadg, ckrm -->",
-          "bbox": [
-            {
-              "h": 16.04,
-              "w": 268.92,
-              "x": 113.04,
-              "y": 74.92,
-              "confidence": 0.4,
-              "end_index": 32,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
           "md": "**Q:** How did Gyro Gearloose come about?",
           "value": "Q: How did Gyro Gearloose come about?",
           "bbox": [
@@ -310,24 +220,6 @@
           "book_side": "left"
         },
         {
-          "md": "<!-- layout: sabi, qdvy -->",
-          "value": "<!-- layout: sabi, qdvy -->",
-          "bbox": [
-            {
-              "h": 263.41,
-              "w": 281.28,
-              "x": 105.41,
-              "y": 74.92,
-              "confidence": 0.4,
-              "end_index": 26,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
           "md": "the same size as Donald or Uncle Scrooge, so that he could have been handled much easier. He was this big tall gawky chicken, and it was difficult to work him in the same panels with the ducks.",
           "value": "the same size as Donald or Uncle Scrooge, so that he could have been handled much easier. He was this big tall gawky chicken, and it was difficult to work him in the same panels with the ducks.",
           "bbox": [
@@ -346,22 +238,23 @@
           "book_side": "right"
         },
         {
-          "md": "<!-- layout: slxc, wfma -->",
-          "value": "<!-- layout: slxc, wfma -->",
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-3-rotated_spread_009_image_1.jpg",
           "bbox": [
-            {
-              "h": 16.04,
-              "w": 268.92,
-              "x": 113.04,
-              "y": 74.92,
-              "confidence": 0.4,
-              "end_index": 26,
-              "label": "text",
-              "start_index": 0
-            }
+              {
+                "h": 212.4905941834986,
+                "w": 298.7070464462653,
+                "x": 467.65392373285067,
+                "y": 355.7905044112043,
+                "confidence": 0.99,
+                "end_index": 67,
+                "label": "image",
+                "start_index": 0
+              }
           ],
-          "type": "text",
-          "book_side": "left"
+          "type": "image",
+          "book_side": "right"
         },
         {
           "md": "**Q:** Don't you like to make pictures of Rube Goldberg-like inventions yourself?",
@@ -400,24 +293,6 @@
           "book_side": "right"
         },
         {
-          "md": "<!-- layout: zqxt, ymfp -->",
-          "value": "<!-- layout: zqxt, ymfp -->",
-          "bbox": [
-            {
-              "h": 16.04,
-              "w": 268.92,
-              "x": 113.04,
-              "y": 74.92,
-              "confidence": 0.4,
-              "end_index": 26,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
           "md": "**Q:** Care to give us any examples?",
           "value": "Q: Care to give us any examples?",
           "bbox": [
@@ -454,24 +329,6 @@
           "book_side": "right"
         },
         {
-          "md": "<!-- layout: vori, smny -->",
-          "value": "<!-- layout: vori, smny -->",
-          "bbox": [
-            {
-              "h": 386.97,
-              "w": 282.06,
-              "x": 99.89,
-              "y": 74.92,
-              "confidence": 0.4,
-              "end_index": 26,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
           "md": "**Q:** Do you think it would be possible to make three-dimensional models of your characters that would actually look as they do from panel to panel in your comics?",
           "value": "Q: Do you think it would be possible to make three-dimensional models of your characters that would actually look as they do from panel to panel in your comics?",
           "bbox": [
@@ -501,24 +358,6 @@
               "confidence": 0.94,
               "end_index": 503,
               "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "right"
-        },
-        {
-          "md": "Uncle Scrooge speaking to a character about worms that pull in teams",
-          "value": "Uncle Scrooge speaking to a character about worms that pull in teams",
-          "bbox": [
-            {
-              "h": 212.4905941834986,
-              "w": 298.7070464462653,
-              "x": 467.65392373285067,
-              "y": 355.7905044112043,
-              "confidence": 0.99,
-              "end_index": 67,
-              "label": "image",
               "start_index": 0
             }
           ],

@@ -1,0 +1,129 @@
+# Format overrides for the Carl Barks Conversations EPUB build.
+#
+# The bbox heuristic promotes indented text items to <blockquote>. This file
+# demotes the false positives — TOC lines, interview bylines, and running-header
+# leaks — back to ordinary <p>. Each override matches on spread stem (substring)
+# plus the first few characters of the item text. Use ``as = "blockquote"`` to
+# promote an item the heuristic missed.
+
+# --- Copyright page (spread 002 left) ---
+
+[[overrides]]
+spread = "spread_002"
+side = "left"
+text_starts_with = "Library of Congress"
+as = "paragraph"
+
+# --- Table of Contents (spread 002 right, spread 003 left/right) ---
+
+[[overrides]]
+spread = "spread_002"
+side = "right"
+text_starts_with = "Introduction ix"
+as = "paragraph"
+
+[[overrides]]
+spread = "spread_002"
+side = "right"
+text_starts_with = "Carl Barks, Telling It Like It Is"
+as = "paragraph"
+
+[[overrides]]
+spread = "spread_002"
+side = "right"
+text_starts_with = "Carl Barks and His Ducks"
+as = "paragraph"
+
+[[overrides]]
+spread = "spread_003"
+side = "left"
+text_starts_with = "Views from Carl Barks"
+as = "paragraph"
+
+[[overrides]]
+spread = "spread_003"
+side = "left"
+text_starts_with = "Carl Barks Interview 137"
+as = "paragraph"
+
+[[overrides]]
+spread = "spread_003"
+side = "right"
+text_starts_with = "Index 233"
+as = "paragraph"
+
+# --- Interview byline set in ALL CAPS (spread 031) ---
+
+[[overrides]]
+spread = "spread_031"
+side = "right"
+text_starts_with = "J. MICHAEL BARRIER, GLENN BRAY"
+as = "paragraph"
+
+# --- Running-header leaks LlamaParse emitted as type=text ---
+
+[[overrides]]
+spread = "spread_020"
+side = "left"
+text_starts_with = "written by"
+as = "paragraph"
+
+[[overrides]]
+spread = "spread_001"
+side = "left"
+text_starts_with = "Previously published in a"
+as = "blockquote"
+
+[[overrides]]
+spread = "spread_001"
+side = "left"
+text_starts_with = "This interview was recorded"
+as = "blockquote"
+
+[[overrides]]
+spread = "spread_006"
+side = "right"
+text_starts_with = "Videotape interview conducted"
+as = "blockquote"
+
+[[overrides]]
+spread = "spread_006"
+side = "right"
+text_starts_with = "Portions of this interview"
+as = "blockquote"
+
+[[overrides]]
+spread = "spread_015"
+side = "right"
+text_starts_with = "Text © 1980 by Dr. Klaus"
+as = "blockquote"
+
+[[overrides]]
+spread = "spread_015"
+side = "right"
+text_starts_with = "Interview conducted on 31"
+as = "blockquote"
+
+[[overrides]]
+spread = "spread_022"
+side = "right"
+text_starts_with = "From Uncle Scrooge McDuck"
+as = "blockquote"
+
+[[overrides]]
+spread = "spread_022"
+side = "right"
+text_starts_with = "This interview material was recorded between 1975 and 1981"
+as = "blockquote"
+
+[[overrides]]
+spread = "spread_027"
+side = "left"
+text_starts_with = "From Mickey Mouse in Color"
+as = "blockquote"
+
+[[overrides]]
+spread = "spread_027"
+side = "left"
+text_starts_with = "The first portion of this interview was conducted by Bruce Hamilton"
+as = "blockquote"

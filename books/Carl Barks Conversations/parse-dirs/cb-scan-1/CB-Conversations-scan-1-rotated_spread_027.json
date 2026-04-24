@@ -4,8 +4,8 @@
       "items": [
         {
           "level": 1,
-          "md": "# Carl Barks: Conversations",
-          "value": "Carl Barks: Conversations",
+          "md": "10 Carl Barks: Conversations",
+          "value": "10 Carl Barks: Conversations",
           "bbox": [
             {
               "h": 11.898981620379192,
@@ -18,12 +18,12 @@
               "start_index": 0
             }
           ],
-          "type": "heading",
+          "type": "header",
           "book_side": "left"
         },
         {
-          "md": "somebody else. Now that story where Gladstone and Donald were up in the *Bering Sea* and they found that old Viking boat—that story came to me from Dana Coly, who used to be an editor on *Judge* magazine years ago. He worked for Disney, too, for a while. He had this idea for a story with quite a number of gags in it in which Gladstone goes up to the North as the result of some trick that Donald had played on him. So I bought the idea from him and developed it, added a lot more to it. But most of the longer stories originated with me. And 90% of the shorter-length gyro stories, too.",
-          "value": "somebody else. Now that story where Gladstone and Donald were up in the Bering Sea and they found that old Viking boat—that story came to me from Dana Coly, who used to be an editor on Judge magazine years ago. He worked for Disney, too, for a while. He had this idea for a story with quite a number of gags in it in which Gladstone goes up to the North as the result of some trick that Donald had played on him. So I bought the idea from him and developed it, added a lot more to it. But most of the longer stories originated with me. And 90% of the shorter-length gyro stories, too.",
+          "md": "somebody else. Now that story where Gladstone and Donald were up in the *Bering Sea* and they found that old Viking boat—that story came to me from Dana Coly, who used to be an editor on *Judge* magazine years ago. He worked for Disney, too, for a while. He had this idea for a story with quite a number of gags in it in which Gladstone goes up to the North as the result of some trick that Donald had played on him. So I bought the idea from him and developed it, added a lot more to it. But most of the longer stories originated with me. And 90% of the shorter-length Gyro stories, too.",
+          "value": "somebody else. Now that story where Gladstone and Donald were up in the Bering Sea and they found that old Viking boat—that story came to me from Dana Coly, who used to be an editor on Judge magazine years ago. He worked for Disney, too, for a while. He had this idea for a story with quite a number of gags in it in which Gladstone goes up to the North as the result of some trick that Donald had played on him. So I bought the idea from him and developed it, added a lot more to it. But most of the longer stories originated with me. And 90% of the shorter-length Gyro stories, too.",
           "bbox": [
             {
               "h": 114.18624,
@@ -203,8 +203,8 @@
         },
         {
           "level": 1,
-          "md": "# Willits, D. Thompson, and M. Thompson / 1962",
-          "value": "Willits, D. Thompson, and M. Thompson / 1962",
+          "md": "10 Willits, D. Thompson, and M. Thompson / 1962",
+          "value": "10 Willits, D. Thompson, and M. Thompson / 1962",
           "bbox": [
             {
               "h": 11.11554224228278,
@@ -217,7 +217,7 @@
               "start_index": 0
             }
           ],
-          "type": "heading",
+          "type": "header",
           "book_side": "right"
         },
         {
@@ -347,6 +347,25 @@
           "book_side": "right"
         },
         {
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-1-rotated_spread_027_image_1.jpg",
+          "bbox": [
+              {
+                "h": 126.52057471417689,
+                "w": 350.7480315120046,
+                "x": 409.7616657536205,
+                "y": 270.00,
+                "confidence": 0.99,
+                "end_index": 129,
+                "label": "image",
+                "start_index": 0
+              }
+          ],
+          "type": "image",
+          "book_side": "right"
+          },
+          {
           "md": "**Q:** Were your stories usually printed exactly as you sent them to the office?",
           "value": "Q: Were your stories usually printed exactly as you sent them to the office?",
           "bbox": [
@@ -376,24 +395,6 @@
               "confidence": 0.87,
               "end_index": 252,
               "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "right"
-        },
-        {
-          "md": "Comic strip panel showing characters in a spy thriller parody with repeated dialogue about shooting various counter-spy operatives",
-          "value": "Comic strip panel showing characters in a spy thriller parody with repeated dialogue about shooting various counter-spy operatives",
-          "bbox": [
-            {
-              "h": 126.52057471417689,
-              "w": 350.7480315120046,
-              "x": 409.7616657536205,
-              "y": 423.49952555259154,
-              "confidence": 0.99,
-              "end_index": 129,
-              "label": "image",
               "start_index": 0
             }
           ],

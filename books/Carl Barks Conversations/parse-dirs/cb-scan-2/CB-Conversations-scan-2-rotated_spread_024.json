@@ -93,8 +93,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** What would you describe as some of your influences?\n**BARKS:** For instance, my sense of dramatics, and the sense of pathos, and the sense of just slapstick humor. Each of those is a field that is practically isolated by itself, yet with my Disney training, I was able to put all three of those elements into one story, and they'd all fit together naturally.",
-          "value": "BARRIER: What would you describe as some of your influences?\nBARKS: For instance, my sense of dramatics, and the sense of pathos, and the sense of just slapstick humor. Each of those is a field that is practically isolated by itself, yet with my Disney training, I was able to put all three of those elements into one story, and they'd all fit together naturally.",
+          "md": "**BARRIER:** What would you describe as some of your influences?",
+          "value": "BARRIER: What would you describe as some of your influences?",
           "bbox": [
             {
               "h": 64.76897394483613,
@@ -111,8 +111,44 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** What was there about the Disney training that let you do this?\n**BARKS:** I would say the key was you have to have a reason for everything. And if you could find a reason for something, you could drag anything in. I think that what I got out of my Disney training more than anything was to analyze whether anything was necessary to a story. And so, when I felt I needed a little drama in here right now, tears rather than a laugh, why I could bring it in. My training at Disney's had showed me how to bring that in. You have a wipe-over and bring it in with a smash, that's the way to do it. Hit 'em right in the jaw. But it had to be related to what had happened before, or very quickly tied back to what had happened before.",
-          "value": "BARRIER: What was there about the Disney training that let you do this?\nBARKS: I would say the key was you have to have a reason for everything. And if you could find a reason for something, you could drag anything in. I think that what I got out of my Disney training more than anything was to analyze whether anything was necessary to a story. And so, when I felt I needed a little drama in here right now, tears rather than a laugh, why I could bring it in. My training at Disney's had showed me how to bring that in. You have a wipe-over and bring it in with a smash, that's the way to do it. Hit 'em right in the jaw. But it had to be related to what had happened before, or very quickly tied back to what had happened before.",
+          "md": "**BARKS:** For instance, my sense of dramatics, and the sense of pathos, and the sense of just slapstick humor. Each of those is a field that is practically isolated by itself, yet with my Disney training, I was able to put all three of those elements into one story, and they'd all fit together naturally.",
+          "value": "BARKS: For instance, my sense of dramatics, and the sense of pathos, and the sense of just slapstick humor. Each of those is a field that is practically isolated by itself, yet with my Disney training, I was able to put all three of those elements into one story, and they'd all fit together naturally.",
+          "bbox": [
+            {
+              "h": 64.76897394483613,
+              "w": 283.63587620879383,
+              "x": 97.28397404368333,
+              "y": 230.65655607850616,
+              "confidence": 0.98,
+              "end_index": 370,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** What was there about the Disney training that let you do this?",
+          "value": "BARRIER: What was there about the Disney training that let you do this?",
+          "bbox": [
+            {
+              "h": 129.57117050304882,
+              "w": 283.82299557271824,
+              "x": 96.09694790574983,
+              "y": 301.3638860184833,
+              "confidence": 0.99,
+              "end_index": 738,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I would say the key was you have to have a reason for everything. And if you could find a reason for something, you could drag anything in. I think that what I got out of my Disney training more than anything was to analyze whether anything was necessary to a story. And so, when I felt I needed a little drama in here right now, tears rather than a laugh, why I could bring it in. My training at Disney's had showed me how to bring that in. You have a wipe-over and bring it in with a smash, that's the way to do it. Hit 'em right in the jaw. But it had to be related to what had happened before, or very quickly tied back to what had happened before.",
+          "value": "BARKS: I would say the key was you have to have a reason for everything. And if you could find a reason for something, you could drag anything in. I think that what I got out of my Disney training more than anything was to analyze whether anything was necessary to a story. And so, when I felt I needed a little drama in here right now, tears rather than a laugh, why I could bring it in. My training at Disney's had showed me how to bring that in. You have a wipe-over and bring it in with a smash, that's the way to do it. Hit 'em right in the jaw. But it had to be related to what had happened before, or very quickly tied back to what had happened before.",
           "bbox": [
             {
               "h": 129.57117050304882,
@@ -255,8 +291,8 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** It seems like you have a lot of violent action in your stories in the early '40s, but then it tapers off into more psychological comedy.\n**BARKS:** Yes, that's right. What I learned from him that time had something to do with that.",
-          "value": "BARRIER: It seems like you have a lot of violent action in your stories in the early '40s, but then it tapers off into more psychological comedy.\nBARKS: Yes, that's right. What I learned from him that time had something to do with that.",
+          "md": "**BARRIER:** It seems like you have a lot of violent action in your stories in the early '40s, but then it tapers off into more psychological comedy.",
+          "value": "BARRIER: It seems like you have a lot of violent action in your stories in the early '40s, but then it tapers off into more psychological comedy.",
           "bbox": [
             {
               "h": 50.86522160584988,
@@ -273,8 +309,26 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** Getting back to your travel for a minute—you've done so many stories set overseas, but you've never been overseas, have you?\n**BARKS:** Never been.",
-          "value": "BARRIER: Getting back to your travel for a minute—you've done so many stories set overseas, but you've never been overseas, have you?\nBARKS: Never been.",
+          "md": "**BARKS:** Yes, that's right. What I learned from him that time had something to do with that.",
+          "value": "BARKS: Yes, that's right. What I learned from him that time had something to do with that.",
+          "bbox": [
+            {
+              "h": 50.86522160584988,
+              "w": 277.02852460461133,
+              "x": 451.18110830316317,
+              "y": 168.64723961032777,
+              "confidence": 0.98,
+              "end_index": 243,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Getting back to your travel for a minute—you've done so many stories set overseas, but you've never been overseas, have you?",
+          "value": "BARRIER: Getting back to your travel for a minute—you've done so many stories set overseas, but you've never been overseas, have you?",
           "bbox": [
             {
               "h": 37.03580353467988,
@@ -291,8 +345,44 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** Whenever you were doing stories about the ducks in foreign countries, did you ever feel handicapped by not having been there?\n**BARKS:** I think it was the other way around. It was an advantage never having been there. I created a sort of fantasy atmosphere about them that probably would have been a little bit stiff if I had tried to draw from real life. That's my travels there, those *National Geographics*.",
-          "value": "BARRIER: Whenever you were doing stories about the ducks in foreign countries, did you ever feel handicapped by not having been there?\nBARKS: I think it was the other way around. It was an advantage never having been there. I created a sort of fantasy atmosphere about them that probably would have been a little bit stiff if I had tried to draw from real life. That's my travels there, those National Geographics.",
+          "md": "**BARKS:** Never been.",
+          "value": "BARKS: Never been.",
+          "bbox": [
+            {
+              "h": 37.03580353467988,
+              "w": 283.89262764386433,
+              "x": 451.9685311309071,
+              "y": 226.2827653439406,
+              "confidence": 0.97,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Whenever you were doing stories about the ducks in foreign countries, did you ever feel handicapped by not having been there?",
+          "value": "BARRIER: Whenever you were doing stories about the ducks in foreign countries, did you ever feel handicapped by not having been there?",
+          "bbox": [
+            {
+              "h": 76.80444180640244,
+              "w": 284.71230876048025,
+              "x": 452.6401947884909,
+              "y": 271.6358873666159,
+              "confidence": 0.98,
+              "end_index": 423,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I think it was the other way around. It was an advantage never having been there. I created a sort of fantasy atmosphere about them that probably would have been a little bit stiff if I had tried to draw from real life. That's my travels there, those *National Geographics*.",
+          "value": "BARKS: I think it was the other way around. It was an advantage never having been there. I created a sort of fantasy atmosphere about them that probably would have been a little bit stiff if I had tried to draw from real life. That's my travels there, those National Geographics.",
           "bbox": [
             {
               "h": 76.80444180640244,
@@ -345,8 +435,26 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** I was wondering how long you and Garé had been married.\n**BARKS:** Since 1954. I got divorced from my second wife in 1951, December 1951. Garé started doing lettering and a little of my inking in about October of 1952. She kept doing more and more of it, and I was paying her more and more, and finally \\[laughing], we decided, hell, what's the",
-          "value": "BARRIER: I was wondering how long you and Garé had been married.\nBARKS: Since 1954. I got divorced from my second wife in 1951, December 1951. Garé started doing lettering and a little of my inking in about October of 1952. She kept doing more and more of it, and I was paying her more and more, and finally [laughing], we decided, hell, what's the",
+          "md": "**BARRIER:** I was wondering how long you and Garé had been married.",
+          "value": "BARRIER: I was wondering how long you and Garé had been married.",
+          "bbox": [
+            {
+              "h": 63.729269245426835,
+              "w": 283.5111884051068,
+              "x": 455.34272811070895,
+              "y": 505.0593162919208,
+              "confidence": 0.98,
+              "end_index": 356,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Since 1954. I got divorced from my second wife in 1951, December 1951. Garé started doing lettering and a little of my inking in about October of 1952. She kept doing more and more of it, and I was paying her more and more, and finally \\[laughing], we decided, hell, what's the",
+          "value": "BARKS: Since 1954. I got divorced from my second wife in 1951, December 1951. Garé started doing lettering and a little of my inking in about October of 1952. She kept doing more and more of it, and I was paying her more and more, and finally [laughing], we decided, hell, what's the",
           "bbox": [
             {
               "h": 63.729269245426835,

@@ -203,8 +203,8 @@
           "book_side": "right"
         },
         {
-          "md": "**Klaus Strzyz:** Carl, as you were writing and drawing your stories then in the 40s, 50s, and 60s, were you aware of their exceptionally high quality?\n**Carl Barks:** Well, I think the whole secret lies in the fact that I worked harder at them, gave them my best.",
-          "value": "Klaus Strzyz: Carl, as you were writing and drawing your stories then in the 40s, 50s, and 60s, were you aware of their exceptionally high quality?\nCarl Barks: Well, I think the whole secret lies in the fact that I worked harder at them, gave them my best.",
+          "md": "**Klaus Strzyz:** Carl, as you were writing and drawing your stories then in the 40s, 50s, and 60s, were you aware of their exceptionally high quality?",
+          "value": "Klaus Strzyz: Carl, as you were writing and drawing your stories then in the 40s, 50s, and 60s, were you aware of their exceptionally high quality?",
           "bbox": [
             {
               "h": 52.47960305830796,
@@ -221,8 +221,44 @@
           "book_side": "right"
         },
         {
-          "md": "**KS:** But other artists worked hard then, too.\n**Garé Barks:** Hard in that they drove themselves to work very fast.",
-          "value": "KS: But other artists worked hard then, too.\nGaré Barks: Hard in that they drove themselves to work very fast.",
+          "md": "**Carl Barks:** Well, I think the whole secret lies in the fact that I worked harder at them, gave them my best.",
+          "value": "Carl Barks: Well, I think the whole secret lies in the fact that I worked harder at them, gave them my best.",
+          "bbox": [
+            {
+              "h": 52.47960305830796,
+              "w": 283.978783322218,
+              "x": 467.6591331459604,
+              "y": 485.6162870665016,
+              "confidence": 0.98,
+              "end_index": 263,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**KS:** But other artists worked hard then, too.",
+          "value": "KS: But other artists worked hard then, too.",
+          "bbox": [
+            {
+              "h": 26.81,
+              "w": 257.09,
+              "x": 466.87,
+              "y": 545.75,
+              "confidence": 1.0,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Garé Barks:** Hard in that they drove themselves to work very fast.",
+          "value": "Garé Barks: Hard in that they drove themselves to work very fast.",
           "bbox": [
             {
               "h": 26.81,
@@ -243,7 +279,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "108"
+      "printed_page_number": "108, 109"
     }
   ]
 }

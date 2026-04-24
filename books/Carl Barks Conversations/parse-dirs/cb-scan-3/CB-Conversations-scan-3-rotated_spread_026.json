@@ -19,7 +19,7 @@
                   "start_index": 0
                 }
               ],
-              "type": "text"
+              "type": "header"
             }
           ],
           "md": "130 CARL BARKS: CONVERSATIONS",
@@ -75,8 +75,44 @@
           "book_side": "left"
         },
         {
+          "md": "<p style=\"text-align:center\">. . . .</p>",
+          "value": "",
+          "bbox": [
+            {
+              "h": 49.84240299995236,
+              "w": 281.8767851324314,
+              "x": 116.83481378620428,
+              "y": 127.79171308236474,
+              "confidence": 0.98,
+              "end_index": 252,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
           "md": "Sometimes I look back at my stories and it feels like looking at the work of a total stranger. I think, \"Good God, I could never have thought of those gags! I never had them in me!\" That information that comes to a writer must come out of a bunch of computers he's got in his head that he doesn't even know about. They all get to meshing their gears, and pretty soon he comes up with an idea, something entirely strange to his own nature. Sometimes I think the head is full of a whole bunch of little wheels, like little movie reels. The best thoughts you've stored away, experiences you've had, things you've read about, are memory scenes buzzing around with little flashes passing through your mind. At any moment, some of them get going in conjunction with others, and pretty soon a whole new gag has formed, something you wouldn't have ever come up with if you hadn't had that help from the subconscious buzzing in the wheels up there.",
           "value": "Sometimes I look back at my stories and it feels like looking at the work of a total stranger. I think, \"Good God, I could never have thought of those gags! I never had them in me!\" That information that comes to a writer must come out of a bunch of computers he's got in his head that he doesn't even know about. They all get to meshing their gears, and pretty soon he comes up with an idea, something entirely strange to his own nature. Sometimes I think the head is full of a whole bunch of little wheels, like little movie reels. The best thoughts you've stored away, experiences you've had, things you've read about, are memory scenes buzzing around with little flashes passing through your mind. At any moment, some of them get going in conjunction with others, and pretty soon a whole new gag has formed, something you wouldn't have ever come up with if you hadn't had that help from the subconscious buzzing in the wheels up there.",
+          "bbox": [
+            {
+              "h": 180.10944897341847,
+              "w": 283.02197943264105,
+              "x": 113.7457570383956,
+              "y": 204.84473059498862,
+              "confidence": 0.99,
+              "end_index": 938,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "<p style=\"text-align:center\">. . . .</p>",
+          "value": "",
           "bbox": [
             {
               "h": 180.10944897341847,

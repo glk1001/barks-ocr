@@ -93,6 +93,24 @@
           "book_side": "left"
         },
         {
+          "md": "<p style=\"text-align:center\">. . . .</p>",
+          "value": "",
+          "bbox": [
+            {
+              "h": 151.23279308546114,
+              "w": 283.91252609922833,
+              "x": 110.6206977360423,
+              "y": 283.84743153344135,
+              "confidence": 0.99,
+              "end_index": 811,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
           "md": "There have been times when I felt nervous about taking a chance with a plot, but it wasn't enough to stop me. I'd compromise a bit if I felt I was getting too wild. I've approached every subject with my teeth chattering and knees knocking. Getting new ideas was the big nerve-racker. Often I'd feel I'd pumped the well dry and hadn't another idea in my system: I'd get real scared. I can remember times when I got so scared that when I did come up with an idea, I almost cried with relief at having gotten over that hump again. There were times when I would have dead periods in",
           "value": "There have been times when I felt nervous about taking a chance with a plot, but it wasn't enough to stop me. I'd compromise a bit if I felt I was getting too wild. I've approached every subject with my teeth chattering and knees knocking. Getting new ideas was the big nerve-racker. Often I'd feel I'd pumped the well dry and hadn't another idea in my system: I'd get real scared. I can remember times when I got so scared that when I did come up with an idea, I almost cried with relief at having gotten over that hump again. There were times when I would have dead periods in",
           "bbox": [

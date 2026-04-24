@@ -19,7 +19,7 @@
                   "start_index": 0
                 }
               ],
-              "type": "text"
+              "type": "header"
             }
           ],
           "md": "GOTTFRIED HELNWEIN / 1992 141",
@@ -39,7 +39,7 @@
           "book_side": "right"
         },
         {
-          "caption": "Conversation with Carl Barks, Gottfried Helnwein / 1992",
+          "caption": "",
           "md": "![Conversation with Carl Barks, Gottfried Helnwein / 1992](CB-Conversations-scan-3-rotated_spread_031_page_1_image_1_v2.jpg)",
           "url": "CB-Conversations-scan-3-rotated_spread_031_page_1_image_1_v2.jpg",
           "bbox": [
@@ -458,7 +458,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "141"
+      "printed_page_number": "140, 141"
     }
   ]
 }

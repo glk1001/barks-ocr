@@ -247,7 +247,45 @@
           "book_side": "right"
         },
         {
-          "md": "**KS:** Are you familiar with European Disney comic artists?\n**CB:** Oh yes, and some are very good. Daan Jippes isn't the only one \\[cf. *TBC* 19 for a look at his work in Holland; he's recently moved to the U.S.]. There are also good artists in Denmark and Germany \\[Freddy Milton and Volker Reiche cf. *TBC* 20], and someone in Spain . . .",
+          "md": "**KS:** Are you familiar with European Disney comic artists?",
+          "value": "KS: Are you familiar with European Disney comic artists?",
+          "bbox": [
+            {
+              "h": 60.20121854304638,
+              "w": 283.11637500000006,
+              "x": 460.819875,
+              "y": 67.29917880794702,
+              "confidence": 0.79,
+              "end_index": 341,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.52,
+              "w": 218.45,
+              "x": 462.13,
+              "y": 67.3,
+              "confidence": 1.0,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 47.58,
+              "w": 283.12,
+              "x": 460.82,
+              "y": 79.92,
+              "confidence": 0.79,
+              "end_index": 341,
+              "label": "text",
+              "start_index": 61
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh yes, and some are very good. Daan Jippes isn't the only one \\[cf. *TBC* 19 for a look at his work in Holland; he's recently moved to the U.S.]. There are also good artists in Denmark and Germany \\[Freddy Milton and Volker Reiche cf. *TBC* 20], and someone in Spain . . .",
           "value": "KS: Are you familiar with European Disney comic artists?\nCB: Oh yes, and some are very good. Daan Jippes isn't the only one [cf. TBC 19 for a look at his work in Holland; he's recently moved to the U.S.]. There are also good artists in Denmark and Germany [Freddy Milton and Volker Reiche cf. TBC 20], and someone in Spain . . .",
           "bbox": [
             {

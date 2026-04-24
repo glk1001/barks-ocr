@@ -57,7 +57,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: Do you ever skip the preliminary process and just go direct without drawing the circles?**",
+          "md": "**Q:** Do you ever skip the preliminary process and just go direct without drawing the circles?",
           "value": "Q: Do you ever skip the preliminary process and just go direct without drawing the circles?",
           "bbox": [
             {
@@ -111,7 +111,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: When you were doing the dialogue, how did you work the words out to fit in the panels?**",
+          "md": "**Q:** When you were doing the dialogue, how did you work the words out to fit in the panels?",
           "value": "Q: When you were doing the dialogue, how did you work the words out to fit in the panels?",
           "bbox": [
             {
@@ -165,7 +165,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: What are some of the other stories \\[besides the square egg story] that you're particularly fond of?**",
+          "md": "**Q:** What are some of the other stories \\[besides the square egg story] that you're particularly fond of?",
           "value": "Q: What are some of the other stories [besides the square egg story] that you're particularly fond of?",
           "bbox": [
             {
@@ -201,50 +201,22 @@
           "book_side": "right"
         },
         {
-          "caption": "Comic panel showing a cyclone sucking up Uncle Scrooge's money from a bin, with a caption box.",
-          "md": "![Comic panel showing a cyclone sucking up Uncle Scrooge's money from a bin, with a caption box.](CB-Conversations-scan-3-rotated_spread_004_page_1_image_1_v2.jpg)",
-          "url": "CB-Conversations-scan-3-rotated_spread_004_page_1_image_1_v2.jpg",
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-3-rotated_spread_004_image_1.png",
           "bbox": [
-            {
-              "h": 329.84348381049927,
-              "w": 276.25703055926067,
-              "x": 461.9380454697028,
-              "y": 242.06774373332703,
-              "confidence": 0.99,
-              "end_index": 119,
-              "label": "image",
-              "start_index": 0
-            }
+              {
+                "h": 329.84348381049927,
+                "w": 276.25703055926067,
+                "x": 461.9380454697028,
+                "y": 242.06774373332703,
+                "confidence": 0.99,
+                "end_index": 119,
+                  "label": "image",
+                "start_index": 0
+              }
           ],
           "type": "image",
-          "book_side": "right"
-        },
-        {
-          "md": "THE HUGE FUNNEL DIPS ONCE, AND UNCLE SCROOGE'S VAST FORTUNE IS SUCKED UP INTO THE SKY!",
-          "value": "THE HUGE FUNNEL DIPS ONCE, AND UNCLE SCROOGE'S VAST FORTUNE IS SUCKED UP INTO THE SKY!",
-          "bbox": [
-            {
-              "h": 66.81925594035825,
-              "w": 99.96107390910826,
-              "x": 518.0418217654345,
-              "y": 251.0081900962272,
-              "confidence": 0.76,
-              "end_index": 85,
-              "label": "text",
-              "start_index": 0
-            },
-            {
-              "h": 46.79,
-              "w": 100.42,
-              "x": 516.55,
-              "y": 271.3,
-              "confidence": 1.0,
-              "end_index": 85,
-              "label": "image",
-              "start_index": 21
-            }
-          ],
-          "type": "text",
           "book_side": "right"
         }
       ],

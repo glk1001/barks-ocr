@@ -57,8 +57,26 @@
           "book_side": "left"
         },
         {
-          "md": "**PC:** Do you think that people who read comic books as kids and really pored over and studied the pictures, like your Andes old cities—now that they are adults, is their interest in visual and graphic arts being transferred into an interest in art, more than kids who have never read comic books?\n**CB:** I think so. It seems to me that every kid that comes around wants to be a cartoonist! I wasn't aware of that when I was a kid. A few kids would read *Mutt and Jeff* and the comics that were around in newspapers in those days and try to be cartoonists, but it wasn't so universal as it is now. Right now it seems like every boy, and girls too, when they reach the early teens, they decide that they're going to be cartoonists or that they're going to write stories, and comic books have been the influence of that.",
-          "value": "PC: Do you think that people who read comic books as kids and really pored over and studied the pictures, like your Andes old cities—now that they are adults, is their interest in visual and graphic arts being transferred into an interest in art, more than kids who have never read comic books?\nCB: I think so. It seems to me that every kid that comes around wants to be a cartoonist! I wasn't aware of that when I was a kid. A few kids would read Mutt and Jeff and the comics that were around in newspapers in those days and try to be cartoonists, but it wasn't so universal as it is now. Right now it seems like every boy, and girls too, when they reach the early teens, they decide that they're going to be cartoonists or that they're going to write stories, and comic books have been the influence of that.",
+          "md": "**PC:** Do you think that people who read comic books as kids and really pored over and studied the pictures, like your Andes old cities—now that they are adults, is their interest in visual and graphic arts being transferred into an interest in art, more than kids who have never read comic books?",
+          "value": "PC: Do you think that people who read comic books as kids and really pored over and studied the pictures, like your Andes old cities—now that they are adults, is their interest in visual and graphic arts being transferred into an interest in art, more than kids who have never read comic books?",
+          "bbox": [
+            {
+              "h": 141.7933870355374,
+              "w": 283.82130501798304,
+              "x": 78.57479889064882,
+              "y": 120.71064278534683,
+              "confidence": 0.95,
+              "end_index": 819,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I think so. It seems to me that every kid that comes around wants to be a cartoonist! I wasn't aware of that when I was a kid. A few kids would read *Mutt and Jeff* and the comics that were around in newspapers in those days and try to be cartoonists, but it wasn't so universal as it is now. Right now it seems like every boy, and girls too, when they reach the early teens, they decide that they're going to be cartoonists or that they're going to write stories, and comic books have been the influence of that.",
+          "value": "CB: I think so. It seems to me that every kid that comes around wants to be a cartoonist! I wasn't aware of that when I was a kid. A few kids would read Mutt and Jeff and the comics that were around in newspapers in those days and try to be cartoonists, but it wasn't so universal as it is now. Right now it seems like every boy, and girls too, when they reach the early teens, they decide that they're going to be cartoonists or that they're going to write stories, and comic books have been the influence of that.",
           "bbox": [
             {
               "h": 141.7933870355374,

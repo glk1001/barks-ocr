@@ -219,8 +219,26 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** Did you get tired of the ducks as personalities?\n**BARKS:** I believe I was beginning to get a little tired of Donald there toward the last. Scrooge was still enough of a character that I could think of ideas for him. And the little nephews. Now this Junior Woodchuck idea comes along and ties right in with all this ecological bushwah that's going on. I can see two sides of the ecological problem. You know, the human race has got to have all these luxuries they've built up for themselves and become used to.",
-          "value": "BARRIER: Did you get tired of the ducks as personalities?\nBARKS: I believe I was beginning to get a little tired of Donald there toward the last. Scrooge was still enough of a character that I could think of ideas for him. And the little nephews. Now this Junior Woodchuck idea comes along and ties right in with all this ecological bushwah that's going on. I can see two sides of the ecological problem. You know, the human race has got to have all these luxuries they've built up for themselves and become used to.",
+          "md": "**BARRIER:** Did you get tired of the ducks as personalities?",
+          "value": "BARRIER: Did you get tired of the ducks as personalities?",
+          "bbox": [
+            {
+              "h": 102.43278060451604,
+              "w": 283.9537380668827,
+              "x": 450.09459503620434,
+              "y": 225.5570622070313,
+              "confidence": 0.98,
+              "end_index": 523,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** I believe I was beginning to get a little tired of Donald there toward the last. Scrooge was still enough of a character that I could think of ideas for him. And the little nephews. Now this Junior Woodchuck idea comes along and ties right in with all this ecological bushwah that's going on. I can see two sides of the ecological problem. You know, the human race has got to have all these luxuries they've built up for themselves and become used to.",
+          "value": "BARKS: I believe I was beginning to get a little tired of Donald there toward the last. Scrooge was still enough of a character that I could think of ideas for him. And the little nephews. Now this Junior Woodchuck idea comes along and ties right in with all this ecological bushwah that's going on. I can see two sides of the ecological problem. You know, the human race has got to have all these luxuries they've built up for themselves and become used to.",
           "bbox": [
             {
               "h": 102.43278060451604,
@@ -273,8 +291,46 @@
           "book_side": "right"
         },
         {
-          "md": "**BRAY:** Right after \"Dangerous Disguise,\" did they tell you to start drawing more dog characters \\[instead of realistic humans]?\n**BARKS:** Oh, they told me it was completely out of line having human characters with ducks.",
-          "value": "BRAY: Right after \"Dangerous Disguise,\" did they tell you to start drawing more dog characters [instead of realistic humans]?\nBARKS: Oh, they told me it was completely out of line having human characters with ducks.",
+          "md": "**BRAY:** Right after \"Dangerous Disguise,\" did they tell you to start drawing more dog characters \\[instead of realistic humans]?",
+          "value": "BRAY: Right after \"Dangerous Disguise,\" did they tell you to start drawing more dog characters [instead of realistic humans]?",
+          "bbox": [
+            {
+              "h": 47.31973509933778,
+              "w": 279.69900000000007,
+              "x": 450.30487500000004,
+              "y": 399.58887417218546,
+              "confidence": 0.96,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 22.08,
+              "w": 278.65,
+              "x": 451.36,
+              "y": 399.59,
+              "confidence": 1.0,
+              "end_index": 129,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 22.61,
+              "w": 269.18,
+              "x": 450.3,
+              "y": 424.3,
+              "confidence": 1.0,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 131
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Oh, they told me it was completely out of line having human characters with ducks.",
+          "value": "BARKS: Oh, they told me it was completely out of line having human characters with ducks.",
           "bbox": [
             {
               "h": 47.31973509933778,

@@ -1,6 +1,6 @@
 # Carl Barks: Conversations
 
-somebody else. Now that story where Gladstone and Donald were up in the *Bering Sea* and they found that old Viking boat—that story came to me from Dana Coly, who used to be an editor on *Judge* magazine years ago. He worked for Disney, too, for a while. He had this idea for a story with quite a number of gags in it in which Gladstone goes up to the North as the result of some trick that Donald had played on him. So I bought the idea from him and developed it, added a lot more to it. But most of the longer stories originated with me. And 90% of the shorter-length gyro stories, too.
+somebody else. Now that story where Gladstone and Donald were up in the *Bering Sea* and they found that old Viking boat—that story came to me from Dana Coly, who used to be an editor on *Judge* magazine years ago. He worked for Disney, too, for a while. He had this idea for a story with quite a number of gags in it in which Gladstone goes up to the North as the result of some trick that Donald had played on him. So I bought the idea from him and developed it, added a lot more to it. But most of the longer stories originated with me. And 90% of the shorter-length Gyro stories, too.
 
 **Q:** You had Donald ranging over the entire world. Where did you get the story ideas?
 

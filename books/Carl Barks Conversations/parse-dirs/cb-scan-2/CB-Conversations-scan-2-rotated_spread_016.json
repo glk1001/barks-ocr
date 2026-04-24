@@ -39,7 +39,7 @@
           "book_side": "right"
         },
         {
-          "caption": "Carl Barks: On His Life and Career J. MICHAEL BARRIER / 1973",
+          "caption": "",
           "md": "![Carl Barks: On His Life and Career J. MICHAEL BARRIER / 1973](CB-Conversations-scan-2-rotated_spread_016_page_1_image_1_v2.jpg)",
           "url": "CB-Conversations-scan-2-rotated_spread_016_page_1_image_1_v2.jpg",
           "bbox": [
@@ -260,7 +260,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "51"
+      "printed_page_number": "50, 51"
     }
   ]
 }

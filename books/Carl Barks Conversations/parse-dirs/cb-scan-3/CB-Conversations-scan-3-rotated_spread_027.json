@@ -19,7 +19,7 @@
                   "start_index": 0
                 }
               ],
-              "type": "text"
+              "type": "header"
             }
           ],
           "md": "BRUCE HAMILTON AND BILL BLACKBEARD / 1983 133",
@@ -39,7 +39,7 @@
           "book_side": "right"
         },
         {
-          "caption": "Interview with Carl Barks and Floyd Gottfredson Bruce Hamilton and BilL BLACKBEARD / 1983",
+          "caption": "",
           "md": "![Interview with Carl Barks and Floyd Gottfredson Bruce Hamilton and BilL BLACKBEARD / 1983](CB-Conversations-scan-3-rotated_spread_027_page_1_seal_1_v2.jpg)",
           "url": "CB-Conversations-scan-3-rotated_spread_027_page_1_seal_1_v2.jpg",
           "bbox": [
@@ -55,43 +55,6 @@
             }
           ],
           "type": "image",
-          "book_side": "left"
-        },
-        {
-          "level": 1,
-          "md": "# Interview with Carl Barks and Floyd Gottfredson",
-          "value": "Interview with Carl Barks and Floyd Gottfredson",
-          "bbox": [
-            {
-              "h": 44.69,
-              "w": 227.91,
-              "x": 140.11,
-              "y": 154.05,
-              "confidence": 1.0,
-              "end_index": 48,
-              "label": "seal",
-              "start_index": 2
-            }
-          ],
-          "type": "heading",
-          "book_side": "left"
-        },
-        {
-          "md": "**BRUCE HAMILTON AND**\n**BILL BLACKBEARD / 1983**",
-          "value": "BRUCE HAMILTON AND\nBILL BLACKBEARD / 1983",
-          "bbox": [
-            {
-              "h": 29.77293959365473,
-              "w": 129.5244306938358,
-              "x": 188.2367955590225,
-              "y": 212.95241332888725,
-              "confidence": 0.87,
-              "end_index": 48,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
           "book_side": "left"
         },
         {
@@ -113,7 +76,7 @@
           "book_side": "left"
         },
         {
-          "md": "The first portion of this interview was conducted by Bruce Hamilton and Bill Blackbeard on 6 December 1982 at the apartment of Floyd Gottfredson in North Hollywood, California. Also present at the interview were Garé Barks, Mattie Gottfredson, Helen Hamilton, Leonard (John) Clark, and Russ Cochran. The second portion of this interview with Barks and Gottfredson was conducted by Bruce Hamilton in a motel in Burbank, California, in the spring of 1983.",
+          "md": "*The first portion of this interview was conducted by Bruce Hamilton and Bill Blackbeard on 6 December 1982 at the apartment of Floyd Gottfredson in North Hollywood, California. Also present at the interview were Garé Barks, Mattie Gottfredson, Helen Hamilton, Leonard (John) Clark, and Russ Cochran. The second portion of this interview with Barks and Gottfredson was conducted by Bruce Hamilton in a motel in Burbank, California, in the spring of 1983.*",
           "value": "The first portion of this interview was conducted by Bruce Hamilton and Bill Blackbeard on 6 December 1982 at the apartment of Floyd Gottfredson in North Hollywood, California. Also present at the interview were Garé Barks, Mattie Gottfredson, Helen Hamilton, Leonard (John) Clark, and Russ Cochran. The second portion of this interview with Barks and Gottfredson was conducted by Bruce Hamilton in a motel in Burbank, California, in the spring of 1983.",
           "bbox": [
             {
@@ -459,7 +422,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "133"
+      "printed_page_number": "132, 133"
     }
   ]
 }

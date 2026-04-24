@@ -57,8 +57,8 @@
           "book_side": "left"
         },
         {
-          "md": "**H:** But Donald liked these girls. He thought they were sexy.\n**B:** Oh, yeah. Well, I'll tell you, at about the same time Disney had put out this animation movie *Saludos Amigos* in which the ducks were traveling down in South America. And Donald behaved like a real wolf. He was a lecher! He was just chasing all these pretty girls. Yeah, I think that was one of the reasons why I thought I could get away with it. But no. The comic books were for kids.",
-          "value": "H: But Donald liked these girls. He thought they were sexy.\nB: Oh, yeah. Well, I'll tell you, at about the same time Disney had put out this animation movie Saludos Amigos in which the ducks were traveling down in South America. And Donald behaved like a real wolf. He was a lecher! He was just chasing all these pretty girls. Yeah, I think that was one of the reasons why I thought I could get away with it. But no. The comic books were for kids.",
+          "md": "**H:** But Donald liked these girls. He thought they were sexy.",
+          "value": "H: But Donald liked these girls. He thought they were sexy.",
           "bbox": [
             {
               "h": 88.12512,
@@ -75,8 +75,64 @@
           "book_side": "left"
         },
         {
-          "md": "**H:** Was \"The Milkman\" the only story they didn't print because of too much brutality?\n**B:** No.",
-          "value": "H: Was \"The Milkman\" the only story they didn't print because of too much brutality?\nB: No.",
+          "md": "**B:** Oh, yeah. Well, I'll tell you, at about the same time Disney had put out this animation movie *Saludos Amigos* in which the ducks were traveling down in South America. And Donald behaved like a real wolf. He was a lecher! He was just chasing all these pretty girls. Yeah, I think that was one of the reasons why I thought I could get away with it. But no. The comic books were for kids.",
+          "value": "B: Oh, yeah. Well, I'll tell you, at about the same time Disney had put out this animation movie Saludos Amigos in which the ducks were traveling down in South America. And Donald behaved like a real wolf. He was a lecher! He was just chasing all these pretty girls. Yeah, I think that was one of the reasons why I thought I could get away with it. But no. The comic books were for kids.",
+          "bbox": [
+            {
+              "h": 88.12512,
+              "w": 283.48440000000005,
+              "x": 122.8152,
+              "y": 98.24760000000002,
+              "confidence": 0.91,
+              "end_index": 456,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**H:** Was \"The Milkman\" the only story they didn't print because of too much brutality?",
+          "value": "H: Was \"The Milkman\" the only story they didn't print because of too much brutality?.",
+          "bbox": [
+            {
+              "h": 34.53551999999999,
+              "w": 272.5488,
+              "x": 121.974,
+              "y": 197.09064000000004,
+              "confidence": 0.79,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 23.92,
+              "w": 271.81,
+              "x": 121.45,
+              "y": 196.38,
+              "confidence": 1.0,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.72,
+              "w": 29.7,
+              "x": 118.82,
+              "y": 219.51,
+              "confidence": 0.79,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 89
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** No.",
+          "value": "B: No.",
           "bbox": [
             {
               "h": 34.53551999999999,
@@ -311,8 +367,56 @@
           "book_side": "right"
         },
         {
-          "md": "**H:** Were you allowed to reproduce them? To print them?\n**B:** Oh, no. No, I could paint something which is sold to somebody and he could keep that painting to hang on his wall—now that was as far as it could go.",
-          "value": "H: Were you allowed to reproduce them? To print them?\nB: Oh, no. No, I could paint something which is sold to somebody and he could keep that painting to hang on his wall—now that was as far as it could go.",
+          "md": "**H:** Were you allowed to reproduce them? To print them?",
+          "value": "H: Were you allowed to reproduce them? To print them?",
+          "bbox": [
+            {
+              "h": 52.99416000000008,
+              "w": 284.3256,
+              "x": 469.3896000000001,
+              "y": 400.13568000000004,
+              "confidence": 0.79,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.88,
+              "w": 220.29,
+              "x": 469.49,
+              "y": 399.85,
+              "confidence": 1.0,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.67,
+              "w": 283.38,
+              "x": 469.49,
+              "y": 412.21,
+              "confidence": 1.0,
+              "end_index": 168,
+              "label": "text",
+              "start_index": 58
+            },
+            {
+              "h": 40.75,
+              "w": 283.64,
+              "x": 469.23,
+              "y": 412.21,
+              "confidence": 0.79,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 58
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** Oh, no. No, I could paint something which is sold to somebody and he could keep that painting to hang on his wall—now that was as far as it could go.",
+          "value": "B: Oh, no. No, I could paint something which is sold to somebody and he could keep that painting to hang on his wall—now that was as far as it could go.",
           "bbox": [
             {
               "h": 52.99416000000008,

@@ -495,7 +495,7 @@
           "book_side": "right"
         },
         {
-          "md": "The remainder of the interview was recorded in the spring of 1983.",
+          "md": "<br/>The remainder of the interview was recorded in the spring of 1983.",
           "value": "The remainder of the interview was recorded in the spring of 1983.",
           "bbox": [
             {
@@ -513,7 +513,7 @@
           "book_side": "right"
         },
         {
-          "md": "**BH**: Carl, do you think you could have been comfortable doing *Donald Duck* as a daily or Sunday strip?",
+          "md": "<br/>**BH**: Carl, do you think you could have been comfortable doing *Donald Duck* as a daily or Sunday strip?",
           "value": "BH: Carl, do you think you could have been comfortable doing Donald Duck as a daily or Sunday strip?",
           "bbox": [
             {

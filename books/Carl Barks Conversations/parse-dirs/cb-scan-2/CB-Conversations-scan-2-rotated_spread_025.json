@@ -93,7 +93,7 @@
           "book_side": "left"
         },
         {
-          "caption": "Title graphic: Carl Barks and His Ducks, J. Michael Barrier / 1974, enclosed in a thought bubble.",
+          "caption": "",
           "md": "![Title graphic: Carl Barks and His Ducks, J. Michael Barrier / 1974, enclosed in a thought bubble.](CB-Conversations-scan-2-rotated_spread_025_page_1_image_1_v2.jpg)",
           "url": "CB-Conversations-scan-2-rotated_spread_025_page_1_image_1_v2.jpg",
           "bbox": [
@@ -170,7 +170,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "68"
+      "printed_page_number": "68, 69"
     }
   ]
 }

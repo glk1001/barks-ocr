@@ -40,7 +40,7 @@
         },
         {
           "level": 1,
-          "md": "# 6 CARL BARKS: CONVERSATIONS",
+          "md": "6 CARL BARKS: CONVERSATIONS",
           "value": "6 CARL BARKS: CONVERSATIONS",
           "bbox": [
             {
@@ -50,11 +50,11 @@
               "y": 18.01051017798447,
               "confidence": 0.88,
               "end_index": 28,
-              "label": "text",
+              "label": "header",
               "start_index": 0
             }
           ],
-          "type": "heading",
+          "type": "header",
           "book_side": "left"
         },
         {
@@ -364,6 +364,25 @@
           "book_side": "right"
         },
         {
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-1-rotated_spread_025_image_1.jpg",
+          "bbox": [
+              {
+                "h": 164.11280976562503,
+                "w": 356.7500768626144,
+                "x": 423.80268707126527,
+                "y": 207.00,
+                "confidence": 0.89,
+                "end_index": 195,
+                "label": "image",
+                "start_index": 0
+              }
+          ],
+          "type": "image",
+          "book_side": "right"
+          },
+          {
           "md": "**Q:** Do you think you drew in a simpler style in the '60s? Less detailed, larger pictures?",
           "value": "Q: Do you think you drew in a simpler style in the '60s? Less detailed, larger pictures?",
           "bbox": [
@@ -429,24 +448,6 @@
               "confidence": 0.93,
               "end_index": 79,
               "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "right"
-        },
-        {
-          "md": "A cartoon illustration showing a character in black clothing saying \"WITH PLEASURE!\" while interacting with other cartoon characters in what appears to be a domestic scene",
-          "value": "A cartoon illustration showing a character in black clothing saying \"WITH PLEASURE!\" while interacting with other cartoon characters in what appears to be a domestic scene",
-          "bbox": [
-            {
-              "h": 164.11280976562503,
-              "w": 356.7500768626144,
-              "x": 423.80268707126527,
-              "y": 393.36537167492384,
-              "confidence": 0.99,
-              "end_index": 170,
-              "label": "image",
               "start_index": 0
             }
           ],

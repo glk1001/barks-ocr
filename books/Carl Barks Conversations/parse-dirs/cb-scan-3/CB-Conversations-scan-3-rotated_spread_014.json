@@ -57,8 +57,26 @@
           "book_side": "left"
         },
         {
-          "md": "**Q:** Could you tell the story of your haunting drugstores?\n**BARKS:** I used to go to the drugstores or wherever there was a newsstand, and if I happened to be around when I had a little time on my hands, I would stand around that newsstand pretending I was looking at *Popular Mechanics* or something and watch the kids. At that time kids would always come in where there was a big stack of comic books and just sit down on one stack and pick up comic books out of the next stack and read them or look through them. And I always hoped that I would see some kid buy a *Walt Disney Comics* or an *Uncle Scrooge*. I never did. They always picked up *Superman* or a Harvey comic or an *Oswald Rabbit*,",
-          "value": "Q: Could you tell the story of your haunting drugstores?\nBARKS: I used to go to the drugstores or wherever there was a newsstand, and if I happened to be around when I had a little time on my hands, I would stand around that newsstand pretending I was looking at Popular Mechanics or something and watch the kids. At that time kids would always come in where there was a big stack of comic books and just sit down on one stack and pick up comic books out of the next stack and read them or look through them. And I always hoped that I would see some kid buy a Walt Disney Comics or an Uncle Scrooge. I never did. They always picked up Superman or a Harvey comic or an Oswald Rabbit,",
+          "md": "**Q:** Could you tell the story of your haunting drugstores?",
+          "value": "Q: Could you tell the story of your haunting drugstores?",
+          "bbox": [
+            {
+              "h": 132.78312000000005,
+              "w": 281.802,
+              "x": 99.2616,
+              "y": 438.83928000000003,
+              "confidence": 0.87,
+              "end_index": 699,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I used to go to the drugstores or wherever there was a newsstand, and if I happened to be around when I had a little time on my hands, I would stand around that newsstand pretending I was looking at *Popular Mechanics* or something and watch the kids. At that time kids would always come in where there was a big stack of comic books and just sit down on one stack and pick up comic books out of the next stack and read them or look through them. And I always hoped that I would see some kid buy a *Walt Disney Comics* or an *Uncle Scrooge*. I never did. They always picked up *Superman* or a Harvey comic or an *Oswald Rabbit*,",
+          "value": "BARKS: I used to go to the drugstores or wherever there was a newsstand, and if I happened to be around when I had a little time on my hands, I would stand around that newsstand pretending I was looking at Popular Mechanics or something and watch the kids. At that time kids would always come in where there was a big stack of comic books and just sit down on one stack and pick up comic books out of the next stack and read them or look through them. And I always hoped that I would see some kid buy a Walt Disney Comics or an Uncle Scrooge. I never did. They always picked up Superman or a Harvey comic or an Oswald Rabbit,",
           "bbox": [
             {
               "h": 132.78312000000005,

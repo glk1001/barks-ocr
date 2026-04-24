@@ -1,6 +1,6 @@
 {
   "pdf": "CB-Conversations-scan-1-rotated.pdf",
-  "num_spreads": 31,
+  "num_spreads": 32,
   "spreads": [
     {
       "spread_num": 1,
@@ -114,7 +114,10 @@
       "spread_num": 17,
       "image": "CB-Conversations-scan-1-rotated_spread_017.jpg",
       "md": "CB-Conversations-scan-1-rotated_spread_017.md",
-      "json": "CB-Conversations-scan-1-rotated_spread_017.json"
+      "json": "CB-Conversations-scan-1-rotated_spread_017.json",
+      "printed_page_numbers_detected": {
+        "1": "xxxiv, xxxv"
+      }
     },
     {
       "spread_num": 18,
@@ -127,6 +130,12 @@
       "image": "CB-Conversations-scan-1-rotated_spread_019.jpg",
       "md": "CB-Conversations-scan-1-rotated_spread_019.md",
       "json": "CB-Conversations-scan-1-rotated_spread_019.json"
+    },
+    {
+      "spread_num": "19a",
+      "image": "CB-Conversations-scan-1-rotated_spread_019a.jpg",
+      "md": "CB-Conversations-scan-1-rotated_spread_019a.md",
+      "json": "CB-Conversations-scan-1-rotated_spread_019a.json"
     },
     {
       "spread_num": 20,
@@ -149,14 +158,17 @@
       "md": "CB-Conversations-scan-1-rotated_spread_022.md",
       "json": "CB-Conversations-scan-1-rotated_spread_022.json",
       "printed_page_numbers_detected": {
-        "1": "xlvi"
+        "1": "xlvi, 1"
       }
     },
     {
       "spread_num": 23,
       "image": "CB-Conversations-scan-1-rotated_spread_023.jpg",
       "md": "CB-Conversations-scan-1-rotated_spread_023.md",
-      "json": "CB-Conversations-scan-1-rotated_spread_023.json"
+      "json": "CB-Conversations-scan-1-rotated_spread_023.json",
+      "printed_page_numbers_detected": {
+        "1": "2, 3"
+      }
     },
     {
       "spread_num": 24,

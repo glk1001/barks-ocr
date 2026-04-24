@@ -111,8 +111,26 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** Were Walt's reactions predictable? Could you anticipate that he would like or dislike something and shape a story to fit his reactions?\n**BARKS:** No, he wasn't that predictable.",
-          "value": "BARRIER: Were Walt's reactions predictable? Could you anticipate that he would like or dislike something and shape a story to fit his reactions?\nBARKS: No, he wasn't that predictable.",
+          "md": "**BARRIER:** Were Walt's reactions predictable? Could you anticipate that he would like or dislike something and shape a story to fit his reactions?",
+          "value": "BARRIER: Were Walt's reactions predictable? Could you anticipate that he would like or dislike something and shape a story to fit his reactions?",
+          "bbox": [
+            {
+              "h": 37.70878305783159,
+              "w": 276.1686646371237,
+              "x": 102.84644385658824,
+              "y": 206.76361130430644,
+              "confidence": 0.98,
+              "end_index": 190,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** No, he wasn't that predictable.",
+          "value": "BARKS: No, he wasn't that predictable.",
           "bbox": [
             {
               "h": 37.70878305783159,
@@ -165,8 +183,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** What differences did you find between timing for cartoons and timing for comic books? You mentioned \\[in the 1973 interview] what Floyd Gottfredson had told you about violent action, but were there other things that struck you immediately, that had to be approached differently?\n**BARKS:** Well, I guess it was a gradual thing, but in drawing comic books, you've got to be darned sure that your idea is presented. If it's going to take three or four drawings to present that idea, the timing of it comes in in how much development you do in the first panel, how much you do in the second, how much in the third, and if you can keep the development just enough that the reader can figure out what is coming, and then in the fourth panel, give it to him with a big sock right in the face.",
-          "value": "BARRIER: What differences did you find between timing for cartoons and timing for comic books? You mentioned [in the 1973 interview] what Floyd Gottfredson had told you about violent action, but were there other things that struck you immediately, that had to be approached differently?\nBARKS: Well, I guess it was a gradual thing, but in drawing comic books, you've got to be darned sure that your idea is presented. If it's going to take three or four drawings to present that idea, the timing of it comes in in how much development you do in the first panel, how much you do in the second, how much in the third, and if you can keep the development just enough that the reader can figure out what is coming, and then in the fourth panel, give it to him with a big sock right in the face.",
+          "md": "**BARRIER:** What differences did you find between timing for cartoons and timing for comic books? You mentioned \\[in the 1973 interview] what Floyd Gottfredson had told you about violent action, but were there other things that struck you immediately, that had to be approached differently?",
+          "value": "BARRIER: What differences did you find between timing for cartoons and timing for comic books? You mentioned [in the 1973 interview] what Floyd Gottfredson had told you about violent action, but were there other things that struck you immediately, that had to be approached differently?",
           "bbox": [
             {
               "h": 142.097974933308,
@@ -183,8 +201,44 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** You have to be careful not to tell him too much at one time.\n**BARKS:** That's right. That's what I consider timing.",
-          "value": "BARRIER: You have to be careful not to tell him too much at one time.\nBARKS: That's right. That's what I consider timing.",
+          "md": "**BARKS:** Well, I guess it was a gradual thing, but in drawing comic books, you've got to be darned sure that your idea is presented. If it's going to take three or four drawings to present that idea, the timing of it comes in in how much development you do in the first panel, how much you do in the second, how much in the third, and if you can keep the development just enough that the reader can figure out what is coming, and then in the fourth panel, give it to him with a big sock right in the face.",
+          "value": "BARKS: Well, I guess it was a gradual thing, but in drawing comic books, you've got to be darned sure that your idea is presented. If it's going to take three or four drawings to present that idea, the timing of it comes in in how much development you do in the first panel, how much you do in the second, how much in the third, and if you can keep the development just enough that the reader can figure out what is coming, and then in the fourth panel, give it to him with a big sock right in the face.",
+          "bbox": [
+            {
+              "h": 142.097974933308,
+              "w": 284.35668491865954,
+              "x": 101.02092024044876,
+              "y": 308.03152624333086,
+              "confidence": 0.99,
+              "end_index": 798,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER:** You have to be careful not to tell him too much at one time.",
+          "value": "BARRIER: You have to be careful not to tell him too much at one time.",
+          "bbox": [
+            {
+              "h": 25.908284522675302,
+              "w": 272.5701310439692,
+              "x": 99.93969778367952,
+              "y": 455.96721428163124,
+              "confidence": 0.97,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** That's right. That's what I consider timing.",
+          "value": "BARKS: That's right. That's what I consider timing.",
           "bbox": [
             {
               "h": 25.908284522675302,
@@ -363,8 +417,26 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** When you had new characters like Scrooge and Gladstone, would you do anything in the way of preparation, like character designs?\n**BARKS:** No, I didn't, and that was bad. I told you before, I got into trouble with that darned Gyro Gearloose \\[i.e., because Gyro was twice as tall as the ducks and created difficulties in panel composition].",
-          "value": "BARRIER: When you had new characters like Scrooge and Gladstone, would you do anything in the way of preparation, like character designs?\nBARKS: No, I didn't, and that was bad. I told you before, I got into trouble with that darned Gyro Gearloose [i.e., because Gyro was twice as tall as the ducks and created difficulties in panel composition].",
+          "md": "**BARRIER:** When you had new characters like Scrooge and Gladstone, would you do anything in the way of preparation, like character designs?",
+          "value": "BARRIER: When you had new characters like Scrooge and Gladstone, would you do anything in the way of preparation, like character designs?",
+          "bbox": [
+            {
+              "h": 62.313212966844524,
+              "w": 283.04219095369666,
+              "x": 453.8847937071266,
+              "y": 339.072686804497,
+              "confidence": 0.98,
+              "end_index": 353,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** No, I didn't, and that was bad. I told you before, I got into trouble with that darned Gyro Gearloose \\[i.e., because Gyro was twice as tall as the ducks and created difficulties in panel composition].",
+          "value": "BARKS: No, I didn't, and that was bad. I told you before, I got into trouble with that darned Gyro Gearloose [i.e., because Gyro was twice as tall as the ducks and created difficulties in panel composition].",
           "bbox": [
             {
               "h": 62.313212966844524,
@@ -417,8 +489,26 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** In effect, you're talking about fitting the character to the gag.\n**BARKS:** Yeah.",
-          "value": "BARRIER: In effect, you're talking about fitting the character to the gag.\nBARKS: Yeah.",
+          "md": "**BARRIER:** In effect, you're talking about fitting the character to the gag.",
+          "value": "BARRIER: In effect, you're talking about fitting the character to the gag.",
+          "bbox": [
+            {
+              "h": 23.608762014100627,
+              "w": 279.50995841272874,
+              "x": 455.3900135527821,
+              "y": 502.7001916349086,
+              "confidence": 0.96,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Yeah.",
+          "value": "BARKS: Yeah.",
           "bbox": [
             {
               "h": 23.608762014100627,

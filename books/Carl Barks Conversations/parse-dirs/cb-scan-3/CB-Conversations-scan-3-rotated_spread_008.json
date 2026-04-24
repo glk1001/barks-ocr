@@ -57,7 +57,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: How did you come up with the name?**",
+          "md": "**Q:** How did you come up with the name?",
           "value": "Q: How did you come up with the name?",
           "bbox": [
             {
@@ -93,7 +93,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: And the idea to give Gladstone his incredible luck?**",
+          "md": "**Q:** And the idea to give Gladstone his incredible luck?",
           "value": "Q: And the idea to give Gladstone his incredible luck?",
           "bbox": [
             {
@@ -129,7 +129,26 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: What about Scrooge?**",
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-3-rotated_spread_008_image_1.jpg",
+          "bbox": [
+              {
+                "h": 200.93671239043454,
+                "w": 292.07888849621287,
+                "x": 97.39143697301354,
+                "y": 367.39597521436747,
+                "confidence": 0.99,
+                "end_index": 263,
+                "label": "image",
+                "start_index": 0
+              }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** What about Scrooge?",
           "value": "Q: What about Scrooge?",
           "bbox": [
             {
@@ -175,25 +194,6 @@
           "book_side": "left"
         },
         {
-          "caption": "Comic panel showing Donald Duck looking angry and Gladstone Gander looking smug. Donald says: \"I'M IN ON THIS DAISY FOR DAISY DEAL, TOO!\" and a thought bubble above him says: \"GLADSTONE GANDER! THE PEST THAT ALWAYS GETS THE LUCKY BREAKS!\"",
-          "md": "![Comic panel showing Donald Duck looking angry and Gladstone Gander looking smug. Donald says: \"I'M IN ON THIS DAISY FOR DAISY DEAL, TOO!\" and a thought bubble above him says: \"GLADSTONE GANDER! THE PEST THAT ALWAYS GETS THE LUCKY BREAKS!\"](CB-Conversations-scan-3-rotated_spread_008_page_1_image_1_v2.jpg)",
-          "url": "CB-Conversations-scan-3-rotated_spread_008_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 200.93671239043454,
-              "w": 292.07888849621287,
-              "x": 97.39143697301354,
-              "y": 367.39597521436747,
-              "confidence": 0.99,
-              "end_index": 263,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image",
-          "book_side": "left"
-        },
-        {
           "md": "\\<page_header>\nAULT, ANDRAE, AND GONG / 1975 95\n\\</page_header>",
           "value": "<page_header>\nAULT, ANDRAE, AND GONG / 1975 95\n</page_header>",
           "bbox": [
@@ -230,8 +230,8 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Didn't some characters like the Gneezles come in a flash of inspiration?**\n**BARKS:** Well, that was a story that did come as a sort of a flash. I had been struggling for days trying to think of something that I could use for a long story plot. And there was a whole bunch of company in the house at the time, and I never had time to really sit down and think of anything. Finally I got to the point where I just ignored the company, and I sat by myself out on the lawn in the swing and did some serious thinking. And all of a sudden I got to thinking of the everglades . . . and what could Donald do in the everglades . . . and what sort of creatures besides alligators would he find out in the everglades? And just like that, I thought of all these weird little people, like little gnomies who lived in there. As soon as I thought of them, why, ideas of how to use them just kept poppin' into my head; so I just sat there and let the thoughts pour all over me, and I remembered as many as I could. When I had gotten enough that I knew I had a story, I joined the party and hoisted a few drinks. Next day I was hard at it, writing the Gneezle story.",
-          "value": "Q: Didn't some characters like the Gneezles come in a flash of inspiration?\nBARKS: Well, that was a story that did come as a sort of a flash. I had been struggling for days trying to think of something that I could use for a long story plot. And there was a whole bunch of company in the house at the time, and I never had time to really sit down and think of anything. Finally I got to the point where I just ignored the company, and I sat by myself out on the lawn in the swing and did some serious thinking. And all of a sudden I got to thinking of the everglades . . . and what could Donald do in the everglades . . . and what sort of creatures besides alligators would he find out in the everglades? And just like that, I thought of all these weird little people, like little gnomies who lived in there. As soon as I thought of them, why, ideas of how to use them just kept poppin' into my head; so I just sat there and let the thoughts pour all over me, and I remembered as many as I could. When I had gotten enough that I knew I had a story, I joined the party and hoisted a few drinks. Next day I was hard at it, writing the Gneezle story.",
+          "md": "**Q:** Didn't some characters like the Gneezles come in a flash of inspiration?",
+          "value": "Q: Didn't some characters like the Gneezles come in a flash of inspiration?",
           "bbox": [
             {
               "h": 207.73750899152063,
@@ -248,8 +248,26 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Did you often build a story around the idea of a locale?**\n**BARKS:** The locale started me on more stories than anything else. Like I say about the Gneezles, I just thought of the everglades. Often while struggling for a story I would think, What locale do I want to draw? Do I want to draw a forest? The sea with sailboats? Or would it be down in the mines and caves? Soon as I had thought of a locale I would enjoy drawing, it seemed that I could much easier think of a reason for putting those characters in that locale. What would they be doing there? All of those things you just build backward from the big climactic situation, and pretty soon you've got the steps of a story.",
-          "value": "Q: Did you often build a story around the idea of a locale?\nBARKS: The locale started me on more stories than anything else. Like I say about the Gneezles, I just thought of the everglades. Often while struggling for a story I would think, What locale do I want to draw? Do I want to draw a forest? The sea with sailboats? Or would it be down in the mines and caves? Soon as I had thought of a locale I would enjoy drawing, it seemed that I could much easier think of a reason for putting those characters in that locale. What would they be doing there? All of those things you just build backward from the big climactic situation, and pretty soon you've got the steps of a story.",
+          "md": "**BARKS:** Well, that was a story that did come as a sort of a flash. I had been struggling for days trying to think of something that I could use for a long story plot. And there was a whole bunch of company in the house at the time, and I never had time to really sit down and think of anything. Finally I got to the point where I just ignored the company, and I sat by myself out on the lawn in the swing and did some serious thinking. And all of a sudden I got to thinking of the everglades . . . and what could Donald do in the everglades . . . and what sort of creatures besides alligators would he find out in the everglades? And just like that, I thought of all these weird little people, like little gnomies who lived in there. As soon as I thought of them, why, ideas of how to use them just kept poppin' into my head; so I just sat there and let the thoughts pour all over me, and I remembered as many as I could. When I had gotten enough that I knew I had a story, I joined the party and hoisted a few drinks. Next day I was hard at it, writing the Gneezle story.",
+          "value": "BARKS: Well, that was a story that did come as a sort of a flash. I had been struggling for days trying to think of something that I could use for a long story plot. And there was a whole bunch of company in the house at the time, and I never had time to really sit down and think of anything. Finally I got to the point where I just ignored the company, and I sat by myself out on the lawn in the swing and did some serious thinking. And all of a sudden I got to thinking of the everglades . . . and what could Donald do in the everglades . . . and what sort of creatures besides alligators would he find out in the everglades? And just like that, I thought of all these weird little people, like little gnomies who lived in there. As soon as I thought of them, why, ideas of how to use them just kept poppin' into my head; so I just sat there and let the thoughts pour all over me, and I remembered as many as I could. When I had gotten enough that I knew I had a story, I joined the party and hoisted a few drinks. Next day I was hard at it, writing the Gneezle story.",
+          "bbox": [
+            {
+              "h": 207.73750899152063,
+              "w": 285.9777453315549,
+              "x": 456.36712914443603,
+              "y": 165.19930318931023,
+              "confidence": 0.77,
+              "end_index": 1154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Did you often build a story around the idea of a locale?",
+          "value": "Q: Did you often build a story around the idea of a locale?",
           "bbox": [
             {
               "h": 130.15885974180642,
@@ -266,8 +284,44 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: What about the creation of imaginary locales?**\n**BARKS:** When you've got a mysterious place, then you develop something out of whole cloth. It's a mysterious place down under the earth. We don't know what's under the crust. Scientists tell us it's a big molten",
-          "value": "Q: What about the creation of imaginary locales?\nBARKS: When you've got a mysterious place, then you develop something out of whole cloth. It's a mysterious place down under the earth. We don't know what's under the crust. Scientists tell us it's a big molten",
+          "md": "**BARKS:** The locale started me on more stories than anything else. Like I say about the Gneezles, I just thought of the everglades. Often while struggling for a story I would think, What locale do I want to draw? Do I want to draw a forest? The sea with sailboats? Or would it be down in the mines and caves? Soon as I had thought of a locale I would enjoy drawing, it seemed that I could much easier think of a reason for putting those characters in that locale. What would they be doing there? All of those things you just build backward from the big climactic situation, and pretty soon you've got the steps of a story.",
+          "value": "BARKS: The locale started me on more stories than anything else. Like I say about the Gneezles, I just thought of the everglades. Often while struggling for a story I would think, What locale do I want to draw? Do I want to draw a forest? The sea with sailboats? Or would it be down in the mines and caves? Soon as I had thought of a locale I would enjoy drawing, it seemed that I could much easier think of a reason for putting those characters in that locale. What would they be doing there? All of those things you just build backward from the big climactic situation, and pretty soon you've got the steps of a story.",
+          "bbox": [
+            {
+              "h": 130.15885974180642,
+              "w": 284.0227127000763,
+              "x": 458.0211678972942,
+              "y": 381.9258869474086,
+              "confidence": 0.8,
+              "end_index": 687,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Did you often build a story around the idea of a locale?",
+          "value": "Q: Did you often build a story around the idea of a locale?",
+          "bbox": [
+            {
+              "h": 130.15885974180642,
+              "w": 284.0227127000763,
+              "x": 458.0211678972942,
+              "y": 381.9258869474086,
+              "confidence": 0.8,
+              "end_index": 687,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** When you've got a mysterious place, then you develop something out of whole cloth. It's a mysterious place down under the earth. We don't know what's under the crust. Scientists tell us it's a big molten",
+          "value": "BARKS: When you've got a mysterious place, then you develop something out of whole cloth. It's a mysterious place down under the earth. We don't know what's under the crust. Scientists tell us it's a big molten",
           "bbox": [
             {
               "h": 50.61240000000009,

@@ -39,7 +39,7 @@
           "book_side": "right"
         },
         {
-          "caption": "Views from Carl Barks E. B. Boatner / 1981",
+          "caption": "",
           "md": "![Views from Carl Barks E. B. Boatner / 1981](CB-Conversations-scan-3-rotated_spread_021_page_1_image_1_v2.jpg)",
           "url": "CB-Conversations-scan-3-rotated_spread_021_page_1_image_1_v2.jpg",
           "bbox": [
@@ -264,7 +264,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "121"
+      "printed_page_number": "120, 121"
     }
   ]
 }

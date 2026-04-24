@@ -63,12 +63,12 @@
               "start_index": 0
             }
           ],
-          "type": "text",
+          "type": "header",
           "book_side": "right"
         },
         {
-          "md": "sents something that nearly everybody wishes he could be at some time in his life—just a little bit too rich.",
-          "value": "sents something that nearly everybody wishes he could be at some time in his life—just a little bit too rich.",
+          "md": "something that nearly everybody wishes he could be at some time in his life—just a little bit too rich.",
+          "value": "something that nearly everybody wishes he could be at some time in his life—just a little bit too rich.",
           "bbox": [
             {
               "h": 24.47008574456937,
@@ -282,6 +282,25 @@
             }
           ],
           "type": "text",
+          "book_side": "right"
+        },
+        {
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-3-rotated_spread_012_image_1.jpg",
+          "bbox": [
+              {
+                "h": 203.4806178901487,
+                "w": 268.3236453887195,
+                "x": 126.66760607612426,
+                "y": 58.302477674828516,
+                "confidence": 0.99,
+                "end_index": 186,
+                "label": "image",
+                "start_index": 0
+              }
+          ],
+          "type": "image",
           "book_side": "right"
         },
         {

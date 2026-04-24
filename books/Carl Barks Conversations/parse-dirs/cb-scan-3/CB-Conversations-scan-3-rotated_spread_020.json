@@ -57,8 +57,8 @@
           "book_side": "left"
         },
         {
-          "md": "**KS:** You are now printing lithographs of some of your paintings?\n**CB:** In limited editions, but not of the Disney paintings \\[one new Disney painting, a version of the cover of WDC 108 with Uncle Scrooge added, is to be offered in 1983]. So far there have appeared *Xerxes and His Harem*, then *King Beowulf*, and then I plan a painting with a Wild West theme. I will not print more than 300 copies. *Xerxes* was printed in an edition of 250, and the demand was so great that *King Beowulf* had to be 300.",
-          "value": "KS: You are now printing lithographs of some of your paintings?\nCB: In limited editions, but not of the Disney paintings [one new Disney painting, a version of the cover of WDC 108 with Uncle Scrooge added, is to be offered in 1983]. So far there have appeared Xerxes and His Harem, then King Beowulf, and then I plan a painting with a Wild West theme. I will not print more than 300 copies. Xerxes was printed in an edition of 250, and the demand was so great that King Beowulf had to be 300.",
+          "md": "**KS:** You are now printing lithographs of some of your paintings?",
+          "value": "KS: You are now printing lithographs of some of your paintings?",
           "bbox": [
             {
               "h": 100.14381522842037,
@@ -75,8 +75,64 @@
           "book_side": "left"
         },
         {
-          "md": "**KS:** What do you feel when you hear that at an auction, for example, one of your Disney paintings is sold for ten times the price which you originally asked for it—do you regret letting the paintings go so cheaply then?\n**GB:** Much more than ten times, sometimes. Carl sold them originally for $150 to $250, and today they go for $20,000 to $40,000.",
-          "value": "KS: What do you feel when you hear that at an auction, for example, one of your Disney paintings is sold for ten times the price which you originally asked for it—do you regret letting the paintings go so cheaply then?\nGB: Much more than ten times, sometimes. Carl sold them originally for $150 to $250, and today they go for $20,000 to $40,000.",
+          "md": "**CB:** In limited editions, but not of the Disney paintings \\[one new Disney painting, a version of the cover of WDC 108 with Uncle Scrooge added, is to be offered in 1983]. So far there have appeared *Xerxes and His Harem*, then *King Beowulf*, and then I plan a painting with a Wild West theme. I will not print more than 300 copies. *Xerxes* was printed in an edition of 250, and the demand was so great that *King Beowulf* had to be 300.",
+          "value": "CB: In limited editions, but not of the Disney paintings [one new Disney painting, a version of the cover of WDC 108 with Uncle Scrooge added, is to be offered in 1983]. So far there have appeared Xerxes and His Harem, then King Beowulf, and then I plan a painting with a Wild West theme. I will not print more than 300 copies. Xerxes was printed in an edition of 250, and the demand was so great that King Beowulf had to be 300.",
+          "bbox": [
+            {
+              "h": 100.14381522842037,
+              "w": 278.4025198349372,
+              "x": 114.04876706007052,
+              "y": 98.78489688095468,
+              "confidence": 0.93,
+              "end_index": 509,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**KS:** What do you feel when you hear that at an auction, for example, one of your Disney paintings is sold for ten times the price which you originally asked for it—do you regret letting the paintings go so cheaply then?",
+          "value": "KS: What do you feel when you hear that at an auction, for example, one of your Disney paintings is sold for ten times the price which you originally asked for it—do you regret letting the paintings go so cheaply then?",
+          "bbox": [
+            {
+              "h": 63.31347246093749,
+              "w": 283.2722817144626,
+              "x": 113.77593657107471,
+              "y": 208.6971709484566,
+              "confidence": 0.77,
+              "end_index": 352,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 37.59,
+              "w": 283.91,
+              "x": 112.25,
+              "y": 208.73,
+              "confidence": 1.0,
+              "end_index": 221,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 23.13,
+              "w": 277.07,
+              "x": 114.09,
+              "y": 247.64,
+              "confidence": 1.0,
+              "end_index": 352,
+              "label": "text",
+              "start_index": 223
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**GB:** Much more than ten times, sometimes. Carl sold them originally for $150 to $250, and today they go for $20,000 to $40,000.",
+          "value": "GB: Much more than ten times, sometimes. Carl sold them originally for $150 to $250, and today they go for $20,000 to $40,000.",
           "bbox": [
             {
               "h": 63.31347246093749,
@@ -257,8 +313,46 @@
           "book_side": "left"
         },
         {
-          "md": "**KS:** And why didn't you draw any more stories with Mickey?\n**CB:** Well, they normally had enough artists for him; this time was an exception. But, as I said, it was wartime, and I had to fill in.",
-          "value": "KS: And why didn't you draw any more stories with Mickey?\nCB: Well, they normally had enough artists for him; this time was an exception. But, as I said, it was wartime, and I had to fill in.",
+          "md": "**KS:** And why didn't you draw any more stories with Mickey?",
+          "value": "KS: And why didn't you draw any more stories with Mickey?",
+          "bbox": [
+            {
+              "h": 37.166992082698144,
+              "w": 277.533224067502,
+              "x": 112.64853692478088,
+              "y": 533.4942922494284,
+              "confidence": 0.75,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.41,
+              "w": 235.8,
+              "x": 111.2,
+              "y": 531.56,
+              "confidence": 1.0,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 24.19,
+              "w": 279.7,
+              "x": 111.2,
+              "y": 544.97,
+              "confidence": 1.0,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 62
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, they normally had enough artists for him; this time was an exception. But, as I said, it was wartime, and I had to fill in.",
+          "value": "CB: Well, they normally had enough artists for him; this time was an exception. But, as I said, it was wartime, and I had to fill in.",
           "bbox": [
             {
               "h": 37.166992082698144,

@@ -21,8 +21,27 @@
           "book_side": "left"
         },
         {
-          "md": "This instance of Barks's explicit influence is probably the most well known and best documented, in part because the Hollywood rumor mill latched onto the fact that both Spielberg and Lucas were paying very high prices for Barks oils in the 1980s. The weight of Barks's effect on the world runs much deeper and often along more indirect paths than this. The massive quantity and range of work Barks produced, which has remained in print all over the world for more than fifty years, fundamentally altered millions of people's lives during their formative years and afterwards, teaching people to love to read, pointing them in the direction their lives should take, defining the codes of morality and excellence by which they would lead their lives, even inspiring them to enter specific professions.",
-          "value": "This instance of Barks's explicit influence is probably the most well known and best documented, in part because the Hollywood rumor mill latched onto the fact that both Spielberg and Lucas were paying very high prices for Barks oils in the 1980s. The weight of Barks's effect on the world runs much deeper and often along more indirect paths than this. The massive quantity and range of work Barks produced, which has remained in print all over the world for more than fifty years, fundamentally altered millions of people's lives during their formative years and afterwards, teaching people to love to read, pointing them in the direction their lives should take, defining the codes of morality and excellence by which they would lead their lives, even inspiring them to enter specific professions.",
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-1-rotated_spread_006_image_1.jpg",
+          "bbox": [
+            {
+              "h": 123.03218650438265,
+              "w": 147.374221739234,
+              "x": 40.53995336318599,
+              "y": 258.4293297684832,
+              "confidence": 0.89,
+              "end_index": 195,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "md": "This instance of Barks's explicit influence is probably the most well known and best documented, in part because the Hollywood rumor mill latched onto the fact that both Spielberg and Lucas were paying very high prices for Barks oils in the 1980s. The weight of Barks's effect on the world runs much deeper and often along more indirect paths than this. The massive quantity and range of work Barks produced, which has remained in print all over the world for more than fifty years, fundamentally altered millions of people's lives during their formative years and afterwards, teaching people to love to read, pointing them in the direction their lives should take, defining the codes of morality and excellence by which they would lead their lives, even inspiring them to enter specific occupations.",
+          "value": "This instance of Barks's explicit influence is probably the most well known and best documented, in part because the Hollywood rumor mill latched onto the fact that both Spielberg and Lucas were paying very high prices for Barks oils in the 1980s. The weight of Barks's effect on the world runs much deeper and often along more indirect paths than this. The massive quantity and range of work Barks produced, which has remained in print all over the world for more than fifty years, fundamentally altered millions of people's lives during their formative years and afterwards, teaching people to love to read, pointing them in the direction their lives should take, defining the codes of morality and excellence by which they would lead their lives, even inspiring them to enter specific occupations.",
           "bbox": [
             {
               "h": 104.49545951910252,
@@ -32,24 +51,6 @@
               "confidence": 0.83,
               "end_index": 799,
               "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
-          "md": "Comic panel showing cartoon characters with text \"JUMPIN' JUGGERNAUTS! RUN FOR YOUR LIVES!\" and action scene with brick wall",
-          "value": "Comic panel showing cartoon characters with text \"JUMPIN' JUGGERNAUTS! RUN FOR YOUR LIVES!\" and action scene with brick wall",
-          "bbox": [
-            {
-              "h": 123.03218650438265,
-              "w": 147.374221739234,
-              "x": 40.53995336318599,
-              "y": 258.4293297684832,
-              "confidence": 0.8,
-              "end_index": 123,
-              "label": "image",
               "start_index": 0
             }
           ],

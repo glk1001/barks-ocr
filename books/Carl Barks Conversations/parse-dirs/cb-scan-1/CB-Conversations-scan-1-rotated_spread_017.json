@@ -56,7 +56,7 @@
             {
               "h": 14.2,
               "w": 204.25,
-              "x": 499.46,
+              "x": 450.00,
               "y": 287.63,
               "confidence": 1.0,
               "end_index": 58,
@@ -243,7 +243,8 @@
       "page_height": 594.72,
       "page_number": 1,
       "page_width": 841.2,
-      "success": true
+      "success": true,
+      "printed_page_number": "xxxiv, xxxv"
     }
   ]
 }

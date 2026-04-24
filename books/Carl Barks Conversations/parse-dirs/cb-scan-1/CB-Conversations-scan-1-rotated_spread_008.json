@@ -22,8 +22,8 @@
           "book_side": "left"
         },
         {
-          "md": "Only the Dalai Lama of scripters, Carl Barks, is permitted real freedom. Gray-haired and sixtiysh, Barks has a freshness and originality which both inspire and depress colleagues. He invented that wonderful miser, Uncle Scrooge (the only Dell character rivaling Pogo in popularity among the \"intelligentsia\"), the gently mad inventing genius, Gyro Gearloose, and those unvillainous villains, the Beagle Boys. Every month Bark's Donald Duck yarn is featured in *Walt Disney's Comics*, the best-loved story in the comic world. The polished drawing and writing (Barks does both) bring a flood of fan mail, including many protests whenever a non-Barks Donald appears.",
-          "value": "Only the Dalai Lama of scripters, Carl Barks, is permitted real freedom. Gray-haired and sixtiysh, Barks has a freshness and originality which both inspire and depress colleagues. He invented that wonderful miser, Uncle Scrooge (the only Dell character rivaling Pogo in popularity among the \"intelligentsia\"), the gently mad inventing genius, Gyro Gearloose, and those unvillainous villains, the Beagle Boys. Every month Bark's Donald Duck yarn is featured in Walt Disney's Comics, the best-loved story in the comic world. The polished drawing and writing (Barks does both) bring a flood of fan mail, including many protests whenever a non-Barks Donald appears.",
+          "md": "Only the Dalai Lama of scripters, Carl Barks, is permitted real freedom. Gray-haired and sixtyish, Barks has a freshness and originality which both inspire and depress colleagues. He invented that wonderful miser, Uncle Scrooge (the only Dell character rivaling Pogo in popularity among the \"intelligentsia\"), the gently mad inventing genius, Gyro Gearloose, and those unvillainous villains, the Beagle Boys. Every month Bark's Donald Duck yarn is featured in *Walt Disney's Comics*, the best-loved story in the comic world. The polished drawing and writing (Barks does both) bring a flood of fan mail, including many protests whenever a non-Barks Donald appears.",
+          "value": "Only the Dalai Lama of scripters, Carl Barks, is permitted real freedom. Gray-haired and sixtyish, Barks has a freshness and originality which both inspire and depress colleagues. He invented that wonderful miser, Uncle Scrooge (the only Dell character rivaling Pogo in popularity among the \"intelligentsia\"), the gently mad inventing genius, Gyro Gearloose, and those unvillainous villains, the Beagle Boys. Every month Bark's Donald Duck yarn is featured in Walt Disney's Comics, the best-loved story in the comic world. The polished drawing and writing (Barks does both) bring a flood of fan mail, including many protests whenever a non-Barks Donald appears.",
           "bbox": [
             {
               "h": 100.54123118390339,
@@ -86,6 +86,25 @@
           "book_side": "left"
         },
         {
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-1-rotated_spread_008_image_1.jpg",
+          "bbox": [
+            {
+              "h": 207.96542845012388,
+              "w": 299.09374518864337,
+              "x": 453.5292512623857,
+              "y": 37.10292242163682,
+              "confidence": 0.99,
+              "end_index": 105,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
           "md": "Barks was the only \"piecework\" employee of Western to be accorded",
           "value": "Barks was the only \"piecework\" employee of Western to be accorded",
           "bbox": [
@@ -121,24 +140,6 @@
           ],
           "type": "heading",
           "book_side": "left"
-        },
-        {
-          "md": "Donald Duck diving through a pile of money with the caption \"I LIKE TO DIVE AROUND IN IT LIKE A PORPOISE!\"",
-          "value": "Donald Duck diving through a pile of money with the caption \"I LIKE TO DIVE AROUND IN IT LIKE A PORPOISE!\"",
-          "bbox": [
-            {
-              "h": 207.96542845012388,
-              "w": 299.09374518864337,
-              "x": 453.5292512623857,
-              "y": 37.10292242163682,
-              "confidence": 0.99,
-              "end_index": 105,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "right"
         },
         {
           "md": "this kind of freedom on a regular basis and allowed to do the work the way he wanted to do it with virtually no editorial interference. Barks literally paid for his freedom, however. He was actually paid *less* than some of the other artists working for Western Publishing at the time, but he valued his autonomy more than the money he could earn by toeing an editorial line:",

@@ -57,7 +57,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: What happened to all your original artwork?**",
+          "md": "**Q:** What happened to all your original artwork?",
           "value": "Q: What happened to all your original artwork?",
           "bbox": [
             {
@@ -93,7 +93,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: How did you come to do the non-duck stories?**",
+          "md": "**Q:** How did you come to do the non-duck stories?",
           "value": "Q: How did you come to do the non-duck stories?",
           "bbox": [
             {
@@ -202,7 +202,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Carl, could you tell us what you feel were your most important early influences, especially in terms of artists?**",
+          "md": "**Q:** Carl, could you tell us what you feel were your most important early influences, especially in terms of artists?",
           "value": "Q: Carl, could you tell us what you feel were your most important early influences, especially in terms of artists?",
           "bbox": [
             {
@@ -242,7 +242,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "90"
+      "printed_page_number": "90, 91"
     }
   ]
 }

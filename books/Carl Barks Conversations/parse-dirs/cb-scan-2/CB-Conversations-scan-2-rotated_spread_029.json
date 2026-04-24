@@ -257,6 +257,25 @@
           "book_side": "left"
         },
         {
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-2-rotated_spread_029_image_1.jpg",
+          "bbox": [
+              {
+                "h": 246.99772072694364,
+                "w": 344.5852958031632,
+                "x": 417.0025496141388,
+                "y": 65.06271219512196,
+                "confidence": 0.99,
+                "end_index": 213,
+                "label": "image",
+                "start_index": 0
+              }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
           "md": "**BARRIER:** Might Western's editors have been concerned about Scrooge and Goldie being alone on Scrooge's claim for a month?",
           "value": "BARRIER: Might Western's editors have been concerned about Scrooge and Goldie being alone on Scrooge's claim for a month?",
           "bbox": [
@@ -351,34 +370,6 @@
               "end_index": 1,
               "label": "header",
               "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "right"
-        },
-        {
-          "md": "A chaotic scene depicting a fight in a barroom with multiple figures engaged in combat, with a speech bubble at the top reading \"IT WAS A FIGHT TO BE PROUD OF! I WAS LIKE A BUZZSAW! MEN FELL IN ROWS LIKE DOMINOES!\"",
-          "value": "A chaotic scene depicting a fight in a barroom with multiple figures engaged in combat, with a speech bubble at the top reading \"IT WAS A FIGHT TO BE PROUD OF! I WAS LIKE A BUZZSAW! MEN FELL IN ROWS LIKE DOMINOES!\"",
-          "bbox": [
-            {
-              "h": 246.99772072694364,
-              "w": 344.5852958031632,
-              "x": 417.0025496141388,
-              "y": 65.06271219512196,
-              "confidence": 0.99,
-              "end_index": 213,
-              "label": "image",
-              "start_index": 0
-            },
-            {
-              "h": 49.69,
-              "w": 67.3,
-              "x": 421.39,
-              "y": 72.82,
-              "confidence": 1.0,
-              "end_index": 213,
-              "label": "text",
-              "start_index": 136
             }
           ],
           "type": "text",

@@ -57,7 +57,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: How about the Beagle Boys?**",
+          "md": "**Q:** How about the Beagle Boys?",
           "value": "Q: How about the Beagle Boys?",
           "bbox": [
             {
@@ -93,8 +93,8 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: Were you satirizing the Boy Scouts with them?**\n**A:** Oh, no! I never heard of the Boy Scouts.",
-          "value": "Q: Were you satirizing the Boy Scouts with them?\nA: Oh, no! I never heard of the Boy Scouts.",
+          "md": "**Q:** Were you satirizing the Boy Scouts with them?",
+          "value": "Q: Were you satirizing the Boy Scouts with them?",
           "bbox": [
             {
               "h": 22.87384615384616,
@@ -131,8 +131,46 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: You once mentioned doing a sort of take-off on the Peace Corps . . .**\n**A:** I was a little afraid to draw or write any stories that might get the publishers in trouble with the government or tread on some politician's toes. And, you know, our foreign policy is \"Always Be Nice.\" Anything that gets published under the Disney name in a foreign country is accepted as part of the American foreign policy, I imagine, by the people who read it. So I felt I'd better not kid about it. I did do a very mild take-off of the Peace Corps under another name. It was a foolproof way of kidding the Peace Corps without hurting anyone's feelings. Most of my censorship was self-censorship because of the fear of having to redo something after I'd sent it in, been paid for it, and spent the money.",
-          "value": "Q: You once mentioned doing a sort of take-off on the Peace Corps . . .\nA: I was a little afraid to draw or write any stories that might get the publishers in trouble with the government or tread on some politician's toes. And, you know, our foreign policy is \"Always Be Nice.\" Anything that gets published under the Disney name in a foreign country is accepted as part of the American foreign policy, I imagine, by the people who read it. So I felt I'd better not kid about it. I did do a very mild take-off of the Peace Corps under another name. It was a foolproof way of kidding the Peace Corps without hurting anyone's feelings. Most of my censorship was self-censorship because of the fear of having to redo something after I'd sent it in, been paid for it, and spent the money.",
+          "md": "**A:** Oh, no! I never heard of the Boy Scouts.",
+          "value": "A: Oh, no! I never heard of the Boy Scouts.",
+          "bbox": [
+            {
+              "h": 22.87384615384616,
+              "w": 193.738875,
+              "x": 100.68112500000001,
+              "y": 216.90716180371356,
+              "confidence": 0.79,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.31,
+              "w": 193.74,
+              "x": 100.68,
+              "y": 216.91,
+              "confidence": 1.0,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 8.68,
+              "w": 167.19,
+              "x": 101.73,
+              "y": 231.1,
+              "confidence": 1.0,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 53
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** You once mentioned doing a sort of take-off on the Peace Corps . . .",
+          "value": "Q: You once mentioned doing a sort of take-off on the Peace Corps . . .",
           "bbox": [
             {
               "h": 140.13316646341463,
@@ -169,7 +207,45 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: Did you feel that Magica DeSpell filled a need?**",
+          "md": "**A:** I was a little afraid to draw or write any stories that might get the publishers in trouble with the government or tread on some politician's toes. And, you know, our foreign policy is \"Always Be Nice.\" Anything that gets published under the Disney name in a foreign country is accepted as part of the American foreign policy, I imagine, by the people who read it. So I felt I'd better not kid about it. I did do a very mild take-off of the Peace Corps under another name. It was a foolproof way of kidding the Peace Corps without hurting anyone's feelings. Most of my censorship was self-censorship because of the fear of having to redo something after I'd sent it in, been paid for it, and spent the money.",
+          "value": "A: I was a little afraid to draw or write any stories that might get the publishers in trouble with the government or tread on some politician's toes. And, you know, our foreign policy is \"Always Be Nice.\" Anything that gets published under the Disney name in a foreign country is accepted as part of the American foreign policy, I imagine, by the people who read it. So I felt I'd better not kid about it. I did do a very mild take-off of the Peace Corps under another name. It was a foolproof way of kidding the Peace Corps without hurting anyone's feelings. Most of my censorship was self-censorship because of the fear of having to redo something after I'd sent it in, been paid for it, and spent the money.",
+          "bbox": [
+            {
+              "h": 140.13316646341463,
+              "w": 281.0979152593846,
+              "x": 101.14207040181975,
+              "y": 251.49715664062504,
+              "confidence": 0.91,
+              "end_index": 790,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.31,
+              "w": 273.39,
+              "x": 100.68,
+              "y": 250.56,
+              "confidence": 1.0,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 126.99,
+              "w": 281.28,
+              "x": 99.89,
+              "y": 263.97,
+              "confidence": 0.91,
+              "end_index": 790,
+              "label": "text",
+              "start_index": 76
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Did you feel that Magica DeSpell filled a need?",
           "value": "Q: Did you feel that Magica DeSpell filled a need?",
           "bbox": [
             {
@@ -205,7 +281,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: Could you tell us something about the pay?**",
+          "md": "**Q:** Could you tell us something about the pay?",
           "value": "Q: Could you tell us something about the pay?",
           "bbox": [
             {
@@ -277,8 +353,8 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: I understand they get a lot more for doing superheroes at DC.**\n**A:** Well, I'll tell you, there's so much going on in one of those *Superman* things compared to what there is in a duck page that they are not getting much more per pencil line than I was. Also, I get a pension.",
-          "value": "Q: I understand they get a lot more for doing superheroes at DC.\nA: Well, I'll tell you, there's so much going on in one of those Superman things compared to what there is in a duck page that they are not getting much more per pencil line than I was. Also, I get a pension.",
+          "md": "**Q:** I understand they get a lot more for doing superheroes at DC.",
+          "value": "Q: I understand they get a lot more for doing superheroes at DC.",
           "bbox": [
             {
               "h": 48.902705570291786,
@@ -295,7 +371,43 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: What sort of schedule did you have?**",
+          "md": "**Q:** What sort of schedule did you have?",
+          "value": "Q: What sort of schedule did you have?",
+          "bbox": [
+            {
+              "h": 11.095666420541148,
+              "w": 154.2764186118522,
+              "x": 442.38967268483236,
+              "y": 178.11553423685217,
+              "confidence": 0.82,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Well, I'll tell you, there's so much going on in one of those *Superman* things compared to what there is in a duck page that they are not getting much more per pencil line than I was. Also, I get a pension.",
+          "value": "A: Well, I'll tell you, there's so much going on in one of those Superman things compared to what there is in a duck page that they are not getting much more per pencil line than I was. Also, I get a pension.",
+          "bbox": [
+            {
+              "h": 48.902705570291786,
+              "w": 282.8535000000001,
+              "x": 440.841375,
+              "y": 118.57591511936342,
+              "confidence": 0.86,
+              "end_index": 282,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** What sort of schedule did you have?",
           "value": "Q: What sort of schedule did you have?",
           "bbox": [
             {
@@ -331,7 +443,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: And you still could turn out a *Scrooge* story every two months and a 10-page *Donald* story every month?**",
+          "md": "**Q:** And you still could turn out a *Scrooge* story every two months and a 10-page *Donald* story every month?",
           "value": "Q: And you still could turn out a Scrooge story every two months and a 10-page Donald story every month?",
           "bbox": [
             {
@@ -367,8 +479,8 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: How did you come to do the Little Golden Books with the ducks?**\n**A:** The Little Golden Books I did because I was asked to give them a try. I didn't eagerly ask to do any more, and that may be one of the reasons I wasn't asked to do more as the few duck Goldens came along. The work was not interesting. I only made cleaned-up pencil drawings on tracing paper. A water color \\[gouache] artist then made the color separations, or whatever.",
-          "value": "Q: How did you come to do the Little Golden Books with the ducks?\nA: The Little Golden Books I did because I was asked to give them a try. I didn't eagerly ask to do any more, and that may be one of the reasons I wasn't asked to do more as the few duck Goldens came along. The work was not interesting. I only made cleaned-up pencil drawings on tracing paper. A water color [gouache] artist then made the color separations, or whatever.",
+          "md": "**Q:** How did you come to do the Little Golden Books with the ducks?",
+          "value": "Q: How did you come to do the Little Golden Books with the ducks?",
           "bbox": [
             {
               "h": 89.20800000000003,
@@ -385,7 +497,25 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Would you give us some details on your Barney Bear work? How did you get the assignment?**",
+          "md": "**A:** The Little Golden Books I did because I was asked to give them a try. I didn't eagerly ask to do any more, and that may be one of the reasons I wasn't asked to do more as the few duck Goldens came along. The work was not interesting. I only made cleaned-up pencil drawings on tracing paper. A water color \\[gouache] artist then made the color separations, or whatever.",
+          "value": "A: The Little Golden Books I did because I was asked to give them a try. I didn't eagerly ask to do any more, and that may be one of the reasons I wasn't asked to do more as the few duck Goldens came along. The work was not interesting. I only made cleaned-up pencil drawings on tracing paper. A water color [gouache] artist then made the color separations, or whatever.",
+          "bbox": [
+            {
+              "h": 89.20800000000003,
+              "w": 284.3256,
+              "x": 442.47120000000007,
+              "y": 399.65184000000005,
+              "confidence": 0.91,
+              "end_index": 444,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Would you give us some details on your Barney Bear work? How did you get the assignment?",
           "value": "Q: Would you give us some details on your Barney Bear work? How did you get the assignment?",
           "bbox": [
             {

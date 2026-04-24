@@ -444,24 +444,6 @@
           ],
           "type": "text",
           "book_side": "right"
-        },
-        {
-          "md": "\\<page_break />",
-          "value": "<page_break />",
-          "bbox": [
-            {
-              "h": 16.04,
-              "w": 283.91,
-              "x": 113.04,
-              "y": 284.44,
-              "confidence": 0.4,
-              "end_index": 14,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
         }
       ],
       "page_height": 595.44,

@@ -19,7 +19,7 @@
                   "start_index": 0
                 }
               ],
-              "type": "text"
+              "type": "header"
             }
           ],
           "md": "CARL BARKS: CONVERSATIONS",
@@ -36,24 +36,6 @@
             }
           ],
           "type": "header",
-          "book_side": "left"
-        },
-        {
-          "md": "Comic panel showing two cartoon duck characters in conversation, with one saying \"WELL, IF YOU DECIDE TO GIVE IT AWAY, I'LL GLADLY TAKE IT OFF YOUR HANDS!\" and the other responding \"EEP!\"",
-          "value": "Comic panel showing two cartoon duck characters in conversation, with one saying \"WELL, IF YOU DECIDE TO GIVE IT AWAY, I'LL GLADLY TAKE IT OFF YOUR HANDS!\" and the other responding \"EEP!\"",
-          "bbox": [
-            {
-              "h": 203.4806178901487,
-              "w": 268.3236453887195,
-              "x": 126.66760607612426,
-              "y": 58.302477674828516,
-              "confidence": 0.99,
-              "end_index": 186,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
           "book_side": "left"
         },
         {
@@ -75,8 +57,8 @@
           "book_side": "left"
         },
         {
-          "md": "\\<page_header>\nAULT, ANDRAE, AND GONG / 1975\n\\</page_header>",
-          "value": "<page_header>\nAULT, ANDRAE, AND GONG / 1975\n</page_header>",
+          "md": "AULT, ANDRAE, AND GONG / 1975  103",
+          "value": "AULT, ANDRAE, AND GONG / 1975  103",
           "bbox": [
             {
               "h": 10.385461627048402,
@@ -89,7 +71,7 @@
               "start_index": 0
             }
           ],
-          "type": "text",
+          "type": "header",
           "book_side": "right"
         },
         {
@@ -111,7 +93,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Did you have any problems with censorship?**",
+          "md": "**Q:** Did you have any problems with censorship?",
           "value": "Q: Did you have any problems with censorship?",
           "bbox": [
             {
@@ -147,7 +129,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: What about the problem of death? Was it ever difficult to relate humor to the fact that these characters could die?**",
+          "md": "**Q:** What about the problem of death? Was it ever difficult to relate humor to the fact that these characters could die?",
           "value": "Q: What about the problem of death? Was it ever difficult to relate humor to the fact that these characters could die?",
           "bbox": [
             {
@@ -243,7 +225,7 @@
               "start_index": 4
             }
           ],
-          "type": "text",
+          "type": "header",
           "book_side": "left"
         }
       ],

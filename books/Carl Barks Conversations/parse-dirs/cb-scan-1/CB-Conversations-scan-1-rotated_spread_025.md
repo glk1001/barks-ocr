@@ -1,5 +1,3 @@
-# 6 CARL BARKS: CONVERSATIONS
-
 **Q:** I understand "Pirate's Gold" was intended to be a full-length movie.
 
 **A:** That was the hope of the story crew that wrote it up, but it got lost in the shuffle. They never had a full-length movie of any one Disney character like Donald or Mickey. Whenever they used any of those characters, they ran in the whole mob.

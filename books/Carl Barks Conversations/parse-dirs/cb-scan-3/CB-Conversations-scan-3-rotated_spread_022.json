@@ -113,7 +113,7 @@
           "book_side": "left"
         },
         {
-          "caption": "Fortune Favors the Bold: An Interview with Carl Barks by Edward Summer / 1981",
+          "caption": "",
           "md": "![Fortune Favors the Bold: An Interview with Carl Barks by Edward Summer / 1981](CB-Conversations-scan-3-rotated_spread_022_page_1_seal_1_v2.jpg)",
           "url": "CB-Conversations-scan-3-rotated_spread_022_page_1_seal_1_v2.jpg",
           "bbox": [
@@ -150,7 +150,7 @@
           "book_side": "right"
         },
         {
-          "md": "*This interview material was recorded between 1975 and 1981, in connection with a film series by Edward Summer entitled The Men Who Made the Comics, a project supported by a grant from the National Endowment for the Arts, a Federal Agency in Washington, D.C.*",
+          "md": "*This interview material was recorded between 1975 and 1981, in connection with a film series by Edward Summer entitled* The Men Who Made the Comics, *a project supported by a grant from the National Endowment for the Arts, a Federal Agency in Washington, D.C.*",
           "value": "This interview material was recorded between 1975 and 1981, in connection with a film series by Edward Summer entitled The Men Who Made the Comics, a project supported by a grant from the National Endowment for the Arts, a Federal Agency in Washington, D.C.",
           "bbox": [
             {
@@ -190,7 +190,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "122"
+      "printed_page_number": "122, 123"
     }
   ]
 }

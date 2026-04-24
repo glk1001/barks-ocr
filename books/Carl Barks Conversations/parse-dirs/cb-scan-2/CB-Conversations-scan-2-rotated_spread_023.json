@@ -57,8 +57,26 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** I've heard this on a couple of occasions, that the Depression was really a great boon to the Disney studio, because there were so many artists who needed work and were available to become animators.\n**BARKS:** Yeah. And the Disney studio was a great boon to those artists. That was the great virtue of that studio: it gave employment to a whole bunch of guys who would have had to have been ditch diggers otherwise.",
-          "value": "BARRIER: I've heard this on a couple of occasions, that the Depression was really a great boon to the Disney studio, because there were so many artists who needed work and were available to become animators.\nBARKS: Yeah. And the Disney studio was a great boon to those artists. That was the great virtue of that studio: it gave employment to a whole bunch of guys who would have had to have been ditch diggers otherwise.",
+          "md": "**BARRIER:** I've heard this on a couple of occasions, that the Depression was really a great boon to the Disney studio, because there were so many artists who needed work and were available to become animators.",
+          "value": "BARRIER: I've heard this on a couple of occasions, that the Depression was really a great boon to the Disney studio, because there were so many artists who needed work and were available to become animators.",
+          "bbox": [
+            {
+              "h": 78.47538502405678,
+              "w": 283.8122699421209,
+              "x": 93.4836069990949,
+              "y": 146.12015376691124,
+              "confidence": 0.97,
+              "end_index": 427,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Yeah. And the Disney studio was a great boon to those artists. That was the great virtue of that studio: it gave employment to a whole bunch of guys who would have had to have been ditch diggers otherwise.",
+          "value": "BARKS: Yeah. And the Disney studio was a great boon to those artists. That was the great virtue of that studio: it gave employment to a whole bunch of guys who would have had to have been ditch diggers otherwise.",
           "bbox": [
             {
               "h": 78.47538502405678,
@@ -111,8 +129,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** They required you to draw on a certain size of paper?\n**BARKS:** That's right. They told me what size the drawings had to be.",
-          "value": "BARRIER: They required you to draw on a certain size of paper?\nBARKS: That's right. They told me what size the drawings had to be.",
+          "md": "**BARRIER:** They required you to draw on a certain size of paper?",
+          "value": "BARRIER: They required you to draw on a certain size of paper?",
           "bbox": [
             {
               "h": 27.008850071455775,
@@ -147,10 +165,86 @@
           ],
           "type": "text",
           "book_side": "left"
+          },
+          {
+            "md": "**BARKS:** That's right. They told me what size the drawings had to be.",
+            "value": "BARKS: That's right. They told me what size the drawings had to be.",
+            "bbox": [
+              {
+                "h": 27.008850071455775,
+                "w": 265.36155556283353,
+                "x": 89.78888084151106,
+                "y": 391.540341068026,
+                "confidence": 0.96,
+                "end_index": 137,
+                "label": "text",
+                "start_index": 0
+              },
+              {
+                "h": 14.46,
+                "w": 248.42,
+                "x": 89.64,
+                "y": 390.65,
+                "confidence": 1.0,
+                "end_index": 65,
+                "label": "text",
+                "start_index": 0
+              },
+              {
+                "h": 13.93,
+                "w": 266.03,
+                "x": 89.11,
+                "y": 404.06,
+                "confidence": 0.96,
+                "end_index": 137,
+                "label": "text",
+                "start_index": 67
+              }
+            ],
+          "type": "text",
+          "book_side": "left"
         },
         {
-          "md": "**BARRIER:** With the eight-panel pages, you could cut them in half.\n**BARKS:** Yes, I cut them in half. A lot of the guys, though, just drew on full size. I used to think, good Lord, they must have arms on them six feet long.",
-          "value": "BARRIER: With the eight-panel pages, you could cut them in half.\nBARKS: Yes, I cut them in half. A lot of the guys, though, just drew on full size. I used to think, good Lord, they must have arms on them six feet long.",
+          "md": "**BARRIER:** With the eight-panel pages, you could cut them in half.",
+          "value": "BARRIER: With the eight-panel pages, you could cut them in half.",
+          "bbox": [
+            {
+              "h": 49.46535115758386,
+              "w": 282.5670010629049,
+              "x": 88.72931000797924,
+              "y": 423.844492782965,
+              "confidence": 0.97,
+              "end_index": 225,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 28.39,
+              "w": 274.44,
+              "x": 87.54,
+              "y": 423.51,
+              "confidence": 1.0,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 40.22,
+              "w": 275.76,
+              "x": 86.22,
+              "y": 434.03,
+              "confidence": 0.97,
+              "end_index": 225,
+              "label": "text",
+              "start_index": 69
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** Yes, I cut them in half. A lot of the guys, though, just drew on full size. I used to think, good Lord, they must have arms on them six feet long.",
+          "value": "BARKS: Yes, I cut them in half. A lot of the guys, though, just drew on full size. I used to think, good Lord, they must have arms on them six feet long.",
           "bbox": [
             {
               "h": 49.46535115758386,

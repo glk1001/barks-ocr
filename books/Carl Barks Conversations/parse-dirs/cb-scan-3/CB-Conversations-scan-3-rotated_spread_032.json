@@ -75,8 +75,46 @@
           "book_side": "left"
         },
         {
-          "md": "**H:** What was the first comic strip you ever saw in your life?\n**B:** Oh, that was a long time ago; it was in my childhood around 1906 or 1907.",
-          "value": "H: What was the first comic strip you ever saw in your life?\nB: Oh, that was a long time ago; it was in my childhood around 1906 or 1907.",
+          "md": "**H:** What was the first comic strip you ever saw in your life?",
+          "value": "H: What was the first comic strip you ever saw in your life?",
+          "bbox": [
+            {
+              "h": 35.130960000000016,
+              "w": 279.27840000000003,
+              "x": 120.2916,
+              "y": 111.34728000000001,
+              "confidence": 0.81,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.14,
+              "w": 228.18,
+              "x": 120.13,
+              "y": 110.15,
+              "confidence": 1.0,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 24.19,
+              "w": 280.75,
+              "x": 118.29,
+              "y": 123.82,
+              "confidence": 1.0,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 65
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Oh, that was a long time ago; it was in my childhood around 1906 or 1907.",
+          "value": "B: Oh, that was a long time ago; it was in my childhood around 1906 or 1907.",
           "bbox": [
             {
               "h": 35.130960000000016,

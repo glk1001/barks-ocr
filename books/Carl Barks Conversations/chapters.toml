@@ -1,0 +1,75 @@
+# Carl Barks: Conversations — chapter sidecar for EPUB build.
+# 'start_printed_page' must match a printed page number detected on a spread
+# (see each scan dir's *_manifest.json "printed_page_numbers_detected" fields).
+
+[[chapters]]
+title = "Introduction"
+start_printed_page = "ix"
+
+[[chapters]]
+title = "Chronology"
+start_printed_page = "xxxv"
+
+[[chapters]]
+title = "Part One: Interviews"
+start_printed_page = "1"
+
+[[chapters]]
+title = "The Duck Man"
+start_printed_page = "3"
+
+[[chapters]]
+title = "A Conversation with Carl Barks"
+start_printed_page = "19"
+
+[[chapters]]
+title = "An Interview with Carl Barks"
+start_printed_page = "26"
+
+[[chapters]]
+title = "Carl Barks, Telling It Like It Is"
+start_printed_page = "37"
+
+[[chapters]]
+title = "Carl Barks: On His Life and Career"
+start_printed_page = "50"
+
+[[chapters]]
+title = "Carl Barks and His Ducks"
+start_printed_page = "69"
+
+[[chapters]]
+title = "Of Ducks and Men: Carl Barks Interviewed"
+start_printed_page = "80"
+
+[[chapters]]
+title = "An Interview with Carl Barks, Duckburg's True Founding Father"
+start_printed_page = "91"
+
+[[chapters]]
+title = "An Interview with Carl and Garé Barks"
+start_printed_page = "109"
+
+[[chapters]]
+title = "Views from Carl Barks"
+start_printed_page = "120"
+
+[[chapters]]
+title = "Fortune Favors the Bold: An Interview with Carl Barks"
+start_printed_page = "123"
+
+[[chapters]]
+title = "Interview with Carl Barks and Floyd Gottfredson"
+start_printed_page = "130"
+
+[[chapters]]
+title = "Carl Barks Interview"
+start_printed_page = "137"
+
+[[chapters]]
+title = "Conversation with Carl Barks"
+start_printed_page = "140"
+
+[[chapters]]
+title = "Reluctant Cult Hero: Carl Barks"
+start_printed_page = "155"

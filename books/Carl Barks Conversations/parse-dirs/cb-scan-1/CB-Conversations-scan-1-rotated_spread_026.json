@@ -5,8 +5,8 @@
         {
           "items": [
             {
-              "md": "8\nCARL BARKS: CONVERSATIONS",
-              "value": "8\nCARL BARKS: CONVERSATIONS",
+              "md": "8 CARL BARKS: CONVERSATIONS",
+              "value": "8 CARL BARKS: CONVERSATIONS",
               "bbox": [
                 {
                   "h": 9.47995910049066,
@@ -19,10 +19,10 @@
                   "start_index": 0
                 }
               ],
-              "type": "text"
+              "type": "header"
             }
           ],
-          "md": "8\nCARL BARKS: CONVERSATIONS",
+          "md": "8 CARL BARKS: CONVERSATIONS",
           "bbox": [
             {
               "h": 9.48,
@@ -57,7 +57,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: What is the layout of your studio? Did you find it especially helpful in your work and would you have made any changes in it?**",
+          "md": "**Q:** What is the layout of your studio? Did you find it especially helpful in your work and would you have made any changes in it?",
           "value": "Q: What is the layout of your studio? Did you find it especially helpful in your work and would you have made any changes in it?",
           "bbox": [
             {
@@ -93,7 +93,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: What was your work procedure? What tools did you use?**",
+          "md": "**Q:** What was your work procedure? What tools did you use?",
           "value": "Q: What was your work procedure? What tools did you use?",
           "bbox": [
             {
@@ -129,7 +129,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: Your wife must be quite an artist in her own right.**",
+          "md": "**Q:** Your wife must be quite an artist in her own right.",
           "value": "Q: Your wife must be quite an artist in her own right.",
           "bbox": [
             {
@@ -165,7 +165,7 @@
           "book_side": "left"
         },
         {
-          "md": "**Q: Did you ever indicate colors that you wanted for a certain thing?**",
+          "md": "**Q:** Did you ever indicate colors that you wanted for a certain thing?",
           "value": "Q: Did you ever indicate colors that you wanted for a certain thing?",
           "bbox": [
             {
@@ -215,7 +215,7 @@
               "start_index": 0
             }
           ],
-          "type": "text",
+          "type": "heading",
           "book_side": "right"
         },
         {
@@ -237,7 +237,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Are you satisfied with the way they were colored?**",
+          "md": "**Q:** Are you satisfied with the way they were colored?",
           "value": "Q: Are you satisfied with the way they were colored?",
           "bbox": [
             {
@@ -273,7 +273,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: How long did it take you to do the lead stories in *Walt Disney's Comics*?**",
+          "md": "**Q:** How long did it take you to do the lead stories in *Walt Disney's Comics*?",
           "value": "Q: How long did it take you to do the lead stories in Walt Disney's Comics?",
           "bbox": [
             {
@@ -309,7 +309,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: What parts of your work became easier over the years?**",
+          "md": "**Q:** What parts of your work became easier over the years?",
           "value": "Q: What parts of your work became easier over the years?",
           "bbox": [
             {
@@ -345,7 +345,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Why did you reuse old stories from time to time?**",
+          "md": "**Q:** Why did you reuse old stories from time to time?",
           "value": "Q: Why did you reuse old stories from time to time?",
           "bbox": [
             {
@@ -381,7 +381,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Did you do all of your story plots?**",
+          "md": "**Q:** Did you do all of your story plots?",
           "value": "Q: Did you do all of your story plots?",
           "bbox": [
             {
@@ -417,7 +417,7 @@
           "book_side": "right"
         },
         {
-          "md": "**Q: Or wasn't an artist who can see what can actually be drawn?**\n**A:** Well, that's right. They didn't write stuff that was easy to stage, and so I took the liberty of rehashing their stuff quite a bit. Some of the stories I changed so completely that, after two years went by, I thought I wrote the whole thing. On those long stories, occasionally the idea came from",
+          "md": "**Q:** Or wasn't an artist who can see what can actually be drawn?\n**A:** Well, that's right. They didn't write stuff that was easy to stage, and so I took the liberty of rehashing their stuff quite a bit. Some of the stories I changed so completely that, after two years went by, I thought I wrote the whole thing. On those long stories, occasionally the idea came from",
           "value": "Q: Or wasn't an artist who can see what can actually be drawn?\nA: Well, that's right. They didn't write stuff that was easy to stage, and so I took the liberty of rehashing their stuff quite a bit. Some of the stories I changed so completely that, after two years went by, I thought I wrote the whole thing. On those long stories, occasionally the idea came from",
           "bbox": [
             {

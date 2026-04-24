@@ -39,8 +39,36 @@
           "book_side": "left"
         },
         {
-          "md": "**FOSTER:** It must have been the fanny gag that got Walt.\n**BARKS:** It was. Oh, he liked fanny gags. Pratfalls and fanny gags.",
-          "value": "FOSTER: It must have been the fanny gag that got Walt.\nBARKS: It was. Oh, he liked fanny gags. Pratfalls and fanny gags.",
+          "md": "**FOSTER:** It must have been the fanny gag that got Walt.",
+          "value": "FOSTER: It must have been the fanny gag that got Walt.",
+          "bbox": [
+            {
+              "h": 14.136869070360138,
+              "w": 218.5633125803878,
+              "x": 100.97319650640722,
+              "y": 59.69386518792875,
+              "confidence": 0.78,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.67,
+              "w": 218.45,
+              "x": 100.94,
+              "y": 59.15,
+              "confidence": 1.0,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** It was. Oh, he liked fanny gags. Pratfalls and fanny gags.",
+          "value": "BARKS: It was. Oh, he liked fanny gags. Pratfalls and fanny gags.",
           "bbox": [
             {
               "h": 14.136869070360138,
@@ -139,8 +167,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** About how many cartoons did you actually work on?\n**BARKS:** There were thirty-six altogether.",
-          "value": "BARRIER: About how many cartoons did you actually work on?\nBARKS: There were thirty-six altogether.",
+          "md": "**BARRIER:** About how many cartoons did you actually work on?",
+          "value": "BARRIER: About how many cartoons did you actually work on?",
           "bbox": [
             {
               "h": 25.36441935022865,
@@ -151,26 +179,24 @@
               "end_index": 106,
               "label": "text",
               "start_index": 0
-            },
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** There were thirty-six altogether.",
+          "value": "BARKS: There were thirty-six altogether.",
+          "bbox": [
             {
-              "h": 14.2,
-              "w": 246.31,
-              "x": 94.37,
-              "y": 405.64,
+              "h": 25.36441935022865,
+              "w": 246.16287715558312,
+              "x": 94.44212648866235,
+              "y": 406.17296988852905,
               "confidence": 0.96,
-              "end_index": 61,
-              "label": "text",
-              "start_index": 0
-            },
-            {
-              "h": 13.14,
-              "w": 157.73,
-              "x": 94.11,
-              "y": 418.25,
-              "confidence": 1.0,
               "end_index": 106,
               "label": "text",
-              "start_index": 63
+              "start_index": 0
             }
           ],
           "type": "text",
@@ -303,8 +329,46 @@
           "book_side": "right"
         },
         {
-          "md": "**BRAY:** About any of your comic book work or anything?\n**BARKS:** Oh, no. After I left the studio, I never met Walt face to face again. . . . I don't think the Disney studio ever even read my comic book stories. I would turn in my stories to Western, and Western supposedly sent them over to the Disney studio for checking, but I know that there were times when I was so close to their deadline they didn't have time; they would just have had to shoot the stories right on through to New York.",
-          "value": "BRAY: About any of your comic book work or anything?\nBARKS: Oh, no. After I left the studio, I never met Walt face to face again. . . . I don't think the Disney studio ever even read my comic book stories. I would turn in my stories to Western, and Western supposedly sent them over to the Disney studio for checking, but I know that there were times when I was so close to their deadline they didn't have time; they would just have had to shoot the stories right on through to New York.",
+          "md": "**BRAY:** About any of your comic book work or anything?",
+          "value": "BRAY: About any of your comic book work or anything?",
+          "bbox": [
+            {
+              "h": 101.8659574361662,
+              "w": 279.49523180259155,
+              "x": 443.9547006002287,
+              "y": 238.7743616044208,
+              "confidence": 0.98,
+              "end_index": 494,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.36,
+              "w": 218.97,
+              "x": 443.47,
+              "y": 238.44,
+              "confidence": 1.0,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 88.59,
+              "w": 279.17,
+              "x": 443.21,
+              "y": 252.37,
+              "confidence": 0.98,
+              "end_index": 494,
+              "label": "text",
+              "start_index": 57
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Oh, no. After I left the studio, I never met Walt face to face again. . . . I don't think the Disney studio ever even read my comic book stories. I would turn in my stories to Western, and Western supposedly sent them over to the Disney studio for checking, but I know that there were times when I was so close to their deadline they didn't have time; they would just have had to shoot the stories right on through to New York.",
+          "value": "BARKS: Oh, no. After I left the studio, I never met Walt face to face again. . . . I don't think the Disney studio ever even read my comic book stories. I would turn in my stories to Western, and Western supposedly sent them over to the Disney studio for checking, but I know that there were times when I was so close to their deadline they didn't have time; they would just have had to shoot the stories right on through to New York.",
           "bbox": [
             {
               "h": 101.8659574361662,
@@ -377,8 +441,46 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** When you started doing the comic books, how much did you call on your Disney background as a gag-man?\n**BARKS:** A great deal of the time, during those first few years.",
-          "value": "BARRIER: When you started doing the comic books, how much did you call on your Disney background as a gag-man?\nBARKS: A great deal of the time, during those first few years.",
+          "md": "**BARRIER:** When you started doing the comic books, how much did you call on your Disney background as a gag-man?",
+          "value": "BARRIER: When you started doing the comic books, how much did you call on your Disney background as a gag-man?",
+          "bbox": [
+            {
+              "h": 38.3179765815549,
+              "w": 278.3047306354802,
+              "x": 443.77222086985523,
+              "y": 531.713389981898,
+              "confidence": 0.87,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 24.71,
+              "w": 279.7,
+              "x": 442.42,
+              "y": 530.77,
+              "confidence": 1.0,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.14,
+              "w": 238.43,
+              "x": 442.42,
+              "y": 556.53,
+              "confidence": 1.0,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 115
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** A great deal of the time, during those first few years.",
+          "value": "BARKS: A great deal of the time, during those first few years.",
           "bbox": [
             {
               "h": 38.3179765815549,

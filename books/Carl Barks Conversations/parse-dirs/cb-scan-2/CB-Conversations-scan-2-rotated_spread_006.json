@@ -76,6 +76,25 @@
           "book_side": "left"
         },
         {
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-2-rotated_spread_006_image_1.jpg",
+          "bbox": [
+              {
+                "h": 200.673165234375,
+                "w": 273.0024497189406,
+                "x": 100.03856392911587,
+                "y": 368.4136437833461,
+                "confidence": 0.99,
+                "end_index": 206,
+                "label": "image",
+                "start_index": 0
+              }
+          ],
+          "type": "image",
+          "book_side": "left"
+          },
+        {
           "md": "**PC:** I read your reply to Chase Craig, a very spicy reply, to a woman who sent you a comic book and wrote in the margins, \"I don't like that, and I don't like that, and not only that but my kid doesn't like that, and not only that either.\"",
           "value": "PC: I read your reply to Chase Craig, a very spicy reply, to a woman who sent you a comic book and wrote in the margins, \"I don't like that, and I don't like that, and not only that but my kid doesn't like that, and not only that either.\"",
           "bbox": [
@@ -184,24 +203,6 @@
           "book_side": "right"
         },
         {
-          "md": "A comic panel showing Uncle Donald in a taxi with children, with dialogue about the taxi being safe and comfortable, and Donald responding \"Shut up! For five dollars I should be entitled to ride in silence!\"",
-          "value": "A comic panel showing Uncle Donald in a taxi with children, with dialogue about the taxi being safe and comfortable, and Donald responding \"Shut up! For five dollars I should be entitled to ride in silence!\"",
-          "bbox": [
-            {
-              "h": 200.673165234375,
-              "w": 273.0024497189406,
-              "x": 100.03856392911587,
-              "y": 368.4136437833461,
-              "confidence": 0.99,
-              "end_index": 206,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
           "md": "PAUL CIOTTI / 1972 31",
           "value": "PAUL CIOTTI / 1972 31",
           "bbox": [
@@ -216,7 +217,7 @@
               "start_index": 0
             }
           ],
-          "type": "text",
+          "type": "header",
           "book_side": "right"
         },
         {

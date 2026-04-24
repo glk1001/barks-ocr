@@ -39,8 +39,26 @@
           "book_side": "left"
         },
         {
-          "md": "end wealth flowed freely from all quarters of the globe.'' \\[Barks laughs.] Do you see any resemblance to yourself in that description?\n**BARKS**: Oh, heavens, yes. Yeah, that's too true to be funny.",
-          "value": "end wealth flowed freely from all quarters of the globe.'' [Barks laughs.] Do you see any resemblance to yourself in that description?\nBARKS: Oh, heavens, yes. Yeah, that's too true to be funny.",
+          "md": "end wealth flowed freely from all quarters of the globe.'' \\[Barks laughs.] Do you see any resemblance to yourself in that description?",
+          "value": "end wealth flowed freely from all quarters of the globe.'' [Barks laughs.] Do you see any resemblance to yourself in that description?",
+          "bbox": [
+            {
+              "h": 38.655574354516006,
+              "w": 277.1283549923781,
+              "x": 107.03177525962272,
+              "y": 64.68883369736092,
+              "confidence": 0.98,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: Oh, heavens, yes. Yeah, that's too true to be funny.",
+          "value": "BARKS: Oh, heavens, yes. Yeah, that's too true to be funny.",
           "bbox": [
             {
               "h": 38.655574354516006,
@@ -93,8 +111,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER**: In other words, you never could take a month off.\n**BARKS**: No, that's right; I was always working too close to my poverty level.",
-          "value": "BARRIER: In other words, you never could take a month off.\nBARKS: No, that's right; I was always working too close to my poverty level.",
+          "md": "**BARRIER**: In other words, you never could take a month off.",
+          "value": "BARRIER: In other words, you never could take a month off.",
           "bbox": [
             {
               "h": 12.073813919588407,
@@ -111,8 +129,44 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER**: Did you ever consider getting out of comics entirely? Did it ever get to be such a burden that you wanted to do something else?\n**BARKS**: No, because I had a fear I couldn't make a living at anything else \\[laughing].",
-          "value": "BARRIER: Did you ever consider getting out of comics entirely? Did it ever get to be such a burden that you wanted to do something else?\nBARKS: No, because I had a fear I couldn't make a living at anything else [laughing].",
+          "md": "**BARKS**: No, that's right; I was always working too close to my poverty level.",
+          "value": "BARKS: No, that's right; I was always working too close to my poverty level.",
+          "bbox": [
+            {
+              "h": 12.073813919588407,
+              "w": 233.83274732040778,
+              "x": 105.97504080125765,
+              "y": 166.0627897580031,
+              "confidence": 0.75,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARRIER**: Did you ever consider getting out of comics entirely? Did it ever get to be such a burden that you wanted to do something else?",
+          "value": "BARRIER: Did you ever consider getting out of comics entirely? Did it ever get to be such a burden that you wanted to do something else?",
+          "bbox": [
+            {
+              "h": 50.03371667778201,
+              "w": 282.46413393792875,
+              "x": 104.61078817525726,
+              "y": 210.5218440977516,
+              "confidence": 0.98,
+              "end_index": 230,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS**: No, because I had a fear I couldn't make a living at anything else \\[laughing].",
+          "value": "BARKS: No, because I had a fear I couldn't make a living at anything else [laughing].",
           "bbox": [
             {
               "h": 50.03371667778201,

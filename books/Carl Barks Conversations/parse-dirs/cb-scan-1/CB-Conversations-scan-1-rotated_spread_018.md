@@ -6,7 +6,7 @@
 
 **1923** Daughter Peggy is born (23 Jan.); works in logging camp during the summer.
 
-**1923–29** Considers working in the oil fields near Coalinga, California, but instead moves to Roseville, California, and works in the railroad car shops (for the Pacific Fruit Express) on the riveting gang as "rivet heater"; in his spare time he refines his car-tooning style and sharpens his knowledge of grammar.
+**1923–29** Considers working in the oil fields near Coalinga, California, but instead moves to Roseville, California, and works in the railroad car shops (for the Pacific Fruit Express) on the riveting gang as "rivet heater"; in his spare time he refines his cartooning style and sharpens his knowledge of grammar.
 
 **1924** Daughter Dorothy is born.
 
@@ -20,7 +20,7 @@
 
 **1935** Responds to an advertisement from the Walt Disney Studios for cartoonists (ca. Sept.); sends samples of his work and is invited to a one-month training and trial period at Disney's beginning in Nov. 1935, which he successfully completes; starts working in the in-between department of Disney Studios in Dec.
 
-**1936** Works for six months in the in-between department and animates a sequence for the *Mickey Mouse* cartoon "Thru the Mirror," while submitting various gags for animated cartoons and comic strips, including a barber-chair gag that was adopted for the *Donald Duck* cartoon "Modern Inventions," and is immediately moved by Walt Disney personally to the new *Donald Duck* story unit.
+**1936** Works for six months in the in-between department and animates a sequence for the *Mickey Mouse* cartoon "Thru the Mirror," while submitting various gags for animated cartoons and comic strips, including a barber-chair gag that was
 
 ---
 

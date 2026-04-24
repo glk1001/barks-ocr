@@ -76,6 +76,24 @@
           "book_side": "left"
         },
         {
+          "md": "<p style=\"text-align:center\">. . . .</p>",
+          "value": "",
+          "bbox": [
+            {
+              "h": 113.62557478325078,
+              "w": 283.76885399199693,
+              "x": 121.69464522198933,
+              "y": 225.02865600943224,
+              "confidence": 0.99,
+              "end_index": 617,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
           "md": "Some of the main people who influenced my drawing style were Winsor McCay, Opper, and Hal Foster. Roy Crane, who drew *Buzz Sawyer*, also had a direct, simple style. There were a number of real good artists who didn't use much crosshatching or managed to put their story over with good clean lines and just blacks and whites. I knew I couldn't meddle much with crosshatching and pen shading or the benday process they used in comic-book work.",
           "value": "Some of the main people who influenced my drawing style were Winsor McCay, Opper, and Hal Foster. Roy Crane, who drew Buzz Sawyer, also had a direct, simple style. There were a number of real good artists who didn't use much crosshatching or managed to put their story over with good clean lines and just blacks and whites. I knew I couldn't meddle much with crosshatching and pen shading or the benday process they used in comic-book work.",
           "bbox": [
@@ -169,6 +187,24 @@
         {
           "md": "Sometimes there was a difficulty in keeping the ducks consistent when there was a time lag between publication of the stories. One time Western Publishing changed the drawing paper on me. I had been drawing on a real good quality of Strathmore drawing paper. Whenever I made my pencil drawing, the pencil didn't dig into the paper and leave a trench. When I inked, it was over the top of nice, smooth paper. They changed to cheap paper with a kind of chalk face on it. I discovered that whenever I made a drawing of a duck, my pencil made a little groove in this stuff, and when I started to ink it, the pen would follow this groove, even though I had erased and redrawn it and cut another groove. I was making my ducks on the model sheet. Also, the model sheet for the newspaper duck were not the same as the animation duck that I'd drawn in the story department. I would sort of subconsciously try to make my duck look a little bit more like the animation ducks. I would draw the ducks in roughly and then I'd erase them and draw them over again to shorten them up. I drew every duck twice before I got him right. But on this paper I would draw them over and still wouldn't get them right because my pencil would be inclined to go back into the old grooves again. The company that made this new paper was in West Germany. They themselves discovered that the paper was too soft on the surface and started turning out a good product. So all of a sudden my paper was nice and firm again, and I was able to draw like I wanted to.",
           "value": "Sometimes there was a difficulty in keeping the ducks consistent when there was a time lag between publication of the stories. One time Western Publishing changed the drawing paper on me. I had been drawing on a real good quality of Strathmore drawing paper. Whenever I made my pencil drawing, the pencil didn't dig into the paper and leave a trench. When I inked, it was over the top of nice, smooth paper. They changed to cheap paper with a kind of chalk face on it. I discovered that whenever I made a drawing of a duck, my pencil made a little groove in this stuff, and when I started to ink it, the pen would follow this groove, even though I had erased and redrawn it and cut another groove. I was making my ducks on the model sheet. Also, the model sheet for the newspaper duck were not the same as the animation duck that I'd drawn in the story department. I would sort of subconsciously try to make my duck look a little bit more like the animation ducks. I would draw the ducks in roughly and then I'd erase them and draw them over again to shorten them up. I drew every duck twice before I got him right. But on this paper I would draw them over and still wouldn't get them right because my pencil would be inclined to go back into the old grooves again. The company that made this new paper was in West Germany. They themselves discovered that the paper was too soft on the surface and started turning out a good product. So all of a sudden my paper was nice and firm again, and I was able to draw like I wanted to.",
+          "bbox": [
+            {
+              "h": 327.4920000000001,
+              "w": 289.3728,
+              "x": 470.23080000000004,
+              "y": 88.72056,
+              "confidence": 0.77,
+              "end_index": 1526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "<p style=\"text-align:center\">. . . .</p>",
+          "value": "",
           "bbox": [
             {
               "h": 327.4920000000001,

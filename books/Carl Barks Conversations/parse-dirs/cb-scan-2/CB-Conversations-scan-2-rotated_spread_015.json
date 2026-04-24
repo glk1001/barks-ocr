@@ -76,7 +76,25 @@
           "book_side": "left"
         },
         {
-          "md": "I think that what has happened now is that over the years all of these stories have been read and the relation of one story to another has become apparent to all of you readers, and you can see the connection of the characters and the build-up of the characters and all. Now when I was working, I was working from the other end of the line. All of these characters were all strangers to me, and each story had to stand by itself; and when I was developing these characters, I remember having thoughts like, \"Should I mention something about a previous story that had taken place?\" And always I discarded that idea because I felt there's nothing worse in picking up a comic book on the stand and starting to read and finding that you are reading something that is continued from some earlier book that you don't have and have no means of getting. I find a sense of frustration in that. I notice that is used a lot in these Marvel comics, but I wouldn't go in for that stuff. I felt that each story had to be a complete story in itself, and whatever introduction of a character that took place, it was just an incidental part of the story. If I used that character again, he was just introduced in the part that he was going to play in that story, not on the strength of what he had been in the past. Take a character like Gyro. He was an inventor, but I didn't go back and rehash a bunch of his earlier inventions in order to show what a great inventor he was. I let him go ahead and show what he could do in this story in which he was acting.",
+          "md": "**DA:** The sense of reality of the stories—I got the feeling that there were events going on between or outside the stories, and every once in a while you get a glimpse into this world. And yet you rarely made a reference between stories. The ducks would never say, \"Remember when we went to get the Golden Helmet.\" But when you were introducing new characters, quite often there would be this indication that things had been going on that the reader hadn't known about. You never thought about that?",
+          "value": "DA: The sense of reality of the stories—I got the feeling that there were events going on between or outside the stories, and every once in a while you get a glimpse into this world. And yet you rarely made a reference between stories. The ducks would never say, \"Remember when we went to get the Golden Helmet.\" But when you were introducing new characters, quite often there would be this indication that things had been going on that the reader hadn't known about. You never thought about that?",
+          "bbox": [
+            {
+              "h": 77.2889006622517,
+              "w": 283.64212499999996,
+              "x": 103.309875,
+              "y": 235.81001324503313,
+              "confidence": 0.84,
+              "end_index": 500,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I think that what has happened now is that over the years all of these stories have been read and the relation of one story to another has become apparent to all of you readers, and you can see the connection of the characters and the build-up of the characters and all. Now when I was working, I was working from the other end of the line. All of these characters were all strangers to me, and each story had to stand by itself; and when I was developing these characters, I remember having thoughts like, \"Should I mention something about a previous story that had taken place?\" And always I discarded that idea because I felt there's nothing worse in picking up a comic book on the stand and starting to read and finding that you are reading something that is continued from some earlier book that you don't have and have no means of getting. I find a sense of frustration in that. I notice that is used a lot in these Marvel comics, but I wouldn't go in for that stuff. I felt that each story had to be a complete story in itself, and whatever introduction of a character that took place, it was just an incidental part of the story. If I used that character again, he was just introduced in the part that he was going to play in that story, not on the strength of what he had been in the past. Take a character like Gyro. He was an inventor, but I didn't go back and rehash a bunch of his earlier inventions in order to show what a great inventor he was. I let him go ahead and show what he could do in this story in which he was acting.",
           "value": "I think that what has happened now is that over the years all of these stories have been read and the relation of one story to another has become apparent to all of you readers, and you can see the connection of the characters and the build-up of the characters and all. Now when I was working, I was working from the other end of the line. All of these characters were all strangers to me, and each story had to stand by itself; and when I was developing these characters, I remember having thoughts like, \"Should I mention something about a previous story that had taken place?\" And always I discarded that idea because I felt there's nothing worse in picking up a comic book on the stand and starting to read and finding that you are reading something that is continued from some earlier book that you don't have and have no means of getting. I find a sense of frustration in that. I notice that is used a lot in these Marvel comics, but I wouldn't go in for that stuff. I felt that each story had to be a complete story in itself, and whatever introduction of a character that took place, it was just an incidental part of the story. If I used that character again, he was just introduced in the part that he was going to play in that story, not on the strength of what he had been in the past. Take a character like Gyro. He was an inventor, but I didn't go back and rehash a bunch of his earlier inventions in order to show what a great inventor he was. I let him go ahead and show what he could do in this story in which he was acting.",
           "bbox": [
             {
@@ -98,24 +116,6 @@
               "end_index": 278,
               "label": "text",
               "start_index": 71
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
-          "md": "**DA:** The sense of reality of the stories—I got the feeling that there were events going on between or outside the stories, and every once in a while you get a glimpse into this world. And yet you rarely made a reference between stories. The ducks would never say, \"Remember when we went to get the Golden Helmet.\" But when you were introducing new characters, quite often there would be this indication that things had been going on that the reader hadn't known about. You never thought about that?",
-          "value": "DA: The sense of reality of the stories—I got the feeling that there were events going on between or outside the stories, and every once in a while you get a glimpse into this world. And yet you rarely made a reference between stories. The ducks would never say, \"Remember when we went to get the Golden Helmet.\" But when you were introducing new characters, quite often there would be this indication that things had been going on that the reader hadn't known about. You never thought about that?",
-          "bbox": [
-            {
-              "h": 77.2889006622517,
-              "w": 283.64212499999996,
-              "x": 103.309875,
-              "y": 235.81001324503313,
-              "confidence": 0.84,
-              "end_index": 500,
-              "label": "text",
-              "start_index": 0
             }
           ],
           "type": "text",

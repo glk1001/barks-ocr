@@ -93,8 +93,26 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** So they had corresponded for more than twenty years?\n**BARKS:** I guess so.",
-          "value": "BARRIER: So they had corresponded for more than twenty years?\nBARKS: I guess so.",
+          "md": "**BARRIER:** So they had corresponded for more than twenty years?",
+          "value": "BARRIER: So they had corresponded for more than twenty years?",
+          "bbox": [
+            {
+              "h": 23.937743890529724,
+              "w": 254.503623404154,
+              "x": 89.159656369093,
+              "y": 256.553370467321,
+              "confidence": 0.97,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BARKS:** I guess so.",
+          "value": "BARKS: I guess so.",
           "bbox": [
             {
               "h": 23.937743890529724,
@@ -363,8 +381,8 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** How old were you when you were doing this sort of thing?\n**BARKS:** I was about eight.",
-          "value": "BARRIER: How old were you when you were doing this sort of thing?\nBARKS: I was about eight.",
+          "md": "**BARRIER:** How old were you when you were doing this sort of thing?",
+          "value": "BARRIER: How old were you when you were doing this sort of thing?",
           "bbox": [
             {
               "h": 25.016308765243874,
@@ -381,8 +399,44 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** Are there any individual cowboys that stuck in your memory?\n**BARKS:** There was Skeeter Bill Robbins; he was a big, tall guy, skinny as a rail, about six-foot-three-inches tall, and he was world champion bronc rider for a number of years back in those times. One was called Windneck Mitchell. He had a sort of a goiter on the side of his neck, and it seemed",
-          "value": "BARRIER: Are there any individual cowboys that stuck in your memory?\nBARKS: There was Skeeter Bill Robbins; he was a big, tall guy, skinny as a rail, about six-foot-three-inches tall, and he was world champion bronc rider for a number of years back in those times. One was called Windneck Mitchell. He had a sort of a goiter on the side of his neck, and it seemed",
+          "md": "**BARKS:** I was about eight.",
+          "value": "BARKS: I was about eight.",
+          "bbox": [
+            {
+              "h": 25.016308765243874,
+              "w": 270.50037862042683,
+              "x": 438.3571862137958,
+              "y": 474.18561613948185,
+              "confidence": 0.97,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARRIER:** Are there any individual cowboys that stuck in your memory?",
+          "value": "BARRIER: Are there any individual cowboys that stuck in your memory?",
+          "bbox": [
+            {
+              "h": 63.87042103182165,
+              "w": 283.8673820264864,
+              "x": 438.53024892816313,
+              "y": 507.04012154153975,
+              "confidence": 0.98,
+              "end_index": 370,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** There was Skeeter Bill Robbins; he was a big, tall guy, skinny as a rail, about six-foot-three-inches tall, and he was world champion bronc rider for a number of years back in those times. One was called Windneck Mitchell. He had a sort of a goiter on the side of his neck, and it seemed",
+          "value": "BARKS: There was Skeeter Bill Robbins; he was a big, tall guy, skinny as a rail, about six-foot-three-inches tall, and he was world champion bronc rider for a number of years back in those times. One was called Windneck Mitchell. He had a sort of a goiter on the side of his neck, and it seemed",
           "bbox": [
             {
               "h": 63.87042103182165,
