@@ -4,8 +4,8 @@
       "items": [
         {
           "caption": "",
-          "md": "![The Duck Man MalcolM Willits, DoN ThoMpson, and MAggie THOMPsoN / 1962](CB-Conversations-scan-1-rotated_spread_023_page_1_image_1_v2.jpg)",
-          "url": "CB-Conversations-scan-1-rotated_spread_023_page_1_image_1_v2.jpg",
+          "md": "![The Duck Man MalcolM Willits, DoN ThoMpson, and MAggie THOMPsoN / 1962](CB-Conversations-scan-1-rotated_spread_023_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-1-rotated_spread_023_page_1_image_1_v2.png",
           "bbox": [
             {
               "h": 185.38361317883007,
@@ -19,43 +19,6 @@
             }
           ],
           "type": "image",
-          "book_side": "right"
-        },
-        {
-          "level": 1,
-          "md": "# The Duck Man",
-          "value": "The Duck Man",
-          "bbox": [
-            {
-              "h": 26.514806578696668,
-              "w": 176.04835925590712,
-              "x": 509.3178079744665,
-              "y": 145.28958321265245,
-              "confidence": 0.86,
-              "end_index": 13,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading",
-          "book_side": "right"
-        },
-        {
-          "md": "**MALCOLM WILLITS, DON THOMPSON, AND MAGGIE THOMPSON / 1962**",
-          "value": "MALCOLM WILLITS, DON THOMPSON, AND MAGGIE THOMPSON / 1962",
-          "bbox": [
-            {
-              "h": 32.08,
-              "w": 218.45,
-              "x": 487.9,
-              "y": 186.67,
-              "confidence": 1.0,
-              "end_index": 60,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
           "book_side": "right"
         },
         {
