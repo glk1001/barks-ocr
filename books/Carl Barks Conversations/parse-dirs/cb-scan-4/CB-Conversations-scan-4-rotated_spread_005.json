@@ -129,7 +129,7 @@
           "book_side": "left"
         },
         {
-          "caption": "Title \"When Donald Duck Turned 60\" by Erik Svane / 1994 inside a hand-drawn speech bubble",
+          "caption": "",
           "md": "![Title \"When Donald Duck Turned 60\" by Erik Svane / 1994 inside a hand-drawn speech bubble](CB-Conversations-scan-4-rotated_spread_005_page_1_image_1_v2.jpg)",
           "url": "CB-Conversations-scan-4-rotated_spread_005_page_1_image_1_v2.jpg",
           "bbox": [
@@ -206,7 +206,7 @@
       "page_number": 1,
       "page_width": 841.2,
       "success": true,
-      "printed_page_number": "164"
+      "printed_page_number": "164, 165"
     }
   ]
 }

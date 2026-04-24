@@ -75,8 +75,46 @@
           "book_side": "left"
         },
         {
-          "md": "**MN:** Did you split up responsibilities on the \"Pirate Gold\" story?\n**CB:** Very much so. Jack and I looked the script over and decided which pages we would like to draw. After we had drawn a few pages, we decided that I should draw all of the stuff that was involved with the ducks outside on the deck of the boat or on the island, and Jack would take care of the inside stuff.",
-          "value": "MN: Did you split up responsibilities on the \"Pirate Gold\" story?\nCB: Very much so. Jack and I looked the script over and decided which pages we would like to draw. After we had drawn a few pages, we decided that I should draw all of the stuff that was involved with the ducks outside on the deck of the boat or on the island, and Jack would take care of the inside stuff.",
+          "md": "**MN:** Did you split up responsibilities on the \"Pirate Gold\" story?",
+          "value": "MN: Did you split up responsibilities on the \"Pirate Gold\" story?",
+          "bbox": [
+            {
+              "h": 75.02544,
+              "w": 281.802,
+              "x": 99.2616,
+              "y": 122.0652,
+              "confidence": 0.85,
+              "end_index": 379,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.88,
+              "w": 247.89,
+              "x": 99.63,
+              "y": 122.24,
+              "confidence": 1.0,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 60.99,
+              "w": 282.06,
+              "x": 98.58,
+              "y": 135.39,
+              "confidence": 0.85,
+              "end_index": 379,
+              "label": "text",
+              "start_index": 70
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Very much so. Jack and I looked the script over and decided which pages we would like to draw. After we had drawn a few pages, we decided that I should draw all of the stuff that was involved with the ducks outside on the deck of the boat or on the island, and Jack would take care of the inside stuff.",
+          "value": "CB: Very much so. Jack and I looked the script over and decided which pages we would like to draw. After we had drawn a few pages, we decided that I should draw all of the stuff that was involved with the ducks outside on the deck of the boat or on the island, and Jack would take care of the inside stuff.",
           "bbox": [
             {
               "h": 75.02544,

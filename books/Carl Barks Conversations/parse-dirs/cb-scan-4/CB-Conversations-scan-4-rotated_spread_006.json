@@ -273,6 +273,25 @@
           "book_side": "left"
         },
         {
+          "caption": "",
+          "md": "![Comic strip panel showing Donald Duck and nephews discovering square eggs in the Andes. Text bubbles: \"DONALD'S ACCIDENTAL DISCOVERY STARTLES THE SCIENTIFIC WORLD!\", \"SQUARE EGGS THAT LOOK LIKE STONES! AMAZING!\", \"THEY CAME FROM SOMEWHERE IN PERU! WHO FOUND THEM, AND WHEN, AND HOW?\", \"WE DON'T KNOW! THE RECORDS ON THIS COLLECTION WERE LOST IN THE CHICAGO FIRE!\", \"THE LIMESTONE IN THEIR SHELLS SHOW THAT THEY CAME FROM HIGH IN THE ANDES MOUNTAINS!\"](CB-Conversations-scan-4-rotated_spread_006_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-4-rotated_spread_006_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 128.69376731135674,
+              "w": 359.7123795731707,
+              "x": 443.70394750381104,
+              "y": 500.00,
+              "confidence": 0.99,
+              "end_index": 475,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
           "md": "**ES:** What do you think of the cartoons \\[*Duck Tales*] that are based on your stories?",
           "value": "ES: What do you think of the cartoons [Duck Tales] that are based on your stories?",
           "bbox": [
@@ -324,25 +343,6 @@
             }
           ],
           "type": "text",
-          "book_side": "right"
-        },
-        {
-          "caption": "Comic strip panel showing Donald Duck and nephews discovering square eggs in the Andes. Text bubbles: \"DONALD'S ACCIDENTAL DISCOVERY STARTLES THE SCIENTIFIC WORLD!\", \"SQUARE EGGS THAT LOOK LIKE STONES! AMAZING!\", \"THEY CAME FROM SOMEWHERE IN PERU! WHO FOUND THEM, AND WHEN, AND HOW?\", \"WE DON'T KNOW! THE RECORDS ON THIS COLLECTION WERE LOST IN THE CHICAGO FIRE!\", \"THE LIMESTONE IN THEIR SHELLS SHOW THAT THEY CAME FROM HIGH IN THE ANDES MOUNTAINS!\"",
-          "md": "![Comic strip panel showing Donald Duck and nephews discovering square eggs in the Andes. Text bubbles: \"DONALD'S ACCIDENTAL DISCOVERY STARTLES THE SCIENTIFIC WORLD!\", \"SQUARE EGGS THAT LOOK LIKE STONES! AMAZING!\", \"THEY CAME FROM SOMEWHERE IN PERU! WHO FOUND THEM, AND WHEN, AND HOW?\", \"WE DON'T KNOW! THE RECORDS ON THIS COLLECTION WERE LOST IN THE CHICAGO FIRE!\", \"THE LIMESTONE IN THEIR SHELLS SHOW THAT THEY CAME FROM HIGH IN THE ANDES MOUNTAINS!\"](CB-Conversations-scan-4-rotated_spread_006_page_1_image_1_v2.jpg)",
-          "url": "CB-Conversations-scan-4-rotated_spread_006_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 128.69376731135674,
-              "w": 359.7123795731707,
-              "x": 443.70394750381104,
-              "y": 64.49014509575078,
-              "confidence": 0.99,
-              "end_index": 475,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image",
           "book_side": "right"
         },
         {

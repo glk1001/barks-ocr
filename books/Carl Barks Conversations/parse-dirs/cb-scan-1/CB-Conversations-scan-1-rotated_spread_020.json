@@ -155,7 +155,7 @@
               "start_index": 15
             }
           ],
-          "type": "text",
+          "type": "header",
           "book_side": "right"
         },
         {
@@ -173,7 +173,7 @@
               "start_index": 0
             }
           ],
-          "type": "text",
+          "type": "header",
           "book_side": "right"
         },
         {

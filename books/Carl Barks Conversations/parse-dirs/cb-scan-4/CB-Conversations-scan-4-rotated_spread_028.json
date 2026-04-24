@@ -39,61 +39,6 @@
           "book_side": "right"
         },
         {
-          "md": "Living the Stories:",
-          "value": "Living the Stories:",
-          "bbox": [
-            {
-              "h": 18.62760375857471,
-              "w": 141.40691415777442,
-              "x": 172.97107377810596,
-              "y": 119.14150365377289,
-              "confidence": 0.87,
-              "end_index": 18,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
-          "level": 1,
-          "md": "# The Carl Barks Genius",
-          "value": "The Carl Barks Genius",
-          "bbox": [
-            {
-              "h": 57.394936573456576,
-              "w": 183.56370154701796,
-              "x": 151.8036128941978,
-              "y": 142.1558929044398,
-              "confidence": 0.95,
-              "end_index": 22,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading",
-          "book_side": "left"
-        },
-        {
-          "md": "**DONALD AULT, BRUCE HAMILTON, JOHN RONAN, AND NICKY WRIGHT / 1999**",
-          "value": "DONALD AULT, BRUCE HAMILTON, JOHN RONAN, AND NICKY WRIGHT / 1999",
-          "bbox": [
-            {
-              "h": 28.917615894039784,
-              "w": 200.8365,
-              "x": 143.00400000000002,
-              "y": 217.40789403973508,
-              "confidence": 0.94,
-              "end_index": 67,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
           "md": "Excerpts from an unpublished interview conducted on 30 April 1999. Reprinted by permission of Donald Ault and Bruce Hamilton.",
           "value": "Excerpts from an unpublished interview conducted on 30 April 1999. Reprinted by permission of Donald Ault and Bruce Hamilton.",
           "bbox": [
@@ -166,8 +111,8 @@
           "book_side": "left"
         },
         {
-          "md": "**DA:** What about the ambassador from Brutopia in \"Cold Bargain,\" that very Russian-looking guy? I mean, he obviously was a parody or a com-",
-          "value": "DA: What about the ambassador from Brutopia in \"Cold Bargain,\" that very Russian-looking guy? I mean, he obviously was a parody or a com-",
+          "md": "**DA:** What about the ambassador from Brutopia in \"Cold Bargain,\" that very Russian-looking guy? I mean, he obviously was a parody or a composite",
+          "value": "DA: What about the ambassador from Brutopia in \"Cold Bargain,\" that very Russian-looking guy? I mean, he obviously was a parody or a composite",
           "bbox": [
             {
               "h": 24.448529801324526,
@@ -184,8 +129,8 @@
           "book_side": "left"
         },
         {
-          "md": "posite of the kinds of things you would imagine a character who was a Brutopian.",
-          "value": "posite of the kinds of things you would imagine a character who was a Brutopian.",
+          "md": "of the kinds of things you would imagine a character who was a Brutopian.",
+          "value": "of the kinds of things you would imagine a character who was a Brutopian.",
           "bbox": [
             {
               "h": 25.26754813083556,

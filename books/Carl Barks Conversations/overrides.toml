@@ -6,16 +6,12 @@
 # plus the first few characters of the item text. Use ``as = "blockquote"`` to
 # promote an item the heuristic missed.
 
-# --- Copyright page (spread 002 left) ---
-
 [[overrides]]
 parse_dir = "cb-scan-1"
 spread = "spread_002"
 side = "left"
 text_starts_with = "Library of Congress"
 as = "paragraph"
-
-# --- Table of Contents (spread 002 right, spread 003 left/right) ---
 
 [[overrides]]
 parse_dir = "cb-scan-1"
@@ -72,8 +68,6 @@ spread = "spread_003"
 side = "right"
 text_starts_with = "Index 233"
 as = "paragraph"
-
-# --- Running-header leaks LlamaParse emitted as type=text ---
 
 [[overrides]]
 parse_dir = "cb-scan-1"
@@ -150,4 +144,18 @@ parse_dir = "cb-scan-3"
 spread = "spread_027"
 side = "left"
 text_starts_with = "The first portion of this interview was conducted by Bruce Hamilton"
+as = "blockquote"
+
+[[overrides]]
+parse_dir = "cb-scan-3"
+spread = "spread_038"
+side = "right"
+text_starts_with = "A video interview conducted on 27 August 1993"
+as = "blockquote"
+
+[[overrides]]
+parse_dir = "cb-scan-3"
+spread = "spread_038"
+side = "right"
+text_starts_with = "Portions of this interview were previously published in Overstreet's"
 as = "blockquote"
