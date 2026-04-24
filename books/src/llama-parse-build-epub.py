@@ -10,7 +10,7 @@ are exposed via the EPUB3 ``page-list`` nav.
 
 Example:
     uv run python scripts/llama-parse-build-epub.py \
-        --parse-dir cb-scan-1 --parse-dir cb-scan-2 \
+        --parse-dirs parse-dirs \
         --chapters chapters.toml \
         --title "Book Title" --author "Editor Name (ed.)" \
         --output cb-conversations.epub
@@ -373,7 +373,14 @@ def _align_cross_page_continuations(pages: list[BookPage]) -> None:
 
 
 def _apply_format_fixes(pages: list[BookPage], overrides: list[_Override]) -> None:
-    """Run the blockquote heuristic, then apply user overrides and log misses."""
+    """Run the blockquote heuristic, then apply user overrides.
+
+    Raises:
+        ValueError: If any override did not match a text item. All unmatched
+            overrides are logged before raising so the user can fix them in one
+            pass.
+
+    """
     _merge_list_continuations(pages)
     for page in pages:
         _annotate_blockquotes(page)
@@ -383,12 +390,15 @@ def _apply_format_fixes(pages: list[BookPage], overrides: list[_Override]) -> No
     unmatched = _apply_overrides(pages, overrides)
     applied = len(overrides) - len(unmatched)
     logger.info(f"Applied {applied}/{len(overrides)} override(s).")
-    for ov in unmatched:
-        logger.warning(
-            f"Override did not match any item: parse_dir={ov.parse_dir!r} "
-            f"spread={ov.spread!r} side={ov.side!r} "
-            f"text_starts_with={ov.text_starts_with!r}"
-        )
+    if unmatched:
+        for ov in unmatched:
+            logger.error(
+                f"Override did not match any item: parse_dir={ov.parse_dir!r} "
+                f"spread={ov.spread!r} side={ov.side!r} "
+                f"text_starts_with={ov.text_starts_with!r}"
+            )
+        msg = f"{len(unmatched)} of {len(overrides)} override(s) did not match any item"
+        raise ValueError(msg)
 
 
 def _apply_overrides(pages: list[BookPage], overrides: list[_Override]) -> list[_Override]:
@@ -796,10 +806,10 @@ def _build_epub(  # noqa: PLR0913 - arg-per-option is reasonable for an epub bui
 
 @app.command()
 def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
-    parse_dir: list[Path] = typer.Option(  # noqa: B008
+    parse_dirs: Path = typer.Option(  # noqa: B008
         ...,
-        "--parse-dir",
-        help="LlamaParse output directory. Pass multiple times for multi-section scans.",
+        "--parse-dirs",
+        help="Parent directory containing one LlamaParse output subdirectory per scan.",
     ),
     chapters: Path = typer.Option(  # noqa: B008
         ...,
@@ -814,7 +824,7 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
     output: Path | None = typer.Option(  # noqa: B008
         None,
         "--output",
-        help="Output .epub path (default: <first-parse-dir>/<title-slug>.epub).",
+        help="Output .epub path (default: <parse-dirs>/<title-slug>.epub).",
     ),
     language: str = typer.Option("en", "--language", help="BCP-47 language tag."),
     keep_running_headers: bool = typer.Option(
@@ -829,10 +839,13 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
     ),
 ) -> None:
     """Build an EPUB3 from LlamaParse parse directories and a chapter sidecar."""
-    for d in parse_dir:
-        if not d.is_dir():
-            logger.error(f"Not a directory: {d}")
-            raise typer.Exit(1)
+    if not parse_dirs.is_dir():
+        logger.error(f"Not a directory: {parse_dirs}")
+        raise typer.Exit(1)
+    parse_dir_list = sorted(d for d in parse_dirs.iterdir() if d.is_dir())
+    if not parse_dir_list:
+        logger.error(f"No parse subdirectories found under: {parse_dirs}")
+        raise typer.Exit(1)
     if not chapters.is_file():
         logger.error(f"Chapters sidecar not found: {chapters}")
         raise typer.Exit(1)
@@ -843,8 +856,8 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
     chapter_list = _load_chapters(chapters)
     override_list = _load_overrides(overrides)
 
-    logger.info(f"Loading spreads from {len(parse_dir)} parse dir(s) ...")
-    spreads = list(iter_spreads(parse_dir))
+    logger.info(f"Loading spreads from {len(parse_dir_list)} parse dir(s) ...")
+    spreads = list(iter_spreads(parse_dir_list))
     logger.info(f"Loaded {len(spreads)} spread(s).")
 
     pages = list(iter_book_pages(spreads, drop_running_headers=not keep_running_headers))
@@ -853,7 +866,11 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
         logger.error("No book pages to write.")
         raise typer.Exit(1)
 
-    _apply_format_fixes(pages, override_list)
+    try:
+        _apply_format_fixes(pages, override_list)
+    except ValueError as exc:
+        logger.error(str(exc))
+        raise typer.Exit(1) from exc
 
     try:
         chapters_by_page = _match_chapters_to_pages(chapter_list, pages)
@@ -864,7 +881,7 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
 
     if output is None:
         slug = "".join(c if c.isalnum() else "-" for c in title).strip("-").lower()
-        output = parse_dir[0] / f"{slug or 'book'}.epub"
+        output = parse_dirs / f"{slug or 'book'}.epub"
 
     _build_epub(
         pages=pages,

@@ -231,29 +231,32 @@ def _print_summary(findings: list[_Finding]) -> None:
 
 @app.command()
 def main(
-    parse_dir: list[Path] = typer.Option(  # noqa: B008
+    parse_dirs: Path = typer.Option(  # noqa: B008
         ...,
-        "--parse-dir",
-        help="LlamaParse output directory. Pass multiple times for multi-section checks.",
+        "--parse-dirs",
+        help="Parent directory containing one LlamaParse output subdirectory per scan.",
     ),
     report_file: Path | None = typer.Option(  # noqa: B008
         None,
         "--report-file",
-        help="Where to write the JSON report (default: <first-parse-dir>/spellcheck-report.json).",
+        help="Where to write the JSON report (default: <parse-dirs>/spellcheck-report.json).",
     ),
 ) -> None:
     """Spellcheck JSON text fields across one or more parse directories."""
-    for d in parse_dir:
-        if not d.is_dir():
-            logger.error(f"Not a directory: {d}")
-            raise typer.Exit(1)
+    if not parse_dirs.is_dir():
+        logger.error(f"Not a directory: {parse_dirs}")
+        raise typer.Exit(1)
+    parse_dir_list = sorted(d for d in parse_dirs.iterdir() if d.is_dir())
+    if not parse_dir_list:
+        logger.error(f"No parse subdirectories found under: {parse_dirs}")
+        raise typer.Exit(1)
 
     if not _PROJECT_WORDS.is_file():
         logger.error(f"Expected project dictionary not found: {_PROJECT_WORDS}")
         raise typer.Exit(1)
 
-    logger.info(f"Loading spreads from {len(parse_dir)} parse dir(s) ...")
-    spreads = list(iter_spreads(parse_dir))
+    logger.info(f"Loading spreads from {len(parse_dir_list)} parse dir(s) ...")
+    spreads = list(iter_spreads(parse_dir_list))
     logger.info(f"Loaded {len(spreads)} spread(s).")
 
     metas = _collect_items(spreads)
@@ -275,11 +278,11 @@ def main(
     _print_summary(findings)
 
     resolved_report = (
-        report_file if report_file is not None else parse_dir[0] / "spellcheck-report.json"
+        report_file if report_file is not None else parse_dirs / "spellcheck-report.json"
     )
     by_word_counts: Counter[str] = Counter(f.word for f in findings)
     report = {
-        "num_parse_dirs": len(parse_dir),
+        "num_parse_dirs": len(parse_dir_list),
         "num_spreads": len(spreads),
         "num_items_checked": len(metas),
         "num_findings": len(findings),
