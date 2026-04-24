@@ -1,0 +1,249 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "220 CARL BARKS: CONVERSATIONS",
+              "value": "220 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.999545693597563,
+                  "w": 125.69614445086226,
+                  "x": 87.83975262897772,
+                  "y": 24.8893018521937,
+                  "confidence": 0.9,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "220 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.0,
+              "w": 125.7,
+              "x": 87.84,
+              "y": 24.89,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "there every weekend to fix up the house and experiment with growing things. I knew the air conditioning in Disney's new Burbank Studio would wreck my health. The weekends at the sunny San Jacinto place persuaded me to prepare to try to live there full time. I guess it cooked some sense into my head. Later in 1942, after having painful surgery on my drippy nose, I made the break. Nov. 6, 1942.",
+          "value": "there every weekend to fix up the house and experiment with growing things. I knew the air conditioning in Disney's new Burbank Studio would wreck my health. The weekends at the sunny San Jacinto place persuaded me to prepare to try to live there full time. I guess it cooked some sense into my head. Later in 1942, after having painful surgery on my drippy nose, I made the break. Nov. 6, 1942.",
+          "bbox": [
+            {
+              "h": 76.35025907548116,
+              "w": 284.3538986340035,
+              "x": 87.07958530035252,
+              "y": 48.783130819478856,
+              "confidence": 0.98,
+              "end_index": 394,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** When and how did your second wife assist you in your work?\n**CB:** My second wife's part in production of the finished art began slowly. That form of comic book work was new to me and to the editors. We had to try different paper sizes and types of drawing paper. I furnished the paper, buying it by the ream in a Hollywood art store. It was Strathmore high surface with lots of 'tooth' making it good for accented pen swooshes and good for gripping fine pointed brushes.",
+          "value": "DA: When and how did your second wife assist you in your work?\nCB: My second wife's part in production of the finished art began slowly. That form of comic book work was new to me and to the editors. We had to try different paper sizes and types of drawing paper. I furnished the paper, buying it by the ream in a Hollywood art store. It was Strathmore high surface with lots of 'tooth' making it good for accented pen swooshes and good for gripping fine pointed brushes.",
+          "bbox": [
+            {
+              "h": 89.26095399437884,
+              "w": 284.3128181539396,
+              "x": 86.4545120790063,
+              "y": 133.04619558641392,
+              "confidence": 0.97,
+              "end_index": 478,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "As I grew more loaded with production, I had my wife draw the orders of each page and also ink the borders \\[of the panels] when the duck drawings were finished. Later I had her paint in the solid blacks. The logos she also inked over top of my blue-line drawings. She never inked the characters or did any lettering.",
+          "value": "As I grew more loaded with production, I had my wife draw the orders of each page and also ink the borders [of the panels] when the duck drawings were finished. Later I had her paint in the solid blacks. The logos she also inked over top of my blue-line drawings. She never inked the characters or did any lettering.",
+          "bbox": [
+            {
+              "h": 63.376283410346836,
+              "w": 284.0388167992569,
+              "x": 85.67934264243522,
+              "y": 223.4838576719703,
+              "confidence": 0.97,
+              "end_index": 316,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Carl Barks: Spools of Memory Donald Ault / 2000",
+          "md": "![Carl Barks: Spools of Memory Donald Ault / 2000](CB-Conversations-scan-4-rotated_spread_033_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-4-rotated_spread_033_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 188.75448,
+              "w": 303.6732,
+              "x": 439.10640000000006,
+              "y": 93.48408,
+              "confidence": 0.83,
+              "end_index": 72,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "From conversations on 18 June and 19 June 2000. Portions of this interview appeared in altered form under the title \"From the Duck's Mouth\" in the Carl Barks memorial issue of the Comics Journal #227, September 2000: 60. Reprinted by permission of Donald Ault.",
+          "value": "From conversations on 18 June and 19 June 2000. Portions of this interview appeared in altered form under the title \"From the Duck's Mouth\" in the Carl Barks memorial issue of the Comics Journal #227, September 2000: 60. Reprinted by permission of Donald Ault.",
+          "bbox": [
+            {
+              "h": 77.42212712938266,
+              "w": 155.0041335508766,
+              "x": 478.69617644817083,
+              "y": 303.1476247951601,
+              "confidence": 0.95,
+              "end_index": 259,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## Comments made by Carl Barks to Donald Ault 6-18-00",
+          "value": "Comments made by Carl Barks to Donald Ault 6-18-00",
+          "bbox": [
+            {
+              "h": 25.619031502477114,
+              "w": 243.69308939119662,
+              "x": 455.99811235232477,
+              "y": 408.59414318311747,
+              "confidence": 0.94,
+              "end_index": 52,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "*In the afternoon*",
+          "value": "In the afternoon",
+          "bbox": [
+            {
+              "h": 10.428035856516772,
+              "w": 71.4172969464558,
+              "x": 456.5762570264863,
+              "y": 450.92946766863577,
+              "confidence": 0.86,
+              "end_index": 17,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\"When I look back on my work, I can't feel the confidence I had at that time, but I could just feel the confidence coming out of the ends of my fingers.\"",
+          "value": "\"When I look back on my work, I can't feel the confidence I had at that time, but I could just feel the confidence coming out of the ends of my fingers.\"",
+          "bbox": [
+            {
+              "h": 38.63662292778198,
+              "w": 276.906103396532,
+              "x": 456.88055687881103,
+              "y": 470.9009385480184,
+              "confidence": 0.91,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\"Things fell into place for me easier than for others because I often had a whole panorama in my mind of what the story would be before I even put anything on paper.\"",
+          "value": "\"Things fell into place for me easier than for others because I often had a whole panorama in my mind of what the story would be before I even put anything on paper.\"",
+          "bbox": [
+            {
+              "h": 38.91382078410828,
+              "w": 283.0095820312501,
+              "x": 457.50177939214944,
+              "y": 517.1671328649011,
+              "confidence": 0.92,
+              "end_index": 165,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "221",
+              "value": "221",
+              "bbox": [
+                {
+                  "h": 9.040770145769867,
+                  "w": 14.741386837842969,
+                  "x": 591.8668693788111,
+                  "y": 579.816472165587,
+                  "confidence": 0.93,
+                  "end_index": 2,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "221",
+          "bbox": [
+            {
+              "h": 9.04,
+              "w": 14.74,
+              "x": 591.87,
+              "y": 579.82,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "220, 221"
+    }
+  ]
+}

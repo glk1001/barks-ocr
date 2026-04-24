@@ -1,0 +1,409 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "176 CARL BARKS: CONVERSATIONS",
+              "value": "176 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 8.975800790181976,
+                  "w": 124.86583788467037,
+                  "x": 128.39686825338225,
+                  "y": 39.26648751190931,
+                  "confidence": 0.83,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "176 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 8.98,
+              "w": 124.87,
+              "x": 128.4,
+              "y": 39.27,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "comic book. So the story was adapted for Donald and the three nephews that would go and look for pirates' gold.",
+          "value": "comic book. So the story was adapted for Donald and the three nephews that would go and look for pirates' gold.",
+          "bbox": [
+            {
+              "h": 24.391323863257444,
+              "w": 281.5873746844036,
+              "x": 127.26169205530681,
+              "y": 62.94337449802307,
+              "confidence": 0.97,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I had nothing to do with the writing of it. It had already been written. It was adapted by Bob Karp, who was a gag writer for the Donald Duck comic strip, the newspaper strip. He adapted it and made it into a script for comic book illustration. Jack Hannah took half the pages and I took half the pages, and we illustrated it together, after hours. We were moonlighting (laughs).",
+          "value": "I had nothing to do with the writing of it. It had already been written. It was adapted by Bob Karp, who was a gag writer for the Donald Duck comic strip, the newspaper strip. He adapted it and made it into a script for comic book illustration. Jack Hannah took half the pages and I took half the pages, and we illustrated it together, after hours. We were moonlighting (laughs).",
+          "bbox": [
+            {
+              "h": 76.86399963438456,
+              "w": 281.9056497892054,
+              "x": 126.68324683808119,
+              "y": 89.17632851681596,
+              "confidence": 0.96,
+              "end_index": 378,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD:** And then when you left the studio because of that sinus problem to become a famous artist, have you never regretted leaving the studio?",
+          "value": "SD: And then when you left the studio because of that sinus problem to become a famous artist, have you never regretted leaving the studio?",
+          "bbox": [
+            {
+              "h": 24.407540717892548,
+              "w": 278.69363336032774,
+              "x": 126.59131822837273,
+              "y": 175.5743140529726,
+              "confidence": 0.79,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I never regretted it at all. Because I know that I would have been a failure around there. I never really amounted to anything. And getting out on my own, I was able to create good stuff. I think that one of the secrets of a successful writing is that a writer be alone. I can't think of Hemingway or Poe or all of those guys writing with a committee sitting around them telling them what to write and correcting their stuff. They worked alone. That's why their stuff had such charm.",
+          "value": "CB: I never regretted it at all. Because I know that I would have been a failure around there. I never really amounted to anything. And getting out on my own, I was able to create good stuff. I think that one of the secrets of a successful writing is that a writer be alone. I can't think of Hemingway or Poe or all of those guys writing with a committee sitting around them telling them what to write and correcting their stuff. They worked alone. That's why their stuff had such charm.",
+          "bbox": [
+            {
+              "h": 90.43,
+              "w": 283.9,
+              "x": 125.39,
+              "y": 200.32,
+              "confidence": 1.0,
+              "end_index": 490,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD:** You are famous for all those characters you created like Uncle $crooge, like Gyro Gearloose. We know that in animation Disney was very involved. Did he ever tell you anything about all those characters you created without asking him?",
+          "value": "SD: You are famous for all those characters you created like Uncle $crooge, like Gyro Gearloose. We know that in animation Disney was very involved. Did he ever tell you anything about all those characters you created without asking him?",
+          "bbox": [
+            {
+              "h": 50.63835405868902,
+              "w": 283.0872223227897,
+              "x": 126.08365090272486,
+              "y": 301.5086188976754,
+              "confidence": 0.94,
+              "end_index": 240,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I don't know if anybody ever asked him what he thought about those comic books. I never had any comment from him at all. I never had any comment from anybody at the Disney Studio, unless it came to the Western Publishing editorial offices and they relayed it to me secondhand. I did not even know if anybody at Disney was reading those stories.",
+          "value": "CB: I don't know if anybody ever asked him what he thought about those comic books. I never had any comment from him at all. I never had any comment from anybody at the Disney Studio, unless it came to the Western Publishing editorial offices and they relayed it to me secondhand. I did not even know if anybody at Disney was reading those stories.",
+          "bbox": [
+            {
+              "h": 64.4762639291159,
+              "w": 283.4455948813834,
+              "x": 125.69201824504574,
+              "y": 353.97946423399395,
+              "confidence": 0.82,
+              "end_index": 351,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD:** But they read them since they copied you after that.",
+          "value": "SD: But they read them since they copied you after that.",
+          "bbox": [
+            {
+              "h": 11.682482026486301,
+              "w": 217.05222588367002,
+              "x": 125.71666277629575,
+              "y": 427.28039176829276,
+              "confidence": 0.89,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** In recent years they have been giving me credit for a lot of that stuff and treating me as if I had done a big favor to the studio in inventing all those characters.",
+          "value": "CB: In recent years they have been giving me credit for a lot of that stuff and treating me as if I had done a big favor to the studio in inventing all those characters.",
+          "bbox": [
+            {
+              "h": 36.09355065262959,
+              "w": 280.9265681450076,
+              "x": 125.3398819550305,
+              "y": 440.6520504477897,
+              "confidence": 0.94,
+              "end_index": 172,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD:** Among all the characters that you created, Uncle $crooge is the most famous. Is he your favorite or do you have other favorite characters?",
+          "value": "SD: Among all the characters that you created, Uncle $crooge is the most famous. Is he your favorite or do you have other favorite characters?",
+          "bbox": [
+            {
+              "h": 26.025854304635743,
+              "w": 284.6936250000001,
+              "x": 123.55125000000001,
+              "y": 486.3417218543047,
+              "confidence": 0.72,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, of course, I would say that Donald should be the favorite character, and I guess he is, because he was the means in getting to Uncle $crooge and all these others. But Uncle $crooge is a good character, and I am proud that I was able to invent him and I am also proud of some",
+          "value": "CB: Well, of course, I would say that Donald should be the favorite character, and I guess he is, because he was the means in getting to Uncle $crooge and all these others. But Uncle $crooge is a good character, and I am proud that I was able to invent him and I am also proud of some",
+          "bbox": [
+            {
+              "h": 51.53,
+              "w": 281.54,
+              "x": 123.55,
+              "y": 514.47,
+              "confidence": 1.0,
+              "end_index": 287,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nSÉBASTIEN DURAND AND DIDIER GHEZ / 1994 177\n\\</page_header>",
+          "value": "<page_header>\nSÉBASTIEN DURAND AND DIDIER GHEZ / 1994 177\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.52,
+              "w": 177.97,
+              "x": 576.48,
+              "y": 39.96,
+              "confidence": 1.0,
+              "end_index": 57,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "other characters that I invented, for example Gyro Gearloose, the crazy inventor.",
+          "value": "other characters that I invented, for example Gyro Gearloose, the crazy inventor.",
+          "bbox": [
+            {
+              "h": 22.737124913657595,
+              "w": 273.32979120617387,
+              "x": 474.665543326029,
+              "y": 63.595594319859956,
+              "confidence": 0.96,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "I read some of those stories now that I wrote for Gyro and I keep on laughing because I think: \"How on earth did I ever come up with such a goofy bunch of stuff?\"",
+          "value": "I read some of those stories now that I wrote for Gyro and I keep on laughing because I think: \"How on earth did I ever come up with such a goofy bunch of stuff?\"",
+          "bbox": [
+            {
+              "h": 37.29021181283347,
+              "w": 278.15140358231713,
+              "x": 474.72810637385675,
+              "y": 89.57857210604043,
+              "confidence": 0.96,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD:** You also created some wonderful villains like the Beagle Boys or Magica DeSpell. You are very interested in all these ducks, since, with a few exceptions, all those characters are ducks.",
+          "value": "SD: You also created some wonderful villains like the Beagle Boys or Magica DeSpell. You are very interested in all these ducks, since, with a few exceptions, all those characters are ducks.",
+          "bbox": [
+            {
+              "h": 36.52597647198932,
+              "w": 282.0508997475229,
+              "x": 474.9133410823171,
+              "y": 134.6294463509909,
+              "confidence": 0.78,
+              "end_index": 193,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** That was because I was assigned to draw for the duck comics. I was not going to drag in a whole new bunch of other types of characters because I did not want to raid the Mickey strips or the Goofy strips. They had their own comic books. Pluto himself had his own comic book, and I was not going to raid those books to get characters. I just invented my own and kept them pretty well identified, and Duckburg characters were all associates of Donald in some way. I did not stick to duck faces only. Gyro is a chicken, the Beagle Boys are dogs, and I had fellows with pig faces. They had variety but did not come from the other comic books.",
+          "value": "CB: That was because I was assigned to draw for the duck comics. I was not going to drag in a whole new bunch of other types of characters because I did not want to raid the Mickey strips or the Goofy strips. They had their own comic books. Pluto himself had his own comic book, and I was not going to raid those books to get characters. I just invented my own and kept them pretty well identified, and Duckburg characters were all associates of Donald in some way. I did not stick to duck faces only. Gyro is a chicken, the Beagle Boys are dogs, and I had fellows with pig faces. They had variety but did not come from the other comic books.",
+          "bbox": [
+            {
+              "h": 115.38022161299544,
+              "w": 282.4164602943979,
+              "x": 474.6725559975229,
+              "y": 173.3984101586319,
+              "confidence": 0.95,
+              "end_index": 645,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD:** When you are a writer or painter, you are the owner of your art. When you drew those comics, you knew that other people could use the same characters. How do you react to that? How is it for you to see other people drawing Uncle $crooge or Donald Duck?",
+          "value": "SD: When you are a writer or painter, you are the owner of your art. When you drew those comics, you knew that other people could use the same characters. How do you react to that? How is it for you to see other people drawing Uncle $crooge or Donald Duck?",
+          "bbox": [
+            {
+              "h": 48.63417218543043,
+              "w": 283.90500000000003,
+              "x": 473.96362500000004,
+              "y": 296.5370066225166,
+              "confidence": 0.94,
+              "end_index": 259,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, I just hope that they will do a good job with them and will keep the character. I know of some instances when somebody has shown Uncle $crooge as a greedy old show-off with a magnificent car, driving around and showing off his money. I don't agree with that. I feel that $crooge is an old tightwad. He had a magnificent car once in a while, but it was for some particular purpose.",
+          "value": "CB: Well, I just hope that they will do a good job with them and will keep the character. I know of some instances when somebody has shown Uncle $crooge as a greedy old show-off with a magnificent car, driving around and showing off his money. I don't agree with that. I feel that $crooge is an old tightwad. He had a magnificent car once in a while, but it was for some particular purpose.",
+          "bbox": [
+            {
+              "h": 76.04826392435218,
+              "w": 283.3822053401296,
+              "x": 475.02654563643296,
+              "y": 348.13614902343755,
+              "confidence": 0.83,
+              "end_index": 393,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD:** You have written a new story that will be published soon (\"Horsing Around with History\"). Did you choose the artist that will draw it?",
+          "value": "SD: You have written a new story that will be published soon (\"Horsing Around with History\"). Did you choose the artist that will draw it?",
+          "bbox": [
+            {
+              "h": 23.134092715231816,
+              "w": 276.80737500000004,
+              "x": 474.48937500000005,
+              "y": 431.92402649006624,
+              "confidence": 0.68,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yes, I chose Bill Van Horn who lives in Vancouver to do the artwork. His drawing style is very Disney-like. It looked quite a bit like my own drawing, and his way of staging things is close to mine. I just wrote out the script with a typewriter and had been trying to sketch it out, and he got the feeling of what I was thinking of. He would read that little blurb and come up with a sketch just like I thought it in my head.",
+          "value": "CB: Yes, I chose Bill Van Horn who lives in Vancouver to do the artwork. His drawing style is very Disney-like. It looked quite a bit like my own drawing, and his way of staging things is close to mine. I just wrote out the script with a typewriter and had been trying to sketch it out, and he got the feeling of what I was thinking of. He would read that little blurb and come up with a sketch just like I thought it in my head.",
+          "bbox": [
+            {
+              "h": 75.19,
+              "w": 278.65,
+              "x": 473.18,
+              "y": 458.21,
+              "confidence": 1.0,
+              "end_index": 432,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD:** When you receive his drawings, can you resist correcting a few things?",
+          "value": "SD: When you receive his drawings, can you resist correcting a few things?",
+          "bbox": [
+            {
+              "h": 23.761153467987814,
+              "w": 259.87227424733226,
+              "x": 474.7240490424925,
+              "y": 542.8332858755717,
+              "confidence": 0.93,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "176, 177"
+    }
+  ]
+}

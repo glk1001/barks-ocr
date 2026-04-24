@@ -1,0 +1,250 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "180 CARL BARKS: CONVERSATIONS",
+              "value": "180 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.952224743354607,
+                  "w": 124.90559722751527,
+                  "x": 125.33169215653584,
+                  "y": 39.5561305521151,
+                  "confidence": 0.83,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "180 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.95,
+              "w": 124.91,
+              "x": 125.33,
+              "y": 39.56,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "happen. Another one is a ten-page story of Donald, where he got to complaining about everything being too noisy and he moves to a very quiet place and he was not satisfied until everything was absolutely silent around him. He went around everywhere seeing if there was any noise he could pick up. Another story I wrote that I like is called \"In Old California,\" where Donald and the kids went back in history before the Gold Rush. That had a lot of sentimental, easygoing stuff in it. It was not a funny story. It was just based on pathos. Another one I like that I wrote in the '60s was the \"Micro Ducks from Outer Space.\"",
+          "value": "happen. Another one is a ten-page story of Donald, where he got to complaining about everything being too noisy and he moves to a very quiet place and he was not satisfied until everything was absolutely silent around him. He went around everywhere seeing if there was any noise he could pick up. Another story I wrote that I like is called \"In Old California,\" where Donald and the kids went back in history before the Gold Rush. That had a lot of sentimental, easygoing stuff in it. It was not a funny story. It was just based on pathos. Another one I like that I wrote in the '60s was the \"Micro Ducks from Outer Space.\"",
+          "bbox": [
+            {
+              "h": 115.32025603682361,
+              "w": 283.95353770483996,
+              "x": 123.7260909274962,
+              "y": 63.448906908584235,
+              "confidence": 0.98,
+              "end_index": 622,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD and DG**: Thank you Carl.",
+          "value": "SD and DG: Thank you Carl.",
+          "bbox": [
+            {
+              "h": 11.660818187881102,
+              "w": 111.7113810380145,
+              "x": 123.670214962843,
+              "y": 186.04661718035447,
+              "confidence": 0.88,
+              "end_index": 29,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# Carl Barks Remembers \"A Perfect Life\"",
+          "value": "Carl Barks Remembers \"A Perfect Life\"",
+          "bbox": [
+            {
+              "h": 87.63980037633385,
+              "w": 185.6676908346037,
+              "x": 508.9471882860138,
+              "y": 132.4743907988758,
+              "confidence": 0.92,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "Donald Ault and Lynda Ault / 1997",
+          "value": "Donald Ault and Lynda Ault / 1997",
+          "bbox": [
+            {
+              "h": 13.144370860927154,
+              "w": 203.20237500000002,
+              "x": 500.25112500000006,
+              "y": 238.96466225165565,
+              "confidence": 0.9,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "caption": "Speech bubble graphic containing the title and authors",
+          "md": "![Speech bubble graphic containing the title and authors](CB-Conversations-scan-4-rotated_spread_013_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-4-rotated_spread_013_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 35.839434889481744,
+              "w": 81.7756138290778,
+              "x": 501.41673118330795,
+              "y": 258.6852021008004,
+              "confidence": 0.77,
+              "end_index": 79,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "Excerpts from unpublished interviews conducted on 13–14 June 1997. Portions of this interview appeared in altered form under the title \"From the Duck's Mouth\" in the *Carl Barks* memorial issue of the *Comics Journal* #227, September 2000: 57–59. Transcribed from the original videotape interview and reprinted by permission of Donald Ault and Lynda Ault.",
+          "value": "Excerpts from unpublished interviews conducted on 13–14 June 1997. Portions of this interview appeared in altered form under the title \"From the Duck's Mouth\" in the Carl Barks memorial issue of the Comics Journal #227, September 2000: 57–59. Transcribed from the original videotape interview and reprinted by permission of Donald Ault and Lynda Ault.",
+          "bbox": [
+            {
+              "h": 98.97899388338418,
+              "w": 162.1385750762195,
+              "x": 487.969633050686,
+              "y": 316.73914838986286,
+              "confidence": 0.98,
+              "end_index": 354,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## Wives and Daughters",
+          "value": "Wives and Daughters",
+          "bbox": [
+            {
+              "h": 11.56704635761588,
+              "w": 113.03625,
+              "x": 464.500125,
+              "y": 437.7075496688742,
+              "confidence": 0.95,
+              "end_index": 21,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA**: Do I remember correctly that you said that your second wife used to tear up your comic books or something?",
+          "value": "DA: Do I remember correctly that you said that your second wife used to tear up your comic books or something?",
+          "bbox": [
+            {
+              "h": 24.413040000000024,
+              "w": 282.6432,
+              "x": 465.18360000000007,
+              "y": 459.6796800000001,
+              "confidence": 0.88,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: Oh, yeah. Oh, yeah, well, she started out doing my blacking, solid blacks, and even ink the borders around the panels.",
+          "value": "CB: Oh, yeah. Oh, yeah, well, she started out doing my blacking, solid blacks, and even ink the borders around the panels.",
+          "bbox": [
+            {
+              "h": 23.65986754966889,
+              "w": 272.07562500000006,
+              "x": 465.28875000000005,
+              "y": 485.81594701986756,
+              "confidence": 0.85,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA**: Your second wife did this?",
+          "value": "DA: Your second wife did this?",
+          "bbox": [
+            {
+              "h": 8.938172185430517,
+              "w": 119.34524999999996,
+              "x": 466.0773750000001,
+              "y": 519.9913112582782,
+              "confidence": 0.8,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: Yeah, she did that for a while. And she had a—she came from a family that had a long record of alcoholism. And she just loved the taste of liquor. And so she kept drinking more and more, and finally she just got to the",
+          "value": "CB: Yeah, she did that for a while. And she had a—she came from a family that had a long record of alcoholism. And she just loved the taste of liquor. And so she kept drinking more and more, and finally she just got to the",
+          "bbox": [
+            {
+              "h": 37.512719999999945,
+              "w": 281.80199999999996,
+              "x": 466.0248000000001,
+              "y": 532.3233600000001,
+              "confidence": 0.85,
+              "end_index": 225,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "180"
+    }
+  ]
+}

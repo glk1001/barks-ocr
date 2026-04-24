@@ -1,0 +1,430 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 190 CARL BARKS: CONVERSATIONS",
+          "value": "190 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.105868469536016,
+              "w": 124.98198525628813,
+              "x": 125.1501641458651,
+              "y": 39.435751763171695,
+              "confidence": 0.8,
+              "end_index": 30,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "Giving kids a background on what the lessons were all about. She was a really good teacher.",
+          "value": "Giving kids a background on what the lessons were all about. She was a really good teacher.",
+          "bbox": [
+            {
+              "h": 24.847119858755722,
+              "w": 277.25967978872904,
+              "x": 123.70917285751717,
+              "y": 62.97068919469323,
+              "confidence": 0.97,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** What kind of a student did you think of yourself as? Did you get grades at that time?",
+          "value": "DA: What kind of a student did you think of yourself as? Did you get grades at that time?",
+          "bbox": [
+            {
+              "h": 23.8176,
+              "w": 268.3428,
+              "x": 122.8152,
+              "y": 97.05672000000001,
+              "confidence": 0.87,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I got good grades except in English—grammar and all the structure of sentences.",
+          "value": "CB: I got good grades except in English—grammar and all the structure of sentences.",
+          "bbox": [
+            {
+              "h": 22.62671999999999,
+              "w": 275.0724,
+              "x": 122.8152,
+              "y": 123.25608000000001,
+              "confidence": 0.91,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**LA:** Diagraming, did you have to do diagraming?",
+          "value": "LA: Diagraming, did you have to do diagraming?",
+          "bbox": [
+            {
+              "h": 13.099680000000006,
+              "w": 189.27000000000004,
+              "x": 121.974,
+              "y": 157.19616000000002,
+              "confidence": 0.88,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, no, we had sort of graduated beyond diagraming of sentences. At the time I was going to school, we didn't do that anymore. We just looked at the book and analyzed it, and on our paper that we were submitting, we'd just underline, like, the predicate or the subject.",
+          "value": "CB: Well, no, we had sort of graduated beyond diagraming of sentences. At the time I was going to school, we didn't do that anymore. We just looked at the book and analyzed it, and on our paper that we were submitting, we'd just underline, like, the predicate or the subject.",
+          "bbox": [
+            {
+              "h": 53.70165983946266,
+              "w": 280.7241023008766,
+              "x": 121.61472581221419,
+              "y": 169.89517953744289,
+              "confidence": 0.94,
+              "end_index": 278,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**LA:** And you said you went to a one-room schoolhouse, so it was all the grades in one room with one teacher.",
+          "value": "LA: And you said you went to a one-room schoolhouse, so it was all the grades in one room with one teacher.",
+          "bbox": [
+            {
+              "h": 24.730548196932165,
+              "w": 278.2211170505431,
+              "x": 120.56115957864903,
+              "y": 229.99694360470662,
+              "confidence": 0.92,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** We learned ABCs. We didn't have all this business of sounding letters. We were just told to look for these little things that you put over the top of a letter—we were supposed to look in the dictionary and see those and know what the sound of the letter was.",
+          "value": "CB: We learned ABCs. We didn't have all this business of sounding letters. We were just told to look for these little things that you put over the top of a letter—we were supposed to look in the dictionary and see those and know what the sound of the letter was.",
+          "bbox": [
+            {
+              "h": 51.57301927877284,
+              "w": 282.11343775009533,
+              "x": 119.85725015482089,
+              "y": 255.93279545064794,
+              "confidence": 0.94,
+              "end_index": 265,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** So, you said you had trouble with English?",
+          "value": "DA: So, you said you had trouble with English?",
+          "bbox": [
+            {
+              "h": 13.445833393673814,
+              "w": 181.8977662978754,
+              "x": 119.38065146841656,
+              "y": 315.80416406250004,
+              "confidence": 0.91,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I just found it hard to analyze a sentence.",
+          "value": "CB: Well, I just found it hard to analyze a sentence.",
+          "bbox": [
+            {
+              "h": 13.194554139672267,
+              "w": 196.97569875428735,
+              "x": 119.14726725657395,
+              "y": 329.07675766006105,
+              "confidence": 0.92,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** But you're such a fantastic writer.",
+          "value": "DA: But you're such a fantastic writer.",
+          "bbox": [
+            {
+              "h": 12.042718688071655,
+              "w": 147.13075681211893,
+              "x": 118.61623270769819,
+              "y": 350.00243021627296,
+              "confidence": 0.92,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I got to digging into that stuff in the 1920s, and I realized if I was going to write jokes and things I needed to be able to write intelligible sentences. So I began studying, got my old school books out and studied those things. So, by the time I got a job back on the *Eye-Opener*, when I was in my thirties and became editor of the darn thing, I knew enough about sentence structure that I was just as well off as the guys in there with college educations, as far as that little simple bunch of writing was concerned.",
+          "value": "CB: Well, I got to digging into that stuff in the 1920s, and I realized if I was going to write jokes and things I needed to be able to write intelligible sentences. So I began studying, got my old school books out and studied those things. So, by the time I got a job back on the Eye-Opener, when I was in my thirties and became editor of the darn thing, I knew enough about sentence structure that I was just as well off as the guys in there with college educations, as far as that little simple bunch of writing was concerned.",
+          "bbox": [
+            {
+              "h": 102.25182904916161,
+              "w": 283.8627236089939,
+              "x": 117.38751248094515,
+              "y": 363.2092522580031,
+              "confidence": 0.95,
+              "end_index": 534,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** That's amazing. So, you not only taught yourself all the subject matter, like archeology and so on, but you even sort of taught yourself how to write.",
+          "value": "DA: That's amazing. So, you not only taught yourself all the subject matter, like archeology and so on, but you even sort of taught yourself how to write.",
+          "bbox": [
+            {
+              "h": 35.98679153963412,
+              "w": 282.790648931736,
+              "x": 115.1074800936071,
+              "y": 476.1288021865474,
+              "confidence": 0.94,
+              "end_index": 157,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, yes. And that was a nice bunch of years in which I would take about an hour or two every evening and look at the old grammar books and see how they phrased a sentence, and I would do it and take a line out of a newspaper or a letter and analyze it and finally I got so I could",
+          "value": "CB: Well, yes. And that was a nice bunch of years in which I would take about an hour or two every evening and look at the old grammar books and see how they phrased a sentence, and I would do it and take a line out of a newspaper or a letter and analyze it and finally I got so I could",
+          "bbox": [
+            {
+              "h": 55.32596907393291,
+              "w": 278.55319209103476,
+              "x": 114.15255459818027,
+              "y": 515.4047033631861,
+              "confidence": 0.93,
+              "end_index": 289,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# DONALD AULT AND LYNDA AULT / 1997 191",
+          "value": "DONALD AULT AND LYNDA AULT / 1997 191",
+          "bbox": [
+            {
+              "h": 10.341743929830411,
+              "w": 135.75239677019823,
+              "x": 592.4802276819742,
+              "y": 40.343744933188844,
+              "confidence": 0.94,
+              "end_index": 38,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "just look at a sentence and realize which words were the subject words and which were the predicates, which were back and forth.",
+          "value": "just look at a sentence and realize which words were the subject words and which were the predicates, which were back and forth.",
+          "bbox": [
+            {
+              "h": 25.664131997903965,
+              "w": 274.08360330125765,
+              "x": 471.34288948170735,
+              "y": 64.35757374952365,
+              "confidence": 0.95,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** And you say you enjoyed that.",
+          "value": "DA: And you say you enjoyed that.",
+          "bbox": [
+            {
+              "h": 11.9088,
+              "w": 137.11559999999997,
+              "x": 471.9132000000001,
+              "y": 98.84304000000002,
+              "confidence": 0.84,
+              "end_index": 36,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I did. It was like working a crossword puzzle or playing a game of cards. It was a test, an exercise for the brain. . . . It was not until I got to work there at Disney's that I discovered there was a chance that I could make a living writing stories. Yeah, I began seeing the first comic books come along, *Superman* and some of those, and I would read those and think, well these are lousy stories as far as I'm concerned, but they are something that's created in someone's mind, and he breaks it down in panel form. And so I was thinking, \"God, maybe I can do the same thing with some kind of characters.\" Then the opportunity came along to do stories for the ducks, and I was already pretty well adept at that through my years in animation story construction, so I just fit right in.",
+          "value": "CB: I did. It was like working a crossword puzzle or playing a game of cards. It was a test, an exercise for the brain. . . . It was not until I got to work there at Disney's that I discovered there was a chance that I could make a living writing stories. Yeah, I began seeing the first comic books come along, Superman and some of those, and I would read those and think, well these are lousy stories as far as I'm concerned, but they are something that's created in someone's mind, and he breaks it down in panel form. And so I was thinking, \"God, maybe I can do the same thing with some kind of characters.\" Then the opportunity came along to do stories for the ducks, and I was already pretty well adept at that through my years in animation story construction, so I just fit right in.",
+          "bbox": [
+            {
+              "h": 142.9056,
+              "w": 281.8020000000001,
+              "x": 472.7544000000001,
+              "y": 110.1564,
+              "confidence": 0.88,
+              "end_index": 794,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## Transition to Comics",
+          "value": "Transition to Comics",
+          "bbox": [
+            {
+              "h": 10.967256245236253,
+              "w": 107.88719595560212,
+              "x": 475.11295176734,
+              "y": 274.97805745283927,
+              "confidence": 0.95,
+              "end_index": 22,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** And how did you make that transition?",
+          "value": "LA: And how did you make that transition?",
+          "bbox": [
+            {
+              "h": 12.260917154153985,
+              "w": 167.32459591749242,
+              "x": 475.97065158155493,
+              "y": 295.1032493997714,
+              "confidence": 0.88,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, I just had to get out of the Disney studio because I had such terrible sinus trouble, and I would have become an invalid if I stayed there and worked. I found that going out in the hot desert sun down around San Jacinto I would feel better. So when I left the studio, it was to go get out of that miserable air-conditioned climate and get out in the open hot sun and cook all the bugs out of me, and it did; it worked. I left with no means other than raising chickens, and, of course, I'm sure grateful to Disney's because of the fact that they had all that stable of characters and Donald Duck needed someone to write stories about him. Western Publishing said for me to go ahead and write a story of my own—just submit a script to them. So I submitted the rabbit's foot story, and they liked that—just bingo! That's what they wanted. It was quite a chain of events—all happened because I had the reckless daring to quit the studio and go out to San Jacinto, and that hot sun began to cook some sense into my head.",
+          "value": "CB: Oh, I just had to get out of the Disney studio because I had such terrible sinus trouble, and I would have become an invalid if I stayed there and worked. I found that going out in the hot desert sun down around San Jacinto I would feel better. So when I left the studio, it was to go get out of that miserable air-conditioned climate and get out in the open hot sun and cook all the bugs out of me, and it did; it worked. I left with no means other than raising chickens, and, of course, I'm sure grateful to Disney's because of the fact that they had all that stable of characters and Donald Duck needed someone to write stories about him. Western Publishing said for me to go ahead and write a story of my own—just submit a script to them. So I submitted the rabbit's foot story, and they liked that—just bingo! That's what they wanted. It was quite a chain of events—all happened because I had the reckless daring to quit the studio and go out to San Jacinto, and that hot sun began to cook some sense into my head.",
+          "bbox": [
+            {
+              "h": 194.70888000000002,
+              "w": 285.1668000000001,
+              "x": 476.1192,
+              "y": 307.24704,
+              "confidence": 0.91,
+              "end_index": 1026,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## Debt to Disney's",
+          "value": "Debt to Disney's",
+          "bbox": [
+            {
+              "h": 12.355708609271574,
+              "w": 87.80025,
+              "x": 479.22112500000003,
+              "y": 523.6717350993378,
+              "confidence": 0.96,
+              "end_index": 18,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Just like going out to Disney in 1935—that was a hell of a big gamble, to go to Disney. I don't know what would have happened to me if I hadn't",
+          "value": "CB: Just like going out to Disney in 1935—that was a hell of a big gamble, to go to Disney. I don't know what would have happened to me if I hadn't",
+          "bbox": [
+            {
+              "h": 26.199359999999956,
+              "w": 283.4844,
+              "x": 479.484,
+              "y": 543.6367200000001,
+              "confidence": 0.91,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

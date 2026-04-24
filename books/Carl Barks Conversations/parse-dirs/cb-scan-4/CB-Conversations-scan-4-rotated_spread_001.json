@@ -1,0 +1,625 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "156\nCARL BARKS: CONVERSATIONS",
+              "value": "156\nCARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 11.57,
+                  "w": 126.44,
+                  "x": 113.82,
+                  "y": 41.54,
+                  "confidence": 1.0,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "156\nCARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 126.44,
+              "x": 113.82,
+              "y": 41.54,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "and wear that chevron to show that they were discharged soldiers and no longer had to salute the officers when they met them.",
+          "value": "and wear that chevron to show that they were discharged soldiers and no longer had to salute the officers when they met them.",
+          "bbox": [
+            {
+              "h": 24.241471971465327,
+              "w": 283.10961278105947,
+              "x": 113.95901738757624,
+              "y": 66.4379581983613,
+              "confidence": 0.97,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN**: Did you do this when you were in San Francisco?",
+          "value": "MN: Did you do this when you were in San Francisco?",
+          "bbox": [
+            {
+              "h": 11.258255491377668,
+              "w": 210.21924157417112,
+              "x": 113.93265725633577,
+              "y": 98.01416416134721,
+              "confidence": 0.93,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Yes. I was working for a little printing plant, and they had a job of doing this poster that was going to be put in all the streetcars and so on, and they asked me to do it.",
+          "value": "CB: Yes. I was working for a little printing plant, and they had a job of doing this poster that was going to be put in all the streetcars and so on, and they asked me to do it.",
+          "bbox": [
+            {
+              "h": 35.48980132450332,
+              "w": 278.12175,
+              "x": 114.08775000000001,
+              "y": 110.93849006622519,
+              "confidence": 0.92,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN**: Were you paid for that job?",
+          "value": "MN: Were you paid for that job?",
+          "bbox": [
+            {
+              "h": 10.515496688741734,
+              "w": 128.80875000000003,
+              "x": 113.03625000000001,
+              "y": 155.1035761589404,
+              "confidence": 0.93,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: No, I didn't get anything extra. I think I was getting $12.50 a week.",
+          "value": "CB: No, I didn't get anything extra. I think I was getting $12.50 a week.",
+          "bbox": [
+            {
+              "h": 11.594408417492383,
+              "w": 277.7156411847371,
+              "x": 113.99357983993904,
+              "y": 168.37780669778968,
+              "confidence": 0.9,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN**: And that took care of your room, your board?",
+          "value": "MN: And that took care of your room, your board?",
+          "bbox": [
+            {
+              "h": 10.77838410596027,
+              "w": 197.94487499999997,
+              "x": 113.29912500000002,
+              "y": 186.65006622516557,
+              "confidence": 0.92,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Everything.",
+          "value": "CB: Everything.",
+          "bbox": [
+            {
+              "h": 11.129079092035054,
+              "w": 60.237408030440186,
+              "x": 113.96546654082509,
+              "y": 200.02681344083467,
+              "confidence": 0.91,
+              "end_index": 18,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN**: What were your responsibilities once you arrived at the \\[Disney Studio] story department?",
+          "value": "MN: What were your responsibilities once you arrived at the [Disney Studio] story department?",
+          "bbox": [
+            {
+              "h": 23.355461747332328,
+              "w": 282.2103378429879,
+              "x": 113.19846811880718,
+              "y": 218.99095128144057,
+              "confidence": 0.93,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Well, the responsibility was to think of stuff that was funny and think of it fast (laughs).",
+          "value": "CB: Well, the responsibility was to think of stuff that was funny and think of it fast (laughs).",
+          "bbox": [
+            {
+              "h": 23.817600000000027,
+              "w": 282.64320000000004,
+              "x": 113.56200000000001,
+              "y": 244.72584,
+              "confidence": 0.92,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN**: What kind of boss was Walt Disney?",
+          "value": "MN: What kind of boss was Walt Disney?",
+          "bbox": [
+            {
+              "h": 10.25260927152317,
+              "w": 161.668125,
+              "x": 113.03625000000002,
+              "y": 276.03178807947023,
+              "confidence": 0.93,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Oh, he was an excellent boss—he was more of a genius, of course, in other things than he was in relations with his employees. We all were scared of him, but I don't think he was as vicious as we thought he was.",
+          "value": "CB: Oh, he was an excellent boss—he was more of a genius, of course, in other things than he was in relations with his employees. We all were scared of him, but I don't think he was as vicious as we thought he was.",
+          "bbox": [
+            {
+              "h": 36.54135099337748,
+              "w": 282.32775000000004,
+              "x": 113.03625000000002,
+              "y": 288.9132715231789,
+              "confidence": 0.93,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN**: Did he drop in unannounced?",
+          "value": "MN: Did he drop in unannounced?",
+          "bbox": [
+            {
+              "h": 10.856738757621942,
+              "w": 136.02971035989904,
+              "x": 113.1441324373571,
+              "y": 333.650664114901,
+              "confidence": 0.93,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: No. He found out if he dropped in unannounced, he had everybody scared all the time, so he let you know in advance that he was going to be there at a certain hour.",
+          "value": "CB: No. He found out if he dropped in unannounced, he had everybody scared all the time, so he let you know in advance that he was going to be there at a certain hour.",
+          "bbox": [
+            {
+              "h": 35.706544435975616,
+              "w": 278.7138574040111,
+              "x": 113.08444959389293,
+              "y": 346.8149030630717,
+              "confidence": 0.92,
+              "end_index": 170,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN**: Was there a secret network of information that let you know when the boss was coming down the hall?",
+          "value": "MN: Was there a secret network of information that let you know when the boss was coming down the hall?",
+          "bbox": [
+            {
+              "h": 23.134092715231816,
+              "w": 278.38462499999997,
+              "x": 112.51050000000002,
+              "y": 390.3878145695365,
+              "confidence": 0.94,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: No, we didn't resort to that.",
+          "value": "CB: No, we didn't resort to that.",
+          "bbox": [
+            {
+              "h": 10.571066830221042,
+              "w": 124.96640710746955,
+              "x": 113.0547333984375,
+              "y": 416.86554567930654,
+              "confidence": 0.91,
+              "end_index": 36,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN**: What were your proudest accomplishments while you were at the studio?",
+          "value": "MN: What were your proudest accomplishments while you were at the studio?",
+          "bbox": [
+            {
+              "h": 22.384737404725637,
+              "w": 275.9045185904154,
+              "x": 112.34803142863949,
+              "y": 435.59529922351385,
+              "confidence": 0.95,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: I guess, the first one was the fact that I did that barber chair gag and got into the story department. And then Harry Reeves and I put out a seven-minute short called \"Good Scouts\" with Donald and the kids going to Yellowstone National Park, and there we had a chance to put in a whole bunch of good gags, with Donald setting up his tent over a geyser, and brought in a bear and all. Walt gave Harry and I each a $300 bonus.",
+          "value": "CB: I guess, the first one was the fact that I did that barber chair gag and got into the story department. And then Harry Reeves and I put out a seven-minute short called \"Good Scouts\" with Donald and the kids going to Yellowstone National Park, and there we had a chance to put in a whole bunch of good gags, with Donald setting up his tent over a geyser, and brought in a bear and all. Walt gave Harry and I each a $300 bonus.",
+          "bbox": [
+            {
+              "h": 76.35173494664636,
+              "w": 283.855410394436,
+              "x": 112.3999502429497,
+              "y": 461.7198321122333,
+              "confidence": 0.93,
+              "end_index": 432,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN**: What did you learn at the studio that most influenced your writing and drawing style?",
+          "value": "MN: What did you learn at the studio that most influenced your writing and drawing style?",
+          "bbox": [
+            {
+              "h": 24.144153115472626,
+              "w": 277.4993879275438,
+              "x": 112.3887174459318,
+              "y": 545.1819154487424,
+              "confidence": 0.97,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nMICHAEL NAIMAN / 1993 157\n\\</page_header>",
+          "value": "<page_header>\nMICHAEL NAIMAN / 1993 157\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.219782900628807,
+              "w": 89.14633229325459,
+              "x": 639.3970035966083,
+              "y": 43.585520323813846,
+              "confidence": 0.92,
+              "end_index": 55,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: You learned there that you don't waste any footage, don't waste any pages in comics—make the darned story tight and full of value from one panel to the next.",
+          "value": "CB: You learned there that you don't waste any footage, don't waste any pages in comics—make the darned story tight and full of value from one panel to the next.",
+          "bbox": [
+            {
+              "h": 36.80423841059603,
+              "w": 279.9618750000001,
+              "x": 472.12350000000004,
+              "y": 68.3507284768212,
+              "confidence": 0.94,
+              "end_index": 164,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN**: Is there a difference between writing for animation and writing for comic books?",
+          "value": "MN: Is there a difference between writing for animation and writing for comic books?",
+          "bbox": [
+            {
+              "h": 23.396980132450324,
+              "w": 274.96725000000004,
+              "x": 472.38637500000004,
+              "y": 114.88180132450333,
+              "confidence": 0.94,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: Very much so.",
+          "value": "CB: Very much so.",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 70.97625,
+              "x": 473.437875,
+              "y": 142.48498013245035,
+              "confidence": 0.92,
+              "end_index": 20,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN**: What are the main differences in your mind?",
+          "value": "MN: What are the main differences in your mind?",
+          "bbox": [
+            {
+              "h": 10.77838410596027,
+              "w": 194.00175000000002,
+              "x": 472.64925000000005,
+              "y": 161.1499867549669,
+              "confidence": 0.93,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: Well, with comic books you don't stick with one particular set of actions. You try to move it along; it is a plot business. Animation is an action business; with action gags you think of something a character can do that is a funny routine, and then you try to get as much footage out of that routine as you possibly can.",
+          "value": "CB: Well, with comic books you don't stick with one particular set of actions. You try to move it along; it is a plot business. Animation is an action business; with action gags you think of something a character can do that is a funny routine, and then you try to get as much footage out of that routine as you possibly can.",
+          "bbox": [
+            {
+              "h": 63.936724433117384,
+              "w": 282.2679419302591,
+              "x": 473.28164269721805,
+              "y": 174.2554436690168,
+              "confidence": 0.93,
+              "end_index": 328,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN**: More concentration in plot development and storyline in a comic book?",
+          "value": "MN: More concentration in plot development and storyline in a comic book?",
+          "bbox": [
+            {
+              "h": 23.396980132450324,
+              "w": 269.70975000000004,
+              "x": 473.175,
+              "y": 247.63994701986758,
+              "confidence": 0.95,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: Oh, my yes. What else is there? It's a story you're trying to tell, and you try to tell it in the funniest way possible. So it's a combination of drawing and of trying to get something real funny, a good laugh.",
+          "value": "CB: Oh, my yes. What else is there? It's a story you're trying to tell, and you try to tell it in the funniest way possible. So it's a combination of drawing and of trying to get something real funny, a good laugh.",
+          "bbox": [
+            {
+              "h": 37.60186439119665,
+              "w": 278.10301614900925,
+              "x": 474.43567797256105,
+              "y": 273.3768657679117,
+              "confidence": 0.95,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN**: What is the difference between your Donald in the comic books and the Donald of animated cartoons?",
+          "value": "MN: What is the difference between your Donald in the comic books and the Donald of animated cartoons?",
+          "bbox": [
+            {
+              "h": 24.167802510480175,
+              "w": 282.3548489662729,
+              "x": 474.8033423208842,
+              "y": 320.0645653439406,
+              "confidence": 0.95,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: The animated Donald back in those days was a squatty guy who seemed to have rather rubbery legs, and I couldn't seem to get the kind of action I needed. I needed a Donald who could walk like a human. So I started making his legs straighter and his arm action and body a little bit taller than it was in the animated stuff.",
+          "value": "CB: The animated Donald back in those days was a squatty guy who seemed to have rather rubbery legs, and I couldn't seem to get the kind of action I needed. I needed a Donald who could walk like a human. So I started making his legs straighter and his arm action and body a little bit taller than it was in the animated stuff.",
+          "bbox": [
+            {
+              "h": 63.29237592416155,
+              "w": 279.7304568407012,
+              "x": 475.0259946408156,
+              "y": 346.68917479516017,
+              "confidence": 0.94,
+              "end_index": 329,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN**: Did this lead to a different personality for Donald?",
+          "value": "MN: Did this lead to a different personality for Donald?",
+          "bbox": [
+            {
+              "h": 10.515496688741734,
+              "w": 214.50600000000003,
+              "x": 475.01512500000007,
+              "y": 420.09409271523185,
+              "confidence": 0.92,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: The personality change came through the gags that I had to do for him. I found that I was very limited if I stayed with just the one Donald who was a squawky, fighty guy. I had to have a Donald who could do some thinking.",
+          "value": "CB: The personality change came through the gags that I had to do for him. I found that I was very limited if I stayed with just the one Donald who was a squawky, fighty guy. I had to have a Donald who could do some thinking.",
+          "bbox": [
+            {
+              "h": 51.05613639958082,
+              "w": 275.29384012957314,
+              "x": 475.55645314881866,
+              "y": 433.10122764386443,
+              "confidence": 0.93,
+              "end_index": 228,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN**: How did you get involved in the comic book \"Donald Duck Finds Pirate Gold\"?",
+          "value": "MN: How did you get involved in the comic book \"Donald Duck Finds Pirate Gold\"?",
+          "bbox": [
+            {
+              "h": 24.54037798685213,
+              "w": 273.75290574980943,
+              "x": 476.0272037681022,
+              "y": 493.2345833317455,
+              "confidence": 0.95,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: That was while I was working at the studio. Western publishing came there trying to find something they could use in the way of a duck story or adventure story using the Disney characters that would make a big full-sized comic book long story—a one-shot, in other words.",
+          "value": "CB: That was while I was working at the studio. Western publishing came there trying to find something they could use in the way of a duck story or adventure story using the Disney characters that would make a big full-sized comic book long story—a one-shot, in other words.",
+          "bbox": [
+            {
+              "h": 51.39300731707311,
+              "w": 283.61096870236287,
+              "x": 476.42076491044213,
+              "y": 520.071540948933,
+              "confidence": 0.93,
+              "end_index": 277,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "156, 157"
+    }
+  ]
+}

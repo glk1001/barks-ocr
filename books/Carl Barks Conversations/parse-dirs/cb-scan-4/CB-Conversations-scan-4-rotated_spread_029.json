@@ -1,0 +1,535 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "212 CARL BARKS: CONVERSATIONS",
+              "value": "212 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.09412754203983,
+                  "w": 101.38678759170163,
+                  "x": 124.12292047565741,
+                  "y": 32.951558335318225,
+                  "confidence": 0.92,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "212 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.09,
+              "w": 101.39,
+              "x": 124.12,
+              "y": 32.95,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "act out his little bit of business. I think the fact that I wrote the story and broke it down into page script format—that was a big advantage. The feeling that I had for the Ducks when I was writing the stories was able to come clear out of the ends of my fingers and onto those drawings, and yet all the time that I was drawing, I was conscious of the fact that I needed to be critical of every line that I put down there, and I would do more erasing than I did drawing.",
+          "value": "act out his little bit of business. I think the fact that I wrote the story and broke it down into page script format—that was a big advantage. The feeling that I had for the Ducks when I was writing the stories was able to come clear out of the ends of my fingers and onto those drawings, and yet all the time that I was drawing, I was conscious of the fact that I needed to be critical of every line that I put down there, and I would do more erasing than I did drawing.",
+          "bbox": [
+            {
+              "h": 88.86277902296115,
+              "w": 283.4418881835938,
+              "x": 99.16713931497715,
+              "y": 56.41248503834796,
+              "confidence": 0.98,
+              "end_index": 471,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**JR:** Was it the visuals of the page that made you modify the story, or was it the essence of the story that made you modify the visuals?",
+          "value": "JR: Was it the visuals of the page that made you modify the story, or was it the essence of the story that made you modify the visuals?",
+          "bbox": [
+            {
+              "h": 23.8176,
+              "w": 282.64320000000004,
+              "x": 99.2616,
+              "y": 153.62352,
+              "confidence": 0.85,
+              "end_index": 138,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** All of those elements were there in front of me to correct and do over again in case I didn't like what I saw. That was one reason why I was not one of the fastest of all the artists that were drawing for the comic books.",
+          "value": "CB: All of those elements were there in front of me to correct and do over again in case I didn't like what I saw. That was one reason why I was not one of the fastest of all the artists that were drawing for the comic books.",
+          "bbox": [
+            {
+              "h": 36.015576158940405,
+              "w": 282.85350000000005,
+              "x": 99.10387500000002,
+              "y": 179.2892185430464,
+              "confidence": 0.86,
+              "end_index": 228,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH:** Carl, can I object to that?",
+          "value": "BH: Carl, can I object to that?",
+          "bbox": [
+            {
+              "h": 9.463947019867561,
+              "w": 115.66499999999999,
+              "x": 99.629625,
+              "y": 225.29451655629143,
+              "confidence": 0.83,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yeah.",
+          "value": "CB: Yeah.",
+          "bbox": [
+            {
+              "h": 8.149509933774823,
+              "w": 37.32825000000001,
+              "x": 100.155375,
+              "y": 238.17600000000002,
+              "confidence": 0.8,
+              "end_index": 12,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH:** I find that's a very interesting statement you made about not being fast. I would guess that you were fast for what you were doing because your reputation at the animation studio was that you were one of the fastest sketch artists that they had. For anyone else to have gone through the process of refining and reanalyzing that you did—wouldn't that have taken them even longer?",
+          "value": "BH: I find that's a very interesting statement you made about not being fast. I would guess that you were fast for what you were doing because your reputation at the animation studio was that you were one of the fastest sketch artists that they had. For anyone else to have gone through the process of refining and reanalyzing that you did—wouldn't that have taken them even longer?",
+          "bbox": [
+            {
+              "h": 75.62088,
+              "w": 282.64320000000004,
+              "x": 99.2616,
+              "y": 256.63464000000005,
+              "confidence": 0.91,
+              "end_index": 385,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Probably another person wouldn't have bothered to do it.",
+          "value": "CB: Probably another person wouldn't have bothered to do it.",
+          "bbox": [
+            {
+              "h": 10.25260927152317,
+              "w": 238.953375,
+              "x": 99.36675000000001,
+              "y": 334.12990728476825,
+              "confidence": 0.87,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Did you consciously feel you were not fast, that you were always taking too much time on your stories?",
+          "value": "DA: Did you consciously feel you were not fast, that you were always taking too much time on your stories?",
+          "bbox": [
+            {
+              "h": 23.22216000000003,
+              "w": 270.02520000000004,
+              "x": 99.2616,
+              "y": 353.69136000000003,
+              "confidence": 0.87,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I always had the feeling that I wished I could get this done faster than I was doing it, but I wouldn't sacrifice quality just to get speed.",
+          "value": "CB: I always had the feeling that I wished I could get this done faster than I was doing it, but I wouldn't sacrifice quality just to get speed.",
+          "bbox": [
+            {
+              "h": 24.413040000000024,
+              "w": 282.64320000000004,
+              "x": 99.2616,
+              "y": 379.29528000000005,
+              "confidence": 0.88,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH:** What was it about Segar's strips that appealed to you?",
+          "value": "BH: What was it about Segar's strips that appealed to you?",
+          "bbox": [
+            {
+              "h": 11.208855911775938,
+              "w": 228.4501775765768,
+              "x": 99.23743508538969,
+              "y": 411.95487467606716,
+              "confidence": 0.81,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, the comedy was always so funny—the people he invented were funny, just the drawing of them was funny, would make you laugh, such outrageous creatures, such inventions of humanity. Yes, Segar did wonderful stuff, and he had a very simple story pattern with some repetitious dialogue that people would use in their own language.",
+          "value": "CB: Well, the comedy was always so funny—the people he invented were funny, just the drawing of them was funny, would make you laugh, such outrageous creatures, such inventions of humanity. Yes, Segar did wonderful stuff, and he had a very simple story pattern with some repetitious dialogue that people would use in their own language.",
+          "bbox": [
+            {
+              "h": 64.407417218543,
+              "w": 284.69362500000005,
+              "x": 97.26375000000002,
+              "y": 422.7229668874173,
+              "confidence": 0.87,
+              "end_index": 339,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Do you feel that Segar's drawing style influenced you?",
+          "value": "DA: Do you feel that Segar's drawing style influenced you?",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 228.80640000000005,
+              "x": 99.2616,
+              "y": 496.00152,
+              "confidence": 0.87,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** It was the simplicity of it. He didn't have to put in a thousand lines to show what his characters were doing; he just kept them very simple and wide open so that you could know what every character was doing and what he was going to do. Oh, yeah. What I was getting out of Segar was",
+          "value": "CB: It was the simplicity of it. He didn't have to put in a thousand lines to show what his characters were doing; he just kept them very simple and wide open so that you could know what every character was doing and what he was going to do. Oh, yeah. What I was getting out of Segar was",
+          "bbox": [
+            {
+              "h": 50.01696000000004,
+              "w": 282.64320000000004,
+              "x": 99.2616,
+              "y": 509.10120000000006,
+              "confidence": 0.86,
+              "end_index": 290,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nAULT, HAMILTON, RONAN, AND WRIGHT / 1999 213\n\\</page_header>",
+          "value": "<page_header>\nAULT, HAMILTON, RONAN, AND WRIGHT / 1999 213\n</page_header>",
+          "bbox": [
+            {
+              "h": 12.09,
+              "w": 189.8,
+              "x": 541.26,
+              "y": 31.28,
+              "confidence": 1.0,
+              "end_index": 58,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "a method of putting into my stories the way he put action and anticipation and all those things into his stories.",
+          "value": "a method of putting into my stories the way he put action and anticipation and all those things into his stories.",
+          "bbox": [
+            {
+              "h": 25.603920000000002,
+              "w": 281.802,
+              "x": 449.2008000000001,
+              "y": 55.971360000000004,
+              "confidence": 0.93,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**NW:** Do you remember the anti-comics hysteria in the 1950s—Dr. Fredrick Wertham and his book *Seduction of the Innocent*?",
+          "value": "NW: Do you remember the anti-comics hysteria in the 1950s—Dr. Fredrick Wertham and his book Seduction of the Innocent?",
+          "bbox": [
+            {
+              "h": 24.413039999999995,
+              "w": 280.1196,
+              "x": 449.2008000000001,
+              "y": 89.316,
+              "confidence": 0.9,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah. I agreed with a lot of what that guy said. (laughs) Although I've never seen the book or read it. I felt that some of the things he was talking about—especially with E.C. comics, which were just primarily criminal, showing you how to commit crimes and giving you reasons for killing someone—they needed a little bit of toning down.",
+          "value": "CB: Yeah. I agreed with a lot of what that guy said. (laughs) Although I've never seen the book or read it. I felt that some of the things he was talking about—especially with E.C. comics, which were just primarily criminal, showing you how to commit crimes and giving you reasons for killing someone—they needed a little bit of toning down.",
+          "bbox": [
+            {
+              "h": 63.712080000000014,
+              "w": 282.6432000000001,
+              "x": 450.04200000000003,
+              "y": 115.51536000000002,
+              "confidence": 0.85,
+              "end_index": 344,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BH:** Many Barks fans are also E.C. fans. Isn't that an interesting contradiction because they're so totally different?",
+          "value": "BH: Many Barks fans are also E.C. fans. Isn't that an interesting contradiction because they're so totally different?",
+          "bbox": [
+            {
+              "h": 25.00847999999999,
+              "w": 281.8020000000001,
+              "x": 450.88320000000004,
+              "y": 186.96816,
+              "confidence": 0.86,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Completely different—even the drawing style, the story construction, everything is almost exactly the opposite of the Disney ducks.",
+          "value": "CB: Completely different—even the drawing style, the story construction, everything is almost exactly the opposite of the Disney ducks.",
+          "bbox": [
+            {
+              "h": 25.00847999999999,
+              "w": 282.64320000000004,
+              "x": 450.88320000000004,
+              "y": 213.16752000000002,
+              "confidence": 0.86,
+              "end_index": 138,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**NW:** Did you look at some of the E.C. comics?",
+          "value": "NW: Did you look at some of the E.C. comics?",
+          "bbox": [
+            {
+              "h": 11.313360000000017,
+              "w": 180.0168,
+              "x": 451.72440000000006,
+              "y": 247.10760000000002,
+              "confidence": 0.88,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, yeah. I remember back in the 1950s at the newsstand where I was buying my own comics—and I'd also buy a *Superman* or one of those once in a while, just to get the drawings—I liked the look of the drawings—but the guy who was running the newsstand said, \"These horror comics, they are just gonna kill the whole business.\" He said he was going to stop selling them because they were nothing but lessons in how to commit murder and how to torture people. I didn't even buy one of them.",
+          "value": "CB: Oh, yeah. I remember back in the 1950s at the newsstand where I was buying my own comics—and I'd also buy a Superman or one of those once in a while, just to get the drawings—I liked the look of the drawings—but the guy who was running the newsstand said, \"These horror comics, they are just gonna kill the whole business.\" He said he was going to stop selling them because they were nothing but lessons in how to commit murder and how to torture people. I didn't even buy one of them.",
+          "bbox": [
+            {
+              "h": 89.91144000000003,
+              "w": 284.3256,
+              "x": 451.72440000000006,
+              "y": 259.01640000000003,
+              "confidence": 0.87,
+              "end_index": 494,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So you never read any of them.",
+          "value": "DA: So you never read any of them.",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 139.63920000000002,
+              "x": 453.40680000000003,
+              "y": 358.45488,
+              "confidence": 0.87,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**NW:** I have to disagree. Some of the artwork was quite good, and the story construction—maybe the taste was questionable—was well written.",
+          "value": "NW: I have to disagree. Some of the artwork was quite good, and the story construction—maybe the taste was questionable—was well written.",
+          "bbox": [
+            {
+              "h": 25.603920000000016,
+              "w": 281.8020000000001,
+              "x": 453.40680000000003,
+              "y": 377.50896000000006,
+              "confidence": 0.85,
+              "end_index": 140,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah, I guess maybe they were pretty well-written stories—tremendous suspense.",
+          "value": "CB: Yeah, I guess maybe they were pretty well-written stories—tremendous suspense.",
+          "bbox": [
+            {
+              "h": 24.413040000000024,
+              "w": 248.15399999999994,
+              "x": 453.40680000000003,
+              "y": 404.30376000000007,
+              "confidence": 0.83,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BH:** Well, some of the stories had a touch of humor you wouldn't expect, and they often had a moral ending—even if the path leading to that moral ending was pretty tortuous.",
+          "value": "BH: Well, some of the stories had a touch of humor you wouldn't expect, and they often had a moral ending—even if the path leading to that moral ending was pretty tortuous.",
+          "bbox": [
+            {
+              "h": 38.703599999999994,
+              "w": 282.6432,
+              "x": 454.24800000000005,
+              "y": 437.05296000000004,
+              "confidence": 0.92,
+              "end_index": 175,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**JR:** What is your response to the massive amount of political interpretation of your work by David Kunzle, Dorfman and Mattelart, and so on? Your use of places like \"Unsteadystan\" or \"Siambodia\" in the 1960s seem as if they must be political statements.",
+          "value": "JR: What is your response to the massive amount of political interpretation of your work by David Kunzle, Dorfman and Mattelart, and so on? Your use of places like \"Unsteadystan\" or \"Siambodia\" in the 1960s seem as if they must be political statements.",
+          "bbox": [
+            {
+              "h": 51.207839999999976,
+              "w": 283.48440000000005,
+              "x": 454.24800000000005,
+              "y": 483.4972800000001,
+              "confidence": 0.91,
+              "end_index": 255,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I get mad like everybody else at the stupid things people are doing in different parts of the world, but what could I do about it? I couldn't hire",
+          "value": "CB: I get mad like everybody else at the stupid things people are doing in different parts of the world, but what could I do about it? I couldn't hire",
+          "bbox": [
+            {
+              "h": 24.711417218543033,
+              "w": 281.8020000000001,
+              "x": 455.036625,
+              "y": 535.5016688741723,
+              "confidence": 0.88,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "212, 213"
+    }
+  ]
+}

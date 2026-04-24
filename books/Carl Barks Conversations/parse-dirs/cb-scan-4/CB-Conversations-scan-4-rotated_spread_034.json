@@ -1,0 +1,644 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "222 CARL BARKS: CONVERSATIONS",
+              "value": "222 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.281390330244857,
+                  "w": 101.03808250166729,
+                  "x": 127.58412467249431,
+                  "y": 36.418118211699706,
+                  "confidence": 0.92,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "222 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.28,
+              "w": 101.04,
+              "x": 127.58,
+              "y": 36.42,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "*In the evening*",
+          "value": "In the evening",
+          "bbox": [
+            {
+              "h": 11.52314555723609,
+              "w": 62.974146910132426,
+              "x": 102.41080668528488,
+              "y": 59.64028175733614,
+              "confidence": 0.85,
+              "end_index": 15,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\"Human beings are a bunch of maggots consuming the body of the earth.\"",
+          "value": "\"Human beings are a bunch of maggots consuming the body of the earth.\"",
+          "bbox": [
+            {
+              "h": 22.031279999999995,
+              "w": 261.6132,
+              "x": 102.6264,
+              "y": 80.38440000000001,
+              "confidence": 0.85,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\"When a person dies, what is called the soul is just a bunch of spools of memory that dies with the body.\"",
+          "value": "\"When a person dies, what is called the soul is just a bunch of spools of memory that dies with the body.\"",
+          "bbox": [
+            {
+              "h": 22.608317880794715,
+              "w": 275.75587500000006,
+              "x": 102.784125,
+              "y": 112.51581456953645,
+              "confidence": 0.86,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\"Cemeteries and funerals are for the living. When I go out to visit Garé's grave, I can almost feel her presence, but to visualize what's really there—by now a bunch of bones in a coffin—I feel that's none of my business—to visit with the dead. To think about souls wandering around and peering into windows and looking for bodies to enter—it's all just too ridiculous. When we die—that's the end. All of the memories we've stored up just disappear—like on a computer.\"",
+          "value": "\"Cemeteries and funerals are for the living. When I go out to visit Garé's grave, I can almost feel her presence, but to visualize what's really there—by now a bunch of bones in a coffin—I feel that's none of my business—to visit with the dead. To think about souls wandering around and peering into windows and looking for bodies to enter—it's all just too ridiculous. When we die—that's the end. All of the memories we've stored up just disappear—like on a computer.\"",
+          "bbox": [
+            {
+              "h": 88.72056,
+              "w": 282.6432,
+              "x": 101.7852,
+              "y": 145.8828,
+              "confidence": 0.86,
+              "end_index": 468,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\"I think of death as total peace—you're beyond the clutches of all those who would crush you.\"",
+          "value": "\"I think of death as total peace—you're beyond the clutches of all those who would crush you.\"",
+          "bbox": [
+            {
+              "h": 24.413040000000024,
+              "w": 278.43719999999996,
+              "x": 101.7852,
+              "y": 242.93952000000002,
+              "confidence": 0.86,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\"I have no apprehension, no fear of death. I do not believe in an afterlife. I've known so many people who spent their lives worrying about an afterlife.\"",
+          "value": "\"I have no apprehension, no fear of death. I do not believe in an afterlife. I've known so many people who spent their lives worrying about an afterlife.\"",
+          "bbox": [
+            {
+              "h": 34.53552000000002,
+              "w": 282.6432,
+              "x": 101.7852,
+              "y": 276.28416000000004,
+              "confidence": 0.87,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\"We're like a weed—you see it and trample it to the ground and don't think anything about it. We're like that weed—we have our little life and when we're gone, we're gone.\"",
+          "value": "\"We're like a weed—you see it and trample it to the ground and don't think anything about it. We're like that weed—we have our little life and when we're gone, we're gone.\"",
+          "bbox": [
+            {
+              "h": 36.917280000000005,
+              "w": 280.1196,
+              "x": 101.7852,
+              "y": 322.13304000000005,
+              "confidence": 0.85,
+              "end_index": 171,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\"I think it's important for your book that people know how I feel about this.\"",
+          "value": "\"I think it's important for your book that people know how I feel about this.\"",
+          "bbox": [
+            {
+              "h": 22.626719999999978,
+              "w": 275.0724,
+              "x": 101.7852,
+              "y": 367.38648,
+              "confidence": 0.86,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## Last recorded conversation with Donald Ault",
+          "value": "Last recorded conversation with Donald Ault",
+          "bbox": [
+            {
+              "h": 11.004981816882584,
+              "w": 237.50084411025634,
+              "x": 101.70330326731614,
+              "y": 412.99973827648637,
+              "confidence": 0.95,
+              "end_index": 45,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "On the morning of 19 June 2000, Carl discovered that he had only one blank check left, and it was the day he usually paid his household helpers. We'd called the bank, and after considerable trouble on the phone, the bank decided to allow one of Carl's helpers go over and pick up ten temporary checks. Originally, they had wanted him to come over in person.",
+          "value": "On the morning of 19 June 2000, Carl discovered that he had only one blank check left, and it was the day he usually paid his household helpers. We'd called the bank, and after considerable trouble on the phone, the bank decided to allow one of Carl's helpers go over and pick up ten temporary checks. Originally, they had wanted him to come over in person.",
+          "bbox": [
+            {
+              "h": 76.15403025914634,
+              "w": 280.3888903421541,
+              "x": 101.03817642137483,
+              "y": 433.9736314881861,
+              "confidence": 0.97,
+              "end_index": 356,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** I wish you didn't worry about these things so much.",
+          "value": "DA: I wish you didn't worry about these things so much.",
+          "bbox": [
+            {
+              "h": 10.25260927152317,
+              "w": 218.18625000000003,
+              "x": 101.9955,
+              "y": 526.3006092715232,
+              "confidence": 0.87,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I don't worry. I just need to get up every morning with alertness and get these jobs done and out of the way, and then if I had time to worry,",
+          "value": "CB: I don't worry. I just need to get up every morning with alertness and get these jobs done and out of the way, and then if I had time to worry,",
+          "bbox": [
+            {
+              "h": 24.413040000000024,
+              "w": 280.96079999999995,
+              "x": 101.7852,
+              "y": 539.46864,
+              "confidence": 0.85,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nDonald Ault / 2000 223\n\\</page_header>",
+          "value": "<page_header>\nDonald Ault / 2000 223\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.71792,
+              "w": 100.94399999999996,
+              "x": 646.8828000000001,
+              "y": 31.558320000000002,
+              "confidence": 0.91,
+              "end_index": 52,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "I'd sit down and worry. I know these jobs are there, and what I do is try to avoid having to do them right now because I'm just always so tired and weak that I don't want to do *anything*. Well, if I get those blank checks, then I can make out the checks for the wages here.",
+          "value": "I'd sit down and worry. I know these jobs are there, and what I do is try to avoid having to do them right now because I'm just always so tired and weak that I don't want to do anything. Well, if I get those blank checks, then I can make out the checks for the wages here.",
+          "bbox": [
+            {
+              "h": 52.93822226681595,
+              "w": 282.24114350705037,
+              "x": 467.55950312023634,
+              "y": 55.48671936571076,
+              "confidence": 0.95,
+              "end_index": 273,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** I hope they give you at least ten.",
+          "value": "DA: I hope they give you at least ten.",
+          "bbox": [
+            {
+              "h": 11.56704635761588,
+              "w": 144.58125000000007,
+              "x": 468.96900000000005,
+              "y": 116.98490066225168,
+              "confidence": 0.87,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** If I order them through the standard procedure—two boxes—it takes . . .",
+          "value": "CB: If I order them through the standard procedure—two boxes—it takes . . .",
+          "bbox": [
+            {
+              "h": 26.199360000000013,
+              "w": 261.6132,
+              "x": 469.3896000000001,
+              "y": 128.0196,
+              "confidence": 0.83,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\\[Phone rings.]",
+          "value": "[Phone rings.]",
+          "bbox": [
+            {
+              "h": 9.726834437086097,
+              "w": 54.415125000000046,
+              "x": 481.84987500000005,
+              "y": 157.73245033112585,
+              "confidence": 0.92,
+              "end_index": 14,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** I'll get that. Hello. . . . No, she had to run an errand. . . . This is Don Ault. I'm visiting here. . . . This is Helen's husband? . . . And you're at \\[your daughter's place in Albany]. . . . Okay, I'll tell her.",
+          "value": "DA: I'll get that. Hello. . . . No, she had to run an errand. . . . This is Don Ault. I'm visiting here. . . . This is Helen's husband? . . . And you're at [your daughter's place in Albany]. . . . Okay, I'll tell her.",
+          "bbox": [
+            {
+              "h": 41.08536000000001,
+              "w": 281.802,
+              "x": 470.23080000000004,
+              "y": 173.27304,
+              "confidence": 0.85,
+              "end_index": 221,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\\[I hang up the phone.]",
+          "value": "[I hang up the phone.]",
+          "bbox": [
+            {
+              "h": 11.041271523178807,
+              "w": 88.06312500000001,
+              "x": 483.16425000000004,
+              "y": 215.04190728476823,
+              "confidence": 0.77,
+              "end_index": 22,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** She knows that he's been up visiting one of their daughters, and now he's up in Albany visiting another one of their daughters.",
+          "value": "CB: She knows that he's been up visiting one of their daughters, and now he's up in Albany visiting another one of their daughters.",
+          "bbox": [
+            {
+              "h": 27.390240000000006,
+              "w": 282.64320000000004,
+              "x": 471.07200000000006,
+              "y": 225.07632,
+              "confidence": 0.92,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** He just wanted her to know where he is right now.",
+          "value": "DA: He just wanted her to know where he is right now.",
+          "bbox": [
+            {
+              "h": 13.695119999999974,
+              "w": 215.34720000000004,
+              "x": 471.9132000000001,
+              "y": 259.01640000000003,
+              "confidence": 0.76,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\\[Long pause]",
+          "value": "[Long pause]",
+          "bbox": [
+            {
+              "h": 11.257714781821594,
+              "w": 49.33199006764482,
+              "x": 484.9791794731327,
+              "y": 274.7531045493522,
+              "confidence": 0.86,
+              "end_index": 12,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** I just wanted to let you know I appreciate your letting me come here to spend some time with you.",
+          "value": "DA: I just wanted to let you know I appreciate your letting me come here to spend some time with you.",
+          "bbox": [
+            {
+              "h": 27.347369709889495,
+              "w": 283.13931645388726,
+              "x": 472.598909036776,
+              "y": 291.34879270912734,
+              "confidence": 0.92,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I was hoping you were getting something done on your book. You had to erase practically everything that you'd written.",
+          "value": "CB: I was hoping you were getting something done on your book. You had to erase practically everything that you'd written.",
+          "bbox": [
+            {
+              "h": 27.124402362804897,
+              "w": 273.7558610899391,
+              "x": 473.55699023437506,
+              "y": 317.4569624857089,
+              "confidence": 0.92,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** I got some stuff done, but I really came here just to see you again, you know.",
+          "value": "DA: I got some stuff done, but I really came here just to see you again, you know.",
+          "bbox": [
+            {
+              "h": 27.423264057736315,
+              "w": 275.155139505526,
+              "x": 473.8490680020961,
+              "y": 350.8167919921876,
+              "confidence": 0.93,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Uh, huh. Well, you didn't see me in my best shape.",
+          "value": "CB: Uh, huh. Well, you didn't see me in my best shape.",
+          "bbox": [
+            {
+              "h": 12.504239999999982,
+              "w": 212.8236,
+              "x": 475.27799999999996,
+              "y": 377.50896000000006,
+              "confidence": 0.87,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** I knew you weren't in your best shape. That's why I came to see you.",
+          "value": "DA: I knew you weren't in your best shape. That's why I came to see you.",
+          "bbox": [
+            {
+              "h": 13.774407521913126,
+              "w": 282.78647889672266,
+              "x": 475.195400747904,
+              "y": 396.3441820455413,
+              "confidence": 0.8,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** When a guy's sick like I am, he's better off if he doesn't have company.",
+          "value": "CB: When a guy's sick like I am, he's better off if he doesn't have company.",
+          "bbox": [
+            {
+              "h": 29.97,
+              "w": 276.02,
+              "x": 474.23,
+              "y": 408.79,
+              "confidence": 1.0,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** That's why I really appreciate that you let me come. I just wanted to spend some time with you. I don't know if I'll see you again.",
+          "value": "DA: That's why I really appreciate that you let me come. I just wanted to spend some time with you. I don't know if I'll see you again.",
+          "bbox": [
+            {
+              "h": 27.34029139072851,
+              "w": 282.0648750000001,
+              "x": 476.0666250000001,
+              "y": 442.17663576158947,
+              "confidence": 0.91,
+              "end_index": 138,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** \\[Laughs] Some time you've spent with me! I've been so spaced out in this damn thick world I live in.",
+          "value": "CB: [Laughs] Some time you've spent with me! I've been so spaced out in this damn thick world I live in.",
+          "bbox": [
+            {
+              "h": 26.977719383574705,
+              "w": 283.21996217606704,
+              "x": 476.54498937690556,
+              "y": 468.36322018387966,
+              "confidence": 0.92,
+              "end_index": 108,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** I just wish you could get some peace here.",
+          "value": "DA: I just wish you could get some peace here.",
+          "bbox": [
+            {
+              "h": 12.504240000000038,
+              "w": 182.54039999999998,
+              "x": 477.8016,
+              "y": 503.14680000000004,
+              "confidence": 0.87,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Impossible!",
+          "value": "CB: Impossible!",
+          "bbox": [
+            {
+              "h": 10.515496688741678,
+              "w": 60.198375,
+              "x": 478.16962500000005,
+              "y": 518.413986754967,
+              "confidence": 0.82,
+              "end_index": 18,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** Isn't there any way you can delegate some of this stuff—like just have someone else make the checks out and you just sign them?",
+          "value": "DA: Isn't there any way you can delegate some of this stuff—like just have someone else make the checks out and you just sign them?",
+          "bbox": [
+            {
+              "h": 26.199359999999956,
+              "w": 269.18399999999997,
+              "x": 477.8016,
+              "y": 535.30056,
+              "confidence": 0.9,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "222, 223"
+    }
+  ]
+}

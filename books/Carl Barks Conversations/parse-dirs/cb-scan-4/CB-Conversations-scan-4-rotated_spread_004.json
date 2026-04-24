@@ -1,0 +1,391 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "162 CARL BARKS: CONVERSATIONS",
+              "value": "162 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.552347866449125,
+                  "w": 124.95092913967227,
+                  "x": 119.9927950766959,
+                  "y": 40.40384790277249,
+                  "confidence": 0.86,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "162 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.55,
+              "w": 124.95,
+              "x": 119.99,
+              "y": 40.4,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "to leave a $100 a week job for the fragile security of a chicken farm, but I hoped to get into comic book work on a freelance basis as a sideline occupation.",
+          "value": "to leave a $100 a week job for the fragile security of a chicken farm, but I hoped to get into comic book work on a freelance basis as a sideline occupation.",
+          "bbox": [
+            {
+              "h": 36.015576158940405,
+              "w": 278.64750000000004,
+              "x": 119.08237500000001,
+              "y": 64.14452980132451,
+              "confidence": 0.98,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: Do you think you could have developed into a good duck comic artist without the years at Disney?**",
+          "value": "Q: Do you think you could have developed into a good duck comic artist without the years at Disney?",
+          "bbox": [
+            {
+              "h": 23.951048891244298,
+              "w": 281.56753884217807,
+              "x": 118.66230345488759,
+              "y": 110.96760615948935,
+              "confidence": 0.81,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Barks:** No, I never could have understood the requirements of story construction and of flamboyant drawing without that training \\[in the Disney duck story unit]. It is hard to imagine how I might have fared drawing other characters than the ducks.",
+          "value": "Barks: No, I never could have understood the requirements of story construction and of flamboyant drawing without that training [in the Disney duck story unit]. It is hard to imagine how I might have fared drawing other characters than the ducks.",
+          "bbox": [
+            {
+              "h": 48.728204479087275,
+              "w": 281.3586488900534,
+              "x": 118.02476395769818,
+              "y": 137.06227592535254,
+              "confidence": 0.98,
+              "end_index": 250,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: Did you ever get any feedback from Walt himself for your comic book art or the new characters you created (Scrooge, Gyro, etc.)?**\n**Barks:** No feedback came from Walt on my comic book work. Don't know if he ever read the comic books.",
+          "value": "Q: Did you ever get any feedback from Walt himself for your comic book art or the new characters you created (Scrooge, Gyro, etc.)?\nBarks: No feedback came from Walt on my comic book work. Don't know if he ever read the comic books.",
+          "bbox": [
+            {
+              "h": 49.25199248523249,
+              "w": 283.3612800292969,
+              "x": 117.61393411180453,
+              "y": 196.02114840891772,
+              "confidence": 0.92,
+              "end_index": 239,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: We have seen a picture where you and Steven Spielberg are together. Some people say that Spielberg got many ideas from your stories. Do you agree?**",
+          "value": "Q: We have seen a picture where you and Steven Spielberg are together. Some people say that Spielberg got many ideas from your stories. Do you agree?",
+          "bbox": [
+            {
+              "h": 36.38266184737045,
+              "w": 282.9799785394436,
+              "x": 116.92157055068598,
+              "y": 255.59877877048405,
+              "confidence": 0.92,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Barks:** Possibly Spielberg got germs of ideas from situations he saw and read in my stories, but by the time he had recycled my situation, it had become a whole new product standing tall on its own merits. The whole entertainment industry is built upon the recycling of time-tested ideas.",
+          "value": "Barks: Possibly Spielberg got germs of ideas from situations he saw and read in my stories, but by the time he had recycled my situation, it had become a whole new product standing tall on its own merits. The whole entertainment industry is built upon the recycling of time-tested ideas.",
+          "bbox": [
+            {
+              "h": 50.9254442406631,
+              "w": 278.76315898913873,
+              "x": 116.69160501619666,
+              "y": 294.196842902058,
+              "confidence": 0.98,
+              "end_index": 290,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: In 1957 you made a Donald Duck one-shot called \"Forbidden Valley,\" where the ducks meet with prehistoric dinosaurs. Could this be a model for Spielberg's *Jurassic Park*?**",
+          "value": "Q: In 1957 you made a Donald Duck one-shot called \"Forbidden Valley,\" where the ducks meet with prehistoric dinosaurs. Could this be a model for Spielberg's Jurassic Park?",
+          "bbox": [
+            {
+              "h": 36.76172583841468,
+              "w": 282.81559400605,
+              "x": 116.25668163467037,
+              "y": 353.76633602801076,
+              "confidence": 0.8,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Barks:** My \"Forbidden Valley\" is an example of the recycling I just mentioned. I've seen such lost worlds in literature and movies since I was a kid. Spielberg didn't have to adapt his *Jurassic Park* from my version. He has libraries full of such fictitious fantasies.",
+          "value": "Barks: My \"Forbidden Valley\" is an example of the recycling I just mentioned. I've seen such lost worlds in literature and movies since I was a kid. Spielberg didn't have to adapt his Jurassic Park from my version. He has libraries full of such fictitious fantasies.",
+          "bbox": [
+            {
+              "h": 49.97723468940553,
+              "w": 279.15371470083846,
+              "x": 116.08428261956938,
+              "y": 392.33484727991623,
+              "confidence": 0.97,
+              "end_index": 271,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q: When did you start getting fan letters? How did your relatives, friends, and neighbors react to your being a duck artist in the forties and fifties?**\n**Barks:** I had been doing the duck comic book for over fifteen years before I received my first fan letter. My relatives and friends were never sure they understood what I did for a living. Even friends who saw me drawing comic book pages and later saw the pages in comic books would ask me how the ducks got from those onto the movie screen. And I'm sure many of them wondered if Walt Disney himself didn't somehow do most of that drawing.",
+          "value": "Q: When did you start getting fan letters? How did your relatives, friends, and neighbors react to your being a duck artist in the forties and fifties?\nBarks: I had been doing the duck comic book for over fifteen years before I received my first fan letter. My relatives and friends were never sure they understood what I did for a living. Even friends who saw me drawing comic book pages and later saw the pages in comic books would ask me how the ducks got from those onto the movie screen. And I'm sure many of them wondered if Walt Disney himself didn't somehow do most of that drawing.",
+          "bbox": [
+            {
+              "h": 115.090401290968,
+              "w": 284.55813016863567,
+              "x": 114.84211309070123,
+              "y": 451.86186368140255,
+              "confidence": 0.76,
+              "end_index": 597,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nMARKKU KIVEKÄS / 1993 163\n\\</page_header>",
+          "value": "<page_header>\nMARKKU KIVEKÄS / 1993 163\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.122480000000001,
+              "w": 111.87960000000001,
+              "x": 643.518,
+              "y": 42.27624,
+              "confidence": 0.93,
+              "end_index": 55,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: How and when did you first begin to realize the fact that your duck comics were much better than those of your colleagues in the early days? Were you proud of your work right from the start or only when readers and fans (in Europe, for example) began to praise your stories?**\n**Barks:** I sensed that my stories and drawings were easier reading than the other tales in Western Publishing's Disney books, but I had no idea the general public found them so until the 1950s when the size of the stacks of Donald Duck and Uncle Scrooge comics on the newsstands told me so. Yes. I was proud of my work, from early in my comic book years.",
+          "value": "Q: How and when did you first begin to realize the fact that your duck comics were much better than those of your colleagues in the early days? Were you proud of your work right from the start or only when readers and fans (in Europe, for example) began to praise your stories?\nBarks: I sensed that my stories and drawings were easier reading than the other tales in Western Publishing's Disney books, but I had no idea the general public found them so until the 1950s when the size of the stacks of Donald Duck and Uncle Scrooge comics on the newsstands told me so. Yes. I was proud of my work, from early in my comic book years.",
+          "bbox": [
+            {
+              "h": 114.654877471775,
+              "w": 284.7060975371571,
+              "x": 474.0293938405107,
+              "y": 66.20298443990569,
+              "confidence": 0.82,
+              "end_index": 637,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Is it really true that most of your comic originals were destroyed by the publisher?**",
+          "value": "Q: Is it really true that most of your comic originals were destroyed by the publisher?",
+          "bbox": [
+            {
+              "h": 24.059022384718016,
+              "w": 282.9883436547257,
+              "x": 475.17686725895584,
+              "y": 189.987308424638,
+              "confidence": 0.79,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Barks:** Yes. The publishers burned the stories to save storage space. For publishing they made smaller photostats of my large hand-drawn pages. The photostats were all they needed from then on to make reprints, or whatever.",
+          "value": "Barks: Yes. The publishers burned the stories to save storage space. For publishing they made smaller photostats of my large hand-drawn pages. The photostats were all they needed from then on to make reprints, or whatever.",
+          "bbox": [
+            {
+              "h": 49.44402415443981,
+              "w": 279.19108222179887,
+              "x": 475.27063669493145,
+              "y": 216.17732921827368,
+              "confidence": 0.97,
+              "end_index": 225,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: What was your relationship with Clarence \"Ducky\" Nash? Did you know any of the \"nine old men\" (Ward Kimball, Wollie Reitherman, Milton Kahl, Frank Thomas, etc.) or other legendary supervising animators at Disney?**",
+          "value": "Q: What was your relationship with Clarence \"Ducky\" Nash? Did you know any of the \"nine old men\" (Ward Kimball, Wollie Reitherman, Milton Kahl, Frank Thomas, etc.) or other legendary supervising animators at Disney?",
+          "bbox": [
+            {
+              "h": 50.4145357588605,
+              "w": 283.6332088891006,
+              "x": 475.77279406440556,
+              "y": 275.6043232159871,
+              "confidence": 0.92,
+              "end_index": 218,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Barks:** I knew Ducky Nash, the voice of Donald Duck, while I was a story man at the Disney Studios. His work and mine never crossed paths after I got into comic book work. I knew most of the \"nine old men\" by sight during my years in the duck unit. Their working department was in different wings of the studio. I knew Marc Davis fairly well. He came to work at Disney's one month after I started there, and we had things in common, like both having come to some extent from the Klamath Falls, Oregon, area.",
+          "value": "Barks: I knew Ducky Nash, the voice of Donald Duck, while I was a story man at the Disney Studios. His work and mine never crossed paths after I got into comic book work. I knew most of the \"nine old men\" by sight during my years in the duck unit. Their working department was in different wings of the studio. I knew Marc Davis fairly well. He came to work at Disney's one month after I started there, and we had things in common, like both having come to some extent from the Klamath Falls, Oregon, area.",
+          "bbox": [
+            {
+              "h": 101.13364168730948,
+              "w": 284.13000657393303,
+              "x": 476.1543835746952,
+              "y": 327.265646570122,
+              "confidence": 0.98,
+              "end_index": 509,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: If you hadn't been a Disney artist, what other profession would you have chosen?**",
+          "value": "Q: If you hadn't been a Disney artist, what other profession would you have chosen?",
+          "bbox": [
+            {
+              "h": 23.134092715231816,
+              "w": 274.704375,
+              "x": 476.32950000000005,
+              "y": 438.49621192052984,
+              "confidence": 0.76,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Barks:** I would have been an artist for some publisher or advertising agency. I was always more of a gag man than an artist.",
+          "value": "Barks: I would have been an artist for some publisher or advertising agency. I was always more of a gag man than an artist.",
+          "bbox": [
+            {
+              "h": 24.43610081935978,
+              "w": 262.4926090415397,
+              "x": 477.16350700266776,
+              "y": 464.44993670922264,
+              "confidence": 0.96,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: What is your favorite non-Disney cartoon and comic character(s)? Prince Valiant, Bugs Bunny, Droopy, Snoopy, etc.?**\n**Barks:** I would say Prince Valiant. The drawing was very inspiring.",
+          "value": "Q: What is your favorite non-Disney cartoon and comic character(s)? Prince Valiant, Bugs Bunny, Droopy, Snoopy, etc.?\nBarks: I would say Prince Valiant. The drawing was very inspiring.",
+          "bbox": [
+            {
+              "h": 37.205710432545786,
+              "w": 267.34382490948934,
+              "x": 477.12308396055647,
+              "y": 498.30977186547267,
+              "confidence": 0.93,
+              "end_index": 191,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q: Uncle Scrooge is the best known of your characters. What do you think is the secret of his overwhelming popularity?**",
+          "value": "Q: Uncle Scrooge is the best known of your characters. What do you think is the secret of his overwhelming popularity?",
+          "bbox": [
+            {
+              "h": 21.819655629139106,
+              "w": 282.064875,
+              "x": 477.64387500000004,
+              "y": 545.4913907284769,
+              "confidence": 0.93,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "162, 163"
+    }
+  ]
+}

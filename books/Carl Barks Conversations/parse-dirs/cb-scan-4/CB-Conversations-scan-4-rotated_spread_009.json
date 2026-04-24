@@ -1,0 +1,321 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "172 CARL BARKS: CONVERSATIONS",
+              "value": "172 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 11.098413768935789,
+                  "w": 125.43892341725422,
+                  "x": 116.67654029511245,
+                  "y": 36.64464449135386,
+                  "confidence": 0.8,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "172 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.1,
+              "w": 125.44,
+              "x": 116.68,
+              "y": 36.64,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Previously unpublished interchange between Erik Svane and Carl Barks:",
+          "value": "Previously unpublished interchange between Erik Svane and Carl Barks:",
+          "bbox": [
+            {
+              "h": 12.660284345822229,
+              "w": 273.9803792813929,
+              "x": 116.24756516172829,
+              "y": 60.72156790801259,
+              "confidence": 0.92,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Who do you think will inherit Scrooge's money?",
+          "value": "ES: Who do you think will inherit Scrooge's money?",
+          "bbox": [
+            {
+              "h": 12.36593004120618,
+              "w": 199.8236698742378,
+              "x": 116.3951192835366,
+              "y": 86.49613761671115,
+              "confidence": 0.89,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Probably Donald's nephews.",
+          "value": "CB: Probably Donald's nephews.",
+          "bbox": [
+            {
+              "h": 11.813191913586131,
+              "w": 125.66389242330415,
+              "x": 116.26866578934833,
+              "y": 99.29021212128433,
+              "confidence": 0.89,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Why would Huey, Dewey, and Louie receive it?",
+          "value": "ES: Why would Huey, Dewey, and Louie receive it?",
+          "bbox": [
+            {
+              "h": 11.304158940397357,
+              "w": 198.7335,
+              "x": 115.665,
+              "y": 119.08800000000001,
+              "confidence": 0.88,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh well, because they are so much more practical than Donald. In the later stories, as I developed those Duck people and the whole community of Duckburg and all of its problems, I began giving those kids much more intelligence than anybody else in Duckburg. And so I guess that when Uncle Scrooge passes on, he will leave all of his money to his three nephews \\[as Barks suggested, incidentally, in *Walt Disney's Comics and Stories* #155 (August 1953)]. And I'm sure they will do a lot of good in the world, their Junior Woodchucks organization, they will save all the birds and all the whales.",
+          "value": "CB: Oh well, because they are so much more practical than Donald. In the later stories, as I developed those Duck people and the whole community of Duckburg and all of its problems, I began giving those kids much more intelligence than anybody else in Duckburg. And so I guess that when Uncle Scrooge passes on, he will leave all of his money to his three nephews [as Barks suggested, incidentally, in Walt Disney's Comics and Stories #155 (August 1953)]. And I'm sure they will do a lot of good in the world, their Junior Woodchucks organization, they will save all the birds and all the whales.",
+          "bbox": [
+            {
+              "h": 114.91992000000002,
+              "w": 283.48440000000005,
+              "x": 114.40320000000001,
+              "y": 131.59224,
+              "confidence": 0.86,
+              "end_index": 602,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Carl Barks at Disneyland Paris Sébastien Durand and Didier Ghez / 1994",
+          "md": "![Carl Barks at Disneyland Paris Sébastien Durand and Didier Ghez / 1994](CB-Conversations-scan-4-rotated_spread_009_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-4-rotated_spread_009_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 187.5683777450934,
+              "w": 302.2425849609375,
+              "x": 455.97196510575463,
+              "y": 105.73764173137388,
+              "confidence": 0.78,
+              "end_index": 95,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "Conducted at Disneyland Paris, on 7 July 1994 and published as a link to \"The Ultimate Disney History Network\" (",
+          "value": "Conducted at Disneyland Paris, on 7 July 1994 and published as a link to \"The Ultimate Disney History Network\" (",
+          "bbox": [
+            {
+              "h": 20.505218543046396,
+              "w": 157.72499999999997,
+              "x": 492.62775000000005,
+              "y": 314.93912582781456,
+              "confidence": 0.78,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "http://www.pizarro.net/didier/_private/interviu/barks.html",
+          "text": "http://www.pizarro.net/didier/_private/interviu/barks.html",
+          "url": "http://www.pizarro.net/didier/_private/interviu/barks.html",
+          "bbox": [
+            {
+              "h": 9.463947019867533,
+              "w": 162.45675,
+              "x": 492.62775000000005,
+              "y": 348.5887152317881,
+              "confidence": 0.7,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "link",
+          "book_side": "right"
+        },
+        {
+          "md": "). Reprinted by permission of Sébastien Durand and Didier Ghez.",
+          "value": "). Reprinted by permission of Sébastien Durand and Didier Ghez.",
+          "bbox": [
+            {
+              "h": 11.56704635761588,
+              "w": 136.695,
+              "x": 492.36487500000004,
+              "y": 368.5681589403974,
+              "confidence": 0.71,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Sébastien Durand:** This is the first time that you have traveled outside the United States. You have seen many countries. How many countries have you visited to date?",
+          "value": "Sébastien Durand: This is the first time that you have traveled outside the United States. You have seen many countries. How many countries have you visited to date?",
+          "bbox": [
+            {
+              "h": 37.70617701505334,
+              "w": 273.4709462652439,
+              "x": 469.0160349895199,
+              "y": 400.35117669112054,
+              "confidence": 0.94,
+              "end_index": 168,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Carl Barks:** This is our number nine.",
+          "value": "Carl Barks: This is our number nine.",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 140.9,
+              "x": 467.13,
+              "y": 438.5,
+              "confidence": 1.0,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD:** And you still have many left?",
+          "value": "SD: And you still have many left?",
+          "bbox": [
+            {
+              "h": 11.041271523178807,
+              "w": 129.33450000000005,
+              "x": 469.23187500000006,
+              "y": 459.0014304635762,
+              "confidence": 0.87,
+              "end_index": 36,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yes, I have more to visit: Holland and England.",
+          "value": "CB: Yes, I have more to visit: Holland and England.",
+          "bbox": [
+            {
+              "h": 11.630963929115849,
+              "w": 196.51393938166922,
+              "x": 469.3615593321266,
+              "y": 471.6977139672257,
+              "confidence": 0.89,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD:** I understand that you had no passport to leave the United States.",
+          "value": "SD: I understand that you had no passport to leave the United States.",
+          "bbox": [
+            {
+              "h": 10.25260927152317,
+              "w": 267.60675000000003,
+              "x": 469.49475000000007,
+              "y": 491.8623576158941,
+              "confidence": 0.84,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, I had never had any use for a passport before and at the time I was born people lived many miles apart. I guess that when I was born, there was word gotten to a doctor about five miles away to come out and deliver a baby at this homestead. Whether he recorded it or not. . . . There was no place to record it because the county governments were pretty",
+          "value": "CB: Well, I had never had any use for a passport before and at the time I was born people lived many miles apart. I guess that when I was born, there was word gotten to a doctor about five miles away to come out and deliver a baby at this homestead. Whether he recorded it or not. . . . There was no place to record it because the county governments were pretty",
+          "bbox": [
+            {
+              "h": 63.88164238410599,
+              "w": 284.69362500000005,
+              "x": 467.12887500000005,
+              "y": 504.2180662251656,
+              "confidence": 0.84,
+              "end_index": 364,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "172"
+    }
+  ]
+}

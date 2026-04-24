@@ -1,0 +1,521 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "170 CARL BARKS: CONVERSATIONS",
+              "value": "170 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 11.57,
+                  "w": 127.23,
+                  "x": 114.61,
+                  "y": 40.75,
+                  "confidence": 1.0,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "170 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 127.23,
+              "x": 114.61,
+              "y": 40.75,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "terrible allergies. And in the Disney studios with the air conditioning going down my neck I got such sinus trouble I could hardly breathe at all. And I knew if I could get out into the hot desert climate out east of Los Angeles, I'd feel much better. So I just left the studio for reasons of health, and I was hoping that I could draw some kind of comics and make some sort of *Superman* strip of my own, something. Once I got outside the studio I found out that Western Publishing would like to have me work on Disney short stories for the comic books.",
+          "value": "terrible allergies. And in the Disney studios with the air conditioning going down my neck I got such sinus trouble I could hardly breathe at all. And I knew if I could get out into the hot desert climate out east of Los Angeles, I'd feel much better. So I just left the studio for reasons of health, and I was hoping that I could draw some kind of comics and make some sort of Superman strip of my own, something. Once I got outside the studio I found out that Western Publishing would like to have me work on Disney short stories for the comic books.",
+          "bbox": [
+            {
+              "h": 100.82483005013817,
+              "w": 284.27838718916735,
+              "x": 114.5907213402725,
+              "y": 65.7964860869617,
+              "confidence": 0.98,
+              "end_index": 553,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Do you feel you would have received more credit and support from Disney if you'd stayed on as a gag writer?",
+          "value": "ES: Do you feel you would have received more credit and support from Disney if you'd stayed on as a gag writer?",
+          "bbox": [
+            {
+              "h": 24.397152003144065,
+              "w": 275.21697624094895,
+              "x": 114.47572605040017,
+              "y": 176.8608659608423,
+              "confidence": 0.96,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** No, I would just have been a nobody around the studio. With my hearing problem, I would never have gotten very far as an animator or even a story man.",
+          "value": "CB: No, I would just have been a nobody around the studio. With my hearing problem, I would never have gotten very far as an animator or even a story man.",
+          "bbox": [
+            {
+              "h": 36.93368920541159,
+              "w": 272.3805760289635,
+              "x": 114.37892613852897,
+              "y": 202.8576672970656,
+              "confidence": 0.97,
+              "end_index": 157,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Do you have any memories of Walt Disney?",
+          "value": "ES: Do you have any memories of Walt Disney?",
+          "bbox": [
+            {
+              "h": 10.515496688741734,
+              "w": 184.53825,
+              "x": 114.08775000000001,
+              "y": 249.21727152317885,
+              "confidence": 0.9,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh yeah, I remember him as a guy who was a genius; all of us respected him and all of us feared him, because he was such a, he was so far above us, mentally. The only time I would ever see Walt was on the story conferences, when he'd come in and look at our stories that we had on our story board and criticize them and come up with answers, gags, things. He was a big help. I will say one thing: he was so generous with our opinions \\[that] he would let us argue a story point. \\[If] we thought a gag was good, and he thought it was bad, he'd let us argue the point. He'd even let us have the last word in these arguments.",
+          "value": "CB: Oh yeah, I remember him as a guy who was a genius; all of us respected him and all of us feared him, because he was such a, he was so far above us, mentally. The only time I would ever see Walt was on the story conferences, when he'd come in and look at our stories that we had on our story board and criticize them and come up with answers, gags, things. He was a big help. I will say one thing: he was so generous with our opinions [that] he would let us argue a story point. [If] we thought a gag was good, and he thought it was bad, he'd let us argue the point. He'd even let us have the last word in these arguments.",
+          "bbox": [
+            {
+              "h": 114.92386274771346,
+              "w": 282.7098404153964,
+              "x": 113.96337526200459,
+              "y": 262.531898523247,
+              "confidence": 0.98,
+              "end_index": 630,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Does it bother you that Disney does not acknowledge you as the creator of Uncle Scrooge?",
+          "value": "ES: Does it bother you that Disney does not acknowledge you as the creator of Uncle Scrooge?",
+          "bbox": [
+            {
+              "h": 23.877698537538127,
+              "w": 264.9256554163491,
+              "x": 113.54847556211891,
+              "y": 386.43416367187507,
+              "confidence": 0.96,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, they are acknowledging it now. Yeah, in fact, they are making quite a bit of ballyhoo about me having invented Uncle Scrooge. \\[They are interrupted by Donald and Daisy characters who come to pose with Barks for picture purposes.]",
+          "value": "CB: Oh, they are acknowledging it now. Yeah, in fact, they are making quite a bit of ballyhoo about me having invented Uncle Scrooge. [They are interrupted by Donald and Daisy characters who come to pose with Barks for picture purposes.]",
+          "bbox": [
+            {
+              "h": 49.68681160918441,
+              "w": 274.71367931235716,
+              "x": 113.2628970381574,
+              "y": 412.43913770007634,
+              "confidence": 0.97,
+              "end_index": 241,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Why do you think you've lived such a long life?",
+          "value": "ES: Why do you think you've lived such a long life?",
+          "bbox": [
+            {
+              "h": 11.700174752286543,
+              "w": 198.34310708246,
+              "x": 113.35947154273057,
+              "y": 471.7268590987044,
+              "confidence": 0.92,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh \\[laughs] I don't know. Maybe it's because I enjoyed what I was doing, and . . . I never got into any excessive fads, like food fads, or drunken binges, or anything that lasted any length of time. Everything I've done was in moderation.",
+          "value": "CB: Oh [laughs] I don't know. Maybe it's because I enjoyed what I was doing, and . . . I never got into any excessive fads, like food fads, or drunken binges, or anything that lasted any length of time. Everything I've done was in moderation.",
+          "bbox": [
+            {
+              "h": 49.24814546970278,
+              "w": 276.56547540134346,
+              "x": 112.95869736685405,
+              "y": 484.584081388148,
+              "confidence": 0.97,
+              "end_index": 246,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** What has given you the most pleasure in the past year?",
+          "value": "ES: What has given you the most pleasure in the past year?",
+          "bbox": [
+            {
+              "h": 11.66000269150156,
+              "w": 229.0312337616711,
+              "x": 113.27161278701412,
+              "y": 544.6083023866236,
+              "confidence": 0.89,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Feeling of having accomplished something. I tackled this painting",
+          "value": "CB: Feeling of having accomplished something. I tackled this painting",
+          "bbox": [
+            {
+              "h": 12.429512166539661,
+              "w": 267.53931565000954,
+              "x": 113.26417434617952,
+              "y": 557.3743663633766,
+              "confidence": 0.93,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nERIK SVANE / 1994 171\n\\</page_header>",
+          "value": "<page_header>\nERIK SVANE / 1994 171\n</page_header>",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 92.01,
+              "x": 656.4,
+              "y": 40.75,
+              "confidence": 1.0,
+              "end_index": 35,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\\[\"Rich Finds at Inventory Time\"]. I didn't know whether I'd ever be able to paint it, and I finished that. And I also went through a seminar of comic book publishers and fans and so on in Atlanta and met a great many of the people who were associated in the comic book business and realized that they had a lot of respect for me. It was quite an uplifting experience in my life.",
+          "value": "[\"Rich Finds at Inventory Time\"]. I didn't know whether I'd ever be able to paint it, and I finished that. And I also went through a seminar of comic book publishers and fans and so on in Atlanta and met a great many of the people who were associated in the comic book business and realized that they had a lot of respect for me. It was quite an uplifting experience in my life.",
+          "bbox": [
+            {
+              "h": 77.3467557629097,
+              "w": 283.0776550352516,
+              "x": 466.08058079268295,
+              "y": 65.71999341296686,
+              "confidence": 0.96,
+              "end_index": 378,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** And what are you going to do in Paris? Tomorrow, you're going to get an award, are you not?",
+          "value": "ES: And what are you going to do in Paris? Tomorrow, you're going to get an award, are you not?",
+          "bbox": [
+            {
+              "h": 25.081548475609758,
+              "w": 272.9479011528202,
+              "x": 466.89445141006104,
+              "y": 149.75181620379195,
+              "confidence": 0.97,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I haven't been briefed on what's going to happen to me. (laughs.) I just hope they lead me past a hot dog stand.",
+          "value": "CB: I haven't been briefed on what's going to happen to me. (laughs.) I just hope they lead me past a hot dog stand.",
+          "bbox": [
+            {
+              "h": 24.18564238410596,
+              "w": 276.281625,
+              "x": 467.39175000000006,
+              "y": 175.8716821192053,
+              "confidence": 0.98,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** I have an invitation that says you're going to receive a medal at the town hall tomorrow morning.",
+          "value": "ES: I have an invitation that says you're going to receive a medal at the town hall tomorrow morning.",
+          "bbox": [
+            {
+              "h": 24.82612082698172,
+              "w": 274.374879620808,
+              "x": 467.9723491091845,
+              "y": 207.73180051686361,
+              "confidence": 0.97,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Town hall? Is that here in Eurodisney?",
+          "value": "CB: Town hall? Is that here in Eurodisney?",
+          "bbox": [
+            {
+              "h": 9.989721854304634,
+              "w": 162.193875,
+              "x": 468.1803750000001,
+              "y": 234.75846357615896,
+              "confidence": 0.95,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** In Paris.",
+          "value": "ES: In Paris.",
+          "bbox": [
+            {
+              "h": 8.675284768211895,
+              "w": 46.52887500000003,
+              "x": 467.9175000000001,
+              "y": 255.26368211920533,
+              "confidence": 0.95,
+              "end_index": 16,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, in Paris \\[whistles].",
+          "value": "CB: Oh, in Paris [whistles].",
+          "bbox": [
+            {
+              "h": 10.778384105960242,
+              "w": 103.30987499999998,
+              "x": 467.9175000000001,
+              "y": 266.5678410596027,
+              "confidence": 0.95,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** The mayor is going to hand you a medal of some sort.\n**CB:** Well, that knocks me off the stool \\[laughs]. Well, thank him very profusely. \\[The following day, on July 8 at 11:30 a.m., Barks was handed the city's highest distinction, the Grande Médaille de Vermeil de la Ville de Paris, by mayor Jacques Chirac's first assistant, Jean Tibéri, in the presence of Dennis F. Hightower, the president of Disney consumer products in Europe, and Pierre Sissmann, the director of Disney France. Within a year, Chirac had become president of France and Tibéri had taken over his job.]",
+          "value": "ES: The mayor is going to hand you a medal of some sort.\nCB: Well, that knocks me off the stool [laughs]. Well, thank him very profusely. [The following day, on July 8 at 11:30 a.m., Barks was handed the city's highest distinction, the Grande Médaille de Vermeil de la Ville de Paris, by mayor Jacques Chirac's first assistant, Jean Tibéri, in the presence of Dennis F. Hightower, the president of Disney consumer products in Europe, and Pierre Sissmann, the director of Disney France. Within a year, Chirac had become president of France and Tibéri had taken over his job.]",
+          "bbox": [
+            {
+              "h": 115.19872048399391,
+              "w": 283.21365077172266,
+              "x": 468.7939837557165,
+              "y": 286.05669986661593,
+              "confidence": 0.98,
+              "end_index": 583,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.41,
+              "w": 225.02,
+              "x": 467.13,
+              "y": 284.44,
+              "confidence": 1.0,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 102.53,
+              "w": 282.33,
+              "x": 468.71,
+              "y": 298.38,
+              "confidence": 0.98,
+              "end_index": 583,
+              "label": "text",
+              "start_index": 61
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** I hope I didn't spoil some surprise or anything. You also have an exhibit of your paintings that will be shown in a gallery?",
+          "value": "ES: I hope I didn't spoil some surprise or anything. You also have an exhibit of your paintings that will be shown in a gallery?",
+          "bbox": [
+            {
+              "h": 24.185642384106018,
+              "w": 282.85349999999994,
+              "x": 470.0205000000001,
+              "y": 408.00127152317884,
+              "confidence": 0.97,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** They won't arrive right away. They're being shown in Milan right now. And there's about 28 of my original oil paintings. \\[On July 9, between 3 and 6 p.m., Barks inaugurated the exhibit dedicated to his works at Catto Animation, 53 rue Veille-du-Temple, Paris.]",
+          "value": "CB: They won't arrive right away. They're being shown in Milan right now. And there's about 28 of my original oil paintings. [On July 9, between 3 and 6 p.m., Barks inaugurated the exhibit dedicated to his works at Catto Animation, 53 rue Veille-du-Temple, Paris.]",
+          "bbox": [
+            {
+              "h": 50.27006880240094,
+              "w": 282.8715325838415,
+              "x": 470.11477034108236,
+              "y": 434.2852929306403,
+              "confidence": 0.96,
+              "end_index": 268,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\\[The Disney people, who have been growing increasingly impatient, ask ES to finish up quickly.]",
+          "value": "[The Disney people, who have been growing increasingly impatient, ask ES to finish up quickly.]",
+          "bbox": [
+            {
+              "h": 23.13409271523176,
+              "w": 272.601375,
+              "x": 471.07200000000006,
+              "y": 486.34172185430475,
+              "confidence": 0.94,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Erik Svane:** How would you like to be remembered?\n**Carl Barks:** I would like to be remembered as a guy who gave my readers their money's worth, that I did a good job, and that they respect me for it.",
+          "value": "Erik Svane: How would you like to be remembered?\nCarl Barks: I would like to be remembered as a guy who gave my readers their money's worth, that I did a good job, and that they respect me for it.",
+          "bbox": [
+            {
+              "h": 48.94353984374996,
+              "w": 283.3946778772866,
+              "x": 470.7725088366998,
+              "y": 519.4745621427212,
+              "confidence": 0.8,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.62,
+              "w": 204.25,
+              "x": 470.55,
+              "y": 517.36,
+              "confidence": 1.0,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 39.96,
+              "w": 283.91,
+              "x": 469.76,
+              "y": 529.72,
+              "confidence": 0.8,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 53
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "170, 171"
+    }
+  ]
+}

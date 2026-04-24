@@ -1,0 +1,420 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 168 CARL BARKs: CoNVeRSAtIONS",
+          "value": "168 CARL BARKs: CoNVeRSAtIONS",
+          "bbox": [
+            {
+              "h": 10.653248034667975,
+              "w": 101.36754031297637,
+              "x": 148.17464305449698,
+              "y": 36.80214387772723,
+              "confidence": 0.9,
+              "end_index": 30,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Any bitterness about that?",
+          "value": "ES: Any bitterness about that?",
+          "bbox": [
+            {
+              "h": 11.313360000000003,
+              "w": 117.76800000000001,
+              "x": 123.6564,
+              "y": 60.13944000000001,
+              "confidence": 0.82,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh no. No. No, from Disney they gave me the right to paint pictures of their characters, and I've made a good lot of money out of painting those characters. They let me sell those paintings and they let me sign my name on them. I'm the only person other than Walt Disney that was ever allowed to sign my name on a painting of the Disney characters. I can sell those for whatever I get and keep the money. The only thing Disney gets out of it is when these are made into serigraphs or lithographs and sold by the publishers, then the publishers pay Disney a royalty, but that's the only money they've ever gotten out of all that.",
+          "value": "CB: Oh no. No. No, from Disney they gave me the right to paint pictures of their characters, and I've made a good lot of money out of painting those characters. They let me sell those paintings and they let me sign my name on them. I'm the only person other than Walt Disney that was ever allowed to sign my name on a painting of the Disney characters. I can sell those for whatever I get and keep the money. The only thing Disney gets out of it is when these are made into serigraphs or lithographs and sold by the publishers, then the publishers pay Disney a royalty, but that's the only money they've ever gotten out of all that.",
+          "bbox": [
+            {
+              "h": 116.1108,
+              "w": 282.64320000000004,
+              "x": 122.8152,
+              "y": 73.23912,
+              "confidence": 0.94,
+              "end_index": 635,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Now I understood that in '76 that you were not allowed to paint any more, but I see you have some new ones here?",
+          "value": "ES: Now I understood that in '76 that you were not allowed to paint any more, but I see you have some new ones here?",
+          "bbox": [
+            {
+              "h": 25.603919999999988,
+              "w": 280.1196000000001,
+              "x": 121.1328,
+              "y": 197.09064000000004,
+              "confidence": 0.9,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, sure. Yeah, in fact they want me to paint more. They'd love to have me sit and paint these things one after another. That's the nice thing about this. They've all of a sudden discovered that I was around \\[laughs]. I could still do a little work, so they wanted to get me to paint these duck paintings. I painted this just two months ago \\[shows copy of \"Surprise Party at Memory Pond\"] for the sixtieth birthday \\[of Donald Duck]. This one I painted around the end of the year. \\[Completed in January 1994, \"Rich Finds at Inventory Time\" is the largest and most detailed painting Barks has ever done.] It took me five months to paint that money bin.",
+          "value": "CB: Oh, sure. Yeah, in fact they want me to paint more. They'd love to have me sit and paint these things one after another. That's the nice thing about this. They've all of a sudden discovered that I was around [laughs]. I could still do a little work, so they wanted to get me to paint these duck paintings. I painted this just two months ago [shows copy of \"Surprise Party at Memory Pond\"] for the sixtieth birthday [of Donald Duck]. This one I painted around the end of the year. [Completed in January 1994, \"Rich Finds at Inventory Time\" is the largest and most detailed painting Barks has ever done.] It took me five months to paint that money bin.",
+          "bbox": [
+            {
+              "h": 117.89712000000003,
+              "w": 284.3256,
+              "x": 119.4504,
+              "y": 223.88544000000002,
+              "confidence": 0.9,
+              "end_index": 661,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Five months!",
+          "value": "ES: Five months!",
+          "bbox": [
+            {
+              "h": 9.714795631669219,
+              "w": 64.33143069383576,
+              "x": 118.8651575004764,
+              "y": 348.30633957221806,
+              "confidence": 0.86,
+              "end_index": 19,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Three months just to paint this \\[Points at the money bin with all its coins]. This was a big painting. It was . . . let's see, twenty-eight inches high and thirty-five inches wide. Big fellow. \\[The painting was sold for two hundred thousand dollars.]",
+          "value": "CB: Three months just to paint this [Points at the money bin with all its coins]. This was a big painting. It was . . . let's see, twenty-eight inches high and thirty-five inches wide. Big fellow. [The painting was sold for two hundred thousand dollars.]",
+          "bbox": [
+            {
+              "h": 50.889562399961875,
+              "w": 282.44155564024396,
+              "x": 118.03395556640626,
+              "y": 361.54787339462666,
+              "confidence": 0.95,
+              "end_index": 259,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Now you retired from comic book drawing in 1966. I know you've done some scripts since then, but are you planning anything else?",
+          "value": "ES: Now you retired from comic book drawing in 1966. I know you've done some scripts since then, but are you planning anything else?",
+          "bbox": [
+            {
+              "h": 27.866066225165582,
+              "w": 271.54987500000004,
+              "x": 116.71650000000001,
+              "y": 420.3569801324504,
+              "confidence": 0.64,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** No. \\[chuckling] I'm not planning to do any more. I did write one story around the end of the year. I wrote a twenty-four-page Uncle Scrooge adventure. Like I was saying, whenever you want to write an easy story, you just get ol' Uncle Scrooge. So I sent him off on a treasure hunt, and he finds the Trojan horse. It'll be drawn by William Van Horn—guy up in Vancouver, British Columbia. \\[A promising young Disney artist, Van Horn was chosen by Barks himself, I was later told. Barks admires Van Horn's art as well as that of Daan Jippes. As for who took the initiative for getting a new Barks script out, I was told that Barks had been joking about doing one with his European editors, until he realized they were taking him seriously. \"Horsing Around with History\" was eventually printed in Walt Disney's Uncle Scrooge Adventures # 33, July 1995]",
+          "value": "CB: No. [chuckling] I'm not planning to do any more. I did write one story around the end of the year. I wrote a twenty-four-page Uncle Scrooge adventure. Like I was saying, whenever you want to write an easy story, you just get ol' Uncle Scrooge. So I sent him off on a treasure hunt, and he finds the Trojan horse. It'll be drawn by William Van Horn—guy up in Vancouver, British Columbia. [A promising young Disney artist, Van Horn was chosen by Barks himself, I was later told. Barks admires Van Horn's art as well as that of Daan Jippes. As for who took the initiative for getting a new Barks script out, I was told that Barks had been joking about doing one with his European editors, until he realized they were taking him seriously. \"Horsing Around with History\" was eventually printed in Walt Disney's Uncle Scrooge Adventures # 33, July 1995]",
+          "bbox": [
+            {
+              "h": 80.18066225165558,
+              "w": 281.27625000000006,
+              "x": 115.13925,
+              "y": 459.5272052980133,
+              "confidence": 0.89,
+              "end_index": 856,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 25.24,
+              "w": 281.8,
+              "x": 482.38,
+              "y": 65.2,
+              "confidence": 1.0,
+              "end_index": 854,
+              "label": "text",
+              "start_index": 665
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# ERik Svane / 1994 169",
+          "value": "ERik Svane / 1994 169",
+          "bbox": [
+            {
+              "h": 10.164045495903201,
+              "w": 66.69476360041921,
+              "x": 674.0290817692455,
+              "y": 43.54995315834605,
+              "confidence": 0.9,
+              "end_index": 22,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** How many fan letters do you get every day?",
+          "value": "ES: How many fan letters do you get every day?",
+          "bbox": [
+            {
+              "h": 11.313360000000003,
+              "w": 186.74640000000005,
+              "x": 482.00759999999997,
+              "y": 110.75184000000002,
+              "confidence": 0.83,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, not so many. Because for many years, I just stopped answering fan letters, and gradually, they just dropped off. Most of the fan letters were people wanting an autograph. So when they didn't get any autograph, they got mad at me and they didn't write any more. Oh, but I get, oh, maybe as many as ten a month, and each one requires an answer, and it takes me almost all day to compose an answer, because those letters are almost like a compact interview. They want to know so many things, and they want to tell me so many things that I—it just takes an awful lot of time to answer. So I made up a form letter to send out and tell them that just because of time and so on, I couldn't answer but I thank them very profusely for being so interested in the ducks.",
+          "value": "CB: Oh, not so many. Because for many years, I just stopped answering fan letters, and gradually, they just dropped off. Most of the fan letters were people wanting an autograph. So when they didn't get any autograph, they got mad at me and they didn't write any more. Oh, but I get, oh, maybe as many as ten a month, and each one requires an answer, and it takes me almost all day to compose an answer, because those letters are almost like a compact interview. They want to know so many things, and they want to tell me so many things that I—it just takes an awful lot of time to answer. So I made up a form letter to send out and tell them that just because of time and so on, I couldn't answer but I thank them very profusely for being so interested in the ducks.",
+          "bbox": [
+            {
+              "h": 141.11928,
+              "w": 283.4844000000001,
+              "x": 481.1664,
+              "y": 123.25608000000001,
+              "confidence": 0.93,
+              "end_index": 770,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** Now I'd like to go back to your beginnings. Do you still subscribe to the *National Geographic*?",
+          "value": "ES: Now I'd like to go back to your beginnings. Do you still subscribe to the National Geographic?",
+          "bbox": [
+            {
+              "h": 24.278319998094545,
+              "w": 276.81293504668446,
+              "x": 480.87651619664643,
+              "y": 272.1965943121189,
+              "confidence": 0.93,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh yes. Whenever they send me the bill now, they say \"valued subscriber since 1935.\"",
+          "value": "CB: Oh yes. Whenever they send me the bill now, they say \"valued subscriber since 1935.\"",
+          "bbox": [
+            {
+              "h": 22.946437128429864,
+              "w": 280.87201957888726,
+              "x": 480.6467510241998,
+              "y": 298.16511919778975,
+              "confidence": 0.94,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** What is your earliest memory?",
+          "value": "ES: What is your earliest memory?",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 132.9096,
+              "x": 481.1664,
+              "y": 330.46920000000006,
+              "confidence": 0.85,
+              "end_index": 36,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh . . . I think my earliest memory that comes quickly to mind was going to school in southern Oregon.",
+          "value": "CB: Oh . . . I think my earliest memory that comes quickly to mind was going to school in southern Oregon.",
+          "bbox": [
+            {
+              "h": 24.574416096608246,
+              "w": 274.38660080030496,
+              "x": 480.6149435499238,
+              "y": 343.38159239234,
+              "confidence": 0.92,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** Good memory?",
+          "value": "ES: Good memory?",
+          "bbox": [
+            {
+              "h": 10.717919999999992,
+              "w": 75.70799999999997,
+              "x": 480.3252,
+              "y": 375.72264,
+              "confidence": 0.83,
+              "end_index": 19,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah, it was a good memory. I lived almost a mile from the schoolhouse, little ol' one-room schoolhouse in the sagebrush. My brother, who was a little older than I, would walk to school \\[with me] and the meadow larks were singing and the birds were all happy and everything looked so nice and sweet.",
+          "value": "CB: Yeah, it was a good memory. I lived almost a mile from the schoolhouse, little ol' one-room schoolhouse in the sagebrush. My brother, who was a little older than I, would walk to school [with me] and the meadow larks were singing and the birds were all happy and everything looked so nice and sweet.",
+          "bbox": [
+            {
+              "h": 61.95818839081561,
+              "w": 283.95509051067086,
+              "x": 479.8865774342607,
+              "y": 388.76488778105954,
+              "confidence": 0.95,
+              "end_index": 307,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** Do you have any regrets about not continuing in one job?",
+          "value": "ES: Do you have any regrets about not continuing in one job?",
+          "bbox": [
+            {
+              "h": 12.30374844226376,
+              "w": 240.21400288205035,
+              "x": 479.7402129620809,
+              "y": 459.7727104087272,
+              "confidence": 0.88,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, I was so glad to leave the farm and that hard work.",
+          "value": "CB: Oh, I was so glad to leave the farm and that hard work.",
+          "bbox": [
+            {
+              "h": 11.431982812500037,
+              "w": 233.02215763147865,
+              "x": 479.7256366234757,
+              "y": 473.1029915110519,
+              "confidence": 0.92,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** Why did you leave your position as a staff animator at Disney studios to become a freelancer?",
+          "value": "ES: Why did you leave your position as a staff animator at Disney studios to become a freelancer?",
+          "bbox": [
+            {
+              "h": 22.608317880794743,
+              "w": 281.0133750000001,
+              "x": 479.48400000000004,
+              "y": 492.65101986754973,
+              "confidence": 0.94,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, I wasn't a staff animator. I was a staff story man. Well, the war, World War II, was on. They weren't making any more of the funny Disney comedies with Donald. They were going in for sort of propaganda pictures and instruction pictures for the army and so on. And I had always had",
+          "value": "CB: Oh, I wasn't a staff animator. I was a staff story man. Well, the war, World War II, was on. They weren't making any more of the funny Disney comedies with Donald. They were going in for sort of propaganda pictures and instruction pictures for the army and so on. And I had always had",
+          "bbox": [
+            {
+              "h": 51.957472637195174,
+              "w": 282.65033288871956,
+              "x": 479.1501467463796,
+              "y": 518.32460587843,
+              "confidence": 0.96,
+              "end_index": 291,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

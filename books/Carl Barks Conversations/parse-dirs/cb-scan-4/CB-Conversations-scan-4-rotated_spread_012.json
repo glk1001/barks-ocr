@@ -1,0 +1,463 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "178 CARL BARKS: CONVERSATIONS",
+              "value": "178 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 8.867078281011814,
+                  "w": 124.97991902272297,
+                  "x": 116.85441169850421,
+                  "y": 39.74270637326125,
+                  "confidence": 0.8,
+                  "end_index": 28,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "178 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 8.87,
+              "w": 124.98,
+              "x": 116.85,
+              "y": 39.74,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: I had very few things to correct. He and I went over his pencil drawings quite thoroughly. I went over the whole way through once before I even got to thinking: \"Well I have got to correct some things.\" So I went back and looked at two or three small situations that required a tiny bit of changing. It could have gone through and made a successful story without my correcting at all. He was that good at interpreting what I wanted.",
+          "value": "CB: I had very few things to correct. He and I went over his pencil drawings quite thoroughly. I went over the whole way through once before I even got to thinking: \"Well I have got to correct some things.\" So I went back and looked at two or three small situations that required a tiny bit of changing. It could have gone through and made a successful story without my correcting at all. He was that good at interpreting what I wanted.",
+          "bbox": [
+            {
+              "h": 75.81535549911874,
+              "w": 283.0672111637767,
+              "x": 115.89762033155489,
+              "y": 63.520754798851954,
+              "confidence": 0.96,
+              "end_index": 439,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD**: Who are the Disney artists today that you would consider as having the same feelings as you had for the characters? Van Horn is one of them, of course, but who are the others?",
+          "value": "SD: Who are the Disney artists today that you would consider as having the same feelings as you had for the characters? Van Horn is one of them, of course, but who are the others?",
+          "bbox": [
+            {
+              "h": 35.81312626714941,
+              "w": 282.07744771817835,
+              "x": 115.7065500786014,
+              "y": 148.79708268149776,
+              "confidence": 0.96,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Those guys in Italy and a number of people working for Egmont. They are marvelous artists. They are doing much better drawings of the ducks and other Disney characters than I was able to do. Daan Jippes, for example, has been very good doing Disney style for many years. Vicar who comes from Chile is excellent, and there are a number of them up there in the Nordic countries and down in Spain. Those guys are superb artists.",
+          "value": "CB: Those guys in Italy and a number of people working for Egmont. They are marvelous artists. They are doing much better drawings of the ducks and other Disney characters than I was able to do. Daan Jippes, for example, has been very good doing Disney style for many years. Vicar who comes from Chile is excellent, and there are a number of them up there in the Nordic countries and down in Spain. Those guys are superb artists.",
+          "bbox": [
+            {
+              "h": 75.67957091987427,
+              "w": 283.3243883681879,
+              "x": 115.64354873880526,
+              "y": 187.71730333936742,
+              "confidence": 0.97,
+              "end_index": 432,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD**: And what do you think of an American artist like Don Rosa?",
+          "value": "SD: And what do you think of an American artist like Don Rosa?",
+          "bbox": [
+            {
+              "h": 9.726834437086097,
+              "w": 248.416875,
+              "x": 115.66500000000002,
+              "y": 272.6142516556292,
+              "confidence": 0.91,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Don Rosa has a style that is a little bit different from the Disney style. I know that there are a great deal of people that like that style, which is extremely detailed. So there is room in the business for artists like Don Rosa and for others like Van Horn. They have a different style. But if they have a good story and tell it properly, then people are going to like it.",
+          "value": "CB: Don Rosa has a style that is a little bit different from the Disney style. I know that there are a great deal of people that like that style, which is extremely detailed. So there is room in the business for artists like Don Rosa and for others like Van Horn. They have a different style. But if they have a good story and tell it properly, then people are going to like it.",
+          "bbox": [
+            {
+              "h": 63.076677131764455,
+              "w": 282.67982367687694,
+              "x": 115.43139038085938,
+              "y": 285.5090231350039,
+              "confidence": 0.95,
+              "end_index": 381,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD**: For you, it is the story that is the most important part?",
+          "value": "SD: For you, it is the story that is the most important part?",
+          "bbox": [
+            {
+              "h": 10.881664581745396,
+              "w": 225.55358735470662,
+              "x": 115.40796054449316,
+              "y": 358.18827650533547,
+              "confidence": 0.9,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Oh yes!",
+          "value": "CB: Oh yes!",
+          "bbox": [
+            {
+              "h": 10.455266344321666,
+              "w": 46.7885817752001,
+              "x": 115.81493342106518,
+              "y": 371.34368681878817,
+              "confidence": 0.89,
+              "end_index": 14,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD**: And you wrote all your stories alone?",
+          "value": "SD: And you wrote all your stories alone?",
+          "bbox": [
+            {
+              "h": 10.908079573170719,
+              "w": 160.45832646365287,
+              "x": 115.42129714295923,
+              "y": 391.5906891053736,
+              "confidence": 0.92,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Once in a while I got a suggestion from somebody. I would buy somebody's idea. They would tell me: \"Why don't you write a story about Donald giving Gladstone a treasure map and sending Gladstone on some dangerous trip?\" Well, I bought that little suggestion from some friend of mine. All I needed were just a few words or something like that to trigger me and I would think of all the rest of the elements of the plot.",
+          "value": "CB: Once in a while I got a suggestion from somebody. I would buy somebody's idea. They would tell me: \"Why don't you write a story about Donald giving Gladstone a treasure map and sending Gladstone on some dangerous trip?\" Well, I bought that little suggestion from some friend of mine. All I needed were just a few words or something like that to trigger me and I would think of all the rest of the elements of the plot.",
+          "bbox": [
+            {
+              "h": 75.37072825838418,
+              "w": 282.7982000762196,
+              "x": 114.9359326171875,
+              "y": 404.85612051734006,
+              "confidence": 0.96,
+              "end_index": 425,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Of all the 500 stories I wrote, there was about 10 of them that started with suggestions from someone else.",
+          "value": "Of all the 500 stories I wrote, there was about 10 of them that started with suggestions from someone else.",
+          "bbox": [
+            {
+              "h": 23.817600000000027,
+              "w": 283.48440000000005,
+              "x": 114.40320000000001,
+              "y": 482.30640000000005,
+              "confidence": 0.75,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD**: When you stopped writing and drawing stories, you started a career as a painter. Now, you have written a new story. Why did it take so long to write a new story, and why did you choose to write another one after all these years?",
+          "value": "SD: When you stopped writing and drawing stories, you started a career as a painter. Now, you have written a new story. Why did it take so long to write a new story, and why did you choose to write another one after all these years?",
+          "bbox": [
+            {
+              "h": 49.79307433307931,
+              "w": 280.46430786728286,
+              "x": 114.72071873809072,
+              "y": 516.3116771627288,
+              "confidence": 0.95,
+              "end_index": 235,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nSÉBASTIEN DURAND AND DIDIER GHEZ / 1994 179\n\\</page_header>",
+          "value": "<page_header>\nSÉBASTIEN DURAND AND DIDIER GHEZ / 1994 179\n</page_header>",
+          "bbox": [
+            {
+              "h": 9.2,
+              "w": 178.76,
+              "x": 563.6,
+              "y": 40.75,
+              "confidence": 1.0,
+              "end_index": 57,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: I could not outrun these guys who were writing stories any longer. They had finally caught me.",
+          "value": "CB: I could not outrun these guys who were writing stories any longer. They had finally caught me.",
+          "bbox": [
+            {
+              "h": 22.345430463576164,
+              "w": 271.81275000000005,
+              "x": 460.819875,
+              "y": 65.45896688741722,
+              "confidence": 0.95,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD**: What is \"Horsing Around with History\"?",
+          "value": "SD: What is \"Horsing Around with History\"?",
+          "bbox": [
+            {
+              "h": 9.989721854304634,
+              "w": 174.28612500000003,
+              "x": 460.5570000000001,
+              "y": 98.05700662251658,
+              "confidence": 0.92,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: It's about Uncle $crooge's search for a very rare treasure. He finds the original Trojan horse. And I mean the original Trojan horse, not just some corny thing. He finds it, the most valuable treasure in the world. And he carries it back to his money bin.",
+          "value": "CB: It's about Uncle $crooge's search for a very rare treasure. He finds the original Trojan horse. And I mean the original Trojan horse, not just some corny thing. He finds it, the most valuable treasure in the world. And he carries it back to his money bin.",
+          "bbox": [
+            {
+              "h": 48.108397350993386,
+              "w": 275.2301250000001,
+              "x": 460.29412500000007,
+              "y": 110.67560264900663,
+              "confidence": 0.96,
+              "end_index": 262,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD**: Do you wish to write another story?",
+          "value": "SD: Do you wish to write another story?",
+          "bbox": [
+            {
+              "h": 9.989721854304605,
+              "w": 156.93637500000006,
+              "x": 460.5570000000001,
+              "y": 170.35104635761593,
+              "confidence": 0.92,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: I certainly hope that I do not have to write another one. There is a temptation to try. People beg me to write more stories. It is difficult for me to keep turning people down. But I know that it is an awfully hard job to write those stories too. Another thing is that I know that any story I write will be examined and criticized by everybody all over the world and if that story is not of very superb quality, they are going to say: \"Well here is this old hack coming back trying to make money on his reputation; he can't write and here he is getting paid for this kind of rubbish.\"",
+          "value": "CB: I certainly hope that I do not have to write another one. There is a temptation to try. People beg me to write more stories. It is difficult for me to keep turning people down. But I know that it is an awfully hard job to write those stories too. Another thing is that I know that any story I write will be examined and criticized by everybody all over the world and if that story is not of very superb quality, they are going to say: \"Well here is this old hack coming back trying to make money on his reputation; he can't write and here he is getting paid for this kind of rubbish.\"",
+          "bbox": [
+            {
+              "h": 101.51368072837275,
+              "w": 284.04340008098325,
+              "x": 460.9270186023248,
+              "y": 183.42664005097186,
+              "confidence": 0.96,
+              "end_index": 591,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD**: After all these years, tell me a little secret: are you now as rich as Uncle $crooge?",
+          "value": "SD: After all these years, tell me a little secret: are you now as rich as Uncle $crooge?",
+          "bbox": [
+            {
+              "h": 24.121106478658568,
+              "w": 266.87572908727134,
+              "x": 461.82328810975616,
+              "y": 294.1576990758385,
+              "confidence": 0.95,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: Just in the last two years, I have gotten enough money to get ahead of the income tax people. I never made more money than a carpenter or a plumber. It is just in the last two or three years that I have gotten above the average level of earning and just because of those lithograph paintings I have been doing and the fact that they sell for a big price.",
+          "value": "CB: Just in the last two years, I have gotten enough money to get ahead of the income tax people. I never made more money than a carpenter or a plumber. It is just in the last two or three years that I have gotten above the average level of earning and just because of those lithograph paintings I have been doing and the fact that they sell for a big price.",
+          "bbox": [
+            {
+              "h": 62.80506365282016,
+              "w": 284.04966139481706,
+              "x": 461.45161652057936,
+              "y": 320.3457343130717,
+              "confidence": 0.95,
+              "end_index": 361,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Didier Ghez**: Can you tell us about your favorite moment as a Disney artist?",
+          "value": "Didier Ghez: Can you tell us about your favorite moment as a Disney artist?",
+          "bbox": [
+            {
+              "h": 22.748661528201204,
+              "w": 268.79264284012964,
+              "x": 462.1163676876906,
+              "y": 392.5625480516388,
+              "confidence": 0.9,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: I hardly have any anecdotes because I was not around enough people to develop any. But I will tell you this about Walt, who was a wonderful guy to work for and was very helpful to us on story situations. And whenever we would have him in on a story conference, he was so patient with us in our efforts to try and convince him that we had a good story. And he would let us argue story points. And in these arguments, he would always leave us the last word: \"Yes, Walt!\" (laughs)",
+          "value": "CB: I hardly have any anecdotes because I was not around enough people to develop any. But I will tell you this about Walt, who was a wonderful guy to work for and was very helpful to us on story situations. And whenever we would have him in on a story conference, he was so patient with us in our efforts to try and convince him that we had a good story. And he would let us argue story points. And in these arguments, he would always leave us the last word: \"Yes, Walt!\" (laughs)",
+          "bbox": [
+            {
+              "h": 89.31600000000003,
+              "w": 283.48440000000005,
+              "x": 462.6600000000001,
+              "y": 418.59432000000004,
+              "confidence": 0.8,
+              "end_index": 484,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD**: Among all the stories you wrote, what are your favorite ones?",
+          "value": "SD: Among all the stories you wrote, what are your favorite ones?",
+          "bbox": [
+            {
+              "h": 9.463947019867533,
+              "w": 255.77737500000006,
+              "x": 462.92287500000003,
+              "y": 517.6253245033114,
+              "confidence": 0.89,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB**: I guess that among the very best was the one with the square eggs and among the funniest was a little ten-page story where Donald is trying to raise chickens and there are some eggs that he stored and a lot of things",
+          "value": "CB: I guess that among the very best was the one with the square eggs and among the funniest was a little ten-page story where Donald is trying to raise chickens and there are some eggs that he stored and a lot of things",
+          "bbox": [
+            {
+              "h": 35.226913907284825,
+              "w": 282.590625,
+              "x": 462.92287500000003,
+              "y": 531.032582781457,
+              "confidence": 0.95,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "178, 179"
+    }
+  ]
+}

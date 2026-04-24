@@ -1,0 +1,253 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "230 NOTES ON THE INTERVIEWERS",
+              "value": "230 NOTES ON THE INTERVIEWERS",
+              "bbox": [
+                {
+                  "h": 8.981786267685306,
+                  "w": 96.83169430020962,
+                  "x": 111.35547543707129,
+                  "y": 35.023745715927504,
+                  "confidence": 0.93,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "230 NOTES ON THE INTERVIEWERS",
+          "bbox": [
+            {
+              "h": 8.98,
+              "w": 96.83,
+              "x": 111.36,
+              "y": 35.02,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Formerly a writer and editor of the *Comics Journal*, **John Ronan** is currently a Ph.D. candidate in English at the University of Florida, where he has been awarded a Kirkland Dissertation Fellowship. He is completing his dissertation, \"Politics and Culture: Comics of the Nineteenth and Twentieth Centuries.\"",
+          "value": "Formerly a writer and editor of the Comics Journal, John Ronan is currently a Ph.D. candidate in English at the University of Florida, where he has been awarded a Kirkland Dissertation Fellowship. He is completing his dissertation, \"Politics and Culture: Comics of the Nineteenth and Twentieth Centuries.\"",
+          "bbox": [
+            {
+              "h": 60.201218543046366,
+              "w": 282.590625,
+              "x": 85.960125,
+              "y": 59.14966887417219,
+              "confidence": 0.99,
+              "end_index": 310,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Bill Spicer** is an American comics letterer and a writer about comics; beginning in the 1960s, he published *Graphic Story Magazine*.",
+          "value": "Bill Spicer is an American comics letterer and a writer about comics; beginning in the 1960s, he published Graphic Story Magazine.",
+          "bbox": [
+            {
+              "h": 24.447872332317093,
+              "w": 277.0668125387053,
+              "x": 87.14517256276201,
+              "y": 136.11524529820886,
+              "confidence": 0.96,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Francesco Stajano**, associate professor of computer engineering at the University of Cambridge, has coauthored two books with Leonardo Gori on Don Rosa and Floyd Gottfredson.",
+          "value": "Francesco Stajano, associate professor of computer engineering at the University of Cambridge, has coauthored two books with Leonardo Gori on Don Rosa and Floyd Gottfredson.",
+          "bbox": [
+            {
+              "h": 36.27846357615894,
+              "w": 277.59600000000006,
+              "x": 85.960125,
+              "y": 174.5572450331126,
+              "confidence": 0.98,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Klaus Strzyz** is the author (with Andreas C. Knigge) of *Disney von Innen* (1988). In 1983 he began working for the German Marvel publisher Condor Verlag, doing translations of the complete German Marvel line. He later before moved to Ehapa Verlag (the German Disney license holder), becoming editor of the German *Micky Maus* magazine, a position he held until 2002. Besides his work for Ehapa, he translated hundreds of album and articles into Danish, Swedish, French, and Italian.",
+          "value": "Klaus Strzyz is the author (with Andreas C. Knigge) of Disney von Innen (1988). In 1983 he began working for the German Marvel publisher Condor Verlag, doing translations of the complete German Marvel line. He later before moved to Ehapa Verlag (the German Disney license holder), becoming editor of the German Micky Maus magazine, a position he held until 2002. Besides his work for Ehapa, he translated hundreds of album and articles into Danish, Swedish, French, and Italian.",
+          "bbox": [
+            {
+              "h": 89.25496186880717,
+              "w": 283.72357843166446,
+              "x": 86.66168643114045,
+              "y": 226.603379518388,
+              "confidence": 0.99,
+              "end_index": 485,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Edward Summer** has worked in films as a producer, director, screenwriter, cinematographer, and marketing consultant. He was in charge of the design, story selection, artist selection, interviews, layouts, and photography for *Uncle Scrooge McDuck: His Life and Times* (1981). His film series *The Men Who Made the Comics*, a project supported by a grant from the National Endowment for the Arts, a federal agency in Washington, D.C., included interviews with Carl Barks, Milton Caniff, and Jack Kirby.",
+          "value": "Edward Summer has worked in films as a producer, director, screenwriter, cinematographer, and marketing consultant. He was in charge of the design, story selection, artist selection, interviews, layouts, and photography for Uncle Scrooge McDuck: His Life and Times (1981). His film series The Men Who Made the Comics, a project supported by a grant from the National Endowment for the Arts, a federal agency in Washington, D.C., included interviews with Carl Barks, Milton Caniff, and Jack Kirby.",
+          "bbox": [
+            {
+              "h": 89.51125819836126,
+              "w": 283.6940688595656,
+              "x": 86.47337741758766,
+              "y": 329.9361844750382,
+              "confidence": 0.99,
+              "end_index": 503,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Danish-American writer **Erik Svane** is a freelance journalist in Paris, where he serves as the correspondent for several comics magazines throughout Europe and the United States, while trying to sell scripts both to comics publishers and producers in the film world. His first *bande dessinée*, a western album, is due to be printed next year, and he is working on a book concerning anti-Americanism in France.",
+          "value": "Danish-American writer Erik Svane is a freelance journalist in Paris, where he serves as the correspondent for several comics magazines throughout Europe and the United States, while trying to sell scripts both to comics publishers and producers in the film world. His first bande dessinée, a western album, is due to be printed next year, and he is working on a book concerning anti-Americanism in France.",
+          "bbox": [
+            {
+              "h": 76.8763827696265,
+              "w": 283.5011640416588,
+              "x": 86.36213265470181,
+              "y": 433.20082457126534,
+              "confidence": 0.99,
+              "end_index": 411,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Don Thompson** (d. 1994) and **Maggie Thompson** have together produced the fanzine *Comic Art* and the newsletter *Newfangles*, and wrote comic-book copy, an assortment of articles, a regular comics column for",
+          "value": "Don Thompson (d. 1994) and Maggie Thompson have together produced the fanzine Comic Art and the newsletter Newfangles, and wrote comic-book copy, an assortment of articles, a regular comics column for",
+          "bbox": [
+            {
+              "h": 36.54135099337759,
+              "w": 277.596,
+              "x": 85.960125,
+              "y": 524.4603973509934,
+              "confidence": 0.98,
+              "end_index": 211,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nNOTES ON THE INTERVIEWERS 231\n\\</page_header>",
+          "value": "<page_header>\nNOTES ON THE INTERVIEWERS 231\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.515839110732662,
+              "w": 96.92659077267534,
+              "x": 618.3500730040016,
+              "y": 29.901619603896727,
+              "confidence": 0.94,
+              "end_index": 59,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Alan Light's *The Buyer's Guide for Comic Fandom*, and a movie column for Light's *Movie Collector's World*. In 1983 they jointly took over editorship of *The Buyer's Guide for Comic Fandom*. Don Thompson was the co-editor, with Richard A. Lupoff, of *All in Color for a Dime* (1970) and *The Comic-Book Book* (1973). Maggie Thompson continues as editor of *The Buyer's Guide*.",
+          "value": "Alan Light's The Buyer's Guide for Comic Fandom, and a movie column for Light's Movie Collector's World. In 1983 they jointly took over editorship of The Buyer's Guide for Comic Fandom. Don Thompson was the co-editor, with Richard A. Lupoff, of All in Color for a Dime (1970) and The Comic-Book Book (1973). Maggie Thompson continues as editor of The Buyer's Guide.",
+          "bbox": [
+            {
+              "h": 80.49965091225229,
+              "w": 281.82874833269824,
+              "x": 458.46161375762205,
+              "y": 53.404721652296125,
+              "confidence": 0.99,
+              "end_index": 376,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Malcolm Willits** was the first fan to learn Carl Barks's name and address, the first fan Barks ever met (on a visit the Barkses made to Seattle in 1961), and the first fan ever to interview him. For thirty-seven years Malcolm has co-owned the Collectors Book Store in Hollywood, California. He is also the author of the current well-received book *The Wonderful Edison Time Machine*.",
+          "value": "Malcolm Willits was the first fan to learn Carl Barks's name and address, the first fan Barks ever met (on a visit the Barkses made to Seattle in 1961), and the first fan ever to interview him. For thirty-seven years Malcolm has co-owned the Collectors Book Store in Hollywood, California. He is also the author of the current well-received book The Wonderful Edison Time Machine.",
+          "bbox": [
+            {
+              "h": 79.94565408369859,
+              "w": 284.2266311690168,
+              "x": 460.6751635146723,
+              "y": 143.67153724633195,
+              "confidence": 0.99,
+              "end_index": 385,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Nicky Wright** (d. 2000) is the author of *The Classic Era of American Comics* (2000) as well as numerous books on automobiles, beginning with *Post War American Classics* (1983). He became well known in Great Britain for his excellent photography of such notables as the Beatles, the Rolling Stones, Eric Clapton, the Beach Boys, Fats Domino, Ray Charles, Duke Ellington, and many others. Nicky Wright died 17 January 2000 in England of complications from pneumonia.",
+          "value": "Nicky Wright (d. 2000) is the author of The Classic Era of American Comics (2000) as well as numerous books on automobiles, beginning with Post War American Classics (1983). He became well known in Great Britain for his excellent photography of such notables as the Beatles, the Rolling Stones, Eric Clapton, the Beach Boys, Fats Domino, Ray Charles, Duke Ellington, and many others. Nicky Wright died 17 January 2000 in England of complications from pneumonia.",
+          "bbox": [
+            {
+              "h": 93.40963227181783,
+              "w": 285.24196582031254,
+              "x": 463.09949414062504,
+              "y": 234.3643521936929,
+              "confidence": 0.99,
+              "end_index": 468,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "231",
+          "value": "231",
+          "bbox": null,
+          "type": "text"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "231"
+    }
+  ]
+}

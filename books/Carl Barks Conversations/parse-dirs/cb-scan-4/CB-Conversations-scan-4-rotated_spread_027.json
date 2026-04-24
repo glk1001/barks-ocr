@@ -1,0 +1,499 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "208 CARL BARKS: CONVERSATIONS",
+              "value": "208 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.722498526819743,
+                  "w": 125.74843268268866,
+                  "x": 106.08605389553165,
+                  "y": 40.08605250928926,
+                  "confidence": 0.8,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "208 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.72,
+              "w": 125.75,
+              "x": 106.09,
+              "y": 40.09,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "that drew them or what methods they used to draw them, why they chose their subject material. It was something in a time that passed long ago and is now obsolete.",
+          "value": "that drew them or what methods they used to draw them, why they chose their subject material. It was something in a time that passed long ago and is now obsolete.",
+          "bbox": [
+            {
+              "h": 35.22691390728476,
+              "w": 283.642125,
+              "x": 104.09850000000002,
+              "y": 63.881642384105966,
+              "confidence": 0.97,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** How do you feel about that?",
+          "value": "DA: How do you feel about that?",
+          "bbox": [
+            {
+              "h": 10.252609271523184,
+              "w": 129.597375,
+              "x": 105.938625,
+              "y": 110.4127152317881,
+              "confidence": 0.85,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I feel it's something that comes along with the passage of time.",
+          "value": "CB: I feel it's something that comes along with the passage of time.",
+          "bbox": [
+            {
+              "h": 12.504239999999996,
+              "w": 259.0896,
+              "x": 105.9912,
+              "y": 123.25608000000001,
+              "confidence": 0.85,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** I don't want to believe you're right, I mean, you often are right about things, and I don't want to believe that's true, but . . . it doesn't depress you or anything?",
+          "value": "DA: I don't want to believe you're right, I mean, you often are right about things, and I don't want to believe that's true, but . . . it doesn't depress you or anything?",
+          "bbox": [
+            {
+              "h": 36.32184000000001,
+              "w": 283.48440000000005,
+              "x": 105.15,
+              "y": 143.50104000000002,
+              "confidence": 0.86,
+              "end_index": 173,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** No, it doesn't depress me, because I feel I lived through it at a time when I was able to give my best output, best production, and if I had that same opportunity now, to do those comic books, they would be stinkers.",
+          "value": "CB: No, it doesn't depress me, because I feel I lived through it at a time when I was able to give my best output, best production, and if I had that same opportunity now, to do those comic books, they would be stinkers.",
+          "bbox": [
+            {
+              "h": 38.10816,
+              "w": 282.64320000000004,
+              "x": 104.3088,
+              "y": 182.20464,
+              "confidence": 0.88,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** You mean if you were the age you were when you started to do the comics . . .",
+          "value": "DA: You mean if you were the age you were when you started to do the comics . . .",
+          "bbox": [
+            {
+              "h": 22.03128000000001,
+              "w": 280.11960000000005,
+              "x": 104.3088,
+              "y": 228.64896000000002,
+              "confidence": 0.84,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** No, if I were at that age, I would pick a way of doing the comics that would be fitted to the present culture of the world, the present way people are thinking, what goes on in the world now. Those stories I did were about a time in history that is now past, and I solved the problems as I would or as all people did in those days. People obeyed the law, a lot of things that are just automatically dated.",
+          "value": "CB: No, if I were at that age, I would pick a way of doing the comics that would be fitted to the present culture of the world, the present way people are thinking, what goes on in the world now. Those stories I did were about a time in history that is now past, and I solved the problems as I would or as all people did in those days. People obeyed the law, a lot of things that are just automatically dated.",
+          "bbox": [
+            {
+              "h": 76.21632,
+              "w": 284.3256,
+              "x": 102.6264,
+              "y": 254.25288,
+              "confidence": 0.87,
+              "end_index": 412,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** I don't know why you're saying all this stuff. You must think it, because you don't say stuff that you don't think. Do you think the fact that things have changed suddenly or recently so much, that something which has been continuously popular for 50 years suddenly . . . I mean there are no other comics that remain popular as yours have.",
+          "value": "DA: I don't know why you're saying all this stuff. You must think it, because you don't say stuff that you don't think. Do you think the fact that things have changed suddenly or recently so much, that something which has been continuously popular for 50 years suddenly . . . I mean there are no other comics that remain popular as yours have.",
+          "bbox": [
+            {
+              "h": 63.712080000000014,
+              "w": 282.64320000000004,
+              "x": 102.6264,
+              "y": 338.80536,
+              "confidence": 0.9,
+              "end_index": 346,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, it's hard to say what is going to be at the end of that fad. The fad was popular, funny animals, dressing ducks and pigs and mice in human clothes and having them do people things. That fad is over.",
+          "value": "CB: Well, it's hard to say what is going to be at the end of that fad. The fad was popular, funny animals, dressing ducks and pigs and mice in human clothes and having them do people things. That fad is over.",
+          "bbox": [
+            {
+              "h": 38.10816,
+              "w": 277.596,
+              "x": 101.7852,
+              "y": 403.70832000000007,
+              "confidence": 0.86,
+              "end_index": 211,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** So you can't say it for sure . . .?",
+          "value": "DA: So you can't say it for sure . . .?",
+          "bbox": [
+            {
+              "h": 11.041271523178807,
+              "w": 142.21537500000005,
+              "x": 101.9955,
+              "y": 450.0632582781457,
+              "confidence": 0.85,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I feel for sure that it is over.",
+          "value": "CB: Well, I feel for sure that it is over.",
+          "bbox": [
+            {
+              "h": 10.717919999999992,
+              "w": 146.36879999999996,
+              "x": 100.944,
+              "y": 462.65688000000006,
+              "confidence": 0.83,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Well, it's true that there's not a lot of money in comic books unless you create a character like Spawn—with merchandising, an animated version on HBO, a live-action movie, and so on.",
+          "value": "DA: Well, it's true that there's not a lot of money in comic books unless you create a character like Spawn—with merchandising, an animated version on HBO, a live-action movie, and so on.",
+          "bbox": [
+            {
+              "h": 36.91728000000006,
+              "w": 281.802,
+              "x": 100.944,
+              "y": 483.4972800000001,
+              "confidence": 0.86,
+              "end_index": 190,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** What did Spawn look like?",
+          "value": "CB: What did Spawn look like?",
+          "bbox": [
+            {
+              "h": 10.25260927152317,
+              "w": 119.34525000000004,
+              "x": 101.20687500000001,
+              "y": 522.3572980132451,
+              "confidence": 0.83,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** He's grotesque, kind of a monstrous character—a huge, muscular, bizarre character.",
+          "value": "DA: He's grotesque, kind of a monstrous character—a huge, muscular, bizarre character.",
+          "bbox": [
+            {
+              "h": 23.22216000000003,
+              "w": 273.39000000000004,
+              "x": 100.944,
+              "y": 542.4458400000001,
+              "confidence": 0.86,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nDONALD AULT / 1999 209\n\\</page_header>",
+          "value": "<page_header>\nDONALD AULT / 1999 209\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.52,
+              "w": 101.47,
+              "x": 640.63,
+              "y": 39.96,
+              "confidence": 1.0,
+              "end_index": 36,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** You know, there's something in those kinds of comics that could've been the breeding grounds of these guys in Columbine, Colorado. These people who just destroy everything with mighty muscles. These weakling kids, like the two that did the shooting, they feel they have to defend themselves against that kind of a person.",
+          "value": "CB: You know, there's something in those kinds of comics that could've been the breeding grounds of these guys in Columbine, Colorado. These people who just destroy everything with mighty muscles. These weakling kids, like the two that did the shooting, they feel they have to defend themselves against that kind of a person.",
+          "bbox": [
+            {
+              "h": 63.712080000000014,
+              "w": 281.802,
+              "x": 460.97760000000005,
+              "y": 64.30752000000001,
+              "confidence": 0.89,
+              "end_index": 328,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So you think they're not imitating that kind of person, they're seeing these other people as that kind of person?",
+          "value": "DA: So you think they're not imitating that kind of person, they're seeing these other people as that kind of person?",
+          "bbox": [
+            {
+              "h": 25.00847999999999,
+              "w": 282.64320000000004,
+              "x": 461.81880000000007,
+              "y": 133.97400000000002,
+              "confidence": 0.87,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah; they hated all the jocks, any athlete.",
+          "value": "CB: Yeah; they hated all the jocks, any athlete.",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 180.0168,
+              "x": 462.6600000000001,
+              "y": 160.17336000000003,
+              "confidence": 0.84,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** I hope this hasn't upset you or anything.",
+          "value": "DA: I hope this hasn't upset you or anything.",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 174.12840000000006,
+              "x": 462.6600000000001,
+              "y": 178.632,
+              "confidence": 0.84,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, no. I realize that there will be a time when I have to just stop, because my memory is not lively enough anymore to remember all of the reasons I would have for doing things in the story. And so people who want to interview me will just have to not interview me anymore, and I think that time is practically here now. I wrote those stories simply as a means of making a living, and I tried to make them interesting and funny so that kids would pay their 10 cents for it, for a book. I didn't realize that I was putting so much depth and philosophy and all that stuff into the stories. Kind of a shock to find out that some people can see a great meaning in certain things I did.",
+          "value": "CB: Oh, no. I realize that there will be a time when I have to just stop, because my memory is not lively enough anymore to remember all of the reasons I would have for doing things in the story. And so people who want to interview me will just have to not interview me anymore, and I think that time is practically here now. I wrote those stories simply as a means of making a living, and I tried to make them interesting and funny so that kids would pay their 10 cents for it, for a book. I didn't realize that I was putting so much depth and philosophy and all that stuff into the stories. Kind of a shock to find out that some people can see a great meaning in certain things I did.",
+          "bbox": [
+            {
+              "h": 128.0196,
+              "w": 284.3256,
+              "x": 462.6600000000001,
+              "y": 191.73168,
+              "confidence": 0.82,
+              "end_index": 689,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** But you don't exactly deny that the meaning is there, right?\n**CB:** Well, no. The meaning just crept in without me even thinking about it. It was just something that was in the situation, and as I drew it, why, it came out that it was the principal motivation of that situation. I felt that you had to have motive in stories, there had to be a theme, something that causes a person to think certain types of thoughts, and what those thoughts lead him into. That was my way of constructing stories. It was a lot of work, but the stories came out better than the kind a lot of guys were drawing \\[back then]. Nobody reads those kinds of stories anymore.",
+          "value": "DA: But you don't exactly deny that the meaning is there, right?\nCB: Well, no. The meaning just crept in without me even thinking about it. It was just something that was in the situation, and as I drew it, why, it came out that it was the principal motivation of that situation. I felt that you had to have motive in stories, there had to be a theme, something that causes a person to think certain types of thoughts, and what those thoughts lead him into. That was my way of constructing stories. It was a lot of work, but the stories came out better than the kind a lot of guys were drawing [back then]. Nobody reads those kinds of stories anymore.",
+          "bbox": [
+            {
+              "h": 114.91992000000005,
+              "w": 284.32560000000007,
+              "x": 464.34240000000005,
+              "y": 325.70568000000003,
+              "confidence": 0.88,
+              "end_index": 659,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So you would characterize your work as sort of interior, something inside that you can't see that is motivating what is seen, what is shown. I think it's that mysterious, invisible force that you put into your stories that makes them what they are. They came from somewhere inside you, and you were getting inside the characters.",
+          "value": "DA: So you would characterize your work as sort of interior, something inside that you can't see that is motivating what is seen, what is shown. I think it's that mysterious, invisible force that you put into your stories that makes them what they are. They came from somewhere inside you, and you were getting inside the characters.",
+          "bbox": [
+            {
+              "h": 63.712080000000014,
+              "w": 283.48440000000005,
+              "x": 465.18360000000007,
+              "y": 447.17544000000004,
+              "confidence": 0.87,
+              "end_index": 336,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah, that's what it was, sure, but I couldn't begin to write stories now—totally impossible.",
+          "value": "CB: Yeah, that's what it was, sure, but I couldn't begin to write stories now—totally impossible.",
+          "bbox": [
+            {
+              "h": 25.008479999999963,
+              "w": 270.86639999999994,
+              "x": 466.0248000000001,
+              "y": 512.0784,
+              "confidence": 0.85,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** You don't have any interest in doing it?",
+          "value": "DA: You don't have any interest in doing it?",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 170.76360000000005,
+              "x": 466.86600000000004,
+              "y": 543.6367200000001,
+              "confidence": 0.82,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** That's right, I don't!",
+          "value": "CB: That's right, I don't!",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 94.21440000000001,
+              "x": 466.86600000000004,
+              "y": 557.33184,
+              "confidence": 0.83,
+              "end_index": 29,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "208, 209"
+    }
+  ]
+}

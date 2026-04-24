@@ -1,0 +1,626 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 184 CARL BARKS: CONVERSATIONS",
+          "value": "184 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.766595602789156,
+              "w": 101.85545945479231,
+              "x": 145.7488973716178,
+              "y": 33.684807029761345,
+              "confidence": 0.93,
+              "end_index": 30,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, God, yeah, took a car that she couldn't even drive. But I was so happy to have that happen that I would just turn out stories to beat hell.",
+          "value": "CB: Oh, God, yeah, took a car that she couldn't even drive. But I was so happy to have that happen that I would just turn out stories to beat hell.",
+          "bbox": [
+            {
+              "h": 26.794800000000002,
+              "w": 278.4372,
+              "x": 121.974,
+              "y": 57.162240000000004,
+              "confidence": 0.92,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**LA:** Goodness.",
+          "value": "LA: Goodness.",
+          "bbox": [
+            {
+              "h": 10.11772175590702,
+              "w": 56.564258360327756,
+              "x": 120.89523823956746,
+              "y": 90.4690055116235,
+              "confidence": 0.89,
+              "end_index": 16,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yeah, you mentioned something about during those very troubled years I turned out good stuff. At the time we were in La Jolla and she was in the hospital—that's when I turned out the story of \"No Such Varmint\" and all that fancy drawing. And I was making enough money with all my cartoon work and doing those stories to pay my doctor bills—to pay all those doctor bills as I went along. Never had to borrow money to pay any of that stuff. There was no medical insurance whatsoever.",
+          "value": "CB: Yeah, you mentioned something about during those very troubled years I turned out good stuff. At the time we were in La Jolla and she was in the hospital—that's when I turned out the story of \"No Such Varmint\" and all that fancy drawing. And I was making enough money with all my cartoon work and doing those stories to pay my doctor bills—to pay all those doctor bills as I went along. Never had to borrow money to pay any of that stuff. There was no medical insurance whatsoever.",
+          "bbox": [
+            {
+              "h": 91.51648401891201,
+              "w": 283.5096355992759,
+              "x": 119.62996446265245,
+              "y": 103.54502016125193,
+              "confidence": 0.95,
+              "end_index": 488,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Oh, that's what I was going to ask. My gosh! You had no medical insurance?",
+          "value": "DA: Oh, that's what I was going to ask. My gosh! You had no medical insurance?",
+          "bbox": [
+            {
+              "h": 22.55822539538874,
+              "w": 271.64664986661586,
+              "x": 118.09075820550687,
+              "y": 201.24989845655492,
+              "confidence": 0.92,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yeah.",
+          "value": "CB: Yeah.",
+          "bbox": [
+            {
+              "h": 9.458995691215716,
+              "w": 37.716276140910814,
+              "x": 117.70320792444743,
+              "y": 226.92624517197032,
+              "confidence": 0.89,
+              "end_index": 12,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** You didn't have any fringe benefits from Western Publishing?",
+          "value": "DA: You didn't have any fringe benefits from Western Publishing?",
+          "bbox": [
+            {
+              "h": 14.144004663681425,
+              "w": 254.53391564048215,
+              "x": 117.15282591582509,
+              "y": 247.3112968130717,
+              "confidence": 0.87,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** None at all.",
+          "value": "CB: None at all.",
+          "bbox": [
+            {
+              "h": 10.085225997999233,
+              "w": 60.82560837461892,
+              "x": 117.17178517411396,
+              "y": 260.263896722561,
+              "confidence": 0.91,
+              "end_index": 19,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**LA:** You were just doing piecework, right? You got paid by the page.",
+          "value": "LA: You were just doing piecework, right? You got paid by the page.",
+          "bbox": [
+            {
+              "h": 61.33032,
+              "w": 281.802,
+              "x": 116.08560000000001,
+              "y": 280.45224,
+              "confidence": 0.5,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Just getting paid by the page. Well, doctor bills weren't so high in those days. Now that was a class A hospital. And their room rates, I don't know what they were, and the doctors' bill for all that operating was only $800.",
+          "value": "CB: Just getting paid by the page. Well, doctor bills weren't so high in those days. Now that was a class A hospital. And their room rates, I don't know what they were, and the doctors' bill for all that operating was only $800.",
+          "bbox": [
+            {
+              "h": 61.33032,
+              "w": 281.802,
+              "x": 116.08560000000001,
+              "y": 280.45224,
+              "confidence": 0.69,
+              "end_index": 231,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**LA:** Oh my. That wouldn't get you in the door today.",
+          "value": "LA: Oh my. That wouldn't get you in the door today.",
+          "bbox": [
+            {
+              "h": 13.934776657774401,
+              "w": 205.01198235637386,
+              "x": 114.78387034941885,
+              "y": 352.60677108898636,
+              "confidence": 0.89,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** No, things have gotten very different.",
+          "value": "CB: No, things have gotten very different.",
+          "bbox": [
+            {
+              "h": 13.02198801448172,
+              "w": 162.14621387909682,
+              "x": 114.67315779820886,
+              "y": 365.3483347179879,
+              "confidence": 0.92,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** What about your first wife?",
+          "value": "DA: What about your first wife?",
+          "bbox": [
+            {
+              "h": 12.012332583841461,
+              "w": 124.87391497951603,
+              "x": 114.2851066120427,
+              "y": 385.7972964557928,
+              "confidence": 0.9,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, the first wife. I was 20 and she was 16 when we got married. And neither of us should've gotten married. We did and had no intention of having any children, but accidentally we got one and then we got another one a little later on.",
+          "value": "CB: Oh, the first wife. I was 20 and she was 16 when we got married. And neither of us should've gotten married. We did and had no intention of having any children, but accidentally we got one and then we got another one a little later on.",
+          "bbox": [
+            {
+              "h": 50.21865707412347,
+              "w": 280.60725366210943,
+              "x": 113.14969248404155,
+              "y": 398.739011261433,
+              "confidence": 0.95,
+              "end_index": 242,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**LA:** Did you have daughters?",
+          "value": "LA: Did you have daughters?",
+          "bbox": [
+            {
+              "h": 12.24645095750762,
+              "w": 112.95512841796877,
+              "x": 112.46118589224469,
+              "y": 457.84686252381874,
+              "confidence": 0.87,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Both daughters, yeah, and there was simply a case of when I was through with my day's work out in the railroad car shops and I would come home instead of going socializing with my wife—you know, play cards with the neighbors or something like that—I was sitting at the drawing board thinking up gags that I could write or draw. And she just couldn't stand that. She wanted a life like the other people around there had. She just never could see the advantage in me working so hard in",
+          "value": "CB: Both daughters, yeah, and there was simply a case of when I was through with my day's work out in the railroad car shops and I would come home instead of going socializing with my wife—you know, play cards with the neighbors or something like that—I was sitting at the drawing board thinking up gags that I could write or draw. And she just couldn't stand that. She wanted a life like the other people around there had. She just never could see the advantage in me working so hard in",
+          "bbox": [
+            {
+              "h": 93.23435373475606,
+              "w": 282.2066937583366,
+              "x": 111.09059681664445,
+              "y": 470.9034914062501,
+              "confidence": 0.95,
+              "end_index": 490,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# DONALD AULT AND LYNDA AULT / 1997 185",
+          "value": "DONALD AULT AND LYNDA AULT / 1997 185",
+          "bbox": [
+            {
+              "h": 8.675284768211924,
+              "w": 159.56512499999997,
+              "x": 584.371125,
+              "y": 39.95888741721855,
+              "confidence": 0.94,
+              "end_index": 38,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "improving myself and becoming a cartoonist or an artist. She just got so hard to get along with. It got really awful, so I finally just barged out of there.",
+          "value": "improving myself and becoming a cartoonist or an artist. She just got so hard to get along with. It got really awful, so I finally just barged out of there.",
+          "bbox": [
+            {
+              "h": 36.91728,
+              "w": 276.75480000000005,
+              "x": 462.6600000000001,
+              "y": 62.5212,
+              "confidence": 0.91,
+              "end_index": 155,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** That's when you left to go work for the Eye-Opener?",
+          "value": "DA: That's when you left to go work for the Eye-Opener?",
+          "bbox": [
+            {
+              "h": 9.20105960264901,
+              "w": 223.44374999999997,
+              "x": 463.71150000000006,
+              "y": 108.57250331125829,
+              "confidence": 0.87,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, I just needed to go be by myself and draw cartoons, and it was very helpful. The best friends I had in those years were her people, her mother and father and brother. They were understanding and helpful to me.",
+          "value": "CB: Well, I just needed to go be by myself and draw cartoons, and it was very helpful. The best friends I had in those years were her people, her mother and father and brother. They were understanding and helpful to me.",
+          "bbox": [
+            {
+              "h": 50.00508566358612,
+              "w": 281.9166571789254,
+              "x": 463.10926179020584,
+              "y": 120.20067389719897,
+              "confidence": 0.93,
+              "end_index": 222,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So they saw what was going on?",
+          "value": "DA: So they saw what was going on?",
+          "bbox": [
+            {
+              "h": 11.283048354134893,
+              "w": 145.68178860994666,
+              "x": 463.96360554020583,
+              "y": 179.14230572360904,
+              "confidence": 0.9,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, sure they did see what was going on.",
+          "value": "CB: Oh, sure they did see what was going on.",
+          "bbox": [
+            {
+              "h": 8.675284768211924,
+              "w": 176.91487500000005,
+              "x": 464.500125,
+              "y": 193.22225165562915,
+              "confidence": 0.91,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** Sounds like your work has been a major satisfaction all of your life.",
+          "value": "LA: Sounds like your work has been a major satisfaction all of your life.",
+          "bbox": [
+            {
+              "h": 10.77838410596027,
+              "w": 273.39000000000004,
+              "x": 462.66,
+              "y": 210.83570860927153,
+              "confidence": 0.91,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** It was, yeah. It helped me to make a living when I would've been a complete failure at anything else.",
+          "value": "CB: It was, yeah. It helped me to make a living when I would've been a complete failure at anything else.",
+          "bbox": [
+            {
+              "h": 24.482211821169955,
+              "w": 276.6346629192074,
+              "x": 463.5803129525534,
+              "y": 224.31087736995053,
+              "confidence": 0.94,
+              "end_index": 108,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** What about your daughters?",
+          "value": "DA: What about your daughters?",
+          "bbox": [
+            {
+              "h": 9.46394701986759,
+              "w": 130.12312500000002,
+              "x": 464.5001250000001,
+              "y": 257.1038940397351,
+              "confidence": 0.89,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, well, my oldest daughter, Peggy, she would have developed into quite a good artist, I think. Yeah, I think she had a tremendous sense of humor.",
+          "value": "CB: Oh, well, my oldest daughter, Peggy, she would have developed into quite a good artist, I think. Yeah, I think she had a tremendous sense of humor.",
+          "bbox": [
+            {
+              "h": 36.48020230564026,
+              "w": 283.3023109756098,
+              "x": 464.0254673208842,
+              "y": 269.6295535346799,
+              "confidence": 0.94,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** That's right. Garé did mention that. That you and she would tell each other stories and get to laughing until the tears rolled down your cheeks.",
+          "value": "DA: That's right. Garé did mention that. That you and she would tell each other stories and get to laughing until the tears rolled down your cheeks.",
+          "bbox": [
+            {
+              "h": 23.13,
+              "w": 281.54,
+              "x": 464.76,
+              "y": 314.68,
+              "confidence": 1.0,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah, that's right. She had a wonderful sense of humor and she would've been an artist of some kind by now. Probably a writer of comic books, or maybe a scriptwriter for some other big comedians, who knows?",
+          "value": "CB: Yeah, that's right. She had a wonderful sense of humor and she would've been an artist of some kind by now. Probably a writer of comic books, or maybe a scriptwriter for some other big comedians, who knows?",
+          "bbox": [
+            {
+              "h": 37.07,
+              "w": 282.59,
+              "x": 464.5,
+              "y": 339.39,
+              "confidence": 1.0,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** What happened?",
+          "value": "DA: What happened?",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 84.90862500000003,
+              "x": 465.28875000000005,
+              "y": 387.23316556291394,
+              "confidence": 0.87,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, she developed cancer. Cancer of the, well, it was the cervix, I guess, and a bunch of these darn doctors in Seattle, they wanted to treat it with radiation. And that kind of killed it off for a while, and then it came back all over, in her lungs and in her head and everywhere.",
+          "value": "CB: Oh, she developed cancer. Cancer of the, well, it was the cervix, I guess, and a bunch of these darn doctors in Seattle, they wanted to treat it with radiation. And that kind of killed it off for a while, and then it came back all over, in her lungs and in her head and everywhere.",
+          "bbox": [
+            {
+              "h": 48.10839735099336,
+              "w": 282.8535,
+              "x": 464.7630000000001,
+              "y": 399.32598675496695,
+              "confidence": 0.94,
+              "end_index": 288,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** Cervical cancer tends to take women very young. Was your daughter young?",
+          "value": "LA: Cervical cancer tends to take women very young. Was your daughter young?",
+          "bbox": [
+            {
+              "h": 25.1416115567835,
+              "w": 283.42793797637194,
+              "x": 465.2185231040397,
+              "y": 456.82891030392545,
+              "confidence": 0.92,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** She was; she died in 1963. She'd have been 40 years old when she died.",
+          "value": "CB: She was; she died in 1963. She'd have been 40 years old when she died.",
+          "bbox": [
+            {
+              "h": 23.66673316977895,
+              "w": 275.832413300305,
+              "x": 465.6605217701982,
+              "y": 483.0355246760672,
+              "confidence": 0.93,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** And how about your younger daughter?",
+          "value": "LA: And how about your younger daughter?",
+          "bbox": [
+            {
+              "h": 11.304158940397315,
+              "w": 174.28612499999997,
+              "x": 465.28875000000005,
+              "y": 515.7851125827815,
+              "confidence": 0.89,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, she married a sailor in WWII, and traveled all over the world with that guy, and they were in Japan, and they were in Germany and everywhere. He was a petty officer in the navy and after the war was over he",
+          "value": "CB: Oh, she married a sailor in WWII, and traveled all over the world with that guy, and they were in Japan, and they were in Germany and everywhere. He was a petty officer in the navy and after the war was over he",
+          "bbox": [
+            {
+              "h": 37.743831673971094,
+              "w": 283.04534665586897,
+              "x": 465.70961047065555,
+              "y": 528.462892325648,
+              "confidence": 0.94,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

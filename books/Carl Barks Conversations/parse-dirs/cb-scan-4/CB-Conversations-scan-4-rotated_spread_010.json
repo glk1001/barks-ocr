@@ -1,0 +1,337 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "174 CARL BARKS: CONVERSATIONS",
+              "value": "174 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.036185414086319,
+                  "w": 125.48185098489903,
+                  "x": 124.29332839295924,
+                  "y": 39.74336674804689,
+                  "confidence": 0.81,
+                  "end_index": 28,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "174 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.04,
+              "w": 125.48,
+              "x": 124.29,
+              "y": 39.74,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "flimsy in those days. So at the time I got my social security at 65, I had to establish that I was born in the United States. My brother who had had a mandatory record, being older than I, was able to prove it, because he had been accepted as an American citizen back in 1918.",
+          "value": "flimsy in those days. So at the time I got my social security at 65, I had to establish that I was born in the United States. My brother who had had a mandatory record, being older than I, was able to prove it, because he had been accepted as an American citizen back in 1918.",
+          "bbox": [
+            {
+              "h": 50.69639169505051,
+              "w": 281.8355856874048,
+              "x": 123.5802023151677,
+              "y": 63.302760206864534,
+              "confidence": 0.98,
+              "end_index": 275,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "When it came to passports, they did not accept that. That was not enough proof. And I can't remember how many things we had to do to finally convince them. They sent me a bunch of questions and I answered them. But anyway, they finally realized that I must have been born as an American citizen. They could not prove I wasn't, so they gave me a passport.",
+          "value": "When it came to passports, they did not accept that. That was not enough proof. And I can't remember how many things we had to do to finally convince them. They sent me a bunch of questions and I answered them. But anyway, they finally realized that I must have been born as an American citizen. They could not prove I wasn't, so they gave me a passport.",
+          "bbox": [
+            {
+              "h": 74.83469894245428,
+              "w": 282.29163474180643,
+              "x": 122.532609375,
+              "y": 115.75472946122335,
+              "confidence": 0.98,
+              "end_index": 353,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD:** Was your childhood on that farm in Oregon your inspiration for Grandma Duck's farm? Have you used your experience on the farm in your work, after that?",
+          "value": "SD: Was your childhood on that farm in Oregon your inspiration for Grandma Duck's farm? Have you used your experience on the farm in your work, after that?",
+          "bbox": [
+            {
+              "h": 36.55288785251526,
+              "w": 269.75007286108996,
+              "x": 121.95105854611282,
+              "y": 200.77455270817458,
+              "confidence": 0.96,
+              "end_index": 158,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yes, in a way. Grandma Duck's farm had been established by the publishers in another comic book. They had a comic book called *Grandma Duck's Farm Friends*. And they had established a pattern of an old granny lady that had a farm back in the middle west, which she grew corn in and things that were very different from the farm I had been used to. I could understand what it was all about because I knew what farmers were. And when it came time for me to write Grandma Duck's stories, I could do it very convincingly.",
+          "value": "CB: Yes, in a way. Grandma Duck's farm had been established by the publishers in another comic book. They had a comic book called Grandma Duck's Farm Friends. And they had established a pattern of an old granny lady that had a farm back in the middle west, which she grew corn in and things that were very different from the farm I had been used to. I could understand what it was all about because I knew what farmers were. And when it came time for me to write Grandma Duck's stories, I could do it very convincingly.",
+          "bbox": [
+            {
+              "h": 102.34479563643296,
+              "w": 283.1399425852706,
+              "x": 121.28563115710749,
+              "y": 239.96622729134916,
+              "confidence": 0.97,
+              "end_index": 524,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD:** When you read that the Disney Studio was looking for artists, what kind of artwork did you send them as an example of your work?",
+          "value": "SD: When you read that the Disney Studio was looking for artists, what kind of artwork did you send them as an example of your work?",
+          "bbox": [
+            {
+              "h": 24.802648713795733,
+              "w": 277.4321288943408,
+              "x": 120.6314240424924,
+              "y": 351.5779692216083,
+              "confidence": 0.82,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I drew what I thought was a version of *Snow White and the Seven Dwarfs*. I had read that they were working on a movie about *Snow White and the Seven Dwarfs*. Anyway, these characters were not anything like the ones that Disney had created, but they were interesting characters, and my drawings were in Disney-like style and they appealed to the people who were hiring for Disney. So they asked me to come and try out for a job.",
+          "value": "CB: Well, I drew what I thought was a version of Snow White and the Seven Dwarfs. I had read that they were working on a movie about Snow White and the Seven Dwarfs. Anyway, these characters were not anything like the ones that Disney had created, but they were interesting characters, and my drawings were in Disney-like style and they appealed to the people who were hiring for Disney. So they asked me to come and try out for a job.",
+          "bbox": [
+            {
+              "h": 89.38,
+              "w": 283.64,
+              "x": 119.35,
+              "y": 376.72,
+              "confidence": 1.0,
+              "end_index": 442,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**SD:** You began as an in-betweener and then were transferred to the story department. Was it a personal choice?",
+          "value": "SD: You began as an in-betweener and then were transferred to the story department. Was it a personal choice?",
+          "bbox": [
+            {
+              "h": 24.209392825838393,
+              "w": 282.6835303746666,
+              "x": 119.36314483493713,
+              "y": 476.5842037299925,
+              "confidence": 0.95,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I was trying out as an in-betweener to become an animator, just as all the people who went in there. But I was turning in jokes and gags to the comic strip and also to the story department, whenever they would send out the little questionnaire to the people in the whole studio, asking for any idea they had for some story that was in production. I was begin-",
+          "value": "CB: I was trying out as an in-betweener to become an animator, just as all the people who went in there. But I was turning in jokes and gags to the comic strip and also to the story department, whenever they would send out the little questionnaire to the people in the whole studio, asking for any idea they had for some story that was in production. I was begin-",
+          "bbox": [
+            {
+              "h": 66.09384,
+              "w": 280.9608,
+              "x": 118.6092,
+              "y": 502.55136000000005,
+              "confidence": 0.93,
+              "end_index": 366,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nSÉBASTIEN DURAND AND DIDIER GHEZ / 1994 175\n\\</page_header>",
+          "value": "<page_header>\nSÉBASTIEN DURAND AND DIDIER GHEZ / 1994 175\n</page_header>",
+          "bbox": [
+            {
+              "h": 10.78,
+              "w": 180.07,
+              "x": 570.96,
+              "y": 41.8,
+              "confidence": 1.0,
+              "end_index": 57,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "ning to sell gags to the story department, when a little form for \"Modern Inventions\" was sent out asking all the people of the studio to think of a story that would be suitable for Donald Duck and that would involve modern inventions and Donald's reaction to those things. I came out with that barber chair gag that became the main climax of the picture. I also came out with the idea of a robot that was the doorman and the guard of the exhibit.",
+          "value": "ning to sell gags to the story department, when a little form for \"Modern Inventions\" was sent out asking all the people of the studio to think of a story that would be suitable for Donald Duck and that would involve modern inventions and Donald's reaction to those things. I came out with that barber chair gag that became the main climax of the picture. I also came out with the idea of a robot that was the doorman and the guard of the exhibit.",
+          "bbox": [
+            {
+              "h": 87.626083195384,
+              "w": 283.2564781583461,
+              "x": 468.4035783155488,
+              "y": 65.80629863578984,
+              "confidence": 0.97,
+              "end_index": 446,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Walt gave me $50 for that gag, and he suggested that I be put in the story department where they needed gagmen more than they needed animators and in-betweeners in the rest of the studio.",
+          "value": "Walt gave me $50 for that gag, and he suggested that I be put in the story department where they needed gagmen more than they needed animators and in-betweeners in the rest of the studio.",
+          "bbox": [
+            {
+              "h": 35.22691390728477,
+              "w": 277.858875,
+              "x": 468.70612500000004,
+              "y": 156.68090066225167,
+              "confidence": 0.96,
+              "end_index": 186,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD:** In that department, you often teamed up with Jack Hannah.",
+          "value": "SD: In that department, you often teamed up with Jack Hannah.",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 248.154,
+              "x": 468.70612500000004,
+              "y": 201.89753642384107,
+              "confidence": 0.85,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** That was after I had been in the story department for about four years. Jack Hannah was an animator. He was sort of tired of animation, and he thought he might try and get in the story department and work over there. As it happened, my partner, Harry Reeves, and I had finished a couple of stories in a row, and Harry had been sort of promoted to another job. So I was just alone in one of the units, and when Jack Hannah asked to be transferred to the story department, they put him over there with me. He knew nothing about writing stories; however, he knew a lot about technique and how those stories could be put into animation. He knew about music and timing and all those things and I didn't. I could think of gags and a funny situation for Donald, but as for techniques and that sort of stuff, it went over my head. So Jack Hannah was very good put with me. The two of us together made a good team. And we produced a number of good shorts.",
+          "value": "CB: That was after I had been in the story department for about four years. Jack Hannah was an animator. He was sort of tired of animation, and he thought he might try and get in the story department and work over there. As it happened, my partner, Harry Reeves, and I had finished a couple of stories in a row, and Harry had been sort of promoted to another job. So I was just alone in one of the units, and when Jack Hannah asked to be transferred to the story department, they put him over there with me. He knew nothing about writing stories; however, he knew a lot about technique and how those stories could be put into animation. He knew about music and timing and all those things and I didn't. I could think of gags and a funny situation for Donald, but as for techniques and that sort of stuff, it went over my head. So Jack Hannah was very good put with me. The two of us together made a good team. And we produced a number of good shorts.",
+          "bbox": [
+            {
+              "h": 176.66034437086094,
+              "w": 283.11637499999995,
+              "x": 468.70612500000004,
+              "y": 215.30479470198676,
+              "confidence": 0.96,
+              "end_index": 953,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**SD:** I understand that you completed your first comic book story, \"Pirate Gold,\" before you left the studio.",
+          "value": "SD: I understand that you completed your first comic book story, \"Pirate Gold,\" before you left the studio.",
+          "bbox": [
+            {
+              "h": 21.293880794701977,
+              "w": 279.43612500000006,
+              "x": 469.7576250000001,
+              "y": 403.2692980132451,
+              "confidence": 0.96,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** That was adapted from a story that had been put on the shelf. There had been a story that they had been working on for a year that was about Mickey, Donald, and Goofy going to look for a treasure. Some pirates were involved looking for where that treasure chest was hidden and they went on that treasure hunt. The story had never gone beyond the story department. It had been pretty well finished. Walt said to shelve it, and maybe after the war was over they could make a movie out of it.",
+          "value": "CB: That was adapted from a story that had been put on the shelf. There had been a story that they had been working on for a year that was about Mickey, Donald, and Goofy going to look for a treasure. Some pirates were involved looking for where that treasure chest was hidden and they went on that treasure hunt. The story had never gone beyond the story department. It had been pretty well finished. Walt said to shelve it, and maybe after the war was over they could make a movie out of it.",
+          "bbox": [
+            {
+              "h": 86.22707284768211,
+              "w": 283.11637500000006,
+              "x": 468.70612500000004,
+              "y": 429.5580397350994,
+              "confidence": 0.96,
+              "end_index": 496,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "But it looked like very good comic book material. It so happened that a representative from Western Publishing was out there looking for something they could use for a long story plot. That was to test whether a long story involving Donald, Mickey, and all those guys could make a good",
+          "value": "But it looked like very good comic book material. It so happened that a representative from Western Publishing was out there looking for something they could use for a long story plot. That was to test whether a long story involving Donald, Mickey, and all those guys could make a good",
+          "bbox": [
+            {
+              "h": 47.845509933774906,
+              "w": 282.85350000000005,
+              "x": 469.7576250000001,
+              "y": 520.2541986754967,
+              "confidence": 0.96,
+              "end_index": 284,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "174, 175"
+    }
+  ]
+}

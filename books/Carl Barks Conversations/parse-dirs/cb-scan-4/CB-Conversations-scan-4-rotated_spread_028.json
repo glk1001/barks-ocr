@@ -1,0 +1,432 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "AULT, HAMILTON, RONAN, AND WRIGHT / 1999 211",
+              "value": "AULT, HAMILTON, RONAN, AND WRIGHT / 1999 211",
+              "bbox": [
+                {
+                  "h": 10.52,
+                  "w": 188.48,
+                  "x": 550.99,
+                  "y": 36.54,
+                  "confidence": 1.0,
+                  "end_index": 43,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "AULT, HAMILTON, RONAN, AND WRIGHT / 1999 211",
+          "bbox": [
+            {
+              "h": 10.52,
+              "w": 188.48,
+              "x": 550.99,
+              "y": 36.54,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "md": "Living the Stories:",
+          "value": "Living the Stories:",
+          "bbox": [
+            {
+              "h": 18.62760375857471,
+              "w": 141.40691415777442,
+              "x": 172.97107377810596,
+              "y": 119.14150365377289,
+              "confidence": 0.87,
+              "end_index": 18,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# The Carl Barks Genius",
+          "value": "The Carl Barks Genius",
+          "bbox": [
+            {
+              "h": 57.394936573456576,
+              "w": 183.56370154701796,
+              "x": 151.8036128941978,
+              "y": 142.1558929044398,
+              "confidence": 0.95,
+              "end_index": 22,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**DONALD AULT, BRUCE HAMILTON, JOHN RONAN, AND NICKY WRIGHT / 1999**",
+          "value": "DONALD AULT, BRUCE HAMILTON, JOHN RONAN, AND NICKY WRIGHT / 1999",
+          "bbox": [
+            {
+              "h": 28.917615894039784,
+              "w": 200.8365,
+              "x": 143.00400000000002,
+              "y": 217.40789403973508,
+              "confidence": 0.94,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Excerpts from an unpublished interview conducted on 30 April 1999. Reprinted by permission of Donald Ault and Bruce Hamilton.",
+          "value": "Excerpts from an unpublished interview conducted on 30 April 1999. Reprinted by permission of Donald Ault and Bruce Hamilton.",
+          "bbox": [
+            {
+              "h": 42.57270484470273,
+              "w": 163.24630167444744,
+              "x": 128.55646914300686,
+              "y": 308.24408714748483,
+              "confidence": 0.98,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**NW:** Your stories are timeless. The stories that you wrote fifty years ago, people are enjoying them just as much as ever today. Is there any reason you can see why people won't be enjoying them for another fifty years?\n**CB:** Yes, I think the reason they are timeless is because I put in nothing that was political, political timing; I didn't mention the names of any country or president or something that would time the story.",
+          "value": "NW: Your stories are timeless. The stories that you wrote fifty years ago, people are enjoying them just as much as ever today. Is there any reason you can see why people won't be enjoying them for another fifty years?\nCB: Yes, I think the reason they are timeless is because I put in nothing that was political, political timing; I didn't mention the names of any country or president or something that would time the story.",
+          "bbox": [
+            {
+              "h": 76.36882491425312,
+              "w": 283.31924156821657,
+              "x": 103.67701339796115,
+              "y": 393.8568471751144,
+              "confidence": 0.98,
+              "end_index": 432,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**NW:** Wouldn't you would take some particular, say, dictator or something, and then create a character out of that person?",
+          "value": "NW: Wouldn't you would take some particular, say, dictator or something, and then create a character out of that person?",
+          "bbox": [
+            {
+              "h": 23.396980132450324,
+              "w": 268.39537499999994,
+              "x": 103.83562500000001,
+              "y": 477.9293245033113,
+              "confidence": 0.9,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I wasn't much for taking some public idol and making a caricature of him.",
+          "value": "CB: Well, I wasn't much for taking some public idol and making a caricature of him.",
+          "bbox": [
+            {
+              "h": 22.919490291539628,
+              "w": 280.9221351348133,
+              "x": 103.56894312118905,
+              "y": 503.8825904725611,
+              "confidence": 0.85,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** What about the ambassador from Brutopia in \"Cold Bargain,\" that very Russian-looking guy? I mean, he obviously was a parody or a com-",
+          "value": "DA: What about the ambassador from Brutopia in \"Cold Bargain,\" that very Russian-looking guy? I mean, he obviously was a parody or a com-",
+          "bbox": [
+            {
+              "h": 24.448529801324526,
+              "w": 278.64750000000004,
+              "x": 102.52125000000001,
+              "y": 536.5532185430465,
+              "confidence": 0.97,
+              "end_index": 140,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "posite of the kinds of things you would imagine a character who was a Brutopian.",
+          "value": "posite of the kinds of things you would imagine a character who was a Brutopian.",
+          "bbox": [
+            {
+              "h": 25.26754813083556,
+              "w": 272.7279036299543,
+              "x": 458.5310892959223,
+              "y": 60.60761558510386,
+              "confidence": 0.95,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, yeah. There was a little bit of that in there. I didn't have any friendliness for the Russians because I didn't think they were buying any of my comics. (general laughter)",
+          "value": "CB: Oh, yeah. There was a little bit of that in there. I didn't have any friendliness for the Russians because I didn't think they were buying any of my comics. (general laughter)",
+          "bbox": [
+            {
+              "h": 37.330013245033115,
+              "w": 278.12175000000013,
+              "x": 457.92825000000005,
+              "y": 86.48996026490067,
+              "confidence": 0.95,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BH:** What do you figure are the best periods that you had as far as plotting, or as far as gags, or as far as art or writing? And were they all at the same time or were they the best for one time for this or . . . what periods did you feel were your best art, the best line work?",
+          "value": "BH: What do you figure are the best periods that you had as far as plotting, or as far as gags, or as far as art or writing? And were they all at the same time or were they the best for one time for this or . . . what periods did you feel were your best art, the best line work?",
+          "bbox": [
+            {
+              "h": 50.84223701767341,
+              "w": 282.9400063119284,
+              "x": 458.8141006812119,
+              "y": 131.54258868021154,
+              "confidence": 0.94,
+              "end_index": 281,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I did the best art in the 1960s—I liked to draw Donald best in the sixties because I had finally gotten around to a style and proportions for the duck that suited me fine, and I had a great set of pens to draw those accented lines very nicely. My lines were stronger in the sixties, and it was harder for the background colors to sort of nullify my drawing—cover it up or hide it or anything. I did the best stories with the most spontaneity and all the charm in the story construction in the 1950s. In the 1940s my story style was—well I was still searching for ways to tell stories—and I think it shows in the construction of the stories in the 1940s.",
+          "value": "CB: I did the best art in the 1960s—I liked to draw Donald best in the sixties because I had finally gotten around to a style and proportions for the duck that suited me fine, and I had a great set of pens to draw those accented lines very nicely. My lines were stronger in the sixties, and it was harder for the background colors to sort of nullify my drawing—cover it up or hide it or anything. I did the best stories with the most spontaneity and all the charm in the story construction in the 1950s. In the 1940s my story style was—well I was still searching for ways to tell stories—and I think it shows in the construction of the stories in the 1940s.",
+          "bbox": [
+            {
+              "h": 115.55911669921876,
+              "w": 284.8599254954268,
+              "x": 459.3214674637958,
+              "y": 183.21822754144438,
+              "confidence": 0.96,
+              "end_index": 660,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**NW:** Some of Donald's expressions are very unique.",
+          "value": "NW: Some of Donald's expressions are very unique.",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 199.78500000000003,
+              "x": 460.03125000000006,
+              "y": 306.52672847682123,
+              "confidence": 0.94,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BH:** Did you ever pose some of your expressions in front of a mirror?\n**CB:** I know that some of the guys that worked at Disney's in animation, they would have a mirror up there and look at their faces and all, but I didn't look enough like a duck that I could get any good out of that. (general laughter)",
+          "value": "BH: Did you ever pose some of your expressions in front of a mirror?\nCB: I know that some of the guys that worked at Disney's in animation, they would have a mirror up there and look at their faces and all, but I didn't look enough like a duck that I could get any good out of that. (general laughter)",
+          "bbox": [
+            {
+              "h": 64.30752000000001,
+              "w": 276.75480000000005,
+              "x": 460.97760000000005,
+              "y": 325.70568000000003,
+              "confidence": 0.79,
+              "end_index": 308,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.36,
+              "w": 266.56,
+              "x": 460.82,
+              "y": 324.4,
+              "confidence": 1.0,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 50.21,
+              "w": 276.81,
+              "x": 460.03,
+              "y": 338.86,
+              "confidence": 0.79,
+              "end_index": 308,
+              "label": "text",
+              "start_index": 73
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** Garé said that she would see you just making faces while you drew.\n**CB:** Well, what it was—oh, the faces I was making—if I was drawing him frowning, I was frowning (makes face); if I was drawing the duck happy, then I'd get those happy faces. (makes different face) (laughter)",
+          "value": "DA: Garé said that she would see you just making faces while you drew.\nCB: Well, what it was—oh, the faces I was making—if I was drawing him frowning, I was frowning (makes face); if I was drawing the duck happy, then I'd get those happy faces. (makes different face) (laughter)",
+          "bbox": [
+            {
+              "h": 49.68572185430463,
+              "w": 283.90500000000003,
+              "x": 460.03125000000006,
+              "y": 396.96000000000004,
+              "confidence": 0.97,
+              "end_index": 285,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So would you say that you sort of lived through the stories?\n**CB:** I think one of the reasons my drawings had so much spontaneous relation to whatever they were thinking of was that I felt just like the Ducks were supposed to feel, and I managed to get that in the drawings so that they looked like they were feeling what they were saying in their dialogue balloons.",
+          "value": "DA: So would you say that you sort of lived through the stories?\nCB: I think one of the reasons my drawings had so much spontaneous relation to whatever they were thinking of was that I felt just like the Ducks were supposed to feel, and I managed to get that in the drawings so that they looked like they were feeling what they were saying in their dialogue balloons.",
+          "bbox": [
+            {
+              "h": 75.71157615894037,
+              "w": 279.69899999999996,
+              "x": 460.819875,
+              "y": 455.3210066225166,
+              "confidence": 0.97,
+              "end_index": 375,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So there is a sense in which you actually experienced the adventures?\n**CB:** I was an actor, and drawing the Duck to act the way I was seeing him",
+          "value": "DA: So there is a sense in which you actually experienced the adventures?\nCB: I was an actor, and drawing the Duck to act the way I was seeing him",
+          "bbox": [
+            {
+              "h": 23.13409271523176,
+              "w": 281.80199999999996,
+              "x": 462.66,
+              "y": 539.4449801324504,
+              "confidence": 0.77,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.78,
+              "w": 281.8,
+              "x": 462.66,
+              "y": 539.44,
+              "confidence": 1.0,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 9.46,
+              "w": 281.28,
+              "x": 462.92,
+              "y": 553.12,
+              "confidence": 1.0,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 78
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "210",
+              "value": "210",
+              "bbox": [
+                {
+                  "h": 7.5045877048399,
+                  "w": 15.934668028296485,
+                  "x": 237.0269690953697,
+                  "y": 586.2479730040017,
+                  "confidence": 0.9,
+                  "end_index": 2,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "210",
+          "bbox": [
+            {
+              "h": 7.5,
+              "w": 15.93,
+              "x": 237.03,
+              "y": 586.25,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer",
+          "book_side": "left"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "210, 211"
+    }
+  ]
+}

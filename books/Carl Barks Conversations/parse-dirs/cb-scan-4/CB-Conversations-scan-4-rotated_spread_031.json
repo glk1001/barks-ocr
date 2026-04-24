@@ -1,0 +1,428 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "216  CARL BARKS: CONVERSATIONS",
+              "value": "216  CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 13.41,
+                  "w": 127.23,
+                  "x": 114.61,
+                  "y": 33.65,
+                  "confidence": 1.0,
+                  "end_index": 29,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "216  CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 13.41,
+              "w": 127.23,
+              "x": 114.61,
+              "y": 33.65,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "I never got a swelled head over hearing that *WDC&S* was selling millions of copies; I knew it wouldn't last. And besides, Alice Cobb, one of the editors, told me *my work* wasn't selling those comics—it was Walt Disney's name over the titles.",
+          "value": "I never got a swelled head over hearing that WDC&S was selling millions of copies; I knew it wouldn't last. And besides, Alice Cobb, one of the editors, told me my work wasn't selling those comics—it was Walt Disney's name over the titles.",
+          "bbox": [
+            {
+              "h": 49.86876480683119,
+              "w": 279.53653142863953,
+              "x": 113.98178352467609,
+              "y": 59.240068044969526,
+              "confidence": 0.98,
+              "end_index": 242,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Now that I am old and cranky, and Western and *WDC&S* are dust in the pages of history, I have other things to write about.",
+          "value": "Now that I am old and cranky, and Western and WDC&S are dust in the pages of history, I have other things to write about.",
+          "bbox": [
+            {
+              "h": 26.92301907750572,
+              "w": 275.62024241973137,
+              "x": 113.66417211914063,
+              "y": 110.83257059594133,
+              "confidence": 0.96,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The \"dangerous\" pill, Metabolife, seems to be improving my day-to-day feeling of being alive. I swallow one pill an hour before breakfast and one-half a pill an hour before lunch. The effect is sort of an energy surge that keeps me interested in whatever is interesting. I can think, and usually I need only a short nap in the afternoon to keep my inner machinery going.",
+          "value": "The \"dangerous\" pill, Metabolife, seems to be improving my day-to-day feeling of being alive. I swallow one pill an hour before breakfast and one-half a pill an hour before lunch. The effect is sort of an energy surge that keeps me interested in whatever is interesting. I can think, and usually I need only a short nap in the afternoon to keep my inner machinery going.",
+          "bbox": [
+            {
+              "h": 66.32921352896344,
+              "w": 282.9306644316883,
+              "x": 112.15195212461892,
+              "y": 136.49985821027062,
+              "confidence": 0.95,
+              "end_index": 369,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "In prior months I was tired *all the time* and felt thick-headed. Also I weighed 185. Now I weigh 170.",
+          "value": "In prior months I was tired all the time and felt thick-headed. Also I weighed 185. Now I weigh 170.",
+          "bbox": [
+            {
+              "h": 25.270779092035067,
+              "w": 278.8154033917683,
+              "x": 110.8324678925305,
+              "y": 201.33545466368145,
+              "confidence": 0.93,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I watched some of the TV program about increasing people's ages. Am glad I won't have to suffer such a fate.",
+          "value": "I watched some of the TV program about increasing people's ages. Am glad I won't have to suffer such a fate.",
+          "bbox": [
+            {
+              "h": 24.165001457698168,
+              "w": 283.0585830733136,
+              "x": 110.36278169659872,
+              "y": 227.68791879049166,
+              "confidence": 0.94,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Best of luck to you and your family.",
+          "value": "Best of luck to you and your family.",
+          "bbox": [
+            {
+              "h": 13.672683212652442,
+              "w": 136.99376485089562,
+              "x": 122.07047432355184,
+              "y": 252.7375919945694,
+              "confidence": 0.9,
+              "end_index": 35,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Carl",
+          "value": "Carl",
+          "bbox": [
+            {
+              "h": 8.802662931116604,
+              "w": 15.840748320788899,
+              "x": 375.8677463914825,
+              "y": 278.72148721417693,
+              "confidence": 0.92,
+              "end_index": 3,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## Questions and Answers",
+          "value": "Questions and Answers",
+          "bbox": [
+            {
+              "h": 13.421971260480184,
+              "w": 124.6147216320503,
+              "x": 109.17690137909682,
+              "y": 303.13358407488573,
+              "confidence": 0.97,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**Question 1:**",
+          "value": "Question 1:",
+          "bbox": [
+            {
+              "h": 9.400864981897831,
+              "w": 48.15194529463607,
+              "x": 108.52445995498286,
+              "y": 323.8567653344132,
+              "confidence": 0.94,
+              "end_index": 14,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "According to Mike Barrier's account of your payment records, you are credited with \"art only\" on all of the *WDC&S* front cover gags that are listed from issues September '49 to April '54 (including some famous ones such as the sailboat and the eggbeater outboard motor). If this is true, how were cover gags sent to you—as sketches, as verbal descriptions, or what? How much restaging of such prepackaged gags did you do or were you expected to do? Would you have drawn up small versions of gags you did not invent yourself? Since I vividly recall your mentioning to me that the eggbeater gag was your own, I would frankly be surprised if you really did \"art only\" on many of those covers, even though you may not have been paid for the ideas or have a record of the payment. Do you recall if any of the *WDC&S* cover gags in this period might have been your own inventions?",
+          "value": "According to Mike Barrier's account of your payment records, you are credited with \"art only\" on all of the WDC&S front cover gags that are listed from issues September '49 to April '54 (including some famous ones such as the sailboat and the eggbeater outboard motor). If this is true, how were cover gags sent to you—as sketches, as verbal descriptions, or what? How much restaging of such prepackaged gags did you do or were you expected to do? Would you have drawn up small versions of gags you did not invent yourself? Since I vividly recall your mentioning to me that the eggbeater gag was your own, I would frankly be surprised if you really did \"art only\" on many of those covers, even though you may not have been paid for the ideas or have a record of the payment. Do you recall if any of the WDC&S cover gags in this period might have been your own inventions?",
+          "bbox": [
+            {
+              "h": 166.62814148723328,
+              "w": 285.65654619319264,
+              "x": 105.01407313798114,
+              "y": 336.860670603087,
+              "confidence": 0.99,
+              "end_index": 874,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**In reply to Question 1:**",
+          "value": "In reply to Question 1:",
+          "bbox": [
+            {
+              "h": 11.591359170160066,
+              "w": 92.73713942513817,
+              "x": 103.65773481266673,
+              "y": 511.17344721322416,
+              "confidence": 0.95,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I have no records of the work I did for *WDC&S* prior to 1952 when I began listing all work by date, price, and title to ease the annual figuring of income taxes. As a result, I have no record of the September '49 sail-",
+          "value": "I have no records of the work I did for WDC&S prior to 1952 when I began listing all work by date, price, and title to ease the annual figuring of income taxes. As a result, I have no record of the September '49 sail-",
+          "bbox": [
+            {
+              "h": 42.017493635670725,
+              "w": 278.48756726074225,
+              "x": 103.05160206566788,
+              "y": 524.4248379049163,
+              "confidence": 0.98,
+              "end_index": 218,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nDONALD AULT / 1999 217\n\\</page_header>",
+          "value": "<page_header>\nDONALD AULT / 1999 217\n</page_header>",
+          "bbox": [
+            {
+              "h": 9.463947019867547,
+              "w": 101.7326250000001,
+              "x": 647.461125,
+              "y": 42.85064900662252,
+              "confidence": 0.91,
+              "end_index": 52,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "boat cover. My memory of that is that it was the *first* cover I did for the comics. \\[Barks's memory is inaccurate here. This was the seventh cover he did for comics.] I have no proof of the idea being mine, but have long recollection of it being my idea, as was the eggbeater outboard motor.",
+          "value": "boat cover. My memory of that is that it was the first cover I did for the comics. [Barks's memory is inaccurate here. This was the seventh cover he did for comics.] I have no proof of the idea being mine, but have long recollection of it being my idea, as was the eggbeater outboard motor.",
+          "bbox": [
+            {
+              "h": 47.84550993377482,
+              "w": 283.64212499999996,
+              "x": 465.28875000000005,
+              "y": 66.5105165562914,
+              "confidence": 0.98,
+              "end_index": 292,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Inasmuch as my 98-year-old memory doesn't remember many of the details that happened around fifty years ago, I need to wonder if I sent a rough sketch of the sailboat gag to the art editor and received back an okay with his suggestions as to the size of the cover. If the idea came from the art editor, such instructions would have been on *his* rough layout. That, I recall, was the method of sending me cover ideas to draw.",
+          "value": "Inasmuch as my 98-year-old memory doesn't remember many of the details that happened around fifty years ago, I need to wonder if I sent a rough sketch of the sailboat gag to the art editor and received back an okay with his suggestions as to the size of the cover. If the idea came from the art editor, such instructions would have been on his rough layout. That, I recall, was the method of sending me cover ideas to draw.",
+          "bbox": [
+            {
+              "h": 72.5569271523179,
+              "w": 282.8535,
+              "x": 467.12887500000005,
+              "y": 118.82511258278147,
+              "confidence": 0.98,
+              "end_index": 424,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Later on I often submitted several cover idea sketches on common typewriter paper, which would account for the small version that ended up in the hands of the Robinson Ranch people.",
+          "value": "Later on I often submitted several cover idea sketches on common typewriter paper, which would account for the small version that ended up in the hands of the Robinson Ranch people.",
+          "bbox": [
+            {
+              "h": 37.20354759432167,
+              "w": 277.0165028820503,
+              "x": 467.1146993854802,
+              "y": 194.96821848561362,
+              "confidence": 0.97,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "As for Barrier's book listing all cover sales for issues between September '49 and April '54 as \"art only,\" I have no records to disprove the assertion. My early records, which were likely the vouchers that came back with the checks, got dumped with the ancient income tax records.",
+          "value": "As for Barrier's book listing all cover sales for issues between September '49 and April '54 as \"art only,\" I have no records to disprove the assertion. My early records, which were likely the vouchers that came back with the checks, got dumped with the ancient income tax records.",
+          "bbox": [
+            {
+              "h": 47.84550993377482,
+              "w": 282.064875,
+              "x": 467.9175000000001,
+              "y": 233.96980132450332,
+              "confidence": 0.98,
+              "end_index": 280,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Question 2:**",
+          "value": "Question 2:",
+          "bbox": [
+            {
+              "h": 8.98450089557926,
+              "w": 48.13938509908539,
+              "x": 467.94114272103667,
+              "y": 292.62435314405496,
+              "confidence": 0.95,
+              "end_index": 14,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "You mentioned that when you wrote \"No Such Varmint,\" you were staying in a warehouse of sorts and had little more than a mattress, blanket, and a drawing board \\[NOTE: My memory was inaccurate here. Barks produced \"No Such Varmint\" while his wife Clara was in the Scripps Institute for cancer surgery in July 1950]. Do you remember how long you lived under such conditions and what other stories you might have done then? According to Barrier's records, you produced a long adventure story almost every month in the first half of 1950 (beginning with \"Vacation Time\" in January and ending with \"No Such Varmint\" in July) until you started back on the *WDC&S* 10-pagers in August of 1950. It's an incredible output—even for you. I wondered if most of those stories might have been produced under those adverse conditions.",
+          "value": "You mentioned that when you wrote \"No Such Varmint,\" you were staying in a warehouse of sorts and had little more than a mattress, blanket, and a drawing board [NOTE: My memory was inaccurate here. Barks produced \"No Such Varmint\" while his wife Clara was in the Scripps Institute for cancer surgery in July 1950]. Do you remember how long you lived under such conditions and what other stories you might have done then? According to Barrier's records, you produced a long adventure story almost every month in the first half of 1950 (beginning with \"Vacation Time\" in January and ending with \"No Such Varmint\" in July) until you started back on the WDC&S 10-pagers in August of 1950. It's an incredible output—even for you. I wondered if most of those stories might have been produced under those adverse conditions.",
+          "bbox": [
+            {
+              "h": 153.95515046684454,
+              "w": 284.76906130907014,
+              "x": 467.4057753429879,
+              "y": 304.81620130049555,
+              "confidence": 0.99,
+              "end_index": 819,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**In reply to Question 2:**",
+          "value": "In reply to Question 2:",
+          "bbox": [
+            {
+              "h": 11.249240710746943,
+              "w": 92.33499402153204,
+              "x": 468.56081242854424,
+              "y": 466.7543167397105,
+              "confidence": 0.95,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "I think I lived in the remodeled warehouse through most of 1951 and 1952. The warehouse had been a barn for carnival rides and equipment. It had a corrugated iron roof that was noisy in hailstorms. The owner, who had sold out his carnival, put together some partitions and kitchens and bathrooms and made the place into five small \"apartments.\" My second wife had divorced me, and I moved into one of the apartments with my only remaining possessions: a drawing board, clothes, and two blankets.",
+          "value": "I think I lived in the remodeled warehouse through most of 1951 and 1952. The warehouse had been a barn for carnival rides and equipment. It had a corrugated iron roof that was noisy in hailstorms. The owner, who had sold out his carnival, put together some partitions and kitchens and bathrooms and made the place into five small \"apartments.\" My second wife had divorced me, and I moved into one of the apartments with my only remaining possessions: a drawing board, clothes, and two blankets.",
+          "bbox": [
+            {
+              "h": 87.27862251655625,
+              "w": 283.37925,
+              "x": 467.12887500000005,
+              "y": 480.2953112582782,
+              "confidence": 0.99,
+              "end_index": 494,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "216, 217"
+    }
+  ]
+}

@@ -1,0 +1,932 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "234 INDEX",
+              "value": "234 INDEX",
+              "bbox": [
+                {
+                  "h": 8.560948031392911,
+                  "w": 20.544961062547646,
+                  "x": 110.5827291289539,
+                  "y": 29.355808763457514,
+                  "confidence": 0.79,
+                  "end_index": 8,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "234 INDEX",
+          "bbox": [
+            {
+              "h": 8.56,
+              "w": 20.54,
+              "x": 110.58,
+              "y": 29.36,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Chicken farm, xxi, 5, 32, 162, 191\nCiotti, Paul, xxx\nCirculation, xviii, xxxii–xxxiii, 16–17, 26–27, 31–32, 46, 114, 216\nCobb, Alice, xviii, 216\nCochran, Russ, xxix\nColombine, Colo., 209\nColored pencil drawings, 196\n*Comic Art*, x, xxviii\nComic books, attitude toward, xiv, xvii–xviii, 6, 23–24, 27–28, 31, 34–35, 74–75, 82, 205–09, 215\nComics vs. animation, 42–43, 66–67, 70–71, 82, 135–36, 157\nContinuity: between stories, 45, 93, 204; comic book vs. comic strips, 135–36, 204; in film, 134\nCornelius Coot, 31, 98\nCoty, Dana, 10\nCraig, Chase, xv, 30, 218\nCrane, Roy (*Buzz Sawyer*, *Wash Tubbs*), 126, 133, 200\nCreative processes, 8–10, 11, 12–13, 15, 22, 25, 33, 41–42, 44–46, 48–49, 64, 71–72, 76–77, 78, 82, 83–86, 92–95, 96–97, 104, 105–08, 112–13, 123–28, 129, 130, 135–36, 137–38, 144, 147, 148–49, 177–78, 196, 197, 206–07, 209, 211–12, 220, 221",
+          "value": "Chicken farm, xxi, 5, 32, 162, 191\nCiotti, Paul, xxx\nCirculation, xviii, xxxii–xxxiii, 16–17, 26–27, 31–32, 46, 114, 216\nCobb, Alice, xviii, 216\nCochran, Russ, xxix\nColombine, Colo., 209\nColored pencil drawings, 196\nComic Art, x, xxviii\nComic books, attitude toward, xiv, xvii–xviii, 6, 23–24, 27–28, 31, 34–35, 74–75, 82, 205–09, 215\nComics vs. animation, 42–43, 66–67, 70–71, 82, 135–36, 157\nContinuity: between stories, 45, 93, 204; comic book vs. comic strips, 135–36, 204; in film, 134\nCornelius Coot, 31, 98\nCoty, Dana, 10\nCraig, Chase, xv, 30, 218\nCrane, Roy (Buzz Sawyer, Wash Tubbs), 126, 133, 200\nCreative processes, 8–10, 11, 12–13, 15, 22, 25, 33, 41–42, 44–46, 48–49, 64, 71–72, 76–77, 78, 82, 83–86, 92–95, 96–97, 104, 105–08, 112–13, 123–28, 129, 130, 135–36, 137–38, 144, 147, 148–49, 177–78, 196, 197, 206–07, 209, 211–12, 220, 221",
+          "bbox": [
+            {
+              "h": 326.3190547154869,
+              "w": 135.12118746129477,
+              "x": 83.86841414884243,
+              "y": 51.11131979861377,
+              "confidence": 0.86,
+              "end_index": 853,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 20.24,
+              "w": 117.51,
+              "x": 85.96,
+              "y": 51.53,
+              "confidence": 1.0,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 20.51,
+              "w": 125.13,
+              "x": 85.96,
+              "y": 73.35,
+              "confidence": 1.0,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 53
+            },
+            {
+              "h": 10.78,
+              "w": 78.07,
+              "x": 84.12,
+              "y": 93.85,
+              "confidence": 0.86,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 121
+            },
+            {
+              "h": 11.83,
+              "w": 69.4,
+              "x": 84.12,
+              "y": 104.37,
+              "confidence": 0.86,
+              "end_index": 163,
+              "label": "text",
+              "start_index": 145
+            },
+            {
+              "h": 9.46,
+              "w": 77.55,
+              "x": 85.7,
+              "y": 117.25,
+              "confidence": 1.0,
+              "end_index": 185,
+              "label": "text",
+              "start_index": 165
+            },
+            {
+              "h": 9.73,
+              "w": 100.94,
+              "x": 85.43,
+              "y": 128.55,
+              "confidence": 1.0,
+              "end_index": 214,
+              "label": "text",
+              "start_index": 187
+            },
+            {
+              "h": 32.07,
+              "w": 138.8,
+              "x": 83.07,
+              "y": 148.79,
+              "confidence": 0.86,
+              "end_index": 335,
+              "label": "text",
+              "start_index": 239
+            },
+            {
+              "h": 21.29,
+              "w": 129.86,
+              "x": 83.07,
+              "y": 181.66,
+              "confidence": 0.86,
+              "end_index": 394,
+              "label": "text",
+              "start_index": 337
+            },
+            {
+              "h": 32.07,
+              "w": 124.6,
+              "x": 83.07,
+              "y": 203.74,
+              "confidence": 0.86,
+              "end_index": 491,
+              "label": "text",
+              "start_index": 396
+            },
+            {
+              "h": 11.83,
+              "w": 79.91,
+              "x": 82.28,
+              "y": 235.55,
+              "confidence": 0.86,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 493
+            },
+            {
+              "h": 10.78,
+              "w": 55.47,
+              "x": 82.28,
+              "y": 247.11,
+              "confidence": 0.86,
+              "end_index": 529,
+              "label": "text",
+              "start_index": 516
+            },
+            {
+              "h": 10.52,
+              "w": 89.64,
+              "x": 82.28,
+              "y": 257.89,
+              "confidence": 1.0,
+              "end_index": 555,
+              "label": "text",
+              "start_index": 531
+            },
+            {
+              "h": 20.51,
+              "w": 110.67,
+              "x": 83.59,
+              "y": 270.25,
+              "confidence": 1.0,
+              "end_index": 611,
+              "label": "text",
+              "start_index": 557
+            },
+            {
+              "h": 85.44,
+              "w": 133.54,
+              "x": 83.59,
+              "y": 292.07,
+              "confidence": 1.0,
+              "end_index": 853,
+              "label": "text",
+              "start_index": 613
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Daughters. See Barks, Dorothy (daughter); Barks, Peggy (daughter)\nDavis, Marc, 163, 206\nDeath: attitude toward, 222; use of, 29, 103–04\nDialogue, 8–9, 11, 22, 27, 40, 52, 71, 78, 84, 86, 101, 128, 147, 200, 211, 212\nDickens, Charles, *A Christmas Carol*, 83, 93, 187\nDisney, Roy E., xi, xii, 193\nDisney, Roy O., xviii\nDisney, Walt, xiii, xviii, 5, 17, 20–21, 35, 37–40, 50–52, 69–70, 73, 92, 105, 116, 120–21, 147–50, 156, 162, 168, 170, 175–76, 179, 202–03, 216",
+          "value": "Daughters. See Barks, Dorothy (daughter); Barks, Peggy (daughter)\nDavis, Marc, 163, 206\nDeath: attitude toward, 222; use of, 29, 103–04\nDialogue, 8–9, 11, 22, 27, 40, 52, 71, 78, 84, 86, 101, 128, 147, 200, 211, 212\nDickens, Charles, A Christmas Carol, 83, 93, 187\nDisney, Roy E., xi, xii, 193\nDisney, Roy O., xviii\nDisney, Walt, xiii, xviii, 5, 17, 20–21, 35, 37–40, 50–52, 69–70, 73, 92, 105, 116, 120–21, 147–50, 156, 162, 168, 170, 175–76, 179, 202–03, 216",
+          "bbox": [
+            {
+              "h": 164.02557343273634,
+              "w": 136.26857322134623,
+              "x": 80.61963128513244,
+              "y": 391.0524969512196,
+              "confidence": 0.84,
+              "end_index": 420,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 19.389179872094136,
+              "w": 121.74553718083078,
+              "x": 239.6311496998857,
+              "y": 53.33474851729232,
+              "confidence": 0.76,
+              "end_index": 461,
+              "label": "text",
+              "start_index": 423
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Disney Company, The, xii, xiv, 5–6, 10, 14, 17, 46, 63, 75, 81–82, 85, 90, 113, 114, 116–18, 122, 125, 143, 150–53, 168, 170, 171, 174, 191–93, 206",
+          "value": "Disney Company, The, xii, xiv, 5–6, 10, 14, 17, 46, 63, 75, 81–82, 85, 90, 113, 114, 116–18, 122, 125, 143, 150–53, 168, 170, 171, 174, 191–93, 206",
+          "bbox": [
+            {
+              "h": 52.28188064262578,
+              "w": 136.3947324337843,
+              "x": 232.06207281345277,
+              "y": 75.30736773532776,
+              "confidence": 0.89,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Disney Duckster Award, x, xxviii\nDisney Legends Award, xi, 193\nDisney story department, 4, 17, 19–20, 37–41, 43, 50–52, 69–70, 125, 135, 147–49, 156, 169–70, 175, 179, 201\nDisney strike, xxi, 21, 149–50, 199, 219",
+          "value": "Disney Duckster Award, x, xxviii\nDisney Legends Award, xi, 193\nDisney story department, 4, 17, 19–20, 37–41, 43, 50–52, 69–70, 125, 135, 147–49, 156, 169–70, 175, 179, 201\nDisney strike, xxi, 21, 149–50, 199, 219",
+          "bbox": [
+            {
+              "h": 74.17520170183883,
+              "w": 136.50357911347183,
+              "x": 230.90205172208462,
+              "y": 129.84385653701412,
+              "confidence": 0.83,
+              "end_index": 211,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Disney Studio, xx–xxi, xxv, 4–5, 7, 28–32, 37, 47, 50–53, 63–64, 67, 81–82, 92, 105, 106, 116, 125, 150, 153, 156, 158, 161, 163, 169–70, 174, 176, 191–92, 199, 201, 202, 211, 219",
+          "value": "Disney Studio, xx–xxi, xxv, 4–5, 7, 28–32, 37, 47, 50–53, 63–64, 67, 81–82, 92, 105, 106, 116, 125, 150, 153, 156, 158, 161, 163, 169–70, 174, 176, 191–92, 199, 201, 202, 211, 219",
+          "bbox": [
+            {
+              "h": 63.334303074980944,
+              "w": 133.72974194931402,
+              "x": 230.02752149628435,
+              "y": 206.67878195264865,
+              "confidence": 0.9,
+              "end_index": 178,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Disney training, 5–6, 17, 21–22, 28, 41–42, 63, 66, 85, 151, 156–57, 162, 202–03, 219",
+          "value": "Disney training, 5–6, 17, 21–22, 28, 41–42, 63, 66, 85, 151, 156–57, 162, 202–03, 219",
+          "bbox": [
+            {
+              "h": 31.017404797065563,
+              "w": 126.08312495236282,
+              "x": 229.74425965844134,
+              "y": 272.29491481040407,
+              "confidence": 0.86,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Donald Duck: in animated cartoons, xiv, xv, 4–5, 19–20, 37–44, 50–52, 78, 81–82, 83, 92, 150, 151–52, 156, 163, 175, 199, 202, 211; animation vs. comic book versions of, xxv–xxvi, 6–7, 41, 77–78, 81–82, 83, 105–06, 129, 157; character of, xxiii, xxxi, 5–7, 10, 15, 23, 28, 30, 33–34, 36, 38, 41, 43–45, 49, 72, 77–78, 83–84, 92–95, 97, 99–100, 103, 105–08, 112–13, 117, 124, 129, 138–39, 143–44, 152, 159, 164, 165, 167–68, 170, 176–77, 178, 191, 200, 211",
+          "value": "Donald Duck: in animated cartoons, xiv, xv, 4–5, 19–20, 37–44, 50–52, 78, 81–82, 83, 92, 150, 151–52, 156, 163, 175, 199, 202, 211; animation vs. comic book versions of, xxv–xxvi, 6–7, 41, 77–78, 81–82, 83, 105–06, 129, 157; character of, xxiii, xxxi, 5–7, 10, 15, 23, 28, 30, 33–34, 36, 38, 41, 43–45, 49, 72, 77–78, 83–84, 92–95, 97, 99–100, 103, 105–08, 112–13, 117, 124, 129, 138–39, 143–44, 152, 159, 164, 165, 167–68, 170, 176–77, 178, 191, 200, 211",
+          "bbox": [
+            {
+              "h": 151.34627117949702,
+              "w": 136.11540270102898,
+              "x": 228.93269320455414,
+              "y": 304.76723606135675,
+              "confidence": 0.77,
+              "end_index": 454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "*Donald Duck* comic book, xxi, 4–5, 16, 64, 76, 82, 107, 114–15, 136, 141, 145, 146, 151–52, 157–58, 162–63, 166, 170, 175–77, 179–80, 191, 201, 218",
+          "value": "Donald Duck comic book, xxi, 4–5, 16, 64, 76, 82, 107, 114–15, 136, 141, 145, 146, 151–52, 157–58, 162–63, 166, 170, 175–77, 179–80, 191, 201, 218",
+          "bbox": [
+            {
+              "h": 53.044458398437484,
+              "w": 137.14538882669592,
+              "x": 227.15009715605947,
+              "y": 458.02421525819375,
+              "confidence": 0.86,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Donaldist society, 141\nDorfman, Ariel, 213",
+          "value": "Donaldist society, 141\nDorfman, Ariel, 213",
+          "bbox": [
+            {
+              "h": 22.345430463576122,
+              "w": 78.07387500000002,
+              "x": 226.07250000000002,
+              "y": 512.1046887417219,
+              "confidence": 1.0,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Drawing: animation, 148–49; comic books, 8, 22, 64, 85–86, 97, 105–",
+          "value": "Drawing: animation, 148–49; comic books, 8, 22, 64, 85–86, 97, 105–",
+          "bbox": [
+            {
+              "h": 20.85926278582313,
+              "w": 127.87739208984374,
+              "x": 227.01327492616238,
+              "y": 535.7948075362044,
+              "confidence": 0.78,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nINDEX 235\n\\</page_header>",
+          "value": "<page_header>\nINDEX 235\n</page_header>",
+          "bbox": [
+            {
+              "h": 9.463947019867547,
+              "w": 44.68875000000003,
+              "x": 691.36125,
+              "y": 24.711417218543048,
+              "confidence": 0.89,
+              "end_index": 19,
+              "label": "header",
+              "start_index": 15
+            },
+            {
+              "h": 10.252609271523177,
+              "w": 45.21450000000016,
+              "x": 691.36125,
+              "y": 24.711417218543048,
+              "confidence": 0.89,
+              "end_index": 23,
+              "label": "header",
+              "start_index": 21
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "06, 125–27, 138, 177–78, 206–07, 211–12, 220, 221; in-betweening, 41–42; story department, 41–42, 147",
+          "value": "06, 125–27, 138, 177–78, 206–07, 211–12, 220, 221; in-betweening, 41–42; story department, 41–42, 147",
+          "bbox": [
+            {
+              "h": 42.353114716320505,
+              "w": 124.44060701695882,
+              "x": 461.8150732660062,
+              "y": 48.648959504811366,
+              "confidence": 0.76,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Drawing paper, 8, 15, 42, 64, 106, 111, 126–27, 195, 206, 220",
+          "value": "Drawing paper, 8, 15, 42, 64, 106, 111, 126–27, 195, 206, 220",
+          "bbox": [
+            {
+              "h": 20.257320088605187,
+              "w": 136.83800840796496,
+              "x": 455.07709813262204,
+              "y": 93.21153756431023,
+              "confidence": 0.81,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "*Duck Tales* (animated television series), 166",
+          "value": "Duck Tales (animated television series), 166",
+          "bbox": [
+            {
+              "h": 20.013211884289277,
+              "w": 135.31896358136436,
+              "x": 455.397627310404,
+              "y": 115.01829191001336,
+              "confidence": 0.75,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Duckburg, xxiii, xxiv, 36, 98, 101, 140–41, 145",
+          "value": "Duckburg, xxiii, xxiv, 36, 98, 101, 140–41, 145",
+          "bbox": [
+            {
+              "h": 20.529828840748845,
+              "w": 137.3839448837653,
+              "x": 455.84578710937507,
+              "y": 137.0152253298876,
+              "confidence": 0.76,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Ducks, as human beings, 32, 44, 83, 100, 130",
+          "value": "Ducks, as human beings, 32, 44, 83, 100, 130",
+          "bbox": [
+            {
+              "h": 20.518048463700477,
+              "w": 126.30748034965698,
+              "x": 456.04985584984763,
+              "y": 159.1807626262386,
+              "confidence": 0.77,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Early life: and cowboys, 55–56; education, xix, xxiv–xxv, 3, 57–58, 81, 88–89, 169, 187, 188, 189–91; parents, 53–57, 81; work, xix, xx, xxiv, 4, 33, 56–57, 58–61, 73, 81, 104–05, 155–56, 169, 174, 184–85\nEC comics, 12, 104, 213\n*Encyclopedia Britannica*, xxv, 10, 19",
+          "value": "Early life: and cowboys, 55–56; education, xix, xxiv–xxv, 3, 57–58, 81, 88–89, 169, 187, 188, 189–91; parents, 53–57, 81; work, xix, xx, xxiv, 4, 33, 56–57, 58–61, 73, 81, 104–05, 155–56, 169, 174, 184–85\nEC comics, 12, 104, 213\nEncyclopedia Britannica, xxv, 10, 19",
+          "bbox": [
+            {
+              "h": 87.70722065310598,
+              "w": 137.56572334698936,
+              "x": 456.3750935356327,
+              "y": 194.39692781535828,
+              "confidence": 0.76,
+              "end_index": 266,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 65.46,
+              "w": 137.75,
+              "x": 455.56,
+              "y": 193.22,
+              "confidence": 1.0,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 22.35,
+              "w": 128.28,
+              "x": 456.35,
+              "y": 259.47,
+              "confidence": 1.0,
+              "end_index": 266,
+              "label": "text",
+              "start_index": 205
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Fairbanks, Douglas, 66\nFan mail, xiii, xxviii, 27, 36, 100, 116, 162, 169, 218\nFandom. See Recognition, attitude toward\nFirst drawing, selling of, 155–56\nFlat Butt Man, The, xix, 189\nFlintheart Glomgold, xxiv, 158–59\nFoster, Hal (*Prince Valiant*, *Tarzan*), 17, 29, 43–44, 89, 100, 126, 133–34, 143, 163, 199\nFuch, Erika, 141–42",
+          "value": "Fairbanks, Douglas, 66\nFan mail, xiii, xxviii, 27, 36, 100, 116, 162, 169, 218\nFandom. See Recognition, attitude toward\nFirst drawing, selling of, 155–56\nFlat Butt Man, The, xix, 189\nFlintheart Glomgold, xxiv, 158–59\nFoster, Hal (Prince Valiant, Tarzan), 17, 29, 43–44, 89, 100, 126, 133–34, 143, 163, 199\nFuch, Erika, 141–42",
+          "bbox": [
+            {
+              "h": 131.18507329458842,
+              "w": 136.35082810118143,
+              "x": 457.24060746951227,
+              "y": 295.9024358517531,
+              "confidence": 0.86,
+              "end_index": 328,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 9.46,
+              "w": 79.65,
+              "x": 457.67,
+              "y": 296.01,
+              "confidence": 0.86,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 20.24,
+              "w": 129.6,
+              "x": 457.67,
+              "y": 306.79,
+              "confidence": 0.86,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 23
+            },
+            {
+              "h": 21.82,
+              "w": 120.13,
+              "x": 457.4,
+              "y": 327.82,
+              "confidence": 1.0,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 79
+            },
+            {
+              "h": 9.46,
+              "w": 111.72,
+              "x": 458.72,
+              "y": 350.95,
+              "confidence": 0.86,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 120
+            },
+            {
+              "h": 9.2,
+              "w": 97.26,
+              "x": 458.72,
+              "y": 362.0,
+              "confidence": 0.86,
+              "end_index": 181,
+              "label": "text",
+              "start_index": 154
+            },
+            {
+              "h": 9.46,
+              "w": 119.08,
+              "x": 458.98,
+              "y": 373.04,
+              "confidence": 0.86,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 183
+            },
+            {
+              "h": 31.55,
+              "w": 135.64,
+              "x": 458.98,
+              "y": 384.08,
+              "confidence": 0.86,
+              "end_index": 308,
+              "label": "text",
+              "start_index": 217
+            },
+            {
+              "h": 9.2,
+              "w": 68.87,
+              "x": 459.77,
+              "y": 417.73,
+              "confidence": 0.86,
+              "end_index": 328,
+              "label": "text",
+              "start_index": 310
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Gags: action, 7, 42–43; animation vs. comic book, 20, 42–43; climax, 92–93, 127; visual vs. dialogue, 22, 101, 128",
+          "value": "Gags: action, 7, 42–43; animation vs. comic book, 20, 42–43; climax, 92–93, 127; visual vs. dialogue, 22, 101, 128",
+          "bbox": [
+            {
+              "h": 43.283746774961884,
+              "w": 136.28365672637202,
+              "x": 459.6225615234375,
+              "y": 441.6670243330794,
+              "confidence": 0.87,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Geppi, Steve, 159\nGladstone Gander, xxiii, xxiv, 13, 48, 71, 79, 93–94, 108, 112–13, 138, 141, 178\nGladstone Publishing, xxx\nGneezles, 95",
+          "value": "Geppi, Steve, 159\nGladstone Gander, xxiii, xxiv, 13, 48, 71, 79, 93–94, 108, 112–13, 138, 141, 178\nGladstone Publishing, xxx\nGneezles, 95",
+          "bbox": [
+            {
+              "h": 67.04,
+              "w": 128.02,
+              "x": 460.03,
+              "y": 485.55,
+              "confidence": 1.0,
+              "end_index": 136,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\"Good Scouts\" (animated cartoon, released in 1938), 156\nGoofy, 143, 177\nGottfredson, Floyd, xiii, xvii, 66, 70–71, 92, 119, 132–33, 198–204\nGyro Gearloose, xxiv, 13–14, 48, 71, 96–97, 112, 138, 141, 158, 162, 176–77, 200",
+          "value": "\"Good Scouts\" (animated cartoon, released in 1938), 156\nGoofy, 143, 177\nGottfredson, Floyd, xiii, xvii, 66, 70–71, 92, 119, 132–33, 198–204\nGyro Gearloose, xxiv, 13–14, 48, 71, 96–97, 112, 138, 141, 158, 162, 176–77, 200",
+          "bbox": [
+            {
+              "h": 85.69409249535539,
+              "w": 136.18527896341465,
+              "x": 601.4563470131479,
+              "y": 47.71162176126621,
+              "confidence": 0.82,
+              "end_index": 219,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 19.19,
+              "w": 130.39,
+              "x": 601.98,
+              "y": 48.11,
+              "confidence": 1.0,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 8.94,
+              "w": 57.83,
+              "x": 601.98,
+              "y": 69.14,
+              "confidence": 0.82,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 56
+            },
+            {
+              "h": 52.31,
+              "w": 134.85,
+              "x": 601.98,
+              "y": 80.71,
+              "confidence": 1.0,
+              "end_index": 219,
+              "label": "text",
+              "start_index": 72
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Hamilton, Bruce, xxix\nHannah, Jack, 6, 52, 158, 175, 176\nHelnwein, Gottfried, xxxi\nHogarth, Burne (*Tarzan*), 133\n*How to Read Donald Duck* (Ariel Dorfman and Armand Mattelart), 73, 213\nHuey, Dewey, and Louie. See Nephews, Donald's (Huey, Dewey, and Louie)\nHuman characters. See Non-animal characters",
+          "value": "Hamilton, Bruce, xxix\nHannah, Jack, 6, 52, 158, 175, 176\nHelnwein, Gottfried, xxxi\nHogarth, Burne (Tarzan), 133\nHow to Read Donald Duck (Ariel Dorfman and Armand Mattelart), 73, 213\nHuey, Dewey, and Louie. See Nephews, Donald's (Huey, Dewey, and Louie)\nHuman characters. See Non-animal characters",
+          "bbox": [
+            {
+              "h": 107.2597657238472,
+              "w": 137.1365478515625,
+              "x": 602.6979405011433,
+              "y": 146.43310936666353,
+              "confidence": 0.84,
+              "end_index": 299,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 53.37,
+              "w": 136.7,
+              "x": 601.98,
+              "y": 146.17,
+              "confidence": 1.0,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 20.77,
+              "w": 136.17,
+              "x": 602.77,
+              "y": 200.85,
+              "confidence": 1.0,
+              "end_index": 221,
+              "label": "text",
+              "start_index": 151
+            },
+            {
+              "h": 32.07,
+              "w": 131.17,
+              "x": 604.09,
+              "y": 221.61,
+              "confidence": 1.0,
+              "end_index": 299,
+              "label": "text",
+              "start_index": 223
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "In-betweening, xx, 4, 19, 37, 41–43, 50, 81–82, 92, 174, 202\nInfluences, 17, 24, 29, 43–44, 66–67, 70–71, 89, 91–92, 100, 126, 132–34, 142–43, 163, 198, 199, 200–01, 212–13",
+          "value": "In-betweening, xx, 4, 19, 37, 41–43, 50, 81–82, 92, 174, 202\nInfluences, 17, 24, 29, 43–44, 66–67, 70–71, 89, 91–92, 100, 126, 132–34, 142–43, 163, 198, 199, 200–01, 212–13",
+          "bbox": [
+            {
+              "h": 63.88837968035447,
+              "w": 136.7298129049162,
+              "x": 604.6255235327745,
+              "y": 266.7146680949886,
+              "confidence": 0.86,
+              "end_index": 171,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Insincerity, in drawing style, 207\nInspiration, from adversity, xxii, 182–84, 217–18",
+          "value": "Insincerity, in drawing style, 207\nInspiration, from adversity, xxii, 182–84, 217–18",
+          "bbox": [
+            {
+              "h": 31.70976122332317,
+              "w": 128.90216880240104,
+              "x": 606.0209449790397,
+              "y": 332.16337600038116,
+              "confidence": 0.84,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Isolation, of the artist, 121, 130, 176",
+          "value": "Isolation, of the artist, 121, 130, 176",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 126.44287500000007,
+              "x": 606.452625,
+              "y": 365.1506225165563,
+              "confidence": 0.81,
+              "end_index": 38,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Jippes, Daan, 115, 168, 178\nJunior Woodchucks, 14, 23, 159, 172",
+          "value": "Jippes, Daan, 115, 168, 178\nJunior Woodchucks, 14, 23, 159, 172",
+          "bbox": [
+            {
+              "h": 20.04330547351368,
+              "w": 128.98416696836898,
+              "x": 606.6731234279727,
+              "y": 387.32847954935227,
+              "confidence": 0.9,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Karp, Bob, 158, 176\nKing, Jack, 38, 43, 51, 202\nKunzle, David, 73, 75–76, 213\nKurtz, Gary, xxix",
+          "value": "Karp, Bob, 158, 176\nKing, Jack, 38, 43, 51, 202\nKunzle, David, 73, 75–76, 213\nKurtz, Gary, xxix",
+          "bbox": [
+            {
+              "h": 42.96616411966463,
+              "w": 106.0417613614711,
+              "x": 606.8117739615092,
+              "y": 420.5051060213416,
+              "confidence": 0.93,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Landon school of cartooning, 58, 135\nLaurel and Hardy, 125\nLithographs, 118, 139, 154, 168, 179\nLittle Golden Books, 15\n*Little Lulu*, 45\nLloyd, Harold, 66\nLucas, George, xii, xxvi, 138",
+          "value": "Landon school of cartooning, 58, 135\nLaurel and Hardy, 125\nLithographs, 118, 139, 154, 168, 179\nLittle Golden Books, 15\nLittle Lulu, 45\nLloyd, Harold, 66\nLucas, George, xii, xxvi, 138",
+          "bbox": [
+            {
+              "h": 76.84698944359761,
+              "w": 130.078544445503,
+              "x": 607.5396892625763,
+              "y": 475.24441409108243,
+              "confidence": 0.9,
+              "end_index": 184,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 19.98,
+              "w": 128.81,
+              "x": 607.24,
+              "y": 475.3,
+              "confidence": 1.0,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.78,
+              "w": 129.86,
+              "x": 607.24,
+              "y": 496.07,
+              "confidence": 0.9,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 59
+            },
+            {
+              "h": 8.68,
+              "w": 79.91,
+              "x": 608.03,
+              "y": 508.69,
+              "confidence": 0.9,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 96
+            },
+            {
+              "h": 10.52,
+              "w": 52.05,
+              "x": 606.19,
+              "y": 518.41,
+              "confidence": 0.9,
+              "end_index": 136,
+              "label": "text",
+              "start_index": 120
+            },
+            {
+              "h": 9.73,
+              "w": 60.46,
+              "x": 608.03,
+              "y": 530.77,
+              "confidence": 0.9,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 138
+            },
+            {
+              "h": 9.73,
+              "w": 97.26,
+              "x": 608.03,
+              "y": 541.55,
+              "confidence": 1.0,
+              "end_index": 184,
+              "label": "text",
+              "start_index": 156
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "202 CARL BARKS: CONVERSATIONS",
+              "value": "202 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.989721854304634,
+                  "w": 16.29825000000001,
+                  "x": 123.55125000000002,
+                  "y": 36.27846357615894,
+                  "confidence": 0.92,
+                  "end_index": 2,
+                  "label": "header",
+                  "start_index": 0
+                },
+                {
+                  "h": 9.155617741877863,
+                  "w": 101.04693599942836,
+                  "x": 148.46166168064028,
+                  "y": 36.98643941144246,
+                  "confidence": 0.92,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 4
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "202 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.99,
+              "w": 125.96,
+              "x": 123.55,
+              "y": 36.28,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** When did you come to know Gottfredson personally? Was there a memorable first encounter, or was it the case that in the studio everybody simply knew everybody else?",
+          "value": "Q: When did you come to know Gottfredson personally? Was there a memorable first encounter, or was it the case that in the studio everybody simply knew everybody else?",
+          "bbox": [
+            {
+              "h": 35.75268874172187,
+              "w": 282.590625,
+              "x": 122.76262500000001,
+              "y": 60.4641059602649,
+              "confidence": 0.96,
+              "end_index": 170,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I didn't become acquainted with Gottfredson until I met him at a dinner in 1982. We had never met during the seven years I worked at the Disney studio. People in the story department had few contacts with people in comic strips or the animation department or camera department. We only knew the people on our own little unit. Sure, we had a nodding acquaintance with personnel in other units of the story department where we had work problems that were common to us both.",
+          "value": "CB: I didn't become acquainted with Gottfredson until I met him at a dinner in 1982. We had never met during the seven years I worked at the Disney studio. People in the story department had few contacts with people in comic strips or the animation department or camera department. We only knew the people on our own little unit. Sure, we had a nodding acquaintance with personnel in other units of the story department where we had work problems that were common to us both.",
+          "bbox": [
+            {
+              "h": 89.03585926543445,
+              "w": 283.4991165920351,
+              "x": 122.71523937690552,
+              "y": 99.14393689024394,
+              "confidence": 0.97,
+              "end_index": 478,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Could you tell us something about the atmosphere of the Hyperion Avenue studios when you joined Disney in 1935?",
+          "value": "Q: Could you tell us something about the atmosphere of the Hyperion Avenue studios when you joined Disney in 1935?",
+          "bbox": [
+            {
+              "h": 23.97635587128432,
+              "w": 272.1317013266959,
+              "x": 122.04668133098325,
+              "y": 196.3198682783918,
+              "confidence": 0.95,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** The atmosphere at the Disney studio on Hyperion Avenue in 1935 was very upbeat for the people who had been around for a few years. Animation had finally been perfected and its great rewards were about to pay off to those who had developed it. But for us raw beginners in the tryout groups trying to learn enough to get a permanent job, it was a place of nervous apprehension.",
+          "value": "CB: The atmosphere at the Disney studio on Hyperion Avenue in 1935 was very upbeat for the people who had been around for a few years. Animation had finally been perfected and its great rewards were about to pay off to those who had developed it. But for us raw beginners in the tryout groups trying to learn enough to get a permanent job, it was a place of nervous apprehension.",
+          "bbox": [
+            {
+              "h": 75.56940799590325,
+              "w": 283.358036668731,
+              "x": 121.64946358136434,
+              "y": 222.34950220798405,
+              "confidence": 0.97,
+              "end_index": 382,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Tell us about your getting a job at Disney. Your job interview: who did you meet the first time you went there? Who hired you? How soon did you get to know Walt Disney in person?",
+          "value": "Q: Tell us about your getting a job at Disney. Your job interview: who did you meet the first time you went there? Who hired you? How soon did you get to know Walt Disney in person?",
+          "bbox": [
+            {
+              "h": 37.00524014862804,
+              "w": 283.58222927186546,
+              "x": 120.99657134265436,
+              "y": 306.0656481230946,
+              "confidence": 0.97,
+              "end_index": 184,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** The job at Disney's came about as a result of my reading in a Minneapolis newspaper that Disney was hiring artists who needed only to send the studio samples of their work. I whipped up a couple of professional-looking groupings of Disney characters done in pen and ink and mailed them to Disney along with a brief personal résumé of my age, experience, etc. That evidently sufficed as a job interview. I received a letter back from Disney's employment boss, George Drake, telling me to report at the Disney gate at 8:00 a.m. on a certain day in November. If I passed the first inspection, I would be taken on for a one-month tryout at $15 a week. George Drake was the hiring officer. I passed the one-month tryout and was hired to work as an in-betweener for $20 a week, two dollars a week more than other beginners were paid. I think they were already eyeing me as a possible storyman. I didn't meet Walt Disney until a few months later when one of my gags, which us in-betweeners were encouraged to submit to the story department, caught Walt's attention. Walt created a special story unit to do only Donald Duck cartoons. Jack King was hired for story and animation director, and I was made the whole unit's storyman.",
+          "value": "CB: The job at Disney's came about as a result of my reading in a Minneapolis newspaper that Disney was hiring artists who needed only to send the studio samples of their work. I whipped up a couple of professional-looking groupings of Disney characters done in pen and ink and mailed them to Disney along with a brief personal résumé of my age, experience, etc. That evidently sufficed as a job interview. I received a letter back from Disney's employment boss, George Drake, telling me to report at the Disney gate at 8:00 a.m. on a certain day in November. If I passed the first inspection, I would be taken on for a one-month tryout at $15 a week. George Drake was the hiring officer. I passed the one-month tryout and was hired to work as an in-betweener for $20 a week, two dollars a week more than other beginners were paid. I think they were already eyeing me as a possible storyman. I didn't meet Walt Disney until a few months later when one of my gags, which us in-betweeners were encouraged to submit to the story department, caught Walt's attention. Walt created a special story unit to do only Donald Duck cartoons. Jack King was hired for story and animation director, and I was made the whole unit's storyman.",
+          "bbox": [
+            {
+              "h": 219.03796642054115,
+              "w": 284.60887185594515,
+              "x": 119.93293691644438,
+              "y": 344.9437288919589,
+              "confidence": 0.97,
+              "end_index": 1228,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nLEONARDO GORI AND FRANCESCO STAJANO / 1998 203\n\\</page_header>",
+          "value": "<page_header>\nLEONARDO GORI AND FRANCESCO STAJANO / 1998 203\n</page_header>",
+          "bbox": [
+            {
+              "h": 14.2,
+              "w": 199.0,
+              "x": 558.08,
+              "y": 32.86,
+              "confidence": 1.0,
+              "end_index": 60,
+              "label": "header",
+              "start_index": 16
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** How closely did he interact with your work? How easy was it to get good ideas across to him? How effective was he at communicating his visions to you? What do you think were Walt Disney's best qualities?",
+          "value": "Q: How closely did he interact with your work? How easy was it to get good ideas across to him? How effective was he at communicating his visions to you? What do you think were Walt Disney's best qualities?",
+          "bbox": [
+            {
+              "h": 38.38,
+              "w": 274.18,
+              "x": 475.54,
+              "y": 57.84,
+              "confidence": 1.0,
+              "end_index": 209,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Walt did not have time to interact closely with work I was doing. He expected gagmen like me to create and develop situations from our own minds. He was very clear and analytical in his critiques of our efforts. I think his best qualities showed in choice of projects. Of many ideas submitted to him by his \"imagineers,\" he could very quickly choose the ones with the best potentials.",
+          "value": "CB: Walt did not have time to interact closely with work I was doing. He expected gagmen like me to create and develop situations from our own minds. He was very clear and analytical in his critiques of our efforts. I think his best qualities showed in choice of projects. Of many ideas submitted to him by his \"imagineers,\" he could very quickly choose the ones with the best potentials.",
+          "bbox": [
+            {
+              "h": 77.29,
+              "w": 284.96,
+              "x": 474.75,
+              "y": 96.48,
+              "confidence": 1.0,
+              "end_index": 391,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** To us, the magic of the comics comes primarily from the great authors he had the good fortune to hire, such as you and Gottfredson; but on the other hand your characters would have never lived without him. What would you say was Walt's most important influence in your comics, and possibly in Gottfredson's? Could your characters have been the same if you had been under another \"leader\"?",
+          "value": "Q: To us, the magic of the comics comes primarily from the great authors he had the good fortune to hire, such as you and Gottfredson; but on the other hand your characters would have never lived without him. What would you say was Walt's most important influence in your comics, and possibly in Gottfredson's? Could your characters have been the same if you had been under another \"leader\"?",
+          "bbox": [
+            {
+              "h": 77.67065851514863,
+              "w": 283.85380749809457,
+              "x": 477.0546102324696,
+              "y": 180.94075889148252,
+              "confidence": 0.97,
+              "end_index": 394,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** You are right about the many great authors who created masterpieces with Walt's stable of funny animal characters. Those guys would have been failures if Walt hadn't already given life to those characters. His most important influence on my comic book characters and Gottfredson's comic strips was that he trusted us to do work that would meet the Disney standard. We never had to fear that he was going to look over our shoulder. I doubt that I could ever have written such popular stories for the ducks if Lantz or Schlesinger had been my overall commander.",
+          "value": "CB: You are right about the many great authors who created masterpieces with Walt's stable of funny animal characters. Those guys would have been failures if Walt hadn't already given life to those characters. His most important influence on my comic book characters and Gottfredson's comic strips was that he trusted us to do work that would meet the Disney standard. We never had to fear that he was going to look over our shoulder. I doubt that I could ever have written such popular stories for the ducks if Lantz or Schlesinger had been my overall commander.",
+          "bbox": [
+            {
+              "h": 102.5706526772104,
+              "w": 284.77381990758386,
+              "x": 478.3696364091083,
+              "y": 259.05760029535065,
+              "confidence": 0.97,
+              "end_index": 566,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** The syndicated strips were very popular in the States during the thirties, right? Al Capp was proposed for the Nobel Prize; Caniff had 50 million readers. . . . So why was Walt Disney not that hot about those strips? Because he wasn't, was he?",
+          "value": "Q: The syndicated strips were very popular in the States during the thirties, right? Al Capp was proposed for the Nobel Prize; Caniff had 50 million readers. . . . So why was Walt Disney not that hot about those strips? Because he wasn't, was he?",
+          "bbox": [
+            {
+              "h": 50.688134794207286,
+              "w": 283.11627481897864,
+              "x": 480.2668145007623,
+              "y": 368.4663673971038,
+              "confidence": 0.97,
+              "end_index": 249,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I know nothing about Walt's opinion of Al Capp's and Caniff's strips.",
+          "value": "CB: I know nothing about Walt's opinion of Al Capp's and Caniff's strips.",
+          "bbox": [
+            {
+              "h": 12.810845364900926,
+              "w": 282.27500469226374,
+              "x": 481.0101576791159,
+              "y": 419.83186057545737,
+              "confidence": 0.94,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** What about your own children and grandchildren? Did they grow up reading comics, or did they feel they had too much of that in the family already? If they did read comics, could you remember if they read any Disney and in particular any Gottfredson?",
+          "value": "Q: What about your own children and grandchildren? Did they grow up reading comics, or did they feel they had too much of that in the family already? If they did read comics, could you remember if they read any Disney and in particular any Gottfredson?",
+          "bbox": [
+            {
+              "h": 51.09127365663112,
+              "w": 279.79006454839936,
+              "x": 481.09966942168455,
+              "y": 439.8173367187501,
+              "confidence": 0.96,
+              "end_index": 255,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I know my children and grandchildren were interested in comics. They would sometimes send me ideas for possible duck stories. Yes, I've heard them mention the Mickey Mouse strips.",
+          "value": "CB: I know my children and grandchildren were interested in comics. They would sometimes send me ideas for possible duck stories. Yes, I've heard them mention the Mickey Mouse strips.",
+          "bbox": [
+            {
+              "h": 38.358361380525906,
+              "w": 283.6012010527821,
+              "x": 481.58149004382625,
+              "y": 491.6329838986282,
+              "confidence": 0.96,
+              "end_index": 186,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Did Gottfredson's childhood accident with a shotgun firing on his hand have a great impact on his drawing technique? Did he use any specially",
+          "value": "Q: Did Gottfredson's childhood accident with a shotgun firing on his hand have a great impact on his drawing technique? Did he use any specially",
+          "bbox": [
+            {
+              "h": 25.86456682545738,
+              "w": 283.3174383098323,
+              "x": 482.39125323932933,
+              "y": 536.909059241616,
+              "confidence": 0.96,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "202, 203"
+    }
+  ]
+}
