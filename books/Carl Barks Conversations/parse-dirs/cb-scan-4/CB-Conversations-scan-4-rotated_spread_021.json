@@ -1,0 +1,411 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 196 CARL BARKS: CONVERSATIONS",
+          "value": "196 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 13.38681184320218,
+              "w": 103.83657671970275,
+              "x": 152.05913711175688,
+              "y": 27.129002826076604,
+              "confidence": 0.88,
+              "end_index": 30,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Oh?",
+          "value": "DA: Oh?",
+          "bbox": [
+            {
+              "h": 9.964740839962849,
+              "w": 35.57838810022867,
+              "x": 129.77934130263912,
+              "y": 50.77971415122429,
+              "confidence": 0.82,
+              "end_index": 10,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** And this guy wanted to have something added—it was a helicopter up above with Flintheart Glomgold in it. I can't imagine what that purpose was, but it's something this guy imagines is worth a lot of money. (Laughs)",
+          "value": "CB: And this guy wanted to have something added—it was a helicopter up above with Flintheart Glomgold in it. I can't imagine what that purpose was, but it's something this guy imagines is worth a lot of money. (Laughs)",
+          "bbox": [
+            {
+              "h": 47.03976000000001,
+              "w": 281.802,
+              "x": 128.7036,
+              "y": 63.71208000000001,
+              "confidence": 0.88,
+              "end_index": 221,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## How He'd Like to Be Remembered",
+          "value": "How He'd Like to Be Remembered",
+          "bbox": [
+            {
+              "h": 16.66527127477136,
+              "w": 182.39392532869667,
+              "x": 126.77224515291542,
+              "y": 125.0539410465892,
+              "confidence": 0.96,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Is there anything missing from all the things that have been said about your work over the years?",
+          "value": "DA: Is there anything missing from all the things that have been said about your work over the years?",
+          "bbox": [
+            {
+              "h": 26.79480000000001,
+              "w": 265.8192,
+              "x": 125.3388,
+              "y": 147.07368000000002,
+              "confidence": 0.9,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I know that years ago when I was subscribing to a magazine called the *Writer's Magazine*—I believe it was mostly about how to write stories for western magazines and love story magazines and that sort of stuff—and one of those guys said the thing you have to get into your stories is a feeling of *sincerity*, that you are really sincerely believing in your characters, and when you present them as one type of character you remain consistent. You never have him do something that is contrary to the character you built for him. The public gets a feeling that guy is a sincere, real person, and my duck stories were kind of to that point. Whenever I invented a villain, he was a stinking villain. He even looked it. All those pig-faced villains, and all those guys were mean all the way through.",
+          "value": "CB: Well, I know that years ago when I was subscribing to a magazine called the Writer's Magazine—I believe it was mostly about how to write stories for western magazines and love story magazines and that sort of stuff—and one of those guys said the thing you have to get into your stories is a feeling of sincerity, that you are really sincerely believing in your characters, and when you present them as one type of character you remain consistent. You never have him do something that is contrary to the character you built for him. The public gets a feeling that guy is a sincere, real person, and my duck stories were kind of to that point. Whenever I invented a villain, he was a stinking villain. He even looked it. All those pig-faced villains, and all those guys were mean all the way through.",
+          "bbox": [
+            {
+              "h": 155.40984,
+              "w": 284.3256,
+              "x": 121.974,
+              "y": 172.6776,
+              "confidence": 0.91,
+              "end_index": 809,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**LA:** If you were writing an autobiography or a book on your work, either one, what would you want to have covered? What would you want to be included? What do you want the future generations to know about your work or your life?",
+          "value": "LA: If you were writing an autobiography or a book on your work, either one, what would you want to have covered? What would you want to be included? What do you want the future generations to know about your work or your life?",
+          "bbox": [
+            {
+              "h": 51.28248982945886,
+              "w": 283.1721507836319,
+              "x": 118.29788246713035,
+              "y": 337.28852255144824,
+              "confidence": 0.92,
+              "end_index": 230,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I guess it would be just like what I was saying to Don. I worked hard, and I was lucky enough to have enough inspiration that I didn't have to produce myself, but it would just produce itself. I was able to do these things a lot easier than if I had to do it all with heavy thinking. So much of the stuff just came as a gift to me.",
+          "value": "CB: I guess it would be just like what I was saying to Don. I worked hard, and I was lucky enough to have enough inspiration that I didn't have to produce myself, but it would just produce itself. I was able to do these things a lot easier than if I had to do it all with heavy thinking. So much of the stuff just came as a gift to me.",
+          "bbox": [
+            {
+              "h": 67.90297971608234,
+              "w": 283.52069307950654,
+              "x": 115.73321075290589,
+              "y": 389.68799422637204,
+              "confidence": 0.93,
+              "end_index": 338,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**LA:** I'm sure glad you found your outlet, your area.",
+          "value": "LA: I'm sure glad you found your outlet, your area.",
+          "bbox": [
+            {
+              "h": 98.84304000000002,
+              "w": 284.3256,
+              "x": 112.72080000000001,
+              "y": 462.65688000000006,
+              "confidence": 0.57,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I'm sure glad that I found the thing I could do well and it was an easy kind of work. Now if I had found out that I was the best ditch digger in the world, wouldn't that have been a hell of a thing? Yeah, I was able to come up with these stories, the story plots, and draw them, a nice easy job, with the cool fan blowing on me in the summer and a nice stove to sit by in the winter. In good solid comfort and working on my own time",
+          "value": "CB: I'm sure glad that I found the thing I could do well and it was an easy kind of work. Now if I had found out that I was the best ditch digger in the world, wouldn't that have been a hell of a thing? Yeah, I was able to come up with these stories, the story plots, and draw them, a nice easy job, with the cool fan blowing on me in the summer and a nice stove to sit by in the winter. In good solid comfort and working on my own time",
+          "bbox": [
+            {
+              "h": 98.84304000000002,
+              "w": 284.3256,
+              "x": 112.72080000000001,
+              "y": 462.65688000000006,
+              "confidence": 0.85,
+              "end_index": 439,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# DONALD AULT AND LYNDA AULT / 1997 197",
+          "value": "DONALD AULT AND LYNDA AULT / 1997 197",
+          "bbox": [
+            {
+              "h": 11.085317074361669,
+              "w": 136.68908931974087,
+              "x": 608.7797299447409,
+              "y": 40.69341559820408,
+              "confidence": 0.94,
+              "end_index": 38,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "and I could quit at any time I wanted to and go to the icebox. Yeah, it was a perfect life.",
+          "value": "and I could quit at any time I wanted to and go to the icebox. Yeah, it was a perfect life.",
+          "bbox": [
+            {
+              "h": 23.134092715231787,
+              "w": 282.8535,
+              "x": 486.3187500000001,
+              "y": 62.56720529801325,
+              "confidence": 0.9,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** Unless you didn't have an idea . . .",
+          "value": "LA: Unless you didn't have an idea . . .",
+          "bbox": [
+            {
+              "h": 10.51549668874172,
+              "w": 149.0501250000001,
+              "x": 487.37025000000006,
+              "y": 95.1652450331126,
+              "confidence": 0.88,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, yeah, if I went two or three days without coming up with an idea I would begin to panic. Yeah, I did get to thinking, \"My god, the well's gone dry and I can't come up with another idea to save my life.\"",
+          "value": "CB: Oh, yeah, if I went two or three days without coming up with an idea I would begin to panic. Yeah, I did get to thinking, \"My god, the well's gone dry and I can't come up with another idea to save my life.\"",
+          "bbox": [
+            {
+              "h": 38.38156291390729,
+              "w": 282.5906250000001,
+              "x": 486.3187500000001,
+              "y": 107.78384105960265,
+              "confidence": 0.91,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So in other words it was always in the back of your mind that you needed to be coming up with another story.",
+          "value": "DA: So in other words it was always in the back of your mind that you needed to be coming up with another story.",
+          "bbox": [
+            {
+              "h": 26.55,
+              "w": 273.65,
+              "x": 483.69,
+              "y": 152.47,
+              "confidence": 1.0,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh sure. Yeah, that's right.",
+          "value": "CB: Oh sure. Yeah, that's right.",
+          "bbox": [
+            {
+              "h": 10.77838410596027,
+              "w": 120.39675000000005,
+              "x": 486.05587500000007,
+              "y": 179.02633112582782,
+              "confidence": 0.81,
+              "end_index": 35,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** And so, when you were in that state of panic what did you do to get another story.",
+          "value": "LA: And so, when you were in that state of panic what did you do to get another story.",
+          "bbox": [
+            {
+              "h": 24.413039999999995,
+              "w": 282.6432,
+              "x": 485.37239999999997,
+              "y": 198.28152000000003,
+              "confidence": 0.91,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Somehow, somewhere in that state of panic, why my brain would start working.",
+          "value": "CB: Somehow, somewhere in that state of panic, why my brain would start working.",
+          "bbox": [
+            {
+              "h": 24.413039999999995,
+              "w": 271.70759999999996,
+              "x": 485.37239999999997,
+              "y": 224.48088,
+              "confidence": 0.92,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** It would just come to you like an inspiration. Just an idea, a germ, a kernel.",
+          "value": "LA: It would just come to you like an inspiration. Just an idea, a germ, a kernel.",
+          "bbox": [
+            {
+              "h": 22.4658438381288,
+              "w": 277.5058871713034,
+              "x": 485.10595855564026,
+              "y": 256.6403449290206,
+              "confidence": 0.92,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Just a germ of an idea. I know how good it felt to me to get a story idea, just to have one that I knew that I could start in and work on and I wouldn't have to do any more frantic searching for a story plot. I'd think, well, I've got two weeks' work here. Two weeks from now I'll have to go back into it again, but for the meantime I'll enjoy myself.",
+          "value": "CB: Just a germ of an idea. I know how good it felt to me to get a story idea, just to have one that I knew that I could start in and work on and I wouldn't have to do any more frantic searching for a story plot. I'd think, well, I've got two weeks' work here. Two weeks from now I'll have to go back into it again, but for the meantime I'll enjoy myself.",
+          "bbox": [
+            {
+              "h": 64.30752000000001,
+              "w": 281.802,
+              "x": 484.5312,
+              "y": 282.834,
+              "confidence": 0.92,
+              "end_index": 358,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** I'm constantly amazed that you don't run out of ideas. Does that amaze you?",
+          "value": "DA: I'm constantly amazed that you don't run out of ideas. Does that amaze you?",
+          "bbox": [
+            {
+              "h": 23.134092715231702,
+              "w": 271.024125,
+              "x": 482.90137500000003,
+              "y": 353.32068874172194,
+              "confidence": 0.91,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, I guess so. When I think of the hundreds of stories I wrote, the hundreds of painting ideas, cover, magazine covers, all of those gags that I've done in my lifetime, it's amazing that I ever did them.",
+          "value": "CB: Well, I guess so. When I think of the hundreds of stories I wrote, the hundreds of painting ideas, cover, magazine covers, all of those gags that I've done in my lifetime, it's amazing that I ever did them.",
+          "bbox": [
+            {
+              "h": 38.64853626619664,
+              "w": 283.0131885480183,
+              "x": 483.7427453077363,
+              "y": 379.4383038824315,
+              "confidence": 0.93,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

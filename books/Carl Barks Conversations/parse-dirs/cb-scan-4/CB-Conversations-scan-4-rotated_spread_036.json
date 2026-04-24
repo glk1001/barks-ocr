@@ -1,0 +1,195 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 226 CARL BARKs: CONVERSAtIoNS",
+          "value": "226 CARL BARKs: CONVERSAtIoNS",
+          "bbox": [
+            {
+              "h": 10.848404295981803,
+              "w": 125.52068365329652,
+              "x": 84.7373154535061,
+              "y": 28.908231996415306,
+              "confidence": 0.84,
+              "end_index": 30,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well! \\[Whistle] I don't have to put that in the family trust. That kind of takes the pressure off for a little while.",
+          "value": "CB: Well! [Whistle] I don't have to put that in the family trust. That kind of takes the pressure off for a little while.",
+          "bbox": [
+            {
+              "h": 22.08,
+              "w": 277.07,
+              "x": 84.91,
+              "y": 53.1,
+              "confidence": 1.0,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\[Laughing about opening the letter]",
+          "value": "[Laughing about opening the letter]",
+          "bbox": [
+            {
+              "h": 9.989721854304634,
+              "w": 138.00937500000003,
+              "x": 96.73800000000001,
+              "y": 79.65488741721856,
+              "confidence": 0.5,
+              "end_index": 35,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Why don't you just go to sleep for a while? Let me just move this stuff.",
+          "value": "DA: Why don't you just go to sleep for a while? Let me just move this stuff.",
+          "bbox": [
+            {
+              "h": 22.608317880794687,
+              "w": 272.07562500000006,
+              "x": 83.59425000000002,
+              "y": 99.37144370860929,
+              "confidence": 0.81,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# Notes on the Interviewers",
+          "value": "Notes on the Interviewers",
+          "bbox": [
+            {
+              "h": 23.649448192168435,
+              "w": 228.37836656821648,
+              "x": 484.45984105849857,
+              "y": 189.37662573361285,
+              "confidence": 0.94,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**Thomas Andrae** teaches in the cinema department at San Francisco State University. He is cofounder and senior editor of the journal *Discourse*, a former editor of the *Carl Barks Library*, and author of a forthcoming study of Barks's work, *Fables of Desire*.",
+          "value": "Thomas Andrae teaches in the cinema department at San Francisco State University. He is cofounder and senior editor of the journal Discourse, a former editor of the Carl Barks Library, and author of a forthcoming study of Barks's work, Fables of Desire.",
+          "bbox": [
+            {
+              "h": 57.21152080078127,
+              "w": 285.2324486232851,
+              "x": 459.5646068025915,
+              "y": 254.5076800709795,
+              "confidence": 0.98,
+              "end_index": 262,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Lynda Ault** has a background in comparative literature and has been an award-winning professional photographer as well as a medical photographer. She is currently a realtor in Gainesville, Florida.",
+          "value": "Lynda Ault has a background in comparative literature and has been an award-winning professional photographer as well as a medical photographer. She is currently a realtor in Gainesville, Florida.",
+          "bbox": [
+            {
+              "h": 43.759925747904,
+              "w": 282.47251157583844,
+              "x": 461.43719045350616,
+              "y": 318.34383252667686,
+              "confidence": 0.97,
+              "end_index": 199,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "In the mid-1960s **J. Michael Barrier** created the magazine *Funnyworld*, in which he published articles on Barks and serially published the carefully researched Carl Barks bibliography, all of which was gathered for his first book, *Carl Barks and the Art of the Comic Book*. In 1999 his *Hollywood Cartoons: American Animation in Its Golden Age* was published by Oxford University Press.",
+          "value": "In the mid-1960s J. Michael Barrier created the magazine Funnyworld, in which he published articles on Barks and serially published the carefully researched Carl Barks bibliography, all of which was gathered for his first book, Carl Barks and the Art of the Comic Book. In 1999 his Hollywood Cartoons: American Animation in Its Golden Age was published by Oxford University Press.",
+          "bbox": [
+            {
+              "h": 82.91793451314788,
+              "w": 283.94076462461896,
+              "x": 463.91476729230186,
+              "y": 368.501930130526,
+              "confidence": 0.98,
+              "end_index": 389,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Bill Blackbeard** is founder of the San Francisco Academy of Comic Art, co-editor of *The Smithsonian Collection of Newspaper Comics*, and compiler and editor of countless collections of comic strip reprint books and scholarly introductions to them. One of the most influential figures in twentieth-century comics scholarship, he is one of the people most responsible for the preservation and collection of late-nineteenth- and early-twentieth-century comics.",
+          "value": "Bill Blackbeard is founder of the San Francisco Academy of Comic Art, co-editor of The Smithsonian Collection of Newspaper Comics, and compiler and editor of countless collections of comic strip reprint books and scholarly introductions to them. One of the most influential figures in twentieth-century comics scholarship, he is one of the people most responsible for the preservation and collection of late-nineteenth- and early-twentieth-century comics.",
+          "bbox": [
+            {
+              "h": 95.59539303544206,
+              "w": 284.1620144102515,
+              "x": 466.72915272484767,
+              "y": 458.2480867425687,
+              "confidence": 0.98,
+              "end_index": 460,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "227",
+          "value": "227",
+          "bbox": [
+            {
+              "h": 10.60031833079266,
+              "w": 15.63389955697399,
+              "x": 603.1237599323553,
+              "y": 574.9954703077364,
+              "confidence": 0.92,
+              "end_index": 2,
+              "label": "footer",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "227"
+    }
+  ]
+}

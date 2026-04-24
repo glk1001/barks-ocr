@@ -1,0 +1,366 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "204 CARL BARKS: CONVERSATIONS",
+              "value": "204 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 11.58089511063739,
+                  "w": 103.41534057021725,
+                  "x": 141.73230211509147,
+                  "y": 30.200029230182935,
+                  "confidence": 0.8,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                },
+                {
+                  "h": 15.25,
+                  "w": 128.28,
+                  "x": 117.24,
+                  "y": 27.34,
+                  "confidence": 1.0,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 4
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "204 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 15.25,
+              "w": 128.28,
+              "x": 117.24,
+              "y": 27.34,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "adapted tools or methods to compensate for this? Was he significantly slower than the other artist then at Disney?",
+          "value": "adapted tools or methods to compensate for this? Was he significantly slower than the other artist then at Disney?",
+          "bbox": [
+            {
+              "h": 26.794799999999995,
+              "w": 270.8664,
+              "x": 118.6092,
+              "y": 53.589600000000004,
+              "confidence": 0.88,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I know little of Gottfredson's damaged hand. He seemed to draw slower than most artists, but he had no special tools to help his work.",
+          "value": "CB: I know little of Gottfredson's damaged hand. He seemed to draw slower than most artists, but he had no special tools to help his work.",
+          "bbox": [
+            {
+              "h": 27.985680000000002,
+              "w": 269.184,
+              "x": 118.6092,
+              "y": 79.78896000000002,
+              "confidence": 0.92,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** The Mickey Mouse daily strips are for the most part joined up in a long continuity that follows the flow of time and in which the events from one story are *carried* into the next. Did you ever want to *experiment* with something of this sort in your own duck stories?",
+          "value": "Q: The Mickey Mouse daily strips are for the most part joined up in a long continuity that follows the flow of time and in which the events from one story are carried into the next. Did you ever want to experiment with something of this sort in your own duck stories?",
+          "bbox": [
+            {
+              "h": 52.218289653201225,
+              "w": 284.19789173851944,
+              "x": 117.19049397984948,
+              "y": 111.31759593178357,
+              "confidence": 0.91,
+              "end_index": 274,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** No.",
+          "value": "CB: No.",
+          "bbox": [
+            {
+              "h": 9.201059602648996,
+              "w": 31.01925,
+              "x": 117.24225000000001,
+              "y": 162.72731125827815,
+              "confidence": 0.77,
+              "end_index": 10,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Do you think this would have taken away some freedom? That it would have meant you could no longer have the money bin destroyed in one story and back at his place in the next, or something like this?",
+          "value": "Q: Do you think this would have taken away some freedom? That it would have meant you could no longer have the money bin destroyed in one story and back at his place in the next, or something like this?",
+          "bbox": [
+            {
+              "h": 38.705904663681395,
+              "w": 281.2288894221609,
+              "x": 115.85875009527442,
+              "y": 180.48149260432552,
+              "confidence": 0.88,
+              "end_index": 205,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** The problems of segmenting continuity to one short, four pages per segment, must have been a bitch of a job for a writer; I certainly never wanted my stories to be so butchered. There was also the problem that *readers* had to wait till next day to read the next segment.",
+          "value": "CB: The problems of segmenting continuity to one short, four pages per segment, must have been a bitch of a job for a writer; I certainly never wanted my stories to be so butchered. There was also the problem that readers had to wait till next day to read the next segment.",
+          "bbox": [
+            {
+              "h": 53.46163798113565,
+              "w": 283.02901714939026,
+              "x": 114.61375045255338,
+              "y": 219.16415562118908,
+              "confidence": 0.93,
+              "end_index": 278,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** And did you ever think about writing a daily strip, be it with Disney or non-Disney characters? What do you think is the difference, from the creator's point of view, between the medium of the daily strip and the medium of the comic book?",
+          "value": "Q: And did you ever think about writing a daily strip, be it with Disney or non-Disney characters? What do you think is the difference, from the creator's point of view, between the medium of the daily strip and the medium of the comic book?",
+          "bbox": [
+            {
+              "h": 50.236402984470296,
+              "w": 284.4991986828316,
+              "x": 113.58028303639483,
+              "y": 276.34139011766393,
+              "confidence": 0.95,
+              "end_index": 244,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yes, I thought of creating a daily strip, but I preferred something more profound than funny animals. I would have gone into stuff of the *Buck Rogers* *interspatial* variety. The difference between newspaper strips and comic books is very great. Comic books, I'm sure, are much easier to write and to read.",
+          "value": "CB: Yes, I thought of creating a daily strip, but I preferred something more profound than funny animals. I would have gone into stuff of the Buck Rogers interspatial variety. The difference between newspaper strips and comic books is very great. Comic books, I'm sure, are much easier to write and to read.",
+          "bbox": [
+            {
+              "h": 62.42532599085363,
+              "w": 284.05969201957896,
+              "x": 112.80319137647678,
+              "y": 327.6394630192455,
+              "confidence": 0.95,
+              "end_index": 314,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** What do you think is Floyd Gottfredson's greatest contribution to comics in general and to Disney comics in particular? Is there anything specific that you'd like to say about him, or anything you would want people to remember him for?",
+          "value": "Q: What do you think is Floyd Gottfredson's greatest contribution to comics in general and to Disney comics in particular? Is there anything specific that you'd like to say about him, or anything you would want people to remember him for?",
+          "bbox": [
+            {
+              "h": 50.2969092701982,
+              "w": 283.5978825564501,
+              "x": 111.41871470679308,
+              "y": 397.30068838605195,
+              "confidence": 0.96,
+              "end_index": 241,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Gottfredson's greatest contribution to comics was quality. He will be remembered for making complex continuities easy to understand and read.",
+          "value": "CB: Gottfredson's greatest contribution to comics was quality. He will be remembered for making complex continuities easy to understand and read.",
+          "bbox": [
+            {
+              "h": 35.559258698551815,
+              "w": 281.63552418778585,
+              "x": 110.35169917111281,
+              "y": 449.26656418159314,
+              "confidence": 0.95,
+              "end_index": 148,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Thank you. It is a great honor to be able to interview the man we regard as the best comics author of all times, and we were very interested to hear your comments about your worthy colleague. Many thanks also to Gerry Talbot for \"being our voice\" over there and for his unfailing cooperation in arranging this all!",
+          "value": "Q: Thank you. It is a great honor to be able to interview the man we regard as the best comics author of all times, and we were very interested to hear your comments about your worthy colleague. Many thanks also to Gerry Talbot for \"being our voice\" over there and for his unfailing cooperation in arranging this all!",
+          "bbox": [
+            {
+              "h": 64.46569793254571,
+              "w": 283.149835461128,
+              "x": 109.4734121570122,
+              "y": 493.3694593416541,
+              "confidence": 0.96,
+              "end_index": 320,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## \"Those Things That Came Along in the 20th Century and Became Obsolete\": Carl Barks on the Past, Present, and Future of Comic Books",
+          "value": "\"Those Things That Came Along in the 20th Century and Became Obsolete\": Carl Barks on the Past, Present, and Future of Comic Books",
+          "bbox": [
+            {
+              "h": 95.69101986754967,
+              "w": 230.54137499999996,
+              "x": 496.83375000000007,
+              "y": 134.59835761589406,
+              "confidence": 0.85,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**DONALD AULT / 1999**",
+          "value": "DONALD AULT / 1999",
+          "bbox": [
+            {
+              "h": 14.333146639195899,
+              "w": 116.06111575838416,
+              "x": 553.8773745474467,
+              "y": 238.03188760718373,
+              "confidence": 0.79,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Unpublished interview conducted 28 April 1999, Grants Pass, Oregon. Portions of this interview appeared in altered form under the title \"From the Duck's Mouth\" in the Carl Barks memorial issue of the *Comics Journal* #227, September 2000: 59–60. Reprinted by permission of Donald Ault.",
+          "value": "Unpublished interview conducted 28 April 1999, Grants Pass, Oregon. Portions of this interview appeared in altered form under the title \"From the Duck's Mouth\" in the Carl Barks memorial issue of the Comics Journal #227, September 2000: 59–60. Reprinted by permission of Donald Ault.",
+          "bbox": [
+            {
+              "h": 86.93423999999999,
+              "w": 165.71640000000002,
+              "x": 496.308,
+              "y": 312.01056000000005,
+              "confidence": 0.94,
+              "end_index": 284,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** These \\[paintings of mine] are pictures of a fad that went by during the 20th century in which people visualized ducks and mice and pigs and so on dressing like human beings and going through a bunch of acts, living out their little story formulas. That whole fad, I think, has died. I believe that Superman and Batman are dead just like the Disney ducks are dead.",
+          "value": "CB: These [paintings of mine] are pictures of a fad that went by during the 20th century in which people visualized ducks and mice and pigs and so on dressing like human beings and going through a bunch of acts, living out their little story formulas. That whole fad, I think, has died. I believe that Superman and Batman are dead just like the Disney ducks are dead.",
+          "bbox": [
+            {
+              "h": 63.11664000000002,
+              "w": 284.32560000000007,
+              "x": 472.7544000000001,
+              "y": 406.68552000000005,
+              "confidence": 0.92,
+              "end_index": 371,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** You don't really believe that do you?",
+          "value": "DA: You don't really believe that do you?",
+          "bbox": [
+            {
+              "h": 10.25260927152317,
+              "w": 161.14237500000002,
+              "x": 472.64925000000005,
+              "y": 476.08911258278147,
+              "confidence": 0.85,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I believe it; I can't see why they would keep on going, so many new things are replacing them. If over the years, the comics had kept printing and selling to children who were learning to read, they might have lasted a longer time. But now, they're no longer printed and sold where kids can reach them. Kids nowadays go to a computer and push the mouse around and get something that substitutes for that form of entertainment. And",
+          "value": "CB: I believe it; I can't see why they would keep on going, so many new things are replacing them. If over the years, the comics had kept printing and selling to children who were learning to read, they might have lasted a longer time. But now, they're no longer printed and sold where kids can reach them. Kids nowadays go to a computer and push the mouse around and get something that substitutes for that form of entertainment. And",
+          "bbox": [
+            {
+              "h": 76.69764723704269,
+              "w": 282.844834341654,
+              "x": 472.6350743854802,
+              "y": 488.29090245331565,
+              "confidence": 0.88,
+              "end_index": 437,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "204"
+    }
+  ]
+}

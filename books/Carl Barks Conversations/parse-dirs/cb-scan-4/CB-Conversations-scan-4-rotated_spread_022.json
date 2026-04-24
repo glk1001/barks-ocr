@@ -1,0 +1,430 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "LEONARDO GORI AND FRANCESCO STAJANO / 1998 199",
+              "value": "LEONARDO GORI AND FRANCESCO STAJANO / 1998 199",
+              "bbox": [
+                {
+                  "h": 12.88,
+                  "w": 199.52,
+                  "x": 550.2,
+                  "y": 21.03,
+                  "confidence": 1.0,
+                  "end_index": 45,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "LEONARDO GORI AND FRANCESCO STAJANO / 1998 199",
+          "bbox": [
+            {
+              "h": 12.88,
+              "w": 199.52,
+              "x": 550.2,
+              "y": 21.03,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "caption": "Carl Barks: On Floyd Gottfredson Leonardo Gori and Francesco Stajano / 1998",
+          "md": "![Carl Barks: On Floyd Gottfredson Leonardo Gori and Francesco Stajano / 1998](CB-Conversations-scan-4-rotated_spread_022_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-4-rotated_spread_022_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 185.18184,
+              "w": 303.6732,
+              "x": 91.69080000000001,
+              "y": 89.316,
+              "confidence": 0.84,
+              "end_index": 100,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "md": "This interview was originally published in *Il grande Floyd Gottfredson* \\[*The Great Floyd Gottfredson*], Leonardo Gori and Francesco Stajano, Comic Art, 1998. Reprinted by permission of Leonardo Gori and Francesco Stajano.",
+          "value": "This interview was originally published in Il grande Floyd Gottfredson [The Great Floyd Gottfredson], Leonardo Gori and Francesco Stajano, Comic Art, 1998. Reprinted by permission of Leonardo Gori and Francesco Stajano.",
+          "bbox": [
+            {
+              "h": 66.70903983184071,
+              "w": 161.96789166110904,
+              "x": 129.76645551876908,
+              "y": 296.0912587199886,
+              "confidence": 0.97,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 59.94,
+              "w": 160.09,
+              "x": 165.87,
+              "y": 131.44,
+              "confidence": 1.0,
+              "end_index": 71,
+              "label": "paragraph_title",
+              "start_index": 54
+            },
+            {
+              "h": 16.82,
+              "w": 110.67,
+              "x": 190.06,
+              "y": 205.58,
+              "confidence": 1.0,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 107
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Let's first explore some comics \"roots\" that you may have in common with Gottfredson, and then if there was any more direct cross-fertilization of ideas between you two. You were born in 1901. The official consensus among comics historians places the beginning of the comics era at 1896, with *Yellow Kid*. Were comics already popular among young children when you were in grade school? Did you read any comics from the Sunday pages when you were a teenager? If so, which ones? Could you mention a few that you liked?",
+          "value": "Q: Let's first explore some comics \"roots\" that you may have in common with Gottfredson, and then if there was any more direct cross-fertilization of ideas between you two. You were born in 1901. The official consensus among comics historians places the beginning of the comics era at 1896, with Yellow Kid. Were comics already popular among young children when you were in grade school? Did you read any comics from the Sunday pages when you were a teenager? If so, which ones? Could you mention a few that you liked?",
+          "bbox": [
+            {
+              "h": 103.01112,
+              "w": 285.1668000000001,
+              "x": 105.15,
+              "y": 381.08160000000004,
+              "confidence": 0.92,
+              "end_index": 523,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** The newspaper comic strips I liked as a teenager were mostly from the San Francisco papers. I am not sure if all the titles I quote were printed that early in the century. *Happy Hooligan*, *Katzenjammer Kids*, *Bringing up Father*, *Old Doc Yak*, Winsor McCay's *Little Nemo*. World War One slowed the creation of comic strips for many of the years I was a teenager.",
+          "value": "CB: The newspaper comic strips I liked as a teenager were mostly from the San Francisco papers. I am not sure if all the titles I quote were printed that early in the century. Happy Hooligan, Katzenjammer Kids, Bringing up Father, Old Doc Yak, Winsor McCay's Little Nemo. World War One slowed the creation of comic strips for many of the years I was a teenager.",
+          "bbox": [
+            {
+              "h": 66.09384,
+              "w": 284.3256,
+              "x": 104.3088,
+              "y": 484.68816000000004,
+              "confidence": 0.9,
+              "end_index": 374,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** As far as we understand, people did not collect complete runs of comics at that time. But do you remember keeping a specific comic issue or newspaper or series of pages with a story that you particularly liked?",
+          "value": "Q: As far as we understand, people did not collect complete runs of comics at that time. But do you remember keeping a specific comic issue or newspaper or series of pages with a story that you particularly liked?",
+          "bbox": [
+            {
+              "h": 39.7,
+              "w": 281.8,
+              "x": 467.39,
+              "y": 45.74,
+              "confidence": 1.0,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I don't recall any evidence of people collecting comic strips in those early years. I kept no comics that I remember. They were too large and awkward to store.",
+          "value": "CB: I don't recall any evidence of people collecting comic strips in those early years. I kept no comics that I remember. They were too large and awkward to store.",
+          "bbox": [
+            {
+              "h": 39.95888741721855,
+              "w": 276.0187500000001,
+              "x": 467.9175000000001,
+              "y": 84.91263576158941,
+              "confidence": 0.68,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** What got you interested in comics anyway? How come you got involved in drawing instead of sticking to the usual farm jobs?",
+          "value": "Q: What got you interested in comics anyway? How come you got involved in drawing instead of sticking to the usual farm jobs?",
+          "bbox": [
+            {
+              "h": 26.02585430463577,
+              "w": 270.76125,
+              "x": 469.23187500000006,
+              "y": 130.39215894039737,
+              "confidence": 0.7,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I got interested in the creation of comics because the job appeared to pay more salary and to be easier on the muscles than farm work.",
+          "value": "CB: I got interested in the creation of comics because the job appeared to pay more salary and to be easier on the muscles than farm work.",
+          "bbox": [
+            {
+              "h": 27.87,
+              "w": 283.12,
+              "x": 468.97,
+              "y": 155.37,
+              "confidence": 1.0,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 3
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** And what happened when you DID get your first cartoonist salary? We heard that Gottfredson was hired at $18/week. Was this a great disappointment? What kept you in comics then?",
+          "value": "Q: And what happened when you DID get your first cartoonist salary? We heard that Gottfredson was hired at $18/week. Was this a great disappointment? What kept you in comics then?",
+          "bbox": [
+            {
+              "h": 39.43311258278146,
+              "w": 283.90500000000003,
+              "x": 467.9175000000001,
+              "y": 188.49027814569538,
+              "confidence": 0.81,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I did not get directly into comics. At the Disney studio I was inducted into story script creation for the animated Duck cartoons. I had no time to even wonder if I would prefer working in Gottfredson's type of comic strip production.",
+          "value": "CB: I did not get directly into comics. At the Disney studio I was inducted into story script creation for the animated Duck cartoons. I had no time to even wonder if I would prefer working in Gottfredson's type of comic strip production.",
+          "bbox": [
+            {
+              "h": 53.58959999999999,
+              "w": 285.1668,
+              "x": 471.07200000000006,
+              "y": 227.45808000000002,
+              "confidence": 0.88,
+              "end_index": 241,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Putting comics aside for a moment: who were your favorite authors of written novels? Jack London? Fenimore Cooper? Mark Twain?",
+          "value": "Q: Putting comics aside for a moment: who were your favorite authors of written novels? Jack London? Fenimore Cooper? Mark Twain?",
+          "bbox": [
+            {
+              "h": 27.390240000000006,
+              "w": 284.3256,
+              "x": 471.9132000000001,
+              "y": 285.21576,
+              "confidence": 0.84,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I had little access to books in my early years and little time to read them. I read very little from the authors of the great classics. Fenimore Cooper is my favorite.",
+          "value": "CB: I had little access to books in my early years and little time to read them. I read very little from the authors of the great classics. Fenimore Cooper is my favorite.",
+          "bbox": [
+            {
+              "h": 39.43311258278146,
+              "w": 270.7612500000001,
+              "x": 472.1235000000001,
+              "y": 311.52158940397356,
+              "confidence": 0.84,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** In the late twenties and early thirties you were selling your own cartoons to the *Calgary Eye-Opener*. And were you still also a reader of comics at that time?",
+          "value": "Q: In the late twenties and early thirties you were selling your own cartoons to the Calgary Eye-Opener. And were you still also a reader of comics at that time?",
+          "bbox": [
+            {
+              "h": 39.29903999999999,
+              "w": 283.48440000000005,
+              "x": 473.5956,
+              "y": 357.264,
+              "confidence": 0.87,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** In the 1920s many new comic strips were introduced. I read every one that I could get my hands on.",
+          "value": "CB: In the 1920s many new comic strips were introduced. I read every one that I could get my hands on.",
+          "bbox": [
+            {
+              "h": 25.762966887417235,
+              "w": 271.5498750000001,
+              "x": 473.70075,
+              "y": 396.1713377483444,
+              "confidence": 0.89,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** The style of your artwork in that period (and also during the first few years of your duck comics) reminds us of that of *Popeye* by Elzie C. Segar; do you feel he had an influence on you?",
+          "value": "Q: The style of your artwork in that period (and also during the first few years of your duck comics) reminds us of that of Popeye by Elzie C. Segar; do you feel he had an influence on you?",
+          "bbox": [
+            {
+              "h": 41.08536000000004,
+              "w": 282.64320000000004,
+              "x": 475.27799999999996,
+              "y": 427.52592000000004,
+              "confidence": 0.89,
+              "end_index": 194,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Elzie Segar's *Popeye* and other strips had a strong influence on my art style and humor creation.",
+          "value": "CB: Elzie Segar's Popeye and other strips had a strong influence on my art style and humor creation.",
+          "bbox": [
+            {
+              "h": 26.0258543046358,
+              "w": 282.85350000000005,
+              "x": 475.278,
+              "y": 467.4138278145696,
+              "confidence": 0.88,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** In 1929 the first version of *Tarzan*, by Harold Foster, came out. Very naturalistic. In the same year, *Buck Rogers* by Nowlan and Calkins came out as well, the first science-fiction comic. Did you read those?",
+          "value": "Q: In 1929 the first version of Tarzan, by Harold Foster, came out. Very naturalistic. In the same year, Buck Rogers by Nowlan and Calkins came out as well, the first science-fiction comic. Did you read those?",
+          "bbox": [
+            {
+              "h": 38.90733774834433,
+              "w": 277.0702500000001,
+              "x": 475.540875,
+              "y": 499.7489801324504,
+              "confidence": 0.83,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I read every *Tarzan*, *Buck Rogers*, and the like that I could buy. Also",
+          "value": "CB: I read every Tarzan, Buck Rogers, and the like that I could buy. Also",
+          "bbox": [
+            {
+              "h": 13.67014569536434,
+              "w": 278.12175,
+              "x": 475.80375000000004,
+              "y": 538.6563178807947,
+              "confidence": 0.66,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "198",
+              "value": "198",
+              "bbox": [
+                {
+                  "h": 10.157468340320012,
+                  "w": 15.037897615758402,
+                  "x": 238.09342111280492,
+                  "y": 574.2680829935215,
+                  "confidence": 0.92,
+                  "end_index": 2,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "198",
+          "bbox": [
+            {
+              "h": 10.16,
+              "w": 15.04,
+              "x": 238.09,
+              "y": 574.27,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer",
+          "book_side": "left"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "198, 199"
+    }
+  ]
+}

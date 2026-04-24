@@ -1,0 +1,681 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "158 CARL BARKS: CONVERSATIONS",
+              "value": "158 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.638150271532016,
+                  "w": 125.02420529546973,
+                  "x": 101.41039900616903,
+                  "y": 39.533234604849476,
+                  "confidence": 0.82,
+                  "end_index": 28,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "158 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.64,
+              "w": 125.02,
+              "x": 101.41,
+              "y": 39.53,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** Did you work with anyone else on this one-shot?",
+          "value": "MN: Did you work with anyone else on this one-shot?",
+          "bbox": [
+            {
+              "h": 12.146787549423594,
+              "w": 210.69359244890913,
+              "x": 100.17573053127384,
+              "y": 63.655985372403784,
+              "confidence": 0.92,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I worked with two others. One was Bob Karp, who did an adaptation of a movie script, and with Jack Hannah, who shared the drawing job with me—that \"Pirate Gold\" story.",
+          "value": "CB: I worked with two others. One was Bob Karp, who did an adaptation of a movie script, and with Jack Hannah, who shared the drawing job with me—that \"Pirate Gold\" story.",
+          "bbox": [
+            {
+              "h": 37.330013245033115,
+              "w": 282.59062499999993,
+              "x": 99.629625,
+              "y": 75.97446357615895,
+              "confidence": 0.93,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** Did you split up responsibilities on the \"Pirate Gold\" story?\n**CB:** Very much so. Jack and I looked the script over and decided which pages we would like to draw. After we had drawn a few pages, we decided that I should draw all of the stuff that was involved with the ducks outside on the deck of the boat or on the island, and Jack would take care of the inside stuff.",
+          "value": "MN: Did you split up responsibilities on the \"Pirate Gold\" story?\nCB: Very much so. Jack and I looked the script over and decided which pages we would like to draw. After we had drawn a few pages, we decided that I should draw all of the stuff that was involved with the ducks outside on the deck of the boat or on the island, and Jack would take care of the inside stuff.",
+          "bbox": [
+            {
+              "h": 75.02544,
+              "w": 281.802,
+              "x": 99.2616,
+              "y": 122.0652,
+              "confidence": 0.85,
+              "end_index": 379,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.88,
+              "w": 247.89,
+              "x": 99.63,
+              "y": 122.24,
+              "confidence": 1.0,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 60.99,
+              "w": 282.06,
+              "x": 98.58,
+              "y": 135.39,
+              "confidence": 0.85,
+              "end_index": 379,
+              "label": "text",
+              "start_index": 70
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** How often did you look at each other's work?",
+          "value": "MN: How often did you look at each other's work?",
+          "bbox": [
+            {
+              "h": 12.18587375905108,
+              "w": 198.11805041801642,
+              "x": 98.42826671470084,
+              "y": 207.2434068264101,
+              "confidence": 0.92,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** We'd see each other every day, but we didn't actually see each other's work because we were working at home at night.",
+          "value": "CB: We'd see each other every day, but we didn't actually see each other's work because we were working at home at night.",
+          "bbox": [
+            {
+              "h": 24.974304635761598,
+              "w": 282.32775000000004,
+              "x": 98.05237500000001,
+              "y": 219.773880794702,
+              "confidence": 0.91,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** So this was in addition to your work at the Disney Studio?",
+          "value": "MN: So this was in addition to your work at the Disney Studio?",
+          "bbox": [
+            {
+              "h": 12.892873663776669,
+              "w": 243.71176689036304,
+              "x": 97.83887045957985,
+              "y": 253.14131588700465,
+              "confidence": 0.89,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, yeah. We were working at home nights.",
+          "value": "CB: Oh, yeah. We were working at home nights.",
+          "bbox": [
+            {
+              "h": 12.669604937595269,
+              "w": 188.3440518649962,
+              "x": 97.97065233184072,
+              "y": 266.0602677067455,
+              "confidence": 0.87,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** Did you ink all of your own work?",
+          "value": "MN: Did you ink all of your own work?",
+          "bbox": [
+            {
+              "h": 11.600063707602857,
+              "w": 151.86253185737425,
+              "x": 97.71849670112425,
+              "y": 286.0825298280298,
+              "confidence": 0.9,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, yes. So did Jack.",
+          "value": "CB: Oh, yes. So did Jack.",
+          "bbox": [
+            {
+              "h": 11.163968154535091,
+              "w": 96.02577555140054,
+              "x": 97.7837270686452,
+              "y": 299.1703425828888,
+              "confidence": 0.88,
+              "end_index": 28,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** What type of tools did you use for inking?",
+          "value": "MN: What type of tools did you use for inking?",
+          "bbox": [
+            {
+              "h": 12.406465529725601,
+              "w": 183.55352065072412,
+              "x": 97.14891750428735,
+              "y": 319.2490335080031,
+              "confidence": 0.94,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I used a 356 Esterbrook pen and a number 2 red sable watercolor brush. I know that number 3 was the brush that most of the guys used, but I always found the number 2 a little better.",
+          "value": "CB: Well, I used a 356 Esterbrook pen and a number 2 red sable watercolor brush. I know that number 3 was the brush that most of the guys used, but I always found the number 2 a little better.",
+          "bbox": [
+            {
+              "h": 37.88306881669205,
+              "w": 275.20023348775726,
+              "x": 96.6412877465225,
+              "y": 332.1329189834223,
+              "confidence": 0.93,
+              "end_index": 195,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** Did you also do the lettering?",
+          "value": "MN: Did you also do the lettering?",
+          "bbox": [
+            {
+              "h": 11.726412461890249,
+              "w": 135.4641759717988,
+              "x": 96.08146367663873,
+              "y": 377.91208467987815,
+              "confidence": 0.9,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, yes!",
+          "value": "CB: Oh, yes!",
+          "bbox": [
+            {
+              "h": 9.989721854304662,
+              "w": 49.68337500000001,
+              "x": 96.21225000000001,
+              "y": 390.9135894039735,
+              "confidence": 0.87,
+              "end_index": 15,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** Which did you like more—the inking or the lettering?",
+          "value": "MN: Which did you like more—the inking or the lettering?",
+          "bbox": [
+            {
+              "h": 12.798896570121967,
+              "w": 226.60896936928359,
+              "x": 95.77696346227135,
+              "y": 410.85161444359767,
+              "confidence": 0.92,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Uh, I liked the inking all right. I didn't like lettering. It was one of the things I never did care for.",
+          "value": "CB: Uh, I liked the inking all right. I didn't like lettering. It was one of the things I never did care for.",
+          "bbox": [
+            {
+              "h": 23.992116225228674,
+              "w": 281.69773034072506,
+              "x": 95.6320829214701,
+              "y": 423.7689707269437,
+              "confidence": 0.92,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** Does it seem to you that some of Gyro's personality is a little bit of yours also?",
+          "value": "MN: Does it seem to you that some of Gyro's personality is a little bit of yours also?",
+          "bbox": [
+            {
+              "h": 23.011144993330774,
+              "w": 279.0372855700981,
+              "x": 94.33415013159777,
+              "y": 456.9395341606327,
+              "confidence": 0.95,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I can see where he can get himself into a lot of jams with his inventions.",
+          "value": "CB: Well, I can see where he can get himself into a lot of jams with his inventions.",
+          "bbox": [
+            {
+              "h": 22.160192249428363,
+              "w": 272.8985557384957,
+              "x": 94.82580101645866,
+              "y": 483.0874327934452,
+              "confidence": 0.93,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** Are there any other characters that might reflect your personality? Let's take Magica DeSpell.",
+          "value": "MN: Are there any other characters that might reflect your personality? Let's take Magica DeSpell.",
+          "bbox": [
+            {
+              "h": 24.246231988376575,
+              "w": 276.08907081566787,
+              "x": 94.2085106082079,
+              "y": 516.1871544112043,
+              "confidence": 0.96,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Magica DeSpell was a villainess. She had mean thoughts. She was acquisitive. The same way with the Beagle Boys and Flintheart Glom-",
+          "value": "CB: Magica DeSpell was a villainess. She had mean thoughts. She was acquisitive. The same way with the Beagle Boys and Flintheart Glom-",
+          "bbox": [
+            {
+              "h": 25.694057169397844,
+              "w": 270.994246010385,
+              "x": 94.10161119712272,
+              "y": 542.3387050495429,
+              "confidence": 0.95,
+              "end_index": 138,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nMICHAEL NAIMAN / 1993 159\n\\</page_header>",
+          "value": "<page_header>\nMICHAEL NAIMAN / 1993 159\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.68,
+              "w": 114.88,
+              "x": 626.43,
+              "y": 42.59,
+              "confidence": 1.0,
+              "end_index": 39,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "159",
+          "value": "159",
+          "bbox": [
+            {
+              "h": 8.57038828839558,
+              "w": 14.572481635861273,
+              "x": 726.6334848990092,
+              "y": 42.787862927543834,
+              "confidence": 0.89,
+              "end_index": 2,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "gold—they were people I had no sympathy with, and I loved to use them in stories in order to humiliate them, frustrate them.",
+          "value": "gold—they were people I had no sympathy with, and I loved to use them in stories in order to humiliate them, frustrate them.",
+          "bbox": [
+            {
+              "h": 21.293880794701977,
+              "w": 281.01337500000005,
+              "x": 460.03125000000006,
+              "y": 67.29917880794703,
+              "confidence": 0.95,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN:** What about Uncle Scrooge?",
+          "value": "MN: What about Uncle Scrooge?",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 129.3345,
+              "x": 459.76837500000005,
+              "y": 100.42299337748346,
+              "confidence": 0.93,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, you'll notice that I gave Uncle Scrooge a redeeming personality. He can be mean up to a certain point, and then he relents and becomes a good guy.",
+          "value": "CB: Well, you'll notice that I gave Uncle Scrooge a redeeming personality. He can be mean up to a certain point, and then he relents and becomes a good guy.",
+          "bbox": [
+            {
+              "h": 38.01214771103277,
+              "w": 282.18970055259143,
+              "x": 459.85518185499245,
+              "y": 112.69952545969896,
+              "confidence": 0.94,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN:** What part did the nephews play?",
+          "value": "MN: What part did the nephews play?",
+          "bbox": [
+            {
+              "h": 11.076798682831551,
+              "w": 149.83935108612803,
+              "x": 460.2714339986662,
+              "y": 159.6815483160252,
+              "confidence": 0.93,
+              "end_index": 38,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** The nephews were mostly in there just to create situations for Donald. But they developed, too, with their Junior Woodchucks—they became characters and sort of people with a lifestyle of their own. They didn't have to have Donald help them out.",
+          "value": "CB: The nephews were mostly in there just to create situations for Donald. But they developed, too, with their Junior Woodchucks—they became characters and sort of people with a lifestyle of their own. They didn't have to have Donald help them out.",
+          "bbox": [
+            {
+              "h": 47.84550993377482,
+              "w": 283.11637500000006,
+              "x": 458.19112500000006,
+              "y": 173.76858278145698,
+              "confidence": 0.95,
+              "end_index": 251,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN:** There was often a parent/sibling conflict between Donald and the nephews. How does that reflect maybe upon today's parents and siblings?",
+          "value": "MN: There was often a parent/sibling conflict between Donald and the nephews. How does that reflect maybe upon today's parents and siblings?",
+          "bbox": [
+            {
+              "h": 24.342442832983995,
+              "w": 283.675134646532,
+              "x": 459.86509977610524,
+              "y": 232.42501316215706,
+              "confidence": 0.81,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, I see they're using it in other comic strips all the time. If you look at any of the comic strips these days, it's always the parents and the kids trying to frustrate each other.",
+          "value": "CB: Well, I see they're using it in other comic strips all the time. If you look at any of the comic strips these days, it's always the parents and the kids trying to frustrate each other.",
+          "bbox": [
+            {
+              "h": 35.48980132450333,
+              "w": 282.0648750000001,
+              "x": 459.24262500000003,
+              "y": 259.469880794702,
+              "confidence": 0.9,
+              "end_index": 191,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN:** After laboring in anonymity basically for twenty-five years during your comic book period, how do you react today to being elevated to a cult hero status?",
+          "value": "MN: After laboring in anonymity basically for twenty-five years during your comic book period, how do you react today to being elevated to a cult hero status?",
+          "bbox": [
+            {
+              "h": 34.43825165562913,
+              "w": 277.59600000000006,
+              "x": 459.24262500000003,
+              "y": 306.7896158940398,
+              "confidence": 0.95,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, it's a very humbling experience, believe me. (laughs) I don't feel I have the personality to be a cult hero.",
+          "value": "CB: Well, it's a very humbling experience, believe me. (laughs) I don't feel I have the personality to be a cult hero.",
+          "bbox": [
+            {
+              "h": 21.819655629139106,
+              "w": 282.32775000000004,
+              "x": 460.819875,
+              "y": 345.69695364238413,
+              "confidence": 0.94,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN:** What was your reaction to the accolades at the Diamond convention in Atlanta?",
+          "value": "MN: What was your reaction to the accolades at the Diamond convention in Atlanta?",
+          "bbox": [
+            {
+              "h": 23.06578325076218,
+              "w": 283.04659891863565,
+              "x": 460.9516130430641,
+              "y": 378.64369130144826,
+              "confidence": 0.95,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, I felt they owed the same kind of accolades to all the other guys there. Everybody who got up on that stage was just as much of a cult hero as I was.",
+          "value": "CB: Well, I felt they owed the same kind of accolades to all the other guys there. Everybody who got up on that stage was just as much of a cult hero as I was.",
+          "bbox": [
+            {
+              "h": 36.471160932736296,
+              "w": 283.8059209698934,
+              "x": 460.91414534108236,
+              "y": 404.99727230373486,
+              "confidence": 0.94,
+              "end_index": 162,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**MN:** There at the convention was the creation of the \"Barkster\" award. Could you tell me a little bit about this?",
+          "value": "MN: There at the convention was the creation of the \"Barkster\" award. Could you tell me a little bit about this?",
+          "bbox": [
+            {
+              "h": 22.608317880794743,
+              "w": 275.49300000000005,
+              "x": 461.34562500000004,
+              "y": 452.69213245033114,
+              "confidence": 0.95,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, that came as a surprise when Steve Geppi happened to be out here and mentioned that he was going to create a special award and name it the Barkster. He asked me to design one for him. Well, I went ahead and designed it, to try to make something simple—kind of like the Oscar that they give away in Hollywood, which is a simple thing that a man can hold in his hand—but it also had to be slightly comic and look a little bit like it was designed by a cartoonist.",
+          "value": "CB: Well, that came as a surprise when Steve Geppi happened to be out here and mentioned that he was going to create a special award and name it the Barkster. He asked me to design one for him. Well, I went ahead and designed it, to try to make something simple—kind of like the Oscar that they give away in Hollywood, which is a simple thing that a man can hold in his hand—but it also had to be slightly comic and look a little bit like it was designed by a cartoonist.",
+          "bbox": [
+            {
+              "h": 88.85594701986759,
+              "w": 284.16787500000004,
+              "x": 460.03125000000006,
+              "y": 479.243761589404,
+              "confidence": 0.95,
+              "end_index": 474,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "158, 159"
+    }
+  ]
+}

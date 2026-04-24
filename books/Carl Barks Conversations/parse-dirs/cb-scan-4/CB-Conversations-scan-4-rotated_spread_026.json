@@ -1,0 +1,401 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "206 CARL BARKS: CONVERSATIONS",
+              "value": "206 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.726834437086097,
+                  "w": 19.189874999999986,
+                  "x": 112.24762500000001,
+                  "y": 24.711417218543048,
+                  "confidence": 0.89,
+                  "end_index": 2,
+                  "label": "header",
+                  "start_index": 0
+                },
+                {
+                  "h": 10.068936014612712,
+                  "w": 101.94035034775155,
+                  "x": 136.13053003525155,
+                  "y": 26.255466594119195,
+                  "confidence": 0.89,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 4
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "206 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.61,
+              "w": 125.82,
+              "x": 112.25,
+              "y": 24.71,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "that new way of doing it will keep on varying in its manipulation of their minds, and God knows what kids will be like 50 years from now.",
+          "value": "that new way of doing it will keep on varying in its manipulation of their minds, and God knows what kids will be like 50 years from now.",
+          "bbox": [
+            {
+              "h": 26.778268470131486,
+              "w": 279.2707637016483,
+              "x": 111.66493461199506,
+              "y": 49.591398532774406,
+              "confidence": 0.94,
+              "end_index": 136,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** You think that the kinds of things that they're being entertained by could actually prevent them from understanding comics or at least being interested in them?",
+          "value": "DA: You think that the kinds of things that they're being entertained by could actually prevent them from understanding comics or at least being interested in them?",
+          "bbox": [
+            {
+              "h": 35.72640000000001,
+              "w": 279.27840000000003,
+              "x": 111.03840000000001,
+              "y": 83.95704,
+              "confidence": 0.77,
+              "end_index": 167,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, they would not be interested in that; that is something that is like the old woodcuts. Something obsolete.",
+          "value": "CB: Well, they would not be interested in that; that is something that is like the old woodcuts. Something obsolete.",
+          "bbox": [
+            {
+              "h": 25.008480000000006,
+              "w": 275.91360000000003,
+              "x": 111.03840000000001,
+              "y": 123.25608000000001,
+              "confidence": 0.9,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** If the comic book and comic strip narrative art form dies it'll be a tremendous loss to the culture.",
+          "value": "DA: If the comic book and comic strip narrative art form dies it'll be a tremendous loss to the culture.",
+          "bbox": [
+            {
+              "h": 23.222160000000002,
+              "w": 268.3428,
+              "x": 110.19720000000001,
+              "y": 157.19616000000002,
+              "confidence": 0.91,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** It's not going to die, exactly; it's just going to be replaced by a different way of putting it before people's eyes. Like the internet—where you read stuff on a monitor instead of in a book. It isn't like going to bed with a comic book where you can read it, turn the pages, slam the thing down, and pick it up later. It's giving away a tremendous amount of the convenience of reading in order to just put everything into some digital form so that some makers like Sony can make a lot more money selling stuff. . . . I don't hardly think that a way will come in which they can draw those comic book panels on the monitor screen with a mouse. It may be that they can. It may be that that's the form it will take—just make up these whole comic book pages right on the screen and draw in all the things with the mouse. It wouldn't have the spontaneity, the look of reality that you get from drawing these out with the blue pencil. . . . You get a thoroughness in the expression and all which I don't think you could ever get with a mouse and a line on the computer. I remember what Marc Davis, who was one of Disney's \"Nine Old Men,\" had to say about *The Lion King*, that they looked like stuffed lions. Yeah, his opinion of animation done with the mouse was that it never quite came up with a real expression that looked genuine, or an action that looked genuine.",
+          "value": "CB: It's not going to die, exactly; it's just going to be replaced by a different way of putting it before people's eyes. Like the internet—where you read stuff on a monitor instead of in a book. It isn't like going to bed with a comic book where you can read it, turn the pages, slam the thing down, and pick it up later. It's giving away a tremendous amount of the convenience of reading in order to just put everything into some digital form so that some makers like Sony can make a lot more money selling stuff. . . . I don't hardly think that a way will come in which they can draw those comic book panels on the monitor screen with a mouse. It may be that they can. It may be that that's the form it will take—just make up these whole comic book pages right on the screen and draw in all the things with the mouse. It wouldn't have the spontaneity, the look of reality that you get from drawing these out with the blue pencil. . . . You get a thoroughness in the expression and all which I don't think you could ever get with a mouse and a line on the computer. I remember what Marc Davis, who was one of Disney's \"Nine Old Men,\" had to say about The Lion King, that they looked like stuffed lions. Yeah, his opinion of animation done with the mouse was that it never quite came up with a real expression that looked genuine, or an action that looked genuine.",
+          "bbox": [
+            {
+              "h": 249.00965666444364,
+              "w": 284.8129531190454,
+              "x": 108.3436081662062,
+              "y": 183.10570676924547,
+              "confidence": 0.94,
+              "end_index": 1370,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Do you think that it's inherent in the medium, or maybe the artists haven't arrived yet who can make use of that medium.",
+          "value": "DA: Do you think that it's inherent in the medium, or maybe the artists haven't arrived yet who can make use of that medium.",
+          "bbox": [
+            {
+              "h": 24.64692436166163,
+              "w": 274.7562312011719,
+              "x": 106.24484081435787,
+              "y": 440.75193102610524,
+              "confidence": 0.91,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I don't think they can get it in that medium.",
+          "value": "CB: I don't think they can get it in that medium.",
+          "bbox": [
+            {
+              "h": 11.313359999999989,
+              "w": 185.06400000000002,
+              "x": 106.8324,
+              "y": 467.4204000000001,
+              "confidence": 0.79,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Do you think the actual physical contact with the page has something to do with it, that it's touchable, tangible? Because you basically needed to use that Esterbrook 356 pen on a particular kind of Strathmore paper?",
+          "value": "DA: Do you think the actual physical contact with the page has something to do with it, that it's touchable, tangible? Because you basically needed to use that Esterbrook 356 pen on a particular kind of Strathmore paper?",
+          "bbox": [
+            {
+              "h": 54.94,
+              "w": 284.17,
+              "x": 104.1,
+              "y": 487.39,
+              "confidence": 1.0,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, I found that I needed to draw from the white paper up, and draw with a blue pencil that would erase easily, and get my drawing set",
+          "value": "CB: Well, I found that I needed to draw from the white paper up, and draw with a blue pencil that would erase easily, and get my drawing set",
+          "bbox": [
+            {
+              "h": 27.86606622516547,
+              "w": 276.01875000000007,
+              "x": 105.67575000000002,
+              "y": 527.3521589403974,
+              "confidence": 0.56,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nDONALD AULT / 1999 207\n\\</page_header>",
+          "value": "<page_header>\nDONALD AULT / 1999 207\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.94,
+              "w": 101.73,
+              "x": 644.04,
+              "y": 27.34,
+              "confidence": 1.0,
+              "end_index": 36,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "nicely, with the expressions perfectly drawn out in the blue pencil, then go over them with the pen and ink.",
+          "value": "nicely, with the expressions perfectly drawn out in the blue pencil, then go over them with the pen and ink.",
+          "bbox": [
+            {
+              "h": 25.008480000000006,
+              "w": 275.07239999999996,
+              "x": 464.34240000000005,
+              "y": 51.80328,
+              "confidence": 0.81,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** And you enjoyed the inking, right? You said that the inking was a snap?",
+          "value": "DA: And you enjoyed the inking, right? You said that the inking was a snap?",
+          "bbox": [
+            {
+              "h": 23.8176,
+              "w": 272.54879999999997,
+              "x": 464.34240000000005,
+              "y": 84.55248,
+              "confidence": 0.8,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yes. I worked out the exact expressions that I wanted, the direct action, everything that went into that drawing—the direction the eyes were looking. . . . I put life into those drawings with the pencil. Then I inked them in. I just went over and inked the expressions that I got with the pencil. Yeah, that was the thing, the charm that made my artwork so popular was that I did the thinking of what the ducks were going to do—I drew it all with the pencil. I inked it all, and it was all my work from just white paper all the way up to the finished product. It gave my stuff a kind of sincerity, the stuff looked genuine.",
+          "value": "CB: Yes. I worked out the exact expressions that I wanted, the direct action, everything that went into that drawing—the direction the eyes were looking. . . . I put life into those drawings with the pencil. Then I inked them in. I just went over and inked the expressions that I got with the pencil. Yeah, that was the thing, the charm that made my artwork so popular was that I did the thinking of what the ducks were going to do—I drew it all with the pencil. I inked it all, and it was all my work from just white paper all the way up to the finished product. It gave my stuff a kind of sincerity, the stuff looked genuine.",
+          "bbox": [
+            {
+              "h": 114.91992000000002,
+              "w": 284.3256,
+              "x": 465.18360000000007,
+              "y": 110.75184000000002,
+              "confidence": 0.78,
+              "end_index": 630,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** Earlier this evening I heard you say that you thought maybe you had created a \"universe.\"",
+          "value": "DA: Earlier this evening I heard you say that you thought maybe you had created a \"universe.\"",
+          "bbox": [
+            {
+              "h": 23.656379911394815,
+              "w": 283.6830990377287,
+              "x": 466.05478417968754,
+              "y": 233.0460845679307,
+              "confidence": 0.93,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, it seems as if it was. I mean now we're beginning to read about Batman's universe, the Spiderman universe, all of those guys had their own universe, and so the ducks have their own universe.",
+          "value": "CB: Well, it seems as if it was. I mean now we're beginning to read about Batman's universe, the Spiderman universe, all of those guys had their own universe, and so the ducks have their own universe.",
+          "bbox": [
+            {
+              "h": 36.917280000000005,
+              "w": 284.32559999999995,
+              "x": 466.0248000000001,
+              "y": 259.01640000000003,
+              "confidence": 0.78,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** But on the other hand, the kind of universe that you saw Don Rosa constructing, that is, taking the consistencies among your stories and trying to explicitly construct the universe—you found that to be problematic. But you feel there's some kind of implicit universe, from your soul or whatever, which permeates what you did. But it's not something like a universe that can be laid out, or . . .",
+          "value": "DA: But on the other hand, the kind of universe that you saw Don Rosa constructing, that is, taking the consistencies among your stories and trying to explicitly construct the universe—you found that to be problematic. But you feel there's some kind of implicit universe, from your soul or whatever, which permeates what you did. But it's not something like a universe that can be laid out, or . . .",
+          "bbox": [
+            {
+              "h": 74.73822217511434,
+              "w": 284.0717513100229,
+              "x": 466.823873880526,
+              "y": 304.5333658822409,
+              "confidence": 0.94,
+              "end_index": 402,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I know what it is. Whenever I wrote the script and it was drawn by some other artist (Tony Strobl or those kind of guys), it came out looking so different—it didn't look like it belonged in the Duck universe.",
+          "value": "CB: I know what it is. Whenever I wrote the script and it was drawn by some other artist (Tony Strobl or those kind of guys), it came out looking so different—it didn't look like it belonged in the Duck universe.",
+          "bbox": [
+            {
+              "h": 35.75268874172184,
+              "w": 282.32775000000004,
+              "x": 466.0773750000001,
+              "y": 382.23830463576166,
+              "confidence": 0.93,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So you do believe that the art was intrinsic? But you yourself think when somebody else draws one of your scripts, it seemed like it somehow . . .",
+          "value": "DA: So you do believe that the art was intrinsic? But you yourself think when somebody else draws one of your scripts, it seemed like it somehow . . .",
+          "bbox": [
+            {
+              "h": 36.49395937500004,
+              "w": 275.0226000142912,
+              "x": 468.2526556068979,
+              "y": 427.34641151867385,
+              "confidence": 0.93,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** . . . didn't look as real, or I use the word \"sincere.\" You couldn't tell whether the guy who drew it was really interested in turning out a nice product or not. Well, I don't know why, but I believe that all this stuff that we're talking about now will just be something nobody will be interested in about 10–12 years down the line. They will think, \"Comic books . . . those were those things that came along in the 20th century and became obsolete.\" They won't be very much interested in who the people were",
+          "value": "CB: . . . didn't look as real, or I use the word \"sincere.\" You couldn't tell whether the guy who drew it was really interested in turning out a nice product or not. Well, I don't know why, but I believe that all this stuff that we're talking about now will just be something nobody will be interested in about 10–12 years down the line. They will think, \"Comic books . . . those were those things that came along in the 20th century and became obsolete.\" They won't be very much interested in who the people were",
+          "bbox": [
+            {
+              "h": 89.56756290491622,
+              "w": 283.71155044778965,
+              "x": 468.5740363233613,
+              "y": 466.57125553067846,
+              "confidence": 0.94,
+              "end_index": 516,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "206, 207"
+    }
+  ]
+}

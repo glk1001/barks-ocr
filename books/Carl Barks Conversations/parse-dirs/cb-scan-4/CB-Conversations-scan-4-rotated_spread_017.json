@@ -1,0 +1,783 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "88 CARL BARKS: CONVERSATIONS",
+              "value": "88 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 17.09,
+                  "w": 127.49,
+                  "x": 132.23,
+                  "y": 27.34,
+                  "confidence": 1.0,
+                  "end_index": 27,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "88 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 17.09,
+              "w": 127.49,
+              "x": 132.23,
+              "y": 27.34,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "LA: Well, early exposure to those kinds of stories can stick in your consciousness.",
+          "value": "LA: Well, early exposure to those kinds of stories can stick in your consciousness.",
+          "bbox": [
+            {
+              "h": 206.02224,
+              "w": 286.00800000000004,
+              "x": 126.18,
+              "y": 53.589600000000004,
+              "confidence": 0.75,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.3,
+              "w": 42.06,
+              "x": 121.45,
+              "y": 355.42,
+              "confidence": 1.0,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 43
+            },
+            {
+              "h": 14.72,
+              "w": 44.16,
+              "x": 130.39,
+              "y": 64.41,
+              "confidence": 1.0,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 72
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: For a short time while I was living in Santa Rosa, when I was 10, I read a few of the Horatio Alger books.",
+          "value": "CB: For a short time while I was living in Santa Rosa, when I was 10, I read a few of the Horatio Alger books.",
+          "bbox": [
+            {
+              "h": 206.02224,
+              "w": 286.00800000000004,
+              "x": 126.18,
+              "y": 53.589600000000004,
+              "confidence": 0.66,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.98,
+              "w": 149.31,
+              "x": 130.65,
+              "y": 92.27,
+              "confidence": 1.0,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 72
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "LA: Don's father read those.",
+          "value": "LA: Don's father read those.",
+          "bbox": [
+            {
+              "h": 12.258284519102524,
+              "w": 108.94042407822027,
+              "x": 130.67389521008005,
+              "y": 112.76888697241809,
+              "confidence": 0.8,
+              "end_index": 27,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: *The Speedwell Boys on Motorcycles*. There were a bunch of imitators out there.",
+          "value": "CB: The Speedwell Boys on Motorcycles. There were a bunch of imitators out there.",
+          "bbox": [
+            {
+              "h": 206.02224,
+              "w": 286.00800000000004,
+              "x": 126.18,
+              "y": 53.589600000000004,
+              "confidence": 0.65,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "LA: Did Horatio Alger inspire you to go out and start shining shoes or get a paper route or whatever you could?",
+          "value": "LA: Did Horatio Alger inspire you to go out and start shining shoes or get a paper route or whatever you could?",
+          "bbox": [
+            {
+              "h": 206.02224,
+              "w": 286.00800000000004,
+              "x": 126.18,
+              "y": 53.589600000000004,
+              "confidence": 0.66,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 28.65,
+              "w": 286.01,
+              "x": 126.97,
+              "y": 156.68,
+              "confidence": 1.0,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 75
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: That's right. They always made a big success.",
+          "value": "CB: That's right. They always made a big success.",
+          "bbox": [
+            {
+              "h": 206.02224,
+              "w": 286.00800000000004,
+              "x": 126.18,
+              "y": 53.589600000000004,
+              "confidence": 0.63,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "LA: Did they affect you? Did they inspire you to work hard and pull yourself up by your bootstraps?",
+          "value": "LA: Did they affect you? Did they inspire you to work hard and pull yourself up by your bootstraps?",
+          "bbox": [
+            {
+              "h": 206.02224,
+              "w": 286.00800000000004,
+              "x": 126.18,
+              "y": 53.589600000000004,
+              "confidence": 0.66,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 26.29,
+              "w": 282.06,
+              "x": 127.23,
+              "y": 204.0,
+              "confidence": 1.0,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 72
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: Oh, I don't know. It gave me the feeling that if I worked hard enough and worked well at anything that I might get a reward out of it.",
+          "value": "CB: Oh, I don't know. It gave me the feeling that if I worked hard enough and worked well at anything that I might get a reward out of it.",
+          "bbox": [
+            {
+              "h": 206.02224,
+              "w": 286.00800000000004,
+              "x": 126.18,
+              "y": 53.589600000000004,
+              "confidence": 0.67,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## His Brother's Storytelling",
+          "value": "His Brother's Storytelling",
+          "bbox": [
+            {
+              "h": 16.008991699218754,
+              "w": 133.05437159394057,
+              "x": 125.48927690310596,
+              "y": 276.13035383717613,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "LA: When you were a child did you make up stories?",
+          "value": "LA: When you were a child did you make up stories?",
+          "bbox": [
+            {
+              "h": 263.18448,
+              "w": 286.84920000000005,
+              "x": 116.92680000000001,
+              "y": 297.72,
+              "confidence": 0.7,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.3,
+              "w": 42.06,
+              "x": 121.45,
+              "y": 355.42,
+              "confidence": 1.0,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 39
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: No, but my brother did.",
+          "value": "CB: No, but my brother did.",
+          "bbox": [
+            {
+              "h": 12.205959789443632,
+              "w": 108.11337965653586,
+              "x": 124.60873581602516,
+              "y": 310.42532722465705,
+              "confidence": 0.94,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "LA: Did he tell them to you? Were you his audience?",
+          "value": "LA: Did he tell them to you? Were you his audience?",
+          "bbox": [
+            {
+              "h": 263.18448,
+              "w": 286.84920000000005,
+              "x": 116.92680000000001,
+              "y": 297.72,
+              "confidence": 0.59,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: We were just little bits of guys lying in bed at night. He would make up stories.",
+          "value": "CB: We were just little bits of guys lying in bed at night. He would make up stories.",
+          "bbox": [
+            {
+              "h": 263.18448,
+              "w": 286.84920000000005,
+              "x": 116.92680000000001,
+              "y": 297.72,
+              "confidence": 0.61,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.3,
+              "w": 42.06,
+              "x": 121.45,
+              "y": 355.42,
+              "confidence": 1.0,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 74
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "LA: Was he older or younger?",
+          "value": "LA: Was he older or younger?",
+          "bbox": [
+            {
+              "h": 13.074888910060942,
+              "w": 116.44715080149582,
+              "x": 122.00311510932738,
+              "y": 376.0782815167684,
+              "confidence": 0.89,
+              "end_index": 27,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: He was a year and a half older. He would make up these stories, and there was always some despicable character. He would be a guy that wore a white collar and worked in an office, and my brother called him \"The Flat Butt Man.\"",
+          "value": "CB: He was a year and a half older. He would make up these stories, and there was always some despicable character. He would be a guy that wore a white collar and worked in an office, and my brother called him \"The Flat Butt Man.\"",
+          "bbox": [
+            {
+              "h": 263.18448,
+              "w": 286.84920000000005,
+              "x": 116.92680000000001,
+              "y": 297.72,
+              "confidence": 0.66,
+              "end_index": 229,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.3,
+              "w": 42.06,
+              "x": 121.45,
+              "y": 355.42,
+              "confidence": 1.0,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 59
+            },
+            {
+              "h": 26.55,
+              "w": 275.76,
+              "x": 118.03,
+              "y": 414.05,
+              "confidence": 1.0,
+              "end_index": 229,
+              "label": "text",
+              "start_index": 215
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "LA: Because he sat in a chair all day?",
+          "value": "LA: Because he sat in a chair all day?",
+          "bbox": [
+            {
+              "h": 14.240694169207297,
+              "w": 142.28215817335177,
+              "x": 119.7537506371475,
+              "y": 447.7198512004574,
+              "confidence": 0.9,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: I think it was a bunch of kids who were his heroes, and whatever they wanted to do, they had to outwit this \"Flat Butt Man\" to accomplish what they wanted to do, whether it was to take a trip or catch some horses—any sort of adventure like that. Now why he had that talent then, and I didn't have any of it...",
+          "value": "CB: I think it was a bunch of kids who were his heroes, and whatever they wanted to do, they had to outwit this \"Flat Butt Man\" to accomplish what they wanted to do, whether it was to take a trip or catch some horses—any sort of adventure like that. Now why he had that talent then, and I didn't have any of it...",
+          "bbox": [
+            {
+              "h": 263.18448,
+              "w": 286.84920000000005,
+              "x": 116.92680000000001,
+              "y": 297.72,
+              "confidence": 0.69,
+              "end_index": 312,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 26.55,
+              "w": 275.76,
+              "x": 118.03,
+              "y": 414.05,
+              "confidence": 1.0,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 112
+            },
+            {
+              "h": 12.62,
+              "w": 93.32,
+              "x": 117.51,
+              "y": 512.1,
+              "confidence": 1.0,
+              "end_index": 312,
+              "label": "text",
+              "start_index": 289
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "LA: What did he do when he grew up? What was his life work?",
+          "value": "LA: What did he do when he grew up? What was his life work?",
+          "bbox": [
+            {
+              "h": 263.18448,
+              "w": 286.84920000000005,
+              "x": 116.92680000000001,
+              "y": 297.72,
+              "confidence": 0.6,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CB: Oh, he became a farmer and a carpenter.",
+          "value": "CB: Oh, he became a farmer and a carpenter.",
+          "bbox": [
+            {
+              "h": 263.18448,
+              "w": 286.84920000000005,
+              "x": 116.92680000000001,
+              "y": 297.72,
+              "confidence": 0.59,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nDONALD AULT AND LYNDA AULT / 1997 189\n\\</page_header>",
+          "value": "<page_header>\nDONALD AULT AND LYNDA AULT / 1997 189\n</page_header>",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 161.14,
+              "x": 601.2,
+              "y": 43.38,
+              "confidence": 1.0,
+              "end_index": 51,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "LA: So he never used his storytelling.",
+          "value": "LA: So he never used his storytelling.",
+          "bbox": [
+            {
+              "h": 11.57,
+              "w": 142.74,
+              "x": 479.75,
+              "y": 67.04,
+              "confidence": 1.0,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "CB: Not a bit, no.",
+          "value": "CB: Not a bit, no.",
+          "bbox": [
+            {
+              "h": 9.463947019867547,
+              "w": 68.61037499999998,
+              "x": 480.00975000000005,
+              "y": 80.18066225165565,
+              "confidence": 0.93,
+              "end_index": 17,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "LA: Do you think you learned something from him in your storytelling? Or do you think maybe you always...",
+          "value": "LA: Do you think you learned something from him in your storytelling? Or do you think maybe you always...",
+          "bbox": [
+            {
+              "h": 24.18564238410596,
+              "w": 273.652875,
+              "x": 479.74687500000005,
+              "y": 98.84566887417219,
+              "confidence": 0.96,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "CB: Maybe I did. Maybe the thing occurred to me in later years that—hell, my brother could lie there and just dream up these adventures, so that it wasn't impossible for just anyone to do the same thing. So I guess that's what made me confident that I could write stories.",
+          "value": "CB: Maybe I did. Maybe the thing occurred to me in later years that—hell, my brother could lie there and just dream up these adventures, so that it wasn't impossible for just anyone to do the same thing. So I guess that's what made me confident that I could write stories.",
+          "bbox": [
+            {
+              "h": 49.15994701986756,
+              "w": 281.802,
+              "x": 479.74687500000005,
+              "y": 125.1344105960265,
+              "confidence": 0.65,
+              "end_index": 271,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 35.75,
+              "w": 279.96,
+              "x": 479.75,
+              "y": 138.54,
+              "confidence": 1.0,
+              "end_index": 271,
+              "label": "text",
+              "start_index": 74
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "LA: Maybe you could do it all along, but you never tried when you had him to do it for you.",
+          "value": "LA: Maybe you could do it all along, but you never tried when you had him to do it for you.",
+          "bbox": [
+            {
+              "h": 24.45670096703507,
+              "w": 275.6584489567455,
+              "x": 479.2566892625763,
+              "y": 183.0522563000191,
+              "confidence": 0.96,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "DA: He didn't have any interest in drawing?",
+          "value": "DA: He didn't have any interest in drawing?",
+          "bbox": [
+            {
+              "h": 11.56704635761588,
+              "w": 170.86875000000003,
+              "x": 478.69537500000007,
+              "y": 215.04190728476823,
+              "confidence": 0.88,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "CB: No. No, none. He had only a sixth-grade education, but in the little hometown that he lived in, where he had his acreage of potatoes and the little hotel he built, he was the Justice of the Peace. (laughs) I thought that was so funny. He lived to be in his 80s. He died of a heart problem. He had heart problems and arthritis and ulcers in his stomach. And he was an avid fisherman. He would sit out in the old boat in the stormy, cold weather for hours at a time. He never had sense enough to come back to shore and get in the warm house. Yeah, he developed, not pneumonia, but rheumatism, all his muscles and bones were aching from these arthritic pains, and he would take aspirins by the handful and they ate the lining out of his stomach. (laughs)",
+          "value": "CB: No. No, none. He had only a sixth-grade education, but in the little hometown that he lived in, where he had his acreage of potatoes and the little hotel he built, he was the Justice of the Peace. (laughs) I thought that was so funny. He lived to be in his 80s. He died of a heart problem. He had heart problems and arthritis and ulcers in his stomach. And he was an avid fisherman. He would sit out in the old boat in the stormy, cold weather for hours at a time. He never had sense enough to come back to shore and get in the warm house. Yeah, he developed, not pneumonia, but rheumatism, all his muscles and bones were aching from these arthritic pains, and he would take aspirins by the handful and they ate the lining out of his stomach. (laughs)",
+          "bbox": [
+            {
+              "h": 139.33,
+              "w": 285.75,
+              "x": 476.59,
+              "y": 228.45,
+              "confidence": 1.0,
+              "end_index": 754,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "LA: But you were able to go further in school than your brother?",
+          "value": "LA: But you were able to go further in school than your brother?",
+          "bbox": [
+            {
+              "h": 12.378951391006108,
+              "w": 250.37441215701224,
+              "x": 478.0828181450077,
+              "y": 377.2681971036586,
+              "confidence": 0.91,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "CB: Yeah, I went through the eighth grade.",
+          "value": "CB: Yeah, I went through the eighth grade.",
+          "bbox": [
+            {
+              "h": 12.215142987804873,
+              "w": 167.459890386814,
+              "x": 477.8716365520199,
+              "y": 390.06755460651686,
+              "confidence": 0.94,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## Self Education in Writing",
+          "value": "Self Education in Writing",
+          "bbox": [
+            {
+              "h": 14.470451410060942,
+              "w": 131.92843709508384,
+              "x": 477.7384959746571,
+              "y": 420.7321685785062,
+              "confidence": 0.96,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "DA: Well, I was curious about what your experience of school was like. You were such a good researcher and you had really good study habits. Did you learn to do that in school or did you just teach yourself to do that?",
+          "value": "DA: Well, I was curious about what your experience of school was like. You were such a good researcher and you had really good study habits. Did you learn to do that in school or did you just teach yourself to do that?",
+          "bbox": [
+            {
+              "h": 49.16,
+              "w": 277.33,
+              "x": 475.54,
+              "y": 441.91,
+              "confidence": 1.0,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "CB: I don't know. I just liked to do it. I liked to understand what I was reading about. And I liked to know who wrote the stuff. What authority they had for writing it. Yeah, I was a little curious as I grew up. I was curious about authors and their backgrounds. In fact, I guess it may be the teachers I had. There was one teacher that we had for about 3 years in a row when I was in about the 7th or 8th grade. She was interesting.",
+          "value": "CB: I don't know. I just liked to do it. I liked to understand what I was reading about. And I liked to know who wrote the stuff. What authority they had for writing it. Yeah, I was a little curious as I grew up. I was curious about authors and their backgrounds. In fact, I guess it may be the teachers I had. There was one teacher that we had for about 3 years in a row when I was in about the 7th or 8th grade. She was interesting.",
+          "bbox": [
+            {
+              "h": 79.06333132145579,
+              "w": 279.54091434832327,
+              "x": 476.6002392101754,
+              "y": 493.7070039300687,
+              "confidence": 0.94,
+              "end_index": 433,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "189",
+              "value": "189",
+              "bbox": [
+                {
+                  "h": 8.0,
+                  "w": 13.0,
+                  "x": 748.0,
+                  "y": 45.0,
+                  "confidence": 0.91,
+                  "end_index": 2,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "189",
+          "bbox": [
+            {
+              "h": 8.0,
+              "w": 13.0,
+              "x": 748.0,
+              "y": 45.0,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "189"
+    }
+  ]
+}

@@ -1,0 +1,554 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 182 CARL BARKS: CONVERSATIONS",
+          "value": "182 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.956255908203124,
+              "w": 101.58622295993712,
+              "x": 154.01165269507436,
+              "y": 34.71745369664635,
+              "confidence": 0.94,
+              "end_index": 30,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "point that she was hostile and half crazy. And she would tear up my comic books and my drawings if I didn't get them out of sight. I had to just be walking on eggshells around her because you never knew what time she would start being hostile and want to tear something up.",
+          "value": "point that she was hostile and half crazy. And she would tear up my comic books and my drawings if I didn't get them out of sight. I had to just be walking on eggshells around her because you never knew what time she would start being hostile and want to tear something up.",
+          "bbox": [
+            {
+              "h": 53.73042824707033,
+              "w": 283.70953430473514,
+              "x": 128.56271793421305,
+              "y": 57.94032193752383,
+              "confidence": 0.94,
+              "end_index": 272,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** So she actually did tear up some of your pages?",
+          "value": "DA: So she actually did tear up some of your pages?",
+          "bbox": [
+            {
+              "h": 14.29056,
+              "w": 201.88799999999998,
+              "x": 128.7036,
+              "y": 116.11080000000001,
+              "confidence": 0.83,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yes, well, I can't remember of her ever tearing up a finished one that had all been inked and everything, but she did tear up one or two that were just in the beginning stages, the pencil sketches. But she did take one of my whole 10-page stories after I'd practically finished it and threw it outside. Thank God it was not muddy or wet out there—they all landed in the dirt.",
+          "value": "CB: Yes, well, I can't remember of her ever tearing up a finished one that had all been inked and everything, but she did tear up one or two that were just in the beginning stages, the pencil sketches. But she did take one of my whole 10-page stories after I'd practically finished it and threw it outside. Thank God it was not muddy or wet out there—they all landed in the dirt.",
+          "bbox": [
+            {
+              "h": 75.02544,
+              "w": 282.6432000000001,
+              "x": 127.86240000000001,
+              "y": 129.21048000000002,
+              "confidence": 0.91,
+              "end_index": 382,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** About what year was this?",
+          "value": "DA: About what year was this?",
+          "bbox": [
+            {
+              "h": 12.50424000000001,
+              "w": 121.97399999999999,
+              "x": 126.18,
+              "y": 213.16752000000002,
+              "confidence": 0.87,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** It was around the late 1940s.",
+          "value": "CB: It was around the late 1940s.",
+          "bbox": [
+            {
+              "h": 11.56704635761588,
+              "w": 129.07162499999998,
+              "x": 126.44287500000002,
+              "y": 226.3460662251656,
+              "confidence": 0.86,
+              "end_index": 36,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Late 1940s, that's part of the period when you were doing the \"classic\" stories. Do you see any connection between that and what your wife was doing at the time?",
+          "value": "DA: Late 1940s, that's part of the period when you were doing the \"classic\" stories. Do you see any connection between that and what your wife was doing at the time?",
+          "bbox": [
+            {
+              "h": 37.51272,
+              "w": 282.64320000000004,
+              "x": 125.3388,
+              "y": 245.91672,
+              "confidence": 0.9,
+              "end_index": 168,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yeah, I do. I think that my stories, doing those stories, was such a relief from my own everyday troubles and problems. It was like going into a peaceful fairyland where I could have fun writing these stories.",
+          "value": "CB: Yeah, I do. I think that my stories, doing those stories, was such a relief from my own everyday troubles and problems. It was like going into a peaceful fairyland where I could have fun writing these stories.",
+          "bbox": [
+            {
+              "h": 40.489919999999984,
+              "w": 283.48440000000005,
+              "x": 124.4976,
+              "y": 284.62032,
+              "confidence": 0.9,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** In 1949 you were doing the most experimental stuff.",
+          "value": "DA: In 1949 you were doing the most experimental stuff.",
+          "bbox": [
+            {
+              "h": 13.099679999999978,
+              "w": 221.2356,
+              "x": 124.4976,
+              "y": 329.87376000000006,
+              "confidence": 0.84,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** 1949, yeah.",
+          "value": "CB: 1949, yeah.",
+          "bbox": [
+            {
+              "h": 11.041271523178807,
+              "w": 63.35287500000001,
+              "x": 123.81412500000002,
+              "y": 342.27941721854313,
+              "confidence": 0.87,
+              "end_index": 18,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** That's when you were doing *Vacation Parade* and *Christmas Parade*, doing all the panel experimentation, and so on.",
+          "value": "DA: That's when you were doing Vacation Parade and Christmas Parade, doing all the panel experimentation, and so on.",
+          "bbox": [
+            {
+              "h": 25.603920000000016,
+              "w": 281.802,
+              "x": 123.6564,
+              "y": 362.02752000000004,
+              "confidence": 0.91,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yeah, well, my wife developed a little mole on the bottom of her foot and she insisted that that was a cancer. So we had to go down to San Diego, and she hunted up a doctor who was easy to convince that that was a cancer on the bottom of her foot. So she managed to talk him into, I think she did, she just kept complaining to the point where he decided \"this woman just wants to have an operation just to get sympathy for herself,\" and so she arranged for me to take her down to that big Scripps Institute in La Jolla, and there they took her into the operating room to remove this mole, and when she came out of there she had her leg off up to here (about the knee) and all the leg glands taken out up here in the groin.",
+          "value": "CB: Yeah, well, my wife developed a little mole on the bottom of her foot and she insisted that that was a cancer. So we had to go down to San Diego, and she hunted up a doctor who was easy to convince that that was a cancer on the bottom of her foot. So she managed to talk him into, I think she did, she just kept complaining to the point where he decided \"this woman just wants to have an operation just to get sympathy for herself,\" and so she arranged for me to take her down to that big Scripps Institute in La Jolla, and there they took her into the operating room to remove this mole, and when she came out of there she had her leg off up to here (about the knee) and all the leg glands taken out up here in the groin.",
+          "bbox": [
+            {
+              "h": 140.52383999999995,
+              "w": 284.3256,
+              "x": 121.1328,
+              "y": 388.22688000000005,
+              "confidence": 0.92,
+              "end_index": 729,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** When was this?",
+          "value": "DA: When was this?",
+          "bbox": [
+            {
+              "h": 10.71792000000005,
+              "w": 79.914,
+              "x": 120.2916,
+              "y": 537.0868800000001,
+              "confidence": 0.84,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** That was 1950, the year of 1950 and . . .",
+          "value": "CB: That was 1950, the year of 1950 and . . .",
+          "bbox": [
+            {
+              "h": 12.504239999999982,
+              "w": 174.9696,
+              "x": 120.2916,
+              "y": 550.1865600000001,
+              "confidence": 0.84,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 1,
+          "md": "# DONALD AULT AND LYNDA AULT / 1997 183",
+          "value": "DONALD AULT AND LYNDA AULT / 1997 183",
+          "bbox": [
+            {
+              "h": 10.080355179949505,
+              "w": 136.48146415301073,
+              "x": 592.5702904201601,
+              "y": 40.98250463271724,
+              "confidence": 0.93,
+              "end_index": 38,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** Well, did it turn out that it was cancer then? Or was this malpractice?",
+          "value": "LA: Well, did it turn out that it was cancer then? Or was this malpractice?",
+          "bbox": [
+            {
+              "h": 9.726834437086097,
+              "w": 282.3277500000001,
+              "x": 471.33487500000007,
+              "y": 64.93319205298013,
+              "confidence": 0.62,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, the doctor said it was. He said as soon as they took the tissue out, well, they took a test on it and found out that it was cancerous tissue, and so they just went up the leg looking for where it would stop and cut it off.",
+          "value": "CB: Oh, the doctor said it was. He said as soon as they took the tissue out, well, they took a test on it and found out that it was cancerous tissue, and so they just went up the leg looking for where it would stop and cut it off.",
+          "bbox": [
+            {
+              "h": 49.69,
+              "w": 283.38,
+              "x": 470.28,
+              "y": 77.03,
+              "confidence": 1.0,
+              "end_index": 233,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** Did that eventually kill her? The cancer?",
+          "value": "LA: Did that eventually kill her? The cancer?",
+          "bbox": [
+            {
+              "h": 8.675284768211952,
+              "w": 170.08012500000007,
+              "x": 472.64925000000005,
+              "y": 135.91279470198674,
+              "confidence": 0.85,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** No.",
+          "value": "CB: No.",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 32.59649999999999,
+              "x": 471.33487500000007,
+              "y": 148.7942781456954,
+              "confidence": 0.83,
+              "end_index": 10,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** No?",
+          "value": "LA: No?",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 33.12225000000001,
+              "x": 471.860625,
+              "y": 167.19639735099338,
+              "confidence": 0.87,
+              "end_index": 10,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** No, it was alcohol that killed her and it took 13 years to do it.",
+          "value": "CB: No, it was alcohol that killed her and it took 13 years to do it.",
+          "bbox": [
+            {
+              "h": 8.93817218543046,
+              "w": 252.36,
+              "x": 472.38637500000004,
+              "y": 179.55210596026492,
+              "confidence": 0.87,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** Oh, gosh. You didn't stay married to her that whole time, did you?",
+          "value": "LA: Oh, gosh. You didn't stay married to her that whole time, did you?",
+          "bbox": [
+            {
+              "h": 9.201059602648996,
+              "w": 273.3900000000001,
+              "x": 472.38637500000004,
+              "y": 198.21711258278148,
+              "confidence": 0.63,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** No, she divorced me in 1951, took everything I had. And I paid her $250 a month alimony for 13 years. Always paid her every month, and she used it to buy more booze. Eventually she just died of cirrhosis of the liver.",
+          "value": "CB: No, she divorced me in 1951, took everything I had. And I paid her $250 a month alimony for 13 years. Always paid her every month, and she used it to buy more booze. Eventually she just died of cirrhosis of the liver.",
+          "bbox": [
+            {
+              "h": 51.53,
+              "w": 282.33,
+              "x": 471.33,
+              "y": 209.0,
+              "confidence": 1.0,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** Wow. And when did you meet Garé?",
+          "value": "LA: Wow. And when did you meet Garé?",
+          "bbox": [
+            {
+              "h": 9.46394701986759,
+              "w": 160.8795,
+              "x": 472.38637500000004,
+              "y": 268.1451655629139,
+              "confidence": 0.84,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, I had met Garé when we first moved to San Jacinto when I was drawing comic books. Garé was a graduate of art school in Boston and she needed some kind of employment so she could use some of her talent. So she came over to see if I had any kind of work that she could do. At that time I was doing all of the lettering, everything myself. I was really just getting going on comic books, and I didn't know that if I had someone to help me that I could do more comic books than I was doing. I was satisfied with what I was doing, so I told her that I didn't have any work for her at all, not even lettering.",
+          "value": "CB: Well, I had met Garé when we first moved to San Jacinto when I was drawing comic books. Garé was a graduate of art school in Boston and she needed some kind of employment so she could use some of her talent. So she came over to see if I had any kind of work that she could do. At that time I was doing all of the lettering, everything myself. I was really just getting going on comic books, and I didn't know that if I had someone to help me that I could do more comic books than I was doing. I was satisfied with what I was doing, so I told her that I didn't have any work for her at all, not even lettering.",
+          "bbox": [
+            {
+              "h": 115.39638971512959,
+              "w": 284.83182471894054,
+              "x": 472.4956224037729,
+              "y": 280.46469936642535,
+              "confidence": 0.92,
+              "end_index": 616,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** About what year was that when you met her?",
+          "value": "DA: About what year was that when you met her?",
+          "bbox": [
+            {
+              "h": 9.46394701986759,
+              "w": 196.36762500000003,
+              "x": 473.70075,
+              "y": 403.2692980132451,
+              "confidence": 0.85,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** That was about 1945. No, about 1944 or even earlier, because shortly after that, she got a job down at McDonnell Douglas, where they were building airplanes. The war was on, you know, and she was in the drafting department, lettering the drafting pages.",
+          "value": "CB: That was about 1945. No, about 1944 or even earlier, because shortly after that, she got a job down at McDonnell Douglas, where they were building airplanes. The war was on, you know, and she was in the drafting department, lettering the drafting pages.",
+          "bbox": [
+            {
+              "h": 50.61239999999998,
+              "w": 283.48440000000005,
+              "x": 473.5956,
+              "y": 415.61712,
+              "confidence": 0.91,
+              "end_index": 260,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So, at what point did Garé start helping you with the lettering?",
+          "value": "DA: So, at what point did Garé start helping you with the lettering?",
+          "bbox": [
+            {
+              "h": 10.515496688741678,
+              "w": 260.509125,
+              "x": 473.70075,
+              "y": 473.4602384105961,
+              "confidence": 0.62,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, it was 1952. I had been divorced—my wife had divorced me, and I was living in a kind of a little room they made in the corner of a little warehouse. I had two blankets that I had gotten out of the whole deal and my drawing board, of course, and my *Geographics*.",
+          "value": "CB: Well, it was 1952. I had been divorced—my wife had divorced me, and I was living in a kind of a little room they made in the corner of a little warehouse. I had two blankets that I had gotten out of the whole deal and my drawing board, of course, and my Geographics.",
+          "bbox": [
+            {
+              "h": 49.69,
+              "w": 282.85,
+              "x": 473.18,
+              "y": 485.55,
+              "confidence": 1.0,
+              "end_index": 275,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**LA:** Oh, for heaven sakes. She really did take you for everything, didn't she?",
+          "value": "LA: Oh, for heaven sakes. She really did take you for everything, didn't she?",
+          "bbox": [
+            {
+              "h": 22.626719999999978,
+              "w": 275.9136,
+              "x": 473.5956,
+              "y": 543.6367200000001,
+              "confidence": 0.9,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

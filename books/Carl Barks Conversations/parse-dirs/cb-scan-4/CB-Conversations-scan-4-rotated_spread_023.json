@@ -1,0 +1,385 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "200 CARL BARKS: CONVERSATIONS",
+              "value": "200 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 9.665961137873957,
+                  "w": 101.07086674090132,
+                  "x": 122.45964002358042,
+                  "y": 33.57866840314168,
+                  "confidence": 0.9,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "200 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.67,
+              "w": 101.07,
+              "x": 122.46,
+              "y": 33.58,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "the strips by Roy Crane. It seems that Floyd Gottfredson and I both liked the way those creators handled their stories.",
+          "value": "the strips by Roy Crane. It seems that Floyd Gottfredson and I both liked the way those creators handled their stories.",
+          "bbox": [
+            {
+              "h": 24.295573951386242,
+              "w": 279.1436089403106,
+              "x": 98.0924098406536,
+              "y": 57.063326494021545,
+              "confidence": 0.95,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Or perhaps the first adventure strips, like *Phil Hardy* by George Storm? And, most importantly, *Wash Tubbs* by Roy Crane? These stories inspired Floyd Gottfredson for his Mickey Mouse Adventures. Did you follow Mickey Mouse's daily strips during the thirties and the forties, but particularly during that excellent period from 1933 to 1939 with stories such as \"The Mail Pilot,\" \"The Pirate Submarine,\" \"The Island in the Sky\"? Of course, in theory you're not expected to, since by then you were a grownup! But since you had been involved in writing comics yourself . . .",
+          "value": "Q: Or perhaps the first adventure strips, like Phil Hardy by George Storm? And, most importantly, Wash Tubbs by Roy Crane? These stories inspired Floyd Gottfredson for his Mickey Mouse Adventures. Did you follow Mickey Mouse's daily strips during the thirties and the forties, but particularly during that excellent period from 1933 to 1939 with stories such as \"The Mail Pilot,\" \"The Pirate Submarine,\" \"The Island in the Sky\"? Of course, in theory you're not expected to, since by then you were a grownup! But since you had been involved in writing comics yourself . . .",
+          "bbox": [
+            {
+              "h": 102.41567999999998,
+              "w": 284.32560000000007,
+              "x": 96.73800000000001,
+              "y": 89.91144,
+              "confidence": 0.82,
+              "end_index": 579,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 51.53,
+              "w": 284.96,
+              "x": 95.42,
+              "y": 89.38,
+              "confidence": 1.0,
+              "end_index": 337,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I followed most of the Mickey Mouse strips of the mid-thirties. Inasmuch as I was a Disney story man, I found Gottfredson's way of building stories very educational. The artwork, the dialogue, the plots all hung together properly.",
+          "value": "CB: I followed most of the Mickey Mouse strips of the mid-thirties. Inasmuch as I was a Disney story man, I found Gottfredson's way of building stories very educational. The artwork, the dialogue, the plots all hung together properly.",
+          "bbox": [
+            {
+              "h": 50.09408113805261,
+              "w": 280.9836713271723,
+              "x": 96.20270775771723,
+              "y": 193.0929313762386,
+              "confidence": 0.91,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** You said you hadn't read many of Gottfredson's later stories when you were writing your own, so he didn't directly influence your comics very much at that time. But you hint at a fantasy of you and him working together . . . how could this have worked out?",
+          "value": "Q: You said you hadn't read many of Gottfredson's later stories when you were writing your own, so he didn't directly influence your comics very much at that time. But you hint at a fantasy of you and him working together . . . how could this have worked out?",
+          "bbox": [
+            {
+              "h": 49.727409146341444,
+              "w": 283.7809633729516,
+              "x": 95.54791207960177,
+              "y": 251.45231651581562,
+              "confidence": 0.94,
+              "end_index": 262,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I don't recall saying much about the influence of Gottfredson's Mickey stories on my output of Duck stories. I seldom saw his strips in the 1940s, 50s, and 60s. I have said that my handling of the ducks was so different from his handling of Mickey that we differed like dramatists and slapstick comedy playwrights. He and I might have worked together as a team, but we would have needed other characters than ducks and mice.",
+          "value": "CB: I don't recall saying much about the influence of Gottfredson's Mickey stories on my output of Duck stories. I seldom saw his strips in the 1940s, 50s, and 60s. I have said that my handling of the ducks was so different from his handling of Mickey that we differed like dramatists and slapstick comedy playwrights. He and I might have worked together as a team, but we would have needed other characters than ducks and mice.",
+          "bbox": [
+            {
+              "h": 76.55518356516767,
+              "w": 283.4110637355898,
+              "x": 95.24714986959319,
+              "y": 303.20701420541167,
+              "confidence": 0.93,
+              "end_index": 431,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** It's apparent that Gottfredson put his soul into Mickey when plotting the stories. More than any other character, Gottfredson was Mickey. Which one of your characters did you identify most with? Donald? Scrooge? Perhaps Gyro Gearloose? Or more likely a bit of all three? And how would you compare the personality of your favorite character(s) with that of Gottfredson's Mickey?",
+          "value": "Q: It's apparent that Gottfredson put his soul into Mickey when plotting the stories. More than any other character, Gottfredson was Mickey. Which one of your characters did you identify most with? Donald? Scrooge? Perhaps Gyro Gearloose? Or more likely a bit of all three? And how would you compare the personality of your favorite character(s) with that of Gottfredson's Mickey?",
+          "bbox": [
+            {
+              "h": 75.97593294112048,
+              "w": 283.0943790045018,
+              "x": 93.90085469166827,
+              "y": 387.1230099180641,
+              "confidence": 0.95,
+              "end_index": 383,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** The character that is most patterned after my own personality is Uncle Scrooge, and after him, Gyro Gearloose. Donald's character was established in the Disney story department by groups of gagmen. I expanded on that character, but didn't try to change him much.",
+          "value": "CB: The character that is most patterned after my own personality is Uncle Scrooge, and after him, Gyro Gearloose. Donald's character was established in the Disney story department by groups of gagmen. I expanded on that character, but didn't try to change him much.",
+          "bbox": [
+            {
+              "h": 51.12534722275152,
+              "w": 284.0548770692407,
+              "x": 93.14187075135767,
+              "y": 464.8652371046114,
+              "confidence": 0.95,
+              "end_index": 269,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** When we read the Gottfredson strips as kids, we found them totally fascinating but also, sometimes, a bit scary, for example, the Phantom Blot story. This never happened with your stories: even the most adventurous",
+          "value": "Q: When we read the Gottfredson strips as kids, we found them totally fascinating but also, sometimes, a bit scary, for example, the Phantom Blot story. This never happened with your stories: even the most adventurous",
+          "bbox": [
+            {
+              "h": 38.386903753810934,
+              "w": 283.0751755549733,
+              "x": 92.95801979325458,
+              "y": 523.3204430687882,
+              "confidence": 0.96,
+              "end_index": 220,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nLEONARDO GORI AND FRANCESCO STAJANO / 1998 201\n\\</page_header>",
+          "value": "<page_header>\nLEONARDO GORI AND FRANCESCO STAJANO / 1998 201\n</page_header>",
+          "bbox": [
+            {
+              "h": 14.98,
+              "w": 198.21,
+              "x": 538.89,
+              "y": 28.39,
+              "confidence": 1.0,
+              "end_index": 60,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "ones were always in some sense reassuring. Was this a conscious choice on your part, or just two different styles of telling stories?",
+          "value": "ones were always in some sense reassuring. Was this a conscious choice on your part, or just two different styles of telling stories?",
+          "bbox": [
+            {
+              "h": 26.8145165562914,
+              "w": 276.281625,
+              "x": 455.56237500000003,
+              "y": 53.89192052980133,
+              "confidence": 0.61,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** About the scariness of some Mickey plots, I put the ducks into some scary places, too. But I was warned by the editors of the comics that such scares should be short and more scary to the ducks than to the readers. Gottfredson and I used different writing styles in wringing drama from our characters' plights.",
+          "value": "CB: About the scariness of some Mickey plots, I put the ducks into some scary places, too. But I was warned by the editors of the comics that such scares should be short and more scary to the ducks than to the readers. Gottfredson and I used different writing styles in wringing drama from our characters' plights.",
+          "bbox": [
+            {
+              "h": 67.82495364238412,
+              "w": 284.95649999999995,
+              "x": 455.56237500000003,
+              "y": 80.18066225165563,
+              "confidence": 0.75,
+              "end_index": 317,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** You joined Disney in 1935 and your first Donald Duck comic came out in 1942. Was it company policy that staff members would read Gottfredson's or anybody else's comics, and watch the shorts, and so on, as part of keeping up with what the studio was producing? Or was it left to the individuals' own will and spare time? Were you still reading Mickey Mouse in the late forties, when Eega Beeva came out?",
+          "value": "Q: You joined Disney in 1935 and your first Donald Duck comic came out in 1942. Was it company policy that staff members would read Gottfredson's or anybody else's comics, and watch the shorts, and so on, as part of keeping up with what the studio was producing? Or was it left to the individuals' own will and spare time? Were you still reading Mickey Mouse in the late forties, when Eega Beeva came out?",
+          "bbox": [
+            {
+              "h": 79.12520267721038,
+              "w": 283.2727074838034,
+              "x": 458.0238727848705,
+              "y": 156.01413699980947,
+              "confidence": 0.94,
+              "end_index": 408,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** The reading of comic strips or comic books or attendance at theaters showing Disney films was not required of anyone. We guys in the duck units knew nobody in other departments of the studio, and nobody knew us. I remember seeing some segments of Eega Beeva, but had no idea who wrote or drew the episodes.",
+          "value": "CB: The reading of comic strips or comic books or attendance at theaters showing Disney films was not required of anyone. We guys in the duck units knew nobody in other departments of the studio, and nobody knew us. I remember seeing some segments of Eega Beeva, but had no idea who wrote or drew the episodes.",
+          "bbox": [
+            {
+              "h": 66.13069334508387,
+              "w": 283.86066989805636,
+              "x": 459.3687028153583,
+              "y": 236.27961635384915,
+              "confidence": 0.95,
+              "end_index": 313,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** You only ever wrote one story with Mickey Mouse (the red hat one): how did that happen? Were you asked to do it by your editor? What did you use as a model for Mickey and Minnie: the animated shorts or the comics? Whose comics?",
+          "value": "Q: You only ever wrote one story with Mickey Mouse (the red hat one): how did that happen? Were you asked to do it by your editor? What did you use as a model for Mickey and Minnie: the animated shorts or the comics? Whose comics?",
+          "bbox": [
+            {
+              "h": 52.42450386814028,
+              "w": 280.92536597275154,
+              "x": 460.21498199314027,
+              "y": 311.08573746665405,
+              "confidence": 0.97,
+              "end_index": 233,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** The comic book story of Minnie Mouse and the red hat was one of those wartime fillers that had popular subject matter. No doubt Western Publishing Company sent me the story script. I don't remember the details.",
+          "value": "CB: The comic book story of Minnie Mouse and the red hat was one of those wartime fillers that had popular subject matter. No doubt Western Publishing Company sent me the story script. I don't remember the details.",
+          "bbox": [
+            {
+              "h": 52.62908709032016,
+              "w": 279.053984494093,
+              "x": 461.6842368521342,
+              "y": 364.14583212176075,
+              "confidence": 0.96,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Why did mice and ducks mix so rarely? Weren't they all seen as \"funny animal comics coming out of the Disney studio\"? Was there some kind of structural separation between the two worlds?",
+          "value": "Q: Why did mice and ducks mix so rarely? Weren't they all seen as \"funny animal comics coming out of the Disney studio\"? Was there some kind of structural separation between the two worlds?",
+          "bbox": [
+            {
+              "h": 39.863094026295734,
+              "w": 283.8492492616235,
+              "x": 462.5590676209985,
+              "y": 425.7399900200077,
+              "confidence": 0.96,
+              "end_index": 192,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** The characters appearing in funny animal comics were determined by the editors. Mice and ducks make cute leading characters. Supporting characters were cats, dogs, chickens, and such, who needed only to be \"dogfaced\" bit players in a plot. Good plots needed a single cute hero. There wasn't room for Mickey and Donald to be stars in a single story. Besides, there was a structural separation between the sorts of worlds and characters that fitted best with Mickey or Donald.",
+          "value": "CB: The characters appearing in funny animal comics were determined by the editors. Mice and ducks make cute leading characters. Supporting characters were cats, dogs, chickens, and such, who needed only to be \"dogfaced\" bit players in a plot. Good plots needed a single cute hero. There wasn't room for Mickey and Donald to be stars in a single story. Besides, there was a structural separation between the sorts of worlds and characters that fitted best with Mickey or Donald.",
+          "bbox": [
+            {
+              "h": 92.88863999999995,
+              "w": 284.3256,
+              "x": 463.50120000000004,
+              "y": 466.22952000000004,
+              "confidence": 0.78,
+              "end_index": 481,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 53.63,
+              "w": 282.06,
+              "x": 463.45,
+              "y": 465.57,
+              "confidence": 1.0,
+              "end_index": 284,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 27.6,
+              "w": 283.38,
+              "x": 464.24,
+              "y": 530.77,
+              "confidence": 1.0,
+              "end_index": 481,
+              "label": "text",
+              "start_index": 357
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "200, 201"
+    }
+  ]
+}

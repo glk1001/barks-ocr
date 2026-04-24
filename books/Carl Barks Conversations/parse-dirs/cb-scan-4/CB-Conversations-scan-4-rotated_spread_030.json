@@ -1,0 +1,375 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "214 CARL BARKS: CONVERSATIONS",
+              "value": "214 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.118670213652821,
+                  "w": 126.00264202434262,
+                  "x": 106.65984069526488,
+                  "y": 31.83257320526868,
+                  "confidence": 0.86,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "214 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.12,
+              "w": 126.0,
+              "x": 106.66,
+              "y": 31.83,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "an army to go over there and kick somebody's butt. Just have to watch TV and hope we'll get some better news someday.",
+          "value": "an army to go over there and kick somebody's butt. Just have to watch TV and hope we'll get some better news someday.",
+          "bbox": [
+            {
+              "h": 24.99946256014197,
+              "w": 274.2644550900343,
+              "x": 106.22008357945886,
+              "y": 56.13747218047352,
+              "confidence": 0.96,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**JR**: So in the 1960s you were aware of what was going on in Southeast Asia?",
+          "value": "JR: So in the 1960s you were aware of what was going on in Southeast Asia?",
+          "bbox": [
+            {
+              "h": 23.222160000000002,
+              "w": 275.91360000000003,
+              "x": 105.9912,
+              "y": 88.12512000000001,
+              "confidence": 0.89,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Oh, yeah. In the 1960s there was so much of that Viet Nam bank burning going on around the country. I realized what people were objecting to in that war, and I felt that someplace we have got to stop the communists or they're going to take over everything. It was something I couldn't do anything about, and I tried to make fun of some of those wars they had in Siambodia and such places. In \"The Treasure of Marco Polo\" I tried to turn things back, to make people think of the better times the people had before they got so damn mad that they were fighting all the time. Those stories were written at a time when I had kind of run out of ideas and would have to do a lot of fabricating on a plot that I didn't know too much about. They weren't my best stories.",
+          "value": "CB: Oh, yeah. In the 1960s there was so much of that Viet Nam bank burning going on around the country. I realized what people were objecting to in that war, and I felt that someplace we have got to stop the communists or they're going to take over everything. It was something I couldn't do anything about, and I tried to make fun of some of those wars they had in Siambodia and such places. In \"The Treasure of Marco Polo\" I tried to turn things back, to make people think of the better times the people had before they got so damn mad that they were fighting all the time. Those stories were written at a time when I had kind of run out of ideas and would have to do a lot of fabricating on a plot that I didn't know too much about. They weren't my best stories.",
+          "bbox": [
+            {
+              "h": 142.2597800519246,
+              "w": 284.2832960592131,
+              "x": 105.2208405047161,
+              "y": 113.71409159679881,
+              "confidence": 0.94,
+              "end_index": 768,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**BH**: When you first realized that your stories were being translated into other languages, did that influence the types of stories you wrote?",
+          "value": "BH: When you first realized that your stories were being translated into other languages, did that influence the types of stories you wrote?",
+          "bbox": [
+            {
+              "h": 24.974304635761598,
+              "w": 274.704375,
+              "x": 104.88712500000001,
+              "y": 262.6245298013245,
+              "confidence": 0.73,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: No. Not at all. I didn't try to think how the Danes were going to like it or the Swedes or anybody else—I was just drawing for my imaginary bunch of buyers—the people around who were living in America—the people who were buying my comics.",
+          "value": "CB: No. Not at all. I didn't try to think how the Danes were going to like it or the Swedes or anybody else—I was just drawing for my imaginary bunch of buyers—the people around who were living in America—the people who were buying my comics.",
+          "bbox": [
+            {
+              "h": 50.74,
+              "w": 280.49,
+              "x": 102.52,
+              "y": 288.65,
+              "confidence": 1.0,
+              "end_index": 245,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA**: You thought of your audience as primarily American and not international?",
+          "value": "DA: You thought of your audience as primarily American and not international?",
+          "bbox": [
+            {
+              "h": 23.222159999999974,
+              "w": 281.802,
+              "x": 104.3088,
+              "y": 346.54608,
+              "confidence": 0.87,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: No—I didn't think of them \\[my buyers] as international, but it happened that my stories fit any country in the world—they were that simple. The type of stories I wrote, the personalities—they had their duplicates in any country you'd go to.",
+          "value": "CB: No—I didn't think of them [my buyers] as international, but it happened that my stories fit any country in the world—they were that simple. The type of stories I wrote, the personalities—they had their duplicates in any country you'd go to.",
+          "bbox": [
+            {
+              "h": 49.68572185430463,
+              "w": 281.802,
+              "x": 103.30987500000002,
+              "y": 372.51147019867545,
+              "confidence": 0.89,
+              "end_index": 248,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA**: Do you like any contemporary comics?",
+          "value": "DA: Do you like any contemporary comics?",
+          "bbox": [
+            {
+              "h": 11.041271523178807,
+              "w": 167.97712500000006,
+              "x": 103.30987500000002,
+              "y": 431.3982516556291,
+              "confidence": 0.83,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Well, I like the *Peanuts* strip very much.",
+          "value": "CB: Well, I like the Peanuts strip very much.",
+          "bbox": [
+            {
+              "h": 11.041271523178807,
+              "w": 168.76575000000003,
+              "x": 103.30987500000002,
+              "y": 444.2797350993377,
+              "confidence": 0.82,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA**: You once told me that there was too much thinking in *Peanuts*, that not enough was actually happening. I'm surprised that you say you really like it.",
+          "value": "DA: You once told me that there was too much thinking in Peanuts, that not enough was actually happening. I'm surprised that you say you really like it.",
+          "bbox": [
+            {
+              "h": 35.22691390728477,
+              "w": 281.013375,
+              "x": 102.25837500000002,
+              "y": 463.9962913907286,
+              "confidence": 0.88,
+              "end_index": 157,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB**: Well, I guess I've gotten older.",
+          "value": "CB: Well, I guess I've gotten older.",
+          "bbox": [
+            {
+              "h": 11.041271523178807,
+              "w": 133.01475000000002,
+              "x": 103.57275000000001,
+              "y": 503.1665165562914,
+              "confidence": 0.84,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Ideas Flowing Like Waterfalls: Some Reflections from Carl Barks at 98 Donald Ault / 1999",
+          "md": "![Ideas Flowing Like Waterfalls: Some Reflections from Carl Barks at 98 Donald Ault / 1999](CB-Conversations-scan-4-rotated_spread_030_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-4-rotated_spread_030_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 188.08448058427024,
+              "w": 303.71775050019056,
+              "x": 445.1762578839558,
+              "y": 100.5017649545065,
+              "confidence": 0.78,
+              "end_index": 113,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "Faxed interchange between Donald Ault and Carl Barks, 3 June 1999. Telephone conversation between Ault and Barks, 5 June 1999. Barks's handwritten responses, 22 July 1999. Reprinted by permission of Donald Ault.",
+          "value": "Faxed interchange between Donald Ault and Carl Barks, 3 June 1999. Telephone conversation between Ault and Barks, 5 June 1999. Barks's handwritten responses, 22 July 1999. Reprinted by permission of Donald Ault.",
+          "bbox": [
+            {
+              "h": 66.0333301686357,
+              "w": 163.87045448266005,
+              "x": 485.9491321217608,
+              "y": 310.0057366091845,
+              "confidence": 0.97,
+              "end_index": 210,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 3,
+          "md": "### Cover Letter from Carl Barks Fax",
+          "value": "Cover Letter from Carl Barks Fax",
+          "bbox": [
+            {
+              "h": 11.799913505144819,
+              "w": 174.01363262195125,
+              "x": 463.43835644531254,
+              "y": 394.8701900676449,
+              "confidence": 0.93,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "Here are the answers to your questions. The task of remembering work I did fifty years ago revived in my aging mind the *real* motivation for all the diligence I spent in polishing stories and in drawing the ducks to the nearest perfection I could attain. The motivation was *money*.",
+          "value": "Here are the answers to your questions. The task of remembering work I did fifty years ago revived in my aging mind the real motivation for all the diligence I spent in polishing stories and in drawing the ducks to the nearest perfection I could attain. The motivation was money.",
+          "bbox": [
+            {
+              "h": 52.665146212843,
+              "w": 283.53813709984763,
+              "x": 463.50352419969516,
+              "y": 416.82235982755344,
+              "confidence": 0.98,
+              "end_index": 282,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "In those days none of us at our drawing boards or in the offices of Western Publishing ever imagined the sale of \"Funny Animal\" comic books would last more than a few years. Western Publishing's top brass was quite obviously ashamed to be printing such trash on their mighty printing presses. My goal was to stretch my possible earning years by doing the most saleable work I could. After all, doing duck work was the easiest, most pleasant work I had ever done to earn money.",
+          "value": "In those days none of us at our drawing boards or in the offices of Western Publishing ever imagined the sale of \"Funny Animal\" comic books would last more than a few years. Western Publishing's top brass was quite obviously ashamed to be printing such trash on their mighty printing presses. My goal was to stretch my possible earning years by doing the most saleable work I could. After all, doing duck work was the easiest, most pleasant work I had ever done to earn money.",
+          "bbox": [
+            {
+              "h": 92.69038219321655,
+              "w": 280.0999745379193,
+              "x": 464.49376350514484,
+              "y": 470.4523446265245,
+              "confidence": 0.98,
+              "end_index": 475,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "215",
+              "value": "215",
+              "bbox": [
+                {
+                  "h": 6.447739853277472,
+                  "w": 15.746803568026012,
+                  "x": 599.1878479658918,
+                  "y": 587.3784991806403,
+                  "confidence": 0.9,
+                  "end_index": 2,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "215",
+          "bbox": [
+            {
+              "h": 6.45,
+              "w": 15.75,
+              "x": 599.19,
+              "y": 587.38,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "215"
+    }
+  ]
+}

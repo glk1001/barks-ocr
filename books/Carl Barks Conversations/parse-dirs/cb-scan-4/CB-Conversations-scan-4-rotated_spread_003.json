@@ -1,0 +1,320 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "160 CARL BARKS: CONVERSATIONS",
+              "value": "160 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.377390872117946,
+                  "w": 125.16064558522297,
+                  "x": 109.99787232636244,
+                  "y": 40.78759656595371,
+                  "confidence": 0.82,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "160 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.38,
+              "w": 125.16,
+              "x": 110.0,
+              "y": 40.79,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** How do you earn a Barkster award?",
+          "value": "MN: How do you earn a Barkster award?",
+          "bbox": [
+            {
+              "h": 10.77838410596027,
+              "w": 159.03937500000006,
+              "x": 109.35600000000001,
+              "y": 64.6703046357616,
+              "confidence": 0.8,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, I guess you have to have done something that sold a lot of comic books.",
+          "value": "CB: Oh, I guess you have to have done something that sold a lot of comic books.",
+          "bbox": [
+            {
+              "h": 24.71,
+              "w": 284.96,
+              "x": 106.46,
+              "y": 77.55,
+              "confidence": 1.0,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** What type of pen is that \\[on the Barkster figure]?",
+          "value": "MN: What type of pen is that [on the Barkster figure]?",
+          "bbox": [
+            {
+              "h": 12.220470306545357,
+              "w": 211.65717734136817,
+              "x": 108.79573763814787,
+              "y": 110.0572108207889,
+              "confidence": 0.76,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** That is a type that they dug up at the office, but I did my work with a very small penholder, and those little 356 Esterbrooks were a smaller pen than this one.",
+          "value": "CB: That is a type that they dug up at the office, but I did my work with a very small penholder, and those little 356 Esterbrooks were a smaller pen than this one.",
+          "bbox": [
+            {
+              "h": 35.48980132450332,
+              "w": 278.64750000000004,
+              "x": 106.990125,
+              "y": 123.03131125827817,
+              "confidence": 0.96,
+              "end_index": 167,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** How is Carl Barks different today than he was ten years ago?\n**CB:** Oh. . . . (pause) Gotten older.",
+          "value": "MN: How is Carl Barks different today than he was ten years ago?\nCB: Oh. . . . (pause) Gotten older.",
+          "bbox": [
+            {
+              "h": 24.479694419302607,
+              "w": 256.92888070455416,
+              "x": 108.46483972465703,
+              "y": 168.09477626953128,
+              "confidence": 0.96,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** Do you have any stories that are percolating in your mind, maybe, for the future? Or are you going to concentrate on other avenues?\n**CB:** Well, I would like to concentrate on other things, but I seem to have gotten trapped into writing a story for a future *Scrooge*.",
+          "value": "MN: Do you have any stories that are percolating in your mind, maybe, for the future? Or are you going to concentrate on other avenues?\nCB: Well, I would like to concentrate on other things, but I seem to have gotten trapped into writing a story for a future Scrooge.",
+          "bbox": [
+            {
+              "h": 50.91991304782775,
+              "w": 280.25904947718186,
+              "x": 107.96229415372525,
+              "y": 200.4820022460938,
+              "confidence": 0.96,
+              "end_index": 276,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** So we have that to look forward to sometime in the future?\n**CB:** If \"looking forward\" is the word for it, yes, it will be sometime in the future.",
+          "value": "MN: So we have that to look forward to sometime in the future?\nCB: If \"looking forward\" is the word for it, yes, it will be sometime in the future.",
+          "bbox": [
+            {
+              "h": 35.200706214272124,
+              "w": 282.8845686392436,
+              "x": 107.66753654368333,
+              "y": 258.62680546875004,
+              "confidence": 0.95,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** This is the last question: How would you like to be remembered?\n**CB:** Well, I would like to be remembered as a guy who did a good job.",
+          "value": "MN: This is the last question: How would you like to be remembered?\nCB: Well, I would like to be remembered as a guy who did a good job.",
+          "bbox": [
+            {
+              "h": 25.712955411585416,
+              "w": 272.3266285489711,
+              "x": 107.43951201648248,
+              "y": 303.8769267530488,
+              "confidence": 0.96,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**MN:** Well, I think all of your fans can certainly attest that you have done a good job. I thank you for talking with us today and appreciate your taking time out of your busy schedule.",
+          "value": "MN: Well, I think all of your fans can certainly attest that you have done a good job. I thank you for talking with us today and appreciate your taking time out of your busy schedule.",
+          "bbox": [
+            {
+              "h": 37.4672720322028,
+              "w": 280.68377943978663,
+              "x": 106.87198653058309,
+              "y": 336.03524644150156,
+              "confidence": 0.97,
+              "end_index": 186,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, thank you for feeling I was worth it.",
+          "value": "CB: Well, thank you for feeling I was worth it.",
+          "bbox": [
+            {
+              "h": 10.515496688741734,
+              "w": 176.12625000000003,
+              "x": 107.51587500000001,
+              "y": 375.4032317880795,
+              "confidence": 0.89,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Carl Barks Speaks with the Finnish Press - Markku Kivekas / 1993",
+          "md": "![Carl Barks Speaks with the Finnish Press - Markku Kivekas / 1993](CB-Conversations-scan-4-rotated_spread_003_page_1_image_2_v2.jpg)",
+          "url": "CB-Conversations-scan-4-rotated_spread_003_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 186.41726914896154,
+              "w": 304.10710403963424,
+              "x": 450.04169945693604,
+              "y": 109.0034210806498,
+              "confidence": 0.78,
+              "end_index": 89,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "Interview conducted on 27 September and 7 October 1993. Portions of this interview appeared in Danish *Aku Ankka* \\[Christmas Premium] 52B/1993. Reprinted by permission of Markku Kivekas and Sanoma Magazines, Finland.",
+          "value": "Interview conducted on 27 September and 7 October 1993. Portions of this interview appeared in Danish Aku Ankka [Christmas Premium] 52B/1993. Reprinted by permission of Markku Kivekas and Sanoma Magazines, Finland.",
+          "bbox": [
+            {
+              "h": 66.34523980564025,
+              "w": 163.97900061928357,
+              "x": 489.83194814691313,
+              "y": 316.767158917683,
+              "confidence": 0.97,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Tell us something about your career before Disney (*Calgary Eye-Opener*, etc.).",
+          "value": "Q: Tell us something about your career before Disney (Calgary Eye-Opener, etc.).",
+          "bbox": [
+            {
+              "h": 25.352115991806397,
+              "w": 261.48614041063263,
+              "x": 466.77298192168456,
+              "y": 402.44444952839183,
+              "confidence": 0.9,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Barks:** I was a common laborer with little education, always interested in drawing cartoons. Learned some of the techniques by copying famous artists' drawing styles. In the late 1920s I started submitting drawings and jokes to humor magazines. Sold enough cartoons and gags to the *Calgary Eye-Opener* to enable me to quit my laboring jobs and to eventually get hired by the magazine.",
+          "value": "Barks: I was a common laborer with little education, always interested in drawing cartoons. Learned some of the techniques by copying famous artists' drawing styles. In the late 1920s I started submitting drawings and jokes to humor magazines. Sold enough cartoons and gags to the Calgary Eye-Opener to enable me to quit my laboring jobs and to eventually get hired by the magazine.",
+          "bbox": [
+            {
+              "h": 75.71157615894037,
+              "w": 284.693625,
+              "x": 465.28875000000005,
+              "y": 429.2951523178809,
+              "confidence": 0.97,
+              "end_index": 387,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Q:** Why did you leave the Disney Studio in the early forties?\n**Barks:** I left the Disney Studios in November 1942 because I was in poor health and had to leave. I had found that the hot sunshine of the desert areas east of Los Angeles cleared up my allergies. It was a reckless gamble",
+          "value": "Q: Why did you leave the Disney Studio in the early forties?\nBarks: I left the Disney Studios in November 1942 because I was in poor health and had to leave. I had found that the hot sunshine of the desert areas east of Los Angeles cleared up my allergies. It was a reckless gamble",
+          "bbox": [
+            {
+              "h": 51.949175847942136,
+              "w": 283.20112814405496,
+              "x": 467.7045652391388,
+              "y": 517.7523401581556,
+              "confidence": 0.94,
+              "end_index": 288,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "160"
+    }
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 218 CARL BARKS: CONVERSATIONS",
+          "value": "218 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 12.015195685261055,
+              "w": 125.65609082626716,
+              "x": 109.01379415372524,
+              "y": 26.145753522770587,
+              "confidence": 0.9,
+              "end_index": 30,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "That was a wonderful place where ideas flowed like waterfalls, and in no time at all I was on my way upward to the glory days of \"The Good Duck Man.\"",
+          "value": "That was a wonderful place where ideas flowed like waterfalls, and in no time at all I was on my way upward to the glory days of \"The Good Duck Man.\"",
+          "bbox": [
+            {
+              "h": 35.45061153415587,
+              "w": 280.6707433843846,
+              "x": 107.32496754120619,
+              "y": 50.14518262314216,
+              "confidence": 0.98,
+              "end_index": 148,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## Question 3:",
+          "value": "Question 3:",
+          "bbox": [
+            {
+              "h": 9.114794170398262,
+              "w": 48.19206779368332,
+              "x": 107.29975949171114,
+              "y": 97.52331511766388,
+              "confidence": 0.94,
+              "end_index": 13,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "According to Barrier, \"In August 1950 a Western Publishing editor told Barks that 'Your public is clamoring to see more Donald Duck, à la Barks so we have decided to put your story-art combination back into the monthly magazines.'\" How did you respond to learning that you indeed had such a large public following that the company would change a policy decision because of public demand? Did you ask any more questions about how big an outcry there had been (i.e., how many complaints, etc.)? This seems to have been one of the only times the company actually indicated to you that you were receiving positive fan mail. Since this seems to have come just as you were finishing \"No Such Varmint\" and were presumably living in the warehouse at the time \\[NOTE: the letter reached Barks c/o the Scripps Institute, where his wife Clara was having cancer surgery], maybe it was a sufficient boost to your spirits that you didn't follow up on it? I've always wondered about this, and it now seems important to me to find out for the record what your response was to receiving that news.",
+          "value": "According to Barrier, \"In August 1950 a Western Publishing editor told Barks that 'Your public is clamoring to see more Donald Duck, à la Barks so we have decided to put your story-art combination back into the monthly magazines.'\" How did you respond to learning that you indeed had such a large public following that the company would change a policy decision because of public demand? Did you ask any more questions about how big an outcry there had been (i.e., how many complaints, etc.)? This seems to have been one of the only times the company actually indicated to you that you were receiving positive fan mail. Since this seems to have come just as you were finishing \"No Such Varmint\" and were presumably living in the warehouse at the time [NOTE: the letter reached Barks c/o the Scripps Institute, where his wife Clara was having cancer surgery], maybe it was a sufficient boost to your spirits that you didn't follow up on it? I've always wondered about this, and it now seems important to me to find out for the record what your response was to receiving that news.",
+          "bbox": [
+            {
+              "h": 207.95280889981908,
+              "w": 286.12600072051265,
+              "x": 102.36182442716274,
+              "y": 110.46895671565362,
+              "confidence": 0.98,
+              "end_index": 1079,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## In reply to Question 3:",
+          "value": "In reply to Question 3:",
+          "bbox": [
+            {
+              "h": 11.421239534108231,
+              "w": 92.51334128477517,
+              "x": 101.20346884527441,
+              "y": 329.64434314024396,
+              "confidence": 0.93,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "The August 1950 information from the editors that the public wanted to see my ten-page stories returned to WDC&S was most likely by a letter which Barrier saw when he was at my home interviewing me. The letter was most likely written by Tom McKimson.",
+          "value": "The August 1950 information from the editors that the public wanted to see my ten-page stories returned to WDC&S was most likely by a letter which Barrier saw when he was at my home interviewing me. The letter was most likely written by Tom McKimson.",
+          "bbox": [
+            {
+              "h": 67.63560327267534,
+              "w": 280.0633521133051,
+              "x": 99.6093446044922,
+              "y": 342.8092203029726,
+              "confidence": 0.98,
+              "end_index": 249,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I don't remember feeling any great gloating over learning that the company had changed a policy because of my stories' popularity. I was more concerned about the extra pressure it would have put on my working time. The long stories were easier to write and more fun to draw. I was really being demoted back to a harder job.",
+          "value": "I don't remember feeling any great gloating over learning that the company had changed a policy because of my stories' popularity. I was more concerned about the extra pressure it would have put on my working time. The long stories were easier to write and more fun to draw. I was really being demoted back to a harder job.",
+          "bbox": [
+            {
+              "h": 67.38311850228659,
+              "w": 283.38512937369,
+              "x": 97.58428543909585,
+              "y": 408.7754315739331,
+              "confidence": 0.98,
+              "end_index": 322,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "As for the company's policy of never telling me about fan letters, I am glad they didn't. Such letters would have cost me time to read and would have gotten me self-conscious about my writing and drawing. I would have liked to receive a few words of summation once in a while from the editors telling me the trend of how the readers praised or booed, but the editors \\[sic] probably feared I would ask for a raise.",
+          "value": "As for the company's policy of never telling me about fan letters, I am glad they didn't. Such letters would have cost me time to read and would have gotten me self-conscious about my writing and drawing. I would have liked to receive a few words of summation once in a while from the editors telling me the trend of how the readers praised or booed, but the editors [sic] probably feared I would ask for a raise.",
+          "bbox": [
+            {
+              "h": 80.2528923447028,
+              "w": 284.32033799185405,
+              "x": 95.74454237923973,
+              "y": 475.1937824028202,
+              "confidence": 0.99,
+              "end_index": 413,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "219",
+          "value": "219",
+          "bbox": [
+            {
+              "h": 10.122480000000001,
+              "w": 100.944,
+              "x": 649.4064000000001,
+              "y": 41.680800000000005,
+              "confidence": 0.91,
+              "end_index": 2,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# Comments from a Phone Conversation",
+          "value": "Comments from a Phone Conversation",
+          "bbox": [
+            {
+              "h": 11.163892809760874,
+              "w": 203.48774063929113,
+              "x": 468.76578279820893,
+              "y": 62.69584475454936,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "\"After the strike at Disney's, there was a time clock, and we were expected to be there every day from about 8:00 to 5:00. I was not one of the strikers, though. In fact, none of us in the story department were out on strike. We were just coming through the strike lines every morning to work. The animators and the in-betweeners were the ones who were striking, but there was no hostility toward us. They didn't mind that we were doing more stories, because it would mean more work for them when they came back.\"",
+          "value": "\"After the strike at Disney's, there was a time clock, and we were expected to be there every day from about 8:00 to 5:00. I was not one of the strikers, though. In fact, none of us in the story department were out on strike. We were just coming through the strike lines every morning to work. The animators and the in-betweeners were the ones who were striking, but there was no hostility toward us. They didn't mind that we were doing more stories, because it would mean more work for them when they came back.\"",
+          "bbox": [
+            {
+              "h": 102.41568000000001,
+              "w": 280.96080000000006,
+              "x": 467.70720000000006,
+              "y": 83.36160000000001,
+              "confidence": 0.89,
+              "end_index": 512,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\"I had to move out before the divorce was even filed, and it wasn't finalized for a year or so. When I had moved into that warehouse and finally got that divorce, I felt so free. All those years of battling with that drunken woman were over, and I just felt as if a huge load was lifted off my shoulders.\"",
+          "value": "\"I had to move out before the divorce was even filed, and it wasn't finalized for a year or so. When I had moved into that warehouse and finally got that divorce, I felt so free. All those years of battling with that drunken woman were over, and I just felt as if a huge load was lifted off my shoulders.\"",
+          "bbox": [
+            {
+              "h": 61.33032000000003,
+              "w": 284.32560000000007,
+              "x": 466.86600000000004,
+              "y": 201.25872000000004,
+              "confidence": 0.83,
+              "end_index": 304,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\"Age depends on how well you get along with your problems.\"",
+          "value": "\"Age depends on how well you get along with your problems.\"",
+          "bbox": [
+            {
+              "h": 11.857175533536553,
+              "w": 246.306110970846,
+              "x": 467.4853691644437,
+              "y": 280.1258251643484,
+              "confidence": 0.82,
+              "end_index": 58,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## Handwritten Responses",
+          "value": "Handwritten Responses",
+          "bbox": [
+            {
+              "h": 12.848216372903961,
+              "w": 126.17018225990861,
+              "x": 467.60278132145584,
+              "y": 313.0910076076601,
+              "confidence": 0.97,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** When were your mother and father born?",
+          "value": "DA: When were your mother and father born?",
+          "bbox": [
+            {
+              "h": 10.25260927152317,
+              "w": 181.64662500000003,
+              "x": 467.39175000000006,
+              "y": 334.12990728476825,
+              "confidence": 0.82,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** My father was born in March 1858. The date was Mar. 4, I think. My mother was born in March 1860. The date was March 15, I think. Anyway, both were born in March, as was I, making March a birthday month that none of us celebrated.",
+          "value": "CB: My father was born in March 1858. The date was Mar. 4, I think. My mother was born in March 1860. The date was March 15, I think. Anyway, both were born in March, as was I, making March a birthday month that none of us celebrated.",
+          "bbox": [
+            {
+              "h": 48.82607999999999,
+              "w": 283.48440000000005,
+              "x": 467.70720000000006,
+              "y": 347.14152,
+              "confidence": 0.83,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** Where did you live during the trial period and after at Disney's?",
+          "value": "DA: Where did you live during the trial period and after at Disney's?",
+          "bbox": [
+            {
+              "h": 14.195920529801299,
+              "w": 266.55525,
+              "x": 465.28875000000005,
+              "y": 404.0579602649007,
+              "confidence": 0.56,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I lived in apartment houses in walking distance of the Disney Studio. Wages for the trial period were $15.00 a week (if you were accepted). After that, wages went up to $18.00 a week. I was started at $20.00 a week because I had to send money to my in-laws who were raising my two daughters. The last two days between paychecks, I often had only fig bars to eat. My girl friend who came with me from Minneapolis quickly got a job in a printing plant for wages about the same as Disney's paid me. She was a very beautiful woman, who in Hollywood circles could have been a stand-in for Marlene Dietrich.",
+          "value": "CB: I lived in apartment houses in walking distance of the Disney Studio. Wages for the trial period were $15.00 a week (if you were accepted). After that, wages went up to $18.00 a week. I was started at $20.00 a week because I had to send money to my in-laws who were raising my two daughters. The last two days between paychecks, I often had only fig bars to eat. My girl friend who came with me from Minneapolis quickly got a job in a printing plant for wages about the same as Disney's paid me. She was a very beautiful woman, who in Hollywood circles could have been a stand-in for Marlene Dietrich.",
+          "bbox": [
+            {
+              "h": 114.35602649006626,
+              "w": 284.43075,
+              "x": 465.28875000000005,
+              "y": 418.253880794702,
+              "confidence": 0.84,
+              "end_index": 608,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** When did you purchase the San Jacinto property?",
+          "value": "DA: When did you purchase the San Jacinto property?",
+          "bbox": [
+            {
+              "h": 11.908800000000042,
+              "w": 210.3,
+              "x": 466.0248000000001,
+              "y": 543.04128,
+              "confidence": 0.81,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I bought the San Jacinto place about 1940. My wife and I drove out",
+          "value": "CB: I bought the San Jacinto place about 1940. My wife and I drove out",
+          "bbox": [
+            {
+              "h": 11.829933774834444,
+              "w": 278.6475,
+              "x": 466.34025,
+              "y": 556.0068874172186,
+              "confidence": 0.83,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "219"
+    }
+  ]
+}

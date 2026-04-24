@@ -1,0 +1,568 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "236 INDEX\nINDEX",
+              "value": "236 INDEX\nINDEX",
+              "bbox": [
+                {
+                  "h": 8.837434544409776,
+                  "w": 45.20023672708651,
+                  "x": 87.37027305640245,
+                  "y": 25.63865881615616,
+                  "confidence": 0.83,
+                  "end_index": 14,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "236 INDEX\nINDEX",
+          "bbox": [
+            {
+              "h": 8.84,
+              "w": 45.2,
+              "x": 87.37,
+              "y": 25.64,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Magica DeSpell, xxiv, 112-13, 158, 177\nMaltin, Leonard, xi\nMarriage: first, 59-61, 184-85; second, 64-65, 181-84, 217, 219-20; third, 67-68, 183-84, 187\nMarvel comics, 29, 129\nMattelart, Armand, 213\nMcCay, Winsor, 89, 91, 126, 142, 198\nMcKimson, Tom, xvi, xxiii, 218\nMemory, 25\nMetabolife, 216\nMeyers, Russell, 225\nMickey Mouse, 6, 41, 118-19, 143, 146, 175, 201\nMickey Mouse comic strip, 70-71, 91-92, 132-33, 177, 200-01, 203\nModel sheets, 7\n\"Modern Inventions\" (animated cartoon, released in 1937), 19, 37-40, 43, 50, 92, 175, 202\nMotivation, as theme, 144, 209",
+          "value": "Magica DeSpell, xxiv, 112-13, 158, 177\nMaltin, Leonard, xi\nMarriage: first, 59-61, 184-85; second, 64-65, 181-84, 217, 219-20; third, 67-68, 183-84, 187\nMarvel comics, 29, 129\nMattelart, Armand, 213\nMcCay, Winsor, 89, 91, 126, 142, 198\nMcKimson, Tom, xvi, xxiii, 218\nMemory, 25\nMetabolife, 216\nMeyers, Russell, 225\nMickey Mouse, 6, 41, 118-19, 143, 146, 175, 201\nMickey Mouse comic strip, 70-71, 91-92, 132-33, 177, 200-01, 203\nModel sheets, 7\n\"Modern Inventions\" (animated cartoon, released in 1937), 19, 37-40, 43, 50, 92, 175, 202\nMotivation, as theme, 144, 209",
+          "bbox": [
+            {
+              "h": 240.41833582495718,
+              "w": 135.78484915979897,
+              "x": 85.1960506115425,
+              "y": 48.38584225716941,
+              "confidence": 0.92,
+              "end_index": 563,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 21.29,
+              "w": 123.55,
+              "x": 85.96,
+              "y": 47.06,
+              "confidence": 1.0,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 9.99,
+              "w": 66.77,
+              "x": 86.22,
+              "y": 69.4,
+              "confidence": 0.92,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 39
+            },
+            {
+              "h": 30.76,
+              "w": 132.23,
+              "x": 86.22,
+              "y": 80.97,
+              "confidence": 0.92,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 59
+            },
+            {
+              "h": 8.94,
+              "w": 81.49,
+              "x": 86.75,
+              "y": 114.09,
+              "confidence": 0.92,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 153
+            },
+            {
+              "h": 8.94,
+              "w": 82.28,
+              "x": 86.75,
+              "y": 124.87,
+              "confidence": 0.92,
+              "end_index": 197,
+              "label": "text",
+              "start_index": 176
+            },
+            {
+              "h": 9.73,
+              "w": 134.85,
+              "x": 85.7,
+              "y": 135.65,
+              "confidence": 0.92,
+              "end_index": 234,
+              "label": "text",
+              "start_index": 199
+            },
+            {
+              "h": 8.68,
+              "w": 106.73,
+              "x": 85.96,
+              "y": 147.22,
+              "confidence": 0.92,
+              "end_index": 265,
+              "label": "text",
+              "start_index": 236
+            },
+            {
+              "h": 9.73,
+              "w": 44.69,
+              "x": 85.96,
+              "y": 157.73,
+              "confidence": 0.92,
+              "end_index": 276,
+              "label": "text",
+              "start_index": 267
+            },
+            {
+              "h": 8.94,
+              "w": 56.52,
+              "x": 86.22,
+              "y": 168.77,
+              "confidence": 0.92,
+              "end_index": 292,
+              "label": "text",
+              "start_index": 278
+            },
+            {
+              "h": 8.94,
+              "w": 71.76,
+              "x": 85.96,
+              "y": 179.81,
+              "confidence": 0.92,
+              "end_index": 313,
+              "label": "text",
+              "start_index": 294
+            },
+            {
+              "h": 19.98,
+              "w": 124.6,
+              "x": 85.7,
+              "y": 190.86,
+              "confidence": 0.92,
+              "end_index": 361,
+              "label": "text",
+              "start_index": 315
+            },
+            {
+              "h": 19.716556291390702,
+              "w": 135.380625,
+              "x": 85.69725000000001,
+              "y": 212.67592052980137,
+              "confidence": 0.92,
+              "end_index": 426,
+              "label": "text",
+              "start_index": 363
+            },
+            {
+              "h": 9.46,
+              "w": 57.04,
+              "x": 85.17,
+              "y": 234.5,
+              "confidence": 0.92,
+              "end_index": 442,
+              "label": "text",
+              "start_index": 428
+            },
+            {
+              "h": 31.81,
+              "w": 130.12,
+              "x": 85.7,
+              "y": 245.54,
+              "confidence": 0.92,
+              "end_index": 532,
+              "label": "text",
+              "start_index": 444
+            },
+            {
+              "h": 8.68,
+              "w": 108.57,
+              "x": 85.96,
+              "y": 279.19,
+              "confidence": 0.92,
+              "end_index": 563,
+              "label": "text",
+              "start_index": 534
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Nash, Clarence \"Ducky,\" 163\nNational Geographic Magazine, xxv, 10, 32-33, 67, 73, 110, 150, 169, 183\nNeighbor Jones, xxiv, 7\nNephews, Donald's (Huey, Dewey, and Louie), 83, 107, 113, 124, 129, 138-39, 159, 172\nNon-animal characters, 11, 23-24, 29, 100-01, 119, 151-53",
+          "value": "Nash, Clarence \"Ducky,\" 163\nNational Geographic Magazine, xxv, 10, 32-33, 67, 73, 110, 150, 169, 183\nNeighbor Jones, xxiv, 7\nNephews, Donald's (Huey, Dewey, and Louie), 83, 107, 113, 124, 129, 138-39, 159, 172\nNon-animal characters, 11, 23-24, 29, 100-01, 119, 151-53",
+          "bbox": [
+            {
+              "h": 108.42598759527442,
+              "w": 136.6297946777344,
+              "x": 84.66326915610709,
+              "y": 303.2601278391769,
+              "confidence": 0.87,
+              "end_index": 266,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 42.06,
+              "w": 128.02,
+              "x": 84.91,
+              "y": 302.85,
+              "confidence": 1.0,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 65.2,
+              "w": 138.01,
+              "x": 84.65,
+              "y": 346.49,
+              "confidence": 1.0,
+              "end_index": 266,
+              "label": "text",
+              "start_index": 101
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Oil paintings, by Barks, 18, 117-18; for Disney, xiv, xxviii-xxix, 107, 117-18, 122, 139, 152-53, 168, 170-71, 178-79, 193-96, 205\nOriginal artwork, destruction of, 90, 163",
+          "value": "Oil paintings, by Barks, 18, 117-18; for Disney, xiv, xxviii-xxix, 107, 117-18, 122, 139, 152-53, 168, 170-71, 178-79, 193-96, 205\nOriginal artwork, destruction of, 90, 163",
+          "bbox": [
+            {
+              "h": 64.466477972561,
+              "w": 137.14961521353374,
+              "x": 84.66103386706843,
+              "y": 426.4604278868141,
+              "confidence": 0.92,
+              "end_index": 171,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Packer, Eleanor, xv, 47, 64, 125\nPage layout, 11, 137-38\nPassport problems, 173-74",
+          "value": "Packer, Eleanor, xv, 47, 64, 125\nPage layout, 11, 137-38\nPassport problems, 173-74",
+          "bbox": [
+            {
+              "h": 32.43207827743904,
+              "w": 110.84381965451125,
+              "x": 84.17895026974563,
+              "y": 506.2089179925687,
+              "confidence": 0.97,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Pay, xviii, 14-15, 37, 50, 73, 110-12, 156, 175, 184, 202, 219\nPeanuts (comic strip), 214\nPolitical views, 108, 210-11, 213-14\nPopular Mechanics, 106\nPopular Science, xxv, 32-33",
+          "value": "Pay, xviii, 14-15, 37, 50, 73, 110-12, 156, 175, 184, 202, 219\nPeanuts (comic strip), 214\nPolitical views, 108, 210-11, 213-14\nPopular Mechanics, 106\nPopular Science, xxv, 32-33",
+          "bbox": [
+            {
+              "h": 64.51247817323268,
+              "w": 131.9533320788872,
+              "x": 232.84085502810598,
+              "y": 49.0877364454316,
+              "confidence": 0.97,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Raymond, Alex (Flash Gordon), 17, 24, 43, 134, 143\nReadership, attitude toward, 11, 35, 46, 106-07, 126, 135, 166, 209\nRecognition, attitude toward, 115, 136, 159, 218\nReeves, Harry, 20, 43, 51-52, 156, 175\nRosa, Don, 178, 207\nRunning gag, 38, 125",
+          "value": "Raymond, Alex (Flash Gordon), 17, 24, 43, 134, 143\nReadership, attitude toward, 11, 35, 46, 106-07, 126, 135, 166, 209\nRecognition, attitude toward, 115, 136, 159, 218\nReeves, Harry, 20, 43, 51-52, 156, 175\nRosa, Don, 178, 207\nRunning gag, 38, 125",
+          "bbox": [
+            {
+              "h": 97.72315605111474,
+              "w": 139.17054817311362,
+              "x": 231.65741662299928,
+              "y": 124.97979292468563,
+              "confidence": 0.96,
+              "end_index": 246,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Sales, comic book. See Circulation\nScarpa, Romano, xxxi\nScripps Memorial Hospital, xxii, 182, 217\nSegar, Elzie C. (Popeye), 17, 24, 133, 142-43, 199, 212-13\nSerigraphs, 168\nSherman, George, xviii, xxviii, 153, 193\nSight gags. See Gags, action\nSincerity, in character construction, 196\nSpawn, 208\nSpeedwell Boys on Motorcycles, The (Edward Stratemeyer), xix\nSpicer, John, xxvii, 30, 116\nSpiderman, 207\nSpielberg, Steven, xii, 162\nSplash panels, 7, 101-03\nStories: \"A Cold Bargain\" (US #17), 210-11; \"A Letter to Santa\" (Christmas Parade #1), 182; \"A Spicy Tale\" (US #39), 49; \"Back to the Klondike\" (FC #456 a.k.a. US #2), xxxii, 49, 76, 103; \"Christmas on Bear Mountain\" (FC #178), 13, 27, 84; \"Cyclone\" story (WDC&S #126), 87; \"Dangerous Disguise\" (FC #308), 23, 100, 119, 151; \"Donald Duck Finds Pirate Gold\" (FC #9), xv,",
+          "value": "Sales, comic book. See Circulation\nScarpa, Romano, xxxi\nScripps Memorial Hospital, xxii, 182, 217\nSegar, Elzie C. (Popeye), 17, 24, 133, 142-43, 199, 212-13\nSerigraphs, 168\nSherman, George, xviii, xxviii, 153, 193\nSight gags. See Gags, action\nSincerity, in character construction, 196\nSpawn, 208\nSpeedwell Boys on Motorcycles, The (Edward Stratemeyer), xix\nSpicer, John, xxvii, 30, 116\nSpiderman, 207\nSpielberg, Steven, xii, 162\nSplash panels, 7, 101-03\nStories: \"A Cold Bargain\" (US #17), 210-11; \"A Letter to Santa\" (Christmas Parade #1), 182; \"A Spicy Tale\" (US #39), 49; \"Back to the Klondike\" (FC #456 a.k.a. US #2), xxxii, 49, 76, 103; \"Christmas on Bear Mountain\" (FC #178), 13, 27, 84; \"Cyclone\" story (WDC&S #126), 87; \"Dangerous Disguise\" (FC #308), 23, 100, 119, 151; \"Donald Duck Finds Pirate Gold\" (FC #9), xv,",
+          "bbox": [
+            {
+              "h": 305.1963821670161,
+              "w": 138.23686105421112,
+              "x": 231.09397351371956,
+              "y": 234.21068431068983,
+              "confidence": 0.92,
+              "end_index": 822,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 43.11,
+              "w": 125.65,
+              "x": 231.86,
+              "y": 233.44,
+              "confidence": 1.0,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 262.1,
+              "w": 136.96,
+              "x": 231.33,
+              "y": 277.35,
+              "confidence": 1.0,
+              "end_index": 822,
+              "label": "text",
+              "start_index": 98
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nINDEX 237\nINDEX\n\\</page_header>",
+          "value": "<page_header>\nINDEX 237\nINDEX\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.849057583841466,
+              "w": 43.52865377286585,
+              "x": 693.8903198837654,
+              "y": 23.757809489627007,
+              "confidence": 0.88,
+              "end_index": 45,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "xxi, 5-6, 157-58, 175-76; \"Feebrunkle's Fix-it Guide\" (WDC&S #161), xxvi; \"Forbidden Valley\" (DD #54), 162; \"Golden Apples, The\" (unpublished), 152; \"Golden Christmas Tree, The,\" 33; \"Golden Helmet, The\" (FC #408), xxii, 27; \"Horse-Radish\" story (FC #495 a.k.a. US #3), 123-24; \"Horsing Around with History,\" 168, 179; \"In Old California,\" xxii, 10, 12-13, 35, 72, 104, 180; \"Land Beneath the Ground\" (Terries and Fermies), 95-96; \"Land of the Totem Poles,\" 87; \"Lifeguard Story\" (1943), 151; \"Lost in the Andes\" (the square egg story) (FC #223), 12-13, 27, 87, 96, 102, 166, 179; \"Micro-Ducks from Outer Space\" (US #65), 88, 180; \"Milkman\" story (originally unpublished), 110, 152; \"Mummy's Ring, The\" (FC #29), xv, 47-48, 64, 125; \"Mystery of the Swamp\" (Gneezles story) (FC #62), 95; \"No Such Varmint\" (FC #318), xxii, 217; \"Northeaster on Cape Quack\" (WDC&S #256), xxvi; \"Old Castle's Secret, The\" (FC #189), 13, 104; \"Omelette\" (chicken farm story) (WDC&S #178), 117, 179; \"Only a Poor Old Man\" (US #1 a.k.a. FC #386), 27, 83, 98; \"Pawn of the Loup Garou\" (DD #117), 12; \"Quiet Neighborhood\" (WDC&S #178), 117, 180; \"Rabbit's Foot\" story (WDC&S #32), 47, 82, 191; \"Riddle of the Red Hat\" (FC #79), 118, 201; \"Seven Cities of Cibola, The\" (US #7), xii; \"Silent Night\" (Christmas caroling story), 34, 110, 152; \"Tralla La\" (US #6), 125; \"Treasure of Marco Polo, The\" (US #64), 213-14; \"Vacation Time\" (forest fire story) (Vacation Parade #1), 13, 87, 103-04, 182, 217; \"Victory Garden\" story (WDC&S #31), 47",
+          "value": "xxi, 5-6, 157-58, 175-76; \"Feebrunkle's Fix-it Guide\" (WDC&S #161), xxvi; \"Forbidden Valley\" (DD #54), 162; \"Golden Apples, The\" (unpublished), 152; \"Golden Christmas Tree, The,\" 33; \"Golden Helmet, The\" (FC #408), xxii, 27; \"Horse-Radish\" story (FC #495 a.k.a. US #3), 123-24; \"Horsing Around with History,\" 168, 179; \"In Old California,\" xxii, 10, 12-13, 35, 72, 104, 180; \"Land Beneath the Ground\" (Terries and Fermies), 95-96; \"Land of the Totem Poles,\" 87; \"Lifeguard Story\" (1943), 151; \"Lost in the Andes\" (the square egg story) (FC #223), 12-13, 27, 87, 96, 102, 166, 179; \"Micro-Ducks from Outer Space\" (US #65), 88, 180; \"Milkman\" story (originally unpublished), 110, 152; \"Mummy's Ring, The\" (FC #29), xv, 47-48, 64, 125; \"Mystery of the Swamp\" (Gneezles story) (FC #62), 95; \"No Such Varmint\" (FC #318), xxii, 217; \"Northeaster on Cape Quack\" (WDC&S #256), xxvi; \"Old Castle's Secret, The\" (FC #189), 13, 104; \"Omelette\" (chicken farm story) (WDC&S #178), 117, 179; \"Only a Poor Old Man\" (US #1 a.k.a. FC #386), 27, 83, 98; \"Pawn of the Loup Garou\" (DD #117), 12; \"Quiet Neighborhood\" (WDC&S #178), 117, 180; \"Rabbit's Foot\" story (WDC&S #32), 47, 82, 191; \"Riddle of the Red Hat\" (FC #79), 118, 201; \"Seven Cities of Cibola, The\" (US #7), xii; \"Silent Night\" (Christmas caroling story), 34, 110, 152; \"Tralla La\" (US #6), 125; \"Treasure of Marco Polo, The\" (US #64), 213-14; \"Vacation Time\" (forest fire story) (Vacation Parade #1), 13, 87, 103-04, 182, 217; \"Victory Garden\" story (WDC&S #31), 47",
+          "bbox": [
+            {
+              "h": 491.69944242151786,
+              "w": 135.18061359089174,
+              "x": 465.28248868616623,
+              "y": 48.23301646281918,
+              "confidence": 0.98,
+              "end_index": 1509,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Story construction, 8, 10, 12-13, 22, 33, 41-42, 47-48, 71-72, 82, 83, 84-85, 92-93, 95-96, 104, 112, 123-28, 137-38, 144, 209, 221\nStory ideas, 10, 76-77, 95, 122, 128-29, 130, 178, 197\nStoryboards, xv, 22, 41-42, 69, 137-38, 148, 170\nStrobl, Tony, 207\nStudio layout, 8\nSummer, Edward, xxix\nSuperman, 14, 15, 23, 46, 93, 102, 106, 115-16, 129, 191, 205\nSuperman vs. Donald Duck, 115-16",
+          "value": "Story construction, 8, 10, 12-13, 22, 33, 41-42, 47-48, 71-72, 82, 83, 84-85, 92-93, 95-96, 104, 112, 123-28, 137-38, 144, 209, 221\nStory ideas, 10, 76-77, 95, 122, 128-29, 130, 178, 197\nStoryboards, xv, 22, 41-42, 69, 137-38, 148, 170\nStrobl, Tony, 207\nStudio layout, 8\nSummer, Edward, xxix\nSuperman, 14, 15, 23, 46, 93, 102, 106, 115-16, 129, 191, 205\nSuperman vs. Donald Duck, 115-16",
+          "bbox": [
+            {
+              "h": 152.81646489436454,
+              "w": 133.11823699504566,
+              "x": 602.3325803163111,
+              "y": 46.47664999940454,
+              "confidence": 0.97,
+              "end_index": 385,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Taboos. See Censorship\nTaliaferro, Al (Donald Duck comic strip artist), 106\nTank, Gerhard \"Gerry,\" xxx, 204\nTelevision, influence on decline of comic book sales, 17, 114\nTheme. See Motivation\nThompson, Don and Maggie, x, xiii, xxviii\nTiming: comic book, xxiv, 70-71; comic book vs. animation, 66-67, 70",
+          "value": "Taboos. See Censorship\nTaliaferro, Al (Donald Duck comic strip artist), 106\nTank, Gerhard \"Gerry,\" xxx, 204\nTelevision, influence on decline of comic book sales, 17, 114\nTheme. See Motivation\nThompson, Don and Maggie, x, xiii, xxviii\nTiming: comic book, xxiv, 70-71; comic book vs. animation, 66-67, 70",
+          "bbox": [
+            {
+              "h": 118.75483427258003,
+              "w": 138.87268495141006,
+              "x": 605.8372129858996,
+              "y": 212.8814119593179,
+              "confidence": 0.96,
+              "end_index": 301,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 31.28,
+              "w": 133.28,
+              "x": 605.4,
+              "y": 213.46,
+              "confidence": 1.0,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.78,
+              "w": 114.09,
+              "x": 605.93,
+              "y": 244.75,
+              "confidence": 0.96,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 76
+            },
+            {
+              "h": 21.82,
+              "w": 136.69,
+              "x": 606.19,
+              "y": 255.53,
+              "confidence": 0.96,
+              "end_index": 168,
+              "label": "text",
+              "start_index": 108
+            },
+            {
+              "h": 9.2,
+              "w": 80.97,
+              "x": 606.72,
+              "y": 278.4,
+              "confidence": 0.96,
+              "end_index": 190,
+              "label": "text",
+              "start_index": 170
+            },
+            {
+              "h": 22.08,
+              "w": 124.34,
+              "x": 606.45,
+              "y": 288.91,
+              "confidence": 0.96,
+              "end_index": 232,
+              "label": "text",
+              "start_index": 192
+            },
+            {
+              "h": 21.56,
+              "w": 136.7,
+              "x": 607.24,
+              "y": 310.21,
+              "confidence": 1.0,
+              "end_index": 301,
+              "label": "text",
+              "start_index": 234
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Uncle Scrooge comic book, xxiv, 4, 46, 49, 78, 83, 87, 98, 106-07, 117, 138\nUncle Scrooge McDuck, xi, xvi, xxiv, 13, 23, 27, 44-46, 48-49, 71-72, 78-79, 83-84, 87-88, 94-95, 98-100, 112-13, 117, 124, 138, 141, 143, 159, 162-64, 167-68, 170, 176-77, 179, 200, 224",
+          "value": "Uncle Scrooge comic book, xxiv, 4, 46, 49, 78, 83, 87, 98, 106-07, 117, 138\nUncle Scrooge McDuck, xi, xvi, xxiv, 13, 23, 27, 44-46, 48-49, 71-72, 78-79, 83-84, 87-88, 94-95, 98-100, 112-13, 117, 124, 138, 141, 143, 159, 162-64, 167-68, 170, 176-77, 179, 200, 224",
+          "bbox": [
+            {
+              "h": 87.06835015243908,
+              "w": 136.98432278963418,
+              "x": 607.7803240758384,
+              "y": 346.3389013719513,
+              "confidence": 0.98,
+              "end_index": 261,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Van Horn, William, 168, 177\nViet Nam, 214",
+          "value": "Van Horn, William, 168, 177\nViet Nam, 214",
+          "bbox": [
+            {
+              "h": 21.055478306021346,
+              "w": 100.42876900724086,
+              "x": 609.1811052067454,
+              "y": 447.65021490091476,
+              "confidence": 0.97,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Walt Disney's Comics and Stories (WDC&S), xvi, xviii, xxi, xxv, xxx, 6, 8, 9, 16, 26-27, 45-46, 82, 87, 106-07, 216, 217",
+          "value": "Walt Disney's Comics and Stories (WDC&S), xvi, xviii, xxi, xxv, xxx, 6, 8, 9, 16, 26-27, 45-46, 82, 87, 106-07, 216, 217",
+          "bbox": [
+            {
+              "h": 43.827470121951265,
+              "w": 136.4320248189787,
+              "x": 610.3254730135291,
+              "y": 482.7339328410824,
+              "confidence": 0.9,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Warehouse period, 183, 217-18",
+          "value": "Warehouse period, 183, 217-18",
+          "bbox": [
+            {
+              "h": 10.669919173971055,
+              "w": 111.71696612995424,
+              "x": 611.0175735994666,
+              "y": 527.3639223132623,
+              "confidence": 0.9,
+              "end_index": 28,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

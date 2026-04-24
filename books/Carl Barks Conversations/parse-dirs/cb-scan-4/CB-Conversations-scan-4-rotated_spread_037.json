@@ -1,0 +1,304 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# Notes on the Interviewers",
+          "value": "Notes on the Interviewers",
+          "bbox": [
+            {
+              "h": 9.463947019867547,
+              "w": 96.21225000000004,
+              "x": 623.5395000000001,
+              "y": 25.76296688741722,
+              "confidence": 0.94,
+              "end_index": 26,
+              "label": "header",
+              "start_index": 0
+            },
+            {
+              "h": 10.778384105960267,
+              "w": 121.71112500000002,
+              "x": 91.21762500000001,
+              "y": 29.96916556291391,
+              "confidence": 0.94,
+              "end_index": 26,
+              "label": "header",
+              "start_index": 0
+            },
+            {
+              "h": 9.46,
+              "w": 96.21,
+              "x": 623.54,
+              "y": 25.76,
+              "confidence": 1.0,
+              "end_index": 26,
+              "label": "header",
+              "start_index": 2
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**E. B. Boatner** is a freelance writer and photographer who currently writes for *Lavender* magazine, based in the Twin Cities. The inscription in E. B. Boatner's publisher's proof edition of *The Fine Art of Walt Disney's Donald Duck* by Carl Barks reads \"For Barbara Boatner, Uncle Scrooge's secretary, Carl Barks.\"",
+          "value": "E. B. Boatner is a freelance writer and photographer who currently writes for Lavender magazine, based in the Twin Cities. The inscription in E. B. Boatner's publisher's proof edition of The Fine Art of Walt Disney's Donald Duck by Carl Barks reads \"For Barbara Boatner, Uncle Scrooge's secretary, Carl Barks.\"",
+          "bbox": [
+            {
+              "h": 63.11664,
+              "w": 283.48440000000005,
+              "x": 91.69080000000001,
+              "y": 54.780480000000004,
+              "confidence": 0.87,
+              "end_index": 317,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "In 1969 **Glenn Bray** helped Bill Spicer produce *Graphic Story Magazine* #11, the first all Basil Woverton fanzine publication. In 1971 he met Carl Barks and suggested that Barks do oil paintings of his cartoon creations and commissioned Barks's first Disney oil painting, *A Tall Ship and a Star to Steer Her By*. He has published numerous collections of Wolverton's work (including *GJDRKZLXCBWQ Comics* and *Floopgoop Frolics*) and *The Illustrated Harvey Kurtzman Index*. He has produced many and various projects involving the work of Stanislav Szukalski.",
+          "value": "In 1969 Glenn Bray helped Bill Spicer produce Graphic Story Magazine #11, the first all Basil Woverton fanzine publication. In 1971 he met Carl Barks and suggested that Barks do oil paintings of his cartoon creations and commissioned Barks's first Disney oil painting, A Tall Ship and a Star to Steer Her By. He has published numerous collections of Wolverton's work (including GJDRKZLXCBWQ Comics and Floopgoop Frolics) and The Illustrated Harvey Kurtzman Index. He has produced many and various projects involving the work of Stanislav Szukalski.",
+          "bbox": [
+            {
+              "h": 100.16010596026493,
+              "w": 281.2762500000001,
+              "x": 91.217625,
+              "y": 132.75814569536425,
+              "confidence": 0.94,
+              "end_index": 561,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Paul Ciotti** has worked as a staff writer for the *Los Angeles Times* Sunday magazine and later for its View section. He has coauthored two books and has recently published *More with Less*, *Paul MacCready and the Dream of Efficient Flight*. He also wrote the screenplay for the 1991 movie *Ted and Venus*, which was based on his magazine article \"Love in Venice.\"",
+          "value": "Paul Ciotti has worked as a staff writer for the Los Angeles Times Sunday magazine and later for its View section. He has coauthored two books and has recently published More with Less, Paul MacCready and the Dream of Efficient Flight. He also wrote the screenplay for the 1991 movie Ted and Venus, which was based on his magazine article \"Love in Venice.\"",
+          "bbox": [
+            {
+              "h": 63.30258735708844,
+              "w": 284.35929588652823,
+              "x": 91.20865879858995,
+              "y": 248.7339834317836,
+              "confidence": 0.99,
+              "end_index": 367,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "A noted Disney connoisseur, **Sébastien Durand** spent ten years in various positions for Euro Disney and as an independent journalist for many magazines and radio and TV channels. He is currently editor for NRJ Group, France's leading radio group.",
+          "value": "A noted Disney connoisseur, Sébastien Durand spent ten years in various positions for Euro Disney and as an independent journalist for many magazines and radio and TV channels. He is currently editor for NRJ Group, France's leading radio group.",
+          "bbox": [
+            {
+              "h": 50.289392520960384,
+              "w": 284.23717522151304,
+              "x": 91.14829973323172,
+              "y": 326.28768912919213,
+              "confidence": 0.99,
+              "end_index": 247,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Bob Foster** is the creator of the underground comic book *Myron Moose Funnies* and has worked for many years as a writer and artist for various American and European comics.",
+          "value": "Bob Foster is the creator of the underground comic book Myron Moose Funnies and has worked for many years as a writer and artist for various American and European comics.",
+          "bbox": [
+            {
+              "h": 37.07289089176829,
+              "w": 279.554263469417,
+              "x": 91.22063043064026,
+              "y": 390.9035802210367,
+              "confidence": 0.97,
+              "end_index": 175,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Didier Ghez** has written for many Disney-related magazines. He is currently the Latin American producer for the Walt Disney Internet Group and is the author of the art-book *Disneyland Paris: From Sketch to Reality*.",
+          "value": "Didier Ghez has written for many Disney-related magazines. He is currently the Latin American producer for the Walt Disney Internet Group and is the author of the art-book Disneyland Paris: From Sketch to Reality.",
+          "bbox": [
+            {
+              "h": 50.19128476086131,
+              "w": 274.2781172768198,
+              "x": 90.9142643447504,
+              "y": 442.54885957031263,
+              "confidence": 0.99,
+              "end_index": 218,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Stephen Gong**, associate director of the University of California Berkeley Art Museum and Pacific Film Archive, writes and lectures on film history, preservation, and independent media. He has served as a program officer in the Media Arts Program at the National Endowment for the Arts and as",
+          "value": "Stephen Gong, associate director of the University of California Berkeley Art Museum and Pacific Film Archive, writes and lectures on film history, preservation, and independent media. He has served as a program officer in the Media Arts Program at the National Endowment for the Arts and as",
+          "bbox": [
+            {
+              "h": 50.74351763528957,
+              "w": 282.48178458162636,
+              "x": 91.0609105760528,
+              "y": 507.36940479706567,
+              "confidence": 0.99,
+              "end_index": 294,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "228–229",
+          "value": "228–229",
+          "bbox": [
+            {
+              "h": 16.076880000000003,
+              "w": 626.6940000000001,
+              "x": 116.08560000000001,
+              "y": 24.413040000000002,
+              "confidence": 0.93,
+              "end_index": 6,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "the associate director of the National Center for Film and Video Preservation at the American Film Institute. He has taught for the Asian American studies department at UC Berkeley and American studies at the University of Hawaii at Manoa.",
+          "value": "the associate director of the National Center for Film and Video Preservation at the American Film Institute. He has taught for the Asian American studies department at UC Berkeley and American studies at the University of Hawaii at Manoa.",
+          "bbox": [
+            {
+              "h": 54.09256625619284,
+              "w": 282.09603129763724,
+              "x": 462.83696977419976,
+              "y": 48.444854943549934,
+              "confidence": 0.98,
+              "end_index": 238,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Leonardo Gori** is one of Italy's most prominent comics collectors and critics. He is particularly knowledgeable about the American newspaper strips of the 1930s. Over the past quarter century he coauthored ten books, including a well-known reference on the Italian Disney authors, and he has been on the organizing committees of all the major Italian comics conventions. Now also a novelist, he recently published his third thriller.",
+          "value": "Leonardo Gori is one of Italy's most prominent comics collectors and critics. He is particularly knowledgeable about the American newspaper strips of the 1930s. Over the past quarter century he coauthored ten books, including a well-known reference on the Italian Disney authors, and he has been on the organizing committees of all the major Italian comics conventions. Now also a novelist, he recently published his third thriller.",
+          "bbox": [
+            {
+              "h": 79.41666285608804,
+              "w": 282.8872610041921,
+              "x": 464.8501574885671,
+              "y": 115.54292200481137,
+              "confidence": 0.99,
+              "end_index": 435,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "For more than thirty years **Bruce Hamilton** has been a collector, dealer, consultant, appraiser, and eventual comic book publisher and Disney licensee. He created Another Rainbow Publishing and Gladstone Publishing (with Russ Cochran) and was hands-on editor of *The Fine Art of Walt Disney's Donald Duck* by Carl Barks, *The Carl Barks Library*, and *The Carl Barks Library in Color*.",
+          "value": "For more than thirty years Bruce Hamilton has been a collector, dealer, consultant, appraiser, and eventual comic book publisher and Disney licensee. He created Another Rainbow Publishing and Gladstone Publishing (with Russ Cochran) and was hands-on editor of The Fine Art of Walt Disney's Donald Duck by Carl Barks, The Carl Barks Library, and The Carl Barks Library in Color.",
+          "bbox": [
+            {
+              "h": 79.76524323790017,
+              "w": 284.1362177972561,
+              "x": 466.87852262766773,
+              "y": 208.81738575171497,
+              "confidence": 0.99,
+              "end_index": 386,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Gottfried Helnwein**, who grew up in postwar Austria, was deeply influenced by Carl Barks's comics. One of the greatest conceptual artists of the past hundred years, he has won worldwide acclaim for his exhibitions and installations, which incorporate and transform an entire spectrum of cultural artifacts into totally original and brilliant aesthetic objects.",
+          "value": "Gottfried Helnwein, who grew up in postwar Austria, was deeply influenced by Carl Barks's comics. One of the greatest conceptual artists of the past hundred years, he has won worldwide acclaim for his exhibitions and installations, which incorporate and transform an entire spectrum of cultural artifacts into totally original and brilliant aesthetic objects.",
+          "bbox": [
+            {
+              "h": 66.89201239996189,
+              "w": 283.8703874571265,
+              "x": 469.16931195217234,
+              "y": 301.17018790015254,
+              "confidence": 0.98,
+              "end_index": 362,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Markku Kivekas** is editor in chief of *Aku Ankka* magazine, the most widely circulated periodical in Finland, distributing approximately 287,000 copies every week. In 1972 Kivekas wrote an article about Barks and sent a copy to him; Barks wrote back and thus began Kivekas's long-lasting friendship with the Duck Man.",
+          "value": "Markku Kivekas is editor in chief of Aku Ankka magazine, the most widely circulated periodical in Finland, distributing approximately 287,000 copies every week. In 1972 Kivekas wrote an article about Barks and sent a copy to him; Barks wrote back and thus began Kivekas's long-lasting friendship with the Duck Man.",
+          "bbox": [
+            {
+              "h": 67.07117340891769,
+              "w": 283.88110682641013,
+              "x": 470.98028427496195,
+              "y": 381.8182059689407,
+              "confidence": 0.99,
+              "end_index": 319,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Michael Naiman** has written articles for *Comicbook Marketplace* for the last ten years. Specializing in critical overviews on the world of comic collecting, he is a charter member and officer of the American Association of Comicbook Collectors, a senior advisor for Overstreet, a contributor to the *Overstreet Comicbook Price Guide* and *Overstreet-Carter Grading Guide*, an assistant to the Comic Con International, San Diego, and a consultant to Sotheby's and Christie's auction houses.",
+          "value": "Michael Naiman has written articles for Comicbook Marketplace for the last ten years. Specializing in critical overviews on the world of comic collecting, he is a charter member and officer of the American Association of Comicbook Collectors, a senior advisor for Overstreet, a contributor to the Overstreet Comicbook Price Guide and Overstreet-Carter Grading Guide, an assistant to the Comic Con International, San Diego, and a consultant to Sotheby's and Christie's auction houses.",
+          "bbox": [
+            {
+              "h": 92.97619594607477,
+              "w": 283.4994672256098,
+              "x": 473.2827947789635,
+              "y": 461.9340240091464,
+              "confidence": 0.99,
+              "end_index": 492,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "228"
+    }
+  ]
+}

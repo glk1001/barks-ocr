@@ -1,0 +1,463 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "DONALD AULT / 2000 225",
+              "value": "DONALD AULT / 2000 225",
+              "bbox": [
+                {
+                  "h": 11.19022580834366,
+                  "w": 78.45696722560972,
+                  "x": 633.0205316787349,
+                  "y": 27.463491519090613,
+                  "confidence": 0.9,
+                  "end_index": 21,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "DONALD AULT / 2000 225",
+          "bbox": [
+            {
+              "h": 11.19,
+              "w": 78.46,
+              "x": 633.02,
+              "y": 27.46,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "level": 1,
+          "md": "# 224 CARL BARKS: CONVERSATIONS",
+          "value": "224 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 9.075317940763146,
+              "w": 101.29439564476944,
+              "x": 110.98585755883194,
+              "y": 33.36165550924162,
+              "confidence": 0.94,
+              "end_index": 30,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well. There is. But first I've got to get things in such an order that the trust officers up at the Family Trust understand exactly where my situation is in so many different categories—all these damn royalty contracts, the mailing of letters and stuff from fans; they've got to understand what that stuff is about. It takes so long to teach that to them. They know about mortgages and real estate, and so on, but not about these kinds of flimsy little deals where the value is in a lot of people's imaginations. I've got that kind of problem: there's nobody higher up in the line of the Carl Barks Trust who understands what I am up against. Some of them—I know what was said by one of the trustees and her lawyer—that neither of them had *ever* read one of my comic books in their life. They didn't know what I had done. They didn't know.",
+          "value": "CB: Well. There is. But first I've got to get things in such an order that the trust officers up at the Family Trust understand exactly where my situation is in so many different categories—all these damn royalty contracts, the mailing of letters and stuff from fans; they've got to understand what that stuff is about. It takes so long to teach that to them. They know about mortgages and real estate, and so on, but not about these kinds of flimsy little deals where the value is in a lot of people's imaginations. I've got that kind of problem: there's nobody higher up in the line of the Carl Barks Trust who understands what I am up against. Some of them—I know what was said by one of the trustees and her lawyer—that neither of them had ever read one of my comic books in their life. They didn't know what I had done. They didn't know.",
+          "bbox": [
+            {
+              "h": 150.63449006622517,
+              "w": 283.90500000000003,
+              "x": 85.960125,
+              "y": 57.57234437086093,
+              "confidence": 0.88,
+              "end_index": 847,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Is this just a lawyer and an accountant?",
+          "value": "DA: Is this just a lawyer and an accountant?",
+          "bbox": [
+            {
+              "h": 8.675284768211895,
+              "w": 169.55437500000002,
+              "x": 87.01162500000001,
+              "y": 219.24810596026495,
+              "confidence": 0.84,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** They're lawyers—part of a big law firm up in Eugene. She works at Bank of America—she was a bookkeeper or a file clerk or something and she just gradually worked her way up until she is now in charge of the department that handles all these assets for people, and they no doubt have the assets of some really big outfits—big, rich people—so they don't want to spend much time with a guy like me who has only a very small percentage of their investments in their charge. Yeah. That was a shock to me when I noticed that neither of them had ever read one of my comics. They didn't know who Uncle Scrooge McDuck was, didn't know why he would be valuable. That was something they just couldn't understand. They thought that just because there was the name of Disney attached to this character Scrooge McDuck that he was just going to make all kinds of money. Anything that I could do that would have their likeness, the Trust could sell it and make scads of money. They didn't know who in the hell the characters were.",
+          "value": "CB: They're lawyers—part of a big law firm up in Eugene. She works at Bank of America—she was a bookkeeper or a file clerk or something and she just gradually worked her way up until she is now in charge of the department that handles all these assets for people, and they no doubt have the assets of some really big outfits—big, rich people—so they don't want to spend much time with a guy like me who has only a very small percentage of their investments in their charge. Yeah. That was a shock to me when I noticed that neither of them had ever read one of my comics. They didn't know who Uncle Scrooge McDuck was, didn't know why he would be valuable. That was something they just couldn't understand. They thought that just because there was the name of Disney attached to this character Scrooge McDuck that he was just going to make all kinds of money. Anything that I could do that would have their likeness, the Trust could sell it and make scads of money. They didn't know who in the hell the characters were.",
+          "bbox": [
+            {
+              "h": 191.73167999999998,
+              "w": 284.3256,
+              "x": 86.6436,
+              "y": 230.43528000000003,
+              "confidence": 0.88,
+              "end_index": 1021,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** And they didn't know there was any difference between the ones you did and all these other guys did.",
+          "value": "DA: And they didn't know there was any difference between the ones you did and all these other guys did.",
+          "bbox": [
+            {
+              "h": 23.65986754966889,
+              "w": 271.024125,
+              "x": 85.960125,
+              "y": 430.8724768211921,
+              "confidence": 0.89,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** No. They wouldn't know.",
+          "value": "CB: No. They wouldn't know.",
+          "bbox": [
+            {
+              "h": 9.726834437086097,
+              "w": 115.40212500000001,
+              "x": 85.960125,
+              "y": 457.42410596026497,
+              "confidence": 0.85,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** It seems as though there must be some way to lift some of these burdens from you.",
+          "value": "DA: It seems as though there must be some way to lift some of these burdens from you.",
+          "bbox": [
+            {
+              "h": 24.087600214367363,
+              "w": 267.708646621332,
+              "x": 86.11479197432355,
+              "y": 476.6365373237425,
+              "confidence": 0.92,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** There *is* no way. I can keep the burdens fairly light by constantly *every day* updating everything that has gone on.",
+          "value": "CB: There is no way. I can keep the burdens fairly light by constantly every day updating everything that has gone on.",
+          "bbox": [
+            {
+              "h": 23.134092715231816,
+              "w": 265.50375,
+              "x": 85.960125,
+              "y": 502.37785430463583,
+              "confidence": 0.91,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** That's a burden in itself.",
+          "value": "DA: That's a burden in itself.",
+          "bbox": [
+            {
+              "h": 8.931600000000003,
+              "w": 111.03840000000001,
+              "x": 86.6436,
+              "y": 535.30056,
+              "confidence": 0.86,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yeah, but think about getting into a mess like we're in now, where",
+          "value": "CB: Yeah, but think about getting into a mess like we're in now, where",
+          "bbox": [
+            {
+              "h": 9.989721854304662,
+              "w": 271.81275000000005,
+              "x": 87.27450000000002,
+              "y": 548.3831523178808,
+              "confidence": 0.89,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "we have to call up the bank and talk to some branch supervisor way up in Seattle or Portland or someplace and be told finally who to go to down here to talk to about getting some blank checks. Maybe this guy up in Portland or farther up—you know, the first guy she talked to—may have called up the people at this local bank to see who the hell this Carl Barks is and find that I have been one of their best and most profitable depositors. I've been carrying just a loose balance in my checkbook close to $50,000, and I get a little interest on that. If he finds that out, he knows then that this guy, he's for real, he's worth doing something about: Let him have a few blank checks.",
+          "value": "we have to call up the bank and talk to some branch supervisor way up in Seattle or Portland or someplace and be told finally who to go to down here to talk to about getting some blank checks. Maybe this guy up in Portland or farther up—you know, the first guy she talked to—may have called up the people at this local bank to see who the hell this Carl Barks is and find that I have been one of their best and most profitable depositors. I've been carrying just a loose balance in my checkbook close to $50,000, and I get a little interest on that. If he finds that out, he knows then that this guy, he's for real, he's worth doing something about: Let him have a few blank checks.",
+          "bbox": [
+            {
+              "h": 168.50952,
+              "w": 282.64320000000004,
+              "x": 454.24800000000005,
+              "y": 51.80328,
+              "confidence": 0.92,
+              "end_index": 681,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** I'm glad they didn't say you had to come down there in person.",
+          "value": "DA: I'm glad they didn't say you had to come down there in person.",
+          "bbox": [
+            {
+              "h": 17.88,
+              "w": 265.77,
+              "x": 456.35,
+              "y": 190.33,
+              "confidence": 1.0,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah, well, I guess I could have.",
+          "value": "CB: Yeah, well, I guess I could have.",
+          "bbox": [
+            {
+              "h": 12.14852047923019,
+              "w": 139.91917590034305,
+              "x": 458.02357224180645,
+              "y": 208.4032554163491,
+              "confidence": 0.8,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** But it's so much easier just to talk to them on the phone.",
+          "value": "DA: But it's so much easier just to talk to them on the phone.",
+          "bbox": [
+            {
+              "h": 14.885999999999996,
+              "w": 238.05959999999993,
+              "x": 458.45400000000006,
+              "y": 226.86264000000003,
+              "confidence": 0.87,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I know it, but there again there's all that runaround you get on that telephone so much of the time. Helen was talking to some supervisor—most likely way up in Seattle—who didn't even know where the branch bank was. If I can just get the checks made out to my caretakers, that'll be a big burden off of me, and as for the other stuff I can draw out—there's $5,800 in the checking account—I can draw out some money for living on for a while. And another thing I've got to do is call the Family Trust and tell them to send down $15,000 or something like that in money to put in the checking account here.",
+          "value": "CB: I know it, but there again there's all that runaround you get on that telephone so much of the time. Helen was talking to some supervisor—most likely way up in Seattle—who didn't even know where the branch bank was. If I can just get the checks made out to my caretakers, that'll be a big burden off of me, and as for the other stuff I can draw out—there's $5,800 in the checking account—I can draw out some money for living on for a while. And another thing I've got to do is call the Family Trust and tell them to send down $15,000 or something like that in money to put in the checking account here.",
+          "bbox": [
+            {
+              "h": 121.46976000000001,
+              "w": 285.1668,
+              "x": 459.2952000000001,
+              "y": 240.55776000000003,
+              "confidence": 0.9,
+              "end_index": 609,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So you still have control over that?",
+          "value": "DA: So you still have control over that?",
+          "bbox": [
+            {
+              "h": 13.099679999999978,
+              "w": 153.09839999999997,
+              "x": 462.6600000000001,
+              "y": 369.76824000000005,
+              "confidence": 0.88,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah, sure, but I've got to have some blank checks that I can write checks on before I build up a big checking account again.",
+          "value": "CB: Yeah, sure, but I've got to have some blank checks that I can write checks on before I build up a big checking account again.",
+          "bbox": [
+            {
+              "h": 27.985680000000002,
+              "w": 272.5488,
+              "x": 463.50120000000004,
+              "y": 380.48616000000004,
+              "confidence": 0.89,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** The reorder for the checks shouldn't take very long.",
+          "value": "DA: The reorder for the checks shouldn't take very long.",
+          "bbox": [
+            {
+              "h": 13.84305104325456,
+              "w": 218.9818375809832,
+              "x": 464.17072980182934,
+              "y": 416.42751775438273,
+              "confidence": 0.9,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I've noticed that it always takes close to a week or ten days.",
+          "value": "CB: I've noticed that it always takes close to a week or ten days.",
+          "bbox": [
+            {
+              "h": 27.540801905487815,
+              "w": 247.77406347656247,
+              "x": 464.4749294731327,
+              "y": 430.12271575838423,
+              "confidence": 0.84,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\\[Phone rings.]",
+          "value": "[Phone rings.]",
+          "bbox": [
+            {
+              "h": 11.304158940397372,
+              "w": 55.46662500000002,
+              "x": 476.32950000000005,
+              "y": 446.1199470198676,
+              "confidence": 0.62,
+              "end_index": 14,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** Hello. . . . He's doing pretty good. . . . This is Don Ault. I'm just here on a brief visit, and his regular caretaker is out at the bank doing some work for him. I'll see if he'd like to talk. . . . It's Russell Myers \\[writer and artist for *Broom Hilda*]. He wants to come over and see you for a few minutes.",
+          "value": "DA: Hello. . . . He's doing pretty good. . . . This is Don Ault. I'm just here on a brief visit, and his regular caretaker is out at the bank doing some work for him. I'll see if he'd like to talk. . . . It's Russell Myers [writer and artist for Broom Hilda]. He wants to come over and see you for a few minutes.",
+          "bbox": [
+            {
+              "h": 68.96092671493899,
+              "w": 283.50207193216465,
+              "x": 465.54536368616624,
+              "y": 463.3417480421114,
+              "confidence": 0.96,
+              "end_index": 318,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\\[Tape gets very bad.]",
+          "value": "[Tape gets very bad.]",
+          "bbox": [
+            {
+              "h": 14.46,
+              "w": 84.38,
+              "x": 477.38,
+              "y": 532.35,
+              "confidence": 1.0,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\\[Mail comes, bringing an state income tax refund $5,285.]",
+          "value": "[Mail comes, bringing an state income tax refund $5,285.]",
+          "bbox": [
+            {
+              "h": 18.14,
+              "w": 226.07,
+              "x": 478.43,
+              "y": 542.07,
+              "confidence": 1.0,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

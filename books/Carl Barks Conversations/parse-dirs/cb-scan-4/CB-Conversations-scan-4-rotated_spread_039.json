@@ -1,0 +1,468 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "level": 1,
+              "md": "# Index",
+              "value": "Index",
+              "bbox": [
+                {
+                  "h": 17.092449552210386,
+                  "w": 45.79645155297255,
+                  "x": 569.8601545112425,
+                  "y": 195.6982295707889,
+                  "confidence": 0.96,
+                  "end_index": 6,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "heading"
+            }
+          ],
+          "md": "# Index",
+          "bbox": [
+            {
+              "h": 17.09,
+              "w": 45.8,
+              "x": 569.86,
+              "y": 195.7,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "md": "Anonymity, x, xi, xiii, xvii–xviii, xxv, xxvii, 21, 46, 75, 116, 129–30\nAnother Rainbow Publishing, xxix, 139\nArlington, Gary, 194\nAsteroid, named for Barks, 146\nAudience. See Readership, attitude toward",
+          "value": "Anonymity, x, xi, xiii, xvii–xviii, xxv, xxvii, 21, 46, 75, 116, 129–30\nAnother Rainbow Publishing, xxix, 139\nArlington, Gary, 194\nAsteroid, named for Barks, 146\nAudience. See Readership, attitude toward",
+          "bbox": [
+            {
+              "h": 65.1960794701987,
+              "w": 134.59200000000004,
+              "x": 452.14500000000004,
+              "y": 278.39777483443714,
+              "confidence": 0.72,
+              "end_index": 202,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.78,
+              "w": 104.89,
+              "x": 460.82,
+              "y": 278.4,
+              "confidence": 0.72,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 22.61,
+              "w": 133.8,
+              "x": 452.93,
+              "y": 288.91,
+              "confidence": 1.0,
+              "end_index": 129,
+              "label": "text",
+              "start_index": 72
+            },
+            {
+              "h": 12.62,
+              "w": 108.83,
+              "x": 452.15,
+              "y": 309.16,
+              "confidence": 1.0,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 131
+            },
+            {
+              "h": 22.08,
+              "w": 119.61,
+              "x": 453.72,
+              "y": 321.51,
+              "confidence": 1.0,
+              "end_index": 202,
+              "label": "text",
+              "start_index": 162
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Barber chair gag. See \"Modern Inventions\"\nBarks, Arminta Johnson (mother). See Early life, parents\nBarks, Clara Balken (second wife), xxii, 8, 64–65, 181–84, 217, 219–20\nBarks, Clyde (brother), 54, 55, 60, 188–89\nBarks, Dorothy (daughter), xx, 3, 60–62, 77, 184–86, 219\nBarks, Garé (third wife), xxii, xxx, 3, 15, 67–68, 76–77, 85, 109, 112, 167, 183, 185, 187\nBarks, Pearl Turner (first wife), xx, 3, 59–62, 184–85\nBarks, Peggy (daughter), xx, 3, 60–62, 76–77, 184–87, 219\nBarks, William (father). See Early life, parents",
+          "value": "Barber chair gag. See \"Modern Inventions\"\nBarks, Arminta Johnson (mother). See Early life, parents\nBarks, Clara Balken (second wife), xxii, 8, 64–65, 181–84, 217, 219–20\nBarks, Clyde (brother), 54, 55, 60, 188–89\nBarks, Dorothy (daughter), xx, 3, 60–62, 77, 184–86, 219\nBarks, Garé (third wife), xxii, xxx, 3, 15, 67–68, 76–77, 85, 109, 112, 167, 183, 185, 187\nBarks, Pearl Turner (first wife), xx, 3, 59–62, 184–85\nBarks, Peggy (daughter), xx, 3, 60–62, 76–77, 184–87, 219\nBarks, William (father). See Early life, parents",
+          "bbox": [
+            {
+              "h": 43.04906109946646,
+              "w": 132.3757453553735,
+              "x": 455.5897745093369,
+              "y": 394.48477938738574,
+              "confidence": 0.56,
+              "end_index": 521,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 21.82,
+              "w": 131.17,
+              "x": 454.51,
+              "y": 350.95,
+              "confidence": 1.0,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 22.61,
+              "w": 129.33,
+              "x": 455.3,
+              "y": 372.51,
+              "confidence": 1.0,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 42
+            },
+            {
+              "h": 11.04,
+              "w": 111.72,
+              "x": 464.24,
+              "y": 405.11,
+              "confidence": 0.56,
+              "end_index": 168,
+              "label": "text",
+              "start_index": 99
+            },
+            {
+              "h": 22.35,
+              "w": 118.29,
+              "x": 456.09,
+              "y": 415.63,
+              "confidence": 1.0,
+              "end_index": 211,
+              "label": "text",
+              "start_index": 170
+            },
+            {
+              "h": 23.13,
+              "w": 129.33,
+              "x": 456.88,
+              "y": 436.66,
+              "confidence": 1.0,
+              "end_index": 268,
+              "label": "text",
+              "start_index": 213
+            },
+            {
+              "h": 35.75,
+              "w": 138.54,
+              "x": 455.56,
+              "y": 456.11,
+              "confidence": 1.0,
+              "end_index": 359,
+              "label": "text",
+              "start_index": 270
+            },
+            {
+              "h": 23.13,
+              "w": 125.13,
+              "x": 458.19,
+              "y": 490.81,
+              "confidence": 1.0,
+              "end_index": 414,
+              "label": "text",
+              "start_index": 361
+            },
+            {
+              "h": 22.61,
+              "w": 133.28,
+              "x": 459.51,
+              "y": 512.63,
+              "confidence": 1.0,
+              "end_index": 472,
+              "label": "text",
+              "start_index": 416
+            },
+            {
+              "h": 25.5,
+              "w": 127.23,
+              "x": 458.98,
+              "y": 532.35,
+              "confidence": 1.0,
+              "end_index": 521,
+              "label": "text",
+              "start_index": 474
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Barksism, 43–44\nBarkster Award, 159–60\nBarney Bear and Benny Burro, 15–16\nBarrier, J. Michael, x, xxviii–xxix, 43, 216–18\nBatman, 205, 207\nBeagle Boys, The, xxiv, 14, 44, 48, 79, 95, 98, 99, 112, 177\nBeaumont, Charles, xv–vi, xxvii–xxviii\nBrand, Max, 10, 124\nBray, Glenn, xxviii\nBrutopia, 210–11",
+          "value": "Barksism, 43–44\nBarkster Award, 159–60\nBarney Bear and Benny Burro, 15–16\nBarrier, J. Michael, x, xxviii–xxix, 43, 216–18\nBatman, 205, 207\nBeagle Boys, The, xxiv, 14, 44, 48, 79, 95, 98, 99, 112, 177\nBeaumont, Charles, xv–vi, xxvii–xxviii\nBrand, Max, 10, 124\nBray, Glenn, xxviii\nBrutopia, 210–11",
+          "bbox": [
+            {
+              "h": 128.61504000000002,
+              "w": 133.7508,
+              "x": 599.7756,
+              "y": 265.56624000000005,
+              "confidence": 0.68,
+              "end_index": 294,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.778384105960242,
+              "w": 59.67262500000004,
+              "x": 597.5148750000001,
+              "y": 263.9389668874172,
+              "confidence": 0.68,
+              "end_index": 14,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.515496688741678,
+              "w": 83.857125,
+              "x": 599.3550000000001,
+              "y": 275.50601324503316,
+              "confidence": 0.59,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 16
+            },
+            {
+              "h": 12.36,
+              "w": 129.07,
+              "x": 598.3,
+              "y": 284.44,
+              "confidence": 0.68,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 39
+            },
+            {
+              "h": 9.2,
+              "w": 28.92,
+              "x": 607.77,
+              "y": 308.63,
+              "confidence": 0.68,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 74
+            },
+            {
+              "h": 9.201059602648968,
+              "w": 28.91624999999999,
+              "x": 607.767,
+              "y": 308.6298278145696,
+              "confidence": 0.68,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 115
+            },
+            {
+              "h": 31.29736824980947,
+              "w": 132.43229754192066,
+              "x": 600.8863670922258,
+              "y": 318.7716135623095,
+              "confidence": 0.64,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 122
+            },
+            {
+              "h": 11.041271523178807,
+              "w": 74.65650000000005,
+              "x": 600.143625,
+              "y": 360.41864900662256,
+              "confidence": 0.7,
+              "end_index": 257,
+              "label": "text",
+              "start_index": 239
+            },
+            {
+              "h": 10.093930535442084,
+              "w": 62.11418676162356,
+              "x": 602.5377009575077,
+              "y": 373.46156637290403,
+              "confidence": 0.65,
+              "end_index": 277,
+              "label": "text",
+              "start_index": 259
+            },
+            {
+              "h": 9.972244293063977,
+              "w": 60.42944252572411,
+              "x": 602.6469483612806,
+              "y": 384.10829708460375,
+              "confidence": 0.64,
+              "end_index": 294,
+              "label": "text",
+              "start_index": 279
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Calgary Eye-Opener, xx–xxi, 58, 60, 62–63, 81, 105, 161, 185, 190, 199\nCapitalism, attitude toward, 44, 98–99, 131\nCarl Barks Library, The, xxix–xxx\nCastelli, Alfredo, xxviii\nCelestial Arts, xxix\nCelotex, 22, 137\nCensorship, 11–12, 14, 29, 34, 76, 103, 110, 151–52\nChaplin, Charlie, 66, 125\nCharacter invention, and development, 44–46, 48–49, 71–72, 78, 83–84, 93–95, 96–97, 107–08, 112–13",
+          "value": "Calgary Eye-Opener, xx–xxi, 58, 60, 62–63, 81, 105, 161, 185, 190, 199\nCapitalism, attitude toward, 44, 98–99, 131\nCarl Barks Library, The, xxix–xxx\nCastelli, Alfredo, xxviii\nCelestial Arts, xxix\nCelotex, 22, 137\nCensorship, 11–12, 14, 29, 34, 76, 103, 110, 151–52\nChaplin, Charlie, 66, 125\nCharacter invention, and development, 44–46, 48–49, 71–72, 78, 83–84, 93–95, 96–97, 107–08, 112–13",
+          "bbox": [
+            {
+              "h": 42.58472455221038,
+              "w": 136.4093839081555,
+              "x": 602.6945343464178,
+              "y": 402.00326598704277,
+              "confidence": 0.76,
+              "end_index": 388,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.56704635761588,
+              "w": 125.12850000000003,
+              "x": 603.561,
+              "y": 401.6919735099338,
+              "confidence": 0.76,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 21.29,
+              "w": 132.49,
+              "x": 603.56,
+              "y": 401.69,
+              "confidence": 0.76,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 21.822824942835393,
+              "w": 134.66753649009152,
+              "x": 604.2812013624239,
+              "y": 422.9575163729041,
+              "confidence": 0.63,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 71
+            },
+            {
+              "h": 10.54699195884145,
+              "w": 114.23927379477891,
+              "x": 604.394355826029,
+              "y": 445.40348691882633,
+              "confidence": 0.65,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 115
+            },
+            {
+              "h": 9.42008233136429,
+              "w": 76.53774930926072,
+              "x": 604.8891999809451,
+              "y": 456.9367685642151,
+              "confidence": 0.63,
+              "end_index": 172,
+              "label": "text",
+              "start_index": 149
+            },
+            {
+              "h": 9.623885513529007,
+              "w": 63.11539588891017,
+              "x": 605.2547605278202,
+              "y": 467.79754934737053,
+              "confidence": 0.62,
+              "end_index": 194,
+              "label": "text",
+              "start_index": 175
+            },
+            {
+              "h": 9.299530692644819,
+              "w": 57.585002786775895,
+              "x": 605.6305395388721,
+              "y": 478.6898508384147,
+              "confidence": 0.64,
+              "end_index": 211,
+              "label": "text",
+              "start_index": 196
+            },
+            {
+              "h": 22.141613114519796,
+              "w": 135.23290808403192,
+              "x": 605.5653717844895,
+              "y": 487.86212863948185,
+              "confidence": 0.74,
+              "end_index": 263,
+              "label": "text",
+              "start_index": 213
+            },
+            {
+              "h": 42.23739400724083,
+              "w": 133.81850233422256,
+              "x": 605.880190644055,
+              "y": 510.6159667968751,
+              "confidence": 0.71,
+              "end_index": 388,
+              "label": "text",
+              "start_index": 265
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "233",
+              "value": "233",
+              "bbox": [
+                {
+                  "h": 8.548352157964972,
+                  "w": 15.47371010384911,
+                  "x": 594.1357691501526,
+                  "y": 579.9184801257624,
+                  "confidence": 0.94,
+                  "end_index": 2,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "233",
+          "bbox": [
+            {
+              "h": 8.55,
+              "w": 15.47,
+              "x": 594.14,
+              "y": 579.92,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "233"
+    }
+  ]
+}

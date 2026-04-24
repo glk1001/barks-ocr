@@ -1,0 +1,523 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "192 CARL BARKS: CONVERSATIONS",
+              "value": "192 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 11.567046357615894,
+                  "w": 17.34975,
+                  "x": 116.979375,
+                  "y": 21.030993377483448,
+                  "confidence": 0.92,
+                  "end_index": 2,
+                  "label": "header",
+                  "start_index": 0
+                },
+                {
+                  "h": 12.590291266613475,
+                  "w": 101.95798220750765,
+                  "x": 141.1190439929497,
+                  "y": 23.084076518733333,
+                  "confidence": 0.93,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 4
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "192 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 14.64,
+              "w": 126.1,
+              "x": 116.98,
+              "y": 21.03,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "been hired out there. It would have been a hell of a mess because I wouldn't have had money enough to get back to Minneapolis where I could have gotten my old job back. They understood I was leaving to take a big gamble to see if I could get on at Disney's. And they would have hired me back there. But I would have had to wire them and ask for money enough for tickets back.",
+          "value": "been hired out there. It would have been a hell of a mess because I wouldn't have had money enough to get back to Minneapolis where I could have gotten my old job back. They understood I was leaving to take a big gamble to see if I could get on at Disney's. And they would have hired me back there. But I would have had to wire them and ask for money enough for tickets back.",
+          "bbox": [
+            {
+              "h": 164.93688000000003,
+              "w": 286.84920000000005,
+              "x": 111.87960000000001,
+              "y": 45.84888,
+              "confidence": 0.98,
+              "end_index": 374,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 66.77,
+              "w": 272.08,
+              "x": 114.35,
+              "y": 59.15,
+              "confidence": 1.0,
+              "end_index": 374,
+              "label": "text",
+              "start_index": 333
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** You were that broke, huh?",
+          "value": "DA: You were that broke, huh?",
+          "bbox": [
+            {
+              "h": 12.62,
+              "w": 121.45,
+              "x": 113.82,
+              "y": 131.71,
+              "confidence": 1.0,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh yeah. Hell, yes. I had barely enough money for rent or an apartment for a month, and before I got my first paycheck, I was just reduced to eating fig newtons. That was my breakfast, lunch, and dinner. It was kind of risky business, but I managed to get on the job there at Disney. Since then I have been a Disney guy.",
+          "value": "CB: Oh yeah. Hell, yes. I had barely enough money for rent or an apartment for a month, and before I got my first paycheck, I was just reduced to eating fig newtons. That was my breakfast, lunch, and dinner. It was kind of risky business, but I managed to get on the job there at Disney. Since then I have been a Disney guy.",
+          "bbox": [
+            {
+              "h": 111.94272000000001,
+              "w": 284.3256,
+              "x": 109.35600000000001,
+              "y": 144.09648,
+              "confidence": 0.75,
+              "end_index": 327,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.72,
+              "w": 120.4,
+              "x": 110.41,
+              "y": 195.59,
+              "confidence": 1.0,
+              "end_index": 327,
+              "label": "text",
+              "start_index": 298
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** I guess you could say that.",
+          "value": "DA: I guess you could say that.",
+          "bbox": [
+            {
+              "h": 13.348700683593751,
+              "w": 120.53238258026869,
+              "x": 110.50273458341275,
+              "y": 217.2099603729993,
+              "confidence": 0.45,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Even though I quit Disney's in 1942, I have been associated with them ever since in various kinds of work.",
+          "value": "CB: Even though I quit Disney's in 1942, I have been associated with them ever since in various kinds of work.",
+          "bbox": [
+            {
+              "h": 94.07952000000002,
+              "w": 279.27840000000003,
+              "x": 106.8324,
+              "y": 263.18448,
+              "confidence": 0.85,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 28.13,
+              "w": 284.17,
+              "x": 108.57,
+              "y": 227.66,
+              "confidence": 1.0,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 78
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** One of the things that is said is that you were exploited by Disney, but you feel that actually",
+          "value": "DA: One of the things that is said is that you were exploited by Disney, but you feel that actually",
+          "bbox": [
+            {
+              "h": 157.19616000000002,
+              "w": 286.84920000000005,
+              "x": 100.944,
+              "y": 360.83664000000005,
+              "confidence": 0.64,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 22.35,
+              "w": 278.12,
+              "x": 106.73,
+              "y": 261.31,
+              "confidence": 1.0,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 64
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I exploited them a little bit, yeah—in turn, sure. God, yes. Just think of all the good things Disney did for me. And so I feel that anytime I can do something in the way of drawing, signing of lithographs or sketches, anything that will help Disney make some money, why I'm glad to do it. Trying to pay them back for the favors they did me.",
+          "value": "CB: I exploited them a little bit, yeah—in turn, sure. God, yes. Just think of all the good things Disney did for me. And so I feel that anytime I can do something in the way of drawing, signing of lithographs or sketches, anything that will help Disney make some money, why I'm glad to do it. Trying to pay them back for the favors they did me.",
+          "bbox": [
+            {
+              "h": 157.19616000000002,
+              "w": 286.84920000000005,
+              "x": 100.944,
+              "y": 360.83664000000005,
+              "confidence": 0.84,
+              "end_index": 348,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** You retired 31 years ago, and you said to me a few days ago on the phone, \"Oh, I wish I could have had a normal retirement.\" I am just curious. I will put it a couple of different ways. What kind of example do you think you have set for people with your life as opposed to the stories? That is, the fact that you kept working and producing stuff and coming up with new stuff year after year when most people are just lounging around or playing shuffle board. Do you think it is important that you have done this?",
+          "value": "DA: You retired 31 years ago, and you said to me a few days ago on the phone, \"Oh, I wish I could have had a normal retirement.\" I am just curious. I will put it a couple of different ways. What kind of example do you think you have set for people with your life as opposed to the stories? That is, the fact that you kept working and producing stuff and coming up with new stuff year after year when most people are just lounging around or playing shuffle board. Do you think it is important that you have done this?",
+          "bbox": [
+            {
+              "h": 31.558320000000002,
+              "w": 275.0724,
+              "x": 99.2616,
+              "y": 524.5826400000001,
+              "confidence": 0.7,
+              "end_index": 519,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, I guess it is. It shows that if a guy works hard enough at something, it is almost the same as a guy who retires and picks up a hobby and he works hard at that hobby. I was entertaining myself as I went along and getting paid for it.",
+          "value": "CB: Oh, I guess it is. It shows that if a guy works hard enough at something, it is almost the same as a guy who retires and picks up a hobby and he works hard at that hobby. I was entertaining myself as I went along and getting paid for it.",
+          "bbox": [
+            {
+              "h": 31.558320000000002,
+              "w": 275.0724,
+              "x": 99.2616,
+              "y": 524.5826400000001,
+              "confidence": 0.58,
+              "end_index": 244,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 42.32,
+              "w": 284.43,
+              "x": 99.63,
+              "y": 475.56,
+              "confidence": 1.0,
+              "end_index": 244,
+              "label": "text",
+              "start_index": 208
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** What about the hassle part of it?",
+          "value": "DA: What about the hassle part of it?",
+          "bbox": [
+            {
+              "h": 14.98,
+              "w": 146.16,
+              "x": 99.63,
+              "y": 523.93,
+              "confidence": 1.0,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well, the hassles came in, it seems like, after I had all that career. It",
+          "value": "CB: Well, the hassles came in, it seems like, after I had all that career. It",
+          "bbox": [
+            {
+              "h": 31.558320000000002,
+              "w": 275.0724,
+              "x": 99.2616,
+              "y": 524.5826400000001,
+              "confidence": 0.52,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nDONALD AULT AND LYNDA AULT / 1997 193\n\\</page_header>",
+          "value": "<page_header>\nDONALD AULT AND LYNDA AULT / 1997 193\n</page_header>",
+          "bbox": [
+            {
+              "h": 8.94,
+              "w": 160.35,
+              "x": 591.47,
+              "y": 35.49,
+              "confidence": 1.0,
+              "end_index": 51,
+              "label": "header",
+              "start_index": 15
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "was in later years that the hassles came in. They are mostly brought in by collectors, the guys who want me to do more work so they can be the only person who owns a certain piece of artwork of mine.",
+          "value": "was in later years that the hassles came in. They are mostly brought in by collectors, the guys who want me to do more work so they can be the only person who owns a certain piece of artwork of mine.",
+          "bbox": [
+            {
+              "h": 36.917280000000005,
+              "w": 282.6432000000001,
+              "x": 469.3896000000001,
+              "y": 57.75768000000001,
+              "confidence": 0.91,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** What do you think about that? Is that something that you enjoy?",
+          "value": "DA: What do you think about that? Is that something that you enjoy?",
+          "bbox": [
+            {
+              "h": 12.881483443708618,
+              "w": 271.54987500000004,
+              "x": 468.70612500000004,
+              "y": 99.63433112582783,
+              "confidence": 0.63,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, I enjoy doing a painting as long as I think it is something that is going to benefit Disney. But to do a painting for just somebody's collection, it doesn't appeal to me.",
+          "value": "CB: Well, I enjoy doing a painting as long as I think it is something that is going to benefit Disney. But to do a painting for just somebody's collection, it doesn't appeal to me.",
+          "bbox": [
+            {
+              "h": 35.75,
+              "w": 283.12,
+              "x": 468.71,
+              "y": 113.3,
+              "confidence": 1.0,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So, in other words, like doing a painting for the serigraphs?",
+          "value": "DA: So, in other words, like doing a painting for the serigraphs?",
+          "bbox": [
+            {
+              "h": 11.567046357615908,
+              "w": 248.154,
+              "x": 468.70612500000004,
+              "y": 155.89223841059604,
+              "confidence": 0.63,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah, that's right. I had the feeling I was doing something and repaying Disney for the great favor they did me back in the early 1970s when they gave me permission to paint those duck pictures, pictures of their copyrighted characters, and to sell those pictures, without requiring me to pay them with royalty or any kind of favor in return. It was like they were just rewarding me for all my hard years of work by giving me this license to do it.",
+          "value": "CB: Yeah, that's right. I had the feeling I was doing something and repaying Disney for the great favor they did me back in the early 1970s when they gave me permission to paint those duck pictures, pictures of their copyrighted characters, and to sell those pictures, without requiring me to pay them with royalty or any kind of favor in return. It was like they were just rewarding me for all my hard years of work by giving me this license to do it.",
+          "bbox": [
+            {
+              "h": 86.48996026490067,
+              "w": 284.69362500000005,
+              "x": 467.9175000000001,
+              "y": 167.72217218543048,
+              "confidence": 0.9,
+              "end_index": 455,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** You said it was George Sherman who had a lot to do with that.",
+          "value": "DA: You said it was George Sherman who had a lot to do with that.",
+          "bbox": [
+            {
+              "h": 12.355708609271517,
+              "w": 263.6636250000001,
+              "x": 467.9175000000001,
+              "y": 260.52143046357617,
+              "confidence": 0.6,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Yeah, that's right. And when the year was up—he had given me the permission to do that for a year—when the year was up and I had so many orders in advance that I couldn't possibly ever finish them up in two years or so, the word came back by telephone from there that as long as I did nothing that would be defamatory towards Disney, or the Disney characters, just keep on painting. If sometime in the future somebody did something that made it look like a bad idea to paint, why they would always stop me. And that is what happened. And I think it was awfully good of Disney, because not only was George Sherman involved in that, I think there were some other higher ups in there like Roy Disney himself.",
+          "value": "CB: Yeah, that's right. And when the year was up—he had given me the permission to do that for a year—when the year was up and I had so many orders in advance that I couldn't possibly ever finish them up in two years or so, the word came back by telephone from there that as long as I did nothing that would be defamatory towards Disney, or the Disney characters, just keep on painting. If sometime in the future somebody did something that made it look like a bad idea to paint, why they would always stop me. And that is what happened. And I think it was awfully good of Disney, because not only was George Sherman involved in that, I think there were some other higher ups in there like Roy Disney himself.",
+          "bbox": [
+            {
+              "h": 126.1859602649007,
+              "w": 284.69362500000005,
+              "x": 467.9175000000001,
+              "y": 272.8771390728477,
+              "confidence": 0.89,
+              "end_index": 712,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** Oh really? Well he introduced you when you got that Disney Legends Award.",
+          "value": "DA: Oh really? Well he introduced you when you got that Disney Legends Award.",
+          "bbox": [
+            {
+              "h": 22.156327505716472,
+              "w": 283.4730194359756,
+              "x": 469.6495797684833,
+              "y": 404.7220245474468,
+              "confidence": 0.91,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** That's right. And he spoke to me as if he was a fan of mine. Like he had read those comic book stories when he was a kid growing up. And he liked my stuff that I did for Disney, so we had a sort of mutual understanding—that I liked what Disney did for me, and he liked what I did for Disney.",
+          "value": "CB: That's right. And he spoke to me as if he was a fan of mine. Like he had read those comic book stories when he was a kid growing up. And he liked my stuff that I did for Disney, so we had a sort of mutual understanding—that I liked what Disney did for me, and he liked what I did for Disney.",
+          "bbox": [
+            {
+              "h": 61.925760000000025,
+              "w": 284.3256,
+              "x": 469.3896000000001,
+              "y": 430.50312,
+              "confidence": 0.93,
+              "end_index": 298,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## The Paintings",
+          "value": "The Paintings",
+          "bbox": [
+            {
+              "h": 13.25209981897866,
+              "w": 72.6112042682927,
+              "x": 469.26954306402445,
+              "y": 505.91923949599857,
+              "confidence": 0.96,
+              "end_index": 15,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** We haven't talked much about your paintings and that whole career that you had after you finished the comic books, and I'm wondering what you think the relative merits of those two parts of your career are.",
+          "value": "DA: We haven't talked much about your paintings and that whole career that you had after you finished the comic books, and I'm wondering what you think the relative merits of those two parts of your career are.",
+          "bbox": [
+            {
+              "h": 37.31821347656247,
+              "w": 283.65399645102906,
+              "x": 469.08400781250003,
+              "y": 524.5314906488187,
+              "confidence": 0.96,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true
+    }
+  ]
+}

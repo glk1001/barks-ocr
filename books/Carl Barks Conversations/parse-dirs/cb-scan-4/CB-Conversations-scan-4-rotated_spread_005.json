@@ -1,0 +1,212 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "164 CARL BARKS: CONVERSATIONS",
+              "value": "164 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 11.758174716260957,
+                  "w": 125.58607681497716,
+                  "x": 110.54199302115093,
+                  "y": 36.07402527599801,
+                  "confidence": 0.8,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "164 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 11.76,
+              "w": 125.59,
+              "x": 110.54,
+              "y": 36.07,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**Barks:** Uncle Scrooge is popular, I think, because he is so ridiculously rich. His money brings him no arrogance or pomposity. It is only a plaything that he hoards.",
+          "value": "Barks: Uncle Scrooge is popular, I think, because he is so ridiculously rich. His money brings him no arrogance or pomposity. It is only a plaything that he hoards.",
+          "bbox": [
+            {
+              "h": 36.83660967987806,
+              "w": 283.37345202338986,
+              "x": 109.23178805616426,
+              "y": 59.965354569597956,
+              "confidence": 0.96,
+              "end_index": 167,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** They say artists never retire. When thinking of your activities, this is evidently true. Have you any new projects in the future?",
+          "value": "Q: They say artists never retire. When thinking of your activities, this is evidently true. Have you any new projects in the future?",
+          "bbox": [
+            {
+              "h": 25.76,
+              "w": 273.13,
+              "x": 108.57,
+              "y": 105.42,
+              "confidence": 1.0,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 7
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Barks:** My projects—if I ever do retire—will certainly include artwork in one form or another.",
+          "value": "Barks: My projects—if I ever do retire—will certainly include artwork in one form or another.",
+          "bbox": [
+            {
+              "h": 23.134092715231787,
+              "w": 275.49300000000005,
+              "x": 108.04162500000001,
+              "y": 131.44370860927154,
+              "confidence": 0.86,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Q:** Any new plans of a trip to Scandinavia or other European countries in order to celebrate Donald's 60th anniversary next year?",
+          "value": "Q: Any new plans of a trip to Scandinavia or other European countries in order to celebrate Donald's 60th anniversary next year?",
+          "bbox": [
+            {
+              "h": 26.559227915396338,
+              "w": 281.63111622284686,
+              "x": 107.87141744474087,
+              "y": 163.34683225038114,
+              "confidence": 0.77,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Barks:** There seems to be a trip to Denmark and Norway and possibly other European countries planned next summer. I am hoping it all comes to pass.",
+          "value": "Barks: There seems to be a trip to Denmark and Norway and possibly other European countries planned next summer. I am hoping it all comes to pass.",
+          "bbox": [
+            {
+              "h": 37.59323076648246,
+              "w": 280.5531809558404,
+              "x": 107.49179398699506,
+              "y": 188.98222686499625,
+              "confidence": 0.83,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Title \"When Donald Duck Turned 60\" by Erik Svane / 1994 inside a hand-drawn speech bubble",
+          "md": "![Title \"When Donald Duck Turned 60\" by Erik Svane / 1994 inside a hand-drawn speech bubble](CB-Conversations-scan-4-rotated_spread_005_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-4-rotated_spread_005_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 185.78290160656445,
+              "w": 304.16761337652434,
+              "x": 456.4923554211129,
+              "y": 108.01356802948746,
+              "confidence": 0.82,
+              "end_index": 114,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "This interview was conducted on 7 July 1994 and has been previously published in six different places: *Quadrado* #4, 1997 (Portugal); *SWOF* #27, 1999 (Switzerland); *BoDoï* #34, 2000 (France); *Stripschrift* #331, 2000 (Holland); *Rackham* #3, 2001 (Denmark); *Hogan's Alley* #9, 2001 (USA). Reprinted by permission of Erik Svane.",
+          "value": "This interview was conducted on 7 July 1994 and has been previously published in six different places: Quadrado #4, 1997 (Portugal); SWOF #27, 1999 (Switzerland); BoDoï #34, 2000 (France); Stripschrift #331, 2000 (Holland); Rackham #3, 2001 (Denmark); Hogan's Alley #9, 2001 (USA). Reprinted by permission of Erik Svane.",
+          "bbox": [
+            {
+              "h": 99.0964253620427,
+              "w": 165.18322658631865,
+              "x": 492.88576622046503,
+              "y": 315.5894757764864,
+              "confidence": 0.95,
+              "end_index": 331,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "When Donald Duck turned 60, Carl Barks—who made untold numbers of people dream with his adventure stories of the Disney Ducks, although he himself had rarely left the West Coast—decided at 93 to celebrate his hero's (60th) birthday by making his first trip outside North America. He visited Oslo, Copenhagen, Helsinki, Stockholm, Warsaw, Stuttgart, Munich, Milan, Amsterdam, London, and, last but not least, Paris with its magic kingdom, Eurodisneyland, where he gave an exclusive interview to Erik Svane, in the Auberge de Cendrillon (Cinderella's Inn).",
+          "value": "When Donald Duck turned 60, Carl Barks—who made untold numbers of people dream with his adventure stories of the Disney Ducks, although he himself had rarely left the West Coast—decided at 93 to celebrate his hero's (60th) birthday by making his first trip outside North America. He visited Oslo, Copenhagen, Helsinki, Stockholm, Warsaw, Stuttgart, Munich, Milan, Amsterdam, London, and, last but not least, Paris with its magic kingdom, Eurodisneyland, where he gave an exclusive interview to Erik Svane, in the Auberge de Cendrillon (Cinderella's Inn).",
+          "bbox": [
+            {
+              "h": 101.72927315167689,
+              "w": 284.25628475133396,
+              "x": 469.17692570979426,
+              "y": 420.3543810165778,
+              "confidence": 0.97,
+              "end_index": 553,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Erik Svane:** Carl Barks, this is your first time in Europe, and in fact, it's the first time you're outside the United States. Why did it take you nine decades to leave the West Coast?",
+          "value": "Erik Svane: Carl Barks, this is your first time in Europe, and in fact, it's the first time you're outside the United States. Why did it take you nine decades to leave the West Coast?",
+          "bbox": [
+            {
+              "h": 34.96402649006632,
+              "w": 282.06487500000003,
+              "x": 468.96900000000005,
+              "y": 532.0841324503311,
+              "confidence": 0.96,
+              "end_index": 186,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "164"
+    }
+  ]
+}

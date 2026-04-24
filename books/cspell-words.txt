@@ -6,6 +6,7 @@ blockquotes
 ebooklib
 figcaption
 ivxlcdm
+llamaparse
 metas
 mybook
 pagebreak

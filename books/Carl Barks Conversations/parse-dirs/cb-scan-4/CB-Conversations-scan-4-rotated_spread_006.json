@@ -1,0 +1,554 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "166 CARL BARKS: CONVERSATIONS",
+              "value": "166 CARL BARKS: CONVERSATIONS",
+              "bbox": [
+                {
+                  "h": 10.21045344476467,
+                  "w": 124.81479565429689,
+                  "x": 115.37125672279917,
+                  "y": 38.899407772008395,
+                  "confidence": 0.81,
+                  "end_index": 28,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "166 CARL BARKS: CONVERSATIONS",
+          "bbox": [
+            {
+              "h": 10.21,
+              "w": 124.81,
+              "x": 115.37,
+              "y": 38.9,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "**Carl Barks:** \\[chuckles] It took that long to get enough money together to get over here \\[laughs], and this time the publisher paid the bill.",
+          "value": "Carl Barks: [chuckles] It took that long to get enough money together to get over here [laughs], and this time the publisher paid the bill.",
+          "bbox": [
+            {
+              "h": 25.603919999999995,
+              "w": 282.64320000000004,
+              "x": 114.40320000000001,
+              "y": 62.5212,
+              "confidence": 0.92,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** What has your schedule in Europe been like?",
+          "value": "ES: What has your schedule in Europe been like?",
+          "bbox": [
+            {
+              "h": 11.304158940397372,
+              "w": 187.95562500000008,
+              "x": 114.08775,
+              "y": 95.69101986754967,
+              "confidence": 0.85,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** It has been very busy. I've had many interviews and run around to see various things that are part of the Disney mystique, the Disney publishers, and see the promising new artists that are coming up in Europe, wonderful bunch of young people.",
+          "value": "CB: It has been very busy. I've had many interviews and run around to see various things that are part of the Disney mystique, the Disney publishers, and see the promising new artists that are coming up in Europe, wonderful bunch of young people.",
+          "bbox": [
+            {
+              "h": 50.612399999999994,
+              "w": 276.75480000000005,
+              "x": 113.56200000000001,
+              "y": 108.96552000000001,
+              "confidence": 0.89,
+              "end_index": 249,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** What countries have you visited?",
+          "value": "ES: What countries have you visited?",
+          "bbox": [
+            {
+              "h": 11.041271523178807,
+              "w": 143.00400000000002,
+              "x": 113.03625000000001,
+              "y": 167.72217218543048,
+              "confidence": 0.86,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, I was in Iceland, all the Scandinavian countries, and Italy, so far. After France, we go to Holland \\[on Monday, July 11] and then England \\[on Thursday, July 14].",
+          "value": "CB: Oh, I was in Iceland, all the Scandinavian countries, and Italy, so far. After France, we go to Holland [on Monday, July 11] and then England [on Thursday, July 14].",
+          "bbox": [
+            {
+              "h": 37.476561599657025,
+              "w": 279.79483566954076,
+              "x": 112.54216972537158,
+              "y": 180.8791002739139,
+              "confidence": 0.91,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Why are your ducks so well liked?",
+          "value": "ES: Why are your ducks so well liked?",
+          "bbox": [
+            {
+              "h": 11.718807071741628,
+              "w": 146.1362222453792,
+              "x": 112.64966396127097,
+              "y": 226.73995743378435,
+              "confidence": 0.87,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Because here in Europe, children learn how to read. And they read those stories and they find it kind of good entertainment, so I guess that's why they like them.",
+          "value": "CB: Because here in Europe, children learn how to read. And they read those stories and they find it kind of good entertainment, so I guess that's why they like them.",
+          "bbox": [
+            {
+              "h": 36.8906097227515,
+              "w": 283.1100635956555,
+              "x": 112.19926261194743,
+              "y": 240.2318309165397,
+              "confidence": 0.91,
+              "end_index": 169,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** But other Disney artists do not have their work republished in glossy computer-colored books.",
+          "value": "ES: But other Disney artists do not have their work republished in glossy computer-colored books.",
+          "bbox": [
+            {
+              "h": 24.16773159775148,
+              "w": 278.2617529773247,
+              "x": 111.78564022008385,
+              "y": 285.8861902105565,
+              "confidence": 0.9,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I guess it's just because I wrote stories that were so easily understood by kids. I wrote stories about things that happened in real life and made them as funny as I possibly could, and I guess kids kind of liked that.",
+          "value": "CB: I guess it's just because I wrote stories that were so easily understood by kids. I wrote stories about things that happened in real life and made them as funny as I possibly could, and I guess kids kind of liked that.",
+          "bbox": [
+            {
+              "h": 38.703599999999994,
+              "w": 283.48440000000005,
+              "x": 111.03840000000001,
+              "y": 311.41512000000006,
+              "confidence": 0.79,
+              "end_index": 225,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** What did you enjoy doing better? The ten-page comedies or the longer adventure stories?",
+          "value": "ES: What did you enjoy doing better? The ten-page comedies or the longer adventure stories?",
+          "bbox": [
+            {
+              "h": 23.396980132450324,
+              "w": 264.45225000000005,
+              "x": 110.670375,
+              "y": 357.5268874172186,
+              "confidence": 0.9,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Now, that would vary from time to time, because sometimes I just didn't feel like I wanted to do a long story. It would take me a whole month, so I would do two or three ten-pagers in the meantime—it was a matter of just how much of an idea I could cook up in my head.",
+          "value": "CB: Now, that would vary from time to time, because sometimes I just didn't feel like I wanted to do a long story. It would take me a whole month, so I would do two or three ten-pagers in the meantime—it was a matter of just how much of an idea I could cook up in my head.",
+          "bbox": [
+            {
+              "h": 51.80328000000003,
+              "w": 281.802,
+              "x": 110.19720000000001,
+              "y": 383.46336,
+              "confidence": 0.79,
+              "end_index": 275,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** Do you have any favorite stories?",
+          "value": "ES: Do you have any favorite stories?",
+          "bbox": [
+            {
+              "h": 11.041271523178807,
+              "w": 144.58124999999998,
+              "x": 109.88175000000001,
+              "y": 442.439523178808,
+              "confidence": 0.87,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Well yes, I have a number of favorite stories, but I guess I would say the story of the square eggs \\[\"Lost in the Andes,\" *Donald Duck*, April 1949]. I hear more about that here in Europe. In fact, up in Norway they gave me an award of some kind for having written such a perfect story.",
+          "value": "CB: Well yes, I have a number of favorite stories, but I guess I would say the story of the square eggs [\"Lost in the Andes,\" Donald Duck, April 1949]. I hear more about that here in Europe. In fact, up in Norway they gave me an award of some kind for having written such a perfect story.",
+          "bbox": [
+            {
+              "h": 51.80328000000003,
+              "w": 280.11960000000005,
+              "x": 110.19720000000001,
+              "y": 456.10704000000004,
+              "confidence": 0.77,
+              "end_index": 294,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**ES:** What do you think of the cartoons \\[*Duck Tales*] that are based on your stories?",
+          "value": "ES: What do you think of the cartoons [Duck Tales] that are based on your stories?",
+          "bbox": [
+            {
+              "h": 23.617838843368887,
+              "w": 270.06747138195504,
+              "x": 109.04371071122334,
+              "y": 515.1269736613949,
+              "confidence": 0.9,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** I think that those cartoons were very excellent, but they couldn't get enough material out of one of my stories to fill up a half hour, so they had",
+          "value": "CB: I think that those cartoons were very excellent, but they couldn't get enough material out of one of my stories to fill up a half hour, so they had",
+          "bbox": [
+            {
+              "h": 26.288741721854308,
+              "w": 281.802,
+              "x": 109.35600000000002,
+              "y": 541.0223046357617,
+              "confidence": 0.77,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\\<page_header>\nERIK SVANE / 1994 167\n\\</page_header>",
+          "value": "<page_header>\nERIK SVANE / 1994 167\n</page_header>",
+          "bbox": [
+            {
+              "h": 9.726834437086097,
+              "w": 91.217625,
+              "x": 661.656375,
+              "y": 43.376423841059605,
+              "confidence": 0.89,
+              "end_index": 51,
+              "label": "header",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "caption": "Comic strip panel showing Donald Duck and nephews discovering square eggs in the Andes. Text bubbles: \"DONALD'S ACCIDENTAL DISCOVERY STARTLES THE SCIENTIFIC WORLD!\", \"SQUARE EGGS THAT LOOK LIKE STONES! AMAZING!\", \"THEY CAME FROM SOMEWHERE IN PERU! WHO FOUND THEM, AND WHEN, AND HOW?\", \"WE DON'T KNOW! THE RECORDS ON THIS COLLECTION WERE LOST IN THE CHICAGO FIRE!\", \"THE LIMESTONE IN THEIR SHELLS SHOW THAT THEY CAME FROM HIGH IN THE ANDES MOUNTAINS!\"",
+          "md": "![Comic strip panel showing Donald Duck and nephews discovering square eggs in the Andes. Text bubbles: \"DONALD'S ACCIDENTAL DISCOVERY STARTLES THE SCIENTIFIC WORLD!\", \"SQUARE EGGS THAT LOOK LIKE STONES! AMAZING!\", \"THEY CAME FROM SOMEWHERE IN PERU! WHO FOUND THEM, AND WHEN, AND HOW?\", \"WE DON'T KNOW! THE RECORDS ON THIS COLLECTION WERE LOST IN THE CHICAGO FIRE!\", \"THE LIMESTONE IN THEIR SHELLS SHOW THAT THEY CAME FROM HIGH IN THE ANDES MOUNTAINS!\"](CB-Conversations-scan-4-rotated_spread_006_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-4-rotated_spread_006_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 128.69376731135674,
+              "w": 359.7123795731707,
+              "x": 443.70394750381104,
+              "y": 64.49014509575078,
+              "confidence": 0.99,
+              "end_index": 475,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "to put in a great deal of fresh material which introduced a lot of other characters and a lot of other situations that weren't in my original stories. But they were certainly fine entertainment.",
+          "value": "to put in a great deal of fresh material which introduced a lot of other characters and a lot of other situations that weren't in my original stories. But they were certainly fine entertainment.",
+          "bbox": [
+            {
+              "h": 34.175364238410594,
+              "w": 281.27624999999995,
+              "x": 471.07200000000006,
+              "y": 213.72747019867552,
+              "confidence": 0.95,
+              "end_index": 193,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** Did you have a favorite character?",
+          "value": "ES: Did you have a favorite character?",
+          "bbox": [
+            {
+              "h": 11.56704635761588,
+              "w": 149.05012500000004,
+              "x": 470.54625000000004,
+              "y": 257.89255629139075,
+              "confidence": 0.76,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I guess I better say Donald is the favorite character, uh, because, he's like all my friends, my neighbors, myself—he's just Mister Everyman. If I ever had to write a story real fast, I would choose Uncle Scrooge as my favorite character in that case, because I could think of a story for him easier than I could think of one for Donald.",
+          "value": "CB: I guess I better say Donald is the favorite character, uh, because, he's like all my friends, my neighbors, myself—he's just Mister Everyman. If I ever had to write a story real fast, I would choose Uncle Scrooge as my favorite character in that case, because I could think of a story for him easier than I could think of one for Donald.",
+          "bbox": [
+            {
+              "h": 60.20121854304642,
+              "w": 283.9050000000001,
+              "x": 469.7576250000001,
+              "y": 272.8771390728477,
+              "confidence": 0.8,
+              "end_index": 344,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** Why is that?",
+          "value": "ES: Why is that?",
+          "bbox": [
+            {
+              "h": 10.515496688741678,
+              "w": 65.45587500000005,
+              "x": 471.07200000000006,
+              "y": 343.3309668874173,
+              "confidence": 0.87,
+              "end_index": 19,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, because with Uncle Scrooge, you know he's either going to be looking for money or he's going to have a battle with the Beagle Boys to save his money. He's got a ready-made plot right there, without having to reach out for it.",
+          "value": "CB: Well, because with Uncle Scrooge, you know he's either going to be looking for money or he's going to have a battle with the Beagle Boys to save his money. He's got a ready-made plot right there, without having to reach out for it.",
+          "bbox": [
+            {
+              "h": 48.897059602648994,
+              "w": 280.48762500000004,
+              "x": 470.54625000000004,
+              "y": 357.0011125827815,
+              "confidence": 0.78,
+              "end_index": 238,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** In the past 10 years, there's been a great deal of quality reprinting of your stories. How have you been involved in that?",
+          "value": "ES: In the past 10 years, there's been a great deal of quality reprinting of your stories. How have you been involved in that?",
+          "bbox": [
+            {
+              "h": 22.608317880794743,
+              "w": 280.75049999999993,
+              "x": 471.5977500000001,
+              "y": 415.8878940397351,
+              "confidence": 0.76,
+              "end_index": 129,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I haven't been involved in that, because that's all the choice of the publishers and the editors of magazines. They reprint my stories in various styles, and I am greatly flattered that they sometimes print them on nice, glossy paper and . . . make real works of art out of those stories.",
+          "value": "CB: I haven't been involved in that, because that's all the choice of the publishers and the editors of magazines. They reprint my stories in various styles, and I am greatly flattered that they sometimes print them on nice, glossy paper and . . . make real works of art out of those stories.",
+          "bbox": [
+            {
+              "h": 48.63417218543049,
+              "w": 282.59062500000005,
+              "x": 471.860625,
+              "y": 441.38797350993383,
+              "confidence": 0.8,
+              "end_index": 295,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** What do you think of the new computer-coloring of your stories?",
+          "value": "ES: What do you think of the new computer-coloring of your stories?",
+          "bbox": [
+            {
+              "h": 9.463947019867533,
+              "w": 267.081,
+              "x": 472.12350000000004,
+              "y": 500.2747549668875,
+              "confidence": 0.76,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** It's just so much magic to me. I can't see how it is done. The old Ben-Day dot color looks very cheap and old-fashioned now.",
+          "value": "CB: It's just so much magic to me. I can't see how it is done. The old Ben-Day dot color looks very cheap and old-fashioned now.",
+          "bbox": [
+            {
+              "h": 21.5567682119206,
+              "w": 280.7504999999999,
+              "x": 472.38637500000004,
+              "y": 513.6820132450332,
+              "confidence": 0.76,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**ES:** Do you receive any royalties or compensation for the reprints?",
+          "value": "ES: Do you receive any royalties or compensation for the reprints?",
+          "bbox": [
+            {
+              "h": 10.25,
+              "w": 254.99,
+              "x": 471.86,
+              "y": 546.28,
+              "confidence": 1.0,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** No, no, I never have.",
+          "value": "CB: No, no, I never have.",
+          "bbox": [
+            {
+              "h": 11.247503348894819,
+              "w": 97.98390127191307,
+              "x": 472.68611661585373,
+              "y": 558.6481362519056,
+              "confidence": 0.82,
+              "end_index": 28,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "166, 167"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "238 INDEX",
+              "value": "238 INDEX",
+              "bbox": [
+                {
+                  "h": 7.673798771555832,
+                  "w": 19.92042005287729,
+                  "x": 106.47216407440932,
+                  "y": 23.75211209508385,
+                  "confidence": 0.74,
+                  "end_index": 8,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "238 INDEX",
+          "bbox": [
+            {
+              "h": 7.67,
+              "w": 19.92,
+              "x": 106.47,
+              "y": 23.75,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Wertham, Dr. Fredrick (*Seduction of the Innocent*), 213",
+          "value": "Wertham, Dr. Fredrick (Seduction of the Innocent), 213",
+          "bbox": [
+            {
+              "h": 20.03027082757718,
+              "w": 125.95283953410826,
+              "x": 81.24717146412921,
+              "y": 45.64569464498381,
+              "confidence": 0.81,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Western Publishing Company (Whitman), x, xv–xvii, xxi, xxix–xxx, 5, 22, 30–31, 34, 64, 110, 119, 144–45, 151, 157, 175, 184, 215, 217, 218",
+          "value": "Western Publishing Company (Whitman), x, xv–xvii, xxi, xxix–xxx, 5, 22, 30–31, 34, 64, 110, 119, 144–45, 151, 157, 175, 184, 215, 217, 218",
+          "bbox": [
+            {
+              "h": 41.01,
+              "w": 134.33,
+              "x": 82.02,
+              "y": 68.09,
+              "confidence": 1.0,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Williams, Margaret (third wife). See Barks, Garé (third wife)\nWillits, Malcolm, x, xiii, xxvii–xxviii, 30\nWork habits, 8–10, 15, 73\nWorld War I, 53, 57, 155–56, 198\nWorld War II, xxi, 5, 53, 149, 169–70",
+          "value": "Williams, Margaret (third wife). See Barks, Garé (third wife)\nWillits, Malcolm, x, xiii, xxvii–xxviii, 30\nWork habits, 8–10, 15, 73\nWorld War I, 53, 57, 155–56, 198\nWorld War II, xxi, 5, 53, 149, 169–70",
+          "bbox": [
+            {
+              "h": 64.44319643733328,
+              "w": 133.03521197360902,
+              "x": 227.74149077029347,
+              "y": 46.088890335008585,
+              "confidence": 0.92,
+              "end_index": 201,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "caption": "Blank page",
+          "md": "![Blank page](CB-Conversations-scan-4-rotated_spread_042_page_1_image_1_v2.jpg)",
+          "url": "CB-Conversations-scan-4-rotated_spread_042_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 593.1454911044425,
+              "w": 434.584494176353,
+              "x": 404.2002916706365,
+              "y": 0.8576042747497561,
+              "confidence": 0.78,
+              "end_index": 35,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.44,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "238"
+    }
+  ]
+}
