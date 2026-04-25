@@ -130,6 +130,35 @@
           "book_side": "left"
         },
         {
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-2-rotated_spread_010_image_1.png",
+          "bbox": [
+            {
+              "h": 230.93401099347375,
+              "w": 304.0517039348324,
+              "x": 457.2404071074696,
+              "y": 70.79699022127478,
+              "confidence": 0.95,
+              "end_index": 139,
+              "label": "image",
+              "start_index": 0
+            },
+            {
+              "h": 229.47075342987816,
+              "w": 305.4356045636434,
+              "x": 459.75009196360526,
+              "y": 340.36046195693604,
+              "confidence": 0.97,
+              "end_index": 100,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
           "md": "**DA:** He kept saying, \"Your hat, sir.\"",
           "value": "DA: He kept saying, \"Your hat, sir.\"",
           "bbox": [
