@@ -7,6 +7,8 @@ ebooklib
 figcaption
 ivxlcdm
 llamaparse
+linkified
+linkify
 metas
 mybook
 pagebreak

@@ -57,8 +57,55 @@
           "book_side": "left"
         },
         {
-          "md": "**DA:** Did Walt come in and talk to you about most of the cartoons?\n**CB:** Oh, no. At the time we worked on that \"Modern Inventions\" cartoon, that was 1936, he was still one of the boys around there. He hadn't become so busy that he just had to have his time all laid out for him and a bunch of flunkies delegated to do his thinking for him or run his errands for him. He would get around to the different story units, just drop in and talk about things like one of the creative men himself. So that was an exception to the rule. Later stories that we worked on, oh, he would come in—on a formal story conference—no, he never worked on any stories after that that I remember of in that same way of being informal about it.",
-          "value": "DA: Did Walt come in and talk to you about most of the cartoons?\nCB: Oh, no. At the time we worked on that \"Modern Inventions\" cartoon, that was 1936, he was still one of the boys around there. He hadn't become so busy that he just had to have his time all laid out for him and a bunch of flunkies delegated to do his thinking for him or run his errands for him. He would get around to the different story units, just drop in and talk about things like one of the creative men himself. So that was an exception to the rule. Later stories that we worked on, oh, he would come in—on a formal story conference—no, he never worked on any stories after that that I remember of in that same way of being informal about it.",
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-2-rotated_spread_010_image_2.png",
+          "bbox": [
+            {
+              "h": 230.93401099347375,
+              "w": 304.0517039348324,
+              "x": 457.2404071074696,
+              "y": 70.79699022127478,
+              "confidence": 0.95,
+              "end_index": 139,
+              "label": "image",
+              "start_index": 0
+            },
+            {
+              "h": 229.47075342987816,
+              "w": 305.4356045636434,
+              "x": 459.75009196360526,
+              "y": 340.36046195693604,
+              "confidence": 0.97,
+              "end_index": 100,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "md": "**DA:** Did Walt come in and talk to you about most of the cartoons?",
+          "value": "DA: Did Walt come in and talk to you about most of the cartoons?",
+          "bbox": [
+            {
+              "h": 130.99680000000004,
+              "w": 284.3256,
+              "x": 99.2616,
+              "y": 188.75448000000003,
+              "confidence": 0.91,
+              "end_index": 723,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Oh, no. At the time we worked on that \"Modern Inventions\" cartoon, that was 1936, he was still one of the boys around there. He hadn't become so busy that he just had to have his time all laid out for him and a bunch of flunkies delegated to do his thinking for him or run his errands for him. He would get around to the different story units, just drop in and talk about things like one of the creative men himself. So that was an exception to the rule. Later stories that we worked on, oh, he would come in—on a formal story conference—no, he never worked on any stories after that that I remember of in that same way of being informal about it.",
+          "value": "CB: Oh, no. At the time we worked on that \"Modern Inventions\" cartoon, that was 1936, he was still one of the boys around there. He hadn't become so busy that he just had to have his time all laid out for him and a bunch of flunkies delegated to do his thinking for him or run his errands for him. He would get around to the different story units, just drop in and talk about things like one of the creative men himself. So that was an exception to the rule. Later stories that we worked on, oh, he would come in—on a formal story conference—no, he never worked on any stories after that that I remember of in that same way of being informal about it.",
           "bbox": [
             {
               "h": 130.99680000000004,
