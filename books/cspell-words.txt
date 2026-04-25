@@ -2,6 +2,7 @@
 # One word per line. Case-insensitive.
 
 ault
+backlink
 blockquotes
 ebooklib
 figcaption
@@ -11,7 +12,9 @@ linkified
 linkify
 metas
 mybook
+noteref
 pagebreak
 pdfium
 spellcheckable
+subline
 willits
