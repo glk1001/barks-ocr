@@ -72,17 +72,15 @@ p.index-entry {
 }
 a { color: inherit; text-decoration: underline; }
 p.contents-entry {
-  padding-left: 1.5em;
-  text-indent: -1.5em;
   margin: 0.4em 0 0.1em 0;
-  text-align: left;
+  text-align: center;
   page-break-inside: avoid;
   font-weight: bold;
 }
 p.contents-credit {
-  margin: 0 0 0.5em 1.5em;
+  margin: 0 0 0.5em 0;
   font-size: 0.95em;
-  text-align: left;
+  text-align: center;
 }
 """
 
@@ -819,20 +817,32 @@ def _render_index_xhtml(
     return "\n".join(parts)
 
 
-_CONTENTS_TRAILING_PAGE_RE = re.compile(r"(?P<token>\b(?:[ivxlcdm]+|\d{1,3})\b)(?P<bold>\*\*)?\s*$")
+_CONTENTS_TRAILING_PAGE_RE = re.compile(
+    r"(?P<gap>\s+)(?P<token>\b(?:[ivxlcdm]+|\d{1,3})\b)(?P<bold>\*\*)?\s*$"
+)
+# Visual separator between chapter title and trailing page number in the
+# Contents page. An em space reads as a clear "page number coming up" beat
+# without resorting to leader dots.
+_CONTENTS_PAGE_GAP = " "  # noqa: RUF001 - em space (intentional)
 
 
 def _linkify_contents_title(line: str, page_link_map: dict[str, tuple[str, int]]) -> str:
     """Wrap a Contents title line in a markdown link if its trailing page ref resolves.
 
+    Always widens the whitespace immediately before the page-reference token to
+    an em space so the page number is visually separated from the title.
+
     The line may be wrapped in ``**...**`` (bold). Markdown-it correctly renders
     ``[**text**](url)`` as a link wrapping bold, so the entire line is wrapped
-    either way. If no trailing page-reference token is found, or the token
-    doesn't resolve in ``page_link_map``, the line is returned unchanged.
+    either way. If no trailing page-reference token is found, the line is
+    returned unchanged. If the token doesn't resolve in ``page_link_map``, the
+    line still gets the wider gap but is not linkified.
     """
     match = _CONTENTS_TRAILING_PAGE_RE.search(line)
     if match is None:
         return line
+    gap_start, gap_end = match.span("gap")
+    line = line[:gap_start] + _CONTENTS_PAGE_GAP + line[gap_end:]
     target = page_link_map.get(match.group("token"))
     if target is None:
         return line
