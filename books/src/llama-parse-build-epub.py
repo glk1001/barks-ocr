@@ -63,13 +63,39 @@ blockquote {
 }
 blockquote p { margin: 0.4em 0; }
 h1, h2, h3 { font-family: sans-serif; }
+p.index-entry {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  margin: 0.2em 0;
+  text-align: left;
+  page-break-inside: avoid;
+}
+a { color: inherit; text-decoration: underline; }
+p.contents-entry {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  margin: 0.4em 0 0.1em 0;
+  text-align: left;
+  page-break-inside: avoid;
+  font-weight: bold;
+}
+p.contents-credit {
+  margin: 0 0 0.5em 1.5em;
+  font-size: 0.95em;
+  text-align: left;
+}
 """
+
+
+_CHAPTER_KINDS = frozenset({"regular", "index", "contents"})
 
 
 @dataclass(frozen=True)
 class _Chapter:
     title: str
-    start_printed_page: str
+    start_printed_page: str | None = None
+    start_heading: str | None = None
+    kind: str = "regular"
 
 
 @dataclass(frozen=True)
@@ -79,6 +105,7 @@ class _ChapterSection:
     title: str
     pages: list[BookPage]
     first_page_index: int
+    kind: str = "regular"
 
 
 def _load_chapters(path: Path) -> list[_Chapter]:
@@ -95,14 +122,72 @@ def _load_chapters(path: Path) -> list[_Chapter]:
         data = tomllib.load(f)
     entries = data.get("chapters") or []
     chapters: list[_Chapter] = []
+    index_seen = False
+    contents_seen = False
     for i, entry in enumerate(entries):
         title = entry.get("title")
-        start = entry.get("start_printed_page")
-        if not isinstance(title, str) or not isinstance(start, str):
-            msg = f"chapters[{i}] must have string 'title' and 'start_printed_page'"
+        start_page = entry.get("start_printed_page")
+        start_heading = entry.get("start_heading")
+        kind = entry.get("kind", "regular")
+        if not isinstance(title, str):
+            msg = f"chapters[{i}] must have a string 'title'"
             raise TypeError(msg)
-        chapters.append(_Chapter(title=title, start_printed_page=start))
+        has_page = isinstance(start_page, str) and start_page != ""
+        has_heading = isinstance(start_heading, str) and start_heading != ""
+        if has_page == has_heading:
+            msg = (
+                f"chapters[{i}] must specify exactly one of "
+                f"'start_printed_page' or 'start_heading' (got both or neither)"
+            )
+            raise TypeError(msg)
+        if kind not in _CHAPTER_KINDS:
+            msg = f"chapters[{i}].kind must be one of {sorted(_CHAPTER_KINDS)}, got {kind!r}"
+            raise ValueError(msg)
+        if kind == "index":
+            if index_seen:
+                msg = f"chapters[{i}]: only one chapter may have kind='index'"
+                raise ValueError(msg)
+            index_seen = True
+        if kind == "contents":
+            if contents_seen:
+                msg = f"chapters[{i}]: only one chapter may have kind='contents'"
+                raise ValueError(msg)
+            contents_seen = True
+        chapters.append(
+            _Chapter(
+                title=title,
+                start_printed_page=start_page if has_page else None,
+                start_heading=start_heading if has_heading else None,
+                kind=kind,
+            )
+        )
     return chapters
+
+
+def _heading_text(item: dict) -> str | None:
+    """Return the visible text of a ``type == "heading"`` item, or ``None``."""
+    if item.get("type") != "heading":
+        return None
+    value = item.get("value")
+    if isinstance(value, str) and value.strip():
+        return value.strip()
+    md = item.get("md")
+    if isinstance(md, str):
+        stripped = re.sub(r"^#+\s*", "", md.strip()).strip()
+        if stripped:
+            return stripped
+    return None
+
+
+def _match_chapter_to_heading(heading_text: str, pages: list[BookPage]) -> int | None:
+    """Return the page index of the first page containing a matching heading."""
+    target = heading_text.casefold()
+    for page in pages:
+        for item in page.items:
+            text = _heading_text(item)
+            if text is not None and text.casefold() == target:
+                return page.page_index_global
+    return None
 
 
 def _match_chapters_to_pages(
@@ -125,15 +210,22 @@ def _match_chapters_to_pages(
     mapping: dict[int, _Chapter] = {}
     missing: list[str] = []
     for chapter in chapters:
-        idx = by_printed.get(chapter.start_printed_page)
-        if idx is None:
-            missing.append(chapter.start_printed_page)
-            continue
+        if chapter.start_printed_page is not None:
+            idx = by_printed.get(chapter.start_printed_page)
+            if idx is None:
+                missing.append(f"printed_page={chapter.start_printed_page!r}")
+                continue
+        else:
+            assert chapter.start_heading is not None
+            idx = _match_chapter_to_heading(chapter.start_heading, pages)
+            if idx is None:
+                missing.append(f"heading={chapter.start_heading!r}")
+                continue
         mapping[idx] = chapter
     if missing:
         available = sorted(by_printed.keys())
         msg = (
-            f"chapters.toml references printed pages not found in any parse: {missing}. "
+            f"chapters.toml references anchors not found in any parse: {missing}. "
             f"Available printed pages: {available}"
         )
         raise ValueError(msg)
@@ -599,6 +691,233 @@ def _merge_paragraph_across_pages(a_items: list[list[str]], b_items: list[list[s
     del a_items[a_last]
 
 
+# A page reference is a roman numeral (lowercase) or 1-3 digit arabic number,
+# optionally a range joined by an en-dash (U+2013) or ASCII hyphen, with no
+# whitespace around the dash (confirmed against the source data). Both single
+# (``"129"``) and ranged (``"129-30"``, ``"xv-vi"``) tokens match.
+_PAGE_REF_TOKEN_RE = re.compile(
+    r"\b(?:[ivxlcdm]+|\d{1,3})(?:[–-](?:[ivxlcdm]+|\d{1,3}))?\b"  # noqa: RUF001
+)
+_RANGE_SEP_RE = re.compile(r"[–-]")  # noqa: RUF001
+
+
+def _build_page_link_map(
+    section_files: list[tuple[str, "_ChapterSection"]],
+) -> dict[str, tuple[str, int]]:
+    """Build a printed-page to (xhtml_filename, page_index_global) lookup.
+
+    Used by the index renderer to resolve each page reference into an
+    intra-EPUB hyperlink target.
+
+    Args:
+        section_files: Pairs of (assigned XHTML filename, section), in spine
+            order.
+
+    Returns:
+        Mapping keyed by ``BookPage.printed_page_number``. Pages without a
+        printed page number are skipped. If two pages share a printed number,
+        the first one wins.
+
+    """
+    mapping: dict[str, tuple[str, int]] = {}
+    for file_name, section in section_files:
+        for page in section.pages:
+            if not page.printed_page_number:
+                continue
+            if page.printed_page_number in mapping:
+                continue
+            mapping[page.printed_page_number] = (file_name, page.page_index_global)
+    return mapping
+
+
+def _linkify_index_entry(line: str, page_link_map: dict[str, tuple[str, int]]) -> str:
+    r"""Wrap page-reference tokens after the entry's first comma in Markdown links.
+
+    The text before the first comma is the entry term and is passed through
+    unchanged. After the first comma, every token matching
+    ``_PAGE_REF_TOKEN_RE`` is wrapped in ``[label](file#page-K)`` if its
+    *first* endpoint resolves in ``page_link_map``. Non-resolving tokens
+    (e.g. the word ``civic`` or a typo'd second range endpoint like the
+    ``vi`` in ``xv-vi``) are left as plain text, so we never emit broken
+    links.
+
+    Markdown link syntax is used (rather than raw ``<a>`` HTML) so that
+    ``markdown-it`` builds the anchor; this side-steps tag-mismatch hazards
+    when an entry contains italics like ``*Comic Art*``.
+
+    Args:
+        line: One logical index entry (a single ``\n``-split line).
+        page_link_map: Mapping of printed page number to its
+            ``(xhtml_filename, page_index_global)``.
+
+    Returns:
+        Markdown text with resolved page references replaced by
+        ``[label](file#page-K)`` links.
+
+    """
+    head, sep, tail = line.partition(",")
+    if not sep:
+        return line
+
+    def _replace(match: re.Match[str]) -> str:
+        token = match.group(0)
+        first_endpoint = _RANGE_SEP_RE.split(token, maxsplit=1)[0]
+        target = page_link_map.get(first_endpoint)
+        if target is None:
+            return token
+        file_name, page_index = target
+        return f"[{token}]({file_name}#page-{page_index})"
+
+    return head + sep + _PAGE_REF_TOKEN_RE.sub(_replace, tail)
+
+
+def _render_index_xhtml(
+    section: _ChapterSection,
+    md_renderer: MarkdownIt,
+    page_link_map: dict[str, tuple[str, int]],
+) -> str:
+    r"""Render an index chapter section with linkified page references.
+
+    Each book page emits its pagebreak anchor (so the EPUB3 page-list nav
+    still picks up index pages), then each ``type: "text"`` item is split on
+    ``\n`` and each line becomes one ``<p class="index-entry">`` with page
+    references converted to internal hyperlinks.
+
+    The cross-page paragraph-merge logic used by ``_render_section_xhtml`` is
+    deliberately skipped: index entries lack sentence-ending punctuation, so
+    that merge would glue the last entry of one page onto the first entry of
+    the next.
+
+    Args:
+        section: Index chapter section.
+        md_renderer: Markdown-it renderer.
+        page_link_map: Printed-page to (file, anchor) lookup.
+
+    Returns:
+        XHTML body for the section (without the outer ``<div class="chapter">``).
+
+    """
+    parts: list[str] = [f"<h1>{escape(section.title)}</h1>"]
+    for page in section.pages:
+        if page.printed_page_number:
+            parts.append(_page_anchor_html(page))
+        for item in page.items:
+            if item.get("type") != "text":
+                continue
+            md = item.get("md")
+            if not isinstance(md, str) or not md.strip():
+                continue
+            for raw_line in md.split("\n"):
+                line = raw_line.strip()
+                if not line:
+                    continue
+                linkified = _linkify_index_entry(line, page_link_map)
+                rendered = md_renderer.renderInline(linkified).strip()
+                if not rendered:
+                    continue
+                parts.append(f'<p class="index-entry">{rendered}</p>')
+    return "\n".join(parts)
+
+
+_CONTENTS_TRAILING_PAGE_RE = re.compile(r"(?P<token>\b(?:[ivxlcdm]+|\d{1,3})\b)(?P<bold>\*\*)?\s*$")
+
+
+def _linkify_contents_title(line: str, page_link_map: dict[str, tuple[str, int]]) -> str:
+    """Wrap a Contents title line in a markdown link if its trailing page ref resolves.
+
+    The line may be wrapped in ``**...**`` (bold). Markdown-it correctly renders
+    ``[**text**](url)`` as a link wrapping bold, so the entire line is wrapped
+    either way. If no trailing page-reference token is found, or the token
+    doesn't resolve in ``page_link_map``, the line is returned unchanged.
+    """
+    match = _CONTENTS_TRAILING_PAGE_RE.search(line)
+    if match is None:
+        return line
+    target = page_link_map.get(match.group("token"))
+    if target is None:
+        return line
+    file_name, page_index = target
+    return f"[{line}]({file_name}#page-{page_index})"
+
+
+def _render_contents_text_item(
+    md: str, md_renderer: MarkdownIt, page_link_map: dict[str, tuple[str, int]]
+) -> list[str]:
+    r"""Render one Contents text item's markdown into a list of <p> fragments.
+
+    Each non-empty line is classified by content: a line ending with a
+    page-reference token is a chapter title (linkified if the token resolves);
+    any other line is a credit subline. This handles both back-to-back titles
+    (e.g. ``"Introduction ix\nChronology xxxv"``) and title+credit blocks
+    (``"**The Duck Man 3**\n*Malcolm Willits...*"``) without relying on blank
+    lines to separate titles, since the printed Contents only uses blank lines
+    between *groups* of entries, not between every entry.
+    """
+    out: list[str] = []
+    for raw_line in md.split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if _CONTENTS_TRAILING_PAGE_RE.search(line):
+            linkified = _linkify_contents_title(line, page_link_map)
+            rendered = md_renderer.renderInline(linkified).strip()
+            if rendered:
+                out.append(f'<p class="contents-entry">{rendered}</p>')
+        else:
+            rendered = md_renderer.renderInline(line).strip()
+            if rendered:
+                out.append(f'<p class="contents-credit">{rendered}</p>')
+    return out
+
+
+def _render_contents_xhtml(
+    section: _ChapterSection,
+    md_renderer: MarkdownIt,
+    page_link_map: dict[str, tuple[str, int]],
+) -> str:
+    """Render a Contents chapter section with linkified chapter titles.
+
+    Each book page emits its pagebreak anchor (so EPUB3 page-list nav still
+    picks up Contents pages). Each ``type: "text"`` item is split on blank lines
+    into entries; the first non-empty line of an entry is the chapter title
+    (linkified to the chapter's first page anchor if its trailing page-reference
+    token resolves), and any subsequent non-empty lines are rendered as italic
+    credit sub-lines.
+
+    The original ``# Contents`` heading item is suppressed because we emit our
+    own ``<h1>`` from ``section.title``.
+
+    Cross-page paragraph merging is deliberately skipped (same rationale as
+    ``_render_index_xhtml``): contents entries lack sentence-ending punctuation
+    and would otherwise be glued together at page boundaries.
+
+    Args:
+        section: Contents chapter section.
+        md_renderer: Markdown-it renderer.
+        page_link_map: Printed-page to (file, anchor) lookup.
+
+    Returns:
+        XHTML body for the section (without the outer ``<div class="chapter">``).
+
+    """
+    parts: list[str] = [f"<h1>{escape(section.title)}</h1>"]
+    title_cf = section.title.casefold()
+    for page in section.pages:
+        if page.printed_page_number:
+            parts.append(_page_anchor_html(page))
+        for item in page.items:
+            heading_text = _heading_text(item)
+            if heading_text is not None and heading_text.casefold() == title_cf:
+                continue
+            if item.get("type") != "text":
+                continue
+            md = item.get("md")
+            if not isinstance(md, str) or not md.strip():
+                continue
+            parts.extend(_render_contents_text_item(md, md_renderer, page_link_map))
+    return "\n".join(parts)
+
+
 def _render_section_xhtml(section: _ChapterSection, md_renderer: MarkdownIt) -> str:
     """Build the XHTML body for one chapter section.
 
@@ -653,6 +972,7 @@ def _group_pages_into_sections(
     """
     sections: list[_ChapterSection] = []
     current_title: str | None = None
+    current_kind: str = "regular"
     current_pages: list[BookPage] = []
     current_first_idx = 0
 
@@ -665,9 +985,11 @@ def _group_pages_into_sections(
                         title=current_title or "Front Matter",
                         pages=current_pages,
                         first_page_index=current_first_idx,
+                        kind=current_kind,
                     )
                 )
             current_title = chapter_here.title
+            current_kind = chapter_here.kind
             current_pages = [page]
             current_first_idx = page.page_index_global
         else:
@@ -681,9 +1003,59 @@ def _group_pages_into_sections(
                 title=current_title or "Front Matter",
                 pages=current_pages,
                 first_page_index=current_first_idx,
+                kind=current_kind,
             )
         )
     return sections
+
+
+_SUP_NOTE_RE = re.compile(r"<sup>(\d+)</sup>")
+_NOTES_HEADING_RE = re.compile(r"<h2>Notes</h2>", re.IGNORECASE)
+_OL_BLOCK_RE = re.compile(r"<ol(?P<attrs>\b[^>]*)>(?P<inner>.*?)</ol>", re.DOTALL)
+_OL_START_ATTR_RE = re.compile(r'\bstart="(\d+)"')
+_LI_OPEN_RE = re.compile(r"<li>")
+
+
+def _linkify_footnotes(html: str) -> str:
+    """Add EPUB3 noteref/endnote semantics to a section's rendered XHTML.
+
+    Finds the first ``<h2>Notes</h2>`` heading and treats every ``<ol>`` block
+    after it as a continuation of the endnote list (the printed Notes section
+    can be broken into multiple ``<ol>`` blocks at page boundaries — markdown-it
+    emits ``<ol start="N">`` for the continuation). Each ``<li>`` gets
+    ``id="fn-N"``, where N is taken from the ``<ol>``'s ``start`` attribute (or
+    1 for the first block). Each ``<sup>N</sup>`` marker in body text becomes
+    ``<a epub:type="noteref" href="#fn-N">``. No-op if there's no Notes block.
+
+    Forward-link only — no backlink from note to body — so readers rely on
+    their built-in back gesture to return.
+    """
+    heading_match = _NOTES_HEADING_RE.search(html)
+    if heading_match is None:
+        return html
+    head = html[: heading_match.end()]
+    tail = html[heading_match.end() :]
+
+    def _process_ol(m: re.Match[str]) -> str:
+        attrs = m.group("attrs")
+        start_match = _OL_START_ATTR_RE.search(attrs)
+        counter = int(start_match.group(1)) if start_match else 1
+
+        def _add_id(_: re.Match[str]) -> str:
+            nonlocal counter
+            i = counter
+            counter += 1
+            return f'<li id="fn-{i}" epub:type="footnote" role="doc-footnote">'
+
+        new_inner = _LI_OPEN_RE.sub(_add_id, m.group("inner"))
+        return f'<ol epub:type="endnotes"{attrs}>{new_inner}</ol>'
+
+    new_tail = _OL_BLOCK_RE.sub(_process_ol, tail)
+    html = head + new_tail
+    return _SUP_NOTE_RE.sub(
+        r'<sup><a epub:type="noteref" href="#fn-\1" role="doc-noteref">\1</a></sup>',
+        html,
+    )
 
 
 def _collect_image_paths(pages: list[BookPage]) -> dict[str, Path]:
@@ -771,12 +1143,21 @@ def _build_epub(  # noqa: PLR0913 - arg-per-option is reasonable for an epub bui
 
     sections = _group_pages_into_sections(pages, chapters_by_page)
     md_renderer = MarkdownIt("commonmark", {"html": True}).enable("table")
+    section_files = [
+        (f"section-{idx:04d}.xhtml", section) for idx, section in enumerate(sections, start=1)
+    ]
+    page_link_map = _build_page_link_map(section_files)
     xhtml_sections: list[epub.EpubHtml] = []
     toc_entries: list[epub.Link] = []
-    for idx, section in enumerate(sections, start=1):
-        inner = _render_section_xhtml(section, md_renderer)
+    for file_name, section in section_files:
+        if section.kind == "index":
+            inner = _render_index_xhtml(section, md_renderer, page_link_map)
+        elif section.kind == "contents":
+            inner = _render_contents_xhtml(section, md_renderer, page_link_map)
+        else:
+            inner = _render_section_xhtml(section, md_renderer)
+            inner = _linkify_footnotes(inner)
         body = f'<div class="chapter">\n{inner}\n</div>'
-        file_name = f"section-{idx:04d}.xhtml"
         uid = f"section-{section.first_page_index}"
         item = epub.EpubHtml(
             uid=uid,

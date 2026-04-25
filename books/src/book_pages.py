@@ -160,8 +160,15 @@ def split_by_side(record: SpreadRecord, *, drop_running_headers: bool) -> list[B
         elif side == "right":
             right_items.append(item)
 
-    def _printed_at(index: int) -> str | None:
-        return printed[index] if len(printed) > index else None
+    # Default to positional assignment (left is index 0, right is index 1).
+    # Special case: when only the right side has items and the spread carries
+    # exactly one detected printed page, that page belongs to the right - this
+    # happens on a recto-only opening like the index heading page where the
+    # verso of the previous spread carries no content.
+    printed_left = printed[0] if len(printed) > 0 else None
+    printed_right = printed[1] if len(printed) > 1 else None
+    if right_items and not left_items and len(printed) == 1:
+        printed_left, printed_right = None, printed[0]
 
     pages: list[BookPage] = []
     if left_items:
@@ -171,7 +178,7 @@ def split_by_side(record: SpreadRecord, *, drop_running_headers: bool) -> list[B
                 spread_stem=record.spread_stem,
                 spread_num_global=record.spread_num_global,
                 side="left",
-                printed_page_number=_printed_at(0),
+                printed_page_number=printed_left,
                 items=left_items,
                 page_index_global=0,
             )
@@ -183,7 +190,7 @@ def split_by_side(record: SpreadRecord, *, drop_running_headers: bool) -> list[B
                 spread_stem=record.spread_stem,
                 spread_num_global=record.spread_num_global,
                 side="right",
-                printed_page_number=_printed_at(1),
+                printed_page_number=printed_right,
                 items=right_items,
                 page_index_global=0,
             )

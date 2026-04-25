@@ -1,6 +1,15 @@
 # Carl Barks: Conversations — chapter sidecar for EPUB build.
-# 'start_printed_page' must match a printed page number detected on a spread
-# (see each scan dir's *_manifest.json "printed_page_numbers_detected" fields).
+# Each chapter must specify exactly one anchor:
+#   * 'start_printed_page' — must match a printed page number detected on a
+#     spread (see each scan dir's *_manifest.json "printed_page_numbers_detected").
+#   * 'start_heading' — matched against a heading item's visible text
+#     (case-insensitive). Used when the printed-page anchor is unreliable
+#     (e.g. spreads with one detected page number split across two sides).
+
+[[chapters]]
+title = "Contents"
+start_heading = "Contents"
+kind = "contents"
 
 [[chapters]]
 title = "Introduction"
