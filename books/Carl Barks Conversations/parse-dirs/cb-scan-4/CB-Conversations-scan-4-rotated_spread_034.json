@@ -39,7 +39,7 @@
           "book_side": "left"
         },
         {
-          "md": "*In the evening*",
+          "md": "<br/>*In the evening*",
           "value": "In the evening",
           "bbox": [
             {

@@ -381,8 +381,46 @@
           "book_side": "right"
         },
         {
-          "md": "**ES:** The mayor is going to hand you a medal of some sort.\n**CB:** Well, that knocks me off the stool \\[laughs]. Well, thank him very profusely. \\[The following day, on July 8 at 11:30 a.m., Barks was handed the city's highest distinction, the Grande Médaille de Vermeil de la Ville de Paris, by mayor Jacques Chirac's first assistant, Jean Tibéri, in the presence of Dennis F. Hightower, the president of Disney consumer products in Europe, and Pierre Sissmann, the director of Disney France. Within a year, Chirac had become president of France and Tibéri had taken over his job.]",
-          "value": "ES: The mayor is going to hand you a medal of some sort.\nCB: Well, that knocks me off the stool [laughs]. Well, thank him very profusely. [The following day, on July 8 at 11:30 a.m., Barks was handed the city's highest distinction, the Grande Médaille de Vermeil de la Ville de Paris, by mayor Jacques Chirac's first assistant, Jean Tibéri, in the presence of Dennis F. Hightower, the president of Disney consumer products in Europe, and Pierre Sissmann, the director of Disney France. Within a year, Chirac had become president of France and Tibéri had taken over his job.]",
+          "md": "**ES:** The mayor is going to hand you a medal of some sort.",
+          "value": "ES: The mayor is going to hand you a medal of some sort.",
+          "bbox": [
+            {
+              "h": 115.19872048399391,
+              "w": 283.21365077172266,
+              "x": 468.7939837557165,
+              "y": 286.05669986661593,
+              "confidence": 0.98,
+              "end_index": 583,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.41,
+              "w": 225.02,
+              "x": 467.13,
+              "y": 284.44,
+              "confidence": 1.0,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 102.53,
+              "w": 282.33,
+              "x": 468.71,
+              "y": 298.38,
+              "confidence": 0.98,
+              "end_index": 583,
+              "label": "text",
+              "start_index": 61
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, that knocks me off the stool \\[laughs]. Well, thank him very profusely. \\[The following day, on July 8 at 11:30 a.m., Barks was handed the city's highest distinction, the Grande Médaille de Vermeil de la Ville de Paris, by mayor Jacques Chirac's first assistant, Jean Tibéri, in the presence of Dennis F. Hightower, the president of Disney consumer products in Europe, and Pierre Sissmann, the director of Disney France. Within a year, Chirac had become president of France and Tibéri had taken over his job.]",
+          "value": "CB: Well, that knocks me off the stool [laughs]. Well, thank him very profusely. [The following day, on July 8 at 11:30 a.m., Barks was handed the city's highest distinction, the Grande Médaille de Vermeil de la Ville de Paris, by mayor Jacques Chirac's first assistant, Jean Tibéri, in the presence of Dennis F. Hightower, the president of Disney consumer products in Europe, and Pierre Sissmann, the director of Disney France. Within a year, Chirac had become president of France and Tibéri had taken over his job.]",
           "bbox": [
             {
               "h": 115.19872048399391,
@@ -473,8 +511,46 @@
           "book_side": "right"
         },
         {
-          "md": "**Erik Svane:** How would you like to be remembered?\n**Carl Barks:** I would like to be remembered as a guy who gave my readers their money's worth, that I did a good job, and that they respect me for it.",
-          "value": "Erik Svane: How would you like to be remembered?\nCarl Barks: I would like to be remembered as a guy who gave my readers their money's worth, that I did a good job, and that they respect me for it.",
+          "md": "**Erik Svane:** How would you like to be remembered?",
+          "value": "Erik Svane: How would you like to be remembered?",
+          "bbox": [
+            {
+              "h": 48.94353984374996,
+              "w": 283.3946778772866,
+              "x": 470.7725088366998,
+              "y": 519.4745621427212,
+              "confidence": 0.8,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.62,
+              "w": 204.25,
+              "x": 470.55,
+              "y": 517.36,
+              "confidence": 1.0,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 39.96,
+              "w": 283.91,
+              "x": 469.76,
+              "y": 529.72,
+              "confidence": 0.8,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 53
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**Carl Barks:** I would like to be remembered as a guy who gave my readers their money's worth, that I did a good job, and that they respect me for it.",
+          "value": "Carl Barks: I would like to be remembered as a guy who gave my readers their money's worth, that I did a good job, and that they respect me for it.",
           "bbox": [
             {
               "h": 48.94353984374996,
