@@ -114,6 +114,7 @@ start_printed_page = "221"
 title = "Notes on the Interviewers"
 start_printed_page = "227"
 
-#[[chapters]]
-#title = "Index"
-#start_printed_page = "233"
+[[chapters]]
+title = "Index"
+start_printed_page = "233"
+kind = "index"

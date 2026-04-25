@@ -22,24 +22,6 @@
           "book_side": "left"
         },
         {
-          "md": "Giving kids a background on what the lessons were all about. She was a really good teacher.",
-          "value": "Giving kids a background on what the lessons were all about. She was a really good teacher.",
-          "bbox": [
-            {
-              "h": 24.847119858755722,
-              "w": 277.25967978872904,
-              "x": 123.70917285751717,
-              "y": 62.97068919469323,
-              "confidence": 0.97,
-              "end_index": 90,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "left"
-        },
-        {
           "md": "**DA:** What kind of a student did you think of yourself as? Did you get grades at that time?",
           "value": "DA: What kind of a student did you think of yourself as? Did you get grades at that time?",
           "bbox": [

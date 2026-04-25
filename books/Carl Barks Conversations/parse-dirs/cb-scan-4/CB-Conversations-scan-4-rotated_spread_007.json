@@ -148,8 +148,8 @@
           "book_side": "left"
         },
         {
-          "md": "**CB:** No. \\[chuckling] I'm not planning to do any more. I did write one story around the end of the year. I wrote a twenty-four-page Uncle Scrooge adventure. Like I was saying, whenever you want to write an easy story, you just get ol' Uncle Scrooge. So I sent him off on a treasure hunt, and he finds the Trojan horse. It'll be drawn by William Van Horn—guy up in Vancouver, British Columbia. \\[A promising young Disney artist, Van Horn was chosen by Barks himself, I was later told. Barks admires Van Horn's art as well as that of Daan Jippes. As for who took the initiative for getting a new Barks script out, I was told that Barks had been joking about doing one with his European editors, until he realized they were taking him seriously. \"Horsing Around with History\" was eventually printed in Walt Disney's Uncle Scrooge Adventures # 33, July 1995]",
-          "value": "CB: No. [chuckling] I'm not planning to do any more. I did write one story around the end of the year. I wrote a twenty-four-page Uncle Scrooge adventure. Like I was saying, whenever you want to write an easy story, you just get ol' Uncle Scrooge. So I sent him off on a treasure hunt, and he finds the Trojan horse. It'll be drawn by William Van Horn—guy up in Vancouver, British Columbia. [A promising young Disney artist, Van Horn was chosen by Barks himself, I was later told. Barks admires Van Horn's art as well as that of Daan Jippes. As for who took the initiative for getting a new Barks script out, I was told that Barks had been joking about doing one with his European editors, until he realized they were taking him seriously. \"Horsing Around with History\" was eventually printed in Walt Disney's Uncle Scrooge Adventures # 33, July 1995]",
+          "md": "**CB:** No. \\[chuckling] I'm not planning to do any more. I did write one story around the end of the year. I wrote a twenty-four-page Uncle Scrooge adventure. Like I was saying, whenever you want to write an easy story, you just get ol' Uncle Scrooge. So I sent him off on a treasure hunt, and he finds the Trojan horse. It'll be drawn by William Van Horn—guy up in Vancouver, British Columbia. \\[A promising young Disney artist, Van Horn was chosen by Barks himself, I was later told. Barks admires Van Horn's art as well as that of Daan Jippes. As for who took the initiative for getting a new Barks script out, I was told that Barks had been joking about doing one with his European editors, until he realized they were taking him seriously. \"Horsing Around with History\" was eventually printed in Walt Disney's Uncle Scrooge Adventures # 33, July 1995.]",
+          "value": "CB: No. [chuckling] I'm not planning to do any more. I did write one story around the end of the year. I wrote a twenty-four-page Uncle Scrooge adventure. Like I was saying, whenever you want to write an easy story, you just get ol' Uncle Scrooge. So I sent him off on a treasure hunt, and he finds the Trojan horse. It'll be drawn by William Van Horn—guy up in Vancouver, British Columbia. [A promising young Disney artist, Van Horn was chosen by Barks himself, I was later told. Barks admires Van Horn's art as well as that of Daan Jippes. As for who took the initiative for getting a new Barks script out, I was told that Barks had been joking about doing one with his European editors, until he realized they were taking him seriously. \"Horsing Around with History\" was eventually printed in Walt Disney's Uncle Scrooge Adventures # 33, July 1995.]",
           "bbox": [
             {
               "h": 80.18066225165558,
@@ -176,7 +176,6 @@
           "book_side": "left"
         },
         {
-          "level": 1,
           "md": "# ERik Svane / 1994 169",
           "value": "ERik Svane / 1994 169",
           "bbox": [
@@ -191,7 +190,7 @@
               "start_index": 0
             }
           ],
-          "type": "heading",
+          "type": "header",
           "book_side": "right"
         },
         {

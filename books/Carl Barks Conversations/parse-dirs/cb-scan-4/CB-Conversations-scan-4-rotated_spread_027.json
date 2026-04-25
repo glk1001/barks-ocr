@@ -399,8 +399,26 @@
           "book_side": "right"
         },
         {
-          "md": "**DA:** But you don't exactly deny that the meaning is there, right?\n**CB:** Well, no. The meaning just crept in without me even thinking about it. It was just something that was in the situation, and as I drew it, why, it came out that it was the principal motivation of that situation. I felt that you had to have motive in stories, there had to be a theme, something that causes a person to think certain types of thoughts, and what those thoughts lead him into. That was my way of constructing stories. It was a lot of work, but the stories came out better than the kind a lot of guys were drawing \\[back then]. Nobody reads those kinds of stories anymore.",
-          "value": "DA: But you don't exactly deny that the meaning is there, right?\nCB: Well, no. The meaning just crept in without me even thinking about it. It was just something that was in the situation, and as I drew it, why, it came out that it was the principal motivation of that situation. I felt that you had to have motive in stories, there had to be a theme, something that causes a person to think certain types of thoughts, and what those thoughts lead him into. That was my way of constructing stories. It was a lot of work, but the stories came out better than the kind a lot of guys were drawing [back then]. Nobody reads those kinds of stories anymore.",
+          "md": "**DA:** But you don't exactly deny that the meaning is there, right?",
+          "value": "DA: But you don't exactly deny that the meaning is there, right?",
+          "bbox": [
+            {
+              "h": 114.91992000000005,
+              "w": 284.32560000000007,
+              "x": 464.34240000000005,
+              "y": 325.70568000000003,
+              "confidence": 0.88,
+              "end_index": 659,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Well, no. The meaning just crept in without me even thinking about it. It was just something that was in the situation, and as I drew it, why, it came out that it was the principal motivation of that situation. I felt that you had to have motive in stories, there had to be a theme, something that causes a person to think certain types of thoughts, and what those thoughts lead him into. That was my way of constructing stories. It was a lot of work, but the stories came out better than the kind a lot of guys were drawing \\[back then]. Nobody reads those kinds of stories anymore.",
+          "value": "CB: Well, no. The meaning just crept in without me even thinking about it. It was just something that was in the situation, and as I drew it, why, it came out that it was the principal motivation of that situation. I felt that you had to have motive in stories, there had to be a theme, something that causes a person to think certain types of thoughts, and what those thoughts lead him into. That was my way of constructing stories. It was a lot of work, but the stories came out better than the kind a lot of guys were drawing [back then]. Nobody reads those kinds of stories anymore.",
           "bbox": [
             {
               "h": 114.91992000000005,

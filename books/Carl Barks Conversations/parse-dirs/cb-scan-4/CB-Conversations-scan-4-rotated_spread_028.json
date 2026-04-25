@@ -57,8 +57,26 @@
           "book_side": "left"
         },
         {
-          "md": "**NW:** Your stories are timeless. The stories that you wrote fifty years ago, people are enjoying them just as much as ever today. Is there any reason you can see why people won't be enjoying them for another fifty years?\n**CB:** Yes, I think the reason they are timeless is because I put in nothing that was political, political timing; I didn't mention the names of any country or president or something that would time the story.",
-          "value": "NW: Your stories are timeless. The stories that you wrote fifty years ago, people are enjoying them just as much as ever today. Is there any reason you can see why people won't be enjoying them for another fifty years?\nCB: Yes, I think the reason they are timeless is because I put in nothing that was political, political timing; I didn't mention the names of any country or president or something that would time the story.",
+          "md": "**NW:** Your stories are timeless. The stories that you wrote fifty years ago, people are enjoying them just as much as ever today. Is there any reason you can see why people won't be enjoying them for another fifty years?",
+          "value": "NW: Your stories are timeless. The stories that you wrote fifty years ago, people are enjoying them just as much as ever today. Is there any reason you can see why people won't be enjoying them for another fifty years?",
+          "bbox": [
+            {
+              "h": 76.36882491425312,
+              "w": 283.31924156821657,
+              "x": 103.67701339796115,
+              "y": 393.8568471751144,
+              "confidence": 0.98,
+              "end_index": 432,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** Yes, I think the reason they are timeless is because I put in nothing that was political, political timing; I didn't mention the names of any country or president or something that would time the story.",
+          "value": "CB: Yes, I think the reason they are timeless is because I put in nothing that was political, political timing; I didn't mention the names of any country or president or something that would time the story.",
           "bbox": [
             {
               "h": 76.36882491425312,
@@ -219,8 +237,8 @@
           "book_side": "right"
         },
         {
-          "md": "**BH:** Did you ever pose some of your expressions in front of a mirror?\n**CB:** I know that some of the guys that worked at Disney's in animation, they would have a mirror up there and look at their faces and all, but I didn't look enough like a duck that I could get any good out of that. (general laughter)",
-          "value": "BH: Did you ever pose some of your expressions in front of a mirror?\nCB: I know that some of the guys that worked at Disney's in animation, they would have a mirror up there and look at their faces and all, but I didn't look enough like a duck that I could get any good out of that. (general laughter)",
+          "md": "**BH:** Did you ever pose some of your expressions in front of a mirror?",
+          "value": "BH: Did you ever pose some of your expressions in front of a mirror?",
           "bbox": [
             {
               "h": 64.30752000000001,
@@ -257,8 +275,46 @@
           "book_side": "right"
         },
         {
-          "md": "**DA:** Garé said that she would see you just making faces while you drew.\n**CB:** Well, what it was—oh, the faces I was making—if I was drawing him frowning, I was frowning (makes face); if I was drawing the duck happy, then I'd get those happy faces. (makes different face) (laughter)",
-          "value": "DA: Garé said that she would see you just making faces while you drew.\nCB: Well, what it was—oh, the faces I was making—if I was drawing him frowning, I was frowning (makes face); if I was drawing the duck happy, then I'd get those happy faces. (makes different face) (laughter)",
+          "md": "**CB:** I know that some of the guys that worked at Disney's in animation, they would have a mirror up there and look at their faces and all, but I didn't look enough like a duck that I could get any good out of that. (general laughter)",
+          "value": "CB: I know that some of the guys that worked at Disney's in animation, they would have a mirror up there and look at their faces and all, but I didn't look enough like a duck that I could get any good out of that. (general laughter)",
+          "bbox": [
+            {
+              "h": 64.30752000000001,
+              "w": 276.75480000000005,
+              "x": 460.97760000000005,
+              "y": 325.70568000000003,
+              "confidence": 0.79,
+              "end_index": 308,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 12.36,
+              "w": 266.56,
+              "x": 460.82,
+              "y": 324.4,
+              "confidence": 1.0,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 50.21,
+              "w": 276.81,
+              "x": 460.03,
+              "y": 338.86,
+              "confidence": 0.79,
+              "end_index": 308,
+              "label": "text",
+              "start_index": 73
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** Garé said that she would see you just making faces while you drew.",
+          "value": "DA: Garé said that she would see you just making faces while you drew.",
           "bbox": [
             {
               "h": 49.68572185430463,
@@ -275,8 +331,26 @@
           "book_side": "right"
         },
         {
-          "md": "**DA:** So would you say that you sort of lived through the stories?\n**CB:** I think one of the reasons my drawings had so much spontaneous relation to whatever they were thinking of was that I felt just like the Ducks were supposed to feel, and I managed to get that in the drawings so that they looked like they were feeling what they were saying in their dialogue balloons.",
-          "value": "DA: So would you say that you sort of lived through the stories?\nCB: I think one of the reasons my drawings had so much spontaneous relation to whatever they were thinking of was that I felt just like the Ducks were supposed to feel, and I managed to get that in the drawings so that they looked like they were feeling what they were saying in their dialogue balloons.",
+          "md": "**CB:** Well, what it was—oh, the faces I was making—if I was drawing him frowning, I was frowning (makes face); if I was drawing the duck happy, then I'd get those happy faces. (makes different face) (laughter)",
+          "value": "CB: Well, what it was—oh, the faces I was making—if I was drawing him frowning, I was frowning (makes face); if I was drawing the duck happy, then I'd get those happy faces. (makes different face) (laughter)",
+          "bbox": [
+            {
+              "h": 49.68572185430463,
+              "w": 283.90500000000003,
+              "x": 460.03125000000006,
+              "y": 396.96000000000004,
+              "confidence": 0.97,
+              "end_index": 285,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So would you say that you sort of lived through the stories?",
+          "value": "DA: So would you say that you sort of lived through the stories?",
           "bbox": [
             {
               "h": 75.71157615894037,
@@ -293,8 +367,64 @@
           "book_side": "right"
         },
         {
-          "md": "**DA:** So there is a sense in which you actually experienced the adventures?\n**CB:** I was an actor, and drawing the Duck to act the way I was seeing him",
-          "value": "DA: So there is a sense in which you actually experienced the adventures?\nCB: I was an actor, and drawing the Duck to act the way I was seeing him",
+          "md": "**CB:** I think one of the reasons my drawings had so much spontaneous relation to whatever they were thinking of was that I felt just like the Ducks were supposed to feel, and I managed to get that in the drawings so that they looked like they were feeling what they were saying in their dialogue balloons.",
+          "value": "CB: I think one of the reasons my drawings had so much spontaneous relation to whatever they were thinking of was that I felt just like the Ducks were supposed to feel, and I managed to get that in the drawings so that they looked like they were feeling what they were saying in their dialogue balloons.",
+          "bbox": [
+            {
+              "h": 75.71157615894037,
+              "w": 279.69899999999996,
+              "x": 460.819875,
+              "y": 455.3210066225166,
+              "confidence": 0.97,
+              "end_index": 375,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**DA:** So there is a sense in which you actually experienced the adventures?",
+          "value": "DA: So there is a sense in which you actually experienced the adventures?",
+          "bbox": [
+            {
+              "h": 23.13409271523176,
+              "w": 281.80199999999996,
+              "x": 462.66,
+              "y": 539.4449801324504,
+              "confidence": 0.77,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 10.78,
+              "w": 281.8,
+              "x": 462.66,
+              "y": 539.44,
+              "confidence": 1.0,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 9.46,
+              "w": 281.28,
+              "x": 462.92,
+              "y": 553.12,
+              "confidence": 1.0,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 78
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** I was an actor, and drawing the Duck to act the way I was seeing him",
+          "value": "CB: I was an actor, and drawing the Duck to act the way I was seeing him",
           "bbox": [
             {
               "h": 23.13409271523176,
