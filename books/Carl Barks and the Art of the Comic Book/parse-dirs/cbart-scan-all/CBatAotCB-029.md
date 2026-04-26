@@ -1,0 +1,14 @@
+# III.
+
+**BARKS HAD ACTUALLY** done his first comic-book work for Western while still a Disney employee, by illustrating half of a comic book based on an uncompleted Disney feature cartoon, *Morgan's Ghost*. *Morgan's Ghost* was to have starred Mickey, Donald and Goofy, sailing to a treasure island aboard a ship manned by the disguised Pegleg Pete and his henchmen. Mickey, Donald, and Goofy would have been led to the island by a parrot named Yellowbeak.
+
+*Morgan's Ghost* would not have been the first feature to star characters from the Disney shorts. It would have followed *Mickey and the Beanstalk*, on which production was already under way in 1941. These features, and *The Wind in the Willows* (also in production in 1941), would have been modest, low-budget efforts, along the lines of *Dumbo*. The hope was that they would regain some of the financial ground that the Disney studio had lost through the expensive boxoffice failures of *Pinocchio* and *Fantasia*.
+
+Walt Disney chafed under the budget restrictions that had been imposed on him by the banks, and *Mickey and the Beanstalk*, *Wind in the Willows*, and *Morgan's Ghost* all were shelved as the studio converted to war production. *Mickey and the Beanstalk* and *The Wind in the Willows* turned up in postwar compilation features (*Fun and Fancy Free* and *The Adventures of Ichabod and Mr. Toad*, respec-
+tively), but *Morgan's Ghost* exists only as story sketches in the Disney Archives — and as a comic book, *Donald Duck Finds Pirate Gold*, Four Color No. 9, published in 1942.
+
+Barks recalled in a 1967 letter that he "got involved in the comic book by being one of two artists who volunteered to do the drawings in spare time." The other was Jack Hannah, Barks's partner in the story department who said in 1976 that he had not even been aware that the comic book was based on an unmade feature. "Carl and I were given a typed copy of the story," he said. "I think it was broken into panels. That's all that I worked from. Carl and I took it to our respective homes; we took thirty-two pages apiece, and got together on hookups. . . . To my recollection, I never saw a sketch of any kind on the thing; I just worked from typewritten pages."
+
+Some of the comic book's panels are in fact strikingly similar to some of the story sketches — except that Donald's nephews have been substituted for Mickey Mouse and Goofy.
+
+"The story adaptation was done by Bob Karp, who was then . . . the gagman for the Donald Duck daily and Sunday newspaper strips," Barks said in 1967. "Most credit for the story should go to Homer Brightman, who plotted it and gagged it up in its original storyboard form for the movie." Barks remembers attending story conferences on

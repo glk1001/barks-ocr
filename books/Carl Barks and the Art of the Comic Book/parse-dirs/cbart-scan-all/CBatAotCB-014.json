@@ -1,0 +1,66 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Cover of Eyeopener's Annual Red Pepper, Fourth Edition, featuring an illustration of \"The Original Bali Dancer\" on a beach. A text box on the left lists \"HUMOR with the lid off! Cartoons, Poems, Annette's PEPPER-UPPERS, FRENCH ART\". The price is listed as 50¢.",
+          "md": "![Cover of Eyeopener's Annual Red Pepper, Fourth Edition, featuring an illustration of \"The Original Bali Dancer\" on a beach. A text box on the left lists \"HUMOR with the lid off! Cartoons, Poems, Annette's PEPPER-UPPERS, FRENCH ART\". The price is listed as 50¢.](CBatAotCB-014_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-014_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 321.2431026105183,
+              "w": 247.98380359184452,
+              "x": 24.157915158155486,
+              "y": 21.698696169969512,
+              "confidence": 0.99,
+              "end_index": 285,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "items": [
+            {
+              "md": "14 Carl Barks and the Art of the Comic Book",
+              "value": "14 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 6.21994664634145,
+                  "w": 80.24669159679878,
+                  "x": 38.037368997713415,
+                  "y": 365.3687423780488,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "14 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 6.22,
+              "w": 80.25,
+              "x": 38.04,
+              "y": 365.37,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "14"
+    }
+  ]
+}

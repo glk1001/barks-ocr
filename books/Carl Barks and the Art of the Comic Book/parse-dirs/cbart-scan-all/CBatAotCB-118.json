@@ -1,0 +1,293 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "118",
+          "value": "118",
+          "bbox": [
+            {
+              "h": 4.115762195121915,
+              "w": 7.14986268578506,
+              "x": 12.154153367949693,
+              "y": 363.73490853658535,
+              "confidence": 0.95,
+              "end_index": 2,
+              "label": "footer",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**No number - (December) 1945 - 20 pages**",
+          "value": "No number - (December) 1945 - 20 pages",
+          "bbox": [
+            {
+              "h": 5.565161490091463,
+              "w": 103.42418790491615,
+              "x": 12.632758550876524,
+              "y": 15.771288109756098,
+              "confidence": 0.98,
+              "end_index": 41,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK's Best Christmas - 8 - Donald rents a horse and sleigh so that he and the nephews can take all their Christmas presents and food to Grandma's house. A storm comes up and they take refuge with a poor widow and her two children. *(Aug. 31, 1945)*",
+          "value": "DONALD DUCK's Best Christmas - 8 - Donald rents a horse and sleigh so that he and the nephews can take all their Christmas presents and food to Grandma's house. A storm comes up and they take refuge with a poor widow and her two children. (Aug. 31, 1945)",
+          "bbox": [
+            {
+              "h": 29.209506002286584,
+              "w": 124.86653784775152,
+              "x": 13.125430521150912,
+              "y": 21.65718035442073,
+              "confidence": 0.99,
+              "end_index": 255,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**No number - 1946 - 20 pages**",
+          "value": "No number - 1946 - 20 pages",
+          "bbox": [
+            {
+              "h": 5.5464043445121956,
+              "w": 71.4753036871189,
+              "x": 12.609725847942071,
+              "y": 58.672145579268296,
+              "confidence": 0.97,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in Santa's Stormy Visit - 8 - Donald and the nephews are tending a lighthouse on Christmas Eve, and Donald is planning to radio ashore for presents. However, an albatross who has taken refuge in the lighthouse wrecks the radio set. *(Mar. 8, 1946)*",
+          "value": "DONALD DUCK in Santa's Stormy Visit - 8 - Donald and the nephews are tending a lighthouse on Christmas Eve, and Donald is planning to radio ashore for presents. However, an albatross who has taken refuge in the lighthouse wrecks the radio set. (Mar. 8, 1946)",
+          "bbox": [
+            {
+              "h": 28.684350228658534,
+              "w": 124.982411990282,
+              "x": 12.918990448742376,
+              "y": 64.65045731707318,
+              "confidence": 0.99,
+              "end_index": 259,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**No number - (December) 1947 - 20 pages**",
+          "value": "No number - (December) 1947 - 20 pages",
+          "bbox": [
+            {
+              "h": 5.726352896341464,
+              "w": 103.26340701219512,
+              "x": 12.717893483231705,
+              "y": 100.16071646341463,
+              "confidence": 0.96,
+              "end_index": 41,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"Three Good Little Ducks\" - 8 - The nephews, fearful that they've been too bad all year to get",
+          "value": "DONALD DUCK in \"Three Good Little Ducks\" - 8 - The nephews, fearful that they've been too bad all year to get",
+          "bbox": [
+            {
+              "h": 11.846970274390246,
+              "w": 124.99863316977897,
+              "x": 12.968940191501524,
+              "y": 105.8244512195122,
+              "confidence": 0.97,
+              "end_index": 108,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Christmas presents, try to make it up to Donald on Christmas Eve, but all of their efforts at good deeds backfire. *(Feb. 28, 1947)*",
+          "value": "Christmas presents, try to make it up to Donald on Christmas Eve, but all of their efforts at good deeds backfire. (Feb. 28, 1947)",
+          "bbox": [
+            {
+              "h": 16.940739329268297,
+              "w": 124.89127477134147,
+              "x": 151.21822980182924,
+              "y": 15.794794207317072,
+              "confidence": 0.99,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**No number - (December) 1948 - 20 pages**",
+          "value": "No number - (December) 1948 - 20 pages",
+          "bbox": [
+            {
+              "h": 5.895663109756101,
+              "w": 103.18705792682927,
+              "x": 151.00646913109756,
+              "y": 39.54399866615854,
+              "confidence": 0.97,
+              "end_index": 41,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"Toyland\" - 8 - art and rewriting of script - The ducks are invited by Santa Claus to come to the North Pole and test his toys. Donald takes his lumps when the testing begins. *(July 8, 1948)*",
+          "value": "DONALD DUCK in \"Toyland\" - 8 - art and rewriting of script - The ducks are invited by Santa Claus to come to the North Pole and test his toys. Donald takes his lumps when the testing begins. (July 8, 1948)",
+          "bbox": [
+            {
+              "h": 23.140606897865847,
+              "w": 124.88134527439026,
+              "x": 151.24445121951217,
+              "y": 45.851452934451224,
+              "confidence": 0.98,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's list notes that he was paid twenty dollars for rewriting the script for this story.",
+          "value": "Barks's list notes that he was paid twenty dollars for rewriting the script for this story.",
+          "bbox": [
+            {
+              "h": 11.135019054878043,
+              "w": 124.99537157012193,
+              "x": 151.26487614329267,
+              "y": 69.65631288109756,
+              "confidence": 0.98,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**No number - (December) 1949 - 20 pages**",
+          "value": "No number - (December) 1949 - 20 pages",
+          "bbox": [
+            {
+              "h": 5.778772865853652,
+              "w": 103.22255716463414,
+              "x": 151.2162233231707,
+              "y": 82.24150152439024,
+              "confidence": 0.96,
+              "end_index": 41,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"New Toys\" - 8 - The nephews' Christmas list includes a new tricycle, scooter and coaster wagon, but they already have one of each, and Donald tells them not to expect new toys until their old ones are worn out. *(July 7, 1949)*",
+          "value": "DONALD DUCK in \"New Toys\" - 8 - The nephews' Christmas list includes a new tricycle, scooter and coaster wagon, but they already have one of each, and Donald tells them not to expect new toys until their old ones are worn out. (July 7, 1949)",
+          "bbox": [
+            {
+              "h": 28.94172256097562,
+              "w": 124.96505144817075,
+              "x": 151.43527248475607,
+              "y": 88.25240853658536,
+              "confidence": 0.99,
+              "end_index": 242,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "A page of Barks's script for \"Pawns of the Loup Garou\" in Donald Duck No. 117, January 1968; © 1967 Walt Disney Productions. The image shows a pencil-sketched comic book page with several panels. Panel 1: Donald Duck looks worried, text says \"WHAT'S COMING IS PLENTY ROUGH!\". Panel 2: A large wolf-like creature (Loup Garou) looms over characters, text says \"ON THIS NIGHT EACH YEAR LOUP GAROUS TRY TO DESTROY ALL MEN AND ALL WOLVES!\" and \"AND COUNT DRAKULA HAD HYPNOTIZED THIS GIANT WOLF INTO BELIEVING HE'S A LOUP GAROU\". Panel 3: Donald talks to a character, text says \"SO WHEN COUNT DRAKULA STOLE YOUR STATUETTE CHARM HE WAS LEAVING YOU TO THIS BEAST'S MERCY!\". Panel 4: The character replies \"YOU BET! WITH ME GONE HE COULD COME BACK AND TAKE OVER THE MINE!\". Panel 5: Donald holds up a charm, text says \"BUT I STILL HAVE THE CHARM — AND HERE COMES ITS TEST!\". Panel 6: Donald uses the charm on the Loup Garou, text says \"DOWN! DOWN, BEAST, DOWN!\" and \"IT'S WORKING! EVERYBODY HEAD FOR THE AIRFIELD!\".",
+          "md": "![A page of Barks's script for \"Pawns of the Loup Garou\" in Donald Duck No. 117, January 1968; © 1967 Walt Disney Productions. The image shows a pencil-sketched comic book page with several panels. Panel 1: Donald Duck looks worried, text says \"WHAT'S COMING IS PLENTY ROUGH!\". Panel 2: A large wolf-like creature (Loup Garou) looms over characters, text says \"ON THIS NIGHT EACH YEAR LOUP GAROUS TRY TO DESTROY ALL MEN AND ALL WOLVES!\" and \"AND COUNT DRAKULA HAD HYPNOTIZED THIS GIANT WOLF INTO BELIEVING HE'S A LOUP GAROU\". Panel 3: Donald talks to a character, text says \"SO WHEN COUNT DRAKULA STOLE YOUR STATUETTE CHARM HE WAS LEAVING YOU TO THIS BEAST'S MERCY!\". Panel 4: The character replies \"YOU BET! WITH ME GONE HE COULD COME BACK AND TAKE OVER THE MINE!\". Panel 5: Donald holds up a charm, text says \"BUT I STILL HAVE THE CHARM — AND HERE COMES ITS TEST!\". Panel 6: Donald uses the charm on the Loup Garou, text says \"DOWN! DOWN, BEAST, DOWN!\" and \"IT'S WORKING! EVERYBODY HEAD FOR THE AIRFIELD!\".](CBatAotCB-118_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-118_page_1_image_1_v2.jpg",
+          "bbox": null,
+          "type": "image"
+        },
+        {
+          "md": "A page of Barks's script for \"Pawns of the Loup Garou\" in *Donald Duck* No. 117, January 1968; © 1967 Walt Disney Productions.",
+          "value": "A page of Barks's script for \"Pawns of the Loup Garou\" in Donald Duck No. 117, January 1968; © 1967 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 28.73478658536588,
+              "w": 65.98042682926831,
+              "x": 204.71438071646338,
+              "y": 228.58122713414633,
+              "confidence": 0.93,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book",
+              "value": "Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.354092987804925,
+                  "w": 77.54427353277437,
+                  "x": 36.69198218368902,
+                  "y": 363.4123170731707,
+                  "confidence": 0.97,
+                  "end_index": 39,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.35,
+              "w": 77.54,
+              "x": 36.69,
+              "y": 363.41,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "118"
+    }
+  ]
+}

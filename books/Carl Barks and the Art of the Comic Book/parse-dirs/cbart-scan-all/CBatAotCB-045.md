@@ -1,0 +1,13 @@
+# V.
+
+**ONE KEY TO THE** major changes in Barks's stories that began in 1947 was the introduction of strong supporting characters who hadn't appeared in the Disney animated cartoons but were entirely the products of Barks's imagination. As Donald and the nephews shared center stage, the demands on them became less severe. They now could be played off against the new characters, instead of just against one another. As they were, the stories involving only Donald and the nephews changed for the better, too.
+
+There were supporting characters before 1947 who appeared in more than one story in *Walt Disney's Comics*, but none of them jogged the ten-page stories out of their rut for very long. The best of these early characters was Mr. Jones, Donald's bushy-browed, prognathous, foul-tempered neighbor. (He played essentially the same role, in a few early Barks stories, that Black Pete played in such Donald Duck cartoons as *Trombone Trouble*, 1944.) Jones's warfare with Donald produced some of Barks's funniest and most inventive gags, but Jones vanished after a few years. The nephews' friend Herbert, a numbingly dopey little pig, also appeared in a few stories, was mentioned in passing in one or two others, and then dropped into limbo. Barks did not begin using Donald's girlfriend Daisy Duck until 1946, and his use of her thereafter was limited. She
+
+was more often a bone of contention between Donald and his cousin Gladstone than she was a character in her own right.
+
+There were many other supporting characters who appeared in one story and then vanished. Some of them were wonderfully violent cranks, like Miss Moosey in the December 1945 *Walt Disney's Comics*; not only does she have a vicious watchdog, and wield a wicked broom, but she sics a nasty parrot on the unoffending Donald: "Go after him, Esmeralda! Tear his eyes out!" "Men!" the parrot shrieks. "I hate 'em!"
+
+There was a lot of Miss Moosey's nastiness, but little of her energy, in Donald's Uncle Scrooge McDuck, who made his first appearance in "Christmas on Bear Mountain," in a 1947 Donald Duck one-shot. As with the supporting characters who preceded him, Scrooge was introduced with no thought of using him again; he was simply a device for putting Donald and some bears together in a remote mountain cabin on Christmas Eve.
+
+Scrooge's debut was not auspicious. An elderly duck who looked like Donald with side whiskers and glasses, he first appeared clad in a dressing gown, with his cane at his side, and fully living up to his namesake's reputation. (Barks said in 1976, at the "Newcon" comics convention in Boston, that Andy Gump's Uncle Bim, in addition to Dickens's

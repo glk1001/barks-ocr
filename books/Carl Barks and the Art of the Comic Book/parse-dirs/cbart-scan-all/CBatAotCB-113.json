@@ -1,0 +1,427 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "view of Duckburg from a graveyard, and of Hazel heading for the steeple. The bottom half of published page 2 followed immediately. This splash panel was dropped, possibly for being too gruesome, and instead of just a different splash, one and one half pages were added to the story. One reason that has been suggested for this is that since this is a *Donald Duck* comic book, the title character really ought to appear on the first page, and as originally done, Donald did not appear until page 4 and even the nephews did not appear until page 3. It appears that the caption in panel 4 of published page 2 was either added or expanded to provide a transition from the added opening sequence. The story is then intact up to published page 16 (page 15 as originally numbered) and it follows the cartoon fairly closely, though the page 4 and page 10 sequences do not appear in the cartoon, nor does the page between panel 4 of page 16 and panel 6 of page 17.",
+          "value": "view of Duckburg from a graveyard, and of Hazel heading for the steeple. The bottom half of published page 2 followed immediately. This splash panel was dropped, possibly for being too gruesome, and instead of just a different splash, one and one half pages were added to the story. One reason that has been suggested for this is that since this is a Donald Duck comic book, the title character really ought to appear on the first page, and as originally done, Donald did not appear until page 4 and even the nephews did not appear until page 3. It appears that the caption in panel 4 of published page 2 was either added or expanded to provide a transition from the added opening sequence. The story is then intact up to published page 16 (page 15 as originally numbered) and it follows the cartoon fairly closely, though the page 4 and page 10 sequences do not appear in the cartoon, nor does the page between panel 4 of page 16 and panel 6 of page 17.",
+          "bbox": [
+            {
+              "h": 94.94591558689024,
+              "w": 125.46807629096796,
+              "x": 11.941550233422255,
+              "y": 19.142197980182928,
+              "confidence": 0.99,
+              "end_index": 955,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Also, at this point comes a nine-page sequence (originally numbered pages 16 to 24) in which Hazel, following Donald's comment on published page 16 that \"It'll take more than a WITCH to get candy from Donald Duck,\" transforms herself into a beautiful girl duck (1½ page), gets candy from Donald (1), reveals herself as the witch, and hops on her broom with the candy and kids (½). Donald lassoes them and retrieves the candy (½). Hazel vows revenge and conjures up her pet, a six-armed, derby-hatted ogre named Smorgasbord, better known as Smorgie the Bad (1½). She sics Smorgie on Donald (½) and Donald tries to battle him off after noting that he's a mighty solid figment of the imagination (2). On the seventh page of this sequence, Hazel directs Smorgie to find the key, and Smorgie, while still standing at the front door, sticks his arms through half a dozen windows around the house. Smorgie finally corners Donald, and Donald gives up (½). He gives Smorgie the basket of goodies, but then paints a stick of dynamite with jam (½), and gives it as a special treat to Smorgie, who gulps it down (½). Smorgie is exploded and Donald reclaims the candy, there being nothing left of Smorgie except a derby hat (½). The story then picks up with published page 17, originally numbered page 25, where Hazel can be seen stomping on the derby hat in panel 1. This whole sequence was added by Barks and does not appear in the cartoon.",
+          "value": "Also, at this point comes a nine-page sequence (originally numbered pages 16 to 24) in which Hazel, following Donald's comment on published page 16 that \"It'll take more than a WITCH to get candy from Donald Duck,\" transforms herself into a beautiful girl duck (1½ page), gets candy from Donald (1), reveals herself as the witch, and hops on her broom with the candy and kids (½). Donald lassoes them and retrieves the candy (½). Hazel vows revenge and conjures up her pet, a six-armed, derby-hatted ogre named Smorgasbord, better known as Smorgie the Bad (1½). She sics Smorgie on Donald (½) and Donald tries to battle him off after noting that he's a mighty solid figment of the imagination (2). On the seventh page of this sequence, Hazel directs Smorgie to find the key, and Smorgie, while still standing at the front door, sticks his arms through half a dozen windows around the house. Smorgie finally corners Donald, and Donald gives up (½). He gives Smorgie the basket of goodies, but then paints a stick of dynamite with jam (½), and gives it as a special treat to Smorgie, who gulps it down (½). Smorgie is exploded and Donald reclaims the candy, there being nothing left of Smorgie except a derby hat (½). The story then picks up with published page 17, originally numbered page 25, where Hazel can be seen stomping on the derby hat in panel 1. This whole sequence was added by Barks and does not appear in the cartoon.",
+          "bbox": [
+            {
+              "h": 135.59871951219512,
+              "w": 125.71377238948168,
+              "x": 11.531228563262193,
+              "y": 115.29743140243903,
+              "confidence": 0.99,
+              "end_index": 1428,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "From page 17 panel 5 to page 19 panel 5 (pages 25 to 27 by the original numbering), the story follows the cartoon fairly closely. But from page 19 panel 5 to page 20 panel 1, there is a break. At this point in the cartoon, Donald grabs a rug to anchor himself and keep from being dragged around too much and Hazel sprays a cactus plant which grows in size and smacks Donald in the tail, knocking the key out. Donald catches it in his mouth and swallows it again. Then Hazel has Donald's feet swing south towards the fire to burn the key out, as in page 19 panels 6-8.",
+          "value": "From page 17 panel 5 to page 19 panel 5 (pages 25 to 27 by the original numbering), the story follows the cartoon fairly closely. But from page 19 panel 5 to page 20 panel 1, there is a break. At this point in the cartoon, Donald grabs a rug to anchor himself and keep from being dragged around too much and Hazel sprays a cactus plant which grows in size and smacks Donald in the tail, knocking the key out. Donald catches it in his mouth and swallows it again. Then Hazel has Donald's feet swing south towards the fire to burn the key out, as in page 19 panels 6-8.",
+          "bbox": [
+            {
+              "h": 57.67676067073171,
+              "w": 125.08949814214937,
+              "x": 12.157998046874999,
+              "y": 251.51647865853658,
+              "confidence": 0.99,
+              "end_index": 566,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks apparently reversed the cactus and fire sequences, since the fire sequence appears on the bottom of page 19 (probably originally page 27). Judging from the below-mentioned page 28 (top) and the cartoon, I would guess that Donald didn't originally regurgitate the key when brought to the fire (as published) but that the key was drawn in afterwards to provide a transition over the dropped page 28.",
+          "value": "Barks apparently reversed the cactus and fire sequences, since the fire sequence appears on the bottom of page 19 (probably originally page 27). Judging from the below-mentioned page 28 (top) and the cartoon, I would guess that Donald didn't originally regurgitate the key when brought to the fire (as published) but that the key was drawn in afterwards to provide a transition over the dropped page 28.",
+          "bbox": [
+            {
+              "h": 40.62109756097565,
+              "w": 125.52915277248476,
+              "x": 12.381347418064022,
+              "y": 310.4405716463414,
+              "confidence": 0.99,
+              "end_index": 402,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A half page numbered as the top half of page 28 is known. Its content follows: Hazel (spraying a cactus plant with witch's brew which animates it) says, \"Toughest knave I ever saw! He needs a partner!\" and \"Stomp along and don't be lazy! That's the ticket — bumps-a-daisy\" (as the cactus plant backs up to Don's tail and out comes the key.) Donald and a nephew race toward the key with Donald exclaiming, \"I'll not give it up! I'll not! I'll not!\" I suspect that a half page (28 bottom) of contention over the key follows with it ending up in Hazel's hands (published page 20, panel 1) but this final missing half page has not been seen. This would mean that pages originally numbered 29-32 of the story are intact and were published as pages 20 to 23.",
+          "value": "A half page numbered as the top half of page 28 is known. Its content follows: Hazel (spraying a cactus plant with witch's brew which animates it) says, \"Toughest knave I ever saw! He needs a partner!\" and \"Stomp along and don't be lazy! That's the ticket — bumps-a-daisy\" (as the cactus plant backs up to Don's tail and out comes the key.) Donald and a nephew race toward the key with Donald exclaiming, \"I'll not give it up! I'll not! I'll not!\" I suspect that a half page (28 bottom) of contention over the key follows with it ending up in Hazel's hands (published page 20, panel 1) but this final missing half page has not been seen. This would mean that pages originally numbered 29-32 of the story are intact and were published as pages 20 to 23.",
+          "bbox": [
+            {
+              "h": 70.93340796493902,
+              "w": 125.39836509146339,
+              "x": 150.08549542682925,
+              "y": 19.33018387957317,
+              "confidence": 0.99,
+              "end_index": 751,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Pages 20 to 23 (originally pages 29 to 32) basically follow the cartoon to the end but there are differences: in the cartoon, Hazel leaves the key on the floor and Donald just picks it up to slide it under the door. Donald is battered against the closet door head first in the cartoon, rather than tail first. The sequence in the top half of page 21 does not appear in the cartoon and no suit of armor is used in the cartoon sequence corresponding to pages 21 and 22. And finally, Donald does not appear at all in the cartoon sequence corresponding to the last page of the story.",
+          "value": "Pages 20 to 23 (originally pages 29 to 32) basically follow the cartoon to the end but there are differences: in the cartoon, Hazel leaves the key on the floor and Donald just picks it up to slide it under the door. Donald is battered against the closet door head first in the cartoon, rather than tail first. The sequence in the top half of page 21 does not appear in the cartoon and no suit of armor is used in the cartoon sequence corresponding to pages 21 and 22. And finally, Donald does not appear at all in the cartoon sequence corresponding to the last page of the story.",
+          "bbox": [
+            {
+              "h": 58.594064405487806,
+              "w": 125.51623285060971,
+              "x": 150.87788300304877,
+              "y": 90.82518864329268,
+              "confidence": 0.99,
+              "end_index": 578,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 16, October 1969.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 16, October 1969.",
+          "bbox": [
+            {
+              "h": 10.408810975609766,
+              "w": 125.46430449695121,
+              "x": 150.72950647865852,
+              "y": 150.16432545731706,
+              "confidence": 0.95,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK featuring HUEY, LOUIE and DEWEY in \"Hobblin' Goblins\" - 9 - On Halloween, the nephews use a goblin foiler invented by Gyro Gearloose to avoid trouble, but have little success. (*May 8, 1952*)",
+          "value": "DONALD DUCK featuring HUEY, LOUIE and DEWEY in \"Hobblin' Goblins\" - 9 - On Halloween, the nephews use a goblin foiler invented by Gyro Gearloose to avoid trouble, but have little success. (May 8, 1952)",
+          "bbox": [
+            {
+              "h": 23.338456554878057,
+              "w": 124.96556592987805,
+              "x": 150.8699599847561,
+              "y": 161.8463300304878,
+              "confidence": 0.95,
+              "end_index": 202,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First appearance of Gyro in the *Donald Duck* series.",
+          "value": "First appearance of Gyro in the Donald Duck series.",
+          "bbox": [
+            {
+              "h": 10.993422256097537,
+              "w": 103.24689214939026,
+              "x": 155.3669931402439,
+              "y": 185.65701219512195,
+              "confidence": 0.83,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck* No. 160, November 1974.",
+          "value": "Reprinted: Donald Duck No. 160, November 1974.",
+          "bbox": [
+            {
+              "h": 5.22888338414632,
+              "w": 100.7504382621951,
+              "x": 155.23694931402437,
+              "y": 191.72758765243904,
+              "confidence": 0.78,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - Donald tries many false faces in an effort to frighten Daisy. (*Apr. 10, 1952*)",
+          "value": "DONALD DUCK - 1 (inside back cover) - Donald tries many false faces in an effort to frighten Daisy. (Apr. 10, 1952)",
+          "bbox": [
+            {
+              "h": 16.668452743902463,
+              "w": 124.88456935975606,
+              "x": 150.88517149390242,
+              "y": 197.55210365853657,
+              "confidence": 0.93,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 27 - Jan.-Feb. 1953 - 36 pages",
+          "value": "27 - Jan.-Feb. 1953 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.71170731707316,
+              "w": 72.10392530487803,
+              "x": 151.07244283536585,
+              "y": 221.09348323170732,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The ducks ride a flying horse. (Illustrating \"The Flying Horse.\") (*July 31, 1952*)",
+          "value": "Front cover (art only): The ducks ride a flying horse. (Illustrating \"The Flying Horse.\") (July 31, 1952)",
+          "bbox": [
+            {
+              "h": 11.581143292682928,
+              "w": 124.73797637195119,
+              "x": 151.50860327743902,
+              "y": 226.97254573170733,
+              "confidence": 0.97,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 28 - Mar.-Apr. 1953 - 36 pages",
+          "value": "28 - Mar.-Apr. 1953 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.71394817073171,
+              "w": 75.33104611280487,
+              "x": 151.13099085365852,
+              "y": 244.96712652439024,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): A robot laughs at Donald's picture on a video screen. (Illustrating \"Robert the Robot.\") (*Aug. 28, 1952*)",
+          "value": "Front cover (art only): A robot laughs at Donald's picture on a video screen. (Illustrating \"Robert the Robot.\") (Aug. 28, 1952)",
+          "bbox": [
+            {
+              "h": 17.113216463414663,
+              "w": 125.08772103658536,
+              "x": 151.13702743902437,
+              "y": 250.90193597560972,
+              "confidence": 0.96,
+              "end_index": 129,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck* No. 147, January 1973.",
+          "value": "Reprinted: Donald Duck No. 147, January 1973.",
+          "bbox": [
+            {
+              "h": 5.39474085365855,
+              "w": 95.55307545731706,
+              "x": 155.4330525914634,
+              "y": 268.78840701219514,
+              "confidence": 0.93,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 29 - May-June 1953 - 36 pages",
+          "value": "29 - May-June 1953 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.616882621951245,
+              "w": 75.44970274390244,
+              "x": 151.20696265243902,
+              "y": 280.46666158536584,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald finds a cat in his fishing creel. (*Oct. 9, 1952*)",
+          "value": "Front cover (art only): Donald finds a cat in his fishing creel. (Oct. 9, 1952)",
+          "bbox": [
+            {
+              "h": 10.950480182926785,
+              "w": 125.10831745426829,
+              "x": 151.32935785060974,
+              "y": 286.3834298780488,
+              "confidence": 0.97,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 30 - July-Aug. 1953 - 36 pages",
+          "value": "30 - July-Aug. 1953 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.64926067073171,
+              "w": 74.4221112804878,
+              "x": 151.34806783536584,
+              "y": 304.1867835365854,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews ride in a sidecar beside Donald's donkey. (*Oct. 9, 1952*)",
+          "value": "Front cover (art only): The nephews ride in a sidecar beside Donald's donkey. (Oct. 9, 1952)",
+          "bbox": [
+            {
+              "h": 11.50733231707316,
+              "w": 125.08487423780487,
+              "x": 151.33463986280486,
+              "y": 310.0667835365854,
+              "confidence": 0.98,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 35 - May-June 1954 - 36 pages",
+          "value": "35 - May-June 1954 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.548445121951245,
+              "w": 75.26490091463414,
+              "x": 151.28339748475608,
+              "y": 327.9552667682927,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald scowls as a drainpipe pours rainwater into his boot. (*Sept. 17, 1953 \\[idea] and Oct. 8, 1953 \\[art]*)",
+          "value": "Front cover: Donald scowls as a drainpipe pours rainwater into his boot. (Sept. 17, 1953 [idea] and Oct. 8, 1953 [art])",
+          "bbox": [
+            {
+              "h": 17.302477134146375,
+              "w": 125.53751524390243,
+              "x": 150.61815548780487,
+              "y": 333.9015777439024,
+              "confidence": 0.98,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n113",
+              "value": "Carl Barks and the Art of the Comic Book\n113",
+              "bbox": [
+                {
+                  "h": 4.6281173780487554,
+                  "w": 77.53927019817075,
+                  "x": 172.0931364329268,
+                  "y": 362.36277439024394,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n113",
+          "bbox": [
+            {
+              "h": 4.63,
+              "w": 77.54,
+              "x": 172.09,
+              "y": 362.36,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "113"
+    }
+  ]
+}

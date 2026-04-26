@@ -1,0 +1,129 @@
+# Carl Barks: Conversations — chapter sidecar for EPUB build.
+# Each chapter must specify exactly one anchor:
+#   * 'start_printed_page' — must match a printed page number detected on a
+#     spread (see each scan dir's *_manifest.json "printed_page_numbers_detected").
+#   * 'start_heading' — matched against a heading item's visible text
+#     (case-insensitive). Used when the printed-page anchor is unreliable
+#     (e.g. spreads with one detected page number split across two sides).
+
+[[chapters]]
+title = "Contents"
+start_heading = "Contents"
+kind = "contents"
+
+[[chapters]]
+title = "Introduction"
+start_printed_page = "ix"
+
+[[chapters]]
+title = "Chronology"
+start_printed_page = "xxxv"
+
+[[chapters]]
+title = "Part One: Interviews"
+start_printed_page = "1"
+
+[[chapters]]
+title = "The Duck Man"
+start_printed_page = "3"
+
+[[chapters]]
+title = "A Conversation with Carl Barks"
+start_printed_page = "19"
+
+[[chapters]]
+title = "An Interview with Carl Barks"
+start_printed_page = "26"
+
+[[chapters]]
+title = "Carl Barks, Telling It Like It Is"
+start_printed_page = "37"
+
+[[chapters]]
+title = "Carl Barks: On His Life and Career"
+start_printed_page = "50"
+
+[[chapters]]
+title = "Carl Barks and His Ducks"
+start_printed_page = "69"
+
+[[chapters]]
+title = "Of Ducks and Men: Carl Barks Interviewed"
+start_printed_page = "80"
+
+[[chapters]]
+title = "An Interview with Carl Barks, Duckburg's True Founding Father"
+start_printed_page = "91"
+
+[[chapters]]
+title = "An Interview with Carl and Garé Barks"
+start_printed_page = "109"
+
+[[chapters]]
+title = "Views from Carl Barks"
+start_printed_page = "120"
+
+[[chapters]]
+title = "Fortune Favors the Bold: An Interview with Carl Barks"
+start_printed_page = "123"
+
+[[chapters]]
+title = "Interview with Carl Barks and Floyd Gottfredson"
+start_printed_page = "132"
+
+[[chapters]]
+title = "Carl Barks Interview"
+start_printed_page = "137"
+
+[[chapters]]
+title = "Conversation with Carl Barks"
+start_printed_page = "140"
+
+[[chapters]]
+title = "Reluctant Cult Hero: Carl Barks"
+start_printed_page = "155"
+
+[[chapters]]
+title = "Carl Barks Speaks with the Finnish Press"
+start_printed_page = "161"
+
+[[chapters]]
+title = "When Donald Duck Turned 60"
+start_printed_page = "165"
+
+[[chapters]]
+title = "Carl Barks at Disneyland Paris"
+start_printed_page = "173"
+
+[[chapters]]
+title = "Carl Barks Remembers \"A Perfect Life\""
+start_printed_page = "181"
+
+[[chapters]]
+title = "Carl Barks: On Floyd Gottfredson"
+start_printed_page = "198"
+
+[[chapters]]
+title = "\"Those Things That Came Along in the 20th Century and Became Obsolete\": Carl Barks on the Past, Present, and Future of Comic Books"
+start_printed_page = "205"
+
+[[chapters]]
+title = "Living the Stories: The Carl Barks Genius"
+start_printed_page = "210"
+
+[[chapters]]
+title = "Ideas Flowing Like Waterfalls: Some Reflections from Carl Barks at 98"
+start_printed_page = "215"
+
+[[chapters]]
+title = "Carl Barks: Spools of Memory"
+start_printed_page = "221"
+
+[[chapters]]
+title = "Notes on the Interviewers"
+start_printed_page = "227"
+
+[[chapters]]
+title = "Index"
+start_printed_page = "233"
+kind = "index"

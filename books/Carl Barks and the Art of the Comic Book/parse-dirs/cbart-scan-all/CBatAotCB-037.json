@@ -1,0 +1,235 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "maiden efforts in *Walt Disney's Comics*. Fortunately, he did — but not so much in *Walt Disney's Comics* as in the *Donald Duck* one-shots of the early and middle forties. It was in these comic books that the ducks first came alive as personalities.",
+          "value": "maiden efforts in Walt Disney's Comics. Fortunately, he did — but not so much in Walt Disney's Comics as in the Donald Duck one-shots of the early and middle forties. It was in these comic books that the ducks first came alive as personalities.",
+          "bbox": [
+            {
+              "h": 44.400627381859756,
+              "w": 125.76585401581552,
+              "x": 11.730582721989327,
+              "y": 13.687690072408536,
+              "confidence": 0.99,
+              "end_index": 249,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The first few issues of *Donald Duck*, like the early issues of other Disney comics, were made up of comic-strip reprints. *Donald Duck Finds Pirate Gold* broke that pattern, and the following issues contained all new material. These \"one-shots\" were published irregularly, at intervals of a year or more, until the late forties. They were published more frequently after that, finally appearing on a bi-monthly schedule in the early fifties. Through 1952, most of them were written and illustrated by Carl Barks.",
+          "value": "The first few issues of Donald Duck, like the early issues of other Disney comics, were made up of comic-strip reprints. Donald Duck Finds Pirate Gold broke that pattern, and the following issues contained all new material. These \"one-shots\" were published irregularly, at intervals of a year or more, until the late forties. They were published more frequently after that, finally appearing on a bi-monthly schedule in the early fifties. Through 1952, most of them were written and illustrated by Carl Barks.",
+          "bbox": [
+            {
+              "h": 81.43907583841464,
+              "w": 125.45878668064023,
+              "x": 11.741925971798779,
+              "y": 58.397338033536585,
+              "confidence": 0.99,
+              "end_index": 512,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Most of the important stories in the one-shots ranged from twenty to thirty pages in length. Oddly, few of them resembled the ten-page stories in *Walt Disney's Comics*. Most of these longer stories were less comedies than adventures, building from gag-filled opening pages to quite \"straight\" adventure passages, and easing again into comedy at the close. They departed from the animated cartoon format of the short stories in another more significant way. The ten-page stories centered on the parent-child relationship, but only in terms of parents and children fighting with one another. The longer stories, by contrast, emphasized parents and children fighting for one another.",
+          "value": "Most of the important stories in the one-shots ranged from twenty to thirty pages in length. Oddly, few of them resembled the ten-page stories in Walt Disney's Comics. Most of these longer stories were less comedies than adventures, building from gag-filled opening pages to quite \"straight\" adventure passages, and easing again into comedy at the close. They departed from the animated cartoon format of the short stories in another more significant way. The ten-page stories centered on the parent-child relationship, but only in terms of parents and children fighting with one another. The longer stories, by contrast, emphasized parents and children fighting for one another.",
+          "bbox": [
+            {
+              "h": 118.58014481707316,
+              "w": 125.90045422065546,
+              "x": 11.414687738185973,
+              "y": 139.8260899390244,
+              "confidence": 0.99,
+              "end_index": 680,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This theme dominates \"The Mummy's Ring\" (1943), in the first *Donald Duck* one-shot that Barks both wrote and illustrated, just as conflict dominates the first ten-page story. \"The Mummy's Ring\" is a story in which Donald crosses the Atlantic and faces death to save Huey after the nephew is clapped in a mummy case by a cornered crook and then taken to Egypt by the emissaries of the Bey El Dagga. The Bey is determined to revive the glory of ancient Egypt, and in the process almost reburies the mummy case with Huey in it before Donald can stop him.",
+          "value": "This theme dominates \"The Mummy's Ring\" (1943), in the first Donald Duck one-shot that Barks both wrote and illustrated, just as conflict dominates the first ten-page story. \"The Mummy's Ring\" is a story in which Donald crosses the Atlantic and faces death to save Huey after the nephew is clapped in a mummy case by a cornered crook and then taken to Egypt by the emissaries of the Bey El Dagga. The Bey is determined to revive the glory of ancient Egypt, and in the process almost reburies the mummy case with Huey in it before Donald can stop him.",
+          "bbox": [
+            {
+              "h": 96.25461128048782,
+              "w": 125.79336914062499,
+              "x": 11.823164777057926,
+              "y": 258.2384679878049,
+              "confidence": 0.99,
+              "end_index": 551,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "There's another rescue in \"Frozen Gold\" (1944) but this time the nephews rescue Donald when he is stranded on the Alaskan barrens. To make the rescue, the nephews pick locks, pilot a plane, and finally snag Donald with a parachute as he plunges over a cliff with a polar bear hot on his heels.",
+          "value": "There's another rescue in \"Frozen Gold\" (1944) but this time the nephews rescue Donald when he is stranded on the Alaskan barrens. To make the rescue, the nephews pick locks, pilot a plane, and finally snag Donald with a parachute as he plunges over a cliff with a polar bear hot on his heels.",
+          "bbox": [
+            {
+              "h": 51.81929639862804,
+              "w": 125.8106192835366,
+              "x": 149.95689214939023,
+              "y": 13.366044683689024,
+              "confidence": 0.99,
+              "end_index": 292,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "It is the next one-shot that contains Barks's finest story of this type (\"The Terror of the River,\" 1946), the one that shows most clearly what he was doing.",
+          "value": "It is the next one-shot that contains Barks's finest story of this type (\"The Terror of the River,\" 1946), the one that shows most clearly what he was doing.",
+          "bbox": [
+            {
+              "h": 29.425849847560983,
+              "w": 126.01730373475606,
+              "x": 150.01213033536584,
+              "y": 65.07831745426829,
+              "confidence": 0.98,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In this story, Donald steps into an auction house to escape the cold, and his sneezes are taken for bids on a houseboat tied to a pier in Floodout, Ohio. After protesting, Donald leaves the auction house with a black eye and the deed to the houseboat.",
+          "value": "In this story, Donald steps into an auction house to escape the cold, and his sneezes are taken for bids on a houseboat tied to a pier in Floodout, Ohio. After protesting, Donald leaves the auction house with a black eye and the deed to the houseboat.",
+          "bbox": [
+            {
+              "h": 43.77393864329267,
+              "w": 125.94565358231706,
+              "x": 150.2627000762195,
+              "y": 94.83879763719513,
+              "confidence": 0.99,
+              "end_index": 250,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The next few pages are filled with the ducks' misadventures as they learn that running a houseboat involves more than watching moonlight on glassy water. Abruptly, a huge, yellow-eyed sea serpent appears. One of the nephews hurls a harpoon at the monster, and a piece of rubber sticks to the point — the sea serpent is a fake. Donald follows the serpent's bubble trail in a folding dinghy, and the serpent promptly swallows him and the dinghy whole. The nephews quickly rent a tugboat and pursue the serpent downriver.",
+          "value": "The next few pages are filled with the ducks' misadventures as they learn that running a houseboat involves more than watching moonlight on glassy water. Abruptly, a huge, yellow-eyed sea serpent appears. One of the nephews hurls a harpoon at the monster, and a piece of rubber sticks to the point — the sea serpent is a fake. Donald follows the serpent's bubble trail in a folding dinghy, and the serpent promptly swallows him and the dinghy whole. The nephews quickly rent a tugboat and pursue the serpent downriver.",
+          "bbox": [
+            {
+              "h": 88.98282393292683,
+              "w": 126.06715701219512,
+              "x": 150.57795731707316,
+              "y": 139.22319740853658,
+              "confidence": 0.99,
+              "end_index": 517,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In the serpent's control room, Donald is tied to a pipe, and the serpent's master is chuckling over the panic he has created all up and down the river. \"There they go to spread the alarm,\" he gloats as one steamer flees the serpent. \"Before night my little plaything will be known as the terror of the river. Haw! Trembling sheriffs will toss dynamite in the water! Jittery people will hunt the serpent with shotguns! Haw! But I won't be here. I'll be miles down the river, scaring more steamer crews with my terrifying invention.\"",
+          "value": "In the serpent's control room, Donald is tied to a pipe, and the serpent's master is chuckling over the panic he has created all up and down the river. \"There they go to spread the alarm,\" he gloats as one steamer flees the serpent. \"Before night my little plaything will be known as the terror of the river. Haw! Trembling sheriffs will toss dynamite in the water! Jittery people will hunt the serpent with shotguns! Haw! But I won't be here. I'll be miles down the river, scaring more steamer crews with my terrifying invention.\"",
+          "bbox": [
+            {
+              "h": 89.05049542682927,
+              "w": 126.02419778963412,
+              "x": 150.9536318597561,
+              "y": 228.1058231707317,
+              "confidence": 0.99,
+              "end_index": 530,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"But why?\" Donald asks. \"Why all this scaring?\"",
+          "value": "\"But why?\" Donald asks. \"Why all this scaring?\"",
+          "bbox": [
+            {
+              "h": 15.107492378048754,
+              "w": 125.47822980182924,
+              "x": 150.22742378048778,
+              "y": 316.8777896341464,
+              "confidence": 0.96,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Why do people dance?\" the \"scarer\" replies smugly. \"Because they like to. It amuses them. I like to scare people.\"",
+          "value": "\"Why do people dance?\" the \"scarer\" replies smugly. \"Because they like to. It amuses them. I like to scare people.\"",
+          "bbox": [
+            {
+              "h": 22.73986280487803,
+              "w": 125.89055259146342,
+              "x": 149.92298780487803,
+              "y": 331.542324695122,
+              "confidence": 0.98,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n37",
+              "value": "Carl Barks and the Art of the Comic Book\n37",
+              "bbox": [
+                {
+                  "h": 4.68246951219513,
+                  "w": 80.04234375,
+                  "x": 171.6514195884146,
+                  "y": 366.94401676829267,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n37",
+          "bbox": [
+            {
+              "h": 4.68,
+              "w": 80.04,
+              "x": 171.65,
+              "y": 366.94,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "37"
+    }
+  ]
+}

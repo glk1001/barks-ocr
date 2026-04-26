@@ -1,0 +1,116 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "mitted a number of ideas to paper — including one for an energy-saving gasoline engine — but has never made working models of any of them. He describes his ideas as \"pipe dreams.\"",
+          "value": "mitted a number of ideas to paper — including one for an energy-saving gasoline engine — but has never made working models of any of them. He describes his ideas as \"pipe dreams.\"",
+          "bbox": [
+            {
+              "h": 29.49466034679878,
+              "w": 125.71028570407773,
+              "x": 11.945588914824693,
+              "y": 12.351589653201218,
+              "confidence": 0.97,
+              "end_index": 178,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The inventions were the big show, but Gyro himself should not be overlooked. Gyro invented in a vacuum, for the sheer joy of it. He was usually not aware of the value of his inventions, and sold them for ridiculously low prices. Worse, his inventions frequently didn't work as he had anticipated. In a story in *Uncle Scrooge* No. 16 (1956), he invents a machine that always predicts the future accurately, but, alas, accurate predictions aren't quite enough. At a fishing hole, he asks the machine where to catch the biggest fish. The machine tells him, but neglects to mention that the fish",
+          "value": "The inventions were the big show, but Gyro himself should not be overlooked. Gyro invented in a vacuum, for the sheer joy of it. He was usually not aware of the value of his inventions, and sold them for ridiculously low prices. Worse, his inventions frequently didn't work as he had anticipated. In a story in Uncle Scrooge No. 16 (1956), he invents a machine that always predicts the future accurately, but, alas, accurate predictions aren't quite enough. At a fishing hole, he asks the machine where to catch the biggest fish. The machine tells him, but neglects to mention that the fish",
+          "bbox": [
+            {
+              "h": 95.81750190548779,
+              "w": 125.5085906535823,
+              "x": 11.950992044588412,
+              "y": 42.178565167682926,
+              "confidence": 0.99,
+              "end_index": 591,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "is so large that it can pull Gyro into the water. It wasn't asked to predict that, it explains. On the way home, Gyro's car approaches a blind corner and he asks the machine if any cars are moving on the cross road. A truck is moving north, the machine replies, and Gyro turns south — but the machine has failed to tell him that the truck is on the wrong side of the road. As Gyro limps home after the collision, a fortune teller offers to tell him \"all the answers.\" \"You may know all the answers, sonny,\" Gyro replies, \"but I've just discovered I could never think of all the questions.\"",
+          "value": "is so large that it can pull Gyro into the water. It wasn't asked to predict that, it explains. On the way home, Gyro's car approaches a blind corner and he asks the machine if any cars are moving on the cross road. A truck is moving north, the machine replies, and Gyro turns south — but the machine has failed to tell him that the truck is on the wrong side of the road. As Gyro limps home after the collision, a fortune teller offers to tell him \"all the answers.\" \"You may know all the answers, sonny,\" Gyro replies, \"but I've just discovered I could never think of all the questions.\"",
+          "bbox": [
+            {
+              "h": 96.16888862423781,
+              "w": 125.46488757621948,
+              "x": 151.16326600609756,
+              "y": 12.12165634527439,
+              "confidence": 0.99,
+              "end_index": 588,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Or, as he says at the close of another story, \"Nobody can make a machine so smart that some jerk won't be too dumb to run it.\"",
+          "value": "Or, as he says at the close of another story, \"Nobody can make a machine so smart that some jerk won't be too dumb to run it.\"",
+          "bbox": [
+            {
+              "h": 28.393891006097565,
+              "w": 125.31061166158536,
+              "x": 150.94790396341463,
+              "y": 108.53047637195121,
+              "confidence": 0.98,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "58 Carl Barks and the Art of the Comic Book",
+              "value": "58 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.373086890243885,
+                  "w": 80.04912204649388,
+                  "x": 36.14889529344512,
+                  "y": 366.95833079268294,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "58 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.37,
+              "w": 80.05,
+              "x": 36.15,
+              "y": 366.96,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "58"
+    }
+  ]
+}

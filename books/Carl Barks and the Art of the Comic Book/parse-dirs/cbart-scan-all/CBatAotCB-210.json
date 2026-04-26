@@ -1,0 +1,170 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Feb. 26 - All of US 4C No. 495 except FC.\nMar. 6 - FC, US 4C No. 495.\nMar. 12 - FC, WDC No. 157.\nMar. 19 - *Tom and Jerry Winter Carnival* No. 2.\nMar. 26 - WDC No. 158.\nApr. 6 - FC, WDC No. 156; WDC No. 159.\nApr. 9 - FC, WDC No. 159; FC, WDC No. 164.\nApr. 23 - WDC No. 160.\nApr. 30 - WDC No. 161.\nMay 7 - BC idea, US No. 4; FC, US No. 4.\nMay 21 - IFC, IBC, BC, US No. 4.\nMay 28 - Hawaii story, US No. 4.\nJune 8 - FC, WDC No. 160; FC, WDC No. 161.\nJune 25 - WDC No. 162.\nJuly 2 - WDC No. 163.\nJuly 9 - FC, WDC No. 162.\nJuly 30 - US No. 5.\nAug. 13 - *Tom and Jerry Summer Fun* No. 1.\nAug. 27 - WDC No. 164; WDC No. 165.\nSept. 17 - FC ideas for DD No. 35, US No. 7, US No. 8, US No. 9; WDC No. 166; one unpublished FC idea (\"frog in hat\").\nOct. 1 - WDC No. 167.\nOct. 8 - Drawings for five FC ideas listed under Sept. 17.\nOct. 15 - Two one-page gag ideas for US No. 6, one unknown DD gag idea (\"tennis match\").\nOct. 29 - Tralla La story, IFC, IBC, BC, US No. 6.\nNov. 6 - FC, WDC No. 163; FC?, WDC No. 165, FC, WDC No. 166; FC?, WDC No. 167; FC idea for WDC No. 176.\nNov. 26 - 10-page story, US No. 6.\nDec. 3 - WDC No. 168.\nDec. 31 - FC, WDC No. 165.",
+          "value": "Feb. 26 - All of US 4C No. 495 except FC.\nMar. 6 - FC, US 4C No. 495.\nMar. 12 - FC, WDC No. 157.\nMar. 19 - Tom and Jerry Winter Carnival No. 2.\nMar. 26 - WDC No. 158.\nApr. 6 - FC, WDC No. 156; WDC No. 159.\nApr. 9 - FC, WDC No. 159; FC, WDC No. 164.\nApr. 23 - WDC No. 160.\nApr. 30 - WDC No. 161.\nMay 7 - BC idea, US No. 4; FC, US No. 4.\nMay 21 - IFC, IBC, BC, US No. 4.\nMay 28 - Hawaii story, US No. 4.\nJune 8 - FC, WDC No. 160; FC, WDC No. 161.\nJune 25 - WDC No. 162.\nJuly 2 - WDC No. 163.\nJuly 9 - FC, WDC No. 162.\nJuly 30 - US No. 5.\nAug. 13 - Tom and Jerry Summer Fun No. 1.\nAug. 27 - WDC No. 164; WDC No. 165.\nSept. 17 - FC ideas for DD No. 35, US No. 7, US No. 8, US No. 9; WDC No. 166; one unpublished FC idea (\"frog in hat\").\nOct. 1 - WDC No. 167.\nOct. 8 - Drawings for five FC ideas listed under Sept. 17.\nOct. 15 - Two one-page gag ideas for US No. 6, one unknown DD gag idea (\"tennis match\").\nOct. 29 - Tralla La story, IFC, IBC, BC, US No. 6.\nNov. 6 - FC, WDC No. 163; FC?, WDC No. 165, FC, WDC No. 166; FC?, WDC No. 167; FC idea for WDC No. 176.\nNov. 26 - 10-page story, US No. 6.\nDec. 3 - WDC No. 168.\nDec. 31 - FC, WDC No. 165.",
+          "bbox": [
+            {
+              "h": 10.638361280487825,
+              "w": 125.65881931211891,
+              "x": 12.658087128429877,
+              "y": 129.96549923780486,
+              "confidence": 0.78,
+              "end_index": 1144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1954",
+          "value": "1954",
+          "bbox": [
+            {
+              "h": 4.562035060975623,
+              "w": 11.378975204839938,
+              "x": 13.097796422446644,
+              "y": 211.8285137195122,
+              "confidence": 0.94,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 7 - WDC No. 169; WDC No. 170.\nJan. 28 - Seven Cities of Cibola story, US No. 7.\nFeb. 11 - Ideas for IFC, BC, US No. 7; FC, WDC No. 176.\nFeb. 25 - Four-page story, IFC, IBC, BC, US No. 7.\nMar. 4 - WDC No. 171.\nMar. 18 - FC, WDC No. 167; WDC No. 172.\nMar. 25 - WDC No. 173.\nApr. 15 - Unpublished FC \"for Bankers Commercial\"; FC, WDC No. 171.\nApr. 22 - FC, WDC No. 169; FC, WDC No. 170; WDC No. 174.\nApr. 29 - FC, WDC No. 172.\nMay 20 - 28-page story, US No. 8.\nJune 10 - Four-page story, IFC, IBC, BC, US No. 8.\nJune 17 - Kite giveaway; WDC No. 175.\nJune 24 - \"Tuckered Tiger,\" US No. 9.\nJuly 8 - Kite giveaway.\nJuly 15 - \"The Lemming with the Locket,\" US No. 9.\nJuly 22 - IFC, IBC, BC, US No. 9; WDC No. 176.\nJuly 29 - WDC No. 177.\nAug. 12 - FC, WDC No. 173.\nSept. 23 - FC, US No. 10.\nSept. 30 - \"Secret of Hondorica,\" DD No. 46.\nOct. 7 - Dogcatcher story, DD No. 45.\nOct. 14 - IFC, IBC, BC, DD No. 45; FC, WDC No. 174; FC, WDC No. 175.\nOct. 28 - \"The Fabulous Philosopher's Stone,\" US No. 10.\nNov. 11 - \"Heirloom Watch,\" US No. 10.\nNov. 26 - WDC No. 178; WDC No. 179.\nDec. 9 - IFC, IBC, US No. 10.\nDec. 23 - FC, WDC No. 177; FC, WDC No. 178.",
+          "value": "Jan. 7 - WDC No. 169; WDC No. 170.\nJan. 28 - Seven Cities of Cibola story, US No. 7.\nFeb. 11 - Ideas for IFC, BC, US No. 7; FC, WDC No. 176.\nFeb. 25 - Four-page story, IFC, IBC, BC, US No. 7.\nMar. 4 - WDC No. 171.\nMar. 18 - FC, WDC No. 167; WDC No. 172.\nMar. 25 - WDC No. 173.\nApr. 15 - Unpublished FC \"for Bankers Commercial\"; FC, WDC No. 171.\nApr. 22 - FC, WDC No. 169; FC, WDC No. 170; WDC No. 174.\nApr. 29 - FC, WDC No. 172.\nMay 20 - 28-page story, US No. 8.\nJune 10 - Four-page story, IFC, IBC, BC, US No. 8.\nJune 17 - Kite giveaway; WDC No. 175.\nJune 24 - \"Tuckered Tiger,\" US No. 9.\nJuly 8 - Kite giveaway.\nJuly 15 - \"The Lemming with the Locket,\" US No. 9.\nJuly 22 - IFC, IBC, BC, US No. 9; WDC No. 176.\nJuly 29 - WDC No. 177.\nAug. 12 - FC, WDC No. 173.\nSept. 23 - FC, US No. 10.\nSept. 30 - \"Secret of Hondorica,\" DD No. 46.\nOct. 7 - Dogcatcher story, DD No. 45.\nOct. 14 - IFC, IBC, BC, DD No. 45; FC, WDC No. 174; FC, WDC No. 175.\nOct. 28 - \"The Fabulous Philosopher's Stone,\" US No. 10.\nNov. 11 - \"Heirloom Watch,\" US No. 10.\nNov. 26 - WDC No. 178; WDC No. 179.\nDec. 9 - IFC, IBC, US No. 10.\nDec. 23 - FC, WDC No. 177; FC, WDC No. 178.",
+          "bbox": [
+            {
+              "h": 10.776036585365855,
+              "w": 125.58075207221796,
+              "x": 12.648160846989327,
+              "y": 265.19496951219514,
+              "confidence": 0.77,
+              "end_index": 1144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1955",
+          "value": "1955",
+          "bbox": [
+            {
+              "h": 4.484765625,
+              "w": 11.43550495426829,
+              "x": 151.7720007621951,
+              "y": 82.40536966463414,
+              "confidence": 0.94,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 6 - WDC No. 180; WDC No. 181; WDC No. 182.\nFeb. 3 - \"The Great Steamboat Race,\" US No. 11.\nFeb. 24 - FC, IBC, BC, US No. 11; IFC, US No. 14.\nMar. 10 - \"Riches, Riches, Everywhere,\" US No. 11.\nMar. 17 - WDC No. 183.\nMar. 31 - WDC No. 184.\nApr. 21 - WDC No. 185; WDC No. 186.\nApr. 28 - WDC No. 187; WDC No. 188.\nMay 26 - FC, US No. 12.\nJune 2 - All of US No. 12 except FC.\nJune 23 - FC, DD No. 44; FC, WDC No. 183.\nJune 30 - WDC No. 189.\nJuly 14 - WDC No. 190.\nAug. 18 - \"Land Beneath the Ground,\" US No. 13.\nSept. 1 - Covers, GG, US No. 13; WDC No. 191.\nSept. 15 - FC, DD No. 46; FC, US No. 15.\nSept. 22 - WDC No. 192.\nSept. 29 - WDC No. 193; WDC No. 194.\nOct. 1 - GG, US No. 14.\nNov. 3 - \"Lost Crown of Genghis Khan,\" US No. 14.\nNov. 17 - Square inch of land story, US No. 14.\nNov. 23 - WDC No. 195.\nDec. 8 - FC, IBC, BC, US No. 14; IFC, US No. 17.\nDec. 15 - Unpublished \"bobsled race\" story for WDC.\nDec. 22 - WDC No. 196.",
+          "value": "Jan. 6 - WDC No. 180; WDC No. 181; WDC No. 182.\nFeb. 3 - \"The Great Steamboat Race,\" US No. 11.\nFeb. 24 - FC, IBC, BC, US No. 11; IFC, US No. 14.\nMar. 10 - \"Riches, Riches, Everywhere,\" US No. 11.\nMar. 17 - WDC No. 183.\nMar. 31 - WDC No. 184.\nApr. 21 - WDC No. 185; WDC No. 186.\nApr. 28 - WDC No. 187; WDC No. 188.\nMay 26 - FC, US No. 12.\nJune 2 - All of US No. 12 except FC.\nJune 23 - FC, DD No. 44; FC, WDC No. 183.\nJune 30 - WDC No. 189.\nJuly 14 - WDC No. 190.\nAug. 18 - \"Land Beneath the Ground,\" US No. 13.\nSept. 1 - Covers, GG, US No. 13; WDC No. 191.\nSept. 15 - FC, DD No. 46; FC, US No. 15.\nSept. 22 - WDC No. 192.\nSept. 29 - WDC No. 193; WDC No. 194.\nOct. 1 - GG, US No. 14.\nNov. 3 - \"Lost Crown of Genghis Khan,\" US No. 14.\nNov. 17 - Square inch of land story, US No. 14.\nNov. 23 - WDC No. 195.\nDec. 8 - FC, IBC, BC, US No. 14; IFC, US No. 17.\nDec. 15 - Unpublished \"bobsled race\" story for WDC.\nDec. 22 - WDC No. 196.",
+          "bbox": [
+            {
+              "h": 5.533650914634172,
+              "w": 117.14474085365855,
+              "x": 151.27991615853657,
+              "y": 230.4482469512195,
+              "confidence": 0.78,
+              "end_index": 927,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1956",
+          "value": "1956",
+          "bbox": [
+            {
+              "h": 4.60852134146342,
+              "w": 11.477263719512202,
+              "x": 151.32182926829267,
+              "y": 253.70172256097558,
+              "confidence": 0.94,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 5 - WDC No. 197.\nFeb. 2 - \"Second-richest Duck,\" US No. 15.\nFeb. 9 - Money bin story, GG, US No. 15.\nFeb. 23 - IFC, IBC, US No. 15; IFC, US No. 16; BC, US No. 17.\nMar. 1 - GG, *Christmas Parade* No. 8.\nMar. 15 - WDC No. 198; WDC No. 214.\nApr. 5 - WDC No. 200.\nApr. 26 - \"Back to Long Ago,\" US No. 16.\nMay 17 - Quiz show story, GG, US No. 16.\nMay 24 - Half-page gag, DD No. 51; IBC, BC, US No. 16; IBC, US No. 17; IBC, US No. 18; \"The Secret Book,\" US No. 31; IFC, US No. 33; unpublished FC for US (\"piggy bank dog\").\nMay 31 - WDC No. 202.",
+          "value": "Jan. 5 - WDC No. 197.\nFeb. 2 - \"Second-richest Duck,\" US No. 15.\nFeb. 9 - Money bin story, GG, US No. 15.\nFeb. 23 - IFC, IBC, US No. 15; IFC, US No. 16; BC, US No. 17.\nMar. 1 - GG, Christmas Parade No. 8.\nMar. 15 - WDC No. 198; WDC No. 214.\nApr. 5 - WDC No. 200.\nApr. 26 - \"Back to Long Ago,\" US No. 16.\nMay 17 - Quiz show story, GG, US No. 16.\nMay 24 - Half-page gag, DD No. 51; IBC, BC, US No. 16; IBC, US No. 17; IBC, US No. 18; \"The Secret Book,\" US No. 31; IFC, US No. 33; unpublished FC for US (\"piggy bank dog\").\nMay 31 - WDC No. 202.",
+          "bbox": [
+            {
+              "h": 22.817881097560985,
+              "w": 125.57747332317072,
+              "x": 150.6467606707317,
+              "y": 318.86967987804877,
+              "confidence": 0.83,
+              "end_index": 542,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "210 Carl Barks and the Art of the Comic Book",
+              "value": "210 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.4270807926829,
+                  "w": 77.89108993902437,
+                  "x": 37.13543540396341,
+                  "y": 363.8263262195122,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "210 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.43,
+              "w": 77.89,
+              "x": 37.14,
+              "y": 363.83,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "210"
+    }
+  ]
+}

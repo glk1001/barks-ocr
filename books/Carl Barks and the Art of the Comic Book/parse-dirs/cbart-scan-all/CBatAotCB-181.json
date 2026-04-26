@@ -1,0 +1,847 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "**206 (18/2) - November 1957 - 36 pages**",
+          "value": "206 (18/2) - November 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.597638147865855,
+              "w": 92.98089093464176,
+              "x": 11.868731778772865,
+              "y": 21.36455887957317,
+              "confidence": 0.96,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: Donald and the nephews are tangled in taffy. *(Jan. 31, 1957)*",
+          "value": "Front cover: Donald and the nephews are tangled in taffy. (Jan. 31, 1957)",
+          "bbox": [
+            {
+              "h": 10.75194169207317,
+              "w": 125.89180449695121,
+              "x": 11.891807355182925,
+              "y": 27.40827267530488,
+              "confidence": 0.97,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Scrooge lets Donald manage a run-down hotel, then shows up in disguise to see how Donald is doing. *(Jan. 17, 1957)*",
+          "value": "DONALD DUCK - 10 - Scrooge lets Donald manage a run-down hotel, then shows up in disguise to see how Donald is doing. (Jan. 17, 1957)",
+          "bbox": [
+            {
+              "h": 17.36259717987805,
+              "w": 126.03339093464177,
+              "x": 11.794166229992376,
+              "y": 39.07125,
+              "confidence": 0.97,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Potato sacks are labeled \"San Jacinto\" and \"Tulelake\" (the California towns where Barks and his brother lived at the time).",
+          "value": "Potato sacks are labeled \"San Jacinto\" and \"Tulelake\" (the California towns where Barks and his brother lived at the time).",
+          "bbox": [
+            {
+              "h": 11.448184070121949,
+              "w": 126.04339974752286,
+              "x": 11.83606004668445,
+              "y": 57.109401676829265,
+              "confidence": 0.96,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 355, April 1970; No. 453, June 1978.",
+          "value": "Reprinted: Walt Disney's Comics No. 355, April 1970; No. 453, June 1978.",
+          "bbox": [
+            {
+              "h": 11.655365853658536,
+              "w": 125.04628060689785,
+              "x": 12.061670993711889,
+              "y": 69.53535823170732,
+              "confidence": 0.95,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**207 (18/3) - December 1957 - 36 pages**",
+          "value": "207 (18/3) - December 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.268841463414637,
+              "w": 84.74549757050303,
+              "x": 12.539614853277438,
+              "y": 86.80865282012195,
+              "confidence": 0.96,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald's ventriloquist's dummy is a parrot. *(Mar. 14, 1957)*",
+          "value": "Front cover (art only): Donald's ventriloquist's dummy is a parrot. (Mar. 14, 1957)",
+          "bbox": [
+            {
+              "h": 11.471913109756088,
+              "w": 126.29589986661585,
+              "x": 11.530868426067071,
+              "y": 92.49230945121951,
+              "confidence": 0.97,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald, Gladstone, and Scrooge enter an Old West contest for desert rats, with a uranium mine the first prize. *(Jan. 17, 1957)*",
+          "value": "DONALD DUCK - 10 - Donald, Gladstone, and Scrooge enter an Old West contest for desert rats, with a uranium mine the first prize. (Jan. 17, 1957)",
+          "bbox": [
+            {
+              "h": 17.46352134146342,
+              "w": 125.9813543254573,
+              "x": 11.88273104039634,
+              "y": 104.34114329268293,
+              "confidence": 0.97,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 379, April 1972.",
+          "value": "Reprinted: Walt Disney's Comics No. 379, April 1972.",
+          "bbox": [
+            {
+              "h": 5.423860518292668,
+              "w": 107.69147067930639,
+              "x": 16.81642947313262,
+              "y": 122.60256859756097,
+              "confidence": 0.95,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**208 (18/4) - January 1958 - 36 pages**",
+          "value": "208 (18/4) - January 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.691928353658549,
+              "w": 88.50866544397864,
+              "x": 11.98147937309451,
+              "y": 136.49814786585364,
+              "confidence": 0.96,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: The nephews wear a single serape over all of their shoulders. *(May 29, 1957)*",
+          "value": "Front cover: The nephews wear a single serape over all of their shoulders. (May 29, 1957)",
+          "bbox": [
+            {
+              "h": 11.280903201219507,
+              "w": 126.08623356516766,
+              "x": 11.889725847942072,
+              "y": 142.35233231707318,
+              "confidence": 0.97,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Gladstone gives the nephews a reindeer he has won, and they plan to give it to Donald as a Christmas gift that the \"Code of Duckburg\" will require that he keep. *(Oct. 18, 1956)*",
+          "value": "DONALD DUCK - 10 - Gladstone gives the nephews a reindeer he has won, and they plan to give it to Donald as a Christmas gift that the \"Code of Duckburg\" will require that he keep. (Oct. 18, 1956)",
+          "bbox": [
+            {
+              "h": 23.24451219512197,
+              "w": 126.08288729039634,
+              "x": 11.803235041920729,
+              "y": 154.11688262195122,
+              "confidence": 0.98,
+              "end_index": 196,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 376, January 1972.",
+          "value": "Reprinted: Walt Disney's Comics No. 376, January 1972.",
+          "bbox": [
+            {
+              "h": 5.27085365853658,
+              "w": 113.02654737519053,
+              "x": 16.54440155773628,
+              "y": 178.25822789634148,
+              "confidence": 0.95,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**209 (18/5) - February 1958 - 36 pages**",
+          "value": "209 (18/5) - February 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.59193597560974,
+              "w": 89.79332948266004,
+              "x": 12.158200624047256,
+              "y": 189.81555640243903,
+              "confidence": 0.96,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: A loose spring on Donald's chair has propelled him into the ceiling. *(Aug. 15, 1957)*",
+          "value": "Front cover: A loose spring on Donald's chair has propelled him into the ceiling. (Aug. 15, 1957)",
+          "bbox": [
+            {
+              "h": 11.557568597560957,
+              "w": 125.89679175400151,
+              "x": 12.145064191120426,
+              "y": 195.51848323170734,
+              "confidence": 0.97,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald buys a midget helicopter to make his job as a rural mailman easier, but a persistent eagle makes his job harder. *(July 25, 1957)*",
+          "value": "DONALD DUCK - 10 - Donald buys a midget helicopter to make his job as a rural mailman easier, but a persistent eagle makes his job harder. (July 25, 1957)",
+          "bbox": [
+            {
+              "h": 22.875091463414638,
+              "w": 125.75901784012957,
+              "x": 11.622920993711888,
+              "y": 207.46891006097562,
+              "confidence": 0.98,
+              "end_index": 155,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 386, November 1972; Donald Duck, Whitman Comic Book No. 8, 1962 (see \"Other Comics Material\").",
+          "value": "Reprinted: Walt Disney's Comics No. 386, November 1972; Donald Duck, Whitman Comic Book No. 8, 1962 (see \"Other Comics Material\").",
+          "bbox": [
+            {
+              "h": 17.311486280487824,
+              "w": 126.44623249333078,
+              "x": 11.411756264291157,
+              "y": 231.74730182926828,
+              "confidence": 0.98,
+              "end_index": 129,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**210 (18/6) - March 1958 - 36 pages**",
+          "value": "210 (18/6) - March 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5078125,
+              "w": 82.46210449218749,
+              "x": 11.805306902629573,
+              "y": 255.25022103658537,
+              "confidence": 0.96,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald is left in charge of a bakery on his first day on the job when the owner has to go to another city. *(July 25, 1957)*",
+          "value": "DONALD DUCK - 10 - Donald is left in charge of a bakery on his first day on the job when the owner has to go to another city. (July 25, 1957)",
+          "bbox": [
+            {
+              "h": 17.41301067073171,
+              "w": 126.11406595369664,
+              "x": 11.8157958984375,
+              "y": 260.92612042682924,
+              "confidence": 0.98,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 396, September 1973; Donald Duck, Whitman Comic Book No. 8, 1962 (see \"Other Comics Material\").",
+          "value": "Reprinted: Walt Disney's Comics No. 396, September 1973; Donald Duck, Whitman Comic Book No. 8, 1962 (see \"Other Comics Material\").",
+          "bbox": [
+            {
+              "h": 16.459390243902433,
+              "w": 126.31123034965701,
+              "x": 11.778781083269816,
+              "y": 278.9816158536585,
+              "confidence": 0.98,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**211 (18/7) - April 1958 - 36 pages**",
+          "value": "211 (18/7) - April 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.710381097560985,
+              "w": 79.00702541444359,
+              "x": 12.218178472751523,
+              "y": 302.5075381097561,
+              "confidence": 0.96,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald, taken in by the nephews' April Fool joke, goes to the South Seas in search of magic wishing stones. *(April 18, 1957)*",
+          "value": "DONALD DUCK - 10 - Donald, taken in by the nephews' April Fool joke, goes to the South Seas in search of magic wishing stones. (April 18, 1957)",
+          "bbox": [
+            {
+              "h": 17.68840701219513,
+              "w": 125.99272544302589,
+              "x": 11.969548756669207,
+              "y": 308.18684451219514,
+              "confidence": 0.98,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"Got this idea from my daughter.\"",
+          "value": "Barks: \"Got this idea from my daughter.\"",
+          "bbox": [
+            {
+              "h": 5.394420731707305,
+              "w": 80.19065489233994,
+              "x": 17.179707150342985,
+              "y": 326.3423780487805,
+              "confidence": 0.9,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 380, May 1972; Donald Duck, Whitman Comic Book No. 8, 1962 (see \"Other Comics Material\").",
+          "value": "Reprinted: Walt Disney's Comics No. 380, May 1972; Donald Duck, Whitman Comic Book No. 8, 1962 (see \"Other Comics Material\").",
+          "bbox": [
+            {
+              "h": 16.422393292682955,
+              "w": 126.18629811356706,
+              "x": 12.076450552591462,
+              "y": 332.33842225609754,
+              "confidence": 0.97,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**212 (18/8) - May 1958 - 36 pages**",
+          "value": "212 (18/8) - May 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.632575743140243,
+              "w": 76.59898628048782,
+              "x": 151.5456802591463,
+              "y": 21.505705506859755,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews are splattered with paint as they help Donald paint the ceiling. *(Nov. 7, 1957)*",
+          "value": "Front cover (art only): The nephews are splattered with paint as they help Donald paint the ceiling. (Nov. 7, 1957)",
+          "bbox": [
+            {
+              "h": 17.37638814786585,
+              "w": 125.7987176067073,
+              "x": 151.63310785060975,
+              "y": 27.544355945121954,
+              "confidence": 0.98,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald pilots a rocket in an around-the-world race with Gladstone Gander. *(Apr. 18, 1957)*",
+          "value": "DONALD DUCK - 10 - Donald pilots a rocket in an around-the-world race with Gladstone Gander. (Apr. 18, 1957)",
+          "bbox": [
+            {
+              "h": 17.064403582317066,
+              "w": 126.03573932926825,
+              "x": 151.28276295731706,
+              "y": 46.16743330792683,
+              "confidence": 0.97,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A new version of \"DONALD DUCK\" in Walt Disney's Comics No. 93, June 1948.",
+          "value": "A new version of \"DONALD DUCK\" in Walt Disney's Comics No. 93, June 1948.",
+          "bbox": [
+            {
+              "h": 10.986316692073173,
+              "w": 125.91063452743904,
+              "x": 151.27447980182924,
+              "y": 64.44147484756097,
+              "confidence": 0.92,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 447, December 1977; Donald Duck, Whitman Comic Book No. 8, 1962 (see \"Other Comics Material\").",
+          "value": "Reprinted: Walt Disney's Comics No. 447, December 1977; Donald Duck, Whitman Comic Book No. 8, 1962 (see \"Other Comics Material\").",
+          "bbox": [
+            {
+              "h": 16.808991996951217,
+              "w": 126.35639862804878,
+              "x": 151.0487938262195,
+              "y": 76.1362842987805,
+              "confidence": 0.98,
+              "end_index": 129,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**213 (18/9) - June 1958 - 36 pages**",
+          "value": "213 (18/9) - June 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.618014481707318,
+              "w": 76.8582507621951,
+              "x": 151.3987442835366,
+              "y": 99.78177210365854,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: The nephews' oars get tangled while they are sculling with Donald. *(Feb. 21, 1957)*",
+          "value": "Front cover: The nephews' oars get tangled while they are sculling with Donald. (Feb. 21, 1957)",
+          "bbox": [
+            {
+              "h": 11.473387957317073,
+              "w": 126.10450838414634,
+              "x": 151.21150724085365,
+              "y": 105.5200381097561,
+              "confidence": 0.97,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald flees when Daisy comes to enlist his help in her spring cleaning, and she and the nephews pursue him with the Junior Woodchucks' official bloodhound. *(July 25, 1957)*",
+          "value": "DONALD DUCK - 10 - Donald flees when Daisy comes to enlist his help in her spring cleaning, and she and the nephews pursue him with the Junior Woodchucks' official bloodhound. (July 25, 1957)",
+          "bbox": [
+            {
+              "h": 22.7346493902439,
+              "w": 126.10152439024388,
+              "x": 151.30322217987802,
+              "y": 117.47814786585366,
+              "confidence": 0.97,
+              "end_index": 192,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First appearance of the Official Hound.",
+          "value": "First appearance of the Official Hound.",
+          "bbox": [
+            {
+              "h": 5.223784298780492,
+              "w": 78.15069740853657,
+              "x": 155.8212118902439,
+              "y": 141.46401676829268,
+              "confidence": 0.88,
+              "end_index": 38,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 382, July 1972; Donald Duck, Whitman Comic Book No. 8, 1962 (see \"Other Comics Material\").",
+          "value": "Reprinted: Walt Disney's Comics No. 382, July 1972; Donald Duck, Whitman Comic Book No. 8, 1962 (see \"Other Comics Material\").",
+          "bbox": [
+            {
+              "h": 16.632987804878056,
+              "w": 126.38716463414634,
+              "x": 151.28499237804877,
+              "y": 147.52095274390243,
+              "confidence": 0.97,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**214 (18/10) - July 1958 - 36 pages**",
+          "value": "214 (18/10) - July 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.622370426829275,
+              "w": 78.57010289634148,
+              "x": 151.57430259146338,
+              "y": 170.77963033536585,
+              "confidence": 0.96,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald holds the nephews' dripping ice-cream cones as they gobble candy. *(Nov. 7, 1957)*",
+          "value": "Front cover (art only): Donald holds the nephews' dripping ice-cream cones as they gobble candy. (Nov. 7, 1957)",
+          "bbox": [
+            {
+              "h": 17.393826219512203,
+              "w": 125.90929687499997,
+              "x": 151.81127286585365,
+              "y": 176.58539634146342,
+              "confidence": 0.98,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald, embarrassed by his ignorance of flowers, fills every nook and cranny around his house with them, not overlooking the nephews' toys. *(Mar. 15, 1956)*",
+          "value": "DONALD DUCK - 10 - Donald, embarrassed by his ignorance of flowers, fills every nook and cranny around his house with them, not overlooking the nephews' toys. (Mar. 15, 1956)",
+          "bbox": [
+            {
+              "h": 23.177858231707305,
+              "w": 126.00999809451217,
+              "x": 151.51134717987802,
+              "y": 194.71680640243903,
+              "confidence": 0.98,
+              "end_index": 175,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 395, August 1973.",
+          "value": "Reprinted: Walt Disney's Comics No. 395, August 1973.",
+          "bbox": [
+            {
+              "h": 10.84826981707316,
+              "w": 125.05194740853655,
+              "x": 151.87549733231705,
+              "y": 219.23435213414635,
+              "confidence": 0.97,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**215 (18/11) - August 1958 - 36 pages**",
+          "value": "215 (18/11) - August 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.693757621951217,
+              "w": 86.8679382621951,
+              "x": 151.64686166158535,
+              "y": 237.33395579268293,
+              "confidence": 0.96,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald hauls the nephews to the bathtub in a large towel. *(Dec. 19, 1957)*",
+          "value": "Front cover (art only): Donald hauls the nephews to the bathtub in a large towel. (Dec. 19, 1957)",
+          "bbox": [
+            {
+              "h": 11.657949695121914,
+              "w": 126.19912157012193,
+              "x": 151.59381859756095,
+              "y": 243.16232469512195,
+              "confidence": 0.97,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "According to Barks's vouchers, this cover was originally scheduled for the front cover of Walt Disney's Comics No. 216, September 1958.",
+          "value": "According to Barks's vouchers, this cover was originally scheduled for the front cover of Walt Disney's Comics No. 216, September 1958.",
+          "bbox": [
+            {
+              "h": 17.095632621951243,
+              "w": 126.2063757621951,
+              "x": 151.54976181402438,
+              "y": 255.25909298780485,
+              "confidence": 0.98,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Scrooge wants to buy land with the right kind of echoes, and Donald and Gladstone try to sell him theirs. *(Sept. 19, 1957)*",
+          "value": "DONALD DUCK - 10 - Scrooge wants to buy land with the right kind of echoes, and Donald and Gladstone try to sell him theirs. (Sept. 19, 1957)",
+          "bbox": [
+            {
+              "h": 17.22125762195119,
+              "w": 126.11538109756096,
+              "x": 151.63907583841464,
+              "y": 272.6271951219512,
+              "confidence": 0.97,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Similar to \"DONALD DUCK\" in Walt Disney's Comics No. 105, June 1949.",
+          "value": "Similar to \"DONALD DUCK\" in Walt Disney's Comics No. 105, June 1949.",
+          "bbox": [
+            {
+              "h": 10.562949695121915,
+              "w": 125.7569245426829,
+              "x": 151.96241044207315,
+              "y": 290.8457469512195,
+              "confidence": 0.96,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 383, August 1972.",
+          "value": "Reprinted: Walt Disney's Comics No. 383, August 1972.",
+          "bbox": [
+            {
+              "h": 5.342286585365855,
+              "w": 112.72463986280486,
+              "x": 155.90220846036584,
+              "y": 302.73205792682927,
+              "confidence": 0.95,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**216 (18/12) - September 1958 - 36 pages**",
+          "value": "216 (18/12) - September 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6172942073171,
+              "w": 95.84036204268293,
+              "x": 151.92108041158536,
+              "y": 314.3798551829268,
+              "confidence": 0.96,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews disturb Donald's rest by putting up a \"do not disturb\" sign. *(Feb. 7, 1958)*",
+          "value": "Front cover (art only): The nephews disturb Donald's rest by putting up a \"do not disturb\" sign. (Feb. 7, 1958)",
+          "bbox": [
+            {
+              "h": 11.758490853658495,
+              "w": 125.9275952743902,
+              "x": 151.83380716463415,
+              "y": 319.9223780487805,
+              "confidence": 0.96,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "According to Barks's vouchers, this cover was originally scheduled for the front cover of Walt Disney's Comics No. 219, December 1958.",
+          "value": "According to Barks's vouchers, this cover was originally scheduled for the front cover of Walt Disney's Comics No. 219, December 1958.",
+          "bbox": [
+            {
+              "h": 16.598003048780466,
+              "w": 126.05084794207318,
+              "x": 151.7819131097561,
+              "y": 332.1026524390244,
+              "confidence": 0.98,
+              "end_index": 133,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n181",
+              "value": "Carl Barks and the Art of the Comic Book\n181",
+              "bbox": [
+                {
+                  "h": 4.6918445121951295,
+                  "w": 77.85649961890243,
+                  "x": 173.9984508384146,
+                  "y": 364.5600457317073,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n181",
+          "bbox": [
+            {
+              "h": 4.69,
+              "w": 77.86,
+              "x": 174.0,
+              "y": 364.56,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "181"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "He tells Donald that when he is through scaring, he will bury his serpent submarine in a mud bank and leave through an escape hatch. \"Then I'll spend the rest of my life laughing at people's wild stories of the 'sea serpent' that thousands saw but nobody ever found.\"",
+          "value": "He tells Donald that when he is through scaring, he will bury his serpent submarine in a mud bank and leave through an escape hatch. \"Then I'll spend the rest of my life laughing at people's wild stories of the 'sea serpent' that thousands saw but nobody ever found.\"",
+          "bbox": [
+            {
+              "h": 51.907834413109754,
+              "w": 126.6290203410823,
+              "x": 12.069837318978657,
+              "y": 13.922083650914633,
+              "confidence": 0.99,
+              "end_index": 266,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"But what about me?\" Donald asks anxiously.",
+          "value": "\"But what about me?\" Donald asks anxiously.",
+          "bbox": [
+            {
+              "h": 7.353538490853652,
+              "w": 119.58507550495426,
+              "x": 17.773874571265242,
+              "y": 66.10787538109756,
+              "confidence": 0.89,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The \"scarer's\" eyes narrow, his mouth twists into a sadistic grin, he hunches forward in his seat and jabs his finger at Donald. \"You? ...Oh, you'll stay in the buried submarine, where the secret of how I scared herds of people to death will be safe in your keeping — forever.\"",
+          "value": "The \"scarer's\" eyes narrow, his mouth twists into a sadistic grin, he hunches forward in his seat and jabs his finger at Donald. \"You? ...Oh, you'll stay in the buried submarine, where the secret of how I scared herds of people to death will be safe in your keeping — forever.\"",
+          "bbox": [
+            {
+              "h": 44.762166539634144,
+              "w": 126.71838581364328,
+              "x": 11.405641434832317,
+              "y": 73.3894950457317,
+              "confidence": 0.97,
+              "end_index": 276,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Not a nice fellow. By this point, comedy has all but vanished from this story.",
+          "value": "Not a nice fellow. By this point, comedy has all but vanished from this story.",
+          "bbox": [
+            {
+              "h": 14.79269817073171,
+              "w": 126.42008503239329,
+              "x": 11.674470988948169,
+              "y": 118.13610137195121,
+              "confidence": 0.96,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Finally, in the Mississippi Delta, the nephews lure the serpent with a decoy — a wrecked steamer that they push along with their tug to make it look like the real thing. The nephews rope the serpent's head, and then begin a deadly tug of war with the sub. The rope breaks the serpent's throat valve and, as water rushes into the submarine, the \"scarer\" collapses into quivering jelly. In desperation, he frees Donald, who stops the sub and lays out the scarer with a wrench.",
+          "value": "Finally, in the Mississippi Delta, the nephews lure the serpent with a decoy — a wrecked steamer that they push along with their tug to make it look like the real thing. The nephews rope the serpent's head, and then begin a deadly tug of war with the sub. The rope breaks the serpent's throat valve and, as water rushes into the submarine, the \"scarer\" collapses into quivering jelly. In desperation, he frees Donald, who stops the sub and lays out the scarer with a wrench.",
+          "bbox": [
+            {
+              "h": 81.37892149390244,
+              "w": 127.00655130525914,
+              "x": 11.739467177972559,
+              "y": 133.06014100609755,
+              "confidence": 0.99,
+              "end_index": 473,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The nephews hear someone crawling up the serpent's throat, and stand with clubs at the ready. Then Donald emerges, crying \"Howdy, men!\"",
+          "value": "The nephews hear someone crawling up the serpent's throat, and stand with clubs at the ready. Then Donald emerges, crying \"Howdy, men!\"",
+          "bbox": [
+            {
+              "h": 29.974641768292695,
+              "w": 126.88814012480944,
+              "x": 12.846797946836888,
+              "y": 214.72559451219513,
+              "confidence": 0.98,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The ten-page stories had a basic appeal to children, because the nephews warred openly with Donald and got away with it. The child reader could identify with the nephews be-",
+          "value": "The ten-page stories had a basic appeal to children, because the nephews warred openly with Donald and got away with it. The child reader could identify with the nephews be-",
+          "bbox": [
+            {
+              "h": 29.96204268292681,
+              "w": 127.20674578410822,
+              "x": 13.241864162538109,
+              "y": 244.30849847560975,
+              "confidence": 0.99,
+              "end_index": 172,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "cause they worked out their conflicts with their parent in a direct and satisfying manner, something most children could never do. Huey, Dewey, and Louie were nephews, of course, and not Donald's sons, but this was merely a concession to respectability.",
+          "value": "cause they worked out their conflicts with their parent in a direct and satisfying manner, something most children could never do. Huey, Dewey, and Louie were nephews, of course, and not Donald's sons, but this was merely a concession to respectability.",
+          "bbox": [
+            {
+              "h": 44.80745379192073,
+              "w": 125.8624961890244,
+              "x": 149.69119664634144,
+              "y": 14.005951314786584,
+              "confidence": 0.99,
+              "end_index": 252,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jejune wish-fulfillment was the stock in trade of the early comic books — the stories often seemed to have been written and drawn by talented children — and Barks's ten-page stories were separated from the competition mainly by his superior craftsmanship. He did well what many other artists and writers did poorly. Stories like \"The Terror of the River\" were a different matter entirely. In these stories, the children turned their skills and resourcefulness not to defeating the parent but to saving his life, and, in so doing, proved that they were indeed \"men\" — that is, mature and responsible. Huey, Dewey, and Louie won my admiration — and that of many other children of my generation — not because they were rebellious children, but because they were adult, in ways that mattered. They were paragons of courage, competence, and good sense, qualities that were most clearly visible when they were rescuing Donald from some folly. Probably this \"rescue\" theme had a gut appeal for children that has never been equalled in comic books.",
+          "value": "Jejune wish-fulfillment was the stock in trade of the early comic books — the stories often seemed to have been written and drawn by talented children — and Barks's ten-page stories were separated from the competition mainly by his superior craftsmanship. He did well what many other artists and writers did poorly. Stories like \"The Terror of the River\" were a different matter entirely. In these stories, the children turned their skills and resourcefulness not to defeating the parent but to saving his life, and, in so doing, proved that they were indeed \"men\" — that is, mature and responsible. Huey, Dewey, and Louie won my admiration — and that of many other children of my generation — not because they were rebellious children, but because they were adult, in ways that mattered. They were paragons of courage, competence, and good sense, qualities that were most clearly visible when they were rescuing Donald from some folly. Probably this \"rescue\" theme had a gut appeal for children that has never been equalled in comic books.",
+          "bbox": [
+            {
+              "h": 178.2051962652439,
+              "w": 126.60830602134145,
+              "x": 150.16885861280485,
+              "y": 58.766107088414635,
+              "confidence": 0.99,
+              "end_index": 1039,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "If Barks's stories had simply remained on this level, he would be entitled to our respect. It is because his stories got so much better that he deserves not only to be respected, but to be read.",
+          "value": "If Barks's stories had simply remained on this level, he would be entitled to our respect. It is because his stories got so much better that he deserves not only to be respected, but to be read.",
+          "bbox": [
+            {
+              "h": 36.747576219512176,
+              "w": 125.7907774390244,
+              "x": 151.57205602134144,
+              "y": 236.5882774390244,
+              "confidence": 0.98,
+              "end_index": 193,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n39",
+              "value": "Carl Barks and the Art of the Comic Book\n39",
+              "bbox": [
+                {
+                  "h": 5.75938262195119,
+                  "w": 80.03323742378046,
+                  "x": 173.05002096036586,
+                  "y": 365.56977896341465,
+                  "confidence": 0.93,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n39",
+          "bbox": [
+            {
+              "h": 5.76,
+              "w": 80.03,
+              "x": 173.05,
+              "y": 365.57,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "39"
+    }
+  ]
+}

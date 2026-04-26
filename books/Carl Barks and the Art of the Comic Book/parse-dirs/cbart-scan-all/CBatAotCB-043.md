@@ -1,0 +1,5 @@
+# MAGAZINE COMICS DUCK
+
+![A model sheet for "Magazine Comics Duck" by Carl Barks, showing various poses and facial expressions of Donald Duck and his nephews. The sheet includes technical notes on drawing the characters, such as "DRAWN WITH ESTERBROOK ART & DRAFTING PEN # 356", "PEAR SHAPED FROM EVERY ANGLE", and "TILTING EYES IS KEY TO MOST EXPRESSIONS". It also demonstrates how to achieve "SPRINGINESS IN WALK" and warns against excessive distortion of the beak and brows.](CBatAotCB-043_page_1_image_1_v2.jpg)
+
+The precision of Barks's handling of Donald Duck in the late forties and early fifties is evident in his "Magazine Comics Duck" model sheet, which was probably drawn to assist the other comic-book artists who began drawing the character around 1950. In the reproduced page from "Luck of the North" in *Donald Duck* Four Color No. 256, 1949, Barks's mastery permits the story to be told primarily through subtle changes in Donald's facial expression. ©1949, 1950 Walt Disney Productions.

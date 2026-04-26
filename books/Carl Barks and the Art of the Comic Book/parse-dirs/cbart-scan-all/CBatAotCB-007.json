@@ -1,0 +1,252 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "it seemed as if there was an extension of his vocal cords, or his voice box, that went out into that, so any time he talked he had a reverberation. He could speak profanity with the loudest basso you ever heard. Just like a tuba.\"",
+          "value": "it seemed as if there was an extension of his vocal cords, or his voice box, that went out into that, so any time he talked he had a reverberation. He could speak profanity with the loudest basso you ever heard. Just like a tuba.\"",
+          "bbox": [
+            {
+              "h": 43.032816310975605,
+              "w": 125.64348668540397,
+              "x": 11.758774175876523,
+              "y": 14.687852515243902,
+              "confidence": 0.99,
+              "end_index": 229,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "After about two years in the feed-lot business, Barks's father decided to move his family to Santa Rosa, California, north of San Francisco.",
+          "value": "After about two years in the feed-lot business, Barks's father decided to move his family to Santa Rosa, California, north of San Francisco.",
+          "bbox": [
+            {
+              "h": 28.689060594512195,
+              "w": 125.70022544302589,
+              "x": 11.912681378620425,
+              "y": 59.1354706554878,
+              "confidence": 0.99,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"He wanted to get back into California because all the pleasant years of his life had been spent in California. He'd rented out the big wheat ranch, and he'd rented out the feed lot business, and so we all took off and went to California. My mother wanted to take it easy down there, and my dad maybe pick up some odd jobs and work a little bit, but my dad was sure he had to have some solid income, so he bought a prune orchard in Santa Rosa. Right away, the price of prunes went down to nothing, and right away the rains stopped up in Oregon, and the wheat ranch didn't pay off. The only income was rent from the feed lot, and so hard times began to settle in on us, and my dad had a nervous breakdown. We were there about two years, and then my dad recovered, and went back to Midland, back to the feed lot business.\"",
+          "value": "\"He wanted to get back into California because all the pleasant years of his life had been spent in California. He'd rented out the big wheat ranch, and he'd rented out the feed lot business, and so we all took off and went to California. My mother wanted to take it easy down there, and my dad maybe pick up some odd jobs and work a little bit, but my dad was sure he had to have some solid income, so he bought a prune orchard in Santa Rosa. Right away, the price of prunes went down to nothing, and right away the rains stopped up in Oregon, and the wheat ranch didn't pay off. The only income was rent from the feed lot, and so hard times began to settle in on us, and my dad had a nervous breakdown. We were there about two years, and then my dad recovered, and went back to Midland, back to the feed lot business.\"",
+          "bbox": [
+            {
+              "h": 139.6509375,
+              "w": 125.72262254668446,
+              "x": 12.101015982278962,
+              "y": 88.67855945121951,
+              "confidence": 0.99,
+              "end_index": 819,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "When the lease on the ranch ran out, the Barks family returned there. It was there that Barks's mother died, when he was fifteen. His formal schooling also ended when he was fifteen, after he had completed the eighth grade. He had had to drop back a total of two years as his family moved from Oregon to California and then back again.",
+          "value": "When the lease on the ranch ran out, the Barks family returned there. It was there that Barks's mother died, when he was fifteen. His formal schooling also ended when he was fifteen, after he had completed the eighth grade. He had had to drop back a total of two years as his family moved from Oregon to California and then back again.",
+          "bbox": [
+            {
+              "h": 58.86589939024391,
+              "w": 125.78574623666158,
+              "x": 12.284937833460365,
+              "y": 229.83834603658536,
+              "confidence": 0.99,
+              "end_index": 334,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I would have loved to have gone on to high school, but it was five miles to the nearest high school, and my hearing had begun to deteriorate a little bit, to where it was kind of difficult for me to pick things up in class.",
+          "value": "\"I would have loved to have gone on to high school, but it was five miles to the nearest high school, and my hearing had begun to deteriorate a little bit, to where it was kind of difficult for me to pick things up in class.",
+          "bbox": [
+            {
+              "h": 36.682111280487824,
+              "w": 125.6652256812119,
+              "x": 12.468165134336889,
+              "y": 288.92197408536583,
+              "confidence": 0.99,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I helped my dad there on the ranch for a year — a little more than a year. World War I was on, and kids my age could get five dollars a day, which was fantastic wages, working for",
+          "value": "\"I helped my dad there on the ranch for a year — a little more than a year. World War I was on, and kids my age could get five dollars a day, which was fantastic wages, working for",
+          "bbox": [
+            {
+              "h": 29.364672256097563,
+              "w": 125.69977848704269,
+              "x": 12.467096512957317,
+              "y": 325.6948399390244,
+              "confidence": 0.99,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "the farmers. I worked for wages any time I could get time off from working on the home ranch. When I was seventeen, the war ended and I was eager to go to San Francisco, to get where I could maybe pursue a line of cartooning.\"",
+          "value": "the farmers. I worked for wages any time I could get time off from working on the home ranch. When I was seventeen, the war ended and I was eager to go to San Francisco, to get where I could maybe pursue a line of cartooning.\"",
+          "bbox": [
+            {
+              "h": 43.922145102896344,
+              "w": 125.76838033536585,
+              "x": 148.72235899390242,
+              "y": 14.899611756859757,
+              "confidence": 0.99,
+              "end_index": 225,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks had first become interested in cartooning when his family lived in Santa Rosa.",
+          "value": "Barks had first become interested in cartooning when his family lived in Santa Rosa.",
+          "bbox": [
+            {
+              "h": 15.068277439024397,
+              "w": 125.40568788109753,
+              "x": 149.2797313262195,
+              "y": 58.92457888719512,
+              "confidence": 0.93,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"There was a kid who sat across the aisle from me in the school, and he had evidently had some correspondence-school training in cartooning, or his parents had, because he used to amaze me with little drawings he'd make of Woodrow Wilson or Theodore Roosevelt or somebody like that. I would look at them, and see how he had constructed them, and oh, I thought that was the most wonderful thing in the world, to draw like that kid could draw. I think I hadn't quite turned sixteen when I talked my dad into letting me subscribe to that Landon school of cartooning.\"",
+          "value": "\"There was a kid who sat across the aisle from me in the school, and he had evidently had some correspondence-school training in cartooning, or his parents had, because he used to amaze me with little drawings he'd make of Woodrow Wilson or Theodore Roosevelt or somebody like that. I would look at them, and see how he had constructed them, and oh, I thought that was the most wonderful thing in the world, to draw like that kid could draw. I think I hadn't quite turned sixteen when I talked my dad into letting me subscribe to that Landon school of cartooning.\"",
+          "bbox": [
+            {
+              "h": 95.89884146341464,
+              "w": 125.87630144817072,
+              "x": 149.1077743902439,
+              "y": 73.84222179878049,
+              "confidence": 0.99,
+              "end_index": 563,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks abandoned the Landon correspondence course after only a few lessons; the lure of high wages for farm labor was too strong. But he continued to study the work of San Francisco newspaper cartoonists like Charles Philippi (later a layout artist at the Disney studio when Barks worked there) and Billy Hon. He finally got to San Francisco himself in December 1918.",
+          "value": "Barks abandoned the Landon correspondence course after only a few lessons; the lure of high wages for farm labor was too strong. But he continued to study the work of San Francisco newspaper cartoonists like Charles Philippi (later a layout artist at the Disney studio when Barks worked there) and Billy Hon. He finally got to San Francisco himself in December 1918.",
+          "bbox": [
+            {
+              "h": 65.32834984756099,
+              "w": 126.09745998475606,
+              "x": 149.21771913109757,
+              "y": 170.08475990853657,
+              "confidence": 0.99,
+              "end_index": 365,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I had about a hundred dollars in my pocket, something like that. I registered at a hotel, and started looking around to see what would happen, and looking at the want-ad sections. Of course, with all the soldiers coming back, there weren't many jobs available. After about a month, I got on at a little printing place, as an errand boy, at twelve dollars a week. It was enough that I could live on it. I paid two dollars a week for a room on an air shaft, at a little hotel just off of Fourth and Market.",
+          "value": "\"I had about a hundred dollars in my pocket, something like that. I registered at a hotel, and started looking around to see what would happen, and looking at the want-ad sections. Of course, with all the soldiers coming back, there weren't many jobs available. After about a month, I got on at a little printing place, as an errand boy, at twelve dollars a week. It was enough that I could live on it. I paid two dollars a week for a room on an air shaft, at a little hotel just off of Fourth and Market.",
+          "bbox": [
+            {
+              "h": 81.03857469512197,
+              "w": 126.01997903963411,
+              "x": 149.41858993902437,
+              "y": 236.66625,
+              "confidence": 0.99,
+              "end_index": 504,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I would go up to either the *Bulletin* or the *Examiner* every once in a while, with a sample, to see if I could see one of the editors or somebody, to see if they were interested in putting me on, but they were well stocked",
+          "value": "\"I would go up to either the Bulletin or the Examiner every once in a while, with a sample, to see if I could see one of the editors or somebody, to see if they were interested in putting me on, but they were well stocked",
+          "bbox": [
+            {
+              "h": 36.467240853658545,
+              "w": 125.99732469512196,
+              "x": 149.54160251524388,
+              "y": 318.25189024390244,
+              "confidence": 0.99,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n7",
+              "value": "Carl Barks and the Art of the Comic Book\n7",
+              "bbox": [
+                {
+                  "h": 4.527599085365855,
+                  "w": 80.40086890243904,
+                  "x": 175.28607850609754,
+                  "y": 366.7309756097561,
+                  "confidence": 0.95,
+                  "end_index": 41,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n7",
+          "bbox": [
+            {
+              "h": 4.53,
+              "w": 80.4,
+              "x": 175.29,
+              "y": 366.73,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "7"
+    }
+  ]
+}

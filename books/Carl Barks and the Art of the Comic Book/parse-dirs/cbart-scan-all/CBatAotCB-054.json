@@ -1,0 +1,134 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "with his money was complete, and, starting with \"Only a Poor Old Man,\" it was under- standable.",
+          "value": "with his money was complete, and, starting with \"Only a Poor Old Man,\" it was under- standable.",
+          "bbox": [
+            {
+              "h": 21.065392054115854,
+              "w": 126.08531821646339,
+              "x": 11.808289824695121,
+              "y": 9.89390196265244,
+              "confidence": 0.98,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "At the end of that story, after the Beagle  Boys have been routed,Donald leaves Scrooge standing at the edge of his huge pile, and says:  \"You may not know it, Uncle Scrooge, but your",
+          "value": "At the end of that story, after the Beagle  Boys have been routed,Donald leaves Scrooge standing at the edge of his huge pile, and says:  \"You may not know it, Uncle Scrooge, but your",
+          "bbox": [
+            {
+              "h": 29.93323742378049,
+              "w": 126.04187023628049,
+              "x": 11.25022294207317,
+              "y": 32.50243902439024,
+              "confidence": 0.99,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "billions are a pain in the neck. You're only a poor old man. Good-bye!\" Scrooge stands star- ing blankly after him for a moment, then shucks his hat and cane as he prepares to plunge into his money. \"Bah!\" he says defi- antly. \"Kid talk! No man is poor who can do what he likes to do once in a while! And I like",
+          "value": "billions are a pain in the neck. You're only a poor old man. Good-bye!\" Scrooge stands star- ing blankly after him for a moment, then shucks his hat and cane as he prepares to plunge into his money. \"Bah!\" he says defi- antly. \"Kid talk! No man is poor who can do what he likes to do once in a while! And I like",
+          "bbox": [
+            {
+              "h": 51.351824028201214,
+              "w": 125.87237423780486,
+              "x": 150.35851371951216,
+              "y": 10.358141673018293,
+              "confidence": 0.99,
+              "end_index": 310,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "Comic strip panels from \"Luck of the North\" showing Gladstone Gander demonstrating his incredible luck to Donald Duck. In the sequence, a debt collector demands five dollars from Donald. Just as the collector threatens him, the wind blows a ten-dollar bill into Gladstone's hand, allowing him to pay the debt and keep five dollars in change, much to Donald's frustration.",
+          "md": "![Comic strip panels from \"Luck of the North\" showing Gladstone Gander demonstrating his incredible luck to Donald Duck. In the sequence, a debt collector demands five dollars from Donald. Just as the collector threatens him, the wind blows a ten-dollar bill into Gladstone's hand, allowing him to pay the debt and keep five dollars in change, much to Donald's frustration.](CBatAotCB-054_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-054_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 278.4374599847561,
+              "w": 190.25835365853658,
+              "x": 48.76225038109756,
+              "y": 64.63295922256097,
+              "confidence": 0.98,
+              "end_index": 396,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From \"Luck of the North\" in Donald Duck Four Color No. 256, 1949; © 1949 Walt Disney Productions.",
+          "value": "From \"Luck of the North\" in Donald Duck Four Color No. 256, 1949; © 1949 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.07534298780487,
+              "w": 208.85346322408537,
+              "x": 41.4948447027439,
+              "y": 347.3004420731707,
+              "confidence": 0.93,
+              "end_index": 96,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "54\nCarl Barks and the Art of the Comic Book",
+              "value": "54\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.407896341463365,
+                  "w": 5.132759979992378,
+                  "x": 14.891352539062497,
+                  "y": 364.79986280487805,
+                  "confidence": 0.79,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "54\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.41,
+              "w": 5.13,
+              "x": 14.89,
+              "y": 364.8,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "54"
+    }
+  ]
+}

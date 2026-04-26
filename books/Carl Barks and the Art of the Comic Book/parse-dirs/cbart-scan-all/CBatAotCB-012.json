@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Carl Barks paddling a canoe in Minneapolis in 1934.",
+          "md": "![Carl Barks paddling a canoe in Minneapolis in 1934.](CBatAotCB-012_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-012_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 334.24632907774395,
+              "w": 240.2148661394817,
+              "x": 26.634842320884143,
+              "y": 11.270599275914634,
+              "confidence": 0.99,
+              "end_index": 76,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Carl Barks paddling a canoe in Minneapolis in 1934.",
+          "value": "Carl Barks paddling a canoe in Minneapolis in 1934.",
+          "bbox": [
+            {
+              "h": 6.621585365853625,
+              "w": 100.98835175304876,
+              "x": 92.00248285060975,
+              "y": 349.87175304878053,
+              "confidence": 0.91,
+              "end_index": 50,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "12\n*Carl Barks and the Art of the Comic Book*",
+              "value": "12\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.11381097560974,
+                  "w": 4.685125524009145,
+                  "x": 14.867202982088413,
+                  "y": 366.9624923780488,
+                  "confidence": 0.74,
+                  "end_index": 44,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "12\n*Carl Barks and the Art of the Comic Book*",
+          "bbox": [
+            {
+              "h": 5.11,
+              "w": 4.69,
+              "x": 14.87,
+              "y": 366.96,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "12"
+    }
+  ]
+}

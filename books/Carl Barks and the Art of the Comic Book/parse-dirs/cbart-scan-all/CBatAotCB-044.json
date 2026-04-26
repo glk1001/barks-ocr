@@ -1,0 +1,116 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "hounds: \"At Lord Tweeksdale's the elite of society set forth to see if one among them has more on the ball than a fox. Over the first fence come the hounds, seeking the scent of their wild cousin. Then over come the riders! Pictures of grace and poise and insouciant daring.\" How many children, reading this comic book, were likely to know what \"insouciant\" meant? And yet, the word enriches the comedy in the panel below (which is filled with riders who are rather less than graceful or poised) for those who do know its meaning and it does nothing to subtract from the enjoyment of those who do not. This was part of Barks's genius: he did not chafe at writing and illustrating stories for children, but instead gave his readers stories that offered them new pleasures as they grew older — if they were wise enough to save his stories and read them repeatedly, as so many of his readers were.",
+          "value": "hounds: \"At Lord Tweeksdale's the elite of society set forth to see if one among them has more on the ball than a fox. Over the first fence come the hounds, seeking the scent of their wild cousin. Then over come the riders! Pictures of grace and poise and insouciant daring.\" How many children, reading this comic book, were likely to know what \"insouciant\" meant? And yet, the word enriches the comedy in the panel below (which is filled with riders who are rather less than graceful or poised) for those who do know its meaning and it does nothing to subtract from the enjoyment of those who do not. This was part of Barks's genius: he did not chafe at writing and illustrating stories for children, but instead gave his readers stories that offered them new pleasures as they grew older — if they were wise enough to save his stories and read them repeatedly, as so many of his readers were.",
+          "bbox": [
+            {
+              "h": 148.2975314405488,
+              "w": 126.06725776486279,
+              "x": 12.412765100990853,
+              "y": 12.008188833841464,
+              "confidence": 0.99,
+              "end_index": 893,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Many small children must have enjoyed the sound of the preposterous proper names in Barks's stories, even when they did not understand their derivation. These names began to flourish in Barks's stories in the late forties when his stories were ascending in so many other respects. In \"Bullet Valley,\" for example, we hear of such cowboy movie stars as Rimfire Remington, Sagebrush Savage, Trigger Trueshot, Ramrod Ransom, Horace Mustang, and Carson Sage. Donald is pitted against rustlers whose leader is a glowering tough named",
+          "value": "Many small children must have enjoyed the sound of the preposterous proper names in Barks's stories, even when they did not understand their derivation. These names began to flourish in Barks's stories in the late forties when his stories were ascending in so many other respects. In \"Bullet Valley,\" for example, we hear of such cowboy movie stars as Rimfire Remington, Sagebrush Savage, Trigger Trueshot, Ramrod Ransom, Horace Mustang, and Carson Sage. Donald is pitted against rustlers whose leader is a glowering tough named",
+          "bbox": [
+            {
+              "h": 89.18858231707316,
+              "w": 125.84651617282773,
+              "x": 13.0748291015625,
+              "y": 160.27124999999998,
+              "confidence": 0.99,
+              "end_index": 527,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Blacksnake McQuirt. In the next few years, Barks's stories were overflowing with such names: J. Morganbilt Giltwhiskers, the millionaire; Indian maharajahs who ruled the principalities of Backdore and Howduyustan; Philo T. Ellic, the stamp collector; Miss Lily de la Field and Rockjaw Bumrisk, the deadbeats; and Petrolio de Vaselino, a supposed South American oil tycoon. The list could go on and on. The names were almost always ingenious, and rarely strained or obvious; Barks may not quite have equalled Dickens as an inventor of names, but he was far superior to Al Capp.",
+          "value": "Blacksnake McQuirt. In the next few years, Barks's stories were overflowing with such names: J. Morganbilt Giltwhiskers, the millionaire; Indian maharajahs who ruled the principalities of Backdore and Howduyustan; Philo T. Ellic, the stamp collector; Miss Lily de la Field and Rockjaw Bumrisk, the deadbeats; and Petrolio de Vaselino, a supposed South American oil tycoon. The list could go on and on. The names were almost always ingenious, and rarely strained or obvious; Barks may not quite have equalled Dickens as an inventor of names, but he was far superior to Al Capp.",
+          "bbox": [
+            {
+              "h": 103.78024961890245,
+              "w": 125.91521341463414,
+              "x": 149.68351371951218,
+              "y": 12.22914443597561,
+              "confidence": 0.99,
+              "end_index": 575,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "How to account for the delights of the language in Barks's stories? He is not a literary man; for years his reading was confined to popular novels like those of Zane Grey. His hearing has been poor since childhood, and no one who worked with him at the Disney studio remembers him as a master of repartee or even as a particularly talkative man. Most of his years with comic books were spent in relative isolation, toiling at a drawing board from one in the afternoon until ten at night. He is, in short, not a man whose skill with words has been sharpened by contact — in print or in person — with other people who are handy with the language. I have no answer, except to suggest that his medium — the comic-book story — unlocked possibilities in him as he unlocked possibilities in it.",
+          "value": "How to account for the delights of the language in Barks's stories? He is not a literary man; for years his reading was confined to popular novels like those of Zane Grey. His hearing has been poor since childhood, and no one who worked with him at the Disney studio remembers him as a master of repartee or even as a particularly talkative man. Most of his years with comic books were spent in relative isolation, toiling at a drawing board from one in the afternoon until ten at night. He is, in short, not a man whose skill with words has been sharpened by contact — in print or in person — with other people who are handy with the language. I have no answer, except to suggest that his medium — the comic-book story — unlocked possibilities in him as he unlocked possibilities in it.",
+          "bbox": [
+            {
+              "h": 133.83114329268295,
+              "w": 126.13637195121947,
+              "x": 150.283759527439,
+              "y": 117.15217225609756,
+              "confidence": 0.99,
+              "end_index": 786,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "44 Carl Barks and the Art of the Comic Book",
+              "value": "44 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.604954268292695,
+                  "w": 83.89045255335365,
+                  "x": 34.97987709603658,
+                  "y": 366.6549695121951,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "44 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.6,
+              "w": 83.89,
+              "x": 34.98,
+              "y": 366.65,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "44"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 1973",
+          "value": "1973",
+          "bbox": [
+            {
+              "h": 4.7077505716463435,
+              "w": 11.261253215510669,
+              "x": 11.160584151105182,
+              "y": 29.06310594512195,
+              "confidence": 0.87,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Mar. 9 - \"Hark, Hark, the Ark,\" JW No. 23.\nMar. 30 - \"Captains Outrageous,\" JW No. 25.",
+          "value": "Mar. 9 - \"Hark, Hark, the Ark,\" JW No. 23.\nMar. 30 - \"Captains Outrageous,\" JW No. 25.",
+          "bbox": [
+            {
+              "h": 11.997759146341464,
+              "w": 97.67688917206554,
+              "x": 10.860444097751524,
+              "y": 40.652732469512195,
+              "confidence": 0.88,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's drawings on the covers of *Daisy and Donald* No. 25, *Uncle Scrooge* No. 144, and *Walt Disney's Comics* No. 405 were done after the above date, but no specific date is available. As mentioned in the bibliography entries for",
+          "value": "Barks's drawings on the covers of Daisy and Donald No. 25, Uncle Scrooge No. 144, and Walt Disney's Comics No. 405 were done after the above date, but no specific date is available. As mentioned in the bibliography entries for",
+          "bbox": [
+            {
+              "h": 24.189317835365856,
+              "w": 125.91573218368904,
+              "x": 10.44153915777439,
+              "y": 58.27805259146342,
+              "confidence": 0.98,
+              "end_index": 231,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "those covers, the drawings were not done specifically for comic books.",
+          "value": "those covers, the drawings were not done specifically for comic books.",
+          "bbox": [
+            {
+              "h": 11.241539634146344,
+              "w": 125.45842225609756,
+              "x": 150.21152629573172,
+              "y": 28.78856993140244,
+              "confidence": 0.97,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The following items — all of them unquestionably Barks's work—do not appear on his list, and so could not be asigned dates:",
+          "value": "The following items — all of them unquestionably Barks's work—do not appear on his list, and so could not be asigned dates:",
+          "bbox": [
+            {
+              "h": 17.842917301829267,
+              "w": 125.73246951219512,
+              "x": 150.42729992378045,
+              "y": 40.95834603658537,
+              "confidence": 0.97,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Rainbow's End,\" DD No. 71; FC, US No. 6; FC, US No. 16; newspaper gag, US No. 25; \"The Homey Touch,\" \"Turnabout,\" US No. 32; FC, WDC No. 137; FC, WDC No. 138; FC, WDC No. 142.",
+          "value": "\"Rainbow's End,\" DD No. 71; FC, US No. 6; FC, US No. 16; newspaper gag, US No. 25; \"The Homey Touch,\" \"Turnabout,\" US No. 32; FC, WDC No. 137; FC, WDC No. 138; FC, WDC No. 142.",
+          "bbox": [
+            {
+              "h": 23.480287728658542,
+              "w": 125.79575076219513,
+              "x": 150.39432164634144,
+              "y": 58.82303734756098,
+              "confidence": 0.98,
+              "end_index": 175,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n215",
+              "value": "Carl Barks and the Art of the Comic Book\n215",
+              "bbox": [
+                {
+                  "h": 4.65164634146342,
+                  "w": 77.91100038109757,
+                  "x": 173.85607660060973,
+                  "y": 363.37532012195123,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n215",
+          "bbox": [
+            {
+              "h": 4.65,
+              "w": 77.91,
+              "x": 173.86,
+              "y": 363.38,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "215"
+    }
+  ]
+}

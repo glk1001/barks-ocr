@@ -1,0 +1,101 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "An advertisement for Valley Photographs featuring a silhouette of a Native American figure using a vintage bellows camera on a tripod. The text reads: VALLEY PHOTOGRAPHS, 163 E. Main St. San Jacinto, Phone 436, Custom Photography.",
+          "md": "![An advertisement for Valley Photographs featuring a silhouette of a Native American figure using a vintage bellows camera on a tripod. The text reads: VALLEY PHOTOGRAPHS, 163 E. Main St. San Jacinto, Phone 436, Custom Photography.](CBatAotCB-078_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-078_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 179.36656869283536,
+              "w": 122.633974490282,
+              "x": 13.247967201791157,
+              "y": 12.329098227896342,
+              "confidence": 0.83,
+              "end_index": 255,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "After Barks had moved to San Jacinto and was working on comic books, he did very little outside work, except for friends in the San Jacinto-Hemet area. He did cartoons pushing a water-bond drive in 1952, and advertising art for local businessmen. He was hired in 1949 or 1950 to draw several political cartoons by a former resident of Hemet who was embroiled with the mayor of Palos Verdes, California, in a dispute over the legality of landing helicopters in the city. In the cartoons, the mayor was depicted as a top-hatted billy goat, standing in the way of progress.",
+          "value": "After Barks had moved to San Jacinto and was working on comic books, he did very little outside work, except for friends in the San Jacinto-Hemet area. He did cartoons pushing a water-bond drive in 1952, and advertising art for local businessmen. He was hired in 1949 or 1950 to draw several political cartoons by a former resident of Hemet who was embroiled with the mayor of Palos Verdes, California, in a dispute over the legality of landing helicopters in the city. In the cartoons, the mayor was depicted as a top-hatted billy goat, standing in the way of progress.",
+          "bbox": [
+            {
+              "h": 60.02862804878049,
+              "w": 123.84084032012194,
+              "x": 150.23455792682924,
+              "y": 130.39080411585365,
+              "confidence": 0.99,
+              "end_index": 569,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "A logo for the Hemet Chamber of Commerce. It features the word \"HEMET\" in large, stylized bold letters at the top. Below it, the words \"CHAMBER of COMMERCE\" are written in an outlined font, flanking a central illustration of a Native American drum decorated with arrows and feathers. At the bottom, \"Hemet, California\" is written in a cursive script.",
+          "md": "![A logo for the Hemet Chamber of Commerce. It features the word \"HEMET\" in large, stylized bold letters at the top. Below it, the words \"CHAMBER of COMMERCE\" are written in an outlined font, flanking a central illustration of a Native American drum decorated with arrows and feathers. At the bottom, \"Hemet, California\" is written in a cursive script.](CBatAotCB-078_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-078_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 133.0557850609756,
+              "w": 241.80393507050306,
+              "x": 23.736503191692073,
+              "y": 216.2103201219512,
+              "confidence": 0.96,
+              "end_index": 375,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "items": [
+            {
+              "md": "78 Carl Barks and the Art of the Comic Book",
+              "value": "78 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.53735518292684,
+                  "w": 80.07838319359756,
+                  "x": 36.91372808689024,
+                  "y": 365.9876295731707,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "78 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.54,
+              "w": 80.08,
+              "x": 36.91,
+              "y": 365.99,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "78"
+    }
+  ]
+}

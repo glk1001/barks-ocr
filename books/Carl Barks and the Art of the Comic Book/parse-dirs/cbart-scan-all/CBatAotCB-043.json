@@ -1,0 +1,101 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# MAGAZINE COMICS DUCK",
+          "value": "MAGAZINE COMICS DUCK",
+          "bbox": [
+            {
+              "h": 10.174068692835368,
+              "w": 106.157119021532,
+              "x": 12.17602312785823,
+              "y": 12.412985899390245,
+              "confidence": 0.82,
+              "end_index": 19,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "caption": "A model sheet for \"Magazine Comics Duck\" by Carl Barks, showing various poses and facial expressions of Donald Duck and his nephews. The sheet includes technical notes on drawing the characters, such as \"DRAWN WITH ESTERBROOK ART & DRAFTING PEN # 356\", \"PEAR SHAPED FROM EVERY ANGLE\", and \"TILTING EYES IS KEY TO MOST EXPRESSIONS\". It also demonstrates how to achieve \"SPRINGINESS IN WALK\" and warns against excessive distortion of the beak and brows.",
+          "md": "![A model sheet for \"Magazine Comics Duck\" by Carl Barks, showing various poses and facial expressions of Donald Duck and his nephews. The sheet includes technical notes on drawing the characters, such as \"DRAWN WITH ESTERBROOK ART & DRAFTING PEN # 356\", \"PEAR SHAPED FROM EVERY ANGLE\", and \"TILTING EYES IS KEY TO MOST EXPRESSIONS\". It also demonstrates how to achieve \"SPRINGINESS IN WALK\" and warns against excessive distortion of the beak and brows.](CBatAotCB-043_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-043_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 151.08736351943597,
+              "w": 263.3501781631097,
+              "x": 10.476468178353658,
+              "y": 11.495144102515244,
+              "confidence": 0.97,
+              "end_index": 476,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "The precision of Barks's handling of Donald Duck in the late forties and early fifties is evident in his \"Magazine Comics Duck\" model sheet, which was probably drawn to assist the other comic-book artists who began drawing the character around 1950. In the reproduced page from \"Luck of the North\" in *Donald Duck* Four Color No. 256, 1949, Barks's mastery permits the story to be told primarily through subtle changes in Donald's facial expression. ©1949, 1950 Walt Disney Productions.",
+          "value": "The precision of Barks's handling of Donald Duck in the late forties and early fifties is evident in his \"Magazine Comics Duck\" model sheet, which was probably drawn to assist the other comic-book artists who began drawing the character around 1950. In the reproduced page from \"Luck of the North\" in Donald Duck Four Color No. 256, 1949, Barks's mastery permits the story to be told primarily through subtle changes in Donald's facial expression. ©1949, 1950 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 53.13954649390244,
+              "w": 124.76391911204266,
+              "x": 13.51327791539634,
+              "y": 183.36346417682927,
+              "confidence": 0.98,
+              "end_index": 485,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n43",
+              "value": "Carl Barks and the Art of the Comic Book\n43",
+              "bbox": [
+                {
+                  "h": 5.096318597560985,
+                  "w": 79.93649771341461,
+                  "x": 173.132509527439,
+                  "y": 368.2700076219512,
+                  "confidence": 0.93,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n43",
+          "bbox": [
+            {
+              "h": 5.1,
+              "w": 79.94,
+              "x": 173.13,
+              "y": 368.27,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "43"
+    }
+  ]
+}

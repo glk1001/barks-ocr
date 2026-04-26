@@ -1,0 +1,167 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "like Gnostradamus and Gnapoleon, and live tucked away in an unexplored corner of the Everglades. The Gneezles are real enough menaces (they plan to feed the ducks to the alligators) but they're comic characters, too.",
+          "value": "like Gnostradamus and Gnapoleon, and live tucked away in an unexplored corner of the Everglades. The Gneezles are real enough menaces (they plan to feed the ducks to the alligators) but they're comic characters, too.",
+          "bbox": [
+            {
+              "h": 37.25630430640244,
+              "w": 125.86576636337651,
+              "x": 11.796222013147865,
+              "y": 13.283400342987806,
+              "confidence": 0.99,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Mystery of the Swamp\" was ahead of its time. It was four years before this sort of story became standard, and the ducks regularly faced such Gneezle-ish villians as Blacksnake McQuirt, the rustler, Foola Zoola, the vengeful witch doctor, and Professor Argus McFiendy, the demon butterfly collector.",
+          "value": "\"Mystery of the Swamp\" was ahead of its time. It was four years before this sort of story became standard, and the ducks regularly faced such Gneezle-ish villians as Blacksnake McQuirt, the rustler, Foola Zoola, the vengeful witch doctor, and Professor Argus McFiendy, the demon butterfly collector.",
+          "bbox": [
+            {
+              "h": 51.33725419207318,
+              "w": 125.76577041253809,
+              "x": 12.141291325266767,
+              "y": 50.70276105182926,
+              "confidence": 0.98,
+              "end_index": 298,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Later, even menaces like these faded in importance, and the plots of the longer stories turned more and more on Donald's relationships with Scrooge and Gladstone and similar characters — not villains so much as nuisances. \"The Gilded Man\" (1952), for example, is full of echoes of the older stories. Donald, with a lack of sense that recalls his foolhardiness in the old adventures, scrounges through wastebaskets in a railroad station looking for rare stamps, which he plans to sell to finance a trip to British Guiana to search for the rarest stamp of all. The ducks make it to Guiana, of course, and there encounter a comic menace — a giant golden Indian named El Dorado, who says things like this: \"Jackaruni! Cackaruni! Macaruni!\" The nephews even rescue Donald from El Dorado. The focus of the story, though is on Gladstone, and the frustration Donald endures simply by being in the line of fire when Gladstone's good luck is operating. When the ducks find the most valuable stamp, it is on a letter addressed to a deceased resident of their home town — and Gladstone is her only heir. The ducks' travail is finally rewarded, but only after some dreadful moments.",
+          "value": "Later, even menaces like these faded in importance, and the plots of the longer stories turned more and more on Donald's relationships with Scrooge and Gladstone and similar characters — not villains so much as nuisances. \"The Gilded Man\" (1952), for example, is full of echoes of the older stories. Donald, with a lack of sense that recalls his foolhardiness in the old adventures, scrounges through wastebaskets in a railroad station looking for rare stamps, which he plans to sell to finance a trip to British Guiana to search for the rarest stamp of all. The ducks make it to Guiana, of course, and there encounter a comic menace — a giant golden Indian named El Dorado, who says things like this: \"Jackaruni! Cackaruni! Macaruni!\" The nephews even rescue Donald from El Dorado. The focus of the story, though is on Gladstone, and the frustration Donald endures simply by being in the line of fire when Gladstone's good luck is operating. When the ducks find the most valuable stamp, it is on a letter addressed to a deceased resident of their home town — and Gladstone is her only heir. The ducks' travail is finally rewarded, but only after some dreadful moments.",
+          "bbox": [
+            {
+              "h": 198.59989710365855,
+              "w": 126.03930747427589,
+              "x": 12.729656893102133,
+              "y": 102.28103277439024,
+              "confidence": 0.99,
+              "end_index": 1168,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Of the later stories, \"Lost in the Andes\" (1949) marks the decisive break with the stories of the early and middle forties, because it is so much like them — up to a critical point. In this story, Donald discovers that some ancient Incan \"blocks\" squirreled away in a museum are actually eggs — square eggs. In",
+          "value": "Of the later stories, \"Lost in the Andes\" (1949) marks the decisive break with the stories of the early and middle forties, because it is so much like them — up to a critical point. In this story, Donald discovers that some ancient Incan \"blocks\" squirreled away in a museum are actually eggs — square eggs. In",
+          "bbox": [
+            {
+              "h": 52.468879573170724,
+              "w": 125.94900950362042,
+              "x": 13.799896746379572,
+              "y": 301.28595274390244,
+              "confidence": 0.99,
+              "end_index": 309,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "due time, he and the nephews plunge into the Peruvian Andes in search of the chickens that lay square eggs. As in the earlier adventure stories, the opening pages of \"Lost in the Andes\" are devoted to comedy. Among other hindrances, the ducks run afoul of Peruvian looneys and con men who turn out square eggs by the gross with cement mixers and square molds. \"Pure\" adventure enters as the ducks encounter a lonely old vicuna hunter, the first person they have met who has seen the eggs before. He tells the ducks that the eggs come from the region of the great mists — a thick, cottony fog that oozes out of the breaks in the mountain wall behind the hunter's cabin. The eggs, he says, were brought out of the mists by a dying American many years before. His face cast in shadow now, the hunter says, \"On hees person was no name, no trinkets — only rags and a poncho filled weeth the leetle square stones.\" \"The eggs!\" the exultant Donald cries, and the ducks set out toward the region of the mists. \"Poor senor and the leetle muchachoes!\" the old hunter says sadly as he stares after them. \"I deed not have chance to tell them that no one that ever entered the mists came back to tell of what he saw.\"",
+          "value": "due time, he and the nephews plunge into the Peruvian Andes in search of the chickens that lay square eggs. As in the earlier adventure stories, the opening pages of \"Lost in the Andes\" are devoted to comedy. Among other hindrances, the ducks run afoul of Peruvian looneys and con men who turn out square eggs by the gross with cement mixers and square molds. \"Pure\" adventure enters as the ducks encounter a lonely old vicuna hunter, the first person they have met who has seen the eggs before. He tells the ducks that the eggs come from the region of the great mists — a thick, cottony fog that oozes out of the breaks in the mountain wall behind the hunter's cabin. The eggs, he says, were brought out of the mists by a dying American many years before. His face cast in shadow now, the hunter says, \"On hees person was no name, no trinkets — only rags and a poncho filled weeth the leetle square stones.\" \"The eggs!\" the exultant Donald cries, and the ducks set out toward the region of the mists. \"Poor senor and the leetle muchachoes!\" the old hunter says sadly as he stares after them. \"I deed not have chance to tell them that no one that ever entered the mists came back to tell of what he saw.\"",
+          "bbox": [
+            {
+              "h": 199.8305087652439,
+              "w": 126.5278582317073,
+              "x": 148.99088414634144,
+              "y": 13.131305259146341,
+              "confidence": 0.99,
+              "end_index": 1203,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The ducks camp on the edge of the forbidding fog that night. They wake the next morning to find that the mists have crept forward during the night and enveloped them. Lost, without their supplies or even a compass, they wander helplessly until they suddenly come upon a lost world hidden in a canyon beneath the fog, a vaguely Incan city built of stone blocks. Warily, they crawl down the canyon's wall to the city's edge and watch from behind a large stone as one of the city's inhabitants approaches them.",
+          "value": "The ducks camp on the edge of the forbidding fog that night. They wake the next morning to find that the mists have crept forward during the night and enveloped them. Lost, without their supplies or even a compass, they wander helplessly until they suddenly come upon a lost world hidden in a canyon beneath the fog, a vaguely Incan city built of stone blocks. Warily, they crawl down the canyon's wall to the city's edge and watch from behind a large stone as one of the city's inhabitants approaches them.",
+          "bbox": [
+            {
+              "h": 88.67165396341466,
+              "w": 125.7901600609756,
+              "x": 150.1745865091463,
+              "y": 212.8013643292683,
+              "confidence": 0.99,
+              "end_index": 506,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "If this were one of the earlier stories, what came next would be predictable — Donald or the nephews would be captured by the savage inhabitants of the city, and then rescued, and finally the ducks would flee the city, probably with a square chicken under each arm. But that isn't what happens. What the ducks see",
+          "value": "If this were one of the earlier stories, what came next would be predictable — Donald or the nephews would be captured by the savage inhabitants of the city, and then rescued, and finally the ducks would flee the city, probably with a square chicken under each arm. But that isn't what happens. What the ducks see",
+          "bbox": [
+            {
+              "h": 51.92112804878052,
+              "w": 125.80828696646341,
+              "x": 150.49685785060973,
+              "y": 301.20521341463416,
+              "confidence": 0.99,
+              "end_index": 312,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n65",
+              "value": "Carl Barks and the Art of the Comic Book\n65",
+              "bbox": [
+                {
+                  "h": 5.357789634146375,
+                  "w": 80.01113185975609,
+                  "x": 173.06387766768293,
+                  "y": 365.8737804878049,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n65",
+          "bbox": [
+            {
+              "h": 5.36,
+              "w": 80.01,
+              "x": 173.06,
+              "y": 365.87,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "65"
+    }
+  ]
+}

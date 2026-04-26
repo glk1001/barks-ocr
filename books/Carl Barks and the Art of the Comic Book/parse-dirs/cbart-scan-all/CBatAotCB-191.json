@@ -1,0 +1,456 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "**370 (31/10) - July 1971 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 142, July 1952.\nChanges: Panels on first page trimmed for indicia.",
+          "value": "370 (31/10) - July 1971 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 142, July 1952.\nChanges: Panels on first page trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 11.757107469512189,
+              "w": 126.24879049161582,
+              "x": 11.887395674542683,
+              "y": 77.76996379573171,
+              "confidence": 0.89,
+              "end_index": 165,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**371 (31/11) - August 1971 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 153, June 1953.",
+          "value": "371 (31/11) - August 1971 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 153, June 1953.",
+          "bbox": [
+            {
+              "h": 11.4680859375,
+              "w": 126.22449516482467,
+              "x": 11.640138981516767,
+              "y": 24.689334032012194,
+              "confidence": 0.91,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**372 (31/12) - September 1971 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 168, September 1954.",
+          "value": "372 (31/12) - September 1971 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 168, September 1954.",
+          "bbox": [
+            {
+              "h": 11.559992378048783,
+              "w": 126.5600262004573,
+              "x": 11.552691025152438,
+              "y": 220.59532774390243,
+              "confidence": 0.91,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**373 (32/1) - October 1971 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 193, October 1956.\nChanges: Splash panel trimmed for indicia.",
+          "value": "373 (32/1) - October 1971 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 193, October 1956.\nChanges: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 11.423574695121914,
+              "w": 126.6715947741997,
+              "x": 11.79580614043445,
+              "y": 267.982637195122,
+              "confidence": 0.89,
+              "end_index": 162,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**374 (32/2) - November 1971 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 203, August 1957.\nChanges: Splash panel trimmed for indicia.",
+          "value": "374 (32/2) - November 1971 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 203, August 1957.\nChanges: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 11.280514481707318,
+              "w": 125.98897294207319,
+              "x": 150.07331935975608,
+              "y": 106.88765624999999,
+              "confidence": 0.87,
+              "end_index": 162,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**375 (32/3) - December 1971 - 36 pages**\nDONALD DUCK *The Fraidy Falcon* - 10 - Reprinted from *Walt Disney's Comics* No. 240, September 1960.\nChanges: Splash panel trimmed for indicia.",
+          "value": "375 (32/3) - December 1971 - 36 pages\nDONALD DUCK The Fraidy Falcon - 10 - Reprinted from Walt Disney's Comics No. 240, September 1960.\nChanges: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 16.673403201219507,
+              "w": 125.99115841749237,
+              "x": 12.02876345750762,
+              "y": 161.242568597561,
+              "confidence": 0.9,
+              "end_index": 185,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**376 (32/4) - January 1972 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 208, January 1958.",
+          "value": "376 (32/4) - January 1972 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 208, January 1958.",
+          "bbox": [
+            {
+              "h": 11.449607469512202,
+              "w": 126.27847072694358,
+              "x": 11.774060713605182,
+              "y": 101.33067073170731,
+              "confidence": 0.89,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**377 (32/5) - February 1972 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 185, February 1956.",
+          "value": "377 (32/5) - February 1972 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 185, February 1956.",
+          "bbox": [
+            {
+              "h": 11.5554192073171,
+              "w": 126.33998666158536,
+              "x": 152.03241425304878,
+              "y": 278.39314024390245,
+              "confidence": 0.92,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**378 (32/6) - March 1972 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 196, January 1957.",
+          "value": "378 (32/6) - March 1972 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 196, January 1957.",
+          "bbox": [
+            {
+              "h": 11.704138719512201,
+              "w": 126.36131835937499,
+              "x": 11.441655154344511,
+              "y": 196.84797256097562,
+              "confidence": 0.92,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**379 (32/7) - April 1972 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 207, December 1957.",
+          "value": "379 (32/7) - April 1972 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 207, December 1957.",
+          "bbox": [
+            {
+              "h": 11.633048780487824,
+              "w": 126.38476586318598,
+              "x": 11.678286728277438,
+              "y": 244.35868902439026,
+              "confidence": 0.92,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**380 (32/8) - May 1972 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 211, April 1958.",
+          "value": "380 (32/8) - May 1972 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 211, April 1958.",
+          "bbox": [
+            {
+              "h": 11.52631097560974,
+              "w": 126.17089903296493,
+              "x": 12.390969297827743,
+              "y": 291.7553048780488,
+              "confidence": 0.92,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**381 (32/9) - June 1972 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 202, July 1957.",
+          "value": "381 (32/9) - June 1972 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 202, July 1957.",
+          "bbox": [
+            {
+              "h": 11.435853658536587,
+              "w": 126.24964367378048,
+              "x": 11.812868711890243,
+              "y": 54.27680830792683,
+              "confidence": 0.92,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**382 (32/10) - July 1972 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 213, June 1958.",
+          "value": "382 (32/10) - July 1972 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 213, June 1958.",
+          "bbox": [
+            {
+              "h": 11.58233231707316,
+              "w": 126.0712900152439,
+              "x": 12.55056688262195,
+              "y": 315.47133384146343,
+              "confidence": 0.93,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**383 (32/11) - August 1972 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 215, August 1958.",
+          "value": "383 (32/11) - August 1972 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 215, August 1958.",
+          "bbox": [
+            {
+              "h": 11.199512195121942,
+              "w": 126.32613316977894,
+              "x": 11.884001167111279,
+              "y": 131.13739710365854,
+              "confidence": 0.9,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**384 (32/12) - September 1972 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 177, June 1955.\nChanges: Splash panel deepened.",
+          "value": "384 (32/12) - September 1972 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 177, June 1955.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 11.36883384146342,
+              "w": 126.11388910060974,
+              "x": 150.26155106707316,
+              "y": 142.4374275914634,
+              "confidence": 0.89,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**385 (33/1) - October 1972 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 187, April 1956.\nChanges: Splash panel deepened.",
+          "value": "385 (33/1) - October 1972 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 187, April 1956.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 11.742347560975622,
+              "w": 126.17008765243901,
+              "x": 150.37130716463415,
+              "y": 177.9880907012195,
+              "confidence": 0.89,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**386 (33/2) - November 1972 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 209, February 1958.\nChanges: Splash panel trimmed for indicia.",
+          "value": "386 (33/2) - November 1972 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 209, February 1958.\nChanges: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 12.011375762195122,
+              "w": 125.89367378048779,
+              "x": 149.40358422256097,
+              "y": 24.169115853658536,
+              "confidence": 0.89,
+              "end_index": 164,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**387 (33/3) - December 1972 \\[dated only on cover] - 52 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 205, October 1957.\nChanges: Splash panel trimmed for indicia.",
+          "value": "387 (33/3) - December 1972 [dated only on cover] - 52 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 205, October 1957.\nChanges: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 11.85539634146342,
+              "w": 125.15240853658536,
+              "x": 151.52861661585365,
+              "y": 338.54252286585364,
+              "confidence": 0.89,
+              "end_index": 186,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**388 (33/4) - January 1973 \\[dated only on cover] - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 136, January 1952.\nChanges: Panels trimmed on first page for indicia, except first panel.",
+          "value": "388 (33/4) - January 1973 [dated only on cover] - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 136, January 1952.\nChanges: Panels trimmed on first page for indicia, except first panel.",
+          "bbox": [
+            {
+              "h": 11.94456173780487,
+              "w": 125.95894435975609,
+              "x": 150.51939214939023,
+              "y": 190.01795350609757,
+              "confidence": 0.87,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**389 (33/5) - \\[February] 1973 - 36 pages**\nDONALD DUCK *Hound Hounder* - 10 - Reprinted from *Walt Disney's Comics* No. 253, October 1961.\nChanges: Splash panel deepened.",
+          "value": "389 (33/5) - [February] 1973 - 36 pages\nDONALD DUCK Hound Hounder - 10 - Reprinted from Walt Disney's Comics No. 253, October 1961.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 12.171196646341476,
+              "w": 125.59019817073168,
+              "x": 150.98784489329267,
+              "y": 213.23833079268292,
+              "confidence": 0.78,
+              "end_index": 171,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**390 (33/6) - \\[March] 1973 - 36 pages**\nDONALD DUCK *The Village Blacksmith* - 10 - Reprinted from *Walt Disney's Comics* No. 239, August 1960.\nChanges: Splash panel deepened.",
+          "value": "390 (33/6) - [March] 1973 - 36 pages\nDONALD DUCK The Village Blacksmith - 10 - Reprinted from Walt Disney's Comics No. 239, August 1960.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 17.441570121951216,
+              "w": 125.80801257621953,
+              "x": 150.71921684451218,
+              "y": 243.17892530487805,
+              "confidence": 0.91,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**391 (33/7) - \\[April] 1973 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 137, February 1952.\nChanges: Panels trimmed on first page for indicia, except first panel.",
+          "value": "391 (33/7) - [April] 1973 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 137, February 1952.\nChanges: Panels trimmed on first page for indicia, except first panel.",
+          "bbox": [
+            {
+              "h": 11.74369664634145,
+              "w": 126.20332317073168,
+              "x": 152.07460175304877,
+              "y": 290.5643140243902,
+              "confidence": 0.88,
+              "end_index": 192,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**392 (33/8) - May 1973 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 163, April 1954.",
+          "value": "392 (33/8) - May 1973 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 163, April 1954.",
+          "bbox": [
+            {
+              "h": 11.804965701219507,
+              "w": 126.17951981707319,
+              "x": 149.55293826219508,
+              "y": 77.30672446646342,
+              "confidence": 0.92,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**393 (33/9) - June 1973 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 167, August 1954.",
+          "value": "393 (33/9) - June 1973 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 167, August 1954.",
+          "bbox": [
+            {
+              "h": 11.79386432926829,
+              "w": 126.08953696646338,
+              "x": 152.33294016768292,
+              "y": 314.0184832317073,
+              "confidence": 0.93,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n191",
+              "value": "Carl Barks and the Art of the Comic Book\n191",
+              "bbox": [
+                {
+                  "h": 4.680091463414665,
+                  "w": 77.93320884146341,
+                  "x": 175.41884908536585,
+                  "y": 364.82444359756096,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n191",
+          "bbox": [
+            {
+              "h": 4.68,
+              "w": 77.93,
+              "x": 175.42,
+              "y": 364.82,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "191"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "learned journals, and that is not a boon to be discarded lightly.",
+          "value": "learned journals, and that is not a boon to be discarded lightly.",
+          "bbox": [
+            {
+              "h": 14.86946670160061,
+              "w": 124.68690763147865,
+              "x": 11.774717749618901,
+              "y": 11.863534441692074,
+              "confidence": 0.97,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Granted, I could have boiled the information down to the point that perhaps thirty or forty pages could have been eliminated from the book; with tiny type, even more pages could have been eliminated. But I have tried to assemble a bibliography that holds some pleasures for readers, as well as for those who simply need a scrap of information. I think this is a bibliography that rewards browsing — that is filled with delightful surprises, especially in the form of insights into Barks's thinking about his own work. It is worth knowing, I think, where the idea for the \"Seven Cities of Cibola\" story originated, and whose picture is on the wanted poster in \"The Mummy's Ring,\" and what Barks thought about deletion of two pages from \"Mythtic Mystery.\"",
+          "value": "Granted, I could have boiled the information down to the point that perhaps thirty or forty pages could have been eliminated from the book; with tiny type, even more pages could have been eliminated. But I have tried to assemble a bibliography that holds some pleasures for readers, as well as for those who simply need a scrap of information. I think this is a bibliography that rewards browsing — that is filled with delightful surprises, especially in the form of insights into Barks's thinking about his own work. It is worth knowing, I think, where the idea for the \"Seven Cities of Cibola\" story originated, and whose picture is on the wanted poster in \"The Mummy's Ring,\" and what Barks thought about deletion of two pages from \"Mythtic Mystery.\"",
+          "bbox": [
+            {
+              "h": 126.00201505335367,
+              "w": 125.37644817073168,
+              "x": 11.94021150914634,
+              "y": 26.904166349085365,
+              "confidence": 0.99,
+              "end_index": 752,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Finally, there are the reprints. I have not enjoyed listing all of them, and I particularly have not enjoyed notating the changes Western has made in the reprinted stories. But for many readers — and especially for those who are just now coming to Barks — it is only through reprints that they can read his work, and I think they deserve to know not only where a particular story has been reprinted, but also how Western has altered it before reprinting it. If a splash panel is deepened or reduced in size, that is not a matter of great moment; but Barks was not careless about composing his panels, and I think that at least",
+          "value": "Finally, there are the reprints. I have not enjoyed listing all of them, and I particularly have not enjoyed notating the changes Western has made in the reprinted stories. But for many readers — and especially for those who are just now coming to Barks — it is only through reprints that they can read his work, and I think they deserve to know not only where a particular story has been reprinted, but also how Western has altered it before reprinting it. If a splash panel is deepened or reduced in size, that is not a matter of great moment; but Barks was not careless about composing his panels, and I think that at least",
+          "bbox": [
+            {
+              "h": 103.72001524390245,
+              "w": 125.47006133288869,
+              "x": 11.958978301257622,
+              "y": 153.17773628048778,
+              "confidence": 0.99,
+              "end_index": 625,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "some of his readers will want to know if his compositions have been damaged.",
+          "value": "some of his readers will want to know if his compositions have been damaged.",
+          "bbox": [
+            {
+              "h": 15.043835270579269,
+              "w": 124.81873285060976,
+              "x": 150.13526295731705,
+              "y": 12.183165491615853,
+              "confidence": 0.97,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "At that, I have ignored some changes that really are trivial, such as very minor changes in dialogue and captions. In \"The Second Richest Duck,\" in *Uncle Scrooge* No. 15, for example, Scrooge complains that a newspaper costs seven cents; that was changed to *ten* cents in the reprint, even though equally outdated prices have been left alone in other stories. Likewise, dates have been altered in some stories, but not in others.",
+          "value": "At that, I have ignored some changes that really are trivial, such as very minor changes in dialogue and captions. In \"The Second Richest Duck,\" in Uncle Scrooge No. 15, for example, Scrooge complains that a newspaper costs seven cents; that was changed to ten cents in the reprint, even though equally outdated prices have been left alone in other stories. Likewise, dates have been altered in some stories, but not in others.",
+          "bbox": [
+            {
+              "h": 73.84503144054878,
+              "w": 125.59951028963411,
+              "x": 150.0086318597561,
+              "y": 27.084274961890245,
+              "confidence": 0.99,
+              "end_index": 430,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Along the same line, the color in the reprints is usually different from the color in the originals — but since the color did not reflect Barks's intentions in either case, there is no point in mentioning the differences. The color work in Barks's peak years was usually natural and unobtrusive, and that is about the best that can be expected from most comic-book publishers. The reprints are no better, but usually not too much worse.",
+          "value": "Along the same line, the color in the reprints is usually different from the color in the originals — but since the color did not reflect Barks's intentions in either case, there is no point in mentioning the differences. The color work in Barks's peak years was usually natural and unobtrusive, and that is about the best that can be expected from most comic-book publishers. The reprints are no better, but usually not too much worse.",
+          "bbox": [
+            {
+              "h": 74.13971798780487,
+              "w": 125.48027057926826,
+              "x": 150.07409108231707,
+              "y": 101.10665396341463,
+              "confidence": 0.99,
+              "end_index": 435,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The decline in the printing quality of Western's comic books in the last few years is a more serious matter, because it robs Barks's stories of some of their force. The highest accolade that can be bestowed by the more obtuse comic-book editors is that an artist's work \"reproduces well,\" and Barks's work has never reproduced as sharply as that of some cartoonists who drew more simply (and simple-mindedly). It suffers especially now, in these days of plastic plates.",
+          "value": "The decline in the printing quality of Western's comic books in the last few years is a more serious matter, because it robs Barks's stories of some of their force. The highest accolade that can be bestowed by the more obtuse comic-book editors is that an artist's work \"reproduces well,\" and Barks's work has never reproduced as sharply as that of some cartoonists who drew more simply (and simple-mindedly). It suffers especially now, in these days of plastic plates.",
+          "bbox": [
+            {
+              "h": 81.86068216463417,
+              "w": 125.73965510670733,
+              "x": 150.15189786585364,
+              "y": 175.21169588414634,
+              "confidence": 0.99,
+              "end_index": 468,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n99",
+              "value": "Carl Barks and the Art of the Comic Book\n99",
+              "bbox": [
+                {
+                  "h": 5.238064024390205,
+                  "w": 80.18595274390246,
+                  "x": 173.12607850609754,
+                  "y": 366.21953506097566,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n99",
+          "bbox": [
+            {
+              "h": 5.24,
+              "w": 80.19,
+              "x": 173.13,
+              "y": 366.22,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "99"
+    }
+  ]
+}

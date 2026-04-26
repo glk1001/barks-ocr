@@ -1,0 +1,689 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "1969, letter to Michael Barrier) Barks had more to do largely because the number of Donald Duck one-shots had been increased, from one in 1946 to three in 1947.",
+          "value": "1969, letter to Michael Barrier) Barks had more to do largely because the number of Donald Duck one-shots had been increased, from one in 1946 to three in 1947.",
+          "bbox": [
+            {
+              "h": 16.791552496189023,
+              "w": 124.7712333269817,
+              "x": 11.992238471798778,
+              "y": 13.422983517530488,
+              "confidence": 0.97,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### PG\\&E KITE GIVEAWAY",
+          "value": "PG&E KITE GIVEAWAY",
+          "bbox": [
+            {
+              "h": 14.447889672256094,
+              "w": 84.67671350990852,
+              "x": 33.06390005716463,
+              "y": 42.09426733993903,
+              "confidence": 0.76,
+              "end_index": 17,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### (see KITE GIVEAWAY)",
+          "value": "(see KITE GIVEAWAY)",
+          "bbox": [
+            {
+              "h": 14.447889672256094,
+              "w": 84.67671350990852,
+              "x": 33.06390005716463,
+              "y": 42.09426733993903,
+              "confidence": 0.76,
+              "end_index": 18,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### PICNIC PARTY",
+          "value": "PICNIC PARTY",
+          "bbox": [
+            {
+              "h": 14.457067454268296,
+              "w": 89.76436094702743,
+              "x": 31.049148961509143,
+              "y": 60.19735518292683,
+              "confidence": 0.66,
+              "end_index": 11,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### (See VACATION PARADE)",
+          "value": "(See VACATION PARADE)",
+          "bbox": [
+            {
+              "h": 14.457067454268296,
+              "w": 89.76436094702743,
+              "x": 31.049148961509143,
+              "y": 60.19735518292683,
+              "confidence": 0.74,
+              "end_index": 20,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### PORKY PIG (Dell)",
+          "value": "PORKY PIG (Dell)",
+          "bbox": [
+            {
+              "h": 7.277721036585362,
+              "w": 61.25758765243902,
+              "x": 45.66031154725609,
+              "y": 79.34564405487805,
+              "confidence": 0.82,
+              "end_index": 15,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**Four Color 48 - (July) 1944 - 52 pages**",
+          "value": "Four Color 48 - (July) 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.89053544207316,
+              "w": 91.80123904344511,
+              "x": 11.914105849847559,
+              "y": 91.20655678353658,
+              "confidence": 0.95,
+              "end_index": 41,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "PORKY PIG in \"Porky of the Mounties\" - 24 - art only - Petunia goes to Canada for the summer, and when she fails to write him for a week, Porky decides to go to a masquerade party, as a Mounted Policeman. The wind blows Porky's hat into a boxcar, and he and Bugs are trapped inside and carried to Canada, where Porky is mistaken by Petunia's uncle for Dauntless of the Mounties. *(Mar. 21, 1944)*",
+          "value": "PORKY PIG in \"Porky of the Mounties\" - 24 - art only - Petunia goes to Canada for the summer, and when she fails to write him for a week, Porky decides to go to a masquerade party, as a Mounted Policeman. The wind blows Porky's hat into a boxcar, and he and Bugs are trapped inside and carried to Canada, where Porky is mistaken by Petunia's uncle for Dauntless of the Mounties. (Mar. 21, 1944)",
+          "bbox": [
+            {
+              "h": 41.04205792682926,
+              "w": 125.28024223513717,
+              "x": 11.946546065167682,
+              "y": 97.16029344512195,
+              "confidence": 0.99,
+              "end_index": 395,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: If you look carefully at the heads of Bugs Bunny, Petunia and Porky, you will occasionally see small black lines where drawings were pasted over Barks's originals. Barks said of the story: \"a few of the Porky or Petunia faces may have been reworked by the staff artists in the editorial room. All of the Bugs heads had to be redrawn, which pleased me very much. I am sure that if my Bugs had been acceptable, the office would have added that series to my work load.\" (letter, August 21, 1974)",
+          "value": "Weston: If you look carefully at the heads of Bugs Bunny, Petunia and Porky, you will occasionally see small black lines where drawings were pasted over Barks's originals. Barks said of the story: \"a few of the Porky or Petunia faces may have been reworked by the staff artists in the editorial room. All of the Bugs heads had to be redrawn, which pleased me very much. I am sure that if my Bugs had been acceptable, the office would have added that series to my work load.\" (letter, August 21, 1974)",
+          "bbox": [
+            {
+              "h": 46.653807164634145,
+              "w": 125.40556890720275,
+              "x": 12.123400223894816,
+              "y": 138.9634870426829,
+              "confidence": 0.98,
+              "end_index": 499,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Porky Pig and His Gang*, Better Little Book 1404, 1946 (see \"Other Comics Material\").",
+          "value": "Reprinted: Porky Pig and His Gang, Better Little Book 1404, 1946 (see \"Other Comics Material\").",
+          "bbox": [
+            {
+              "h": 11.173285060975623,
+              "w": 124.62795874618901,
+              "x": 12.792763433689023,
+              "y": 186.28227896341463,
+              "confidence": 0.94,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### SCE KITE GIVEAWAY",
+          "value": "SCE KITE GIVEAWAY",
+          "bbox": [
+            {
+              "h": 14.983330792682928,
+              "w": 83.82827958269817,
+              "x": 33.23825147675304,
+              "y": 205.9601524390244,
+              "confidence": 0.78,
+              "end_index": 16,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### (See KITE GIVEAWAYS)",
+          "value": "(See KITE GIVEAWAYS)",
+          "bbox": [
+            {
+              "h": 14.983330792682928,
+              "w": 83.82827958269817,
+              "x": 33.23825147675304,
+              "y": 205.9601524390244,
+              "confidence": 0.79,
+              "end_index": 19,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### SUMMER FUN (Dell)",
+          "value": "SUMMER FUN (Dell)",
+          "bbox": [
+            {
+              "h": 6.89661585365855,
+              "w": 71.21749904725608,
+              "x": 41.08986185213414,
+              "y": 230.9282469512195,
+              "confidence": 0.95,
+              "end_index": 16,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "The first issue, published in 1958, was titled *Mickey Mouse Summer Fun*.",
+          "value": "The first issue, published in 1958, was titled Mickey Mouse Summer Fun.",
+          "bbox": [
+            {
+              "h": 10.214428353658523,
+              "w": 125.2008973656631,
+              "x": 11.647146651105183,
+              "y": 241.58266006097563,
+              "confidence": 0.98,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**2 - (August) 1959 - 84 pages**",
+          "value": "2 - (August) 1959 - 84 pages",
+          "bbox": [
+            {
+              "h": 5.641211890243885,
+              "w": 67.32628203601371,
+              "x": 11.875227110327742,
+              "y": 259.05317835365855,
+              "confidence": 0.95,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE and GYRO in Fun? What's That? - 10. Scrooge and Gyro are under a doctor's orders to stop working and have fun, but whatever they try, they wind up counting money and inventing. *(Jan. 8, 1959)*",
+          "value": "UNCLE SCROOGE and GYRO in Fun? What's That? - 10. Scrooge and Gyro are under a doctor's orders to stop working and have fun, but whatever they try, they wind up counting money and inventing. (Jan. 8, 1959)",
+          "bbox": [
+            {
+              "h": 23.601013719512228,
+              "w": 125.29945705506859,
+              "x": 12.035758265053353,
+              "y": 264.74179115853656,
+              "confidence": 0.98,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in Jungle Hi-jinks - 14 - art only - The nephews, using one of Gyro's cast-off cameras, are hired as cameramen for an African trip by a travel film company and Donald goes along as a bus boy. *(Jan. 30, 1959)*",
+          "value": "DONALD DUCK in Jungle Hi-jinks - 14 - art only - The nephews, using one of Gyro's cast-off cameras, are hired as cameramen for an African trip by a travel film company and Donald goes along as a bus boy. (Jan. 30, 1959)",
+          "bbox": [
+            {
+              "h": 23.582652439024404,
+              "w": 125.23985113376523,
+              "x": 12.04751738757622,
+              "y": 288.5377820121951,
+              "confidence": 0.99,
+              "end_index": 220,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### TOM AND JERRY SUMMER FUN (Dell)",
+          "value": "TOM AND JERRY SUMMER FUN (Dell)",
+          "bbox": [
+            {
+              "h": 15.17625,
+              "w": 116.12114519817072,
+              "x": 15.411290967987803,
+              "y": 324.21299542682925,
+              "confidence": 0.98,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**1 - (July) 1954 - 100 pages**",
+          "value": "1 - (July) 1954 - 100 pages",
+          "bbox": [
+            {
+              "h": 5.875632621951245,
+              "w": 61.69924340224847,
+              "x": 11.978901605373474,
+              "y": 343.130625,
+              "confidence": 0.91,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DROOPY - 8 (pp. 83-90) - script only - Droopy, while",
+          "value": "DROOPY - 8 (pp. 83-90) - script only - Droopy, while",
+          "bbox": [
+            {
+              "h": 5.657538109756115,
+              "w": 120.02026379096799,
+              "x": 16.964246498666157,
+              "y": 349.2650533536585,
+              "confidence": 0.95,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "looking for a place to bury his bone, is chosen as the mascot for a ship headed for a tropical island in search of Bluebeard's buried treasure. *(Aug. 13, 1953)*",
+          "value": "looking for a place to bury his bone, is chosen as the mascot for a ship headed for a tropical island in search of Bluebeard's buried treasure. (Aug. 13, 1953)",
+          "bbox": [
+            {
+              "h": 17.76994092987805,
+              "w": 124.86464176829266,
+              "x": 150.8638033536585,
+              "y": 12.702867759146342,
+              "confidence": 0.98,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Tom and Jerry Summer Fun* (Gold Key). No. 1, 1967",
+          "value": "Reprinted: Tom and Jerry Summer Fun (Gold Key). No. 1, 1967",
+          "bbox": [
+            {
+              "h": 5.337559070121949,
+              "w": 120.42344702743901,
+              "x": 155.0537080792683,
+              "y": 31.027239900914637,
+              "confidence": 0.95,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### TOM AND JERRY SUMMER FUN (Gold Key)",
+          "value": "TOM AND JERRY SUMMER FUN (Gold Key)",
+          "bbox": [
+            {
+              "h": 15.088799542682928,
+              "w": 116.08141006097561,
+              "x": 155.68736089939023,
+              "y": 47.98509146341463,
+              "confidence": 0.98,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**1 - (October) 1967 - 69 pages**",
+          "value": "1 - (October) 1967 - 69 pages",
+          "bbox": [
+            {
+              "h": 6.0057336128048835,
+              "w": 69.20847370426829,
+              "x": 151.64943407012194,
+              "y": 70.095234375,
+              "confidence": 0.9,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DROOPY - 8 - Reprinted from *Tom and Jerry Summer Fun* (Dell) No. 1, 1954.",
+          "value": "DROOPY - 8 - Reprinted from Tom and Jerry Summer Fun (Dell) No. 1, 1954.",
+          "bbox": [
+            {
+              "h": 11.377448551829275,
+              "w": 125.12713033536588,
+              "x": 151.3951257621951,
+              "y": 76.21622903963414,
+              "confidence": 0.96,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### TOM AND JERRY WINTER CARNIVAL (Dell)",
+          "value": "TOM AND JERRY WINTER CARNIVAL (Dell)",
+          "bbox": [
+            {
+              "h": 14.75203125,
+              "w": 96.02377477134148,
+              "x": 164.72327172256095,
+              "y": 99.1255449695122,
+              "confidence": 0.98,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**1 - (December) 1952 - 100 pages**",
+          "value": "1 - (December) 1952 - 100 pages",
+          "bbox": [
+            {
+              "h": 5.95580030487803,
+              "w": 77.70193216463412,
+              "x": 151.2936356707317,
+              "y": 121.20938643292683,
+              "confidence": 0.94,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DROOPY - 8 (pp. 45-52) - script only - Droopy is given a job as a fox hound, and he bumbles through the hunt until he follows the fox into the hunter's house. *(Mar. 6, 1952)*",
+          "value": "DROOPY - 8 (pp. 45-52) - script only - Droopy is given a job as a fox hound, and he bumbles through the hunt until he follows the fox into the hunter's house. (Mar. 6, 1952)",
+          "bbox": [
+            {
+              "h": 17.59464557926829,
+              "w": 124.867900152439,
+              "x": 151.35285251524388,
+              "y": 127.2609375,
+              "confidence": 0.96,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"The office wrote me to ask if I would do a story for Droopy. Then asked for another, and so on.\" (January 15, 1969, letter to Michael Barrier) \"The reason I happened to do the Droopy scripts in 1952 and 53 is that the office wrote me a note or phoned and asked me to try to write them. I never went out of my way to ask for those sorts of jobs.\" (Dec. 11, 1969, letter to Michael Barrier)",
+          "value": "Barks: \"The office wrote me to ask if I would do a story for Droopy. Then asked for another, and so on.\" (January 15, 1969, letter to Michael Barrier) \"The reason I happened to do the Droopy scripts in 1952 and 53 is that the office wrote me a note or phoned and asked me to try to write them. I never went out of my way to ask for those sorts of jobs.\" (Dec. 11, 1969, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 40.36688643292681,
+              "w": 125.05283917682924,
+              "x": 151.27202743902438,
+              "y": 145.02353277439025,
+              "confidence": 0.98,
+              "end_index": 395,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Golden Digest* No. 41, January 1975.",
+          "value": "Reprinted: Golden Digest No. 41, January 1975.",
+          "bbox": [
+            {
+              "h": 5.510625,
+              "w": 95.70627096036583,
+              "x": 155.37483041158535,
+              "y": 186.68382621951218,
+              "confidence": 0.95,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**2 - 1953 - 100 pages**",
+          "value": "2 - 1953 - 100 pages",
+          "bbox": [
+            {
+              "h": 5.67082317073171,
+              "w": 46.117608612804865,
+              "x": 150.91748094512192,
+              "y": 198.3369512195122,
+              "confidence": 0.95,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DROOPY - 8 (pp. 46-53) - script only - A cynical \"hero\" dog contrives to have Droopy carry serum to forty children through terrible weather. *(Mar. 19, 1953)*",
+          "value": "DROOPY - 8 (pp. 46-53) - script only - A cynical \"hero\" dog contrives to have Droopy carry serum to forty children through terrible weather. (Mar. 19, 1953)",
+          "bbox": [
+            {
+              "h": 17.423185975609766,
+              "w": 125.46372141768289,
+              "x": 151.2028125,
+              "y": 204.40666920731707,
+              "confidence": 0.97,
+              "end_index": 157,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Golden Digest* No. 22, March, 1972.",
+          "value": "Reprinted: Golden Digest No. 22, March, 1972.",
+          "bbox": [
+            {
+              "h": 5.433018292682927,
+              "w": 93.78270960365855,
+              "x": 155.41439405487802,
+              "y": 222.3040701219512,
+              "confidence": 0.94,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### UNCLE DONALD AND HIS NEPHEWS FAMILY FUN (Dell)",
+          "value": "UNCLE DONALD AND HIS NEPHEWS FAMILY FUN (Dell)",
+          "bbox": [
+            {
+              "h": 15.580175304878058,
+              "w": 103.72369664634145,
+              "x": 159.9908631859756,
+              "y": 239.16436737804878,
+              "confidence": 0.98,
+              "end_index": 45,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**1 - (November) 1960 - 84 pages**",
+          "value": "1 - (November) 1960 - 84 pages",
+          "bbox": [
+            {
+              "h": 5.686326219512175,
+              "w": 76.2398094512195,
+              "x": 150.28374237804877,
+              "y": 266.87339176829266,
+              "confidence": 0.95,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (pencil rough only): The ducks sit together, each doing what interests him; for example, the nephews work a puzzle and Scrooge \"reads\" a thousand-dollar bill. *(Apr. 25, 1960)*",
+          "value": "Front cover (pencil rough only): The ducks sit together, each doing what interests him; for example, the nephews work a puzzle and Scrooge \"reads\" a thousand-dollar bill. (Apr. 25, 1960)",
+          "bbox": [
+            {
+              "h": 23.046608231707303,
+              "w": 125.2316730182927,
+              "x": 150.20869664634145,
+              "y": 272.9049237804878,
+              "confidence": 0.99,
+              "end_index": 187,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Another artist made a painting for the cover, based on a pencil sketch by Barks. A surviving Barks sketch for this cover differs sharply from the published version. In Barks's drawing, the nephews are reading comics, Scrooge is \"reading\" a hundred-dollar bill, Donald is reading the sports pages (rather than \"investment news\"), Grandma is reading a cookbook (rather than an \"album\"), and Daisy is reading a newspaper with the heading \"beauty\" (rather than writing in her diary). Barks believes that this was an alternate version of the cover that was returned to him when the sketch for the published version was",
+          "value": "Another artist made a painting for the cover, based on a pencil sketch by Barks. A surviving Barks sketch for this cover differs sharply from the published version. In Barks's drawing, the nephews are reading comics, Scrooge is \"reading\" a hundred-dollar bill, Donald is reading the sports pages (rather than \"investment news\"), Grandma is reading a cookbook (rather than an \"album\"), and Daisy is reading a newspaper with the heading \"beauty\" (rather than writing in her diary). Barks believes that this was an alternate version of the cover that was returned to him when the sketch for the published version was",
+          "bbox": [
+            {
+              "h": 58.687637195121916,
+              "w": 125.19260670731704,
+              "x": 150.43534298780486,
+              "y": 296.59948170731707,
+              "confidence": 0.99,
+              "end_index": 612,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "130 *Carl Barks and the Art of the Comic Book*",
+              "value": "130 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.865487804878085,
+                  "w": 77.94919207317072,
+                  "x": 36.655321074695124,
+                  "y": 365.9394740853658,
+                  "confidence": 0.95,
+                  "end_index": 45,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "130 *Carl Barks and the Art of the Comic Book*",
+          "bbox": [
+            {
+              "h": 4.87,
+              "w": 77.95,
+              "x": 36.66,
+              "y": 365.94,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "130"
+    }
+  ]
+}

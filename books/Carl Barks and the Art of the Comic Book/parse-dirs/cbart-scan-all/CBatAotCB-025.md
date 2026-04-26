@@ -1,0 +1,8 @@
+![A cartoon drawing of a wild-haired man with handwritten text surrounding him. The text reads: "MUSIC - FOOEY!! BEETHOVEN IS PHONEY COMPARED TO THE HOOSIER HOT SHOTS!!", "LITERATURE FOOEY!! WOT HAS KIPLING GOT OUR WESTERN PULPS MAGAZINES AINT! -", "ART!! HUMBUG!! WOT HAS THIS DEGAS GOT THAT PETTY AINT - BESIDES, CAN DEGAS DRAW SEX NO!!"](CBatAotCB-025_page_1_image_1_v2.jpg)
+
+of course, is that many hands were involved in the making of these cartoons. Jack King was a stodgy director, who sacrificed every other consideration in order to stage the gags in his cartoons clearly; watching them is like listening to a comedian enunciate the words very slowly and precisely as he tells a joke.
+
+King's direction usually made the gags in his cartoons seem worse than they were — quite an accomplishment, since many of the gags were terrible. This is especially noticeable in the earlier cartoons, the ones on which Barks worked with Harry Reeves, but contrived gags turn up in the later cartoons as well. In *Donald's Snow Fight* (1942), for example, Donald is pursuing the
+nephews, who take refuge in their snow fort. Donald slams into mattress springs on the gate of the fort; he bounces across a frozen lake like a stone skipping across the water; he hits a tree, and icicles form a cage around him; and snow falls on him and makes him look like a rhinoceros. Any one of these ideas might have been tolerable in isolation, but in their cumulative effect, in a few seconds of screen time, they are insufferable, especially as presented by King.
+
+One would like to blame Barks's partners in the story department for such stuff, but the fault was probably as much his as theirs. He was, after all, fresh from the *Eye-Opener*,

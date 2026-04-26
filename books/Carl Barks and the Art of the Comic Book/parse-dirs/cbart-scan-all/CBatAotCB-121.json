@@ -1,0 +1,293 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "**01-329-207 - May-July 1962 \\[(April) 1962] - 36 pages**\nFront cover: A motor on Gyro's back paddles his boat as he fishes. *(May 3, 1961)*",
+          "value": "01-329-207 - May-July 1962 [(April) 1962] - 36 pages\nFront cover: A motor on Gyro's back paddles his boat as he fishes. (May 3, 1961)",
+          "bbox": [
+            {
+              "h": 10.979436928353662,
+              "w": 124.7463024009146,
+              "x": 12.226031821646341,
+              "y": 25.094416920731707,
+              "confidence": 0.89,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# HUEY, DEWEY AND LOUIE JUNIOR WOODCHUCKS (Gold Key)",
+          "value": "HUEY, DEWEY AND LOUIE JUNIOR WOODCHUCKS (Gold Key)",
+          "bbox": [
+            {
+              "h": 13.77421875,
+              "w": 125.02573670922253,
+              "x": 11.828215272484755,
+              "y": 46.7205868902439,
+              "confidence": 0.98,
+              "end_index": 49,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## 4 - January 1970 - 36 pages",
+          "value": "4 - January 1970 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.423460365853653,
+              "w": 66.6120281535823,
+              "x": 11.757761290015242,
+              "y": 66.45233231707317,
+              "confidence": 0.95,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "THE JUNIOR WOODCHUCKS Lost in the Black Forest - 10 - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 227, August 1959.\nChanges: Title changed as indicated. Splash panel deepened.\nTHE JUNIOR WOODCHUCKS Challenge of the Chickadees - 10 - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 181, October 1955.\nChanges: Title changed as indicated. Splash panel deepened.",
+          "value": "THE JUNIOR WOODCHUCKS Lost in the Black Forest - 10 - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 227, August 1959.\nChanges: Title changed as indicated. Splash panel deepened.\nTHE JUNIOR WOODCHUCKS Challenge of the Chickadees - 10 - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 181, October 1955.\nChanges: Title changed as indicated. Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 22.591486280487796,
+              "w": 125.22472322789632,
+              "x": 11.988662823932925,
+              "y": 90.55074695121952,
+              "confidence": 0.9,
+              "end_index": 376,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 5 - April 1970 - 36 pages",
+          "value": "5 - April 1970 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.471284298780465,
+              "w": 58.939043683307915,
+              "x": 12.120389434070121,
+              "y": 125.73508765243903,
+              "confidence": 0.96,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "THE JUNIOR WOODCHUCKS Test at Frostbite Pass - 10 - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 125, February 1951.\nChanges: Title changed as indicated. Panels on first page trimmed for indicia.\nTHE JUNIOR WOODCHUCKS Ten Star Generals - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 132, September 1951.\nChanges: Title changed as indicated.",
+          "value": "THE JUNIOR WOODCHUCKS Test at Frostbite Pass - 10 - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 125, February 1951.\nChanges: Title changed as indicated. Panels on first page trimmed for indicia.\nTHE JUNIOR WOODCHUCKS Ten Star Generals - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 132, September 1951.\nChanges: Title changed as indicated.",
+          "bbox": [
+            {
+              "h": 17.20438262195122,
+              "w": 124.90464808022102,
+              "x": 12.140914038681402,
+              "y": 131.6642149390244,
+              "confidence": 0.88,
+              "end_index": 359,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 6 - July 1970 - 36 pages",
+          "value": "6 - July 1970 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.303151676829275,
+              "w": 55.931372903963414,
+              "x": 12.331384813262193,
+              "y": 191.17194740853657,
+              "confidence": 0.96,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Peril of the Black Forest - 14 - script only - The Woodchucks and the animals of the Black Forest of Duckburg combine to hold back Scrooge's bulldozers, which are preparing to level the forest for construction of a new city. *(Oct. 3, 1969)*\nBarks: \"I did a 14 page of the Junior Woodchucks for Chase \\[Craig] a few months ago. (Sept. or thereabouts) Also a 6 pager (I'm not sure of the title and can't dig up the record). Chase is now wanting me to do more stories for the Junior Woodchucks, which will likely be a regular comic (1/4'ly). I'm currently writing a 14 page for him. In the story I did in Sept. (?) I used Uncle Scrooge as the villain. I'm doing the same in the current story. Analyzing all the things you fans have written and said I've included that you all liked him best when he was the menace in the duck stories. When he became the hero, with his own book, I had to be careful how bad I made him. Anyway, in the current story he is fighting dirty against the Junior Woodchucks who are trying to save a whale that got washed ashore by a tidal wave. Uncle S. wants to render the frantic mammal into countless barrels of whale oil. In the previous story Uncle S. was going to cut down the Black Forest of Duckberg and turn the whole ecology into a suburbia.\" *(Dec. 11, 1969, letter to Michael Barrier)*\nReprinted: Huey, Dewey and Louie Junior Woodchucks No. 41, November 1976.\nTHE JUNIOR WOODCHUCKS Life Savers - 5 - script only - The Woodchucks mistake a movie company's sinking sloop for the real thing, much to the amusement of the movie makers. *(Oct. 10, 1969)*\nReprinted: Huey, Dewey and Louie Junior Woodchucks No. 41, July 1976.",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Peril of the Black Forest - 14 - script only - The Woodchucks and the animals of the Black Forest of Duckburg combine to hold back Scrooge's bulldozers, which are preparing to level the forest for construction of a new city. (Oct. 3, 1969)\nBarks: \"I did a 14 page of the Junior Woodchucks for Chase [Craig] a few months ago. (Sept. or thereabouts) Also a 6 pager (I'm not sure of the title and can't dig up the record). Chase is now wanting me to do more stories for the Junior Woodchucks, which will likely be a regular comic (1/4'ly). I'm currently writing a 14 page for him. In the story I did in Sept. (?) I used Uncle Scrooge as the villain. I'm doing the same in the current story. Analyzing all the things you fans have written and said I've included that you all liked him best when he was the menace in the duck stories. When he became the hero, with his own book, I had to be careful how bad I made him. Anyway, in the current story he is fighting dirty against the Junior Woodchucks who are trying to save a whale that got washed ashore by a tidal wave. Uncle S. wants to render the frantic mammal into countless barrels of whale oil. In the previous story Uncle S. was going to cut down the Black Forest of Duckberg and turn the whole ecology into a suburbia.\" (Dec. 11, 1969, letter to Michael Barrier)\nReprinted: Huey, Dewey and Louie Junior Woodchucks No. 41, November 1976.\nTHE JUNIOR WOODCHUCKS Life Savers - 5 - script only - The Woodchucks mistake a movie company's sinking sloop for the real thing, much to the amusement of the movie makers. (Oct. 10, 1969)\nReprinted: Huey, Dewey and Louie Junior Woodchucks No. 41, July 1976.",
+          "bbox": [
+            {
+              "h": 104.94363567073171,
+              "w": 125.55918992949697,
+              "x": 12.377094369283537,
+              "y": 233.33492378048783,
+              "confidence": 0.94,
+              "end_index": 1697,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 7 - October 1970 - 36 pages",
+          "value": "7 - October 1970 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.430783155487811,
+              "w": 66.40310785060974,
+              "x": 150.78193216463413,
+              "y": 60.619893292682924,
+              "confidence": 0.97,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE JUNIOR WOODCHUCKS Whale of a Good Deed - 17 - script only - A tidal wave leaves a whale stranded on the shore, and since the whale is partially on Scrooge's land, Scrooge has him tied down, with plans to render him into whale oil. *(Jan. 1, 1970)*\nChanges: This was written as a fourteen-page story and was expanded to seventeen pages by enlarging a number of panels.\nSee Barks's comments on \"Peril of the Black Forest,\" Huey, Dewey and Louie Junior Woodchucks No. 6, July 1970.\nReprinted: Huey, Dewey and Louie Junior Woodchucks No. 35, November 1975.",
+          "value": "HUEY, DEWEY AND LOUIE JUNIOR WOODCHUCKS Whale of a Good Deed - 17 - script only - A tidal wave leaves a whale stranded on the shore, and since the whale is partially on Scrooge's land, Scrooge has him tied down, with plans to render him into whale oil. (Jan. 1, 1970)\nChanges: This was written as a fourteen-page story and was expanded to seventeen pages by enlarging a number of panels.\nSee Barks's comments on \"Peril of the Black Forest,\" Huey, Dewey and Louie Junior Woodchucks No. 6, July 1970.\nReprinted: Huey, Dewey and Louie Junior Woodchucks No. 35, November 1975.",
+          "bbox": [
+            {
+              "h": 28.977170350609768,
+              "w": 125.4357507621951,
+              "x": 150.19343368902437,
+              "y": 67.00940739329268,
+              "confidence": 0.9,
+              "end_index": 573,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 8 - January 1971 - 36 pages",
+          "value": "8 - January 1971 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.351501524390232,
+              "w": 66.49544016768293,
+              "x": 151.06373094512193,
+              "y": 137.18705030487806,
+              "confidence": 0.96,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Let Sleeping Bones Lie - 14 - script only - The Woodchucks uncover the skeleton of a huge prehistoric beast, but the bones lie in the path of Scrooge's highway construction crew. *(Mar. 16, 1970)*\nChanges: In the story as published, Pluto is the Woodchuck's official hound, but in Barks's script the Official Hound was the same dog used in earlier stories with the Woodchucks.\nBarks: \"I've just finished the script for a 14-page Junior Woodchuck story. It's about the J.W\\.s discovering the bones of a huge prehistoric beast. Larger than a dinosaur. They vow to dig it out complete and give the 'Colossaurus' to the children of the future. In other words, set up a park around the bones. But Uncle Scrooge's construction crew is building a super highway right through the bones. Uncle Scrooge figures he'll grind up the bones and use them for road ballast. Then, when the kids dissuade him from that, he re-routes the highway, buys the bone site, and starts readying the bones into a hamburger joint. The situation gives me several chances to poke fun at America's tastes and ideas of culture. Perhaps you will like the story.\" *(Mar. 8, 1970, letter to Michael Barrier.)*\nHUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Bad Day for Troop 'A' - 6 - script only - The nephews' Troop A is the consistent winner in Woodchuck competition, and when a plane carrying circus performers goes down, they beat Troop K to it. *(Jan. 1, 1970)*\nChanges: The third panel on the first page of Barks's script was deleted (it showed Troop A winning a trail-marking contest) and the first panel on the second page of Barks's script was shifted to the first page. The new first panel on the second page — the second panel on that page, in Barks's script — was enlarged to a double panel, the full width of the page.",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Let Sleeping Bones Lie - 14 - script only - The Woodchucks uncover the skeleton of a huge prehistoric beast, but the bones lie in the path of Scrooge's highway construction crew. (Mar. 16, 1970)\nChanges: In the story as published, Pluto is the Woodchuck's official hound, but in Barks's script the Official Hound was the same dog used in earlier stories with the Woodchucks.\nBarks: \"I've just finished the script for a 14-page Junior Woodchuck story. It's about the J.W.s discovering the bones of a huge prehistoric beast. Larger than a dinosaur. They vow to dig it out complete and give the 'Colossaurus' to the children of the future. In other words, set up a park around the bones. But Uncle Scrooge's construction crew is building a super highway right through the bones. Uncle Scrooge figures he'll grind up the bones and use them for road ballast. Then, when the kids dissuade him from that, he re-routes the highway, buys the bone site, and starts readying the bones into a hamburger joint. The situation gives me several chances to poke fun at America's tastes and ideas of culture. Perhaps you will like the story.\" (Mar. 8, 1970, letter to Michael Barrier.)\nHUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Bad Day for Troop 'A' - 6 - script only - The nephews' Troop A is the consistent winner in Woodchuck competition, and when a plane carrying circus performers goes down, they beat Troop K to it. (Jan. 1, 1970)\nChanges: The third panel on the first page of Barks's script was deleted (it showed Troop A winning a trail-marking contest) and the first panel on the second page of Barks's script was shifted to the first page. The new first panel on the second page — the second panel on that page, in Barks's script — was enlarged to a double panel, the full width of the page.",
+          "bbox": [
+            {
+              "h": 76.19750762195119,
+              "w": 125.82493902439026,
+              "x": 150.84063452743902,
+              "y": 191.08419969512195,
+              "confidence": 0.91,
+              "end_index": 1835,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 9 - April 1971 - 36 pages",
+          "value": "9 - April 1971 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6143902439024345,
+              "w": 59.129348323170724,
+              "x": 151.5747313262195,
+              "y": 339.73319359756096,
+              "confidence": 0.95,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: This was redrawn, by another artist, from",
+          "value": "Front cover: This was redrawn, by another artist, from",
+          "bbox": [
+            {
+              "h": 5.715640243902435,
+              "w": 119.52799161585368,
+              "x": 157.0609927591463,
+              "y": 345.046875,
+              "confidence": 0.96,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n121",
+              "value": "Carl Barks and the Art of the Comic Book\n121",
+              "bbox": [
+                {
+                  "h": 4.289062500000054,
+                  "w": 77.88729992378052,
+                  "x": 173.19659679878046,
+                  "y": 361.9192225609756,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n121",
+          "bbox": [
+            {
+              "h": 4.29,
+              "w": 77.89,
+              "x": 173.2,
+              "y": 361.92,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "121"
+    }
+  ]
+}

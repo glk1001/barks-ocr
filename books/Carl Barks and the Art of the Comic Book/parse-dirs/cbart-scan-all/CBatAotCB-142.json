@@ -1,0 +1,697 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "of Donald's recordings of Shoeless Pashly, the calypso king. *(May 23, 1957)*",
+          "value": "of Donald's recordings of Shoeless Pashly, the calypso king. (May 23, 1957)",
+          "bbox": [
+            {
+              "h": 11.517110327743902,
+              "w": 125.51375154820882,
+              "x": 11.683814191120426,
+              "y": 16.01318597560976,
+              "confidence": 0.94,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A new version of \"Land of the Totem Poles\" in *Donald Duck* Four Color No. 263, 1950.",
+          "value": "A new version of \"Land of the Totem Poles\" in Donald Duck Four Color No. 263, 1950.",
+          "bbox": [
+            {
+              "h": 10.761513910060975,
+              "w": 125.60967237519053,
+              "x": 11.81571443883384,
+              "y": 28.191611089939023,
+              "confidence": 0.95,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE - 4 - Gyro invents a robot servant that responds directly to his thought waves. *(Apr. 25, 1957)*\nReprinted: *Walt Disney's Comics* No. 297, June 1965.",
+          "value": "GYRO GEARLOOSE - 4 - Gyro invents a robot servant that responds directly to his thought waves. (Apr. 25, 1957)\nReprinted: Walt Disney's Comics No. 297, June 1965.",
+          "bbox": [
+            {
+              "h": 17.86148151676829,
+              "w": 125.4162390434451,
+              "x": 11.848132145579267,
+              "y": 39.71755621189025,
+              "confidence": 0.92,
+              "end_index": 165,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 3/4 - Scrooge is stranded on a desert island, but his money attracts help. *(July 25, 1957)*",
+          "value": "UNCLE SCROOGE - 3/4 - Scrooge is stranded on a desert island, but his money attracts help. (July 25, 1957)",
+          "bbox": [
+            {
+              "h": 11.700383003048781,
+              "w": 125.50925304878047,
+              "x": 11.847664824695121,
+              "y": 57.507816310975606,
+              "confidence": 0.89,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "An advertisement fills out the page.",
+          "value": "An advertisement fills out the page.",
+          "bbox": [
+            {
+              "h": 5.17909298780487,
+              "w": 71.8481785918445,
+              "x": 16.255844845655485,
+              "y": 69.87469321646341,
+              "confidence": 0.87,
+              "end_index": 35,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 21 - Mar.-May 1958 - 36 pages",
+          "value": "21 - Mar.-May 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.468363185975608,
+              "w": 73.94954589843749,
+              "x": 12.354374642721035,
+              "y": 82.12856135670732,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge paints dollar signs on a piggy bank and a real pig. *(Aug. 15, 1957)*",
+          "value": "Front cover (art only): Scrooge paints dollar signs on a piggy bank and a real pig. (Aug. 15, 1957)",
+          "bbox": [
+            {
+              "h": 11.618248856707318,
+              "w": 125.61259420255335,
+              "x": 12.35022020293445,
+              "y": 88.11427019817073,
+              "confidence": 0.94,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "According to Barks's vouchers, this cover was originally scheduled for *Uncle Scrooge* No. 23, Sept.-Nov. 1958.",
+          "value": "According to Barks's vouchers, this cover was originally scheduled for Uncle Scrooge No. 23, Sept.-Nov. 1958.",
+          "bbox": [
+            {
+              "h": 11.109740853658536,
+              "w": 125.4999344988567,
+              "x": 12.389960699314024,
+              "y": 100.18885289634146,
+              "confidence": 0.92,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 107, September 1973.",
+          "value": "Reprinted: Uncle Scrooge No. 107, September 1973.",
+          "bbox": [
+            {
+              "h": 5.55761432926829,
+              "w": 102.36165884622713,
+              "x": 17.163408798589938,
+              "y": 112.0033536585366,
+              "confidence": 0.88,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge dreams of finding money, at a lecture on easy ways to get rich. *(June 6, 1957)*",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge dreams of finding money, at a lecture on easy ways to get rich. (June 6, 1957)",
+          "bbox": [
+            {
+              "h": 17.268315548780492,
+              "w": 125.73466463414631,
+              "x": 12.256154725609756,
+              "y": 117.52011814024391,
+              "confidence": 0.96,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in The Money Well - 26 - Scrooge pumps his money underground to save it from the Beagle Boys, who are planning to drill into the bin from an adjacent lot. But Scrooge's eyeglasses are bad, and he mistakenly pumps his money under land on which the Beagle Boys' grandfather has been squatting. *(Aug. 22, 1957)*",
+          "value": "UNCLE SCROOGE in The Money Well - 26 - Scrooge pumps his money underground to save it from the Beagle Boys, who are planning to drill into the bin from an adjacent lot. But Scrooge's eyeglasses are bad, and he mistakenly pumps his money under land on which the Beagle Boys' grandfather has been squatting. (Aug. 22, 1957)",
+          "bbox": [
+            {
+              "h": 35.51048780487805,
+              "w": 126.05800352515243,
+              "x": 12.063202648628048,
+              "y": 135.17398628048778,
+              "confidence": 0.97,
+              "end_index": 322,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 107, September 1973.",
+          "value": "Reprinted: Uncle Scrooge No. 107, September 1973.",
+          "bbox": [
+            {
+              "h": 5.6120236280487825,
+              "w": 102.35425888433687,
+              "x": 16.891633836699697,
+              "y": 171.0861013719512,
+              "confidence": 0.92,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE - 3 3/4 - Gyro invents a mechanical scarecrow that has little success in scaring off crows led by the wily Old Blackie. *(June 20, 1957)*",
+          "value": "GYRO GEARLOOSE - 3 3/4 - Gyro invents a mechanical scarecrow that has little success in scaring off crows led by the wily Old Blackie. (June 20, 1957)",
+          "bbox": [
+            {
+              "h": 17.7535632621951,
+              "w": 125.8382244426448,
+              "x": 12.182297661013719,
+              "y": 176.6224961890244,
+              "confidence": 0.95,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A circulation statement fills out the last page.",
+          "value": "A circulation statement fills out the last page.",
+          "bbox": [
+            {
+              "h": 5.57346036585368,
+              "w": 92.5235166968369,
+              "x": 16.689313905297254,
+              "y": 195.02126524390243,
+              "confidence": 0.92,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 3/4 - Scrooge buys a dog to outmatch a deadbeat's watchdog. *(June 6, 1957)*",
+          "value": "UNCLE SCROOGE - 3/4 - Scrooge buys a dog to outmatch a deadbeat's watchdog. (June 6, 1957)",
+          "bbox": [
+            {
+              "h": 11.652599085365855,
+              "w": 125.86601931688263,
+              "x": 12.086171041349084,
+              "y": 200.53403963414635,
+              "confidence": 0.93,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "An advertisement fills out the page.",
+          "value": "An advertisement fills out the page.",
+          "bbox": [
+            {
+              "h": 5.229786585365855,
+              "w": 71.676201290968,
+              "x": 16.8035995855564,
+              "y": 212.7519512195122,
+              "confidence": 0.89,
+              "end_index": 35,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge forgets that he's had a self-locking door put on his vault. *(June 6, 1957)*",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge forgets that he's had a self-locking door put on his vault. (June 6, 1957)",
+          "bbox": [
+            {
+              "h": 17.32957317073168,
+              "w": 125.85452708174542,
+              "x": 12.048504549352133,
+              "y": 218.21325457317076,
+              "confidence": 0.96,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 22 - June-Aug. 1958 - 36 pages",
+          "value": "22 - June-Aug. 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5462728658536795,
+              "w": 75.61387600038108,
+              "x": 12.306391720655487,
+              "y": 242.1337042682927,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge carries a cash register as a valise. *(June 20, 1957)*",
+          "value": "Front cover (art only): Scrooge carries a cash register as a valise. (June 20, 1957)",
+          "bbox": [
+            {
+              "h": 10.996074695121969,
+              "w": 125.71839093464175,
+              "x": 12.184949385480182,
+              "y": 248.1115243902439,
+              "confidence": 0.96,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 97, February 1972.",
+          "value": "Reprinted: Uncle Scrooge No. 97, February 1972.",
+          "bbox": [
+            {
+              "h": 5.436036585365855,
+              "w": 96.76338081173779,
+              "x": 16.84428972942073,
+              "y": 260.10878048780484,
+              "confidence": 0.93,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge heads for the museum to buy parts for his old car. *(Oct. 31, 1957)*",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge heads for the museum to buy parts for his old car. (Oct. 31, 1957)",
+          "bbox": [
+            {
+              "h": 11.80644054878052,
+              "w": 125.65722013147862,
+              "x": 12.069944502667683,
+              "y": 265.8407698170731,
+              "confidence": 0.93,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE and The Golden River - 26 - Scrooge, more miserly than ever because dry weather is shrinking his money pile, is taken to a mountain cabin by Donald and the nephews for the sake of his nerves. There, Dewey reads him the story of \"The King of the Golden River,\" a story that comes true, after a fashion, when a waterfall near the cabin starts flowing intermittently with gold. *(Nov. 21, 1957)*",
+          "value": "UNCLE SCROOGE and The Golden River - 26 - Scrooge, more miserly than ever because dry weather is shrinking his money pile, is taken to a mountain cabin by Donald and the nephews for the sake of his nerves. There, Dewey reads him the story of \"The King of the Golden River,\" a story that comes true, after a fashion, when a waterfall near the cabin starts flowing intermittently with gold. (Nov. 21, 1957)",
+          "bbox": [
+            {
+              "h": 41.198734756097565,
+              "w": 125.71184844226372,
+              "x": 12.210947861089938,
+              "y": 277.4518902439024,
+              "confidence": 0.97,
+              "end_index": 405,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: In \"The Golden River,\" one page was cut. Perhaps on looking over this story after he had finished it, Barks thought it could use a couple of more gags and a little less straight business, so he chopped a page of straight stuff and added a page of gags. Because the top and bottom halves of pages 4 and 5 are not perfectly aligned and because the bottom half of page 5 could",
+          "value": "Weston: In \"The Golden River,\" one page was cut. Perhaps on looking over this story after he had finished it, Barks thought it could use a couple of more gags and a little less straight business, so he chopped a page of straight stuff and added a page of gags. Because the top and bottom halves of pages 4 and 5 are not perfectly aligned and because the bottom half of page 5 could",
+          "bbox": [
+            {
+              "h": 35.51432926829264,
+              "w": 125.76831066596799,
+              "x": 12.17825469226372,
+              "y": 318.9957164634147,
+              "confidence": 0.99,
+              "end_index": 380,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "logically and smoothly follow the top of page 4, I am inclined to suspect that the half-page balloon and stilt gags on those pages were added after the story had been completed. This added a page of gags here, moving up the numbering of later pages by one page. The cut page, which really doesn't subtract anything significant from the story, and which is numbered as page 16 (panels 1-4, 6-8) and panels 1 and 2 of page 17, follows published page 16 (which would have originally been numbered page 15). In the top half of the cut page, one nephew comments, \"This gets more like the fairy story every minute!\" and the other nephews offer theories (accurate ones) as to where the gold comes from and goes to. Scrooge says, \"I don't care what CAUSES it! I'm going to be ready to CATCH it next time!\" Panel 5 of the unpublished page has been cut out and is published as panel 1 of page 17. Panel 2 of published page 17 was drawn new to replace the other five panels. In these five panels, Scrooge says he's cured, Donald and the kids decide they are not needed, and Scrooge suggests that they might want to get back to Duckburg, where they would have a better chance of raising the five dollars they need. This art was cut from the story by Barks and consigned to his scrap pile.\nReprinted: *Uncle Scrooge* No. 110, February 1974.",
+          "value": "logically and smoothly follow the top of page 4, I am inclined to suspect that the half-page balloon and stilt gags on those pages were added after the story had been completed. This added a page of gags here, moving up the numbering of later pages by one page. The cut page, which really doesn't subtract anything significant from the story, and which is numbered as page 16 (panels 1-4, 6-8) and panels 1 and 2 of page 17, follows published page 16 (which would have originally been numbered page 15). In the top half of the cut page, one nephew comments, \"This gets more like the fairy story every minute!\" and the other nephews offer theories (accurate ones) as to where the gold comes from and goes to. Scrooge says, \"I don't care what CAUSES it! I'm going to be ready to CATCH it next time!\" Panel 5 of the unpublished page has been cut out and is published as panel 1 of page 17. Panel 2 of published page 17 was drawn new to replace the other five panels. In these five panels, Scrooge says he's cured, Donald and the kids decide they are not needed, and Scrooge suggests that they might want to get back to Duckburg, where they would have a better chance of raising the five dollars they need. This art was cut from the story by Barks and consigned to his scrap pile.\nReprinted: Uncle Scrooge No. 110, February 1974.",
+          "bbox": [
+            {
+              "h": 124.12678782393293,
+              "w": 125.8849275914634,
+              "x": 150.4030163871951,
+              "y": 16.858795255335366,
+              "confidence": 0.99,
+              "end_index": 1326,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE - 4 - Gyro invents a machine that can read thoughts, but it seems to have little success at reading a bird's mind. *(Dec. 12, 1957)*",
+          "value": "GYRO GEARLOOSE - 4 - Gyro invents a machine that can read thoughts, but it seems to have little success at reading a bird's mind. (Dec. 12, 1957)",
+          "bbox": [
+            {
+              "h": 17.53081554878049,
+              "w": 125.78834222560974,
+              "x": 150.46288490853658,
+              "y": 141.2471913109756,
+              "confidence": 0.95,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 66, November 1966.",
+          "value": "Reprinted: Uncle Scrooge No. 66, November 1966.",
+          "bbox": [
+            {
+              "h": 5.40291539634145,
+              "w": 99.82407964939026,
+              "x": 155.45606707317071,
+              "y": 159.29626143292683,
+              "confidence": 0.9,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 7/8 - Scrooge pays a reduced rate for a bumpy ride on a horse. *(Oct. 31, 1957)*",
+          "value": "UNCLE SCROOGE - 7/8 - Scrooge pays a reduced rate for a bumpy ride on a horse. (Oct. 31, 1957)",
+          "bbox": [
+            {
+              "h": 11.402069359756087,
+              "w": 125.65939596036583,
+              "x": 150.74821646341462,
+              "y": 165.1672179878049,
+              "confidence": 0.92,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Dell Pledge fills out the page.",
+          "value": "The Dell Pledge fills out the page.",
+          "bbox": [
+            {
+              "h": 5.379512195121969,
+              "w": 67.75271341463414,
+              "x": 155.31564786585363,
+              "y": 177.16942454268292,
+              "confidence": 0.88,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge takes precautions before going down with his ship. *(Oct. 31, 1957)*\nReprinted: *Uncle Scrooge* No. 97, February 1972.",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge takes precautions before going down with his ship. (Oct. 31, 1957)\nReprinted: Uncle Scrooge No. 97, February 1972.",
+          "bbox": [
+            {
+              "h": 17.543288871951216,
+              "w": 124.89487614329266,
+              "x": 152.04400724085366,
+              "y": 182.61545350609757,
+              "confidence": 0.95,
+              "end_index": 165,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 23 - Sept.-Nov. 1958 - 36 pages",
+          "value": "23 - Sept.-Nov. 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.55596798780487,
+              "w": 74.42302019817072,
+              "x": 150.72436166158536,
+              "y": 206.38817835365853,
+              "confidence": 0.95,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews sail paper airplanes made from currency. *(May 23, 1957)*",
+          "value": "Front cover (art only): The nephews sail paper airplanes made from currency. (May 23, 1957)",
+          "bbox": [
+            {
+              "h": 11.385914634146348,
+              "w": 125.58525914634141,
+              "x": 150.64010670731707,
+              "y": 212.33970274390242,
+              "confidence": 0.96,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 110, February 1974.",
+          "value": "Reprinted: Uncle Scrooge No. 110, February 1974.",
+          "bbox": [
+            {
+              "h": 5.386692073170725,
+              "w": 99.376171875,
+              "x": 155.36478086890244,
+              "y": 224.43717987804877,
+              "confidence": 0.92,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge and a maharajah compare what they're hauling. *(Dec. 5, 1957)*",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge and a maharajah compare what they're hauling. (Dec. 5, 1957)",
+          "bbox": [
+            {
+              "h": 12.136371951219507,
+              "w": 125.67723132621953,
+              "x": 150.6715243902439,
+              "y": 229.8847637195122,
+              "confidence": 0.94,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE and The Strange Shipwrecks - 21 - Scrooge goes to Gloomgurgle Straits in the North Pacific, where ships loaded with gold from his Alaskan mines have been mysteriously sinking. There, he learns too late that the lighthouse keepers at Raider Nick's Reef are actually the Beagle Boys, and that they have been terrorizing the ships with an inflated rubber \"ghost ship\" supposedly sailed by Raider Nick, a pirate whose ship was wrecked in the straits years before. *(Dec. 31, 1957)*",
+          "value": "UNCLE SCROOGE and The Strange Shipwrecks - 21 - Scrooge goes to Gloomgurgle Straits in the North Pacific, where ships loaded with gold from his Alaskan mines have been mysteriously sinking. There, he learns too late that the lighthouse keepers at Raider Nick's Reef are actually the Beagle Boys, and that they have been terrorizing the ships with an inflated rubber \"ghost ship\" supposedly sailed by Raider Nick, a pirate whose ship was wrecked in the straits years before. (Dec. 31, 1957)",
+          "bbox": [
+            {
+              "h": 52.20763719512194,
+              "w": 125.741953125,
+              "x": 150.83758193597558,
+              "y": 242.3683307926829,
+              "confidence": 0.97,
+              "end_index": 490,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"This story was stretched from a short one by Nick George.\"",
+          "value": "Barks: \"This story was stretched from a short one by Nick George.\"",
+          "bbox": [
+            {
+              "h": 11.185815548780464,
+              "w": 125.47495426829269,
+              "x": 151.0331707317073,
+              "y": 295.5416158536585,
+              "confidence": 0.96,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 119, June 1975; *Walt Disney Comics Digest* No. 5, November 1968.",
+          "value": "Reprinted: Uncle Scrooge No. 119, June 1975; Walt Disney Comics Digest No. 5, November 1968.",
+          "bbox": [
+            {
+              "h": 11.2361432926829,
+              "w": 125.6261261432927,
+              "x": 151.0507488567073,
+              "y": 307.45854420731706,
+              "confidence": 0.96,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE - 4 - Gyro tries to \"stiffen\" the water in his swimming pool so that the neighbors won't know he can't swim. *(Jan. 9, 1958)*",
+          "value": "GYRO GEARLOOSE - 4 - Gyro tries to \"stiffen\" the water in his swimming pool so that the neighbors won't know he can't swim. (Jan. 9, 1958)",
+          "bbox": [
+            {
+              "h": 17.454123475609794,
+              "w": 124.96597751524388,
+              "x": 150.96268673780486,
+              "y": 319.7426295731707,
+              "confidence": 0.97,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE and The Fabulous Tycoon - 5 - Scrooge and Donald visit the ranch of Longhorn Tallgrass, reputed to be a tycoon richer than Scrooge. *(Jan. 9, 1958)*",
+          "value": "UNCLE SCROOGE and The Fabulous Tycoon - 5 - Scrooge and Donald visit the ranch of Longhorn Tallgrass, reputed to be a tycoon richer than Scrooge. (Jan. 9, 1958)",
+          "bbox": [
+            {
+              "h": 17.605929878048755,
+              "w": 125.80399961890242,
+              "x": 150.342890625,
+              "y": 337.55798780487805,
+              "confidence": 0.98,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "142 Carl Barks and the Art of the Comic Book",
+              "value": "142 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.480632621951244,
+                  "w": 77.6664715129573,
+                  "x": 37.018026391006096,
+                  "y": 363.7066463414634,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "142 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.48,
+              "w": 77.67,
+              "x": 37.02,
+              "y": 363.71,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "142"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+![A comic book cover for Walt Disney's Comics and Stories. The illustration shows Daisy Duck holding a broom and looking angry at Huey, Dewey, and Louie, who are playing with a string of firecrackers near a box labeled "HOME WAVE".](CBatAotCB-200_page_1_image_1_v2.jpg)

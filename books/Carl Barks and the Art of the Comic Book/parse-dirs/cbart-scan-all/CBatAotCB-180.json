@@ -1,0 +1,637 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "BUT NOW I HAVE GOOD NEWS FOR ALL YOU FANS! FULLDRIP PULPBUGLE, THE FABULOUS JAVELIN THROWER, IS WARMING UP TO THROW!",
+          "md": "![BUT NOW I HAVE GOOD NEWS FOR ALL YOU FANS! FULLDRIP PULPBUGLE, THE FABULOUS JAVELIN THROWER, IS WARMING UP TO THROW!](CBatAotCB-180_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-180_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 71.360390625,
+              "w": 85.58000619283536,
+              "x": 43.207670064786576,
+              "y": 12.810834603658536,
+              "confidence": 0.96,
+              "end_index": 141,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "HE'S POISED TO START HIS RUN! AT LAST DUCKBURG IS GOING TO SEE A REAL STAR PERFORM! AH!.. AH!",
+          "md": "![HE'S POISED TO START HIS RUN! AT LAST DUCKBURG IS GOING TO SEE A REAL STAR PERFORM! AH!.. AH!](CBatAotCB-180_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-180_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 71.08011385289633,
+              "w": 112.92988376524391,
+              "x": 130.59780297256094,
+              "y": 12.60453172637195,
+              "confidence": 0.97,
+              "end_index": 118,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "CHOO! WHO LET DANDELIONS GROW IN HERE? THEY GIVE ME HAY FEVER!.. WHOOSH! AH-CHOOF! CHOO",
+          "md": "![CHOO! WHO LET DANDELIONS GROW IN HERE? THEY GIVE ME HAY FEVER!.. WHOOSH! AH-CHOOF! CHOO](CBatAotCB-180_page_1_image_4_v2.jpg)",
+          "url": "CBatAotCB-180_page_1_image_4_v2.jpg",
+          "bbox": [
+            {
+              "h": 70.36006669207316,
+              "w": 102.94409394054878,
+              "x": 43.91141673018293,
+              "y": 86.42151105182927,
+              "confidence": 0.94,
+              "end_index": 112,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "THE GREAT PULPBUGLE IS THROUGH FOR THE DANDELION SEASON! SORRY! ... NEXT THROWER IS - I'M VERY SORRY - DONALD DUCK! AH-CHOO!",
+          "md": "![THE GREAT PULPBUGLE IS THROUGH FOR THE DANDELION SEASON! SORRY! ... NEXT THROWER IS - I'M VERY SORRY - DONALD DUCK! AH-CHOO!](CBatAotCB-180_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-180_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 70.53623666158538,
+              "w": 95.04523056402437,
+              "x": 148.83158346036586,
+              "y": 86.3393311737805,
+              "confidence": 0.95,
+              "end_index": 149,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From *Walt Disney's Comics* No. 188, May 1956; © 1956 Walt Disney Productions.",
+          "value": "From Walt Disney's Comics No. 188, May 1956; © 1956 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.7145236280487826,
+              "w": 158.82345703125,
+              "x": 64.91880668826218,
+              "y": 161.38095274390244,
+              "confidence": 0.93,
+              "end_index": 77,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald attends a \"suppressed desire\" party dressed as a knight in shining armor, and the other partygoers scoff at him. *(Mar. 15, 1956)*",
+          "value": "DONALD DUCK - 10 - Donald attends a \"suppressed desire\" party dressed as a knight in shining armor, and the other partygoers scoff at him. (Mar. 15, 1956)",
+          "bbox": [
+            {
+              "h": 17.991779725609767,
+              "w": 126.40879751810213,
+              "x": 11.312116163300304,
+              "y": 173.07337271341464,
+              "confidence": 0.97,
+              "end_index": 155,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"I bought the basic idea for this story from my daughter who lived in Washington state.\"",
+          "value": "Barks: \"I bought the basic idea for this story from my daughter who lived in Washington state.\"",
+          "bbox": [
+            {
+              "h": 11.404481707317071,
+              "w": 126.37607433784297,
+              "x": 11.306570479230183,
+              "y": 191.31141768292684,
+              "confidence": 0.96,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A bus' destination is identified as \"Hemet,\" a California town near San Jacinto, where Barks lived at the time.",
+          "value": "A bus' destination is identified as \"Hemet,\" a California town near San Jacinto, where Barks lived at the time.",
+          "bbox": [
+            {
+              "h": 10.949611280487824,
+              "w": 126.29280118616614,
+              "x": 11.17824587938262,
+              "y": 203.33220274390243,
+              "confidence": 0.95,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck* No. 135, January 1971.",
+          "value": "Reprinted: Donald Duck No. 135, January 1971.",
+          "bbox": [
+            {
+              "h": 5.618734756097565,
+              "w": 95.78949052019817,
+              "x": 15.541255478277439,
+              "y": 214.897568597561,
+              "confidence": 0.93,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 199 (17/7) - April 1957 - 36 pages",
+          "value": "199 (17/7) - April 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 6.024672256097538,
+              "w": 79.06600752667683,
+              "x": 11.43474609375,
+              "y": 226.35148628048782,
+              "confidence": 0.95,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews get paint all over themselves and none on the canvas. *(Sept. 6, 1956)*",
+          "value": "Front cover (art only): The nephews get paint all over themselves and none on the canvas. (Sept. 6, 1956)",
+          "bbox": [
+            {
+              "h": 11.823887195121943,
+              "w": 126.46910227705793,
+              "x": 11.212110565929876,
+              "y": 232.4696112804878,
+              "confidence": 0.93,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Gyro invents a machine that lets the ducks see greatly magnified versions of everyday life. *(Sept. 20, 1956)*",
+          "value": "DONALD DUCK - 10 - Gyro invents a machine that lets the ducks see greatly magnified versions of everyday life. (Sept. 20, 1956)",
+          "bbox": [
+            {
+              "h": 11.525442073170725,
+              "w": 126.86421136623474,
+              "x": 10.777352086509145,
+              "y": 244.41482469512195,
+              "confidence": 0.91,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 434, November 1976.",
+          "value": "Reprinted: Walt Disney's Comics No. 434, November 1976.",
+          "bbox": [
+            {
+              "h": 5.491714939024405,
+              "w": 118.78591070407772,
+              "x": 15.835096346227134,
+              "y": 262.45900152439026,
+              "confidence": 0.95,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 200 (17/8) - May 1957 - 36 pages",
+          "value": "200 (17/8) - May 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.83900152439026,
+              "w": 76.65655249618901,
+              "x": 11.377544302591462,
+              "y": 273.866181402439,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews startle Donald with a frog under a top hat. *(Nov. 29, 1956)*",
+          "value": "Front cover (art only): The nephews startle Donald with a frog under a top hat. (Nov. 29, 1956)",
+          "bbox": [
+            {
+              "h": 11.64009146341461,
+              "w": 125.9536376953125,
+              "x": 11.380488638528961,
+              "y": 279.9809908536585,
+              "confidence": 0.97,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's list shows that an idea for a front cover identified as \"Donald Duck 'Frog in Hat'\" was accepted by Western on September 17, 1953, and the drawing for that cover was accepted on October 8, 1953. That drawing was apparently never published.",
+          "value": "Barks's list shows that an idea for a front cover identified as \"Donald Duck 'Frog in Hat'\" was accepted by Western on September 17, 1953, and the drawing for that cover was accepted on October 8, 1953. That drawing was apparently never published.",
+          "bbox": [
+            {
+              "h": 23.23923018292684,
+              "w": 126.3279960222942,
+              "x": 11.130000357278961,
+              "y": 292.04400914634147,
+              "confidence": 0.92,
+              "end_index": 246,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald starts a pet service to feed pets whose owners are on vacation, and some of the pets are highly unusual. *(Apr. 5, 1956)*",
+          "value": "DONALD DUCK - 10 - Donald starts a pet service to feed pets whose owners are on vacation, and some of the pets are highly unusual. (Apr. 5, 1956)",
+          "bbox": [
+            {
+              "h": 18.06269817073171,
+              "w": 126.28999082983994,
+              "x": 11.185343583269816,
+              "y": 314.94656249999997,
+              "confidence": 0.94,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"Got basic idea of this from my daughter.\"",
+          "value": "Barks: \"Got basic idea of this from my daughter.\"",
+          "bbox": [
+            {
+              "h": 5.490274390243885,
+              "w": 97.50076922160822,
+              "x": 15.527028987233232,
+              "y": 333.3571417682927,
+              "confidence": 0.9,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 360, September 1970.",
+          "value": "Reprinted: Walt Disney's Comics No. 360, September 1970.",
+          "bbox": [
+            {
+              "h": 10.48429115853658,
+              "w": 125.20206459603658,
+              "x": 11.293679496951219,
+              "y": 339.18384146341464,
+              "confidence": 0.96,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 201 (17/9) - June 1957 - 36 pages",
+          "value": "201 (17/9) - June 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 6.101227134146347,
+              "w": 77.3030030487805,
+              "x": 150.20442644817072,
+              "y": 173.46955792682928,
+              "confidence": 0.96,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald mistakenly dumps a powerful dye invented by Gyro in the city reservoir, dying much of the city red. *(July 5, 1956)*",
+          "value": "DONALD DUCK - 10 - Donald mistakenly dumps a powerful dye invented by Gyro in the city reservoir, dying much of the city red. (July 5, 1956)",
+          "bbox": [
+            {
+              "h": 17.660133384146345,
+              "w": 126.51473894817072,
+              "x": 149.90354039634144,
+              "y": 179.45943978658536,
+              "confidence": 0.98,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 435, December 1976.",
+          "value": "Reprinted: Walt Disney's Comics No. 435, December 1976.",
+          "bbox": [
+            {
+              "h": 5.6970960365853625,
+              "w": 118.66933879573168,
+              "x": 154.45977324695122,
+              "y": 197.446943597561,
+              "confidence": 0.96,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 202 (17/10) - July 1957 - 36 pages",
+          "value": "202 (17/10) - July 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 6.097179878048783,
+              "w": 78.6946589176829,
+              "x": 150.15056021341462,
+              "y": 208.94169969512197,
+              "confidence": 0.95,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and Scrooge go to an Indian reservation to learn the medicine man's secret of making rain. *(May 31, 1956)*",
+          "value": "DONALD DUCK - 10 - Donald and Scrooge go to an Indian reservation to learn the medicine man's secret of making rain. (May 31, 1956)",
+          "bbox": [
+            {
+              "h": 17.466882621951218,
+              "w": 126.30140053353658,
+              "x": 149.9527076981707,
+              "y": 215.0084679878049,
+              "confidence": 0.98,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 381, June 1972.",
+          "value": "Reprinted: Walt Disney's Comics No. 381, June 1972.",
+          "bbox": [
+            {
+              "h": 5.47746951219513,
+              "w": 106.66584603658534,
+              "x": 154.57458841463415,
+              "y": 232.98912347560974,
+              "confidence": 0.95,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 203 (17/11) - August 1957 - 36 pages",
+          "value": "203 (17/11) - August 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 6.213818597561012,
+              "w": 86.97570503048779,
+              "x": 150.20727324695122,
+              "y": 244.36157012195122,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews are hired to deliver a package within twenty minutes, but a lion blocks their way. *(Oct. 11, 1956)*",
+          "value": "DONALD DUCK - 10 - The nephews are hired to deliver a package within twenty minutes, but a lion blocks their way. (Oct. 11, 1956)",
+          "bbox": [
+            {
+              "h": 17.543506097560986,
+              "w": 126.53470083841461,
+              "x": 149.967353277439,
+              "y": 250.4698856707317,
+              "confidence": 0.97,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 374, November 1971.",
+          "value": "Reprinted: Walt Disney's Comics No. 374, November 1971.",
+          "bbox": [
+            {
+              "h": 5.5612271341463195,
+              "w": 119.24440929878045,
+              "x": 154.4918426067073,
+              "y": 268.6799542682927,
+              "confidence": 0.96,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 204 (17/12) - September 1957 - 36 pages",
+          "value": "204 (17/12) - September 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 6.049847560975595,
+              "w": 95.99134527439023,
+              "x": 149.75917682926828,
+              "y": 280.33852134146343,
+              "confidence": 0.96,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The nephews try to play checkers with Mexican jumping beans. *(Jan. 25, 1957)*",
+          "value": "Front cover: The nephews try to play checkers with Mexican jumping beans. (Jan. 25, 1957)",
+          "bbox": [
+            {
+              "h": 11.33391768292684,
+              "w": 126.15679687500003,
+              "x": 149.58739138719508,
+              "y": 286.558262195122,
+              "confidence": 0.97,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and the nephews, as park workers, try to clean the sculptured head of Senator Snoggin that is carved into a mountainside. *(June 21, 1956)*",
+          "value": "DONALD DUCK - 10 - Donald and the nephews, as park workers, try to clean the sculptured head of Senator Snoggin that is carved into a mountainside. (June 21, 1956)",
+          "bbox": [
+            {
+              "h": 17.600967987804868,
+              "w": 126.50240853658534,
+              "x": 149.5003067835366,
+              "y": 298.2936128048781,
+              "confidence": 0.98,
+              "end_index": 164,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 205 (18/1) - October 1957 - 36 pages",
+          "value": "205 (18/1) - October 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.96112804878052,
+              "w": 86.27244283536585,
+              "x": 149.7851924542683,
+              "y": 321.817431402439,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald tries to raise a prime crop of apples, but his efforts benefit only Gladstone's tree. *(Sept. 25, 1956)*",
+          "value": "DONALD DUCK - 10 - Donald tries to raise a prime crop of apples, but his efforts benefit only Gladstone's tree. (Sept. 25, 1956)",
+          "bbox": [
+            {
+              "h": 17.27860518292684,
+              "w": 126.3616806402439,
+              "x": 149.51807355182925,
+              "y": 327.6797103658537,
+              "confidence": 0.98,
+              "end_index": 129,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 387, December 1972.",
+          "value": "Reprinted: Walt Disney's Comics No. 387, December 1972.",
+          "bbox": [
+            {
+              "h": 5.75908536585368,
+              "w": 118.39565167682927,
+              "x": 154.198125,
+              "y": 345.60775152439027,
+              "confidence": 0.96,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "180 Carl Barks and the Art of the Comic Book",
+              "value": "180 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.5621036585365795,
+                  "w": 83.32858064977133,
+                  "x": 28.698250524009143,
+                  "y": 366.66905487804877,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "180 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.56,
+              "w": 83.33,
+              "x": 28.7,
+              "y": 366.67,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "180"
+    }
+  ]
+}

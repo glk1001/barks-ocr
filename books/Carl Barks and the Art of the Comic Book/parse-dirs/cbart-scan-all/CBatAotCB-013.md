@@ -1,0 +1,5 @@
+![A three-panel comic strip showing a dog and cat chasing each other around an outhouse. In the first panel, they run around it. In the second, they wrap a rope around it. In the third, the outhouse is lifted up by the rope, revealing the dog and cat inside, with the dog exclaiming "WHAT THA-!"](CBatAotCB-013_page_1_image_1_v2.jpg)
+
+On this page and the three following are examples of Barks's work as a cartoonist for the *Calgary Eye-Opener*. He was the art director of *Coo-Coo*, a short lived (one issue in 1932) magazine from the publisher of *Eye-Opener*.
+
+![A two-panel comic strip about a tattoo artist. In the first panel, a man asks a sailor, "WHY DO YOU WANT MABEL TAKEN OFF YOUR ARM?" A sign reads "TATTOOS PUT ON OR TOOK OFF $3.00 PER." In the second panel, the sailor shows his arm where the tattoo has been modified to look like a different woman, saying "SEE!"](CBatAotCB-013_page_1_image_2_v2.jpg)

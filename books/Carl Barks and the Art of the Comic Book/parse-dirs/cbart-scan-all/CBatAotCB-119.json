@@ -1,0 +1,381 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# GOLDEN DIGEST (Gold Key)",
+          "value": "GOLDEN DIGEST (Gold Key)",
+          "bbox": [
+            {
+              "h": 7.382418064024391,
+              "w": 100.75895722179875,
+              "x": 25.17987947789634,
+              "y": 16.713861471036587,
+              "confidence": 0.98,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "All issues of *Golden Digest* were approximately 4 7/8 inches wide and 6 5/8 inches tall.",
+          "value": "All issues of Golden Digest were approximately 4 7/8 inches wide and 6 5/8 inches tall.",
+          "bbox": [
+            {
+              "h": 10.460219131097562,
+              "w": 124.65636992663872,
+              "x": 11.545587962080791,
+              "y": 27.65317168445122,
+              "confidence": 0.98,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 18 - July 1971 - 164 pages",
+          "value": "18 - July 1971 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.688947217987811,
+              "w": 62.61146984565549,
+              "x": 11.453899818978657,
+              "y": 45.134053925304876,
+              "confidence": 0.96,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO Camping Out - 8 (pp. 66-73) - A reprint of \"BARNEY BEAR AND BENNY BURRO\" in *Our Gang* No. 24, July 1946.\nChanges: Title changed as indicated.",
+          "value": "BARNEY BEAR AND BENNY BURRO Camping Out - 8 (pp. 66-73) - A reprint of \"BARNEY BEAR AND BENNY BURRO\" in Our Gang No. 24, July 1946.\nChanges: Title changed as indicated.",
+          "bbox": [
+            {
+              "h": 17.01909489329269,
+              "w": 124.4385876762576,
+              "x": 11.877816668254573,
+              "y": 51.33690548780488,
+              "confidence": 0.94,
+              "end_index": 169,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 22 - March 1972 - 164 pages",
+          "value": "22 - March 1972 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.468603277439028,
+              "w": 62.467563952934455,
+              "x": 11.600180902248475,
+              "y": 80.81888528963414,
+              "confidence": 0.95,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DROOPY The Hero Hound - 11 (originally 8) (pp. 143-153) - A reprint of \"DROOPY\" in *Tom and Jerry Winter Carnival* No. 2, 1953.\nChanges: Title changed as indicated. The panels for the original eight-page story have been trimmed and partially re-drawn so that the pages are three panels deep.",
+          "value": "DROOPY The Hero Hound - 11 (originally 8) (pp. 143-153) - A reprint of \"DROOPY\" in Tom and Jerry Winter Carnival No. 2, 1953.\nChanges: Title changed as indicated. The panels for the original eight-page story have been trimmed and partially re-drawn so that the pages are three panels deep.",
+          "bbox": [
+            {
+              "h": 17.188559451219508,
+              "w": 124.83271925019052,
+              "x": 12.013841344321644,
+              "y": 104.65498856707318,
+              "confidence": 0.92,
+              "end_index": 290,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 41 - January 1975 - 132 pages",
+          "value": "41 - January 1975 - 132 pages",
+          "bbox": [
+            {
+              "h": 5.68184451219513,
+              "w": 71.89449695121951,
+              "x": 11.645713605182925,
+              "y": 128.2692987804878,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DROOPY King of the Hounds - 11 (originally 8) (pp. 65-75) - A reprint of \"DROOPY\" in *Tom and Jerry Winter Carnival* No. 1, 1952.\nChanges: Title changed as indicated. The panels for the original eight-page story have been trimmed and partially re-drawn so that the pages are three panels deep.",
+          "value": "DROOPY King of the Hounds - 11 (originally 8) (pp. 65-75) - A reprint of \"DROOPY\" in Tom and Jerry Winter Carnival No. 1, 1952.\nChanges: Title changed as indicated. The panels for the original eight-page story have been trimmed and partially re-drawn so that the pages are three panels deep.",
+          "bbox": [
+            {
+              "h": 17.32607469512197,
+              "w": 124.75620295826982,
+              "x": 12.259922232278962,
+              "y": 152.29162728658537,
+              "confidence": 0.92,
+              "end_index": 292,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# GRANDMA DUCK'S FARM FRIENDS (Dell)",
+          "value": "GRANDMA DUCK'S FARM FRIENDS (Dell)",
+          "bbox": [
+            {
+              "h": 13.992176067073187,
+              "w": 96.34933450838415,
+              "x": 24.733077839176826,
+              "y": 183.31338795731708,
+              "confidence": 0.99,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 1010 - July-Sept. 1959 - 36 pages",
+          "value": "Four Color 1010 - July-Sept. 1959 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.649214939024377,
+              "w": 108.22121641577743,
+              "x": 11.61224871379573,
+              "y": 201.6853582317073,
+              "confidence": 0.96,
+              "end_index": 43,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "GRANDMA DUCK'S FARM FRIENDS and the Flying Farm Hand - 8 - art only - Dumbo comes to Grandma's farm, at the nephews' invitation, but scares the animals until the nephews hit on using him as a scarecrow. *(Mar. 6, 1959)*\nGRANDMA DUCK'S FARM FRIENDS and A Honey of a Hen - 7 - art only - Scrooge, at Grandma's farm to buy some produce, fakes an accident so that he can enjoy Grandma's cooking for a few days, but he gives himself away when he sees a hen in danger from a chicken hawk. *(Mar. 6, 1959)*\nGRANDMA DUCK'S FARM FRIENDS and the Weather Watchers - 7 - art only - Gyro invents a mechanical weather-vane for Grandma's farm, but Grandma's goat interferes with it, causing it to give out alarming forecasts. *(Mar. 6, 1959)*",
+          "value": "GRANDMA DUCK'S FARM FRIENDS and the Flying Farm Hand - 8 - art only - Dumbo comes to Grandma's farm, at the nephews' invitation, but scares the animals until the nephews hit on using him as a scarecrow. (Mar. 6, 1959)\nGRANDMA DUCK'S FARM FRIENDS and A Honey of a Hen - 7 - art only - Scrooge, at Grandma's farm to buy some produce, fakes an accident so that he can enjoy Grandma's cooking for a few days, but he gives himself away when he sees a hen in danger from a chicken hawk. (Mar. 6, 1959)\nGRANDMA DUCK'S FARM FRIENDS and the Weather Watchers - 7 - art only - Gyro invents a mechanical weather-vane for Grandma's farm, but Grandma's goat interferes with it, causing it to give out alarming forecasts. (Mar. 6, 1959)",
+          "bbox": [
+            {
+              "h": 35.22427591463417,
+              "w": 125.2041032298018,
+              "x": 11.898437738185974,
+              "y": 231.36102896341464,
+              "confidence": 0.89,
+              "end_index": 726,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney comics Digest* No. 56, December 1975.\nGRANDMA DUCK'S FARM FRIENDS and the Sheepish Cowboys - 6 7/8 - art only - The nephews ride on sheep when their horse runs away, but the other sheep follow their mounts. The nephews pen up the sheep in a gully, where the Big Bad Wolf finds them. *(Mar. 6, 1959)*\nThe Dell Pledge fills out the last page.\nReprinted: *Walt Disney Comics Digest* No. 50, December 1974; *Walt Disney's Comics* No. 293, February 1965.",
+          "value": "Reprinted: Walt Disney comics Digest No. 56, December 1975.\nGRANDMA DUCK'S FARM FRIENDS and the Sheepish Cowboys - 6 7/8 - art only - The nephews ride on sheep when their horse runs away, but the other sheep follow their mounts. The nephews pen up the sheep in a gully, where the Big Bad Wolf finds them. (Mar. 6, 1959)\nThe Dell Pledge fills out the last page.\nReprinted: Walt Disney Comics Digest No. 50, December 1974; Walt Disney's Comics No. 293, February 1965.",
+          "bbox": [
+            {
+              "h": 35.0543140243902,
+              "w": 125.05972251333839,
+              "x": 12.082270626905487,
+              "y": 296.79560213414635,
+              "confidence": 0.91,
+              "end_index": 472,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 1073 - Jan.-Mar. 1960 - 36 pages",
+          "value": "Four Color 1073 - Jan.-Mar. 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.693135956554877,
+              "w": 107.47025533536585,
+              "x": 150.4421512957317,
+              "y": 17.119740377286586,
+              "confidence": 0.97,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Grandma cracks an egg for Gus Goose's breakfast and finds a chick inside. *(July 18, 1959)*\nGRANDMA DUCK Mopping Up - 1 (inside front cover) - art only - Grandma puts down fly paper to keep Gus from tracking up her kitchen floor. *(July 28, 1959)*\nGRANDMA DUCK'S FARM FRIENDS Touche' Toupee' - 6 - art only - After Grandma's horse eats some of his hay and apples, her neighbor Si Bumpkin accuses her of stealing his eggs. *(July 15, 1959)*\nReprinted: *Walt Disney Comics Digest* No. 39, \\[February] 1973.\nGRANDMA DUCK'S FARM FRIENDS The Snow Chaser - 6 - art only - Gyro uses a \"snow chaser\" to vaporize snow on Grandma's farm, but through a series of misadventures, the vaporized snow builds up in storm clouds overhead. *(July 28, 1959)*\nGRANDMA DUCK'S FARM FRIENDS Free Ski Spree - 6 - art only - Scrooge tries winter sports at Grandma's, but has little luck at ice skating, tobogganing or skiing. *(July 15, 1959)*\nReprinted: *Walt Disney Comics Digest* No. 20, February 1970.",
+          "value": "Front cover: Grandma cracks an egg for Gus Goose's breakfast and finds a chick inside. (July 18, 1959)\nGRANDMA DUCK Mopping Up - 1 (inside front cover) - art only - Grandma puts down fly paper to keep Gus from tracking up her kitchen floor. (July 28, 1959)\nGRANDMA DUCK'S FARM FRIENDS Touche' Toupee' - 6 - art only - After Grandma's horse eats some of his hay and apples, her neighbor Si Bumpkin accuses her of stealing his eggs. (July 15, 1959)\nReprinted: Walt Disney Comics Digest No. 39, [February] 1973.\nGRANDMA DUCK'S FARM FRIENDS The Snow Chaser - 6 - art only - Gyro uses a \"snow chaser\" to vaporize snow on Grandma's farm, but through a series of misadventures, the vaporized snow builds up in storm clouds overhead. (July 28, 1959)\nGRANDMA DUCK'S FARM FRIENDS Free Ski Spree - 6 - art only - Scrooge tries winter sports at Grandma's, but has little luck at ice skating, tobogganing or skiing. (July 15, 1959)\nReprinted: Walt Disney Comics Digest No. 20, February 1970.",
+          "bbox": [
+            {
+              "h": 29.00210556402439,
+              "w": 125.1225171493902,
+              "x": 150.70517149390244,
+              "y": 88.0673037347561,
+              "confidence": 0.86,
+              "end_index": 992,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 1161 - Feb.-Apr. 1961 \\[(January) 1961] - 36 pages",
+          "value": "Four Color 1161 - Feb.-Apr. 1961 [(January) 1961] - 36 pages",
+          "bbox": [
+            {
+              "h": 11.843986280487798,
+              "w": 125.00814786585367,
+              "x": 150.85913871951217,
+              "y": 153.0196074695122,
+              "confidence": 0.98,
+              "end_index": 59,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "GRANDMA DUCK'S FARM FRIENDS The Whole Herd of Help - 8 - art only - Scrooge gives Grandma an elephant that he has received as a gift, and the elephant proves useful on the farm. *(Aug. 8, 1960)*\nReprinted: *Walt Disney Comics Digest* No. 34, April 1972.\nGRANDMA DUCK'S FARM FRIENDS The Day the Farm Stood Still - 6 - Grandma wakes to find the farm silent, waiting for the return of a precocious chick who has upset all of the surrounding farmers with his efforts to help them. *(Aug. 8, 1960)*\nReprinted: *Walt Disney Comics Digest* No. 10, April 1969.\nGRANDMA DUCK'S FARM FRIENDS The Training Farm Fuss - 7 - art only - Gladstone practices being a matador, using one of Grandma's bulls, then heads for Mexico. *(Aug. 8, 1960)*\nReprinted: *Walt Disney Comics Digest* No. 21, April 1970.\nGRANDMA DUCK'S FARM FRIENDS The Reversed Rescue - 7 - art only - Donald flies in a helicopter to Grandma's snowbound farm, but is shot down by the Beagle Boys, and Grandma and the nephews have to rescue him. *(Aug. 8, 1960)*\nReprinted: *Walt Disney Comics Digest* No. 19, January 1970.",
+          "value": "GRANDMA DUCK'S FARM FRIENDS The Whole Herd of Help - 8 - art only - Scrooge gives Grandma an elephant that he has received as a gift, and the elephant proves useful on the farm. (Aug. 8, 1960)\nReprinted: Walt Disney Comics Digest No. 34, April 1972.\nGRANDMA DUCK'S FARM FRIENDS The Day the Farm Stood Still - 6 - Grandma wakes to find the farm silent, waiting for the return of a precocious chick who has upset all of the surrounding farmers with his efforts to help them. (Aug. 8, 1960)\nReprinted: Walt Disney Comics Digest No. 10, April 1969.\nGRANDMA DUCK'S FARM FRIENDS The Training Farm Fuss - 7 - art only - Gladstone practices being a matador, using one of Grandma's bulls, then heads for Mexico. (Aug. 8, 1960)\nReprinted: Walt Disney Comics Digest No. 21, April 1970.\nGRANDMA DUCK'S FARM FRIENDS The Reversed Rescue - 7 - art only - Donald flies in a helicopter to Grandma's snowbound farm, but is shot down by the Beagle Boys, and Grandma and the nephews have to rescue him. (Aug. 8, 1960)\nReprinted: Walt Disney Comics Digest No. 19, January 1970.",
+          "bbox": [
+            {
+              "h": 29.56035823170733,
+              "w": 125.09850800304878,
+              "x": 151.1718407012195,
+              "y": 194.4617606707317,
+              "confidence": 0.85,
+              "end_index": 1071,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# GYRO GEARLOOSE (Dell)",
+          "value": "GYRO GEARLOOSE (Dell)",
+          "bbox": [
+            {
+              "h": 7.483102134146375,
+              "w": 90.70185594512196,
+              "x": 165.40087842987802,
+              "y": 312.1545045731707,
+              "confidence": 0.98,
+              "end_index": 20,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 1047 - Nov.-Jan. 1960 - 36 pages",
+          "value": "Four Color 1047 - Nov.-Jan. 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.46891768292684,
+              "w": 110.09601562500002,
+              "x": 151.2172351371951,
+              "y": 326.4485899390244,
+              "confidence": 0.95,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Gyro pedals a machine that runs instead of rolls. *(Feb. 4, 1959)*\nReprinted: *Walt Disney Showcase* No. 18, October 1973.",
+          "value": "Front cover: Gyro pedals a machine that runs instead of rolls. (Feb. 4, 1959)\nReprinted: Walt Disney Showcase No. 18, October 1973.",
+          "bbox": [
+            {
+              "h": 11.140129573170725,
+              "w": 124.93152439024388,
+              "x": 151.42534298780487,
+              "y": 332.19980945121955,
+              "confidence": 0.89,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n119",
+              "value": "Carl Barks and the Art of the Comic Book\n119",
+              "bbox": [
+                {
+                  "h": 4.708788109756115,
+                  "w": 77.69071646341463,
+                  "x": 172.91467797256095,
+                  "y": 363.9878963414634,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n119",
+          "bbox": [
+            {
+              "h": 4.71,
+              "w": 77.69,
+              "x": 172.91,
+              "y": 363.99,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "119"
+    }
+  ]
+}

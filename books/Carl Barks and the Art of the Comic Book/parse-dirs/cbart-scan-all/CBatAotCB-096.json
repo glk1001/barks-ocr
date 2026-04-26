@@ -1,0 +1,201 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "issue number, but some are identified only by issue number. In cases of the latter kind, the cover on a particular issue is probably the one that was submitted for that issue, but there is no way to be sure, since Western sometimes moved a cover intended for one issue to another issue. In addition, there are some conflicts. For example, Barks's list shows that he submitted an unidentified cover for *Walt Disney's Comics* No. 167, August 1954, on November 6, 1953, and another cover, identified as \"fly on beak,\" for the same issue on March 18, 1954. Since the latter cover actually appeared on No. 167, the November 6, 1953 cover probably appeared elsewhere, possibly on No. 168, for which no cover drawing is listed, but which does have a Barks drawing on its cover. Such conflicts are pointed out in notes to the appropriate entries.",
+          "value": "issue number, but some are identified only by issue number. In cases of the latter kind, the cover on a particular issue is probably the one that was submitted for that issue, but there is no way to be sure, since Western sometimes moved a cover intended for one issue to another issue. In addition, there are some conflicts. For example, Barks's list shows that he submitted an unidentified cover for Walt Disney's Comics No. 167, August 1954, on November 6, 1953, and another cover, identified as \"fly on beak,\" for the same issue on March 18, 1954. Since the latter cover actually appeared on No. 167, the November 6, 1953 cover probably appeared elsewhere, possibly on No. 168, for which no cover drawing is listed, but which does have a Barks drawing on its cover. Such conflicts are pointed out in notes to the appropriate entries.",
+          "bbox": [
+            {
+              "h": 147.17171827362804,
+              "w": 125.2579576743521,
+              "x": 12.230941906440547,
+              "y": 12.016021817835366,
+              "confidence": 0.99,
+              "end_index": 838,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "With the assistance of Kim Weston — and, of course, of Carl Barks — I have done as much as possible to eliminate the inconsistencies and ambiguities in Barks's list, and in the bibliography as a whole, but some remain, simply because the information needed to clear them up is not available in Barks's records. I have tried to make the limits of my knowledge clear in the bibliography entries for such items. Perhaps some future Barks scholar will have better luck in unraveling the few puzzles that are left.",
+          "value": "With the assistance of Kim Weston — and, of course, of Carl Barks — I have done as much as possible to eliminate the inconsistencies and ambiguities in Barks's list, and in the bibliography as a whole, but some remain, simply because the information needed to clear them up is not available in Barks's records. I have tried to make the limits of my knowledge clear in the bibliography entries for such items. Perhaps some future Barks scholar will have better luck in unraveling the few puzzles that are left.",
+          "bbox": [
+            {
+              "h": 89.07490472560974,
+              "w": 125.50368056878808,
+              "x": 12.492738066882621,
+              "y": 160.13802210365856,
+              "confidence": 0.99,
+              "end_index": 508,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In any event, too much importance should not be attached to the dates in the bibliography, since the dates do not tell us specifically when Barks was working on a story, or even when he completed it. The dates are best viewed as a rough guide to the time when each story was written and drawn, and, even more important, as a reliable guide to the chronological order in which the stories were written and drawn. Barks said in an April 17, 1967, letter that he \"ordinarily worked on only one story at a time. Never could comfortably mix them up or start a new one while one was still unfinished. The stories were a continuous",
+          "value": "In any event, too much importance should not be attached to the dates in the bibliography, since the dates do not tell us specifically when Barks was working on a story, or even when he completed it. The dates are best viewed as a rough guide to the time when each story was written and drawn, and, even more important, as a reliable guide to the chronological order in which the stories were written and drawn. Barks said in an April 17, 1967, letter that he \"ordinarily worked on only one story at a time. Never could comfortably mix them up or start a new one while one was still unfinished. The stories were a continuous",
+          "bbox": [
+            {
+              "h": 102.86709603658538,
+              "w": 125.23842344702743,
+              "x": 12.474224228277437,
+              "y": 249.14496951219513,
+              "confidence": 0.99,
+              "end_index": 623,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "chain-of-thought thing with me. They grew and were subject to change right up to the inking of the last panel. Besides, I liked a little mental rest after finishing a story.\"",
+          "value": "chain-of-thought thing with me. They grew and were subject to change right up to the inking of the last panel. Besides, I liked a little mental rest after finishing a story.\"",
+          "bbox": [
+            {
+              "h": 29.942848942454265,
+              "w": 124.88753620426832,
+              "x": 150.15299542682925,
+              "y": 11.915422780106708,
+              "confidence": 0.99,
+              "end_index": 173,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A chronological list of Barks's work is included in this book as Appendix A. One can learn from examining this list that — for example — the last *Uncle Scrooge* story written and drawn by Barks was not the last to be published and his later stories in *Walt Disney's Comics* were not published in anything like the order in which they were submitted.",
+          "value": "A chronological list of Barks's work is included in this book as Appendix A. One can learn from examining this list that — for example — the last Uncle Scrooge story written and drawn by Barks was not the last to be published and his later stories in Walt Disney's Comics were not published in anything like the order in which they were submitted.",
+          "bbox": [
+            {
+              "h": 58.96419683689025,
+              "w": 125.41505144817074,
+              "x": 150.72218368902438,
+              "y": 41.9336347179878,
+              "confidence": 0.95,
+              "end_index": 350,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In some cases, it is known — because the fact is noted on Barks's 1969 list, or I noticed it while examining a voucher — that a particular story was scheduled for an issue other than the one in which it appeared. I have noted such schedule changes in the bibliography, even though most of them were insignificant, just to give an indication of how extensively Barks's work was being juggled in the fifties and sixties.",
+          "value": "In some cases, it is known — because the fact is noted on Barks's 1969 list, or I noticed it while examining a voucher — that a particular story was scheduled for an issue other than the one in which it appeared. I have noted such schedule changes in the bibliography, even though most of them were insignificant, just to give an indication of how extensively Barks's work was being juggled in the fifties and sixties.",
+          "bbox": [
+            {
+              "h": 72.9978544207317,
+              "w": 125.1023494664634,
+              "x": 151.0696989329268,
+              "y": 101.51044207317074,
+              "confidence": 0.97,
+              "end_index": 417,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "One final point: to judge by the vouchers I have seen, the submission and acceptance of Barks's work were usually separated by only a few days, a week to ten days at most.",
+          "value": "One final point: to judge by the vouchers I have seen, the submission and acceptance of Barks's work were usually separated by only a few days, a week to ten days at most.",
+          "bbox": [
+            {
+              "h": 29.871642530487797,
+              "w": 125.37596798780487,
+              "x": 151.33980182926828,
+              "y": 175.18553734756097,
+              "confidence": 0.98,
+              "end_index": 170,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In regard to the number of pages in Barks's stories, pages were sometimes filled out with advertisements (usually house ads for other Dell and Gold Key comics), or with the Dell Pledge to Parents (Dell's answer to the Comics Code, to which Dell and Western Publishing never subscribed). It is likely that in many cases, panels were dropped or cropped to make room for such things, but it is impossible to be sure exactly what happened in each case. Barks's list indicates that he was usually paid for full pages, but that is not conclusive. Rather than speculate, I have simply noted, when the final page of a Barks story is filled out by the Dell Pledge or an advertisement.",
+          "value": "In regard to the number of pages in Barks's stories, pages were sometimes filled out with advertisements (usually house ads for other Dell and Gold Key comics), or with the Dell Pledge to Parents (Dell's answer to the Comics Code, to which Dell and Western Publishing never subscribed). It is likely that in many cases, panels were dropped or cropped to make room for such things, but it is impossible to be sure exactly what happened in each case. Barks's list indicates that he was usually paid for full pages, but that is not conclusive. Rather than speculate, I have simply noted, when the final page of a Barks story is filled out by the Dell Pledge or an advertisement.",
+          "bbox": [
+            {
+              "h": 110.98657774390246,
+              "w": 125.28553925304878,
+              "x": 151.2913719512195,
+              "y": 205.12403963414633,
+              "confidence": 0.99,
+              "end_index": 674,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks said in a 1974 interview that he did remember allowing space for the Dell Pledge \"in the later years. I recall that they would send out a request maybe for a one-page gag, and they would specify a certain page was for",
+          "value": "Barks said in a 1974 interview that he did remember allowing space for the Dell Pledge \"in the later years. I recall that they would send out a request maybe for a one-page gag, and they would specify a certain page was for",
+          "bbox": [
+            {
+              "h": 37.0245274390244,
+              "w": 124.90411966463417,
+              "x": 151.31749047256096,
+              "y": 316.2142911585366,
+              "confidence": 0.98,
+              "end_index": 222,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "96 Carl Barks and the Art of the Comic Book",
+              "value": "96 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.652012195121915,
+                  "w": 80.09320241044207,
+                  "x": 35.05703005907012,
+                  "y": 366.08540396341465,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "96 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.65,
+              "w": 80.09,
+              "x": 35.06,
+              "y": 366.09,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "96"
+    }
+  ]
+}

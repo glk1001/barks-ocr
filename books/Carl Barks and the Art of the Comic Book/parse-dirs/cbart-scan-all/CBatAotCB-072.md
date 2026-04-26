@@ -1,0 +1,3 @@
+![A comic strip page featuring Donald Duck. In the first panel, Donald is being chased by a large, horned monster on a rocky landscape, shouting "HELP! HELP!". In the second panel, he is running away from the monster, yelling "YEEK!". In the third panel, he is falling off a cliff while the monster watches from above, thinking "I'VE GOT TO ESCAPE THESE MEN FROM MARS SOMEHOW!". In the fourth panel, Donald is cornered by the monster and screams "SCREECH! HELP! SCREECH!". In the final panel, Donald is shown waking up in bed, realizing it was a nightmare, while Huey, Dewey, and Louie look on from the doorway. He is still shouting "SCREECH! YEEK! HELP!".](CBatAotCB-072_page_1_image_1_v2.jpg)
+
+From Walt Disney's Comics No. 101, February 1949; © 1949 Walt Disney Productions.

@@ -1,0 +1,235 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "\"Reprinted\" — Self-explanatory. I should add, however, that I have listed only those Better Little Book reprints that are in the \"All Pictures Comics\" format — that is, with panels from the original comic books reprinted one to a page. I have not listed those stories in which the comic-book artwork is on one page and the text on the facing page, since those versions strike me as too far removed from the originals to qualify as true reprints.",
+          "value": "\"Reprinted\" — Self-explanatory. I should add, however, that I have listed only those Better Little Book reprints that are in the \"All Pictures Comics\" format — that is, with panels from the original comic books reprinted one to a page. I have not listed those stories in which the comic-book artwork is on one page and the text on the facing page, since those versions strike me as too far removed from the originals to qualify as true reprints.",
+          "bbox": [
+            {
+              "h": 73.94633288871951,
+              "w": 125.0519988567073,
+              "x": 12.146252858231707,
+              "y": 12.688425114329268,
+              "confidence": 0.99,
+              "end_index": 444,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The entries for reprinted stories are also self-explanatory, I think, but I should say a word about the \"changes\" notes that follow many such entries. The \"changes\" listed here are the alterations that were made in the story as it was originally published. If, for example, a page was cut from a story before it was first published, and another page was deleted when the story was reprinted, only the second cut would be listed under the entry for the reprint.",
+          "value": "The entries for reprinted stories are also self-explanatory, I think, but I should say a word about the \"changes\" notes that follow many such entries. The \"changes\" listed here are the alterations that were made in the story as it was originally published. If, for example, a page was cut from a story before it was first published, and another page was deleted when the story was reprinted, only the second cut would be listed under the entry for the reprint.",
+          "bbox": [
+            {
+              "h": 81.23528391768292,
+              "w": 125.10780082888716,
+              "x": 12.161629430259145,
+              "y": 86.673984375,
+              "confidence": 0.99,
+              "end_index": 459,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "For what I hope are obvious reasons, I have not listed the bits and pieces of Barks art that were reprinted, as one example, on the back covers of the *March of Comics* giveaway.",
+          "value": "For what I hope are obvious reasons, I have not listed the bits and pieces of Barks art that were reprinted, as one example, on the back covers of the March of Comics giveaway.",
+          "bbox": [
+            {
+              "h": 29.355434451219505,
+              "w": 125.39151926924542,
+              "x": 12.242181188071644,
+              "y": 167.4158231707317,
+              "confidence": 0.99,
+              "end_index": 177,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**A FEW TERMS** should be defined here, since they turn up fairly often in the bibliography.",
+          "value": "A FEW TERMS should be defined here, since they turn up fairly often in the bibliography.",
+          "bbox": [
+            {
+              "h": 22.22332317073171,
+              "w": 125.0311602038872,
+              "x": 12.315227943978657,
+              "y": 211.11647103658535,
+              "confidence": 0.98,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Indicia\" refers to the information — the comic book's title, number and date; the publisher's name and address; subscription information; the copyright notice — that is usually published at the bottom of the first inside page of a comic book (and was published in the Dell titles, before they began accepting advertising in 1952, at the bottom of the inside front cover). The sentence \"Panels on first page trimmed for indicia,\" and variations thereof, which turns up frequently in the entries for the reprints, means that the panels were reduced in depth to accommodate the indicia at the bottom of the first page. (By contrast, in some stories the panels were increased in depth, because the indicia did not take up as",
+          "value": "\"Indicia\" refers to the information — the comic book's title, number and date; the publisher's name and address; subscription information; the copyright notice — that is usually published at the bottom of the first inside page of a comic book (and was published in the Dell titles, before they began accepting advertising in 1952, at the bottom of the inside front cover). The sentence \"Panels on first page trimmed for indicia,\" and variations thereof, which turns up frequently in the entries for the reprints, means that the panels were reduced in depth to accommodate the indicia at the bottom of the first page. (By contrast, in some stories the panels were increased in depth, because the indicia did not take up as",
+          "bbox": [
+            {
+              "h": 118.9288719512195,
+              "w": 125.15193156916918,
+              "x": 12.173551471989327,
+              "y": 233.35868140243903,
+              "confidence": 0.99,
+              "end_index": 720,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "much space as when the stories were first published.)",
+          "value": "much space as when the stories were first published.)",
+          "bbox": [
+            {
+              "h": 14.820181497713415,
+              "w": 124.83603658536582,
+              "x": 150.71292301829266,
+              "y": 12.795267244664634,
+              "confidence": 0.98,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"New versions\" — Barks only rarely duplicated the plots of earlier stories exactly, but there are many stories that seem to have been inspired by earlier stories. I have tried to identify as \"new versions\" only those stories that were unquestionably modeled on earlier stories, and have noted other stories that are highly similar to earlier efforts, if not quite identical in structure.",
+          "value": "\"New versions\" — Barks only rarely duplicated the plots of earlier stories exactly, but there are many stories that seem to have been inspired by earlier stories. I have tried to identify as \"new versions\" only those stories that were unquestionably modeled on earlier stories, and have noted other stories that are highly similar to earlier efforts, if not quite identical in structure.",
+          "bbox": [
+            {
+              "h": 65.62493426067074,
+              "w": 125.38771532012194,
+              "x": 150.59639291158535,
+              "y": 27.621971227134146,
+              "confidence": 0.99,
+              "end_index": 386,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Splash panel\" refers to the half-page title panels that Barks used to open many of his stories.",
+          "value": "\"Splash panel\" refers to the half-page title panels that Barks used to open many of his stories.",
+          "bbox": [
+            {
+              "h": 20.80289634146342,
+              "w": 124.72650342987802,
+              "x": 150.69513910060974,
+              "y": 94.32801448170731,
+              "confidence": 0.98,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**SO MUCH FOR** the mechanics of the bibliography. The really important question is, why is this bibliography so elaborate? A good question, because it is the people who buy this book who must pick up the tab for the filigree and furbelows that I have added.",
+          "value": "SO MUCH FOR the mechanics of the bibliography. The really important question is, why is this bibliography so elaborate? A good question, because it is the people who buy this book who must pick up the tab for the filigree and furbelows that I have added.",
+          "bbox": [
+            {
+              "h": 44.163544207317074,
+              "w": 125.09084222560976,
+              "x": 150.53895960365853,
+              "y": 129.33754573170734,
+              "confidence": 0.98,
+              "end_index": 257,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The basic answer, of course, is that Barks is an important artist — to my mind, one of the three or four genuine artists who have come out of comic books, and easily the greatest of the lot. I think that a complete and accurate catalog of his comic-book work is fully as justified as, say, another scholarly study of an obscure eighteenth century poet. Not every item on this list is nailed down as firmly as I would like, because, as I have already mentioned, not even Barks's records are a 100 per cent sure guide to what he did and did not do for comic books; there are notes in the bibliography that point up discrepancies between what Barks's records say he did and the evidence of the comic books themselves. Question marks have been inserted when dates are uncertain or unavailable.",
+          "value": "The basic answer, of course, is that Barks is an important artist — to my mind, one of the three or four genuine artists who have come out of comic books, and easily the greatest of the lot. I think that a complete and accurate catalog of his comic-book work is fully as justified as, say, another scholarly study of an obscure eighteenth century poet. Not every item on this list is nailed down as firmly as I would like, because, as I have already mentioned, not even Barks's records are a 100 per cent sure guide to what he did and did not do for comic books; there are notes in the bibliography that point up discrepancies between what Barks's records say he did and the evidence of the comic books themselves. Question marks have been inserted when dates are uncertain or unavailable.",
+          "bbox": [
+            {
+              "h": 132.44983993902437,
+              "w": 125.28420160060976,
+              "x": 150.46103277439022,
+              "y": 174.49022103658535,
+              "confidence": 0.99,
+              "end_index": 788,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Despite such shortcomings, this bibliography is probably as accurate as such a bibliography can be, or is ever likely to be. When \"Barks scholarship\" becomes a minor industry late in this century, this book may at least prevent a few arguments in the pages of",
+          "value": "Despite such shortcomings, this bibliography is probably as accurate as such a bibliography can be, or is ever likely to be. When \"Barks scholarship\" becomes a minor industry late in this century, this book may at least prevent a few arguments in the pages of",
+          "bbox": [
+            {
+              "h": 44.38221036585368,
+              "w": 124.96210175304876,
+              "x": 150.83307164634144,
+              "y": 307.9797484756097,
+              "confidence": 0.99,
+              "end_index": 258,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "98 Carl Barks and the Art of the Comic Book",
+              "value": "98 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.496981707317045,
+                  "w": 80.09961628239328,
+                  "x": 34.460428496570124,
+                  "y": 366.8294359756098,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "98 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.5,
+              "w": 80.1,
+              "x": 34.46,
+              "y": 366.83,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "98"
+    }
+  ]
+}

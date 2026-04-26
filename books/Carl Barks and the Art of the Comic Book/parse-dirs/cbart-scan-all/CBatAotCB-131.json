@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A comic strip featuring Porky Pig and Bugs Bunny. In the first panel, Bugs Bunny is kicking a crate labeled \"To: CANADIAN ARMY\" while Porky Pig looks on. Bugs says, \"DOES THAT ANSWER YOUR QUESTION?\" In the second panel, Porky is surprised, saying \"C-C-CANADA!\" while Bugs starts removing his Mountie costume, saying \"YEP! WE MIGHT AS WELL TAKE OFF OUR COSTUMES! WE DON'T NEED 'EM NOW!\" In the third panel, Porky holds his hat and says, \"I N-N-NEED MY COSTUME! IT'S THE ONLY C-C-CLOTHES I HAVE!\" while Bugs gestures. In the fourth panel, Porky explains, \"B-B-BUGS! WHAT D-D-DID I TELL YOU? TH-THAT W-W-WISHING RING I G-G-GAVE PETUNIA REALLY W-W-WORKS!\" In the fifth panel, Porky continues, \"SHE W-W-WISHED I WAS IN C-C-CANADA WITH HER — AN' P-P-PRESTO! I'M ON MY WAY!\" while Bugs opens a crate, saying \"LET'S SEE WHAT'S IN HERE!\" In the sixth panel, Porky asks, \"TH-THINK WE SH-SHOULD O-OPEN IT?\" and Bugs replies, \"SURE! WE GOTTA EAT, DON'T WE? MAYBE IT'S A SHIPMENT OF CARROTS.\" The crate opens with a \"POP\". In the seventh panel, Bugs is disappointed, saying \"PHOOEY! CRACKERS!\" while Porky looks at a box labeled \"K RATION\" and says, \"W-W-WE'RE IN LUCK! AT L-LEAST WE W-W-WON'T S-STARVE!\" In the final panel, Bugs holds a cracker and asks, \"Y'MEAN PEOPLE EAT THIS STUFF?\" and Porky answers, \"S-S-SURE! S-S-SOLDIERS CARRY IT WITH THEM IN C-C-CASE THEY G-G-GET HUNGRY!\"",
+          "md": "![A comic strip featuring Porky Pig and Bugs Bunny. In the first panel, Bugs Bunny is kicking a crate labeled \"To: CANADIAN ARMY\" while Porky Pig looks on. Bugs says, \"DOES THAT ANSWER YOUR QUESTION?\" In the second panel, Porky is surprised, saying \"C-C-CANADA!\" while Bugs starts removing his Mountie costume, saying \"YEP! WE MIGHT AS WELL TAKE OFF OUR COSTUMES! WE DON'T NEED 'EM NOW!\" In the third panel, Porky holds his hat and says, \"I N-N-NEED MY COSTUME! IT'S THE ONLY C-C-CLOTHES I HAVE!\" while Bugs gestures. In the fourth panel, Porky explains, \"B-B-BUGS! WHAT D-D-DID I TELL YOU? TH-THAT W-W-WISHING RING I G-G-GAVE PETUNIA REALLY W-W-WORKS!\" In the fifth panel, Porky continues, \"SHE W-W-WISHED I WAS IN C-C-CANADA WITH HER — AN' P-P-PRESTO! I'M ON MY WAY!\" while Bugs opens a crate, saying \"LET'S SEE WHAT'S IN HERE!\" In the sixth panel, Porky asks, \"TH-THINK WE SH-SHOULD O-OPEN IT?\" and Bugs replies, \"SURE! WE GOTTA EAT, DON'T WE? MAYBE IT'S A SHIPMENT OF CARROTS.\" The crate opens with a \"POP\". In the seventh panel, Bugs is disappointed, saying \"PHOOEY! CRACKERS!\" while Porky looks at a box labeled \"K RATION\" and says, \"W-W-WE'RE IN LUCK! AT L-LEAST WE W-W-WON'T S-STARVE!\" In the final panel, Bugs holds a cracker and asks, \"Y'MEAN PEOPLE EAT THIS STUFF?\" and Porky answers, \"S-S-SURE! S-S-SOLDIERS CARRY IT WITH THEM IN C-C-CASE THEY G-G-GET HUNGRY!\"](CBatAotCB-131_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-131_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 309.67943597560975,
+              "w": 213.0980402057927,
+              "x": 37.49588128810975,
+              "y": 21.011913109756097,
+              "confidence": 0.96,
+              "end_index": 1395,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From Porky Pig Four Color No. 48, 1944; © 1944 Leon Schleshinger Productions.",
+          "value": "From Porky Pig Four Color No. 48, 1944; © 1944 Leon Schleshinger Productions.",
+          "bbox": [
+            {
+              "h": 6.410876524390205,
+              "w": 157.80538347942073,
+              "x": 66.67126857850609,
+              "y": 346.2546493902439,
+              "confidence": 0.84,
+              "end_index": 76,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n131",
+              "value": "Carl Barks and the Art of the Comic Book\n131",
+              "bbox": [
+                {
+                  "h": 5.17744664634145,
+                  "w": 77.799375,
+                  "x": 172.5549352134146,
+                  "y": 363.92919969512195,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n131",
+          "bbox": [
+            {
+              "h": 5.18,
+              "w": 77.8,
+              "x": 172.55,
+              "y": 363.93,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "131"
+    }
+  ]
+}

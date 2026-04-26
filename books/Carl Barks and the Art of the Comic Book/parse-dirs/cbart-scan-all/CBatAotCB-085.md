@@ -1,0 +1,17 @@
+![X.](CBatAotCB-085_page_1_image_1_v2.jpg)
+
+**FOR ALL THE** millions of copies that his comic books sold, Barks was never paid exceptionally well, by industry standards. The most he ever received before his retirement in 1966 was forty-five dollars and fifty cents per page (eleven dollars and fifty cents for script and thirty-four dollars for drawings). He received some bonuses, but they were given to all employees; he was not singled out because of the quality or the high sales of his work.*
+
+In 1974, Barks and I talked about this side of his life. I read to him a quotation from a piece that David Kunzle had written as an introduction to the English edition of a Chilean book called *How to Read Donald Duck*, a Marxist interpretation of the duck stories, including those by Barks.* Here is the transcript of that part of our interview.
+
+*Barrier:* Kunzle had an interesting summary of how he saw your career: "a man who never seemed to have time or money for a vacation, whose life was continuous and seemingly monotonous labor, paid piece-rate at a level which never permitted him to save, who never had and never sought an adventure, who never traveled abroad and little in the United States (only into the California and Oregon forests), who lived in other words, something of the life of the 'average' U.S. worker (a life presumably shared by the parents of many of his readers) — this man wrote ceaselessly about a world of constant leisure, where 'work' was defined as consumption, the exotic exploit, and fierce competition to avoid work, to which end wealth flowed freely from all quarters of the globe." [Barks laughed.] Do you see any resemblance to yourself in that description?
+
+*Barks:* Oh, heavens, yes. Yeah, that's too true to be funny.
+
+<hr/>
+
+*Circulation figures were published in the Disney comic books starting in 1960. At that time, both *Walt Disney's Comics* and *Uncle Scrooge* were still selling more than one million copies per issue. In a 1968 interview in the fan magazine *Vanguard*, George Sherman, then the head of the Disney publications department, said that *Walt Disney's Comics* had reached its peak circulation in 1953, when the September issue sold more than three million copies. According to Tom Golberg of the publications department, neither Disney nor Western any longer has such early circulation figures on file.
+
+Barks became an employee of Western in the fifties, he thinks in 1958. He continued to be paid page rates, but his earnings per page were credited against his salary every month until the amount of his salary had been exceeded. He could then draw the excess whenever he wished.
+
+*When the book (*How to Read Donald Duck: Imperialist Ideology in the Disney Comic*, by Ariel Dorfman and Armand Mattelart. Translation and introduction by David Kunzle. New York: International General, 1975) was published, most of the references to Barks in Kunzle's introduction had been deleted, including the quoted passage. The book was printed in Great Britain; its importation into the United States was temporarily barred by the U.S. Customs Service on the ground of probable violation of Disney copyrights. A full account of the case, by John Shelton Lawrence, has been published in an anthology titled *Fair Use and Free Inquiry: Copyright Law and the New Media* (John Shelton Lawrence and Bernard Timberg, editors. Norwood, N.J.: Ablex Publishing Corporation, 1980).

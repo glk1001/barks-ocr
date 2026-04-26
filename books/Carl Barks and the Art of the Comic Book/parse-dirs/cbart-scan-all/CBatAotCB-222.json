@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "The cover photograph for the program book of the 1976 Newcon comics convention, showing an elderly man (Carl Barks) laughing while holding a \"Howard the Duck\" comic book.",
+          "md": "![The cover photograph for the program book of the 1976 Newcon comics convention, showing an elderly man (Carl Barks) laughing while holding a \"Howard the Duck\" comic book.](CBatAotCB-222_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-222_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 324.1001967416159,
+              "w": 226.01706602515242,
+              "x": 31.14321979801829,
+              "y": 12.704978563262195,
+              "confidence": 0.99,
+              "end_index": 195,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "The cover photograph for the program book of the 1976 Newcon comics convention.",
+          "value": "The cover photograph for the program book of the 1976 Newcon comics convention.",
+          "bbox": [
+            {
+              "h": 7.7192606707317095,
+              "w": 165.80535966082314,
+              "x": 60.00855040015243,
+              "y": 344.338056402439,
+              "confidence": 0.92,
+              "end_index": 78,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "222\nCarl Barks and the Art of the Comic Book",
+              "value": "222\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.57318597560974,
+                  "w": 77.65373809070121,
+                  "x": 35.366428639481704,
+                  "y": 366.3728048780488,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "222\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.57,
+              "w": 77.65,
+              "x": 35.37,
+              "y": 366.37,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "222"
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A fortune teller looking at Donald Duck. Text: \"LOOOK! LOOOK! DON'T BLINK! .... HA! I SEE YOU HAF REPRESSED DESIRE! THERE EES SOMETHING YOU WANT!\"",
+          "md": "![A fortune teller looking at Donald Duck. Text: \"LOOOK! LOOOK! DON'T BLINK! .... HA! I SEE YOU HAF REPRESSED DESIRE! THERE EES SOMETHING YOU WANT!\"](CBatAotCB-102_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-102_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 81.3049483136433,
+              "w": 117.50808927210365,
+              "x": 30.57264243521341,
+              "y": 11.059095131478658,
+              "confidence": 0.81,
+              "end_index": 171,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Close up of the fortune teller's face. Text: \"LOOOK DEEP EENTO MY EYES, SO I CAN SEE WHAT EES THEES THING YOU WANT!\"",
+          "md": "![Close up of the fortune teller's face. Text: \"LOOOK DEEP EENTO MY EYES, SO I CAN SEE WHAT EES THEES THING YOU WANT!\"](CBatAotCB-102_page_1_image_4_v2.jpg)",
+          "url": "CBatAotCB-102_page_1_image_4_v2.jpg",
+          "bbox": [
+            {
+              "h": 81.49771674923781,
+              "w": 107.8436490091463,
+              "x": 150.17998856707317,
+              "y": 10.74494902820122,
+              "confidence": 0.8,
+              "end_index": 141,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "The fortune teller slams her hands on the table, startling Donald. Text: \"BAM!\"",
+          "md": "![The fortune teller slams her hands on the table, startling Donald. Text: \"BAM!\"](CBatAotCB-102_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-102_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 83.82983231707317,
+              "w": 112.14984660823171,
+              "x": 25.68,
+              "y": 91.44,
+              "confidence": 0.8,
+              "end_index": 104,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "The fortune teller chasing Donald out of her house. Text: \"YOU MONSTAIR! YOU FIEND! GEET OUT FROM MY HOUSE! I AM EENSULT!\"",
+          "md": "![The fortune teller chasing Donald out of her house. Text: \"YOU MONSTAIR! YOU FIEND! GEET OUT FROM MY HOUSE! I AM EENSULT!\"](CBatAotCB-102_page_1_image_5_v2.jpg)",
+          "url": "CBatAotCB-102_page_1_image_5_v2.jpg",
+          "bbox": [
+            {
+              "h": 80.44514291158538,
+              "w": 117.72782869664633,
+              "x": 140.36553830030488,
+              "y": 94.36270769817074,
+              "confidence": 0.79,
+              "end_index": 147,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck in a coat and hat running away. Text: \"MADAME! MADAME! CALM YOURSELF!\"",
+          "md": "![Donald Duck in a coat and hat running away. Text: \"MADAME! MADAME! CALM YOURSELF!\"](CBatAotCB-102_page_1_image_7_v2.jpg)",
+          "url": "CBatAotCB-102_page_1_image_7_v2.jpg",
+          "bbox": [
+            {
+              "h": 69.41203124999998,
+              "w": 108.50942906821646,
+              "x": 30.602017197027436,
+              "y": 177.66803734756098,
+              "confidence": 0.78,
+              "end_index": 107,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald talking to the fortune teller who is sitting in a chair. Text: \"DID YOU READ HIS MIND? DID YOU FIND OUT WHAT HE WANTED?\" \"I'LL SAY I DEED!\"",
+          "md": "![Donald talking to the fortune teller who is sitting in a chair. Text: \"DID YOU READ HIS MIND? DID YOU FIND OUT WHAT HE WANTED?\" \"I'LL SAY I DEED!\"](CBatAotCB-102_page_1_image_9_v2.jpg)",
+          "url": "CBatAotCB-102_page_1_image_9_v2.jpg",
+          "bbox": [
+            {
+              "h": 81.25086128048784,
+              "w": 119.91860327743902,
+              "x": 138.17709603658537,
+              "y": 177.9298399390244,
+              "confidence": 0.77,
+              "end_index": 171,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "The fortune teller yelling at Donald. Text: \"THAT EENSULTING MONSTAIR WANTED MY PEECTURE TO FRIGHTEN HEES NEPHEWS WEEETH!\"",
+          "md": "![The fortune teller yelling at Donald. Text: \"THAT EENSULTING MONSTAIR WANTED MY PEECTURE TO FRIGHTEN HEES NEPHEWS WEEETH!\"](CBatAotCB-102_page_1_image_6_v2.jpg)",
+          "url": "CBatAotCB-102_page_1_image_6_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.31012957317071,
+              "w": 105.13361875952744,
+              "x": 30.363713557545726,
+              "y": 249.41284298780485,
+              "confidence": 0.78,
+              "end_index": 147,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald driving a car in the snow with the fortune teller. Text: \"HUH?\" \"I SAID, TAKE ME RIGHT HOME!\"",
+          "md": "![Donald driving a car in the snow with the fortune teller. Text: \"HUH?\" \"I SAID, TAKE ME RIGHT HOME!\"](CBatAotCB-102_page_1_image_8_v2.jpg)",
+          "url": "CBatAotCB-102_page_1_image_8_v2.jpg",
+          "bbox": [
+            {
+              "h": 81.36827743902433,
+              "w": 120.89153963414631,
+              "x": 137.5690301067073,
+              "y": 261.73591463414635,
+              "confidence": 0.78,
+              "end_index": 125,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From \"You Can't Guess!\" in *Christmas Parade* No. 2, 1950; © 1950 Walt Disney Productions.",
+          "value": "From \"You Can't Guess!\" in Christmas Parade No. 2, 1950; © 1950 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.3174009146341445,
+              "w": 180.03381002286585,
+              "x": 54.483158346036575,
+              "y": 347.9451448170731,
+              "confidence": 0.94,
+              "end_index": 89,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "102 Carl Barks and the Art of the Comic Book",
+              "value": "102 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.86983231707316,
+                  "w": 77.7313905297256,
+                  "x": 37.821749714176825,
+                  "y": 366.8970731707317,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "102 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.87,
+              "w": 77.73,
+              "x": 37.82,
+              "y": 366.9,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "102"
+    }
+  ]
+}

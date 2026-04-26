@@ -1,0 +1,30 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# A Carl Barks Comic-Book Bibliography",
+          "value": "A Carl Barks Comic-Book Bibliography",
+          "bbox": [
+            {
+              "h": 139.3658117378049,
+              "w": 263.2255664062499,
+              "x": 11.281310499237804,
+              "y": 79.01296875,
+              "confidence": 0.82,
+              "end_index": 35,
+              "label": "doc_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A comic strip titled \"DONALD TENTÉ!\" featuring Donald Duck and Uncle Scrooge. Donald is carrying bags of items from sales while Scrooge looks on.",
+          "md": "![A comic strip titled \"DONALD TENTÉ!\" featuring Donald Duck and Uncle Scrooge. Donald is carrying bags of items from sales while Scrooge looks on.](CBatAotCB-203_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-203_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 311.1955578315549,
+              "w": 196.5105154344512,
+              "x": 41.930559260670734,
+              "y": 8.740608326981707,
+              "confidence": 0.92,
+              "end_index": 170,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck walking past a store window with signs saying \"SOLDES\", \"PRIX SACRIFIÉS\", \"ÉCONOMISEZ!\", and \"RABAIS 80%\". Donald says: \"ZUT ET ZUT! QUAND JE VOIS CES PRIX, JE NE PEUX PAS RÉSISTER!\"",
+          "md": "![Donald Duck walking past a store window with signs saying \"SOLDES\", \"PRIX SACRIFIÉS\", \"ÉCONOMISEZ!\", and \"RABAIS 80%\". Donald says: \"ZUT ET ZUT! QUAND JE VOIS CES PRIX, JE NE PEUX PAS RÉSISTER!\"](CBatAotCB-203_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-203_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 76.26185713605183,
+              "w": 143.38644054878046,
+              "x": 94.08,
+              "y": 8.825196979801829,
+              "confidence": 0.77,
+              "end_index": 219,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald shows Scrooge a small device. Donald says: \"REGARDE! J'AI ACHETÉ UN APPAREIL À ASTIQUER LES ŒUFS À LA COQUE DONT JE N'AI PAS LE MOINDRE BESOIN!\"",
+          "md": "![Donald shows Scrooge a small device. Donald says: \"REGARDE! J'AI ACHETÉ UN APPAREIL À ASTIQUER LES ŒUFS À LA COQUE DONT JE N'AI PAS LE MOINDRE BESOIN!\"](CBatAotCB-203_page_1_image_5_v2.jpg)",
+          "url": "CBatAotCB-203_page_1_image_5_v2.jpg",
+          "bbox": [
+            {
+              "h": 75.84104611280486,
+              "w": 89.12971560594512,
+              "x": 42.19803401295731,
+              "y": 87.6132793445122,
+              "confidence": 0.76,
+              "end_index": 176,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald is now carrying more bags. A sign says \"FREIN SUR LES PRIX\". Donald says: \"UNE MINUTE PLUS TARD! JE ME SUIS ENCORE LAISSÉ AVOIR! QUATRE KILOS DE LESSIVE SUPER-RÉCURANTE!\"",
+          "md": "![Donald is now carrying more bags. A sign says \"FREIN SUR LES PRIX\". Donald says: \"UNE MINUTE PLUS TARD! JE ME SUIS ENCORE LAISSÉ AVOIR! QUATRE KILOS DE LESSIVE SUPER-RÉCURANTE!\"](CBatAotCB-203_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-203_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 75.66013719512195,
+              "w": 104.83935880335366,
+              "x": 133.14161490091465,
+              "y": 87.23243140243902,
+              "confidence": 0.77,
+              "end_index": 202,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald looks distressed, talking to Scrooge. Donald says: \"COMMENT VEUX-TU QUE JE M'EN SORTE? TOUS LES MAGASINS ANNONCENT DES SOLDES!\"",
+          "md": "![Donald looks distressed, talking to Scrooge. Donald says: \"COMMENT VEUX-TU QUE JE M'EN SORTE? TOUS LES MAGASINS ANNONCENT DES SOLDES!\"](CBatAotCB-203_page_1_image_8_v2.jpg)",
+          "url": "CBatAotCB-203_page_1_image_8_v2.jpg",
+          "bbox": [
+            {
+              "h": 75.26549542682926,
+              "w": 108.51066596798779,
+              "x": 42.875902248475604,
+              "y": 165.69782012195122,
+              "confidence": 0.76,
+              "end_index": 159,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Scrooge points towards a shop. Scrooge says: \"ATTENDS! JE VOIS UNE OCCASION DONT TU AS RÉELLEMENT BESOIN!\"",
+          "md": "![Scrooge points towards a shop. Scrooge says: \"ATTENDS! JE VOIS UNE OCCASION DONT TU AS RÉELLEMENT BESOIN!\"](CBatAotCB-203_page_1_image_7_v2.jpg)",
+          "url": "CBatAotCB-203_page_1_image_7_v2.jpg",
+          "bbox": [
+            {
+              "h": 75.15228658536586,
+              "w": 85.17486471036585,
+              "x": 152.99898818597558,
+              "y": 165.01982469512197,
+              "confidence": 0.76,
+              "end_index": 131,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Scrooge leads Donald toward a shop with signs \"SOLDES\", \"AFFAIRES\", and \"SELLERIE TOUT POUR LE CHEVAL\". Scrooge says: \"UN PETIT OBJET QUI T'ÉVITERA LA RUINE!\"",
+          "md": "![Scrooge leads Donald toward a shop with signs \"SOLDES\", \"AFFAIRES\", and \"SELLERIE TOUT POUR LE CHEVAL\". Scrooge says: \"UN PETIT OBJET QUI T'ÉVITERA LA RUINE!\"](CBatAotCB-203_page_1_image_6_v2.jpg)",
+          "url": "CBatAotCB-203_page_1_image_6_v2.jpg",
+          "bbox": [
+            {
+              "h": 76.10362042682928,
+              "w": 101.96637004573168,
+              "x": 42.72,
+              "y": 243.5061356707317,
+              "confidence": 0.76,
+              "end_index": 183,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald is now wearing a horse bridle with blinkers, preventing him from seeing the shops. A sign says \"ON LIQUIDE\". Scrooge says: \"EH BIEN, VOILÀ! COMME ÇA, TU NE SERAS PAS TENTÉ!\"",
+          "md": "![Donald is now wearing a horse bridle with blinkers, preventing him from seeing the shops. A sign says \"ON LIQUIDE\". Scrooge says: \"EH BIEN, VOILÀ! COMME ÇA, TU NE SERAS PAS TENTÉ!\"](CBatAotCB-203_page_1_image_4_v2.jpg)",
+          "url": "CBatAotCB-203_page_1_image_4_v2.jpg",
+          "bbox": [
+            {
+              "h": 77.33931402439023,
+              "w": 91.64503810975609,
+              "x": 146.55107469512194,
+              "y": 242.04569359756098,
+              "confidence": 0.76,
+              "end_index": 205,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "RIDEAU!",
+          "value": "RIDEAU!",
+          "bbox": [
+            {
+              "h": 7.276166158536634,
+              "w": 25.63218178353658,
+              "x": 209.5040682164634,
+              "y": 321.87139481707317,
+              "confidence": 0.78,
+              "end_index": 6,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The \"bridle\" gag—intended for Uncle Scrooge No. 19 but not published there—as it was published in France in 1975; ©Walt Disney Productions.",
+          "value": "The \"bridle\" gag—intended for Uncle Scrooge No. 19 but not published there—as it was published in France in 1975; ©Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 12.416135670731709,
+              "w": 191.18469083460363,
+              "x": 45.725080506859754,
+              "y": 336.341318597561,
+              "confidence": 0.91,
+              "end_index": 138,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n203",
+              "value": "Carl Barks and the Art of the Comic Book\n203",
+              "bbox": [
+                {
+                  "h": 5.047980182926785,
+                  "w": 77.8741120426829,
+                  "x": 170.5716082317073,
+                  "y": 365.71673780487805,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n203",
+          "bbox": [
+            {
+              "h": 5.05,
+              "w": 77.87,
+              "x": 170.57,
+              "y": 365.72,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "203"
+    }
+  ]
+}

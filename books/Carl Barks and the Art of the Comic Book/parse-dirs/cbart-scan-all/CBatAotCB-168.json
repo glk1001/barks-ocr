@@ -1,0 +1,899 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "they outwit Donald's efforts to get them into a tub. (*Nov. 27, 1943*)",
+          "value": "they outwit Donald's efforts to get them into a tub. (Nov. 27, 1943)",
+          "bbox": [
+            {
+              "h": 11.035519721798781,
+              "w": 125.44096846417683,
+              "x": 10.89382860137195,
+              "y": 12.570948932926829,
+              "confidence": 0.94,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 300, September 1965.",
+          "value": "Reprinted: Walt Disney's Comics No. 300, September 1965.",
+          "bbox": [
+            {
+              "h": 5.193992949695123,
+              "w": 118.81746879763719,
+              "x": 15.009915920350608,
+              "y": 24.89829649390244,
+              "confidence": 0.95,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 44 (4/8) - May 1944 - 52 pages",
+          "value": "44 (4/8) - May 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.475300114329268,
+              "w": 71.2170917492378,
+              "x": 10.941915491615854,
+              "y": 36.515130525914635,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK This Month The Mad Chemist - 10 - Donald becomes a scientific genius after suffering a crack on the head, and invents \"duckmite,\" an incredibly powerful explosive that he uses to propel a rocket to the moon. (*Dec. 30, 1943*)",
+          "value": "DONALD DUCK This Month The Mad Chemist - 10 - Donald becomes a scientific genius after suffering a crack on the head, and invents \"duckmite,\" an incredibly powerful explosive that he uses to propel a rocket to the moon. (Dec. 30, 1943)",
+          "bbox": [
+            {
+              "h": 28.724614138719513,
+              "w": 125.98820336318597,
+              "x": 10.659047017911584,
+              "y": 42.25342511432927,
+              "confidence": 0.99,
+              "end_index": 236,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Donald's \"scientific\" doubletalk includes an unwitting reference to a then-elusive chemical intermediate, carbene. Tongue-in-cheek references to this story were made in at least two scientific publications in the nineteen-sixties (see the page titled, \"Donald Duck, Scientist Deluxe,\" in *Walt Disney's Comics* No. 301, October 1965, for details). The first panel of the second page was reproduced in *Chemical and Engineering News* for June 16, 1969, to accompany an article on carbene chemistry.",
+          "value": "Donald's \"scientific\" doubletalk includes an unwitting reference to a then-elusive chemical intermediate, carbene. Tongue-in-cheek references to this story were made in at least two scientific publications in the nineteen-sixties (see the page titled, \"Donald Duck, Scientist Deluxe,\" in Walt Disney's Comics No. 301, October 1965, for details). The first panel of the second page was reproduced in Chemical and Engineering News for June 16, 1969, to accompany an article on carbene chemistry.",
+          "bbox": [
+            {
+              "h": 46.756669207317074,
+              "w": 125.61515589272102,
+              "x": 11.173962819169207,
+              "y": 72.07424542682928,
+              "confidence": 0.99,
+              "end_index": 496,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 301, October 1965.",
+          "value": "Reprinted: Walt Disney's Comics No. 301, October 1965.",
+          "bbox": [
+            {
+              "h": 5.098410823170725,
+              "w": 110.83094845655488,
+              "x": 15.613460842225608,
+              "y": 119.71084984756098,
+              "confidence": 0.91,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 45 (4/9) - June 1944 - 52 pages",
+          "value": "45 (4/9) - June 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.493715701219507,
+              "w": 71.49669219226371,
+              "x": 11.222345536394817,
+              "y": 132.19270198170733,
+              "confidence": 0.97,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK This Month's Thriller - Rival Boatmen - 10 - Donald cheats the nephews out of a customer for their fishing boat, but soon both he and the passenger need the nephews' help. (*Jan. 19, 1944*)",
+          "value": "DONALD DUCK This Month's Thriller - Rival Boatmen - 10 - Donald cheats the nephews out of a customer for their fishing boat, but soon both he and the passenger need the nephews' help. (Jan. 19, 1944)",
+          "bbox": [
+            {
+              "h": 23.216490091463392,
+              "w": 126.11479265910822,
+              "x": 11.057374833269817,
+              "y": 138.00977515243903,
+              "confidence": 0.99,
+              "end_index": 200,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The passenger is identified as \"J.P. Diamondtubs, the millionaire\" but he is identical in appearance to Black Pete.",
+          "value": "The passenger is identified as \"J.P. Diamondtubs, the millionaire\" but he is identical in appearance to Black Pete.",
+          "bbox": [
+            {
+              "h": 11.052701981707331,
+              "w": 125.80874892816308,
+              "x": 11.233692001714939,
+              "y": 161.87701600609756,
+              "confidence": 0.97,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck Beach Party* No. 1, 1965.",
+          "value": "Reprinted: Donald Duck Beach Party No. 1, 1965.",
+          "bbox": [
+            {
+              "h": 5.07220655487803,
+              "w": 97.76537788205029,
+              "x": 15.59975740758384,
+              "y": 173.60571265243902,
+              "confidence": 0.91,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 46 (4/10) - July 1944 - 52 pages",
+          "value": "46 (4/10) - July 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.4793559451219425,
+              "w": 73.08728741901676,
+              "x": 11.272809760861279,
+              "y": 185.05893292682927,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"Camera Crazy\" - 10 - Donald and the nephews compete at taking pictures to sell to the newspaper, and the nephews' little box camera consistently beats Donald's fancier model. (*Feb. 29, 1944*)",
+          "value": "DONALD DUCK in \"Camera Crazy\" - 10 - Donald and the nephews compete at taking pictures to sell to the newspaper, and the nephews' little box camera consistently beats Donald's fancier model. (Feb. 29, 1944)",
+          "bbox": [
+            {
+              "h": 22.98044588414632,
+              "w": 125.92139576981707,
+              "x": 11.285267721036584,
+              "y": 190.8723818597561,
+              "confidence": 0.99,
+              "end_index": 207,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 47 (4/11) - August 1944 - 52 pages",
+          "value": "47 (4/11) - August 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.598224085365855,
+              "w": 81.37146329554115,
+              "x": 11.343911132812499,
+              "y": 220.5626981707317,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - A relative sends Donald a falcon, which wreaks havoc on the neighbors' livestock and a model airplane. (*Apr. 1, 1944*)",
+          "value": "DONALD DUCK - 10 - A relative sends Donald a falcon, which wreaks havoc on the neighbors' livestock and a model airplane. (Apr. 1, 1944)",
+          "bbox": [
+            {
+              "h": 17.399794207317072,
+              "w": 126.02088902915398,
+              "x": 11.240481016577743,
+              "y": 226.22213414634146,
+              "confidence": 0.98,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 302, November 1965.",
+          "value": "Reprinted: Walt Disney's Comics No. 302, November 1965.",
+          "bbox": [
+            {
+              "h": 5.2598323170731875,
+              "w": 118.72498963891005,
+              "x": 15.722808569931402,
+              "y": 244.36006097560977,
+              "confidence": 0.95,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 48 (4/12) - September 1944 - 52 pages",
+          "value": "48 (4/12) - September 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.676448170731709,
+              "w": 90.52477777248474,
+              "x": 11.401499857088412,
+              "y": 255.90333841463413,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and Mr. Jones quarrel over a can of putty and both wind up covered with the stuff. (*Apr. 26, 1944*)",
+          "value": "DONALD DUCK - 10 - Donald and Mr. Jones quarrel over a can of putty and both wind up covered with the stuff. (Apr. 26, 1944)",
+          "bbox": [
+            {
+              "h": 17.270625,
+              "w": 126.07436725895579,
+              "x": 11.3653564453125,
+              "y": 261.78592225609754,
+              "confidence": 0.98,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 49 (5/1) - October 1944 - 52 pages",
+          "value": "49 (5/1) - October 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.546524390243939,
+              "w": 80.81254108708077,
+              "x": 11.416030749809451,
+              "y": 285.1795884146341,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald becomes a tight-wire walker after the nephews become successful at it, and he immediately sets out for Niagara Falls. (*May 26, 1944*)",
+          "value": "DONALD DUCK - 10 - Donald becomes a tight-wire walker after the nephews become successful at it, and he immediately sets out for Niagara Falls. (May 26, 1944)",
+          "bbox": [
+            {
+              "h": 17.652461890243885,
+              "w": 125.94992485232467,
+              "x": 11.393873737614328,
+              "y": 290.9267149390244,
+              "confidence": 0.98,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Duckburg is mentioned for the first time on a sign in the last panel of this story.",
+          "value": "Duckburg is mentioned for the first time on a sign in the last panel of this story.",
+          "bbox": [
+            {
+              "h": 11.27798780487803,
+              "w": 125.64436559165398,
+              "x": 11.61782762480945,
+              "y": 309.12887195121954,
+              "confidence": 0.94,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 303, December 1965.",
+          "value": "Reprinted: Walt Disney's Comics No. 303, December 1965.",
+          "bbox": [
+            {
+              "h": 5.208818597560985,
+              "w": 118.41697479992378,
+              "x": 15.778624475990851,
+              "y": 321.0806707317073,
+              "confidence": 0.96,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 50 (5/2) - November 1944 - 52 pages",
+          "value": "50 (5/2) - November 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.691745426829275,
+              "w": 87.55060939881858,
+              "x": 11.653665563071645,
+              "y": 332.5505030487805,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald accidentally gives the kids a rare dime worth five hundred dollars and has a hard time getting it back. (*June 22, 1944*)",
+          "value": "DONALD DUCK - 10 - Donald accidentally gives the kids a rare dime worth five hundred dollars and has a hard time getting it back. (June 22, 1944)",
+          "bbox": [
+            {
+              "h": 17.352576219512173,
+              "w": 125.80073694740852,
+              "x": 11.580052877286585,
+              "y": 338.3921112804878,
+              "confidence": 0.98,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 51 (5/3) - December 1944 - 52 pages",
+          "value": "51 (5/3) - December 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.678970560213415,
+              "w": 86.22643102134147,
+              "x": 150.3558212652439,
+              "y": 13.258830983231707,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald buys a \"modern seaside home\" that turns out to be a shack afflicted with everything from sandstorms to giant turtles. (*July 27, 1944*)",
+          "value": "DONALD DUCK - 10 - Donald buys a \"modern seaside home\" that turns out to be a shack afflicted with everything from sandstorms to giant turtles. (July 27, 1944)",
+          "bbox": [
+            {
+              "h": 17.343750000000004,
+              "w": 126.02773056402435,
+              "x": 150.04306783536586,
+              "y": 19.0721884527439,
+              "confidence": 0.99,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 52 (5/4) - January 1945 - 52 pages",
+          "value": "52 (5/4) - January 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.659264481707312,
+              "w": 80.94128048780486,
+              "x": 150.37694931402436,
+              "y": 42.73032393292683,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - A trade rat invades Donald's home and takes his valuables, and when Donald fights back, he damages his house rather than the rat. (*Aug. 26, 1944*)",
+          "value": "DONALD DUCK - 10 - A trade rat invades Donald's home and takes his valuables, and when Donald fights back, he damages his house rather than the rat. (Aug. 26, 1944)",
+          "bbox": [
+            {
+              "h": 22.697383765243906,
+              "w": 126.0166520579268,
+              "x": 150.09002286585365,
+              "y": 48.67102705792683,
+              "confidence": 0.99,
+              "end_index": 165,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 53 (5/5) - February 1945 - 52 pages",
+          "value": "53 (5/5) - February 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.574026295731696,
+              "w": 84.2511299542683,
+              "x": 150.47252286585365,
+              "y": 78.11239138719513,
+              "confidence": 0.96,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald buys a tramp steamer and starts for Acapulco with a cargo of bubble-bath soap. (*Oct. 6, 1944*)",
+          "value": "DONALD DUCK - 10 - Donald buys a tramp steamer and starts for Acapulco with a cargo of bubble-bath soap. (Oct. 6, 1944)",
+          "bbox": [
+            {
+              "h": 16.581442454268288,
+              "w": 125.80183879573171,
+              "x": 150.41687309451217,
+              "y": 84.16069550304879,
+              "confidence": 0.98,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck and the Green Serpent*, Better Little Book No. 845, 1948 (see \"Other Comics Material\").",
+          "value": "Reprinted: Donald Duck and the Green Serpent, Better Little Book No. 845, 1948 (see \"Other Comics Material\").",
+          "bbox": [
+            {
+              "h": 11.064672256097564,
+              "w": 125.02167873475608,
+              "x": 151.29804306402437,
+              "y": 102.05587271341463,
+              "confidence": 0.97,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 54 (5/6) - March 1945 - 52 pages",
+          "value": "54 (5/6) - March 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.556653963414638,
+              "w": 77.03518102134144,
+              "x": 150.68845083841464,
+              "y": 119.4941044207317,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and the nephews ice skate the three miles to Pumpkinburg in a no-holds-barred race. (*Oct. 27, 1944*)",
+          "value": "DONALD DUCK - 10 - Donald and the nephews ice skate the three miles to Pumpkinburg in a no-holds-barred race. (Oct. 27, 1944)",
+          "bbox": [
+            {
+              "h": 16.838494664634144,
+              "w": 125.94623666158536,
+              "x": 150.40303353658535,
+              "y": 125.38247332317071,
+              "confidence": 0.98,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 55 (5/7) - April 1945 - 52 pages",
+          "value": "55 (5/7) - April 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.612366615853652,
+              "w": 73.61732469512194,
+              "x": 150.66439024390243,
+              "y": 148.96505716463415,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald takes the nephews to cousin Cuthbert Coot's ranch to prove that he knows \"cowpunchin' from A to Z.\" (*Dec. 1, 1944*)",
+          "value": "DONALD DUCK - 10 - Donald takes the nephews to cousin Cuthbert Coot's ranch to prove that he knows \"cowpunchin' from A to Z.\" (Dec. 1, 1944)",
+          "bbox": [
+            {
+              "h": 17.337267530487797,
+              "w": 126.00044588414632,
+              "x": 150.47607278963415,
+              "y": 154.92134908536585,
+              "confidence": 0.99,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 56 (5/8) - May 1945 - 52 pages",
+          "value": "56 (5/8) - May 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.523795731707305,
+              "w": 71.13712842987803,
+              "x": 150.8870750762195,
+              "y": 178.44326981707317,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald raids the refrigerator while walking in his sleep, and blames the nephews. (*Jan. 3, 1945*)",
+          "value": "DONALD DUCK - 10 - Donald raids the refrigerator while walking in his sleep, and blames the nephews. (Jan. 3, 1945)",
+          "bbox": [
+            {
+              "h": 17.020758384146347,
+              "w": 125.91231516768292,
+              "x": 150.80733041158535,
+              "y": 184.2935556402439,
+              "confidence": 0.98,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 57 (5/9) - June 1945 - 52 pages",
+          "value": "57 (5/9) - June 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.62769817073171,
+              "w": 71.22212080792684,
+              "x": 151.16643864329265,
+              "y": 207.91060975609756,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and the nephews compete for the thousand dollars offered for a photograph of the iron-billed woodpecker. (*Feb. 2, 1945*)",
+          "value": "DONALD DUCK - 10 - Donald and the nephews compete for the thousand dollars offered for a photograph of the iron-billed woodpecker. (Feb. 2, 1945)",
+          "bbox": [
+            {
+              "h": 17.66028201219513,
+              "w": 124.65150914634144,
+              "x": 150.70194740853657,
+              "y": 213.86439786585365,
+              "confidence": 0.98,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 58 (5/10) - July 1945 - 36 pages",
+          "value": "58 (5/10) - July 1945 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.624405487804897,
+              "w": 72.8931230945122,
+              "x": 151.26756859756094,
+              "y": 237.40520579268292,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 8 - The nephews fall off a cliff at the Grand Canyon and barely survive Donald's efforts to rescue them. (*Mar. 9, 1945*)",
+          "value": "DONALD DUCK - 8 - The nephews fall off a cliff at the Grand Canyon and barely survive Donald's efforts to rescue them. (Mar. 9, 1945)",
+          "bbox": [
+            {
+              "h": 17.25246951219513,
+              "w": 126.02310022865852,
+              "x": 150.90569931402436,
+              "y": 243.25314786585366,
+              "confidence": 0.98,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages have ten to twelve panels each; most have twelve.",
+          "value": "These pages have ten to twelve panels each; most have twelve.",
+          "bbox": [
+            {
+              "h": 5.430846036585335,
+              "w": 121.3507488567073,
+              "x": 155.2630506859756,
+              "y": 261.5571951219512,
+              "confidence": 0.97,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 59 (5/11) - August 1945 - 36 pages",
+          "value": "59 (5/11) - August 1945 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.68152439024394,
+              "w": 81.23595846036585,
+              "x": 151.1286756859756,
+              "y": 273.0161661585366,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 8 - Donald, vacationing at a dude ranch, tries to tame a wild \"knothead\" colt with kindness. (*Apr. 3, 1945*)",
+          "value": "DONALD DUCK - 8 - Donald, vacationing at a dude ranch, tries to tame a wild \"knothead\" colt with kindness. (Apr. 3, 1945)",
+          "bbox": [
+            {
+              "h": 16.88897103658539,
+              "w": 126.10810975609756,
+              "x": 150.89501524390244,
+              "y": 278.9765167682927,
+              "confidence": 0.98,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages have ten to twelve panels each; most have twelve.",
+          "value": "These pages have ten to twelve panels each; most have twelve.",
+          "bbox": [
+            {
+              "h": 5.459245426829275,
+              "w": 121.51805830792681,
+              "x": 155.51878239329267,
+              "y": 296.7822942073171,
+              "confidence": 0.97,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 60 (5/12) - September 1945 - 36 pages",
+          "value": "60 (5/12) - September 1945 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6920198170731595,
+              "w": 90.26991425304878,
+              "x": 151.3228925304878,
+              "y": 308.3054268292683,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald invents a radar set so that he can track down the nephews wherever they are, but they catch on to what he has done. (*May 12, 1945*)",
+          "value": "DONALD DUCK - 10 - Donald invents a radar set so that he can track down the nephews wherever they are, but they catch on to what he has done. (May 12, 1945)",
+          "bbox": [
+            {
+              "h": 17.092820121951245,
+              "w": 125.75448932926825,
+              "x": 151.44717416158537,
+              "y": 314.8897179878049,
+              "confidence": 0.98,
+              "end_index": 157,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages have ten to twelve panels each.",
+          "value": "These pages have ten to twelve panels each.",
+          "bbox": [
+            {
+              "h": 5.464504573170725,
+              "w": 88.7703544207317,
+              "x": 155.9534851371951,
+              "y": 332.96490091463414,
+              "confidence": 0.95,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 61 (6/1) - October 1945 - 52 pages",
+          "value": "61 (6/1) - October 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.7826371951219695,
+              "w": 80.74094131097559,
+              "x": 151.79486089939022,
+              "y": 344.57167682926826,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 8 - The nephews set up a detective",
+          "value": "DONALD DUCK - 8 - The nephews set up a detective",
+          "bbox": [
+            {
+              "h": 5.688201219512175,
+              "w": 120.9976257621951,
+              "x": 156.50276295731706,
+              "y": 350.47799542682924,
+              "confidence": 0.96,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "168 Carl Barks and the Art of the Comic Book",
+              "value": "168 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.385144817073215,
+                  "w": 77.65670064786583,
+                  "x": 36.98230849847561,
+                  "y": 366.5435670731707,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "168 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.39,
+              "w": 77.66,
+              "x": 36.98,
+              "y": 366.54,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "168"
+    }
+  ]
+}

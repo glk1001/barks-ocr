@@ -1,0 +1,800 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "all-purpose ship helps out yachtsmen during a race — for a price. *(July 12, 1958)*",
+          "value": "all-purpose ship helps out yachtsmen during a race — for a price. (July 12, 1958)",
+          "bbox": [
+            {
+              "h": 11.773053544207315,
+              "w": 125.40566965987043,
+              "x": 11.852947908727133,
+              "y": 22.37842225609756,
+              "confidence": 0.96,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck* No. 135, January 1971.",
+          "value": "Reprinted: Donald Duck No. 135, January 1971.",
+          "bbox": [
+            {
+              "h": 5.247367568597558,
+              "w": 94.22939977134145,
+              "x": 16.52367759146341,
+              "y": 34.573845274390244,
+              "confidence": 0.94,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Crawls for Cash - 3/8 - A broken leg doesn't stop Scrooge from going after a penny. *(Oct. 1, 1958)*\nThe Dell Pledge fills out the half page.",
+          "value": "UNCLE SCROOGE Crawls for Cash - 3/8 - A broken leg doesn't stop Scrooge from going after a penny. (Oct. 1, 1958)\nThe Dell Pledge fills out the half page.",
+          "bbox": [
+            {
+              "h": 17.309153963414637,
+              "w": 125.61894590796493,
+              "x": 11.96939441215701,
+              "y": 40.147911585365854,
+              "confidence": 0.97,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 28 - Dec.-Feb. 1960 - 36 pages",
+          "value": "28 - Dec.-Feb. 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.622747713414637,
+              "w": 71.17252369950457,
+              "x": 11.405091582507621,
+              "y": 63.44732469512196,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge tests his eyes with a chart made of coins. *(July 11, 1959)*",
+          "value": "Front cover: Scrooge tests his eyes with a chart made of coins. (July 11, 1959)",
+          "bbox": [
+            {
+              "h": 11.118298399390246,
+              "w": 125.88979158727132,
+              "x": 11.599219464557926,
+              "y": 69.25720083841463,
+              "confidence": 0.97,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 140, May 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 140, May 1977.",
+          "bbox": [
+            {
+              "h": 5.267863948170725,
+              "w": 90.44665908441308,
+              "x": 15.83411454363567,
+              "y": 81.18656821646341,
+              "confidence": 0.93,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE and the \"Paul Bunyan\" Machine - 21 - The Beagle Boys invent a huge \"Paul Bunyan\" machine to chop into Scrooge's money bin, but Scrooge mails his money to an Idaho forest and hides it inside trees. When the Beagles come to the forest, Scrooge confronts them with a \"Paul Bunyan\" machine of his own. *(Dec. 15, 1958)*",
+          "value": "UNCLE SCROOGE and the \"Paul Bunyan\" Machine - 21 - The Beagle Boys invent a huge \"Paul Bunyan\" machine to chop into Scrooge's money bin, but Scrooge mails his money to an Idaho forest and hides it inside trees. When the Beagles come to the forest, Scrooge confronts them with a \"Paul Bunyan\" machine of his own. (Dec. 15, 1958)",
+          "bbox": [
+            {
+              "h": 34.69978467987804,
+              "w": 125.94110041920733,
+              "x": 11.50475419207317,
+              "y": 86.75329458841463,
+              "confidence": 0.98,
+              "end_index": 328,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks has said that he felt that the climactic fight in this story \"could have been improved with a half-page spread of Scrooge's and the B. Boys' giant machines hacking each other to pieces, but I was afraid the editors would delete such a scene as being too violent.\" *(April or May 1960 letter to John Spicer)*",
+          "value": "Barks has said that he felt that the climactic fight in this story \"could have been improved with a half-page spread of Scrooge's and the B. Boys' giant machines hacking each other to pieces, but I was afraid the editors would delete such a scene as being too violent.\" (April or May 1960 letter to John Spicer)",
+          "bbox": [
+            {
+              "h": 28.913334603658534,
+              "w": 126.02698456554877,
+              "x": 11.36404344512195,
+              "y": 122.01441310975609,
+              "confidence": 0.98,
+              "end_index": 312,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 144, September 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 144, September 1977.",
+          "bbox": [
+            {
+              "h": 5.686886432926812,
+              "w": 103.01605171017529,
+              "x": 15.75093571360518,
+              "y": 151.27486280487804,
+              "confidence": 0.91,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE and The Inventors' Contest - 4 - Gyro enters a contest for inventors of a better mousetrap, and faces Black Pete in the finals. *(Jan. 16, 1959)*",
+          "value": "GYRO GEARLOOSE and The Inventors' Contest - 4 - Gyro enters a contest for inventors of a better mousetrap, and faces Black Pete in the finals. (Jan. 16, 1959)",
+          "bbox": [
+            {
+              "h": 17.031070884146345,
+              "w": 125.84418599942832,
+              "x": 11.635632979230182,
+              "y": 157.03213033536585,
+              "confidence": 0.96,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 144, September 1977; *Walt Disney Comics Digest* No. 11, May 1969.",
+          "value": "Reprinted: Uncle Scrooge No. 144, September 1977; Walt Disney Comics Digest No. 11, May 1969.",
+          "bbox": [
+            {
+              "h": 11.32791539634145,
+              "w": 125.20707543349846,
+              "x": 11.606978491806402,
+              "y": 174.38905106707318,
+              "confidence": 0.96,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE and the Witching Stick - 5 - Scrooge is hunting for gold with a witching stick, when Donald substitutes another stick for it. *(Jan. 16, 1959)*",
+          "value": "UNCLE SCROOGE and the Witching Stick - 5 - Scrooge is hunting for gold with a witching stick, when Donald substitutes another stick for it. (Jan. 16, 1959)",
+          "bbox": [
+            {
+              "h": 16.80089176829267,
+              "w": 125.8106171398628,
+              "x": 11.76649890434451,
+              "y": 186.63089176829268,
+              "confidence": 0.96,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 138, March 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 138, March 1977.",
+          "bbox": [
+            {
+              "h": 5.611143292682927,
+              "w": 94.82736578220275,
+              "x": 16.205486733041155,
+              "y": 204.10230182926827,
+              "confidence": 0.88,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Money Hat - 3/8 - A bag of money holds down Scrooge's hat on a windy day. *(May 20, 1959)*.\nThe Dell Pledge fills out the page.",
+          "value": "UNCLE SCROOGE The Money Hat - 3/8 - A bag of money holds down Scrooge's hat on a windy day. (May 20, 1959).\nThe Dell Pledge fills out the page.",
+          "bbox": [
+            {
+              "h": 17.318711890243886,
+              "w": 125.87170112423779,
+              "x": 11.79488328887195,
+              "y": 209.86712652439024,
+              "confidence": 0.95,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 29 - Mar.-May 1960 - 36 pages",
+          "value": "29 - Mar.-May 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6861661585365795,
+              "w": 74.07351991234755,
+              "x": 11.587855849847559,
+              "y": 233.1570274390244,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge balances with a sack of money on a teeter-totter. *(July 11, 1959)*",
+          "value": "Front cover: Scrooge balances with a sack of money on a teeter-totter. (July 11, 1959)",
+          "bbox": [
+            {
+              "h": 11.261638719512174,
+              "w": 125.82024330697408,
+              "x": 11.646602157964939,
+              "y": 238.99330792682926,
+              "confidence": 0.96,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 86, April 1970.",
+          "value": "Reprinted: Uncle Scrooge No. 86, April 1970.",
+          "bbox": [
+            {
+              "h": 5.412370426829275,
+              "w": 90.12394936166157,
+              "x": 15.897345417301828,
+              "y": 250.77873475609755,
+              "confidence": 0.93,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Island in the Sky - 18 - Scrooge decides to hide his money in space, but the rocky, barren asteroid he chooses is populated by tiny savages, who live just three hundred yards from another asteroid that is lushly vegetated and covered with trees and lakes. Their future looks bleak when the ducks scare away the birds whose eggs are their only source of food. *(June 15, 1959)*",
+          "value": "UNCLE SCROOGE Island in the Sky - 18 - Scrooge decides to hide his money in space, but the rocky, barren asteroid he chooses is populated by tiny savages, who live just three hundred yards from another asteroid that is lushly vegetated and covered with trees and lakes. Their future looks bleak when the ducks scare away the birds whose eggs are their only source of food. (June 15, 1959)",
+          "bbox": [
+            {
+              "h": 40.94878810975606,
+              "w": 126.09573539919967,
+              "x": 11.497732588605183,
+              "y": 256.41331554878053,
+              "confidence": 0.98,
+              "end_index": 389,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 143, August 1977; *Walt Disney Comics Digest* No. 2, July 1968.",
+          "value": "Reprinted: Uncle Scrooge No. 143, August 1977; Walt Disney Comics Digest No. 2, July 1968.",
+          "bbox": [
+            {
+              "h": 11.042172256097565,
+              "w": 125.85605980849849,
+              "x": 11.369768125952742,
+              "y": 297.7424771341464,
+              "confidence": 0.95,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Oodles of Oomph - 4 - Gyro builds a boat with a little extra \"oomph\" to win the annual race around Tulebug Lake. *(Apr. 20, 1959)*",
+          "value": "GYRO GEARLOOSE Oodles of Oomph - 4 - Gyro builds a boat with a little extra \"oomph\" to win the annual race around Tulebug Lake. (Apr. 20, 1959)",
+          "bbox": [
+            {
+              "h": 17.32943597560974,
+              "w": 126.07168230754571,
+              "x": 11.524392387576219,
+              "y": 309.19291920731706,
+              "confidence": 0.96,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 36, August 1972.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 36, August 1972.",
+          "bbox": [
+            {
+              "h": 5.601745426829274,
+              "w": 121.14838926733992,
+              "x": 16.133585770769816,
+              "y": 327.11924542682925,
+              "confidence": 0.79,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Hound of the Whiskervilles - 7 3/4 -",
+          "value": "UNCLE SCROOGE Hound of the Whiskervilles - 7 3/4 -",
+          "bbox": [
+            {
+              "h": 22.218201219512174,
+              "w": 126.06047410918444,
+              "x": 11.561058855754572,
+              "y": 327.48288109756095,
+              "confidence": 0.77,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge returns to Scotland to find a piece of the family tartan, only to learn that the Hound of the Whiskervilles —",
+          "value": "Scrooge returns to Scotland to find a piece of the family tartan, only to learn that the Hound of the Whiskervilles —",
+          "bbox": [
+            {
+              "h": 17.51048780487803,
+              "w": 126.0901093273628,
+              "x": 11.441655154344511,
+              "y": 332.28393292682927,
+              "confidence": 0.86,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "the family that was an ancient rival of the McDucks — has returned to the moors. *(July 11, 1959)*",
+          "value": "the family that was an ancient rival of the McDucks — has returned to the moors. (July 11, 1959)",
+          "bbox": [
+            {
+              "h": 11.499709413109754,
+              "w": 125.22687118902435,
+              "x": 151.119140625,
+              "y": 22.522868711890247,
+              "confidence": 0.97,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A circulation statement fills out the eighth page.",
+          "value": "A circulation statement fills out the eighth page.",
+          "bbox": [
+            {
+              "h": 5.5895236280487826,
+              "w": 98.30284298780484,
+              "x": 155.24252286585366,
+              "y": 34.36079554115854,
+              "confidence": 0.95,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 30 - June-Aug. 1960 - 36 pages",
+          "value": "30 - June-Aug. 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.675990853658536,
+              "w": 73.54090701219512,
+              "x": 150.78824314024388,
+              "y": 46.10449504573171,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge fans himself with a handful of bills. *(Aug. 4, 1958)*",
+          "value": "Front cover (art only): Scrooge fans himself with a handful of bills. (Aug. 4, 1958)",
+          "bbox": [
+            {
+              "h": 11.149990472560978,
+              "w": 125.67457317073168,
+              "x": 150.80534108231706,
+              "y": 51.979201600609755,
+              "confidence": 0.97,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Pipeline to Danger - 17 - Scrooge, in the Sahara to drill oil wells, decides to use a lava crater to store the oil. The crater is populated by tiny Arab ducks who capture Scrooge, and it appears that they and he will be trapped when oil starts flowing into the crater. *(Nov. 13, 1959)*",
+          "value": "UNCLE SCROOGE Pipeline to Danger - 17 - Scrooge, in the Sahara to drill oil wells, decides to use a lava crater to store the oil. The crater is populated by tiny Arab ducks who capture Scrooge, and it appears that they and he will be trapped when oil starts flowing into the crater. (Nov. 13, 1959)",
+          "bbox": [
+            {
+              "h": 34.10987423780487,
+              "w": 125.82109756097559,
+              "x": 150.45943788109756,
+              "y": 63.6205449695122,
+              "confidence": 0.98,
+              "end_index": 299,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 100, August 1972; No. 146, November 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 100, August 1972; No. 146, November 1977.",
+          "bbox": [
+            {
+              "h": 10.52496951219513,
+              "w": 125.59885861280483,
+              "x": 150.5322370426829,
+              "y": 99.16297637195122,
+              "confidence": 0.97,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE War Paint - 4 - Gyro invents war paint for movie Indians that makes them as warlike as real Indians. *(Dec. 9, 1959)*",
+          "value": "GYRO GEARLOOSE War Paint - 4 - Gyro invents war paint for movie Indians that makes them as warlike as real Indians. (Dec. 9, 1959)",
+          "bbox": [
+            {
+              "h": 16.810289634146347,
+              "w": 125.78604420731705,
+              "x": 150.45391577743902,
+              "y": 110.55208079268293,
+              "confidence": 0.96,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 95, October 1971.",
+          "value": "Reprinted: Uncle Scrooge No. 95, October 1971.",
+          "bbox": [
+            {
+              "h": 5.2166272865853625,
+              "w": 95.81448361280489,
+              "x": 154.7723037347561,
+              "y": 128.29234756097563,
+              "confidence": 0.94,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Yoicks! The Fox! - 9 - Before Von Crankenshaft will sell his motor factory to him, Scrooge must prove that he is a sportsman by riding to the hounds in competition with other millionaires who want to buy the factory. *(Dec. 9, 1959)*",
+          "value": "UNCLE SCROOGE Yoicks! The Fox! - 9 - Before Von Crankenshaft will sell his motor factory to him, Scrooge must prove that he is a sportsman by riding to the hounds in competition with other millionaires who want to buy the factory. (Dec. 9, 1959)",
+          "bbox": [
+            {
+              "h": 28.672591463414637,
+              "w": 125.85350990853658,
+              "x": 150.49318788109755,
+              "y": 133.90602896341463,
+              "confidence": 0.97,
+              "end_index": 246,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A new version of \"DONALD DUCK\" in *Walt Disney's Comics* No. 98, November 1948.",
+          "value": "A new version of \"DONALD DUCK\" in Walt Disney's Comics No. 98, November 1948.",
+          "bbox": [
+            {
+              "h": 10.82132240853658,
+              "w": 125.6147217987805,
+              "x": 150.31255335365853,
+              "y": 163.44977515243903,
+              "confidence": 0.96,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 155, August 1978; *Walt Disney's Comics Digest* No. 17, November 1969.",
+          "value": "Reprinted: Uncle Scrooge No. 155, August 1978; Walt Disney's Comics Digest No. 17, November 1969.",
+          "bbox": [
+            {
+              "h": 10.939504573170751,
+              "w": 125.76220655487802,
+              "x": 150.08149961890243,
+              "y": 175.1494550304878,
+              "confidence": 0.96,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 31 - Sept.-Nov. 1960 - 36 pages",
+          "value": "31 - Sept.-Nov. 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6187804878048695,
+              "w": 74.16492187499999,
+              "x": 150.40044397865853,
+              "y": 192.3607088414634,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge stretches to pick up a bill while obeying a \"Keep Off the Grass\" sign. *(Aug. 12, 1959)*\nReprinted: *Uncle Scrooge* No. 87, June 1970; No. 143, August 1977.",
+          "value": "Front cover (art only): Scrooge stretches to pick up a bill while obeying a \"Keep Off the Grass\" sign. (Aug. 12, 1959)\nReprinted: Uncle Scrooge No. 87, June 1970; No. 143, August 1977.",
+          "bbox": [
+            {
+              "h": 22.111440548780465,
+              "w": 125.58373285060976,
+              "x": 150.44011051829267,
+              "y": 198.36555640243904,
+              "confidence": 0.98,
+              "end_index": 187,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE All at Sea - 17 - Scrooge goes to the port of Bantu in an old windjammer to pick up a billion dollars in gold. He has the gold shaped to look like corn in an effort to fool the Beagle Boys, but they see through the ruse. *(Feb. 12, 1960)*",
+          "value": "UNCLE SCROOGE All at Sea - 17 - Scrooge goes to the port of Bantu in an old windjammer to pick up a billion dollars in gold. He has the gold shaped to look like corn in an effort to fool the Beagle Boys, but they see through the ruse. (Feb. 12, 1960)",
+          "bbox": [
+            {
+              "h": 28.659740853658576,
+              "w": 125.85637385670731,
+              "x": 150.35525533536585,
+              "y": 221.5935594512195,
+              "confidence": 0.97,
+              "end_index": 251,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 137, February 1977; *Walt Disney Comics Digest* No. 3, August 1968.",
+          "value": "Reprinted: Uncle Scrooge No. 137, February 1977; Walt Disney Comics Digest No. 3, August 1968.",
+          "bbox": [
+            {
+              "h": 11.23191310975606,
+              "w": 125.72994855182927,
+              "x": 150.1170674542683,
+              "y": 251.1258612804878,
+              "confidence": 0.97,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Fishy Warden - 4 - Gyro, as a special game warden, wears a fish suit to catch frogmen who are raiding the salmon grounds. *(Feb. 16, 1960)*",
+          "value": "GYRO GEARLOOSE Fishy Warden - 4 - Gyro, as a special game warden, wears a fish suit to catch frogmen who are raiding the salmon grounds. (Feb. 16, 1960)",
+          "bbox": [
+            {
+              "h": 17.35525152439026,
+              "w": 125.74822980182927,
+              "x": 150.446953125,
+              "y": 262.52606707317074,
+              "confidence": 0.97,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Two-way Luck - 9 - Scrooge, beaten on Friday the Thirteenth in an emerald contest, goes to the South American source of the largest emerald and finds a cave where emeralds \"grow.\" *(Feb. 26, 1960)*",
+          "value": "UNCLE SCROOGE Two-way Luck - 9 - Scrooge, beaten on Friday the Thirteenth in an emerald contest, goes to the South American source of the largest emerald and finds a cave where emeralds \"grow.\" (Feb. 26, 1960)",
+          "bbox": [
+            {
+              "h": 27.94250762195119,
+              "w": 126.0578448932927,
+              "x": 150.29248856707315,
+              "y": 279.9944131097561,
+              "confidence": 0.96,
+              "end_index": 210,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 92, April 1971; *Uncle Scrooge* No. 157, October 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 92, April 1971; Uncle Scrooge No. 157, October 1978.",
+          "bbox": [
+            {
+              "h": 10.47178353658539,
+              "w": 125.44453125000003,
+              "x": 150.2180945121951,
+              "y": 309.9751600609756,
+              "confidence": 0.95,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Secret Book - 7/8 - Scrooge buys a phony book on \"How to Make Money.\" *(May 24, 1956)*\nThe Dell Pledge fills out the page.",
+          "value": "UNCLE SCROOGE The Secret Book - 7/8 - Scrooge buys a phony book on \"How to Make Money.\" (May 24, 1956)\nThe Dell Pledge fills out the page.",
+          "bbox": [
+            {
+              "h": 17.574375,
+              "w": 125.5792225609756,
+              "x": 150.32095655487802,
+              "y": 321.0567073170732,
+              "confidence": 0.93,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 157, October 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 157, October 1978.",
+          "bbox": [
+            {
+              "h": 5.310137195121915,
+              "w": 98.19745998475608,
+              "x": 154.79921112804877,
+              "y": 339.0906173780488,
+              "confidence": 0.86,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Balmy Swami - 1 (inside back",
+          "value": "UNCLE SCROOGE The Balmy Swami - 1 (inside back",
+          "bbox": [
+            {
+              "h": 11.04290396341461,
+              "w": 121.23020579268292,
+              "x": 154.69864710365852,
+              "y": 339.13955030487807,
+              "confidence": 0.76,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "144\nCarl Barks and the Art of the Comic Book",
+              "value": "144\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.46576981707316,
+                  "w": 77.68360375381096,
+                  "x": 37.323465605945124,
+                  "y": 362.85850609756096,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "144\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.47,
+              "w": 77.68,
+              "x": 37.32,
+              "y": 362.86,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "144"
+    }
+  ]
+}

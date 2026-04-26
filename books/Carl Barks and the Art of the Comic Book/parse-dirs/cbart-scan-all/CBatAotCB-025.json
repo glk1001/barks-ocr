@@ -1,0 +1,134 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A cartoon drawing of a wild-haired man with handwritten text surrounding him. The text reads: \"MUSIC - FOOEY!! BEETHOVEN IS PHONEY COMPARED TO THE HOOSIER HOT SHOTS!!\", \"LITERATURE FOOEY!! WOT HAS KIPLING GOT OUR WESTERN PULPS MAGAZINES AINT! -\", \"ART!! HUMBUG!! WOT HAS THIS DEGAS GOT THAT PETTY AINT - BESIDES, CAN DEGAS DRAW SEX NO!!\"",
+          "md": "![A cartoon drawing of a wild-haired man with handwritten text surrounding him. The text reads: \"MUSIC - FOOEY!! BEETHOVEN IS PHONEY COMPARED TO THE HOOSIER HOT SHOTS!!\", \"LITERATURE FOOEY!! WOT HAS KIPLING GOT OUR WESTERN PULPS MAGAZINES AINT! -\", \"ART!! HUMBUG!! WOT HAS THIS DEGAS GOT THAT PETTY AINT - BESIDES, CAN DEGAS DRAW SEX NO!!\"](CBatAotCB-025_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-025_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 186.63139767530487,
+              "w": 246.29146317644816,
+              "x": 23.328317692454267,
+              "y": 25.297657202743903,
+              "confidence": 0.98,
+              "end_index": 362,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "of course, is that many hands were involved in the making of these cartoons. Jack King was a stodgy director, who sacrificed every other consideration in order to stage the gags in his cartoons clearly; watching them is like listening to a comedian enunciate the words very slowly and precisely as he tells a joke.",
+          "value": "of course, is that many hands were involved in the making of these cartoons. Jack King was a stodgy director, who sacrificed every other consideration in order to stage the gags in his cartoons clearly; watching them is like listening to a comedian enunciate the words very slowly and precisely as he tells a joke.",
+          "bbox": [
+            {
+              "h": 52.073323170731705,
+              "w": 125.50372772961126,
+              "x": 13.116937285632622,
+              "y": 237.39857469512197,
+              "confidence": 0.99,
+              "end_index": 313,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "King's direction usually made the gags in his cartoons seem worse than they were — quite an accomplishment, since many of the gags were terrible. This is especially noticeable in the earlier cartoons, the ones on which Barks worked with Harry Reeves, but contrived gags turn up in the later cartoons as well. In *Donald's Snow Fight* (1942), for example, Donald is pursuing the",
+          "value": "King's direction usually made the gags in his cartoons seem worse than they were — quite an accomplishment, since many of the gags were terrible. This is especially noticeable in the earlier cartoons, the ones on which Barks worked with Harry Reeves, but contrived gags turn up in the later cartoons as well. In Donald's Snow Fight (1942), for example, Donald is pursuing the",
+          "bbox": [
+            {
+              "h": 66.58726371951218,
+              "w": 125.77299137766767,
+              "x": 13.10678377477134,
+              "y": 289.38589939024394,
+              "confidence": 0.99,
+              "end_index": 376,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "nephews, who take refuge in their snow fort. Donald slams into mattress springs on the gate of the fort; he bounces across a frozen lake like a stone skipping across the water; he hits a tree, and icicles form a cage around him; and snow falls on him and makes him look like a rhinoceros. Any one of these ideas might have been tolerable in isolation, but in their cumulative effect, in a few seconds of screen time, they are insufferable, especially as presented by King.",
+          "value": "nephews, who take refuge in their snow fort. Donald slams into mattress springs on the gate of the fort; he bounces across a frozen lake like a stone skipping across the water; he hits a tree, and icicles form a cage around him; and snow falls on him and makes him look like a rhinoceros. Any one of these ideas might have been tolerable in isolation, but in their cumulative effect, in a few seconds of screen time, they are insufferable, especially as presented by King.",
+          "bbox": [
+            {
+              "h": 89.52836890243904,
+              "w": 126.30112614329266,
+              "x": 149.65542301829265,
+              "y": 236.91361280487806,
+              "confidence": 0.99,
+              "end_index": 471,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "One would like to blame Barks's partners in the story department for such stuff, but the fault was probably as much his as theirs. He was, after all, fresh from the *Eye-Opener*,",
+          "value": "One would like to blame Barks's partners in the story department for such stuff, but the fault was probably as much his as theirs. He was, after all, fresh from the Eye-Opener,",
+          "bbox": [
+            {
+              "h": 29.682141768292695,
+              "w": 125.88010861280489,
+              "x": 150.55595464939023,
+              "y": 325.90671493902437,
+              "confidence": 0.99,
+              "end_index": 177,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n25",
+              "value": "Carl Barks and the Art of the Comic Book\n25",
+              "bbox": [
+                {
+                  "h": 5.10443597560974,
+                  "w": 80.346796875,
+                  "x": 173.25198932926827,
+                  "y": 365.90192835365855,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n25",
+          "bbox": [
+            {
+              "h": 5.1,
+              "w": 80.35,
+              "x": 173.25,
+              "y": 365.9,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "25"
+    }
+  ]
+}

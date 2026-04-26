@@ -1,0 +1,188 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# WALT DISNEY'S",
+          "value": "WALT DISNEY'S",
+          "bbox": [
+            {
+              "h": 13.401342416158537,
+              "w": 89.18364615091463,
+              "x": 99.34172732469511,
+              "y": 40.530277248475606,
+              "confidence": 0.83,
+              "end_index": 12,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# UNCLE SCROOGE",
+          "value": "UNCLE SCROOGE",
+          "bbox": [
+            {
+              "h": 29.175720274390244,
+              "w": 226.72873570884144,
+              "x": 30.006502477134145,
+              "y": 57.40648056402439,
+              "confidence": 0.86,
+              "end_index": 12,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## The Lemonade King",
+          "value": "The Lemonade King",
+          "bbox": [
+            {
+              "h": 18.211309070121942,
+              "w": 137.73127191310974,
+              "x": 77.39174256859755,
+              "y": 89.03436928353659,
+              "confidence": 0.81,
+              "end_index": 16,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Pictures by Carl Barks and Norm McGary",
+          "value": "Pictures by Carl Barks and Norm McGary",
+          "bbox": [
+            {
+              "h": 14.75061356707316,
+              "w": 202.46167111280485,
+              "x": 42.41665015243902,
+              "y": 111.84668826219513,
+              "confidence": 0.88,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "Uncle Scrooge relaxing in a beach chair, wearing a top hat and spectacles, drinking lemonade from four glasses simultaneously using long straws. A pitcher of lemonade sits on the sand nearby. Text above the image reads \"Authorized Edition\".",
+          "md": "![Uncle Scrooge relaxing in a beach chair, wearing a top hat and spectacles, drinking lemonade from four glasses simultaneously using long straws. A pitcher of lemonade sits on the sand nearby. Text above the image reads \"Authorized Edition\".](CBatAotCB-196_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-196_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 146.40938643292682,
+              "w": 189.70085270579267,
+              "x": 60.48822313262195,
+              "y": 129.5018711890244,
+              "confidence": 0.94,
+              "end_index": 265,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Copyright © 1960 Walt Disney Productions\nWorld Rights Reserved",
+          "value": "Copyright © 1960 Walt Disney Productions\nWorld Rights Reserved",
+          "bbox": [
+            {
+              "h": 12.30914634146342,
+              "w": 82.95275819359755,
+              "x": 102.5297303734756,
+              "y": 294.0110213414634,
+              "confidence": 0.9,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**WHITMAN PUBLISHING CO., RACINE, WIS.**\nPRINTED IN U.S.A.",
+          "value": "WHITMAN PUBLISHING CO., RACINE, WIS.\nPRINTED IN U.S.A.",
+          "bbox": [
+            {
+              "h": 15.77579268292684,
+              "w": 194.64997379954266,
+              "x": 48.83724037728658,
+              "y": 311.728125,
+              "confidence": 0.8,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "From *Uncle Scrooge the Lemonade King*; © 1960 Walt Disney Productions.",
+          "value": "From Uncle Scrooge the Lemonade King; © 1960 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.816653963414664,
+              "w": 146.0548013528963,
+              "x": 71.08369521722561,
+              "y": 344.81009908536583,
+              "confidence": 0.91,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "196 Carl Barks and the Art of the Comic Book",
+              "value": "196 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.46185213414632,
+                  "w": 77.91001000381098,
+                  "x": 35.446524866615846,
+                  "y": 365.66183689024393,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "196 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.46,
+              "w": 77.91,
+              "x": 35.45,
+              "y": 365.66,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "196"
+    }
+  ]
+}

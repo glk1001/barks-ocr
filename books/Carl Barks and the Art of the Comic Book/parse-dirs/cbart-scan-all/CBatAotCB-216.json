@@ -1,0 +1,255 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "level": 1,
+              "md": "# APPENDIX B",
+              "value": "APPENDIX B",
+              "bbox": [
+                {
+                  "h": 13.74849895198171,
+                  "w": 120.70386099466464,
+                  "x": 14.378670445884145,
+                  "y": 16.764513624237804,
+                  "confidence": 0.63,
+                  "end_index": 9,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "heading"
+            },
+            {
+              "level": 1,
+              "md": "# BARKS AS A DISNEY STORY MAN",
+              "value": "BARKS AS A DISNEY STORY MAN",
+              "bbox": [
+                {
+                  "h": 65.33303163109757,
+                  "w": 126.19098418445121,
+                  "x": 12.107452362804876,
+                  "y": 59.360104801829266,
+                  "confidence": 0.59,
+                  "end_index": 26,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "heading"
+            }
+          ],
+          "md": "# APPENDIX B\n# BARKS AS A DISNEY STORY MAN",
+          "bbox": [
+            {
+              "h": 107.93,
+              "w": 126.19,
+              "x": 12.11,
+              "y": 16.76,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header"
+        },
+        {
+          "md": "The following is a list of the Disney cartoons on which Barks worked as a story man, according to his own records. The date in parentheses is the cartoon's release date.",
+          "value": "The following is a list of the Disney cartoons on which Barks worked as a story man, according to his own records. The date in parentheses is the cartoon's release date.",
+          "bbox": [
+            {
+              "h": 22.496384336890245,
+              "w": 125.95713402724846,
+              "x": 11.79567752000762,
+              "y": 35.888760480182924,
+              "confidence": 0.98,
+              "end_index": 168,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In some cases, Barks's role in the work on a story is specified in an outline that was distributed throughout the studio before work on the story was completed; copies of such outlines have been preserved in the Disney Archives. The initials \"SD\" after a cartoon's release date indicate that, according to an outline, Barks was the story director on the cartoon. The initials \"SC\" indicate that he was identified as a member of the story crew, technically subordinate to a story director — although as Barks and other former Disney story men have said, such distinctions were not much honored at the time.",
+          "value": "In some cases, Barks's role in the work on a story is specified in an outline that was distributed throughout the studio before work on the story was completed; copies of such outlines have been preserved in the Disney Archives. The initials \"SD\" after a cartoon's release date indicate that, according to an outline, Barks was the story director on the cartoon. The initials \"SC\" indicate that he was identified as a member of the story crew, technically subordinate to a story director — although as Barks and other former Disney story men have said, such distinctions were not much honored at the time.",
+          "bbox": [
+            {
+              "h": 65.33303163109757,
+              "w": 126.19098418445121,
+              "x": 12.107452362804876,
+              "y": 59.360104801829266,
+              "confidence": 0.99,
+              "end_index": 604,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Typically, a year or more would elapse between the circulation of an outline and the release of the finished cartoon; for example, the outline for *Sea Scouts* was distributed on March 26, 1938, and the cartoon was released on June 30, 1939.",
+          "value": "Typically, a year or more would elapse between the circulation of an outline and the release of the finished cartoon; for example, the outline for Sea Scouts was distributed on March 26, 1938, and the cartoon was released on June 30, 1939.",
+          "bbox": [
+            {
+              "h": 29.658669969512175,
+              "w": 126.54844178734756,
+              "x": 12.247292778201219,
+              "y": 124.8266730182927,
+              "confidence": 0.99,
+              "end_index": 240,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Modern Inventions* (May 29, 1937)\n*Donald's Ostrich* (December 10, 1937)\n*Self Control* (February 11, 1938)\n*Donald's Better Self* (March 11, 1938) SC\n*Donald's Nephews* (April 15, 1938) SC\n*Good Scouts* (July 8, 1938) SC\n*Donald's Golf Game* (November 4, 1938) SC\n*Donald's Lucky Day* (January 13, 1939) SC\n*The Hockey Champ* (April 28, 1939) SD\n*Donald's Cousin Gus* (May 19, 1939) SD\n*Sea Scouts* (June 30, 1939) SD\n*Donald's Penguin* (August 11, 1939) SC\n*The Autograph Hound* (September 1, 1939) SC\n*Mr. Duck Steps Out* (June 7, 1940)\n*Bone Trouble* (June 28, 1940)\n*Put-Put Troubles* (July 19, 1940)",
+          "value": "Modern Inventions (May 29, 1937)\nDonald's Ostrich (December 10, 1937)\nSelf Control (February 11, 1938)\nDonald's Better Self (March 11, 1938) SC\nDonald's Nephews (April 15, 1938) SC\nGood Scouts (July 8, 1938) SC\nDonald's Golf Game (November 4, 1938) SC\nDonald's Lucky Day (January 13, 1939) SC\nThe Hockey Champ (April 28, 1939) SD\nDonald's Cousin Gus (May 19, 1939) SD\nSea Scouts (June 30, 1939) SD\nDonald's Penguin (August 11, 1939) SC\nThe Autograph Hound (September 1, 1939) SC\nMr. Duck Steps Out (June 7, 1940)\nBone Trouble (June 28, 1940)\nPut-Put Troubles (July 19, 1940)",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Donald's Vacation* (August 9, 1940)\n*Window Cleaners* (September 20, 1940)\n*Fire Chief* (December 13, 1940)\n*Timber* (January 10, 1941)\n*The Golden Eggs* (March 7, 1941)\n*Early to Bed* (July 11, 1941)\n*Truant Officer Donald* (August 1, 1941)\n*Old MacDonald Duck* (September 12, 1941)\n*Chef Donald* (December 5, 1941)\n*The Village Smithy* (January 16, 1942)\n*Donald's Snow Fight* (April 10, 1942)\n*Donald Gets Drafted* (May 1, 1942)\n*The Army Mascot* (May 22, 1942)\n*The Vanishing Private* (September 25, 1942)\n*Sky Trooper* (November 6, 1942)\n*Bellboy Donald* (December 18, 1942)\n*The Old Army Game* (November 5, 1943)\n*Home Defense* (November 26, 1943)\n*Trombone Trouble* (February 18, 1944)\n*The Plastics Inventor* (September 1, 1944)",
+          "value": "Donald's Vacation (August 9, 1940)\nWindow Cleaners (September 20, 1940)\nFire Chief (December 13, 1940)\nTimber (January 10, 1941)\nThe Golden Eggs (March 7, 1941)\nEarly to Bed (July 11, 1941)\nTruant Officer Donald (August 1, 1941)\nOld MacDonald Duck (September 12, 1941)\nChef Donald (December 5, 1941)\nThe Village Smithy (January 16, 1942)\nDonald's Snow Fight (April 10, 1942)\nDonald Gets Drafted (May 1, 1942)\nThe Army Mascot (May 22, 1942)\nThe Vanishing Private (September 25, 1942)\nSky Trooper (November 6, 1942)\nBellboy Donald (December 18, 1942)\nThe Old Army Game (November 5, 1943)\nHome Defense (November 26, 1943)\nTrombone Trouble (February 18, 1944)\nThe Plastics Inventor (September 1, 1944)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Trombone Trouble* had the working title *Superman Duck* at the time Barks was involved with it.",
+          "value": "Trombone Trouble had the working title Superman Duck at the time Barks was involved with it.",
+          "bbox": [
+            {
+              "h": 11.88915777439026,
+              "w": 125.48424923780486,
+              "x": 150.19875,
+              "y": 141.92970274390242,
+              "confidence": 0.96,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "All of the above cartoons were directed by Jack King, with the following exceptions: *Sea Scouts*, Dick Lundy; *Bone Trouble*, Jack Kinney; *Put-Put Troubles*, Riley Thompson; *The Golden Eggs*, Wilfred Jackson; *The Village Smithy*, Dick Lundy; *The Army Mascot*, Clyde Geronimi.",
+          "value": "All of the above cartoons were directed by Jack King, with the following exceptions: Sea Scouts, Dick Lundy; Bone Trouble, Jack Kinney; Put-Put Troubles, Riley Thompson; The Golden Eggs, Wilfred Jackson; The Village Smithy, Dick Lundy; The Army Mascot, Clyde Geronimi.",
+          "bbox": [
+            {
+              "h": 34.558730945121944,
+              "w": 125.61777439024388,
+              "x": 150.28686356707314,
+              "y": 154.03872713414634,
+              "confidence": 0.97,
+              "end_index": 279,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "All of the cartoons on the list are Donald Duck cartoons except for *Bone Trouble* and *The Army Mascot*, both of which star Pluto.",
+          "value": "All of the cartoons on the list are Donald Duck cartoons except for Bone Trouble and The Army Mascot, both of which star Pluto.",
+          "bbox": [
+            {
+              "h": 17.09015625,
+              "w": 125.60540967987802,
+              "x": 150.4657488567073,
+              "y": 189.4709336890244,
+              "confidence": 0.97,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's records show that he worked on cartoon stories listed under the titles \"Northwest Mounted,\" \"Prospector,\" \"Balloon,\" \"Shooting Gallery,\" \"Beaver Hunt,\" and \"Salesman,\" all of which were shelved. The Disney Archives has material — sketches, outlines, gag suggestions, or story meeting notes — matching all of these titles except \"Salesman,\" and has an outline with Barks' name on it and sketches for a cartoon that was to have been titled *Donald Munchausen*.",
+          "value": "Barks's records show that he worked on cartoon stories listed under the titles \"Northwest Mounted,\" \"Prospector,\" \"Balloon,\" \"Shooting Gallery,\" \"Beaver Hunt,\" and \"Salesman,\" all of which were shelved. The Disney Archives has material — sketches, outlines, gag suggestions, or story meeting notes — matching all of these titles except \"Salesman,\" and has an outline with Barks' name on it and sketches for a cartoon that was to have been titled Donald Munchausen.",
+          "bbox": [
+            {
+              "h": 52.38016006097559,
+              "w": 125.85246379573171,
+              "x": 150.46322789634144,
+              "y": 207.27509908536584,
+              "confidence": 0.99,
+              "end_index": 465,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "216\nCarl Barks and the Art of the Comic Book",
+              "value": "216\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.621783536585389,
+                  "w": 77.7167878239329,
+                  "x": 37.56975657393293,
+                  "y": 364.83868902439025,
+                  "confidence": 0.93,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "216\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.62,
+              "w": 77.72,
+              "x": 37.57,
+              "y": 364.84,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "216"
+    }
+  ]
+}

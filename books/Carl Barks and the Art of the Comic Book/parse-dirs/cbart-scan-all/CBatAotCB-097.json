@@ -1,0 +1,201 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "it, it would have to have that 'Pledge to Parents' panel. That was on very rare occasions, it happened a few times, but it was not often. So much of the time, I was so far ahead of the publication dates that my stories had gone in long before any of these problems ever arose. ... They had to cut a story that they had already paid me for.\"",
+          "value": "it, it would have to have that 'Pledge to Parents' panel. That was on very rare occasions, it happened a few times, but it was not often. So much of the time, I was so far ahead of the publication dates that my stories had gone in long before any of these problems ever arose. ... They had to cut a story that they had already paid me for.\"",
+          "bbox": [
+            {
+              "h": 59.0393926257622,
+              "w": 125.24324992854417,
+              "x": 12.413465010480182,
+              "y": 11.717036490091463,
+              "confidence": 0.99,
+              "end_index": 339,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The story descriptions are meant only to identify the stories, and not to summarize them. Sometimes, when stories are brief or simple, the descriptions double as synopses, but that is coincidental; I have tried only to give some idea of what a story is about, and to identify those major supporting characters (such as Uncle Scrooge, Gladstone Gander, and the Junior Woodchucks) who have significant roles in the story. When this bibliography was being published in installments, in *Funnyworld*, I published full plot summaries for some stories, and the general consensus — with which I agreed — was that those synopses were dry, boring, and superfluous.",
+          "value": "The story descriptions are meant only to identify the stories, and not to summarize them. Sometimes, when stories are brief or simple, the descriptions double as synopses, but that is coincidental; I have tried only to give some idea of what a story is about, and to identify those major supporting characters (such as Uncle Scrooge, Gladstone Gander, and the Junior Woodchucks) who have significant roles in the story. When this bibliography was being published in installments, in Funnyworld, I published full plot summaries for some stories, and the general consensus — with which I agreed — was that those synopses were dry, boring, and superfluous.",
+          "bbox": [
+            {
+              "h": 111.57426448170732,
+              "w": 124.87935701695882,
+              "x": 12.975904987614328,
+              "y": 71.63599847560975,
+              "confidence": 0.99,
+              "end_index": 654,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**NOTES FOLLOW MANY** of the entries in this bibliography, some of them labeled as follows.",
+          "value": "NOTES FOLLOW MANY of the entries in this bibliography, some of them labeled as follows.",
+          "bbox": [
+            {
+              "h": 20.704618902439016,
+              "w": 124.56681581078506,
+              "x": 13.347568716653962,
+              "y": 197.72903963414635,
+              "confidence": 0.97,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Barks\" — These are quotations from Barks himself about his work, taken from letters, interviews, and other sources. When not otherwise identified, the quotations come from the aforementioned 1969 list of Barks's work for Western. Four of the interviews cited were recorded by me on May 30, 1971, and November 22, 1973, in Goleta, California, October 5 and 6, 1974, in Atlanta, Georgia, and August 13, 1978, in Temecula, California. The other interview was published in *Comic Art* No. 7, 1968, a mimeographed comics fan magazine. Most of the quotations from letters to persons other than me are taken from copies of those letters in the Walt Disney Archives.",
+          "value": "\"Barks\" — These are quotations from Barks himself about his work, taken from letters, interviews, and other sources. When not otherwise identified, the quotations come from the aforementioned 1969 list of Barks's work for Western. Four of the interviews cited were recorded by me on May 30, 1971, and November 22, 1973, in Goleta, California, October 5 and 6, 1974, in Atlanta, Georgia, and August 13, 1978, in Temecula, California. The other interview was published in Comic Art No. 7, 1968, a mimeographed comics fan magazine. Most of the quotations from letters to persons other than me are taken from copies of those letters in the Walt Disney Archives.",
+          "bbox": [
+            {
+              "h": 111.1975152439024,
+              "w": 124.85597489519816,
+              "x": 13.563896484375,
+              "y": 219.58721798780488,
+              "confidence": 0.99,
+              "end_index": 658,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks refers to several persons in his notes: his daughter Peggy, now deceased, lived in Washington state at the time she was giving",
+          "value": "Barks refers to several persons in his notes: his daughter Peggy, now deceased, lived in Washington state at the time she was giving",
+          "bbox": [
+            {
+              "h": 22.281333841463418,
+              "w": 124.91593988185974,
+              "x": 13.40737185594512,
+              "y": 331.02868902439025,
+              "confidence": 0.98,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks ideas for stories; Chase Craig was an editor in Western Publishing's West Coast office from 1949 until his retirement in 1975, and handled Barks's work for much of that time; Dana Coty was a writer who worked for *Judge* magazine and in the Disney studio's story department; Nick George was a Disney animator and story man who died in 1978.",
+          "value": "Barks ideas for stories; Chase Craig was an editor in Western Publishing's West Coast office from 1949 until his retirement in 1975, and handled Barks's work for much of that time; Dana Coty was a writer who worked for Judge magazine and in the Disney studio's story department; Nick George was a Disney animator and story man who died in 1978.",
+          "bbox": [
+            {
+              "h": 59.17978182164634,
+              "w": 125.13803734756092,
+              "x": 150.54803163109756,
+              "y": 12.484095846036585,
+              "confidence": 0.99,
+              "end_index": 345,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Changes\" — This term embraces those changes made in Barks's work after he had submitted it to Western — changes in dialogue, the deletion of panels or pages, and so on. Sometimes Barks was ordered to make such changes himself; sometimes Western's editors made them.",
+          "value": "\"Changes\" — This term embraces those changes made in Barks's work after he had submitted it to Western — changes in dialogue, the deletion of panels or pages, and so on. Sometimes Barks was ordered to make such changes himself; sometimes Western's editors made them.",
+          "bbox": [
+            {
+              "h": 51.98563833841464,
+              "w": 125.0894702743902,
+              "x": 150.99345274390242,
+              "y": 71.877421875,
+              "confidence": 0.98,
+              "end_index": 265,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Weston\" — These are quotations taken from an article by Kim Weston in *Funnyworld* No. 16, Winter 1974-75, on Barks' unpublished work. The quotations are © 1975 by Kim Weston, and reproduced here by permission. The Weston notes accompanying the entries for *Donald Duck* No. 26 and *Uncle Scrooge* Four Color No. 456 include information about unpublished pages that had not come to light when the article in *Funnyworld* was written. The additional material in these notes is © by Kim Weston. Weston has made the most thorough study of Barks's unpublished work, and I have quoted him in this bibliography because I saw no reason to duplicate his work — especially since my own findings agree with his. Some of the material that Weston discusses was deleted by Barks himself before his stories were submitted; Weston also discusses material that was (like material listed under \"changes\") deleted or altered by Western, or on Western's orders.",
+          "value": "\"Weston\" — These are quotations taken from an article by Kim Weston in Funnyworld No. 16, Winter 1974-75, on Barks' unpublished work. The quotations are © 1975 by Kim Weston, and reproduced here by permission. The Weston notes accompanying the entries for Donald Duck No. 26 and Uncle Scrooge Four Color No. 456 include information about unpublished pages that had not come to light when the article in Funnyworld was written. The additional material in these notes is © by Kim Weston. Weston has made the most thorough study of Barks's unpublished work, and I have quoted him in this bibliography because I saw no reason to duplicate his work — especially since my own findings agree with his. Some of the material that Weston discusses was deleted by Barks himself before his stories were submitted; Weston also discusses material that was (like material listed under \"changes\") deleted or altered by Western, or on Western's orders.",
+          "bbox": [
+            {
+              "h": 162.2052324695122,
+              "w": 126.0105983231707,
+              "x": 150.65399771341464,
+              "y": 124.45174161585365,
+              "confidence": 0.98,
+              "end_index": 942,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Other notes deal with unusual features that do not fit into neat categories — the introduction of a new character, the citation of a story in scientific literature, and so forth. I have not attempted to shoehorn all of my notes into neat pigeonholes, and you will find, for example, some quotations from Barks that are not flagged by the word \"Barks\" at the beginning of a paragraph.",
+          "value": "Other notes deal with unusual features that do not fit into neat categories — the introduction of a new character, the citation of a story in scientific literature, and so forth. I have not attempted to shoehorn all of my notes into neat pigeonholes, and you will find, for example, some quotations from Barks that are not flagged by the word \"Barks\" at the beginning of a paragraph.",
+          "bbox": [
+            {
+              "h": 66.66384146341461,
+              "w": 124.8942930640244,
+              "x": 151.6174676067073,
+              "y": 286.91064786585366,
+              "confidence": 0.99,
+              "end_index": 382,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "*Carl Barks and the Art of the Comic Book*\n97",
+              "value": "Carl Barks and the Art of the Comic Book\n97",
+              "bbox": [
+                {
+                  "h": 5.15625,
+                  "w": 79.97131097560977,
+                  "x": 173.05869855182925,
+                  "y": 366.78443597560977,
+                  "confidence": 0.93,
+                  "end_index": 44,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "*Carl Barks and the Art of the Comic Book*\n97",
+          "bbox": [
+            {
+              "h": 5.16,
+              "w": 79.97,
+              "x": 173.06,
+              "y": 366.78,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "97"
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Uncle Scrooge saying: \"BAH! KID TALK! NO MAN IS POOR WHO CAN DO WHAT HE LIKES TO DO ONCE IN A WHILE!\"",
+          "md": "![Uncle Scrooge saying: \"BAH! KID TALK! NO MAN IS POOR WHO CAN DO WHAT HE LIKES TO DO ONCE IN A WHILE!\"](CBatAotCB-049_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-049_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 92.2165086699695,
+              "w": 131.88371141387194,
+              "x": 13.065130049542683,
+              "y": 13.503971512957316,
+              "confidence": 0.93,
+              "end_index": 126,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Uncle Scrooge diving into coins: \"AND I LIKE TO DIVE AROUND IN MY MONEY LIKE A PORPOISE!\"",
+          "md": "![Uncle Scrooge diving into coins: \"AND I LIKE TO DIVE AROUND IN MY MONEY LIKE A PORPOISE!\"](CBatAotCB-049_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-049_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 92.75760623094513,
+              "w": 127.25603849085363,
+              "x": 148.16210556402436,
+              "y": 12.953098799542682,
+              "confidence": 0.93,
+              "end_index": 114,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Uncle Scrooge burrowing through coins: \"AND BURROW THROUGH IT LIKE A GOPHER!\"",
+          "md": "![Uncle Scrooge burrowing through coins: \"AND BURROW THROUGH IT LIKE A GOPHER!\"](CBatAotCB-049_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-049_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 92.28168064024392,
+              "w": 144.924355349657,
+              "x": 13.215694193025913,
+              "y": 108.58046112804878,
+              "confidence": 0.9,
+              "end_index": 102,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Uncle Scrooge tossing coins: \"AND TOSS IT UP AND LET IT HIT ME ON THE HEAD!\"",
+          "md": "![Uncle Scrooge tossing coins: \"AND TOSS IT UP AND LET IT HIT ME ON THE HEAD!\"](CBatAotCB-049_page_1_image_4_v2.jpg)",
+          "url": "CBatAotCB-049_page_1_image_4_v2.jpg",
+          "bbox": [
+            {
+              "h": 92.6239024390244,
+              "w": 114.85121570121947,
+              "x": 161.31705983231706,
+              "y": 108.65300304878049,
+              "confidence": 0.89,
+              "end_index": 101,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From Uncle Scrooge Four Color No. 386, 1952; © 1952 Walt Disney Productions.",
+          "value": "\nFrom Uncle Scrooge Four Color No. 386, 1952; © 1952 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.466875,
+              "w": 165.74253715701218,
+              "x": 71.96003334603658,
+              "y": 210.44339176829268,
+              "confidence": 0.92,
+              "end_index": 75,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Disney's Comics, and the plot hinged on the Beagle Boys' efforts to crack it (as many plots were to later). Here, as in the November issue, Scrooge saved them the trouble, by taking Donald's bad advice.\\*",
+          "value": "Disney's Comics, and the plot hinged on the Beagle Boys' efforts to crack it (as many plots were to later). Here, as in the November issue, Scrooge saved them the trouble, by taking Donald's bad advice.*",
+          "bbox": [
+            {
+              "h": 43.2467149390244,
+              "w": 126.10572491901677,
+              "x": 11.89248582793445,
+              "y": 221.01089176829268,
+              "confidence": 0.99,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Beagle Boys acquired a real group personality a few months later, in the first issue of *Uncle Scrooge* (1952). In \"Only a Poor Old Man,\" the story that takes up the entire comic book, the Beagles are revealed as the perfect foils for Scrooge. Like him, they're monomani-",
+          "value": "The Beagle Boys acquired a real group personality a few months later, in the first issue of Uncle Scrooge (1952). In \"Only a Poor Old Man,\" the story that takes up the entire comic book, the Beagles are revealed as the perfect foils for Scrooge. Like him, they're monomani-",
+          "bbox": [
+            {
+              "h": 44.348711890243884,
+              "w": 125.80638338414634,
+              "x": 11.73309832317073,
+              "y": 266.0237881097561,
+              "confidence": 0.99,
+              "end_index": 274,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "acs, fully as devoted to Scrooge's fortune as Scrooge himself is. They expend as much time and energy trying to steal it as Scrooge does protecting it. The big difference is that the Beagles are interchangeable organization men (they became \"Beagle Boys, Inc.\" in that story, as proclaimed on their shirtfronts) and not rugged individualists.",
+          "value": "acs, fully as devoted to Scrooge's fortune as Scrooge himself is. They expend as much time and energy trying to steal it as Scrooge does protecting it. The big difference is that the Beagles are interchangeable organization men (they became \"Beagle Boys, Inc.\" in that story, as proclaimed on their shirtfronts) and not rugged individualists.",
+          "bbox": [
+            {
+              "h": 60.068803353658545,
+              "w": 125.91900342987803,
+              "x": 151.44497903963415,
+              "y": 221.12485518292684,
+              "confidence": 0.99,
+              "end_index": 341,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Only a Poor Old Man\" marks a major change in Scrooge, too. This is, after all, Scrooge's story; he is the hero, battling a set of unmistakable (although comic) villains. But because he is the hero, rather than a supporting character in a Donald Duck story, he can't be quite the same incorrigible old capitalist as before.",
+          "value": "\"Only a Poor Old Man\" marks a major change in Scrooge, too. This is, after all, Scrooge's story; he is the hero, battling a set of unmistakable (although comic) villains. But because he is the hero, rather than a supporting character in a Donald Duck story, he can't be quite the same incorrigible old capitalist as before.",
+          "bbox": [
+            {
+              "h": 57.81651676829269,
+              "w": 126.03604801829269,
+              "x": 151.83156059451218,
+              "y": 280.8578734756097,
+              "confidence": 0.99,
+              "end_index": 322,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge in his supporting appearances was not an especially sympathetic character. If",
+          "value": "Scrooge in his supporting appearances was not an especially sympathetic character. If",
+          "bbox": [
+            {
+              "h": 14.61834603658539,
+              "w": 125.93085365853658,
+              "x": 151.88880525914632,
+              "y": 340.28268292682924,
+              "confidence": 0.98,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\*It took a while for the money bin to become a fixture. It is absent from the stories starring Scrooge in the March 1952 and September 1952 issues of *Walt Disney's Comics*, and also from the first few issues of *Uncle Scrooge*, although Scrooge's vault is labeled \"money bin\" in a few of these stories. The \"true\" bin first reappeared in *Walt Disney's Comics* in the August 1953 issue and in *Uncle Scrooge* in No. 9 (1955).",
+          "value": "*It took a while for the money bin to become a fixture. It is absent from the stories starring Scrooge in the March 1952 and September 1952 issues of Walt Disney's Comics, and also from the first few issues of Uncle Scrooge, although Scrooge's vault is labeled \"money bin\" in a few of these stories. The \"true\" bin first reappeared in Walt Disney's Comics in the August 1953 issue and in Uncle Scrooge in No. 9 (1955).",
+          "bbox": [
+            {
+              "h": 38.30076219512197,
+              "w": 125.83578922923016,
+              "x": 12.379961532964938,
+              "y": 315.72537347560973,
+              "confidence": 0.95,
+              "end_index": 426,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n49",
+              "value": "Carl Barks and the Art of the Comic Book\n49",
+              "bbox": [
+                {
+                  "h": 5.129336890243885,
+                  "w": 80.13633955792683,
+                  "x": 172.8872389481707,
+                  "y": 366.1028963414634,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n49",
+          "bbox": [
+            {
+              "h": 5.13,
+              "w": 80.14,
+              "x": 172.89,
+              "y": 366.1,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "49"
+    }
+  ]
+}

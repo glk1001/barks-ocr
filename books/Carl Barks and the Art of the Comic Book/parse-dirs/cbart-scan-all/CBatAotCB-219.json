@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Scrooge McDuck standing in his money bin, surrounded by stacks of coins, bills, and bags of money that look like a city skyline.",
+          "md": "![Scrooge McDuck standing in his money bin, surrounded by stacks of coins, bills, and bags of money that look like a city skyline.](CBatAotCB-219_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-219_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 310.2795045731707,
+              "w": 262.8889924733231,
+              "x": 13.10862947789634,
+              "y": 24.469161585365853,
+              "confidence": 0.99,
+              "end_index": 153,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From *Scrooge McDuck and Money*; © 1967 Walt Disney Productions.",
+          "value": "From Scrooge McDuck and Money; © 1967 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.96573932926829,
+              "w": 141.37532869664633,
+              "x": 75.01698075457315,
+              "y": 340.32466463414636,
+              "confidence": 0.93,
+              "end_index": 63,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "*Carl Barks and the Art of the Comic Book*\n219",
+              "value": "Carl Barks and the Art of the Comic Book\n219",
+              "bbox": [
+                {
+                  "h": 5.8002210365853895,
+                  "w": 77.62949314024391,
+                  "x": 173.79025724085363,
+                  "y": 363.79202743902437,
+                  "confidence": 0.92,
+                  "end_index": 45,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "*Carl Barks and the Art of the Comic Book*\n219",
+          "bbox": [
+            {
+              "h": 5.8,
+              "w": 77.63,
+              "x": 173.79,
+              "y": 363.79,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "219"
+    }
+  ]
+}

@@ -1,0 +1,784 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Reprinted from *Walt Disney's Comics* No. 308, May 1966.",
+          "value": "Reprinted from Walt Disney's Comics No. 308, May 1966.",
+          "bbox": [
+            {
+              "h": 10.476422446646342,
+              "w": 125.25534667968749,
+              "x": 11.796157702934451,
+              "y": 13.266996951219513,
+              "confidence": 0.97,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 4 - February 1974 - 36 pages",
+          "value": "4 - February 1974 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.509101562500003,
+              "w": 69.81338414634145,
+              "x": 11.375207698170732,
+              "y": 29.090153391768293,
+              "confidence": 0.96,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DAISY AND DONALD The Giant Cowry Shell - 10 - A reprint of \"DONALD DUCK\" in *Walt Disney's Comics* No. 224, May 1959.",
+          "value": "DAISY AND DONALD The Giant Cowry Shell - 10 - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 224, May 1959.",
+          "bbox": [
+            {
+              "h": 17.567803925304876,
+              "w": 125.82248880525914,
+              "x": 11.617457841082317,
+              "y": 35.0405859375,
+              "confidence": 0.97,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Title changed as indicated. Splash panel deepened.",
+          "value": "Changes: Title changed as indicated. Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 10.691758765243899,
+              "w": 92.08361340034297,
+              "x": 11.815830197217988,
+              "y": 53.22840891768293,
+              "confidence": 0.93,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 25 - August 1977 - 36 Pages",
+          "value": "25 - August 1977 - 36 Pages",
+          "bbox": [
+            {
+              "h": 5.421665396341464,
+              "w": 66.82429580316311,
+              "x": 12.947104730373475,
+              "y": 71.17650342987805,
+              "confidence": 0.96,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (idea and pencil rough): Donald winces as he sees Daisy with her hair in curlers on a videophone. (*Date not available.*)",
+          "value": "Front cover (idea and pencil rough): Donald winces as he sees Daisy with her hair in curlers on a videophone. (Date not available.)",
+          "bbox": [
+            {
+              "h": 16.67786204268293,
+              "w": 124.76999642721033,
+              "x": 13.224887338033536,
+              "y": 76.97416920731708,
+              "confidence": 0.98,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This cover was inked by one of Western's staff artists, working from the pencil layout for one of Barks's paintings, which Barks sold to Western as a cover idea.",
+          "value": "This cover was inked by one of Western's staff artists, working from the pencil layout for one of Barks's paintings, which Barks sold to Western as a cover idea.",
+          "bbox": [
+            {
+              "h": 16.58097942073171,
+              "w": 124.6855399676067,
+              "x": 13.339715367759144,
+              "y": 95.01817454268293,
+              "confidence": 0.98,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# DAISY DUCK'S DIARY (Dell)",
+          "value": "DAISY DUCK'S DIARY (Dell)",
+          "bbox": [
+            {
+              "h": 7.23552210365855,
+              "w": 99.93983160251524,
+              "x": 25.142916110899385,
+              "y": 123.56141387195122,
+              "confidence": 0.98,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 1055 - Nov.-Jan. 1960 - 36 pages",
+          "value": "Four Color 1055 - Nov.-Jan. 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.585224847560985,
+              "w": 110.07621879763717,
+              "x": 13.177529296874999,
+              "y": 137.56831554878048,
+              "confidence": 0.95,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "\"Daisy's Dazed Days\" 1 (inside front cover)-art only-A \"diary entry\" in rebus form. *(May 14, 1959)*",
+          "value": "\"Daisy's Dazed Days\" 1 (inside front cover)-art only-A \"diary entry\" in rebus form. (May 14, 1959)",
+          "bbox": [
+            {
+              "h": 11.838509908536606,
+              "w": 125.99667837747711,
+              "x": 12.51479647008384,
+              "y": 143.34846036585364,
+              "confidence": 0.96,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY The Librarian-6-art only-Daisy goes to Scrooge's money bin to collect two cents due on an overdue book on lion taming, and finds Scrooge trapped with a lion he was trying to tame for a quick profit. *(May 14, 1959)*",
+          "value": "DAISY DUCK'S DIARY The Librarian-6-art only-Daisy goes to Scrooge's money bin to collect two cents due on an overdue book on lion taming, and finds Scrooge trapped with a lion he was trying to tame for a quick profit. (May 14, 1959)",
+          "bbox": [
+            {
+              "h": 28.82826219512197,
+              "w": 125.22606195217223,
+              "x": 13.041582864900912,
+              "y": 155.52737423780488,
+              "confidence": 0.98,
+              "end_index": 233,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY The Double Date - 5 - art only - Daisy and Donald double-date with Clara Cluck and Rockhead Rooster, and Rockhead and Donald hit it off too well *(May 14, 1959)*",
+          "value": "DAISY DUCK'S DIARY The Double Date - 5 - art only - Daisy and Donald double-date with Clara Cluck and Rockhead Rooster, and Rockhead and Donald hit it off too well (May 14, 1959)",
+          "bbox": [
+            {
+              "h": 23.252320884146346,
+              "w": 125.13330197217986,
+              "x": 13.343848370807926,
+              "y": 184.85116234756097,
+              "confidence": 0.98,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 298, July 1965.",
+          "value": "Reprinted: Walt Disney's Comics No. 298, July 1965.",
+          "bbox": [
+            {
+              "h": 5.325480182926812,
+              "w": 105.27840891768292,
+              "x": 17.670225800304877,
+              "y": 208.7931631097561,
+              "confidence": 0.93,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY The TV Babysitter - 6 - art only - Daisy baby-sits with the nephews, using the closed-circuit television camera in their room, while Donald goes to a bowling tournament. *(May 14, 1959)*",
+          "value": "DAISY DUCK'S DIARY The TV Babysitter - 6 - art only - Daisy baby-sits with the nephews, using the closed-circuit television camera in their room, while Donald goes to a bowling tournament. (May 14, 1959)",
+          "bbox": [
+            {
+              "h": 23.613910060975595,
+              "w": 124.9236003001143,
+              "x": 13.368971155678352,
+              "y": 214.4464024390244,
+              "confidence": 0.98,
+              "end_index": 204,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY Donald's Party-7-art only-Daisy is wearing an evening gown she has just received in the mail when Donald invites her to a come-as-you-are party, but she goes to the party in work clothes. *(May 29, 1959).*",
+          "value": "DAISY DUCK'S DIARY Donald's Party-7-art only-Daisy is wearing an evening gown she has just received in the mail when Donald invites her to a come-as-you-are party, but she goes to the party in work clothes. (May 29, 1959).",
+          "bbox": [
+            {
+              "h": 28.615129573170723,
+              "w": 125.21065000952743,
+              "x": 13.309313786204267,
+              "y": 238.51097560975612,
+              "confidence": 0.98,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY The Beauty Queen-7-art only-Daisy, depressed because she thinks she hasn't won the city beauty queen contest, goes to Grandma's farm, where two roving judges pick her to be Farm Queen. *(May 14, 1959)*",
+          "value": "DAISY DUCK'S DIARY The Beauty Queen-7-art only-Daisy, depressed because she thinks she hasn't won the city beauty queen contest, goes to Grandma's farm, where two roving judges pick her to be Farm Queen. (May 14, 1959)",
+          "bbox": [
+            {
+              "h": 23.747172256097564,
+              "w": 125.5030535442073,
+              "x": 13.381797827743902,
+              "y": 267.96068597560975,
+              "confidence": 0.97,
+              "end_index": 219,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY Tight Shoes - 7/8 - art only - Daisy tries on new shoes but decides her bare feet are more comfortable. *(May 14, 1959).*",
+          "value": "DAISY Tight Shoes - 7/8 - art only - Daisy tries on new shoes but decides her bare feet are more comfortable. (May 14, 1959).",
+          "bbox": [
+            {
+              "h": 18.56469512195119,
+              "w": 125.78407417111279,
+              "x": 12.816508908155487,
+              "y": 291.8121493902439,
+              "confidence": 0.93,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Dell Pledge fills out the page.",
+          "value": "The Dell Pledge fills out the page.",
+          "bbox": [
+            {
+              "h": 5.531844512195129,
+              "w": 67.54955852229419,
+              "x": 17.627346965510668,
+              "y": 311.2099390243902,
+              "confidence": 0.93,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK The Framed Mirror - 1 (inside back cover) - art only - Daisy tries painting a self-portrait, then settles for a mirror *(May 14?, 1959)*",
+          "value": "DAISY DUCK The Framed Mirror - 1 (inside back cover) - art only - Daisy tries painting a self-portrait, then settles for a mirror (May 14?, 1959)",
+          "bbox": [
+            {
+              "h": 17.591890243902434,
+              "w": 124.74354242092227,
+              "x": 13.243864210175303,
+              "y": 316.79835365853654,
+              "confidence": 0.97,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page is three panels deep.",
+          "value": "This page is three panels deep.",
+          "bbox": [
+            {
+              "h": 5.3972789634146645,
+              "w": 61.237742592416154,
+              "x": 17.695481492949696,
+              "y": 335.1209679878049,
+              "confidence": 0.9,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK The New Girl - 1 (back cover) - art only -",
+          "value": "DAISY DUCK The New Girl - 1 (back cover) - art only -",
+          "bbox": [
+            {
+              "h": 5.65662347560974,
+              "w": 119.94423089748473,
+              "x": 18.05593487995427,
+              "y": 340.3264024390244,
+              "confidence": 0.95,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Daisy cheers up when rain ruins a pretty new girl's hairdo. *(May 14?, 1959)*",
+          "value": "Daisy cheers up when rain ruins a pretty new girl's hairdo. (May 14?, 1959)",
+          "bbox": [
+            {
+              "h": 11.049976657774389,
+              "w": 124.97717606707316,
+              "x": 150.77394054878047,
+              "y": 13.465076695884147,
+              "confidence": 0.97,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page was replaced by an advertisement in some copies. It is three panels deep.",
+          "value": "This page was replaced by an advertisement in some copies. It is three panels deep.",
+          "bbox": [
+            {
+              "h": 11.057452362804877,
+              "w": 124.77333841463411,
+              "x": 150.51517339939022,
+              "y": 25.714181592987803,
+              "confidence": 0.97,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's list shows him submitting the artwork for the front cover and inside front and back covers — but not the back cover — probably (but not certainly) on May 14, 1959 (that date is followed by a question mark on his list, for those three covers). It seems likely that his records are in error, and that the back cover, rather than the front cover, should be listed.",
+          "value": "Barks's list shows him submitting the artwork for the front cover and inside front and back covers — but not the back cover — probably (but not certainly) on May 14, 1959 (that date is followed by a question mark on his list, for those three covers). It seems likely that his records are in error, and that the back cover, rather than the front cover, should be listed.",
+          "bbox": [
+            {
+              "h": 34.93006955030488,
+              "w": 125.07636814024389,
+              "x": 150.3707583841463,
+              "y": 37.61845941310976,
+              "confidence": 0.99,
+              "end_index": 368,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 1150 - Dec.-Feb. 1961 \\[(November) 1960] - 36 pages",
+          "value": "Four Color 1150 - Dec.-Feb. 1961 [(November) 1960] - 36 pages",
+          "bbox": [
+            {
+              "h": 11.513694740853651,
+              "w": 124.70227134146342,
+              "x": 150.209228277439,
+              "y": 78.87775724085367,
+              "confidence": 0.98,
+              "end_index": 60,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DAISY DUCK \"Small Fryers\" - 1 (inside front cover) - art only - Daisy's nieces come to visit, and mess up her kitchen. *(June 6, 1960)*",
+          "value": "DAISY DUCK \"Small Fryers\" - 1 (inside front cover) - art only - Daisy's nieces come to visit, and mess up her kitchen. (June 6, 1960)",
+          "bbox": [
+            {
+              "h": 17.301019435975608,
+              "w": 125.29359946646342,
+              "x": 150.3225,
+              "y": 90.4850019054878,
+              "confidence": 0.98,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY A Sticky Situation - 8 - art only - Daisy, fed up with Donald and men in general, takes her nieces camping in the wilderness. *(June 6, 1960).*",
+          "value": "DAISY DUCK'S DIARY A Sticky Situation - 8 - art only - Daisy, fed up with Donald and men in general, takes her nieces camping in the wilderness. (June 6, 1960).",
+          "bbox": [
+            {
+              "h": 17.415594512195117,
+              "w": 125.15943978658535,
+              "x": 150.34139862804878,
+              "y": 108.61006097560976,
+              "confidence": 0.97,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 12, June 1969.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 12, June 1969.",
+          "bbox": [
+            {
+              "h": 5.395243902439015,
+              "w": 115.1442644817073,
+              "x": 154.68696836890243,
+              "y": 126.58518292682928,
+              "confidence": 0.93,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY Ring Leader Roundup - 6 - art only - Daisy finds a lost ring that she uses to make Donald think that she has another boyfriend, but the ring contains a midget radio used by diamond smugglers. *(June 6, 1960)*",
+          "value": "DAISY DUCK'S DIARY Ring Leader Roundup - 6 - art only - Daisy finds a lost ring that she uses to make Donald think that she has another boyfriend, but the ring contains a midget radio used by diamond smugglers. (June 6, 1960)",
+          "bbox": [
+            {
+              "h": 28.180529725609738,
+              "w": 125.0370445884146,
+              "x": 150.33925495426828,
+              "y": 132.3212538109756,
+              "confidence": 0.97,
+              "end_index": 226,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 22, June 1970.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 22, June 1970.",
+          "bbox": [
+            {
+              "h": 34.911276676829274,
+              "w": 125.40056021341466,
+              "x": 150.11312309451216,
+              "y": 162.32022484756098,
+              "confidence": 0.89,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY Too Much Help - 4 - art only - Daisy, convinced that Grandma Duck is having trouble, takes Gladstone to her farm to bring her luck. *(June 6, 1960)*",
+          "value": "DAISY DUCK'S DIARY Too Much Help - 4 - art only - Daisy, convinced that Grandma Duck is having trouble, takes Gladstone to her farm to bring her luck. (June 6, 1960)",
+          "bbox": [
+            {
+              "h": 16.896,
+              "w": 125.568,
+              "x": 150.048,
+              "y": 168.96,
+              "confidence": 1.0,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 42, August 1973; *Walt Disney's Comics* No. 301, October 1965.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 42, August 1973; Walt Disney's Comics No. 301, October 1965.",
+          "bbox": [
+            {
+              "h": 11.380038109756088,
+              "w": 125.09411775914631,
+              "x": 150.2276981707317,
+              "y": 185.91432164634148,
+              "confidence": 0.85,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY Ruling the Roost - 8 - art only - When Scrooge can't be found, Daisy makes decisions for him, until he's finally located stuck in a chute leading to his underground jewel vaults. *(June 6, 1960)*",
+          "value": "DAISY DUCK'S DIARY Ruling the Roost - 8 - art only - When Scrooge can't be found, Daisy makes decisions for him, until he's finally located stuck in a chute leading to his underground jewel vaults. (June 6, 1960)",
+          "bbox": [
+            {
+              "h": 23.33430640243904,
+              "w": 125.1812023628049,
+              "x": 150.18557926829266,
+              "y": 197.71227896341463,
+              "confidence": 0.97,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 34, April 1972.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 34, April 1972.",
+          "bbox": [
+            {
+              "h": 5.459016768292694,
+              "w": 116.89034679878046,
+              "x": 154.72118140243902,
+              "y": 221.56298780487805,
+              "confidence": 0.93,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY Daringly Different - 4 1/2 - art only - Daisy tries to break out of the subdivision mold with unusual touches for her house and yard, but all of her neighbors imitate her. *(June 6, 1960)*",
+          "value": "DAISY DUCK'S DIARY Daringly Different - 4 1/2 - art only - Daisy tries to break out of the subdivision mold with unusual touches for her house and yard, but all of her neighbors imitate her. (June 6, 1960)",
+          "bbox": [
+            {
+              "h": 23.433567073170753,
+              "w": 125.78405487804878,
+              "x": 149.75000190548778,
+              "y": 228.26041920731706,
+              "confidence": 0.97,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 304, January 1966.",
+          "value": "Reprinted: Walt Disney's Comics No. 304, January 1966.",
+          "bbox": [
+            {
+              "h": 5.37292682926829,
+              "w": 112.92026295731706,
+              "x": 154.52751333841462,
+              "y": 252.31355945121953,
+              "confidence": 0.93,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK False Flattery - 1/2 - art only - Daisy buys a parrot that compliments her. *(June 6, 1960)*",
+          "value": "DAISY DUCK False Flattery - 1/2 - art only - Daisy buys a parrot that compliments her. (June 6, 1960)",
+          "bbox": [
+            {
+              "h": 11.316974085365855,
+              "w": 124.98367568597558,
+              "x": 150.15872332317073,
+              "y": 258.0945274390244,
+              "confidence": 0.94,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 304, January 1966.",
+          "value": "Reprinted: Walt Disney's Comics No. 304, January 1966.",
+          "bbox": [
+            {
+              "h": 5.275632621951245,
+              "w": 112.88483231707319,
+              "x": 154.53300114329267,
+              "y": 270.1445579268293,
+              "confidence": 0.9,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK Friendly Enemy - 1 - art only - Daisy takes up sculpting, instead of skating, at Donald's suggestion. *(June 6, 1960)*",
+          "value": "DAISY DUCK Friendly Enemy - 1 - art only - Daisy takes up sculpting, instead of skating, at Donald's suggestion. (June 6, 1960)",
+          "bbox": [
+            {
+              "h": 17.14173018292684,
+              "w": 125.33498094512197,
+              "x": 150.06601371951217,
+              "y": 275.6467454268293,
+              "confidence": 0.95,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK Undercover Girl - 1 (inside back cover) - art only - Daisy buys a new hat that's so big no one can see who she is. *(June 6, 1960)*",
+          "value": "DAISY DUCK Undercover Girl - 1 (inside back cover) - art only - Daisy buys a new hat that's so big no one can see who she is. (June 6, 1960)",
+          "bbox": [
+            {
+              "h": 17.19443597560974,
+              "w": 125.51570121951217,
+              "x": 150.12826600609756,
+              "y": 293.5179649390244,
+              "confidence": 0.97,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page is three panels deep.",
+          "value": "This page is three panels deep.",
+          "bbox": [
+            {
+              "h": 5.423574695121969,
+              "w": 61.006263338414634,
+              "x": 155.06410060975608,
+              "y": 311.5982698170732,
+              "confidence": 0.92,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK The Inventive Gentleman - 1 (back cover) - art only - Gyro comes to Daisy's aid when she has to stand on the bus. *(June 6, 1960)*",
+          "value": "DAISY DUCK The Inventive Gentleman - 1 (back cover) - art only - Gyro comes to Daisy's aid when she has to stand on the bus. (June 6, 1960)",
+          "bbox": [
+            {
+              "h": 16.76673018292684,
+              "w": 125.21701028963417,
+              "x": 150.35784489329265,
+              "y": 317.50120426829267,
+              "confidence": 0.97,
+              "end_index": 140,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page was replaced by an advertisement in some copies. It is three panels deep.",
+          "value": "This page was replaced by an advertisement in some copies. It is three panels deep.",
+          "bbox": [
+            {
+              "h": 11.04868902439026,
+              "w": 124.87746951219509,
+              "x": 150.41622141768292,
+              "y": 335.4888795731707,
+              "confidence": 0.98,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "104 Carl Barks and the Art of the Comic Book",
+              "value": "104 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.207545731707305,
+                  "w": 77.66636861661586,
+                  "x": 37.197460461128045,
+                  "y": 366.7768673780488,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "104 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.21,
+              "w": 77.67,
+              "x": 37.2,
+              "y": 366.78,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "104"
+    }
+  ]
+}

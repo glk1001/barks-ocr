@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A comic strip page featuring Donald Duck, his nephews, and Black Pete on a ship. In the first panel, Black Pete points and shouts \"GRAB 'EM, LADS, QUICK!\" while Donald exclaims \"BLACK PETE!\". The subsequent panels show a chaotic chase and struggle on the ship's deck and rigging.",
+          "md": "![A comic strip page featuring Donald Duck, his nephews, and Black Pete on a ship. In the first panel, Black Pete points and shouts \"GRAB 'EM, LADS, QUICK!\" while Donald exclaims \"BLACK PETE!\". The subsequent panels show a chaotic chase and struggle on the ship's deck and rigging.](CBatAotCB-105_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-105_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 314.76286966463414,
+              "w": 221.19162204649388,
+              "x": 33.104115377286575,
+              "y": 15.714615091463417,
+              "confidence": 0.99,
+              "end_index": 304,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From Donald Duck Four Color No. 9, 1942; © 1942 Walt Disney Productions.",
+          "value": "From Donald Duck Four Color No. 9, 1942; © 1942 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.66832317073171,
+              "w": 148.9611942644817,
+              "x": 69.70906869283536,
+              "y": 340.4189862804878,
+              "confidence": 0.91,
+              "end_index": 71,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n105",
+              "value": "Carl Barks and the Art of the Comic Book\n105",
+              "bbox": [
+                {
+                  "h": 6.02480945121948,
+                  "w": 77.77704649390246,
+                  "x": 173.19423018292682,
+                  "y": 364.73330030487807,
+                  "confidence": 0.93,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n105",
+          "bbox": [
+            {
+              "h": 6.02,
+              "w": 77.78,
+              "x": 173.19,
+              "y": 364.73,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "105"
+    }
+  ]
+}

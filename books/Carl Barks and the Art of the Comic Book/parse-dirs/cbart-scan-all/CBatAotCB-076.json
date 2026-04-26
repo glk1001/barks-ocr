@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Sketches of male aviators and female characters by Carl Barks.",
+          "md": "![Sketches of male aviators and female characters by Carl Barks.](CBatAotCB-076_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-076_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 337.8704768483232,
+              "w": 251.38085127667676,
+              "x": 18.883678067835366,
+              "y": 16.788974371189024,
+              "confidence": 0.87,
+              "end_index": 87,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Barks made these drawings, and many more like them, between 1946 and 1950. He has said that he was \"mostly experimenting on drawing and inking styles. I had a feeling the duck comics job could fade away and I would be in need of a new set of characters and the know how to draw them.\" Of the page of nude studies, he has said he was \"just practicing, trying to get action into girlie poses. Some girlie poses are so trite, there's nothing new about the way they handle the figure. I was trying to make 'em a little more perky.\"",
+          "value": "Barks made these drawings, and many more like them, between 1946 and 1950. He has said that he was \"mostly experimenting on drawing and inking styles. I had a feeling the duck comics job could fade away and I would be in need of a new set of characters and the know how to draw them.\" Of the page of nude studies, he has said he was \"just practicing, trying to get action into girlie poses. Some girlie poses are so trite, there's nothing new about the way they handle the figure. I was trying to make 'em a little more perky.\"",
+          "bbox": [
+            {
+              "h": 53.97336128048782,
+              "w": 123.0212023628049,
+              "x": 151.78824123475607,
+              "y": 275.5015929878049,
+              "confidence": 0.96,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "76 Carl Barks and the Art of the Comic Book",
+              "value": "76 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.76119664634145,
+                  "w": 79.81065548780487,
+                  "x": 37.32387290396341,
+                  "y": 365.72133384146343,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "76 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.76,
+              "w": 79.81,
+              "x": 37.32,
+              "y": 365.72,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "76"
+    }
+  ]
+}

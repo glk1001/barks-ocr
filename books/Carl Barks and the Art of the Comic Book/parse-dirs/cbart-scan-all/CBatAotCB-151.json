@@ -1,0 +1,647 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "UNCLE SCROOGE Interplanetary Postman - 15 - Scrooge's complaints about the mails lead to his being named postmaster of Duckburg. He vows to deliver any letter any place, and to live up to his promise, he has to build a rocket to take a letter to Venus. *(Mar. 27, 1964)*",
+          "value": "UNCLE SCROOGE Interplanetary Postman - 15 - Scrooge's complaints about the mails lead to his being named postmaster of Duckburg. He vows to deliver any letter any place, and to live up to his promise, he has to build a rocket to take a letter to Venus. (Mar. 27, 1964)",
+          "bbox": [
+            {
+              "h": 29.34453887195122,
+              "w": 125.0065808403201,
+              "x": 11.497943740472559,
+              "y": 17.096833079268293,
+              "confidence": 0.99,
+              "end_index": 269,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 94, August 1971; No. 154, July 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 94, August 1971; No. 154, July 1978.",
+          "bbox": [
+            {
+              "h": 10.601044207317072,
+              "w": 124.43921148532773,
+              "x": 11.866483064977134,
+              "y": 47.00129382621951,
+              "confidence": 0.96,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 54 - December 1964 - 36 pages",
+          "value": "54 - December 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.74816120426829,
+              "w": 74.39500238185975,
+              "x": 11.412829173018292,
+              "y": 64.64910823170732,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The ducks inspect a green, polka-dotted elephant whose mahout is Gladstone. (Illustrating \"The Billion Dollar Safari.\") *(May 11, 1964)*",
+          "value": "Front cover: The ducks inspect a green, polka-dotted elephant whose mahout is Gladstone. (Illustrating \"The Billion Dollar Safari.\") (May 11, 1964)",
+          "bbox": [
+            {
+              "h": 17.290604039634143,
+              "w": 124.91373404153963,
+              "x": 11.577028153582317,
+              "y": 70.57386242378048,
+              "confidence": 0.98,
+              "end_index": 148,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A Barks sketch for the cover of this issue — rejected by Western — shows Scrooge and Donald and the nephews cornered, with a tiger in front of them and Gladstone approaching on the elephant behind them.",
+          "value": "A Barks sketch for the cover of this issue — rejected by Western — shows Scrooge and Donald and the nephews cornered, with a tiger in front of them and Gladstone approaching on the elephant behind them.",
+          "bbox": [
+            {
+              "h": 23.161612042682926,
+              "w": 125.04172637195121,
+              "x": 11.509127286585365,
+              "y": 88.51573170731707,
+              "confidence": 0.98,
+              "end_index": 201,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Billion Dollar Safari - 20 - Scrooge, whose zoo needs customers, offers a billion dollars to anyone who will bring him a speckled elephant with a square trunk. Gladstone, through his usual luck, winds up in India, in the midst of speckled pachyderms belonging to the elephant girls of Jumbostan. The spots are paint, but Gladstone finds a real speckled elephant with a square trunk, in the jungle. *(May 11, 1964)*",
+          "value": "UNCLE SCROOGE The Billion Dollar Safari - 20 - Scrooge, whose zoo needs customers, offers a billion dollars to anyone who will bring him a speckled elephant with a square trunk. Gladstone, through his usual luck, winds up in India, in the midst of speckled pachyderms belonging to the elephant girls of Jumbostan. The spots are paint, but Gladstone finds a real speckled elephant with a square trunk, in the jungle. (May 11, 1964)",
+          "bbox": [
+            {
+              "h": 47.024382621951204,
+              "w": 125.01296148532775,
+              "x": 11.571796517721037,
+              "y": 112.05090320121951,
+              "confidence": 0.98,
+              "end_index": 431,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 118, April 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 118, April 1975.",
+          "bbox": [
+            {
+              "h": 5.5088185975609845,
+              "w": 92.67686440072407,
+              "x": 15.667332436166156,
+              "y": 159.6060594512195,
+              "confidence": 0.93,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - Scrooge, stranded on a raft, can't attract the attention of ships and planes. *(Dec. 20, 1962 \\[idea] and June 7, 1963 \\[art])*",
+          "value": "UNCLE SCROOGE - 1 - Scrooge, stranded on a raft, can't attract the attention of ships and planes. (Dec. 20, 1962 [idea] and June 7, 1963 [art])",
+          "bbox": [
+            {
+              "h": 17.229123475609768,
+              "w": 125.12018483231707,
+              "x": 11.456212842987805,
+              "y": 165.4878887195122,
+              "confidence": 0.96,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 88, August 1970; No. 118, April 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 88, August 1970; No. 118, April 1975.",
+          "bbox": [
+            {
+              "h": 10.168433689024377,
+              "w": 124.68020650724085,
+              "x": 12.047723180259144,
+              "y": 183.3551867378049,
+              "confidence": 0.96,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Flowers Are Flowers - 1 (inside back cover) - art only - Scrooge provides Grandma Duck with a cauliflower corsage when he takes her to the opera. *(Nov. 1, 1961)*",
+          "value": "UNCLE SCROOGE Flowers Are Flowers - 1 (inside back cover) - art only - Scrooge provides Grandma Duck with a cauliflower corsage when he takes her to the opera. (Nov. 1, 1961)",
+          "bbox": [
+            {
+              "h": 22.950068597560985,
+              "w": 125.6687713176448,
+              "x": 11.857959818025913,
+              "y": 194.78814786585366,
+              "confidence": 0.97,
+              "end_index": 175,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's records show him receiving payment for both the art and the idea for this page, but he has said, \"I am not sure, but I think this was drawn for a gag that was sent to me by the office. I never used \\[Ludwig] von Drake \\[who appears in the first two panels] except when asked to.\" (Sept. 11, 1973, letter to Michael Barrier) Von Drake was introduced on the Disney television program in the fall of 1961, just a few weeks before Barks submitted this page, so it seems likely that the gag was part of an effort by Disney and Western to promote the character.",
+          "value": "Barks's records show him receiving payment for both the art and the idea for this page, but he has said, \"I am not sure, but I think this was drawn for a gag that was sent to me by the office. I never used [Ludwig] von Drake [who appears in the first two panels] except when asked to.\" (Sept. 11, 1973, letter to Michael Barrier) Von Drake was introduced on the Disney television program in the fall of 1961, just a few weeks before Barks submitted this page, so it seems likely that the gag was part of an effort by Disney and Western to promote the character.",
+          "bbox": [
+            {
+              "h": 53.07912347560976,
+              "w": 125.28940751238565,
+              "x": 11.908441191882622,
+              "y": 218.77678353658536,
+              "confidence": 0.99,
+              "end_index": 562,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 55 - February 1965 - 36 pages",
+          "value": "55 - February 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.80449695121948,
+              "w": 72.30754966177591,
+              "x": 11.86849168730945,
+              "y": 277.73743902439026,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge and Donald hold imaginary glasses of water from a mirage water cooler. (Illustrating \"McDuck of Arabia\") *(July 13, 1964)*",
+          "value": "Front cover: Scrooge and Donald hold imaginary glasses of water from a mirage water cooler. (Illustrating \"McDuck of Arabia\") (July 13, 1964)",
+          "bbox": [
+            {
+              "h": 17.117629573170724,
+              "w": 125.9613913633765,
+              "x": 11.835648461318595,
+              "y": 283.53052591463415,
+              "confidence": 0.97,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 121, August 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 121, August 1975.",
+          "bbox": [
+            {
+              "h": 5.44737804878052,
+              "w": 96.35408381764482,
+              "x": 17.148366639672254,
+              "y": 301.6619359756097,
+              "confidence": 0.93,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE McDuck of Arabia - 24 - Scrooge is persuaded by an Arab, Sheik Arrabi, to finance an expedition to the lost mines of the Queen of Sheba, but their plans are overheard by spies, and when the ducks and the sheik reach Arabia, the sheik is kidnaped by a desert bandit Hassan Ben Jaild. Scrooge and Donald look for the bandits from Scrooge's plane, but the plane crashes in the desert.",
+          "value": "UNCLE SCROOGE McDuck of Arabia - 24 - Scrooge is persuaded by an Arab, Sheik Arrabi, to finance an expedition to the lost mines of the Queen of Sheba, but their plans are overheard by spies, and when the ducks and the sheik reach Arabia, the sheik is kidnaped by a desert bandit Hassan Ben Jaild. Scrooge and Donald look for the bandits from Scrooge's plane, but the plane crashes in the desert.",
+          "bbox": [
+            {
+              "h": 41.4502591463415,
+              "w": 125.13323980564023,
+              "x": 12.480181497713412,
+              "y": 307.3982698170731,
+              "confidence": 0.99,
+              "end_index": 394,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The nephews enlist the help of the Arab Junior Woodchucks. *(July 13, 1964)*",
+          "value": "The nephews enlist the help of the Arab Junior Woodchucks. (July 13, 1964)",
+          "bbox": [
+            {
+              "h": 11.490916063262196,
+              "w": 125.23220464939023,
+              "x": 150.14104230182923,
+              "y": 17.329911871189026,
+              "confidence": 0.95,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 121, August 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 121, August 1975.",
+          "bbox": [
+            {
+              "h": 5.508841463414634,
+              "w": 96.41941120426829,
+              "x": 154.47952934451217,
+              "y": 29.553658536585363,
+              "confidence": 0.92,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - Scrooge uses a sort of geiger counter to find the watch he lost the day before. *(Dec. 20, 1962 \\[idea] and Aug. 3, 1964 \\[art])*",
+          "value": "UNCLE SCROOGE - 1 - Scrooge uses a sort of geiger counter to find the watch he lost the day before. (Dec. 20, 1962 [idea] and Aug. 3, 1964 [art])",
+          "bbox": [
+            {
+              "h": 17.69474942835366,
+              "w": 125.1989005335366,
+              "x": 150.06592797256096,
+              "y": 35.2072265625,
+              "confidence": 0.97,
+              "end_index": 148,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 56 - March 1965 - 36 pages",
+          "value": "56 - March 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.765350609756101,
+              "w": 65.33554115853657,
+              "x": 150.07345655487802,
+              "y": 58.96347942073171,
+              "confidence": 0.96,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The ducks flee from ghosts emerging from the smokestack of an old locomotive. (Illustrating \"Mystery of the Ghost Town Railroad.\") *(Aug. 31, 1964)*",
+          "value": "Front cover: The ducks flee from ghosts emerging from the smokestack of an old locomotive. (Illustrating \"Mystery of the Ghost Town Railroad.\") (Aug. 31, 1964)",
+          "bbox": [
+            {
+              "h": 17.370691692073173,
+              "w": 125.15498094512196,
+              "x": 150.27930068597558,
+              "y": 64.58833079268292,
+              "confidence": 0.97,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 122, September 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 122, September 1975.",
+          "bbox": [
+            {
+              "h": 5.630962271341463,
+              "w": 103.13775342987803,
+              "x": 154.43588414634144,
+              "y": 82.67010480182927,
+              "confidence": 0.92,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Inside front cover: In a full-page drawing, the ducks look startled as a ghost appears wearing a hotel bellhop's cap. (Illustrating \"Mystery of the Ghost Town Railroad.\") *(Aug. 31, 1964)*",
+          "value": "Inside front cover: In a full-page drawing, the ducks look startled as a ghost appears wearing a hotel bellhop's cap. (Illustrating \"Mystery of the Ghost Town Railroad.\") (Aug. 31, 1964)",
+          "bbox": [
+            {
+              "h": 23.319689405487797,
+              "w": 125.4732736280488,
+              "x": 150.06308117378046,
+              "y": 88.33707507621952,
+              "confidence": 0.97,
+              "end_index": 187,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Mystery of the Ghost Town Railroad - 24 - The ducks drive to the old gold-rush city of Goldopolis — now only a deserted hotel — to look for a valuable stock certificate that Scrooge hid there many years before. They spend the night in the old hotel, in the hope of reviving Scrooge's memory, but ghosts harass the ducks and the townspeople who come to help. *(Aug. 31, 1964)*",
+          "value": "UNCLE SCROOGE Mystery of the Ghost Town Railroad - 24 - The ducks drive to the old gold-rush city of Goldopolis — now only a deserted hotel — to look for a valuable stock certificate that Scrooge hid there many years before. They spend the night in the old hotel, in the hope of reviving Scrooge's memory, but ghosts harass the ducks and the townspeople who come to help. (Aug. 31, 1964)",
+          "bbox": [
+            {
+              "h": 46.83546493902439,
+              "w": 125.40342416158533,
+              "x": 150.16078124999999,
+              "y": 112.20145198170731,
+              "confidence": 0.98,
+              "end_index": 388,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 122, September 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 122, September 1975.",
+          "bbox": [
+            {
+              "h": 5.503170731707332,
+              "w": 103.71124618902438,
+              "x": 154.54138719512193,
+              "y": 159.93873475609755,
+              "confidence": 0.95,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 57 - May 1965 - 36 pages",
+          "value": "57 - May 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.713799542682927,
+              "w": 59.51009908536585,
+              "x": 150.31445693597558,
+              "y": 171.65067073170732,
+              "confidence": 0.95,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: A frightened Scrooge clings to a vine, with porcupines and an alligator clustered beneath him. (Illustrating \"The Swamp of No Return.\") *(Oct. 19, 1964)*",
+          "value": "Front cover: A frightened Scrooge clings to a vine, with porcupines and an alligator clustered beneath him. (Illustrating \"The Swamp of No Return.\") (Oct. 19, 1964)",
+          "bbox": [
+            {
+              "h": 17.65488567073171,
+              "w": 125.37627667682926,
+              "x": 150.55482278963413,
+              "y": 178.01215701219513,
+              "confidence": 0.93,
+              "end_index": 165,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 123, October 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 123, October 1975.",
+          "bbox": [
+            {
+              "h": 5.730182926829275,
+              "w": 98.00657012195124,
+              "x": 155.26896722560974,
+              "y": 195.78635670731705,
+              "confidence": 0.9,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge is furious at a panhandling Asian's plea for five dollars for a cup of coffee. *(September 28, 1964)*",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge is furious at a panhandling Asian's plea for five dollars for a cup of coffee. (September 28, 1964)",
+          "bbox": [
+            {
+              "h": 17.585830792682927,
+              "w": 125.2256707317073,
+              "x": 150.68810785060973,
+              "y": 201.52424542682925,
+              "confidence": 0.96,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page is three panels deep.",
+          "value": "This page is three panels deep.",
+          "bbox": [
+            {
+              "h": 5.594519817073187,
+              "w": 60.94071836890243,
+              "x": 155.55299542682926,
+              "y": 219.56554115853658,
+              "confidence": 0.9,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Swamp of No Return - 24 - A physicist invents a \"teaching machine\" — a small box that \"spurts knowledge from an ionized core into the student's mental muscles.\" He asks Scrooge for his financial assistance, but the Brutopian consul steals the machine and uses it to command both Scrooge and the scientist to go to the Dismal Swamp, then commands Donald to go to the swamp, too. The nephews take him there in the Junior Woodchuck's helicopter, but it sinks in the quicksand before they can leave. *(Oct. 30, 1964)*",
+          "value": "UNCLE SCROOGE The Swamp of No Return - 24 - A physicist invents a \"teaching machine\" — a small box that \"spurts knowledge from an ionized core into the student's mental muscles.\" He asks Scrooge for his financial assistance, but the Brutopian consul steals the machine and uses it to command both Scrooge and the scientist to go to the Dismal Swamp, then commands Donald to go to the swamp, too. The nephews take him there in the Junior Woodchuck's helicopter, but it sinks in the quicksand before they can leave. (Oct. 30, 1964)",
+          "bbox": [
+            {
+              "h": 58.95667682926829,
+              "w": 125.4446512957317,
+              "x": 150.66708269817073,
+              "y": 225.1901524390244,
+              "confidence": 0.98,
+              "end_index": 530,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 123, October 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 123, October 1975.",
+          "bbox": [
+            {
+              "h": 5.488948170731709,
+              "w": 97.98132621951217,
+              "x": 155.54073361280487,
+              "y": 284.6959298780488,
+              "confidence": 0.91,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - Scrooge locks four doors as he leaves his money, but leaves his keys behind. *(Sept. 19, 1964)*",
+          "value": "UNCLE SCROOGE - 1 - Scrooge locks four doors as he leaves his money, but leaves his keys behind. (Sept. 19, 1964)",
+          "bbox": [
+            {
+              "h": 16.975609756097565,
+              "w": 125.14705792682925,
+              "x": 151.05688833841464,
+              "y": 290.2892835365854,
+              "confidence": 0.95,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - Scrooge is a student at a parachute school that has trained him to land \"on a dime.\" *(Sept. 28, 1964)*",
+          "value": "UNCLE SCROOGE - 1 - Scrooge is a student at a parachute school that has trained him to land \"on a dime.\" (Sept. 28, 1964)",
+          "bbox": [
+            {
+              "h": 17.37798018292684,
+              "w": 126.06100038109756,
+              "x": 150.34539443597558,
+              "y": 308.1750457317073,
+              "confidence": 0.95,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 114, September 1974.",
+          "value": "Reprinted: Uncle Scrooge No. 114, September 1974.",
+          "bbox": [
+            {
+              "h": 5.5409451219512444,
+              "w": 103.02600800304877,
+              "x": 155.52682545731707,
+              "y": 326.083056402439,
+              "confidence": 0.91,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - An Indian snake charmer is dissatisfied with Scrooge's reward for his playing. *(Sept. 28, 1964)*",
+          "value": "UNCLE SCROOGE - 1 - An Indian snake charmer is dissatisfied with Scrooge's reward for his playing. (Sept. 28, 1964)",
+          "bbox": [
+            {
+              "h": 17.119756097560984,
+              "w": 125.05798399390243,
+              "x": 151.1509012957317,
+              "y": 331.88947408536586,
+              "confidence": 0.96,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n151",
+              "value": "Carl Barks and the Art of the Comic Book\n151",
+              "bbox": [
+                {
+                  "h": 4.7351067073171,
+                  "w": 77.87023628048779,
+                  "x": 174.46712652439024,
+                  "y": 364.57751524390244,
+                  "confidence": 0.93,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n151",
+          "bbox": [
+            {
+              "h": 4.74,
+              "w": 77.87,
+              "x": 174.47,
+              "y": 364.58,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "151"
+    }
+  ]
+}

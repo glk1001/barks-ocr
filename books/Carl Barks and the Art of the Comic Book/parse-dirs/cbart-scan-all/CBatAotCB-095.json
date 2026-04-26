@@ -1,0 +1,269 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "bibliography the dates are enclosed by brackets rather than parenteses.)",
+          "value": "bibliography the dates are enclosed by brackets rather than parenteses.)",
+          "bbox": [
+            {
+              "h": 14.681069216844513,
+              "w": 124.84979897103658,
+              "x": 12.682377096036584,
+              "y": 11.638248618521342,
+              "confidence": 0.98,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The \"official\" titles of some of the Barks one-shots, as given in the indicia, differed from the over-all series title; in such cases, the full \"official\" title of a particular comic book is given immediately under the line giving the issue number, the date, and the page count.",
+          "value": "The \"official\" titles of some of the Barks one-shots, as given in the indicia, differed from the over-all series title; in such cases, the full \"official\" title of a particular comic book is given immediately under the line giving the issue number, the date, and the page count.",
+          "bbox": [
+            {
+              "h": 44.17046398628049,
+              "w": 124.65842249428351,
+              "x": 12.983792635289634,
+              "y": 26.310248666158536,
+              "confidence": 0.99,
+              "end_index": 277,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The entry for each story is broken down this way:",
+          "value": "The entry for each story is broken down this way:",
+          "bbox": [
+            {
+              "h": 14.571270960365855,
+              "w": 124.48817620998473,
+              "x": 13.054066549161584,
+              "y": 70.59312118902439,
+              "confidence": 0.96,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Story title — number of pages in the story — page numbers if they are given in the comic book itself — a capsule description of the story — date that Barks submitted the story to Western, or that Western accepted it.*",
+          "value": "Story title — number of pages in the story — page numbers if they are given in the comic book itself — a capsule description of the story — date that Barks submitted the story to Western, or that Western accepted it.",
+          "bbox": [
+            {
+              "h": 37.226410060975624,
+              "w": 125.21870272008381,
+              "x": 12.402358636623473,
+              "y": 92.63261432926829,
+              "confidence": 0.98,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks typically both wrote and illustrated his stories, but he sometimes worked from other writers' scripts, sometimes edited or rewrote such scripts, and sometimes wrote stories that he did not illustrate. If a story (or front-cover drawing, or one-page gag) departs from the norm, that fact is noted in the entry immediately after the number of pages, by such terms as \"art only\" and \"script only.\"",
+          "value": "Barks typically both wrote and illustrated his stories, but he sometimes worked from other writers' scripts, sometimes edited or rewrote such scripts, and sometimes wrote stories that he did not illustrate. If a story (or front-cover drawing, or one-page gag) departs from the norm, that fact is noted in the entry immediately after the number of pages, by such terms as \"art only\" and \"script only.\"",
+          "bbox": [
+            {
+              "h": 66.96025152439026,
+              "w": 125.16036692549542,
+              "x": 13.073116306211888,
+              "y": 137.2559451219512,
+              "confidence": 0.99,
+              "end_index": 399,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Such notations are not based on speculation, but rather on a complete list of Barks's work for Western that he made in 1969, for my use in compiling the bibliography. He updated that list through 1973, when he did his last work specifically for comic books. For each entry, he noted whether he had been paid for both story and artwork, or for story or artwork alone.",
+          "value": "Such notations are not based on speculation, but rather on a complete list of Barks's work for Western that he made in 1969, for my use in compiling the bibliography. He updated that list through 1973, when he did his last work specifically for comic books. For each entry, he noted whether he had been paid for both story and artwork, or for story or artwork alone.",
+          "bbox": [
+            {
+              "h": 58.766410060975595,
+              "w": 125.47435939881858,
+              "x": 12.680982636242376,
+              "y": 204.34705792682928,
+              "confidence": 0.99,
+              "end_index": 365,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's list is chronological; the dates that accompany most entries in this bibliography, for submission or acceptance, are from his list. The dates for 1944 through 1957 are from Barks's vouchers — the monthly statements sent to him by Western Publishing — and are, in effect, the dates on which Western accepted a piece of work. The dates for 1942 and 1943, and from December 31, 1957, through 1973, are the dates on which Barks submitted his work to Western, either by mailing it or by delivering it in person.",
+          "value": "Barks's list is chronological; the dates that accompany most entries in this bibliography, for submission or acceptance, are from his list. The dates for 1944 through 1957 are from Barks's vouchers — the monthly statements sent to him by Western Publishing — and are, in effect, the dates on which Western accepted a piece of work. The dates for 1942 and 1943, and from December 31, 1957, through 1973, are the dates on which Barks submitted his work to Western, either by mailing it or by delivering it in person.",
+          "bbox": [
+            {
+              "h": 89.01066310975611,
+              "w": 124.9743785727896,
+              "x": 11.981526533917682,
+              "y": 263.6638033536585,
+              "confidence": 0.99,
+              "end_index": 513,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Starting in the middle fifties, Western began juggling the order of Barks's stories and covers much more than in the past, as the amount of advertising in the comics grew. (No outside advertisements at all appeared in the Dell comic books until the summer of 1952, and it was several years after that before ads began appearing in the inside pages, as well as on the covers.) A story listed on a voucher as being for one issue might actually appear in another. Barks began keeping records of his submissions — often with descriptions of the work — in 1952, and his records are a more reliable source for the later items.",
+          "value": "Starting in the middle fifties, Western began juggling the order of Barks's stories and covers much more than in the past, as the amount of advertising in the comics grew. (No outside advertisements at all appeared in the Dell comic books until the summer of 1952, and it was several years after that before ads began appearing in the inside pages, as well as on the covers.) A story listed on a voucher as being for one issue might actually appear in another. Barks began keeping records of his submissions — often with descriptions of the work — in 1952, and his records are a more reliable source for the later items.",
+          "bbox": [
+            {
+              "h": 101.95025962271342,
+              "w": 125.36595274390243,
+              "x": 151.19986280487802,
+              "y": 13.1790048589939,
+              "confidence": 0.99,
+              "end_index": 619,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In addition to copying information from his records, Barks also checked this information against his own copies of the comic books in many instances.",
+          "value": "In addition to copying information from his records, Barks also checked this information against his own copies of the comic books in many instances.",
+          "bbox": [
+            {
+              "h": 28.84094131097561,
+              "w": 125.04644245426829,
+              "x": 150.62185975609756,
+              "y": 116.45280868902438,
+              "confidence": 0.98,
+              "end_index": 148,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In August 1978, Barks permitted me to examine the vouchers themselves, in an effort to clear up a few ambiguities in the list. In a fairly extensive examination of the vouchers, I found one or two minor errors in dates (and corrected them), but nothing more. I am sure of this: all of the dates in this bibliography conform to the dates on Barks's list, and the dates on Barks's list conform — with only a few possible exceptions — to the dates on his vouchers and his records of his submissions.",
+          "value": "In August 1978, Barks permitted me to examine the vouchers themselves, in an effort to clear up a few ambiguities in the list. In a fairly extensive examination of the vouchers, I found one or two minor errors in dates (and corrected them), but nothing more. I am sure of this: all of the dates in this bibliography conform to the dates on Barks's list, and the dates on Barks's list conform — with only a few possible exceptions — to the dates on his vouchers and his records of his submissions.",
+          "bbox": [
+            {
+              "h": 81.10518292682927,
+              "w": 125.29090701219512,
+              "x": 150.27808307926827,
+              "y": 145.83532774390244,
+              "confidence": 0.99,
+              "end_index": 495,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Unfortunately, Barks's list is inconsistent and ambiguous in some respects, because of inconsistencies and ambiguities in those supporting records. For example, some stories and gags and cover drawings are described cryptically in Barks's personal records, and he did not indicate, on the list, where he thought those items had been published. I have indicated, in notes accompanying the appropriate entries, when I think there is any reason to doubt that a date has been properly assigned to a particular item.",
+          "value": "Unfortunately, Barks's list is inconsistent and ambiguous in some respects, because of inconsistencies and ambiguities in those supporting records. For example, some stories and gags and cover drawings are described cryptically in Barks's personal records, and he did not indicate, on the list, where he thought those items had been published. I have indicated, in notes accompanying the appropriate entries, when I think there is any reason to doubt that a date has been properly assigned to a particular item.",
+          "bbox": [
+            {
+              "h": 88.61060213414635,
+              "w": 125.0955926067073,
+              "x": 149.92916158536585,
+              "y": 227.32977896341464,
+              "confidence": 0.99,
+              "end_index": 510,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In some cases, a question mark is inserted in lieu of the day of the month; this means that Barks himself was uncertain of the date.",
+          "value": "In some cases, a question mark is inserted in lieu of the day of the month; this means that Barks himself was uncertain of the date.",
+          "bbox": [
+            {
+              "h": 21.85417682926829,
+              "w": 124.9500800304878,
+              "x": 149.71179306402436,
+              "y": 316.49565548780487,
+              "confidence": 0.98,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "On Barks's list, many covers are clearly identified as to content, or as to content and",
+          "value": "On Barks's list, many covers are clearly identified as to content, or as to content and",
+          "bbox": [
+            {
+              "h": 14.660899390243939,
+              "w": 124.82468368902437,
+              "x": 149.79126333841464,
+              "y": 338.7480411585366,
+              "confidence": 0.97,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n95",
+              "value": "Carl Barks and the Art of the Comic Book\n95",
+              "bbox": [
+                {
+                  "h": 5.27233993902435,
+                  "w": 80.14096989329269,
+                  "x": 172.15967606707315,
+                  "y": 366.53986280487806,
+                  "confidence": 0.93,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n95",
+          "bbox": [
+            {
+              "h": 5.27,
+              "w": 80.14,
+              "x": 172.16,
+              "y": 366.54,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "95"
+    }
+  ]
+}

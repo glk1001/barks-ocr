@@ -1,0 +1,666 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "as the nephews cower behind him. (Illustrating \"Sheriff of Bullet Valley.\") *(Apr. 29, 1948)*",
+          "value": "as the nephews cower behind him. (Illustrating \"Sheriff of Bullet Valley.\") (Apr. 29, 1948)",
+          "bbox": [
+            {
+              "h": 11.781559641768293,
+              "w": 124.9285028820503,
+              "x": 12.166818192644817,
+              "y": 16.075263910060976,
+              "confidence": 0.97,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - Donald picks out a vacant lot where the nephews can play ball. *(Apr. 22, 1948)*",
+          "value": "DONALD DUCK - 1 (inside front cover) - Donald picks out a vacant lot where the nephews can play ball. (Apr. 22, 1948)",
+          "bbox": [
+            {
+              "h": 17.04622237042683,
+              "w": 124.68814345941311,
+              "x": 12.213783941501523,
+              "y": 28.231229039634147,
+              "confidence": 0.97,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"Sheriff of Bullet Valley\" - 32 - Donald becomes a sheriff's deputy in Bullet Valley and is sent out to bring in a gang of rustlers. The rustlers are led by Blacksnake McQuirt, a tough gunman who poses as a legitimate rancher and uses a branding ray to change brands from as far as a mile away. *(Mar. 16, 1948)*",
+          "value": "DONALD DUCK in \"Sheriff of Bullet Valley\" - 32 - Donald becomes a sheriff's deputy in Bullet Valley and is sent out to bring in a gang of rustlers. The rustlers are led by Blacksnake McQuirt, a tough gunman who poses as a legitimate rancher and uses a branding ray to change brands from as far as a mile away. (Mar. 16, 1948)",
+          "bbox": [
+            {
+              "h": 35.25073170731708,
+              "w": 125.14570634051066,
+              "x": 12.046783179306402,
+              "y": 45.95010480182927,
+              "confidence": 0.98,
+              "end_index": 326,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks caricatured himself on a wanted poster on the last page of this story. He said in the 1971 interview: \"That caricature originated in the old Disney studio days in the gag sheets that us guys used to draw of each other and circulate around. Some of the guys took to drawing me with this tremendous big schnoz so I just copied that old caricature.\"",
+          "value": "Barks caricatured himself on a wanted poster on the last page of this story. He said in the 1971 interview: \"That caricature originated in the old Disney studio days in the gag sheets that us guys used to draw of each other and circulate around. Some of the guys took to drawing me with this tremendous big schnoz so I just copied that old caricature.\"",
+          "bbox": [
+            {
+              "h": 34.90908155487804,
+              "w": 125.39652903487043,
+              "x": 11.796372070312499,
+              "y": 81.86482088414634,
+              "confidence": 0.99,
+              "end_index": 351,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - Donald pretends to be sick so that the nephews have to cook. *(Apr. 22, 1948)*",
+          "value": "DONALD DUCK - 1 (inside back cover) - Donald pretends to be sick so that the nephews have to cook. (Apr. 22, 1948)",
+          "bbox": [
+            {
+              "h": 16.86586509146342,
+              "w": 124.93393387957316,
+              "x": 11.930702172256096,
+              "y": 117.48991234756097,
+              "confidence": 0.97,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (back cover) - Donald tests the authenticity of worm holes in an antique. *(Apr. 22, 1948)*",
+          "value": "DONALD DUCK - 1 (back cover) - Donald tests the authenticity of worm holes in an antique. (Apr. 22, 1948)",
+          "bbox": [
+            {
+              "h": 11.959355945121942,
+              "w": 125.18043814310211,
+              "x": 11.910201148056402,
+              "y": 135.21070884146343,
+              "confidence": 0.97,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 203 - (December) 1948 - 36 pages",
+          "value": "Four Color 203 - (December) 1948 - 36 pages",
+          "bbox": [
+            {
+              "h": 11.049294969512202,
+              "w": 119.21839367378048,
+              "x": 11.646030868902438,
+              "y": 153.01581173780485,
+              "confidence": 0.78,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## Donald Duck in The Golden Christmas Tree",
+          "value": "Donald Duck in The Golden Christmas Tree",
+          "bbox": [
+            {
+              "h": 11.049294969512202,
+              "w": 119.21839367378048,
+              "x": 11.646030868902438,
+              "y": 153.01581173780485,
+              "confidence": 0.8,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald prepares to put on dark glasses before looking at a golden Christmas tree. (Illustrating \"The Golden Christmas Tree.\") *(July 29, 1948)*",
+          "value": "Front cover: Donald prepares to put on dark glasses before looking at a golden Christmas tree. (Illustrating \"The Golden Christmas Tree.\") (July 29, 1948)",
+          "bbox": [
+            {
+              "h": 17.800506859756116,
+              "w": 125.21189226848323,
+              "x": 11.895098966272865,
+              "y": 164.64791158536585,
+              "confidence": 0.93,
+              "end_index": 155,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Christmas Parade* (Gold Key) No. 4, 1966.",
+          "value": "Reprinted: Christmas Parade (Gold Key) No. 4, 1966.",
+          "bbox": [
+            {
+              "h": 5.379660823170725,
+              "w": 104.27692525724083,
+              "x": 16.635219369283536,
+              "y": 183.1869169207317,
+              "confidence": 0.84,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - Donald returns the nephews' presents when they fail to do their chores. *(July 22, 1948).*",
+          "value": "DONALD DUCK - 1 (inside front cover) - Donald returns the nephews' presents when they fail to do their chores. (July 22, 1948).",
+          "bbox": [
+            {
+              "h": 17.101234756097536,
+              "w": 125.31658608041158,
+              "x": 11.71384170160061,
+              "y": 188.8291006097561,
+              "confidence": 0.95,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Christmas Parade* (Gold Key) No. 4, 1966.",
+          "value": "Reprinted: Christmas Parade (Gold Key) No. 4, 1966.",
+          "bbox": [
+            {
+              "h": 5.542911585365855,
+              "w": 104.6060263433689,
+              "x": 16.38509979992378,
+              "y": 206.6631631097561,
+              "confidence": 0.91,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"The Golden Christmas Tree\" - 20 - The nephews, disappointed in their wish for a golden Christmas tree, are lured into a trap by a witch who plans to use their tears in a magic potion that will destroy all the Christmas trees on earth. *(June 30, 1948)*",
+          "value": "DONALD DUCK in \"The Golden Christmas Tree\" - 20 - The nephews, disappointed in their wish for a golden Christmas tree, are lured into a trap by a witch who plans to use their tears in a magic potion that will destroy all the Christmas trees on earth. (June 30, 1948)",
+          "bbox": [
+            {
+              "h": 29.267286585365852,
+              "w": 125.32086056592986,
+              "x": 11.761941453887193,
+              "y": 212.59282774390243,
+              "confidence": 0.97,
+              "end_index": 267,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes:* The dialogue in the second, third, fourth and fifth panels of the last page of this story was changed by Barks's editors. Barks does not recall the original dialogue.",
+          "value": "Changes: The dialogue in the second, third, fourth and fifth panels of the last page of this story was changed by Barks's editors. Barks does not recall the original dialogue.",
+          "bbox": [
+            {
+              "h": 17.571310975609766,
+              "w": 125.25313226467223,
+              "x": 11.842454625571644,
+              "y": 242.34256097560976,
+              "confidence": 0.97,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Weston:* In a letter to a fan dated March 22, 1961, Barks mentions \"The Golden Christmas Tree\": I felt sourly about the finished story because the editors had made me do some changes in the fight sequences between Don and the witch that I thought took the guts out of the story. I still gag when I read the last two pages of the story. But the rest of the tale was robust enough.\" In a more recent letter (October 3, 1973), Barks says, \"About the last two pages of 'The Golden Christmas Tree'... only the last four panels are mine as they were in the original. I still wince at the preachy stuff I had to put in about the 'sprit of Christmas'.\" In earlier sections, the story seems to be intact up to page 9, but the bottom half of page 10 (probably redrawn) appears to have been drawn separately from the top half and a number of top and bottom halves from that point on don't quite match, so there were probably a couple of cuts or redrawn halves between",
+          "value": "Weston: In a letter to a fan dated March 22, 1961, Barks mentions \"The Golden Christmas Tree\": I felt sourly about the finished story because the editors had made me do some changes in the fight sequences between Don and the witch that I thought took the guts out of the story. I still gag when I read the last two pages of the story. But the rest of the tale was robust enough.\" In a more recent letter (October 3, 1973), Barks says, \"About the last two pages of 'The Golden Christmas Tree'... only the last four panels are mine as they were in the original. I still wince at the preachy stuff I had to put in about the 'sprit of Christmas'.\" In earlier sections, the story seems to be intact up to page 9, but the bottom half of page 10 (probably redrawn) appears to have been drawn separately from the top half and a number of top and bottom halves from that point on don't quite match, so there were probably a couple of cuts or redrawn halves between",
+          "bbox": [
+            {
+              "h": 88.41583079268295,
+              "w": 125.5142295874619,
+              "x": 11.638216106135669,
+              "y": 260.41845274390244,
+              "confidence": 0.99,
+              "end_index": 956,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "pages 10 and 18, in addition to the changes in the last two pages.",
+          "value": "pages 10 and 18, in addition to the changes in the last two pages.",
+          "bbox": [
+            {
+              "h": 11.183729039634144,
+              "w": 125.29215891768293,
+              "x": 150.25067835365851,
+              "y": 16.92729706554878,
+              "confidence": 0.96,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Christmas Parade* (Gold Key) No. 4, 1966.",
+          "value": "Reprinted: Christmas Parade (Gold Key) No. 4, 1966.",
+          "bbox": [
+            {
+              "h": 5.686471989329268,
+              "w": 104.71127858231706,
+              "x": 154.71569359756094,
+              "y": 29.075419207317072,
+              "confidence": 0.88,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - Donald tests toys to see how sturdy they are. *(July 22, 1948).*",
+          "value": "DONALD DUCK - 1 (inside back cover) - Donald tests toys to see how sturdy they are. (July 22, 1948).",
+          "bbox": [
+            {
+              "h": 11.888031631097558,
+              "w": 124.81821836890244,
+              "x": 150.25854992378046,
+              "y": 35.029727515243906,
+              "confidence": 0.92,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Christmas Parade* (Gold Key) No. 4, 1966.",
+          "value": "Reprinted: Christmas Parade (Gold Key) No. 4, 1966.",
+          "bbox": [
+            {
+              "h": 5.387192263719507,
+              "w": 104.68178163109756,
+              "x": 154.72564024390243,
+              "y": 47.30335461128049,
+              "confidence": 0.86,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (back cover) - Donald acquires some unusual decorations for his Christmas tree. *(July 22, 1948)*\nReprinted: *Christmas Parade* (Gold Key) No. 4, 1966.",
+          "value": "DONALD DUCK - 1 (back cover) - Donald acquires some unusual decorations for his Christmas tree. (July 22, 1948)\nReprinted: Christmas Parade (Gold Key) No. 4, 1966.",
+          "bbox": [
+            {
+              "h": 17.902637195121955,
+              "w": 125.07758574695124,
+              "x": 149.9347694359756,
+              "y": 52.66043254573171,
+              "confidence": 0.94,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 223 - (April) 1949 - 36 pages",
+          "value": "Four Color 223 - (April) 1949 - 36 pages",
+          "bbox": [
+            {
+              "h": 11.155518292682927,
+              "w": 97.62077743902438,
+              "x": 149.92964176829267,
+              "y": 76.40243140243902,
+              "confidence": 0.8,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## Donald Duck in \"Lost in the Andes\"",
+          "value": "Donald Duck in \"Lost in the Andes\"",
+          "bbox": [
+            {
+              "h": 11.155518292682927,
+              "w": 97.62077743902438,
+              "x": 149.92964176829267,
+              "y": 76.40243140243902,
+              "confidence": 0.79,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald and the nephews gleefully examine the square eggs in a hen's nest. (Illustrating \"Lost in the Andes!\") *(Nov. 24, 1948)*",
+          "value": "Front cover: Donald and the nephews gleefully examine the square eggs in a hen's nest. (Illustrating \"Lost in the Andes!\") (Nov. 24, 1948)",
+          "bbox": [
+            {
+              "h": 17.070966082317085,
+              "w": 125.15372903963414,
+              "x": 149.98556592987802,
+              "y": 88.53576791158535,
+              "confidence": 0.95,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Donald Duck* No. 1, 1965",
+          "value": "Reprinted: The Best of Donald Duck No. 1, 1965",
+          "bbox": [
+            {
+              "h": 5.300259146341464,
+              "w": 96.1060575457317,
+              "x": 154.75081554878045,
+              "y": 106.62801448170731,
+              "confidence": 0.88,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - Donald exercises so that he can fit into his tuxedo again. *(Nov. 24, 1948)*\nReprinted: *The Best of Donald Duck* No. 1, 1965",
+          "value": "DONALD DUCK - 1 (inside front cover) - Donald exercises so that he can fit into his tuxedo again. (Nov. 24, 1948)\nReprinted: The Best of Donald Duck No. 1, 1965",
+          "bbox": [
+            {
+              "h": 17.342195121951203,
+              "w": 125.03604992378048,
+              "x": 150.08110518292682,
+              "y": 112.25762195121952,
+              "confidence": 0.95,
+              "end_index": 163,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"Lost in the Andes!\" - 32 - Donald, a museum janitor, discovers that some \"blocks\" from Inca ruins in the Andes are actually square eggs. When the other members of a scientific expedition fall ill, Donald and the nephews press on alone deep into the Andes. There they find a strange race of block-shaped people who speak with Southern accents and live on the square eggs. *(Oct. 21, 1948)*",
+          "value": "DONALD DUCK in \"Lost in the Andes!\" - 32 - Donald, a museum janitor, discovers that some \"blocks\" from Inca ruins in the Andes are actually square eggs. When the other members of a scientific expedition fall ill, Donald and the nephews press on alone deep into the Andes. There they find a strange race of block-shaped people who speak with Southern accents and live on the square eggs. (Oct. 21, 1948)",
+          "bbox": [
+            {
+              "h": 46.71619664634145,
+              "w": 124.9947198932927,
+              "x": 149.93835365853658,
+              "y": 130.08982088414635,
+              "confidence": 0.98,
+              "end_index": 403,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The setting of this story is similar to that of the \"Lake Titicaca\" sequence in the 1943 Disney feature, *Saludos Amigos*, but Barks has said that he did not work on that cartoon. \"My 'Lost in the Andes' was inspired chiefly by *National Geographic* articles about the Inca civilizations. Some scenes from *Saludos Amigos* helped me with costume suggestions and exaggerated scenery. I only saw the picture once in a theatre.\" (Jan. 15, 1969, letter to Michael Barrier)",
+          "value": "The setting of this story is similar to that of the \"Lake Titicaca\" sequence in the 1943 Disney feature, Saludos Amigos, but Barks has said that he did not work on that cartoon. \"My 'Lost in the Andes' was inspired chiefly by National Geographic articles about the Inca civilizations. Some scenes from Saludos Amigos helped me with costume suggestions and exaggerated scenery. I only saw the picture once in a theatre.\" (Jan. 15, 1969, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 46.42577743902437,
+              "w": 125.27094512195119,
+              "x": 150.2379363567073,
+              "y": 177.6878506097561,
+              "confidence": 0.98,
+              "end_index": 467,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Donald Duck* No. 1, 1965.",
+          "value": "Reprinted: The Best of Donald Duck No. 1, 1965.",
+          "bbox": [
+            {
+              "h": 5.454923780487797,
+              "w": 97.37106516768293,
+              "x": 154.7422580030488,
+              "y": 225.03891768292684,
+              "confidence": 0.9,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - Donald ends the nephews' fighting over television. *(Nov. 24, 1948)*",
+          "value": "DONALD DUCK - 1 (inside back cover) - Donald ends the nephews' fighting over television. (Nov. 24, 1948)",
+          "bbox": [
+            {
+              "h": 11.792995426829275,
+              "w": 124.72686356707315,
+              "x": 150.43990472560972,
+              "y": 230.98392530487806,
+              "confidence": 0.86,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Donald Duck* No. 1, 1965.",
+          "value": "Reprinted: The Best of Donald Duck No. 1, 1965.",
+          "bbox": [
+            {
+              "h": 5.29207317073171,
+              "w": 96.87721417682924,
+              "x": 155.30925114329267,
+              "y": 243.29192835365853,
+              "confidence": 0.86,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (back cover) - Donald helps the nephews to baby-sit by singing a lullaby. *(Nov. 24, 1948)*\nReprinted: *The Best of Donald Duck* No. 1, 1965.",
+          "value": "DONALD DUCK - 1 (back cover) - Donald helps the nephews to baby-sit by singing a lullaby. (Nov. 24, 1948)\nReprinted: The Best of Donald Duck No. 1, 1965.",
+          "bbox": [
+            {
+              "h": 17.3784375,
+              "w": 125.19806021341464,
+              "x": 150.1119912347561,
+              "y": 248.92987042682927,
+              "confidence": 0.93,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 238 - (August) 1949 - 36 pages",
+          "value": "Four Color 238 - (August) 1949 - 36 pages",
+          "bbox": [
+            {
+              "h": 10.883871951219534,
+              "w": 102.9464176829268,
+              "x": 149.53337080792681,
+              "y": 272.9788948170731,
+              "confidence": 0.81,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## Donald Duck in Voodoo Hoodoo",
+          "value": "Donald Duck in Voodoo Hoodoo",
+          "bbox": [
+            {
+              "h": 10.883871951219534,
+              "w": 102.9464176829268,
+              "x": 149.53337080792681,
+              "y": 272.9788948170731,
+              "confidence": 0.77,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald and the nephews are startled in the jungle at the sight of a tiny man. (Illustrating \"Voodoo Hoodoo.\") *(Mar. 17, 1949)*",
+          "value": "Front cover: Donald and the nephews are startled in the jungle at the sight of a tiny man. (Illustrating \"Voodoo Hoodoo.\") (Mar. 17, 1949)",
+          "bbox": [
+            {
+              "h": 17.45117378048777,
+              "w": 124.9060918445122,
+              "x": 149.81012766768293,
+              "y": 284.9237423780488,
+              "confidence": 0.97,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - art only - Donald has trouble traversing some freshly waxed floors. *(Mar. 17, 1949)*",
+          "value": "DONALD DUCK - 1 (inside front cover) - art only - Donald has trouble traversing some freshly waxed floors. (Mar. 17, 1949)",
+          "bbox": [
+            {
+              "h": 16.672568597560986,
+              "w": 125.40774580792683,
+              "x": 149.42042492378047,
+              "y": 303.17750762195124,
+              "confidence": 0.97,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"Voodoo Hoodoo\" - 32 - A zombie gives Donald a poisoned doll that was intended for Uncle Scrooge, who looked like Donald when the doll was given to the zombie seventy years before. Donald—followed by the nephews and \"Bombie the Zombie\"—goes to Africa to",
+          "value": "DONALD DUCK in \"Voodoo Hoodoo\" - 32 - A zombie gives Donald a poisoned doll that was intended for Uncle Scrooge, who looked like Donald when the doll was given to the zombie seventy years before. Donald—followed by the nephews and \"Bombie the Zombie\"—goes to Africa to",
+          "bbox": [
+            {
+              "h": 29.374230182926784,
+              "w": 125.27850800304876,
+              "x": 149.69917111280486,
+              "y": 320.43091463414635,
+              "confidence": 0.98,
+              "end_index": 267,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "108 Carl Barks and the Art of the Comic Book",
+              "value": "108 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.146600609756114,
+                  "w": 77.71874714176829,
+                  "x": 35.613101181402435,
+                  "y": 363.96192073170727,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "108 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.15,
+              "w": 77.72,
+              "x": 35.61,
+              "y": 363.96,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "108"
+    }
+  ]
+}

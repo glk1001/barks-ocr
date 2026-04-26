@@ -1,0 +1,3 @@
+![This 1949 circular for Walt Disney's Comics features Donald Duck as a teacher at a desk, wearing a mortarboard and holding a magnifying glass over a comic book held by one of his nephews. Two other nephews stand in front of the desk, also holding magnifying glasses and comic books. A chalkboard in the background says "YOU CAN BE SURE IT'S APPROVED! If it's WALT DISNEY'S" and includes a "HONOR ROLL" with the names Huey, Dewey, Louie, and Donald, along with some arithmetic problems.](CBatAotCB-201_page_1_image_1_v2.jpg)
+
+This 1949 circular for Walt Disney's Comics included a reduction of a cover drawing by Barks for Walt Disney's Comics— probably the November 1949 issue—that was not used; © 1949 Walt Disney Productions.

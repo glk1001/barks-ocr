@@ -1,0 +1,609 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "the poor children of Shacktown. Scrooge is unable to deliver when the floor of his money bin collapses and his money falls deep into an unknown cavern, separated by only a thin crust from bottomless quicksand. *(Feb. 15 and Mar. 15, 1951)*",
+          "value": "the poor children of Shacktown. Scrooge is unable to deliver when the floor of his money bin collapses and his money falls deep into an unknown cavern, separated by only a thin crust from bottomless quicksand. (Feb. 15 and Mar. 15, 1951)",
+          "bbox": [
+            {
+              "h": 29.044375952743906,
+              "w": 124.91590879858992,
+              "x": 11.461950385861279,
+              "y": 19.848295541158535,
+              "confidence": 0.99,
+              "end_index": 238,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Ten pages of this story were accepted on the earlier date, the remaining twenty-two pages on the later date. \"I think what happened there was that they wanted some of the material early, and so I just sent them the ten pages I had drawn at that point.\" *(1974 interview)*",
+          "value": "Ten pages of this story were accepted on the earlier date, the remaining twenty-two pages on the later date. \"I think what happened there was that they wanted some of the material early, and so I just sent them the ten pages I had drawn at that point.\" (1974 interview)",
+          "bbox": [
+            {
+              "h": 28.610196265243903,
+              "w": 125.25035191977898,
+              "x": 11.515169231135669,
+              "y": 50.11965320121951,
+              "confidence": 0.98,
+              "end_index": 270,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Christmas Parade* (Gold Key) No. 2, 1964; No. 8, 1971.",
+          "value": "Reprinted: Christmas Parade (Gold Key) No. 2, 1964; No. 8, 1971.",
+          "bbox": [
+            {
+              "h": 10.310945121951217,
+              "w": 124.58069073932924,
+              "x": 11.808084032012193,
+              "y": 79.67853658536585,
+              "confidence": 0.96,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - art only - Donald brings his own mistletoe to win a kiss from Daisy. *(May 24, 1951)*",
+          "value": "DONALD DUCK - 1 (inside back cover) - art only - Donald brings his own mistletoe to win a kiss from Daisy. (May 24, 1951)",
+          "bbox": [
+            {
+              "h": 17.439809451219507,
+              "w": 125.09970524485516,
+              "x": 11.372389838986278,
+              "y": 91.12243902439025,
+              "confidence": 0.96,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Christmas Parade* (Gold Key) No. 2, 1964.",
+          "value": "Reprinted: Christmas Parade (Gold Key) No. 2, 1964.",
+          "bbox": [
+            {
+              "h": 5.243689024390246,
+              "w": 104.6195057641006,
+              "x": 15.840297970655485,
+              "y": 109.32537347560975,
+              "confidence": 0.91,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (back cover) - art only - The nephews write a Christmas list the size of a postage stamp. *(May 24, 1951)*",
+          "value": "DONALD DUCK - 1 (back cover) - art only - The nephews write a Christmas list the size of a postage stamp. (May 24, 1951)",
+          "bbox": [
+            {
+              "h": 17.09471798780487,
+              "w": 124.77809415491615,
+              "x": 11.512388886242377,
+              "y": 114.88556021341464,
+              "confidence": 0.97,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Four Color 394 - May-June 1952 - 36 pages**\n**Donald Duck in Malayalaya**",
+          "value": "Four Color 394 - May-June 1952 - 36 pages\nDonald Duck in Malayalaya",
+          "bbox": [
+            {
+              "h": 11.00846798780487,
+              "w": 106.84127036490091,
+              "x": 11.176314429306402,
+              "y": 138.7189481707317,
+              "confidence": 0.98,
+              "end_index": 74,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The ducks bounce away from gun-toting villains on bundles of raw rubber. (Illustrating \"Malayalaya.\") *(Nov. 8, 1951)*",
+          "value": "Front cover (art only): The ducks bounce away from gun-toting villains on bundles of raw rubber. (Illustrating \"Malayalaya.\") (Nov. 8, 1951)",
+          "bbox": [
+            {
+              "h": 17.16682545731707,
+              "w": 125.25740889386431,
+              "x": 11.374407036013718,
+              "y": 150.65259146341464,
+              "confidence": 0.97,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck* No. 174, August 1976.",
+          "value": "Reprinted: Donald Duck No. 174, August 1976.",
+          "bbox": [
+            {
+              "h": 5.27179115853658,
+              "w": 94.77038478944358,
+              "x": 15.561597870617376,
+              "y": 168.7159413109756,
+              "confidence": 0.94,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Four Color 408 - July-Aug. 1952 - 36 pages**\n**Donald Duck and The Golden Helmet**",
+          "value": "Four Color 408 - July-Aug. 1952 - 36 pages\nDonald Duck and The Golden Helmet",
+          "bbox": [
+            {
+              "h": 10.93042682926829,
+              "w": 105.38374475990852,
+              "x": 11.289713700457316,
+              "y": 180.17171112804877,
+              "confidence": 0.98,
+              "end_index": 83,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald triumphantly holds up a golden helmet and a map of Labrador. (Illustrating \"The Golden Helmet.\") *(Jan. 3, 1952)*",
+          "value": "Front cover (art only): Donald triumphantly holds up a golden helmet and a map of Labrador. (Illustrating \"The Golden Helmet.\") (Jan. 3, 1952)",
+          "bbox": [
+            {
+              "h": 16.92681402439026,
+              "w": 125.0701600609756,
+              "x": 11.478627096036584,
+              "y": 192.04977896341464,
+              "confidence": 0.97,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Donald Duck and Uncle Scrooge* No. 1, 1964.",
+          "value": "Reprinted: The Best of Donald Duck and Uncle Scrooge No. 1, 1964.",
+          "bbox": [
+            {
+              "h": 10.482759146341477,
+              "w": 124.79186082793444,
+              "x": 11.860071336699693,
+              "y": 210.07804115853656,
+              "confidence": 0.96,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - art only - Donald has trouble getting his store windows shiny enough. *(Jan. 3, 1952)*",
+          "value": "DONALD DUCK - 1 (inside front cover) - art only - Donald has trouble getting his store windows shiny enough. (Jan. 3, 1952)",
+          "bbox": [
+            {
+              "h": 16.78971036585365,
+              "w": 125.30974133003049,
+              "x": 11.408730468749999,
+              "y": 221.87174542682928,
+              "confidence": 0.97,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"The Golden Helmet\" - 32 - The ducks and a museum curator race Azure Blue, a descendant of the Vikings, to the coast of Labrador to find a golden helmet, left by a Viking explorer, that will give Blue title to all of North America. Once the helmet is saved from Blue, the curator and Donald have visions of ruling the continent. *(Dec. 3, 1951)*",
+          "value": "DONALD DUCK in \"The Golden Helmet\" - 32 - The ducks and a museum curator race Azure Blue, a descendant of the Vikings, to the coast of Labrador to find a golden helmet, left by a Viking explorer, that will give Blue title to all of North America. Once the helmet is saved from Blue, the curator and Donald have visions of ruling the continent. (Dec. 3, 1951)",
+          "bbox": [
+            {
+              "h": 40.52362042682925,
+              "w": 125.06869914729418,
+              "x": 11.59581209508384,
+              "y": 239.6037804878049,
+              "confidence": 0.98,
+              "end_index": 359,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Donald Duck and Uncle Scrooge* No. 1, 1964.",
+          "value": "Reprinted: The Best of Donald Duck and Uncle Scrooge No. 1, 1964.",
+          "bbox": [
+            {
+              "h": 10.10243140243907,
+              "w": 124.6843084270198,
+              "x": 11.973463104992376,
+              "y": 281.4119359756097,
+              "confidence": 0.96,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - art only - Donald is angry because the nephews have lent his lawn roller. *(Jan. 3, 1952)*",
+          "value": "DONALD DUCK - 1 (inside back cover) - art only - Donald is angry because the nephews have lent his lawn roller. (Jan. 3, 1952)",
+          "bbox": [
+            {
+              "h": 17.22084603658539,
+              "w": 125.03007764862805,
+              "x": 11.654815644054876,
+              "y": 292.944306402439,
+              "confidence": 0.96,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck* No. 160, November, 1974.",
+          "value": "Reprinted: Donald Duck No. 160, November, 1974.",
+          "bbox": [
+            {
+              "h": 5.18293445121948,
+              "w": 101.88461961699696,
+              "x": 16.134808736661583,
+              "y": 311.1236890243903,
+              "confidence": 0.92,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD'S NEPHEWS - 1 (back cover) - art only - The nephews sell towels to the victims of an over-active park fountain. *(Jan. 3, 1952)*",
+          "value": "DONALD'S NEPHEWS - 1 (back cover) - art only - The nephews sell towels to the victims of an over-active park fountain. (Jan. 3, 1952)",
+          "bbox": [
+            {
+              "h": 17.082964939024404,
+              "w": 125.15774735613566,
+              "x": 11.84242890148628,
+              "y": 316.6560823170731,
+              "confidence": 0.96,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Four Color 422 - Sept.-Oct. 1952 - 36 pages**\n**Donald Duck and The Gilded Man**",
+          "value": "Four Color 422 - Sept.-Oct. 1952 - 36 pages\nDonald Duck and The Gilded Man",
+          "bbox": [
+            {
+              "h": 10.482690548780464,
+              "w": 105.45840248666157,
+              "x": 11.863148580411584,
+              "y": 338.2740320121951,
+              "confidence": 0.98,
+              "end_index": 81,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The ducks flee with a mail sack from a giant golden Indian. (Illustrating \"The Gilded Man.\") *(Feb. 21, 1952)*",
+          "value": "Front cover (art only): The ducks flee with a mail sack from a giant golden Indian. (Illustrating \"The Gilded Man.\") (Feb. 21, 1952)",
+          "bbox": [
+            {
+              "h": 17.18791063262195,
+              "w": 125.00732469512191,
+              "x": 149.82410442073171,
+              "y": 19.690746951219513,
+              "confidence": 0.97,
+              "end_index": 133,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - Scrooge complains about the prices at Donald's riding stable. *(Jan. 31, 1952)*",
+          "value": "DONALD DUCK - 1 (inside front cover) - Scrooge complains about the prices at Donald's riding stable. (Jan. 31, 1952)",
+          "bbox": [
+            {
+              "h": 16.757609565548776,
+              "w": 124.87131288109754,
+              "x": 150.09389862804878,
+              "y": 37.7135127667683,
+              "confidence": 0.97,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK and \"The Gilded Man\" - 32 - The ducks go to British Guiana in search of the world's rarest stamp, a one-cent magenta of 1856, and find it on a letter in the possession of El Dorado, a giant golden Indian. After they retrieve the letter, the ducks learn that it is addressed to a deceased Duckburg resident who named Gladstone her only heir. *(Jan. 31, 1952)*",
+          "value": "DONALD DUCK and \"The Gilded Man\" - 32 - The ducks go to British Guiana in search of the world's rarest stamp, a one-cent magenta of 1856, and find it on a letter in the possession of El Dorado, a giant golden Indian. After they retrieve the letter, the ducks learn that it is addressed to a deceased Duckburg resident who named Gladstone her only heir. (Jan. 31, 1952)",
+          "bbox": [
+            {
+              "h": 40.99174733231707,
+              "w": 124.96909870426826,
+              "x": 150.02814786585364,
+              "y": 55.573199314024386,
+              "confidence": 0.98,
+              "end_index": 369,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - Donald puts on sturdy clothing to bring Daisy's cat down from a telephone pole. *(Jan. 31, 1952)*",
+          "value": "DONALD DUCK - 1 (inside back cover) - Donald puts on sturdy clothing to bring Daisy's cat down from a telephone pole. (Jan. 31, 1952)",
+          "bbox": [
+            {
+              "h": 17.143296493902447,
+              "w": 124.84058117378046,
+              "x": 150.05529535060973,
+              "y": 97.40271722560975,
+              "confidence": 0.95,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck* No. 135, January 1971.",
+          "value": "Reprinted: Donald Duck No. 135, January 1971.",
+          "bbox": [
+            {
+              "h": 5.310720274390246,
+              "w": 95.2822351371951,
+              "x": 154.35908917682923,
+              "y": 115.4992911585366,
+              "confidence": 0.9,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (back cover) - Donald literally paints himself into a corner. *(Jan. 31, 1952)*",
+          "value": "DONALD DUCK - 1 (back cover) - Donald literally paints himself into a corner. (Jan. 31, 1952)",
+          "bbox": [
+            {
+              "h": 11.5262881097561,
+              "w": 125.38363376524391,
+              "x": 149.69450647865852,
+              "y": 121.88901676829268,
+              "confidence": 0.92,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck* No. 135, January 1971.",
+          "value": "Reprinted: Donald Duck No. 135, January 1971.",
+          "bbox": [
+            {
+              "h": 5.27295731707316,
+              "w": 95.38619474085365,
+              "x": 153.95093368902437,
+              "y": 134.11756097560976,
+              "confidence": 0.9,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**26 - Nov.-Dec. 1952 - 36 pages**",
+          "value": "26 - Nov.-Dec. 1952 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.771181402439042,
+              "w": 74.92126143292684,
+              "x": 150.16779535060974,
+              "y": 146.29657774390242,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald is confronted by the nephews, in Halloween costumes, and a real witch, on a broomstick. *(Apr. 10, 1952)*",
+          "value": "Front cover (art only): Donald is confronted by the nephews, in Halloween costumes, and a real witch, on a broomstick. (Apr. 10, 1952)",
+          "bbox": [
+            {
+              "h": 17.194275914634144,
+              "w": 124.80509908536588,
+              "x": 150.4466101371951,
+              "y": 152.2785137195122,
+              "confidence": 0.97,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - The ducks put a wagon on a roof as a Halloween trick. *(Apr. 10, 1952)*",
+          "value": "DONALD DUCK - 1 (inside front cover) - The ducks put a wagon on a roof as a Halloween trick. (Apr. 10, 1952)",
+          "bbox": [
+            {
+              "h": 11.72509527439026,
+              "w": 124.81850990853657,
+              "x": 150.391337652439,
+              "y": 169.9344969512195,
+              "confidence": 0.95,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in Trick or Treat - 23 - Donald refuses to provide treats on Halloween, and a real witch helps the nephews to counterattack until Donald finally gives in. *(Mar. 31, 1952)*",
+          "value": "DONALD DUCK in Trick or Treat - 23 - Donald refuses to provide treats on Halloween, and a real witch helps the nephews to counterattack until Donald finally gives in. (Mar. 31, 1952)",
+          "bbox": [
+            {
+              "h": 22.85613567073171,
+              "w": 125.76716272865852,
+              "x": 150.28279916158536,
+              "y": 182.04244664634146,
+              "confidence": 0.97,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This story was based on a Donald Duck cartoon, *Trick or Treat* (1952), which was directed by Jack Hannah, once Barks's partner in the Disney story department. The story was changed extensively before publication, as detailed below. Barks has explained the reasons for the changes: \"Alice Cobb, the Western editor at the time, gave me photostats of the story board sketches and asked me to adapt them to a comic book version. I believe it was sort of open end as to length. Anyway, in the part where Hazel is trying to bust into Don's closet, I departed from the movie script and added some business with an ogre that Hazel summons. \\[Barks's departures from the film's story were actually more extensive than that, as Kim Weston explains below.] Alice Cobb deleted the extra business and didn't pay me for the unwanted pages. She was that mad.\" *Jan. 25, 1971, letter to Michael Barrier*",
+          "value": "This story was based on a Donald Duck cartoon, Trick or Treat (1952), which was directed by Jack Hannah, once Barks's partner in the Disney story department. The story was changed extensively before publication, as detailed below. Barks has explained the reasons for the changes: \"Alice Cobb, the Western editor at the time, gave me photostats of the story board sketches and asked me to adapt them to a comic book version. I believe it was sort of open end as to length. Anyway, in the part where Hazel is trying to bust into Don's closet, I departed from the movie script and added some business with an ogre that Hazel summons. [Barks's departures from the film's story were actually more extensive than that, as Kim Weston explains below.] Alice Cobb deleted the extra business and didn't pay me for the unwanted pages. She was that mad.\" Jan. 25, 1971, letter to Michael Barrier",
+          "bbox": [
+            {
+              "h": 86.48069359756099,
+              "w": 125.25485899390243,
+              "x": 149.5985556402439,
+              "y": 207.3430106707317,
+              "confidence": 0.99,
+              "end_index": 887,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: \"*Trick or Treat*\" has the somewhat dubious distinction of the story with the greatest number of pages cut — ten and a half. More pages of art may have been drawn for it than any other Barks story (at least thirty-three and a half). It was originally a thirty-two page story that Barks had been asked to adapt from a Donald Duck cartoon of the same title.",
+          "value": "Weston: \"Trick or Treat\" has the somewhat dubious distinction of the story with the greatest number of pages cut — ten and a half. More pages of art may have been drawn for it than any other Barks story (at least thirty-three and a half). It was originally a thirty-two page story that Barks had been asked to adapt from a Donald Duck cartoon of the same title.",
+          "bbox": [
+            {
+              "h": 33.80963414634145,
+              "w": 125.5664805640244,
+              "x": 150.06249809451216,
+              "y": 295.59059451219514,
+              "confidence": 0.99,
+              "end_index": 362,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "After the title and credits, the cartoon starts with Hazel flying over town and around the church steeple, and that is how the comic story originally opened. The original splash panel is a",
+          "value": "After the title and credits, the cartoon starts with Hazel flying over town and around the church steeple, and that is how the comic story originally opened. The original splash panel is a",
+          "bbox": [
+            {
+              "h": 17.370754573170725,
+              "w": 124.82631288109754,
+              "x": 149.72733041158537,
+              "y": 332.73960365853657,
+              "confidence": 0.99,
+              "end_index": 187,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "112 Carl Barks and the Art of the Comic Book",
+              "value": "112 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.74788871951223,
+                  "w": 77.69641863567072,
+                  "x": 36.31067835365854,
+                  "y": 362.5176448170731,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "112 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.75,
+              "w": 77.7,
+              "x": 36.31,
+              "y": 362.52,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "112"
+    }
+  ]
+}

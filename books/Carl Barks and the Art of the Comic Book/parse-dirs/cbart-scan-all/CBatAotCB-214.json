@@ -1,0 +1,1586 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 1965",
+          "value": "1965",
+          "bbox": [
+            {
+              "h": 4.7714319740853695,
+              "w": 11.499458245998474,
+              "x": 12.255688476562499,
+              "y": 28.47330983231707,
+              "confidence": 0.94,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 16 - FC, US No. 59.",
+          "value": "Jan. 16 - FC, US No. 59.",
+          "bbox": [
+            {
+              "h": 5.215166730182927,
+              "w": 50.47750131002286,
+              "x": 12.114596155678353,
+              "y": 40.032624809451214,
+              "confidence": 0.94,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. 25 - \"North of the Yukon,\" US No. 59.",
+          "value": "Jan. 25 - \"North of the Yukon,\" US No. 59.",
+          "bbox": [
+            {
+              "h": 5.571145198170732,
+              "w": 91.7426706602515,
+              "x": 12.105787800114328,
+              "y": 45.92165967987805,
+              "confidence": 0.94,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 1 - Large figures gag, US No. 61.",
+          "value": "Feb. 1 - Large figures gag, US No. 61.",
+          "bbox": [
+            {
+              "h": 5.812568597560971,
+              "w": 79.52484696551066,
+              "x": 12.217616830221036,
+              "y": 51.7694131097561,
+              "confidence": 0.93,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 8 - Parrot gag, US No. 61.",
+          "value": "Feb. 8 - Parrot gag, US No. 61.",
+          "bbox": [
+            {
+              "h": 5.533662347560971,
+              "w": 64.3780156726372,
+              "x": 12.236859517911585,
+              "y": 57.60877477134146,
+              "confidence": 0.94,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 18 - FC, DD No. 103.",
+          "value": "Feb. 18 - FC, DD No. 103.",
+          "bbox": [
+            {
+              "h": 5.133910060975609,
+              "w": 55.40035489710366,
+              "x": 12.24053591844512,
+              "y": 63.48717987804878,
+              "confidence": 0.93,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 4 - \"Phantom of Notre Duck,\" US No. 60.",
+          "value": "Mar. 4 - \"Phantom of Notre Duck,\" US No. 60.",
+          "bbox": [
+            {
+              "h": 5.567538109756088,
+              "w": 100.84194633669968,
+              "x": 12.169534227324693,
+              "y": 69.44366615853659,
+              "confidence": 0.94,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 10 - Redrawing three pages of \"Mummy's Ring,\" DD 4C No. 29.",
+          "value": "Mar. 10 - Redrawing three pages of \"Mummy's Ring,\" DD 4C No. 29.",
+          "bbox": [
+            {
+              "h": 11.125095274390246,
+              "w": 125.69844190644052,
+              "x": 11.99123416063262,
+              "y": 75.40321646341464,
+              "confidence": 0.95,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 15 - FC, US No. 60; FC, WDC No. 301.",
+          "value": "Mar. 15 - FC, US No. 60; FC, WDC No. 301.",
+          "bbox": [
+            {
+              "h": 5.259695121951217,
+              "w": 94.50090570217225,
+              "x": 12.16701541063262,
+              "y": 87.27687118902439,
+              "confidence": 0.94,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 1 - \"So Far and No Safari,\" US No. 61.",
+          "value": "Apr. 1 - \"So Far and No Safari,\" US No. 61.",
+          "bbox": [
+            {
+              "h": 5.546301448170725,
+              "w": 90.79320110041921,
+              "x": 12.25258014958079,
+              "y": 93.12053163109756,
+              "confidence": 0.94,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 12 - \"Queen of the Wild Dog Pack,\" US No. 62.",
+          "value": "May 12 - \"Queen of the Wild Dog Pack,\" US No. 62.",
+          "bbox": [
+            {
+              "h": 5.768586128048782,
+              "w": 113.40025402534299,
+              "x": 12.18947253715701,
+              "y": 99.02745045731707,
+              "confidence": 0.94,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 15 - FC, US No. 61.",
+          "value": "May 15 - FC, US No. 61.",
+          "bbox": [
+            {
+              "h": 5.300990853658536,
+              "w": 52.64463224085365,
+              "x": 12.274303067835366,
+              "y": 104.85950076219513,
+              "confidence": 0.94,
+              "end_index": 22,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 25 - FC, WDC No. 303.",
+          "value": "May 25 - FC, WDC No. 303.",
+          "bbox": [
+            {
+              "h": 5.6535708841463475,
+              "w": 61.634913895769806,
+              "x": 12.260059427400913,
+              "y": 110.54557545731707,
+              "confidence": 0.94,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 23 - FC, DD No. 105.",
+          "value": "June 23 - FC, DD No. 105.",
+          "bbox": [
+            {
+              "h": 5.169203506097565,
+              "w": 56.69556259527438,
+              "x": 12.237003144054876,
+              "y": 116.61700838414635,
+              "confidence": 0.94,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 24 - FC, WDC No. 304.",
+          "value": "June 24 - FC, WDC No. 304.",
+          "bbox": [
+            {
+              "h": 5.04913490853658,
+              "w": 61.9973544683689,
+              "x": 12.20102586699695,
+              "y": 122.50173018292683,
+              "confidence": 0.94,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 22 - FC, DD No. 106; FC, US No. 62.",
+          "value": "July 22 - FC, DD No. 106; FC, US No. 62.",
+          "bbox": [
+            {
+              "h": 5.4646989329268125,
+              "w": 88.55566013243138,
+              "x": 12.12557176543445,
+              "y": 128.51134527439027,
+              "confidence": 0.95,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 3 - \"House of Haunts,\" US No. 63.",
+          "value": "Aug. 3 - \"House of Haunts,\" US No. 63.",
+          "bbox": [
+            {
+              "h": 5.654999999999999,
+              "w": 85.47715701219511,
+              "x": 12.163548018292683,
+              "y": 134.3508955792683,
+              "confidence": 0.95,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 26 - FC, WDC No. 306.",
+          "value": "Aug. 26 - FC, WDC No. 306.",
+          "bbox": [
+            {
+              "h": 5.782797256097565,
+              "w": 61.86652177019817,
+              "x": 12.332853229801827,
+              "y": 140.11066692073172,
+              "confidence": 0.94,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 12 - FC, US No. 63.",
+          "value": "Sept. 12 - FC, US No. 63.",
+          "bbox": [
+            {
+              "h": 5.5959146341463475,
+              "w": 52.77341129954268,
+              "x": 12.313009241615854,
+              "y": 146.10102896341462,
+              "confidence": 0.94,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 1 - FC, WDC No. 307.",
+          "value": "Oct. 1 - FC, WDC No. 307.",
+          "bbox": [
+            {
+              "h": 5.3879039634146375,
+              "w": 58.229463009717975,
+              "x": 12.355926662538108,
+              "y": 151.9859336890244,
+              "confidence": 0.94,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 13 - \"Treasure of Marco Polo,\" US No. 64.",
+          "value": "Oct. 13 - \"Treasure of Marco Polo,\" US No. 64.",
+          "bbox": [
+            {
+              "h": 5.700777439024405,
+              "w": 101.57258431783535,
+              "x": 12.278221703506096,
+              "y": 157.9164557926829,
+              "confidence": 0.94,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 16 - WDC No. 308.",
+          "value": "Nov. 16 - WDC No. 308.",
+          "bbox": [
+            {
+              "h": 5.003883384146348,
+              "w": 53.74892006478658,
+              "x": 12.359153963414634,
+              "y": 163.90072408536585,
+              "confidence": 0.93,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 7 - \"Micro-ducks from Outer-Space,\" US No. 65.",
+          "value": "Dec. 7 - \"Micro-ducks from Outer-Space,\" US No. 65.",
+          "bbox": [
+            {
+              "h": 5.831890243902435,
+              "w": 115.90436940262956,
+              "x": 12.36933962938262,
+              "y": 169.71046875,
+              "confidence": 0.94,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 23 - FC, US No. 64.",
+          "value": "Dec. 23 - FC, US No. 64.",
+          "bbox": [
+            {
+              "h": 5.614744664634145,
+              "w": 52.70154249237804,
+              "x": 12.352525724085366,
+              "y": 175.82662728658536,
+              "confidence": 0.93,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1966",
+          "value": "1966",
+          "bbox": [
+            {
+              "h": 4.81487423780487,
+              "w": 11.641955745045731,
+              "x": 12.544577458079267,
+              "y": 187.61196265243905,
+              "confidence": 0.95,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 2 - FC, WDC No. 309.",
+          "value": "Jan. 2 - FC, WDC No. 309.",
+          "bbox": [
+            {
+              "h": 5.419413109756115,
+              "w": 56.78465367759146,
+              "x": 12.342034584603658,
+              "y": 199.16229420731707,
+              "confidence": 0.94,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. 5 - WDC No. 312.",
+          "value": "Jan. 5 - WDC No. 312.",
+          "bbox": [
+            {
+              "h": 5.346265243902435,
+              "w": 48.3241434832317,
+              "x": 12.383823361280488,
+              "y": 205.0544131097561,
+              "confidence": 0.94,
+              "end_index": 20,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. 27 - FC, US No. 65.",
+          "value": "Jan. 27 - FC, US No. 65.",
+          "bbox": [
+            {
+              "h": 5.289923780487797,
+              "w": 50.30077898723323,
+              "x": 12.455352396150912,
+              "y": 211.03756097560975,
+              "confidence": 0.94,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. 28 - FC, WDC No. 310.",
+          "value": "Jan. 28 - FC, WDC No. 310.",
+          "bbox": [
+            {
+              "h": 5.047431402439015,
+              "w": 59.59410858898628,
+              "x": 12.47903356040396,
+              "y": 217.00580030487805,
+              "confidence": 0.94,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 15 - \"The Heedless Horseman,\" US No. 66.",
+          "value": "Feb. 15 - \"The Heedless Horseman,\" US No. 66.",
+          "bbox": [
+            {
+              "h": 5.45684451219513,
+              "w": 103.57884432164634,
+              "x": 12.379913300304876,
+              "y": 222.95131097560977,
+              "confidence": 0.95,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 19 - \"The Doom Diamond,\" US No. 70.",
+          "value": "Mar. 19 - \"The Doom Diamond,\" US No. 70.",
+          "bbox": [
+            {
+              "h": 5.6990625,
+              "w": 96.63941001333842,
+              "x": 12.42119402629573,
+              "y": 228.82017530487806,
+              "confidence": 0.95,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 21 - FC, US No. 66.",
+          "value": "Mar. 21 - FC, US No. 66.",
+          "bbox": [
+            {
+              "h": 5.281303353658522,
+              "w": 52.68983803353658,
+              "x": 12.330703125,
+              "y": 234.71492378048782,
+              "confidence": 0.94,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 6 - FC, WDC No. 313.",
+          "value": "Apr. 6 - FC, WDC No. 313.",
+          "bbox": [
+            {
+              "h": 5.350106707317045,
+              "w": 58.0611181640625,
+              "x": 12.424071908346036,
+              "y": 240.57985518292682,
+              "confidence": 0.94,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 13 - \"Hall of the Mermaid Queen,\" US No. 68.",
+          "value": "Apr. 13 - \"Hall of the Mermaid Queen,\" US No. 68.",
+          "bbox": [
+            {
+              "h": 5.71017530487803,
+              "w": 111.3134540539253,
+              "x": 12.402144269245426,
+              "y": 246.55904725609756,
+              "confidence": 0.94,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 28 - FC, WDC No. 314.",
+          "value": "Apr. 28 - FC, WDC No. 314.",
+          "bbox": [
+            {
+              "h": 5.4496875,
+              "w": 61.330093130716456,
+              "x": 12.438729277820121,
+              "y": 252.37486280487806,
+              "confidence": 0.94,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 21 - FC, US No. 70.",
+          "value": "May 21 - FC, US No. 70.",
+          "bbox": [
+            {
+              "h": 5.08932164634145,
+              "w": 52.35302936833079,
+              "x": 12.507760932736279,
+              "y": 258.3183612804878,
+              "confidence": 0.94,
+              "end_index": 22,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 27 - \"The Cattle King,\" US No. 69.",
+          "value": "May 27 - \"The Cattle King,\" US No. 69.",
+          "bbox": [
+            {
+              "h": 5.77628048780487,
+              "w": 85.55716749237803,
+              "x": 12.519689405487805,
+              "y": 264.1861737804878,
+              "confidence": 0.95,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 2 - FC, WDC No. 315.",
+          "value": "June 2 - FC, WDC No. 315.",
+          "bbox": [
+            {
+              "h": 5.0784375,
+              "w": 58.751339319740836,
+              "x": 12.52208817644817,
+              "y": 270.1052743902439,
+              "confidence": 0.94,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 9 - FC, DD No. 111.",
+          "value": "June 9 - FC, DD No. 111.",
+          "bbox": [
+            {
+              "h": 5.04642530487803,
+              "w": 53.91213402724847,
+              "x": 12.6002197265625,
+              "y": 276.0380487804878,
+              "confidence": 0.94,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 15 - FC, WDC No. 316.",
+          "value": "June 15 - FC, WDC No. 316.",
+          "bbox": [
+            {
+              "h": 5.38170731707316,
+              "w": 61.452421875,
+              "x": 12.552950647865853,
+              "y": 281.74991615853656,
+              "confidence": 0.94,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 22 - \"King Scrooge the First,\" US No. 71.",
+          "value": "June 22 - \"King Scrooge the First,\" US No. 71.",
+          "bbox": [
+            {
+              "h": 5.5013871951219695,
+              "w": 98.70827922541919,
+              "x": 12.494506597751522,
+              "y": 287.83001524390244,
+              "confidence": 0.94,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 20 - FC, US No. 68.",
+          "value": "July 20 - FC, US No. 68.",
+          "bbox": [
+            {
+              "h": 5.432766768292694,
+              "w": 51.31783215034299,
+              "x": 12.494701672065547,
+              "y": 293.5919588414634,
+              "confidence": 0.94,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 30 - FC, US No. 69; FC, WDC No. 319.",
+          "value": "Sept. 30 - FC, US No. 69; FC, WDC No. 319.",
+          "bbox": [
+            {
+              "h": 5.682347560975649,
+              "w": 94.75087950171493,
+              "x": 12.506174614138718,
+              "y": 299.6907850609756,
+              "confidence": 0.94,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 27 - FC, WDC No. 321.",
+          "value": "Oct. 27 - FC, WDC No. 321.",
+          "bbox": [
+            {
+              "h": 5.22116615853658,
+              "w": 61.05307259908536,
+              "x": 12.655812690548778,
+              "y": 305.3775228658537,
+              "confidence": 0.93,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 15 - FC, WDC No. 322.",
+          "value": "Dec. 15 - FC, WDC No. 322.",
+          "bbox": [
+            {
+              "h": 5.634649390243885,
+              "w": 61.36812511909298,
+              "x": 12.722994354992377,
+              "y": 311.2724085365854,
+              "confidence": 0.93,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1967",
+          "value": "1967",
+          "bbox": [
+            {
+              "h": 4.766181402439015,
+              "w": 11.395389314977134,
+              "x": 12.82346405773628,
+              "y": 323.33252286585366,
+              "confidence": 0.95,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 18 - FC, US No. 71.",
+          "value": "Jan. 18 - FC, US No. 71.",
+          "bbox": [
+            {
+              "h": 5.36293445121948,
+              "w": 50.64113543254573,
+              "x": 12.579118473704268,
+              "y": 335.01189786585365,
+              "confidence": 0.93,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 15 - FC, WDC No. 324.",
+          "value": "Feb. 15 - FC, WDC No. 324.",
+          "bbox": [
+            {
+              "h": 5.492149390243885,
+              "w": 60.069077029344506,
+              "x": 12.631818549923779,
+              "y": 340.9374695121951,
+              "confidence": 0.93,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 21 - \"Pawns of the Loup Garou,\" DD No. 117.",
+          "value": "Mar. 21 - \"Pawns of the Loup Garou,\" DD No. 117.",
+          "bbox": [
+            {
+              "h": 5.824624618902441,
+              "w": 110.33312309451217,
+              "x": 150.7409108231707,
+              "y": 28.513522294207316,
+              "confidence": 0.94,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 25 - FC, WDC No. 326.",
+          "value": "Mar. 25 - FC, WDC No. 326.",
+          "bbox": [
+            {
+              "h": 4.99945026676829,
+              "w": 61.696097560975595,
+              "x": 150.78889481707316,
+              "y": 34.45110423018293,
+              "confidence": 0.94,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 21 - FC, WDC No. 328.",
+          "value": "June 21 - FC, WDC No. 328.",
+          "bbox": [
+            {
+              "h": 5.08826124237805,
+              "w": 61.73485518292681,
+              "x": 150.44600990853658,
+              "y": 40.37667587652439,
+              "confidence": 0.94,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 11 - FC, WDC No. 329.",
+          "value": "Aug. 11 - FC, WDC No. 329.",
+          "bbox": [
+            {
+              "h": 5.460294397865855,
+              "w": 61.88861661585365,
+              "x": 150.42865472560973,
+              "y": 46.40357755335366,
+              "confidence": 0.94,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 15 - FC, WDC No. 331.",
+          "value": "Sept. 15 - FC, WDC No. 331.",
+          "bbox": [
+            {
+              "h": 5.444971417682927,
+              "w": 62.02795541158536,
+              "x": 150.34788109756096,
+              "y": 52.35066882621951,
+              "confidence": 0.94,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 9 - FC, WDC No. 332.",
+          "value": "Oct. 9 - FC, WDC No. 332.",
+          "bbox": [
+            {
+              "h": 5.3728868140243975,
+              "w": 58.15582888719513,
+              "x": 150.51179496951218,
+              "y": 58.27575457317073,
+              "confidence": 0.94,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1968",
+          "value": "1968",
+          "bbox": [
+            {
+              "h": 4.686299542682927,
+              "w": 11.555722179878057,
+              "x": 150.72775724085363,
+              "y": 70.0266425304878,
+              "confidence": 0.95,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 23 - FC, WDC No. 334.",
+          "value": "Jan. 23 - FC, WDC No. 334.",
+          "bbox": [
+            {
+              "h": 5.164007240853666,
+              "w": 59.96361471036585,
+              "x": 150.30577934451216,
+              "y": 81.62147675304878,
+              "confidence": 0.94,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 7 - FC, WDC No. 341.",
+          "value": "June 7 - FC, WDC No. 341.",
+          "bbox": [
+            {
+              "h": 4.991512957317072,
+              "w": 59.060990853658545,
+              "x": 150.5087252286585,
+              "y": 87.61966463414635,
+              "confidence": 0.94,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 18 - Walt Disney Comics Digest No. 5.",
+          "value": "June 18 - Walt Disney Comics Digest No. 5.",
+          "bbox": [
+            {
+              "h": 5.673041158536593,
+              "w": 96.90069169207315,
+              "x": 150.43534298780486,
+              "y": 93.65197408536585,
+              "confidence": 0.94,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 28 - FC, WDC No. 342.",
+          "value": "Aug. 28 - FC, WDC No. 342.",
+          "bbox": [
+            {
+              "h": 5.31679115853658,
+              "w": 62.03874237804878,
+              "x": 150.40452553353657,
+              "y": 99.48137195121951,
+              "confidence": 0.95,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 6 - \"Officer for a Day,\" DD No. 126.",
+          "value": "Nov. 6 - \"Officer for a Day,\" DD No. 126.",
+          "bbox": [
+            {
+              "h": 5.51472942073171,
+              "w": 89.25093178353657,
+              "x": 150.39634527439023,
+              "y": 105.4924961890244,
+              "confidence": 0.94,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 18 - FC, DD No. 126.",
+          "value": "Dec. 18 - FC, DD No. 126.",
+          "bbox": [
+            {
+              "h": 5.403452743902449,
+              "w": 56.66432926829267,
+              "x": 150.55845846036584,
+              "y": 111.3217225609756,
+              "confidence": 0.93,
+              "end_index": 24,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1969",
+          "value": "1969",
+          "bbox": [
+            {
+              "h": 4.674157774390232,
+              "w": 11.610960365853652,
+              "x": 150.62384908536586,
+              "y": 123.11488948170732,
+              "confidence": 0.95,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Apr. 12 - FC, WDC No. 350.",
+          "value": "Apr. 12 - FC, WDC No. 350.",
+          "bbox": [
+            {
+              "h": 5.455689786585389,
+              "w": 60.7775762195122,
+              "x": 150.5760708841463,
+              "y": 134.75987423780487,
+              "confidence": 0.94,
+              "end_index": 25,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 6 - FC, WDC No. 351.",
+          "value": "May 6 - FC, WDC No. 351.",
+          "bbox": [
+            {
+              "h": 5.118921493902435,
+              "w": 59.240682164634144,
+              "x": 150.47830221036585,
+              "y": 140.79922637195122,
+              "confidence": 0.94,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 3 - \"Peril of the Black Forest,\" JW No. 6.",
+          "value": "Oct. 3 - \"Peril of the Black Forest,\" JW No. 6.",
+          "bbox": [
+            {
+              "h": 5.65899009146342,
+              "w": 96.87896341463414,
+              "x": 150.52638910060975,
+              "y": 146.72850228658535,
+              "confidence": 0.94,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 10 - \"Life Savers,\" JW No. 6.",
+          "value": "Oct. 10 - \"Life Savers,\" JW No. 6.",
+          "bbox": [
+            {
+              "h": 5.675099085365828,
+              "w": 70.4389081554878,
+              "x": 150.51604801829265,
+              "y": 152.69076219512198,
+              "confidence": 0.94,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1970",
+          "value": "1970",
+          "bbox": [
+            {
+              "h": 4.75195884146342,
+              "w": 11.512214176829275,
+              "x": 150.79448551829267,
+              "y": 164.46501905487804,
+              "confidence": 0.95,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 1 - \"Whale of a Good Deed,\" JW No. 7; \"Bad Day for Troop 'A',\" JW No. 8.",
+          "value": "Jan. 1 - \"Whale of a Good Deed,\" JW No. 7; \"Bad Day for Troop 'A',\" JW No. 8.",
+          "bbox": [
+            {
+              "h": 11.463887195121941,
+              "w": 125.9498723323171,
+              "x": 150.19257621951218,
+              "y": 176.25657393292684,
+              "confidence": 0.95,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 16 - \"A Day in a Duck's Life,\" DD No. 138.",
+          "value": "Feb. 16 - \"A Day in a Duck's Life,\" DD No. 138.",
+          "bbox": [
+            {
+              "h": 5.585819359756087,
+              "w": 102.76456554878047,
+              "x": 150.5662957317073,
+              "y": 187.94063643292682,
+              "confidence": 0.94,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 16 - \"Let Sleeping Bones Lie,\" JW No. 8.",
+          "value": "Mar. 16 - \"Let Sleeping Bones Lie,\" JW No. 8.",
+          "bbox": [
+            {
+              "h": 5.910594512195102,
+              "w": 97.2253296493902,
+              "x": 150.55564596036584,
+              "y": 193.8897256097561,
+              "confidence": 0.95,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 25 - \"Looter of the Lake,\" JW No. 9.",
+          "value": "June 25 - \"Looter of the Lake,\" JW No. 9.",
+          "bbox": [
+            {
+              "h": 5.471524390243885,
+              "w": 87.73495998475609,
+              "x": 150.44678163109756,
+              "y": 199.78525152439025,
+              "confidence": 0.94,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 21 - \"Bottled Battlers,\" JW No. 10.",
+          "value": "Aug. 21 - \"Bottled Battlers,\" JW No. 10.",
+          "bbox": [
+            {
+              "h": 5.738620426829248,
+              "w": 85.25541539634145,
+              "x": 150.48955221036584,
+              "y": 205.68743140243905,
+              "confidence": 0.95,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 11 - \"Maple Sugar Time,\" JW No. 10.",
+          "value": "Sept. 11 - \"Maple Sugar Time,\" JW No. 10.",
+          "bbox": [
+            {
+              "h": 5.942743902439042,
+              "w": 91.35679115853658,
+              "x": 150.38850800304877,
+              "y": 211.4310594512195,
+              "confidence": 0.94,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 26 - \"Traitor in the Ranks,\" JW No. 11.",
+          "value": "Oct. 26 - \"Traitor in the Ranks,\" JW No. 11.",
+          "bbox": [
+            {
+              "h": 5.426410060975595,
+              "w": 95.32181592987803,
+              "x": 150.55705221036584,
+              "y": 217.56006859756098,
+              "confidence": 0.93,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 3 - \"Eagle Savers,\" JW No. 11.",
+          "value": "Dec. 3 - \"Eagle Savers,\" JW No. 11.",
+          "bbox": [
+            {
+              "h": 5.726295731707305,
+              "w": 74.58948932926829,
+              "x": 150.5468826219512,
+              "y": 223.3812804878049,
+              "confidence": 0.94,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1971",
+          "value": "1971",
+          "bbox": [
+            {
+              "h": 4.74,
+              "w": 11.378208841463419,
+              "x": 150.77287728658536,
+              "y": 235.22439786585366,
+              "confidence": 0.95,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Feb. 4 - \"Storm Dancers,\" JW No. 12.",
+          "value": "Feb. 4 - \"Storm Dancers,\" JW No. 12.",
+          "bbox": [
+            {
+              "h": 5.279199695121915,
+              "w": 79.19003620426825,
+              "x": 150.39896913109757,
+              "y": 246.9139710365854,
+              "confidence": 0.94,
+              "end_index": 35,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 3 - \"Hound of the Moaning Hills,\" JW No. 12.",
+          "value": "Mar. 3 - \"Hound of the Moaning Hills,\" JW No. 12.",
+          "bbox": [
+            {
+              "h": 5.705579268292695,
+              "w": 110.76629954268293,
+              "x": 150.5083650914634,
+              "y": 253.10718749999998,
+              "confidence": 0.94,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 4 - \"The Day the Mountain Shook,\" JW No. 13.",
+          "value": "May 4 - \"The Day the Mountain Shook,\" JW No. 13.",
+          "bbox": [
+            {
+              "h": 5.8262652439024345,
+              "w": 114.32771341463418,
+              "x": 150.59901676829267,
+              "y": 259.0461356707317,
+              "confidence": 0.95,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 25 - \"Gold of the '49ers,\" JW No. 13.",
+          "value": "May 25 - \"Gold of the '49ers,\" JW No. 13.",
+          "bbox": [
+            {
+              "h": 5.66579268292684,
+              "w": 88.77546493902437,
+              "x": 150.66377286585364,
+              "y": 264.6557469512195,
+              "confidence": 0.94,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 30 - \"Duckmade Disaster,\" JW No. 14.",
+          "value": "July 30 - \"Duckmade Disaster,\" JW No. 14.",
+          "bbox": [
+            {
+              "h": 5.5230411585365795,
+              "w": 93.91292492378047,
+              "x": 150.5061356707317,
+              "y": 270.66962652439025,
+              "confidence": 0.94,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 30 - \"Wailing Whalers,\" JW No. 15.",
+          "value": "Sept. 30 - \"Wailing Whalers,\" JW No. 15.",
+          "bbox": [
+            {
+              "h": 5.708506097560985,
+              "w": 89.0972217987805,
+              "x": 150.461650152439,
+              "y": 276.63953506097556,
+              "confidence": 0.94,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1972",
+          "value": "1972",
+          "bbox": [
+            {
+              "h": 4.72451981707316,
+              "w": 11.462103658536579,
+              "x": 150.91766958841464,
+              "y": 288.3926753048781,
+              "confidence": 0.95,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 3 - \"Where There's Smoke,\" JW No. 16.",
+          "value": "Jan. 3 - \"Where There's Smoke,\" JW No. 16.",
+          "bbox": [
+            {
+              "h": 5.7079344512195345,
+              "w": 94.33162728658536,
+              "x": 150.60923780487803,
+              "y": 300.13705792682924,
+              "confidence": 0.92,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. 27 - \"Be Leery of Lake Eerie,\" JW No. 17.",
+          "value": "Jan. 27 - \"Be Leery of Lake Eerie,\" JW No. 17.",
+          "bbox": [
+            {
+              "h": 5.651592987804924,
+              "w": 96.64381097560974,
+              "x": 150.67479992378045,
+              "y": 306.107743902439,
+              "confidence": 0.92,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 29 - Unpublished FC for Christmas one-shot (oil painting).",
+          "value": "Mar. 29 - Unpublished FC for Christmas one-shot (oil painting).",
+          "bbox": [
+            {
+              "h": 11.75014481707316,
+              "w": 125.3226676829268,
+              "x": 150.56514672256094,
+              "y": 311.9742530487805,
+              "confidence": 0.94,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 31 - \"Teahouse of the Waggin' Dragon,\" JW No. 19.",
+          "value": "Mar. 31 - \"Teahouse of the Waggin' Dragon,\" JW No. 19.",
+          "bbox": [
+            {
+              "h": 5.940274390243885,
+              "w": 123.56245426829267,
+              "x": 150.58138719512195,
+              "y": 323.9319283536585,
+              "confidence": 0.93,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 5 - \"New Zoo Brews Ado,\" JW No. 20.",
+          "value": "June 5 - \"New Zoo Brews Ado,\" JW No. 20.",
+          "bbox": [
+            {
+              "h": 5.659870426829221,
+              "w": 92.91875762195122,
+              "x": 150.628359375,
+              "y": 329.5968521341464,
+              "confidence": 0.93,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 18 - \"Music Hath Charms,\" JW No. 21.",
+          "value": "Sept. 18 - \"Music Hath Charms,\" JW No. 21.",
+          "bbox": [
+            {
+              "h": 5.869824695121969,
+              "w": 96.3292225609756,
+              "x": 150.5859832317073,
+              "y": 335.5168902439024,
+              "confidence": 0.94,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 9 - \"The Phantom Joker,\" JW No. 22.",
+          "value": "Dec. 9 - \"The Phantom Joker,\" JW No. 22.",
+          "bbox": [
+            {
+              "h": 5.645190548780465,
+              "w": 90.78261242378049,
+              "x": 150.6695865091463,
+              "y": 341.4840548780488,
+              "confidence": 0.94,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "214 Carl Barks and the Art of the Comic Book",
+              "value": "214 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.077454268292695,
+                  "w": 78.0148699504573,
+                  "x": 37.78325790777439,
+                  "y": 362.09963414634143,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "214 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.08,
+              "w": 78.01,
+              "x": 37.78,
+              "y": 362.1,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "214"
+    }
+  ]
+}

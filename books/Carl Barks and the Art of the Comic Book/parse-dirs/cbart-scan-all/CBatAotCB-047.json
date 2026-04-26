@@ -1,0 +1,184 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Scrooge, helped to shape Scrooge's personality. \"Here I sit in this big lonely dump waiting for Christmas to pass,\" Scrooge growled to himself as he sat huddled in a large chair in his mansion. \"Bah! That silly season when everybody loves everybody else! A curse on it! Me—I'm different. Everybody hates me, and I hate everybody!\" Scrooge in these first few pages was hunched and creaky, and leaned heavily on his cane. Even then, there were framed pictures of money in his mansion, but there was no hint of the vast wealth that was to be his a few stories later. Prophetically, though, Scrooge by the end of the story was far more vigorous than at the start, standing tall, his cane nowhere in sight. And that's the way it went for the next twenty years — Scrooge's vigor and his wealth both grew with age. As Barks said in 1971, \"Scrooge in 'Christmas on Bear Mountain' was just my first idea of a rich old uncle. I made him too old and decrepit. I discovered later on that I was going to have to make him more active; I couldn't have an old guy like that out doing all the things I had to have him do.\"",
+          "value": "Scrooge, helped to shape Scrooge's personality. \"Here I sit in this big lonely dump waiting for Christmas to pass,\" Scrooge growled to himself as he sat huddled in a large chair in his mansion. \"Bah! That silly season when everybody loves everybody else! A curse on it! Me—I'm different. Everybody hates me, and I hate everybody!\" Scrooge in these first few pages was hunched and creaky, and leaned heavily on his cane. Even then, there were framed pictures of money in his mansion, but there was no hint of the vast wealth that was to be his a few stories later. Prophetically, though, Scrooge by the end of the story was far more vigorous than at the start, standing tall, his cane nowhere in sight. And that's the way it went for the next twenty years — Scrooge's vigor and his wealth both grew with age. As Barks said in 1971, \"Scrooge in 'Christmas on Bear Mountain' was just my first idea of a rich old uncle. I made him too old and decrepit. I discovered later on that I was going to have to make him more active; I couldn't have an old guy like that out doing all the things I had to have him do.\"",
+          "bbox": [
+            {
+              "h": 184.51187738185976,
+              "w": 125.60061106612042,
+              "x": 12.402367211318596,
+              "y": 13.260515910823171,
+              "confidence": 0.99,
+              "end_index": 1104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge was still the decrepit old man when he made his next appearance, in \"The Old Castle's Secret,\" in a 1948 issue of *Donald Duck*. He made this startling statement after summoning Donald and the nephews to his mansion: \"The McDuck fortune is in bad shape! I must raise several million dollars immediately!\" That was the last time the McDuck fortune was ever in the sort of bad shape a few million dollars could remedy. Scrooge's fortune in later years would be endangered by the likes of the Beagle Boys, but not by ordinary financial reverses.\\*",
+          "value": "Scrooge was still the decrepit old man when he made his next appearance, in \"The Old Castle's Secret,\" in a 1948 issue of Donald Duck. He made this startling statement after summoning Donald and the nephews to his mansion: \"The McDuck fortune is in bad shape! I must raise several million dollars immediately!\" That was the last time the McDuck fortune was ever in the sort of bad shape a few million dollars could remedy. Scrooge's fortune in later years would be endangered by the likes of the Beagle Boys, but not by ordinary financial reverses.*",
+          "bbox": [
+            {
+              "h": 95.89422256097562,
+              "w": 125.50806974085364,
+              "x": 12.691937881097559,
+              "y": 198.68019054878047,
+              "confidence": 0.99,
+              "end_index": 551,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge's role in \"Secret\" (a story set on the mist-shrouded Scottish moors, and filled with",
+          "value": "Scrooge's role in \"Secret\" (a story set on the mist-shrouded Scottish moors, and filled with",
+          "bbox": [
+            {
+              "h": 14.37621951219513,
+              "w": 125.35022889672253,
+              "x": 12.935577124618902,
+              "y": 294.68743902439024,
+              "confidence": 0.97,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "skeletons in armor, dungeons, secret tunnels and a multitude of eerie effects) is relatively minor, but he plays a larger part than he did in \"Bear Mountain,\" and as in that story, he is much more vigorous at the close. Most important, his fortune has served as a convenient excuse for transporting the ducks to an exotic setting filled with story possibilities — and Barks was not slow to draw a lesson from this.",
+          "value": "skeletons in armor, dungeons, secret tunnels and a multitude of eerie effects) is relatively minor, but he plays a larger part than he did in \"Bear Mountain,\" and as in that story, he is much more vigorous at the close. Most important, his fortune has served as a convenient excuse for transporting the ducks to an exotic setting filled with story possibilities — and Barks was not slow to draw a lesson from this.",
+          "bbox": [
+            {
+              "h": 66.08493378429878,
+              "w": 125.72502667682924,
+              "x": 149.76312118902436,
+              "y": 13.626941215701219,
+              "confidence": 0.98,
+              "end_index": 413,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In Scrooge's next appearance, in the November 1948 *Walt Disney's Comics*, Donald described him for the first time as \"the richest old coot in the world.\" With that, the stage had been set for the Scrooge who emerged in the May 1949 *Walt Disney's Comics* — a crusty, belligerent old capitalist, who tricks his nephews into raising his sunken yacht for nothing, instead of calling on them for help.",
+          "value": "In Scrooge's next appearance, in the November 1948 Walt Disney's Comics, Donald described him for the first time as \"the richest old coot in the world.\" With that, the stage had been set for the Scrooge who emerged in the May 1949 Walt Disney's Comics — a crusty, belligerent old capitalist, who tricks his nephews into raising his sunken yacht for nothing, instead of calling on them for help.",
+          "bbox": [
+            {
+              "h": 66.09110899390245,
+              "w": 126.11342606707314,
+              "x": 149.1998151676829,
+              "y": 80.80495426829268,
+              "confidence": 0.95,
+              "end_index": 397,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The \"classic\" Scrooge didn't emerge fully for another six months, though, until \"Letter to Santa\" in *Christmas Parade No. 1*, the first of the \"giant\" twenty-five-cent Disney comic books. This Scrooge carries a cane, but not because he needs it — he's as spry as a five-year-old. Here, for the first time, his money is not just talked about, but seen. Great piles of it inundate his desk. Donald asks him to buy a steam shovel for the nephews for Christmas, and Scrooge replies indignantly: \"The nerve of you, nephew! If I could afford a steam shovel, I'd have one in here shoveling the money out of my way!\" Unaccountably, Scrooge does give Donald the money, but he is incensed when Donald tells him that the nephews will think the steam shovel came from Santa Claus. If Scrooge McDuck buys his grand-nephews a steam shovel, he growls, they're going to know who bought it and how much he paid for it: \"What's the use of having eleven octillion dollars if I don't make a big noise about it?\" He is a splendidly vain and selfish old rascal, and he remained such for the next few years, as Barks embellished his already sharply etched personality.",
+          "value": "The \"classic\" Scrooge didn't emerge fully for another six months, though, until \"Letter to Santa\" in Christmas Parade No. 1, the first of the \"giant\" twenty-five-cent Disney comic books. This Scrooge carries a cane, but not because he needs it — he's as spry as a five-year-old. Here, for the first time, his money is not just talked about, but seen. Great piles of it inundate his desk. Donald asks him to buy a steam shovel for the nephews for Christmas, and Scrooge replies indignantly: \"The nerve of you, nephew! If I could afford a steam shovel, I'd have one in here shoveling the money out of my way!\" Unaccountably, Scrooge does give Donald the money, but he is incensed when Donald tells him that the nephews will think the steam shovel came from Santa Claus. If Scrooge McDuck buys his grand-nephews a steam shovel, he growls, they're going to know who bought it and how much he paid for it: \"What's the use of having eleven octillion dollars if I don't make a big noise about it?\" He is a splendidly vain and selfish old rascal, and he remained such for the next few years, as Barks embellished his already sharply etched personality.",
+          "bbox": [
+            {
+              "h": 192.12213795731708,
+              "w": 125.87088224085365,
+              "x": 149.67763147865853,
+              "y": 147.11452362804877,
+              "confidence": 0.99,
+              "end_index": 1145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "(Also at about this time, Scrooge began wearing, for good, a silk top hat and an old",
+          "value": "(Also at about this time, Scrooge began wearing, for good, a silk top hat and an old",
+          "bbox": [
+            {
+              "h": 14.840716463414664,
+              "w": 125.94555068597559,
+              "x": 150.27813452743902,
+              "y": 339.3847865853658,
+              "confidence": 0.98,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\* There is one odd exception to this. In the May 1954 \\*Walt Disney's Comics\\* there is a character named Miss Penny Wise, an old maid who, Scrooge says, \"owns an old note of mine that could ruin me.\" After Donald has been the unwitting cause of the destruction of Miss Wise's house, Scrooge sobs that \"Miss Penny will foreclose on my entire fortune.\" She does not, of course.",
+          "value": "* There is one odd exception to this. In the May 1954 *Walt Disney's Comics* there is a character named Miss Penny Wise, an old maid who, Scrooge says, \"owns an old note of mine that could ruin me.\" After Donald has been the unwitting cause of the destruction of Miss Wise's house, Scrooge sobs that \"Miss Penny will foreclose on my entire fortune.\" She does not, of course.",
+          "bbox": [
+            {
+              "h": 32.72268292682927,
+              "w": 125.60811285251526,
+              "x": 12.41705673589939,
+              "y": 321.5213414634147,
+              "confidence": 0.96,
+              "end_index": 376,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n47",
+              "value": "Carl Barks and the Art of the Comic Book\n47",
+              "bbox": [
+                {
+                  "h": 4.628460365853679,
+                  "w": 80.09435785060974,
+                  "x": 171.7632850609756,
+                  "y": 366.8312881097561,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n47",
+          "bbox": [
+            {
+              "h": 4.63,
+              "w": 80.09,
+              "x": 171.76,
+              "y": 366.83,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "47"
+    }
+  ]
+}

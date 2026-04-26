@@ -1,0 +1,1 @@
+![A pencil sketch of an elderly man with glasses and a large nose, leaning over a desk with his hand to his head, appearing to be in deep thought or frustration. Handwritten text above him reads: "NOW FOR A FEW BAMBI GAGS".](CBatAotCB-023_page_1_image_1_v2.jpg)

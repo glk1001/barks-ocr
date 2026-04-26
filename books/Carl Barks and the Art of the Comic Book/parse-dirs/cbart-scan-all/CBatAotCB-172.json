@@ -1,0 +1,608 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 89 (8/5) - February 1948 - 52 pages",
+          "value": "89 (8/5) - February 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.555067644817072,
+              "w": 84.17867913967225,
+              "x": 11.718927567644817,
+              "y": 13.202596703506098,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald takes a job as a night watchman, guarding a million dollars in silk, but the nephews have to prevent him from falling asleep on the job. *(Sept. 4, 1947)*",
+          "value": "DONALD DUCK - 10 - Donald takes a job as a night watchman, guarding a million dollars in silk, but the nephews have to prevent him from falling asleep on the job. (Sept. 4, 1947)",
+          "bbox": [
+            {
+              "h": 23.777076505335366,
+              "w": 126.0877898723323,
+              "x": 11.651868092606707,
+              "y": 18.713967701981705,
+              "confidence": 0.99,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 90 (8/6) - March 1948 - 52 pages",
+          "value": "90 (8/6) - March 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.3884298780487825,
+              "w": 77.18444502667683,
+              "x": 11.931006573932926,
+              "y": 48.534294969512196,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and the nephews are rival telegram messengers, and Donald sends the nephews out with a phony telegram so that he can get the good jobs and big tips. *(Oct. 9, 1947)*",
+          "value": "DONALD DUCK - 10 - Donald and the nephews are rival telegram messengers, and Donald sends the nephews out with a phony telegram so that he can get the good jobs and big tips. (Oct. 9, 1947)",
+          "bbox": [
+            {
+              "h": 23.443748094512195,
+              "w": 125.91495081459601,
+              "x": 11.866808903391767,
+              "y": 54.20602134146341,
+              "confidence": 0.99,
+              "end_index": 190,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 91 (8/7) - April 1948 - 52 pages",
+          "value": "91 (8/7) - April 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.532141768292681,
+              "w": 73.57521115186736,
+              "x": 12.154539229230183,
+              "y": 83.74039824695122,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald stages a high-society garden party with a jungle motif, including nephews who have been hypnotized into thinking they're monkeys. *(Oct. 28, 1947)*\nReprinted: *Walt Disney's Comics* No. 307, April 1966.",
+          "value": "DONALD DUCK - 10 - Donald stages a high-society garden party with a jungle motif, including nephews who have been hypnotized into thinking they're monkeys. (Oct. 28, 1947)\nReprinted: Walt Disney's Comics No. 307, April 1966.",
+          "bbox": [
+            {
+              "h": 23.20069550304878,
+              "w": 126.1205645007622,
+              "x": 11.96196122332317,
+              "y": 89.44518864329268,
+              "confidence": 0.95,
+              "end_index": 227,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 92 (8/8) - May 1948 - 52 pages",
+          "value": "92 (8/8) - May 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.347923018292668,
+              "w": 71.42656619188261,
+              "x": 12.31198563738567,
+              "y": 125.41586890243904,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Professor Pulpheart Clabberhead, a child psychologist, talks Donald into letting the nephews do whatever they want. *(Dec. 30, 1947)*\nReprinted: *Walt Disney's Comics* No. 349, October 1969.",
+          "value": "DONALD DUCK - 10 - Professor Pulpheart Clabberhead, a child psychologist, talks Donald into letting the nephews do whatever they want. (Dec. 30, 1947)\nReprinted: Walt Disney's Comics No. 349, October 1969.",
+          "bbox": [
+            {
+              "h": 17.312263719512174,
+              "w": 125.92366699218746,
+              "x": 12.318742497141768,
+              "y": 130.98373856707317,
+              "confidence": 0.93,
+              "end_index": 208,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 93 (8/9) - June 1948 - 52 pages",
+          "value": "93 (8/9) - June 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.46972942073171,
+              "w": 71.4445730516387,
+              "x": 12.62654832793445,
+              "y": 160.62304115853658,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald is the pilot of a round-trip rocketship to the moon, competing against Baron de Sleezy for a prize of a hundred thousand dollars. *(Jan. 16, 1948)*",
+          "value": "DONALD DUCK - 10 - Donald is the pilot of a round-trip rocketship to the moon, competing against Baron de Sleezy for a prize of a hundred thousand dollars. (Jan. 16, 1948)",
+          "bbox": [
+            {
+              "h": 17.71009527439023,
+              "w": 126.134208984375,
+              "x": 12.544300924161584,
+              "y": 166.10813643292684,
+              "confidence": 0.98,
+              "end_index": 172,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 94 (8/10) - July 1948 - 52 pages",
+          "value": "94 (8/10) - July 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.459142530487798,
+              "w": 73.16350681211888,
+              "x": 12.821109232088412,
+              "y": 190.1555144817073,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald becomes a member of the Coast Patrol, on guard against crafty jewel smugglers — who outwit Donald but not the nephews. *(Feb. 3, 1948)*\nReprinted: *Walt Disney's Comics* No. 306, March 1966.",
+          "value": "DONALD DUCK - 10 - Donald becomes a member of the Coast Patrol, on guard against crafty jewel smugglers — who outwit Donald but not the nephews. (Feb. 3, 1948)\nReprinted: Walt Disney's Comics No. 306, March 1966.",
+          "bbox": [
+            {
+              "h": 23.474131097560985,
+              "w": 125.84957090796493,
+              "x": 12.64183915301067,
+              "y": 195.66704268292682,
+              "confidence": 0.94,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 95 (8/11) - July 1948 - 52 pages",
+          "value": "95 (8/11) - July 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.601745426829274,
+              "w": 73.12725407298018,
+              "x": 13.004958198361278,
+              "y": 225.39985518292684,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald lies sweating on the beach as a St. Bernard approaches with cold drinks. *(Mar. 4, 1948)*\nDONALD DUCK - 10 - Donald and Gladstone brag about their wealth until Daisy asks them to contribute to her club. *(Feb. 19, 1948)*",
+          "value": "Front cover: Donald lies sweating on the beach as a St. Bernard approaches with cold drinks. (Mar. 4, 1948)\nDONALD DUCK - 10 - Donald and Gladstone brag about their wealth until Daisy asks them to contribute to her club. (Feb. 19, 1948)",
+          "bbox": [
+            {
+              "h": 17.07720274390246,
+              "w": 125.92062726276677,
+              "x": 13.123661990282011,
+              "y": 242.8239100609756,
+              "confidence": 0.89,
+              "end_index": 239,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 96 (8/12) - September 1948 - 52 pages",
+          "value": "96 (8/12) - September 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.51359756097565,
+              "w": 90.50611602038872,
+              "x": 13.378047470464939,
+              "y": 266.77575457317073,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald floats in the bubbles from the soap that a nephew is pouring into his tub. *(Mar. 4, 1948)*\nAn alternate version of this cover still exists; it differs slightly from the published version, in that Donald casts a shadow on the wall behind him as he floats in the air.\nDONALD DUCK - 10 - When Donald forces the nephews to be his caddies, they trick him into believing he can hit a hole-in-one with every shot, and this leads to a bet with Gladstone. *(Mar. 25, 1948)*",
+          "value": "Front cover: Donald floats in the bubbles from the soap that a nephew is pouring into his tub. (Mar. 4, 1948)\nAn alternate version of this cover still exists; it differs slightly from the published version, in that Donald casts a shadow on the wall behind him as he floats in the air.\nDONALD DUCK - 10 - When Donald forces the nephews to be his caddies, they trick him into believing he can hit a hole-in-one with every shot, and this leads to a bet with Gladstone. (Mar. 25, 1948)",
+          "bbox": [
+            {
+              "h": 23.130937499999998,
+              "w": 126.03496975038111,
+              "x": 13.568655440167682,
+              "y": 301.87591463414634,
+              "confidence": 0.89,
+              "end_index": 484,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 97 (9/1) - October 1948 - 52 pages",
+          "value": "97 (9/1) - October 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.46564786585368,
+              "w": 80.9245673351753,
+              "x": 13.791514981897864,
+              "y": 331.644306402439,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald goes searching for pearls to make Daisy a necklace for her birthday, but he finds ball bearings in a giant clam instead. *(Apr. 29, 1948)*",
+          "value": "DONALD DUCK - 10 - Donald goes searching for pearls to make Daisy a necklace for her birthday, but he finds ball bearings in a giant clam instead. (Apr. 29, 1948)",
+          "bbox": [
+            {
+              "h": 17.584413109756113,
+              "w": 125.88471108041158,
+              "x": 13.831688500381096,
+              "y": 337.13197408536587,
+              "confidence": 0.99,
+              "end_index": 163,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 98 (9/2) - November 1948 - 52 pages",
+          "value": "98 (9/2) - November 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.567991139481708,
+              "w": 87.54858041158536,
+              "x": 151.15906440548778,
+              "y": 12.417368997713414,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald rides to the hounds on Lord Tweeksdale's estate to prove — for Uncle Scrooge's benefit — that the members of the duck family are great sportsmen. *(May 28, 1948)*\nFirst appearance of Uncle Scrooge in *Walt Disney's Comics*.",
+          "value": "DONALD DUCK - 10 - Donald rides to the hounds on Lord Tweeksdale's estate to prove — for Uncle Scrooge's benefit — that the members of the duck family are great sportsmen. (May 28, 1948)\nFirst appearance of Uncle Scrooge in Walt Disney's Comics.",
+          "bbox": [
+            {
+              "h": 23.52207078887195,
+              "w": 125.67848323170728,
+              "x": 150.94625762195122,
+              "y": 18.238480849847562,
+              "confidence": 0.95,
+              "end_index": 248,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 99 (9/3) - December 1948 - 52 pages",
+          "value": "99 (9/3) - December 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.669897103658536,
+              "w": 86.3684794207317,
+              "x": 151.3692301829268,
+              "y": 53.82513338414634,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - art and rewriting of script - Donald stuffs his head full of obscure facts so that he can win a barrel of money on a radio quiz, but he must compete with the nephews for prizes. *(June 10, 1948)*\nBarks: \"Script came from the office. I was paid $25 extra for 'revising' it.\"",
+          "value": "DONALD DUCK - 10 - art and rewriting of script - Donald stuffs his head full of obscure facts so that he can win a barrel of money on a radio quiz, but he must compete with the nephews for prizes. (June 10, 1948)\nBarks: \"Script came from the office. I was paid $25 extra for 'revising' it.\"",
+          "bbox": [
+            {
+              "h": 23.515604039634145,
+              "w": 124.94610137195124,
+              "x": 151.16991996951216,
+              "y": 59.57248856707317,
+              "confidence": 0.94,
+              "end_index": 291,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 100 (9/4) - January 1949 - 52 pages",
+          "value": "100 (9/4) - January 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.60660442073171,
+              "w": 83.80840129573171,
+              "x": 151.5359394054878,
+              "y": 101.09027057926829,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews are captured by a tricky truant officer who they later discover is Donald in disguise. *(July 29, 1948)*",
+          "value": "DONALD DUCK - 10 - The nephews are captured by a tricky truant officer who they later discover is Donald in disguise. (July 29, 1948)",
+          "bbox": [
+            {
+              "h": 17.7039443597561,
+              "w": 125.9150933689024,
+              "x": 151.37404916158536,
+              "y": 106.76119664634146,
+              "confidence": 0.98,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 101 (9/5) - February 1949 - 52 pages",
+          "value": "101 (9/5) - February 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.741775914634145,
+              "w": 86.88150342987805,
+              "x": 151.7220788871951,
+              "y": 130.658037347561,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald is plagued by terrible nightmares, and crochets doilies on doctor's orders to relax his thinking nerve — until Daisy hears about it. *(Aug. 26, 1948)*",
+          "value": "DONALD DUCK - 10 - Donald is plagued by terrible nightmares, and crochets doilies on doctor's orders to relax his thinking nerve — until Daisy hears about it. (Aug. 26, 1948)",
+          "bbox": [
+            {
+              "h": 22.40810213414632,
+              "w": 125.9642606707317,
+              "x": 151.5684889481707,
+              "y": 136.70822789634147,
+              "confidence": 0.99,
+              "end_index": 175,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 102 (9/6) - March 1949 - 52 pages",
+          "value": "102 (9/6) - March 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.600213414634145,
+              "w": 79.83610518292681,
+              "x": 151.80403582317072,
+              "y": 165.9034870426829,
+              "confidence": 0.97,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - art and rewriting of script - Donald guards Pizen Spring Dude Ranch during a horse-stealing scare, and buys the same horses over and over again from the wily thief. *(Sept. 9, 1948)*",
+          "value": "DONALD DUCK - 10 - art and rewriting of script - Donald guards Pizen Spring Dude Ranch during a horse-stealing scare, and buys the same horses over and over again from the wily thief. (Sept. 9, 1948)",
+          "bbox": [
+            {
+              "h": 23.638227896341476,
+              "w": 124.96801829268293,
+              "x": 151.42654344512195,
+              "y": 172.12288490853658,
+              "confidence": 0.99,
+              "end_index": 200,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 103 (9/7) - April 1949 - 52 pages",
+          "value": "103 (9/7) - April 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.590198170731682,
+              "w": 76.3635594512195,
+              "x": 151.96472560975607,
+              "y": 201.2769054878049,
+              "confidence": 0.97,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and Gladstone, rival beachcombers, split up the beach to look for a valuable ruby lost by the Maharajah of Backdore. *(Sept. 23, 1948)*\nBarks: \"My notation on voucher says I paid Dana Coty $25.00 for the idea.\"\nReprinted: *Walt Disney's Comics* No. 356, May 1970.",
+          "value": "DONALD DUCK - 10 - Donald and Gladstone, rival beachcombers, split up the beach to look for a valuable ruby lost by the Maharajah of Backdore. (Sept. 23, 1948)\nBarks: \"My notation on voucher says I paid Dana Coty $25.00 for the idea.\"\nReprinted: Walt Disney's Comics No. 356, May 1970.",
+          "bbox": [
+            {
+              "h": 17.500564024390233,
+              "w": 125.81979420731705,
+              "x": 151.78323361280488,
+              "y": 207.0379573170732,
+              "confidence": 0.89,
+              "end_index": 288,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 104 (9/8) - May 1949 - 52 pages",
+          "value": "104 (9/8) - May 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.65410823170736,
+              "w": 73.94721036585365,
+              "x": 152.23662919207317,
+              "y": 248.62955030487802,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Truant officer Donald fumes as the nephews fish just across the state line. *(Dec. 9, 1948)*\nDONALD DUCK - 10 - Donald raises Uncle Scrooge's sunken yacht by stuffing it with ping-pong balls. *(Nov. 24, 1948)*\nIn December 1964, a ship carrying thousands of sheep sank in the harbor at Kuwait. Because of the health hazard involved (the city of Kuwait pumped its drinking water from the harbor), it was necessary to raise the ship rapidly, and Karl Kroyer, a Danish inventor, did so by filling the ship with expandable polystyrene foam. He sought a patent on the process, but, under patent law, a \"preliminary description\" had already been published, and, therefore, Kroyer's process was unpatentable. That \"preliminary description\" was this story. Accounts of this incident appeared in *Popular Science* for April 1965, and *Chemistry* for September 1966, both of which evidently obtained their information (which differs in some details) from Danish publications. A few",
+          "value": "Front cover: Truant officer Donald fumes as the nephews fish just across the state line. (Dec. 9, 1948)\nDONALD DUCK - 10 - Donald raises Uncle Scrooge's sunken yacht by stuffing it with ping-pong balls. (Nov. 24, 1948)\nIn December 1964, a ship carrying thousands of sheep sank in the harbor at Kuwait. Because of the health hazard involved (the city of Kuwait pumped its drinking water from the harbor), it was necessary to raise the ship rapidly, and Karl Kroyer, a Danish inventor, did so by filling the ship with expandable polystyrene foam. He sought a patent on the process, but, under patent law, a \"preliminary description\" had already been published, and, therefore, Kroyer's process was unpatentable. That \"preliminary description\" was this story. Accounts of this incident appeared in Popular Science for April 1965, and Chemistry for September 1966, both of which evidently obtained their information (which differs in some details) from Danish publications. A few",
+          "bbox": [
+            {
+              "h": 69.73907012195124,
+              "w": 125.98784108231706,
+              "x": 152.3467625762195,
+              "y": 284.2093902439024,
+              "confidence": 0.96,
+              "end_index": 982,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "172 Carl Barks and the Art of the Comic Book",
+              "value": "172 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.318079268292695,
+                  "w": 77.68025533536586,
+                  "x": 38.698705221036576,
+                  "y": 365.7176524390244,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "172 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.32,
+              "w": 77.68,
+              "x": 38.7,
+              "y": 365.72,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "172"
+    }
+  ]
+}

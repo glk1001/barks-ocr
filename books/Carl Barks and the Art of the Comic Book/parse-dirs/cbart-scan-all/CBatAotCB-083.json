@@ -1,0 +1,135 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "CALIFORNIA OFFICE—SEATED, L. TO R.: Michael H. Arens, Carl Buettner, J. Alfred Riley, Jane Werner Watson, Alice N. Cobb, Albert L. Stoffel, Thomas McKimson. STANDING, L. TO R.: Ralph Heimdahl, Chase Craig, Francis J. Hoffman, A. L. Zerbe, John N. Carey, Guy Erne, Carl Barks, R. S. Callender.",
+          "md": "![CALIFORNIA OFFICE—SEATED, L. TO R.: Michael H. Arens, Carl Buettner, J. Alfred Riley, Jane Werner Watson, Alice N. Cobb, Albert L. Stoffel, Thomas McKimson. STANDING, L. TO R.: Ralph Heimdahl, Chase Craig, Francis J. Hoffman, A. L. Zerbe, John N. Carey, Guy Erne, Carl Barks, R. S. Callender.](CBatAotCB-083_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-083_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 178.67126024199695,
+              "w": 225.89986280487804,
+              "x": 28.69655487804878,
+              "y": 11.811601800685976,
+              "confidence": 0.98,
+              "end_index": 317,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**CALIFORNIA OFFICE—SEATED, L. TO R.:** *Michael H. Arens, Carl Buettner, J. Alfred Riley, Jane Werner Watson, Alice N. Cobb, Albert L. Stoffel, Thomas McKimson.*\n**STANDING, L. TO R.:** *Ralph Heimdahl, Chase Craig, Francis J. Hoffman, A. L. Zerbe, John N. Carey, Guy Erne, Carl Barks, R. S. Callender.*",
+          "value": "CALIFORNIA OFFICE—SEATED, L. TO R.: Michael H. Arens, Carl Buettner, J. Alfred Riley, Jane Werner Watson, Alice N. Cobb, Albert L. Stoffel, Thomas McKimson.\nSTANDING, L. TO R.: Ralph Heimdahl, Chase Craig, Francis J. Hoffman, A. L. Zerbe, John N. Carey, Guy Erne, Carl Barks, R. S. Callender.",
+          "bbox": [
+            {
+              "h": 28.442435213414637,
+              "w": 221.5981997903963,
+              "x": 30.22107993521341,
+              "y": 156.99284679878048,
+              "confidence": 0.79,
+              "end_index": 303,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This photograph of Carl Barks and other members of Western Publishing's California staff appeared in the company's annual report for 1957. Of the other people in the photo, R.S. Callender was a vice president of Western and head of its West Coast Division; Albert L. Stoffel was Callender's assistant; Chase Craig and Alice N. Cobb were comic-book editors; Thomas McKimson supervised the Whitman books; Carl Buettner supervised the Golden Books; Michael H. Arens and John N. Carey were comic-book artists; and Ralph Heimdahl was the artist for the Bugs Bunny newspaper strip. Most of the other people in the photo were members of the sales staff.",
+          "value": "This photograph of Carl Barks and other members of Western Publishing's California staff appeared in the company's annual report for 1957. Of the other people in the photo, R.S. Callender was a vice president of Western and head of its West Coast Division; Albert L. Stoffel was Callender's assistant; Chase Craig and Alice N. Cobb were comic-book editors; Thomas McKimson supervised the Whitman books; Carl Buettner supervised the Golden Books; Michael H. Arens and John N. Carey were comic-book artists; and Ralph Heimdahl was the artist for the Bugs Bunny newspaper strip. Most of the other people in the photo were members of the sales staff.",
+          "bbox": [
+            {
+              "h": 30.675342987804868,
+              "w": 263.18173042111283,
+              "x": 11.651790920350608,
+              "y": 193.62048018292683,
+              "confidence": 0.87,
+              "end_index": 645,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "Barks at his drawing board; this photo was probably taken late in 1962.",
+          "md": "![Barks at his drawing board; this photo was probably taken late in 1962.](CBatAotCB-083_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-083_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 113.94759146341464,
+              "w": 206.57325028582315,
+              "x": 38.096843083079264,
+              "y": 226.9794969512195,
+              "confidence": 0.99,
+              "end_index": 96,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Barks at his drawing board; this photo was probably taken late in 1962.",
+          "value": "Barks at his drawing board; this photo was probably taken late in 1962.",
+          "bbox": [
+            {
+              "h": 6.78651676829264,
+              "w": 148.99386814024388,
+              "x": 69.37034679878047,
+              "y": 347.5262423780488,
+              "confidence": 0.9,
+              "end_index": 70,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n83",
+              "value": "Carl Barks and the Art of the Comic Book\n83",
+              "bbox": [
+                {
+                  "h": 5.9281783536585495,
+                  "w": 80.33676448170733,
+                  "x": 172.26586509146338,
+                  "y": 365.6192835365854,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n83",
+          "bbox": [
+            {
+              "h": 5.93,
+              "w": 80.34,
+              "x": 172.27,
+              "y": 365.62,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "83"
+    }
+  ]
+}

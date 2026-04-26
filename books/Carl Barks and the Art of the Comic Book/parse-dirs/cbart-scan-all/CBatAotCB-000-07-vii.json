@@ -1,0 +1,116 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# Preface",
+          "value": "Preface",
+          "bbox": [
+            {
+              "h": 14.6291444359756,
+              "w": 76.21741234756095,
+              "x": 107.70357278963414,
+              "y": 57.145426829268295,
+              "confidence": 0.97,
+              "end_index": 6,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**IN A SENSE**, this book will self-destruct if it succeeds in its purpose, which is to open more readers' eyes to the special excellences of Carl Barks's comic-book stories. If Barks comes to be accepted as one of the few real artists to have worked in the comic-strip medium, my essay on his life and work will almost certainly seem inadequate, if not downright improper. Many people frown on combining biography with criticism, as I have done here, and certainly the combination can be questioned when — as in Barks's case — the world of the author's imagination is so far removed from his everyday existence. Likewise, if our universities turn out a few Barks scholars in the future, no doubt at least one of them will produce a bibliography of Barks's work that annotates his stories in more detail than I have done.",
+          "value": "IN A SENSE, this book will self-destruct if it succeeds in its purpose, which is to open more readers' eyes to the special excellences of Carl Barks's comic-book stories. If Barks comes to be accepted as one of the few real artists to have worked in the comic-strip medium, my essay on his life and work will almost certainly seem inadequate, if not downright improper. Many people frown on combining biography with criticism, as I have done here, and certainly the combination can be questioned when — as in Barks's case — the world of the author's imagination is so far removed from his everyday existence. Likewise, if our universities turn out a few Barks scholars in the future, no doubt at least one of them will produce a bibliography of Barks's work that annotates his stories in more detail than I have done.",
+          "bbox": [
+            {
+              "h": 139.44267530487807,
+              "w": 125.65971215224847,
+              "x": 12.085665134336889,
+              "y": 117.93653963414634,
+              "confidence": 0.99,
+              "end_index": 820,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This book could have been three books, in other words, and at least three books — by other writers, not by me — may eventually sprout from it. Barks's reputation may out- grow this book like a boy outgrowing a suit of clothes. But for now, one book is sufficient.",
+          "value": "This book could have been three books, in other words, and at least three books — by other writers, not by me — may eventually sprout from it. Barks's reputation may out- grow this book like a boy outgrowing a suit of clothes. But for now, one book is sufficient.",
+          "bbox": [
+            {
+              "h": 43.724496951219535,
+              "w": 125.53598358898626,
+              "x": 12.679184093940547,
+              "y": 258.79776676829266,
+              "confidence": 0.99,
+              "end_index": 262,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "I have said that the other books, if they  come, will not be written by me, and that is  because I doubt that I will have anything more  to say about Carl Barks that would justify my  writing another book about him. Each time that I have considered Barks's work in print, I have found myself reworking the same ideas.",
+          "value": "I have said that the other books, if they  come, will not be written by me, and that is  because I doubt that I will have anything more  to say about Carl Barks that would justify my  writing another book about him. Each time that I have considered Barks's work in print, I have found myself reworking the same ideas.",
+          "bbox": [
+            {
+              "h": 51.161638719512226,
+              "w": 125.28763147865851,
+              "x": 13.056036585365852,
+              "y": 303.29025914634144,
+              "confidence": 0.99,
+              "end_index": 316,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The essay appeared in embryonic form in 1967 as \"The Lord of Quackly Hall,\" in the sixth, mimeographed issue of *Funnyworld*, a fan magazine I then published. A longer and more elaborate version of \"The Lord of Quackly Hall\" was published in 1968 in *Comic Art*, another mimeographed fan magazine. \"The Duck Man,\" as published in *The Comic-Book Book* in 1974, was essentially a shorter \"popular\" version of \"Quackly Hall.\" The essay in this book is the outgrowth of those three earlier articles: much longer, far more detailed, rewritten so heavily that scarcely a paragraph remains the same — and yet in substance unchanged. Carl Barks's stories made a deep impression on me when I was a child. As I have grown older, I have been better able to articulate my feelings about his stories, and to subject my feelings, and the stories themselves, to closer scrutiny; but my feelings have not changed, and I do not think that they ever will. My opinions do change in some respects — there are stories that I still love, but no longer admire as much as I used to — but their core, my conviction of the great worth of Carl Barks's best work, does not.",
+          "value": "The essay appeared in embryonic form in 1967 as \"The Lord of Quackly Hall,\" in the sixth, mimeographed issue of Funnyworld, a fan magazine I then published. A longer and more elaborate version of \"The Lord of Quackly Hall\" was published in 1968 in Comic Art, another mimeographed fan magazine. \"The Duck Man,\" as published in The Comic-Book Book in 1974, was essentially a shorter \"popular\" version of \"Quackly Hall.\" The essay in this book is the outgrowth of those three earlier articles: much longer, far more detailed, rewritten so heavily that scarcely a paragraph remains the same — and yet in substance unchanged. Carl Barks's stories made a deep impression on me when I was a child. As I have grown older, I have been better able to articulate my feelings about his stories, and to subject my feelings, and the stories themselves, to closer scrutiny; but my feelings have not changed, and I do not think that they ever will. My opinions do change in some respects — there are stories that I still love, but no longer admire as much as I used to — but their core, my conviction of the great worth of Carl Barks's best work, does not.",
+          "bbox": [
+            {
+              "h": 191.67512195121947,
+              "w": 125.83500571646339,
+              "x": 149.38542301829267,
+              "y": 118.20512195121951,
+              "confidence": 0.99,
+              "end_index": 1145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "I put my affections and my critical judgments to a severe test in the first half of 1978, when I was completing the bulk of the work on this book, by re-reading every bit of Carl Barks's comic-book work. In many instances, I was reading stories that I had not looked at for",
+          "value": "I put my affections and my critical judgments to a severe test in the first half of 1978, when I was completing the bulk of the work on this book, by re-reading every bit of Carl Barks's comic-book work. In many instances, I was reading stories that I had not looked at for",
+          "bbox": [
+            {
+              "h": 43.722507621951245,
+              "w": 125.55353277439025,
+              "x": 149.9700457317073,
+              "y": 310.79753048780486,
+              "confidence": 0.99,
+              "end_index": 272,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "vii"
+    }
+  ]
+}

@@ -1,0 +1,810 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "ently decides to buy Donald a new car to replace his worn-out jalopy. They also buy the nephews building sets. Finally, the nephews guess correctly that Donald wants a new car for Christmas. *(May 24, 1950)*",
+          "value": "ently decides to buy Donald a new car to replace his worn-out jalopy. They also buy the nephews building sets. Finally, the nephews guess correctly that Donald wants a new car for Christmas. (May 24, 1950)",
+          "bbox": [
+            {
+              "h": 23.105717892530492,
+              "w": 124.64983493711888,
+              "x": 11.80978396532012,
+              "y": 13.89174209222561,
+              "confidence": 0.99,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Christmas Parade* (Gold Key) No. 6, 1968.",
+          "value": "Reprinted: Christmas Parade (Gold Key) No. 6, 1968.",
+          "bbox": [
+            {
+              "h": 5.670660251524391,
+              "w": 113.12370724561738,
+              "x": 16.518017220846037,
+              "y": 37.58067644817073,
+              "confidence": 0.96,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 8 - (December) 1956 - 100 pages",
+          "value": "8 - (December) 1956 - 100 pages",
+          "bbox": [
+            {
+              "h": 5.784975228658536,
+              "w": 77.51649687976372,
+              "x": 11.754268173589939,
+              "y": 49.54619474085366,
+              "confidence": 0.95,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "GYRO GEARLOOSE in Grandma's Present - 8 (pp. 68-75) - Gyro, tired of inventing, goes to Grandma's farm to forget about it, but soon finds himself inventing a machine that manufactures all the farm's products out of nothing but dirt, water and air. *(Mar. 1, 1956)*",
+          "value": "GYRO GEARLOOSE in Grandma's Present - 8 (pp. 68-75) - Gyro, tired of inventing, goes to Grandma's farm to forget about it, but soon finds himself inventing a machine that manufactures all the farm's products out of nothing but dirt, water and air. (Mar. 1, 1956)",
+          "bbox": [
+            {
+              "h": 28.69251333841463,
+              "w": 124.85432962557164,
+              "x": 11.7698291015625,
+              "y": 55.64064786585366,
+              "confidence": 0.99,
+              "end_index": 263,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 9 - (December) 1958 - 100 pages",
+          "value": "9 - (December) 1958 - 100 pages",
+          "bbox": [
+            {
+              "h": 5.586288109756101,
+              "w": 77.66667409012958,
+              "x": 11.754053806211889,
+              "y": 90.98599847560975,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in Christmas in Duckburg - 20 - art only - Donald lets the nephews pick their own present, and it's a ferris wheel. To get the money for it, the ducks go to Canada to pick up the 100-foot Christmas tree Scrooge has bought for the town square, in response to a challenge from Ollie Eiderduck. To save himself from losing his bet with Scrooge, Eiderduck sends the Beagle Boys north to shorten the tree. *(Apr. 6, 1958)*",
+          "value": "DONALD DUCK in Christmas in Duckburg - 20 - art only - Donald lets the nephews pick their own present, and it's a ferris wheel. To get the money for it, the ducks go to Canada to pick up the 100-foot Christmas tree Scrooge has bought for the town square, in response to a challenge from Ollie Eiderduck. To save himself from losing his bet with Scrooge, Eiderduck sends the Beagle Boys north to shorten the tree. (Apr. 6, 1958)",
+          "bbox": [
+            {
+              "h": 47.12780487804878,
+              "w": 125.12210985137193,
+              "x": 11.909707031249999,
+              "y": 96.89461509146342,
+              "confidence": 0.99,
+              "end_index": 428,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The name of Barks's wife Gare' appears on a storefront in the second panel on the first page.",
+          "value": "The name of Barks's wife Gare' appears on a storefront in the second panel on the first page.",
+          "bbox": [
+            {
+              "h": 11.237858231707332,
+              "w": 125.07367032679115,
+              "x": 12.050641792111279,
+              "y": 144.69729420731707,
+              "confidence": 0.98,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages are three panels deep.",
+          "value": "These pages are three panels deep.",
+          "bbox": [
+            {
+              "h": 5.554184451219507,
+              "w": 68.66331495331555,
+              "x": 16.38563035918445,
+              "y": 156.43068978658536,
+              "confidence": 0.91,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Christmas Parade* (Golden Press) No. 11191, 1977; *Walt Disney Comics Digest* No. 18, December 1969.",
+          "value": "Reprinted: Christmas Parade (Golden Press) No. 11191, 1977; Walt Disney Comics Digest No. 18, December 1969.",
+          "bbox": [
+            {
+              "h": 10.985807926829274,
+              "w": 125.09980492568596,
+              "x": 11.823610661204267,
+              "y": 162.70869283536584,
+              "confidence": 0.97,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 26 - (December) 1959 - 84 pages",
+          "value": "26 - (December) 1959 - 84 pages",
+          "bbox": [
+            {
+              "h": 5.676265243902462,
+              "w": 77.67013826695884,
+              "x": 11.72347644340701,
+              "y": 180.0938300304878,
+              "confidence": 0.97,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in The Christmas Cha Cha - 16 - art only - Donald practices the cha cha so that he can win the first prize in a dance contest, a silver bowl, with Daisy, and give her his half of the bowl as a Christmas gift. But Scrooge is supposed to supply the bowl, and so he enters the contest, too, with a dance teacher as his partner. *(May 26, 1959)*",
+          "value": "DONALD DUCK in The Christmas Cha Cha - 16 - art only - Donald practices the cha cha so that he can win the first prize in a dance contest, a silver bowl, with Daisy, and give her his half of the bowl as a Christmas gift. But Scrooge is supposed to supply the bowl, and so he enters the contest, too, with a dance teacher as his partner. (May 26, 1959)",
+          "bbox": [
+            {
+              "h": 35.1599199695122,
+              "w": 125.19426269531249,
+              "x": 11.86874892816311,
+              "y": 186.0869245426829,
+              "confidence": 0.99,
+              "end_index": 352,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"The 'Christmas Cha Cha' story in D.D. Christmas Parade #26 was not my story. I did the drawings and did a great deal of rewriting and polishing on the dialogue of the script, which was sent to me by the office.\" (June 9, 1968, letter to Michael Barrier)",
+          "value": "Barks: \"The 'Christmas Cha Cha' story in D.D. Christmas Parade #26 was not my story. I did the drawings and did a great deal of rewriting and polishing on the dialogue of the script, which was sent to me by the office.\" (June 9, 1968, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 29.11369664634145,
+              "w": 125.52816453887193,
+              "x": 11.549209698932925,
+              "y": 221.61002286585367,
+              "confidence": 0.98,
+              "end_index": 260,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks caricatured himself on a wanted poster on the thirteenth page of this story.",
+          "value": "Barks caricatured himself on a wanted poster on the thirteenth page of this story.",
+          "bbox": [
+            {
+              "h": 10.954778963414665,
+              "w": 125.62417754382619,
+              "x": 11.551008241234754,
+              "y": 252.18157774390244,
+              "confidence": 0.97,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck* No. 201, November 1978.",
+          "value": "Reprinted: Donald Duck No. 201, November 1978.",
+          "bbox": [
+            {
+              "h": 5.21755335365855,
+              "w": 98.1169618187881,
+              "x": 15.82362126048018,
+              "y": 264.046806402439,
+              "confidence": 0.96,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# CHRISTMAS PARADE (Gold Key)",
+          "value": "CHRISTMAS PARADE (Gold Key)",
+          "bbox": [
+            {
+              "h": 6.98661585365855,
+              "w": 118.02205756955031,
+              "x": 15.230033703315547,
+              "y": 282.30896341463415,
+              "confidence": 0.98,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## 2 - (January) 1964 - 36 pages",
+          "value": "2 - (January) 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.672423780487825,
+              "w": 69.66017042206555,
+              "x": 11.453770126714938,
+              "y": 296.1883536585366,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - Reprinted from the inside front cover of *Donald Duck Four Color* No. 367, Jan.-Feb. 1952.",
+          "value": "DONALD DUCK - 1 (inside front cover) - Reprinted from the inside front cover of Donald Duck Four Color No. 367, Jan.-Feb. 1952.",
+          "bbox": [
+            {
+              "h": 16.753559451219534,
+              "w": 124.82579947122713,
+              "x": 11.771374690358229,
+              "y": 301.94924542682924,
+              "confidence": 0.98,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"A Christmas for Shacktown\" - 32 - Reprinted from *Donald Duck Four Color* No. 367, Jan.-Feb. 1952.",
+          "value": "DONALD DUCK in \"A Christmas for Shacktown\" - 32 - Reprinted from Donald Duck Four Color No. 367, Jan.-Feb. 1952.",
+          "bbox": [
+            {
+              "h": 16.614443597560985,
+              "w": 125.02406785918444,
+              "x": 11.877087819169207,
+              "y": 319.6731402439024,
+              "confidence": 0.98,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - Reprinted from the inside back cover of *Donald Duck Four Color* No. 367, Jan.-Feb. 1952.",
+          "value": "DONALD DUCK - 1 (inside back cover) - Reprinted from the inside back cover of Donald Duck Four Color No. 367, Jan.-Feb. 1952.",
+          "bbox": [
+            {
+              "h": 16.80304115853658,
+              "w": 124.83848680449694,
+              "x": 12.016322646722559,
+              "y": 337.52926829268296,
+              "confidence": 0.98,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 3 - (January) 1965 - 36 pages",
+          "value": "3 - (January) 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.718790015243903,
+              "w": 69.4552362804878,
+              "x": 150.23051067073172,
+              "y": 14.21921112804878,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - Reprinted from the inside front cover of *Donald Duck Four Color* No. 178, 1947.",
+          "value": "DONALD DUCK - 1 (inside front cover) - Reprinted from the inside front cover of Donald Duck Four Color No. 178, 1947.",
+          "bbox": [
+            {
+              "h": 16.776175209603654,
+              "w": 124.8189386432927,
+              "x": 150.37116996951218,
+              "y": 20.05711366234756,
+              "confidence": 0.98,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK's Christmas on Bear Mountain - 20 - Reprinted from *Donald Duck Four Color* No. 178, 1947.",
+          "value": "DONALD DUCK's Christmas on Bear Mountain - 20 - Reprinted from Donald Duck Four Color No. 178, 1947.",
+          "bbox": [
+            {
+              "h": 11.377054115853658,
+              "w": 125.20603467987803,
+              "x": 150.27624809451217,
+              "y": 37.8959394054878,
+              "confidence": 0.96,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - Reprinted from the inside back cover of *Donald Duck Four Color* No. 178, 1947.",
+          "value": "DONALD DUCK - 1 (inside back cover) - Reprinted from the inside back cover of Donald Duck Four Color No. 178, 1947.",
+          "bbox": [
+            {
+              "h": 16.557690548780478,
+              "w": 124.98789443597556,
+              "x": 150.3477267530488,
+              "y": 49.744956173780494,
+              "confidence": 0.97,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 4 - (January) 1966 - 36 pages",
+          "value": "4 - (January) 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.643092606707318,
+              "w": 71.7235175304878,
+              "x": 150.01002096036584,
+              "y": 73.4019512195122,
+              "confidence": 0.95,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Donald Duck Four Color* No. 203, 1948.",
+          "value": "Front cover: Reprinted from the front cover of Donald Duck Four Color No. 203, 1948.",
+          "bbox": [
+            {
+              "h": 11.424860899390232,
+              "w": 125.23968178353658,
+              "x": 150.0790301067073,
+              "y": 78.99330411585366,
+              "confidence": 0.97,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - Reprinted from the inside front cover of *Donald Duck Four Color* No. 203, 1948.",
+          "value": "DONALD DUCK - 1 (inside front cover) - Reprinted from the inside front cover of Donald Duck Four Color No. 203, 1948.",
+          "bbox": [
+            {
+              "h": 16.35129192073171,
+              "w": 125.08451410060977,
+              "x": 150.33693978658536,
+              "y": 91.01660442073171,
+              "confidence": 0.97,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"The Golden Christmas Tree\" - 20 - Reprinted from *Donald Duck Four Color* No. 203, 1948.",
+          "value": "DONALD DUCK in \"The Golden Christmas Tree\" - 20 - Reprinted from Donald Duck Four Color No. 203, 1948.",
+          "bbox": [
+            {
+              "h": 11.801307164634144,
+              "w": 125.14558307926826,
+              "x": 150.40303353658535,
+              "y": 108.69332698170732,
+              "confidence": 0.92,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - Reprinted from the inside back cover of *Donald Duck Four Color* No. 203, 1948.",
+          "value": "DONALD DUCK - 1 (inside back cover) - Reprinted from the inside back cover of Donald Duck Four Color No. 203, 1948.",
+          "bbox": [
+            {
+              "h": 16.61245426829268,
+              "w": 125.07240663109754,
+              "x": 150.4201314786585,
+              "y": 120.87262957317074,
+              "confidence": 0.94,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (back cover) - Reprinted from the back cover of *Donald Duck Four Color* No. 203, 1948.",
+          "value": "DONALD DUCK - 1 (back cover) - Reprinted from the back cover of Donald Duck Four Color No. 203, 1948.",
+          "bbox": [
+            {
+              "h": 11.476977896341477,
+              "w": 125.15035060975609,
+              "x": 150.44012766768293,
+              "y": 138.65349466463414,
+              "confidence": 0.97,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 5 - (February) 1967 - 84 pages",
+          "value": "5 - (February) 1967 - 84 pages",
+          "bbox": [
+            {
+              "h": 5.774439786585362,
+              "w": 72.95985137195119,
+              "x": 150.17959413109756,
+              "y": 158.21795350609756,
+              "confidence": 0.95,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"Letter to Santa\" - 24 - Reprinted from *Christmas Parade* (Dell) No. 1, 1949.",
+          "value": "DONALD DUCK in \"Letter to Santa\" - 24 - Reprinted from Christmas Parade (Dell) No. 1, 1949.",
+          "bbox": [
+            {
+              "h": 11.361448170731709,
+              "w": 125.09152820121953,
+              "x": 150.34556592987803,
+              "y": 164.15859375,
+              "confidence": 0.94,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: The single panel that makes up the first page was trimmed for the indicia.",
+          "value": "Changes: The single panel that makes up the first page was trimmed for the indicia.",
+          "bbox": [
+            {
+              "h": 11.146383384146347,
+              "w": 124.92430449695121,
+              "x": 150.50028772865852,
+              "y": 176.16719131097562,
+              "confidence": 0.95,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - 1 - Reprinted from *Christmas Parade* (Dell) No. 1, 1949.",
+          "value": "DONALD DUCK - 1 (inside back cover) - 1 - Reprinted from Christmas Parade (Dell) No. 1, 1949.",
+          "bbox": [
+            {
+              "h": 11.792995426829247,
+              "w": 124.8470807926829,
+              "x": 150.53525533536586,
+              "y": 187.4370274390244,
+              "confidence": 0.96,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 6 - (February) 1968 - 68 pages",
+          "value": "6 - (February) 1968 - 68 pages",
+          "bbox": [
+            {
+              "h": 5.7548094512195345,
+              "w": 72.96803163109753,
+              "x": 150.15201791158535,
+              "y": 205.77210365853657,
+              "confidence": 0.94,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"You Can't Guess!\" - 25 - Reprinted from *Christmas Parade* (Dell) No. 2, 1950.",
+          "value": "DONALD DUCK in \"You Can't Guess!\" - 25 - Reprinted from Christmas Parade (Dell) No. 2, 1950.",
+          "bbox": [
+            {
+              "h": 11.380335365853679,
+              "w": 125.29941310975609,
+              "x": 149.77706364329265,
+              "y": 212.32792682926828,
+              "confidence": 0.97,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 8 - (January) 1971 - 36 pages",
+          "value": "8 - (January) 1971 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.618597560975622,
+              "w": 69.73122141768293,
+              "x": 150.489706554878,
+              "y": 229.91727896341462,
+              "confidence": 0.94,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"A Christmas for Shacktown\" - 32 - Reprinted from *Donald Duck Four Color* No. 367, Jan.-Feb. 1952.",
+          "value": "DONALD DUCK in \"A Christmas for Shacktown\" - 32 - Reprinted from Donald Duck Four Color No. 367, Jan.-Feb. 1952.",
+          "bbox": [
+            {
+              "h": 17.22322408536588,
+              "w": 125.25446455792681,
+              "x": 150.67526295731707,
+              "y": 235.3306326219512,
+              "confidence": 0.98,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Panels on first page trimmed for indicia.",
+          "value": "Changes: Panels on first page trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 5.442484756097564,
+              "w": 99.8162938262195,
+              "x": 154.99455983231707,
+              "y": 253.82275152439024,
+              "confidence": 0.96,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# CHRISTMAS PARADE (Golden Press)",
+          "value": "CHRISTMAS PARADE (Golden Press)",
+          "bbox": [
+            {
+              "h": 13.79961128048777,
+              "w": 78.81350419207313,
+              "x": 174.23135670731708,
+              "y": 271.7319512195122,
+              "confidence": 0.99,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## 11191 - 1977 - 228 pages",
+          "value": "11191 - 1977 - 228 pages",
+          "bbox": [
+            {
+              "h": 5.47557164634145,
+              "w": 56.696484375,
+              "x": 150.67092416158536,
+              "y": 292.3329192073171,
+              "confidence": 0.95,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in Christmas in Duckburg - 20 (pp. 3-22) - Reprinted from *Christmas Parade* (Dell) No. 9, 1958.\nDONALD DUCK - 17 5/6 (pp. 135-152) - Reprinted from *Christmas in Disneyland* No. 1, 1957.",
+          "value": "DONALD DUCK in Christmas in Duckburg - 20 (pp. 3-22) - Reprinted from Christmas Parade (Dell) No. 9, 1958.\nDONALD DUCK - 17 5/6 (pp. 135-152) - Reprinted from Christmas in Disneyland No. 1, 1957.",
+          "bbox": [
+            {
+              "h": 23.588025914634144,
+              "w": 125.3396455792683,
+              "x": 150.53925114329266,
+              "y": 298.1511585365854,
+              "confidence": 0.96,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# DAISY AND DONALD (Gold Key)",
+          "value": "DAISY AND DONALD (Gold Key)",
+          "bbox": [
+            {
+              "h": 7.104786585365855,
+              "w": 115.94721608231707,
+              "x": 154.0629020579268,
+              "y": 329.7999009146341,
+              "confidence": 0.98,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## 1 - May 1973 - 36 pages",
+          "value": "1 - May 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.63682164634145,
+              "w": 56.75184260670731,
+              "x": 149.50874428353657,
+              "y": 343.5972256097561,
+              "confidence": 0.93,
+              "end_index": 22,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD AND DAISY The Beauty Business - 10 -",
+          "value": "DONALD AND DAISY The Beauty Business - 10 -",
+          "bbox": [
+            {
+              "h": 5.31834603658539,
+              "w": 120.22247332317069,
+              "x": 154.32220083841463,
+              "y": 349.62141768292685,
+              "confidence": 0.95,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n103",
+              "value": "Carl Barks and the Art of the Comic Book\n103",
+              "bbox": [
+                {
+                  "h": 4.43051067073171,
+                  "w": 77.83183879573174,
+                  "x": 172.55807355182924,
+                  "y": 367.26937499999997,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n103",
+          "bbox": [
+            {
+              "h": 4.43,
+              "w": 77.83,
+              "x": 172.56,
+              "y": 367.27,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "103"
+    }
+  ]
+}

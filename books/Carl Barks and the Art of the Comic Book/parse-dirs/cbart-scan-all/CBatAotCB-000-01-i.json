@@ -1,0 +1,66 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# Carl Barks",
+          "value": "Carl Barks",
+          "bbox": [
+            {
+              "h": 73.28523246951221,
+              "w": 225.55233041158536,
+              "x": 29.232799161585362,
+              "y": 100.98912347560974,
+              "confidence": 0.61,
+              "end_index": 9,
+              "label": "doc_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# and the",
+          "value": "and the",
+          "bbox": [
+            {
+              "h": 73.28523246951221,
+              "w": 225.55233041158536,
+              "x": 29.232799161585362,
+              "y": 100.98912347560974,
+              "confidence": 0.57,
+              "end_index": 6,
+              "label": "doc_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# Art of the Comic Book",
+          "value": "Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 73.28523246951221,
+              "w": 225.55233041158536,
+              "x": 29.232799161585362,
+              "y": 100.98912347560974,
+              "confidence": 0.69,
+              "end_index": 20,
+              "label": "doc_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true
+    }
+  ]
+}

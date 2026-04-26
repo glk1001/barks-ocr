@@ -1,0 +1,923 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 415 (35/7) - April 1975 - 36 pages",
+          "value": "415 (35/7) - April 1975 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.668602324695123,
+              "w": 78.87437166539632,
+              "x": 11.048104516006095,
+              "y": 23.871951219512194,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Raven Mad - 10 - Reprinted from Walt Disney's Comics No. 265, October 1962.",
+          "value": "DONALD DUCK Raven Mad - 10 - Reprinted from Walt Disney's Comics No. 265, October 1962.",
+          "bbox": [
+            {
+              "h": 11.703155487804876,
+              "w": 125.78773770960365,
+              "x": 11.01216796875,
+              "y": 29.66239138719512,
+              "confidence": 0.97,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 416 (35/8) - May 1975 - 36 pages",
+          "value": "416 (35/8) - May 1975 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.551709222560978,
+              "w": 76.57372844416919,
+              "x": 11.057726395769816,
+              "y": 47.834737042682924,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 222, March 1959.\nChanges: Splash panel deepened.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 222, March 1959.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 11.454443597560985,
+              "w": 125.75551829268292,
+              "x": 150.72041730182923,
+              "y": 200.67278963414634,
+              "confidence": 0.91,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 417 (35/9) - June 1975 - 36 pages",
+          "value": "417 (35/9) - June 1975 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.541333841463406,
+              "w": 76.82235601657773,
+              "x": 11.141428282202742,
+              "y": 77.28406440548781,
+              "confidence": 0.95,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 225, June 1959.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 225, June 1959.",
+          "bbox": [
+            {
+              "h": 11.461737804878057,
+              "w": 125.85303722846798,
+              "x": 11.317003739519816,
+              "y": 83.04282393292682,
+              "confidence": 0.97,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 418 (35/10) - July 1975 - 36 pages",
+          "value": "418 (35/10) - July 1975 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.558025914634145,
+              "w": 78.57496046112804,
+              "x": 11.302730087652439,
+              "y": 101.07548780487805,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Froggy Farmer - 10 - Reprinted from Walt Disney's Comics No. 236, May 1960.",
+          "value": "DONALD DUCK Froggy Farmer - 10 - Reprinted from Walt Disney's Comics No. 236, May 1960.",
+          "bbox": [
+            {
+              "h": 11.298429878048783,
+              "w": 125.50571598704269,
+              "x": 11.544536490091462,
+              "y": 106.94895960365854,
+              "confidence": 0.97,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 419 (35/11) - August 1975 - 36 pages",
+          "value": "419 (35/11) - August 1975 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.64056021341461,
+              "w": 86.80379954268292,
+              "x": 11.355820312499999,
+              "y": 124.70576981707319,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 138, March 1952.\nChanges: Panels on first page trimmed for indicia, except bottom row.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 138, March 1952.\nChanges: Panels on first page trimmed for indicia, except bottom row.",
+          "bbox": [
+            {
+              "h": 11.242511432926813,
+              "w": 125.99253465605943,
+              "x": 11.615647508574693,
+              "y": 166.27834984756097,
+              "confidence": 0.89,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 420 (35/12) - September 1975 - 36 pages",
+          "value": "420 (35/12) - September 1975 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.654554115853652,
+              "w": 95.83847775342987,
+              "x": 11.462650295350608,
+              "y": 160.21006097560976,
+              "confidence": 0.96,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 65, February 1946.\nChanges: Panels on first page trimmed for indicia, except first panel.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 65, February 1946.\nChanges: Panels on first page trimmed for indicia, except first panel.",
+          "bbox": [
+            {
+              "h": 11.206829268292667,
+              "w": 125.88217404249237,
+              "x": 11.963261361471035,
+              "y": 231.02318597560975,
+              "confidence": 0.88,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 421 (36/1) - October 1975 - 36 pages",
+          "value": "421 (36/1) - October 1975 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.657949695121969,
+              "w": 86.08394102515243,
+              "x": 11.706546779725608,
+              "y": 195.81939786585366,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 152, May 1953.\nChanges: Splash panel deepened.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 152, May 1953.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 11.002385670731709,
+              "w": 125.95551876905486,
+              "x": 11.095668349847559,
+              "y": 53.512854420731706,
+              "confidence": 0.9,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 422 (36/2) - November 1975 - 36 pages",
+          "value": "422 (36/2) - November 1975 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.636775914634172,
+              "w": 93.06261206650152,
+              "x": 11.749410608803354,
+              "y": 225.14647865853658,
+              "confidence": 0.95,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 169, October 1954.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 169, October 1954.",
+          "bbox": [
+            {
+              "h": 11.206829268292667,
+              "w": 125.88217404249237,
+              "x": 11.963261361471035,
+              "y": 231.02318597560975,
+              "confidence": 0.96,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 423 (36/3) - December 1975 - 36 pages",
+          "value": "423 (36/3) - December 1975 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.558757621951244,
+              "w": 91.94540539253047,
+              "x": 11.922200362042682,
+              "y": 248.90643292682927,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK The Wax Museum - 10 - Reprinted from Walt Disney's Comics No. 231, December 1959.",
+          "value": "DONALD DUCK The Wax Museum - 10 - Reprinted from Walt Disney's Comics No. 231, December 1959.",
+          "bbox": [
+            {
+              "h": 11.267400914634145,
+              "w": 125.84679270674542,
+              "x": 12.00041765910823,
+              "y": 254.92612042682927,
+              "confidence": 0.97,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 424 (36/4) - January 1976 - 36 pages",
+          "value": "424 (36/4) - January 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.645007621951245,
+              "w": 86.3761687785823,
+              "x": 12.08245927019817,
+              "y": 272.68939024390244,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Northeaster on Cape Quack - 10 - Reprinted from Walt Disney's Comics No. 256, January 1962.",
+          "value": "DONALD DUCK Northeaster on Cape Quack - 10 - Reprinted from Walt Disney's Comics No. 256, January 1962.",
+          "bbox": [
+            {
+              "h": 11.632088414634145,
+              "w": 125.50392173208841,
+              "x": 12.14872880144817,
+              "y": 278.77838414634147,
+              "confidence": 0.96,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 425 (36/5) - February 1976 - 36 pages",
+          "value": "425 (36/5) - February 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.650106707317099,
+              "w": 89.77755633098322,
+              "x": 12.276801519626524,
+              "y": 296.4245350609756,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Merry Ferry - 10 - Reprinted from Walt Disney's Comics No. 260, May 1962.\nChanges: Splash panel deepened.",
+          "value": "DONALD DUCK Merry Ferry - 10 - Reprinted from Walt Disney's Comics No. 260, May 1962.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 11.436585365853679,
+              "w": 125.47850847942073,
+              "x": 12.713044493140242,
+              "y": 301.80786585365854,
+              "confidence": 0.74,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 426 (36/6) - March 1976 - 36 pages",
+          "value": "426 (36/6) - March 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6242225609756495,
+              "w": 82.51010027629572,
+              "x": 12.548343892911584,
+              "y": 326.03588414634146,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Master Wrecker - 10 - Reprinted from Walt Disney's Comics No. 264, September 1962.\nChanges: Splash panel deepened.",
+          "value": "DONALD DUCK Master Wrecker - 10 - Reprinted from Walt Disney's Comics No. 264, September 1962.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 10.136501524390205,
+              "w": 125.25732743426069,
+              "x": 12.947550614519816,
+              "y": 331.6182164634146,
+              "confidence": 0.71,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 427 (36/7) - April 1976 - 36 pages",
+          "value": "427 (36/7) - April 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.758868140243902,
+              "w": 78.88590891768293,
+              "x": 149.3195693597561,
+              "y": 23.443373666158536,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK A Duck's-eye View of Europe - 10 - Reprinted from Walt Disney's Comics No. 273, June 1963.",
+          "value": "DONALD DUCK A Duck's-eye View of Europe - 10 - Reprinted from Walt Disney's Comics No. 273, June 1963.",
+          "bbox": [
+            {
+              "h": 12.029422637195122,
+              "w": 124.77164062499999,
+              "x": 149.28221798780487,
+              "y": 29.621478658536585,
+              "confidence": 0.97,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 428 (36/8) - May 1976 - 36 pages",
+          "value": "428 (36/8) - May 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.567869664634145,
+              "w": 76.53642530487805,
+              "x": 149.57957126524389,
+              "y": 47.2177705792683,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Zero Hero - 10 - Reprinted from Walt Disney's Comics No. 275, August 1963.",
+          "value": "DONALD DUCK Zero Hero - 10 - Reprinted from Walt Disney's Comics No. 275, August 1963.",
+          "bbox": [
+            {
+              "h": 11.991956935975608,
+              "w": 125.89213033536585,
+              "x": 149.41028963414632,
+              "y": 52.581962652439024,
+              "confidence": 0.97,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 429 (36/9) - June 1976 - 36 pages",
+          "value": "429 (36/9) - June 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.703092606707319,
+              "w": 76.96785251524388,
+              "x": 149.64960937499998,
+              "y": 70.81976753048781,
+              "confidence": 0.96,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK A Stone's Throw from Ghost Town - 10 - Reprinted from Walt Disney's Comics No. 271, April 1963.",
+          "value": "DONALD DUCK A Stone's Throw from Ghost Town - 10 - Reprinted from Walt Disney's Comics No. 271, April 1963.",
+          "bbox": [
+            {
+              "h": 11.984919969512202,
+              "w": 125.68757240853658,
+              "x": 149.74041539634143,
+              "y": 76.7769569359756,
+              "confidence": 0.96,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 431 (36/11) - August 1976 - 36 pages",
+          "value": "431 (36/11) - August 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.646185213414637,
+              "w": 86.88196646341461,
+              "x": 149.7945388719512,
+              "y": 94.5633155487805,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Hero of the Dike - 10 - Reprinted from Walt Disney's Comics No. 288, September 1964.",
+          "value": "DONALD DUCK Hero of the Dike - 10 - Reprinted from Walt Disney's Comics No. 288, September 1964.",
+          "bbox": [
+            {
+              "h": 11.926417682926825,
+              "w": 125.6585556402439,
+              "x": 149.89801829268293,
+              "y": 100.00929878048781,
+              "confidence": 0.96,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 432 (36/12) - September 1976 - 36 pages",
+          "value": "432 (36/12) - September 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.770483993902435,
+              "w": 95.837978277439,
+              "x": 150.03673971036585,
+              "y": 118.05826600609755,
+              "confidence": 0.95,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Delivery Dilemma - 10 - Reprinted from Walt Disney's Comics No. 291, December 1964.",
+          "value": "DONALD DUCK Delivery Dilemma - 10 - Reprinted from Walt Disney's Comics No. 291, December 1964.",
+          "bbox": [
+            {
+              "h": 11.785975609756088,
+              "w": 125.85796875,
+              "x": 150.00062309451218,
+              "y": 123.63592225609756,
+              "confidence": 0.96,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 434 (37/2) - November 1976 - 36 pages",
+          "value": "434 (37/2) - November 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.643692835365854,
+              "w": 93.2373932926829,
+              "x": 150.17513528963414,
+              "y": 141.91147865853657,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 199, April 1957.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 199, April 1957.",
+          "bbox": [
+            {
+              "h": 11.963037347560958,
+              "w": 126.09795731707318,
+              "x": 150.26491234756097,
+              "y": 147.36505335365854,
+              "confidence": 0.96,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 435 (37/3) - December 1976 - 36 pages",
+          "value": "435 (37/3) - December 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.601036585365855,
+              "w": 91.97235137195122,
+              "x": 150.41052782012193,
+              "y": 165.4524237804878,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 201, June 1957.\nChanges: Splash panel deepened.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 201, June 1957.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 11.46725990853658,
+              "w": 126.0019207317073,
+              "x": 11.386457698170732,
+              "y": 130.50150914634148,
+              "confidence": 0.92,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 436 (37/4) - January 1977 - 36 pages",
+          "value": "436 (37/4) - January 1977 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.701600609756087,
+              "w": 86.5457012195122,
+              "x": 150.63542492378045,
+              "y": 195.05307164634146,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 195, December 1956.\nChanges: Splash panel deepened.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 195, December 1956.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 11.436562500000027,
+              "w": 125.89391387195121,
+              "x": 150.48986089939024,
+              "y": 170.9972675304878,
+              "confidence": 0.9,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 439 (37/7) - April 1977 - 36 pages",
+          "value": "439 (37/7) - April 1977 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.614504573170725,
+              "w": 78.97570312499997,
+              "x": 150.80516958841463,
+              "y": 224.62026676829268,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Instant Hercules - 10 - Reprinted from Walt Disney's Comics No. 292, January 1965.",
+          "value": "DONALD DUCK Instant Hercules - 10 - Reprinted from Walt Disney's Comics No. 292, January 1965.",
+          "bbox": [
+            {
+              "h": 11.818719512195102,
+              "w": 125.92212461890243,
+              "x": 151.2354306402439,
+              "y": 230.10754573170732,
+              "confidence": 0.96,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 440 (37/8) - May 1977 - 36 pages",
+          "value": "440 (37/8) - May 1977 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.51252286585368,
+              "w": 76.58072217987805,
+              "x": 151.24668064024388,
+              "y": 248.43338414634144,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Captain Blight's Mystery Ship - 10 - Reprinted from Walt Disney's Comics No. 283, April 1964.",
+          "value": "DONALD DUCK Captain Blight's Mystery Ship - 10 - Reprinted from Walt Disney's Comics No. 283, April 1964.",
+          "bbox": [
+            {
+              "h": 12.114397865853679,
+              "w": 125.04577362804875,
+              "x": 151.51357660060972,
+              "y": 253.92637957317072,
+              "confidence": 0.96,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 442 (37/10) - July 1977 - 36 pages",
+          "value": "442 (37/10) - July 1977 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.636410060975595,
+              "w": 78.41556974085366,
+              "x": 151.38330983231705,
+              "y": 271.90028963414636,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD AND DAISY The Not-so-ancient Mariner - 10 - Reprinted from Walt Disney's Comics No. 312, September 1966.",
+          "value": "DONALD AND DAISY The Not-so-ancient Mariner - 10 - Reprinted from Walt Disney's Comics No. 312, September 1966.",
+          "bbox": [
+            {
+              "h": 17.133452743902435,
+              "w": 126.13726371951218,
+              "x": 151.35146341463414,
+              "y": 277.358368902439,
+              "confidence": 0.97,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 443 (37/11) - August 1977 - 36 pages",
+          "value": "443 (37/11) - August 1977 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.64304115853658,
+              "w": 86.80577172256098,
+              "x": 151.6018788109756,
+              "y": 301.5108612804878,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Monkey Business - 10 - Reprinted from Walt Disney's Comics No. 297, June 1965.",
+          "value": "DONALD DUCK Monkey Business - 10 - Reprinted from Walt Disney's Comics No. 297, June 1965.",
+          "bbox": [
+            {
+              "h": 11.89806402439026,
+              "w": 125.81519817073168,
+              "x": 151.74037728658536,
+              "y": 307.1734756097561,
+              "confidence": 0.96,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 446 (38/2) - November 1977 - 36 pages",
+          "value": "446 (38/2) - November 1977 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.551806402439015,
+              "w": 93.22665777439023,
+              "x": 151.69963033536584,
+              "y": 325.26814024390245,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK The Duckburg Pet Parade - 10 - Reprinted from Walt Disney's Comics No. 277, October 1963.",
+          "value": "DONALD DUCK The Duckburg Pet Parade - 10 - Reprinted from Walt Disney's Comics No. 277, October 1963.",
+          "bbox": [
+            {
+              "h": 17.20792682926829,
+              "w": 126.0008574695122,
+              "x": 151.80758574695122,
+              "y": 330.74275152439026,
+              "confidence": 0.97,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n193",
+              "value": "Carl Barks and the Art of the Comic Book\n193",
+              "bbox": [
+                {
+                  "h": 4.347804878048755,
+                  "w": 77.83823551829266,
+                  "x": 174.91630335365852,
+                  "y": 363.54505335365855,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n193",
+          "bbox": [
+            {
+              "h": 4.35,
+              "w": 77.84,
+              "x": 174.92,
+              "y": 363.55,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "193"
+    }
+  ]
+}

@@ -1,0 +1,503 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 13 - July 1969 - 164 pages",
+          "value": "13 - July 1969 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.604958079268293,
+              "w": 61.1779716082317,
+              "x": 11.402012195121952,
+              "y": 16.511924542682927,
+              "confidence": 0.97,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK AND UNCLE SCROOGE For Old Dime's Sake - 18 (pp. 3-12, 96-103) - A reprint of \"UNCLE SCROOGE For Old Dime's Sake\" in *Uncle Scrooge* No. 43, July 1963.\n*Changes:* Title changed as indicated. Splash panel deepened and partially redrawn.",
+          "value": "DONALD DUCK AND UNCLE SCROOGE For Old Dime's Sake - 18 (pp. 3-12, 96-103) - A reprint of \"UNCLE SCROOGE For Old Dime's Sake\" in Uncle Scrooge No. 43, July 1963.\nChanges: Title changed as indicated. Splash panel deepened and partially redrawn.",
+          "bbox": [
+            {
+              "h": 22.863721417682925,
+              "w": 124.887041015625,
+              "x": 11.568530630716461,
+              "y": 22.534787538109757,
+              "confidence": 0.93,
+              "end_index": 245,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 16 - October 1969 - 164 pages",
+          "value": "16 - October 1969 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.410746951219507,
+              "w": 71.40209294016768,
+              "x": 11.584398104039634,
+              "y": 64.14488757621952,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Trick or Treat - 23 (pp. 3-25) - Reprinted from *Donald Duck* No. 26, Nov.-Dec. 1952.\nUNCLE SCROOGE Fabulous Tycoon - 5 (pp. 102-106) - A reprint of \"UNCLE SCROOGE and The Fabulous Tycoon\" in *Uncle Scrooge* No. 23, Sept.-Nov. 1959.\n*Changes:* Title changed as indicated.",
+          "value": "DONALD DUCK Trick or Treat - 23 (pp. 3-25) - Reprinted from Donald Duck No. 26, Nov.-Dec. 1952.\nUNCLE SCROOGE Fabulous Tycoon - 5 (pp. 102-106) - A reprint of \"UNCLE SCROOGE and The Fabulous Tycoon\" in Uncle Scrooge No. 23, Sept.-Nov. 1959.\nChanges: Title changed as indicated.",
+          "bbox": [
+            {
+              "h": 17.350306783536592,
+              "w": 124.99834806116615,
+              "x": 11.895193287919206,
+              "y": 82.23951791158537,
+              "confidence": 0.87,
+              "end_index": 282,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 17 - November 1969 - 164 pages",
+          "value": "17 - November 1969 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.62897865853658,
+              "w": 78.15816275247714,
+              "x": 11.758997117949693,
+              "y": 111.68699314024391,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK AND UNCLE SCROOGE Yoicks! The Fox! - 9 (pp. 89-97) - A reprint of \"UNCLE SCROOGE Yoicks! The Fox!\" from *Uncle Scrooge* No. 30, June-Aug. 1961.\n*Changes:* Title changed as indicated.",
+          "value": "DONALD DUCK AND UNCLE SCROOGE Yoicks! The Fox! - 9 (pp. 89-97) - A reprint of \"UNCLE SCROOGE Yoicks! The Fox!\" from Uncle Scrooge No. 30, June-Aug. 1961.\nChanges: Title changed as indicated.",
+          "bbox": [
+            {
+              "h": 17.460754573170725,
+              "w": 125.2576318359375,
+              "x": 11.765636075647866,
+              "y": 117.7198056402439,
+              "confidence": 0.93,
+              "end_index": 193,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 18 - December 1969 - 164 pages",
+          "value": "18 - December 1969 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.536131859756088,
+              "w": 77.29646698742377,
+              "x": 11.806439834222559,
+              "y": 147.17974847560976,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Christmas in Duckburg - 20 (pp. 3-22) - Reprinted from *Christmas Parade* No. 9, 1958.",
+          "value": "DONALD DUCK Christmas in Duckburg - 20 (pp. 3-22) - Reprinted from Christmas Parade No. 9, 1958.",
+          "bbox": [
+            {
+              "h": 11.221794969512175,
+              "w": 125.10245236280487,
+              "x": 11.94864043445122,
+              "y": 153.3265586890244,
+              "confidence": 0.97,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 19 - January 1970 - 164 pages",
+          "value": "19 - January 1970 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.5217263719512175,
+              "w": 71.7563114519817,
+              "x": 12.14921541539634,
+              "y": 172.9399618902439,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE Much Luck McDuck - 7 (pp. 33-39) - Reprinted from *Uncle Scrooge* No. 38, June-Aug. 1962.\nGRANDMA DUCK'S FARM FRIENDS The Reversed Rescue - 7 (pp. 64-70) - Reprinted from *Grandma Duck's Farm Friends* Four Color No. 1161, Feb.-Apr. 1961.\nDONALD DUCK Roaring Wheels - 14 (originally 10) (pp. 92-105) - A reprint of \"DONALD DUCK\" in *Walt Disney's Comics* No. 166, July 1954.\n*Changes:* Title changed as indicated. The panels for the original ten-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "value": "UNCLE SCROOGE Much Luck McDuck - 7 (pp. 33-39) - Reprinted from Uncle Scrooge No. 38, June-Aug. 1962.\nGRANDMA DUCK'S FARM FRIENDS The Reversed Rescue - 7 (pp. 64-70) - Reprinted from Grandma Duck's Farm Friends Four Color No. 1161, Feb.-Apr. 1961.\nDONALD DUCK Roaring Wheels - 14 (originally 10) (pp. 92-105) - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 166, July 1954.\nChanges: Title changed as indicated. The panels for the original ten-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "bbox": [
+            {
+              "h": 17.201661585365855,
+              "w": 124.8985846989329,
+              "x": 12.489416444359755,
+              "y": 226.38018292682926,
+              "confidence": 0.88,
+              "end_index": 554,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 20 - February 1970 - 164 pages",
+          "value": "20 - February 1970 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.679535060975595,
+              "w": 75.01086592511432,
+              "x": 12.086033846227133,
+              "y": 251.18892530487807,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Iceboat to Beaver Island - 13 (originally 10) (pp. 3-15) - A reprint of \"DONALD DUCK\" in *Walt Disney's Comics* No. 174, March 1955.\n*Changes:* Title changed as indicated. The panels for the original ten-page story were trimmed and partially redrawn so that the pages could be made three panels deep.\nGRANDMA DUCK'S FARM FRIENDS Free Ski Spree - 8 (originally 6) (pp. 102-109) - Reprinted from *Grandma Duck's Farm Friends* Four Color No. 1073, Jan.-Mar. 1960.\n*Changes:* The panels for the original six-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "value": "DONALD DUCK Iceboat to Beaver Island - 13 (originally 10) (pp. 3-15) - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 174, March 1955.\nChanges: Title changed as indicated. The panels for the original ten-page story were trimmed and partially redrawn so that the pages could be made three panels deep.\nGRANDMA DUCK'S FARM FRIENDS Free Ski Spree - 8 (originally 6) (pp. 102-109) - Reprinted from Grandma Duck's Farm Friends Four Color No. 1073, Jan.-Mar. 1960.\nChanges: The panels for the original six-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "bbox": [
+            {
+              "h": 17.28596798780487,
+              "w": 124.83261313833839,
+              "x": 12.271359803734756,
+              "y": 275.3427210365854,
+              "confidence": 0.87,
+              "end_index": 611,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 21 - April 1970 - 164 pages",
+          "value": "21 - April 1970 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.6004192073171,
+              "w": 64.38165455887957,
+              "x": 11.925380502096036,
+              "y": 334.0792454268293,
+              "confidence": 0.97,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "GRANDMA DUCK The Training Farm Fuss - 7 (pp.\n29-35) - A reprint of \"GRANDMA DUCK'S FARM FRIENDS The Training Farm Fuss\" in *Grandma Duck's Farm Friends* Four Color No. 1161, Feb.-Apr. 1961.\n*Changes:* Title changed as indicated.\nDONALD DUCK Riding the Pony Express - 13 (originally 10) (pp. 82-94) - Reprinted from *Walt Disney's Comics* No. 234, March 1960.\n*Changes:* The panels for the original ten-page story were trimmed and partially redrawn so that the pages could be made three panels deep.\nGYRO GEARLOOSE Monsterville - 10 (pp. 114-123) - Reprinted from *Gyro Gearloose* Four Color No. 1184, May-July 1961.\n*Changes:* Splash panel deepened and partially redrawn.",
+          "value": "GRANDMA DUCK The Training Farm Fuss - 7 (pp.\n29-35) - A reprint of \"GRANDMA DUCK'S FARM FRIENDS The Training Farm Fuss\" in Grandma Duck's Farm Friends Four Color No. 1161, Feb.-Apr. 1961.\nChanges: Title changed as indicated.\nDONALD DUCK Riding the Pony Express - 13 (originally 10) (pp. 82-94) - Reprinted from Walt Disney's Comics No. 234, March 1960.\nChanges: The panels for the original ten-page story were trimmed and partially redrawn so that the pages could be made three panels deep.\nGYRO GEARLOOSE Monsterville - 10 (pp. 114-123) - Reprinted from Gyro Gearloose Four Color No. 1184, May-July 1961.\nChanges: Splash panel deepened and partially redrawn.",
+          "bbox": [
+            {
+              "h": 16.89514481707316,
+              "w": 125.36831078506098,
+              "x": 12.282470464939022,
+              "y": 310.76892530487805,
+              "confidence": 0.85,
+              "end_index": 670,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 22 - June 1970 - 164 pages",
+          "value": "22 - June 1970 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.347374237804884,
+              "w": 62.59110708841461,
+              "x": 150.64784108231706,
+              "y": 105.49551448170732,
+              "confidence": 0.97,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE The Money Champ - 22 (pp. 3-15, 97-105) - Reprinted from *Uncle Scrooge* No. 27, Sept.-Nov. 1959.\n*Changes:* Splash panel deepened and partially redrawn. Part of the first panel on the fourteenth page is covered by a caption identifying the second half of the story.\nDAISY DUCK'S DIARY Ring Leader Roundup - 6 (pp. 70-75) - Reprinted from *Daisy Duck's Diary* Four Color No. 1150, Dec.-Feb. 1961.",
+          "value": "UNCLE SCROOGE The Money Champ - 22 (pp. 3-15, 97-105) - Reprinted from Uncle Scrooge No. 27, Sept.-Nov. 1959.\nChanges: Splash panel deepened and partially redrawn. Part of the first panel on the fourteenth page is covered by a caption identifying the second half of the story.\nDAISY DUCK'S DIARY Ring Leader Roundup - 6 (pp. 70-75) - Reprinted from Daisy Duck's Diary Four Color No. 1150, Dec.-Feb. 1961.",
+          "bbox": [
+            {
+              "h": 17.366181402439015,
+              "w": 124.95709413109756,
+              "x": 151.24246189024387,
+              "y": 129.09463033536585,
+              "confidence": 0.9,
+              "end_index": 409,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 23 - July 1970 - 164 pages",
+          "value": "23 - July 1970 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.43363567073171,
+              "w": 61.392724847560956,
+              "x": 150.94166158536584,
+              "y": 170.71734375,
+              "confidence": 0.97,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Water Ski Race - 6 (pp. 3-8) - Reprinted from *Donald Duck* No. 60, July-Aug. 1958.",
+          "value": "DONALD DUCK Water Ski Race - 6 (pp. 3-8) - Reprinted from Donald Duck No. 60, July-Aug. 1958.",
+          "bbox": [
+            {
+              "h": 11.66013338414632,
+              "w": 125.37468178353657,
+              "x": 151.26580221036585,
+              "y": 176.93770198170733,
+              "confidence": 0.97,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 24 - August 1970 - 164 pages",
+          "value": "24 - August 1970 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.382370426829275,
+              "w": 69.65826791158536,
+              "x": 151.04711318597558,
+              "y": 194.36112804878047,
+              "confidence": 0.97,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK The Watchful Parent - 10 (pp. 113-122) - A reprint of \"DONALD DUCK\" in *Walt Disney's Comics* No. 228, September 1959.\n*Changes:* Title changed as indicated. Splash panel deepened and partially redrawn.",
+          "value": "DONALD DUCK The Watchful Parent - 10 (pp. 113-122) - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 228, September 1959.\nChanges: Title changed as indicated. Splash panel deepened and partially redrawn.",
+          "bbox": [
+            {
+              "h": 17.486112804878058,
+              "w": 125.09314024390245,
+              "x": 151.14651105182924,
+              "y": 199.92402439024391,
+              "confidence": 0.91,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 25 - October 1970 - 164 pages",
+          "value": "25 - October 1970 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.758170731707332,
+              "w": 71.56421684451217,
+              "x": 151.39658346036586,
+              "y": 236.84206554878048,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "GYRO GEARLOOSE Mighty but Miserable - 7 (pp. 45-51) - Reprinted from *Gyro Gearloose* Four Color No. 1184, May-July 1961.",
+          "value": "GYRO GEARLOOSE Mighty but Miserable - 7 (pp. 45-51) - Reprinted from Gyro Gearloose Four Color No. 1184, May-July 1961.",
+          "bbox": [
+            {
+              "h": 17.588597560975593,
+              "w": 125.01869474085365,
+              "x": 151.6193025914634,
+              "y": 242.83083841463414,
+              "confidence": 0.97,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 26 - December 1970 - 164 pages",
+          "value": "26 - December 1970 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.453803353658549,
+              "w": 77.36547827743901,
+              "x": 150.5699657012195,
+              "y": 269.65095274390245,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Stubborn Stork - 8 (pp. 94-101) - Reprinted from *Gyro Gearloose* Four Color No. 1047, Nov.-Jan. 1960.\nDONALD DUCK Duck Luck - 10 (pp. 130-139) - Reprinted from *Walt Disney's Comics* No. 251, August 1961.\n*Changes:* Panels on first page deepened and partially redrawn.",
+          "value": "GYRO GEARLOOSE The Stubborn Stork - 8 (pp. 94-101) - Reprinted from Gyro Gearloose Four Color No. 1047, Nov.-Jan. 1960.\nDONALD DUCK Duck Luck - 10 (pp. 130-139) - Reprinted from Walt Disney's Comics No. 251, August 1961.\nChanges: Panels on first page deepened and partially redrawn.",
+          "bbox": [
+            {
+              "h": 17.099222560975594,
+              "w": 125.38822980182927,
+              "x": 150.64405106707315,
+              "y": 275.3283612804878,
+              "confidence": 0.89,
+              "end_index": 287,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 27 - February 1971 - 164 pages",
+          "value": "27 - February 1971 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.51190548780487,
+              "w": 75.23406631097559,
+              "x": 150.59181402439023,
+              "y": 322.6985670731707,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Movie Mad - 10 (pp. 3-12) - Reprinted from *Walt Disney's Comics* No. 257, February 1962.\n*Changes:* Splash panel deepened and partially redrawn.",
+          "value": "DONALD DUCK Movie Mad - 10 (pp. 3-12) - Reprinted from Walt Disney's Comics No. 257, February 1962.\nChanges: Splash panel deepened and partially redrawn.",
+          "bbox": [
+            {
+              "h": 10.677141768292694,
+              "w": 124.76047637195119,
+              "x": 150.99842606707315,
+              "y": 328.8195960365854,
+              "confidence": 0.74,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n163",
+              "value": "Carl Barks and the Art of the Comic Book\n163",
+              "bbox": [
+                {
+                  "h": 4.33982469512197,
+                  "w": 78.10550876524391,
+                  "x": 172.08288109756094,
+                  "y": 363.5997027439024,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n163",
+          "bbox": [
+            {
+              "h": 4.34,
+              "w": 78.11,
+              "x": 172.08,
+              "y": 363.6,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "163"
+    }
+  ]
+}

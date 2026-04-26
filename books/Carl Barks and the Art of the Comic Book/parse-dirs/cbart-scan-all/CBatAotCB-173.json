@@ -1,0 +1,830 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Barks panels are reproduced with each article. (The dialogue in the *Popular Science* panels is not by Barks; it evidently was re-translated from the Danish.)",
+          "value": "Barks panels are reproduced with each article. (The dialogue in the Popular Science panels is not by Barks; it evidently was re-translated from the Danish.)",
+          "bbox": [
+            {
+              "h": 16.761313833841463,
+              "w": 124.9799156821646,
+              "x": 11.478845750762193,
+              "y": 12.72112900152439,
+              "confidence": 0.99,
+              "end_index": 157,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**105 (9/9) - June 1949 - 52 pages**",
+          "value": "105 (9/9) - June 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.403858612804877,
+              "w": 73.85888243140244,
+              "x": 11.408588986280487,
+              "y": 36.33080887957317,
+              "confidence": 0.98,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald goes to Thrushwhistle Glen to practice echoes, and the nephews are there to supply them — for ten cents each. *(Jan. 13, 1949)*",
+          "value": "DONALD DUCK - 10 - Donald goes to Thrushwhistle Glen to practice echoes, and the nephews are there to supply them — for ten cents each. (Jan. 13, 1949)",
+          "bbox": [
+            {
+              "h": 17.276244283536585,
+              "w": 125.62509074885668,
+              "x": 11.383694502667682,
+              "y": 42.124653201219516,
+              "confidence": 0.99,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**106 (9/10) - July 1949 - 52 pages**",
+          "value": "106 (9/10) - July 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.388212652439028,
+              "w": 75.52377631955031,
+              "x": 11.58292432831555,
+              "y": 65.64828887195121,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews return from summer camp with a collection of pets who rout both Donald and the Black Mask Burglar. *(Jan. 27, 1949)*",
+          "value": "DONALD DUCK - 10 - The nephews return from summer camp with a collection of pets who rout both Donald and the Black Mask Burglar. (Jan. 27, 1949)",
+          "bbox": [
+            {
+              "h": 17.49897484756097,
+              "w": 125.7157917301829,
+              "x": 11.51789919969512,
+              "y": 71.36033346036585,
+              "confidence": 0.98,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**107 (9/11) - August 1949 - 52 pages**",
+          "value": "107 (9/11) - August 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.535988948170725,
+              "w": 83.6539763957698,
+              "x": 11.829403939596036,
+              "y": 95.31615663109756,
+              "confidence": 0.97,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald accidentally drinks \"liquid isotopes\" that give him the incredible strength of Super Snooper, a comic-book superhero. *(Mar. 22, 1949)*",
+          "value": "DONALD DUCK - 10 - Donald accidentally drinks \"liquid isotopes\" that give him the incredible strength of Super Snooper, a comic-book superhero. (Mar. 22, 1949)",
+          "bbox": [
+            {
+              "h": 17.40492759146342,
+              "w": 125.95160549256859,
+              "x": 11.495209484565548,
+              "y": 100.97900533536585,
+              "confidence": 0.96,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"My notes say I paid Dana Coty $25 for the idea.\"",
+          "value": "Barks: \"My notes say I paid Dana Coty $25 for the idea.\"",
+          "bbox": [
+            {
+              "h": 5.10443597560974,
+              "w": 110.65300745522102,
+              "x": 15.850001310022865,
+              "y": 119.1463262195122,
+              "confidence": 0.91,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**108 (9/12) - September 1949 - 52 pages**",
+          "value": "108 (9/12) - September 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.506349085365855,
+              "w": 93.00121296208079,
+              "x": 11.903579339748473,
+              "y": 130.60379954268294,
+              "confidence": 0.97,
+              "end_index": 41,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald and the nephews sail on a small boat. *(Feb. 23, 1949)*",
+          "value": "Front cover (art only): Donald and the nephews sail on a small boat. (Feb. 23, 1949)",
+          "bbox": [
+            {
+              "h": 11.149664634146347,
+              "w": 125.55119509813262,
+              "x": 11.888211342416158,
+              "y": 136.51368521341465,
+              "confidence": 0.97,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Instead of eating an enormous frog named B-36 as he had originally planned, Donald enters the frog in a jumping contest. *(Apr. 14, 1949)*",
+          "value": "DONALD DUCK - 10 - Instead of eating an enormous frog named B-36 as he had originally planned, Donald enters the frog in a jumping contest. (Apr. 14, 1949)",
+          "bbox": [
+            {
+              "h": 17.156547256097536,
+              "w": 125.82425733612803,
+              "x": 11.785871284298779,
+              "y": 148.3556135670732,
+              "confidence": 0.98,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**109 (10/1) - October 1949 - 52 pages**",
+          "value": "109 (10/1) - October 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.46808307926829,
+              "w": 85.73363686166158,
+              "x": 12.152793206935975,
+              "y": 171.868125,
+              "confidence": 0.97,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald is hit by a newspaper flung from the nephews' bicycle handlebar slingshot. *(June 16, 1949)*",
+          "value": "Front cover (art only): Donald is hit by a newspaper flung from the nephews' bicycle handlebar slingshot. (June 16, 1949)",
+          "bbox": [
+            {
+              "h": 16.903685213414636,
+              "w": 125.80454625571647,
+              "x": 11.981149247332317,
+              "y": 177.54238948170732,
+              "confidence": 0.98,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews buy a water divining stick from an old peddler and try to convince Donald that it really works. *(Apr. 28, 1949)*",
+          "value": "DONALD DUCK - 10 - The nephews buy a water divining stick from an old peddler and try to convince Donald that it really works. (Apr. 28, 1949)",
+          "bbox": [
+            {
+              "h": 17.375464939024404,
+              "w": 125.72246069931401,
+              "x": 12.02111590129573,
+              "y": 195.44030487804878,
+              "confidence": 0.98,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**110 (10/2) - November 1949 - 52 pages**",
+          "value": "110 (10/2) - November 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.605221036585389,
+              "w": 92.82321086604419,
+              "x": 12.30341737328506,
+              "y": 220.47178353658535,
+              "confidence": 0.97,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald comes to fetch his nephews home from Camp Waha-Go-Gaga (where Gladstone is the camp guard) and tangles with three porridge-hungry bears. *(May 12, 1949)*",
+          "value": "DONALD DUCK - 10 - Donald comes to fetch his nephews home from Camp Waha-Go-Gaga (where Gladstone is the camp guard) and tangles with three porridge-hungry bears. (May 12, 1949)",
+          "bbox": [
+            {
+              "h": 23.290541158536605,
+              "w": 125.98940060499237,
+              "x": 12.143089867568596,
+              "y": 226.35162347560976,
+              "confidence": 0.99,
+              "end_index": 178,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**111 (10/3) - December 1949 - 52 pages**",
+          "value": "111 (10/3) - December 1949 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.59545731707316,
+              "w": 91.84407714843748,
+              "x": 12.257069002477134,
+              "y": 255.93025152439026,
+              "confidence": 0.97,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Daisy breaks up with Donald and returns a bundle of steamy love letters, which the nephews later take to Gladstone's house in a box of borrowed books. *(Aug. 4, 1949)*",
+          "value": "DONALD DUCK - 10 - Daisy breaks up with Donald and returns a bundle of steamy love letters, which the nephews later take to Gladstone's house in a box of borrowed books. (Aug. 4, 1949)",
+          "bbox": [
+            {
+              "h": 23.128925304878084,
+              "w": 125.9219874237805,
+              "x": 12.1419140625,
+              "y": 261.8651295731707,
+              "confidence": 0.99,
+              "end_index": 185,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**112 (10/4) - January 1950 - 52 pages**",
+          "value": "112 (10/4) - January 1950 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.480442073170725,
+              "w": 86.20671886909298,
+              "x": 12.50104694645579,
+              "y": 291.4932164634146,
+              "confidence": 0.97,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews trick Donald into thinking that he has been bitten by a strange insect and has slept forty years. *(Aug. 24, 1949)*",
+          "value": "DONALD DUCK - 10 - The nephews trick Donald into thinking that he has been bitten by a strange insect and has slept forty years. (Aug. 24, 1949)",
+          "bbox": [
+            {
+              "h": 17.3746875,
+              "w": 125.73524556974085,
+              "x": 12.407740329649389,
+              "y": 297.3210137195122,
+              "confidence": 0.99,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**114 (10/6) - March 1950 - 52 pages**",
+          "value": "114 (10/6) - March 1950 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.502370426829275,
+              "w": 82.23162954935214,
+              "x": 12.670772318025913,
+              "y": 320.98719512195123,
+              "confidence": 0.97,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald, who has bragged of his skiing exploits, is pursued by foreign spies as he carries serum to a stricken community through a record snowfall. *(Oct. 13, 1949)*",
+          "value": "DONALD DUCK - 10 - Donald, who has bragged of his skiing exploits, is pursued by foreign spies as he carries serum to a stricken community through a record snowfall. (Oct. 13, 1949)",
+          "bbox": [
+            {
+              "h": 22.718025914634143,
+              "w": 125.88775295350608,
+              "x": 12.467722465701218,
+              "y": 326.8809375,
+              "confidence": 0.99,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**117 (10/9) - June 1950 - 52 pages**",
+          "value": "117 (10/9) - June 1950 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.507755335365855,
+              "w": 76.68276105182927,
+              "x": 150.49358231707316,
+              "y": 12.714939500762195,
+              "confidence": 0.98,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and Gladstone compete to find the first daisy and so be Daisy's partner at the Wildflower Club's picnic lunch. *(Oct. 27, 1949)*",
+          "value": "DONALD DUCK - 10 - Donald and Gladstone compete to find the first daisy and so be Daisy's partner at the Wildflower Club's picnic lunch. (Oct. 27, 1949)",
+          "bbox": [
+            {
+              "h": 17.419677496189024,
+              "w": 125.92979039634145,
+              "x": 150.28228467987802,
+              "y": 18.48239376905488,
+              "confidence": 0.98,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 299, August 1965.",
+          "value": "Reprinted: Walt Disney's Comics No. 299, August 1965.",
+          "bbox": [
+            {
+              "h": 5.13948932926829,
+              "w": 112.26743711890244,
+              "x": 154.90423399390244,
+              "y": 36.6928896722561,
+              "confidence": 0.9,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**124 (11/4) - January 1951 - 52 pages**",
+          "value": "124 (11/4) - January 1951 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.510196265243906,
+              "w": 86.47974466463414,
+              "x": 150.54370998475608,
+              "y": 48.289458841463414,
+              "confidence": 0.97,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Uncle Scrooge becomes allergic to money and must let Donald manage his fortune. *(Aug. 10, 1950)*",
+          "value": "DONALD DUCK - 10 - Uncle Scrooge becomes allergic to money and must let Donald manage his fortune. (Aug. 10, 1950)",
+          "bbox": [
+            {
+              "h": 16.76298018292683,
+              "w": 125.87962842987805,
+              "x": 150.3975800304878,
+              "y": 54.09135480182927,
+              "confidence": 0.98,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**125 (11/5) - February 1951 - 52 pages**",
+          "value": "125 (11/5) - February 1951 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.502879192073173,
+              "w": 89.49033727134145,
+              "x": 150.72811737804878,
+              "y": 77.739375,
+              "confidence": 0.97,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews take their St. Bernard dog into the snow to pass the test that will make them brigadier generals in the Junior Woodchucks. *(Aug. 31, 1950)*",
+          "value": "DONALD DUCK - 10 - The nephews take their St. Bernard dog into the snow to pass the test that will make them brigadier generals in the Junior Woodchucks. (Aug. 31, 1950)",
+          "bbox": [
+            {
+              "h": 22.78019817073171,
+              "w": 126.0980087652439,
+              "x": 150.26667873475608,
+              "y": 83.65250762195122,
+              "confidence": 0.98,
+              "end_index": 170,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First appearance of the Junior Woodchucks.",
+          "value": "First appearance of the Junior Woodchucks.",
+          "bbox": [
+            {
+              "h": 5.222469512195116,
+              "w": 87.77128239329267,
+              "x": 155.32979611280487,
+              "y": 107.36706173780487,
+              "confidence": 0.83,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Huey, Dewey and Louie Junior Woodchucks* No. 5, April 1970.",
+          "value": "Reprinted: Huey, Dewey and Louie Junior Woodchucks No. 5, April 1970.",
+          "bbox": [
+            {
+              "h": 11.173159298780478,
+              "w": 125.85923780487805,
+              "x": 150.45218368902437,
+              "y": 113.35557164634146,
+              "confidence": 0.97,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**126 (11/6) - March 1951 - 52 pages**",
+          "value": "126 (11/6) - March 1951 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.466894054878058,
+              "w": 82.38729992378049,
+              "x": 150.81472179878045,
+              "y": 130.83064024390242,
+              "confidence": 0.97,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Uncle Scrooge's fortune, which he has hidden in a huge corn crib on a farm, is picked up by a tornado and scattered all over the country, so that everyone becomes a millionaire. *(Sept. 14, 1950)*",
+          "value": "DONALD DUCK - 10 - Uncle Scrooge's fortune, which he has hidden in a huge corn crib on a farm, is picked up by a tornado and scattered all over the country, so that everyone becomes a millionaire. (Sept. 14, 1950)",
+          "bbox": [
+            {
+              "h": 23.23992759146342,
+              "w": 126.19116425304878,
+              "x": 150.48775152439023,
+              "y": 136.71725990853656,
+              "confidence": 0.98,
+              "end_index": 214,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks has said that he has always considered this story \"technically well done. It had a rhythm that could almost have been set to music.\" *(Oct. 14, 1969, letter to Winston Ljungdahl)*\nReprinted: *Walt Disney's Comics* No. 363, December 1970; Les Daniels, *Comix: A History of Comic Books in America*, New York: Outerbridge & Dienstfrey, 1971 (see Appendix D).",
+          "value": "Barks has said that he has always considered this story \"technically well done. It had a rhythm that could almost have been set to music.\" (Oct. 14, 1969, letter to Winston Ljungdahl)\nReprinted: Walt Disney's Comics No. 363, December 1970; Les Daniels, Comix: A History of Comic Books in America, New York: Outerbridge & Dienstfrey, 1971 (see Appendix D).",
+          "bbox": [
+            {
+              "h": 34.79670731707316,
+              "w": 126.3203506097561,
+              "x": 150.29290015243902,
+              "y": 160.48806402439024,
+              "confidence": 0.98,
+              "end_index": 360,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**127 (11/7) - April 1951 - 52 pages**",
+          "value": "127 (11/7) - April 1951 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.499900914634145,
+              "w": 78.94939596036585,
+              "x": 150.84908917682924,
+              "y": 201.66157774390243,
+              "confidence": 0.97,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews try all day to play an April Fool's trick on Donald, but all their efforts backfire. *(Sept. 28, 1950)*",
+          "value": "DONALD DUCK - 10 - The nephews try all day to play an April Fool's trick on Donald, but all their efforts backfire. (Sept. 28, 1950)",
+          "bbox": [
+            {
+              "h": 17.147789634146346,
+              "w": 126.05880525914631,
+              "x": 150.43153582317072,
+              "y": 207.28486280487806,
+              "confidence": 0.97,
+              "end_index": 133,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 344, May 1969.",
+          "value": "Reprinted: Walt Disney's Comics No. 344, May 1969.",
+          "bbox": [
+            {
+              "h": 5.187942073170752,
+              "w": 106.74289824695119,
+              "x": 154.95369283536584,
+              "y": 225.38135670731705,
+              "confidence": 0.91,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**128 (11/8) - May 1951 - 52 pages**",
+          "value": "128 (11/8) - May 1951 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.430137195121942,
+              "w": 76.66924733231707,
+              "x": 150.7118769054878,
+              "y": 236.93661585365854,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and Gladstone are rivals for the lead in a play about knights and dragons, to be staged by Daisy's drama club. *(Nov. 30, 1950)*",
+          "value": "DONALD DUCK - 10 - Donald and Gladstone are rivals for the lead in a play about knights and dragons, to be staged by Daisy's drama club. (Nov. 30, 1950)",
+          "bbox": [
+            {
+              "h": 17.528597560975623,
+              "w": 125.92371951219509,
+              "x": 150.61256478658535,
+              "y": 242.61747713414633,
+              "confidence": 0.98,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**129 (11/9) - June 1951 - 52 pages**",
+          "value": "129 (11/9) - June 1951 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.40971798780487,
+              "w": 76.79011623475611,
+              "x": 150.93354992378045,
+              "y": 266.5107393292683,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald tears out his garden and replaces it with a swimming pool that is taken over by a horde of obnoxious children. *(Dec. 7, 1950)*",
+          "value": "DONALD DUCK - 10 - Donald tears out his garden and replaces it with a swimming pool that is taken over by a horde of obnoxious children. (Dec. 7, 1950)",
+          "bbox": [
+            {
+              "h": 17.2980182926829,
+              "w": 125.98890434451219,
+              "x": 150.6395750762195,
+              "y": 272.0783917682927,
+              "confidence": 0.98,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 335, August 1968.",
+          "value": "Reprinted: Walt Disney's Comics No. 335, August 1968.",
+          "bbox": [
+            {
+              "h": 5.16701981707316,
+              "w": 112.53385289634147,
+              "x": 155.3326943597561,
+              "y": 290.30158536585367,
+              "confidence": 0.88,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**130 (11/10) - July 1951 - 52 pages**",
+          "value": "130 (11/10) - July 1951 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.478109756097565,
+              "w": 78.34131288109754,
+              "x": 150.78693978658535,
+              "y": 303.11398628048784,
+              "confidence": 0.97,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews provide power with eggbeaters for Donald's boat. *(Feb. 22, 1951)*",
+          "value": "Front cover (art only): The nephews provide power with eggbeaters for Donald's boat. (Feb. 22, 1951)",
+          "bbox": [
+            {
+              "h": 11.589580792682954,
+              "w": 125.75544969512197,
+              "x": 150.55808117378047,
+              "y": 308.91674542682927,
+              "confidence": 0.97,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald discovers that the old dime he has given Uncle Scrooge to pay a debt is actually worth five dollars and he tries to get it back. *(Dec. 28, 1950)*",
+          "value": "DONALD DUCK - 10 - Donald discovers that the old dime he has given Uncle Scrooge to pay a debt is actually worth five dollars and he tries to get it back. (Dec. 28, 1950)",
+          "bbox": [
+            {
+              "h": 22.994474085365855,
+              "w": 126.24825457317073,
+              "x": 150.76762957317072,
+              "y": 320.76228658536587,
+              "confidence": 0.98,
+              "end_index": 171,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge and Money*, 1967.",
+          "value": "Reprinted: Uncle Scrooge and Money, 1967.",
+          "bbox": [
+            {
+              "h": 5.27073932926829,
+              "w": 88.02214367378049,
+              "x": 157.00170731707314,
+              "y": 344.572431402439,
+              "confidence": 0.95,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n173",
+              "value": "Carl Barks and the Art of the Comic Book\n173",
+              "bbox": [
+                {
+                  "h": 4.577538109756115,
+                  "w": 77.82695121951217,
+                  "x": 173.69706745426828,
+                  "y": 365.07704268292684,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n173",
+          "bbox": [
+            {
+              "h": 4.58,
+              "w": 77.83,
+              "x": 173.7,
+              "y": 365.08,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "173"
+    }
+  ]
+}

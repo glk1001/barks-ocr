@@ -1,0 +1,184 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "of his early stories almost as if they were storyboard sketches, although his basic methods were always the same: \"First, just jotting down a bunch of gags that would come to my mind. Then, I would start hooking the gags together, and pretty soon I'd have a little synopsis. From that, I'd break it down into a longer synopsis, and make a mark every two or three lines and think, 'Well, that will make one page.' By the time I'd get to the bottom of my synopsis I'd know whether I was going to have enough material.\" Working from such a synopsis, Barks would write a complete script. Then he would rough his drawings in, in pencil, adding many of the details in the inking. A finished page would measure about sixteen inches by twenty-three inches, roughly two and a half times the dimensions of the artwork as printed.",
+          "value": "of his early stories almost as if they were storyboard sketches, although his basic methods were always the same: \"First, just jotting down a bunch of gags that would come to my mind. Then, I would start hooking the gags together, and pretty soon I'd have a little synopsis. From that, I'd break it down into a longer synopsis, and make a mark every two or three lines and think, 'Well, that will make one page.' By the time I'd get to the bottom of my synopsis I'd know whether I was going to have enough material.\" Working from such a synopsis, Barks would write a complete script. Then he would rough his drawings in, in pencil, adding many of the details in the inking. A finished page would measure about sixteen inches by twenty-three inches, roughly two and a half times the dimensions of the artwork as printed.",
+          "bbox": [
+            {
+              "h": 140.02852705792682,
+              "w": 125.75758157869664,
+              "x": 11.86814441215701,
+              "y": 13.752067454268293,
+              "confidence": 0.99,
+              "end_index": 818,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks said in 1976, at the \"Newcon\" comics convention in Boston, that he \"tried to end each page, especially toward the latter part of the story, with a little zinger that would carry the reader forward. ... Sometimes the story would not lend itself to that kind of presentation, but that's the way we learned to do it at the Disney studios working on the short subjects. There had to be a little climax just about every few seconds on the screen, so that's the way I tried to write the duck stories.\"",
+          "value": "Barks said in 1976, at the \"Newcon\" comics convention in Boston, that he \"tried to end each page, especially toward the latter part of the story, with a little zinger that would carry the reader forward. ... Sometimes the story would not lend itself to that kind of presentation, but that's the way we learned to do it at the Disney studios working on the short subjects. There had to be a little climax just about every few seconds on the screen, so that's the way I tried to write the duck stories.\"",
+          "bbox": [
+            {
+              "h": 80.89280487804878,
+              "w": 125.7055535442073,
+              "x": 13.222917301829268,
+              "y": 154.2077743902439,
+              "confidence": 0.99,
+              "end_index": 500,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "At the start, Barks says, he bought what was, in effect, a large bulletin board (he remembers that it was four feet by eight feet) \"and when I'd get a half sheet or a comic page done in pencil, I'd stick it up there, and then the next one, and the next one, and after I got about five of them done, I would sit back and look at the display and read the continuity. Sometimes I would take down two or three sheets and do a lot of erasing and changing. I was able to visualize my story progress much better that way.\" For the first year, too, Barks was working with six-panel pages, so that there were fewer and larger panels in a story; it was thus more natural to tell a highly visual story, through drawings that echoed the story",
+          "value": "At the start, Barks says, he bought what was, in effect, a large bulletin board (he remembers that it was four feet by eight feet) \"and when I'd get a half sheet or a comic page done in pencil, I'd stick it up there, and then the next one, and the next one, and after I got about five of them done, I would sit back and look at the display and read the continuity. Sometimes I would take down two or three sheets and do a lot of erasing and changing. I was able to visualize my story progress much better that way.\" For the first year, too, Barks was working with six-panel pages, so that there were fewer and larger panels in a story; it was thus more natural to tell a highly visual story, through drawings that echoed the story",
+          "bbox": [
+            {
+              "h": 118.70179115853655,
+              "w": 125.69077076981706,
+              "x": 13.39862995426829,
+              "y": 235.85993140243903,
+              "confidence": 0.99,
+              "end_index": 729,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "sketches for an animated cartoon.",
+          "value": "sketches for an animated cartoon.",
+          "bbox": [
+            {
+              "h": 6.724404535060974,
+              "w": 94.29984946646339,
+              "x": 150.85989329268293,
+              "y": 13.540536871189024,
+              "confidence": 0.94,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "However, the sketches on a storyboard are not really comparable to the panels in a comic strip or a comic-book story. For one thing, the sketches are not meant to stand by themselves. Disney story men typically would \"act out\" their stories while pointing to the drawings, and they could provide a continuity that might not be apparent from the drawings alone. The story sketches, after all, were only a starting point — the raw material from which directors, layout men, artists, and animators would fashion a film. They were not meant to stand on their own, as a comic strip's panels must.",
+          "value": "However, the sketches on a storyboard are not really comparable to the panels in a comic strip or a comic-book story. For one thing, the sketches are not meant to stand by themselves. Disney story men typically would \"act out\" their stories while pointing to the drawings, and they could provide a continuity that might not be apparent from the drawings alone. The story sketches, after all, were only a starting point — the raw material from which directors, layout men, artists, and animators would fashion a film. They were not meant to stand on their own, as a comic strip's panels must.",
+          "bbox": [
+            {
+              "h": 101.94468178353661,
+              "w": 125.64339557926826,
+              "x": 150.9073456554878,
+              "y": 21.38630144817073,
+              "confidence": 0.99,
+              "end_index": 590,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Beyond that, stories that are well suited to animation may not work well in comics form, for reasons that Barks discussed when I talked with him in 1973: \"You could draw just so much violent action in a comic book before it began to get tiresome. I think Floyd Gottfredson \\[artist for the Mickey Mouse newspaper strip] put his finger on it one time when I was talking to him, sometime in the nineteen-forties. I'd gone to the studio for something. He said, 'In the strip, the reader can hold it up, and he looks at it for a long, long time, but when it's on the screen, he sees it for a twenty-fourth of a second, and it's gone.' There's no chance for him to look at it too long. I remembered what he had told me, and I toned down my action a little bit after having talked with him.\"",
+          "value": "Beyond that, stories that are well suited to animation may not work well in comics form, for reasons that Barks discussed when I talked with him in 1973: \"You could draw just so much violent action in a comic book before it began to get tiresome. I think Floyd Gottfredson [artist for the Mickey Mouse newspaper strip] put his finger on it one time when I was talking to him, sometime in the nineteen-forties. I'd gone to the studio for something. He said, 'In the strip, the reader can hold it up, and he looks at it for a long, long time, but when it's on the screen, he sees it for a twenty-fourth of a second, and it's gone.' There's no chance for him to look at it too long. I remembered what he had told me, and I toned down my action a little bit after having talked with him.\"",
+          "bbox": [
+            {
+              "h": 125.96764481707318,
+              "w": 125.81528391768292,
+              "x": 150.35516958841464,
+              "y": 124.90198170731706,
+              "confidence": 0.99,
+              "end_index": 784,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's early stories were filled with panels that looked like frozen bits of violent action — like story sketches, or even frames of film. But the panels in a good comics story have got to \"breathe\" — they have to embrace more time than a frame of film. Otherwise the story can't flow. The continuity from panel to panel is interrupted, and it is this, more than the violence of the action, or anything else, that is truly tiresome.",
+          "value": "Barks's early stories were filled with panels that looked like frozen bits of violent action — like story sketches, or even frames of film. But the panels in a good comics story have got to \"breathe\" — they have to embrace more time than a frame of film. Otherwise the story can't flow. The continuity from panel to panel is interrupted, and it is this, more than the violence of the action, or anything else, that is truly tiresome.",
+          "bbox": [
+            {
+              "h": 74.02351371951222,
+              "w": 125.64867759146341,
+              "x": 150.48866044207315,
+              "y": 251.06666158536584,
+              "confidence": 0.99,
+              "end_index": 432,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "As the forties wore on, Barks took this increasingly into account. He began dealing with his panels as if they were scenes in a motion picture — individual shots, each",
+          "value": "As the forties wore on, Barks took this increasingly into account. He began dealing with his panels as if they were scenes in a motion picture — individual shots, each",
+          "bbox": [
+            {
+              "h": 29.567492378048755,
+              "w": 125.81007050304878,
+              "x": 150.41508955792682,
+              "y": 325.3072408536585,
+              "confidence": 0.99,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n35",
+              "value": "Carl Barks and the Art of the Comic Book\n35",
+              "bbox": [
+                {
+                  "h": 5.246547256097565,
+                  "w": 80.1752686737805,
+                  "x": 172.99958460365852,
+                  "y": 365.87153963414636,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n35",
+          "bbox": [
+            {
+              "h": 5.25,
+              "w": 80.18,
+              "x": 173.0,
+              "y": 365.87,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "35"
+    }
+  ]
+}

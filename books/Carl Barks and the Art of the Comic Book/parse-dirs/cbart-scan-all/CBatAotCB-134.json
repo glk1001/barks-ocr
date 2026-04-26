@@ -1,0 +1,442 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "the menehunes — the tiny ones. *(May 28, 1953)*",
+          "value": "the menehunes — the tiny ones. (May 28, 1953)",
+          "bbox": [
+            {
+              "h": 5.735900819359757,
+              "w": 103.05653391768293,
+              "x": 11.443402248475609,
+              "y": 16.55499523628049,
+              "confidence": 0.94,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "According to Barks, his wife Garé — who had begun working as his assistant only shortly before — suggested the locale for this story, and told him about the menehunes. *(August 1978 letter to Michael Barrier)*",
+          "value": "According to Barks, his wife Garé — who had begun working as his assistant only shortly before — suggested the locale for this story, and told him about the menehunes. (August 1978 letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 23.282633860518292,
+              "w": 126.07832983993902,
+              "x": 11.307621951219511,
+              "y": 22.706291444359756,
+              "confidence": 0.98,
+              "end_index": 208,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge finds a way to avoid paying a penny but still learns his weight. *(Feb. 6, 1953 \\[idea] and May 21, 1953 \\[art])*",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge finds a way to avoid paying a penny but still learns his weight. (Feb. 6, 1953 [idea] and May 21, 1953 [art])",
+          "bbox": [
+            {
+              "h": 18.021682545731718,
+              "w": 126.07063512290395,
+              "x": 11.402341249047256,
+              "y": 45.947349466463415,
+              "confidence": 0.98,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (back cover) - Scrooge loads down a passing bum with sacks of money. *(May 7, 1953 \\[idea] and May 21, 1953 \\[art])*",
+          "value": "UNCLE SCROOGE - 1 (back cover) - Scrooge loads down a passing bum with sacks of money. (May 7, 1953 [idea] and May 21, 1953 [art])",
+          "bbox": [
+            {
+              "h": 18.084077743902448,
+              "w": 126.34021496284299,
+              "x": 11.385269031059451,
+              "y": 63.69021722560975,
+              "confidence": 0.98,
+              "end_index": 133,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's list shows him receiving credit for \"art\" on both of the above dates, but the May 7, 1953, entry is almost certainly for the gag idea.",
+          "value": "Barks's list shows him receiving credit for \"art\" on both of the above dates, but the May 7, 1953, entry is almost certainly for the gag idea.",
+          "bbox": [
+            {
+              "h": 18.077515243902436,
+              "w": 126.00238912442832,
+              "x": 11.604489686547256,
+              "y": 81.82040396341463,
+              "confidence": 0.98,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 5 - Mar.-May 1954 - 36 pages",
+          "value": "5 - Mar.-May 1954 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.680632621951217,
+              "w": 71.76683045922256,
+              "x": 12.304488138338412,
+              "y": 105.0538262195122,
+              "confidence": 0.95,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge plays a cash register as if it were a piano. *(July 30, 1953)*",
+          "value": "Front cover (art only): Scrooge plays a cash register as if it were a piano. (July 30, 1953)",
+          "bbox": [
+            {
+              "h": 12.217042682926825,
+              "w": 125.8313239567454,
+              "x": 11.499312476181402,
+              "y": 110.3187118902439,
+              "confidence": 0.97,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"I think the idea was mine, too. No payment to prove it.\"\nReprinted: *Uncle Scrooge* No. 106, August 1973.",
+          "value": "Barks: \"I think the idea was mine, too. No payment to prove it.\"\nReprinted: Uncle Scrooge No. 106, August 1973.",
+          "bbox": [
+            {
+              "h": 11.9636318597561,
+              "w": 121.55524461699694,
+              "x": 15.646702791539633,
+              "y": 122.49942073170732,
+              "confidence": 0.96,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge invites a sideshow freak to dinner during \"hospitality week.\" *(July 30, 1953)*",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge invites a sideshow freak to dinner during \"hospitality week.\" (July 30, 1953)",
+          "bbox": [
+            {
+              "h": 17.645442073170724,
+              "w": 126.09483184070122,
+              "x": 11.513256002286585,
+              "y": 134.47286204268292,
+              "confidence": 0.98,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 32 - Scrooge buys up all the 1916 quarters ever minted and sinks all but one deep in the Atlantic, with the aim of making that one coin the most",
+          "value": "UNCLE SCROOGE - 32 - Scrooge buys up all the 1916 quarters ever minted and sinks all but one deep in the Atlantic, with the aim of making that one coin the most",
+          "bbox": [
+            {
+              "h": 18.05532393292681,
+              "w": 126.24951183784296,
+              "x": 11.565371927400912,
+              "y": 152.1353163109756,
+              "confidence": 0.98,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "valuable in the world. But the last quarter is flattened by a steamroller and so Scrooge must dive into the Atlantic to get another. There, the ducks find Atlantis, a sunken city populated by fish-men who breathe under water. *(July 30, 1953)*",
+          "value": "valuable in the world. But the last quarter is flattened by a steamroller and so Scrooge must dive into the Atlantic to get another. There, the ducks find Atlantis, a sunken city populated by fish-men who breathe under water. (July 30, 1953)",
+          "bbox": [
+            {
+              "h": 29.39593416539634,
+              "w": 126.14885670731707,
+              "x": 150.20403201219509,
+              "y": 15.426446741615855,
+              "confidence": 0.99,
+              "end_index": 242,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mentioned in this story is the \"Junior Woodchucks' Book of Knowledge,\" the famous Junior Woodchuck Guidebook in embryo.",
+          "value": "Mentioned in this story is the \"Junior Woodchucks' Book of Knowledge,\" the famous Junior Woodchuck Guidebook in embryo.",
+          "bbox": [
+            {
+              "h": 17.086349085365853,
+              "w": 126.11622141768295,
+              "x": 150.25854992378046,
+              "y": 45.41618140243903,
+              "confidence": 0.98,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge's \"worry room\" first appears in this story.",
+          "value": "Scrooge's \"worry room\" first appears in this story.",
+          "bbox": [
+            {
+              "h": 5.872374237804883,
+              "w": 97.91159679878047,
+              "x": 155.13597370426828,
+              "y": 63.15629954268292,
+              "confidence": 0.94,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks says that the idea for this story came from Chase Craig, one of his editors at Western.",
+          "value": "Barks says that the idea for this story came from Chase Craig, one of his editors at Western.",
+          "bbox": [
+            {
+              "h": 11.21450076219513,
+              "w": 126.03635670731707,
+              "x": 150.5225476371951,
+              "y": 69.23843368902439,
+              "confidence": 0.96,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 1, June 1968.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 1, June 1968.",
+          "bbox": [
+            {
+              "h": 5.769460746951217,
+              "w": 112.74839176829269,
+              "x": 155.34005144817073,
+              "y": 81.00276105182927,
+              "confidence": 0.93,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - On a cruise ship, Scrooge watches native boys risk their lives for pennies thrown in the water. *(July 30, 1953)*",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - On a cruise ship, Scrooge watches native boys risk their lives for pennies thrown in the water. (July 30, 1953)",
+          "bbox": [
+            {
+              "h": 17.701572027439028,
+              "w": 125.85652820121948,
+              "x": 150.8391768292683,
+              "y": 86.70096608231707,
+              "confidence": 0.97,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (back cover) - To celebrate a big business deal, Scrooge buys one soda, and five straws, for himself, Donald and the nephews. *(July 30, 1953)*",
+          "value": "UNCLE SCROOGE - 1 (back cover) - To celebrate a big business deal, Scrooge buys one soda, and five straws, for himself, Donald and the nephews. (July 30, 1953)",
+          "bbox": [
+            {
+              "h": 18.01464557926829,
+              "w": 126.23753620426828,
+              "x": 150.9178582317073,
+              "y": 104.35634908536585,
+              "confidence": 0.98,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 6 - June-Aug. 1954 - 36 pages",
+          "value": "6 - June-Aug. 1954 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.9274923780487825,
+              "w": 71.19207507621951,
+              "x": 151.19809641768293,
+              "y": 128.49784298780486,
+              "confidence": 0.95,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge scrubs bills on a washboard. *(Not listed.)*",
+          "value": "Front cover: Scrooge scrubs bills on a washboard. (Not listed.)",
+          "bbox": [
+            {
+              "h": 11.44418826219513,
+              "w": 126.1400419207317,
+              "x": 150.89588986280486,
+              "y": 134.24349466463414,
+              "confidence": 0.97,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 72, December 1967.",
+          "value": "Reprinted: Uncle Scrooge No. 72, December 1967.",
+          "bbox": [
+            {
+              "h": 5.508932926829274,
+              "w": 100.51295350609753,
+              "x": 155.8063776676829,
+              "y": 146.36471798780485,
+              "confidence": 0.92,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge is reluctant to pay the price for a paper with news about his big oil strike. *(Oct. 15, 1953 \\[idea] and Oct. 29, 1953 \\[art])*",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge is reluctant to pay the price for a paper with news about his big oil strike. (Oct. 15, 1953 [idea] and Oct. 29, 1953 [art])",
+          "bbox": [
+            {
+              "h": 17.966764481707305,
+              "w": 126.24453315548779,
+              "x": 151.2336471036585,
+              "y": 151.82359756097563,
+              "confidence": 0.98,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "A large comic panel showing a chaotic barroom brawl in the Klondike. Scrooge McDuck is in the center, swinging his fists and knocking down several large, bearded men. In the upper left, a speech bubble reads: \"IT WAS A FIGHT TO BE PROUD OF! I WAS LIKE A BUZZSAW! MEN FELL IN ROWS LIKE DOMINOES!\"",
+          "md": "![A large comic panel showing a chaotic barroom brawl in the Klondike. Scrooge McDuck is in the center, swinging his fists and knocking down several large, bearded men. In the upper left, a speech bubble reads: \"IT WAS A FIGHT TO BE PROUD OF! I WAS LIKE A BUZZSAW! MEN FELL IN ROWS LIKE DOMINOES!\"](CBatAotCB-134_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-134_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 163.5152515243903,
+              "w": 227.75272794397864,
+              "x": 32.13070955602134,
+              "y": 175.9926219512195,
+              "confidence": 0.99,
+              "end_index": 320,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "This half-page panel was deleted from \"Back to the Klondike\" in *Uncle Scrooge* Four Color No. 456, 1953, before publication; © Walt Disney Productions.",
+          "value": "This half-page panel was deleted from \"Back to the Klondike\" in Uncle Scrooge Four Color No. 456, 1953, before publication; © Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 12.42722560975606,
+              "w": 227.2226638719512,
+              "x": 32.467585746951215,
+              "y": 338.9474085365854,
+              "confidence": 0.92,
+              "end_index": 151,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "134 Carl Barks and the Art of the Comic Book",
+              "value": "134 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.442858231707359,
+                  "w": 77.88075743140243,
+                  "x": 38.577321836890235,
+                  "y": 364.27920731707314,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "134 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.44,
+              "w": 77.88,
+              "x": 38.58,
+              "y": 364.28,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "134"
+    }
+  ]
+}

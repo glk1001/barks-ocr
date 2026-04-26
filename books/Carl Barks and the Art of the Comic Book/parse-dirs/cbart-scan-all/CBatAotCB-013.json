@@ -1,0 +1,101 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A three-panel comic strip showing a dog and cat chasing each other around an outhouse. In the first panel, they run around it. In the second, they wrap a rope around it. In the third, the outhouse is lifted up by the rope, revealing the dog and cat inside, with the dog exclaiming \"WHAT THA-!\"",
+          "md": "![A three-panel comic strip showing a dog and cat chasing each other around an outhouse. In the first panel, they run around it. In the second, they wrap a rope around it. In the third, the outhouse is lifted up by the rope, revealing the dog and cat inside, with the dog exclaiming \"WHAT THA-!\"](CBatAotCB-013_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-013_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 235.2850216749238,
+              "w": 145.80927353277437,
+              "x": 51.350183403201214,
+              "y": 11.87592344702744,
+              "confidence": 0.98,
+              "end_index": 318,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "On this page and the three following are examples of Barks's work as a cartoonist for the *Calgary Eye-Opener*. He was the art director of *Coo-Coo*, a short lived (one issue in 1932) magazine from the publisher of *Eye-Opener*.",
+          "value": "On this page and the three following are examples of Barks's work as a cartoonist for the Calgary Eye-Opener. He was the art director of Coo-Coo, a short lived (one issue in 1932) magazine from the publisher of Eye-Opener.",
+          "bbox": [
+            {
+              "h": 42.16964176829269,
+              "w": 72.74570693597559,
+              "x": 201.681493902439,
+              "y": 204.81212652439027,
+              "confidence": 0.87,
+              "end_index": 227,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "A two-panel comic strip about a tattoo artist. In the first panel, a man asks a sailor, \"WHY DO YOU WANT MABEL TAKEN OFF YOUR ARM?\" A sign reads \"TATTOOS PUT ON OR TOOK OFF $3.00 PER.\" In the second panel, the sailor shows his arm where the tattoo has been modified to look like a different woman, saying \"SEE!\"",
+          "md": "![A two-panel comic strip about a tattoo artist. In the first panel, a man asks a sailor, \"WHY DO YOU WANT MABEL TAKEN OFF YOUR ARM?\" A sign reads \"TATTOOS PUT ON OR TOOK OFF $3.00 PER.\" In the second panel, the sailor shows his arm where the tattoo has been modified to look like a different woman, saying \"SEE!\"](CBatAotCB-013_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-013_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 70.25119664634144,
+              "w": 262.96799328315547,
+              "x": 12.052422113185974,
+              "y": 284.81346036585364,
+              "confidence": 0.95,
+              "end_index": 336,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n13",
+              "value": "Carl Barks and the Art of the Comic Book\n13",
+              "bbox": [
+                {
+                  "h": 5.7714557926829,
+                  "w": 80.23318216463412,
+                  "x": 173.19747141768292,
+                  "y": 366.38094512195124,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n13",
+          "bbox": [
+            {
+              "h": 5.77,
+              "w": 80.23,
+              "x": 173.2,
+              "y": 366.38,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "13"
+    }
+  ]
+}

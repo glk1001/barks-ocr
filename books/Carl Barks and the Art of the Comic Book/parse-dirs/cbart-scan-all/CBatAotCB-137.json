@@ -1,0 +1,595 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "slithered in behind this cliff and all the boys but me went ashore for the raid!\" One of the Beagle Boys pictured says, \"Quiet! This'll be a SNEAK job!\" The next caption is, \"They climbed the cliff! I watched 'em! And then — And then —.\" The other line has the scene back on the boat. Huey says, \"WHAT?\" and the Beagle Boy says, \"ZOWIE! Just like that they turned to STONE!\" Huey: \"Yu expect us to believe THAT?\" Beagle: \"It's the TRUTH! Somebody did it! Maybe MARTIANS with a RAY!\" There could be more cut here, though, and this explanation may be wrong.",
+          "value": "slithered in behind this cliff and all the boys but me went ashore for the raid!\" One of the Beagle Boys pictured says, \"Quiet! This'll be a SNEAK job!\" The next caption is, \"They climbed the cliff! I watched 'em! And then — And then —.\" The other line has the scene back on the boat. Huey says, \"WHAT?\" and the Beagle Boy says, \"ZOWIE! Just like that they turned to STONE!\" Huey: \"Yu expect us to believe THAT?\" Beagle: \"It's the TRUTH! Somebody did it! Maybe MARTIANS with a RAY!\" There could be more cut here, though, and this explanation may be wrong.",
+          "bbox": [
+            {
+              "h": 59.229625095274386,
+              "w": 125.63558510384908,
+              "x": 11.63158143578506,
+              "y": 18.306809737042684,
+              "confidence": 0.99,
+              "end_index": 554,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Two other finished half pages are known. One, numbered 16 (top), fits neatly immediately after published page 15. Donald says, \"I'll help you, Uncle Scrooge!\" and one of the nephews says, \"Come back here!\" Donald tells the nephews they are worrying too much and convinces the two with him to come up and help Scrooge. In the fourth panel we see Huey, still down on the beach questioning the Beagle Boy. There could be another half page between this and the published top of page 16. Or it is possible that the published top could have just been added to replace this one.",
+          "value": "Two other finished half pages are known. One, numbered 16 (top), fits neatly immediately after published page 15. Donald says, \"I'll help you, Uncle Scrooge!\" and one of the nephews says, \"Come back here!\" Donald tells the nephews they are worrying too much and convinces the two with him to come up and help Scrooge. In the fourth panel we see Huey, still down on the beach questioning the Beagle Boy. There could be another half page between this and the published top of page 16. Or it is possible that the published top could have just been added to replace this one.",
+          "bbox": [
+            {
+              "h": 57.990062881097565,
+              "w": 125.91899163967224,
+              "x": 11.213457864900914,
+              "y": 78.56382050304877,
+              "confidence": 0.99,
+              "end_index": 570,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The other known half page would fit in place of the bottom half of page 17 (although that implies that another half page or more was probably cut between it and published page 18). In the first two panels, Scrooge says, \"Sure enough! I can HEAR the ray bouncing off me — Zing! Zing! Zing!\" \"That means I'm safe while I get the boys out of danger!\" The other two panels on this half page are identical to panels 5 and 6 of published page 17 but redrawn and with different shading. I suspect that what is published as the bottom half of page 17 was a half page that was redrawn to replace and condense a page or more in the original version. This story, I think, had a rough gestation period and required a lot of revising. However, too many pieces of this particular puzzle are missing to say exactly what happened. I feel reasonably sure that up to three more full pages from this story exist or did exist and were probably given away to fans by Barks many years ago.",
+          "value": "The other known half page would fit in place of the bottom half of page 17 (although that implies that another half page or more was probably cut between it and published page 18). In the first two panels, Scrooge says, \"Sure enough! I can HEAR the ray bouncing off me — Zing! Zing! Zing!\" \"That means I'm safe while I get the boys out of danger!\" The other two panels on this half page are identical to panels 5 and 6 of published page 17 but redrawn and with different shading. I suspect that what is published as the bottom half of page 17 was a half page that was redrawn to replace and condense a page or more in the original version. This story, I think, had a rough gestation period and required a lot of revising. However, too many pieces of this particular puzzle are missing to say exactly what happened. I feel reasonably sure that up to three more full pages from this story exist or did exist and were probably given away to fans by Barks many years ago.",
+          "bbox": [
+            {
+              "h": 94.23928353658536,
+              "w": 125.89920124333078,
+              "x": 11.39344929020579,
+              "y": 137.75025914634148,
+              "confidence": 0.99,
+              "end_index": 966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\[In the 1974 interview, Barks said he had no specific memories about whether this story had been planned as thirty-two pages. Then he added, \"I think the reason there was some cutting on that was that I had decided I had gotten a little repetitious with my stuff. ... I don't think it was planned to be a longer story, it was just that I got to looking at it and decided I could put in stronger business. Substitutions, rather than cuts.\"]",
+          "value": "[In the 1974 interview, Barks said he had no specific memories about whether this story had been planned as thirty-two pages. Then he added, \"I think the reason there was some cutting on that was that I had decided I had gotten a little repetitious with my stuff. ... I don't think it was planned to be a longer story, it was just that I got to looking at it and decided I could put in stronger business. Substitutions, rather than cuts.\"]",
+          "bbox": [
+            {
+              "h": 46.6936737804878,
+              "w": 125.83328863376522,
+              "x": 11.213173828124999,
+              "y": 232.9202057926829,
+              "confidence": 0.99,
+              "end_index": 439,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 111, April 1974.",
+          "value": "Reprinted: Uncle Scrooge No. 111, April 1974.",
+          "bbox": [
+            {
+              "h": 5.522057926829275,
+              "w": 92.47133538967223,
+              "x": 15.63956971703506,
+              "y": 279.9707698170732,
+              "confidence": 0.93,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 4 - Scrooge faces the necessity of spending money in his campaign for treasurer of Duckburg. (June 10, 1954)",
+          "value": "UNCLE SCROOGE - 4 - Scrooge faces the necessity of spending money in his campaign for treasurer of Duckburg. (June 10, 1954)",
+          "bbox": [
+            {
+              "h": 17.332408536585334,
+              "w": 125.84976919778961,
+              "x": 11.467679354039634,
+              "y": 285.4769131097561,
+              "confidence": 0.96,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: The Best of Donald Duck and Uncle Scrooge No. 2, 1967.",
+          "value": "Reprinted: The Best of Donald Duck and Uncle Scrooge No. 2, 1967.",
+          "bbox": [
+            {
+              "h": 10.26375,
+              "w": 125.62695896055638,
+              "x": 11.705666801638719,
+              "y": 303.5228048780488,
+              "confidence": 0.96,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge rents his limousine as a taxi on a rainy day. (June 10, 1954)",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge rents his limousine as a taxi on a rainy day. (June 10, 1954)",
+          "bbox": [
+            {
+              "h": 11.707545731707304,
+              "w": 125.66320848418444,
+              "x": 11.469069526486278,
+              "y": 315.1440320121951,
+              "confidence": 0.94,
+              "end_index": 108,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: The Best of Donald Duck and Uncle Scrooge No. 2, 1967.",
+          "value": "Reprinted: The Best of Donald Duck and Uncle Scrooge No. 2, 1967.",
+          "bbox": [
+            {
+              "h": 10.3520807926829,
+              "w": 125.51636254287345,
+              "x": 11.776776748285059,
+              "y": 326.99094512195126,
+              "confidence": 0.95,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (back cover) - Scrooge uses his electric blanket to hatch out chicks. (June 10, 1954)",
+          "value": "UNCLE SCROOGE - 1 (back cover) - Scrooge uses his electric blanket to hatch out chicks. (June 10, 1954)",
+          "bbox": [
+            {
+              "h": 11.72414634146342,
+              "w": 125.39574980945122,
+              "x": 11.720270579268291,
+              "y": 338.6180030487805,
+              "confidence": 0.97,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 9 - Mar.-May 1955 - 36 pages",
+          "value": "9 - Mar.-May 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.651841653963416,
+              "w": 71.40827743902437,
+              "x": 150.4502286585366,
+              "y": 18.3029296875,
+              "confidence": 0.96,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge trims a topiary bush in the shape of a dollar sign. (Sept. 17, 1953 \\[idea] and Oct. 8, 1953 \\[art])",
+          "value": "Front cover: Scrooge trims a topiary bush in the shape of a dollar sign. (Sept. 17, 1953 [idea] and Oct. 8, 1953 [art])",
+          "bbox": [
+            {
+              "h": 11.94562214176829,
+              "w": 125.72327743902437,
+              "x": 150.30670541158537,
+              "y": 24.049630335365855,
+              "confidence": 0.97,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge brags to Donald about his fabulous \"lawnmower\" — a sheep. (July 22, 1954)",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge brags to Donald about his fabulous \"lawnmower\" — a sheep. (July 22, 1954)",
+          "bbox": [
+            {
+              "h": 16.57809260670732,
+              "w": 125.88158346036582,
+              "x": 150.16842987804878,
+              "y": 36.114455030487804,
+              "confidence": 0.97,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in The Lemming With the Locket - 22 - Scrooge hides the combination to his new safe in a locket that accidentally falls around the neck of a lemming that Donald and the nephews have brought to his office. The lemming escapes onto a schooner, and the ducks follow the ship to Norway, where they find millions of lemmings marching to the sea. (July 15, 1954)",
+          "value": "UNCLE SCROOGE in The Lemming With the Locket - 22 - Scrooge hides the combination to his new safe in a locket that accidentally falls around the neck of a lemming that Donald and the nephews have brought to his office. The lemming escapes onto a schooner, and the ducks follow the ship to Norway, where they find millions of lemmings marching to the sea. (July 15, 1954)",
+          "bbox": [
+            {
+              "h": 41.46713986280488,
+              "w": 125.97575076219512,
+              "x": 150.058056402439,
+              "y": 53.83887576219512,
+              "confidence": 0.99,
+              "end_index": 369,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 104, \\[April] 1973.",
+          "value": "Reprinted: Uncle Scrooge No. 104, [April] 1973.",
+          "bbox": [
+            {
+              "h": 5.654565548780492,
+              "w": 94.61282583841461,
+              "x": 154.79886814024388,
+              "y": 95.76883765243903,
+              "confidence": 0.91,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in The Tuckered Tiger - 9 3/4 - Scrooge matches his race horse against the Maharajah of Swingingdore's tiger in a race the loser of which must pay the winner the loser's weight in diamonds. (June 24, 1954)",
+          "value": "UNCLE SCROOGE in The Tuckered Tiger - 9 3/4 - Scrooge matches his race horse against the Maharajah of Swingingdore's tiger in a race the loser of which must pay the winner the loser's weight in diamonds. (June 24, 1954)",
+          "bbox": [
+            {
+              "h": 23.371509146341463,
+              "w": 126.00802591463412,
+              "x": 150.02116806402438,
+              "y": 101.42595274390244,
+              "confidence": 0.96,
+              "end_index": 218,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The tenth page is filled out with an advertisement.",
+          "value": "The tenth page is filled out with an advertisement.",
+          "bbox": [
+            {
+              "h": 5.410644054878057,
+              "w": 101.96236852134142,
+              "x": 154.88329458841463,
+              "y": 125.29206173780487,
+              "confidence": 0.9,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge runs a ski lift that's free — on the way up only. (July 22, 1954)",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge runs a ski lift that's free — on the way up only. (July 22, 1954)",
+          "bbox": [
+            {
+              "h": 11.425163871951217,
+              "w": 125.73704839939026,
+              "x": 150.15409298780486,
+              "y": 131.48482088414633,
+              "confidence": 0.91,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (back cover) - Scrooge relaxes by \"fishing\" in his money bin. (July 22, 1954)",
+          "value": "UNCLE SCROOGE - 1 (back cover) - Scrooge relaxes by \"fishing\" in his money bin. (July 22, 1954)",
+          "bbox": [
+            {
+              "h": 11.482111280487796,
+              "w": 126.13825838414631,
+              "x": 150.01705221036585,
+              "y": 143.123974847561,
+              "confidence": 0.92,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 10 - June-Aug. 1955 - 36 pages",
+          "value": "10 - June-Aug. 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6665929878048695,
+              "w": 73.87113567073168,
+              "x": 150.18286966463413,
+              "y": 160.96278201219513,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge drops loose coins and bills in a money-sorting machine. (Sept. 23, 1954)",
+          "value": "Front cover: Scrooge drops loose coins and bills in a money-sorting machine. (Sept. 23, 1954)",
+          "bbox": [
+            {
+              "h": 11.541482469512202,
+              "w": 125.89549161585362,
+              "x": 150.07405678353658,
+              "y": 166.89940929878048,
+              "confidence": 0.96,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 67, January 1967; No. 132, September 1976",
+          "value": "Reprinted: Uncle Scrooge No. 67, January 1967; No. 132, September 1976",
+          "bbox": [
+            {
+              "h": 11.052176067073159,
+              "w": 126.03851753048777,
+              "x": 149.88966653963413,
+              "y": 178.96289634146342,
+              "confidence": 0.96,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge brings a folding cup to the diner. (Dec. 9, 1954)",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge brings a folding cup to the diner. (Dec. 9, 1954)",
+          "bbox": [
+            {
+              "h": 11.65007240853658,
+              "w": 125.72835365853658,
+              "x": 150.09202934451216,
+              "y": 190.38140625,
+              "confidence": 0.96,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in \"The Fabulous Philosopher's Stone\" - 24 - The ducks search for the philosopher's stone — which can turn other metals into gold — all over Europe, following a trail that finally leads them to the labyrinth of Crete. (Oct. 28, 1954)",
+          "value": "UNCLE SCROOGE in \"The Fabulous Philosopher's Stone\" - 24 - The ducks search for the philosopher's stone — which can turn other metals into gold — all over Europe, following a trail that finally leads them to the labyrinth of Crete. (Oct. 28, 1954)",
+          "bbox": [
+            {
+              "h": 29.074047256097565,
+              "w": 126.13316501524388,
+              "x": 149.84734184451216,
+              "y": 202.2204649390244,
+              "confidence": 0.96,
+              "end_index": 246,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 67, January 1967; No. 132, September 1976.",
+          "value": "Reprinted: Uncle Scrooge No. 67, January 1967; No. 132, September 1976.",
+          "bbox": [
+            {
+              "h": 10.964153963414637,
+              "w": 125.89092987804878,
+              "x": 149.8738719512195,
+              "y": 232.16048780487804,
+              "confidence": 0.96,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in \"Heirloom Watch\" - 8 - Scrooge is told that he can claim his great-uncle's estate only by presenting the old McDuck heirloom watch — which he has just thrown away because it fell apart. (Nov. 11, 1954)",
+          "value": "UNCLE SCROOGE in \"Heirloom Watch\" - 8 - Scrooge is told that he can claim his great-uncle's estate only by presenting the old McDuck heirloom watch — which he has just thrown away because it fell apart. (Nov. 11, 1954)",
+          "bbox": [
+            {
+              "h": 23.718567073170725,
+              "w": 125.69962842987805,
+              "x": 150.01459984756096,
+              "y": 243.57884908536585,
+              "confidence": 0.96,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge sets up a pottery shop on a bad curve in the road. (Dec. 9, 1954)",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge sets up a pottery shop on a bad curve in the road. (Dec. 9, 1954)",
+          "bbox": [
+            {
+              "h": 11.995815548780465,
+              "w": 125.61657393292681,
+              "x": 149.9156307164634,
+              "y": 267.3897942073171,
+              "confidence": 0.94,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 11 - Sept.-Nov. 1955 - 36 pages",
+          "value": "11 - Sept.-Nov. 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.720396341463419,
+              "w": 74.32739519817075,
+              "x": 150.00252667682923,
+              "y": 285.42557926829267,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge irons wrinkled bills. (Feb. 24, 1955)\nReprinted: Uncle Scrooge No. 148, January 1978.",
+          "value": "Front cover: Scrooge irons wrinkled bills. (Feb. 24, 1955)\nReprinted: Uncle Scrooge No. 148, January 1978.",
+          "bbox": [
+            {
+              "h": 11.563285060975595,
+              "w": 120.38096798780487,
+              "x": 154.4688795731707,
+              "y": 291.34955030487805,
+              "confidence": 0.95,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in The Great Steamboat Race - 16 - Scrooge and \"Horseshoe\" Hogg raise two steamboats from the Mississippi to finish a race that their uncles started in 1870 — a race to decide the ownership of Cornpone Gables, an old Southern mansion. (Feb. 3, 1955)",
+          "value": "UNCLE SCROOGE in The Great Steamboat Race - 16 - Scrooge and \"Horseshoe\" Hogg raise two steamboats from the Mississippi to finish a race that their uncles started in 1870 — a race to decide the ownership of Cornpone Gables, an old Southern mansion. (Feb. 3, 1955)",
+          "bbox": [
+            {
+              "h": 29.23753810975606,
+              "w": 126.1342625762195,
+              "x": 149.74056974085366,
+              "y": 303.0839405487805,
+              "confidence": 0.98,
+              "end_index": 262,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 72, December 1967; No. 155, August 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 72, December 1967; No. 155, August 1978.",
+          "bbox": [
+            {
+              "h": 10.717431402439015,
+              "w": 125.94369855182927,
+              "x": 149.76720274390243,
+              "y": 333.0257469512195,
+              "confidence": 0.96,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in \"Riches, Riches, Everywhere!\" - 16 -",
+          "value": "UNCLE SCROOGE in \"Riches, Riches, Everywhere!\" - 16 -",
+          "bbox": [
+            {
+              "h": 5.697873475609795,
+              "w": 120.74847942073168,
+              "x": 155.02625190548778,
+              "y": 344.563125,
+              "confidence": 0.96,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n137",
+              "value": "Carl Barks and the Art of the Comic Book\n137",
+              "bbox": [
+                {
+                  "h": 4.430236280487825,
+                  "w": 77.83165015243904,
+                  "x": 172.45963605182925,
+                  "y": 361.708125,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n137",
+          "bbox": [
+            {
+              "h": 4.43,
+              "w": 77.83,
+              "x": 172.46,
+              "y": 361.71,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "137"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "ten years or more. The experience was like sharpening a two-edged sword. My dislike for some of Barks's stories — especially his later ones — was heightened, to the point that there are many stories I am sure that I will never read again. But on the other hand, my enthusiasm for Barks's best stories was greater after reading them than it had been before. I cannot count the times that I have read \"Letter to Santa\" in *Christmas Parade* No. 1 (1949), and yet, reading it again, I found myself laughing aloud over and over again.",
+          "value": "ten years or more. The experience was like sharpening a two-edged sword. My dislike for some of Barks's stories — especially his later ones — was heightened, to the point that there are many stories I am sure that I will never read again. But on the other hand, my enthusiasm for Barks's best stories was greater after reading them than it had been before. I cannot count the times that I have read \"Letter to Santa\" in Christmas Parade No. 1 (1949), and yet, reading it again, I found myself laughing aloud over and over again.",
+          "bbox": [
+            {
+              "h": 88.00505430640244,
+              "w": 126.06729206364328,
+              "x": 12.613996046112804,
+              "y": 15.500387766768293,
+              "confidence": 0.99,
+              "end_index": 529,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Carl Barks, when he was good, was extraordinary. If I am sure of anything, it is that the few dozen stories he wrote and drew when he was at the height of his powers will be delighting new readers many years from now.",
+          "value": "Carl Barks, when he was good, was extraordinary. If I am sure of anything, it is that the few dozen stories he wrote and drew when he was at the height of his powers will be delighting new readers many years from now.",
+          "bbox": [
+            {
+              "h": 36.94729801829268,
+              "w": 125.96618354611279,
+              "x": 12.65413848132622,
+              "y": 103.94439786585366,
+              "confidence": 0.99,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Many people assisted me during the nearly twelve years that this book has been gestating. The following among Carl Barks's fans deserve special thanks: Tom Andrae, John Benson, Steve Eng, Charles Heffelfinger, Leonard Hollman, Alan Hutchinson, Matt Rosenblatt, Don and Maggie Thompson, and Andy Zerbe. They represent not only themselves but all of the other fans who have offered me encouragement and suggestions and bits of information along the way.",
+          "value": "Many people assisted me during the nearly twelve years that this book has been gestating. The following among Carl Barks's fans deserve special thanks: Tom Andrae, John Benson, Steve Eng, Charles Heffelfinger, Leonard Hollman, Alan Hutchinson, Matt Rosenblatt, Don and Maggie Thompson, and Andy Zerbe. They represent not only themselves but all of the other fans who have offered me encouragement and suggestions and bits of information along the way.",
+          "bbox": [
+            {
+              "h": 81.04346798780489,
+              "w": 126.09568073551829,
+              "x": 12.827216558689024,
+              "y": 148.23240091463413,
+              "confidence": 0.99,
+              "end_index": 450,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Donald Ault read the manuscript and made a number of helpful suggestions, and was of invaluable assistance in tracking down some unpublished material.",
+          "value": "Donald Ault read the manuscript and made a number of helpful suggestions, and was of invaluable assistance in tracking down some unpublished material.",
+          "bbox": [
+            {
+              "h": 29.75899390243904,
+              "w": 125.96815465415395,
+              "x": 13.068511694931402,
+              "y": 229.55019054878048,
+              "confidence": 0.99,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "So was Markku Kivekäs; in particular it is thanks to him that Barks's \"bridle\" gag for Uncle Scrooge is reproduced in this book.",
+          "value": "So was Markku Kivekäs; in particular it is thanks to him that Barks's \"bridle\" gag for Uncle Scrooge is reproduced in this book.",
+          "bbox": [
+            {
+              "h": 28.7596875,
+              "w": 126.02511528201217,
+              "x": 13.017107469512194,
+              "y": 260.41447408536584,
+              "confidence": 0.99,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barbara Boatner generously provided me with many of her photographs as illustrations, and also copied a number of Carl Barks's own photos for reproduction in this book. Steve Gong loaned me what turned out to be a perfect illustration for the cover of the book.",
+          "value": "Barbara Boatner generously provided me with many of her photographs as illustrations, and also copied a number of Carl Barks's own photos for reproduction in this book. Steve Gong loaned me what turned out to be a perfect illustration for the cover of the book.",
+          "bbox": [
+            {
+              "h": 43.57934451219513,
+              "w": 126.01121141387193,
+              "x": 12.300764576981706,
+              "y": 288.9442682926829,
+              "confidence": 0.99,
+              "end_index": 260,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Among Carl Barks's former colleagues at the Disney studio and at Western Publishing Company, Jack Hannah, Chuck Couch, Hom-",
+          "value": "Among Carl Barks's former colleagues at the Disney studio and at Western Publishing Company, Jack Hannah, Chuck Couch, Hom-",
+          "bbox": [
+            {
+              "h": 22.15982469512197,
+              "w": 125.78938726657773,
+              "x": 12.683355683117377,
+              "y": 333.2806783536585,
+              "confidence": 0.98,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "er Brightman, Chase Craig, and Roger Armstrong were generous in sharing their memories and, in some instances, potential illustrations for the book.",
+          "value": "er Brightman, Chase Craig, and Roger Armstrong were generous in sharing their memories and, in some instances, potential illustrations for the book.",
+          "bbox": [
+            {
+              "h": 28.226760194359755,
+              "w": 125.78264862804875,
+              "x": 149.90806783536584,
+              "y": 15.82797970655488,
+              "confidence": 0.99,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "David R. Smith, the Disney studio's archivist, read part of the manuscript and made a number of helpful suggestions, and also provided me with valuable information about Carl Barks's association with the studio. He also made available to me letters and other material from the Disney Archives.",
+          "value": "David R. Smith, the Disney studio's archivist, read part of the manuscript and made a number of helpful suggestions, and also provided me with valuable information about Carl Barks's association with the studio. He also made available to me letters and other material from the Disney Archives.",
+          "bbox": [
+            {
+              "h": 51.310163871951225,
+              "w": 126.00072027439023,
+              "x": 149.66305449695122,
+              "y": 45.38574695121951,
+              "confidence": 0.99,
+              "end_index": 292,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Milt Gray, formerly my co-editor of *Funnyworld* and a laborer in the vineyard of animation and the comics for many years, was helpful and encouraging in more ways than I can count.",
+          "value": "Milt Gray, formerly my co-editor of Funnyworld and a laborer in the vineyard of animation and the comics for many years, was helpful and encouraging in more ways than I can count.",
+          "bbox": [
+            {
+              "h": 35.66988567073171,
+              "w": 125.94366425304878,
+              "x": 149.72686737804878,
+              "y": 97.14647103658535,
+              "confidence": 0.99,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Kim Weston—the most dedicated Barks fan I know — gave the manuscript by far its most thorough reading and uncovered dozens of errors that quite likely would have escaped my attention otherwise. He has taken a continuing and active interest in this book — especially in its accuracy and completeness— and has expressed that interest by assisting me repeatedly, in large ways and small. He has given me more help than any other person — with one exception.",
+          "value": "Kim Weston—the most dedicated Barks fan I know — gave the manuscript by far its most thorough reading and uncovered dozens of errors that quite likely would have escaped my attention otherwise. He has taken a continuing and active interest in this book — especially in its accuracy and completeness— and has expressed that interest by assisting me repeatedly, in large ways and small. He has given me more help than any other person — with one exception.",
+          "bbox": [
+            {
+              "h": 81.00130335365851,
+              "w": 126.15696836890243,
+              "x": 149.60745617378046,
+              "y": 134.2619131097561,
+              "confidence": 0.99,
+              "end_index": 453,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "That exception is, of course, Carl Barks. To catalog the assistance he and his wife Garé have given me would be superfluous; there is evidence of it throughout this book, in quotations from interviews, in citations of information that Barks provided from his personal records, and in photographs and drawings from his files. He has responded tirelessly to my requests for information, but he has never assumed the role of a censor. He has read the complete manuscript of this book, but his few suggestions for changes were directed only at relatively minor factual errors. Carl Barks is an honest and a modest man; I wish that I as a writer could always work with people like him.",
+          "value": "That exception is, of course, Carl Barks. To catalog the assistance he and his wife Garé have given me would be superfluous; there is evidence of it throughout this book, in quotations from interviews, in citations of information that Barks provided from his personal records, and in photographs and drawings from his files. He has responded tirelessly to my requests for information, but he has never assumed the role of a censor. He has read the complete manuscript of this book, but his few suggestions for changes were directed only at relatively minor factual errors. Carl Barks is an honest and a modest man; I wish that I as a writer could always work with people like him.",
+          "bbox": [
+            {
+              "h": 116.53797256097562,
+              "w": 126.22463986280489,
+              "x": 149.5439176829268,
+              "y": 215.76237804878048,
+              "confidence": 0.99,
+              "end_index": 679,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "I said at the beginning that Barks's life and his work shed little light on one another; but on this level, at least, they do. Honesty and",
+          "value": "I said at the beginning that Barks's life and his work shed little light on one another; but on this level, at least, they do. Honesty and",
+          "bbox": [
+            {
+              "h": 22.338018292682953,
+              "w": 125.71357088414635,
+              "x": 149.88899771341462,
+              "y": 333.9238948170732,
+              "confidence": 0.99,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "viii",
+              "value": "viii",
+              "bbox": [
+                {
+                  "h": 4.155617378048755,
+                  "w": 7.462900152439015,
+                  "x": 140.06159108231708,
+                  "y": 374.6627515243903,
+                  "confidence": 0.94,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "viii",
+          "bbox": [
+            {
+              "h": 4.16,
+              "w": 7.46,
+              "x": 140.06,
+              "y": 374.66,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "viii"
+    }
+  ]
+}

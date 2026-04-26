@@ -1,0 +1,185 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Barks is at the left, with a pointer, in this 1937 photo; Harry Reeves is at the center, and the man at the right has not been identified. The storyboard is for a Donald Duck cartoon called Good Scouts. This photograph was published in the April 1938 issue of Photoplay magazine, in connection with an article on the making of Snow White and the Seven Dwarfs. ©1937 Walt Disney Productions.",
+          "md": "![Barks is at the left, with a pointer, in this 1937 photo; Harry Reeves is at the center, and the man at the right has not been identified. The storyboard is for a Donald Duck cartoon called Good Scouts. This photograph was published in the April 1938 issue of Photoplay magazine, in connection with an article on the making of Snow White and the Seven Dwarfs. ©1937 Walt Disney Productions.](CBatAotCB-017_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-017_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 152.7077743902439,
+              "w": 198.67941596798778,
+              "x": 11.724772294207316,
+              "y": 10.751627286585366,
+              "confidence": 1.0,
+              "end_index": 415,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Barks is at the left, with a pointer, in this 1937 photo; Harry Reeves is at the center, and the man at the right has not been identified. The storyboard is for a Donald Duck cartoon called *Good Scouts*. This photograph was published in the April 1938 issue of *Photoplay* magazine, in connection with an article on the making of *Snow White and the Seven Dwarfs*. ©1937 Walt Disney Productions.",
+          "value": "Barks is at the left, with a pointer, in this 1937 photo; Harry Reeves is at the center, and the man at the right has not been identified. The storyboard is for a Donald Duck cartoon called Good Scouts. This photograph was published in the April 1938 issue of Photoplay magazine, in connection with an article on the making of Snow White and the Seven Dwarfs. ©1937 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 83.85979230182927,
+              "w": 60.81515053353658,
+              "x": 215.51681592987802,
+              "y": 79.84770388719512,
+              "confidence": 0.98,
+              "end_index": 395,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"The first thing that happened to me from animation was to go over to work with Jack King, who was a director. Jack had just been brought back to the studio from Schlesinger's \\[the Warner Brothers cartoon studio] at that point, and told to make *Modern Inventions*. So for about two months, he and I worked up the story for *Modern Inventions*. When that went into animation, I was put in a little room and told to think up another story. I wasn't getting very far very fast, so Walt, or Ted Sears, or one of the guys in the department, said, 'Barks is just wasting his time here, he'd better be put with somebody like Harry Reeves, who has had a lot of story experience, and then his wild thoughts will be directed along usable lines.' That's how I happened to be put with Harry Reeves. We worked as a team for a number of years.\" Chuck Couch, a former animator, also worked with Reeves and Barks.",
+          "value": "\"The first thing that happened to me from animation was to go over to work with Jack King, who was a director. Jack had just been brought back to the studio from Schlesinger's [the Warner Brothers cartoon studio] at that point, and told to make Modern Inventions. So for about two months, he and I worked up the story for Modern Inventions. When that went into animation, I was put in a little room and told to think up another story. I wasn't getting very far very fast, so Walt, or Ted Sears, or one of the guys in the department, said, 'Barks is just wasting his time here, he'd better be put with somebody like Harry Reeves, who has had a lot of story experience, and then his wild thoughts will be directed along usable lines.' That's how I happened to be put with Harry Reeves. We worked as a team for a number of years.\" Chuck Couch, a former animator, also worked with Reeves and Barks.",
+          "bbox": [
+            {
+              "h": 154.5916349085366,
+              "w": 125.87046315262957,
+              "x": 12.391908226943595,
+              "y": 168.87572789634146,
+              "confidence": 0.99,
+              "end_index": 898,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Around the time the studio moved from its old Hyperion Avenue location to the new plant in Burbank, Barks was paired with Jack Hannah, another former animator. While he",
+          "value": "Around the time the studio moved from its old Hyperion Avenue location to the new plant in Burbank, Barks was paired with Jack Hannah, another former animator. While he",
+          "bbox": [
+            {
+              "h": 29.30204268292684,
+              "w": 125.60936475800303,
+              "x": 13.212316834984755,
+              "y": 324.42313262195125,
+              "confidence": 0.99,
+              "end_index": 167,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "was with Hannah, Barks had the title of \"story director\" and was technically the man in charge, but neither he nor Hannah seems to have paid any attention to such questions of rank. (Barks had also been the story director for some cartoons when he was with Reeves and Couch — but the title had even less meaning then, since Reeves out-ranked him as \"associate producer.\")\\*",
+          "value": "was with Hannah, Barks had the title of \"story director\" and was technically the man in charge, but neither he nor Hannah seems to have paid any attention to such questions of rank. (Barks had also been the story director for some cartoons when he was with Reeves and Couch — but the title had even less meaning then, since Reeves out-ranked him as \"associate producer.\")*",
+          "bbox": [
+            {
+              "h": 66.76672637195122,
+              "w": 126.16665777439023,
+              "x": 150.15604801829267,
+              "y": 168.98189405487804,
+              "confidence": 0.99,
+              "end_index": 372,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks worked on the stories for about three dozen cartoons, most of them directed by Jack King, who directed virtually all of the Donald Duck cartoons made before and during World War II. Later, Jack Hannah became the premier Donald Duck director.",
+          "value": "Barks worked on the stories for about three dozen cartoons, most of them directed by Jack King, who directed virtually all of the Donald Duck cartoons made before and during World War II. Later, Jack Hannah became the premier Donald Duck director.",
+          "bbox": [
+            {
+              "h": 43.63378810975611,
+              "w": 126.30146913109756,
+              "x": 149.76286394817072,
+              "y": 235.70133384146342,
+              "confidence": 0.99,
+              "end_index": 246,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Of the Disney cartoons on which Barks worked — and I have seen most of them — I know of none that have the flavor of Barks's best comic-book stories. One reason for this,",
+          "value": "Of the Disney cartoons on which Barks worked — and I have seen most of them — I know of none that have the flavor of Barks's best comic-book stories. One reason for this,",
+          "bbox": [
+            {
+              "h": 29.96480945121948,
+              "w": 126.25602324695122,
+              "x": 149.99866806402437,
+              "y": 280.39333079268295,
+              "confidence": 0.99,
+              "end_index": 169,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\*This summary of Barks's work in the Disney story department is over-simplified; he worked briefly with other men — Nick George, for one — whose names can be found on mimeographed outlines of stories or in the gag sketches that were passed back and forth among the story men. But Barks's collaborations with Reeves, Couch and Hannah were certainly the most important.",
+          "value": "*This summary of Barks's work in the Disney story department is over-simplified; he worked briefly with other men — Nick George, for one — whose names can be found on mimeographed outlines of stories or in the gag sketches that were passed back and forth among the story men. But Barks's collaborations with Reeves, Couch and Hannah were certainly the most important.",
+          "bbox": [
+            {
+              "h": 32.56195884146342,
+              "w": 125.92395960365852,
+              "x": 150.12078887195122,
+              "y": 321.0158917682927,
+              "confidence": 0.91,
+              "end_index": 367,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n17",
+              "value": "Carl Barks and the Art of the Comic Book\n17",
+              "bbox": [
+                {
+                  "h": 4.680160060975649,
+                  "w": 80.37972370426829,
+                  "x": 173.6375419207317,
+                  "y": 365.26294207317073,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n17",
+          "bbox": [
+            {
+              "h": 4.68,
+              "w": 80.38,
+              "x": 173.64,
+              "y": 365.26,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "17"
+    }
+  ]
+}

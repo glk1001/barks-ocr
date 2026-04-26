@@ -1,0 +1,495 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "accepted. \"I often sent in two or more layouts of such cover assignments.\" (January 1979 letter to Michael Barrier)",
+          "value": "accepted. \"I often sent in two or more layouts of such cover assignments.\" (January 1979 letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 11.488099275914633,
+              "w": 125.0354132526677,
+              "x": 12.36424090129573,
+              "y": 18.84654249237805,
+              "confidence": 0.97,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# UNCLE SCROOGE (Dell/Gold Key)",
+          "value": "UNCLE SCROOGE (Dell/Gold Key)",
+          "bbox": [
+            {
+              "h": 7.419609374999999,
+              "w": 123.85265625,
+              "x": 12.401032774390242,
+              "y": 41.34397294207317,
+              "confidence": 0.98,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Issues through No. 39, Sept.-Nov. 1962, were published with the Dell label; subsequent issues were published with the Gold Key label.",
+          "value": "Issues through No. 39, Sept.-Nov. 1962, were published with the Dell label; subsequent issues were published with the Gold Key label.",
+          "bbox": [
+            {
+              "h": 17.102641006097564,
+              "w": 125.59736447217986,
+              "x": 12.034843988185974,
+              "y": 55.11045731707317,
+              "confidence": 0.99,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 386 - (March) 1952 - 36 pages",
+          "value": "Four Color 386 - (March) 1952 - 36 pages",
+          "bbox": [
+            {
+              "h": 11.676625381097564,
+              "w": 101.96035025247711,
+              "x": 12.048555997522865,
+              "y": 77.9933974847561,
+              "confidence": 0.8,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## Uncle Scrooge in Only a Poor Old Man",
+          "value": "Uncle Scrooge in Only a Poor Old Man",
+          "bbox": [
+            {
+              "h": 11.676625381097564,
+              "w": 101.96035025247711,
+              "x": 12.048555997522865,
+              "y": 77.9933974847561,
+              "confidence": 0.81,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald rows Scrooge on a lake of money. (Illustrating \"Only a Poor Old Man.\") (Sept. 27, 1951)",
+          "value": "Front cover: Donald rows Scrooge on a lake of money. (Illustrating \"Only a Poor Old Man.\") (Sept. 27, 1951)",
+          "bbox": [
+            {
+              "h": 11.400017149390232,
+              "w": 125.22148306497711,
+              "x": 12.08808534203506,
+              "y": 90.22999047256098,
+              "confidence": 0.93,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: The Best of Walt Disney Comics No. 96172, 1974; Uncle Scrooge and Donald Duck No. 1, 1965.",
+          "value": "Reprinted: The Best of Walt Disney Comics No. 96172, 1974; Uncle Scrooge and Donald Duck No. 1, 1965.",
+          "bbox": [
+            {
+              "h": 11.124180640243898,
+              "w": 125.21080006669207,
+              "x": 12.042887052210366,
+              "y": 102.24381859756097,
+              "confidence": 0.93,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - A salesman for Osogood Silver Polish volunteers to polish Scrooge's coins. (Sept. 27, 195.1)",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - A salesman for Osogood Silver Polish volunteers to polish Scrooge's coins. (Sept. 27, 195.1)",
+          "bbox": [
+            {
+              "h": 17.44777820121952,
+              "w": 125.0048766196646,
+              "x": 11.996577267530487,
+              "y": 113.62794969512196,
+              "confidence": 0.97,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**UNCLE SCROOGE in \"Only a Poor Old Man\" - 32** - When the Beagle Boys erect a building next to Scrooge's money bin, with plans to puncture the bin and drain out the money, Scrooge secretly transfers his money to an old reservoir, where he hides it underwater. Learning of this stratagem, the Beagle Boys try to destroy a dam so that Scrooge's money will flow onto their land. (Sept. 27, 1951)",
+          "value": "UNCLE SCROOGE in \"Only a Poor Old Man\" - 32 - When the Beagle Boys erect a building next to Scrooge's money bin, with plans to puncture the bin and drain out the money, Scrooge secretly transfers his money to an old reservoir, where he hides it underwater. Learning of this stratagem, the Beagle Boys try to destroy a dam so that Scrooge's money will flow onto their land. (Sept. 27, 1951)",
+          "bbox": [
+            {
+              "h": 46.95010289634145,
+              "w": 125.92689214939026,
+              "x": 11.403529916158536,
+              "y": 131.63905106707318,
+              "confidence": 0.99,
+              "end_index": 392,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: The Best of Walt Disney Comics No 961 72. 1974: Uncle Scrooge and Donald Duck No. 1, 1965.",
+          "value": "Reprinted: The Best of Walt Disney Comics No 961 72. 1974: Uncle Scrooge and Donald Duck No. 1, 1965.",
+          "bbox": [
+            {
+              "h": 11.357503810975595,
+              "w": 125.4157878001143,
+              "x": 11.905913800495425,
+              "y": 179.30974847560975,
+              "confidence": 0.93,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge takes a bum to a diner for a \"free\" cup of coffee (Sept. 27, 1951) First of a series of one-page gags set in the diner.",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge takes a bum to a diner for a \"free\" cup of coffee (Sept. 27, 1951) First of a series of one-page gags set in the diner.",
+          "bbox": [
+            {
+              "h": 17.674904725609768,
+              "w": 124.85240889386431,
+              "x": 11.976256311928353,
+              "y": 190.94388338414635,
+              "confidence": 0.87,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge and Donald Duck No. 1, 1965.",
+          "value": "Reprinted: Uncle Scrooge and Donald Duck No. 1, 1965.",
+          "bbox": [
+            {
+              "h": 6.020121951219507,
+              "w": 112.06343011623474,
+              "x": 16.275609517911583,
+              "y": 208.9806631097561,
+              "confidence": 0.75,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (back cover) - Scrooge decides to \"take a chance\" on the Soupline Eight car. (Sept. 27, 1951)",
+          "value": "UNCLE SCROOGE - 1 (back cover) - Scrooge decides to \"take a chance\" on the Soupline Eight car. (Sept. 27, 1951)",
+          "bbox": [
+            {
+              "h": 23.264016768292695,
+              "w": 125.15784489329269,
+              "x": 11.882889672256095,
+              "y": 209.06405487804878,
+              "confidence": 0.66,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge and Donald Duck No. 1, 1965.",
+          "value": "Reprinted: Uncle Scrooge and Donald Duck No. 1, 1965.",
+          "bbox": [
+            {
+              "h": 23.264016768292695,
+              "w": 125.15784489329269,
+              "x": 11.882889672256095,
+              "y": 209.06405487804878,
+              "confidence": 0.54,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 456 - (March) 1953 - 36 pages",
+          "value": "Four Color 456 - (March) 1953 - 36 pages",
+          "bbox": [
+            {
+              "h": 11.716371951219507,
+              "w": 101.2448358898628,
+              "x": 11.709211366234754,
+              "y": 238.35676829268291,
+              "confidence": 0.8,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## Uncle Scrooge, Back to the Klondike",
+          "value": "Uncle Scrooge, Back to the Klondike",
+          "bbox": [
+            {
+              "h": 11.716371951219507,
+              "w": 101.2448358898628,
+              "x": 11.709211366234754,
+              "y": 238.35676829268291,
+              "confidence": 0.8,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge is interrupted by an old woman and her bear as he digs for gold. (Illustrating \"Back to the Klondike.\") (Aug. 28, 1952)",
+          "value": "Front cover: Scrooge is interrupted by an old woman and her bear as he digs for gold. (Illustrating \"Back to the Klondike.\") (Aug. 28, 1952)",
+          "bbox": [
+            {
+              "h": 17.19269817073171,
+              "w": 125.12152570026674,
+              "x": 11.909810999428354,
+              "y": 250.31314024390244,
+              "confidence": 0.97,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: The Best of Uncle Scrooge and Donald Duck No. 1 1966; Uncle Scrooge No. 142, July 1977.",
+          "value": "Reprinted: The Best of Uncle Scrooge and Donald Duck No. 1 1966; Uncle Scrooge No. 142, July 1977.",
+          "bbox": [
+            {
+              "h": 11.1778125,
+              "w": 124.8468964367378,
+              "x": 12.278839081554876,
+              "y": 268.36474847560976,
+              "confidence": 0.96,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover)-Scrooge waits for the light to change before getting in a taxi. (Oct. 16, 1952)",
+          "value": "UNCLE SCROOGE - 1 (inside front cover)-Scrooge waits for the light to change before getting in a taxi. (Oct. 16, 1952)",
+          "bbox": [
+            {
+              "h": 16.78559451219513,
+              "w": 124.91398163586128,
+              "x": 11.996340391577743,
+              "y": 280.11338414634145,
+              "confidence": 0.97,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: The Best of Uncle Scrooge and Donald Duck No. 1, 1966.",
+          "value": "Reprinted: The Best of Uncle Scrooge and Donald Duck No. 1, 1966.",
+          "bbox": [
+            {
+              "h": 10.33698932926829,
+              "w": 124.78761099466463,
+              "x": 12.32617997332317,
+              "y": 298.0234298780488,
+              "confidence": 0.96,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**UNCLE SCROOGE in \"Back to the Klondike\" - 27** - Scrooge takes pills to restore his failing memory, and immediately recalls the location of a bag of nuggets he cached in the Yukon fifty years before. When the ducks arrive in the Klondike, they find that Scrooge's claim has been taken over by Glittering Goldie, a former dance hall girl Scrooge knew in the gold rush days — and who still",
+          "value": "UNCLE SCROOGE in \"Back to the Klondike\" - 27 - Scrooge takes pills to restore his failing memory, and immediately recalls the location of a bag of nuggets he cached in the Yukon fifty years before. When the ducks arrive in the Klondike, they find that Scrooge's claim has been taken over by Glittering Goldie, a former dance hall girl Scrooge knew in the gold rush days — and who still",
+          "bbox": [
+            {
+              "h": 41.591890243902434,
+              "w": 125.17091808784299,
+              "x": 11.908076767339939,
+              "y": 309.46543445121955,
+              "confidence": 0.99,
+              "end_index": 388,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "owes Scrooge a thousand dollars, plus interest. (Sept. 18, 1952)",
+          "value": "owes Scrooge a thousand dollars, plus interest. (Sept. 18, 1952)",
+          "bbox": [
+            {
+              "h": 11.514292111280488,
+              "w": 124.56569359756098,
+              "x": 151.2178525152439,
+              "y": 18.957078887195124,
+              "confidence": 0.96,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Weston:* By far the most important of the known unpublished Barks pages are the pages cut from \"Back to the Klondike.\" Originally the story was thirty-two pages. As published it was only twenty-seven. A five-page sequence was cut following page 11 of the published story, and another half page following published page 15. These pages change the characters' motivation, making Scrooge a somewhat more sympathetic but more ambiguous character and Goldie less so. They tie up loose ends, contain some very fine episodes and gags, and reveal aspects of Scrooge's character not previously known.",
+          "value": "Weston: By far the most important of the known unpublished Barks pages are the pages cut from \"Back to the Klondike.\" Originally the story was thirty-two pages. As published it was only twenty-seven. A five-page sequence was cut following page 11 of the published story, and another half page following published page 15. These pages change the characters' motivation, making Scrooge a somewhat more sympathetic but more ambiguous character and Goldie less so. They tie up loose ends, contain some very fine episodes and gags, and reveal aspects of Scrooge's character not previously known.",
+          "bbox": [
+            {
+              "h": 58.757946836890234,
+              "w": 124.94908536585362,
+              "x": 151.0425514481707,
+              "y": 31.877060785060976,
+              "confidence": 0.99,
+              "end_index": 591,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The deleted sequence begins after Scrooge turns to walk out the door of the Black Jack Ballroom (page 11, panel 8). The nephews trip him, demanding, \"Don't be so doggoned GREEDY! Tell us what happened when you met Goldie!\" And thus begins a flashback sequence. Scrooge tells how he walked into the bar and ordered coffee, and how the sneers that followed stopped when he emptied his gold poke and out came the goose egg nugget, a hunk of solid gold bigger than his fist. *\"Suddenly Glittering Goldie was there in a long dive for the nugget!\" \"What a JEWEL!\" she exclaims. \"Don't be so doggoned grabby!\" replies Scrooge. Goldie hustles him off to a back room for coffee. \"I don't know what Goldie put in my coffee!\" Scrooge reminisces, \"but I awoke hours later in a snowdrift six miles from town! . . . drugged and rolled. Nobody can take gold from Scrooge McDuck! There'll be a hot time in the old town tonight!\"* He walks back to town and stands in the doorway, doors swung apart. \"Weaklings and cowards have ten seconds to clear out!\" Goldie giggles. And then comes a fight to end all fights, which includes a beautiful half-page panel that Gary Brown once described as \"like Jack Kirby with ducks,\" an understatement if anything.",
+          "value": "The deleted sequence begins after Scrooge turns to walk out the door of the Black Jack Ballroom (page 11, panel 8). The nephews trip him, demanding, \"Don't be so doggoned GREEDY! Tell us what happened when you met Goldie!\" And thus begins a flashback sequence. Scrooge tells how he walked into the bar and ordered coffee, and how the sneers that followed stopped when he emptied his gold poke and out came the goose egg nugget, a hunk of solid gold bigger than his fist. \"Suddenly Glittering Goldie was there in a long dive for the nugget!\" \"What a JEWEL!\" she exclaims. \"Don't be so doggoned grabby!\" replies Scrooge. Goldie hustles him off to a back room for coffee. \"I don't know what Goldie put in my coffee!\" Scrooge reminisces, \"but I awoke hours later in a snowdrift six miles from town! . . . drugged and rolled. Nobody can take gold from Scrooge McDuck! There'll be a hot time in the old town tonight!\" He walks back to town and stands in the doorway, doors swung apart. \"Weaklings and cowards have ten seconds to clear out!\" Goldie giggles. And then comes a fight to end all fights, which includes a beautiful half-page panel that Gary Brown once described as \"like Jack Kirby with ducks,\" an understatement if anything.",
+          "bbox": [
+            {
+              "h": 123.39309260670733,
+              "w": 125.32143292682925,
+              "x": 150.5956726371951,
+              "y": 91.038515625,
+              "confidence": 0.99,
+              "end_index": 1231,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*\"When it was all over I cornered the star of the North on the balcony!\"* climbing up on a mound of bodies: *\"I'll trouble you for my goose egg nugget, mam!\" \"She gave it to me but good! (right on the head) There was a girl with SPIRIT! But the other gold in my poke had been stolen! I made her give me an I.O.U. for it!\": \"One thousand dollars, mam, at COMPOUND INTEREST, or I tear this dive apart splinter by splinter!\"* And he would have. Goldie: *\"There! Now GET OUT!\"* Scrooge: *\"I aim to, mam! But YOU'RE GOING WITH ME!\" \"I took her along, screaming like a singed cat!\"* Goldie: *\"Where are you taking me, you wolf?\"* Scrooge: *\"To my claim! You're going to learn how HARD a miner works for his gold!\" \"And there at my diggings I made her work for a month!\"* Scrooge: *\"Keep digging, mam, or you don't get any supper!\"* Goldie: *\"But I'm starving now! And my dress is in rags!\"* Scrooge: *\"You can buy a new dress when you get back to town! Buy it this time with money you earned SQUARE, not by drugging miners and stacking cards!\" \"When the month was up I paid her off!\" \"Fifty cents a day is all you earned, and it's all you get!\" \"She threw the money in my face and stomped off!\"* Goldie: *\"I dug more gold than you did, tightwad!\"*",
+          "value": "\"When it was all over I cornered the star of the North on the balcony!\" climbing up on a mound of bodies: \"I'll trouble you for my goose egg nugget, mam!\" \"She gave it to me but good! (right on the head) There was a girl with SPIRIT! But the other gold in my poke had been stolen! I made her give me an I.O.U. for it!\": \"One thousand dollars, mam, at COMPOUND INTEREST, or I tear this dive apart splinter by splinter!\" And he would have. Goldie: \"There! Now GET OUT!\" Scrooge: \"I aim to, mam! But YOU'RE GOING WITH ME!\" \"I took her along, screaming like a singed cat!\" Goldie: \"Where are you taking me, you wolf?\" Scrooge: \"To my claim! You're going to learn how HARD a miner works for his gold!\" \"And there at my diggings I made her work for a month!\" Scrooge: \"Keep digging, mam, or you don't get any supper!\" Goldie: \"But I'm starving now! And my dress is in rags!\" Scrooge: \"You can buy a new dress when you get back to town! Buy it this time with money you earned SQUARE, not by drugging miners and stacking cards!\" \"When the month was up I paid her off!\" \"Fifty cents a day is all you earned, and it's all you get!\" \"She threw the money in my face and stomped off!\" Goldie: \"I dug more gold than you did, tightwad!\"",
+          "bbox": [
+            {
+              "h": 117.79385670731706,
+              "w": 125.51456935975611,
+              "x": 149.86591463414632,
+              "y": 215.7444512195122,
+              "confidence": 0.99,
+              "end_index": 1240,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Thus end the four pages that are known to still exist. But internal structural evidence strongly points to the following  conclusion: A fifth page was cut immediately following these",
+          "value": "Thus end the four pages that are known to still exist. But internal structural evidence strongly points to the following  conclusion: A fifth page was cut immediately following these",
+          "bbox": [
+            {
+              "h": 17.98278201219513,
+              "w": 125.0373875762195,
+              "x": 150.13747522865853,
+              "y": 334.3978125,
+              "confidence": 0.99,
+              "end_index": 181,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "132 Carl Barks and the Art of the Comic Book",
+              "value": "132 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.718414634146375,
+                  "w": 77.78911108993901,
+                  "x": 37.06954744664634,
+                  "y": 362.0961356707317,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "132 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.72,
+              "w": 77.79,
+              "x": 37.07,
+              "y": 362.1,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "132"
+    }
+  ]
+}

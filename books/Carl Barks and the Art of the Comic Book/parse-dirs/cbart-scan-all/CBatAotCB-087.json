@@ -1,0 +1,185 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# XI.",
+          "value": "XI.",
+          "bbox": [
+            {
+              "h": 26.760394435975616,
+              "w": 59.49787157012195,
+              "x": 113.57502667682925,
+              "y": 48.02536394817073,
+              "confidence": 0.82,
+              "end_index": 2,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**BARKS'S SECOND MARRIAGE**",
+          "value": "BARKS'S SECOND MARRIAGE",
+          "bbox": [
+            {
+              "h": 5.800483993902448,
+              "w": 106.03646127096036,
+              "x": 31.09265267721036,
+              "y": 120.39846036585367,
+              "confidence": 0.91,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "ended in divorce in December 1951. Remarkably, he had done some of his best work when his marriage was falling apart. \"It seemed like the more difficulties I had, why, the bigger the inspiration that would come when there was just a moment of calmness,\" he said in 1973. He remembers drawing the first issue of Uncle Scrooge in a motel in Los Angeles in September 1951, during one such \"moment of calmness.\"",
+          "value": "ended in divorce in December 1951. Remarkably, he had done some of his best work when his marriage was falling apart. \"It seemed like the more difficulties I had, why, the bigger the inspiration that would come when there was just a moment of calmness,\" he said in 1973. He remembers drawing the first issue of Uncle Scrooge in a motel in Los Angeles in September 1951, during one such \"moment of calmness.\"",
+          "bbox": [
+            {
+              "h": 73.34686737804878,
+              "w": 125.41147580030487,
+              "x": 11.91758288871951,
+              "y": 127.07508384146341,
+              "confidence": 0.98,
+              "end_index": 406,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks married his third wife, the former Margaret Williams (known professionally as Gare'), in 1954. She had been working as his assistant, doing lettering and some backgrounds, for about two years. Gare' is an accomplished landscape painter, and after his retirement on June 30, 1966, Barks himself turned more and more to painting. He wrote a few scripts for Western—most of them for the new Junior Woodchucks comic book — and illustrated a few front covers, but he has done nothing for the comics since 1973.",
+          "value": "Barks married his third wife, the former Margaret Williams (known professionally as Gare'), in 1954. She had been working as his assistant, doing lettering and some backgrounds, for about two years. Gare' is an accomplished landscape painter, and after his retirement on June 30, 1966, Barks himself turned more and more to painting. He wrote a few scripts for Western—most of them for the new Junior Woodchucks comic book — and illustrated a few front covers, but he has done nothing for the comics since 1973.",
+          "bbox": [
+            {
+              "h": 95.15830792682924,
+              "w": 125.70669719416921,
+              "x": 12.037745450647865,
+              "y": 201.83341463414635,
+              "confidence": 0.99,
+              "end_index": 510,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In 1971, Barks received permission from the Disney studio to make signed oil paintings of scenes from the duck comic books. The sale price of the paintings started at a hundred and fifty dollars; when demand surged, Barks raised the price to slow down the flood of orders, but to little effect. An agent, Russ Cochran, asked Barks for a chance to offer a",
+          "value": "In 1971, Barks received permission from the Disney studio to make signed oil paintings of scenes from the duck comic books. The sale price of the paintings started at a hundred and fifty dollars; when demand surged, Barks raised the price to slow down the flood of orders, but to little effect. An agent, Russ Cochran, asked Barks for a chance to offer a",
+          "bbox": [
+            {
+              "h": 58.854580792682896,
+              "w": 125.61831566787345,
+              "x": 11.815740162919207,
+              "y": 297.9661280487805,
+              "confidence": 0.99,
+              "end_index": 353,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "few paintings to auction at comic-book conventions. That blew the lid off. Soon prices were in four figures, and climbing. In mid-1974, a study of Uncle Scrooge stalking out of sinful Dawson with his bag of gold intact sold for three thousand four hundred dollars. In early 1975, another painting of Scrooge—this time in the snowy streets of Duckburg — brought four thousand one hundred dollars. The highest price was paid for Barks's last duck painting, an oversized composition on a Bicentennial theme, titled \"July Fourth in Duckburg.\" It was auctioned in New York on July 4, 1976, for six thousand four hundred dollars. The painting has since been resold for twelve thousand five hundred dollars.",
+          "value": "few paintings to auction at comic-book conventions. That blew the lid off. Soon prices were in four figures, and climbing. In mid-1974, a study of Uncle Scrooge stalking out of sinful Dawson with his bag of gold intact sold for three thousand four hundred dollars. In early 1975, another painting of Scrooge—this time in the snowy streets of Duckburg — brought four thousand one hundred dollars. The highest price was paid for Barks's last duck painting, an oversized composition on a Bicentennial theme, titled \"July Fourth in Duckburg.\" It was auctioned in New York on July 4, 1976, for six thousand four hundred dollars. The painting has since been resold for twelve thousand five hundred dollars.",
+          "bbox": [
+            {
+              "h": 117.58303353658538,
+              "w": 125.89110137195121,
+              "x": 148.95763147865853,
+              "y": 120.63358993902439,
+              "confidence": 0.99,
+              "end_index": 699,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks produced a total of one hundred and twenty-one duck paintings in five years, before the Disney studio — troubled by unauthorized reproductions of one of the paintings — withdrew permission for Barks to sell them. Typically, Barks refused to make a fuss, expressing relief that he could now turn to subject matter entirely of his choosing.",
+          "value": "Barks produced a total of one hundred and twenty-one duck paintings in five years, before the Disney studio — troubled by unauthorized reproductions of one of the paintings — withdrew permission for Barks to sell them. Typically, Barks refused to make a fuss, expressing relief that he could now turn to subject matter entirely of his choosing.",
+          "bbox": [
+            {
+              "h": 58.76558689024388,
+              "w": 125.64552210365855,
+              "x": 149.16385289634144,
+              "y": 239.01669969512196,
+              "confidence": 0.99,
+              "end_index": 343,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "It is through his paintings that Barks has finally reaped some of the financial rewards that were never his while he was writing and drawing for comic books. Yet it is on the comic books that Barks's reputation will always rest. His paintings have a durable charm, but it was in his comic books that Barks was — and remains — \"the good artist.\"",
+          "value": "It is through his paintings that Barks has finally reaped some of the financial rewards that were never his while he was writing and drawing for comic books. Yet it is on the comic books that Barks's reputation will always rest. His paintings have a durable charm, but it was in his comic books that Barks was — and remains — \"the good artist.\"",
+          "bbox": [
+            {
+              "h": 58.52407774390243,
+              "w": 125.61732850609756,
+              "x": 149.28708841463413,
+              "y": 298.2358765243902,
+              "confidence": 0.99,
+              "end_index": 343,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n87",
+              "value": "Carl Barks and the Art of the Comic Book\n87",
+              "bbox": [
+                {
+                  "h": 4.465152439024405,
+                  "w": 80.1796417682927,
+                  "x": 171.44394626524388,
+                  "y": 368.0997713414634,
+                  "confidence": 0.93,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n87",
+          "bbox": [
+            {
+              "h": 4.47,
+              "w": 80.18,
+              "x": 171.44,
+              "y": 368.1,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "87"
+    }
+  ]
+}

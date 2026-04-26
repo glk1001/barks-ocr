@@ -1,0 +1,186 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# II.",
+          "value": "II.",
+          "bbox": [
+            {
+              "h": 26.99131097560976,
+              "w": 41.004320693597556,
+              "x": 47.85671112804877,
+              "y": 53.27665586890244,
+              "confidence": 0.92,
+              "end_index": 2,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "I WAS LUCKY: I was caught up by  Carl Barks's stories at their high tide.He was at  his best for five or six years in the late forties  and early fifties. By then, he had mastered his  medium, and he had not been overtaken by his  publisher's timidity and his own boredom. He  did memorable stories in both earlier and later  years, but his work was at its most intense and  exuberant at that time.",
+          "value": "I WAS LUCKY: I was caught up by  Carl Barks's stories at their high tide.He was at  his best for five or six years in the late forties  and early fifties. By then, he had mastered his  medium, and he had not been overtaken by his  publisher's timidity and his own boredom. He  did memorable stories in both earlier and later  years, but his work was at its most intense and  exuberant at that time.",
+          "bbox": [
+            {
+              "h": 64.93153582317073,
+              "w": 125.72011016101371,
+              "x": 6.884986066120426,
+              "y": 120.30251524390245,
+              "confidence": 0.99,
+              "end_index": 397,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks was not an early bloomer. He backed into a comic-book career in 1942, when he was forty-one years old and still a story man at the Walt Disney studio. He had come to Disney's in 1935, after spending almost twenty years in grim and demanding jobs. Barks drew sparingly on his personal experiences when writing and drawing his duck stories — entertainment, and not self-expression, has always been his chief concern — but the harshness of his early years must have discouraged any sentimentality in those stories. Those dreadful jobs were even of some practical value in saddling Donald Duck with problems in the stories that Barks wrote many years later; as he explained in a 1968 letter, \"The perversity of beasts, machines, and nature I knew by heart.\"",
+          "value": "Barks was not an early bloomer. He backed into a comic-book career in 1942, when he was forty-one years old and still a story man at the Walt Disney studio. He had come to Disney's in 1935, after spending almost twenty years in grim and demanding jobs. Barks drew sparingly on his personal experiences when writing and drawing his duck stories — entertainment, and not self-expression, has always been his chief concern — but the harshness of his early years must have discouraged any sentimentality in those stories. Those dreadful jobs were even of some practical value in saddling Donald Duck with problems in the stories that Barks wrote many years later; as he explained in a 1968 letter, \"The perversity of beasts, machines, and nature I knew by heart.\"",
+          "bbox": [
+            {
+              "h": 131.684462652439,
+              "w": 125.58172530011431,
+              "x": 7.005964295922255,
+              "y": 186.97382240853656,
+              "confidence": 0.99,
+              "end_index": 758,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Carl Barks was born on March 27, 1901, near Merrill, Oregon. In 1973, he described his early years as follows:",
+          "value": "Carl Barks was born on March 27, 1901, near Merrill, Oregon. In 1973, he described his early years as follows:",
+          "bbox": [
+            {
+              "h": 21.14272865853658,
+              "w": 125.56523508955792,
+              "x": 7.239728706173779,
+              "y": 320.0641920731707,
+              "confidence": 0.98,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"My folks had a little wheat ranch in southern Oregon, about two miles over the Califor-",
+          "value": "\"My folks had a little wheat ranch in southern Oregon, about two miles over the Califor-",
+          "bbox": [
+            {
+              "h": 14.46537347560974,
+              "w": 125.23158030440165,
+              "x": 7.4250584151105175,
+              "y": 342.3270960365854,
+              "confidence": 0.98,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "The Barks ranch in Oregon in 1910. The image includes handwritten text at the top: \"midland\" and \"The Barks ranch\".",
+          "md": "![The Barks ranch in Oregon in 1910. The image includes handwritten text at the top: \"midland\" and \"The Barks ranch\".](CBatAotCB-004_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-004_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 258.06633527057926,
+              "w": 141.99234660823168,
+              "x": 143.7121046112805,
+              "y": 10.05338271722561,
+              "confidence": 0.99,
+              "end_index": 140,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "The Barks ranch in Oregon in 1910.",
+          "value": "The Barks ranch in Oregon in 1910.",
+          "bbox": [
+            {
+              "h": 5.88772865853658,
+              "w": 70.15969035823171,
+              "x": 143.81711032774388,
+              "y": 270.82790396341466,
+              "confidence": 0.92,
+              "end_index": 33,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "nia line. My dad was a homesteader, and moved up there in the eighteen-eighties. He'd been a blacksmith and a teamster and so on, on those big grain ranches around Stockton, in the San Joaquin Valley, quite a number of years, and he had come there out of Missouri, as an orphan at the age of about fourteen. He had had a little apprenticeship as a blacksmith, and so he went to work on those big ranches. He worked there for many years, and",
+          "value": "nia line. My dad was a homesteader, and moved up there in the eighteen-eighties. He'd been a blacksmith and a teamster and so on, on those big grain ranches around Stockton, in the San Joaquin Valley, quite a number of years, and he had come there out of Missouri, as an orphan at the age of about fourteen. He had had a little apprenticeship as a blacksmith, and so he went to work on those big ranches. He worked there for many years, and",
+          "bbox": [
+            {
+              "h": 74.57245426829269,
+              "w": 125.83675495426829,
+              "x": 143.8422427591463,
+              "y": 283.34743902439027,
+              "confidence": 0.99,
+              "end_index": 439,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "4 Carl Barks and the Art of the Comic Book",
+              "value": "4 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.442560975609794,
+                  "w": 80.07271960746951,
+                  "x": 27.611491520579268,
+                  "y": 368.7211966463414,
+                  "confidence": 0.96,
+                  "end_index": 41,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "4 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.44,
+              "w": 80.07,
+              "x": 27.61,
+              "y": 368.72,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "4"
+    }
+  ]
+}

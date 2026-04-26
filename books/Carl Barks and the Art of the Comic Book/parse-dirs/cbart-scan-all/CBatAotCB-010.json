@@ -1,0 +1,167 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "After about a year more of selling cartoons to the *Eye-Opener* as a free-lancer, Barks moved to Minneapolis to join the magazine's staff. A contractor named Henry Meyer had bought the magazine from Harvey Fawcett, a member of the famous publishing family. \"Henry Meyer was enough of a businessman to see things weren't being run right around there. There was too much drinking and playing around, and not enough production. So he looked over the list of gag men and decided that hell, I was a hard-working son of a gun. So he sent a telegram to me, asking if I would come back there. I had enough money to send a telegram saying I didn't have enough money to get back there. He sent me money, and I closed my affairs very rapidly and gave away the big stack of joke magazines I had. What I could carry in a valise, I carried with me.",
+          "value": "After about a year more of selling cartoons to the Eye-Opener as a free-lancer, Barks moved to Minneapolis to join the magazine's staff. A contractor named Henry Meyer had bought the magazine from Harvey Fawcett, a member of the famous publishing family. \"Henry Meyer was enough of a businessman to see things weren't being run right around there. There was too much drinking and playing around, and not enough production. So he looked over the list of gag men and decided that hell, I was a hard-working son of a gun. So he sent a telegram to me, asking if I would come back there. I had enough money to send a telegram saying I didn't have enough money to get back there. He sent me money, and I closed my affairs very rapidly and gave away the big stack of joke magazines I had. What I could carry in a valise, I carried with me.",
+          "bbox": [
+            {
+              "h": 140.52569645579268,
+              "w": 125.90131597751525,
+              "x": 11.95554092035061,
+              "y": 13.971491044207317,
+              "confidence": 0.99,
+              "end_index": 833,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I got into Minneapolis in November of 1931. I went to work there with the *Eye-Opener*. Ed Sumner was editor, and I was the gag man and illustrator. Eventually, the *Eye-Opener* changed hands; Annette Fawcett bought it from Meyer. Then she fired Ed Sumner. She wanted to put on her own type of heavy drinkers. I never did fit into it, because I just couldn't drink a hell of a lot, but I fitted into the workhorse part of it. I was there for four years, doing that work. It just got to where I was doing all of it. Toward the last there, I was practically writing the whole thing. We bought a few gags, at a dollar a gag, and two dollars a gag, and so on. Very little of that. I got a hundred dollars a month, I think.",
+          "value": "\"I got into Minneapolis in November of 1931. I went to work there with the Eye-Opener. Ed Sumner was editor, and I was the gag man and illustrator. Eventually, the Eye-Opener changed hands; Annette Fawcett bought it from Meyer. Then she fired Ed Sumner. She wanted to put on her own type of heavy drinkers. I never did fit into it, because I just couldn't drink a hell of a lot, but I fitted into the workhorse part of it. I was there for four years, doing that work. It just got to where I was doing all of it. Toward the last there, I was practically writing the whole thing. We bought a few gags, at a dollar a gag, and two dollars a gag, and so on. Very little of that. I got a hundred dollars a month, I think.",
+          "bbox": [
+            {
+              "h": 118.27642911585367,
+              "w": 125.84000797923017,
+              "x": 12.943018888147863,
+              "y": 154.672099847561,
+              "confidence": 0.99,
+              "end_index": 718,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I worked for the *Eye-Opener* until 1935, and I could see that the Depression was going to keep right on going forever, and that little magazine was just barely skinning by. I read somewhere that Disney was needing guys — it was in a newspaper column, I think — so I sent this bunch of cartoons and old page proofs to Disney's and got a letter right back, telling me to come out for the start of their November class. It was a tryout, in which you worked one month, and you went to their art class, and you",
+          "value": "\"I worked for the Eye-Opener until 1935, and I could see that the Depression was going to keep right on going forever, and that little magazine was just barely skinning by. I read somewhere that Disney was needing guys — it was in a newspaper column, I think — so I sent this bunch of cartoons and old page proofs to Disney's and got a letter right back, telling me to come out for the start of their November class. It was a tryout, in which you worked one month, and you went to their art class, and you",
+          "bbox": [
+            {
+              "h": 81.47851371951218,
+              "w": 125.7224060356326,
+              "x": 13.316995641196645,
+              "y": 273.2189405487805,
+              "confidence": 0.99,
+              "end_index": 506,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "looked at their animation, and you did a few in-betweens, and that sort of thing. At the end of the month, they picked out the ones that were likely to make the grade, and those that weren't were given their walking papers. Of the seven that went to work with my bunch, there were four of us that made it, I believe.\"",
+          "value": "looked at their animation, and you did a few in-betweens, and that sort of thing. At the end of the month, they picked out the ones that were likely to make the grade, and those that weren't were given their walking papers. Of the seven that went to work with my bunch, there were four of us that made it, I believe.\"",
+          "bbox": [
+            {
+              "h": 51.336488185975604,
+              "w": 125.60933689024391,
+              "x": 149.07580792682924,
+              "y": 13.957574314024392,
+              "confidence": 0.99,
+              "end_index": 316,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks was thirty-four years old when he was hired by the Disney studio — considerably older than many of the young artists who were joining the Disney staff at that time. People like Frank Thomas, Ollie Johnston, and Ward Kimball — all of them at least ten years younger than Barks, and all of them to become brilliant animators — had been working at the studio for more than a year when Barks went on the payroll. He began as an \"in-betweener,\" filling in drawings between those made by the animators and their assistants, and found the work heavy going.",
+          "value": "Barks was thirty-four years old when he was hired by the Disney studio — considerably older than many of the young artists who were joining the Disney staff at that time. People like Frank Thomas, Ollie Johnston, and Ward Kimball — all of them at least ten years younger than Barks, and all of them to become brilliant animators — had been working at the studio for more than a year when Barks went on the payroll. He began as an \"in-betweener,\" filling in drawings between those made by the animators and their assistants, and found the work heavy going.",
+          "bbox": [
+            {
+              "h": 96.07917301829269,
+              "w": 125.80331364329267,
+              "x": 149.26450266768293,
+              "y": 65.85967225609757,
+              "confidence": 0.99,
+              "end_index": 554,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I began turning in scripts, or gags, for the comic strip, and selling those to the comic-strip department, as a sort of a sideline. I was attracting a little attention that way. The story department would send over a little outline of a story, just an idea of a story that they were going to try to make into a seven-minute short subject, and ask the guys for gags, any little situation on these stories that we could think of, so all of us guys would turn in gags. I was beginning to turn in some pretty good gags, and finally I turned in the gag of the barber chair in *Modern Inventions*. Walt paid me fifty dollars for the gag. He seemed to get the idea that I should be working in the story department, rather than over in animation.\"",
+          "value": "\"I began turning in scripts, or gags, for the comic strip, and selling those to the comic-strip department, as a sort of a sideline. I was attracting a little attention that way. The story department would send over a little outline of a story, just an idea of a story that they were going to try to make into a seven-minute short subject, and ask the guys for gags, any little situation on these stories that we could think of, so all of us guys would turn in gags. I was beginning to turn in some pretty good gags, and finally I turned in the gag of the barber chair in Modern Inventions. Walt paid me fifty dollars for the gag. He seemed to get the idea that I should be working in the story department, rather than over in animation.\"",
+          "bbox": [
+            {
+              "h": 118.61843368902443,
+              "w": 125.83455983231707,
+              "x": 149.7850895579268,
+              "y": 162.05767911585366,
+              "confidence": 0.99,
+              "end_index": 739,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Modern Inventions* (1937) is a cartoon in which Donald Duck enters a museum of modern inventions and runs afoul of the robots there. In Barks's gag — which closes the cartoon — Donald is pinned upside down in a robot barber chair; the feathers on his fanny are being trimmed and combed, and shoe polish is being applied to his head. Donald's squawking protests are counter-pointed against the robot barber's recorded chatter.",
+          "value": "Modern Inventions (1937) is a cartoon in which Donald Duck enters a museum of modern inventions and runs afoul of the robots there. In Barks's gag — which closes the cartoon — Donald is pinned upside down in a robot barber chair; the feathers on his fanny are being trimmed and combed, and shoe polish is being applied to his head. Donald's squawking protests are counter-pointed against the robot barber's recorded chatter.",
+          "bbox": [
+            {
+              "h": 73.64883384146341,
+              "w": 125.71614329268294,
+              "x": 150.23604992378046,
+              "y": 280.90223323170727,
+              "confidence": 0.99,
+              "end_index": 425,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "10 Carl Barks and the Art of the Comic Book",
+              "value": "10 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.784817073170725,
+                  "w": 80.07442168445121,
+                  "x": 34.72154725609756,
+                  "y": 365.9078506097561,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "10 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.78,
+              "w": 80.07,
+              "x": 34.72,
+              "y": 365.91,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "10"
+    }
+  ]
+}

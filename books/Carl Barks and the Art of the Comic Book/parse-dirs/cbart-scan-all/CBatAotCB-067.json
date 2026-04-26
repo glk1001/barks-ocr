@@ -1,0 +1,167 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "from their hiding place is not a savage, not even one of a lost race of Incans who fled Pizarro, but a funny-looking, harmless little man who is singing, \"Oh, Ah wish Ah was in Dixie! / Hooray! Hooray! / In Dixieland Ah'll take mah stand / To whoop it up in Dixie!\"",
+          "value": "from their hiding place is not a savage, not even one of a lost race of Incans who fled Pizarro, but a funny-looking, harmless little man who is singing, \"Oh, Ah wish Ah was in Dixie! / Hooray! Hooray! / In Dixieland Ah'll take mah stand / To whoop it up in Dixie!\"",
+          "bbox": [
+            {
+              "h": 44.646776152820124,
+              "w": 125.53965248666158,
+              "x": 11.660734327362803,
+              "y": 11.733010432545731,
+              "confidence": 0.99,
+              "end_index": 264,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Much the same thing happens in \"Ancient Persia,\" published a year later, except that adventure is dominant from the first page. A mad scientist kidnaps Donald and the nephews and forces them to help him unearth an ancient Persian city whose inhabitants were dehydrated while still living. The scientist fills the royal bathtub with a special solution and then pours in the dust of the royal family. The water seethes, and then a pompous Persian monarch and his fat, freckle-faced daughter emerge. \"So I live again!\" the king declaims. \"I, King Nevvawaza, imperial potentate of all Itsa Faka and adjoining subdivisions.\" The scientist plans to dehydrate everyone in the world so that he can have a little privacy, but somehow, once King Nevvawaza and his retinue appear, it's hard to get very worried.",
+          "value": "Much the same thing happens in \"Ancient Persia,\" published a year later, except that adventure is dominant from the first page. A mad scientist kidnaps Donald and the nephews and forces them to help him unearth an ancient Persian city whose inhabitants were dehydrated while still living. The scientist fills the royal bathtub with a special solution and then pours in the dust of the royal family. The water seethes, and then a pompous Persian monarch and his fat, freckle-faced daughter emerge. \"So I live again!\" the king declaims. \"I, King Nevvawaza, imperial potentate of all Itsa Faka and adjoining subdivisions.\" The scientist plans to dehydrate everyone in the world so that he can have a little privacy, but somehow, once King Nevvawaza and his retinue appear, it's hard to get very worried.",
+          "bbox": [
+            {
+              "h": 133.44289253048782,
+              "w": 126.00016613471799,
+              "x": 12.0943212890625,
+              "y": 56.42512957317073,
+              "confidence": 0.99,
+              "end_index": 799,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In both \"Lost in the Andes\" and \"Ancient Persia,\" the pattern set in the earlier stories collapses at the climactic moment under the force of a loud horselaugh. In effect, Barks had turned his back on children's fantasies as the source of so many of his stories, and was drawing instead on a much wider range of emotions and attitudes. The strong appeal to children was still there, in the fast-paced, logical plots and strong characterizations, but now the stories operated on many more levels than before.",
+          "value": "In both \"Lost in the Andes\" and \"Ancient Persia,\" the pattern set in the earlier stories collapses at the climactic moment under the force of a loud horselaugh. In effect, Barks had turned his back on children's fantasies as the source of so many of his stories, and was drawing instead on a much wider range of emotions and attitudes. The strong appeal to children was still there, in the fast-paced, logical plots and strong characterizations, but now the stories operated on many more levels than before.",
+          "bbox": [
+            {
+              "h": 87.4924618902439,
+              "w": 125.65143971512954,
+              "x": 13.27004275438262,
+              "y": 190.08384146341464,
+              "confidence": 0.99,
+              "end_index": 506,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's range was so broad, in fact, that some of the longer stories came perilously close to uninhibited sentimentality. \"Old California\" and \"Christmas for Shacktown\" (both 1951) are full of good, warm people and good, warm sentiments; \"Old California\" has the atmosphere of a Hollywood movie of the thirties. Fortunately, there are elements of incongruity in these stories that prevent them from tumbling over the edge. There are starry-eyed",
+          "value": "Barks's range was so broad, in fact, that some of the longer stories came perilously close to uninhibited sentimentality. \"Old California\" and \"Christmas for Shacktown\" (both 1951) are full of good, warm people and good, warm sentiments; \"Old California\" has the atmosphere of a Hollywood movie of the thirties. Fortunately, there are elements of incongruity in these stories that prevent them from tumbling over the edge. There are starry-eyed",
+          "bbox": [
+            {
+              "h": 73.35795731707316,
+              "w": 125.7711542492378,
+              "x": 14.435700743140242,
+              "y": 278.70475609756096,
+              "confidence": 0.99,
+              "end_index": 443,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "children dressed in rags in \"Shacktown,\" but there's also Uncle Scrooge at his incorrigible best, and such bit players as a Westerner who is soliciting donations for a Christmas party for cowboys who can't yodel. In \"Old California,\" set in that part of the state where Barks himself lived at the time, the ducks have been transported, by means of a strange dream, to the California of 1848. The story centers on, of all things, the romance between Panchita, the beautiful daughter of a wealthy, titled landowner, and Rolando, the poor (but handsome and honest) vaquero who works for her father. A little sticky, perhaps, but when Rolando serenades Panchita, it is with songs Donald has taught him: \"You'd be a pip on my radar / a wow on my video! / We could sing bebop in a helicop' / on our way to a movie show!\" So much for hearts and flowers.",
+          "value": "children dressed in rags in \"Shacktown,\" but there's also Uncle Scrooge at his incorrigible best, and such bit players as a Westerner who is soliciting donations for a Christmas party for cowboys who can't yodel. In \"Old California,\" set in that part of the state where Barks himself lived at the time, the ducks have been transported, by means of a strange dream, to the California of 1848. The story centers on, of all things, the romance between Panchita, the beautiful daughter of a wealthy, titled landowner, and Rolando, the poor (but handsome and honest) vaquero who works for her father. A little sticky, perhaps, but when Rolando serenades Panchita, it is with songs Donald has taught him: \"You'd be a pip on my radar / a wow on my video! / We could sing bebop in a helicop' / on our way to a movie show!\" So much for hearts and flowers.",
+          "bbox": [
+            {
+              "h": 140.3854737519055,
+              "w": 125.96494664634145,
+              "x": 149.9787919207317,
+              "y": 11.743200028582317,
+              "confidence": 0.99,
+              "end_index": 845,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's enhanced powers as an artist were most clearly visible in the richness of his drawings at this time. Even the panels in which he presented his stories took on irregular shapes, starting in 1949; for a few years, in his longer stories, he stepped boldly away from simple rectangular panels. Barks was always basically conservative in his staging of his stories — not for him the gaudy stunting of a Will Eisner — but even in this area, he was flexing his muscles. In \"Dangerous Disguise,\" a 1950 spy parody, one panel is filled with counter-spies, each popping out of hiding and proclaiming his intention of shooting one of the others; the speech balloon of the spy on the far right is cut off by the panel border. (In the next panel, as Donald walks away from the scene, blissfully unaware, he hears a single \"BANG!\" and thinks, \"Can you beat that? People shooting firecrackers.\")",
+          "value": "Barks's enhanced powers as an artist were most clearly visible in the richness of his drawings at this time. Even the panels in which he presented his stories took on irregular shapes, starting in 1949; for a few years, in his longer stories, he stepped boldly away from simple rectangular panels. Barks was always basically conservative in his staging of his stories — not for him the gaudy stunting of a Will Eisner — but even in this area, he was flexing his muscles. In \"Dangerous Disguise,\" a 1950 spy parody, one panel is filled with counter-spies, each popping out of hiding and proclaiming his intention of shooting one of the others; the speech balloon of the spy on the far right is cut off by the panel border. (In the next panel, as Donald walks away from the scene, blissfully unaware, he hears a single \"BANG!\" and thinks, \"Can you beat that? People shooting firecrackers.\")",
+          "bbox": [
+            {
+              "h": 147.41131097560975,
+              "w": 126.01905297256096,
+              "x": 150.85893292682925,
+              "y": 153.02716463414635,
+              "confidence": 0.99,
+              "end_index": 887,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "There was a wealth of detail in Barks's stories of the late forties and early fifties, whether the stories were set in Duckburg or in exotic foreign locales. In part, this detail was the product of Barks's reference files (he maintained an extensive \"morgue\"), but there was more to it than that, since even the cockeyed",
+          "value": "There was a wealth of detail in Barks's stories of the late forties and early fifties, whether the stories were set in Duckburg or in exotic foreign locales. In part, this detail was the product of Barks's reference files (he maintained an extensive \"morgue\"), but there was more to it than that, since even the cockeyed",
+          "bbox": [
+            {
+              "h": 51.790746951219475,
+              "w": 125.66865663109753,
+              "x": 151.34504954268291,
+              "y": 300.1703506097561,
+              "confidence": 0.99,
+              "end_index": 319,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n67",
+              "value": "Carl Barks and the Art of the Comic Book\n67",
+              "bbox": [
+                {
+                  "h": 5.04244664634145,
+                  "w": 80.10505907012194,
+                  "x": 174.36277248475608,
+                  "y": 366.18228658536583,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n67",
+          "bbox": [
+            {
+              "h": 5.04,
+              "w": 80.11,
+              "x": 174.36,
+              "y": 366.18,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "67"
+    }
+  ]
+}

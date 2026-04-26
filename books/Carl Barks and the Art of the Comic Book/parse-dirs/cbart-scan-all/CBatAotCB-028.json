@@ -1,0 +1,201 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Disney cartoons are by no means plotless; in fact, the beginnings, middles and ends are more clearly defined than in the cartoons of most other studios. But, as Barks suggests, it is how the plot is used that makes the difference. Disney plots typically were designed to set up situations that the animators could exploit. In *On Ice* (1936), for example, Donald puts ice skates on the sleeping Pluto, and lures him onto the ice. In a story of the kind that Barks later wrote and drew for comic books, this would be but the prelude to a whole string of complications, culminating in some comic catastrophe. But in *On Ice*, Pluto is given his skates so that he can go through painful struggles to right himself and return to solid ground, all beautifully animated by Norman Ferguson. Donald comes to grief, and all of *On Ice*'s strands are pulled together in the closing seconds, but the story remains basically an excuse for the animation. The animation is the reason for the cartoon's existence, it is not simply the means of telling the story.",
+          "value": "Disney cartoons are by no means plotless; in fact, the beginnings, middles and ends are more clearly defined than in the cartoons of most other studios. But, as Barks suggests, it is how the plot is used that makes the difference. Disney plots typically were designed to set up situations that the animators could exploit. In On Ice (1936), for example, Donald puts ice skates on the sleeping Pluto, and lures him onto the ice. In a story of the kind that Barks later wrote and drew for comic books, this would be but the prelude to a whole string of complications, culminating in some comic catastrophe. But in On Ice, Pluto is given his skates so that he can go through painful struggles to right himself and return to solid ground, all beautifully animated by Norman Ferguson. Donald comes to grief, and all of On Ice's strands are pulled together in the closing seconds, but the story remains basically an excuse for the animation. The animation is the reason for the cartoon's existence, it is not simply the means of telling the story.",
+          "bbox": [
+            {
+              "h": 170.3132469512195,
+              "w": 125.77222394245425,
+              "x": 11.871774723704268,
+              "y": 13.610682164634147,
+              "confidence": 0.99,
+              "end_index": 1046,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "By contrast, Barks is primarily a writer; his drawings have always been the servants of the ideas he wanted to get across. When he was working at the Disney studio, those ideas had not yet taken the form of richly humorous stories; he was still thinking more of gags than of stories. But still, it is little wonder that he found the Disney priorities skewed.",
+          "value": "By contrast, Barks is primarily a writer; his drawings have always been the servants of the ideas he wanted to get across. When he was working at the Disney studio, those ideas had not yet taken the form of richly humorous stories; he was still thinking more of gags than of stories. But still, it is little wonder that he found the Disney priorities skewed.",
+          "bbox": [
+            {
+              "h": 59.24282012195121,
+              "w": 125.57280547351371,
+              "x": 12.193202529535059,
+              "y": 184.92516768292683,
+              "confidence": 0.99,
+              "end_index": 357,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In 1942, Barks decided to leave the Disney studio. World War II had just begun, and the studio was rapidly becoming a war plant; at one point, more than ninety per cent of the footage it was producing was for the military.",
+          "value": "In 1942, Barks decided to leave the Disney studio. World War II had just begun, and the studio was rapidly becoming a war plant; at one point, more than ninety per cent of the footage it was producing was for the military.",
+          "bbox": [
+            {
+              "h": 36.76159298780487,
+              "w": 125.39206161871188,
+              "x": 12.691998975800304,
+              "y": 245.82329268292682,
+              "confidence": 0.99,
+              "end_index": 221,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"It was when they were starting to put badges on everybody, and we were going to have to check in at the gate every morning and we couldn't have any gasoline to drive anywhere. You were just going to be locked in there for the duration, and I just didn't think I wanted to be locked into that place for the duration.\"",
+          "value": "\"It was when they were starting to put badges on everybody, and we were going to have to check in at the gate every morning and we couldn't have any gasoline to drive anywhere. You were just going to be locked in there for the duration, and I just didn't think I wanted to be locked into that place for the duration.\"",
+          "bbox": [
+            {
+              "h": 57.844207317073156,
+              "w": 125.3815897722942,
+              "x": 12.966837247522864,
+              "y": 284.6809298780488,
+              "confidence": 0.99,
+              "end_index": 316,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The studio's air conditioning also bothered",
+          "value": "The studio's air conditioning also bothered",
+          "bbox": [
+            {
+              "h": 7.24008384146342,
+              "w": 119.05382812499998,
+              "x": 19.396654916158536,
+              "y": 343.81173018292685,
+              "confidence": 0.97,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "him; he had had an operation to relieve his sinuses not long before he decided to leave.",
+          "value": "him; he had had an operation to relieve his sinuses not long before he decided to leave.",
+          "bbox": [
+            {
+              "h": 15.02015196265244,
+              "w": 124.9717911585366,
+              "x": 149.73604230182923,
+              "y": 13.823227419969513,
+              "confidence": 0.97,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks had no appetite for the military films the studio was making. \"We were working on one about medicine, and the way germs invade the body. They were getting lined up for some war picture on gun barrels, or something like that. I couldn't see myself getting tied up with that sort of thing. The war was a very unpopular subject with me, anyway. I had seen one generation of young men marched off to war — World War I — and I was stupid enough that I wanted to get into it, but I was just a little too young. And then comes this Second World War, and I had learned my lesson in the meantime. When I saw how little we had accomplished with World War I, I thought, why in the devil kill off another whole generation of young men to accomplish the same result?\"",
+          "value": "Barks had no appetite for the military films the studio was making. \"We were working on one about medicine, and the way germs invade the body. They were getting lined up for some war picture on gun barrels, or something like that. I couldn't see myself getting tied up with that sort of thing. The war was a very unpopular subject with me, anyway. I had seen one generation of young men marched off to war — World War I — and I was stupid enough that I wanted to get into it, but I was just a little too young. And then comes this Second World War, and I had learned my lesson in the meantime. When I saw how little we had accomplished with World War I, I thought, why in the devil kill off another whole generation of young men to accomplish the same result?\"",
+          "bbox": [
+            {
+              "h": 131.69040777439025,
+              "w": 125.76110899390243,
+              "x": 149.74353658536586,
+              "y": 29.195967987804877,
+              "confidence": 0.99,
+              "end_index": 759,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "He left the studio on November 6, 1942, moved to San Jacinto, a town east of Los Angeles, with his second wife, and set up a chicken farm. He had sold a few magazine cartoons while he was at Disney's, and now he began selling more. And most important, \"I wrote to Western Publishing, and told them that I had left the studio, and that I was available in case they had anything they wanted done.\"\\*",
+          "value": "He left the studio on November 6, 1942, moved to San Jacinto, a town east of Los Angeles, with his second wife, and set up a chicken farm. He had sold a few magazine cartoons while he was at Disney's, and now he began selling more. And most important, \"I wrote to Western Publishing, and told them that I had left the studio, and that I was available in case they had anything they wanted done.\"*",
+          "bbox": [
+            {
+              "h": 72.4526867378049,
+              "w": 125.46819740853658,
+              "x": 150.23618711890242,
+              "y": 162.53120807926828,
+              "confidence": 0.99,
+              "end_index": 396,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\*Western Publishing Company has produced comic books and children's books under a bewildering variety of imprints — Whitman, K.K. Publications, Gold Key, and Dell, to name only a few. Western itself changed its name (from Western Printing and Lithographing to Western Publishing) in August 1960. While Barks was associated with Western, most of its comic books were published under the Dell label. They were \"designed and produced\" by Western and distributed by Dell Publishing Company, a completely independent company. In the words of a 1960 Western prospectus, \"Under an exclusive arrangement, Dell Publishing must buy all of its comic books from Western and all but two comic books created and produced by Western must be sold to Dell Publishing.\" The two aforementioned comic books were *Red Ryder Comics* and *Walt Disney's Comics and Stories*, the latter being the comic book with which Barks was most closely connected. *Walt Disney's Comics* was published by Western through its K.K. Publications subsidiary but did carry the Dell label for more than fourteen years, starting with the March 1948 issue.",
+          "value": "*Western Publishing Company has produced comic books and children's books under a bewildering variety of imprints — Whitman, K.K. Publications, Gold Key, and Dell, to name only a few. Western itself changed its name (from Western Printing and Lithographing to Western Publishing) in August 1960. While Barks was associated with Western, most of its comic books were published under the Dell label. They were \"designed and produced\" by Western and distributed by Dell Publishing Company, a completely independent company. In the words of a 1960 Western prospectus, \"Under an exclusive arrangement, Dell Publishing must buy all of its comic books from Western and all but two comic books created and produced by Western must be sold to Dell Publishing.\" The two aforementioned comic books were Red Ryder Comics and Walt Disney's Comics and Stories, the latter being the comic book with which Barks was most closely connected. Walt Disney's Comics was published by Western through its K.K. Publications subsidiary but did carry the Dell label for more than fourteen years, starting with the March 1948 issue.",
+          "bbox": [
+            {
+              "h": 102.66985518292684,
+              "w": 125.78556402439025,
+              "x": 150.25592606707315,
+              "y": 247.03454268292683,
+              "confidence": 0.91,
+              "end_index": 1111,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "28 Carl Barks and the Art of the Comic Book",
+              "value": "28 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.560525914634145,
+                  "w": 80.05578672827743,
+                  "x": 34.68719059641768,
+                  "y": 366.12025152439026,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "28 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.56,
+              "w": 80.06,
+              "x": 34.69,
+              "y": 366.12,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "28"
+    }
+  ]
+}

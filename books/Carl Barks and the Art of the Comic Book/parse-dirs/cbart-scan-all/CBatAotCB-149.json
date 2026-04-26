@@ -1,0 +1,648 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "and when a slide of Donald is projected toward Scrooge by the ray, Scrooge will be overwhelmed by the urge to be generous to Donald. But Donald unwittingly shows Scrooge a slide of a dog, and Scrooge buys the dog all of the presents listed in the song \"The Twelve Days of Christmas.\" *(Aug. 14, 1963)*",
+          "value": "and when a slide of Donald is projected toward Scrooge by the ray, Scrooge will be overwhelmed by the urge to be generous to Donald. But Donald unwittingly shows Scrooge a slide of a dog, and Scrooge buys the dog all of the presents listed in the song \"The Twelve Days of Christmas.\" (Aug. 14, 1963)",
+          "bbox": [
+            {
+              "h": 35.18346608231707,
+              "w": 124.79043528487043,
+              "x": 10.569521841653962,
+              "y": 25.085099085365854,
+              "confidence": 0.99,
+              "end_index": 300,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 96, December 1971.",
+          "value": "Reprinted: Uncle Scrooge No. 96, December 1971.",
+          "bbox": [
+            {
+              "h": 5.449138719512202,
+              "w": 99.51398008765243,
+              "x": 15.165836032774388,
+              "y": 60.859378810975606,
+              "confidence": 0.94,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Man versus Machine - 4 - Gyro, in a fit of revulsion over machines, flies off to the desert to live the simple life. *(July 22, 1963)*",
+          "value": "GYRO GEARLOOSE Man versus Machine - 4 - Gyro, in a fit of revulsion over machines, flies off to the desert to live the simple life. (July 22, 1963)",
+          "bbox": [
+            {
+              "h": 17.564999999999998,
+              "w": 124.58744759908535,
+              "x": 10.836802591463412,
+              "y": 66.47030487804878,
+              "confidence": 0.96,
+              "end_index": 148,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 37, October 1972.\nUNCLE SCROOGE - ½ (top half of inside back cover) - Scrooge burns a mass of candles to test a light bulb. *(Sept. 24, 1962)*",
+          "value": "Reprinted: Walt Disney Comics Digest No. 37, October 1972.\nUNCLE SCROOGE - ½ (top half of inside back cover) - Scrooge burns a mass of candles to test a light bulb. (Sept. 24, 1962)",
+          "bbox": [
+            {
+              "h": 22.614740853658535,
+              "w": 124.8070573313643,
+              "x": 10.794457531440548,
+              "y": 84.68985137195122,
+              "confidence": 0.96,
+              "end_index": 184,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - ½ (bottom half of inside back cover) - Scrooge has invented a divining stick that attracts gold like a magnet. *(Sept. 24, 1962)*",
+          "value": "UNCLE SCROOGE - ½ (bottom half of inside back cover) - Scrooge has invented a divining stick that attracts gold like a magnet. (Sept. 24, 1962)",
+          "bbox": [
+            {
+              "h": 17.853361280487796,
+              "w": 124.78875571646341,
+              "x": 10.863075457317072,
+              "y": 108.01658917682927,
+              "confidence": 0.97,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These are almost certainly the gags identified on Barks's list as \"no bargain\" and \"up and at it,\" with no issue specified.",
+          "value": "These are almost certainly the gags identified on Barks's list as \"no bargain\" and \"up and at it,\" with no issue specified.",
+          "bbox": [
+            {
+              "h": 11.87084222560974,
+              "w": 124.56335056211888,
+              "x": 11.221859994283536,
+              "y": 126.37285060975611,
+              "confidence": 0.97,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 48 - March 1964 - 36 pages",
+          "value": "48 - March 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.911200457317072,
+              "w": 65.08001738757622,
+              "x": 11.144914967606706,
+              "y": 145.06004954268292,
+              "confidence": 0.96,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: As Magica de Spell grins in the background, Scrooge is astonished to see Donald's and the nephews' faces reflected as Magica's in a pond. (Illustrating \"The Many Faces of Magica de Spell.\") *(October 15, 1963)*",
+          "value": "Front cover: As Magica de Spell grins in the background, Scrooge is astonished to see Donald's and the nephews' faces reflected as Magica's in a pond. (Illustrating \"The Many Faces of Magica de Spell.\") (October 15, 1963)",
+          "bbox": [
+            {
+              "h": 23.400114329268288,
+              "w": 125.0971746379573,
+              "x": 11.311544874237804,
+              "y": 151.08436737804877,
+              "confidence": 0.97,
+              "end_index": 222,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 138, March 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 138, March 1977.",
+          "bbox": [
+            {
+              "h": 5.840705030487797,
+              "w": 95.30178008288871,
+              "x": 15.34636873570884,
+              "y": 174.7770617378049,
+              "confidence": 0.9,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Many Faces of Magica de Spell - 22 - Magica invents a potion that, when sprayed on a person's face, makes that face look like the face at which the person last looked. Learning of the potion, Scrooge flees from Duckburg with his Old Number One Dime and hides in an unknown jungle valley that is populated by a strange race of faceless people. Magica follows him there and sprays his face. *(October 5, 1963)*",
+          "value": "UNCLE SCROOGE The Many Faces of Magica de Spell - 22 - Magica invents a potion that, when sprayed on a person's face, makes that face look like the face at which the person last looked. Learning of the potion, Scrooge flees from Duckburg with his Old Number One Dime and hides in an unknown jungle valley that is populated by a strange race of faceless people. Magica follows him there and sprays his face. (October 5, 1963)",
+          "bbox": [
+            {
+              "h": 47.25198932926831,
+              "w": 124.9863006145198,
+              "x": 11.600000833650913,
+              "y": 180.66752286585364,
+              "confidence": 0.98,
+              "end_index": 425,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 138, March 1977; *Walt Disney Comics Digest* No. 34, April 1972.",
+          "value": "Reprinted: Uncle Scrooge No. 138, March 1977; Walt Disney Comics Digest No. 34, April 1972.",
+          "bbox": [
+            {
+              "h": 11.5528125,
+              "w": 125.16801019435974,
+              "x": 11.403397008384145,
+              "y": 228.25536585365853,
+              "confidence": 0.96,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Jonah Gyro - 4 - Gyro's use of a little mechanical fish to lure salmon irks some other fishermen, but when he tosses it away, it lures a school of salmon and a whale toward the shore. *(Sept. 16, 1963)*",
+          "value": "GYRO GEARLOOSE Jonah Gyro - 4 - Gyro's use of a little mechanical fish to lure salmon irks some other fishermen, but when he tosses it away, it lures a school of salmon and a whale toward the shore. (Sept. 16, 1963)",
+          "bbox": [
+            {
+              "h": 29.540807926829245,
+              "w": 125.86263767149389,
+              "x": 10.907651009908536,
+              "y": 240.01703506097562,
+              "confidence": 0.99,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 49 - May 1964 - 36 pages",
+          "value": "49 - May 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.68991615853658,
+              "w": 59.39740186737804,
+              "x": 11.720489233993902,
+              "y": 273.7346112804878,
+              "confidence": 0.96,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: As Donald pilots a small space ship toward the moon, Scrooge has to be restrained from leaping off the nose of the ship with a pick in his hand. (Illustrating \"The Loony Lunar Gold Rush.\") *(Nov. 12, 1963)*",
+          "value": "Front cover: As Donald pilots a small space ship toward the moon, Scrooge has to be restrained from leaping off the nose of the ship with a pick in his hand. (Illustrating \"The Loony Lunar Gold Rush.\") (Nov. 12, 1963)",
+          "bbox": [
+            {
+              "h": 23.31477896341461,
+              "w": 125.12798566120425,
+              "x": 11.906575123856706,
+              "y": 279.56965701219514,
+              "confidence": 0.98,
+              "end_index": 218,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 117, February 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 117, February 1975.",
+          "bbox": [
+            {
+              "h": 5.57025914634145,
+              "w": 99.56372510956554,
+              "x": 16.085245927019816,
+              "y": 303.4794969512195,
+              "confidence": 0.92,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Loony Lunar Gold Rush - 17 - Scrooge is lecturing the Junior Woodchucks on the follies of gold fever when the first astronauts return from the moon with the news that gold is thick there. The ducks build their own small rocket and go to the moon, where Scrooge sets up the rocket as a store selling everything at gold rush prices. A villain named Dan McShrew lures the",
+          "value": "UNCLE SCROOGE The Loony Lunar Gold Rush - 17 - Scrooge is lecturing the Junior Woodchucks on the follies of gold fever when the first astronauts return from the moon with the news that gold is thick there. The ducks build their own small rocket and go to the moon, where Scrooge sets up the rocket as a store selling everything at gold rush prices. A villain named Dan McShrew lures the",
+          "bbox": [
+            {
+              "h": 41.354954268292694,
+              "w": 125.30552365186736,
+              "x": 11.850849252096037,
+              "y": 309.3222942073171,
+              "confidence": 0.99,
+              "end_index": 385,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "ducks away from the rocket and leaves them to die, leading to a parody of Service's \"The Shooting of Dan McGrew.\" *(Nov. 12, 1963)*",
+          "value": "ducks away from the rocket and leaves them to die, leading to a parody of Service's \"The Shooting of Dan McGrew.\" (Nov. 12, 1963)",
+          "bbox": [
+            {
+              "h": 16.114979039634143,
+              "w": 125.43358993902434,
+              "x": 148.866328125,
+              "y": 24.535635480182926,
+              "confidence": 0.96,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 117, February 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 117, February 1975.",
+          "bbox": [
+            {
+              "h": 5.528511814024391,
+              "w": 99.67987042682927,
+              "x": 153.52252477134144,
+              "y": 42.812852515243904,
+              "confidence": 0.95,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 50 - July 1964 - 36 pages",
+          "value": "50 - July 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.677231326219514,
+              "w": 58.56377858231707,
+              "x": 148.95216082317071,
+              "y": 54.52586318597561,
+              "confidence": 0.96,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The ducks are riding on a flying carpet, which is being unraveled by a roc. (Illustrating \"Rug Riders in the Sky.\") *(Dec. 26, 1963)*",
+          "value": "Front cover: The ducks are riding on a flying carpet, which is being unraveled by a roc. (Illustrating \"Rug Riders in the Sky.\") (Dec. 26, 1963)",
+          "bbox": [
+            {
+              "h": 17.691796875000005,
+              "w": 125.00466653963417,
+              "x": 149.28628239329265,
+              "y": 60.18158917682926,
+              "confidence": 0.98,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A Barks sketch for the cover of this issue — rejected by Western — shows Scrooge being tossed by a magic carpet while the other ducks flee. The title of the story, as given on the drawing, was to have been \"Rug Bugs in Old Bugdud,\" and not \"Rug Riders in the Sky.\"",
+          "value": "A Barks sketch for the cover of this issue — rejected by Western — shows Scrooge being tossed by a magic carpet while the other ducks flee. The title of the story, as given on the drawing, was to have been \"Rug Bugs in Old Bugdud,\" and not \"Rug Riders in the Sky.\"",
+          "bbox": [
+            {
+              "h": 29.076259527439028,
+              "w": 125.28348132621953,
+              "x": 149.11439405487803,
+              "y": 78.30158346036585,
+              "confidence": 0.98,
+              "end_index": 263,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 116, December 1974.",
+          "value": "Reprinted: Uncle Scrooge No. 116, December 1974.",
+          "bbox": [
+            {
+              "h": 5.453346036585376,
+              "w": 102.47280297256098,
+              "x": 153.7168788109756,
+              "y": 107.99354039634146,
+              "confidence": 0.93,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Rug Riders in the Sky - 16 - Magica de Spell, in a bazaar in Baghdad, finds an authentic flying carpet, and tricks Scrooge into buying it. Magica steals the carpet twice, but each time the ducks regain it, and the carpet finally carries them to a cave containing the treasure of Aladdin. *(Dec. 26, 1963)*",
+          "value": "UNCLE SCROOGE Rug Riders in the Sky - 16 - Magica de Spell, in a bazaar in Baghdad, finds an authentic flying carpet, and tricks Scrooge into buying it. Magica steals the carpet twice, but each time the ducks regain it, and the carpet finally carries them to a cave containing the treasure of Aladdin. (Dec. 26, 1963)",
+          "bbox": [
+            {
+              "h": 35.30863948170732,
+              "w": 125.37061737804875,
+              "x": 149.34632240853657,
+              "y": 113.44279344512195,
+              "confidence": 0.98,
+              "end_index": 318,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: This story was submitted as seventeen pages; one page was dropped by Western before publication.",
+          "value": "Changes: This story was submitted as seventeen pages; one page was dropped by Western before publication.",
+          "bbox": [
+            {
+              "h": 11.363631859756087,
+              "w": 124.9637480945122,
+              "x": 149.69538109756095,
+              "y": 149.63239710365855,
+              "confidence": 0.91,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 116, December 1974.",
+          "value": "Reprinted: Uncle Scrooge No. 116, December 1974.",
+          "bbox": [
+            {
+              "h": 5.759496951219507,
+              "w": 103.47864900914634,
+              "x": 153.4548875762195,
+              "y": 161.29784679878048,
+              "confidence": 0.89,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 51 - August 1964 - 36 pages",
+          "value": "51 - August 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.767259908536579,
+              "w": 67.060546875,
+              "x": 149.45216844512194,
+              "y": 173.21967987804877,
+              "confidence": 0.96,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: A worried-looking Scrooge runs while holding aloft a crate that contains a mixture of lettuce and currency. (Illustrating \"How Green Was My Lettuce.\") *(Jan. 18, 1964)*",
+          "value": "Front cover: A worried-looking Scrooge runs while holding aloft a crate that contains a mixture of lettuce and currency. (Illustrating \"How Green Was My Lettuce.\") (Jan. 18, 1964)",
+          "bbox": [
+            {
+              "h": 22.9616387195122,
+              "w": 125.36022484756096,
+              "x": 149.54053925304876,
+              "y": 178.98262957317073,
+              "confidence": 0.98,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 95, October 1971.",
+          "value": "Reprinted: Uncle Scrooge No. 95, October 1971.",
+          "bbox": [
+            {
+              "h": 5.431920731707332,
+              "w": 96.15923780487806,
+              "x": 154.05412157012194,
+              "y": 202.7675076219512,
+              "confidence": 0.9,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE How Green Was My Lettuce - 15 - Gophers undermine the foundations of Scrooge's money bin, and he has the coins exchanged for bills to reduce the bin's weight. The gophers belong to the Beagle Boys, who are planning to slide the bin down a tunnel and into a pit on their property. When the plot is discovered, Scrooge and Donald disguise themselves as lettuce farmers and drive out of town in a truck filled with lettuce that conceals Scrooge's paper money. *(Jan. 18, 1964)*",
+          "value": "UNCLE SCROOGE How Green Was My Lettuce - 15 - Gophers undermine the foundations of Scrooge's money bin, and he has the coins exchanged for bills to reduce the bin's weight. The gophers belong to the Beagle Boys, who are planning to slide the bin down a tunnel and into a pit on their property. When the plot is discovered, Scrooge and Donald disguise themselves as lettuce farmers and drive out of town in a truck filled with lettuce that conceals Scrooge's paper money. (Jan. 18, 1964)",
+          "bbox": [
+            {
+              "h": 54.00105182926831,
+              "w": 125.71345083841466,
+              "x": 149.58226371951216,
+              "y": 207.97783536585365,
+              "confidence": 0.99,
+              "end_index": 487,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: This story was submitted as seventeen pages; two pages were dropped by Western before publication.",
+          "value": "Changes: This story was submitted as seventeen pages; two pages were dropped by Western before publication.",
+          "bbox": [
+            {
+              "h": 11.153643292682899,
+              "w": 125.22769435975611,
+              "x": 149.9630144817073,
+              "y": 262.4399085365854,
+              "confidence": 0.89,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 95, October 1971.",
+          "value": "Reprinted: Uncle Scrooge No. 95, October 1971.",
+          "bbox": [
+            {
+              "h": 5.5208460365853895,
+              "w": 96.56473513719513,
+              "x": 154.14298971036584,
+              "y": 274.18465701219515,
+              "confidence": 0.89,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 52 - September 1964 - 36 pages",
+          "value": "52 - September 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.68070121951223,
+              "w": 76.21166730182927,
+              "x": 149.60447217987803,
+              "y": 285.7929420731707,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge and Donald look puzzled as they examine a huge wig beneath which the nephews' feet are visible. (Illustrating \"The Great Wig Mystery.\") *(Feb. 19, 1964)*",
+          "value": "Front cover: Scrooge and Donald look puzzled as they examine a huge wig beneath which the nephews' feet are visible. (Illustrating \"The Great Wig Mystery.\") (Feb. 19, 1964)",
+          "bbox": [
+            {
+              "h": 22.907949695121967,
+              "w": 125.43509908536585,
+              "x": 149.74357088414632,
+              "y": 291.2948551829268,
+              "confidence": 0.98,
+              "end_index": 173,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 85, February 1970; No. 152, May 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 85, February 1970; No. 152, May 1978.",
+          "bbox": [
+            {
+              "h": 10.996097560975649,
+              "w": 124.95507050304874,
+              "x": 150.20859375,
+              "y": 315.3367225609756,
+              "confidence": 0.97,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Great Wig Mystery - 20 - Scrooge crashes his plane on landing, while bringing home a load of wigs from Europe. A pig character named Scalpnick pretends to have been caught under the wigs, and a jury,",
+          "value": "UNCLE SCROOGE The Great Wig Mystery - 20 - Scrooge crashes his plane on landing, while bringing home a load of wigs from Europe. A pig character named Scalpnick pretends to have been caught under the wigs, and a jury,",
+          "bbox": [
+            {
+              "h": 23.859054878048756,
+              "w": 125.49791730182925,
+              "x": 150.04612042682925,
+              "y": 326.74923018292685,
+              "confidence": 0.99,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n149",
+              "value": "Carl Barks and the Art of the Comic Book\n149",
+              "bbox": [
+                {
+                  "h": 4.509672256097565,
+                  "w": 77.98539443597559,
+                  "x": 172.46448932926828,
+                  "y": 361.5032926829268,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n149",
+          "bbox": [
+            {
+              "h": 4.51,
+              "w": 77.99,
+              "x": 172.46,
+              "y": 361.5,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "149"
+    }
+  ]
+}

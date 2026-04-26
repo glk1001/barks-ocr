@@ -1,0 +1,185 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# VI.",
+          "value": "VI.",
+          "bbox": [
+            {
+              "h": 27.4449237804878,
+              "w": 58.89306402439024,
+              "x": 111.98649580792683,
+              "y": 51.79908155487805,
+              "confidence": 0.87,
+              "end_index": 2,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**SCROOGE, GLADSTONE, AND**",
+          "value": "SCROOGE, GLADSTONE, AND",
+          "bbox": [
+            {
+              "h": 6.975342987804869,
+              "w": 106.43221560594513,
+              "x": 31.087758669969507,
+              "y": 118.18889862804878,
+              "confidence": 0.88,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Gyro embodied some basic American preoccupations — wealth, luck, technology — but the best stories with these characters resist efforts to draw lessons for present-day American society from them. The point with Al Capp's General Bullmoose was what his money did to other people; the point with Uncle Scrooge was what his money did to him.",
+          "value": "Gyro embodied some basic American preoccupations — wealth, luck, technology — but the best stories with these characters resist efforts to draw lessons for present-day American society from them. The point with Al Capp's General Bullmoose was what his money did to other people; the point with Uncle Scrooge was what his money did to him.",
+          "bbox": [
+            {
+              "h": 61.04676448170733,
+              "w": 125.43236161394819,
+              "x": 12.363589224466462,
+              "y": 123.82751524390243,
+              "confidence": 0.94,
+              "end_index": 337,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks is a highly conservative man, with a generally cynical view of human nature, and no one who reads the stories from his best years could come away believing that he is optimistic about man's perfectibility. If human beings do not deceive and destroy themselves in one way, he suggests in these stories, they will do it in another. Scrooge's life of unending toil is in truth not far removed from Gladstone's life of unending idleness; one is the other, turned inside out. Both characters are vessels for human failings that have expressed themselves in other ways at other times, and will again. Because Barks is a twentieth century artist, he worked with materials that were ready at hand, like our obsessions with money and luck, but his subject matter was not the twentieth century as much as it was human nature as he saw it.",
+          "value": "Barks is a highly conservative man, with a generally cynical view of human nature, and no one who reads the stories from his best years could come away believing that he is optimistic about man's perfectibility. If human beings do not deceive and destroy themselves in one way, he suggests in these stories, they will do it in another. Scrooge's life of unending toil is in truth not far removed from Gladstone's life of unending idleness; one is the other, turned inside out. Both characters are vessels for human failings that have expressed themselves in other ways at other times, and will again. Because Barks is a twentieth century artist, he worked with materials that were ready at hand, like our obsessions with money and luck, but his subject matter was not the twentieth century as much as it was human nature as he saw it.",
+          "bbox": [
+            {
+              "h": 140.00262576219515,
+              "w": 125.38377096036585,
+              "x": 12.682351371951219,
+              "y": 185.37671112804878,
+              "confidence": 0.99,
+              "end_index": 833,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's characteristic tone is one of tolerance and wry amusement, and so parody came naturally to him. The professions were frequent targets, but Barks usually attacked only",
+          "value": "Barks's characteristic tone is one of tolerance and wry amusement, and so parody came naturally to him. The professions were frequent targets, but Barks usually attacked only",
+          "bbox": [
+            {
+              "h": 29.376356707317044,
+              "w": 125.19947503810974,
+              "x": 13.271364329268291,
+              "y": 325.6467530487805,
+              "confidence": 0.99,
+              "end_index": 173,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "foolishness and self-importance. There is, for example, Lawyer Sharkey (\"The Golden Helmet,\" 1952), who is given to uttering bogus Latin legalisms like \"Hocus, locus, jocus\" (\"To the landlord belong the doorknobs\"). He serves the villainous Azure Blue, but Sharkey himself is not evil, only silly.",
+          "value": "foolishness and self-importance. There is, for example, Lawyer Sharkey (\"The Golden Helmet,\" 1952), who is given to uttering bogus Latin legalisms like \"Hocus, locus, jocus\" (\"To the landlord belong the doorknobs\"). He serves the villainous Azure Blue, but Sharkey himself is not evil, only silly.",
+          "bbox": [
+            {
+              "h": 51.95721036585365,
+              "w": 125.97955792682927,
+              "x": 148.65134336890242,
+              "y": 117.81254954268292,
+              "confidence": 0.99,
+              "end_index": 296,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Junior Woodchucks, probably the best example of Barks the parodist, first appeared in the February 1951 *Walt Disney's Comics*. The Woodchucks were a Boy Scouts-like organization to which the nephews belonged. Like the Scouts, the Woodchucks regarded themselves with utter seriousness, but their ranks were higher, their medals more numerous, their upper lips stiffer. In Barks's hands, the upper-class English origins of the Scouts were only too apparent. At one point in the second Woodchuck story (in the September 1951 *Walt Disney's Comics*), the Exalted Grand Marshal of the Woodchucks turns a withering eye on Donald, who has disgraced himself beyond hope of redemption. \"I can see, sir,\" the Grand Marshal says with true aristocratic scorn, \"that you have never been a Woodchuck.\" Obviously, the supreme insult.",
+          "value": "The Junior Woodchucks, probably the best example of Barks the parodist, first appeared in the February 1951 Walt Disney's Comics. The Woodchucks were a Boy Scouts-like organization to which the nephews belonged. Like the Scouts, the Woodchucks regarded themselves with utter seriousness, but their ranks were higher, their medals more numerous, their upper lips stiffer. In Barks's hands, the upper-class English origins of the Scouts were only too apparent. At one point in the second Woodchuck story (in the September 1951 Walt Disney's Comics), the Exalted Grand Marshal of the Woodchucks turns a withering eye on Donald, who has disgraced himself beyond hope of redemption. \"I can see, sir,\" the Grand Marshal says with true aristocratic scorn, \"that you have never been a Woodchuck.\" Obviously, the supreme insult.",
+          "bbox": [
+            {
+              "h": 139.80241234756096,
+              "w": 126.06911204268292,
+              "x": 149.02713795731708,
+              "y": 170.2901867378049,
+              "confidence": 0.98,
+              "end_index": 822,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's parodies occasionally darkened into satire, as his detachment gave way to anger and contempt. For example, at the beginning of \"Lost in the Andes\" (1949), the distinguished leader of an archeological expedition decorously tells his first assistant to prepare",
+          "value": "Barks's parodies occasionally darkened into satire, as his detachment gave way to anger and contempt. For example, at the beginning of \"Lost in the Andes\" (1949), the distinguished leader of an archeological expedition decorously tells his first assistant to prepare",
+          "bbox": [
+            {
+              "h": 44.282400914634195,
+              "w": 125.93505525914634,
+              "x": 149.55923208841463,
+              "y": 310.68391006097556,
+              "confidence": 0.95,
+              "end_index": 265,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n59",
+              "value": "Carl Barks and the Art of the Comic Book\n59",
+              "bbox": [
+                {
+                  "h": 5.71591463414632,
+                  "w": 80.18056783536582,
+                  "x": 172.13216844512195,
+                  "y": 365.724512195122,
+                  "confidence": 0.93,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n59",
+          "bbox": [
+            {
+              "h": 5.72,
+              "w": 80.18,
+              "x": 172.13,
+              "y": 365.72,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "59"
+    }
+  ]
+}

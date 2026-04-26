@@ -1,0 +1,573 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 265 (23/1) October 1962 - 36 pages",
+          "value": "265 (23/1) October 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5448494664634165,
+              "w": 85.51302067454267,
+              "x": 12.03657822027439,
+              "y": 19.330701219512196,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Raven Mad - 10 - Magica de Spell hypnotizes a raven and has the bird steal Scrooge's Old Number One Dime, which is on display at a bazaar, and put it on the tip of a sun-bound rocket. *(Feb. 17, 1962)*\nReprinted: Walt Disney's Comics No. 415, April 1975.",
+          "value": "DONALD DUCK Raven Mad - 10 - Magica de Spell hypnotizes a raven and has the bird steal Scrooge's Old Number One Dime, which is on display at a bazaar, and put it on the tip of a sun-bound rocket. (Feb. 17, 1962)\nReprinted: Walt Disney's Comics No. 415, April 1975.",
+          "bbox": [
+            {
+              "h": 11.234016768292694,
+              "w": 111.05733970083838,
+              "x": 17.132140100990853,
+              "y": 215.0123094512195,
+              "confidence": 0.8,
+              "end_index": 265,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 266 (23/2) - November 1962 - 36 pages",
+          "value": "266 (23/2) - November 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.638153582317079,
+              "w": 93.01964855659297,
+              "x": 12.198411656821644,
+              "y": 60.64122713414634,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Stalwart Ranger - 10 - Donald, who is being tested to see if he is fit to be a forest ranger, is sent out to count the bighorn sheep at a water hole, but frightens the sheep away with the noise of his hi-fi and air conditioner. *(Mar. 5, 1962)*\nReprinted: Walt Disney's Comics No. 448, January 1978.",
+          "value": "DONALD DUCK Stalwart Ranger - 10 - Donald, who is being tested to see if he is fit to be a forest ranger, is sent out to count the bighorn sheep at a water hole, but frightens the sheep away with the noise of his hi-fi and air conditioner. (Mar. 5, 1962)\nReprinted: Walt Disney's Comics No. 448, January 1978.",
+          "bbox": [
+            {
+              "h": 4.8891882621951295,
+              "w": 29.615860804115847,
+              "x": 12.169117282774389,
+              "y": 90.56544397865854,
+              "confidence": 0.65,
+              "end_index": 310,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 267 (23/3) - December 1962 - 36 pages",
+          "value": "267 (23/3) - December 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.638891006097564,
+              "w": 92.06601812595272,
+              "x": 12.32121415301067,
+              "y": 108.00890625,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Log Jockey - 10 - Donald takes his cousin Whitewater's place driving logs down the river when Whitewater's foot is injured by Black Pierre, a rival logger who wants to get his logs to the sawmill first. *(Mar. 15, 1962)*",
+          "value": "DONALD DUCK Log Jockey - 10 - Donald takes his cousin Whitewater's place driving logs down the river when Whitewater's foot is injured by Black Pierre, a rival logger who wants to get his logs to the sawmill first. (Mar. 15, 1962)",
+          "bbox": [
+            {
+              "h": 29.012172256097564,
+              "w": 126.3141221655869,
+              "x": 12.088068192644817,
+              "y": 113.7871875,
+              "confidence": 0.99,
+              "end_index": 231,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 268 (23/4) - January 1963 - 36 pages",
+          "value": "268 (23/4) - January 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5325076219512175,
+              "w": 86.60688595655486,
+              "x": 12.432051733993902,
+              "y": 149.60111661585364,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Christmas Cheers - 10 - The nephews find huge gold nuggets on Scrooge's land and Scrooge buys Donald a truck and pays for paving a street so the nugget can be transported safely. *(June 4, 1962)*",
+          "value": "DONALD DUCK Christmas Cheers - 10 - The nephews find huge gold nuggets on Scrooge's land and Scrooge buys Donald a truck and pays for paving a street so the nugget can be transported safely. (June 4, 1962)",
+          "bbox": [
+            {
+              "h": 23.560746951219507,
+              "w": 126.03860649294967,
+              "x": 12.266449718940546,
+              "y": 155.2813262195122,
+              "confidence": 0.99,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 269 (23/5) - February 1963 - 36 pages",
+          "value": "269 (23/5) - February 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5819550304878245,
+              "w": 89.64897341844511,
+              "x": 12.567977801067071,
+              "y": 185.1262157012195,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK A Matter of Factory - 10 - art and rewriting of script - Scrooge, embarrassed because Donald is a nobody, makes Donald \"president\" of a motel, and Donald is besieged by obnoxious guests. *(June 7, 1962)*\nBarks: \"A heavily rewritten story from the office.\"\nReprinted: Walt Disney's Comics No. 414, March 1975.",
+          "value": "DONALD DUCK A Matter of Factory - 10 - art and rewriting of script - Scrooge, embarrassed because Donald is a nobody, makes Donald \"president\" of a motel, and Donald is besieged by obnoxious guests. (June 7, 1962)\nBarks: \"A heavily rewritten story from the office.\"\nReprinted: Walt Disney's Comics No. 414, March 1975.",
+          "bbox": [
+            {
+              "h": 23.63284298780487,
+              "w": 126.42448813833839,
+              "x": 12.236726610137193,
+              "y": 190.91391768292684,
+              "confidence": 0.93,
+              "end_index": 319,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 270 (23/6) - March 1963 - 36 pages",
+          "value": "270 (23/6) - March 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.707751524390233,
+              "w": 82.49578267911585,
+              "x": 12.71347322789634,
+              "y": 232.47278963414635,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK The Jinxed Jalopy Race - 10 - Donald, driving in a road race to fetch the mistletoe that will give him the right to kiss Daisy at the Mistletoe Ball, is jinxed by Gladstone's luck. *(June 25, 1962)*\nReprinted: Walt Disney Comics Digest No. 35, June 1972; Walt Disney's Comics No. 450, March 1978.",
+          "value": "DONALD DUCK The Jinxed Jalopy Race - 10 - Donald, driving in a road race to fetch the mistletoe that will give him the right to kiss Daisy at the Mistletoe Ball, is jinxed by Gladstone's luck. (June 25, 1962)\nReprinted: Walt Disney Comics Digest No. 35, June 1972; Walt Disney's Comics No. 450, March 1978.",
+          "bbox": [
+            {
+              "h": 23.20719512195119,
+              "w": 126.22849526009908,
+              "x": 12.488043421303352,
+              "y": 238.2448399390244,
+              "confidence": 0.93,
+              "end_index": 307,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 271 (23/7) - April 1963 - 36 pages",
+          "value": "271 (23/7) - April 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.68570884146342,
+              "w": 78.88016923113565,
+              "x": 12.910055616425304,
+              "y": 279.853993902439,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK A Stone's Throw From Ghost Town - 10 - Donald buys a worthless ranch from a swindler, then sells it to another sucker when the law will give him no relief. *(Aug. 11, 1962)*\nReprinted: Walt Disney's Comics No. 429, June 1976.",
+          "value": "DONALD DUCK A Stone's Throw From Ghost Town - 10 - Donald buys a worthless ranch from a swindler, then sells it to another sucker when the law will give him no relief. (Aug. 11, 1962)\nReprinted: Walt Disney's Comics No. 429, June 1976.",
+          "bbox": [
+            {
+              "h": 23.066158536585387,
+              "w": 126.08040277248476,
+              "x": 12.724849704649388,
+              "y": 285.7184908536585,
+              "confidence": 0.95,
+              "end_index": 236,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 272 (23/8) - May 1963 - 36 pages",
+          "value": "272 (23/8) - May 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.477835365853625,
+              "w": 76.69931557259908,
+              "x": 13.006786752096035,
+              "y": 321.3303201219512,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Spare That Hair - 10 - Donald, who specializes in giving weird haircuts to weird people, gives a haircut and shave to an escaped gorilla, mistaking him for a circus roustabout. *(Aug. 15, 1962)*\nReprinted: Walt Disney Comics Digest No. 39, \\[February] 1973; Walt Disney's Comics No. 451, April 1978.",
+          "value": "DONALD DUCK Spare That Hair - 10 - Donald, who specializes in giving weird haircuts to weird people, gives a haircut and shave to an escaped gorilla, mistaking him for a circus roustabout. (Aug. 15, 1962)\nReprinted: Walt Disney Comics Digest No. 39, [February] 1973; Walt Disney's Comics No. 451, April 1978.",
+          "bbox": [
+            {
+              "h": 23.281532012195076,
+              "w": 126.06763076410058,
+              "x": 12.952477848704268,
+              "y": 327.15402439024393,
+              "confidence": 0.94,
+              "end_index": 310,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 273 (23/9) - June 1963 - 36 pages",
+          "value": "273 (23/9) - June 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.641623475609753,
+              "w": 76.75353658536582,
+              "x": 149.73993521341464,
+              "y": 36.8287471417683,
+              "confidence": 0.97,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK A Duck's-eye View of Europe - 10 - Donald, on a five-day tour of all the famous sights of Europe, falls ten seconds behind the rest of the party in Venice and tries — unsuccessfully — to catch up with it. *(Aug. 27, 1962)*\nReprinted: Walt Disney's Comics No. 427, April 1976.",
+          "value": "DONALD DUCK A Duck's-eye View of Europe - 10 - Donald, on a five-day tour of all the famous sights of Europe, falls ten seconds behind the rest of the party in Venice and tries — unsuccessfully — to catch up with it. (Aug. 27, 1962)\nReprinted: Walt Disney's Comics No. 427, April 1976.",
+          "bbox": [
+            {
+              "h": 5.290638338414637,
+              "w": 32.308696646341474,
+              "x": 149.63515243902438,
+              "y": 66.32286585365853,
+              "confidence": 0.61,
+              "end_index": 286,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 274 (23/10) - July 1963 - 36 pages",
+          "value": "274 (23/10) - July 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6699428353658545,
+              "w": 78.530625,
+              "x": 149.81907964939023,
+              "y": 84.10021532012195,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Gall of the Wild - 10 - art and rewriting of script - Donald drives the nephews along the northern coast, where they try to find food on a beach after Donald loses his wallet in a berry patch. *(Oct. 10, 1962)*\nBarks: \"This was a nine-page office story that I stretched.\"\nReprinted: Walt Disney Comics Digest No. 31, October 1971; Walt Disney's Comics No. 452, May 1978.",
+          "value": "DONALD DUCK Gall of the Wild - 10 - art and rewriting of script - Donald drives the nephews along the northern coast, where they try to find food on a beach after Donald loses his wallet in a berry patch. (Oct. 10, 1962)\nBarks: \"This was a nine-page office story that I stretched.\"\nReprinted: Walt Disney Comics Digest No. 31, October 1971; Walt Disney's Comics No. 452, May 1978.",
+          "bbox": [
+            {
+              "h": 23.29227896341464,
+              "w": 126.08308879573171,
+              "x": 149.5684413109756,
+              "y": 90.07115853658536,
+              "confidence": 0.92,
+              "end_index": 381,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 275 (23/11) - August 1963 - 36 pages",
+          "value": "275 (23/11) - August 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.697004573170725,
+              "w": 86.68956745426829,
+              "x": 149.90100228658537,
+              "y": 137.5001524390244,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Zero Hero - 10 - Donald, tired of being a street cleaner, sails a ship north with a cargo of worms, perfumes and candles to sell to the Eskimos, and returns with reindeer butter. *(Oct. 29, 1962)*\nReprinted: Walt Disney's Comics No. 428, May 1976.",
+          "value": "DONALD DUCK Zero Hero - 10 - Donald, tired of being a street cleaner, sails a ship north with a cargo of worms, perfumes and candles to sell to the Eskimos, and returns with reindeer butter. (Oct. 29, 1962)\nReprinted: Walt Disney's Comics No. 428, May 1976.",
+          "bbox": [
+            {
+              "h": 22.878041158536607,
+              "w": 126.04580602134145,
+              "x": 149.71880716463414,
+              "y": 143.46752286585365,
+              "confidence": 0.95,
+              "end_index": 258,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 276 (23/12) - September 1963 - 36 pages",
+          "value": "276 (23/12) - September 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.82900914634145,
+              "w": 95.71709222560973,
+              "x": 150.03790586890244,
+              "y": 178.82157393292684,
+              "confidence": 0.97,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (part) (art only): Donald, wearing a lifeguard's shirt, is admired by two girl ducks. *(Feb. 21, 1963)*\nDONALD DUCK Beach Boy - 10 - Donald, angry at the Woodchucks' Official Hound for showing him up as a lifeguard, tries to distract the Hound during his sentry duty. *(Nov. 13, 1962)*",
+          "value": "Front cover (part) (art only): Donald, wearing a lifeguard's shirt, is admired by two girl ducks. (Feb. 21, 1963)\nDONALD DUCK Beach Boy - 10 - Donald, angry at the Woodchucks' Official Hound for showing him up as a lifeguard, tries to distract the Hound during his sentry duty. (Nov. 13, 1962)",
+          "bbox": [
+            {
+              "h": 34.6563224085366,
+              "w": 126.21553353658535,
+              "x": 149.6973875762195,
+              "y": 185.03413490853657,
+              "confidence": 0.97,
+              "end_index": 296,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 277 (24/1) - October 1963 - 36 pages",
+          "value": "277 (24/1) - October 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.715960365853652,
+              "w": 86.29197599085364,
+              "x": 150.12493902439022,
+              "y": 226.29091463414633,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (part) (art only): Donald rides an elephant in a parade of strange pets. *(Apr. 4, 1963)*\nDONALD DUCK The Duckburg Pet Parade - 10 - Donald, searching for a unique pet to enter in the pet parade, rents a rogue elephant that Uncle Scrooge has just received as a gift from a rajah. *(Mar. 7, 1963)*\nReprinted: Walt Disney's Comics No. 446, November 1977.",
+          "value": "Front cover (part) (art only): Donald rides an elephant in a parade of strange pets. (Apr. 4, 1963)\nDONALD DUCK The Duckburg Pet Parade - 10 - Donald, searching for a unique pet to enter in the pet parade, rents a rogue elephant that Uncle Scrooge has just received as a gift from a rajah. (Mar. 7, 1963)\nReprinted: Walt Disney's Comics No. 446, November 1977.",
+          "bbox": [
+            {
+              "h": 22.149123475609795,
+              "w": 125.97415586890243,
+              "x": 149.9491920731707,
+              "y": 244.24657774390244,
+              "confidence": 0.91,
+              "end_index": 363,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 278 (24/2) - November 1963 - 36 pages",
+          "value": "278 (24/2) - November 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.723117378048809,
+              "w": 93.1589862804878,
+              "x": 150.03605373475608,
+              "y": 280.29791158536585,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (part) (art only): Donald, holding a toy ray gun, dances with Daisy. *(May 8, 1963)*\nDONALD DUCK Have Gun, Will Dance - 10 - The nephews' toy gun is an exact model of a top-secret Army ray gun — except that the toy gun only sets its victims to dancing uncontrollably. *(Apr. 11, 1963)*",
+          "value": "Front cover (part) (art only): Donald, holding a toy ray gun, dances with Daisy. (May 8, 1963)\nDONALD DUCK Have Gun, Will Dance - 10 - The nephews' toy gun is an exact model of a top-secret Army ray gun — except that the toy gun only sets its victims to dancing uncontrollably. (Apr. 11, 1963)",
+          "bbox": [
+            {
+              "h": 23.27051067073171,
+              "w": 126.04693788109753,
+              "x": 149.90721036585364,
+              "y": 298.24182164634146,
+              "confidence": 0.94,
+              "end_index": 296,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 279 (24/3) - December 1963 - 36 pages",
+          "value": "279 (24/3) - December 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.85009146341461,
+              "w": 91.77621379573168,
+              "x": 150.16127858231707,
+              "y": 327.6539862804878,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (part) (art only): Donald and the nephews throw balls at pins at a carnival booth. *(July 1, 1963)*\nDONALD DUCK Once Upon a Carnival - 10 - Donald is",
+          "value": "Front cover (part) (art only): Donald and the nephews throw balls at pins at a carnival booth. (July 1, 1963)\nDONALD DUCK Once Upon a Carnival - 10 - Donald is",
+          "bbox": [
+            {
+              "h": 17.371623475609738,
+              "w": 125.72104801829266,
+              "x": 150.11838795731705,
+              "y": 333.6961737804878,
+              "confidence": 0.98,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "186 Carl Barks and the Art of the Comic Book",
+              "value": "186 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.512439024390205,
+                  "w": 77.7228972942073,
+                  "x": 36.48099752286585,
+                  "y": 365.85736280487805,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "186 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.51,
+              "w": 77.72,
+              "x": 36.48,
+              "y": 365.86,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "186"
+    }
+  ]
+}

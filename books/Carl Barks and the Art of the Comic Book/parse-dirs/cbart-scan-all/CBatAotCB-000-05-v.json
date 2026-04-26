@@ -1,0 +1,715 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "level": 1,
+              "md": "# Contents",
+              "value": "Contents",
+              "bbox": [
+                {
+                  "h": 13.635714557926827,
+                  "w": 87.39658536585365,
+                  "x": 97.49767911585364,
+                  "y": 47.73711699695122,
+                  "confidence": 0.98,
+                  "end_index": 7,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "heading"
+            }
+          ],
+          "md": "# Contents",
+          "bbox": [
+            {
+              "h": 13.64,
+              "w": 87.4,
+              "x": 97.5,
+              "y": 47.74,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header"
+        },
+        {
+          "md": "Preface vii",
+          "value": "Preface vii",
+          "bbox": [
+            {
+              "h": 272.83012385670736,
+              "w": 257.47264588891005,
+              "x": 13.81505037633384,
+              "y": 74.23077553353659,
+              "confidence": 0.65,
+              "end_index": 10,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A Carl Barks Comic-Book Bibliography 91",
+          "value": "A Carl Barks Comic-Book Bibliography 91",
+          "bbox": [
+            {
+              "h": 272.83012385670736,
+              "w": 257.47264588891005,
+              "x": 13.81505037633384,
+              "y": 74.23077553353659,
+              "confidence": 0.66,
+              "end_index": 38,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "The Best of Donald Duck 100",
+              "value": "The Best of Donald Duck 100",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 26,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "The Best of Donald Duck and Uncle Scrooge 100",
+              "value": "The Best of Donald Duck and Uncle Scrooge 100",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.66,
+                  "end_index": 44,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "The Best of Uncle Scrooge and Donald Duck 100",
+              "value": "The Best of Uncle Scrooge and Donald Duck 100",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.66,
+                  "end_index": 44,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "The Best of Walt Disney Comics 100",
+              "value": "The Best of Walt Disney Comics 100",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 33,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Boys' and Girls' March of Comics 101",
+              "value": "Boys' and Girls' March of Comics 101",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 35,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Cheerios Premiums 101",
+              "value": "Cheerios Premiums 101",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 20,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Christmas in Disneyland 101",
+              "value": "Christmas in Disneyland 101",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 26,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Christmas Parade (Dell) 101",
+              "value": "Christmas Parade (Dell) 101",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 26,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Christmas Parade (Gold Key) 103",
+              "value": "Christmas Parade (Gold Key) 103",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 30,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Christmas Parade (Golden Press) 103",
+              "value": "Christmas Parade (Golden Press) 103",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 34,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Daisy and Donald (Gold Key) 103",
+              "value": "Daisy and Donald (Gold Key) 103",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 30,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Daisy Duck's Diary 104",
+              "value": "Daisy Duck's Diary 104",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 21,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Disneyland Birthday Party (Dell) 106",
+              "value": "Disneyland Birthday Party (Dell) 106",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.66,
+                  "end_index": 35,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Donald Duck 106",
+              "value": "Donald Duck 106",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 14,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Donald Duck Album (Dell) 117",
+              "value": "Donald Duck Album (Dell) 117",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 27,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Donald Duck Album (Gold Key) 117",
+              "value": "Donald Duck Album (Gold Key) 117",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 31,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Donald Duck Beach Party 117",
+              "value": "Donald Duck Beach Party 117",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 26,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Duck Album 117",
+              "value": "Duck Album 117",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 13,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Firestone Christmas Giveaways 117",
+              "value": "Firestone Christmas Giveaways 117",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.66,
+                  "end_index": 32,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Golden Digest 119",
+              "value": "Golden Digest 119",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 16,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Grandma Duck's Farm Friends 119",
+              "value": "Grandma Duck's Farm Friends 119",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 30,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Gyro Gearloose 119",
+              "value": "Gyro Gearloose 119",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 17,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Huey, Dewey and Louie Junior Woodchucks 121",
+              "value": "Huey, Dewey and Louie Junior Woodchucks 121",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.66,
+                  "end_index": 42,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Kite Giveaways 124",
+              "value": "Kite Giveaways 124",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 17,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Merry Christmas 125",
+              "value": "Merry Christmas 125",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 18,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Mickey Mouse 125",
+              "value": "Mickey Mouse 125",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 15,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Mickey Mouse Almanac 125",
+              "value": "Mickey Mouse Almanac 125",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 23,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "New Funnies 125",
+              "value": "New Funnies 125",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 14,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Our Gang Comics 125",
+              "value": "Our Gang Comics 125",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 18,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Porky Pig 130",
+              "value": "Porky Pig 130",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 12,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Summer Fun 130",
+              "value": "Summer Fun 130",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 13,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Tom and Jerry Summer Fun (Dell) 130",
+              "value": "Tom and Jerry Summer Fun (Dell) 130",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 34,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Tom and Jerry Summer Fun (Gold Key) 130",
+              "value": "Tom and Jerry Summer Fun (Gold Key) 130",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.66,
+                  "end_index": 38,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Tom and Jerry Winter Carnival 130",
+              "value": "Tom and Jerry Winter Carnival 130",
+              "bbox": [
+                {
+                  "h": 272.83012385670736,
+                  "w": 257.47264588891005,
+                  "x": 13.81505037633384,
+                  "y": 74.23077553353659,
+                  "confidence": 0.65,
+                  "end_index": 32,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "* The Best of Donald Duck 100\n* The Best of Donald Duck and Uncle Scrooge 100\n* The Best of Uncle Scrooge and Donald Duck 100\n* The Best of Walt Disney Comics 100\n* Boys' and Girls' March of Comics 101\n* Cheerios Premiums 101\n* Christmas in Disneyland 101\n* Christmas Parade (Dell) 101\n* Christmas Parade (Gold Key) 103\n* Christmas Parade (Golden Press) 103\n* Daisy and Donald (Gold Key) 103\n* Daisy Duck's Diary 104\n* Disneyland Birthday Party (Dell) 106\n* Donald Duck 106\n* Donald Duck Album (Dell) 117\n* Donald Duck Album (Gold Key) 117\n* Donald Duck Beach Party 117\n* Duck Album 117\n* Firestone Christmas Giveaways 117\n* Golden Digest 119\n* Grandma Duck's Farm Friends 119\n* Gyro Gearloose 119\n* Huey, Dewey and Louie Junior Woodchucks 121\n* Kite Giveaways 124\n* Merry Christmas 125\n* Mickey Mouse 125\n* Mickey Mouse Almanac 125\n* New Funnies 125\n* Our Gang Comics 125\n* Porky Pig 130\n* Summer Fun 130\n* Tom and Jerry Summer Fun (Dell) 130\n* Tom and Jerry Summer Fun (Gold Key) 130\n* Tom and Jerry Winter Carnival 130",
+          "ordered": false,
+          "bbox": [
+            {
+              "h": 272.83,
+              "w": 257.47,
+              "x": 13.82,
+              "y": 74.23,
+              "confidence": 0.65,
+              "end_index": 1020,
+              "label": "list",
+              "start_index": 0
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "items": [
+            {
+              "md": "v",
+              "value": "v",
+              "bbox": [
+                {
+                  "h": 2.9014939024390696,
+                  "w": 2.8542330411585226,
+                  "x": 141.89068502286585,
+                  "y": 373.942431402439,
+                  "confidence": 0.89,
+                  "end_index": 0,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "v",
+          "bbox": [
+            {
+              "h": 2.9,
+              "w": 2.85,
+              "x": 141.89,
+              "y": 373.94,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "v"
+    }
+  ]
+}

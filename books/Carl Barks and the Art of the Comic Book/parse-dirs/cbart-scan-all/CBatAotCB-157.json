@@ -1,0 +1,337 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "UNCLE SCROOGE Clothes Make the Duck - 7½ - Reprinted from *Uncle Scrooge* No. 32, Dec.-Feb. 1961.\nUNCLE SCROOGE The Homey Touch - ½ - Reprinted from *Uncle Scrooge* No. 32, Dec.-Feb. 1961.",
+          "value": "UNCLE SCROOGE Clothes Make the Duck - 7½ - Reprinted from Uncle Scrooge No. 32, Dec.-Feb. 1961.\nUNCLE SCROOGE The Homey Touch - ½ - Reprinted from Uncle Scrooge No. 32, Dec.-Feb. 1961.",
+          "bbox": [
+            {
+              "h": 11.563905297256097,
+              "w": 125.05185415872714,
+              "x": 10.682174042492376,
+              "y": 12.861545350609756,
+              "confidence": 0.87,
+              "end_index": 187,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**118 - April 1975 - 36 pages**\nUNCLE SCROOGE The Billion Dollar Safari - 20 pages - Reprinted from *Uncle Scrooge* No. 54, December 1964.\nChanges: Splash panel trimmed for indicia.\nUNCLE SCROOGE - Reprinted from *Uncle Scrooge* No. 54, December 1964.",
+          "value": "118 - April 1975 - 36 pages\nUNCLE SCROOGE The Billion Dollar Safari - 20 pages - Reprinted from Uncle Scrooge No. 54, December 1964.\nChanges: Splash panel trimmed for indicia.\nUNCLE SCROOGE - Reprinted from Uncle Scrooge No. 54, December 1964.",
+          "bbox": [
+            {
+              "h": 17.569921875,
+              "w": 125.00981778772865,
+              "x": 10.510057402820122,
+              "y": 48.498984375,
+              "confidence": 0.9,
+              "end_index": 250,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**119 - June 1975 - 36 pages**\nUNCLE SCROOGE and The Strange Shipwrecks - 21 - Reprinted from *Uncle Scrooge* No. 23, Sept.-Nov. 1958.\nChanges: Panels on first page trimmed for indicia.\nGYRO GEARLOOSE The Great Pop Up - 4 - Reprinted from *Uncle Scrooge* No. 37, Mar.-May 1962.",
+          "value": "119 - June 1975 - 36 pages\nUNCLE SCROOGE and The Strange Shipwrecks - 21 - Reprinted from Uncle Scrooge No. 23, Sept.-Nov. 1958.\nChanges: Panels on first page trimmed for indicia.\nGYRO GEARLOOSE The Great Pop Up - 4 - Reprinted from Uncle Scrooge No. 37, Mar.-May 1962.",
+          "bbox": [
+            {
+              "h": 17.507743902439028,
+              "w": 124.58360292016006,
+              "x": 10.47068347465701,
+              "y": 89.78021341463415,
+              "confidence": 0.88,
+              "end_index": 276,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**120 - July 1975 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 26, June-Aug. 1959.\nUNCLE SCROOGE Billions in the Hole - 16 - Reprinted from *Uncle Scrooge* No. 33, Mar.-May 1961.\nUNCLE SCROOGE Chugwagon Derby - 10 (originally 9¾) - Reprinted from *Uncle Scrooge* No. 34, June-Aug. 1961.\nChanges: Some of the panels on the last page were enlarged to fill out the page.",
+          "value": "120 - July 1975 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 26, June-Aug. 1959.\nUNCLE SCROOGE Billions in the Hole - 16 - Reprinted from Uncle Scrooge No. 33, Mar.-May 1961.\nUNCLE SCROOGE Chugwagon Derby - 10 (originally 9¾) - Reprinted from Uncle Scrooge No. 34, June-Aug. 1961.\nChanges: Some of the panels on the last page were enlarged to fill out the page.",
+          "bbox": [
+            {
+              "h": 23.035529725609738,
+              "w": 125.14111780678351,
+              "x": 10.988349609375,
+              "y": 155.14176448170733,
+              "confidence": 0.89,
+              "end_index": 401,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**121 - August 1975 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 55, February 1965.\nUNCLE SCROOGE McDuck of Arabia - 24 - Reprinted from *Uncle Scrooge* No. 55, February 1965.",
+          "value": "121 - August 1975 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 55, February 1965.\nUNCLE SCROOGE McDuck of Arabia - 24 - Reprinted from Uncle Scrooge No. 55, February 1965.",
+          "bbox": [
+            {
+              "h": 11.35440548780487,
+              "w": 124.85255787919206,
+              "x": 11.185769102515243,
+              "y": 202.45280487804877,
+              "confidence": 0.89,
+              "end_index": 209,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**122 - September 1975 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 56, March 1965.\nUNCLE SCROOGE Mystery of the Ghost Town Railroad - 24 - Reprinted from *Uncle Scrooge* No. 56, March 1965.",
+          "value": "122 - September 1975 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 56, March 1965.\nUNCLE SCROOGE Mystery of the Ghost Town Railroad - 24 - Reprinted from Uncle Scrooge No. 56, March 1965.",
+          "bbox": [
+            {
+              "h": 16.284809451219534,
+              "w": 124.7472724133003,
+              "x": 11.534850300114327,
+              "y": 238.11112042682927,
+              "confidence": 0.9,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**123 - October 1975 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 57, May 1965.\nUNCLE SCROOGE The Swamp of No Return - 24 - Reprinted from *Uncle Scrooge* No. 57, May 1965.",
+          "value": "123 - October 1975 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 57, May 1965.\nUNCLE SCROOGE The Swamp of No Return - 24 - Reprinted from Uncle Scrooge No. 57, May 1965.",
+          "bbox": [
+            {
+              "h": 11.384954268292695,
+              "w": 125.19071598704267,
+              "x": 11.786394340701218,
+              "y": 279.4929649390244,
+              "confidence": 0.89,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**124 - December 1975 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 59, September 1965.\nUNCLE SCROOGE North of the Yukon - 24 - Reprinted from *Uncle Scrooge* No. 59, September 1965.",
+          "value": "124 - December 1975 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 59, September 1965.\nUNCLE SCROOGE North of the Yukon - 24 - Reprinted from Uncle Scrooge No. 59, September 1965.",
+          "bbox": [
+            {
+              "h": 11.453346036585389,
+              "w": 124.9750323932927,
+              "x": 11.984431211890243,
+              "y": 315.1378125,
+              "confidence": 0.88,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**125 - January 1976 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 68, March 1967.\nUNCLE SCROOGE Hall of the Mermaid Queen - 24 - Reprinted from *Uncle Scrooge* No. 68, March 1967.",
+          "value": "125 - January 1976 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 68, March 1967.\nUNCLE SCROOGE Hall of the Mermaid Queen - 24 - Reprinted from Uncle Scrooge No. 68, March 1967.",
+          "bbox": [
+            {
+              "h": 11.418735708841462,
+              "w": 125.09998285060976,
+              "x": 150.25635480182925,
+              "y": 12.690966082317074,
+              "confidence": 0.88,
+              "end_index": 213,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**126 - March 1976 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 69, May 1967.\nUNCLE SCROOGE The Cattle King - 24 - Reprinted from *Uncle Scrooge* No. 69, May 1967.",
+          "value": "126 - March 1976 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 69, May 1967.\nUNCLE SCROOGE The Cattle King - 24 - Reprinted from Uncle Scrooge No. 69, May 1967.",
+          "bbox": [
+            {
+              "h": 11.37747713414632,
+              "w": 125.03768447503812,
+              "x": 11.516779130144817,
+              "y": 303.2332317073171,
+              "confidence": 0.89,
+              "end_index": 197,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**127 - April 1976 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 61, January 1966.\nUNCLE SCROOGE So Far and No Safari - 24 - Reprinted from *Uncle Scrooge* No. 61, January 1966.\nUNCLE SCROOGE - 1 (\"top wages\") - Reprinted from *Uncle Scrooge* No. 61, January 1966.",
+          "value": "127 - April 1976 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 61, January 1966.\nUNCLE SCROOGE So Far and No Safari - 24 - Reprinted from Uncle Scrooge No. 61, January 1966.\nUNCLE SCROOGE - 1 (\"top wages\") - Reprinted from Uncle Scrooge No. 61, January 1966.",
+          "bbox": [
+            {
+              "h": 11.771278582317086,
+              "w": 125.0235994664634,
+              "x": 150.52853277439021,
+              "y": 83.3829306402439,
+              "confidence": 0.85,
+              "end_index": 297,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**128 - May 1976 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 62, March 1966.\nUNCLE SCROOGE The Queen of the Wild Dog Pack - 24 - Reprinted from *Uncle Scrooge* No. 62, March 1966.",
+          "value": "128 - May 1976 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 62, March 1966.\nUNCLE SCROOGE The Queen of the Wild Dog Pack - 24 - Reprinted from Uncle Scrooge No. 62, March 1966.",
+          "bbox": [
+            {
+              "h": 17.076642530487796,
+              "w": 125.59841272865852,
+              "x": 150.54431021341463,
+              "y": 131.67349847560976,
+              "confidence": 0.89,
+              "end_index": 214,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**129 - June 1976 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 63, May 1966.\nUNCLE SCROOGE House of Haunts - 24 - Reprinted from *Uncle Scrooge* No. 63, May 1966.",
+          "value": "129 - June 1976 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 63, May 1966.\nUNCLE SCROOGE House of Haunts - 24 - Reprinted from Uncle Scrooge No. 63, May 1966.",
+          "bbox": [
+            {
+              "h": 11.678140243902435,
+              "w": 125.18782202743901,
+              "x": 150.2490663109756,
+              "y": 196.00273628048782,
+              "confidence": 0.89,
+              "end_index": 196,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**130 - July 1976 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 65, September 1966.\nUNCLE SCROOGE Micro-ducks from Outer Space - 24 - Reprinted from *Uncle Scrooge* No. 65, September 1966.",
+          "value": "130 - July 1976 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 65, September 1966.\nUNCLE SCROOGE Micro-ducks from Outer Space - 24 - Reprinted from Uncle Scrooge No. 65, September 1966.",
+          "bbox": [
+            {
+              "h": 11.988544207317073,
+              "w": 125.0437157012195,
+              "x": 150.78999237804877,
+              "y": 208.07330030487805,
+              "confidence": 0.89,
+              "end_index": 221,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**131 - August 1976 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 66, November 1966.\nUNCLE SCROOGE The Heedless Horseman - 24 - Reprinted from *Uncle Scrooge* No. 66, November 1966.",
+          "value": "131 - August 1976 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 66, November 1966.\nUNCLE SCROOGE The Heedless Horseman - 24 - Reprinted from Uncle Scrooge No. 66, November 1966.",
+          "bbox": [
+            {
+              "h": 16.73021341463417,
+              "w": 126.0135480182927,
+              "x": 150.19919588414632,
+              "y": 243.79269054878048,
+              "confidence": 0.89,
+              "end_index": 214,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**132 - September 1976 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 10, June-Aug. 1955.\nUNCLE SCROOGE in \"The Fabulous Philosopher's Stone\" - 24 - Reprinted from *Uncle Scrooge* No. 10, June-Aug. 1955.\nChanges: Panels on first page trimmed for indicia, except bottom row.",
+          "value": "132 - September 1976 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 10, June-Aug. 1955.\nUNCLE SCROOGE in \"The Fabulous Philosopher's Stone\" - 24 - Reprinted from Uncle Scrooge No. 10, June-Aug. 1955.\nChanges: Panels on first page trimmed for indicia, except bottom row.",
+          "bbox": [
+            {
+              "h": 17.226471036585334,
+              "w": 125.21764481707315,
+              "x": 151.01917682926828,
+              "y": 285.6578506097561,
+              "confidence": 0.88,
+              "end_index": 305,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**133 - October 1976 - 36 pages**\nFront cover: Reprinted from the front cover of *Uncle Scrooge* No. 70, July 1967.\nUNCLE SCROOGE The Doom Diamond - 24 - Reprinted from *Uncle Scrooge* No. 70, July 1967.",
+          "value": "133 - October 1976 - 36 pages\nFront cover: Reprinted from the front cover of Uncle Scrooge No. 70, July 1967.\nUNCLE SCROOGE The Doom Diamond - 24 - Reprinted from Uncle Scrooge No. 70, July 1967.",
+          "bbox": [
+            {
+              "h": 11.335049542682928,
+              "w": 125.22508872427592,
+              "x": 10.646966344321644,
+              "y": 190.4803467987805,
+              "confidence": 0.88,
+              "end_index": 202,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "*Carl Barks and the Art of the Comic Book*\n157",
+              "value": "Carl Barks and the Art of the Comic Book\n157",
+              "bbox": [
+                {
+                  "h": 4.826753048780465,
+                  "w": 77.79191501524392,
+                  "x": 173.7699695121951,
+                  "y": 365.96915396341467,
+                  "confidence": 0.95,
+                  "end_index": 45,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "*Carl Barks and the Art of the Comic Book*\n157",
+          "bbox": [
+            {
+              "h": 4.83,
+              "w": 77.79,
+              "x": 173.77,
+              "y": 365.97,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "157"
+    }
+  ]
+}

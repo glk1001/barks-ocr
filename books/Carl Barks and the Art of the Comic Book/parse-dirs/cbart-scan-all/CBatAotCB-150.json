@@ -1,0 +1,168 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "persuaded by Scalpnick's story that the crash gave him an allergy to wigs, awards him nine hundred times more money than there is in the world. (*Feb. 19, 1964*)",
+          "value": "persuaded by Scalpnick's story that the crash gave him an allergy to wigs, awards him nine hundred times more money than there is in the world. (Feb. 19, 1964)",
+          "bbox": [
+            {
+              "h": 23.929214462652443,
+              "w": 125.78671088986279,
+              "x": 11.643134765625,
+              "y": 15.459307831554876,
+              "confidence": 0.98,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted: Uncle Scrooge* No. 85, February, 1970; No. 152, May 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 85, February, 1970; No. 152, May 1978.",
+          "bbox": [
+            {
+              "h": 11.920166730182927,
+              "w": 125.4291728991997,
+              "x": 12.455543183117376,
+              "y": 39.815382050304876,
+              "confidence": 0.98,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**53 - October 1964 - 36 pages**",
+          "value": "53 - October 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.986376238567073,
+              "w": 69.11873094512194,
+              "x": 150.57301829268292,
+              "y": 16.050884622713415,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover. A nervous Scrooge, wearing a postman's hat, prepares to deposit a letter in the mouth of a strange, living mailbox. (Illustrating \"Interplanetary Postman.\") (*Mar. 27, 1964*)",
+          "value": "Front cover. A nervous Scrooge, wearing a postman's hat, prepares to deposit a letter in the mouth of a strange, living mailbox. (Illustrating \"Interplanetary Postman.\") (Mar. 27, 1964)",
+          "bbox": [
+            {
+              "h": 17.83132574314024,
+              "w": 125.85920350609756,
+              "x": 150.5862233231707,
+              "y": 21.745185308689024,
+              "confidence": 0.98,
+              "end_index": 186,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted: Uncle Scrooge* No. 94, August 1971; No. 154, July 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 94, August 1971; No. 154, July 1978.",
+          "bbox": [
+            {
+              "h": 10.627577172256101,
+              "w": 124.51345655487802,
+              "x": 151.09201028963415,
+              "y": 39.795140053353656,
+              "confidence": 0.97,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "Barks's blue-pencil rough for the front cover of Uncle Scrooge No. 51, August 1964; © 1964 Walt Disney Productions.",
+          "md": "![Barks's blue-pencil rough for the front cover of Uncle Scrooge No. 51, August 1964; © 1964 Walt Disney Productions.](CBatAotCB-150_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-150_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 277.58436928353655,
+              "w": 221.63402486661585,
+              "x": 33.025365377286576,
+              "y": 57.05337461890244,
+              "confidence": 1.0,
+              "end_index": 140,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Barks's blue-pencil rough for the front cover of *Uncle Scrooge* No. 51, August 1964; © 1964 Walt Disney Productions.",
+          "value": "Barks's blue-pencil rough for the front cover of Uncle Scrooge No. 51, August 1964; © 1964 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.759900914634144,
+              "w": 256.5934534584603,
+              "x": 18.177215367759143,
+              "y": 342.7097332317073,
+              "confidence": 0.91,
+              "end_index": 116,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "150 Carl Barks and the Art of the Comic Book",
+              "value": "150 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.797873475609794,
+                  "w": 77.74591606326219,
+                  "x": 38.802068883384145,
+                  "y": 362.9279725609756,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "150 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.8,
+              "w": 77.75,
+              "x": 38.8,
+              "y": 362.93,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "150"
+    }
+  ]
+}

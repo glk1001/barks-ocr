@@ -1,0 +1,48 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A man with a mustache holding a small animal, possibly a dog or a cat, outdoors.",
+          "md": "![A man with a mustache holding a small animal, possibly a dog or a cat, outdoors.](CBatAotCB-000-02-ii_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-000-02-ii_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 204.74,
+              "w": 142.56,
+              "x": 100.83,
+              "y": 10.91,
+              "confidence": 0.99,
+              "end_index": 105,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "A portrait of an elderly person with glasses, smiling.",
+          "md": "![A portrait of an elderly person with glasses, smiling.](CBatAotCB-000-02-ii_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-000-02-ii_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 130.92,
+              "w": 99.87,
+              "x": 121.33,
+              "y": 225.2,
+              "confidence": 0.99,
+              "end_index": 79,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true
+    }
+  ]
+}

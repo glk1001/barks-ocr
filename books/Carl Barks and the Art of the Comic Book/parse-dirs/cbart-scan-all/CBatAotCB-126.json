@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Walter Lantz presents Andy Panda comic strip. In the first panel, Andy Panda sees a goat and says, \"LOOKS LIKE THAT OL' GOAT'S BROKEN LOOSE!\". In the second panel, Andy approaches the goat near a house on a hill and says, \"I BET YOU STRAYED FROM THAT OLD HOUSE ON THE HILL!\". In the third panel, Andy leads the goat away, saying, \"I'M GONNA TAKE YOU BACK! YOU'LL GET INTO A LOT OF TROUBLE, WANDERIN' AROUND LOOSE.\" In the fourth panel, Andy brings the goat to a fenced yard, saying, \"THIS LOOKS LIKE WHERE YOU BELONG!\". In the final panel, a boy looking out a window shouts, \"LOOK, MOM! THE OL' GOAT'S BACK!\", and his mother, who is ironing, replies, \"OH, THANK GOODNESS!\".",
+          "md": "![Walter Lantz presents Andy Panda comic strip. In the first panel, Andy Panda sees a goat and says, \"LOOKS LIKE THAT OL' GOAT'S BROKEN LOOSE!\". In the second panel, Andy approaches the goat near a house on a hill and says, \"I BET YOU STRAYED FROM THAT OLD HOUSE ON THE HILL!\". In the third panel, Andy leads the goat away, saying, \"I'M GONNA TAKE YOU BACK! YOU'LL GET INTO A LOT OF TROUBLE, WANDERIN' AROUND LOOSE.\" In the fourth panel, Andy brings the goat to a fenced yard, saying, \"THIS LOOKS LIKE WHERE YOU BELONG!\". In the final panel, a boy looking out a window shouts, \"LOOK, MOM! THE OL' GOAT'S BACK!\", and his mother, who is ironing, replies, \"OH, THANK GOODNESS!\".](CBatAotCB-126_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-126_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 330.33433307926833,
+              "w": 231.96959579839935,
+              "x": 28.223765482088414,
+              "y": 12.574607469512195,
+              "confidence": 0.96,
+              "end_index": 698,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From New Funnies No. 76, June 1943; © 1943 Walter Lantz Productions.",
+          "value": "From New Funnies No. 76, June 1943; © 1943 Walter Lantz Productions.",
+          "bbox": [
+            {
+              "h": 6.677035060975595,
+              "w": 142.62207221798778,
+              "x": 73.18422541920732,
+              "y": 347.4756631097561,
+              "confidence": 0.94,
+              "end_index": 67,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "126\nCarl Barks and the Art of the Comic Book",
+              "value": "126\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.652515243902434,
+                  "w": 7.151572265625,
+                  "x": 14.064677972560974,
+                  "y": 368.5215777439024,
+                  "confidence": 0.8,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "126\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.65,
+              "w": 7.15,
+              "x": 14.06,
+              "y": 368.52,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "126"
+    }
+  ]
+}

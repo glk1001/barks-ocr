@@ -1,0 +1,910 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "ship is attacked by the Beagle Boys, but Scrooge is victorious. He buys the diamond, and bad luck immediately descends upon him. The Beagles steal it, and the bad luck becomes theirs. (Mar. 19, 1966)",
+          "value": "ship is attacked by the Beagle Boys, but Scrooge is victorious. He buys the diamond, and bad luck immediately descends upon him. The Beagles steal it, and the bad luck becomes theirs. (Mar. 19, 1966)",
+          "bbox": [
+            {
+              "h": 22.911851181402437,
+              "w": 124.66624475990852,
+              "x": 13.477478563262194,
+              "y": 23.67828887195122,
+              "confidence": 0.98,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 133, October 1976.",
+          "value": "Reprinted: Uncle Scrooge No. 133, October 1976.",
+          "bbox": [
+            {
+              "h": 5.205725990853659,
+              "w": 98.69367116044205,
+              "x": 17.435817216082313,
+              "y": 47.739597942073175,
+              "confidence": 0.95,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 71 - October 1967 - 36 pages",
+          "value": "71 - October 1967 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.586042301829261,
+              "w": 69.12527558117378,
+              "x": 13.275769578887193,
+              "y": 59.70759146341464,
+              "confidence": 0.97,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The ducks — all dressed in the clothing of an ancient civilization — flee with armloads of treasure. (Illustrating \"King Scrooge the First.\") (Jan. 18, 1967)",
+          "value": "Front cover: The ducks — all dressed in the clothing of an ancient civilization — flee with armloads of treasure. (Illustrating \"King Scrooge the First.\") (Jan. 18, 1967)",
+          "bbox": [
+            {
+              "h": 17.23227324695123,
+              "w": 124.79319955221033,
+              "x": 13.514952124618901,
+              "y": 65.6805868902439,
+              "confidence": 0.97,
+              "end_index": 169,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 145, October 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 145, October 1977.",
+          "bbox": [
+            {
+              "h": 5.423940548780492,
+              "w": 97.93284596512957,
+              "x": 17.90187869188262,
+              "y": 83.56076410060975,
+              "confidence": 0.88,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE King Scrooge the First - 21 - script only - A swami who claims to be more than four thousand years old stuns the ducks into unconsciousness and transports them to the ruins of Sagbad, ancient capital of Fatcatstan. The ducks drink a potion that stimulates \"memory cells in the ducks' genes,\" so that they act out events in which their ancestors participated thousands of years before. (June 22, 1966)",
+          "value": "UNCLE SCROOGE King Scrooge the First - 21 - script only - A swami who claims to be more than four thousand years old stuns the ducks into unconsciousness and transports them to the ruins of Sagbad, ancient capital of Fatcatstan. The ducks drink a potion that stimulates \"memory cells in the ducks' genes,\" so that they act out events in which their ancestors participated thousands of years before. (June 22, 1966)",
+          "bbox": [
+            {
+              "h": 46.50775152439023,
+              "w": 124.96134396436736,
+              "x": 13.354079053925304,
+              "y": 89.26863567073171,
+              "confidence": 0.98,
+              "end_index": 413,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's list indicates that \"King Scrooge the First\" was written as a twenty-four page story; however, the story's dialogue in his pencil script is identical with that in the story as published, and covers only twenty-one pages. \"This is a mystery to me, too. I got paid for 24 pages.\" (Feb. 24, 1972, letter to Michael Barrier)\nReprinted: Uncle Scrooge No. 145, October 1977.",
+          "value": "Barks's list indicates that \"King Scrooge the First\" was written as a twenty-four page story; however, the story's dialogue in his pencil script is identical with that in the story as published, and covers only twenty-one pages. \"This is a mystery to me, too. I got paid for 24 pages.\" (Feb. 24, 1972, letter to Michael Barrier)\nReprinted: Uncle Scrooge No. 145, October 1977.",
+          "bbox": [
+            {
+              "h": 34.17059451219513,
+              "w": 124.91568585651675,
+              "x": 13.316948480373474,
+              "y": 137.00065929878048,
+              "confidence": 0.96,
+              "end_index": 375,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 72 - December 1967 - 36 pages",
+          "value": "72 - December 1967 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.577942073170725,
+              "w": 74.84697992092225,
+              "x": 13.073099156821645,
+              "y": 178.13358612804876,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 6, June-Aug. 1954.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 6, June-Aug. 1954.",
+          "bbox": [
+            {
+              "h": 11.341474847560985,
+              "w": 125.16965439214937,
+              "x": 13.20785799352134,
+              "y": 184.20568216463414,
+              "confidence": 0.97,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in The Great Steamboat Race - 16 - Reprinted from Uncle Scrooge No. 11, Sept.-Nov. 1955.",
+          "value": "UNCLE SCROOGE in The Great Steamboat Race - 16 - Reprinted from Uncle Scrooge No. 11, Sept.-Nov. 1955.",
+          "bbox": [
+            {
+              "h": 5.209390243902435,
+              "w": 120.30831673971038,
+              "x": 18.009970226753047,
+              "y": 196.03534298780488,
+              "confidence": 0.79,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Panels on first page trimmed for indicia, except middle row.",
+          "value": "Changes: Panels on first page trimmed for indicia, except middle row.",
+          "bbox": [
+            {
+              "h": 10.167576219512203,
+              "w": 124.7068180735518,
+              "x": 13.475577124618901,
+              "y": 208.31698170731707,
+              "confidence": 0.92,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE - 4 - Reprinted from Uncle Scrooge No. 19, Sept.-Nov. 1957.",
+          "value": "GYRO GEARLOOSE - 4 - Reprinted from Uncle Scrooge No. 19, Sept.-Nov. 1957.",
+          "bbox": [
+            {
+              "h": 11.334740853658522,
+              "w": 124.96757883955792,
+              "x": 13.630011671112804,
+              "y": 218.98442835365853,
+              "confidence": 0.96,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - (inside back cover) - Reprinted from the inside back cover of Uncle Scrooge No. 11, Sept.-Nov. 1955.",
+          "value": "UNCLE SCROOGE - 1 - (inside back cover) - Reprinted from the inside back cover of Uncle Scrooge No. 11, Sept.-Nov. 1955.",
+          "bbox": [
+            {
+              "h": 16.98852896341461,
+              "w": 125.35704256383384,
+              "x": 13.220363114519817,
+              "y": 230.79669969512196,
+              "confidence": 0.96,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 73 - February 1968 - 36 pages",
+          "value": "73 - February 1968 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.61571646341461,
+              "w": 72.6749324742759,
+              "x": 13.279200528772863,
+              "y": 255.07344512195124,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 32, Dec.-Feb. 1961.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 32, Dec.-Feb. 1961.",
+          "bbox": [
+            {
+              "h": 11.29147865853658,
+              "w": 125.18082936356707,
+              "x": 13.412525247713413,
+              "y": 261.0720503048781,
+              "confidence": 0.97,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Tree Trick - 1 (inside front cover) - Reprinted from Uncle Scrooge No. 33, Mar.-May 1961.",
+          "value": "UNCLE SCROOGE Tree Trick - 1 (inside front cover) - Reprinted from Uncle Scrooge No. 33, Mar.-May 1961.",
+          "bbox": [
+            {
+              "h": 11.464161585365854,
+              "w": 124.79797458555637,
+              "x": 13.516599537919205,
+              "y": 273.05679878048784,
+              "confidence": 0.92,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Bongo on the Congo - 10 - Reprinted from Uncle Scrooge No. 33, Mar.-May 1961.",
+          "value": "UNCLE SCROOGE Bongo on the Congo - 10 - Reprinted from Uncle Scrooge No. 33, Mar.-May 1961.",
+          "bbox": [
+            {
+              "h": 16.346661585365855,
+              "w": 125.78091653963413,
+              "x": 12.362137957317072,
+              "y": 284.9406631097561,
+              "confidence": 0.95,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Splash panel trimmed for indicia.",
+          "value": "Changes: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 5.44074695121948,
+              "w": 85.43371331935974,
+              "x": 17.841921208079267,
+              "y": 302.419824695122,
+              "confidence": 0.88,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Duckburg's Day of Peril - 4 - Reprinted from Uncle Scrooge No. 36, Dec.-Feb. 1962.",
+          "value": "GYRO GEARLOOSE Duckburg's Day of Peril - 4 - Reprinted from Uncle Scrooge No. 36, Dec.-Feb. 1962.",
+          "bbox": [
+            {
+              "h": 11.617339939024404,
+              "w": 124.88542147008384,
+              "x": 13.13183367473323,
+              "y": 308.19900914634144,
+              "confidence": 0.93,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Money Bag Goat - 6 - Reprinted from Uncle Scrooge No. 36, Dec.-Feb. 1962.",
+          "value": "UNCLE SCROOGE Money Bag Goat - 6 - Reprinted from Uncle Scrooge No. 36, Dec.-Feb. 1962.",
+          "bbox": [
+            {
+              "h": 11.159908536585334,
+              "w": 124.80720846036586,
+              "x": 13.262712461890242,
+              "y": 320.2517378048781,
+              "confidence": 0.93,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 74 - April 1968 - 36 pages",
+          "value": "74 - April 1968 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.51821646341461,
+              "w": 61.91158500857469,
+              "x": 12.978035799352133,
+              "y": 337.74141768292685,
+              "confidence": 0.96,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Reprinted",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Reprinted",
+          "bbox": [
+            {
+              "h": 5.824207317073214,
+              "w": 119.95703720464938,
+              "x": 18.09531416730183,
+              "y": 343.7026600609756,
+              "confidence": 0.96,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "from the inside front cover of Uncle Scrooge No. 19, Sept.-Nov. 1957.",
+          "value": "from the inside front cover of Uncle Scrooge No. 19, Sept.-Nov. 1957.",
+          "bbox": [
+            {
+              "h": 10.373446074695122,
+              "w": 125.08350228658533,
+              "x": 152.12330602134145,
+              "y": 24.02369474085366,
+              "confidence": 0.97,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 82 - August 1969 - 36 pages",
+          "value": "82 - August 1969 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.599764672256101,
+              "w": 67.06860708841461,
+              "x": 152.07990091463415,
+              "y": 41.862481897865855,
+              "confidence": 0.96,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE Mythtic Mystery - 14 - Reprinted from Uncle Scrooge No. 34, June-Aug. 1962.",
+          "value": "UNCLE SCROOGE Mythtic Mystery - 14 - Reprinted from Uncle Scrooge No. 34, June-Aug. 1962.",
+          "bbox": [
+            {
+              "h": 11.52545922256097,
+              "w": 124.93094131097561,
+              "x": 152.05858422256094,
+              "y": 48.019361661585364,
+              "confidence": 0.95,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Splash panel deepened.",
+          "value": "Changes: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 5.348774771341463,
+              "w": 65.57360899390244,
+              "x": 156.70257050304878,
+              "y": 59.85056021341464,
+              "confidence": 0.88,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 84 - December 1969 - 36 pages",
+          "value": "84 - December 1969 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.552989710365855,
+              "w": 74.60341463414635,
+              "x": 152.13489900914632,
+              "y": 71.42311737804879,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE \"The Lost Crown of Genghis Khan!\" - 19 - Reprinted from Uncle Scrooge No. 14, June-Aug. 1956.\nChanges: Splash panel trimmed for indicia.",
+          "value": "UNCLE SCROOGE \"The Lost Crown of Genghis Khan!\" - 19 - Reprinted from Uncle Scrooge No. 14, June-Aug. 1956.\nChanges: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 17.121230945121955,
+              "w": 124.81495998475609,
+              "x": 152.42650724085365,
+              "y": 77.51432926829268,
+              "confidence": 0.92,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 85 - February 1970 - 36 pages",
+          "value": "85 - February 1970 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.529283536585362,
+              "w": 72.54330983231704,
+              "x": 152.00891958841464,
+              "y": 101.07180640243902,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the cover of Uncle Scrooge No. 52, September 1964.",
+          "value": "Front cover: Reprinted from the cover of Uncle Scrooge No. 52, September 1964.",
+          "bbox": [
+            {
+              "h": 11.199535060975608,
+              "w": 125.2435575457317,
+              "x": 151.96716082317073,
+              "y": 107.03983993902439,
+              "confidence": 0.96,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Great Wig Mystery - 20 - Reprinted from Uncle Scrooge No. 52, September 1964.\nChanges: Splash panel trimmed for indicia.",
+          "value": "UNCLE SCROOGE The Great Wig Mystery - 20 - Reprinted from Uncle Scrooge No. 52, September 1964.\nChanges: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 17.352862042682926,
+              "w": 125.10042873475605,
+              "x": 152.05012957317072,
+              "y": 118.91499237804878,
+              "confidence": 0.95,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 86 - April 1970 - 36 pages",
+          "value": "86 - April 1970 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.705430640243912,
+              "w": 61.87160442073171,
+              "x": 152.01692835365853,
+              "y": 142.42227896341464,
+              "confidence": 0.96,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 29, Mar.-May 1960.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 29, Mar.-May 1960.",
+          "bbox": [
+            {
+              "h": 11.19751143292684,
+              "w": 125.29025533536583,
+              "x": 151.96782964939024,
+              "y": 148.60226753048778,
+              "confidence": 0.96,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Golden Nugget Boat - 19 - Reprinted from Uncle Scrooge No. 35, Sept.-Nov. 1961.",
+          "value": "UNCLE SCROOGE The Golden Nugget Boat - 19 - Reprinted from Uncle Scrooge No. 35, Sept.-Nov. 1961.",
+          "bbox": [
+            {
+              "h": 11.424043445121942,
+              "w": 125.11941310975611,
+              "x": 152.07484184451218,
+              "y": 160.41645960365855,
+              "confidence": 0.95,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 87 - June 1970 - 36 pages",
+          "value": "87 - June 1970 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5674009146341445,
+              "w": 59.840259146341474,
+              "x": 152.09924542682924,
+              "y": 177.94246189024392,
+              "confidence": 0.96,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 31, Sept.-Nov. 1960.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 31, Sept.-Nov. 1960.",
+          "bbox": [
+            {
+              "h": 11.35346798780487,
+              "w": 125.19010289634144,
+              "x": 152.04673399390242,
+              "y": 184.0083612804878,
+              "confidence": 0.97,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE and The Flying Dutchman - 20 - Reprinted from Uncle Scrooge No. 25, Mar.-May 1959.",
+          "value": "UNCLE SCROOGE and The Flying Dutchman - 20 - Reprinted from Uncle Scrooge No. 25, Mar.-May 1959.",
+          "bbox": [
+            {
+              "h": 11.478109756097565,
+              "w": 125.13795160060977,
+              "x": 152.07611089939022,
+              "y": 195.9800762195122,
+              "confidence": 0.96,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 88 - August 1970 - 36 pages",
+          "value": "88 - August 1970 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.545449695121969,
+              "w": 66.92091653963412,
+              "x": 152.14602896341464,
+              "y": 213.68041920731707,
+              "confidence": 0.96,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 37, Mar.-May 1962.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 37, Mar.-May 1962.",
+          "bbox": [
+            {
+              "h": 11.515129573170725,
+              "w": 125.08297065548777,
+              "x": 152.04333841463415,
+              "y": 219.61321646341463,
+              "confidence": 0.95,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Unsafe Safe - 19 - Reprinted from Uncle Scrooge No. 38, June-Aug. 1962.",
+          "value": "UNCLE SCROOGE The Unsafe Safe - 19 - Reprinted from Uncle Scrooge No. 38, June-Aug. 1962.",
+          "bbox": [
+            {
+              "h": 11.581006097560984,
+              "w": 124.93742378048779,
+              "x": 152.29924161585365,
+              "y": 231.60896341463413,
+              "confidence": 0.94,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - Reprinted from Uncle Scrooge No. 54, December 1964.",
+          "value": "UNCLE SCROOGE - 1 - Reprinted from Uncle Scrooge No. 54, December 1964.",
+          "bbox": [
+            {
+              "h": 10.715236280487797,
+              "w": 125.18055068597559,
+              "x": 152.04819169207315,
+              "y": 243.55838414634147,
+              "confidence": 0.95,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 89 - October 1970 - 36 pages",
+          "value": "89 - October 1970 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5199085365853895,
+              "w": 68.9990282012195,
+              "x": 152.1625952743902,
+              "y": 261.0045731707317,
+              "confidence": 0.96,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 15, Sept.-Nov. 1956.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 15, Sept.-Nov. 1956.",
+          "bbox": [
+            {
+              "h": 11.453849085365855,
+              "w": 125.27627858231706,
+              "x": 151.9712252286585,
+              "y": 266.9559375,
+              "confidence": 0.96,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in \"The Second-richest Duck\" - 20 - Reprinted from Uncle Scrooge No. 15, Sept.-Nov. 1956.",
+          "value": "UNCLE SCROOGE in \"The Second-richest Duck\" - 20 - Reprinted from Uncle Scrooge No. 15, Sept.-Nov. 1956.",
+          "bbox": [
+            {
+              "h": 11.5389557926829,
+              "w": 124.17074314024391,
+              "x": 152.00075647865853,
+              "y": 278.56298780487805,
+              "confidence": 0.89,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Splash panel trimmed for indicia.",
+          "value": "Changes: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 17.63506097560974,
+              "w": 124.09329649390243,
+              "x": 152.02358231707316,
+              "y": 278.4814481707317,
+              "confidence": 0.76,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 90 - December 1970 - 36 pages",
+          "value": "90 - December 1970 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5597637195121745,
+              "w": 74.87130525914634,
+              "x": 152.04608231707314,
+              "y": 302.3861204268293,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 16, Dec.-Feb. 1957.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 16, Dec.-Feb. 1957.",
+          "bbox": [
+            {
+              "h": 11.15435213414632,
+              "w": 125.31349275914634,
+              "x": 151.9628048780488,
+              "y": 308.38067835365854,
+              "confidence": 0.96,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Lines representing the floor and a window were removed.",
+          "value": "Changes: Lines representing the floor and a window were removed.",
+          "bbox": [
+            {
+              "h": 10.307515243902435,
+              "w": 124.91554115853657,
+              "x": 152.2569169207317,
+              "y": 320.4929268292683,
+              "confidence": 0.96,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Cave of Ali Baba - 16 - Reprinted from Uncle Scrooge No. 37, Mar.-May 1962.",
+          "value": "UNCLE SCROOGE Cave of Ali Baba - 16 - Reprinted from Uncle Scrooge No. 37, Mar.-May 1962.",
+          "bbox": [
+            {
+              "h": 11.492515243902435,
+              "w": 124.64356897865852,
+              "x": 152.5027362804878,
+              "y": 332.14788109756097,
+              "confidence": 0.94,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Panels on first page trimmed for indicia.",
+          "value": "Changes: Panels on first page trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 5.0782545731707245,
+              "w": 99.70871570121953,
+              "x": 156.78859184451218,
+              "y": 344.4184298780488,
+              "confidence": 0.92,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "154 Carl Barks and the Art of the Comic Book",
+              "value": "154 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.833109756097564,
+                  "w": 77.82512052210365,
+                  "x": 37.64559975228658,
+                  "y": 362.43610518292684,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "154 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.83,
+              "w": 77.83,
+              "x": 37.65,
+              "y": 362.44,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "154"
+    }
+  ]
+}

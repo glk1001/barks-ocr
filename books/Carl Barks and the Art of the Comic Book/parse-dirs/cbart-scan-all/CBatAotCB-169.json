@@ -1,0 +1,485 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "From Walt Disney's Comics No. 44, May 1944; © 1944 Walt Disney Productions.",
+              "value": "From Walt Disney's Comics No. 44, May 1944; © 1944 Walt Disney Productions.",
+              "bbox": [
+                {
+                  "h": 93.65451219512195,
+                  "w": 129.51067740091463,
+                  "x": 143.55815453506096,
+                  "y": 13.44,
+                  "confidence": 0.69,
+                  "end_index": 74,
+                  "label": "image",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "From Walt Disney's Comics No. 44, May 1944; © 1944 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 93.65,
+              "w": 129.51,
+              "x": 143.56,
+              "y": 13.44,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header"
+        },
+        {
+          "caption": "Donald Duck talking about chemical atoms while his nephews watch skeptically. From Walt Disney's Comics No. 44, May 1944.",
+          "md": "![Donald Duck talking about chemical atoms while his nephews watch skeptically. From Walt Disney's Comics No. 44, May 1944.](CBatAotCB-169_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-169_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.11256573932927,
+              "w": 128.81244855182925,
+              "x": 11.913226943597559,
+              "y": 14.640071455792683,
+              "confidence": 0.95,
+              "end_index": 146,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck mumbling while his nephews observe a bump on his head. From Walt Disney's Comics No. 44, May 1944.",
+          "md": "![Donald Duck mumbling while his nephews observe a bump on his head. From Walt Disney's Comics No. 44, May 1944.](CBatAotCB-169_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-169_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.65451219512195,
+              "w": 129.51067740091463,
+              "x": 143.55815453506096,
+              "y": 13.44,
+              "confidence": 0.93,
+              "end_index": 135,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck demanding quiet to use his \"vast mental powers\" while his nephews look on. From Walt Disney's Comics No. 44, May 1944.",
+          "md": "![Donald Duck demanding quiet to use his \"vast mental powers\" while his nephews look on. From Walt Disney's Comics No. 44, May 1944.](CBatAotCB-169_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-169_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 91.96008384146342,
+              "w": 128.65812440453507,
+              "x": 12.679569955221035,
+              "y": 111.2155106707317,
+              "confidence": 0.92,
+              "end_index": 155,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck feeling like a \"super man\" while his nephews talk to him. From Walt Disney's Comics No. 44, May 1944.",
+          "md": "![Donald Duck feeling like a \"super man\" while his nephews talk to him. From Walt Disney's Comics No. 44, May 1944.](CBatAotCB-169_page_1_image_4_v2.jpg)",
+          "url": "CBatAotCB-169_page_1_image_4_v2.jpg",
+          "bbox": [
+            {
+              "h": 92.44642911585368,
+              "w": 129.5493407012195,
+              "x": 144.05818788109755,
+              "y": 110.34643673780488,
+              "confidence": 0.91,
+              "end_index": 138,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "agency and trap a bank robber despite Donald's efforts to confuse them with phony clues. *(May 31, 1945)*",
+          "value": "agency and trap a bank robber despite Donald's efforts to confuse them with phony clues. (May 31, 1945)",
+          "bbox": [
+            {
+              "h": 11.905564024390232,
+              "w": 125.99906857374236,
+              "x": 10.57448230278201,
+              "y": 217.6920274390244,
+              "confidence": 0.96,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages have nine to eleven panels each; most have ten.",
+          "value": "These pages have nine to eleven panels each; most have ten.",
+          "bbox": [
+            {
+              "h": 5.531067073170725,
+              "w": 121.138496212843,
+              "x": 15.07615222465701,
+              "y": 230.04317835365853,
+              "confidence": 0.95,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 62 (6/2) - November 1945 - 52 pages",
+          "value": "62 (6/2) - November 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.653010670731737,
+              "w": 87.44873773342225,
+              "x": 11.069012838224085,
+              "y": 241.65448170731707,
+              "confidence": 0.95,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald enters water-ski races and has to operate his tow boat by remote control when the nephews eat themselves sick on popcorn and candy. *(June 27, 1945)*",
+          "value": "DONALD DUCK - 10 - Donald enters water-ski races and has to operate his tow boat by remote control when the nephews eat themselves sick on popcorn and candy. (June 27, 1945)",
+          "bbox": [
+            {
+              "h": 23.010731707317046,
+              "w": 126.21184534584604,
+              "x": 10.926040515434451,
+              "y": 247.54122713414637,
+              "confidence": 0.98,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Cross-references:** At the beginning of this story, Donald refers clearly to the story in the preceding issue, Walt Disney's Comics No. 61, October 1945.",
+          "value": "Cross-references: At the beginning of this story, Donald refers clearly to the story in the preceding issue, Walt Disney's Comics No. 61, October 1945.",
+          "bbox": [
+            {
+              "h": 16.509923780487824,
+              "w": 126.07490424923779,
+              "x": 11.153350323932925,
+              "y": 271.28430640243903,
+              "confidence": 0.98,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 63 (6/3) - December 1945 - 52 pages",
+          "value": "63 (6/3) - December 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.70880335365855,
+              "w": 86.36558974847559,
+              "x": 11.420936547256096,
+              "y": 294.72459603658535,
+              "confidence": 0.96,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald advertises to find the rightful owner of a ten-dollar bill the nephews have found, and he is besieged by phony claimants. *(Aug. 2, 1945)*",
+          "value": "DONALD DUCK - 10 - Donald advertises to find the rightful owner of a ten-dollar bill the nephews have found, and he is besieged by phony claimants. (Aug. 2, 1945)",
+          "bbox": [
+            {
+              "h": 17.467431402439015,
+              "w": 126.01510861280487,
+              "x": 11.45197694359756,
+              "y": 300.5144588414634,
+              "confidence": 0.97,
+              "end_index": 163,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Changes:** According to Barks, the ducks' halos in the last panel were added by the editors. (April 1968 letter to Michael Barrier)\n**Reprinted:** Walt Disney's Comics No. 304, January 1966",
+          "value": "Changes: According to Barks, the ducks' halos in the last panel were added by the editors. (April 1968 letter to Michael Barrier)\nReprinted: Walt Disney's Comics No. 304, January 1966",
+          "bbox": [
+            {
+              "h": 17.427278963414665,
+              "w": 126.08076290967986,
+              "x": 11.186180687881096,
+              "y": 318.51256097560974,
+              "confidence": 0.96,
+              "end_index": 190,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 64 (6/4) - January 1946 - 52 pages",
+          "value": "64 (6/4) - January 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.73537347560974,
+              "w": 80.98637588128811,
+              "x": 11.640353348894816,
+              "y": 342.073193597561,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald resolves not to lose his\ntemper and the nephews run wild, finally digging into Donald's old love letters. *(Sept. 19, 1945)*",
+          "value": "DONALD DUCK - 10 - Donald resolves not to lose his\ntemper and the nephews run wild, finally digging into Donald's old love letters. (Sept. 19, 1945)",
+          "bbox": [
+            {
+              "h": 11.769237804878056,
+              "w": 125.9806554878049,
+              "x": 149.30116806402438,
+              "y": 217.77198932926828,
+              "confidence": 0.91,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First appearance of Daisy Duck in a Barks story.",
+          "value": "First appearance of Daisy Duck in a Barks story.",
+          "bbox": [
+            {
+              "h": 5.473696646341478,
+              "w": 96.68006478658536,
+              "x": 153.92803925304878,
+              "y": 230.16823170731706,
+              "confidence": 0.92,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 65 (6/5) - February 1946 - 52 pages",
+          "value": "65 (6/5) - February 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.908902439024377,
+              "w": 86.28076028963415,
+              "x": 149.5269569359756,
+              "y": 241.56841463414634,
+              "confidence": 0.96,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews obtain a parrot at the docks — \"a guy named Joe from Singapore\" — and then try to persuade Donald to let them keep it. *(Oct. 4, 1945)*\n**Reprinted:** Walt Disney's Comics No. 420, September 1975.",
+          "value": "DONALD DUCK - 10 - The nephews obtain a parrot at the docks — \"a guy named Joe from Singapore\" — and then try to persuade Donald to let them keep it. (Oct. 4, 1945)\nReprinted: Walt Disney's Comics No. 420, September 1975.",
+          "bbox": [
+            {
+              "h": 23.37070884146342,
+              "w": 125.92711509146342,
+              "x": 149.51376905487803,
+              "y": 247.56736280487803,
+              "confidence": 0.96,
+              "end_index": 226,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 66 (6/6) - March 1946 - 52 pages",
+          "value": "66 (6/6) - March 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.756501524390205,
+              "w": 77.4472980182927,
+              "x": 149.79592797256095,
+              "y": 277.0265396341464,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald goes ice-fishing, but spends more time under the ice than on it as he battles a big, wily old fish. *(Oct. 27, 1945)*",
+          "value": "DONALD DUCK - 10 - Donald goes ice-fishing, but spends more time under the ice than on it as he battles a big, wily old fish. (Oct. 27, 1945)",
+          "bbox": [
+            {
+              "h": 17.68863567073171,
+              "w": 125.94733422256095,
+              "x": 149.71724657012194,
+              "y": 282.5894131097561,
+              "confidence": 0.98,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 67 (6/7) - April 1946 - 52 pages",
+          "value": "67 (6/7) - April 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.729451219512175,
+              "w": 73.50429306402438,
+              "x": 151.21979039634144,
+              "y": 306.42224085365854,
+              "confidence": 0.95,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews buy miniature jet engines with their savings, against Donald's wishes, but the engines save Donald's life when he and a girl are trapped on a peak. *(Nov. 23, 1945)*",
+          "value": "DONALD DUCK - 10 - The nephews buy miniature jet engines with their savings, against Donald's wishes, but the engines save Donald's life when he and a girl are trapped on a peak. (Nov. 23, 1945)",
+          "bbox": [
+            {
+              "h": 23.789748475609738,
+              "w": 125.75287728658539,
+              "x": 151.07429496951218,
+              "y": 312.1245960365854,
+              "confidence": 0.99,
+              "end_index": 195,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 68 (6/8) - May 1946 - 52 pages",
+          "value": "68 (6/8) - May 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.618025914634145,
+              "w": 71.1805163871951,
+              "x": 151.4002705792683,
+              "y": 341.8055945121951,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald builds a huge kite to",
+          "value": "DONALD DUCK - 10 - Donald builds a huge kite to",
+          "bbox": [
+            {
+              "h": 5.380381097560985,
+              "w": 121.17982088414634,
+              "x": 156.02083079268291,
+              "y": 347.49116615853654,
+              "confidence": 0.96,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n169",
+              "value": "Carl Barks and the Art of the Comic Book\n169",
+              "bbox": [
+                {
+                  "h": 4.384458841463419,
+                  "w": 77.76761432926828,
+                  "x": 172.0080240091463,
+                  "y": 363.79083841463415,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n169",
+          "bbox": [
+            {
+              "h": 4.38,
+              "w": 77.77,
+              "x": 172.01,
+              "y": 363.79,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "169"
+    }
+  ]
+}

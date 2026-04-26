@@ -1,0 +1,553 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "nephews to call the Edison Company to send a lineman to retrieve a kite that is tangled in power lines; the fourth panel (which is the width of the page, as wide as two normal panels) shows the lineman returning the kite. In the PG\\&E edition, the third panel shows Donald telling the nephews that they must notify PG\\&E about a broken power line; the fourth panel shows the ducks preparing to telephone PG\\&E; and the fifth panel shows a nephew writing down \"Never touch fallen electric wires. Report them to P.G. and E. or to your parents\" as one of his kite safety rules.",
+          "value": "nephews to call the Edison Company to send a lineman to retrieve a kite that is tangled in power lines; the fourth panel (which is the width of the page, as wide as two normal panels) shows the lineman returning the kite. In the PG&E edition, the third panel shows Donald telling the nephews that they must notify PG&E about a broken power line; the fourth panel shows the ducks preparing to telephone PG&E; and the fifth panel shows a nephew writing down \"Never touch fallen electric wires. Report them to P.G. and E. or to your parents\" as one of his kite safety rules.",
+          "bbox": [
+            {
+              "h": 57.98913681402439,
+              "w": 124.84933165015244,
+              "x": 11.425751238567072,
+              "y": 25.846617759146344,
+              "confidence": 0.99,
+              "end_index": 573,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The final panel on the eighth page shows all of the kite safety rules. There are seven for SCE, and eight for PG\\&E, \"Never touch fallen electric wires\" being the extra one.",
+          "value": "The final panel on the eighth page shows all of the kite safety rules. There are seven for SCE, and eight for PG&E, \"Never touch fallen electric wires\" being the extra one.",
+          "bbox": [
+            {
+              "h": 17.190205792682928,
+              "w": 124.70409024866615,
+              "x": 11.367232159870426,
+              "y": 85.34339176829268,
+              "confidence": 0.99,
+              "end_index": 172,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's vouchers show that Western accepted eight pages of pencil roughs on June 17, 1954, and accepted another eight panels of roughs and six inked pages on July 8, 1954. This would indicate that some of Barks's pencils were inked by another artist, but there is no noticeable variation in inking styles in the story; all looks like Barks's work. Since this was an unusual book, it seems likely that either his records, or Western's, or both, failed to reflect accurately the work that was done.",
+          "value": "Barks's vouchers show that Western accepted eight pages of pencil roughs on June 17, 1954, and accepted another eight panels of roughs and six inked pages on July 8, 1954. This would indicate that some of Barks's pencils were inked by another artist, but there is no noticeable variation in inking styles in the story; all looks like Barks's work. Since this was an unusual book, it seems likely that either his records, or Western's, or both, failed to reflect accurately the work that was done.",
+          "bbox": [
+            {
+              "h": 46.77489329268294,
+              "w": 124.99720762671492,
+              "x": 11.367480826028961,
+              "y": 103.26930640243903,
+              "confidence": 0.99,
+              "end_index": 495,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# MARCH OF COMICS (See BOYS' AND GIRLS' MARCH OF COMICS)",
+          "value": "MARCH OF COMICS (See BOYS' AND GIRLS' MARCH OF COMICS)",
+          "bbox": [
+            {
+              "h": 15.29111661585368,
+              "w": 120.27078101181401,
+              "x": 14.548095703124998,
+              "y": 157.04137957317073,
+              "confidence": 0.99,
+              "end_index": 53,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## MERRY CHRISTMAS (Dell)",
+          "value": "MERRY CHRISTMAS (Dell)",
+          "bbox": [
+            {
+              "h": 7.3127057926829275,
+              "w": 96.16276200457315,
+              "x": 26.850791730182923,
+              "y": 186.84740853658536,
+              "confidence": 0.97,
+              "end_index": 21,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### 39 - (December) 1960 - 84 pages",
+          "value": "39 - (December) 1960 - 84 pages",
+          "bbox": [
+            {
+              "h": 5.753346036585362,
+              "w": 77.52510158631858,
+              "x": 12.07520614996189,
+              "y": 200.4961280487805,
+              "confidence": 0.93,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (pencil rough only): The nephews scowl because Donald's Christmas stocking is so much larger than theirs. (Apr. 25, 1960)",
+          "value": "Front cover (pencil rough only): The nephews scowl because Donald's Christmas stocking is so much larger than theirs. (Apr. 25, 1960)",
+          "bbox": [
+            {
+              "h": 17.097484756097565,
+              "w": 124.88386730659299,
+              "x": 12.202244545541157,
+              "y": 206.51538109756098,
+              "confidence": 0.98,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Another artist made a painting for the cover, based on a pencil sketch by Barks. One version of Barks's drawing still exists, and shows Donald with his eyes partially closed, rather than completely open as they are in the painting.",
+          "value": "Another artist made a painting for the cover, based on a pencil sketch by Barks. One version of Barks's drawing still exists, and shows Donald with his eyes partially closed, rather than completely open as they are in the painting.",
+          "bbox": [
+            {
+              "h": 23.25846036585365,
+              "w": 125.0049988090701,
+              "x": 12.184172303734755,
+              "y": 224.52555640243904,
+              "confidence": 0.99,
+              "end_index": 230,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## MICKEY MOUSE (Dell)",
+          "value": "MICKEY MOUSE (Dell)",
+          "bbox": [
+            {
+              "h": 7.1506783536584955,
+              "w": 81.03988090701218,
+              "x": 31.267274199695123,
+              "y": 259.0991387195122,
+              "confidence": 0.98,
+              "end_index": 18,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### Four Color 79 - (August) 1945 - 36 pages",
+          "value": "Four Color 79 - (August) 1945 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.78201981707316,
+              "w": 99.80724752286584,
+              "x": 11.618994855182926,
+              "y": 273.1639024390244,
+              "confidence": 0.96,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "MICKEY MOUSE and The Riddle of the Red Hat - 11 - Mickey laughs at Minnie's new hat, then mistakes a girl in a similar hat for Minnie; the girl mistakes Mickey for someone else and gives him a \"diamond ring\" that actually contains a large ruby. Minnie is kidnaped by the girl's real contact, Black Pete (who is never identified by name). (Apr. 27, 1945)",
+          "value": "MICKEY MOUSE and The Riddle of the Red Hat - 11 - Mickey laughs at Minnie's new hat, then mistakes a girl in a similar hat for Minnie; the girl mistakes Mickey for someone else and gives him a \"diamond ring\" that actually contains a large ruby. Minnie is kidnaped by the girl's real contact, Black Pete (who is never identified by name). (Apr. 27, 1945)",
+          "bbox": [
+            {
+              "h": 40.44530487804875,
+              "w": 125.06146532012194,
+              "x": 11.588769054878048,
+              "y": 279.17528963414634,
+              "confidence": 0.99,
+              "end_index": 352,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"Mickey Mouse and Porky Pig I barely touched. They weren't my cup of tea.\" (June 9, 1966, letter to Michael Barrier) \"About how I happened to do the Mickey and Porky series in 1944 and '45 — I was asked to do so by the office. I wouldn't have",
+          "value": "Barks: \"Mickey Mouse and Porky Pig I barely touched. They weren't my cup of tea.\" (June 9, 1966, letter to Michael Barrier) \"About how I happened to do the Mickey and Porky series in 1944 and '45 — I was asked to do so by the office. I wouldn't have",
+          "bbox": [
+            {
+              "h": 23.20719512195119,
+              "w": 124.87510611185213,
+              "x": 11.74764636528201,
+              "y": 320.79032012195125,
+              "confidence": 0.99,
+              "end_index": 248,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "ventured into those characters' field by choice.\" (Feb. 20, 1970, letter to Michael Barrier)",
+          "value": "ventured into those characters' field by choice.\" (Feb. 20, 1970, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 10.560745998475612,
+              "w": 124.89794588414631,
+              "x": 149.61431592987802,
+              "y": 25.88673018292683,
+              "confidence": 0.97,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## MICKEY MOUSE ALMANAC (Dell)",
+          "value": "MICKEY MOUSE ALMANAC (Dell)",
+          "bbox": [
+            {
+              "h": 7.189138719512195,
+              "w": 122.63955983231709,
+              "x": 152.07004001524388,
+              "y": 41.697444740853655,
+              "confidence": 0.98,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### 1 - (December) 1957 - 100 pages",
+          "value": "1 - (December) 1957 - 100 pages",
+          "bbox": [
+            {
+              "h": 5.44745807926829,
+              "w": 77.64473894817075,
+              "x": 149.7356307164634,
+              "y": 57.785756478658534,
+              "confidence": 0.94,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "GYRO GEARLOOSE in August Accident - 4 - Gyro, seeking fame, invents a steam rocket ship, but it makes a lot of smoke and barely gets off the ground. (Mar. 21, 1957)\nReprinted: Walt Disney Comics Digest No. 57, February 1976.",
+          "value": "GYRO GEARLOOSE in August Accident - 4 - Gyro, seeking fame, invents a steam rocket ship, but it makes a lot of smoke and barely gets off the ground. (Mar. 21, 1957)\nReprinted: Walt Disney Comics Digest No. 57, February 1976.",
+          "bbox": [
+            {
+              "h": 23.721728277439027,
+              "w": 124.8057507621951,
+              "x": 149.94341272865853,
+              "y": 63.487740091463415,
+              "confidence": 0.95,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in September Scrimmage - 4 - Scrooge helps the Duckburg football team win against the Dogdale Barkers by using some old-time tricks, such as hiding the football in his top hat. (Mar. 21, 1957)",
+          "value": "UNCLE SCROOGE in September Scrimmage - 4 - Scrooge helps the Duckburg football team win against the Dogdale Barkers by using some old-time tricks, such as hiding the football in his top hat. (Mar. 21, 1957)",
+          "bbox": [
+            {
+              "h": 23.57738757621952,
+              "w": 125.58088605182924,
+              "x": 149.87896532012195,
+              "y": 87.37299352134146,
+              "confidence": 0.95,
+              "end_index": 205,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 57, February 1976.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 57, February 1976.",
+          "bbox": [
+            {
+              "h": 5.323536585365855,
+              "w": 121.06092416158533,
+              "x": 154.10138528963415,
+              "y": 111.45586509146342,
+              "confidence": 0.96,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## MICKEY MOUSE SUMMER FUN (See SUMMER FUN)",
+          "value": "MICKEY MOUSE SUMMER FUN (See SUMMER FUN)",
+          "bbox": [
+            {
+              "h": 14.808852896341449,
+              "w": 113.48530106707312,
+              "x": 155.16020579268292,
+              "y": 125.86773246951219,
+              "confidence": 0.98,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## NEW FUNNIES (Dell)",
+          "value": "NEW FUNNIES (Dell)",
+          "bbox": [
+            {
+              "h": 7.226204268292695,
+              "w": 73.70855945121953,
+              "x": 174.92623285060972,
+              "y": 149.98529725609757,
+              "confidence": 0.97,
+              "end_index": 17,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### 76 - June 1943 - 68 pages",
+          "value": "76 - June 1943 - 68 pages",
+          "bbox": [
+            {
+              "h": 5.6044435975609845,
+              "w": 59.86058117378046,
+              "x": 150.50493521341463,
+              "y": 162.0885137195122,
+              "confidence": 0.9,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "ANDY PANDA - 10 - art only - Andy saves a lion tamer's life by talking to the lions in their own language, and the circus owner rewards him with a bag of money that Andy gives to a poor family. (Jan. 16, 1943)",
+          "value": "ANDY PANDA - 10 - art only - Andy saves a lion tamer's life by talking to the lions in their own language, and the circus owner rewards him with a bag of money that Andy gives to a poor family. (Jan. 16, 1943)",
+          "bbox": [
+            {
+              "h": 23.922370426829275,
+              "w": 125.2922789634146,
+              "x": 150.62818788109755,
+              "y": 167.72126524390242,
+              "confidence": 0.98,
+              "end_index": 208,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages are three panels deep.",
+          "value": "These pages are three panels deep.",
+          "bbox": [
+            {
+              "h": 5.382210365853652,
+              "w": 68.77666920731707,
+              "x": 155.3700800304878,
+              "y": 192.23343749999998,
+              "confidence": 0.91,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"Some office staffer wrote it, maybe Eleanor Packer, who was editor of the L.A. division then.\" (August 1967 letter to Michael Barrier)",
+          "value": "Barks: \"Some office staffer wrote it, maybe Eleanor Packer, who was editor of the L.A. division then.\" (August 1967 letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 15.9926067073171,
+              "w": 125.73056592987803,
+              "x": 150.79030106707316,
+              "y": 197.95012957317073,
+              "confidence": 0.97,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## OUR GANG COMICS (Dell)",
+          "value": "OUR GANG COMICS (Dell)",
+          "bbox": [
+            {
+              "h": 7.33301067073171,
+              "w": 92.3937118902439,
+              "x": 164.61610518292682,
+              "y": 225.49888719512197,
+              "confidence": 0.98,
+              "end_index": 21,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "The stories in issues 8-10 were three panels deep; the stories in the remaining issues were four panels deep, except as noted.",
+          "value": "The stories in issues 8-10 were three panels deep; the stories in the remaining issues were four panels deep, except as noted.",
+          "bbox": [
+            {
+              "h": 11.195625,
+              "w": 124.86556783536588,
+              "x": 150.82658917682923,
+              "y": 238.62381859756098,
+              "confidence": 0.99,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 8 - Nov.-Dec. 1943 - 60 pages",
+          "value": "8 - Nov.-Dec. 1943 - 60 pages",
+          "bbox": [
+            {
+              "h": 5.53056402439026,
+              "w": 70.15460556402438,
+              "x": 150.67435403963415,
+              "y": 256.1890472560976,
+              "confidence": 0.9,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BENNY \"THE LONESOME BURRO\" - 8 (pp. 43-50) - Benny tries to help some beavers build a dam, after an owl tells him he should be working, but his efforts backfire. (June 30, 1943)",
+          "value": "BENNY \"THE LONESOME BURRO\" - 8 (pp. 43-50) - Benny tries to help some beavers build a dam, after an owl tells him he should be working, but his efforts backfire. (June 30, 1943)",
+          "bbox": [
+            {
+              "h": 17.49153201219513,
+              "w": 125.37963795731707,
+              "x": 150.7259394054878,
+              "y": 262.03733231707315,
+              "confidence": 0.93,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks discussed his work for Our Gang Comics in the Comic Art interview: \"The Barney Bear stories were assigned to me for no particular reason that I know of (artists were in short supply, perhaps). I had never heard of Barney Bear or Benny Burro until the office sent me a model sheet of 'Benny, the Lonesome Burro' and asked me to do a finished 8-page story for the MGM Our Gang No. 8. They must have liked the yarn, for they asked me to do another for Our Gang No. 9, and also sent a model sheet of a nameless dog whom I called Happy Hound. I did an 8-pager of him for Our Gang No. 9. Later I saw him in an MGM movie short as Droopy. Then I was asked for another Benny for Our Gang No.",
+          "value": "Barks discussed his work for Our Gang Comics in the Comic Art interview: \"The Barney Bear stories were assigned to me for no particular reason that I know of (artists were in short supply, perhaps). I had never heard of Barney Bear or Benny Burro until the office sent me a model sheet of 'Benny, the Lonesome Burro' and asked me to do a finished 8-page story for the MGM Our Gang No. 8. They must have liked the yarn, for they asked me to do another for Our Gang No. 9, and also sent a model sheet of a nameless dog whom I called Happy Hound. I did an 8-pager of him for Our Gang No. 9. Later I saw him in an MGM movie short as Droopy. Then I was asked for another Benny for Our Gang No.",
+          "bbox": [
+            {
+              "h": 64.44278963414638,
+              "w": 125.27264291158536,
+              "x": 150.52860137195123,
+              "y": 279.79657774390245,
+              "confidence": 0.99,
+              "end_index": 687,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n125",
+              "value": "Carl Barks and the Art of the Comic Book\n125",
+              "bbox": [
+                {
+                  "h": 4.374878048780465,
+                  "w": 77.69999428353661,
+                  "x": 172.5867301829268,
+                  "y": 355.49158536585367,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n125",
+          "bbox": [
+            {
+              "h": 4.37,
+              "w": 77.7,
+              "x": 172.59,
+              "y": 355.49,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "125"
+    }
+  ]
+}

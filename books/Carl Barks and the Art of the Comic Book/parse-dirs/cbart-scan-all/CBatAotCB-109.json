@@ -1,0 +1,721 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "persuade the witch doctor Foola Zoola to give him the antidote for the poison, which is supposed to shrink its victims to the size of a rat. *(Mar. 3, 1949)*",
+          "value": "persuade the witch doctor Foola Zoola to give him the antidote for the poison, which is supposed to shrink its victims to the size of a rat. (Mar. 3, 1949)",
+          "bbox": [
+            {
+              "h": 17.332111280487805,
+              "w": 124.52917825838414,
+              "x": 11.557149866615854,
+              "y": 15.679044397865855,
+              "confidence": 0.8,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes:* On the first and twenty-second pages of this story, Barks's editors substituted \"done for\" for \"dead.\" However, \"dead\" was left unchanged on the sixth page.",
+          "value": "Changes: On the first and twenty-second pages of this story, Barks's editors substituted \"done for\" for \"dead.\" However, \"dead\" was left unchanged on the sixth page.",
+          "bbox": [
+            {
+              "h": 17.332111280487805,
+              "w": 124.52917825838414,
+              "x": 11.557149866615854,
+              "y": 15.679044397865855,
+              "confidence": 0.81,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - art only - Donald suffers when Daisy loses her temper at sports.",
+          "value": "DONALD DUCK - 1 (inside back cover) - art only - Donald suffers when Daisy loses her temper at sports.",
+          "bbox": [
+            {
+              "h": 28.82831364329268,
+              "w": 125.19178996760671,
+              "x": 11.572547875381096,
+              "y": 51.94620617378049,
+              "confidence": 0.66,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (back cover) - art only - Donald restricts the nephews to one ice cream cone each at a picnic. *(Mar. 17, 1949)*",
+          "value": "DONALD DUCK - 1 (back cover) - art only - Donald restricts the nephews to one ice cream cone each at a picnic. (Mar. 17, 1949)",
+          "bbox": [
+            {
+              "h": 28.82831364329268,
+              "w": 125.19178996760671,
+              "x": 11.572547875381096,
+              "y": 51.94620617378049,
+              "confidence": 0.69,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 256 - (December) 1949 - 36 pages",
+          "value": "Four Color 256 - (December) 1949 - 36 pages",
+          "bbox": [
+            {
+              "h": 10.694239710365855,
+              "w": 110.56524009146341,
+              "x": 11.382256097560974,
+              "y": 87.09911775914634,
+              "confidence": 0.82,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### Donald Duck in \"Luck of the North\"",
+          "value": "Donald Duck in \"Luck of the North\"",
+          "bbox": [
+            {
+              "h": 10.694239710365855,
+              "w": 110.56524009146341,
+              "x": 11.382256097560974,
+              "y": 87.09911775914634,
+              "confidence": 0.79,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: A polar bear lifts the kayak in which the ducks are riding. (Illustrating \"Luck of the North.\") *(July 21, 1949)*",
+          "value": "Front cover: A polar bear lifts the kayak in which the ducks are riding. (Illustrating \"Luck of the North.\") (July 21, 1949)",
+          "bbox": [
+            {
+              "h": 16.77640243902439,
+              "w": 124.67056533441308,
+              "x": 11.703615305830791,
+              "y": 99.18650533536585,
+              "confidence": 0.97,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Donald Duck and Uncle Scrooge* No. 2, 1967; *Walt Disney Comics Digest* No. 44, December 1973.",
+          "value": "Reprinted: The Best of Donald Duck and Uncle Scrooge No. 2, 1967; Walt Disney Comics Digest No. 44, December 1973.",
+          "bbox": [
+            {
+              "h": 11.220846036585362,
+              "w": 124.62149342606706,
+              "x": 12.006318121189024,
+              "y": 117.22766387195121,
+              "confidence": 0.95,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - art only - Donald burns the nephews' toys when firewood runs low. *(July 21, 1949)*",
+          "value": "DONALD DUCK - 1 (inside front cover) - art only - Donald burns the nephews' toys when firewood runs low. (July 21, 1949)",
+          "bbox": [
+            {
+              "h": 16.82368902439026,
+              "w": 125.74665848894819,
+              "x": 11.362047684832316,
+              "y": 129.05064786585365,
+              "confidence": 0.96,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"Luck of the North\" - 32 - Donald, exasperated by Gladstone Gander's good luck, sends him on a wild goose chase to Alaska in search of a uranium mine, then is overcome by remorse and fears for Gladstone's safety. He and the nephews follow Gladstone to a desolate iceberg in the Arctic Ocean that just happens to contain a Viking ship decked out in gold trim. *(June 29, 1949)*",
+          "value": "DONALD DUCK in \"Luck of the North\" - 32 - Donald, exasperated by Gladstone Gander's good luck, sends him on a wild goose chase to Alaska in search of a uranium mine, then is overcome by remorse and fears for Gladstone's safety. He and the nephews follow Gladstone to a desolate iceberg in the Arctic Ocean that just happens to contain a Viking ship decked out in gold trim. (June 29, 1949)",
+          "bbox": [
+            {
+              "h": 46.73566692073171,
+              "w": 124.83918135480181,
+              "x": 11.573062357088412,
+              "y": 146.65080411585365,
+              "confidence": 0.98,
+              "end_index": 390,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First appearance of Gladstone in the Donald Duck series. Barks credits Dana Coty with the idea for this story.",
+          "value": "First appearance of Gladstone in the Donald Duck series. Barks credits Dana Coty with the idea for this story.",
+          "bbox": [
+            {
+              "h": 11.131349085365855,
+              "w": 114.32736292397104,
+              "x": 15.963980444931401,
+              "y": 194.5372637195122,
+              "confidence": 0.87,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Donald Duck and Uncle Scrooge* No. 2, 1967; *Walt Disney Comics Digest* No. 44, December 1973.",
+          "value": "Reprinted: The Best of Donald Duck and Uncle Scrooge No. 2, 1967; Walt Disney Comics Digest No. 44, December 1973.",
+          "bbox": [
+            {
+              "h": 10.890205792682927,
+              "w": 124.5538562309451,
+              "x": 11.909629858993902,
+              "y": 206.67807164634146,
+              "confidence": 0.9,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - art only - Donald has trouble hiding the nephews' Christmas presents. *(July 21, 1949)*",
+          "value": "DONALD DUCK - 1 (inside back cover) - art only - Donald has trouble hiding the nephews' Christmas presents. (July 21, 1949)",
+          "bbox": [
+            {
+              "h": 17.036684451219507,
+              "w": 125.589638671875,
+              "x": 11.423262433307926,
+              "y": 218.6703429878049,
+              "confidence": 0.96,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (back cover) - art only - The nephews receive a box of tools for Christmas. *(July 21, 1949)*",
+          "value": "DONALD DUCK - 1 (back cover) - art only - The nephews receive a box of tools for Christmas. (July 21, 1949)",
+          "bbox": [
+            {
+              "h": 11.331745426829247,
+              "w": 124.75516327648627,
+              "x": 11.616256311928353,
+              "y": 236.19274390243902,
+              "confidence": 0.96,
+              "end_index": 108,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 263 - (February) 1950 - 52 pages",
+          "value": "Four Color 263 - (February) 1950 - 52 pages",
+          "bbox": [
+            {
+              "h": 10.87769817073171,
+              "w": 108.77756085651676,
+              "x": 11.417893602324693,
+              "y": 253.8656707317073,
+              "confidence": 0.8,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### Donald Duck in Land of the Totem Poles",
+          "value": "Donald Duck in Land of the Totem Poles",
+          "bbox": [
+            {
+              "h": 10.87769817073171,
+              "w": 108.77756085651676,
+              "x": 11.417893602324693,
+              "y": 253.8656707317073,
+              "confidence": 0.8,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The frightened ducks pretend to be part of a totem pole as Indians rave below. (Illustrating \"Land of the Totem Poles.\") *(Oct. 6, 1949)*",
+          "value": "Front cover: The frightened ducks pretend to be part of a totem pole as Indians rave below. (Illustrating \"Land of the Totem Poles.\") (Oct. 6, 1949)",
+          "bbox": [
+            {
+              "h": 17.435990853658495,
+              "w": 124.89034656059451,
+              "x": 11.717605992759145,
+              "y": 265.58821646341465,
+              "confidence": 0.97,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - art only - Donald's newspaper reading is disrupted by the nephews' noise. *(Oct. 6, 1949)*",
+          "value": "DONALD DUCK - 1 (inside front cover) - art only - Donald's newspaper reading is disrupted by the nephews' noise. (Oct. 6, 1949)",
+          "bbox": [
+            {
+              "h": 17.299618902439015,
+              "w": 125.50974823742378,
+              "x": 11.38355302019817,
+              "y": 283.86830030487806,
+              "confidence": 0.96,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"Land of the Totem Poles\" - 24 - Donald is hired as a salesman on the Kickmiquick River in Northwest Canada, and learns only when he arrives there that he is to sell steam calliopes. He switches to cosmetics, and this gets him in serious trouble with a tribe of primitive Indians who have never before seen white men. *(Sept. 29, 1949)*",
+          "value": "DONALD DUCK in \"Land of the Totem Poles\" - 24 - Donald is hired as a salesman on the Kickmiquick River in Northwest Canada, and learns only when he arrives there that he is to sell steam calliopes. He switches to cosmetics, and this gets him in serious trouble with a tribe of primitive Indians who have never before seen white men. (Sept. 29, 1949)",
+          "bbox": [
+            {
+              "h": 40.638269817073216,
+              "w": 125.44356874047253,
+              "x": 11.652309689405486,
+              "y": 301.74795731707314,
+              "confidence": 0.98,
+              "end_index": 350,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"Trail of the Unicorn\" - 24 - Donald",
+          "value": "DONALD DUCK in \"Trail of the Unicorn\" - 24 - Donald",
+          "bbox": [
+            {
+              "h": 4.66186737804881,
+              "w": 120.00456995522103,
+              "x": 16.105167087461886,
+              "y": 343.92503048780486,
+              "confidence": 0.95,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "and the nephews are sent to the Himalayas to capture a unicorn for Uncle Scrooge's private zoo. Gladstone stows away on their plane and, thanks to his luck, gets all the credit — and the reward — for finding the unicorn. *(Sept. 8, 1949)*",
+          "value": "and the nephews are sent to the Himalayas to capture a unicorn for Uncle Scrooge's private zoo. Gladstone stows away on their plane and, thanks to his luck, gets all the credit — and the reward — for finding the unicorn. (Sept. 8, 1949)",
+          "bbox": [
+            {
+              "h": 28.80672399009146,
+              "w": 124.9043769054878,
+              "x": 149.25266958841462,
+              "y": 15.897903487042685,
+              "confidence": 0.98,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"Paid Dana Coty $30 for the idea.\"",
+          "value": "Barks: \"Paid Dana Coty $30 for the idea.\"",
+          "bbox": [
+            {
+              "h": 5.314201600609754,
+              "w": 81.0374199695122,
+              "x": 153.6296570121951,
+              "y": 45.86638719512195,
+              "confidence": 0.91,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - art only - Donald is a theater doorman during a kiddie matinee. *(Oct. 6, 1949)*",
+          "value": "DONALD DUCK - 1 (inside back cover) - art only - Donald is a theater doorman during a kiddie matinee. (Oct. 6, 1949)",
+          "bbox": [
+            {
+              "h": 17.09264291158537,
+              "w": 124.99705221036585,
+              "x": 149.08265053353657,
+              "y": 51.48680259146341,
+              "confidence": 0.96,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (back cover) - art only - Donald tests the ability of the nephews' dog to fetch a stick.",
+          "value": "DONALD DUCK - 1 (back cover) - art only - Donald tests the ability of the nephews' dog to fetch a stick.",
+          "bbox": [
+            {
+              "h": 11.712044588414624,
+              "w": 124.7703544207317,
+              "x": 149.4586337652439,
+              "y": 69.2599161585366,
+              "confidence": 0.97,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 275 - (May) 1950 - 52 pages",
+          "value": "Four Color 275 - (May) 1950 - 52 pages",
+          "bbox": [
+            {
+              "h": 10.711200457317085,
+              "w": 95.56760099085365,
+              "x": 149.04709984756096,
+              "y": 87.2163681402439,
+              "confidence": 0.8,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### Donald Duck in Ancient Persia",
+          "value": "Donald Duck in Ancient Persia",
+          "bbox": [
+            {
+              "h": 10.711200457317085,
+              "w": 95.56760099085365,
+              "x": 149.04709984756096,
+              "y": 87.2163681402439,
+              "confidence": 0.79,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Two nephews bow before Donald as another knocks off his \"crown\" with a slingshot. (Illustrating \"In Ancient Persia.\") *(Nov. 10, 1949)*",
+          "value": "Front cover: Two nephews bow before Donald as another knocks off his \"crown\" with a slingshot. (Illustrating \"In Ancient Persia.\") (Nov. 10, 1949)",
+          "bbox": [
+            {
+              "h": 17.28858612804878,
+              "w": 125.15683307926825,
+              "x": 149.28249237804877,
+              "y": 99.0600342987805,
+              "confidence": 0.97,
+              "end_index": 147,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 44, December 1973.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 44, December 1973.",
+          "bbox": [
+            {
+              "h": 10.20516768292684,
+              "w": 124.72104992378048,
+              "x": 149.7695007621951,
+              "y": 116.98295350609756,
+              "confidence": 0.96,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK \"in Ancient Persia\" - 24 - The ducks are kidnaped by a mysterious scientist and flown to Persia, where they dig into an ancient city, Itsa Faka. The inhabitants of the city have been dehydrated while still living, and the scientist restores the royal entourage to life by pouring its dust into a special mixture. Donald is mistaken for the prince who jilted King Nevvawaza's daughter, and a marriage ceremony is ordered by the king. *(Nov. 23, 1949)*",
+          "value": "DONALD DUCK \"in Ancient Persia\" - 24 - The ducks are kidnaped by a mysterious scientist and flown to Persia, where they dig into an ancient city, Itsa Faka. The inhabitants of the city have been dehydrated while still living, and the scientist restores the royal entourage to life by pouring its dust into a special mixture. Donald is mistaken for the prince who jilted King Nevvawaza's daughter, and a marriage ceremony is ordered by the king. (Nov. 23, 1949)",
+          "bbox": [
+            {
+              "h": 47.285316310975595,
+              "w": 125.01579649390243,
+              "x": 149.43901486280487,
+              "y": 128.51243140243903,
+              "confidence": 0.98,
+              "end_index": 461,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"About my 'morgue' of reference material. I have four files full of clippings of every sort of subject and type of drawing. Also have many years of Nat'l. Geographics, and an Encyclopedia Brittanica. The rock of gibraltar picture in 'Ancient Persia' and the authentic-looking background props and frescoes are from Nat'l Geo. I simplify such material, naturally.\" *(June 9, 1966, letter to Michael Barrier)*",
+          "value": "Barks: \"About my 'morgue' of reference material. I have four files full of clippings of every sort of subject and type of drawing. Also have many years of Nat'l. Geographics, and an Encyclopedia Brittanica. The rock of gibraltar picture in 'Ancient Persia' and the authentic-looking background props and frescoes are from Nat'l Geo. I simplify such material, naturally.\" (June 9, 1966, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 40.732911585365855,
+              "w": 125.15926829268292,
+              "x": 149.4968769054878,
+              "y": 176.36252286585363,
+              "confidence": 0.98,
+              "end_index": 413,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 44, December 1973.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 44, December 1973.",
+          "bbox": [
+            {
+              "h": 10.354984756097565,
+              "w": 124.88835937499996,
+              "x": 150.01333079268292,
+              "y": 217.94172256097562,
+              "confidence": 0.96,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 282 - (July) 1950 - 52 pages",
+          "value": "Four Color 282 - (July) 1950 - 52 pages",
+          "bbox": [
+            {
+              "h": 10.792179878048755,
+              "w": 105.96350990853661,
+              "x": 149.4799333079268,
+              "y": 235.3806631097561,
+              "confidence": 0.79,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### Donald Duck and the Pixilated Parrot",
+          "value": "Donald Duck and the Pixilated Parrot",
+          "bbox": [
+            {
+              "h": 10.792179878048755,
+              "w": 105.96350990853661,
+              "x": 149.4799333079268,
+              "y": 235.3806631097561,
+              "confidence": 0.81,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The ducks find a parrot using an adding machine in Scrooge's safe. (Illustrating \"The Pixilated Parrot.\") *(Feb. 23, 1950)*",
+          "value": "Front cover: The ducks find a parrot using an adding machine in Scrooge's safe. (Illustrating \"The Pixilated Parrot.\") (Feb. 23, 1950)",
+          "bbox": [
+            {
+              "h": 17.339131097560983,
+              "w": 125.06348894817074,
+              "x": 149.7828601371951,
+              "y": 247.30870426829267,
+              "confidence": 0.97,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 44, December 1973.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 44, December 1973.",
+          "bbox": [
+            {
+              "h": 10.374763719512229,
+              "w": 124.86738567073171,
+              "x": 150.20511242378046,
+              "y": 265.38443597560973,
+              "confidence": 0.96,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK and \"The Pixilated Parrot\" - 22 - Donald gives Uncle Scrooge a parrot that only counts, instead of talking, and Scrooge has the parrot memorize the combination to his safe, which Scrooge has been forgetting constantly. However, the parrot first gives the combination to two burglars and then flies away to a boat bound for Latin America. *(Feb. 23, 1950)*",
+          "value": "DONALD DUCK and \"The Pixilated Parrot\" - 22 - Donald gives Uncle Scrooge a parrot that only counts, instead of talking, and Scrooge has the parrot memorize the combination to his safe, which Scrooge has been forgetting constantly. However, the parrot first gives the combination to two burglars and then flies away to a boat bound for Latin America. (Feb. 23, 1950)",
+          "bbox": [
+            {
+              "h": 40.648216463414606,
+              "w": 125.17403391768289,
+              "x": 149.9784832317073,
+              "y": 277.1638719512195,
+              "confidence": 0.97,
+              "end_index": 366,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 44, December 1973.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 44, December 1973.",
+          "bbox": [
+            {
+              "h": 10.420083841463365,
+              "w": 124.77227515243901,
+              "x": 150.35625,
+              "y": 318.88861280487805,
+              "confidence": 0.96,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 291 - (September) 1950 - 52 pages",
+          "value": "Four Color 291 - (September) 1950 - 52 pages",
+          "bbox": [
+            {
+              "h": 11.52862042682922,
+              "w": 111.76014100609753,
+              "x": 150.59263719512194,
+              "y": 337.3714253048781,
+              "confidence": 0.79,
+              "end_index": 43,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### Donald Duck in \"The Magic Hourglass\"",
+          "value": "Donald Duck in \"The Magic Hourglass\"",
+          "bbox": [
+            {
+              "h": 11.52862042682922,
+              "w": 111.76014100609753,
+              "x": 150.59263719512194,
+              "y": 337.3714253048781,
+              "confidence": 0.77,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n109",
+              "value": "Carl Barks and the Art of the Comic Book\n109",
+              "bbox": [
+                {
+                  "h": 4.47409298780487,
+                  "w": 77.67505907012195,
+                  "x": 172.17986089939023,
+                  "y": 363.09747713414635,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n109",
+          "bbox": [
+            {
+              "h": 4.47,
+              "w": 77.68,
+              "x": 172.18,
+              "y": 363.1,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "109"
+    }
+  ]
+}

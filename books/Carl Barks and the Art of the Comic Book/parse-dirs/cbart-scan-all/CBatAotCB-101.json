@@ -1,0 +1,570 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "DONALD DUCK'S Christmas on Bear Mountain - 20 -\nReprinted from Donald Duck Four Color No. 178, 1947",
+          "value": "DONALD DUCK'S Christmas on Bear Mountain - 20 -\nReprinted from Donald Duck Four Color No. 178, 1947",
+          "bbox": [
+            {
+              "h": 11.674528868140245,
+              "w": 125.37274175876523,
+              "x": 12.381647532393291,
+              "y": 13.047497618140245,
+              "confidence": 0.86,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# BOYS' AND GIRLS'",
+          "value": "BOYS' AND GIRLS'",
+          "bbox": [
+            {
+              "h": 12.863631859756094,
+              "w": 73.29988519435973,
+              "x": 40.17110470655488,
+              "y": 36.26251143292683,
+              "confidence": 0.8,
+              "end_index": 15,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# MARCH OF COMICS",
+          "value": "MARCH OF COMICS",
+          "bbox": [
+            {
+              "h": 12.863631859756094,
+              "w": 73.29988519435973,
+              "x": 40.17110470655488,
+              "y": 36.26251143292683,
+              "confidence": 0.82,
+              "end_index": 14,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "This was a pulp-cover comic book given away to children by shoe stores, primarily. Its dimensions were the same as those of ordinary comic books, until 1952; later issues (none of which contained Barks's work) were half the size of ordinary comic books, and had slick covers.",
+          "value": "This was a pulp-cover comic book given away to children by shoe stores, primarily. Its dimensions were the same as those of ordinary comic books, until 1952; later issues (none of which contained Barks's work) were half the size of ordinary comic books, and had slick covers.",
+          "bbox": [
+            {
+              "h": 28.609864710365862,
+              "w": 124.98685582602897,
+              "x": 12.051417802019817,
+              "y": 57.649138719512194,
+              "confidence": 0.99,
+              "end_index": 274,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## No number, but fourth in the series - 1947 - 32 pages",
+          "value": "No number, but fourth in the series - 1947 - 32 pages",
+          "bbox": [
+            {
+              "h": 11.658252667682927,
+              "w": 125.58828172637193,
+              "x": 12.146077076981706,
+              "y": 92.85992949695121,
+              "confidence": 0.98,
+              "end_index": 52,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"Maharajah Donald\" - 28 - The nephews, starting with a pencil stub, trade up to a steam- ship ticket to India, which Donald commandeers from them. The nephews stow away, but are discovered. An Indian nobleman, the Maharajah of Hoopadoola, comes to their rescue, and to oblige him, Donald rides a sacred elephant to the neighboring kingdom of Bumpay. There he learns that he must increase his weight to a hundred pounds — or Bumpay will have to give fifty square miles of tiger-hunting land to the Maharajah of Hoopadoola, and Donald himself will be fed to the tigers. (Aug. 13, 1946)",
+          "value": "DONALD DUCK in \"Maharajah Donald\" - 28 - The nephews, starting with a pencil stub, trade up to a steam- ship ticket to India, which Donald commandeers from them. The nephews stow away, but are discovered. An Indian nobleman, the Maharajah of Hoopadoola, comes to their rescue, and to oblige him, Donald rides a sacred elephant to the neighboring kingdom of Bumpay. There he learns that he must increase his weight to a hundred pounds — or Bumpay will have to give fifty square miles of tiger-hunting land to the Maharajah of Hoopadoola, and Donald himself will be fed to the tigers. (Aug. 13, 1946)",
+          "bbox": [
+            {
+              "h": 65.29934451219512,
+              "w": 124.95341344321645,
+              "x": 12.36424090129573,
+              "y": 104.52758003048781,
+              "confidence": 0.99,
+              "end_index": 597,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in The Peaceful Hills - 2 - Donald forgoes seeing a cowboy movie with the nephews to take a walk in the snow-covered hills. (Oct. 4, 1946)",
+          "value": "DONALD DUCK in The Peaceful Hills - 2 - Donald forgoes seeing a cowboy movie with the nephews to take a walk in the snow-covered hills. (Oct. 4, 1946)",
+          "bbox": [
+            {
+              "h": 17.36721036585365,
+              "w": 124.93344619378809,
+              "x": 12.540447670541157,
+              "y": 170.04748856707317,
+              "confidence": 0.96,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 20 - 1948 - 24 pages",
+          "value": "20 - 1948 - 24 pages",
+          "bbox": [
+            {
+              "h": 5.58516768292684,
+              "w": 45.88601788776676,
+              "x": 12.341023842416158,
+              "y": 193.7103887195122,
+              "confidence": 0.96,
+              "end_index": 19,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"Darkest Africa\" - 22 - Donald, an aggressive butterfly collector, is hired by Sir Gnatbugg- Mothley to go to Africa and bring back an Almostus Extinctus, rarest of butterflies. In Africa, the ducks are sabotaged by Professor Argus McFiendy, who is also after the Almostus Extinctus, and Donald is forced to give him the butterfly when the nephews are captured by cannibals hired by McFiendy. (Sept. 26, 1947)",
+          "value": "DONALD DUCK in \"Darkest Africa\" - 22 - Donald, an aggressive butterfly collector, is hired by Sir Gnatbugg- Mothley to go to Africa and bring back an Almostus Extinctus, rarest of butterflies. In Africa, the ducks are sabotaged by Professor Argus McFiendy, who is also after the Almostus Extinctus, and Donald is forced to give him the butterfly when the nephews are captured by cannibals hired by McFiendy. (Sept. 26, 1947)",
+          "bbox": [
+            {
+              "h": 47.28297256097562,
+              "w": 124.98790086699694,
+              "x": 12.710975847942072,
+              "y": 199.52974847560975,
+              "confidence": 0.99,
+              "end_index": 423,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 41 - 1949 - 24 pages",
+          "value": "41 - 1949 - 24 pages",
+          "bbox": [
+            {
+              "h": 5.65712652439026,
+              "w": 45.79778641863567,
+              "x": 12.640218535632622,
+              "y": 253.54794969512196,
+              "confidence": 0.96,
+              "end_index": 19,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"Race to the South Seas!\" - 22-Uncle Scrooge, through his lawyer, gives both Gladstone and Donald sailing ships, and just a few minutes later they learn that Scrooge has been lost in a storm in the South Seas. Both Donald and Gladstone set sail for the islands where Scrooge was last seen, and along the way, Gladstone has nothing but good luck and Donald has nothing but bad. (Dec. 15, 1948)",
+          "value": "DONALD DUCK in \"Race to the South Seas!\" - 22-Uncle Scrooge, through his lawyer, gives both Gladstone and Donald sailing ships, and just a few minutes later they learn that Scrooge has been lost in a storm in the South Seas. Both Donald and Gladstone set sail for the islands where Scrooge was last seen, and along the way, Gladstone has nothing but good luck and Donald has nothing but bad. (Dec. 15, 1948)",
+          "bbox": [
+            {
+              "h": 46.62996951219513,
+              "w": 125.10572896817835,
+              "x": 12.826936809260669,
+              "y": 259.6458612804878,
+              "confidence": 0.99,
+              "end_index": 406,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# CHEERIOS PREMIUMS",
+          "value": "CHEERIOS PREMIUMS",
+          "bbox": [
+            {
+              "h": 5.711432926829275,
+              "w": 81.86116306211889,
+              "x": 34.11673327934451,
+              "y": 318.9921951219512,
+              "confidence": 0.97,
+              "end_index": 16,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "There were sixteen premium comic books in this series, each only a quarter the size of an ordinary comic book. The premium comics were the same width as full-size comics, but only",
+          "value": "There were sixteen premium comic books in this series, each only a quarter the size of an ordinary comic book. The premium comics were the same width as full-size comics, but only",
+          "bbox": [
+            {
+              "h": 17.598589939024404,
+              "w": 125.31989912823931,
+              "x": 12.976479492187499,
+              "y": 332.86701219512196,
+              "confidence": 0.99,
+              "end_index": 178,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "one-fourth as deep, so that each page contained a single row of panels.",
+          "value": "one-fourth as deep, so that each page contained a single row of panels.",
+          "bbox": [
+            {
+              "h": 11.308379382621949,
+              "w": 124.8757202743902,
+              "x": 150.99931783536584,
+              "y": 13.979162538109756,
+              "confidence": 0.98,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Y1 - 1947 - 32 pages",
+          "value": "Y1 - 1947 - 32 pages",
+          "bbox": [
+            {
+              "h": 5.713044969512195,
+              "w": 47.14381097560974,
+              "x": 150.6918464176829,
+              "y": 31.503584222560978,
+              "confidence": 0.96,
+              "end_index": 19,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK's Atom Bomb - 30 (equivalent to 7½ normal pages) - Donald invents an \"atom bomb\" that goes \"fut\" instead of \"boom,\" and two professors are summoned to inspect Donald's handiwork. One of them, Professor Sleezy, a foreign expert, steals the bomb, and accidentally ignites it. (Sept. 9, 1946)",
+          "value": "DONALD DUCK's Atom Bomb - 30 (equivalent to 7½ normal pages) - Donald invents an \"atom bomb\" that goes \"fut\" instead of \"boom,\" and two professors are summoned to inspect Donald's handiwork. One of them, Professor Sleezy, a foreign expert, steals the bomb, and accidentally ignites it. (Sept. 9, 1946)",
+          "bbox": [
+            {
+              "h": 35.08161013719511,
+              "w": 124.98578506097556,
+              "x": 150.93694550304878,
+              "y": 37.460201981707314,
+              "confidence": 0.99,
+              "end_index": 300,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# CHRISTMAS IN DISNEYLAND (Dell)",
+          "value": "CHRISTMAS IN DISNEYLAND (Dell)",
+          "bbox": [
+            {
+              "h": 13.872004573170738,
+              "w": 106.33179306402437,
+              "x": 160.05440167682923,
+              "y": 84.69218368902439,
+              "confidence": 0.98,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## 1 - (December) 1957 - 100 pages",
+          "value": "1 - (December) 1957 - 100 pages",
+          "bbox": [
+            {
+              "h": 5.714839939024378,
+              "w": 77.69829649390243,
+              "x": 150.94569169207315,
+              "y": 105.53277439024392,
+              "confidence": 0.95,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 17 5/6 - Scrooge, Donald and the nephews risk an island's tabu for its black pearls, but almost immediately their ship is sucked from a lagoon into an underwater cavern. They plug a volcano to build up pressure to blow the boat out of the cavern. (Mar. 14, 1957)",
+          "value": "DONALD DUCK - 17 5/6 - Scrooge, Donald and the nephews risk an island's tabu for its black pearls, but almost immediately their ship is sucked from a lagoon into an underwater cavern. They plug a volcano to build up pressure to blow the boat out of the cavern. (Mar. 14, 1957)",
+          "bbox": [
+            {
+              "h": 29.59166158536584,
+              "w": 124.82903963414634,
+              "x": 151.28591844512195,
+              "y": 111.41454649390245,
+              "confidence": 0.97,
+              "end_index": 275,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages are three panels deep.",
+          "value": "These pages are three panels deep.",
+          "bbox": [
+            {
+              "h": 5.638982469512202,
+              "w": 69.0224199695122,
+              "x": 155.4543006859756,
+              "y": 141.3158231707317,
+              "confidence": 0.89,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This story is actually a segment of the story \"Christmas in Disneyland,\" which takes up most of the book; the Barks segment begins on the fourth page, not counting covers. The last panel on the last page of Barks's story is a transitional panel (not by Barks) leading from Barks's story to the next one.",
+          "value": "This story is actually a segment of the story \"Christmas in Disneyland,\" which takes up most of the book; the Barks segment begins on the fourth page, not counting covers. The last panel on the last page of Barks's story is a transitional panel (not by Barks) leading from Barks's story to the next one.",
+          "bbox": [
+            {
+              "h": 29.35480564024391,
+              "w": 124.7676619664634,
+              "x": 151.25146532012192,
+              "y": 147.17554115853656,
+              "confidence": 0.98,
+              "end_index": 302,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Christmas Parade (Golden Press) No. 11191, 1977; Walt Disney Comics Digest No. 38, \\[December] 1972.",
+          "value": "Reprinted: Christmas Parade (Golden Press) No. 11191, 1977; Walt Disney Comics Digest No. 38, [December] 1972.",
+          "bbox": [
+            {
+              "h": 11.347442835365854,
+              "w": 124.86215510670733,
+              "x": 151.2181269054878,
+              "y": 176.89958460365855,
+              "confidence": 0.96,
+              "end_index": 110,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# CHRISTMAS PARADE (Dell)",
+          "value": "CHRISTMAS PARADE (Dell)",
+          "bbox": [
+            {
+              "h": 7.3188338414634195,
+              "w": 99.40539443597562,
+              "x": 163.42461699695122,
+              "y": 200.33069359756098,
+              "confidence": 0.98,
+              "end_index": 22,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## 1 - (November) 1949 - 132 pages",
+          "value": "1 - (November) 1949 - 132 pages",
+          "bbox": [
+            {
+              "h": 5.803307926829275,
+              "w": 78.55938452743901,
+              "x": 150.5200438262195,
+              "y": 214.2747713414634,
+              "confidence": 0.95,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"Letter to Santa\" - 24 - Donald forgets to mail the nephews' letter to Santa Claus, and discovers on Christmas Eve that they want a steamshovel. Donald gets the money for the steamshovel from Uncle Scrooge but Scrooge, upset because Santa and not he will get the credit for the gift, buys a steamshovel of his own to give to the nephews. He and Donald meet and fight in their steamshovels, wrecking them. Then they disguise Donald as Santa so that he can tell the nephews he's out of steamshovels. (June 1, 1949)",
+          "value": "DONALD DUCK in \"Letter to Santa\" - 24 - Donald forgets to mail the nephews' letter to Santa Claus, and discovers on Christmas Eve that they want a steamshovel. Donald gets the money for the steamshovel from Uncle Scrooge but Scrooge, upset because Santa and not he will get the credit for the gift, buys a steamshovel of his own to give to the nephews. He and Donald meet and fight in their steamshovels, wrecking them. Then they disguise Donald as Santa so that he can tell the nephews he's out of steamshovels. (June 1, 1949)",
+          "bbox": [
+            {
+              "h": 59.43914634146339,
+              "w": 125.09339748475605,
+              "x": 150.33076600609755,
+              "y": 219.94538871951218,
+              "confidence": 0.99,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Christmas Parade (Gold Key) No. 5, 1967.",
+          "value": "Reprinted: Christmas Parade (Gold Key) No. 5, 1967.",
+          "bbox": [
+            {
+              "h": 5.8117225609755945,
+              "w": 112.93616044207316,
+              "x": 155.08881288109757,
+              "y": 279.65750762195125,
+              "confidence": 0.89,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 - art only - Donald, his reading disrupted by the nephews, finally retreats outside into the snow. (Aug. 4, 1949)",
+          "value": "DONALD DUCK - 1 - art only - Donald, his reading disrupted by the nephews, finally retreats outside into the snow. (Aug. 4, 1949)",
+          "bbox": [
+            {
+              "h": 17.37772865853658,
+              "w": 125.03797065548783,
+              "x": 150.24026867378046,
+              "y": 285.7046798780488,
+              "confidence": 0.94,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Christmas Parade (Gold Key) No. 5, 1967.",
+          "value": "Reprinted: Christmas Parade (Gold Key) No. 5, 1967.",
+          "bbox": [
+            {
+              "h": 5.760091463414665,
+              "w": 113.4208536585366,
+              "x": 154.87736089939023,
+              "y": 303.40275914634145,
+              "confidence": 0.94,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 2 - 1950 - 132 pages",
+          "value": "2 - 1950 - 132 pages",
+          "bbox": [
+            {
+              "h": 5.632408536585389,
+              "w": 44.739758003048756,
+              "x": 150.26786204268294,
+              "y": 315.4243445121951,
+              "confidence": 0.96,
+              "end_index": 19,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"You Can't Guess!\" - 25 (pp. 1-25) Donald promises to buy the nephews what they want for Christmas — a spectacular building set — if they can guess what he wants for Christmas. As they try to guess, Donald's friends and relatives become involved, and each independ-",
+          "value": "DONALD DUCK in \"You Can't Guess!\" - 25 (pp. 1-25) Donald promises to buy the nephews what they want for Christmas — a spectacular building set — if they can guess what he wants for Christmas. As they try to guess, Donald's friends and relatives become involved, and each independ-",
+          "bbox": [
+            {
+              "h": 29.680472560975595,
+              "w": 125.11644626524388,
+              "x": 150.40901867378045,
+              "y": 321.181875,
+              "confidence": 0.99,
+              "end_index": 279,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n101",
+              "value": "Carl Barks and the Art of the Comic Book\n101",
+              "bbox": [
+                {
+                  "h": 5.609999999999999,
+                  "w": 77.5606554878049,
+                  "x": 173.95459984756096,
+                  "y": 366.49765243902436,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n101",
+          "bbox": [
+            {
+              "h": 5.61,
+              "w": 77.56,
+              "x": 173.95,
+              "y": 366.5,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "101"
+    }
+  ]
+}

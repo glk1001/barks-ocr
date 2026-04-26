@@ -1,0 +1,99 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Uncle Donald and His Nephews Family Fun 130\nUncle Scrooge 132\nUncle Scrooge and Donald Duck 159\nUncle Scrooge and Money 160\nUncle Scrooge Goes to Disneyland 160\nVacation in Disneyland 160\nVacation Parade 160\nWalt Disney Comics Digest 160\nWalt Disney Showcase 165\nWalt Disney's Comics and Stories 165\nOther Comics Material 195\nUnpublished and Unidentified Material 198",
+          "value": "Uncle Donald and His Nephews Family Fun 130\nUncle Scrooge 132\nUncle Scrooge and Donald Duck 159\nUncle Scrooge and Money 160\nUncle Scrooge Goes to Disneyland 160\nVacation in Disneyland 160\nVacation Parade 160\nWalt Disney Comics Digest 160\nWalt Disney Showcase 165\nWalt Disney's Comics and Stories 165\nOther Comics Material 195\nUnpublished and Unidentified Material 198",
+          "bbox": [
+            {
+              "h": 153.26055354420734,
+              "w": 263.4803366758765,
+              "x": 14.217835961318595,
+              "y": 14.73857755335366,
+              "confidence": 0.85,
+              "end_index": 366,
+              "label": "reference",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Appendices\nAppendix A: A Chronological Listing of Barks's Comics Work 207\nAppendix B: Barks as a Disney Story Man 216\nAppendix C: Scrooge on the Screen 218\nAppendix D: An Informal (and Highly Selective) Listing of Articles About Carl Barks 221",
+          "value": "Appendices\nAppendix A: A Chronological Listing of Barks's Comics Work 207\nAppendix B: Barks as a Disney Story Man 216\nAppendix C: Scrooge on the Screen 218\nAppendix D: An Informal (and Highly Selective) Listing of Articles About Carl Barks 221",
+          "bbox": [
+            {
+              "h": 153.26055354420734,
+              "w": 263.4803366758765,
+              "x": 14.217835961318595,
+              "y": 14.73857755335366,
+              "confidence": 0.77,
+              "end_index": 242,
+              "label": "reference",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Addenda 226",
+          "value": "Addenda 226",
+          "bbox": [
+            {
+              "h": 153.26055354420734,
+              "w": 263.4803366758765,
+              "x": 14.217835961318595,
+              "y": 14.73857755335366,
+              "confidence": 0.64,
+              "end_index": 10,
+              "label": "reference",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "vi",
+              "value": "vi",
+              "bbox": [
+                {
+                  "h": 3.9179954268292203,
+                  "w": 4.550299161585389,
+                  "x": 144.9391177591463,
+                  "y": 373.4132012195122,
+                  "confidence": 0.93,
+                  "end_index": 1,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "vi",
+          "bbox": [
+            {
+              "h": 3.92,
+              "w": 4.55,
+              "x": 144.94,
+              "y": 373.41,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "vi"
+    }
+  ]
+}

@@ -1,0 +1,577 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "UNCLE SCROOGE - 22 - His nerves so frazzled that he can't bear the mention of his fortune, Scrooge goes with Donald and the nephews to the money-less paradise of Tralla La, in a Himalayan valley. However, the bottle caps from Scrooge's nerve medicine soon become as sought after in Tralla La as money is in the outside world — until Scrooge orders a billion caps dropped into the valley. (*Oct. 29, 1953*)",
+          "value": "UNCLE SCROOGE - 22 - His nerves so frazzled that he can't bear the mention of his fortune, Scrooge goes with Donald and the nephews to the money-less paradise of Tralla La, in a Himalayan valley. However, the bottle caps from Scrooge's nerve medicine soon become as sought after in Tralla La as money is in the outside world — until Scrooge orders a billion caps dropped into the valley. (Oct. 29, 1953)",
+          "bbox": [
+            {
+              "h": 47.32908584222561,
+              "w": 125.829140625,
+              "x": 11.31552782012195,
+              "y": 16.91513671875,
+              "confidence": 0.99,
+              "end_index": 404,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Junior Woodchuck Guidebook is first mentioned in this story.",
+          "value": "The Junior Woodchuck Guidebook is first mentioned in this story.",
+          "bbox": [
+            {
+              "h": 11.329950457317072,
+              "w": 125.74661347179878,
+              "x": 11.491373380335366,
+              "y": 64.75913300304877,
+              "confidence": 0.97,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"As for the 'Shangri La' story, which poked fun at the idea of humans living together in unselfish Utopian harmony, it started from my efforts to find a way to use one BILLION of something in a visible way. The bottle cap gag was the result.\" (*Mar. 8, 1968, letter to Dick Blackburn*)",
+          "value": "Barks: \"As for the 'Shangri La' story, which poked fun at the idea of humans living together in unselfish Utopian harmony, it started from my efforts to find a way to use one BILLION of something in a visible way. The bottle cap gag was the result.\" (Mar. 8, 1968, letter to Dick Blackburn)",
+          "bbox": [
+            {
+              "h": 29.467477134146346,
+              "w": 125.93080649771342,
+              "x": 11.50458698551829,
+              "y": 76.43276295731707,
+              "confidence": 0.98,
+              "end_index": 291,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Uncle Scrooge and Donald Duck* No. 1, 1966; *Uncle Scrooge* No. 106, August 1973.",
+          "value": "Reprinted: The Best of Uncle Scrooge and Donald Duck No. 1, 1966; Uncle Scrooge No. 106, August 1973.",
+          "bbox": [
+            {
+              "h": 11.51637576219513,
+              "w": 125.7602793921494,
+              "x": 11.744226133765242,
+              "y": 106.14791158536585,
+              "confidence": 0.96,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 10 - Scrooge, trying to get them to sell their houses and lots, tricks both Donald and his neighbor Jughead Jones into tearing down their homes in a search for a nonexistent fortune. (*Nov. 26, 1953*)",
+          "value": "UNCLE SCROOGE - 10 - Scrooge, trying to get them to sell their houses and lots, tricks both Donald and his neighbor Jughead Jones into tearing down their homes in a search for a nonexistent fortune. (Nov. 26, 1953)",
+          "bbox": [
+            {
+              "h": 23.69270579268294,
+              "w": 125.90082936356707,
+              "x": 11.68480135289634,
+              "y": 117.70589176829267,
+              "confidence": 0.97,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A new version of \"BARNEY BEAR AND BENNY BURRO\" in *Our Gang Comics* No. 35, June 1947.",
+          "value": "A new version of \"BARNEY BEAR AND BENNY BURRO\" in Our Gang Comics No. 35, June 1947.",
+          "bbox": [
+            {
+              "h": 11.436608231707332,
+              "w": 125.69391875476371,
+              "x": 11.76302293730945,
+              "y": 141.7541044207317,
+              "confidence": 0.94,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 11, May 1969.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 11, May 1969.",
+          "bbox": [
+            {
+              "h": 5.74618902439026,
+              "w": 115.03892649580793,
+              "x": 16.710732421875,
+              "y": 153.62747332317073,
+              "confidence": 0.9,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - art only - Scrooge digs up the beach in search of a lost nickel. (*Oct. 29, 1953*)",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - art only - Scrooge digs up the beach in search of a lost nickel. (Oct. 29, 1953)",
+          "bbox": [
+            {
+              "h": 17.244695121951217,
+              "w": 126.38331781154723,
+              "x": 11.654988209794206,
+              "y": 159.57485899390244,
+              "confidence": 0.92,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 106, August 1973.",
+          "value": "Reprinted: Uncle Scrooge No. 106, August 1973.",
+          "bbox": [
+            {
+              "h": 5.554870426829274,
+              "w": 96.29644471703504,
+              "x": 16.53798554211128,
+              "y": 177.4993673780488,
+              "confidence": 0.91,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (back cover) - Offered a \"penny for your thoughts,\" Scrooge quickly accepts. (*Oct. 15, 1953 \\[idea] and Oct. 29, 1953 \\[art]*)",
+          "value": "UNCLE SCROOGE - 1 (back cover) - Offered a \"penny for your thoughts,\" Scrooge quickly accepts. (Oct. 15, 1953 [idea] and Oct. 29, 1953 [art])",
+          "bbox": [
+            {
+              "h": 17.164984756097564,
+              "w": 125.95921874999999,
+              "x": 11.755298208841461,
+              "y": 183.33262957317072,
+              "confidence": 0.94,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 106, August 1973.",
+          "value": "Reprinted: Uncle Scrooge No. 106, August 1973.",
+          "bbox": [
+            {
+              "h": 5.567881097560985,
+              "w": 96.26935832698169,
+              "x": 16.822527153201218,
+              "y": 201.25987042682928,
+              "confidence": 0.89,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 7 - Sept.-Nov. 1954 - 36 pages",
+          "value": "7 - Sept.-Nov. 1954 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.578536585365855,
+              "w": 71.57128775247712,
+              "x": 12.09753465605945,
+              "y": 212.99085365853657,
+              "confidence": 0.94,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge drops a coin in a wishing well—with a string attached. (*Sept. 17, 1953 \\[idea] and Oct. 8, 1953 \\[art]*)\nReprinted: *The Best of Donald Duck and Uncle Scrooge* No. 2, 1967.",
+          "value": "Front cover: Scrooge drops a coin in a wishing well—with a string attached. (Sept. 17, 1953 [idea] and Oct. 8, 1953 [art])\nReprinted: The Best of Donald Duck and Uncle Scrooge No. 2, 1967.",
+          "bbox": [
+            {
+              "h": 23.05323932926829,
+              "w": 125.72196015148627,
+              "x": 12.384814810403961,
+              "y": 218.59410823170734,
+              "confidence": 0.97,
+              "end_index": 193,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge's foul mood is erased when he finds a nickel on the sidewalk. (*Feb. 11, 1954 \\[idea] and Feb. 25, 1954 \\[art]*)",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge's foul mood is erased when he finds a nickel on the sidewalk. (Feb. 11, 1954 [idea] and Feb. 25, 1954 [art])",
+          "bbox": [
+            {
+              "h": 17.473376524390233,
+              "w": 125.65436582983993,
+              "x": 12.39394686070884,
+              "y": 242.38961890243903,
+              "confidence": 0.96,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Uncle Scrooge and Donald Duck* No. 1, 1966.",
+          "value": "Reprinted: The Best of Uncle Scrooge and Donald Duck No. 1, 1966.",
+          "bbox": [
+            {
+              "h": 10.60660060975606,
+              "w": 125.29625762195121,
+              "x": 12.84060594512195,
+              "y": 260.47872713414637,
+              "confidence": 0.95,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 28 - Scrooge and the ducks go hunting Indian arrowheads, and stumble onto jewels from the Seven Cities of Cibola. When they go searching for the Cities in the desert, they are followed by Beagle Boys, who have overheard them talking about the fabulous treasure left by the Indians in the Cities. (*Jan. 28, 1954*)",
+          "value": "UNCLE SCROOGE - 28 - Scrooge and the ducks go hunting Indian arrowheads, and stumble onto jewels from the Seven Cities of Cibola. When they go searching for the Cities in the desert, they are followed by Beagle Boys, who have overheard them talking about the fabulous treasure left by the Indians in the Cities. (Jan. 28, 1954)",
+          "bbox": [
+            {
+              "h": 35.321775914634195,
+              "w": 125.87079220655487,
+              "x": 12.529323075457317,
+              "y": 272.12933689024385,
+              "confidence": 0.98,
+              "end_index": 328,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Part of this story is set in Indio, California, although none of the Indio settings were taken from life. On the twelfth page, the Beagle Boys are kicked out of an Indio office identified as \"Aid for the Poor - Riverside County Welfare\" by a human character who is a caricature of Al Koch, then the director of the welfare office in Indio. In Barks's words, \"He is the guy who led me to a bluff near Thousand Palms and showed me the ancient Indian trail",
+          "value": "Part of this story is set in Indio, California, although none of the Indio settings were taken from life. On the twelfth page, the Beagle Boys are kicked out of an Indio office identified as \"Aid for the Poor - Riverside County Welfare\" by a human character who is a caricature of Al Koch, then the director of the welfare office in Indio. In Barks's words, \"He is the guy who led me to a bluff near Thousand Palms and showed me the ancient Indian trail",
+          "bbox": [
+            {
+              "h": 40.931204268292696,
+              "w": 125.77647591939783,
+              "x": 12.822040658346035,
+              "y": 307.87189024390244,
+              "confidence": 0.99,
+              "end_index": 452,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "that started the sequence of ideas that became the plot of the Seven Cities story. Al and I 'developed' the plot that evening over copious draughts of bourbon and ale.\" (*June 1968 letter to Michael Barrier*)",
+          "value": "that started the sequence of ideas that became the plot of the Seven Cities story. Al and I 'developed' the plot that evening over copious draughts of bourbon and ale.\" (June 1968 letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 22.50930211509146,
+              "w": 125.72854230182926,
+              "x": 149.52642530487802,
+              "y": 17.11607040777439,
+              "confidence": 0.98,
+              "end_index": 207,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Donald Duck and Uncle Scrooge* No. 2, 1967.",
+          "value": "Reprinted: The Best of Donald Duck and Uncle Scrooge No. 2, 1967.",
+          "bbox": [
+            {
+              "h": 10.22564119664634,
+              "w": 125.29915586890243,
+              "x": 149.8964576981707,
+              "y": 40.899309260670734,
+              "confidence": 0.96,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 4 - Scrooge uses a carrier pigeon to send a million dollars to the bank, but the pigeon flies south instead. (*Feb. 25, 1954*)",
+          "value": "UNCLE SCROOGE - 4 - Scrooge uses a carrier pigeon to send a million dollars to the bank, but the pigeon flies south instead. (Feb. 25, 1954)",
+          "bbox": [
+            {
+              "h": 17.104818978658543,
+              "w": 125.53411966463415,
+              "x": 149.75506097560972,
+              "y": 52.27096417682927,
+              "confidence": 0.96,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Uncle Scrooge and Donald Duck* No. 1, 1966; *The Best of Walt Disney Comics* No. 96172, 1974.",
+          "value": "Reprinted: The Best of Uncle Scrooge and Donald Duck No. 1, 1966; The Best of Walt Disney Comics No. 96172, 1974.",
+          "bbox": [
+            {
+              "h": 11.309965701219507,
+              "w": 125.45902248475608,
+              "x": 150.06088605182924,
+              "y": 70.33621760670732,
+              "confidence": 0.95,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - art only - Scrooge dials a wrong number, but still gets his dime's worth. (*Feb. 25, 1954*)",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - art only - Scrooge dials a wrong number, but still gets his dime's worth. (Feb. 25, 1954)",
+          "bbox": [
+            {
+              "h": 17.410203887195117,
+              "w": 125.63723894817072,
+              "x": 149.83298780487803,
+              "y": 81.93936928353659,
+              "confidence": 0.96,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (back cover) - Scrooge brings his own coffee cup to the diner to get a lower price. (*Feb. 11, 1954 \\[idea] and Feb. 25, 1954 \\[art]*)",
+          "value": "UNCLE SCROOGE - 1 (back cover) - Scrooge brings his own coffee cup to the diner to get a lower price. (Feb. 11, 1954 [idea] and Feb. 25, 1954 [art])",
+          "bbox": [
+            {
+              "h": 18.063532774390247,
+              "w": 125.59638910060974,
+              "x": 150.10346798780486,
+              "y": 99.56049923780488,
+              "confidence": 0.97,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 8 - Dec.-Feb. 1955 - 36 pages",
+          "value": "8 - Dec.-Feb. 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.8184108231707246,
+              "w": 68.52904916158533,
+              "x": 150.20490663109757,
+              "y": 123.65959984756098,
+              "confidence": 0.94,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge skates a dollar sign in the ice. (*Sept. 17, 1953 \\[idea] and Oct. 8, 1953 \\[art]*)",
+          "value": "Front cover: Scrooge skates a dollar sign in the ice. (Sept. 17, 1953 [idea] and Oct. 8, 1953 [art])",
+          "bbox": [
+            {
+              "h": 11.554778963414638,
+              "w": 125.26343368902437,
+              "x": 150.4322732469512,
+              "y": 129.69751143292683,
+              "confidence": 0.95,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 111, April 1974.",
+          "value": "Reprinted: Uncle Scrooge No. 111, April 1974.",
+          "bbox": [
+            {
+              "h": 5.663574695121943,
+              "w": 92.24828506097559,
+              "x": 154.7582583841463,
+              "y": 141.77798780487805,
+              "confidence": 0.9,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge pleads a lack of cash when a clubwoman asks for a donation. (*June 10, 1954*)",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge pleads a lack of cash when a clubwoman asks for a donation. (June 10, 1954)",
+          "bbox": [
+            {
+              "h": 17.12566692073171,
+              "w": 125.68654344512191,
+              "x": 150.14015053353657,
+              "y": 147.29916539634146,
+              "confidence": 0.95,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Donald Duck and Uncle Scrooge* No. 2, 1966.",
+          "value": "Reprinted: The Best of Donald Duck and Uncle Scrooge No. 2, 1966.",
+          "bbox": [
+            {
+              "h": 10.409131097560985,
+              "w": 125.46250381097562,
+              "x": 150.40337652439024,
+              "y": 165.16447408536584,
+              "confidence": 0.94,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 28 - Scrooge takes a sea voyage so that the wind can clean out the gold dust that's clogging his pores and making him feel tired, and also to answer a plea for help that turns up in a bottle on the beach. When the ducks arrive at the island from which the message was sent, they find the Beagle Boys and a mysterious ray that turns living things into stone. (*May 20, 1954*)",
+          "value": "UNCLE SCROOGE - 28 - Scrooge takes a sea voyage so that the wind can clean out the gold dust that's clogging his pores and making him feel tired, and also to answer a plea for help that turns up in a bottle on the beach. When the ducks arrive at the island from which the message was sent, they find the Beagle Boys and a mysterious ray that turns living things into stone. (May 20, 1954)",
+          "bbox": [
+            {
+              "h": 41.522275152439015,
+              "w": 125.73258955792683,
+              "x": 150.244453125,
+              "y": 176.77345655487804,
+              "confidence": 0.98,
+              "end_index": 389,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: I suspect that the message-in-a-bottle story in *Uncle Scrooge* No. 8 was originally planned as a thirty-two-page story but that Barks was dissatisfied with it and, at various stages, edited it down to twenty-eight. I know of one and a half unpublished pages from this story which went to fans out of Barks's \"scrappile.\" And in reference to another story, Barks once wrote, \"I often made such cuts in my stories whenever I detected any draggy spots. Usually this sort of cutting took place before the final inking,\" but not always.",
+          "value": "Weston: I suspect that the message-in-a-bottle story in Uncle Scrooge No. 8 was originally planned as a thirty-two-page story but that Barks was dissatisfied with it and, at various stages, edited it down to twenty-eight. I know of one and a half unpublished pages from this story which went to fans out of Barks's \"scrappile.\" And in reference to another story, Barks once wrote, \"I often made such cuts in my stories whenever I detected any draggy spots. Usually this sort of cutting took place before the final inking,\" but not always.",
+          "bbox": [
+            {
+              "h": 53.06048780487806,
+              "w": 125.86530868902437,
+              "x": 150.6377400914634,
+              "y": 218.6424923780488,
+              "confidence": 0.98,
+              "end_index": 539,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "There are two unfinished two-panel strips (quarter pages) that fit with page 13. I say they are unfinished because they don't have the solid blacks inked in yet, but they are otherwise complete. So they were probably edited out by Barks fairly early, before the pages were finally finished and numbered. A good case could be made for saying that these four panels were originally the second and third lines of page 13 and that the published second line of that page was originally the bottom line, but that the dialogue was changed and it was shifted up to follow line 1 when the others were cut. This may not be what did happen, but it seems a reasonable explanation. The two strips are somewhat ambiguous in that it is not clear which comes first. One line is a flashback in which the Beagle Boy recalls, \"We",
+          "value": "There are two unfinished two-panel strips (quarter pages) that fit with page 13. I say they are unfinished because they don't have the solid blacks inked in yet, but they are otherwise complete. So they were probably edited out by Barks fairly early, before the pages were finally finished and numbered. A good case could be made for saying that these four panels were originally the second and third lines of page 13 and that the published second line of that page was originally the bottom line, but that the dialogue was changed and it was shifted up to follow line 1 when the others were cut. This may not be what did happen, but it seems a reasonable explanation. The two strips are somewhat ambiguous in that it is not clear which comes first. One line is a flashback in which the Beagle Boy recalls, \"We",
+          "bbox": [
+            {
+              "h": 76.87975609756099,
+              "w": 125.67001143292684,
+              "x": 150.8798894817073,
+              "y": 272.14911585365854,
+              "confidence": 0.99,
+              "end_index": 809,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "136 Carl Barks and the Art of the Comic Book",
+              "value": "136 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.570632621951245,
+                  "w": 77.76339129192073,
+                  "x": 37.84872570503048,
+                  "y": 360.9397408536585,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "136 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.57,
+              "w": 77.76,
+              "x": 37.85,
+              "y": 360.94,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "136"
+    }
+  ]
+}

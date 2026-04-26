@@ -1,0 +1,881 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "DONALD DUCK - 10 - Donald agrees to treat a poor person to Thanksgiving dinner, but rebels when he learns that the \"poor person\" is Gladstone. *(May 29, 1952)*",
+          "value": "DONALD DUCK - 10 - Donald agrees to treat a poor person to Thanksgiving dinner, but rebels when he learns that the \"poor person\" is Gladstone. (May 29, 1952)",
+          "bbox": [
+            {
+              "h": 16.68352419969512,
+              "w": 125.8966931450076,
+              "x": 10.344065239138718,
+              "y": 13.435303925304877,
+              "confidence": 0.93,
+              "end_index": 158,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This was the first issue of *Walt Disney's Comics* in which the indicia were printed on the first page of the Donald Duck story, rather than on the inside front cover. The bottom three rows of panels on the first page of this story appear to have been trimmed to accommodate the indicia. Barks himself allowed the necessary space in most later issues.",
+          "value": "This was the first issue of Walt Disney's Comics in which the indicia were printed on the first page of the Donald Duck story, rather than on the inside front cover. The bottom three rows of panels on the first page of this story appear to have been trimmed to accommodate the indicia. Barks himself allowed the necessary space in most later issues.",
+          "bbox": [
+            {
+              "h": 34.68517625762195,
+              "w": 126.19269912347559,
+              "x": 10.270555449695122,
+              "y": 31.019522675304877,
+              "confidence": 0.99,
+              "end_index": 350,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 351, December 1969.",
+          "value": "Reprinted: Walt Disney's Comics No. 351, December 1969.",
+          "bbox": [
+            {
+              "h": 5.10153201219513,
+              "w": 118.49217166063261,
+              "x": 14.924853872903961,
+              "y": 66.43680068597561,
+              "confidence": 0.95,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**148 (13/4) - January 1953 - 52 pages**",
+          "value": "148 (13/4) - January 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.550245807926826,
+              "w": 86.35656488185975,
+              "x": 10.61736328125,
+              "y": 77.9342606707317,
+              "confidence": 0.96,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): A dog joins the nephews' carol singing. *(July 31, 1952)*",
+          "value": "Front cover (art only): A dog joins the nephews' carol singing. (July 31, 1952)",
+          "bbox": [
+            {
+              "h": 11.268081173780493,
+              "w": 125.67433522294206,
+              "x": 10.51392030297256,
+              "y": 83.7300400152439,
+              "confidence": 0.97,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald tries to trick Scrooge into buying him Christmas dinner by impersonating a South American oil tycoon, Petrolio de Vaselino. *(June 12, 1952)*",
+          "value": "DONALD DUCK - 10 - Donald tries to trick Scrooge into buying him Christmas dinner by impersonating a South American oil tycoon, Petrolio de Vaselino. (June 12, 1952)",
+          "bbox": [
+            {
+              "h": 23.071606326219506,
+              "w": 125.99023663776674,
+              "x": 10.433728682355182,
+              "y": 95.75829077743903,
+              "confidence": 0.94,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 328, January 1968.",
+          "value": "Reprinted: Walt Disney's Comics No. 328, January 1968.",
+          "bbox": [
+            {
+              "h": 5.118681402439015,
+              "w": 113.2967713891006,
+              "x": 15.04446336699695,
+              "y": 113.6778887195122,
+              "confidence": 0.79,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**149 (13/5) - February 1953 - 52 pages**",
+          "value": "149 (13/5) - February 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.459542682926813,
+              "w": 89.76520448266005,
+              "x": 10.739148604230182,
+              "y": 125.25229801829269,
+              "confidence": 0.96,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews wait with first aid as Donald prepares to ski. *(July 31, 1952)*",
+          "value": "Front cover (art only): The nephews wait with first aid as Donald prepares to ski. (July 31, 1952)",
+          "bbox": [
+            {
+              "h": 11.283692835365855,
+              "w": 125.825712890625,
+              "x": 10.536360280106706,
+              "y": 131.0316768292683,
+              "confidence": 0.96,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald is converted to \"flipism,\" the philosophy of solving all life's problems by flipping a coin. *(June 30, 1952)*",
+          "value": "DONALD DUCK - 10 - Donald is converted to \"flipism,\" the philosophy of solving all life's problems by flipping a coin. (June 30, 1952)",
+          "bbox": [
+            {
+              "h": 16.772275152439015,
+              "w": 125.85166849275915,
+              "x": 10.623676400533537,
+              "y": 143.0959413109756,
+              "confidence": 0.96,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First appearance of Daisy's nieces, April, May and June.\nReprinted: *Walt Disney's Comics* No. 365, February 1971.",
+          "value": "First appearance of Daisy's nieces, April, May and June.\nReprinted: Walt Disney's Comics No. 365, February 1971.",
+          "bbox": [
+            {
+              "h": 11.066581554878029,
+              "w": 115.30633479420732,
+              "x": 15.10791825457317,
+              "y": 161.0183917682927,
+              "confidence": 0.89,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**150 (13/6) - March 1953 - 52 pages**",
+          "value": "150 (13/6) - March 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.440289634146347,
+              "w": 82.49097870617378,
+              "x": 10.821177353277438,
+              "y": 178.54510289634146,
+              "confidence": 0.96,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews share a dunce cap in Donald's classroom. *(Sept. 18, 1952)*",
+          "value": "Front cover (art only): The nephews share a dunce cap in Donald's classroom. (Sept. 18, 1952)",
+          "bbox": [
+            {
+              "h": 11.296566310975622,
+              "w": 125.89202100800303,
+              "x": 10.649837795350608,
+              "y": 184.28013338414635,
+              "confidence": 0.97,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald becomes a postman and deliberately loses a valentine sent special delivery by Gladstone to Daisy. *(June 30, 1952)*",
+          "value": "DONALD DUCK - 10 - Donald becomes a postman and deliberately loses a valentine sent special delivery by Gladstone to Daisy. (June 30, 1952)",
+          "bbox": [
+            {
+              "h": 16.98983231707316,
+              "w": 125.89263195503048,
+              "x": 10.661334317835365,
+              "y": 196.27849847560975,
+              "confidence": 0.96,
+              "end_index": 140,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 366, March 1971.",
+          "value": "Reprinted: Walt Disney's Comics No. 366, March 1971.",
+          "bbox": [
+            {
+              "h": 5.185952743902435,
+              "w": 111.24486185213414,
+              "x": 15.108655678353657,
+              "y": 214.3737576219512,
+              "confidence": 0.91,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**151 (13/7) - April 1953 - 52 pages**",
+          "value": "151 (13/7) - April 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.543849085365855,
+              "w": 78.88249404535061,
+              "x": 11.002133431783536,
+              "y": 225.7985899390244,
+              "confidence": 0.96,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald regulates the nephews' traffic with stop and go signals. *(Oct. 2, 1952)*",
+          "value": "Front cover (art only): Donald regulates the nephews' traffic with stop and go signals. (Oct. 2, 1952)",
+          "bbox": [
+            {
+              "h": 11.539961890243884,
+              "w": 125.89018280773625,
+              "x": 10.95658357945884,
+              "y": 231.6415929878049,
+              "confidence": 0.96,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and Gladstone compete to win children's votes for grand marshal of the Easter Parade. *(Oct. 23, 1952)*",
+          "value": "DONALD DUCK - 10 - Donald and Gladstone compete to win children's votes for grand marshal of the Easter Parade. (Oct. 23, 1952)",
+          "bbox": [
+            {
+              "h": 16.90447408536588,
+              "w": 126.16980468749996,
+              "x": 10.889365472560975,
+              "y": 243.71709603658536,
+              "confidence": 0.94,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 367, April 1971.",
+          "value": "Reprinted: Walt Disney's Comics No. 367, April 1971.",
+          "bbox": [
+            {
+              "h": 5.130663109756115,
+              "w": 108.39395150533535,
+              "x": 15.574626048018294,
+              "y": 261.73705792682927,
+              "confidence": 0.9,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**152 (13/8) - May 1953 - 52 pages**",
+          "value": "152 (13/8) - May 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.42476371951223,
+              "w": 78.59474549828506,
+              "x": 11.351885599275914,
+              "y": 273.3500304878049,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews paint golf balls as Easter eggs. *(Aug. 14, 1952)*",
+          "value": "Front cover (art only): The nephews paint golf balls as Easter eggs. (Aug. 14, 1952)",
+          "bbox": [
+            {
+              "h": 11.133132621951244,
+              "w": 125.91029153963414,
+              "x": 11.302459984756096,
+              "y": 279.13120426829266,
+              "confidence": 0.97,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald learns that the only way to get on a television quiz show is to do an unusual stunt or to own a freak like a talking dog. *(Oct. 30, 1952)*",
+          "value": "DONALD DUCK - 10 - Donald learns that the only way to get on a television quiz show is to do an unusual stunt or to own a freak like a talking dog. (Oct. 30, 1952)",
+          "bbox": [
+            {
+              "h": 17.482225609756114,
+              "w": 126.0096100895579,
+              "x": 11.419669636051827,
+              "y": 290.8806631097561,
+              "confidence": 0.96,
+              "end_index": 164,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 421, October 1975.",
+          "value": "Reprinted: Walt Disney's Comics No. 421, October 1975.",
+          "bbox": [
+            {
+              "h": 5.14262195121948,
+              "w": 114.28413145483995,
+              "x": 15.790718011623474,
+              "y": 309.1430030487805,
+              "confidence": 0.93,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**153 (13/9) - June 1953 - 52 pages**",
+          "value": "153 (13/9) - June 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.496745426829275,
+              "w": 76.92602943978657,
+              "x": 11.504552686737805,
+              "y": 320.76688262195125,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald spells out \"don't touch\" on a cake's icing as the nephews watch. *(Oct. 2, 1952)*",
+          "value": "Front cover (art only): Donald spells out \"don't touch\" on a cake's icing as the nephews watch. (Oct. 2, 1952)",
+          "bbox": [
+            {
+              "h": 11.532256097560985,
+              "w": 125.97241520579266,
+              "x": 11.461477705792683,
+              "y": 326.3392454268293,
+              "confidence": 0.91,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Gyro supplies Donald with teams of worms that haul fish in by themselves. *(Nov. 27, 1952)*\nReprinted: *Walt Disney's Comics* No. 371, August 1971.",
+          "value": "DONALD DUCK - 10 - Gyro supplies Donald with teams of worms that haul fish in by themselves. (Nov. 27, 1952)\nReprinted: Walt Disney's Comics No. 371, August 1971.",
+          "bbox": [
+            {
+              "h": 17.470632621951243,
+              "w": 126.05567227991612,
+              "x": 11.534734541730183,
+              "y": 338.359756097561,
+              "confidence": 0.86,
+              "end_index": 165,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**154 (13/10) - July 1953 - 52 pages**",
+          "value": "154 (13/10) - July 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.780539253048782,
+              "w": 78.18674542682928,
+              "x": 150.0959394054878,
+              "y": 13.65046875,
+              "confidence": 0.97,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews dispense grape juice from Donald's tuba. *(Oct. 2, 1952)*",
+          "value": "Front cover (art only): The nephews dispense grape juice from Donald's tuba. (Oct. 2, 1952)",
+          "bbox": [
+            {
+              "h": 11.00490520198171,
+              "w": 125.75102515243901,
+              "x": 150.03567644817073,
+              "y": 19.757213700457317,
+              "confidence": 0.97,
+              "end_index": 92,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews try to spoil the sale of Quackly Hall, the old mansion they are using as a clubhouse. *(Nov. 27, 1952)*",
+          "value": "DONALD DUCK - 10 - The nephews try to spoil the sale of Quackly Hall, the old mansion they are using as a clubhouse. (Nov. 27, 1952)",
+          "bbox": [
+            {
+              "h": 16.940859375,
+              "w": 125.69595846036584,
+              "x": 150.04761242378046,
+              "y": 31.59333269817073,
+              "confidence": 0.97,
+              "end_index": 133,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 359, August 1970.",
+          "value": "Reprinted: Walt Disney's Comics No. 359, August 1970.",
+          "bbox": [
+            {
+              "h": 5.016802591463413,
+              "w": 111.99769435975608,
+              "x": 154.7957469512195,
+              "y": 49.56497332317073,
+              "confidence": 0.89,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**155 (13/11) - August 1953 - 52 pages**",
+          "value": "155 (13/11) - August 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.578891006097565,
+              "w": 86.67601943597559,
+              "x": 150.35240853658536,
+              "y": 61.05224657012195,
+              "confidence": 0.97,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews, dressed as Scouts, prepare to awaken Donald with a trumpet blast. *(Dec. 6, 1952)*",
+          "value": "Front cover (art only): The nephews, dressed as Scouts, prepare to awaken Donald with a trumpet blast. (Dec. 6, 1952)",
+          "bbox": [
+            {
+              "h": 16.290457317073173,
+              "w": 125.81003620426826,
+              "x": 150.10947027439022,
+              "y": 67.08325266768293,
+              "confidence": 0.98,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Scrooge plants pots of gold at the foot of a rainbow to see who will handle the money best, Donald, Gladstone or the nephews. *(Dec. 24, 1952)*",
+          "value": "DONALD DUCK - 10 - Scrooge plants pots of gold at the foot of a rainbow to see who will handle the money best, Donald, Gladstone or the nephews. (Dec. 24, 1952)",
+          "bbox": [
+            {
+              "h": 17.532118902439027,
+              "w": 126.02208841463414,
+              "x": 150.1780506859756,
+              "y": 84.71378048780488,
+              "confidence": 0.97,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 348, September 1969.",
+          "value": "Reprinted: Walt Disney's Comics No. 348, September 1969.",
+          "bbox": [
+            {
+              "h": 5.208407012195116,
+              "w": 118.75578887195118,
+              "x": 154.91911966463414,
+              "y": 102.84069740853658,
+              "confidence": 0.86,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**156 (13/12) - September 1953 - 52 pages**",
+          "value": "156 (13/12) - September 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.64386432926829,
+              "w": 95.75535251524391,
+              "x": 150.63576791158536,
+              "y": 114.30520198170731,
+              "confidence": 0.96,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald finds that the nephews have dirtied his hand towel. *(Apr. 6, 1953)*",
+          "value": "Front cover (art only): Donald finds that the nephews have dirtied his hand towel. (Apr. 6, 1953)",
+          "bbox": [
+            {
+              "h": 11.324016768292694,
+              "w": 125.70854611280487,
+              "x": 150.44671303353658,
+              "y": 120.17602134146341,
+              "confidence": 0.95,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald, a master rainmaker, brews up an incredible storm to spoil the picnic to which Gladstone has taken Daisy. *(Dec. 31, 1952)*",
+          "value": "DONALD DUCK - 10 - Donald, a master rainmaker, brews up an incredible storm to spoil the picnic to which Gladstone has taken Daisy. (Dec. 31, 1952)",
+          "bbox": [
+            {
+              "h": 17.42790777439023,
+              "w": 125.6781402439024,
+              "x": 150.4869969512195,
+              "y": 131.95673780487806,
+              "confidence": 0.95,
+              "end_index": 148,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 368, May 1971.",
+          "value": "Reprinted: Walt Disney's Comics No. 368, May 1971.",
+          "bbox": [
+            {
+              "h": 5.205834603658523,
+              "w": 106.91478658536582,
+              "x": 155.0529706554878,
+              "y": 150.13304496951218,
+              "confidence": 0.91,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**157 (14/1) - October 1953 - 52 pages**",
+          "value": "157 (14/1) - October 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.692820121951217,
+              "w": 88.24702362804878,
+              "x": 150.55838986280486,
+              "y": 161.23615472560977,
+              "confidence": 0.96,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews fish from hiding as truant officer Donald walks by. *(Mar. 12, 1953)*",
+          "value": "Front cover (art only): The nephews fish from hiding as truant officer Donald walks by. (Mar. 12, 1953)",
+          "bbox": [
+            {
+              "h": 11.312080792682927,
+              "w": 125.7836089939024,
+              "x": 150.26522103658536,
+              "y": 167.48935975609757,
+              "confidence": 0.96,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and Scrooge hold a contest to see if Scrooge's money can help him climb a mountain faster than Donald's youth. *(Jan. 15, 1953)*",
+          "value": "DONALD DUCK - 10 - Donald and Scrooge hold a contest to see if Scrooge's money can help him climb a mountain faster than Donald's youth. (Jan. 15, 1953)",
+          "bbox": [
+            {
+              "h": 17.325720274390232,
+              "w": 126.06863185975605,
+              "x": 150.08683307926827,
+              "y": 179.34387576219513,
+              "confidence": 0.96,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: One panel that fits in place of the seventh panel of page 10 of the mountain-climbing story in *Walt Disney's Comics and Stories* No. 157 exists, which implies that the last three panels of the story were cut and replaced by the published dream ending. The unpublished panel has the caption \"So henceforth on—everyday!\" and shows Scrooge (gloating) walking after Donald (about ready to explode) and saying, \"WELL? When are you going to think of something else you can beat me at?\" The dream ending has a great punch line, but I'd sure like to know what was originally in the other panels. Barks says, in an October 3, 1973 letter, that this \"was quite likely changed to a dream ending by me. I believe I recall looking at the panel of Uncle Scrooge's money ramp and deciding it looked too impossible to be real.\"",
+          "value": "Weston: One panel that fits in place of the seventh panel of page 10 of the mountain-climbing story in Walt Disney's Comics and Stories No. 157 exists, which implies that the last three panels of the story were cut and replaced by the published dream ending. The unpublished panel has the caption \"So henceforth on—everyday!\" and shows Scrooge (gloating) walking after Donald (about ready to explode) and saying, \"WELL? When are you going to think of something else you can beat me at?\" The dream ending has a great punch line, but I'd sure like to know what was originally in the other panels. Barks says, in an October 3, 1973 letter, that this \"was quite likely changed to a dream ending by me. I believe I recall looking at the panel of Uncle Scrooge's money ramp and deciding it looked too impossible to be real.\"",
+          "bbox": [
+            {
+              "h": 81.84045731707316,
+              "w": 125.15566692073173,
+              "x": 151.13596417682925,
+              "y": 197.54021341463414,
+              "confidence": 0.98,
+              "end_index": 819,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 101, September 1972.",
+          "value": "Reprinted: Uncle Scrooge No. 101, September 1972.",
+          "bbox": [
+            {
+              "h": 4.97579268292684,
+              "w": 103.28127667682925,
+              "x": 155.16142339939023,
+              "y": 280.3816463414634,
+              "confidence": 0.93,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**158 (14/2) - November 1953 - 52 pages**",
+          "value": "158 (14/2) - November 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.6129268292682895,
+              "w": 95.02607469512196,
+              "x": 151.72909298780488,
+              "y": 291.7363033536585,
+              "confidence": 0.96,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): A worm intervenes as Donald and Daisy bite at a Halloween apple. *(Dec. 6, 1952)*",
+          "value": "Front cover (art only): A worm intervenes as Donald and Daisy bite at a Halloween apple. (Dec. 6, 1952)",
+          "bbox": [
+            {
+              "h": 11.065152439024404,
+              "w": 125.79900914634145,
+              "x": 150.71201410060974,
+              "y": 297.8711661585366,
+              "confidence": 0.95,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK — 10 — The nephews raise bees as a Junior Woodchuck project and get Donald in trouble with the whole city. *(May 26, 1953)*",
+          "value": "DONALD DUCK — 10 — The nephews raise bees as a Junior Woodchuck project and get Donald in trouble with the whole city. (May 26, 1953)",
+          "bbox": [
+            {
+              "h": 16.84042682926829,
+              "w": 125.94241234756095,
+              "x": 150.5846112804878,
+              "y": 309.5615625,
+              "confidence": 0.96,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 361, October 1970.",
+          "value": "Reprinted: Walt Disney's Comics No. 361, October 1970.",
+          "bbox": [
+            {
+              "h": 5.127919207317045,
+              "w": 114.35115663109754,
+              "x": 155.19910060975607,
+              "y": 327.5573094512195,
+              "confidence": 0.95,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**159 (14/3) - December 1953 - 52 pages**",
+          "value": "159 (14/3) - December 1953 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.61514481707316,
+              "w": 93.94092987804875,
+              "x": 151.35096608231706,
+              "y": 339.03749999999997,
+              "confidence": 0.96,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald gets the nephews to smile for the camera by holding up a candy cane. *(Apr. 9, 1953)*",
+          "value": "Front cover (art only): Donald gets the nephews to smile for the camera by holding up a candy cane. (Apr. 9, 1953)",
+          "bbox": [
+            {
+              "h": 11.349100609756114,
+              "w": 125.98777248475608,
+              "x": 150.90611089939023,
+              "y": 345.0211737804878,
+              "confidence": 0.98,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "176 Carl Barks and the Art of the Comic Book",
+              "value": "176 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.2695579268292745,
+                  "w": 77.82442168445121,
+                  "x": 36.280375381097556,
+                  "y": 366.8455792682927,
+                  "confidence": 0.96,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "176 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.27,
+              "w": 77.82,
+              "x": 36.28,
+              "y": 366.85,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "176"
+    }
+  ]
+}

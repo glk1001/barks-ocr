@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Cover of Walt Disney's Comics and Stories No. 78, March 1947. The illustration shows Donald Duck looking suspiciously at a makeshift \"radio\" built from a wooden crate labeled \"BARKS JIFFY Chicken Dinner\". Inside the crate, one of his nephews is playing a ukulele and singing, while another nephew works on the back of the crate. A sign on top of the crate reads \"1947 RADiO $8.00 SPot CASH\".",
+          "md": "![Cover of Walt Disney's Comics and Stories No. 78, March 1947. The illustration shows Donald Duck looking suspiciously at a makeshift \"radio\" built from a wooden crate labeled \"BARKS JIFFY Chicken Dinner\". Inside the crate, one of his nephews is playing a ukulele and singing, while another nephew works on the back of the crate. A sign on top of the crate reads \"1947 RADiO $8.00 SPot CASH\".](CBatAotCB-171_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-171_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 327.9187042682927,
+              "w": 224.54870950838412,
+              "x": 30.563819073932923,
+              "y": 12.890236280487805,
+              "confidence": 0.98,
+              "end_index": 416,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From Walt Disney's Comics No. 78, March 1947; © 1947 Walt Disney Productions.",
+          "value": "From Walt Disney's Comics No. 78, March 1947; © 1947 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.82806402439026,
+              "w": 160.23014005335364,
+              "x": 64.68934355945122,
+              "y": 347.58404725609756,
+              "confidence": 0.92,
+              "end_index": 76,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n171",
+              "value": "Carl Barks and the Art of the Comic Book\n171",
+              "bbox": [
+                {
+                  "h": 5.4579649390244045,
+                  "w": 77.82583650914634,
+                  "x": 170.0286413871951,
+                  "y": 365.22679115853657,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n171",
+          "bbox": [
+            {
+              "h": 5.46,
+              "w": 77.83,
+              "x": 170.03,
+              "y": 365.23,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "171"
+    }
+  ]
+}

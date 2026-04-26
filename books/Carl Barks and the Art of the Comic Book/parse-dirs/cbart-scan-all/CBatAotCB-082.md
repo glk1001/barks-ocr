@@ -1,0 +1,19 @@
+plots and with no crime stories among the offerings it's possible that the contests between Don and the kids satisfied the reader's desire for triumphs of good over bad. At any rate, the magazine didn't seem to go broke.
+
+"Now comes a neurotic female with a cramped, fault-finding mind and a cry-baby son, and proves all of those millions (well, dozens, at least) of boys and girls who have bought and read Disney comics over the years were and are sadists, masochists, murderers, lechers and worse! I agree with her.
+
+"From now on you will see changed stories coming from this former breeding place of vice. You will see stories that will cause [the complaining woman] to write another letter to say that she just loves the Donald Ducks. For every time she reads one to her little nose-picking crybaby, he goes to sleep in the middle of the second page."
+
+He added a postscript: "All of this letter except the first paragraph is so much jousting with windmills."*
+
+Earlier in the year, Barks had submitted a ten-page story that is listed in his records as "bobsled race." It was never published, and it is a safe bet that it, too, involved rivalry between Donald and his nephews, especially since it would have gone into an issue that would have been in preparation around the time that this exchange of letters occurred.
+
+Comic-book editors tend to become petty bureaucrats; their jobs encourage them to be more interested in rules than in creativity, and complaints are the occasion for laying down rules. One complaining mother carries more weight than one brilliant artist. Barks was aware of this situation, and unhappy with it even if he was too much of a realist to challenge it directly. As he said he would, he stepped away from stories in which Donald and the nephews were in open conflict — and his stories took another step down.
+
+The quality of Barks's drawings declined somewhat at this time, too, as could have been expected, given how closely his writing and his drawing were related. He has said, though, that the changes in his drawings were due in part to changes in the quality of the drawing paper that Western provided. "In the old days," he said in a 1960 letter to a fan, "I was furnished the best grade of Strathmore, and my style was more detailed and the characters more expressive. Nowadays . . . the paper furnished us artists has been a clay-coated import from Germany. The pencil and pen digs into the surface. The result has been a tightening of the lines, less bounce to the characters. I've griped, but the economy of the cheaper paper wins out in the front office."
+
+Near the end of the fifties, Barks turned in *Uncle Scrooge* to stories set in outer space; he evidently found in them a kind of release. But he took no pains to make them plausible, and so they failed even as fantasy. On earth, by contrast, some of his "scientific" explanations of myths and legends (the *Flying Dutchman*, for example) were labored and relentless. The delicate balance between the fantastic and the mundane, which Barks had struck so well, so often, was lost.
+
+Increasingly, Barks would rush through the preliminaries, sending the ducks off on an adventure without bothering to establish a pretext for it. Gone were the days when he would devote half of a story's pages to getting the ducks where they were going, as he did in *Uncle Scrooge* No. 5 (1954), when he took eighteen pages (out of thirty-two) to get the ducks to Atlantis.
+
+I take no pleasure in reading most of Barks's stories from the sixties. The younger ducks frequently were presented as very unattractive characters, lazy and uncaring, cynical and "hip." Scrooge was depicted more sympathetically, but he lacked the passion for money that he would have needed to accumulate so much of it. Worse, in some later stories Barks returned to the idea that Scrooge had

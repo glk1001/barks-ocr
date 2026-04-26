@@ -1,0 +1,492 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "four pages, and the four panels that form the top half of published page 12 were salvaged from that fifth page and used to connect published pages 11 and 12 while eliminating the whole flashback sequence. I suspect that nothing of real importance is in the eliminated panels, perhaps another panel or so to finish up the flashback, preparations for the trip, and a more extensive and scenic trip than is shown in the four remaining panels. Perhaps even those cut panels still exist, but I don't know of anyone who has uncovered them yet.",
+          "value": "four pages, and the four panels that form the top half of published page 12 were salvaged from that fifth page and used to connect published pages 11 and 12 while eliminating the whole flashback sequence. I suspect that nothing of real importance is in the eliminated panels, perhaps another panel or so to finish up the flashback, preparations for the trip, and a more extensive and scenic trip than is shown in the four remaining panels. Perhaps even those cut panels still exist, but I don't know of anyone who has uncovered them yet.",
+          "bbox": [
+            {
+              "h": 52.941428163109755,
+              "w": 124.85495021913108,
+              "x": 11.392273485137194,
+              "y": 18.292582888719515,
+              "confidence": 0.99,
+              "end_index": 536,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Four and a half pages mean that the next several pages are made up of the bottom half of one page and the top half of the next, according to Barks's original conception, so that his page design is broken up. For example, published page 15 is actually made up of the bottom half of the page originally numbered 19 and the top half of the page originally numbered 20. The bottom half of the page originally numbered 20 was also cut before publication. In it, Donald suggests going into town to get the law after this tough little old lady. Scrooge rejects that idea. He wants to keep the law out of this because he never kept up taxes on the claim; he really doesn't own it any more than she does. Donald comments, \"Oho! So you're claim-jumping your own claim!\" To which Scrooge replies, 'Well, it amounts to that!\"",
+          "value": "Four and a half pages mean that the next several pages are made up of the bottom half of one page and the top half of the next, according to Barks's original conception, so that his page design is broken up. For example, published page 15 is actually made up of the bottom half of the page originally numbered 19 and the top half of the page originally numbered 20. The bottom half of the page originally numbered 20 was also cut before publication. In it, Donald suggests going into town to get the law after this tough little old lady. Scrooge rejects that idea. He wants to keep the law out of this because he never kept up taxes on the claim; he really doesn't own it any more than she does. Donald comments, \"Oho! So you're claim-jumping your own claim!\" To which Scrooge replies, 'Well, it amounts to that!\"",
+          "bbox": [
+            {
+              "h": 76.51734946646341,
+              "w": 125.04242628144056,
+              "x": 11.424318192644817,
+              "y": 72.08736471036585,
+              "confidence": 0.99,
+              "end_index": 812,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Carl Barks explained the cuts in a letter to me dated February 17, 1972: the sequence \"was cut out of the story at the editorial office in Beverly Hills in 1952. I was a little skeptical of whether I could get by with such a bar room atmosphere but I did it anyway for fun. Such pages, when cut from stories were never returned to me...the sequence was cut because of violence and dance hall atmosphere.\"",
+          "value": "Carl Barks explained the cuts in a letter to me dated February 17, 1972: the sequence \"was cut out of the story at the editorial office in Beverly Hills in 1952. I was a little skeptical of whether I could get by with such a bar room atmosphere but I did it anyway for fun. Such pages, when cut from stories were never returned to me...the sequence was cut because of violence and dance hall atmosphere.\"",
+          "bbox": [
+            {
+              "h": 40.84884146341461,
+              "w": 125.25888802877286,
+              "x": 11.361043373666158,
+              "y": 149.3467568597561,
+              "confidence": 0.99,
+              "end_index": 403,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\[In the 1974 interview, Barks enlarged upon the reasons for the deletion of the five pages. When asked if he had been paid for those pages, he said, \"Evidently I wasn't...I think they figured I should have had sense enough to know you couldn't get involved in fights in a barroom...It was quite a while afterwards before I found out why they cut it...I got a letter from the office, or was told on my next visit to the office, that I had violated a lot of their taboos and should have had sense enough to know it wouldn't work...\" One problem, he said, was the month that Scrooge and Goldie spent alone on Scrooge's claim. \"That was kidnaping, he picked her up and carried her out to his claim and made her go to work...It didn't look very much like kidnapping yet it was.\"]",
+          "value": "[In the 1974 interview, Barks enlarged upon the reasons for the deletion of the five pages. When asked if he had been paid for those pages, he said, \"Evidently I wasn't...I think they figured I should have had sense enough to know you couldn't get involved in fights in a barroom...It was quite a while afterwards before I found out why they cut it...I got a letter from the office, or was told on my next visit to the office, that I had violated a lot of their taboos and should have had sense enough to know it wouldn't work...\" One problem, he said, was the month that Scrooge and Goldie spent alone on Scrooge's claim. \"That was kidnaping, he picked her up and carried her out to his claim and made her go to work...It didn't look very much like kidnapping yet it was.\"]",
+          "bbox": [
+            {
+              "h": 76.54628048780489,
+              "w": 125.46304508860518,
+              "x": 11.605402891577743,
+              "y": 190.95080030487804,
+              "confidence": 0.99,
+              "end_index": 774,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Uncle Scrooge and Donald Duck* No. 1, 1966; *Uncle Scrooge* No. 142, July 1977.",
+          "value": "Reprinted: The Best of Uncle Scrooge and Donald Duck No. 1, 1966; Uncle Scrooge No. 142, July 1977.",
+          "bbox": [
+            {
+              "h": 11.09448932926829,
+              "w": 124.50555068597559,
+              "x": 11.926672065548779,
+              "y": 268.21678353658535,
+              "confidence": 0.96,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in \"Somethin' Fishy Here\" - 5 - Donald pastes up a fake newspaper that convinces Scrooge that fish have been made the official money of the land. (*Sept. 3, 1952*)",
+          "value": "UNCLE SCROOGE in \"Somethin' Fishy Here\" - 5 - Donald pastes up a fake newspaper that convinces Scrooge that fish have been made the official money of the land. (Sept. 3, 1952)",
+          "bbox": [
+            {
+              "h": 16.87991615853658,
+              "w": 125.02800257240852,
+              "x": 11.649370712652438,
+              "y": 280.01654725609757,
+              "confidence": 0.94,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks noted on his list, \"I can't find voucher for 5 page story of fish money in Uncle S. #2. The story and drawings are mine.\" He indicated that the story was accepted by Western sometime in September 1952—and the date was probably late in the month, after Western had rejected five pages of \"Back to the Klondike.\"",
+          "value": "Barks noted on his list, \"I can't find voucher for 5 page story of fish money in Uncle S. #2. The story and drawings are mine.\" He indicated that the story was accepted by Western sometime in September 1952—and the date was probably late in the month, after Western had rejected five pages of \"Back to the Klondike.\"",
+          "bbox": [
+            {
+              "h": 33.889527439024405,
+              "w": 125.5141845703125,
+              "x": 11.776262266577742,
+              "y": 297.8238795731707,
+              "confidence": 0.97,
+              "end_index": 315,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 156, September 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 156, September 1978.",
+          "bbox": [
+            {
+              "h": 5.490983231707359,
+              "w": 102.67374452172255,
+              "x": 16.27533512766768,
+              "y": 333.8041920731707,
+              "confidence": 0.87,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge uses baled money as a ladder. (*Oct. 16, 1952*)",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge uses baled money as a ladder. (Oct. 16, 1952)",
+          "bbox": [
+            {
+              "h": 11.126935975609793,
+              "w": 124.71021686833079,
+              "x": 12.08400378715701,
+              "y": 339.740556402439,
+              "confidence": 0.88,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Uncle Scrooge and Donald Duck* No. 1, 1966.",
+          "value": "Reprinted: The Best of Uncle Scrooge and Donald Duck No. 1, 1966.",
+          "bbox": [
+            {
+              "h": 10.979444073932926,
+              "w": 124.4797580030488,
+              "x": 149.97097179878045,
+              "y": 18.311348608993903,
+              "confidence": 0.96,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (back cover) - Scrooge plays checkers for high stakes — with himself. (*Oct. 16, 1952*)",
+          "value": "UNCLE SCROOGE - 1 (back cover) - Scrooge plays checkers for high stakes — with himself. (Oct. 16, 1952)",
+          "bbox": [
+            {
+              "h": 11.747109375000003,
+              "w": 124.72569740853655,
+              "x": 149.68431974085365,
+              "y": 30.061080411585365,
+              "confidence": 0.97,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 495 - (September) 1953 - 36 pages",
+          "value": "Four Color 495 - (September) 1953 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.553384146341464,
+              "w": 111.77823361280487,
+              "x": 149.787284679878,
+              "y": 48.060057164634145,
+              "confidence": 0.96,
+              "end_index": 43,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: A pirate jack-in-the-box pops out at the ducks from a treasure chest. (*Mar. 6, 1953*)",
+          "value": "Front cover: A pirate jack-in-the-box pops out at the ducks from a treasure chest. (Mar. 6, 1953)",
+          "bbox": [
+            {
+              "h": 11.494521722560972,
+              "w": 124.90247332317075,
+              "x": 149.8967663871951,
+              "y": 53.95618902439024,
+              "confidence": 0.96,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge trims his own sideburns because barbers' prices are \"too much.\" (*Feb. 6, 1953 \\[idea] and Feb. 26, 1953 \\[art]*)",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge trims his own sideburns because barbers' prices are \"too much.\" (Feb. 6, 1953 [idea] and Feb. 26, 1953 [art])",
+          "bbox": [
+            {
+              "h": 17.538738567073175,
+              "w": 125.37998094512191,
+              "x": 149.68939596036586,
+              "y": 65.79182355182927,
+              "confidence": 0.96,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 22 - Scrooge is faced with the loss of his entire fortune to Chisel McSue because, many years before, an ancestor of Scrooge's failed to deliver a case of horseradish to Jamaica, and then failed to give all his property to McSue's ancestor, as provided in a contract. Scrooge can save his fortune only by fulfilling the terms of the original contract, and the ducks set out in a small sailing ship to find the horseradish, which was on a ship that sank in the Caribbean. (*Feb. 26, 1953*)",
+          "value": "UNCLE SCROOGE - 22 - Scrooge is faced with the loss of his entire fortune to Chisel McSue because, many years before, an ancestor of Scrooge's failed to deliver a case of horseradish to Jamaica, and then failed to give all his property to McSue's ancestor, as provided in a contract. Scrooge can save his fortune only by fulfilling the terms of the original contract, and the ducks set out in a small sailing ship to find the horseradish, which was on a ship that sank in the Caribbean. (Feb. 26, 1953)",
+          "bbox": [
+            {
+              "h": 52.793334603658536,
+              "w": 126.11388910060974,
+              "x": 150.06685403963414,
+              "y": 84.1047599085366,
+              "confidence": 0.98,
+              "end_index": 503,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 105, June 1973.",
+          "value": "Reprinted: Uncle Scrooge No. 105, June 1973.",
+          "bbox": [
+            {
+              "h": 5.54587271341461,
+              "w": 90.75407583841461,
+              "x": 154.96986471036584,
+              "y": 137.6730068597561,
+              "confidence": 0.91,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 10 - For safety's sake, Scrooge has his coins changed into greenbacks and stores them in an old water tank, but this fails to stop the Beagle Boys. (*Feb. 26, 1953*)",
+          "value": "UNCLE SCROOGE - 10 - For safety's sake, Scrooge has his coins changed into greenbacks and stores them in an old water tank, but this fails to stop the Beagle Boys. (Feb. 26, 1953)",
+          "bbox": [
+            {
+              "h": 22.968155487804868,
+              "w": 125.75085365853657,
+              "x": 150.39660251524387,
+              "y": 143.32298780487804,
+              "confidence": 0.97,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First appearance of Scrooge's \"Old Number One Dime,\" which is identified here only as the first dime he ever earned.",
+          "value": "First appearance of Scrooge's \"Old Number One Dime,\" which is identified here only as the first dime he ever earned.",
+          "bbox": [
+            {
+              "h": 11.45661585365855,
+              "w": 125.55927782012196,
+              "x": 150.40018673780486,
+              "y": 167.42748475609756,
+              "confidence": 0.96,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: There exists a half page cut from the second story in *Uncle Scrooge* one-shot No. 495 in which the first dime is introduced. This page came from Barks's \"scrap pile\" and appears to fit in place of the published top half of page 9 of the story. So it is apparently a page that Barks discarded in his own revisions of the story. There must have been more extensive revisions than this, though, because the page is numbered as the top half of page 10. No other unpublished material from this story is known, however.",
+          "value": "Weston: There exists a half page cut from the second story in Uncle Scrooge one-shot No. 495 in which the first dime is introduced. This page came from Barks's \"scrap pile\" and appears to fit in place of the published top half of page 9 of the story. So it is apparently a page that Barks discarded in his own revisions of the story. There must have been more extensive revisions than this, though, because the page is numbered as the top half of page 10. No other unpublished material from this story is known, however.",
+          "bbox": [
+            {
+              "h": 52.19439786585368,
+              "w": 125.99742759146342,
+              "x": 150.31768102134146,
+              "y": 179.4384375,
+              "confidence": 0.98,
+              "end_index": 521,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Walt Disney Comics* No. 96172, 1974.",
+          "value": "Reprinted: The Best of Walt Disney Comics No. 96172, 1974.",
+          "bbox": [
+            {
+              "h": 22.795403963414635,
+              "w": 125.96580411585364,
+              "x": 150.31829839939022,
+              "y": 233.0007850609756,
+              "confidence": 0.73,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - art only - Scrooge's money bin is at the bottom of a rainbow that the nephews see. (*Feb. 26, 1953*)",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - art only - Scrooge's money bin is at the bottom of a rainbow that the nephews see. (Feb. 26, 1953)",
+          "bbox": [
+            {
+              "h": 22.795403963414635,
+              "w": 125.96580411585364,
+              "x": 150.31829839939022,
+              "y": 233.0007850609756,
+              "confidence": 0.86,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (back cover) - art only - Scrooge \"treats\" the trained fleas to a meal at the circus. (*Feb. 26, 1953*)",
+          "value": "UNCLE SCROOGE - 1 (back cover) - art only - Scrooge \"treats\" the trained fleas to a meal at the circus. (Feb. 26, 1953)",
+          "bbox": [
+            {
+              "h": 17.27627286585368,
+              "w": 125.93164253048782,
+              "x": 150.39044588414632,
+              "y": 256.0576600609756,
+              "confidence": 0.96,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 4 - Dec.-Feb. 1954 - 36 pages",
+          "value": "4 - Dec.-Feb. 1954 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.620701219512175,
+              "w": 68.87400914634148,
+              "x": 150.5774771341463,
+              "y": 280.0316844512195,
+              "confidence": 0.95,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald patches Scrooge's coat with greenbacks. (*May 7, 1953*)",
+          "value": "Front cover (art only): Donald patches Scrooge's coat with greenbacks. (May 7, 1953)",
+          "bbox": [
+            {
+              "h": 11.633734756097564,
+              "w": 125.88175495426829,
+              "x": 150.35865091463413,
+              "y": 285.88447408536587,
+              "confidence": 0.97,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge uses ballet to elude such pests as a process server and a bill collector. (*Feb. 6, 1953 \\[idea] and May 21, 1953 \\[art]*)",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge uses ballet to elude such pests as a process server and a bill collector. (Feb. 6, 1953 [idea] and May 21, 1953 [art])",
+          "bbox": [
+            {
+              "h": 17.60110518292684,
+              "w": 125.62202743902438,
+              "x": 150.57065167682924,
+              "y": 297.7951829268293,
+              "confidence": 0.97,
+              "end_index": 170,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 32 - Scrooge has his money canned before shipping it to a Hawaiian island he has bought, but the Beagle Boys have infiltrated the canning operation and have bought the ship Scrooge uses. They make the ducks their prisoners on the island, which is now populated only by one old Hawaiian named Opu Nui (Big Tummy) and by",
+          "value": "UNCLE SCROOGE - 32 - Scrooge has his money canned before shipping it to a Hawaiian island he has bought, but the Beagle Boys have infiltrated the canning operation and have bought the ship Scrooge uses. They make the ducks their prisoners on the island, which is now populated only by one old Hawaiian named Opu Nui (Big Tummy) and by",
+          "bbox": [
+            {
+              "h": 35.456547256097565,
+              "w": 125.90214557926826,
+              "x": 150.54916349085366,
+              "y": 315.55806402439026,
+              "confidence": 0.98,
+              "end_index": 333,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n133",
+              "value": "Carl Barks and the Art of the Comic Book\n133",
+              "bbox": [
+                {
+                  "h": 4.49986280487803,
+                  "w": 77.82885480182925,
+                  "x": 172.68518483231708,
+                  "y": 362.1026067073171,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n133",
+          "bbox": [
+            {
+              "h": 4.5,
+              "w": 77.83,
+              "x": 172.69,
+              "y": 362.1,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "133"
+    }
+  ]
+}

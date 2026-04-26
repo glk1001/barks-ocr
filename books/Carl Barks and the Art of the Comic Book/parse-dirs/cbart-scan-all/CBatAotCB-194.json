@@ -1,0 +1,65 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "**447 (38/3) - December 1977 - 52 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's Comics* No. 212, May 1958.\nChanges: Splash panel deepened.\n**448 (38/4) - January 1978 - 36 pages**\nDONALD DUCK Stalwart Ranger - 10 - Reprinted from *Walt Disney's Comics* No. 266, November 1962.\n**449 (38/5) - February 1978 - 36 pages**\nDONALD DUCK Double Masquerade - 10 - Reprinted from *Walt Disney's Comics* No. 280, January 1964.\n**450 (38/6) - March 1978 - 36 pages**\nDONALD DUCK The Jinxed Jalopy Race - 10 - Reprinted from *Walt Disney's Comics* No. 270, March 1963.\n**451 (38/7) - April 1978 - 36 pages**\nDONALD DUCK Spare That Hair - 10 - Reprinted from *Walt Disney's Comics* No. 272, May 1963.\n**452 (38/8) - May 1978 - 36 pages**\nDONALD DUCK Gall of the Wild - 10 - Reprinted from *Walt Disney's Comics* No. 274, July 1963.\n**453 (38/9) - June 1978 - 36 pages**\nDONALD DUCK - 10 - Reprinted from *Walt Disney's*\n*Comics* No. 206, November 1957.\n**454 (38/10) - July 1978 - 36 pages**\nDONALD DUCK Way Out Yonder - 10 - Reprinted from *Walt Disney's Comics* No. 262, July 1962.\n**455 (38/11) - August 1978 - 36 pages**\nDONALD DUCK Rocks to Riches - 10 - Reprinted from *Walt Disney's Comics* No. 241, October 1960.\n**456 (38/12) - September 1978 - 36 pages**\nDONALD DUCK Lost Frontier - 10 - Reprinted from *Walt Disney's Comics* No. 246, March 1961.\n**457 (39/1) - October 1978 - 36 pages**\nDONALD DUCK The Madcap Mariner - 9 - Reprinted from *Walt Disney's Comics* No. 247, April 1961.\n**458 (39/2) - November 1978 - 36 pages**\nDONALD DUCK The Candy Kid - 10 - Reprinted from *Walt Disney's Comics* No. 263, August 1962.\n**459 (39/3) - December 1978 - 36 pages**\nDONALD DUCK Balloonatics - 10 - Reprinted from *Walt Disney's Comics* No. 242, November 1960.\nChanges: Splash panel deepened.",
+          "value": "447 (38/3) - December 1977 - 52 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 212, May 1958.\nChanges: Splash panel deepened.\n448 (38/4) - January 1978 - 36 pages\nDONALD DUCK Stalwart Ranger - 10 - Reprinted from Walt Disney's Comics No. 266, November 1962.\n449 (38/5) - February 1978 - 36 pages\nDONALD DUCK Double Masquerade - 10 - Reprinted from Walt Disney's Comics No. 280, January 1964.\n450 (38/6) - March 1978 - 36 pages\nDONALD DUCK The Jinxed Jalopy Race - 10 - Reprinted from Walt Disney's Comics No. 270, March 1963.\n451 (38/7) - April 1978 - 36 pages\nDONALD DUCK Spare That Hair - 10 - Reprinted from Walt Disney's Comics No. 272, May 1963.\n452 (38/8) - May 1978 - 36 pages\nDONALD DUCK Gall of the Wild - 10 - Reprinted from Walt Disney's Comics No. 274, July 1963.\n453 (38/9) - June 1978 - 36 pages\nDONALD DUCK - 10 - Reprinted from Walt Disney's\nComics No. 206, November 1957.\n454 (38/10) - July 1978 - 36 pages\nDONALD DUCK Way Out Yonder - 10 - Reprinted from Walt Disney's Comics No. 262, July 1962.\n455 (38/11) - August 1978 - 36 pages\nDONALD DUCK Rocks to Riches - 10 - Reprinted from Walt Disney's Comics No. 241, October 1960.\n456 (38/12) - September 1978 - 36 pages\nDONALD DUCK Lost Frontier - 10 - Reprinted from Walt Disney's Comics No. 246, March 1961.\n457 (39/1) - October 1978 - 36 pages\nDONALD DUCK The Madcap Mariner - 9 - Reprinted from Walt Disney's Comics No. 247, April 1961.\n458 (39/2) - November 1978 - 36 pages\nDONALD DUCK The Candy Kid - 10 - Reprinted from Walt Disney's Comics No. 263, August 1962.\n459 (39/3) - December 1978 - 36 pages\nDONALD DUCK Balloonatics - 10 - Reprinted from Walt Disney's Comics No. 242, November 1960.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 17.549371189024406,
+              "w": 125.79134336890243,
+              "x": 150.30046303353657,
+              "y": 160.2610518292683,
+              "confidence": 0.83,
+              "end_index": 1793,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "194 Carl Barks and the Art of the Comic Book",
+              "value": "194 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.861440548780465,
+                  "w": 77.85042016006096,
+                  "x": 36.96067454268292,
+                  "y": 365.2385442073171,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "194 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.86,
+              "w": 77.85,
+              "x": 36.96,
+              "y": 365.24,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "194"
+    }
+  ]
+}

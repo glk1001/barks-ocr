@@ -1,0 +1,895 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "ing a dachshund, with four leashes for one dog. *(Nov. 28, 1964)*",
+          "value": "ing a dachshund, with four leashes for one dog. (Nov. 28, 1964)",
+          "bbox": [
+            {
+              "h": 11.305246760670732,
+              "w": 126.05884491711124,
+              "x": 11.248614114900914,
+              "y": 17.56559737042683,
+              "confidence": 0.97,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**DONALD DUCK** Monkey Business - 10 - art only - Donald, an expert at tuning bells, solves a problem for Scrooge, who has one million unsaleable mechanical monkeys with clangorous cymbals. *(Nov. 16, 1964)*",
+          "value": "DONALD DUCK Monkey Business - 10 - art only - Donald, an expert at tuning bells, solves a problem for Scrooge, who has one million unsaleable mechanical monkeys with clangorous cymbals. (Nov. 16, 1964)",
+          "bbox": [
+            {
+              "h": 23.150141958841463,
+              "w": 126.18851574409298,
+              "x": 10.673204911394816,
+              "y": 29.574017721036586,
+              "confidence": 0.96,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 443, August 1977.",
+          "value": "Reprinted: Walt Disney's Comics No. 443, August 1977.",
+          "bbox": [
+            {
+              "h": 5.406316692073173,
+              "w": 112.06824159203505,
+              "x": 15.505257836318597,
+              "y": 53.409157774390245,
+              "confidence": 0.88,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**GYRO GEARLOOSE** - 4 - Reprinted from *Uncle Scrooge* No. 20, Dec.-Feb. 1958.",
+          "value": "GYRO GEARLOOSE - 4 - Reprinted from Uncle Scrooge No. 20, Dec.-Feb. 1958.",
+          "bbox": [
+            {
+              "h": 10.698286966463407,
+              "w": 125.45621105659296,
+              "x": 10.703576481516768,
+              "y": 59.22435594512196,
+              "confidence": 0.93,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**UNCLE SCROOGE** Million-dollar Shower - 1 - Scrooge hires Indians to perform a dance that produces a shower of money. *(Jan. 15, 1962)*",
+          "value": "UNCLE SCROOGE Million-dollar Shower - 1 - Scrooge hires Indians to perform a dance that produces a shower of money. (Jan. 15, 1962)",
+          "bbox": [
+            {
+              "h": 17.335575457317074,
+              "w": 125.9916193073552,
+              "x": 10.77847215605945,
+              "y": 70.70929115853659,
+              "confidence": 0.92,
+              "end_index": 136,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "As noted on the original art for this page, which still exists, it was intended for the back cover of *Uncle Scrooge* No. 39, Sept.-Nov. 1962.",
+          "value": "As noted on the original art for this page, which still exists, it was intended for the back cover of Uncle Scrooge No. 39, Sept.-Nov. 1962.",
+          "bbox": [
+            {
+              "h": 17.504354039634144,
+              "w": 126.12684117759144,
+              "x": 11.021891673018292,
+              "y": 88.79759336890244,
+              "confidence": 0.97,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 298 (25/10) - July 1965 - 36 pages",
+          "value": "298 (25/10) - July 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5406935975609715,
+              "w": 78.52556914538872,
+              "x": 11.229503263147866,
+              "y": 112.4833193597561,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews ride Donald's vacuum cleaner. *(Dec. 22, 1964)*",
+          "value": "Front cover (art only): The nephews ride Donald's vacuum cleaner. (Dec. 22, 1964)",
+          "bbox": [
+            {
+              "h": 11.114016768292695,
+              "w": 125.93341534870424,
+              "x": 11.243742616234755,
+              "y": 118.15980182926829,
+              "confidence": 0.97,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**DAISY DUCK'S DIARY** The Double Date - 5 - Reprinted from *Daisy Duck's Diary* Four Color No. 1055, Nov.-Jan. 1960.",
+          "value": "DAISY DUCK'S DIARY The Double Date - 5 - Reprinted from Daisy Duck's Diary Four Color No. 1055, Nov.-Jan. 1960.",
+          "bbox": [
+            {
+              "h": 17.377214176829273,
+              "w": 124.92474609375,
+              "x": 11.566084698932926,
+              "y": 130.8062080792683,
+              "confidence": 0.97,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 299 (25/11) - August 1965 - 36 pages",
+          "value": "299 (25/11) - August 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6062728658536525,
+              "w": 86.75420136242379,
+              "x": 11.485523294588413,
+              "y": 153.89150533536585,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**DONALD DUCK** - 10 - Reprinted from *Walt Disney's Comics* No. 117, June 1950.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 117, June 1950.",
+          "bbox": [
+            {
+              "h": 11.20756097560974,
+              "w": 126.27261313833841,
+              "x": 11.296519864710366,
+              "y": 159.65711890243904,
+              "confidence": 0.97,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This was the first Donald Duck story since the first one in the series, in *Walt Disney's Comics* No. 31, April 1943, that was not the lead story in the magazine.",
+          "value": "This was the first Donald Duck story since the first one in the series, in Walt Disney's Comics No. 31, April 1943, that was not the lead story in the magazine.",
+          "bbox": [
+            {
+              "h": 17.30404344512197,
+              "w": 126.09009860899391,
+              "x": 11.469542206554877,
+              "y": 171.82391387195122,
+              "confidence": 0.98,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 300 (25/12) - September 1965 - 36 pages",
+          "value": "300 (25/12) - September 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.697141768292667,
+              "w": 95.73923744759908,
+              "x": 11.696684808498475,
+              "y": 195.36880335365854,
+              "confidence": 0.96,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**DONALD DUCK** Now Showing \"Three Dirty Little Ducks\" - 10 - Reprinted from *Walt Disney's Comics* No. 43, April 1944.",
+          "value": "DONALD DUCK Now Showing \"Three Dirty Little Ducks\" - 10 - Reprinted from Walt Disney's Comics No. 43, April 1944.",
+          "bbox": [
+            {
+              "h": 17.54883384146342,
+              "w": 126.21073813833839,
+              "x": 11.458272913490854,
+              "y": 201.0899542682927,
+              "confidence": 0.97,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: On the third page of the story as originally published, Donald takes a box of \"pre-war bon-bons\" from a drawer; the \"pre-war\" was dropped in the reprint.",
+          "value": "Changes: On the third page of the story as originally published, Donald takes a box of \"pre-war bon-bons\" from a drawer; the \"pre-war\" was dropped in the reprint.",
+          "bbox": [
+            {
+              "h": 17.304329268292694,
+              "w": 126.07261373380332,
+              "x": 11.603171327172255,
+              "y": 219.23771341463413,
+              "confidence": 0.98,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 301 (26/1) - October 1965 - 36 pages",
+          "value": "301 (26/1) - October 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.57602134146342,
+              "w": 86.21536108993901,
+              "x": 11.921818788109755,
+              "y": 242.8519893292683,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews' fishing lines are tangled with Donald's, and they pull him under the boat. *(Mar. 15, 1965)*",
+          "value": "Front cover (art only): The nephews' fishing lines are tangled with Donald's, and they pull him under the boat. (Mar. 15, 1965)",
+          "bbox": [
+            {
+              "h": 17.422248475609738,
+              "w": 126.09896591558687,
+              "x": 11.705516744474085,
+              "y": 248.5468673780488,
+              "confidence": 0.97,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Coloring Book*, 1966 (see \"Other Comics Material\").",
+          "value": "Reprinted: Walt Disney's Coloring Book, 1966 (see \"Other Comics Material\").",
+          "bbox": [
+            {
+              "h": 10.599969512195129,
+              "w": 125.62153332221796,
+              "x": 12.49089236375762,
+              "y": 266.71271341463415,
+              "confidence": 0.95,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**DAISY DUCK'S DIARY** Too Much Help - 4 - Reprinted from *Daisy Duck's Diary* Four Color No. 1150, Dec.-Feb. 1961.",
+          "value": "DAISY DUCK'S DIARY Too Much Help - 4 - Reprinted from Daisy Duck's Diary Four Color No. 1150, Dec.-Feb. 1961.",
+          "bbox": [
+            {
+              "h": 15.985838414634145,
+              "w": 126.00528951505335,
+              "x": 11.89292313738567,
+              "y": 278.7426676829268,
+              "confidence": 0.95,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**DONALD DUCK** This Month The Mad Chemist - 10 - Reprinted from *Walt Disney's Comics* No. 44, May 1944.",
+          "value": "DONALD DUCK This Month The Mad Chemist - 10 - Reprinted from Walt Disney's Comics No. 44, May 1944.",
+          "bbox": [
+            {
+              "h": 11.68488567073171,
+              "w": 126.24534239233994,
+              "x": 11.993808712842988,
+              "y": 295.9751524390244,
+              "confidence": 0.97,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 302 (26/2) - November 1965 - 36 pages",
+          "value": "302 (26/2) - November 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.570030487804869,
+              "w": 92.88170207698171,
+              "x": 12.326814500762193,
+              "y": 313.71690548780487,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**DONALD DUCK** - 10 - Reprinted from *Walt Disney's Comics* No. 47, August 1944.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 47, August 1944.",
+          "bbox": [
+            {
+              "h": 11.560724085365855,
+              "w": 125.80708865282013,
+              "x": 12.408207650533535,
+              "y": 319.56434451219513,
+              "confidence": 0.97,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 303 (26/3) - December 1965 - 36 pages",
+          "value": "303 (26/3) - December 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.619420731707305,
+              "w": 91.92404261147104,
+              "x": 12.611711961699694,
+              "y": 336.7355487804878,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (part) (art only): Donald, dressed as an Indian,",
+          "value": "Front cover (part) (art only): Donald, dressed as an Indian,",
+          "bbox": [
+            {
+              "h": 5.608193597560985,
+              "w": 120.71507669588414,
+              "x": 17.494603182164635,
+              "y": 342.5884756097561,
+              "confidence": 0.96,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "is disgusted as a turkey snuggles up to him. *(May 25, 1965)*\n**DONALD DUCK** - 10 - Reprinted from *Walt Disney's Comics* No. 49, October 1944.",
+          "value": "is disgusted as a turkey snuggles up to him. (May 25, 1965)\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 49, October 1944.",
+          "bbox": [
+            {
+              "h": 17.91648818597561,
+              "w": 126.0625438262195,
+              "x": 149.6557831554878,
+              "y": 16.41098037347561,
+              "confidence": 0.83,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 304 (26/4) - January 1966 - 36 pages",
+          "value": "304 (26/4) - January 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.674130144817072,
+              "w": 86.19213224085365,
+              "x": 149.7302801067073,
+              "y": 41.03048208841464,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald is tangled in his Yo-Yo string, while the nephews easily handle theirs. *(June 24, 1965)*",
+          "value": "Front cover (art only): Donald is tangled in his Yo-Yo string, while the nephews easily handle theirs. (June 24, 1965)",
+          "bbox": [
+            {
+              "h": 16.433251714939022,
+              "w": 125.87239138719512,
+              "x": 149.64549352134145,
+              "y": 46.939678925304875,
+              "confidence": 0.97,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**DAISY DUCK'S DIARY** Daringly Different - 4½ - Reprinted from *Daisy Duck's Diary* Four Color No. 1150, Dec.-Feb. 1961.",
+          "value": "DAISY DUCK'S DIARY Daringly Different - 4½ - Reprinted from Daisy Duck's Diary Four Color No. 1150, Dec.-Feb. 1961.",
+          "bbox": [
+            {
+              "h": 16.667258003048783,
+              "w": 125.96360899390243,
+              "x": 149.5871512957317,
+              "y": 64.69904153963414,
+              "confidence": 0.96,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**DAISY DUCK** False Flattery - ½ - Reprinted from *Daisy Duck's Diary* Four Color No. 1150, Dec.-Feb. 1961.",
+          "value": "DAISY DUCK False Flattery - ½ - Reprinted from Daisy Duck's Diary Four Color No. 1150, Dec.-Feb. 1961.",
+          "bbox": [
+            {
+              "h": 11.555796493902434,
+              "w": 126.0831573932927,
+              "x": 149.56017530487802,
+              "y": 82.32552782012195,
+              "confidence": 0.95,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**DONALD DUCK** - 10 - Reprinted from *Walt Disney's Comics* No. 63, December 1945.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 63, December 1945.",
+          "bbox": [
+            {
+              "h": 10.690381097560984,
+              "w": 126.07844131097559,
+              "x": 149.61982088414632,
+              "y": 94.26130335365853,
+              "confidence": 0.95,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 305 (26/5) - February 1966 - 36 pages",
+          "value": "305 (26/5) - February 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.7189557926829275,
+              "w": 89.46432164634147,
+              "x": 150.01377667682925,
+              "y": 111.90725990853659,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**GYRO GEARLOOSE** - 4 - Reprinted from *Uncle Scrooge* No. 25, Mar.-May 1959.",
+          "value": "GYRO GEARLOOSE - 4 - Reprinted from Uncle Scrooge No. 25, Mar.-May 1959.",
+          "bbox": [
+            {
+              "h": 11.118109756097551,
+              "w": 125.89271341463417,
+              "x": 149.75386051829267,
+              "y": 117.91993902439025,
+              "confidence": 0.96,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**DONALD DUCK** - 9½ (originally 10) - Reprinted from *Walt Disney's Comics* No. 70, July 1946.",
+          "value": "DONALD DUCK - 9½ (originally 10) - Reprinted from Walt Disney's Comics No. 70, July 1946.",
+          "bbox": [
+            {
+              "h": 11.304397865853652,
+              "w": 124.76057926829266,
+              "x": 150.13860708841463,
+              "y": 130.37828506097563,
+              "confidence": 0.95,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Panels 5 and 6 on the ninth page and panels 1 and 2 on the tenth page of the original ten-page story were dropped to make room for a circulation statement.",
+          "value": "Changes: Panels 5 and 6 on the ninth page and panels 1 and 2 on the tenth page of the original ten-page story were dropped to make room for a circulation statement.",
+          "bbox": [
+            {
+              "h": 16.677473323170723,
+              "w": 124.92197217987803,
+              "x": 150.22951600609755,
+              "y": 142.33919588414633,
+              "confidence": 0.97,
+              "end_index": 163,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 306 (26/6) - March 1966 - 36 pages",
+          "value": "306 (26/6) - March 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.607564786585362,
+              "w": 82.3911756859756,
+              "x": 150.16525724085363,
+              "y": 165.28248475609755,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald has connected the nephews' metal bunk bed to the water pipe, and installed faucets. *(Aug. 26, 1965)*",
+          "value": "Front cover (art only): Donald has connected the nephews' metal bunk bed to the water pipe, and installed faucets. (Aug. 26, 1965)",
+          "bbox": [
+            {
+              "h": 17.20314786585365,
+              "w": 125.52000571646339,
+              "x": 150.15265243902437,
+              "y": 171.66689405487804,
+              "confidence": 0.96,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**DONALD DUCK** - 10 - Reprinted from *Walt Disney's Comics* No. 94, July 1948.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 94, July 1948.",
+          "bbox": [
+            {
+              "h": 11.070331554878058,
+              "w": 125.92889862804876,
+              "x": 150.1099676067073,
+              "y": 189.03849466463413,
+              "confidence": 0.96,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 307 (26/7) - April 1966 - 36 pages",
+          "value": "307 (26/7) - April 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.658887195121969,
+              "w": 78.86694169207315,
+              "x": 150.26292301829267,
+              "y": 206.6132469512195,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald is ready with a flyswatter as a nephew's model plane approaches. *(Oct. 1, 1965)*",
+          "value": "Front cover (art only): Donald is ready with a flyswatter as a nephew's model plane approaches. (Oct. 1, 1965)",
+          "bbox": [
+            {
+              "h": 11.696981707317072,
+              "w": 125.67515625,
+              "x": 150.17537538109755,
+              "y": 212.6600762195122,
+              "confidence": 0.93,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**DONALD DUCK** - 10 - Reprinted from *Walt Disney's Comics* No. 91, April 1948.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 91, April 1948.",
+          "bbox": [
+            {
+              "h": 11.07878048780487,
+              "w": 125.90574695121953,
+              "x": 150.1140663109756,
+              "y": 224.59451981707318,
+              "confidence": 0.93,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 308 (26/8) - May 1966 - 36 pages",
+          "value": "308 (26/8) - May 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.610754573170725,
+              "w": 76.64402057926826,
+              "x": 150.23985708841462,
+              "y": 242.25148628048782,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**DONALD AND DAISY** The Beauty Business - 10 - Daisy is angry with Donald for opening a beauty shop, but he is a master beautician, and soon every girl in town — except Daisy — has been to his shop. *(Nov. 16, 1965)*",
+          "value": "DONALD AND DAISY The Beauty Business - 10 - Daisy is angry with Donald for opening a beauty shop, but he is a master beautician, and soon every girl in town — except Daisy — has been to his shop. (Nov. 16, 1965)",
+          "bbox": [
+            {
+              "h": 23.21405487804881,
+              "w": 125.78031631097559,
+              "x": 150.22481707317073,
+              "y": 248.31146341463415,
+              "confidence": 0.97,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Daisy and Donald* No. 1, May 1973.",
+          "value": "Reprinted: Daisy and Donald No. 1, May 1973.",
+          "bbox": [
+            {
+              "h": 5.25923780487803,
+              "w": 92.7592168445122,
+              "x": 154.72073551829266,
+              "y": 272.1247408536585,
+              "confidence": 0.9,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 309 (26/9) - June 1966 - 36 pages",
+          "value": "309 (26/9) - June 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.57917682926829,
+              "w": 76.73791349085364,
+              "x": 150.44827362804878,
+              "y": 283.7023399390244,
+              "confidence": 0.95,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald and Daisy ride together on a skateboard. *(Jan. 2, 1966)*",
+          "value": "Front cover (art only): Donald and Daisy ride together on a skateboard. (Jan. 2, 1966)",
+          "bbox": [
+            {
+              "h": 11.135236280487824,
+              "w": 125.67608231707312,
+              "x": 150.3542263719512,
+              "y": 289.7333917682927,
+              "confidence": 0.97,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 310 (26/10) - July 1966 - 36 pages",
+          "value": "310 (26/10) - July 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.593467987804869,
+              "w": 78.41450647865855,
+              "x": 150.5507926829268,
+              "y": 307.3925990853658,
+              "confidence": 0.95,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (part) (art only): Daisy lifts a barbell with one finger. *(Jan. 28, 1966)*",
+          "value": "Front cover (part) (art only): Daisy lifts a barbell with one finger. (Jan. 28, 1966)",
+          "bbox": [
+            {
+              "h": 10.97469512195119,
+              "w": 125.81828506097561,
+              "x": 150.4205945121951,
+              "y": 313.47496189024395,
+              "confidence": 0.96,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 312 (26/12) - September 1966 - 36 pages",
+          "value": "312 (26/12) - September 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.62289634146342,
+              "w": 95.68359946646342,
+              "x": 150.70909870426829,
+              "y": 330.9559527439024,
+              "confidence": 0.96,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**DONALD AND DAISY** The Not-so-ancient Mariner - 10 - After learning that Daisy and Gladstone have both won",
+          "value": "DONALD AND DAISY The Not-so-ancient Mariner - 10 - After learning that Daisy and Gladstone have both won",
+          "bbox": [
+            {
+              "h": 11.295182926829275,
+              "w": 126.13716082317072,
+              "x": 150.29142530487803,
+              "y": 337.0175990853658,
+              "confidence": 0.98,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "188 Carl Barks and the Art of the Comic Book",
+              "value": "188 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.498193597560984,
+                  "w": 77.7852782012195,
+                  "x": 36.843166920731704,
+                  "y": 363.7621417682927,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "188 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.5,
+              "w": 77.79,
+              "x": 36.84,
+              "y": 363.76,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "188"
+    }
+  ]
+}

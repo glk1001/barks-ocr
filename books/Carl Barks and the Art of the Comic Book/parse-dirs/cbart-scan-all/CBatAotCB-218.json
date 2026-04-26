@@ -1,0 +1,373 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# APPENDIX C",
+          "value": "APPENDIX C",
+          "bbox": [
+            {
+              "h": 15.092612423780492,
+              "w": 98.90193978658536,
+              "x": 25.008835746951217,
+              "y": 15.787059832317071,
+              "confidence": 0.69,
+              "end_index": 9,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# SCROOGE ON THE SCREEN",
+          "value": "SCROOGE ON THE SCREEN",
+          "bbox": [
+            {
+              "h": 15.092612423780492,
+              "w": 98.90193978658536,
+              "x": 25.008835746951217,
+              "y": 15.787059832317071,
+              "confidence": 0.81,
+              "end_index": 20,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "None of the characters Barks created for his comic-book stories appeared in animated cartoons until 1967, when the Disney studio released a double-length short titled *Scrooge McDuck and Money*. (Scrooge had been used in the titles for the *Mickey Mouse Club* on television in the fifties, but he was on screen for only a few seconds, popping out of the Big Bad Wolf's hat. *Scrooge McDuck and Money* was, in any event, his first appearance in a theatrical film.)",
+          "value": "None of the characters Barks created for his comic-book stories appeared in animated cartoons until 1967, when the Disney studio released a double-length short titled Scrooge McDuck and Money. (Scrooge had been used in the titles for the Mickey Mouse Club on television in the fifties, but he was on screen for only a few seconds, popping out of the Big Bad Wolf's hat. Scrooge McDuck and Money was, in any event, his first appearance in a theatrical film.)",
+          "bbox": [
+            {
+              "h": 53.46252096036586,
+              "w": 127.29697408536585,
+              "x": 12.058199314024389,
+              "y": 37.86487042682926,
+              "confidence": 0.99,
+              "end_index": 462,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The cartoon opens with a song that tells of the need for money to circulate, and then we see Scrooge in his money bin, tossing money around as he sings its praise. (Scrooge speaks with the voice of the late Bill Thompson, who gave Scrooge a standard old-man voice with a slight Scottish accent.) The nephews appear, bearing a piggy-bank containing $1.95 (Scrooge can tell the amount by shaking the bank) and seeking Scrooge's investment advice. The film segues into a history of money, told in song by the Mellomen, and returns to Scrooge and the nephews occasionally in between illustrated musical treatises on the dimensions of a billion, the perils of inflation, the need for a family budget, and so on. At the close, the nephews invest their $1.95 in Scrooge's enterprises.",
+          "value": "The cartoon opens with a song that tells of the need for money to circulate, and then we see Scrooge in his money bin, tossing money around as he sings its praise. (Scrooge speaks with the voice of the late Bill Thompson, who gave Scrooge a standard old-man voice with a slight Scottish accent.) The nephews appear, bearing a piggy-bank containing $1.95 (Scrooge can tell the amount by shaking the bank) and seeking Scrooge's investment advice. The film segues into a history of money, told in song by the Mellomen, and returns to Scrooge and the nephews occasionally in between illustrated musical treatises on the dimensions of a billion, the perils of inflation, the need for a family budget, and so on. At the close, the nephews invest their $1.95 in Scrooge's enterprises.",
+          "bbox": [
+            {
+              "h": 82.92289824695122,
+              "w": 127.62067525724085,
+              "x": 12.297941358612803,
+              "y": 91.20443025914635,
+              "confidence": 0.99,
+              "end_index": 776,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Scrooge McDuck and Money* is a dreary cartoon; it suffers from its makers' lack of confidence in animation's ability to teach. The sugar coating is so thick that it obscures the limited amount of information about the economic system that the film is intended to convey. The Scrooge of the film is clearly only a device and not a character. He bears no resemblance — physically or psychologically — to Barks's character.",
+          "value": "Scrooge McDuck and Money is a dreary cartoon; it suffers from its makers' lack of confidence in animation's ability to teach. The sugar coating is so thick that it obscures the limited amount of information about the economic system that the film is intended to convey. The Scrooge of the film is clearly only a device and not a character. He bears no resemblance — physically or psychologically — to Barks's character.",
+          "bbox": [
+            {
+              "h": 47.56279344512194,
+              "w": 127.63553627572408,
+              "x": 12.65757157488567,
+              "y": 173.9364900914634,
+              "confidence": 0.99,
+              "end_index": 420,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Twelve years before the release of *Scrooge McDuck and Money*, the Disney studio had given some consideration to making an *Uncle Scrooge* cartoon that might have been more consistent with Barks's comic books — mainly because it might have been based on ideas provided by Barks himself.",
+          "value": "Twelve years before the release of Scrooge McDuck and Money, the Disney studio had given some consideration to making an Uncle Scrooge cartoon that might have been more consistent with Barks's comic books — mainly because it might have been based on ideas provided by Barks himself.",
+          "bbox": [
+            {
+              "h": 35.32415396341464,
+              "w": 127.46641863567072,
+              "x": 12.889361661585363,
+              "y": 221.1284679878049,
+              "confidence": 0.99,
+              "end_index": 285,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Disney Archives has a file of correspondence between Barks and Ken Peterson, then the head of the Disney animation department. In a letter dated January 4, 1955, following up on a phone conversation, Peterson told Barks that he was interested in a story line for an *Uncle Scrooge* cartoon.",
+          "value": "The Disney Archives has a file of correspondence between Barks and Ken Peterson, then the head of the Disney animation department. In a letter dated January 4, 1955, following up on a phone conversation, Peterson told Barks that he was interested in a story line for an Uncle Scrooge cartoon.",
+          "bbox": [
+            {
+              "h": 35.76914634146342,
+              "w": 127.17447170350609,
+              "x": 13.131172351371951,
+              "y": 256.4828506097561,
+              "confidence": 0.99,
+              "end_index": 293,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks responded six days later with a nine-page script that is no longer in the Archives' files. However, he condensed the script to a two-page synopsis in a letter to Peterson dated January 10, 1955. Here is the story as Barks summarized it:",
+          "value": "Barks responded six days later with a nine-page script that is no longer in the Archives' files. However, he condensed the script to a two-page synopsis in a letter to Peterson dated January 10, 1955. Here is the story as Barks summarized it:",
+          "bbox": [
+            {
+              "h": 29.581280487804868,
+              "w": 127.15862566692073,
+              "x": 13.302366139481705,
+              "y": 292.10458079268295,
+              "confidence": 0.99,
+              "end_index": 241,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The underlying theme is about the modern working man (Donald) and the easy, unworried life he leads as contrasted to that of his boss. (Scrooge).",
+          "value": "The underlying theme is about the modern working man (Donald) and the easy, unworried life he leads as contrasted to that of his boss. (Scrooge).",
+          "bbox": [
+            {
+              "h": 17.855442073170778,
+              "w": 126.797450933689,
+              "x": 13.336862137957317,
+              "y": 330.52182164634144,
+              "confidence": 0.99,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "It opens on Don in his bed, surrounded by every modern convenience. When the alarm rings, he simply presses a few buttons, and his breakfast is cooked for him at his bedside. He doesn't even have to get up to eat.",
+          "value": "It opens on Don in his bed, surrounded by every modern convenience. When the alarm rings, he simply presses a few buttons, and his breakfast is cooked for him at his bedside. He doesn't even have to get up to eat.",
+          "bbox": [
+            {
+              "h": 23.671497713414634,
+              "w": 126.48194931402435,
+              "x": 149.916796875,
+              "y": 17.355677400914633,
+              "confidence": 0.99,
+              "end_index": 212,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "He rides to work, (while a narrator points out that he is covered by insurance if he gets sick, and that another insurance will care for him if he loses his job. He is well fed, well scrubbed. Secure.) He works at Scrooge's money bin, operating a money sorting machine that runs by power, so that all the duck has to do is sit on a seat and whistle a merry tune. The coins, dropping out of the various pipes in the machine, plop into their respective kettles with a musical tempo.",
+          "value": "He rides to work, (while a narrator points out that he is covered by insurance if he gets sick, and that another insurance will care for him if he loses his job. He is well fed, well scrubbed. Secure.) He works at Scrooge's money bin, operating a money sorting machine that runs by power, so that all the duck has to do is sit on a seat and whistle a merry tune. The coins, dropping out of the various pipes in the machine, plop into their respective kettles with a musical tempo.",
+          "bbox": [
+            {
+              "h": 47.02295064786586,
+              "w": 126.46716653963414,
+              "x": 150.12322408536585,
+              "y": 41.18329744664634,
+              "confidence": 0.99,
+              "end_index": 479,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge is a stern, but busy boss who keeps to his ledgers. Also he keeps an ear cocked on the off-stage plunking of coins to make sure Donald maintains a steady clip of production. Scrooge also makes sure that Donald doesn't leave his work one second before the noon bell.",
+          "value": "Scrooge is a stern, but busy boss who keeps to his ledgers. Also he keeps an ear cocked on the off-stage plunking of coins to make sure Donald maintains a steady clip of production. Scrooge also makes sure that Donald doesn't leave his work one second before the noon bell.",
+          "bbox": [
+            {
+              "h": 29.29638910060975,
+              "w": 126.29440358231705,
+              "x": 150.17402057926827,
+              "y": 88.4678105945122,
+              "confidence": 0.99,
+              "end_index": 272,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "To show how plush is the working man's life, Don collects his morning wages as he leaves for lunch, and pays part of the money to a dealer in autos at a shiny salesroom down the street. In three more weeks Don will have paid down enough for the down payment, and he can drive a shiny little red sport car out of the place.",
+          "value": "To show how plush is the working man's life, Don collects his morning wages as he leaves for lunch, and pays part of the money to a dealer in autos at a shiny salesroom down the street. In three more weeks Don will have paid down enough for the down payment, and he can drive a shiny little red sport car out of the place.",
+          "bbox": [
+            {
+              "h": 35.100080030487796,
+              "w": 126.12150342987803,
+              "x": 150.41412919207315,
+              "y": 118.00884146341463,
+              "confidence": 0.99,
+              "end_index": 321,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Don eats lunch in a dining car cafe, crowded, noisy, with a jukebox that jumps a foot off the floor. A happy place, full of smiles and laughter, and has a cook that philosophizes that happy, unworried people have good digestions. Another point in the working man's favor.",
+          "value": "Don eats lunch in a dining car cafe, crowded, noisy, with a jukebox that jumps a foot off the floor. A happy place, full of smiles and laughter, and has a cook that philosophizes that happy, unworried people have good digestions. Another point in the working man's favor.",
+          "bbox": [
+            {
+              "h": 29.230541158536578,
+              "w": 126.38063071646341,
+              "x": 150.56881669207314,
+              "y": 153.33728277439025,
+              "confidence": 0.99,
+              "end_index": 270,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "By contrast, Scrooge's frugal lunch of crackers and cheese, which he bought someplace for wholesale prices, seems somber indeed. But Scrooge has his reasons for eating so frugally. He's the saving kind. He was young once, too, like Donald. But he saved his money, and look at what it's got him — three cubic acres of the stuff.",
+          "value": "By contrast, Scrooge's frugal lunch of crackers and cheese, which he bought someplace for wholesale prices, seems somber indeed. But Scrooge has his reasons for eating so frugally. He's the saving kind. He was young once, too, like Donald. But he saved his money, and look at what it's got him — three cubic acres of the stuff.",
+          "bbox": [
+            {
+              "h": 34.99745807926829,
+              "w": 126.23144817073171,
+              "x": 150.61587461890244,
+              "y": 182.9130525914634,
+              "confidence": 0.99,
+              "end_index": 326,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Before Scrooge has a chance to eat his cheese, he has to listen to the radio... Big shots must keep abreast of the news... The radio announces a plague of rats is loose in the city. Scrooge goes nearly frantic. The greatest fear he knows is that rats COULD get into his money and eat up billions of dollars in green backs.",
+          "value": "Before Scrooge has a chance to eat his cheese, he has to listen to the radio... Big shots must keep abreast of the news... The radio announces a plague of rats is loose in the city. Scrooge goes nearly frantic. The greatest fear he knows is that rats COULD get into his money and eat up billions of dollars in green backs.",
+          "bbox": [
+            {
+              "h": 29.626051829268317,
+              "w": 126.63744283536585,
+              "x": 150.75298399390243,
+              "y": 218.3505868902439,
+              "confidence": 0.98,
+              "end_index": 321,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge closes and shutters all of his windows and bolts the door. He sits down terrified to eat his cheese sandwich. But before he can begin he is beseiged by a determined rat who has smelled the cheese from afar. The rat rattles the shutters, bangs the door, and tries by various gag means to get inside. Meanwhile Scrooge gulps his sandwich as best he can, showing the contrast between his harried lunch hour and that of his fortunate employee down the street bouncing on his stool to the tune of the juke box.",
+          "value": "Scrooge closes and shutters all of his windows and bolts the door. He sits down terrified to eat his cheese sandwich. But before he can begin he is beseiged by a determined rat who has smelled the cheese from afar. The rat rattles the shutters, bangs the door, and tries by various gag means to get inside. Meanwhile Scrooge gulps his sandwich as best he can, showing the contrast between his harried lunch hour and that of his fortunate employee down the street bouncing on his stool to the tune of the juke box.",
+          "bbox": [
+            {
+              "h": 52.904794207317046,
+              "w": 126.30095464939025,
+              "x": 151.06469131097558,
+              "y": 248.0124237804878,
+              "confidence": 0.99,
+              "end_index": 512,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The rat gets in (by gag means) and then begins a battle of personalities between he and Scrooge. Scrooge corners the rat, and is going to shoot him, but the rat picks up a big bill and holds it in front of him for protection. Scrooge cocks the gun. The rat looks at the denomination of the bill, throws it away, and grabs a bigger one. Scrooge sights down the gun barrel sees the figure $10,000, and goes chicken.",
+          "value": "The rat gets in (by gag means) and then begins a battle of personalities between he and Scrooge. Scrooge corners the rat, and is going to shoot him, but the rat picks up a big bill and holds it in front of him for protection. Scrooge cocks the gun. The rat looks at the denomination of the bill, throws it away, and grabs a bigger one. Scrooge sights down the gun barrel sees the figure $10,000, and goes chicken.",
+          "bbox": [
+            {
+              "h": 41.05440548780487,
+              "w": 126.02610137195121,
+              "x": 151.47651676829267,
+              "y": 301.19330030487805,
+              "confidence": 0.99,
+              "end_index": 412,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "He can't shoot a ten-thousand dollar bill to pieces, so he clubs",
+          "value": "He can't shoot a ten-thousand dollar bill to pieces, so he clubs",
+          "bbox": [
+            {
+              "h": 5.556242378048809,
+              "w": 121.10707317073171,
+              "x": 155.67461890243902,
+              "y": 342.5289100609756,
+              "confidence": 0.95,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "218 Carl Barks and the Art of the Comic Book",
+              "value": "218 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.681867378048755,
+                  "w": 77.65385813643293,
+                  "x": 37.681587747713415,
+                  "y": 364.2729649390244,
+                  "confidence": 0.93,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "218 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.68,
+              "w": 77.65,
+              "x": 37.68,
+              "y": 364.27,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "218"
+    }
+  ]
+}

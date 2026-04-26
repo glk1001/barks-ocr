@@ -1,0 +1,30 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# Appendices",
+          "value": "Appendices",
+          "bbox": [
+            {
+              "h": 48.46455411585365,
+              "w": 232.0712145102896,
+              "x": 26.713152867759145,
+              "y": 83.37618521341463,
+              "confidence": 0.82,
+              "end_index": 9,
+              "label": "doc_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true
+    }
+  ]
+}

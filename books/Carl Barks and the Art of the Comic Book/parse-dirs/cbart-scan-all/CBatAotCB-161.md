@@ -1,0 +1,3 @@
+![Walt Disney's Donald Duck in VACATION TIME. Donald Duck and his nephews are in a car that is flying off a broken bridge over a river. They are being attacked by a black panther from a tree on the left and a bear from the rocks on the right. Donald says, "AH! VACATION TIME! THE ONE SEASON OF THE YEAR WHEN WE CAN GET AWAY FROM THE DANGERS OF CITY LIVING!" One nephew shouts, "LOOK OUT IN FRONT OF YOU!" Another shouts, "LOOK OUT BEHIND YOU!" and a third shouts, "WATCH OUT ON THIS SIDE!"](CBatAotCB-161_page_1_image_1_v2.jpg)
+
+From Vacation Parade No. 1, 1950; © 1950 Walt Disney Productions.

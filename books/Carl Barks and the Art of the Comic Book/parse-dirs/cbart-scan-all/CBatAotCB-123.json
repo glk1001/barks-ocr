@@ -1,0 +1,422 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "For the next plot I may have the J.W\\.s battling the dogfood people to save wild horses. Please don't tell these plots around until sufficient time has elapsed for Western to get the stuff on the presses. That could be four to six months. After reading parts of *All in Color for a Dime* \\[edited by Dick Lupoff and Don Thompson; New Rochelle: Arlington House, 1970], I can understand Chase's fear of National scooping him on any plots that might look promising. Those production-line whip crackers could have a comic written, drawn, and on the newsstands in 30 days.\" (May 3, 1971, letter to Michael Barrier)",
+          "value": "For the next plot I may have the J.W.s battling the dogfood people to save wild horses. Please don't tell these plots around until sufficient time has elapsed for Western to get the stuff on the presses. That could be four to six months. After reading parts of All in Color for a Dime [edited by Dick Lupoff and Don Thompson; New Rochelle: Arlington House, 1970], I can understand Chase's fear of National scooping him on any plots that might look promising. Those production-line whip crackers could have a comic written, drawn, and on the newsstands in 30 days.\" (May 3, 1971, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 58.78107993521341,
+              "w": 125.17186344798016,
+              "x": 12.143552901105183,
+              "y": 19.589055354420733,
+              "confidence": 0.99,
+              "end_index": 608,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Gold of the '49ers - 12 - script only - The Woodchucks, whose treasury is depleted, come to the desert in search of three gold bricks lost there years ago. The nephews' search is interrupted by a wild horse stampede, started by some unsavory mustang hunters on motorcycles. (May 25, 1971)",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Gold of the '49ers - 12 - script only - The Woodchucks, whose treasury is depleted, come to the desert in search of three gold bricks lost there years ago. The nephews' search is interrupted by a wild horse stampede, started by some unsavory mustang hunters on motorcycles. (May 25, 1971)",
+          "bbox": [
+            {
+              "h": 41.17651486280487,
+              "w": 125.12736935499237,
+              "x": 12.081240591653962,
+              "y": 78.60932355182928,
+              "confidence": 0.98,
+              "end_index": 331,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "See Barks's comments on \"The Day the Mountain Shook,\" *Huey, Dewey and Louie Junior Woodchucks* No. 13, March 1972.",
+          "value": "See Barks's comments on \"The Day the Mountain Shook,\" Huey, Dewey and Louie Junior Woodchucks No. 13, March 1972.",
+          "bbox": [
+            {
+              "h": 16.130990853658535,
+              "w": 125.59871605849845,
+              "x": 11.795527462842987,
+              "y": 120.50322027439024,
+              "confidence": 0.98,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**14 - May 1972 - 36 pages**",
+          "value": "14 - May 1972 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6099885670731595,
+              "w": 58.86785227705793,
+              "x": 11.881142578124999,
+              "y": 144.1177019817073,
+              "confidence": 0.96,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Duckmade Disaster - 13 - script only - Scrooge is forced to move his money bin when the Woodchucks and other protest that it is on the site of the home of Cornelius Coot, the founder of Duckburg. (July 30, 1971)",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Duckmade Disaster - 13 - script only - Scrooge is forced to move his money bin when the Woodchucks and other protest that it is on the site of the home of Cornelius Coot, the founder of Duckburg. (July 30, 1971)",
+          "bbox": [
+            {
+              "h": 29.772816310975593,
+              "w": 125.76741353849086,
+              "x": 11.151440310594511,
+              "y": 150.24912347560976,
+              "confidence": 0.98,
+              "end_index": 254,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: This story was twelve pages as submitted; it was expanded to thirteen pages by enlarging several panels.",
+          "value": "Changes: This story was twelve pages as submitted; it was expanded to thirteen pages by enlarging several panels.",
+          "bbox": [
+            {
+              "h": 11.271768292682927,
+              "w": 124.93572920636431,
+              "x": 12.006585008574694,
+              "y": 180.14630716463415,
+              "confidence": 0.97,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**15 - July 1972 - 36 pages**",
+          "value": "15 - July 1972 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.602477134146347,
+              "w": 58.370866163300306,
+              "x": 11.928012933498474,
+              "y": 197.46990091463414,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Wailing Whalers - 18 - script only - The Woodchucks have gone to sea in a rowboat to observe the migration of the whales; when their boat is capsized, they are rescued by Scrooge's whaling ship. Huey and the Woodchucks' leader go with Scrooge in his underwater whale-finder and while they are gone, Scrooge's ship is attacked by renegade whalers. (Sept. 30, 1971)",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Wailing Whalers - 18 - script only - The Woodchucks have gone to sea in a rowboat to observe the migration of the whales; when their boat is capsized, they are rescued by Scrooge's whaling ship. Huey and the Woodchucks' leader go with Scrooge in his underwater whale-finder and while they are gone, Scrooge's ship is attacked by renegade whalers. (Sept. 30, 1971)",
+          "bbox": [
+            {
+              "h": 47.06675304878052,
+              "w": 125.18180687881097,
+              "x": 12.01003953887195,
+              "y": 203.6408231707317,
+              "confidence": 0.99,
+              "end_index": 406,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**16 - September 1972 - 36 pages**",
+          "value": "16 - September 1972 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.651410060975595,
+              "w": 75.47056283346036,
+              "x": 12.70701433879573,
+              "y": 258.3104039634147,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Where There's Smoke - 16 - script only - The Woodchucks patrol the forest, watching for fires, and are drenched repeatedly with chemical goop as Donald, a sky warden, dumps a load each time he sees what he thinks is a fire from his plane. (Jan. 3, 1972)",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Where There's Smoke - 16 - script only - The Woodchucks patrol the forest, watching for fires, and are drenched repeatedly with chemical goop as Donald, a sky warden, dumps a load each time he sees what he thinks is a fire from his plane. (Jan. 3, 1972)",
+          "bbox": [
+            {
+              "h": 35.35872713414637,
+              "w": 125.02134217797253,
+              "x": 12.719859232088412,
+              "y": 264.22042682926826,
+              "confidence": 0.99,
+              "end_index": 296,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**17 - November 1972 - 36 pages**",
+          "value": "17 - November 1972 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.50323932926829,
+              "w": 75.52109243997714,
+              "x": 12.703002453315547,
+              "y": 307.89825457317073,
+              "confidence": 0.97,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Be Leery of Lake Eerie - 16 - script only - The Woodchucks try to go swimming in incredibly polluted Lake Eerie, but they find it infested with two kinds of strange beast: catfish that dine on beer cans and old tires, and a dragon with skin that looks like old plastic bags. (Jan. 27, 1972)",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Be Leery of Lake Eerie - 16 - script only - The Woodchucks try to go swimming in incredibly polluted Lake Eerie, but they find it infested with two kinds of strange beast: catfish that dine on beer cans and old tires, and a dragon with skin that looks like old plastic bags. (Jan. 27, 1972)",
+          "bbox": [
+            {
+              "h": 35.62102134146342,
+              "w": 125.28187142721036,
+              "x": 12.521796636814024,
+              "y": 313.8608917682927,
+              "confidence": 0.99,
+              "end_index": 333,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: In the third panel on the last page of Barks's script, one of the nephews says of the dragon, \"He seems to have passed away.\" In the story as published, this has been changed to \"He seems to really be gone this time.\"",
+          "value": "Changes: In the third panel on the last page of Barks's script, one of the nephews says of the dragon, \"He seems to have passed away.\" In the story as published, this has been changed to \"He seems to really be gone this time.\"",
+          "bbox": [
+            {
+              "h": 23.266616330030487,
+              "w": 124.86033727134145,
+              "x": 150.1637137957317,
+              "y": 19.787876810213415,
+              "confidence": 0.99,
+              "end_index": 225,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In the fourth panel, in the original script, one of the nephews asks, \"What caused this disaster, doctors?\" and one of two scientists replies, \"The rains, without a doubt.\" In the published story, the scientist replies, \"The rains! All that fresh water was too much for them.\"",
+          "value": "In the fourth panel, in the original script, one of the nephews asks, \"What caused this disaster, doctors?\" and one of two scientists replies, \"The rains, without a doubt.\" In the published story, the scientist replies, \"The rains! All that fresh water was too much for them.\"",
+          "bbox": [
+            {
+              "h": 29.03901676829268,
+              "w": 124.78758955792684,
+              "x": 150.244384527439,
+              "y": 43.5231631097561,
+              "confidence": 0.99,
+              "end_index": 275,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In the fifth panel in Barks's script, one scientist says, \"Fresh water diluted the lake until it was only 98 percent impure.\" The other scientist says, \"The dragon couldn't take it. He was poisoned.\" In the published version, this panel has been replaced by one in which the delighted nephews exclaim that the lake is clean again.",
+          "value": "In the fifth panel in Barks's script, one scientist says, \"Fresh water diluted the lake until it was only 98 percent impure.\" The other scientist says, \"The dragon couldn't take it. He was poisoned.\" In the published version, this panel has been replaced by one in which the delighted nephews exclaim that the lake is clean again.",
+          "bbox": [
+            {
+              "h": 35.06887385670732,
+              "w": 125.0363414634146,
+              "x": 150.17637004573172,
+              "y": 73.21189596036585,
+              "confidence": 0.99,
+              "end_index": 329,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In the final panel, in Barks's script, the lake is still polluted. The Woodchucks' leader, who is testing the water, says, \"Scoriatic phosphates are bad today, troopers.\" One nephew, coating himself with material from a bucket, says, \"Coat yourselves with graphite and wear gas masks.\" Another nephew — already coated and wearing a gas mask — is leaping into the lake and saying, \"Last one in is a pink baboon.\" In the published version, the happy nephews are swimming in a clean Lake Eerie, and saying that they hope \"someone can figure a way to keep it this way.\"",
+          "value": "In the final panel, in Barks's script, the lake is still polluted. The Woodchucks' leader, who is testing the water, says, \"Scoriatic phosphates are bad today, troopers.\" One nephew, coating himself with material from a bucket, says, \"Coat yourselves with graphite and wear gas masks.\" Another nephew — already coated and wearing a gas mask — is leaping into the lake and saying, \"Last one in is a pink baboon.\" In the published version, the happy nephews are swimming in a clean Lake Eerie, and saying that they hope \"someone can figure a way to keep it this way.\"",
+          "bbox": [
+            {
+              "h": 58.34252286585365,
+              "w": 125.22047446646339,
+              "x": 150.18288681402439,
+              "y": 108.95862804878048,
+              "confidence": 0.99,
+              "end_index": 564,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"Just noticed that there is another script I overlooked. 'Be Leery of Lake Eerie' 16 pages about pollution. It will be the next on the stands, I think. It concerns Lake Eerie which has become so full of acids, old tires, gunk and junk that the J.W\\.s have to wear grease when swimming. A giant dragon forms in the lake from the coalescence of chemical matters. He consumes junk in great mouthfuls. The J.W\\.s protect the dragon, but a big game hunter tries to kill it. Anyway, the office butchered my ending and it all comes out as sweet as raindrops on rose petals.\" (Aug. 16, 1972, letter to Michael Barrier)",
+          "value": "Barks: \"Just noticed that there is another script I overlooked. 'Be Leery of Lake Eerie' 16 pages about pollution. It will be the next on the stands, I think. It concerns Lake Eerie which has become so full of acids, old tires, gunk and junk that the J.W.s have to wear grease when swimming. A giant dragon forms in the lake from the coalescence of chemical matters. He consumes junk in great mouthfuls. The J.W.s protect the dragon, but a big game hunter tries to kill it. Anyway, the office butchered my ending and it all comes out as sweet as raindrops on rose petals.\" (Aug. 16, 1972, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 58.89251524390246,
+              "w": 125.11718368902437,
+              "x": 150.41814214939023,
+              "y": 168.24626524390243,
+              "confidence": 0.99,
+              "end_index": 616,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**19 - (March) 1973 - 36 pages**",
+          "value": "19 - (March) 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.560449695121942,
+              "w": 68.4038757621951,
+              "x": 150.38569550304877,
+              "y": 233.25004573170733,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Teahouse of the Waggin' Dragon - 17 - script only - The Woodchucks accompany Scrooge to Outer Monghoulia, to the Teahouse of the Waggin' Dragon, where he buys a sackful of fortune cookies that he plans to use to scare away some pesky newsmen. (Mar. 31, 1972)",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS Teahouse of the Waggin' Dragon - 17 - script only - The Woodchucks accompany Scrooge to Outer Monghoulia, to the Teahouse of the Waggin' Dragon, where he buys a sackful of fortune cookies that he plans to use to scare away some pesky newsmen. (Mar. 31, 1972)",
+          "bbox": [
+            {
+              "h": 35.20609756097562,
+              "w": 125.20299923780486,
+              "x": 150.55075838414632,
+              "y": 239.22701981707317,
+              "confidence": 0.99,
+              "end_index": 301,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: The story was submitted as sixteen pages. It was expanded by enlarging several panels and by adding the fourth panel of the seventh page in the published version.",
+          "value": "Changes: The story was submitted as sixteen pages. It was expanded by enlarging several panels and by adding the fourth panel of the seventh page in the published version.",
+          "bbox": [
+            {
+              "h": 22.57125,
+              "w": 125.7156974085366,
+              "x": 150.7892721036585,
+              "y": 274.6284603658537,
+              "confidence": 0.98,
+              "end_index": 170,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**20 - May 1973 - 36 pages**",
+          "value": "20 - May 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.573917682926839,
+              "w": 60.71607850609756,
+              "x": 151.3416025152439,
+              "y": 308.35266768292684,
+              "confidence": 0.97,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS New Zoo Brews Ado - 17 - script only - The Woodchucks try to keep a group of abandoned wild animals from bothering the rich golfers who have pledged to give money to build cages for them. (June 5, 1972)",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOODCHUCKS New Zoo Brews Ado - 17 - script only - The Woodchucks try to keep a group of abandoned wild animals from bothering the rich golfers who have pledged to give money to build cages for them. (June 5, 1972)",
+          "bbox": [
+            {
+              "h": 34.90877286585362,
+              "w": 125.35813262195119,
+              "x": 151.33071265243902,
+              "y": 314.0979192073171,
+              "confidence": 0.99,
+              "end_index": 245,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n123",
+              "value": "Carl Barks and the Art of the Comic Book\n123",
+              "bbox": [
+                {
+                  "h": 5.16528201219513,
+                  "w": 77.61642530487805,
+                  "x": 173.55657964939022,
+                  "y": 360.77766768292685,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n123",
+          "bbox": [
+            {
+              "h": 5.17,
+              "w": 77.62,
+              "x": 173.56,
+              "y": 360.78,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "123"
+    }
+  ]
+}

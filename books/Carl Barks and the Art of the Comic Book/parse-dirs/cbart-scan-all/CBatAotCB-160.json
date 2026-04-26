@@ -1,0 +1,452 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Reprinted from the inside back cover of Uncle Scrooge Four Color No. 386, 1952.\nUNCLE SCROOGE - 1 (back cover) - Reprinted from the back cover of Uncle Scrooge Four Color No. 386, 1952.",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Reprinted from the inside back cover of Uncle Scrooge Four Color No. 386, 1952.\nUNCLE SCROOGE - 1 (back cover) - Reprinted from the back cover of Uncle Scrooge Four Color No. 386, 1952.",
+          "bbox": [
+            {
+              "h": 16.87596179496951,
+              "w": 125.73279856612042,
+              "x": 11.717206197599085,
+              "y": 16.862788205030487,
+              "confidence": 0.9,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## UNCLE SCROOGE AND MONEY (Gold Key)",
+          "value": "UNCLE SCROOGE AND MONEY (Gold Key)",
+          "bbox": [
+            {
+              "h": 14.234205411585362,
+              "w": 113.5317802019817,
+              "x": 17.595553067835365,
+              "y": 57.82522294207317,
+              "confidence": 0.99,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### No number - (March) 1967 - 36 pages",
+          "value": "No number - (March) 1967 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.738248856707319,
+              "w": 93.92073861471036,
+              "x": 11.97725204839939,
+              "y": 78.49194169207317,
+              "confidence": 0.86,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 130, July 1951.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 130, July 1951.",
+          "bbox": [
+            {
+              "h": 11.444805640243912,
+              "w": 125.03717856802592,
+              "x": 12.109993688071645,
+              "y": 84.4670350609756,
+              "confidence": 0.97,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## UNCLE SCROOGE GOES TO DISNEYLAND (Dell)",
+          "value": "UNCLE SCROOGE GOES TO DISNEYLAND (Dell)",
+          "bbox": [
+            {
+              "h": 13.994153963414623,
+              "w": 97.74075671684452,
+              "x": 25.376465081935972,
+              "y": 109.20555640243903,
+              "confidence": 0.99,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### 1 - (August) 1957 - 100 pages",
+          "value": "1 - (August) 1957 - 100 pages",
+          "bbox": [
+            {
+              "h": 5.539881859756115,
+              "w": 69.98344500285822,
+              "x": 11.989054044397866,
+              "y": 129.89458079268292,
+              "confidence": 0.95,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Untitled story - 20 - Scrooge tells Grandma of his days as the skipper of a steamboat, when he and Ratchet Gearloose, Gyro's grandfather, raced the Beagle family's steamboat to pick up a cargo of gold bound for New Orleans. *(Jan. 10, 1957)*\nThese pages are three panels deep.\nThis story is actually a segment of the story \"Uncle Scrooge Goes to Disneyland,\" which takes up the entire book; the Barks segment begins on the third page, not counting the covers.\nBarks's list shows this story as nineteen pages, but this may be an error; the story does not appear to have been stretched through the enlargement and rearrangement of panels.\nReprinted: Walt Disney Comics Digest No. 28, April 1971.",
+          "value": "Untitled story - 20 - Scrooge tells Grandma of his days as the skipper of a steamboat, when he and Ratchet Gearloose, Gyro's grandfather, raced the Beagle family's steamboat to pick up a cargo of gold bound for New Orleans. (Jan. 10, 1957)\nThese pages are three panels deep.\nThis story is actually a segment of the story \"Uncle Scrooge Goes to Disneyland,\" which takes up the entire book; the Barks segment begins on the third page, not counting the covers.\nBarks's list shows this story as nineteen pages, but this may be an error; the story does not appear to have been stretched through the enlargement and rearrangement of panels.\nReprinted: Walt Disney Comics Digest No. 28, April 1971.",
+          "bbox": [
+            {
+              "h": 28.81780106707316,
+              "w": 125.25229730373474,
+              "x": 12.113263862423779,
+              "y": 135.81186356707317,
+              "confidence": 0.88,
+              "end_index": 692,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## VACATION IN DISNEYLAND (Dell)",
+          "value": "VACATION IN DISNEYLAND (Dell)",
+          "bbox": [
+            {
+              "h": 7.399024390243913,
+              "w": 124.62786013719513,
+              "x": 11.811968368902438,
+              "y": 223.71084603658537,
+              "confidence": 0.98,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### Four Color No. 1025 - Aug.-Oct. 1959 - 36 pages",
+          "value": "Four Color No. 1025 - Aug.-Oct. 1959 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.792629573170725,
+              "w": 117.64571848799542,
+              "x": 11.948099156821645,
+              "y": 239.25123475609755,
+              "confidence": 0.95,
+              "end_index": 46,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in Mastering the Matterhorn - 8 - art only - The ducks climb the Matterhorn, where they find the Beagle Boys and a diamond they've hidden at the top of the mountain. *(Feb. 14, 1959)*\nReprinted: Walt Disney Comics Digest No. 7, January 1969.\nGRANDMA DUCK AND UNCLE SCROOGE in Trail\nTycoon - 6 - art only - Scrooge brings along no provisions except money on a wagon train heading west, but he learns that Indians prefer buttons to coins. *(Feb. 14, 1959)*\nReprinted: Walt Disney Comics Digest No. 9, March 1969.\nGYRO GEARLOOSE and GUS GOOSE on the Dream Planet - 6 - art only - Gyro and Gus find Gus's \"dream planet,\" where the inhabitants are completely lazy. Gyro spoils this paradise by encouraging them to work harder to make life easier. *(Feb. 14, 1959)*\nReprinted: Walt Disney Comics Digest No. 7, January 1969.",
+          "value": "DONALD DUCK in Mastering the Matterhorn - 8 - art only - The ducks climb the Matterhorn, where they find the Beagle Boys and a diamond they've hidden at the top of the mountain. (Feb. 14, 1959)\nReprinted: Walt Disney Comics Digest No. 7, January 1969.\nGRANDMA DUCK AND UNCLE SCROOGE in Trail\nTycoon - 6 - art only - Scrooge brings along no provisions except money on a wagon train heading west, but he learns that Indians prefer buttons to coins. (Feb. 14, 1959)\nReprinted: Walt Disney Comics Digest No. 9, March 1969.\nGYRO GEARLOOSE and GUS GOOSE on the Dream Planet - 6 - art only - Gyro and Gus find Gus's \"dream planet,\" where the inhabitants are completely lazy. Gyro spoils this paradise by encouraging them to work harder to make life easier. (Feb. 14, 1959)\nReprinted: Walt Disney Comics Digest No. 7, January 1969.",
+          "bbox": [
+            {
+              "h": 28.629146341463418,
+              "w": 125.29481492949694,
+              "x": 11.692010527820122,
+              "y": 310.44091463414634,
+              "confidence": 0.86,
+              "end_index": 828,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## VACATION PARADE (Dell)",
+          "value": "VACATION PARADE (Dell)",
+          "bbox": [
+            {
+              "h": 7.564270198170732,
+              "w": 96.7895807926829,
+              "x": 165.67744664634145,
+              "y": 16.379532679115854,
+              "confidence": 0.98,
+              "end_index": 21,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### No number (No. 1) - (July) 1950 - 112 pages",
+          "value": "No number (No. 1) - (July) 1950 - 112 pages",
+          "bbox": [
+            {
+              "h": 6.078689977134145,
+              "w": 109.62017149390246,
+              "x": 152.32812118902436,
+              "y": 29.050967035060978,
+              "confidence": 0.93,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in Vacation Time - 33 (pp. 1-33) - Donald takes the nephews camping in a wilderness area, where they encounter a bullying camper who is careless with his cigarettes and his campfire. The camper sets fire to the woods, but saves himself by stealing Donald's car. The ducks, trapped by the blaze, save themselves by burying themselves in trenches. The camper tells the forest rangers that the ducks started the fire. *(Jan. 5, 1950)*\nDONALD DUCK in Camp Counselor - 8 (pp. 102-109) - art only - Donald, humiliated in his efforts to teach the nephews and other boys woodcraft, finally fools them into believing a bearskin rug is a real bear. *(Jan. 27, 1950)*\nDONALD'S GRANDMA DUCK - 14 - (pp. 114-127) - art only - The nephews, visiting Grandma, have trouble adjusting to country ways, especially the quiet at night, but Grandma is not sympathetic. They find a letter from one of Grandma's creditors and mistakenly think that she is about to lose her farm. *(Jan. 19, 1950)*",
+          "value": "DONALD DUCK in Vacation Time - 33 (pp. 1-33) - Donald takes the nephews camping in a wilderness area, where they encounter a bullying camper who is careless with his cigarettes and his campfire. The camper sets fire to the woods, but saves himself by stealing Donald's car. The ducks, trapped by the blaze, save themselves by burying themselves in trenches. The camper tells the forest rangers that the ducks started the fire. (Jan. 5, 1950)\nDONALD DUCK in Camp Counselor - 8 (pp. 102-109) - art only - Donald, humiliated in his efforts to teach the nephews and other boys woodcraft, finally fools them into believing a bearskin rug is a real bear. (Jan. 27, 1950)\nDONALD'S GRANDMA DUCK - 14 - (pp. 114-127) - art only - The nephews, visiting Grandma, have trouble adjusting to country ways, especially the quiet at night, but Grandma is not sympathetic. They find a letter from one of Grandma's creditors and mistakenly think that she is about to lose her farm. (Jan. 19, 1950)",
+          "bbox": [
+            {
+              "h": 46.624235899390236,
+              "w": 125.0312137957317,
+              "x": 151.97642149390242,
+              "y": 35.3558174542683,
+              "confidence": 0.91,
+              "end_index": 983,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 8 - (July) 1957 - 100 pages",
+          "value": "8 - (July) 1957 - 100 pages",
+          "bbox": [
+            {
+              "h": 5.645625,
+              "w": 61.71950647865852,
+              "x": 152.05632050304877,
+              "y": 149.5107393292683,
+              "confidence": 0.95,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "(Retitled *Picnic Party*)\nGYRO GEARLOOSE in Picnic - 6 - Gyro goes picnicking to see what he can do to make open-air picnics more pleasant, but by the time he's through inventing, the picnic is no longer a picnic. *(July 12, 1956)*\nThese pages are three panels deep.\nReprinted: Walt Disney Comics Digest No. 4, October 1968.",
+          "value": "(Retitled Picnic Party)\nGYRO GEARLOOSE in Picnic - 6 - Gyro goes picnicking to see what he can do to make open-air picnics more pleasant, but by the time he's through inventing, the picnic is no longer a picnic. (July 12, 1956)\nThese pages are three panels deep.\nReprinted: Walt Disney Comics Digest No. 4, October 1968.",
+          "bbox": [
+            {
+              "h": 23.241402439024377,
+              "w": 125.09132240853657,
+              "x": 152.22796875,
+              "y": 161.68887576219512,
+              "confidence": 0.93,
+              "end_index": 323,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## WALT DISNEY COMICS DIGEST (Gold Key)",
+          "value": "WALT DISNEY COMICS DIGEST (Gold Key)",
+          "bbox": [
+            {
+              "h": 14.205320121951244,
+              "w": 112.99582317073171,
+              "x": 157.6607583841463,
+              "y": 208.00221036585364,
+              "confidence": 0.99,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "All issues of *Walt Disney Comics Digest* were approximately four and seven-eighths inches wide and six and five-eighths inches tall.",
+          "value": "All issues of Walt Disney Comics Digest were approximately four and seven-eighths inches wide and six and five-eighths inches tall.",
+          "bbox": [
+            {
+              "h": 11.05241615853658,
+              "w": 126.11658155487802,
+              "x": 150.93948361280488,
+              "y": 227.6909679878049,
+              "confidence": 0.98,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 1 - June 1968 - 196 pages",
+          "value": "1 - June 1968 - 196 pages",
+          "bbox": [
+            {
+              "h": 5.655068597560985,
+              "w": 59.54856516768292,
+              "x": 151.60409108231707,
+              "y": 244.6179649390244,
+              "confidence": 0.94,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE Secret of Atlantis - 32 (pp. 3-18, 99-114) - A reprint of \"UNCLE SCROOGE\" in *Uncle Scrooge* No. 5, Mar.-May 1954.\nChanges: Title changed as noted. Part of the first panel on the seventeenth page is covered by a caption identifying the second half of the story.",
+          "value": "UNCLE SCROOGE Secret of Atlantis - 32 (pp. 3-18, 99-114) - A reprint of \"UNCLE SCROOGE\" in Uncle Scrooge No. 5, Mar.-May 1954.\nChanges: Title changed as noted. Part of the first panel on the seventeenth page is covered by a caption identifying the second half of the story.",
+          "bbox": [
+            {
+              "h": 16.5494817073171,
+              "w": 124.89175495426828,
+              "x": 151.6325419207317,
+              "y": 268.92338414634145,
+              "confidence": 0.91,
+              "end_index": 274,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 2 - July 1968 - 196 pages",
+          "value": "2 - July 1968 - 196 pages",
+          "bbox": [
+            {
+              "h": 5.512339939024405,
+              "w": 58.4918711890244,
+              "x": 151.21491996951218,
+              "y": 293.26463414634145,
+              "confidence": 0.95,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK AND UNCLE SCROOGE Island in the Sky - 18 (pp. 3-20) - A reprint of \"UNCLE SCROOGE Island in the Sky\" in *Uncle Scrooge* No. 29, Mar.-May 1960.\nChanges: Title changed as indicated. Splash panel deepened and partially redrawn.",
+          "value": "DONALD DUCK AND UNCLE SCROOGE Island in the Sky - 18 (pp. 3-20) - A reprint of \"UNCLE SCROOGE Island in the Sky\" in Uncle Scrooge No. 29, Mar.-May 1960.\nChanges: Title changed as indicated. Splash panel deepened and partially redrawn.",
+          "bbox": [
+            {
+              "h": 17.820342987804924,
+              "w": 125.50829268292681,
+              "x": 150.8143445121951,
+              "y": 299.374618902439,
+              "confidence": 0.91,
+              "end_index": 235,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### 3 - August 1968 - 196 pages",
+          "value": "3 - August 1968 - 196 pages",
+          "bbox": [
+            {
+              "h": 5.658246951219534,
+              "w": 66.52896722560973,
+              "x": 151.0052000762195,
+              "y": 335.16493902439026,
+              "confidence": 0.94,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE All at Sea - 17 (pp. 3-19) - Reprinted",
+          "value": "UNCLE SCROOGE All at Sea - 17 (pp. 3-19) - Reprinted",
+          "bbox": [
+            {
+              "h": 6.2083765243902596,
+              "w": 123.60402439024385,
+              "x": 152.42376333841463,
+              "y": 340.99593749999997,
+              "confidence": 0.91,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "160 Carl Barks and the Art of the Comic Book",
+              "value": "160 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.3586432926829,
+                  "w": 77.625703125,
+                  "x": 36.244413109756096,
+                  "y": 363.8510442073171,
+                  "confidence": 0.96,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "160 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.36,
+              "w": 77.63,
+              "x": 36.24,
+              "y": 363.85,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "160"
+    }
+  ]
+}

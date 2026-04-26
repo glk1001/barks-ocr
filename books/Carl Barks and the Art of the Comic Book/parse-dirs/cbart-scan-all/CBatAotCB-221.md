@@ -1,0 +1,28 @@
+# APPENDIX D
+# AN INFORMAL (AND HIGHLY SELECTIVE) LISTING OF ARTICLES ABOUT CARL BARKS
+
+When I first began work on this book in 1967, it was my intention to list all of the fan magazine articles in which there were substantial references to Carl Barks, and tolist all of the references to Barks and his work in commercial magazines and books. At that time, even such an all- inclusive list would have encompassed only a handful of items.
+
+In the past dozen vears, and particularly since l970 interest in Barks' work has grown tremendously, and the number of articles about him has multiplied to a total many times that in 1967. Moreover, the line between "fan" and "commercial" publications has blurred, to the point that some magazines that are "fanzines" in all but name are nationally distributed, and Robert Overstreet's Comic Book Price Guide is found in hundreds of bookstores. It would now be difficult to list everything that has been written about Barks, and difficult to categorize the publications in which such writings have appeared.
+
+Most of the material about Barks published since 1967 is of little value (as, for that matter, is most of the material published before 1967). Listing all of it would serve no worthwhile purpose. It has seemed the better' course to describe the Barks articles that have something to recommend them beyond their association with Barks. I will discuss them in roughly the order in which they appeared.
+
+As best I can tell, the first reference to Barks's comic- book work in print came in an article titled "The Comic World," by Charles Beaumont, in the May 1955 issue of a West Coast magazine called Fortnight. The article describes Western Publishing's West Coast comics oper- ations, and the restrictions under which Western's artist and writers had to operate. Here is what Beaumont said about Barks:
+
+> "Only the Dalai Lama of scripsters, Carl Barks, is permitted real freedom. Gray-haired and sixtyish, Barks has a freshness and originality which both inspire and depress colleagues. He invented that wonderful miser, Uncle Scrooge (only Dell character rivaling Pogo in popularity among the 'intelligentsia'), the gently mad inventing genius, Gyro Gearloose, and those unvillainous villains, the Beagle Boys. Every month Barks's Donald Duck yarn is featured in *Walt Disney's Comics*, the best-loved story in the comic world. The polished drawing and writing (Barks does both) bring a flood of fan mail, including many protests whenever a non-Barks Donald appears."
+
+In retrospect, it seems remarkable that this article did
+
+not crack the wall of anonymity around Barks and bring him into touch with those people who were writing fan letters about his stories. But, for whatever reason — and I can think of several — Beaumont's praise had no effects. As mentioned elsewhere in this book, it was another five years before Barks began corresponding with any of his readers.
+
+I first learned Barks's name upon reading *Comic Art* No. 5 (1964), a mimeographed fan magazine, in the spring of 1965. Don and Maggie Thompson were then alone, or almost so, among the publishers of comics fan magazines in that theirs was not dominated by the super-heroes. They were Barks fans, and mentioned in an editorial in No. 5 that "Carl Barks, creator of Uncle Scrooge, Gladstone Gander and Gyro Gearloose, as well as the Junior Woodchucks of the World, has personally appointed us both Honorary Grand Exalted Hightails in that eminent organization. A very extensive article-interview-bibliography treatment of Mr. Barks will be featured in (hopefully) the next issue of *Comic Art*. It was too much to fit into this one."
+
+As it happened, that "article-interview-bibliography treatment" did not appear until 1968, in *Comic Art* No. 7, and I wrote the article portion myself. The article was accompanied by an interview (recorded by Malcolm Willits in 1962, and supplemented by correspondence with the Thompsons), a brief autobiography, a bare-bones bibliography, and excerpts from a number of Barks's letters to the Thompsons.
+
+My article had first appeared, in different form, in the sixth issue (June 1967) of my own magazine, *Funnyworld*, which at that time was distributed through an amateur press association, CAPA-alpha (which is still in existence). In both *Funnyworld* and *Comic Art*, the article was titled "The Lord of Quackly Hall." It is essentially this article — greatly expanded and heavily revised — that is published in this book.
+
+(The revised version has a few paragraphs from my second major article about Barks, "The Duck Man," which was published as part of *The Comic-Book Book* (Don Thompson and Dick Lupoff, editors; New Rochelle, N.Y.: Arlington House, 1974). "The Duck Man" is in many respects a condensed and "popular" version of "The Lord of Quackly Hall.")
+
+The Barks bibliography in this book was published in *Funnyworld* No. 7 (September 1967) through No. 16 (Winter 1974-75). As with the article, the final version of the bibliography differs considerably from the original. No. 16 was a special Barks issue, including, in addition to the final installment of the bibliography, an article by Kim Weston on Barks's unpublished comics work (the article is excerpted throughout the bibliography in this book) and eight pages of rare Barks artwork (some of it reproduced in this book).
+
+Barks was mentioned in one paragraph in *The Assault on Childhood* by Ron Goulart (Los Angeles: Sherbourne

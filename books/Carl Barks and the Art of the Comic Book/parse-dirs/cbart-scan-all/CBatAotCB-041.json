@@ -1,0 +1,164 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "precise — and this becomes apparent only when Barks's stories are read, rather than just looked at. Barks was a writer first and an artist second, and his drawings have life because they are in the service of characters and ideas.",
+          "value": "precise — and this becomes apparent only when Barks's stories are read, rather than just looked at. Barks was a writer first and an artist second, and his drawings have life because they are in the service of characters and ideas.",
+          "bbox": [
+            {
+              "h": 36.77902391387195,
+              "w": 125.47699826124237,
+              "x": 10.938778225038108,
+              "y": 13.994478372713415,
+              "confidence": 0.96,
+              "end_index": 229,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In the late forties, Barks turned increasingly to comedy that hinged as much on what the ducks thought and felt as on what they did. He had learned how to make states of mind clearly visible. There were wonderful sequences in which the \"action\" consisted almost entirely of subtle — but unmistakable — changes in the expression on Donald's face. \"Luck of the North,\" in a 1949 issue of *Donald Duck*, contains one of the best examples of this. Donald has won what appears to be a triumph over Gladstone, by sending him on a wild-goose chase to the Arctic, but in a page and a half of remarkable drawings, Donald's satisfaction disintegrates into guilt and anxiety, as he realizes that he may have purchased his triumph at the cost of Gladstone's life. Work of this kind was beyond the abilities of most comic-book artists, even those who were, as draftsmen, Barks's superiors; their work looks like shorthand when set beside his.",
+          "value": "In the late forties, Barks turned increasingly to comedy that hinged as much on what the ducks thought and felt as on what they did. He had learned how to make states of mind clearly visible. There were wonderful sequences in which the \"action\" consisted almost entirely of subtle — but unmistakable — changes in the expression on Donald's face. \"Luck of the North,\" in a 1949 issue of Donald Duck, contains one of the best examples of this. Donald has won what appears to be a triumph over Gladstone, by sending him on a wild-goose chase to the Arctic, but in a page and a half of remarkable drawings, Donald's satisfaction disintegrates into guilt and anxiety, as he realizes that he may have purchased his triumph at the cost of Gladstone's life. Work of this kind was beyond the abilities of most comic-book artists, even those who were, as draftsmen, Barks's superiors; their work looks like shorthand when set beside his.",
+          "bbox": [
+            {
+              "h": 161.78881097560975,
+              "w": 126.02826862614329,
+              "x": 11.093745474466461,
+              "y": 51.14135670731707,
+              "confidence": 0.98,
+              "end_index": 928,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "I have talked about Barks as a writer, and about the increasing importance that dialogue assumed in his stories, and yet I have not quoted that dialogue, except incidentally. It is",
+          "value": "I have talked about Barks as a writer, and about the increasing importance that dialogue assumed in his stories, and yet I have not quoted that dialogue, except incidentally. It is",
+          "bbox": [
+            {
+              "h": 29.812591463414638,
+              "w": 125.77501714939022,
+              "x": 11.425969893292683,
+              "y": 213.83926829268293,
+              "confidence": 0.99,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "really not fair to pluck Barks's dialogue out of context, as if he were a playwright. He wrote his dialogue to be read within comic-book panels, and words that seem crisp and sassy in that context may have a flat taste when read apart from the drawings. The dialogue in Barks's earliest stories is rather flat and ordinary even for comic books; it is sparse and functional, subordinate to the almost purely visual gags. But as his work evolved in the forties, he realized, I think, that comic-book dialogue can be richer precisely because it accompanies pictures. If the pictures tell much of the story, and if the story itself is compelling, it doesn't really matter if some of the words in the dialogue balloons are unfamiliar. The child reader will be tantalized by them rather than repelled. The writer of children's books, on the other hand, must not put too many verbal obstacles in his young reader's path, because there are no pictures — or at least not as many — to make clear what the words mean.",
+          "value": "really not fair to pluck Barks's dialogue out of context, as if he were a playwright. He wrote his dialogue to be read within comic-book panels, and words that seem crisp and sassy in that context may have a flat taste when read apart from the drawings. The dialogue in Barks's earliest stories is rather flat and ordinary even for comic books; it is sparse and functional, subordinate to the almost purely visual gags. But as his work evolved in the forties, he realized, I think, that comic-book dialogue can be richer precisely because it accompanies pictures. If the pictures tell much of the story, and if the story itself is compelling, it doesn't really matter if some of the words in the dialogue balloons are unfamiliar. The child reader will be tantalized by them rather than repelled. The writer of children's books, on the other hand, must not put too many verbal obstacles in his young reader's path, because there are no pictures — or at least not as many — to make clear what the words mean.",
+          "bbox": [
+            {
+              "h": 169.70381478658535,
+              "w": 126.79734375,
+              "x": 148.08263528963414,
+              "y": 13.945495426829268,
+              "confidence": 0.99,
+              "end_index": 1005,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The comic-book writer can really let himself go in his captions, especially if they are simply comments on what the panels clearly show. Take for example the Donald Duck story in the November 1948 *Walt Disney's Comics*, in which Donald is a fox hunter. These captions accompany three panels of bumbling fox hunters and their bumbling",
+          "value": "The comic-book writer can really let himself go in his captions, especially if they are simply comments on what the panels clearly show. Take for example the Donald Duck story in the November 1948 Walt Disney's Comics, in which Donald is a fox hunter. These captions accompany three panels of bumbling fox hunters and their bumbling",
+          "bbox": [
+            {
+              "h": 59.589077743902436,
+              "w": 126.34367378048776,
+              "x": 148.73256288109755,
+              "y": 184.34858231707318,
+              "confidence": 0.99,
+              "end_index": 333,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "OVER THE FIRST FENCE COME THE HOUNDS, SEEKING THE SCENT OF THEIR WILD COUSIN!",
+          "md": "![OVER THE FIRST FENCE COME THE HOUNDS, SEEKING THE SCENT OF THEIR WILD COUSIN!](CBatAotCB-041_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-041_page_1_image_1_v2.jpg",
+          "bbox": null,
+          "type": "image"
+        },
+        {
+          "caption": "THEN OVER COME THE RIDERS! PICTURES OF GRACE AND POISE AND INSOUCIANT DARING!",
+          "md": "![THEN OVER COME THE RIDERS! PICTURES OF GRACE AND POISE AND INSOUCIANT DARING!](CBatAotCB-041_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-041_page_1_image_2_v2.jpg",
+          "bbox": null,
+          "type": "image"
+        },
+        {
+          "md": "From *Walt Disney's Comics* No. 98, November 1948; © 1948 Walt Disney Productions.",
+          "value": "From Walt Disney's Comics No. 98, November 1948; © 1948 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.124138719512175,
+              "w": 176.585556402439,
+              "x": 53.75258574695122,
+              "y": 349.03506859756095,
+              "confidence": 0.94,
+              "end_index": 81,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n41",
+              "value": "Carl Barks and the Art of the Comic Book\n41",
+              "bbox": [
+                {
+                  "h": 4.14331554878052,
+                  "w": 5.143788109756115,
+                  "x": 268.79846227134146,
+                  "y": 367.87518292682927,
+                  "confidence": 0.79,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n41",
+          "bbox": [
+            {
+              "h": 4.14,
+              "w": 5.14,
+              "x": 268.8,
+              "y": 367.88,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "41"
+    }
+  ]
+}

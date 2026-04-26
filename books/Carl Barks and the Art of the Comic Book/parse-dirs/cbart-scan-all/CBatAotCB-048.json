@@ -1,0 +1,185 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A comic strip showing Donald Duck looking through a telescope and seeing the Beagle Boys digging a hole near a vault.",
+          "md": "![A comic strip showing Donald Duck looking through a telescope and seeing the Beagle Boys digging a hole near a vault.](CBatAotCB-048_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-048_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 192.23363328887197,
+              "w": 266.51924614138716,
+              "x": 10.417047684832317,
+              "y": 11.974834698932927,
+              "confidence": 0.95,
+              "end_index": 142,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From Walt Disney's Comics No. 135, December 1951; © 1951 Walt Disney Productions.",
+          "value": "From Walt Disney's Comics No. 135, December 1951; © 1951 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.442568597560958,
+              "w": 179.2549533155488,
+              "x": 53.75477229420731,
+              "y": 210.56348323170732,
+              "confidence": 0.95,
+              "end_index": 80,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "broadcloth coat, which we are told in a later story he bought in Scotland in 1902.",
+          "value": "broadcloth coat, which we are told in a later story he bought in Scotland in 1902.",
+          "bbox": [
+            {
+              "h": 15.051859756097564,
+              "w": 125.66574230659296,
+              "x": 11.617810475419207,
+              "y": 222.30244664634148,
+              "confidence": 0.98,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge's love for money soon turned into something like lust. Before, he was simply surrounded by money; now he wallowed in it. \"I wish people weren't so darned crazy about money,\" he says at one point. \"They make me nervous.\" He surveys his vast pile and says, \"Now, me, I know money isn't worth anything! It's just a lot of paper and metal.\" And then he plunges into the cash with wild abandon. \"But I love the stuff! I love to dive around in it like a porpoise! And burrow through it like a gopher! And toss it up and let it hit me on the head!\"",
+          "value": "Scrooge's love for money soon turned into something like lust. Before, he was simply surrounded by money; now he wallowed in it. \"I wish people weren't so darned crazy about money,\" he says at one point. \"They make me nervous.\" He surveys his vast pile and says, \"Now, me, I know money isn't worth anything! It's just a lot of paper and metal.\" And then he plunges into the cash with wild abandon. \"But I love the stuff! I love to dive around in it like a porpoise! And burrow through it like a gopher! And toss it up and let it hit me on the head!\"",
+          "bbox": [
+            {
+              "h": 88.14182926829267,
+              "w": 125.96512564310211,
+              "x": 11.668094631288108,
+              "y": 237.59775914634147,
+              "confidence": 0.99,
+              "end_index": 548,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In another story, Donald asks Scrooge what he plans to do with all of his money. \"Why, I'm going to keep it right here, of course!\" Scrooge replies hotly. \"I just like to look at it! And I like",
+          "value": "In another story, Donald asks Scrooge what he plans to do with all of his money. \"Why, I'm going to keep it right here, of course!\" Scrooge replies hotly. \"I just like to look at it! And I like",
+          "bbox": [
+            {
+              "h": 29.295868902439015,
+              "w": 125.96122201314783,
+              "x": 11.859312476181401,
+              "y": 326.0294131097561,
+              "confidence": 0.98,
+              "end_index": 192,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "to run around in it in my bare feet and feel thousand dollar bills crackling between my toes!\"",
+          "value": "to run around in it in my bare feet and feel thousand dollar bills crackling between my toes!\"",
+          "bbox": [
+            {
+              "h": 21.292888719512202,
+              "w": 125.4334012957317,
+              "x": 150.0385575457317,
+              "y": 222.42999237804878,
+              "confidence": 0.98,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"People that spend money are saps!\" he says as he roots and snorts contentedly in the stuff. \"They don't know how to enjoy it.\"",
+          "value": "\"People that spend money are saps!\" he says as he roots and snorts contentedly in the stuff. \"They don't know how to enjoy it.\"",
+          "bbox": [
+            {
+              "h": 21.843338414634143,
+              "w": 125.61101753048781,
+              "x": 150.03156059451217,
+              "y": 244.7686737804878,
+              "confidence": 0.98,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge's money bin and the Beagle Boys arrived on the scene, appropriately, at almost the same time. The Beagle Boys — a grinning gang of domino-masked burglars so accustomed to prison that they went by numbers instead of names — made their debut in the November 1951 Walt Disney's Comics, but only in the last panel, scooping up Scrooge's money after he accidentally blew open his vault. The money bin — a square building many stories high, and full to the brim with cash — first appeared in the next issue of Walt",
+          "value": "Scrooge's money bin and the Beagle Boys arrived on the scene, appropriately, at almost the same time. The Beagle Boys — a grinning gang of domino-masked burglars so accustomed to prison that they went by numbers instead of names — made their debut in the November 1951 Walt Disney's Comics, but only in the last panel, scooping up Scrooge's money after he accidentally blew open his vault. The money bin — a square building many stories high, and full to the brim with cash — first appeared in the next issue of Walt",
+          "bbox": [
+            {
+              "h": 88.16592987804876,
+              "w": 125.96419207317075,
+              "x": 150.22149009146338,
+              "y": 266.98067835365856,
+              "confidence": 0.99,
+              "end_index": 515,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "48 Carl Barks and the Art of the Comic Book",
+              "value": "48 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.205548780487825,
+                  "w": 80.36059355945122,
+                  "x": 36.05227991615853,
+                  "y": 366.48100609756096,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "48 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.21,
+              "w": 80.36,
+              "x": 36.05,
+              "y": 366.48,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "48"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "No. 262 (half page); FC, US No. 39; unpublished half-page \"status seeker\" gag.\nNov. 3 - GG, US No. 38.\nNov 6 - FC, DD No. 83.\nNov. 9 - Unpublished FC for US (\"six cups\").\nNov. 16 - WDC No. 261.\nDec. 5 - WDC No. 262.\nDec. 13 - WDC No. 263.",
+          "value": "No. 262 (half page); FC, US No. 39; unpublished half-page \"status seeker\" gag.\nNov. 3 - GG, US No. 38.\nNov 6 - FC, DD No. 83.\nNov. 9 - Unpublished FC for US (\"six cups\").\nNov. 16 - WDC No. 261.\nDec. 5 - WDC No. 262.\nDec. 13 - WDC No. 263.",
+          "bbox": [
+            {
+              "h": 11.686217606707315,
+              "w": 120.51873332698169,
+              "x": 17.596247618140243,
+              "y": 16.547466653963415,
+              "confidence": 0.83,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1962",
+          "value": "1962",
+          "bbox": [
+            {
+              "h": 4.517486661585362,
+              "w": 11.225992997332316,
+              "x": 13.235204839939023,
+              "y": 70.02098894817074,
+              "confidence": 0.94,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 15 - \"A Spicy Tale,\" GG, IFC, IBC, US No. 39; \"Million Dollar Shower,\" WDC No. 297; unpublished \"major operation\" half-page.\nFeb. 5 - \"Tricky Experiment,\" US No. 39.\nFeb. 9 - WDC No. 264.\nFeb. 17 - WDC No. 265.\nMar. 5 - WDC No. 266.\nMar. 15 - WDC No. 267.\nMar. 19 - GG, US No. 41.\nApr. 12 - \"Oddball Odyssey,\" US No. 40.\nApr. 18 - GG, US No. 40.\nMay 16 - \"Status Seeker,\" US No. 41.\nMay 21 - FC, US No. 40.\nJune 4 - WDC No. 268.\nJune? - WDC No. 269.\nJune 25 - WDC No. 270.\nJuly 16 - \"For Old Dime's Sake,\" US No. 43.\nAug. 11 - WDC No. 271.\nAug. 15 - WDC No. 272.\nAug. 27 - WDC No. 273.\nSept. 17 - \"Sticky Money,\" US No. 42.\nSept. 24 - One-page gags for US No. 42, half-page gags for US No. 47.\nOct. 10 - WDC No. 274.\nOct. 29 - WDC No. 275.\nNov. 5 - FC, US No. 43.\nNov. 13 - WDC No. 276.\nDec. 10 - \"Crown of the Mayas,\" US No. 44.\nDec. 20 - Gag ideas (one each) for US No. 46, 54, 55, 61.\nDec. 26 - \"Invisible Intruder,\" US No. 44.",
+          "value": "Jan. 15 - \"A Spicy Tale,\" GG, IFC, IBC, US No. 39; \"Million Dollar Shower,\" WDC No. 297; unpublished \"major operation\" half-page.\nFeb. 5 - \"Tricky Experiment,\" US No. 39.\nFeb. 9 - WDC No. 264.\nFeb. 17 - WDC No. 265.\nMar. 5 - WDC No. 266.\nMar. 15 - WDC No. 267.\nMar. 19 - GG, US No. 41.\nApr. 12 - \"Oddball Odyssey,\" US No. 40.\nApr. 18 - GG, US No. 40.\nMay 16 - \"Status Seeker,\" US No. 41.\nMay 21 - FC, US No. 40.\nJune 4 - WDC No. 268.\nJune? - WDC No. 269.\nJune 25 - WDC No. 270.\nJuly 16 - \"For Old Dime's Sake,\" US No. 43.\nAug. 11 - WDC No. 271.\nAug. 15 - WDC No. 272.\nAug. 27 - WDC No. 273.\nSept. 17 - \"Sticky Money,\" US No. 42.\nSept. 24 - One-page gags for US No. 42, half-page gags for US No. 47.\nOct. 10 - WDC No. 274.\nOct. 29 - WDC No. 275.\nNov. 5 - FC, US No. 43.\nNov. 13 - WDC No. 276.\nDec. 10 - \"Crown of the Mayas,\" US No. 44.\nDec. 20 - Gag ideas (one each) for US No. 46, 54, 55, 61.\nDec. 26 - \"Invisible Intruder,\" US No. 44.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1963",
+          "value": "1963",
+          "bbox": [
+            {
+              "h": 4.43544969512197,
+              "w": 11.056442335175303,
+              "x": 13.290234017721035,
+              "y": 272.4055106707317,
+              "confidence": 0.94,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 12 - Unpublished one-page \"kids runaway\" gag.\nJan. 17 - FC, US No. 44.\nJan. 23 - FC, Donald Duck Album No. 1 (Gold Key).\nJan. 28 - \"Isle of Geese,\" US No. 45.\nFeb. 7 - \"Travel Tightwad,\" US No. 45.\nFeb. 21 - FC, WDC No. 276.\nMar. 6 - FC, US No. 45.\nMar. 7 - WDC No. 277.\nMar. 19 - GG, US No. 46.\nApr. 4 - FC, WDC No. 277.\nApr. 11 - WDC No. 278.\nMay 8 - FC, WDC No. 278.\nMay 27 - \"Lost Beneath the Sea,\" US No. 46.\nJune 4 - \"Lemonade Fling,\" FC, US No. 46.\nJune 7 - One-page gags for US No. 46, 54.\nJune 24 - WDC No. 279.\nJuly 1 - FC, WDC No. 279.\nJuly 15 - WDC No. 280.\nJuly 22 - GG, US No. 47.\nAug. 5 - FC; WDC No. 280.\nAug. 14 - \"Thrifty Spendthrift,\" US No. 47.\nAug. 19 - Unknown page intended for US No. 47, possibly in US No. 61.\nAug. 21 - FC, US No. 47.\nAug. 26 - WDC, No. 281.\nSept. 6 - FC, WDE No. 281; WDC No. 282.\nSept. 16 - GG, US No. 48; FC, WDC No. 282.\nOct. 5 - \"Many Faces of Magica de Spell,\" US No. 48.\nOct. 15 - FC, US No. 48.\nOct. 29 - WDC No. 283.\nOct. 31 - FC, WDC No. 283.\nNov. 12 - \"Loony Luna Gold Rush,\" FC, US No. 49.\nDec. 3 - WDC No. 286.\nDec. 26 - \"Rug Riders in the Sky,\" FC, US No. 50.",
+          "value": "Jan. 12 - Unpublished one-page \"kids runaway\" gag.\nJan. 17 - FC, US No. 44.\nJan. 23 - FC, Donald Duck Album No. 1 (Gold Key).\nJan. 28 - \"Isle of Geese,\" US No. 45.\nFeb. 7 - \"Travel Tightwad,\" US No. 45.\nFeb. 21 - FC, WDC No. 276.\nMar. 6 - FC, US No. 45.\nMar. 7 - WDC No. 277.\nMar. 19 - GG, US No. 46.\nApr. 4 - FC, WDC No. 277.\nApr. 11 - WDC No. 278.\nMay 8 - FC, WDC No. 278.\nMay 27 - \"Lost Beneath the Sea,\" US No. 46.\nJune 4 - \"Lemonade Fling,\" FC, US No. 46.\nJune 7 - One-page gags for US No. 46, 54.\nJune 24 - WDC No. 279.\nJuly 1 - FC, WDC No. 279.\nJuly 15 - WDC No. 280.\nJuly 22 - GG, US No. 47.\nAug. 5 - FC; WDC No. 280.\nAug. 14 - \"Thrifty Spendthrift,\" US No. 47.\nAug. 19 - Unknown page intended for US No. 47, possibly in US No. 61.\nAug. 21 - FC, US No. 47.\nAug. 26 - WDC, No. 281.\nSept. 6 - FC, WDE No. 281; WDC No. 282.\nSept. 16 - GG, US No. 48; FC, WDC No. 282.\nOct. 5 - \"Many Faces of Magica de Spell,\" US No. 48.\nOct. 15 - FC, US No. 48.\nOct. 29 - WDC No. 283.\nOct. 31 - FC, WDC No. 283.\nNov. 12 - \"Loony Luna Gold Rush,\" FC, US No. 49.\nDec. 3 - WDC No. 286.\nDec. 26 - \"Rug Riders in the Sky,\" FC, US No. 50.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1964",
+          "value": "1964",
+          "bbox": [
+            {
+              "h": 4.547903963414638,
+              "w": 11.371674923780493,
+              "x": 150.7078982469512,
+              "y": 160.73881097560977,
+              "confidence": 0.94,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 18 - \"How Green Was my Lettuce,\" FC, US No. 51.\nFeb. 19 - \"Great Wig Mystery,\" FC, US No. 52.\nMar. 6 - WDC No. 288.\nMar. 18 - FC, WDC No. 288.\nMar. 27 - \"Interplanetary Postman,\" FC, US No. 53.\nApr. 6 - WDC No. 289.\nApr. 22 - FC, WDC No. 289.\nMay 11 - \"Billion Dollar Safari,\" FC, US No. 54.\nMay 15 - FC, WDC No. 290.\nMay 25 - WDC No. 291.\nMay 29 - FC, WDC No. 291.\nJune 11 - WDC No. 292.\nJune 16 - FC, WDC No. 292.\nJuly 13 - \"McDuck of Arabia,\" FC, US No. 55.\nAug. 3 - Lost watch gag, US No. 55.\nAug. 31 - \"Ghost Town Railroad,\" FC, IFC, US No. 56.\nSept. 17 - WDC No. 294.\nSept. 19 - Forgotten keys gag, US No. 57.\nSept. 28 - Three one-page gags, US No. 57.\nOct. 9 - FC, WDC No. 295; FC, WDC No. 296.\nOct. 19 - FC, US No. 57.\nOct. 23 - FC, DD No. 101.\nOct. 30 - \"Swamp of No Return,\" US No. 57.\nNov. 16 - WDC No. 297.\nNov. 28 - FC, WDC No. 297.\nDec. 3 - FC, US No. 58.\nDec. 13 - \"Giant Robot Robbers,\" US No. 58.\nDec. 21 - One-page gags for US No. 58 (two), 61 (one).\nDec. 22 - FC, WDC No. 298.",
+          "value": "Jan. 18 - \"How Green Was my Lettuce,\" FC, US No. 51.\nFeb. 19 - \"Great Wig Mystery,\" FC, US No. 52.\nMar. 6 - WDC No. 288.\nMar. 18 - FC, WDC No. 288.\nMar. 27 - \"Interplanetary Postman,\" FC, US No. 53.\nApr. 6 - WDC No. 289.\nApr. 22 - FC, WDC No. 289.\nMay 11 - \"Billion Dollar Safari,\" FC, US No. 54.\nMay 15 - FC, WDC No. 290.\nMay 25 - WDC No. 291.\nMay 29 - FC, WDC No. 291.\nJune 11 - WDC No. 292.\nJune 16 - FC, WDC No. 292.\nJuly 13 - \"McDuck of Arabia,\" FC, US No. 55.\nAug. 3 - Lost watch gag, US No. 55.\nAug. 31 - \"Ghost Town Railroad,\" FC, IFC, US No. 56.\nSept. 17 - WDC No. 294.\nSept. 19 - Forgotten keys gag, US No. 57.\nSept. 28 - Three one-page gags, US No. 57.\nOct. 9 - FC, WDC No. 295; FC, WDC No. 296.\nOct. 19 - FC, US No. 57.\nOct. 23 - FC, DD No. 101.\nOct. 30 - \"Swamp of No Return,\" US No. 57.\nNov. 16 - WDC No. 297.\nNov. 28 - FC, WDC No. 297.\nDec. 3 - FC, US No. 58.\nDec. 13 - \"Giant Robot Robbers,\" US No. 58.\nDec. 21 - One-page gags for US No. 58 (two), 61 (one).\nDec. 22 - FC, WDC No. 298.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n213",
+              "value": "Carl Barks and the Art of the Comic Book\n213",
+              "bbox": [
+                {
+                  "h": 4.8879420731707794,
+                  "w": 77.95047827743902,
+                  "x": 173.1684889481707,
+                  "y": 364.0250304878049,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n213",
+          "bbox": [
+            {
+              "h": 4.89,
+              "w": 77.95,
+              "x": 173.17,
+              "y": 364.03,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "213"
+    }
+  ]
+}

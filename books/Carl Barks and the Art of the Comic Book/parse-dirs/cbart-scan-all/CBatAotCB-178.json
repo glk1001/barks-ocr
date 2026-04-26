@@ -1,0 +1,807 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "that they should study the ant's industriousness, but then the ants get loose in the house. *(Jan. 7, 1954)*",
+          "value": "that they should study the ant's industriousness, but then the ants get loose in the house. (Jan. 7, 1954)",
+          "bbox": [
+            {
+              "h": 11.49656964557927,
+              "w": 125.87260789824694,
+              "x": 11.067562642911584,
+              "y": 13.333735232469513,
+              "confidence": 0.95,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 29, June 1971.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 29, June 1971.",
+          "bbox": [
+            {
+              "h": 5.328930068597561,
+              "w": 115.88416742092224,
+              "x": 15.247959103467986,
+              "y": 25.583157393292684,
+              "confidence": 0.93,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 171 (15/3) - December 1954 - 36 pages",
+          "value": "171 (15/3) - December 1954 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.778807164634145,
+              "w": 91.721435427782,
+              "x": 11.227134503620425,
+              "y": 37.13272008384146,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald hides Christmas presents in a closet, but the nephews are waiting for him. *(Apr. 15, 1954)*",
+          "value": "Front cover (art only): Donald hides Christmas presents in a closet, but the nephews are waiting for him. (Apr. 15, 1954)",
+          "bbox": [
+            {
+              "h": 16.9125400152439,
+              "w": 125.97598763814786,
+              "x": 11.156256073742377,
+              "y": 43.01444359756098,
+              "confidence": 0.98,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Gyro seals Scrooge's money in wax so that it will be safe from all hazards, but Scrooge forgets to hold out any spending money. *(Mar. 4, 1954)*\nReprinted: Walt Disney's Comics No. 400, January 1974.",
+          "value": "DONALD DUCK - 10 - Gyro seals Scrooge's money in wax so that it will be safe from all hazards, but Scrooge forgets to hold out any spending money. (Mar. 4, 1954)\nReprinted: Walt Disney's Comics No. 400, January 1974.",
+          "bbox": [
+            {
+              "h": 23.287425685975613,
+              "w": 126.16630406821645,
+              "x": 11.010210794588414,
+              "y": 60.76852705792683,
+              "confidence": 0.92,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 172 (15/4) - January 1955 - 36 pages",
+          "value": "172 (15/4) - January 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6066101371951165,
+              "w": 86.37104647008383,
+              "x": 11.24252822503811,
+              "y": 90.3465262957317,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald oils a nephew's violin. *(Apr. 29, 1954)*",
+          "value": "Front cover (art only): Donald oils a nephew's violin. (Apr. 29, 1954)",
+          "bbox": [
+            {
+              "h": 11.166585365853665,
+              "w": 125.89527832031247,
+              "x": 11.306274652248474,
+              "y": 95.94755716463415,
+              "confidence": 0.96,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 363, December 1970.",
+          "value": "Reprinted: Walt Disney's Comics No. 363, December 1970.",
+          "bbox": [
+            {
+              "h": 5.260689786585362,
+              "w": 117.6748681640625,
+              "x": 16.40849692740091,
+              "y": 107.92564024390245,
+              "confidence": 0.85,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - On Christmas Eve, Scrooge takes the ducks in his submarine to hunt for a sunken ship. *(Mar. 18, 1954)*",
+          "value": "DONALD DUCK - 10 - On Christmas Eve, Scrooge takes the ducks in his submarine to hunt for a sunken ship. (Mar. 18, 1954)",
+          "bbox": [
+            {
+              "h": 17.165933689024392,
+              "w": 126.24943895293444,
+              "x": 11.107813333650913,
+              "y": 113.87665015243903,
+              "confidence": 0.91,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 364, January 1971.",
+          "value": "Reprinted: Walt Disney's Comics No. 364, January 1971.",
+          "bbox": [
+            {
+              "h": 5.316196646341477,
+              "w": 113.28812916825454,
+              "x": 15.426233446074695,
+              "y": 132.09304115853658,
+              "confidence": 0.93,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 173 (15/5) - February 1955 - 36 pages",
+          "value": "173 (15/5) - February 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.696272865853652,
+              "w": 89.67824528391768,
+              "x": 11.348409632240854,
+              "y": 143.4706669207317,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (rough pencil layout only): The nephews have made balloons from the fingers of Donald's rubber gloves. *(Aug. 12, 1954)*",
+          "value": "Front cover (rough pencil layout only): The nephews have made balloons from the fingers of Donald's rubber gloves. (Aug. 12, 1954)",
+          "bbox": [
+            {
+              "h": 17.44981326219513,
+              "w": 126.29798994855183,
+              "x": 11.045405630716461,
+              "y": 149.3898018292683,
+              "confidence": 0.98,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"Inking was done in the office. Don't remember the reasons.\"",
+          "value": "Barks: \"Inking was done in the office. Don't remember the reasons.\"",
+          "bbox": [
+            {
+              "h": 10.220350609756087,
+              "w": 126.07259229706555,
+              "x": 11.185030606897865,
+              "y": 167.4992149390244,
+              "confidence": 0.97,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - After Donald tricks the nephews into breaking their New Year's resolution never to be late for school, they take him skiing, planning to get him to break his resolution never to lose his temper. *(Mar. 25, 1954)*",
+          "value": "DONALD DUCK - 10 - After Donald tricks the nephews into breaking their New Year's resolution never to be late for school, they take him skiing, planning to get him to break his resolution never to lose his temper. (Mar. 25, 1954)",
+          "bbox": [
+            {
+              "h": 28.776985518292694,
+              "w": 126.20642292301825,
+              "x": 11.210080506859756,
+              "y": 178.8172294207317,
+              "confidence": 0.98,
+              "end_index": 230,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 353, February 1970.",
+          "value": "Reprinted: Walt Disney's Comics No. 353, February 1970.",
+          "bbox": [
+            {
+              "h": 5.3295731707317096,
+              "w": 115.69438798113566,
+              "x": 15.617498451791155,
+              "y": 208.78566310975611,
+              "confidence": 0.95,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 174 (15/6) - March 1955 - 36 pages",
+          "value": "174 (15/6) - March 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6217530487804925,
+              "w": 82.44269566977896,
+              "x": 11.339413705221036,
+              "y": 220.1910137195122,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The coin Donald drops into a nephew's piggy bank passes through a hole in the bottom. *(Oct. 14, 1954)*",
+          "value": "Front cover (art only): The coin Donald drops into a nephew's piggy bank passes through a hole in the bottom. (Oct. 14, 1954)",
+          "bbox": [
+            {
+              "h": 17.321227134146348,
+              "w": 126.20983565167684,
+              "x": 11.08771103277439,
+              "y": 226.0470274390244,
+              "confidence": 0.98,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: According to Barks, \"Somebody at Dell redrew Donald's head.\"",
+          "value": "Changes: According to Barks, \"Somebody at Dell redrew Donald's head.\"",
+          "bbox": [
+            {
+              "h": 10.471349085365881,
+              "w": 125.98978646627286,
+              "x": 11.250918564214938,
+              "y": 244.14290396341462,
+              "confidence": 0.97,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald gets a job carrying mail in his iceboat to isolated Beaver Island, and the nephews help by sending packages to the people who live there. *(Apr. 22, 1954)*",
+          "value": "DONALD DUCK - 10 - Donald gets a job carrying mail in his iceboat to isolated Beaver Island, and the nephews help by sending packages to the people who live there. (Apr. 22, 1954)",
+          "bbox": [
+            {
+              "h": 22.79183689024394,
+              "w": 126.13097310880335,
+              "x": 11.140703720464938,
+              "y": 255.68734756097558,
+              "confidence": 0.98,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 20, February 1970",
+          "value": "Reprinted: Walt Disney Comics Digest No. 20, February 1970",
+          "bbox": [
+            {
+              "h": 5.48679878048777,
+              "w": 121.65626417206552,
+              "x": 15.62814607945884,
+              "y": 279.60219512195124,
+              "confidence": 0.96,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 175 (15/7) - April 1955 - 36 pages",
+          "value": "175 (15/7) - April 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.645556402439015,
+              "w": 78.91437261814025,
+              "x": 11.187974942835366,
+              "y": 290.0105945121951,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald droops as the nephews quarrel over checkers. *(Oct. 14, 1954)*",
+          "value": "Front cover: Donald droops as the nephews quarrel over checkers. (Oct. 14, 1954)",
+          "bbox": [
+            {
+              "h": 11.36705030487803,
+              "w": 126.12729456459601,
+              "x": 11.10125154820884,
+              "y": 295.76428353658537,
+              "confidence": 0.97,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald loses a valuable ring given to him for safekeeping when he helps Daisy's club pull taffy, and he runs afoul of Gladstone's luck as he tries to recover it. *(June 17, 1954)*",
+          "value": "DONALD DUCK - 10 - Donald loses a valuable ring given to him for safekeeping when he helps Daisy's club pull taffy, and he runs afoul of Gladstone's luck as he tries to recover it. (June 17, 1954)",
+          "bbox": [
+            {
+              "h": 22.809123475609738,
+              "w": 126.32950195312499,
+              "x": 11.019338557545732,
+              "y": 307.77006859756096,
+              "confidence": 0.98,
+              "end_index": 197,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: For the taffy story in Walt Disney's Comics and Stories No. 175, there are presently known one and a quarter pages of unpublished art. The sequence is numbered as the last two panels of page 6 and all of page 7 of the story, and begins with",
+          "value": "Weston: For the taffy story in Walt Disney's Comics and Stories No. 175, there are presently known one and a quarter pages of unpublished art. The sequence is numbered as the last two panels of page 6 and all of page 7 of the story, and begins with",
+          "bbox": [
+            {
+              "h": 22.50928353658539,
+              "w": 126.343916015625,
+              "x": 11.375299876143291,
+              "y": 332.27268292682925,
+              "confidence": 0.99,
+              "end_index": 247,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Donald running into the Akin-Bones Hospital calling, \"Wait! Stop! Don't anybody eat that candy!\" Donald tells the nurses not to eat the candy because there is something in it, but he can't tell them what. They think he is trying to trick them and he gets the candy back only by buying it at a dollar a bag. He eats it hoping to find the lost diamond ring, doesn't, and soon meets Louie who gives him the good (?) news that he \"sold all seventeen bags to the men at the boiler factory!\" This sequence does not fit neatly in the space indicated by the page numbers, so rather extensive revisions probably were made, although no more artwork from this story is known to exist. Barks has said that he dropped this sequence because it wasn't visual enough. The artwork found its way into fans' hands from the Barks's scrap pile.",
+          "value": "Donald running into the Akin-Bones Hospital calling, \"Wait! Stop! Don't anybody eat that candy!\" Donald tells the nurses not to eat the candy because there is something in it, but he can't tell them what. They think he is trying to trick them and he gets the candy back only by buying it at a dollar a bag. He eats it hoping to find the lost diamond ring, doesn't, and soon meets Louie who gives him the good (?) news that he \"sold all seventeen bags to the men at the boiler factory!\" This sequence does not fit neatly in the space indicated by the page numbers, so rather extensive revisions probably were made, although no more artwork from this story is known to exist. Barks has said that he dropped this sequence because it wasn't visual enough. The artwork found its way into fans' hands from the Barks's scrap pile.",
+          "bbox": [
+            {
+              "h": 82.0824952362805,
+              "w": 126.0697637195122,
+              "x": 150.41666730182925,
+              "y": 13.804175876524392,
+              "confidence": 0.99,
+              "end_index": 822,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 176 (15/8) - May 1955 - 36 pages",
+          "value": "176 (15/8) - May 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.4739138719512175,
+              "w": 76.43879382621951,
+              "x": 151.27828696646338,
+              "y": 101.63633003048781,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The nephews already have pillows on their bottoms as they hand Donald their report cards. *(Nov. 6, 1953 \\[idea] and Feb. 11, 1954 \\[art])*",
+          "value": "Front cover: The nephews already have pillows on their bottoms as they hand Donald their report cards. (Nov. 6, 1953 [idea] and Feb. 11, 1954 [art])",
+          "bbox": [
+            {
+              "h": 17.373292682926827,
+              "w": 126.01354801829267,
+              "x": 151.16474085365851,
+              "y": 107.51758765243902,
+              "confidence": 0.97,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and the nephews encounter a \"hiccuping ghost\" in an Old West ghost town. *(July 22, 1954)*",
+          "value": "DONALD DUCK - 10 - Donald and the nephews encounter a \"hiccuping ghost\" in an Old West ghost town. (July 22, 1954)",
+          "bbox": [
+            {
+              "h": 16.723845274390232,
+              "w": 126.01888147865851,
+              "x": 151.1320026676829,
+              "y": 125.18886814024391,
+              "confidence": 0.97,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 394, July 1973.",
+          "value": "Reprinted: Walt Disney's Comics No. 394, July 1973.",
+          "bbox": [
+            {
+              "h": 5.43068597560974,
+              "w": 105.77661585365854,
+              "x": 155.50118711890244,
+              "y": 143.07830030487804,
+              "confidence": 0.95,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 177 (15/9) - June 1955 - 36 pages",
+          "value": "177 (15/9) - June 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.74076981707316,
+              "w": 76.65552782012195,
+              "x": 151.23028582317073,
+              "y": 154.63079268292682,
+              "confidence": 0.96,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews use Donald's blouse as a sail for their boat. *(Dec. 23, 1954)*",
+          "value": "Front cover (art only): The nephews use Donald's blouse as a sail for their boat. (Dec. 23, 1954)",
+          "bbox": [
+            {
+              "h": 11.333608993902434,
+              "w": 125.76990663109756,
+              "x": 151.0380240091463,
+              "y": 160.59380716463414,
+              "confidence": 0.97,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald is hired to man an experimental diving globe that is going deeper into the ocean than anyone has ever gone. *(July 29, 1954)*",
+          "value": "DONALD DUCK - 10 - Donald is hired to man an experimental diving globe that is going deeper into the ocean than anyone has ever gone. (July 29, 1954)",
+          "bbox": [
+            {
+              "h": 17.437728658536578,
+              "w": 125.89986471036582,
+              "x": 151.10891958841464,
+              "y": 172.43881097560975,
+              "confidence": 0.97,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 384, September 1972.",
+          "value": "Reprinted: Walt Disney's Comics No. 384, September 1972.",
+          "bbox": [
+            {
+              "h": 5.31752286585368,
+              "w": 118.7958326981707,
+              "x": 155.59185594512195,
+              "y": 190.5275076219512,
+              "confidence": 0.94,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 178 (15/10) - July 1955 - 36 pages",
+          "value": "178 (15/10) - July 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.627881097560957,
+              "w": 78.35758765243901,
+              "x": 151.35310975609755,
+              "y": 202.05192073170733,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews quarrel over which candy to buy from Donald. *(Dec. 23, 1954)*",
+          "value": "Front cover (art only): The nephews quarrel over which candy to buy from Donald. (Dec. 23, 1954)",
+          "bbox": [
+            {
+              "h": 17.180922256097563,
+              "w": 125.56162728658536,
+              "x": 151.46181974085366,
+              "y": 207.81164634146342,
+              "confidence": 0.98,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald rents an apartment in a quiet part of town to escape the noise that disrupts his sleep. *(Nov. 26, 1954)*",
+          "value": "DONALD DUCK - 10 - Donald rents an apartment in a quiet part of town to escape the noise that disrupts his sleep. (Nov. 26, 1954)",
+          "bbox": [
+            {
+              "h": 17.349032012195128,
+              "w": 125.96415777439023,
+              "x": 151.0071208079268,
+              "y": 225.50318597560977,
+              "confidence": 0.98,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 179 (15/11) - August 1955 - 36 pages",
+          "value": "179 (15/11) - August 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.813826219512175,
+              "w": 86.72693597560973,
+              "x": 151.22373475609757,
+              "y": 249.16559451219513,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald enters a four-event canoe contest against Gladstone at a northern lake. *(Nov. 26, 1954)*",
+          "value": "DONALD DUCK - 10 - Donald enters a four-event canoe contest against Gladstone at a northern lake. (Nov. 26, 1954)",
+          "bbox": [
+            {
+              "h": 16.823734756097565,
+              "w": 125.99962271341467,
+              "x": 151.16347179878045,
+              "y": 255.05012195121952,
+              "confidence": 0.98,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 180 (15/12) - September 1955 - 36 pages",
+          "value": "180 (15/12) - September 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.752339939024405,
+              "w": 95.70399009146341,
+              "x": 151.33980182926828,
+              "y": 278.7380945121951,
+              "confidence": 0.97,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald sells Scrooge a billion-dollar insurance policy that will pay him two billion dollars if he is ever injured. *(Jan. 6, 1955)*",
+          "value": "DONALD DUCK - 10 - Donald sells Scrooge a billion-dollar insurance policy that will pay him two billion dollars if he is ever injured. (Jan. 6, 1955)",
+          "bbox": [
+            {
+              "h": 17.422294207317098,
+              "w": 126.14117378048776,
+              "x": 151.05532774390244,
+              "y": 284.68541158536584,
+              "confidence": 0.98,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 362, November 1970.",
+          "value": "Reprinted: Walt Disney's Comics No. 362, November 1970.",
+          "bbox": [
+            {
+              "h": 5.39071646341461,
+              "w": 119.0962214176829,
+              "x": 155.38580602134144,
+              "y": 302.72938262195123,
+              "confidence": 0.95,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 181 (16/1) - October 1955 - 36 pages",
+          "value": "181 (16/1) - October 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.791349085365855,
+              "w": 86.20034679878049,
+              "x": 151.3453582317073,
+              "y": 314.1064710365854,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The Chickadee Patrol, a girls' group, challenges the Junior Woodchucks to a bridge-building contest, and Donald tries to help the Woodchucks. *(Jan. 6, 1955)*",
+          "value": "DONALD DUCK - 10 - The Chickadee Patrol, a girls' group, challenges the Junior Woodchucks to a bridge-building contest, and Donald tries to help the Woodchucks. (Jan. 6, 1955)",
+          "bbox": [
+            {
+              "h": 22.74914634146342,
+              "w": 126.18855754573171,
+              "x": 151.13671875,
+              "y": 320.0575381097561,
+              "confidence": 0.98,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Huey, Dewey and Louie Junior Woodchucks No. 4, January 1970.",
+          "value": "Reprinted: Huey, Dewey and Louie Junior Woodchucks No. 4, January 1970.",
+          "bbox": [
+            {
+              "h": 10.841044207317045,
+              "w": 126.12980373475605,
+              "x": 151.1007393292683,
+              "y": 343.9309298780488,
+              "confidence": 0.97,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "178 Carl Barks and the Art of the Comic Book",
+              "value": "178 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.492454268292695,
+                  "w": 83.27012909679878,
+                  "x": 29.632761528201215,
+                  "y": 365.98266768292683,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "178 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.49,
+              "w": 83.27,
+              "x": 29.63,
+              "y": 365.98,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "178"
+    }
+  ]
+}

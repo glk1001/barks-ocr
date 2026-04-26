@@ -1,0 +1,135 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "through variety stores. Barks's work has continued to be reprinted in the Whitman comic books, and it has also been reprinted in a number of hardcover and semi-hardcover books from Abbeville Press since 1978. The Abbeville books published to date (all of them adapted from Italian reprint volumes) have radically altered the composition of Barks's panels and pages and often changed dialogue as well; they are completely inadequate. Western itself has done a little better by Barks, publishing a few of his stories in a series of \"Dynabrite Comics\" that enjoy somewhat\nbetter paper and printing (and higher prices) than the other Whitman comics. The color, unfortunately, is garish.\nIn closing, let me encourage everyone who finds errors or omissions in this book—and particularly in the bibliography—to write to me at 226 N. Saint Asaph Street, Alexandria, Va. 22314.\nMichael Barrier\nAugust 23, 1981",
+          "value": "through variety stores. Barks's work has continued to be reprinted in the Whitman comic books, and it has also been reprinted in a number of hardcover and semi-hardcover books from Abbeville Press since 1978. The Abbeville books published to date (all of them adapted from Italian reprint volumes) have radically altered the composition of Barks's panels and pages and often changed dialogue as well; they are completely inadequate. Western itself has done a little better by Barks, publishing a few of his stories in a series of \"Dynabrite Comics\" that enjoy somewhat\nbetter paper and printing (and higher prices) than the other Whitman comics. The color, unfortunately, is garish.\nIn closing, let me encourage everyone who finds errors or omissions in this book—and particularly in the bibliography—to write to me at 226 N. Saint Asaph Street, Alexandria, Va. 22314.\nMichael Barrier\nAugust 23, 1981",
+          "bbox": [
+            {
+              "h": 7.245205792682954,
+              "w": 69.15822599085365,
+              "x": 149.52390434451218,
+              "y": 322.5606402439024,
+              "confidence": 0.61,
+              "end_index": 899,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### Sources of Illustrations",
+          "value": "Sources of Illustrations",
+          "bbox": [
+            {
+              "h": 6.081059451219534,
+              "w": 64.97495807926829,
+              "x": 149.16361280487803,
+              "y": 277.8166920731707,
+              "confidence": 0.85,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "csv": "\"Roger Armstrong:\",\"Page 31.\"\n\"Lynda Ault:\",\"Page ii (bottom).\"\n\"Carl Barks:\",\"Pages ii (top), 4-6, 8-16, 18-25, 76-79, 88 (top right, bottom).\"\n\"Michael Barrier:\",\"Page 63.\"\n\"E. B. Boatner:\",\"Pages 26, 83 (bottom), 88 (top left), 89, 111, 222, 225, 228.\"\n\"David R. Smith:\",\"Pages 17, 83 (top), 217, 219.\"",
+          "html": "<table>\n    <tr>\n        <td>Roger Armstrong:</td>\n        <td>Page 31.</td>\n    </tr>\n    <tr>\n        <td>Lynda Ault:</td>\n        <td>Page ii (bottom).</td>\n    </tr>\n    <tr>\n        <td>Carl Barks:</td>\n        <td>Pages ii (top), 4-6, 8-16, 18-25, 76-79, 88 (top right, bottom).</td>\n    </tr>\n    <tr>\n        <td>Michael Barrier:</td>\n        <td>Page 63.</td>\n    </tr>\n    <tr>\n        <td>E. B. Boatner:</td>\n        <td>Pages 26, 83 (bottom), 88 (top left), 89, 111, 222, 225, 228.</td>\n    </tr>\n    <tr>\n        <td>David R. Smith:</td>\n        <td>Pages 17, 83 (top), 217, 219.</td>\n    </tr>\n</table>",
+          "md": "| Roger Armstrong: | Page 31.                                                         |\n| ---------------- | ---------------------------------------------------------------- |\n| Lynda Ault:      | Page ii (bottom).                                                |\n| Carl Barks:      | Pages ii (top), 4-6, 8-16, 18-25, 76-79, 88 (top right, bottom). |\n| Michael Barrier: | Page 63.                                                         |\n| E. B. Boatner:   | Pages 26, 83 (bottom), 88 (top left), 89, 111, 222, 225, 228.    |\n| David R. Smith:  | Pages 17, 83 (top), 217, 219.                                    |",
+          "rows": [
+            [
+              "Roger Armstrong:",
+              "Page 31."
+            ],
+            [
+              "Lynda Ault:",
+              "Page ii (bottom)."
+            ],
+            [
+              "Carl Barks:",
+              "Pages ii (top), 4-6, 8-16, 18-25, 76-79, 88 (top right, bottom)."
+            ],
+            [
+              "Michael Barrier:",
+              "Page 63."
+            ],
+            [
+              "E. B. Boatner:",
+              "Pages 26, 83 (bottom), 88 (top left), 89, 111, 222, 225, 228."
+            ],
+            [
+              "David R. Smith:",
+              "Pages 17, 83 (top), 217, 219."
+            ]
+          ],
+          "bbox": [
+            {
+              "h": 59.43466463414637,
+              "w": 126.22102134146341,
+              "x": 149.23028963414632,
+              "y": 292.6035365853658,
+              "confidence": 0.76,
+              "end_index": 614,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "merged_from_pages": null,
+          "merged_into_page": null,
+          "parse_concerns": [
+            {
+              "details": "layout detected [text, footer, paragraph_title, key-value-region] but no table/form",
+              "type": "layout_lvm_disagreement"
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n227",
+              "value": "Carl Barks and the Art of the Comic Book\n227",
+              "bbox": [
+                {
+                  "h": 5.39410060975606,
+                  "w": 83.07998094512196,
+                  "x": 174.76058689024387,
+                  "y": 364.2672942073171,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n227",
+          "bbox": [
+            {
+              "h": 5.39,
+              "w": 83.08,
+              "x": 174.76,
+              "y": 364.27,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "227"
+    }
+  ]
+}

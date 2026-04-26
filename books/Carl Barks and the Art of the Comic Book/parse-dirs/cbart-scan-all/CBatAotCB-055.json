@@ -1,0 +1,218 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "to dive around in my money like a porpoise! And burrow through it like a gopher! And toss it up and let it hit me on the head!\"",
+          "value": "to dive around in my money like a porpoise! And burrow through it like a gopher! And toss it up and let it hit me on the head!\"",
+          "bbox": [
+            {
+              "h": 22.369866854039632,
+              "w": 125.7731864519817,
+              "x": 11.470133860518292,
+              "y": 11.981210699314024,
+              "confidence": 0.98,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This Scrooge is fully realized, a sympathetic, sometimes almost noble character, balanced neatly between the Scrooge that was and the Scrooge that was to come, of whom I will have more to say later.",
+          "value": "This Scrooge is fully realized, a sympathetic, sometimes almost noble character, balanced neatly between the Scrooge that was and the Scrooge that was to come, of whom I will have more to say later.",
+          "bbox": [
+            {
+              "h": 36.30727134146342,
+              "w": 125.69086830697408,
+              "x": 11.637718773818596,
+              "y": 34.353795731707315,
+              "confidence": 0.99,
+              "end_index": 197,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The second major supporting character first appeared in the January 1948 *Walt Disney's Comics*, just a month after Scrooge's debut in \"Christmas on Bear Mountain.\" This was Gladstone Gander (a typically inspired Barks name), a wavy-haired duck with a long beak reminiscent of Donald's in his first few animated cartoons.\\* As with Scrooge, there was little to indicate that Gladstone was going to become a fixture, but in his next few appearances he began to take shape. A rather flashy dresser from the start, he began to emerge as the small-town con man, the sharpie, the hustler — or, as he was described in one story, \"loafer, bum, chiseler and connoisseur of the fast buck.\" (For one thing, he started wearing spats.)",
+          "value": "The second major supporting character first appeared in the January 1948 Walt Disney's Comics, just a month after Scrooge's debut in \"Christmas on Bear Mountain.\" This was Gladstone Gander (a typically inspired Barks name), a wavy-haired duck with a long beak reminiscent of Donald's in his first few animated cartoons.* As with Scrooge, there was little to indicate that Gladstone was going to become a fixture, but in his next few appearances he began to take shape. A rather flashy dresser from the start, he began to emerge as the small-town con man, the sharpie, the hustler — or, as he was described in one story, \"loafer, bum, chiseler and connoisseur of the fast buck.\" (For one thing, he started wearing spats.)",
+          "bbox": [
+            {
+              "h": 126.16666920731707,
+              "w": 125.85887659584601,
+              "x": 10.970311666349085,
+              "y": 71.84903963414635,
+              "confidence": 0.99,
+              "end_index": 722,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The \"classic\" Gladstone, like the \"classic\" Scrooge, began to show himself in the spring of 1949, but it wasn't until that summer, in a Donald Duck story in the *March of Comics* giveaway, that Gladstone acquired his most striking characteristic: awe-inspiring good luck. In this story, Donald and Gladstone race in small boats to the South Pacific, where Uncle Scrooge has been \"lost\" in a plane crash. Gladstone gets every break and reaches Scrooge before the luckless ducks — but, it seems Scrooge wasn't in danger at all, merely seeking privacy for a while. Scrooge vows to leave his fortune to Donald, who he thinks was kind enough to leave him alone.",
+          "value": "The \"classic\" Gladstone, like the \"classic\" Scrooge, began to show himself in the spring of 1949, but it wasn't until that summer, in a Donald Duck story in the March of Comics giveaway, that Gladstone acquired his most striking characteristic: awe-inspiring good luck. In this story, Donald and Gladstone race in small boats to the South Pacific, where Uncle Scrooge has been \"lost\" in a plane crash. Gladstone gets every break and reaches Scrooge before the luckless ducks — but, it seems Scrooge wasn't in danger at all, merely seeking privacy for a while. Scrooge vows to leave his fortune to Donald, who he thinks was kind enough to leave him alone.",
+          "bbox": [
+            {
+              "h": 111.17748475609758,
+              "w": 125.92965212938263,
+              "x": 11.808985446836889,
+              "y": 197.51721036585366,
+              "confidence": 0.99,
+              "end_index": 655,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "There were later stories that amounted to variations on this plot: Gladstone's good luck was eventually topped by a single stroke of good luck for the ducks, after they had endured page after galling page of heartbreak and humiliation. \"Luck of the North\" (1949) and \"The Gilded Man\" (1952), both in *Donald Duck* one-shots, fit this pattern, with thirty-one pages of agony followed by a single, overwhelming page of triumph. And yet these happy endings have an arbitrary, *deus ex machina* feeling, because it is so obvious that Barks has no patience with those people who trust to luck, or who are in fact lucky. He put it this way in 1974:",
+          "value": "There were later stories that amounted to variations on this plot: Gladstone's good luck was eventually topped by a single stroke of good luck for the ducks, after they had endured page after galling page of heartbreak and humiliation. \"Luck of the North\" (1949) and \"The Gilded Man\" (1952), both in Donald Duck one-shots, fit this pattern, with thirty-one pages of agony followed by a single, overwhelming page of triumph. And yet these happy endings have an arbitrary, deus ex machina feeling, because it is so obvious that Barks has no patience with those people who trust to luck, or who are in fact lucky. He put it this way in 1974:",
+          "bbox": [
+            {
+              "h": 111.41711604420733,
+              "w": 126.01126714939022,
+              "x": 150.19556021341464,
+              "y": 12.196580602134146,
+              "confidence": 0.99,
+              "end_index": 641,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I don't think anybody likes a character who gets by with so little effort in the world. They like to feel that other people have just as much of a struggle as they themselves have, and Gladstone was a fellow who would just go along, skimming all the cream out of life, without ever sweating for it.\"",
+          "value": "\"I don't think anybody likes a character who gets by with so little effort in the world. They like to feel that other people have just as much of a struggle as they themselves have, and Gladstone was a fellow who would just go along, skimming all the cream out of life, without ever sweating for it.\"",
+          "bbox": [
+            {
+              "h": 51.722115091463415,
+              "w": 125.88182355182924,
+              "x": 150.6396951219512,
+              "y": 123.82862423780486,
+              "confidence": 0.99,
+              "end_index": 299,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Good luck, Barks seems to say, is corrupting if we enjoy too much of it: we cease being thankful for it and begin to think we deserve it. Gladstone was the extreme example of the person who takes good fortune as his due, to the point that being lucky becomes an end in itself, and his life an *objet d'art* to be protected from the blemish of work.",
+          "value": "Good luck, Barks seems to say, is corrupting if we enjoy too much of it: we cease being thankful for it and begin to think we deserve it. Gladstone was the extreme example of the person who takes good fortune as his due, to the point that being lucky becomes an end in itself, and his life an objet d'art to be protected from the blemish of work.",
+          "bbox": [
+            {
+              "h": 58.3818407012195,
+              "w": 125.6721551067073,
+              "x": 150.83957126524388,
+              "y": 175.88134527439024,
+              "confidence": 0.99,
+              "end_index": 347,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In a 1949 story called \"Trail of the Unicorn,\"<sup>11</sup> Gladstone tries to cheat Donald, rather than rely on his good luck, and he gets beaten up for his pains. A little later, his confidence restored, Gladstone reprimands himself. \"I had a little bad luck on that deal I tried to rig on Donald — but that was because cheating is a form of work. Anyone as lucky as I should just sit around and let Dame Fortune dump a bale of mazuma in his lap.\"",
+          "value": "In a 1949 story called \"Trail of the Unicorn,\"<sup>11</sup> Gladstone tries to cheat Donald, rather than rely on his good luck, and he gets beaten up for his pains. A little later, his confidence restored, Gladstone reprimands himself. \"I had a little bad luck on that deal I tried to rig on Donald — but that was because cheating is a form of work. Anyone as lucky as I should just sit around and let Dame Fortune dump a bale of mazuma in his lap.\"",
+          "bbox": [
+            {
+              "h": 73.74105182926829,
+              "w": 125.88021150914632,
+              "x": 151.24668064024388,
+              "y": 234.8133612804878,
+              "confidence": 0.99,
+              "end_index": 448,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Such arrogance is tolerable only if expressed in silence, and Gladstone was rarely quiet. At the start of \"Luck of the North,\" Gladstone drags Donald with him for a demonstration of his luck, gloating insufferably all the while. Then one of Gladstone's credi-",
+          "value": "Such arrogance is tolerable only if expressed in silence, and Gladstone was rarely quiet. At the start of \"Luck of the North,\" Gladstone drags Donald with him for a demonstration of his luck, gloating insufferably all the while. Then one of Gladstone's credi-",
+          "bbox": [
+            {
+              "h": 43.52407774390243,
+              "w": 125.75565548780486,
+              "x": 151.4753677591463,
+              "y": 310.0899923780488,
+              "confidence": 0.99,
+              "end_index": 258,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\*All the ducks had rather long beaks in the forties in Barks's stories. He explained in 1971 what led to his shortening them: \"One day a girl who lived down the road from us — she had been an inker at Disney's — said to us, 'You're drawing that duck's beak too long.' So I took a hard look at the duck, and then I looked at the Disney model sheets, and also at the Disney comic strip, and I decided she was right.\"",
+          "value": "*All the ducks had rather long beaks in the forties in Barks's stories. He explained in 1971 what led to his shortening them: \"One day a girl who lived down the road from us — she had been an inker at Disney's — said to us, 'You're drawing that duck's beak too long.' So I took a hard look at the duck, and then I looked at the Disney model sheets, and also at the Disney comic strip, and I decided she was right.\"",
+          "bbox": [
+            {
+              "h": 37.88240853658539,
+              "w": 125.81297518102134,
+              "x": 12.403590177210365,
+              "y": 317.33835365853656,
+              "confidence": 0.94,
+              "end_index": 414,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n55",
+              "value": "Carl Barks and the Art of the Comic Book\n55",
+              "bbox": [
+                {
+                  "h": 4.928940548780465,
+                  "w": 80.03644435975609,
+                  "x": 171.5883612804878,
+                  "y": 366.87384146341464,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n55",
+          "bbox": [
+            {
+              "h": 4.93,
+              "w": 80.04,
+              "x": 171.59,
+              "y": 366.87,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "55"
+    }
+  ]
+}

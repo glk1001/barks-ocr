@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Barks holds a pointer on the storyboard for Good Scouts while Harry Reeves sits on the floor and makes faces in this 1937 publicity photo. Among others in the photo are Roy Williams, T. Hee, Ed Penner, and Peter O'Crotty.",
+          "md": "![Barks holds a pointer on the storyboard for Good Scouts while Harry Reeves sits on the floor and makes faces in this 1937 publicity photo. Among others in the photo are Roy Williams, T. Hee, Ed Penner, and Peter O'Crotty.](CBatAotCB-217_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-217_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 205.27831697789634,
+              "w": 261.683768697599,
+              "x": 12.993555997522863,
+              "y": 13.369754668445122,
+              "confidence": 1.0,
+              "end_index": 246,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Barks holds a pointer on the storyboard for *Good Scouts* while Harry Reeves sits on the floor and makes faces in this 1937 publicity photo (taken on the same day as the photo on page 17). Among others in the photo are, standing left to right, Roy Williams, T. Hee, and Ed Penner; Peter O'Crotty is seated next to Barks. © 1937 Walt Disney Productions",
+          "value": "Barks holds a pointer on the storyboard for Good Scouts while Harry Reeves sits on the floor and makes faces in this 1937 publicity photo (taken on the same day as the photo on page 17). Among others in the photo are, standing left to right, Roy Williams, T. Hee, and Ed Penner; Peter O'Crotty is seated next to Barks. © 1937 Walt Disney Productions",
+          "bbox": [
+            {
+              "h": 18.476158536585363,
+              "w": 263.5325201267149,
+              "x": 13.164814095846035,
+              "y": 222.78823170731707,
+              "confidence": 0.91,
+              "end_index": 350,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n217",
+              "value": "Carl Barks and the Art of the Comic Book\n217",
+              "bbox": [
+                {
+                  "h": 5.28249237804881,
+                  "w": 77.77846989329267,
+                  "x": 174.10993902439023,
+                  "y": 365.8517606707317,
+                  "confidence": 0.93,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n217",
+          "bbox": [
+            {
+              "h": 5.28,
+              "w": 77.78,
+              "x": 174.11,
+              "y": 365.85,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "217"
+    }
+  ]
+}

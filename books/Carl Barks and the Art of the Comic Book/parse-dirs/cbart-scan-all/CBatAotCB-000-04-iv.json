@@ -1,0 +1,133 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Copyright © 1981 by M. Lilien\nAll rights reserved including the right of reproduction\nin whole or in part in any form.",
+          "value": "Copyright © 1981 by M. Lilien\nAll rights reserved including the right of reproduction\nin whole or in part in any form.",
+          "bbox": [
+            {
+              "h": 21.93961509146342,
+              "w": 151.1140301067073,
+              "x": 68.7814881859756,
+              "y": 147.57975228658535,
+              "confidence": 0.89,
+              "end_index": 117,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Library of Congress Cataloging in Publication Data",
+          "value": "Library of Congress Cataloging in Publication Data",
+          "bbox": [
+            {
+              "h": 5.229535060975595,
+              "w": 120.5377262766768,
+              "x": 67.80418302210364,
+              "y": 195.79111280487805,
+              "confidence": 0.85,
+              "end_index": 49,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "```\nBarrier, J. Michael.\n    Carl Barks and the art of the comic book.\n\n    Bibliography: p.\n    1. Barks, Carl, 1901-    . 2. Barks, Carl,\n1901-    --Bibliography. I. Title.\nPN6727.B35Z54        741'.092'4        81-20899\nISBN 0-9607652-0-4                     AACR2\nISBN 0-9607652-1-2 (pbk.)\n```",
+          "value": "Barrier, J. Michael.\n    Carl Barks and the art of the comic book.\n\n    Bibliography: p.\n    1. Barks, Carl, 1901-    . 2. Barks, Carl,\n1901-    --Bibliography. I. Title.\nPN6727.B35Z54        741'.092'4        81-20899\nISBN 0-9607652-0-4                     AACR2\nISBN 0-9607652-1-2 (pbk.)",
+          "bbox": [
+            {
+              "h": 54.50709603658536,
+              "w": 157.72196027057927,
+              "x": 68.7871689214939,
+              "y": 207.95135670731707,
+              "confidence": 0.98,
+              "end_index": 296,
+              "label": "code",
+              "start_index": 0
+            }
+          ],
+          "language": null,
+          "type": "code"
+        },
+        {
+          "md": "Manufactured in United States of America",
+          "value": "Manufactured in United States of America",
+          "bbox": [
+            {
+              "h": 5.146440548780465,
+              "w": 101.26885575457317,
+              "x": 92.80131002286583,
+              "y": 282.06125762195126,
+              "confidence": 0.84,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "ISBN 0-9607652-0-4 (Hardbound)\nISBN 0-9607652-1-2 (Paperback)",
+          "value": "ISBN 0-9607652-0-4 (Hardbound)\nISBN 0-9607652-1-2 (Paperback)",
+          "bbox": [
+            {
+              "h": 11.22761432926829,
+              "w": 70.98984946646338,
+              "x": 107.29485137195121,
+              "y": 300.6578048780488,
+              "confidence": 0.84,
+              "end_index": 60,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Library of Congress Catalog Card Number: 81-20899",
+          "value": "Library of Congress Catalog Card Number: 81-20899",
+          "bbox": [
+            {
+              "h": 5.191440548780465,
+              "w": 96.27319550304877,
+              "x": 94.96052972560975,
+              "y": 313.5627896341464,
+              "confidence": 0.88,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "If you are interested in animation and the comic arts you may wish to subscribe to FUNNYWORLD, P.O. Box 1633, New York, N.Y. 10001.",
+          "value": "If you are interested in animation and the comic arts you may wish to subscribe to FUNNYWORLD, P.O. Box 1633, New York, N.Y. 10001.",
+          "bbox": [
+            {
+              "h": 5.27330030487803,
+              "w": 268.52343214081554,
+              "x": 9.234180282964939,
+              "y": 320.19923780487807,
+              "confidence": 0.95,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "iv"
+    }
+  ]
+}

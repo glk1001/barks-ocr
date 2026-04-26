@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A comic strip page featuring Donald Duck and his nephews Huey, Dewey, and Louie. In the first panel, Donald is carrying a large bag of seeds and a pitchfork, telling the boys they will make a \"Victory Garden.\" In the second panel, Donald instructs the boys to put in the seeds while he makes the holes. The boys ask how to put them in, and Donald replies \"Any way!\" In the third panel, Donald is planting seeds while the boys follow behind him. The final two panels show three crows watching them, with one crow saying \"Ha ha, brothers! Dinner is served!\" and another saying \"Come on, boys, let's eat!\" as they prepare to swoop down on the freshly planted seeds.",
+          "md": "![A comic strip page featuring Donald Duck and his nephews Huey, Dewey, and Louie. In the first panel, Donald is carrying a large bag of seeds and a pitchfork, telling the boys they will make a \"Victory Garden.\" In the second panel, Donald instructs the boys to put in the seeds while he makes the holes. The boys ask how to put them in, and Donald replies \"Any way!\" In the third panel, Donald is planting seeds while the boys follow behind him. The final two panels show three crows watching them, with one crow saying \"Ha ha, brothers! Dinner is served!\" and another saying \"Come on, boys, let's eat!\" as they prepare to swoop down on the freshly planted seeds.](CBatAotCB-167_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-167_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 317.2663276486281,
+              "w": 223.9902331840701,
+              "x": 31.30951529153963,
+              "y": 16.27616472942073,
+              "confidence": 0.97,
+              "end_index": 687,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From Barks's first Donald Duck story for *Walt Disney's Comics and Stories* (in No. 31, April 1943); © 1943 Walt Disney Productions.",
+          "value": "From Barks's first Donald Duck story for Walt Disney's Comics and Stories (in No. 31, April 1943); © 1943 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 12.47835365853658,
+              "w": 227.17816977896342,
+              "x": 29.38998189786585,
+              "y": 338.7184984756098,
+              "confidence": 0.95,
+              "end_index": 131,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n167",
+              "value": "Carl Barks and the Art of the Comic Book\n167",
+              "bbox": [
+                {
+                  "h": 4.750495426829275,
+                  "w": 77.85797446646339,
+                  "x": 171.3316006097561,
+                  "y": 363.44259146341466,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n167",
+          "bbox": [
+            {
+              "h": 4.75,
+              "w": 77.86,
+              "x": 171.33,
+              "y": 363.44,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "167"
+    }
+  ]
+}

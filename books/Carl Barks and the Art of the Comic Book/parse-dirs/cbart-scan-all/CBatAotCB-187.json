@@ -1,0 +1,830 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "running a crooked hit-the-bottles-with-a-ball game at a carnival, but the nephews finally do knock down all three bottles. *(June 24, 1963)*",
+          "value": "running a crooked hit-the-bottles-with-a-ball game at a carnival, but the nephews finally do knock down all three bottles. (June 24, 1963)",
+          "bbox": [
+            {
+              "h": 16.97451219512195,
+              "w": 125.78558010194361,
+              "x": 11.198175614519817,
+              "y": 17.07742854420732,
+              "confidence": 0.98,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**280 (24/4) - January 1964 - 36 pages**",
+          "value": "280 (24/4) - January 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.56640625,
+              "w": 86.2909931164253,
+              "x": 11.316587866806401,
+              "y": 40.73120236280487,
+              "confidence": 0.98,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (part) (art only): Donald is startled when he looks in a mirror and sees Scrooge as his reflection. *(Aug. 5, 1963)*",
+          "value": "Front cover (part) (art only): Donald is startled when he looks in a mirror and sees Scrooge as his reflection. (Aug. 5, 1963)",
+          "bbox": [
+            {
+              "h": 16.375166730182926,
+              "w": 125.85911883098322,
+              "x": 11.310056092797256,
+              "y": 46.88521246189025,
+              "confidence": 0.98,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Double Masquerade - 10 - Donald, trying to avoid his surfing club, and Scrooge, trying to avoid some Junior Chickadees who want a gift for their Christmas fund, disguise themselves as each other. *(July 15, 1963)*",
+          "value": "DONALD DUCK Double Masquerade - 10 - Donald, trying to avoid his surfing club, and Scrooge, trying to avoid some Junior Chickadees who want a gift for their Christmas fund, disguise themselves as each other. (July 15, 1963)",
+          "bbox": [
+            {
+              "h": 29.024799923780478,
+              "w": 126.0062616711128,
+              "x": 11.291559403582317,
+              "y": 64.48020388719513,
+              "confidence": 0.97,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 449, February 1978.",
+          "value": "Reprinted: Walt Disney's Comics No. 449, February 1978.",
+          "bbox": [
+            {
+              "h": 5.157461890243899,
+              "w": 116.24179008669968,
+              "x": 15.627777367568598,
+              "y": 88.53904344512195,
+              "confidence": 0.84,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**281 (24/5) - February 1964 - 36 pages**",
+          "value": "281 (24/5) - February 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.449058689024391,
+              "w": 89.62909405964176,
+              "x": 11.463748928163108,
+              "y": 99.9599199695122,
+              "confidence": 0.97,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (part) (art only): A snowball with a lighted fuse sails toward Donald. *(Sept. 6, 1963)*",
+          "value": "Front cover (part) (art only): A snowball with a lighted fuse sails toward Donald. (Sept. 6, 1963)",
+          "bbox": [
+            {
+              "h": 11.018528963414637,
+              "w": 125.88572396627286,
+              "x": 11.49240770293445,
+              "y": 106.08081173780488,
+              "confidence": 0.98,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Feud and Far Between - 10 - Donald's new neighbor outwits Donald's efforts to get a look at him, until he is finally revealed as an old adversary, Mr. Jones. *(Aug. 26, 1963)*",
+          "value": "DONALD DUCK Feud and Far Between - 10 - Donald's new neighbor outwits Donald's efforts to get a look at him, until he is finally revealed as an old adversary, Mr. Jones. (Aug. 26, 1963)",
+          "bbox": [
+            {
+              "h": 23.05190167682926,
+              "w": 125.8452213938643,
+              "x": 11.383256121379572,
+              "y": 117.80357469512195,
+              "confidence": 0.98,
+              "end_index": 186,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**282 (24/6) - March 1964 - 36 pages**",
+          "value": "282 (24/6) - March 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.64857469512197,
+              "w": 82.43332138433689,
+              "x": 11.56483600895579,
+              "y": 147.36034298780487,
+              "confidence": 0.97,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Top half, Donald throws a haymaker; bottom half, the Beagle Boys flee from Madam Mim. *(Sept. 16, 1963)*",
+          "value": "Front cover (art only): Top half, Donald throws a haymaker; bottom half, the Beagle Boys flee from Madam Mim. (Sept. 16, 1963)",
+          "bbox": [
+            {
+              "h": 16.97813643292684,
+              "w": 126.10892971131858,
+              "x": 11.512954816120425,
+              "y": 153.42123475609756,
+              "confidence": 0.98,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Bubbleweight Champ - 10 - The nephews bring Donald in as a substitute in a boxing match with Boldan True, a tiny muscleman who represents a rival Junior Woodchuck troop. *(Sept. 9, 1963)*",
+          "value": "DONALD DUCK Bubbleweight Champ - 10 - The nephews bring Donald in as a substitute in a boxing match with Boldan True, a tiny muscleman who represents a rival Junior Woodchuck troop. (Sept. 9, 1963)",
+          "bbox": [
+            {
+              "h": 23.160663109756086,
+              "w": 125.9980010241997,
+              "x": 11.527512504763719,
+              "y": 171.14060213414635,
+              "confidence": 0.98,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Huey, Dewey and Louie Junior Woodchucks* No. 22, July 1973.",
+          "value": "Reprinted: Huey, Dewey and Louie Junior Woodchucks No. 22, July 1973.",
+          "bbox": [
+            {
+              "h": 11.029253048780491,
+              "w": 125.98266518197407,
+              "x": 11.676827958269817,
+              "y": 195.1297637195122,
+              "confidence": 0.96,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**283 (24/7) - April 1964 - 36 pages**",
+          "value": "283 (24/7) - April 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.497339939024378,
+              "w": 78.85820622141767,
+              "x": 11.089393816692072,
+              "y": 212.53982469512195,
+              "confidence": 0.97,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (part) (art only): Donald and the nephews, on a broken spar, look at an exploding ship. *(Oct. 31, 1963)*",
+          "value": "Front cover (part) (art only): Donald and the nephews, on a broken spar, look at an exploding ship. (Oct. 31, 1963)",
+          "bbox": [
+            {
+              "h": 11.434024390243913,
+              "w": 125.95449945217223,
+              "x": 10.985122308498473,
+              "y": 218.52679115853658,
+              "confidence": 0.9,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Captain Blight's Mystery Ship - 10 - The ducks see a sailor shanghaied, and then are trapped themselves and put to work by the gun-running ship's harsh crew. *(Oct. 29, 1963)*",
+          "value": "DONALD DUCK Captain Blight's Mystery Ship - 10 - The ducks see a sailor shanghaied, and then are trapped themselves and put to work by the gun-running ship's harsh crew. (Oct. 29, 1963)",
+          "bbox": [
+            {
+              "h": 22.84319359756096,
+              "w": 125.94050233422256,
+              "x": 10.957343511814024,
+              "y": 230.3422637195122,
+              "confidence": 0.93,
+              "end_index": 186,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 440, May 1977.",
+          "value": "Reprinted: Walt Disney's Comics No. 440, May 1977.",
+          "bbox": [
+            {
+              "h": 5.1172865853658545,
+              "w": 106.3979939977134,
+              "x": 15.548104516006097,
+              "y": 254.36631859756096,
+              "confidence": 0.91,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**286 (24/8) - July 1964 - 36 pages**",
+          "value": "286 (24/8) - July 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.541013719512175,
+              "w": 75.70787823932928,
+              "x": 11.38606326219512,
+              "y": 265.9052057926829,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK The Olympian Torch Bearer - 10 - Donald wins the right to carry the Olympic torch when all the other athletes get indigestion from parched corn at the Olympic banquet. *(Dec. 3, 1963)*",
+          "value": "DONALD DUCK The Olympian Torch Bearer - 10 - Donald wins the right to carry the Olympic torch when all the other athletes get indigestion from parched corn at the Olympic banquet. (Dec. 3, 1963)",
+          "bbox": [
+            {
+              "h": 23.261958841463418,
+              "w": 125.81155714081552,
+              "x": 11.304240305830792,
+              "y": 271.85951981707314,
+              "confidence": 0.98,
+              "end_index": 195,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**288 (24/12) - September 1964 - 36 pages**",
+          "value": "288 (24/12) - September 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.480807926829275,
+              "w": 95.7140771484375,
+              "x": 11.488467630525912,
+              "y": 301.52092225609755,
+              "confidence": 0.97,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: While Daisy and Gladstone dance, Donald has his finger stuck in a dike. *(Mar. 18, 1964)*",
+          "value": "Front cover: While Daisy and Gladstone dance, Donald has his finger stuck in a dike. (Mar. 18, 1964)",
+          "bbox": [
+            {
+              "h": 11.159268292682954,
+              "w": 125.99687237995427,
+              "x": 11.318578267911585,
+              "y": 307.3519893292683,
+              "confidence": 0.97,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Hero of the Dike - 10 - While Donald and Gladstone race along the Duckburg dike to Daisy's house to ask her to the Wooden Shoe Ball, they find a hole in the dike, and Donald puts his finger in it while Gladstone goes for help. *(Mar. 6, 1964)*",
+          "value": "DONALD DUCK Hero of the Dike - 10 - While Donald and Gladstone race along the Duckburg dike to Daisy's house to ask her to the Wooden Shoe Ball, they find a hole in the dike, and Donald puts his finger in it while Gladstone goes for help. (Mar. 6, 1964)",
+          "bbox": [
+            {
+              "h": 29.094672256097564,
+              "w": 125.90160001429115,
+              "x": 11.38685749333079,
+              "y": 319.1611509146341,
+              "confidence": 0.99,
+              "end_index": 254,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 431, August 1976.",
+          "value": "Reprinted: Walt Disney's Comics No. 431, August 1976.",
+          "bbox": [
+            {
+              "h": 10.580483517530489,
+              "w": 124.96858422256098,
+              "x": 149.53697217987803,
+              "y": 17.271386718749998,
+              "confidence": 0.97,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**289 (25/1) - October 1964 - 36 pages**",
+          "value": "289 (25/1) - October 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.562884908536587,
+              "w": 86.24232850609754,
+              "x": 150.57831745426827,
+              "y": 34.61866520579268,
+              "confidence": 0.97,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (part): Donald's pancake is punctured by Mr. Jones's arrow. *(Apr. 22, 1964)*",
+          "value": "Front cover (part): Donald's pancake is punctured by Mr. Jones's arrow. (Apr. 22, 1964)",
+          "bbox": [
+            {
+              "h": 11.503850990853659,
+              "w": 125.80746379573168,
+              "x": 150.48481897865852,
+              "y": 40.37533536585366,
+              "confidence": 0.97,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Unfriendly Enemies - 10 - The nephews are awakened by Donald and Mr. Jones, who are hurling watermelons at one another in the first of a series of slapstick gags. *(Apr 6, 1964)*",
+          "value": "DONALD DUCK Unfriendly Enemies - 10 - The nephews are awakened by Donald and Mr. Jones, who are hurling watermelons at one another in the first of a series of slapstick gags. (Apr 6, 1964)",
+          "bbox": [
+            {
+              "h": 23.43225800304878,
+              "w": 125.61328125000003,
+              "x": 150.55729230182925,
+              "y": 52.363256478658535,
+              "confidence": 0.98,
+              "end_index": 189,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**290 (25/2) - November 1964 - 36 pages**",
+          "value": "290 (25/2) - November 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.519359756097565,
+              "w": 93.09429878048779,
+              "x": 150.6682145579268,
+              "y": 81.9362538109756,
+              "confidence": 0.97,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): A football has just landed in Donald's soup, splattering him with it. *(May 15, 1964)*",
+          "value": "Front cover (art only): A football has just landed in Donald's soup, splattering him with it. (May 15, 1964)",
+          "bbox": [
+            {
+              "h": 11.289352134146347,
+              "w": 125.79201219512197,
+              "x": 150.602275152439,
+              "y": 87.9770693597561,
+              "confidence": 0.97,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**291 (25/3) - December 1964 - 36 pages**",
+          "value": "291 (25/3) - December 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.490548780487811,
+              "w": 91.98073742378047,
+              "x": 150.73995045731706,
+              "y": 105.6523856707317,
+              "confidence": 0.97,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald is wearing a mask so that he is literally \"two-faced.\" *(May 29, 1964)*",
+          "value": "Front cover (art only): Donald is wearing a mask so that he is literally \"two-faced.\" (May 29, 1964)",
+          "bbox": [
+            {
+              "h": 11.276387195121941,
+              "w": 126.01498856707316,
+              "x": 150.58318788109756,
+              "y": 111.5941806402439,
+              "confidence": 0.97,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Delivery Dilemma - 10 - art only - Scrooge signs a contract to deliver \"wild rabbit eggs,\" not noticing the fine print that gives his fortune to the Beagle Boys if even one egg is cracked. *(May 25, 1964)*",
+          "value": "DONALD DUCK Delivery Dilemma - 10 - art only - Scrooge signs a contract to deliver \"wild rabbit eggs,\" not noticing the fine print that gives his fortune to the Beagle Boys if even one egg is cracked. (May 25, 1964)",
+          "bbox": [
+            {
+              "h": 23.419287347560985,
+              "w": 126.38764481707315,
+              "x": 150.3976143292683,
+              "y": 123.30796875,
+              "confidence": 0.98,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 432, September 1976.",
+          "value": "Reprinted: Walt Disney's Comics No. 432, September 1976.",
+          "bbox": [
+            {
+              "h": 5.22832317073171,
+              "w": 118.60386242378048,
+              "x": 155.3882412347561,
+              "y": 147.39004573170732,
+              "confidence": 0.94,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**292 (25/4) - January 1965 - 36 pages**",
+          "value": "292 (25/4) - January 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.61761432926829,
+              "w": 86.54300876524391,
+              "x": 150.8523475609756,
+              "y": 158.93291158536584,
+              "confidence": 0.97,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews, dressed as pilgrims, flee from an angry turkey. *(June 16, 1964)*",
+          "value": "Front cover (art only): The nephews, dressed as pilgrims, flee from an angry turkey. (June 16, 1964)",
+          "bbox": [
+            {
+              "h": 11.341143292682927,
+              "w": 126.03795160060976,
+              "x": 150.6508765243902,
+              "y": 164.91537347560975,
+              "confidence": 0.97,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Instant Hercules - 10 - Donald is a master scuba diver, and he is given the job of finding an ancient Persian battle fleet and an elixir that made ancient soldiers fierce fighters. *(June 11, 1964)*",
+          "value": "DONALD DUCK Instant Hercules - 10 - Donald is a master scuba diver, and he is given the job of finding an ancient Persian battle fleet and an elixir that made ancient soldiers fierce fighters. (June 11, 1964)",
+          "bbox": [
+            {
+              "h": 23.000396341463418,
+              "w": 126.17379192073167,
+              "x": 150.60868902439023,
+              "y": 176.8357774390244,
+              "confidence": 0.98,
+              "end_index": 209,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 439, April 1977.",
+          "value": "Reprinted: Walt Disney's Comics No. 439, April 1977.",
+          "bbox": [
+            {
+              "h": 5.397347560975622,
+              "w": 107.72159679878047,
+              "x": 155.508046875,
+              "y": 200.3603963414634,
+              "confidence": 0.86,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**293 (25/5) - February 1965 - 36 pages**",
+          "value": "293 (25/5) - February 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.62815548780487,
+              "w": 89.80568025914631,
+              "x": 149.78718178353657,
+              "y": 212.74223323170733,
+              "confidence": 0.97,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GRANDMA DUCK'S FARM FRIENDS and the Sheepish Cowboys - 6 7/8 - Reprinted from *Grandma Duck's Farm Friends* Four Color No. 1010, July-Sept. 1959.",
+          "value": "GRANDMA DUCK'S FARM FRIENDS and the Sheepish Cowboys - 6 7/8 - Reprinted from Grandma Duck's Farm Friends Four Color No. 1010, July-Sept. 1959.",
+          "bbox": [
+            {
+              "h": 17.32410823170733,
+              "w": 126.1583746189024,
+              "x": 149.5892263719512,
+              "y": 218.8086356707317,
+              "confidence": 0.98,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**294 (25/6) - March 1965 - 36 pages**",
+          "value": "294 (25/6) - March 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.509367378048809,
+              "w": 82.51343368902438,
+              "x": 150.01185594512194,
+              "y": 242.43509908536583,
+              "confidence": 0.97,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Duck Out of Luck - 10 - Gladstone is barred from an ice-skating race because of his good luck, so he enters as the \"Masked Marvel,\" dressed all in black. *(Sept. 17, 1964)*",
+          "value": "DONALD DUCK Duck Out of Luck - 10 - Gladstone is barred from an ice-skating race because of his good luck, so he enters as the \"Masked Marvel,\" dressed all in black. (Sept. 17, 1964)",
+          "bbox": [
+            {
+              "h": 22.339984756097564,
+              "w": 126.22006097560977,
+              "x": 149.6922256097561,
+              "y": 248.25928353658537,
+              "confidence": 0.98,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 413, February 1975.",
+          "value": "Reprinted: Walt Disney's Comics No. 413, February 1975.",
+          "bbox": [
+            {
+              "h": 5.181013719512175,
+              "w": 115.50157202743901,
+              "x": 154.3589519817073,
+              "y": 272.3258231707317,
+              "confidence": 0.95,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**295 (25/7) - April 1965 - 36 pages**",
+          "value": "295 (25/7) - April 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.577118902439015,
+              "w": 79.0489996189024,
+              "x": 149.99115663109757,
+              "y": 283.75993902439023,
+              "confidence": 0.97,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald, a logger, is high up a tree that a woodpecker is pecking from under him. (Illustrating \"Timber Tycoon.\") *(Oct. 9, 1964)*",
+          "value": "Front cover (art only): Donald, a logger, is high up a tree that a woodpecker is pecking from under him. (Illustrating \"Timber Tycoon.\") (Oct. 9, 1964)",
+          "bbox": [
+            {
+              "h": 17.143124999999998,
+              "w": 126.18154344512193,
+              "x": 149.92266196646338,
+              "y": 289.72047256097557,
+              "confidence": 0.98,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**296 (25/8) - May 1965 - 36 pages**",
+          "value": "296 (25/8) - May 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.47184451219513,
+              "w": 76.85461509146342,
+              "x": 150.13984184451218,
+              "y": 313.3616158536585,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald pulls a fish out of a top hat, while an angry rabbit rises from a fish bowl. *(Oct. 9, 1964)*",
+          "value": "Front cover (art only): Donald pulls a fish out of a top hat, while an angry rabbit rises from a fish bowl. (Oct. 9, 1964)",
+          "bbox": [
+            {
+              "h": 11.480442073170725,
+              "w": 125.96779344512191,
+              "x": 150.03890053353658,
+              "y": 319.1321798780488,
+              "confidence": 0.98,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**297 (25/9) - June 1965 - 36 pages**",
+          "value": "297 (25/9) - June 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5010442073171,
+              "w": 76.8796875,
+              "x": 150.2220388719512,
+              "y": 336.9363795731707,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald and the nephews are walk-",
+          "value": "Front cover (art only): Donald and the nephews are walk-",
+          "bbox": [
+            {
+              "h": 5.69480945121948,
+              "w": 121.07709603658533,
+              "x": 154.7951981707317,
+              "y": 342.7476905487805,
+              "confidence": 0.97,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n187",
+              "value": "Carl Barks and the Art of the Comic Book\n187",
+              "bbox": [
+                {
+                  "h": 4.291806402439015,
+                  "w": 77.77419969512196,
+                  "x": 172.31448361280485,
+                  "y": 363.70682926829267,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n187",
+          "bbox": [
+            {
+              "h": 4.29,
+              "w": 77.77,
+              "x": 172.31,
+              "y": 363.71,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "187"
+    }
+  ]
+}

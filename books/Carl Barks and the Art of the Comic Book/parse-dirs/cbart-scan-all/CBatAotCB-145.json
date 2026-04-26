@@ -1,0 +1,680 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "cover) - A fortune teller predicts even more wealth for Scrooge. (*Oct. 31, 1957*)",
+          "value": "cover) - A fortune teller predicts even more wealth for Scrooge. (Oct. 31, 1957)",
+          "bbox": [
+            {
+              "h": 11.696988852896343,
+              "w": 125.52729420731707,
+              "x": 11.197016958841461,
+              "y": 23.339967130335364,
+              "confidence": 0.98,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 32 - Dec.-Feb. 1961 - 36 pages",
+          "value": "32 - Dec.-Feb. 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.699148246951217,
+              "w": 70.8835693359375,
+              "x": 11.195916182355182,
+              "y": 41.06075362042683,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge hitches a ride in an armored truck. (*July 31, 1959*)",
+          "value": "Front cover (art only): Scrooge hitches a ride in an armored truck. (July 31, 1959)",
+          "bbox": [
+            {
+              "h": 11.354348323170731,
+              "w": 125.2926005144817,
+              "x": 11.42560546875,
+              "y": 46.85623285060976,
+              "confidence": 0.97,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 73, February 1968; No. 151, April 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 73, February 1968; No. 151, April 1978.",
+          "bbox": [
+            {
+              "h": 10.911528201219507,
+              "w": 125.68387349942834,
+              "x": 11.2487255859375,
+              "y": 58.73837652439025,
+              "confidence": 0.96,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE That's No Fable! - 18 - Scrooge plans to buy forty acres in the Dismal Ooze Swamp in Florida and while inspecting the land finds the original Fountain of Youth. Two of the soldiers of \"Poncey de Loon\" have been trapped for centuries on an island in the center of the Fountain, and the ducks are trapped there, too. (*May 12, 1960*)",
+          "value": "UNCLE SCROOGE That's No Fable! - 18 - Scrooge plans to buy forty acres in the Dismal Ooze Swamp in Florida and while inspecting the land finds the original Fountain of Youth. Two of the soldiers of \"Poncey de Loon\" have been trapped for centuries on an island in the center of the Fountain, and the ducks are trapped there, too. (May 12, 1960)",
+          "bbox": [
+            {
+              "h": 41.35638338414635,
+              "w": 126.00260992282773,
+              "x": 11.72127917778201,
+              "y": 70.07722179878049,
+              "confidence": 0.98,
+              "end_index": 344,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks has explained \"why I padded the Poncey de Loon story by having Uncle Scrooge tell it to Grandma. . . . I was trying to get a little variety in the opening. It seemed to me from the business involved that the reader needed to be aware that Scrooge would find the Fountain of Youth. That Fountain would have seemed awfully phony if it were dragged into the story along about page 8. Grandma was the gimmick that helped plant the fountain early.\" (*Dec. 30, 1960, letter to Malcolm Willits*)",
+          "value": "Barks has explained \"why I padded the Poncey de Loon story by having Uncle Scrooge tell it to Grandma. . . . I was trying to get a little variety in the opening. It seemed to me from the business involved that the reader needed to be aware that Scrooge would find the Fountain of Youth. That Fountain would have seemed awfully phony if it were dragged into the story along about page 8. Grandma was the gimmick that helped plant the fountain early.\" (Dec. 30, 1960, letter to Malcolm Willits)",
+          "bbox": [
+            {
+              "h": 46.55255716463416,
+              "w": 125.92735196741614,
+              "x": 11.65712116520579,
+              "y": 112.20942073170731,
+              "confidence": 0.99,
+              "end_index": 493,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: From \"That's No Fable\" there exist two panels excised from page 5 and replaced by the present panels 5 and 6 of that page. In the original, the two boys are only described; in the revision they are shown.",
+          "value": "Weston: From \"That's No Fable\" there exist two panels excised from page 5 and replaced by the present panels 5 and 6 of that page. In the original, the two boys are only described; in the revision they are shown.",
+          "bbox": [
+            {
+              "h": 22.627499999999998,
+              "w": 125.87399592701983,
+              "x": 11.780129454077743,
+              "y": 159.0299199695122,
+              "confidence": 0.98,
+              "end_index": 211,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 97, February 1972; Walt Disney Comics Digest No. 56, December 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 97, February 1972; Walt Disney Comics Digest No. 56, December 1975.",
+          "bbox": [
+            {
+              "h": 11.205080030487798,
+              "w": 125.84368652343747,
+              "x": 11.559226014672255,
+              "y": 183.3378086890244,
+              "confidence": 0.96,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE That Small Feeling - 4 - An Amazon witch doctor asks Gyro to give more power to his voodoo doll, which shrinks those who squeeze it. (*June 13, 1960*)",
+          "value": "GYRO GEARLOOSE That Small Feeling - 4 - An Amazon witch doctor asks Gyro to give more power to his voodoo doll, which shrinks those who squeeze it. (June 13, 1960)",
+          "bbox": [
+            {
+              "h": 22.622492378048783,
+              "w": 124.99580137671494,
+              "x": 11.846694812309451,
+              "y": 195.0227743902439,
+              "confidence": 0.96,
+              "end_index": 164,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 92, April 1971.",
+          "value": "Reprinted: Uncle Scrooge No. 92, April 1971.",
+          "bbox": [
+            {
+              "h": 5.440472560975622,
+              "w": 89.56559737042681,
+              "x": 16.330609756097562,
+              "y": 218.8376981707317,
+              "confidence": 0.92,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Clothes Make the Duck - 7½ - Scrooge ruins his clothes while trying to avoid an invitation to a party Daisy's club is holding to show that \"clothes make the man.\" (*May 17, 1960*)",
+          "value": "UNCLE SCROOGE Clothes Make the Duck - 7½ - Scrooge ruins his clothes while trying to avoid an invitation to a party Daisy's club is holding to show that \"clothes make the man.\" (May 17, 1960)",
+          "bbox": [
+            {
+              "h": 23.376699695121914,
+              "w": 125.35138112137957,
+              "x": 11.829301043254572,
+              "y": 224.38836128048783,
+              "confidence": 0.97,
+              "end_index": 192,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 117, February 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 117, February 1975.",
+          "bbox": [
+            {
+              "h": 5.406882621951245,
+              "w": 99.46306247618139,
+              "x": 16.458120831745426,
+              "y": 248.36302591463414,
+              "confidence": 0.89,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Homey Touch - ½ - Scrooge \"beautifies\" his money bags with bows. (*Not listed.*)\nReprinted: Uncle Scrooge No. 117, February 1975.",
+          "value": "UNCLE SCROOGE The Homey Touch - ½ - Scrooge \"beautifies\" his money bags with bows. (Not listed.)\nReprinted: Uncle Scrooge No. 117, February 1975.",
+          "bbox": [
+            {
+              "h": 17.745640243902436,
+              "w": 125.26605433022102,
+              "x": 11.908496927400913,
+              "y": 254.04990091463412,
+              "confidence": 0.89,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE A Thrift Gift - 1 - Scrooge gives Donald and the nephews \"matched luggage\" — hobo sticks and bundles. (*July 18, 1960*)",
+          "value": "UNCLE SCROOGE A Thrift Gift - 1 - Scrooge gives Donald and the nephews \"matched luggage\" — hobo sticks and bundles. (July 18, 1960)",
+          "bbox": [
+            {
+              "h": 17.41817835365855,
+              "w": 125.06722965891767,
+              "x": 12.188215272484754,
+              "y": 272.1396722560976,
+              "confidence": 0.94,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 97, February 1972.",
+          "value": "Reprinted: Uncle Scrooge No. 97, February 1972.",
+          "bbox": [
+            {
+              "h": 5.302408536585335,
+              "w": 96.47514886623473,
+              "x": 16.890329411204267,
+              "y": 290.2545274390244,
+              "confidence": 0.89,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Turnabout - 1 (inside back cover) - Scrooge is pursued by a hoodlum — until he sees a reward poster for him. (*Not listed.*)",
+          "value": "UNCLE SCROOGE Turnabout - 1 (inside back cover) - Scrooge is pursued by a hoodlum — until he sees a reward poster for him. (Not listed.)",
+          "bbox": [
+            {
+              "h": 17.52233231707316,
+              "w": 124.88834008193598,
+              "x": 12.43445907964939,
+              "y": 295.78740091463413,
+              "confidence": 0.95,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 105, June 1973.",
+          "value": "Reprinted: Uncle Scrooge No. 105, June 1973.",
+          "bbox": [
+            {
+              "h": 5.361836890243885,
+              "w": 90.65651724466463,
+              "x": 16.98064453125,
+              "y": 313.7141844512195,
+              "confidence": 0.93,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 33 - Mar.-May 1961 - 36 pages",
+          "value": "33 - Mar.-May 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.591272865853679,
+              "w": 74.02593035442072,
+              "x": 12.568166444359756,
+              "y": 325.3903125,
+              "confidence": 0.95,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge shovels money into a bank's night deposit vault. (*Apr. 21, 1960*)",
+          "value": "Front cover (art only): Scrooge shovels money into a bank's night deposit vault. (Apr. 21, 1960)",
+          "bbox": [
+            {
+              "h": 11.5451067073171,
+              "w": 124.77164276867376,
+              "x": 12.58770174352134,
+              "y": 331.1611051829268,
+              "confidence": 0.96,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 92, April 1971.",
+          "value": "Reprinted: Uncle Scrooge No. 92, April 1971.",
+          "bbox": [
+            {
+              "h": 5.250411585365855,
+              "w": 89.74578279820884,
+              "x": 17.014479206364328,
+              "y": 343.36609756097556,
+              "confidence": 0.93,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Tree Trick - 1 (inside front cover) - Scrooge carries his money to the bank concealed in a bag for a tree's roots. (*Probably May 24, 1956*)",
+          "value": "UNCLE SCROOGE Tree Trick - 1 (inside front cover) - Scrooge carries his money to the bank concealed in a bag for a tree's roots. (Probably May 24, 1956)",
+          "bbox": [
+            {
+              "h": 17.715420160060972,
+              "w": 125.43924923780489,
+              "x": 150.4037195121951,
+              "y": 23.126444359756096,
+              "confidence": 0.96,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page is probably the one identified on Barks's list as \"carries money to bank,\" with no issue number specified.",
+          "value": "This page is probably the one identified on Barks's list as \"carries money to bank,\" with no issue number specified.",
+          "bbox": [
+            {
+              "h": 11.444339748475608,
+              "w": 125.42033346036585,
+              "x": 150.25714367378046,
+              "y": 41.294013910060976,
+              "confidence": 0.93,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 73, February 1968.",
+          "value": "Reprinted: Uncle Scrooge No. 73, February 1968.",
+          "bbox": [
+            {
+              "h": 5.676591082317072,
+              "w": 97.13558689024389,
+              "x": 155.2100419207317,
+              "y": 53.127639100609755,
+              "confidence": 0.86,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Billions in the Hole - 16 - An \"atom subtracter\" invented by Scrooge's engineers is stolen by the Beagle Boys, who plan to shrink Scrooge's money bin with it. Not only the bin but the Beagle Boys and Scrooge and Donald are shrunk, and are soon at the mercy of hungry ants. (*Sept. 3, 1960*)",
+          "value": "UNCLE SCROOGE Billions in the Hole - 16 - An \"atom subtracter\" invented by Scrooge's engineers is stolen by the Beagle Boys, who plan to shrink Scrooge's money bin with it. Not only the bin but the Beagle Boys and Scrooge and Donald are shrunk, and are soon at the mercy of hungry ants. (Sept. 3, 1960)",
+          "bbox": [
+            {
+              "h": 35.064740853658535,
+              "w": 125.38651486280489,
+              "x": 150.48224657012193,
+              "y": 59.078014481707314,
+              "confidence": 0.97,
+              "end_index": 303,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"Got this story idea from a friend of Bill Spicer's.\"\nReprinted: Uncle Scrooge No. 120, June 1975.",
+          "value": "Barks: \"Got this story idea from a friend of Bill Spicer's.\"\nReprinted: Uncle Scrooge No. 120, June 1975.",
+          "bbox": [
+            {
+              "h": 11.667084603658536,
+              "w": 111.16608612804875,
+              "x": 155.40813452743902,
+              "y": 94.59964939024391,
+              "confidence": 0.92,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE You Can't Win - 4 - Gyro shapes trees to order, but can't satisfy his finicky customers. (*Aug. 15, 1960*)",
+          "value": "GYRO GEARLOOSE You Can't Win - 4 - Gyro shapes trees to order, but can't satisfy his finicky customers. (Aug. 15, 1960)",
+          "bbox": [
+            {
+              "h": 17.37753429878048,
+              "w": 124.91667301829264,
+              "x": 151.1375419207317,
+              "y": 106.28949695121952,
+              "confidence": 0.95,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 30, August 1971.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 30, August 1971.",
+          "bbox": [
+            {
+              "h": 5.599824695121942,
+              "w": 120.58768673780489,
+              "x": 155.41777248475609,
+              "y": 124.45374237804877,
+              "confidence": 0.76,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Bongo on the Congo - 10 - Scrooge takes Donald to his diamond mine in Kachoonga to show him how to be a tycoon, but they find that the mining camp has been deserted because of the sound of a dreaded Qwak Qwak war drum. (*Sept. 12, 1960*)",
+          "value": "UNCLE SCROOGE Bongo on the Congo - 10 - Scrooge takes Donald to his diamond mine in Kachoonga to show him how to be a tycoon, but they find that the mining camp has been deserted because of the sound of a dreaded Qwak Qwak war drum. (Sept. 12, 1960)",
+          "bbox": [
+            {
+              "h": 35.10131478658536,
+              "w": 125.31693978658535,
+              "x": 150.9860956554878,
+              "y": 124.48720655487806,
+              "confidence": 0.97,
+              "end_index": 250,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 73, February 1968.",
+          "value": "Reprinted: Uncle Scrooge No. 73, February 1968.",
+          "bbox": [
+            {
+              "h": 5.515987042682927,
+              "w": 97.25719321646342,
+              "x": 155.37714557926827,
+              "y": 159.88237042682928,
+              "confidence": 0.84,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Big Bobber - ¾ - Scrooge disguises himself to bob for apples. (*June 6, 1957*)",
+          "value": "UNCLE SCROOGE The Big Bobber - ¾ - Scrooge disguises himself to bob for apples. (June 6, 1957)",
+          "bbox": [
+            {
+              "h": 11.802610518292694,
+              "w": 125.17640053353661,
+              "x": 151.02639672256095,
+              "y": 165.6399580792683,
+              "confidence": 0.85,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A circulation statement fills out the page.",
+          "value": "A circulation statement fills out the page.",
+          "bbox": [
+            {
+              "h": 5.5060289634146375,
+              "w": 83.84079649390243,
+              "x": 155.78324314024388,
+              "y": 177.9807393292683,
+              "confidence": 0.82,
+              "end_index": 42,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Thumbs Up - 1 (inside back cover) - Scrooge matches a butcher's thumb on the scales by pushing his thumb under the scales. (*Dec. 5, 1957*)",
+          "value": "UNCLE SCROOGE Thumbs Up - 1 (inside back cover) - Scrooge matches a butcher's thumb on the scales by pushing his thumb under the scales. (Dec. 5, 1957)",
+          "bbox": [
+            {
+              "h": 17.62504573170733,
+              "w": 125.0836737804878,
+              "x": 151.17419016768292,
+              "y": 183.3698094512195,
+              "confidence": 0.9,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 34 - June-Aug. 1961 - 36 pages",
+          "value": "34 - June-Aug. 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6740701219512175,
+              "w": 73.8883708079268,
+              "x": 151.13279153963413,
+              "y": 207.1591463414634,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge lifts bags of money as if they were barbells. (*July 25, 1960*)",
+          "value": "Front cover (art only): Scrooge lifts bags of money as if they were barbells. (July 25, 1960)",
+          "bbox": [
+            {
+              "h": 11.533399390243884,
+              "w": 125.88880335365849,
+              "x": 150.38115091463413,
+              "y": 213.26067073170734,
+              "confidence": 0.97,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Mythtic Mystery - 14 - A small planet is slipping closer and closer to earth, and the ducks are swept up in a storm caused by the planet's approach. They land on a flying chariot and are taken to the planet, which is called Valhalla and is populated by Roman and Norse \"gods.\" (*Dec. 10, 1960*)",
+          "value": "UNCLE SCROOGE Mythtic Mystery - 14 - A small planet is slipping closer and closer to earth, and the ducks are swept up in a storm caused by the planet's approach. They land on a flying chariot and are taken to the planet, which is called Valhalla and is populated by Roman and Norse \"gods.\" (Dec. 10, 1960)",
+          "bbox": [
+            {
+              "h": 35.25288109756101,
+              "w": 125.35146150914635,
+              "x": 150.90079458841464,
+              "y": 224.8288719512195,
+              "confidence": 0.98,
+              "end_index": 307,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: This story was submitted as sixteen pages; two pages were dropped before publication to make room for advertisements. Barks described the cuts in these terms: \"In the Valhalla story the cuts were scattered around, but totaled the equivalent of 16 panels. My chin hit my knees when I saw. . . the big half-page stupender I did of Thor and Vulcan and a nephew riding above the busiest street corner in Duckburg in the gold chariot missing. Thor's horse's terrified, thousands (at least) of people gaping upward in disbelief. Autos bumper to bumper, smoking, clanking. In short, I gave Vulcan something to be scared about. All wasted effort.\" (*Mar. 24, 1961, letter to Malcolm Willits*)",
+          "value": "Changes: This story was submitted as sixteen pages; two pages were dropped before publication to make room for advertisements. Barks described the cuts in these terms: \"In the Valhalla story the cuts were scattered around, but totaled the equivalent of 16 panels. My chin hit my knees when I saw. . . the big half-page stupender I did of Thor and Vulcan and a nephew riding above the busiest street corner in Duckburg in the gold chariot missing. Thor's horse's terrified, thousands (at least) of people gaping upward in disbelief. Autos bumper to bumper, smoking, clanking. In short, I gave Vulcan something to be scared about. All wasted effort.\" (Mar. 24, 1961, letter to Malcolm Willits)",
+          "bbox": [
+            {
+              "h": 69.77407774390244,
+              "w": 125.31205221036582,
+              "x": 151.0635594512195,
+              "y": 260.6840167682927,
+              "confidence": 0.98,
+              "end_index": 692,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks had originally planned to do a story for Uncle Scrooge No. 34 with a plot revolving around an Aswan-type dam, but decided it would come too soon after \"Pipeline to Danger\"",
+          "value": "Barks had originally planned to do a story for Uncle Scrooge No. 34 with a plot revolving around an Aswan-type dam, but decided it would come too soon after \"Pipeline to Danger\"",
+          "bbox": [
+            {
+              "h": 17.370160060975593,
+              "w": 125.18274580792684,
+              "x": 151.01248856707315,
+              "y": 331.61810213414634,
+              "confidence": 0.98,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book 145",
+              "value": "Carl Barks and the Art of the Comic Book 145",
+              "bbox": [
+                {
+                  "h": 4.52823932926829,
+                  "w": 77.73026295731704,
+                  "x": 172.06329649390244,
+                  "y": 363.30333841463414,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book 145",
+          "bbox": [
+            {
+              "h": 4.53,
+              "w": 77.73,
+              "x": 172.06,
+              "y": 363.3,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "145"
+    }
+  ]
+}

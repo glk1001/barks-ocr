@@ -1,0 +1,3 @@
+![Cover of Walt Disney's Comics and Stories No. 78, March 1947. The illustration shows Donald Duck looking suspiciously at a makeshift "radio" built from a wooden crate labeled "BARKS JIFFY Chicken Dinner". Inside the crate, one of his nephews is playing a ukulele and singing, while another nephew works on the back of the crate. A sign on top of the crate reads "1947 RADiO $8.00 SPot CASH".](CBatAotCB-171_page_1_image_1_v2.jpg)
+
+From Walt Disney's Comics No. 78, March 1947; © 1947 Walt Disney Productions.

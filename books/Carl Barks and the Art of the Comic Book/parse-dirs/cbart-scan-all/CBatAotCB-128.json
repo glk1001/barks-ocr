@@ -1,0 +1,360 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "METRO-GOLDWYN-MAYER-CARTOONS\n*present*",
+              "value": "METRO-GOLDWYN-MAYER-CARTOONS\npresent",
+              "bbox": [
+                {
+                  "h": 339.0,
+                  "w": 236.0,
+                  "x": 26.0,
+                  "y": 9.0,
+                  "confidence": 0.51,
+                  "end_index": 37,
+                  "label": "image",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "METRO-GOLDWYN-MAYER-CARTOONS\n*present*",
+          "bbox": [
+            {
+              "h": 339.0,
+              "w": 236.0,
+              "x": 26.0,
+              "y": 9.0,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header"
+        },
+        {
+          "caption": "Comic strip titled \"HAPPY HOUND (DETECTIVE)\" featuring a sad-looking dog and a warden pig.",
+          "md": "![Comic strip titled \"HAPPY HOUND (DETECTIVE)\" featuring a sad-looking dog and a warden pig.](CBatAotCB-128_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-128_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.64,
+              "end_index": 115,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "level": 1,
+          "md": "# HAPPY HOUND",
+          "value": "HAPPY HOUND",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.61,
+              "end_index": 10,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## (DETECTIVE)",
+          "value": "(DETECTIVE)",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.61,
+              "end_index": 10,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**Happy Hound:** HELLOO!",
+          "value": "Happy Hound: HELLOO!",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.61,
+              "end_index": 23,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Narrator Box:** AN EVENT OF GREAT IMPORTANCE SHAKES ESCAPE-PROOF ALCASING PRISON!",
+          "value": "Narrator Box: AN EVENT OF GREAT IMPORTANCE SHAKES ESCAPE-PROOF ALCASING PRISON!",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.63,
+              "end_index": 82,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Warden (Pig):** THAT GUY IS WEARING OUT HIS WELCOME AROUND HERE! HOW DID HE DO IT THIS TIME?",
+          "value": "Warden (Pig): THAT GUY IS WEARING OUT HIS WELCOME AROUND HERE! HOW DID HE DO IT THIS TIME?",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.63,
+              "end_index": 93,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Radio/Intercom:** PRISONER NUMBER 3B909664780, ALIAS TORPEDO WOLF, ALIAS KILLER DILLER WOLFIE BOY, ALIAS LOBO THE LOUSE, ALIAS HOUDINI WOLF, HAS ESCAPED AGAIN!",
+          "value": "Radio/Intercom: PRISONER NUMBER 3B909664780, ALIAS TORPEDO WOLF, ALIAS KILLER DILLER WOLFIE BOY, ALIAS LOBO THE LOUSE, ALIAS HOUDINI WOLF, HAS ESCAPED AGAIN!",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.66,
+              "end_index": 160,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Guard:** HE FLASHED A BIG AUTOMATIC AND COWED FOURTEEN BULLS— I MEAN GUARDS!",
+          "value": "Guard: HE FLASHED A BIG AUTOMATIC AND COWED FOURTEEN BULLS— I MEAN GUARDS!",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.63,
+              "end_index": 77,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "Warden questioning a wolf guard.",
+          "md": "![Warden questioning a wolf guard.](CBatAotCB-128_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-128_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.62,
+              "end_index": 57,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**Warden:** ANY IDEA WHICH WAY HE WENT?",
+          "value": "Warden: ANY IDEA WHICH WAY HE WENT?",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.61,
+              "end_index": 38,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Wolf Guard:** HUNK-UH! HE MADE US CLOSE OUR EYES WHILE HE WALKED OUT OF THE GATE!",
+          "value": "Wolf Guard: HUNK-UH! HE MADE US CLOSE OUR EYES WHILE HE WALKED OUT OF THE GATE!",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.63,
+              "end_index": 82,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "Warden shouting for detectives while Happy Hound lies on the ground.",
+          "md": "![Warden shouting for detectives while Happy Hound lies on the ground.](CBatAotCB-128_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-128_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.64,
+              "end_index": 93,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**Warden:** CALL OUT MY PHENOMENAL HOUND DETECTIVES! GET THEM ON HIS TRAIL IMMEDIATELY!",
+          "value": "Warden: CALL OUT MY PHENOMENAL HOUND DETECTIVES! GET THEM ON HIS TRAIL IMMEDIATELY!",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.63,
+              "end_index": 86,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Happy Hound:** HE DOESN'T MEAN ME! THIS IS MY DAY OFF! I'M SO HAPPY!",
+          "value": "Happy Hound: HE DOESN'T MEAN ME! THIS IS MY DAY OFF! I'M SO HAPPY!",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.62,
+              "end_index": 69,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "21",
+          "value": "21",
+          "bbox": [
+            {
+              "h": 339.21485399199696,
+              "w": 236.32930521150914,
+              "x": 26.48281940739329,
+              "y": 9.169246617759146,
+              "confidence": 0.6,
+              "end_index": 1,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "From *Our Gang Comics* No. 9, Jan.-Feb. 1943; © 1943 Loew's Inc.",
+          "value": "From Our Gang Comics No. 9, Jan.-Feb. 1943; © 1943 Loew's Inc.",
+          "bbox": [
+            {
+              "h": 6.878368902439015,
+              "w": 128.51527534298776,
+              "x": 80.51327458079268,
+              "y": 352.1575381097561,
+              "confidence": 0.9,
+              "end_index": 63,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "128 Carl Barks and the Art of the Comic Book",
+              "value": "128 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.850663109756114,
+                  "w": 77.6862704839939,
+                  "x": 37.07778344131097,
+                  "y": 372.18404725609753,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "128 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.85,
+              "w": 77.69,
+              "x": 37.08,
+              "y": 372.18,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "21, 128"
+    }
+  ]
+}

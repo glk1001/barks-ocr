@@ -1,0 +1,1 @@
+![A cartoon illustration by C. Barks titled "MOVE OVER!" showing a stork carrying a baby towards a small house where a wolf is sitting on the doorstep. The top of the page features the stylized logo "CO-CO" and a price of 10¢.](CBatAotCB-015_page_1_image_1_v2.jpg)

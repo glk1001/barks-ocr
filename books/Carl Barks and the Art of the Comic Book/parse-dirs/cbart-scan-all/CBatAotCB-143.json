@@ -1,0 +1,205 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 135, December 1976; *Walt Disney Comics Digest* No. 16, October 1969.\nUNCLE SCROOGE - 5/8 - Scrooge proves he has a \"roll that would choke a horse.\" (*Oct. 31, 1957*)\nThe Dell Pledge and an advertisement fill out the page.\nUNCLE SCROOGE - 1 (inside back cover) - Scrooge finds a way to read his newspaper without paying for expensive electricity. (*Mar. 25, 1958*)",
+          "value": "Reprinted: Uncle Scrooge No. 135, December 1976; Walt Disney Comics Digest No. 16, October 1969.\nUNCLE SCROOGE - 5/8 - Scrooge proves he has a \"roll that would choke a horse.\" (Oct. 31, 1957)\nThe Dell Pledge and an advertisement fill out the page.\nUNCLE SCROOGE - 1 (inside back cover) - Scrooge finds a way to read his newspaper without paying for expensive electricity. (Mar. 25, 1958)",
+          "bbox": [
+            {
+              "h": 17.08153010670732,
+              "w": 125.39109160632621,
+              "x": 11.695534727515243,
+              "y": 47.4960537347561,
+              "confidence": 0.84,
+              "end_index": 394,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 24 - Dec.-Feb. 1959 - 36 pages",
+          "value": "24 - Dec.-Feb. 1959 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.569630335365855,
+              "w": 71.15524140148628,
+              "x": 11.55217761528201,
+              "y": 74.07157774390244,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge, as a Santa collecting for charity, has a safe instead of a kettle. (*Oct. 10, 1957*)\nReprinted: *Uncle Scrooge* No. 96, December 1971.\nUNCLE SCROOGE and The Twenty-four Carat Moon - 20 - A new moon is discovered behind earth's moon, this one made of solid gold, and Scrooge is soon in a rocket race with the Beagle Boys and others to be the first to reach it. When Scrooge does arrive on the golden moon, he finds that Muchkale, the richest man on Venus, has beat him to it. (*Jan. 20, 1958*)\nReprinted: *Uncle Scrooge* No. 135, December 1976; *Walt Disney Comics Digest* No. 6, December 1968.\nGYRO GEARLOOSE - 4 - Gyro builds a house on Cyclone Hill so that he can test his new invention, a cyclone warning bell. (*Jan. 20, 1958*)\nReprinted: *Uncle Scrooge* No. 113, August 1974.\nUNCLE SCROOGE and The Magic Ink - 6 - Scrooge buys an ink that makes people want to pay their bills, and tries it out on Donald. (*Feb. 17, 1958*)\nBarks: \"Got this story idea from my daughter.\"\nReprinted: *Uncle Scrooge* No. 92, April 1971.",
+          "value": "Front cover (art only): Scrooge, as a Santa collecting for charity, has a safe instead of a kettle. (Oct. 10, 1957)\nReprinted: Uncle Scrooge No. 96, December 1971.\nUNCLE SCROOGE and The Twenty-four Carat Moon - 20 - A new moon is discovered behind earth's moon, this one made of solid gold, and Scrooge is soon in a rocket race with the Beagle Boys and others to be the first to reach it. When Scrooge does arrive on the golden moon, he finds that Muchkale, the richest man on Venus, has beat him to it. (Jan. 20, 1958)\nReprinted: Uncle Scrooge No. 135, December 1976; Walt Disney Comics Digest No. 6, December 1968.\nGYRO GEARLOOSE - 4 - Gyro builds a house on Cyclone Hill so that he can test his new invention, a cyclone warning bell. (Jan. 20, 1958)\nReprinted: Uncle Scrooge No. 113, August 1974.\nUNCLE SCROOGE and The Magic Ink - 6 - Scrooge buys an ink that makes people want to pay their bills, and tries it out on Donald. (Feb. 17, 1958)\nBarks: \"Got this story idea from my daughter.\"\nReprinted: Uncle Scrooge No. 92, April 1971.",
+          "bbox": [
+            {
+              "h": 4.908304115853652,
+              "w": 29.75250178639481,
+              "x": 11.736885122903962,
+              "y": 133.2990320121951,
+              "confidence": 0.61,
+              "end_index": 1053,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 25 - Mar.-May 1959 - 36 pages",
+          "value": "25 - Mar.-May 1959 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.35534298780487,
+              "w": 73.90086306688261,
+              "x": 11.756619783727134,
+              "y": 212.53159298780488,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews paint dollar signs on the sleeping Scrooge's glasses. (*Aug. 4, 1958*)\nReprinted: *Uncle Scrooge* No. 150, March 1978.\nUNCLE SCROOGE - 1 (inside front cover) - Scrooge refuses to budge from a park bench that's to be taken downtown. (*Sept. 9, 1958*)\nUNCLE SCROOGE and The Flying Dutchman - 20 - Scrooge, Donald and the nephews sail in a dredging boat for the Cape of Good Hope in search of the \"Fliegende Hollander,\" a gold-laden ship that disappeared three hundred years before, and that Scrooge believes was scuttled with the gold still aboard. They don't realize until too late that the ship they're seeking is the ghostly \"Flying Dutchman,\" which brings bad luck to all who see it sailing above the water. (*Apr. 20, 1958*)\nReprinted: *Uncle Scrooge* No. 87, June 1970; No. 151, April 1978.\nGYRO GEARLOOSE - 4 - Gyro invents a wishing well that works — and puts him in danger in a Latin American war. (*June 9, 1958*)\nReprinted: *Walt Disney's Comics* No. 305, February 1966.\nUNCLE SCROOGE - 5 3/4 - Scrooge, in Egypt in search of investment opportunities, spends great sums to excavate a pyramid, against his better judgment. (*June 9, 1958*)\nA circulation statement fills out the sixth page.\nReprinted: *Uncle Scrooge* No. 151, April 1978.\nUNCLE SCROOGE - 1/2 - Scrooge chases a butterfly, and then a ten-dollar bill. (*Jan. 10, 1958*)\nAccording to Barks's list, this was originally scheduled for *Uncle Scrooge* No. 22, June-Aug. 1958.\nUNCLE SCROOGE - 3/8 - Scrooge uses binoculars to read a newspaper for free. (Not listed.)\nThe Dell Pledge fills out the page.\nUNCLE SCROOGE - 1 (inside back cover) - A basket of kittens eventually returns to Scrooge's doorstep. (*Sept. 9, 1958*)",
+          "value": "Front cover (art only): The nephews paint dollar signs on the sleeping Scrooge's glasses. (Aug. 4, 1958)\nReprinted: Uncle Scrooge No. 150, March 1978.\nUNCLE SCROOGE - 1 (inside front cover) - Scrooge refuses to budge from a park bench that's to be taken downtown. (Sept. 9, 1958)\nUNCLE SCROOGE and The Flying Dutchman - 20 - Scrooge, Donald and the nephews sail in a dredging boat for the Cape of Good Hope in search of the \"Fliegende Hollander,\" a gold-laden ship that disappeared three hundred years before, and that Scrooge believes was scuttled with the gold still aboard. They don't realize until too late that the ship they're seeking is the ghostly \"Flying Dutchman,\" which brings bad luck to all who see it sailing above the water. (Apr. 20, 1958)\nReprinted: Uncle Scrooge No. 87, June 1970; No. 151, April 1978.\nGYRO GEARLOOSE - 4 - Gyro invents a wishing well that works — and puts him in danger in a Latin American war. (June 9, 1958)\nReprinted: Walt Disney's Comics No. 305, February 1966.\nUNCLE SCROOGE - 5 3/4 - Scrooge, in Egypt in search of investment opportunities, spends great sums to excavate a pyramid, against his better judgment. (June 9, 1958)\nA circulation statement fills out the sixth page.\nReprinted: Uncle Scrooge No. 151, April 1978.\nUNCLE SCROOGE - 1/2 - Scrooge chases a butterfly, and then a ten-dollar bill. (Jan. 10, 1958)\nAccording to Barks's list, this was originally scheduled for Uncle Scrooge No. 22, June-Aug. 1958.\nUNCLE SCROOGE - 3/8 - Scrooge uses binoculars to read a newspaper for free. (Not listed.)\nThe Dell Pledge fills out the page.\nUNCLE SCROOGE - 1 (inside back cover) - A basket of kittens eventually returns to Scrooge's doorstep. (Sept. 9, 1958)",
+          "bbox": [
+            {
+              "h": 58.74690548780487,
+              "w": 125.42868521341464,
+              "x": 11.316411013719511,
+              "y": 254.90480945121953,
+              "confidence": 0.87,
+              "end_index": 1723,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 26 - June-Aug. 1959 - 36 pages",
+          "value": "26 - June-Aug. 1959 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.384737042682927,
+              "w": 73.83548208841464,
+              "x": 149.75595274390244,
+              "y": 99.34789253048781,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge uses a magnet to retrieve coins through a grate. (*Oct. 1, 1958*)\nReprinted: *Uncle Scrooge* No. 120, June 1975.\nUNCLE SCROOGE and The Prize of Pizarro - 20 - Scrooge finds a letter in an old Spanish galleon he has given to the city of Duckburg that reveals the location of the Incas' long-secret gold mines. The ducks make the hazardous journey into the Andes to the mines, where, unknown to them, descendants of the Incas are still on guard, and traps are plentiful. (*Aug. 11, 1958*)\nReprinted: *Walt Disney Comics Digest* No. 8, February 1969.\nGYRO GEARLOOSE in Krankenstein Gyro - 4 - Gyro tries to emulate a \"Krankenstein\" movie he has seen by synthesizing life and hatching a creature of some sort from an egg. (*June 16, 1958*)\nReprinted: *Uncle Scrooge* No. 91, February 1971.\nUNCLE SCROOGE - 6 - Scrooge returns to the ghost town of Pizen Bluff to finish digging a claim he abandoned many years before, after dreaming that ghosts have bricked his old mine shut. (*June 16, 1958*)\nReprinted: *Uncle Scrooge* No. 143, August 1977.",
+          "value": "Front cover (art only): Scrooge uses a magnet to retrieve coins through a grate. (Oct. 1, 1958)\nReprinted: Uncle Scrooge No. 120, June 1975.\nUNCLE SCROOGE and The Prize of Pizarro - 20 - Scrooge finds a letter in an old Spanish galleon he has given to the city of Duckburg that reveals the location of the Incas' long-secret gold mines. The ducks make the hazardous journey into the Andes to the mines, where, unknown to them, descendants of the Incas are still on guard, and traps are plentiful. (Aug. 11, 1958)\nReprinted: Walt Disney Comics Digest No. 8, February 1969.\nGYRO GEARLOOSE in Krankenstein Gyro - 4 - Gyro tries to emulate a \"Krankenstein\" movie he has seen by synthesizing life and hatching a creature of some sort from an egg. (June 16, 1958)\nReprinted: Uncle Scrooge No. 91, February 1971.\nUNCLE SCROOGE - 6 - Scrooge returns to the ghost town of Pizen Bluff to finish digging a claim he abandoned many years before, after dreaming that ghosts have bricked his old mine shut. (June 16, 1958)\nReprinted: Uncle Scrooge No. 143, August 1977.",
+          "bbox": [
+            {
+              "h": 40.79479801829268,
+              "w": 125.83991044207316,
+              "x": 150.08336890243902,
+              "y": 122.33835365853659,
+              "confidence": 0.87,
+              "end_index": 1069,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 27 - Sept.-Nov. 1959 - 36 pages",
+          "value": "27 - Sept.-Nov. 1959 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.3715320121951295,
+              "w": 74.24773628048783,
+              "x": 150.13550304878046,
+              "y": 233.4372713414634,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge blows a dollar sign from a bubble pipe. (*Oct. 1, 1958*)\nReprinted: *Uncle Scrooge* No. 103, \\[February] 1973.\nUNCLE SCROOGE and The Money Champ - 22 - Flintheart Glomgold challenges Scrooge to a return match to determine who is wealthiest. The two tycoons turn everything they own into silver dollars and place them in rival piles at the old Duckburg airport, where Scrooge must contend with Flintheart's tricks as well as his money. (*July 12, 1958*)\nCross-references: There are clear references to \"The Second-richest Duck\" in *Uncle Scrooge* No. 15, Sept.-Nov. 1956.\nReprinted: *Uncle Scrooge* No. 150, March 1978; *Walt Disney Comics Digest* No. 22, June 1970.\nGYRO GEARLOOSE and the Firefly Tracker - 4 - Gyro invents a machine for tracking fireflies that also proves useful in tracking meteors. (*July 15, 1958*)\nReprinted: *Donald Duck* No. 135, January 1971; *Uncle Scrooge* No. 150, March 1978.\nUNCLE SCROOGE and His Handy Andy - 4 - Scrooge's",
+          "value": "Front cover (art only): Scrooge blows a dollar sign from a bubble pipe. (Oct. 1, 1958)\nReprinted: Uncle Scrooge No. 103, [February] 1973.\nUNCLE SCROOGE and The Money Champ - 22 - Flintheart Glomgold challenges Scrooge to a return match to determine who is wealthiest. The two tycoons turn everything they own into silver dollars and place them in rival piles at the old Duckburg airport, where Scrooge must contend with Flintheart's tricks as well as his money. (July 12, 1958)\nCross-references: There are clear references to \"The Second-richest Duck\" in Uncle Scrooge No. 15, Sept.-Nov. 1956.\nReprinted: Uncle Scrooge No. 150, March 1978; Walt Disney Comics Digest No. 22, June 1970.\nGYRO GEARLOOSE and the Firefly Tracker - 4 - Gyro invents a machine for tracking fireflies that also proves useful in tracking meteors. (July 15, 1958)\nReprinted: Donald Duck No. 135, January 1971; Uncle Scrooge No. 150, March 1978.\nUNCLE SCROOGE and His Handy Andy - 4 - Scrooge's",
+          "bbox": [
+            {
+              "h": 40.137233231707306,
+              "w": 125.75184832317072,
+              "x": 150.39859184451217,
+              "y": 256.6268140243902,
+              "confidence": 0.88,
+              "end_index": 984,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n143",
+              "value": "Carl Barks and the Art of the Comic Book\n143",
+              "bbox": [
+                {
+                  "h": 4.351234756097565,
+                  "w": 77.83766958841464,
+                  "x": 173.5212519054878,
+                  "y": 364.7779573170732,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n143",
+          "bbox": [
+            {
+              "h": 4.35,
+              "w": 77.84,
+              "x": 173.52,
+              "y": 364.78,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "143"
+    }
+  ]
+}

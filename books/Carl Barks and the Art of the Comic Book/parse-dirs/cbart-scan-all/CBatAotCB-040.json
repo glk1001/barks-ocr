@@ -1,0 +1,151 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "IV.",
+          "md": "![IV.](CBatAotCB-040_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-040_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 27.478559451219514,
+              "w": 57.57505621189024,
+              "x": 118.77284394054877,
+              "y": 48.890504954268295,
+              "confidence": 0.84,
+              "end_index": 28,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**THE \"RESCUE\" THEME** did turn up again, most notably in \"Adventure Down Under\" (1947). Here, as in \"Terror,\" the early pages are filled with comedy that yields to adventure as the story moves along. Finally, Donald is captured by menacing and realistically drawn Australian bushmen. The nephews rescue him, but the exhausted ducks are pursued across the desert by the bushmen, who fear that the ducks will talk to the police. As the bushmen close in, ready to kill the ducks, Donald and the nephews turn to face them and Donald says: \"This is it, boys! Goodbye!\" A rather grim moment for a \"funny-animal\" comic book, but, fortunately, the ducks are saved at the last minute by \"Mournful Mary,\" a female kangaroo who has \"adopted\" Donald.",
+          "value": "THE \"RESCUE\" THEME did turn up again, most notably in \"Adventure Down Under\" (1947). Here, as in \"Terror,\" the early pages are filled with comedy that yields to adventure as the story moves along. Finally, Donald is captured by menacing and realistically drawn Australian bushmen. The nephews rescue him, but the exhausted ducks are pursued across the desert by the bushmen, who fear that the ducks will talk to the police. As the bushmen close in, ready to kill the ducks, Donald and the nephews turn to face them and Donald says: \"This is it, boys! Goodbye!\" A rather grim moment for a \"funny-animal\" comic book, but, fortunately, the ducks are saved at the last minute by \"Mournful Mary,\" a female kangaroo who has \"adopted\" Donald.",
+          "bbox": [
+            {
+              "h": 132.760849847561,
+              "w": 125.66246141387194,
+              "x": 12.309630811737804,
+              "y": 117.12458460365853,
+              "confidence": 0.99,
+              "end_index": 738,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Adventure Down Under\" was the last of the longer stories in which the theme of the children rescuing their parent was treated seriously. In the same year (1947), a story called \"Maharajah Donald\" appeared in *Boy's and Girls' March of Comics*, a comic book given away by shoe stores. Through a series of misfortunes that defy synopsis, Donald is condemned to be fed at dawn to a mob of half-starved tigers in an Indian principality. The nephews unload a cart full of cat food in the tigers' pen, and when morning comes, the tigers could not be less interested in Donald. Scorned by the Indians because even the tigers",
+          "value": "\"Adventure Down Under\" was the last of the longer stories in which the theme of the children rescuing their parent was treated seriously. In the same year (1947), a story called \"Maharajah Donald\" appeared in Boy's and Girls' March of Comics, a comic book given away by shoe stores. Through a series of misfortunes that defy synopsis, Donald is condemned to be fed at dawn to a mob of half-starved tigers in an Indian principality. The nephews unload a cart full of cat food in the tigers' pen, and when morning comes, the tigers could not be less interested in Donald. Scorned by the Indians because even the tigers",
+          "bbox": [
+            {
+              "h": 103.59740853658533,
+              "w": 125.6139147056021,
+              "x": 12.851128167873474,
+              "y": 250.75783536585368,
+              "confidence": 0.99,
+              "end_index": 617,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "will have nothing to do with him, Donald is sent out of the country on the first boat. it would almost be more merciful to be eaten alive than to be rescued under such circumstances.",
+          "value": "will have nothing to do with him, Donald is sent out of the country on the first boat. it would almost be more merciful to be eaten alive than to be rescued under such circumstances.",
+          "bbox": [
+            {
+              "h": 35.64126905487806,
+              "w": 125.3444988567073,
+              "x": 150.15086890243902,
+              "y": 117.31338795731706,
+              "confidence": 0.99,
+              "end_index": 181,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In \"Sheriff of Bullet Valley\" (1948), the old theme is vestigial — it shows up only in the nephews' demonstrations that they have more sense than Donald — and in \"Voodoo Hoodoo\" (1949), the rescue has none of the emotional impact of those in the early stories.",
+          "value": "In \"Sheriff of Bullet Valley\" (1948), the old theme is vestigial — it shows up only in the nephews' demonstrations that they have more sense than Donald — and in \"Voodoo Hoodoo\" (1949), the rescue has none of the emotional impact of those in the early stories.",
+          "bbox": [
+            {
+              "h": 44.40012576219513,
+              "w": 125.48375190548782,
+              "x": 150.17196265243902,
+              "y": 154.28365472560975,
+              "confidence": 0.96,
+              "end_index": 259,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The \"rescue\" theme's rapid atrophy after 1947 came as other elements in the longer stories (especially comedy) gained in vigor. The ten-page stories in *Walt Disney's Comics* broke out of their strait-jacketed plots at about the same time. As the stories changed, Barks's drawing style changed to accomodate new subtleties. Barks's drawing in the early stories had a hard, crisp quality reminiscent of animated cartoons, but his line later became lighter and more pliable. Barks is not a \"natural\" draftsman; it is plain, from even a casual examination of his drawings, that he has always had to work hard to draw well. I have known some cartoonists who, in simply glancing over his work, have dismissed it as tight and dry, and so of little interest. They miss the point. Barks converted the deficiencies of his drawing style into the virtues of what might be called an acting style. What might have been tight and dry was instead",
+          "value": "The \"rescue\" theme's rapid atrophy after 1947 came as other elements in the longer stories (especially comedy) gained in vigor. The ten-page stories in Walt Disney's Comics broke out of their strait-jacketed plots at about the same time. As the stories changed, Barks's drawing style changed to accomodate new subtleties. Barks's drawing in the early stories had a hard, crisp quality reminiscent of animated cartoons, but his line later became lighter and more pliable. Barks is not a \"natural\" draftsman; it is plain, from even a casual examination of his drawings, that he has always had to work hard to draw well. I have known some cartoonists who, in simply glancing over his work, have dismissed it as tight and dry, and so of little interest. They miss the point. Barks converted the deficiencies of his drawing style into the virtues of what might be called an acting style. What might have been tight and dry was instead",
+          "bbox": [
+            {
+              "h": 155.43443597560977,
+              "w": 125.55,
+              "x": 150.27214939024387,
+              "y": 199.00538871951218,
+              "confidence": 0.99,
+              "end_index": 930,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "40 Carl Barks and the Art of the Comic Book",
+              "value": "40 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.580579268292695,
+                  "w": 80.1366611089939,
+                  "x": 35.88663824314024,
+                  "y": 365.25514481707313,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "40 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.58,
+              "w": 80.14,
+              "x": 35.89,
+              "y": 365.26,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "40"
+    }
+  ]
+}

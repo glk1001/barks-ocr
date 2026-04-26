@@ -1,0 +1,65 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "modesty are characteristic of Carl Barks's stories as well as of Carl Barks the man. I first met Carl Barks in June 1969, when he was still living in San Jacinto, and I remember feeling a little surprised — and maybe even a little disappointed — that Carl Barks was so mild-mannered and unassuming. It took me a while to realize that what appealed to me most strongly about Barks's best stories — their integrity — was there in the man, too. Only it was not dressed out in exciting plots and\nfunny characters and snappy dialogue; it was lying on the surface, and so was easier to miss.\nIt was my great good fortune to grow up with Carl Barks's stories as my constant companions. I feel just as fortunate to have known Carl Barks himself.\n**MICHAEL BARRIER**",
+          "value": "modesty are characteristic of Carl Barks's stories as well as of Carl Barks the man. I first met Carl Barks in June 1969, when he was still living in San Jacinto, and I remember feeling a little surprised — and maybe even a little disappointed — that Carl Barks was so mild-mannered and unassuming. It took me a while to realize that what appealed to me most strongly about Barks's best stories — their integrity — was there in the man, too. Only it was not dressed out in exciting plots and\nfunny characters and snappy dialogue; it was lying on the surface, and so was easier to miss.\nIt was my great good fortune to grow up with Carl Barks's stories as my constant companions. I feel just as fortunate to have known Carl Barks himself.\nMICHAEL BARRIER",
+          "bbox": [
+            {
+              "h": 81.12064596036585,
+              "w": 125.77121212842987,
+              "x": 12.829688214557926,
+              "y": 16.541381478658536,
+              "confidence": 0.94,
+              "end_index": 756,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "ix",
+              "value": "ix",
+              "bbox": [
+                {
+                  "h": 4.348216463414665,
+                  "w": 4.207774390243885,
+                  "x": 143.89924733231706,
+                  "y": 375.7740777439024,
+                  "confidence": 0.9,
+                  "end_index": 1,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "ix",
+          "bbox": [
+            {
+              "h": 4.35,
+              "w": 4.21,
+              "x": 143.9,
+              "y": 375.77,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "ix"
+    }
+  ]
+}

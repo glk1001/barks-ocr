@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "This 1949 circular for Walt Disney's Comics features Donald Duck as a teacher at a desk, wearing a mortarboard and holding a magnifying glass over a comic book held by one of his nephews. Two other nephews stand in front of the desk, also holding magnifying glasses and comic books. A chalkboard in the background says \"YOU CAN BE SURE IT'S APPROVED! If it's WALT DISNEY'S\" and includes a \"HONOR ROLL\" with the names Huey, Dewey, Louie, and Donald, along with some arithmetic problems.",
+          "md": "![This 1949 circular for Walt Disney's Comics features Donald Duck as a teacher at a desk, wearing a mortarboard and holding a magnifying glass over a comic book held by one of his nephews. Two other nephews stand in front of the desk, also holding magnifying glasses and comic books. A chalkboard in the background says \"YOU CAN BE SURE IT'S APPROVED! If it's WALT DISNEY'S\" and includes a \"HONOR ROLL\" with the names Huey, Dewey, Louie, and Donald, along with some arithmetic problems.](CBatAotCB-201_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-201_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 210.20745760289634,
+              "w": 263.892889910442,
+              "x": 12.038552543826219,
+              "y": 13.597550019054879,
+              "confidence": 0.99,
+              "end_index": 510,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "This 1949 circular for Walt Disney's Comics included a reduction of a cover drawing by Barks for Walt Disney's Comics— probably the November 1949 issue—that was not used; © 1949 Walt Disney Productions.",
+          "value": "This 1949 circular for Walt Disney's Comics included a reduction of a cover drawing by Barks for Walt Disney's Comics— probably the November 1949 issue—that was not used; © 1949 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 12.408384146341477,
+              "w": 268.4719775390625,
+              "x": 11.297361256669205,
+              "y": 227.1614405487805,
+              "confidence": 0.96,
+              "end_index": 201,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n201",
+              "value": "Carl Barks and the Art of the Comic Book\n201",
+              "bbox": [
+                {
+                  "h": 5.193109756097565,
+                  "w": 77.74749809451217,
+                  "x": 175.09088414634144,
+                  "y": 365.55759146341467,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n201",
+          "bbox": [
+            {
+              "h": 5.19,
+              "w": 77.75,
+              "x": 175.09,
+              "y": 365.56,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "201"
+    }
+  ]
+}

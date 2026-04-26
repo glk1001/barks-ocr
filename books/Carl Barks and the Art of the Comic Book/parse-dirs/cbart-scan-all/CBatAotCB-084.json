@@ -1,0 +1,116 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "accumulated his fortune through luck, this time arising from possession not of a magic hourglass but of the first dime he ever earned, \"Old Number One.\" Barks's skills as a parodist also failed in later years; his jabs at lawyers and the courts turned sour, revealing too crudely his contempt for what he considered softness in dealing with criminals and \"crybabies.\"",
+          "value": "accumulated his fortune through luck, this time arising from possession not of a magic hourglass but of the first dime he ever earned, \"Old Number One.\" Barks's skills as a parodist also failed in later years; his jabs at lawyers and the courts turned sour, revealing too crudely his contempt for what he considered softness in dealing with criminals and \"crybabies.\"",
+          "bbox": [
+            {
+              "h": 59.46627381859756,
+              "w": 125.98665670255335,
+              "x": 13.26841570598323,
+              "y": 13.373623285060976,
+              "confidence": 0.98,
+              "end_index": 366,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Beneath the later stories' \"modern\" veneer of slang and rock music there was visible the despair and disgust of a man who believed, as Barks said in a 1970 letter, that \"civilization reached its peak\" in the nineteen-twenties, and that \"the world's culture and good taste has been on the skids ever since.\" It was plain in these stories that Barks had long ago lost interest in the work, try as he might to conceal that fact from his readers. Barks had pretty well exhausted the potential of the ducks for his kinds of stories by the middle fifties, just as",
+          "value": "Beneath the later stories' \"modern\" veneer of slang and rock music there was visible the despair and disgust of a man who believed, as Barks said in a 1970 letter, that \"civilization reached its peak\" in the nineteen-twenties, and that \"the world's culture and good taste has been on the skids ever since.\" It was plain in these stories that Barks had long ago lost interest in the work, try as he might to conceal that fact from his readers. Barks had pretty well exhausted the potential of the ducks for his kinds of stories by the middle fifties, just as",
+          "bbox": [
+            {
+              "h": 89.15846798780487,
+              "w": 125.77001059927589,
+              "x": 13.270308569931402,
+              "y": 72.54080030487806,
+              "confidence": 0.99,
+              "end_index": 556,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "the noose of censorship was at its tightest; it would have been incredible if his work had remained on the same high level.",
+          "value": "the noose of censorship was at its tightest; it would have been incredible if his work had remained on the same high level.",
+          "bbox": [
+            {
+              "h": 22.271354325457317,
+              "w": 125.34060594512194,
+              "x": 150.04577743902436,
+              "y": 13.985532107469512,
+              "confidence": 0.97,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks never seriously considered leaving Western for another publisher, but he did try to interest Western in letting him do another kind of strip, preferably one with human characters. (He suggested a \"Space Family Robinson\" idea to Western years before it was picked up as a comic book, and then a television show, with no credit or compensation to Barks.) At one point Western was ready to publish a comic book of Barks's own, starring a young human character who would have been, Barks has said, \"almost like a humanized Donald Duck,\" with two young children as his companions. Barks would have been paid royalties — and a lower page rate than for his duck stories, and he decided that he could not accept the financial risk.",
+          "value": "Barks never seriously considered leaving Western for another publisher, but he did try to interest Western in letting him do another kind of strip, preferably one with human characters. (He suggested a \"Space Family Robinson\" idea to Western years before it was picked up as a comic book, and then a television show, with no credit or compensation to Barks.) At one point Western was ready to publish a comic book of Barks's own, starring a young human character who would have been, Barks has said, \"almost like a humanized Donald Duck,\" with two young children as his companions. Barks would have been paid royalties — and a lower page rate than for his duck stories, and he decided that he could not accept the financial risk.",
+          "bbox": [
+            {
+              "h": 125.2623075457317,
+              "w": 125.9404058689024,
+              "x": 149.82242378048778,
+              "y": 36.21144626524391,
+              "confidence": 0.99,
+              "end_index": 728,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "84 Carl Barks and the Art of the Comic Book",
+              "value": "84 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.597065548780465,
+                  "w": 80.07891911204268,
+                  "x": 36.23361328125,
+                  "y": 365.4934756097561,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "84 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.6,
+              "w": 80.08,
+              "x": 36.23,
+              "y": 365.49,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "84"
+    }
+  ]
+}

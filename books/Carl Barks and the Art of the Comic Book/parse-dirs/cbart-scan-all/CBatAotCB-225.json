@@ -1,0 +1,134 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Illustrated No. 2) include interesting observations on comic-book technique, or on Barks's own work.",
+          "value": "Illustrated No. 2) include interesting observations on comic-book technique, or on Barks's own work.",
+          "bbox": [
+            {
+              "h": 12.230023342225609,
+              "w": 125.20502500952743,
+              "x": 11.779605325838412,
+              "y": 17.386982183689025,
+              "confidence": 0.9,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks has done many sketches for fans, and a few",
+          "value": "Barks has done many sketches for fans, and a few",
+          "bbox": [
+            {
+              "h": 6.536155678353656,
+              "w": 120.79958138814784,
+              "x": 16.39878179782774,
+              "y": 29.28132336128049,
+              "confidence": 0.89,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "of those have turned up in fan magazines; but I am not going to try to list them. This has got to stop someplace.",
+          "value": "of those have turned up in fan magazines; but I am not going to try to list them. This has got to stop someplace.",
+          "bbox": [
+            {
+              "h": 18.788010194359757,
+              "w": 126.05239138719513,
+              "x": 149.53563452743902,
+              "y": 17.708098799542682,
+              "confidence": 0.98,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "Barks and his wife were photographed with Disneyana—the first of the Disney studio's own publications to acknowledge Barks's importance—at the 1976 Newcon comics convention in Boston.",
+          "md": "![Barks and his wife were photographed with Disneyana—the first of the Disney studio's own publications to acknowledge Barks's importance—at the 1976 Newcon comics convention in Boston.](CBatAotCB-225_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-225_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 168.4926162347561,
+              "w": 259.0146376000381,
+              "x": 14.223887552400912,
+              "y": 40.60512004573171,
+              "confidence": 0.99,
+              "end_index": 208,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Barks and his wife were photographed with *Disneyana*—the first of the Disney studio's own publications to acknowledge Barks's importance—at the 1976 Newcon comics convention in Boston.",
+          "value": "Barks and his wife were photographed with Disneyana—the first of the Disney studio's own publications to acknowledge Barks's importance—at the 1976 Newcon comics convention in Boston.",
+          "bbox": [
+            {
+              "h": 12.399763719512203,
+              "w": 263.5196505811737,
+              "x": 12.055942025533536,
+              "y": 215.0417606707317,
+              "confidence": 0.89,
+              "end_index": 184,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n225",
+              "value": "Carl Barks and the Art of the Comic Book\n225",
+              "bbox": [
+                {
+                  "h": 5.46025152439026,
+                  "w": 77.85272675304878,
+                  "x": 172.77616234756096,
+                  "y": 364.41498475609757,
+                  "confidence": 0.93,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n225",
+          "bbox": [
+            {
+              "h": 5.46,
+              "w": 77.85,
+              "x": 172.78,
+              "y": 364.41,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "225"
+    }
+  ]
+}

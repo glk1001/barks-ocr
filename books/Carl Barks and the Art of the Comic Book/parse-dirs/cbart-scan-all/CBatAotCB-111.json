@@ -1,0 +1,293 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "The supporting characters are humanoid dogs; Barks said in the 1971 interview that he would have preferred to have drawn them as real humans, but for the warning he had been given when he submitted \"Dangerous Disguise\" for Donald Duck Four Color No. 308, 1951. (see the note to that story).",
+          "value": "The supporting characters are humanoid dogs; Barks said in the 1971 interview that he would have preferred to have drawn them as real humans, but for the warning he had been given when he submitted \"Dangerous Disguise\" for Donald Duck Four Color No. 308, 1951. (see the note to that story).",
+          "bbox": [
+            {
+              "h": 34.80823885289634,
+              "w": 125.45424209222558,
+              "x": 10.942258479420731,
+              "y": 13.218457031249999,
+              "confidence": 0.99,
+              "end_index": 289,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 348 - Sept.-Oct. 1951 - 36 pages",
+          "value": "Four Color 348 - Sept.-Oct. 1951 - 36 pages",
+          "bbox": [
+            {
+              "h": 10.845840320121956,
+              "w": 105.19301245712651,
+              "x": 11.137321003239327,
+              "y": 54.131147103658535,
+              "confidence": 0.8,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## Donald Duck, the Crocodile Collector",
+          "value": "Donald Duck, the Crocodile Collector",
+          "bbox": [
+            {
+              "h": 10.845840320121956,
+              "w": 105.19301245712651,
+              "x": 11.137321003239327,
+              "y": 54.131147103658535,
+              "confidence": 0.8,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald uses a magnifying glass to inspect a hungry crocodile's hide. (Illustrating \"The Crocodile Collector.\") (Apr. 5, 1951)",
+          "value": "Front cover (art only): Donald uses a magnifying glass to inspect a hungry crocodile's hide. (Illustrating \"The Crocodile Collector.\") (Apr. 5, 1951)",
+          "bbox": [
+            {
+              "h": 17.32030106707316,
+              "w": 124.67108839081556,
+              "x": 11.505651319550305,
+              "y": 66.05653582317073,
+              "confidence": 0.98,
+              "end_index": 148,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 356 - Nov.-Dec. 1951 - 36 pages",
+          "value": "Four Color 356 - Nov.-Dec. 1951 - 36 pages",
+          "bbox": [
+            {
+              "h": 11.69262004573171,
+              "w": 105.61969464557926,
+              "x": 11.131810689786585,
+              "y": 89.69131669207317,
+              "confidence": 0.78,
+              "end_index": 41,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## Donald Duck in Rags to Riches",
+          "value": "Donald Duck in Rags to Riches",
+          "bbox": [
+            {
+              "h": 11.69262004573171,
+              "w": 105.61969464557926,
+              "x": 11.131810689786585,
+              "y": 89.69131669207317,
+              "confidence": 0.75,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): A ragged Donald sees himself as rich in a mirror. (Illustrating \"From Rags to Riches.\") (May 24, 1951)",
+          "value": "Front cover (art only): A ragged Donald sees himself as rich in a mirror. (Illustrating \"From Rags to Riches.\") (May 24, 1951)",
+          "bbox": [
+            {
+              "h": 17.01260241996951,
+              "w": 125.24263147865855,
+              "x": 150.37873285060974,
+              "y": 13.318074980945122,
+              "confidence": 0.99,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 367 - Jan.-Feb. 1952 - 36 pages",
+          "value": "Four Color 367 - Jan.-Feb. 1952 - 36 pages",
+          "bbox": [
+            {
+              "h": 10.83461318597561,
+              "w": 119.08498856707315,
+              "x": 150.68982278963415,
+              "y": 37.40592416158537,
+              "confidence": 0.79,
+              "end_index": 41,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## Donald Duck in A Christmas for Shacktown",
+          "value": "Donald Duck in A Christmas for Shacktown",
+          "bbox": [
+            {
+              "h": 10.83461318597561,
+              "w": 119.08498856707315,
+              "x": 150.68982278963415,
+              "y": 37.40592416158537,
+              "confidence": 0.81,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald, dressed as Santa, rides a toy train, while the nephews labor under a heavy sack. (Illustrating \"A Christmas for Shacktown.\") (May 24, 1951)",
+          "value": "Front cover: Donald, dressed as Santa, rides a toy train, while the nephews labor under a heavy sack. (Illustrating \"A Christmas for Shacktown.\") (May 24, 1951)",
+          "bbox": [
+            {
+              "h": 17.136013719512196,
+              "w": 125.27634717987806,
+              "x": 150.80016196646338,
+              "y": 49.11863757621951,
+              "confidence": 0.96,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - art only - The nephews make tree ornaments out of Donald's golf balls. Reprinted: Christmas Parade (Gold Key) No. 2, 1964.",
+          "value": "DONALD DUCK - 1 (inside front cover) - art only - The nephews make tree ornaments out of Donald's golf balls. Reprinted: Christmas Parade (Gold Key) No. 2, 1964.",
+          "bbox": [
+            {
+              "h": 17.649192073170724,
+              "w": 124.84317073170727,
+              "x": 151.1684451219512,
+              "y": 66.64746951219513,
+              "confidence": 0.96,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"A Christmas for Shacktown\" - 32 - The ducks and Daisy get Scrooge's promise to match their twenty-five dollars for Christmas dinner and a toy train for",
+          "value": "DONALD DUCK in \"A Christmas for Shacktown\" - 32 - The ducks and Daisy get Scrooge's promise to match their twenty-five dollars for Christmas dinner and a toy train for",
+          "bbox": [
+            {
+              "h": 17.614561737804884,
+              "w": 125.1930182926829,
+              "x": 151.07149961890244,
+              "y": 84.59666158536585,
+              "confidence": 0.98,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "Barks holds his own copy of Donald Duck Four Color No. 189, 1948, the first comic book for which he illustrated the cover. The words stamped on the cover read as follows: \"This comic is the personal file copy of Carl Barks. Anyone else possessing the book has stolen it.\" Comic-book cover © 1948 Walt Disney Productions.",
+          "md": "![Barks holds his own copy of Donald Duck Four Color No. 189, 1948, the first comic book for which he illustrated the cover. The words stamped on the cover read as follows: \"This comic is the personal file copy of Carl Barks. Anyone else possessing the book has stolen it.\" Comic-book cover © 1948 Walt Disney Productions.](CBatAotCB-111_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-111_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 217.53707698170732,
+              "w": 160.33928306021338,
+              "x": 65.36847227515243,
+              "y": 110.29953887195121,
+              "confidence": 1.0,
+              "end_index": 345,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Barks holds his own copy of *Donald Duck* Four Color No. 189, 1948, the first comic book for which he illustrated the cover. The words stamped on the cover read as follows: \"This comic is the personal file copy of Carl Barks. Anyone else possessing the book has stolen it.\" Comic-book cover © 1948 Walt Disney Productions.",
+          "value": "Barks holds his own copy of Donald Duck Four Color No. 189, 1948, the first comic book for which he illustrated the cover. The words stamped on the cover read as follows: \"This comic is the personal file copy of Carl Barks. Anyone else possessing the book has stolen it.\" Comic-book cover © 1948 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 23.68783536585368,
+              "w": 161.315752191311,
+              "x": 64.43588843368902,
+              "y": 329.455243902439,
+              "confidence": 0.91,
+              "end_index": 321,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n111",
+              "value": "Carl Barks and the Art of the Comic Book\n111",
+              "bbox": [
+                {
+                  "h": 4.587599085365855,
+                  "w": 77.62503429878046,
+                  "x": 171.801493902439,
+                  "y": 366.2977362804878,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n111",
+          "bbox": [
+            {
+              "h": 4.59,
+              "w": 77.63,
+              "x": 171.8,
+              "y": 366.3,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "111"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Carl Barks as a young man in San Francisco, just after the end of World War I.",
+          "md": "![Carl Barks as a young man in San Francisco, just after the end of World War I.](CBatAotCB-009_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-009_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 262.3939195884146,
+              "w": 257.0557131288109,
+              "x": 14.164071551067073,
+              "y": 13.21226181402439,
+              "confidence": 1.0,
+              "end_index": 103,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Carl Barks as a young man in San Francisco, just after the end of World War I.",
+          "value": "Carl Barks as a young man in San Francisco, just after the end of World War I.",
+          "bbox": [
+            {
+              "h": 6.08871951219513,
+              "w": 159.7094674161585,
+              "x": 13.262283727134145,
+              "y": 280.29619664634146,
+              "confidence": 0.9,
+              "end_index": 77,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks had never abandoned his hopes of becoming a cartoonist, and in 1928 and 1929 he began selling gag cartoons to the *Calgary Eye-Opener*, a mildly risque humor magazine that had originated in Canada, in 1902, but was published in Minneapolis by the time Barks started contributing to it. He also sold a few cartoons to the venerable *Judge*.",
+          "value": "Barks had never abandoned his hopes of becoming a cartoonist, and in 1928 and 1929 he began selling gag cartoons to the Calgary Eye-Opener, a mildly risque humor magazine that had originated in Canada, in 1902, but was published in Minneapolis by the time Barks started contributing to it. He also sold a few cartoons to the venerable Judge.",
+          "bbox": [
+            {
+              "h": 59.11253048780487,
+              "w": 125.8040467797256,
+              "x": 13.574904249237804,
+              "y": 290.90064786585367,
+              "confidence": 0.99,
+              "end_index": 344,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks was spending all of his spare time",
+          "value": "Barks was spending all of his spare time",
+          "bbox": [
+            {
+              "h": 7.06351371951223,
+              "w": 119.13377643864328,
+              "x": 20.282783203125,
+              "y": 350.5004268292683,
+              "confidence": 0.96,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "drawing, and his wife did not share his ambitions; they separated early in 1930. (Barks's two daughters — one of them now deceased — were born during this marriage.)",
+          "value": "drawing, and his wife did not share his ambitions; they separated early in 1930. (Barks's two daughters — one of them now deceased — were born during this marriage.)",
+          "bbox": [
+            {
+              "h": 29.686714939024405,
+              "w": 126.11284298780484,
+              "x": 151.94370045731708,
+              "y": 290.09721036585364,
+              "confidence": 0.98,
+              "end_index": 164,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks returned to Oregon, and worked briefly in a box factory until the Depression eliminated his job. In effect, the Depression made his decision for him: he finally became a fulltime cartoonist.",
+          "value": "Barks returned to Oregon, and worked briefly in a box factory until the Depression eliminated his job. In effect, the Depression made his decision for him: he finally became a fulltime cartoonist.",
+          "bbox": [
+            {
+              "h": 36.01147865853658,
+              "w": 125.88472179878049,
+              "x": 152.4430907012195,
+              "y": 319.87024390243903,
+              "confidence": 0.98,
+              "end_index": 195,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n9",
+              "value": "Carl Barks and the Art of the Comic Book\n9",
+              "bbox": [
+                {
+                  "h": 4.4200152439024345,
+                  "w": 80.29361661585365,
+                  "x": 176.95507431402436,
+                  "y": 368.05897865853655,
+                  "confidence": 0.95,
+                  "end_index": 41,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n9",
+          "bbox": [
+            {
+              "h": 4.42,
+              "w": 80.29,
+              "x": 176.96,
+              "y": 368.06,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "9"
+    }
+  ]
+}

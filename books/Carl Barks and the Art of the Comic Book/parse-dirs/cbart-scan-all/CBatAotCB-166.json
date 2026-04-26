@@ -1,0 +1,672 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "No. 263, August 1962. Subsequent issues were published under the Gold Key label.",
+          "value": "No. 263, August 1962. Subsequent issues were published under the Gold Key label.",
+          "bbox": [
+            {
+              "h": 11.181665396341463,
+              "w": 125.53666956459602,
+              "x": 11.404915801257621,
+              "y": 16.1511328125,
+              "confidence": 0.98,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's stories in Walt Disney's Comics were three panels deep through No. 41, February 1944, and four panels deep thereafter, except as noted.",
+          "value": "Barks's stories in Walt Disney's Comics were three panels deep through No. 41, February 1944, and four panels deep thereafter, except as noted.",
+          "bbox": [
+            {
+              "h": 17.232730564024394,
+              "w": 125.09541039443596,
+              "x": 11.709442883003048,
+              "y": 28.34719893292683,
+              "confidence": 0.98,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Walt Disney's Comics was issued in two editions, starting with No. 351, December 1969, through No. 360, September 1970. There was a twenty-five-cent edition that contained a poster, in addition to the regular fifteen-cent edition.",
+          "value": "Walt Disney's Comics was issued in two editions, starting with No. 351, December 1969, through No. 360, September 1970. There was a twenty-five-cent edition that contained a poster, in addition to the regular fifteen-cent edition.",
+          "bbox": [
+            {
+              "h": 23.24571836890244,
+              "w": 125.30077541444358,
+              "x": 11.743697718178353,
+              "y": 46.120072408536586,
+              "confidence": 0.98,
+              "end_index": 229,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Walt Disney's Comics, unlike most other comic books, was published in annual volumes, beginning with Vol. 1, No. 1, October 1940 — a carryover from the numbering system of its predecessor, Mickey Mouse Magazine. A new volume thus began each year with the October issue. The whole-issue number, as given in this listing, was usually found on the front cover, or in the code numbering at the bottom of the first page (for example, \"WDC #100 - 491\" means Walt Disney's Comics No. 100, January 1949). More recently, it was also included in the indicia.",
+          "value": "Walt Disney's Comics, unlike most other comic books, was published in annual volumes, beginning with Vol. 1, No. 1, October 1940 — a carryover from the numbering system of its predecessor, Mickey Mouse Magazine. A new volume thus began each year with the October issue. The whole-issue number, as given in this listing, was usually found on the front cover, or in the code numbering at the bottom of the first page (for example, \"WDC #100 - 491\" means Walt Disney's Comics No. 100, January 1949). More recently, it was also included in the indicia.",
+          "bbox": [
+            {
+              "h": 58.22851943597562,
+              "w": 125.45609422637193,
+              "x": 11.232023151676827,
+              "y": 70.29603086890243,
+              "confidence": 0.99,
+              "end_index": 547,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 31 (3/7) - April 1943 - 68 pages",
+          "value": "31 (3/7) - April 1943 - 68 pages",
+          "bbox": [
+            {
+              "h": 5.673795731707332,
+              "w": 73.29619378810975,
+              "x": 11.627723894817072,
+              "y": 136.100625,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 (pp. 5-14) - art and rewriting of script - Donald defends his Victory Garden against a gang of voracious crows. *(December 1942)*",
+          "value": "DONALD DUCK - 10 (pp. 5-14) - art and rewriting of script - Donald defends his Victory Garden against a gang of voracious crows. (December 1942)",
+          "bbox": [
+            {
+              "h": 17.440872713414638,
+              "w": 125.37096036585365,
+              "x": 11.931088033536584,
+              "y": 141.92926829268293,
+              "confidence": 0.98,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This was Barks's first comic-book work after leaving the Disney studio. \"They sent me a ready-written script to draw for story #1 several weeks after I left the studio... The script was the Crow story. I noticed some bad errors in the plot, and wrote the editor for permission to change things around. The result was they invited me to see if I could do a whole original story myself.",
+          "value": "This was Barks's first comic-book work after leaving the Disney studio. \"They sent me a ready-written script to draw for story #1 several weeks after I left the studio... The script was the Crow story. I noticed some bad errors in the plot, and wrote the editor for permission to change things around. The result was they invited me to see if I could do a whole original story myself.",
+          "bbox": [
+            {
+              "h": 47.58922637195124,
+              "w": 125.5328623999619,
+              "x": 11.72584091558689,
+              "y": 159.9693407012195,
+              "confidence": 0.98,
+              "end_index": 383,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The story of the kids and their 'rabbit foot' was my answer to the opportunity.\" (Apr. 17, 1967, letter to Michael Barrier)",
+          "value": "The story of the kids and their 'rabbit foot' was my answer to the opportunity.\" (Apr. 17, 1967, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 11.161051829268317,
+              "w": 125.6869550304878,
+              "x": 11.579079649390243,
+              "y": 196.36408536585364,
+              "confidence": 0.77,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 32(3/8) - May 1943 - 68 pages",
+          "value": "32(3/8) - May 1943 - 68 pages",
+          "bbox": [
+            {
+              "h": 5.569893292682927,
+              "w": 71.83313750476371,
+              "x": 11.705563905297256,
+              "y": 214.0601981707317,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 (pp. 1-10) - Donald insists that the nephews' lucky rabbit foot is a phony, but they have good luck and he has bad. His luck gets worse when he steals the rabbit foot. *(Dec. 23, 1942)*",
+          "value": "DONALD DUCK - 10 (pp. 1-10) - Donald insists that the nephews' lucky rabbit foot is a phony, but they have good luck and he has bad. His luck gets worse when he steals the rabbit foot. (Dec. 23, 1942)",
+          "bbox": [
+            {
+              "h": 23.05879573170733,
+              "w": 126.01476026581553,
+              "x": 11.312386266196645,
+              "y": 219.7978125,
+              "confidence": 0.98,
+              "end_index": 201,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The first Donald Duck story both written and drawn by Barks; see notes to \"DONALD DUCK\" in Walt Disney's Comics No. 31, April 1943.",
+          "value": "The first Donald Duck story both written and drawn by Barks; see notes to \"DONALD DUCK\" in Walt Disney's Comics No. 31, April 1943.",
+          "bbox": [
+            {
+              "h": 16.90863567073171,
+              "w": 125.69771412919204,
+              "x": 11.458898866234755,
+              "y": 243.32275152439024,
+              "confidence": 0.98,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Firestone Christmas giveaway, 1943.",
+          "value": "Reprinted: Firestone Christmas giveaway, 1943.",
+          "bbox": [
+            {
+              "h": 5.417263719512175,
+              "w": 96.04030571169969,
+              "x": 16.335515553544205,
+              "y": 260.7489557926829,
+              "confidence": 0.95,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 33(3/9) - June 1943 - 68 pages",
+          "value": "33(3/9) - June 1943 - 68 pages",
+          "bbox": [
+            {
+              "h": 5.530106707317045,
+              "w": 70.30732088414635,
+              "x": 11.47012957317073,
+              "y": 273.80807926829266,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 (pp. 1-10) - Donald, a lifeguard, tries to impress a pretty girl and finally does, by saving her from a dead shark. *(Jan. 29, 1943)*",
+          "value": "DONALD DUCK - 10 (pp. 1-10) - Donald, a lifeguard, tries to impress a pretty girl and finally does, by saving her from a dead shark. (Jan. 29, 1943)",
+          "bbox": [
+            {
+              "h": 17.364900914634145,
+              "w": 125.94864186356706,
+              "x": 11.377518578506095,
+              "y": 279.42109756097557,
+              "confidence": 0.98,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 34 (3/10) - July 1943 - 68 pages",
+          "value": "34 (3/10) - July 1943 - 68 pages",
+          "bbox": [
+            {
+              "h": 5.514626524390205,
+              "w": 72.89211342416158,
+              "x": 11.577405440167682,
+              "y": 303.35282012195125,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 (pp. 1-10) - Donald devotes a day to good deeds, but they all backfire, starting with a good deed for his neighbor, Mr. Jones. When he tries to turn off a plane's engine, the plane carries him and the nephews to the tropics, where they are captured by natives. *(Feb. 24, 1943)*",
+          "value": "DONALD DUCK - 10 (pp. 1-10) - Donald devotes a day to good deeds, but they all backfire, starting with a good deed for his neighbor, Mr. Jones. When he tries to turn off a plane's engine, the plane carries him and the nephews to the tropics, where they are captured by natives. (Feb. 24, 1943)",
+          "bbox": [
+            {
+              "h": 35.04089176829264,
+              "w": 126.06474216368139,
+              "x": 11.417752119855182,
+              "y": 309.0752743902439,
+              "confidence": 0.99,
+              "end_index": 294,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First appearance of Mr. Jones.",
+          "value": "First appearance of Mr. Jones.",
+          "bbox": [
+            {
+              "h": 5.42300304878052,
+              "w": 59.097653034489326,
+              "x": 15.731859160632618,
+              "y": 344.9341463414634,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 35 (3/11) - August 1943 - 68 pages",
+          "value": "35 (3/11) - August 1943 - 68 pages",
+          "bbox": [
+            {
+              "h": 5.800322503810978,
+              "w": 81.02210556402437,
+              "x": 151.2732450457317,
+              "y": 16.235979420731706,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 (pp. 1-10) - Donald and the nephews visit a dude ranch and get lost in the desert. Donald keeps sabotaging the nephews' efforts to get them back to the ranch. *(Mar. 17, 1943)*",
+          "value": "DONALD DUCK - 10 (pp. 1-10) - Donald and the nephews visit a dude ranch and get lost in the desert. Donald keeps sabotaging the nephews' efforts to get them back to the ranch. (Mar. 17, 1943)",
+          "bbox": [
+            {
+              "h": 23.295605945121956,
+              "w": 125.86830983231704,
+              "x": 150.8460194359756,
+              "y": 22.213087842987804,
+              "confidence": 0.98,
+              "end_index": 192,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Firestone Christmas giveaway, 1944.",
+          "value": "Reprinted: Firestone Christmas giveaway, 1944.",
+          "bbox": [
+            {
+              "h": 5.305732660060978,
+              "w": 95.99287157012193,
+              "x": 155.51046493902436,
+              "y": 46.14516482469512,
+              "confidence": 0.91,
+              "end_index": 45,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 36 (3/12) - September 1943 - 68 pages",
+          "value": "36 (3/12) - September 1943 - 68 pages",
+          "bbox": [
+            {
+              "h": 5.53160442073171,
+              "w": 90.23019626524388,
+              "x": 151.3109737042683,
+              "y": 57.790358231707316,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"The Mighty Trapper\" - 10 (pp. 1-10) - Donald brags about his trapping skills but the nephews fool him with a fox fur. The ducks then compete at building wolf traps. *(Apr. 20, 1943)*",
+          "value": "DONALD DUCK in \"The Mighty Trapper\" - 10 (pp. 1-10) - Donald brags about his trapping skills but the nephews fool him with a fox fur. The ducks then compete at building wolf traps. (Apr. 20, 1943)",
+          "bbox": [
+            {
+              "h": 23.34483612804877,
+              "w": 125.81706745426828,
+              "x": 150.91775533536585,
+              "y": 63.47598132621952,
+              "confidence": 0.98,
+              "end_index": 197,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "On the seventh page of this story, the nephews are talking about how big a wolf they are going to trap. One nephew says the wolf will be bigger than an elephant — \"Big as a — as a — uh — a bohimaton!\" When I asked Barks, in the 1978 interview, what a \"bohimaton\" was (it is not in the dictionary), he said he had picked the word up from an Englishman he had known in a logging camp, when he was young. \"That was a word he would use once in a while, to describe something of huge size.\"",
+          "value": "On the seventh page of this story, the nephews are talking about how big a wolf they are going to trap. One nephew says the wolf will be bigger than an elephant — \"Big as a — as a — uh — a bohimaton!\" When I asked Barks, in the 1978 interview, what a \"bohimaton\" was (it is not in the dictionary), he said he had picked the word up from an Englishman he had known in a logging camp, when he was young. \"That was a word he would use once in a while, to describe something of huge size.\"",
+          "bbox": [
+            {
+              "h": 46.81630907012194,
+              "w": 126.04985327743904,
+              "x": 151.0021989329268,
+              "y": 87.51788300304878,
+              "confidence": 0.99,
+              "end_index": 484,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 38 (4/2) - November 1943 - 68 pages",
+          "value": "38 (4/2) - November 1943 - 68 pages",
+          "bbox": [
+            {
+              "h": 5.955731707317073,
+              "w": 87.43842987804878,
+              "x": 151.47300114329266,
+              "y": 140.28080030487806,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"Good Neighbors\" - 10 (pp. 1-10) - Donald and Jones try to bury the hatchet, but resume fighting after some accidents with a football, until both are evicted. *(June 22, 1943)*",
+          "value": "DONALD DUCK in \"Good Neighbors\" - 10 (pp. 1-10) - Donald and Jones try to bury the hatchet, but resume fighting after some accidents with a football, until both are evicted. (June 22, 1943)",
+          "bbox": [
+            {
+              "h": 22.802812499999998,
+              "w": 125.882440929878,
+              "x": 151.17360708841463,
+              "y": 146.4050762195122,
+              "confidence": 0.98,
+              "end_index": 190,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 39 (4/3) - December 1943 - 60 pages",
+          "value": "39 (4/3) - December 1943 - 60 pages",
+          "bbox": [
+            {
+              "h": 5.76572789634145,
+              "w": 86.31116615853658,
+              "x": 151.48941310975607,
+              "y": 175.76365472560977,
+              "confidence": 0.96,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in Salesman Donald - 10 (pp. 1-10) - Donald sells the egg beaters the nephews cannot sell but almost meets his match in a hairy hermit. *(July 23, 1943)*",
+          "value": "DONALD DUCK in Salesman Donald - 10 (pp. 1-10) - Donald sells the egg beaters the nephews cannot sell but almost meets his match in a hairy hermit. (July 23, 1943)",
+          "bbox": [
+            {
+              "h": 17.52573932926829,
+              "w": 125.86875571646338,
+              "x": 151.01584984756096,
+              "y": 181.933125,
+              "confidence": 0.97,
+              "end_index": 164,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 40 (4/4) - January 1944 - 60 pages",
+          "value": "40 (4/4) - January 1944 - 60 pages",
+          "bbox": [
+            {
+              "h": 5.749161585365854,
+              "w": 80.95427972560977,
+              "x": 151.45526867378047,
+              "y": 205.25298018292682,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in Snow Fun - 10 (pp. 1-10) - Donald takes the nephews skiing and rigs a catapult for a spectacular jump. *(Aug. 28, 1943)*",
+          "value": "DONALD DUCK in Snow Fun - 10 (pp. 1-10) - Donald takes the nephews skiing and rigs a catapult for a spectacular jump. (Aug. 28, 1943)",
+          "bbox": [
+            {
+              "h": 17.34246951219513,
+              "w": 126.01459413109754,
+              "x": 151.2545007621951,
+              "y": 211.09703506097563,
+              "confidence": 0.98,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 41 (4/5) - February 1944 - 60 pages.",
+          "value": "41 (4/5) - February 1944 - 60 pages.",
+          "bbox": [
+            {
+              "h": 5.8855335365853625,
+              "w": 87.777353277439,
+              "x": 151.4145388719512,
+              "y": 234.0804649390244,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK The Duck in the Iron Pants - 10 (pp. 1-10) - Donald attacks the nephews' snow fort dressed in a homemade suit of armor, and the nephews counter-attack with a blowtorch. *(Sept. 22, 1943)*",
+          "value": "DONALD DUCK The Duck in the Iron Pants - 10 (pp. 1-10) - Donald attacks the nephews' snow fort dressed in a homemade suit of armor, and the nephews counter-attack with a blowtorch. (Sept. 22, 1943)",
+          "bbox": [
+            {
+              "h": 23.299481707317046,
+              "w": 126.07790967987805,
+              "x": 151.21061547256096,
+              "y": 240.65485518292684,
+              "confidence": 0.99,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 42 (4/6) - March 1944 - 60 pages",
+          "value": "42 (4/6) - March 1944 - 60 pages",
+          "bbox": [
+            {
+              "h": 5.640434451219535,
+              "w": 77.01458460365852,
+              "x": 151.35407012195122,
+              "y": 270.06772865853657,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in Kite Weather - 7 - Donald enters a children's kite contest dressed as a little boy, but wins dressed as a little girl. *(Oct. 20, 1943)*",
+          "value": "DONALD DUCK in Kite Weather - 7 - Donald enters a children's kite contest dressed as a little boy, but wins dressed as a little girl. (Oct. 20, 1943)",
+          "bbox": [
+            {
+              "h": 17.38817835365855,
+              "w": 126.05709032012194,
+              "x": 151.15242759146338,
+              "y": 276.0126219512195,
+              "confidence": 0.98,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes:* This story was drawn as a ten-page story, with pages that were three panels deep. It was published as a seven-page story, with pages that were four panels deep, by trimming and expanding the panels. Apparently, no panels were omitted.",
+          "value": "Changes: This story was drawn as a ten-page story, with pages that were three panels deep. It was published as a seven-page story, with pages that were four panels deep, by trimming and expanding the panels. Apparently, no panels were omitted.",
+          "bbox": [
+            {
+              "h": 28.118711890243883,
+              "w": 125.9460994664634,
+              "x": 151.24846417682923,
+              "y": 294.10788109756095,
+              "confidence": 0.99,
+              "end_index": 244,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 43 (4/7) April 1944 - 52 pages",
+          "value": "43 (4/7) April 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.989024390243885,
+              "w": 70.84948170731707,
+              "x": 150.77651295731707,
+              "y": 332.72362042682926,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Now Showing \"Three Dirty Little Ducks\" - 10 - The nephews vow never to take a bath, and",
+          "value": "DONALD DUCK Now Showing \"Three Dirty Little Ducks\" - 10 - The nephews vow never to take a bath, and",
+          "bbox": [
+            {
+              "h": 11.398856707317044,
+              "w": 125.95474275914634,
+              "x": 150.7096989329268,
+              "y": 338.9697256097561,
+              "confidence": 0.98,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "166 Carl Barks and the Art of the Comic Book",
+              "value": "166 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.620754573170725,
+                  "w": 77.62009098704267,
+                  "x": 36.24244521722561,
+                  "y": 364.56685975609753,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "166 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.62,
+              "w": 77.62,
+              "x": 36.24,
+              "y": 364.57,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "166"
+    }
+  ]
+}

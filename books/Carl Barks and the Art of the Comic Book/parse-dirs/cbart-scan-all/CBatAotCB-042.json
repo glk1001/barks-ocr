@@ -1,0 +1,192 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Donald Duck thinking: \"I DON'T SEEM TO BE SLEEPY! MAYBE A SNACK OF CHEESE AND COLD CUTS WILL FIX ME UP!\"",
+          "md": "![Donald Duck thinking: \"I DON'T SEEM TO BE SLEEPY! MAYBE A SNACK OF CHEESE AND COLD CUTS WILL FIX ME UP!\"](CBatAotCB-042_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-042_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 81.66721560594513,
+              "w": 115.9991572980183,
+              "x": 33.46944026295731,
+              "y": 13.410741711128049,
+              "confidence": 0.92,
+              "end_index": 129,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck eating a snack and laughing: \"NO ICEBOXES FULL OF SNACKS WHERE GLADSTONE'S GOING! ALL ICE AND NO BOXES! HAW!\"",
+          "md": "![Donald Duck eating a snack and laughing: \"NO ICEBOXES FULL OF SNACKS WHERE GLADSTONE'S GOING! ALL ICE AND NO BOXES! HAW!\"](CBatAotCB-042_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-042_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 82.88935261051829,
+              "w": 112.80537919207313,
+              "x": 152.31639100609755,
+              "y": 12.516741139481708,
+              "confidence": 0.94,
+              "end_index": 146,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck eating a sandwich and thinking: \"HE'LL NEVER GUESS THAT I SENT HIM THERE! AND I WON'T TELL HIM WHEN HE GETS BACK!\"",
+          "md": "![Donald Duck eating a sandwich and thinking: \"HE'LL NEVER GUESS THAT I SENT HIM THERE! AND I WON'T TELL HIM WHEN HE GETS BACK!\"](CBatAotCB-042_page_1_image_6_v2.jpg)",
+          "url": "CBatAotCB-042_page_1_image_6_v2.jpg",
+          "bbox": [
+            {
+              "h": 82.13614710365852,
+              "w": 120.75935427782011,
+              "x": 33.29996355754573,
+              "y": 98.45825076219512,
+              "confidence": 0.91,
+              "end_index": 151,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck looking worried while eating: \"IF HE GETS BACK!\"",
+          "md": "![Donald Duck looking worried while eating: \"IF HE GETS BACK!\"](CBatAotCB-042_page_1_image_4_v2.jpg)",
+          "url": "CBatAotCB-042_page_1_image_4_v2.jpg",
+          "bbox": [
+            {
+              "h": 82.55466082317075,
+              "w": 107.96717606707315,
+              "x": 157.3584317835366,
+              "y": 98.28819740853659,
+              "confidence": 0.92,
+              "end_index": 85,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck looking startled in a circular frame.",
+          "md": "![Donald Duck looking startled in a circular frame.](CBatAotCB-042_page_1_image_10_v2.jpg)",
+          "url": "CBatAotCB-042_page_1_image_10_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.48584222560976,
+              "w": 92.67250952743902,
+              "x": 45.08933974847561,
+              "y": 182.7373742378049,
+              "confidence": 0.78,
+              "end_index": 75,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck leaning on a table looking concerned.",
+          "md": "![Donald Duck leaning on a table looking concerned.](CBatAotCB-042_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-042_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 71.17465701219513,
+              "w": 119.74714367378046,
+              "x": 145.5704725609756,
+              "y": 183.91131859756098,
+              "confidence": 0.92,
+              "end_index": 74,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck looking out a window in fear: \"ICEBERGS AND POLAR BEARS! I WONDER IF POLAR BEARS EAT PEOPLE?\"",
+          "md": "![Donald Duck looking out a window in fear: \"ICEBERGS AND POLAR BEARS! I WONDER IF POLAR BEARS EAT PEOPLE?\"](CBatAotCB-042_page_1_image_8_v2.jpg)",
+          "url": "CBatAotCB-042_page_1_image_8_v2.jpg",
+          "bbox": [
+            {
+              "h": 83.63201981707323,
+              "w": 112.66347870617378,
+              "x": 34.055539967606705,
+              "y": 266.4925609756097,
+              "confidence": 0.81,
+              "end_index": 130,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald Duck imagining a fat polar bear that has eaten someone, with the thought: \"OH, ME! OH, MY!\"",
+          "md": "![Donald Duck imagining a fat polar bear that has eaten someone, with the thought: \"OH, ME! OH, MY!\"](CBatAotCB-042_page_1_image_5_v2.jpg)",
+          "url": "CBatAotCB-042_page_1_image_5_v2.jpg",
+          "bbox": [
+            {
+              "h": 94.92178353658534,
+              "w": 116.01806021341463,
+              "x": 149.31480182926828,
+              "y": 257.2855335365854,
+              "confidence": 0.92,
+              "end_index": 123,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "items": [
+            {
+              "md": "42 Carl Barks and the Art of the Comic Book",
+              "value": "42 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.208178353658496,
+                  "w": 80.4531788300305,
+                  "x": 36.36243950076219,
+                  "y": 366.8509298780488,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "42 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.21,
+              "w": 80.45,
+              "x": 36.36,
+              "y": 366.85,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "42"
+    }
+  ]
+}

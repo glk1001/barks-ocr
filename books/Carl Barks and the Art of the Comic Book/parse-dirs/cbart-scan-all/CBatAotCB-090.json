@@ -1,0 +1,48 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "90\nCarl Barks and the Art of the Comic Book",
+              "value": "90\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.931333841463419,
+                  "w": 80.02758241234754,
+                  "x": 41.66138671875,
+                  "y": 364.63358231707315,
+                  "confidence": 0.92,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "90\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.93,
+              "w": 80.03,
+              "x": 41.66,
+              "y": 364.63,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "90"
+    }
+  ]
+}

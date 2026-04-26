@@ -1,0 +1,270 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A comic strip page showing a villainous character in a submarine explaining his plan to Donald Duck.",
+          "md": "![A comic strip page showing a villainous character in a submarine explaining his plan to Donald Duck.](CBatAotCB-038_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-038_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.67,
+              "end_index": 125,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**INSIDE THE SUB!**",
+          "value": "INSIDE THE SUB!",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.65,
+              "end_index": 18,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Panel 1:**\n\\[Villain]: HAW! HAW! HAW!\nDonald Duck: WHAT'S SO DOGGONE FUNNY, SNAKE EYES?",
+          "value": "Panel 1:\n[Villain]: HAW! HAW! HAW!\nDonald Duck: WHAT'S SO DOGGONE FUNNY, SNAKE EYES?",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.66,
+              "end_index": 88,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Panel 2:**\n\\[Villain]: IT WORKS! IT WORKS! MY FAKE SERPENT SCARED THAT STEAMER CREW OUT OF THEIR SKINS!.... HAW!",
+          "value": "Panel 2:\n[Villain]: IT WORKS! IT WORKS! MY FAKE SERPENT SCARED THAT STEAMER CREW OUT OF THEIR SKINS!.... HAW!",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.67,
+              "end_index": 113,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Panel 3:**\n\\[Villain]: THERE THEY GO TO SPREAD THE ALARM! BEFORE NIGHT MY LITTLE PLAYTHING WILL BE KNOWN AS THE TERROR OF THE RIVER!... HAW!",
+          "value": "Panel 3:\n[Villain]: THERE THEY GO TO SPREAD THE ALARM! BEFORE NIGHT MY LITTLE PLAYTHING WILL BE KNOWN AS THE TERROR OF THE RIVER!... HAW!",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.67,
+              "end_index": 141,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Panel 4:**\n\\[Villain]: TREMBLING SHERIFFS WILL TOSS DYNAMITE IN THE WATER! JITTERY PEOPLE WILL HUNT THE \"SERPENT\" WITH SHOTGUNS! HAW!",
+          "value": "Panel 4:\n[Villain]: TREMBLING SHERIFFS WILL TOSS DYNAMITE IN THE WATER! JITTERY PEOPLE WILL HUNT THE \"SERPENT\" WITH SHOTGUNS! HAW!",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.67,
+              "end_index": 134,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Panel 5:**\n\\[Villain]: BUT I WON'T BE HERE! I'LL BE MILES DOWN THE RIVER, SCARING MORE STEAMER CREWS WITH MY TERRIFYING INVENTION! HAW!",
+          "value": "Panel 5:\n[Villain]: BUT I WON'T BE HERE! I'LL BE MILES DOWN THE RIVER, SCARING MORE STEAMER CREWS WITH MY TERRIFYING INVENTION! HAW!",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.67,
+              "end_index": 136,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Panel 6:**\nDonald Duck: BUT WHY?? WHY ALL THIS SCARING?\n\\[Villain]: WHY?.. WHY DO PEOPLE DANCE? BECAUSE THEY LIKE TO! IT AMUSES THEM!... I LIKE TO SCARE PEOPLE!",
+          "value": "Panel 6:\nDonald Duck: BUT WHY?? WHY ALL THIS SCARING?\n[Villain]: WHY?.. WHY DO PEOPLE DANCE? BECAUSE THEY LIKE TO! IT AMUSES THEM!... I LIKE TO SCARE PEOPLE!",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.68,
+              "end_index": 161,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Panel 7:**\nDonald Duck: SOUNDS SILLY TO ME!",
+          "value": "Panel 7:\nDonald Duck: SOUNDS SILLY TO ME!",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.65,
+              "end_index": 44,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Panel 8:**\n\\[Villain]: AND AFTER I'VE SCARED EVERYBODY OFF THE RIVER, I'LL BORE THIS SUB INTO A MUD BANK AND GO OUT THE ESCAPE HATCH!\n\\[Diagram showing the submarine]: BORING INTO MUD",
+          "value": "Panel 8:\n[Villain]: AND AFTER I'VE SCARED EVERYBODY OFF THE RIVER, I'LL BORE THIS SUB INTO A MUD BANK AND GO OUT THE ESCAPE HATCH!\n[Diagram showing the submarine]: BORING INTO MUD",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.69,
+              "end_index": 184,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Panel 9:**\n\\[Villain]: THEN I'LL SPEND THE REST OF MY LIFE LAUGHING AT PEOPLE'S WILD STORIES OF THE \"SEA SERPENT\" THAT THOUSANDS SAW, BUT NOBODY EVER FOUND! HAW!\nDonald Duck: WHAT ABOUT ME?",
+          "value": "Panel 9:\n[Villain]: THEN I'LL SPEND THE REST OF MY LIFE LAUGHING AT PEOPLE'S WILD STORIES OF THE \"SEA SERPENT\" THAT THOUSANDS SAW, BUT NOBODY EVER FOUND! HAW!\nDonald Duck: WHAT ABOUT ME?",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.69,
+              "end_index": 190,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Panel 10:**\n\\[Villain]: YOU?... OH, YOU'LL STAY IN THE BURIED SUBMARINE, WHERE THE SECRET OF HOW I SCARED HERDS OF PEOPLE TO DEATH WILL BE SAFE IN YOUR KEEPING — FOREVER!",
+          "value": "Panel 10:\n[Villain]: YOU?... OH, YOU'LL STAY IN THE BURIED SUBMARINE, WHERE THE SECRET OF HOW I SCARED HERDS OF PEOPLE TO DEATH WILL BE SAFE IN YOUR KEEPING — FOREVER!",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.68,
+              "end_index": 171,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "From \"The Terror of the River\" in *Donald Duck Four Color* No. 108, 1946, © 1946 Walt Disney Productions.",
+          "value": "From \"The Terror of the River\" in Donald Duck Four Color No. 108, 1946, © 1946 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.618772865853679,
+              "w": 210.1243788109756,
+              "x": 36.8178544207317,
+              "y": 348.6869588414634,
+              "confidence": 0.89,
+              "end_index": 104,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "38\nCarl Barks and the Art of the Comic Book",
+              "value": "38\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.322035060975595,
+                  "w": 5.150225562118901,
+                  "x": 11.88800340605945,
+                  "y": 368.33087652439025,
+                  "confidence": 0.78,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "38\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.32,
+              "w": 5.15,
+              "x": 11.89,
+              "y": 368.33,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "38"
+    }
+  ]
+}

@@ -1,0 +1,765 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Inside front cover: A full-page drawing of the exterior of Gyro's workshop, with Gyro on a bike-saucer. *(Mar. 18, 1959)*",
+          "value": "Inside front cover: A full-page drawing of the exterior of Gyro's workshop, with Gyro on a bike-saucer. (Mar. 18, 1959)",
+          "bbox": [
+            {
+              "h": 17.39578982469512,
+              "w": 124.94708103086889,
+              "x": 12.46931092797256,
+              "y": 15.463991044207319,
+              "confidence": 0.97,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Gab-muffer - 10 - Gyro invents a machine to envelope the nephews in a \"globe of silence,\" but then a fire starts in Donald's back yard and the gab-muffer silences Donald and Gyro as well as the nephews. *(Mar. 18, 1959)*",
+          "value": "GYRO GEARLOOSE The Gab-muffer - 10 - Gyro invents a machine to envelope the nephews in a \"globe of silence,\" but then a fire starts in Donald's back yard and the gab-muffer silences Donald and Gyro as well as the nephews. (Mar. 18, 1959)",
+          "bbox": [
+            {
+              "h": 29.372283727134135,
+              "w": 125.6231024914253,
+              "x": 12.389205054306402,
+              "y": 33.201090891768295,
+              "confidence": 0.94,
+              "end_index": 238,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Showcase No. 18, October 1973.",
+          "value": "Reprinted: Walt Disney Showcase No. 18, October 1973.",
+          "bbox": [
+            {
+              "h": 5.437785823170725,
+              "w": 113.2980232945884,
+              "x": 17.062106278582316,
+              "y": 63.41917111280488,
+              "confidence": 0.92,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Stubborn Stork - 8 - Gyro and Scrooge use Gyro's bike saucers as they try to remove a nesting stork from an air vent leading from Scrooge's money bin, but the stork keeps coming back. *(Apr. 14, 1959)*",
+          "value": "GYRO GEARLOOSE The Stubborn Stork - 8 - Gyro and Scrooge use Gyro's bike saucers as they try to remove a nesting stork from an air vent leading from Scrooge's money bin, but the stork keeps coming back. (Apr. 14, 1959)",
+          "bbox": [
+            {
+              "h": 23.395924161585363,
+              "w": 125.06952446169967,
+              "x": 12.81107576695884,
+              "y": 69.36576219512196,
+              "confidence": 0.96,
+              "end_index": 219,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 26, December 1970.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 26, December 1970.",
+          "bbox": [
+            {
+              "h": 10.09988757621952,
+              "w": 125.2274071074695,
+              "x": 12.875903677591461,
+              "y": 93.34372522865853,
+              "confidence": 0.92,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Milktime Melodies - 7 - Gyro invents a special hi-fi set to keep Grandma's cows happy, and it performs well even when it accidentally starts broadcasting piercing sound waves. *(Apr. 14, 1959)*",
+          "value": "GYRO GEARLOOSE Milktime Melodies - 7 - Gyro invents a special hi-fi set to keep Grandma's cows happy, and it performs well even when it accidentally starts broadcasting piercing sound waves. (Apr. 14, 1959)",
+          "bbox": [
+            {
+              "h": 23.335095274390245,
+              "w": 124.80501441025152,
+              "x": 13.015099919016768,
+              "y": 104.83815548780488,
+              "confidence": 0.97,
+              "end_index": 207,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Showcase No. 18, October 1973.",
+          "value": "Reprinted: Walt Disney Showcase No. 18, October 1973.",
+          "bbox": [
+            {
+              "h": 5.511139481707332,
+              "w": 113.0830106707317,
+              "x": 17.42919112042683,
+              "y": 128.77125,
+              "confidence": 0.76,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Lost Rabbit Foot - 6 7/8 - Gyro invents a machine to locate Gladstone's lost rabbit's foot, which is in the water at the bottom of a pier. *(Apr. 14, 1959)*\nThe Dell Pledge fills out the last page.",
+          "value": "GYRO GEARLOOSE The Lost Rabbit Foot - 6 7/8 - Gyro invents a machine to locate Gladstone's lost rabbit's foot, which is in the water at the bottom of a pier. (Apr. 14, 1959)\nThe Dell Pledge fills out the last page.",
+          "bbox": [
+            {
+              "h": 29.39987423780487,
+              "w": 125.39175614519816,
+              "x": 12.763688786204268,
+              "y": 128.85068597560976,
+              "confidence": 0.88,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 9, March 1969.\nGYRO GEARLOOSE The Bird Camera - 1 (inside back cover) - Gyro has no luck finding the curly-tailed woodpecker to photograph. *(Mar. 18, 1959)*",
+          "value": "Reprinted: Walt Disney Comics Digest No. 9, March 1969.\nGYRO GEARLOOSE The Bird Camera - 1 (inside back cover) - Gyro has no luck finding the curly-tailed woodpecker to photograph. (Mar. 18, 1959)",
+          "bbox": [
+            {
+              "h": 23.365175304878058,
+              "w": 124.80396293826217,
+              "x": 13.15776248094512,
+              "y": 158.64894054878047,
+              "confidence": 0.92,
+              "end_index": 197,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Odd Order - 1 (back cover) - Gyro, at a restaurant, orders a flashlight battery for his helper. *(Mar. 18, 1959)*",
+          "value": "GYRO GEARLOOSE The Odd Order - 1 (back cover) - Gyro, at a restaurant, orders a flashlight battery for his helper. (Mar. 18, 1959)",
+          "bbox": [
+            {
+              "h": 17.635346798780493,
+              "w": 125.81108338891006,
+              "x": 11.394199576028962,
+              "y": 182.0022370426829,
+              "confidence": 0.94,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page was replaced by an advertisement in some copies.",
+          "value": "This page was replaced by an advertisement in some copies.",
+          "bbox": [
+            {
+              "h": 10.99676067073171,
+              "w": 125.96033881955029,
+              "x": 12.963098680449693,
+              "y": 200.4435594512195,
+              "confidence": 0.96,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# Four Color 1095 - Apr.-June 1960 (\\[March] 1960) - 36 pages",
+          "value": "Four Color 1095 - Apr.-June 1960 ([March] 1960) - 36 pages",
+          "bbox": [
+            {
+              "h": 11.836349085365855,
+              "w": 125.09033417492375,
+              "x": 12.636247379954268,
+              "y": 217.7300304878049,
+              "confidence": 0.97,
+              "end_index": 57,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Gyro uses a \"camera\" that paints his portrait. *(Sept. 28, 1959)*",
+          "value": "Front cover: Gyro uses a \"camera\" that paints his portrait. (Sept. 28, 1959)",
+          "bbox": [
+            {
+              "h": 11.132492378048783,
+              "w": 125.04092249428352,
+              "x": 12.825803877667683,
+              "y": 229.91565548780488,
+              "confidence": 0.97,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Call of the Wild - 1 (inside front cover) - Gyro invents a moose call so good that hunters fire at him. *(Oct. 19, 1959)*",
+          "value": "GYRO GEARLOOSE The Call of the Wild - 1 (inside front cover) - Gyro invents a moose call so good that hunters fire at him. (Oct. 19, 1959)",
+          "bbox": [
+            {
+              "h": 17.56392530487803,
+              "w": 124.795986328125,
+              "x": 13.18570098132622,
+              "y": 241.64009908536585,
+              "confidence": 0.97,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Cave of the Winds - 10 - On Gyro's advice, Scrooge buys Duckburg savings bonds with his money to save it from the Beagle Boys, then hides the bonds in caves in the Aeolian Mountains. *(Sept. 12, 1959)*",
+          "value": "GYRO GEARLOOSE Cave of the Winds - 10 - On Gyro's advice, Scrooge buys Duckburg savings bonds with his money to save it from the Beagle Boys, then hides the bonds in caves in the Aeolian Mountains. (Sept. 12, 1959)",
+          "bbox": [
+            {
+              "h": 23.711661585365853,
+              "w": 124.85994390720273,
+              "x": 13.239165277248475,
+              "y": 259.525243902439,
+              "confidence": 0.97,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Mixed-up Mixer - 7 - Gyro uses his new concrete mixer to build a dam on Grandma's farm when a flood hits, then Grandma uses it to mix bread for flood refugees. *(Sept. 16, 1959)*",
+          "value": "GYRO GEARLOOSE Mixed-up Mixer - 7 - Gyro uses his new concrete mixer to build a dam on Grandma's farm when a flood hits, then Grandma uses it to mix bread for flood refugees. (Sept. 16, 1959)",
+          "bbox": [
+            {
+              "h": 23.300442073170725,
+              "w": 124.89803055926066,
+              "x": 13.259026414824694,
+              "y": 283.54895579268293,
+              "confidence": 0.97,
+              "end_index": 192,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Madball Pitcher - 8 - Gyro, caught in the middle in a hotly contested baseball game between two Duckburg teams, invents an unhittable ball for one side and an unmissable bat for the other. *(Sept. 12, 1959)*",
+          "value": "GYRO GEARLOOSE The Madball Pitcher - 8 - Gyro, caught in the middle in a hotly contested baseball game between two Duckburg teams, invents an unhittable ball for one side and an unmissable bat for the other. (Sept. 12, 1959)",
+          "bbox": [
+            {
+              "h": 29.20070121951223,
+              "w": 124.81871248570882,
+              "x": 13.301396127096035,
+              "y": 307.20521341463416,
+              "confidence": 0.97,
+              "end_index": 225,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Bear Tamer - 7 - Gladstone recruits Gyro to help him tame a bear so that he will be",
+          "value": "GYRO GEARLOOSE The Bear Tamer - 7 - Gladstone recruits Gyro to help him tame a bear so that he will be",
+          "bbox": [
+            {
+              "h": 11.628109756097565,
+              "w": 124.65549745141003,
+              "x": 13.371267030297256,
+              "y": 336.836387195122,
+              "confidence": 0.97,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "crowned \"king of luck,\" and Gyro invents a repellent that keeps the bear subdued. *(Oct. 29, 1959)*",
+          "value": "crowned \"king of luck,\" and Gyro invents a repellent that keeps the bear subdued. (Oct. 29, 1959)",
+          "bbox": [
+            {
+              "h": 11.458633765243901,
+              "w": 124.2719245426829,
+              "x": 150.15040586890242,
+              "y": 15.217445693597561,
+              "confidence": 0.95,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 43; October 1973",
+          "value": "Reprinted: Walt Disney Comics Digest No. 43; October 1973",
+          "bbox": [
+            {
+              "h": 5.307324695121949,
+              "w": 119.42461509146341,
+              "x": 154.33628048780486,
+              "y": 27.456922637195124,
+              "confidence": 0.92,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Tale of the Tape - 1 (inside back cover) - Gyro tapes his snores, but the tape picks up an elephant's snores as well. *(Oct. 19, 1959)*",
+          "value": "GYRO GEARLOOSE Tale of the Tape - 1 (inside back cover) - Gyro tapes his snores, but the tape picks up an elephant's snores as well. (Oct. 19, 1959)",
+          "bbox": [
+            {
+              "h": 17.811668254573167,
+              "w": 124.9068292682927,
+              "x": 150.66620807926827,
+              "y": 33.5215615472561,
+              "confidence": 0.95,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE His Shining Hour - 1 (back cover) - Gyro invents a home shoe shiner. *(Oct. 19, 1959)*",
+          "value": "GYRO GEARLOOSE His Shining Hour - 1 (back cover) - Gyro invents a home shoe shiner. (Oct. 19, 1959)",
+          "bbox": [
+            {
+              "h": 11.406019435975608,
+              "w": 124.97854801829266,
+              "x": 150.68200266768292,
+              "y": 51.6932412347561,
+              "confidence": 0.93,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page was replaced by an advertisement in some copies.",
+          "value": "This page was replaced by an advertisement in some copies.",
+          "bbox": [
+            {
+              "h": 5.248993902439029,
+              "w": 120.12959222560977,
+              "x": 155.2278601371951,
+              "y": 63.75620807926829,
+              "confidence": 0.92,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# Four Color 1184 - May-July 1961 - 36 pages",
+          "value": "Four Color 1184 - May-July 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.827848704268289,
+              "w": 108.19325647865851,
+              "x": 150.55185594512193,
+              "y": 75.21678544207317,
+              "confidence": 0.95,
+              "end_index": 41,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Bark's list shows that he submitted thirty-two pages of artwork for the inside pages of this comic book. Only twenty-nine pages were published, and it is not known in which stories cuts were made.",
+          "value": "Bark's list shows that he submitted thirty-two pages of artwork for the inside pages of this comic book. Only twenty-nine pages were published, and it is not known in which stories cuts were made.",
+          "bbox": [
+            {
+              "h": 17.12902820121951,
+              "w": 125.39623856707315,
+              "x": 151.04752477134144,
+              "y": 81.62095655487805,
+              "confidence": 0.96,
+              "end_index": 195,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: A mechanical fly swatter keeps the flies away while Gyro fishes. *(Oct. 1, 1960)*",
+          "value": "Front cover: A mechanical fly swatter keeps the flies away while Gyro fishes. (Oct. 1, 1960)",
+          "bbox": [
+            {
+              "h": 11.22820884146342,
+              "w": 125.0541082317073,
+              "x": 150.81665967987803,
+              "y": 98.7212881097561,
+              "confidence": 0.94,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Nose Knows - 1 (inside front cover) - art only - Gyro sends up a rocket that radios back everything it sees — and warns him of impending disaster. *(Oct. 31, 1960)*",
+          "value": "GYRO GEARLOOSE The Nose Knows - 1 (inside front cover) - art only - Gyro sends up a rocket that radios back everything it sees — and warns him of impending disaster. (Oct. 31, 1960)",
+          "bbox": [
+            {
+              "h": 22.916078506097563,
+              "w": 125.28392721036585,
+              "x": 150.52081554878046,
+              "y": 110.68104420731707,
+              "confidence": 0.97,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page was replaced by an advertisement in some copies.\nReprinted: Walt Disney Showcase No. 18, October 1973.",
+          "value": "This page was replaced by an advertisement in some copies.\nReprinted: Walt Disney Showcase No. 18, October 1973.",
+          "bbox": [
+            {
+              "h": 11.480190548780465,
+              "w": 120.294140625,
+              "x": 155.1709413109756,
+              "y": 134.55321265243904,
+              "confidence": 0.94,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Monsterville - 10 - art only - Duckburg is rebuilt to Gyro's specifications, but his inventions eliminate so much work that the people have nothing to do. *(Oct. 12, 1960)*",
+          "value": "GYRO GEARLOOSE Monsterville - 10 - art only - Duckburg is rebuilt to Gyro's specifications, but his inventions eliminate so much work that the people have nothing to do. (Oct. 12, 1960)",
+          "bbox": [
+            {
+              "h": 22.918696646341477,
+              "w": 125.24842797256095,
+              "x": 150.67337652439022,
+              "y": 146.28892911585365,
+              "confidence": 0.95,
+              "end_index": 186,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 21, April 1970.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 21, April 1970.",
+          "bbox": [
+            {
+              "h": 5.51318597560974,
+              "w": 116.3949695121951,
+              "x": 155.23900724085365,
+              "y": 170.14313643292684,
+              "confidence": 0.87,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Cube - 5 - art only - Gyro tries to find a use for the large plastic cube with holes that he has invented. *(Oct. 12, 1960)*",
+          "value": "GYRO GEARLOOSE The Cube - 5 - art only - Gyro tries to find a use for the large plastic cube with holes that he has invented. (Oct. 12, 1960)",
+          "bbox": [
+            {
+              "h": 16.783182164634145,
+              "w": 124.99936737804875,
+              "x": 150.8105201981707,
+              "y": 176.1737080792683,
+              "confidence": 0.94,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Mighty but Miserable - 7 - art only - A Beagle Boy forces Gyro to make a machine that will increase his intelligence, but the machine's effects last only an hour. *(Oct. 12, 1960)*",
+          "value": "GYRO GEARLOOSE Mighty but Miserable - 7 - art only - A Beagle Boy forces Gyro to make a machine that will increase his intelligence, but the machine's effects last only an hour. (Oct. 12, 1960)",
+          "bbox": [
+            {
+              "h": 23.137568597560957,
+              "w": 124.91231707317073,
+              "x": 150.81624809451216,
+              "y": 193.67849085365853,
+              "confidence": 0.97,
+              "end_index": 194,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 25, October 1970.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 25, October 1970.",
+          "bbox": [
+            {
+              "h": 5.521600609756088,
+              "w": 120.3790129573171,
+              "x": 155.28584222560974,
+              "y": 217.79204268292682,
+              "confidence": 0.8,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Brain-strain - 7 - art only - Gyro is marooned with Donald on a rocky island when Donald's poorly constructed boat sinks. *(Oct. 12, 1960)*",
+          "value": "GYRO GEARLOOSE Brain-strain - 7 - art only - Gyro is marooned with Donald on a rocky island when Donald's poorly constructed boat sinks. (Oct. 12, 1960)",
+          "bbox": [
+            {
+              "h": 23.018368902439015,
+              "w": 125.03044207317072,
+              "x": 150.82928163109756,
+              "y": 217.85213414634146,
+              "confidence": 0.97,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Showcase No. 18, October 1973.",
+          "value": "Reprinted: Walt Disney Showcase No. 18, October 1973.",
+          "bbox": [
+            {
+              "h": 5.43804878048777,
+              "w": 112.89652820121951,
+              "x": 155.4359851371951,
+              "y": 241.6702362804878,
+              "confidence": 0.88,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Old Timer - 1 (inside back cover) - art only - Gyro drives his self-servicing car into Donald's service station — but only for a drink of water. *(Oct. 31, 1960)*",
+          "value": "GYRO GEARLOOSE The Old Timer - 1 (inside back cover) - art only - Gyro drives his self-servicing car into Donald's service station — but only for a drink of water. (Oct. 31, 1960)",
+          "bbox": [
+            {
+              "h": 17.39732469512197,
+              "w": 125.61021150914631,
+              "x": 150.42666539634143,
+              "y": 247.5071570121951,
+              "confidence": 0.88,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Mechanized Mess - 1 (back cover) - art only - Gyro's mechanized trash can panicks the trash collectors. *(Oct. 31, 1960)*",
+          "value": "GYRO GEARLOOSE Mechanized Mess - 1 (back cover) - art only - Gyro's mechanized trash can panicks the trash collectors. (Oct. 31, 1960)",
+          "bbox": [
+            {
+              "h": 17.30190548780487,
+              "w": 125.13455602134144,
+              "x": 150.61458841463414,
+              "y": 265.22080792682925,
+              "confidence": 0.91,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page was replaced by an advertisement in some copies.",
+          "value": "This page was replaced by an advertisement in some copies.",
+          "bbox": [
+            {
+              "h": 10.964817073170725,
+              "w": 125.75603277439023,
+              "x": 150.59510670731706,
+              "y": 283.33349085365853,
+              "confidence": 0.95,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 409, October 1974.",
+          "value": "Reprinted: Walt Disney's Comics No. 409, October 1974.",
+          "bbox": [
+            {
+              "h": 5.18014481707316,
+              "w": 114.28871570121953,
+              "x": 154.30796684451218,
+              "y": 295.4615396341464,
+              "confidence": 0.94,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# Four Color 1267 - Dec.-Feb. 1962 (\\[November] 1961) - 36 pages.",
+          "value": "Four Color 1267 - Dec.-Feb. 1962 ([November] 1961) - 36 pages.",
+          "bbox": [
+            {
+              "h": 11.515060975609794,
+              "w": 124.67274009146341,
+              "x": 149.9162137957317,
+              "y": 306.9022179878049,
+              "confidence": 0.96,
+              "end_index": 61,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Gyro rides a unicycle that prints his name on the ground as it rolls. *(Apr. 8, 1961)*",
+          "value": "Front cover: Gyro rides a unicycle that prints his name on the ground as it rolls. (Apr. 8, 1961)",
+          "bbox": [
+            {
+              "h": 11.557522865853679,
+              "w": 124.97333460365854,
+              "x": 150.26319740853657,
+              "y": 318.8959527439024,
+              "confidence": 0.96,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Buffaloed by Buffaloes - 4 - Gyro, sent to Farbakishan as a \"Brain Corpsman,\" tries to put idle water buffaloes to work. *(June 19, 1961)*",
+          "value": "GYRO GEARLOOSE Buffaloed by Buffaloes - 4 - Gyro, sent to Farbakishan as a \"Brain Corpsman,\" tries to put idle water buffaloes to work. (June 19, 1961)",
+          "bbox": [
+            {
+              "h": 17.010823170731708,
+              "w": 125.29389100609757,
+              "x": 150.23917111280485,
+              "y": 331.04288871951223,
+              "confidence": 0.97,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "120\nCarl Barks and the Art of the Comic Book",
+              "value": "120\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.60367378048777,
+                  "w": 77.4770136242378,
+                  "x": 36.89800638338414,
+                  "y": 362.8560137195122,
+                  "confidence": 0.93,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "120\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.6,
+              "w": 77.48,
+              "x": 36.9,
+              "y": 362.86,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "120"
+    }
+  ]
+}

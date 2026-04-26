@@ -1,0 +1,833 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "prove he is the greatest kite maker after the nephews' kite flying disrupts his gardening. *(Jan. 4, 1946)*",
+          "value": "prove he is the greatest kite maker after the nephews' kite flying disrupts his gardening. (Jan. 4, 1946)",
+          "bbox": [
+            {
+              "h": 11.657642435213415,
+              "w": 125.69837009336891,
+              "x": 11.339817787728657,
+              "y": 13.050438738567074,
+              "confidence": 0.98,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 69 (6/9) - June 1946 - 52 pages",
+          "value": "69 (6/9) - June 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.502724847560971,
+              "w": 71.23109208269817,
+              "x": 11.45448718559451,
+              "y": 31.00408822408537,
+              "confidence": 0.97,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Daisy goes wild over Deltoid Biceppa, Susy Swan's muscular boyfriend, so Donald lifts weights to build himself up. *(Feb. 1, 1946)*",
+          "value": "DONALD DUCK - 10 - Daisy goes wild over Deltoid Biceppa, Susy Swan's muscular boyfriend, so Donald lifts weights to build himself up. (Feb. 1, 1946)",
+          "bbox": [
+            {
+              "h": 17.262804878048783,
+              "w": 125.835488043064,
+              "x": 11.278457269435973,
+              "y": 36.83323170731707,
+              "confidence": 0.99,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 70 (6/10) - July 1946 - 52 pages",
+          "value": "70 (6/10) - July 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.503645198170732,
+              "w": 73.30068692835366,
+              "x": 11.68453125,
+              "y": 60.061663490853654,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews bring home a bright mongrel puppy, but Donald will have only a Smugsnorkle Squatty, the world's smartest dog. *(Feb. 28, 1946)*",
+          "value": "DONALD DUCK - 10 - The nephews bring home a bright mongrel puppy, but Donald will have only a Smugsnorkle Squatty, the world's smartest dog. (Feb. 28, 1946)",
+          "bbox": [
+            {
+              "h": 17.682690548780478,
+              "w": 126.0507311118521,
+              "x": 11.56786073266006,
+              "y": 65.75309451219513,
+              "confidence": 0.96,
+              "end_index": 157,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 305, February 1966.",
+          "value": "Reprinted: Walt Disney's Comics No. 305, February 1966.",
+          "bbox": [
+            {
+              "h": 5.2808174542682895,
+              "w": 115.5117469750381,
+              "x": 16.122822384717985,
+              "y": 83.88104611280488,
+              "confidence": 0.87,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 71 (6/11) - August 1946 - 52 pages",
+          "value": "71 (6/11) - August 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.651964557926839,
+              "w": 81.61336723513719,
+              "x": 11.722120569740852,
+              "y": 95.47747522865853,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - On the advice of a young tough named Butch, the nephews cheat to beat Donald in a swimming race. *(Mar. 26, 1946)*",
+          "value": "DONALD DUCK - 10 - On the advice of a young tough named Butch, the nephews cheat to beat Donald in a swimming race. (Mar. 26, 1946)",
+          "bbox": [
+            {
+              "h": 17.290301067073173,
+              "w": 125.91227765339177,
+              "x": 11.626698146913109,
+              "y": 101.2853163109756,
+              "confidence": 0.98,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 72 (6/12) - September 1946 - 52 pages",
+          "value": "72 (6/12) - September 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.559077743902435,
+              "w": 90.57821312881096,
+              "x": 11.658185499237804,
+              "y": 125.02167301829269,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews play hooky on the first day of school and catch a freight train for Pickleburg with Donald hot on their trail. *(Apr. 25, 1946)*",
+          "value": "DONALD DUCK - 10 - The nephews play hooky on the first day of school and catch a freight train for Pickleburg with Donald hot on their trail. (Apr. 25, 1946)",
+          "bbox": [
+            {
+              "h": 17.56734375,
+              "w": 126.0195738852896,
+              "x": 11.639276152820122,
+              "y": 130.72006097560975,
+              "confidence": 0.98,
+              "end_index": 158,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 73 (7/1) - October 1946 - 52 pages",
+          "value": "73 (7/1) - October 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.593891006097564,
+              "w": 82.81879894721797,
+              "x": 11.523615305830791,
+              "y": 154.53436737804878,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - One of the nephews invents a \"gold-finder\" that points at the gold in two of Donald's watches, smashing them as it does. *(May 27, 1946)*",
+          "value": "DONALD DUCK - 10 - One of the nephews invents a \"gold-finder\" that points at the gold in two of Donald's watches, smashing them as it does. (May 27, 1946)",
+          "bbox": [
+            {
+              "h": 17.209184451219507,
+              "w": 126.11367258955792,
+              "x": 11.515534727515242,
+              "y": 160.39020960365855,
+              "confidence": 0.98,
+              "end_index": 155,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 74 (7/2) - November 1946 - 52 pages",
+          "value": "74 (7/2) - November 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.579519817073187,
+              "w": 87.66587366615852,
+              "x": 11.711592987804876,
+              "y": 183.86694740853656,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald becomes a bill collector, with the nephews as his assistants, and is assigned to collect from a gangster, a wild woman — and himself. *(June 14, 1946)*",
+          "value": "DONALD DUCK - 10 - Donald becomes a bill collector, with the nephews as his assistants, and is assigned to collect from a gangster, a wild woman — and himself. (June 14, 1946)",
+          "bbox": [
+            {
+              "h": 22.940922256097565,
+              "w": 125.99744045350609,
+              "x": 11.724562214176828,
+              "y": 189.92060213414635,
+              "confidence": 0.99,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This story was retold in *Donald Duck and the Boys*, Whitman Book No. 845, 1948 (See \"Other Comics Material.\")",
+          "value": "This story was retold in Donald Duck and the Boys, Whitman Book No. 845, 1948 (See \"Other Comics Material.\")",
+          "bbox": [
+            {
+              "h": 10.311539634146348,
+              "w": 124.55646936928352,
+              "x": 11.77524080602134,
+              "y": 214.62018292682927,
+              "confidence": 0.97,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 75 (7/3) - December 1946 - 52 pages",
+          "value": "75 (7/3) - December 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.591821646341478,
+              "w": 86.47571884527439,
+              "x": 11.408533250762193,
+              "y": 232.2528201219512,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews win a Thanksgiving turkey in a raffle, but refuse to let Donald kill it, so Donald enters a crooked turkey shoot. *(July 8, 1946)*",
+          "value": "DONALD DUCK - 10 - The nephews win a Thanksgiving turkey in a raffle, but refuse to let Donald kill it, so Donald enters a crooked turkey shoot. (July 8, 1946)",
+          "bbox": [
+            {
+              "h": 17.28363567073171,
+              "w": 126.00449742759147,
+              "x": 11.443114996189022,
+              "y": 238.09442835365854,
+              "confidence": 0.98,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This is the only story in which Barks's name appears. On the fourth page, a can is labeled \"Barks Dog Soup.\"",
+          "value": "This is the only story in which Barks's name appears. On the fourth page, a can is labeled \"Barks Dog Soup.\"",
+          "bbox": [
+            {
+              "h": 11.172233231707304,
+              "w": 125.85218404630335,
+              "x": 11.497736875952743,
+              "y": 256.1005335365854,
+              "confidence": 0.97,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 76 (7/4) - January 1947 - 52 pages",
+          "value": "76 (7/4) - January 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.497797256097565,
+              "w": 81.23844833746189,
+              "x": 11.479978682355183,
+              "y": 273.52440548780487,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald befriends a stray cat that keeps the ducks awake all night before they are to get up early and go fishing. *(Aug. 29, 1946)*",
+          "value": "DONALD DUCK - 10 - Donald befriends a stray cat that keeps the ducks awake all night before they are to get up early and go fishing. (Aug. 29, 1946)",
+          "bbox": [
+            {
+              "h": 17.54085365853658,
+              "w": 125.97647961128048,
+              "x": 11.544197789634145,
+              "y": 279.1536585365854,
+              "confidence": 0.99,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 77 (7/5) - February 1947 - 52 pages",
+          "value": "77 (7/5) - February 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.47957317073171,
+              "w": 84.64706650152438,
+              "x": 11.908991044207317,
+              "y": 303.04939024390245,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews wear bug costumes to make Donald believe his home-brewed bug spray makes things grow to giant size. *(Sept. 25, 1946)*",
+          "value": "DONALD DUCK - 10 - The nephews wear bug costumes to make Donald believe his home-brewed bug spray makes things grow to giant size. (Sept. 25, 1946)",
+          "bbox": [
+            {
+              "h": 17.369565548780464,
+              "w": 125.8731523913872,
+              "x": 11.994517197027438,
+              "y": 308.8148094512195,
+              "confidence": 0.99,
+              "end_index": 148,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 78 (7/6) - March 1947 - 52 pages",
+          "value": "78 (7/6) - March 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.6552057926829,
+              "w": 77.26733338891005,
+              "x": 12.013155368711889,
+              "y": 332.4726905487805,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald buys a safe to protect his valuables during a wave of burglaries, and to protect a jar of jam from the nephews. *(Oct. 28, 1946)*",
+          "value": "DONALD DUCK - 10 - Donald buys a safe to protect his valuables during a wave of burglaries, and to protect a jar of jam from the nephews. (Oct. 28, 1946)",
+          "bbox": [
+            {
+              "h": 17.362385670731708,
+              "w": 126.01746236661585,
+              "x": 11.961669683689022,
+              "y": 338.30387195121955,
+              "confidence": 0.99,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "On the cover of this issue a box is labeled \"Bark's \\[sic] Jiffy Chicken Dinner\" — a double joke, since Barks had a chicken farm at San Jacinto, California, in the nineteen-forties. The cover was drawn by Carl Buettner, who was for a time art editor at Western Publishing's West Coast office.",
+          "value": "On the cover of this issue a box is labeled \"Bark's [sic] Jiffy Chicken Dinner\" — a double joke, since Barks had a chicken farm at San Jacinto, California, in the nineteen-forties. The cover was drawn by Carl Buettner, who was for a time art editor at Western Publishing's West Coast office.",
+          "bbox": [
+            {
+              "h": 28.570581173780486,
+              "w": 126.12399009146338,
+              "x": 150.2307507621951,
+              "y": 13.830340129573171,
+              "confidence": 0.99,
+              "end_index": 291,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 79 (7/7) - April 1947 - 52 pages",
+          "value": "79 (7/7) - April 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.619026295731703,
+              "w": 73.65609946646339,
+              "x": 150.40649771341464,
+              "y": 48.83188262195122,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald refuses to take the nephews with him on a picnic with Daisy, so they sabotage the food and the picnic site. *(Nov. 18, 1946)*",
+          "value": "DONALD DUCK - 10 - Donald refuses to take the nephews with him on a picnic with Daisy, so they sabotage the food and the picnic site. (Nov. 18, 1946)",
+          "bbox": [
+            {
+              "h": 17.291850228658543,
+              "w": 126.0072027439024,
+              "x": 150.28432545731707,
+              "y": 54.89538109756098,
+              "confidence": 0.99,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 80 (7/8) - May 1947 - 52 pages",
+          "value": "80 (7/8) - May 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.526236661585362,
+              "w": 71.4397637195122,
+              "x": 150.5690739329268,
+              "y": 78.31786394817074,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald expels the nephews from his back yard so he can plant a prize-winning flower garden, but the nephews insist on playing in the yard anyway. *(Jan. 10, 1947).*",
+          "value": "DONALD DUCK - 10 - Donald expels the nephews from his back yard so he can plant a prize-winning flower garden, but the nephews insist on playing in the yard anyway. (Jan. 10, 1947).",
+          "bbox": [
+            {
+              "h": 23.12191692073171,
+              "w": 125.79619664634147,
+              "x": 150.41358041158534,
+              "y": 84.35850228658536,
+              "confidence": 0.99,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 81 (7/9) - June 1947 - 52 pages",
+          "value": "81 (7/9) - June 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.56828125,
+              "w": 71.60542682926828,
+              "x": 150.47749618902438,
+              "y": 113.79022865853659,
+              "confidence": 0.97,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald mistakes a play map of a lost gold mine, drawn by the nephews, for the real thing, and heads for New Mexico and the \"site\" of the mine. *(Jan. 28, 1947)*",
+          "value": "DONALD DUCK - 10 - Donald mistakes a play map of a lost gold mine, drawn by the nephews, for the real thing, and heads for New Mexico and the \"site\" of the mine. (Jan. 28, 1947)",
+          "bbox": [
+            {
+              "h": 22.859062500000014,
+              "w": 125.9117663871951,
+              "x": 150.43309641768292,
+              "y": 119.59832698170732,
+              "confidence": 0.99,
+              "end_index": 178,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 82 (7/10) - July 1947 - 52 pages",
+          "value": "82 (7/10) - July 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.60627286585368,
+              "w": 73.07987995426829,
+              "x": 150.74794207317072,
+              "y": 149.28304115853658,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald puts together a magic act after the nephews flabbergast him with card tricks, but the nephews sabotage his efforts to impress Daisy. *(Feb. 19, 1947)*",
+          "value": "DONALD DUCK - 10 - Donald puts together a magic act after the nephews flabbergast him with card tricks, but the nephews sabotage his efforts to impress Daisy. (Feb. 19, 1947)",
+          "bbox": [
+            {
+              "h": 17.195316310975596,
+              "w": 125.81981135670733,
+              "x": 150.5662614329268,
+              "y": 155.39764481707317,
+              "confidence": 0.99,
+              "end_index": 175,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 83 (7/11) - August 1947 - 52 pages",
+          "value": "83 (7/11) - August 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.850240091463419,
+              "w": 81.15377858231707,
+              "x": 150.86188262195122,
+              "y": 179.18037347560977,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald tries to spend his vacation sleeping, but has to fend off obnoxious door-to-door salesmen. *(Mar. 19, 1947)*",
+          "value": "DONALD DUCK - 10 - Donald tries to spend his vacation sleeping, but has to fend off obnoxious door-to-door salesmen. (Mar. 19, 1947)",
+          "bbox": [
+            {
+              "h": 16.877721036585363,
+              "w": 125.99516387195119,
+              "x": 150.58224466463415,
+              "y": 185.21675304878048,
+              "confidence": 0.98,
+              "end_index": 133,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 84 (7/12) - September 1947 - 52 pages",
+          "value": "84 (7/12) - September 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.714588414634145,
+              "w": 90.5905907012195,
+              "x": 150.77164253048778,
+              "y": 208.76805640243904,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald, who dances only \"hep cat,\" crams on Strauss waltzes so that he and Daisy can win a waltz contest. *(May 1, 1947)*",
+          "value": "DONALD DUCK - 10 - Donald, who dances only \"hep cat,\" crams on Strauss waltzes so that he and Daisy can win a waltz contest. (May 1, 1947)",
+          "bbox": [
+            {
+              "h": 17.19900914634145,
+              "w": 125.99396341463414,
+              "x": 150.54069169207315,
+              "y": 214.61981707317074,
+              "confidence": 0.98,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 85 (8/1) - October 1947 - 52 pages",
+          "value": "85 (8/1) - October 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.705899390243885,
+              "w": 80.91279535060977,
+              "x": 150.76123285060973,
+              "y": 238.29057164634148,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald buys instruments and tries to transform the nephews into a string trio, with Grandma Duck's assistance. *(May 5, 1947)*",
+          "value": "DONALD DUCK - 10 - Donald buys instruments and tries to transform the nephews into a string trio, with Grandma Duck's assistance. (May 5, 1947)",
+          "bbox": [
+            {
+              "h": 17.164939024390232,
+              "w": 125.87101943597561,
+              "x": 150.59627286585365,
+              "y": 244.40618140243905,
+              "confidence": 0.99,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 86 (8/2) - November 1947 - 52 pages",
+          "value": "86 (8/2) - November 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.845495426829275,
+              "w": 87.70304496951218,
+              "x": 150.7935594512195,
+              "y": 267.8568978658537,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald becomes a volunteer fireman, but is quickly demoted from hoseman to squirt man to wet-sack man. *(June 23, 1947)*",
+          "value": "DONALD DUCK - 10 - Donald becomes a volunteer fireman, but is quickly demoted from hoseman to squirt man to wet-sack man. (June 23, 1947)",
+          "bbox": [
+            {
+              "h": 17.028338414634145,
+              "w": 126.14592416158533,
+              "x": 150.52733231707316,
+              "y": 273.84244664634144,
+              "confidence": 0.99,
+              "end_index": 138,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 87 (8/3) - December 1947 - 52 pages",
+          "value": "87 (8/3) - December 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.670503048780519,
+              "w": 86.5306269054878,
+              "x": 150.81127477134143,
+              "y": 297.39416158536585,
+              "confidence": 0.97,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald, irate over the high price of turkey, goes hunting in pilgrim costume, carrying a flintlock loaded with dried peas. *(July 31, 1947)*",
+          "value": "DONALD DUCK - 10 - Donald, irate over the high price of turkey, goes hunting in pilgrim costume, carrying a flintlock loaded with dried peas. (July 31, 1947)",
+          "bbox": [
+            {
+              "h": 17.36213414634145,
+              "w": 125.97641958841463,
+              "x": 150.48512766768292,
+              "y": 303.2240396341464,
+              "confidence": 0.98,
+              "end_index": 158,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 88 (8/4) - January 1948 - 52 pages",
+          "value": "88 (8/4) - January 1948 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.639176829268345,
+              "w": 81.11620426829266,
+              "x": 150.76560594512193,
+              "y": 326.78266006097556,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald must go swimming in Frozenbear Lake on Christmas Day or lose his house on a bet to Gladstone Gander. *(Aug. 15, 1947)*\nFirst appearance of Gladstone Gander.",
+          "value": "DONALD DUCK - 10 - Donald must go swimming in Frozenbear Lake on Christmas Day or lose his house on a bet to Gladstone Gander. (Aug. 15, 1947)\nFirst appearance of Gladstone Gander.",
+          "bbox": [
+            {
+              "h": 23.302637195121967,
+              "w": 126.02882812499996,
+              "x": 150.51846608231708,
+              "y": 332.6389024390244,
+              "confidence": 0.95,
+              "end_index": 181,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "170 Carl Barks and the Art of the Comic Book",
+              "value": "170 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.59841463414632,
+                  "w": 77.77326505335365,
+                  "x": 36.495583079268286,
+                  "y": 366.30224085365853,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "170 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.6,
+              "w": 77.77,
+              "x": 36.5,
+              "y": 366.3,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "170"
+    }
+  ]
+}

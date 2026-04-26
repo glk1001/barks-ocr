@@ -1,0 +1,1 @@
+![Cover of Eyeopener's Annual Red Pepper, Fourth Edition, featuring an illustration of "The Original Bali Dancer" on a beach. A text box on the left lists "HUMOR with the lid off! Cartoons, Poems, Annette's PEPPER-UPPERS, FRENCH ART". The price is listed as 50¢.](CBatAotCB-014_page_1_image_1_v2.jpg)

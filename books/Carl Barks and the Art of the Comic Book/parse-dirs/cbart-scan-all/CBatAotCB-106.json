@@ -1,0 +1,603 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# DISNEYLAND BIRTHDAY PARTY (Dell)",
+          "value": "DISNEYLAND BIRTHDAY PARTY (Dell)",
+          "bbox": [
+            {
+              "h": 13.737752000762196,
+              "w": 119.74523580411585,
+              "x": 14.923883860518291,
+              "y": 12.36746141387195,
+              "confidence": 0.98,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## 1 - (October) 1958 - 100 pages",
+          "value": "1 - (October) 1958 - 100 pages",
+          "bbox": [
+            {
+              "h": 5.571573932926826,
+              "w": 72.00586187595273,
+              "x": 12.870826386242376,
+              "y": 30.844170160060976,
+              "confidence": 0.95,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE AND GYRO - 16 - Scrooge and Gyro go to the moon to find a material hard enough to cut into Scrooge's new impenetrable money bin, since Scrooge has destroyed the only copy of the combination. On the moon, they find the material they want — a comet head — but are forced to jettison it on their way back to earth when their rocket catches fire. *(Feb. 4, 1958)*",
+          "value": "UNCLE SCROOGE AND GYRO - 16 - Scrooge and Gyro go to the moon to find a material hard enough to cut into Scrooge's new impenetrable money bin, since Scrooge has destroyed the only copy of the combination. On the moon, they find the material they want — a comet head — but are forced to jettison it on their way back to earth when their rocket catches fire. (Feb. 4, 1958)",
+          "bbox": [
+            {
+              "h": 40.791488185975616,
+              "w": 125.30919469321644,
+              "x": 12.83854158727134,
+              "y": 36.67591463414634,
+              "confidence": 0.99,
+              "end_index": 372,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This is actually a segment of the story \"Disneyland Birthday Party,\" which takes up the entire book; the Barks segment begins on the fourteenth page, not counting covers. The pages are three panels deep.",
+          "value": "This is actually a segment of the story \"Disneyland Birthday Party,\" which takes up the entire book; the Barks segment begins on the fourteenth page, not counting covers. The pages are three panels deep.",
+          "bbox": [
+            {
+              "h": 23.080455411585362,
+              "w": 124.93399175876523,
+              "x": 12.85655702172256,
+              "y": 78.45547065548782,
+              "confidence": 0.99,
+              "end_index": 202,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# DONALD DUCK (Dell/Gold Key)",
+          "value": "DONALD DUCK (Dell/Gold Key)",
+          "bbox": [
+            {
+              "h": 7.5239405487804785,
+              "w": 115.05681009432165,
+              "x": 17.20534120141006,
+              "y": 112.53966082317073,
+              "confidence": 0.98,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Four Color Nos. 9 and 29 had pages that were three panels deep; subsequent issues had pages that were four panels deep, except as noted.",
+          "value": "Four Color Nos. 9 and 29 had pages that were three panels deep; subsequent issues had pages that were four panels deep, except as noted.",
+          "bbox": [
+            {
+              "h": 14.912583841463393,
+              "w": 125.50202350895579,
+              "x": 13.17612626238567,
+              "y": 126.39681402439025,
+              "confidence": 0.99,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Issues through No. 84, Sept.-Nov. 1962, were published with the Dell label; subsequent issues were published with the Gold Key label.",
+          "value": "Issues through No. 84, Sept.-Nov. 1962, were published with the Dell label; subsequent issues were published with the Gold Key label.",
+          "bbox": [
+            {
+              "h": 16.750929878048783,
+              "w": 125.81201374333078,
+              "x": 12.8964990234375,
+              "y": 143.65010670731706,
+              "confidence": 0.99,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 9 - 1942 - 68 pages",
+          "value": "Four Color 9 - 1942 - 68 pages",
+          "bbox": [
+            {
+              "h": 10.715590701219508,
+              "w": 84.74659405964175,
+              "x": 12.479807426638718,
+              "y": 166.9276486280488,
+              "confidence": 0.78,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### Donald Duck Finds Pirate Gold",
+          "value": "Donald Duck Finds Pirate Gold",
+          "bbox": [
+            {
+              "h": 10.715590701219508,
+              "w": 84.74659405964175,
+              "x": 12.479807426638718,
+              "y": 166.9276486280488,
+              "confidence": 0.81,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Finds Pirate Gold - 64 - art only - Bearing a map found in Donald's seafood restaurant, the ducks and a parrot named Old Yellow Beak set sail for an island where the pirate Henry Morgan's treasure is buried. Unknown to them, the crew of the ship is made up of Black Pete, disguised as an old woman, and two of his rat-faced henchmen. Pete takes over the ship, but the ducks and the parrot reach the treasure island on a raft. There they dig up the treasure while Pete lies in wait. *(Date not available)*",
+          "value": "DONALD DUCK Finds Pirate Gold - 64 - art only - Bearing a map found in Donald's seafood restaurant, the ducks and a parrot named Old Yellow Beak set sail for an island where the pirate Henry Morgan's treasure is buried. Unknown to them, the crew of the ship is made up of Black Pete, disguised as an old woman, and two of his rat-faced henchmen. Pete takes over the ship, but the ducks and the parrot reach the treasure island on a raft. There they dig up the treasure while Pete lies in wait. (Date not available)",
+          "bbox": [
+            {
+              "h": 53.11477134146342,
+              "w": 125.17376059927591,
+              "x": 12.61996081840701,
+              "y": 178.92148628048778,
+              "confidence": 0.99,
+              "end_index": 515,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This was Barks's first comic-book work. He illustrated thirty-two of the sixty-four pages. The pages are not numbered, but Barks illustrated these: 1, 2, 5, 12-40. The other pages were illustrated by Jack Hannah, at that time Barks's partner in the Duck unit of the story department at the Disney Studio. The story adaption was written by Bob Karp, and was taken from storyboards by Homer Brightman for *Morgan's Ghost*, a Disney feature cartoon that was never produced.",
+          "value": "This was Barks's first comic-book work. He illustrated thirty-two of the sixty-four pages. The pages are not numbered, but Barks illustrated these: 1, 2, 5, 12-40. The other pages were illustrated by Jack Hannah, at that time Barks's partner in the Duck unit of the story department at the Disney Studio. The story adaption was written by Bob Karp, and was taken from storyboards by Homer Brightman for Morgan's Ghost, a Disney feature cartoon that was never produced.",
+          "bbox": [
+            {
+              "h": 46.90941310975609,
+              "w": 125.67408977229421,
+              "x": 13.366598108803354,
+              "y": 232.3982469512195,
+              "confidence": 0.99,
+              "end_index": 469,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck and Ghost Morgan's Treasure*, Better Little Book 1411, 1946 (see \"Other Comics Material\").",
+          "value": "Reprinted: Donald Duck and Ghost Morgan's Treasure, Better Little Book 1411, 1946 (see \"Other Comics Material\").",
+          "bbox": [
+            {
+              "h": 10.99813262195119,
+              "w": 125.64409227324694,
+              "x": 13.34879168254573,
+              "y": 280.24138719512194,
+              "confidence": 0.98,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 29 - (September) 1943 - 68 pages",
+          "value": "Four Color 29 - (September) 1943 - 68 pages",
+          "bbox": [
+            {
+              "h": 11.890038109756114,
+              "w": 112.18400426352895,
+              "x": 13.118795850800304,
+              "y": 298.26491615853655,
+              "confidence": 0.82,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### Donald Duck and the Mummy's Ring",
+          "value": "Donald Duck and the Mummy's Ring",
+          "bbox": [
+            {
+              "h": 11.890038109756114,
+              "w": 112.18400426352895,
+              "x": 13.118795850800304,
+              "y": 298.26491615853655,
+              "confidence": 0.79,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK and the Mummy's Ring - 28 - Huey is trapped inside a mummy case and taken to Egypt by emissaries of the Bey El Dagga, who is restoring life in his province to the way it was in ancient times. Donald and the other two nephews follow Huey by getting jobs on the ship carrying the mummy case, and later sailing a felucca up the Nile to the Bey's domain. *(May 10, 1943)*",
+          "value": "DONALD DUCK and the Mummy's Ring - 28 - Huey is trapped inside a mummy case and taken to Egypt by emissaries of the Bey El Dagga, who is restoring life in his province to the way it was in ancient times. Donald and the other two nephews follow Huey by getting jobs on the ship carrying the mummy case, and later sailing a felucca up the Nile to the Bey's domain. (May 10, 1943)",
+          "bbox": [
+            {
+              "h": 41.06565548780487,
+              "w": 125.0296178306021,
+              "x": 13.145085866044207,
+              "y": 310.3851905487805,
+              "confidence": 0.99,
+              "end_index": 378,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Chuck Couch, who worked with Barks as a story man at the Disney studio, is caricatured on a wanted poster on the seventh page of this story.",
+          "value": "Chuck Couch, who worked with Barks as a story man at the Disney studio, is caricatured on a wanted poster on the seventh page of this story.",
+          "bbox": [
+            {
+              "h": 5.34059451219513,
+              "w": 120.44346786871188,
+              "x": 17.566061475800304,
+              "y": 352.11317835365855,
+              "confidence": 0.97,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge and Donald Duck* No. 1, 1965; *Walt Disney Comics Digest* No. 44, December 1973.",
+          "value": "Reprinted: Uncle Scrooge and Donald Duck No. 1, 1965; Walt Disney Comics Digest No. 44, December 1973.",
+          "bbox": [
+            {
+              "h": 11.181696836890243,
+              "w": 124.78275342987806,
+              "x": 151.65120045731706,
+              "y": 26.366955983231705,
+              "confidence": 0.96,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"The Hard Loser\" - 10 - Donald and the nephews are rivals in the \"Screwball Derby,\" a cross-country horse race in which any dirty trick may be played on the other contestants. *(May 10, 1943)*",
+          "value": "DONALD DUCK in \"The Hard Loser\" - 10 - Donald and the nephews are rivals in the \"Screwball Derby,\" a cross-country horse race in which any dirty trick may be played on the other contestants. (May 10, 1943)",
+          "bbox": [
+            {
+              "h": 23.312312309451215,
+              "w": 124.79570121951217,
+              "x": 151.9530983231707,
+              "y": 38.048566120426834,
+              "confidence": 0.99,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"Too Many Pets\" - 26 - An organ grinder gives the nephews a monkey named Jingo, who plays hob with Donald's house until Donald gives him to a stranger. The stranger proves to be a foreign spy who tries to use Jingo to steal some secret plans. *(May 29, 1943)*",
+          "value": "DONALD DUCK in \"Too Many Pets\" - 26 - An organ grinder gives the nephews a monkey named Jingo, who plays hob with Donald's house until Donald gives him to a stranger. The stranger proves to be a foreign spy who tries to use Jingo to steal some secret plans. (May 29, 1943)",
+          "bbox": [
+            {
+              "h": 29.712753429878042,
+              "w": 125.98454839939025,
+              "x": 151.80636814024388,
+              "y": 61.664594131097566,
+              "confidence": 0.98,
+              "end_index": 273,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"In the Sept. 1943 D.D. the story 'Too Many Pets' was a sort of collaboration. The script was started by a writer at the Disney Studio who found himself so overloaded with work on plots for the Mickey comic strips that he had to quit 'Too Many Pets.' I was handed the half-outlined plot and asked to do what I could with it. I merely polished up the other writer's gags and situations, and lengthened the tale, and lo! it didn't look too bad for that spy-conscious era. The Disney writer was named Merrill (something-or-other) \\[Merrill de Maris]. He had been Walt Kelly's partner in a story unit at Disneys. I understand he got fed up with gag writing and bought a nursery (plants and trees) and lived happily ever after.\" *(June 9, 1968, letter to Michael Barrier)*",
+          "value": "Barks: \"In the Sept. 1943 D.D. the story 'Too Many Pets' was a sort of collaboration. The script was started by a writer at the Disney Studio who found himself so overloaded with work on plots for the Mickey comic strips that he had to quit 'Too Many Pets.' I was handed the half-outlined plot and asked to do what I could with it. I merely polished up the other writer's gags and situations, and lengthened the tale, and lo! it didn't look too bad for that spy-conscious era. The Disney writer was named Merrill (something-or-other) [Merrill de Maris]. He had been Walt Kelly's partner in a story unit at Disneys. I understand he got fed up with gag writing and bought a nursery (plants and trees) and lived happily ever after.\" (June 9, 1968, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 70.7773799542683,
+              "w": 124.77628810975608,
+              "x": 151.6581631097561,
+              "y": 91.80112614329268,
+              "confidence": 0.99,
+              "end_index": 773,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 62 - (January) 1945 - 52 pages",
+          "value": "Four Color 62 - (January) 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 10.674180640243884,
+              "w": 102.54690548780484,
+              "x": 151.2415701219512,
+              "y": 168.3632698170732,
+              "confidence": 0.82,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### Donald Duck in Frozen Gold",
+          "value": "Donald Duck in Frozen Gold",
+          "bbox": [
+            {
+              "h": 10.674180640243884,
+              "w": 102.54690548780484,
+              "x": 151.2415701219512,
+              "y": 168.3632698170732,
+              "confidence": 0.77,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in Frozen Gold - 24 - Donald flies penicillin to Point Marrow, Alaska, but a crook has stashed a stolen map to a gold mine on Donald's plane. When he reaches Alaska, Donald is kidnaped by two crooks and abandoned on the barrens. The nephews use a plane to rescue him. *(Aug. 9, 1944)*",
+          "value": "DONALD DUCK in Frozen Gold - 24 - Donald flies penicillin to Point Marrow, Alaska, but a crook has stashed a stolen map to a gold mine on Donald's plane. When he reaches Alaska, Donald is kidnaped by two crooks and abandoned on the barrens. The nephews use a plane to rescue him. (Aug. 9, 1944)",
+          "bbox": [
+            {
+              "h": 35.15757621951217,
+              "w": 125.09862804878048,
+              "x": 151.18502858231707,
+              "y": 180.4404649390244,
+              "confidence": 0.99,
+              "end_index": 295,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Walt Disney Comics* No. 96170, 1974.",
+          "value": "Reprinted: The Best of Walt Disney Comics No. 96170, 1974.",
+          "bbox": [
+            {
+              "h": 40.331227134146346,
+              "w": 125.66560403963412,
+              "x": 150.36501333841463,
+              "y": 216.47922256097561,
+              "confidence": 0.67,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in Mystery of the Swamp - 24 - Donald and the nephews go exploring in the Everglades, where they run afoul of strange little goblins called Gneezles. Donald tries to capture a Gneezle, but instead the ducks are captured by them, and are to be fed to the alligators. *(Sept. 23, 1944)*",
+          "value": "DONALD DUCK in Mystery of the Swamp - 24 - Donald and the nephews go exploring in the Everglades, where they run afoul of strange little goblins called Gneezles. Donald tries to capture a Gneezle, but instead the ducks are captured by them, and are to be fed to the alligators. (Sept. 23, 1944)",
+          "bbox": [
+            {
+              "h": 40.331227134146346,
+              "w": 125.66560403963412,
+              "x": 150.36501333841463,
+              "y": 216.47922256097561,
+              "confidence": 0.91,
+              "end_index": 295,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *The Best of Walt Disney Comics* No. 96170, 1974.",
+          "value": "Reprinted: The Best of Walt Disney Comics No. 96170, 1974.",
+          "bbox": [
+            {
+              "h": 5.470175304878085,
+              "w": 121.21331364329264,
+              "x": 154.87353658536585,
+              "y": 257.97169207317074,
+              "confidence": 0.95,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## Four Color 108 - 1946 - 52 pages",
+          "value": "Four Color 108 - 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 11.16820884146342,
+              "w": 105.91633193597556,
+              "x": 150.28573170731707,
+              "y": 269.4627210365854,
+              "confidence": 0.77,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### Donald Duck in the Terror of the River",
+          "value": "Donald Duck in the Terror of the River",
+          "bbox": [
+            {
+              "h": 11.16820884146342,
+              "w": 105.91633193597556,
+              "x": 150.28573170731707,
+              "y": 269.4627210365854,
+              "confidence": 0.82,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"The Terror of the River!\" - 28 - Donald's sneezes at an auction are mistaken for bids on a houseboat, and soon he and the nephews are sailing down the Ohio River. There they encounter a huge serpent, which they later learn is an elaborate submarine whose captain gets his pleasure from scaring people. *(Jan. 25, 1946)*",
+          "value": "DONALD DUCK in \"The Terror of the River!\" - 28 - Donald's sneezes at an auction are mistaken for bids on a houseboat, and soon he and the nephews are sailing down the Ohio River. There they encounter a huge serpent, which they later learn is an elaborate submarine whose captain gets his pleasure from scaring people. (Jan. 25, 1946)",
+          "bbox": [
+            {
+              "h": 47.59959603658533,
+              "w": 125.61647103658535,
+              "x": 149.6281726371951,
+              "y": 281.25653963414635,
+              "confidence": 0.96,
+              "end_index": 334,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Donald Duck and the Green Serpent*, Better Little Book 1432, 1947 (see \"Other Comics Material\").",
+          "value": "Reprinted: Donald Duck and the Green Serpent, Better Little Book 1432, 1947 (see \"Other Comics Material\").",
+          "bbox": [
+            {
+              "h": 11.547141768292695,
+              "w": 125.30622141768289,
+              "x": 149.89006097560974,
+              "y": 317.2471417682927,
+              "confidence": 0.85,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in \"The Firebug\" - 13 - Donald falls on his head when getting up one morning and turns into a pyromaniac, setting harmless fires but also getting the blame for big fires set by another firebug. *(July 19, 1945)*",
+          "value": "DONALD DUCK in \"The Firebug\" - 13 - Donald falls on his head when getting up one morning and turns into a pyromaniac, setting harmless fires but also getting the blame for big fires set by another firebug. (July 19, 1945)",
+          "bbox": [
+            {
+              "h": 23.8042682926829,
+              "w": 124.91506097560976,
+              "x": 150.41327172256095,
+              "y": 328.84959603658535,
+              "confidence": 0.98,
+              "end_index": 222,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages have nine to eleven panels each; most have ten",
+          "value": "These pages have nine to eleven panels each; most have ten",
+          "bbox": [
+            {
+              "h": 5.612675304878085,
+              "w": 120.1316844512195,
+              "x": 155.04218368902437,
+              "y": 352.78170731707314,
+              "confidence": 0.96,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "106 Carl Barks and the Art of the Comic Book",
+              "value": "106 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.4762881097560605,
+                  "w": 77.6399499809451,
+                  "x": 35.994808022103655,
+                  "y": 366.8540396341464,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "106 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.48,
+              "w": 77.64,
+              "x": 35.99,
+              "y": 366.85,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "106"
+    }
+  ]
+}

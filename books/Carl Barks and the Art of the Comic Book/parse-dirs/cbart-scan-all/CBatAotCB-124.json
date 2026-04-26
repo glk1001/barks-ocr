@@ -1,0 +1,635 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 2,
+          "md": "## 21 - July 1973 - 36 pages",
+          "value": "21 - July 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.531895960365851,
+              "w": 58.36463450362042,
+              "x": 12.5167236328125,
+              "y": 25.598243140243902,
+              "confidence": 0.97,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD- CHUCKS Music Hath Charms - 16 - script only - The nephews, racing the Littlest Chickadees to Woodtick Campground, have to contend with Donald, who plays pipes, invented by Gyro, that charm children as the Pied Piper's pipes charmed rats. (Sept. 18, 1972)",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD- CHUCKS Music Hath Charms - 16 - script only - The nephews, racing the Littlest Chickadees to Woodtick Campground, have to contend with Donald, who plays pipes, invented by Gyro, that charm children as the Pied Piper's pipes charmed rats. (Sept. 18, 1972)",
+          "bbox": [
+            {
+              "h": 35.24634146341463,
+              "w": 124.82699135384908,
+              "x": 12.755689667492376,
+              "y": 31.395611661585367,
+              "confidence": 0.99,
+              "end_index": 292,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Blue-pencil drawings exist for an unfinished Gyro Gear- loose story on the \"pied piper\" theme. According to Barks, \"I shelved the Pied Piper story with Gyro because I felt I was getting intosomethingtoo involved forsuch a short story.Also I would have to draw whole swarms of kids and rats and people, and the page rates weren't worth it.\" (July 14, 1978, letter to Michael Barrier",
+          "value": "Blue-pencil drawings exist for an unfinished Gyro Gear- loose story on the \"pied piper\" theme. According to Barks, \"I shelved the Pied Piper story with Gyro because I felt I was getting intosomethingtoo involved forsuch a short story.Also I would have to draw whole swarms of kids and rats and people, and the page rates weren't worth it.\" (July 14, 1978, letter to Michael Barrier",
+          "bbox": [
+            {
+              "h": 40.17177782012195,
+              "w": 125.04441453887193,
+              "x": 12.73144578887195,
+              "y": 67.29935785060975,
+              "confidence": 0.99,
+              "end_index": 380,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 22 - September 1973 - 36 pages",
+          "value": "22 - September 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.420453506097565,
+              "w": 75.78262492854421,
+              "x": 11.328071527248474,
+              "y": 113.94185213414634,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD- CHUCKS The Phantom Joker - 15 - Donald, the city's pollution enforcer, sabotages the JuniorWoodchucks'ama- teur show, which they are holding to raise money for \"Secret Project X.\" (Dec. 9, 1972)",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD- CHUCKS The Phantom Joker - 15 - Donald, the city's pollution enforcer, sabotages the JuniorWoodchucks'ama- teur show, which they are holding to raise money for \"Secret Project X.\" (Dec. 9, 1972)",
+          "bbox": [
+            {
+              "h": 28.910384908536578,
+              "w": 125.0265073599466,
+              "x": 11.551751024199694,
+              "y": 119.87543826219513,
+              "confidence": 0.99,
+              "end_index": 232,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Barks's script was sixteen pages as submitted. It was shortened by combining and eliminating a page's worth of panels, as follows:",
+          "value": "Changes: Barks's script was sixteen pages as submitted. It was shortened by combining and eliminating a page's worth of panels, as follows:",
+          "bbox": [
+            {
+              "h": 17.255933689024378,
+              "w": 125.14152081745425,
+              "x": 11.61677186547256,
+              "y": 149.7562042682927,
+              "confidence": 0.98,
+              "end_index": 138,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The fourth panel on the second page of the published version contains the dialogue Barks wrote fortwo panels; the fifth panel was to have been a full page wide.",
+          "value": "The fourth panel on the second page of the published version contains the dialogue Barks wrote fortwo panels; the fifth panel was to have been a full page wide.",
+          "bbox": [
+            {
+              "h": 17.08886432926829,
+              "w": 124.9468505859375,
+              "x": 11.567440572599084,
+              "y": 167.6126524390244,
+              "confidence": 0.99,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The dialogue in the last two panels on the fifth page of Barks's script was given to Donald in what is now the second panel of the fifth page in the published version, except that the lines, \"I don't like it! There aren't enough people now working to save dear old Duckburg!\" have been compressed into \"I mustn't let this happen to them.",
+          "value": "The dialogue in the last two panels on the fifth page of Barks's script was given to Donald in what is now the second panel of the fifth page in the published version, except that the lines, \"I don't like it! There aren't enough people now working to save dear old Duckburg!\" have been compressed into \"I mustn't let this happen to them.",
+          "bbox": [
+            {
+              "h": 34.85842225609756,
+              "w": 125.08888933879572,
+              "x": 11.757242520960366,
+              "y": 185.5793826219512,
+              "confidence": 0.99,
+              "end_index": 336,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Two panels were eliminated from the twelfth page of Barks's script; they would have come between the fifth and sixth panels on the eleventh page of the published version. They show Donald snapping the wire on which Huey is walking. A thought balloon was added to the fifth panel, so that Huey thinks, \"I'm so nervous I'm about t-to..",
+          "value": "Two panels were eliminated from the twelfth page of Barks's script; they would have come between the fifth and sixth panels on the eleventh page of the published version. They show Donald snapping the wire on which Huey is walking. A thought balloon was added to the fifth panel, so that Huey thinks, \"I'm so nervous I'm about t-to..",
+          "bbox": [
+            {
+              "h": 34.11267530487805,
+              "w": 125.0652617663872,
+              "x": 11.863435832698169,
+              "y": 221.01365853658535,
+              "confidence": 0.99,
+              "end_index": 332,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Two panels were eliminated from the fourteenth page of Barks's script; they would have come between the fourth and fifth panels on page 13 of the published version. They show the pulley pin shearing and Donald's cable car dropping. A thought balloon (\"And the pulley bin is shearing\") was added to the fourth panel.",
+          "value": "Two panels were eliminated from the fourteenth page of Barks's script; they would have come between the fourth and fifth panels on page 13 of the published version. They show the pulley pin shearing and Donald's cable car dropping. A thought balloon (\"And the pulley bin is shearing\") was added to the fourth panel.",
+          "bbox": [
+            {
+              "h": 34.408125,
+              "w": 124.99082055068598,
+              "x": 11.766494616996951,
+              "y": 256.4273094512195,
+              "confidence": 0.99,
+              "end_index": 314,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's title for this story was \"High Wire Heroes.\"",
+          "value": "Barks's title for this story was \"High Wire Heroes.\"",
+          "bbox": [
+            {
+              "h": 5.02134146341461,
+              "w": 100.11186249523627,
+              "x": 16.177149509336886,
+              "y": 291.8178887195122,
+              "confidence": 0.83,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE JUNIOR WOODCHUCKS Bubbleweight Champ- 10- A reprint of \"DONALDDUCK Bubbleweight Champ\" in Walt Disney's Comics No. 282, March 1964.",
+          "value": "HUEY, DEWEY AND LOUIE JUNIOR WOODCHUCKS Bubbleweight Champ- 10- A reprint of \"DONALDDUCK Bubbleweight Champ\" in Walt Disney's Comics No. 282, March 1964.",
+          "bbox": [
+            {
+              "h": 22.60721798780487,
+              "w": 125.61927710556401,
+              "x": 11.77950242949695,
+              "y": 297.78013719512194,
+              "confidence": 0.96,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Title changed as indicated. Splash panel deepened.",
+          "value": "Changes: Title changed as indicated. Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 5.443307926829275,
+              "w": 120.39743247427592,
+              "x": 16.42594214462652,
+              "y": 321.8015167682927,
+              "confidence": 0.97,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 23 - November 1973 - 36 pages",
+          "value": "23 - November 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.65804115853658,
+              "w": 77.42057283727134,
+              "x": 11.582241568216462,
+              "y": 332.6679192073171,
+              "confidence": 0.95,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD—",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD—",
+          "bbox": [
+            {
+              "h": 5.104115853658495,
+              "w": 119.63141637290396,
+              "x": 16.92246415301067,
+              "y": 338.6066387195122,
+              "confidence": 0.95,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "CHUCKS Hark, Hark, the Ark - 15 - script only - The Junior Woodchucks are recruited to herd wildlife from Mistyvale Forest — the site of a new airport — to their new home on Wildwood Island. (Mar. 9, 1973)",
+          "value": "CHUCKS Hark, Hark, the Ark - 15 - script only - The Junior Woodchucks are recruited to herd wildlife from Mistyvale Forest — the site of a new airport — to their new home on Wildwood Island. (Mar. 9, 1973)",
+          "bbox": [
+            {
+              "h": 22.97969988567073,
+              "w": 125.4246551067073,
+              "x": 150.11759908536584,
+              "y": 26.415814596036586,
+              "confidence": 0.98,
+              "end_index": 204,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD CHUCKS Medaling Around - 10 - A reprint of \"DONALD DUCK Medaling Around\" in Walt Disney's Comics No.261 June 1962.",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD CHUCKS Medaling Around - 10 - A reprint of \"DONALD DUCK Medaling Around\" in Walt Disney's Comics No.261 June 1962.",
+          "bbox": [
+            {
+              "h": 22.43271722560976,
+              "w": 125.72139100609756,
+              "x": 150.37365663109756,
+              "y": 50.50728086890244,
+              "confidence": 0.97,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Title changed as indicated. Splash panel deepened.",
+          "value": "Changes: Title changed as indicated. Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 5.478709984756101,
+              "w": 120.69989519817075,
+              "x": 154.60425685975608,
+              "y": 74.33830221036585,
+              "confidence": 0.94,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 25 - March 1974 - 36 pages",
+          "value": "25 - March 1974 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.661408155487811,
+              "w": 65.23748094512197,
+              "x": 150.65271150914631,
+              "y": 87.48336699695122,
+              "confidence": 0.97,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD-  CHUCKS Captains Outrageous - 15 script only - The  Woodchucks give their leader a loudly ticking watch that  leads them into great problems and then great success  among the cod fishermen of Newfoundland.(Mar.30, 1973) This script is, to date, Barks's last comic-book story.",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD-  CHUCKS Captains Outrageous - 15 script only - The  Woodchucks give their leader a loudly ticking watch that  leads them into great problems and then great success  among the cod fishermen of Newfoundland.(Mar.30, 1973) This script is, to date, Barks's last comic-book story.",
+          "bbox": [
+            {
+              "h": 35.668187881097566,
+              "w": 125.39929115853657,
+              "x": 150.74842225609757,
+              "y": 93.83710175304878,
+              "confidence": 0.97,
+              "end_index": 313,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK The Dog-sitter - 10 - Reprinted from Walt Disney's Comics No. 238, July 1960.",
+          "value": "DONALD DUCK The Dog-sitter - 10 - Reprinted from Walt Disney's Comics No. 238, July 1960.",
+          "bbox": [
+            {
+              "h": 11.154192073170751,
+              "w": 125.05815548780487,
+              "x": 150.68899961890244,
+              "y": 129.95366615853658,
+              "confidence": 0.81,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Splash panel deepened.",
+          "value": "Changes: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 16.985133384146348,
+              "w": 125.1221055640244,
+              "x": 150.58269054878045,
+              "y": 130.0418368902439,
+              "confidence": 0.79,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 26 - May 1974 - 36 pages",
+          "value": "26 - May 1974 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.45110518292684,
+              "w": 59.52416158536585,
+              "x": 150.69165777439022,
+              "y": 153.57881478658535,
+              "confidence": 0.96,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE JUNIOR WOODCHUCKS Under the Polar Ice - 10 - A reprint of \"DONALD DUCK Under the Polar Ice\" in Walt Disney's Comics No. 232, January 1960.",
+          "value": "HUEY, DEWEY AND LOUIE JUNIOR WOODCHUCKS Under the Polar Ice - 10 - A reprint of \"DONALD DUCK Under the Polar Ice\" in Walt Disney's Comics No. 232, January 1960.",
+          "bbox": [
+            {
+              "h": 22.828353658536578,
+              "w": 124.79470655487802,
+              "x": 151.1738643292683,
+              "y": 159.57402439024392,
+              "confidence": 0.98,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Title changed as indicated. Splash panel deepened.",
+          "value": "Changes: Title changed as indicated. Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 5.4291882621951295,
+              "w": 120.51682545731707,
+              "x": 155.4553982469512,
+              "y": 183.32412347560975,
+              "confidence": 0.96,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 35 - November 1975 - 36 pages",
+          "value": "35 - November 1975 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.578216463414638,
+              "w": 75.50254001524391,
+              "x": 151.15642339939023,
+              "y": 194.95920731707318,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE JUNIOR WOODCHUCKS Whale of a Good Deed - 17 - Reprinted from Huey, Dewey and Louie Junior Woodchucks No. 7, October 1970.",
+          "value": "HUEY, DEWEY AND LOUIE JUNIOR WOODCHUCKS Whale of a Good Deed - 17 - Reprinted from Huey, Dewey and Louie Junior Woodchucks No. 7, October 1970.",
+          "bbox": [
+            {
+              "h": 17.23173018292684,
+              "w": 125.25113757621948,
+              "x": 150.79470846036585,
+              "y": 200.97228658536585,
+              "confidence": 0.98,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 41 - November 1976 - 36 pages",
+          "value": "41 - November 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.620929878048782,
+              "w": 75.63911775914632,
+              "x": 151.07607850609756,
+              "y": 224.67631097560977,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD- CHUCKS Peril of the Black Forest - 14 - Reprinted from Huey, Dewey and Louie Junior Woodchucks No. 6, July 1970.",
+          "value": "HUEY, DEWEY AND LOUIE THE JUNIOR WOOD- CHUCKS Peril of the Black Forest - 14 - Reprinted from Huey, Dewey and Louie Junior Woodchucks No. 6, July 1970.",
+          "bbox": [
+            {
+              "h": 22.712583841463445,
+              "w": 125.13083460365854,
+              "x": 151.13183117378045,
+              "y": 230.5776219512195,
+              "confidence": 0.98,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "THE JUNIOR WOODCHUCKS Life Savers - 5 - Reprinted from Huey, Dewey and Louie Junior Woodchucks No. 6, July 1970.",
+          "value": "THE JUNIOR WOODCHUCKS Life Savers - 5 - Reprinted from Huey, Dewey and Louie Junior Woodchucks No. 6, July 1970.",
+          "bbox": [
+            {
+              "h": 17.296600609756116,
+              "w": 125.75735327743901,
+              "x": 151.19494092987802,
+              "y": 254.60037347560973,
+              "confidence": 0.98,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# KITE GIVEAWAYS",
+          "value": "KITE GIVEAWAYS",
+          "bbox": [
+            {
+              "h": 5.435899390243939,
+              "w": 67.22394626524388,
+              "x": 180.53173399390244,
+              "y": 283.83866615853657,
+              "confidence": 0.97,
+              "end_index": 13,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## (No number) - 1954 - 8 pages",
+          "value": "(No number) - 1954 - 8 pages",
+          "bbox": [
+            {
+              "h": 5.62394817073171,
+              "w": 71.51642149390243,
+              "x": 150.9005201981707,
+              "y": 297.17396341463416,
+              "confidence": 0.97,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Tells About Kites - 8 - art only - In a series of comic episodes, Donald teaches the nephews the rules of safe kite flying. (June 17, 1954, and July 8, 1954)",
+          "value": "DONALD DUCK Tells About Kites - 8 - art only - In a series of comic episodes, Donald teaches the nephews the rules of safe kite flying. (June 17, 1954, and July 8, 1954)",
+          "bbox": [
+            {
+              "h": 17.622942073170723,
+              "w": 124.77206935975609,
+              "x": 150.91249047256096,
+              "y": 303.05684451219514,
+              "confidence": 0.98,
+              "end_index": 168,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This booklet was published in at least two different editons, one for Pacific Gas and Electric Company and the other for the  Southern California Edison Company. In the SCE edition, the  third panel on the seventh page shows Donald telling the",
+          "value": "This booklet was published in at least two different editons, one for Pacific Gas and Electric Company and the other for the  Southern California Edison Company. In the SCE edition, the  third panel on the seventh page shows Donald telling the",
+          "bbox": [
+            {
+              "h": 23.264016768292695,
+              "w": 125.03303163109753,
+              "x": 150.93811166158537,
+              "y": 321.4704420731707,
+              "confidence": 0.99,
+              "end_index": 242,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "124 Carl Barks and the Art of the Comic Book",
+              "value": "124 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.239900914634145,
+                  "w": 77.75500095274391,
+                  "x": 37.14501333841463,
+                  "y": 355.19846798780486,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "124 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.24,
+              "w": 77.76,
+              "x": 37.15,
+              "y": 355.2,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "124"
+    }
+  ]
+}

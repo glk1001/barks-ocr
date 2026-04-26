@@ -1,0 +1,305 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# APPENDIX D",
+          "value": "APPENDIX D",
+          "bbox": [
+            {
+              "h": 28.893991520579267,
+              "w": 125.67203827648625,
+              "x": 12.314991068025913,
+              "y": 18.59341034679878,
+              "confidence": 0.67,
+              "end_index": 9,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# AN INFORMAL (AND HIGHLY SELECTIVE) LISTING OF ARTICLES ABOUT CARL BARKS",
+          "value": "AN INFORMAL (AND HIGHLY SELECTIVE) LISTING OF ARTICLES ABOUT CARL BARKS",
+          "bbox": [
+            {
+              "h": 28.893991520579267,
+              "w": 125.67203827648625,
+              "x": 12.314991068025913,
+              "y": 18.59341034679878,
+              "confidence": 0.92,
+              "end_index": 70,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "When I first began work on this book in 1967, it was my intention to list all of the fan magazine articles in which there were substantial references to Carl Barks, and tolist all of the references to Barks and his work in commercial magazines and books. At that time, even such an all- inclusive list would have encompassed only a handful of items.",
+          "value": "When I first began work on this book in 1967, it was my intention to list all of the fan magazine articles in which there were substantial references to Carl Barks, and tolist all of the references to Barks and his work in commercial magazines and books. At that time, even such an all- inclusive list would have encompassed only a handful of items.",
+          "bbox": [
+            {
+              "h": 41.26018673780488,
+              "w": 126.64733696169966,
+              "x": 12.93411406726372,
+              "y": 55.11644817073171,
+              "confidence": 0.99,
+              "end_index": 348,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In the past dozen vears, and particularly since l970 interest in Barks' work has grown tremendously, and the number of articles about him has multiplied to a total many times that in 1967. Moreover, the line between \"fan\" and \"commercial\" publications has blurred, to the point that some magazines that are \"fanzines\" in all but name are nationally distributed, and Robert Overstreet's Comic Book Price Guide is found in hundreds of bookstores. It would now be difficult to list everything that has been written about Barks, and difficult to categorize the publications in which such writings have appeared.",
+          "value": "In the past dozen vears, and particularly since l970 interest in Barks' work has grown tremendously, and the number of articles about him has multiplied to a total many times that in 1967. Moreover, the line between \"fan\" and \"commercial\" publications has blurred, to the point that some magazines that are \"fanzines\" in all but name are nationally distributed, and Robert Overstreet's Comic Book Price Guide is found in hundreds of bookstores. It would now be difficult to list everything that has been written about Barks, and difficult to categorize the publications in which such writings have appeared.",
+          "bbox": [
+            {
+              "h": 70.99221036585367,
+              "w": 126.87570038586125,
+              "x": 13.244052853467986,
+              "y": 96.52056402439024,
+              "confidence": 0.99,
+              "end_index": 606,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Most of the material about Barks published since 1967 is of little value (as, for that matter, is most of the material published before 1967). Listing all of it would serve no worthwhile purpose. It has seemed the better' course to describe the Barks articles that have something to recommend them beyond their association with Barks. I will discuss them in roughly the order in which they appeared.",
+          "value": "Most of the material about Barks published since 1967 is of little value (as, for that matter, is most of the material published before 1967). Listing all of it would serve no worthwhile purpose. It has seemed the better' course to describe the Barks articles that have something to recommend them beyond their association with Barks. I will discuss them in roughly the order in which they appeared.",
+          "bbox": [
+            {
+              "h": 47.16752286585368,
+              "w": 126.90856719226372,
+              "x": 13.512106397675304,
+              "y": 167.59429115853658,
+              "confidence": 0.99,
+              "end_index": 398,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "As best I can tell, the first reference to Barks's comic- book work in print came in an article titled \"The Comic World,\" by Charles Beaumont, in the May 1955 issue of a West Coast magazine called Fortnight. The article describes Western Publishing's West Coast comics oper- ations, and the restrictions under which Western's artist and writers had to operate. Here is what Beaumont said about Barks:",
+          "value": "As best I can tell, the first reference to Barks's comic- book work in print came in an article titled \"The Comic World,\" by Charles Beaumont, in the May 1955 issue of a West Coast magazine called Fortnight. The article describes Western Publishing's West Coast comics oper- ations, and the restrictions under which Western's artist and writers had to operate. Here is what Beaumont said about Barks:",
+          "bbox": [
+            {
+              "h": 47.06231707317075,
+              "w": 126.94329685118139,
+              "x": 13.628428568025912,
+              "y": 220.42314786585365,
+              "confidence": 0.99,
+              "end_index": 399,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Only the Dalai Lama of scripsters, Carl Barks, is permitted real freedom. Gray-haired and sixtyish, Barks has a freshness and originality which both inspire and depress colleagues. He invented that wonderful miser, Uncle Scrooge (only Dell character rivaling Pogo in popularity among the 'intelligentsia'), the gently mad inventing genius, Gyro Gearloose, and those unvillainous villains, the Beagle Boys. Every month Barks's Donald Duck yarn is featured in *Walt Disney's Comics*, the best-loved story in the comic world. The polished drawing and writing (Barks does both) bring a flood of fan mail, including many protests whenever a non-Barks Donald appears.\"",
+          "value": "\"Only the Dalai Lama of scripsters, Carl Barks, is permitted real freedom. Gray-haired and sixtyish, Barks has a freshness and originality which both inspire and depress colleagues. He invented that wonderful miser, Uncle Scrooge (only Dell character rivaling Pogo in popularity among the 'intelligentsia'), the gently mad inventing genius, Gyro Gearloose, and those unvillainous villains, the Beagle Boys. Every month Barks's Donald Duck yarn is featured in Walt Disney's Comics, the best-loved story in the comic world. The polished drawing and writing (Barks does both) bring a flood of fan mail, including many protests whenever a non-Barks Donald appears.\"",
+          "bbox": [
+            {
+              "h": 76.95507621951218,
+              "w": 127.07777379477895,
+              "x": 13.887907417111279,
+              "y": 267.61326219512193,
+              "confidence": 0.99,
+              "end_index": 662,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In retrospect, it seems remarkable that this article did",
+          "value": "In retrospect, it seems remarkable that this article did",
+          "bbox": [
+            {
+              "h": 5.971714939024404,
+              "w": 121.02444740853657,
+              "x": 18.98478658536585,
+              "y": 344.2516920731707,
+              "confidence": 0.96,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "not crack the wall of anonymity around Barks and bring him into touch with those people who were writing fan letters about his stories. But, for whatever reason — and I can think of several — Beaumont's praise had no effects. As mentioned elsewhere in this book, it was another five years before Barks began corresponding with any of his readers.",
+          "value": "not crack the wall of anonymity around Barks and bring him into touch with those people who were writing fan letters about his stories. But, for whatever reason — and I can think of several — Beaumont's praise had no effects. As mentioned elsewhere in this book, it was another five years before Barks began corresponding with any of his readers.",
+          "bbox": [
+            {
+              "h": 41.43289824695122,
+              "w": 125.65404535060974,
+              "x": 150.43779535060975,
+              "y": 19.597568597560976,
+              "confidence": 0.99,
+              "end_index": 345,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "I first learned Barks's name upon reading *Comic Art* No. 5 (1964), a mimeographed fan magazine, in the spring of 1965. Don and Maggie Thompson were then alone, or almost so, among the publishers of comics fan magazines in that theirs was not dominated by the super-heroes. They were Barks fans, and mentioned in an editorial in No. 5 that \"Carl Barks, creator of Uncle Scrooge, Gladstone Gander and Gyro Gearloose, as well as the Junior Woodchucks of the World, has personally appointed us both Honorary Grand Exalted Hightails in that eminent organization. A very extensive article-interview-bibliography treatment of Mr. Barks will be featured in (hopefully) the next issue of *Comic Art*. It was too much to fit into this one.\"",
+          "value": "I first learned Barks's name upon reading Comic Art No. 5 (1964), a mimeographed fan magazine, in the spring of 1965. Don and Maggie Thompson were then alone, or almost so, among the publishers of comics fan magazines in that theirs was not dominated by the super-heroes. They were Barks fans, and mentioned in an editorial in No. 5 that \"Carl Barks, creator of Uncle Scrooge, Gladstone Gander and Gyro Gearloose, as well as the Junior Woodchucks of the World, has personally appointed us both Honorary Grand Exalted Hightails in that eminent organization. A very extensive article-interview-bibliography treatment of Mr. Barks will be featured in (hopefully) the next issue of Comic Art. It was too much to fit into this one.\"",
+          "bbox": [
+            {
+              "h": 82.67955411585368,
+              "w": 125.55025724085365,
+              "x": 150.54149771341463,
+              "y": 61.00522865853659,
+              "confidence": 0.99,
+              "end_index": 730,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "As it happened, that \"article-interview-bibliography treatment\" did not appear until 1968, in *Comic Art* No. 7, and I wrote the article portion myself. The article was accompanied by an interview (recorded by Malcolm Willits in 1962, and supplemented by correspondence with the Thompsons), a brief autobiography, a bare-bones bibliography, and excerpts from a number of Barks's letters to the Thompsons.",
+          "value": "As it happened, that \"article-interview-bibliography treatment\" did not appear until 1968, in Comic Art No. 7, and I wrote the article portion myself. The article was accompanied by an interview (recorded by Malcolm Willits in 1962, and supplemented by correspondence with the Thompsons), a brief autobiography, a bare-bones bibliography, and excerpts from a number of Barks's letters to the Thompsons.",
+          "bbox": [
+            {
+              "h": 47.22267530487805,
+              "w": 126.48128048780487,
+              "x": 150.82295350609755,
+              "y": 143.6030030487805,
+              "confidence": 0.99,
+              "end_index": 403,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "My article had first appeared, in different form, in the sixth issue (June 1967) of my own magazine, *Funnyworld*, which at that time was distributed through an amateur press association, CAPA-alpha (which is still in existence). In both *Funnyworld* and *Comic Art*, the article was titled \"The Lord of Quackly Hall.\" It is essentially this article — greatly expanded and heavily revised — that is published in this book.",
+          "value": "My article had first appeared, in different form, in the sixth issue (June 1967) of my own magazine, Funnyworld, which at that time was distributed through an amateur press association, CAPA-alpha (which is still in existence). In both Funnyworld and Comic Art, the article was titled \"The Lord of Quackly Hall.\" It is essentially this article — greatly expanded and heavily revised — that is published in this book.",
+          "bbox": [
+            {
+              "h": 47.416166158536576,
+              "w": 125.50777820121951,
+              "x": 151.13737042682925,
+              "y": 190.5025838414634,
+              "confidence": 0.99,
+              "end_index": 421,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "(The revised version has a few paragraphs from my second major article about Barks, \"The Duck Man,\" which was published as part of *The Comic-Book Book* (Don Thompson and Dick Lupoff, editors; New Rochelle, N.Y.: Arlington House, 1974). \"The Duck Man\" is in many respects a condensed and \"popular\" version of \"The Lord of Quackly Hall.\")",
+          "value": "(The revised version has a few paragraphs from my second major article about Barks, \"The Duck Man,\" which was published as part of The Comic-Book Book (Don Thompson and Dick Lupoff, editors; New Rochelle, N.Y.: Arlington House, 1974). \"The Duck Man\" is in many respects a condensed and \"popular\" version of \"The Lord of Quackly Hall.\")",
+          "bbox": [
+            {
+              "h": 41.43310975609754,
+              "w": 125.48299733231707,
+              "x": 151.24450266768292,
+              "y": 237.60455030487805,
+              "confidence": 0.99,
+              "end_index": 336,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Barks bibliography in this book was published in *Funnyworld* No. 7 (September 1967) through No. 16 (Winter 1974-75). As with the article, the final version of the bibliography differs considerably from the original. No. 16 was a special Barks issue, including, in addition to the final installment of the bibliography, an article by Kim Weston on Barks's unpublished comics work (the article is excerpted throughout the bibliography in this book) and eight pages of rare Barks artwork (some of it reproduced in this book).",
+          "value": "The Barks bibliography in this book was published in Funnyworld No. 7 (September 1967) through No. 16 (Winter 1974-75). As with the article, the final version of the bibliography differs considerably from the original. No. 16 was a special Barks issue, including, in addition to the final installment of the bibliography, an article by Kim Weston on Barks's unpublished comics work (the article is excerpted throughout the bibliography in this book) and eight pages of rare Barks artwork (some of it reproduced in this book).",
+          "bbox": [
+            {
+              "h": 59.27179115853658,
+              "w": 125.84100800304876,
+              "x": 151.13858803353656,
+              "y": 278.85276676829267,
+              "confidence": 0.99,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks was mentioned in one paragraph in *The Assault on Childhood* by Ron Goulart (Los Angeles: Sherbourne",
+          "value": "Barks was mentioned in one paragraph in The Assault on Childhood by Ron Goulart (Los Angeles: Sherbourne",
+          "bbox": [
+            {
+              "h": 12.024397865853626,
+              "w": 125.15796493902434,
+              "x": 151.31795350609755,
+              "y": 337.9853734756098,
+              "confidence": 0.97,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n221",
+              "value": "Carl Barks and the Art of the Comic Book\n221",
+              "bbox": [
+                {
+                  "h": 5.718338414634145,
+                  "w": 77.77450838414634,
+                  "x": 174.7926219512195,
+                  "y": 365.2289405487805,
+                  "confidence": 0.93,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n221",
+          "bbox": [
+            {
+              "h": 5.72,
+              "w": 77.77,
+              "x": 174.79,
+              "y": 365.23,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "221"
+    }
+  ]
+}

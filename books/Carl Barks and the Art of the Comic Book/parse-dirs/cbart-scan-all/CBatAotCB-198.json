@@ -1,0 +1,274 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# UNPUBLISHED AND UNIDENTIFIED MATERIAL",
+          "value": "UNPUBLISHED AND UNIDENTIFIED MATERIAL",
+          "bbox": [
+            {
+              "h": 24.354292111280486,
+              "w": 183.77147246570118,
+              "x": 53.6107645769817,
+              "y": 32.07221512957317,
+              "confidence": 0.93,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "This is a listing of Barks stories, covers, and gags that were never published at all in their intended form, at least in the United States. Portions of a number of Barks's stories were deleted before publication, by Barks and his editors, and those deletions are noted with the entries for the appropriate stories. (For the most important examples of such deletions, see entries under *Donald Duck* Four Color No. 108, 1946; No. 26, Nov.-Dec. 1952; No. 45, Jan.-Feb. 1956; *Gyro Gearloose* Four Color No. 1184, 1961; *Uncle Scrooge* Four Color No. 456, 1953; Four Color No. 495, 1953; No. 8, Dec.-Feb. 1955; No. 12, Dec.-Feb. 1956; No. 13, Mar.-May 1956; No. 22, June-Aug. 1958; No. 32, Dec.-Feb. 1961; No. 34, June-Aug. 1961; No. 50, July 1964; No. 51, August 1964; *Walt Disney's Comics* No. 157, October 1953; No. 175, April 1955; No. 219, December 1958; No. 247, April 1961; No. 249, June 1961.)",
+          "value": "This is a listing of Barks stories, covers, and gags that were never published at all in their intended form, at least in the United States. Portions of a number of Barks's stories were deleted before publication, by Barks and his editors, and those deletions are noted with the entries for the appropriate stories. (For the most important examples of such deletions, see entries under Donald Duck Four Color No. 108, 1946; No. 26, Nov.-Dec. 1952; No. 45, Jan.-Feb. 1956; Gyro Gearloose Four Color No. 1184, 1961; Uncle Scrooge Four Color No. 456, 1953; Four Color No. 495, 1953; No. 8, Dec.-Feb. 1955; No. 12, Dec.-Feb. 1956; No. 13, Mar.-May 1956; No. 22, June-Aug. 1958; No. 32, Dec.-Feb. 1961; No. 34, June-Aug. 1961; No. 50, July 1964; No. 51, August 1964; Walt Disney's Comics No. 157, October 1953; No. 175, April 1955; No. 219, December 1958; No. 247, April 1961; No. 249, June 1961.)",
+          "bbox": [
+            {
+              "h": 88.11592225609756,
+              "w": 126.98999892816309,
+              "x": 11.940838533727133,
+              "y": 118.47372713414634,
+              "confidence": 0.99,
+              "end_index": 899,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This listing also includes Barks's work for Western that cannot be identified because of its nature, such as gags that are not described in Barks's records, and that were illustrated by other artists.",
+          "value": "This listing also includes Barks's work for Western that cannot be identified because of its nature, such as gags that are not described in Barks's records, and that were illustrated by other artists.",
+          "bbox": [
+            {
+              "h": 23.173788109756114,
+              "w": 126.64659739424542,
+              "x": 12.254751691120426,
+              "y": 207.12354420731705,
+              "confidence": 0.98,
+              "end_index": 199,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "When a piece of unpublished work is described, this means that I have seen it, either in the original or (more often) in a copy. Likewise, Kim Weston's descriptions of unpublished work, in this section and elsewhere in this book, are based on actual inspection of the work. (I have seen all of the unpublished material that Weston describes.)",
+          "value": "When a piece of unpublished work is described, this means that I have seen it, either in the original or (more often) in a copy. Likewise, Kim Weston's descriptions of unpublished work, in this section and elsewhere in this book, are based on actual inspection of the work. (I have seen all of the unpublished material that Weston describes.)",
+          "bbox": [
+            {
+              "h": 35.18629573170733,
+              "w": 126.67495819836125,
+              "x": 12.286019316882621,
+              "y": 230.79930640243904,
+              "confidence": 0.99,
+              "end_index": 341,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The entries are listed chronologically, according to the dates in Barks's list of his work for Western Publishing. The descriptive titles in quotation marks (the ones for January 24 and February 7, 1952, for example) are taken directly from Barks's list.",
+          "value": "The entries are listed chronologically, according to the dates in Barks's list of his work for Western Publishing. The descriptive titles in quotation marks (the ones for January 24 and February 7, 1952, for example) are taken directly from Barks's list.",
+          "bbox": [
+            {
+              "h": 28.777202743902436,
+              "w": 126.50303877667683,
+              "x": 12.326908822408535,
+              "y": 266.28560213414636,
+              "confidence": 0.98,
+              "end_index": 253,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### *August 31, 1945* - \"DONALD DUCK\" for *Walt Disney's Comics* No. 64, January 1946.",
+          "value": "August 31, 1945 - \"DONALD DUCK\" for Walt Disney's Comics No. 64, January 1946.",
+          "bbox": [
+            {
+              "h": 11.838955792682954,
+              "w": 126.2138464653201,
+              "x": 12.535293206935973,
+              "y": 301.5122332317073,
+              "confidence": 0.85,
+              "end_index": 77,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "This ten-page story was rejected by Western. Most of the artwork remained in Barks's hands for years, and nine and a half pages of it are now in a private collection. (The first half page was evidently given away years ago.)",
+          "value": "This ten-page story was rejected by Western. Most of the artwork remained in Barks's hands for years, and nine and a half pages of it are now in a private collection. (The first half page was evidently given away years ago.)",
+          "bbox": [
+            {
+              "h": 23.64269817073171,
+              "w": 126.32820717416158,
+              "x": 12.508788824314022,
+              "y": 313.58224847560973,
+              "confidence": 0.98,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: The story opens with Donald gushing over with an anachronistic Christmas spirit and he decides to \"sally forth and",
+          "value": "Weston: The story opens with Donald gushing over with an anachronistic Christmas spirit and he decides to \"sally forth and",
+          "bbox": [
+            {
+              "h": 11.585327743902434,
+              "w": 126.06970798399388,
+              "x": 12.577272770579267,
+              "y": 337.4382393292683,
+              "confidence": 0.97,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "go out and the neighbors are not in the least receptive and Donald gets pretty raw treatment from them. The carol singing begins on the bottom half of page 2. From here through the top of page 9 was redrawn, slightly rewritten and condensed and published as pages 3 (bottom) to 9 (bottom) of \"The Terrible Tourist,\" *Walt Disney's* No. 248, May 1961. Some panels are exactly the same in the two stories. The changes include caroling to serenading the senoritas, winter to summer, Duckburg to Mexico, Neighbor Jones to the Duckburgian Consul, and other more minor changes, but the gags and story lines are essentially the same. Neighbor Jones finally gives up and decides to \"join (Donald) in a beautiful carol!\" Jones gives Donald a gargle to remove the alum (rather than glue as in the later story) so he can sing again. The kids warn him not to trust Jones, but he pays no heed. Jones tells Donald, \"I've got a sick friend up in the canyon that needs cheering up!\" So they go off, but the friend's house is a half mile away across an impassable gully. Donald asks how they'll get there. Jones says, \"WE DON'T! You sing from HERE!\" and he has a little gadget that'll help Donald sing real loud, an electrified baton (i.e., a cattle prod). \"AND SO—FAR INTO THE NIGHT!\" Donald sings while Jones pokes him with the prod, saying \"Louder! Louder! I forgot to tell you that besides being sick, my friend is STONE DEAF! LOUDER!\"",
+          "value": "go out and the neighbors are not in the least receptive and Donald gets pretty raw treatment from them. The carol singing begins on the bottom half of page 2. From here through the top of page 9 was redrawn, slightly rewritten and condensed and published as pages 3 (bottom) to 9 (bottom) of \"The Terrible Tourist,\" Walt Disney's No. 248, May 1961. Some panels are exactly the same in the two stories. The changes include caroling to serenading the senoritas, winter to summer, Duckburg to Mexico, Neighbor Jones to the Duckburgian Consul, and other more minor changes, but the gags and story lines are essentially the same. Neighbor Jones finally gives up and decides to \"join (Donald) in a beautiful carol!\" Jones gives Donald a gargle to remove the alum (rather than glue as in the later story) so he can sing again. The kids warn him not to trust Jones, but he pays no heed. Jones tells Donald, \"I've got a sick friend up in the canyon that needs cheering up!\" So they go off, but the friend's house is a half mile away across an impassable gully. Donald asks how they'll get there. Jones says, \"WE DON'T! You sing from HERE!\" and he has a little gadget that'll help Donald sing real loud, an electrified baton (i.e., a cattle prod). \"AND SO—FAR INTO THE NIGHT!\" Donald sings while Jones pokes him with the prod, saying \"Louder! Louder! I forgot to tell you that besides being sick, my friend is STONE DEAF! LOUDER!\"",
+          "bbox": [
+            {
+              "h": 135.9045388719512,
+              "w": 126.38078506097557,
+              "x": 150.87958079268293,
+              "y": 118.91573551829268,
+              "confidence": 0.99,
+              "end_index": 1421,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### *January 20, 1949* - Front cover for *Boys' and Girls' March of Comics*.",
+          "value": "January 20, 1949 - Front cover for Boys' and Girls' March of Comics.",
+          "bbox": [
+            {
+              "h": 11.087263719512174,
+              "w": 125.27394626524391,
+              "x": 150.53631859756095,
+              "y": 261.0547637195122,
+              "confidence": 0.94,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### *June 16, 1949* - Front cover for *Boys' and Girls' March of Comics*, art only.",
+          "value": "June 16, 1949 - Front cover for Boys' and Girls' March of Comics, art only.",
+          "bbox": [
+            {
+              "h": 12.081059451219534,
+              "w": 126.39323551829267,
+              "x": 151.05013147865853,
+              "y": 278.2695731707317,
+              "confidence": 0.96,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "### *June 16, 1949* - Front cover for *Walt Disney's Comics* No. 110, November 1949, art only.",
+          "value": "June 16, 1949 - Front cover for Walt Disney's Comics No. 110, November 1949, art only.",
+          "bbox": [
+            {
+              "h": 11.908262195121916,
+              "w": 125.70449885670727,
+              "x": 151.68424733231706,
+              "y": 295.90262195121954,
+              "confidence": 0.9,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "It is apparently this cover — greatly reduced in size — that is visible in an advertisement for *Walt Disney's Comics* that was probably distributed in the fall of 1949, soliciting Christmas gift subscriptions. In the advertisement, one of the nephews is holding a copy of *Walt Disney's Comics* up to Donald, who — as a school teacher — is inspecting the comic book. (The same drawing — but with the cover of the February 1950 issue",
+          "value": "It is apparently this cover — greatly reduced in size — that is visible in an advertisement for Walt Disney's Comics that was probably distributed in the fall of 1949, soliciting Christmas gift subscriptions. In the advertisement, one of the nephews is holding a copy of Walt Disney's Comics up to Donald, who — as a school teacher — is inspecting the comic book. (The same drawing — but with the cover of the February 1950 issue",
+          "bbox": [
+            {
+              "h": 41.240625,
+              "w": 126.02260289634144,
+              "x": 151.54833841463415,
+              "y": 308.4175838414634,
+              "confidence": 0.99,
+              "end_index": 432,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "198 *Carl Barks and the Art of the Comic Book*",
+              "value": "198 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.90724085365855,
+                  "w": 77.74636623475608,
+                  "x": 36.693161204268286,
+                  "y": 363.4516006097561,
+                  "confidence": 0.94,
+                  "end_index": 45,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "198 *Carl Barks and the Art of the Comic Book*",
+          "bbox": [
+            {
+              "h": 4.91,
+              "w": 77.75,
+              "x": 36.69,
+              "y": 363.45,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "198"
+    }
+  ]
+}

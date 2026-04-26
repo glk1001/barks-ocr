@@ -1,0 +1,66 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A cartoon illustration by C. Barks titled \"MOVE OVER!\" showing a stork carrying a baby towards a small house where a wolf is sitting on the doorstep. The top of the page features the stylized logo \"CO-CO\" and a price of 10¢.",
+          "md": "![A cartoon illustration by C. Barks titled \"MOVE OVER!\" showing a stork carrying a baby towards a small house where a wolf is sitting on the doorstep. The top of the page features the stylized logo \"CO-CO\" and a price of 10¢.](CBatAotCB-015_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-015_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 324.12184641768295,
+              "w": 252.49363876714935,
+              "x": 17.21518173589939,
+              "y": 18.287612423780487,
+              "confidence": 0.93,
+              "end_index": 249,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n15",
+              "value": "Carl Barks and the Art of the Comic Book\n15",
+              "bbox": [
+                {
+                  "h": 5.14454268292684,
+                  "w": 80.23578887195119,
+                  "x": 173.88022294207315,
+                  "y": 364.38948932926826,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n15",
+          "bbox": [
+            {
+              "h": 5.14,
+              "w": 80.24,
+              "x": 173.88,
+              "y": 364.39,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "15"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A charcoal or pencil sketch of a coiled rattlesnake wearing glasses. The snake has a human-like nose and a smiling expression. Handwritten text above the snake reads: \"NICK YOU'D BETTER GO OVER IT\"",
+          "md": "![A charcoal or pencil sketch of a coiled rattlesnake wearing glasses. The snake has a human-like nose and a smiling expression. Handwritten text above the snake reads: \"NICK YOU'D BETTER GO OVER IT\"](CBatAotCB-021_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-021_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 319.3700161966463,
+              "w": 258.5863455125762,
+              "x": 14.034304258765243,
+              "y": 25.187255144817073,
+              "confidence": 0.99,
+              "end_index": 222,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n21",
+              "value": "Carl Barks and the Art of the Comic Book\n21",
+              "bbox": [
+                {
+                  "h": 5.315327743902435,
+                  "w": 80.27274580792681,
+                  "x": 172.0796570121951,
+                  "y": 367.64435213414635,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n21",
+          "bbox": [
+            {
+              "h": 5.32,
+              "w": 80.27,
+              "x": 172.08,
+              "y": 367.64,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "21"
+    }
+  ]
+}

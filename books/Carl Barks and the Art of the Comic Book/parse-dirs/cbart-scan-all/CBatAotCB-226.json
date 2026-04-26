@@ -1,0 +1,305 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "level": 1,
+              "md": "# ADDENDA",
+              "value": "ADDENDA",
+              "bbox": [
+                {
+                  "h": 5.0,
+                  "w": 38.0,
+                  "x": 54.0,
+                  "y": 17.0,
+                  "confidence": 0.94,
+                  "end_index": 6,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "heading"
+            }
+          ],
+          "md": "# ADDENDA",
+          "bbox": [
+            {
+              "h": 5.0,
+              "w": 38.0,
+              "x": 54.0,
+              "y": 17.0,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header"
+        },
+        {
+          "md": "Most of this book was written in 1978, with a few bits and pieces added in 1979 and 1981. There was some information that could not, for a number of reasons, be incorporated in the body of the bibliography, and so I am including it here.",
+          "value": "Most of this book was written in 1978, with a few bits and pieces added in 1979 and 1981. There was some information that could not, for a number of reasons, be incorporated in the body of the bibliography, and so I am including it here.",
+          "bbox": [
+            {
+              "h": 43.35719131097561,
+              "w": 125.8723388671875,
+              "x": 11.96309844226372,
+              "y": 32.253212652439025,
+              "confidence": 0.99,
+              "end_index": 236,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Cheerios Premium* - The entry for these comic books should have noted that they were distributed through the mail; they were not included in the boxes of cereal.",
+          "value": "Cheerios Premium - The entry for these comic books should have noted that they were distributed through the mail; they were not included in the boxes of cereal.",
+          "bbox": [
+            {
+              "h": 29.20792111280487,
+              "w": 126.08857660060977,
+              "x": 11.830241044207316,
+              "y": 83.97863757621951,
+              "confidence": 0.98,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Donald Duck* - I say elsewhere that all of the unpublished artwork described in the bibliography has been seen by Kim Weston or myself; but that is not true of one of the pages of unpublished artwork for \"Trick or Treat\" (No. 26, Nov.-Dec. 1952); that page was described to Kim Weston by its owner. The page in question is the one that Weston refers to as the seventh page of the sequence with \"Smorgie.\"",
+          "value": "Donald Duck - I say elsewhere that all of the unpublished artwork described in the bibliography has been seen by Kim Weston or myself; but that is not true of one of the pages of unpublished artwork for \"Trick or Treat\" (No. 26, Nov.-Dec. 1952); that page was described to Kim Weston by its owner. The page in question is the one that Weston refers to as the seventh page of the sequence with \"Smorgie.\"",
+          "bbox": [
+            {
+              "h": 74.39583841463414,
+              "w": 126.23045350609756,
+              "x": 11.85640243902439,
+              "y": 113.63690167682927,
+              "confidence": 0.99,
+              "end_index": 404,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Kite Giveaways* - A third edition of \"DONALD DUCK Tells About Kites\" has recently been uncovered; it bears the name of Florida Power & Light Co., and is virtually identical to the SCE edition.",
+          "value": "Kite Giveaways - A third edition of \"DONALD DUCK Tells About Kites\" has recently been uncovered; it bears the name of Florida Power & Light Co., and is virtually identical to the SCE edition.",
+          "bbox": [
+            {
+              "h": 36.3755945121951,
+              "w": 126.19816120426829,
+              "x": 11.79106326219512,
+              "y": 187.83054878048782,
+              "confidence": 0.98,
+              "end_index": 192,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Pluto Saves the Ship* - The entry for this black-and-white comic book (*Large Feature Comic* No. 7, published by Dell in 1942) in *The Comic Book Price Guide* (No. 11, 1981), says that it was \"written by Carl Barks, Jack Hannah, & Nick George.\" In a May 17, 1981, letter to me, Barks explained the genesis of this story:",
+          "value": "Pluto Saves the Ship - The entry for this black-and-white comic book (Large Feature Comic No. 7, published by Dell in 1942) in The Comic Book Price Guide (No. 11, 1981), says that it was \"written by Carl Barks, Jack Hannah, & Nick George.\" In a May 17, 1981, letter to me, Barks explained the genesis of this story:",
+          "bbox": [
+            {
+              "h": 58.851653963414634,
+              "w": 125.92726622046493,
+              "x": 11.98288240758384,
+              "y": 224.89760670731707,
+              "confidence": 0.99,
+              "end_index": 320,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Pluto Saves the Ship was written by Jack Hannah, Nick George, and I in 1942 in our evening hours. It was not an adaptation of a cartoon story. Eleanor Packer of Whitman Pub. may have dreamed up the basic plot. It was only a one-shot special designed to take advantage of the wartime jitters. Anyway, we three did the final draft in rough sketch form in my den room in North Hollywood. The",
+          "value": "\"Pluto Saves the Ship was written by Jack Hannah, Nick George, and I in 1942 in our evening hours. It was not an adaptation of a cartoon story. Eleanor Packer of Whitman Pub. may have dreamed up the basic plot. It was only a one-shot special designed to take advantage of the wartime jitters. Anyway, we three did the final draft in rough sketch form in my den room in North Hollywood. The",
+          "bbox": [
+            {
+              "h": 67.05587652439026,
+              "w": 126.06969405011431,
+              "x": 12.002825004763718,
+              "y": 284.22322408536587,
+              "confidence": 0.99,
+              "end_index": 388,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "post-Pearl Harbor blackouts were in effect, and we had all window blinds closed and taped shut. It was hot and stuffy, and we consumed many beers. The story shows the effects. One of Disney's layout men with a flair for drawing panel after panel of shipyard scaffolding did the artwork. I can't recall his name.",
+          "value": "post-Pearl Harbor blackouts were in effect, and we had all window blinds closed and taped shut. It was hot and stuffy, and we consumed many beers. The story shows the effects. One of Disney's layout men with a flair for drawing panel after panel of shipyard scaffolding did the artwork. I can't recall his name.",
+          "bbox": [
+            {
+              "h": 51.57076743521341,
+              "w": 125.68273628048776,
+              "x": 150.62467225609757,
+              "y": 17.495252000762196,
+              "confidence": 0.99,
+              "end_index": 310,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Because of the fact that we were only writing action gags to flesh out someone else's story line, none of us felt we deserved any claim to fame. I certainly forgot the whole business very quickly. As for payment, I doubt that we received more than a dollar a page.\"",
+          "value": "\"Because of the fact that we were only writing action gags to flesh out someone else's story line, none of us felt we deserved any claim to fame. I certainly forgot the whole business very quickly. As for payment, I doubt that we received more than a dollar a page.\"",
+          "bbox": [
+            {
+              "h": 44.84491234756097,
+              "w": 125.58904916158534,
+              "x": 150.83583269817072,
+              "y": 69.46118140243902,
+              "confidence": 0.98,
+              "end_index": 265,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Uncle Scrooge* - \"Back to the Klondike\" (*Four Color* No. 456, 1953), with all of the extant unpublished material included, was published in three issues of the Finnish comic book *Aku Ankka* in January 1981, through the efforts of Markku Kivekäs. The story was to be published complete in English for the first time late in 1981, in a deluxe volume of Barks stories from the California publishing house of Celestial Arts. That book was also to include previously unpublished panels from \"Land Beneath the Ground!\" in *Uncle Scrooge* No. 13, Mar.-May 1956.",
+          "value": "Uncle Scrooge - \"Back to the Klondike\" (Four Color No. 456, 1953), with all of the extant unpublished material included, was published in three issues of the Finnish comic book Aku Ankka in January 1981, through the efforts of Markku Kivekäs. The story was to be published complete in English for the first time late in 1981, in a deluxe volume of Barks stories from the California publishing house of Celestial Arts. That book was also to include previously unpublished panels from \"Land Beneath the Ground!\" in Uncle Scrooge No. 13, Mar.-May 1956.",
+          "bbox": [
+            {
+              "h": 95.96965701219513,
+              "w": 125.70271532012194,
+              "x": 151.01751333841463,
+              "y": 114.18644817073171,
+              "confidence": 0.99,
+              "end_index": 556,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Walt Disney's Comics and Stories* - In the aforementioned letter of May 17, 1981, Barks provided bits of information about two of his stories.",
+          "value": "Walt Disney's Comics and Stories - In the aforementioned letter of May 17, 1981, Barks provided bits of information about two of his stories.",
+          "bbox": [
+            {
+              "h": 28.527736280487797,
+              "w": 125.55684260670733,
+              "x": 151.39565739329265,
+              "y": 210.37211890243904,
+              "confidence": 0.98,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "On No. 75, December 1946: \"As for the can of dog food with Barks on it ..., I probably put the name on it myself just to see if the editors would white it out.\"",
+          "value": "On No. 75, December 1946: \"As for the can of dog food with Barks on it ..., I probably put the name on it myself just to see if the editors would white it out.\"",
+          "bbox": [
+            {
+              "h": 29.194984756097536,
+              "w": 125.77052400914631,
+              "x": 151.42849847560973,
+              "y": 239.69659298780488,
+              "confidence": 0.98,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "On No. 153, June 1953: This was the first story on which Barks's wife Garé worked; \"she inked the scales of the fish.\"",
+          "value": "On No. 153, June 1953: This was the first story on which Barks's wife Garé worked; \"she inked the scales of the fish.\"",
+          "bbox": [
+            {
+              "h": 21.19095274390249,
+              "w": 125.75004763719512,
+              "x": 151.535390625,
+              "y": 269.6358841463414,
+              "confidence": 0.98,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Gold Key Line of comic books expired in 1980, and with its passing, Barks's work was no longer available on newsstands, for the first time in almost forty years. Western now publishes its comic books under the Whitman label, distributing them primarily in plastic bags—several comics to a bag—",
+          "value": "The Gold Key Line of comic books expired in 1980, and with its passing, Barks's work was no longer available on newsstands, for the first time in almost forty years. Western now publishes its comic books under the Whitman label, distributing them primarily in plastic bags—several comics to a bag—",
+          "bbox": [
+            {
+              "h": 51.96539634146342,
+              "w": 125.73745998475609,
+              "x": 151.70357469512194,
+              "y": 299.3990396341464,
+              "confidence": 0.99,
+              "end_index": 296,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "226\nCarl Barks and the Art of the Comic Book",
+              "value": "226\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.287682926829275,
+                  "w": 83.09656869283536,
+                  "x": 30.70883431783536,
+                  "y": 365.8004039634146,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "226\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.29,
+              "w": 83.1,
+              "x": 30.71,
+              "y": 365.8,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "226"
+    }
+  ]
+}

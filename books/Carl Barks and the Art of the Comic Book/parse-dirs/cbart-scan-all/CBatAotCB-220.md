@@ -1,0 +1,15 @@
+the gun, poises to clonk the rat, but the wily rodent sticks the bill between his teeth and threatens to bite it if Scrooge gets tough. Scrooge is stymied. The rat senses the tremendous power the posession of this bill gives him over Scrooge. He merely has to gesture that he wants cheese, and Scrooge hastens to order him some.
+
+But the rat overuses his power. He makes Scrooge bring him cheeses after cheeses, the choice of roqueforts, camemberts, fine swisses, all of which he refuses as being too cheap for his refined tastes. Scrooge finally has to order the most expensive cheese in the world, ODORA DE PUNGENTO, which is brought from its mountain cave in an armored car, and served to the rat on a velvet cushion accompanied by a flourish for trumpets. This satisfies the rat. He prepares like a gourmet to eat this fine cheese in style.
+
+Scrooge gets his adding machine, adds up how much all this is costing him. So much for the cheese, so much for rent for the armored car, rent for the velvet pillow, fee for the trumpeteers, etc. It totals ten-thousand dollars and ONE CENT! He snatches the cheese from under the rat's nose. "Take it back," he says to the cheesemen. "It's cheaper to let him eat the money."
+
+Scrooge goes berserk. Spouting duck talk, he routs the rat who goes back to his garbage can, glad to escape with his life.
+
+Donald comes back to work unworried, cheerful, with his stomach in fine fettle. Scrooge, bilious, hiccupy, drinks a bicarbonate of soda, and eyes him enviously. As the narrator comments, the working man certainly has it made.
+
+Peterson wrote again to Barks on February 14, 1955; Barks had visited the studio in the interim and had seen the storyboards for a cartoon with Scrooge and Donald. It is obvious, from Peterson's letter, that Barks's script had not been followed. Peterson told Barks that his script might be used later, and that the studio wanted to keep it for a month or so, unless Barks wanted to use it for a comic book.
+
+On May 6, 1955, Peterson returned Barks's script, saying that television production had reduced the possibility of making any Uncle Scrooge short subjects. That was an understatement, since the Disney studio virtually ceased making short subjects of any kind in 1955. The weekly Disney television program had begun in the fall of 1954, and as the shorts units were shut down, their personnel—such as Jack Hannah, director of most of the Donald Duck cartoons—were moved into work for the television show; Hannah directed more than a dozen hour-long shows featuring Donald.
+
+Barks never used his script as the basis for a comic book story. When I asked him why, in 1974, he said, "I just didn't have quite enough action. I would need to have jazzed it up and introduced some clouds of rats, or something. In other words, it would have been a story that starred Uncle Scrooge, and the kids and Donald wouldn't have had enough to do with it. I would have had to have used them in there."

@@ -1,0 +1,65 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A self-portrait caricature of Carl Barks inside a circular yellow and orange frame. He is depicted with a large nose, glasses, and wearing Donald Duck's sailor hat and red bow tie. The text \"CARL BARKS ©\" is written to the right of his face.",
+          "md": "![A self-portrait caricature of Carl Barks inside a circular yellow and orange frame. He is depicted with a large nose, glasses, and wearing Donald Duck's sailor hat and red bow tie. The text \"CARL BARKS ©\" is written to the right of his face.](CBatAotCB-000-00-fc_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-000-00-fc_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 196.74594798018293,
+              "w": 196.96429258765244,
+              "x": 45.81262814405488,
+              "y": 47.50351086128049,
+              "confidence": 0.99,
+              "end_index": 266,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "level": 1,
+          "md": "# Carl Barks and the Art of the Comic Book",
+          "value": "Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 44.50525152439026,
+              "w": 222.9118473704268,
+              "x": 33.803823361280486,
+              "y": 247.26912347560972,
+              "confidence": 0.91,
+              "end_index": 39,
+              "label": "doc_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "— *by Michael Barrier* —",
+          "value": "— by Michael Barrier —",
+          "bbox": [
+            {
+              "h": 15.930388719512175,
+              "w": 154.56779725609755,
+              "x": 65.63606707317072,
+              "y": 302.3556173780488,
+              "confidence": 0.88,
+              "end_index": 23,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true
+    }
+  ]
+}

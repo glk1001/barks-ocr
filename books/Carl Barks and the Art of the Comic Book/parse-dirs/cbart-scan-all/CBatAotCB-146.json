@@ -1,0 +1,697 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "(*Uncle Scrooge* No. 30, June-Aug. 1960), another story with a Middle Eastern desert setting. \"In its place I wrote a 16-pager of Uncle Scrooge and the ducks getting blown into Valhalla (a wandering small planet that strays into the earth's shadow). This Valhalla is peopled by dog-faces named Thor, Odin, and other names common to the Norse Gods. Also Vulcan, Jupiter, Venus, and the Latin Gods names. You'll have to read *Uncle Scrooge* #34 to see how I explain away such mythical anomalies with scientifically provable hogwash. As Louie expresses it: 'Another of childhood's cherished illusions reduced to so many nuts and bolts.'\" (Dec. 30, 1960, letter to Willits.)",
+          "value": "(Uncle Scrooge No. 30, June-Aug. 1960), another story with a Middle Eastern desert setting. \"In its place I wrote a 16-pager of Uncle Scrooge and the ducks getting blown into Valhalla (a wandering small planet that strays into the earth's shadow). This Valhalla is peopled by dog-faces named Thor, Odin, and other names common to the Norse Gods. Also Vulcan, Jupiter, Venus, and the Latin Gods names. You'll have to read Uncle Scrooge #34 to see how I explain away such mythical anomalies with scientifically provable hogwash. As Louie expresses it: 'Another of childhood's cherished illusions reduced to so many nuts and bolts.'\" (Dec. 30, 1960, letter to Willits.)",
+          "bbox": [
+            {
+              "h": 64.90477991615855,
+              "w": 125.30108946265243,
+              "x": 11.724476467225609,
+              "y": 17.999494092987803,
+              "confidence": 0.98,
+              "end_index": 669,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 82, August 1969; No. 147, December 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 82, August 1969; No. 147, December 1977.",
+          "bbox": [
+            {
+              "h": 11.223555640243912,
+              "w": 125.47884932355181,
+              "x": 11.625972513338413,
+              "y": 83.10396722560975,
+              "confidence": 0.96,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Wily Rival - 4 - Gyro is frustrated in a patent attorney's waiting room in an effort to get a look at a rival's invention. (*Dec. 10, 1960*)",
+          "value": "GYRO GEARLOOSE Wily Rival - 4 - Gyro is frustrated in a patent attorney's waiting room in an effort to get a look at a rival's invention. (Dec. 10, 1960)",
+          "bbox": [
+            {
+              "h": 17.717715320121954,
+              "w": 125.19212438071645,
+              "x": 11.401551305259144,
+              "y": 94.67657583841464,
+              "confidence": 0.97,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 93, June 1971.",
+          "value": "Reprinted: Uncle Scrooge No. 93, June 1971.",
+          "bbox": [
+            {
+              "h": 5.625091463414638,
+              "w": 88.56891661108993,
+              "x": 15.706981826410061,
+              "y": 112.96202743902438,
+              "confidence": 0.92,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Chugwagon Derby - 9 3/4 - Scrooge and Donald are rivals in a cross-country race for antique cars, and play dirty tricks on one another all along the way, not knowing that the last car to finish will be the winner. (*Nov. 16, 1960*)",
+          "value": "UNCLE SCROOGE Chugwagon Derby - 9 3/4 - Scrooge and Donald are rivals in a cross-country race for antique cars, and play dirty tricks on one another all along the way, not knowing that the last car to finish will be the winner. (Nov. 16, 1960)",
+          "bbox": [
+            {
+              "h": 29.419355945121954,
+              "w": 125.30480016196644,
+              "x": 11.348589700838414,
+              "y": 118.52665015243902,
+              "confidence": 0.97,
+              "end_index": 244,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A new version of \"The Hard Loser,\" *Donald Duck* Four Color No. 29, 1943.",
+          "value": "A new version of \"The Hard Loser,\" Donald Duck Four Color No. 29, 1943.",
+          "bbox": [
+            {
+              "h": 11.145171493902435,
+              "w": 125.36287978753809,
+              "x": 11.253758931974085,
+              "y": 148.60423399390243,
+              "confidence": 0.96,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "An advertisment fills out the tenth page.",
+          "value": "An advertisment fills out the tenth page.",
+          "bbox": [
+            {
+              "h": 5.386977896341477,
+              "w": 81.75489793730944,
+              "x": 15.733683427019814,
+              "y": 160.67041920731705,
+              "confidence": 0.88,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 120, June 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 120, June 1975.",
+          "bbox": [
+            {
+              "h": 5.530975609756115,
+              "w": 91.00206888338414,
+              "x": 15.803253144054876,
+              "y": 166.2336013719512,
+              "confidence": 0.91,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 35 - Sept.-Nov. 1961 - 36 pages",
+          "value": "35 - Sept.-Nov. 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.671737804878057,
+              "w": 74.19722167968749,
+              "x": 11.405348823361278,
+              "y": 178.0272370426829,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge wears a lei made of currency. (*Aug. 1, 1960*)",
+          "value": "Front cover: Scrooge wears a lei made of currency. (Aug. 1, 1960)",
+          "bbox": [
+            {
+              "h": 11.189199695121943,
+              "w": 124.92401081364329,
+              "x": 11.740328934832316,
+              "y": 183.8612423780488,
+              "confidence": 0.97,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 101, September 1972.",
+          "value": "Reprinted: Uncle Scrooge No. 101, September 1972.",
+          "bbox": [
+            {
+              "h": 5.57167682926829,
+              "w": 103.04514886623475,
+              "x": 15.646432688643293,
+              "y": 195.7980868902439,
+              "confidence": 0.93,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Golden Nugget Boat - 19 - Scrooge and Gladstone both go to Alaska—Scrooge paying his way with parts of a golden boat shaped from a single nugget, Gladstone traveling on a ticket that Scrooge won at a TV show and then lost. In Alaska, they compete in a contest to see who can find the biggest gold nugget. (*Feb. 16, 1961*)",
+          "value": "UNCLE SCROOGE The Golden Nugget Boat - 19 - Scrooge and Gladstone both go to Alaska—Scrooge paying his way with parts of a golden boat shaped from a single nugget, Gladstone traveling on a ticket that Scrooge won at a TV show and then lost. In Alaska, they compete in a contest to see who can find the biggest gold nugget. (Feb. 16, 1961)",
+          "bbox": [
+            {
+              "h": 41.39604420731707,
+              "w": 125.39744331173779,
+              "x": 11.460650247713414,
+              "y": 201.5491006097561,
+              "confidence": 0.98,
+              "end_index": 339,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"*Scrooge* #35 will have no unplanned cuts. I found out about the ad stunt in time to write the book's material to fit. The main Scrooge story will be about Alaska and the finding of nuggets. No world-beater of a story, but I needed a substitute fast for the Egyptian Aswan Dam tale which I've decided to junk. \\[See note to \"Mythic Mystery\" in *Uncle Scrooge* No. 34.] Have you noticed that the way the ancient statues and temples will be raised above the future level of the water is by a method fully as wacky as the one I'd vaguely planned for Uncle Scrooge? The nerve of mere humans to steal Uncle Scrooge's stuff!\" (Mar. 24, 1961, letter to Malcolm Willits)",
+          "value": "Barks: \"Scrooge #35 will have no unplanned cuts. I found out about the ad stunt in time to write the book's material to fit. The main Scrooge story will be about Alaska and the finding of nuggets. No world-beater of a story, but I needed a substitute fast for the Egyptian Aswan Dam tale which I've decided to junk. [See note to \"Mythic Mystery\" in Uncle Scrooge No. 34.] Have you noticed that the way the ancient statues and temples will be raised above the future level of the water is by a method fully as wacky as the one I'd vaguely planned for Uncle Scrooge? The nerve of mere humans to steal Uncle Scrooge's stuff!\" (Mar. 24, 1961, letter to Malcolm Willits)",
+          "bbox": [
+            {
+              "h": 64.76512957317073,
+              "w": 125.53553448932924,
+              "x": 11.618677591463413,
+              "y": 243.25689786585366,
+              "confidence": 0.99,
+              "end_index": 669,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 86, April 1970; No. 159, December 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 86, April 1970; No. 159, December 1978.",
+          "bbox": [
+            {
+              "h": 11.477743902439014,
+              "w": 125.42527891577743,
+              "x": 11.780072646722559,
+              "y": 308.2694588414634,
+              "confidence": 0.96,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Fast Away Castaway - 4 - Gyro goes to a small island to test a survival kit that can turn sand into any kind of food, even ice cream. (*Feb. 24, 1961*)",
+          "value": "GYRO GEARLOOSE Fast Away Castaway - 4 - Gyro goes to a small island to test a survival kit that can turn sand into any kind of food, even ice cream. (Feb. 24, 1961)",
+          "bbox": [
+            {
+              "h": 18.19335365853658,
+              "w": 125.41344798018292,
+              "x": 11.926817835365853,
+              "y": 319.81810975609756,
+              "confidence": 0.96,
+              "end_index": 165,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 94, August 1971; No. 154, July 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 94, August 1971; No. 154, July 1978.",
+          "bbox": [
+            {
+              "h": 10.82224847560974,
+              "w": 124.7598375571646,
+              "x": 12.497819645579268,
+              "y": 338.09997713414634,
+              "confidence": 0.94,
+              "end_index": 66,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Gift Lion - 4 - The Beagle Boys give Scrooge a lion to guard his vault, but the \"lion\" is actually a Beagle Boy in disguise. (*Feb. 24, 1961*)",
+          "value": "UNCLE SCROOGE Gift Lion - 4 - The Beagle Boys give Scrooge a lion to guard his vault, but the \"lion\" is actually a Beagle Boy in disguise. (Feb. 24, 1961)",
+          "bbox": [
+            {
+              "h": 17.78827362804878,
+              "w": 124.9568883384146,
+              "x": 149.94415015243902,
+              "y": 17.7440625,
+              "confidence": 0.98,
+              "end_index": 155,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 90, December 1970; No. 147, December 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 90, December 1970; No. 147, December 1977.",
+          "bbox": [
+            {
+              "h": 10.6006640625,
+              "w": 124.85913681402434,
+              "x": 150.0990262957317,
+              "y": 35.8396503429878,
+              "confidence": 0.96,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 36 - Dec.-Feb. 1962 - 36 pages",
+          "value": "36 - Dec.-Feb. 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.629133003048776,
+              "w": 71.35351943597561,
+              "x": 150.3658708079268,
+              "y": 53.532690548780494,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge sleeps under a quilt patched with bills. (*Sept. 3, 1960*)",
+          "value": "Front cover (art only): Scrooge sleeps under a quilt patched with bills. (Sept. 3, 1960)",
+          "bbox": [
+            {
+              "h": 11.890358231707324,
+              "w": 125.13290967987805,
+              "x": 150.2960213414634,
+              "y": 59.375207698170726,
+              "confidence": 0.97,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 93, June 1971.",
+          "value": "Reprinted: Uncle Scrooge No. 93, June 1971.",
+          "bbox": [
+            {
+              "h": 5.382810594512189,
+              "w": 88.26124047256096,
+              "x": 155.37239519817072,
+              "y": 71.69634146341464,
+              "confidence": 0.92,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Midas Touch - 17 - When Magica de Spell, a sorceress, comes to buy a coin from Scrooge to use in making a magic amulet, he accidentally gives her his Old Number One Dime. She refuses to return it, and so the ducks pursue her to her sorcery shop on the slopes of Mount Vesuvius. (*Apr. 17, 1961*)",
+          "value": "UNCLE SCROOGE The Midas Touch - 17 - When Magica de Spell, a sorceress, comes to buy a coin from Scrooge to use in making a magic amulet, he accidentally gives her his Old Number One Dime. She refuses to return it, and so the ducks pursue her to her sorcery shop on the slopes of Mount Vesuvius. (Apr. 17, 1961)",
+          "bbox": [
+            {
+              "h": 35.63186547256098,
+              "w": 125.22350990853654,
+              "x": 150.31853849085365,
+              "y": 77.14018102134146,
+              "confidence": 0.98,
+              "end_index": 312,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First appearance of Magica de Spell, and the first story in which the Old Number One Dime is identified by that name.",
+          "value": "First appearance of Magica de Spell, and the first story in which the Old Number One Dime is identified by that name.",
+          "bbox": [
+            {
+              "h": 11.624451219512189,
+              "w": 124.94152248475608,
+              "x": 150.49749237804878,
+              "y": 112.99941310975609,
+              "confidence": 0.94,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 93, June 1971; *Walt Disney Showcase* No. 30, July 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 93, June 1971; Walt Disney Showcase No. 30, July 1975.",
+          "bbox": [
+            {
+              "h": 11.08114710365855,
+              "w": 125.50462271341463,
+              "x": 150.34319931402436,
+              "y": 124.94413490853657,
+              "confidence": 0.94,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Duckburg's Day of Peril - 4 - A giant mechanical man being used in a movie runs amok, and Gyro is called in to stop him. (*May 3, 1961*)",
+          "value": "GYRO GEARLOOSE Duckburg's Day of Peril - 4 - A giant mechanical man being used in a movie runs amok, and Gyro is called in to stop him. (May 3, 1961)",
+          "bbox": [
+            {
+              "h": 17.786021341463393,
+              "w": 125.35828696646338,
+              "x": 150.50198551829266,
+              "y": 136.35962652439025,
+              "confidence": 0.95,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 73, February 1968.",
+          "value": "Reprinted: Uncle Scrooge No. 73, February 1968.",
+          "bbox": [
+            {
+              "h": 5.58200076219513,
+              "w": 96.72667682926829,
+              "x": 155.29939024390242,
+              "y": 154.46961128048778,
+              "confidence": 0.91,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Money Bag Goat - 6 - Scrooge is given a mountain goat that will eat only money, and takes him to a valley so that the goat can learn to eat grass. (*May 3, 1961*)",
+          "value": "UNCLE SCROOGE Money Bag Goat - 6 - Scrooge is given a mountain goat that will eat only money, and takes him to a valley so that the goat can learn to eat grass. (May 3, 1961)",
+          "bbox": [
+            {
+              "h": 23.236360518292667,
+              "w": 125.26461699695122,
+              "x": 150.6876619664634,
+              "y": 160.24185594512196,
+              "confidence": 0.96,
+              "end_index": 175,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 73, February 1968; No. 147, December 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 73, February 1968; No. 147, December 1977.",
+          "bbox": [
+            {
+              "h": 10.531349085365855,
+              "w": 124.91567835365852,
+              "x": 150.94431974085364,
+              "y": 184.30573170731708,
+              "confidence": 0.96,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 37 - Mar.-May 1962 - 36 pages",
+          "value": "37 - Mar.-May 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.709375,
+              "w": 74.1436051829268,
+              "x": 151.1305964176829,
+              "y": 201.89163109756097,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge sews patches on money bags. (*Mar. 27, 1961*)",
+          "value": "Front cover (art only): Scrooge sews patches on money bags. (Mar. 27, 1961)",
+          "bbox": [
+            {
+              "h": 11.272431402439015,
+              "w": 124.95435022865851,
+              "x": 151.0920788871951,
+              "y": 207.84706554878048,
+              "confidence": 0.95,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 88, August 1970.",
+          "value": "Reprinted: Uncle Scrooge No. 88, August 1970.",
+          "bbox": [
+            {
+              "h": 5.54179115853658,
+              "w": 93.8516673018293,
+              "x": 155.56453696646338,
+              "y": 219.80298018292683,
+              "confidence": 0.9,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Windy Story - 1 (inside front cover) - Scrooge tells the nephews how he saved his gold from outlaws by using flypaper. (*Oct. 31, 1957*)",
+          "value": "UNCLE SCROOGE Windy Story - 1 (inside front cover) - Scrooge tells the nephews how he saved his gold from outlaws by using flypaper. (Oct. 31, 1957)",
+          "bbox": [
+            {
+              "h": 17.71756097560974,
+              "w": 125.11639481707316,
+              "x": 151.09892149390242,
+              "y": 225.3567073170732,
+              "confidence": 0.96,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Cave of Ali Baba - 16 - The ducks are touring Scrooge's oil pipelines in Persia when they are joined by an archeologist carrying clay tablets that tell of Ali Baba's cave. Their donkeys are soon stolen by giant rocs that lead them to the cave itself. (*July 7, 1961*)",
+          "value": "UNCLE SCROOGE Cave of Ali Baba - 16 - The ducks are touring Scrooge's oil pipelines in Persia when they are joined by an archeologist carrying clay tablets that tell of Ali Baba's cave. Their donkeys are soon stolen by giant rocs that lead them to the cave itself. (July 7, 1961)",
+          "bbox": [
+            {
+              "h": 34.99481707317072,
+              "w": 126.0291539634146,
+              "x": 151.204853277439,
+              "y": 243.08069359756098,
+              "confidence": 0.97,
+              "end_index": 280,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 90, December 1970.",
+          "value": "Reprinted: Uncle Scrooge No. 90, December 1970.",
+          "bbox": [
+            {
+              "h": 5.735556402439014,
+              "w": 99.82733803353655,
+              "x": 155.82548208841465,
+              "y": 278.69544969512197,
+              "confidence": 0.93,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Great Pop Up - 4 - Gyro has difficulty in adjusting his toaster to pop-up properly. (*Aug. 22, 1961*)",
+          "value": "GYRO GEARLOOSE The Great Pop Up - 4 - Gyro has difficulty in adjusting his toaster to pop-up properly. (Aug. 22, 1961)",
+          "bbox": [
+            {
+              "h": 17.169855182926838,
+              "w": 125.03327172256098,
+              "x": 151.36732660060974,
+              "y": 284.6117606707317,
+              "confidence": 0.96,
+              "end_index": 119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 119, June 1975.",
+          "value": "Reprinted: Uncle Scrooge No. 119, June 1975.",
+          "bbox": [
+            {
+              "h": 5.519474085365855,
+              "w": 91.11345846036582,
+              "x": 155.7528201219512,
+              "y": 302.6698170731707,
+              "confidence": 0.93,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Deep Down Doings - 9 - Scrooge salvages pearls from a sunken Asian ship, but the Beagle Boys are waiting to take them, and so the ducks string the pearls around the tails of salmon on their way inland to spawn. (*July 13, 1961*)",
+          "value": "UNCLE SCROOGE Deep Down Doings - 9 - Scrooge salvages pearls from a sunken Asian ship, but the Beagle Boys are waiting to take them, and so the ducks string the pearls around the tails of salmon on their way inland to spawn. (July 13, 1961)",
+          "bbox": [
+            {
+              "h": 29.178498475609793,
+              "w": 125.08319359756095,
+              "x": 151.47248666158535,
+              "y": 308.41785823170727,
+              "confidence": 0.97,
+              "end_index": 241,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 136, January 1977; *Walt Disney Comics Digest* No. 12, June 1969.",
+          "value": "Reprinted: Uncle Scrooge No. 136, January 1977; Walt Disney Comics Digest No. 12, June 1969.",
+          "bbox": [
+            {
+              "h": 11.110015243902435,
+              "w": 125.0604192073171,
+              "x": 151.55159679878045,
+              "y": 338.172256097561,
+              "confidence": 0.96,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "146 Carl Barks and the Art of the Comic Book",
+              "value": "146 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.55542682926829,
+                  "w": 77.68040539253049,
+                  "x": 37.527603372713415,
+                  "y": 362.73736280487805,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "146 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.56,
+              "w": 77.68,
+              "x": 37.53,
+              "y": 362.74,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "146"
+    }
+  ]
+}

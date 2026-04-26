@@ -1,0 +1,363 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A comic strip page showing characters in Tralla La trading sheep for a bottle cap.",
+          "md": "![A comic strip page showing characters in Tralla La trading sheep for a bottle cap.](CBatAotCB-051_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-051_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 326.48220274390246,
+              "w": 224.07322122713413,
+              "x": 29.231607278963413,
+              "y": 16.371608231707317,
+              "confidence": 0.96,
+              "end_index": 107,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Scrooge McDuck gives a bottle cap to a resident of Tralla La.",
+          "md": "![Scrooge McDuck gives a bottle cap to a resident of Tralla La.](CBatAotCB-051_page_1_image_4_v2.jpg)",
+          "url": "CBatAotCB-051_page_1_image_4_v2.jpg",
+          "bbox": [
+            {
+              "h": 79.95598084984756,
+              "w": 106.92610732660062,
+              "x": 29.151320264862804,
+              "y": 16.721099942835366,
+              "confidence": 0.62,
+              "end_index": 86,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**Scrooge:** YOU CAN HAVE IT! I DON'T WANT IT!\n**Resident:** OH THANK YOU!",
+          "value": "\nScrooge: YOU CAN HAVE IT! I DON'T WANT IT!\nResident: OH THANK YOU!",
+          "bbox": [
+            {
+              "h": 79.95598084984756,
+              "w": 106.92610732660062,
+              "x": 29.151320264862804,
+              "y": 16.721099942835366,
+              "confidence": 0.56,
+              "end_index": 73,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "The resident shows the bottle cap to others.",
+          "md": "![The resident shows the bottle cap to others.](CBatAotCB-051_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-051_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 80.7928153582317,
+              "w": 113.88773723323169,
+              "x": 139.02944645579265,
+              "y": 16.095397294207316,
+              "confidence": 0.58,
+              "end_index": 69,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**Resident:** LOOK AT THE BOTTLE CAP OLD McDUCK GAVE ME!\n**Others:** YOU LUCKY, LUCKY, LUCKY!",
+          "value": "\nResident: LOOK AT THE BOTTLE CAP OLD McDUCK GAVE ME!\nOthers: YOU LUCKY, LUCKY, LUCKY!",
+          "bbox": [
+            {
+              "h": 80.7928153582317,
+              "w": 113.88773723323169,
+              "x": 139.02944645579265,
+              "y": 16.095397294207316,
+              "confidence": 0.61,
+              "end_index": 92,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "The resident, Hop Sing, tells others about the gift.",
+          "md": "![The resident, Hop Sing, tells others about the gift.](CBatAotCB-051_page_1_image_6_v2.jpg)",
+          "url": "CBatAotCB-051_page_1_image_6_v2.jpg",
+          "bbox": [
+            {
+              "h": 79.58693597560976,
+              "w": 111.72616163300302,
+              "x": 29.576779487423778,
+              "y": 99.37925304878048,
+              "confidence": 0.57,
+              "end_index": 77,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**Hop Sing:** SCROOGE GAVE A BEAUTIFUL BOTTLE CAP TO HOP SING!\n**Other:** GEE! I WISH I COULD HAVE ONE!",
+          "value": "\nHop Sing: SCROOGE GAVE A BEAUTIFUL BOTTLE CAP TO HOP SING!\nOther: GEE! I WISH I COULD HAVE ONE!",
+          "bbox": [
+            {
+              "h": 79.58693597560976,
+              "w": 111.72616163300302,
+              "x": 29.576779487423778,
+              "y": 99.37925304878048,
+              "confidence": 0.59,
+              "end_index": 102,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "A man tries to buy the bottle cap from Hop Sing.",
+          "md": "![A man tries to buy the bottle cap from Hop Sing.](CBatAotCB-051_page_1_image_7_v2.jpg)",
+          "url": "CBatAotCB-051_page_1_image_7_v2.jpg",
+          "bbox": [
+            {
+              "h": 79.57413109756097,
+              "w": 109.4785604039634,
+              "x": 143.6684422637195,
+              "y": 99.58626905487806,
+              "confidence": 0.58,
+              "end_index": 73,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**Man:** I'LL BUY IT FROM YOU, HOP SING! HOW MUCH?\n**Hop Sing:** I DON'T WANT TO SELL!",
+          "value": "\nMan: I'LL BUY IT FROM YOU, HOP SING! HOW MUCH?\nHop Sing: I DON'T WANT TO SELL!",
+          "bbox": [
+            {
+              "h": 79.57413109756097,
+              "w": 109.4785604039634,
+              "x": 143.6684422637195,
+              "y": 99.58626905487806,
+              "confidence": 0.57,
+              "end_index": 85,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "Two men start bidding sheep for the bottle cap.",
+          "md": "![Two men start bidding sheep for the bottle cap.](CBatAotCB-051_page_1_image_5_v2.jpg)",
+          "url": "CBatAotCB-051_page_1_image_5_v2.jpg",
+          "bbox": [
+            {
+              "h": 79.68029725609759,
+              "w": 127.29797303734756,
+              "x": 29.71200028582317,
+              "y": 181.4854344512195,
+              "confidence": 0.6,
+              "end_index": 72,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**Man 1:** I'LL GIVE YOU A SHEEP FOR IT!\n**Man 2:** I'LL GIVE YOU TWO SHEEP!",
+          "value": "\nMan 1: I'LL GIVE YOU A SHEEP FOR IT!\nMan 2: I'LL GIVE YOU TWO SHEEP!",
+          "bbox": [
+            {
+              "h": 79.68029725609759,
+              "w": 127.29797303734756,
+              "x": 29.71200028582317,
+              "y": 181.4854344512195,
+              "confidence": 0.56,
+              "end_index": 75,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "A woman encourages her husband to bid more.",
+          "md": "![A woman encourages her husband to bid more.](CBatAotCB-051_page_1_image_8_v2.jpg)",
+          "url": "CBatAotCB-051_page_1_image_8_v2.jpg",
+          "bbox": [
+            {
+              "h": 79.89588795731711,
+              "w": 93.5547770579268,
+              "x": 159.16021532012195,
+              "y": 181.53890625,
+              "confidence": 0.56,
+              "end_index": 68,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**Woman:** WISE UP, HUSBAND! IT IS THE ONLY BOTTLE CAP IN TRALLA LA! IT IS WORTH MANY SHEEP!",
+          "value": "\nWoman: WISE UP, HUSBAND! IT IS THE ONLY BOTTLE CAP IN TRALLA LA! IT IS WORTH MANY SHEEP!",
+          "bbox": [
+            {
+              "h": 79.89588795731711,
+              "w": 93.5547770579268,
+              "x": 159.16021532012195,
+              "y": 181.53890625,
+              "confidence": 0.59,
+              "end_index": 91,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "The bidding continues to ten sheep.",
+          "md": "![The bidding continues to ten sheep.](CBatAotCB-051_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-051_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 78.45836890243908,
+              "w": 101.95923875762193,
+              "x": 29.961296684451217,
+              "y": 263.67503048780486,
+              "confidence": 0.59,
+              "end_index": 60,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**Man:** I'LL GIVE YOU TEN SHEEP!\n**Hop Sing:** WOW! THAT BE BIG PRICE! OKAY!",
+          "value": "\nMan: I'LL GIVE YOU TEN SHEEP!\nHop Sing: WOW! THAT BE BIG PRICE! OKAY!",
+          "bbox": [
+            {
+              "h": 78.45836890243908,
+              "w": 101.95923875762193,
+              "x": 29.961296684451217,
+              "y": 263.67503048780486,
+              "confidence": 0.59,
+              "end_index": 76,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "A neighbor offers twenty sheep to the new owner.",
+          "md": "![A neighbor offers twenty sheep to the new owner.](image)",
+          "url": "image",
+          "bbox": [
+            {
+              "h": 78.336,
+              "w": 118.65599999999999,
+              "x": 133.92000000000002,
+              "y": 263.808,
+              "confidence": 0.54,
+              "end_index": 57,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**Neighbor:** YOU GOT A BARGAIN, NEIGHBOR! I'LL GIVE YOU TWENTY SHEEP FOR THAT SHINY BAUBLE!",
+          "value": "\nNeighbor: YOU GOT A BARGAIN, NEIGHBOR! I'LL GIVE YOU TWENTY SHEEP FOR THAT SHINY BAUBLE!",
+          "bbox": [
+            {
+              "h": 78.336,
+              "w": 118.65599999999999,
+              "x": 133.92000000000002,
+              "y": 263.808,
+              "confidence": 0.61,
+              "end_index": 91,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "From Uncle Scrooge No. 6, June-Aug. 1954; © 1954 Walt Disney Productions.",
+          "value": "From Uncle Scrooge No. 6, June-Aug. 1954; © 1954 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.375777439024405,
+              "w": 158.99885241996947,
+              "x": 63.48692692454268,
+              "y": 345.9695579268293,
+              "confidence": 0.93,
+              "end_index": 72,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n51",
+              "value": "Carl Barks and the Art of the Comic Book\n51",
+              "bbox": [
+                {
+                  "h": 4.995663109756115,
+                  "w": 80.21721608231707,
+                  "x": 169.55036204268293,
+                  "y": 364.7820731707317,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n51",
+          "bbox": [
+            {
+              "h": 5.0,
+              "w": 80.22,
+              "x": 169.55,
+              "y": 364.78,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "51"
+    }
+  ]
+}

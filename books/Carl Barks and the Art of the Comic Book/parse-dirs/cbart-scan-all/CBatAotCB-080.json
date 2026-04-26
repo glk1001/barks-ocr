@@ -1,0 +1,186 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "level": 1,
+              "md": "# IX.",
+              "value": "IX.",
+              "bbox": [
+                {
+                  "h": 26.55190358231707,
+                  "w": 58.125440167682925,
+                  "x": 115.6244988567073,
+                  "y": 51.971541539634146,
+                  "confidence": 0.87,
+                  "end_index": 2,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "heading"
+            }
+          ],
+          "md": "# IX.",
+          "bbox": [
+            {
+              "h": 26.55,
+              "w": 58.13,
+              "x": 115.62,
+              "y": 51.97,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header"
+        },
+        {
+          "md": "**WITH BARKS BACK** on the ten-page stories, other cartoonists did five of the twelve issues of *Donald Duck* for 1951 and 1952. Barks left the series entirely at the end of 1952; it wasn't until 1956 that a Barks story appeared in *Donald Duck* again. Barks concentrated on *Uncle Scrooge*, which became a quarterly late in 1953. The stories in *Uncle Scrooge* were in much the same vein as the stories in *Donald Duck* except that now everything turned on Scrooge and his money.",
+          "value": "WITH BARKS BACK on the ten-page stories, other cartoonists did five of the twelve issues of Donald Duck for 1951 and 1952. Barks left the series entirely at the end of 1952; it wasn't until 1956 that a Barks story appeared in Donald Duck again. Barks concentrated on Uncle Scrooge, which became a quarterly late in 1953. The stories in Uncle Scrooge were in much the same vein as the stories in Donald Duck except that now everything turned on Scrooge and his money.",
+          "bbox": [
+            {
+              "h": 80.71536585365855,
+              "w": 125.85573289824694,
+              "x": 12.091158298399389,
+              "y": 119.63000762195121,
+              "confidence": 0.98,
+              "end_index": 479,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge had been a superb supporting character, with a funny, sharply focused — and limited — personality. Barks revealed him whole in \"Only a Poor Old Man,\" but with that done, there was little more that Barks could do with Scrooge in a starring role. Increasingly, Scrooge became an adventure hero whose money served only as a gimmick to transport the ducks to exotic climes or to place them in improbable situations. Barks sent the ducks to Hawaii, to Atlantis, and to the Seven Cities of Cibola. He reworked ancient myths, so that Scrooge found the philosopher's stone, and the golden fleece. These stories were often beautifully crafted, but, by comparison with what Barks had done before, they only skimmed the surface.",
+          "value": "Scrooge had been a superb supporting character, with a funny, sharply focused — and limited — personality. Barks revealed him whole in \"Only a Poor Old Man,\" but with that done, there was little more that Barks could do with Scrooge in a starring role. Increasingly, Scrooge became an adventure hero whose money served only as a gimmick to transport the ducks to exotic climes or to place them in improbable situations. Barks sent the ducks to Hawaii, to Atlantis, and to the Seven Cities of Cibola. He reworked ancient myths, so that Scrooge found the philosopher's stone, and the golden fleece. These stories were often beautifully crafted, but, by comparison with what Barks had done before, they only skimmed the surface.",
+          "bbox": [
+            {
+              "h": 123.6434679878049,
+              "w": 125.78823397008384,
+              "x": 12.578594345464937,
+              "y": 201.38817073170733,
+              "confidence": 0.98,
+              "end_index": 724,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Similarly, the Barks stories in *Walt Disney's Comics* gradually became more sedate. The ten-page story in the July 1955 issue is the last with any of the old fire; after that, all is slap-",
+          "value": "Similarly, the Barks stories in Walt Disney's Comics gradually became more sedate. The ten-page story in the July 1955 issue is the last with any of the old fire; after that, all is slap-",
+          "bbox": [
+            {
+              "h": 29.06762195121948,
+              "w": 125.51088974371187,
+              "x": 13.250914753239327,
+              "y": 325.8933612804878,
+              "confidence": 0.99,
+              "end_index": 188,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "stick or situation comedy, and even the slapstick lacks the energy of the gag-filled ten-pagers of the middle forties. Barks himself provided the best measure of the change when, in the late fifties, he did new versions of a dozen or so of his earlier stories. Without exception, they were inferior to the originals, lacking both the vigor of the early stories and the subtlety of the stories of the late forties and early fifties.",
+          "value": "stick or situation comedy, and even the slapstick lacks the energy of the gag-filled ten-pagers of the middle forties. Barks himself provided the best measure of the change when, in the late fifties, he did new versions of a dozen or so of his earlier stories. Without exception, they were inferior to the originals, lacking both the vigor of the early stories and the subtlety of the stories of the late forties and early fifties.",
+          "bbox": [
+            {
+              "h": 73.29229801829267,
+              "w": 125.28936356707315,
+              "x": 149.19052019817073,
+              "y": 119.44782393292684,
+              "confidence": 0.99,
+              "end_index": 430,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "It is instructive to consider the stories in *Walt Disney's Comics* in which Donald is an expert at some job or another. In the first such story, in the September 1953 issue, he is an expert rainmaker. When he fills an order from Farmer Pumpkindew for an inch and a half of slow rain on his gooseberries, he makes sure that no rain falls on Mrs. Pumpkindew's clothesline; as the lady says, \"That marvelous duck even scalloped the edges to fit around the ruffles on my party dress.\" Donald's skills become his undoing, however, when he puts them in the services of his baser emotions — in this case jealousy.",
+          "value": "It is instructive to consider the stories in Walt Disney's Comics in which Donald is an expert at some job or another. In the first such story, in the September 1953 issue, he is an expert rainmaker. When he fills an order from Farmer Pumpkindew for an inch and a half of slow rain on his gooseberries, he makes sure that no rain falls on Mrs. Pumpkindew's clothesline; as the lady says, \"That marvelous duck even scalloped the edges to fit around the ruffles on my party dress.\" Donald's skills become his undoing, however, when he puts them in the services of his baser emotions — in this case jealousy.",
+          "bbox": [
+            {
+              "h": 102.07278201219512,
+              "w": 125.68108993902437,
+              "x": 149.5571570121951,
+              "y": 193.47704268292682,
+              "confidence": 0.99,
+              "end_index": 606,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Donald is an expert skywriter in the November 1956 issue, and an expert mover in the February 1959 issue, but in both cases he is undone not by his emotions but by circumstances, in what are basically mechanical stories. The last \"expert\" story appeared in the May 1966 issue, with Donald as — of all things — an expert beautician. So far had we come",
+          "value": "Donald is an expert skywriter in the November 1956 issue, and an expert mover in the February 1959 issue, but in both cases he is undone not by his emotions but by circumstances, in what are basically mechanical stories. The last \"expert\" story appeared in the May 1966 issue, with Donald as — of all things — an expert beautician. So far had we come",
+          "bbox": [
+            {
+              "h": 58.33950457317072,
+              "w": 125.60659298780486,
+              "x": 150.15375,
+              "y": 296.45759908536587,
+              "confidence": 0.99,
+              "end_index": 349,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "80 80 Carl Barks and the Art of the Comic Book",
+              "value": "80 80 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.335342987804925,
+                  "w": 80.20184165396341,
+                  "x": 36.535421112804876,
+                  "y": 365.9079420731707,
+                  "confidence": 0.93,
+                  "end_index": 45,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "80 80 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.34,
+              "w": 80.2,
+              "x": 36.54,
+              "y": 365.91,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "80"
+    }
+  ]
+}

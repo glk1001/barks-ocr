@@ -1,0 +1,864 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "DONALD DUCK Black Wednesday - 10 - The ducks try to find the cause of Black Wednesday, the mysterious day once a year when everyone's hair falls out if they stay in Duckburg. (Oct. 30, 1958)",
+          "value": "DONALD DUCK Black Wednesday - 10 - The ducks try to find the cause of Black Wednesday, the mysterious day once a year when everyone's hair falls out if they stay in Duckburg. (Oct. 30, 1958)",
+          "bbox": [
+            {
+              "h": 23.56103134527439,
+              "w": 126.0266276438643,
+              "x": 10.315097775342988,
+              "y": 18.308393197408535,
+              "confidence": 0.98,
+              "end_index": 189,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**231 (20/3) - December 1959 - 36 pages**",
+          "value": "231 (20/3) - December 1959 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.498117378048782,
+              "w": 91.7450790777439,
+              "x": 10.595159108231707,
+              "y": 48.157334222560976,
+              "confidence": 0.96,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews wash dishes while they're in the bathtub. (Jan. 2, 1959)",
+          "value": "Front cover (art only): The nephews wash dishes while they're in the bathtub. (Jan. 2, 1959)",
+          "bbox": [
+            {
+              "h": 11.195996570121942,
+              "w": 125.82036335270578,
+              "x": 10.59162311833079,
+              "y": 54.000868902439024,
+              "confidence": 0.96,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK The Wax Museum - 10 - Donald becomes a night watchman at a wax museum, but even the frightening exhibits can't keep him awake. (Nov. 17, 1958)\nBarks: \"Got this story idea from my daughter.\"",
+          "value": "DONALD DUCK The Wax Museum - 10 - Donald becomes a night watchman at a wax museum, but even the frightening exhibits can't keep him awake. (Nov. 17, 1958)\nBarks: \"Got this story idea from my daughter.\"",
+          "bbox": [
+            {
+              "h": 23.486547256097563,
+              "w": 125.78350395388718,
+              "x": 10.724390482088413,
+              "y": 65.86464557926828,
+              "confidence": 0.96,
+              "end_index": 200,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Similar to \"DONALD DUCK\" in Walt Disney's Comics No. 89, February 1948.",
+          "value": "Similar to \"DONALD DUCK\" in Walt Disney's Comics No. 89, February 1948.",
+          "bbox": [
+            {
+              "h": 10.608955792682927,
+              "w": 125.66205518769053,
+              "x": 10.848806092797256,
+              "y": 89.99450076219513,
+              "confidence": 0.94,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 423, December 1975.",
+          "value": "Reprinted: Walt Disney's Comics No. 423, December 1975.",
+          "bbox": [
+            {
+              "h": 5.387332317073174,
+              "w": 118.64569300209602,
+              "x": 15.153412371379572,
+              "y": 101.80170731707317,
+              "confidence": 0.94,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**232 (20/4) - January 1960 - 36 pages**",
+          "value": "232 (20/4) - January 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5877286585365935,
+              "w": 86.45547077458079,
+              "x": 11.152238829077742,
+              "y": 113.48020198170731,
+              "confidence": 0.96,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald plays icicles like a xylophone while the nephews sing. (June 12, 1959)",
+          "value": "Front cover (art only): Donald plays icicles like a xylophone while the nephews sing. (June 12, 1959)",
+          "bbox": [
+            {
+              "h": 11.740518292682914,
+              "w": 126.0567859184451,
+              "x": 11.183859089176828,
+              "y": 119.1099237804878,
+              "confidence": 0.96,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 352, January 1970.",
+          "value": "Reprinted: Walt Disney's Comics No. 352, January 1970.",
+          "bbox": [
+            {
+              "h": 5.325617378048782,
+              "w": 112.35923780487803,
+              "x": 16.009170160060975,
+              "y": 131.50588033536584,
+              "confidence": 0.9,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Under the Polar Ice - 10 - Donald stows away to avoid peeling potatoes at his lodge when the nephews win a trip on a submarine going under the North Pole. (July 11, 1959)",
+          "value": "DONALD DUCK Under the Polar Ice - 10 - Donald stows away to avoid peeling potatoes at his lodge when the nephews win a trip on a submarine going under the North Pole. (July 11, 1959)",
+          "bbox": [
+            {
+              "h": 23.071566310975594,
+              "w": 125.837148318407,
+              "x": 11.304278891958841,
+              "y": 137.0192949695122,
+              "confidence": 0.97,
+              "end_index": 181,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Huey, Dewey, and Louie Junior Woodchucks No. 26, May 1974.",
+          "value": "Reprinted: Huey, Dewey, and Louie Junior Woodchucks No. 26, May 1974.",
+          "bbox": [
+            {
+              "h": 11.173399390243912,
+              "w": 125.8248993664253,
+              "x": 11.52359815644055,
+              "y": 160.72790396341463,
+              "confidence": 0.96,
+              "end_index": 68,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**233 (20/5) - February 1960 - 36 pages**",
+          "value": "233 (20/5) - February 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.597892530487798,
+              "w": 89.72224097275151,
+              "x": 11.543673661394816,
+              "y": 178.27302210365855,
+              "confidence": 0.96,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews use umbrellas as shields, as they fight with water pistols. (Jan. 2, 1959)",
+          "value": "Front cover (art only): The nephews use umbrellas as shields, as they fight with water pistols. (Jan. 2, 1959)",
+          "bbox": [
+            {
+              "h": 17.490297256097563,
+              "w": 125.6537420207698,
+              "x": 11.525705387766768,
+              "y": 184.15806402439026,
+              "confidence": 0.97,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This cover was originally scheduled for Walt Disney's Comics No. 232, January 1960.",
+          "value": "This cover was originally scheduled for Walt Disney's Comics No. 232, January 1960.",
+          "bbox": [
+            {
+              "h": 11.0446875,
+              "w": 126.77062071265243,
+              "x": 11.17103991996951,
+              "y": 201.6105868902439,
+              "confidence": 0.96,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Knights of the Flying Sleds - 10 - Donald and the nephews become \"knights errant\" on flying sleds invented by Gyro Gearloose. (Aug. 12, 1959)",
+          "value": "DONALD DUCK Knights of the Flying Sleds - 10 - Donald and the nephews become \"knights errant\" on flying sleds invented by Gyro Gearloose. (Aug. 12, 1959)",
+          "bbox": [
+            {
+              "h": 23.0934375,
+              "w": 125.71056223799539,
+              "x": 12.166959675114327,
+              "y": 213.13129573170733,
+              "confidence": 0.97,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 46, April 1974.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 46, April 1974.",
+          "bbox": [
+            {
+              "h": 5.379649390243912,
+              "w": 117.08384122522865,
+              "x": 16.024855421112804,
+              "y": 237.8015167682927,
+              "confidence": 0.95,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**234 (20/6) - March 1960 - 36 pages**",
+          "value": "234 (20/6) - March 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.52352134146342,
+              "w": 82.34164503144054,
+              "x": 11.802899556974085,
+              "y": 249.39914634146342,
+              "confidence": 0.96,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Riding the Pony Express - 10 - Donald plays the part of a Pony Express rider on a dude ranch, and unexpectedly carries some vital diplomatic mail. (Aug. 17, 1959)",
+          "value": "DONALD DUCK Riding the Pony Express - 10 - Donald plays the part of a Pony Express rider on a dude ranch, and unexpectedly carries some vital diplomatic mail. (Aug. 17, 1959)",
+          "bbox": [
+            {
+              "h": 22.978902439024402,
+              "w": 126.02832328982467,
+              "x": 11.775867830602134,
+              "y": 255.20869664634145,
+              "confidence": 0.98,
+              "end_index": 173,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Donald Duck No. 192, February 1978; Walt Disney Comics Digest No. 21, April 1970.",
+          "value": "Reprinted: Donald Duck No. 192, February 1978; Walt Disney Comics Digest No. 21, April 1970.",
+          "bbox": [
+            {
+              "h": 11.308993902439015,
+              "w": 126.14527248475608,
+              "x": 11.878370807926828,
+              "y": 279.0184527439024,
+              "confidence": 0.97,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**235 (20/7) - April 1960 - 36 pages**",
+          "value": "235 (20/7) - April 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.705739329268289,
+              "w": 78.94502286585364,
+              "x": 12.093561356707317,
+              "y": 296.6930259146341,
+              "confidence": 0.97,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald lifts up the dirty-footed nephews with his vacuum cleaner. (July 31, 1959)",
+          "value": "Front cover (art only): Donald lifts up the dirty-footed nephews with his vacuum cleaner. (July 31, 1959)",
+          "bbox": [
+            {
+              "h": 11.62792682926829,
+              "w": 125.87907857755333,
+              "x": 12.042414372141767,
+              "y": 302.3951067073171,
+              "confidence": 0.97,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Want to Buy an Island? - 10 - Donald buys a Caribbean Island from a hobo, not knowing that the deed was drawn up in kindergarten by the nephews. (Sept. 28, 1959)",
+          "value": "DONALD DUCK Want to Buy an Island? - 10 - Donald buys a Caribbean Island from a hobo, not knowing that the deed was drawn up in kindergarten by the nephews. (Sept. 28, 1959)",
+          "bbox": [
+            {
+              "h": 22.787766768292638,
+              "w": 125.946406011814,
+              "x": 12.061159727515243,
+              "y": 314.4002743902439,
+              "confidence": 0.98,
+              "end_index": 172,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A new version of \"DONALD DUCK\" in Walt Disney's Comics No. 81, June 1947.",
+          "value": "A new version of \"DONALD DUCK\" in Walt Disney's Comics No. 81, June 1947.",
+          "bbox": [
+            {
+              "h": 11.10809451219513,
+              "w": 124.93363805259145,
+              "x": 12.911291444359755,
+              "y": 338.48249999999996,
+              "confidence": 0.97,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**236 (20/8) - May 1960 - 36 pages**",
+          "value": "236 (20/8) - May 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.504668445121952,
+              "w": 76.47211509146342,
+              "x": 149.6057412347561,
+              "y": 17.894704173018294,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews build a play house with Donald inside. (Apr. 1, 1959)",
+          "value": "Front cover (art only): The nephews build a play house with Donald inside. (Apr. 1, 1959)",
+          "bbox": [
+            {
+              "h": 11.713185022865854,
+              "w": 125.84059641768289,
+              "x": 149.43251524390243,
+              "y": 23.19307831554878,
+              "confidence": 0.97,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Froggy Farmer - 10 - The nephews trick Donald into believing that his \"special frog food\" has caused young frogs to become full-grown overnight. (Oct. 14, 1959)\nA new version of \"DONALD DUCK\" in Walt Disney's Comics No. 77, February 1947.",
+          "value": "DONALD DUCK Froggy Farmer - 10 - The nephews trick Donald into believing that his \"special frog food\" has caused young frogs to become full-grown overnight. (Oct. 14, 1959)\nA new version of \"DONALD DUCK\" in Walt Disney's Comics No. 77, February 1947.",
+          "bbox": [
+            {
+              "h": 28.71553925304878,
+              "w": 126.31647484756098,
+              "x": 149.29790967987802,
+              "y": 35.06858231707317,
+              "confidence": 0.97,
+              "end_index": 249,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 418, July 1975.",
+          "value": "Reprinted: Walt Disney's Comics No. 418, July 1975.",
+          "bbox": [
+            {
+              "h": 5.591209984756101,
+              "w": 105.95160823170733,
+              "x": 154.05705411585365,
+              "y": 65.16475038109756,
+              "confidence": 0.94,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**237 (20/9) - June 1960 - 36 pages**",
+          "value": "237 (20/9) - June 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.604740853658536,
+              "w": 77.00825647865855,
+              "x": 149.8933708079268,
+              "y": 76.96243330792683,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald has no luck fishing but the nephews attract fish with bread. (Jan. 22, 1959)",
+          "value": "Front cover (art only): Donald has no luck fishing but the nephews attract fish with bread. (Jan. 22, 1959)",
+          "bbox": [
+            {
+              "h": 11.557042682926825,
+              "w": 125.85253239329266,
+              "x": 150.00640243902438,
+              "y": 82.53884908536585,
+              "confidence": 0.96,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Mystery of the Loch - 10 - The ducks go to Scotland to take underwater pictures of the \"Loch Less\" monster. (Jan. 15, 1960)",
+          "value": "DONALD DUCK Mystery of the Loch - 10 - The ducks go to Scotland to take underwater pictures of the \"Loch Less\" monster. (Jan. 15, 1960)",
+          "bbox": [
+            {
+              "h": 17.259860899390247,
+              "w": 126.14285442073168,
+              "x": 149.96076791158535,
+              "y": 94.37432355182928,
+              "confidence": 0.95,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 11, May 1969.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 11, May 1969.",
+          "bbox": [
+            {
+              "h": 5.43386432926829,
+              "w": 115.70316310975608,
+              "x": 154.45829839939023,
+              "y": 112.73742759146342,
+              "confidence": 0.94,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**238 (20/10) - July 1960 - 36 pages**",
+          "value": "238 (20/10) - July 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.659767530487797,
+              "w": 78.45281821646341,
+              "x": 150.29492378048778,
+              "y": 124.51195884146341,
+              "confidence": 0.96,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): At the beach, the ducks head for the water wearing life preservers. (Jan. 7, 1960)",
+          "value": "Front cover (art only): At the beach, the ducks head for the water wearing life preservers. (Jan. 7, 1960)",
+          "bbox": [
+            {
+              "h": 11.844180640243884,
+              "w": 126.09430449695118,
+              "x": 150.16856707317072,
+              "y": 129.96021722560977,
+              "confidence": 0.96,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK The Dog-sitter - 10 - Donald substitutes for the nephews as a sitter for a wealthy couple's dog, and the dog stares at him relentlessly. (Jan. 7, 1960)",
+          "value": "DONALD DUCK The Dog-sitter - 10 - Donald substitutes for the nephews as a sitter for a wealthy couple's dog, and the dog stares at him relentlessly. (Jan. 7, 1960)",
+          "bbox": [
+            {
+              "h": 17.808041158536607,
+              "w": 126.12236089939023,
+              "x": 150.2164138719512,
+              "y": 141.89314024390242,
+              "confidence": 0.96,
+              "end_index": 162,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Huey, Dewey and Louie Junior Woodchucks No. 25, March 1974.",
+          "value": "Reprinted: Huey, Dewey and Louie Junior Woodchucks No. 25, March 1974.",
+          "bbox": [
+            {
+              "h": 11.24810213414632,
+              "w": 126.05297446646341,
+              "x": 150.38229992378047,
+              "y": 159.83196265243905,
+              "confidence": 0.95,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**239 (20/11) - August 1960 - 36 pages**",
+          "value": "239 (20/11) - August 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.62605182926829,
+              "w": 87.00089748475608,
+              "x": 150.5706688262195,
+              "y": 177.53737042682926,
+              "confidence": 0.96,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK The Village Blacksmith - 10 - Donald, the Duckburg blacksmith, is hired to melt down an old cannon and pound it into plowshares. (Jan. 15, 1960)",
+          "value": "DONALD DUCK The Village Blacksmith - 10 - Donald, the Duckburg blacksmith, is hired to melt down an old cannon and pound it into plowshares. (Jan. 15, 1960)",
+          "bbox": [
+            {
+              "h": 18.531962652439013,
+              "w": 125.79298971036584,
+              "x": 150.35215129573172,
+              "y": 182.99582698170732,
+              "confidence": 0.95,
+              "end_index": 155,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 390, \\[March] 1973.",
+          "value": "Reprinted: Walt Disney's Comics No. 390, [March] 1973.",
+          "bbox": [
+            {
+              "h": 5.5095960365853625,
+              "w": 113.34200076219513,
+              "x": 155.26462842987803,
+              "y": 201.60635670731708,
+              "confidence": 0.92,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**240 (20/12) - September 1960 - 36 pages**",
+          "value": "240 (20/12) - September 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.7831631097561145,
+              "w": 95.94099466463415,
+              "x": 150.91679496951218,
+              "y": 213.25625762195122,
+              "confidence": 0.95,
+              "end_index": 42,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: Donald carries all three nephews, under one umbrella. (Nov. 22, 1958)",
+          "value": "Front cover: Donald carries all three nephews, under one umbrella. (Nov. 22, 1958)",
+          "bbox": [
+            {
+              "h": 11.755243902439043,
+              "w": 126.37088986280486,
+              "x": 150.69537919207315,
+              "y": 218.77509146341464,
+              "confidence": 0.97,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK The Fraidy Falcon - 10 - The ducks acquire a young falcon that has been expelled from a falcon training school for lack of spirit. (Jan. 15, 1960)",
+          "value": "DONALD DUCK The Fraidy Falcon - 10 - The ducks acquire a young falcon that has been expelled from a falcon training school for lack of spirit. (Jan. 15, 1960)",
+          "bbox": [
+            {
+              "h": 17.753277439024405,
+              "w": 126.07243902439025,
+              "x": 150.99413871951216,
+              "y": 230.65454268292683,
+              "confidence": 0.97,
+              "end_index": 157,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 375, December 1971.",
+          "value": "Reprinted: Walt Disney's Comics No. 375, December 1971.",
+          "bbox": [
+            {
+              "h": 5.657743902439015,
+              "w": 118.79015625000002,
+              "x": 155.4262614329268,
+              "y": 248.95742378048783,
+              "confidence": 0.94,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**241 (21/1) - October 1960 - 36 pages**",
+          "value": "241 (21/1) - October 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.636341463414665,
+              "w": 86.34505335365851,
+              "x": 151.36213033536586,
+              "y": 260.76027439024386,
+              "confidence": 0.96,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The nephews share a single bandage for their aching jaws as they go to the dentist. (Apr. 18, 1960)",
+          "value": "Front cover (art only): The nephews share a single bandage for their aching jaws as they go to the dentist. (Apr. 18, 1960)",
+          "bbox": [
+            {
+              "h": 17.384222560975594,
+              "w": 126.27963795731709,
+              "x": 151.24726371951218,
+              "y": 266.1860213414634,
+              "confidence": 0.98,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Rocks to Riches - 10 - The ducks go hunting gem stones in the desert, equipped with a machine that tumbles and polishes the stones, and Scrooge shows up with some of his own gems to be polished. (Jan. 28, 1960)",
+          "value": "DONALD DUCK Rocks to Riches - 10 - The ducks go hunting gem stones in the desert, equipped with a machine that tumbles and polishes the stones, and Scrooge shows up with some of his own gems to be polished. (Jan. 28, 1960)",
+          "bbox": [
+            {
+              "h": 29.820274390243885,
+              "w": 126.11359756097559,
+              "x": 151.36410251524387,
+              "y": 283.9114253048781,
+              "confidence": 0.98,
+              "end_index": 221,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 455, August 1978.",
+          "value": "Reprinted: Walt Disney's Comics No. 455, August 1978.",
+          "bbox": [
+            {
+              "h": 10.653727134146319,
+              "w": 124.86450457317072,
+              "x": 151.60182736280487,
+              "y": 314.89445121951223,
+              "confidence": 0.97,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**242 (21/2) - November 1960 - 36 pages**",
+          "value": "242 (21/2) - November 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.602477134146374,
+              "w": 93.1589519817073,
+              "x": 151.94466082317072,
+              "y": 331.73583841463415,
+              "confidence": 0.96,
+              "end_index": 40,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: Policeman Donald gives the nephews' toy car a ticket at a stop light. (Feb. 26, 1960)",
+          "value": "Front cover: Policeman Donald gives the nephews' toy car a ticket at a stop light. (Feb. 26, 1960)",
+          "bbox": [
+            {
+              "h": 11.59065548780487,
+              "w": 125.99367187499996,
+              "x": 151.94159108231707,
+              "y": 337.4707317073171,
+              "confidence": 0.97,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n183",
+              "value": "Carl Barks and the Art of the Comic Book\n183",
+              "bbox": [
+                {
+                  "h": 5.04482469512197,
+                  "w": 77.90765625,
+                  "x": 174.3718788109756,
+                  "y": 363.90772865853654,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n183",
+          "bbox": [
+            {
+              "h": 5.04,
+              "w": 77.91,
+              "x": 174.37,
+              "y": 363.91,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "183"
+    }
+  ]
+}

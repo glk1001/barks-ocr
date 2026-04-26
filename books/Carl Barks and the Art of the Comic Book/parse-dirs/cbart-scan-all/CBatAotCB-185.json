@@ -1,0 +1,791 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "burg's dog ??? test of wits. *(Jan. 16, 1961)*",
+              "value": "burg's dog ??? test of wits. (Jan. 16, 1961)",
+              "bbox": [
+                {
+                  "h": 5.3527419969512176,
+                  "w": 86.42729003906248,
+                  "x": 11.442659465510669,
+                  "y": 17.305566882621953,
+                  "confidence": 0.78,
+                  "end_index": 45,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "burg's dog ??? test of wits. *(Jan. 16, 1961)*",
+          "bbox": [
+            {
+              "h": 5.35,
+              "w": 86.43,
+              "x": 11.44,
+              "y": 17.31,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 389, \\[February] 1973.",
+          "value": "Reprinted: Walt Disney's Comics No. 389, [February] 1973.",
+          "bbox": [
+            {
+              "h": 5.255343464176829,
+              "w": 118.0644187071265,
+              "x": 15.531517840129572,
+              "y": 23.5850204839939,
+              "confidence": 0.91,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 254 (22/2) - November 1961 - 36 pages",
+          "value": "254 (22/2) - November 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.590555449695123,
+              "w": 92.9528259575076,
+              "x": 11.539137647675304,
+              "y": 34.98466463414634,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Jet Witch - 10 - Donald, dressed as a witch and riding Gyro's jet stick, unintentionally disrupts Duckburg's Halloween pageant. *(Mar. 13, 1961)*",
+          "value": "DONALD DUCK Jet Witch - 10 - Donald, dressed as a witch and riding Gyro's jet stick, unintentionally disrupts Duckburg's Halloween pageant. (Mar. 13, 1961)",
+          "bbox": [
+            {
+              "h": 17.31398151676829,
+              "w": 125.9006589415015,
+              "x": 11.473185380144816,
+              "y": 40.965648818597565,
+              "confidence": 0.97,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 411, December 1974.",
+          "value": "Reprinted: Walt Disney's Comics No. 411, December 1974.",
+          "bbox": [
+            {
+              "h": 5.111558689024391,
+              "w": 118.26146948837652,
+              "x": 15.786327767721035,
+              "y": 59.125844131097566,
+              "confidence": 0.93,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 255 (22/3) - December 1961 - 36 pages",
+          "value": "255 (22/3) - December 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.501998856707319,
+              "w": 93.78283072122711,
+              "x": 11.832863829077743,
+              "y": 71.06444931402439,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Boat Buster - 10 - Scrooge and John D. Rockerduck enter boats in a river derby to see who manufactures the best gasoline, and Donald is the driver for Scrooge. *(Mar. 20, 1961)*",
+          "value": "DONALD DUCK Boat Buster - 10 - Scrooge and John D. Rockerduck enter boats in a river derby to see who manufactures the best gasoline, and Donald is the driver for Scrooge. (Mar. 20, 1961)",
+          "bbox": [
+            {
+              "h": 22.925596417682925,
+              "w": 125.31263636147102,
+              "x": 11.79348025438262,
+              "y": 76.84100419207317,
+              "confidence": 0.98,
+              "end_index": 188,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 403, April 1974.",
+          "value": "Reprinted: Walt Disney's Comics No. 403, April 1974.",
+          "bbox": [
+            {
+              "h": 5.252217987804883,
+              "w": 107.55933034012955,
+              "x": 17.071993973894816,
+              "y": 100.9161356707317,
+              "confidence": 0.87,
+              "end_index": 51,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 256 (22/4) - January 1962 - 36 pages",
+          "value": "256 (22/4) - January 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.594737042682928,
+              "w": 88.51535477801066,
+              "x": 12.438166563452743,
+              "y": 111.1158612804878,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): A Donald snowman seems to have thrown a snowball at Donald himself. *(Jan. 23, 1961)*\nThe same idea—but a different drawing—was used for the cover of Walt Disney's Comics No. 341, February 1969.",
+          "value": "Front cover (art only): A Donald snowman seems to have thrown a snowball at Donald himself. (Jan. 23, 1961)\nThe same idea—but a different drawing—was used for the cover of Walt Disney's Comics No. 341, February 1969.",
+          "bbox": [
+            {
+              "h": 23.08728658536584,
+              "w": 125.42342249428351,
+              "x": 12.065477086509144,
+              "y": 117.32841082317073,
+              "confidence": 0.98,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Northeaster on Cape Quack - 10 - Donald and the nephews, left in charge of a lighthouse, fight an evil pig character who wants the land on which the lighthouse stands. *(May 17, 1961)*",
+          "value": "DONALD DUCK Northeaster on Cape Quack - 10 - Donald and the nephews, left in charge of a lighthouse, fight an evil pig character who wants the land on which the lighthouse stands. (May 17, 1961)",
+          "bbox": [
+            {
+              "h": 23.232050304878058,
+              "w": 126.17603956269052,
+              "x": 11.740797327553352,
+              "y": 141.5703201219512,
+              "confidence": 0.98,
+              "end_index": 195,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 424, January 1976.",
+          "value": "Reprinted: Walt Disney's Comics No. 424, January 1976.",
+          "bbox": [
+            {
+              "h": 5.0373932926829275,
+              "w": 113.47438012099846,
+              "x": 15.974876738757619,
+              "y": 165.7411737804878,
+              "confidence": 0.88,
+              "end_index": 53,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 257 (22/5) - February 1962 - 36 pages",
+          "value": "257 (22/5) - February 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.497534298780492,
+              "w": 89.77405892721036,
+              "x": 10.773193359375,
+              "y": 177.79591463414633,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Movie Mad - 10 - Donald takes embarrassing movies of the nephews when they're forced to wear girls' clothes after getting theirs wet, and they respond in kind. *(June 5, 1961)*",
+          "value": "DONALD DUCK Movie Mad - 10 - Donald takes embarrassing movies of the nephews when they're forced to wear girls' clothes after getting theirs wet, and they respond in kind. (June 5, 1961)",
+          "bbox": [
+            {
+              "h": 22.9541387195122,
+              "w": 126.43799649866615,
+              "x": 10.721506169016768,
+              "y": 183.6082088414634,
+              "confidence": 0.98,
+              "end_index": 187,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 27, February 1971.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 27, February 1971.",
+          "bbox": [
+            {
+              "h": 5.281623475609767,
+              "w": 121.37173649485516,
+              "x": 15.630051805449694,
+              "y": 207.63459603658535,
+              "confidence": 0.89,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 258 (22/6) - March 1962 - 36 pages",
+          "value": "258 (22/6) - March 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.624908536585362,
+              "w": 82.36140756002285,
+              "x": 11.207483446074693,
+              "y": 219.21205792682926,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Ten-cent Valentine - 10 - Scrooge entrusts his old Number One Dime to Donald when Magica de Spell comes to take it. *(June 14, 1961)*",
+          "value": "DONALD DUCK Ten-cent Valentine - 10 - Scrooge entrusts his old Number One Dime to Donald when Magica de Spell comes to take it. (June 14, 1961)",
+          "bbox": [
+            {
+              "h": 17.35019817073171,
+              "w": 125.91762826314786,
+              "x": 11.186953482278962,
+              "y": 225.0700381097561,
+              "confidence": 0.98,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Showcase No. 30, July 1975; Walt Disney's Comics No. 402, March 1974.",
+          "value": "Reprinted: Walt Disney Showcase No. 30, July 1975; Walt Disney's Comics No. 402, March 1974.",
+          "bbox": [
+            {
+              "h": 11.056371951219534,
+              "w": 125.27986709222559,
+              "x": 11.290022389481706,
+              "y": 243.24505335365853,
+              "confidence": 0.97,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 259 (22/7) - April 1962 - 36 pages",
+          "value": "259 (22/7) - April 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.574923780487825,
+              "w": 78.7160409918064,
+              "x": 11.46863221703506,
+              "y": 260.7400152439024,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Jungle Bungle - 10 - Donald, an expert archer, is hired for an African expedition to capture a rare pink-eyed rhinoceros. *(Sept. 14, 1961)*",
+          "value": "DONALD DUCK Jungle Bungle - 10 - Donald, an expert archer, is hired for an African expedition to capture a rare pink-eyed rhinoceros. (Sept. 14, 1961)",
+          "bbox": [
+            {
+              "h": 17.508315548780466,
+              "w": 126.06880764100609,
+              "x": 11.540360613567072,
+              "y": 266.57364329268296,
+              "confidence": 0.98,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: In \"Jungle Bungle,\" the title panel was revised following office suggestions. In the original splash panel, one of the nephews is holding a stick with a prune on it and the other two are standing next to him. They call to Donald, \"All set, Unca Donald! See if you can shoot the PRUNE off this stick with your arrow!\" Donald, in panel front right, replies, \"Ha! A PRUNE! I could shoot a RAISIN at this easy distance!\" The panel was presumably revised because it is extremely unsafe as originally drawn. As revised with the nephews standing next to Donald as he aims at the stick, now stuck in the ground, there is no safety hazard.",
+          "value": "Weston: In \"Jungle Bungle,\" the title panel was revised following office suggestions. In the original splash panel, one of the nephews is holding a stick with a prune on it and the other two are standing next to him. They call to Donald, \"All set, Unca Donald! See if you can shoot the PRUNE off this stick with your arrow!\" Donald, in panel front right, replies, \"Ha! A PRUNE! I could shoot a RAISIN at this easy distance!\" The panel was presumably revised because it is extremely unsafe as originally drawn. As revised with the nephews standing next to Donald as he aims at the stick, now stuck in the ground, there is no safety hazard.",
+          "bbox": [
+            {
+              "h": 63.54971798780487,
+              "w": 126.21918421303351,
+              "x": 11.634997379954267,
+              "y": 284.6163338414634,
+              "confidence": 0.99,
+              "end_index": 637,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 405, June 1974.",
+          "value": "Reprinted: Walt Disney's Comics No. 405, June 1974.",
+          "bbox": [
+            {
+              "h": 5.242109851371953,
+              "w": 106.6214462652439,
+              "x": 153.7177362804878,
+              "y": 17.801487233231708,
+              "confidence": 0.83,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 260 (22/8) - May 1962 - 36 pages",
+          "value": "260 (22/8) - May 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.391413871951221,
+              "w": 76.55763910060973,
+              "x": 149.25064596036586,
+              "y": 29.468766196646342,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews tie a Scout knot in Donald's hose. *(Sept. 7, 1961)*",
+          "value": "Front cover (art only): The nephews tie a Scout knot in Donald's hose. (Sept. 7, 1961)",
+          "bbox": [
+            {
+              "h": 11.176414824695122,
+              "w": 125.89089557926829,
+              "x": 149.16302972560973,
+              "y": 35.14842987804878,
+              "confidence": 0.97,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Merry Ferry - 10 - The nephews try to drum up business for Donald's ferry, which suffers from competition. *(Sept. 19, 1961)*",
+          "value": "DONALD DUCK Merry Ferry - 10 - The nephews try to drum up business for Donald's ferry, which suffers from competition. (Sept. 19, 1961)",
+          "bbox": [
+            {
+              "h": 17.565000000000005,
+              "w": 126.02193407012194,
+              "x": 149.14409679878048,
+              "y": 46.961901676829264,
+              "confidence": 0.97,
+              "end_index": 136,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 425, February 1976.",
+          "value": "Reprinted: Walt Disney's Comics No. 425, February 1976.",
+          "bbox": [
+            {
+              "h": 5.349780868902449,
+              "w": 115.2046989329268,
+              "x": 153.7438033536585,
+              "y": 65.10344131097561,
+              "confidence": 0.86,
+              "end_index": 54,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 261 (22/9) - June 1962 - 36 pages",
+          "value": "261 (22/9) - June 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.574677972560971,
+              "w": 76.79032202743902,
+              "x": 149.52736852134146,
+              "y": 76.84575457317074,
+              "confidence": 0.97,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews, hiding in a log, eat Donald's picnic lunch. *(Apr. 21, 1961)*",
+          "value": "Front cover (art only): The nephews, hiding in a log, eat Donald's picnic lunch. (Apr. 21, 1961)",
+          "bbox": [
+            {
+              "h": 11.473850990853666,
+              "w": 125.86366234756095,
+              "x": 149.4055907012195,
+              "y": 82.56108612804879,
+              "confidence": 0.97,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Medaling Around - 10 - The Junior Woodchucks' Official Hound interferes with Donald's photographing of wild animals, so Donald tries to trick him with phony lion tracks. *(Nov. 16, 1961)*",
+          "value": "DONALD DUCK Medaling Around - 10 - The Junior Woodchucks' Official Hound interferes with Donald's photographing of wild animals, so Donald tries to trick him with phony lion tracks. (Nov. 16, 1961)",
+          "bbox": [
+            {
+              "h": 23.56539443597561,
+              "w": 126.20929115853657,
+              "x": 149.3562176067073,
+              "y": 94.28641577743903,
+              "confidence": 0.98,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Huey, Dewey and Louie Junior Woodchucks No. 23, November 1973.",
+          "value": "Reprinted: Huey, Dewey and Louie Junior Woodchucks No. 23, November 1973.",
+          "bbox": [
+            {
+              "h": 10.668978658536593,
+              "w": 125.85302972560976,
+              "x": 149.73125762195122,
+              "y": 118.31196265243902,
+              "confidence": 0.95,
+              "end_index": 72,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 262 (22/10) - July 1962 - 36 pages",
+          "value": "262 (22/10) - July 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.471810213414638,
+              "w": 78.46382812499999,
+              "x": 149.7059108231707,
+              "y": 135.98727896341464,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Way Out Yonder - 10 - While looking for gold nuggets and fossils in the West, the ducks are hired as drivers in a race for midget motorcycles through rugged country. *(Dec. 5, 1961)*",
+          "value": "DONALD DUCK Way Out Yonder - 10 - While looking for gold nuggets and fossils in the West, the ducks are hired as drivers in a race for midget motorcycles through rugged country. (Dec. 5, 1961)",
+          "bbox": [
+            {
+              "h": 23.23711509146342,
+              "w": 126.24005716463411,
+              "x": 149.50589748475608,
+              "y": 141.71127667682927,
+              "confidence": 0.98,
+              "end_index": 193,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 42, August 1973; Walt Disney's Comics No. 454, July 1978.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 42, August 1973; Walt Disney's Comics No. 454, July 1978.",
+          "bbox": [
+            {
+              "h": 11.086006097560958,
+              "w": 125.85772865853657,
+              "x": 149.97320121951216,
+              "y": 165.78904344512196,
+              "confidence": 0.96,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1/2 - Scrooge gives a dollar to a sobbing bum. *(Nov. 1, 1961)*",
+          "value": "UNCLE SCROOGE - 1/2 - Scrooge gives a dollar to a sobbing bum. (Nov. 1, 1961)",
+          "bbox": [
+            {
+              "h": 11.503399390243912,
+              "w": 126.04098704268293,
+              "x": 149.87275724085364,
+              "y": 177.42659679878048,
+              "confidence": 0.92,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 263 (22/11) - August 1962 - 36 pages",
+          "value": "263 (22/11) - August 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.52068597560974,
+              "w": 86.82739710365851,
+              "x": 150.1002267530488,
+              "y": 195.30411585365854,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK The Candy Kid - 10 - Donald sells ice cream, cotton candy and popcorn at the Duckburg World's Fair, in each case with messy results. *(Dec. 13, 1961)*",
+          "value": "DONALD DUCK The Candy Kid - 10 - Donald sells ice cream, cotton candy and popcorn at the Duckburg World's Fair, in each case with messy results. (Dec. 13, 1961)",
+          "bbox": [
+            {
+              "h": 17.451859756097566,
+              "w": 126.2386680640244,
+              "x": 149.780322027439,
+              "y": 200.98911585365855,
+              "confidence": 0.95,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"I dreamed up this story to feature Joe Cowles, a fan who was working on a popcorn machine at Disneyland.\"",
+          "value": "Barks: \"I dreamed up this story to feature Joe Cowles, a fan who was working on a popcorn machine at Disneyland.\"",
+          "bbox": [
+            {
+              "h": 11.180327743902435,
+              "w": 126.00713414634147,
+              "x": 150.07788109756095,
+              "y": 219.09009146341464,
+              "confidence": 0.92,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 458, November 1978.",
+          "value": "Reprinted: Walt Disney's Comics No. 458, November 1978.",
+          "bbox": [
+            {
+              "h": 5.397393292682927,
+              "w": 119.4246150914634,
+              "x": 154.40568407012194,
+              "y": 230.92778963414634,
+              "confidence": 0.89,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 264 (22/12) - September 1962 - 36 pages",
+          "value": "264 (22/12) - September 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.551486280487797,
+              "w": 96.06277248475608,
+              "x": 150.13572599085364,
+              "y": 242.57606707317075,
+              "confidence": 0.97,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Master Wrecker - 10 - When Donald, a fantastically skilled wrecker, demolishes an old fort, an angry gnat whose home was in the fort takes its revenge. *(Feb. 9, 1962)*",
+          "value": "DONALD DUCK Master Wrecker - 10 - When Donald, a fantastically skilled wrecker, demolishes an old fort, an angry gnat whose home was in the fort takes its revenge. (Feb. 9, 1962)",
+          "bbox": [
+            {
+              "h": 23.354474085365855,
+              "w": 126.14726181402438,
+              "x": 150.01537157012194,
+              "y": 248.23278201219512,
+              "confidence": 0.98,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In the seventh panel of the fourth page, Barks included a few bars of music; Matt Rosenblatt has pointed out that \"The first seven notes are 'Twinkle, twinkle, little star': the melody comes from a Haydn symphony. The last three notes are the ones that follow in the symphony, but not in 'Twinkle, twinkle little star.'\" Barks, questioned about this, replied, \"The music from Haydn's symphony must have been lifted from the book 'The art of enjoying music' by Sigmund Spaeth. I used the book for many references to musical forms and titles. Actually, I can't read a note.\" *(Nov. 22, 1968, letter to Michael Barrier)*",
+          "value": "In the seventh panel of the fourth page, Barks included a few bars of music; Matt Rosenblatt has pointed out that \"The first seven notes are 'Twinkle, twinkle, little star': the melody comes from a Haydn symphony. The last three notes are the ones that follow in the symphony, but not in 'Twinkle, twinkle little star.'\" Barks, questioned about this, replied, \"The music from Haydn's symphony must have been lifted from the book 'The art of enjoying music' by Sigmund Spaeth. I used the book for many references to musical forms and titles. Actually, I can't read a note.\" (Nov. 22, 1968, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 58.52467225609756,
+              "w": 126.22964748475609,
+              "x": 150.2809813262195,
+              "y": 272.3996798780488,
+              "confidence": 0.99,
+              "end_index": 616,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks credits the idea for this story to Joe Cowles (see note to \"The Candy Kid,\" Walt Disney's Comics No. 263, August 1962).\nReprinted: Walt Disney's Comics No. 426, March 1976.",
+          "value": "Barks credits the idea for this story to Joe Cowles (see note to \"The Candy Kid,\" Walt Disney's Comics No. 263, August 1962).\nReprinted: Walt Disney's Comics No. 426, March 1976.",
+          "bbox": [
+            {
+              "h": 16.921692073170725,
+              "w": 126.03549923780487,
+              "x": 150.5572237042683,
+              "y": 331.7622484756098,
+              "confidence": 0.97,
+              "end_index": 177,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n185",
+              "value": "Carl Barks and the Art of the Comic Book\n185",
+              "bbox": [
+                {
+                  "h": 4.518086890243939,
+                  "w": 77.84180259146342,
+                  "x": 173.46385289634145,
+                  "y": 364.335,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n185",
+          "bbox": [
+            {
+              "h": 4.52,
+              "w": 77.84,
+              "x": 173.46,
+              "y": 364.34,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "185"
+    }
+  ]
+}

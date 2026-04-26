@@ -1,0 +1,185 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "X.",
+          "md": "![X.](CBatAotCB-085_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-085_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 32.2158955792683,
+              "w": 44.2539500762195,
+              "x": 119.8525438262195,
+              "y": 49.09877286585366,
+              "confidence": 0.79,
+              "end_index": 27,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "**FOR ALL THE** millions of copies that his comic books sold, Barks was never paid exceptionally well, by industry standards. The most he ever received before his retirement in 1966 was forty-five dollars and fifty cents per page (eleven dollars and fifty cents for script and thirty-four dollars for drawings). He received some bonuses, but they were given to all employees; he was not singled out because of the quality or the high sales of his work.\\*",
+          "value": "FOR ALL THE millions of copies that his comic books sold, Barks was never paid exceptionally well, by industry standards. The most he ever received before his retirement in 1966 was forty-five dollars and fifty cents per page (eleven dollars and fifty cents for script and thirty-four dollars for drawings). He received some bonuses, but they were given to all employees; he was not singled out because of the quality or the high sales of his work.*",
+          "bbox": [
+            {
+              "h": 81.39440167682926,
+              "w": 126.63081995522101,
+              "x": 11.535043230754573,
+              "y": 118.63912728658538,
+              "confidence": 0.99,
+              "end_index": 453,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In 1974, Barks and I talked about this side of his life. I read to him a quotation from a piece that David Kunzle had written as an introduction to the English edition of a Chilean book called *How to Read Donald Duck*, a Marxist interpretation of the duck stories, including those by Barks.\\* Here is the transcript of that part of our interview.",
+          "value": "In 1974, Barks and I talked about this side of his life. I read to him a quotation from a piece that David Kunzle had written as an introduction to the English edition of a Chilean book called How to Read Donald Duck, a Marxist interpretation of the duck stories, including those by Barks.* Here is the transcript of that part of our interview.",
+          "bbox": [
+            {
+              "h": 59.21094512195124,
+              "w": 126.79275200076216,
+              "x": 11.311502000762193,
+              "y": 200.06625,
+              "confidence": 0.99,
+              "end_index": 346,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Barrier:* Kunzle had an interesting summary of how he saw your career: \"a man who never seemed to have time or money for a vacation, whose life was continuous and seemingly monotonous labor, paid piece-rate at a level which never permitted him to save, who never had and never sought an adventure, who never traveled abroad and little in the United States (only into the California and Oregon forests), who lived in other words, something of the life of the 'average' U.S. worker (a life presumably shared by the parents of many of his readers) — this man wrote ceaselessly about a world of constant leisure, where 'work' was defined as consumption, the exotic exploit, and fierce competition to avoid work, to which end wealth flowed freely from all quarters of the globe.\" \\[Barks laughed.] Do you see any resemblance to yourself in that description?",
+          "value": "Barrier: Kunzle had an interesting summary of how he saw your career: \"a man who never seemed to have time or money for a vacation, whose life was continuous and seemingly monotonous labor, paid piece-rate at a level which never permitted him to save, who never had and never sought an adventure, who never traveled abroad and little in the United States (only into the California and Oregon forests), who lived in other words, something of the life of the 'average' U.S. worker (a life presumably shared by the parents of many of his readers) — this man wrote ceaselessly about a world of constant leisure, where 'work' was defined as consumption, the exotic exploit, and fierce competition to avoid work, to which end wealth flowed freely from all quarters of the globe.\" [Barks laughed.] Do you see any resemblance to yourself in that description?",
+          "bbox": [
+            {
+              "h": 140.60801067073172,
+              "w": 126.67290777439023,
+              "x": 149.80314786585365,
+              "y": 118.27015243902439,
+              "confidence": 0.99,
+              "end_index": 852,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Barks:* Oh, heavens, yes. Yeah, that's too true to be funny.",
+          "value": "Barks: Oh, heavens, yes. Yeah, that's too true to be funny.",
+          "bbox": [
+            {
+              "h": 15.037545731707304,
+              "w": 125.93971989329269,
+              "x": 150.40533155487802,
+              "y": 258.2584756097561,
+              "confidence": 0.97,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\*Circulation figures were published in the Disney comic books starting in 1960. At that time, both *Walt Disney's Comics* and *Uncle Scrooge* were still selling more than one million copies per issue. In a 1968 interview in the fan magazine *Vanguard*, George Sherman, then the head of the Disney publications department, said that *Walt Disney's Comics* had reached its peak circulation in 1953, when the September issue sold more than three million copies. According to Tom Golberg of the publications department, neither Disney nor Western any longer has such early circulation figures on file.",
+          "value": "*Circulation figures were published in the Disney comic books starting in 1960. At that time, both Walt Disney's Comics and Uncle Scrooge were still selling more than one million copies per issue. In a 1968 interview in the fan magazine Vanguard, George Sherman, then the head of the Disney publications department, said that Walt Disney's Comics had reached its peak circulation in 1953, when the September issue sold more than three million copies. According to Tom Golberg of the publications department, neither Disney nor Western any longer has such early circulation figures on file.",
+          "bbox": [
+            {
+              "h": 54.488163109756115,
+              "w": 126.19904011051825,
+              "x": 12.247044112042683,
+              "y": 272.8126600609756,
+              "confidence": 0.92,
+              "end_index": 597,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks became an employee of Western in the fifties, he thinks in 1958. He continued to be paid page rates, but his earnings per page were credited against his salary every month until the amount of his salary had been exceeded. He could then draw the excess whenever he wished.",
+          "value": "Barks became an employee of Western in the fifties, he thinks in 1958. He continued to be paid page rates, but his earnings per page were credited against his salary every month until the amount of his salary had been exceeded. He could then draw the excess whenever he wished.",
+          "bbox": [
+            {
+              "h": 26.83141006097565,
+              "w": 126.43733624714177,
+              "x": 12.668767983041157,
+              "y": 327.07984756097557,
+              "confidence": 0.87,
+              "end_index": 276,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\*When the book (*How to Read Donald Duck: Imperialist Ideology in the Disney Comic*, by Ariel Dorfman and Armand Mattelart. Translation and introduction by David Kunzle. New York: International General, 1975) was published, most of the references to Barks in Kunzle's introduction had been deleted, including the quoted passage. The book was printed in Great Britain; its importation into the United States was temporarily barred by the U.S. Customs Service on the ground of probable violation of Disney copyrights. A full account of the case, by John Shelton Lawrence, has been published in an anthology titled *Fair Use and Free Inquiry: Copyright Law and the New Media* (John Shelton Lawrence and Bernard Timberg, editors. Norwood, N.J.: Ablex Publishing Corporation, 1980).",
+          "value": "*When the book (How to Read Donald Duck: Imperialist Ideology in the Disney Comic, by Ariel Dorfman and Armand Mattelart. Translation and introduction by David Kunzle. New York: International General, 1975) was published, most of the references to Barks in Kunzle's introduction had been deleted, including the quoted passage. The book was printed in Great Britain; its importation into the United States was temporarily barred by the U.S. Customs Service on the ground of probable violation of Disney copyrights. A full account of the case, by John Shelton Lawrence, has been published in an anthology titled Fair Use and Free Inquiry: Copyright Law and the New Media (John Shelton Lawrence and Bernard Timberg, editors. Norwood, N.J.: Ablex Publishing Corporation, 1980).",
+          "bbox": [
+            {
+              "h": 11.26676067073171,
+              "w": 125.59126143292681,
+              "x": 148.96790396341464,
+              "y": 282.40634908536583,
+              "confidence": 0.82,
+              "end_index": 777,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "85\nCarl Barks and the Art of the Comic Book",
+              "value": "85\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.760365853658495,
+                  "w": 80.10406440548782,
+                  "x": 173.00558689024388,
+                  "y": 365.48851371951224,
+                  "confidence": 0.93,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "85\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.76,
+              "w": 80.1,
+              "x": 173.01,
+              "y": 365.49,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "85"
+    }
+  ]
+}

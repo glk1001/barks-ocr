@@ -1,0 +1,628 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "unbroken through pages 6 and 7 (8 and 9 originally) up to panel 1 of page 8. The next nine panels (originally numbered as page 10 and the first two panels of page 11) are dropped and replaced by panel 2 of page 8, a panel added to make up for the nine panels dropped. The result is another page eliminated from the story length. In this eliminated page, the kids locate Donald and Scrooge behind a pillar, and still in the mine cart, which is looping around inside the arch. The kids suggest that they yank off a sideboard and use it to jam the wheels as a brake (as the nephews had done on published page 5). Donald asks, \"How come WE don't get any ideas like this?\" Scrooge answers, \"Don't ask me! I only know how to make money!\" The idea works fine, but unfortunately, the car stops at the top of the loop.",
+          "value": "unbroken through pages 6 and 7 (8 and 9 originally) up to panel 1 of page 8. The next nine panels (originally numbered as page 10 and the first two panels of page 11) are dropped and replaced by panel 2 of page 8, a panel added to make up for the nine panels dropped. The result is another page eliminated from the story length. In this eliminated page, the kids locate Donald and Scrooge behind a pillar, and still in the mine cart, which is looping around inside the arch. The kids suggest that they yank off a sideboard and use it to jam the wheels as a brake (as the nephews had done on published page 5). Donald asks, \"How come WE don't get any ideas like this?\" Scrooge answers, \"Don't ask me! I only know how to make money!\" The idea works fine, but unfortunately, the car stops at the top of the loop.",
+          "bbox": [
+            {
+              "h": 73.58655154344513,
+              "w": 125.74906154725608,
+              "x": 11.438849085365852,
+              "y": 15.956354325457319,
+              "confidence": 0.99,
+              "end_index": 808,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The story picks up with panel 3 of page 8 and appears to be intact up through page 20. On pages 21 and 22 there appears to be evidence of more cuts (misaligned panels are the usual evidence). So the final two pages of cuts were probably made between the end of page 20 and the beginning of page 23, though it is possible that a page was dropped somewhere else between pages 9 and 27. However only two panels of these two suspected pages are known to exist. In the first panel, Donald says, \"More speed! It's growing PITCH DARK up here! We can't be FAR from the shaft!\" and in the second, two Terry Fermians shout, \"PUSH, YOU FERMIES! RAH! RAH! RAH!\" \"ROLL, YOU TERRIES! CHA! CHA! CHA!\" This seems to fit with the top half of page 21.",
+          "value": "The story picks up with panel 3 of page 8 and appears to be intact up through page 20. On pages 21 and 22 there appears to be evidence of more cuts (misaligned panels are the usual evidence). So the final two pages of cuts were probably made between the end of page 20 and the beginning of page 23, though it is possible that a page was dropped somewhere else between pages 9 and 27. However only two panels of these two suspected pages are known to exist. In the first panel, Donald says, \"More speed! It's growing PITCH DARK up here! We can't be FAR from the shaft!\" and in the second, two Terry Fermians shout, \"PUSH, YOU FERMIES! RAH! RAH! RAH!\" \"ROLL, YOU TERRIES! CHA! CHA! CHA!\" This seems to fit with the top half of page 21.",
+          "bbox": [
+            {
+              "h": 68.6789462652439,
+              "w": 125.74935308689022,
+              "x": 11.249476943597559,
+              "y": 89.8742206554878,
+              "confidence": 0.99,
+              "end_index": 732,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The five pages were cut, presumably, to make room for the text page and the four-page Gyro story.",
+          "value": "The five pages were cut, presumably, to make room for the text page and the four-page Gyro story.",
+          "bbox": [
+            {
+              "h": 10.877995426829274,
+              "w": 125.44978753810973,
+              "x": 11.135622141768291,
+              "y": 158.98417682926828,
+              "confidence": 0.95,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\[In the 1974 interview, Barks discussed this story: \"I cut quite a number of pages out, myself. ... I can't recall whether they sent it back to me or whether they notified me while I was still working on it, and told me that instead of a thirty-two-page story they were going to have twenty-seven pages. ... I cut out the stuff that I considered sort of padding. ... It was stuff that wasn't absolutely necessary to the continuity of the story. ... They were good enough gags to keep the story moving.\"",
+          "value": "[In the 1974 interview, Barks discussed this story: \"I cut quite a number of pages out, myself. ... I can't recall whether they sent it back to me or whether they notified me while I was still working on it, and told me that instead of a thirty-two-page story they were going to have twenty-seven pages. ... I cut out the stuff that I considered sort of padding. ... It was stuff that wasn't absolutely necessary to the continuity of the story. ... They were good enough gags to keep the story moving.\"",
+          "bbox": [
+            {
+              "h": 45.17285442073171,
+              "w": 125.93200266768292,
+              "x": 11.09188262195122,
+              "y": 170.23590320121951,
+              "confidence": 0.99,
+              "end_index": 502,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\[The half page referred to as \"7 (top)\" by Kim Weston has been published in the Finnish Donald Duck comic book, *Aku Ankka* No. 7, February 18, 1976.]",
+          "value": "[The half page referred to as \"7 (top)\" by Kim Weston has been published in the Finnish Donald Duck comic book, Aku Ankka No. 7, February 18, 1976.]",
+          "bbox": [
+            {
+              "h": 16.557484756097566,
+              "w": 125.68136111375763,
+              "x": 11.077214534108231,
+              "y": 215.47966463414633,
+              "confidence": 0.96,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 109, December 1973.",
+          "value": "Reprinted: Uncle Scrooge No. 109, December 1973.",
+          "bbox": [
+            {
+              "h": 5.271173780487797,
+              "w": 101.88894662252285,
+              "x": 15.680850443025912,
+              "y": 232.81856707317075,
+              "confidence": 0.92,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE - 4 - Gyro traps lightning, but finds it too powerful to be used as electric power. *(Sept. 1, 1955)*",
+          "value": "GYRO GEARLOOSE - 4 - Gyro traps lightning, but finds it too powerful to be used as electric power. (Sept. 1, 1955)",
+          "bbox": [
+            {
+              "h": 11.521760670731709,
+              "w": 125.27230849847562,
+              "x": 11.232970655487804,
+              "y": 238.33147865853658,
+              "confidence": 0.91,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"The four-page Gyro stories for Uncle S. #13 and #14 were sent back to me for changes. In the #13 story, I'd used the nephews. Because of postal mailing laws, no characters used in other parts of the book could be used in a Gyro story. Hence the change to Mickey's nephews. The character 'Speedy' in #14 was originally Donald.\"",
+          "value": "Barks: \"The four-page Gyro stories for Uncle S. #13 and #14 were sent back to me for changes. In the #13 story, I'd used the nephews. Because of postal mailing laws, no characters used in other parts of the book could be used in a Gyro story. Hence the change to Mickey's nephews. The character 'Speedy' in #14 was originally Donald.\"",
+          "bbox": [
+            {
+              "h": 33.79596036585368,
+              "w": 125.6262558355564,
+              "x": 11.055447670541158,
+              "y": 249.89474085365853,
+              "confidence": 0.97,
+              "end_index": 333,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge makes sure spring has arrived before changing hats. *(Sept. 1, 1955)*\nUNCLE SCROOGE - 7/8 (back cover) - Scrooge, \"mushing\" through the far North, decides to eat mush, as well. *(Sept. 1, 1955)*",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge makes sure spring has arrived before changing hats. (Sept. 1, 1955)\nUNCLE SCROOGE - 7/8 (back cover) - Scrooge, \"mushing\" through the far North, decides to eat mush, as well. (Sept. 1, 1955)",
+          "bbox": [
+            {
+              "h": 27.638003048780465,
+              "w": 125.80854742282773,
+              "x": 10.974629025342987,
+              "y": 284.14442835365855,
+              "confidence": 0.88,
+              "end_index": 241,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Dell Pledge fills out the page.",
+          "value": "The Dell Pledge fills out the page.",
+          "bbox": [
+            {
+              "h": 5.3480030487805195,
+              "w": 67.99069979039633,
+              "x": 15.86813786204268,
+              "y": 312.6271875,
+              "confidence": 0.95,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 14 - June-Aug. 1956 - 36 pages",
+          "value": "14 - June-Aug. 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5307926829268395,
+              "w": 73.75535692168444,
+              "x": 11.09909715605945,
+              "y": 324.0241692073171,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge cuts cookies with a dollar-sign cutter. *(Dec. 8, 1955)*",
+          "value": "Front cover: Scrooge cuts cookies with a dollar-sign cutter. (Dec. 8, 1955)",
+          "bbox": [
+            {
+              "h": 10.910121951219534,
+              "w": 125.42051888814785,
+              "x": 11.112405082888719,
+              "y": 329.7220426829268,
+              "confidence": 0.95,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 100, August 1972; No. 146, November 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 100, August 1972; No. 146, November 1977.",
+          "bbox": [
+            {
+              "h": 10.020914634146374,
+              "w": 125.42296910727897,
+              "x": 10.99582567168445,
+              "y": 341.41781249999997,
+              "confidence": 0.95,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge suffers stomach pains from Grandma Duck's expensive meal. *(Feb. 24, 1955)*",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge suffers stomach pains from Grandma Duck's expensive meal. (Feb. 24, 1955)",
+          "bbox": [
+            {
+              "h": 16.75861995045732,
+              "w": 125.49188071646341,
+              "x": 150.4158955792683,
+              "y": 16.038619950457317,
+              "confidence": 0.98,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page was apparently intended for the inside front cover of Uncle Scrooge No. 11, Sept.-Nov. 1955 (it was accepted on the same date as the other three covers for that issue), but was displaced by a full-page presentation of the Dell Pledge to Parents.",
+          "value": "This page was apparently intended for the inside front cover of Uncle Scrooge No. 11, Sept.-Nov. 1955 (it was accepted on the same date as the other three covers for that issue), but was displaced by a full-page presentation of the Dell Pledge to Parents.",
+          "bbox": [
+            {
+              "h": 27.582170350609754,
+              "w": 125.6115320121951,
+              "x": 150.2993140243902,
+              "y": 33.860567835365856,
+              "confidence": 0.98,
+              "end_index": 254,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE \"The Lost Crown of Genghis Khan!\" - 19 - The lost crown of Genghis Khan, found in Asia by Scrooge's agents, is stolen from a yak train in the Hindu Kush Mountains, and Scrooge, Donald, and the nephews go to Asia to recover it. There they find that the crown has been stolen by \"Gu\" the Abominable Snowman, a weak-minded giant who is fascinated by the ticking of Scrooge's watch. *(Nov. 3, 1955)*",
+          "value": "UNCLE SCROOGE \"The Lost Crown of Genghis Khan!\" - 19 - The lost crown of Genghis Khan, found in Asia by Scrooge's agents, is stolen from a yak train in the Hindu Kush Mountains, and Scrooge, Donald, and the nephews go to Asia to recover it. There they find that the crown has been stolen by \"Gu\" the Abominable Snowman, a weak-minded giant who is fascinated by the ticking of Scrooge's watch. (Nov. 3, 1955)",
+          "bbox": [
+            {
+              "h": 44.31903201219513,
+              "w": 125.7748113567073,
+              "x": 150.25006097560973,
+              "y": 62.25786585365854,
+              "confidence": 0.98,
+              "end_index": 408,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 84, December 1969.",
+          "value": "Reprinted: Uncle Scrooge No. 84, December 1969.",
+          "bbox": [
+            {
+              "h": 5.268772865853666,
+              "w": 99.08669016768292,
+              "x": 155.22348704268293,
+              "y": 108.1575,
+              "confidence": 0.9,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE - 4 - Gyro has to contend with his obnoxious neighbor while trying to invent a super-speed gasoline for Speedy, a racing driver. *(Oct. 1, 1955)*",
+          "value": "GYRO GEARLOOSE - 4 - Gyro has to contend with his obnoxious neighbor while trying to invent a super-speed gasoline for Speedy, a racing driver. (Oct. 1, 1955)",
+          "bbox": [
+            {
+              "h": 17.38601753048781,
+              "w": 125.8431688262195,
+              "x": 150.22613757621951,
+              "y": 113.65487423780488,
+              "confidence": 0.94,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "See note to \"GYRO GEARLOOSE\" in Uncle Scrooge No. 13, Mar.-May 1956.",
+          "value": "See note to \"GYRO GEARLOOSE\" in Uncle Scrooge No. 13, Mar.-May 1956.",
+          "bbox": [
+            {
+              "h": 10.355099085365854,
+              "w": 125.66989138719512,
+              "x": 150.401112804878,
+              "y": 131.39207698170733,
+              "confidence": 0.94,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 7 3/4 - Scrooge gets a deed to an inch of Texas land in a cereal box, and sends the nephews out to buy all the cereal when it appears that there's oil on the land. *(Nov. 17, 1955)*",
+          "value": "UNCLE SCROOGE - 7 3/4 - Scrooge gets a deed to an inch of Texas land in a cereal box, and sends the nephews out to buy all the cereal when it appears that there's oil on the land. (Nov. 17, 1955)",
+          "bbox": [
+            {
+              "h": 22.487183689024405,
+              "w": 125.81734184451217,
+              "x": 150.39303544207314,
+              "y": 142.50421875,
+              "confidence": 0.97,
+              "end_index": 196,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "An advertisement fills out the page.",
+          "value": "An advertisement fills out the page.",
+          "bbox": [
+            {
+              "h": 5.55388719512197,
+              "w": 71.83771532012194,
+              "x": 155.03717606707315,
+              "y": 165.8198094512195,
+              "confidence": 0.91,
+              "end_index": 35,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge pans gold on the beach — but only to sell gold pans. *(Dec. 8, 1955)*\nUNCLE SCROOGE - 7/8 (back cover) - Scrooge uses fireflies instead of electric lights. *(Dec. 8, 1955)*",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge pans gold on the beach — but only to sell gold pans. (Dec. 8, 1955)\nUNCLE SCROOGE - 7/8 (back cover) - Scrooge uses fireflies instead of electric lights. (Dec. 8, 1955)",
+          "bbox": [
+            {
+              "h": 22.77387576219513,
+              "w": 125.9974961890244,
+              "x": 150.07024961890244,
+              "y": 171.60517911585364,
+              "confidence": 0.94,
+              "end_index": 219,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Dell Pledge fills out the page.",
+          "value": "The Dell Pledge fills out the page.",
+          "bbox": [
+            {
+              "h": 5.403315548780465,
+              "w": 67.62026867378049,
+              "x": 155.08061547256096,
+              "y": 194.55555640243904,
+              "confidence": 0.9,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 15 - Sept.-Nov. 1956 - 36 pages",
+          "value": "15 - Sept.-Nov. 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.587705792682927,
+              "w": 74.10659679878049,
+              "x": 150.3651333841463,
+              "y": 208.83361280487804,
+              "confidence": 0.95,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge \"cans\" coins. *(Sept. 15, 1955)*",
+          "value": "Front cover: Scrooge \"cans\" coins. (Sept. 15, 1955)",
+          "bbox": [
+            {
+              "h": 11.098216463414637,
+              "w": 104.65159870426831,
+              "x": 155.06953696646337,
+              "y": 214.64686737804877,
+              "confidence": 0.84,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 89, October 1970.",
+          "value": "Reprinted: Uncle Scrooge No. 89, October 1970.",
+          "bbox": [
+            {
+              "h": 5.303689024390232,
+              "w": 95.1626695884146,
+              "x": 155.18935975609756,
+              "y": 220.54349085365854,
+              "confidence": 0.79,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge is \"sculpted\" in mud by the great Buffo. *(Feb. 23, 1956)*",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge is \"sculpted\" in mud by the great Buffo. (Feb. 23, 1956)",
+          "bbox": [
+            {
+              "h": 11.222515243902434,
+              "w": 125.81205983231705,
+              "x": 150.16932164634144,
+              "y": 226.04611280487805,
+              "confidence": 0.92,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in \"The Second-richest Duck\" - 20 - Scrooge goes to South Africa to match his wealth against that of Flintheart Glomgold, proclaimed to be the richest duck in the world. After comparing their wealth, Scrooge and Flintheart find that the title of richest duck hangs on who has saved the largest ball of string. They roll their string across open African country to determine whose roll is the longest. *(Feb. 2, 1956)*",
+          "value": "UNCLE SCROOGE in \"The Second-richest Duck\" - 20 - Scrooge goes to South Africa to match his wealth against that of Flintheart Glomgold, proclaimed to be the richest duck in the world. After comparing their wealth, Scrooge and Flintheart find that the title of richest duck hangs on who has saved the largest ball of string. They roll their string across open African country to determine whose roll is the longest. (Feb. 2, 1956)",
+          "bbox": [
+            {
+              "h": 46.32496189024391,
+              "w": 125.67409298780484,
+              "x": 150.26117378048778,
+              "y": 237.33567073170732,
+              "confidence": 0.97,
+              "end_index": 430,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First appearance of Flintheart Glomgold.",
+          "value": "First appearance of Flintheart Glomgold.",
+          "bbox": [
+            {
+              "h": 5.339862804878084,
+              "w": 80.88732850609756,
+              "x": 155.0423894817073,
+              "y": 283.85865091463415,
+              "confidence": 0.85,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 89, October 1970.",
+          "value": "Reprinted: Uncle Scrooge No. 89, October 1970.",
+          "bbox": [
+            {
+              "h": 5.199855182926839,
+              "w": 94.91628429878047,
+              "x": 155.41480564024388,
+              "y": 289.84271341463415,
+              "confidence": 0.82,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE - 4 - Gyro invents a machine to translate the howling of the cats on his fence. *(Feb. 9, 1956)*\nFirst appearance of Gyro's \"helper,\" a tiny metal figure with a light bulb for a head.",
+          "value": "GYRO GEARLOOSE - 4 - Gyro invents a machine to translate the howling of the cats on his fence. (Feb. 9, 1956)\nFirst appearance of Gyro's \"helper,\" a tiny metal figure with a light bulb for a head.",
+          "bbox": [
+            {
+              "h": 22.218704268292694,
+              "w": 125.71624618902437,
+              "x": 150.2533193597561,
+              "y": 295.2782240853658,
+              "confidence": 0.95,
+              "end_index": 197,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 6 3/4 - Scrooge, told his money bin is in the way of a new turnpike, moves it first to a valley and then to a hilltop, but can't escape \"progress.\" *(Feb. 9, 1956)*",
+          "value": "UNCLE SCROOGE - 6 3/4 - Scrooge, told his money bin is in the way of a new turnpike, moves it first to a valley and then to a hilltop, but can't escape \"progress.\" (Feb. 9, 1956)",
+          "bbox": [
+            {
+              "h": 17.44628048780487,
+              "w": 125.47773246951218,
+              "x": 150.40166158536584,
+              "y": 318.11115091463415,
+              "confidence": 0.95,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "An advertisement fills out the seventh page.",
+          "value": "An advertisement fills out the seventh page.",
+          "bbox": [
+            {
+              "h": 5.20463414634145,
+              "w": 88.42261623475608,
+              "x": 155.17003239329267,
+              "y": 335.75645579268297,
+              "confidence": 0.88,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge and Donald sneak into a concert. *(Feb. 23, 1956)*",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge and Donald sneak into a concert. (Feb. 23, 1956)",
+          "bbox": [
+            {
+              "h": 11.116189024390259,
+              "w": 125.62869855182925,
+              "x": 150.32774771341462,
+              "y": 341.0367987804878,
+              "confidence": 0.94,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "140 Carl Barks and the Art of the Comic Book",
+              "value": "140 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.385396341463419,
+                  "w": 77.63653296493901,
+                  "x": 36.56055354420731,
+                  "y": 363.4781707317073,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "140 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.39,
+              "w": 77.64,
+              "x": 36.56,
+              "y": 363.48,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "140"
+    }
+  ]
+}

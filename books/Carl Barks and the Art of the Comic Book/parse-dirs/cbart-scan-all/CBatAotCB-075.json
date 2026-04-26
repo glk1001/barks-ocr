@@ -1,0 +1,116 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "and he soon has the deadbeat at his mercy.",
+          "value": "and he soon has the deadbeat at his mercy.",
+          "bbox": [
+            {
+              "h": 7.840318216463414,
+              "w": 118.19617425685975,
+              "x": 11.882739615091461,
+              "y": 12.388243616615853,
+              "confidence": 0.92,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Shortly afterward, Donald meets the nephews on the bridge, a sack of money over his shoulder and the gun in his hand. The nephews ask where Donald got the money, and he replies that Uncle Scrooge has given it to him as a reward for collecting the debt — \"so *he says!*\" Looking crafty, Donald says, \"But he isn't fooling me. He must have dreamed that while I had him hypnotized with this gun.\" Hurling the gun into the river as the nephews gape, he tells them sternly: \"Which just goes to show what that thing will do to somebody",
+          "value": "Shortly afterward, Donald meets the nephews on the bridge, a sack of money over his shoulder and the gun in his hand. The nephews ask where Donald got the money, and he replies that Uncle Scrooge has given it to him as a reward for collecting the debt — \"so he says!\" Looking crafty, Donald says, \"But he isn't fooling me. He must have dreamed that while I had him hypnotized with this gun.\" Hurling the gun into the river as the nephews gape, he tells them sternly: \"Which just goes to show what that thing will do to somebody",
+          "bbox": [
+            {
+              "h": 88.7214500762195,
+              "w": 126.09946431974085,
+              "x": 11.999524818978657,
+              "y": 20.484026295731706,
+              "confidence": 0.99,
+              "end_index": 528,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "with a gullible mind!\"",
+          "value": "with a gullible mind!\"",
+          "bbox": [
+            {
+              "h": 7.7915439214939015,
+              "w": 60.15553353658536,
+              "x": 150.4248475609756,
+              "y": 11.90146103277439,
+              "confidence": 0.92,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In a way, this is a disturbing story. Donald can be regarded as a monstrous hypocrite, committing an evil deed and condemning it in almost the same instant. But Donald isn't evil, only \"gullible\" — he simply hasn't noticed that there is a vast discrepancy between what he says and what he does. As in many of Barks's best stories, Donald is not simply a \"little man\" who invites us to sympathize and identify with him; he is a master of self-deception, and this is his burden and his glory.",
+          "value": "In a way, this is a disturbing story. Donald can be regarded as a monstrous hypocrite, committing an evil deed and condemning it in almost the same instant. But Donald isn't evil, only \"gullible\" — he simply hasn't noticed that there is a vast discrepancy between what he says and what he does. As in many of Barks's best stories, Donald is not simply a \"little man\" who invites us to sympathize and identify with him; he is a master of self-deception, and this is his burden and his glory.",
+          "bbox": [
+            {
+              "h": 90.18521627286586,
+              "w": 125.9333574695122,
+              "x": 150.83936547256096,
+              "y": 19.066529153963415,
+              "confidence": 0.99,
+              "end_index": 489,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n75",
+              "value": "Carl Barks and the Art of the Comic Book\n75",
+              "bbox": [
+                {
+                  "h": 5.04203506097565,
+                  "w": 80.14107278963417,
+                  "x": 173.7972713414634,
+                  "y": 366.36960365853656,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n75",
+          "bbox": [
+            {
+              "h": 5.04,
+              "w": 80.14,
+              "x": 173.8,
+              "y": 366.37,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "75"
+    }
+  ]
+}

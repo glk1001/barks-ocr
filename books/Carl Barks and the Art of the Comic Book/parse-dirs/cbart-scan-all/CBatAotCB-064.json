@@ -1,0 +1,151 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# VII.",
+          "value": "VII.",
+          "bbox": [
+            {
+              "h": 27.537244664634144,
+              "w": 70.5678972942073,
+              "x": 109.14773151676829,
+              "y": 50.759268292682926,
+              "confidence": 0.88,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**AS THE NEW** supporting characters grew in importance, the old formula for the ten-page stories in *Walt Disney's Comics*, which had Donald and the nephews battling in almost every issue, slowly died. It was almost parodied in some stories, before it slid out of sight completely. In the May 1948 *Walt Disney's Comics*, a wild caricature of a child psychologist, Professor Pulpheart Clabberhead — \"the friend of all children\" — persuades Donald to let the nephews do whatever they please. (He talks this way: \"Stifling the child's extrovertentualities tends to subjunctuate his bio-physical transmogrification.\") The results are, of course, disastrous, but in the end it's the psychologist, and not Donald, who is chasing the nephews with switch in hand. Just a year or two earlier, it would have been Donald in hot pursuit — and was, in one highly similar story in the January 1946 *Walt Disney's Comics*.",
+          "value": "AS THE NEW supporting characters grew in importance, the old formula for the ten-page stories in Walt Disney's Comics, which had Donald and the nephews battling in almost every issue, slowly died. It was almost parodied in some stories, before it slid out of sight completely. In the May 1948 Walt Disney's Comics, a wild caricature of a child psychologist, Professor Pulpheart Clabberhead — \"the friend of all children\" — persuades Donald to let the nephews do whatever they please. (He talks this way: \"Stifling the child's extrovertentualities tends to subjunctuate his bio-physical transmogrification.\") The results are, of course, disastrous, but in the end it's the psychologist, and not Donald, who is chasing the nephews with switch in hand. Just a year or two earlier, it would have been Donald in hot pursuit — and was, in one highly similar story in the January 1946 Walt Disney's Comics.",
+          "bbox": [
+            {
+              "h": 148.06288490853663,
+              "w": 125.6882165825076,
+              "x": 13.239516839748473,
+              "y": 118.88271722560975,
+              "confidence": 0.99,
+              "end_index": 908,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In the August 1949 issue, Donald comes on stage breathing fire about the nephews' reading habits, which include regular devourings of the adventures of a comic-book superhero, Super Snooper. But, at the end, it's the nephews who decide Donald's strange behavior has been caused by their comic books. \"Kids should know better than to leave fantastic stories lying around where their parents can read them,\" one of the nephews says indignantly as he hurls the latest issue of Super Snooper into the trashcan.",
+          "value": "In the August 1949 issue, Donald comes on stage breathing fire about the nephews' reading habits, which include regular devourings of the adventures of a comic-book superhero, Super Snooper. But, at the end, it's the nephews who decide Donald's strange behavior has been caused by their comic books. \"Kids should know better than to leave fantastic stories lying around where their parents can read them,\" one of the nephews says indignantly as he hurls the latest issue of Super Snooper into the trashcan.",
+          "bbox": [
+            {
+              "h": 88.111875,
+              "w": 126.30339093464174,
+              "x": 13.50383181688262,
+              "y": 267.68759908536583,
+              "confidence": 0.98,
+              "end_index": 505,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "It is in the longer stories of the later forties and early fifties that the changes in Barks's approach can best be seen. A few of the ten-page stories probably are Barks's finest work, but it is always the longer stories that show most clearly what is going on at any one time.",
+          "value": "It is in the longer stories of the later forties and early fifties that the changes in Barks's approach can best be seen. A few of the ten-page stories probably are Barks's finest work, but it is always the longer stories that show most clearly what is going on at any one time.",
+          "bbox": [
+            {
+              "h": 43.92064024390245,
+              "w": 125.51757050304877,
+              "x": 149.26448551829267,
+              "y": 118.91380335365854,
+              "confidence": 0.97,
+              "end_index": 277,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The principal change in the longer stories in the late forties was a new emphasis on comedy. Comedy wasn't absent from the earlier stories, of course, but there rarely was the blend of comedy and adventure that came to characterize the longer stories later. There are a few stories in the early one-shots that are primarily humorous, but they are like longer ten-page stories, for the most part, with the same emphasis on gags and, usually, the conflict between Donald and the nephews. \"Volcano Valley\" (1947), for example, although it's set in Latin America, is just like those few stories in the early issues of *Walt Disney's Comics* in which Donald and the nephews are not at one another's throats.",
+          "value": "The principal change in the longer stories in the late forties was a new emphasis on comedy. Comedy wasn't absent from the earlier stories, of course, but there rarely was the blend of comedy and adventure that came to characterize the longer stories later. There are a few stories in the early one-shots that are primarily humorous, but they are like longer ten-page stories, for the most part, with the same emphasis on gags and, usually, the conflict between Donald and the nephews. \"Volcano Valley\" (1947), for example, although it's set in Latin America, is just like those few stories in the early issues of Walt Disney's Comics in which Donald and the nephews are not at one another's throats.",
+          "bbox": [
+            {
+              "h": 117.00577362804876,
+              "w": 126.29865663109753,
+              "x": 149.31704839939022,
+              "y": 163.31719893292683,
+              "confidence": 0.99,
+              "end_index": 701,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Mystery of the Swamp\" (1944), the story that fills out the \"Frozen Gold\" one-shot, is something else again. It is built in some ways like the other stories of that time — the nephews rescue Donald — but it is not cast in the gags-adventure-gags mold. The difference is the menace involved — not a sneering psychopath or fierce savages this time, but the Gneezles, squatty little goblins who dress and talk like wool-hatted crackers, have names",
+          "value": "\"Mystery of the Swamp\" (1944), the story that fills out the \"Frozen Gold\" one-shot, is something else again. It is built in some ways like the other stories of that time — the nephews rescue Donald — but it is not cast in the gags-adventure-gags mold. The difference is the menace involved — not a sneering psychopath or fierce savages this time, but the Gneezles, squatty little goblins who dress and talk like wool-hatted crackers, have names",
+          "bbox": [
+            {
+              "h": 73.27175304878051,
+              "w": 125.69040205792683,
+              "x": 150.6336756859756,
+              "y": 281.3923170731707,
+              "confidence": 0.99,
+              "end_index": 443,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "64\nCarl Barks and the Art of the Comic Book",
+              "value": "64\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.753605182926785,
+                  "w": 80.26917444740853,
+                  "x": 36.58735375381097,
+                  "y": 366.1401905487805,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "64\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.75,
+              "w": 80.27,
+              "x": 36.59,
+              "y": 366.14,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "64"
+    }
+  ]
+}

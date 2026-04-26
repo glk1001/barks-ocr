@@ -1,0 +1,168 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "with good artists, and didn't need to take on any young kids. They'd glance at my samples, and give them back to me.",
+          "value": "with good artists, and didn't need to take on any young kids. They'd glance at my samples, and give them back to me.",
+          "bbox": [
+            {
+              "h": 22.11539491234756,
+              "w": 125.54937833460365,
+              "x": 11.899889005335366,
+              "y": 22.15153153582317,
+              "confidence": 0.99,
+              "end_index": 115,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I was with the little job printing outfit for a year and a half, something like that. Then I went back to Oregon and worked up there for a summer on the ranch. Then I came back to San Francisco for a few months. I was going to study show-card writing. I thought that might be a branch of drawing and semi-drawing I could get into that would not be so difficult as getting into newspaper work. I went to the YMCA show-card school, their night class, for a few lessons, and I soon found that the lettering came so hard for me, that that wasn't one of my natural talents. I used up all of my money and went back up to Oregon, and worked on the ranch again. Nothing would grow, so I had to work at something else.\"",
+          "value": "\"I was with the little job printing outfit for a year and a half, something like that. Then I went back to Oregon and worked up there for a summer on the ranch. Then I came back to San Francisco for a few months. I was going to study show-card writing. I thought that might be a branch of drawing and semi-drawing I could get into that would not be so difficult as getting into newspaper work. I went to the YMCA show-card school, their night class, for a few lessons, and I soon found that the lettering came so hard for me, that that wasn't one of my natural talents. I used up all of my money and went back up to Oregon, and worked on the ranch again. Nothing would grow, so I had to work at something else.\"",
+          "bbox": [
+            {
+              "h": 118.55865663109756,
+              "w": 125.95625726467223,
+              "x": 11.955889267339938,
+              "y": 44.55928925304878,
+              "confidence": 0.99,
+              "end_index": 710,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In 1923, Barks married and left the ranch, spending the summer at a logging camp. From there, he and his wife drove in a second-hand Ford to Coalinga, in central California, in search of a job in the oil fields there.",
+          "value": "In 1923, Barks married and left the ranch, spending the summer at a logging camp. From there, he and his wife drove in a second-hand Ford to Coalinga, in central California, in search of a job in the oil fields there.",
+          "bbox": [
+            {
+              "h": 36.31951600609754,
+              "w": 125.7140564262576,
+              "x": 12.971973489900913,
+              "y": 163.54560594512196,
+              "confidence": 0.99,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I just didn't like the looks of the oil fields, or the area they were in, and so we drove back up to Roseville \\[east of Sacramento], where there was a couple that my wife knew. This guy worked for the railroad, in the car shops. He said, 'Oh, hell, I can get you on at the car shops. All you have to do is just go over there, and I'll tell you who to talk to.' So I went over, and right away I got put on in the car shops. And there I was for over six years. I started out just swinging a sledge hammer, and common labor, and got put on to heating rivets on a riveting gang, and that was piecework. I was on that for five and a half years or so. God, I was getting sick of that.\"",
+          "value": "\"I just didn't like the looks of the oil fields, or the area they were in, and so we drove back up to Roseville [east of Sacramento], where there was a couple that my wife knew. This guy worked for the railroad, in the car shops. He said, 'Oh, hell, I can get you on at the car shops. All you have to do is just go over there, and I'll tell you who to talk to.' So I went over, and right away I got put on in the car shops. And there I was for over six years. I started out just swinging a sledge hammer, and common labor, and got put on to heating rivets on a riveting gang, and that was piecework. I was on that for five and a half years or so. God, I was getting sick of that.\"",
+          "bbox": [
+            {
+              "h": 111.25369664634145,
+              "w": 125.87470012385671,
+              "x": 13.309305211509145,
+              "y": 200.64832317073171,
+              "confidence": 0.99,
+              "end_index": 680,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "(Barks's employer was the Pacific Fruit Express, which he described in a 1980 letter as \"a refrigerated car system owned jointly by Union Pacific and Southern Pacific. Work was in the repairing of banged-up cars. I worked in the heavy steel section, which mostly re-",
+          "value": "(Barks's employer was the Pacific Fruit Express, which he described in a 1980 letter as \"a refrigerated car system owned jointly by Union Pacific and Southern Pacific. Work was in the repairing of banged-up cars. I worked in the heavy steel section, which mostly re-",
+          "bbox": [
+            {
+              "h": 45.33329268292684,
+              "w": 125.74236792587651,
+              "x": 13.6499853515625,
+              "y": 311.97873475609754,
+              "confidence": 0.99,
+              "end_index": 265,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "A young man in a suit, tie, and flat cap standing in front of a building with a \"HOTEL\" sign.",
+          "md": "![A young man in a suit, tie, and flat cap standing in front of a building with a \"HOTEL\" sign.](CBatAotCB-008_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-008_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 319.4686337652439,
+              "w": 124.24064405487805,
+              "x": 151.86030297256096,
+              "y": 12.755367759146342,
+              "confidence": 0.99,
+              "end_index": 118,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "paired the steel underframes and wheel 'trucks.'\")",
+          "value": "paired the steel underframes and wheel 'trucks.'\")",
+          "bbox": [
+            {
+              "h": 14.313818597560985,
+              "w": 125.38178163109754,
+              "x": 152.77530868902437,
+              "y": 342.3114557926829,
+              "confidence": 0.98,
+              "end_index": 49,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "8 Carl Barks and the Art of the Comic Book",
+              "value": "8 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.617370426829274,
+                  "w": 80.2032050304878,
+                  "x": 33.639086318597556,
+                  "y": 368.575243902439,
+                  "confidence": 0.96,
+                  "end_index": 41,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "8 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.62,
+              "w": 80.2,
+              "x": 33.64,
+              "y": 368.58,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "8"
+    }
+  ]
+}

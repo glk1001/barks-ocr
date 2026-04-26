@@ -1,0 +1,3 @@
+![A comic strip page featuring Uncle Scrooge, Donald Duck, and the Beagle Boys. In the first panel, Scrooge and Donald are outside a cafe. In the second, they are inside eating. The following panels show the Beagle Boys being kicked out of a welfare office and complaining about their hardships.](CBatAotCB-135_page_1_image_1_v2.jpg)
+
+From Uncle Scrooge No. 7, Sept.-Nov. 1954; © 1954 Walt Disney Productions.

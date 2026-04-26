@@ -1,0 +1,254 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "BARKIE \"Now do you see why they designed it this way?\"",
+          "md": "![BARKIE \"Now do you see why they designed it this way?\"](CBatAotCB-027_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-027_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 108.18595226753048,
+              "w": 107.7779539824695,
+              "x": 18.58487566692073,
+              "y": 15.472561451981706,
+              "confidence": 0.99,
+              "end_index": 79,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "\"Now do you see why they designed it this way?\"",
+          "value": "\"Now do you see why they designed it this way?\"",
+          "bbox": [
+            {
+              "h": 4.985762195121942,
+              "w": 95.2089579363567,
+              "x": 24.839337604801827,
+              "y": 126.89311737804877,
+              "confidence": 0.95,
+              "end_index": 46,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "BARKIE \"They're having a little difficulty getting volunteers for the parachute corps . . .\"",
+          "md": "![BARKIE \"They're having a little difficulty getting volunteers for the parachute corps . . .\"](CBatAotCB-027_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-027_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 110.36626429115854,
+              "w": 94.140703125,
+              "x": 164.6646551067073,
+              "y": 15.283568025914633,
+              "confidence": 0.99,
+              "end_index": 117,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "\"They're having a little difficulty getting volunteers for the parachute corps . . .\"",
+          "value": "\"They're having a little difficulty getting volunteers for the parachute corps . . .\"",
+          "bbox": [
+            {
+              "h": 9.460369664634145,
+              "w": 74.39592416158533,
+              "x": 172.97619283536585,
+              "y": 125.6915967987805,
+              "confidence": 0.95,
+              "end_index": 84,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These cartoons by Barks were published in *Flying and Popular Aviation* magazine in 1941, while he was still on the Disney studio's staff; ©1941 *Flying and Popular Aviation*.",
+          "value": "These cartoons by Barks were published in Flying and Popular Aviation magazine in 1941, while he was still on the Disney studio's staff; ©1941 Flying and Popular Aviation.",
+          "bbox": [
+            {
+              "h": 12.21270960365855,
+              "w": 263.3621923828125,
+              "x": 11.336912037919205,
+              "y": 143.07978658536584,
+              "confidence": 0.91,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "protested — \"I felt that I was in with the guys who were really producing the future\" — but to no avail. \"Maybe it was six weeks I was on that; I don't think we produced one single thing that ever appeared in the movie.\" Couch and Hultgren continued to work on the story for *Bambi*, but little of their material reached the screen.",
+          "value": "protested — \"I felt that I was in with the guys who were really producing the future\" — but to no avail. \"Maybe it was six weeks I was on that; I don't think we produced one single thing that ever appeared in the movie.\" Couch and Hultgren continued to work on the story for Bambi, but little of their material reached the screen.",
+          "bbox": [
+            {
+              "h": 58.190579268292694,
+              "w": 125.65534334508382,
+              "x": 11.514920564977134,
+              "y": 162.20647865853658,
+              "confidence": 0.99,
+              "end_index": 331,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "When Barks and I were talking in 1973 about his work on *Bambi*, he described a gag that he and Couch had devised. It is apparently the gag that is reproduced in Robert D. Feild's 1941 book, *The Art of Walt Disney*, as Plate 26, \"The Way to Crack a Nut\": a squirrel tells a chipmunk to crack a nut in the fork of a limb, and the chipmunk tries to crack the nut while it is still in his mouth. Hultgren, as a \"story sketch man,\" made the nine finished sketches for this gag from rough sketches by Barks and Couch. This was a luxury that Barks had not enjoyed on the Duck shorts, where his own rough sketches were used on the storyboard. (\"We never made beautiful layouts or things like they did for *Snow White*, where they had draftsmen working with the different story men, and each gag man had his draftsman who",
+          "value": "When Barks and I were talking in 1973 about his work on Bambi, he described a gag that he and Couch had devised. It is apparently the gag that is reproduced in Robert D. Feild's 1941 book, The Art of Walt Disney, as Plate 26, \"The Way to Crack a Nut\": a squirrel tells a chipmunk to crack a nut in the fork of a limb, and the chipmunk tries to crack the nut while it is still in his mouth. Hultgren, as a \"story sketch man,\" made the nine finished sketches for this gag from rough sketches by Barks and Couch. This was a luxury that Barks had not enjoyed on the Duck shorts, where his own rough sketches were used on the storyboard. (\"We never made beautiful layouts or things like they did for Snow White, where they had draftsmen working with the different story men, and each gag man had his draftsman who",
+          "bbox": [
+            {
+              "h": 133.07679878048782,
+              "w": 125.84404558879572,
+              "x": 11.744766339557925,
+              "y": 221.6980106707317,
+              "confidence": 0.99,
+              "end_index": 813,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "did a beautiful, detailed drawing of the simplest gag. If it was nothing more than Dopey wriggling his nose, there was a two-thousand-dollar painting.\")",
+          "value": "did a beautiful, detailed drawing of the simplest gag. If it was nothing more than Dopey wriggling his nose, there was a two-thousand-dollar painting.\")",
+          "bbox": [
+            {
+              "h": 29.855579268292665,
+              "w": 125.62151295731707,
+              "x": 150.0258669969512,
+              "y": 162.22173018292685,
+              "confidence": 0.99,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "When Barks and I were looking at the plate in the Feild book, he suggested another reason why his departure from the Disney studio was inevitable. \"These guys who could visualize stuff in action,\" he said, \"they were much better at thinking up that type of gag than I was.\"",
+          "value": "When Barks and I were looking at the plate in the Feild book, he suggested another reason why his departure from the Disney studio was inevitable. \"These guys who could visualize stuff in action,\" he said, \"they were much better at thinking up that type of gag than I was.\"",
+          "bbox": [
+            {
+              "h": 44.59241615853658,
+              "w": 125.98957317073167,
+              "x": 150.26357469512195,
+              "y": 191.96275152439026,
+              "confidence": 0.99,
+              "end_index": 272,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "What type of gag came most naturally to him? I asked.",
+          "value": "What type of gag came most naturally to him? I asked.",
+          "bbox": [
+            {
+              "h": 13.429916158536606,
+              "w": 125.46622522865854,
+              "x": 151.15124428353658,
+              "y": 236.75311737804878,
+              "confidence": 0.95,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Well,\" he said. \"I would have thought of the gag, but I wouldn't have seen all of these sketches as being necessary in putting it over.\" He would have drawn one sketch, he said, \"and that would have been it.\"",
+          "value": "\"Well,\" he said. \"I would have thought of the gag, but I wouldn't have seen all of these sketches as being necessary in putting it over.\" He would have drawn one sketch, he said, \"and that would have been it.\"",
+          "bbox": [
+            {
+              "h": 36.67191310975606,
+              "w": 125.8758898628049,
+              "x": 151.05587652439021,
+              "y": 251.14157012195125,
+              "confidence": 0.98,
+              "end_index": 208,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In other words, he was more interested in getting an idea across in a single drawing than in elaborating it in a series of drawings. He summed up his attitude neatly in a 1977 letter: \"I was a plot man. Animation gags were long and tiresome to me. I wanted to see movement from one situation to another rather than movement revolving endlessly within one situation.\"",
+          "value": "In other words, he was more interested in getting an idea across in a single drawing than in elaborating it in a series of drawings. He summed up his attitude neatly in a 1977 letter: \"I was a plot man. Animation gags were long and tiresome to me. I wanted to see movement from one situation to another rather than movement revolving endlessly within one situation.\"",
+          "bbox": [
+            {
+              "h": 65.33835365853658,
+              "w": 126.01603467987803,
+              "x": 149.27038490853658,
+              "y": 288.2550228658537,
+              "confidence": 0.99,
+              "end_index": 365,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n27",
+              "value": "Carl Barks and the Art of the Comic Book\n27",
+              "bbox": [
+                {
+                  "h": 4.49602134146342,
+                  "w": 80.18488948170727,
+                  "x": 173.2655544969512,
+                  "y": 365.0680792682927,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n27",
+          "bbox": [
+            {
+              "h": 4.5,
+              "w": 80.18,
+              "x": 173.27,
+              "y": 365.07,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "27"
+    }
+  ]
+}

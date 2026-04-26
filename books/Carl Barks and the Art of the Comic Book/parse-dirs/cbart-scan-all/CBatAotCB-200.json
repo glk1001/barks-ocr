@@ -1,0 +1,66 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A comic book cover for Walt Disney's Comics and Stories. The illustration shows Daisy Duck holding a broom and looking angry at Huey, Dewey, and Louie, who are playing with a string of firecrackers near a box labeled \"HOME WAVE\".",
+          "md": "![A comic book cover for Walt Disney's Comics and Stories. The illustration shows Daisy Duck holding a broom and looking angry at Huey, Dewey, and Louie, who are playing with a string of firecrackers near a box labeled \"HOME WAVE\".](CBatAotCB-200_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-200_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 322.51909012957316,
+              "w": 259.49119879001523,
+              "x": 14.446781392911584,
+              "y": 23.370025724085366,
+              "confidence": 0.98,
+              "end_index": 254,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "items": [
+            {
+              "md": "200 Carl Barks and the Art of the Comic Book",
+              "value": "200 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.0911051829267855,
+                  "w": 77.85413300304877,
+                  "x": 36.58378239329268,
+                  "y": 364.03321646341465,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "200 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.09,
+              "w": 77.85,
+              "x": 36.58,
+              "y": 364.03,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "200"
+    }
+  ]
+}

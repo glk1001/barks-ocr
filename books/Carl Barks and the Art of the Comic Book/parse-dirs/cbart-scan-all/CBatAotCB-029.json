@@ -1,0 +1,185 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# III.",
+          "value": "III.",
+          "bbox": [
+            {
+              "h": 27.253850990853657,
+              "w": 54.70452267530488,
+              "x": 115.7497665777439,
+              "y": 52.45173018292683,
+              "confidence": 0.88,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**BARKS HAD ACTUALLY** done his first comic-book work for Western while still a Disney employee, by illustrating half of a comic book based on an uncompleted Disney feature cartoon, *Morgan's Ghost*. *Morgan's Ghost* was to have starred Mickey, Donald and Goofy, sailing to a treasure island aboard a ship manned by the disguised Pegleg Pete and his henchmen. Mickey, Donald, and Goofy would have been led to the island by a parrot named Yellowbeak.",
+          "value": "BARKS HAD ACTUALLY done his first comic-book work for Western while still a Disney employee, by illustrating half of a comic book based on an uncompleted Disney feature cartoon, Morgan's Ghost. Morgan's Ghost was to have starred Mickey, Donald and Goofy, sailing to a treasure island aboard a ship manned by the disguised Pegleg Pete and his henchmen. Mickey, Donald, and Goofy would have been led to the island by a parrot named Yellowbeak.",
+          "bbox": [
+            {
+              "h": 81.53667301829267,
+              "w": 125.68674923780486,
+              "x": 11.250411585365853,
+              "y": 117.78049161585366,
+              "confidence": 0.97,
+              "end_index": 448,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Morgan's Ghost* would not have been the first feature to star characters from the Disney shorts. It would have followed *Mickey and the Beanstalk*, on which production was already under way in 1941. These features, and *The Wind in the Willows* (also in production in 1941), would have been modest, low-budget efforts, along the lines of *Dumbo*. The hope was that they would regain some of the financial ground that the Disney studio had lost through the expensive boxoffice failures of *Pinocchio* and *Fantasia*.",
+          "value": "Morgan's Ghost would not have been the first feature to star characters from the Disney shorts. It would have followed Mickey and the Beanstalk, on which production was already under way in 1941. These features, and The Wind in the Willows (also in production in 1941), would have been modest, low-budget efforts, along the lines of Dumbo. The hope was that they would regain some of the financial ground that the Disney studio had lost through the expensive boxoffice failures of Pinocchio and Fantasia.",
+          "bbox": [
+            {
+              "h": 87.86723323170733,
+              "w": 125.80430723608993,
+              "x": 11.51904070598323,
+              "y": 199.5799618902439,
+              "confidence": 0.98,
+              "end_index": 515,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Walt Disney chafed under the budget restrictions that had been imposed on him by the banks, and *Mickey and the Beanstalk*, *Wind in the Willows*, and *Morgan's Ghost* all were shelved as the studio converted to war production. *Mickey and the Beanstalk* and *The Wind in the Willows* turned up in postwar compilation features (*Fun and Fancy Free* and *The Adventures of Ichabod and Mr. Toad*, respec-",
+          "value": "Walt Disney chafed under the budget restrictions that had been imposed on him by the banks, and Mickey and the Beanstalk, Wind in the Willows, and Morgan's Ghost all were shelved as the studio converted to war production. Mickey and the Beanstalk and The Wind in the Willows turned up in postwar compilation features (Fun and Fancy Free and The Adventures of Ichabod and Mr. Toad, respec-",
+          "bbox": [
+            {
+              "h": 66.58991615853658,
+              "w": 125.8714685356326,
+              "x": 11.884387028391767,
+              "y": 287.92893292682925,
+              "confidence": 0.99,
+              "end_index": 401,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "tively), but *Morgan's Ghost* exists only as story sketches in the Disney Archives — and as a comic book, *Donald Duck Finds Pirate Gold*, Four Color No. 9, published in 1942.",
+          "value": "tively), but Morgan's Ghost exists only as story sketches in the Disney Archives — and as a comic book, Donald Duck Finds Pirate Gold, Four Color No. 9, published in 1942.",
+          "bbox": [
+            {
+              "h": 29.824607469512202,
+              "w": 125.80523437499997,
+              "x": 147.94122141768293,
+              "y": 117.57603658536586,
+              "confidence": 0.98,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks recalled in a 1967 letter that he \"got involved in the comic book by being one of two artists who volunteered to do the drawings in spare time.\" The other was Jack Hannah, Barks's partner in the story department who said in 1976 that he had not even been aware that the comic book was based on an unmade feature. \"Carl and I were given a typed copy of the story,\" he said. \"I think it was broken into panels. That's all that I worked from. Carl and I took it to our respective homes; we took thirty-two pages apiece, and got together on hookups. . . . To my recollection, I never saw a sketch of any kind on the thing; I just worked from typewritten pages.\"",
+          "value": "Barks recalled in a 1967 letter that he \"got involved in the comic book by being one of two artists who volunteered to do the drawings in spare time.\" The other was Jack Hannah, Barks's partner in the story department who said in 1976 that he had not even been aware that the comic book was based on an unmade feature. \"Carl and I were given a typed copy of the story,\" he said. \"I think it was broken into panels. That's all that I worked from. Carl and I took it to our respective homes; we took thirty-two pages apiece, and got together on hookups. . . . To my recollection, I never saw a sketch of any kind on the thing; I just worked from typewritten pages.\"",
+          "bbox": [
+            {
+              "h": 110.90764481707318,
+              "w": 125.94767721036582,
+              "x": 148.0906269054878,
+              "y": 147.5508612804878,
+              "confidence": 0.99,
+              "end_index": 662,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Some of the comic book's panels are in fact strikingly similar to some of the story sketches — except that Donald's nephews have been substituted for Mickey Mouse and Goofy.",
+          "value": "Some of the comic book's panels are in fact strikingly similar to some of the story sketches — except that Donald's nephews have been substituted for Mickey Mouse and Goofy.",
+          "bbox": [
+            {
+              "h": 35.923010670731706,
+              "w": 125.67350990853657,
+              "x": 148.6121913109756,
+              "y": 258.5144817073171,
+              "confidence": 0.97,
+              "end_index": 172,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"The story adaptation was done by Bob Karp, who was then . . . the gagman for the Donald Duck daily and Sunday newspaper strips,\" Barks said in 1967. \"Most credit for the story should go to Homer Brightman, who plotted it and gagged it up in its original storyboard form for the movie.\" Barks remembers attending story conferences on",
+          "value": "\"The story adaptation was done by Bob Karp, who was then . . . the gagman for the Donald Duck daily and Sunday newspaper strips,\" Barks said in 1967. \"Most credit for the story should go to Homer Brightman, who plotted it and gagged it up in its original storyboard form for the movie.\" Barks remembers attending story conferences on",
+          "bbox": [
+            {
+              "h": 59.57195121951217,
+              "w": 125.82977515243901,
+              "x": 149.16671684451217,
+              "y": 295.1491463414634,
+              "confidence": 0.99,
+              "end_index": 332,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n29",
+              "value": "Carl Barks and the Art of the Comic Book\n29",
+              "bbox": [
+                {
+                  "h": 4.66735518292684,
+                  "w": 80.20085556402441,
+                  "x": 171.77998856707316,
+                  "y": 366.07545731707313,
+                  "confidence": 0.93,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n29",
+          "bbox": [
+            {
+              "h": 4.67,
+              "w": 80.2,
+              "x": 171.78,
+              "y": 366.08,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "29"
+    }
+  ]
+}

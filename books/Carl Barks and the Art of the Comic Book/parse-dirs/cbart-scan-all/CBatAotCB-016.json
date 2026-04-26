@@ -1,0 +1,118 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Two women in beachwear talking near a large tree, with one holding a tennis racket. Signed \"BARKIE\".",
+          "md": "![Two women in beachwear talking near a large tree, with one holding a tennis racket. Signed \"BARKIE\".](CBatAotCB-016_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-016_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 116.85829744664636,
+              "w": 155.50114638910063,
+              "x": 15.31736161394817,
+              "y": 12.067685785060975,
+              "confidence": 0.99,
+              "end_index": 125,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "\"He used to belong to the bashfulest man.\"",
+          "value": "\"He used to belong to the bashfulest man.\"",
+          "bbox": [
+            {
+              "h": 3.387862042682941,
+              "w": 59.17248332698169,
+              "x": 61.078226467225605,
+              "y": 122.25754573170731,
+              "confidence": 0.8,
+              "end_index": 41,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "Two women on a beach under an umbrella, one wearing glasses and looking disgruntled at a small, scrawny man holding a tiny fish in the background. Signed \"BARKIE\".",
+          "md": "![Two women on a beach under an umbrella, one wearing glasses and looking disgruntled at a small, scrawny man holding a tiny fish in the background. Signed \"BARKIE\".](CBatAotCB-016_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-016_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 189.24485899390245,
+              "w": 228.44904249237803,
+              "x": 29.275664062499995,
+              "y": 142.21158155487805,
+              "confidence": 0.95,
+              "end_index": 188,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "\"I stopped wearing glasses till I caught me a husband---and look what I got!\"",
+          "value": "\"I stopped wearing glasses till I caught me a husband---and look what I got!\"",
+          "bbox": [
+            {
+              "h": 9.4921875,
+              "w": 157.33784394054874,
+              "x": 60.14180544969511,
+              "y": 341.1436966463414,
+              "confidence": 0.89,
+              "end_index": 76,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "16 Carl Barks and the Art of the Comic Book",
+              "value": "16 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.336661585365855,
+                  "w": 80.17762242759144,
+                  "x": 36.27765291539634,
+                  "y": 366.4657317073171,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "16 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.34,
+              "w": 80.18,
+              "x": 36.28,
+              "y": 366.47,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "16"
+    }
+  ]
+}

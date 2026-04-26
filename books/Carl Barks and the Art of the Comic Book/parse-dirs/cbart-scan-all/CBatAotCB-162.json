@@ -1,0 +1,397 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "printed from *Uncle Scrooge* No. 31, Sept. - Nov. 1960.\n*Changes:* Panels on first page deepened and partially redrawn.",
+          "value": "printed from Uncle Scrooge No. 31, Sept. - Nov. 1960.\nChanges: Panels on first page deepened and partially redrawn.",
+          "bbox": [
+            {
+              "h": 5.505680259146343,
+              "w": 120.34664348323167,
+              "x": 16.013971989329267,
+              "y": 28.981431974085364,
+              "confidence": 0.9,
+              "end_index": 118,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 4 - October 1968 - 196 pages",
+          "value": "4 - October 1968 - 196 pages",
+          "bbox": [
+            {
+              "h": 5.540302019817072,
+              "w": 68.98191310975608,
+              "x": 11.362457126524388,
+              "y": 40.7999599847561,
+              "confidence": 0.96,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK and the Titanic Ants! - 20 (pp. 3-14, 119-126) - Reprinted from *Donald Duck* No. 60, July-Aug. 1958.\nGYRO GEARLOOSE in Picnic - 6 (pp. 59-64) - Reprinted from *Picnic Party* No. 8, 1957 (listed under Vacation Parade).",
+          "value": "DONALD DUCK and the Titanic Ants! - 20 (pp. 3-14, 119-126) - Reprinted from Donald Duck No. 60, July-Aug. 1958.\nGYRO GEARLOOSE in Picnic - 6 (pp. 59-64) - Reprinted from Picnic Party No. 8, 1957 (listed under Vacation Parade).",
+          "bbox": [
+            {
+              "h": 17.493304115853665,
+              "w": 125.01183712842986,
+              "x": 11.717996141387193,
+              "y": 64.27328506097561,
+              "confidence": 0.91,
+              "end_index": 229,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 5 - November 1968 - 196 pages",
+          "value": "5 - November 1968 - 196 pages",
+          "bbox": [
+            {
+              "h": 5.506086128048782,
+              "w": 75.653701171875,
+              "x": 11.629698218368901,
+              "y": 88.11532202743902,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK AND UNCLE SCROOGE The Strange Shipwrecks - 21 (pp. 3-12, 99-109) - A reprint of \"UNCLE SCROOGE and The Strange Shipwrecks\" in *Uncle Scrooge* No. 23, Sept.-Nov. 1958.\n*Changes:* Title changed as indicated.\nDAISY DUCK'S DIARY The Dainty Daredevil - 8 (pp. 67-74) - art only - Daisy, trying to find a job, is misled by a fortune teller and takes a job as a stunt girl for a daredevil pilot. (June 18, 1968)\nThese pages are two panels deep.\nBarks: \"The Daisy Duck story in D.C. Digest must be one I drew for Chase \\[Craig] last June. 8 pages. He was desperate for someone to do the art. All the current ink slingers having been busy or away on vacation.\" (Nov. 22, 1968 letter to Michael Barrier)",
+          "value": "DONALD DUCK AND UNCLE SCROOGE The Strange Shipwrecks - 21 (pp. 3-12, 99-109) - A reprint of \"UNCLE SCROOGE and The Strange Shipwrecks\" in Uncle Scrooge No. 23, Sept.-Nov. 1958.\nChanges: Title changed as indicated.\nDAISY DUCK'S DIARY The Dainty Daredevil - 8 (pp. 67-74) - art only - Daisy, trying to find a job, is misled by a fortune teller and takes a job as a stunt girl for a daredevil pilot. (June 18, 1968)\nThese pages are two panels deep.\nBarks: \"The Daisy Duck story in D.C. Digest must be one I drew for Chase [Craig] last June. 8 pages. He was desperate for someone to do the art. All the current ink slingers having been busy or away on vacation.\" (Nov. 22, 1968 letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 28.45408536585365,
+              "w": 125.21138528963414,
+              "x": 11.988221227134144,
+              "y": 153.49055259146343,
+              "confidence": 0.89,
+              "end_index": 704,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 6 - December 1968 - 196 pages",
+          "value": "6 - December 1968 - 196 pages",
+          "bbox": [
+            {
+              "h": 5.570647865853652,
+              "w": 74.6299715367759,
+              "x": 12.19842880621189,
+              "y": 187.80317835365855,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE and The Twenty-four Carat Moon - 20 (pp. 3-12, 99-108) - Reprinted from *Uncle Scrooge* No. 24, Dec.-Feb. 1959.\n*Changes:* Splash panel deepened. Part of the first panel on the eleventh page is covered by a caption identifying the second half of the story.",
+          "value": "UNCLE SCROOGE and The Twenty-four Carat Moon - 20 (pp. 3-12, 99-108) - Reprinted from Uncle Scrooge No. 24, Dec.-Feb. 1959.\nChanges: Splash panel deepened. Part of the first panel on the eleventh page is covered by a caption identifying the second half of the story.",
+          "bbox": [
+            {
+              "h": 17.285442073170724,
+              "w": 125.0079560070503,
+              "x": 12.391132217035059,
+              "y": 211.55817073170732,
+              "confidence": 0.92,
+              "end_index": 269,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 7 - January 1969 - 196 pages",
+          "value": "7 - January 1969 - 196 pages",
+          "bbox": [
+            {
+              "h": 5.5933993902439125,
+              "w": 69.44591022770578,
+              "x": 11.94531023723323,
+              "y": 235.16423780487804,
+              "confidence": 0.96,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in Mastering the Matterhorn - 8 (pp. 41-48) - Reprinted from *Vacation in Disneyland* Four Color No. 1025, Aug.-Oct. 1959.\nGYRO GEARLOOSE and GUS GOOSE on the Dream Planet - 6 (pp. 146-151) - Reprinted from *Vacation in Disneyland* Four Color No. 1025, Aug.-Oct. 1959.",
+          "value": "DONALD DUCK in Mastering the Matterhorn - 8 (pp. 41-48) - Reprinted from Vacation in Disneyland Four Color No. 1025, Aug.-Oct. 1959.\nGYRO GEARLOOSE and GUS GOOSE on the Dream Planet - 6 (pp. 146-151) - Reprinted from Vacation in Disneyland Four Color No. 1025, Aug.-Oct. 1959.",
+          "bbox": [
+            {
+              "h": 17.31445884146342,
+              "w": 125.56859529820882,
+              "x": 11.811817239900913,
+              "y": 258.9004115853659,
+              "confidence": 0.9,
+              "end_index": 279,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 8 - February 1969 - 196 pages",
+          "value": "8 - February 1969 - 196 pages",
+          "bbox": [
+            {
+              "h": 5.45753048780487,
+              "w": 72.45075135766007,
+              "x": 11.921024556974086,
+              "y": 282.6478125,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK AND UNCLE SCROOGE in The Prize of Pizarro - 20 (pp. 3-12, 99-108) - A reprint of \"UNCLE SCROOGE and The Prize of Pizarro\" in *Uncle Scrooge* No. 26, June-Aug. 1959.\n*Changes:* Title changed as indicated. Splash panel deepened and partially redrawn. Part of the first panel on the eleventh page is covered by a caption identifying the second half of the story.",
+          "value": "DONALD DUCK AND UNCLE SCROOGE in The Prize of Pizarro - 20 (pp. 3-12, 99-108) - A reprint of \"UNCLE SCROOGE and The Prize of Pizarro\" in Uncle Scrooge No. 26, June-Aug. 1959.\nChanges: Title changed as indicated. Splash panel deepened and partially redrawn. Part of the first panel on the eleventh page is covered by a caption identifying the second half of the story.",
+          "bbox": [
+            {
+              "h": 17.34960365853658,
+              "w": 125.51661871189023,
+              "x": 12.348306974085366,
+              "y": 312.1395960365854,
+              "confidence": 0.92,
+              "end_index": 370,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 9 - March 1969 - 196 pages",
+          "value": "9 - March 1969 - 196 pages",
+          "bbox": [
+            {
+              "h": 5.43466463414632,
+              "w": 65.35601002762957,
+              "x": 12.464338676638718,
+              "y": 337.4143673780488,
+              "confidence": 0.96,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK AND UNCLE SCROOGE Isle of\nGolden Geese - 23 (pp. 3-14, 99-109) - A reprint of \"UNCLE SCROOGE Isle of Golden Geese\" in *Uncle Scrooge* No. 45, October 1963.\n*Changes:* Title changed as indicated. Splash panel deepened and partially redrawn.\nGYRO GEARLOOSE The Lost Rabbit Foot - 7 (originally 6 7/8) (pp. 78-84) - Reprinted from *Gyro Gearloose* Four Color No. 1047, Nov.-Jan. 1960.\n*Changes:* The last panel was widened and partially redrawn to take up the space occupied by the Dell Pledge in the original.\nGRANDMA DUCK and UNCLE SCROOGE in Trail Tycoon - 6 (pp. 155-160) - Reprinted from *Vacation in Disneyland* Four Color No. 1025, Aug.-Oct. 1959.",
+          "value": "DONALD DUCK AND UNCLE SCROOGE Isle of\nGolden Geese - 23 (pp. 3-14, 99-109) - A reprint of \"UNCLE SCROOGE Isle of Golden Geese\" in Uncle Scrooge No. 45, October 1963.\nChanges: Title changed as indicated. Splash panel deepened and partially redrawn.\nGYRO GEARLOOSE The Lost Rabbit Foot - 7 (originally 6 7/8) (pp. 78-84) - Reprinted from Gyro Gearloose Four Color No. 1047, Nov.-Jan. 1960.\nChanges: The last panel was widened and partially redrawn to take up the space occupied by the Dell Pledge in the original.\nGRANDMA DUCK and UNCLE SCROOGE in Trail Tycoon - 6 (pp. 155-160) - Reprinted from Vacation in Disneyland Four Color No. 1025, Aug.-Oct. 1959.",
+          "bbox": [
+            {
+              "h": 17.14710365853658,
+              "w": 125.17108422256095,
+              "x": 150.25302782012193,
+              "y": 76.29479611280487,
+              "confidence": 0.81,
+              "end_index": 662,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 10 - April 1969 - 196 pages",
+          "value": "10 - April 1969 - 196 pages",
+          "bbox": [
+            {
+              "h": 5.482820121951217,
+              "w": 64.39227324695122,
+              "x": 150.4382069359756,
+              "y": 99.73600609756099,
+              "confidence": 0.96,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK AND UNCLE SCROOGE Lost Beneath the Sea - 22 (pp. 3-14, 99-108) - A reprint of \"UNCLE SCROOGE Lost Beneath the Sea\" in *Uncle Scrooge* No. 46, December 1963.\n*Changes:* Title changed as indicated. Part of the first panel on the thirteenth page is covered by a caption identifying the second half of the story.\nGRANDMA DUCK The Day the Farm Stood Still - 6 (pp. 71-76) - A reprint of \"GRANDMA DUCK'S FARM FRIENDS The Day the Farm Stood Still\" in *Grandma Duck's Farm Friends* Four Color No. 1161, Feb.-Apr. 1961.\n*Changes:* Title changed as indicated.\nGYRO GEARLOOSE A Helper's Helping Hand - 4 (pp. 77-80) - Reprinted from *Uncle Scrooge* No. 46, December 1963.",
+          "value": "DONALD DUCK AND UNCLE SCROOGE Lost Beneath the Sea - 22 (pp. 3-14, 99-108) - A reprint of \"UNCLE SCROOGE Lost Beneath the Sea\" in Uncle Scrooge No. 46, December 1963.\nChanges: Title changed as indicated. Part of the first panel on the thirteenth page is covered by a caption identifying the second half of the story.\nGRANDMA DUCK The Day the Farm Stood Still - 6 (pp. 71-76) - A reprint of \"GRANDMA DUCK'S FARM FRIENDS The Day the Farm Stood Still\" in Grandma Duck's Farm Friends Four Color No. 1161, Feb.-Apr. 1961.\nChanges: Title changed as indicated.\nGYRO GEARLOOSE A Helper's Helping Hand - 4 (pp. 77-80) - Reprinted from Uncle Scrooge No. 46, December 1963.",
+          "bbox": [
+            {
+              "h": 23.486181402439016,
+              "w": 125.09902248475608,
+              "x": 150.60687118902436,
+              "y": 147.0840548780488,
+              "confidence": 0.86,
+              "end_index": 671,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 11 - May 1969 - 164 pages",
+          "value": "11 - May 1969 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.603254573170725,
+              "w": 62.12112804878049,
+              "x": 150.83272865853658,
+              "y": 200.5449237804878,
+              "confidence": 0.97,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Mystery of the Loch - 13 (originally 10) (pp. 3-15) - Reprinted from *Walt Disney's Comics* No. 237, June 1960.\n*Changes:* The panels of the original ten-page story were trimmed and partially redrawn so that the pages could be made three panels deep. The eighth panel on the third page of the original story was deleted from the reprint.\nUNCLE SCROOGE In the Buying Mood - 10 (pp. 98-107) - A reprint of \"UNCLE SCROOGE\" in *Uncle Scrooge* No. 6, June-Aug. 1954.\n*Changes:* Title changed as indicated.\nGYRO GEARLOOSE Inventor's Contest - 4 (pp. 143-146) - A reprint of \"GYRO GEARLOOSE and The Inventors' Contest\" from *Uncle Scrooge* No. 28, Dec.-Feb. 1960.\n*Changes:* Title changed as indicated.",
+          "value": "DONALD DUCK Mystery of the Loch - 13 (originally 10) (pp. 3-15) - Reprinted from Walt Disney's Comics No. 237, June 1960.\nChanges: The panels of the original ten-page story were trimmed and partially redrawn so that the pages could be made three panels deep. The eighth panel on the third page of the original story was deleted from the reprint.\nUNCLE SCROOGE In the Buying Mood - 10 (pp. 98-107) - A reprint of \"UNCLE SCROOGE\" in Uncle Scrooge No. 6, June-Aug. 1954.\nChanges: Title changed as indicated.\nGYRO GEARLOOSE Inventor's Contest - 4 (pp. 143-146) - A reprint of \"GYRO GEARLOOSE and The Inventors' Contest\" from Uncle Scrooge No. 28, Dec.-Feb. 1960.\nChanges: Title changed as indicated.",
+          "bbox": [
+            {
+              "h": 23.554961890243884,
+              "w": 124.82660442073171,
+              "x": 151.4968387957317,
+              "y": 224.46130335365854,
+              "confidence": 0.88,
+              "end_index": 706,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 12 - June 1969 - 164 pages",
+          "value": "12 - June 1969 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.6049695121951295,
+              "w": 62.32417682926826,
+              "x": 152.37545350609756,
+              "y": 302.47047256097557,
+              "confidence": 0.96,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY A Sticky Situation - 8 (pp. 111-118) - Reprinted from *Daisy Duck's Diary* Four Color No. 1150, Dec.-Feb. 1961.\n*Changes:* Splash panel deepened and partially redrawn.",
+          "value": "DAISY DUCK'S DIARY A Sticky Situation - 8 (pp. 111-118) - Reprinted from Daisy Duck's Diary Four Color No. 1150, Dec.-Feb. 1961.\nChanges: Splash panel deepened and partially redrawn.",
+          "bbox": [
+            {
+              "h": 16.67627286585368,
+              "w": 124.53122332317072,
+              "x": 153.24650533536584,
+              "y": 308.4536661585366,
+              "confidence": 0.9,
+              "end_index": 185,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Deep Down Doings - 9 (pp. 140-148) - Reprinted from *Uncle Scrooge* No. 37, Mar.-May 1962.",
+          "value": "UNCLE SCROOGE Deep Down Doings - 9 (pp. 140-148) - Reprinted from Uncle Scrooge No. 37, Mar.-May 1962.",
+          "bbox": [
+            {
+              "h": 21.539108231707303,
+              "w": 125.3904077743902,
+              "x": 151.79149961890244,
+              "y": 326.44051829268295,
+              "confidence": 0.84,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "162 Carl Barks and the Art of the Comic Book",
+              "value": "162 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.35914634146342,
+                  "w": 77.75365901295731,
+                  "x": 36.99390577362804,
+                  "y": 363.68259146341467,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "162 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.36,
+              "w": 77.75,
+              "x": 36.99,
+              "y": 363.68,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "162"
+    }
+  ]
+}

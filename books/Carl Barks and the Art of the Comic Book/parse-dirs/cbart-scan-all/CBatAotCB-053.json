@@ -1,0 +1,184 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "looked after his money himself, calling in Donald and the nephews when he needed help. He sat at the hub of a vast corporate empire only when that was convenient for a particular story. In *Uncle Scrooge* No. 6 (1954), for example, Scrooge is worn to a frazzle by the world's demands on him because he is a billionaire; but his temporary revulsion at the sight of money is simply a good excuse for dropping him into Tralla La, a Himalayan paradise where money is unknown. In other stories, published around the same time, Scrooge was alone with his money (and a cannon), untroubled by the army of clerks and favor-seekers who plague him in *Uncle Scrooge* No. 6.",
+          "value": "looked after his money himself, calling in Donald and the nephews when he needed help. He sat at the hub of a vast corporate empire only when that was convenient for a particular story. In Uncle Scrooge No. 6 (1954), for example, Scrooge is worn to a frazzle by the world's demands on him because he is a billionaire; but his temporary revulsion at the sight of money is simply a good excuse for dropping him into Tralla La, a Himalayan paradise where money is unknown. In other stories, published around the same time, Scrooge was alone with his money (and a cannon), untroubled by the army of clerks and favor-seekers who plague him in Uncle Scrooge No. 6.",
+          "bbox": [
+            {
+              "h": 111.32067716272864,
+              "w": 125.55003858612803,
+              "x": 11.109705125762193,
+              "y": 11.876460794588414,
+              "confidence": 0.99,
+              "end_index": 661,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks was similarly cavalier about the size of Scrooge's fortune. In the January 1951 *Walt Disney's Comics* it is spoken of in mere billions of dollars; in the November 1951 issue, Scrooge has no idea how much money he has, because \"it'd take thirteen years to count it\"; in the December 1951 issue, Scrooge pegs the total at \"five hundred triplicataillion multipludillion quadruplicatillion centrifugalillion dollars and sixteen cents.\" The figures were comparably fantastic in later stories (the closest thing to a constant was that sixteen cents), and Scrooge's fortune was more often measured in cubic acres than in dollars. It was Scrooge's attachment to his money that was real, not the money itself.",
+          "value": "Barks was similarly cavalier about the size of Scrooge's fortune. In the January 1951 Walt Disney's Comics it is spoken of in mere billions of dollars; in the November 1951 issue, Scrooge has no idea how much money he has, because \"it'd take thirteen years to count it\"; in the December 1951 issue, Scrooge pegs the total at \"five hundred triplicataillion multipludillion quadruplicatillion centrifugalillion dollars and sixteen cents.\" The figures were comparably fantastic in later stories (the closest thing to a constant was that sixteen cents), and Scrooge's fortune was more often measured in cubic acres than in dollars. It was Scrooge's attachment to his money that was real, not the money itself.",
+          "bbox": [
+            {
+              "h": 118.47061737804877,
+              "w": 125.6625321551067,
+              "x": 12.038488233612805,
+              "y": 123.30157774390243,
+              "confidence": 0.99,
+              "end_index": 706,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks was not concerned with constructing an internally consistent little world in his stories. Anyone who tries to write a \"biography\" of any of the ducks, basing it on Barks's stories, is doomed to tying himself in knots if he tries to explain all of the inconsistencies from story to story.\\* For example, Donald's skills and his economic status change radically from story to story; at some times he has",
+          "value": "Barks was not concerned with constructing an internally consistent little world in his stories. Anyone who tries to write a \"biography\" of any of the ducks, basing it on Barks's stories, is doomed to tying himself in knots if he tries to explain all of the inconsistencies from story to story.* For example, Donald's skills and his economic status change radically from story to story; at some times he has",
+          "bbox": [
+            {
+              "h": 66.39980945121954,
+              "w": 125.72199766577744,
+              "x": 13.115855802210364,
+              "y": 242.2328963414634,
+              "confidence": 0.99,
+              "end_index": 406,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "a good job, at others he is desperate for work, and at others he seems to have an independent income — all as a particular story requires. Barks concentrated not on superficial consistency from story to story, as today's writers of superhero comic books do, but on psychological consistency — or psychological plausibility — within each story. It is on this level of shrewd characterization that Barks's stories from his best years are in fact consistent. Whether Scrooge is a businessman or simply a miser in a given story, he remains an exemplar of those self-made men who cut their own hair and leave dimes for tips.",
+          "value": "a good job, at others he is desperate for work, and at others he seems to have an independent income — all as a particular story requires. Barks concentrated not on superficial consistency from story to story, as today's writers of superhero comic books do, but on psychological consistency — or psychological plausibility — within each story. It is on this level of shrewd characterization that Barks's stories from his best years are in fact consistent. Whether Scrooge is a businessman or simply a miser in a given story, he remains an exemplar of those self-made men who cut their own hair and leave dimes for tips.",
+          "bbox": [
+            {
+              "h": 103.93887290396341,
+              "w": 126.2092911585366,
+              "x": 147.74180830792682,
+              "y": 11.750959413109756,
+              "confidence": 0.99,
+              "end_index": 618,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's grasp of Scrooge's personality in the early fifties was such that he could even make us believe that Scrooge would spend money freely under some circumstances — specifically, when his ego was threatened. In a story in the March 1952 *Walt Disney's Comics* (which appeared around the same time as the first issue of *Uncle Scrooge*), Scrooge competes with the Maharajah of Howduyustan, who also claims to be the richest man in the world, to see who can build the biggest statue of Cornelius Coot, the founder of Duckburg. The statues finally dwarf the Duckburg skyline, in one of the most spectacular of Barks's half-page panels. When the dust settles, the Maharajah is wearing a barrel and begging in a park, but Scrooge has only emptied his petty-cash safe; his three cubic acres of money are intact.",
+          "value": "Barks's grasp of Scrooge's personality in the early fifties was such that he could even make us believe that Scrooge would spend money freely under some circumstances — specifically, when his ego was threatened. In a story in the March 1952 Walt Disney's Comics (which appeared around the same time as the first issue of Uncle Scrooge), Scrooge competes with the Maharajah of Howduyustan, who also claims to be the richest man in the world, to see who can build the biggest statue of Cornelius Coot, the founder of Duckburg. The statues finally dwarf the Duckburg skyline, in one of the most spectacular of Barks's half-page panels. When the dust settles, the Maharajah is wearing a barrel and begging in a park, but Scrooge has only emptied his petty-cash safe; his three cubic acres of money are intact.",
+          "bbox": [
+            {
+              "h": 139.400224847561,
+              "w": 126.06660823170733,
+              "x": 149.18849657012194,
+              "y": 116.42111661585366,
+              "confidence": 0.99,
+              "end_index": 808,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "At the end, as Donald and Scrooge walk past the poverty-stricken Maharajah, Donald suggests that Scrooge give his former rival a dime for a cup of coffee. The outraged Scrooge takes after Donald with his cane, crying, \"A dime? What do you think I am — a doggoned spendthrift?\"",
+          "value": "At the end, as Donald and Scrooge walk past the poverty-stricken Maharajah, Donald suggests that Scrooge give his former rival a dime for a cup of coffee. The outraged Scrooge takes after Donald with his cane, crying, \"A dime? What do you think I am — a doggoned spendthrift?\"",
+          "bbox": [
+            {
+              "h": 50.79546493902435,
+              "w": 125.92413109756096,
+              "x": 149.96556974085365,
+              "y": 256.96538871951225,
+              "confidence": 0.99,
+              "end_index": 275,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "However vigorously Scrooge may have responded to assaults by common thieves like the Beagle Boys, he was never more ferocious than when he was defending his fortune's good name — its standing as the world's largest accumulation of cash. His identification",
+          "value": "However vigorously Scrooge may have responded to assaults by common thieves like the Beagle Boys, he was never more ferocious than when he was defending his fortune's good name — its standing as the world's largest accumulation of cash. His identification",
+          "bbox": [
+            {
+              "h": 43.425617378048806,
+              "w": 125.76296112804877,
+              "x": 150.46799542682925,
+              "y": 308.63103658536585,
+              "confidence": 0.99,
+              "end_index": 254,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "\\*This has not prevented some people from making the effort. The outstanding work of this kind is *An Informal Biography of Scrooge McDuck* by Jack L. Chalker (Baltimore: Mirage Press, 1974), in which Chalker ingeniously disposes of many inconsistencies by treating some of Barks's stories about Scrooge as \"fiction\" and others as \"fact.\"",
+              "value": "*This has not prevented some people from making the effort. The outstanding work of this kind is An Informal Biography of Scrooge McDuck by Jack L. Chalker (Baltimore: Mirage Press, 1974), in which Chalker ingeniously disposes of many inconsistencies by treating some of Barks's stories about Scrooge as \"fiction\" and others as \"fact.\"",
+              "bbox": [
+                {
+                  "h": 32.042492378048756,
+                  "w": 125.8772489519817,
+                  "x": 14.145893197408535,
+                  "y": 320.0573094512195,
+                  "confidence": 0.95,
+                  "end_index": 337,
+                  "label": "footnote",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n53",
+              "value": "Carl Barks and the Art of the Comic Book\n53",
+              "bbox": [
+                {
+                  "h": 5.2209375,
+                  "w": 80.08490853658533,
+                  "x": 173.05077553353658,
+                  "y": 365.9140243902439,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "\\*This has not prevented some people from making the effort. The outstanding work of this kind is *An Informal Biography of Scrooge McDuck* by Jack L. Chalker (Baltimore: Mirage Press, 1974), in which Chalker ingeniously disposes of many inconsistencies by treating some of Barks's stories about Scrooge as \"fiction\" and others as \"fact.\"\n\nCarl Barks and the Art of the Comic Book\n53",
+          "bbox": [
+            {
+              "h": 51.08,
+              "w": 238.99,
+              "x": 14.15,
+              "y": 320.06,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "53"
+    }
+  ]
+}

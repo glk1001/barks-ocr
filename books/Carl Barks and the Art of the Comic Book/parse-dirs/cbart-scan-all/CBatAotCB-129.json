@@ -1,0 +1,626 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Changes: This story was submitted as six pages. It was expanded to eight pages by rearranging and altering the panels so that there would be fewer on a page.",
+          "value": "Changes: This story was submitted as six pages. It was expanded to eight pages by rearranging and altering the panels so that there would be fewer on a page.",
+          "bbox": [
+            {
+              "h": 17.37984517911585,
+              "w": 124.54453768102134,
+              "x": 12.350855802210365,
+              "y": 16.97958126905488,
+              "confidence": 0.99,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**22 - Mar.-Apr. 1946 - 52 pages**",
+          "value": "22 - Mar.-Apr. 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.6872265625000065,
+              "w": 73.27476455316311,
+              "x": 12.011382550495425,
+              "y": 40.30532012195122,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney's nephew from Alaska — a Kodiak bear with a huge appetite — comes to visit, eating an enormous quantity of food before Barney steers him to the home of his cousin Brownie. *(Oct. 10, 1945)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney's nephew from Alaska — a Kodiak bear with a huge appetite — comes to visit, eating an enormous quantity of food before Barney steers him to the home of his cousin Brownie. (Oct. 10, 1945)",
+          "bbox": [
+            {
+              "h": 28.700133384146348,
+              "w": 124.91796994092986,
+              "x": 12.149174685594511,
+              "y": 46.406953125,
+              "confidence": 0.99,
+              "end_index": 229,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**23 - May-June 1946 - 52 pages**",
+          "value": "23 - May-June 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.804394054878057,
+              "w": 73.75226681592987,
+              "x": 11.999580554496951,
+              "y": 81.82925876524389,
+              "confidence": 0.97,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney has a terrible headache, and Benny tries to keep things quiet for him — but he makes so much noise doing it that Barney winds up with shellshock. *(Dec. 10, 1945)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney has a terrible headache, and Benny tries to keep things quiet for him — but he makes so much noise doing it that Barney winds up with shellshock. (Dec. 10, 1945)",
+          "bbox": [
+            {
+              "h": 23.141032774390247,
+              "w": 125.05591749237803,
+              "x": 12.10684355945122,
+              "y": 88.10331173780489,
+              "confidence": 0.99,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**24 - July 1946 - 52 pages**",
+          "value": "24 - July 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.555007621951231,
+              "w": 58.6127851086128,
+              "x": 11.966735184832316,
+              "y": 117.5008193597561,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Benny talks Barney into \"roughing it\" in Yellowstone National Park, and they camp near a steam hole that erupts into a geyser after Barney has pitched his tent over it to enjoy its warmth. *(Feb. 18, 1946)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Benny talks Barney into \"roughing it\" in Yellowstone National Park, and they camp near a steam hole that erupts into a geyser after Barney has pitched his tent over it to enjoy its warmth. (Feb. 18, 1946)",
+          "bbox": [
+            {
+              "h": 28.580796493902433,
+              "w": 125.2716278820503,
+              "x": 12.01368271246189,
+              "y": 123.63249237804878,
+              "confidence": 0.98,
+              "end_index": 239,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Golden Digest* No. 18, July 1971.",
+          "value": "Reprinted: Golden Digest No. 18, July 1971.",
+          "bbox": [
+            {
+              "h": 5.358235518292695,
+              "w": 87.57698730468748,
+              "x": 16.62143876238567,
+              "y": 153.39838033536586,
+              "confidence": 0.95,
+              "end_index": 44,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**25 - August 1946 - 52 pages**",
+          "value": "25 - August 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.48153963414632,
+              "w": 67.57588605182926,
+              "x": 12.074105373475609,
+              "y": 164.9810899390244,
+              "confidence": 0.97,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney goes hunting with a gun, but Benny persuades him that it's too dangerous, so Barney switches to a bow and arrow. *(Mar. 20, 1946)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney goes hunting with a gun, but Benny persuades him that it's too dangerous, so Barney switches to a bow and arrow. (Mar. 20, 1946)",
+          "bbox": [
+            {
+              "h": 22.69979039634145,
+              "w": 124.97155642625762,
+              "x": 12.224765982278962,
+              "y": 171.12158917682927,
+              "confidence": 0.99,
+              "end_index": 170,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**26 - September 1946 - 52 pages**",
+          "value": "26 - September 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.623125,
+              "w": 75.68639112519054,
+              "x": 12.163006740663109,
+              "y": 200.62705792682928,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney and Benny go fishing in the North Woods, but a pelican steals their catch and they lose their poles to a huge fish. *(Apr. 13, 1946)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney and Benny go fishing in the North Woods, but a pelican steals their catch and they lose their poles to a huge fish. (Apr. 13, 1946)",
+          "bbox": [
+            {
+              "h": 22.79979420731707,
+              "w": 124.92671934546493,
+              "x": 12.29006228563262,
+              "y": 206.6075076219512,
+              "confidence": 0.99,
+              "end_index": 173,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**27 - October 1946 - 52 pages**",
+          "value": "27 - October 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.698102134146347,
+              "w": 68.82060487328505,
+              "x": 12.252657321836889,
+              "y": 236.159131097561,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney takesa job as dog catcher, using Benny to pull his wagon, and the stray dog he pursues saves his life. *(May 24, 1946)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney takesa job as dog catcher, using Benny to pull his wagon, and the stray dog he pursues saves his life. (May 24, 1946)",
+          "bbox": [
+            {
+              "h": 17.331310975609767,
+              "w": 124.90950457317072,
+              "x": 12.401530106707316,
+              "y": 242.42348323170734,
+              "confidence": 0.78,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**28 - November 1946 - 52 pages**",
+          "value": "28 - November 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.802256097560985,
+              "w": 75.52064977134145,
+              "x": 12.217122713414634,
+              "y": 265.93307926829266,
+              "confidence": 0.97,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney goes out into the fields to paint a picture that he can enter in a museum's contest, but his painting is mangled badly by a bull. *(June 10, 1946)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney goes out into the fields to paint a picture that he can enter in a museum's contest, but his painting is mangled badly by a bull. (June 10, 1946)",
+          "bbox": [
+            {
+              "h": 22.912568597560984,
+              "w": 124.93076874523625,
+              "x": 12.366820812690547,
+              "y": 272.01315548780485,
+              "confidence": 0.99,
+              "end_index": 187,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**29 - December 1946 - 52 pages**",
+          "value": "29 - December 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.70326981707316,
+              "w": 74.38697539538872,
+              "x": 12.23574373570884,
+              "y": 301.6122256097561,
+              "confidence": 0.97,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney tricks Benny with a pot of gold-painted pebbles at the end of a rainbow, and Benny, with the help of a miner, fools Barney by substituting real gold for the pebbles. *(July 8, 1946)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney tricks Benny with a pot of gold-painted pebbles at the end of a rainbow, and Benny, with the help of a miner, fools Barney by substituting real gold for the pebbles. (July 8, 1946)",
+          "bbox": [
+            {
+              "h": 23.338993902439015,
+              "w": 124.94014088700457,
+              "x": 12.419598061166157,
+              "y": 307.7086051829268,
+              "confidence": 0.99,
+              "end_index": 222,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**30 - January 1947 - 52 pages**",
+          "value": "30 - January 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.625548780487825,
+              "w": 68.95890505907013,
+              "x": 12.34037752477134,
+              "y": 337.0101676829268,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - art andrewriting of script - Barney is golfing when he discovers that the bottom of a lake on the course is covered with golf balls, and he tries to outwit McDuff, the Scottish manager of the course, who has forbidden him to go into the lake. *(Aug. 20, 1946)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - art andrewriting of script - Barney is golfing when he discovers that the bottom of a lake on the course is covered with golf balls, and he tries to outwit McDuff, the Scottish manager of the course, who has forbidden him to go into the lake. (Aug. 20, 1946)",
+          "bbox": [
+            {
+              "h": 29.280030011432927,
+              "w": 125.11419969512191,
+              "x": 149.8730830792683,
+              "y": 17.164197313262196,
+              "confidence": 0.97,
+              "end_index": 293,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**31 - February 1947 - 52 pages**",
+          "value": "31 - February 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.671692073170732,
+              "w": 72.37901867378046,
+              "x": 149.84610708841464,
+              "y": 52.836579649390245,
+              "confidence": 0.97,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - art and rewriting of script - Barney goes to a gym to take boxing lessons so that he can whip Mooseface McElk, who refuses to keep his chickens out of Barney's yard. *(Sept. 20, 1946)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - art and rewriting of script - Barney goes to a gym to take boxing lessons so that he can whip Mooseface McElk, who refuses to keep his chickens out of Barney's yard. (Sept. 20, 1946)",
+          "bbox": [
+            {
+              "h": 23.65155868902439,
+              "w": 124.91749618902438,
+              "x": 150.05690739329268,
+              "y": 58.77436737804878,
+              "confidence": 0.98,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The first appearance of Mooseface McElk. Of him, Barks said, \"I'm fairly sure he was the invention of an MGM writer and artist who was one of Western's most prolific contributors in those days. He wrote and drew the Li'l Wolf stories for years, and in spare moments did other scripts like an occasional one for Barney and Benny. I believe his name was Gil Turner \\[it was], but I'm very hazy at remembering names. Anyway, I always welcomed scripts from him, they were rich in gags and situations.\" *(Aug. 1, 1970, letter to Michael Barrier)*",
+          "value": "The first appearance of Mooseface McElk. Of him, Barks said, \"I'm fairly sure he was the invention of an MGM writer and artist who was one of Western's most prolific contributors in those days. He wrote and drew the Li'l Wolf stories for years, and in spare moments did other scripts like an occasional one for Barney and Benny. I believe his name was Gil Turner [it was], but I'm very hazy at remembering names. Anyway, I always welcomed scripts from him, they were rich in gags and situations.\" (Aug. 1, 1970, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 52.8291768292683,
+              "w": 125.30671875,
+              "x": 149.9686394817073,
+              "y": 82.72290777439024,
+              "confidence": 0.99,
+              "end_index": 540,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**32 - March 1947 - 52 pages**",
+          "value": "32 - March 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.673018292682928,
+              "w": 65.26006669207315,
+              "x": 149.99571836890243,
+              "y": 141.8200038109756,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - art and rewriting of script - Barney goes hunting for Klepto Klippo, a thief with a price on his head, but Klippo steals Barney's money, his rifle, his phone, his clothes, and finally even his house, with Barney and the sheriff inside. *(Oct. 12, 1946)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - art and rewriting of script - Barney goes hunting for Klepto Klippo, a thief with a price on his head, but Klippo steals Barney's money, his rifle, his phone, his clothes, and finally even his house, with Barney and the sheriff inside. (Oct. 12, 1946)",
+          "bbox": [
+            {
+              "h": 29.5501257621951,
+              "w": 125.00734184451217,
+              "x": 150.18338414634144,
+              "y": 147.84154344512197,
+              "confidence": 0.99,
+              "end_index": 286,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**33 - April 1947 - 52 pages**",
+          "value": "33 - April 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.725987042682927,
+              "w": 61.73828506097559,
+              "x": 150.11420350609757,
+              "y": 183.497881097561,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - art and rewriting of script - Barney's rich, ferocious old Uncle Grizzly comes to visit, and Barney tries to set up some way to save his uncle's life and so win his favor. *(Nov. 18, 1946)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - art and rewriting of script - Barney's rich, ferocious old Uncle Grizzly comes to visit, and Barney tries to set up some way to save his uncle's life and so win his favor. (Nov. 18, 1946)",
+          "bbox": [
+            {
+              "h": 22.580613567073186,
+              "w": 125.06614710365852,
+              "x": 150.23322027439022,
+              "y": 189.33778582317072,
+              "confidence": 0.98,
+              "end_index": 222,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**34 - May 1947 - 52 pages**",
+          "value": "34 - May 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.58329268292684,
+              "w": 59.52834603658536,
+              "x": 150.14860518292681,
+              "y": 218.95829268292684,
+              "confidence": 0.97,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - art and rewriting of script - Barney sells his house and then cannot find another, but Benny helps out by starting a fight between Mooseface and the purchaser of Barney's house. *(Jan. 2, 1947)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - art and rewriting of script - Barney sells his house and then cannot find another, but Benny helps out by starting a fight between Mooseface and the purchaser of Barney's house. (Jan. 2, 1947)",
+          "bbox": [
+            {
+              "h": 29.345121951219507,
+              "w": 125.35170160060973,
+              "x": 150.17009336890243,
+              "y": 224.78499237804877,
+              "confidence": 0.99,
+              "end_index": 227,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**35 - June 1947 - 52 pages**",
+          "value": "35 - June 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.566326219512175,
+              "w": 59.605844131097534,
+              "x": 150.25810403963413,
+              "y": 260.6276067073171,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Mooseface, jealous of Barney's garden, tricks him into digging it up by telling him that there are agates in the ground, and Benny, to teach Mooseface a lesson, tells him that Old Man Cougar may have hidden his fortune on Mooseface's property. *(Jan. 15, 1947)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Mooseface, jealous of Barney's garden, tricks him into digging it up by telling him that there are agates in the ground, and Benny, to teach Mooseface a lesson, tells him that Old Man Cougar may have hidden his fortune on Mooseface's property. (Jan. 15, 1947)",
+          "bbox": [
+            {
+              "h": 35.20904725609756,
+              "w": 125.09490663109756,
+              "x": 150.37104992378045,
+              "y": 266.4940015243902,
+              "confidence": 0.99,
+              "end_index": 294,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**36 - July 1947 - 52 pages**",
+          "value": "36 - July 1947 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.52685975609751,
+              "w": 58.457503810975595,
+              "x": 150.3675,
+              "y": 307.94945121951224,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - The watches of Barney, Benny and Mooseface all vanish, and Barney discovers that his pet magpie has stolen them. *(Jan. 28, 1947)*",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - The watches of Barney, Benny and Mooseface all vanish, and Barney discovers that his pet magpie has stolen them. (Jan. 28, 1947)",
+          "bbox": [
+            {
+              "h": 23.271562499999998,
+              "w": 125.0284698932927,
+              "x": 150.490478277439,
+              "y": 313.7857774390244,
+              "confidence": 0.98,
+              "end_index": 163,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"I believe it was my constant griping about having too much to do that got me free of the Barneys and Bennys.\" (Dec. 11,",
+          "value": "Barks: \"I believe it was my constant griping about having too much to do that got me free of the Barneys and Bennys.\" (Dec. 11,",
+          "bbox": [
+            {
+              "h": 11.383673780487824,
+              "w": 125.27622713414634,
+              "x": 150.5479801829268,
+              "y": 337.80962652439024,
+              "confidence": 0.98,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n129",
+              "value": "Carl Barks and the Art of the Comic Book\n129",
+              "bbox": [
+                {
+                  "h": 5.02710365853658,
+                  "w": 77.87133384146341,
+                  "x": 173.16749428353657,
+                  "y": 364.0203658536585,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n129",
+          "bbox": [
+            {
+              "h": 5.03,
+              "w": 77.87,
+              "x": 173.17,
+              "y": 364.02,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "129"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Donald Duck's nephews playing with a hypnosis gun. One nephew says \"YOU'RE A DOG!\" and another responds \"BOW, WOW, WOW, WOW, WOW!\"",
+          "md": "![Donald Duck's nephews playing with a hypnosis gun. One nephew says \"YOU'RE A DOG!\" and another responds \"BOW, WOW, WOW, WOW, WOW!\"](CBatAotCB-074_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-074_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 95.616,
+              "w": 146.016,
+              "x": 10.080000000000002,
+              "y": 10.752,
+              "confidence": 0.89,
+              "end_index": 155,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "A nephew points the gun at another and says \"BING! YOU'RE UNHYPNOTIZED!\" while Donald watches from a chair.",
+          "md": "![A nephew points the gun at another and says \"BING! YOU'RE UNHYPNOTIZED!\" while Donald watches from a chair.](CBatAotCB-074_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-074_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.34712223704268,
+              "w": 115.30375381097559,
+              "x": 158.96611852134146,
+              "y": 12.384653677591464,
+              "confidence": 0.9,
+              "end_index": 132,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "A nephew points the gun at Dewey and says \"BING! YOU'RE HYPNOTIZED, DEWEY!\"",
+          "md": "![A nephew points the gun at Dewey and says \"BING! YOU'RE HYPNOTIZED, DEWEY!\"](CBatAotCB-074_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-074_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 94.01314024390244,
+              "w": 131.6738221703506,
+              "x": 11.226241663490853,
+              "y": 109.99486280487805,
+              "confidence": 0.89,
+              "end_index": 100,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Dewey acts like a cat, saying \"MEOW! MEOW! MEOW!\" after being told \"YOU'RE A CAT!\"",
+          "md": "![Dewey acts like a cat, saying \"MEOW! MEOW! MEOW!\" after being told \"YOU'RE A CAT!\"](CBatAotCB-074_page_1_image_5_v2.jpg)",
+          "url": "CBatAotCB-074_page_1_image_5_v2.jpg",
+          "bbox": [
+            {
+              "h": 94.1822332317073,
+              "w": 128.4805049542683,
+              "x": 146.42428925304878,
+              "y": 108.92346036585366,
+              "confidence": 0.88,
+              "end_index": 107,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "A nephew points the gun at Donald and says \"BING! YOU'RE UNHYPNOTIZED!\"",
+          "md": "![A nephew points the gun at Donald and says \"BING! YOU'RE UNHYPNOTIZED!\"](CBatAotCB-074_page_1_image_4_v2.jpg)",
+          "url": "CBatAotCB-074_page_1_image_4_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.25108993902444,
+              "w": 115.95542206554876,
+              "x": 11.698602324695122,
+              "y": 207.11346036585365,
+              "confidence": 0.88,
+              "end_index": 96,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Donald reaches for the gun, saying \"OH, NO, YOU DON'T! GIVE ME THAT GUN!\" while a nephew says \"NOW YOU HYPNOTIZE ME, DEWEY!\"",
+          "md": "![Donald reaches for the gun, saying \"OH, NO, YOU DON'T! GIVE ME THAT GUN!\" while a nephew says \"NOW YOU HYPNOTIZE ME, DEWEY!\"](CBatAotCB-074_page_1_image_6_v2.jpg)",
+          "url": "CBatAotCB-074_page_1_image_6_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.70577743902439,
+              "w": 145.24098132621947,
+              "x": 130.73223704268293,
+              "y": 206.29083841463412,
+              "confidence": 0.88,
+              "end_index": 149,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From *Walt Disney's Comics* No. 145, October 1952; © 1952 Walt Disney Productions.",
+          "value": "From Walt Disney's Comics No. 145, October 1952; © 1952 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.28902439024394,
+              "w": 166.3832683879573,
+              "x": 59.710039538871946,
+              "y": 305.64,
+              "confidence": 0.95,
+              "end_index": 81,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "intractable deadbeat, Rockjaw Bumrisk. Donald tries to hypnotize Bumrisk with no success, and finally Rockjaw turns the gun on Donald. Once again Donald goes under—first as a gopher (\"Cherk! Cherk! I keep thinking",
+          "value": "intractable deadbeat, Rockjaw Bumrisk. Donald tries to hypnotize Bumrisk with no success, and finally Rockjaw turns the gun on Donald. Once again Donald goes under—first as a gopher (\"Cherk! Cherk! I keep thinking",
+          "bbox": [
+            {
+              "h": 36.831814024390205,
+              "w": 125.82429485041921,
+              "x": 11.228881597751522,
+              "y": 318.2921798780488,
+              "confidence": 0.98,
+              "end_index": 212,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "that I have to collect a dollar from this guy! But how can I when I'm only a gopher?\"), then a chicken. Then Bumrisk hypnotizes Donald into thinking that he's a gorilla. This is a mistake. Donald is a bill-collecting gorilla,",
+          "value": "that I have to collect a dollar from this guy! But how can I when I'm only a gopher?\"), then a chicken. Then Bumrisk hypnotizes Donald into thinking that he's a gorilla. This is a mistake. Donald is a bill-collecting gorilla,",
+          "bbox": [
+            {
+              "h": 36.85189024390243,
+              "w": 125.75083650914631,
+              "x": 149.40790586890242,
+              "y": 318.6972256097561,
+              "confidence": 0.98,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "74 Carl Barks and the Art of the Comic Book",
+              "value": "74 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.52849085365855,
+                  "w": 80.36637719131097,
+                  "x": 33.833667587652435,
+                  "y": 366.5488490853658,
+                  "confidence": 0.96,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "74 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.53,
+              "w": 80.37,
+              "x": 33.83,
+              "y": 366.55,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "74"
+    }
+  ]
+}

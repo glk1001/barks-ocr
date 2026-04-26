@@ -1,0 +1,458 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Scrooge takes the nephews and Donald to Australia to demonstrate his ability to find valuable minerals anywhere. In Australia, the ducks are followed into the desert by two miners. (Mar. 10, 1955)",
+          "value": "Scrooge takes the nephews and Donald to Australia to demonstrate his ability to find valuable minerals anywhere. In Australia, the ducks are followed into the desert by two miners. (Mar. 10, 1955)",
+          "bbox": [
+            {
+              "h": 23.435113376524395,
+              "w": 125.53824730849846,
+              "x": 13.496378263147864,
+              "y": 18.744232088414634,
+              "confidence": 0.98,
+              "end_index": 195,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 91, February 1971, No. 148, January 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 91, February 1971, No. 148, January 1978.",
+          "bbox": [
+            {
+              "h": 10.922583841463412,
+              "w": 125.52569181116615,
+              "x": 13.398071527248474,
+              "y": 42.902309451219516,
+              "confidence": 0.96,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge is invited to a \"come-as-you-are\" party while bathing in money. (Feb. 24, 1955)",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge is invited to a \"come-as-you-are\" party while bathing in money. (Feb. 24, 1955)",
+          "bbox": [
+            {
+              "h": 17.515918445121947,
+              "w": 125.51929508860516,
+              "x": 13.44626131383384,
+              "y": 54.30744855182927,
+              "confidence": 0.96,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 72, December 1967.",
+          "value": "Reprinted: Uncle Scrooge No. 72, December 1967.",
+          "bbox": [
+            {
+              "h": 5.610131478658536,
+              "w": 99.62906321455793,
+              "x": 17.633348180259144,
+              "y": 71.93492378048781,
+              "confidence": 0.93,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 7/8 (back cover) - Scrooge gives a squirrel nuts, then takes them back from a hole in the squirrel's tree. (Feb. 24, 1955)",
+          "value": "UNCLE SCROOGE - 7/8 (back cover) - Scrooge gives a squirrel nuts, then takes them back from a hole in the squirrel's tree. (Feb. 24, 1955)",
+          "bbox": [
+            {
+              "h": 17.58547065548781,
+              "w": 125.53121713033536,
+              "x": 13.50892197027439,
+              "y": 78.2432412347561,
+              "confidence": 0.96,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Dell Pledge fills out the page.",
+          "value": "The Dell Pledge fills out the page.",
+          "bbox": [
+            {
+              "h": 5.4010060975609715,
+              "w": 68.10653534679878,
+              "x": 18.10222322789634,
+              "y": 96.19405106707318,
+              "confidence": 0.93,
+              "end_index": 34,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 12 - Dec.-Feb. 1956 - 36 pages",
+          "value": "12 - Dec.-Feb. 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.695701219512202,
+              "w": 71.31938250285822,
+              "x": 13.48347763433689,
+              "y": 107.79770579268292,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge uses coins instead of sand in a huge hourglass. (May 26, 1955)",
+          "value": "Front cover: Scrooge uses coins instead of sand in a huge hourglass. (May 26, 1955)",
+          "bbox": [
+            {
+              "h": 11.61503048780487,
+              "w": 125.7128838366997,
+              "x": 13.312626834032011,
+              "y": 113.75971417682928,
+              "confidence": 0.96,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 91, February 1971",
+          "value": "Reprinted: Uncle Scrooge No. 91, February 1971",
+          "bbox": [
+            {
+              "h": 5.587214176829248,
+              "w": 95.66104373094512,
+              "x": 18.16182593368902,
+              "y": 125.75243140243904,
+              "confidence": 0.92,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge celebrates his seventy-fifth birthday with a seventy-five-watt bulb on the cake. (June 2, 1955)",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge celebrates his seventy-fifth birthday with a seventy-five-watt bulb on the cake. (June 2, 1955)",
+          "bbox": [
+            {
+              "h": 17.44019817073171,
+              "w": 125.73692620998473,
+              "x": 13.387982326600609,
+              "y": 131.5137118902439,
+              "confidence": 0.97,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in \"The Golden Fleecing\" - 31 7/8. Scrooge, who wants a coat woven of gold, is shown some of the legendary \"golden fleece\" by Arab-like traders who prove to be Harpies in disguise. The Harpies take Scrooge and Donald to Colchis, where Scrooge is to judge their cooking ability. The nephews come to the rescue, but Scrooge is swallowed by the Sleepless Dragon. (June 2, 1955)",
+          "value": "UNCLE SCROOGE in \"The Golden Fleecing\" - 31 7/8. Scrooge, who wants a coat woven of gold, is shown some of the legendary \"golden fleece\" by Arab-like traders who prove to be Harpies in disguise. The Harpies take Scrooge and Donald to Colchis, where Scrooge is to judge their cooking ability. The nephews come to the rescue, but Scrooge is swallowed by the Sleepless Dragon. (June 2, 1955)",
+          "bbox": [
+            {
+              "h": 41.210407774390255,
+              "w": 125.8592099371189,
+              "x": 13.365516625381096,
+              "y": 149.33724466463414,
+              "confidence": 0.98,
+              "end_index": 387,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: In a letter to a fan commenting about reasons why Donald was less vital in 1960 than in the old days, Barks mentioned that taboo after taboo was imposed on the scripter's freedom. He mentioned \"The Golden Fleecing,\" Scrooge No. 12: \"Well, I almost had to eat those 32 pages of drawings because I'd used some harpies as menaces. It seems that Harpy or Harpie is an obscure nickname for a street-walker. I managed to save the story by renaming the old girls LARKIES.\" At another time Barks said that in addition to changing the names he had to redraw a page or two. There exist at least two panels of drawings from the story as originally done, panels 1 and 3 of page 16. Scrooge and Donald are sitting in a Harpy nest and five Harpies are frolicking and somersaulting in the air shouting \"Whee!\" and \"Hee! Hee! Hee!\" In the other panel four Harpies are shown and one of them is speaking. In the margins of the page are notes from the editor revising the word Harpies to Larkies in the caption and telling Barks to bring Scrooge and Donald in the nest into the foreground and show only a couple of Larkies. In the other panel Barks is advised to show a close-up on only one Larky. No changes in dialogue are made. Some panels other than the ones with Harpy-Larky name changes appear to have been relettered, for example page 9 panel 3, but these are probably to omit Harpy references.",
+          "value": "Weston: In a letter to a fan commenting about reasons why Donald was less vital in 1960 than in the old days, Barks mentioned that taboo after taboo was imposed on the scripter's freedom. He mentioned \"The Golden Fleecing,\" Scrooge No. 12: \"Well, I almost had to eat those 32 pages of drawings because I'd used some harpies as menaces. It seems that Harpy or Harpie is an obscure nickname for a street-walker. I managed to save the story by renaming the old girls LARKIES.\" At another time Barks said that in addition to changing the names he had to redraw a page or two. There exist at least two panels of drawings from the story as originally done, panels 1 and 3 of page 16. Scrooge and Donald are sitting in a Harpy nest and five Harpies are frolicking and somersaulting in the air shouting \"Whee!\" and \"Hee! Hee! Hee!\" In the other panel four Harpies are shown and one of them is speaking. In the margins of the page are notes from the editor revising the word Harpies to Larkies in the caption and telling Barks to bring Scrooge and Donald in the nest into the foreground and show only a couple of Larkies. In the other panel Barks is advised to show a close-up on only one Larky. No changes in dialogue are made. Some panels other than the ones with Harpy-Larky name changes appear to have been relettered, for example page 9 panel 3, but these are probably to omit Harpy references.",
+          "bbox": [
+            {
+              "h": 135.36547637195122,
+              "w": 126.02183331745424,
+              "x": 13.432266339557925,
+              "y": 191.15031631097563,
+              "confidence": 0.99,
+              "end_index": 1389,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\[Barks has said that the panels on the sixteenth page had to be redrawn because the editors thought that \"such behavior by the Harpies suggested insanity.\" (Nov. 22, 1968, letter to Michael Barrier)]",
+          "value": "[Barks has said that the panels on the sixteenth page had to be redrawn because the editors thought that \"such behavior by the Harpies suggested insanity.\" (Nov. 22, 1968, letter to Michael Barrier)]",
+          "bbox": [
+            {
+              "h": 23.23490853658539,
+              "w": 125.61395114805639,
+              "x": 13.54250369188262,
+              "y": 327.495868902439,
+              "confidence": 0.98,
+              "end_index": 199,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Dell Pledge fills out the last page.",
+          "value": "The Dell Pledge fills out the last page.",
+          "bbox": [
+            {
+              "h": 5.96483231707317,
+              "w": 75.9009375,
+              "x": 156.27675114329267,
+              "y": 19.540989900914635,
+              "confidence": 0.93,
+              "end_index": 39,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge gets free coffee at the diner by soaking it up with a \"doughnut\" cut from a sponge. (June 2, 1955)",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge gets free coffee at the diner by soaking it up with a \"doughnut\" cut from a sponge. (June 2, 1955)",
+          "bbox": [
+            {
+              "h": 17.202833460365856,
+              "w": 125.56510861280483,
+              "x": 151.75157583841462,
+              "y": 25.55978849085366,
+              "confidence": 0.96,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (back cover) - Scrooge passes up a cafe in the desert in favor of lower prices at another, a mile away. (June 2, 1955)",
+          "value": "UNCLE SCROOGE - 1 (back cover) - Scrooge passes up a cafe in the desert in favor of lower prices at another, a mile away. (June 2, 1955)",
+          "bbox": [
+            {
+              "h": 17.405250571646345,
+              "w": 125.57359756097561,
+              "x": 151.75682355182923,
+              "y": 42.87150057164634,
+              "confidence": 0.97,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 13 - Mar.-May 1956 - 36 pages",
+          "value": "13 - Mar.-May 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.815924161585363,
+              "w": 74.03263147865854,
+              "x": 151.67467797256094,
+              "y": 66.72348132621951,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The nephews build a castle of coins. (Sept. 1, 1955)",
+          "value": "Front cover: The nephews build a castle of coins. (Sept. 1, 1955)",
+          "bbox": [
+            {
+              "h": 10.58773056402439,
+              "w": 125.41601181402437,
+              "x": 151.9509032012195,
+              "y": 72.93048589939025,
+              "confidence": 0.96,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Uncle Scrooge No. 109, December 1973",
+          "value": "Reprinted: Uncle Scrooge No. 109, December 1973",
+          "bbox": [
+            {
+              "h": 5.677391387195116,
+              "w": 101.55613376524391,
+              "x": 156.47280297256094,
+              "y": 84.71482088414635,
+              "confidence": 0.92,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge paints a policeman on his window to scare burglars away. (Sept. 1, 1955)",
+          "value": "UNCLE SCROOGE - 1 (inside front cover) - Scrooge paints a policeman on his window to scare burglars away. (Sept. 1, 1955)",
+          "bbox": [
+            {
+              "h": 17.19272675304878,
+              "w": 125.85683689024391,
+              "x": 151.43760480182925,
+              "y": 90.56189977134146,
+              "confidence": 0.96,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in \"Land Beneath the Ground!\" - 27. Fearful of earthquakes, Scrooge has a shaft dug beneath his money bin to search for weak places in the rock. The shaft breaks through into a huge cavern populated by the Terries and the Fermies, round, legless creatures who compete in a \"game\" of causing earthquakes. (Aug. 18, 1955)",
+          "value": "UNCLE SCROOGE in \"Land Beneath the Ground!\" - 27. Fearful of earthquakes, Scrooge has a shaft dug beneath his money bin to search for weak places in the rock. The shaft breaks through into a huge cavern populated by the Terries and the Fermies, round, legless creatures who compete in a \"game\" of causing earthquakes. (Aug. 18, 1955)",
+          "bbox": [
+            {
+              "h": 35.537721036585346,
+              "w": 125.69270007621951,
+              "x": 151.52415777439023,
+              "y": 108.11387195121952,
+              "confidence": 0.98,
+              "end_index": 332,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The February 25-March 3, 1971, issue of the Bugle-American (Milwaukee) included an article — credited to \"Carl Barks\" — recounting this story, in connection with the February 9, 1971, earthquake in Los Angeles, as if the story were fact. Barks was identified in an editor's note as \"a noted authority on ducks and money bins.\" The cover of this issue of the Bugle-American (an underground or semi-underground newspaper) depicted Scrooge, Donald, the nephews, and the Terries and the Fermies, and was signed by \"Carl Barksalike.\" Barks did not write the article, and commented after I called it to his attention: \"I am a bit grouchy at finding my name used as the author of a piece of childish nonsense. However, I doubt that anybody much will seriously believe that I could be that silly.\" (Mar. 4, 1971, letter to Michael Barrier)",
+          "value": "The February 25-March 3, 1971, issue of the Bugle-American (Milwaukee) included an article — credited to \"Carl Barks\" — recounting this story, in connection with the February 9, 1971, earthquake in Los Angeles, as if the story were fact. Barks was identified in an editor's note as \"a noted authority on ducks and money bins.\" The cover of this issue of the Bugle-American (an underground or semi-underground newspaper) depicted Scrooge, Donald, the nephews, and the Terries and the Fermies, and was signed by \"Carl Barksalike.\" Barks did not write the article, and commented after I called it to his attention: \"I am a bit grouchy at finding my name used as the author of a piece of childish nonsense. However, I doubt that anybody much will seriously believe that I could be that silly.\" (Mar. 4, 1971, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 82.18305640243904,
+              "w": 125.68072980182924,
+              "x": 151.5684032012195,
+              "y": 143.85834603658535,
+              "confidence": 0.99,
+              "end_index": 830,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: In Uncle Scrooge No. 13, both stories were changed before publication. With this issue, an application for second-class mailing privileges was made (granted with issue No. 15). Apparently, the Post Office required that periodicals with second-class mailing privileges have at least two stories, with no single character appearing in both, and at least one page of text. That would seem to be indicated by the changes made in the issue.",
+          "value": "Weston: In Uncle Scrooge No. 13, both stories were changed before publication. With this issue, an application for second-class mailing privileges was made (granted with issue No. 15). Apparently, the Post Office required that periodicals with second-class mailing privileges have at least two stories, with no single character appearing in both, and at least one page of text. That would seem to be indicated by the changes made in the issue.",
+          "bbox": [
+            {
+              "h": 45.997842987804866,
+              "w": 125.59566882621954,
+              "x": 151.34206554878045,
+              "y": 227.142256097561,
+              "confidence": 0.99,
+              "end_index": 442,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Land Beneath the Ground\" was originally a thirty-two page story. The first cuts are made between pages 2 and 5 with the net elimination of two pages. And there is almost certainly some redrawing and changes in text. I say this for several reasons. First, some panels look like they have been relettered, or had captions or figures added or changed. Second, the natural rhythm and flow of a Barks story is not present in these pages but disrupted in such a way that I have long had a feeling that something just wasn't right about the story. Now I think I know why — two pages were cut from the beginning against a tight deadline. Third, I think that if Barks had fully redrawn and rewritten these pages, he could have corrected the subtle imbalances that are there.",
+          "value": "\"Land Beneath the Ground\" was originally a thirty-two page story. The first cuts are made between pages 2 and 5 with the net elimination of two pages. And there is almost certainly some redrawing and changes in text. I say this for several reasons. First, some panels look like they have been relettered, or had captions or figures added or changed. Second, the natural rhythm and flow of a Barks story is not present in these pages but disrupted in such a way that I have long had a feeling that something just wasn't right about the story. Now I think I know why — two pages were cut from the beginning against a tight deadline. Third, I think that if Barks had fully redrawn and rewritten these pages, he could have corrected the subtle imbalances that are there.",
+          "bbox": [
+            {
+              "h": 75.87985518292683,
+              "w": 125.64219512195122,
+              "x": 150.74022484756094,
+              "y": 274.42765243902437,
+              "confidence": 0.99,
+              "end_index": 765,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "138 Carl Barks and the Art of the Comic Book",
+              "value": "138 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.619611280487825,
+                  "w": 77.63730683117377,
+                  "x": 34.50277034108231,
+                  "y": 362.73802591463414,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "138 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.62,
+              "w": 77.64,
+              "x": 34.5,
+              "y": 362.74,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "138"
+    }
+  ]
+}

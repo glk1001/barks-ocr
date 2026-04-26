@@ -1,0 +1,1 @@
+![A collection of five pencil sketches of nude female figures in various poses. The central figure is standing and leaning against a block, while others are seated or standing in different orientations.](CBatAotCB-077_page_1_image_1_v2.jpg)

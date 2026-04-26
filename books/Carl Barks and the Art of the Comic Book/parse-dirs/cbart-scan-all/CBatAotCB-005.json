@@ -1,0 +1,117 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Ore 1910 spread.",
+          "md": "![Ore 1910 spread.](CBatAotCB-005_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-005_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 259.03404320693596,
+              "w": 282.0782077035671,
+              "x": 0.06659603118896484,
+              "y": 8.398807402820122,
+              "confidence": 0.99,
+              "end_index": 41,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "when he heard about the homestead land in Oregon, he went up there and took up a homestead of a hundred and sixty acres. He was very industrious at it, cleared the sagebrush off, and he got enough income out of his hundred and sixty acres to buy other hundred and sixties around him. By the time I came along, he had about a square mile of land, all in wheat, and doing all right.",
+          "value": "when he heard about the homestead land in Oregon, he went up there and took up a homestead of a hundred and sixty acres. He was very industrious at it, cleared the sagebrush off, and he got enough income out of his hundred and sixty acres to buy other hundred and sixties around him. By the time I came along, he had about a square mile of land, all in wheat, and doing all right.",
+          "bbox": [
+            {
+              "h": 66.71855945121948,
+              "w": 125.78028415586891,
+              "x": 20.784544350228654,
+              "y": 283.2968826219512,
+              "confidence": 0.99,
+              "end_index": 379,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"My father was forty-odd years old when I",
+          "value": "\"My father was forty-odd years old when I",
+          "bbox": [
+            {
+              "h": 6.995259146341504,
+              "w": 118.85385766006097,
+              "x": 27.887558117378045,
+              "y": 350.3850457317073,
+              "confidence": 0.96,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "was born. My mother was forty, too. She and my dad didn't get married until 1897, 1898, something like that. They had corresponded with each other a little bit over the years. She had had the problem of having to take care of her aged parents, who were not so much aged as they were ill. When they had finally passed on, I guess she wrote to my dad and said that she was free then, she could come out and marry him if he had gotten his homestead put",
+          "value": "was born. My mother was forty, too. She and my dad didn't get married until 1897, 1898, something like that. They had corresponded with each other a little bit over the years. She had had the problem of having to take care of her aged parents, who were not so much aged as they were ill. When they had finally passed on, I guess she wrote to my dad and said that she was free then, she could come out and marry him if he had gotten his homestead put",
+          "bbox": [
+            {
+              "h": 73.9694817073171,
+              "w": 125.79252667682927,
+              "x": 158.0963700457317,
+              "y": 283.73115091463416,
+              "confidence": 0.99,
+              "end_index": 448,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "*Carl Barks and the Art of the Comic Book*\n5",
+              "value": "Carl Barks and the Art of the Comic Book\n5",
+              "bbox": [
+                {
+                  "h": 4.331890243902435,
+                  "w": 80.76241234756098,
+                  "x": 183.08788490853658,
+                  "y": 369.2478887195122,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "*Carl Barks and the Art of the Comic Book*\n5",
+          "bbox": [
+            {
+              "h": 4.33,
+              "w": 80.76,
+              "x": 183.09,
+              "y": 369.25,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "5"
+    }
+  ]
+}

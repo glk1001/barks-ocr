@@ -1,0 +1,205 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Aug. 4 - One-page gag, Christmas Parade No. 1; WDC No. 111.\nAug. 24 - WDC No. 112.\nSept. 8 - \"Trail of the Unicorn,\" DD 4C No. 263.\nSept. 29 - \"Land of the Totem Poles,\" DD 4C No. 263.\nOct. 6 - Covers, DD 4C No. 263.\nOct. 13 - WDC No. 114.\nOct. 27 - WDC No. 117.\nNov. 10 - FC, DD 4C No. 275.\nNov. 23 - \"Ancient Persia,\" DD 4C No. 275.",
+          "value": "Aug. 4 - One-page gag, Christmas Parade No. 1; WDC No. 111.\nAug. 24 - WDC No. 112.\nSept. 8 - \"Trail of the Unicorn,\" DD 4C No. 263.\nSept. 29 - \"Land of the Totem Poles,\" DD 4C No. 263.\nOct. 6 - Covers, DD 4C No. 263.\nOct. 13 - WDC No. 114.\nOct. 27 - WDC No. 117.\nNov. 10 - FC, DD 4C No. 275.\nNov. 23 - \"Ancient Persia,\" DD 4C No. 275.",
+          "bbox": [
+            {
+              "h": 10.94300161966463,
+              "w": 125.4548230278201,
+              "x": 10.922615996570121,
+              "y": 20.319193502286588,
+              "confidence": 0.76,
+              "end_index": 333,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 1950",
+          "value": "1950",
+          "bbox": [
+            {
+              "h": 4.582711509146334,
+              "w": 11.349565072408538,
+              "x": 11.575536156631095,
+              "y": 85.37959984756098,
+              "confidence": 0.93,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 5 - \"Vacation Time,\" Vacation Parade No. 1.\nJan. 19 - Grandma Duck, Vacation Parade No. 1.\nJan. 27 - \"Camp Counselor,\" Vacation Parade No. 1.\nFeb. 23 - \"The Pixilated Parrot,\" FC, DD 4C No. 282.\nMar. 16 - \"The Magic Hourglass,\" DD 4C No. 291.\nApr. 20 - \"Big-top Bedlam,\" DD 4C No. 300.\nMay 24 - \"You Can't Guess,\" Christmas Parade No. 2 (Dell).\nJune 29 - \"Dangerous Disguise,\" DD 4C No. 308.\nJuly 27 - \"No Such Varmint,\" DD 4C No. 318.\nAug. 10 - WDC No. 124.\nAug. 31 - WDC No. 125.\nSept. 14 - WDC No. 126.\nSept. 28 - WDC No. 127.\nNov. 2 - \"In Old California,\" DD 4C No. 328.\nNov. 30 - WDC No. 128.\nDec. 7 - WDC No. 129.\nDec. 28 - WDC No. 130.",
+          "value": "Jan. 5 - \"Vacation Time,\" Vacation Parade No. 1.\nJan. 19 - Grandma Duck, Vacation Parade No. 1.\nJan. 27 - \"Camp Counselor,\" Vacation Parade No. 1.\nFeb. 23 - \"The Pixilated Parrot,\" FC, DD 4C No. 282.\nMar. 16 - \"The Magic Hourglass,\" DD 4C No. 291.\nApr. 20 - \"Big-top Bedlam,\" DD 4C No. 300.\nMay 24 - \"You Can't Guess,\" Christmas Parade No. 2 (Dell).\nJune 29 - \"Dangerous Disguise,\" DD 4C No. 308.\nJuly 27 - \"No Such Varmint,\" DD 4C No. 318.\nAug. 10 - WDC No. 124.\nAug. 31 - WDC No. 125.\nSept. 14 - WDC No. 126.\nSept. 28 - WDC No. 127.\nNov. 2 - \"In Old California,\" DD 4C No. 328.\nNov. 30 - WDC No. 128.\nDec. 7 - WDC No. 129.\nDec. 28 - WDC No. 130.",
+          "bbox": [
+            {
+              "h": 10.912168445121942,
+              "w": 125.54109410727895,
+              "x": 11.475254025342988,
+              "y": 132.74881097560976,
+              "confidence": 0.77,
+              "end_index": 646,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 1951",
+          "value": "1951",
+          "bbox": [
+            {
+              "h": 4.514474085365855,
+              "w": 11.218753810975608,
+              "x": 11.94688690929878,
+              "y": 209.51133384146343,
+              "confidence": 0.93,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 11 - WDC No. 131.\nJan. 25 - WDC No. 132.\nFeb. 8 - Unknown one-page gag idea for DD 4C No. 348.\nFeb. 15 - 10 pages of \"Christmas for Shacktown,\" DD 4C No. 367.\nFeb. 22 - FC, WDC No. 130.\nMar. 1 - FC, WDC No. 131.\nMar. ? - FC, WDC No. 132.\nMar. 8 - FC, Duck Album 4C No. 353; unknown one-page DD gag idea for DD 4C No. 356.\nMar. 15 - 22 pages of \"Christmas for Shacktown,\" DD 4C No. 367.\nMar. 29 - Grandma Duck, WDC No. 132.\nApr. 5 - FC, DD 4C No. 348.\nApr. 12 - WDC No. 133.\nMay 5 - FC, WDC No. 133; WDC No. 134.\nMay 10 - FC, WDC No. 134; FC, WDC No. 135; FC, WDC No. 139; FC?, WDC No. 140.\nMay 17 - Two unknown one-page gag ideas.\nMay 24 - FC, DD 4C No. 356; covers, DD 4C No. 367.\nMay 31 - WDC No. 135.\nJune 7 - WDC No. 136.\nJune 21 - WDC No. 137.\nJuly 12 - WDC No. 138.\nJuly 26 - WDC No. 139.\nAug. 2 - FC, WDC No. 136.\nAug. 23 - WDC No. 140.\nSept. 27 - US 4C No. 386; FC?, WDC No. 140; FC, WDC No. 141; unknown one-page gag idea for Uncle Scrooge.\nOct. 18 - WDC No. 141.\nNov. 8 - FC, DD 4C No. 394.\nDec. 3 - \"The Golden Helmet,\" DD 4C No. 408.",
+          "value": "Jan. 11 - WDC No. 131.\nJan. 25 - WDC No. 132.\nFeb. 8 - Unknown one-page gag idea for DD 4C No. 348.\nFeb. 15 - 10 pages of \"Christmas for Shacktown,\" DD 4C No. 367.\nFeb. 22 - FC, WDC No. 130.\nMar. 1 - FC, WDC No. 131.\nMar. ? - FC, WDC No. 132.\nMar. 8 - FC, Duck Album 4C No. 353; unknown one-page DD gag idea for DD 4C No. 356.\nMar. 15 - 22 pages of \"Christmas for Shacktown,\" DD 4C No. 367.\nMar. 29 - Grandma Duck, WDC No. 132.\nApr. 5 - FC, DD 4C No. 348.\nApr. 12 - WDC No. 133.\nMay 5 - FC, WDC No. 133; WDC No. 134.\nMay 10 - FC, WDC No. 134; FC, WDC No. 135; FC, WDC No. 139; FC?, WDC No. 140.\nMay 17 - Two unknown one-page gag ideas.\nMay 24 - FC, DD 4C No. 356; covers, DD 4C No. 367.\nMay 31 - WDC No. 135.\nJune 7 - WDC No. 136.\nJune 21 - WDC No. 137.\nJuly 12 - WDC No. 138.\nJuly 26 - WDC No. 139.\nAug. 2 - FC, WDC No. 136.\nAug. 23 - WDC No. 140.\nSept. 27 - US 4C No. 386; FC?, WDC No. 140; FC, WDC No. 141; unknown one-page gag idea for Uncle Scrooge.\nOct. 18 - WDC No. 141.\nNov. 8 - FC, DD 4C No. 394.\nDec. 3 - \"The Golden Helmet,\" DD 4C No. 408.",
+          "bbox": [
+            {
+              "h": 11.997198932926832,
+              "w": 125.57857088414634,
+              "x": 149.77737233231707,
+              "y": 50.22758574695122,
+              "confidence": 0.77,
+              "end_index": 1049,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 1952",
+          "value": "1952",
+          "bbox": [
+            {
+              "h": 4.634205411585362,
+              "w": 11.361402439024378,
+              "x": 150.2212157012195,
+              "y": 85.84837842987805,
+              "confidence": 0.94,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 3 - Covers, DD 4C No. 408; FC, WDC No. 143; FC, WDC No. 144; FC, WDC No. 145; FC, WDC No. 146.\nJan. 10 - WDC No. 142; WDC No. 143; unpublished \"golden apples\" story for WDC.\nJan. 24 - Unknown one-page DD gag idea.\nJan. 31 - \"The Gilded Man,\" IFC, IBC, BC, DD 4C No. 422.\nFeb. 7 - Three unknown one-page gags, one each for DD, Donald's nephews, Bugs Bunny.\nFeb. 21 - FC, DD 4C No. 422; WDC No. 144; unpublished FC for March of Comics.\nMar. 6 - WDC No. 145; Tom and Jerry Winter Carnival No. 1.\nMar. 31 - \"Trick or Treat,\" DD No. 26.\nApr. 10 - Covers, DD No. 26.\nMay 8 - \"Hobblin' Goblins,\" DD No. 26.\nMay 15 - WDC No. 146.\nMay 29 - WDC No. 147.\nJune 12 - WDC No. 148.\nJune 30 - WDC No. 149; WDC No. 150.\nJuly 31 - FC DD, No. 27; FC, Duck Album 4C No. 450; FC, WDC No. 147; FC, WDC No. 148; FC, WDC No. 149.\nAug. 14 - FC, WDC No. 152.\nAug. 28 - FC, DD No. 28; FC, US 4C No. 456.\nSept. 18 - \"Back to the Klondike,\" US 4C No. 456; FC, WDC No. 150.\nSept. ? - \"Somethin' Fishy Here,\" US 4C No. 456.\nOct. 2 - FC, WDC No. 151; FC, WDC No. 153; FC, WDC No. 154.\nOct. 9 - FC, DD No. 29; FC, DD No. 30.\nOct. 16 - IFC, IBC, BC, US 4C No. 456.\nOct. 23 - WDC No. 151.\nOct. 30 - WDC No. 152.\nNov. 27 - WDC No. 153; WDC No. 154.\nDec. 6 - FC, WDC No. 155; FC, WDC No. 158.\nDec. 24 - WDC No. 155.\nDec. 31 - WDC No. 156.",
+          "value": "Jan. 3 - Covers, DD 4C No. 408; FC, WDC No. 143; FC, WDC No. 144; FC, WDC No. 145; FC, WDC No. 146.\nJan. 10 - WDC No. 142; WDC No. 143; unpublished \"golden apples\" story for WDC.\nJan. 24 - Unknown one-page DD gag idea.\nJan. 31 - \"The Gilded Man,\" IFC, IBC, BC, DD 4C No. 422.\nFeb. 7 - Three unknown one-page gags, one each for DD, Donald's nephews, Bugs Bunny.\nFeb. 21 - FC, DD 4C No. 422; WDC No. 144; unpublished FC for March of Comics.\nMar. 6 - WDC No. 145; Tom and Jerry Winter Carnival No. 1.\nMar. 31 - \"Trick or Treat,\" DD No. 26.\nApr. 10 - Covers, DD No. 26.\nMay 8 - \"Hobblin' Goblins,\" DD No. 26.\nMay 15 - WDC No. 146.\nMay 29 - WDC No. 147.\nJune 12 - WDC No. 148.\nJune 30 - WDC No. 149; WDC No. 150.\nJuly 31 - FC DD, No. 27; FC, Duck Album 4C No. 450; FC, WDC No. 147; FC, WDC No. 148; FC, WDC No. 149.\nAug. 14 - FC, WDC No. 152.\nAug. 28 - FC, DD No. 28; FC, US 4C No. 456.\nSept. 18 - \"Back to the Klondike,\" US 4C No. 456; FC, WDC No. 150.\nSept. ? - \"Somethin' Fishy Here,\" US 4C No. 456.\nOct. 2 - FC, WDC No. 151; FC, WDC No. 153; FC, WDC No. 154.\nOct. 9 - FC, DD No. 29; FC, DD No. 30.\nOct. 16 - IFC, IBC, BC, US 4C No. 456.\nOct. 23 - WDC No. 151.\nOct. 30 - WDC No. 152.\nNov. 27 - WDC No. 153; WDC No. 154.\nDec. 6 - FC, WDC No. 155; FC, WDC No. 158.\nDec. 24 - WDC No. 155.\nDec. 31 - WDC No. 156.",
+          "bbox": [
+            {
+              "h": 11.355308689024378,
+              "w": 125.71319359756096,
+              "x": 149.9945007621951,
+              "y": 133.05059451219512,
+              "confidence": 0.77,
+              "end_index": 1305,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 1953",
+          "value": "1953",
+          "bbox": [
+            {
+              "h": 4.7094283536585495,
+              "w": 11.574483612804869,
+              "x": 150.29773628048778,
+              "y": 316.1098170731707,
+              "confidence": 0.93,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 15 - WDC No. 157.\nFeb. 6 - One-page gag ideas for US 4C No. 495 (one), US No. 4 (two); unknown one-page gag idea (\"gets picture taken\").",
+          "value": "Jan. 15 - WDC No. 157.\nFeb. 6 - One-page gag ideas for US 4C No. 495 (one), US No. 4 (two); unknown one-page gag idea (\"gets picture taken\").",
+          "bbox": [
+            {
+              "h": 17.255236280487825,
+              "w": 125.70443025914632,
+              "x": 150.029296875,
+              "y": 333.597324695122,
+              "confidence": 0.89,
+              "end_index": 140,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n209",
+              "value": "Carl Barks and the Art of the Comic Book\n209",
+              "bbox": [
+                {
+                  "h": 4.594984756097565,
+                  "w": 78.08633574695119,
+                  "x": 172.94237423780487,
+                  "y": 365.0775,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n209",
+          "bbox": [
+            {
+              "h": 4.59,
+              "w": 78.09,
+              "x": 172.94,
+              "y": 365.08,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "209"
+    }
+  ]
+}

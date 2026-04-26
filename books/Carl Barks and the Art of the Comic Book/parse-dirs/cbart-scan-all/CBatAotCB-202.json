@@ -1,0 +1,456 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "*May 24, 1956* - \"Piggy bank dog,\" front cover for *Uncle Scrooge*, art only.",
+          "value": "May 24, 1956 - \"Piggy bank dog,\" front cover for Uncle Scrooge, art only.",
+          "bbox": [
+            {
+              "h": 12.192710556402439,
+              "w": 126.44211663967226,
+              "x": 10.858302567644817,
+              "y": 17.427739138719513,
+              "confidence": 0.92,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks remembers this cover as one in which Scrooge was pulling a piggy bank along the street on a leash, as if it were a dog.",
+          "value": "Barks remembers this cover as one in which Scrooge was pulling a piggy bank along the street on a leash, as if it were a dog.",
+          "bbox": [
+            {
+              "h": 17.908362233231706,
+              "w": 125.98605754573171,
+              "x": 11.48252000762195,
+              "y": 29.740595464939023,
+              "confidence": 0.95,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*February 28, 1957* - \"Bridle,\" one-page *Uncle Scrooge* gag, art and idea.",
+          "value": "February 28, 1957 - \"Bridle,\" one-page Uncle Scrooge gag, art and idea.",
+          "bbox": [
+            {
+              "h": 11.515432545731716,
+              "w": 126.20691060880335,
+              "x": 11.382484398818596,
+              "y": 53.466671112804875,
+              "confidence": 0.89,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page, although never published in the United States, has been published overseas; it has turned up in French and Austral- ian Disney comics books (in Le Journal de Mickey-Parade, No. 1182, 1975, and Walt Disney's Giant Comics No. G 415, 1967, respectively), and it has probably been published in other coun- tries as well. It was accepted by Western on the same day as the inside front cover for Uncle Scrooge No. 19,Sept.-Nov. 1957, and, according to Barks's vouchers, it was intended for the inside back cover of that issue, but it was bumped at the last minute for a subscription advertisement —the first to appear in Uncle Scrooge.",
+          "value": "This page, although never published in the United States, has been published overseas; it has turned up in French and Austral- ian Disney comics books (in Le Journal de Mickey-Parade, No. 1182, 1975, and Walt Disney's Giant Comics No. G 415, 1967, respectively), and it has probably been published in other coun- tries as well. It was accepted by Western on the same day as the inside front cover for Uncle Scrooge No. 19,Sept.-Nov. 1957, and, according to Barks's vouchers, it was intended for the inside back cover of that issue, but it was bumped at the last minute for a subscription advertisement —the first to appear in Uncle Scrooge.",
+          "bbox": [
+            {
+              "h": 64.92872332317073,
+              "w": 126.43259658441309,
+              "x": 11.47096667778201,
+              "y": 65.65955030487805,
+              "confidence": 0.98,
+              "end_index": 639,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In this gag, Donald is frustrated by his vulnerability to bargain sales: he emerges from one store with an Easter egg polisher, and from another with a dozen canary bird bibs. Scrooge drags him into a harness store and buys him a set of blinders, as part of an \"Old Dobbin Bridle.",
+          "value": "In this gag, Donald is frustrated by his vulnerability to bargain sales: he emerges from one store with an Easter egg polisher, and from another with a dozen canary bird bibs. Scrooge drags him into a harness store and buys him a set of blinders, as part of an \"Old Dobbin Bridle.",
+          "bbox": [
+            {
+              "h": 28.964977134146345,
+              "w": 126.96835532583839,
+              "x": 11.54233064977134,
+              "y": 130.78543445121952,
+              "confidence": 0.98,
+              "end_index": 279,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*September 19, 1957* - \"DONALD DUCK\" for *Walt Disney's Comics*.",
+          "value": "September 19, 1957 - \"DONALD DUCK\" for Walt Disney's Comics.",
+          "bbox": [
+            {
+              "h": 11.627263719512202,
+              "w": 126.4011735423018,
+              "x": 11.520156488185973,
+              "y": 165.77271722560977,
+              "confidence": 0.84,
+              "end_index": 63,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "No issue specified, and it is difficult to say for which issue it might have been intended, since Western was by this time publishing Barks's stories out of order. This story, identified as \"The Milkman,\" still exists; most of the original artwork is now at the Disney Archives, and photostats of the complete story are extant. It was shelved, Barks says, \"because Donald was too mean to the villain.\" Although not published in a Disney comic book in the United States, this story has been published in Holland, in Donald Duck No. 47, November 22, 1974.",
+          "value": "No issue specified, and it is difficult to say for which issue it might have been intended, since Western was by this time publishing Barks's stories out of order. This story, identified as \"The Milkman,\" still exists; most of the original artwork is now at the Disney Archives, and photostats of the complete story are extant. It was shelved, Barks says, \"because Donald was too mean to the villain.\" Although not published in a Disney comic book in the United States, this story has been published in Holland, in Donald Duck No. 47, November 22, 1974.",
+          "bbox": [
+            {
+              "h": 53.06815929878049,
+              "w": 127.23926853086888,
+              "x": 11.683037109375,
+              "y": 178.0137919207317,
+              "confidence": 0.99,
+              "end_index": 552,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Weston: It concerns Donald's trials and tribulations as milkman for the Daisy Dairy Company, and mostly with Mr. McSwine, Barks's standard pig villain. A large part of the story shows Donald in his (successful) efforts to be a perfect milkman, but each morning as he goes past apartment 505, McSwine, who wants Donald's job, pulls increasingly nasty dirty tricks on him and calls the company about Donald's supposedly wretched performance. Finally, he switches bottles with Donald, substituting his own bottle of watered milk. He calls the company, empties the bottle on Donald, and yells his accusation at the top of his lungs to the still sleeping neighbors. Donald finally loses his cool. The substitute bottle he had previously offered to McSwine in place of McSwine's own planted bottle of watered milk, he now gives to McSwine, right in the face, and slams the window down on his hands when McSwine grabs for him. Donald tells him, \"I want you to sample our full line of superior dairy products!\" as he ties a rope around the bottom of McSwine's night shirt. After Donald has had his revenge and left, McSwine calls the night boss and tells him what happened: \"He filled my nightshirt full of YOGURT and ice-cold COTTAGE CHEESE.",
+          "value": "Weston: It concerns Donald's trials and tribulations as milkman for the Daisy Dairy Company, and mostly with Mr. McSwine, Barks's standard pig villain. A large part of the story shows Donald in his (successful) efforts to be a perfect milkman, but each morning as he goes past apartment 505, McSwine, who wants Donald's job, pulls increasingly nasty dirty tricks on him and calls the company about Donald's supposedly wretched performance. Finally, he switches bottles with Donald, substituting his own bottle of watered milk. He calls the company, empties the bottle on Donald, and yells his accusation at the top of his lungs to the still sleeping neighbors. Donald finally loses his cool. The substitute bottle he had previously offered to McSwine in place of McSwine's own planted bottle of watered milk, he now gives to McSwine, right in the face, and slams the window down on his hands when McSwine grabs for him. Donald tells him, \"I want you to sample our full line of superior dairy products!\" as he ties a rope around the bottom of McSwine's night shirt. After Donald has had his revenge and left, McSwine calls the night boss and tells him what happened: \"He filled my nightshirt full of YOGURT and ice-cold COTTAGE CHEESE.",
+          "bbox": [
+            {
+              "h": 118.54157012195124,
+              "w": 126.95818466558687,
+              "x": 11.925311904535059,
+              "y": 231.31564024390244,
+              "confidence": 0.99,
+              "end_index": 1233,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": ". . . Is he FIRED?\" So Donald loses his job and McSwine goes down to find the hiring boss, and who is it? \"YOU?\" \"Yes, ME! Thanks to you for phoning in complaints!\" says Donald. \"But I thought you'd be FIRED!\" Donald counters: \"You HOPED! But I was PROMOTED, instead! It seems the other 199 customers on my route thought I was such a perfect milkman I deserved a BETTER job! So YOU just don't live right, noisy boy!\" And he picks up McSwine and throws him out.",
+          "value": ". . . Is he FIRED?\" So Donald loses his job and McSwine goes down to find the hiring boss, and who is it? \"YOU?\" \"Yes, ME! Thanks to you for phoning in complaints!\" says Donald. \"But I thought you'd be FIRED!\" Donald counters: \"You HOPED! But I was PROMOTED, instead! It seems the other 199 customers on my route thought I was such a perfect milkman I deserved a BETTER job! So YOU just don't live right, noisy boy!\" And he picks up McSwine and throws him out.",
+          "bbox": [
+            {
+              "h": 47.56602324695123,
+              "w": 126.40722942073171,
+              "x": 150.45854611280487,
+              "y": 17.61556211890244,
+              "confidence": 0.98,
+              "end_index": 459,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*June 24, 1958* - \"Cover, teeter-totter on skis,\" art only.",
+          "value": "June 24, 1958 - \"Cover, teeter-totter on skis,\" art only.",
+          "bbox": [
+            {
+              "h": 6.435508765243899,
+              "w": 118.7574695121951,
+              "x": 155.1742682926829,
+              "y": 71.29231897865853,
+              "confidence": 0.9,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*October 1, 1958* - Three one-page gags for *Uncle Scrooge*, art only.",
+          "value": "October 1, 1958 - Three one-page gags for Uncle Scrooge, art only.",
+          "bbox": [
+            {
+              "h": 12.02374618902439,
+              "w": 126.40827553353658,
+              "x": 149.98662919207317,
+              "y": 83.050078125,
+              "confidence": 0.88,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "There are several gags in issues of U ncle Scrooge that are not specifically mentioned in Barks's list; see the entries for Uncle Scrooge No. 25, Mar.-May 1959, and No. 32, Dec.-Feb. 1961. One or more of these gags may have been among the three that Barks submitted on this date.",
+          "value": "There are several gags in issues of U ncle Scrooge that are not specifically mentioned in Barks's list; see the entries for Uncle Scrooge No. 25, Mar.-May 1959, and No. 32, Dec.-Feb. 1961. One or more of these gags may have been among the three that Barks submitted on this date.",
+          "bbox": [
+            {
+              "h": 28.799834222560985,
+              "w": 126.42197789634145,
+              "x": 150.09314405487802,
+              "y": 95.54865663109756,
+              "confidence": 0.98,
+              "end_index": 278,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*January 2, 1959* - Front cover, \"seashells,\" art only.",
+          "value": "January 2, 1959 - Front cover, \"seashells,\" art only.",
+          "bbox": [
+            {
+              "h": 6.388971036585362,
+              "w": 107.19495617378045,
+              "x": 155.256259527439,
+              "y": 130.59760289634147,
+              "confidence": 0.94,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*March 7, 1960* - Front cover for *Walt Disney's Comics*, \"hammocks,\" art and idea.",
+          "value": "March 7, 1960 - Front cover for Walt Disney's Comics, \"hammocks,\" art and idea.",
+          "bbox": [
+            {
+              "h": 12.179028201219507,
+              "w": 126.2248113567073,
+              "x": 150.11452934451216,
+              "y": 142.24096417682927,
+              "confidence": 0.87,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's pencil drawing for this cover still exists. It shows Donald and the nephews in hammocks suspended one above another.",
+          "value": "Barks's pencil drawing for this cover still exists. It shows Donald and the nephews in hammocks suspended one above another.",
+          "bbox": [
+            {
+              "h": 16.739737042682926,
+              "w": 126.32137957317074,
+              "x": 150.2420007621951,
+              "y": 154.66505716463413,
+              "confidence": 0.96,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*September 28, 1961* - Front cover for *Gyro Gearloose*, \"rocket chair,\" art only.",
+          "value": "September 28, 1961 - Front cover for Gyro Gearloose, \"rocket chair,\" art only.",
+          "bbox": [
+            {
+              "h": 11.965141006097564,
+              "w": 126.3784012957317,
+              "x": 150.03972370426828,
+              "y": 177.92643292682928,
+              "confidence": 0.89,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The pencil drawing for this cover still exists, and shows Gyro rising in a jet-propelled chair.",
+          "value": "The pencil drawing for this cover still exists, and shows Gyro rising in a jet-propelled chair.",
+          "bbox": [
+            {
+              "h": 11.670857469512201,
+              "w": 126.36464748475608,
+              "x": 150.1711051829268,
+              "y": 190.20408155487806,
+              "confidence": 0.96,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*October 5, 1961* - Front cover for *Walt Disney's Comics*, \"kids at bat,\" art only.",
+          "value": "October 5, 1961 - Front cover for Walt Disney's Comics, \"kids at bat,\" art only.",
+          "bbox": [
+            {
+              "h": 11.950838414634145,
+              "w": 126.21911775914634,
+              "x": 150.1074294969512,
+              "y": 207.39610518292685,
+              "confidence": 0.86,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The pencil drawing for this cover still exists, and shows the nephews standing three in row, with bats over their shoulders, as Donald prepares to pitch. The nephews would plainly knock one another's brains out if they swung their bats, and the cover was probably shelved for that reason.",
+          "value": "The pencil drawing for this cover still exists, and shows the nephews standing three in row, with bats over their shoulders, as Donald prepares to pitch. The nephews would plainly knock one another's brains out if they swung their bats, and the cover was probably shelved for that reason.",
+          "bbox": [
+            {
+              "h": 29.33544969512194,
+              "w": 126.3903887195122,
+              "x": 150.29410060975607,
+              "y": 219.85680640243905,
+              "confidence": 0.98,
+              "end_index": 287,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*November 1, 1961* - Half-page gag, \"status seeker,\" art and idea.",
+          "value": "November 1, 1961 - Half-page gag, \"status seeker,\" art and idea.",
+          "bbox": [
+            {
+              "h": 11.015990853658549,
+              "w": 125.85368140243901,
+              "x": 150.22774961890244,
+              "y": 255.0158231707317,
+              "confidence": 0.85,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*November 9, 1961* - Front cover for *Uncle Scrooge*, \"six cups,\" art only.",
+          "value": "November 9, 1961 - Front cover for Uncle Scrooge, \"six cups,\" art only.",
+          "bbox": [
+            {
+              "h": 11.81167682926829,
+              "w": 126.28612042682924,
+              "x": 150.27533917682925,
+              "y": 272.6255259146341,
+              "confidence": 0.88,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's pencil sketch for this cover still exists; see note to the front cover of Uncle Scrooge No. 144, September 1977. Barks's drawing is vastly superior to the published version. His Scrooge is enthusiastic and alive, whereas the Scrooge on the published cover is inert.",
+          "value": "Barks's pencil sketch for this cover still exists; see note to the front cover of Uncle Scrooge No. 144, September 1977. Barks's drawing is vastly superior to the published version. His Scrooge is enthusiastic and alive, whereas the Scrooge on the published cover is inert.",
+          "bbox": [
+            {
+              "h": 28.67803353658539,
+              "w": 126.50784489329268,
+              "x": 150.21917492378046,
+              "y": 284.8920045731707,
+              "confidence": 0.97,
+              "end_index": 272,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*January 15, 1962* - Half-page gag, \"major operation,\" art and idea.",
+          "value": "January 15, 1962 - Half-page gag, \"major operation,\" art and idea.",
+          "bbox": [
+            {
+              "h": 11.217096036585389,
+              "w": 125.48958269817075,
+              "x": 150.50215701219508,
+              "y": 320.09185975609756,
+              "confidence": 0.92,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*January 12, 1963* - One-page gag for *Walt Disney's Comics*, \"kids runaway,\" art only.",
+          "value": "January 12, 1963 - One-page gag for Walt Disney's Comics, \"kids runaway,\" art only.",
+          "bbox": [
+            {
+              "h": 12.029839939024404,
+              "w": 126.35344893292684,
+              "x": 151.25834222560974,
+              "y": 338.2065777439024,
+              "confidence": 0.95,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "202 Carl Barks and the Art of the Comic Book",
+              "value": "202 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.552995426829275,
+                  "w": 77.93342749618901,
+                  "x": 35.63579411204268,
+                  "y": 364.04810213414635,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "202 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.55,
+              "w": 77.93,
+              "x": 35.64,
+              "y": 364.05,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "202"
+    }
+  ]
+}

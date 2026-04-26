@@ -1,0 +1,3 @@
+![A sketch by Carl Barks depicting an artist (a caricature of himself) sitting on a stool and drawing a cartoon duck on an easel. To the right, a nude female model stands posing. The artist is looking at the model while drawing the duck. Handwritten text on the sketch includes "YOU'RE WELCOME", "CARL BARKS 1968", and a title at the bottom: "BARKS AND THE DUCK SYNDROME".](CBatAotCB-224_page_1_image_1_v2.jpg)
+
+Barks's sketch for the cover of *Funnyworld* No. 10, November 1968.

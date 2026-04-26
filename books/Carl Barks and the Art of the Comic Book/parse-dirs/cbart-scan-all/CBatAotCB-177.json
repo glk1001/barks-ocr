@@ -1,0 +1,858 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "DONALD DUCK - 10 - Uncle Scrooge tries to force Donald to sell his house at Scrooge's price, but even a will-o'-the-wisp doesn't frighten Donald into selling. (*Apr. 6, 1953*)",
+          "value": "DONALD DUCK - 10 - Uncle Scrooge tries to force Donald to sell his house at Scrooge's price, but even a will-o'-the-wisp doesn't frighten Donald into selling. (Apr. 6, 1953)",
+          "bbox": [
+            {
+              "h": 22.38111328125,
+              "w": 125.78664443597559,
+              "x": 10.063982469512194,
+              "y": 13.448721894054879,
+              "confidence": 0.98,
+              "end_index": 174,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted: Uncle Scrooge No. 101, September 1972.*",
+          "value": "Reprinted: Uncle Scrooge No. 101, September 1972.",
+          "bbox": [
+            {
+              "h": 5.183343178353659,
+              "w": 103.22772341844511,
+              "x": 14.765474942835363,
+              "y": 37.33454554115853,
+              "confidence": 0.96,
+              "end_index": 50,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 160 (14/4) - January 1954 - 52 pages",
+          "value": "160 (14/4) - January 1954 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.628744283536586,
+              "w": 86.195927615282,
+              "x": 10.312677567644817,
+              "y": 48.732999237804876,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews sail toy ships in the tub Donald is using to soak his feet. (*June 8, 1953*)",
+          "value": "Front cover (art only): The nephews sail toy ships in the tub Donald is using to soak his feet. (June 8, 1953)",
+          "bbox": [
+            {
+              "h": 11.335598323170732,
+              "w": 125.72818538014482,
+              "x": 10.231554520769818,
+              "y": 54.91795541158537,
+              "confidence": 0.94,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews give Donald a camel for Christmas and the ducks use it to prospect for uranium. (*Apr. 23, 1953*)",
+          "value": "DONALD DUCK - 10 - The nephews give Donald a camel for Christmas and the ducks use it to prospect for uranium. (Apr. 23, 1953)",
+          "bbox": [
+            {
+              "h": 16.706129954268302,
+              "w": 125.95931735899389,
+              "x": 10.076231421493901,
+              "y": 66.78891768292682,
+              "confidence": 0.94,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted: Walt Disney's Comics No. 352, January 1970.*",
+          "value": "Reprinted: Walt Disney's Comics No. 352, January 1970.",
+          "bbox": [
+            {
+              "h": 5.062099847560985,
+              "w": 113.14225109565548,
+              "x": 14.728207174161584,
+              "y": 84.70920160060975,
+              "confidence": 0.93,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 161 (14/5) - February 1954 - 52 pages",
+          "value": "161 (14/5) - February 1954 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.454066310975609,
+              "w": 89.53299959508385,
+              "x": 10.363570526867376,
+              "y": 96.14869664634146,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald's stamp collection blows away as the nephews rush through a door. (*June 8, 1953*)",
+          "value": "Front cover (art only): Donald's stamp collection blows away as the nephews rush through a door. (June 8, 1953)",
+          "bbox": [
+            {
+              "h": 17.234965701219522,
+              "w": 125.73311475800303,
+              "x": 10.236648961509145,
+              "y": 102.05865091463414,
+              "confidence": 0.86,
+              "end_index": 112,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted: Walt Disney's Comics No. 355, April 1970.*",
+          "value": "Reprinted: Walt Disney's Comics No. 355, April 1970.",
+          "bbox": [
+            {
+              "h": 40.193689024390245,
+              "w": 126.45441918349849,
+              "x": 9.967916944550304,
+              "y": 102.32963414634146,
+              "confidence": 0.57,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald opens a fix-it shop, with only Feebrunkle's Fix-It Guide to aid him, and disaster awaits when he tries to fix Daisy's vacuum cleaner. (*Apr. 30, 1953*)",
+          "value": "DONALD DUCK - 10 - Donald opens a fix-it shop, with only Feebrunkle's Fix-It Guide to aid him, and disaster awaits when he tries to fix Daisy's vacuum cleaner. (Apr. 30, 1953)",
+          "bbox": [
+            {
+              "h": 40.193689024390245,
+              "w": 126.45441918349849,
+              "x": 9.967916944550304,
+              "y": 102.32963414634146,
+              "confidence": 0.76,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted: Walt Disney Comics Digest No. 52, April 1975.*",
+          "value": "Reprinted: Walt Disney Comics Digest No. 52, April 1975.",
+          "bbox": [
+            {
+              "h": 5.228460365853652,
+              "w": 116.9511638957698,
+              "x": 14.764693573742376,
+              "y": 143.8656288109756,
+              "confidence": 0.95,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 162 (14/6) - March 1954 - 52 pages",
+          "value": "162 (14/6) - March 1954 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.665712652439042,
+              "w": 82.30956709698933,
+              "x": 10.436101729230183,
+              "y": 155.3428125,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews duel with pickets from the fence Donald is painting. (*July 9, 1953*)",
+          "value": "Front cover (art only): The nephews duel with pickets from the fence Donald is painting. (July 9, 1953)",
+          "bbox": [
+            {
+              "h": 11.294336890243885,
+              "w": 125.67719381192832,
+              "x": 10.313286370998474,
+              "y": 161.50756097560975,
+              "confidence": 0.96,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald is a station master in rugged country, and he is forced to care for ten thousand baby turkeys and to fend off Hairy Harry, the train robber. (*June 25, 1953*)",
+          "value": "DONALD DUCK - 10 - Donald is a station master in rugged country, and he is forced to care for ten thousand baby turkeys and to fend off Hairy Harry, the train robber. (June 25, 1953)",
+          "bbox": [
+            {
+              "h": 22.410182926829275,
+              "w": 125.90234279725608,
+              "x": 10.221165205792683,
+              "y": 173.29042682926828,
+              "confidence": 0.97,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 163 (14/7) - April 1954 - 52 pages",
+          "value": "163 (14/7) - April 1954 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.847050304878057,
+              "w": 80.49940393959604,
+              "x": 11.22495010003811,
+              "y": 202.45115853658535,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The nephews play baseball with their musical instruments. (*Nov. 6, 1953*)",
+          "value": "Front cover: The nephews play baseball with their musical instruments. (Nov. 6, 1953)",
+          "bbox": [
+            {
+              "h": 11.10338414634145,
+              "w": 125.6903924113948,
+              "x": 10.451482588605183,
+              "y": 208.73586128048782,
+              "confidence": 0.97,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald beats Gladstone at even odds in a raffle for an antique chair, but his luck is deceptive, as Gladstone proves by masquerading as a swami. (*July 2, 1953*)",
+          "value": "DONALD DUCK - 10 - Donald beats Gladstone at even odds in a raffle for an antique chair, but his luck is deceptive, as Gladstone proves by masquerading as a swami. (July 2, 1953)",
+          "bbox": [
+            {
+              "h": 22.626676829268288,
+              "w": 125.8753593035442,
+              "x": 10.374916992187499,
+              "y": 220.44041158536584,
+              "confidence": 0.98,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted: Walt Disney's Comics No. 392, May 1973.*",
+          "value": "Reprinted: Walt Disney's Comics No. 392, May 1973.",
+          "bbox": [
+            {
+              "h": 5.23403963414632,
+              "w": 106.78232147961127,
+              "x": 14.988810380144814,
+              "y": 244.41217225609756,
+              "confidence": 0.95,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 164 (14/8) - May 1954 - 52 pages",
+          "value": "164 (14/8) - May 1954 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.509824695121915,
+              "w": 76.47985268197408,
+              "x": 10.758855397294207,
+              "y": 254.59824695121952,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The nephews pull Donald as he rides his golf-bag carrier. (*Apr. 9, 1953*)",
+          "value": "Front cover: The nephews pull Donald as he rides his golf-bag carrier. (Apr. 9, 1953)",
+          "bbox": [
+            {
+              "h": 11.06227134146342,
+              "w": 125.84120307736279,
+              "x": 10.421094940929876,
+              "y": 260.7090777439024,
+              "confidence": 0.97,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald is sent out to demonstrate a new flour, made by Scrooge's mills, but he is accidentally given boxes with instructions in a foreign language. (*Aug. 27, 1953*)",
+          "value": "DONALD DUCK - 10 - Donald is sent out to demonstrate a new flour, made by Scrooge's mills, but he is accidentally given boxes with instructions in a foreign language. (Aug. 27, 1953)",
+          "bbox": [
+            {
+              "h": 22.375038109756115,
+              "w": 126.00938714748476,
+              "x": 10.435071693978657,
+              "y": 272.3539481707317,
+              "confidence": 0.98,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 165 (14/9) - June 1954 - 52 pages",
+          "value": "165 (14/9) - June 1954 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.57753048780487,
+              "w": 76.65658465129573,
+              "x": 10.870378953887194,
+              "y": 301.74841463414634,
+              "confidence": 0.97,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald looks apprehensive as the nephews go by with a saw, hammer and drill. (*Dec. 31, 1953*)",
+          "value": "Front cover (art only): Donald looks apprehensive as the nephews go by with a saw, hammer and drill. (Dec. 31, 1953)",
+          "bbox": [
+            {
+              "h": 11.27110518292684,
+              "w": 125.80329649390244,
+              "x": 10.652763910060974,
+              "y": 307.81454268292686,
+              "confidence": 0.83,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks' list includes two entries for the front cover of *Walt Disney's Comics* No. 165—one for November 6, 1953, for \"art,\" and one for December 31, 1953, also for \"art.\" The second listing is unquestionably the correct one, since it is identified as \"kids with tools.\" The earlier listing is thus for another cover, possibly that of *Walt Disney's Comics* No. 168, September 1954, which is the only cover published at this time for which there is no entry on Barks' list.",
+          "value": "Barks' list includes two entries for the front cover of Walt Disney's Comics No. 165—one for November 6, 1953, for \"art,\" and one for December 31, 1953, also for \"art.\" The second listing is unquestionably the correct one, since it is identified as \"kids with tools.\" The earlier listing is thus for another cover, possibly that of Walt Disney's Comics No. 168, September 1954, which is the only cover published at this time for which there is no entry on Barks' list.",
+          "bbox": [
+            {
+              "h": 33.53787347560979,
+              "w": 125.82063345560213,
+              "x": 10.618397603849084,
+              "y": 320.79521341463413,
+              "confidence": 0.88,
+              "end_index": 471,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Spurred on by the nephews, Donald tries first singing and then musical instruments from a tuba to a calliope in an effort to become a television performer. (*Aug. 27, 1953*)",
+          "value": "DONALD DUCK - 10 - Spurred on by the nephews, Donald tries first singing and then musical instruments from a tuba to a calliope in an effort to become a television performer. (Aug. 27, 1953)",
+          "bbox": [
+            {
+              "h": 23.411547256097563,
+              "w": 126.04139862804878,
+              "x": 149.74670922256095,
+              "y": 25.123330792682925,
+              "confidence": 0.98,
+              "end_index": 191,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 166 (14/10) - July 1954 - 52 pages",
+          "value": "166 (14/10) - July 1954 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.5116653963414635,
+              "w": 78.18297256097559,
+              "x": 150.15814024390244,
+              "y": 54.66001143292683,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: A dog sleeps under the covers with the nephews. (*Nov. 6, 1953*)",
+          "value": "Front cover: A dog sleeps under the covers with the nephews. (Nov. 6, 1953)",
+          "bbox": [
+            {
+              "h": 11.247473323170732,
+              "w": 125.84368330792684,
+              "x": 150.14459222560973,
+              "y": 60.499561737804875,
+              "confidence": 0.97,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald is called in as a substitute midget auto driver when the regular driver has a sore finger. (*Sept. 17, 1953*)",
+          "value": "DONALD DUCK - 10 - Donald is called in as a substitute midget auto driver when the regular driver has a sore finger. (Sept. 17, 1953)",
+          "bbox": [
+            {
+              "h": 16.71667111280488,
+              "w": 126.03862042682924,
+              "x": 149.96169397865853,
+              "y": 72.3414443597561,
+              "confidence": 0.96,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted: Walt Disney Comics Digest No. 19, January 1970.*",
+          "value": "Reprinted: Walt Disney Comics Digest No. 19, January 1970.",
+          "bbox": [
+            {
+              "h": 5.223618521341463,
+              "w": 121.39995045731705,
+              "x": 154.51453125,
+              "y": 90.52628620426829,
+              "confidence": 0.95,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 167 (14/11) - August 1954 - 52 pages",
+          "value": "167 (14/11) - August 1954 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.668205030487811,
+              "w": 86.63955983231708,
+              "x": 150.22164443597558,
+              "y": 101.95977896341464,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The nephews take aim at a fly on the sleeping Donald's beak. (*Mar. 18, 1954*)",
+          "value": "Front cover: The nephews take aim at a fly on the sleeping Donald's beak. (Mar. 18, 1954)",
+          "bbox": [
+            {
+              "h": 11.314561737804883,
+              "w": 126.0484813262195,
+              "x": 149.97740282012194,
+              "y": 107.83568597560975,
+              "confidence": 0.97,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks's list includes two entries for the front cover of *Walt Disney's Comics* No. 167 — one for November 6, 1953, for \"art,\" and one for March 18, 1954, for \"art and idea.\" The second listing is unquestionably the correct one, since it is identified as \"fly on beak.\" The earlier listing is thus for another cover, possibly that of *Walt Disney's Comics* No. 168, September 1954, which is the only cover published at this time for which there is no entry on Barks' list.",
+          "value": "Barks's list includes two entries for the front cover of Walt Disney's Comics No. 167 — one for November 6, 1953, for \"art,\" and one for March 18, 1954, for \"art and idea.\" The second listing is unquestionably the correct one, since it is identified as \"fly on beak.\" The earlier listing is thus for another cover, possibly that of Walt Disney's Comics No. 168, September 1954, which is the only cover published at this time for which there is no entry on Barks' list.",
+          "bbox": [
+            {
+              "h": 45.78763719512194,
+              "w": 126.19606897865854,
+              "x": 150.05066501524388,
+              "y": 119.96868521341463,
+              "confidence": 0.99,
+              "end_index": 471,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald competes with Gladstone to catch the largest fish in a salmon derby, with predictable—and unpredictable—results. (*Oct. 1, 1953*)",
+          "value": "DONALD DUCK - 10 - Donald competes with Gladstone to catch the largest fish in a salmon derby, with predictable—and unpredictable—results. (Oct. 1, 1953)",
+          "bbox": [
+            {
+              "h": 17.38234756097562,
+              "w": 124.78319931402437,
+              "x": 150.13877858231706,
+              "y": 167.60486661585364,
+              "confidence": 0.87,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This was the first story in *Walt Disney's Comics* that Barks opened with a splash panel—a panel taking up the top half of the first page.",
+          "value": "This was the first story in Walt Disney's Comics that Barks opened with a splash panel—a panel taking up the top half of the first page.",
+          "bbox": [
+            {
+              "h": 16.80633384146342,
+              "w": 126.2069245426829,
+              "x": 149.8905926067073,
+              "y": 185.60160823170733,
+              "confidence": 0.97,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted: Walt Disney's Comics No. 393, June 1973.*",
+          "value": "Reprinted: Walt Disney's Comics No. 393, June 1973.",
+          "bbox": [
+            {
+              "h": 5.08278201219513,
+              "w": 106.79914824695125,
+              "x": 154.55951410060973,
+              "y": 203.3721493902439,
+              "confidence": 0.95,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 168 (14/12) - September 1954 - 52 pages",
+          "value": "168 (14/12) - September 1954 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.57753048780487,
+              "w": 95.78730182926826,
+              "x": 150.35282012195123,
+              "y": 214.76165396341463,
+              "confidence": 0.96,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald trims the nephews' Indian headdresses as well as a hedge. (*Probably Nov. 6, 1953*)",
+          "value": "Front cover (art only): Donald trims the nephews' Indian headdresses as well as a hedge. (Probably Nov. 6, 1953)",
+          "bbox": [
+            {
+              "h": 23.158170731707305,
+              "w": 126.11562118902435,
+              "x": 149.96935975609756,
+              "y": 220.59912347560976,
+              "confidence": 0.79,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "See notes to front covers of *Walt Disney's Comics* No. 165, June 1954, and No. 167, August 1954.",
+          "value": "See notes to front covers of Walt Disney's Comics No. 165, June 1954, and No. 167, August 1954.",
+          "bbox": [
+            {
+              "h": 23.158170731707305,
+              "w": 126.11562118902435,
+              "x": 149.96935975609756,
+              "y": 220.59912347560976,
+              "confidence": 0.76,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald banishes the nephews' pet chipmunk, Cheltenham, when he steals the car keys during a trip through the South. (*Dec. 3, 1953*)",
+          "value": "DONALD DUCK - 10 - Donald banishes the nephews' pet chipmunk, Cheltenham, when he steals the car keys during a trip through the South. (Dec. 3, 1953)",
+          "bbox": [
+            {
+              "h": 17.34754573170733,
+              "w": 126.00857469512194,
+              "x": 150.11579839939023,
+              "y": 244.21772103658535,
+              "confidence": 0.95,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted: Walt Disney's Comics No. 372, September 1971.*",
+          "value": "Reprinted: Walt Disney's Comics No. 372, September 1971.",
+          "bbox": [
+            {
+              "h": 5.244695121951245,
+              "w": 119.17708079268293,
+              "x": 154.7571951219512,
+              "y": 262.38235518292686,
+              "confidence": 0.94,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 169 (15/1) - October 1954 - 36 pages",
+          "value": "169 (15/1) - October 1954 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.53886432926829,
+              "w": 86.11029535060973,
+              "x": 150.06561928353656,
+              "y": 276.8998856707317,
+              "confidence": 0.91,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald shaves initials on the nephews' heads. (*Apr. 22, 1954*)",
+          "value": "Front cover: Donald shaves initials on the nephews' heads. (Apr. 22, 1954)",
+          "bbox": [
+            {
+              "h": 11.276684451219534,
+              "w": 125.85440167682924,
+              "x": 149.9620369664634,
+              "y": 282.77677591463413,
+              "confidence": 0.96,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews sail away on a houseboat on the first day of school, but Donald is hot on their trail, and drills holes in the boat. (*Jan. 7, 1954*)",
+          "value": "DONALD DUCK - 10 - The nephews sail away on a houseboat on the first day of school, but Donald is hot on their trail, and drills holes in the boat. (Jan. 7, 1954)",
+          "bbox": [
+            {
+              "h": 17.266989329268288,
+              "w": 125.65401105182924,
+              "x": 150.01590320121952,
+              "y": 294.56743902439024,
+              "confidence": 0.95,
+              "end_index": 163,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted: Walt Disney's Comics No. 422, November 1975.*",
+          "value": "Reprinted: Walt Disney's Comics No. 422, November 1975.",
+          "bbox": [
+            {
+              "h": 5.210533536585335,
+              "w": 119.34713414634145,
+              "x": 154.20320121951218,
+              "y": 312.7521951219512,
+              "confidence": 0.92,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 170 (15/2) - November 1954 - 36 pages",
+          "value": "170 (15/2) - November 1954 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.7020807926829,
+              "w": 92.90975419207315,
+              "x": 149.89889291158536,
+              "y": 325.8510594512195,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The nephews use an electric blanket as a tepee. (*Apr. 22, 1954*)",
+          "value": "Front cover: The nephews use an electric blanket as a tepee. (Apr. 22, 1954)",
+          "bbox": [
+            {
+              "h": 11.40653963414632,
+              "w": 125.92790396341464,
+              "x": 149.76682545731705,
+              "y": 331.72506859756095,
+              "confidence": 0.97,
+              "end_index": 77,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews buy a glass-enclosed \"city\" of ax-toothed ants after Donald tells them",
+          "value": "DONALD DUCK - 10 - The nephews buy a glass-enclosed \"city\" of ax-toothed ants after Donald tells them",
+          "bbox": [
+            {
+              "h": 11.36190548780487,
+              "w": 125.97748285060973,
+              "x": 149.781025152439,
+              "y": 343.58455792682923,
+              "confidence": 0.97,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n177",
+              "value": "Carl Barks and the Art of the Comic Book\n177",
+              "bbox": [
+                {
+                  "h": 4.404878048780465,
+                  "w": 77.71964748475608,
+                  "x": 171.73330792682924,
+                  "y": 366.3651219512195,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n177",
+          "bbox": [
+            {
+              "h": 4.4,
+              "w": 77.72,
+              "x": 171.73,
+              "y": 366.37,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "177"
+    }
+  ]
+}

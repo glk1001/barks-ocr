@@ -1,0 +1,7 @@
+mitted a number of ideas to paper — including one for an energy-saving gasoline engine — but has never made working models of any of them. He describes his ideas as "pipe dreams."
+
+The inventions were the big show, but Gyro himself should not be overlooked. Gyro invented in a vacuum, for the sheer joy of it. He was usually not aware of the value of his inventions, and sold them for ridiculously low prices. Worse, his inventions frequently didn't work as he had anticipated. In a story in *Uncle Scrooge* No. 16 (1956), he invents a machine that always predicts the future accurately, but, alas, accurate predictions aren't quite enough. At a fishing hole, he asks the machine where to catch the biggest fish. The machine tells him, but neglects to mention that the fish
+
+is so large that it can pull Gyro into the water. It wasn't asked to predict that, it explains. On the way home, Gyro's car approaches a blind corner and he asks the machine if any cars are moving on the cross road. A truck is moving north, the machine replies, and Gyro turns south — but the machine has failed to tell him that the truck is on the wrong side of the road. As Gyro limps home after the collision, a fortune teller offers to tell him "all the answers." "You may know all the answers, sonny," Gyro replies, "but I've just discovered I could never think of all the questions."
+
+Or, as he says at the close of another story, "Nobody can make a machine so smart that some jerk won't be too dumb to run it."

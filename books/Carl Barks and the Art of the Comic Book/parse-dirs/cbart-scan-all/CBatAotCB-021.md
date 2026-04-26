@@ -1,0 +1,1 @@
+![A charcoal or pencil sketch of a coiled rattlesnake wearing glasses. The snake has a human-like nose and a smiling expression. Handwritten text above the snake reads: "NICK YOU'D BETTER GO OVER IT"](CBatAotCB-021_page_1_image_1_v2.jpg)

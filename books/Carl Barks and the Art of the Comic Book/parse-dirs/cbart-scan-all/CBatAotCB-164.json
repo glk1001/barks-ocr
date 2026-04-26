@@ -1,0 +1,861 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "UNCLE SCROOGE The Invisible Intruder - 6 (pp. 110-115) - Reprinted from Uncle Scrooge No. 44, August 1963.",
+          "value": "UNCLE SCROOGE The Invisible Intruder - 6 (pp. 110-115) - Reprinted from Uncle Scrooge No. 44, August 1963.",
+          "bbox": [
+            {
+              "h": 11.747926829268295,
+              "w": 124.49004978086889,
+              "x": 13.665155059070122,
+              "y": 12.398157393292683,
+              "confidence": 0.95,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 28 - April 1971 - 164 pages",
+          "value": "28 - April 1971 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.550131478658536,
+              "w": 64.2016277629573,
+              "x": 12.95899247332317,
+              "y": 30.426290967987804,
+              "confidence": 0.97,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE Fantastic River Race - 20 (pp. 91-110) - A reprint of the untitled story in Uncle Scrooge Goes to Disneyland No. 1, 1957.",
+          "value": "UNCLE SCROOGE Fantastic River Race - 20 (pp. 91-110) - A reprint of the untitled story in Uncle Scrooge Goes to Disneyland No. 1, 1957.",
+          "bbox": [
+            {
+              "h": 17.014507431402436,
+              "w": 125.06508276962651,
+              "x": 12.855201148056402,
+              "y": 36.32799066310976,
+              "confidence": 0.98,
+              "end_index": 134,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Title added as indicated.",
+          "value": "Changes: Title added as indicated.",
+          "bbox": [
+            {
+              "h": 5.015842225609753,
+              "w": 68.73020079077743,
+              "x": 17.47883217416158,
+              "y": 54.165531631097565,
+              "confidence": 0.92,
+              "end_index": 33,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 29 - June 1971 - 164 pages",
+          "value": "29 - June 1971 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.29124428353658,
+              "w": 62.313114400724075,
+              "x": 13.296249166349085,
+              "y": 66.63965510670732,
+              "confidence": 0.97,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Too Many Ants - 10 (pp. 61-70) - A reprint of \"DONALD DUCK\" from Walt Disney's Comics No. 170, November 1954.",
+          "value": "DONALD DUCK Too Many Ants - 10 (pp. 61-70) - A reprint of \"DONALD DUCK\" from Walt Disney's Comics No. 170, November 1954.",
+          "bbox": [
+            {
+              "h": 16.747614329268288,
+              "w": 125.04150450171493,
+              "x": 13.432696146150912,
+              "y": 72.41061928353659,
+              "confidence": 0.98,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Title changed as indicated. Splash panel deepened and partially redrawn.",
+          "value": "Changes: Title changed as indicated. Splash panel deepened and partially redrawn.",
+          "bbox": [
+            {
+              "h": 11.230907012195116,
+              "w": 125.05975788395578,
+              "x": 13.545241163300304,
+              "y": 90.3489443597561,
+              "confidence": 0.98,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 30 - August 1971 - 164 pages",
+          "value": "30 - August 1971 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.520137195121943,
+              "w": 69.50895674542683,
+              "x": 13.42508288871951,
+              "y": 108.07610899390245,
+              "confidence": 0.97,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE The Lemonade Fling - 5 (pp. 82-86) - Reprinted from Uncle Scrooge No. 46, December 1963.",
+          "value": "UNCLE SCROOGE The Lemonade Fling - 5 (pp. 82-86) - Reprinted from Uncle Scrooge No. 46, December 1963.",
+          "bbox": [
+            {
+              "h": 23.248593749999998,
+              "w": 125.15315775057164,
+              "x": 13.44836854516006,
+              "y": 114.13588033536585,
+              "confidence": 0.74,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE You Can't Win - 4 (pp. 147-150) - Reprinted from Uncle Scrooge No. 33, Mar.-May 1961.",
+          "value": "GYRO GEARLOOSE You Can't Win - 4 (pp. 147-150) - Reprinted from Uncle Scrooge No. 33, Mar.-May 1961.",
+          "bbox": [
+            {
+              "h": 23.248593749999998,
+              "w": 125.15315775057164,
+              "x": 13.44836854516006,
+              "y": 114.13588033536585,
+              "confidence": 0.73,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 31 - October 1971 - 164 pages",
+          "value": "31 - October 1971 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.577347560975622,
+              "w": 71.58796874999999,
+              "x": 13.480226753048779,
+              "y": 143.51466082317071,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Gall of the Wild - 10 (pp. 61-70) - Reprinted from Walt Disney's Comics No. 274, July 1963.\nChanges: Splash panel deepened and partially redrawn.",
+          "value": "DONALD DUCK Gall of the Wild - 10 (pp. 61-70) - Reprinted from Walt Disney's Comics No. 274, July 1963.\nChanges: Splash panel deepened and partially redrawn.",
+          "bbox": [
+            {
+              "h": 17.55354420731707,
+              "w": 124.9798835270579,
+              "x": 13.581538919588413,
+              "y": 149.36408917682928,
+              "confidence": 0.95,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Finny Fun - 4 (pp. 88-91) - Reprinted from Uncle Scrooge No. 39, Sept.-Nov. 1962.",
+          "value": "GYRO GEARLOOSE Finny Fun - 4 (pp. 88-91) - Reprinted from Uncle Scrooge No. 39, Sept.-Nov. 1962.",
+          "bbox": [
+            {
+              "h": 11.55328125,
+              "w": 124.72258050685974,
+              "x": 13.614639386432925,
+              "y": 167.50306783536584,
+              "confidence": 0.95,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 33 - February 1972 - 164 pages",
+          "value": "33 - February 1972 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.586562499999999,
+              "w": 75.07883431783536,
+              "x": 13.53498046875,
+              "y": 185.04668826219512,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Ice Taxi - 13 (originally 10) (pp. 3-15) - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 186, March 1956.",
+          "value": "DONALD DUCK Ice Taxi - 13 (originally 10) (pp. 3-15) - A reprint of \"DONALD DUCK\" in Walt Disney's Comics No. 186, March 1956.",
+          "bbox": [
+            {
+              "h": 17.105384908536607,
+              "w": 125.11089629382622,
+              "x": 13.796343607088412,
+              "y": 190.88653582317073,
+              "confidence": 0.98,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Title changed as indicated. The panels for the original ten-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "value": "Changes: Title changed as indicated. The panels for the original ten-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "bbox": [
+            {
+              "h": 17.235891768292696,
+              "w": 124.91610601657773,
+              "x": 13.78657595750762,
+              "y": 208.91115091463413,
+              "confidence": 0.98,
+              "end_index": 164,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 34 - April 1972 - 36 pages",
+          "value": "34 - April 1972 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.626646341463419,
+              "w": 61.804565310594505,
+              "x": 13.678330078124999,
+              "y": 233.2599695121951,
+              "confidence": 0.97,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"No Such Varmint\" - 38 (originally 28) (pp. 3-22, 142-159) - Reprinted from Donald Duck Four Color No. 318, 1951.",
+          "value": "DONALD DUCK in \"No Such Varmint\" - 38 (originally 28) (pp. 3-22, 142-159) - Reprinted from Donald Duck Four Color No. 318, 1951.",
+          "bbox": [
+            {
+              "h": 17.297606707317044,
+              "w": 125.1148663776677,
+              "x": 13.822753668064022,
+              "y": 239.1389862804878,
+              "confidence": 0.98,
+              "end_index": 127,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: The panels for the original twenty-eight-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "value": "Changes: The panels for the original twenty-eight-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "bbox": [
+            {
+              "h": 17.489862804878083,
+              "w": 124.97584806116615,
+              "x": 13.797678044016768,
+              "y": 257.31619664634144,
+              "confidence": 0.98,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GRANDMA DUCK'S FARM FRIENDS The Whole Herd of Help - 8 (pp. 24-31) - Reprinted from Grandma Duck's Farm Friends Four Color No. 1161, Feb.-Apr. 1961.\nChanges: Splash panel deepened.",
+          "value": "GRANDMA DUCK'S FARM FRIENDS The Whole Herd of Help - 8 (pp. 24-31) - Reprinted from Grandma Duck's Farm Friends Four Color No. 1161, Feb.-Apr. 1961.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 23.476920731707303,
+              "w": 125.26518828601371,
+              "x": 13.217852872522863,
+              "y": 274.9772789634147,
+              "confidence": 0.8,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Tricky Experiment - 8 (pp. 63-70) - Reprinted from Uncle Scrooge No. 39, Sept.-Nov. 1962.",
+          "value": "UNCLE SCROOGE Tricky Experiment - 8 (pp. 63-70) - Reprinted from Uncle Scrooge No. 39, Sept.-Nov. 1962.",
+          "bbox": [
+            {
+              "h": 27.977926829268288,
+              "w": 125.32388314596035,
+              "x": 13.322051495807925,
+              "y": 298.8558155487805,
+              "confidence": 0.78,
+              "end_index": 102,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Many Faces of Magica de Spell - 22 (pp. 107-128) - Reprinted from Uncle Scrooge No. 48, March 1964.",
+          "value": "UNCLE SCROOGE The Many Faces of Magica de Spell - 22 (pp. 107-128) - Reprinted from Uncle Scrooge No. 48, March 1964.",
+          "bbox": [
+            {
+              "h": 27.977926829268288,
+              "w": 125.32388314596035,
+              "x": 13.322051495807925,
+              "y": 298.8558155487805,
+              "confidence": 0.81,
+              "end_index": 116,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Splash panel deepened.",
+          "value": "Changes: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 5.42233993902435,
+              "w": 65.40117616234757,
+              "x": 18.01823408917683,
+              "y": 328.37622713414635,
+              "confidence": 0.85,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY Ruling the Roost - 11 (originally 8) - (pp. 130-140) - Reprinted from Daisy Duck's Diary Four Color No. 1150, Dec.-Feb. 1961.",
+          "value": "DAISY DUCK'S DIARY Ruling the Roost - 11 (originally 8) - (pp. 130-140) - Reprinted from Daisy Duck's Diary Four Color No. 1150, Dec.-Feb. 1961.",
+          "bbox": [
+            {
+              "h": 16.996349085365853,
+              "w": 124.94428246474848,
+              "x": 13.536160561166158,
+              "y": 334.0533612804878,
+              "confidence": 0.97,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: The panels for the original eight-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "value": "Changes: The panels for the original eight-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "bbox": [
+            {
+              "h": 17.302001238567073,
+              "w": 124.65783727134148,
+              "x": 152.04330411585366,
+              "y": 12.778026391006097,
+              "confidence": 0.99,
+              "end_index": 138,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 35 - June 1972 - 164 pages",
+          "value": "35 - June 1972 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.514415015243905,
+              "w": 62.09567835365852,
+              "x": 151.57306783536586,
+              "y": 36.394798971036586,
+              "confidence": 0.98,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK The Jinxed Jalopy Race - 10 (pp. 3-12) - Reprinted from Walt Disney's Comics No. 270, March 1963.",
+          "value": "DONALD DUCK The Jinxed Jalopy Race - 10 (pp. 3-12) - Reprinted from Walt Disney's Comics No. 270, March 1963.",
+          "bbox": [
+            {
+              "h": 16.32320979420732,
+              "w": 124.88484375,
+              "x": 151.60834413109757,
+              "y": 42.47670445884146,
+              "confidence": 0.98,
+              "end_index": 108,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE Madcap Inventors - 5 (originally 3 3/4) (pp. 28-32) - Reprinted from Uncle Scrooge No. 38, June-Aug. 1962.",
+          "value": "GYRO GEARLOOSE Madcap Inventors - 5 (originally 3 3/4) (pp. 28-32) - Reprinted from Uncle Scrooge No. 38, June-Aug. 1962.",
+          "bbox": [
+            {
+              "h": 16.986831173780484,
+              "w": 125.09427210365851,
+              "x": 151.4706688262195,
+              "y": 60.161684451219514,
+              "confidence": 0.98,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: The panels for the original story of three and three-quarter pages were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "value": "Changes: The panels for the original story of three and three-quarter pages were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "bbox": [
+            {
+              "h": 17.520594512195114,
+              "w": 124.92169778963414,
+              "x": 151.62873475609757,
+              "y": 78.07975609756099,
+              "confidence": 0.99,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 36 - August 1972 - 164 pages",
+          "value": "36 - August 1972 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.494744664634158,
+              "w": 69.37074123475608,
+              "x": 151.51302782012195,
+              "y": 101.46292682926828,
+              "confidence": 0.97,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "GYRO GEARLOOSE Oodles of Oomph - 4 (pp. 118-121) - Reprinted from Uncle Scrooge No. 29, Mar.-May 1960.",
+          "value": "GYRO GEARLOOSE Oodles of Oomph - 4 (pp. 118-121) - Reprinted from Uncle Scrooge No. 29, Mar.-May 1960.",
+          "bbox": [
+            {
+              "h": 11.379660823170724,
+              "w": 124.85220846036584,
+              "x": 151.67827934451216,
+              "y": 107.51152820121952,
+              "confidence": 0.97,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 37 - October 1972 - 164 pages",
+          "value": "37 - October 1972 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.617328506097538,
+              "w": 71.60889100609754,
+              "x": 151.55830221036584,
+              "y": 125.13426448170733,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "GYRO GEARLOOSE Man Versus Machine - 4 (pp. 146-149) - Reprinted from Uncle Scrooge No. 47, February 1964.",
+          "value": "GYRO GEARLOOSE Man Versus Machine - 4 (pp. 146-149) - Reprinted from Uncle Scrooge No. 47, February 1964.",
+          "bbox": [
+            {
+              "h": 11.504679878048782,
+              "w": 124.6211375762195,
+              "x": 151.96014672256095,
+              "y": 131.18475228658536,
+              "confidence": 0.97,
+              "end_index": 104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 38 - \\[December] 1972 - 164 pages",
+          "value": "38 - [December] 1972 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.7192301829268395,
+              "w": 80.30939405487806,
+              "x": 151.56838605182924,
+              "y": 148.8759032012195,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 1 7/8 (pp. 6-23) - Reprinted from Christmas in Disneyland No. 1, 1957.",
+          "value": "DONALD DUCK - 1 7/8 (pp. 6-23) - Reprinted from Christmas in Disneyland No. 1, 1957.",
+          "bbox": [
+            {
+              "h": 11.270190548780493,
+              "w": 125.02018673780489,
+              "x": 151.3038395579268,
+              "y": 154.87281631097562,
+              "confidence": 0.97,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Panels were trimmed, and dialogue enlarged and rearranged within the panels, evidently in an effort to increase legibility.",
+          "value": "Changes: Panels were trimmed, and dialogue enlarged and rearranged within the panels, evidently in an effort to increase legibility.",
+          "bbox": [
+            {
+              "h": 16.869214939024403,
+              "w": 124.84639481707313,
+              "x": 151.66327362804878,
+              "y": 167.03211128048778,
+              "confidence": 0.98,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 39 - \\[February] 1973 - 164 pages",
+          "value": "39 - [February] 1973 - 164 pages",
+          "bbox": [
+            {
+              "h": 5.7096036585365795,
+              "w": 78.05224275914634,
+              "x": 151.54940167682923,
+              "y": 190.26464176829268,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Spare That Hair - 10 (pp. 3-12) - Reprinted from Walt Disney's Comics No. 272, May 1963.\nChanges: Splash panel deepened.",
+          "value": "DONALD DUCK Spare That Hair - 10 (pp. 3-12) - Reprinted from Walt Disney's Comics No. 272, May 1963.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 17.460754573170725,
+              "w": 125.00634717987802,
+              "x": 151.59392149390243,
+              "y": 196.47509908536585,
+              "confidence": 0.95,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GRANDMA DUCK'S FARM FRIENDS Touche' Toupee - 6 (pp. 123-128) - Reprinted from Grandma Duck's Farm Friends Four Color No. 1073, Jan.-Mar. 1960.",
+          "value": "GRANDMA DUCK'S FARM FRIENDS Touche' Toupee - 6 (pp. 123-128) - Reprinted from Grandma Duck's Farm Friends Four Color No. 1073, Jan.-Mar. 1960.",
+          "bbox": [
+            {
+              "h": 17.032545731707305,
+              "w": 125.64094321646338,
+              "x": 151.34069359756094,
+              "y": 214.39993902439025,
+              "confidence": 0.96,
+              "end_index": 141,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 42 - August 1973 - 132 pages",
+          "value": "42 - August 1973 - 132 pages",
+          "bbox": [
+            {
+              "h": 5.592370426829275,
+              "w": 69.45415586890243,
+              "x": 151.47404725609755,
+              "y": 237.82392530487806,
+              "confidence": 0.97,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DAISY DUCK'S DIARY Too Much Help - 6 (originally 4) (pp. 66-71) - Reprinted from Daisy Duck's Diary Four Color No. 1150, Dec.-Feb. 1961.",
+          "value": "DAISY DUCK'S DIARY Too Much Help - 6 (originally 4) (pp. 66-71) - Reprinted from Daisy Duck's Diary Four Color No. 1150, Dec.-Feb. 1961.",
+          "bbox": [
+            {
+              "h": 17.047934451219533,
+              "w": 124.90967606707312,
+              "x": 151.79100228658535,
+              "y": 243.8602820121951,
+              "confidence": 0.97,
+              "end_index": 135,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: The panels for the original four-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "value": "Changes: The panels for the original four-page story were trimmed and partially redrawn so that the pages could be made three panels deep.",
+          "bbox": [
+            {
+              "h": 17.6186432926829,
+              "w": 124.73792492378045,
+              "x": 152.82960365853657,
+              "y": 261.9567987804878,
+              "confidence": 0.97,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Way Out Yonder - 10 (pp. 74-83) - Reprinted from Walt Disney's Comics No. 262, July 1962.\nChanges: Splash panel deepened.",
+          "value": "DONALD DUCK Way Out Yonder - 10 (pp. 74-83) - Reprinted from Walt Disney's Comics No. 262, July 1962.\nChanges: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 17.436493902439015,
+              "w": 125.03767911585365,
+              "x": 152.10922637195122,
+              "y": 280.9299923780488,
+              "confidence": 0.96,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 43 - October 1973 - 132 pages",
+          "value": "43 - October 1973 - 132 pages",
+          "bbox": [
+            {
+              "h": 5.793681402439015,
+              "w": 71.70796303353657,
+              "x": 151.78844702743902,
+              "y": 304.66884146341465,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "GYRO GEARLOOSE The Bear Tamer - 7 (pp. 89-95) - Reprinted from Gyro Gearloose Four Color No. 1095, Apr.-June 1960.",
+          "value": "GYRO GEARLOOSE The Bear Tamer - 7 (pp. 89-95) - Reprinted from Gyro Gearloose Four Color No. 1095, Apr.-June 1960.",
+          "bbox": [
+            {
+              "h": 17.165327743902434,
+              "w": 125.28001714939026,
+              "x": 152.28221227134145,
+              "y": 310.9057088414634,
+              "confidence": 0.97,
+              "end_index": 113,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 44 - December 1973 - 132 pages",
+          "value": "44 - December 1973 - 132 pages",
+          "bbox": [
+            {
+              "h": 5.483826219512175,
+              "w": 82.5636299542683,
+              "x": 151.99547446646338,
+              "y": 333.4326219512195,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK and the Mummy's Ring - 28 (pp. 3-30) - Reprinted from Donald Duck Four Color No. 29, 1943.",
+          "value": "DONALD DUCK and the Mummy's Ring - 28 (pp. 3-30) - Reprinted from Donald Duck Four Color No. 29, 1943.",
+          "bbox": [
+            {
+              "h": 11.34548780487803,
+              "w": 125.22344131097559,
+              "x": 152.0234108231707,
+              "y": 340.1960442073171,
+              "confidence": 0.98,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "164 Carl Barks and the Art of the Comic Book",
+              "value": "164 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.245388719512175,
+                  "w": 77.74314214939024,
+                  "x": 37.84682641006097,
+                  "y": 366.04049542682924,
+                  "confidence": 0.96,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "164 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.25,
+              "w": 77.74,
+              "x": 37.85,
+              "y": 366.04,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "164"
+    }
+  ]
+}

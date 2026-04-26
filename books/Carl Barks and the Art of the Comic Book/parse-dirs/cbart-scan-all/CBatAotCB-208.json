@@ -1,0 +1,205 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Aug. 10 - OG No. 21.\nAug. 31 - Firestone giveaway, 1945.\nAug. 31 - Unpublished Christmas Carol story for WDC.\nSept. 19 - WDC No. 64.\nOct. 4 - WDC No. 65.\nOct. 10 - OG No. 22.\nOct. 27 - WDC No. 66.\nNov. 23 - WDC No. 67.\nDec. 10 - OG No. 23.",
+          "value": "Aug. 10 - OG No. 21.\nAug. 31 - Firestone giveaway, 1945.\nAug. 31 - Unpublished Christmas Carol story for WDC.\nSept. 19 - WDC No. 64.\nOct. 4 - WDC No. 65.\nOct. 10 - OG No. 22.\nOct. 27 - WDC No. 66.\nNov. 23 - WDC No. 67.\nDec. 10 - OG No. 23.",
+          "bbox": [
+            {
+              "h": 5.487041730182927,
+              "w": 123.31140220083842,
+              "x": 11.226233088795732,
+              "y": 31.90903868140244,
+              "confidence": 0.82,
+              "end_index": 238,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1946",
+          "value": "1946",
+          "bbox": [
+            {
+              "h": 4.675060975609753,
+              "w": 11.556684689405484,
+              "x": 11.445175066692071,
+              "y": 79.10370045731707,
+              "confidence": 0.93,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 4 - WDC No. 68.\nJan. 25 - \"Terror of the River,\" \"Seals Are So Smart,\" DD 4C No. 108.\nFeb. 1 - WDC No. 69.\nFeb. 18 - OG No. 24.\nFeb. 28 - WDC No. 70.\nMar. 8 - Firestone giveaway, 1946.\nMar. 20 - OG No. 25.\nMar. 26 - WDC No. 71.\nApr. 13 - OG No. 26.\nApr. 25 - WDC No. 72.\nMay 24 - OG No. 27.\nMay 27 - WDC No. 73.\nJune 10 - OG No. 28.\nJune 14 - WDC No. 74.\nJuly 8 - OG No. 29; WDC No. 75.\nAug. 13 - \"Maharajah Donald,\" March of Comics, 1947.\nAug. 20 - OG No. 30.\nAug. 29 - WDC No. 76.\nSept. 9 - Cheerios premium.\nSept. 20 - OG No. 31.\nSept. 25 - WDC No. 77.\nOct. 4 - \"Peaceful Hills,\" March of Comics, 1947.\nOct. 12 - OG No. 32.\nOct. 28 - WDC No. 78.\nNov. 18 - WDC No. 79; OG No. 33.\nDec. 9 - \"Volcano Valley,\" DD 4C No. 147.\nDec. 30 - IFC, DD 4C No. 147.",
+          "value": "Jan. 4 - WDC No. 68.\nJan. 25 - \"Terror of the River,\" \"Seals Are So Smart,\" DD 4C No. 108.\nFeb. 1 - WDC No. 69.\nFeb. 18 - OG No. 24.\nFeb. 28 - WDC No. 70.\nMar. 8 - Firestone giveaway, 1946.\nMar. 20 - OG No. 25.\nMar. 26 - WDC No. 71.\nApr. 13 - OG No. 26.\nApr. 25 - WDC No. 72.\nMay 24 - OG No. 27.\nMay 27 - WDC No. 73.\nJune 10 - OG No. 28.\nJune 14 - WDC No. 74.\nJuly 8 - OG No. 29; WDC No. 75.\nAug. 13 - \"Maharajah Donald,\" March of Comics, 1947.\nAug. 20 - OG No. 30.\nAug. 29 - WDC No. 76.\nSept. 9 - Cheerios premium.\nSept. 20 - OG No. 31.\nSept. 25 - WDC No. 77.\nOct. 4 - \"Peaceful Hills,\" March of Comics, 1947.\nOct. 12 - OG No. 32.\nOct. 28 - WDC No. 78.\nNov. 18 - WDC No. 79; OG No. 33.\nDec. 9 - \"Volcano Valley,\" DD 4C No. 147.\nDec. 30 - IFC, DD 4C No. 147.",
+          "bbox": [
+            {
+              "h": 11.025766006097564,
+              "w": 125.39310451600608,
+              "x": 11.325144340701218,
+              "y": 96.60086890243903,
+              "confidence": 0.79,
+              "end_index": 757,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1947",
+          "value": "1947",
+          "bbox": [
+            {
+              "h": 4.643963414634145,
+              "w": 11.278098204077743,
+              "x": 11.776504501714937,
+              "y": 262.09616615853656,
+              "confidence": 0.93,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 2 - OG No. 34.\nJan. 10 - WDC No. 80.\nJan. 15 - OG No. 35.\nJan. 28 - WDC No. 81; OG No. 36.\nFeb. 19 - WDC No. 82.\nFeb. 28 - Firestone giveaway, 1948.\nMar. 19 - WDC No. 83.\nApr. 4 - \"Adventure Down Under,\" DD 4C No. 159.\nApr. 15 - \"Ghost of the Grotto,\" DD 4C No. 159.\nMay 1 - WDC No. 84.\nMay 5 - WDC No. 85.\nJune 23 - WDC No. 86.\nJuly 22 - \"Christmas on Bear Mountain,\" three covers, DD\n4C No. 178.\nJuly 31 - WDC No. 87.\nAug. 15 - WDC No. 88.\nSept. 4 - WDC No. 89.\nSept. 26 - March of Comics No. 20.\nOct. 9 - WDC No. 90.\nOct. 28 - WDC No. 91.\nDec. 3 - \"Old Castle's Secret,\" DD 4C No. 189.\nDec. 11 - Donald Duck and the Boys (children's book).\nDec. 30 - WDC No. 92.",
+          "value": "Jan. 2 - OG No. 34.\nJan. 10 - WDC No. 80.\nJan. 15 - OG No. 35.\nJan. 28 - WDC No. 81; OG No. 36.\nFeb. 19 - WDC No. 82.\nFeb. 28 - Firestone giveaway, 1948.\nMar. 19 - WDC No. 83.\nApr. 4 - \"Adventure Down Under,\" DD 4C No. 159.\nApr. 15 - \"Ghost of the Grotto,\" DD 4C No. 159.\nMay 1 - WDC No. 84.\nMay 5 - WDC No. 85.\nJune 23 - WDC No. 86.\nJuly 22 - \"Christmas on Bear Mountain,\" three covers, DD\n4C No. 178.\nJuly 31 - WDC No. 87.\nAug. 15 - WDC No. 88.\nSept. 4 - WDC No. 89.\nSept. 26 - March of Comics No. 20.\nOct. 9 - WDC No. 90.\nOct. 28 - WDC No. 91.\nDec. 3 - \"Old Castle's Secret,\" DD 4C No. 189.\nDec. 11 - Donald Duck and the Boys (children's book).\nDec. 30 - WDC No. 92.",
+          "bbox": [
+            {
+              "h": 5.5709679878048695,
+              "w": 125.377314214939,
+              "x": 11.698130716463412,
+              "y": 344.66540396341463,
+              "confidence": 0.81,
+              "end_index": 668,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1948",
+          "value": "1948",
+          "bbox": [
+            {
+              "h": 4.590137195121956,
+              "w": 11.547627667682928,
+              "x": 150.2739500762195,
+              "y": 87.06683117378049,
+              "confidence": 0.94,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 6 - IFC, IBC, BC, DD 4C No. 189.\nJan. 16 - FC, DD, 4C No. 189; WDC No. 93.\nFeb. 3 - WDC No. 94.\nFeb. 19 - WDC No. 95.\nMar. 4 - FC, WDC No. 95; FC, WDC No. 96.\nMar. 16 - \"Sheriff of Bullet Valley,\" DD 4C No. 199.\nMar. 25 - WDC No. 96.\nApr. 22 - IFC, IBC, BC, DD 4C No. 199.\nApr. 29 - FC, DD 4C No. 199; WDC No. 97.\nMay 28 - WDC No. 98.\nJune 10 - WDC No. 99.\nJune 30 - \"Golden Christmas Tree,\" DD 4C No. 203.\nJuly 8 - Firestone giveaway, 1948.\nJuly 22 - IFC, IBC, BC, DD 4C No. 203.\nJuly 29 - FC, CC 4C No. 203; WDC No. 100.\nAug. 26 - WDC No. 101.\nSept. 9 - WDC No. 102.\nSept. 23 - WDC No. 103.\nOct. 21 - \"Lost in the Andes,\" DD 4C No. 223.\nNov. 24 - Covers, DD 4C No. 223; WDC No. 104.\nDec. 9 - FC, WDC No. 104.\nDec. 15 - March of Comics No. 41.",
+          "value": "Jan. 6 - IFC, IBC, BC, DD 4C No. 189.\nJan. 16 - FC, DD, 4C No. 189; WDC No. 93.\nFeb. 3 - WDC No. 94.\nFeb. 19 - WDC No. 95.\nMar. 4 - FC, WDC No. 95; FC, WDC No. 96.\nMar. 16 - \"Sheriff of Bullet Valley,\" DD 4C No. 199.\nMar. 25 - WDC No. 96.\nApr. 22 - IFC, IBC, BC, DD 4C No. 199.\nApr. 29 - FC, DD 4C No. 199; WDC No. 97.\nMay 28 - WDC No. 98.\nJune 10 - WDC No. 99.\nJune 30 - \"Golden Christmas Tree,\" DD 4C No. 203.\nJuly 8 - Firestone giveaway, 1948.\nJuly 22 - IFC, IBC, BC, DD 4C No. 203.\nJuly 29 - FC, CC 4C No. 203; WDC No. 100.\nAug. 26 - WDC No. 101.\nSept. 9 - WDC No. 102.\nSept. 23 - WDC No. 103.\nOct. 21 - \"Lost in the Andes,\" DD 4C No. 223.\nNov. 24 - Covers, DD 4C No. 223; WDC No. 104.\nDec. 9 - FC, WDC No. 104.\nDec. 15 - March of Comics No. 41.",
+          "bbox": [
+            {
+              "h": 5.586048018292694,
+              "w": 111.0854668445122,
+              "x": 150.25661204268292,
+              "y": 134.22796875,
+              "confidence": 0.8,
+              "end_index": 748,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1949",
+          "value": "1949",
+          "bbox": [
+            {
+              "h": 4.563178353658549,
+              "w": 11.430926067073187,
+              "x": 150.39370426829265,
+              "y": 244.73917682926827,
+              "confidence": 0.94,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 13 - WDC No. 105.\nJan. 20 - Unpublished FC for March of Comics.\nJan. 27 - WDC No. 106.\nFeb. 23 - FC, WDC No. 108.\nMar. 3 - \"Voodoo Hoodoo,\" DD 4C No. 238.\nMar. 17 - Covers, DD 4C No. 238.\nMar. 22 - WDC No. 107.\nApr. 14 - WDC No. 108.\nApr. 28 - WDC No. 109.\nMay 12 - WDC No. 110.\nJune 1 - \"Letter to Santa,\" Christmas Parade No. 1 (Dell).\nJune 16 - FC, WDC No. 109; unpublished FC for March of\nComics; unpublished FC for WDC No. 110.\nJune 29 - \"Luck of the North,\" DD 4C No. 256.\nJuly 7 - Firestone giveaway, 1949.\nJuly 21 - Covers, DD 4C No. 256.",
+          "value": "Jan. 13 - WDC No. 105.\nJan. 20 - Unpublished FC for March of Comics.\nJan. 27 - WDC No. 106.\nFeb. 23 - FC, WDC No. 108.\nMar. 3 - \"Voodoo Hoodoo,\" DD 4C No. 238.\nMar. 17 - Covers, DD 4C No. 238.\nMar. 22 - WDC No. 107.\nApr. 14 - WDC No. 108.\nApr. 28 - WDC No. 109.\nMay 12 - WDC No. 110.\nJune 1 - \"Letter to Santa,\" Christmas Parade No. 1 (Dell).\nJune 16 - FC, WDC No. 109; unpublished FC for March of\nComics; unpublished FC for WDC No. 110.\nJune 29 - \"Luck of the North,\" DD 4C No. 256.\nJuly 7 - Firestone giveaway, 1949.\nJuly 21 - Covers, DD 4C No. 256.",
+          "bbox": [
+            {
+              "h": 5.61059451219513,
+              "w": 123.1894207317073,
+              "x": 150.32606707317072,
+              "y": 315.78016006097556,
+              "confidence": 0.8,
+              "end_index": 550,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "208 Carl Barks and the Art of the Comic Book",
+              "value": "208 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.706432926829275,
+                  "w": 77.98720369664632,
+                  "x": 36.58254763719512,
+                  "y": 364.2540548780488,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "208 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.71,
+              "w": 77.99,
+              "x": 36.58,
+              "y": 364.25,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "208"
+    }
+  ]
+}

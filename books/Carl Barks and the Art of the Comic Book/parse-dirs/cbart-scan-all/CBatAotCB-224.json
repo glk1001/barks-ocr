@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A sketch by Carl Barks depicting an artist (a caricature of himself) sitting on a stool and drawing a cartoon duck on an easel. To the right, a nude female model stands posing. The artist is looking at the model while drawing the duck. Handwritten text on the sketch includes \"YOU'RE WELCOME\", \"CARL BARKS 1968\", and a title at the bottom: \"BARKS AND THE DUCK SYNDROME\".",
+          "md": "![A sketch by Carl Barks depicting an artist (a caricature of himself) sitting on a stool and drawing a cartoon duck on an easel. To the right, a nude female model stands posing. The artist is looking at the model while drawing the duck. Handwritten text on the sketch includes \"YOU'RE WELCOME\", \"CARL BARKS 1968\", and a title at the bottom: \"BARKS AND THE DUCK SYNDROME\".](CBatAotCB-224_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-224_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 313.72715510670736,
+              "w": 259.31542182736274,
+              "x": 15.268472989710364,
+              "y": 18.450748856707317,
+              "confidence": 0.98,
+              "end_index": 395,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Barks's sketch for the cover of *Funnyworld* No. 10, November 1968.",
+          "value": "Barks's sketch for the cover of Funnyworld No. 10, November 1968.",
+          "bbox": [
+            {
+              "h": 6.8804268292682895,
+              "w": 133.15154439786585,
+              "x": 78.75925209603658,
+              "y": 341.044756097561,
+              "confidence": 0.85,
+              "end_index": 66,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "224 Carl Barks and the Art of the Comic Book",
+              "value": "224 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 6.26801067073171,
+                  "w": 77.66657012195121,
+                  "x": 37.752530487804876,
+                  "y": 366.18562499999996,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "224 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 6.27,
+              "w": 77.67,
+              "x": 37.75,
+              "y": 366.19,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "224"
+    }
+  ]
+}

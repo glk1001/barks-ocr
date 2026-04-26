@@ -1,0 +1,692 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "HUEY, DEWEY AND LOUIE Rainbow's End - ½ - Uncle Scrooge is first to the end of the rainbow. (*Not listed.*)",
+          "value": "HUEY, DEWEY AND LOUIE Rainbow's End - ½ - Uncle Scrooge is first to the end of the rainbow. (Not listed.)",
+          "bbox": [
+            {
+              "h": 11.324548399390242,
+              "w": 124.82184439310214,
+              "x": 12.450304044397866,
+              "y": 15.40752381859756,
+              "confidence": 0.94,
+              "end_index": 106,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 72 - July-Aug. 1960 - 36 pages",
+          "value": "72 - July-Aug. 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.652907774390246,
+              "w": 72.24114936642529,
+              "x": 12.279474680830791,
+              "y": 33.17336318597561,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The ducks eat corn on the cob. (*Oct. 22, 1959*)",
+          "value": "Front cover: The ducks eat corn on the cob. (Oct. 22, 1959)",
+          "bbox": [
+            {
+              "h": 10.8141025152439,
+              "w": 124.19362149866615,
+              "x": 12.72160525438262,
+              "y": 39.20102515243903,
+              "confidence": 0.97,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Donald Duck No. 177, November 1976.",
+          "value": "Reprinted: Donald Duck No. 177, November 1976.",
+          "bbox": [
+            {
+              "h": 5.138168826219514,
+              "w": 100.41786871189022,
+              "x": 16.721504382621948,
+              "y": 51.25183879573171,
+              "confidence": 0.94,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 73 - Sept.-Oct. 1960 - 36 pages",
+          "value": "73 - Sept.-Oct. 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.630767911585376,
+              "w": 72.29956769245426,
+              "x": 12.161796636814023,
+              "y": 62.65532012195121,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald struggles as he cooks eggs and pancakes. (*Nov. 27, 1959*)",
+          "value": "Front cover (art only): Donald struggles as he cooks eggs and pancakes. (Nov. 27, 1959)",
+          "bbox": [
+            {
+              "h": 11.171935975609752,
+              "w": 124.43851586318598,
+              "x": 12.635968702362804,
+              "y": 68.76419016768293,
+              "confidence": 0.98,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 77 - May-June 1961 - 36 pages",
+          "value": "77 - May-June 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.680741234756088,
+              "w": 73.65333305544969,
+              "x": 12.187408179306402,
+              "y": 86.44846417682928,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): There is a bee in Donald's space helmet. (*Sept. 19, 1960*)",
+          "value": "Front cover (art only): There is a bee in Donald's space helmet. (Sept. 19, 1960)",
+          "bbox": [
+            {
+              "h": 10.899134908536594,
+              "w": 124.59968797637194,
+              "x": 12.524778487042683,
+              "y": 92.64338414634146,
+              "confidence": 0.97,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 78 - July-Aug. 1961 - 36 pages",
+          "value": "78 - July-Aug. 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.602888719512189,
+              "w": 72.27115865567835,
+              "x": 12.2244873046875,
+              "y": 110.10435594512195,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald has run over the lawn sprinkler with his lawn mower. (*Aug. 8, 1960*)",
+          "value": "Front cover (art only): Donald has run over the lawn sprinkler with his lawn mower. (Aug. 8, 1960)",
+          "bbox": [
+            {
+              "h": 11.403349847560971,
+              "w": 124.39579994759907,
+              "x": 12.638023413681402,
+              "y": 116.23896722560976,
+              "confidence": 0.98,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 79 - Sept.-Oct. 1961 - 36 pages",
+          "value": "79 - Sept.-Oct. 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.649420731707305,
+              "w": 72.27349847560974,
+              "x": 12.247931592987804,
+              "y": 134.02038109756097,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald's toothpaste tube has broken. (*Sept. 19, 1960*)",
+          "value": "Front cover (art only): Donald's toothpaste tube has broken. (Sept. 19, 1960)",
+          "bbox": [
+            {
+              "h": 11.19540777439026,
+              "w": 124.565361328125,
+              "x": 12.552511194740854,
+              "y": 140.2621532012195,
+              "confidence": 0.96,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Poor Loser - 1 - Scrooge and the ducks race bacteria under a microscope. (*Sept. 9, 1958*)\nReprinted: Donald Duck No. 164, July 1975.",
+          "value": "UNCLE SCROOGE Poor Loser - 1 - Scrooge and the ducks race bacteria under a microscope. (Sept. 9, 1958)\nReprinted: Donald Duck No. 164, July 1975.",
+          "bbox": [
+            {
+              "h": 17.24834222560974,
+              "w": 124.45339081554877,
+              "x": 12.660897484756095,
+              "y": 152.05720655487806,
+              "confidence": 0.77,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 80 - Nov.-Dec. 1961 - 36 pages",
+          "value": "80 - Nov.-Dec. 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.68089557926829,
+              "w": 72.74364257812499,
+              "x": 12.227813214557925,
+              "y": 175.5137423780488,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: A bird joins Donald as he plays the flute. (*Mar. 4, 1961*)",
+          "value": "Front cover: A bird joins Donald as he plays the flute. (Mar. 4, 1961)",
+          "bbox": [
+            {
+              "h": 11.017854420731709,
+              "w": 125.06691668254572,
+              "x": 12.140372761051827,
+              "y": 181.53419588414633,
+              "confidence": 0.98,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 81 - Jan.-Feb. 1962 - 36 pages",
+          "value": "81 - Jan.-Feb. 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.587431402439043,
+              "w": 69.76655237709603,
+              "x": 12.39549030583079,
+              "y": 199.4366844512195,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE The Sleepies - 1 (inside back cover) - At Donald's suggestion, Scrooge counts piggy banks to put himself to sleep. (*Feb. 17, 1958*)",
+          "value": "UNCLE SCROOGE The Sleepies - 1 (inside back cover) - At Donald's suggestion, Scrooge counts piggy banks to put himself to sleep. (Feb. 17, 1958)",
+          "bbox": [
+            {
+              "h": 17.153254573170724,
+              "w": 124.78668064024389,
+              "x": 12.497635289634145,
+              "y": 205.42012957317075,
+              "confidence": 0.98,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 83 - June-Aug. 1962 - 36 pages",
+          "value": "83 - June-Aug. 1962 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.608056402439015,
+              "w": 73.35979337366615,
+              "x": 12.32138993426067,
+              "y": 228.9606631097561,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews \"carry\" Donald's bass drum from inside. (*Nov. 6, 1961*)",
+          "value": "Front cover (art only): The nephews \"carry\" Donald's bass drum from inside. (Nov. 6, 1961)",
+          "bbox": [
+            {
+              "h": 11.299207317073186,
+              "w": 124.58491056116615,
+              "x": 12.650855444931402,
+              "y": 235.06017530487804,
+              "confidence": 0.96,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Donald Duck No. 171, May 1976.",
+          "value": "Reprinted: Donald Duck No. 171, May 1976.",
+          "bbox": [
+            {
+              "h": 5.273117378048755,
+              "w": 88.46665158155487,
+              "x": 16.83105897484756,
+              "y": 247.00044969512197,
+              "confidence": 0.91,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 98 - November 1964 - 36 pages",
+          "value": "98 - November 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.7201676829268395,
+              "w": 75.41622820598322,
+              "x": 12.066035513528961,
+              "y": 259.9675381097561,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in Secret of Hondorica - 24 - Reprinted from Donald Duck No. 46, Mar.-Apr. 1956.",
+          "value": "DONALD DUCK in Secret of Hondorica - 24 - Reprinted from Donald Duck No. 46, Mar.-Apr. 1956.",
+          "bbox": [
+            {
+              "h": 11.402881097560984,
+              "w": 124.65522413300303,
+              "x": 12.307000524009144,
+              "y": 266.1972713414634,
+              "confidence": 0.98,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 101 - May 1965 - 36 pages",
+          "value": "101 - May 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.594474085365855,
+              "w": 61.57824909489329,
+              "x": 11.89780749809451,
+              "y": 284.85912347560975,
+              "confidence": 0.97,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald, the nephews, Scrooge and Gyro are in a small rocket ship, and Donald is fending off meteors with a ray device. (Illustrating \"The Incredible Golden Iceberg.\") (*Oct. 23, 1964*)",
+          "value": "Front cover (art only): Donald, the nephews, Scrooge and Gyro are in a small rocket ship, and Donald is fending off meteors with a ray device. (Illustrating \"The Incredible Golden Iceberg.\") (Oct. 23, 1964)",
+          "bbox": [
+            {
+              "h": 23.122362804878083,
+              "w": 124.85635110994664,
+              "x": 11.956545231516767,
+              "y": 291.0216768292683,
+              "confidence": 0.99,
+              "end_index": 207,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 103 - September 1965 - 36 pages",
+          "value": "103 - September 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.65580030487803,
+              "w": 78.14152248475608,
+              "x": 11.856994092987804,
+              "y": 321.88678353658537,
+              "confidence": 0.97,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald and the nephews flee down a flight of stairs with the Beagle Boys in hot pursuit. (Illustrating \"The Golden Galleon.\") (*Feb. 18, 1965*)",
+          "value": "Front cover (art only): Donald and the nephews flee down a flight of stairs with the Beagle Boys in hot pursuit. (Illustrating \"The Golden Galleon.\") (Feb. 18, 1965)",
+          "bbox": [
+            {
+              "h": 17.122545731707305,
+              "w": 124.45139291158536,
+              "x": 11.81298875762195,
+              "y": 328.1845426829268,
+              "confidence": 0.99,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 105 - January 1966 - 36 pages",
+          "value": "105 - January 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.689788967225608,
+              "w": 71.9917168445122,
+              "x": 152.1672256097561,
+              "y": 16.25290301067073,
+              "confidence": 0.98,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald, the nephews and Scrooge rush joyfully toward the pot of gold at the end of the rainbow — unaware that Magica de Spell is hiding in it. (Illustrating \"The Great Rainbow Race.\") (*July 23, 1965*)",
+          "value": "Front cover (art only): Donald, the nephews and Scrooge rush joyfully toward the pot of gold at the end of the rainbow — unaware that Magica de Spell is hiding in it. (Illustrating \"The Great Rainbow Race.\") (July 23, 1965)",
+          "bbox": [
+            {
+              "h": 28.781995998475608,
+              "w": 125.44267911585365,
+              "x": 152.14120998475607,
+              "y": 22.33690644054878,
+              "confidence": 0.99,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 106 - March 1966 - 36 pages",
+          "value": "106 - March 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6604420731707386,
+              "w": 67.95102896341463,
+              "x": 151.862978277439,
+              "y": 58.125177210365855,
+              "confidence": 0.97,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald uses a blanket to send up smoke signals from a scowling Indian's pipe while the nephews dance on Indian drums. (Illustrating \"Ambush at Thunder Mountain.\") (*July 22, 1965*)",
+          "value": "Front cover (art only): Donald uses a blanket to send up smoke signals from a scowling Indian's pipe while the nephews dance on Indian drums. (Illustrating \"Ambush at Thunder Mountain.\") (July 22, 1965)",
+          "bbox": [
+            {
+              "h": 23.06703887195123,
+              "w": 125.08221608231707,
+              "x": 151.8517625762195,
+              "y": 64.28615853658536,
+              "confidence": 0.99,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes:* In Barks's original drawing (a pencil layout still exists), the nephew in the foreground appeared to be bouncing up and down on the drum with his bottom, instead of his feet. In the cover as published, a drawing of the nephew by another artist has been substituted for Barks's drawing. The nephew appears to be bouncing on the drum with his feet in the substituted drawing.",
+          "value": "Changes: In Barks's original drawing (a pencil layout still exists), the nephew in the foreground appeared to be bouncing up and down on the drum with his bottom, instead of his feet. In the cover as published, a drawing of the nephew by another artist has been substituted for Barks's drawing. The nephew appears to be bouncing on the drum with his feet in the substituted drawing.",
+          "bbox": [
+            {
+              "h": 40.61199123475611,
+              "w": 125.22241234756098,
+              "x": 151.7854630335366,
+              "y": 88.33936166158536,
+              "confidence": 0.99,
+              "end_index": 383,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 111 - January 1967 - 36 pages",
+          "value": "111 - January 1967 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.741935975609767,
+              "w": 71.94032012195122,
+              "x": 151.49779916158536,
+              "y": 135.32311737804878,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald looks startled and the nephews flee at the sight of a huge footprint. (Illustrating \"The Giant of Duckburg.\") (*June 9, 1966*)",
+          "value": "Front cover (art only): Donald looks startled and the nephews flee at the sight of a huge footprint. (Illustrating \"The Giant of Duckburg.\") (June 9, 1966)",
+          "bbox": [
+            {
+              "h": 17.17582317073171,
+              "w": 125.24156821646342,
+              "x": 151.41448742378046,
+              "y": 141.4447294207317,
+              "confidence": 0.95,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Donald Duck No. 190, December 1977.",
+          "value": "Reprinted: Donald Duck No. 190, December 1977.",
+          "bbox": [
+            {
+              "h": 5.268498475609767,
+              "w": 100.91965129573171,
+              "x": 155.50838986280488,
+              "y": 159.43649771341464,
+              "confidence": 0.9,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 117 - January 1968 - 36 pages",
+          "value": "117 - January 1968 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6804611280487824,
+              "w": 71.92399390243901,
+              "x": 151.29835175304876,
+              "y": 169.46860518292684,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Pawns of the Loup Garou - 21 - script only - Donald is a cargo pilot with secret orders to fly a crate of tools to the North Woods; Scrooge and the nephews tag along. At the rendezvous point, a panicky man fleeing from a wolf's howl takes Donald's plane. The stranded ducks open the crate the man has left behind and find a half-finished gold statuette of a wolf. The statuette is stolen that night, and they track the thief to a mine where they are met by a huge wolf who stands on his rear legs. (*Mar. 21, 1967*)",
+          "value": "DONALD DUCK Pawns of the Loup Garou - 21 - script only - Donald is a cargo pilot with secret orders to fly a crate of tools to the North Woods; Scrooge and the nephews tag along. At the rendezvous point, a panicky man fleeing from a wolf's howl takes Donald's plane. The stranded ducks open the crate the man has left behind and find a half-finished gold statuette of a wolf. The statuette is stolen that night, and they track the thief to a mine where they are met by a huge wolf who stands on his rear legs. (Mar. 21, 1967)",
+          "bbox": [
+            {
+              "h": 63.95213414634148,
+              "w": 125.6046208079268,
+              "x": 150.18026295731707,
+              "y": 175.3683612804878,
+              "confidence": 0.99,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "When asked if the script had been edited so that the wolf in the story was not a real werewolf, Barks replied: \"The thing you noticed about my 'Loup Garou' story is the sort of business I like to forget. Always there were decisions to make. Could a loup garou be a real werewolf? Could a witch be a real witch? How far can I stretch the ridiculous without getting in trouble with the office? How far can I push pure fantasy before some sophisticated 5-year-old kid complains that Donald Duck is only a fairy tale character like Hans C. Anderson's people? I leaned toward logical explanations of phenomenons in everyday terms and mechanics — just to be safe. I hate to go back into those old stories and relive the struggles I had trying to make the explanations interesting and funny and not a dull let-down. Man! How I feel about a kid who yearns to make a career of writing and drawing comics — better, I say, he should take up something exalting and invigorating like sewer engineering.\" (*January 23, 1968, letter to Michael Barrier*)",
+          "value": "When asked if the script had been edited so that the wolf in the story was not a real werewolf, Barks replied: \"The thing you noticed about my 'Loup Garou' story is the sort of business I like to forget. Always there were decisions to make. Could a loup garou be a real werewolf? Could a witch be a real witch? How far can I stretch the ridiculous without getting in trouble with the office? How far can I push pure fantasy before some sophisticated 5-year-old kid complains that Donald Duck is only a fairy tale character like Hans C. Anderson's people? I leaned toward logical explanations of phenomenons in everyday terms and mechanics — just to be safe. I hate to go back into those old stories and relive the struggles I had trying to make the explanations interesting and funny and not a dull let-down. Man! How I feel about a kid who yearns to make a career of writing and drawing comics — better, I say, he should take up something exalting and invigorating like sewer engineering.\" (January 23, 1968, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 105.92400914634148,
+              "w": 125.89305640243904,
+              "x": 150.1177362804878,
+              "y": 239.9599161585366,
+              "confidence": 0.99,
+              "end_index": 1037,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n115",
+              "value": "Carl Barks and the Art of the Comic Book\n115",
+              "bbox": [
+                {
+                  "h": 4.759184451219535,
+                  "w": 77.5848361280488,
+                  "x": 171.90337842987802,
+                  "y": 363.1404649390244,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n115",
+          "bbox": [
+            {
+              "h": 4.76,
+              "w": 77.58,
+              "x": 171.9,
+              "y": 363.14,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "115"
+    }
+  ]
+}

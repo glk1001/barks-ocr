@@ -1,0 +1,99 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Santa\" and some of the other stories Barks had done in 1949, a few months earlier. It is as if, in this story and a few others, Barks's energy had been channeled away from characterization and in other directions.",
+          "value": "Santa\" and some of the other stories Barks had done in 1949, a few months earlier. It is as if, in this story and a few others, Barks's energy had been channeled away from characterization and in other directions.",
+          "bbox": [
+            {
+              "h": 36.810827458079274,
+              "w": 125.76930318692835,
+              "x": 12.61600359660823,
+              "y": 12.750613090701219,
+              "confidence": 0.98,
+              "end_index": 212,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "But if Barks went overboard in his use of realistic illustration, and veered dangerously  close to sentimentality, it was only because",
+          "value": "But if Barks went overboard in his use of realistic illustration, and veered dangerously  close to sentimentality, it was only because",
+          "bbox": [
+            {
+              "h": 22.219607469512194,
+              "w": 125.54431390529723,
+              "x": 12.863510027629571,
+              "y": 49.642494283536585,
+              "confidence": 0.98,
+              "end_index": 133,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "his work in the early fifties was so much more ambitious — if that's the word — than it had been a few years earlier. He was dealing with a much wider range of characters, emotions, and subjects than he had before, and since he was doing so much more, it wasn't surprising that sometimes, in some areas, he would do too much.",
+          "value": "his work in the early fifties was so much more ambitious — if that's the word — than it had been a few years earlier. He was dealing with a much wider range of characters, emotions, and subjects than he had before, and since he was doing so much more, it wasn't surprising that sometimes, in some areas, he would do too much.",
+          "bbox": [
+            {
+              "h": 58.866328124999995,
+              "w": 125.7218711890244,
+              "x": 150.13229611280485,
+              "y": 13.005440167682927,
+              "confidence": 0.99,
+              "end_index": 324,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n69",
+              "value": "Carl Barks and the Art of the Comic Book\n69",
+              "bbox": [
+                {
+                  "h": 5.804245426829275,
+                  "w": 79.68568788109754,
+                  "x": 173.9552000762195,
+                  "y": 367.44423018292684,
+                  "confidence": 0.91,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n69",
+          "bbox": [
+            {
+              "h": 5.8,
+              "w": 79.69,
+              "x": 173.96,
+              "y": 367.44,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "69"
+    }
+  ]
+}

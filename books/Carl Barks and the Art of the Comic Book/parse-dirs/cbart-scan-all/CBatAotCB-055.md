@@ -1,0 +1,21 @@
+to dive around in my money like a porpoise! And burrow through it like a gopher! And toss it up and let it hit me on the head!"
+
+This Scrooge is fully realized, a sympathetic, sometimes almost noble character, balanced neatly between the Scrooge that was and the Scrooge that was to come, of whom I will have more to say later.
+
+The second major supporting character first appeared in the January 1948 *Walt Disney's Comics*, just a month after Scrooge's debut in "Christmas on Bear Mountain." This was Gladstone Gander (a typically inspired Barks name), a wavy-haired duck with a long beak reminiscent of Donald's in his first few animated cartoons.* As with Scrooge, there was little to indicate that Gladstone was going to become a fixture, but in his next few appearances he began to take shape. A rather flashy dresser from the start, he began to emerge as the small-town con man, the sharpie, the hustler — or, as he was described in one story, "loafer, bum, chiseler and connoisseur of the fast buck." (For one thing, he started wearing spats.)
+
+The "classic" Gladstone, like the "classic" Scrooge, began to show himself in the spring of 1949, but it wasn't until that summer, in a Donald Duck story in the *March of Comics* giveaway, that Gladstone acquired his most striking characteristic: awe-inspiring good luck. In this story, Donald and Gladstone race in small boats to the South Pacific, where Uncle Scrooge has been "lost" in a plane crash. Gladstone gets every break and reaches Scrooge before the luckless ducks — but, it seems Scrooge wasn't in danger at all, merely seeking privacy for a while. Scrooge vows to leave his fortune to Donald, who he thinks was kind enough to leave him alone.
+
+There were later stories that amounted to variations on this plot: Gladstone's good luck was eventually topped by a single stroke of good luck for the ducks, after they had endured page after galling page of heartbreak and humiliation. "Luck of the North" (1949) and "The Gilded Man" (1952), both in *Donald Duck* one-shots, fit this pattern, with thirty-one pages of agony followed by a single, overwhelming page of triumph. And yet these happy endings have an arbitrary, *deus ex machina* feeling, because it is so obvious that Barks has no patience with those people who trust to luck, or who are in fact lucky. He put it this way in 1974:
+
+> "I don't think anybody likes a character who gets by with so little effort in the world. They like to feel that other people have just as much of a struggle as they themselves have, and Gladstone was a fellow who would just go along, skimming all the cream out of life, without ever sweating for it."
+
+Good luck, Barks seems to say, is corrupting if we enjoy too much of it: we cease being thankful for it and begin to think we deserve it. Gladstone was the extreme example of the person who takes good fortune as his due, to the point that being lucky becomes an end in itself, and his life an *objet d'art* to be protected from the blemish of work.
+
+In a 1949 story called "Trail of the Unicorn,"<sup>11</sup> Gladstone tries to cheat Donald, rather than rely on his good luck, and he gets beaten up for his pains. A little later, his confidence restored, Gladstone reprimands himself. "I had a little bad luck on that deal I tried to rig on Donald — but that was because cheating is a form of work. Anyone as lucky as I should just sit around and let Dame Fortune dump a bale of mazuma in his lap."
+
+Such arrogance is tolerable only if expressed in silence, and Gladstone was rarely quiet. At the start of "Luck of the North," Gladstone drags Donald with him for a demonstration of his luck, gloating insufferably all the while. Then one of Gladstone's credi-
+
+<footnote>
+*All the ducks had rather long beaks in the forties in Barks's stories. He explained in 1971 what led to his shortening them: "One day a girl who lived down the road from us — she had been an inker at Disney's — said to us, 'You're drawing that duck's beak too long.' So I took a hard look at the duck, and then I looked at the Disney model sheets, and also at the Disney comic strip, and I decided she was right."
+</footnote>

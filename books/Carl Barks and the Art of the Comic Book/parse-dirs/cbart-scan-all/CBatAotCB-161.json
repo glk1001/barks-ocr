@@ -1,0 +1,47 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Walt Disney's Donald Duck in VACATION TIME. Donald Duck and his nephews are in a car that is flying off a broken bridge over a river. They are being attacked by a black panther from a tree on the left and a bear from the rocks on the right. Donald says, \"AH! VACATION TIME! THE ONE SEASON OF THE YEAR WHEN WE CAN GET AWAY FROM THE DANGERS OF CITY LIVING!\" One nephew shouts, \"LOOK OUT IN FRONT OF YOU!\" Another shouts, \"LOOK OUT BEHIND YOU!\" and a third shouts, \"WATCH OUT ON THIS SIDE!\"",
+          "md": "![Walt Disney's Donald Duck in VACATION TIME. Donald Duck and his nephews are in a car that is flying off a broken bridge over a river. They are being attacked by a black panther from a tree on the left and a bear from the rocks on the right. Donald says, \"AH! VACATION TIME! THE ONE SEASON OF THE YEAR WHEN WE CAN GET AWAY FROM THE DANGERS OF CITY LIVING!\" One nephew shouts, \"LOOK OUT IN FRONT OF YOU!\" Another shouts, \"LOOK OUT BEHIND YOU!\" and a third shouts, \"WATCH OUT ON THIS SIDE!\"](CBatAotCB-161_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-161_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 327.5888721894055,
+              "w": 222.40789753239326,
+              "x": 28.18412037919207,
+              "y": 8.160266530106709,
+              "confidence": 0.99,
+              "end_index": 512,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From Vacation Parade No. 1, 1950; © 1950 Walt Disney Productions.",
+          "value": "From Vacation Parade No. 1, 1950; © 1950 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.65801067073171,
+              "w": 134.43912061737802,
+              "x": 73.22337747713414,
+              "y": 341.5895579268293,
+              "confidence": 0.89,
+              "end_index": 64,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true
+    }
+  ]
+}

@@ -1,0 +1,643 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 182 (16/2) - November 1955 - 36 pages",
+          "value": "182 (16/2) - November 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.550413014481708,
+              "w": 92.78454327839175,
+              "x": 10.519644983803353,
+              "y": 12.458373189786585,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald borrows Grandma Duck's colorblind old bull and his cart to enter a contest for the most old-fashioned rig at the Farmers' Fair. *(Jan. 6, 1955)*",
+          "value": "DONALD DUCK - 10 - Donald borrows Grandma Duck's colorblind old bull and his cart to enter a contest for the most old-fashioned rig at the Farmers' Fair. (Jan. 6, 1955)",
+          "bbox": [
+            {
+              "h": 17.289657964939025,
+              "w": 125.8398386290015,
+              "x": 10.400551043254572,
+              "y": 18.23914824695122,
+              "confidence": 0.98,
+              "end_index": 169,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 183 - December 1955 - 36 pages",
+          "value": "183 - December 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.606184260670732,
+              "w": 77.3541746855945,
+              "x": 10.654858279344511,
+              "y": 42.05526391006098,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The nephews route their model railroad around the sleeping Donald. *(June 23, 1955)*\nDONALD DUCK - 10 - Gyro has invented a gun for Donald that shoots custard, temporarily blinding game and letting the hunter capture it alive. *(Mar. 17, 1955)*\nGyro, although mentioned, does not appear in the story.\nReprinted: Walt Disney's Comics No. 399, December 1973.",
+          "value": "Front cover: The nephews route their model railroad around the sleeping Donald. (June 23, 1955)\nDONALD DUCK - 10 - Gyro has invented a gun for Donald that shoots custard, temporarily blinding game and letting the hunter capture it alive. (Mar. 17, 1955)\nGyro, although mentioned, does not appear in the story.\nReprinted: Walt Disney's Comics No. 399, December 1973.",
+          "bbox": [
+            {
+              "h": 17.34264100609756,
+              "w": 125.95411895007621,
+              "x": 10.59767792492378,
+              "y": 59.63673018292683,
+              "confidence": 0.87,
+              "end_index": 368,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 184 - January 1956 - 36 pages",
+          "value": "184 - January 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.386509146341464,
+              "w": 72.00043195026677,
+              "x": 10.539351776867376,
+              "y": 96.10656631097561,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews vow on Christmas Eve never to take another bath, and flee when Donald summons them to the tub. *(Mar. 31, 1955)*",
+          "value": "DONALD DUCK - 10 - The nephews vow on Christmas Eve never to take another bath, and flee when Donald summons them to the tub. (Mar. 31, 1955)",
+          "bbox": [
+            {
+              "h": 17.249268292682927,
+              "w": 125.86018316501523,
+              "x": 10.342297780106707,
+              "y": 101.76249237804878,
+              "confidence": 0.98,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 185 (16/5) - February 1956 - 36 pages",
+          "value": "185 (16/5) - February 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.55471036585368,
+              "w": 89.47091773056401,
+              "x": 10.865671446265242,
+              "y": 126.36412728658536,
+              "confidence": 0.97,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - At New Year's, Donald resolves to serve only the nephews' favorite foods, while the nephews resolve to eat only the foods that Donald has said are good for them. *(Apr. 21, 1955)*\nCross-references: The ducks refer clearly to the events of \"DONALD DUCK\" in Walt Disney's Comics No. 173, February 1955.\nReprinted: Walt Disney's Comics No. 377, February 1972.",
+          "value": "DONALD DUCK - 10 - At New Year's, Donald resolves to serve only the nephews' favorite foods, while the nephews resolve to eat only the foods that Donald has said are good for them. (Apr. 21, 1955)\nCross-references: The ducks refer clearly to the events of \"DONALD DUCK\" in Walt Disney's Comics No. 173, February 1955.\nReprinted: Walt Disney's Comics No. 377, February 1972.",
+          "bbox": [
+            {
+              "h": 22.99102134146342,
+              "w": 125.7951237376143,
+              "x": 10.649197908727134,
+              "y": 132.33148628048778,
+              "confidence": 0.91,
+              "end_index": 374,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 186 (16/6) - March 1956 - 36 pages",
+          "value": "186 (16/6) - March 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.657641006097565,
+              "w": 82.56342737709602,
+              "x": 10.332324337842987,
+              "y": 184.61877667682927,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and the nephews have rival ice taxis to carry fishermen to fishing holes across a frozen lake. *(Apr. 21, 1955)*\nA new version of \"This Month's Thriller - Rival Boatmen\" in Walt Disney's Comics No. 45, June 1944. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)\nReprinted: Walt Disney Comics Digest No. 33, February 1972.",
+          "value": "DONALD DUCK - 10 - Donald and the nephews have rival ice taxis to carry fishermen to fishing holes across a frozen lake. (Apr. 21, 1955)\nA new version of \"This Month's Thriller - Rival Boatmen\" in Walt Disney's Comics No. 45, June 1944. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)\nReprinted: Walt Disney Comics Digest No. 33, February 1972.",
+          "bbox": [
+            {
+              "h": 23.142461890243883,
+              "w": 125.91145341082316,
+              "x": 10.38437166539634,
+              "y": 208.59107469512196,
+              "confidence": 0.91,
+              "end_index": 400,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 187 (16/7) - April 1956 - 36 pages",
+          "value": "187 (16/7) - April 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.63801067073171,
+              "w": 78.73432652915395,
+              "x": 10.70837831078506,
+              "y": 246.51866615853658,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Scrooge gives Donald a featherbed business and Gladstone a moving business to see which is best qualified to manage his fortune. *(Apr. 28, 1955)*\nReprinted: Walt Disney's Comics No. 385, October 1972.",
+          "value": "DONALD DUCK - 10 - Scrooge gives Donald a featherbed business and Gladstone a moving business to see which is best qualified to manage his fortune. (Apr. 28, 1955)\nReprinted: Walt Disney's Comics No. 385, October 1972.",
+          "bbox": [
+            {
+              "h": 22.661775914634145,
+              "w": 125.78065393959602,
+              "x": 10.604579482660059,
+              "y": 252.60375,
+              "confidence": 0.94,
+              "end_index": 219,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 188 (16/8) - May 1956 - 36 pages",
+          "value": "188 (16/8) - May 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.489679878048809,
+              "w": 76.29568323647102,
+              "x": 10.980427662919206,
+              "y": 289.50018292682927,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald enters the Duckburg tryouts for the Olympic team, but finishes in only one event, and with no one but the nephews there to see him. *(Apr. 28, 1955)*\nBarks caricatured himself on the sixth page of this story as Fulldrip Pulpbugle, a javelin hurler with hay fever.",
+          "value": "DONALD DUCK - 10 - Donald enters the Duckburg tryouts for the Olympic team, but finishes in only one event, and with no one but the nephews there to see him. (Apr. 28, 1955)\nBarks caricatured himself on the sixth page of this story as Fulldrip Pulpbugle, a javelin hurler with hay fever.",
+          "bbox": [
+            {
+              "h": 22.92480182926829,
+              "w": 126.04590034298779,
+              "x": 10.670179115853657,
+              "y": 295.38878048780487,
+              "confidence": 0.92,
+              "end_index": 288,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 189 (16/9) - June 1956 - 36 pages",
+          "value": "189 (16/9) - June 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.55505335365855,
+              "w": 76.53011432926829,
+              "x": 11.153114519817072,
+              "y": 336.73451981707314,
+              "confidence": 0.97,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - When gophers, cut-worms and birds prevent Donald from growing a shade tree in his back\nyard, he buys the world's toughest tree — the Mongolian Thorned Mulberry. *(June 30, 1955)*",
+          "value": "DONALD DUCK - 10 - When gophers, cut-worms and birds prevent Donald from growing a shade tree in his back\nyard, he buys the world's toughest tree — the Mongolian Thorned Mulberry. (June 30, 1955)",
+          "bbox": [
+            {
+              "h": 11.592370426829275,
+              "w": 125.55721346227135,
+              "x": 11.085175066692072,
+              "y": 342.6428506097561,
+              "confidence": 0.92,
+              "end_index": 196,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 190 (16/10) - July 1956 - 36 pages",
+          "value": "190 (16/10) - July 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.57379763719512,
+              "w": 78.1205144817073,
+              "x": 149.57612423780486,
+              "y": 30.420797446646343,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and the nephews hold a swimming race to decide if the nephews will take their piano lessons without complaining. *(July 14, 1955)*\nA new version of \"DONALD DUCK\" in Walt Disney's Comics No. 54, March 1945. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)",
+          "value": "DONALD DUCK - 10 - Donald and the nephews hold a swimming race to decide if the nephews will take their piano lessons without complaining. (July 14, 1955)\nA new version of \"DONALD DUCK\" in Walt Disney's Comics No. 54, March 1945. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)",
+          "bbox": [
+            {
+              "h": 17.451431021341463,
+              "w": 126.27286394817072,
+              "x": 149.81781059451217,
+              "y": 54.68683879573171,
+              "confidence": 0.9,
+              "end_index": 333,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 191 (16/11) - August 1956 - 36 pages",
+          "value": "191 (16/11) - August 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.653633765243899,
+              "w": 86.62856707317073,
+              "x": 150.13822980182925,
+              "y": 78.37514862804878,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald uses a scintillator and uranium buttons on their caps to keep track of the nephews when the ducks camp in the woods. *(Sept. 1, 1955)*\nReprinted: Walt Disney's Comics No. 406, July 1974.",
+          "value": "DONALD DUCK - 10 - Donald uses a scintillator and uranium buttons on their caps to keep track of the nephews when the ducks camp in the woods. (Sept. 1, 1955)\nReprinted: Walt Disney's Comics No. 406, July 1974.",
+          "bbox": [
+            {
+              "h": 17.956429115853652,
+              "w": 125.80014100609756,
+              "x": 150.05980564024387,
+              "y": 84.14731326219513,
+              "confidence": 0.93,
+              "end_index": 211,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 192 (16/12) - September 1956 - 36 pages",
+          "value": "192 (16/12) - September 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.59370807926829,
+              "w": 95.66910823170733,
+              "x": 150.32287728658537,
+              "y": 113.78595274390244,
+              "confidence": 0.96,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald takes a job as a fish culture expert at a salmon hatchery to prove Professor Blabaway Utterbunk's contention that man is the master of any task. *(Sept. 22, 1955)*\nReprinted: Donald Duck No. 159, October 1974.",
+          "value": "DONALD DUCK - 10 - Donald takes a job as a fish culture expert at a salmon hatchery to prove Professor Blabaway Utterbunk's contention that man is the master of any task. (Sept. 22, 1955)\nReprinted: Donald Duck No. 159, October 1974.",
+          "bbox": [
+            {
+              "h": 23.296600609756087,
+              "w": 126.05211699695121,
+              "x": 149.98875571646337,
+              "y": 119.59424542682927,
+              "confidence": 0.95,
+              "end_index": 234,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 193 (17/1) - October 1956 - 36 pages",
+          "value": "193 (17/1) - October 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.493578506097565,
+              "w": 86.14047827743904,
+              "x": 150.42018292682926,
+              "y": 155.3169969512195,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald captures a whale and pens it up so that he can exhibit it for a fee. *(Sept. 29, 1955)*\nReprinted: Walt Disney's Comics No. 373, October 1971.",
+          "value": "DONALD DUCK - 10 - Donald captures a whale and pens it up so that he can exhibit it for a fee. (Sept. 29, 1955)\nReprinted: Walt Disney's Comics No. 373, October 1971.",
+          "bbox": [
+            {
+              "h": 17.355194359756087,
+              "w": 125.99132240853655,
+              "x": 150.19326219512195,
+              "y": 161.20478277439025,
+              "confidence": 0.95,
+              "end_index": 167,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 194 (17/2) - November 1956 - 36 pages",
+          "value": "194 (17/2) - November 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.58224085365855,
+              "w": 93.02659298780486,
+              "x": 150.46677782012193,
+              "y": 184.85783917682926,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald is a skywriter, and Scrooge hires him to boost his campaign for public office — with disastrous results. *(Sept. 29, 1955)*\nReprinted: Donald Duck No. 134, November 1970",
+          "value": "DONALD DUCK - 10 - Donald is a skywriter, and Scrooge hires him to boost his campaign for public office — with disastrous results. (Sept. 29, 1955)\nReprinted: Donald Duck No. 134, November 1970",
+          "bbox": [
+            {
+              "h": 17.60838795731707,
+              "w": 126.0460118140244,
+              "x": 150.20792492378047,
+              "y": 190.6345769817073,
+              "confidence": 0.92,
+              "end_index": 194,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 195 (17/3) - December 1956 - 36 pages",
+          "value": "195 (17/3) - December 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.498757621951217,
+              "w": 91.86290396341464,
+              "x": 150.49058117378047,
+              "y": 220.26841463414635,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The nephews use the Junior Woodchuck Guidebook to find where two trains will collide in a snowstorm, and then enlist Scrooge's help. *(Nov. 23, 1955)*\nReprinted: Walt Disney's Comics No. 436, January 1977.",
+          "value": "DONALD DUCK - 10 - The nephews use the Junior Woodchuck Guidebook to find where two trains will collide in a snowstorm, and then enlist Scrooge's help. (Nov. 23, 1955)\nReprinted: Walt Disney's Comics No. 436, January 1977.",
+          "bbox": [
+            {
+              "h": 18.097339939024376,
+              "w": 125.52077743902437,
+              "x": 150.3060537347561,
+              "y": 226.1126524390244,
+              "confidence": 0.9,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 196 (17/4) - January 1957 - 36 pages",
+          "value": "196 (17/4) - January 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.68756097560974,
+              "w": 86.44565167682927,
+              "x": 150.68807355182923,
+              "y": 256.16634146341465,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and the nephews compete in a snow sculpture contest, with both sides planning to give the prize money to a poor family. *(Dec. 22, 1955)*\nReprinted: Walt Disney's Comics No. 378, March 1972.",
+          "value": "DONALD DUCK - 10 - Donald and the nephews compete in a snow sculpture contest, with both sides planning to give the prize money to a poor family. (Dec. 22, 1955)\nReprinted: Walt Disney's Comics No. 378, March 1972.",
+          "bbox": [
+            {
+              "h": 23.400320121951243,
+              "w": 125.99639862804878,
+              "x": 150.52690358231706,
+              "y": 261.9591768292683,
+              "confidence": 0.82,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 197 (17/5) - February 1957 - 36 pages",
+          "value": "197 (17/5) - February 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.624817073170725,
+              "w": 89.57313452743901,
+              "x": 150.86490091463415,
+              "y": 291.4406478658537,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald becomes a border patrolman in the desert and is tricked by camera and parakeet smugglers. *(Jan. 5, 1956)*\nSimilar to \"DONALD DUCK\" in Walt Disney's Comics No. 94, July 1948.\nReprinted: Walt Disney's Comics No. 354, March 1970.",
+          "value": "DONALD DUCK - 10 - Donald becomes a border patrolman in the desert and is tricked by camera and parakeet smugglers. (Jan. 5, 1956)\nSimilar to \"DONALD DUCK\" in Walt Disney's Comics No. 94, July 1948.\nReprinted: Walt Disney's Comics No. 354, March 1970.",
+          "bbox": [
+            {
+              "h": 17.75144817073171,
+              "w": 125.9682050304878,
+              "x": 150.57312118902436,
+              "y": 297.00713414634146,
+              "confidence": 0.9,
+              "end_index": 252,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 198 (17/6) - March 1957 - 36 pages",
+          "value": "198 (17/6) - March 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.455015243902435,
+              "w": 82.39503429878049,
+              "x": 150.22624047256096,
+              "y": 336.59878810975613,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Plaster falls on Donald when the nephews hit a punching bag. *(Sept. 6, 1956)*",
+          "value": "Front cover (art only): Plaster falls on Donald when the nephews hit a punching bag. (Sept. 6, 1956)",
+          "bbox": [
+            {
+              "h": 11.79811737804881,
+              "w": 125.80178734756095,
+              "x": 150.07743521341465,
+              "y": 342.256806402439,
+              "confidence": 0.98,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n179",
+              "value": "Carl Barks and the Art of the Comic Book\n179",
+              "bbox": [
+                {
+                  "h": 4.515045731707305,
+                  "w": 77.87222560975609,
+                  "x": 172.51195884146338,
+                  "y": 365.14529725609754,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n179",
+          "bbox": [
+            {
+              "h": 4.52,
+              "w": 77.87,
+              "x": 172.51,
+              "y": 365.15,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "179"
+    }
+  ]
+}

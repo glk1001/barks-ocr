@@ -1,0 +1,151 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Scrooge McDuck trading a water bag for a magic hourglass with his nephews in the desert.",
+          "md": "![Scrooge McDuck trading a water bag for a magic hourglass with his nephews in the desert.](CBatAotCB-050_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-050_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 192.9288438452744,
+              "w": 261.9020611423399,
+              "x": 12.397822622903961,
+              "y": 11.919159203506098,
+              "confidence": 0.99,
+              "end_index": 113,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From Donald Duck Four Color No. 291, 1950; © 1950 Walt Disney Productions.",
+          "value": "From Donald Duck Four Color No. 291, 1950; © 1950 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.503368902439015,
+              "w": 161.88965224847558,
+              "x": 64.37079363567072,
+              "y": 209.83735518292684,
+              "confidence": 0.94,
+              "end_index": 73,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "never quite a villain, he was frequently at odds with Donald and the nephews. In \"The Magic Hourglass,\" (1950), for instance, he gives the nephews an hourglass that he later discovers is the enchanted source of his great wealth. The bulk of the story is taken up by his efforts to get the hourglass back, by fair means or foul. He finally regains it when he finds the ducks dying of thirst in the Sahara Desert and trades them a water bag for the hourglass. Scrooge is punished for his greed a short while later, but, still, the fiendish expression on his face when he makes the trade is not the sort to win the heart.",
+          "value": "never quite a villain, he was frequently at odds with Donald and the nephews. In \"The Magic Hourglass,\" (1950), for instance, he gives the nephews an hourglass that he later discovers is the enchanted source of his great wealth. The bulk of the story is taken up by his efforts to get the hourglass back, by fair means or foul. He finally regains it when he finds the ducks dying of thirst in the Sahara Desert and trades them a water bag for the hourglass. Scrooge is punished for his greed a short while later, but, still, the fiendish expression on his face when he makes the trade is not the sort to win the heart.",
+          "bbox": [
+            {
+              "h": 103.0523551829268,
+              "w": 126.08904499333079,
+              "x": 11.231747689596036,
+              "y": 223.47050304878047,
+              "confidence": 0.99,
+              "end_index": 617,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Scrooge of \"The Magic Hourglass\" differs from the later Scrooge in many respects. This is almost the only story after \"Letter to Santa\" in which Scrooge's money is not highly",
+          "value": "The Scrooge of \"The Magic Hourglass\" differs from the later Scrooge in many respects. This is almost the only story after \"Letter to Santa\" in which Scrooge's money is not highly",
+          "bbox": [
+            {
+              "h": 29.755861280487824,
+              "w": 125.91102467606707,
+              "x": 11.201454363567072,
+              "y": 327.36505335365854,
+              "confidence": 0.99,
+              "end_index": 177,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "visible; he is surrounded instead by the trappings of a big-wheel executive. Most important, the story turns on luck — Scrooge has accumulated his fortune less through his own efforts than through the magic of the hourglass. \"The Magic Hourglass\" remains a wonderful story, but it is a story in which Donald and the nephews are the sympathetic characters; it would not have been successful if Barks had asked that we cheer for Scrooge, instead of simply enjoying his energy and irascibility.",
+          "value": "visible; he is surrounded instead by the trappings of a big-wheel executive. Most important, the story turns on luck — Scrooge has accumulated his fortune less through his own efforts than through the magic of the hourglass. \"The Magic Hourglass\" remains a wonderful story, but it is a story in which Donald and the nephews are the sympathetic characters; it would not have been successful if Barks had asked that we cheer for Scrooge, instead of simply enjoying his energy and irascibility.",
+          "bbox": [
+            {
+              "h": 82.28686737804878,
+              "w": 126.04772675304878,
+              "x": 150.0017721036585,
+              "y": 223.16606707317075,
+              "confidence": 0.99,
+              "end_index": 490,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Scrooge of \"Only a Poor Old Man\" is a much warmer-hearted soul than the Scrooge of \"The Magic Hourglass\"; he loves money no less, but he is not so greedy for more. Early in the story, he explains to the nephews why it is that he loves his money so much: \"I made it on the seas, and in the mines, and in the cattle",
+          "value": "The Scrooge of \"Only a Poor Old Man\" is a much warmer-hearted soul than the Scrooge of \"The Magic Hourglass\"; he loves money no less, but he is not so greedy for more. Early in the story, he explains to the nephews why it is that he loves his money so much: \"I made it on the seas, and in the mines, and in the cattle",
+          "bbox": [
+            {
+              "h": 51.347903963414666,
+              "w": 125.66646150914634,
+              "x": 150.18053734756094,
+              "y": 305.39261432926827,
+              "confidence": 0.99,
+              "end_index": 316,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "50 Carl Barks and the Art of the Comic Book",
+              "value": "50 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.54897865853658,
+                  "w": 80.07798447027439,
+                  "x": 37.107683403201214,
+                  "y": 367.8195045731707,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "50 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.55,
+              "w": 80.08,
+              "x": 37.11,
+              "y": 367.82,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "50"
+    }
+  ]
+}

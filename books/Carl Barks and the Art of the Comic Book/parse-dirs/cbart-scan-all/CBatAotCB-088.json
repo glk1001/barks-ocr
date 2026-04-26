@@ -1,0 +1,136 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Carl Barks at work on a duck painting in 1974.",
+          "md": "![Carl Barks at work on a duck painting in 1974.](CBatAotCB-088_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-088_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 83.20200171493902,
+              "w": 129.680878668064,
+              "x": 15.800074075838413,
+              "y": 12.618758574695123,
+              "confidence": 0.99,
+              "end_index": 71,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Carl Barks at work on a duck painting in 1974.",
+          "value": "Carl Barks at work on a duck painting in 1974.",
+          "bbox": [
+            {
+              "h": 6.109081554878044,
+              "w": 97.9656688262195,
+              "x": 27.98012195121951,
+              "y": 99.17511814024391,
+              "confidence": 0.93,
+              "end_index": 45,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "King Beowulf, a fantasy painting by Carl Barks depicting a warrior fighting a dragon.",
+          "md": "![King Beowulf, a fantasy painting by Carl Barks depicting a warrior fighting a dragon.](CBatAotCB-088_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-088_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 144.48719988567072,
+              "w": 115.10790777439026,
+              "x": 157.83285251524387,
+              "y": 15.068040205792682,
+              "confidence": 0.99,
+              "end_index": 110,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "Barks's final painting on a Disney subject was \"July Fourth in Duckburg\" (24 x 16, oil on masonite). Since permission for the Disney paintings was withdrawn in 1976, Barks has concentrated on fantasy subjects of his own choosing, such as \"King Beowulf\" (20 x 16, oil on masonite). Bicentennial painting ©Walt Disney Productions; \"King Beowulf\" ©1978 Carl Barks.",
+          "value": "Barks's final painting on a Disney subject was \"July Fourth in Duckburg\" (24 x 16, oil on masonite). Since permission for the Disney paintings was withdrawn in 1976, Barks has concentrated on fantasy subjects of his own choosing, such as \"King Beowulf\" (20 x 16, oil on masonite). Bicentennial painting ©Walt Disney Productions; \"King Beowulf\" ©1978 Carl Barks.",
+          "bbox": [
+            {
+              "h": 41.75940548780487,
+              "w": 113.65628263147865,
+              "x": 32.104685356326215,
+              "y": 132.52146722560977,
+              "confidence": 0.99,
+              "end_index": 360,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "July Fourth in Duckburg, a Bicentennial painting by Carl Barks featuring Disney characters in a parade.",
+          "md": "![July Fourth in Duckburg, a Bicentennial painting by Carl Barks featuring Disney characters in a parade.](CBatAotCB-088_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-088_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 166.9916844512195,
+              "w": 224.51075576410057,
+              "x": 33.17560475419207,
+              "y": 186.30285823170732,
+              "confidence": 1.0,
+              "end_index": 128,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "items": [
+            {
+              "md": "88 Carl Barks and the Art of the Comic Book",
+              "value": "88 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.63122713414632,
+                  "w": 79.98845179115852,
+                  "x": 37.64478944359756,
+                  "y": 365.805137195122,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "88 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.63,
+              "w": 79.99,
+              "x": 37.64,
+              "y": 365.81,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "88"
+    }
+  ]
+}

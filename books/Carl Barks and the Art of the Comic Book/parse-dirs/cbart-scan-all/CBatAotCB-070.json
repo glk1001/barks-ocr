@@ -1,0 +1,134 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# VIII.",
+          "value": "VIII.",
+          "bbox": [
+            {
+              "h": 28.2027724847561,
+              "w": 88.67846798780488,
+              "x": 99.1781307164634,
+              "y": 50.72442073170732,
+              "confidence": 0.83,
+              "end_index": 4,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**WITH MORE AND** thicker Disney comics being published in the early fifties, Barks's virtual monopoly on the duck stories was broken. He chose to abandon the ten-page stories for most of 1950, concentrating instead on the *Donald Duck* series and the new twenty-five-cent comic books. Cartoonists like Jack Bradbury and Paul Murry began illustrating the ten-page stories, but readers complained about the change. In August 1950, a Western Publishing editor told Barks that \"Your public is clamoring to see more Donald Duck, a la Barks... so we have decided to put your story-art combination back into the monthly magazines.\" (It should be mentioned that such fan letters were never passed along to Barks; he recalls receiving only a few letters about his work via Western, all of them complaints. He did not receive a fan letter addressed directly to him, from John Spicer, until 1960, and Barks at first thought that it was a practical joke played by a cartoonist friend.)",
+          "value": "WITH MORE AND thicker Disney comics being published in the early fifties, Barks's virtual monopoly on the duck stories was broken. He chose to abandon the ten-page stories for most of 1950, concentrating instead on the Donald Duck series and the new twenty-five-cent comic books. Cartoonists like Jack Bradbury and Paul Murry began illustrating the ten-page stories, but readers complained about the change. In August 1950, a Western Publishing editor told Barks that \"Your public is clamoring to see more Donald Duck, a la Barks... so we have decided to put your story-art combination back into the monthly magazines.\" (It should be mentioned that such fan letters were never passed along to Barks; he recalls receiving only a few letters about his work via Western, all of them complaints. He did not receive a fan letter addressed directly to him, from John Spicer, until 1960, and Barks at first thought that it was a practical joke played by a cartoonist friend.)",
+          "bbox": [
+            {
+              "h": 170.03857088414634,
+              "w": 125.67715736947407,
+              "x": 12.301151510099086,
+              "y": 121.94324314024391,
+              "confidence": 0.99,
+              "end_index": 973,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks quickly turned out the stories for the first four 1951 issues of *Walt Disney's Comics*, and continued to do every Donald Duck story for *Walt Disney's* for the next thirteen years; when a Donald Duck story by another artist appeared in the May 1964 *Walt Disney's Comics*, it was for the first time since the December 1950 issue.",
+          "value": "Barks quickly turned out the stories for the first four 1951 issues of Walt Disney's Comics, and continued to do every Donald Duck story for Walt Disney's for the next thirteen years; when a Donald Duck story by another artist appeared in the May 1964 Walt Disney's Comics, it was for the first time since the December 1950 issue.",
+          "bbox": [
+            {
+              "h": 57.20764481707321,
+              "w": 125.51482445693598,
+              "x": 12.425995855564024,
+              "y": 292.202743902439,
+              "confidence": 0.99,
+              "end_index": 335,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "By the time Barks picked up the ten-page stories again, the old formula of conflict between Donald and the nephews had faded completely. The nephews were now much more like real children in their relationship with Donald, although brighter and more resourceful than real children in other ways. They still caused Donald a lot of trouble, but because they were children, not because they were openly defiant. The story in the November 1953 *Walt Disney's Comics* is typical. The nephews take up bee-raising as a Junior Woodchuck project and Donald suffers woes such as any parent might suffer, only in heightened form. (Heightened, it must be said, in large part by Donald's obtuseness. Early in the story, he carries the nephews' beehive across town, to the junkyard, heedless of the chaos he is creating. When he goes to retrieve the hive, after being dressed down by the Supreme Instructor of the Junior Woodchucks, he is met by six hose companies from the Duckburg fire department. He remarks as the water pours onto him, \"I guess this is an example of just how mad some people can get.\")",
+          "value": "By the time Barks picked up the ten-page stories again, the old formula of conflict between Donald and the nephews had faded completely. The nephews were now much more like real children in their relationship with Donald, although brighter and more resourceful than real children in other ways. They still caused Donald a lot of trouble, but because they were children, not because they were openly defiant. The story in the November 1953 Walt Disney's Comics is typical. The nephews take up bee-raising as a Junior Woodchuck project and Donald suffers woes such as any parent might suffer, only in heightened form. (Heightened, it must be said, in large part by Donald's obtuseness. Early in the story, he carries the nephews' beehive across town, to the junkyard, heedless of the chaos he is creating. When he goes to retrieve the hive, after being dressed down by the Supreme Instructor of the Junior Woodchucks, he is met by six hose companies from the Duckburg fire department. He remarks as the water pours onto him, \"I guess this is an example of just how mad some people can get.\")",
+          "bbox": [
+            {
+              "h": 184.93748094512196,
+              "w": 125.84908536585368,
+              "x": 149.48670731707315,
+              "y": 122.12653582317074,
+              "confidence": 0.99,
+              "end_index": 1090,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Finally, his toubles apparently over, Donald coats himself with a cologne called \"Attar of Tiger Lilies\" and prepares to call on Daisy. But, as he passes the bees' cage, the scent drives them wild—so wild that they lift the cage and drop on top of Donald. Some months",
+          "value": "Finally, his toubles apparently over, Donald coats himself with a cologne called \"Attar of Tiger Lilies\" and prepares to call on Daisy. But, as he passes the bees' cage, the scent drives them wild—so wild that they lift the cage and drop on top of Donald. Some months",
+          "bbox": [
+            {
+              "h": 43.81381097560974,
+              "w": 125.39531249999999,
+              "x": 150.61592606707316,
+              "y": 307.4107088414634,
+              "confidence": 0.99,
+              "end_index": 266,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "70 Carl Barks and the Art of the Comic Book",
+              "value": "70 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.760007621951245,
+                  "w": 80.08907583841463,
+                  "x": 34.50582507621951,
+                  "y": 363.8947179878049,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "70 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.76,
+              "w": 80.09,
+              "x": 34.51,
+              "y": 363.89,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "70"
+    }
+  ]
+}

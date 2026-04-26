@@ -1,0 +1,84 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Sketch of an artist painting a portrait of a man sitting on a stool.",
+          "md": "![Sketch of an artist painting a portrait of a man sitting on a stool.](CBatAotCB-024_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-024_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 181.324921875,
+              "w": 216.01134860899387,
+              "x": 34.69452410442073,
+              "y": 22.88606135670732,
+              "confidence": 0.99,
+              "end_index": 93,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Cartoon of an artist showing a portrait to his subject. The subject says, \"I GUESS ITS ALL RIGHT -- BUT WHAT IS IT?\" The artist asks, \"HOW DO YOU LIKE EET\"",
+          "md": "![Cartoon of an artist showing a portrait to his subject. The subject says, \"I GUESS ITS ALL RIGHT -- BUT WHAT IS IT?\" The artist asks, \"HOW DO YOU LIKE EET\"](CBatAotCB-024_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-024_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 106.6493368902439,
+              "w": 134.09286156631094,
+              "x": 14.989514576981707,
+              "y": 220.60317073170734,
+              "confidence": 0.95,
+              "end_index": 180,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "items": [
+            {
+              "md": "24 Carl Barks and the Art of the Comic Book",
+              "value": "24 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.739359756097564,
+                  "w": 79.91789705602135,
+                  "x": 35.52855683117377,
+                  "y": 365.4766463414634,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "24 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.74,
+              "w": 79.92,
+              "x": 35.53,
+              "y": 365.48,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "24"
+    }
+  ]
+}

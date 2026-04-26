@@ -1,0 +1,66 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "A collection of five pencil sketches of nude female figures in various poses. The central figure is standing and leaning against a block, while others are seated or standing in different orientations.",
+          "md": "![A collection of five pencil sketches of nude female figures in various poses. The central figure is standing and leaning against a block, while others are seated or standing in different orientations.](CBatAotCB-077_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-077_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 330.86660584984753,
+              "w": 258.68154820884143,
+              "x": 14.906618711890243,
+              "y": 13.146869759908535,
+              "confidence": 0.99,
+              "end_index": 225,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n77",
+              "value": "Carl Barks and the Art of the Comic Book\n77",
+              "bbox": [
+                {
+                  "h": 6.055129573170725,
+                  "w": 80.12201981707315,
+                  "x": 171.30561928353657,
+                  "y": 365.3942606707317,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n77",
+          "bbox": [
+            {
+              "h": 6.06,
+              "w": 80.12,
+              "x": 171.31,
+              "y": 365.39,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "77"
+    }
+  ]
+}

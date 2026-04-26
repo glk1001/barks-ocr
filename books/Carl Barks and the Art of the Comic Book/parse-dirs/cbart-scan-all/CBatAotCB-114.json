@@ -1,0 +1,843 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 44 - Nov.-Dec. 1955 - 36 pages",
+          "value": "44 - Nov.-Dec. 1955 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.859680830792681,
+              "w": 70.67949480754572,
+              "x": 11.012680306783535,
+              "y": 16.538900533536587,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald fills and inflatable boat with hot water so that the nephews can sleep in it. (*June 23, 1955*)",
+          "value": "Front cover: Donald fills and inflatable boat with hot water so that the nephews can sleep in it. (June 23, 1955)",
+          "bbox": [
+            {
+              "h": 11.583074028201217,
+              "w": 125.47245152915394,
+              "x": 11.310219012004572,
+              "y": 22.608657107469515,
+              "confidence": 0.98,
+              "end_index": 114,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 45 - Jan.-Feb. 1956 - 36 pages",
+          "value": "45 - Jan.-Feb. 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.7232374237804855,
+              "w": 72.11428460842225,
+              "x": 10.87092880621189,
+              "y": 39.96427877286585,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside front cover) - The nephews use heating pads to melt the snow off their badminton court. (*Oct. 14, 1954*)",
+          "value": "DONALD DUCK - 1 (inside front cover) - The nephews use heating pads to melt the snow off their badminton court. (Oct. 14, 1954)",
+          "bbox": [
+            {
+              "h": 16.763374618902446,
+              "w": 125.76816811166155,
+              "x": 11.054632002667683,
+              "y": 46.688963414634145,
+              "confidence": 0.97,
+              "end_index": 128,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page was replaced by an advertisement in some copies.\nDONALD DUCK - 6 - Donald is a failure as a dogcatcher, fleeing town after locking up a pack of foxhounds. (*Oct. 7, 1954*)",
+          "value": "This page was replaced by an advertisement in some copies.\nDONALD DUCK - 6 - Donald is a failure as a dogcatcher, fleeing town after locking up a pack of foxhounds. (Oct. 7, 1954)",
+          "bbox": [
+            {
+              "h": 22.611373856707317,
+              "w": 124.98461354325457,
+              "x": 11.092754025342987,
+              "y": 64.74026867378049,
+              "confidence": 0.98,
+              "end_index": 180,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes*: Barks submitted this story as eight pages; it was cut to six by his editors. The positions of panels 5 and 6 and panels 7 and 8 were reversed on the fifth page of the story as published.\n*Reprinted*: Donald Duck No. 157, July 1974.",
+          "value": "Changes: Barks submitted this story as eight pages; it was cut to six by his editors. The positions of panels 5 and 6 and panels 7 and 8 were reversed on the fifth page of the story as published.\nReprinted: Donald Duck No. 157, July 1974.",
+          "bbox": [
+            {
+              "h": 22.629460746951217,
+              "w": 125.52427484279724,
+              "x": 10.477669707507621,
+              "y": 88.93943025914635,
+              "confidence": 0.98,
+              "end_index": 241,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 1 (inside back cover) - Donald can't wake the nephews up on the first morning of their paper route. (*Oct. 17, 1954*)",
+          "value": "DONALD DUCK - 1 (inside back cover) - Donald can't wake the nephews up on the first morning of their paper route. (Oct. 17, 1954)",
+          "bbox": [
+            {
+              "h": 17.155678353658537,
+              "w": 124.96669993330792,
+              "x": 11.374751095655487,
+              "y": 112.05878048780488,
+              "confidence": 0.97,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page was replaced by an advertisement in some copies.\nDONALD DUCK - 1 (back cover) - Donald is an aggressive snowplow driver (*Oct. 14, 1954*)",
+          "value": "This page was replaced by an advertisement in some copies.\nDONALD DUCK - 1 (back cover) - Donald is an aggressive snowplow driver (Oct. 14, 1954)",
+          "bbox": [
+            {
+              "h": 16.98680259146342,
+              "w": 124.40830185308687,
+              "x": 11.837824290205791,
+              "y": 130.19453506097562,
+              "confidence": 0.97,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This page was replaced by an advertisement in some copies.",
+          "value": "This page was replaced by an advertisement in some copies.",
+          "bbox": [
+            {
+              "h": 5.3882698170731596,
+              "w": 119.89697789634144,
+              "x": 15.965773628048778,
+              "y": 147.9978544207317,
+              "confidence": 0.95,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 46 - Mar.-Apr. 1956 - 36 pages",
+          "value": "46 - Mar.-Apr. 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.492755335365855,
+              "w": 73.25672017911585,
+              "x": 11.126691596798779,
+              "y": 159.41276295731706,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: The nephews blow over their birthday cake, to Donald's dismay. (*Sept. 15, 1955*)",
+          "value": "Front cover: The nephews blow over their birthday cake, to Donald's dismay. (Sept. 15, 1955)",
+          "bbox": [
+            {
+              "h": 11.58455030487803,
+              "w": 124.66205816501522,
+              "x": 11.541837604801827,
+              "y": 165.17266006097563,
+              "confidence": 0.97,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes*: The nephews' faces were redrawn by another artist after Barks had submitted the cover to Western.",
+          "value": "Changes: The nephews' faces were redrawn by another artist after Barks had submitted the cover to Western.",
+          "bbox": [
+            {
+              "h": 11.07515625,
+              "w": 124.62446455792681,
+              "x": 11.491729230182925,
+              "y": 177.26416920731705,
+              "confidence": 0.95,
+              "end_index": 107,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted*: Donald Duck No. 154, January 1974.",
+          "value": "Reprinted: Donald Duck No. 154, January 1974.",
+          "bbox": [
+            {
+              "h": 5.21214557926829,
+              "w": 95.65296422446646,
+              "x": 15.351849037728657,
+              "y": 189.3824199695122,
+              "confidence": 0.88,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in Secret of Hondorica - 24 - Scrooge sends the ducks deep into the jungles of Hondorica to recover valuable papers from a crashed mail plane, but Gladstone is a step ahead of them all the way. (*Sept. 30, 1954*)",
+          "value": "DONALD DUCK in Secret of Hondorica - 24 - Scrooge sends the ducks deep into the jungles of Hondorica to recover valuable papers from a crashed mail plane, but Gladstone is a step ahead of them all the way. (Sept. 30, 1954)",
+          "bbox": [
+            {
+              "h": 23.527545731707303,
+              "w": 124.9808428210747,
+              "x": 11.205269031059451,
+              "y": 195.54372713414634,
+              "confidence": 0.98,
+              "end_index": 223,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted*: Donald Duck No. 98, November 1964; No. 154, January 1974.",
+          "value": "Reprinted: Donald Duck No. 98, November 1964; No. 154, January 1974.",
+          "bbox": [
+            {
+              "h": 11.03974847560974,
+              "w": 124.75284167778197,
+              "x": 11.416052186547255,
+              "y": 221.03849085365854,
+              "confidence": 0.97,
+              "end_index": 69,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 51 - Jan.-Feb. 1957 - 36 pages",
+          "value": "51 - Jan.-Feb. 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.566600609756114,
+              "w": 70.11644924256859,
+              "x": 11.653206816882621,
+              "y": 238.90717225609757,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - ½ - Donald tries to sell Scrooge a comfortable hat. (*May 24, 1956*)",
+          "value": "DONALD DUCK - ½ - Donald tries to sell Scrooge a comfortable hat. (May 24, 1956)",
+          "bbox": [
+            {
+              "h": 11.348231707317073,
+              "w": 125.11627155583079,
+              "x": 11.80696396246189,
+              "y": 244.70254573170732,
+              "confidence": 0.97,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes*: Barks's list shows a full page \"new hat\" gag accepted on May 24, 1956, with no issue specified. The gag as published has obviously been cut from a full page.",
+          "value": "Changes: Barks's list shows a full page \"new hat\" gag accepted on May 24, 1956, with no issue specified. The gag as published has obviously been cut from a full page.",
+          "bbox": [
+            {
+              "h": 17.12453506097565,
+              "w": 125.19535382526676,
+              "x": 11.844257455221037,
+              "y": 256.7842911585366,
+              "confidence": 0.98,
+              "end_index": 167,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 52 - Mar.-Apr. 1957 - 36 pages",
+          "value": "52 - Mar.-Apr. 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.532576219512175,
+              "w": 73.38998701886432,
+              "x": 11.668158941501524,
+              "y": 280.9730030487805,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald is injured by a chair spring while reading a book on first aid. (*Sept. 6, 1956*)",
+          "value": "Front cover (art only): Donald is injured by a chair spring while reading a book on first aid. (Sept. 6, 1956)",
+          "bbox": [
+            {
+              "h": 11.635015243902435,
+              "w": 125.1961309070122,
+              "x": 11.900201981707317,
+              "y": 286.73595274390243,
+              "confidence": 0.98,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK and the Lost Peg Leg Mine - 10 - The ducks and Scrooge go to an abandoned mine in search of gold left there by an old prospector and find that pack rats have taken all of it. (*June 14, 1956*)",
+          "value": "DONALD DUCK and the Lost Peg Leg Mine - 10 - The ducks and Scrooge go to an abandoned mine in search of gold left there by an old prospector and find that pack rats have taken all of it. (June 14, 1956)",
+          "bbox": [
+            {
+              "h": 22.93328506097565,
+              "w": 125.28896913109753,
+              "x": 11.895597370426827,
+              "y": 298.83326981707313,
+              "confidence": 0.98,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This story was originally scheduled for *Walt Disney's Comics* No. 203, August 1957. In a letter dated June 22, 1956, Chase Craig informed Barks of the change and asked for another ten-page story for *Walt Disney's*.",
+          "value": "This story was originally scheduled for Walt Disney's Comics No. 203, August 1957. In a letter dated June 22, 1956, Chase Craig informed Barks of the change and asked for another ten-page story for Walt Disney's.",
+          "bbox": [
+            {
+              "h": 22.552157012195128,
+              "w": 125.22538776676826,
+              "x": 11.720579268292683,
+              "y": 322.83676829268296,
+              "confidence": 0.98,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted*: Donald Duck No. 134, November 1970,",
+          "value": "Reprinted: Donald Duck No. 134, November 1970,",
+          "bbox": [
+            {
+              "h": 5.066181402439015,
+              "w": 100.85015446360516,
+              "x": 16.258684141577742,
+              "y": 346.08962652439027,
+              "confidence": 0.96,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 54 - July-Aug. 1957 - 36 pages",
+          "value": "54 - July-Aug. 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.697060308689025,
+              "w": 72.40138147865852,
+              "x": 151.42620045731707,
+              "y": 16.58931402439024,
+              "confidence": 0.98,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK in \"Forbidden Valley\" - 26 - The ducks are sent to South America to find rare wasps needed to save Duckburg's pickle crop from a bug called the augur-nosed pickle hater. In the Amazon jungle, they must contend with dinosaurs, fierce Indians, and an embittered canner named P. J. McBrine. (*Dec. 13, 1956*)",
+          "value": "DONALD DUCK in \"Forbidden Valley\" - 26 - The ducks are sent to South America to find rare wasps needed to save Duckburg's pickle crop from a bug called the augur-nosed pickle hater. In the Amazon jungle, they must contend with dinosaurs, fierce Indians, and an embittered canner named P. J. McBrine. (Dec. 13, 1956)",
+          "bbox": [
+            {
+              "h": 35.03328458460366,
+              "w": 124.98304115853655,
+              "x": 151.38665396341463,
+              "y": 22.561073266006098,
+              "confidence": 0.99,
+              "end_index": 316,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A new version of \"Donald Duck in Darkest Africa\" in *Boys and Girls' March of Comics* No. 20, 1948.",
+          "value": "A new version of \"Donald Duck in Darkest Africa\" in Boys and Girls' March of Comics No. 20, 1948.",
+          "bbox": [
+            {
+              "h": 11.1571875,
+              "w": 125.08583460365851,
+              "x": 151.2203563262195,
+              "y": 58.35819169207317,
+              "confidence": 0.97,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 55 - Sept.-Oct. 1957 - 36 pages",
+          "value": "55 - Sept.-Oct. 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.632345655487811,
+              "w": 71.8587919207317,
+              "x": 150.6824657012195,
+              "y": 76.96322789634146,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald's hat has become a bird's nest. (*Oct. 18, 1956*)",
+          "value": "Front cover (art only): Donald's hat has become a bird's nest. (Oct. 18, 1956)",
+          "bbox": [
+            {
+              "h": 10.6657431402439,
+              "w": 125.32999047256095,
+              "x": 150.67214176829268,
+              "y": 83.18659298780489,
+              "confidence": 0.97,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 57 - Jan.-Feb. 1958 - 36 pages",
+          "value": "57 - Jan.-Feb. 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.732286585365855,
+              "w": 69.54957507621951,
+              "x": 150.61686928353657,
+              "y": 100.55151676829267,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Donald puzzles over his cookbook as his mixer overflows. (*July 25, 1957*)",
+          "value": "Front cover: Donald puzzles over his cookbook as his mixer overflows. (July 25, 1957)",
+          "bbox": [
+            {
+              "h": 10.962942073170739,
+              "w": 125.48843368902438,
+              "x": 150.6187557164634,
+              "y": 106.82004192073171,
+              "confidence": 0.93,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 60 - July-Aug. 1958 - 36 pages",
+          "value": "60 - July-Aug. 1958 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.722019817073187,
+              "w": 71.92293064024388,
+              "x": 150.62650724085364,
+              "y": 124.19323170731707,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK and the Titanic Ants! - 20 - Giant ants and a huge mole disrupt the Buckberg billionaires' picnic. Scrooge makes a business deal with the scientist who has enlarged them, then faces disaster when Donald wrecks the machine that controls the giant creatures. (*June 20, 1957*)",
+          "value": "DONALD DUCK and the Titanic Ants! - 20 - Giant ants and a huge mole disrupt the Buckberg billionaires' picnic. Scrooge makes a business deal with the scientist who has enlarged them, then faces disaster when Donald wrecks the machine that controls the giant creatures. (June 20, 1957)",
+          "bbox": [
+            {
+              "h": 34.285346798780466,
+              "w": 125.75006478658538,
+              "x": 150.36765434451218,
+              "y": 130.2737881097561,
+              "confidence": 0.99,
+              "end_index": 285,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages are three panels deep.",
+          "value": "These pages are three panels deep.",
+          "bbox": [
+            {
+              "h": 5.5584375,
+              "w": 68.43925495426829,
+              "x": 155.17310213414632,
+              "y": 165.91287347560976,
+              "confidence": 0.89,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted*: Donald Duck No. 192, February 1978; *Walt Disney Comics Digest* No. 4, October 1968.",
+          "value": "Reprinted: Donald Duck No. 192, February 1978; Walt Disney Comics Digest No. 4, October 1968.",
+          "bbox": [
+            {
+              "h": 10.527484756097564,
+              "w": 125.63837080792683,
+              "x": 150.60092035060973,
+              "y": 172.29720274390243,
+              "confidence": 0.95,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in Water Ski Race - 6 - Donald's water skis keep flying off his feet until Daisy suggests chaining them on, which enables Donald to win a water ski race. (*Oct. 31, 1957*)",
+          "value": "DONALD DUCK in Water Ski Race - 6 - Donald's water skis keep flying off his feet until Daisy suggests chaining them on, which enables Donald to win a water ski race. (Oct. 31, 1957)",
+          "bbox": [
+            {
+              "h": 22.567934451219507,
+              "w": 125.81432355182928,
+              "x": 150.46802972560974,
+              "y": 183.71028201219514,
+              "confidence": 0.98,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages are three panels deep.\n*Reprinted*: *Walt Disney Comics Digest* No. 23, July 1970.",
+          "value": "These pages are three panels deep.\nReprinted: Walt Disney Comics Digest No. 23, July 1970.",
+          "bbox": [
+            {
+              "h": 11.25775152439026,
+              "w": 114.41677019817072,
+              "x": 154.87885289634144,
+              "y": 207.43259908536584,
+              "confidence": 0.79,
+              "end_index": 93,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 65 - May-June 1959 - 36 pages",
+          "value": "65 - May-June 1959 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.762835365853652,
+              "w": 73.72886432926829,
+              "x": 150.92267721036586,
+              "y": 226.9915929878049,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald empties a dustpan into a stuffed pelican's beak. (*Apr. 20, 1958*)",
+          "value": "Front cover (art only): Donald empties a dustpan into a stuffed pelican's beak. (Apr. 20, 1958)",
+          "bbox": [
+            {
+              "h": 11.534314024390232,
+              "w": 124.77203506097561,
+              "x": 151.25883955792682,
+              "y": 233.08502286585366,
+              "confidence": 0.96,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Reprinted*: Donald Duck No. 199, September 1978.",
+          "value": "Reprinted: Donald Duck No. 199, September 1978.",
+          "bbox": [
+            {
+              "h": 5.23536585365855,
+              "w": 101.8556993140244,
+              "x": 155.73268673780487,
+              "y": 245.28377286585368,
+              "confidence": 0.85,
+              "end_index": 48,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 68 - Nov.-Dec. 1959 - 36 pages",
+          "value": "68 - Nov.-Dec. 1959 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6217073170731595,
+              "w": 73.02491615853658,
+              "x": 150.91787538109756,
+              "y": 256.8669283536585,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK The Master Glasser - 5 - art only - Donald, a master at repairing broken glass, breaks glass all over Duckburg with a huge tuning fork. (*May 20, 1959*)",
+          "value": "DONALD DUCK The Master Glasser - 5 - art only - Donald, a master at repairing broken glass, breaks glass all over Duckburg with a huge tuning fork. (May 20, 1959)",
+          "bbox": [
+            {
+              "h": 17.44559451219513,
+              "w": 125.33172256097562,
+              "x": 150.6780068597561,
+              "y": 262.79414634146343,
+              "confidence": 0.97,
+              "end_index": 163,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"The 'Master Glasser' story was from a script sent to me from the office. As usual, I did lots of rewriting to pull the gags together.\" (June 9, 1968, letter to Michael Barrier)\n*Reprinted*: Donald Duck No. 188, October 1977.",
+          "value": "Barks: \"The 'Master Glasser' story was from a script sent to me from the office. As usual, I did lots of rewriting to pull the gags together.\" (June 9, 1968, letter to Michael Barrier)\nReprinted: Donald Duck No. 188, October 1977.",
+          "bbox": [
+            {
+              "h": 22.65701981707316,
+              "w": 124.85172827743901,
+              "x": 151.30154153963414,
+              "y": 280.9699847560976,
+              "confidence": 0.96,
+              "end_index": 231,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 70 - Mar.-Apr. 1960 - 36 pages",
+          "value": "70 - Mar.-Apr. 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.656692073170725,
+              "w": 73.40148246951217,
+              "x": 150.6501219512195,
+              "y": 311.20895579268296,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald tosses a banana peel into a suit of armor. (*Aug. 21, 1959*)",
+          "value": "Front cover (art only): Donald tosses a banana peel into a suit of armor. (Aug. 21, 1959)",
+          "bbox": [
+            {
+              "h": 10.666303353658495,
+              "w": 124.38222942073173,
+              "x": 151.47346417682925,
+              "y": 317.2298780487805,
+              "confidence": 0.97,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 71 - May-June 1960 - 36 pages",
+          "value": "71 - May-June 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.587454268292695,
+              "w": 74.02295922256096,
+              "x": 151.2265987042683,
+              "y": 334.35521341463414,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald is burned by the sun's rays as they pass through a telescope. (*Oct. 22, 1959*)",
+          "value": "Front cover (art only): Donald is burned by the sun's rays as they pass through a telescope. (Oct. 22, 1959)",
+          "bbox": [
+            {
+              "h": 11.637393292682955,
+              "w": 124.66426829268289,
+              "x": 151.53100038109756,
+              "y": 340.0516920731707,
+              "confidence": 0.98,
+              "end_index": 109,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "114\nCarl Barks and the Art of the Comic Book",
+              "value": "114\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.432431402439015,
+                  "w": 77.82919350228657,
+                  "x": 36.739940453506094,
+                  "y": 364.160625,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "114\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.43,
+              "w": 77.83,
+              "x": 36.74,
+              "y": 364.16,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "114"
+    }
+  ]
+}

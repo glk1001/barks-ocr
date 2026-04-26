@@ -1,0 +1,853 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "**177 - November 1976 - 36 pages**",
+          "value": "177 - November 1976 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.748914348323174,
+              "w": 78.34401069455029,
+              "x": 11.4554443359375,
+              "y": 15.971597275152439,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of Donald Duck No. 72, July-Aug. 1960.",
+          "value": "Front cover: Reprinted from the front cover of Donald Duck No. 72, July-Aug. 1960.",
+          "bbox": [
+            {
+              "h": 11.244157774390242,
+              "w": 124.75467880621187,
+              "x": 11.56272020293445,
+              "y": 22.116016577743903,
+              "confidence": 0.98,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**183 - May 1977 - 36 pages**",
+          "value": "183 - May 1977 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.398956745426826,
+              "w": 61.71527808212651,
+              "x": 11.677389600800304,
+              "y": 39.737895388719515,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK A Day in a Duck's Life - 13 - Reprinted from Donald Duck No. 138, July 1971.",
+          "value": "DONALD DUCK A Day in a Duck's Life - 13 - Reprinted from Donald Duck No. 138, July 1971.",
+          "bbox": [
+            {
+              "h": 11.257722942073167,
+              "w": 124.3272741996951,
+              "x": 11.491360518292682,
+              "y": 45.605870807926834,
+              "confidence": 0.97,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**188 - October 1977 - 36 pages**",
+          "value": "188 - October 1977 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.557294207317073,
+              "w": 71.30153856230945,
+              "x": 11.646460675495426,
+              "y": 63.255937499999995,
+              "confidence": 0.96,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK The Master Glasser - 5 - Reprinted from Donald Duck No. 68, Nov.-Dec. 1959.",
+          "value": "DONALD DUCK The Master Glasser - 5 - Reprinted from Donald Duck No. 68, Nov.-Dec. 1959.",
+          "bbox": [
+            {
+              "h": 10.972477134146347,
+              "w": 124.43526283822408,
+              "x": 11.879975347751524,
+              "y": 69.22759527439024,
+              "confidence": 0.96,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**190 - December 1977 - 36 pages**",
+          "value": "190 - December 1977 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.52878048780487,
+              "w": 77.09774842797255,
+              "x": 11.74465058117378,
+              "y": 87.12992378048781,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of Donald Duck No. 111, January 1967.",
+          "value": "Front cover: Reprinted from the front cover of Donald Duck No. 111, January 1967.",
+          "bbox": [
+            {
+              "h": 11.287762957317073,
+              "w": 124.79320276772101,
+              "x": 11.591473299352133,
+              "y": 93.19868140243902,
+              "confidence": 0.98,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**192 - February 1978 - 36 pages**",
+          "value": "192 - February 1978 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.565514481707319,
+              "w": 74.60008443692834,
+              "x": 11.750156607278962,
+              "y": 110.8328506097561,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK and the Titanic Ants - 20 - Reprinted from Donald Duck No. 60, July-Aug. 1958.",
+          "value": "DONALD DUCK and the Titanic Ants - 20 - Reprinted from Donald Duck No. 60, July-Aug. 1958.",
+          "bbox": [
+            {
+              "h": 11.635369664634158,
+              "w": 123.6947928972942,
+              "x": 11.869027605754573,
+              "y": 116.85669969512195,
+              "confidence": 0.93,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Panels on first page trimmed for indicia.",
+          "value": "Changes: Panels on first page trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 5.510613567073187,
+              "w": 106.85961485327742,
+              "x": 16.649016053734755,
+              "y": 129.04091844512195,
+              "confidence": 0.87,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Riding the Pony Express - 10 - Reprinted from Walt Disney's Comics No. 234, March 1960.",
+          "value": "DONALD DUCK Riding the Pony Express - 10 - Reprinted from Walt Disney's Comics No. 234, March 1960.",
+          "bbox": [
+            {
+              "h": 15.959382621951217,
+              "w": 124.69365806021341,
+              "x": 11.773317930640243,
+              "y": 134.82826600609755,
+              "confidence": 0.93,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Splash panel deepened.",
+          "value": "Changes: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 5.483346036585362,
+              "w": 65.62920195788871,
+              "x": 15.823919231135669,
+              "y": 152.3023856707317,
+              "confidence": 0.85,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 226, July 1959.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 226, July 1959.",
+          "bbox": [
+            {
+              "h": 10.872038871951217,
+              "w": 124.73457972084601,
+              "x": 11.56325183403201,
+              "y": 158.2096760670732,
+              "confidence": 0.93,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Splash panel deepened.",
+          "value": "Changes: Splash panel deepened.",
+          "bbox": [
+            {
+              "h": 5.471764481707305,
+              "w": 65.44866389576981,
+              "x": 16.9313818359375,
+              "y": 169.91163109756098,
+              "confidence": 0.91,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**199 - September 1978 - 36 pages**",
+          "value": "199 - September 1978 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.702298018292694,
+              "w": 78.23314310213414,
+              "x": 11.711241425304877,
+              "y": 181.65283536585363,
+              "confidence": 0.96,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of Donald Duck No. 65, May-June 1959.",
+          "value": "Front cover: Reprinted from the front cover of Donald Duck No. 65, May-June 1959.",
+          "bbox": [
+            {
+              "h": 11.11311356707316,
+              "w": 124.858310427782,
+              "x": 11.609188619474084,
+              "y": 187.88239710365855,
+              "confidence": 0.97,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**201 - November 1978 - 36 pages**",
+          "value": "201 - November 1978 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.638102134146347,
+              "w": 77.98182307545731,
+              "x": 11.720034775152438,
+              "y": 205.48573170731706,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: This was redrawn, by another artist, from Barks's front cover for Walt Disney's Comics No. 148, January 1953.",
+          "value": "Front cover: This was redrawn, by another artist, from Barks's front cover for Walt Disney's Comics No. 148, January 1953.",
+          "bbox": [
+            {
+              "h": 16.50118902439026,
+              "w": 124.53959329744661,
+              "x": 11.943365925114328,
+              "y": 211.49554115853658,
+              "confidence": 0.98,
+              "end_index": 121,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK in The Christmas Cha Cha - 16 - Reprinted from Christmas Parade (Dell) No. 26, 1959.",
+          "value": "DONALD DUCK in The Christmas Cha Cha - 16 - Reprinted from Christmas Parade (Dell) No. 26, 1959.",
+          "bbox": [
+            {
+              "h": 11.419367378048783,
+              "w": 124.85316239519815,
+              "x": 11.990379906631096,
+              "y": 229.38349847560977,
+              "confidence": 0.98,
+              "end_index": 95,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# DONALD DUCK ALBUM (Dell)",
+          "value": "DONALD DUCK ALBUM (Dell)",
+          "bbox": [
+            {
+              "h": 7.29724847560974,
+              "w": 107.87199695121949,
+              "x": 19.9206631097561,
+              "y": 251.60247713414637,
+              "confidence": 0.98,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**Four Color 1099 - May-July 1960 - 36 pages**",
+          "value": "Four Color 1099 - May-July 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.887202743902435,
+              "w": 107.8804012242759,
+              "x": 12.066224156821644,
+              "y": 264.3480640243902,
+              "confidence": 0.96,
+              "end_index": 45,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): A scowling Donald photographs the other ducks as they pose in a mock house front. (Oct. 22, 1959)",
+          "value": "Front cover (art only): A scowling Donald photographs the other ducks as they pose in a mock house front. (Oct. 22, 1959)",
+          "bbox": [
+            {
+              "h": 16.876006097560985,
+              "w": 124.5489536490091,
+              "x": 12.346534155868902,
+              "y": 270.4258765243903,
+              "confidence": 0.98,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Four Color 1140 - Oct.-Dec. 1960 - 36 pages**",
+          "value": "Four Color 1140 - Oct.-Dec. 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.758490853658549,
+              "w": 106.34764231612043,
+              "x": 12.13906404820884,
+              "y": 294.0692835365854,
+              "confidence": 0.97,
+              "end_index": 46,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Donald takes the nephews' pictures; one of them aims at the \"birdie\" with a slingshot. (Apr. 18, 1960)",
+          "value": "Front cover (art only): Donald takes the nephews' pictures; one of them aims at the \"birdie\" with a slingshot. (Apr. 18, 1960)",
+          "bbox": [
+            {
+              "h": 17.085388719512174,
+              "w": 124.54300924161582,
+              "x": 12.353447503810974,
+              "y": 300.1572256097561,
+              "confidence": 0.98,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Four Color 1239 - Oct.-Dec. 1961 (\\[September] 1961) - 36 pages**",
+          "value": "Four Color 1239 - Oct.-Dec. 1961 ([September] 1961) - 36 pages",
+          "bbox": [
+            {
+              "h": 11.5659375,
+              "w": 124.42812869188259,
+              "x": 12.081875119092986,
+              "y": 323.85281249999997,
+              "confidence": 0.97,
+              "end_index": 66,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): The ducks pose together, with the nephews under a bearskin rug. (Apr. 8, 1961)",
+          "value": "Front cover (art only): The ducks pose together, with the nephews under a bearskin rug. (Apr. 8, 1961)",
+          "bbox": [
+            {
+              "h": 11.374504573170725,
+              "w": 124.48569062023628,
+              "x": 12.301833198361278,
+              "y": 335.81142530487807,
+              "confidence": 0.98,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Gyro is in the pencil rough for this cover, but he was eliminated from the finished drawing.",
+          "value": "Gyro is in the pencil rough for this cover, but he was eliminated from the finished drawing.",
+          "bbox": [
+            {
+              "h": 11.265703125,
+              "w": 125.00917682926828,
+              "x": 150.45401867378047,
+              "y": 16.330686928353657,
+              "confidence": 0.98,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# DONALD DUCK ALBUM (Gold Key)",
+          "value": "DONALD DUCK ALBUM (Gold Key)",
+          "bbox": [
+            {
+              "h": 7.099959032012196,
+              "w": 125.25158346036585,
+              "x": 150.23335746951216,
+              "y": 38.83174161585366,
+              "confidence": 0.98,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**1 - August 1963 - 36 pages**",
+          "value": "1 - August 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.49012004573171,
+              "w": 64.37874237804876,
+              "x": 151.25467225609756,
+              "y": 51.07374237804878,
+              "confidence": 0.95,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): In the top half of the cover, Donald takes a flash picture of Scrooge, the nephews, Grandma, Daisy and Gus Goose; in the bottom half, Donald suppresses a laugh as the others stagger around, blinded. (Jan. 23, 1963)",
+          "value": "Front cover (art only): In the top half of the cover, Donald takes a flash picture of Scrooge, the nephews, Grandma, Daisy and Gus Goose; in the bottom half, Donald suppresses a laugh as the others stagger around, blinded. (Jan. 23, 1963)",
+          "bbox": [
+            {
+              "h": 28.697892530487795,
+              "w": 124.98597370426829,
+              "x": 151.44076028963414,
+              "y": 56.9057412347561,
+              "confidence": 0.99,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Back cover: The same as the top half of the front cover, enlarged.",
+          "value": "Back cover: The same as the top half of the front cover, enlarged.",
+          "bbox": [
+            {
+              "h": 11.456901676829274,
+              "w": 124.77258384146339,
+              "x": 151.64399771341462,
+              "y": 86.42900533536586,
+              "confidence": 0.98,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# DONALD DUCK BEACH PARTY (Gold Key)",
+          "value": "DONALD DUCK BEACH PARTY (Gold Key)",
+          "bbox": [
+            {
+              "h": 14.075293445121941,
+              "w": 113.3154706554878,
+              "x": 157.09959603658535,
+              "y": 111.27888338414634,
+              "confidence": 0.99,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**1 - (September) 1965 - 36 pages**",
+          "value": "1 - (September) 1965 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.624108231707332,
+              "w": 76.22221417682924,
+              "x": 151.226015625,
+              "y": 130.52929115853658,
+              "confidence": 0.91,
+              "end_index": 34,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Rival Boatmen - 10 - Reprinted from Walt Disney's Comics No. 45, June 1944.",
+          "value": "DONALD DUCK Rival Boatmen - 10 - Reprinted from Walt Disney's Comics No. 45, June 1944.",
+          "bbox": [
+            {
+              "h": 11.58691692073171,
+              "w": 124.77124618902437,
+              "x": 151.36444550304878,
+              "y": 136.41036585365853,
+              "confidence": 0.96,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# DONALD DUCK'S ATOM BOMB (See Cheerios Premiums)",
+          "value": "DONALD DUCK'S ATOM BOMB (See Cheerios Premiums)",
+          "bbox": [
+            {
+              "h": 14.016608231707332,
+              "w": 113.00342035060976,
+              "x": 155.88183498475607,
+              "y": 159.5548513719512,
+              "confidence": 0.98,
+              "end_index": 46,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# DUCK ALBUM (Dell)",
+          "value": "DUCK ALBUM (Dell)",
+          "bbox": [
+            {
+              "h": 7.238231707317072,
+              "w": 73.36943025914631,
+              "x": 172.52197408536585,
+              "y": 183.1537385670732,
+              "confidence": 0.97,
+              "end_index": 16,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**Four Color 353 - (October) 1951 - 36 pages**",
+          "value": "Four Color 353 - (October) 1951 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.860289634146347,
+              "w": 105.14059641768293,
+              "x": 150.55022675304878,
+              "y": 196.42561737804877,
+              "confidence": 0.91,
+              "end_index": 45,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): Five \"photographs\" of the ducks. (Mar. 8, 1951)",
+          "value": "Front cover (art only): Five \"photographs\" of the ducks. (Mar. 8, 1951)",
+          "bbox": [
+            {
+              "h": 11.037736280487797,
+              "w": 125.36454649390242,
+              "x": 150.66279535060974,
+              "y": 202.48216463414633,
+              "confidence": 0.96,
+              "end_index": 70,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Four Color 450 - (February) 1953 - 36 pages**",
+          "value": "Four Color 450 - (February) 1953 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.82537347560974,
+              "w": 108.27401295731704,
+              "x": 150.71765625,
+              "y": 220.01190548780488,
+              "confidence": 0.95,
+              "end_index": 46,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover (art only): A group \"photograph\" of the ducks. (July 31, 1952)",
+          "value": "Front cover (art only): A group \"photograph\" of the ducks. (July 31, 1952)",
+          "bbox": [
+            {
+              "h": 11.181882621951218,
+              "w": 125.44547446646341,
+              "x": 150.42122903963414,
+              "y": 225.82653201219512,
+              "confidence": 0.97,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# FIRESTONE CHRISTMAS GIVEAWAYS",
+          "value": "FIRESTONE CHRISTMAS GIVEAWAYS",
+          "bbox": [
+            {
+              "h": 12.326112804878084,
+              "w": 89.49608231707319,
+              "x": 165.45306402439022,
+              "y": 249.68490091463414,
+              "confidence": 0.99,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "The first issue was titled *Firestone presents Comics by Walt Disney*; the subsequent issues were titled *Donald and Mickey by Walt Disney*. All were given away at Christmas by Firestone dealers.",
+          "value": "The first issue was titled Firestone presents Comics by Walt Disney; the subsequent issues were titled Donald and Mickey by Walt Disney. All were given away at Christmas by Firestone dealers.",
+          "bbox": [
+            {
+              "h": 22.13378048780487,
+              "w": 125.40066310975611,
+              "x": 150.59599847560975,
+              "y": 268.8904801829268,
+              "confidence": 0.99,
+              "end_index": 194,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**No number - 1943 - 20 pages**",
+          "value": "No number - 1943 - 20 pages",
+          "bbox": [
+            {
+              "h": 5.41429115853658,
+              "w": 71.65766387195121,
+              "x": 150.65425495426828,
+              "y": 298.2935670731707,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 32, May 1943.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 32, May 1943.",
+          "bbox": [
+            {
+              "h": 11.588140243902435,
+              "w": 124.98892339939023,
+              "x": 150.77241425304877,
+              "y": 304.0940853658537,
+              "confidence": 0.98,
+              "end_index": 71,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**No number - undated, but almost certainly 1944 - 20 pages**",
+          "value": "No number - undated, but almost certainly 1944 - 20 pages",
+          "bbox": [
+            {
+              "h": 11.45755335365855,
+              "w": 125.15223704268293,
+              "x": 150.66541920731706,
+              "y": 324.25879573170727,
+              "confidence": 0.96,
+              "end_index": 60,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 35, August 1943.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 35, August 1943.",
+          "bbox": [
+            {
+              "h": 11.445,
+              "w": 125.10389291158536,
+              "x": 151.1304763719512,
+              "y": 335.89852134146344,
+              "confidence": 0.97,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n117",
+              "value": "Carl Barks and the Art of the Comic Book\n117",
+              "bbox": [
+                {
+                  "h": 4.172606707317045,
+                  "w": 77.74993330792681,
+                  "x": 172.4196951219512,
+                  "y": 363.06080030487806,
+                  "confidence": 0.96,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n117",
+          "bbox": [
+            {
+              "h": 4.17,
+              "w": 77.75,
+              "x": 172.42,
+              "y": 363.06,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "117"
+    }
+  ]
+}

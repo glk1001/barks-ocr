@@ -1,0 +1,3 @@
+![Barks holds a pointer on the storyboard for Good Scouts while Harry Reeves sits on the floor and makes faces in this 1937 publicity photo. Among others in the photo are Roy Williams, T. Hee, Ed Penner, and Peter O'Crotty.](CBatAotCB-217_page_1_image_1_v2.jpg)
+
+Barks holds a pointer on the storyboard for *Good Scouts* while Harry Reeves sits on the floor and makes faces in this 1937 publicity photo (taken on the same day as the photo on page 17). Among others in the photo are, standing left to right, Roy Williams, T. Hee, and Ed Penner; Peter O'Crotty is seated next to Barks. © 1937 Walt Disney Productions

@@ -1,0 +1,1121 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# 103 - \\[February] 1973 - 36 pages",
+          "value": "103 - [February] 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.704310213414634,
+              "w": 78.42682831554878,
+              "x": 12.849592225609754,
+              "y": 13.866946932164634,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 27, Sept.-Nov. 1959.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 27, Sept.-Nov. 1959.",
+          "bbox": [
+            {
+              "h": 11.44565882240854,
+              "w": 125.17549268769052,
+              "x": 12.664009027248474,
+              "y": 19.8150185785061,
+              "confidence": 0.97,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE \"Back to Long Ago\" - 20 - Reprinted from *Uncle Scrooge* No. 16, Dec.-Feb. 1957.",
+          "value": "UNCLE SCROOGE \"Back to Long Ago\" - 20 - Reprinted from Uncle Scrooge No. 16, Dec.-Feb. 1957.",
+          "bbox": [
+            {
+              "h": 11.201261432926826,
+              "w": 124.17837461890242,
+              "x": 12.924732278963413,
+              "y": 31.86680830792683,
+              "confidence": 0.95,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes: Splash panel trimmed for indicia; title and caption rearranged.*",
+          "value": "Changes: Splash panel trimmed for indicia; title and caption rearranged.",
+          "bbox": [
+            {
+              "h": 11.131943597560971,
+              "w": 124.66652986852134,
+              "x": 12.566132097942072,
+              "y": 43.793008765243904,
+              "confidence": 0.96,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 104 - \\[April] 1973 - 36 pages",
+          "value": "104 - [April] 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.633157393292688,
+              "w": 67.45552948742377,
+              "x": 12.935024056783536,
+              "y": 61.35834603658537,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from *Uncle Scrooge* No. 17, Mar.-May 1957.",
+          "value": "Front cover: Reprinted from Uncle Scrooge No. 17, Mar.-May 1957.",
+          "bbox": [
+            {
+              "h": 11.371972179878057,
+              "w": 125.20008812881095,
+              "x": 12.62513671875,
+              "y": 67.1804725609756,
+              "confidence": 0.96,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in The Lemming with the Locket - 22 - Reprinted from *Uncle Scrooge* No. 9, Mar.-May 1955.",
+          "value": "UNCLE SCROOGE in The Lemming with the Locket - 22 - Reprinted from Uncle Scrooge No. 9, Mar.-May 1955.",
+          "bbox": [
+            {
+              "h": 11.596766387195116,
+              "w": 124.89649032964937,
+              "x": 12.93579149199695,
+              "y": 78.97249047256098,
+              "confidence": 0.92,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes: Splash panel trimmed for indicia.*",
+          "value": "Changes: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 5.712358993902435,
+              "w": 85.69588891006097,
+              "x": 17.533896722560975,
+              "y": 91.20445884146342,
+              "confidence": 0.86,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (genie) - Reprinted from *Uncle Scrooge* No. 42, May 1963.",
+          "value": "UNCLE SCROOGE - 1 (genie) - Reprinted from Uncle Scrooge No. 42, May 1963.",
+          "bbox": [
+            {
+              "h": 11.5201943597561,
+              "w": 125.33473978182164,
+              "x": 12.67471239043445,
+              "y": 96.7348856707317,
+              "confidence": 0.94,
+              "end_index": 75,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (dime on sidewalk) - Reprinted from *Uncle Scrooge* No. 42, May 1963.",
+          "value": "UNCLE SCROOGE - 1 (dime on sidewalk) - Reprinted from Uncle Scrooge No. 42, May 1963.",
+          "bbox": [
+            {
+              "h": 11.44565167682926,
+              "w": 125.12069181116615,
+              "x": 12.852806664443596,
+              "y": 108.70251905487805,
+              "confidence": 0.94,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 105 - June 1973 - 36 pages",
+          "value": "105 - June 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.4815625,
+              "w": 62.50613507526676,
+              "x": 12.830964772294205,
+              "y": 126.56151676829269,
+              "confidence": 0.97,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 18, June-Aug. 1957.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 18, June-Aug. 1957.",
+          "bbox": [
+            {
+              "h": 11.544203506097565,
+              "w": 124.92771401009908,
+              "x": 12.940907369474084,
+              "y": 132.27803734756097,
+              "confidence": 0.95,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 22 - Reprinted from *Uncle Scrooge* Four Color No. 495, 1953.",
+          "value": "UNCLE SCROOGE - 22 - Reprinted from Uncle Scrooge Four Color No. 495, 1953.",
+          "bbox": [
+            {
+              "h": 11.536897865853652,
+              "w": 125.16007752953506,
+              "x": 12.709547089367376,
+              "y": 144.24029725609756,
+              "confidence": 0.95,
+              "end_index": 76,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes: Panels on first page trimmed for indicia.*",
+          "value": "Changes: Panels on first page trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 5.492721036585363,
+              "w": 99.02987530964175,
+              "x": 17.647716153772866,
+              "y": 156.39553353658536,
+              "confidence": 0.92,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Turnabout - 1 - Reprinted from *Uncle Scrooge* No. 32, Dec.-Feb. 1961.",
+          "value": "UNCLE SCROOGE Turnabout - 1 - Reprinted from Uncle Scrooge No. 32, Dec.-Feb. 1961.",
+          "bbox": [
+            {
+              "h": 11.314630335365855,
+              "w": 124.69821658250763,
+              "x": 13.169178615663109,
+              "y": 162.05366615853657,
+              "confidence": 0.93,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 106 - August 1973 - 36 pages",
+          "value": "106 - August 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.4510022865853625,
+              "w": 69.62742902057927,
+              "x": 12.898455125762194,
+              "y": 179.65516006097562,
+              "confidence": 0.97,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 5, Mar.-May 1954.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 5, Mar.-May 1954.",
+          "bbox": [
+            {
+              "h": 11.685068597560985,
+              "w": 125.0346522484756,
+              "x": 12.915300114329268,
+              "y": 185.39126524390244,
+              "confidence": 0.95,
+              "end_index": 83,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 22 - Reprinted from *Uncle Scrooge* No. 6, June-Aug. 1954.",
+          "value": "UNCLE SCROOGE - 22 - Reprinted from Uncle Scrooge No. 6, June-Aug. 1954.",
+          "bbox": [
+            {
+              "h": 11.152042682926812,
+              "w": 125.00151426733993,
+              "x": 12.894949147294206,
+              "y": 197.36586128048782,
+              "confidence": 0.95,
+              "end_index": 73,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes: Panels on first page trimmed for indicia.*",
+          "value": "Changes: Panels on first page trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 5.485472560975622,
+              "w": 98.87340748856707,
+              "x": 17.82373427972561,
+              "y": 209.56147865853657,
+              "confidence": 0.87,
+              "end_index": 51,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - Reprinted from the inside back cover of *Uncle Scrooge* No. 6, June-Aug. 1954.",
+          "value": "UNCLE SCROOGE - 1 - Reprinted from the inside back cover of Uncle Scrooge No. 6, June-Aug. 1954.",
+          "bbox": [
+            {
+              "h": 11.407980182926812,
+              "w": 124.89091249047256,
+              "x": 13.045543302210364,
+              "y": 215.31482469512196,
+              "confidence": 0.91,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - Reprinted from the back cover of *Uncle Scrooge* No. 6, June-Aug. 1954.",
+          "value": "UNCLE SCROOGE - 1 - Reprinted from the back cover of Uncle Scrooge No. 6, June-Aug. 1954.",
+          "bbox": [
+            {
+              "h": 11.536211890243885,
+              "w": 124.85978849085365,
+              "x": 13.249790396341462,
+              "y": 226.90783536585369,
+              "confidence": 0.93,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 107 - September 1973 - 36 pages",
+          "value": "107 - September 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.426935975609794,
+              "w": 78.65485303925303,
+              "x": 13.054255192454267,
+              "y": 244.92532774390241,
+              "confidence": 0.97,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 21, Mar.-May 1958.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 21, Mar.-May 1958.",
+          "bbox": [
+            {
+              "h": 11.547393292682955,
+              "w": 125.12241854039634,
+              "x": 12.915081459603657,
+              "y": 250.67711890243902,
+              "confidence": 0.97,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in The Money Well - 26 - Reprinted from *Uncle Scrooge* No. 21, Mar.-May 1958.",
+          "value": "UNCLE SCROOGE in The Money Well - 26 - Reprinted from Uncle Scrooge No. 21, Mar.-May 1958.",
+          "bbox": [
+            {
+              "h": 10.959100609756115,
+              "w": 124.75126500571645,
+              "x": 13.177250619283535,
+              "y": 262.67069359756096,
+              "confidence": 0.93,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes: Splash panel trimmed for indicia.*",
+          "value": "Changes: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 5.436219512195129,
+              "w": 85.86277069836127,
+              "x": 17.568468821455788,
+              "y": 274.4069588414634,
+              "confidence": 0.88,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 108 - October 1973 - 36 pages",
+          "value": "108 - October 1973 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.504474085365855,
+              "w": 71.74102277057926,
+              "x": 13.047440453506095,
+              "y": 288.43358231707316,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Uncle Scrooge in The Mines of King Solomon - 27 - Reprinted from *Uncle Scrooge* No. 19, Sept.-Nov. 1957.\n*Changes: Splash panel trimmed for indicia.*",
+          "value": "Uncle Scrooge in The Mines of King Solomon - 27 - Reprinted from Uncle Scrooge No. 19, Sept.-Nov. 1957.\nChanges: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 17.34644817073171,
+              "w": 124.19877274676065,
+              "x": 13.791146270007621,
+              "y": 294.4619359756097,
+              "confidence": 0.95,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 109 - December 1973 - 52 pages",
+          "value": "109 - December 1973 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.526539634146374,
+              "w": 77.42017518578506,
+              "x": 13.096913228849084,
+              "y": 318.1035365853658,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 13, Mar.-May 1956.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 13, Mar.-May 1956.",
+          "bbox": [
+            {
+              "h": 11.60247713414632,
+              "w": 124.98867258955792,
+              "x": 13.036291206173779,
+              "y": 324.06418445121955,
+              "confidence": 0.96,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE in \"Land Beneath the Ground!\" - 27",
+          "value": "UNCLE SCROOGE in \"Land Beneath the Ground!\" - 27",
+          "bbox": [
+            {
+              "h": 7.481821646341505,
+              "w": 123.34943526105181,
+              "x": 14.565566644435973,
+              "y": 335.974618902439,
+              "confidence": 0.83,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Reprinted from *Uncle Scrooge* No. 13, Mar.-May 1956.\n*Changes: Splash panel trimmed for indicia.*",
+              "value": "Reprinted from Uncle Scrooge No. 13, Mar.-May 1956.\nChanges: Splash panel trimmed for indicia.",
+              "bbox": [
+                {
+                  "h": 17.161326219512176,
+                  "w": 124.3135997046494,
+                  "x": 13.567695074314024,
+                  "y": 336.1389329268293,
+                  "confidence": 0.83,
+                  "end_index": 97,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "* Reprinted from *Uncle Scrooge* No. 13, Mar.-May 1956.\n  *Changes: Splash panel trimmed for indicia.*",
+          "ordered": false,
+          "bbox": [
+            {
+              "h": 17.16,
+              "w": 124.31,
+              "x": 13.57,
+              "y": 336.14,
+              "confidence": 0.83,
+              "end_index": 101,
+              "label": "list",
+              "start_index": 0
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "level": 1,
+          "md": "# 110 - February 1974 - 36 pages",
+          "value": "110 - February 1974 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.687882526676829,
+              "w": 75.07589748475608,
+              "x": 151.38240091463413,
+              "y": 13.997608136432927,
+              "confidence": 0.98,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 23, Sept.-Nov. 1958.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 23, Sept.-Nov. 1958.",
+          "bbox": [
+            {
+              "h": 11.30456221417683,
+              "w": 125.08014100609753,
+              "x": 151.24865282012195,
+              "y": 20.100715987042683,
+              "confidence": 0.97,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE and The Golden River - 26 - Reprinted from *Uncle Scrooge* No. 22, June-Aug. 1958.\n*Changes: Splash panel trimmed for indicia.*",
+          "value": "UNCLE SCROOGE and The Golden River - 26 - Reprinted from Uncle Scrooge No. 22, June-Aug. 1958.\nChanges: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 17.158273628048775,
+              "w": 124.61294016768295,
+              "x": 151.61839367378045,
+              "y": 32.02258765243903,
+              "confidence": 0.95,
+              "end_index": 140,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 111 - April 1974 - 36 pages",
+          "value": "111 - April 1974 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.631008003048782,
+              "w": 64.4517644817073,
+              "x": 151.34240853658537,
+              "y": 55.49940548780487,
+              "confidence": 0.97,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 8, Dec.-Feb. 1955.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 8, Dec.-Feb. 1955.",
+          "bbox": [
+            {
+              "h": 11.431937881097564,
+              "w": 124.87945884146339,
+              "x": 151.30694359756095,
+              "y": 61.51986471036585,
+              "confidence": 0.97,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Mysterious Unfinished Invention - 28 - A reprint of \"UNCLE SCROOGE\" in *Uncle Scrooge* No. 8, Dec.-Feb. 1955.",
+          "value": "UNCLE SCROOGE The Mysterious Unfinished Invention - 28 - A reprint of \"UNCLE SCROOGE\" in Uncle Scrooge No. 8, Dec.-Feb. 1955.",
+          "bbox": [
+            {
+              "h": 17.01222370426829,
+              "w": 125.17154725609755,
+              "x": 151.23474466463415,
+              "y": 73.37104230182928,
+              "confidence": 0.96,
+              "end_index": 126,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes: Title changed as indicated. Panels on first page trimmed for indicia.*",
+          "value": "Changes: Title changed as indicated. Panels on first page trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 10.057528582317072,
+              "w": 124.99856135670727,
+              "x": 151.43194550304878,
+              "y": 91.42853849085367,
+              "confidence": 0.95,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 112 - June 1974 - 36 pages",
+          "value": "112 - June 1974 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.576981707317086,
+              "w": 62.33398628048779,
+              "x": 151.351806402439,
+              "y": 108.84516768292683,
+              "confidence": 0.97,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "UNCLE SCROOGE Land of the Pygmy Indians - 27 - Reprinted from *Uncle Scrooge* No. 18, June-Aug. 1957.",
+          "value": "UNCLE SCROOGE Land of the Pygmy Indians - 27 - Reprinted from Uncle Scrooge No. 18, June-Aug. 1957.",
+          "bbox": [
+            {
+              "h": 16.978582317073172,
+              "w": 124.49452362804875,
+              "x": 151.72616044207317,
+              "y": 115.08578506097561,
+              "confidence": 0.85,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes: Splash panel trimmed for indicia.*",
+          "value": "Changes: Splash panel trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 10.16590701219513,
+              "w": 123.073525152439,
+              "x": 152.14018102134145,
+              "y": 121.9860137195122,
+              "confidence": 0.76,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 113 - August 1974 - 36 pages",
+          "value": "113 - August 1974 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.594142530487797,
+              "w": 69.44597560975609,
+              "x": 151.34307736280488,
+              "y": 138.34977896341462,
+              "confidence": 0.97,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 20, Dec.-Feb. 1958.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 20, Dec.-Feb. 1958.",
+          "bbox": [
+            {
+              "h": 11.402458079268317,
+              "w": 125.05822408536582,
+              "x": 151.25990282012194,
+              "y": 144.46153582317072,
+              "confidence": 0.96,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Crown of the Mayas - 21 - Reprinted from *Uncle Scrooge* No. 44, August 1963.",
+          "value": "UNCLE SCROOGE Crown of the Mayas - 21 - Reprinted from Uncle Scrooge No. 44, August 1963.",
+          "bbox": [
+            {
+              "h": 11.51905106707316,
+              "w": 124.71333269817075,
+              "x": 151.62892339939023,
+              "y": 156.60619664634146,
+              "confidence": 0.94,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE - 4 - Reprinted from *Uncle Scrooge* No. 24, Dec.-Feb. 1959.",
+          "value": "GYRO GEARLOOSE - 4 - Reprinted from Uncle Scrooge No. 24, Dec.-Feb. 1959.",
+          "bbox": [
+            {
+              "h": 10.403506097560985,
+              "w": 124.81206173780487,
+              "x": 151.47987804878045,
+              "y": 168.35116234756097,
+              "confidence": 0.93,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 114 - September 1974 - 36 pages",
+          "value": "114 - September 1974 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.7280221036585495,
+              "w": 78.84478467987803,
+              "x": 151.30720083841464,
+              "y": 185.97791158536586,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 60, November 1965.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 60, November 1965.",
+          "bbox": [
+            {
+              "h": 11.237309451219534,
+              "w": 125.10430449695124,
+              "x": 151.14601371951218,
+              "y": 192.15928353658535,
+              "confidence": 0.95,
+              "end_index": 84,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Phantom of Notre Duck - 24",
+          "value": "UNCLE SCROOGE The Phantom of Notre Duck - 24",
+          "bbox": [
+            {
+              "h": 6.913147865853652,
+              "w": 121.42762957317075,
+              "x": 154.76937118902438,
+              "y": 204.09423018292682,
+              "confidence": 0.79,
+              "end_index": 43,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Reprinted from *Uncle Scrooge* No. 60, November 1965.\n*Changes: Splash panel trimmed for indicia.*",
+              "value": "Reprinted from Uncle Scrooge No. 60, November 1965.\nChanges: Splash panel trimmed for indicia.",
+              "bbox": [
+                {
+                  "h": 17.105030487804896,
+                  "w": 124.85286013719512,
+                  "x": 151.54327934451217,
+                  "y": 204.16054115853657,
+                  "confidence": 0.91,
+                  "end_index": 97,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "* Reprinted from *Uncle Scrooge* No. 60, November 1965.\n  *Changes: Splash panel trimmed for indicia.*",
+          "ordered": false,
+          "bbox": [
+            {
+              "h": 17.11,
+              "w": 124.85,
+              "x": 151.54,
+              "y": 204.16,
+              "confidence": 0.91,
+              "end_index": 101,
+              "label": "list",
+              "start_index": 0
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (\"land on a dime\") - Reprinted from *Uncle Scrooge* No. 57, May 1965.",
+          "value": "UNCLE SCROOGE - 1 (\"land on a dime\") - Reprinted from Uncle Scrooge No. 57, May 1965.",
+          "bbox": [
+            {
+              "h": 11.052278963414636,
+              "w": 124.97436356707313,
+              "x": 151.4010080030488,
+              "y": 221.73955792682926,
+              "confidence": 0.94,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 115 - October 1974 - 36 pages",
+          "value": "115 - October 1974 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.66309451219513,
+              "w": 71.84550114329267,
+              "x": 151.4994969512195,
+              "y": 237.5673932926829,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 58, July 1965.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 58, July 1965.",
+          "bbox": [
+            {
+              "h": 11.283315548780491,
+              "w": 124.9538014481707,
+              "x": 151.47624237804877,
+              "y": 243.74270579268293,
+              "confidence": 0.96,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Giant Robot Robbers - 20 - Reprinted from *Uncle Scrooge* No. 58, July 1965.",
+          "value": "UNCLE SCROOGE The Giant Robot Robbers - 20 - Reprinted from Uncle Scrooge No. 58, July 1965.",
+          "bbox": [
+            {
+              "h": 11.51709603658539,
+              "w": 125.41803544207316,
+              "x": 151.6297294207317,
+              "y": 255.50807926829268,
+              "confidence": 0.96,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 116 - December 1974 - 52 pages",
+          "value": "116 - December 1974 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.77054115853658,
+              "w": 77.5489081554878,
+              "x": 151.41357850609756,
+              "y": 271.88268292682926,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 50, July 1964.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 50, July 1964.",
+          "bbox": [
+            {
+              "h": 11.15807926829264,
+              "w": 125.06901105182925,
+              "x": 151.3507088414634,
+              "y": 278.0754192073171,
+              "confidence": 0.97,
+              "end_index": 80,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE Rug Riders in the Sky - 16 - Reprinted from *Uncle Scrooge* No. 50, July 1964.",
+          "value": "UNCLE SCROOGE Rug Riders in the Sky - 16 - Reprinted from Uncle Scrooge No. 50, July 1964.",
+          "bbox": [
+            {
+              "h": 11.27826219512197,
+              "w": 124.78223894817074,
+              "x": 151.73878239329267,
+              "y": 289.886318597561,
+              "confidence": 0.97,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 117 - February 1975 - 36 pages",
+          "value": "117 - February 1975 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.54469512195119,
+              "w": 75.16780106707319,
+              "x": 151.46663871951216,
+              "y": 307.54250762195124,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* No. 49, May 1964.",
+          "value": "Front cover: Reprinted from the front cover of Uncle Scrooge No. 49, May 1964.",
+          "bbox": [
+            {
+              "h": 11.248262195121969,
+              "w": 124.91566120426826,
+              "x": 151.47452743902437,
+              "y": 313.56370426829267,
+              "confidence": 0.97,
+              "end_index": 79,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE The Loony Lunar Gold Rush - 17 - Reprinted from *Uncle Scrooge* No. 49, May 1964.",
+          "value": "UNCLE SCROOGE The Loony Lunar Gold Rush - 17 - Reprinted from Uncle Scrooge No. 49, May 1964.",
+          "bbox": [
+            {
+              "h": 11.169763719512174,
+              "w": 124.82216272865854,
+              "x": 151.61359184451217,
+              "y": 325.5072713414634,
+              "confidence": 0.95,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Changes: Dialogue and captions on the third page were changed to eliminate references to \"the first\" astronauts returning from the moon.*",
+          "value": "Changes: Dialogue and captions on the third page were changed to eliminate references to \"the first\" astronauts returning from the moon.",
+          "bbox": [
+            {
+              "h": 16.82858231707316,
+              "w": 124.75071836890245,
+              "x": 151.88209984756097,
+              "y": 337.39248475609753,
+              "confidence": 0.96,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "156 Carl Barks and the Art of the Comic Book",
+              "value": "156 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.234756097560985,
+                  "w": 77.79868473704266,
+                  "x": 36.84488614710366,
+                  "y": 366.6984375,
+                  "confidence": 0.96,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "156 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.23,
+              "w": 77.8,
+              "x": 36.84,
+              "y": 366.7,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "156"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+modesty are characteristic of Carl Barks's stories as well as of Carl Barks the man. I first met Carl Barks in June 1969, when he was still living in San Jacinto, and I remember feeling a little surprised — and maybe even a little disappointed — that Carl Barks was so mild-mannered and unassuming. It took me a while to realize that what appealed to me most strongly about Barks's best stories — their integrity — was there in the man, too. Only it was not dressed out in exciting plots and
+funny characters and snappy dialogue; it was lying on the surface, and so was easier to miss.
+It was my great good fortune to grow up with Carl Barks's stories as my constant companions. I feel just as fortunate to have known Carl Barks himself.
+**MICHAEL BARRIER**

@@ -1,0 +1,167 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "later, the nephews come to visit Donald, who is still confined to a hospital bed; they have a jar of honey and a first-place ribbon in hand. The judges, they tell Donald, went wild over the honey — it was the first they had come across that tasted like a barber shop smells. \"Now,\" the nephews announce proudly \"because you were such a help to us, we're going to let you eat some—on a slice of bread!\" \"Ah!\" Donald says wistfully as he munches on the bread and honey. \"We parents! What rich rewards we reap!\"",
+          "value": "later, the nephews come to visit Donald, who is still confined to a hospital bed; they have a jar of honey and a first-place ribbon in hand. The judges, they tell Donald, went wild over the honey — it was the first they had come across that tasted like a barber shop smells. \"Now,\" the nephews announce proudly \"because you were such a help to us, we're going to let you eat some—on a slice of bread!\" \"Ah!\" Donald says wistfully as he munches on the bread and honey. \"We parents! What rich rewards we reap!\"",
+          "bbox": [
+            {
+              "h": 88.67976133765245,
+              "w": 125.65104527915395,
+              "x": 12.874594964748475,
+              "y": 13.475474942835366,
+              "confidence": 0.99,
+              "end_index": 507,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Donald himself had changed in the forties, evolving from a rather crude carbon of the animated-cartoon character into a considerably more complex personality. He remained close kin to the Donald on the screen, but became better suited to comic-book stories. For one thing, it became clear that he wasn't speaking in the screen Donald's quacking voice.",
+          "value": "Donald himself had changed in the forties, evolving from a rather crude carbon of the animated-cartoon character into a considerably more complex personality. He remained close kin to the Donald on the screen, but became better suited to comic-book stories. For one thing, it became clear that he wasn't speaking in the screen Donald's quacking voice.",
+          "bbox": [
+            {
+              "h": 65.86889862804878,
+              "w": 125.65554056307164,
+              "x": 13.193828720464937,
+              "y": 102.28028963414634,
+              "confidence": 0.99,
+              "end_index": 350,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Donald in the early ten-page stories was, like the movie Donald, ready to explode at the slightest spark. In the longer stories, the other side of his personality — his courage — showed through more strongly. Donald had to be rescued by the nephews in those stories only because he had plunged headlong into dangerous situations. Other times — especially in the transitional stories of the late forties — Donald came through whole even without the nephews' help. Pursuing Blacksnake McQuirt through the Badlands in \"Sheriff of Bullet Valley,\" Donald gets the drop on the rustler, then holsters his pistols when Blacksnake tells him, \"Put your guns back in their holsters and draw even — like a brave man should!\" \"Okay!\" Donald replies. \"I'm no coward! Rimfire Remington always does this in his pictures.\" Donald is, of course, gunned down, but he is saved when the bullets hit his badge — and he once again takes up Blacksnake's trail, enduring a grenade explosion and a sizzling gun battle before he finally runs the rustler down. In other stories, Donald heedlessly challenged such adversaries as a",
+          "value": "The Donald in the early ten-page stories was, like the movie Donald, ready to explode at the slightest spark. In the longer stories, the other side of his personality — his courage — showed through more strongly. Donald had to be rescued by the nephews in those stories only because he had plunged headlong into dangerous situations. Other times — especially in the transitional stories of the late forties — Donald came through whole even without the nephews' help. Pursuing Blacksnake McQuirt through the Badlands in \"Sheriff of Bullet Valley,\" Donald gets the drop on the rustler, then holsters his pistols when Blacksnake tells him, \"Put your guns back in their holsters and draw even — like a brave man should!\" \"Okay!\" Donald replies. \"I'm no coward! Rimfire Remington always does this in his pictures.\" Donald is, of course, gunned down, but he is saved when the bullets hit his badge — and he once again takes up Blacksnake's trail, enduring a grenade explosion and a sizzling gun battle before he finally runs the rustler down. In other stories, Donald heedlessly challenged such adversaries as a",
+          "bbox": [
+            {
+              "h": 184.66063262195124,
+              "w": 126.04377703410822,
+              "x": 13.672759741806402,
+              "y": 169.38340701219514,
+              "confidence": 0.99,
+              "end_index": 1104,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "giant octopus and an armored man, a witch, and a Scottish ghost.",
+          "value": "giant octopus and an armored man, a witch, and a Scottish ghost.",
+          "bbox": [
+            {
+              "h": 15.203959127286584,
+              "w": 125.59683498475606,
+              "x": 149.71686928353657,
+              "y": 13.334375476371951,
+              "confidence": 0.98,
+              "end_index": 63,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The climactic story of this kind came not in *Donald Duck*, but in the February 1949 *Walt Disney's Comics*, when Donald was pursued by voracious wolves, pirates, lions, and even Martians — all phantoms, creatures of his nightmares. To cure him, by relaxing his \"thinking nerve,\" the doctor orders him to crochet doilies — but even this does not work. The only possible remaining cure is for Donald to be frightened by something in real life even worse than his nightmares. While the nephews try to come up with something, Donald continues to crochet doilies. Daisy hears about it, and she and her friend Mrs. Gobblechin come to get Donald to speak at a meeting of the Needlework Club. Donald flees in horror, with the women close behind. He drives his car over a cliff, swims through a shark pond, and swings from tree to tree. Finally, he is cornered in a tree over the lions' cage at the zoo, as hundreds of women track him down with dogs. He thinks, \"This is worse than any nightmare I ever had,\" and takes refuge among the lions.",
+          "value": "The climactic story of this kind came not in Donald Duck, but in the February 1949 Walt Disney's Comics, when Donald was pursued by voracious wolves, pirates, lions, and even Martians — all phantoms, creatures of his nightmares. To cure him, by relaxing his \"thinking nerve,\" the doctor orders him to crochet doilies — but even this does not work. The only possible remaining cure is for Donald to be frightened by something in real life even worse than his nightmares. While the nephews try to come up with something, Donald continues to crochet doilies. Daisy hears about it, and she and her friend Mrs. Gobblechin come to get Donald to speak at a meeting of the Needlework Club. Donald flees in horror, with the women close behind. He drives his car over a cliff, swims through a shark pond, and swings from tree to tree. Finally, he is cornered in a tree over the lions' cage at the zoo, as hundreds of women track him down with dogs. He thinks, \"This is worse than any nightmare I ever had,\" and takes refuge among the lions.",
+          "bbox": [
+            {
+              "h": 177.99627953506098,
+              "w": 126.45565929878049,
+              "x": 149.85511051829266,
+              "y": 28.6318759527439,
+              "confidence": 0.99,
+              "end_index": 1033,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These days, of course, Donald's motives for fleeing are open to criticism; in the cant of the seventies, he is clearly a \"chauvinist.\" But it is Donald's desperation, and not its causes, that endears him to us. He is a very passionate little character, and it is, after all, himself that he so recklessly endangers, and not others. Donald in 1949 was very much a man of honor, even if his ideas about honor sometimes seemed a little cockeyed.",
+          "value": "These days, of course, Donald's motives for fleeing are open to criticism; in the cant of the seventies, he is clearly a \"chauvinist.\" But it is Donald's desperation, and not its causes, that endears him to us. He is a very passionate little character, and it is, after all, himself that he so recklessly endangers, and not others. Donald in 1949 was very much a man of honor, even if his ideas about honor sometimes seemed a little cockeyed.",
+          "bbox": [
+            {
+              "h": 73.13252286585364,
+              "w": 126.01500571646342,
+              "x": 150.93380716463415,
+              "y": 206.1404725609756,
+              "confidence": 0.99,
+              "end_index": 441,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "With the introduction of characters like Scrooge and Gladstone, the nature of Donald's problems changed. He faced fewer direct physical challenges, and fewer problems that would yield to plain foolhardiness. The Donald of the late forties and early fifties exploded less often, because there was less to trigger his temper, but there were still plenty of irritants around to make his life uncomfortable. There was Gladstone's luck, and the nephews, and",
+          "value": "With the introduction of characters like Scrooge and Gladstone, the nature of Donald's problems changed. He faced fewer direct physical challenges, and fewer problems that would yield to plain foolhardiness. The Donald of the late forties and early fifties exploded less often, because there was less to trigger his temper, but there were still plenty of irritants around to make his life uncomfortable. There was Gladstone's luck, and the nephews, and",
+          "bbox": [
+            {
+              "h": 73.8415701219512,
+              "w": 125.90202553353654,
+              "x": 151.3370750762195,
+              "y": 279.93137195121955,
+              "confidence": 0.99,
+              "end_index": 451,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n71",
+              "value": "Carl Barks and the Art of the Comic Book\n71",
+              "bbox": [
+                {
+                  "h": 5.259535060975595,
+                  "w": 80.28073742378047,
+                  "x": 174.26629001524387,
+                  "y": 365.93634146341464,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n71",
+          "bbox": [
+            {
+              "h": 5.26,
+              "w": 80.28,
+              "x": 174.27,
+              "y": 365.94,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "71"
+    }
+  ]
+}

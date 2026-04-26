@@ -1,0 +1,81 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# Carl Barks and the Art of the Comic Book",
+          "value": "Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 67.59405297256097,
+              "w": 222.51406726371954,
+              "x": 32.63294874237804,
+              "y": 88.72537157012195,
+              "confidence": 0.85,
+              "end_index": 39,
+              "label": "doc_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "by\nMichael Barrier",
+          "value": "by\nMichael Barrier",
+          "bbox": [
+            {
+              "h": 24.838422256097566,
+              "w": 84.46405678353659,
+              "x": 97.58344321646341,
+              "y": 177.88689786585365,
+              "confidence": 0.84,
+              "end_index": 17,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**M. Lilien**",
+          "value": "M. Lilien",
+          "bbox": [
+            {
+              "h": 9.247774390243885,
+              "w": 49.13780487804877,
+              "x": 117.05247713414633,
+              "y": 251.35865853658538,
+              "confidence": 0.82,
+              "end_index": 12,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "New York, New York",
+          "value": "New York, New York",
+          "bbox": [
+            {
+              "h": 8.560038109756114,
+              "w": 71.91207507621952,
+              "x": 106.28452934451218,
+              "y": 269.03314024390244,
+              "confidence": 0.87,
+              "end_index": 17,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true
+    }
+  ]
+}

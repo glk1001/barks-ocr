@@ -1,0 +1,716 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "their pistols at ropes holding sacks of money above one another's heads. *(Sept. 24, 1962)*",
+          "value": "their pistols at ropes holding sacks of money above one another's heads. (Sept. 24, 1962)",
+          "bbox": [
+            {
+              "h": 11.743793826219514,
+              "w": 124.82962700076217,
+              "x": 13.13086366234756,
+              "y": 25.955810785060976,
+              "confidence": 0.97,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE **The Case of the Sticky Money** - 20 - Scrooge is surprised to see the Beagle Boys spending wildly. He then encounters Donald and the nephews, who are celebrating the nephews' invention of super-sticky glue. The Beagles are stealing money from under Scrooge's nose by running a vacuum tube up the side of the money bin and down a ventilator, but the ducks use the nephews' glue to foil them. *(Sept. 17, 1962)*",
+          "value": "UNCLE SCROOGE The Case of the Sticky Money - 20 - Scrooge is surprised to see the Beagle Boys spending wildly. He then encounters Donald and the nephews, who are celebrating the nephews' invention of super-sticky glue. The Beagles are stealing money from under Scrooge's nose by running a vacuum tube up the side of the money bin and down a ventilator, but the ducks use the nephews' glue to foil them. (Sept. 17, 1962)",
+          "bbox": [
+            {
+              "h": 47.00773913871951,
+              "w": 125.0899579601753,
+              "x": 12.973514791349084,
+              "y": 38.15452648628049,
+              "confidence": 0.98,
+              "end_index": 424,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 99, June 1972; No. 141, June 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 99, June 1972; No. 141, June 1977.",
+          "bbox": [
+            {
+              "h": 10.14633384146342,
+              "w": 124.81778320312499,
+              "x": 13.093737376143292,
+              "y": 85.74261814024389,
+              "confidence": 0.96,
+              "end_index": 64,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - A genie in a lamp appears to Scrooge, telling him that any desire will be granted, but Scrooge's demands are extravagant. *(Sept. 24, 1962)*",
+          "value": "UNCLE SCROOGE - 1 - A genie in a lamp appears to Scrooge, telling him that any desire will be granted, but Scrooge's demands are extravagant. (Sept. 24, 1962)",
+          "bbox": [
+            {
+              "h": 17.69348323170732,
+              "w": 125.12270257717226,
+              "x": 12.892477491425304,
+              "y": 97.34104801829268,
+              "confidence": 0.94,
+              "end_index": 159,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 104, \\[April] 1973.",
+          "value": "Reprinted: Uncle Scrooge No. 104, [April] 1973.",
+          "bbox": [
+            {
+              "h": 5.617305640243899,
+              "w": 94.09127751048017,
+              "x": 17.531239638910062,
+              "y": 115.18283917682928,
+              "confidence": 0.85,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - Donald glues a dime to the sidewalk to foil Scrooge. *(Sept. 24, 1962)*",
+          "value": "UNCLE SCROOGE - 1 - Donald glues a dime to the sidewalk to foil Scrooge. (Sept. 24, 1962)",
+          "bbox": [
+            {
+              "h": 11.287945884146334,
+              "w": 124.99986578220273,
+              "x": 12.857831435785059,
+              "y": 121.00408536585365,
+              "confidence": 0.89,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 104, \\[April] 1973.",
+          "value": "Reprinted: Uncle Scrooge No. 104, [April] 1973.",
+          "bbox": [
+            {
+              "h": 5.402892530487825,
+              "w": 95.08902689119664,
+              "x": 17.208258741425304,
+              "y": 132.80188262195122,
+              "confidence": 0.89,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 43 - July 1963 - 36 pages",
+          "value": "43 - July 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.51763338414632,
+              "w": 58.749319979039626,
+              "x": 12.741407440929876,
+              "y": 144.68488948170733,
+              "confidence": 0.96,
+              "end_index": 24,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge, in a chef's hat, tosses a bowl of money. *(Nov. 5, 1962)*",
+          "value": "Front cover: Scrooge, in a chef's hat, tosses a bowl of money. (Nov. 5, 1962)",
+          "bbox": [
+            {
+              "h": 11.583064024390259,
+              "w": 125.08136825933687,
+              "x": 12.866148890053353,
+              "y": 150.5137157012195,
+              "confidence": 0.96,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge Coloring Book* 1966 (see \"Other Comics Material\")",
+          "value": "Reprinted: Uncle Scrooge Coloring Book 1966 (see \"Other Comics Material\")",
+          "bbox": [
+            {
+              "h": 10.338201219512202,
+              "w": 124.98135301543444,
+              "x": 12.966824385480182,
+              "y": 162.69122332317073,
+              "confidence": 0.96,
+              "end_index": 74,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE **For Old Dime's Sake** - 18 - Magica de Spell hurls all sorts of wild weather at Scrooge's bin in her effort to get at his Old Number One Dime, but Scrooge is ready for her. Magica eludes Scrooge's spies and hypnotizes him into giving her the combination to his safe, then she disguises herself as Scrooge. *(July 16, 1962)*",
+          "value": "UNCLE SCROOGE For Old Dime's Sake - 18 - Magica de Spell hurls all sorts of wild weather at Scrooge's bin in her effort to get at his Old Number One Dime, but Scrooge is ready for her. Magica eludes Scrooge's spies and hypnotizes him into giving her the combination to his safe, then she disguises herself as Scrooge. (July 16, 1962)",
+          "bbox": [
+            {
+              "h": 35.434756097560985,
+              "w": 125.1826386242378,
+              "x": 12.866943121189022,
+              "y": 174.18798018292682,
+              "confidence": 0.99,
+              "end_index": 338,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 140, May 1977; *Walt Disney Comics Digest* No. 13, July 1969.",
+          "value": "Reprinted: Uncle Scrooge No. 140, May 1977; Walt Disney Comics Digest No. 13, July 1969.",
+          "bbox": [
+            {
+              "h": 11.319077743902435,
+              "w": 125.1513592082698,
+              "x": 12.87066346703506,
+              "y": 209.9671417682927,
+              "confidence": 0.97,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 44 - August 1963 - 36 pages",
+          "value": "44 - August 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.490480182926812,
+              "w": 67.09239758003048,
+              "x": 12.744170636432925,
+              "y": 227.56387957317074,
+              "confidence": 0.96,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Scrooge protests as a bird flies off with some of his paper money to use in a nest. *(Jan. 17, 1963)*\nReprinted: *Uncle Scrooge* No. 153, June 1978.",
+          "value": "Front cover (art only): Scrooge protests as a bird flies off with some of his paper money to use in a nest. (Jan. 17, 1963)\nReprinted: Uncle Scrooge No. 153, June 1978.",
+          "bbox": [
+            {
+              "h": 17.619923780487795,
+              "w": 125.04311011337651,
+              "x": 12.929668087842987,
+              "y": 233.40128048780488,
+              "confidence": 0.98,
+              "end_index": 171,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE **Crown of the Mayas** - 21 - Scrooge, who is fuming because he has been denied membership in the Archeologists' Club, takes the ducks with him on a flight over the Yucatan, where they sight some Mayan ruins whose discovery will get Scrooge into the Club. Two scoundrels who have just been thrown out of the Club follow the ducks to the ruins and trap them in a pool called the \"Well of Sacrifice.\" *(Dec. 10, 1962)*",
+          "value": "UNCLE SCROOGE Crown of the Mayas - 21 - Scrooge, who is fuming because he has been denied membership in the Archeologists' Club, takes the ducks with him on a flight over the Yucatan, where they sight some Mayan ruins whose discovery will get Scrooge into the Club. Two scoundrels who have just been thrown out of the Club follow the ducks to the ruins and trap them in a pool called the \"Well of Sacrifice.\" (Dec. 10, 1962)",
+          "bbox": [
+            {
+              "h": 46.786600609756114,
+              "w": 125.72717785346799,
+              "x": 12.48108719988567,
+              "y": 251.38433689024387,
+              "confidence": 0.98,
+              "end_index": 429,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 113, August 1974.",
+          "value": "Reprinted: Uncle Scrooge No. 113, August 1974.",
+          "bbox": [
+            {
+              "h": 5.66949695121948,
+              "w": 96.27635635003809,
+              "x": 17.647403177400914,
+              "y": 299.0631173780488,
+              "confidence": 0.92,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE **The Invisible Intruder** - 6 - art only - Scrooge's huge bed quivers at night, as if someone were walking on it. *(Dec. 26, 1962)*",
+          "value": "UNCLE SCROOGE The Invisible Intruder - 6 - art only - Scrooge's huge bed quivers at night, as if someone were walking on it. (Dec. 26, 1962)",
+          "bbox": [
+            {
+              "h": 16.91320884146342,
+              "w": 124.96070836509145,
+              "x": 13.056392435213413,
+              "y": 305.05877286585365,
+              "confidence": 0.97,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 153, June 1978; *Walt Disney Comics Digest* No. 27, February 1971.",
+          "value": "Reprinted: Uncle Scrooge No. 153, June 1978; Walt Disney Comics Digest No. 27, February 1971.",
+          "bbox": [
+            {
+              "h": 11.134047256097565,
+              "w": 125.09828506097558,
+              "x": 12.959005335365854,
+              "y": 322.7000762195122,
+              "confidence": 0.97,
+              "end_index": 96,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 45 - October 1963 - 36 pages",
+          "value": "45 - October 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.717652439024405,
+              "w": 69.01801686356707,
+              "x": 12.95921541539634,
+              "y": 340.2944588414634,
+              "confidence": 0.96,
+              "end_index": 27,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge and the nephews examine a nest of",
+          "value": "Front cover: Scrooge and the nephews examine a nest of",
+          "bbox": [
+            {
+              "h": 5.599184451219535,
+              "w": 120.18345846036583,
+              "x": 17.995815548780485,
+              "y": 346.198193597561,
+              "confidence": 0.96,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "golden eggs. (Illustrating \"Isle of Golden Geese.\") *(Mar. 6, 1963)*",
+          "value": "golden eggs. (Illustrating \"Isle of Golden Geese.\") (Mar. 6, 1963)",
+          "bbox": [
+            {
+              "h": 11.16935213414634,
+              "w": 124.60834413109757,
+              "x": 151.6193368902439,
+              "y": 26.861447217987802,
+              "confidence": 0.97,
+              "end_index": 67,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 139, April 1977.",
+          "value": "Reprinted: Uncle Scrooge No. 139, April 1977.",
+          "bbox": [
+            {
+              "h": 5.403990091463413,
+              "w": 91.86907774390244,
+              "x": 156.05025914634143,
+              "y": 39.07223894817073,
+              "confidence": 0.94,
+              "end_index": 46,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE **Isle of Golden Geese** - 23 - Scrooge buys some goose eggs, and finds that one egg has gold dust suspended in the yolk. The eggs have come from Featherbrain Island, and the ducks prepare to go there — but Magica de Spell learns of their plans and blocks their way, then sails for the island herself with the Beagle Boys as her crew. *(Jan. 28, 1963)*",
+          "value": "UNCLE SCROOGE Isle of Golden Geese - 23 - Scrooge buys some goose eggs, and finds that one egg has gold dust suspended in the yolk. The eggs have come from Featherbrain Island, and the ducks prepare to go there — but Magica de Spell learns of their plans and blocks their way, then sails for the island herself with the Beagle Boys as her crew. (Jan. 28, 1963)",
+          "bbox": [
+            {
+              "h": 38.47422541920731,
+              "w": 125.00655297256098,
+              "x": 151.3760556402439,
+              "y": 44.949297827743905,
+              "confidence": 0.97,
+              "end_index": 365,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 139, April 1977; *Walt Disney Comics Digest* No. 9, March 1969.",
+          "value": "Reprinted: Uncle Scrooge No. 139, April 1977; Walt Disney Comics Digest No. 9, March 1969.",
+          "bbox": [
+            {
+              "h": 11.098673780487811,
+              "w": 125.01857469512191,
+              "x": 151.34348894817072,
+              "y": 86.75000762195121,
+              "confidence": 0.96,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE **The Travel Tightwad** - 4 - art only - Scrooge tries to save money by switching from a chauffeur-driven car to a chauffeur-driven motor scooter. *(Feb. 7, 1963)*",
+          "value": "UNCLE SCROOGE The Travel Tightwad - 4 - art only - Scrooge tries to save money by switching from a chauffeur-driven car to a chauffeur-driven motor scooter. (Feb. 7, 1963)",
+          "bbox": [
+            {
+              "h": 22.333673780487796,
+              "w": 125.13170922256096,
+              "x": 151.28291730182923,
+              "y": 98.48502667682928,
+              "confidence": 0.96,
+              "end_index": 176,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 139, April 1977; *Walt Disney Comics Digest* No. 33, February 1972.",
+          "value": "Reprinted: Uncle Scrooge No. 139, April 1977; Walt Disney Comics Digest No. 33, February 1972.",
+          "bbox": [
+            {
+              "h": 11.209435975609754,
+              "w": 125.12517530487803,
+              "x": 151.29449314024387,
+              "y": 122.23399390243902,
+              "confidence": 0.96,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 46 - December 1963 - 36 pages",
+          "value": "46 - December 1963 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.816238567073187,
+              "w": 74.73964939024391,
+              "x": 151.36046684451216,
+              "y": 139.7507469512195,
+              "confidence": 0.97,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: A four-armed creature covered in metal and riding in a tiny flying saucer hooks Scrooge away as he reaches for his Old Number One Dime. (Illustrating \"Lost Beneath the Sea.\") *(June 4, 1963)*",
+          "value": "Front cover: A four-armed creature covered in metal and riding in a tiny flying saucer hooks Scrooge away as he reaches for his Old Number One Dime. (Illustrating \"Lost Beneath the Sea.\") (June 4, 1963)",
+          "bbox": [
+            {
+              "h": 22.719077743902435,
+              "w": 124.98996951219513,
+              "x": 151.36175304878046,
+              "y": 146.06885670731705,
+              "confidence": 0.98,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 149, February 1978.",
+          "value": "Reprinted: Uncle Scrooge No. 149, February 1978.",
+          "bbox": [
+            {
+              "h": 5.608879573170752,
+              "w": 99.30855182926831,
+              "x": 155.5705221036585,
+              "y": 169.63689786585365,
+              "confidence": 0.92,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE **Lost Beneath the Sea** - 22 - An ocean liner bearing Scrooge's Old Number One Dime sinks in deep water, and Donald and Scrooge go after it in a bathysphere. They find that the ocean liner, and other ships as well, have been taken to an undersea shipyard manned by Martians — four-armed creatures who are salvaging the iron from the sunken ships for their own iron-poor planet. *(May 27, 1963)*",
+          "value": "UNCLE SCROOGE Lost Beneath the Sea - 22 - An ocean liner bearing Scrooge's Old Number One Dime sinks in deep water, and Donald and Scrooge go after it in a bathysphere. They find that the ocean liner, and other ships as well, have been taken to an undersea shipyard manned by Martians — four-armed creatures who are salvaging the iron from the sunken ships for their own iron-poor planet. (May 27, 1963)",
+          "bbox": [
+            {
+              "h": 47.40626524390243,
+              "w": 125.66546684451217,
+              "x": 151.35185785060975,
+              "y": 175.29802591463414,
+              "confidence": 0.98,
+              "end_index": 408,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Uncle Scrooge* No. 149, February 1978; *Walt Disney Comics Digest* No. 10, April 1969.",
+          "value": "Reprinted: Uncle Scrooge No. 149, February 1978; Walt Disney Comics Digest No. 10, April 1969.",
+          "bbox": [
+            {
+              "h": 10.920457317073186,
+              "w": 124.71185785060973,
+              "x": 151.39690929878046,
+              "y": 223.10862804878047,
+              "confidence": 0.96,
+              "end_index": 97,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "GYRO GEARLOOSE **A Helper's Helping Hand** - 4 - Gyro, using a rocket belt and a portable paint sprayer, paints a huge bridge in record time. *(Mar. 19, 1963)*",
+          "value": "GYRO GEARLOOSE A Helper's Helping Hand - 4 - Gyro, using a rocket belt and a portable paint sprayer, paints a huge bridge in record time. (Mar. 19, 1963)",
+          "bbox": [
+            {
+              "h": 17.68376524390246,
+              "w": 125.03838224085362,
+              "x": 151.29596798780486,
+              "y": 234.59897103658534,
+              "confidence": 0.96,
+              "end_index": 158,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 10, April 1969.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 10, April 1969.",
+          "bbox": [
+            {
+              "h": 5.690304878048755,
+              "w": 115.54413681402437,
+              "x": 156.07186737804878,
+              "y": 252.73840701219513,
+              "confidence": 0.88,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE **The Lemonade Fling** - 5 - art only - Scrooge has bankrolled the nephews' lemonade stand, and to make sure they're honest, he disguises himself and watches how they handle their money. *(June 4, 1963)*",
+          "value": "UNCLE SCROOGE The Lemonade Fling - 5 - art only - Scrooge has bankrolled the nephews' lemonade stand, and to make sure they're honest, he disguises himself and watches how they handle their money. (June 4, 1963)",
+          "bbox": [
+            {
+              "h": 23.548079268292692,
+              "w": 124.96964748475608,
+              "x": 151.26096608231705,
+              "y": 258.43646341463415,
+              "confidence": 0.94,
+              "end_index": 216,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney Comics Digest* No. 30, August 1971.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 30, August 1971.",
+          "bbox": [
+            {
+              "h": 5.59173018292684,
+              "w": 120.10858422256095,
+              "x": 155.8600381097561,
+              "y": 282.05576981707316,
+              "confidence": 0.85,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 - (inside back cover) - When there is a fire at the business school, all the firemen carry pretty girls to safety — except Scrooge. *(Dec. 20, 1962 \\[idea] and June 7, 1963 \\[art])*",
+          "value": "UNCLE SCROOGE - 1 - (inside back cover) - When there is a fire at the business school, all the firemen carry pretty girls to safety — except Scrooge. (Dec. 20, 1962 [idea] and June 7, 1963 [art])",
+          "bbox": [
+            {
+              "h": 27.64410823170736,
+              "w": 125.07113757621953,
+              "x": 151.24362804878047,
+              "y": 283.6315929878049,
+              "confidence": 0.96,
+              "end_index": 198,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 47 - February 1964 - 36 pages",
+          "value": "47 - February 1964 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.621067073170725,
+              "w": 72.60036585365852,
+              "x": 151.31140243902436,
+              "y": 317.3900762195122,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover: Scrooge tosses money from a sack as Donald shines a ray on him from a small machine. (Illustrating \"The Thrifty Spendthrift.\") *(Aug. 21, 1963)*",
+          "value": "Front cover: Scrooge tosses money from a sack as Donald shines a ray on him from a small machine. (Illustrating \"The Thrifty Spendthrift.\") (Aug. 21, 1963)",
+          "bbox": [
+            {
+              "h": 17.31935213414632,
+              "w": 124.97215129573168,
+              "x": 151.39888147865852,
+              "y": 323.53548018292685,
+              "confidence": 0.97,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE **The Thrifty Spendthrift** - 20 - Donald has bought a hypnotic ray device from a scientist,",
+          "value": "UNCLE SCROOGE The Thrifty Spendthrift - 20 - Donald has bought a hypnotic ray device from a scientist,",
+          "bbox": [
+            {
+              "h": 11.754649390243939,
+              "w": 124.92677400914631,
+              "x": 151.4426295731707,
+              "y": 341.2106707317073,
+              "confidence": 0.97,
+              "end_index": 105,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "148 Carl Barks and the Art of the Comic Book",
+              "value": "148 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.231211890243885,
+                  "w": 77.67968940548779,
+                  "x": 36.25152153201219,
+                  "y": 363.54025152439027,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "148 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.23,
+              "w": 77.68,
+              "x": 36.25,
+              "y": 363.54,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "148"
+    }
+  ]
+}

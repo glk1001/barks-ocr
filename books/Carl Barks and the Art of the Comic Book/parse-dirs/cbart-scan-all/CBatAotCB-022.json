@@ -1,0 +1,102 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "Sketch of an ostrich-like bird wearing a vest. A speech bubble says: \"$90 IS A LOT OF MONEY\"",
+          "md": "![Sketch of an ostrich-like bird wearing a vest. A speech bubble says: \"$90 IS A LOT OF MONEY\"](CBatAotCB-022_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-022_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 142.98921636814026,
+              "w": 125.3578582317073,
+              "x": 80.85740282012193,
+              "y": 23.881107564786586,
+              "confidence": 0.97,
+              "end_index": 117,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Caricature sketch of a man in a Nazi-style uniform with his arm raised in a salute. Handwritten text reads: \"REICHSFÜHRER BARKS — THE SWAGGERING NAZI OF THE 3RD ANNEX\" and \"circa about 1939\"",
+          "md": "![Caricature sketch of a man in a Nazi-style uniform with his arm raised in a salute. Handwritten text reads: \"REICHSFÜHRER BARKS — THE SWAGGERING NAZI OF THE 3RD ANNEX\" and \"circa about 1939\"](CBatAotCB-022_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-022_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 158.24110518292684,
+              "w": 127.59448385099085,
+              "x": 13.378785966082317,
+              "y": 178.73021341463414,
+              "confidence": 0.97,
+              "end_index": 215,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "Sketch of a cowboy with a gun. Handwritten text reads: \"My taste in movies was very low class. I was reputed to attend only horse operas.\"",
+          "md": "![Sketch of a cowboy with a gun. Handwritten text reads: \"My taste in movies was very low class. I was reputed to attend only horse operas.\"](CBatAotCB-022_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-022_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 142.3687385670732,
+              "w": 119.79716844512191,
+              "x": 152.26874999999998,
+              "y": 186.2830907012195,
+              "confidence": 0.94,
+              "end_index": 163,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "items": [
+            {
+              "md": "22 Carl Barks and the Art of the Comic Book",
+              "value": "22 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 5.04528201219513,
+                  "w": 80.15454149199694,
+                  "x": 35.88262314214939,
+                  "y": 366.7768902439024,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "22 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 5.05,
+              "w": 80.15,
+              "x": 35.88,
+              "y": 366.78,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "22"
+    }
+  ]
+}

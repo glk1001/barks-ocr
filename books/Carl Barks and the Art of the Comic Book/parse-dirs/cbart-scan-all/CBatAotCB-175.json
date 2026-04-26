@@ -1,0 +1,533 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "caption": "ON THE SEA BOTTOM AND ON THE SURFACE THE DUCKS WORK LIKE MAD! RAM THOSE BALLS DOWN THE HOSE, BOYS! RAM 'EM DOWN THE HOSE!",
+          "md": "![ON THE SEA BOTTOM AND ON THE SURFACE THE DUCKS WORK LIKE MAD! RAM THOSE BALLS DOWN THE HOSE, BOYS! RAM 'EM DOWN THE HOSE!](CBatAotCB-175_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-175_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.61806974085366,
+              "w": 138.7441727801067,
+              "x": 11.75770984184451,
+              "y": 12.406834984756097,
+              "confidence": 0.94,
+              "end_index": 146,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "WE ARE, UNCA' DONALD! BUT WE'RE GETTING TIRED! THIS IS TWO SCOW LOADS WE'VE SENT DOWN!",
+          "md": "![WE ARE, UNCA' DONALD! BUT WE'RE GETTING TIRED! THIS IS TWO SCOW LOADS WE'VE SENT DOWN!](CBatAotCB-175_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-175_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.06834317835366,
+              "w": 121.26060022865852,
+              "x": 153.53939977134144,
+              "y": 12.093501333841463,
+              "confidence": 0.91,
+              "end_index": 111,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "SOON THE TERRIFIC TOIL PAYS OFF! SHE'S MOVING! HER KEEL IS PULLING OUT OF THE MUD!",
+          "md": "![SOON THE TERRIFIC TOIL PAYS OFF! SHE'S MOVING! HER KEEL IS PULLING OUT OF THE MUD!](CBatAotCB-175_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-175_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 92.77068978658536,
+              "w": 134.27717999714173,
+              "x": 11.987654225419206,
+              "y": 108.62859375,
+              "confidence": 0.92,
+              "end_index": 107,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "THAR SHE BLOWS!",
+          "md": "![THAR SHE BLOWS!](CBatAotCB-175_page_1_image_4_v2.jpg)",
+          "url": "CBatAotCB-175_page_1_image_4_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.66841463414633,
+              "w": 127.32281821646339,
+              "x": 148.84748094512193,
+              "y": 108.02865091463414,
+              "confidence": 0.9,
+              "end_index": 40,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "From *Walt Disney's Comics* No. 104, May 1949; © 1949 Walt Disney Productions.",
+          "value": "\nFrom Walt Disney's Comics No. 104, May 1949; © 1949 Walt Disney Productions.",
+          "bbox": [
+            {
+              "h": 6.327942073170752,
+              "w": 166.59049304496946,
+              "x": 61.720179592225605,
+              "y": 204.1615701219512,
+              "confidence": 0.93,
+              "end_index": 77,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "houseboat on Lake Erie for the summer to keep them out of mischief. (Jan. 10, 1952)",
+          "value": "houseboat on Lake Erie for the summer to keep them out of mischief. (Jan. 10, 1952)",
+          "bbox": [
+            {
+              "h": 11.317065548780493,
+              "w": 126.22547482374236,
+              "x": 11.356142935403962,
+              "y": 213.8863719512195,
+              "confidence": 0.95,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 370, July 1971.",
+          "value": "Reprinted: Walt Disney's Comics No. 370, July 1971.",
+          "bbox": [
+            {
+              "h": 5.46994664634145,
+              "w": 106.32183248380335,
+              "x": 15.606001929306402,
+              "y": 226.2870274390244,
+              "confidence": 0.95,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 143 (12/11) - August 1952 - 52 pages",
+          "value": "143 (12/11) - August 1952 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.881623475609767,
+              "w": 86.82302293730945,
+              "x": 11.515224966653962,
+              "y": 237.7367606707317,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews menace Donald in the water with a phony shark fin. (Jan. 3, 1952)",
+          "value": "Front cover (art only): The nephews menace Donald in the water with a phony shark fin. (Jan. 3, 1952)",
+          "bbox": [
+            {
+              "h": 11.295365853658522,
+              "w": 125.94723025438263,
+              "x": 11.479605683117377,
+              "y": 243.8487804878049,
+              "confidence": 0.97,
+              "end_index": 100,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and the nephews hunt gemstones in the desert, trying to match Gladstone's luck at finding jewels. (Jan. 10, 1952)",
+          "value": "DONALD DUCK - 10 - Donald and the nephews hunt gemstones in the desert, trying to match Gladstone's luck at finding jewels. (Jan. 10, 1952)",
+          "bbox": [
+            {
+              "h": 17.2692759146342,
+              "w": 126.058114996189,
+              "x": 11.373196932164634,
+              "y": 255.42589939024387,
+              "confidence": 0.98,
+              "end_index": 138,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks has said that this story \"was inspired by the desert which is just over a range of hills from San Jacinto. I've sweated through heat waves and wind storms generated by that desert so many years it is no longer fun.\" (Oct. 14, 1969, letter to Winston Ljungdahl)",
+          "value": "Barks has said that this story \"was inspired by the desert which is just over a range of hills from San Jacinto. I've sweated through heat waves and wind storms generated by that desert so many years it is no longer fun.\" (Oct. 14, 1969, letter to Winston Ljungdahl)",
+          "bbox": [
+            {
+              "h": 28.619954268292695,
+              "w": 126.12709413109756,
+              "x": 11.443067835365852,
+              "y": 273.3631097560976,
+              "confidence": 0.99,
+              "end_index": 265,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 369, June 1971.",
+          "value": "Reprinted: Walt Disney's Comics No. 369, June 1971.",
+          "bbox": [
+            {
+              "h": 5.324382621951244,
+              "w": 106.79766589653201,
+              "x": 15.929475871760669,
+              "y": 302.9241082317073,
+              "confidence": 0.96,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 144 (12/12) - September 1952 - 52 pages",
+          "value": "144 (12/12) - September 1952 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.97564786585368,
+              "w": 95.72545576886432,
+              "x": 11.743256121379572,
+              "y": 314.2228582317073,
+              "confidence": 0.96,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald is caught by his shirt when he pole vaults. (Jan. 3, 1952)",
+          "value": "Front cover (art only): Donald is caught by his shirt when he pole vaults. (Jan. 3, 1952)",
+          "bbox": [
+            {
+              "h": 11.08785823170736,
+              "w": 125.96490484470273,
+              "x": 11.525555330602133,
+              "y": 320.4203277439024,
+              "confidence": 0.97,
+              "end_index": 88,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - The ducks travel the country spending extravagantly to get rid of money that Uncle Scrooge's vaults cannot hold. (Feb. 21, 1952)",
+          "value": "DONALD DUCK - 10 - The ducks travel the country spending extravagantly to get rid of money that Uncle Scrooge's vaults cannot hold. (Feb. 21, 1952)",
+          "bbox": [
+            {
+              "h": 17.516638719512173,
+              "w": 126.1336023246951,
+              "x": 11.487656249999999,
+              "y": 331.96708079268296,
+              "confidence": 0.98,
+              "end_index": 146,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"Slated for #145 W\\.D.C. but used in #144.\" The story",
+          "value": "Barks: \"Slated for #145 W.D.C. but used in #144.\" The story",
+          "bbox": [
+            {
+              "h": 5.068170731707305,
+              "w": 121.35278534679878,
+              "x": 16.15429258765244,
+              "y": 350.18446646341465,
+              "confidence": 0.96,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "originally scheduled for No. 144 was shelved (see \"Unpublished and Unidentified Material\").",
+          "value": "originally scheduled for No. 144 was shelved (see \"Unpublished and Unidentified Material\").",
+          "bbox": [
+            {
+              "h": 11.351638719512202,
+              "w": 126.41071074695121,
+              "x": 150.3423932926829,
+              "y": 214.43590701219512,
+              "confidence": 0.97,
+              "end_index": 90,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 343, April 1969.",
+          "value": "Reprinted: Walt Disney's Comics No. 343, April 1969.",
+          "bbox": [
+            {
+              "h": 5.470632621951217,
+              "w": 108.71602134146342,
+              "x": 154.9812862042683,
+              "y": 226.45104420731707,
+              "confidence": 0.96,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 145 (13/1) - October 1952 - 52 pages",
+          "value": "145 (13/1) - October 1952 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.759268292682927,
+              "w": 86.39655297256098,
+              "x": 150.80213414634144,
+              "y": 238.10576981707317,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews jump rope with frankfurters. (Jan. 3, 1952)",
+          "value": "Front cover (art only): The nephews jump rope with frankfurters. (Jan. 3, 1952)",
+          "bbox": [
+            {
+              "h": 11.344527439024404,
+              "w": 126.45212652439022,
+              "x": 150.5580125762195,
+              "y": 243.83919969512195,
+              "confidence": 0.97,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald believes that the nephews' toy gun actually has the power to hypnotize, and he tries it out on Uncle Scrooge. (Mar. 6, 1952)",
+          "value": "DONALD DUCK - 10 - Donald believes that the nephews' toy gun actually has the power to hypnotize, and he tries it out on Uncle Scrooge. (Mar. 6, 1952)",
+          "bbox": [
+            {
+              "h": 17.3641692073171,
+              "w": 126.41019626524391,
+              "x": 150.58618902439022,
+              "y": 255.58424542682926,
+              "confidence": 0.98,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 357, June 1970.",
+          "value": "Reprinted: Walt Disney's Comics No. 357, June 1970.",
+          "bbox": [
+            {
+              "h": 5.487484756097564,
+              "w": 107.10550495426826,
+              "x": 155.12463795731708,
+              "y": 273.6350076219512,
+              "confidence": 0.95,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 146 (13/2) - November 1952 - 52 pages",
+          "value": "146 (13/2) - November 1952 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.72087652439026,
+              "w": 92.88277820121951,
+              "x": 151.22810785060975,
+              "y": 285.198818597561,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald rolls the nephews dry in a towel. (Jan. 3, 1952)",
+          "value": "Front cover (art only): Donald rolls the nephews dry in a towel. (Jan. 3, 1952)",
+          "bbox": [
+            {
+              "h": 11.366501524390259,
+              "w": 126.10011814024388,
+              "x": 151.07355754573172,
+              "y": 291.016006097561,
+              "confidence": 0.97,
+              "end_index": 78,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald's attempt to raise chickens on the heights overlooking the town of Pleasant Valley leads to a series of calamities culminating in the town's being renamed \"Omelet.\" (May 15, 1952)",
+          "value": "DONALD DUCK - 10 - Donald's attempt to raise chickens on the heights overlooking the town of Pleasant Valley leads to a series of calamities culminating in the town's being renamed \"Omelet.\" (May 15, 1952)",
+          "bbox": [
+            {
+              "h": 23.310685975609793,
+              "w": 126.22872141768289,
+              "x": 151.09435975609756,
+              "y": 302.8542759146341,
+              "confidence": 0.98,
+              "end_index": 204,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: *Walt Disney's Comics* No. 358, July 1970.",
+          "value": "Reprinted: Walt Disney's Comics No. 358, July 1970.",
+          "bbox": [
+            {
+              "h": 5.31971798780487,
+              "w": 105.70626905487805,
+              "x": 155.57280297256096,
+              "y": 326.88875762195124,
+              "confidence": 0.95,
+              "end_index": 52,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 147 (13/3) - December 1952 - 52 pages",
+          "value": "147 (13/3) - December 1952 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.561318597560985,
+              "w": 91.87537157012194,
+              "x": 151.48778391768292,
+              "y": 337.86505335365854,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews construct an Erector-set ladder to a cookie jar. (July 31, 1952)",
+          "value": "Front cover (art only): The nephews construct an Erector-set ladder to a cookie jar. (July 31, 1952)",
+          "bbox": [
+            {
+              "h": 11.46221798780487,
+              "w": 126.08693025914631,
+              "x": 151.44204649390244,
+              "y": 343.8533231707317,
+              "confidence": 0.98,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n175",
+              "value": "Carl Barks and the Art of the Comic Book\n175",
+              "bbox": [
+                {
+                  "h": 4.446814024390259,
+                  "w": 77.94953506097559,
+                  "x": 173.02048971036584,
+                  "y": 366.85490853658536,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n175",
+          "bbox": [
+            {
+              "h": 4.45,
+              "w": 77.95,
+              "x": 173.02,
+              "y": 366.85,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "175"
+    }
+  ]
+}

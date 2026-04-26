@@ -1,0 +1,170 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "June 14 - \"Lost Peg Leg Mine,\" DD No. 52.\nJune 21 - WDC No. 204.\nJuly 5 - WDC No. 201.\nJuly 12 - GG, Picnic Party No. 8.\nAug. 2 - \"A Cold Bargain,\" US No. 17.\nAug. ? - GG, US No. 17.\nAug. 16 - FC, US No. 17; FC, US No. 18.\nSept. 6 - FC, DD No. 52; FC, WDC No. 198; FC, WDC No. 199.\nSept. 20 - WDC No. 199.\nSept. 25 - WDC No. 205.\nOct. 11 - GG, US No. 18; WDC No. 203.\nOct. 18 - FC, DD No. 55; FC, US No. 19; WDC No. 208.\nNov. 15 - \"Land of the Pygmy Indians,\" FC, US, No. 18.\nNov. 29 - FC, WDC No. 200.\nDec. 13 - \"Forbidden Valley,\" DD No. 54.",
+          "value": "June 14 - \"Lost Peg Leg Mine,\" DD No. 52.\nJune 21 - WDC No. 204.\nJuly 5 - WDC No. 201.\nJuly 12 - GG, Picnic Party No. 8.\nAug. 2 - \"A Cold Bargain,\" US No. 17.\nAug. ? - GG, US No. 17.\nAug. 16 - FC, US No. 17; FC, US No. 18.\nSept. 6 - FC, DD No. 52; FC, WDC No. 198; FC, WDC No. 199.\nSept. 20 - WDC No. 199.\nSept. 25 - WDC No. 205.\nOct. 11 - GG, US No. 18; WDC No. 203.\nOct. 18 - FC, DD No. 55; FC, US No. 19; WDC No. 208.\nNov. 15 - \"Land of the Pygmy Indians,\" FC, US, No. 18.\nNov. 29 - FC, WDC No. 200.\nDec. 13 - \"Forbidden Valley,\" DD No. 54.",
+          "bbox": [
+            {
+              "h": 5.271876905487811,
+              "w": 119.56205887957317,
+              "x": 11.948923399390242,
+              "y": 93.14487233231706,
+              "confidence": 0.71,
+              "end_index": 542,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1957",
+          "value": "1957",
+          "bbox": [
+            {
+              "h": 4.510323932926826,
+              "w": 11.120728968178353,
+              "x": 12.281822003620425,
+              "y": 116.80414253048781,
+              "confidence": 0.93,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 10 - Uncle Scrooge Goes to Disneyland No. 1.\nJan. 17 - WDC No. 206; WDC No. 207.\nJan. 25 - FC, WDC No. 204.\nJan. 31 - FC, WDC No. 206.\nFeb. 15 - \"Mines of King Solomon,\" US No. 19.\nFeb. 21 - FC, WDC No. 213.\nFeb. 28 - IFC, GG US No. 19; unpublished gag for US (\"bridle).\nMar. 14 - Christmas in Disneyland No. 1; FC, WDC No. 207.\nMar. 21 - Mickey Mouse Almanac No. 1.\nApr. 18 - WDC No. 211; WDC No. 212.\nApr. 25 - GG, US No. 20.\nMay 23 - \"City of Golden Roofs,\" US No. 20; FC, US No. 23.\nMay 29 - FC, US No. 20; FC, WDC No. 208.\nJune 6 - IFC, IBC, one-page dog gag, US No. 21; apple-bobbing gag, US No. 33.\nJune 20 - \"Titanic Ants,\" DD No. 60; GG, US No. 21; FC, US No. 22.\nJuly 25 - FC, DD No. 57; one-page island gag, US No. 20; WDC No. 209; WDC No. 210; WDC No. 213.\nAug. 15 - FC, US No. 21; FC, WDC No. 209.\nAug. 22 - \"The Money Well,\" US No. 21.\nSept. 19 - Unpublished \"milkman\" story for WDC; WDC No. 215.\nOct. 10 - FC, US No. 24.\nOct. ? - WDC No. 216.\nOct. 24 - WDC No. 217.\nOct. 31 - Water skiing story, DD No. 60; one-page gags for US No. 22 (three), 23 (one), 31 (one), 37 (one).\nNov. 7 - FC, WDC No. 212; FC, WDC No. 214.\nNov. 21 - \"King of the Golden River,\" US No. 22.\nDec. 5 - One-page gags for US No. 23, 33.\nDec. 12 - GG, US No. 22\nDec. 19 - FC, WDC No. 215.\nDec. 31 - \"Strange Shipwrecks,\" US No. 23.",
+          "value": "Jan. 10 - Uncle Scrooge Goes to Disneyland No. 1.\nJan. 17 - WDC No. 206; WDC No. 207.\nJan. 25 - FC, WDC No. 204.\nJan. 31 - FC, WDC No. 206.\nFeb. 15 - \"Mines of King Solomon,\" US No. 19.\nFeb. 21 - FC, WDC No. 213.\nFeb. 28 - IFC, GG US No. 19; unpublished gag for US (\"bridle).\nMar. 14 - Christmas in Disneyland No. 1; FC, WDC No. 207.\nMar. 21 - Mickey Mouse Almanac No. 1.\nApr. 18 - WDC No. 211; WDC No. 212.\nApr. 25 - GG, US No. 20.\nMay 23 - \"City of Golden Roofs,\" US No. 20; FC, US No. 23.\nMay 29 - FC, US No. 20; FC, WDC No. 208.\nJune 6 - IFC, IBC, one-page dog gag, US No. 21; apple-bobbing gag, US No. 33.\nJune 20 - \"Titanic Ants,\" DD No. 60; GG, US No. 21; FC, US No. 22.\nJuly 25 - FC, DD No. 57; one-page island gag, US No. 20; WDC No. 209; WDC No. 210; WDC No. 213.\nAug. 15 - FC, US No. 21; FC, WDC No. 209.\nAug. 22 - \"The Money Well,\" US No. 21.\nSept. 19 - Unpublished \"milkman\" story for WDC; WDC No. 215.\nOct. 10 - FC, US No. 24.\nOct. ? - WDC No. 216.\nOct. 24 - WDC No. 217.\nOct. 31 - Water skiing story, DD No. 60; one-page gags for US No. 22 (three), 23 (one), 31 (one), 37 (one).\nNov. 7 - FC, WDC No. 212; FC, WDC No. 214.\nNov. 21 - \"King of the Golden River,\" US No. 22.\nDec. 5 - One-page gags for US No. 23, 33.\nDec. 12 - GG, US No. 22\nDec. 19 - FC, WDC No. 215.\nDec. 31 - \"Strange Shipwrecks,\" US No. 23.",
+          "bbox": [
+            {
+              "h": 11.391402439024404,
+              "w": 125.65824480754571,
+              "x": 11.942305878429876,
+              "y": 300.4876143292683,
+              "confidence": 0.7,
+              "end_index": 1320,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1958",
+          "value": "1958",
+          "bbox": [
+            {
+              "h": 4.623509908536587,
+              "w": 11.426913109756114,
+              "x": 151.06283917682924,
+              "y": 16.68775724085366,
+              "confidence": 0.9,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 9 - \"The Fabulous Tycoon,\" GG, US No. 23.\nJan. 10 - Half-page gag, US No. 25.\nJan. 20 - \"Twenty-four-carat Moon,\" GG, US No. 24.\nFeb. 4 - Disneyland Birthday Party No. 1.\nFeb. 7 - FC, WDC No. 216.\nFeb. 14 - WDC No. 218.\nFeb. 17 - One-page gag, DD No. 81; \" Magic Ink,\" US No. 24.\nMar. 5 - WDC No. 221.\nMar. 12 - WDC No. 219.\nMar. 19 - WDC No. 224.\nMar. 25 - IBC, US No. 23.\nApr. 4 - FC, WDC No. 218; FC, WDC No. 220.\nApr. 6 - Christmas Parade No. 9.\nApr. 14 - WDC No. 220; WDC No. 222.\nApr. 18 - WDC No. 223.\nApr. 20 - FC, DD No. 65; \"The Flying Dutchman,\" US No. 25.\nJune 9 - Pyramid story, GG, US No. 25.\nJune 16 - Ghost town story, GG, US No. 26.\nJune 24 - Unpublished cover for WDC (\"teeter totter on skis\").\nJuly 12 - \"The Money Champ,\" yacht race story, US No. 27.\nJuly 15 - GG, US No. 27.\nAug. 4 - FC, US No. 25; FC, US No. 30.\nAug. 11 - \"Prize of Pizarro,\" US No. 26\nAug. 15 - WDC No. 225.\nSept. 9 - One-page gag, DD No. 79; IFC, IBC, US No. 25.\nSept. 16 - WDC No. 226.\nSept. 20 - FC, WDC No. 226.\nOct. 1 - FC, US No. 26; FC, half-page gag, US No. 27; FC WDC No. 228; three unknown one-page gags for US.\nOct. 10 - WDC No. 227.\nOct. 15 - WDC No. 229.\nOct. 30 - WDC No. 230.\nNov. 10 - WDC No. 228.\nNov. 17 - WDC No. 231.\nNov. 22 - FC, WDC No. 229; FC, WDC No. 240.\nNov. 28 - Donald Duck and the Christmas Carol (children's book).\nDec. 15 - \"Paul Bunyan Machine,\" US No. 28.",
+          "value": "Jan. 9 - \"The Fabulous Tycoon,\" GG, US No. 23.\nJan. 10 - Half-page gag, US No. 25.\nJan. 20 - \"Twenty-four-carat Moon,\" GG, US No. 24.\nFeb. 4 - Disneyland Birthday Party No. 1.\nFeb. 7 - FC, WDC No. 216.\nFeb. 14 - WDC No. 218.\nFeb. 17 - One-page gag, DD No. 81; \" Magic Ink,\" US No. 24.\nMar. 5 - WDC No. 221.\nMar. 12 - WDC No. 219.\nMar. 19 - WDC No. 224.\nMar. 25 - IBC, US No. 23.\nApr. 4 - FC, WDC No. 218; FC, WDC No. 220.\nApr. 6 - Christmas Parade No. 9.\nApr. 14 - WDC No. 220; WDC No. 222.\nApr. 18 - WDC No. 223.\nApr. 20 - FC, DD No. 65; \"The Flying Dutchman,\" US No. 25.\nJune 9 - Pyramid story, GG, US No. 25.\nJune 16 - Ghost town story, GG, US No. 26.\nJune 24 - Unpublished cover for WDC (\"teeter totter on skis\").\nJuly 12 - \"The Money Champ,\" yacht race story, US No. 27.\nJuly 15 - GG, US No. 27.\nAug. 4 - FC, US No. 25; FC, US No. 30.\nAug. 11 - \"Prize of Pizarro,\" US No. 26\nAug. 15 - WDC No. 225.\nSept. 9 - One-page gag, DD No. 79; IFC, IBC, US No. 25.\nSept. 16 - WDC No. 226.\nSept. 20 - FC, WDC No. 226.\nOct. 1 - FC, US No. 26; FC, half-page gag, US No. 27; FC WDC No. 228; three unknown one-page gags for US.\nOct. 10 - WDC No. 227.\nOct. 15 - WDC No. 229.\nOct. 30 - WDC No. 230.\nNov. 10 - WDC No. 228.\nNov. 17 - WDC No. 231.\nNov. 22 - FC, WDC No. 229; FC, WDC No. 240.\nNov. 28 - Donald Duck and the Christmas Carol (children's book).\nDec. 15 - \"Paul Bunyan Machine,\" US No. 28.",
+          "bbox": [
+            {
+              "h": 11.254710365853652,
+              "w": 125.35115282012194,
+              "x": 151.24530868902437,
+              "y": 206.27165396341462,
+              "confidence": 0.71,
+              "end_index": 1383,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# 1959",
+          "value": "1959",
+          "bbox": [
+            {
+              "h": 4.672065548780465,
+              "w": 11.259449314024376,
+              "x": 151.41767721036584,
+              "y": 277.26482469512194,
+              "confidence": 0.94,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Jan. 2 - FC, WDC No. 230; FC, WDC No. 231; FC, WDC No. 233; unpublished \"seashells\" cover.\nJan. 8 - \"Fun? What's That?\" Summer Fun No. 2.\nJan. 16 - Witching stick story, GG, US No. 28.\nJan. 22 - FC, WDC No. 237.\nJan. 30 - \"Jungle Hi-jinks,\" Summer Fun No. 2.\nFeb. 4 - FC, GG 4C No. 1047.\nFeb. 14 - Vacation in Disneyland 4C No. 1025.\nMar. 6 - Grandma Duck's Farm Friends 4C No. 1010.",
+          "value": "Jan. 2 - FC, WDC No. 230; FC, WDC No. 231; FC, WDC No. 233; unpublished \"seashells\" cover.\nJan. 8 - \"Fun? What's That?\" Summer Fun No. 2.\nJan. 16 - Witching stick story, GG, US No. 28.\nJan. 22 - FC, WDC No. 237.\nJan. 30 - \"Jungle Hi-jinks,\" Summer Fun No. 2.\nFeb. 4 - FC, GG 4C No. 1047.\nFeb. 14 - Vacation in Disneyland 4C No. 1025.\nMar. 6 - Grandma Duck's Farm Friends 4C No. 1010.",
+          "bbox": [
+            {
+              "h": 11.77977896341461,
+              "w": 125.5928563262195,
+              "x": 150.63137766768293,
+              "y": 288.40028963414636,
+              "confidence": 0.74,
+              "end_index": 382,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book 211",
+              "value": "Carl Barks and the Art of the Comic Book 211",
+              "bbox": [
+                {
+                  "h": 4.5597942073171,
+                  "w": 77.89935594512194,
+                  "x": 174.20546112804877,
+                  "y": 363.24409298780483,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book 211",
+          "bbox": [
+            {
+              "h": 4.56,
+              "w": 77.9,
+              "x": 174.21,
+              "y": 363.24,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "211"
+    }
+  ]
+}

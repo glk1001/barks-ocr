@@ -1,0 +1,756 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "DONALD DUCK Balloonatics - 10 - The nephews, testing a new balloon gas for Gyro, disrupt Donald's leaf-raking, and Donald has Gyro construct a huge balloon for him. *(Mar. 11, 1960)*",
+          "value": "DONALD DUCK Balloonatics - 10 - The nephews, testing a new balloon gas for Gyro, disrupt Donald's leaf-raking, and Donald has Gyro construct a huge balloon for him. (Mar. 11, 1960)",
+          "bbox": [
+            {
+              "h": 19.657608612804875,
+              "w": 125.92796934546493,
+              "x": 10.598532178925304,
+              "y": 17.410949885670732,
+              "confidence": 0.96,
+              "end_index": 181,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 459, December 1978.",
+          "value": "Reprinted: Walt Disney's Comics No. 459, December 1978.",
+          "bbox": [
+            {
+              "h": 5.311157583841464,
+              "w": 118.38808772389481,
+              "x": 15.351234875190547,
+              "y": 41.673932926829266,
+              "confidence": 0.94,
+              "end_index": 54,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 243 (21/3) - December 1960 - 36 pages",
+          "value": "243 (21/3) - December 1960 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.405705030487811,
+              "w": 91.84285203887194,
+              "x": 10.968840034298779,
+              "y": 53.25375571646341,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews use a snow shovel as a sled. *(Apr. 23, 1959)*",
+          "value": "Front cover (art only): The nephews use a snow shovel as a sled. (Apr. 23, 1959)",
+          "bbox": [
+            {
+              "h": 11.564222560975601,
+              "w": 125.82713414634145,
+              "x": 10.915835556402438,
+              "y": 58.968658536585366,
+              "confidence": 0.97,
+              "end_index": 81,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This cover was originally scheduled for Walt Disney's Comics No. 232, January 1960.",
+          "value": "This cover was originally scheduled for Walt Disney's Comics No. 232, January 1960.",
+          "bbox": [
+            {
+              "h": 10.785988948170738,
+              "w": 126.07231790682164,
+              "x": 10.882163800495425,
+              "y": 71.36538681402439,
+              "confidence": 0.97,
+              "end_index": 82,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Turkey Trouble - 10 - Donald tries to capture the most wild turkeys so that he can dine with Daisy at her club's Thanksgiving feast, but he is competing with Gladstone. *(Apr. 11, 1960)*",
+          "value": "DONALD DUCK Turkey Trouble - 10 - Donald tries to capture the most wild turkeys so that he can dine with Daisy at her club's Thanksgiving feast, but he is competing with Gladstone. (Apr. 11, 1960)",
+          "bbox": [
+            {
+              "h": 23.289294969512188,
+              "w": 126.24596834508381,
+              "x": 10.908449528391767,
+              "y": 82.81014100609757,
+              "confidence": 0.97,
+              "end_index": 197,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 244 (21/4) - January 1961 - 36 pages",
+          "value": "244 (21/4) - January 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.546775914634145,
+              "w": 86.30759586985516,
+              "x": 11.222349823742377,
+              "y": 112.41070884146342,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Missile Fizzle - 10 - Donald, a broom boy on a missile base, tries to solve the mysterious explosions destroying every rocket that is fired. *(Apr. 11, 1960)*",
+          "value": "DONALD DUCK Missile Fizzle - 10 - Donald, a broom boy on a missile base, tries to solve the mysterious explosions destroying every rocket that is fired. (Apr. 11, 1960)",
+          "bbox": [
+            {
+              "h": 17.598772865853665,
+              "w": 126.05700886051828,
+              "x": 11.165997999237804,
+              "y": 118.26687118902439,
+              "confidence": 0.99,
+              "end_index": 169,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 245 - February 1961 - 36 pages",
+          "value": "245 - February 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.4957736280487826,
+              "w": 75.35730611661585,
+              "x": 11.259127762957316,
+              "y": 142.1793292682927,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Sitting High - 10 - While surrounded by celebrities at Palm Sands, Donald tries flagpole sitting in an effort to become famous, after other methods fail. *(Apr. 18, 1960)*",
+          "value": "DONALD DUCK Sitting High - 10 - While surrounded by celebrities at Palm Sands, Donald tries flagpole sitting in an effort to become famous, after other methods fail. (Apr. 18, 1960)",
+          "bbox": [
+            {
+              "h": 23.20488567073171,
+              "w": 126.04742127953503,
+              "x": 11.24257967320884,
+              "y": 147.84445884146342,
+              "confidence": 0.99,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 246 - March 1961 - 36 pages",
+          "value": "246 - March 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.368879573170752,
+              "w": 68.11243688071646,
+              "x": 11.478963652820122,
+              "y": 177.76189024390243,
+              "confidence": 0.97,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Lost Frontier - 10 - Donald takes the nephews to a mesa in the Grand Canyon to prove that a television explorer, Captain Gadabout, is a fraud. *(July 18, 1960)*",
+          "value": "DONALD DUCK Lost Frontier - 10 - Donald takes the nephews to a mesa in the Grand Canyon to prove that a television explorer, Captain Gadabout, is a fraud. (July 18, 1960)",
+          "bbox": [
+            {
+              "h": 23.097358993902436,
+              "w": 126.10744843273628,
+              "x": 11.43132157488567,
+              "y": 183.5850342987805,
+              "confidence": 0.98,
+              "end_index": 171,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 456, September 1978.",
+          "value": "Reprinted: Walt Disney's Comics No. 456, September 1978.",
+          "bbox": [
+            {
+              "h": 5.2766844512195075,
+              "w": 118.75171696360516,
+              "x": 15.783594583650913,
+              "y": 207.62810213414633,
+              "confidence": 0.96,
+              "end_index": 55,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 247 - April 1961 - 36 pages",
+          "value": "247 - April 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.499946646341477,
+              "w": 64.7747314453125,
+              "x": 11.46815632145579,
+              "y": 219.26227134146342,
+              "confidence": 0.97,
+              "end_index": 26,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald ducks as the nephews play with paddleballs. *(July 25, 1960)*",
+          "value": "Front cover (art only): Donald ducks as the nephews play with paddleballs. (July 25, 1960)",
+          "bbox": [
+            {
+              "h": 11.545655487804897,
+              "w": 126.01970786490091,
+              "x": 11.43571610613567,
+              "y": 224.90311737804876,
+              "confidence": 0.97,
+              "end_index": 91,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK The Madcap Mariner - 9 - Donald captains Scrooge's fishing boat in a race to bring back the first load of codfish, and Gyro is along as a \"secret weapon.\" *(July 11, 1960)*",
+          "value": "DONALD DUCK The Madcap Mariner - 9 - Donald captains Scrooge's fishing boat in a race to bring back the first load of codfish, and Gyro is along as a \"secret weapon.\" (July 11, 1960)",
+          "bbox": [
+            {
+              "h": 23.06981707317075,
+              "w": 126.17409417873473,
+              "x": 11.48942049352134,
+              "y": 236.90124237804878,
+              "confidence": 0.98,
+              "end_index": 183,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: This was submitted as a ten-page story; one page (probably the ninth of the original ten) was dropped by Western before publication.",
+          "value": "Changes: This was submitted as a ten-page story; one page (probably the ninth of the original ten) was dropped by Western before publication.",
+          "bbox": [
+            {
+              "h": 17.0491692073171,
+              "w": 126.07543588033533,
+              "x": 11.645520674542682,
+              "y": 260.88246951219514,
+              "confidence": 0.98,
+              "end_index": 140,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 457, October 1978.",
+          "value": "Reprinted: Walt Disney's Comics No. 457, October 1978.",
+          "bbox": [
+            {
+              "h": 5.183117378048809,
+              "w": 113.98094202553354,
+              "x": 16.305599514100606,
+              "y": 278.7211966463414,
+              "confidence": 0.95,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 248 (21/8) - May 1961 - 36 pages",
+          "value": "248 (21/8) - May 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.394649390243885,
+              "w": 76.55084687023627,
+              "x": 11.862174280678353,
+              "y": 290.3836737804878,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Terrible Tourist - 10 - Donald, a tourist in Central America, is thwarted in his efforts to serenade a senorita on her balcony. *(July 11, 1960)*",
+          "value": "DONALD DUCK Terrible Tourist - 10 - Donald, a tourist in Central America, is thwarted in his efforts to serenade a senorita on her balcony. (July 11, 1960)",
+          "bbox": [
+            {
+              "h": 17.2802057926829,
+              "w": 125.84246462938262,
+              "x": 11.857861209032011,
+              "y": 296.0792149390244,
+              "confidence": 0.98,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A new version of the unpublished \"DONALD DUCK\" story intended for Walt Disney's Comics No. 64, January 1946 (see \"Unpublished and Unidentified Material\").",
+          "value": "A new version of the unpublished \"DONALD DUCK\" story intended for Walt Disney's Comics No. 64, January 1946 (see \"Unpublished and Unidentified Material\").",
+          "bbox": [
+            {
+              "h": 17.23383384146342,
+              "w": 126.09086282869664,
+              "x": 11.736814381669205,
+              "y": 314.10676829268294,
+              "confidence": 0.98,
+              "end_index": 153,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 249 (21/9) - June 1961 - 36 pages",
+          "value": "249 (21/9) - June 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.407202743902435,
+              "w": 76.82353718083078,
+              "x": 11.996344678925304,
+              "y": 337.7784146341464,
+              "confidence": 0.96,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Stranger Than Fiction - 9 - Donald",
+          "value": "DONALD DUCK Stranger Than Fiction - 9 - Donald",
+          "bbox": [
+            {
+              "h": 5.49994664634145,
+              "w": 120.8752509289253,
+              "x": 17.08726336223323,
+              "y": 343.4031173780488,
+              "confidence": 0.96,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "finds that Gyro has invented a machine described in a science-fiction story that he has refused to permit the nephews to read. *(Oct. 31, 1960)*",
+          "value": "finds that Gyro has invented a machine described in a science-fiction story that he has refused to permit the nephews to read. (Oct. 31, 1960)",
+          "bbox": [
+            {
+              "h": 17.237801067073175,
+              "w": 125.81542111280487,
+              "x": 149.42483231707317,
+              "y": 17.279591272865854,
+              "confidence": 0.98,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: This was submitted as a ten-page story; one page was dropped by Western before publication.",
+          "value": "Changes: This was submitted as a ten-page story; one page was dropped by Western before publication.",
+          "bbox": [
+            {
+              "h": 11.146209032012194,
+              "w": 125.62533727134142,
+              "x": 149.55249237804878,
+              "y": 35.55481040396341,
+              "confidence": 0.97,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The science-fiction story, \"Ten Seconds to Mars,\" is by \"Spicer Willits,\" a reference to John and Bill Spicer and Malcolm Willits, three of the first comics fans to get in touch with Barks.",
+          "value": "The science-fiction story, \"Ten Seconds to Mars,\" is by \"Spicer Willits,\" a reference to John and Bill Spicer and Malcolm Willits, three of the first comics fans to get in touch with Barks.",
+          "bbox": [
+            {
+              "h": 17.072306592987804,
+              "w": 126.01510861280487,
+              "x": 149.50293064024387,
+              "y": 47.355768864329264,
+              "confidence": 0.97,
+              "end_index": 188,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney's Comics No. 409, October 1974.",
+          "value": "Reprinted: Walt Disney's Comics No. 409, October 1974.",
+          "bbox": [
+            {
+              "h": 5.265988948170725,
+              "w": 114.16124428353655,
+              "x": 154.00378810975607,
+              "y": 65.08064405487805,
+              "confidence": 0.92,
+              "end_index": 53,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 250 (21/10) - July 1961 - 36 pages",
+          "value": "250 (21/10) - July 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.50921875,
+              "w": 78.2681707317073,
+              "x": 149.77581173780487,
+              "y": 76.69457698170731,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews have stacked Donald's grill high with charcoal. *(Sept. 19, 1960)*",
+          "value": "Front cover (art only): The nephews have stacked Donald's grill high with charcoal. (Sept. 19, 1960)",
+          "bbox": [
+            {
+              "h": 11.499472179878044,
+              "w": 125.93452362804878,
+              "x": 149.6164596036585,
+              "y": 82.5585880335366,
+              "confidence": 0.97,
+              "end_index": 101,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Boxed-in - 10 - art and rewriting of script - Donald has to borrow money from the nephews to take Daisy to a box lunch social, and they try to sabotage his car on his way to the social. *(Nov. 12, 1960)*",
+          "value": "DONALD DUCK Boxed-in - 10 - art and rewriting of script - Donald has to borrow money from the nephews to take Daisy to a box lunch social, and they try to sabotage his car on his way to the social. (Nov. 12, 1960)",
+          "bbox": [
+            {
+              "h": 22.732648628048768,
+              "w": 125.90571265243898,
+              "x": 149.77936166158537,
+              "y": 94.63470274390245,
+              "confidence": 0.98,
+              "end_index": 214,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"I have just finished drawing two ten-page Donalds for Disney Comics that were scripted by an outsider. Editor Chase Craig sent me the two scripts while I was busy drawing the Gyro #3. I welcomed them as a chance to gain some time. Besides, I thought the writer might be some beginner who'd be encouraged by having his stuff used. Well, after days of rewriting and gag-propping on the scripts, all for free, I got them in shape and drew the art. Then, too late, I noticed on the border of one of the sheets the barely legible name of the author. It'd been erased, but I could make out the moniker of an old hack who has been around the game for years, and has never caught onto the duck style. Boy, do I feel let down.\" *(Dec. 30, 1960, letter to Malcolm Willits)*",
+          "value": "Barks: \"I have just finished drawing two ten-page Donalds for Disney Comics that were scripted by an outsider. Editor Chase Craig sent me the two scripts while I was busy drawing the Gyro #3. I welcomed them as a chance to gain some time. Besides, I thought the writer might be some beginner who'd be encouraged by having his stuff used. Well, after days of rewriting and gag-propping on the scripts, all for free, I got them in shape and drew the art. Then, too late, I noticed on the border of one of the sheets the barely legible name of the author. It'd been erased, but I could make out the moniker of an old hack who has been around the game for years, and has never caught onto the duck style. Boy, do I feel let down.\" (Dec. 30, 1960, letter to Malcolm Willits)",
+          "bbox": [
+            {
+              "h": 75.54074314024389,
+              "w": 126.20855373475608,
+              "x": 149.9152362804878,
+              "y": 118.54229039634146,
+              "confidence": 0.99,
+              "end_index": 770,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 251 (21/11) - August 1961 - 36 pages",
+          "value": "251 (21/11) - August 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.56744664634145,
+              "w": 86.65022675304878,
+              "x": 150.07657774390242,
+              "y": 201.22826981707317,
+              "confidence": 0.97,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Duck Luck - 10 - art and rewriting of script - Donald refuses to believe a fortune cookie's warning that he \"can't do anything right\" that day — but he can't, as Gladstone proves to him. *(Dec. 28, 1960)*",
+          "value": "DONALD DUCK Duck Luck - 10 - art and rewriting of script - Donald refuses to believe a fortune cookie's warning that he \"can't do anything right\" that day — but he can't, as Gladstone proves to him. (Dec. 28, 1960)",
+          "bbox": [
+            {
+              "h": 23.176234756097564,
+              "w": 125.96758765243898,
+              "x": 150.01051829268292,
+              "y": 207.1058231707317,
+              "confidence": 0.98,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks: \"This story was from the office. I rewrote it very much.\" (See note to \"Boxed-in,\" Walt Disney's Comics No. 250, July 1961.)",
+          "value": "Barks: \"This story was from the office. I rewrote it very much.\" (See note to \"Boxed-in,\" Walt Disney's Comics No. 250, July 1961.)",
+          "bbox": [
+            {
+              "h": 16.420998475609768,
+              "w": 125.97986661585368,
+              "x": 150.1612957317073,
+              "y": 231.1155182926829,
+              "confidence": 0.98,
+              "end_index": 130,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Reprinted: Walt Disney Comics Digest No. 26, December 1970.",
+          "value": "Reprinted: Walt Disney Comics Digest No. 26, December 1970.",
+          "bbox": [
+            {
+              "h": 10.375403963414664,
+              "w": 125.7243407012195,
+              "x": 150.45300685975607,
+              "y": 248.92751524390243,
+              "confidence": 0.97,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 252 (21/12) - September 1961 - 36 pages",
+          "value": "252 (21/12) - September 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.58573932926829,
+              "w": 95.7362137957317,
+              "x": 150.4544988567073,
+              "y": 272.30286585365855,
+              "confidence": 0.97,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK Mr. Private Eye - 10 - Donald is hired to protect the huge \"cats-eye opal\" that Scrooge is presenting to an Oriental king — a job that gets tougher when the Beagle Boys show up. *(Jan. 10, 1961)*",
+          "value": "DONALD DUCK Mr. Private Eye - 10 - Donald is hired to protect the huge \"cats-eye opal\" that Scrooge is presenting to an Oriental king — a job that gets tougher when the Beagle Boys show up. (Jan. 10, 1961)",
+          "bbox": [
+            {
+              "h": 23.45608993902435,
+              "w": 125.93260289634148,
+              "x": 150.39733993902436,
+              "y": 278.10489329268296,
+              "confidence": 0.98,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "This was Barks's first story with the Beagle Boys for Walt Disney's Comics in almost ten years; their last previous appearance was in No. 135, December 1951.",
+          "value": "This was Barks's first story with the Beagle Boys for Walt Disney's Comics in almost ten years; their last previous appearance was in No. 135, December 1951.",
+          "bbox": [
+            {
+              "h": 16.379657012195075,
+              "w": 126.07096417682926,
+              "x": 150.26542682926828,
+              "y": 302.2785137195122,
+              "confidence": 0.98,
+              "end_index": 156,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 253 (22/1) - October 1961 - 36 pages",
+          "value": "253 (22/1) - October 1961 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.515038109756115,
+              "w": 86.12907393292684,
+              "x": 150.68042492378046,
+              "y": 325.5662195121951,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald cages the nephews in two market baskets. *(Sept. 19, 1960)*",
+          "value": "Front cover (art only): Donald cages the nephews in two market baskets. (Sept. 19, 1960)",
+          "bbox": [
+            {
+              "h": 11.36682164634145,
+              "w": 125.80334794207316,
+              "x": 150.61503429878047,
+              "y": 331.51333079268295,
+              "confidence": 0.96,
+              "end_index": 89,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Hound Hounder - 10 - Donald, Duck-",
+          "value": "DONALD DUCK Hound Hounder - 10 - Donald, Duck-",
+          "bbox": [
+            {
+              "h": 5.499786585365855,
+              "w": 120.73412538109753,
+              "x": 155.58780868902437,
+              "y": 343.28252286585365,
+              "confidence": 0.94,
+              "end_index": 45,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "184 Carl Barks and the Art of the Comic Book",
+              "value": "184 Carl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 4.46204268292684,
+                  "w": 77.91170779344512,
+                  "x": 36.662399485518286,
+                  "y": 364.5205335365854,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "184 Carl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 4.46,
+              "w": 77.91,
+              "x": 36.66,
+              "y": 364.52,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "184"
+    }
+  ]
+}

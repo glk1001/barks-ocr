@@ -1,0 +1,168 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# V.",
+          "value": "V.",
+          "bbox": [
+            {
+              "h": 27.981265243902435,
+              "w": 42.88705792682927,
+              "x": 120.41814786585365,
+              "y": 54.01995617378049,
+              "confidence": 0.82,
+              "end_index": 1,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "**ONE KEY TO THE** major changes in Barks's stories that began in 1947 was the introduction of strong supporting characters who hadn't appeared in the Disney animated cartoons but were entirely the products of Barks's imagination. As Donald and the nephews shared center stage, the demands on them became less severe. They now could be played off against the new characters, instead of just against one another. As they were, the stories involving only Donald and the nephews changed for the better, too.",
+          "value": "ONE KEY TO THE major changes in Barks's stories that began in 1947 was the introduction of strong supporting characters who hadn't appeared in the Disney animated cartoons but were entirely the products of Barks's imagination. As Donald and the nephews shared center stage, the demands on them became less severe. They now could be played off against the new characters, instead of just against one another. As they were, the stories involving only Donald and the nephews changed for the better, too.",
+          "bbox": [
+            {
+              "h": 89.21955411585368,
+              "w": 125.3975440644055,
+              "x": 10.505448504192072,
+              "y": 125.90287728658535,
+              "confidence": 0.99,
+              "end_index": 503,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "There were supporting characters before 1947 who appeared in more than one story in *Walt Disney's Comics*, but none of them jogged the ten-page stories out of their rut for very long. The best of these early characters was Mr. Jones, Donald's bushy-browed, prognathous, foul-tempered neighbor. (He played essentially the same role, in a few early Barks stories, that Black Pete played in such Donald Duck cartoons as *Trombone Trouble*, 1944.) Jones's warfare with Donald produced some of Barks's funniest and most inventive gags, but Jones vanished after a few years. The nephews' friend Herbert, a numbingly dopey little pig, also appeared in a few stories, was mentioned in passing in one or two others, and then dropped into limbo. Barks did not begin using Donald's girlfriend Daisy Duck until 1946, and his use of her thereafter was limited. She",
+          "value": "There were supporting characters before 1947 who appeared in more than one story in Walt Disney's Comics, but none of them jogged the ten-page stories out of their rut for very long. The best of these early characters was Mr. Jones, Donald's bushy-browed, prognathous, foul-tempered neighbor. (He played essentially the same role, in a few early Barks stories, that Black Pete played in such Donald Duck cartoons as Trombone Trouble, 1944.) Jones's warfare with Donald produced some of Barks's funniest and most inventive gags, but Jones vanished after a few years. The nephews' friend Herbert, a numbingly dopey little pig, also appeared in a few stories, was mentioned in passing in one or two others, and then dropped into limbo. Barks did not begin using Donald's girlfriend Daisy Duck until 1946, and his use of her thereafter was limited. She",
+          "bbox": [
+            {
+              "h": 139.87012957317071,
+              "w": 125.72356576314786,
+              "x": 10.923607445693596,
+              "y": 215.26593749999998,
+              "confidence": 0.99,
+              "end_index": 851,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "was more often a bone of contention between Donald and his cousin Gladstone than she was a character in her own right.",
+          "value": "was more often a bone of contention between Donald and his cousin Gladstone than she was a character in her own right.",
+          "bbox": [
+            {
+              "h": 22.36328506097562,
+              "w": 125.5332793445122,
+              "x": 148.91714176829265,
+              "y": 125.79804878048779,
+              "confidence": 0.98,
+              "end_index": 117,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "There were many other supporting characters who appeared in one story and then vanished. Some of them were wonderfully violent cranks, like Miss Moosey in the December 1945 *Walt Disney's Comics*; not only does she have a vicious watchdog, and wield a wicked broom, but she sics a nasty parrot on the unoffending Donald: \"Go after him, Esmeralda! Tear his eyes out!\" \"Men!\" the parrot shrieks. \"I hate 'em!\"",
+          "value": "There were many other supporting characters who appeared in one story and then vanished. Some of them were wonderfully violent cranks, like Miss Moosey in the December 1945 Walt Disney's Comics; not only does she have a vicious watchdog, and wield a wicked broom, but she sics a nasty parrot on the unoffending Donald: \"Go after him, Esmeralda! Tear his eyes out!\" \"Men!\" the parrot shrieks. \"I hate 'em!\"",
+          "bbox": [
+            {
+              "h": 73.05234374999999,
+              "w": 125.61286966463415,
+              "x": 149.27060785060974,
+              "y": 148.36290777439027,
+              "confidence": 0.99,
+              "end_index": 406,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "There was a lot of Miss Moosey's nastiness, but little of her energy, in Donald's Uncle Scrooge McDuck, who made his first appearance in \"Christmas on Bear Mountain,\" in a 1947 Donald Duck one-shot. As with the supporting characters who preceded him, Scrooge was introduced with no thought of using him again; he was simply a device for putting Donald and some bears together in a remote mountain cabin on Christmas Eve.",
+          "value": "There was a lot of Miss Moosey's nastiness, but little of her energy, in Donald's Uncle Scrooge McDuck, who made his first appearance in \"Christmas on Bear Mountain,\" in a 1947 Donald Duck one-shot. As with the supporting characters who preceded him, Scrooge was introduced with no thought of using him again; he was simply a device for putting Donald and some bears together in a remote mountain cabin on Christmas Eve.",
+          "bbox": [
+            {
+              "h": 73.05075457317075,
+              "w": 125.81538681402438,
+              "x": 149.65806402439023,
+              "y": 222.45402439024392,
+              "confidence": 0.99,
+              "end_index": 419,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge's debut was not auspicious. An elderly duck who looked like Donald with side whiskers and glasses, he first appeared clad in a dressing gown, with his cane at his side, and fully living up to his namesake's reputation. (Barks said in 1976, at the \"Newcon\" comics convention in Boston, that Andy Gump's Uncle Bim, in addition to Dickens's",
+          "value": "Scrooge's debut was not auspicious. An elderly duck who looked like Donald with side whiskers and glasses, he first appeared clad in a dressing gown, with his cane at his side, and fully living up to his namesake's reputation. (Barks said in 1976, at the \"Newcon\" comics convention in Boston, that Andy Gump's Uncle Bim, in addition to Dickens's",
+          "bbox": [
+            {
+              "h": 58.98198932926829,
+              "w": 125.59909870426829,
+              "x": 150.16323361280487,
+              "y": 296.44170731707317,
+              "confidence": 0.99,
+              "end_index": 344,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n45",
+              "value": "Carl Barks and the Art of the Comic Book\n45",
+              "bbox": [
+                {
+                  "h": 5.114634146341505,
+                  "w": 80.12164253048779,
+                  "x": 173.3252000762195,
+                  "y": 367.5457545731707,
+                  "confidence": 0.94,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n45",
+          "bbox": [
+            {
+              "h": 5.11,
+              "w": 80.12,
+              "x": 173.33,
+              "y": 367.55,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "45"
+    }
+  ]
+}

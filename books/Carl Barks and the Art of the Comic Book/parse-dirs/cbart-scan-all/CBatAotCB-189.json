@@ -1,0 +1,835 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "free ocean cruises, Donald memorizes sea poetry and wins one, too — but he is riding in the freight hatch, and they are in first class. (*Jan. 5, 1966*)\nReprinted: Walt Disney's Comics No. 442, July 1977.",
+          "value": "free ocean cruises, Donald memorizes sea poetry and wins one, too — but he is riding in the freight hatch, and they are in first class. (Jan. 5, 1966)\nReprinted: Walt Disney's Comics No. 442, July 1977.",
+          "bbox": [
+            {
+              "h": 16.93999047256097,
+              "w": 125.7278681164253,
+              "x": 10.371656464367376,
+              "y": 18.451189024390246,
+              "confidence": 0.94,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 313 (27/1) - October 1966 - 36 pages",
+          "value": "313 (27/1) - October 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5922675304878044,
+              "w": 87.87078529916158,
+              "x": 11.17314286394817,
+              "y": 48.4280087652439,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald plays a tune with drumstickson the nephews' helmets. (*Apr. 6, 1966*)",
+          "value": "Front cover (art only): Donald plays a tune with drumstickson the nephews' helmets. (Apr. 6, 1966)",
+          "bbox": [
+            {
+              "h": 11.544403582317079,
+              "w": 124.58387623856707,
+              "x": 11.237227991615853,
+              "y": 54.34270769817073,
+              "confidence": 0.96,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 314 (27/2) - November 1966 - 36 pages",
+          "value": "314 (27/2) - November 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.544740853658536,
+              "w": 94.87130037633383,
+              "x": 11.378647222751523,
+              "y": 72.40207888719513,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews' toy rocket lands in Daisy's cake. (*Apr 28, 1966*)",
+          "value": "Front cover (art only): The nephews' toy rocket lands in Daisy's cake. (Apr 28, 1966)",
+          "bbox": [
+            {
+              "h": 11.506669207317072,
+              "w": 124.64880275819358,
+              "x": 11.392113781440548,
+              "y": 78.39908917682928,
+              "confidence": 0.96,
+              "end_index": 86,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 315 (27/3) - December 1966 - 36 pages",
+          "value": "315 (27/3) - December 1966 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.561227134146347,
+              "w": 93.83252858231707,
+              "x": 11.333037347560975,
+              "y": 96.08947408536585,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Donald is frightened by the nephews' hat-rack \"ghost.\" (*June 2, 1966*)",
+          "value": "Front cover (art only): Donald is frightened by the nephews' hat-rack \"ghost.\" (June 2, 1966)",
+          "bbox": [
+            {
+              "h": 11.487004573170738,
+              "w": 124.60492389958078,
+              "x": 11.455534370236279,
+              "y": 102.07780106707317,
+              "confidence": 0.95,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 316 (27/4) - January 1967 - 36 pages",
+          "value": "316 (27/4) - January 1967 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.607804878048782,
+              "w": 88.38333662823932,
+              "x": 11.745041801638719,
+              "y": 119.30470655487805,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Daisy and a dalmatian are both wearing spotted coats. (*June 15, 1966*)",
+          "value": "Front cover (art only): Daisy and a dalmatian are both wearing spotted coats. (June 15, 1966)",
+          "bbox": [
+            {
+              "h": 11.581349085365854,
+              "w": 124.71109577458078,
+              "x": 11.807354111089937,
+              "y": 125.10618521341463,
+              "confidence": 0.97,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 319 (27/7) - April 1967 - 36 pages",
+          "value": "319 (27/7) - April 1967 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.710232469512202,
+              "w": 80.63037061737803,
+              "x": 11.566303353658537,
+              "y": 143.63435213414635,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews apply fingerpint powder to their piggy bank. (*Sept. 30, 1966*)",
+          "value": "Front cover (art only): The nephews apply fingerpint powder to their piggy bank. (Sept. 30, 1966)",
+          "bbox": [
+            {
+              "h": 11.617465701219507,
+              "w": 124.69720905583078,
+              "x": 11.68392566215701,
+              "y": 149.5990243902439,
+              "confidence": 0.97,
+              "end_index": 98,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 321 (27/9) - June 1967 - 36 pages",
+          "value": "321 (27/9) - June 1967 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.616230945121942,
+              "w": 76.43806068978658,
+              "x": 11.566925019054876,
+              "y": 166.6780449695122,
+              "confidence": 0.95,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews see no evil, hear no evil, speak no evil as Donald approaches an open manhole. (*Oct. 27, 1966*)",
+          "value": "Front cover (art only): The nephews see no evil, hear no evil, speak no evil as Donald approaches an open manhole. (Oct. 27, 1966)",
+          "bbox": [
+            {
+              "h": 17.08794969512197,
+              "w": 126.05979242092224,
+              "x": 11.393693669016768,
+              "y": 172.57104420731707,
+              "confidence": 0.98,
+              "end_index": 131,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 322 (27/10) - July 1967 - 36 pages",
+          "value": "322 (27/10) - July 1967 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.6303963414634195,
+              "w": 78.27063917206554,
+              "x": 11.56703327458079,
+              "y": 196.24104420731706,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Daisy has just cut off a horse's tail and is wearing it as a ponytail. (*Dec. 15, 1966*)",
+          "value": "Front cover (art only): Daisy has just cut off a horse's tail and is wearing it as a ponytail. (Dec. 15, 1966)",
+          "bbox": [
+            {
+              "h": 11.4196875,
+              "w": 125.82861328125,
+              "x": 11.566058974847559,
+              "y": 202.22124237804877,
+              "confidence": 0.97,
+              "end_index": 111,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 324 (27/12) - September 1967 - 36 pages",
+          "value": "324 (27/12) - September 1967 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.632339939024405,
+              "w": 95.56523544683688,
+              "x": 11.701482350419207,
+              "y": 219.92060213414635,
+              "confidence": 0.96,
+              "end_index": 38,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Smoke from the nephews' fire collects under Donald's umbrella. (*Feb. 15, 1967*)",
+          "value": "Front cover (art only): Smoke from the nephews' fire collects under Donald's umbrella. (Feb. 15, 1967)",
+          "bbox": [
+            {
+              "h": 11.453025914634145,
+              "w": 125.74255120998477,
+              "x": 11.713730230564023,
+              "y": 225.68295731707317,
+              "confidence": 0.97,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 326 (28/2) - November 1967 - 36 pages",
+          "value": "326 (28/2) - November 1967 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.698696646341477,
+              "w": 92.8665956078506,
+              "x": 11.787927067454268,
+              "y": 243.6360594512195,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews' toy rocket has just landed on Donald's house. (*Mar. 25, 1967*)",
+          "value": "Front cover (art only): The nephews' toy rocket has just landed on Donald's house. (Mar. 25, 1967)",
+          "bbox": [
+            {
+              "h": 11.093185975609794,
+              "w": 125.81335353944358,
+              "x": 11.708112733422254,
+              "y": 249.56963414634143,
+              "confidence": 0.97,
+              "end_index": 99,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 328 (28/4) - January 1968 - 36 pages",
+          "value": "328 (28/4) - January 1968 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.737980182926785,
+              "w": 86.28937249904725,
+              "x": 11.879971060403962,
+              "y": 267.4211432926829,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews use one of Donald's skis as a sled. (*June 21, 1967*)\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 148, January 1953.",
+          "value": "Front cover (art only): The nephews use one of Donald's skis as a sled. (June 21, 1967)\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 148, January 1953.",
+          "bbox": [
+            {
+              "h": 11.27073932926829,
+              "w": 126.00581900247711,
+              "x": 11.719510646913108,
+              "y": 273.3194817073171,
+              "confidence": 0.9,
+              "end_index": 166,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 329 (28/5) - February 1968 - 36 pages",
+          "value": "329 (28/5) - February 1968 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.58980945121948,
+              "w": 89.58532131288108,
+              "x": 12.043019959984756,
+              "y": 302.9106631097561,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): Water squirts from a snowman's \"mouth\" and hits Donald on the head. (*Aug. 11, 1967*)",
+          "value": "Front cover (art only): Water squirts from a snowman's \"mouth\" and hits Donald on the head. (Aug. 11, 1967)",
+          "bbox": [
+            {
+              "h": 17.09087652439026,
+              "w": 125.6921630859375,
+              "x": 12.200398842416158,
+              "y": 309.04650914634146,
+              "confidence": 0.98,
+              "end_index": 108,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 331 (28/7) - April 1968 - 36 pages",
+          "value": "331 (28/7) - April 1968 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.608285060975595,
+              "w": 78.83046065167683,
+              "x": 12.542416634908536,
+              "y": 332.971875,
+              "confidence": 0.97,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews are launching a \"moon rocket\" from a springboard. (*Sept. 15, 1967*)",
+          "value": "Front cover (art only): The nephews are launching a \"moon rocket\" from a springboard. (Sept. 15, 1967)",
+          "bbox": [
+            {
+              "h": 11.49818597560974,
+              "w": 126.54500440644053,
+              "x": 12.45283572313262,
+              "y": 338.87341463414634,
+              "confidence": 0.98,
+              "end_index": 103,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 332 (28/8) - May 1968 - 36 pages",
+          "value": "332 (28/8) - May 1968 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.633091653963413,
+              "w": 76.36968178353658,
+              "x": 149.80916730182923,
+              "y": 18.656618711890246,
+              "confidence": 0.97,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews take aim at a cuckoo clock with bow and arrow, popgun and slingshot. (*Oct. 9, 1967*)",
+          "value": "Front cover (art only): The nephews take aim at a cuckoo clock with bow and arrow, popgun and slingshot. (Oct. 9, 1967)",
+          "bbox": [
+            {
+              "h": 17.18604420731707,
+              "w": 125.86992187499999,
+              "x": 149.66267721036584,
+              "y": 24.391200457317073,
+              "confidence": 0.98,
+              "end_index": 120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 334 (28/10) - July 1968 - 36 pages",
+          "value": "334 (28/10) - July 1968 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.502467606707311,
+              "w": 78.2873094512195,
+              "x": 149.87037347560974,
+              "y": 48.26966844512195,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews are using a fish bowl to blow soap bubbles, with a fish in one bubble. (*Jan. 23, 1968*)",
+          "value": "Front cover (art only): The nephews are using a fish bowl to blow soap bubbles, with a fish in one bubble. (Jan. 23, 1968)",
+          "bbox": [
+            {
+              "h": 17.333734756097563,
+              "w": 125.88336699695124,
+              "x": 149.77474847560973,
+              "y": 53.952016006097566,
+              "confidence": 0.98,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 335 (28/11) - August 1968 - 36 pages",
+          "value": "335 (28/11) - August 1968 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.548519435975608,
+              "w": 86.4720788871951,
+              "x": 149.9540625,
+              "y": 77.82810022865853,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 129, June 1951.\nChanges: Panels on first page trimmed for indicia, except bottom row.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 129, June 1951.\nChanges: Panels on first page trimmed for indicia, except bottom row.",
+          "bbox": [
+            {
+              "h": 11.593719512195129,
+              "w": 126.12428163109753,
+              "x": 150.25794969512194,
+              "y": 201.64623475609756,
+              "confidence": 0.89,
+              "end_index": 143,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 341 (29/5) - February 1969 - 36 pages",
+          "value": "341 (29/5) - February 1969 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.538669969512188,
+              "w": 92.03810213414634,
+              "x": 149.99921684451218,
+              "y": 113.35397103658538,
+              "confidence": 0.96,
+              "end_index": 36,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): A snowman seems to have thrown a snowball that just hit Donald. (*June 7, 1968*)\nThe same idea — but a different drawing — was used for the cover of Walt Disney's Comics No. 256, January 1962.",
+          "value": "Front cover (art only): A snowman seems to have thrown a snowball that just hit Donald. (June 7, 1968)\nThe same idea — but a different drawing — was used for the cover of Walt Disney's Comics No. 256, January 1962.",
+          "bbox": [
+            {
+              "h": 11.24707317073171,
+              "w": 125.93641006097559,
+              "x": 149.97009717987802,
+              "y": 131.12168826219514,
+              "confidence": 0.89,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 342 (29/6) - March 1969 - 36 pages",
+          "value": "342 (29/6) - March 1969 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.65136432926829,
+              "w": 82.41067454268293,
+              "x": 150.20274580792682,
+              "y": 148.737256097561,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Front cover (art only): The nephews are using Daisy's portable hair dryer to pop popcorn. (*Aug. 28, 1968*)\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 131, August 1951.\nChanges: Panels on first page trimmed for indicia, except first panel.",
+          "value": "Front cover (art only): The nephews are using Daisy's portable hair dryer to pop popcorn. (Aug. 28, 1968)\nDONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 131, August 1951.\nChanges: Panels on first page trimmed for indicia, except first panel.",
+          "bbox": [
+            {
+              "h": 11.85315548780487,
+              "w": 126.00778582317075,
+              "x": 150.06030297256095,
+              "y": 154.57457698170734,
+              "confidence": 0.86,
+              "end_index": 254,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 343 (29/7) - April 1969 - 36 pages",
+          "value": "343 (29/7) - April 1969 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5983155487804925,
+              "w": 78.9466863567073,
+              "x": 150.3442625762195,
+              "y": 196.04124237804876,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 144, September 1952.\nChanges: Panels on first page trimmed for indicia, except first panel.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 144, September 1952.\nChanges: Panels on first page trimmed for indicia, except first panel.",
+          "bbox": [
+            {
+              "h": 11.520663109756114,
+              "w": 125.91580828410822,
+              "x": 11.989667135099085,
+              "y": 285.13703506097556,
+              "confidence": 0.89,
+              "end_index": 149,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 344 (29/8) - May 1969 - 36 pages",
+          "value": "344 (29/8) - May 1969 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.545678353658523,
+              "w": 78.39397865853658,
+              "x": 151.5934927591463,
+              "y": 231.80410060975612,
+              "confidence": 0.96,
+              "end_index": 31,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 127, April 1951.\nChanges: Panels on first page trimmed for indicia, except first panel.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 127, April 1951.\nChanges: Panels on first page trimmed for indicia, except first panel.",
+          "bbox": [
+            {
+              "h": 11.36084222560974,
+              "w": 126.16305640243898,
+              "x": 150.08721036585365,
+              "y": 166.4279725609756,
+              "confidence": 0.87,
+              "end_index": 145,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 345 (29/9) - June 1969 - 36 pages",
+          "value": "345 (29/9) - June 1969 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.538589939024405,
+              "w": 76.96673780487805,
+              "x": 150.6365739329268,
+              "y": 267.2192606707317,
+              "confidence": 0.96,
+              "end_index": 32,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 139, April 1952.\nChanges: Panels on first page trimmed for indicia.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 139, April 1952.\nChanges: Panels on first page trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 11.652233231707305,
+              "w": 126.09802591463414,
+              "x": 150.45367568597558,
+              "y": 237.36715701219512,
+              "confidence": 0.9,
+              "end_index": 125,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 346 (29/10) - July 1969 - 36 pages",
+          "value": "346 (29/10) - July 1969 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.491211890243885,
+              "w": 78.38828506097559,
+              "x": 150.84351562499998,
+              "y": 296.7061737804878,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 140, May 1952.\nChanges: Panels on first page trimmed for indicia.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 140, May 1952.\nChanges: Panels on first page trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 11.21213414634145,
+              "w": 123.75360137195122,
+              "x": 150.52520579268293,
+              "y": 273.2602362804878,
+              "confidence": 0.89,
+              "end_index": 123,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 347 (29/11) - August 1969 - 36 pages",
+          "value": "347 (29/11) - August 1969 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.5802743902438845,
+              "w": 86.81674733231706,
+              "x": 150.85251905487803,
+              "y": 326.40340701219515,
+              "confidence": 0.96,
+              "end_index": 35,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 141, June 1952.\nChanges: Panels on first page trimmed for indicia.",
+          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney's Comics No. 141, June 1952.\nChanges: Panels on first page trimmed for indicia.",
+          "bbox": [
+            {
+              "h": 11.511951219512188,
+              "w": 125.91142339939023,
+              "x": 149.89367949695122,
+              "y": 83.51830792682927,
+              "confidence": 0.9,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book\n189",
+              "value": "Carl Barks and the Art of the Comic Book\n189",
+              "bbox": [
+                {
+                  "h": 4.59290396341461,
+                  "w": 77.76325838414634,
+                  "x": 174.0183612804878,
+                  "y": 364.9573628048781,
+                  "confidence": 0.95,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book\n189",
+          "bbox": [
+            {
+              "h": 4.59,
+              "w": 77.76,
+              "x": 174.02,
+              "y": 364.96,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "189"
+    }
+  ]
+}

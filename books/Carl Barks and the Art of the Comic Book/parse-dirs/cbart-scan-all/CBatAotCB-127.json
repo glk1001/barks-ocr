@@ -1,0 +1,743 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "Next, I was asked to combine Benny with Barney Bear into an 8-page, 8-panel format as a regular feature, starting in *Our Gang* No. 11.",
+              "value": "Next, I was asked to combine Benny with Barney Bear into an 8-page, 8-panel format as a regular feature, starting in Our Gang No. 11.",
+              "bbox": [
+                {
+                  "h": 16.14965796493902,
+                  "w": 124.74572896817835,
+                  "x": 12.405001786394816,
+                  "y": 17.63283727134146,
+                  "confidence": 0.96,
+                  "end_index": 134,
+                  "label": "text",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "10. Next, I was asked to combine Benny with Barney Bear into an 8-page, 8-panel format as a regular feature, starting in *Our Gang* No. 11.",
+          "ordered": true,
+          "bbox": [
+            {
+              "h": 16.15,
+              "w": 124.75,
+              "x": 12.41,
+              "y": 17.63,
+              "confidence": 0.96,
+              "end_index": 138,
+              "label": "list",
+              "start_index": 0
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "md": "Benny is the burro from a 1942 Rudolf Ising cartoon for MGM, *Little Gravel Voice*; he has no name in that cartoon. \"About the name of Benny Burro, I don't believe I named him. My guess would be Eleanor Packer, who edited the comic books for Western in those days.\" (Mar. 8, 1970, letter to Michael Barrier)",
+          "value": "Benny is the burro from a 1942 Rudolf Ising cartoon for MGM, Little Gravel Voice; he has no name in that cartoon. \"About the name of Benny Burro, I don't believe I named him. My guess would be Eleanor Packer, who edited the comic books for Western in those days.\" (Mar. 8, 1970, letter to Michael Barrier)",
+          "bbox": [
+            {
+              "h": 28.986765434451222,
+              "w": 125.14574171112805,
+              "x": 12.15110184832317,
+              "y": 35.3710947027439,
+              "confidence": 0.99,
+              "end_index": 306,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 9 - Jan.-Feb. 1944 - 60 pages",
+          "value": "9 - Jan.-Feb. 1944 - 60 pages",
+          "bbox": [
+            {
+              "h": 5.619072027439015,
+              "w": 68.50497356135669,
+              "x": 12.262926591082316,
+              "y": 71.22047446646341,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "HAPPY HOUND (Detective) - 7 7/8 (pp. 21-28) - A prisoner escapes from Alca-sing Prison on Happy's day off, when Happy wants to go fishing, and Happy keeps crossing paths with the crook despite his best efforts not to. (*July 31, 1943*)",
+          "value": "HAPPY HOUND (Detective) - 7 7/8 (pp. 21-28) - A prisoner escapes from Alca-sing Prison on Happy's day off, when Happy wants to go fishing, and Happy keeps crossing paths with the crook despite his best efforts not to. (July 31, 1943)",
+          "bbox": [
+            {
+              "h": 23.432177972560986,
+              "w": 124.96095488757618,
+              "x": 12.574788252667682,
+              "y": 77.26533727134147,
+              "confidence": 0.95,
+              "end_index": 234,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"Happy Hound\" is actually Droopy, and the prisoner is the wolf who was Droopy's opponent in many of Tex Avery's MGM cartoons.",
+          "value": "\"Happy Hound\" is actually Droopy, and the prisoner is the wolf who was Droopy's opponent in many of Tex Avery's MGM cartoons.",
+          "bbox": [
+            {
+              "h": 16.283871951219506,
+              "w": 124.8403893149771,
+              "x": 12.518492163681401,
+              "y": 101.2897294207317,
+              "confidence": 0.95,
+              "end_index": 124,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A circulation statement fills out the eighth page.",
+          "value": "A circulation statement fills out the eighth page.",
+          "bbox": [
+            {
+              "h": 5.637793445121956,
+              "w": 97.471679568407,
+              "x": 17.297690667873475,
+              "y": 118.99618902439025,
+              "confidence": 0.93,
+              "end_index": 49,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BENNY \"THE LONESOME BURRO\" - 8 (pp. 41-48) - Benny plays follow-the-leader with a little mountain goat until his sneeze causes a snow slide that carries them into a wolf's cave. (*Aug. 12, 1943*)",
+          "value": "BENNY \"THE LONESOME BURRO\" - 8 (pp. 41-48) - Benny plays follow-the-leader with a little mountain goat until his sneeze causes a snow slide that carries them into a wolf's cave. (Aug. 12, 1943)",
+          "bbox": [
+            {
+              "h": 23.076665396341475,
+              "w": 124.97351895960365,
+              "x": 12.493592320884144,
+              "y": 125.0771112804878,
+              "confidence": 0.98,
+              "end_index": 194,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 10 - Mar.-Apr. 1944 - 52 pages",
+          "value": "10 - Mar.-Apr. 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.524275914634145,
+              "w": 74.26296708269815,
+              "x": 12.346761385289634,
+              "y": 155.57099085365854,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BENNY \"THE LONESOME BURRO\" - 8 - Benny goes to the desert to see \"the most beautiful bird in the world,\" a macaw who plays vicious tricks on him. (*Oct. 9, 1943*)",
+          "value": "BENNY \"THE LONESOME BURRO\" - 8 - Benny goes to the desert to see \"the most beautiful bird in the world,\" a macaw who plays vicious tricks on him. (Oct. 9, 1943)",
+          "bbox": [
+            {
+              "h": 17.59150152439026,
+              "w": 125.00305664062499,
+              "x": 12.495961080411584,
+              "y": 161.51366615853658,
+              "confidence": 0.98,
+              "end_index": 161,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 11 - May-June 1944 - 52 pages",
+          "value": "11 - May-June 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.586642530487797,
+              "w": 74.1041229992378,
+              "x": 12.379754668445122,
+              "y": 185.39530106707318,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney and Benny come to a Western town whose inhabitants are fleeing because of mysterious groans that are coming from a huge \"horn\" hollowed out of a mountain by a madman. (*Dec. 16, 1943*)",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney and Benny come to a Western town whose inhabitants are fleeing because of mysterious groans that are coming from a huge \"horn\" hollowed out of a mountain by a madman. (Dec. 16, 1943)",
+          "bbox": [
+            {
+              "h": 28.698269817073157,
+              "w": 125.12490627381858,
+              "x": 12.439707864900912,
+              "y": 191.48764481707317,
+              "confidence": 0.99,
+              "end_index": 224,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The first story with Barney and Benny as a team. They never appeared together in animated cartoons until *Half-pint Palomino*, a 1953 MGM cartoon directed by Dick Lundy (although Barney did have an unnamed burro as a foil in *The Prospecting Bear*, a 1941 cartoon directed by Rudolf Ising).",
+          "value": "The first story with Barney and Benny as a team. They never appeared together in animated cartoons until Half-pint Palomino, a 1953 MGM cartoon directed by Dick Lundy (although Barney did have an unnamed burro as a foil in The Prospecting Bear, a 1941 cartoon directed by Rudolf Ising).",
+          "bbox": [
+            {
+              "h": 29.43466463414632,
+              "w": 125.09637933498473,
+              "x": 12.49611971227134,
+              "y": 221.00924542682927,
+              "confidence": 0.99,
+              "end_index": 289,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "HAPPY HOUND Detective - 6 - Happy apathetically captures the wolf prisoner again, then lets him visit his \"mother,\" actually a disguised hoodlum. (*Oct. 30, 1943*)",
+          "value": "HAPPY HOUND Detective - 6 - Happy apathetically captures the wolf prisoner again, then lets him visit his \"mother,\" actually a disguised hoodlum. (Oct. 30, 1943)",
+          "bbox": [
+            {
+              "h": 17.48368902439026,
+              "w": 124.70544719416918,
+              "x": 12.70543123570884,
+              "y": 250.64643292682928,
+              "confidence": 0.97,
+              "end_index": 162,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks submitted this as an eight-page story; it was reduced to six by rearranging and altering the panels so that more could be accommodated on a page.",
+          "value": "Barks submitted this as an eight-page story; it was reduced to six by rearranging and altering the panels so that more could be accommodated on a page.",
+          "bbox": [
+            {
+              "h": 17.386600609756115,
+              "w": 124.77888731421493,
+              "x": 12.690221870236279,
+              "y": 268.59228658536585,
+              "confidence": 0.98,
+              "end_index": 150,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 12 - July-Aug. 1944 - 52 pages",
+          "value": "12 - July-Aug. 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.731349085365855,
+              "w": 72.06872189405487,
+              "x": 12.572865377286584,
+              "y": 292.17217225609755,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney and Benny go moose hunting, using Benny as a lure, but the moose they take home with them is only unconscious, not dead. (*Feb. 7, 1944*)",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney and Benny go moose hunting, using Benny as a lure, but the moose they take home with them is only unconscious, not dead. (Feb. 7, 1944)",
+          "bbox": [
+            {
+              "h": 22.933902439024404,
+              "w": 124.85528784775154,
+              "x": 12.62396520102896,
+              "y": 298.2632469512195,
+              "confidence": 0.99,
+              "end_index": 177,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 13 - Sept.-Oct. 1944 - 52 pages",
+          "value": "13 - Sept.-Oct. 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.622942073170725,
+              "w": 72.18060665967987,
+              "x": 12.499815405868901,
+              "y": 327.7608612804878,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney orders a cowboy outfit and tries Benny as his steed before deciding to capture a wild horse, \"Satan,\" \"the wildest, meanest brute",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney orders a cowboy outfit and tries Benny as his steed before deciding to capture a wild horse, \"Satan,\" \"the wildest, meanest brute",
+          "bbox": [
+            {
+              "h": 17.49878048780487,
+              "w": 124.72192990186737,
+              "x": 12.913939953315547,
+              "y": 333.83501524390243,
+              "confidence": 0.99,
+              "end_index": 169,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "on the whole range.\" (*Apr. 19, 1944*)",
+          "value": "on the whole range.\" (Apr. 19, 1944)",
+          "bbox": [
+            {
+              "h": 5.95422684832317,
+              "w": 75.65316310975608,
+              "x": 151.32745426829266,
+              "y": 17.95441834984756,
+              "confidence": 0.9,
+              "end_index": 37,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 14 - Nov.-Dec. 1944 - 52 pages",
+          "value": "14 - Nov.-Dec. 1944 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.734210175304876,
+              "w": 72.82912157012194,
+              "x": 150.9579706554878,
+              "y": 30.019827553353657,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney, a sheepherder, uses Benny as a decoy to trap a marauding wolf, and Benny is carried away by the wolf. (*July 11, 1944*)",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney, a sheepherder, uses Benny as a decoy to trap a marauding wolf, and Benny is carried away by the wolf. (July 11, 1944)",
+          "bbox": [
+            {
+              "h": 17.36620712652439,
+              "w": 124.94851943597557,
+              "x": 151.09163300304877,
+              "y": 36.232211318597564,
+              "confidence": 0.98,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 15 - Jan.-Feb. 1945 - 52 pages",
+          "value": "15 - Jan.-Feb. 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.740203887195123,
+              "w": 70.16803353658536,
+              "x": 150.74819931402436,
+              "y": 59.705939405487804,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney decides to become a matador after seeing a bullfight, but his \"practice\" with a bull in the open fields leaves him battered. (*Sept. 7, 1944*)",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney decides to become a matador after seeing a bullfight, but his \"practice\" with a bull in the open fields leaves him battered. (Sept. 7, 1944)",
+          "bbox": [
+            {
+              "h": 23.268492759146348,
+              "w": 125.34208079268289,
+              "x": 150.64170160060974,
+              "y": 65.6870350609756,
+              "confidence": 0.99,
+              "end_index": 182,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 16 - Mar.-Apr. 1945 - 52 pages",
+          "value": "16 - Mar.-Apr. 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.60847370426829,
+              "w": 73.3490224847561,
+              "x": 150.75569359756096,
+              "y": 95.41772675304878,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney is looking for a bee tree, and he finds not one but two angry cougars in a tree that is also filled with angry bees. (*Nov. 2, 1944*)",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney is looking for a bee tree, and he finds not one but two angry cougars in a tree that is also filled with angry bees. (Nov. 2, 1944)",
+          "bbox": [
+            {
+              "h": 23.050323932926826,
+              "w": 124.93174733231707,
+              "x": 150.89995426829267,
+              "y": 101.32768673780488,
+              "confidence": 0.99,
+              "end_index": 173,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 17 - May-June 1945 - 52 pages",
+          "value": "17 - May-June 1945 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.606147103658549,
+              "w": 73.74242949695122,
+              "x": 150.78860327743902,
+              "y": 131.06557545731707,
+              "confidence": 0.96,
+              "end_index": 28,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Barney inherits ten thousand acres of desert land and a divining rod, which leads him not to water but to oil, then gold, and finally diamonds — all of which he trades away for something to drink. (*Jan. 6, 1945*)",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Barney inherits ten thousand acres of desert land and a divining rod, which leads him not to water but to oil, then gold, and finally diamonds — all of which he trades away for something to drink. (Jan. 6, 1945)",
+          "bbox": [
+            {
+              "h": 29.26149009146342,
+              "w": 125.11843559451216,
+              "x": 150.83171684451216,
+              "y": 137.03216844512193,
+              "confidence": 0.99,
+              "end_index": 246,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 18 - July-Aug. 1945 - 36 pages",
+          "value": "18 - July-Aug. 1945 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.689058689024405,
+              "w": 72.74112804878047,
+              "x": 150.63237233231706,
+              "y": 172.49735899390242,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 6 - In Mexico, Barney serenades a senorita whose flower pot has fallen on his head, and wins her favor in competition with a rival serenader. (*Feb. 20, 1945*)",
+          "value": "BARNEY BEAR AND BENNY BURRO - 6 - In Mexico, Barney serenades a senorita whose flower pot has fallen on his head, and wins her favor in competition with a rival serenader. (Feb. 20, 1945)",
+          "bbox": [
+            {
+              "h": 23.331985518292694,
+              "w": 125.14505144817072,
+              "x": 150.6598799542683,
+              "y": 178.23232088414633,
+              "confidence": 0.98,
+              "end_index": 188,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Changes: Barks submitted this as an eight-page story; it was reduced to six pages, of ten or eleven panels each, by rearranging and altering the panels so that more could be accommodated on a page.",
+          "value": "Changes: Barks submitted this as an eight-page story; it was reduced to six pages, of ten or eleven panels each, by rearranging and altering the panels so that more could be accommodated on a page.",
+          "bbox": [
+            {
+              "h": 23.275038109756085,
+              "w": 124.93982469512194,
+              "x": 150.7904382621951,
+              "y": 202.4131554878049,
+              "confidence": 0.99,
+              "end_index": 196,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 19 - Sept.-Oct. 1945 - 36 pages",
+          "value": "19 - Sept.-Oct. 1945 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.60741615853658,
+              "w": 72.46294778963414,
+              "x": 150.6131307164634,
+              "y": 231.93144054878047,
+              "confidence": 0.96,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 6 - Barney goes fishing for a turtle for turtle soup, but catches the turtle on his toe, and it stays there despite Benny's efforts to remove it. (*Apr. 14, 1945*)",
+          "value": "BARNEY BEAR AND BENNY BURRO - 6 - Barney goes fishing for a turtle for turtle soup, but catches the turtle on his toe, and it stays there despite Benny's efforts to remove it. (Apr. 14, 1945)",
+          "bbox": [
+            {
+              "h": 23.349100609756114,
+              "w": 125.10958650914631,
+              "x": 150.58591463414632,
+              "y": 237.88307926829268,
+              "confidence": 0.98,
+              "end_index": 192,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages have ten panels each.",
+          "value": "These pages have ten panels each.",
+          "bbox": [
+            {
+              "h": 5.34868902439026,
+              "w": 68.70272103658536,
+              "x": 155.08877858231708,
+              "y": 261.8735213414634,
+              "confidence": 0.95,
+              "end_index": 32,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 20 - Nov.-Dec. 1945 - 36 pages",
+          "value": "20 - Nov.-Dec. 1945 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.60917682926829,
+              "w": 73.0929649390244,
+              "x": 150.38151105182925,
+              "y": 273.3830030487805,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 6 - Barney reads an old book on medicine and immediately decides he's suffering from the illnesses the book describes. (*June 13, 1945*)",
+          "value": "BARNEY BEAR AND BENNY BURRO - 6 - Barney reads an old book on medicine and immediately decides he's suffering from the illnesses the book describes. (June 13, 1945)",
+          "bbox": [
+            {
+              "h": 23.110609756097563,
+              "w": 125.02850419207316,
+              "x": 150.5901505335366,
+              "y": 279.3636356707317,
+              "confidence": 0.99,
+              "end_index": 165,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages have nine to eleven panels each; most have ten.",
+          "value": "These pages have nine to eleven panels each; most have ten.",
+          "bbox": [
+            {
+              "h": 5.540327743902435,
+              "w": 120.53755907012192,
+              "x": 155.06103086890244,
+              "y": 303.2855030487805,
+              "confidence": 0.96,
+              "end_index": 58,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## 21 - Jan.-Feb. 1946 - 52 pages",
+          "value": "21 - Jan.-Feb. 1946 - 52 pages",
+          "bbox": [
+            {
+              "h": 5.68561737804881,
+              "w": 70.2101524390244,
+              "x": 150.42560213414632,
+              "y": 315.3609375,
+              "confidence": 0.97,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "BARNEY BEAR AND BENNY BURRO - 8 - Benny forces Barney to go skiing on a beautiful winter day, but Barney goes to sleep for the winter at the top of the ski slope. (*Aug. 10, 1945*)",
+          "value": "BARNEY BEAR AND BENNY BURRO - 8 - Benny forces Barney to go skiing on a beautiful winter day, but Barney goes to sleep for the winter at the top of the ski slope. (Aug. 10, 1945)",
+          "bbox": [
+            {
+              "h": 23.266463414634146,
+              "w": 125.21169397865854,
+              "x": 150.4840987042683,
+              "y": 321.1767530487805,
+              "confidence": 0.99,
+              "end_index": 179,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "These pages are three panels deep.",
+          "value": "These pages are three panels deep.",
+          "bbox": [
+            {
+              "h": 5.4799390243902595,
+              "w": 69.00564786585365,
+              "x": 155.21877096036584,
+              "y": 345.24608231707316,
+              "confidence": 0.96,
+              "end_index": 33,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "Carl Barks and the Art of the Comic Book 127",
+              "value": "Carl Barks and the Art of the Comic Book 127",
+              "bbox": [
+                {
+                  "h": 4.85448932926829,
+                  "w": 77.65652057926829,
+                  "x": 171.86935403963415,
+                  "y": 365.4897027439024,
+                  "confidence": 0.94,
+                  "end_index": 43,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "Carl Barks and the Art of the Comic Book 127",
+          "bbox": [
+            {
+              "h": 4.85,
+              "w": 77.66,
+              "x": 171.87,
+              "y": 365.49,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 384.0,
+      "page_number": 1,
+      "page_width": 288.0,
+      "success": true,
+      "printed_page_number": "127"
+    }
+  ]
+}
