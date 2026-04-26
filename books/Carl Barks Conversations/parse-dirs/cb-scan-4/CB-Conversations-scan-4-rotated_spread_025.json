@@ -247,6 +247,25 @@
           "book_side": "left"
         },
         {
+          "caption": "",
+          "md": "![“Those Things That Came Along in the 20th Century and Beacme Obsolete”: Carl Barks on the Past, Present, and Future of Comic Books Donald Ault / 1999](CB-Conversations-scan-4-rotated_spread_025_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-4-rotated_spread_025_page_1_image_1_v2.png",
+          "bbox": [
+            {
+              "h": 185.18184,
+              "w": 303.6732,
+              "x": 91.69080000000001,
+              "y": 89.316,
+              "confidence": 0.84,
+              "end_index": 100,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
           "md": "Unpublished interview conducted 28 April 1999, Grants Pass, Oregon. Portions of this interview appeared in altered form under the title \"From the Duck's Mouth\" in the Carl Barks memorial issue of the *Comics Journal* #227, September 2000: 59–60. Reprinted by permission of Donald Ault.",
           "value": "Unpublished interview conducted 28 April 1999, Grants Pass, Oregon. Portions of this interview appeared in altered form under the title \"From the Duck's Mouth\" in the Carl Barks memorial issue of the Comics Journal #227, September 2000: 59–60. Reprinted by permission of Donald Ault.",
           "bbox": [

@@ -57,8 +57,26 @@
           "book_side": "left"
         },
         {
-          "md": "**DA:** When and how did your second wife assist you in your work?\n**CB:** My second wife's part in production of the finished art began slowly. That form of comic book work was new to me and to the editors. We had to try different paper sizes and types of drawing paper. I furnished the paper, buying it by the ream in a Hollywood art store. It was Strathmore high surface with lots of 'tooth' making it good for accented pen swooshes and good for gripping fine pointed brushes.",
-          "value": "DA: When and how did your second wife assist you in your work?\nCB: My second wife's part in production of the finished art began slowly. That form of comic book work was new to me and to the editors. We had to try different paper sizes and types of drawing paper. I furnished the paper, buying it by the ream in a Hollywood art store. It was Strathmore high surface with lots of 'tooth' making it good for accented pen swooshes and good for gripping fine pointed brushes.",
+          "md": "**DA:** When and how did your second wife assist you in your work?",
+          "value": "DA: When and how did your second wife assist you in your work?",
+          "bbox": [
+            {
+              "h": 89.26095399437884,
+              "w": 284.3128181539396,
+              "x": 86.4545120790063,
+              "y": 133.04619558641392,
+              "confidence": 0.97,
+              "end_index": 478,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**CB:** My second wife's part in production of the finished art began slowly. That form of comic book work was new to me and to the editors. We had to try different paper sizes and types of drawing paper. I furnished the paper, buying it by the ream in a Hollywood art store. It was Strathmore high surface with lots of 'tooth' making it good for accented pen swooshes and good for gripping fine pointed brushes.",
+          "value": "CB: My second wife's part in production of the finished art began slowly. That form of comic book work was new to me and to the editors. We had to try different paper sizes and types of drawing paper. I furnished the paper, buying it by the ream in a Hollywood art store. It was Strathmore high surface with lots of 'tooth' making it good for accented pen swooshes and good for gripping fine pointed brushes.",
           "bbox": [
             {
               "h": 89.26095399437884,
@@ -94,8 +112,8 @@
         },
         {
           "caption": "",
-          "md": "![Carl Barks: Spools of Memory Donald Ault / 2000](CB-Conversations-scan-4-rotated_spread_033_page_1_image_1_v2.jpg)",
-          "url": "CB-Conversations-scan-4-rotated_spread_033_page_1_image_1_v2.jpg",
+          "md": "![Carl Barks: Spools of Memory Donald Ault / 2000](CB-Conversations-scan-4-rotated_spread_033_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-4-rotated_spread_033_page_1_image_1_v2.png",
           "bbox": [
             {
               "h": 188.75448,

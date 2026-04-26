@@ -90,7 +90,7 @@
               "start_index": 0
             }
           ],
-          "type": "heading",
+          "type": "header",
           "book_side": "right"
         },
         {
@@ -108,13 +108,13 @@
               "start_index": 0
             }
           ],
-          "type": "text",
+          "type": "header",
           "book_side": "right"
         },
         {
-          "caption": "Speech bubble graphic containing the title and authors",
-          "md": "![Speech bubble graphic containing the title and authors](CB-Conversations-scan-4-rotated_spread_013_page_1_image_1_v2.jpg)",
-          "url": "CB-Conversations-scan-4-rotated_spread_013_page_1_image_1_v2.jpg",
+          "caption": "",
+          "md": "![Carl Barks Remembers \"A Perfect Life\" Donald Ault and Lynda Ault / 1997](CB-Conversations-scan-4-rotated_spread_013_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-4-rotated_spread_013_page_1_image_1_v2.png",
           "bbox": [
             {
               "h": 35.839434889481744,

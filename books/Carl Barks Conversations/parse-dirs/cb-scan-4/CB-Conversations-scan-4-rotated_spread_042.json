@@ -91,25 +91,6 @@
           ],
           "type": "text",
           "book_side": "left"
-        },
-        {
-          "caption": "Blank page",
-          "md": "![Blank page](CB-Conversations-scan-4-rotated_spread_042_page_1_image_1_v2.jpg)",
-          "url": "CB-Conversations-scan-4-rotated_spread_042_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 593.1454911044425,
-              "w": 434.584494176353,
-              "x": 404.2002916706365,
-              "y": 0.8576042747497561,
-              "confidence": 0.78,
-              "end_index": 35,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image",
-          "book_side": "right"
         }
       ],
       "page_height": 595.44,

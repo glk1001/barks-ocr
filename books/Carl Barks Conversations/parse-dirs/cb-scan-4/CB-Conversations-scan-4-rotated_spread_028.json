@@ -39,6 +39,25 @@
           "book_side": "right"
         },
         {
+          "caption": "",
+          "md": "![Living the Stories: The Carl Barks Genius Donald Ault, Bruce Hamilton, John Ronan, and Nicky Wright / 1999](CB-Conversations-scan-4-rotated_spread_028_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-4-rotated_spread_028_page_1_image_1_v2.png",
+          "bbox": [
+            {
+              "h": 185.18184,
+              "w": 303.6732,
+              "x": 91.69080000000001,
+              "y": 89.316,
+              "confidence": 0.84,
+              "end_index": 100,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
           "md": "Excerpts from an unpublished interview conducted on 30 April 1999. Reprinted by permission of Donald Ault and Bruce Hamilton.",
           "value": "Excerpts from an unpublished interview conducted on 30 April 1999. Reprinted by permission of Donald Ault and Bruce Hamilton.",
           "bbox": [
