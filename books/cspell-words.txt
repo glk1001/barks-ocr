@@ -1,11 +1,15 @@
 # cspell word list — project-specific words
 # One word per line. Case-insensitive.
 
+alnum
+arminta
 ault
 backlink
 blockquotes
+desync
 ebooklib
 figcaption
+hrefs
 ivxlcdm
 llamaparse
 linkified
@@ -16,5 +20,6 @@ noteref
 pagebreak
 pdfium
 spellcheckable
+sluggable
 subline
 willits

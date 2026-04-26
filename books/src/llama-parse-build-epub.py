@@ -19,6 +19,7 @@ Example:
 
 import re
 import tomllib
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -743,6 +744,11 @@ def _linkify_index_entry(line: str, page_link_map: dict[str, tuple[str, int]]) -
     ``markdown-it`` builds the anchor; this side-steps tag-mismatch hazards
     when an entry contains italics like ``*Comic Art*``.
 
+    For ranged tokens (e.g. ``"43-44"`` or ``"60-62"``), the resolver tries
+    the first endpoint, then falls back to the second. LlamaParse occasionally
+    misses detecting a printed page number on its own page; if only one end of
+    a range is detected, we still want the range to be a clickable link.
+
     Args:
         line: One logical index entry (a single ``\n``-split line).
         page_link_map: Mapping of printed page number to its
@@ -759,43 +765,290 @@ def _linkify_index_entry(line: str, page_link_map: dict[str, tuple[str, int]]) -
 
     def _replace(match: re.Match[str]) -> str:
         token = match.group(0)
-        first_endpoint = _RANGE_SEP_RE.split(token, maxsplit=1)[0]
-        target = page_link_map.get(first_endpoint)
-        if target is None:
-            return token
-        file_name, page_index = target
-        return f"[{token}]({file_name}#page-{page_index})"
+        endpoints = _RANGE_SEP_RE.split(token, maxsplit=1)
+        for endpoint in endpoints:
+            target = page_link_map.get(endpoint)
+            if target is not None:
+                file_name, page_index = target
+                return f"[{token}]({file_name}#page-{page_index})"
+        return token
 
     return head + sep + _PAGE_REF_TOKEN_RE.sub(_replace, tail)
 
 
-def _render_index_xhtml(
-    section: _ChapterSection,
-    md_renderer: MarkdownIt,
-    page_link_map: dict[str, tuple[str, int]],
-) -> str:
-    r"""Render an index chapter section with linkified page references.
+# Cross-reference clause introducer. The index uses ``". See "`` and
+# ``". See also "`` (capital S) before a target term — confirmed against the
+# source data. The leading ``.`` keeps the regex from matching mid-sentence
+# uses of the word "see".
+_SEE_RE = re.compile(r"\.\s+See(?:\s+also)?\s+")
 
-    Each book page emits its pagebreak anchor (so the EPUB3 page-list nav
-    still picks up index pages), then each ``type: "text"`` item is split on
-    ``\n`` and each line becomes one ``<p class="index-entry">`` with page
-    references converted to internal hyperlinks.
+# Multi-target cross-references separate targets with a semicolon
+# (e.g. ``"See Barks, Dorothy (daughter); Barks, Peggy (daughter)"``).
+_TARGET_SEP = ";"
 
-    The cross-page paragraph-merge logic used by ``_render_section_xhtml`` is
-    deliberately skipped: index entries lack sentence-ending punctuation, so
-    that merge would glue the last entry of one page onto the first entry of
-    the next.
+# Decorative characters stripped before comparing entry terms — quotes
+# (straight + curly), markdown emphasis markers — so a bare cross-ref like
+# ``"Modern Inventions"`` matches the entry that adds a parenthetical
+# disambiguation, and italicized titles like ``*Comic Art*`` match either way.
+_TERM_DECOR_RE = re.compile(r"[*_`\"“”‘’]")  # noqa: RUF001
+_WS_RE = re.compile(r"\s+")
 
-    Args:
-        section: Index chapter section.
-        md_renderer: Markdown-it renderer.
-        page_link_map: Printed-page to (file, anchor) lookup.
+
+def _normalize_for_match(text: str) -> str:
+    """Return ``text`` lowercased with markdown/quote decoration stripped."""
+    cleaned = _TERM_DECOR_RE.sub("", text)
+    return _WS_RE.sub(" ", cleaned).strip().casefold()
+
+
+def _slugify_term(term: str) -> str:
+    """Return a stable ASCII id slug for an entry term (alnum + hyphens).
+
+    The slug is restricted to ASCII so that markdown-it's URL-encoding of
+    cross-reference fragments (e.g. ``é`` → ``%C3%A9``) cannot desync from
+    the literal ``id`` attribute on the target element — some EPUB readers
+    compare the two byte-for-byte.
+    """
+    cleaned = _TERM_DECOR_RE.sub("", term).casefold()
+    folded = unicodedata.normalize("NFKD", cleaned)
+    out: list[str] = []
+    for ch in folded:
+        if ch.isascii() and ch.isalnum():
+            out.append(ch)
+        elif out and out[-1] != "-":
+            out.append("-")
+    return "".join(out).strip("-")
+
+
+def _extract_index_term(line: str) -> str | None:
+    """Return the entry term portion of an index ``line``, or ``None`` if empty.
+
+    The term ends at the earliest of:
+        * a ``:`` (introduces sub-entries on the same line, as in
+          ``"Early life: and cowboys, 55-56; ..."``);
+        * the first page-reference token (a number / roman numeral after the
+          term, as in ``"Anonymity, x, xi, ..."``);
+        * a ``". See"`` or ``". See also"`` clause (cross-reference entries
+          like ``"Audience. See Readership, attitude toward"``).
+
+    Trailing comma + whitespace is stripped so terms like ``"Beaumont, Charles"``
+    survive intact.
+    """
+    cuts: list[int] = []
+    colon = line.find(":")
+    if colon >= 0:
+        cuts.append(colon)
+    pr_match = _PAGE_REF_TOKEN_RE.search(line)
+    if pr_match is not None:
+        cuts.append(pr_match.start())
+    see_match = _SEE_RE.search(line)
+    if see_match is not None:
+        cuts.append(see_match.start())
+    cut = min(cuts) if cuts else len(line)
+    term = line[:cut].rstrip(", \t").rstrip()
+    return term or None
+
+
+@dataclass(frozen=True)
+class _IndexTermLookup:
+    """Pre-built lookup tables used to resolve cross-reference targets."""
+
+    by_norm: dict[str, str]
+    norms_desc: list[str]
+    norms_asc: list[str]
+
+
+def _build_index_term_lookup(by_norm: dict[str, str]) -> _IndexTermLookup:
+    """Return an ``_IndexTermLookup`` with the longest-first / shortest-first lists."""
+    norms_desc: list[str] = list(by_norm)
+    norms_desc.sort(key=len, reverse=True)
+    norms_asc: list[str] = list(by_norm)
+    norms_asc.sort(key=len)
+    return _IndexTermLookup(by_norm=by_norm, norms_desc=norms_desc, norms_asc=norms_asc)
+
+
+def _collect_index_terms(section: _ChapterSection) -> dict[str, str]:
+    """Walk every index line and return ``{normalized_term: slug}``.
+
+    First-occurrence wins on duplicate terms. Empty / un-sluggable terms are
+    dropped.
+    """
+    terms: dict[str, str] = {}
+    for page in section.pages:
+        for item in page.items:
+            if item.get("type") != "text":
+                continue
+            md = item.get("md")
+            if not isinstance(md, str):
+                continue
+            for raw_line in md.split("\n"):
+                line = raw_line.strip()
+                if not line:
+                    continue
+                term = _extract_index_term(line)
+                if term is None:
+                    continue
+                norm = _normalize_for_match(term)
+                if not norm or norm in terms:
+                    continue
+                slug = _slugify_term(term)
+                if slug:
+                    terms[norm] = slug
+    return terms
+
+
+def _is_word_aligned(haystack: str, needle_len: int) -> bool:
+    """Return True if position ``needle_len`` in ``haystack`` is on a word boundary."""
+    return needle_len == len(haystack) or not haystack[needle_len].isalnum()
+
+
+def _term_prefix_of_target(
+    target_norm: str, norms_desc: list[str], terms_by_norm: dict[str, str]
+) -> str | None:
+    """Return the longest term in ``norms_desc`` that is a word-aligned prefix of target."""
+    for norm in norms_desc:
+        if len(norm) >= len(target_norm):
+            continue
+        if not target_norm.startswith(norm):
+            continue
+        if not _is_word_aligned(target_norm, len(norm)):
+            continue
+        return terms_by_norm[norm]
+    return None
+
+
+def _term_extending_target(
+    target_norm: str, norms_asc: list[str], terms_by_norm: dict[str, str]
+) -> str | None:
+    """Return the shortest term in ``norms_asc`` that has target as a word-aligned prefix."""
+    for norm in norms_asc:
+        if len(norm) <= len(target_norm):
+            continue
+        if not norm.startswith(target_norm):
+            continue
+        if not _is_word_aligned(norm, len(target_norm)):
+            continue
+        return terms_by_norm[norm]
+    return None
+
+
+def _find_target_slug(target: str, lookup: _IndexTermLookup) -> str | None:
+    """Resolve a cross-reference ``target`` to an entry slug.
+
+    Tries, in order:
+        1. Exact normalized match (``"Readership, attitude toward"`` →
+           identical entry term).
+        2. Term is a word-aligned prefix of the target (``"Early life"``
+           is a prefix of ``"Early life, parents"``); pick the longest
+           matching term so a more-specific entry wins over a generic one.
+        3. Target is a word-aligned prefix of the term (a bare cross-ref
+           like ``"Modern Inventions"`` resolves to an entry whose printed
+           term has a parenthetical expansion); pick the shortest matching
+           term so we don't over-reach into a longer entry that merely
+           starts with the same words.
 
     Returns:
-        XHTML body for the section (without the outer ``<div class="chapter">``).
+        The slug of the matched entry, or ``None`` if nothing resolved.
 
     """
-    parts: list[str] = [f"<h1>{escape(section.title)}</h1>"]
+    target_norm = _normalize_for_match(target)
+    if not target_norm:
+        return None
+    exact = lookup.by_norm.get(target_norm)
+    if exact is not None:
+        return exact
+    longer = _term_prefix_of_target(target_norm, lookup.norms_desc, lookup.by_norm)
+    if longer is not None:
+        return longer
+    return _term_extending_target(target_norm, lookup.norms_asc, lookup.by_norm)
+
+
+def _linkify_index_cross_refs(
+    line: str,
+    index_file_name: str,
+    lookup: _IndexTermLookup,
+    unmatched: list[str],
+) -> str:
+    """Wrap each ``See <target>`` cross-reference target in a markdown link.
+
+    Multi-target cross-references (separated by ``;``) have each target
+    resolved independently. Targets that do not resolve are appended to
+    ``unmatched`` and left as plain text so the caller can report them.
+
+    The href is qualified with ``index_file_name`` rather than left as a
+    fragment-only ``#entry-...`` so EPUB readers that don't follow same-doc
+    fragment links still navigate to the target entry.
+    """
+    match = _SEE_RE.search(line)
+    if match is None:
+        return line
+    head = line[: match.end()]
+    targets_text = line[match.end() :]
+    rendered_targets: list[str] = []
+    for raw_target in targets_text.split(_TARGET_SEP):
+        stripped = raw_target.strip()
+        if not stripped:
+            rendered_targets.append(raw_target)
+            continue
+        slug = _find_target_slug(stripped, lookup)
+        if slug is None:
+            unmatched.append(stripped)
+            rendered_targets.append(raw_target)
+            continue
+        leading = raw_target[: len(raw_target) - len(raw_target.lstrip())]
+        trailing = raw_target[len(raw_target.rstrip()) :]
+        rendered_targets.append(f"{leading}[{stripped}]({index_file_name}#entry-{slug}){trailing}")
+    return head + _TARGET_SEP.join(rendered_targets)
+
+
+@dataclass(frozen=True)
+class _IndexRenderContext:
+    """Bundle of per-section state used while rendering index entries."""
+
+    md_renderer: MarkdownIt
+    index_file_name: str
+    page_link_map: dict[str, tuple[str, int]]
+    term_lookup: _IndexTermLookup
+
+
+def _render_index_line(
+    line: str,
+    ctx: _IndexRenderContext,
+    unmatched: list[str],
+    emitted_ids: set[str],
+) -> str | None:
+    """Render one index entry ``line`` to a ``<p class="index-entry">`` fragment.
+
+    Returns ``None`` if the line produced no visible HTML (so the caller can
+    skip it). Mutates ``unmatched`` for cross-refs that didn't resolve and
+    ``emitted_ids`` to prevent duplicate ids on repeated terms.
+    """
+    linkified = _linkify_index_entry(line, ctx.page_link_map)
+    linkified = _linkify_index_cross_refs(
+        linkified, ctx.index_file_name, ctx.term_lookup, unmatched
+    )
+    rendered = ctx.md_renderer.renderInline(linkified).strip()
+    if not rendered:
+        return None
+    term = _extract_index_term(line)
+    slug = _slugify_term(term) if term else ""
+    if slug and slug not in emitted_ids:
+        emitted_ids.add(slug)
+        return f'<p class="index-entry" id="entry-{slug}">{rendered}</p>'
+    return f'<p class="index-entry">{rendered}</p>'
+
+
+def _render_index_pages(
+    section: _ChapterSection,
+    ctx: _IndexRenderContext,
+    unmatched: list[str],
+    emitted_ids: set[str],
+) -> list[str]:
+    """Walk ``section`` pages and return ordered XHTML fragments for each entry.
+
+    Pagebreak anchors precede the entries from each book page so the EPUB3
+    page-list nav still resolves printed page numbers from inside the index.
+    """
+    parts: list[str] = []
     for page in section.pages:
         if page.printed_page_number:
             parts.append(_page_anchor_html(page))
@@ -809,11 +1062,70 @@ def _render_index_xhtml(
                 line = raw_line.strip()
                 if not line:
                     continue
-                linkified = _linkify_index_entry(line, page_link_map)
-                rendered = md_renderer.renderInline(linkified).strip()
-                if not rendered:
-                    continue
-                parts.append(f'<p class="index-entry">{rendered}</p>')
+                rendered = _render_index_line(line, ctx, unmatched, emitted_ids)
+                if rendered is not None:
+                    parts.append(rendered)
+    return parts
+
+
+def _render_index_xhtml(
+    section: _ChapterSection,
+    index_file_name: str,
+    md_renderer: MarkdownIt,
+    page_link_map: dict[str, tuple[str, int]],
+) -> str:
+    r"""Render an index chapter section with linkified page references.
+
+    Each book page emits its pagebreak anchor (so the EPUB3 page-list nav
+    still picks up index pages), then each ``type: "text"`` item is split on
+    ``\n`` and each line becomes one ``<p class="index-entry">`` with page
+    references converted to internal hyperlinks.
+
+    Each entry's ``<p>`` carries an ``id="entry-<slug>"`` derived from its
+    term so that ``See <target>`` cross-reference clauses (e.g.
+    ``"Barks, Arminta Johnson (mother). See Early life, parents"``) can
+    resolve to internal hyperlinks pointing back at the target entry.
+
+    The cross-page paragraph-merge logic used by ``_render_section_xhtml`` is
+    deliberately skipped: index entries lack sentence-ending punctuation, so
+    that merge would glue the last entry of one page onto the first entry of
+    the next.
+
+    Args:
+        section: Index chapter section.
+        index_file_name: XHTML filename assigned to this index section, used
+            to qualify cross-reference hrefs (so EPUB readers that don't
+            follow same-doc fragment links still navigate correctly).
+        md_renderer: Markdown-it renderer.
+        page_link_map: Printed-page to (file, anchor) lookup.
+
+    Returns:
+        XHTML body for the section (without the outer ``<div class="chapter">``).
+
+    Raises:
+        ValueError: If any ``See <target>`` cross-reference fails to resolve
+            to a known entry. All unmatched targets are logged before raising.
+
+    """
+    term_lookup = _build_index_term_lookup(_collect_index_terms(section))
+    ctx = _IndexRenderContext(
+        md_renderer=md_renderer,
+        index_file_name=index_file_name,
+        page_link_map=page_link_map,
+        term_lookup=term_lookup,
+    )
+    unmatched: list[str] = []
+    emitted_ids: set[str] = set()
+    parts: list[str] = [f"<h1>{escape(section.title)}</h1>"]
+    parts.extend(_render_index_pages(section, ctx, unmatched, emitted_ids))
+    if unmatched:
+        for target in unmatched:
+            logger.error(f"Index cross-reference target not found: {target!r}")
+        msg = (
+            f"{len(unmatched)} index cross-reference target(s) did not match any entry. "
+            f"Check the index source for typos or missing terms."
+        )
+        raise ValueError(msg)
     return "\n".join(parts)
 
 
@@ -1161,7 +1473,7 @@ def _build_epub(  # noqa: PLR0913 - arg-per-option is reasonable for an epub bui
     toc_entries: list[epub.Link] = []
     for file_name, section in section_files:
         if section.kind == "index":
-            inner = _render_index_xhtml(section, md_renderer, page_link_map)
+            inner = _render_index_xhtml(section, file_name, md_renderer, page_link_map)
         elif section.kind == "contents":
             inner = _render_contents_xhtml(section, md_renderer, page_link_map)
         else:
