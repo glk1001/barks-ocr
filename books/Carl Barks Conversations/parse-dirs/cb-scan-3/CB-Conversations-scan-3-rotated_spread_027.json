@@ -40,8 +40,8 @@
         },
         {
           "caption": "",
-          "md": "![Interview with Carl Barks and Floyd Gottfredson Bruce Hamilton and BilL BLACKBEARD / 1983](CB-Conversations-scan-3-rotated_spread_027_page_1_seal_1_v2.jpg)",
-          "url": "CB-Conversations-scan-3-rotated_spread_027_page_1_seal_1_v2.jpg",
+          "md": "![Interview with Carl Barks and Floyd Gottfredson Bruce Hamilton and Bill BLACKBEARD / 1983](CB-Conversations-scan-3-rotated_spread_027_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-3-rotated_spread_027_page_1_image_1_v2.png",
           "bbox": [
             {
               "h": 185.2352603313167,
@@ -50,7 +50,7 @@
               "y": 107.17213531940742,
               "confidence": 0.85,
               "end_index": 113,
-              "label": "seal",
+              "label": "image",
               "start_index": 0
             }
           ],

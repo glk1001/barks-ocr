@@ -144,7 +144,7 @@
               "start_index": 2
             }
           ],
-          "type": "heading",
+          "type": "header",
           "book_side": "right"
         },
         {
@@ -163,7 +163,26 @@
               "start_index": 0
             }
           ],
-          "type": "heading",
+          "type": "header",
+          "book_side": "right"
+        },
+        {
+          "caption": "",
+          "md": "![An Interview with Carl and Garé Barks KLAUS STRZYZ / 1980 / 1975](CB-Conversations-scan-3-rotated_spread_015_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-3-rotated_spread_015_page_1_image_1_v2.png",
+          "bbox": [
+            {
+              "h": 185.77728000000002,
+              "w": 304.5144,
+              "x": 86.6436,
+              "y": 98.24760000000002,
+              "confidence": 0.76,
+              "end_index": 85,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
           "book_side": "right"
         },
         {

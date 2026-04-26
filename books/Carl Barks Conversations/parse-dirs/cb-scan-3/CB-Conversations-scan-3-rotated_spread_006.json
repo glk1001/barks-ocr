@@ -129,40 +129,58 @@
           "book_side": "left"
         },
         {
-          "level": 1,
-          "md": "# An Interview with Carl Barks, Duckburg's True Founding Father",
-          "value": "An Interview with Carl Barks, Duckburg's True Founding Father",
-          "bbox": [
+          "items": [
             {
-              "h": 61.3244945193407,
-              "w": 222.8708648294589,
-              "x": 482.2342695788873,
-              "y": 148.6775592773438,
-              "confidence": 0.91,
-              "end_index": 62,
-              "label": "paragraph_title",
-              "start_index": 0
+              "md": "DONALD AULT, THOMAS ANDRAE, AND STEPHEN GONG / 1975 91",
+              "value": "DONALD AULT, THOMAS ANDRAE, AND STEPHEN GONG / 1975 91",
+              "bbox": [
+                {
+                  "h": 8.94,
+                  "w": 108.57,
+                  "x": 616.97,
+                  "y": 35.49,
+                  "confidence": 1.0,
+                  "end_index": 22,
+                  "label": "header",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
             }
           ],
-          "type": "heading",
+          "md": "DONALD AULT, THOMAS ANDRAE, AND STEPHEN GONG / 1975 91",
+          "bbox": [
+            {
+              "h": 8.94,
+              "w": 108.57,
+              "x": 616.97,
+              "y": 35.49,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "header",
           "book_side": "right"
         },
         {
-          "md": "DONALD AULT, THOMAS ANDRAE, AND STEPHEN GONG / 1975",
-          "value": "DONALD AULT, THOMAS ANDRAE, AND STEPHEN GONG / 1975",
+          "caption": "",
+          "md": "![An Interview with Carl Barks, Duckburg's True Founding Father DONALD AULT, THOMAS ANDRAE, AND STEPHEN GONG / 1975](CB-Conversations-scan-3-rotated_spread_006_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-3-rotated_spread_006_page_1_image_1_v2.png",
           "bbox": [
             {
-              "h": 28.91509058689026,
-              "w": 195.39907488567079,
-              "x": 496.37992997332327,
-              "y": 225.93227918254578,
-              "confidence": 0.92,
-              "end_index": 50,
-              "label": "text",
+              "h": 185.77728000000002,
+              "w": 304.5144,
+              "x": 86.6436,
+              "y": 98.24760000000002,
+              "confidence": 0.76,
+              "end_index": 85,
+              "label": "image",
               "start_index": 0
             }
           ],
-          "type": "text",
+          "type": "image",
           "book_side": "right"
         },
         {

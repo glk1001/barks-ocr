@@ -114,8 +114,8 @@
         },
         {
           "caption": "",
-          "md": "![Fortune Favors the Bold: An Interview with Carl Barks by Edward Summer / 1981](CB-Conversations-scan-3-rotated_spread_022_page_1_seal_1_v2.jpg)",
-          "url": "CB-Conversations-scan-3-rotated_spread_022_page_1_seal_1_v2.jpg",
+          "md": "![Fortune Favors the Bold: An Interview with Carl Barks by Edward Summer / 1981](CB-Conversations-scan-3-rotated_spread_022_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-3-rotated_spread_022_page_1_image_1_v2.png",
           "bbox": [
             {
               "h": 186.53115499118712,
@@ -124,7 +124,7 @@
               "y": 111.28567633979614,
               "confidence": 0.78,
               "end_index": 101,
-              "label": "seal",
+              "label": "image",
               "start_index": 0
             }
           ],
