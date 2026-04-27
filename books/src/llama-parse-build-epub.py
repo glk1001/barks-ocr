@@ -693,9 +693,12 @@ def _merge_paragraph_across_pages(a_items: list[list[str]], b_items: list[list[s
 # A page reference is a roman numeral (lowercase) or 1-3 digit arabic number,
 # optionally a range joined by an en-dash (U+2013) or ASCII hyphen, with no
 # whitespace around the dash (confirmed against the source data). Both single
-# (``"129"``) and ranged (``"129-30"``, ``"xv-vi"``) tokens match.
+# (``"129"``) and ranged (``"129-30"``, ``"xv-vi"``) tokens match. The
+# negative lookbehind for ``#`` excludes comic-issue numbers in parentheticals
+# like ``"(FC #408)"`` or ``"(US #2)"`` — those are publication identifiers,
+# not page references, and have no entry in the printed-page map.
 _PAGE_REF_TOKEN_RE = re.compile(
-    r"\b(?:[ivxlcdm]+|\d{1,3})(?:[–-](?:[ivxlcdm]+|\d{1,3}))?\b"  # noqa: RUF001
+    r"(?<!#)\b(?:[ivxlcdm]+|\d{1,3})(?:[–-](?:[ivxlcdm]+|\d{1,3}))?\b"  # noqa: RUF001
 )
 _RANGE_SEP_RE = re.compile(r"[–-]")  # noqa: RUF001
 

@@ -18,6 +18,7 @@ metas
 mybook
 noteref
 pagebreak
+parentheticals
 pdfium
 spellcheckable
 sluggable
