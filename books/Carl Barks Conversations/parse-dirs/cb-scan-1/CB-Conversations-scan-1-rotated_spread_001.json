@@ -3,7 +3,7 @@
     {
       "items": [
         {
-          "md": "Conversations with Comic Artists\nM. Thomas Inge, General Editor",
+          "md": "Conversations with Comic Artists\nM. Thomas Inge, General Editor<div style=\"page-break-after: always;\"></div>",
           "value": "Conversations with Comic Artists\nM. Thomas Inge, General Editor",
           "bbox": [
             {
@@ -77,7 +77,7 @@
           "book_side": "right"
         },
         {
-          "md": "University Press of Mississippi\nJackson",
+          "md": "University Press of Mississippi\nJackson<div style=\"page-break-after: always;\"></div>",
           "value": "University Press of Mississippi\nJackson",
           "bbox": [
             {

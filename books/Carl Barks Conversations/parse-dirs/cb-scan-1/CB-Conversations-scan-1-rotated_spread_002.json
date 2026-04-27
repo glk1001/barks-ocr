@@ -3,7 +3,7 @@
     {
       "items": [
         {
-          "md": "[www.upress.state.ms.us](http://www.upress.state.ms.us)",
+          "md": "<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>[<p style=\"text-align: center;\">www.upress.state.ms.us</p>](http://www.upress.state.ms.us)",
           "text": "www.upress.state.ms.us",
           "url": "http://www.upress.state.ms.us",
           "bbox": [
@@ -22,7 +22,7 @@
           "book_side": "left"
         },
         {
-          "md": "The University Press of Mississippi is a member of the Association of American University Presses.",
+          "md": "<p style=\"text-align: center;\">The University Press of Mississippi is a member of the Association of American University Presses.</p>",
           "value": "The University Press of Mississippi is a member of the Association of American University Presses.",
           "bbox": [
             {
@@ -40,7 +40,7 @@
           "book_side": "left"
         },
         {
-          "md": "Copyright © 2003 by University Press of Mississippi\nAll rights reserved\nManufactured in the United States of America",
+          "md": "<p style=\"text-align: center;\">Copyright © 2003 by University Press of Mississippi\nAll rights reserved\nManufactured in the United States of America</p>",
           "value": "Copyright © 2003 by University Press of Mississippi\nAll rights reserved\nManufactured in the United States of America",
           "bbox": [
             {
@@ -58,7 +58,7 @@
           "book_side": "left"
         },
         {
-          "md": "11 10 09 08 07 06 05 04 03 4 3 2 1",
+          "md": "<p style=\"text-align: center;\">11 10 09 08 07 06 05 04 03 4 3 2 1</p>",
           "value": "11 10 09 08 07 06 05 04 03 4 3 2 1\n",
           "bbox": [
             {
@@ -76,9 +76,9 @@
           "book_side": "left"
         },
         {
-          "caption": "Registered trademark symbol",
-          "md": "![Registered trademark symbol](CB-Conversations-scan-1-rotated_spread_002_page_1_image_1_v2.jpg)",
-          "url": "CB-Conversations-scan-1-rotated_spread_002_page_1_image_1_v2.jpg",
+          "caption": "",
+          "md": "![Registered trademark symbol](CB-Conversations-scan-1-rotated_spread_002_page_1_image_1_v2.png)",
+          "url": "CB-Conversations-scan-1-rotated_spread_002_page_1_image_1_v2.png",
           "bbox": [
             {
               "h": 8.372988709984782,
@@ -95,7 +95,7 @@
           "book_side": "left"
         },
         {
-          "md": "Library of Congress Cataloging-in-Publication Data\nBarks, Carl, 1901–\nCarl Barks : conversations / edited by Donald Ault.\np. cm.\nISBN 1-57806-500-3 (cloth : alk. paper)—\nISBN 1-57806-501-1 (pbk : alk. paper)",
+          "md": "<br/><p style=\"text-align: center;\">Library of Congress Cataloging-in-Publication Data\nBarks, Carl, 1901–\nCarl Barks : conversations / edited by Donald Ault.\np. cm.\nISBN 1-57806-500-3 (cloth : alk. paper)—\nISBN 1-57806-501-1 (pbk : alk. paper)</p>",
           "value": "Library of Congress Cataloging-in-Publication Data\nBarks, Carl, 1901–\nCarl Barks : conversations / edited by Donald Ault.\np. cm.\nISBN 1-57806-500-3 (cloth : alk. paper)—\nISBN 1-57806-501-1 (pbk : alk. paper)",
           "bbox": [
             {
@@ -155,7 +155,7 @@
         {
           "items": [
             {
-              "md": "Barks, Carl, 1901– —Interviews. 2. Cartoonists—United States—Interviews. I. Ault, Donald D. II. Title.\nNC1766.U52 B37 2002\n741.5'092—dc21 2002011790",
+              "md": "<p style=\"text-align: center;\">Barks, Carl, 1901– —Interviews. 2. Cartoonists—United States—Interviews. I. Ault, Donald D. II. Title.\nNC1766.U52 B37 2002\n741.5'092—dc21 2002011790</p>",
               "value": "Barks, Carl, 1901– —Interviews. 2. Cartoonists—United States—Interviews. I. Ault, Donald D. II. Title.\nNC1766.U52 B37 2002\n741.5'092—dc21 2002011790",
               "bbox": [
                 {
@@ -222,7 +222,7 @@
               "type": "text"
             }
           ],
-          "md": "1. Barks, Carl, 1901– —Interviews. 2. Cartoonists—United States—Interviews. I. Ault, Donald D. II. Title.\n   NC1766.U52 B37 2002\n   741.5'092—dc21 2002011790",
+          "md": "<p style=\"text-align: center;\">1. Barks, Carl, 1901– —Interviews. 2. Cartoonists—United States—Interviews. I. Ault, Donald D. II. Title.\n   NC1766.U52 B37 2002\n   741.5'092—dc21 2002011790</p>",
           "ordered": true,
           "bbox": [
             {
@@ -240,7 +240,7 @@
           "book_side": "left"
         },
         {
-          "md": "British Library Cataloging-in-Publication Data available",
+          "md": "<p style=\"text-align: center;\">British Library Cataloging-in-Publication Data available</p>",
           "value": "British Library Cataloging-in-Publication Data available",
           "bbox": [
             {

@@ -729,16 +729,20 @@ def _build_page_link_map(
     return mapping
 
 
-def _linkify_index_entry(line: str, page_link_map: dict[str, tuple[str, int]]) -> str:
+def _linkify_index_entry(
+    line: str,
+    page_link_map: dict[str, tuple[str, int]],
+    unresolved: list[str] | None = None,
+) -> str:
     r"""Wrap page-reference tokens after the entry's first comma in Markdown links.
 
     The text before the first comma is the entry term and is passed through
     unchanged. After the first comma, every token matching
     ``_PAGE_REF_TOKEN_RE`` is wrapped in ``[label](file#page-K)`` if its
-    *first* endpoint resolves in ``page_link_map``. Non-resolving tokens
-    (e.g. the word ``civic`` or a typo'd second range endpoint like the
-    ``vi`` in ``xv-vi``) are left as plain text, so we never emit broken
-    links.
+    *first* endpoint resolves in ``page_link_map``. Non-resolving tokens are
+    left as plain text and (when ``unresolved`` is given) appended there so
+    the caller can flag them — typically a printed page number that
+    LlamaParse failed to detect, or a typo'd OCR range endpoint.
 
     Markdown link syntax is used (rather than raw ``<a>`` HTML) so that
     ``markdown-it`` builds the anchor; this side-steps tag-mismatch hazards
@@ -753,6 +757,8 @@ def _linkify_index_entry(line: str, page_link_map: dict[str, tuple[str, int]]) -
         line: One logical index entry (a single ``\n``-split line).
         page_link_map: Mapping of printed page number to its
             ``(xhtml_filename, page_index_global)``.
+        unresolved: Optional accumulator. When a page-ref token can't be
+            resolved (no endpoint found), the token's text is appended here.
 
     Returns:
         Markdown text with resolved page references replaced by
@@ -771,6 +777,8 @@ def _linkify_index_entry(line: str, page_link_map: dict[str, tuple[str, int]]) -
             if target is not None:
                 file_name, page_index = target
                 return f"[{token}]({file_name}#page-{page_index})"
+        if unresolved is not None:
+            unresolved.append(token)
         return token
 
     return head + sep + _PAGE_REF_TOKEN_RE.sub(_replace, tail)
@@ -1010,21 +1018,32 @@ class _IndexRenderContext:
     term_lookup: _IndexTermLookup
 
 
+@dataclass
+class _IndexErrors:
+    """Accumulator for index-build errors that should fail the run together."""
+
+    unmatched_xrefs: list[str]
+    unresolved_pages: list[tuple[str, str]]
+
+
 def _render_index_line(
     line: str,
     ctx: _IndexRenderContext,
-    unmatched: list[str],
+    errors: _IndexErrors,
     emitted_ids: set[str],
 ) -> str | None:
     """Render one index entry ``line`` to a ``<p class="index-entry">`` fragment.
 
     Returns ``None`` if the line produced no visible HTML (so the caller can
-    skip it). Mutates ``unmatched`` for cross-refs that didn't resolve and
+    skip it). Mutates ``errors`` for unresolved page-refs and cross-refs and
     ``emitted_ids`` to prevent duplicate ids on repeated terms.
     """
-    linkified = _linkify_index_entry(line, ctx.page_link_map)
+    line_unresolved: list[str] = []
+    linkified = _linkify_index_entry(line, ctx.page_link_map, line_unresolved)
+    for token in line_unresolved:
+        errors.unresolved_pages.append((line, token))
     linkified = _linkify_index_cross_refs(
-        linkified, ctx.index_file_name, ctx.term_lookup, unmatched
+        linkified, ctx.index_file_name, ctx.term_lookup, errors.unmatched_xrefs
     )
     rendered = ctx.md_renderer.renderInline(linkified).strip()
     if not rendered:
@@ -1040,7 +1059,7 @@ def _render_index_line(
 def _render_index_pages(
     section: _ChapterSection,
     ctx: _IndexRenderContext,
-    unmatched: list[str],
+    errors: _IndexErrors,
     emitted_ids: set[str],
 ) -> list[str]:
     """Walk ``section`` pages and return ordered XHTML fragments for each entry.
@@ -1062,10 +1081,34 @@ def _render_index_pages(
                 line = raw_line.strip()
                 if not line:
                     continue
-                rendered = _render_index_line(line, ctx, unmatched, emitted_ids)
+                rendered = _render_index_line(line, ctx, errors, emitted_ids)
                 if rendered is not None:
                     parts.append(rendered)
     return parts
+
+
+def _report_index_errors(errors: _IndexErrors) -> None:
+    """Log every accumulated error and raise if any were recorded.
+
+    Both unresolved page-refs and unmatched cross-references are reported
+    together so the user can fix everything in one pass.
+    """
+    for line, token in errors.unresolved_pages:
+        logger.error(
+            f"Index page reference not found in any printed page: {token!r} (in line: {line!r})"
+        )
+    for target in errors.unmatched_xrefs:
+        logger.error(f"Index cross-reference target not found: {target!r}")
+    total = len(errors.unresolved_pages) + len(errors.unmatched_xrefs)
+    if total == 0:
+        return
+    msg = (
+        f"Index build failed: {len(errors.unresolved_pages)} unresolved page "
+        f"reference(s), {len(errors.unmatched_xrefs)} unmatched cross-reference(s). "
+        f"Add the missing printed page numbers to the parse data, or fix the "
+        f"index source for typos."
+    )
+    raise ValueError(msg)
 
 
 def _render_index_xhtml(
@@ -1103,8 +1146,10 @@ def _render_index_xhtml(
         XHTML body for the section (without the outer ``<div class="chapter">``).
 
     Raises:
-        ValueError: If any ``See <target>`` cross-reference fails to resolve
-            to a known entry. All unmatched targets are logged before raising.
+        ValueError: If any page-reference token can't be resolved to a printed
+            page, or any ``See <target>`` cross-reference can't be resolved to
+            a known entry. All errors are logged before raising so the user
+            can fix everything in one pass.
 
     """
     term_lookup = _build_index_term_lookup(_collect_index_terms(section))
@@ -1114,18 +1159,11 @@ def _render_index_xhtml(
         page_link_map=page_link_map,
         term_lookup=term_lookup,
     )
-    unmatched: list[str] = []
+    errors = _IndexErrors(unmatched_xrefs=[], unresolved_pages=[])
     emitted_ids: set[str] = set()
     parts: list[str] = [f"<h1>{escape(section.title)}</h1>"]
-    parts.extend(_render_index_pages(section, ctx, unmatched, emitted_ids))
-    if unmatched:
-        for target in unmatched:
-            logger.error(f"Index cross-reference target not found: {target!r}")
-        msg = (
-            f"{len(unmatched)} index cross-reference target(s) did not match any entry. "
-            f"Check the index source for typos or missing terms."
-        )
-        raise ValueError(msg)
+    parts.extend(_render_index_pages(section, ctx, errors, emitted_ids))
+    _report_index_errors(errors)
     return "\n".join(parts)
 
 

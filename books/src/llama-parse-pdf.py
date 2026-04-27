@@ -3,9 +3,9 @@
 
 Each PDF page is assumed to be an image of a two-page book spread. For each PDF page this
 script renders a JPG, sends it to LlamaParse, and writes ``.md`` / ``.json`` outputs. Items
-in the JSON are tagged with ``book_side`` ("left" or "right") based on their bbox center-x,
-and a ``{pdf_stem}_manifest.json`` is written listing spreads in reading order with the
-book page numbers they cover.
+in the JSON are tagged with ``book_side`` ("left" or "right") based on their bbox center-x.
+Reading order at build time is recovered from the spread filenames (e.g.
+``*_spread_001.json``); no separate manifest is produced.
 """
 
 import json
@@ -274,50 +274,6 @@ def parse_spread(
     return printed_page_numbers
 
 
-def _write_manifest(
-    pdf_path: Path,
-    output_dir: Path,
-    spread_images: list[Path],
-    per_spread_printed: list[dict[int, str] | None],
-) -> None:
-    """Write a top-level manifest.json describing spreads in reading order.
-
-    Logical book page numbers are NOT computed here; books typically have unnumbered
-    covers and roman-numeral front matter that can't be derived arithmetically. Instead
-    each entry records the spread position plus whatever printed page numbers LlamaParse
-    detected on the spread, leaving logical labelling to ebook-assembly time.
-
-    Args:
-        pdf_path: Source PDF path (stem used for manifest filename).
-        output_dir: Directory to write the manifest into.
-        spread_images: Rendered spread JPG paths, in PDF page order.
-        per_spread_printed: Printed-page-number dicts returned by ``parse_spread``
-            (or ``None`` if that spread was skipped), aligned with ``spread_images``.
-
-    """
-    spreads: list[dict[str, Any]] = []
-    for i, img_path in enumerate(spread_images):
-        entry: dict[str, Any] = {
-            "spread_num": i + 1,
-            "image": img_path.name,
-            "md": f"{img_path.stem}.md",
-            "json": f"{img_path.stem}.json",
-        }
-        printed = per_spread_printed[i]
-        if printed:
-            entry["printed_page_numbers_detected"] = {str(k): v for k, v in printed.items()}
-        spreads.append(entry)
-
-    manifest = {
-        "pdf": pdf_path.name,
-        "num_spreads": len(spreads),
-        "spreads": spreads,
-    }
-    manifest_path = output_dir / f"{pdf_path.stem}_manifest.json"
-    manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
-    logger.info(f"Wrote manifest {manifest_path}")
-
-
 @app.command()
 def main(
     pdf_path: Path = typer.Argument(  # noqa: B008
@@ -375,18 +331,12 @@ def main(
     client = LlamaCloud(api_key=resolved_api_key)
 
     errors: list[str] = []
-    per_spread_printed: list[dict[int, str] | None] = []
     for image_path in spread_images:
         try:
-            per_spread_printed.append(
-                parse_spread(client, image_path, resolved_output_dir, overwrite)
-            )
+            parse_spread(client, image_path, resolved_output_dir, overwrite)
         except Exception as exc:  # noqa: BLE001
             logger.error(f"Failed to parse {image_path.name}: {exc}")
             errors.append(image_path.name)
-            per_spread_printed.append(None)
-
-    _write_manifest(pdf_path, resolved_output_dir, spread_images, per_spread_printed)
 
     if errors:
         logger.warning(f"{len(errors)} file(s) failed: {', '.join(errors)}")
