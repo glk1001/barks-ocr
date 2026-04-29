@@ -20,6 +20,7 @@ Example:
 import re
 import tomllib
 import unicodedata
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -54,9 +55,15 @@ div.chapter:first-of-type {
   padding-top: 0;
 }
 p { margin: 0.5em 0; text-align: justify; }
-figure { margin: 1em 0; text-align: center; }
-figure img { max-width: 100%; height: auto; }
-figcaption { font-style: italic; font-size: 0.9em; margin-top: 0.3em; }
+figure { margin: 1.5em 0 1em 0; text-align: center; }
+figure img { max-width: 90%; max-height: 80vh; height: auto; object-fit: contain; }
+figure.side-by-side {
+  display: inline-block;
+  max-width: 48%;
+  vertical-align: top;
+  margin: 1em 0.5%;
+}
+figcaption { font-style: normal; font-size: 0.8em; margin-top: 0.3em; margin-bottom: 2.0em; }
 blockquote {
   margin: 0.8em 1.5em;
   padding: 0 0.5em;
@@ -82,6 +89,9 @@ p.contents-credit {
   margin: 0 0 0.5em 0;
   font-size: 0.95em;
   text-align: center;
+}
+aside.footnote {
+  display: none;
 }
 """
 
@@ -237,9 +247,16 @@ def _match_chapters_to_pages(
 # of each other, so 15 is a comfortable fence.
 _BLOCKQUOTE_INDENT_THRESHOLD = 15.0
 
-# The indent heuristic needs at least this many text items on a page to build
-# a reliable median baseline.
+# The indent heuristic needs at least this many text items in a column to
+# build a reliable median baseline.
 _MIN_ITEMS_FOR_HEURISTIC = 2
+
+# Minimum forward jump in bbox-x (in page-space points) between two
+# consecutive items that signals a column boundary inside a single page. The
+# typical column gap in a two-column print layout is ~250-300pt; within-column
+# x variation (paragraph indents, hanging list bullets) sits well under 50pt,
+# so 100 is a safe fence.
+_COLUMN_X_JUMP_THRESHOLD = 100.0
 
 
 def _item_bbox_x(item: dict) -> float | None:
@@ -264,20 +281,185 @@ def _median(values: list[float]) -> float:
     return 0.5 * (s[mid - 1] + s[mid])
 
 
-def _annotate_blockquotes(page: BookPage) -> None:
-    """Mark indented text items as ``render_as="blockquote"`` using their bbox.
+def _split_into_columns(items: list[dict]) -> list[list[dict]]:
+    """Split a page's items into per-column lists in reading order.
 
-    The baseline left-x of a page is taken as the median left-x of its text
-    items. Any text item whose bbox is indented by more than
-    ``_BLOCKQUOTE_INDENT_THRESHOLD`` points gets promoted. If fewer than two
-    text items have bbox info, the heuristic is skipped.
+    LlamaParse emits items in reading order, so a two-column page reads
+    col1.top → col1.bottom → col2.top → col2.bottom. The transition is
+    detected by a forward jump in ``bbox.x`` larger than
+    ``_COLUMN_X_JUMP_THRESHOLD`` between two consecutive *text* items; once
+    observed, every subsequent item joins the new column. Only text items
+    drive the comparison because inline images can sit anywhere in a layout
+    (e.g. a CB Conversations interview body has a portrait pinned to the
+    right margin of an otherwise single-column page) and would otherwise
+    register a spurious column break. Items missing bbox info, and non-text
+    items, are appended to the current column without resetting state.
+
+    For a single-column page, returns one list containing every item.
+
+    Args:
+        items: Items in the page's reading order.
+
+    Returns:
+        One list per column, in reading order. Always returns at least one
+        list (possibly empty) so callers can index ``[0]``.
+
+    """
+    columns: list[list[dict]] = [[]]
+    last_text_x: float | None = None
+    for item in items:
+        if item.get("type") == "text":
+            x = _item_bbox_x(item)
+            if (
+                x is not None
+                and last_text_x is not None
+                and x - last_text_x >= _COLUMN_X_JUMP_THRESHOLD
+            ):
+                columns.append([])
+            if x is not None:
+                last_text_x = x
+        columns[-1].append(item)
+    return columns
+
+
+# Footnote markers: in this book LlamaParse emits a footnote-bearing text
+# item with ``bbox[0].label == "footnote"``. The body marker that points at
+# such a footnote is a literal asterisk that survives into the markdown as
+# the escaped sequence ``\*`` — italics use bare ``*``, so matching ``\*``
+# only is unambiguous and avoids tagging italic openers/closers.
+_BODY_FOOTNOTE_MARKER_RE = re.compile(r"\\\*")
+
+
+def _is_footnote_item(item: dict) -> bool:
+    """Return True if LlamaParse classified this item as a footnote."""
+    bbox = item.get("bbox") or []
+    if not bbox or not isinstance(bbox[0], dict):
+        return False
+    return bbox[0].get("label") == "footnote"
+
+
+def _group_footnote_items(page: BookPage) -> list[list[dict]]:
+    """Group footnote-tagged text items into one list per logical footnote.
+
+    A new group starts whenever a footnote item's text begins with an asterisk
+    (raw or markdown-escaped); subsequent footnote items without a leading
+    marker are continuations of the current footnote (LlamaParse occasionally
+    splits a long footnote at a layout break).
+    """
+    groups: list[list[dict]] = []
+    for item in page.items:
+        if not _is_footnote_item(item) or item.get("type") != "text":
+            continue
+        md_lstrip = (item.get("md") or "").lstrip()
+        starts_marker = md_lstrip.startswith(("\\*", "*"))
+        if starts_marker or not groups:
+            groups.append([item])
+        else:
+            groups[-1].append(item)
+    return groups
+
+
+def _merge_footnote_continuations(page: BookPage, groups: list[list[dict]]) -> None:
+    """Fold continuation items into each group's head item and drop them."""
+    for group in groups:
+        head = group[0]
+        for tail in group[1:]:
+            head_md = head.get("md") or ""
+            tail_md = tail.get("md") or ""
+            head["md"] = f"{head_md.rstrip()} {tail_md.lstrip()}"
+            head_v = head.get("value") or ""
+            tail_v = tail.get("value") or ""
+            head["value"] = f"{head_v.rstrip()} {tail_v.lstrip()}"
+            page.items.remove(tail)
+
+
+def _substitute_body_markers(page: BookPage, page_id: int) -> int:
+    r"""Replace every body ``\*`` with an EPUB3 noteref. Returns the count."""
+    counter = 0
+    for item in page.items:
+        if _is_footnote_item(item) or item.get("type") != "text":
+            continue
+        md = item.get("md")
+        if not isinstance(md, str) or "\\*" not in md:
+            continue
+
+        def _repl(_: re.Match[str]) -> str:
+            nonlocal counter
+            counter += 1
+            return (
+                f'<sup><a id="fnref-{page_id}-{counter}" '
+                f'epub:type="noteref" href="#fn-{page_id}-{counter}" '
+                f'role="doc-noteref">*</a></sup>'
+            )
+
+        item["md"] = _BODY_FOOTNOTE_MARKER_RE.sub(_repl, md)
+    return counter
+
+
+def _link_page_footnotes(page: BookPage) -> None:
+    r"""Wire up body footnote markers to footnote items, per page.
+
+    LlamaParse tags footnote-bearing text items with
+    ``bbox[0].label == "footnote"`` and may split a long footnote across
+    multiple such items at a layout break. The body marker that points at a
+    footnote is the markdown-escaped sequence ``\*`` (a literal asterisk that
+    would otherwise be eaten by markdown italics) and may sit at the end of a
+    paragraph or mid-sentence.
+
+    For each page this function groups consecutive footnote items into one
+    footnote per group, merges continuations into each group's head item,
+    replaces every ``\*`` in body text with an EPUB3 noteref numbered in
+    reading order, and tags each footnote head item with ``_footnote_num``
+    and ``_footnote_page_id`` so ``_render_item_html`` can emit the
+    ``<aside epub:type="footnote">`` block. Mismatches between body-marker
+    count and footnote-group count are logged as warnings and the build
+    continues — the unmatched side just doesn't link.
 
     Args:
         page: Book page; its item dicts are updated in place.
 
     """
+    groups = _group_footnote_items(page)
+    if not groups:
+        return
+
+    _merge_footnote_continuations(page, groups)
+
+    page_id = page.page_index_global
+    found = _substitute_body_markers(page, page_id)
+
+    for n, group in enumerate(groups, start=1):
+        head = group[0]
+        head["_footnote_num"] = n
+        head["_footnote_page_id"] = page_id
+
+    if found != len(groups):
+        logger.warning(
+            f"{page.spread_stem} (printed page {page.printed_page_number!r}): "
+            f"found {found} body footnote marker(s) but {len(groups)} footnote "
+            f"group(s); some footnotes may be unlinked"
+        )
+
+
+def _annotate_blockquotes(items: list[dict]) -> None:
+    """Mark indented text items as ``render_as="blockquote"`` using their bbox.
+
+    Operates on one column's worth of items at a time so the indent baseline
+    isn't poisoned by items from other columns: on a two-column page the
+    median across both columns sits between them, which would promote every
+    column-2 item to a blockquote. The baseline left-x is taken as the median
+    left-x of the column's text items, and any text item whose bbox is
+    indented by more than ``_BLOCKQUOTE_INDENT_THRESHOLD`` points gets
+    promoted. If fewer than two text items have bbox info, the heuristic is
+    skipped.
+
+    Args:
+        items: One column's items (or all items on a single-column page);
+            their item dicts are updated in place.
+
+    """
     candidates: list[tuple[dict, float]] = []
-    for item in page.items:
+    for item in items:
         if item.get("type") != "text":
             continue
         x = _item_bbox_x(item)
@@ -303,51 +485,120 @@ class _Override:
     as_: str
 
 
-def _load_overrides(path: Path | None) -> list[_Override]:
-    """Parse the overrides sidecar into ``_Override`` records.
+@dataclass(frozen=True)
+class _ImageOverride:
+    """One per-image style override loaded from the overrides sidecar."""
+
+    parse_dir: str
+    spread: str
+    side: str | None
+    caption_starts_with: str | None
+    url: str | None
+    width: str | None
+    max_height: str | None
+    space_above: str | None
+    class_: str | None
+
+
+def _load_overrides(path: Path | None) -> tuple[list[_Override], list[_ImageOverride]]:
+    """Parse the overrides sidecar into ``_Override`` and ``_ImageOverride`` records.
 
     Args:
         path: Path to the overrides TOML file, or ``None`` to skip loading.
 
     Returns:
-        The parsed overrides, preserving file order.
+        ``(text_overrides, image_overrides)`` preserving file order within each
+        list.
 
     """
     if path is None:
-        return []
+        return [], []
     with path.open("rb") as f:
         data = tomllib.load(f)
-    entries = data.get("overrides") or []
-    out: list[_Override] = []
-    for i, entry in enumerate(entries):
-        parse_dir = entry.get("parse_dir")
-        spread = entry.get("spread")
-        text_starts = entry.get("text_starts_with")
-        as_val = entry.get("as")
-        side = entry.get("side")
-        if (
-            not isinstance(parse_dir, str)
-            or not isinstance(spread, str)
-            or not isinstance(text_starts, str)
-        ):
-            msg = f"overrides[{i}] requires string 'parse_dir', 'spread', and 'text_starts_with'"
-            raise TypeError(msg)
-        if as_val not in {"blockquote", "paragraph"}:
-            msg = f"overrides[{i}].as must be 'blockquote' or 'paragraph'"
-            raise ValueError(msg)
-        if side is not None and side not in {"left", "right"}:
-            msg = f"overrides[{i}].side must be 'left' or 'right' if given"
-            raise ValueError(msg)
-        out.append(
-            _Override(
-                parse_dir=parse_dir,
-                spread=spread,
-                side=side,
-                text_starts_with=text_starts,
-                as_=as_val,
-            )
+    text_entries = data.get("overrides") or []
+    image_entries = data.get("image_overrides") or []
+    return (
+        [_parse_text_override(i, entry) for i, entry in enumerate(text_entries)],
+        [_parse_image_override(i, entry) for i, entry in enumerate(image_entries)],
+    )
+
+
+def _parse_text_override(i: int, entry: dict) -> _Override:
+    """Validate and parse one ``[[overrides]]`` entry."""
+    parse_dir = entry.get("parse_dir")
+    spread = entry.get("spread")
+    text_starts = entry.get("text_starts_with")
+    as_val = entry.get("as")
+    side = entry.get("side")
+    if (
+        not isinstance(parse_dir, str)
+        or not isinstance(spread, str)
+        or not isinstance(text_starts, str)
+    ):
+        msg = f"overrides[{i}] requires string 'parse_dir', 'spread', and 'text_starts_with'"
+        raise TypeError(msg)
+    if as_val not in {"blockquote", "paragraph"}:
+        msg = f"overrides[{i}].as must be 'blockquote' or 'paragraph'"
+        raise ValueError(msg)
+    if side is not None and side not in {"left", "right"}:
+        msg = f"overrides[{i}].side must be 'left' or 'right' if given"
+        raise ValueError(msg)
+    return _Override(
+        parse_dir=parse_dir,
+        spread=spread,
+        side=side,
+        text_starts_with=text_starts,
+        as_=as_val,
+    )
+
+
+def _opt_str(i: int, entry: dict, key: str, hint: str = "") -> str | None:
+    """Extract an optional string field from an ``[[image_overrides]]`` entry."""
+    val = entry.get(key)
+    if val is not None and not isinstance(val, str):
+        suffix = f" ({hint})" if hint else ""
+        msg = f"image_overrides[{i}].{key} must be a string if given{suffix}"
+        raise TypeError(msg)
+    return val
+
+
+def _parse_image_override(i: int, entry: dict) -> _ImageOverride:
+    """Validate and parse one ``[[image_overrides]]`` entry."""
+    parse_dir = entry.get("parse_dir")
+    spread = entry.get("spread")
+    if not isinstance(parse_dir, str) or not isinstance(spread, str):
+        msg = f"image_overrides[{i}] requires string 'parse_dir' and 'spread'"
+        raise TypeError(msg)
+    caption_starts = _opt_str(i, entry, "caption_starts_with")
+    url = _opt_str(i, entry, "url")
+    if caption_starts is None and url is None:
+        msg = f"image_overrides[{i}] requires at least one of 'caption_starts_with' or 'url'"
+        raise ValueError(msg)
+    side = _opt_str(i, entry, "side")
+    if side is not None and side not in {"left", "right"}:
+        msg = f"image_overrides[{i}].side must be 'left' or 'right' if given"
+        raise ValueError(msg)
+    width = _opt_str(i, entry, "width", "e.g. '60%'")
+    max_height = _opt_str(i, entry, "max_height", "e.g. '50vh'")
+    space_above = _opt_str(i, entry, "space_above", "e.g. '2em'")
+    class_val = _opt_str(i, entry, "class")
+    if width is None and max_height is None and space_above is None and class_val is None:
+        msg = (
+            f"image_overrides[{i}] requires at least one of 'width', 'max_height', "
+            f"'space_above', or 'class'"
         )
-    return out
+        raise ValueError(msg)
+    return _ImageOverride(
+        parse_dir=parse_dir,
+        spread=spread,
+        side=side,
+        caption_starts_with=caption_starts,
+        url=url,
+        width=width,
+        max_height=max_height,
+        space_above=space_above,
+        class_=class_val,
+    )
 
 
 def _item_matches_prefix(item: dict, prefix: str) -> bool:
@@ -356,17 +607,17 @@ def _item_matches_prefix(item: dict, prefix: str) -> bool:
     return text.startswith(prefix)
 
 
-def _last_text_item(page: BookPage) -> dict | None:
-    """Return the last ``type == "text"`` item on ``page``, or ``None``."""
-    for item in reversed(page.items):
+def _last_text_item(items: list[dict]) -> dict | None:
+    """Return the last ``type == "text"`` item in ``items``, or ``None``."""
+    for item in reversed(items):
         if item.get("type") == "text":
             return item
     return None
 
 
-def _first_text_item(page: BookPage) -> dict | None:
-    """Return the first ``type == "text"`` item on ``page``, or ``None``."""
-    for item in page.items:
+def _first_text_item(items: list[dict]) -> dict | None:
+    """Return the first ``type == "text"`` item in ``items``, or ``None``."""
+    for item in items:
         if item.get("type") == "text":
             return item
     return None
@@ -375,17 +626,17 @@ def _first_text_item(page: BookPage) -> dict | None:
 _CONTENT_TYPES = {"text", "list"}
 
 
-def _last_content_item(page: BookPage) -> dict | None:
-    """Return the last text-or-list item on ``page``, or ``None``."""
-    for item in reversed(page.items):
+def _last_content_item(items: list[dict]) -> dict | None:
+    """Return the last text-or-list item in ``items``, or ``None``."""
+    for item in reversed(items):
         if item.get("type") in _CONTENT_TYPES:
             return item
     return None
 
 
-def _first_content_item(page: BookPage) -> dict | None:
-    """Return the first text-or-list item on ``page``, or ``None``."""
-    for item in page.items:
+def _first_content_item(items: list[dict]) -> dict | None:
+    """Return the first text-or-list item in ``items``, or ``None``."""
+    for item in items:
         if item.get("type") in _CONTENT_TYPES:
             return item
     return None
@@ -399,25 +650,110 @@ def _text_is_open(text: str) -> bool:
     return not _SENTENCE_END_RE.search(trimmed)
 
 
-def _merge_list_continuations(pages: list[BookPage]) -> None:
-    """Fold a lowercase text continuation on page B into page A's open list.
+def _bbox_of(item: dict) -> dict | None:
+    """Return the first bbox dict on an item, or ``None`` if missing/incomplete."""
+    bboxes = item.get("bbox") or []
+    if not bboxes or not isinstance(bboxes[0], dict):
+        return None
+    bbox = bboxes[0]
+    if any(bbox.get(k) is None for k in ("x", "y", "w", "h")):
+        return None
+    return bbox
+
+
+def _headings_form_one(prev: dict, nxt: dict) -> bool:
+    """Return True if ``nxt`` is visually a continuation line of ``prev``'s heading.
+
+    Two heading items are treated as one when their bboxes share enough
+    horizontal range to be in the same column AND their vertical positions
+    are tight: either identical (the LlamaParse bug case where both lines get
+    the same bbox) or within ~1.5x the line height (the typical multi-line
+    heading case where each printed line gets its own bbox).
+    """
+    a = _bbox_of(prev)
+    b = _bbox_of(nxt)
+    if a is None or b is None:
+        return False
+    a_x0, a_x1 = a["x"], a["x"] + a["w"]
+    b_x0, b_x1 = b["x"], b["x"] + b["w"]
+    overlap = min(a_x1, b_x1) - max(a_x0, b_x0)
+    if overlap < min(a["w"], b["w"]) * 0.4:
+        return False
+    if a["x"] == b["x"] and a["y"] == b["y"] and a["w"] == b["w"] and a["h"] == b["h"]:
+        return True
+    line_height = max(a["h"], b["h"])
+    return b["y"] - (a["y"] + a["h"]) <= line_height * 1.5
+
+
+def _join_heading(prev: dict, nxt: dict) -> None:
+    """Append ``nxt``'s text into ``prev`` and expand ``prev``'s bbox to span both."""
+    nxt_md = re.sub(r"^#+\s*", "", (nxt.get("md") or "").lstrip())
+    prev["md"] = f"{(prev.get('md') or '').rstrip()} {nxt_md}".strip()
+    prev["value"] = (
+        f"{(prev.get('value') or '').rstrip()} {(nxt.get('value') or '').lstrip()}".strip()
+    )
+    a = _bbox_of(prev)
+    b = _bbox_of(nxt)
+    if a is not None and b is not None:
+        x0 = min(a["x"], b["x"])
+        y0 = min(a["y"], b["y"])
+        x1 = max(a["x"] + a["w"], b["x"] + b["w"])
+        y1 = max(a["y"] + a["h"], b["y"] + b["h"])
+        a["x"], a["y"], a["w"], a["h"] = x0, y0, x1 - x0, y1 - y0
+
+
+def _merge_continuation_headings(blocks: list[list[dict]]) -> None:
+    """Merge consecutive same-level heading items that visually form one heading.
+
+    LlamaParse sometimes emits a single centered multi-line heading as several
+    sibling heading items — either with identical bboxes (when it can't tell
+    the lines apart) or with vertically adjacent bboxes (one bbox per line).
+    Each block (column) is scanned in order: a run of consecutive heading
+    items at the same level whose bboxes overlap or are vertically tight is
+    collapsed into one heading whose text is the lines joined by a space, so
+    the EPUB renders it as a single ``<hN>`` that the reader can wrap
+    naturally.
+    """
+    for block in blocks:
+        merged: list[dict] = []
+        for item in block:
+            if (
+                merged
+                and item.get("type") == "heading"
+                and merged[-1].get("type") == "heading"
+                and merged[-1].get("level") == item.get("level")
+                and _headings_form_one(merged[-1], item)
+            ):
+                _join_heading(merged[-1], item)
+            else:
+                merged.append(item)
+        block[:] = merged
+
+
+def _merge_list_continuations(blocks: list[list[dict]]) -> None:
+    """Fold a lowercase text continuation in block B into block A's open list.
+
+    A "block" is a single column on a multi-column page or all items on a
+    single-column page; this pass walks every adjacent pair so list
+    continuations that split across columns within a page are merged the
+    same way as ones that split across pages.
 
     LlamaParse sometimes emits a numbered list whose last entry runs into the
-    next page as a standalone ``type: "text"`` item (e.g. a footnote that
-    breaks mid-sentence at the page boundary). When detected, the text item is
-    appended to the list's markdown and dropped from page B, so the reader sees
-    a single complete list entry instead of a truncated one plus an orphan
-    paragraph.
+    next block as a standalone ``type: "text"`` item (e.g. a footnote that
+    breaks mid-sentence at the boundary). When detected, the text item is
+    appended to the list's markdown and dropped from block B, so the reader
+    sees a single complete list entry instead of a truncated one plus an
+    orphan paragraph.
 
     Heuristic:
-        * Page A's last content item is a list whose text has no
+        * Block A's last content item is a list whose text has no
           sentence-ending punctuation.
-        * Page B's first content item is a text item beginning with a lowercase
-          letter (a continuation marker).
+        * Block B's first content item is a text item beginning with a
+          lowercase letter (a continuation marker).
     """
-    for i in range(len(pages) - 1):
-        a_last = _last_content_item(pages[i])
-        b_first = _first_content_item(pages[i + 1])
+    for i in range(len(blocks) - 1):
+        a_last = _last_content_item(blocks[i])
+        b_first = _first_content_item(blocks[i + 1])
         if a_last is None or b_first is None:
             continue
         if a_last.get("type") != "list" or b_first.get("type") != "text":
@@ -434,23 +770,25 @@ def _merge_list_continuations(pages: list[BookPage]) -> None:
         b_val = (b_first.get("value") or "").lstrip()
         if a_val or b_val:
             a_last["value"] = f"{a_val} {b_val}".strip()
-        pages[i + 1].items.remove(b_first)
+        blocks[i + 1].remove(b_first)
 
 
-def _align_cross_page_continuations(pages: list[BookPage]) -> None:
+def _align_cross_block_continuations(blocks: list[list[dict]]) -> None:
     """Align ``render_as`` across paragraphs that split at a soft word-break.
 
-    The blockquote heuristic scores indentation per-page. A paragraph that
-    continues from the previous page — detectable by its first half ending with
-    a soft word-break hyphen (e.g. ``"contains an ar-"``) — often appears
-    heavily indented on the new page because hanging-indent continuation lines
-    start below the section's first line. That makes the heuristic mis-promote
-    the continuation to a blockquote. This pass copies the first half's
-    ``render_as`` onto the second half so both render the same way.
+    The blockquote heuristic scores indentation per-column. A paragraph that
+    continues from the previous block (a column or a page) — detectable by
+    its first half ending with a soft word-break hyphen (e.g.
+    ``"contains an ar-"``) — often appears heavily indented in the new block
+    because hanging-indent continuation lines start below the section's first
+    line. That makes the heuristic mis-promote the continuation to a
+    blockquote. This pass copies the first half's ``render_as`` onto the
+    second half so both render the same way, regardless of whether the split
+    happened across columns or across pages.
     """
-    for i in range(len(pages) - 1):
-        prev = _last_text_item(pages[i])
-        nxt = _first_text_item(pages[i + 1])
+    for i in range(len(blocks) - 1):
+        prev = _last_text_item(blocks[i])
+        nxt = _first_text_item(blocks[i + 1])
         if prev is None or nxt is None:
             continue
         prev_text = (prev.get("md") or prev.get("value") or "").rstrip()
@@ -463,8 +801,17 @@ def _align_cross_page_continuations(pages: list[BookPage]) -> None:
             nxt.pop("render_as", None)
 
 
-def _apply_format_fixes(pages: list[BookPage], overrides: list[_Override]) -> None:
-    """Run the blockquote heuristic, then apply user overrides.
+def _apply_format_fixes(
+    pages: list[BookPage],
+    overrides: list[_Override],
+    image_overrides: list[_ImageOverride],
+) -> None:
+    """Run the column-aware blockquote heuristic, then apply user overrides.
+
+    Each page is split into per-column blocks first so list-continuation
+    merges, blockquote indentation, and soft-word-break alignment all see one
+    column at a time — that's important for two-column print layouts where
+    column 1's bottom paragraph often runs into column 2's top.
 
     Raises:
         ValueError: If any override did not match a text item. All unmatched
@@ -472,24 +819,66 @@ def _apply_format_fixes(pages: list[BookPage], overrides: list[_Override]) -> No
             pass.
 
     """
-    _merge_list_continuations(pages)
     for page in pages:
-        _annotate_blockquotes(page)
-    _align_cross_page_continuations(pages)
-    if not overrides:
+        _link_page_footnotes(page)
+
+    pages_blocks: list[list[list[dict]]] = [_split_into_columns(p.items) for p in pages]
+    flat_blocks: list[list[dict]] = [block for blocks in pages_blocks for block in blocks]
+
+    _merge_continuation_headings(flat_blocks)
+    _merge_list_continuations(flat_blocks)
+
+    for blocks in pages_blocks:
+        for block in blocks:
+            _annotate_blockquotes(block)
+
+    _align_cross_block_continuations(flat_blocks)
+
+    # Reassemble each page's items from its column blocks (which may have lost
+    # items to list-continuation merges) so downstream rendering sees the
+    # post-merge state.
+    for page, blocks in zip(pages, pages_blocks, strict=True):
+        page.items[:] = [item for block in blocks for item in block]
+
+    _run_overrides(
+        kind="override",
+        all_overrides=overrides,
+        apply=lambda: _apply_overrides(pages, overrides),
+        describe=lambda ov: (
+            f"parse_dir={ov.parse_dir!r} spread={ov.spread!r} side={ov.side!r} "
+            f"text_starts_with={ov.text_starts_with!r}"
+        ),
+    )
+    _run_overrides(
+        kind="image override",
+        all_overrides=image_overrides,
+        apply=lambda: _apply_image_overrides(pages, image_overrides),
+        describe=lambda ov: (
+            f"parse_dir={ov.parse_dir!r} spread={ov.spread!r} side={ov.side!r} "
+            f"caption_starts_with={ov.caption_starts_with!r} url={ov.url!r}"
+        ),
+    )
+
+
+def _run_overrides[T](
+    *,
+    kind: str,
+    all_overrides: list[T],
+    apply: Callable[[], list[T]],
+    describe: Callable[[T], str],
+) -> None:
+    """Apply one batch of overrides and raise if any didn't match."""
+    if not all_overrides:
         return
-    unmatched = _apply_overrides(pages, overrides)
-    applied = len(overrides) - len(unmatched)
-    logger.info(f"Applied {applied}/{len(overrides)} override(s).")
-    if unmatched:
-        for ov in unmatched:
-            logger.error(
-                f"Override did not match any item: parse_dir={ov.parse_dir!r} "
-                f"spread={ov.spread!r} side={ov.side!r} "
-                f"text_starts_with={ov.text_starts_with!r}"
-            )
-        msg = f"{len(unmatched)} of {len(overrides)} override(s) did not match any item"
-        raise ValueError(msg)
+    unmatched = apply()
+    applied = len(all_overrides) - len(unmatched)
+    logger.info(f"Applied {applied}/{len(all_overrides)} {kind}(s).")
+    if not unmatched:
+        return
+    for ov in unmatched:
+        logger.error(f"{kind.capitalize()} did not match any item: {describe(ov)}")
+    msg = f"{len(unmatched)} of {len(all_overrides)} {kind}(s) did not match any item"
+    raise ValueError(msg)
 
 
 def _apply_overrides(pages: list[BookPage], overrides: list[_Override]) -> list[_Override]:
@@ -517,11 +906,94 @@ def _apply_overrides(pages: list[BookPage], overrides: list[_Override]) -> list[
     return unmatched
 
 
-def _render_item_html(parse_dir: Path, item: dict, md_renderer: MarkdownIt) -> str:
+def _apply_image_overrides(
+    pages: list[BookPage], overrides: list[_ImageOverride]
+) -> list[_ImageOverride]:
+    """Apply each image override to matching image items.
+
+    Tags matched items with ``_img_style`` (a CSS declaration string) so
+    ``_render_item_html`` can emit it as an inline ``style="..."`` on the
+    ``<img>``.
+
+    Returns overrides that matched nothing.
+    """
+    unmatched: list[_ImageOverride] = []
+    for ov in overrides:
+        img_style = _build_image_style(ov)
+        figure_style = _build_figure_style(ov)
+        matched = False
+        for page in pages:
+            if not _page_matches_override(page, ov.parse_dir, ov.spread, ov.side):
+                continue
+            for item in page.items:
+                if not _image_matches_override(item, ov):
+                    continue
+                if img_style:
+                    item["_img_style"] = img_style
+                if figure_style:
+                    item["_figure_style"] = figure_style
+                if ov.class_:
+                    item["_figure_class"] = ov.class_
+                matched = True
+        if not matched:
+            unmatched.append(ov)
+    return unmatched
+
+
+def _image_matches_override(item: dict, ov: _ImageOverride) -> bool:
+    """Return True if ``item`` is an image matching ``ov``'s caption/url filters."""
+    if item.get("type") != "image":
+        return False
+    if ov.caption_starts_with is not None:
+        caption = (item.get("caption") or "").lstrip()
+        if not caption.startswith(ov.caption_starts_with):
+            return False
+    if ov.url is not None:
+        item_url = item.get("url") or ""
+        if ov.url not in item_url:
+            return False
+    return True
+
+
+def _build_image_style(ov: _ImageOverride) -> str:
+    """Compose the inline ``<img>`` style for an image override."""
+    decls: list[str] = []
+    if ov.width is not None:
+        decls.append(f"max-width: {ov.width}")
+    if ov.max_height is not None:
+        decls.append(f"max-height: {ov.max_height}")
+    return "; ".join(decls)
+
+
+def _build_figure_style(ov: _ImageOverride) -> str:
+    """Compose the inline ``<figure>`` style for an image override.
+
+    ``space_above`` is emitted as ``padding-top`` rather than ``margin-top`` so
+    it survives margin collapsing and EPUB readers' page-break margin reset
+    when the figure is the first element on a rendered screen page.
+    """
+    decls: list[str] = []
+    if ov.space_above is not None:
+        decls.append(f"padding-top: {ov.space_above}")
+    return "; ".join(decls)
+
+
+def _page_matches_override(page: BookPage, parse_dir: str, spread: str, side: str | None) -> bool:
+    """Return True if ``page`` is in scope for an override targeting these fields."""
+    if page.parse_dir.name != parse_dir:
+        return False
+    if spread not in page.spread_stem:
+        return False
+    return not (side is not None and page.side != side)
+
+
+def _render_item_html(page: BookPage, item: dict, md_renderer: MarkdownIt) -> str:
     """Render a single LlamaParse item to an XHTML fragment.
 
     Args:
-        parse_dir: The directory containing the items.
+        page: The book page the item came from. Used to resolve image paths
+            relative to the source parse directory and to include the source
+            JSON filename in any error messages.
         item: The raw item.
         md_renderer: Markdown-it renderer.
 
@@ -530,22 +1002,36 @@ def _render_item_html(parse_dir: Path, item: dict, md_renderer: MarkdownIt) -> s
         render.
 
     """
+    if "_footnote_num" in item:
+        return _render_footnote_html(item, md_renderer)
     item_type = item.get("type")
     if item_type == "image":
         url = item.get("url")
         caption = item.get("caption") or ""
+        source = f"{page.parse_dir.name}/{page.spread_stem}.json"
         if not url:
-            msg = f"There is an image without an url: '{item}'"
+            msg = f"There is an image without an url in {source}: '{item}'"
             raise RuntimeError(msg)
-        url_path = parse_dir / url
+        url_path = page.parse_dir / url
         if not url_path.is_file():
-            msg = f'Could not find url: "{url_path}"'
+            msg = f'Could not find url: "{url_path}" (referenced from {source})'
             raise FileNotFoundError(msg)
         basename = Path(url).name
         caption_attr = escape(caption, {'"': "&quot;"})
-        caption_html = escape(caption)
+        caption_html = caption
+        img_style = item.get("_img_style")
+        img_style_attr = f' style="{escape(img_style, {chr(34): "&quot;"})}"' if img_style else ""
+        figure_style = item.get("_figure_style")
+        figure_style_attr = (
+            f' style="{escape(figure_style, {chr(34): "&quot;"})}"' if figure_style else ""
+        )
+        figure_class = item.get("_figure_class")
+        figure_class_attr = (
+            f' class="{escape(figure_class, {chr(34): "&quot;"})}"' if figure_class else ""
+        )
         return (
-            f'<figure><img src="images/{escape(basename)}" alt="{caption_attr}"/>'
+            f"<figure{figure_class_attr}{figure_style_attr}>"
+            f'<img src="images/{escape(basename)}"{img_style_attr} alt="{caption_attr}"/>'
             f"<figcaption>{caption_html}</figcaption></figure>"
         )
     md = item.get("md")
@@ -555,6 +1041,37 @@ def _render_item_html(parse_dir: Path, item: dict, md_renderer: MarkdownIt) -> s
     if item.get("render_as") == "blockquote":
         return f"<blockquote>{rendered}</blockquote>"
     return rendered
+
+
+def _render_footnote_html(item: dict, md_renderer: MarkdownIt) -> str:
+    r"""Render a footnote-tagged item as an EPUB3 ``<aside>`` block.
+
+    The leading ``\*`` (or ``*``) marker is stripped from the item's markdown
+    before rendering, then a backlink to the body marker is injected at the
+    start of the first paragraph so EPUB readers without a built-in popup can
+    still navigate back. ``_link_page_footnotes`` is responsible for setting
+    ``_footnote_num`` and ``_footnote_page_id`` on the item.
+    """
+    md = item.get("md") or ""
+    if not md.strip():
+        return ""
+    body_md = md.lstrip()
+    if body_md.startswith("\\*"):
+        body_md = body_md[2:].lstrip()
+    elif body_md.startswith("*"):
+        body_md = body_md[1:].lstrip()
+    rendered = md_renderer.render(body_md).strip()
+    n = item["_footnote_num"]
+    page_id = item["_footnote_page_id"]
+    backlink = f'<sup><a href="#fnref-{page_id}-{n}" role="doc-backlink">*</a></sup> '
+    if rendered.startswith("<p>"):
+        rendered = "<p>" + backlink + rendered[len("<p>") :]
+    else:
+        rendered = backlink + rendered
+    return (
+        f'<aside class="footnote" epub:type="footnote" '
+        f'id="fn-{page_id}-{n}" role="doc-footnote">{rendered}</aside>'
+    )
 
 
 def _page_anchor_html(page: BookPage) -> str:
@@ -644,20 +1161,28 @@ def _ends_with_soft_word_break(text: str) -> bool:
     return text[-2].isalnum()
 
 
-def _build_page_blocks(section: _ChapterSection, md_renderer: MarkdownIt) -> list[dict]:
-    """Render each page into a block of (anchor, items) where items are [kind, html]."""
-    page_blocks: list[dict] = []
+def _build_render_blocks(section: _ChapterSection, md_renderer: MarkdownIt) -> list[dict]:
+    """Render each page's columns into render blocks of ``(anchor, items)``.
+
+    Each block is one column on a multi-column page (or one whole page on a
+    single-column page); ``items`` is a list of ``[kind, html]`` pairs. The
+    page's pagebreak anchor rides on the first column block of that page so
+    EPUB3 page-list nav still resolves correctly.
+    """
+    render_blocks: list[dict] = []
     for page in section.pages:
         anchor = _page_anchor_html(page) if page.printed_page_number else ""
-        items: list[list[str]] = []
-        for item in page.items:
-            html = _render_item_html(page.parse_dir, item, md_renderer)
-            if not html:
-                continue
-            kind = "p" if _is_full_paragraph(html) else "other"
-            items.append([kind, html])
-        page_blocks.append({"anchor": anchor, "items": items})
-    return page_blocks
+        columns = _split_into_columns(page.items)
+        for col_idx, col_items in enumerate(columns):
+            items: list[list[str]] = []
+            for item in col_items:
+                html = _render_item_html(page, item, md_renderer)
+                if not html:
+                    continue
+                kind = "p" if _is_full_paragraph(html) else "other"
+                items.append([kind, html])
+            render_blocks.append({"anchor": anchor if col_idx == 0 else "", "items": items})
+    return render_blocks
 
 
 def _is_figure_like(html: str) -> bool:
@@ -665,8 +1190,12 @@ def _is_figure_like(html: str) -> bool:
     return html.lstrip().startswith("<figure")
 
 
-def _merge_paragraph_across_pages(a_items: list[list[str]], b_items: list[list[str]]) -> None:
+def _merge_paragraph_across_blocks(a_items: list[list[str]], b_items: list[list[str]]) -> None:
     """Merge A's last paragraph into B's first paragraph if A's is open.
+
+    A "block" here is the rendered output of one column on a multi-column
+    page or one whole page on a single-column page, so this same merge bridges
+    column-to-column splits within a page and across-page splits.
 
     Only fires when the span between A's last paragraph and B's first paragraph
     contains figures only — a heading or any other non-figure block between them
@@ -1284,11 +1813,14 @@ def _render_contents_xhtml(
 def _render_section_xhtml(section: _ChapterSection, md_renderer: MarkdownIt) -> str:
     """Build the XHTML body for one chapter section.
 
-    LlamaParse often splits a single paragraph at a page boundary — sometimes
-    with figures (image crops) sitting between the two halves. This renderer
-    detects such splits and merges the two halves into one ``<p>`` so readers
-    don't see a mid-paragraph line break. Intervening figures stay in reading
-    order and cluster between the two pages' non-text content.
+    LlamaParse often splits a single paragraph at a column or page boundary —
+    sometimes with figures (image crops) sitting between the two halves. This
+    renderer splits each page into per-column render blocks and runs the
+    same paragraph-merge across every adjacent block pair, so a paragraph
+    that runs from the bottom of column 1 to the top of column 2 (or from
+    the end of one page to the start of the next) merges into a single
+    ``<p>``. Intervening figures stay in reading order and cluster between
+    the two halves' non-text content.
 
     Args:
         section: Chapter section to render.
@@ -1298,13 +1830,13 @@ def _render_section_xhtml(section: _ChapterSection, md_renderer: MarkdownIt) -> 
         The XHTML body content (without the outer ``<body>`` wrapper).
 
     """
-    page_blocks = _build_page_blocks(section, md_renderer)
+    render_blocks = _build_render_blocks(section, md_renderer)
 
-    for i in range(len(page_blocks) - 1):
-        _merge_paragraph_across_pages(page_blocks[i]["items"], page_blocks[i + 1]["items"])
+    for i in range(len(render_blocks) - 1):
+        _merge_paragraph_across_blocks(render_blocks[i]["items"], render_blocks[i + 1]["items"])
 
     parts: list[str] = []
-    for block in page_blocks:
+    for block in render_blocks:
         anchor = block["anchor"]
         items = block["items"]
         if anchor and items:
@@ -1598,7 +2130,7 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
         raise typer.Exit(1)
 
     chapter_list = _load_chapters(chapters)
-    override_list = _load_overrides(overrides)
+    override_list, image_override_list = _load_overrides(overrides)
 
     logger.info(f"Loading spreads from {len(parse_dir_list)} parse dir(s) ...")
     spreads = list(iter_spreads(parse_dir_list))
@@ -1611,7 +2143,7 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
         raise typer.Exit(1)
 
     try:
-        _apply_format_fixes(pages, override_list)
+        _apply_format_fixes(pages, override_list, image_override_list)
     except ValueError as exc:
         logger.error(str(exc))
         raise typer.Exit(1) from exc

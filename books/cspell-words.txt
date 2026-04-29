@@ -5,10 +5,12 @@ alnum
 arminta
 ault
 backlink
+bboxes
 blockquotes
 desync
 ebooklib
 figcaption
+fnref
 hrefs
 ivxlcdm
 llamaparse
