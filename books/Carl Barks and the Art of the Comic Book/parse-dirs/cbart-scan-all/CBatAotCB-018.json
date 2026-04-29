@@ -3,43 +3,8 @@
     {
       "items": [
         {
-          "caption": "A model sheet for the Disney animated short \"Good Scouts\" featuring Donald Duck and his nephews. The sheet includes character sketches, construction notes, and production credits. Text on the sheet includes: \"Good Scouts\", RM-13, © W.D.P. 10-7-37, DIRECTOR, STORY REEVES, ANIMATION MULLIN, TOMEY, BERRY, ALLEN, CANNON, HANNAH. Notes state: \"NEPHEW'S HEAD IS THE SAME SIZE AS DONALD'S. THE LOWER BODY IS BUILT FROM A CIRCLE THE SAME SIZE AS THE HEAD BUT FLATTENED ON TOP.\" and \"KID COMES APPR. TO DONALD'S SHOULDERS.\"",
-          "md": "![A model sheet for the Disney animated short \"Good Scouts\" featuring Donald Duck and his nephews. The sheet includes character sketches, construction notes, and production credits. Text on the sheet includes: \"Good Scouts\", RM-13, © W.D.P. 10-7-37, DIRECTOR, STORY REEVES, ANIMATION MULLIN, TOMEY, BERRY, ALLEN, CANNON, HANNAH. Notes state: \"NEPHEW'S HEAD IS THE SAME SIZE AS DONALD'S. THE LOWER BODY IS BUILT FROM A CIRCLE THE SAME SIZE AS THE HEAD BUT FLATTENED ON TOP.\" and \"KID COMES APPR. TO DONALD'S SHOULDERS.\"](CBatAotCB-018_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-018_page_1_image_2_v2.jpg",
-          "bbox": [
-            {
-              "h": 162.23529535060976,
-              "w": 204.8638848132622,
-              "x": 46.82234994283536,
-              "y": 14.332528582317074,
-              "confidence": 0.99,
-              "end_index": 541,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "A model sheet for *Good Scouts*, one of Barks's first assignments as a Disney story man; ©1937 Walt Disney Productions.",
-          "value": "A model sheet for Good Scouts, one of Barks's first assignments as a Disney story man; ©1937 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.660823170731709,
-              "w": 230.5175826505335,
-              "x": 18.92431140434451,
-              "y": 181.41485899390244,
-              "confidence": 0.84,
-              "end_index": 118,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "A black and white portrait photograph of Carl Barks.",
-          "md": "![A black and white portrait photograph of Carl Barks.](CBatAotCB-018_page_1_image_1_v2.jpg)",
+          "caption": "Carl Barks in 1938.",
+          "md": "![Carl Barks in 1938.](CBatAotCB-018_page_1_image_1_v2.jpg)",
           "url": "CBatAotCB-018_page_1_image_1_v2.jpg",
           "bbox": [
             {
@@ -54,23 +19,6 @@
             }
           ],
           "type": "image"
-        },
-        {
-          "md": "Carl Barks in 1938.",
-          "value": "Carl Barks in 1938.",
-          "bbox": [
-            {
-              "h": 5.37503048780487,
-              "w": 37.17505907012197,
-              "x": 176.5410708841463,
-              "y": 348.8041234756098,
-              "confidence": 0.9,
-              "end_index": 18,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
         },
         {
           "items": [

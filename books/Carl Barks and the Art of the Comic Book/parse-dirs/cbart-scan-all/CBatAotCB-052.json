@@ -1,0 +1,126 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "wars of the old frontier. I made it by being tougher than the toughies, and smarter than the smarties. And I made it square. You'd love your money, too, boys, if you got it the way I did — by thinking a little harder than the other guy — by jumping a little quicker —.\"",
+          "value": "wars of the old frontier. I made it by being tougher than the toughies, and smarter than the smarties. And I made it square. You'd love your money, too, boys, if you got it the way I did — by thinking a little harder than the other guy — by jumping a little quicker —.\"",
+          "bbox": [
+            {
+              "h": 90.58829268292683,
+              "w": 251.8450231040396,
+              "x": 22.797625524009145,
+              "y": 429.4071036585366,
+              "confidence": 0.98,
+              "end_index": 268,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "There is in this story little to suggest that Scrooge is a tycoon; he is simply a miser, who cares about his money because he worked so hard to accumulate it. In earlier stories, Barks had been quite casual about how Scrooge made his money — there might be a sign saying something, like \"Scrooge McDuck, financier\" or \"money to lend\" — and in the January 1951 Walt Disney's Comics, Scrooge speaks of his \"mortgage business\" and takes Donald with him to repossess a washer because a poor woman has not paid the last nickel due on it. But if Scrooge's attachment to",
+          "value": "There is in this story little to suggest that Scrooge is a tycoon; he is simply a miser, who cares about his money because he worked so hard to accumulate it. In earlier stories, Barks had been quite casual about how Scrooge made his money — there might be a sign saying something, like \"Scrooge McDuck, financier\" or \"money to lend\" — and in the January 1951 Walt Disney's Comics, Scrooge speaks of his \"mortgage business\" and takes Donald with him to repossess a washer because a poor woman has not paid the last nickel due on it. But if Scrooge's attachment to",
+          "bbox": [
+            {
+              "h": 192.1399847560975,
+              "w": 252.0128770483994,
+              "x": 22.712757479039634,
+              "y": 520.1175457317073,
+              "confidence": 0.99,
+              "end_index": 562,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "his money was to command our sympathy, he had to have acquired the money in some less cold and impersonal way. And so, in \"Only a Poor Old Man,\" Scrooge tells the nephews how he dug for copper in Montana in the eighteen-eighties, and took a fortune in gold out of the Klondike in 1898. Later stories are filled with references to such bold exploits. In 1974, Barks said, \"I purposely tried to make it look as if Uncle Scrooge made most of his money back in the days before the world got so crowded, back in the days when you could go out in the hills and find riches. I never thought of Scrooge as I would think of some of the millionaires we have around who have made their money by exploiting other people to a certain extent. He had lots of money, but he wasn't a criminal about it.\"",
+          "value": "his money was to command our sympathy, he had to have acquired the money in some less cold and impersonal way. And so, in \"Only a Poor Old Man,\" Scrooge tells the nephews how he dug for copper in Montana in the eighteen-eighties, and took a fortune in gold out of the Klondike in 1898. Later stories are filled with references to such bold exploits. In 1974, Barks said, \"I purposely tried to make it look as if Uncle Scrooge made most of his money back in the days before the world got so crowded, back in the days when you could go out in the hills and find riches. I never thought of Scrooge as I would think of some of the millionaires we have around who have made their money by exploiting other people to a certain extent. He had lots of money, but he wasn't a criminal about it.\"",
+          "bbox": [
+            {
+              "h": 263.8363262195122,
+              "w": 252.41803353658528,
+              "x": 299.3211356707317,
+              "y": 432.534375,
+              "confidence": 0.99,
+              "end_index": 785,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In most of the later stories, too, Scrooge",
+          "value": "In most of the later stories, too, Scrooge",
+          "bbox": [
+            {
+              "h": 15.4522865853658,
+              "w": 238.8386661585365,
+              "x": 312.02862804878043,
+              "y": 698.5037652439024,
+              "confidence": 0.97,
+              "end_index": 41,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "52\nCarl Barks and the Art of the Comic Book",
+              "value": "52\nCarl Barks and the Art of the Comic Book",
+              "bbox": [
+                {
+                  "h": 8.69181402439026,
+                  "w": 10.393953887195122,
+                  "x": 25.052665301067073,
+                  "y": 732.699649390244,
+                  "confidence": 0.78,
+                  "end_index": 1,
+                  "label": "footer",
+                  "start_index": 0
+                },
+                {
+                  "h": 9.69589939024383,
+                  "w": 160.7000504954268,
+                  "x": 69.12594226371951,
+                  "y": 732.6565701219513,
+                  "confidence": 0.95,
+                  "end_index": 42,
+                  "label": "footer",
+                  "start_index": 3
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "52\nCarl Barks and the Art of the Comic Book",
+          "bbox": [
+            {
+              "h": 9.7,
+              "w": 204.77,
+              "x": 25.05,
+              "y": 732.66,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 768.0,
+      "page_number": 1,
+      "page_width": 576.0,
+      "success": true,
+      "printed_page_number": "52"
+    }
+  ]
+}

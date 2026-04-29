@@ -3,22 +3,22 @@
     {
       "items": [
         {
-          "caption": "IV.",
-          "md": "![IV.](CBatAotCB-040_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-040_page_1_image_1_v2.jpg",
+          "level": 1,
+          "md": "<p style=\"text-align: center; font-size: 3rem;\">IV.</p>",
+          "value": "IV.",
           "bbox": [
             {
               "h": 27.478559451219514,
               "w": 57.57505621189024,
               "x": 118.77284394054877,
               "y": 48.890504954268295,
-              "confidence": 0.84,
-              "end_index": 28,
-              "label": "image",
+              "confidence": 0.88,
+              "end_index": 3,
+              "label": "paragraph_title",
               "start_index": 0
             }
           ],
-          "type": "image"
+          "type": "text"
         },
         {
           "md": "**THE \"RESCUE\" THEME** did turn up again, most notably in \"Adventure Down Under\" (1947). Here, as in \"Terror,\" the early pages are filled with comedy that yields to adventure as the story moves along. Finally, Donald is captured by menacing and realistically drawn Australian bushmen. The nephews rescue him, but the exhausted ducks are pursued across the desert by the bushmen, who fear that the ducks will talk to the police. As the bushmen close in, ready to kill the ducks, Donald and the nephews turn to face them and Donald says: \"This is it, boys! Goodbye!\" A rather grim moment for a \"funny-animal\" comic book, but, fortunately, the ducks are saved at the last minute by \"Mournful Mary,\" a female kangaroo who has \"adopted\" Donald.",

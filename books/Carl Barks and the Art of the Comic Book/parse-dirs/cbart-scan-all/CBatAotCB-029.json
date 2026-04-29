@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# III.",
+          "md": "<p style=\"text-align: center; font-size: 3rem;\">III.</p>",
           "value": "III.",
           "bbox": [
             {
@@ -18,7 +18,7 @@
               "start_index": 0
             }
           ],
-          "type": "heading"
+          "type": "text"
         },
         {
           "md": "**BARKS HAD ACTUALLY** done his first comic-book work for Western while still a Disney employee, by illustrating half of a comic book based on an uncompleted Disney feature cartoon, *Morgan's Ghost*. *Morgan's Ghost* was to have starred Mickey, Donald and Goofy, sailing to a treasure island aboard a ship manned by the disguised Pegleg Pete and his henchmen. Mickey, Donald, and Goofy would have been led to the island by a parrot named Yellowbeak.",
@@ -156,7 +156,7 @@
                   "start_index": 0
                 }
               ],
-              "type": "text"
+              "type": "footer"
             }
           ],
           "md": "Carl Barks and the Art of the Comic Book\n29",
@@ -168,7 +168,7 @@
               "y": 366.08,
               "confidence": null,
               "end_index": null,
-              "label": null,
+              "label": "footer",
               "start_index": null
             }
           ],

@@ -3,95 +3,6 @@
     {
       "items": [
         {
-          "caption": "Uncle Scrooge saying: \"BAH! KID TALK! NO MAN IS POOR WHO CAN DO WHAT HE LIKES TO DO ONCE IN A WHILE!\"",
-          "md": "![Uncle Scrooge saying: \"BAH! KID TALK! NO MAN IS POOR WHO CAN DO WHAT HE LIKES TO DO ONCE IN A WHILE!\"](CBatAotCB-049_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-049_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 92.2165086699695,
-              "w": 131.88371141387194,
-              "x": 13.065130049542683,
-              "y": 13.503971512957316,
-              "confidence": 0.93,
-              "end_index": 126,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "Uncle Scrooge diving into coins: \"AND I LIKE TO DIVE AROUND IN MY MONEY LIKE A PORPOISE!\"",
-          "md": "![Uncle Scrooge diving into coins: \"AND I LIKE TO DIVE AROUND IN MY MONEY LIKE A PORPOISE!\"](CBatAotCB-049_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-049_page_1_image_2_v2.jpg",
-          "bbox": [
-            {
-              "h": 92.75760623094513,
-              "w": 127.25603849085363,
-              "x": 148.16210556402436,
-              "y": 12.953098799542682,
-              "confidence": 0.93,
-              "end_index": 114,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "Uncle Scrooge burrowing through coins: \"AND BURROW THROUGH IT LIKE A GOPHER!\"",
-          "md": "![Uncle Scrooge burrowing through coins: \"AND BURROW THROUGH IT LIKE A GOPHER!\"](CBatAotCB-049_page_1_image_3_v2.jpg)",
-          "url": "CBatAotCB-049_page_1_image_3_v2.jpg",
-          "bbox": [
-            {
-              "h": 92.28168064024392,
-              "w": 144.924355349657,
-              "x": 13.215694193025913,
-              "y": 108.58046112804878,
-              "confidence": 0.9,
-              "end_index": 102,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "Uncle Scrooge tossing coins: \"AND TOSS IT UP AND LET IT HIT ME ON THE HEAD!\"",
-          "md": "![Uncle Scrooge tossing coins: \"AND TOSS IT UP AND LET IT HIT ME ON THE HEAD!\"](CBatAotCB-049_page_1_image_4_v2.jpg)",
-          "url": "CBatAotCB-049_page_1_image_4_v2.jpg",
-          "bbox": [
-            {
-              "h": 92.6239024390244,
-              "w": 114.85121570121947,
-              "x": 161.31705983231706,
-              "y": 108.65300304878049,
-              "confidence": 0.89,
-              "end_index": 101,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From Uncle Scrooge Four Color No. 386, 1952; © 1952 Walt Disney Productions.",
-          "value": "\nFrom Uncle Scrooge Four Color No. 386, 1952; © 1952 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.466875,
-              "w": 165.74253715701218,
-              "x": 71.96003334603658,
-              "y": 210.44339176829268,
-              "confidence": 0.92,
-              "end_index": 75,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "Disney's Comics, and the plot hinged on the Beagle Boys' efforts to crack it (as many plots were to later). Here, as in the November issue, Scrooge saved them the trouble, by taking Donald's bad advice.\\*",
           "value": "Disney's Comics, and the plot hinged on the Beagle Boys' efforts to crack it (as many plots were to later). Here, as in the November issue, Scrooge saved them the trouble, by taking Donald's bad advice.*",
           "bbox": [
@@ -109,8 +20,43 @@
           "type": "text"
         },
         {
-          "md": "The Beagle Boys acquired a real group personality a few months later, in the first issue of *Uncle Scrooge* (1952). In \"Only a Poor Old Man,\" the story that takes up the entire comic book, the Beagles are revealed as the perfect foils for Scrooge. Like him, they're monomani-",
-          "value": "The Beagle Boys acquired a real group personality a few months later, in the first issue of Uncle Scrooge (1952). In \"Only a Poor Old Man,\" the story that takes up the entire comic book, the Beagles are revealed as the perfect foils for Scrooge. Like him, they're monomani-",
+          "md": "\\*It took a while for the money bin to become a fixture. It is absent from the stories starring Scrooge in the March 1952 and September 1952 issues of *Walt Disney's Comics*, and also from the first few issues of *Uncle Scrooge*, although Scrooge's vault is labeled \"money bin\" in a few of these stories. The \"true\" bin first reappeared in *Walt Disney's Comics* in the August 1953 issue and in *Uncle Scrooge* in No. 9 (1955).",
+          "value": "*It took a while for the money bin to become a fixture. It is absent from the stories starring Scrooge in the March 1952 and September 1952 issues of Walt Disney's Comics, and also from the first few issues of Uncle Scrooge, although Scrooge's vault is labeled \"money bin\" in a few of these stories. The \"true\" bin first reappeared in Walt Disney's Comics in the August 1953 issue and in Uncle Scrooge in No. 9 (1955).",
+          "bbox": [
+            {
+              "h": 38.30076219512197,
+              "w": 125.83578922923016,
+              "x": 12.379961532964938,
+              "y": 315.72537347560973,
+              "confidence": 0.95,
+              "end_index": 426,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "caption": "From <i>Walt Disney's Comics</i> No. 135, December 1951; © 1951 Walt Disney Productions.",
+          "md": "![From Walt Disney's Comics No. 135, December 1951; © 1951 Walt Disney Productions.](CBatAotCB-048_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-048_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 192.23363328887197,
+              "w": 266.51924614138716,
+              "x": 10.417047684832317,
+              "y": 11.974834698932927,
+              "confidence": 0.95,
+              "end_index": 142,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "The Beagle Boys acquired a real group personality a few months later, in the first issue of *Uncle Scrooge* (1952). In \"Only a Poor Old Man,\" the story that takes up the entire comic book, the Beagles are revealed as the perfect foils for Scrooge. Like him, they're monomaniacs,",
+          "value": "The Beagle Boys acquired a real group personality a few months later, in the first issue of Uncle Scrooge (1952). In \"Only a Poor Old Man,\" the story that takes up the entire comic book, the Beagles are revealed as the perfect foils for Scrooge. Like him, they're monomaniacs,",
           "bbox": [
             {
               "h": 44.348711890243884,
@@ -126,8 +72,8 @@
           "type": "text"
         },
         {
-          "md": "acs, fully as devoted to Scrooge's fortune as Scrooge himself is. They expend as much time and energy trying to steal it as Scrooge does protecting it. The big difference is that the Beagles are interchangeable organization men (they became \"Beagle Boys, Inc.\" in that story, as proclaimed on their shirtfronts) and not rugged individualists.",
-          "value": "acs, fully as devoted to Scrooge's fortune as Scrooge himself is. They expend as much time and energy trying to steal it as Scrooge does protecting it. The big difference is that the Beagles are interchangeable organization men (they became \"Beagle Boys, Inc.\" in that story, as proclaimed on their shirtfronts) and not rugged individualists.",
+          "md": "fully as devoted to Scrooge's fortune as Scrooge himself is. They expend as much time and energy trying to steal it as Scrooge does protecting it. The big difference is that the Beagles are interchangeable organization men (they became \"Beagle Boys, Inc.\" in that story, as proclaimed on their shirtfronts) and not rugged individualists.",
+          "value": "fully as devoted to Scrooge's fortune as Scrooge himself is. They expend as much time and energy trying to steal it as Scrooge does protecting it. The big difference is that the Beagles are interchangeable organization men (they became \"Beagle Boys, Inc.\" in that story, as proclaimed on their shirtfronts) and not rugged individualists.",
           "bbox": [
             {
               "h": 60.068803353658545,
@@ -171,23 +117,6 @@
               "confidence": 0.98,
               "end_index": 84,
               "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "\\*It took a while for the money bin to become a fixture. It is absent from the stories starring Scrooge in the March 1952 and September 1952 issues of *Walt Disney's Comics*, and also from the first few issues of *Uncle Scrooge*, although Scrooge's vault is labeled \"money bin\" in a few of these stories. The \"true\" bin first reappeared in *Walt Disney's Comics* in the August 1953 issue and in *Uncle Scrooge* in No. 9 (1955).",
-          "value": "*It took a while for the money bin to become a fixture. It is absent from the stories starring Scrooge in the March 1952 and September 1952 issues of Walt Disney's Comics, and also from the first few issues of Uncle Scrooge, although Scrooge's vault is labeled \"money bin\" in a few of these stories. The \"true\" bin first reappeared in Walt Disney's Comics in the August 1953 issue and in Uncle Scrooge in No. 9 (1955).",
-          "bbox": [
-            {
-              "h": 38.30076219512197,
-              "w": 125.83578922923016,
-              "x": 12.379961532964938,
-              "y": 315.72537347560973,
-              "confidence": 0.95,
-              "end_index": 426,
-              "label": "footnote",
               "start_index": 0
             }
           ],

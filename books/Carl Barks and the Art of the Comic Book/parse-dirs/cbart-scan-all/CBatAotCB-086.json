@@ -3,8 +3,365 @@
     {
       "items": [
         {
-          "md": "*Barrier:* What particularly struck you about that?\n*Barks:* Well, it's just that working, working all the time, and never getting far enough ahead — that is, enough reward out of my work — to escape from it.\n*Barrier:* In other words, you never could take a month off.\n*Barks:* No, that's right; I was always working too close to my poverty level.\n*Barrier:* Did you ever consider getting out of comics entirely? Did it ever get to be such a burden that you wanted to do something else?\n*Barks:* No, because I had a fear I couldn't make a living at anything else \\[laughing].\n*Barrier:* Were you ever approached about any jobs other than being in comics?\n*Barks:* No.\n*Barrier:* Do you think that if you'd lived someplace else you might have followed another career?\n*Barks:* Oh, yes. If I had been working in some place where there was a lot of logging going on, or shipping... for instance, a sea captain might have said, \"Well, come along with me, be a stevedore or something on my ship.\"...\n*Barrier:* We were talking about David Kunzle's description of your career, and of course he sees this in Marxist terms. You agree with his description of your career, and yet your political views are obviously poles apart from his. How do you account for this?\n*Barks:* I feel that if I had wanted to break away from that rut I was in, I could have done it. If I were put into that situation \\[a Marxist society], it would be with me all the days of my life, and I couldn't ever have any other choice. I\nwas in it because it just suited my particular abilities, and I made the best of it.\n*Barrier:* But you still felt you had freedom of choice to —\n*Barks:* Oh, certainly. I knew that I could quit that business and go to work on a farm, or the logging woods. There were a great many places I could have gone to work and made a living.\n*Barrier:* But you felt the costs of exercising that choice would have been too great.\n*Barks:* Oh, yes, it wouldn't have gained me anything.\n*Barrier:* Did you feel exploited at the time? You couldn't sign your work, the rates you were paid certainly didn't reflect the sales of your work. ...\n*Barks:* No, I didn't think much about that. I would have liked to have received more money, but I also knew that they had to pay such a whopping royalty to Disney's that they didn't have much of a profit margin, either. There were too many fingers cutting into the pie on those comic book sales.\n*Barrier:* That's why you were interested in starting your own comic, with your own characters.\n*Barks:* Well, I had thought of it, yes. But like Kunzle says, I never got far enough ahead, at any time, that I could buy my way out of that rut.\n*Barrier:* But you didn't blame that on the economic system, just on your personal circumstances.\n*Barks:* No, the economic system is such that a guy that has any ability can make something of that ability, and I just didn't have the ability, so I was where I was. I accepted that, and that was it.",
-          "value": "Barrier: What particularly struck you about that?\nBarks: Well, it's just that working, working all the time, and never getting far enough ahead — that is, enough reward out of my work — to escape from it.\nBarrier: In other words, you never could take a month off.\nBarks: No, that's right; I was always working too close to my poverty level.\nBarrier: Did you ever consider getting out of comics entirely? Did it ever get to be such a burden that you wanted to do something else?\nBarks: No, because I had a fear I couldn't make a living at anything else [laughing].\nBarrier: Were you ever approached about any jobs other than being in comics?\nBarks: No.\nBarrier: Do you think that if you'd lived someplace else you might have followed another career?\nBarks: Oh, yes. If I had been working in some place where there was a lot of logging going on, or shipping... for instance, a sea captain might have said, \"Well, come along with me, be a stevedore or something on my ship.\"...\nBarrier: We were talking about David Kunzle's description of your career, and of course he sees this in Marxist terms. You agree with his description of your career, and yet your political views are obviously poles apart from his. How do you account for this?\nBarks: I feel that if I had wanted to break away from that rut I was in, I could have done it. If I were put into that situation [a Marxist society], it would be with me all the days of my life, and I couldn't ever have any other choice. I\nwas in it because it just suited my particular abilities, and I made the best of it.\nBarrier: But you still felt you had freedom of choice to —\nBarks: Oh, certainly. I knew that I could quit that business and go to work on a farm, or the logging woods. There were a great many places I could have gone to work and made a living.\nBarrier: But you felt the costs of exercising that choice would have been too great.\nBarks: Oh, yes, it wouldn't have gained me anything.\nBarrier: Did you feel exploited at the time? You couldn't sign your work, the rates you were paid certainly didn't reflect the sales of your work. ...\nBarks: No, I didn't think much about that. I would have liked to have received more money, but I also knew that they had to pay such a whopping royalty to Disney's that they didn't have much of a profit margin, either. There were too many fingers cutting into the pie on those comic book sales.\nBarrier: That's why you were interested in starting your own comic, with your own characters.\nBarks: Well, I had thought of it, yes. But like Kunzle says, I never got far enough ahead, at any time, that I could buy my way out of that rut.\nBarrier: But you didn't blame that on the economic system, just on your personal circumstances.\nBarks: No, the economic system is such that a guy that has any ability can make something of that ability, and I just didn't have the ability, so I was where I was. I accepted that, and that was it.",
+          "md": "***Barrier:*** What particularly struck you about that?",
+          "value": "Barrier: What particularly struck you about that?",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** Well, it's just that working, working all the time, and never getting far enough ahead — that is, enough reward out of my work — to escape from it.",
+          "value": "Barks: Well, it's just that working, working all the time, and never getting far enough ahead — that is, enough reward out of my work — to escape from it.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barrier:*** In other words, you never could take a month off.",
+          "value": "Barrier: In other words, you never could take a month off.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** No, that's right; I was always working too close to my poverty level.",
+          "value": "Barks: No, that's right; I was always working too close to my poverty level.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barrier:*** Did you ever consider getting out of comics entirely? Did it ever get to be such a burden that you wanted to do something else?",
+          "value": "Barrier: Did you ever consider getting out of comics entirely? Did it ever get to be such a burden that you wanted to do something else?",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** No, because I had a fear I couldn't make a living at anything else \\[laughing].",
+          "value": "Barks: No, because I had a fear I couldn't make a living at anything else [laughing].",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barrier:*** Were you ever approached about any jobs other than being in comics?",
+          "value": "Barrier: Were you ever approached about any jobs other than being in comics?",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** No.",
+          "value": "Barks: No.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barrier:*** Do you think that if you'd lived someplace else you might have followed another career?",
+          "value": "Barrier: Do you think that if you'd lived someplace else you might have followed another career?",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** Oh, yes. If I had been working in some place where there was a lot of logging going on, or shipping... for instance, a sea captain might have said, \"Well, come along with me, be a stevedore or something on my ship.\"...",
+          "value": "Barks: Oh, yes. If I had been working in some place where there was a lot of logging going on, or shipping... for instance, a sea captain might have said, \"Well, come along with me, be a stevedore or something on my ship.\"...",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barrier:*** We were talking about David Kunzle's description of your career, and of course he sees this in Marxist terms. You agree with his description of your career, and yet your political views are obviously poles apart from his. How do you account for this?",
+          "value": "Barrier: We were talking about David Kunzle's description of your career, and of course he sees this in Marxist terms. You agree with his description of your career, and yet your political views are obviously poles apart from his. How do you account for this?",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** I feel that if I had wanted to break away from that rut I was in, I could have done it. If I were put into that situation \\[a Marxist society], it would be with me all the days of my life, and I couldn't ever have any other choice. I was in it because it just suited my particular abilities, and I made the best of it.",
+          "value": "Barks: I feel that if I had wanted to break away from that rut I was in, I could have done it. If I were put into that situation [a Marxist society], it would be with me all the days of my life, and I couldn't ever have any other choice. I was in it because it just suited my particular abilities, and I made the best of it.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barrier:*** But you still felt you had freedom of choice to —",
+          "value": "Barrier: But you still felt you had freedom of choice to —",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** Oh, certainly. I knew that I could quit that business and go to work on a farm, or the logging woods. There were a great many places I could have gone to work and made a living.",
+          "value": "Barks: Oh, certainly. I knew that I could quit that business and go to work on a farm, or the logging woods. There were a great many places I could have gone to work and made a living.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barrier:*** But you felt the costs of exercising that choice would have been too great.",
+          "value": "Barrier: But you felt the costs of exercising that choice would have been too great.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** Oh, yes, it wouldn't have gained me anything.",
+          "value": "Barks: Oh, yes, it wouldn't have gained me anything.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barrier:*** Did you feel exploited at the time? You couldn't sign your work, the rates you were paid certainly didn't reflect the sales of your work. ...",
+          "value": "Barrier: Did you feel exploited at the time? You couldn't sign your work, the rates you were paid certainly didn't reflect the sales of your work. ...",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** No, I didn't think much about that. I would have liked to have received more money, but I also knew that they had to pay such a whopping royalty to Disney's that they didn't have much of a profit margin, either. There were too many fingers cutting into the pie on those comic book sales.",
+          "value": "Barks: No, I didn't think much about that. I would have liked to have received more money, but I also knew that they had to pay such a whopping royalty to Disney's that they didn't have much of a profit margin, either. There were too many fingers cutting into the pie on those comic book sales.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barrier:*** That's why you were interested in starting your own comic, with your own characters.",
+          "value": "Barrier: That's why you were interested in starting your own comic, with your own characters.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** Well, I had thought of it, yes. But like Kunzle says, I never got far enough ahead, at any time, that I could buy my way out of that rut.",
+          "value": "Barks: Well, I had thought of it, yes. But like Kunzle says, I never got far enough ahead, at any time, that I could buy my way out of that rut.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barrier:*** But you didn't blame that on the economic system, just on your personal circumstances.",
+          "value": "Barrier: But you didn't blame that on the economic system, just on your personal circumstances.",
+          "bbox": [
+            {
+              "h": 51.448788109756116,
+              "w": 125.98403391768292,
+              "x": 151.2666425304878,
+              "y": 137.83698932926828,
+              "confidence": 0.85,
+              "end_index": 2966,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** No, the economic system is such that a guy that has any ability can make something of that ability, and I just didn't have the ability, so I was where I was. I accepted that, and that was it.",
+          "value": "Barks: No, the economic system is such that a guy that has any ability can make something of that ability, and I just didn't have the ability, so I was where I was. I accepted that, and that was it.",
           "bbox": [
             {
               "h": 51.448788109756116,

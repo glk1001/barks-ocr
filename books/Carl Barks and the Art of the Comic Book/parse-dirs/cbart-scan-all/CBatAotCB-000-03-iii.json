@@ -4,6 +4,24 @@
       "items": [
         {
           "level": 1,
+          "md": "<div style=\"page-break-before: always;\"></div>",
+          "value": "",
+          "bbox": [
+            {
+              "h": 67.59405297256097,
+              "w": 222.51406726371954,
+              "x": 32.63294874237804,
+              "y": 88.72537157012195,
+              "confidence": 0.85,
+              "end_index": 39,
+              "label": "doc_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
           "md": "# Carl Barks and the Art of the Comic Book",
           "value": "Carl Barks and the Art of the Comic Book",
           "bbox": [
@@ -66,6 +84,24 @@
               "confidence": 0.87,
               "end_index": 17,
               "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "<div style=\"page-break-before: always;\"></div>",
+          "value": "",
+          "bbox": [
+            {
+              "h": 67.59405297256097,
+              "w": 222.51406726371954,
+              "x": 32.63294874237804,
+              "y": 88.72537157012195,
+              "confidence": 0.85,
+              "end_index": 39,
+              "label": "doc_title",
               "start_index": 0
             }
           ],

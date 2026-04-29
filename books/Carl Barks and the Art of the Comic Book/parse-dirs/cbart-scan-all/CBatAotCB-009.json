@@ -3,41 +3,6 @@
     {
       "items": [
         {
-          "caption": "Carl Barks as a young man in San Francisco, just after the end of World War I.",
-          "md": "![Carl Barks as a young man in San Francisco, just after the end of World War I.](CBatAotCB-009_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-009_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 262.3939195884146,
-              "w": 257.0557131288109,
-              "x": 14.164071551067073,
-              "y": 13.21226181402439,
-              "confidence": 1.0,
-              "end_index": 103,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "Carl Barks as a young man in San Francisco, just after the end of World War I.",
-          "value": "Carl Barks as a young man in San Francisco, just after the end of World War I.",
-          "bbox": [
-            {
-              "h": 6.08871951219513,
-              "w": 159.7094674161585,
-              "x": 13.262283727134145,
-              "y": 280.29619664634146,
-              "confidence": 0.9,
-              "end_index": 77,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "Barks had never abandoned his hopes of becoming a cartoonist, and in 1928 and 1929 he began selling gag cartoons to the *Calgary Eye-Opener*, a mildly risque humor magazine that had originated in Canada, in 1902, but was published in Minneapolis by the time Barks started contributing to it. He also sold a few cartoons to the venerable *Judge*.",
           "value": "Barks had never abandoned his hopes of becoming a cartoonist, and in 1928 and 1929 he began selling gag cartoons to the Calgary Eye-Opener, a mildly risque humor magazine that had originated in Canada, in 1902, but was published in Minneapolis by the time Barks started contributing to it. He also sold a few cartoons to the venerable Judge.",
           "bbox": [

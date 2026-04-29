@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# VII.",
+          "md": "<p style=\"text-align: center; font-size: 3rem;\">VII.</p>",
           "value": "VII.",
           "bbox": [
             {
@@ -18,7 +18,7 @@
               "start_index": 0
             }
           ],
-          "type": "heading"
+          "type": "text"
         },
         {
           "md": "**AS THE NEW** supporting characters grew in importance, the old formula for the ten-page stories in *Walt Disney's Comics*, which had Donald and the nephews battling in almost every issue, slowly died. It was almost parodied in some stories, before it slid out of sight completely. In the May 1948 *Walt Disney's Comics*, a wild caricature of a child psychologist, Professor Pulpheart Clabberhead — \"the friend of all children\" — persuades Donald to let the nephews do whatever they please. (He talks this way: \"Stifling the child's extrovertentualities tends to subjunctuate his bio-physical transmogrification.\") The results are, of course, disastrous, but in the end it's the psychologist, and not Donald, who is chasing the nephews with switch in hand. Just a year or two earlier, it would have been Donald in hot pursuit — and was, in one highly similar story in the January 1946 *Walt Disney's Comics*.",

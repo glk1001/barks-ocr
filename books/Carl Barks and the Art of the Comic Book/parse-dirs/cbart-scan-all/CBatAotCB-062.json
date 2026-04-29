@@ -3,7 +3,7 @@
     {
       "items": [
         {
-          "caption": "Prince Valiant comic strip panel by Harold R. Foster showing a figure standing on a rocky cliff overlooking a stormy sea.",
+          "caption": "",
           "md": "![Prince Valiant comic strip panel by Harold R. Foster showing a figure standing on a rocky cliff overlooking a stormy sea.](CBatAotCB-062_page_1_image_2_v2.jpg)",
           "url": "CBatAotCB-062_page_1_image_2_v2.jpg",
           "bbox": [
@@ -21,25 +21,8 @@
           "type": "image"
         },
         {
-          "md": "Synopsis: SIR GAWAIN FINDS A STOUT SHIP AS HE HAS PROMISED AND A CREW OF HARDY ORKNEY MEN TO SAIL IT AND ALL IS READY. THEN THE WILD STORM GODS RIDE THE WINDS AND VEX THE SEA UNTIL IT ROARS IN FURY AGAINST THE ROCK-BOUND SHORE. PRINCE VALIANT PACES THE CLIFFS IMPATIENTLY, FOR THROUGH THE THUNDER OF THE STORM HE SEEMS TO HEAR THE VOICE OF ALETA CALLING HIM HOME!",
-          "value": "\nSynopsis: SIR GAWAIN FINDS A STOUT SHIP AS HE HAS PROMISED AND A CREW OF HARDY ORKNEY MEN TO SAIL IT AND ALL IS READY. THEN THE WILD STORM GODS RIDE THE WINDS AND VEX THE SEA UNTIL IT ROARS IN FURY AGAINST THE ROCK-BOUND SHORE. PRINCE VALIANT PACES THE CLIFFS IMPATIENTLY, FOR THROUGH THE THUNDER OF THE STORM HE SEEMS TO HEAR THE VOICE OF ALETA CALLING HIM HOME!",
-          "bbox": [
-            {
-              "h": 129.63299828506095,
-              "w": 259.56159918064026,
-              "x": 14.005834127286585,
-              "y": 28.114993330792682,
-              "confidence": 0.88,
-              "end_index": 362,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "Comic strip panel from \"The Golden Helmet\" by Carl Barks showing Donald Duck and his nephews on a rocky coast.",
-          "md": "![Comic strip panel from \"The Golden Helmet\" by Carl Barks showing Donald Duck and his nephews on a rocky coast.](CBatAotCB-062_page_1_image_1_v2.jpg)",
+          "caption": "In his \"morgue\" of reference materials, which included the files shown in a 1969 snapshot, Barks stored the work of such comic-strip masters as Harold Foster and Alex Raymond. He clipped many panels of water scenes from Foster's \"Prince Valiant,\" and their influence can be felt in his depiction of the rugged coast of Labrador in \"The Golden Helmet\" in <i>Donald Duck</> Four Color No. 408, 1952. In the same story, Barks made the museum where Donald worked as a guard seem just as real as the coast of Labrador—but by introducing fantastic rather than realistic details. \"The Golden Helmet\" © 1952 Walt Disney Productions; \"Prince Valiant\" © 1951 King Features Syndicate.",
+          "md": "![In his \"morgue\" of reference materials, which included the files shown in a 1969 snapshot, Barks stored the work of such comic-strip masters as Harold Foster and Alex Raymond. He clipped many panels of water scenes from Foster's \"Prince Valiant,\" and their influence can be felt in his depiction of the rugged coast of Labrador in \"The Golden Helmet\" in Donald Duck Four Color No. 408, 1952. In the same story, Barks made the museum where Donald worked as a guard seem just as real as the coast of Labrador—but by introducing fantastic rather than realistic details. \"The Golden Helmet\" © 1952 Walt Disney Productions; \"Prince Valiant\" © 1951 King Features Syndicate.](CBatAotCB-062_page_1_image_1_v2.jpg)",
           "url": "CBatAotCB-062_page_1_image_1_v2.jpg",
           "bbox": [
             {
@@ -54,40 +37,6 @@
             }
           ],
           "type": "image"
-        },
-        {
-          "md": "OLAF, THE BLUE, MUST HAVE FELT THE SAME WAY!\nTHAT'S THE ICKIEST VIEW OF AMERICA I'VE EVER SEEN!",
-          "value": "\nOLAF, THE BLUE, MUST HAVE FELT THE SAME WAY!\nTHAT'S THE ICKIEST VIEW OF AMERICA I'VE EVER SEEN!",
-          "bbox": [
-            {
-              "h": 92.47719512195124,
-              "w": 257.40517375666917,
-              "x": 15.711504978086888,
-              "y": 191.20323932926829,
-              "confidence": 0.78,
-              "end_index": 94,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "In his \"morgue\" of reference materials, which included the files shown in a 1969 snapshot, Barks stored the work of such comic-strip masters as Harold Foster and Alex Raymond. He clipped many panels of water scenes from Foster's \"Prince Valiant,\" and their influence can be felt in his depiction of the rugged coast of Labrador in \"The Golden Helmet\" in *Donald Duck* Four Color No. 408, 1952. In the same story, Barks made the museum where Donald worked as a guard seem just as real as the coast of Labrador—but by introducing fantastic rather than realistic details. \"The Golden Helmet\" © 1952 Walt Disney Productions; \"Prince Valiant\" © 1951 King Features Syndicate.",
-          "value": "In his \"morgue\" of reference materials, which included the files shown in a 1969 snapshot, Barks stored the work of such comic-strip masters as Harold Foster and Alex Raymond. He clipped many panels of water scenes from Foster's \"Prince Valiant,\" and their influence can be felt in his depiction of the rugged coast of Labrador in \"The Golden Helmet\" in Donald Duck Four Color No. 408, 1952. In the same story, Barks made the museum where Donald worked as a guard seem just as real as the coast of Labrador—but by introducing fantastic rather than realistic details. \"The Golden Helmet\" © 1952 Walt Disney Productions; \"Prince Valiant\" © 1951 King Features Syndicate.",
-          "bbox": [
-            {
-              "h": 29.771753048780518,
-              "w": 262.9264563881478,
-              "x": 13.599864114900912,
-              "y": 301.3644740853658,
-              "confidence": 0.86,
-              "end_index": 668,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
         },
         {
           "items": [

@@ -37,6 +37,23 @@
           "type": "text"
         },
         {
+          "md": "\\* There is one odd exception to this. In the May 1954 \\*Walt Disney's Comics\\* there is a character named Miss Penny Wise, an old maid who, Scrooge says, \"owns an old note of mine that could ruin me.\" After Donald has been the unwitting cause of the destruction of Miss Wise's house, Scrooge sobs that \"Miss Penny will foreclose on my entire fortune.\" She does not, of course.",
+          "value": "* There is one odd exception to this. In the May 1954 *Walt Disney's Comics* there is a character named Miss Penny Wise, an old maid who, Scrooge says, \"owns an old note of mine that could ruin me.\" After Donald has been the unwitting cause of the destruction of Miss Wise's house, Scrooge sobs that \"Miss Penny will foreclose on my entire fortune.\" She does not, of course.",
+          "bbox": [
+            {
+              "h": 32.72268292682927,
+              "w": 125.60811285251526,
+              "x": 12.41705673589939,
+              "y": 321.5213414634147,
+              "confidence": 0.96,
+              "end_index": 376,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
           "md": "Scrooge's role in \"Secret\" (a story set on the mist-shrouded Scottish moors, and filled with",
           "value": "Scrooge's role in \"Secret\" (a story set on the mist-shrouded Scottish moors, and filled with",
           "bbox": [
@@ -105,8 +122,26 @@
           "type": "text"
         },
         {
-          "md": "(Also at about this time, Scrooge began wearing, for good, a silk top hat and an old",
-          "value": "(Also at about this time, Scrooge began wearing, for good, a silk top hat and an old",
+          "caption": "From <i>Christmas Parade</i> No. 1, 1949; © 1949 Walt Disney Productions.",
+          "md": "!From Christmas Parade No. 1, 1949; © 1949 Walt Disney Productions.](CBatAotCB-046_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-046_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 339.52613543254574,
+              "w": 233.83372808689026,
+              "x": 27.957819169207315,
+              "y": 9.51165420160061,
+              "confidence": 0.7,
+              "end_index": 176,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "md": "[Also at about this time, Scrooge began wearing, for good, a silk top hat and an old",
+          "value": "[Also at about this time, Scrooge began wearing, for good, a silk top hat and an old",
           "bbox": [
             {
               "h": 14.840716463414664,
@@ -116,23 +151,6 @@
               "confidence": 0.98,
               "end_index": 83,
               "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "\\* There is one odd exception to this. In the May 1954 \\*Walt Disney's Comics\\* there is a character named Miss Penny Wise, an old maid who, Scrooge says, \"owns an old note of mine that could ruin me.\" After Donald has been the unwitting cause of the destruction of Miss Wise's house, Scrooge sobs that \"Miss Penny will foreclose on my entire fortune.\" She does not, of course.",
-          "value": "* There is one odd exception to this. In the May 1954 *Walt Disney's Comics* there is a character named Miss Penny Wise, an old maid who, Scrooge says, \"owns an old note of mine that could ruin me.\" After Donald has been the unwitting cause of the destruction of Miss Wise's house, Scrooge sobs that \"Miss Penny will foreclose on my entire fortune.\" She does not, of course.",
-          "bbox": [
-            {
-              "h": 32.72268292682927,
-              "w": 125.60811285251526,
-              "x": 12.41705673589939,
-              "y": 321.5213414634147,
-              "confidence": 0.96,
-              "end_index": 376,
-              "label": "footnote",
               "start_index": 0
             }
           ],

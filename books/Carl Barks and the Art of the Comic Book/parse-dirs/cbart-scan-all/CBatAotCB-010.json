@@ -20,6 +20,24 @@
           "type": "text"
         },
         {
+          "caption": "Carl Barks in 1932, when he was working for the <i>Calgary Eye Opener.</i>",
+          "md": "![Carl Barks in 1932, when he was working for the Calgary Eye Opener.](CBatAotCB-011_page_1_image_1_v2.png)",
+          "url": "CBatAotCB-011_page_1_image_1_v2.png",
+          "bbox": [
+            {
+              "h": 159.33135908917683,
+              "w": 262.50088998189784,
+              "x": 12.250760170541158,
+              "y": 13.99300066692073,
+              "confidence": 0.76,
+              "end_index": 207,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "md": "\"I got into Minneapolis in November of 1931. I went to work there with the *Eye-Opener*. Ed Sumner was editor, and I was the gag man and illustrator. Eventually, the *Eye-Opener* changed hands; Annette Fawcett bought it from Meyer. Then she fired Ed Sumner. She wanted to put on her own type of heavy drinkers. I never did fit into it, because I just couldn't drink a hell of a lot, but I fitted into the workhorse part of it. I was there for four years, doing that work. It just got to where I was doing all of it. Toward the last there, I was practically writing the whole thing. We bought a few gags, at a dollar a gag, and two dollars a gag, and so on. Very little of that. I got a hundred dollars a month, I think.",
           "value": "\"I got into Minneapolis in November of 1931. I went to work there with the Eye-Opener. Ed Sumner was editor, and I was the gag man and illustrator. Eventually, the Eye-Opener changed hands; Annette Fawcett bought it from Meyer. Then she fired Ed Sumner. She wanted to put on her own type of heavy drinkers. I never did fit into it, because I just couldn't drink a hell of a lot, but I fitted into the workhorse part of it. I was there for four years, doing that work. It just got to where I was doing all of it. Toward the last there, I was practically writing the whole thing. We bought a few gags, at a dollar a gag, and two dollars a gag, and so on. Very little of that. I got a hundred dollars a month, I think.",
           "bbox": [
@@ -35,6 +53,132 @@
             }
           ],
           "type": "text"
+        },
+        {
+          "caption": "Carl Barks paddling a canoe in Minneapolis in 1934.",
+          "md": "![Carl Barks paddling a canoe in Minneapolis in 1934.](CBatAotCB-012_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-012_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 334.24632907774395,
+              "w": 240.2148661394817,
+              "x": 26.634842320884143,
+              "y": 11.270599275914634,
+              "confidence": 0.99,
+              "end_index": 76,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "On this page and the three following are examples of Barks's work as a cartoonist for the <i>Calgary Eye-Opener.</i> He was the art director of <i>Coo-Coo,</i> a short lived (one issue in 1932) magazine from the publisher of <i>Eye-Opener.</i>",
+          "md": "![On this page and the three following are examples of Barks's work as a cartoonist for the *Calgary Eye-Opener.* He was the art director of *Coo-Coo,* a short lived (one issue in 1932) magazine from the publisher of *Eye-Opener.*](CBatAotCB-013_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-013_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 235.2850216749238,
+              "w": 145.80927353277437,
+              "x": 51.350183403201214,
+              "y": 11.87592344702744,
+              "confidence": 0.98,
+              "end_index": 318,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "",
+          "md": "![Cover of Eyeopener's Annual Red Pepper, Fourth Edition, featuring an illustration of \"The Original Bali Dancer\" on a beach. A text box on the left lists \"HUMOR with the lid off! Cartoons, Poems, Annette's PEPPER-UPPERS, FRENCH ART\". The price is listed as 50¢.](CBatAotCB-014_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-014_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 321.2431026105183,
+              "w": 247.98380359184452,
+              "x": 24.157915158155486,
+              "y": 21.698696169969512,
+              "confidence": 0.99,
+              "end_index": 285,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "",
+          "md": "![A cartoon illustration by C. Barks titled \"MOVE OVER!\" showing a stork carrying a baby towards a small house where a wolf is sitting on the doorstep. The top of the page features the stylized logo \"CO-CO\" and a price of 10¢.](CBatAotCB-015_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-015_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 324.12184641768295,
+              "w": 252.49363876714935,
+              "x": 17.21518173589939,
+              "y": 18.287612423780487,
+              "confidence": 0.93,
+              "end_index": 249,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "",
+          "md": "![Two women in beachwear talking near a large tree, with one holding a tennis racket. Signed \"BARKIE\".](CBatAotCB-016_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-016_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 116.85829744664636,
+              "w": 155.50114638910063,
+              "x": 15.31736161394817,
+              "y": 12.067685785060975,
+              "confidence": 0.99,
+              "end_index": 125,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "",
+          "md": "![Two women on a beach under an umbrella, one wearing glasses and looking disgruntled at a small, scrawny man holding a tiny fish in the background. Signed \"BARKIE\".](CBatAotCB-016_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-016_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 189.24485899390245,
+              "w": 228.44904249237803,
+              "x": 29.275664062499995,
+              "y": 142.21158155487805,
+              "confidence": 0.95,
+              "end_index": 188,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "",
+          "md": "![A two-panel comic strip about a tattoo artist. In the first panel, a man asks a sailor, \"WHY DO YOU WANT MABEL TAKEN OFF YOUR ARM?\" A sign reads \"TATTOOS PUT ON OR TOOK OFF $3.00 PER.\" In the second panel, the sailor shows his arm where the tattoo has been modified to look like a different woman, saying \"SEE!\"](CBatAotCB-013_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-013_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 70.25119664634144,
+              "w": 262.96799328315547,
+              "x": 12.052422113185974,
+              "y": 284.81346036585364,
+              "confidence": 0.95,
+              "end_index": 336,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
         },
         {
           "md": "\"I worked for the *Eye-Opener* until 1935, and I could see that the Depression was going to keep right on going forever, and that little magazine was just barely skinning by. I read somewhere that Disney was needing guys — it was in a newspaper column, I think — so I sent this bunch of cartoons and old page proofs to Disney's and got a letter right back, telling me to come out for the start of their November class. It was a tryout, in which you worked one month, and you went to their art class, and you",
@@ -69,6 +213,24 @@
             }
           ],
           "type": "text"
+        },
+        {
+          "caption": "Barks sent this drawing of his conception of Snow White and the Seven Dwarfs to the Disney studio when he applied for work in 1935.",
+          "md": "![Barks sent this drawing of his conception of Snow White and the Seven Dwarfs to the Disney studio when he applied for work in 1935.](CBatAotCB-011_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-011_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 162.71071646341463,
+              "w": 228.17351610137192,
+              "x": 30.608861947408535,
+              "y": 186.94010670731706,
+              "confidence": 0.99,
+              "end_index": 296,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
         },
         {
           "md": "Barks was thirty-four years old when he was hired by the Disney studio — considerably older than many of the young artists who were joining the Disney staff at that time. People like Frank Thomas, Ollie Johnston, and Ward Kimball — all of them at least ten years younger than Barks, and all of them to become brilliant animators — had been working at the studio for more than a year when Barks went on the payroll. He began as an \"in-betweener,\" filling in drawings between those made by the animators and their assistants, and found the work heavy going.",

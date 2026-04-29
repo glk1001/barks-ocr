@@ -3,43 +3,8 @@
     {
       "items": [
         {
-          "caption": "A comic strip showing Donald Duck looking through a telescope and seeing the Beagle Boys digging a hole near a vault.",
-          "md": "![A comic strip showing Donald Duck looking through a telescope and seeing the Beagle Boys digging a hole near a vault.](CBatAotCB-048_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-048_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 192.23363328887197,
-              "w": 266.51924614138716,
-              "x": 10.417047684832317,
-              "y": 11.974834698932927,
-              "confidence": 0.95,
-              "end_index": 142,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From Walt Disney's Comics No. 135, December 1951; © 1951 Walt Disney Productions.",
-          "value": "From Walt Disney's Comics No. 135, December 1951; © 1951 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.442568597560958,
-              "w": 179.2549533155488,
-              "x": 53.75477229420731,
-              "y": 210.56348323170732,
-              "confidence": 0.95,
-              "end_index": 80,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "broadcloth coat, which we are told in a later story he bought in Scotland in 1902.",
-          "value": "broadcloth coat, which we are told in a later story he bought in Scotland in 1902.",
+          "md": "broadcloth coat, which we are told in a later story he bought in Scotland in 1902.]",
+          "value": "broadcloth coat, which we are told in a later story he bought in Scotland in 1902.]",
           "bbox": [
             {
               "h": 15.051859756097564,

@@ -3,41 +3,6 @@
     {
       "items": [
         {
-          "caption": "Barks lived and worked in this house in San Jacinto from 1942 to 1951.",
-          "md": "![Barks lived and worked in this house in San Jacinto from 1942 to 1951.](CBatAotCB-026_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-026_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 180.07205387766766,
-              "w": 261.31245117187495,
-              "x": 11.41915515434451,
-              "y": 11.105930116234756,
-              "confidence": 1.0,
-              "end_index": 95,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "Barks lived and worked in this house in San Jacinto from 1942 to 1951.",
-          "value": "Barks lived and worked in this house in San Jacinto from 1942 to 1951.",
-          "bbox": [
-            {
-              "h": 5.718109756097565,
-              "w": 147.70048685213413,
-              "x": 71.04952076981706,
-              "y": 196.16970274390243,
-              "confidence": 0.91,
-              "end_index": 69,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "where gags were everything. Jack Hannah said in 1976 that Barks had \"a natural talent for cartoon work,\" but it was still developing; as Hannah also remarked, \"Some of it was too far out sometimes; you'd have to watch him on continuity.\" While he was at the Disney studio, Barks was not a consummate story-teller, and he showed few signs of becoming one.",
           "value": "where gags were everything. Jack Hannah said in 1976 that Barks had \"a natural talent for cartoon work,\" but it was still developing; as Hannah also remarked, \"Some of it was too far out sometimes; you'd have to watch him on continuity.\" While he was at the Disney studio, Barks was not a consummate story-teller, and he showed few signs of becoming one.",
           "bbox": [

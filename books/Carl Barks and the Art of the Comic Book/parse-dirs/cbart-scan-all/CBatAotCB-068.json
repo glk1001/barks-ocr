@@ -54,6 +54,24 @@
           "type": "text"
         },
         {
+          "caption": "From \"Dangerous Disguise\" in <i>Donald Duck</i> Four Color No. 308, 1951; © 1950 Walt Disney Productions.",
+          "md": "![From \"Dangerous Disguise\" in Donald Duck Four Color No. 308, 1951; © 1950 Walt Disney Productions.](CBatAotCB-068_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-068_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.08133384146342,
+              "w": 265.2117862757241,
+              "x": 11.365347870617377,
+              "y": 249.60439024390243,
+              "confidence": 0.99,
+              "end_index": 188,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "md": "Another problem was that Barks the illustrator, when he was doing more than providing settings for the ducks, was simply not on a par with Barks the cartoonist. His shortcomings as a natural draftsman, which he had turned to his advantage in earlier stories, were highlighted in some of his stories in the early fifties. The men and women in \"Dangerous Disguise\" look like emigrants from one of the better adventure comic books of the early forties, which isn't saying much. They come to life only when Barks \"cartoons\" their faces.",
           "value": "Another problem was that Barks the illustrator, when he was doing more than providing settings for the ducks, was simply not on a par with Barks the cartoonist. His shortcomings as a natural draftsman, which he had turned to his advantage in earlier stories, were highlighted in some of his stories in the early fifties. The men and women in \"Dangerous Disguise\" look like emigrants from one of the better adventure comic books of the early forties, which isn't saying much. They come to life only when Barks \"cartoons\" their faces.",
           "bbox": [
@@ -82,41 +100,6 @@
               "confidence": 0.99,
               "end_index": 506,
               "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "A comic strip panel from \"Dangerous Disguise\" showing several men in suits pointing guns at each other with overlapping speech bubbles full of spy-themed dialogue.",
-          "md": "![A comic strip panel from \"Dangerous Disguise\" showing several men in suits pointing guns at each other with overlapping speech bubbles full of spy-themed dialogue.](CBatAotCB-068_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-068_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 93.08133384146342,
-              "w": 265.2117862757241,
-              "x": 11.365347870617377,
-              "y": 249.60439024390243,
-              "confidence": 0.99,
-              "end_index": 188,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From \"Dangerous Disguise\" in *Donald Duck Four Color* No. 308, 1951; © 1950 Walt Disney Productions.",
-          "value": "From \"Dangerous Disguise\" in Donald Duck Four Color No. 308, 1951; © 1950 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.160861280487825,
-              "w": 213.65788205030486,
-              "x": 36.55177305640243,
-              "y": 348.42896341463415,
-              "confidence": 0.95,
-              "end_index": 99,
-              "label": "caption",
               "start_index": 0
             }
           ],

@@ -20,6 +20,24 @@
           "type": "text"
         },
         {
+          "caption": "From \"Lost in the Andes\" in <i>Donald Duck</i> Four Color No. 223, 1949; © 1949 Walt Disney Productions",
+          "md": "![From \"Lost in the Andes\" in Donald Duck Four Color No. 223, 1949; © 1949 Walt Disney Productions](CBatAotCB-066_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-066_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 93.13557164634143,
+              "w": 142.53769828982468,
+              "x": 12.936289896150912,
+              "y": 48.898513719512195,
+              "confidence": 0.54,
+              "end_index": 88,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "md": "Much the same thing happens in \"Ancient Persia,\" published a year later, except that adventure is dominant from the first page. A mad scientist kidnaps Donald and the nephews and forces them to help him unearth an ancient Persian city whose inhabitants were dehydrated while still living. The scientist fills the royal bathtub with a special solution and then pours in the dust of the royal family. The water seethes, and then a pompous Persian monarch and his fat, freckle-faced daughter emerge. \"So I live again!\" the king declaims. \"I, King Nevvawaza, imperial potentate of all Itsa Faka and adjoining subdivisions.\" The scientist plans to dehydrate everyone in the world so that he can have a little privacy, but somehow, once King Nevvawaza and his retinue appear, it's hard to get very worried.",
           "value": "Much the same thing happens in \"Ancient Persia,\" published a year later, except that adventure is dominant from the first page. A mad scientist kidnaps Donald and the nephews and forces them to help him unearth an ancient Persian city whose inhabitants were dehydrated while still living. The scientist fills the royal bathtub with a special solution and then pours in the dust of the royal family. The water seethes, and then a pompous Persian monarch and his fat, freckle-faced daughter emerge. \"So I live again!\" the king declaims. \"I, King Nevvawaza, imperial potentate of all Itsa Faka and adjoining subdivisions.\" The scientist plans to dehydrate everyone in the world so that he can have a little privacy, but somehow, once King Nevvawaza and his retinue appear, it's hard to get very worried.",
           "bbox": [

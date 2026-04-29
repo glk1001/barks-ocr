@@ -3,24 +3,6 @@
     {
       "items": [
         {
-          "caption": "A cartoon illustration by C. Barks titled \"MOVE OVER!\" showing a stork carrying a baby towards a small house where a wolf is sitting on the doorstep. The top of the page features the stylized logo \"CO-CO\" and a price of 10¢.",
-          "md": "![A cartoon illustration by C. Barks titled \"MOVE OVER!\" showing a stork carrying a baby towards a small house where a wolf is sitting on the doorstep. The top of the page features the stylized logo \"CO-CO\" and a price of 10¢.](CBatAotCB-015_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-015_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 324.12184641768295,
-              "w": 252.49363876714935,
-              "x": 17.21518173589939,
-              "y": 18.287612423780487,
-              "confidence": 0.93,
-              "end_index": 249,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
           "items": [
             {
               "md": "Carl Barks and the Art of the Comic Book\n15",

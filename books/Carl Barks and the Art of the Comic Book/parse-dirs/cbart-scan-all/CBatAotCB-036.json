@@ -3,41 +3,6 @@
     {
       "items": [
         {
-          "caption": "A giant octopus rises from the sea, shattering an old wooden galleon. In the background, seagulls fly away. On the right, a small duck character in a boat says, \"UH OH! I MUSTA USED A SPRINKLE TOO MUCH PEPPER!\"",
-          "md": "![A giant octopus rises from the sea, shattering an old wooden galleon. In the background, seagulls fly away. On the right, a small duck character in a boat says, \"UH OH! I MUSTA USED A SPRINKLE TOO MUCH PEPPER!\"](CBatAotCB-036_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-036_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 182.06667016006097,
-              "w": 253.26366996951216,
-              "x": 16.47075457317073,
-              "y": 12.929053925304878,
-              "confidence": 1.0,
-              "end_index": 235,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From \"The Ghost of the Grotto\" in *Donald Duck Four Color* No. 159, 1947; © 1947 Walt Disney Productions.",
-          "value": "From \"The Ghost of the Grotto\" in Donald Duck Four Color No. 159, 1947; © 1947 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.816882621951217,
-              "w": 205.72030392530485,
-              "x": 40.33098418445122,
-              "y": 199.8713643292683,
-              "confidence": 0.95,
-              "end_index": 104,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "encompassing as much time as required to get its point across. His stories developed a much more supple and ingratiating rhythm than before, as Barks achieved flexibility not only by toning down the action in his stories, but by bringing the dialogue and the drawings into better balance.",
           "value": "encompassing as much time as required to get its point across. His stories developed a much more supple and ingratiating rhythm than before, as Barks achieved flexibility not only by toning down the action in his stories, but by bringing the dialogue and the drawings into better balance.",
           "bbox": [
@@ -87,6 +52,24 @@
             }
           ],
           "type": "text"
+        },
+        {
+          "caption": "From \"The Ghost of the Grotto\" in <i>Donald Duck Four Color</i> No. 159, 1947; © 1947 Walt Disney Productions.",
+          "md": "![From \"The Ghost of the Grotto\" in Donald Duck Four Color No. 159, 1947; © 1947 Walt Disney Productions.](CBatAotCB-036_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-036_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 182.06667016006097,
+              "w": 253.26366996951216,
+              "x": 16.47075457317073,
+              "y": 12.929053925304878,
+              "confidence": 1.0,
+              "end_index": 235,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
         },
         {
           "md": "This new technical mastery wouldn't have counted for much, though, if Barks hadn't used it to tell more interesting stories than his",

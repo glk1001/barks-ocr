@@ -3,22 +3,22 @@
     {
       "items": [
         {
-          "caption": "X.",
-          "md": "![X.](CBatAotCB-085_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-085_page_1_image_1_v2.jpg",
+          "level": 1,
+          "md": "<p style=\"text-align: center; font-size: 3rem;\">X.</p>",
+          "value": "X.",
           "bbox": [
             {
               "h": 32.2158955792683,
               "w": 44.2539500762195,
               "x": 119.8525438262195,
               "y": 49.09877286585366,
-              "confidence": 0.79,
-              "end_index": 27,
-              "label": "image",
+              "confidence": 0.88,
+              "end_index": 3,
+              "label": "paragraph_title",
               "start_index": 0
             }
           ],
-          "type": "image"
+          "type": "text"
         },
         {
           "md": "**FOR ALL THE** millions of copies that his comic books sold, Barks was never paid exceptionally well, by industry standards. The most he ever received before his retirement in 1966 was forty-five dollars and fifty cents per page (eleven dollars and fifty cents for script and thirty-four dollars for drawings). He received some bonuses, but they were given to all employees; he was not singled out because of the quality or the high sales of his work.\\*",
@@ -31,57 +31,6 @@
               "y": 118.63912728658538,
               "confidence": 0.99,
               "end_index": 453,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "In 1974, Barks and I talked about this side of his life. I read to him a quotation from a piece that David Kunzle had written as an introduction to the English edition of a Chilean book called *How to Read Donald Duck*, a Marxist interpretation of the duck stories, including those by Barks.\\* Here is the transcript of that part of our interview.",
-          "value": "In 1974, Barks and I talked about this side of his life. I read to him a quotation from a piece that David Kunzle had written as an introduction to the English edition of a Chilean book called How to Read Donald Duck, a Marxist interpretation of the duck stories, including those by Barks.* Here is the transcript of that part of our interview.",
-          "bbox": [
-            {
-              "h": 59.21094512195124,
-              "w": 126.79275200076216,
-              "x": 11.311502000762193,
-              "y": 200.06625,
-              "confidence": 0.99,
-              "end_index": 346,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "*Barrier:* Kunzle had an interesting summary of how he saw your career: \"a man who never seemed to have time or money for a vacation, whose life was continuous and seemingly monotonous labor, paid piece-rate at a level which never permitted him to save, who never had and never sought an adventure, who never traveled abroad and little in the United States (only into the California and Oregon forests), who lived in other words, something of the life of the 'average' U.S. worker (a life presumably shared by the parents of many of his readers) — this man wrote ceaselessly about a world of constant leisure, where 'work' was defined as consumption, the exotic exploit, and fierce competition to avoid work, to which end wealth flowed freely from all quarters of the globe.\" \\[Barks laughed.] Do you see any resemblance to yourself in that description?",
-          "value": "Barrier: Kunzle had an interesting summary of how he saw your career: \"a man who never seemed to have time or money for a vacation, whose life was continuous and seemingly monotonous labor, paid piece-rate at a level which never permitted him to save, who never had and never sought an adventure, who never traveled abroad and little in the United States (only into the California and Oregon forests), who lived in other words, something of the life of the 'average' U.S. worker (a life presumably shared by the parents of many of his readers) — this man wrote ceaselessly about a world of constant leisure, where 'work' was defined as consumption, the exotic exploit, and fierce competition to avoid work, to which end wealth flowed freely from all quarters of the globe.\" [Barks laughed.] Do you see any resemblance to yourself in that description?",
-          "bbox": [
-            {
-              "h": 140.60801067073172,
-              "w": 126.67290777439023,
-              "x": 149.80314786585365,
-              "y": 118.27015243902439,
-              "confidence": 0.99,
-              "end_index": 852,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "*Barks:* Oh, heavens, yes. Yeah, that's too true to be funny.",
-          "value": "Barks: Oh, heavens, yes. Yeah, that's too true to be funny.",
-          "bbox": [
-            {
-              "h": 15.037545731707304,
-              "w": 125.93971989329269,
-              "x": 150.40533155487802,
-              "y": 258.2584756097561,
-              "confidence": 0.97,
-              "end_index": 60,
               "label": "text",
               "start_index": 0
             }
@@ -106,17 +55,17 @@
           "type": "text"
         },
         {
-          "md": "Barks became an employee of Western in the fifties, he thinks in 1958. He continued to be paid page rates, but his earnings per page were credited against his salary every month until the amount of his salary had been exceeded. He could then draw the excess whenever he wished.",
-          "value": "Barks became an employee of Western in the fifties, he thinks in 1958. He continued to be paid page rates, but his earnings per page were credited against his salary every month until the amount of his salary had been exceeded. He could then draw the excess whenever he wished.",
+          "md": "In 1974, Barks and I talked about this side of his life. I read to him a quotation from a piece that David Kunzle had written as an introduction to the English edition of a Chilean book called *How to Read Donald Duck*, a Marxist interpretation of the duck stories, including those by Barks.\\* Here is the transcript of that part of our interview.",
+          "value": "In 1974, Barks and I talked about this side of his life. I read to him a quotation from a piece that David Kunzle had written as an introduction to the English edition of a Chilean book called How to Read Donald Duck, a Marxist interpretation of the duck stories, including those by Barks.* Here is the transcript of that part of our interview.",
           "bbox": [
             {
-              "h": 26.83141006097565,
-              "w": 126.43733624714177,
-              "x": 12.668767983041157,
-              "y": 327.07984756097557,
-              "confidence": 0.87,
-              "end_index": 276,
-              "label": "footnote",
+              "h": 59.21094512195124,
+              "w": 126.79275200076216,
+              "x": 11.311502000762193,
+              "y": 200.06625,
+              "confidence": 0.99,
+              "end_index": 346,
+              "label": "text",
               "start_index": 0
             }
           ],
@@ -133,6 +82,57 @@
               "y": 282.40634908536583,
               "confidence": 0.82,
               "end_index": 777,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barrier:*** Kunzle had an interesting summary of how he saw your career: \"a man who never seemed to have time or money for a vacation, whose life was continuous and seemingly monotonous labor, paid piece-rate at a level which never permitted him to save, who never had and never sought an adventure, who never traveled abroad and little in the United States (only into the California and Oregon forests), who lived in other words, something of the life of the 'average' U.S. worker (a life presumably shared by the parents of many of his readers) — this man wrote ceaselessly about a world of constant leisure, where 'work' was defined as consumption, the exotic exploit, and fierce competition to avoid work, to which end wealth flowed freely from all quarters of the globe.\" \\[Barks laughed.] Do you see any resemblance to yourself in that description?",
+          "value": "Barrier: Kunzle had an interesting summary of how he saw your career: \"a man who never seemed to have time or money for a vacation, whose life was continuous and seemingly monotonous labor, paid piece-rate at a level which never permitted him to save, who never had and never sought an adventure, who never traveled abroad and little in the United States (only into the California and Oregon forests), who lived in other words, something of the life of the 'average' U.S. worker (a life presumably shared by the parents of many of his readers) — this man wrote ceaselessly about a world of constant leisure, where 'work' was defined as consumption, the exotic exploit, and fierce competition to avoid work, to which end wealth flowed freely from all quarters of the globe.\" [Barks laughed.] Do you see any resemblance to yourself in that description?",
+          "bbox": [
+            {
+              "h": 140.60801067073172,
+              "w": 126.67290777439023,
+              "x": 149.80314786585365,
+              "y": 118.27015243902439,
+              "confidence": 0.99,
+              "end_index": 852,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "***Barks:*** Oh, heavens, yes. Yeah, that's too true to be funny.",
+          "value": "Barks: Oh, heavens, yes. Yeah, that's too true to be funny.",
+          "bbox": [
+            {
+              "h": 15.037545731707304,
+              "w": 125.93971989329269,
+              "x": 150.40533155487802,
+              "y": 258.2584756097561,
+              "confidence": 0.97,
+              "end_index": 60,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks became an employee of Western in the fifties, he thinks in 1958. He continued to be paid page rates, but his earnings per page were credited against his salary every month until the amount of his salary had been exceeded. He could then draw the excess whenever he wished.",
+          "value": "Barks became an employee of Western in the fifties, he thinks in 1958. He continued to be paid page rates, but his earnings per page were credited against his salary every month until the amount of his salary had been exceeded. He could then draw the excess whenever he wished.",
+          "bbox": [
+            {
+              "h": 26.83141006097565,
+              "w": 126.43733624714177,
+              "x": 12.668767983041157,
+              "y": 327.07984756097557,
+              "confidence": 0.87,
+              "end_index": 276,
               "label": "footnote",
               "start_index": 0
             }

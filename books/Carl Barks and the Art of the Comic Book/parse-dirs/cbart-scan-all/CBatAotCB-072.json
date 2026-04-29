@@ -3,41 +3,6 @@
     {
       "items": [
         {
-          "caption": "A comic strip page featuring Donald Duck. In the first panel, Donald is being chased by a large, horned monster on a rocky landscape, shouting \"HELP! HELP!\". In the second panel, he is running away from the monster, yelling \"YEEK!\". In the third panel, he is falling off a cliff while the monster watches from above, thinking \"I'VE GOT TO ESCAPE THESE MEN FROM MARS SOMEHOW!\". In the fourth panel, Donald is cornered by the monster and screams \"SCREECH! HELP! SCREECH!\". In the final panel, Donald is shown waking up in bed, realizing it was a nightmare, while Huey, Dewey, and Louie look on from the doorway. He is still shouting \"SCREECH! YEEK! HELP!\".",
-          "md": "![A comic strip page featuring Donald Duck. In the first panel, Donald is being chased by a large, horned monster on a rocky landscape, shouting \"HELP! HELP!\". In the second panel, he is running away from the monster, yelling \"YEEK!\". In the third panel, he is falling off a cliff while the monster watches from above, thinking \"I'VE GOT TO ESCAPE THESE MEN FROM MARS SOMEHOW!\". In the fourth panel, Donald is cornered by the monster and screams \"SCREECH! HELP! SCREECH!\". In the final panel, Donald is shown waking up in bed, realizing it was a nightmare, while Huey, Dewey, and Louie look on from the doorway. He is still shouting \"SCREECH! YEEK! HELP!\".](CBatAotCB-072_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-072_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 281.60922256097564,
-              "w": 257.10457281345276,
-              "x": 15.85885897008384,
-              "y": 50.62451981707317,
-              "confidence": 0.97,
-              "end_index": 679,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From Walt Disney's Comics No. 101, February 1949; © 1949 Walt Disney Productions.",
-          "value": "From Walt Disney's Comics No. 101, February 1949; © 1949 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.54429878048777,
-              "w": 168.69727848704267,
-              "x": 60.7795526867378,
-              "y": 339.94625762195125,
-              "confidence": 0.93,
-              "end_index": 80,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "items": [
             {
               "md": "72",

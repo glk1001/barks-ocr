@@ -3,6 +3,23 @@
     {
       "items": [
         {
+          "md": "\"The first thing that happened to me from animation was to go over to work with Jack King, who was a director. Jack had just been brought back to the studio from Schlesinger's \\[the Warner Brothers cartoon studio] at that point, and told to make *Modern Inventions*. So for about two months, he and I worked up the story for *Modern Inventions*. When that went into animation, I was put in a little room and told to think up another story. I wasn't getting very far very fast, so Walt, or Ted Sears, or one of the guys in the department, said, 'Barks is just wasting his time here, he'd better be put with somebody like Harry Reeves, who has had a lot of story experience, and then his wild thoughts will be directed along usable lines.' That's how I happened to be put with Harry Reeves. We worked as a team for a number of years.\" Chuck Couch, a former animator, also worked with Reeves and Barks.",
+          "value": "\"The first thing that happened to me from animation was to go over to work with Jack King, who was a director. Jack had just been brought back to the studio from Schlesinger's [the Warner Brothers cartoon studio] at that point, and told to make Modern Inventions. So for about two months, he and I worked up the story for Modern Inventions. When that went into animation, I was put in a little room and told to think up another story. I wasn't getting very far very fast, so Walt, or Ted Sears, or one of the guys in the department, said, 'Barks is just wasting his time here, he'd better be put with somebody like Harry Reeves, who has had a lot of story experience, and then his wild thoughts will be directed along usable lines.' That's how I happened to be put with Harry Reeves. We worked as a team for a number of years.\" Chuck Couch, a former animator, also worked with Reeves and Barks.",
+          "bbox": [
+            {
+              "h": 154.5916349085366,
+              "w": 125.87046315262957,
+              "x": 12.391908226943595,
+              "y": 168.87572789634146,
+              "confidence": 0.99,
+              "end_index": 898,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
           "caption": "Barks is at the left, with a pointer, in this 1937 photo; Harry Reeves is at the center, and the man at the right has not been identified. The storyboard is for a Donald Duck cartoon called Good Scouts. This photograph was published in the April 1938 issue of Photoplay magazine, in connection with an article on the making of Snow White and the Seven Dwarfs. ©1937 Walt Disney Productions.",
           "md": "![Barks is at the left, with a pointer, in this 1937 photo; Harry Reeves is at the center, and the man at the right has not been identified. The storyboard is for a Donald Duck cartoon called Good Scouts. This photograph was published in the April 1938 issue of Photoplay magazine, in connection with an article on the making of Snow White and the Seven Dwarfs. ©1937 Walt Disney Productions.](CBatAotCB-017_page_1_image_1_v2.jpg)",
           "url": "CBatAotCB-017_page_1_image_1_v2.jpg",
@@ -21,38 +38,22 @@
           "type": "image"
         },
         {
-          "md": "Barks is at the left, with a pointer, in this 1937 photo; Harry Reeves is at the center, and the man at the right has not been identified. The storyboard is for a Donald Duck cartoon called *Good Scouts*. This photograph was published in the April 1938 issue of *Photoplay* magazine, in connection with an article on the making of *Snow White and the Seven Dwarfs*. ©1937 Walt Disney Productions.",
-          "value": "Barks is at the left, with a pointer, in this 1937 photo; Harry Reeves is at the center, and the man at the right has not been identified. The storyboard is for a Donald Duck cartoon called Good Scouts. This photograph was published in the April 1938 issue of Photoplay magazine, in connection with an article on the making of Snow White and the Seven Dwarfs. ©1937 Walt Disney Productions.",
+          "caption": "A model sheet for <i>Good Scouts,</i> one of Barks's first assignments as a Disney story man; ©1937 Walt Disney Productions.",
+          "md": "![A model sheet for *Good Scouts*, one of Barks's first assignments as a Disney story man; ©1937 Walt Disney Productions.](CBatAotCB-018_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-018_page_1_image_2_v2.jpg",
           "bbox": [
             {
-              "h": 83.85979230182927,
-              "w": 60.81515053353658,
-              "x": 215.51681592987802,
-              "y": 79.84770388719512,
-              "confidence": 0.98,
-              "end_index": 395,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "\"The first thing that happened to me from animation was to go over to work with Jack King, who was a director. Jack had just been brought back to the studio from Schlesinger's \\[the Warner Brothers cartoon studio] at that point, and told to make *Modern Inventions*. So for about two months, he and I worked up the story for *Modern Inventions*. When that went into animation, I was put in a little room and told to think up another story. I wasn't getting very far very fast, so Walt, or Ted Sears, or one of the guys in the department, said, 'Barks is just wasting his time here, he'd better be put with somebody like Harry Reeves, who has had a lot of story experience, and then his wild thoughts will be directed along usable lines.' That's how I happened to be put with Harry Reeves. We worked as a team for a number of years.\" Chuck Couch, a former animator, also worked with Reeves and Barks.",
-          "value": "\"The first thing that happened to me from animation was to go over to work with Jack King, who was a director. Jack had just been brought back to the studio from Schlesinger's [the Warner Brothers cartoon studio] at that point, and told to make Modern Inventions. So for about two months, he and I worked up the story for Modern Inventions. When that went into animation, I was put in a little room and told to think up another story. I wasn't getting very far very fast, so Walt, or Ted Sears, or one of the guys in the department, said, 'Barks is just wasting his time here, he'd better be put with somebody like Harry Reeves, who has had a lot of story experience, and then his wild thoughts will be directed along usable lines.' That's how I happened to be put with Harry Reeves. We worked as a team for a number of years.\" Chuck Couch, a former animator, also worked with Reeves and Barks.",
-          "bbox": [
-            {
-              "h": 154.5916349085366,
-              "w": 125.87046315262957,
-              "x": 12.391908226943595,
-              "y": 168.87572789634146,
+              "h": 162.23529535060976,
+              "w": 204.8638848132622,
+              "x": 46.82234994283536,
+              "y": 14.332528582317074,
               "confidence": 0.99,
-              "end_index": 898,
-              "label": "text",
+              "end_index": 541,
+              "label": "image",
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "image"
         },
         {
           "md": "Around the time the studio moved from its old Hyperion Avenue location to the new plant in Burbank, Barks was paired with Jack Hannah, another former animator. While he",
@@ -72,8 +73,8 @@
           "type": "text"
         },
         {
-          "md": "was with Hannah, Barks had the title of \"story director\" and was technically the man in charge, but neither he nor Hannah seems to have paid any attention to such questions of rank. (Barks had also been the story director for some cartoons when he was with Reeves and Couch — but the title had even less meaning then, since Reeves out-ranked him as \"associate producer.\")\\*",
-          "value": "was with Hannah, Barks had the title of \"story director\" and was technically the man in charge, but neither he nor Hannah seems to have paid any attention to such questions of rank. (Barks had also been the story director for some cartoons when he was with Reeves and Couch — but the title had even less meaning then, since Reeves out-ranked him as \"associate producer.\")*",
+          "md": "was with Hannah, Barks had the title of \"story director\" and was technically the man in charge, but neither he nor Hannah seems to have paid any attention to such questions of rank. [Barks had also been the story director for some cartoons when he was with Reeves and Couch — but the title had even less meaning then, since Reeves out-ranked him as \"associate producer.\"]\\*",
+          "value": "was with Hannah, Barks had the title of \"story director\" and was technically the man in charge, but neither he nor Hannah seems to have paid any attention to such questions of rank. [Barks had also been the story director for some cartoons when he was with Reeves and Couch — but the title had even less meaning then, since Reeves out-ranked him as \"associate producer.\"]*",
           "bbox": [
             {
               "h": 66.76672637195122,

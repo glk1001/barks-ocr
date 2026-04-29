@@ -105,6 +105,24 @@
           "type": "text"
         },
         {
+          "caption": "These cartoons by Barks were published in <i>Flying and Popular Aviation</i> magazine in 1941, while he was still on the Disney studio's staff; ©1941 <i>Flying and Popular Aviation</i>.",
+          "md": "![These cartoons by Barks were published in Flying and Popular Aviation magazine in 1941, while he was still on the Disney studio's staff; ©1941 Flying and Popular Aviation.](CBatAotCB-027_page_1_image_1_v2.png)",
+          "url": "CBatAotCB-027_page_1_image_1_v2.png",
+          "bbox": [
+            {
+              "h": 108.18595226753048,
+              "w": 107.7779539824695,
+              "x": 18.58487566692073,
+              "y": 15.472561451981706,
+              "confidence": 0.99,
+              "end_index": 79,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "md": "Barks had no appetite for the military films the studio was making. \"We were working on one about medicine, and the way germs invade the body. They were getting lined up for some war picture on gun barrels, or something like that. I couldn't see myself getting tied up with that sort of thing. The war was a very unpopular subject with me, anyway. I had seen one generation of young men marched off to war — World War I — and I was stupid enough that I wanted to get into it, but I was just a little too young. And then comes this Second World War, and I had learned my lesson in the meantime. When I saw how little we had accomplished with World War I, I thought, why in the devil kill off another whole generation of young men to accomplish the same result?\"",
           "value": "Barks had no appetite for the military films the studio was making. \"We were working on one about medicine, and the way germs invade the body. They were getting lined up for some war picture on gun barrels, or something like that. I couldn't see myself getting tied up with that sort of thing. The war was a very unpopular subject with me, anyway. I had seen one generation of young men marched off to war — World War I — and I was stupid enough that I wanted to get into it, but I was just a little too young. And then comes this Second World War, and I had learned my lesson in the meantime. When I saw how little we had accomplished with World War I, I thought, why in the devil kill off another whole generation of young men to accomplish the same result?\"",
           "bbox": [
@@ -120,6 +138,24 @@
             }
           ],
           "type": "text"
+        },
+        {
+          "caption": "Barks lived and worked in this house in San Jacinto from 1942 to 1951.",
+          "md": "![Barks lived and worked in this house in San Jacinto from 1942 to 1951.](CBatAotCB-026_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-026_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 180.07205387766766,
+              "w": 261.31245117187495,
+              "x": 11.41915515434451,
+              "y": 11.105930116234756,
+              "confidence": 1.0,
+              "end_index": 95,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
         },
         {
           "md": "He left the studio on November 6, 1942, moved to San Jacinto, a town east of Los Angeles, with his second wife, and set up a chicken farm. He had sold a few magazine cartoons while he was at Disney's, and now he began selling more. And most important, \"I wrote to Western Publishing, and told them that I had left the studio, and that I was available in case they had anything they wanted done.\"\\*",

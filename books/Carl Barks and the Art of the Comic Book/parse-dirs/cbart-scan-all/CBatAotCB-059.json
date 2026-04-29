@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# VI.",
+          "md": "<p style=\"text-align: center; font-size: 3rem;\">VI.</p>",
           "value": "VI.",
           "bbox": [
             {
@@ -18,28 +18,11 @@
               "start_index": 0
             }
           ],
-          "type": "heading"
-        },
-        {
-          "md": "**SCROOGE, GLADSTONE, AND**",
-          "value": "SCROOGE, GLADSTONE, AND",
-          "bbox": [
-            {
-              "h": 6.975342987804869,
-              "w": 106.43221560594513,
-              "x": 31.087758669969507,
-              "y": 118.18889862804878,
-              "confidence": 0.88,
-              "end_index": 26,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
           "type": "text"
         },
         {
-          "md": "Gyro embodied some basic American preoccupations — wealth, luck, technology — but the best stories with these characters resist efforts to draw lessons for present-day American society from them. The point with Al Capp's General Bullmoose was what his money did to other people; the point with Uncle Scrooge was what his money did to him.",
-          "value": "Gyro embodied some basic American preoccupations — wealth, luck, technology — but the best stories with these characters resist efforts to draw lessons for present-day American society from them. The point with Al Capp's General Bullmoose was what his money did to other people; the point with Uncle Scrooge was what his money did to him.",
+          "md": "**SCROOGE, GLADSTONE, AND** Gyro embodied some basic American preoccupations — wealth, luck, technology — but the best stories with these characters resist efforts to draw lessons for present-day American society from them. The point with Al Capp's General Bullmoose was what his money did to other people; the point with Uncle Scrooge was what his money did to him.",
+          "value": "SCROOGE, GLADSTONE, AND Gyro embodied some basic American preoccupations — wealth, luck, technology — but the best stories with these characters resist efforts to draw lessons for present-day American society from them. The point with Al Capp's General Bullmoose was what his money did to other people; the point with Uncle Scrooge was what his money did to him.",
           "bbox": [
             {
               "h": 61.04676448170733,
@@ -121,6 +104,24 @@
             }
           ],
           "type": "text"
+        },
+        {
+          "caption": "From <i>Walt Disney's Comics</> No. 132, September 1951; © 1951 Walt Disney Productions.",
+          "md": "![From Walt Disney's Comics No. 132, September 1951; © 1951 Walt Disney Productions.](CBatAotCB-060_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-060_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 322.893505621189,
+              "w": 222.95894602705792,
+              "x": 33.286059689405484,
+              "y": 15.62487090320122,
+              "confidence": 0.75,
+              "end_index": 418,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
         },
         {
           "md": "Barks's parodies occasionally darkened into satire, as his detachment gave way to anger and contempt. For example, at the beginning of \"Lost in the Andes\" (1949), the distinguished leader of an archeological expedition decorously tells his first assistant to prepare",

@@ -1,0 +1,11 @@
+![Comic panel showing Scrooge McDuck and the Maharajah of Howduyustan competing with giant statues of themselves. Text in panel: "THEN — (THE CAMERA MUST PULL BACK TO AN EXTREME LONG SHOT TO SHOW THE AWESOME FINISH OF THIS THIRD ROUND IN THE BATTLE OF THE TITANS!)", "MAY TEN THOUSAND DEMONS HOUND THAT UPSTART! HE HAS TOPPED ME AGAIN!", "ERECTED BY SCROOGE McDUCK WORLD'S RICHEST MAN", "ERECTED BY MAHARAJAH OF HOWDUYUSTAN WORLD'S RICHEST MAN"](CBatAotCB-052_spread_001_page_1_image_1_v2.jpg)
+
+From Walt Disney's Comics No. 138, March 1952; © 1952 Walt Disney Productions.
+
+wars of the old frontier. I made it by being tougher than the toughies, and smarter than the smarties. And I made it square. You'd love your money, too, boys, if you got it the way I did — by thinking a little harder than the other guy — by jumping a little quicker —."
+
+There is in this story little to suggest that Scrooge is a tycoon; he is simply a miser, who cares about his money because he worked so hard to accumulate it. In earlier stories, Barks had been quite casual about how Scrooge made his money — there might be a sign saying something, like "Scrooge McDuck, financier" or "money to lend" — and in the January 1951 Walt Disney's Comics, Scrooge speaks of his "mortgage business" and takes Donald with him to repossess a washer because a poor woman has not paid the last nickel due on it. But if Scrooge's attachment to
+
+his money was to command our sympathy, he had to have acquired the money in some less cold and impersonal way. And so, in "Only a Poor Old Man," Scrooge tells the nephews how he dug for copper in Montana in the eighteen-eighties, and took a fortune in gold out of the Klondike in 1898. Later stories are filled with references to such bold exploits. In 1974, Barks said, "I purposely tried to make it look as if Uncle Scrooge made most of his money back in the days before the world got so crowded, back in the days when you could go out in the hills and find riches. I never thought of Scrooge as I would think of some of the millionaires we have around who have made their money by exploiting other people to a certain extent. He had lots of money, but he wasn't a criminal about it."
+
+In most of the later stories, too, Scrooge

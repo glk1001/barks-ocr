@@ -37,6 +37,42 @@
           "type": "text"
         },
         {
+          "caption": "",
+          "md": "![From \"Luck of the North\"](CBatAotCB-042_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-042_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 81.66721560594513,
+              "w": 115.9991572980183,
+              "x": 33.46944026295731,
+              "y": 13.410741711128049,
+              "confidence": 0.92,
+              "end_index": 129,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "The precision of Barks's handling of Donald Duck in the late forties and early fifties is evident in his \"Magazine Comics Duck\" model sheet, which was probably drawn to assist the other comic-book artists who began drawing the character around 1950. In the reproduced page from \"Luck of the North\" in <i>Donald Duck</i> Four Color No. 256, 1949, Barks's mastery permits the story to be told primarily through subtle changes in Donald's facial expression. ©1949, 1950 Walt Disney Productions.",
+          "md": "![he precision of Barks's handling of Donald Duck in the late forties and early fifties is evident in his \"Magazine Comics Duck\" model sheet, which was probably drawn to assist the other comic-book artists who began drawing the character around 1950. In the reproduced page from \"Luck of the North\" in Donald Duck Four Color No. 256, 1949, Barks's mastery permits the story to be told primarily through subtle changes in Donald's facial expression. ©1949, 1950 Walt Disney Productions.](CBatAotCB-043_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-043_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 151.08736351943597,
+              "w": 263.3501781631097,
+              "x": 10.476468178353658,
+              "y": 11.495144102515244,
+              "confidence": 0.97,
+              "end_index": 476,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "md": "I have talked about Barks as a writer, and about the increasing importance that dialogue assumed in his stories, and yet I have not quoted that dialogue, except incidentally. It is",
           "value": "I have talked about Barks as a writer, and about the increasing importance that dialogue assumed in his stories, and yet I have not quoted that dialogue, except incidentally. It is",
           "bbox": [
@@ -82,37 +118,6 @@
               "confidence": 0.99,
               "end_index": 333,
               "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "OVER THE FIRST FENCE COME THE HOUNDS, SEEKING THE SCENT OF THEIR WILD COUSIN!",
-          "md": "![OVER THE FIRST FENCE COME THE HOUNDS, SEEKING THE SCENT OF THEIR WILD COUSIN!](CBatAotCB-041_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-041_page_1_image_1_v2.jpg",
-          "bbox": null,
-          "type": "image"
-        },
-        {
-          "caption": "THEN OVER COME THE RIDERS! PICTURES OF GRACE AND POISE AND INSOUCIANT DARING!",
-          "md": "![THEN OVER COME THE RIDERS! PICTURES OF GRACE AND POISE AND INSOUCIANT DARING!](CBatAotCB-041_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-041_page_1_image_2_v2.jpg",
-          "bbox": null,
-          "type": "image"
-        },
-        {
-          "md": "From *Walt Disney's Comics* No. 98, November 1948; © 1948 Walt Disney Productions.",
-          "value": "From Walt Disney's Comics No. 98, November 1948; © 1948 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.124138719512175,
-              "w": 176.585556402439,
-              "x": 53.75258574695122,
-              "y": 349.03506859756095,
-              "confidence": 0.94,
-              "end_index": 81,
-              "label": "caption",
               "start_index": 0
             }
           ],

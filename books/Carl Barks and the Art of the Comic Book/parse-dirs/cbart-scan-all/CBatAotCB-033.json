@@ -3,109 +3,6 @@
     {
       "items": [
         {
-          "caption": "From Our Gang Comics, No. 11, May-June 1944, the first issue in which Barks worked with Barney Bear and Benny Burro as a team; and one of the model sheets that Barks used in drawing Barney. © Loew's Inc.",
-          "md": "![From Our Gang Comics, No. 11, May-June 1944, the first issue in which Barks worked with Barney Bear and Benny Burro as a team; and one of the model sheets that Barks used in drawing Barney. © Loew's Inc.](CBatAotCB-033_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-033_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 168.21466463414635,
-              "w": 255.37643518959604,
-              "x": 17.020758026867377,
-              "y": 15.006528201219512,
-              "confidence": 1.0,
-              "end_index": 228,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From Our Gang Comics, No. 11, May-June 1944, the first issue in which Barks worked with Barney Bear and Benny Burro as a team; and one of the model sheets that Barks used in drawing Barney. © Loew's Inc.",
-          "value": "From Our Gang Comics, No. 11, May-June 1944, the first issue in which Barks worked with Barney Bear and Benny Burro as a team; and one of the model sheets that Barks used in drawing Barney. © Loew's Inc.",
-          "bbox": [
-            {
-              "h": 12.007477134146347,
-              "w": 257.5156008241234,
-              "x": 14.759625928925304,
-              "y": 191.5363719512195,
-              "confidence": 0.92,
-              "end_index": 202,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Although Barks is associated indelibly with the Disney ducks he was assigned some stories with other characters during his first five years with Western. He did single stories with Andy Panda, Mickey Mouse, and Porky Pig, and none of them come even close to ranking with his best work.",
-          "value": "Although Barks is associated indelibly with the Disney ducks he was assigned some stories with other characters during his first five years with Western. He did single stories with Andy Panda, Mickey Mouse, and Porky Pig, and none of them come even close to ranking with his best work.",
-          "bbox": [
-            {
-              "h": 29.979809451219506,
-              "w": 125.36147246570121,
-              "x": 13.209459317835364,
-              "y": 223.11653963414633,
-              "confidence": 0.99,
-              "end_index": 284,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "His most enduring association was with Barney Bear and Benny  Burro, whose stories he drew for Our Gang Comics from 1944 to  1947 (he drew three stories with Benny alone before working with  Barney and Benny as a team). Although these stories sometimes approach the duck stories of the middle forties in quality, Barney Bear was too limited a character to engage Barks's interest in the way  that Donald Duck did. Barney was merely stupid; he was not stupid  in Donald's grand, energetic way. Even so, the Barney-and-Benny  stories do work well when Benny is played as Barney's sensible long-suffering foil; they don't work when Benny's stupidity causes",
-          "value": "His most enduring association was with Barney Bear and Benny  Burro, whose stories he drew for Our Gang Comics from 1944 to  1947 (he drew three stories with Benny alone before working with  Barney and Benny as a team). Although these stories sometimes approach the duck stories of the middle forties in quality, Barney Bear was too limited a character to engage Barks's interest in the way  that Donald Duck did. Barney was merely stupid; he was not stupid  in Donald's grand, energetic way. Even so, the Barney-and-Benny  stories do work well when Benny is played as Barney's sensible long-suffering foil; they don't work when Benny's stupidity causes",
-          "bbox": [
-            {
-              "h": 59.76205792682927,
-              "w": 125.49663324123473,
-              "x": 12.605957269435974,
-              "y": 253.36161585365855,
-              "confidence": 0.99,
-              "end_index": 652,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "problems. In its last year or so, the series became highly mechanical In part this was because Barks wasn't writing most of these stories, but only illustrating them; but it seems obvious, too, that Barks had exhausted his interest in the characters.",
-          "value": "problems. In its last year or so, the series became highly mechanical In part this was because Barks wasn't writing most of these stories, but only illustrating them; but it seems obvious, too, that Barks had exhausted his interest in the characters.",
-          "bbox": [
-            {
-              "h": 23.480899390243884,
-              "w": 125.46895198170733,
-              "x": 150.81540777439022,
-              "y": 222.78235518292684,
-              "confidence": 0.98,
-              "end_index": 249,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "The most tantalizing of Barks's non-duck stories are the two he did for Our Gang with a character he called Happy Hound, but who is actually Droopy. (Barks wrote several Droopy stories in the early fifties—probably because someone remembered that he had done the two for Our Gang years before— but they are ordinary comic-book stories.) The Happy Hound stories have a strong burlesque flavor that is not that common in Barks's stories, and Happy himself is an intriguing character— his low-key approach to life contrasts humorously with the ho-hum military precision of the other hounds atthe prison where Happy is a guard dog.",
-          "value": "The most tantalizing of Barks's non-duck stories are the two he did for Our Gang with a character he called Happy Hound, but who is actually Droopy. (Barks wrote several Droopy stories in the early fifties—probably because someone remembered that he had done the two for Our Gang years before— but they are ordinary comic-book stories.) The Happy Hound stories have a strong burlesque flavor that is not that common in Barks's stories, and Happy himself is an intriguing character— his low-key approach to life contrasts humorously with the ho-hum military precision of the other hounds atthe prison where Happy is a guard dog.",
-          "bbox": [
-            {
-              "h": 65.93901676829263,
-              "w": 125.66099085365852,
-              "x": 150.49637766768294,
-              "y": 246.92622713414636,
-              "confidence": 0.99,
-              "end_index": 626,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "items": [
             {
               "md": "Carl Barks and the Art of the Comic Book\n33",
@@ -122,7 +19,7 @@
                   "start_index": 0
                 }
               ],
-              "type": "text"
+              "type": "footer"
             }
           ],
           "md": "Carl Barks and the Art of the Comic Book\n33",

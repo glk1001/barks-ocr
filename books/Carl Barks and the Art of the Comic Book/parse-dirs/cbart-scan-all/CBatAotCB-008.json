@@ -37,6 +37,42 @@
           "type": "text"
         },
         {
+          "caption": "Carl Barks as a young man in San Francisco, just after the end of World War I.",
+          "md": "![Carl Barks as a young man in San Francisco, just after the end of World War I.](CBatAotCB-008_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-008_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 262.3939195884146,
+              "w": 257.0557131288109,
+              "x": 14.164071551067073,
+              "y": 13.21226181402439,
+              "confidence": 1.0,
+              "end_index": 103,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "",
+          "md": "![A young man in a suit, tie, and flat cap standing in front of a building with a \"HOTEL\" sign.](CBatAotCB-008_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-008_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 319.4686337652439,
+              "w": 124.24064405487805,
+              "x": 151.86030297256096,
+              "y": 12.755367759146342,
+              "confidence": 0.99,
+              "end_index": 118,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "md": "In 1923, Barks married and left the ranch, spending the summer at a logging camp. From there, he and his wife drove in a second-hand Ford to Coalinga, in central California, in search of a job in the oil fields there.",
           "value": "In 1923, Barks married and left the ranch, spending the summer at a logging camp. From there, he and his wife drove in a second-hand Ford to Coalinga, in central California, in search of a job in the oil fields there.",
           "bbox": [
@@ -86,24 +122,6 @@
             }
           ],
           "type": "text"
-        },
-        {
-          "caption": "A young man in a suit, tie, and flat cap standing in front of a building with a \"HOTEL\" sign.",
-          "md": "![A young man in a suit, tie, and flat cap standing in front of a building with a \"HOTEL\" sign.](CBatAotCB-008_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-008_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 319.4686337652439,
-              "w": 124.24064405487805,
-              "x": 151.86030297256096,
-              "y": 12.755367759146342,
-              "confidence": 0.99,
-              "end_index": 118,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
         },
         {
           "md": "paired the steel underframes and wheel 'trucks.'\")",

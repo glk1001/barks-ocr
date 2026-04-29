@@ -20,6 +20,24 @@
           "type": "text"
         },
         {
+          "caption": "From <i>Uncle Scrooge</i> Four Color No. 386, 1952; © 1952 Walt Disney Productions.",
+          "md": "![From Uncle Scrooge Four Color No. 386, 1952; © 1952 Walt Disney Productions.](CBatAotCB-049_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-049_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 92.2165086699695,
+              "w": 131.88371141387194,
+              "x": 13.065130049542683,
+              "y": 13.503971512957316,
+              "confidence": 0.93,
+              "end_index": 126,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "md": "This Scrooge is fully realized, a sympathetic, sometimes almost noble character, balanced neatly between the Scrooge that was and the Scrooge that was to come, of whom I will have more to say later.",
           "value": "This Scrooge is fully realized, a sympathetic, sometimes almost noble character, balanced neatly between the Scrooge that was and the Scrooge that was to come, of whom I will have more to say later.",
           "bbox": [
@@ -48,6 +66,23 @@
               "confidence": 0.99,
               "end_index": 722,
               "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\\*All the ducks had rather long beaks in the forties in Barks's stories. He explained in 1971 what led to his shortening them: \"One day a girl who lived down the road from us — she had been an inker at Disney's — said to us, 'You're drawing that duck's beak too long.' So I took a hard look at the duck, and then I looked at the Disney model sheets, and also at the Disney comic strip, and I decided she was right.\"",
+          "value": "*All the ducks had rather long beaks in the forties in Barks's stories. He explained in 1971 what led to his shortening them: \"One day a girl who lived down the road from us — she had been an inker at Disney's — said to us, 'You're drawing that duck's beak too long.' So I took a hard look at the duck, and then I looked at the Disney model sheets, and also at the Disney comic strip, and I decided she was right.\"",
+          "bbox": [
+            {
+              "h": 37.88240853658539,
+              "w": 125.81297518102134,
+              "x": 12.403590177210365,
+              "y": 317.33835365853656,
+              "confidence": 0.94,
+              "end_index": 414,
+              "label": "footnote",
               "start_index": 0
             }
           ],
@@ -122,8 +157,8 @@
           "type": "text"
         },
         {
-          "md": "In a 1949 story called \"Trail of the Unicorn,\"<sup>11</sup> Gladstone tries to cheat Donald, rather than rely on his good luck, and he gets beaten up for his pains. A little later, his confidence restored, Gladstone reprimands himself. \"I had a little bad luck on that deal I tried to rig on Donald — but that was because cheating is a form of work. Anyone as lucky as I should just sit around and let Dame Fortune dump a bale of mazuma in his lap.\"",
-          "value": "In a 1949 story called \"Trail of the Unicorn,\"<sup>11</sup> Gladstone tries to cheat Donald, rather than rely on his good luck, and he gets beaten up for his pains. A little later, his confidence restored, Gladstone reprimands himself. \"I had a little bad luck on that deal I tried to rig on Donald — but that was because cheating is a form of work. Anyone as lucky as I should just sit around and let Dame Fortune dump a bale of mazuma in his lap.\"",
+          "md": "In a 1949 story called \"Trail of the Unicorn,\" Gladstone tries to cheat Donald, rather than rely on his good luck, and he gets beaten up for his pains. A little later, his confidence restored, Gladstone reprimands himself. \"I had a little bad luck on that deal I tried to rig on Donald — but that was because cheating is a form of work. Anyone as lucky as I should just sit around and let Dame Fortune dump a bale of mazuma in his lap.\"",
+          "value": "In a 1949 story called \"Trail of the Unicorn,\" Gladstone tries to cheat Donald, rather than rely on his good luck, and he gets beaten up for his pains. A little later, his confidence restored, Gladstone reprimands himself. \"I had a little bad luck on that deal I tried to rig on Donald — but that was because cheating is a form of work. Anyone as lucky as I should just sit around and let Dame Fortune dump a bale of mazuma in his lap.\"",
           "bbox": [
             {
               "h": 73.74105182926829,
@@ -139,8 +174,8 @@
           "type": "text"
         },
         {
-          "md": "Such arrogance is tolerable only if expressed in silence, and Gladstone was rarely quiet. At the start of \"Luck of the North,\" Gladstone drags Donald with him for a demonstration of his luck, gloating insufferably all the while. Then one of Gladstone's credi-",
-          "value": "Such arrogance is tolerable only if expressed in silence, and Gladstone was rarely quiet. At the start of \"Luck of the North,\" Gladstone drags Donald with him for a demonstration of his luck, gloating insufferably all the while. Then one of Gladstone's credi-",
+          "md": "Such arrogance is tolerable only if expressed in silence, and Gladstone was rarely quiet. At the start of \"Luck of the North,\" Gladstone drags Donald with him for a demonstration of his luck, gloating insufferably all the while. Then one of Gladstone's creditors",
+          "value": "Such arrogance is tolerable only if expressed in silence, and Gladstone was rarely quiet. At the start of \"Luck of the North,\" Gladstone drags Donald with him for a demonstration of his luck, gloating insufferably all the while. Then one of Gladstone's creditors",
           "bbox": [
             {
               "h": 43.52407774390243,
@@ -150,23 +185,6 @@
               "confidence": 0.99,
               "end_index": 258,
               "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "\\*All the ducks had rather long beaks in the forties in Barks's stories. He explained in 1971 what led to his shortening them: \"One day a girl who lived down the road from us — she had been an inker at Disney's — said to us, 'You're drawing that duck's beak too long.' So I took a hard look at the duck, and then I looked at the Disney model sheets, and also at the Disney comic strip, and I decided she was right.\"",
-          "value": "*All the ducks had rather long beaks in the forties in Barks's stories. He explained in 1971 what led to his shortening them: \"One day a girl who lived down the road from us — she had been an inker at Disney's — said to us, 'You're drawing that duck's beak too long.' So I took a hard look at the duck, and then I looked at the Disney model sheets, and also at the Disney comic strip, and I decided she was right.\"",
-          "bbox": [
-            {
-              "h": 37.88240853658539,
-              "w": 125.81297518102134,
-              "x": 12.403590177210365,
-              "y": 317.33835365853656,
-              "confidence": 0.94,
-              "end_index": 414,
-              "label": "footnote",
               "start_index": 0
             }
           ],

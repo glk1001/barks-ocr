@@ -3,40 +3,22 @@
     {
       "items": [
         {
-          "items": [
-            {
-              "level": 1,
-              "md": "# IX.",
-              "value": "IX.",
-              "bbox": [
-                {
-                  "h": 26.55190358231707,
-                  "w": 58.125440167682925,
-                  "x": 115.6244988567073,
-                  "y": 51.971541539634146,
-                  "confidence": 0.87,
-                  "end_index": 2,
-                  "label": "header",
-                  "start_index": 0
-                }
-              ],
-              "type": "heading"
-            }
-          ],
-          "md": "# IX.",
+          "level": 1,
+          "md": "<p style=\"text-align: center; font-size: 3rem;\">IX.</p>",
+          "value": "IX.",
           "bbox": [
             {
-              "h": 26.55,
-              "w": 58.13,
-              "x": 115.62,
-              "y": 51.97,
-              "confidence": null,
-              "end_index": null,
-              "label": null,
-              "start_index": null
+              "h": 27.478559451219514,
+              "w": 57.57505621189024,
+              "x": 118.77284394054877,
+              "y": 48.890504954268295,
+              "confidence": 0.88,
+              "end_index": 3,
+              "label": "paragraph_title",
+              "start_index": 0
             }
           ],
-          "type": "header"
+          "type": "text"
         },
         {
           "md": "**WITH BARKS BACK** on the ten-page stories, other cartoonists did five of the twelve issues of *Donald Duck* for 1951 and 1952. Barks left the series entirely at the end of 1952; it wasn't until 1956 that a Barks story appeared in *Donald Duck* again. Barks concentrated on *Uncle Scrooge*, which became a quarterly late in 1953. The stories in *Uncle Scrooge* were in much the same vein as the stories in *Donald Duck* except that now everything turned on Scrooge and his money.",

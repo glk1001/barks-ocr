@@ -3,24 +3,6 @@
     {
       "items": [
         {
-          "caption": "Ore 1910 spread.",
-          "md": "![Ore 1910 spread.](CBatAotCB-005_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-005_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 259.03404320693596,
-              "w": 282.0782077035671,
-              "x": 0.06659603118896484,
-              "y": 8.398807402820122,
-              "confidence": 0.99,
-              "end_index": 41,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
           "md": "when he heard about the homestead land in Oregon, he went up there and took up a homestead of a hundred and sixty acres. He was very industrious at it, cleared the sagebrush off, and he got enough income out of his hundred and sixty acres to buy other hundred and sixties around him. By the time I came along, he had about a square mile of land, all in wheat, and doing all right.",
           "value": "when he heard about the homestead land in Oregon, he went up there and took up a homestead of a hundred and sixty acres. He was very industrious at it, cleared the sagebrush off, and he got enough income out of his hundred and sixty acres to buy other hundred and sixties around him. By the time I came along, he had about a square mile of land, all in wheat, and doing all right.",
           "bbox": [

@@ -3,97 +3,8 @@
     {
       "items": [
         {
-          "caption": "ONCE, LONG AGO, IN A VERY WEAK MOMENT I TOOK A JOB! A JOB!",
-          "md": "![ONCE, LONG AGO, IN A VERY WEAK MOMENT I TOOK A JOB! A JOB!](CBatAotCB-056_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-056_page_1_image_2_v2.jpg",
-          "bbox": [
-            {
-              "h": 92.9392754382622,
-              "w": 146.71898008765243,
-              "x": 10.033186451981706,
-              "y": 10.975865567835365,
-              "confidence": 0.99,
-              "end_index": 83,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "YES! I ACTUALLY WORKED — I EARNED THAT DIME!",
-          "md": "![YES! I ACTUALLY WORKED — I EARNED THAT DIME!](CBatAotCB-056_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-056_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 93.47015410632622,
-              "w": 115.30044397865852,
-              "x": 159.90984946646338,
-              "y": 10.807090558307927,
-              "confidence": 0.99,
-              "end_index": 69,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "AND I'VE BEEN SO ASHAMED OF IT EVER SINCE THAT I HID IT IN THE SAFE AND NEVER LOOKED AT IT AGAIN!",
-          "md": "![AND I'VE BEEN SO ASHAMED OF IT EVER SINCE THAT I HID IT IN THE SAFE AND NEVER LOOKED AT IT AGAIN!](CBatAotCB-056_page_1_image_3_v2.jpg)",
-          "url": "CBatAotCB-056_page_1_image_3_v2.jpg",
-          "bbox": [
-            {
-              "h": 92.9932774390244,
-              "w": 131.25197075076218,
-              "x": 9.948905773628049,
-              "y": 107.36789634146342,
-              "confidence": 0.98,
-              "end_index": 122,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "ANY COMMENTS? NOTHING THAT COULD BE PRINTED IN THE PAPER!",
-          "md": "![ANY COMMENTS? NOTHING THAT COULD BE PRINTED IN THE PAPER!](CBatAotCB-056_page_1_image_4_v2.jpg)",
-          "url": "CBatAotCB-056_page_1_image_4_v2.jpg",
-          "bbox": [
-            {
-              "h": 93.28700076219512,
-              "w": 131.21850800304875,
-              "x": 144.40674923780486,
-              "y": 107.62421112804878,
-              "confidence": 0.98,
-              "end_index": 82,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From *Walt Disney's Comics* No. 140, May 1952; © 1952 Walt Disney Productions.",
-          "value": "From Walt Disney's Comics No. 140, May 1952; © 1952 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.25346798780487,
-              "w": 166.9244902820122,
-              "x": 60.514204458841455,
-              "y": 202.82078506097562,
-              "confidence": 0.95,
-              "end_index": 77,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "tors seizes him and demands five dollars that Gladstone owes him. Gladstone sticks out his hand and into it floats — not a five, but a ten-dollar bill. Gladstone buys an old trunk for fifty cents at an auction and, sure enough, it contains a hundred dollars in a secret money cache. And so it goes.",
-          "value": "tors seizes him and demands five dollars that Gladstone owes him. Gladstone sticks out his hand and into it floats — not a five, but a ten-dollar bill. Gladstone buys an old trunk for fifty cents at an auction and, sure enough, it contains a hundred dollars in a secret money cache. And so it goes.",
+          "md": "seizes him and demands five dollars that Gladstone owes him. Gladstone sticks out his hand and into it floats — not a five, but a ten-dollar bill. Gladstone buys an old trunk for fifty cents at an auction and, sure enough, it contains a hundred dollars in a secret money cache. And so it goes.",
+          "value": "seizes him and demands five dollars that Gladstone owes him. Gladstone sticks out his hand and into it floats — not a five, but a ten-dollar bill. Gladstone buys an old trunk for fifty cents at an auction and, sure enough, it contains a hundred dollars in a secret money cache. And so it goes.",
           "bbox": [
             {
               "h": 52.004977134146316,
@@ -107,6 +18,24 @@
             }
           ],
           "type": "text"
+        },
+        {
+          "caption": "From \"Luck of the North\" in <i>Donald Duck</i> Four Color No. 256, 1949; © 1949 Walt Disney Productions.",
+          "md": "![From \"Luck of the North\" in Donald Duck Four Color No. 256, 1949; © 1949 Walt Disney Productions.](CBatAotCB-054_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-054_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 278.4374599847561,
+              "w": 190.25835365853658,
+              "x": 48.76225038109756,
+              "y": 64.63295922256097,
+              "confidence": 0.98,
+              "end_index": 396,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
         },
         {
           "md": "Gladstone retained a certain hauteur even when his luck went sour (as it did at times, always temporarily). In the April 1954 *Walt Disney's Comics*, Donald has beaten Gladstone in a raffle drawing in full view of a large audience, and as the ducks and the crowd chortle over his defeat, Gladstone thinks gloomily: \"How awful to be a deposed monarch! How terrible to sit in sackcloth and ashes while ragpickers cheer at my downfall.\"",

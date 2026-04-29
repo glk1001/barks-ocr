@@ -3,9 +3,9 @@
     {
       "items": [
         {
-          "caption": "A man with a mustache holding a small animal, possibly a dog or a cat, outdoors.",
-          "md": "![A man with a mustache holding a small animal, possibly a dog or a cat, outdoors.](CBatAotCB-000-02-ii_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-000-02-ii_page_1_image_1_v2.jpg",
+          "caption": "",
+          "md": "![A man with a mustache holding a small animal, possibly a dog or a cat, outdoors.](CBatAotCB-000-02-ii_page_1_image_1_v2.png)",
+          "url": "CBatAotCB-000-02-ii_page_1_image_1_v2.png",
           "bbox": [
             {
               "h": 204.74,
@@ -21,9 +21,9 @@
           "type": "image"
         },
         {
-          "caption": "A portrait of an elderly person with glasses, smiling.",
-          "md": "![A portrait of an elderly person with glasses, smiling.](CBatAotCB-000-02-ii_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-000-02-ii_page_1_image_2_v2.jpg",
+          "caption": "",
+          "md": "![A portrait of an elderly person with glasses, smiling.](CBatAotCB-000-02-ii_page_1_image_2_v2.png)",
+          "url": "CBatAotCB-000-02-ii_page_1_image_2_v2.png",
           "bbox": [
             {
               "h": 130.92,
@@ -37,6 +37,24 @@
             }
           ],
           "type": "image"
+        },
+        {
+          "level": 1,
+          "md": "<div style=\"page-break-before: always;\"></div>",
+          "value": "",
+          "bbox": [
+            {
+              "h": 67.59405297256097,
+              "w": 222.51406726371954,
+              "x": 32.63294874237804,
+              "y": 88.72537157012195,
+              "confidence": 0.85,
+              "end_index": 39,
+              "label": "doc_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
         }
       ],
       "page_height": 384.0,

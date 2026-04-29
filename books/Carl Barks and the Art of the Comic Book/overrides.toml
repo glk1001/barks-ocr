@@ -6,156 +6,55 @@
 # plus the first few characters of the item text. Use ``as = "blockquote"`` to
 # promote an item the heuristic missed.
 
-[[overrides]]
-parse_dir = "cb-scan-1"
-spread = "spread_002"
-side = "left"
-text_starts_with = "Library of Congress"
-as = "paragraph"
+[[image_overrides]]
+parse_dir = "cbart-scan-all"
+spread = "CBatAotCB-031"
+caption_starts_with = "Roger Armstrong"
+width = "90%"
+max_height = "45vh"
 
-[[overrides]]
-parse_dir = "cb-scan-1"
-spread = "spread_002"
-side = "right"
-text_starts_with = "Introduction ix"
-as = "paragraph"
+[[image_overrides]]
+parse_dir = "cbart-scan-all"
+spread = "CBatAotCB-031"
+caption_starts_with = ""
+url = "CBatAotCB-032_page_1_image_1_v2"
+width = "100%"
+max_height = "100vh"
+space_above = "2em"
 
-[[overrides]]
-parse_dir = "cb-scan-1"
-spread = "spread_023"
-side = "right"
-text_starts_with = "From Comic Art #7"
-as = "blockquote"
+[[image_overrides]]
+parse_dir = "cbart-scan-all"
+spread = "CBatAotCB-041"
+caption_starts_with = ""
+url = "CBatAotCB-042_page_1_image_1_v2"
+width = "100%"
+max_height = "100vh"
+space_above = "2em"
 
-[[overrides]]
-parse_dir = "cb-scan-1"
-spread = "spread_023"
-side = "right"
-text_starts_with = "The original interview for this article was conducted in December 1962"
-as = "blockquote"
+[[image_overrides]]
+parse_dir = "cbart-scan-all"
+spread = "CBatAotCB-057"
+caption_starts_with = "From <i>Walt Disney's Comics</i> No. 140"
+#width = "60%"
+max_height = "45vh"
 
-[[overrides]]
-parse_dir = "cb-scan-1"
-spread = "spread_002"
-side = "right"
-text_starts_with = "Carl Barks, Telling It Like It Is"
-as = "paragraph"
+[[image_overrides]]
+parse_dir = "cbart-scan-all"
+spread = "CBatAotCB-063"
+caption_starts_with = ""
+url = "CBatAotCB-063_page_1_image_1_v2"
+width = "80%"
+max_height = "45vh"
+space_above = "0.5em"
 
-[[overrides]]
-parse_dir = "cb-scan-1"
-spread = "spread_002"
-side = "right"
-text_starts_with = "Carl Barks and His Ducks"
-as = "paragraph"
+[[image_overrides]]
+parse_dir = "cbart-scan-all"
+spread    = "CBatAotCB-089"
+url       = "CBatAotCB-089_page_1_image_2_v2"
+class     = "side-by-side"
 
-[[overrides]]
-parse_dir = "cb-scan-1"
-spread = "spread_003"
-side = "left"
-text_starts_with = "Views from Carl Barks"
-as = "paragraph"
-
-[[overrides]]
-parse_dir = "cb-scan-1"
-spread = "spread_003"
-side = "left"
-text_starts_with = "Carl Barks Interview 137"
-as = "paragraph"
-
-[[overrides]]
-parse_dir = "cb-scan-1"
-spread = "spread_003"
-side = "right"
-text_starts_with = "Index 233"
-as = "paragraph"
-
-[[overrides]]
-parse_dir = "cb-scan-1"
-spread = "spread_020"
-side = "left"
-text_starts_with = "written by"
-as = "paragraph"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_001"
-side = "left"
-text_starts_with = "Previously published in a"
-as = "blockquote"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_001"
-side = "left"
-text_starts_with = "This interview was recorded"
-as = "blockquote"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_006"
-side = "right"
-text_starts_with = "Videotape interview conducted"
-as = "blockquote"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_006"
-side = "right"
-text_starts_with = "Portions of this interview"
-as = "blockquote"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_015"
-side = "right"
-text_starts_with = "Text © 1980 by Dr. Klaus"
-as = "blockquote"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_015"
-side = "right"
-text_starts_with = "Interview conducted on 31"
-as = "blockquote"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_022"
-side = "right"
-text_starts_with = "From Uncle Scrooge McDuck"
-as = "blockquote"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_022"
-side = "right"
-text_starts_with = "This interview material was recorded between 1975 and 1981"
-as = "blockquote"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_027"
-side = "left"
-text_starts_with = "From Mickey Mouse in Color"
-as = "blockquote"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_027"
-side = "left"
-text_starts_with = "The first portion of this interview was conducted by Bruce Hamilton"
-as = "blockquote"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_038"
-side = "right"
-text_starts_with = "A video interview conducted on 27 August 1993"
-as = "blockquote"
-
-[[overrides]]
-parse_dir = "cb-scan-3"
-spread = "spread_038"
-side = "right"
-text_starts_with = "Portions of this interview were previously published in Overstreet's"
-as = "blockquote"
+[[image_overrides]]
+parse_dir = "cbart-scan-all"
+spread    = "CBatAotCB-089"
+url       = "CBatAotCB-089_page_1_image_3_v2"
+class     = "side-by-side"

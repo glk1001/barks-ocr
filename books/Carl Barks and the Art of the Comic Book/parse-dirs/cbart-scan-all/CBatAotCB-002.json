@@ -3,151 +3,8 @@
     {
       "items": [
         {
-          "caption": "Donald Duck and Gladstone Gander arguing. Donald: \"YOUR BRAND OF LUCK WOULDN'T BE SO GOOD, IF MINE WASN'T SO BAD!\" Gladstone: \"DON'T TRY TO TAKE THE CREDIT!\"",
-          "md": "![Donald Duck and Gladstone Gander arguing. Donald: \"YOUR BRAND OF LUCK WOULDN'T BE SO GOOD, IF MINE WASN'T SO BAD!\" Gladstone: \"DON'T TRY TO TAKE THE CREDIT!\"](CBatAotCB-002_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-002_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 71.80799999999999,
-              "w": 99.35999999999999,
-              "x": 75.456,
-              "y": 20.352,
-              "confidence": 0.89,
-              "end_index": 182,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "Gladstone and Donald continuing their argument. Gladstone: \"I'M LUCKY ALL THE TIME!\" Donald: \"OH, STOP BRAGGIN'! SOMETIME YOUR LUCK WILL CHANGE! THEN HOW YOU'LL HOWL!\"",
-          "md": "![Gladstone and Donald continuing their argument. Gladstone: \"I'M LUCKY ALL THE TIME!\" Donald: \"OH, STOP BRAGGIN'! SOMETIME YOUR LUCK WILL CHANGE! THEN HOW YOU'LL HOWL!\"](CBatAotCB-002_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-002_page_1_image_2_v2.jpg",
-          "bbox": [
-            {
-              "h": 71.52598370807927,
-              "w": 98.17225038109754,
-              "x": 177.4633307926829,
-              "y": 20.45675447789634,
-              "confidence": 0.89,
-              "end_index": 192,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "A comic panel showing Gladstone's luck in action. Donald: \"MY LUCK WILL NEVER CHANGE, CUZ — EXCEPT TO GET BITTER!\" Sound effect: \"BONG\". A woman says to Gladstone: \"THANKS FOR SAVING MY VASE, GLADSTONE! HERE'S FIVE DOLLARS REWARD!\"",
-          "md": "![A comic panel showing Gladstone's luck in action. Donald: \"MY LUCK WILL NEVER CHANGE, CUZ — EXCEPT TO GET BITTER!\" Sound effect: \"BONG\". A woman says to Gladstone: \"THANKS FOR SAVING MY VASE, GLADSTONE! HERE'S FIVE DOLLARS REWARD!\"](CBatAotCB-002_page_1_image_8_v2.jpg)",
-          "url": "CBatAotCB-002_page_1_image_8_v2.jpg",
-          "bbox": [
-            {
-              "h": 70.44026295731709,
-              "w": 199.4270607850609,
-              "x": 75.99885194359754,
-              "y": 94.73693597560975,
-              "confidence": 0.84,
-              "end_index": 256,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "Gladstone walking away happily while Donald looks frustrated. Gladstone: \"SEE WHAT I MEAN?\" Donald: \"I GIVE UP!\"",
-          "md": "![Gladstone walking away happily while Donald looks frustrated. Gladstone: \"SEE WHAT I MEAN?\" Donald: \"I GIVE UP!\"](CBatAotCB-002_page_1_image_4_v2.jpg)",
-          "url": "CBatAotCB-002_page_1_image_4_v2.jpg",
-          "bbox": [
-            {
-              "h": 70.94185975609756,
-              "w": 96.66669683689022,
-              "x": 76.36037823932926,
-              "y": 167.45069359756098,
-              "confidence": 0.87,
-              "end_index": 137,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "Donald Duck recounting his bad luck. Donald: \"THIS MORNING I GOT MY TONGUE CAUGHT IN THE CAKE MIXER, AND BEFORE THAT, THE SOAP POWDER FELL IN MY SCRAMBLED EGGS, AND BEFORE THAT —\"",
-          "md": "![Donald Duck recounting his bad luck. Donald: \"THIS MORNING I GOT MY TONGUE CAUGHT IN THE CAKE MIXER, AND BEFORE THAT, THE SOAP POWDER FELL IN MY SCRAMBLED EGGS, AND BEFORE THAT —\"](CBatAotCB-002_page_1_image_5_v2.jpg)",
-          "url": "CBatAotCB-002_page_1_image_5_v2.jpg",
-          "bbox": [
-            {
-              "h": 71.13318978658538,
-              "w": 100.45397675304872,
-              "x": 175.4280411585366,
-              "y": 167.75532393292684,
-              "confidence": 0.86,
-              "end_index": 204,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "Donald walking away in the rain, dejected. Donald: \"MAYBE GLADSTONE IS RIGHT! HE'LL ALWAYS BE LUCKY, AND I'LL ALWAYS BE UNLUCKY!\"",
-          "md": "![Donald walking away in the rain, dejected. Donald: \"MAYBE GLADSTONE IS RIGHT! HE'LL ALWAYS BE LUCKY, AND I'LL ALWAYS BE UNLUCKY!\"](CBatAotCB-002_page_1_image_7_v2.jpg)",
-          "url": "CBatAotCB-002_page_1_image_7_v2.jpg",
-          "bbox": [
-            {
-              "h": 69.82186737804875,
-              "w": 93.82283060213415,
-              "x": 76.46387480945121,
-              "y": 240.63141768292684,
-              "confidence": 0.85,
-              "end_index": 154,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "Huey, Dewey, and Louie watching Donald. One nephew says: \"POOR UNCA DONALD IS DOWN IN THE DUMPS AGAIN!\" Another adds: \"HE'S BEEN TALKING TO GLADSTONE! I CAN SEE IT IN HIS EYE!\"",
-          "md": "![Huey, Dewey, and Louie watching Donald. One nephew says: \"POOR UNCA DONALD IS DOWN IN THE DUMPS AGAIN!\" Another adds: \"HE'S BEEN TALKING TO GLADSTONE! I CAN SEE IT IN HIS EYE!\"](CBatAotCB-002_page_1_image_3_v2.jpg)",
-          "url": "CBatAotCB-002_page_1_image_3_v2.jpg",
-          "bbox": [
-            {
-              "h": 71.7623780487805,
-              "w": 103.97821074695119,
-              "x": 171.81373856707316,
-              "y": 241.12264481707317,
-              "confidence": 0.87,
-              "end_index": 201,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From *Walt Disney's Comics* No. 131, August 1951; © 1951 Walt Disney Productions.",
-          "value": "From Walt Disney's Comics No. 131, August 1951; © 1951 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 23.149984756097563,
-              "w": 57.865162800114334,
-              "x": 12.27485292016006,
-              "y": 291.78466463414634,
-              "confidence": 0.92,
-              "end_index": 80,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Most often, when there was a new Barks comic book, I bought it; I can recall passing up only the 1950 Donald Duck issue about \"The Pixilated Parrot,\" for reasons that I could not have articulated at the time, and cannot now",
-          "value": "Most often, when there was a new Barks comic book, I bought it; I can recall passing up only the 1950 Donald Duck issue about \"The Pixilated Parrot,\" for reasons that I could not have articulated at the time, and cannot now",
+          "md": "Most often, when there was a new Barks comic book, I bought it; I can recall passing up only the 1950 Donald Duck issue about \"The Pixilated Parrot,\" for reasons that I could not have articulated at the time, and cannot now (although I am still cooler to that story than to others published that year).",
+          "value": "Most often, when there was a new Barks comic book, I bought it; I can recall passing up only the 1950 Donald Duck issue about \"The Pixilated Parrot,\" for reasons that I could not have articulated at the time, and cannot now (although I am still cooler to that story than to others published that year).",
           "bbox": [
             {
               "h": 36.978704268292695,
@@ -163,30 +20,13 @@
           "type": "text"
         },
         {
-          "md": "(although I am still cooler to that story than to others published that year).",
-          "value": "(although I am still cooler to that story than to others published that year).",
-          "bbox": [
-            {
-              "h": 14.865823170731709,
-              "w": 125.4814538871951,
-              "x": 149.73317835365853,
-              "y": 322.0364405487805,
-              "confidence": 0.97,
-              "end_index": 77,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "So many more of my childhood memories revolve around Carl Barks's comic books. I can remember reading *Donald Duck in Ancient*",
           "value": "So many more of my childhood memories revolve around Carl Barks's comic books. I can remember reading Donald Duck in Ancient",
           "bbox": [
             {
               "h": 21.5971875,
               "w": 125.89165015243898,
-              "x": 149.5279344512195,
+              "x": 12.00,
               "y": 337.00305640243903,
               "confidence": 0.98,
               "end_index": 125,

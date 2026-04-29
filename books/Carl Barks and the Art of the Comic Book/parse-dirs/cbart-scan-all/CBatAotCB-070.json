@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# VIII.",
+          "md": "<p style=\"text-align: center; font-size: 3rem;\">VIII.</p>",
           "value": "VIII.",
           "bbox": [
             {
@@ -18,7 +18,7 @@
               "start_index": 0
             }
           ],
-          "type": "heading"
+          "type": "text"
         },
         {
           "md": "**WITH MORE AND** thicker Disney comics being published in the early fifties, Barks's virtual monopoly on the duck stories was broken. He chose to abandon the ten-page stories for most of 1950, concentrating instead on the *Donald Duck* series and the new twenty-five-cent comic books. Cartoonists like Jack Bradbury and Paul Murry began illustrating the ten-page stories, but readers complained about the change. In August 1950, a Western Publishing editor told Barks that \"Your public is clamoring to see more Donald Duck, a la Barks... so we have decided to put your story-art combination back into the monthly magazines.\" (It should be mentioned that such fan letters were never passed along to Barks; he recalls receiving only a few letters about his work via Western, all of them complaints. He did not receive a fan letter addressed directly to him, from John Spicer, until 1960, and Barks at first thought that it was a practical joke played by a cartoonist friend.)",

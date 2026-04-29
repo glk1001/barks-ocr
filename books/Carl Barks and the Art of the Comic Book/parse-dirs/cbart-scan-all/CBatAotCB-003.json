@@ -54,6 +54,42 @@
           "type": "text"
         },
         {
+          "caption": "",
+          "md": "![From *Walt Disney's Comics* No. 131, August 1951; © 1951 Walt Disney Productions.](CBatAotCB-002_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-002_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 71.7623780487805,
+              "w": 103.97821074695119,
+              "x": 171.81373856707316,
+              "y": 241.12264481707317,
+              "confidence": 0.87,
+              "end_index": 201,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "From <i>Walt Disney's Comics</i> No. 131, August 1951; © 1951 Walt Disney Productions.",
+          "md": "![From *Walt Disney's Comics* No. 131, August 1951; © 1951 Walt Disney Productions.](CBatAotCB-002_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-002_page_1_image_2_v2.jpg",
+          "bbox": [
+            {
+              "h": 71.7623780487805,
+              "w": 103.97821074695119,
+              "x": 171.81373856707316,
+              "y": 241.12264481707317,
+              "confidence": 0.87,
+              "end_index": 201,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "md": "Here, as on so many other occasions, Barks has seized upon the feelings that all of us have had, and has magnified and lampooned them so artfully that we have no choice but to laugh and admit that yes, that really is our reflection in the funhouse mirror.",
           "value": "Here, as on so many other occasions, Barks has seized upon the feelings that all of us have had, and has magnified and lampooned them so artfully that we have no choice but to laugh and admit that yes, that really is our reflection in the funhouse mirror.",
           "bbox": [

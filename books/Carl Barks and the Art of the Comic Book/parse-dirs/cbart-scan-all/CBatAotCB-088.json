@@ -3,43 +3,8 @@
     {
       "items": [
         {
-          "caption": "Carl Barks at work on a duck painting in 1974.",
-          "md": "![Carl Barks at work on a duck painting in 1974.](CBatAotCB-088_page_1_image_3_v2.jpg)",
-          "url": "CBatAotCB-088_page_1_image_3_v2.jpg",
-          "bbox": [
-            {
-              "h": 83.20200171493902,
-              "w": 129.680878668064,
-              "x": 15.800074075838413,
-              "y": 12.618758574695123,
-              "confidence": 0.99,
-              "end_index": 71,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "Carl Barks at work on a duck painting in 1974.",
-          "value": "Carl Barks at work on a duck painting in 1974.",
-          "bbox": [
-            {
-              "h": 6.109081554878044,
-              "w": 97.9656688262195,
-              "x": 27.98012195121951,
-              "y": 99.17511814024391,
-              "confidence": 0.93,
-              "end_index": 45,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "King Beowulf, a fantasy painting by Carl Barks depicting a warrior fighting a dragon.",
-          "md": "![King Beowulf, a fantasy painting by Carl Barks depicting a warrior fighting a dragon.](CBatAotCB-088_page_1_image_2_v2.jpg)",
+          "caption": "Barks's final painting on a Disney subject was \"July Fourth in Duckburg\" (24 x 16, oil on masonite). Since permission for the Disney paintings was withdrawn in 1976, Barks has concentrated on fantasy subjects of his own choosing, such as \"King Beowulf\" (20 x 16, oil on masonite). Bicentennial painting ©Walt Disney Productions; \"King Beowulf\" ©1978 Carl Barks.",
+          "md": "![Barks's final painting on a Disney subject was \"July Fourth in Duckburg\" (24 x 16, oil on masonite). Since permission for the Disney paintings was withdrawn in 1976, Barks has concentrated on fantasy subjects of his own choosing, such as \"King Beowulf\" (20 x 16, oil on masonite). Bicentennial painting ©Walt Disney Productions; \"King Beowulf\" ©1978 Carl Barks.](CBatAotCB-088_page_1_image_2_v2.jpg)",
           "url": "CBatAotCB-088_page_1_image_2_v2.jpg",
           "bbox": [
             {
@@ -56,25 +21,8 @@
           "type": "image"
         },
         {
-          "md": "Barks's final painting on a Disney subject was \"July Fourth in Duckburg\" (24 x 16, oil on masonite). Since permission for the Disney paintings was withdrawn in 1976, Barks has concentrated on fantasy subjects of his own choosing, such as \"King Beowulf\" (20 x 16, oil on masonite). Bicentennial painting ©Walt Disney Productions; \"King Beowulf\" ©1978 Carl Barks.",
-          "value": "Barks's final painting on a Disney subject was \"July Fourth in Duckburg\" (24 x 16, oil on masonite). Since permission for the Disney paintings was withdrawn in 1976, Barks has concentrated on fantasy subjects of his own choosing, such as \"King Beowulf\" (20 x 16, oil on masonite). Bicentennial painting ©Walt Disney Productions; \"King Beowulf\" ©1978 Carl Barks.",
-          "bbox": [
-            {
-              "h": 41.75940548780487,
-              "w": 113.65628263147865,
-              "x": 32.104685356326215,
-              "y": 132.52146722560977,
-              "confidence": 0.99,
-              "end_index": 360,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "July Fourth in Duckburg, a Bicentennial painting by Carl Barks featuring Disney characters in a parade.",
-          "md": "![July Fourth in Duckburg, a Bicentennial painting by Carl Barks featuring Disney characters in a parade.](CBatAotCB-088_page_1_image_1_v2.jpg)",
+          "caption": "",
+          "md": "![Barks's final painting on a Disney subject was \"July Fourth in Duckburg\" (24 x 16, oil on masonite). Since permission for the Disney paintings was withdrawn in 1976, Barks has concentrated on fantasy subjects of his own choosing, such as \"King Beowulf\" (20 x 16, oil on masonite). Bicentennial painting ©Walt Disney Productions; \"King Beowulf\" ©1978 Carl Barks.](CBatAotCB-088_page_1_image_1_v2.jpg)",
           "url": "CBatAotCB-088_page_1_image_1_v2.jpg",
           "bbox": [
             {

@@ -3,41 +3,6 @@
     {
       "items": [
         {
-          "caption": "From Walt Disney's Comics No. 141, June 1952: © 1952 Walt Disney Productions. The comic strip shows Donald Duck meeting Gyro Gearloose. Donald says, \"IT'S GYRO GEARLOOSE, THE DIZZY INVENTOR!\" Gyro, riding a strange motorized vehicle that goes \"SPUT\", replies, \"HI, UNCA DONALD!\" Donald asks, \"WHAT ON EARTH HAVE YOU GOT THERE, GYRO?\" Gyro answers, \"MY NEW JET-POWERED BAGGAGE BUGGY, DONALD!\"",
-          "md": "![From Walt Disney's Comics No. 141, June 1952: © 1952 Walt Disney Productions. The comic strip shows Donald Duck meeting Gyro Gearloose. Donald says, \"IT'S GYRO GEARLOOSE, THE DIZZY INVENTOR!\" Gyro, riding a strange motorized vehicle that goes \"SPUT\", replies, \"HI, UNCA DONALD!\" Donald asks, \"WHAT ON EARTH HAVE YOU GOT THERE, GYRO?\" Gyro answers, \"MY NEW JET-POWERED BAGGAGE BUGGY, DONALD!\"](CBatAotCB-057_page_1_image_3_v2.jpg)",
-          "url": "CBatAotCB-057_page_1_image_3_v2.jpg",
-          "bbox": [
-            {
-              "h": 92.04216653963414,
-              "w": 149.56471239043444,
-              "x": 12.364614972370426,
-              "y": 17.04475038109756,
-              "confidence": 0.95,
-              "end_index": 416,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From *Walt Disney's Comics* No. 141, June 1952; © 1952 Walt Disney Productions.",
-          "value": "From Walt Disney's Comics No. 141, June 1952; © 1952 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.651139481707305,
-              "w": 168.17057783917681,
-              "x": 57.581714462652435,
-              "y": 112.82689024390244,
-              "confidence": 0.93,
-              "end_index": 78,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "when he was working with Gladstone, since Gladstone's good luck was like Superman's invincibility: what made the character interesting also made it hard to write a story about him that held any surprises. The best stories with Gladstone were in fact stories about Donald, who was made to pay the price for taking Gladstone's luck as seriously as Gladstone did.",
           "value": "when he was working with Gladstone, since Gladstone's good luck was like Superman's invincibility: what made the character interesting also made it hard to write a story about him that held any surprises. The best stories with Gladstone were in fact stories about Donald, who was made to pay the price for taking Gladstone's luck as seriously as Gladstone did.",
           "bbox": [
@@ -72,6 +37,24 @@
           "type": "text"
         },
         {
+          "caption": "From <i>Walt Disney's Comics</i> No. 140, May 1952; © 1952 Walt Disney Productions.",
+          "md": "![From Walt Disney's Comics No. 140, May 1952; © 1952 Walt Disney Productions.](CBatAotCB-056_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-056_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 92.9392754382622,
+              "w": 146.71898008765243,
+              "x": 10.033186451981706,
+              "y": 10.975865567835365,
+              "confidence": 0.99,
+              "end_index": 83,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "md": "Gyro Gearloose, the third of Barks's major supporting characters, did a walk-on in that same story, but it was in the next issue of *Walt Disney's Comics* that Gyro really made his debut. Gyro was not a duck, but a chicken — a chicken almost twice as tall as the ducks, with a mop of red hair and glasses perched on his beak. Clad, in his early appearances, in a baggy",
           "value": "Gyro Gearloose, the third of Barks's major supporting characters, did a walk-on in that same story, but it was in the next issue of Walt Disney's Comics that Gyro really made his debut. Gyro was not a duck, but a chicken — a chicken almost twice as tall as the ducks, with a mop of red hair and glasses perched on his beak. Clad, in his early appearances, in a baggy",
           "bbox": [
@@ -104,6 +87,24 @@
             }
           ],
           "type": "text"
+        },
+        {
+          "caption": "From <i>Walt Disney's Comics</i> No. 141, June 1952: © 1952 Walt Disney Productions.",
+          "md": "![From Walt Disney's Comics No. 141, June 1952: © 1952 Walt Disney Productions.](CBatAotCB-057_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-057_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 92.04216653963414,
+              "w": 149.56471239043444,
+              "x": 12.364614972370426,
+              "y": 17.04475038109756,
+              "confidence": 0.95,
+              "end_index": 416,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
         },
         {
           "md": "It took Scrooge and Gladstone almost two years to acquire their \"specialities\" — wealth and luck — but Gyro was, from the first, a fabulous inventor. In his first story, Gyro has invented \"think boxes\" that will teach any animals that pass through their rays how to think and speak. Donald scoffs at the \"think boxes\" — until a wolf speaking colloquial English has him tied to a spit, and is garnishing him with sage.",

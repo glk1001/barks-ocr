@@ -71,6 +71,24 @@
           "type": "text"
         },
         {
+          "caption": "From \"The Terror of the River\" in <i>Donald Duck Four Color</i> No. 108, 1946, © 1946 Walt Disney Productions.",
+          "md": "![From \"The Terror of the River\" in Donald Duck Four Color No. 108, 1946, © 1946 Walt Disney Productions.](CBatAotCB-038_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-038_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 321.8829134908537,
+              "w": 220.85232993521336,
+              "x": 33.45493187881097,
+              "y": 16.07241425304878,
+              "confidence": 0.67,
+              "end_index": 125,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "md": "Finally, in the Mississippi Delta, the nephews lure the serpent with a decoy — a wrecked steamer that they push along with their tug to make it look like the real thing. The nephews rope the serpent's head, and then begin a deadly tug of war with the sub. The rope breaks the serpent's throat valve and, as water rushes into the submarine, the \"scarer\" collapses into quivering jelly. In desperation, he frees Donald, who stops the sub and lays out the scarer with a wrench.",
           "value": "Finally, in the Mississippi Delta, the nephews lure the serpent with a decoy — a wrecked steamer that they push along with their tug to make it look like the real thing. The nephews rope the serpent's head, and then begin a deadly tug of war with the sub. The rope breaks the serpent's throat valve and, as water rushes into the submarine, the \"scarer\" collapses into quivering jelly. In desperation, he frees Donald, who stops the sub and lays out the scarer with a wrench.",
           "bbox": [

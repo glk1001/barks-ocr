@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# XI.",
+          "md": "<p style=\"text-align: center; font-size: 3rem;\">XI.</p>",
           "value": "XI.",
           "bbox": [
             {
@@ -18,28 +18,11 @@
               "start_index": 0
             }
           ],
-          "type": "heading"
-        },
-        {
-          "md": "**BARKS'S SECOND MARRIAGE**",
-          "value": "BARKS'S SECOND MARRIAGE",
-          "bbox": [
-            {
-              "h": 5.800483993902448,
-              "w": 106.03646127096036,
-              "x": 31.09265267721036,
-              "y": 120.39846036585367,
-              "confidence": 0.91,
-              "end_index": 26,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
           "type": "text"
         },
         {
-          "md": "ended in divorce in December 1951. Remarkably, he had done some of his best work when his marriage was falling apart. \"It seemed like the more difficulties I had, why, the bigger the inspiration that would come when there was just a moment of calmness,\" he said in 1973. He remembers drawing the first issue of Uncle Scrooge in a motel in Los Angeles in September 1951, during one such \"moment of calmness.\"",
-          "value": "ended in divorce in December 1951. Remarkably, he had done some of his best work when his marriage was falling apart. \"It seemed like the more difficulties I had, why, the bigger the inspiration that would come when there was just a moment of calmness,\" he said in 1973. He remembers drawing the first issue of Uncle Scrooge in a motel in Los Angeles in September 1951, during one such \"moment of calmness.\"",
+          "md": "**BARKS'S SECOND MARRIAGE** ended in divorce in December 1951. Remarkably, he had done some of his best work when his marriage was falling apart. \"It seemed like the more difficulties I had, why, the bigger the inspiration that would come when there was just a moment of calmness,\" he said in 1973. He remembers drawing the first issue of Uncle Scrooge in a motel in Los Angeles in September 1951, during one such \"moment of calmness.\"",
+          "value": "BARKS'S SECOND MARRIAGE ended in divorce in December 1951. Remarkably, he had done some of his best work when his marriage was falling apart. \"It seemed like the more difficulties I had, why, the bigger the inspiration that would come when there was just a moment of calmness,\" he said in 1973. He remembers drawing the first issue of Uncle Scrooge in a motel in Los Angeles in September 1951, during one such \"moment of calmness.\"",
           "bbox": [
             {
               "h": 73.34686737804878,
@@ -55,8 +38,8 @@
           "type": "text"
         },
         {
-          "md": "Barks married his third wife, the former Margaret Williams (known professionally as Gare'), in 1954. She had been working as his assistant, doing lettering and some backgrounds, for about two years. Gare' is an accomplished landscape painter, and after his retirement on June 30, 1966, Barks himself turned more and more to painting. He wrote a few scripts for Western—most of them for the new Junior Woodchucks comic book — and illustrated a few front covers, but he has done nothing for the comics since 1973.",
-          "value": "Barks married his third wife, the former Margaret Williams (known professionally as Gare'), in 1954. She had been working as his assistant, doing lettering and some backgrounds, for about two years. Gare' is an accomplished landscape painter, and after his retirement on June 30, 1966, Barks himself turned more and more to painting. He wrote a few scripts for Western—most of them for the new Junior Woodchucks comic book — and illustrated a few front covers, but he has done nothing for the comics since 1973.",
+          "md": "Barks married his third wife, the former Margaret Williams (known professionally as Garé), in 1954. She had been working as his assistant, doing lettering and some backgrounds, for about two years. Gare' is an accomplished landscape painter, and after his retirement on June 30, 1966, Barks himself turned more and more to painting. He wrote a few scripts for Western—most of them for the new Junior Woodchucks comic book — and illustrated a few front covers, but he has done nothing for the comics since 1973.",
+          "value": "Barks married his third wife, the former Margaret Williams (known professionally as Garé), in 1954. She had been working as his assistant, doing lettering and some backgrounds, for about two years. Gare' is an accomplished landscape painter, and after his retirement on June 30, 1966, Barks himself turned more and more to painting. He wrote a few scripts for Western—most of them for the new Junior Woodchucks comic book — and illustrated a few front covers, but he has done nothing for the comics since 1973.",
           "bbox": [
             {
               "h": 95.15830792682924,
@@ -106,6 +89,24 @@
           "type": "text"
         },
         {
+          "caption": "Carl Barks at work on a duck painting in 1974.",
+          "md": "![Carl Barks at work on a duck painting in 1974.](CBatAotCB-088_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-088_page_1_image_3_v2.jpg",
+          "bbox": [
+            {
+              "h": 83.20200171493902,
+              "w": 129.680878668064,
+              "x": 15.800074075838413,
+              "y": 12.618758574695123,
+              "confidence": 0.99,
+              "end_index": 71,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+       {
           "md": "Barks produced a total of one hundred and twenty-one duck paintings in five years, before the Disney studio — troubled by unauthorized reproductions of one of the paintings — withdrew permission for Barks to sell them. Typically, Barks refused to make a fuss, expressing relief that he could now turn to subject matter entirely of his choosing.",
           "value": "Barks produced a total of one hundred and twenty-one duck paintings in five years, before the Disney studio — troubled by unauthorized reproductions of one of the paintings — withdrew permission for Barks to sell them. Typically, Barks refused to make a fuss, expressing relief that he could now turn to subject matter entirely of his choosing.",
           "bbox": [

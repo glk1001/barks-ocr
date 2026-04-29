@@ -3,9 +3,9 @@
     {
       "items": [
         {
-          "caption": "Carl and Gare Barks in 1976.",
-          "md": "![Carl and Gare Barks in 1976.](CBatAotCB-089_page_1_image_3_v2.jpg)",
-          "url": "CBatAotCB-089_page_1_image_3_v2.jpg",
+          "caption": "Carl and Garé Barks in 1976.",
+          "md": "![Carl and Garé Barks in 1976.](CBatAotCB-089_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-089_page_1_image_2_v2.jpg",
           "bbox": [
             {
               "h": 152.29308069740856,
@@ -21,56 +21,22 @@
           "type": "image"
         },
         {
-          "md": "Carl and Gare Barks in 1976.",
-          "value": "Carl and Gare Barks in 1976.",
-          "bbox": [
-            {
-              "h": 5.56814405487803,
-              "w": 59.299646055640245,
-              "x": 36.50469369283536,
-              "y": 168.62008765243903,
-              "confidence": 0.94,
-              "end_index": 27,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "caption": "A 1978 photo.",
-          "md": "![A 1978 photo.](CBatAotCB-089_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-089_page_1_image_2_v2.jpg",
+          "md": "![A 1978 photo.](CBatAotCB-089_page_1_image_3_v2.jpg)",
+          "url": "CBatAotCB-089_page_1_image_3_v2.jpg",
           "bbox": [
             {
-              "h": 156.11777415205793,
-              "w": 108.77419207317072,
-              "x": 162.82433689024387,
-              "y": 11.779752524771341,
+              "h": 152.29308069740856,
+              "w": 99.86159608422254,
+              "x": 15.396617520960366,
+              "y": 11.752498570884146,
               "confidence": 0.99,
-              "end_index": 38,
+              "end_index": 53,
               "label": "image",
               "start_index": 0
             }
           ],
           "type": "image"
-        },
-        {
-          "md": "A 1978 photo.",
-          "value": "A 1978 photo.",
-          "bbox": [
-            {
-              "h": 6.460335365853652,
-              "w": 29.28645960365852,
-              "x": 202.390243902439,
-              "y": 175.01086509146342,
-              "confidence": 0.94,
-              "end_index": 12,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
         },
         {
           "caption": "Carl Barks in 1976.",
@@ -89,23 +55,6 @@
             }
           ],
           "type": "image"
-        },
-        {
-          "md": "Carl Barks in 1976.",
-          "value": "Carl Barks in 1976.",
-          "bbox": [
-            {
-              "h": 5.2982926829268395,
-              "w": 39.54076600609756,
-              "x": 123.29236852134144,
-              "y": 349.25220274390244,
-              "confidence": 0.95,
-              "end_index": 18,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
         },
         {
           "items": [

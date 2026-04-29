@@ -3,25 +3,7 @@
     {
       "items": [
         {
-          "level": 1,
-          "md": "# DON'T LET THIS HAPPEN TO YOU!",
-          "value": "DON'T LET THIS HAPPEN TO YOU!",
-          "bbox": [
-            {
-              "h": 8.394157774390246,
-              "w": 161.93758479420734,
-              "x": 104.22031726371951,
-              "y": 13.043913395579267,
-              "confidence": 0.94,
-              "end_index": 28,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "caption": "A cartoon showing a man looking through a telescope at a withered plant under a scorching sun, while standing in a puddle of water from a leaking hose.",
+          "caption": "",
           "md": "![A cartoon showing a man looking through a telescope at a withered plant under a scorching sun, while standing in a puddle of water from a leaking hose.](CBatAotCB-079_page_1_image_2_v2.jpg)",
           "url": "CBatAotCB-079_page_1_image_2_v2.jpg",
           "bbox": [
@@ -39,24 +21,7 @@
           "type": "image"
         },
         {
-          "md": "**Vote YES on Water Bonds, March 11**",
-          "value": "Vote YES on Water Bonds, March 11",
-          "bbox": [
-            {
-              "h": 9.534878048780492,
-              "w": 157.30296208079264,
-              "x": 107.2827010289634,
-              "y": 153.39069740853657,
-              "confidence": 0.88,
-              "end_index": 36,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "A complex cartoon titled \"A Good Laugh Won't Hurt Anyone\" depicting a humorous scene at \"PALOS VERDES\". On the left, a flying machine labeled \"THE CONSTITUTION\" carries two men past a sign for \"HOLLYWOOD RIVIERA\". On the right, a group of cavemen-like figures operate a large catapult. In the foreground, a goat in a tuxedo looks at a map, and a man carves \"C. BARKS\" into a stone.",
+          "caption": "",
           "md": "![A complex cartoon titled \"A Good Laugh Won't Hurt Anyone\" depicting a humorous scene at \"PALOS VERDES\". On the left, a flying machine labeled \"THE CONSTITUTION\" carries two men past a sign for \"HOLLYWOOD RIVIERA\". On the right, a group of cavemen-like figures operate a large catapult. In the foreground, a goat in a tuxedo looks at a map, and a man carves \"C. BARKS\" into a stone.](CBatAotCB-079_page_1_image_1_v2.jpg)",
           "url": "CBatAotCB-079_page_1_image_1_v2.jpg",
           "bbox": [

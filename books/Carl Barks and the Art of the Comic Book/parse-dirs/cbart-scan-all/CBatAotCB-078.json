@@ -3,8 +3,8 @@
     {
       "items": [
         {
-          "caption": "An advertisement for Valley Photographs featuring a silhouette of a Native American figure using a vintage bellows camera on a tripod. The text reads: VALLEY PHOTOGRAPHS, 163 E. Main St. San Jacinto, Phone 436, Custom Photography.",
-          "md": "![An advertisement for Valley Photographs featuring a silhouette of a Native American figure using a vintage bellows camera on a tripod. The text reads: VALLEY PHOTOGRAPHS, 163 E. Main St. San Jacinto, Phone 436, Custom Photography.](CBatAotCB-078_page_1_image_3_v2.jpg)",
+          "caption": "After Barks had moved to San Jacinto and was working on comic books, he did very little outside work, except for friends in the San Jacinto-Hemet area. He did cartoons pushing a water-bond drive in 1952, and advertising art for local businessmen. He was hired in 1949 or 1950 to draw several political cartoons by a former resident of Hemet who was embroiled with the mayor of Palos Verdes, California, in a dispute over the legality of landing helicopters in the city. In the cartoons, the mayor was depicted as a top-hatted billy goat, standing in the way of progress.",
+          "md": "![After Barks had moved to San Jacinto and was working on comic books, he did very little outside work, except for friends in the San Jacinto-Hemet area. He did cartoons pushing a water-bond drive in 1952, and advertising art for local businessmen. He was hired in 1949 or 1950 to draw several political cartoons by a former resident of Hemet who was embroiled with the mayor of Palos Verdes, California, in a dispute over the legality of landing helicopters in the city. In the cartoons, the mayor was depicted as a top-hatted billy goat, standing in the way of progress.](CBatAotCB-078_page_1_image_3_v2.jpg)",
           "url": "CBatAotCB-078_page_1_image_3_v2.jpg",
           "bbox": [
             {
@@ -21,24 +21,7 @@
           "type": "image"
         },
         {
-          "md": "After Barks had moved to San Jacinto and was working on comic books, he did very little outside work, except for friends in the San Jacinto-Hemet area. He did cartoons pushing a water-bond drive in 1952, and advertising art for local businessmen. He was hired in 1949 or 1950 to draw several political cartoons by a former resident of Hemet who was embroiled with the mayor of Palos Verdes, California, in a dispute over the legality of landing helicopters in the city. In the cartoons, the mayor was depicted as a top-hatted billy goat, standing in the way of progress.",
-          "value": "After Barks had moved to San Jacinto and was working on comic books, he did very little outside work, except for friends in the San Jacinto-Hemet area. He did cartoons pushing a water-bond drive in 1952, and advertising art for local businessmen. He was hired in 1949 or 1950 to draw several political cartoons by a former resident of Hemet who was embroiled with the mayor of Palos Verdes, California, in a dispute over the legality of landing helicopters in the city. In the cartoons, the mayor was depicted as a top-hatted billy goat, standing in the way of progress.",
-          "bbox": [
-            {
-              "h": 60.02862804878049,
-              "w": 123.84084032012194,
-              "x": 150.23455792682924,
-              "y": 130.39080411585365,
-              "confidence": 0.99,
-              "end_index": 569,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "A logo for the Hemet Chamber of Commerce. It features the word \"HEMET\" in large, stylized bold letters at the top. Below it, the words \"CHAMBER of COMMERCE\" are written in an outlined font, flanking a central illustration of a Native American drum decorated with arrows and feathers. At the bottom, \"Hemet, California\" is written in a cursive script.",
+          "caption": "",
           "md": "![A logo for the Hemet Chamber of Commerce. It features the word \"HEMET\" in large, stylized bold letters at the top. Below it, the words \"CHAMBER of COMMERCE\" are written in an outlined font, flanking a central illustration of a Native American drum decorated with arrows and feathers. At the bottom, \"Hemet, California\" is written in a cursive script.](CBatAotCB-078_page_1_image_1_v2.jpg)",
           "url": "CBatAotCB-078_page_1_image_1_v2.jpg",
           "bbox": [

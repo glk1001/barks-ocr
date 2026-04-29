@@ -1,4 +1,4 @@
-# Carl Barks: Conversations — chapter sidecar for EPUB build.
+# Carl Barks and the Art of the Comic Book — chapter sidecar for EPUB build.
 # Each chapter must specify exactly one anchor:
 #   * 'start_printed_page' — must match a printed page number detected on a
 #     spread (see each scan dir's *_manifest.json "printed_page_numbers_detected").
@@ -8,122 +8,90 @@
 
 [[chapters]]
 title = "Contents"
-start_heading = "Contents"
+#start_heading = "Contents"
 kind = "contents"
+start_printed_page = "v"
 
 [[chapters]]
-title = "Introduction"
-start_printed_page = "ix"
+title = "Preface"
+start_printed_page = "vii"
 
 [[chapters]]
-title = "Chronology"
-start_printed_page = "xxxv"
-
-[[chapters]]
-title = "Part One: Interviews"
+title = "I."
 start_printed_page = "1"
 
 [[chapters]]
-title = "The Duck Man"
-start_printed_page = "3"
+title = "II."
+start_printed_page = "4"
 
 [[chapters]]
-title = "A Conversation with Carl Barks"
-start_printed_page = "19"
+title = "III."
+start_printed_page = "29"
 
 [[chapters]]
-title = "An Interview with Carl Barks"
-start_printed_page = "26"
+title = "IV."
+start_printed_page = "40"
 
 [[chapters]]
-title = "Carl Barks, Telling It Like It Is"
-start_printed_page = "37"
+title = "V."
+start_printed_page = "45"
 
 [[chapters]]
-title = "Carl Barks: On His Life and Career"
-start_printed_page = "50"
+title = "VI."
+start_printed_page = "59"
 
 [[chapters]]
-title = "Carl Barks and His Ducks"
-start_printed_page = "69"
+title = "VII."
+start_printed_page = "64"
 
 [[chapters]]
-title = "Of Ducks and Men: Carl Barks Interviewed"
+title = "VIII."
+start_printed_page = "70"
+
+[[chapters]]
+title = "IX."
 start_printed_page = "80"
 
 [[chapters]]
-title = "An Interview with Carl Barks, Duckburg's True Founding Father"
+title = "X."
+start_printed_page = "85"
+
+[[chapters]]
+title = "XI."
+start_printed_page = "87"
+
+[[chapters]]
+title = "A Carl Barks Comic-Book Bibliography."
 start_printed_page = "91"
 
 [[chapters]]
-title = "An Interview with Carl and Garé Barks"
-start_printed_page = "109"
+title = "Other Comics Material"
+start_printed_page = "195"
 
 [[chapters]]
-title = "Views from Carl Barks"
-start_printed_page = "120"
-
-[[chapters]]
-title = "Fortune Favors the Bold: An Interview with Carl Barks"
-start_printed_page = "123"
-
-[[chapters]]
-title = "Interview with Carl Barks and Floyd Gottfredson"
-start_printed_page = "132"
-
-[[chapters]]
-title = "Carl Barks Interview"
-start_printed_page = "137"
-
-[[chapters]]
-title = "Conversation with Carl Barks"
-start_printed_page = "140"
-
-[[chapters]]
-title = "Reluctant Cult Hero: Carl Barks"
-start_printed_page = "155"
-
-[[chapters]]
-title = "Carl Barks Speaks with the Finnish Press"
-start_printed_page = "161"
-
-[[chapters]]
-title = "When Donald Duck Turned 60"
-start_printed_page = "165"
-
-[[chapters]]
-title = "Carl Barks at Disneyland Paris"
-start_printed_page = "173"
-
-[[chapters]]
-title = "Carl Barks Remembers \"A Perfect Life\""
-start_printed_page = "181"
-
-[[chapters]]
-title = "Carl Barks: On Floyd Gottfredson"
+title = "Unpublished and Unidentified Material"
 start_printed_page = "198"
 
 [[chapters]]
-title = "\"Those Things That Came Along in the 20th Century and Became Obsolete\": Carl Barks on the Past, Present, and Future of Comic Books"
+title = "Appendices"
 start_printed_page = "205"
 
 [[chapters]]
-title = "Living the Stories: The Carl Barks Genius"
-start_printed_page = "210"
+title = "Appendix A - A Chronological listing of Barks's Comics Work"
+start_printed_page = "207"
 
 [[chapters]]
-title = "Ideas Flowing Like Waterfalls: Some Reflections from Carl Barks at 98"
-start_printed_page = "215"
+title = "Appendix B - Barks as a Disney Story Man"
+start_printed_page = "216"
 
 [[chapters]]
-title = "Carl Barks: Spools of Memory"
+title = "Appendix C - Scrooge on the Screen"
+start_printed_page = "218"
+
+[[chapters]]
+title = "Appendix D - An Informal (and Highly Selective) Listing of Articles About Carl Barks"
 start_printed_page = "221"
 
 [[chapters]]
-title = "Notes on the Interviewers"
-start_printed_page = "227"
-
-[[chapters]]
-title = "Index"
-start_printed_page = "233"
-kind = "index"
+title = "Addenda"
+start_printed_page = "226"

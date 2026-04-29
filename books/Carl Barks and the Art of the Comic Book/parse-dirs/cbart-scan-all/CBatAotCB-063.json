@@ -3,7 +3,7 @@
     {
       "items": [
         {
-          "caption": "Carl Barks looking through a folder of artwork in his studio.",
+          "caption": "",
           "md": "![Carl Barks looking through a folder of artwork in his studio.](CBatAotCB-063_page_1_image_1_v2.jpg)",
           "url": "CBatAotCB-063_page_1_image_1_v2.jpg",
           "bbox": [
@@ -21,9 +21,9 @@
           "type": "image"
         },
         {
-          "caption": "Donald Duck yawning in a museum. Exhibits include \"HEADLESS HORSEMAN'S TOUPEE\" and a statue labeled \"GOD of GAB\".",
+          "caption": "",
           "md": "![Donald Duck yawning in a museum. Exhibits include \"HEADLESS HORSEMAN'S TOUPEE\" and a statue labeled \"GOD of GAB\".](CBatAotCB-063_page_1_image_3_v2.jpg)",
-          "url": "CBatAotCB-063_page_1_image_3_v2.jpg",
+          "url": "CBatAotCB-063_page_1_image_2_v2.jpg",
           "bbox": [
             {
               "h": 92.56599466463416,
@@ -37,145 +37,6 @@
             }
           ],
           "type": "image"
-        },
-        {
-          "md": "Donald Duck: YAWN!",
-          "value": "\nDonald Duck: YAWN!",
-          "bbox": [
-            {
-              "h": 92.56599466463416,
-              "w": 131.00484267816313,
-              "x": 13.593139410251522,
-              "y": 158.452099847561,
-              "confidence": 0.62,
-              "end_index": 17,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "Donald Duck walking past a \"GODIVA'S LAUNDRY BAG\" exhibit.",
-          "md": "![Donald Duck walking past a \"GODIVA'S LAUNDRY BAG\" exhibit.](CBatAotCB-063_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-063_page_1_image_2_v2.jpg",
-          "bbox": [
-            {
-              "h": 92.366181402439,
-              "w": 125.58469321646342,
-              "x": 148.15658346036585,
-              "y": 158.7129649390244,
-              "confidence": 0.76,
-              "end_index": 83,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "Donald Duck: THREE MONTHS I'VE WORKED HERE, AND NOT A DOGGONED THING HAS HAPPENED!",
-          "value": "\nDonald Duck: THREE MONTHS I'VE WORKED HERE, AND NOT A DOGGONED THING HAS HAPPENED!",
-          "bbox": [
-            {
-              "h": 92.366181402439,
-              "w": 125.58469321646342,
-              "x": 148.15658346036585,
-              "y": 158.7129649390244,
-              "confidence": 0.75,
-              "end_index": 81,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "Donald Duck leaning on a mop next to a statue labeled \"JOY\" and another labeled \"THE FIGHT\".",
-          "md": "![Donald Duck leaning on a mop next to a statue labeled \"JOY\" and another labeled \"THE FIGHT\".](CBatAotCB-063_page_1_image_5_v2.jpg)",
-          "url": "CBatAotCB-063_page_1_image_5_v2.jpg",
-          "bbox": [
-            {
-              "h": 91.65276676829271,
-              "w": 107.16915920350608,
-              "x": 13.565626429115852,
-              "y": 254.81229420731708,
-              "confidence": 0.79,
-              "end_index": 117,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "Donald Duck: THE PAY IS GOOD, AND THE HOURS SHORT! MAYBE I SHOULDN'T KICK!",
-          "value": "\nDonald Duck: THE PAY IS GOOD, AND THE HOURS SHORT! MAYBE I SHOULDN'T KICK!",
-          "bbox": [
-            {
-              "h": 91.65276676829271,
-              "w": 107.16915920350608,
-              "x": 13.565626429115852,
-              "y": 254.81229420731708,
-              "confidence": 0.7,
-              "end_index": 73,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "Donald Duck looking at a large Viking ship exhibit.",
-          "md": "![Donald Duck looking at a large Viking ship exhibit.](CBatAotCB-063_page_1_image_4_v2.jpg)",
-          "url": "CBatAotCB-063_page_1_image_4_v2.jpg",
-          "bbox": [
-            {
-              "h": 91.1559832317073,
-              "w": 150.90692549542683,
-              "x": 123.80975705030487,
-              "y": 254.92591463414635,
-              "confidence": 0.71,
-              "end_index": 76,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "Donald Duck: BUT I'M THE RUGGED TYPE! I LIKE ADVENTURE — THE KIND OF RIP-SNORTING FUN THOSE OLD VIKINGS MUST HAVE HAD!",
-          "value": "\nDonald Duck: BUT I'M THE RUGGED TYPE! I LIKE ADVENTURE — THE KIND OF RIP-SNORTING FUN THOSE OLD VIKINGS MUST HAVE HAD!",
-          "bbox": [
-            {
-              "h": 91.1559832317073,
-              "w": 150.90692549542683,
-              "x": 123.80975705030487,
-              "y": 254.92591463414635,
-              "confidence": 0.77,
-              "end_index": 117,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "D.D.O.S. #408-527",
-          "value": "D.D.O.S. #408-527",
-          "bbox": [
-            {
-              "h": 91.1559832317073,
-              "w": 150.90692549542683,
-              "x": 123.80975705030487,
-              "y": 254.92591463414635,
-              "confidence": 0.6,
-              "end_index": 16,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
         },
         {
           "items": [

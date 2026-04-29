@@ -3,8 +3,8 @@
     {
       "items": [
         {
-          "caption": "Sketches of male aviators and female characters by Carl Barks.",
-          "md": "![Sketches of male aviators and female characters by Carl Barks.](CBatAotCB-076_page_1_image_1_v2.jpg)",
+          "caption": "Barks made these drawings, and many more like them, between 1946 and 1950. He has said that he was \"mostly experimenting on drawing and inking styles. I had a feeling the duck comics job could fade away and I would be in need of a new set of characters and the know how to draw them.\" Of the page of nude studies, he has said he was \"just practicing, trying to get action into girlie poses. Some girlie poses are so trite, there's nothing new about the way they handle the figure. I was trying to make 'em a little more perky.\"",
+          "md": "![Barks made these drawings, and many more like them, between 1946 and 1950. He has said that he was \"mostly experimenting on drawing and inking styles. I had a feeling the duck comics job could fade away and I would be in need of a new set of characters and the know how to draw them.\" Of the page of nude studies, he has said he was \"just practicing, trying to get action into girlie poses. Some girlie poses are so trite, there's nothing new about the way they handle the figure. I was trying to make 'em a little more perky.\"](CBatAotCB-076_page_1_image_1_v2.jpg)",
           "url": "CBatAotCB-076_page_1_image_1_v2.jpg",
           "bbox": [
             {
@@ -19,23 +19,6 @@
             }
           ],
           "type": "image"
-        },
-        {
-          "md": "Barks made these drawings, and many more like them, between 1946 and 1950. He has said that he was \"mostly experimenting on drawing and inking styles. I had a feeling the duck comics job could fade away and I would be in need of a new set of characters and the know how to draw them.\" Of the page of nude studies, he has said he was \"just practicing, trying to get action into girlie poses. Some girlie poses are so trite, there's nothing new about the way they handle the figure. I was trying to make 'em a little more perky.\"",
-          "value": "Barks made these drawings, and many more like them, between 1946 and 1950. He has said that he was \"mostly experimenting on drawing and inking styles. I had a feeling the duck comics job could fade away and I would be in need of a new set of characters and the know how to draw them.\" Of the page of nude studies, he has said he was \"just practicing, trying to get action into girlie poses. Some girlie poses are so trite, there's nothing new about the way they handle the figure. I was trying to make 'em a little more perky.\"",
-          "bbox": [
-            {
-              "h": 53.97336128048782,
-              "w": 123.0212023628049,
-              "x": 151.78824123475607,
-              "y": 275.5015929878049,
-              "confidence": 0.96,
-              "end_index": 526,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
         },
         {
           "items": [

@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# I.",
+          "md": "<p style=\"text-align: center; font-size: 3rem;\">I.</p>",
           "value": "I.",
           "bbox": [
             {
@@ -18,7 +18,7 @@
               "start_index": 0
             }
           ],
-          "type": "heading"
+          "type": "text"
         },
         {
           "md": "**I FIRST BECAME** aware of Carl Barks one late summer day in 1949, although it was many years later that I learned his name. I had been reading my friends' copies of *Walt Disney's Comics and Stories* for two years or so, after an early diet of such comic books as *New Funnies* and *Animal Comics*, and after much badgering, my parents had finally given me a subscription for my ninth birthday. The October issue (which came in the mail late in August) was the first I received on my subscription, which made it something special. Perhaps that was why I noticed that the ten-page Donald Duck story — written and illustrated by Barks — stood apart from the others.",
@@ -38,25 +38,8 @@
           "type": "text"
         },
         {
-          "md": "It was a good story: Donald's three nephews tried unsuccessfully to persuade Donald that their witching stick really could find water, until they demonstrated that Donald's gimpiness that day was caused by \"water on the knee.\" Barks's superior craftsmanship — the quality of his dialogue, his drawing, his plots — was evident to me even then, I think. I was very much aware of the specific California setting of the story, with, for example, its references to the Los Angeles aqueduct and desert hot springs. The story had a sharp, crystalline quality that made everything else in that issue of *Walt Disney's Comics* seem like so much cotton candy in comparison. But I was most impressed by its emotional preci-",
-          "value": "It was a good story: Donald's three nephews tried unsuccessfully to persuade Donald that their witching stick really could find water, until they demonstrated that Donald's gimpiness that day was caused by \"water on the knee.\" Barks's superior craftsmanship — the quality of his dialogue, his drawing, his plots — was evident to me even then, I think. I was very much aware of the specific California setting of the story, with, for example, its references to the Los Angeles aqueduct and desert hot springs. The story had a sharp, crystalline quality that made everything else in that issue of Walt Disney's Comics seem like so much cotton candy in comparison. But I was most impressed by its emotional preci-",
-          "bbox": [
-            {
-              "h": 118.36847560975609,
-              "w": 125.67588295541158,
-              "x": 13.274058927210364,
-              "y": 237.58772103658535,
-              "confidence": 0.99,
-              "end_index": 711,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "sion — by the way Donald and the nephews passed so believably through cynicism, anticipation, gleeful scorn, alarm, dismay, desperation, shock, and triumph, to arrive finally at Donald's smugness and the nephews' frustration, after Donald had appropriated the witching stick and set himself up in business. I could not have expressed myself in such terms at the time, of course, but at least I knew that Barks's stories were very different from anything else I was reading in comic books then.",
-          "value": "sion — by the way Donald and the nephews passed so believably through cynicism, anticipation, gleeful scorn, alarm, dismay, desperation, shock, and triumph, to arrive finally at Donald's smugness and the nephews' frustration, after Donald had appropriated the witching stick and set himself up in business. I could not have expressed myself in such terms at the time, of course, but at least I knew that Barks's stories were very different from anything else I was reading in comic books then.",
+          "md": "It was a good story: Donald's three nephews tried unsuccessfully to persuade Donald that their witching stick really could find water, until they demonstrated that Donald's gimpiness that day was caused by \"water on the knee.\" Barks's superior craftsmanship — the quality of his dialogue, his drawing, his plots — was evident to me even then, I think. I was very much aware of the specific California setting of the story, with, for example, its references to the Los Angeles aqueduct and desert hot springs. The story had a sharp, crystalline quality that made everything else in that issue of *Walt Disney's Comics* seem like so much cotton candy in comparison. But I was most impressed by its emotional precision — by the way Donald and the nephews passed so believably through cynicism, anticipation, gleeful scorn, alarm, dismay, desperation, shock, and triumph, to arrive finally at Donald's smugness and the nephews' frustration, after Donald had appropriated the witching stick and set himself up in business. I could not have expressed myself in such terms at the time, of course, but at least I knew that Barks's stories were very different from anything else I was reading in comic books then.",
+          "value": "It was a good story: Donald's three nephews tried unsuccessfully to persuade Donald that their witching stick really could find water, until they demonstrated that Donald's gimpiness that day was caused by \"water on the knee.\" Barks's superior craftsmanship — the quality of his dialogue, his drawing, his plots — was evident to me even then, I think. I was very much aware of the specific California setting of the story, with, for example, its references to the Los Angeles aqueduct and desert hot springs. The story had a sharp, crystalline quality that made everything else in that issue of Walt Disney's Comics seem like so much cotton candy in comparison. But I was most impressed by its emotional precision — by the way Donald and the nephews passed so believably through cynicism, anticipation, gleeful scorn, alarm, dismay, desperation, shock, and triumph, to arrive finally at Donald's smugness and the nephews' frustration, after Donald had appropriated the witching stick and set himself up in business. I could not have expressed myself in such terms at the time, of course, but at least I knew that Barks's stories were very different from anything else I was reading in comic books then.",
           "bbox": [
             {
               "h": 87.64076981707316,

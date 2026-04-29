@@ -71,6 +71,24 @@
           "type": "text"
         },
         {
+          "caption": "Barks at his drawing board; this photo was probably taken late in 1962.",
+          "md": "![Barks at his drawing board; this photo was probably taken late in 1962.](CBatAotCB-083_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-083_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 113.94759146341464,
+              "w": 206.57325028582315,
+              "x": 38.096843083079264,
+              "y": 226.9794969512195,
+              "confidence": 0.99,
+              "end_index": 96,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "items": [
             {
               "md": "84 Carl Barks and the Art of the Comic Book",

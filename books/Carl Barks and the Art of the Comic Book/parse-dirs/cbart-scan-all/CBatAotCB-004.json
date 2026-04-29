@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# II.",
+          "md": "<p style=\"text-align: center; font-size: 3rem;\">II.</p>",
           "value": "II.",
           "bbox": [
             {
@@ -18,7 +18,7 @@
               "start_index": 0
             }
           ],
-          "type": "heading"
+          "type": "text"
         },
         {
           "md": "I WAS LUCKY: I was caught up by  Carl Barks's stories at their high tide.He was at  his best for five or six years in the late forties  and early fifties. By then, he had mastered his  medium, and he had not been overtaken by his  publisher's timidity and his own boredom. He  did memorable stories in both earlier and later  years, but his work was at its most intense and  exuberant at that time.",
@@ -89,9 +89,9 @@
           "type": "text"
         },
         {
-          "caption": "The Barks ranch in Oregon in 1910. The image includes handwritten text at the top: \"midland\" and \"The Barks ranch\".",
-          "md": "![The Barks ranch in Oregon in 1910. The image includes handwritten text at the top: \"midland\" and \"The Barks ranch\".](CBatAotCB-004_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-004_page_1_image_1_v2.jpg",
+          "caption": "The Barks ranch in Oregon in 1910.",
+          "md": "![The Barks ranch in Oregon in 1910.](CBatAotCB-004_page_1_image_1_v2.png)",
+          "url": "CBatAotCB-004_page_1_image_1_v2.png",
           "bbox": [
             {
               "h": 258.06633527057926,
@@ -105,23 +105,6 @@
             }
           ],
           "type": "image"
-        },
-        {
-          "md": "The Barks ranch in Oregon in 1910.",
-          "value": "The Barks ranch in Oregon in 1910.",
-          "bbox": [
-            {
-              "h": 5.88772865853658,
-              "w": 70.15969035823171,
-              "x": 143.81711032774388,
-              "y": 270.82790396341466,
-              "confidence": 0.92,
-              "end_index": 33,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
         },
         {
           "md": "nia line. My dad was a homesteader, and moved up there in the eighteen-eighties. He'd been a blacksmith and a teamster and so on, on those big grain ranches around Stockton, in the San Joaquin Valley, quite a number of years, and he had come there out of Missouri, as an orphan at the age of about fourteen. He had had a little apprenticeship as a blacksmith, and so he went to work on those big ranches. He worked there for many years, and",

@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# V.",
+          "md": "<p style=\"text-align: center; font-size: 3rem;\">V.</p>",
           "value": "V.",
           "bbox": [
             {
@@ -18,7 +18,7 @@
               "start_index": 0
             }
           ],
-          "type": "heading"
+          "type": "text"
         },
         {
           "md": "**ONE KEY TO THE** major changes in Barks's stories that began in 1947 was the introduction of strong supporting characters who hadn't appeared in the Disney animated cartoons but were entirely the products of Barks's imagination. As Donald and the nephews shared center stage, the demands on them became less severe. They now could be played off against the new characters, instead of just against one another. As they were, the stories involving only Donald and the nephews changed for the better, too.",

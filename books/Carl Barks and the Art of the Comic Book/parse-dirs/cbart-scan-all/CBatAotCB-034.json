@@ -20,6 +20,23 @@
           "type": "text"
         },
         {
+          "md": "\\*<p>Chase Craig, a writer for Western in the forties and later a comic-book editor for the company, said in a 1978 letter: \"I do beg to differ with Roger Armstrong in his saying that Carl was embarrassed by Carl Buettner's reading of Carl's stories orally at our office. We all went into hysterics of laughter, and such appreciation of his work certainly could do nothing but give him a lift. Carl loves recognition of his talent as much as anyone I've ever met, and that's exactly what he got every time he ever came to the office. In fact, it was a great day when Carl came in once a month to deliver his work. We all had lunch together and sort of celebrated the occasion. I repeat, he was not embarrassed by his reception. He loved it.\"</p><p>Barks himself said in 1978 that he had enjoyed the warm response to his work — \"Like an actor on the stage, I like to see a little appreciation of my punch lines\" — but he was glad when the \"showings\" stopped. \"I think the reason for it was that Eleanor Packer and Buettner and those people were new at their business of editing comic books, and they felt that the best way to see how comic-book stories were put together was to read them out loud. If they would read well, as you read them out loud, they would read well to the children.\"</p><p>Hemet, which Armstrong mentioned in his letter, is a town near San Jacinto; Barks lived at various houses in the Hemet-San Jacinto area during his almost thirty years there.</p>",
+          "value": "*<p>Chase Craig, a writer for Western in the forties and later a comic-book editor for the company, said in a 1978 letter: \"I do beg to differ with Roger Armstrong in his saying that Carl was embarrassed by Carl Buettner's reading of Carl's stories orally at our office. We all went into hysterics of laughter, and such appreciation of his work certainly could do nothing but give him a lift. Carl loves recognition of his talent as much as anyone I've ever met, and that's exactly what he got every time he ever came to the office. In fact, it was a great day when Carl came in once a month to deliver his work. We all had lunch together and sort of celebrated the occasion. I repeat, he was not embarrassed by his reception. He loved it.\"</p><p>Barks himself said in 1978 that he had enjoyed the warm response to his work — \"Like an actor on the stage, I like to see a little appreciation of my punch lines\" — but he was glad when the \"showings\" stopped. \"I think the reason for it was that Eleanor Packer and Buettner and those people were new at their business of editing comic books, and they felt that the best way to see how comic-book stories were put together was to read them out loud. If they would read well, as you read them out loud, they would read well to the children.\"</p><p>Hemet, which Armstrong mentioned in his letter, is a town near San Jacinto; Barks lived at various houses in the Hemet-San Jacinto area during his almost thirty years there.</p>",
+          "bbox": [
+            {
+              "h": 65.3862804878049,
+              "w": 126.04803544207316,
+              "x": 12.3440625,
+              "y": 222.98833079268292,
+              "confidence": 0.94,
+              "end_index": 738,
+              "label": "footnote",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
           "md": "The \"showings\" ended when Eleanor Packer left Western in 1946. Barks's visits to Western's offices dwindled, and he worked thereafter mostly through the mail.",
           "value": "The \"showings\" ended when Eleanor Packer left Western in 1946. Barks's visits to Western's offices dwindled, and he worked thereafter mostly through the mail.",
           "bbox": [
@@ -149,57 +166,6 @@
               "y": 347.5793597560976,
               "confidence": 0.96,
               "end_index": 40,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "\\* Chase Craig, a writer for Western in the forties and later a comic-book editor for the company, said in a 1978 letter: \"I do beg to differ with Roger Armstrong in his saying that Carl was embarrassed by Carl Buettner's reading of Carl's stories orally at our office. We all went into hysterics of laughter, and such appreciation of his work certainly could do nothing but give him a lift. Carl loves recognition of his talent as much as anyone I've ever met, and that's exactly what he got every time he ever came to the office. In fact, it was a great day when Carl came in once a month to deliver his work. We all had lunch together and sort of celebrated the occasion. I repeat, he was not embarrassed by his reception. He loved it.\"",
-          "value": "* Chase Craig, a writer for Western in the forties and later a comic-book editor for the company, said in a 1978 letter: \"I do beg to differ with Roger Armstrong in his saying that Carl was embarrassed by Carl Buettner's reading of Carl's stories orally at our office. We all went into hysterics of laughter, and such appreciation of his work certainly could do nothing but give him a lift. Carl loves recognition of his talent as much as anyone I've ever met, and that's exactly what he got every time he ever came to the office. In fact, it was a great day when Carl came in once a month to deliver his work. We all had lunch together and sort of celebrated the occasion. I repeat, he was not embarrassed by his reception. He loved it.\"",
-          "bbox": [
-            {
-              "h": 65.3862804878049,
-              "w": 126.04803544207316,
-              "x": 12.3440625,
-              "y": 222.98833079268292,
-              "confidence": 0.94,
-              "end_index": 738,
-              "label": "footnote",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Barks himself said in 1978 that he had enjoyed the warm response to his work — \"Like an actor on the stage, I like to see a little appreciation of my punch lines\" — but he was glad when the \"showings\" stopped. \"I think the reason for it was that Eleanor Packer and Buettner and those people were new at their business of editing comic books, and they felt that the best way to see how comic-book stories were put together was to read them out loud. If they would read well, as you read them out loud, they would read well to the children.\"",
-          "value": "Barks himself said in 1978 that he had enjoyed the warm response to his work — \"Like an actor on the stage, I like to see a little appreciation of my punch lines\" — but he was glad when the \"showings\" stopped. \"I think the reason for it was that Eleanor Packer and Buettner and those people were new at their business of editing comic books, and they felt that the best way to see how comic-book stories were put together was to read them out loud. If they would read well, as you read them out loud, they would read well to the children.\"",
-          "bbox": [
-            {
-              "h": 48.471493902439015,
-              "w": 125.8731395293445,
-              "x": 12.61419755144817,
-              "y": 288.65259146341464,
-              "confidence": 0.91,
-              "end_index": 538,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Hemet, which Armstrong mentioned in his letter, is a town near San Jacinto; Barks lived at various houses in the Hemet-San Jacinto area during his almost thirty years there.",
-          "value": "Hemet, which Armstrong mentioned in his letter, is a town near San Jacinto; Barks lived at various houses in the Hemet-San Jacinto area during his almost thirty years there.",
-          "bbox": [
-            {
-              "h": 16.129161585365853,
-              "w": 125.49533417492376,
-              "x": 12.895554735137193,
-              "y": 337.42884146341464,
-              "confidence": 0.94,
-              "end_index": 172,
               "label": "text",
               "start_index": 0
             }

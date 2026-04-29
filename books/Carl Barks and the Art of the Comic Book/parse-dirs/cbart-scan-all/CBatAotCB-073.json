@@ -88,6 +88,24 @@
           "type": "text"
         },
         {
+          "caption": "From <i>Walt Disney's Comics</i> No. 145, October 1952; © 1952 Walt Disney Productions.",
+          "md": "![From Walt Disney's Comics No. 145, October 1952; © 1952 Walt Disney Productions.](CBatAotCB-074_page_1_image_2_v2.jpg)",
+          "url": "CBatAotCB-074_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 95.616,
+              "w": 146.016,
+              "x": 10.080000000000002,
+              "y": 10.752,
+              "confidence": 0.89,
+              "end_index": 155,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "md": "As he prepares to dispose of the gun, Donald thinks: \"Goodness knows what some child might do while under its spell.\" He raises his arm to hurl the gun. \"Why, it might even hypnotize grown-up people.\" His arm still outstretched, he now gazes at the gun with new interest. \"It might, at that! . . . Imagine Uncle Scrooge being hypnotized.\" Now he caresses the gun, with a sly look on his face. \"Say, this thing has possibilities.\" In the space of three panels, Donald has shifted from indignation to greed, without any grinding of gears.",
           "value": "As he prepares to dispose of the gun, Donald thinks: \"Goodness knows what some child might do while under its spell.\" He raises his arm to hurl the gun. \"Why, it might even hypnotize grown-up people.\" His arm still outstretched, he now gazes at the gun with new interest. \"It might, at that! . . . Imagine Uncle Scrooge being hypnotized.\" Now he caresses the gun, with a sly look on his face. \"Say, this thing has possibilities.\" In the space of three panels, Donald has shifted from indignation to greed, without any grinding of gears.",
           "bbox": [
