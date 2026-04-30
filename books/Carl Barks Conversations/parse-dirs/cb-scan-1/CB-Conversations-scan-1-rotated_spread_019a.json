@@ -18,7 +18,25 @@
               "start_index": 0
             }
           ],
-          "type": "heading",
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "destruction at the Western Publishing Poughkeepsie, NY, office and gives them to Barks as a retirement present; J. Michael Barrier publishes the first version of his essay \"The Lord of Quackly Hall\" in his fanzine *Funnyworld* #6 (June). Walt Disney dies (15 Dec.)",
+          "value": "destruction at the Western Publishing Poughkeepsie, NY, office and gives them to Barks as a retirement present; J. Michael Barrier publishes the first version of his essay \"The Lord of Quackly Hall\" in his fanzine Funnyworld #6 (June). Walt Disney dies (15 Dec.)",
+          "bbox": [
+            {
+              "h": 63.65546682307547,
+              "w": 235.68053616854044,
+              "x": 90.00,
+              "y": 60.41826530344895,
+              "confidence": 0.94,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
           "book_side": "left"
         },
         {
@@ -28,7 +46,7 @@
             {
               "h": 63.65546682307547,
               "w": 235.68053616854044,
-              "x": 140.43605987995429,
+              "x": 90.00,
               "y": 60.41826530344895,
               "confidence": 0.94,
               "end_index": 152,
