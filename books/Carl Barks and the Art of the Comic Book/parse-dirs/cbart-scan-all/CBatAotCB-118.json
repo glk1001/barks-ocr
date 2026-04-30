@@ -224,30 +224,6 @@
           "type": "text"
         },
         {
-          "caption": "A page of Barks's script for \"Pawns of the Loup Garou\" in Donald Duck No. 117, January 1968; © 1967 Walt Disney Productions. The image shows a pencil-sketched comic book page with several panels. Panel 1: Donald Duck looks worried, text says \"WHAT'S COMING IS PLENTY ROUGH!\". Panel 2: A large wolf-like creature (Loup Garou) looms over characters, text says \"ON THIS NIGHT EACH YEAR LOUP GAROUS TRY TO DESTROY ALL MEN AND ALL WOLVES!\" and \"AND COUNT DRAKULA HAD HYPNOTIZED THIS GIANT WOLF INTO BELIEVING HE'S A LOUP GAROU\". Panel 3: Donald talks to a character, text says \"SO WHEN COUNT DRAKULA STOLE YOUR STATUETTE CHARM HE WAS LEAVING YOU TO THIS BEAST'S MERCY!\". Panel 4: The character replies \"YOU BET! WITH ME GONE HE COULD COME BACK AND TAKE OVER THE MINE!\". Panel 5: Donald holds up a charm, text says \"BUT I STILL HAVE THE CHARM — AND HERE COMES ITS TEST!\". Panel 6: Donald uses the charm on the Loup Garou, text says \"DOWN! DOWN, BEAST, DOWN!\" and \"IT'S WORKING! EVERYBODY HEAD FOR THE AIRFIELD!\".",
-          "md": "![A page of Barks's script for \"Pawns of the Loup Garou\" in Donald Duck No. 117, January 1968; © 1967 Walt Disney Productions. The image shows a pencil-sketched comic book page with several panels. Panel 1: Donald Duck looks worried, text says \"WHAT'S COMING IS PLENTY ROUGH!\". Panel 2: A large wolf-like creature (Loup Garou) looms over characters, text says \"ON THIS NIGHT EACH YEAR LOUP GAROUS TRY TO DESTROY ALL MEN AND ALL WOLVES!\" and \"AND COUNT DRAKULA HAD HYPNOTIZED THIS GIANT WOLF INTO BELIEVING HE'S A LOUP GAROU\". Panel 3: Donald talks to a character, text says \"SO WHEN COUNT DRAKULA STOLE YOUR STATUETTE CHARM HE WAS LEAVING YOU TO THIS BEAST'S MERCY!\". Panel 4: The character replies \"YOU BET! WITH ME GONE HE COULD COME BACK AND TAKE OVER THE MINE!\". Panel 5: Donald holds up a charm, text says \"BUT I STILL HAVE THE CHARM — AND HERE COMES ITS TEST!\". Panel 6: Donald uses the charm on the Loup Garou, text says \"DOWN! DOWN, BEAST, DOWN!\" and \"IT'S WORKING! EVERYBODY HEAD FOR THE AIRFIELD!\".](CBatAotCB-118_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-118_page_1_image_1_v2.jpg",
-          "bbox": null,
-          "type": "image"
-        },
-        {
-          "md": "A page of Barks's script for \"Pawns of the Loup Garou\" in *Donald Duck* No. 117, January 1968; © 1967 Walt Disney Productions.",
-          "value": "A page of Barks's script for \"Pawns of the Loup Garou\" in Donald Duck No. 117, January 1968; © 1967 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 28.73478658536588,
-              "w": 65.98042682926831,
-              "x": 204.71438071646338,
-              "y": 228.58122713414633,
-              "confidence": 0.93,
-              "end_index": 125,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "items": [
             {
               "md": "Carl Barks and the Art of the Comic Book",

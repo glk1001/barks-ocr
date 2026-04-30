@@ -39,7 +39,7 @@
         },
         {
           "level": 2,
-          "md": "## Donald Duck, the Crocodile Collector",
+          "md": "### Donald Duck, the Crocodile Collector",
           "value": "Donald Duck, the Crocodile Collector",
           "bbox": [
             {
@@ -92,7 +92,7 @@
         },
         {
           "level": 2,
-          "md": "## Donald Duck in Rags to Riches",
+          "md": "### Donald Duck in Rags to Riches",
           "value": "Donald Duck in Rags to Riches",
           "bbox": [
             {
@@ -145,7 +145,7 @@
         },
         {
           "level": 2,
-          "md": "## Donald Duck in A Christmas for Shacktown",
+          "md": "### Donald Duck in A Christmas for Shacktown",
           "value": "Donald Duck in A Christmas for Shacktown",
           "bbox": [
             {
@@ -207,41 +207,6 @@
               "confidence": 0.98,
               "end_index": 166,
               "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "Barks holds his own copy of Donald Duck Four Color No. 189, 1948, the first comic book for which he illustrated the cover. The words stamped on the cover read as follows: \"This comic is the personal file copy of Carl Barks. Anyone else possessing the book has stolen it.\" Comic-book cover © 1948 Walt Disney Productions.",
-          "md": "![Barks holds his own copy of Donald Duck Four Color No. 189, 1948, the first comic book for which he illustrated the cover. The words stamped on the cover read as follows: \"This comic is the personal file copy of Carl Barks. Anyone else possessing the book has stolen it.\" Comic-book cover © 1948 Walt Disney Productions.](CBatAotCB-111_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-111_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 217.53707698170732,
-              "w": 160.33928306021338,
-              "x": 65.36847227515243,
-              "y": 110.29953887195121,
-              "confidence": 1.0,
-              "end_index": 345,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "Barks holds his own copy of *Donald Duck* Four Color No. 189, 1948, the first comic book for which he illustrated the cover. The words stamped on the cover read as follows: \"This comic is the personal file copy of Carl Barks. Anyone else possessing the book has stolen it.\" Comic-book cover © 1948 Walt Disney Productions.",
-          "value": "Barks holds his own copy of Donald Duck Four Color No. 189, 1948, the first comic book for which he illustrated the cover. The words stamped on the cover read as follows: \"This comic is the personal file copy of Carl Barks. Anyone else possessing the book has stolen it.\" Comic-book cover © 1948 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 23.68783536585368,
-              "w": 161.315752191311,
-              "x": 64.43588843368902,
-              "y": 329.455243902439,
-              "confidence": 0.91,
-              "end_index": 321,
-              "label": "caption",
               "start_index": 0
             }
           ],

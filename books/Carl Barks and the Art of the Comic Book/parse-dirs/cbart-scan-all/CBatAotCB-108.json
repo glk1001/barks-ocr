@@ -124,7 +124,7 @@
         },
         {
           "level": 2,
-          "md": "## Donald Duck in The Golden Christmas Tree",
+          "md": "### Donald Duck in The Golden Christmas Tree",
           "value": "Donald Duck in The Golden Christmas Tree",
           "bbox": [
             {
@@ -364,7 +364,7 @@
         },
         {
           "level": 2,
-          "md": "## Donald Duck in \"Lost in the Andes\"",
+          "md": "### Donald Duck in \"Lost in the Andes\"",
           "value": "Donald Duck in \"Lost in the Andes\"",
           "bbox": [
             {
@@ -553,7 +553,7 @@
         },
         {
           "level": 2,
-          "md": "## Donald Duck in Voodoo Hoodoo",
+          "md": "### Donald Duck in Voodoo Hoodoo",
           "value": "Donald Duck in Voodoo Hoodoo",
           "bbox": [
             {

@@ -3,23 +3,6 @@
     {
       "items": [
         {
-          "md": "DONALD DUCK'S Christmas on Bear Mountain - 20 -\nReprinted from Donald Duck Four Color No. 178, 1947",
-          "value": "DONALD DUCK'S Christmas on Bear Mountain - 20 -\nReprinted from Donald Duck Four Color No. 178, 1947",
-          "bbox": [
-            {
-              "h": 11.674528868140245,
-              "w": 125.37274175876523,
-              "x": 12.381647532393291,
-              "y": 13.047497618140245,
-              "confidence": 0.86,
-              "end_index": 98,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "level": 1,
           "md": "# BOYS' AND GIRLS'",
           "value": "BOYS' AND GIRLS'",

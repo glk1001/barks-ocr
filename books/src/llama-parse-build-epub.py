@@ -17,6 +17,7 @@ Example:
 
 """
 
+import html
 import re
 import tomllib
 import unicodedata
@@ -70,7 +71,9 @@ blockquote {
   font-size: 0.95em;
 }
 blockquote p { margin: 0.4em 0; }
-h1, h2, h3 { font-family: sans-serif; }
+h1 { font-family: sans-serif; font-size: 1.50em; margin: 1.5em 0 0.5em; text-align: center; }
+h2 { font-family: sans-serif; font-size: 1.10em; margin: 1.2em 0 -0.1em; font-weight: bold; }
+h3 { font-family: sans-serif; font-size: 1.05em; margin: 0.0em 0 -0.3em; font-weight: bold; }
 p.index-entry {
   padding-left: 1.5em;
   text-indent: -1.5em;
@@ -702,6 +705,31 @@ def _join_heading(prev: dict, nxt: dict) -> None:
         a["x"], a["y"], a["w"], a["h"] = x0, y0, x1 - x0, y1 - y0
 
 
+_MD_HEADING_PREFIX_RE = re.compile(r"^(#+)\s")
+
+
+def _md_heading_level(item: dict) -> int | None:
+    """Return the heading level implied by leading ``#`` markers in ``md``, or ``None``."""
+    md = (item.get("md") or "").lstrip()
+    m = _MD_HEADING_PREFIX_RE.match(md)
+    return len(m.group(1)) if m else None
+
+
+def _heading_levels_match(prev: dict, nxt: dict) -> bool:
+    """Return True if two heading items target the same level.
+
+    LlamaParse's ``level`` field is occasionally wrong relative to the actual
+    ``#`` prefix in ``md`` (e.g. ``level: 2`` on an item whose markdown is
+    ``"### …"``). Trust the markdown prefix when present on both items; fall
+    back to ``level`` only when one or both items lack a prefix.
+    """
+    prev_md = _md_heading_level(prev)
+    nxt_md = _md_heading_level(nxt)
+    if prev_md is not None and nxt_md is not None:
+        return prev_md == nxt_md
+    return prev.get("level") == nxt.get("level")
+
+
 def _merge_continuation_headings(blocks: list[list[dict]]) -> None:
     """Merge consecutive same-level heading items that visually form one heading.
 
@@ -721,7 +749,7 @@ def _merge_continuation_headings(blocks: list[list[dict]]) -> None:
                 merged
                 and item.get("type") == "heading"
                 and merged[-1].get("type") == "heading"
-                and merged[-1].get("level") == item.get("level")
+                and _heading_levels_match(merged[-1], item)
                 and _headings_form_one(merged[-1], item)
             ):
                 _join_heading(merged[-1], item)
@@ -1089,6 +1117,11 @@ def _page_anchor_html(page: BookPage) -> str:
 _SENTENCE_END_RE = re.compile("[.!?][\")'\\]\u2019\u201d]*\\s*$")
 _SUP_TAG_RE = re.compile(r"<sup\b[^>]*>.*?</sup>", re.DOTALL)
 _TAG_RE = re.compile(r"<[^>]+>")
+# Balanced single-level parenthetical at the end of a paragraph \u2014 e.g. a
+# trailing citation, date, or aside like ``"(Mar. 21, 1967)"`` or
+# ``"(art only)"``. Used to peel a closing parenthetical so the sentence-end
+# check sees the punctuation that precedes it.
+_TRAILING_PARENTHETICAL_RE = re.compile(r"\s*\([^()]*\)\s*$")
 
 # Minimum characters required to test for a soft word-break hyphen (one letter
 # before the hyphen, plus the hyphen itself).
@@ -1096,16 +1129,29 @@ _MIN_HYPHEN_CONTEXT = 2
 
 
 def _paragraph_is_open(prev_html: str) -> bool:
-    """Return True if ``prev_html`` ends with an unfinished paragraph (no sentence end)."""
+    """Return True if ``prev_html`` ends with an unfinished paragraph (no sentence end).
+
+    A paragraph that ends with a balanced trailing parenthetical (a citation,
+    date, or aside like ``"(Mar. 21, 1967)"``) is treated as closed when the
+    text *before* the parenthetical is sentence-ending — otherwise the
+    cross-block paragraph merge would incorrectly attach the next block's
+    first paragraph to it.
+    """
     trimmed = prev_html.rstrip()
     if not trimmed.endswith("</p>"):
         return False
     inner = trimmed[: -len("</p>")]
     cleaned = _SUP_TAG_RE.sub("", inner)
-    plain = _TAG_RE.sub("", cleaned).rstrip()
+    # Strip tags then unescape HTML entities (e.g. ``&quot;`` from a literal
+    # ``"`` in the source) so the sentence-end regex sees the actual closing
+    # punctuation.
+    plain = html.unescape(_TAG_RE.sub("", cleaned)).rstrip()
     if not plain:
         return False
-    return not _SENTENCE_END_RE.search(plain)
+    if _SENTENCE_END_RE.search(plain):
+        return False
+    stripped = _TRAILING_PARENTHETICAL_RE.sub("", plain).rstrip()
+    return not (stripped != plain and _SENTENCE_END_RE.search(stripped))
 
 
 def _next_starts_paragraph(next_html: str) -> bool:

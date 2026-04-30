@@ -105,8 +105,8 @@
           "type": "text"
         },
         {
-          "md": "**Four Color 394 - May-June 1952 - 36 pages**\n**Donald Duck in Malayalaya**",
-          "value": "Four Color 394 - May-June 1952 - 36 pages\nDonald Duck in Malayalaya",
+          "md": "## Four Color 394 - May-June 1952 - 36 pages",
+          "value": "Four Color 394 - May-June 1952 - 36 pages",
           "bbox": [
             {
               "h": 11.00846798780487,
@@ -119,7 +119,24 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
+        },
+        {
+          "md": "### Donald Duck in Malayalaya",
+          "value": "Donald Duck in Malayalaya",
+          "bbox": [
+            {
+              "h": 11.00846798780487,
+              "w": 106.84127036490091,
+              "x": 11.176314429306402,
+              "y": 138.7189481707317,
+              "confidence": 0.98,
+              "end_index": 74,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The ducks bounce away from gun-toting villains on bundles of raw rubber. (Illustrating \"Malayalaya.\") *(Nov. 8, 1951)*",
@@ -156,8 +173,8 @@
           "type": "text"
         },
         {
-          "md": "**Four Color 408 - July-Aug. 1952 - 36 pages**\n**Donald Duck and The Golden Helmet**",
-          "value": "Four Color 408 - July-Aug. 1952 - 36 pages\nDonald Duck and The Golden Helmet",
+          "md": "## Four Color 408 - July-Aug. 1952 - 36 pages",
+          "value": "Four Color 408 - July-Aug. 1952 - 36 pages",
           "bbox": [
             {
               "h": 10.93042682926829,
@@ -170,7 +187,24 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
+        },
+        {
+          "md": "### Donald Duck and The Golden Helmet",
+          "value": "Donald Duck and The Golden Helmet",
+          "bbox": [
+            {
+              "h": 10.93042682926829,
+              "w": 105.38374475990852,
+              "x": 11.289713700457316,
+              "y": 180.17171112804877,
+              "confidence": 0.98,
+              "end_index": 83,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald triumphantly holds up a golden helmet and a map of Labrador. (Illustrating \"The Golden Helmet.\") *(Jan. 3, 1952)*",
@@ -309,8 +343,8 @@
           "type": "text"
         },
         {
-          "md": "**Four Color 422 - Sept.-Oct. 1952 - 36 pages**\n**Donald Duck and The Gilded Man**",
-          "value": "Four Color 422 - Sept.-Oct. 1952 - 36 pages\nDonald Duck and The Gilded Man",
+          "md": "## Four Color 422 - Sept.-Oct. 1952 - 36 pages",
+          "value": "Four Color 422 - Sept.-Oct. 1952 - 36 pages",
           "bbox": [
             {
               "h": 10.482690548780464,
@@ -323,7 +357,24 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
+        },
+        {
+          "md": "### Donald Duck and The Gilded Man",
+          "value": "Donald Duck and The Gilded Man",
+          "bbox": [
+            {
+              "h": 10.482690548780464,
+              "w": 105.45840248666157,
+              "x": 11.863148580411584,
+              "y": 338.2740320121951,
+              "confidence": 0.98,
+              "end_index": 81,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The ducks flee with a mail sack from a giant golden Indian. (Illustrating \"The Gilded Man.\") *(Feb. 21, 1952)*",
@@ -460,6 +511,40 @@
             }
           ],
           "type": "text"
+        },
+        {
+          "md": "## 26 - Nov.-Dec. 1952 - 36 pages",
+          "value": "26 - Nov.-Dec. 1952 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.771181402439042,
+              "w": 74.92126143292684,
+              "x": 150.16779535060974,
+              "y": 146.29657774390242,
+              "confidence": 0.98,
+              "end_index": 81,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "### Donald Duck in Trick or Treat",
+          "value": "Donald Duck in Trick or Treat",
+          "bbox": [
+            {
+              "h": 5.771181402439042,
+              "w": 74.92126143292684,
+              "x": 150.16779535060974,
+              "y": 146.29657774390242,
+              "confidence": 0.98,
+              "end_index": 81,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald is confronted by the nephews, in Halloween costumes, and a real witch, on a broomstick. *(Apr. 10, 1952)*",

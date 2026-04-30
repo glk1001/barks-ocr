@@ -3,41 +3,6 @@
     {
       "items": [
         {
-          "caption": "A comic strip page featuring Donald Duck, his nephews, and Black Pete on a ship. In the first panel, Black Pete points and shouts \"GRAB 'EM, LADS, QUICK!\" while Donald exclaims \"BLACK PETE!\". The subsequent panels show a chaotic chase and struggle on the ship's deck and rigging.",
-          "md": "![A comic strip page featuring Donald Duck, his nephews, and Black Pete on a ship. In the first panel, Black Pete points and shouts \"GRAB 'EM, LADS, QUICK!\" while Donald exclaims \"BLACK PETE!\". The subsequent panels show a chaotic chase and struggle on the ship's deck and rigging.](CBatAotCB-105_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-105_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 314.76286966463414,
-              "w": 221.19162204649388,
-              "x": 33.104115377286575,
-              "y": 15.714615091463417,
-              "confidence": 0.99,
-              "end_index": 304,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From Donald Duck Four Color No. 9, 1942; © 1942 Walt Disney Productions.",
-          "value": "From Donald Duck Four Color No. 9, 1942; © 1942 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.66832317073171,
-              "w": 148.9611942644817,
-              "x": 69.70906869283536,
-              "y": 340.4189862804878,
-              "confidence": 0.91,
-              "end_index": 71,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "items": [
             {
               "md": "Carl Barks and the Art of the Comic Book\n105",

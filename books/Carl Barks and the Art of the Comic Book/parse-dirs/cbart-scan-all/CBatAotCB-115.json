@@ -352,41 +352,6 @@
         },
         {
           "level": 2,
-          "md": "## 98 - November 1964 - 36 pages",
-          "value": "98 - November 1964 - 36 pages",
-          "bbox": [
-            {
-              "h": 5.7201676829268395,
-              "w": 75.41622820598322,
-              "x": 12.066035513528961,
-              "y": 259.9675381097561,
-              "confidence": 0.97,
-              "end_index": 28,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "md": "DONALD DUCK in Secret of Hondorica - 24 - Reprinted from Donald Duck No. 46, Mar.-Apr. 1956.",
-          "value": "DONALD DUCK in Secret of Hondorica - 24 - Reprinted from Donald Duck No. 46, Mar.-Apr. 1956.",
-          "bbox": [
-            {
-              "h": 11.402881097560984,
-              "w": 124.65522413300303,
-              "x": 12.307000524009144,
-              "y": 266.1972713414634,
-              "confidence": 0.98,
-              "end_index": 91,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "level": 2,
           "md": "## 101 - May 1965 - 36 pages",
           "value": "101 - May 1965 - 36 pages",
           "bbox": [
@@ -663,7 +628,7 @@
                   "start_index": 0
                 }
               ],
-              "type": "text"
+              "type": "footer"
             }
           ],
           "md": "Carl Barks and the Art of the Comic Book\n115",

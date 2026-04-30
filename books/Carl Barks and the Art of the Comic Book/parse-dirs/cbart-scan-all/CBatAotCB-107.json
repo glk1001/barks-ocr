@@ -263,6 +263,24 @@
           "type": "heading"
         },
         {
+          "level": 3,
+          "md": "### Donald Duck's Christmas on Bear Mountain",
+          "value": "Donald Duck's Christmas on Bear Mountain",
+          "bbox": [
+            {
+              "h": 10.61299161585368,
+              "w": 104.48857660060973,
+              "x": 151.12464557926828,
+              "y": 161.54893673780487,
+              "confidence": 0.82,
+              "end_index": 37,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
           "md": "DONALD DUCK - 1 (inside front cover) - Donald buys a huge visor for his tiny car. *(July 22, 1947)*",
           "value": "DONALD DUCK - 1 (inside front cover) - Donald buys a huge visor for his tiny car. (July 22, 1947)",
           "bbox": [
@@ -569,6 +587,24 @@
             }
           ],
           "type": "text"
+        },
+        {
+          "caption": "Barks holds his own copy of <i>Donald Duck</i> Four Color No. 189, 1948, the first comic book for which he illustrated the cover. The words stamped on the cover read as follows: \"This comic is the personal file copy of Carl Barks. Anyone else possessing the book has stolen it.\" Comic-book cover © 1948 Walt Disney Productions.",
+          "md": "![Barks holds his own copy of Donald Duck Four Color No. 189, 1948, the first comic book for which he illustrated the cover. The words stamped on the cover read as follows: \"This comic is the personal file copy of Carl Barks. Anyone else possessing the book has stolen it.\" Comic-book cover © 1948 Walt Disney Productions.](CBatAotCB-111_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-111_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 217.53707698170732,
+              "w": 160.33928306021338,
+              "x": 65.36847227515243,
+              "y": 110.29953887195121,
+              "confidence": 1.0,
+              "end_index": 345,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
         },
         {
           "level": 2,

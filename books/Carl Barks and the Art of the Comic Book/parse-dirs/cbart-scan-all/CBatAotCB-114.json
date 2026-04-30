@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# 44 - Nov.-Dec. 1955 - 36 pages",
+          "md": "## 44 - Nov.-Dec. 1955 - 36 pages",
           "value": "44 - Nov.-Dec. 1955 - 36 pages",
           "bbox": [
             {
@@ -39,7 +39,7 @@
         },
         {
           "level": 1,
-          "md": "# 45 - Jan.-Feb. 1956 - 36 pages",
+          "md": "## 45 - Jan.-Feb. 1956 - 36 pages",
           "value": "45 - Jan.-Feb. 1956 - 36 pages",
           "bbox": [
             {
@@ -159,8 +159,26 @@
         },
         {
           "level": 1,
-          "md": "# 46 - Mar.-Apr. 1956 - 36 pages",
+          "md": "## 46 - Mar.-Apr. 1956 - 36 pages",
           "value": "46 - Mar.-Apr. 1956 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.492755335365855,
+              "w": 73.25672017911585,
+              "x": 11.126691596798779,
+              "y": 159.41276295731706,
+              "confidence": 0.96,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "### Donald Duck in Secret of Hondorica",
+          "value": "Donald Duck in Secret of Hondorica",
           "bbox": [
             {
               "h": 5.492755335365855,
@@ -262,7 +280,7 @@
         },
         {
           "level": 1,
-          "md": "# 51 - Jan.-Feb. 1957 - 36 pages",
+          "md": "## 51 - Jan.-Feb. 1957 - 36 pages",
           "value": "51 - Jan.-Feb. 1957 - 36 pages",
           "bbox": [
             {
@@ -314,7 +332,7 @@
         },
         {
           "level": 1,
-          "md": "# 52 - Mar.-Apr. 1957 - 36 pages",
+          "md": "## 52 - Mar.-Apr. 1957 - 36 pages",
           "value": "52 - Mar.-Apr. 1957 - 36 pages",
           "bbox": [
             {
@@ -400,8 +418,26 @@
         },
         {
           "level": 1,
-          "md": "# 54 - July-Aug. 1957 - 36 pages",
+          "md": "## 54 - July-Aug. 1957 - 36 pages",
           "value": "54 - July-Aug. 1957 - 36 pages",
+          "bbox": [
+            {
+              "h": 5.697060308689025,
+              "w": 72.40138147865852,
+              "x": 151.42620045731707,
+              "y": 16.58931402439024,
+              "confidence": 0.98,
+              "end_index": 29,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "### Donald Duck in \"Forbidden Valley\"",
+          "value": "Donald Duck in \"Forbidden Valley\"",
           "bbox": [
             {
               "h": 5.697060308689025,
@@ -452,7 +488,7 @@
         },
         {
           "level": 1,
-          "md": "# 55 - Sept.-Oct. 1957 - 36 pages",
+          "md": "## 55 - Sept.-Oct. 1957 - 36 pages",
           "value": "55 - Sept.-Oct. 1957 - 36 pages",
           "bbox": [
             {
@@ -487,7 +523,7 @@
         },
         {
           "level": 1,
-          "md": "# 57 - Jan.-Feb. 1958 - 36 pages",
+          "md": "## 57 - Jan.-Feb. 1958 - 36 pages",
           "value": "57 - Jan.-Feb. 1958 - 36 pages",
           "bbox": [
             {
@@ -522,7 +558,7 @@
         },
         {
           "level": 1,
-          "md": "# 60 - July-Aug. 1958 - 36 pages",
+          "md": "## 60 - July-Aug. 1958 - 36 pages",
           "value": "60 - July-Aug. 1958 - 36 pages",
           "bbox": [
             {
@@ -625,7 +661,7 @@
         },
         {
           "level": 1,
-          "md": "# 65 - May-June 1959 - 36 pages",
+          "md": "## 65 - May-June 1959 - 36 pages",
           "value": "65 - May-June 1959 - 36 pages",
           "bbox": [
             {
@@ -677,7 +713,7 @@
         },
         {
           "level": 1,
-          "md": "# 68 - Nov.-Dec. 1959 - 36 pages",
+          "md": "## 68 - Nov.-Dec. 1959 - 36 pages",
           "value": "68 - Nov.-Dec. 1959 - 36 pages",
           "bbox": [
             {
@@ -729,7 +765,7 @@
         },
         {
           "level": 1,
-          "md": "# 70 - Mar.-Apr. 1960 - 36 pages",
+          "md": "## 70 - Mar.-Apr. 1960 - 36 pages",
           "value": "70 - Mar.-Apr. 1960 - 36 pages",
           "bbox": [
             {
@@ -764,7 +800,7 @@
         },
         {
           "level": 1,
-          "md": "# 71 - May-June 1960 - 36 pages",
+          "md": "## 71 - May-June 1960 - 36 pages",
           "value": "71 - May-June 1960 - 36 pages",
           "bbox": [
             {

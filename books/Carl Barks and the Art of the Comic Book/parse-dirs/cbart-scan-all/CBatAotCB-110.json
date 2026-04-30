@@ -39,7 +39,7 @@
         },
         {
           "level": 2,
-          "md": "## Donald Duck in Big-top Bedlam",
+          "md": "### Donald Duck in Big-top Bedlam",
           "value": "Donald Duck in Big-top Bedlam",
           "bbox": [
             {
@@ -92,7 +92,7 @@
         },
         {
           "level": 2,
-          "md": "## Donald Duck in Dangerous Disguise",
+          "md": "### Donald Duck in Dangerous Disguise",
           "value": "Donald Duck in Dangerous Disguise",
           "bbox": [
             {
@@ -162,7 +162,7 @@
         },
         {
           "level": 2,
-          "md": "## Donald Duck in No Such Varmint",
+          "md": "### Donald Duck in No Such Varmint",
           "value": "Donald Duck in No Such Varmint",
           "bbox": [
             {
@@ -232,7 +232,7 @@
         },
         {
           "level": 2,
-          "md": "## Donald Duck in Old California",
+          "md": "### Donald Duck in Old California",
           "value": "Donald Duck in Old California",
           "bbox": [
             {
@@ -293,30 +293,6 @@
               "y": 167.56379954268291,
               "confidence": 0.99,
               "end_index": 656,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "caption": "A comic strip excerpt from \"Donald Duck in Old California\" showing the ducks driving into the back country, seeing an old ranch house, a town where Ramona lived, and then crashing into a rock near an Indian Reservation sign.",
-          "md": "![A comic strip excerpt from \"Donald Duck in Old California\" showing the ducks driving into the back country, seeing an old ranch house, a town where Ramona lived, and then crashing into a rock near an Indian Reservation sign.](CBatAotCB-110_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-110_page_1_image_1_v2.jpg",
-          "bbox": null,
-          "type": "image"
-        },
-        {
-          "md": "From *Donald Duck* Four Color No. 328, 1951; © 1951 Walt Disney Productions.",
-          "value": "From Donald Duck Four Color No. 328, 1951; © 1951 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 12.248757621951244,
-              "w": 77.42795350609757,
-              "x": 197.55325838414632,
-              "y": 289.63943597560973,
-              "confidence": 0.92,
-              "end_index": 75,
               "label": "text",
               "start_index": 0
             }

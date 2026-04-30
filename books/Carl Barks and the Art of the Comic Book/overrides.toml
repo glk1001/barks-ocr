@@ -58,3 +58,17 @@ parse_dir = "cbart-scan-all"
 spread    = "CBatAotCB-089"
 url       = "CBatAotCB-089_page_1_image_3_v2"
 class     = "side-by-side"
+
+[[image_overrides]]
+parse_dir = "cbart-scan-all"
+spread = "CBatAotCB-107"
+caption_starts_with = "Barks holds his own copy of"
+#width = "60%"
+max_height = "75vh"
+
+[[image_overrides]]
+parse_dir = "cbart-scan-all"
+spread = "CBatAotCB-116"
+caption_starts_with = "A page of Barks's script for"
+#width = "60%"
+max_height = "65vh"
