@@ -3,8 +3,25 @@
     {
       "items": [
         {
-          "md": "**01-329-207 - May-July 1962 \\[(April) 1962] - 36 pages**\nFront cover: A motor on Gyro's back paddles his boat as he fishes. *(May 3, 1961)*",
-          "value": "01-329-207 - May-July 1962 [(April) 1962] - 36 pages\nFront cover: A motor on Gyro's back paddles his boat as he fishes. (May 3, 1961)",
+          "md": "## 01-329-207 - May-July 1962 \\[(April) 1962] - 36 pages",
+          "value": "01-329-207 - May-July 1962 [(April) 1962] - 36 pages",
+          "bbox": [
+            {
+              "h": 10.979436928353662,
+              "w": 124.7463024009146,
+              "x": 12.226031821646341,
+              "y": 25.094416920731707,
+              "confidence": 0.89,
+              "end_index": 139,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Front cover: A motor on Gyro's back paddles his boat as he fishes. *(May 3, 1961)*",
+          "value": "Front cover: A motor on Gyro's back paddles his boat as he fishes. (May 3, 1961)",
           "bbox": [
             {
               "h": 10.979436928353662,
