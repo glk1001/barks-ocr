@@ -263,24 +263,6 @@
           "type": "heading"
         },
         {
-          "level": 3,
-          "md": "### Donald Duck's Christmas on Bear Mountain",
-          "value": "Donald Duck's Christmas on Bear Mountain",
-          "bbox": [
-            {
-              "h": 10.61299161585368,
-              "w": 104.48857660060973,
-              "x": 151.12464557926828,
-              "y": 161.54893673780487,
-              "confidence": 0.82,
-              "end_index": 37,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
           "md": "DONALD DUCK - 1 (inside front cover) - Donald buys a huge visor for his tiny car. *(July 22, 1947)*",
           "value": "DONALD DUCK - 1 (inside front cover) - Donald buys a huge visor for his tiny car. (July 22, 1947)",
           "bbox": [

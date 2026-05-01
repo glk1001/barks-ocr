@@ -176,24 +176,6 @@
           "type": "heading"
         },
         {
-          "level": 1,
-          "md": "### Donald Duck in Secret of Hondorica",
-          "value": "Donald Duck in Secret of Hondorica",
-          "bbox": [
-            {
-              "h": 5.492755335365855,
-              "w": 73.25672017911585,
-              "x": 11.126691596798779,
-              "y": 159.41276295731706,
-              "confidence": 0.96,
-              "end_index": 29,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
           "md": "Front cover: The nephews blow over their birthday cake, to Donald's dismay. (*Sept. 15, 1955*)",
           "value": "Front cover: The nephews blow over their birthday cake, to Donald's dismay. (Sept. 15, 1955)",
           "bbox": [
@@ -420,24 +402,6 @@
           "level": 1,
           "md": "## 54 - July-Aug. 1957 - 36 pages",
           "value": "54 - July-Aug. 1957 - 36 pages",
-          "bbox": [
-            {
-              "h": 5.697060308689025,
-              "w": 72.40138147865852,
-              "x": 151.42620045731707,
-              "y": 16.58931402439024,
-              "confidence": 0.98,
-              "end_index": 29,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "level": 1,
-          "md": "### Donald Duck in \"Forbidden Valley\"",
-          "value": "Donald Duck in \"Forbidden Valley\"",
           "bbox": [
             {
               "h": 5.697060308689025,

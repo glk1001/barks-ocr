@@ -496,42 +496,8 @@
           "type": "text"
         },
         {
-          "md": "**26 - Nov.-Dec. 1952 - 36 pages**",
-          "value": "26 - Nov.-Dec. 1952 - 36 pages",
-          "bbox": [
-            {
-              "h": 5.771181402439042,
-              "w": 74.92126143292684,
-              "x": 150.16779535060974,
-              "y": 146.29657774390242,
-              "confidence": 0.96,
-              "end_index": 33,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "## 26 - Nov.-Dec. 1952 - 36 pages",
           "value": "26 - Nov.-Dec. 1952 - 36 pages",
-          "bbox": [
-            {
-              "h": 5.771181402439042,
-              "w": 74.92126143292684,
-              "x": 150.16779535060974,
-              "y": 146.29657774390242,
-              "confidence": 0.98,
-              "end_index": 81,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "md": "### Donald Duck in Trick or Treat",
-          "value": "Donald Duck in Trick or Treat",
           "bbox": [
             {
               "h": 5.771181402439042,
