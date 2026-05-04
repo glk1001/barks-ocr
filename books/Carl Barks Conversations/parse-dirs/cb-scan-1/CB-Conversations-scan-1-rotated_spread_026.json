@@ -417,8 +417,26 @@
           "book_side": "right"
         },
         {
-          "md": "**Q:** Or wasn't an artist who can see what can actually be drawn?\n**A:** Well, that's right. They didn't write stuff that was easy to stage, and so I took the liberty of rehashing their stuff quite a bit. Some of the stories I changed so completely that, after two years went by, I thought I wrote the whole thing. On those long stories, occasionally the idea came from",
-          "value": "Q: Or wasn't an artist who can see what can actually be drawn?\nA: Well, that's right. They didn't write stuff that was easy to stage, and so I took the liberty of rehashing their stuff quite a bit. Some of the stories I changed so completely that, after two years went by, I thought I wrote the whole thing. On those long stories, occasionally the idea came from",
+          "md": "**Q:** Or wasn't an artist who can see what can actually be drawn?",
+          "value": "Q: Or wasn't an artist who can see what can actually be drawn?",
+          "bbox": [
+            {
+              "h": 64.22976,
+              "w": 284.3256,
+              "x": 438.26520000000005,
+              "y": 483.50736,
+              "confidence": 0.91,
+              "end_index": 369,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Well, that's right. They didn't write stuff that was easy to stage, and so I took the liberty of rehashing their stuff quite a bit. Some of the stories I changed so completely that, after two years went by, I thought I wrote the whole thing. On those long stories, occasionally the idea came from",
+          "value": "A: Well, that's right. They didn't write stuff that was easy to stage, and so I took the liberty of rehashing their stuff quite a bit. Some of the stories I changed so completely that, after two years went by, I thought I wrote the whole thing. On those long stories, occasionally the idea came from",
           "bbox": [
             {
               "h": 64.22976,

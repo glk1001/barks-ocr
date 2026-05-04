@@ -184,8 +184,8 @@
           "book_side": "left"
         },
         {
-          "md": "**A:** The year of the square eggs, I guess. 1949. That was about the time I hit my peak in stories. I couldn't say for sure whether that was the peak in art, but I remember I felt more interested in art at that time. I mean, I tried a little harder, although some of the stuff since that time has probably been better. Let's see. The art I was doing about the time Scrooge discovered Atlantis under the sea—that was probably as good as I've got—ten, art-wise. That and in the 25¢ books—the forest fire story, for example. My best story, technically, is probably the square egg one \\[\"Lost in the Andes\"]. The one I always liked best for sentimental value was \"In Old California.\" I created an atmosphere and then kept that atmosphere through the whole story. Composing these stories is like writing music. You've got to have the beat and keep the whole thing going.",
-          "value": "A: The year of the square eggs, I guess. 1949. That was about the time I hit my peak in stories. I couldn't say for sure whether that was the peak in art, but I remember I felt more interested in art at that time. I mean, I tried a little harder, although some of the stuff since that time has probably been better. Let's see. The art I was doing about the time Scrooge discovered Atlantis under the sea—that was probably as good as I've got—ten, art-wise. That and in the 25¢ books—the forest fire story, for example. My best story, technically, is probably the square egg one [\"Lost in the Andes\"]. The one I always liked best for sentimental value was \"In Old California.\" I created an atmosphere and then kept that atmosphere through the whole story. Composing these stories is like writing music. You've got to have the beat and keep the whole thing going.",
+          "md": "**A:** The year of the square eggs, I guess. 1949. That was about the time I hit my peak in stories. I couldn't say for sure whether that was the peak in art, but I remember I felt more interested in art at that time. I mean, I tried a little harder, although some of the stuff since that time has probably been better. Let's see. The art I was doing about the time Scrooge discovered Atlantis under the sea—that was probably as good as I've gotten, art-wise. That and in the 25¢ books—the forest fire story, for example. My best story, technically, is probably the square egg one \\[\"Lost in the Andes\"]. The one I always liked best for sentimental value was \"In Old California.\" I created an atmosphere and then kept that atmosphere",
+          "value": "A: The year of the square eggs, I guess. 1949. That was about the time I hit my peak in stories. I couldn't say for sure whether that was the peak in art, but I remember I felt more interested in art at that time. I mean, I tried a little harder, although some of the stuff since that time has probably been better. Let's see. The art I was doing about the time Scrooge discovered Atlantis under the sea—that was probably as good as I've gotten, art-wise. That and in the 25¢ books—the forest fire story, for example. My best story, technically, is probably the square egg one [\"Lost in the Andes\"]. The one I always liked best for sentimental value was \"In Old California.\" I created an atmosphere and then kept that atmosphere",
           "bbox": [
             {
               "h": 132.62256000000008,
@@ -217,7 +217,7 @@
               "start_index": 0
             }
           ],
-          "type": "heading",
+          "type": "header",
           "book_side": "right"
         },
         {

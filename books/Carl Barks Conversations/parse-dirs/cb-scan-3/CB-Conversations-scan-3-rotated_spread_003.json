@@ -175,7 +175,7 @@
               "y": 518.3174791491998,
               "confidence": 0.85,
               "end_index": 302,
-              "label": "footnote",
+              "label": "text",
               "start_index": 0
             }
           ],

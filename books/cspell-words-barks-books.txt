@@ -225,7 +225,6 @@ nyheter
 opper
 organisation
 overstreet
-panko
 paolini
 paperino
 paperon

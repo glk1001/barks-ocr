@@ -419,8 +419,26 @@
           "book_side": "left"
         },
         {
-          "md": "**Q:** Not even any *Silly Symphonies*? Just the Donald Duck cartoons?\n**A:** Just *Donald Duck*. Oh, I helped out on a *Pluto* once in a while as things moved from story unit to story unit—in story conferences we'd submit gags to another guy's story.",
-          "value": "Q: Not even any Silly Symphonies? Just the Donald Duck cartoons?\nA: Just Donald Duck. Oh, I helped out on a Pluto once in a while as things moved from story unit to story unit—in story conferences we'd submit gags to another guy's story.",
+          "md": "**Q:** Not even any *Silly Symphonies*? Just the Donald Duck cartoons?",
+          "value": "Q: Not even any Silly Symphonies? Just the Donald Duck cartoons?",
+          "bbox": [
+            {
+              "h": 51.318756427448555,
+              "w": 283.33311663967226,
+              "x": 452.6443523008766,
+              "y": 50.4944011873571,
+              "confidence": 0.94,
+              "end_index": 250,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**A:** Just *Donald Duck*. Oh, I helped out on a *Pluto* once in a while as things moved from story unit to story unit—in story conferences we'd submit gags to another guy's story.",
+          "value": "A: Just Donald Duck. Oh, I helped out on a Pluto once in a while as things moved from story unit to story unit—in story conferences we'd submit gags to another guy's story.",
           "bbox": [
             {
               "h": 51.318756427448555,

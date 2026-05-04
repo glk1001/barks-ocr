@@ -233,7 +233,7 @@
               "y": 280.1258251643484,
               "confidence": 0.82,
               "end_index": 58,
-              "label": "footnote",
+              "label": "text",
               "start_index": 0
             }
           ],

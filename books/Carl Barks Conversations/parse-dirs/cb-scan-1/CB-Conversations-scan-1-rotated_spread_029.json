@@ -371,24 +371,6 @@
           "book_side": "right"
         },
         {
-          "md": "**Q:** What sort of schedule did you have?",
-          "value": "Q: What sort of schedule did you have?",
-          "bbox": [
-            {
-              "h": 11.095666420541148,
-              "w": 154.2764186118522,
-              "x": 442.38967268483236,
-              "y": 178.11553423685217,
-              "confidence": 0.82,
-              "end_index": 41,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text",
-          "book_side": "right"
-        },
-        {
           "md": "**A:** Well, I'll tell you, there's so much going on in one of those *Superman* things compared to what there is in a duck page that they are not getting much more per pencil line than I was. Also, I get a pension.",
           "value": "A: Well, I'll tell you, there's so much going on in one of those Superman things compared to what there is in a duck page that they are not getting much more per pencil line than I was. Also, I get a pension.",
           "bbox": [
