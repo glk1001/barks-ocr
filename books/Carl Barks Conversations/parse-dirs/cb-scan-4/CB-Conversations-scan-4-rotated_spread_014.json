@@ -238,8 +238,8 @@
           "book_side": "left"
         },
         {
-          "md": "**CB:** That was 1950, the year of 1950 and . . .",
-          "value": "CB: That was 1950, the year of 1950 and . . .",
+          "md": "**CB:** That was 1950, the year of 1950 and …",
+          "value": "CB: That was 1950, the year of 1950 and …",
           "bbox": [
             {
               "h": 12.504239999999982,

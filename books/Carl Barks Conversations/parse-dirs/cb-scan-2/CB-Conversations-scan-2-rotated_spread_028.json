@@ -237,8 +237,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARKS**: Oh, yes. If I had been working in some place where there was a lot of logging going on, or shipping . . . for instance, a sea captain might have said, \"Well, come along with me, be a stevedore or something on my ship.\"",
-          "value": "BARKS: Oh, yes. If I had been working in some place where there was a lot of logging going on, or shipping . . . for instance, a sea captain might have said, \"Well, come along with me, be a stevedore or something on my ship.\"",
+          "md": "**BARKS**: Oh, yes. If I had been working in some place where there was a lot of logging going on, or shipping … for instance, a sea captain might have said, \"Well, come along with me, be a stevedore or something on my ship.\"",
+          "value": "BARKS: Oh, yes. If I had been working in some place where there was a lot of logging going on, or shipping … for instance, a sea captain might have said, \"Well, come along with me, be a stevedore or something on my ship.\"",
           "bbox": [
             {
               "h": 49.120006169016804,
@@ -417,8 +417,8 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER**: But you still felt you had freedom of choice to . . .",
-          "value": "BARRIER: But you still felt you had freedom of choice to . . .",
+          "md": "**BARRIER**: But you still felt you had freedom of choice to …",
+          "value": "BARRIER: But you still felt you had freedom of choice to …",
           "bbox": [
             {
               "h": 11.12695171017532,

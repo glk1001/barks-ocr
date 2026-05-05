@@ -112,8 +112,8 @@
           "book_side": "left"
         },
         {
-          "md": "**CB:** Three months just to paint this \\[Points at the money bin with all its coins]. This was a big painting. It was . . . let's see, twenty-eight inches high and thirty-five inches wide. Big fellow. \\[The painting was sold for two hundred thousand dollars.]",
-          "value": "CB: Three months just to paint this [Points at the money bin with all its coins]. This was a big painting. It was . . . let's see, twenty-eight inches high and thirty-five inches wide. Big fellow. [The painting was sold for two hundred thousand dollars.]",
+          "md": "**CB:** Three months just to paint this \\[Points at the money bin with all its coins]. This was a big painting. It was … let's see, twenty-eight inches high and thirty-five inches wide. Big fellow. \\[The painting was sold for two hundred thousand dollars.]",
+          "value": "CB: Three months just to paint this [Points at the money bin with all its coins]. This was a big painting. It was … let's see, twenty-eight inches high and thirty-five inches wide. Big fellow. [The painting was sold for two hundred thousand dollars.]",
           "bbox": [
             {
               "h": 50.889562399961875,
@@ -284,8 +284,8 @@
           "book_side": "right"
         },
         {
-          "md": "**CB:** Oh . . . I think my earliest memory that comes quickly to mind was going to school in southern Oregon.",
-          "value": "CB: Oh . . . I think my earliest memory that comes quickly to mind was going to school in southern Oregon.",
+          "md": "**CB:** Oh … I think my earliest memory that comes quickly to mind was going to school in southern Oregon.",
+          "value": "CB: Oh … I think my earliest memory that comes quickly to mind was going to school in southern Oregon.",
           "bbox": [
             {
               "h": 24.574416096608246,

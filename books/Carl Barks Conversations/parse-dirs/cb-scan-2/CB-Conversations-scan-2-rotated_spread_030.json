@@ -147,8 +147,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** It seemed that after a while his greed came to be taken for granted, as sort of a basic premise . . .",
-          "value": "BARRIER: It seemed that after a while his greed came to be taken for granted, as sort of a basic premise . . .",
+          "md": "**BARRIER:** It seemed that after a while his greed came to be taken for granted, as sort of a basic premise …",
+          "value": "BARRIER: It seemed that after a while his greed came to be taken for granted, as sort of a basic premise …",
           "bbox": [
             {
               "h": 24.584024771341475,
@@ -183,8 +183,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** . . . without any real moral judgment attached to it.",
-          "value": "BARRIER: . . . without any real moral judgment attached to it.",
+          "md": "**BARRIER:** … without any real moral judgment attached to it.",
+          "value": "BARRIER: … without any real moral judgment attached to it.",
           "bbox": [
             {
               "h": 14.2,

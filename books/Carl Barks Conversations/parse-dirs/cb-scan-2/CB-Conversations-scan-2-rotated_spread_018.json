@@ -183,8 +183,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARKS:** No, I don't think so. My dad was never much of a fellow to talk; he was a silent sort of guy. He would read his Bible . . . that was about the extent of his life.",
-          "value": "BARKS: No, I don't think so. My dad was never much of a fellow to talk; he was a silent sort of guy. He would read his Bible . . . that was about the extent of his life.",
+          "md": "**BARKS:** No, I don't think so. My dad was never much of a fellow to talk; he was a silent sort of guy. He would read his Bible … that was about the extent of his life.",
+          "value": "BARKS: No, I don't think so. My dad was never much of a fellow to talk; he was a silent sort of guy. He would read his Bible … that was about the extent of his life.",
           "bbox": [
             {
               "h": 35.31184418826216,
@@ -219,8 +219,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARKS:** Oh, they were the salt of the earth . . . tillers of the soil.",
-          "value": "BARKS: Oh, they were the salt of the earth . . . tillers of the soil.",
+          "md": "**BARKS:** Oh, they were the salt of the earth … tillers of the soil.",
+          "value": "BARKS: Oh, they were the salt of the earth … tillers of the soil.",
           "bbox": [
             {
               "h": 11.958545279153913,
@@ -345,8 +345,8 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** So you were actually helping to feed the cattle when you were just . . .",
-          "value": "BARRIER: So you were actually helping to feed the cattle when you were just . . .",
+          "md": "**BARRIER:** So you were actually helping to feed the cattle when you were just …",
+          "value": "BARRIER: So you were actually helping to feed the cattle when you were just …",
           "bbox": [
             {
               "h": 24.91539995236285,

@@ -19,7 +19,7 @@
                   "start_index": 0
                 }
               ],
-              "type": "text"
+              "type": "header"
             }
           ],
           "md": "BARRIER, BRAY, FOSTER, AND SPICER / 1971 25",
@@ -54,7 +54,7 @@
               "start_index": 0
             }
           ],
-          "type": "heading",
+          "type": "header",
           "book_side": "left"
         },
         {
@@ -94,8 +94,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARKS:** Oh, I guess so; it's hard to say. . . . I'd rather draw humans. Fantasy characters get into another field, but of course in comic books, you have to combine 'em all.",
-          "value": "BARKS: Oh, I guess so; it's hard to say. . . . I'd rather draw humans. Fantasy characters get into another field, but of course in comic books, you have to combine 'em all.",
+          "md": "**BARKS:** Oh, I guess so; it's hard to say.… I'd rather draw humans. Fantasy characters get into another field, but of course in comic books, you have to combine 'em all.",
+          "value": "BARKS: Oh, I guess so; it's hard to say.… I'd rather draw humans. Fantasy characters get into another field, but of course in comic books, you have to combine 'em all.",
           "bbox": [
             {
               "h": 37.09763056997905,

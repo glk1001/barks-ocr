@@ -374,8 +374,8 @@
           "book_side": "right"
         },
         {
-          "md": "**KS:** That was . . .",
-          "value": "KS: That was . . .",
+          "md": "**KS:** That was …",
+          "value": "KS: That was …",
           "bbox": [
             {
               "h": 8.931600000000003,
@@ -392,8 +392,8 @@
           "book_side": "right"
         },
         {
-          "md": "**CB:** 1942 . . . no, 1943.",
-          "value": "CB: 1942 . . . no, 1943.",
+          "md": "**CB:** 1942 … no, 1943.",
+          "value": "CB: 1942 … no, 1943.",
           "bbox": [
             {
               "h": 8.938172185430403,

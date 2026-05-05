@@ -310,8 +310,8 @@
           "book_side": "right"
         },
         {
-          "md": "**CB:** If I order them through the standard procedure—two boxes—it takes . . .",
-          "value": "CB: If I order them through the standard procedure—two boxes—it takes . . .",
+          "md": "**CB:** If I order them through the standard procedure—two boxes—it takes …",
+          "value": "CB: If I order them through the standard procedure—two boxes—it takes …",
           "bbox": [
             {
               "h": 26.199360000000013,
@@ -346,8 +346,8 @@
           "book_side": "right"
         },
         {
-          "md": "**DA:** I'll get that. Hello. . . . No, she had to run an errand. . . . This is Don Ault. I'm visiting here. . . . This is Helen's husband? . . . And you're at \\[your daughter's place in Albany]. . . . Okay, I'll tell her.",
-          "value": "DA: I'll get that. Hello. . . . No, she had to run an errand. . . . This is Don Ault. I'm visiting here. . . . This is Helen's husband? . . . And you're at [your daughter's place in Albany]. . . . Okay, I'll tell her.",
+          "md": "**DA:** I'll get that. Hello.… No, she had to run an errand.… This is Don Ault. I'm visiting here.… This is Helen's husband? … And you're at \\[your daughter's place in Albany].… Okay, I'll tell her.",
+          "value": "DA: I'll get that. Hello.… No, she had to run an errand.… This is Don Ault. I'm visiting here.… This is Helen's husband? … And you're at [your daughter's place in Albany].… Okay, I'll tell her.",
           "bbox": [
             {
               "h": 41.08536000000001,
