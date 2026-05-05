@@ -9,6 +9,7 @@ bboxes
 blockquotes
 curlies
 curlification
+curlified
 desync
 ebooklib
 figcaption

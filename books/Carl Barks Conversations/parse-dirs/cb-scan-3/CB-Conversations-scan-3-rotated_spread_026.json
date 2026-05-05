@@ -75,7 +75,7 @@
           "book_side": "left"
         },
         {
-          "md": "<p style=”text-align:center”>. . . .</p>",
+          "md": "<p style=\"text-align:center\">. . . .</p>",
           "value": "",
           "bbox": [
             {
@@ -111,7 +111,7 @@
           "book_side": "left"
         },
         {
-          "md": "<p style=”text-align:center”>. . . .</p>",
+          "md": "<p style=\"text-align:center\">. . . .</p>",
           "value": "",
           "bbox": [
             {
