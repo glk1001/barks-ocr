@@ -3,7 +3,7 @@
     {
       "items": [
         {
-          "md": "Conversations with Comic Artists\nM. Thomas Inge, General Editor<div style=\"page-break-after: always;\"></div>",
+          "md": "Conversations with Comic Artists\nM. Thomas Inge, General Editor<div style=”page-break-after: always;”></div>",
           "value": "Conversations with Comic Artists\nM. Thomas Inge, General Editor",
           "bbox": [
             {
@@ -22,7 +22,7 @@
         },
         {
           "caption": "",
-          "md": "![Title graphic: \"Carl Barks CONVERSATIONS\" inside a hand-drawn thought bubble.](CB-Conversations-scan-1-rotated_spread_001_page_1_image_1_v2.png)",
+          "md": "![Title graphic: “Carl Barks CONVERSATIONS” inside a hand-drawn thought bubble.](CB-Conversations-scan-1-rotated_spread_001_page_1_image_1_v2.png)",
           "url": "CB-Conversations-scan-1-rotated_spread_001_page_1_image_1_v2.png",
           "bbox": [
             {
@@ -77,7 +77,7 @@
           "book_side": "right"
         },
         {
-          "md": "University Press of Mississippi\nJackson<div style=\"page-break-after: always;\"></div>",
+          "md": "University Press of Mississippi\nJackson<div style=”page-break-after: always;”></div>",
           "value": "University Press of Mississippi\nJackson",
           "bbox": [
             {
@@ -100,6 +100,6 @@
       "page_width": 841.2,
       "success": true,
       "printed_page_number": "i, iii"
-   }
+    }
   ]
 }

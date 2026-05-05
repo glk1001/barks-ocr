@@ -659,8 +659,8 @@
           "book_side": "right"
         },
         {
-          "md": "\"Good Scouts\" (animated cartoon, released in 1938), 156\nGoofy, 143, 177\nGottfredson, Floyd, xiii, xvii, 66, 70–71, 92, 119, 132–33, 198–204\nGyro Gearloose, xxiv, 13–14, 48, 71, 96–97, 112, 138, 141, 158, 162, 176–77, 200",
-          "value": "\"Good Scouts\" (animated cartoon, released in 1938), 156\nGoofy, 143, 177\nGottfredson, Floyd, xiii, xvii, 66, 70–71, 92, 119, 132–33, 198–204\nGyro Gearloose, xxiv, 13–14, 48, 71, 96–97, 112, 138, 141, 158, 162, 176–77, 200",
+          "md": "“Good Scouts” (animated cartoon, released in 1938), 156\nGoofy, 143, 177\nGottfredson, Floyd, xiii, xvii, 66, 70–71, 92, 119, 132–33, 198–204\nGyro Gearloose, xxiv, 13–14, 48, 71, 96–97, 112, 138, 141, 158, 162, 176–77, 200",
+          "value": "“Good Scouts” (animated cartoon, released in 1938), 156\nGoofy, 143, 177\nGottfredson, Floyd, xiii, xvii, 66, 70–71, 92, 119, 132–33, 198–204\nGyro Gearloose, xxiv, 13–14, 48, 71, 96–97, 112, 138, 141, 158, 162, 176–77, 200",
           "bbox": [
             {
               "h": 85.69409249535539,
@@ -707,8 +707,8 @@
           "book_side": "right"
         },
         {
-          "md": "Hamilton, Bruce, xxix\nHannah, Jack, 6, 52, 158, 175, 176\nHelnwein, Gottfried, xxxi\nHogarth, Burne (*Tarzan*), 133\n*How to Read Donald Duck* (Ariel Dorfman and Armand Mattelart), 73, 213\nHuey, Dewey, and Louie. See Nephews, Donald's (Huey, Dewey, and Louie)\nHuman characters. See Non-animal characters",
-          "value": "Hamilton, Bruce, xxix\nHannah, Jack, 6, 52, 158, 175, 176\nHelnwein, Gottfried, xxxi\nHogarth, Burne (Tarzan), 133\nHow to Read Donald Duck (Ariel Dorfman and Armand Mattelart), 73, 213\nHuey, Dewey, and Louie. See Nephews, Donald's (Huey, Dewey, and Louie)\nHuman characters. See Non-animal characters",
+          "md": "Hamilton, Bruce, xxix\nHannah, Jack, 6, 52, 158, 175, 176\nHelnwein, Gottfried, xxxi\nHogarth, Burne (*Tarzan*), 133\n*How to Read Donald Duck* (Ariel Dorfman and Armand Mattelart), 73, 213\nHuey, Dewey, and Louie. See Nephews, Donald’s (Huey, Dewey, and Louie)\nHuman characters. See Non-animal characters",
+          "value": "Hamilton, Bruce, xxix\nHannah, Jack, 6, 52, 158, 175, 176\nHelnwein, Gottfried, xxxi\nHogarth, Burne (Tarzan), 133\nHow to Read Donald Duck (Ariel Dorfman and Armand Mattelart), 73, 213\nHuey, Dewey, and Louie. See Nephews, Donald’s (Huey, Dewey, and Louie)\nHuman characters. See Non-animal characters",
           "bbox": [
             {
               "h": 107.2597657238472,
@@ -928,6 +928,6 @@
       "page_width": 841.2,
       "success": true,
       "printed_page_number": "234, 235"
-   }
+    }
   ]
 }

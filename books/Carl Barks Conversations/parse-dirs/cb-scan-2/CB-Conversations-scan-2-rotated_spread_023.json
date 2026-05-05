@@ -39,8 +39,8 @@
           "book_side": "left"
         },
         {
-          "md": "bunch, there was four of us that made it. I believe there were four of us. The December class came in, and one of them was Walt Kelly. There were a bunch of real geniuses came in with that class, a whole bunch of guys that had just been laid off and were sort of on WPA and that sort of work, and so they came out there to Disney's. Some of those were real accomplished artists, real good artists.",
-          "value": "bunch, there was four of us that made it. I believe there were four of us. The December class came in, and one of them was Walt Kelly. There were a bunch of real geniuses came in with that class, a whole bunch of guys that had just been laid off and were sort of on WPA and that sort of work, and so they came out there to Disney's. Some of those were real accomplished artists, real good artists.",
+          "md": "bunch, there was four of us that made it. I believe there were four of us. The December class came in, and one of them was Walt Kelly. There were a bunch of real geniuses came in with that class, a whole bunch of guys that had just been laid off and were sort of on WPA and that sort of work, and so they came out there to Disney’s. Some of those were real accomplished artists, real good artists.",
+          "value": "bunch, there was four of us that made it. I believe there were four of us. The December class came in, and one of them was Walt Kelly. There were a bunch of real geniuses came in with that class, a whole bunch of guys that had just been laid off and were sort of on WPA and that sort of work, and so they came out there to Disney’s. Some of those were real accomplished artists, real good artists.",
           "bbox": [
             {
               "h": 76.84019068573744,
@@ -57,8 +57,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARRIER:** I've heard this on a couple of occasions, that the Depression was really a great boon to the Disney studio, because there were so many artists who needed work and were available to become animators.",
-          "value": "BARRIER: I've heard this on a couple of occasions, that the Depression was really a great boon to the Disney studio, because there were so many artists who needed work and were available to become animators.",
+          "md": "**BARRIER:** I’ve heard this on a couple of occasions, that the Depression was really a great boon to the Disney studio, because there were so many artists who needed work and were available to become animators.",
+          "value": "BARRIER: I’ve heard this on a couple of occasions, that the Depression was really a great boon to the Disney studio, because there were so many artists who needed work and were available to become animators.",
           "bbox": [
             {
               "h": 78.47538502405678,
@@ -111,8 +111,8 @@
           "book_side": "left"
         },
         {
-          "md": "**BARKS:** On that \"Mummy's Ring,\" I submitted a sort of script in advance there. I don't remember how detailed a thing it was, but I believe I kind of roughed out the drawings and sent the sheets in, or took the sheets in, and left them there. Eleanor Packer was the editor, and she was also quite a story woman herself. I remember that she suggested some big changes, and I drew up the changes, and I think I sent the roughs of those changes back. She looked them over and sent back word to go ahead with my original version; my original version was better. So after that, I never had any trouble.",
-          "value": "BARKS: On that \"Mummy's Ring,\" I submitted a sort of script in advance there. I don't remember how detailed a thing it was, but I believe I kind of roughed out the drawings and sent the sheets in, or took the sheets in, and left them there. Eleanor Packer was the editor, and she was also quite a story woman herself. I remember that she suggested some big changes, and I drew up the changes, and I think I sent the roughs of those changes back. She looked them over and sent back word to go ahead with my original version; my original version was better. So after that, I never had any trouble.",
+          "md": "**BARKS:** On that “Mummy’s Ring,” I submitted a sort of script in advance there. I don’t remember how detailed a thing it was, but I believe I kind of roughed out the drawings and sent the sheets in, or took the sheets in, and left them there. Eleanor Packer was the editor, and she was also quite a story woman herself. I remember that she suggested some big changes, and I drew up the changes, and I think I sent the roughs of those changes back. She looked them over and sent back word to go ahead with my original version; my original version was better. So after that, I never had any trouble.",
+          "value": "BARKS: On that “Mummy’s Ring,” I submitted a sort of script in advance there. I don’t remember how detailed a thing it was, but I believe I kind of roughed out the drawings and sent the sheets in, or took the sheets in, and left them there. Eleanor Packer was the editor, and she was also quite a story woman herself. I remember that she suggested some big changes, and I drew up the changes, and I think I sent the roughs of those changes back. She looked them over and sent back word to go ahead with my original version; my original version was better. So after that, I never had any trouble.",
           "bbox": [
             {
               "h": 113.5154827720084,
@@ -165,42 +165,42 @@
           ],
           "type": "text",
           "book_side": "left"
-          },
-          {
-            "md": "**BARKS:** That's right. They told me what size the drawings had to be.",
-            "value": "BARKS: That's right. They told me what size the drawings had to be.",
-            "bbox": [
-              {
-                "h": 27.008850071455775,
-                "w": 265.36155556283353,
-                "x": 89.78888084151106,
-                "y": 391.540341068026,
-                "confidence": 0.96,
-                "end_index": 137,
-                "label": "text",
-                "start_index": 0
-              },
-              {
-                "h": 14.46,
-                "w": 248.42,
-                "x": 89.64,
-                "y": 390.65,
-                "confidence": 1.0,
-                "end_index": 65,
-                "label": "text",
-                "start_index": 0
-              },
-              {
-                "h": 13.93,
-                "w": 266.03,
-                "x": 89.11,
-                "y": 404.06,
-                "confidence": 0.96,
-                "end_index": 137,
-                "label": "text",
-                "start_index": 67
-              }
-            ],
+        },
+        {
+          "md": "**BARKS:** That’s right. They told me what size the drawings had to be.",
+          "value": "BARKS: That’s right. They told me what size the drawings had to be.",
+          "bbox": [
+            {
+              "h": 27.008850071455775,
+              "w": 265.36155556283353,
+              "x": 89.78888084151106,
+              "y": 391.540341068026,
+              "confidence": 0.96,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 14.46,
+              "w": 248.42,
+              "x": 89.64,
+              "y": 390.65,
+              "confidence": 1.0,
+              "end_index": 65,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 13.93,
+              "w": 266.03,
+              "x": 89.11,
+              "y": 404.06,
+              "confidence": 0.96,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 67
+            }
+          ],
           "type": "text",
           "book_side": "left"
         },
@@ -371,8 +371,8 @@
           "book_side": "right"
         },
         {
-          "md": "ing]. I was still married to my first wife. I wasn't going to pay for any darned divorce; let her pay for it. So, eventually, she found some old slob that was willing to come up with the money. I shouldn't say such a name about him; he was a wonderful man. But he was really taken. She just socked him for the amount of money to send her over to Reno to get a divorce, and she never even rewarded him by living with him for one day. Poor old guy. Lost all that money. It must have been about 1938 that I got married. Yeah, because in 1938, with my second wife, I went by Roseville and picked up my two daughters, who were at that time back in Roseville living with their mother, temporarily, and going to school there, and took them with us on a trip back through Montana and Yellowstone and down through the South, Shreveport and Texas.",
-          "value": "ing]. I was still married to my first wife. I wasn't going to pay for any darned divorce; let her pay for it. So, eventually, she found some old slob that was willing to come up with the money. I shouldn't say such a name about him; he was a wonderful man. But he was really taken. She just socked him for the amount of money to send her over to Reno to get a divorce, and she never even rewarded him by living with him for one day. Poor old guy. Lost all that money. It must have been about 1938 that I got married. Yeah, because in 1938, with my second wife, I went by Roseville and picked up my two daughters, who were at that time back in Roseville living with their mother, temporarily, and going to school there, and took them with us on a trip back through Montana and Yellowstone and down through the South, Shreveport and Texas.",
+          "md": "ing]. I was still married to my first wife. I wasn’t going to pay for any darned divorce; let her pay for it. So, eventually, she found some old slob that was willing to come up with the money. I shouldn’t say such a name about him; he was a wonderful man. But he was really taken. She just socked him for the amount of money to send her over to Reno to get a divorce, and she never even rewarded him by living with him for one day. Poor old guy. Lost all that money. It must have been about 1938 that I got married. Yeah, because in 1938, with my second wife, I went by Roseville and picked up my two daughters, who were at that time back in Roseville living with their mother, temporarily, and going to school there, and took them with us on a trip back through Montana and Yellowstone and down through the South, Shreveport and Texas.",
+          "value": "ing]. I was still married to my first wife. I wasn’t going to pay for any darned divorce; let her pay for it. So, eventually, she found some old slob that was willing to come up with the money. I shouldn’t say such a name about him; he was a wonderful man. But he was really taken. She just socked him for the amount of money to send her over to Reno to get a divorce, and she never even rewarded him by living with him for one day. Poor old guy. Lost all that money. It must have been about 1938 that I got married. Yeah, because in 1938, with my second wife, I went by Roseville and picked up my two daughters, who were at that time back in Roseville living with their mother, temporarily, and going to school there, and took them with us on a trip back through Montana and Yellowstone and down through the South, Shreveport and Texas.",
           "bbox": [
             {
               "h": 153.89411233565173,
@@ -425,8 +425,8 @@
           "book_side": "right"
         },
         {
-          "md": "**BARRIER:** I've told you before that I think your stories from the late forties and early fifties are probably your finest, and it's amazing to me that you could have done that kind of work …",
-          "value": "BARRIER: I've told you before that I think your stories from the late forties and early fifties are probably your finest, and it's amazing to me that you could have done that kind of work …",
+          "md": "**BARRIER:** I’ve told you before that I think your stories from the late forties and early fifties are probably your finest, and it’s amazing to me that you could have done that kind of work …",
+          "value": "BARRIER: I’ve told you before that I think your stories from the late forties and early fifties are probably your finest, and it’s amazing to me that you could have done that kind of work …",
           "bbox": [
             {
               "h": 37.40004676543448,

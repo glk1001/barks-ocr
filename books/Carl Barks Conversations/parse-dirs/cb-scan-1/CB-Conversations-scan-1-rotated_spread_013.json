@@ -39,8 +39,8 @@
           "book_side": "left"
         },
         {
-          "md": "Each panel in \"Feebrunkle's Fix-it Guide\" speaks volumes about Donald's character in this story (Barks varied Donald's character from story to story), and what Barks leaves out between the panels is as important as the precise gestures and words he uses to construct a continuity that works as a relay to move his readers through the jumps in time between the panels.",
-          "value": "Each panel in \"Feebrunkle's Fix-it Guide\" speaks volumes about Donald's character in this story (Barks varied Donald's character from story to story), and what Barks leaves out between the panels is as important as the precise gestures and words he uses to construct a continuity that works as a relay to move his readers through the jumps in time between the panels.",
+          "md": "Each panel in “Feebrunkle’s Fix-it Guide” speaks volumes about Donald’s character in this story (Barks varied Donald’s character from story to story), and what Barks leaves out between the panels is as important as the precise gestures and words he uses to construct a continuity that works as a relay to move his readers through the jumps in time between the panels.",
+          "value": "Each panel in “Feebrunkle’s Fix-it Guide” speaks volumes about Donald’s character in this story (Barks varied Donald’s character from story to story), and what Barks leaves out between the panels is as important as the precise gestures and words he uses to construct a continuity that works as a relay to move his readers through the jumps in time between the panels.",
           "bbox": [
             {
               "h": 76.34568510801735,
@@ -57,27 +57,27 @@
           "book_side": "left"
         },
         {
-            "caption": "",
-            "md": "",
-            "url": "CB-Conversations-scan-1-rotated_spread_013_image_1.jpg",
-            "bbox": [
-              {
-                "h": 123.1466074933308,
-                "w": 161.57720446181884,
-                "x": 67.75871735363474,
-                "y": 285.8729790920351,
-                "confidence": 0.89,
-                "end_index": 195,
-                "label": "image",
-                "start_index": 0
-              }
-            ],
-            "type": "image",
-            "book_side": "left"
-          },
-          {
-          "md": "In \"Northeaster on Cape Quack,\" the cinematic quality of Barks's layouts praised so highly by George Lucas is strikingly evident.<sup>17</sup> The sudden pulling back of the imaginary \"camera\" to take in the panorama suddenly and dramatically situates Donald holding the lanterns (in mid-range \"shots\") in the first two panels as the source of a distant, lifesaving light. In this sequence Donald is being heroic almost beyond belief—literally risking his life—while still retaining his sense of humor.",
-          "value": "In \"Northeaster on Cape Quack,\" the cinematic quality of Barks's layouts praised so highly by George Lucas is strikingly evident.<sup>17</sup> The sudden pulling back of the imaginary \"camera\" to take in the panorama suddenly and dramatically situates Donald holding the lanterns (in mid-range \"shots\") in the first two panels as the source of a distant, lifesaving light. In this sequence Donald is being heroic almost beyond belief—literally risking his life—while still retaining his sense of humor.",
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-1-rotated_spread_013_image_1.jpg",
+          "bbox": [
+            {
+              "h": 123.1466074933308,
+              "w": 161.57720446181884,
+              "x": 67.75871735363474,
+              "y": 285.8729790920351,
+              "confidence": 0.89,
+              "end_index": 195,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        },
+        {
+          "md": "In “Northeaster on Cape Quack,” the cinematic quality of Barks’s layouts praised so highly by George Lucas is strikingly evident.<sup>17</sup> The sudden pulling back of the imaginary “camera” to take in the panorama suddenly and dramatically situates Donald holding the lanterns (in mid-range “shots”) in the first two panels as the source of a distant, lifesaving light. In this sequence Donald is being heroic almost beyond belief—literally risking his life—while still retaining his sense of humor.",
+          "value": "In “Northeaster on Cape Quack,” the cinematic quality of Barks’s layouts praised so highly by George Lucas is strikingly evident.<sup>17</sup> The sudden pulling back of the imaginary “camera” to take in the panorama suddenly and dramatically situates Donald holding the lanterns (in mid-range “shots”) in the first two panels as the source of a distant, lifesaving light. In this sequence Donald is being heroic almost beyond belief—literally risking his life—while still retaining his sense of humor.",
           "bbox": [
             {
               "h": 91.21083653534681,
@@ -94,27 +94,27 @@
           "book_side": "left"
         },
         {
-            "caption": "",
-            "md": "",
-            "url": "CB-Conversations-scan-1-rotated_spread_013_image_2.jpg",
-            "bbox": [
-              {
-                "h": 124.57108860280107,
-                "w": 176.13742018387956,
-                "x": 425.79097980182934,
-                "y": 37.64284978325077,
-                "confidence": 0.9,
-                "end_index": 163,
-                "label": "image",
-                "start_index": 0
-              }
-            ],
-            "type": "image",
-            "book_side": "right"
-          },
-          {
-          "md": "Paradoxically, the very techniques Barks used to make himself disappear as the author of merely fictional stories—analogous to the so-called \"transparency\" effects of classical Hollywood cinema that seem to make the camera disappear—drew him into public visibility. One could say that Barks was the first comic book artist to be \"unmasked\" because his was",
-          "value": "Paradoxically, the very techniques Barks used to make himself disappear as the author of merely fictional stories—analogous to the so-called \"transparency\" effects of classical Hollywood cinema that seem to make the camera disappear—drew him into public visibility. One could say that Barks was the first comic book artist to be \"unmasked\" because his was",
+          "caption": "",
+          "md": "",
+          "url": "CB-Conversations-scan-1-rotated_spread_013_image_2.jpg",
+          "bbox": [
+            {
+              "h": 124.57108860280107,
+              "w": 176.13742018387956,
+              "x": 425.79097980182934,
+              "y": 37.64284978325077,
+              "confidence": 0.9,
+              "end_index": 163,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "book_side": "right"
+        },
+        {
+          "md": "Paradoxically, the very techniques Barks used to make himself disappear as the author of merely fictional stories—analogous to the so-called “transparency” effects of classical Hollywood cinema that seem to make the camera disappear—drew him into public visibility. One could say that Barks was the first comic book artist to be “unmasked” because his was",
+          "value": "Paradoxically, the very techniques Barks used to make himself disappear as the author of merely fictional stories—analogous to the so-called “transparency” effects of classical Hollywood cinema that seem to make the camera disappear—drew him into public visibility. One could say that Barks was the first comic book artist to be “unmasked” because his was",
           "bbox": [
             {
               "h": 66.85606697789632,
@@ -185,8 +185,8 @@
           "book_side": "right"
         },
         {
-          "md": "Perhaps because Beaumont's essay in *Fortnight* revealing Barks's identity and unique role at Western Publishing did not receive wide distribution (copies of it are officially housed today only in California libraries), it did not attract the attention of Barks's potential fan audience. At least it did not come to the attention of Malcolm Willits, who was in college at the University of Washington in 1955, where *Fortnight* was apparently not distributed. It was not until two years later that Willits decided to write to the Disney Studios to try to learn the identity of the Donald Duck-Uncle Scrooge artist-writer, indicating this time that he wanted to interview Barks for publication in a fanzine he had been producing entitled *Destiny*. In the response he received from Frank Reilly in the Disney comic strip department dated 6 November 1957, Willits became the first real \"fan\" ever to learn Barks's name and address. Because Willits was in the army at the time, stationed in Minneapolis, two and a half years passed before he told John Spicer, the only other Barks fan Willits had ever met, who",
-          "value": "Perhaps because Beaumont's essay in Fortnight revealing Barks's identity and unique role at Western Publishing did not receive wide distribution (copies of it are officially housed today only in California libraries), it did not attract the attention of Barks's potential fan audience. At least it did not come to the attention of Malcolm Willits, who was in college at the University of Washington in 1955, where Fortnight was apparently not distributed. It was not until two years later that Willits decided to write to the Disney Studios to try to learn the identity of the Donald Duck-Uncle Scrooge artist-writer, indicating this time that he wanted to interview Barks for publication in a fanzine he had been producing entitled Destiny. In the response he received from Frank Reilly in the Disney comic strip department dated 6 November 1957, Willits became the first real \"fan\" ever to learn Barks's name and address. Because Willits was in the army at the time, stationed in Minneapolis, two and a half years passed before he told John Spicer, the only other Barks fan Willits had ever met, who",
+          "md": "Perhaps because Beaumont’s essay in *Fortnight* revealing Barks’s identity and unique role at Western Publishing did not receive wide distribution (copies of it are officially housed today only in California libraries), it did not attract the attention of Barks’s potential fan audience. At least it did not come to the attention of Malcolm Willits, who was in college at the University of Washington in 1955, where *Fortnight* was apparently not distributed. It was not until two years later that Willits decided to write to the Disney Studios to try to learn the identity of the Donald Duck-Uncle Scrooge artist-writer, indicating this time that he wanted to interview Barks for publication in a fanzine he had been producing entitled *Destiny*. In the response he received from Frank Reilly in the Disney comic strip department dated 6 November 1957, Willits became the first real “fan” ever to learn Barks’s name and address. Because Willits was in the army at the time, stationed in Minneapolis, two and a half years passed before he told John Spicer, the only other Barks fan Willits had ever met, who",
+          "value": "Perhaps because Beaumont’s essay in Fortnight revealing Barks’s identity and unique role at Western Publishing did not receive wide distribution (copies of it are officially housed today only in California libraries), it did not attract the attention of Barks’s potential fan audience. At least it did not come to the attention of Malcolm Willits, who was in college at the University of Washington in 1955, where Fortnight was apparently not distributed. It was not until two years later that Willits decided to write to the Disney Studios to try to learn the identity of the Donald Duck-Uncle Scrooge artist-writer, indicating this time that he wanted to interview Barks for publication in a fanzine he had been producing entitled Destiny. In the response he received from Frank Reilly in the Disney comic strip department dated 6 November 1957, Willits became the first real “fan” ever to learn Barks’s name and address. Because Willits was in the army at the time, stationed in Minneapolis, two and a half years passed before he told John Spicer, the only other Barks fan Willits had ever met, who",
           "bbox": [
             {
               "h": 191.99576344321645,

@@ -3,8 +3,8 @@
     {
       "items": [
         {
-          "md": "An Interview with Carl Barks, Duckburg's True Founding Father 91\n*Donald Ault, Thomas Andrae, and Stephen Gong*",
-          "value": "An Interview with Carl Barks, Duckburg's True Founding Father 91\nDonald Ault, Thomas Andrae, and Stephen Gong",
+          "md": "An Interview with Carl Barks, Duckburg’s True Founding Father 91\n*Donald Ault, Thomas Andrae, and Stephen Gong*",
+          "value": "An Interview with Carl Barks, Duckburg’s True Founding Father 91\nDonald Ault, Thomas Andrae, and Stephen Gong",
           "bbox": [
             {
               "h": 12.58792009813262,
@@ -281,8 +281,8 @@
           "book_side": "left"
         },
         {
-          "md": "Carl Barks Remembers \"A Perfect Life\" 181\n*Donald Ault and Lynda Ault*",
-          "value": "Carl Barks Remembers \"A Perfect Life\" 181\nDonald Ault and Lynda Ault",
+          "md": "Carl Barks Remembers “A Perfect Life” 181\n*Donald Ault and Lynda Ault*",
+          "value": "Carl Barks Remembers “A Perfect Life” 181\nDonald Ault and Lynda Ault",
           "bbox": [
             {
               "h": 24.383519999999976,
@@ -337,8 +337,8 @@
           "book_side": "left"
         },
         {
-          "md": "\"Those Things That Came Along in the 20th Century and Became Obsolete\": Carl Barks on the Past, Present, and Future of Comic Books 205\n*Donald Ault*",
-          "value": "\"Those Things That Came Along in the 20th Century and Became Obsolete\": Carl Barks on the Past, Present, and Future of Comic Books 205\nDonald Ault",
+          "md": "“Those Things That Came Along in the 20th Century and Became Obsolete”: Carl Barks on the Past, Present, and Future of Comic Books 205\n*Donald Ault*",
+          "value": "“Those Things That Came Along in the 20th Century and Became Obsolete”: Carl Barks on the Past, Present, and Future of Comic Books 205\nDonald Ault",
           "bbox": [
             {
               "h": 51.145920000000004,
@@ -540,6 +540,6 @@
       "page_width": 841.2,
       "success": true,
       "printed_page_number": "vi, vii"
-   }
+    }
   ]
 }

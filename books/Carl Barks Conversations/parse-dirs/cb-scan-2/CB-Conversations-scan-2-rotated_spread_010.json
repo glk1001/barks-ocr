@@ -112,8 +112,8 @@
           "book_side": "left"
         },
         {
-          "md": "**CB:** The robot butler developed out of conversations I had with Jack King. We had to have a vehicle to carry this barber chair gag—there had to be a reason for that to happen. So we thought of this idea of Donald going into this museum of modern inventions, and there were a bunch of other types of modern inventions in there, and instead of having a museum guard being a dog face or anything, it was conceived to be a good idea that he be a mechanical guy, a robot, who was the museum guard, so whenever Donald tried anything smart he couldn't outsmart this robot. He was always one up on him.",
-          "value": "CB: The robot butler developed out of conversations I had with Jack King. We had to have a vehicle to carry this barber chair gag—there had to be a reason for that to happen. So we thought of this idea of Donald going into this museum of modern inventions, and there were a bunch of other types of modern inventions in there, and instead of having a museum guard being a dog face or anything, it was conceived to be a good idea that he be a mechanical guy, a robot, who was the museum guard, so whenever Donald tried anything smart he couldn't outsmart this robot. He was always one up on him.",
+          "md": "**CB:** The robot butler developed out of conversations I had with Jack King. We had to have a vehicle to carry this barber chair gag—there had to be a reason for that to happen. So we thought of this idea of Donald going into this museum of modern inventions, and there were a bunch of other types of modern inventions in there, and instead of having a museum guard being a dog face or anything, it was conceived to be a good idea that he be a mechanical guy, a robot, who was the museum guard, so whenever Donald tried anything smart he couldn’t outsmart this robot. He was always one up on him.",
+          "value": "CB: The robot butler developed out of conversations I had with Jack King. We had to have a vehicle to carry this barber chair gag—there had to be a reason for that to happen. So we thought of this idea of Donald going into this museum of modern inventions, and there were a bunch of other types of modern inventions in there, and instead of having a museum guard being a dog face or anything, it was conceived to be a good idea that he be a mechanical guy, a robot, who was the museum guard, so whenever Donald tried anything smart he couldn’t outsmart this robot. He was always one up on him.",
           "bbox": [
             {
               "h": 129.1581747713415,
@@ -159,8 +159,8 @@
           "book_side": "left"
         },
         {
-          "md": "**DA:** He kept saying, \"Your hat, sir.\"",
-          "value": "DA: He kept saying, \"Your hat, sir.\"",
+          "md": "**DA:** He kept saying, “Your hat, sir.”",
+          "value": "DA: He kept saying, “Your hat, sir.”",
           "bbox": [
             {
               "h": 11.908799999999985,
@@ -177,8 +177,8 @@
           "book_side": "left"
         },
         {
-          "md": "**CB:** That's right. He was taking Donald's hats—he kept insisting on it.",
-          "value": "CB: That's right. He was taking Donald's hats—he kept insisting on it.",
+          "md": "**CB:** That’s right. He was taking Donald’s hats—he kept insisting on it.",
+          "value": "CB: That’s right. He was taking Donald’s hats—he kept insisting on it.",
           "bbox": [
             {
               "h": 15.48144000000002,
@@ -213,8 +213,8 @@
           "book_side": "left"
         },
         {
-          "md": "**CB:** That was what we called a \"running gag.\"",
-          "value": "CB: That was what we called a \"running gag.\"",
+          "md": "**CB:** That was what we called a “running gag.”",
+          "value": "CB: That was what we called a “running gag.”",
           "bbox": [
             {
               "h": 14.182262080792636,
@@ -295,8 +295,8 @@
           "book_side": "left"
         },
         {
-          "md": "**CB:** My original gag was that he was trying to cheat this barber chair, and he got flipped upside down and the barber chair didn't know his head from his hind end and gave him his hair cut on his bottom and shoeshine on his beak.",
-          "value": "CB: My original gag was that he was trying to cheat this barber chair, and he got flipped upside down and the barber chair didn't know his head from his hind end and gave him his hair cut on his bottom and shoeshine on his beak.",
+          "md": "**CB:** My original gag was that he was trying to cheat this barber chair, and he got flipped upside down and the barber chair didn’t know his head from his hind end and gave him his hair cut on his bottom and shoeshine on his beak.",
+          "value": "CB: My original gag was that he was trying to cheat this barber chair, and he got flipped upside down and the barber chair didn’t know his head from his hind end and gave him his hair cut on his bottom and shoeshine on his beak.",
           "bbox": [
             {
               "h": 50.61240000000004,
@@ -359,8 +359,8 @@
           "book_side": "left"
         },
         {
-          "md": "**DA:** It really got pretty close, when he was getting his \"hair\" parted down the middle and having those hot towels put on his rear end, glowing red.",
-          "value": "DA: It really got pretty close, when he was getting his \"hair\" parted down the middle and having those hot towels put on his rear end, glowing red.",
+          "md": "**DA:** It really got pretty close, when he was getting his “hair” parted down the middle and having those hot towels put on his rear end, glowing red.",
+          "value": "DA: It really got pretty close, when he was getting his “hair” parted down the middle and having those hot towels put on his rear end, glowing red.",
           "bbox": [
             {
               "h": 29.414989867568647,
@@ -394,7 +394,7 @@
           "type": "text",
           "book_side": "right"
         }
-       ],
+      ],
       "page_height": 595.44,
       "page_number": 1,
       "page_width": 841.2,
