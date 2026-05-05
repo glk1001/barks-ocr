@@ -28,6 +28,7 @@ from xml.sax.saxutils import escape
 
 import typer
 from book_pages import BookPage, iter_book_pages
+from curly_quotes import curlify
 from ebooklib import epub
 from loader import iter_spreads
 from loguru import logger
@@ -167,9 +168,9 @@ def _load_chapters(path: Path) -> list[_Chapter]:
             contents_seen = True
         chapters.append(
             _Chapter(
-                title=title,
+                title=curlify(title),
                 start_printed_page=start_page if has_page else None,
-                start_heading=start_heading if has_heading else None,
+                start_heading=curlify(start_heading) if has_heading else None,
                 kind=kind,
             )
         )
@@ -1114,7 +1115,7 @@ def _page_anchor_html(page: BookPage) -> str:
 # A paragraph "ends a sentence" if the visible text (after stripping footnote
 # superscripts and inline tags) terminates with sentence-closing punctuation,
 # optionally followed by closing quotes / brackets (straight or curly).
-_SENTENCE_END_RE = re.compile("[.!?][\")'\\]\u2019\u201d]*\\s*$")
+_SENTENCE_END_RE = re.compile("[.!?\u2026][\")'\\]\u2019\u201d]*\\s*$")
 _SUP_TAG_RE = re.compile(r"<sup\b[^>]*>.*?</sup>", re.DOTALL)
 _TAG_RE = re.compile(r"<[^>]+>")
 # Balanced single-level parenthetical at the end of a paragraph \u2014 e.g. a

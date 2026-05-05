@@ -7,6 +7,8 @@ ault
 backlink
 bboxes
 blockquotes
+curlies
+curlification
 desync
 ebooklib
 figcaption
@@ -17,6 +19,7 @@ llamaparse
 linkified
 linkify
 metas
+misoriented
 mybook
 noteref
 pagebreak
