@@ -107,6 +107,7 @@ dependencies = [
     { name = "great-tables", extra = ["extra"] },
     { name = "intspan" },
     { name = "kivy" },
+    { name = "language-tool-python" },
     { name = "loguru-config" },
     { name = "markdown-it-py" },
     { name = "nltk" },
@@ -149,6 +150,7 @@ requires-dist = [
     { name = "great-tables", extras = ["extra"], specifier = ">=0.20.0" },
     { name = "intspan", specifier = ">=1.6.1" },
     { name = "kivy", specifier = ">=2.3.1" },
+    { name = "language-tool-python", specifier = ">=3.3.0" },
     { name = "loguru-config", specifier = ">=0.1.0" },
     { name = "markdown-it-py", specifier = ">=4.0.0" },
     { name = "nltk", specifier = ">=3.9.2" },
@@ -1235,6 +1237,22 @@ dependencies = [
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/6a/55/cd1555bde62f809219cbc5d8a0836b0293399da2f4ba4e8ee84b6a7cc393/Kivy_Garden-0.1.5-py3-none-any.whl", hash = "sha256:ef50f44b96358cf10ac5665f27a4751bb34ef54051c54b93af891f80afe42929", size = 4623, upload-time = "2022-03-23T23:25:33.752Z" },
+]
+
+[[package]]
+name = "language-tool-python"
+version = "3.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "packaging" },
+    { name = "psutil" },
+    { name = "requests" },
+    { name = "toml" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4f/08/12e0f8e77a4ef42b25bf0008532581a45197eccc569aa4ba3f3f5294d6f6/language_tool_python-3.3.0.tar.gz", hash = "sha256:60be6dbbd2009b1289ece3785d542dcf8cc148c070a0f901965765a46afb5e4e", size = 53137, upload-time = "2026-03-07T20:37:53.453Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d0/03/a79a49f425adfc34457bf6589dc0067cb6fee99dd8b01a492db8020678be/language_tool_python-3.3.0-py3-none-any.whl", hash = "sha256:8e50f6d802c54d1ad7a1dc3c414adfbf26c4eb79189df8f63ed2a174ac504fa7", size = 53953, upload-time = "2026-03-07T20:37:52.299Z" },
 ]
 
 [[package]]
@@ -3107,6 +3125,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/c5/cb/2f6d79c7576e22c116352a801f4c3c8ace5957e9aced862012430b62e14f/tifffile-2026.3.3.tar.gz", hash = "sha256:d9a1266bed6f2ee1dd0abde2018a38b4f8b2935cb843df381d70ac4eac5458b7", size = 388745, upload-time = "2026-03-03T19:14:38.134Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/1a/e4/e804505f87627cd8cdae9c010c47c4485fd8c1ce31a7dd0ab7fcc4707377/tifffile-2026.3.3-py3-none-any.whl", hash = "sha256:e8be15c94273113d31ecb7aa3a39822189dd11c4967e3cc88c178f1ad2fd1170", size = 243960, upload-time = "2026-03-03T19:14:35.808Z" },
+]
+
+[[package]]
+name = "toml"
+version = "0.10.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f", size = 22253, upload-time = "2020-11-01T01:40:22.204Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b", size = 16588, upload-time = "2020-11-01T01:40:20.672Z" },
 ]
 
 [[package]]
