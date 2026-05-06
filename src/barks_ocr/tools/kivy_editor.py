@@ -11,7 +11,7 @@ from attr import dataclass
 from barks_fantagraphics.barks_titles import BARKS_TITLES
 from barks_fantagraphics.comic_book import get_page_str
 from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
-from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT
+from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT, PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
 from barks_fantagraphics.comics_utils import get_backup_file
@@ -22,7 +22,6 @@ from barks_fantagraphics.speech_groupers import (
     SpeechText,
     get_speech_page_group,
 )
-from comic_utils.comic_consts import JPG_FILE_EXT, PNG_FILE_EXT
 from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
 from kivy.config import Config
@@ -602,19 +601,16 @@ class EditorApp(App):
             )
             pane.speech_groups = pane.page_group.speech_groups
 
-        restored_dir = self._comics_database.get_fantagraphics_restored_volume_image_dir(volume)
-        self._srce_image_file = self._get_srce_image_file(restored_dir, fanta_page)
+        self._srce_image_file = self._get_srce_image_file(title_str, fanta_page)
         segments_dir = Path(
             self._comics_database.get_fantagraphics_panel_segments_volume_dir(volume)
         )
         self._panel_segments_file = segments_dir / (fanta_page + ".json")
 
-    @staticmethod
-    def _get_srce_image_file(restored_dir: Path, fanta_page: str) -> Path:
-        srce_image_file = restored_dir / (fanta_page + PNG_FILE_EXT)
-        if not srce_image_file.is_file():
-            srce_image_file = restored_dir / (fanta_page + JPG_FILE_EXT)
-        return srce_image_file
+    def _get_srce_image_file(self, title_str: str, fanta_page: str) -> Path:
+        comic = self._comics_database.get_comic_book(title_str)
+        srce_image_file = comic.get_final_srce_story_file(fanta_page, PageType.BODY)
+        return srce_image_file[0]
 
     def _load_queue_entry(self, index: int) -> None:
         """Load the queue entry at *index* and refresh the entire UI."""

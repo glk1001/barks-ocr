@@ -21,6 +21,7 @@ import html
 import re
 import tomllib
 import unicodedata
+import zipfile
 from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
@@ -2030,6 +2031,65 @@ def _collect_image_paths(pages: list[BookPage]) -> dict[str, Path]:
     return mapping
 
 
+_A11Y_FEATURES = ("tableOfContents", "readingOrder", "printPageNumbers")
+_A11Y_ACCESS_MODES = ("textual", "visual")
+_A11Y_SUMMARY = (
+    "Text-based interview transcripts derived from OCR of the print edition. "
+    "Images are unannotated photographs of comic pages."
+)
+
+
+def _add_a11y_metadata(book: epub.EpubBook, page_break_source: str) -> None:
+    """Add the Schema.org accessibility metadata Ace expects in the OPF.
+
+    Without these declarations Ace fails on ``metadata-accessMode``,
+    ``metadata-accessibilityFeature``, ``metadata-accessibilityHazard``,
+    ``metadata-accessibilitySummary``, ``metadata-accessModeSufficient``,
+    and ``epub-pagesource`` (because the book has page-break anchors).
+
+    Args:
+        book: The ebooklib book under construction.
+        page_break_source: Identifier or short citation for the print source
+            of the page numbers (an ISBN URI is ideal; fall back to the title).
+
+    """
+    for mode in _A11Y_ACCESS_MODES:
+        book.add_metadata("OPF", "meta", mode, {"property": "schema:accessMode"})
+    book.add_metadata("OPF", "meta", "textual", {"property": "schema:accessModeSufficient"})
+    for feature in _A11Y_FEATURES:
+        book.add_metadata("OPF", "meta", feature, {"property": "schema:accessibilityFeature"})
+    book.add_metadata("OPF", "meta", "none", {"property": "schema:accessibilityHazard"})
+    book.add_metadata("OPF", "meta", _A11Y_SUMMARY, {"property": "schema:accessibilitySummary"})
+    book.add_metadata("OPF", "meta", page_break_source, {"property": "pageBreakSource"})
+
+
+def _set_package_xml_lang(epub_path: Path, language: str) -> None:
+    """Inject ``xml:lang`` on ``<package>`` in ``content.opf`` after writing.
+
+    ebooklib's writer does not expose ``xml:lang`` on the package root. Without
+    it Ace flags ``epub-lang`` (serious). The EPUB zip is rewritten in place,
+    preserving the entry order and per-entry compression mode (``mimetype``
+    must remain the first, uncompressed entry for a valid EPUB).
+    """
+    with zipfile.ZipFile(epub_path, "r") as zin:
+        infos = zin.infolist()
+        members: list[tuple[zipfile.ZipInfo, bytes]] = [
+            (info, zin.read(info.filename)) for info in infos
+        ]
+
+    for idx, (info, data) in enumerate(members):
+        if info.filename.endswith("content.opf"):
+            text = data.decode("utf-8")
+            if "xml:lang=" not in text and "<package " in text:
+                text = text.replace("<package ", f'<package xml:lang="{language}" ', 1)
+                members[idx] = (info, text.encode("utf-8"))
+            break
+
+    with zipfile.ZipFile(epub_path, "w") as zout:
+        for info, data in members:
+            zout.writestr(info, data)
+
+
 def _add_cover_to_spine(book: epub.EpubBook, spine: list) -> None:
     """Prepend the cover XHTML to ``spine`` as a linear entry.
 
@@ -2141,8 +2201,11 @@ def _build_epub(  # noqa: PLR0913 - arg-per-option is reasonable for an epub bui
     book.add_item(epub.EpubNcx())
     book.add_item(epub.EpubNav())
 
+    _add_a11y_metadata(book, page_break_source=f"Print edition: {title}")
+
     output_path.parent.mkdir(parents=True, exist_ok=True)
     epub.write_epub(str(output_path), book)
+    _set_package_xml_lang(output_path, language)
     logger.info(f"Wrote EPUB: {output_path}")
 
 
