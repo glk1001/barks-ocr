@@ -29,12 +29,13 @@ fantagraphics
 favourites
 fromarray
 gemb
-grazie
 gemf
 gemg
 gemr
 genai
 getrgb
+grazie
+gttl
 halign
 hotpink
 ikey
