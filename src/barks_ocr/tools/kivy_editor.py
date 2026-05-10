@@ -113,6 +113,19 @@ CROP_PADDING_UNKNOWN = 400
 # Screen-space radius (px) for corner drag handles on the bounding box
 HANDLE_RADIUS = 14
 
+# Allowed values for a group's "type" field, shown in the bottom-bar radio row.
+TYPE_OPTIONS: tuple[str, ...] = (
+    "background",
+    "dialogue",
+    "narration",
+    "sound_effect",
+    "thought",
+    "title",
+)
+DEFAULT_TYPE = "dialogue"
+TITLE_PAGE_DEFAULT_TYPE = "title"
+TITLE_PAGE_ISSUE_TYPE = "title_page"
+
 
 # ── Data classes ─────────────────────────────────────────────────────────────
 
@@ -825,7 +838,7 @@ class EditorApp(App):
             raise ValueError(msg)
         pane.group_id = group_id
         speech_group = pane.speech_groups[group_id]
-        pane.label = self._get_ocr_label(pane.name, group_id)
+        pane.label = self._get_ocr_label(pane.name, group_id, self._get_pane_type(pane))
         # Always push the label to the StringProperty so the header updates even
         # when the text value doesn't change (Kivy skips dispatch for same values).
         setattr(self, pane.label_prop, pane.label)
@@ -852,8 +865,26 @@ class EditorApp(App):
             pane.panel_num_input.text = str(panel_num)
 
     @staticmethod
-    def _get_ocr_label(ocr_name: str, group_id: str) -> str:
-        return f"{ocr_name}: group_id: {group_id}"
+    def _get_ocr_label(ocr_name: str, group_id: str, type_name: str) -> str:
+        return f"{ocr_name}: group_id: {group_id} ({type_name})"
+
+    def _get_pane_type(self, pane: EnginePane) -> str:
+        json_groups = pane.page_group.speech_page_json.get("groups", {})
+        return json_groups.get(pane.group_id, {}).get("type") or DEFAULT_TYPE
+
+    def _refresh_pane_labels(self) -> None:
+        """Re-compute both panes' header labels and push to their label props.
+
+        Preserves any current 'DIFFS -- ' prefix the diff-highlighter has set so
+        the diff state isn't lost on a type-only refresh.
+        """
+        for pane in self._panes:
+            pane.label = self._get_ocr_label(pane.name, pane.group_id, self._get_pane_type(pane))
+            current_prop: str = getattr(self, pane.label_prop)
+            if current_prop.startswith("DIFFS -- "):
+                setattr(self, pane.label_prop, f"DIFFS -- {pane.label}")
+            else:
+                setattr(self, pane.label_prop, pane.label)
 
     # ── info text ─────────────────────────────────────────────────────────────
 
@@ -1044,6 +1075,12 @@ class EditorApp(App):
 
         row.add_widget(Widget())  # spacer
 
+        set_type_btn = Button(
+            text="Set Type", size_hint_x=None, width=110, size_hint_y=None, height=44
+        )
+        set_type_btn.bind(on_press=lambda _: self._show_type_popup())
+        row.add_widget(set_type_btn)
+
         row.add_widget(self._get_save_button())
 
         if not self._queue:
@@ -1088,6 +1125,90 @@ class EditorApp(App):
         checkbox_layout.add_widget(decode_checkbox)
         checkbox_layout.add_widget(decode_label)
         return checkbox_layout, decode_checkbox
+
+    # ── type popup ────────────────────────────────────────────────────────────
+
+    def _apply_type_to_current_groups(self, type_name: str) -> None:
+        """Write *type_name* to both panes' currently selected group's JSON."""
+        changed = False
+        for pane in self._panes:
+            json_groups = pane.page_group.speech_page_json.get("groups", {})
+            json_group = json_groups.get(pane.group_id)
+            if json_group is None:
+                continue
+            if json_group.get("type") != type_name:
+                json_group["type"] = type_name
+                changed = True
+        if changed:
+            self._has_changes = True
+            self._refresh_pane_labels()
+            logger.debug(f'Type set to "{type_name}" for both panes\' current groups.')
+
+    def _show_type_popup(self) -> None:
+        """Show a popup with type radio buttons; on Save, apply to both panes.
+
+        For 'title_page' queue entries the radio defaults to 'title'; otherwise
+        it reflects the current JSON value (falling back to 'dialogue').
+        Nothing is applied unless the user presses Save.
+        """
+        if self._queue and self._queue[self._queue_index].issue_type == TITLE_PAGE_ISSUE_TYPE:
+            current = TITLE_PAGE_DEFAULT_TYPE
+        else:
+            json_groups = self._easy_pane.page_group.speech_page_json.get("groups", {})
+            current = json_groups.get(self._easy_pane.group_id, {}).get("type") or DEFAULT_TYPE
+        if current not in TYPE_OPTIONS:
+            current = DEFAULT_TYPE
+
+        radios: dict[str, CheckBox] = {}
+
+        content = BoxLayout(orientation="vertical", padding=10, spacing=8)
+        content.add_widget(
+            Label(
+                text="Set type — applies to both panes' current groups",
+                size_hint_y=None,
+                height=28,
+                bold=True,
+            )
+        )
+
+        for type_name in TYPE_OPTIONS:
+            row = BoxLayout(orientation="horizontal", size_hint_y=None, height=34, spacing=8)
+            cb = CheckBox(
+                group="set_type_popup",
+                active=(type_name == current),
+                size_hint_x=None,
+                width=30,
+            )
+            radios[type_name] = cb
+            lbl = Label(text=type_name, halign="left", valign="middle")
+            lbl.bind(size=lbl.setter("text_size"))
+            row.add_widget(cb)
+            row.add_widget(lbl)
+            content.add_widget(row)
+
+        button_layout = BoxLayout(spacing=10, size_hint_y=None, height=44)
+        popup = Popup(
+            title="Set type",
+            content=content,
+            size_hint=(None, None),
+            size=(440, 360),
+            auto_dismiss=False,
+        )
+
+        def on_save(_inst: Button) -> None:
+            selected = next((t for t, c in radios.items() if c.active), None)
+            if selected is not None:
+                self._apply_type_to_current_groups(selected)
+            popup.dismiss()
+
+        save_btn = Button(text="Save")
+        save_btn.bind(on_press=on_save)
+        cancel_btn = Button(text="Cancel")
+        cancel_btn.bind(on_press=lambda _: popup.dismiss())
+        button_layout.add_widget(save_btn)
+        button_layout.add_widget(cancel_btn)
+        content.add_widget(button_layout)
+        popup.open()
 
     # ── speech item popups ────────────────────────────────────────────────────
 
@@ -1508,7 +1629,7 @@ class EditorApp(App):
             title="Acknowledge issues",
             content=content,
             size_hint=(None, None),
-            size=(440, 280),
+            size=(460, 380),
             auto_dismiss=False,
         )
 

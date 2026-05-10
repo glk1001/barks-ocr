@@ -73,6 +73,7 @@ touchpads
 uncurated
 ungrab
 unwarping
+uppercased
 verdana
 vscodium
 whof

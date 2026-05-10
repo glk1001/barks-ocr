@@ -19,6 +19,9 @@ from PIL import Image, ImageDraw, ImageFont
 
 from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.group_checks import (
+    has_dash_no_spaces,
+    has_dash_wrong_space,
+    has_dot_at_end_of_sentence,
     has_page_number_notes,
     is_acknowledged,
     is_ai_detected_error,
@@ -363,6 +366,14 @@ class OcrChecker:
             add("error_notes")
         if has_page_number_notes(group) and not is_acknowledged(group, "page_number_notes"):
             add("page_number_notes")
+        if has_dot_at_end_of_sentence(group) and not is_acknowledged(
+            group, "dot_at_end_of_sentence"
+        ):
+            add("dot_at_end_of_sentence")
+        if has_dash_wrong_space(group) and not is_acknowledged(group, "dash_wrong_space"):
+            add("dash_wrong_space")
+        if has_dash_no_spaces(group) and not is_acknowledged(group, "dash_no_spaces"):
+            add("dash_no_spaces")
 
         if ai_text:
             fit_fixed, fit_issue = self._check_text_fits(

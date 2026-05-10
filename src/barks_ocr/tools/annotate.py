@@ -268,7 +268,7 @@ def main(
     title_str: TitleArg = "",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
-    init_logging(APP_LOGGING_NAME, "show-ocr.log", log_level_str)
+    init_logging(APP_LOGGING_NAME, "annotate-ocr.log", log_level_str)
 
     comics_database, title_list = get_comic_titles(volumes_str, title_str, exclude_non_comics=True)
 
