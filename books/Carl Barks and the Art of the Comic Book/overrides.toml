@@ -34,7 +34,7 @@ space_above = "2em"
 [[image_overrides]]
 parse_dir = "cbart-scan-all"
 spread = "CBatAotCB-057"
-caption_starts_with = "From <i>Walt Disney's Comics</i> No. 140"
+caption_starts_with = "From <i>Walt Disney"
 #width = "60%"
 max_height = "45vh"
 
@@ -69,6 +69,6 @@ max_height = "75vh"
 [[image_overrides]]
 parse_dir = "cbart-scan-all"
 spread = "CBatAotCB-116"
-caption_starts_with = "A page of Barks's script for"
+caption_starts_with = "A page of Barks"
 #width = "60%"
 max_height = "65vh"

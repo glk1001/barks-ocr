@@ -3,8 +3,8 @@
     {
       "items": [
         {
-          "md": "Most often, when there was a new Barks comic book, I bought it; I can recall passing up only the 1950 Donald Duck issue about \"The Pixilated Parrot,\" for reasons that I could not have articulated at the time, and cannot now (although I am still cooler to that story than to others published that year).",
-          "value": "Most often, when there was a new Barks comic book, I bought it; I can recall passing up only the 1950 Donald Duck issue about \"The Pixilated Parrot,\" for reasons that I could not have articulated at the time, and cannot now (although I am still cooler to that story than to others published that year).",
+          "md": "Most often, when there was a new Barks comic book, I bought it; I can recall passing up only the 1950 Donald Duck issue about “The Pixilated Parrot,” for reasons that I could not have articulated at the time, and cannot now (although I am still cooler to that story than to others published that year).",
+          "value": "Most often, when there was a new Barks comic book, I bought it; I can recall passing up only the 1950 Donald Duck issue about “The Pixilated Parrot,” for reasons that I could not have articulated at the time, and cannot now (although I am still cooler to that story than to others published that year).",
           "bbox": [
             {
               "h": 36.978704268292695,
@@ -20,13 +20,13 @@
           "type": "text"
         },
         {
-          "md": "So many more of my childhood memories revolve around Carl Barks's comic books. I can remember reading *Donald Duck in Ancient*",
-          "value": "So many more of my childhood memories revolve around Carl Barks's comic books. I can remember reading Donald Duck in Ancient",
+          "md": "So many more of my childhood memories revolve around Carl Barks’s comic books. I can remember reading *Donald Duck in Ancient*",
+          "value": "So many more of my childhood memories revolve around Carl Barks’s comic books. I can remember reading Donald Duck in Ancient",
           "bbox": [
             {
               "h": 21.5971875,
               "w": 125.89165015243898,
-              "x": 12.00,
+              "x": 12.0,
               "y": 337.00305640243903,
               "confidence": 0.98,
               "end_index": 125,

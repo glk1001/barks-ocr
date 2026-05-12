@@ -20,15 +20,15 @@
           "type": "text"
         },
         {
-          "caption": "A page of Barks's script for \"Pawns of the Loup Garou\" in <i>Donald Duck</i> No. 117, January 1968; © 1967 Walt Disney Productions..",
-          "md": "![A page of Barks's script for \"Pawns of the Loup Garou\" in Donald Duck No. 117, January 1968; © 1967 Walt Disney Productions.](CBatAotCB-118_page_1_image_1_v2.jpg)",
+          "caption": "A page of Barks’s script for “Pawns of the Loup Garou” in <i>Donald Duck</i> No. 117, January 1968; © 1967 Walt Disney Productions..",
+          "md": "![A page of Barks’s script for “Pawns of the Loup Garou” in Donald Duck No. 117, January 1968; © 1967 Walt Disney Productions.](CBatAotCB-118_page_1_image_1_v2.jpg)",
           "url": "CBatAotCB-118_page_1_image_1_v2.jpg",
           "bbox": [
             {
               "h": 105.92400914634148,
               "w": 125.89305640243904,
               "x": 150.1177362804878,
-              "y": 300.00,
+              "y": 300.0,
               "confidence": 0.99,
               "end_index": 1037,
               "label": "text",
@@ -56,8 +56,8 @@
           "type": "heading"
         },
         {
-          "md": "Front cover: Donald, a policeman, writes a ticket on a nephew's bicycle while a Beagle Boy walks out of a bank with a sack of money. *(Dec. 18, 1968)*",
-          "value": "Front cover: Donald, a policeman, writes a ticket on a nephew's bicycle while a Beagle Boy walks out of a bank with a sack of money. (Dec. 18, 1968)",
+          "md": "Front cover: Donald, a policeman, writes a ticket on a nephew’s bicycle while a Beagle Boy walks out of a bank with a sack of money. *(Dec. 18, 1968)*",
+          "value": "Front cover: Donald, a policeman, writes a ticket on a nephew’s bicycle while a Beagle Boy walks out of a bank with a sack of money. (Dec. 18, 1968)",
           "bbox": [
             {
               "h": 17.302868711890238,
@@ -90,8 +90,8 @@
           "type": "text"
         },
         {
-          "md": "DONALD DUCK Officer of the Day - 14 - script only - When Donald, as a substitute policeman, takes over after Duckburg's regular police are felled by the flu, he is treed by the Purgatory Cherubs motorcycle gang and foiled by legal technicalities when he tries to stop the Beagle Boys from burglarizing a bank. *(Nov. 6, 1968)*",
-          "value": "DONALD DUCK Officer of the Day - 14 - script only - When Donald, as a substitute policeman, takes over after Duckburg's regular police are felled by the flu, he is treed by the Purgatory Cherubs motorcycle gang and foiled by legal technicalities when he tries to stop the Beagle Boys from burglarizing a bank. (Nov. 6, 1968)",
+          "md": "DONALD DUCK Officer of the Day - 14 - script only - When Donald, as a substitute policeman, takes over after Duckburg’s regular police are felled by the flu, he is treed by the Purgatory Cherubs motorcycle gang and foiled by legal technicalities when he tries to stop the Beagle Boys from burglarizing a bank. *(Nov. 6, 1968)*",
+          "value": "DONALD DUCK Officer of the Day - 14 - script only - When Donald, as a substitute policeman, takes over after Duckburg’s regular police are felled by the flu, he is treed by the Purgatory Cherubs motorcycle gang and foiled by legal technicalities when he tries to stop the Beagle Boys from burglarizing a bank. (Nov. 6, 1968)",
           "bbox": [
             {
               "h": 35.272934451219506,
@@ -107,8 +107,8 @@
           "type": "text"
         },
         {
-          "md": "Barks: \"I did a 14-page Donald Duck script for Chase \\[Craig] a few weeks ago. He now wants me to do more scripts. I am too tired of ducks to get excited.\" *(November 22, 1968, letter to Michael Barrier)* \"My 'Officer for a Day' was a sight-gag story with poor Donald playing the helplessness of a modern policeman to his best ability. The Beagle Boys, a motorcycle gang, and a flying saucer all present unsolvable problems.\" *(Jan. 15, 1969, letter to Michael Barrier)*",
-          "value": "Barks: \"I did a 14-page Donald Duck script for Chase [Craig] a few weeks ago. He now wants me to do more scripts. I am too tired of ducks to get excited.\" (November 22, 1968, letter to Michael Barrier) \"My 'Officer for a Day' was a sight-gag story with poor Donald playing the helplessness of a modern policeman to his best ability. The Beagle Boys, a motorcycle gang, and a flying saucer all present unsolvable problems.\" (Jan. 15, 1969, letter to Michael Barrier)",
+          "md": "Barks: “I did a 14-page Donald Duck script for Chase \\[Craig] a few weeks ago. He now wants me to do more scripts. I am too tired of ducks to get excited.” *(November 22, 1968, letter to Michael Barrier)* “My ‘Officer for a Day’ was a sight-gag story with poor Donald playing the helplessness of a modern policeman to his best ability. The Beagle Boys, a motorcycle gang, and a flying saucer all present unsolvable problems.” *(Jan. 15, 1969, letter to Michael Barrier)*",
+          "value": "Barks: “I did a 14-page Donald Duck script for Chase [Craig] a few weeks ago. He now wants me to do more scripts. I am too tired of ducks to get excited.” (November 22, 1968, letter to Michael Barrier) “My ‘Officer for a Day’ was a sight-gag story with poor Donald playing the helplessness of a modern policeman to his best ability. The Beagle Boys, a motorcycle gang, and a flying saucer all present unsolvable problems.” (Jan. 15, 1969, letter to Michael Barrier)",
           "bbox": [
             {
               "h": 46.4152705792683,
@@ -142,8 +142,8 @@
           "type": "heading"
         },
         {
-          "md": "DONALD DUCK A Day in a Duck's Life - 13 - script only - Donald's \"muscle car\" is infuriating the neighbors. He horns in on the nephews' delivery business, then gets involved in a race with another hot-car driver and winds up inside a cargo plane when his brakes go out. A hijacker forces the plane to land and steals Donald's car. *(Feb. 16, 1970)*",
-          "value": "DONALD DUCK A Day in a Duck's Life - 13 - script only - Donald's \"muscle car\" is infuriating the neighbors. He horns in on the nephews' delivery business, then gets involved in a race with another hot-car driver and winds up inside a cargo plane when his brakes go out. A hijacker forces the plane to land and steals Donald's car. (Feb. 16, 1970)",
+          "md": "DONALD DUCK A Day in a Duck’s Life - 13 - script only - Donald’s “muscle car” is infuriating the neighbors. He horns in on the nephews’ delivery business, then gets involved in a race with another hot-car driver and winds up inside a cargo plane when his brakes go out. A hijacker forces the plane to land and steals Donald’s car. *(Feb. 16, 1970)*",
+          "value": "DONALD DUCK A Day in a Duck’s Life - 13 - script only - Donald’s “muscle car” is infuriating the neighbors. He horns in on the nephews’ delivery business, then gets involved in a race with another hot-car driver and winds up inside a cargo plane when his brakes go out. A hijacker forces the plane to land and steals Donald’s car. (Feb. 16, 1970)",
           "bbox": [
             {
               "h": 40.751432926829274,
@@ -159,8 +159,8 @@
           "type": "text"
         },
         {
-          "md": "Changes: Barks submitted a fourteen-page script. It was compressed to thirteen pages in its published form by deleting one panel (it would have been the third panel on the fourth page of the published story, showing Donald lunging for the nephews'",
-          "value": "Changes: Barks submitted a fourteen-page script. It was compressed to thirteen pages in its published form by deleting one panel (it would have been the third panel on the fourth page of the published story, showing Donald lunging for the nephews'",
+          "md": "Changes: Barks submitted a fourteen-page script. It was compressed to thirteen pages in its published form by deleting one panel (it would have been the third panel on the fourth page of the published story, showing Donald lunging for the nephews’",
+          "value": "Changes: Barks submitted a fourteen-page script. It was compressed to thirteen pages in its published form by deleting one panel (it would have been the third panel on the fourth page of the published story, showing Donald lunging for the nephews’",
           "bbox": [
             {
               "h": 23.179870426829275,
@@ -176,8 +176,8 @@
           "type": "text"
         },
         {
-          "md": "piggy bank and saying, \"My speed career can be delayed no longer! I need this money!\") and reducing the width of a number of panels that were to have been the width of the page.",
-          "value": "piggy bank and saying, \"My speed career can be delayed no longer! I need this money!\") and reducing the width of a number of panels that were to have been the width of the page.",
+          "md": "piggy bank and saying, “My speed career can be delayed no longer! I need this money!”) and reducing the width of a number of panels that were to have been the width of the page.",
+          "value": "piggy bank and saying, “My speed career can be delayed no longer! I need this money!”) and reducing the width of a number of panels that were to have been the width of the page.",
           "bbox": [
             {
               "h": 22.872333269817073,
@@ -193,8 +193,8 @@
           "type": "text"
         },
         {
-          "md": "Barks: \"I've just turned in a 14-page Donald script to Chase \\[Craig]. It's about Donald building himself a hotrod car. The kids comment that he wastes his life in such useless projects. He'll never get ahead. The car takes everything Don can earn by a series of flukes of luck, proving the kids are right. It's about the poorest story I ever did, but then, I'm burned out on D.D. ideas.\" *(Feb. 20, 1970, letter to Michael Barrier)*",
-          "value": "Barks: \"I've just turned in a 14-page Donald script to Chase [Craig]. It's about Donald building himself a hotrod car. The kids comment that he wastes his life in such useless projects. He'll never get ahead. The car takes everything Don can earn by a series of flukes of luck, proving the kids are right. It's about the poorest story I ever did, but then, I'm burned out on D.D. ideas.\" (Feb. 20, 1970, letter to Michael Barrier)",
+          "md": "Barks: “I’ve just turned in a 14-page Donald script to Chase \\[Craig]. It’s about Donald building himself a hotrod car. The kids comment that he wastes his life in such useless projects. He’ll never get ahead. The car takes everything Don can earn by a series of flukes of luck, proving the kids are right. It’s about the poorest story I ever did, but then, I’m burned out on D.D. ideas.” *(Feb. 20, 1970, letter to Michael Barrier)*",
+          "value": "Barks: “I’ve just turned in a 14-page Donald script to Chase [Craig]. It’s about Donald building himself a hotrod car. The kids comment that he wastes his life in such useless projects. He’ll never get ahead. The car takes everything Don can earn by a series of flukes of luck, proving the kids are right. It’s about the poorest story I ever did, but then, I’m burned out on D.D. ideas.” (Feb. 20, 1970, letter to Michael Barrier)",
           "bbox": [
             {
               "h": 40.70171112804878,

@@ -38,8 +38,8 @@
           "type": "header"
         },
         {
-          "caption": "Comic strip titled \"HAPPY HOUND (DETECTIVE)\" featuring a sad-looking dog and a warden pig.",
-          "md": "![Comic strip titled \"HAPPY HOUND (DETECTIVE)\" featuring a sad-looking dog and a warden pig.](CBatAotCB-128_page_1_image_1_v2.jpg)",
+          "caption": "Comic strip titled “HAPPY HOUND (DETECTIVE)” featuring a sad-looking dog and a warden pig.",
+          "md": "![Comic strip titled “HAPPY HOUND (DETECTIVE)” featuring a sad-looking dog and a warden pig.](CBatAotCB-128_page_1_image_1_v2.jpg)",
           "url": "CBatAotCB-128_page_1_image_1_v2.jpg",
           "bbox": [
             {
@@ -264,8 +264,8 @@
           "type": "text"
         },
         {
-          "md": "**Happy Hound:** HE DOESN'T MEAN ME! THIS IS MY DAY OFF! I'M SO HAPPY!",
-          "value": "Happy Hound: HE DOESN'T MEAN ME! THIS IS MY DAY OFF! I'M SO HAPPY!",
+          "md": "**Happy Hound:** HE DOESN’T MEAN ME! THIS IS MY DAY OFF! I’M SO HAPPY!",
+          "value": "Happy Hound: HE DOESN’T MEAN ME! THIS IS MY DAY OFF! I’M SO HAPPY!",
           "bbox": [
             {
               "h": 339.21485399199696,
@@ -298,8 +298,8 @@
           "type": "text"
         },
         {
-          "md": "From *Our Gang Comics* No. 9, Jan.-Feb. 1943; © 1943 Loew's Inc.",
-          "value": "From Our Gang Comics No. 9, Jan.-Feb. 1943; © 1943 Loew's Inc.",
+          "md": "From *Our Gang Comics* No. 9, Jan.-Feb. 1943; © 1943 Loew’s Inc.",
+          "value": "From Our Gang Comics No. 9, Jan.-Feb. 1943; © 1943 Loew’s Inc.",
           "bbox": [
             {
               "h": 6.878368902439015,
