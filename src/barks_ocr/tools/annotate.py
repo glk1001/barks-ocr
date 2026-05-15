@@ -8,7 +8,7 @@ import cv2 as cv
 import typer
 from barks_fantagraphics.barks_titles import BARKS_TITLES
 from barks_fantagraphics.comic_book import ComicBook
-from barks_fantagraphics.comics_consts import CARL_BARKS_FONT_FILE, PNG_FILE_EXT
+from barks_fantagraphics.comics_consts import PAGE_NUM_FONT_FILE, PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import draw_panel_bounds_on_image
 from barks_fantagraphics.panel_boxes import TitlePanelBoxes, check_page_panel_boxes
@@ -63,7 +63,7 @@ TEXT_TYPE_ABBREV_MAP = {
     "title": "H",
 }
 
-TEXT_FONT_PATH = CARL_BARKS_FONT_FILE
+TEXT_FONT_PATH = PAGE_NUM_FONT_FILE
 TEXT_FONT_SIZE = 28
 TEXT_COLOR = "#000000"
 TEXT_BOUNDING_BOX_OFFSET = (20, 20)
@@ -283,7 +283,7 @@ def _build_annotated_pages(
 
         page_panel_boxes = title_pages_panel_boxes.pages[fanta_page]
         check_page_panel_boxes(pil_image.size, page_panel_boxes)
-        draw_panel_bounds_on_image(pil_image, page_panel_boxes)
+        draw_panel_bounds_on_image(pil_image, page_panel_boxes, bounds_color=(0, 128, 0, 100))
 
         display_image, save_image, speech_labels = _build_prelim_annotated_image(
             speech_page_group, pil_image, save
@@ -312,7 +312,7 @@ class _DraggableLabel(KivyLabel):
         self.dragged = False
         self._drag_offset = (0.0, 0.0)
         with self.canvas.before:  # ty: ignore[unresolved-attribute]
-            Color(1.0, 0.97, 0.78, 0.95)
+            Color(1.0, 0.85, 0.4, 1.0)
             self._bg = Rectangle(pos=self.pos, size=self.size)
         self.bind(pos=self._update_bg, size=self._update_bg)
 
@@ -400,9 +400,11 @@ class _OcrAnnotationsViewer(KivyPageViewer):
             label = _DraggableLabel(
                 text=spec.text,
                 font_name=str(TEXT_FONT_PATH),
-                font_size=TEXT_FONT_SIZE / 2.0,
-                bold=True,
+                font_size=TEXT_FONT_SIZE / 1.9,
+                bold=False,
                 color=text_color_kivy,
+                outline_color=text_color_kivy,
+                outline_width=1,
                 size_hint=(None, None),
             )
             # Stash the source image-pixel position so we can re-project on resize.
