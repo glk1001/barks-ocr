@@ -1,4 +1,8 @@
+import configparser
 import json
+import subprocess
+import threading
+from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from pathlib import Path
@@ -11,13 +15,19 @@ from barks_fantagraphics.comic_book import ComicBook
 from barks_fantagraphics.comics_consts import PAGE_NUM_FONT_FILE, PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import draw_panel_bounds_on_image
-from barks_fantagraphics.panel_boxes import TitlePanelBoxes, check_page_panel_boxes
+from barks_fantagraphics.panel_boxes import (
+    TitlePagesPanelBoxes,
+    TitlePanelBoxes,
+    check_page_panel_boxes,
+)
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups, SpeechPageGroup, SpeechText
 from barks_kivy_ui.page_viewer import KivyPageViewer
 from comic_utils.common_typer_options import LogLevelArg, TitleArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
+from kivy.clock import Clock
 from kivy.graphics import Color, Rectangle
 from kivy.input.motionevent import MotionEvent
+from kivy.uix.button import Button
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.label import Label as KivyLabel
 from kivy.uix.widget import Widget
@@ -73,6 +83,43 @@ INFO_FONT_SIZE = 28
 INFO_TEXT_COLOR = "blue"
 INFO_BOUNDING_BOX_OFFSET = (10, -25)
 
+_INI_PATH = Path.home() / ".config" / "barks-ocr" / "annotate.ini"
+_INI_SECTION = "annotate"
+
+
+def _load_last_state() -> tuple[str, int] | None:
+    """Return ``(title, page)`` from the ini file, or ``None`` if unavailable/invalid."""
+    if not _INI_PATH.is_file():
+        return None
+    cfg = configparser.ConfigParser()
+    try:
+        cfg.read(_INI_PATH)
+    except configparser.Error:
+        logger.exception(f'Failed to read ini "{_INI_PATH}"')
+        return None
+    if _INI_SECTION not in cfg:
+        return None
+    title = cfg[_INI_SECTION].get("title", "")
+    page_str = cfg[_INI_SECTION].get("page", "")
+    if not title or not page_str:
+        return None
+    try:
+        return title, int(page_str)
+    except ValueError:
+        return None
+
+
+def _save_last_state(title: str, page: int) -> None:
+    """Persist ``title`` and ``page`` (1-based) to the ini file."""
+    cfg = configparser.ConfigParser()
+    cfg[_INI_SECTION] = {"title": title, "page": str(page)}
+    try:
+        _INI_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with _INI_PATH.open("w") as f:
+            cfg.write(f)
+    except OSError:
+        logger.exception(f'Failed to write ini "{_INI_PATH}"')
+
 
 def get_color(group_id: int) -> str:
     return COLORS[group_id % len(COLORS)]
@@ -96,10 +143,12 @@ class SpeechLabel:
     """Spec for a draggable speech-text label in the viewer.
 
     ``image_xy`` is the top-left position in PIL image pixel coords (top-left origin).
+    ``group_id`` is the OCR speech-group key used by the kivy editor for deep-linking.
     """
 
     text: str
     image_xy: tuple[int, int]
+    group_id: str
 
 
 def _build_prelim_annotated_image(
@@ -132,7 +181,13 @@ def _build_prelim_annotated_image(
 
         ocr_box, text_top_left = draw_speech_box(color_index, display_draw, speech_text)
 
-        speech_labels.append(SpeechLabel(text=speech_text.raw_ai_text, image_xy=text_top_left))
+        speech_labels.append(
+            SpeechLabel(
+                text=speech_text.raw_ai_text,
+                image_xy=text_top_left,
+                group_id=group_id,
+            )
+        )
 
         if text_draw is not None:
             bake_speech_text(text_draw, text_top_left, speech_text, text_font, color_index)
@@ -251,6 +306,47 @@ def _save_if_outdated(image: Image.Image, dst_file: Path, src_file: Path, label:
     image.save(dst_file)
 
 
+def _process_one_page(
+    speech_page_group: SpeechPageGroup,
+    comic: ComicBook,
+    title_pages_panel_boxes: TitlePagesPanelBoxes,
+    engine: OcrTypes,
+    save: bool,
+) -> tuple[str, Image.Image, list[SpeechLabel]]:
+    fanta_page = speech_page_group.fanta_page
+
+    svg_file = comic.get_srce_restored_svg_story_file(fanta_page)
+    png_file = Path(str(svg_file) + PNG_FILE_EXT)
+    if not png_file.is_file():
+        msg = f'Page PNG not found: "{png_file}".'
+        raise FileNotFoundError(msg)
+
+    bw_image = get_bw_image_from_alpha(png_file)
+    if bw_image is None or bw_image.size == 0:
+        msg = f'Could not decode page PNG: "{png_file}".'
+        raise RuntimeError(msg)
+    pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
+
+    page_panel_boxes = title_pages_panel_boxes.pages[fanta_page]
+    check_page_panel_boxes(pil_image.size, page_panel_boxes)
+    draw_panel_bounds_on_image(pil_image, page_panel_boxes, bounds_color=(0, 128, 0, 100))
+
+    display_image, save_image, speech_labels = _build_prelim_annotated_image(
+        speech_page_group, pil_image, save
+    )
+
+    if save:
+        assert save_image is not None
+        ocr_group_file = comic.get_ocr_prelim_groups_json_file(fanta_page, engine)
+        prelim_file = comic.get_ocr_prelim_annotated_file(fanta_page, engine)
+        boxes_file = comic.get_ocr_boxes_annotated_file(fanta_page, engine)
+        _save_if_outdated(save_image, prelim_file, ocr_group_file, "prelim annotated")
+        _draw_individual_boxes_on_image(pil_image, ocr_group_file)
+        _save_if_outdated(pil_image, boxes_file, ocr_group_file, "boxes annotated")
+
+    return fanta_page, display_image, speech_labels
+
+
 def _build_annotated_pages(
     speech_groups: SpeechGroups,
     title_panel_boxes: TitlePanelBoxes,
@@ -264,53 +360,32 @@ def _build_annotated_pages(
 
     filtered = [g for g in title_speech_page_groups if g.ocr_index == engine]
 
-    def process(
-        speech_page_group: SpeechPageGroup,
-    ) -> tuple[str, Image.Image, list[SpeechLabel]]:
-        fanta_page = speech_page_group.fanta_page
-
-        svg_file = comic.get_srce_restored_svg_story_file(fanta_page)
-        png_file = Path(str(svg_file) + PNG_FILE_EXT)
-        if not png_file.is_file():
-            msg = f'Page PNG not found: "{png_file}".'
-            raise FileNotFoundError(msg)
-
-        bw_image = get_bw_image_from_alpha(png_file)
-        if bw_image is None or bw_image.size == 0:
-            msg = f'Could not decode page PNG: "{png_file}".'
-            raise RuntimeError(msg)
-        pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
-
-        page_panel_boxes = title_pages_panel_boxes.pages[fanta_page]
-        check_page_panel_boxes(pil_image.size, page_panel_boxes)
-        draw_panel_bounds_on_image(pil_image, page_panel_boxes, bounds_color=(0, 128, 0, 100))
-
-        display_image, save_image, speech_labels = _build_prelim_annotated_image(
-            speech_page_group, pil_image, save
-        )
-
-        if save:
-            assert save_image is not None
-            ocr_group_file = comic.get_ocr_prelim_groups_json_file(fanta_page, engine)
-            prelim_file = comic.get_ocr_prelim_annotated_file(fanta_page, engine)
-            boxes_file = comic.get_ocr_boxes_annotated_file(fanta_page, engine)
-            _save_if_outdated(save_image, prelim_file, ocr_group_file, "prelim annotated")
-            _draw_individual_boxes_on_image(pil_image, ocr_group_file)
-            _save_if_outdated(pil_image, boxes_file, ocr_group_file, "boxes annotated")
-
-        return fanta_page, display_image, speech_labels
-
     with ThreadPoolExecutor() as executor:
-        return list(executor.map(process, filtered))
+        return list(
+            executor.map(
+                lambda g: _process_one_page(g, comic, title_pages_panel_boxes, engine, save),
+                filtered,
+            )
+        )
 
 
 class _DraggableLabel(KivyLabel):
-    """Kivy Label with a white background, drag-movable by the user."""
+    """Kivy Label with a yellow background.
 
-    def __init__(self, **kwargs) -> None:  # noqa: ANN003
+    Drag-movable; fires ``on_touched`` on single press and ``on_double_tapped`` on double-click.
+    """
+
+    def __init__(
+        self,
+        on_touched: Callable[[], None] | None = None,
+        on_double_tapped: Callable[[], None] | None = None,
+        **kwargs,  # noqa: ANN003
+    ) -> None:
         super().__init__(**kwargs)
         self.dragged = False
         self._drag_offset = (0.0, 0.0)
+        self._on_touched = on_touched
+        self._on_double_tapped = on_double_tapped
         with self.canvas.before:  # ty: ignore[unresolved-attribute]
             Color(1.0, 0.85, 0.4, 1.0)
             self._bg = Rectangle(pos=self.pos, size=self.size)
@@ -325,8 +400,14 @@ class _DraggableLabel(KivyLabel):
             return False
         if getattr(touch, "button", "left") != "left":
             return False
+        if getattr(touch, "is_double_tap", False):
+            if self._on_double_tapped is not None:
+                self._on_double_tapped()
+            return True
         touch.grab(self)
         self._drag_offset = (touch.x - self.x, touch.y - self.y)
+        if self._on_touched is not None:
+            self._on_touched()
         return True
 
     def on_touch_move(self, touch: MotionEvent) -> bool:
@@ -355,6 +436,10 @@ class _OcrAnnotationsViewer(KivyPageViewer):
         start_page: int,
         win_left: int,
         win_top: int,
+        volume: int,
+        engine: OcrTypes,
+        comics_database: ComicsDatabase,
+        title: str,
     ) -> None:
         super().__init__(
             window_title=window_title,
@@ -364,6 +449,11 @@ class _OcrAnnotationsViewer(KivyPageViewer):
             win_top=win_top,
         )
         self._page_speech_labels = page_speech_labels
+        self._volume = volume
+        self._engine = engine
+        self._comics_database = comics_database
+        self._title = title
+        self._last_touched_group_id: str | None = None
         self._overlay: FloatLayout | None = None
 
     def build(self) -> Widget:
@@ -377,6 +467,23 @@ class _OcrAnnotationsViewer(KivyPageViewer):
         self._image_widget.size_hint = (1, 1)
         self._image_widget.pos_hint = {"x": 0, "y": 0}
         self._overlay.add_widget(self._image_widget)
+        # Top-right "Edit" + "Refresh" buttons.
+        edit_btn = Button(
+            text="Edit",
+            size_hint=(None, None),
+            size=(80, 36),
+            pos_hint={"right": 0.995, "top": 0.995},
+        )
+        edit_btn.bind(on_release=lambda _btn: self._launch_kivy_editor())
+        self._overlay.add_widget(edit_btn)
+        refresh_btn = Button(
+            text="Refresh",
+            size_hint=(None, None),
+            size=(80, 36),
+            pos_hint={"right": 0.895, "top": 0.995},
+        )
+        refresh_btn.bind(on_release=lambda _btn: self._refresh_current_page())
+        self._overlay.add_widget(refresh_btn)
         parent.add_widget(self._overlay)
         # When the image widget resizes (initial layout / window resize), refresh labels.
         self._image_widget.bind(size=lambda *_a: self._refresh_label_positions())
@@ -384,20 +491,96 @@ class _OcrAnnotationsViewer(KivyPageViewer):
         self._rebuild_labels_for_current_page()
         return root
 
+    def _launch_kivy_editor(self) -> None:
+        if not self._pages:
+            return
+        fanta_page, _ = self._pages[self._index]
+        target_id = self._last_touched_group_id or "0"
+        easy_id = target_id
+        paddle_id = target_id
+        cmd = [
+            "barks-ocr-kivy-editor",
+            "--",
+            "--volume",
+            str(self._volume),
+            "--fanta-page",
+            fanta_page,
+            "--easyocr-group-id",
+            easy_id,
+            "--paddleocr-group-id",
+            paddle_id,
+        ]
+        logger.info(f"Launching: {' '.join(cmd)}")
+        try:
+            proc = subprocess.Popen(cmd)  # noqa: S603
+        except OSError:
+            logger.exception("Failed to launch barks-ocr-kivy-editor")
+            return
+        threading.Thread(
+            target=self._wait_for_editor_then_refresh,
+            args=(proc,),
+            daemon=True,
+        ).start()
+
+    def _wait_for_editor_then_refresh(self, proc: subprocess.Popen) -> None:
+        rc = proc.wait()
+        logger.info(f"kivy editor exited with code {rc}; scheduling refresh.")
+        Clock.schedule_once(lambda _dt: self._refresh_current_page(), 0)
+
+    def _refresh_current_page(self) -> None:
+        """Re-read the current page's OCR data from disk and redraw."""
+        if not self._pages:
+            return
+        fanta_page = self._pages[self._index][0]
+        logger.info(f'Refreshing page "{fanta_page}" for engine "{self._engine.value}".')
+        try:
+            # Fresh instances so any on-disk changes are picked up.
+            speech_groups = SpeechGroups(self._comics_database)
+            title_panel_boxes = TitlePanelBoxes(self._comics_database)
+            comic = self._comics_database.get_comic_book(self._title)
+            title_enum = comic.get_title_enum()
+            page_groups = speech_groups.get_speech_page_groups(title_enum)
+            matching = next(
+                (
+                    g
+                    for g in page_groups
+                    if g.ocr_index == self._engine and g.fanta_page == fanta_page
+                ),
+                None,
+            )
+            if matching is None:
+                logger.warning(f'No speech-page-group for "{fanta_page}" on refresh.')
+                return
+            title_pages_panel_boxes = title_panel_boxes.get_page_panel_boxes(title_enum)
+            _, display_image, speech_labels = _process_one_page(
+                matching, comic, title_pages_panel_boxes, self._engine, save=False
+            )
+        except (OSError, RuntimeError):
+            logger.exception("Refresh failed")
+            return
+
+        self._pages[self._index] = (fanta_page, display_image)
+        self._page_speech_labels[self._index] = speech_labels
+        self._show_current()
+
     def _show_current(self) -> None:
         super()._show_current()
         self._rebuild_labels_for_current_page()
+        _save_last_state(self._title, self._index + 1)
 
     def _rebuild_labels_for_current_page(self) -> None:
         if self._overlay is None or self._image_widget is None:
             return
         for child in list(self._overlay.children):
-            if child is not self._image_widget:
+            if isinstance(child, _DraggableLabel):
                 self._overlay.remove_widget(child)
+        self._last_touched_group_id = None
         rgb = ImageColor.getrgb(TEXT_COLOR)
         text_color_kivy = (rgb[0] / 255.0, rgb[1] / 255.0, rgb[2] / 255.0, 1.0)
         for spec in self._page_speech_labels[self._index]:
             label = _DraggableLabel(
+                on_touched=lambda gid=spec.group_id: self._mark_touched(gid),
+                on_double_tapped=lambda gid=spec.group_id: self._launch_editor_for_group(gid),
                 text=spec.text,
                 font_name=str(TEXT_FONT_PATH),
                 font_size=TEXT_FONT_SIZE / 1.9,
@@ -414,6 +597,13 @@ class _OcrAnnotationsViewer(KivyPageViewer):
             label.bind(size=lambda lbl, _val: self._reposition_label(lbl))
             self._overlay.add_widget(label)
         self._refresh_label_positions()
+
+    def _mark_touched(self, group_id: str) -> None:
+        self._last_touched_group_id = group_id
+
+    def _launch_editor_for_group(self, group_id: str) -> None:
+        self._last_touched_group_id = group_id
+        self._launch_kivy_editor()
 
     def _refresh_label_positions(self) -> None:
         if self._overlay is None:
@@ -475,6 +665,7 @@ def show_ocr_annotations(  # noqa: PLR0913
 
     pages = [(fanta_page, image) for fanta_page, image, _ in page_entries]
     page_speech_labels = [labels for _, _, labels in page_entries]
+    volume = comics_database.get_fanta_volume_int(title)
 
     _OcrAnnotationsViewer(
         window_title=f"OCR annotations [{engine.value}] — {title}",
@@ -483,6 +674,10 @@ def show_ocr_annotations(  # noqa: PLR0913
         start_page=start_page,
         win_left=win_left,
         win_top=win_top,
+        volume=volume,
+        engine=engine,
+        comics_database=comics_database,
+        title=title,
     ).run()
 
 
@@ -491,17 +686,33 @@ app = typer.Typer()
 
 @app.command(help="Show prelim OCR annotated images for a title")
 def main(  # noqa: PLR0913
-    title_str: TitleArg,
+    title_str: TitleArg = "",
     engine: OcrTypes = typer.Option(  # noqa: B008
         ..., "--engine", "-e", help="OCR engine to display."
     ),
     page: int = typer.Option(1, "--page", "-p", help="Page number to start on (1-based)."),
     save: bool = typer.Option(default=False, help="Also save prelim + boxes annotated PNGs."),
+    last_page: bool = typer.Option(
+        default=False,
+        help="Resume at the last title/page saved in the ini file.",
+    ),
     win_left: int = typer.Option(100, "--win-left", help="Window left position in pixels."),
     win_top: int = typer.Option(80, "--win-top", help="Window top position in pixels."),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
     init_logging(APP_LOGGING_NAME, "annotate-ocr.log", log_level_str)
+
+    if last_page:
+        state = _load_last_state()
+        if state is None:
+            msg = f'--last-page requested but no saved state found at "{_INI_PATH}".'
+            raise typer.BadParameter(msg)
+        title_str, page = state
+        logger.info(f'Resuming last state: title="{title_str}", page={page}.')
+
+    if not title_str:
+        msg = "Must pass --title (or --last-page with prior saved state)."
+        raise typer.BadParameter(msg)
 
     comics_database = ComicsDatabase()
 
