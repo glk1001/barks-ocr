@@ -12,9 +12,9 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import draw_panel_bounds_on_image
 from barks_fantagraphics.panel_boxes import TitlePanelBoxes, check_page_panel_boxes
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups, SpeechPageGroup, SpeechText
+from barks_kivy_ui.page_viewer import KivyPageViewer
 from comic_utils.common_typer_options import LogLevelArg, TitleArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
-from comic_utils.kivy_page_viewer import KivyPageViewer
 from loguru import logger
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 from PIL.ImageDraw import ImageDraw as PilImageDraw
@@ -122,7 +122,8 @@ def draw_speech_text(
         speech_text.raw_ai_text,
     )
     bbox_color = (*ImageColor.getrgb(COLORS[color_index]), 255)
-    text_box_color = (*ImageColor.getrgb(COLORS[color_index]), 50)
+#    text_box_color = (*ImageColor.getrgb(COLORS[color_index]), 50)
+    text_box_color = (255, 255, 255, 255)
     draw.rectangle(ocr_box.min_rotated_rectangle, outline=bbox_color, width=7)
 
     text = f"{speech_text.raw_ai_text}"

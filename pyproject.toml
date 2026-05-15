@@ -13,6 +13,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "barks-fantagraphics",
+    "barks-kivy-ui",
     "comic-utils",
     "dotenv>=0.9.9",
     "easyocr>=1.7.2",
@@ -68,6 +69,7 @@ barks-ocr-nano-panels          = "barks_ocr.nano.nano_banana_panels:main"
 
 [tool.uv.sources]
 barks-fantagraphics = { path = "../barks-compleat-reader/src/barks-fantagraphics", editable = true }
+barks-kivy-ui = { path = "../barks-compleat-reader/src/barks-kivy-ui", editable = true }
 comic-utils = { path = "../barks-compleat-reader/src/comic-utils", editable = true }
 en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }
 
