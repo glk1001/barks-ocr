@@ -4,13 +4,17 @@
 arctan
 barksian
 beamsearch
+blit
 blueviolet
 bocr
 bolditalic
 boxlayout
+bufferfmt
 bunx
 chkg
 chkr
+codepoint
+colorfmt
 coords
 crooge
 csvfile
@@ -61,6 +65,7 @@ readtext
 rects
 rowname
 sapg
+scancode
 scrollview
 socr
 srce
@@ -69,6 +74,7 @@ sysfs
 textbbox
 textline
 timespec
+tobytes
 touchpads
 uncurated
 ungrab
