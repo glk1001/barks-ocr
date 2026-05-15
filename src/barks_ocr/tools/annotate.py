@@ -1,5 +1,4 @@
 import json
-from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any
@@ -15,13 +14,7 @@ from barks_fantagraphics.panel_boxes import TitlePanelBoxes, check_page_panel_bo
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups, SpeechPageGroup, SpeechText
 from comic_utils.common_typer_options import LogLevelArg, TitleArg
 from comic_utils.cv_image_utils import get_bw_image_from_alpha
-from kivy.app import App
-from kivy.core.image import Texture
-from kivy.core.window import Window
-from kivy.input.motionevent import MotionEvent
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.image import Image as KivyImage
-from kivy.uix.label import Label
+from comic_utils.kivy_page_viewer import KivyPageViewer
 from loguru import logger
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 from PIL.ImageDraw import ImageDraw as PilImageDraw
@@ -31,9 +24,6 @@ from barks_ocr.cli_setup import init_logging
 from barks_ocr.utils.ocr_box import OcrBox
 
 APP_LOGGING_NAME = "anno"
-
-_KEY_RIGHT = 275
-_KEY_LEFT = 276
 
 # noinspection SpellCheckingInspection
 COLORS = [
@@ -70,7 +60,7 @@ TEXT_TYPE_ABBREV_MAP = {
 TEXT_FONT_PATH = CARL_BARKS_FONT_FILE
 TEXT_FONT_SIZE = 28
 TEXT_COLOR = "purple"
-TEXT_BOUNDING_BOX_OFFSET = (20, 5)
+TEXT_BOUNDING_BOX_OFFSET = (20, 20)
 
 INFO_FONT_PATH = Path("/home/greg/Prj/fonts/verdana.ttf")
 INFO_FONT_SIZE = 28
@@ -79,8 +69,7 @@ INFO_BOUNDING_BOX_OFFSET = (10, -25)
 
 
 def get_color(group_id: int) -> str:
-    group_id %= len(COLORS)
-    return COLORS[group_id]
+    return COLORS[group_id % len(COLORS)]
 
 
 def get_text_type_abbrev(text_type: str) -> str:
@@ -105,15 +94,16 @@ def _build_prelim_annotated_image(
     overlay = Image.new("RGBA", pil_image.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
     text_font = ImageFont.truetype(str(TEXT_FONT_PATH), TEXT_FONT_SIZE)
+    info_font = ImageFont.truetype(str(INFO_FONT_PATH), int(1.35 * INFO_FONT_SIZE))
 
     color_index = 0
     for group_id, speech_text in speech_groups_map.items():
         logger.debug(f'Annotating group "{group_id}".')
 
-        ocr_text_box, panel_num = draw_speech_text(color_index, draw, speech_text, text_font)
+        ocr_text_box = draw_speech_text(color_index, draw, speech_text, text_font)
 
-        if panel_num != -1:
-            draw_info_text(draw, ocr_text_box, panel_num, speech_text)
+        if speech_text.panel_num != -1:
+            draw_info_text(draw, ocr_text_box, speech_text, info_font)
 
         color_index += 1
         if color_index == len(COLORS):
@@ -124,12 +114,9 @@ def _build_prelim_annotated_image(
 
 def draw_speech_text(
     color_index: int, draw: PilImageDraw, speech_text: SpeechText, text_font: FreeTypeFont
-) -> tuple[OcrBox, int]:
-    text_box = speech_text.text_box
-    panel_num = speech_text.panel_num
-
+) -> OcrBox:
     ocr_box = OcrBox(
-        text_box,
+        speech_text.text_box,
         speech_text.raw_ai_text,
         1.0,
         speech_text.raw_ai_text,
@@ -146,19 +133,18 @@ def draw_speech_text(
     text_bbox = draw.textbbox(top_left, text, font=text_font, align="left")
     draw.rectangle(text_bbox, fill=text_box_color)
     draw.text(top_left, text, fill=TEXT_COLOR, font=text_font, align="left", stroke_width=1)
-    return ocr_box, panel_num
+    return ocr_box
 
 
 def draw_info_text(
-    draw: PilImageDraw, ocr_text_box: OcrBox, panel_num: int, speech_text: SpeechText
+    draw: PilImageDraw, ocr_text_box: OcrBox, speech_text: SpeechText, info_font: FreeTypeFont
 ) -> None:
-    info_text = f"{panel_num}:{get_text_type_abbrev(speech_text.type)}"
+    info_text = f"{speech_text.panel_num}:{get_text_type_abbrev(speech_text.type)}"
     top_left = ocr_text_box.min_rotated_rectangle[0]
     top_left = (
         top_left[0] + INFO_BOUNDING_BOX_OFFSET[0],
         top_left[1] + INFO_BOUNDING_BOX_OFFSET[1],
     )
-    info_font = ImageFont.truetype(str(INFO_FONT_PATH), int(1.35 * INFO_FONT_SIZE))
     info_box = draw.textbbox(top_left, info_text, font=info_font, align="left")
     draw.rectangle(info_box, fill=(0, 255, 255, 80))
     draw.text(
@@ -205,27 +191,15 @@ def _draw_individual_boxes_on_image(pil_image: Image.Image, ocr_file: Path) -> N
                 draw.polygon(box, outline=get_color(group_id), width=2)
 
 
-def _save_prelim_if_needed(
-    prelim_image: Image.Image, prelim_file: Path, ocr_group_file: Path
-) -> None:
-    if prelim_file.is_file() and prelim_file.stat().st_mtime > ocr_group_file.stat().st_mtime:
-        logger.info(f'Found prelim annotated file - skipping: "{prelim_file}".')
+def _save_if_outdated(image: Image.Image, dst_file: Path, src_file: Path, label: str) -> None:
+    """Save ``image`` to ``dst_file`` unless ``dst_file`` is already newer than ``src_file``."""
+    if dst_file.is_file() and dst_file.stat().st_mtime > src_file.stat().st_mtime:
+        logger.info(f'Found {label} file - skipping: "{dst_file}".')
         return
 
-    prelim_file.parent.mkdir(parents=True, exist_ok=True)
-    logger.info(f'Saving prelim annotated image to "{prelim_file}".')
-    prelim_image.save(prelim_file)
-
-
-def _save_boxes_if_needed(pil_image: Image.Image, boxes_file: Path, ocr_group_file: Path) -> None:
-    if boxes_file.is_file() and boxes_file.stat().st_mtime > ocr_group_file.stat().st_mtime:
-        logger.info(f'Found boxes annotated file - skipping: "{boxes_file}".')
-        return
-
-    _draw_individual_boxes_on_image(pil_image, ocr_group_file)
-    boxes_file.parent.mkdir(parents=True, exist_ok=True)
-    logger.info(f'Saving boxes annotated image to "{boxes_file}".')
-    pil_image.save(boxes_file)
+    dst_file.parent.mkdir(parents=True, exist_ok=True)
+    logger.info(f'Saving {label} image to "{dst_file}".')
+    image.save(dst_file)
 
 
 def _build_annotated_pages(
@@ -243,7 +217,6 @@ def _build_annotated_pages(
 
     def process(speech_page_group: SpeechPageGroup) -> tuple[str, Image.Image]:
         fanta_page = speech_page_group.fanta_page
-        ocr_type = speech_page_group.ocr_index
 
         svg_file = comic.get_srce_restored_svg_story_file(fanta_page)
         png_file = Path(str(svg_file) + PNG_FILE_EXT)
@@ -264,125 +237,17 @@ def _build_annotated_pages(
         prelim_image = _build_prelim_annotated_image(speech_page_group, pil_image)
 
         if save:
-            ocr_group_file = comic.get_ocr_prelim_groups_json_file(fanta_page, ocr_type)
-            prelim_file = comic.get_ocr_prelim_annotated_file(fanta_page, ocr_type)
-            boxes_file = comic.get_ocr_boxes_annotated_file(fanta_page, ocr_type)
-            _save_prelim_if_needed(prelim_image, prelim_file, ocr_group_file)
-            _save_boxes_if_needed(pil_image, boxes_file, ocr_group_file)
+            ocr_group_file = comic.get_ocr_prelim_groups_json_file(fanta_page, engine)
+            prelim_file = comic.get_ocr_prelim_annotated_file(fanta_page, engine)
+            boxes_file = comic.get_ocr_boxes_annotated_file(fanta_page, engine)
+            _save_if_outdated(prelim_image, prelim_file, ocr_group_file, "prelim annotated")
+            _draw_individual_boxes_on_image(pil_image, ocr_group_file)
+            _save_if_outdated(pil_image, boxes_file, ocr_group_file, "boxes annotated")
 
         return fanta_page, prelim_image
 
     with ThreadPoolExecutor() as executor:
         return list(executor.map(process, filtered))
-
-
-def _pil_to_texture(pil: Image.Image) -> Texture:
-    tex = Texture.create(size=pil.size)
-    tex.blit_buffer(pil.tobytes(), colorfmt="rgba", bufferfmt="ubyte")
-    tex.flip_vertical()
-
-    return tex
-
-
-class _ClickNavLayout(BoxLayout):
-    """Vertical BoxLayout that splits clicks left-of-center vs right-of-center."""
-
-    def __init__(
-        self,
-        on_left_click: Callable[[], None],
-        on_right_click: Callable[[], None],
-        **kwargs,  # noqa: ANN003
-    ) -> None:
-        super().__init__(**kwargs)
-        self._on_left_click = on_left_click
-        self._on_right_click = on_right_click
-
-    def on_touch_down(self, touch: MotionEvent) -> bool:
-        if not self.collide_point(*touch.pos):
-            return False
-        if getattr(touch, "button", "left") != "left":
-            return False
-        if touch.x < self.center_x:
-            self._on_left_click()
-        else:
-            self._on_right_click()
-        return True
-
-
-class _OcrAnnotationsViewer(App):
-    def __init__(  # noqa: PLR0913
-        self,
-        title: str,
-        engine: OcrTypes,
-        pages: list[tuple[str, Image.Image]],
-        start_page: int,
-        win_left: int,
-        win_top: int,
-    ) -> None:
-        super().__init__()
-        self._title_str = title
-        self._engine = engine
-        self._pages = pages
-        self._index = max(0, min(len(pages) - 1, start_page - 1))
-        self._win_left = win_left
-        self._win_top = win_top
-        self._page_label: Label | None = None
-        self._image_widget: KivyImage | None = None
-
-    def build(self) -> BoxLayout:
-        self.title = f"OCR annotations [{self._engine.value}] — {self._title_str}"
-        Window.size = (1000, 1400)
-        Window.left = self._win_left
-        Window.top = self._win_top
-
-        root = _ClickNavLayout(
-            on_left_click=lambda: self._go(-1),
-            on_right_click=lambda: self._go(+1),
-            orientation="vertical",
-        )
-
-        self._page_label = Label(size_hint_y=None, height=30)
-        self._image_widget = KivyImage(allow_stretch=True, keep_ratio=True)
-
-        root.add_widget(self._page_label)
-        root.add_widget(self._image_widget)
-
-        Window.bind(on_key_down=self._on_key_down)
-        self._show_current()
-
-        return root
-
-    def _on_key_down(
-        self,
-        _window: object,
-        key: int,
-        _scancode: int,
-        _codepoint: str | None,
-        _modifiers: list,
-    ) -> bool:
-        if key == _KEY_LEFT:
-            self._go(-1)
-            return True
-        if key == _KEY_RIGHT:
-            self._go(+1)
-            return True
-        return False
-
-    def _go(self, delta: int) -> None:
-        new_index = self._index + delta
-        if 0 <= new_index < len(self._pages):
-            self._index = new_index
-            self._show_current()
-
-    def _show_current(self) -> None:
-        fanta_page, pil_image = self._pages[self._index]
-        assert self._page_label is not None
-        assert self._image_widget is not None
-
-        self._page_label.text = (
-            f"Page {self._index + 1} of {len(self._pages)}   [fanta: {fanta_page}]"
-        )
-        self._image_widget.texture = _pil_to_texture(pil_image)
 
 
 def show_ocr_annotations(  # noqa: PLR0913
@@ -418,9 +283,8 @@ def show_ocr_annotations(  # noqa: PLR0913
         logger.error(f'No prelim OCR pages for engine "{engine.value}" in title "{title_name}".')
         return
 
-    _OcrAnnotationsViewer(
-        title=title,
-        engine=engine,
+    KivyPageViewer(
+        window_title=f"OCR annotations [{engine.value}] — {title}",
         pages=pages,
         start_page=start_page,
         win_left=win_left,
