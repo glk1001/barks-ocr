@@ -2,12 +2,11 @@
 import copy
 import json
 from collections.abc import Callable
-from dataclasses import replace
+from dataclasses import dataclass, replace
 from io import BytesIO
 from pathlib import Path
 
 import typer
-from attr import dataclass
 from barks_fantagraphics.barks_titles import BARKS_TITLES
 from barks_fantagraphics.comic_book import get_page_str
 from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
@@ -161,6 +160,15 @@ class EnginePane:
         self.speech_groups: dict[str, SpeechText] = {}
         self.canvas: BoundingBoxCanvas | None = None
         self.panel_num_input: TextInput | None = None
+
+    def json_groups(self) -> dict:
+        """Return the live JSON ``groups`` dict (mutable), or an empty dict if missing."""
+        return self.page_group.speech_page_json.get("groups", {})
+
+    def json_group(self, group_id: str | None = None) -> dict | None:
+        """Return the JSON dict for ``group_id`` (defaults to current), or None."""
+        gid = self.group_id if group_id is None else group_id
+        return self.json_groups().get(gid)
 
 
 # ── Helper functions ──────────────────────────────────────────────────────────
@@ -565,7 +573,6 @@ class EditorApp(App):
 
         self._info_label: Label | None = None
         self._decode_checkbox: CheckBox | None = None
-        self._popup: Popup | None = None
         self._has_changes = False
 
         # Load the initial page data
@@ -587,6 +594,7 @@ class EditorApp(App):
             self.queue_progress_text = f"{queue_index + 1} / {len(self._queue)}"
 
         Window.bind(on_request_close=self.on_request_close)
+        Window.bind(on_key_down=self._on_key_down)
 
     def _other_pane(self, pane: EnginePane) -> EnginePane:
         """Return the opposite engine pane."""
@@ -657,35 +665,23 @@ class EditorApp(App):
 
     def _load_canvas_content(self, pane: EnginePane) -> None:
         """Refresh the BoundingBoxCanvas for the given engine pane."""
-        json_groups = pane.page_group.speech_page_json.get("groups", {})
-        panel_num = json_groups.get(pane.group_id, {}).get("panel_num", -1)
-        self._load_engine_canvas_content(
-            canvas=pane.canvas,
-            group_id=pane.group_id,
-            page_group=pane.page_group,
-            panel_num=panel_num,
-        )
+        panel_num = (pane.json_group() or {}).get("panel_num", -1)
+        self._load_engine_canvas_content(pane, panel_num)
 
-    def _load_engine_canvas_content(
-        self,
-        canvas: BoundingBoxCanvas | None,
-        group_id: str,
-        page_group: SpeechPageGroup,
-        panel_num: int,
-    ) -> None:
+    def _load_engine_canvas_content(self, pane: EnginePane, panel_num: int) -> None:
         """Parameterized canvas refresh for one engine."""
+        canvas = pane.canvas
         if canvas is None:
             return
 
-        raw_json_groups = page_group.speech_page_json.get("groups", {})
-        group_json = raw_json_groups.get(group_id)
+        group_json = pane.json_group()
         if group_json is None:
-            logger.warning(f"Group {group_id} not found in JSON for canvas refresh.")
+            logger.warning(f"Group {pane.group_id} not found in JSON for canvas refresh.")
             return
 
         text_box = group_json.get("text_box", [])
         if not text_box:
-            logger.warning(f"Group {group_id} has no text_box.")
+            logger.warning(f"Group {pane.group_id} has no text_box.")
             return
 
         if not self._srce_image_file.is_file():
@@ -697,7 +693,7 @@ class EditorApp(App):
 
         if panel_num <= 0:
             # Unknown panel: show wider crop and overlay all panel outlines
-            logger.warning(f'Panel num not known for group: "{group_id}".')
+            logger.warning(f'Panel num not known for group: "{pane.group_id}".')
             all_panel_bounds = get_all_panel_bounds_from_file(self._panel_segments_file)
             crop_l, crop_t, crop_r, crop_b = compute_crop_region(
                 img_w, img_h, None, text_box, padding=CROP_PADDING_UNKNOWN
@@ -746,33 +742,42 @@ class EditorApp(App):
         self._show_exit_popup()
         return True  # prevent immediate close
 
+    def _on_key_down(
+        self,
+        _window: object,
+        key: int,
+        _scancode: int,
+        _codepoint: str | None,
+        modifier: list[str],
+    ) -> bool:
+        """Global keyboard shortcuts.
+
+        Ctrl+Enter — Save & Next (queue mode) or Save (single mode).
+        Ctrl+S     — Save without advancing.
+        """
+        if "ctrl" not in modifier:
+            return False
+        # Enter (13) or numpad Enter (271)
+        if key in (13, 271):
+            if self._queue:
+                self._handle_save_and_next(renumber=True)
+            else:
+                self._handle_save(renumber=True)
+            return True
+        if key == ord("s"):
+            self._handle_save(renumber=True)
+            return True
+        return False
+
     def _show_exit_popup(self) -> None:
-        content = BoxLayout(orientation="vertical", padding=10, spacing=10)
-        content.add_widget(Label(text="There are unsaved changes.\nAre you sure you want to exit?"))
-        button_layout = BoxLayout(spacing=10)
-
-        yes_button = Button(text="Yes, exit")
-        yes_button.bind(on_press=self._stop_app)
-        button_layout.add_widget(yes_button)
-
-        no_button = Button(text="No, go back")
-        no_button.bind(on_press=lambda _btn: self._popup.dismiss())
-        button_layout.add_widget(no_button)
-
-        content.add_widget(button_layout)
-        self._popup = Popup(
+        self._show_confirm_popup(
             title="Unsaved Changes",
-            content=content,
-            size_hint=(None, None),
+            message="There are unsaved changes.\nAre you sure you want to exit?",
+            on_confirm=self.stop,
+            confirm_label="Yes, exit",
+            cancel_label="No, go back",
             size=(420, 200),
-            auto_dismiss=False,
         )
-        self._popup.open()
-
-    def _stop_app(self, *_args: object) -> None:
-        if self._popup:
-            self._popup.dismiss()
-        self.stop()
 
     # ── pane callbacks (text, box, panel_num) ────────────────────────────────
 
@@ -788,8 +793,7 @@ class EditorApp(App):
 
     def _on_box_changed(self, pane: EnginePane, new_text_box: list) -> None:
         """Handle a bounding box change reported by a canvas."""
-        json_groups = pane.page_group.speech_page_json.get("groups", {})
-        json_group = json_groups.get(pane.group_id)
+        json_group = pane.json_group()
         if json_group is not None:
             json_group["text_box"] = new_text_box
         self._has_changes = True
@@ -797,8 +801,7 @@ class EditorApp(App):
 
     def _on_panel_num_confirmed(self, pane: EnginePane, instance: TextInput) -> None:
         """Validate and apply a panel_num TextInput value."""
-        json_groups = pane.page_group.speech_page_json.get("groups", {})
-        json_group = json_groups.get(pane.group_id)
+        json_group = pane.json_group()
         current = json_group.get("panel_num", -1) if json_group else -1
         try:
             new_num = int(instance.text.strip())
@@ -851,14 +854,12 @@ class EditorApp(App):
         )
         # Read from live JSON, not SpeechText — the dataclass is never updated after load,
         # so returning to a previously-edited group would restore the stale original value.
-        json_groups = pane.page_group.speech_page_json.get("groups", {})
-        panel_num = json_groups.get(group_id, {}).get("panel_num", speech_group.panel_num)
+        panel_num = (pane.json_group(group_id) or {}).get("panel_num", speech_group.panel_num)
         self._set_panel_num(pane, panel_num)
 
     def _set_panel_num(self, pane: EnginePane, panel_num: int) -> None:
         """Update panel_num in the JSON dict and the panel_num input widget."""
-        json_groups = pane.page_group.speech_page_json.get("groups", {})
-        json_group = json_groups.get(pane.group_id)
+        json_group = pane.json_group()
         if json_group is not None:
             json_group["panel_num"] = panel_num
         if pane.panel_num_input is not None:
@@ -869,8 +870,7 @@ class EditorApp(App):
         return f"{ocr_name}: group_id: {group_id} ({type_name})"
 
     def _get_pane_type(self, pane: EnginePane) -> str:
-        json_groups = pane.page_group.speech_page_json.get("groups", {})
-        return json_groups.get(pane.group_id, {}).get("type") or DEFAULT_TYPE
+        return (pane.json_group() or {}).get("type") or DEFAULT_TYPE
 
     def _refresh_pane_labels(self) -> None:
         """Re-compute both panes' header labels and push to their label props.
@@ -986,8 +986,7 @@ class EditorApp(App):
         label_widget.bind(text=self.setter(pane.label_prop))
         header_row.add_widget(label_widget)
         header_row.add_widget(Label(text="panel:", size_hint_x=None, width=50, font_size="13sp"))
-        json_groups = pane.page_group.speech_page_json.get("groups", {})
-        initial_panel_num = json_groups.get(pane.group_id, {}).get("panel_num", -1)
+        initial_panel_num = (pane.json_group() or {}).get("panel_num", -1)
         pane.panel_num_input = TextInput(
             text=str(initial_panel_num),
             multiline=False,
@@ -1132,8 +1131,7 @@ class EditorApp(App):
         """Write *type_name* to both panes' currently selected group's JSON."""
         changed = False
         for pane in self._panes:
-            json_groups = pane.page_group.speech_page_json.get("groups", {})
-            json_group = json_groups.get(pane.group_id)
+            json_group = pane.json_group()
             if json_group is None:
                 continue
             if json_group.get("type") != type_name:
@@ -1154,8 +1152,7 @@ class EditorApp(App):
         if self._queue and self._queue[self._queue_index].issue_type == TITLE_PAGE_ISSUE_TYPE:
             current = TITLE_PAGE_DEFAULT_TYPE
         else:
-            json_groups = self._easy_pane.page_group.speech_page_json.get("groups", {})
-            current = json_groups.get(self._easy_pane.group_id, {}).get("type") or DEFAULT_TYPE
+            current = (self._easy_pane.json_group() or {}).get("type") or DEFAULT_TYPE
         if current not in TYPE_OPTIONS:
             current = DEFAULT_TYPE
 
@@ -1308,12 +1305,10 @@ class EditorApp(App):
         ocr_file = pane.page_group.ocr_prelim_groups_json_file
         backup_file = self._get_prelim_ocr_backup_file(ocr_file)
 
-        json_groups = pane.page_group.speech_page_json.get("groups", {})
-
         # Sync text for all groups whose raw_ai_text has changed
         changed = False
         for gid, speech_text in pane.speech_groups.items():
-            json_group = json_groups.get(gid)
+            json_group = pane.json_group(gid)
             if json_group is None:
                 continue
             if speech_text.raw_ai_text != json_group.get("ai_text"):
@@ -1321,7 +1316,7 @@ class EditorApp(App):
                 changed = True
 
         # Sync text_box from canvas (panel_num already updated in json_group)
-        json_group = json_groups.get(pane.group_id)
+        json_group = pane.json_group()
         if json_group is not None and pane.canvas is not None:
             new_text_box = pane.canvas.get_text_box_full_page()
             if new_text_box and new_text_box != json_group.get("text_box"):
@@ -1365,8 +1360,12 @@ class EditorApp(App):
         for pane in self._panes:
             self._handle_next(pane)
 
-    def _handle_prev(self, pane: EnginePane) -> None:
-        """Navigate to the previous group in a pane."""
+    def _handle_step(self, pane: EnginePane, direction: int) -> None:
+        """Step to the previous (direction=-1) or next (direction=+1) group in a pane.
+
+        If the current group_id isn't in the list, the step lands on the "edge"
+        appropriate for the direction (prev → last group, next → first group).
+        """
         group_ids = list(pane.speech_groups.keys())
         if not group_ids:
             return
@@ -1374,22 +1373,15 @@ class EditorApp(App):
         try:
             idx = group_ids.index(pane.group_id)
         except ValueError:
-            idx = 0
-        self._set_group_id(pane, group_ids[(idx - 1) % len(group_ids)])
+            idx = 0 if direction < 0 else -1
+        self._set_group_id(pane, group_ids[(idx + direction) % len(group_ids)])
         self._load_canvas_content(pane)
 
+    def _handle_prev(self, pane: EnginePane) -> None:
+        self._handle_step(pane, -1)
+
     def _handle_next(self, pane: EnginePane) -> None:
-        """Navigate to the next group in a pane."""
-        group_ids = list(pane.speech_groups.keys())
-        if not group_ids:
-            return
-        self._commit_panel_nums()
-        try:
-            idx = group_ids.index(pane.group_id)
-        except ValueError:
-            idx = -1
-        self._set_group_id(pane, group_ids[(idx + 1) % len(group_ids)])
-        self._load_canvas_content(pane)
+        self._handle_step(pane, 1)
 
     def _handle_copy_in(self, target: EnginePane) -> None:
         """Copy the current group from the other engine into a new group in target."""
@@ -1501,13 +1493,12 @@ class EditorApp(App):
         both the JSON groups dict and the in-memory speech_groups dict so that
         positional ordering is preserved.
         """
-        source_json_groups = source.page_group.speech_page_json.get("groups", {})
-        source_group = source_json_groups.get(source.group_id)
+        source_group = source.json_group()
         if source_group is None:
             logger.warning(f"Source group {source.group_id} not found.")
             return
 
-        target_json_groups = target.page_group.speech_page_json.get("groups", {})
+        target_json_groups = target.json_groups()
         new_id = str(max((int(k) for k in target_json_groups), default=-1) + 1)
 
         new_group = copy.deepcopy(source_group)
@@ -1567,7 +1558,7 @@ class EditorApp(App):
         else:
             neighbor_id = None
 
-        json_groups = pane.page_group.speech_page_json.get("groups", {})
+        json_groups = pane.json_groups()
         if pane.group_id in json_groups:
             del json_groups[pane.group_id]
         pane.speech_groups.pop(pane.group_id, None)
@@ -1593,8 +1584,7 @@ class EditorApp(App):
         does not gate the checkbox — the user may pre-acknowledge or clear a
         stale entry.
         """
-        json_groups = pane.page_group.speech_page_json.get("groups", {})
-        group = json_groups.get(pane.group_id)
+        group = pane.json_group()
         if group is None:
             logger.warning(f"Group {pane.group_id} not found for acknowledge popup.")
             return
@@ -1652,7 +1642,16 @@ class EditorApp(App):
         popup.open()
 
     @staticmethod
-    def _show_confirm_popup(title: str, message: str, on_confirm: Callable[[], None]) -> None:
+    def _show_confirm_popup(  # noqa: PLR0913
+        title: str,
+        message: str,
+        on_confirm: Callable[[], None],
+        confirm_label: str = "Yes",
+        cancel_label: str | None = "Cancel",
+        size: tuple[int, int] = (440, 200),
+        auto_dismiss: bool = False,
+    ) -> None:
+        """Show a confirm popup; ``cancel_label=None`` produces a single-button popup."""
         content = BoxLayout(orientation="vertical", padding=10, spacing=10)
         content.add_widget(Label(text=message))
         button_layout = BoxLayout(spacing=10, size_hint_y=None, height=44)
@@ -1660,15 +1659,16 @@ class EditorApp(App):
             title=title,
             content=content,
             size_hint=(None, None),
-            size=(440, 200),
-            auto_dismiss=False,
+            size=size,
+            auto_dismiss=auto_dismiss,
         )
-        yes_btn = Button(text="Yes")
+        yes_btn = Button(text=confirm_label)
         yes_btn.bind(on_press=lambda _: (popup.dismiss(), on_confirm()))
-        no_btn = Button(text="Cancel")
-        no_btn.bind(on_press=lambda _: popup.dismiss())
         button_layout.add_widget(yes_btn)
-        button_layout.add_widget(no_btn)
+        if cancel_label is not None:
+            no_btn = Button(text=cancel_label)
+            no_btn.bind(on_press=lambda _: popup.dismiss())
+            button_layout.add_widget(no_btn)
         content.add_widget(button_layout)
         popup.open()
 
@@ -1680,18 +1680,15 @@ class EditorApp(App):
         self._load_queue_entry(next_index)
 
     def _show_queue_done_popup(self) -> None:
-        content = BoxLayout(orientation="vertical", padding=10, spacing=10)
-        content.add_widget(Label(text="All queue entries have been processed."))
-        btn = Button(text="Close", size_hint_y=None, height=40)
-        popup = Popup(
+        self._show_confirm_popup(
             title="Queue Complete",
-            content=content,
-            size_hint=(None, None),
+            message="All queue entries have been processed.",
+            on_confirm=self.stop,
+            confirm_label="Close",
+            cancel_label=None,
             size=(360, 160),
+            auto_dismiss=True,
         )
-        btn.bind(on_press=lambda _: (popup.dismiss(), self.stop()))
-        content.add_widget(btn)
-        popup.open()
 
     @staticmethod
     def _get_prelim_ocr_backup_file(ocr_file: Path) -> Path:

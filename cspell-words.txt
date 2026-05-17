@@ -54,6 +54,7 @@ misrecognized
 mkldnn
 motionevent
 norp
+numpad
 opno
 outpaint
 paddleocr

@@ -12,7 +12,7 @@ import cv2 as cv
 import typer
 from barks_fantagraphics.barks_titles import BARKS_TITLES
 from barks_fantagraphics.comic_book import ComicBook
-from barks_fantagraphics.comics_consts import PAGE_NUM_FONT_FILE, PNG_FILE_EXT
+from barks_fantagraphics.comics_consts import CARL_BARKS_FONT_FILE, PAGE_NUM_FONT_FILE, PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import draw_panel_bounds_on_image
 from barks_fantagraphics.panel_boxes import (
@@ -73,12 +73,12 @@ TEXT_TYPE_ABBREV_MAP = {
     "title": "H",
 }
 
-TEXT_FONT_PATH = PAGE_NUM_FONT_FILE
+TEXT_FONT_PATH = CARL_BARKS_FONT_FILE
 TEXT_FONT_SIZE = 28
 TEXT_COLOR = "#000000"
 TEXT_BOUNDING_BOX_OFFSET = (20, 20)
 
-INFO_FONT_PATH = Path("/home/greg/Prj/fonts/verdana.ttf")
+INFO_FONT_PATH = PAGE_NUM_FONT_FILE
 INFO_FONT_SIZE = 28
 INFO_TEXT_COLOR = "blue"
 INFO_BOUNDING_BOX_OFFSET = (10, -25)
@@ -190,7 +190,7 @@ def _build_prelim_annotated_image(
         )
 
         if text_draw is not None:
-            bake_speech_text(text_draw, text_top_left, speech_text, text_font, color_index)
+            bake_speech_text(text_draw, text_top_left, speech_text, text_font)
 
         if speech_text.panel_num != -1:
             draw_info_text(display_draw, ocr_box, speech_text, info_font)
@@ -231,7 +231,6 @@ def bake_speech_text(
     top_left: tuple[int, int],
     speech_text: SpeechText,
     text_font: FreeTypeFont,
-    color_index: int,  # noqa: ARG001
 ) -> None:
     """Draw the speech text and its background rectangle onto ``draw`` (for save mode)."""
     text = f"{speech_text.raw_ai_text}"
@@ -347,6 +346,33 @@ def _process_one_page(
     return fanta_page, display_image, speech_labels
 
 
+def _build_one_page(
+    comics_database: ComicsDatabase,
+    title: str,
+    engine: OcrTypes,
+    fanta_page: str,
+    save: bool,
+) -> tuple[str, Image.Image, list[SpeechLabel]] | None:
+    """Re-read OCR data and rebuild a single annotated page (used for live refresh)."""
+    speech_groups = SpeechGroups(comics_database)
+    title_panel_boxes = TitlePanelBoxes(comics_database)
+    comic = comics_database.get_comic_book(title)
+    title_enum = comic.get_title_enum()
+    matching = next(
+        (
+            g
+            for g in speech_groups.get_speech_page_groups(title_enum)
+            if g.ocr_index == engine and g.fanta_page == fanta_page
+        ),
+        None,
+    )
+    if matching is None:
+        logger.warning(f'No speech-page-group for "{fanta_page}".')
+        return None
+    title_pages_panel_boxes = title_panel_boxes.get_page_panel_boxes(title_enum)
+    return _process_one_page(matching, comic, title_pages_panel_boxes, engine, save)
+
+
 def _build_annotated_pages(
     speech_groups: SpeechGroups,
     title_panel_boxes: TitlePanelBoxes,
@@ -377,11 +403,13 @@ class _DraggableLabel(KivyLabel):
 
     def __init__(
         self,
+        image_xy: tuple[int, int],
         on_touched: Callable[[], None] | None = None,
         on_double_tapped: Callable[[], None] | None = None,
         **kwargs,  # noqa: ANN003
     ) -> None:
         super().__init__(**kwargs)
+        self.image_xy = image_xy
         self.dragged = False
         self._drag_offset = (0.0, 0.0)
         self._on_touched = on_touched
@@ -534,31 +562,15 @@ class _OcrAnnotationsViewer(KivyPageViewer):
         fanta_page = self._pages[self._index][0]
         logger.info(f'Refreshing page "{fanta_page}" for engine "{self._engine.value}".')
         try:
-            # Fresh instances so any on-disk changes are picked up.
-            speech_groups = SpeechGroups(self._comics_database)
-            title_panel_boxes = TitlePanelBoxes(self._comics_database)
-            comic = self._comics_database.get_comic_book(self._title)
-            title_enum = comic.get_title_enum()
-            page_groups = speech_groups.get_speech_page_groups(title_enum)
-            matching = next(
-                (
-                    g
-                    for g in page_groups
-                    if g.ocr_index == self._engine and g.fanta_page == fanta_page
-                ),
-                None,
-            )
-            if matching is None:
-                logger.warning(f'No speech-page-group for "{fanta_page}" on refresh.')
-                return
-            title_pages_panel_boxes = title_panel_boxes.get_page_panel_boxes(title_enum)
-            _, display_image, speech_labels = _process_one_page(
-                matching, comic, title_pages_panel_boxes, self._engine, save=False
+            result = _build_one_page(
+                self._comics_database, self._title, self._engine, fanta_page, save=False
             )
         except (OSError, RuntimeError):
             logger.exception("Refresh failed")
             return
-
+        if result is None:
+            return
+        _, display_image, speech_labels = result
         self._pages[self._index] = (fanta_page, display_image)
         self._page_speech_labels[self._index] = speech_labels
         self._show_current()
@@ -579,6 +591,7 @@ class _OcrAnnotationsViewer(KivyPageViewer):
         text_color_kivy = (rgb[0] / 255.0, rgb[1] / 255.0, rgb[2] / 255.0, 1.0)
         for spec in self._page_speech_labels[self._index]:
             label = _DraggableLabel(
+                image_xy=spec.image_xy,
                 on_touched=lambda gid=spec.group_id: self._mark_touched(gid),
                 on_double_tapped=lambda gid=spec.group_id: self._launch_editor_for_group(gid),
                 text=spec.text,
@@ -590,8 +603,6 @@ class _OcrAnnotationsViewer(KivyPageViewer):
                 outline_width=1,
                 size_hint=(None, None),
             )
-            # Stash the source image-pixel position so we can re-project on resize.
-            label.image_xy = spec.image_xy  # type: ignore[attr-defined]
             # Size to fit text once the texture renders, and refresh position afterwards.
             label.bind(texture_size=lambda lbl, val: setattr(lbl, "size", val))
             label.bind(size=lambda lbl, _val: self._reposition_label(lbl))
@@ -623,7 +634,7 @@ class _OcrAnnotationsViewer(KivyPageViewer):
         scale = min(widget_w / src_w, widget_h / src_h)
         letterbox_x = (widget_w - src_w * scale) / 2
         letterbox_y = (widget_h - src_h * scale) / 2
-        px, py = label.image_xy  # type: ignore[attr-defined]
+        px, py = label.image_xy
         wx = self._image_widget.x + letterbox_x + px * scale
         wy = self._image_widget.top - letterbox_y - py * scale
         # Position by top-left, accounting for label's current height.
