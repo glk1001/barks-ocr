@@ -38,8 +38,6 @@ from loguru import logger
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 from PIL.ImageDraw import ImageDraw as PilImageDraw
 from PIL.ImageFont import FreeTypeFont
-from screeninfo import get_monitors
-from screeninfo.common import ScreenInfoError
 
 from barks_ocr.cli_setup import init_logging
 from barks_ocr.utils.ocr_box import OcrBox
@@ -90,21 +88,6 @@ INFO_BOUNDING_BOX_OFFSET = (10, -25)
 
 _INI_PATH = Path.home() / ".config" / "barks-ocr" / "annotate.ini"
 _INI_SECTION = "annotate"
-
-
-def _get_primary_monitor_offset() -> tuple[int, int]:
-    """Return the ``(x, y)`` origin of the primary monitor, or ``(0, 0)`` on failure."""
-    try:
-        monitors = get_monitors()
-    except ScreenInfoError:
-        logger.exception("Failed to enumerate monitors; using virtual-desktop origin.")
-        return 0, 0
-    for monitor in monitors:
-        if monitor.is_primary:
-            return monitor.x, monitor.y
-    if monitors:
-        return monitors[0].x, monitors[0].y
-    return 0, 0
 
 
 def _load_last_state() -> tuple[str, int] | None:
@@ -480,8 +463,6 @@ class _OcrAnnotationsViewer(KivyPageViewer):
         pages: list[tuple[str, Image.Image]],
         page_speech_labels: list[list[SpeechLabel]],
         start_page: int,
-        win_left: int,
-        win_top: int,
         volume: int,
         engine: OcrTypes,
         comics_database: ComicsDatabase,
@@ -491,8 +472,6 @@ class _OcrAnnotationsViewer(KivyPageViewer):
             window_title=window_title,
             pages=pages,
             start_page=start_page,
-            win_left=win_left,
-            win_top=win_top,
         )
         self._page_speech_labels = page_speech_labels
         self._volume = volume
@@ -659,14 +638,12 @@ class _OcrAnnotationsViewer(KivyPageViewer):
         label.pos = (wx, wy - label.height)
 
 
-def show_ocr_annotations(  # noqa: PLR0913
+def show_ocr_annotations(
     comics_database: ComicsDatabase,
     title: str,
     engine: OcrTypes,
     start_page: int,
     save: bool,
-    win_left: int,
-    win_top: int,
 ) -> None:
     """Display prelim OCR annotations for ``title`` in a Kivy viewer window.
 
@@ -676,8 +653,6 @@ def show_ocr_annotations(  # noqa: PLR0913
         engine: OCR engine whose prelim annotated images to show.
         start_page: 1-based page index to show first. Clamped to the available range.
         save: When True, also save prelim + boxes annotated PNG files (with mtime skip).
-        win_left: Window left position in pixels.
-        win_top: Window top position in pixels.
 
     """
     logger.info(f'Showing OCR annotations [{engine.value}] for "{title}"...')
@@ -701,8 +676,6 @@ def show_ocr_annotations(  # noqa: PLR0913
         pages=pages,
         page_speech_labels=page_speech_labels,
         start_page=start_page,
-        win_left=win_left,
-        win_top=win_top,
         volume=volume,
         engine=engine,
         comics_database=comics_database,
@@ -730,12 +703,6 @@ def main(  # noqa: PLR0913
     last_page: bool = typer.Option(
         default=False,
         help="Resume at the last title/page saved in the ini file.",
-    ),
-    win_left: int = typer.Option(
-        100, "--win-left", help="Window left position in pixels (relative to primary monitor)."
-    ),
-    win_top: int = typer.Option(
-        80, "--win-top", help="Window top position in pixels (relative to primary monitor)."
     ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
@@ -769,15 +736,12 @@ def main(  # noqa: PLR0913
         msg = "Must pass --title, --volume with --page, or --last-page with prior saved state."
         raise typer.BadParameter(msg)
 
-    primary_x, primary_y = _get_primary_monitor_offset()
     show_ocr_annotations(
         comics_database,
         title_str,
         engine,
         page,
         save,
-        win_left + primary_x,
-        win_top + primary_y,
     )
 
 
