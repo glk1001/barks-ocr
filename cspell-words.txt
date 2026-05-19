@@ -2,8 +2,10 @@
 # One word per line. Case-insensitive.
 
 arctan
+autojunk
 barksian
 beamsearch
+blas
 blit
 blueviolet
 bocr
@@ -18,6 +20,9 @@ colorfmt
 coords
 crooge
 csvfile
+deskew
+deskewed
+deskewing
 dirname
 divid
 divis
@@ -26,6 +31,7 @@ denoising
 dismissable
 dotenv
 easyocr
+entr
 ents
 etype
 fanta
@@ -45,6 +51,7 @@ halign
 hotpink
 ikey
 imwrite
+initargs
 inpaint
 intspan
 kivy
@@ -63,6 +70,7 @@ phant
 pngs
 propn
 putalpha
+qint
 readtext
 rects
 rowname
@@ -77,9 +85,11 @@ textbbox
 textline
 timespec
 tobytes
+torchao
 touchpads
 uncurated
 ungrab
+unrotated
 unwarping
 uppercased
 verdana

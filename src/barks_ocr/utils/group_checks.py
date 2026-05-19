@@ -15,6 +15,7 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "dot_at_end_of_sentence",
     "dash_wrong_space",
     "dash_no_spaces",
+    "florence-check",
 )
 
 # Word-uppercased forms (e.g. "MR", "PROF") that, when followed by ".", should
@@ -90,6 +91,14 @@ def has_dash_no_spaces(group: dict) -> bool:
     return bool(_DASH_NO_SPACES_RE.search(ai_text))
 
 
+def _never_fires(group: dict) -> bool:
+    # florence-check is an external check (florence_check.py); it has no
+    # in-process predicate, so the acknowledge popup never auto-checks it.
+    # The user toggles it manually to opt a group out of future florence runs.
+    del group
+    return False
+
+
 DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     "short_text": is_short_text,
     "error_notes": is_ai_detected_error,
@@ -97,6 +106,7 @@ DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     "dot_at_end_of_sentence": has_dot_at_end_of_sentence,
     "dash_wrong_space": has_dash_wrong_space,
     "dash_no_spaces": has_dash_no_spaces,
+    "florence-check": _never_fires,
 }
 
 

@@ -23,6 +23,7 @@ from barks_fantagraphics.speech_groupers import (
 )
 from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
+from comic_utils.screen_utils import get_centred_position_on_primary_monitor
 from kivy.config import Config
 from loguru import logger
 from PIL import Image as PilImage
@@ -35,15 +36,15 @@ from barks_ocr.utils.group_checks import (
 
 APP_LOGGING_NAME = "kpoe"
 
-# Set the main window size using variables
-MAIN_WINDOW_X = 2120
-MAIN_WINDOW_Y = 20
 MAIN_WINDOW_WIDTH = 2000
 MAIN_WINDOW_HEIGHT = 1330
+_MAIN_WINDOW_X, _MAIN_WINDOW_Y = get_centred_position_on_primary_monitor(
+    MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT
+)
 
 Config.set("graphics", "position", "custom")  # ty:ignore[unresolved-attribute]
-Config.set("graphics", "left", MAIN_WINDOW_X)  # ty:ignore[unresolved-attribute]
-Config.set("graphics", "top", MAIN_WINDOW_Y)  # ty:ignore[unresolved-attribute]
+Config.set("graphics", "left", _MAIN_WINDOW_X)  # ty:ignore[unresolved-attribute]
+Config.set("graphics", "top", _MAIN_WINDOW_Y)  # ty:ignore[unresolved-attribute]
 Config.set("graphics", "width", MAIN_WINDOW_WIDTH)  # ty:ignore[unresolved-attribute]
 Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty:ignore[unresolved-attribute]
 # Disable Kivy's right-click/ctrl-click multitouch emulation — laptop touchpads
