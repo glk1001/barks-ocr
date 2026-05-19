@@ -11,10 +11,13 @@ from typing import Any
 import cv2 as cv
 import typer
 from barks_fantagraphics.barks_titles import BARKS_TITLES
-from barks_fantagraphics.comic_book import ComicBook
+from barks_fantagraphics.comic_book import ComicBook, get_page_str
 from barks_fantagraphics.comics_consts import CARL_BARKS_FONT_FILE, PAGE_NUM_FONT_FILE, PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
-from barks_fantagraphics.comics_helpers import draw_panel_bounds_on_image
+from barks_fantagraphics.comics_helpers import (
+    draw_panel_bounds_on_image,
+    get_title_from_volume_page,
+)
 from barks_fantagraphics.panel_boxes import (
     TitlePagesPanelBoxes,
     TitlePanelBoxes,
@@ -23,7 +26,7 @@ from barks_fantagraphics.panel_boxes import (
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups, SpeechPageGroup, SpeechText
 from barks_kivy_ui.page_viewer import KivyPageViewer
 from comic_utils.common_typer_options import LogLevelArg, TitleArg
-from comic_utils.cv_image_utils import get_bw_image_from_alpha
+from comic_utils.cv_image_utils import get_bw_image_from_alpha, validate_page_bw_image
 from kivy.clock import Clock
 from kivy.graphics import Color, Rectangle
 from kivy.input.motionevent import MotionEvent
@@ -35,6 +38,8 @@ from loguru import logger
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 from PIL.ImageDraw import ImageDraw as PilImageDraw
 from PIL.ImageFont import FreeTypeFont
+from screeninfo import get_monitors
+from screeninfo.common import ScreenInfoError
 
 from barks_ocr.cli_setup import init_logging
 from barks_ocr.utils.ocr_box import OcrBox
@@ -85,6 +90,21 @@ INFO_BOUNDING_BOX_OFFSET = (10, -25)
 
 _INI_PATH = Path.home() / ".config" / "barks-ocr" / "annotate.ini"
 _INI_SECTION = "annotate"
+
+
+def _get_primary_monitor_offset() -> tuple[int, int]:
+    """Return the ``(x, y)`` origin of the primary monitor, or ``(0, 0)`` on failure."""
+    try:
+        monitors = get_monitors()
+    except ScreenInfoError:
+        logger.exception("Failed to enumerate monitors; using virtual-desktop origin.")
+        return 0, 0
+    for monitor in monitors:
+        if monitor.is_primary:
+            return monitor.x, monitor.y
+    if monitors:
+        return monitors[0].x, monitors[0].y
+    return 0, 0
 
 
 def _load_last_state() -> tuple[str, int] | None:
@@ -321,9 +341,7 @@ def _process_one_page(
         raise FileNotFoundError(msg)
 
     bw_image = get_bw_image_from_alpha(png_file)
-    if bw_image is None or bw_image.size == 0:
-        msg = f'Could not decode page PNG: "{png_file}".'
-        raise RuntimeError(msg)
+    validate_page_bw_image(bw_image, png_file)
     pil_image = Image.fromarray(cv.merge([bw_image, bw_image, bw_image])).convert("RGBA")
 
     page_panel_boxes = title_pages_panel_boxes.pages[fanta_page]
@@ -698,6 +716,12 @@ app = typer.Typer()
 @app.command(help="Show prelim OCR annotated images for a title")
 def main(  # noqa: PLR0913
     title_str: TitleArg = "",
+    volume: int | None = typer.Option(
+        None,
+        "--volume",
+        "-v",
+        help="Fanta volume; use with --page to look up the title. Mutually exclusive with --title.",
+    ),
     engine: OcrTypes = typer.Option(  # noqa: B008
         ..., "--engine", "-e", help="OCR engine to display."
     ),
@@ -707,11 +731,19 @@ def main(  # noqa: PLR0913
         default=False,
         help="Resume at the last title/page saved in the ini file.",
     ),
-    win_left: int = typer.Option(100, "--win-left", help="Window left position in pixels."),
-    win_top: int = typer.Option(80, "--win-top", help="Window top position in pixels."),
+    win_left: int = typer.Option(
+        100, "--win-left", help="Window left position in pixels (relative to primary monitor)."
+    ),
+    win_top: int = typer.Option(
+        80, "--win-top", help="Window top position in pixels (relative to primary monitor)."
+    ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
     init_logging(APP_LOGGING_NAME, "annotate-ocr.log", log_level_str)
+
+    if title_str and volume is not None:
+        msg = "Options --title and --volume are mutually exclusive."
+        raise typer.BadParameter(msg)
 
     if last_page:
         state = _load_last_state()
@@ -721,13 +753,32 @@ def main(  # noqa: PLR0913
         title_str, page = state
         logger.info(f'Resuming last state: title="{title_str}", page={page}.')
 
-    if not title_str:
-        msg = "Must pass --title (or --last-page with prior saved state)."
-        raise typer.BadParameter(msg)
-
     comics_database = ComicsDatabase()
 
-    show_ocr_annotations(comics_database, title_str, engine, page, save, win_left, win_top)
+    if volume is not None:
+        page_str = get_page_str(page)
+        title_str, page = get_title_from_volume_page(comics_database, volume, page_str)
+        if not title_str:
+            msg = f'No title found for volume {volume}, page "{page_str}".'
+            raise typer.BadParameter(msg)
+        logger.info(
+            f'Resolved volume {volume}, page "{page_str}" -> title="{title_str}", page={page}.'
+        )
+
+    if not title_str:
+        msg = "Must pass --title, --volume with --page, or --last-page with prior saved state."
+        raise typer.BadParameter(msg)
+
+    primary_x, primary_y = _get_primary_monitor_offset()
+    show_ocr_annotations(
+        comics_database,
+        title_str,
+        engine,
+        page,
+        save,
+        win_left + primary_x,
+        win_top + primary_y,
+    )
 
 
 if __name__ == "__main__":
