@@ -273,8 +273,26 @@
           "book_side": "right"
         },
         {
-          "md": "**Q:** How about the adventure strips, like *Tarzan* and *Prince Valiant*?\n**CB:** Oh, I liked them. I liked them for their illustrations more than for their scripts. I could follow *Prince Valiant*—it aroused quite a bit of sympathy in me—but as for *Tarzan*, I just liked it for the drawings and that’s about all.",
-          "value": "Q: How about the adventure strips, like Tarzan and Prince Valiant?\nCB: Oh, I liked them. I liked them for their illustrations more than for their scripts. I could follow Prince Valiant—it aroused quite a bit of sympathy in me—but as for Tarzan, I just liked it for the drawings and that’s about all.",
+          "md": "**Q:** How about the adventure strips, like *Tarzan* and *Prince Valiant*?",
+          "value": "Q: How about the adventure strips, like Tarzan and Prince Valiant?",
+          "bbox": [
+            {
+              "h": 49.8781341511052,
+              "w": 284.36322799161593,
+              "x": 461.72125373951985,
+              "y": 362.2084963748095,
+              "confidence": 0.95,
+              "end_index": 314,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**CB:** Oh, I liked them. I liked them for their illustrations more than for their scripts. I could follow *Prince Valiant*—it aroused quite a bit of sympathy in me—but as for *Tarzan*, I just liked it for the drawings and that’s about all.",
+          "value": "CB: Oh, I liked them. I liked them for their illustrations more than for their scripts. I could follow Prince Valiant—it aroused quite a bit of sympathy in me—but as for Tarzan, I just liked it for the drawings and that’s about all.",
           "bbox": [
             {
               "h": 49.8781341511052,

@@ -165,8 +165,26 @@
           "book_side": "right"
         },
         {
-          "md": "**Q:** Do you therefore prefer doing the paintings?\n**BARKS:** Yes, I would hate to have to go back into comic books again.",
-          "value": "Q: Do you therefore prefer doing the paintings?\nBARKS: Yes, I would hate to have to go back into comic books again.",
+          "md": "**Q:** Do you therefore prefer doing the paintings?",
+          "value": "Q: Do you therefore prefer doing the paintings?",
+          "bbox": [
+            {
+              "h": 24.022998718559432,
+              "w": 270.12640286775917,
+              "x": 455.73528744283544,
+              "y": 325.4368427543827,
+              "confidence": 0.89,
+              "end_index": 122,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**BARKS:** Yes, I would hate to have to go back into comic books again.",
+          "value": "BARKS: Yes, I would hate to have to go back into comic books again.",
           "bbox": [
             {
               "h": 24.022998718559432,
