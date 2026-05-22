@@ -1,6 +1,8 @@
 # cspell word list — project-specific words
 # One word per line. Case-insensitive.
 
+acked
+acks
 arctan
 autojunk
 barksian

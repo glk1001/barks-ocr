@@ -13,7 +13,9 @@ Florence-2 is loaded on demand and is NOT a hard dependency.  Install with:
 
 import math
 import multiprocessing as mp
+import re
 import time
+import traceback
 from dataclasses import dataclass
 from difflib import SequenceMatcher
 from pathlib import Path
@@ -40,7 +42,11 @@ from thefuzz import fuzz
 from barks_ocr.utils.group_checks import is_acknowledged
 
 app = typer.Typer()
-_console = Console()
+# record=True so --log-html can dump a colored transcript at the end.  Memory
+# cost is bounded by the run's output volume (segments are stored, not the
+# rendered terminal).  Worker processes have their own _console; in multi-worker
+# mode their output prints to the parent's terminal but isn't captured here.
+_console = Console(record=True)
 
 DEFAULT_MODEL = "microsoft/Florence-2-large"
 _OCR_TASK = "<OCR>"
@@ -64,6 +70,11 @@ _DESKEW_MIN_ANGLE = 5.0
 # Pages are loaded as black-on-white BW; white avoids a black triangle that would
 # confuse Florence's text detector.
 _DESKEW_FILL = (255, 255, 255)
+# Florence-2 almost never emits em/en dashes -- it transcribes them as "-" or
+# "--". Canonicalize all dash variants (and runs of them) to a single "-" on
+# both sides before scoring so the variant alone doesn't cost similarity points.
+# Chars: U+2014 EM DASH, U+2013 EN DASH, U+2212 MINUS SIGN, U+002D HYPHEN-MINUS.
+_DASH_RUN_RE = re.compile("[—\u2013\u2212-]+")
 
 
 @dataclass(frozen=True, slots=True)
@@ -293,13 +304,16 @@ def _bbox_from_polygon(
 
 
 def _normalize(s: str) -> str:
-    """Uppercase and strip all whitespace.
+    """Uppercase, strip all whitespace, and canonicalize dash variants.
 
     Florence-2 frequently drops newlines without inserting a space and occasionally adds
     stray spaces before punctuation, so any whitespace-preserving compare understates
     agreement.  Stripping whitespace on both sides isolates true character-level errors.
+    Em/en dashes and runs of hyphens are folded to a single ``-`` because Florence-2
+    rarely emits ``—`` (or its en-dash sibling); it transcribes them as ``-`` or ``--``,
+    which would otherwise cost a point per dash without indicating a real OCR miss.
     """
-    return "".join(s.upper().split())
+    return _DASH_RUN_RE.sub("-", "".join(s.upper().split()))
 
 
 def _load_page_image(comic: ComicBook, fanta_page: str) -> Image.Image:
@@ -442,7 +456,7 @@ def _worker_init(model_id: str, quantize: bool) -> None:
 
 def _worker_run(
     args: tuple[str, OcrTypes, int, int, int, Path | None, int, bool],
-) -> tuple[int, int, float, list[str]]:
+) -> tuple[int, int, float, list[str], list[str]]:
     """Process one title in a worker using the worker-local model and DB."""
     (
         title_name,
@@ -457,25 +471,31 @@ def _worker_run(
     assert _WORKER_FLORENCE is not None
     assert _WORKER_DB is not None
     _console.rule(f"Validating {title_name} ({engine.value})", style="bold cyan")
-    checked, flagged, florence_seconds, queue_lines = _process_title(
-        _WORKER_DB,
-        title_name,
-        engine,
-        _WORKER_FLORENCE,
-        threshold,
-        limit,
-        pad,
-        save_crops_dir,
-        cache_threshold,
-        ignore_cache,
-    )
+    try:
+        checked, flagged, florence_seconds, queue_lines, errors = _process_title(
+            _WORKER_DB,
+            title_name,
+            engine,
+            _WORKER_FLORENCE,
+            threshold,
+            limit,
+            pad,
+            save_crops_dir,
+            cache_threshold,
+            ignore_cache,
+        )
+    except Exception as exc:  # noqa: BLE001
+        tb = traceback.format_exc()
+        err = f'Title "{title_name}" ({engine.value}) crashed: {exc}\n{tb}'
+        _console.print(f"  [bold red]ERROR[/] {err}")
+        return 0, 0, 0.0, [], [err]
     _console.print(
         f"  {checked} bubbles checked, [bold red]{flagged}[/] below threshold {threshold}.\n"
     )
-    return checked, flagged, florence_seconds, queue_lines
+    return checked, flagged, florence_seconds, queue_lines, errors
 
 
-def _process_title(  # noqa: C901, PLR0913, PLR0912, PLR0915
+def _process_title(  # noqa: PLR0913
     comics_database: ComicsDatabase,
     title_str: str,
     engine: OcrTypes,
@@ -486,26 +506,27 @@ def _process_title(  # noqa: C901, PLR0913, PLR0912, PLR0915
     save_crops_dir: Path | None,
     cache_threshold: int,
     ignore_cache: bool,
-) -> tuple[int, int, float, list[str]]:
+) -> tuple[int, int, float, list[str], list[str]]:
     """Validate all bubbles for one title.
 
-    Returns ``(checked, flagged, florence_seconds, queue_lines)`` where
+    Returns ``(checked, flagged, florence_seconds, queue_lines, errors)`` where
     ``florence_seconds`` is the total time spent inside ``_florence_ocr`` for
-    this title and ``queue_lines`` are kivy-editor queue entries for bubbles
-    flagged below ``threshold`` (each: ``volume page engine group_id florence-check``).
+    this title, ``queue_lines`` are kivy-editor queue entries for bubbles flagged
+    below ``threshold`` (each: ``volume page engine group_id florence-check``),
+    and ``errors`` are human-readable messages for pages that crashed (logged
+    but skipped so the job keeps going).
     """
     title = BARKS_TITLE_DICT[title_str]
     speech_groups = SpeechGroups(comics_database)
     speech_page_groups = speech_groups.get_speech_page_groups(title)
     comic = comics_database.get_comic_book(title_str)
 
-    model, processor, device, dtype = florence
-
     checked = 0
     flagged = 0
     florence_seconds = 0.0
     results: list[_Result] = []
     queue_lines: list[str] = []
+    errors: list[str] = []
 
     try:
         for page_group in speech_page_groups:
@@ -518,108 +539,39 @@ def _process_title(  # noqa: C901, PLR0913, PLR0912, PLR0915
                 _console.print(f"  [yellow]Skip page {page_group.fanta_page}: {exc}[/]")
                 continue
 
-            json_groups = page_group.speech_page_json.get("groups", {})
-            page_dirty = False
-
-            for speech_text in page_group.speech_groups.values():
-                if speech_text.panel_num == -1:
-                    continue
-                if not speech_text.raw_ai_text.strip():
-                    continue
-                if not speech_text.text_box:
-                    continue
-
-                bbox = _bbox_from_polygon(speech_text.text_box, pad, page_image.size)
-                crop = page_image.crop(bbox)
-                if crop.width < _MIN_CROP_PX or crop.height < _MIN_CROP_PX:
-                    continue
-
-                group_dict = json_groups.get(speech_text.group_id) or {}
-                if is_acknowledged(group_dict, _FLORENCE_CHECK_ISSUE):
-                    skipped_result = _Result(
-                        fanta_page=page_group.fanta_page,
-                        panel_num=speech_text.panel_num,
-                        group_id=speech_text.group_id,
-                        cleaned=speech_text.raw_ai_text,
-                        florence="",
-                        score=_SCORE_SKIPPED,
-                    )
-                    results.append(skipped_result)
-                    _print_progress(skipped_result, threshold, 0.0)
-                    continue
-
-                if not ignore_cache and _is_cache_hit(
-                    group_dict, speech_text.raw_ai_text, threshold
-                ):
-                    cached_score = int(group_dict[_FLORENCE_PASSED_KEY]["score"])
-                    cached_result = _Result(
-                        fanta_page=page_group.fanta_page,
-                        panel_num=speech_text.panel_num,
-                        group_id=speech_text.group_id,
-                        cleaned=speech_text.raw_ai_text,
-                        florence="",
-                        score=cached_score,
-                        cached=True,
-                    )
-                    results.append(cached_result)
-                    _print_progress(cached_result, threshold, 0.0)
-                    continue
-
-                if save_crops_dir is not None:
-                    save_crops_dir.mkdir(parents=True, exist_ok=True)
-                    safe_title = title_str.replace("/", "_")
-                    crop_path = save_crops_dir / (
-                        f"{safe_title}_p{page_group.fanta_page}"
-                        f"_panel{speech_text.panel_num}_g{speech_text.group_id}.png"
-                    )
-                    crop.save(crop_path)
-
-                cleaned_normalized = _normalize(speech_text.raw_ai_text)
-                t0 = time.perf_counter()
-                if speech_text.type == _SOUND_EFFECT_TYPE:
-                    florence_text, score, rotation = _florence_ocr_best_rotation(
-                        crop, cleaned_normalized, model, processor, device, dtype
-                    )
-                else:
-                    florence_text = _florence_ocr(crop, model, processor, device, dtype)
-                    score = fuzz.ratio(cleaned_normalized, _normalize(florence_text))
-                    rotation = 0
-                elapsed = time.perf_counter() - t0
-                florence_seconds += elapsed
-
-                result = _Result(
-                    fanta_page=page_group.fanta_page,
-                    panel_num=speech_text.panel_num,
-                    group_id=speech_text.group_id,
-                    cleaned=speech_text.raw_ai_text,
-                    florence=florence_text,
-                    score=score,
-                    rotation=rotation,
+            try:
+                page_checked, page_flagged, page_seconds = _process_page(
+                    page_group=page_group,
+                    page_image=page_image,
+                    title_str=title_str,
+                    engine=engine,
+                    florence=florence,
+                    threshold=threshold,
+                    limit=limit,
+                    limit_remaining=(limit - checked) if limit else 0,
+                    pad=pad,
+                    save_crops_dir=save_crops_dir,
+                    cache_threshold=cache_threshold,
+                    ignore_cache=ignore_cache,
+                    results=results,
+                    queue_lines=queue_lines,
                 )
-                results.append(result)
-                _print_progress(result, threshold, elapsed)
+            except Exception as exc:  # noqa: BLE001
+                tb = traceback.format_exc()
+                err = (
+                    f'Title "{title_str}" page {page_group.fanta_page} '
+                    f"({engine.value}) crashed: {exc}"
+                )
+                errors.append(err)
+                _console.print(f"  [bold red]ERROR[/] {err}\n[dim]{tb}[/]")
+                continue
 
-                checked += 1
-                if score < threshold:
-                    flagged += 1
-                    line = _build_queue_line(page_group, engine, speech_text.group_id)
-                    if line is not None:
-                        queue_lines.append(line)
+            checked += page_checked
+            flagged += page_flagged
+            florence_seconds += page_seconds
 
-                if score >= cache_threshold and group_dict:
-                    group_dict[_FLORENCE_PASSED_KEY] = {
-                        "text": speech_text.raw_ai_text,
-                        "score": score,
-                    }
-                    page_dirty = True
-
-                if limit and checked >= limit:
-                    if page_dirty:
-                        page_group.save_json()
-                    return checked, flagged, florence_seconds, queue_lines
-
-            if page_dirty:
-                page_group.save_json()
+            if limit and checked >= limit:
+                return checked, flagged, florence_seconds, queue_lines, errors
     finally:
         if results:
             table = _new_results_table(f"{title_str} ({engine.value})")
@@ -628,7 +580,135 @@ def _process_title(  # noqa: C901, PLR0913, PLR0912, PLR0915
             _console.print()
             _console.print(table)
 
-    return checked, flagged, florence_seconds, queue_lines
+    return checked, flagged, florence_seconds, queue_lines, errors
+
+
+def _process_page(  # noqa: C901, PLR0913, PLR0912, PLR0915
+    *,
+    page_group: Any,  # noqa: ANN401
+    page_image: Image.Image,
+    title_str: str,
+    engine: OcrTypes,
+    florence: tuple[Any, Any, str, Any],
+    threshold: int,
+    limit: int,
+    limit_remaining: int,
+    pad: int,
+    save_crops_dir: Path | None,
+    cache_threshold: int,
+    ignore_cache: bool,
+    results: list[_Result],
+    queue_lines: list[str],
+) -> tuple[int, int, float]:
+    """Validate all bubbles on a single page; mutates ``results``/``queue_lines``.
+
+    Returns ``(checked, flagged, florence_seconds)``.  Raises on unexpected
+    errors so the caller can log them and continue with the next page.
+    """
+    model, processor, device, dtype = florence
+    json_groups = page_group.speech_page_json.get("groups", {})
+    page_dirty = False
+    checked = 0
+    flagged = 0
+    florence_seconds = 0.0
+
+    for speech_text in page_group.speech_groups.values():
+        if speech_text.panel_num == -1:
+            continue
+        if not speech_text.raw_ai_text.strip():
+            continue
+        if not speech_text.text_box:
+            continue
+
+        bbox = _bbox_from_polygon(speech_text.text_box, pad, page_image.size)
+        crop = page_image.crop(bbox)
+        if crop.width < _MIN_CROP_PX or crop.height < _MIN_CROP_PX:
+            continue
+
+        group_dict = json_groups.get(speech_text.group_id) or {}
+        if is_acknowledged(group_dict, _FLORENCE_CHECK_ISSUE):
+            skipped_result = _Result(
+                fanta_page=page_group.fanta_page,
+                panel_num=speech_text.panel_num,
+                group_id=speech_text.group_id,
+                cleaned=speech_text.raw_ai_text,
+                florence="",
+                score=_SCORE_SKIPPED,
+            )
+            results.append(skipped_result)
+            _print_progress(skipped_result, threshold, 0.0)
+            continue
+
+        if not ignore_cache and _is_cache_hit(group_dict, speech_text.raw_ai_text, threshold):
+            cached_score = int(group_dict[_FLORENCE_PASSED_KEY]["score"])
+            cached_result = _Result(
+                fanta_page=page_group.fanta_page,
+                panel_num=speech_text.panel_num,
+                group_id=speech_text.group_id,
+                cleaned=speech_text.raw_ai_text,
+                florence="",
+                score=cached_score,
+                cached=True,
+            )
+            results.append(cached_result)
+            _print_progress(cached_result, threshold, 0.0)
+            continue
+
+        if save_crops_dir is not None:
+            save_crops_dir.mkdir(parents=True, exist_ok=True)
+            safe_title = title_str.replace("/", "_")
+            crop_path = save_crops_dir / (
+                f"{safe_title}_p{page_group.fanta_page}"
+                f"_panel{speech_text.panel_num}_g{speech_text.group_id}.png"
+            )
+            crop.save(crop_path)
+
+        cleaned_normalized = _normalize(speech_text.raw_ai_text)
+        t0 = time.perf_counter()
+        if speech_text.type == _SOUND_EFFECT_TYPE:
+            florence_text, score, rotation = _florence_ocr_best_rotation(
+                crop, cleaned_normalized, model, processor, device, dtype
+            )
+        else:
+            florence_text = _florence_ocr(crop, model, processor, device, dtype)
+            score = fuzz.ratio(cleaned_normalized, _normalize(florence_text))
+            rotation = 0
+        elapsed = time.perf_counter() - t0
+        florence_seconds += elapsed
+
+        result = _Result(
+            fanta_page=page_group.fanta_page,
+            panel_num=speech_text.panel_num,
+            group_id=speech_text.group_id,
+            cleaned=speech_text.raw_ai_text,
+            florence=florence_text,
+            score=score,
+            rotation=rotation,
+        )
+        results.append(result)
+        _print_progress(result, threshold, elapsed)
+
+        checked += 1
+        if score < threshold:
+            flagged += 1
+            line = _build_queue_line(page_group, engine, speech_text.group_id, score)
+            if line is not None:
+                queue_lines.append(line)
+
+        if score >= cache_threshold and group_dict:
+            group_dict[_FLORENCE_PASSED_KEY] = {
+                "text": speech_text.raw_ai_text,
+                "score": score,
+            }
+            page_dirty = True
+
+        if limit and checked >= limit_remaining:
+            break
+
+    if page_dirty:
+        page_group.save_json()
+
+    return checked, flagged, florence_seconds
 
 
 def _is_cache_hit(group_dict: dict, current_text: str, current_threshold: int) -> bool:
@@ -656,7 +736,7 @@ def _write_queue_file(
     unique_lines = sorted(set(queue_lines))
     header = (
         f"# florence_check flagged bubbles (engine={engine.value}, threshold={threshold})\n"
-        "# Format: volume page engine group_id florence-check\n"
+        "# Format: volume page engine group_id florence-check-sim<score>\n"
     )
     queue_out.write_text(header + "\n".join(unique_lines) + ("\n" if unique_lines else ""))
     _console.print(
@@ -669,6 +749,7 @@ def _build_queue_line(
     page_group: Any,  # noqa: ANN401
     engine: OcrTypes,
     group_id: str,
+    score: int,
 ) -> str | None:
     """Build a kivy-editor queue line, or None if the page/group can't be int-parsed."""
     try:
@@ -680,11 +761,14 @@ def _build_queue_line(
             f"{page_group.fanta_page!r}/{group_id!r}[/]"
         )
         return None
-    return f"{page_group.fanta_vol} {page_int} {engine.value} {gid_int} {_FLORENCE_CHECK_ISSUE}"
+    return (
+        f"{page_group.fanta_vol} {page_int} {engine.value} {gid_int} "
+        f"{_FLORENCE_CHECK_ISSUE}-sim{score}"
+    )
 
 
 @app.command(help="Spot-check cleaned OCR text against bubble images using Florence-2.")
-def main(  # noqa: PLR0913
+def main(  # noqa: C901, PLR0913, PLR0915
     volumes_str: VolumesArg = "",
     title_str: TitleArg = "",
     engine: OcrTypes = typer.Option(  # noqa: B008
@@ -748,6 +832,15 @@ def main(  # noqa: PLR0913
         "--no-quantize",
         help="Skip int8 dynamic quantization (slower but higher OCR quality).",
     ),
+    log_html: Path | None = typer.Option(  # noqa: B008
+        None,
+        "--log-html",
+        help=(
+            "If set, write a colored HTML transcript of the run here (open in any browser). "
+            "In multi-worker mode (--workers > 1) only the main process's output is captured; "
+            "worker output appears live in the terminal but is not in the HTML."
+        ),
+    ),
 ) -> None:
     """Run Florence-2 validation across one or more titles."""
     if volumes_str and title_str:
@@ -769,6 +862,11 @@ def main(  # noqa: PLR0913
     grand_flagged = 0
     grand_florence_seconds = 0.0
     all_queue_lines: list[str] = []
+    all_errors: list[str] = []
+
+    def _checkpoint_queue() -> None:
+        if queue_out is not None:
+            _write_queue_file(queue_out, all_queue_lines, threshold, engine)
 
     if effective_workers > 1:
         # Spawn (not fork) to avoid known torch+fork hazards.  Each worker loads
@@ -785,40 +883,52 @@ def main(  # noqa: PLR0913
             initializer=_worker_init,
             initargs=(model_id, not no_quantize),
         ) as pool:
-            for checked, flagged, florence_seconds, queue_lines in pool.imap_unordered(
+            for checked, flagged, florence_seconds, queue_lines, errors in pool.imap_unordered(
                 _worker_run, args_list
             ):
                 grand_checked += checked
                 grand_flagged += flagged
                 grand_florence_seconds += florence_seconds
                 all_queue_lines.extend(queue_lines)
+                all_errors.extend(errors)
+                _checkpoint_queue()
     else:
         florence = _load_florence(model_id, quantize=not no_quantize)
         for title_name in title_list:
             _console.rule(f"Validating {title_name} ({engine.value})", style="bold cyan")
-            checked, flagged, florence_seconds, queue_lines = _process_title(
-                comics_database,
-                title_name,
-                engine,
-                florence,
-                threshold,
-                limit,
-                pad,
-                save_crops_dir,
-                cache_threshold,
-                ignore_cache,
-            )
+            try:
+                checked, flagged, florence_seconds, queue_lines, errors = _process_title(
+                    comics_database,
+                    title_name,
+                    engine,
+                    florence,
+                    threshold,
+                    limit,
+                    pad,
+                    save_crops_dir,
+                    cache_threshold,
+                    ignore_cache,
+                )
+            except Exception as exc:  # noqa: BLE001
+                tb = traceback.format_exc()
+                err = f'Title "{title_name}" ({engine.value}) crashed: {exc}'
+                all_errors.append(err)
+                _console.print(f"  [bold red]ERROR[/] {err}\n[dim]{tb}[/]")
+                _checkpoint_queue()
+                continue
             grand_checked += checked
             grand_flagged += flagged
             grand_florence_seconds += florence_seconds
             all_queue_lines.extend(queue_lines)
+            all_errors.extend(errors)
             _console.print(
                 f"  {checked} bubbles checked, "
                 f"[bold red]{flagged}[/] below threshold {threshold}.\n"
             )
+            _checkpoint_queue()
 
-    if queue_out is not None:
-        _write_queue_file(queue_out, all_queue_lines, threshold, engine)
+    # Final flush even if no titles produced output (writes header / empty file).
+    _checkpoint_queue()
 
     wall_elapsed = time.perf_counter() - wall_start
     per_bubble = grand_florence_seconds / grand_checked if grand_checked else 0.0
@@ -836,6 +946,19 @@ def main(  # noqa: PLR0913
         f"[bold]Wall time:[/] {wall_elapsed:.1f}s  "
         f"[dim](parallelism {parallelism:.2f}x across {effective_workers} worker(s))[/]"
     )
+
+    if all_errors:
+        _console.rule("[bold red]Errors", style="bold red")
+        _console.print(f"[bold red]{len(all_errors)} error(s) during run:[/]")
+        for err in all_errors:
+            _console.print(f"  [red]•[/] {err}")
+    else:
+        _console.print("[bold green]No errors during run.[/]")
+
+    if log_html is not None:
+        log_html.parent.mkdir(parents=True, exist_ok=True)
+        _console.save_html(str(log_html))
+        _console.print(f"[bold]HTML transcript:[/] {log_html}")
 
 
 if __name__ == "__main__":

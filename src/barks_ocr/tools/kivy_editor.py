@@ -125,6 +125,7 @@ TYPE_OPTIONS: tuple[str, ...] = (
 DEFAULT_TYPE = "dialogue"
 TITLE_PAGE_DEFAULT_TYPE = "title"
 TITLE_PAGE_ISSUE_TYPE = "title_page"
+FLORENCE_CHECK_ISSUE_TYPE = "florence-check"
 
 
 # ── Data classes ─────────────────────────────────────────────────────────────
@@ -842,7 +843,9 @@ class EditorApp(App):
             raise ValueError(msg)
         pane.group_id = group_id
         speech_group = pane.speech_groups[group_id]
-        pane.label = self._get_ocr_label(pane.name, group_id, self._get_pane_type(pane))
+        pane.label = self._get_ocr_label(
+            pane.name, group_id, self._get_pane_type(pane), self._get_pane_florence_ack(pane)
+        )
         # Always push the label to the StringProperty so the header updates even
         # when the text value doesn't change (Kivy skips dispatch for same values).
         setattr(self, pane.label_prop, pane.label)
@@ -867,11 +870,19 @@ class EditorApp(App):
             pane.panel_num_input.text = str(panel_num)
 
     @staticmethod
-    def _get_ocr_label(ocr_name: str, group_id: str, type_name: str) -> str:
-        return f"{ocr_name}: group_id: {group_id} ({type_name})"
+    def _get_ocr_label(ocr_name: str, group_id: str, type_name: str, florence_ack: bool) -> str:
+        flor_state = "ack" if florence_ack else "-"
+        return f"{ocr_name}: group_id: {group_id} ({type_name})  [flor: {flor_state}]"
 
     def _get_pane_type(self, pane: EnginePane) -> str:
         return (pane.json_group() or {}).get("type") or DEFAULT_TYPE
+
+    @staticmethod
+    def _get_pane_florence_ack(pane: EnginePane) -> bool:
+        group = pane.json_group()
+        if group is None:
+            return False
+        return FLORENCE_CHECK_ISSUE_TYPE in (group.get("acknowledged_issues") or [])
 
     def _refresh_pane_labels(self) -> None:
         """Re-compute both panes' header labels and push to their label props.
@@ -880,7 +891,12 @@ class EditorApp(App):
         the diff state isn't lost on a type-only refresh.
         """
         for pane in self._panes:
-            pane.label = self._get_ocr_label(pane.name, pane.group_id, self._get_pane_type(pane))
+            pane.label = self._get_ocr_label(
+                pane.name,
+                pane.group_id,
+                self._get_pane_type(pane),
+                self._get_pane_florence_ack(pane),
+            )
             current_prop: str = getattr(self, pane.label_prop)
             if current_prop.startswith("DIFFS -- "):
                 setattr(self, pane.label_prop, f"DIFFS -- {pane.label}")
@@ -1075,13 +1091,19 @@ class EditorApp(App):
 
         row.add_widget(Widget())  # spacer
 
+        row.add_widget(self._get_save_button())
+
         set_type_btn = Button(
             text="Set Type", size_hint_x=None, width=110, size_hint_y=None, height=44
         )
         set_type_btn.bind(on_press=lambda _: self._show_type_popup())
         row.add_widget(set_type_btn)
 
-        row.add_widget(self._get_save_button())
+        set_flor_btn = Button(
+            text="Set Flor", size_hint_x=None, width=110, size_hint_y=None, height=44
+        )
+        set_flor_btn.bind(on_press=lambda _: self._apply_florence_ack_to_current_groups())
+        row.add_widget(set_flor_btn)
 
         if not self._queue:
             row.add_widget(self._get_save_exit_button())
@@ -1142,6 +1164,25 @@ class EditorApp(App):
             self._has_changes = True
             self._refresh_pane_labels()
             logger.debug(f'Type set to "{type_name}" for both panes\' current groups.')
+
+    def _apply_florence_ack_to_current_groups(self) -> None:
+        """Add ``florence-check`` to acknowledged_issues on both panes' current groups."""
+        changed = False
+        affected: list[str] = []
+        for pane in self._panes:
+            json_group = pane.json_group()
+            if json_group is None:
+                continue
+            acked = list(json_group.get("acknowledged_issues") or [])
+            if FLORENCE_CHECK_ISSUE_TYPE not in acked:
+                acked.append(FLORENCE_CHECK_ISSUE_TYPE)
+                json_group["acknowledged_issues"] = acked
+                changed = True
+            affected.append(pane.name)
+        if changed:
+            self._has_changes = True
+            self._refresh_pane_labels()
+            logger.debug(f"florence-check acknowledged on {', '.join(affected)} current groups.")
 
     def _show_type_popup(self) -> None:
         """Show a popup with type radio buttons; on Save, apply to both panes.
@@ -1631,6 +1672,7 @@ class EditorApp(App):
             elif "acknowledged_issues" in group:
                 del group["acknowledged_issues"]
             self._has_changes = True
+            self._refresh_pane_labels()
             popup.dismiss()
 
         save_btn = Button(text="Save")
