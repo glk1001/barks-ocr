@@ -417,8 +417,46 @@
           "book_side": "right"
         },
         {
-          "md": "**H:** Were you there when the great Disney strike took place?\n**B:** I was one of those in the story department. I wasn’t affected by the strike. The story department wasn’t striking. It was the animators and in-betweeners who were striking. The guys in the story department went through the picket lines every morning.",
-          "value": "H: Were you there when the great Disney strike took place?\nB: I was one of those in the story department. I wasn’t affected by the strike. The story department wasn’t striking. It was the animators and in-betweeners who were striking. The guys in the story department went through the picket lines every morning.",
+          "md": "**H:** Were you there when the great Disney strike took place?",
+          "value": "H: Were you there when the great Disney strike took place?",
+          "bbox": [
+            {
+              "h": 62.567205298013334,
+              "w": 281.27625,
+              "x": 466.0773750000001,
+              "y": 477.14066225165567,
+              "confidence": 0.84,
+              "end_index": 319,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 11.3,
+              "w": 231.59,
+              "x": 467.13,
+              "y": 477.14,
+              "confidence": 1.0,
+              "end_index": 61,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 49.95,
+              "w": 281.28,
+              "x": 466.08,
+              "y": 489.76,
+              "confidence": 0.84,
+              "end_index": 319,
+              "label": "text",
+              "start_index": 63
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "**B:** I was one of those in the story department. I wasn’t affected by the strike. The story department wasn’t striking. It was the animators and in-betweeners who were striking. The guys in the story department went through the picket lines every morning.",
+          "value": "B: I was one of those in the story department. I wasn’t affected by the strike. The story department wasn’t striking. It was the animators and in-betweeners who were striking. The guys in the story department went through the picket lines every morning.",
           "bbox": [
             {
               "h": 62.567205298013334,

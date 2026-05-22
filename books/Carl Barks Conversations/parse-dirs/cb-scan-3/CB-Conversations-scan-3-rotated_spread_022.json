@@ -54,7 +54,7 @@
               "start_index": 0
             }
           ],
-          "type": "header",
+          "type": "heading",
           "book_side": "left"
         },
         {
@@ -91,7 +91,7 @@
               "start_index": 0
             }
           ],
-          "type": "header",
+          "type": "heading",
           "book_side": "left"
         },
         {

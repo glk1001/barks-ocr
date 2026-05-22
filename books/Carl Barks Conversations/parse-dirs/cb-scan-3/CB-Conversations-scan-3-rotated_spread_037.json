@@ -241,8 +241,26 @@
           "book_side": "left"
         },
         {
-          "md": "**H:** When you retired, you began to paint in oil. But you were not allowed to paint your ducks, since the copyright belonged to Disney, didn’t it?\n**B:** Yeah. For five years I was just painting and drawing little landscapes and things. Selling them at art shows. And I wrote a bunch of scripts for the Junior Woodchucks. I did about fifteen of those I think. Those were pretty lean years. I wasn’t making very much money out of it. But then, in 1971 I think it was, some guy came by and asked if I could paint him a picture of that little old sailboat cover—September 1949, Disney Comics.",
-          "value": "H: When you retired, you began to paint in oil. But you were not allowed to paint your ducks, since the copyright belonged to Disney, didn’t it?\nB: Yeah. For five years I was just painting and drawing little landscapes and things. Selling them at art shows. And I wrote a bunch of scripts for the Junior Woodchucks. I did about fifteen of those I think. Those were pretty lean years. I wasn’t making very much money out of it. But then, in 1971 I think it was, some guy came by and asked if I could paint him a picture of that little old sailboat cover—September 1949, Disney Comics.",
+          "md": "**H:** When you retired, you began to paint in oil. But you were not allowed to paint your ducks, since the copyright belonged to Disney, didn’t it?",
+          "value": "H: When you retired, you began to paint in oil. But you were not allowed to paint your ducks, since the copyright belonged to Disney, didn’t it?",
+          "bbox": [
+            {
+              "h": 104.79744,
+              "w": 284.3256,
+              "x": 117.76800000000001,
+              "y": 466.22952000000004,
+              "confidence": 0.85,
+              "end_index": 590,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**B:** Yeah. For five years I was just painting and drawing little landscapes and things. Selling them at art shows. And I wrote a bunch of scripts for the Junior Woodchucks. I did about fifteen of those I think. Those were pretty lean years. I wasn’t making very much money out of it. But then, in 1971 I think it was, some guy came by and asked if I could paint him a picture of that little old sailboat cover—September 1949, Disney Comics.",
+          "value": "B: Yeah. For five years I was just painting and drawing little landscapes and things. Selling them at art shows. And I wrote a bunch of scripts for the Junior Woodchucks. I did about fifteen of those I think. Those were pretty lean years. I wasn’t making very much money out of it. But then, in 1971 I think it was, some guy came by and asked if I could paint him a picture of that little old sailboat cover—September 1949, Disney Comics.",
           "bbox": [
             {
               "h": 104.79744,
