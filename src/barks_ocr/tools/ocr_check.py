@@ -7,7 +7,7 @@ from enum import Enum, auto
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import ENUM_FROM_BARKS_TITLE
+from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePagesPanelBoxes, TitlePanelBoxes
@@ -260,7 +260,7 @@ class OcrChecker:
 
         for title_str in title_list:
             print("-" * 80)
-            title = ENUM_FROM_BARKS_TITLE[title_str]
+            title = STR_TITLE_TO_ENUM[title_str]
             volume = self._comics_database.get_fanta_volume_int(title_str)
             page_groups = self._speech_groups.get_speech_page_groups(title)
             page_panel_boxes = self._title_panel_boxes.get_page_panel_boxes(title)

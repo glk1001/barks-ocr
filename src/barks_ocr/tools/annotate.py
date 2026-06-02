@@ -10,7 +10,7 @@ from typing import Any
 
 import cv2 as cv
 import typer
-from barks_fantagraphics.barks_titles import BARKS_TITLES
+from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE
 from barks_fantagraphics.comic_book import ComicBook, get_page_str
 from barks_fantagraphics.comics_consts import CARL_BARKS_FONT_FILE, PAGE_NUM_FONT_FILE, PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
@@ -663,7 +663,7 @@ def show_ocr_annotations(
 
     page_entries = _build_annotated_pages(speech_groups, title_panel_boxes, comic, engine, save)
     if not page_entries:
-        title_name = BARKS_TITLES[comic.get_title_enum()]
+        title_name = ENUM_TO_STR_TITLE[comic.get_title_enum()]
         logger.error(f'No prelim OCR pages for engine "{engine.value}" in title "{title_name}".')
         return
 

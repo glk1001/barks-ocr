@@ -7,7 +7,7 @@ from io import BytesIO
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import BARKS_TITLES, ENUM_FROM_BARKS_TITLE
+from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE, STR_TITLE_TO_ENUM
 from barks_fantagraphics.comic_book import get_page_str
 from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT, PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
@@ -609,7 +609,7 @@ class EditorApp(App):
         self._fanta_page = fanta_page
 
         title_str, dest_page = get_title_from_volume_page(self._comics_database, volume, fanta_page)
-        self._title = ENUM_FROM_BARKS_TITLE[title_str]
+        self._title = STR_TITLE_TO_ENUM[title_str]
         dest_page_str = get_page_str(dest_page)
 
         for pane in self._panes:
@@ -905,7 +905,10 @@ class EditorApp(App):
     # ── info text ─────────────────────────────────────────────────────────────
 
     def _get_editor_info(self) -> str:
-        info = f'"{BARKS_TITLES[self._title]}"  |  Volume {self._volume} |  Page {self._fanta_page}'
+        info = (
+            f'"{ENUM_TO_STR_TITLE[self._title]}"'
+            f"  |  Volume {self._volume} |  Page {self._fanta_page}"
+        )
         if self._queue:
             engine = self._queue[self._queue_index].engine
             issue_type = self._queue[self._queue_index].issue_type

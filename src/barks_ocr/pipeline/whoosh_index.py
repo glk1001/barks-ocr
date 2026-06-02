@@ -5,7 +5,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import ENUM_FROM_BARKS_TITLE
+from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comic_book_info import NON_COMIC_TITLES
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.comics_database import ComicsDatabase
@@ -202,7 +202,7 @@ def _tag_volumes(
             [vol], exclude_non_comics=True
         )
         for title_str, _ in titles:
-            title = ENUM_FROM_BARKS_TITLE[title_str]
+            title = STR_TITLE_TO_ENUM[title_str]
             speech_page_groups = all_speech_groups.get_speech_page_groups(title)
             for speech_page in speech_page_groups:
                 if speech_page.ocr_index != ocr_index_to_use:
@@ -290,7 +290,7 @@ def _discover_entities(
         volumes, exclude_non_comics=True
     )
     for title_str, _ in titles:
-        title = ENUM_FROM_BARKS_TITLE[title_str]
+        title = STR_TITLE_TO_ENUM[title_str]
         speech_page_groups = all_speech_groups.get_speech_page_groups(title)
         for speech_page in speech_page_groups:
             if speech_page.ocr_index != ocr_index_to_use:

@@ -7,7 +7,7 @@ from difflib import SequenceMatcher
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import ENUM_FROM_BARKS_TITLE
+from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups, SpeechPageGroup, SpeechText
@@ -47,7 +47,7 @@ def _compare_title(
     verbose: bool,
 ) -> tuple[list[MismatchFound], list[MissingPanel], int, int, int]:
     """Compare EasyOCR vs PaddleOCR for one title. Return mismatches and counts."""
-    title = ENUM_FROM_BARKS_TITLE[title_str]
+    title = STR_TITLE_TO_ENUM[title_str]
     volume = comics_database.get_fanta_volume_int(title_str)
     speech_groups = SpeechGroups(comics_database)
     speech_page_groups = speech_groups.get_speech_page_groups(title)

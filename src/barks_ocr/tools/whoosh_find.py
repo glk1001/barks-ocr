@@ -3,7 +3,7 @@ import contextlib
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import ENUM_FROM_BARKS_TITLE
+from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT
 from barks_fantagraphics.whoosh_search_engine import ENTITY_TYPES, SearchEngine
@@ -56,7 +56,7 @@ def main(
     with add_to_queue.open("a") if add_to_queue else contextlib.nullcontext() as queue_file:
         for comic_title, title_info in found_text.items():
             print(f'"{comic_title}"')
-            title = ENUM_FROM_BARKS_TITLE[comic_title]
+            title = STR_TITLE_TO_ENUM[comic_title]
 
             for fanta_page, page_info in title_info.fanta_pages.items():
                 print(
