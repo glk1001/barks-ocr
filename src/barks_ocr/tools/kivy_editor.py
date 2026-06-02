@@ -7,9 +7,8 @@ from io import BytesIO
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import BARKS_TITLES
+from barks_fantagraphics.barks_titles import BARKS_TITLES, ENUM_FROM_BARKS_TITLE
 from barks_fantagraphics.comic_book import get_page_str
-from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
 from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT, PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
@@ -610,7 +609,7 @@ class EditorApp(App):
         self._fanta_page = fanta_page
 
         title_str, dest_page = get_title_from_volume_page(self._comics_database, volume, fanta_page)
-        self._title = BARKS_TITLE_DICT[title_str]
+        self._title = ENUM_FROM_BARKS_TITLE[title_str]
         dest_page_str = get_page_str(dest_page)
 
         for pane in self._panes:

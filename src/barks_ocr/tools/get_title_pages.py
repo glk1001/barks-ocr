@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
+from barks_fantagraphics.barks_titles import ENUM_FROM_BARKS_TITLE
 from barks_fantagraphics.comics_consts import PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_comic_titles
@@ -89,7 +89,7 @@ def print_title_summary(
         comic = comics_database.get_comic_book(title_str)
         is_barks = comic.is_barks_title()
 
-        title_enum = BARKS_TITLE_DICT[title_str]
+        title_enum = ENUM_FROM_BARKS_TITLE[title_str]
         try:
             page_group = get_speech_page_group(
                 comics_database,

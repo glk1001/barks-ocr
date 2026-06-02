@@ -5,7 +5,7 @@ import re
 import textwrap
 
 import typer
-from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
+from barks_fantagraphics.barks_titles import ENUM_FROM_BARKS_TITLE
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePagesPanelBoxes, TitlePanelBoxes
@@ -251,7 +251,7 @@ class PrelimOCRCleaner:
         for title_str in title_list:
             print("-" * 80)
 
-            title = BARKS_TITLE_DICT[title_str]
+            title = ENUM_FROM_BARKS_TITLE[title_str]
             volume = self._comics_database.get_fanta_volume_int(title_str)
             skip_pages = SKIP_PREFIXES.get((target_string, volume), [])
             speech_page_groups = self._speech_groups.get_speech_page_groups(title)

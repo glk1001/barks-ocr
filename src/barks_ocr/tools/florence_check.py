@@ -23,8 +23,8 @@ from typing import Any
 
 import cv2 as cv
 import typer
+from barks_fantagraphics.barks_titles import ENUM_FROM_BARKS_TITLE
 from barks_fantagraphics.comic_book import ComicBook
-from barks_fantagraphics.comic_book_info import BARKS_TITLE_DICT
 from barks_fantagraphics.comics_consts import PNG_FILE_EXT
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
@@ -516,7 +516,7 @@ def _process_title(  # noqa: PLR0913
     and ``errors`` are human-readable messages for pages that crashed (logged
     but skipped so the job keeps going).
     """
-    title = BARKS_TITLE_DICT[title_str]
+    title = ENUM_FROM_BARKS_TITLE[title_str]
     speech_groups = SpeechGroups(comics_database)
     speech_page_groups = speech_groups.get_speech_page_groups(title)
     comic = comics_database.get_comic_book(title_str)
