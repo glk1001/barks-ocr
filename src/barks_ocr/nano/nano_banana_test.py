@@ -84,14 +84,14 @@ def main() -> None:
 
     # PANEL_TYPE = "Censorship"
     # PANEL_TYPE = "Closeups"
-    PANEL_TYPE = "Favourites"
-    # PANEL_TYPE = "Insets"
+    # PANEL_TYPE = "Favourites"
+    PANEL_TYPE = "Insets"
     # PANEL_TYPE = "Splash"
     # PANEL_TYPE = "Silhouettes"
     DEST_SUFFIX_PRE = ""
     # DEST_SUFFIX_PRE = "-cl"
 
-    TITLE = "Boxed-In"
+    TITLE = "Toasty Toys"
     EDITED = ""
     # EDITED = "edited"
     IMAGE_FILENAME = "068-4.png"
