@@ -19,6 +19,7 @@ are passed in, so a book parsed into ad-hoc sections reassembles correctly.
 """
 
 import json
+import re
 from collections.abc import Iterator
 from dataclasses import dataclass
 from pathlib import Path
@@ -61,8 +62,67 @@ def _iter_parse_json_paths(parse_dir: Path) -> list[Path]:
     return sorted(parse_dir.glob("*.json"))
 
 
+_REPRINTED_PREFIX = "Reprinted: "
+
+# Matches a ``"Reprinted: ..."`` reprint-source clause through the end of its
+# line. Tolerates markdown emphasis markers around the whole clause
+# (``*Reprinted: ...*``, ``**Reprinted:** ...``) or around just the word with
+# the colon outside (``*Reprinted*: ...``), and the inline form that trails a
+# strip description (``"... golf balls. Reprinted: ..."``). The required colon
+# keeps mid-text "Reprinted from ..." mentions untouched.
+_REPRINTED_CLAUSE_RE = re.compile(r"\s*[*_]*Reprinted[*_]*\s*:.*$")
+
+
+def _is_reprinted_item(item: dict) -> bool:
+    """Return True for a standalone "Reprinted: ..." caption item to drop entirely.
+
+    These are the per-strip reprint-source captions in the comic-pages section
+    of the book (e.g. ``"Reprinted: *Walt Disney's Comics* No. 449, ..."``).
+    They are identified by their first JSON key being ``md`` whose value starts
+    with ``"Reprinted: "`` — items that merely mention "Reprinted from" mid-text
+    keep a different leading key and are preserved.
+    """
+    first_key = next(iter(item), None)
+    if first_key != "md":
+        return False
+    md = item.get("md")
+    return isinstance(md, str) and md.startswith(_REPRINTED_PREFIX)
+
+
+def _strip_reprinted_lines(item: dict) -> None:
+    """Strip any ``"Reprinted: ..."`` reprint-source clause from ``md``/``value``.
+
+    Some comic-strip-listing items glue a reprint-source clause onto the strip
+    description rather than emitting it as a standalone item, so they aren't
+    caught by ``_is_reprinted_item``. The clause may be its own
+    newline-delimited line (possibly wrapped in markdown emphasis, e.g.
+    ``*Reprinted: ...*`` or ``**Reprinted:** ...``) or trail the description
+    inline (``"... golf balls. Reprinted: ..."``). Each line is truncated at the
+    clause: a line that was nothing but the clause is dropped, and an inline
+    clause is cut while the leading description text is kept.
+    """
+    for key in ("md", "value"):
+        text = item.get(key)
+        if not isinstance(text, str):
+            continue
+        out: list[str] = []
+        for line in text.split("\n"):
+            stripped = _REPRINTED_CLAUSE_RE.sub("", line)
+            if stripped == line:
+                out.append(line)
+            elif stripped.strip():
+                out.append(stripped.rstrip())
+            # else: the whole line was a reprint clause -> drop it
+        item[key] = "\n".join(out)
+
+
 def _load_parse_json(json_path: Path) -> tuple[list[dict], str | None]:
     """Load a parse JSON and extract items + printed page number.
+
+    Reprint-source captions are removed: items whose first key is ``md`` with a
+    value starting with ``"Reprinted: "`` are dropped entirely
+    (``_is_reprinted_item``), and any ``"Reprinted: ..."`` line embedded inside
+    a surviving item is stripped (``_strip_reprinted_lines``).
 
     Args:
         json_path: Path to the parse JSON file (one spread or one page).
@@ -78,7 +138,17 @@ def _load_parse_json(json_path: Path) -> tuple[list[dict], str | None]:
     if not pages:
         return [], None
     page = pages[0]
-    return list(page.get("items") or []), page.get("printed_page_number")
+    items: list[dict] = []
+    for item in page.get("items") or []:
+        if _is_reprinted_item(item):
+            continue
+        _strip_reprinted_lines(item)
+        md = item.get("md")
+        if item.get("type") == "text" and isinstance(md, str) and not md.strip():
+            # The item was nothing but a reprint clause; drop it entirely.
+            continue
+        items.append(item)
+    return items, page.get("printed_page_number")
 
 
 def iter_spreads(parse_dirs: list[Path]) -> Iterator[SpreadRecord]:
