@@ -400,6 +400,23 @@
           "type": "text"
         },
         {
+          "md": "First appearance (a cameo) of Daisy Duck in a Barks story.",
+          "value": "First appearance (a cameo) of Daisy Duck in a Barks story.",
+          "bbox": [
+            {
+              "h": 5.473696646341478,
+              "w": 96.68006478658536,
+              "x": 153.92803925304878,
+              "y": 230.16823170731706,
+              "confidence": 0.92,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
           "level": 2,
           "md": "## 38 (4/2) - November 1943 - 68 pages",
           "value": "38 (4/2) - November 1943 - 68 pages",

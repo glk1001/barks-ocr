@@ -214,8 +214,8 @@
         },
         {
           "level": 1,
-          "md": "## 95 (8/11) - July 1948 - 52 pages",
-          "value": "95 (8/11) - July 1948 - 52 pages",
+          "md": "## 95 (8/11) - August 1948 - 52 pages",
+          "value": "95 (8/11) - August 1948 - 52 pages",
           "bbox": [
             {
               "h": 5.601745426829274,
@@ -241,6 +241,23 @@
               "y": 242.8239100609756,
               "confidence": 0.89,
               "end_index": 239,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First Barks cover for *Walt Disney's Comics.*",
+          "value": "First Barks cover for Walt Disney's Comics.",
+          "bbox": [
+            {
+              "h": 5.473696646341478,
+              "w": 96.68006478658536,
+              "x": 153.92803925304878,
+              "y": 230.16823170731706,
+              "confidence": 0.92,
+              "end_index": 47,
               "label": "text",
               "start_index": 0
             }

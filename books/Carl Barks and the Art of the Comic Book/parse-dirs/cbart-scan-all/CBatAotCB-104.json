@@ -381,6 +381,23 @@
           "type": "text"
         },
         {
+          "md": "This page is three panels deep.",
+          "value": "This page is three panels deep.",
+          "bbox": [
+            {
+              "h": 5.423574695121969,
+              "w": 61.006263338414634,
+              "x": 155.06410060975608,
+              "y": 311.5982698170732,
+              "confidence": 0.92,
+              "end_index": 30,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
           "md": "DAISY DUCK’S DIARY A Sticky Situation - 8 - art only - Daisy, fed up with Donald and men in general, takes her nieces camping in the wilderness. *(June 6, 1960).*",
           "value": "DAISY DUCK’S DIARY A Sticky Situation - 8 - art only - Daisy, fed up with Donald and men in general, takes her nieces camping in the wilderness. (June 6, 1960).",
           "bbox": [
