@@ -209,8 +209,8 @@
           "type": "text"
         },
         {
-          "md": "UNCLE SCROOGE North of the Yukon - 24 - A magazine’s picture story about Scrooge reminds Soapy Slick, an old Alaskan money lender, of an I.O.U. that Scrooge gave him in 1898—at 100 per cent interest, every month, compounded forever. Scrooge has a receipt for the debt, and carries it with him to Alaska in a flight bag for the trail of Soapy’s lawsuit. Soapy is on the plane, too, and in a tussle, the flight bag falls through a window and lands near a river.",
-          "value": "UNCLE SCROOGE North of the Yukon - 24 - A magazine’s picture story about Scrooge reminds Soapy Slick, an old Alaskan money lender, of an I.O.U. that Scrooge gave him in 1898—at 100 per cent interest, every month, compounded forever. Scrooge has a receipt for the debt, and carries it with him to Alaska in a flight bag for the trail of Soapy’s lawsuit. Soapy is on the plane, too, and in a tussle, the flight bag falls through a window and lands near a river.",
+          "md": "UNCLE SCROOGE North of the Yukon - 24 - A magazine’s picture story about Scrooge reminds Soapy Slick, an old Alaskan money lender, of an I.O.U. that Scrooge gave him in 1898—at 100 per cent interest, every month, compounded forever. Scrooge has a receipt for the debt, and carries it with him to Alaska in a flight bag for the trail of Soapy’s lawsuit. Soapy is on the plane, too, and in a tussle, the flight bag falls through a window and lands near a river. *(Jan. 25, 1965)*",
+          "value": "UNCLE SCROOGE North of the Yukon - 24 - A magazine’s picture story about Scrooge reminds Soapy Slick, an old Alaskan money lender, of an I.O.U. that Scrooge gave him in 1898—at 100 per cent interest, every month, compounded forever. Scrooge has a receipt for the debt, and carries it with him to Alaska in a flight bag for the trail of Soapy’s lawsuit. Soapy is on the plane, too, and in a tussle, the flight bag falls through a window and lands near a river. (Jan. 25, 1965)",
           "bbox": [
             {
               "h": 47.453894817073156,
@@ -219,23 +219,6 @@
               "y": 190.48152439024392,
               "confidence": 0.98,
               "end_index": 458,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "*(Jan. 25, 1965)*",
-          "value": "(Jan. 25, 1965)",
-          "bbox": [
-            {
-              "h": 5.022759146341477,
-              "w": 29.969118950076215,
-              "x": 12.909814453125,
-              "y": 238.06966463414633,
-              "confidence": 0.86,
-              "end_index": 16,
               "label": "text",
               "start_index": 0
             }

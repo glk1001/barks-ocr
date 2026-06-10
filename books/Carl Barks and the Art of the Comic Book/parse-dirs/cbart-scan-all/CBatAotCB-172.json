@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# 89 (8/5) - February 1948 - 52 pages",
+          "md": "## 89 (8/5) - February 1948 - 52 pages",
           "value": "89 (8/5) - February 1948 - 52 pages",
           "bbox": [
             {
@@ -39,7 +39,7 @@
         },
         {
           "level": 1,
-          "md": "# 90 (8/6) - March 1948 - 52 pages",
+          "md": "## 90 (8/6) - March 1948 - 52 pages",
           "value": "90 (8/6) - March 1948 - 52 pages",
           "bbox": [
             {
@@ -74,7 +74,7 @@
         },
         {
           "level": 1,
-          "md": "# 91 (8/7) - April 1948 - 52 pages",
+          "md": "## 91 (8/7) - April 1948 - 52 pages",
           "value": "91 (8/7) - April 1948 - 52 pages",
           "bbox": [
             {
@@ -109,7 +109,7 @@
         },
         {
           "level": 1,
-          "md": "# 92 (8/8) - May 1948 - 52 pages",
+          "md": "## 92 (8/8) - May 1948 - 52 pages",
           "value": "92 (8/8) - May 1948 - 52 pages",
           "bbox": [
             {
@@ -144,7 +144,7 @@
         },
         {
           "level": 1,
-          "md": "# 93 (8/9) - June 1948 - 52 pages",
+          "md": "## 93 (8/9) - June 1948 - 52 pages",
           "value": "93 (8/9) - June 1948 - 52 pages",
           "bbox": [
             {
@@ -179,7 +179,7 @@
         },
         {
           "level": 1,
-          "md": "# 94 (8/10) - July 1948 - 52 pages",
+          "md": "## 94 (8/10) - July 1948 - 52 pages",
           "value": "94 (8/10) - July 1948 - 52 pages",
           "bbox": [
             {
@@ -214,7 +214,7 @@
         },
         {
           "level": 1,
-          "md": "# 95 (8/11) - July 1948 - 52 pages",
+          "md": "## 95 (8/11) - July 1948 - 52 pages",
           "value": "95 (8/11) - July 1948 - 52 pages",
           "bbox": [
             {
@@ -231,8 +231,25 @@
           "type": "heading"
         },
         {
-          "md": "Front cover: Donald lies sweating on the beach as a St. Bernard approaches with cold drinks. *(Mar. 4, 1948)*\nDONALD DUCK - 10 - Donald and Gladstone brag about their wealth until Daisy asks them to contribute to her club. *(Feb. 19, 1948)*",
-          "value": "Front cover: Donald lies sweating on the beach as a St. Bernard approaches with cold drinks. (Mar. 4, 1948)\nDONALD DUCK - 10 - Donald and Gladstone brag about their wealth until Daisy asks them to contribute to her club. (Feb. 19, 1948)",
+          "md": "Front cover: Donald lies sweating on the beach as a St. Bernard approaches with cold drinks. *(Mar. 4, 1948)*",
+          "value": "Front cover: Donald lies sweating on the beach as a St. Bernard approaches with cold drinks. (Mar. 4, 1948)",
+          "bbox": [
+            {
+              "h": 17.07720274390246,
+              "w": 125.92062726276677,
+              "x": 13.123661990282011,
+              "y": 242.8239100609756,
+              "confidence": 0.89,
+              "end_index": 239,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald and Gladstone brag about their wealth until Daisy asks them to contribute to her club. *(Feb. 19, 1948)*",
+          "value": "DONALD DUCK - 10 - Donald and Gladstone brag about their wealth until Daisy asks them to contribute to her club. (Feb. 19, 1948)",
           "bbox": [
             {
               "h": 17.07720274390246,
@@ -249,7 +266,7 @@
         },
         {
           "level": 1,
-          "md": "# 96 (8/12) - September 1948 - 52 pages",
+          "md": "## 96 (8/12) - September 1948 - 52 pages",
           "value": "96 (8/12) - September 1948 - 52 pages",
           "bbox": [
             {
@@ -266,8 +283,42 @@
           "type": "heading"
         },
         {
-          "md": "Front cover: Donald floats in the bubbles from the soap that a nephew is pouring into his tub. *(Mar. 4, 1948)*\nAn alternate version of this cover still exists; it differs slightly from the published version, in that Donald casts a shadow on the wall behind him as he floats in the air.\nDONALD DUCK - 10 - When Donald forces the nephews to be his caddies, they trick him into believing he can hit a hole-in-one with every shot, and this leads to a bet with Gladstone. *(Mar. 25, 1948)*",
-          "value": "Front cover: Donald floats in the bubbles from the soap that a nephew is pouring into his tub. (Mar. 4, 1948)\nAn alternate version of this cover still exists; it differs slightly from the published version, in that Donald casts a shadow on the wall behind him as he floats in the air.\nDONALD DUCK - 10 - When Donald forces the nephews to be his caddies, they trick him into believing he can hit a hole-in-one with every shot, and this leads to a bet with Gladstone. (Mar. 25, 1948)",
+          "md": "Front cover: Donald floats in the bubbles from the soap that a nephew is pouring into his tub. *(Mar. 4, 1948)*",
+          "value": "Front cover: Donald floats in the bubbles from the soap that a nephew is pouring into his tub. (Mar. 4, 1948)",
+          "bbox": [
+            {
+              "h": 23.130937499999998,
+              "w": 126.03496975038111,
+              "x": 13.568655440167682,
+              "y": 301.87591463414634,
+              "confidence": 0.89,
+              "end_index": 484,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "An alternate version of this cover still exists; it differs slightly from the published version, in that Donald casts a shadow on the wall behind him as he floats in the air.",
+          "value": "An alternate version of this cover still exists; it differs slightly from the published version, in that Donald casts a shadow on the wall behind him as he floats in the air.",
+          "bbox": [
+            {
+              "h": 23.130937499999998,
+              "w": 126.03496975038111,
+              "x": 13.568655440167682,
+              "y": 301.87591463414634,
+              "confidence": 0.89,
+              "end_index": 484,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - When Donald forces the nephews to be his caddies, they trick him into believing he can hit a hole-in-one with every shot, and this leads to a bet with Gladstone. *(Mar. 25, 1948)*",
+          "value": "DONALD DUCK - 10 - When Donald forces the nephews to be his caddies, they trick him into believing he can hit a hole-in-one with every shot, and this leads to a bet with Gladstone. (Mar. 25, 1948)",
           "bbox": [
             {
               "h": 23.130937499999998,
@@ -284,7 +335,7 @@
         },
         {
           "level": 1,
-          "md": "# 97 (9/1) - October 1948 - 52 pages",
+          "md": "## 97 (9/1) - October 1948 - 52 pages",
           "value": "97 (9/1) - October 1948 - 52 pages",
           "bbox": [
             {
@@ -319,7 +370,7 @@
         },
         {
           "level": 1,
-          "md": "# 98 (9/2) - November 1948 - 52 pages",
+          "md": "## 98 (9/2) - November 1948 - 52 pages",
           "value": "98 (9/2) - November 1948 - 52 pages",
           "bbox": [
             {
@@ -336,8 +387,25 @@
           "type": "heading"
         },
         {
-          "md": "DONALD DUCK - 10 - Donald rides to the hounds on Lord Tweeksdale’s estate to prove — for Uncle Scrooge’s benefit — that the members of the duck family are great sportsmen. *(May 28, 1948)*\nFirst appearance of Uncle Scrooge in *Walt Disney’s Comics*.",
-          "value": "DONALD DUCK - 10 - Donald rides to the hounds on Lord Tweeksdale’s estate to prove — for Uncle Scrooge’s benefit — that the members of the duck family are great sportsmen. (May 28, 1948)\nFirst appearance of Uncle Scrooge in Walt Disney’s Comics.",
+          "md": "DONALD DUCK - 10 - Donald rides to the hounds on Lord Tweeksdale’s estate to prove — for Uncle Scrooge’s benefit — that the members of the duck family are great sportsmen. *(May 28, 1948)*",
+          "value": "DONALD DUCK - 10 - Donald rides to the hounds on Lord Tweeksdale’s estate to prove — for Uncle Scrooge’s benefit — that the members of the duck family are great sportsmen. (May 28, 1948)",
+          "bbox": [
+            {
+              "h": 23.52207078887195,
+              "w": 125.67848323170728,
+              "x": 150.94625762195122,
+              "y": 18.238480849847562,
+              "confidence": 0.95,
+              "end_index": 248,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "First appearance of Uncle Scrooge in *Walt Disney’s Comics*.",
+          "value": "First appearance of Uncle Scrooge in Walt Disney’s Comics.",
           "bbox": [
             {
               "h": 23.52207078887195,
@@ -354,7 +422,7 @@
         },
         {
           "level": 1,
-          "md": "# 99 (9/3) - December 1948 - 52 pages",
+          "md": "## 99 (9/3) - December 1948 - 52 pages",
           "value": "99 (9/3) - December 1948 - 52 pages",
           "bbox": [
             {
@@ -371,8 +439,25 @@
           "type": "heading"
         },
         {
-          "md": "DONALD DUCK - 10 - art and rewriting of script - Donald stuffs his head full of obscure facts so that he can win a barrel of money on a radio quiz, but he must compete with the nephews for prizes. *(June 10, 1948)*\nBarks: “Script came from the office. I was paid $25 extra for ‘revising’ it.”",
-          "value": "DONALD DUCK - 10 - art and rewriting of script - Donald stuffs his head full of obscure facts so that he can win a barrel of money on a radio quiz, but he must compete with the nephews for prizes. (June 10, 1948)\nBarks: “Script came from the office. I was paid $25 extra for ‘revising’ it.”",
+          "md": "DONALD DUCK - 10 - art and rewriting of script - Donald stuffs his head full of obscure facts so that he can win a barrel of money on a radio quiz, but he must compete with the nephews for prizes. *(June 10, 1948)*",
+          "value": "DONALD DUCK - 10 - art and rewriting of script - Donald stuffs his head full of obscure facts so that he can win a barrel of money on a radio quiz, but he must compete with the nephews for prizes. (June 10, 1948)",
+          "bbox": [
+            {
+              "h": 23.515604039634145,
+              "w": 124.94610137195124,
+              "x": 151.16991996951216,
+              "y": 59.57248856707317,
+              "confidence": 0.94,
+              "end_index": 291,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Barks:* “Script came from the office. I was paid $25 extra for ‘revising’ it.”",
+          "value": "Barks: “Script came from the office. I was paid $25 extra for ‘revising’ it.”",
           "bbox": [
             {
               "h": 23.515604039634145,
@@ -389,7 +474,7 @@
         },
         {
           "level": 1,
-          "md": "# 100 (9/4) - January 1949 - 52 pages",
+          "md": "## 100 (9/4) - January 1949 - 52 pages",
           "value": "100 (9/4) - January 1949 - 52 pages",
           "bbox": [
             {
@@ -424,7 +509,7 @@
         },
         {
           "level": 1,
-          "md": "# 101 (9/5) - February 1949 - 52 pages",
+          "md": "## 101 (9/5) - February 1949 - 52 pages",
           "value": "101 (9/5) - February 1949 - 52 pages",
           "bbox": [
             {
@@ -459,7 +544,7 @@
         },
         {
           "level": 1,
-          "md": "# 102 (9/6) - March 1949 - 52 pages",
+          "md": "## 102 (9/6) - March 1949 - 52 pages",
           "value": "102 (9/6) - March 1949 - 52 pages",
           "bbox": [
             {
@@ -494,7 +579,7 @@
         },
         {
           "level": 1,
-          "md": "# 103 (9/7) - April 1949 - 52 pages",
+          "md": "## 103 (9/7) - April 1949 - 52 pages",
           "value": "103 (9/7) - April 1949 - 52 pages",
           "bbox": [
             {
@@ -511,8 +596,25 @@
           "type": "heading"
         },
         {
-          "md": "DONALD DUCK - 10 - Donald and Gladstone, rival beachcombers, split up the beach to look for a valuable ruby lost by the Maharajah of Backdore. *(Sept. 23, 1948)*\nBarks: “My notation on voucher says I paid Dana Coty $25.00 for the idea.”\nReprinted: *Walt Disney’s Comics* No. 356, May 1970.",
-          "value": "DONALD DUCK - 10 - Donald and Gladstone, rival beachcombers, split up the beach to look for a valuable ruby lost by the Maharajah of Backdore. (Sept. 23, 1948)\nBarks: “My notation on voucher says I paid Dana Coty $25.00 for the idea.”\nReprinted: Walt Disney’s Comics No. 356, May 1970.",
+          "md": "DONALD DUCK - 10 - Donald and Gladstone, rival beachcombers, split up the beach to look for a valuable ruby lost by the Maharajah of Backdore. *(Sept. 23, 1948)*",
+          "value": "DONALD DUCK - 10 - Donald and Gladstone, rival beachcombers, split up the beach to look for a valuable ruby lost by the Maharajah of Backdore. (Sept. 23, 1948)",
+          "bbox": [
+            {
+              "h": 17.500564024390233,
+              "w": 125.81979420731705,
+              "x": 151.78323361280488,
+              "y": 207.0379573170732,
+              "confidence": 0.89,
+              "end_index": 288,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Barks:* “My notation on voucher says I paid Dana Coty $25.00 for the idea.”\nReprinted: *Walt Disney’s Comics* No. 356, May 1970.",
+          "value": "Barks: “My notation on voucher says I paid Dana Coty $25.00 for the idea.”\nReprinted: Walt Disney’s Comics No. 356, May 1970.",
           "bbox": [
             {
               "h": 17.500564024390233,
@@ -529,7 +631,7 @@
         },
         {
           "level": 1,
-          "md": "# 104 (9/8) - May 1949 - 52 pages",
+          "md": "## 104 (9/8) - May 1949 - 52 pages",
           "value": "104 (9/8) - May 1949 - 52 pages",
           "bbox": [
             {
@@ -546,8 +648,42 @@
           "type": "heading"
         },
         {
-          "md": "Front cover: Truant officer Donald fumes as the nephews fish just across the state line. *(Dec. 9, 1948)*\nDONALD DUCK - 10 - Donald raises Uncle Scrooge’s sunken yacht by stuffing it with ping-pong balls. *(Nov. 24, 1948)*\nIn December 1964, a ship carrying thousands of sheep sank in the harbor at Kuwait. Because of the health hazard involved (the city of Kuwait pumped its drinking water from the harbor), it was necessary to raise the ship rapidly, and Karl Kroyer, a Danish inventor, did so by filling the ship with expandable polystyrene foam. He sought a patent on the process, but, under patent law, a “preliminary description” had already been published, and, therefore, Kroyer’s process was unpatentable. That “preliminary description” was this story. Accounts of this incident appeared in *Popular Science* for April 1965, and *Chemistry* for September 1966, both of which evidently obtained their information (which differs in some details) from Danish publications. A few",
-          "value": "Front cover: Truant officer Donald fumes as the nephews fish just across the state line. (Dec. 9, 1948)\nDONALD DUCK - 10 - Donald raises Uncle Scrooge’s sunken yacht by stuffing it with ping-pong balls. (Nov. 24, 1948)\nIn December 1964, a ship carrying thousands of sheep sank in the harbor at Kuwait. Because of the health hazard involved (the city of Kuwait pumped its drinking water from the harbor), it was necessary to raise the ship rapidly, and Karl Kroyer, a Danish inventor, did so by filling the ship with expandable polystyrene foam. He sought a patent on the process, but, under patent law, a “preliminary description” had already been published, and, therefore, Kroyer’s process was unpatentable. That “preliminary description” was this story. Accounts of this incident appeared in Popular Science for April 1965, and Chemistry for September 1966, both of which evidently obtained their information (which differs in some details) from Danish publications. A few",
+          "md": "Front cover: Truant officer Donald fumes as the nephews fish just across the state line. *(Dec. 9, 1948)*",
+          "value": "Front cover: Truant officer Donald fumes as the nephews fish just across the state line. (Dec. 9, 1948)",
+          "bbox": [
+            {
+              "h": 69.73907012195124,
+              "w": 125.98784108231706,
+              "x": 152.3467625762195,
+              "y": 284.2093902439024,
+              "confidence": 0.96,
+              "end_index": 982,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Donald raises Uncle Scrooge’s sunken yacht by stuffing it with ping-pong balls. *(Nov. 24, 1948)*",
+          "value": "DONALD DUCK - 10 - Donald raises Uncle Scrooge’s sunken yacht by stuffing it with ping-pong balls. (Nov. 24, 1948)",
+          "bbox": [
+            {
+              "h": 69.73907012195124,
+              "w": 125.98784108231706,
+              "x": 152.3467625762195,
+              "y": 284.2093902439024,
+              "confidence": 0.96,
+              "end_index": 982,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In December 1964, a ship carrying thousands of sheep sank in the harbor at Kuwait. Because of the health hazard involved (the city of Kuwait pumped its drinking water from the harbor), it was necessary to raise the ship rapidly, and Karl Kroyer, a Danish inventor, did so by filling the ship with expandable polystyrene foam. He sought a patent on the process, but, under patent law, a “preliminary description” had already been published, and, therefore, Kroyer’s process was unpatentable. That “preliminary description” was this story. Accounts of this incident appeared in *Popular Science* for April 1965, and *Chemistry* for September 1966, both of which evidently obtained their information (which differs in some details) from Danish publications. A few",
+          "value": "In December 1964, a ship carrying thousands of sheep sank in the harbor at Kuwait. Because of the health hazard involved (the city of Kuwait pumped its drinking water from the harbor), it was necessary to raise the ship rapidly, and Karl Kroyer, a Danish inventor, did so by filling the ship with expandable polystyrene foam. He sought a patent on the process, but, under patent law, a “preliminary description” had already been published, and, therefore, Kroyer’s process was unpatentable. That “preliminary description” was this story. Accounts of this incident appeared in Popular Science for April 1965, and Chemistry for September 1966, both of which evidently obtained their information (which differs in some details) from Danish publications. A few",
           "bbox": [
             {
               "h": 69.73907012195124,

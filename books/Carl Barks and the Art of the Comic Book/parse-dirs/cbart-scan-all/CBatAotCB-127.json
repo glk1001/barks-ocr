@@ -3,42 +3,6 @@
     {
       "items": [
         {
-          "items": [
-            {
-              "md": "Next, I was asked to combine Benny with Barney Bear into an 8-page, 8-panel format as a regular feature, starting in *Our Gang* No. 11.",
-              "value": "Next, I was asked to combine Benny with Barney Bear into an 8-page, 8-panel format as a regular feature, starting in Our Gang No. 11.",
-              "bbox": [
-                {
-                  "h": 16.14965796493902,
-                  "w": 124.74572896817835,
-                  "x": 12.405001786394816,
-                  "y": 17.63283727134146,
-                  "confidence": 0.96,
-                  "end_index": 134,
-                  "label": "text",
-                  "start_index": 0
-                }
-              ],
-              "type": "text"
-            }
-          ],
-          "md": "10. Next, I was asked to combine Benny with Barney Bear into an 8-page, 8-panel format as a regular feature, starting in *Our Gang* No. 11.",
-          "ordered": true,
-          "bbox": [
-            {
-              "h": 16.15,
-              "w": 124.75,
-              "x": 12.41,
-              "y": 17.63,
-              "confidence": 0.96,
-              "end_index": 138,
-              "label": "list",
-              "start_index": 0
-            }
-          ],
-          "type": "list"
-        },
-        {
           "md": "Benny is the burro from a 1942 Rudolf Ising cartoon for MGM, *Little Gravel Voice*; he has no name in that cartoon. “About the name of Benny Burro, I don’t believe I named him. My guess would be Eleanor Packer, who edited the comic books for Western in those days.” (Mar. 8, 1970, letter to Michael Barrier)",
           "value": "Benny is the burro from a 1942 Rudolf Ising cartoon for MGM, Little Gravel Voice; he has no name in that cartoon. “About the name of Benny Burro, I don’t believe I named him. My guess would be Eleanor Packer, who edited the comic books for Western in those days.” (Mar. 8, 1970, letter to Michael Barrier)",
           "bbox": [

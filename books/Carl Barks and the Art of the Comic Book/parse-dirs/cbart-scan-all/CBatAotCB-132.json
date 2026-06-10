@@ -56,8 +56,8 @@
         },
         {
           "level": 2,
-          "md": "## Four Color 386 - (March) 1952 - 36 pages",
-          "value": "Four Color 386 - (March) 1952 - 36 pages",
+          "md": "## Four Color 386 - (March) 1952 - 36 pages<br>Uncle Scrooge in Only a Poor Old Man",
+          "value": "Four Color 386 - (March) 1952 - 36 pages<br>Uncle Scrooge in Only a Poor Old Man",
           "bbox": [
             {
               "h": 11.676625381097564,
@@ -66,24 +66,6 @@
               "y": 77.9933974847561,
               "confidence": 0.8,
               "end_index": 39,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "level": 2,
-          "md": "## Uncle Scrooge in Only a Poor Old Man",
-          "value": "Uncle Scrooge in Only a Poor Old Man",
-          "bbox": [
-            {
-              "h": 11.676625381097564,
-              "w": 101.96035025247711,
-              "x": 12.048555997522865,
-              "y": 77.9933974847561,
-              "confidence": 0.81,
-              "end_index": 35,
               "label": "paragraph_title",
               "start_index": 0
             }
@@ -245,8 +227,8 @@
         },
         {
           "level": 2,
-          "md": "## Four Color 456 - (March) 1953 - 36 pages",
-          "value": "Four Color 456 - (March) 1953 - 36 pages",
+          "md": "## Four Color 456 - (March) 1953 - 36 pages<br>Uncle Scrooge, Back to the Klondike",
+          "value": "Four Color 456 - (March) 1953 - 36 pages<br>Uncle Scrooge, Back to the Klondike",
           "bbox": [
             {
               "h": 11.716371951219507,
@@ -255,24 +237,6 @@
               "y": 238.35676829268291,
               "confidence": 0.8,
               "end_index": 39,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "level": 2,
-          "md": "## Uncle Scrooge, Back to the Klondike",
-          "value": "Uncle Scrooge, Back to the Klondike",
-          "bbox": [
-            {
-              "h": 11.716371951219507,
-              "w": 101.2448358898628,
-              "x": 11.709211366234754,
-              "y": 238.35676829268291,
-              "confidence": 0.8,
-              "end_index": 34,
               "label": "paragraph_title",
               "start_index": 0
             }

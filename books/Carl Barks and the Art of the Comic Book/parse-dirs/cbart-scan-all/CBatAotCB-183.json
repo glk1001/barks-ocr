@@ -20,7 +20,7 @@
           "type": "text"
         },
         {
-          "md": "**231 (20/3) - December 1959 - 36 pages**",
+          "md": "## 231 (20/3) - December 1959 - 36 pages",
           "value": "231 (20/3) - December 1959 - 36 pages",
           "bbox": [
             {
@@ -34,7 +34,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews wash dishes while they’re in the bathtub. (Jan. 2, 1959)",
@@ -54,8 +54,8 @@
           "type": "text"
         },
         {
-          "md": "DONALD DUCK The Wax Museum - 10 - Donald becomes a night watchman at a wax museum, but even the frightening exhibits can’t keep him awake. (Nov. 17, 1958)\nBarks: “Got this story idea from my daughter.”",
-          "value": "DONALD DUCK The Wax Museum - 10 - Donald becomes a night watchman at a wax museum, but even the frightening exhibits can’t keep him awake. (Nov. 17, 1958)\nBarks: “Got this story idea from my daughter.”",
+          "md": "DONALD DUCK The Wax Museum - 10 - Donald becomes a night watchman at a wax museum, but even the frightening exhibits can’t keep him awake. (Nov. 17, 1958)",
+          "value": "DONALD DUCK The Wax Museum - 10 - Donald becomes a night watchman at a wax museum, but even the frightening exhibits can’t keep him awake. (Nov. 17, 1958)",
           "bbox": [
             {
               "h": 23.486547256097563,
@@ -71,7 +71,24 @@
           "type": "text"
         },
         {
-          "md": "Similar to “DONALD DUCK” in Walt Disney’s Comics No. 89, February 1948.",
+          "md": "*Barks:* “Got this story idea from my daughter.”",
+          "value": "Barks: “Got this story idea from my daughter.”",
+          "bbox": [
+            {
+              "h": 23.486547256097563,
+              "w": 125.78350395388718,
+              "x": 10.724390482088413,
+              "y": 65.86464557926828,
+              "confidence": 0.96,
+              "end_index": 200,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Similar to “DONALD DUCK” in *Walt Disney’s Comics* No. 89, February 1948.",
           "value": "Similar to “DONALD DUCK” in Walt Disney’s Comics No. 89, February 1948.",
           "bbox": [
             {
@@ -105,7 +122,7 @@
           "type": "text"
         },
         {
-          "md": "**232 (20/4) - January 1960 - 36 pages**",
+          "md": "## 232 (20/4) - January 1960 - 36 pages",
           "value": "232 (20/4) - January 1960 - 36 pages",
           "bbox": [
             {
@@ -119,7 +136,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald plays icicles like a xylophone while the nephews sing. (June 12, 1959)",
@@ -190,7 +207,7 @@
           "type": "text"
         },
         {
-          "md": "**233 (20/5) - February 1960 - 36 pages**",
+          "md": "## 233 (20/5) - February 1960 - 36 pages",
           "value": "233 (20/5) - February 1960 - 36 pages",
           "bbox": [
             {
@@ -204,7 +221,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews use umbrellas as shields, as they fight with water pistols. (Jan. 2, 1959)",
@@ -224,7 +241,7 @@
           "type": "text"
         },
         {
-          "md": "This cover was originally scheduled for Walt Disney’s Comics No. 232, January 1960.",
+          "md": "This cover was originally scheduled for *Walt Disney’s Comics* No. 232, January 1960.",
           "value": "This cover was originally scheduled for Walt Disney’s Comics No. 232, January 1960.",
           "bbox": [
             {
@@ -275,7 +292,7 @@
           "type": "text"
         },
         {
-          "md": "**234 (20/6) - March 1960 - 36 pages**",
+          "md": "## 234 (20/6) - March 1960 - 36 pages",
           "value": "234 (20/6) - March 1960 - 36 pages",
           "bbox": [
             {
@@ -289,7 +306,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "DONALD DUCK Riding the Pony Express - 10 - Donald plays the part of a Pony Express rider on a dude ranch, and unexpectedly carries some vital diplomatic mail. (Aug. 17, 1959)",
@@ -326,7 +343,7 @@
           "type": "text"
         },
         {
-          "md": "**235 (20/7) - April 1960 - 36 pages**",
+          "md": "## 235 (20/7) - April 1960 - 36 pages",
           "value": "235 (20/7) - April 1960 - 36 pages",
           "bbox": [
             {
@@ -340,7 +357,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald lifts up the dirty-footed nephews with his vacuum cleaner. (July 31, 1959)",
@@ -377,7 +394,7 @@
           "type": "text"
         },
         {
-          "md": "A new version of “DONALD DUCK” in Walt Disney’s Comics No. 81, June 1947.",
+          "md": "A new version of “DONALD DUCK” in *Walt Disney’s Comics* No. 81, June 1947.",
           "value": "A new version of “DONALD DUCK” in Walt Disney’s Comics No. 81, June 1947.",
           "bbox": [
             {
@@ -394,7 +411,7 @@
           "type": "text"
         },
         {
-          "md": "**236 (20/8) - May 1960 - 36 pages**",
+          "md": "## 236 (20/8) - May 1960 - 36 pages",
           "value": "236 (20/8) - May 1960 - 36 pages",
           "bbox": [
             {
@@ -408,7 +425,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews build a play house with Donald inside. (Apr. 1, 1959)",
@@ -428,8 +445,25 @@
           "type": "text"
         },
         {
-          "md": "DONALD DUCK Froggy Farmer - 10 - The nephews trick Donald into believing that his “special frog food” has caused young frogs to become full-grown overnight. (Oct. 14, 1959)\nA new version of “DONALD DUCK” in Walt Disney’s Comics No. 77, February 1947.",
-          "value": "DONALD DUCK Froggy Farmer - 10 - The nephews trick Donald into believing that his “special frog food” has caused young frogs to become full-grown overnight. (Oct. 14, 1959)\nA new version of “DONALD DUCK” in Walt Disney’s Comics No. 77, February 1947.",
+          "md": "DONALD DUCK Froggy Farmer - 10 - The nephews trick Donald into believing that his “special frog food” has caused young frogs to become full-grown overnight. (Oct. 14, 1959)",
+          "value": "DONALD DUCK Froggy Farmer - 10 - The nephews trick Donald into believing that his “special frog food” has caused young frogs to become full-grown overnight. (Oct. 14, 1959)",
+          "bbox": [
+            {
+              "h": 28.71553925304878,
+              "w": 126.31647484756098,
+              "x": 149.29790967987802,
+              "y": 35.06858231707317,
+              "confidence": 0.97,
+              "end_index": 249,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A new version of “DONALD DUCK” in *Walt Disney’s Comics* No. 77, February 1947.",
+          "value": "A new version of “DONALD DUCK” in Walt Disney’s Comics No. 77, February 1947.",
           "bbox": [
             {
               "h": 28.71553925304878,
@@ -462,7 +496,7 @@
           "type": "text"
         },
         {
-          "md": "**237 (20/9) - June 1960 - 36 pages**",
+          "md": "## 237 (20/9) - June 1960 - 36 pages",
           "value": "237 (20/9) - June 1960 - 36 pages",
           "bbox": [
             {
@@ -476,7 +510,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald has no luck fishing but the nephews attract fish with bread. (Jan. 22, 1959)",
@@ -530,7 +564,7 @@
           "type": "text"
         },
         {
-          "md": "**238 (20/10) - July 1960 - 36 pages**",
+          "md": "## 238 (20/10) - July 1960 - 36 pages",
           "value": "238 (20/10) - July 1960 - 36 pages",
           "bbox": [
             {
@@ -544,7 +578,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): At the beach, the ducks head for the water wearing life preservers. (Jan. 7, 1960)",
@@ -598,7 +632,7 @@
           "type": "text"
         },
         {
-          "md": "**239 (20/11) - August 1960 - 36 pages**",
+          "md": "## 239 (20/11) - August 1960 - 36 pages",
           "value": "239 (20/11) - August 1960 - 36 pages",
           "bbox": [
             {
@@ -612,7 +646,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "DONALD DUCK The Village Blacksmith - 10 - Donald, the Duckburg blacksmith, is hired to melt down an old cannon and pound it into plowshares. (Jan. 15, 1960)",
@@ -649,7 +683,7 @@
           "type": "text"
         },
         {
-          "md": "**240 (20/12) - September 1960 - 36 pages**",
+          "md": "## 240 (20/12) - September 1960 - 36 pages",
           "value": "240 (20/12) - September 1960 - 36 pages",
           "bbox": [
             {
@@ -663,7 +697,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover: Donald carries all three nephews, under one umbrella. (Nov. 22, 1958)",
@@ -717,7 +751,7 @@
           "type": "text"
         },
         {
-          "md": "**241 (21/1) - October 1960 - 36 pages**",
+          "md": "## 241 (21/1) - October 1960 - 36 pages",
           "value": "241 (21/1) - October 1960 - 36 pages",
           "bbox": [
             {
@@ -731,7 +765,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews share a single bandage for their aching jaws as they go to the dentist. (Apr. 18, 1960)",
@@ -785,7 +819,7 @@
           "type": "text"
         },
         {
-          "md": "**242 (21/2) - November 1960 - 36 pages**",
+          "md": "## 242 (21/2) - November 1960 - 36 pages",
           "value": "242 (21/2) - November 1960 - 36 pages",
           "bbox": [
             {
@@ -799,7 +833,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover: Policeman Donald gives the nephews’ toy car a ticket at a stop light. (Feb. 26, 1960)",

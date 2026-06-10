@@ -397,7 +397,7 @@
           "type": "text"
         },
         {
-          "md": "Changes: This story was submitted as seventeen pages; one page was dropped by Western before publication.",
+          "md": "*Changes:* This story was submitted as seventeen pages; one page was dropped by Western before publication.",
           "value": "Changes: This story was submitted as seventeen pages; one page was dropped by Western before publication.",
           "bbox": [
             {
@@ -500,7 +500,7 @@
           "type": "text"
         },
         {
-          "md": "Changes: This story was submitted as seventeen pages; two pages were dropped by Western before publication.",
+          "md": "*Changes:* This story was submitted as seventeen pages; two pages were dropped by Western before publication.",
           "value": "Changes: This story was submitted as seventeen pages; two pages were dropped by Western before publication.",
           "bbox": [
             {
@@ -532,6 +532,24 @@
             }
           ],
           "type": "text"
+        },
+        {
+          "caption": "Barks’s blue-pencil rough for the front cover of <i>Uncle Scrooge</i> No. 51, August 1964; © 1964 Walt Disney Productions.",
+          "md": "![Barks’s blue-pencil rough for the front cover of *Uncle Scrooge* No. 51, August 1964; © 1964 Walt Disney Productions.](CBatAotCB-150_page_1_image_1_v2.png)",
+          "url": "CBatAotCB-150_page_1_image_1_v2.png",
+          "bbox": [
+            {
+              "h": 277.58436928353655,
+              "w": 221.63402486661585,
+              "x": 33.025365377286576,
+              "y": 57.05337461890244,
+              "confidence": 1.0,
+              "end_index": 140,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
         },
         {
           "level": 2,

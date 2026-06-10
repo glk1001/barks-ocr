@@ -377,7 +377,7 @@
           "type": "text"
         },
         {
-          "md": "Barks: “Got this idea from my daughter.”",
+          "md": "*Barks:* “Got this idea from my daughter.”",
           "value": "Barks: “Got this idea from my daughter.”",
           "bbox": [
             {
@@ -462,7 +462,7 @@
           "type": "text"
         },
         {
-          "md": "A new version of “DONALD DUCK” in Walt Disney’s Comics No. 93, June 1948.",
+          "md": "A new version of “DONALD DUCK” in *Walt Disney’s Comics* No. 93, June 1948.",
           "value": "A new version of “DONALD DUCK” in Walt Disney’s Comics No. 93, June 1948.",
           "bbox": [
             {
@@ -717,7 +717,7 @@
           "type": "text"
         },
         {
-          "md": "Similar to “DONALD DUCK” in Walt Disney’s Comics No. 105, June 1949.",
+          "md": "Similar to “DONALD DUCK” in *Walt Disney’s Comics* No. 105, June 1949.",
           "value": "Similar to “DONALD DUCK” in Walt Disney’s Comics No. 105, June 1949.",
           "bbox": [
             {
@@ -785,7 +785,7 @@
           "type": "text"
         },
         {
-          "md": "According to Barks’s vouchers, this cover was originally scheduled for the front cover of Walt Disney’s Comics No. 219, December 1958.",
+          "md": "According to Barks’s vouchers, this cover was originally scheduled for the front cover of *Walt Disney’s Comics* No. 219, December 1958.",
           "value": "According to Barks’s vouchers, this cover was originally scheduled for the front cover of Walt Disney’s Comics No. 219, December 1958.",
           "bbox": [
             {

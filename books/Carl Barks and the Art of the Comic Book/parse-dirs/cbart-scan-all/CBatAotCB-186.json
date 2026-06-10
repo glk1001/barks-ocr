@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# 265 (23/1) October 1962 - 36 pages",
+          "md": "## 265 (23/1) October 1962 - 36 pages",
           "value": "265 (23/1) October 1962 - 36 pages",
           "bbox": [
             {
@@ -39,7 +39,7 @@
         },
         {
           "level": 1,
-          "md": "# 266 (23/2) - November 1962 - 36 pages",
+          "md": "## 266 (23/2) - November 1962 - 36 pages",
           "value": "266 (23/2) - November 1962 - 36 pages",
           "bbox": [
             {
@@ -74,7 +74,7 @@
         },
         {
           "level": 1,
-          "md": "# 267 (23/3) - December 1962 - 36 pages",
+          "md": "## 267 (23/3) - December 1962 - 36 pages",
           "value": "267 (23/3) - December 1962 - 36 pages",
           "bbox": [
             {
@@ -109,7 +109,7 @@
         },
         {
           "level": 1,
-          "md": "# 268 (23/4) - January 1963 - 36 pages",
+          "md": "## 268 (23/4) - January 1963 - 36 pages",
           "value": "268 (23/4) - January 1963 - 36 pages",
           "bbox": [
             {
@@ -144,7 +144,7 @@
         },
         {
           "level": 1,
-          "md": "# 269 (23/5) - February 1963 - 36 pages",
+          "md": "## 269 (23/5) - February 1963 - 36 pages",
           "value": "269 (23/5) - February 1963 - 36 pages",
           "bbox": [
             {
@@ -161,8 +161,25 @@
           "type": "heading"
         },
         {
-          "md": "DONALD DUCK A Matter of Factory - 10 - art and rewriting of script - Scrooge, embarrassed because Donald is a nobody, makes Donald “president” of a motel, and Donald is besieged by obnoxious guests. *(June 7, 1962)*\nBarks: “A heavily rewritten story from the office.”\nReprinted: Walt Disney’s Comics No. 414, March 1975.",
-          "value": "DONALD DUCK A Matter of Factory - 10 - art and rewriting of script - Scrooge, embarrassed because Donald is a nobody, makes Donald “president” of a motel, and Donald is besieged by obnoxious guests. (June 7, 1962)\nBarks: “A heavily rewritten story from the office.”\nReprinted: Walt Disney’s Comics No. 414, March 1975.",
+          "md": "DONALD DUCK A Matter of Factory - 10 - art and rewriting of script - Scrooge, embarrassed because Donald is a nobody, makes Donald “president” of a motel, and Donald is besieged by obnoxious guests. *(June 7, 1962)*",
+          "value": "DONALD DUCK A Matter of Factory - 10 - art and rewriting of script - Scrooge, embarrassed because Donald is a nobody, makes Donald “president” of a motel, and Donald is besieged by obnoxious guests. (June 7, 1962)",
+          "bbox": [
+            {
+              "h": 23.63284298780487,
+              "w": 126.42448813833839,
+              "x": 12.236726610137193,
+              "y": 190.91391768292684,
+              "confidence": 0.93,
+              "end_index": 319,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Barks:* “A heavily rewritten story from the office.”\nReprinted: Walt Disney’s Comics No. 414, March 1975.",
+          "value": "Barks: “A heavily rewritten story from the office.”\nReprinted: Walt Disney’s Comics No. 414, March 1975.",
           "bbox": [
             {
               "h": 23.63284298780487,
@@ -179,7 +196,7 @@
         },
         {
           "level": 1,
-          "md": "# 270 (23/6) - March 1963 - 36 pages",
+          "md": "## 270 (23/6) - March 1963 - 36 pages",
           "value": "270 (23/6) - March 1963 - 36 pages",
           "bbox": [
             {
@@ -214,7 +231,7 @@
         },
         {
           "level": 1,
-          "md": "# 271 (23/7) - April 1963 - 36 pages",
+          "md": "## 271 (23/7) - April 1963 - 36 pages",
           "value": "271 (23/7) - April 1963 - 36 pages",
           "bbox": [
             {
@@ -249,7 +266,7 @@
         },
         {
           "level": 1,
-          "md": "# 272 (23/8) - May 1963 - 36 pages",
+          "md": "## 272 (23/8) - May 1963 - 36 pages",
           "value": "272 (23/8) - May 1963 - 36 pages",
           "bbox": [
             {
@@ -284,7 +301,7 @@
         },
         {
           "level": 1,
-          "md": "# 273 (23/9) - June 1963 - 36 pages",
+          "md": "## 273 (23/9) - June 1963 - 36 pages",
           "value": "273 (23/9) - June 1963 - 36 pages",
           "bbox": [
             {
@@ -319,7 +336,7 @@
         },
         {
           "level": 1,
-          "md": "# 274 (23/10) - July 1963 - 36 pages",
+          "md": "## 274 (23/10) - July 1963 - 36 pages",
           "value": "274 (23/10) - July 1963 - 36 pages",
           "bbox": [
             {
@@ -336,8 +353,25 @@
           "type": "heading"
         },
         {
-          "md": "DONALD DUCK Gall of the Wild - 10 - art and rewriting of script - Donald drives the nephews along the northern coast, where they try to find food on a beach after Donald loses his wallet in a berry patch. *(Oct. 10, 1962)*\nBarks: “This was a nine-page office story that I stretched.”\nReprinted: Walt Disney Comics Digest No. 31, October 1971; Walt Disney’s Comics No. 452, May 1978.",
-          "value": "DONALD DUCK Gall of the Wild - 10 - art and rewriting of script - Donald drives the nephews along the northern coast, where they try to find food on a beach after Donald loses his wallet in a berry patch. (Oct. 10, 1962)\nBarks: “This was a nine-page office story that I stretched.”\nReprinted: Walt Disney Comics Digest No. 31, October 1971; Walt Disney’s Comics No. 452, May 1978.",
+          "md": "DONALD DUCK Gall of the Wild - 10 - art and rewriting of script - Donald drives the nephews along the northern coast, where they try to find food on a beach after Donald loses his wallet in a berry patch. *(Oct. 10, 1962)*",
+          "value": "DONALD DUCK Gall of the Wild - 10 - art and rewriting of script - Donald drives the nephews along the northern coast, where they try to find food on a beach after Donald loses his wallet in a berry patch. (Oct. 10, 1962)",
+          "bbox": [
+            {
+              "h": 23.29227896341464,
+              "w": 126.08308879573171,
+              "x": 149.5684413109756,
+              "y": 90.07115853658536,
+              "confidence": 0.92,
+              "end_index": 381,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Barks:* “This was a nine-page office story that I stretched.”\nReprinted: Walt Disney Comics Digest No. 31, October 1971; Walt Disney’s Comics No. 452, May 1978.",
+          "value": "Barks: “This was a nine-page office story that I stretched.”\nReprinted: Walt Disney Comics Digest No. 31, October 1971; Walt Disney’s Comics No. 452, May 1978.",
           "bbox": [
             {
               "h": 23.29227896341464,
@@ -354,7 +388,7 @@
         },
         {
           "level": 1,
-          "md": "# 275 (23/11) - August 1963 - 36 pages",
+          "md": "## 275 (23/11) - August 1963 - 36 pages",
           "value": "275 (23/11) - August 1963 - 36 pages",
           "bbox": [
             {
@@ -389,7 +423,7 @@
         },
         {
           "level": 1,
-          "md": "# 276 (23/12) - September 1963 - 36 pages",
+          "md": "## 276 (23/12) - September 1963 - 36 pages",
           "value": "276 (23/12) - September 1963 - 36 pages",
           "bbox": [
             {
@@ -406,8 +440,25 @@
           "type": "heading"
         },
         {
-          "md": "Front cover (part) (art only): Donald, wearing a lifeguard’s shirt, is admired by two girl ducks. *(Feb. 21, 1963)*\nDONALD DUCK Beach Boy - 10 - Donald, angry at the Woodchucks’ Official Hound for showing him up as a lifeguard, tries to distract the Hound during his sentry duty. *(Nov. 13, 1962)*",
-          "value": "Front cover (part) (art only): Donald, wearing a lifeguard’s shirt, is admired by two girl ducks. (Feb. 21, 1963)\nDONALD DUCK Beach Boy - 10 - Donald, angry at the Woodchucks’ Official Hound for showing him up as a lifeguard, tries to distract the Hound during his sentry duty. (Nov. 13, 1962)",
+          "md": "Front cover (part) (art only): Donald, wearing a lifeguard’s shirt, is admired by two girl ducks. *(Feb. 21, 1963)*",
+          "value": "Front cover (part) (art only): Donald, wearing a lifeguard’s shirt, is admired by two girl ducks. (Feb. 21, 1963)",
+          "bbox": [
+            {
+              "h": 34.6563224085366,
+              "w": 126.21553353658535,
+              "x": 149.6973875762195,
+              "y": 185.03413490853657,
+              "confidence": 0.97,
+              "end_index": 296,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Beach Boy - 10 - Donald, angry at the Woodchucks’ Official Hound for showing him up as a lifeguard, tries to distract the Hound during his sentry duty. *(Nov. 13, 1962)*",
+          "value": "DONALD DUCK Beach Boy - 10 - Donald, angry at the Woodchucks’ Official Hound for showing him up as a lifeguard, tries to distract the Hound during his sentry duty. (Nov. 13, 1962)",
           "bbox": [
             {
               "h": 34.6563224085366,
@@ -424,7 +475,7 @@
         },
         {
           "level": 1,
-          "md": "# 277 (24/1) - October 1963 - 36 pages",
+          "md": "## 277 (24/1) - October 1963 - 36 pages",
           "value": "277 (24/1) - October 1963 - 36 pages",
           "bbox": [
             {
@@ -441,8 +492,25 @@
           "type": "heading"
         },
         {
-          "md": "Front cover (part) (art only): Donald rides an elephant in a parade of strange pets. *(Apr. 4, 1963)*\nDONALD DUCK The Duckburg Pet Parade - 10 - Donald, searching for a unique pet to enter in the pet parade, rents a rogue elephant that Uncle Scrooge has just received as a gift from a rajah. *(Mar. 7, 1963)*\nReprinted: Walt Disney’s Comics No. 446, November 1977.",
-          "value": "Front cover (part) (art only): Donald rides an elephant in a parade of strange pets. (Apr. 4, 1963)\nDONALD DUCK The Duckburg Pet Parade - 10 - Donald, searching for a unique pet to enter in the pet parade, rents a rogue elephant that Uncle Scrooge has just received as a gift from a rajah. (Mar. 7, 1963)\nReprinted: Walt Disney’s Comics No. 446, November 1977.",
+          "md": "Front cover (part) (art only): Donald rides an elephant in a parade of strange pets. *(Apr. 4, 1963)*",
+          "value": "Front cover (part) (art only): Donald rides an elephant in a parade of strange pets. (Apr. 4, 1963)",
+          "bbox": [
+            {
+              "h": 22.149123475609795,
+              "w": 125.97415586890243,
+              "x": 149.9491920731707,
+              "y": 244.24657774390244,
+              "confidence": 0.91,
+              "end_index": 363,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK The Duckburg Pet Parade - 10 - Donald, searching for a unique pet to enter in the pet parade, rents a rogue elephant that Uncle Scrooge has just received as a gift from a rajah. *(Mar. 7, 1963)*\nReprinted: Walt Disney’s Comics No. 446, November 1977.",
+          "value": "DONALD DUCK The Duckburg Pet Parade - 10 - Donald, searching for a unique pet to enter in the pet parade, rents a rogue elephant that Uncle Scrooge has just received as a gift from a rajah. (Mar. 7, 1963)\nReprinted: Walt Disney’s Comics No. 446, November 1977.",
           "bbox": [
             {
               "h": 22.149123475609795,
@@ -459,7 +527,7 @@
         },
         {
           "level": 1,
-          "md": "# 278 (24/2) - November 1963 - 36 pages",
+          "md": "## 278 (24/2) - November 1963 - 36 pages",
           "value": "278 (24/2) - November 1963 - 36 pages",
           "bbox": [
             {
@@ -476,8 +544,25 @@
           "type": "heading"
         },
         {
-          "md": "Front cover (part) (art only): Donald, holding a toy ray gun, dances with Daisy. *(May 8, 1963)*\nDONALD DUCK Have Gun, Will Dance - 10 - The nephews’ toy gun is an exact model of a top-secret Army ray gun — except that the toy gun only sets its victims to dancing uncontrollably. *(Apr. 11, 1963)*",
-          "value": "Front cover (part) (art only): Donald, holding a toy ray gun, dances with Daisy. (May 8, 1963)\nDONALD DUCK Have Gun, Will Dance - 10 - The nephews’ toy gun is an exact model of a top-secret Army ray gun — except that the toy gun only sets its victims to dancing uncontrollably. (Apr. 11, 1963)",
+          "md": "Front cover (part) (art only): Donald, holding a toy ray gun, dances with Daisy. *(May 8, 1963)*",
+          "value": "Front cover (part) (art only): Donald, holding a toy ray gun, dances with Daisy. (May 8, 1963)",
+          "bbox": [
+            {
+              "h": 23.27051067073171,
+              "w": 126.04693788109753,
+              "x": 149.90721036585364,
+              "y": 298.24182164634146,
+              "confidence": 0.94,
+              "end_index": 296,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Have Gun, Will Dance - 10 - The nephews’ toy gun is an exact model of a top-secret Army ray gun — except that the toy gun only sets its victims to dancing uncontrollably. *(Apr. 11, 1963)*",
+          "value": "DONALD DUCK Have Gun, Will Dance - 10 - The nephews’ toy gun is an exact model of a top-secret Army ray gun — except that the toy gun only sets its victims to dancing uncontrollably. (Apr. 11, 1963)",
           "bbox": [
             {
               "h": 23.27051067073171,
@@ -494,7 +579,7 @@
         },
         {
           "level": 1,
-          "md": "# 279 (24/3) - December 1963 - 36 pages",
+          "md": "## 279 (24/3) - December 1963 - 36 pages",
           "value": "279 (24/3) - December 1963 - 36 pages",
           "bbox": [
             {
@@ -511,8 +596,25 @@
           "type": "heading"
         },
         {
-          "md": "Front cover (part) (art only): Donald and the nephews throw balls at pins at a carnival booth. *(July 1, 1963)*\nDONALD DUCK Once Upon a Carnival - 10 - Donald is",
-          "value": "Front cover (part) (art only): Donald and the nephews throw balls at pins at a carnival booth. (July 1, 1963)\nDONALD DUCK Once Upon a Carnival - 10 - Donald is",
+          "md": "Front cover (part) (art only): Donald and the nephews throw balls at pins at a carnival booth. *(July 1, 1963)*",
+          "value": "Front cover (part) (art only): Donald and the nephews throw balls at pins at a carnival booth. (July 1, 1963)",
+          "bbox": [
+            {
+              "h": 17.371623475609738,
+              "w": 125.72104801829266,
+              "x": 150.11838795731705,
+              "y": 333.6961737804878,
+              "confidence": 0.98,
+              "end_index": 160,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK Once Upon a Carnival - 10 - Donald is",
+          "value": "DONALD DUCK Once Upon a Carnival - 10 - Donald is",
           "bbox": [
             {
               "h": 17.371623475609738,

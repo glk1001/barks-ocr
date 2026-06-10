@@ -122,7 +122,7 @@
           "type": "text"
         },
         {
-          "md": "Barks: “My notes say I paid Dana Coty $25 for the idea.”",
+          "md": "*Barks:* “My notes say I paid Dana Coty $25 for the idea.”",
           "value": "Barks: “My notes say I paid Dana Coty $25 for the idea.”",
           "bbox": [
             {

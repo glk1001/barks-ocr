@@ -362,41 +362,6 @@
           "type": "text"
         },
         {
-          "caption": "A large comic panel showing a chaotic barroom brawl in the Klondike. Scrooge McDuck is in the center, swinging his fists and knocking down several large, bearded men. In the upper left, a speech bubble reads: “IT WAS A FIGHT TO BE PROUD OF! I WAS LIKE A BUZZSAW! MEN FELL IN ROWS LIKE DOMINOES!”",
-          "md": "![A large comic panel showing a chaotic barroom brawl in the Klondike. Scrooge McDuck is in the center, swinging his fists and knocking down several large, bearded men. In the upper left, a speech bubble reads: “IT WAS A FIGHT TO BE PROUD OF! I WAS LIKE A BUZZSAW! MEN FELL IN ROWS LIKE DOMINOES!”](CBatAotCB-134_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-134_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 163.5152515243903,
-              "w": 227.75272794397864,
-              "x": 32.13070955602134,
-              "y": 175.9926219512195,
-              "confidence": 0.99,
-              "end_index": 320,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "This half-page panel was deleted from “Back to the Klondike” in *Uncle Scrooge* Four Color No. 456, 1953, before publication; © Walt Disney Productions.",
-          "value": "This half-page panel was deleted from “Back to the Klondike” in Uncle Scrooge Four Color No. 456, 1953, before publication; © Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 12.42722560975606,
-              "w": 227.2226638719512,
-              "x": 32.467585746951215,
-              "y": 338.9474085365854,
-              "confidence": 0.92,
-              "end_index": 151,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "items": [
             {
               "md": "134 Carl Barks and the Art of the Comic Book",

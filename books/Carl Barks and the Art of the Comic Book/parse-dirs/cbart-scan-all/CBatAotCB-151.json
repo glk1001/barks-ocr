@@ -243,8 +243,8 @@
           "type": "text"
         },
         {
-          "md": "UNCLE SCROOGE McDuck of Arabia - 24 - Scrooge is persuaded by an Arab, Sheik Arrabi, to finance an expedition to the lost mines of the Queen of Sheba, but their plans are overheard by spies, and when the ducks and the sheik reach Arabia, the sheik is kidnaped by a desert bandit Hassan Ben Jaild. Scrooge and Donald look for the bandits from Scrooge’s plane, but the plane crashes in the desert.",
-          "value": "UNCLE SCROOGE McDuck of Arabia - 24 - Scrooge is persuaded by an Arab, Sheik Arrabi, to finance an expedition to the lost mines of the Queen of Sheba, but their plans are overheard by spies, and when the ducks and the sheik reach Arabia, the sheik is kidnaped by a desert bandit Hassan Ben Jaild. Scrooge and Donald look for the bandits from Scrooge’s plane, but the plane crashes in the desert.",
+          "md": "UNCLE SCROOGE McDuck of Arabia - 24 - Scrooge is persuaded by an Arab, Sheik Arrabi, to finance an expedition to the lost mines of the Queen of Sheba, but their plans are overheard by spies, and when the ducks and the sheik reach Arabia, the sheik is kidnaped by a desert bandit Hassan Ben Jaild. Scrooge and Donald look for the bandits from Scrooge’s plane, but the plane crashes in the desert. The nephews enlist the help of the Arab Junior Woodchucks. *(July 13, 1964)*",
+          "value": "UNCLE SCROOGE McDuck of Arabia - 24 - Scrooge is persuaded by an Arab, Sheik Arrabi, to finance an expedition to the lost mines of the Queen of Sheba, but their plans are overheard by spies, and when the ducks and the sheik reach Arabia, the sheik is kidnaped by a desert bandit Hassan Ben Jaild. Scrooge and Donald look for the bandits from Scrooge’s plane, but the plane crashes in the desert. The nephews enlist the help of the Arab Junior Woodchucks. (July 13, 1964)",
           "bbox": [
             {
               "h": 41.4502591463415,
@@ -253,23 +253,6 @@
               "y": 307.3982698170731,
               "confidence": 0.99,
               "end_index": 394,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "The nephews enlist the help of the Arab Junior Woodchucks. *(July 13, 1964)*",
-          "value": "The nephews enlist the help of the Arab Junior Woodchucks. (July 13, 1964)",
-          "bbox": [
-            {
-              "h": 11.490916063262196,
-              "w": 125.23220464939023,
-              "x": 150.14104230182923,
-              "y": 17.329911871189026,
-              "confidence": 0.95,
-              "end_index": 75,
               "label": "text",
               "start_index": 0
             }

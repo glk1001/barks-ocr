@@ -3,41 +3,6 @@
     {
       "items": [
         {
-          "items": [
-            {
-              "md": "burg's dog ??? test of wits. *(Jan. 16, 1961)*",
-              "value": "burg's dog ??? test of wits. (Jan. 16, 1961)",
-              "bbox": [
-                {
-                  "h": 5.3527419969512176,
-                  "w": 86.42729003906248,
-                  "x": 11.442659465510669,
-                  "y": 17.305566882621953,
-                  "confidence": 0.78,
-                  "end_index": 45,
-                  "label": "header",
-                  "start_index": 0
-                }
-              ],
-              "type": "text"
-            }
-          ],
-          "md": "burg’s dog ??? test of wits. *(Jan. 16, 1961)*",
-          "bbox": [
-            {
-              "h": 5.35,
-              "w": 86.43,
-              "x": 11.44,
-              "y": 17.31,
-              "confidence": null,
-              "end_index": null,
-              "label": null,
-              "start_index": null
-            }
-          ],
-          "type": "header"
-        },
-        {
           "md": "Reprinted: Walt Disney’s Comics No. 389, \\[February] 1973.",
           "value": "Reprinted: Walt Disney’s Comics No. 389, [February] 1973.",
           "bbox": [
@@ -177,8 +142,25 @@
           "type": "heading"
         },
         {
-          "md": "Front cover (art only): A Donald snowman seems to have thrown a snowball at Donald himself. *(Jan. 23, 1961)*\nThe same idea—but a different drawing—was used for the cover of Walt Disney’s Comics No. 341, February 1969.",
-          "value": "Front cover (art only): A Donald snowman seems to have thrown a snowball at Donald himself. (Jan. 23, 1961)\nThe same idea—but a different drawing—was used for the cover of Walt Disney’s Comics No. 341, February 1969.",
+          "md": "Front cover (art only): A Donald snowman seems to have thrown a snowball at Donald himself. *(Jan. 23, 1961)*",
+          "value": "Front cover (art only): A Donald snowman seems to have thrown a snowball at Donald himself. (Jan. 23, 1961)",
+          "bbox": [
+            {
+              "h": 23.08728658536584,
+              "w": 125.42342249428351,
+              "x": 12.065477086509144,
+              "y": 117.32841082317073,
+              "confidence": 0.98,
+              "end_index": 217,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The same idea—but a different drawing—was used for the cover of *Walt Disney’s Comics* No. 341, February 1969.",
+          "value": "The same idea—but a different drawing—was used for the cover of Walt Disney’s Comics No. 341, February 1969.",
           "bbox": [
             {
               "h": 23.08728658536584,
@@ -367,7 +349,7 @@
           "type": "text"
         },
         {
-          "md": "Weston: In “Jungle Bungle,” the title panel was revised following office suggestions. In the original splash panel, one of the nephews is holding a stick with a prune on it and the other two are standing next to him. They call to Donald, “All set, Unca Donald! See if you can shoot the PRUNE off this stick with your arrow!” Donald, in panel front right, replies, “Ha! A PRUNE! I could shoot a RAISIN at this easy distance!” The panel was presumably revised because it is extremely unsafe as originally drawn. As revised with the nephews standing next to Donald as he aims at the stick, now stuck in the ground, there is no safety hazard.",
+          "md": "*Weston:* In “Jungle Bungle,” the title panel was revised following office suggestions. In the original splash panel, one of the nephews is holding a stick with a prune on it and the other two are standing next to him. They call to Donald, “All set, Unca Donald! See if you can shoot the PRUNE off this stick with your arrow!” Donald, in panel front right, replies, “Ha! A PRUNE! I could shoot a RAISIN at this easy distance!” The panel was presumably revised because it is extremely unsafe as originally drawn. As revised with the nephews standing next to Donald as he aims at the stick, now stuck in the ground, there is no safety hazard.",
           "value": "Weston: In “Jungle Bungle,” the title panel was revised following office suggestions. In the original splash panel, one of the nephews is holding a stick with a prune on it and the other two are standing next to him. They call to Donald, “All set, Unca Donald! See if you can shoot the PRUNE off this stick with your arrow!” Donald, in panel front right, replies, “Ha! A PRUNE! I could shoot a RAISIN at this easy distance!” The panel was presumably revised because it is extremely unsafe as originally drawn. As revised with the nephews standing next to Donald as he aims at the stick, now stuck in the ground, there is no safety hazard.",
           "bbox": [
             {
@@ -643,7 +625,7 @@
           "type": "text"
         },
         {
-          "md": "Barks: “I dreamed up this story to feature Joe Cowles, a fan who was working on a popcorn machine at Disneyland.”",
+          "md": "*Barks:* “I dreamed up this story to feature Joe Cowles, a fan who was working on a popcorn machine at Disneyland.”",
           "value": "Barks: “I dreamed up this story to feature Joe Cowles, a fan who was working on a popcorn machine at Disneyland.”",
           "bbox": [
             {

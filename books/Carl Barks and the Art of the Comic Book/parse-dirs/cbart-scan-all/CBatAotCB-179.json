@@ -4,7 +4,7 @@
       "items": [
         {
           "level": 1,
-          "md": "# 182 (16/2) - November 1955 - 36 pages",
+          "md": "## 182 (16/2) - November 1955 - 36 pages",
           "value": "182 (16/2) - November 1955 - 36 pages",
           "bbox": [
             {
@@ -39,7 +39,7 @@
         },
         {
           "level": 1,
-          "md": "# 183 - December 1955 - 36 pages",
+          "md": "## 183 - December 1955 - 36 pages",
           "value": "183 - December 1955 - 36 pages",
           "bbox": [
             {
@@ -56,8 +56,42 @@
           "type": "heading"
         },
         {
-          "md": "Front cover: The nephews route their model railroad around the sleeping Donald. *(June 23, 1955)*\nDONALD DUCK - 10 - Gyro has invented a gun for Donald that shoots custard, temporarily blinding game and letting the hunter capture it alive. *(Mar. 17, 1955)*\nGyro, although mentioned, does not appear in the story.\nReprinted: Walt Disney’s Comics No. 399, December 1973.",
-          "value": "Front cover: The nephews route their model railroad around the sleeping Donald. (June 23, 1955)\nDONALD DUCK - 10 - Gyro has invented a gun for Donald that shoots custard, temporarily blinding game and letting the hunter capture it alive. (Mar. 17, 1955)\nGyro, although mentioned, does not appear in the story.\nReprinted: Walt Disney’s Comics No. 399, December 1973.",
+          "md": "Front cover: The nephews route their model railroad around the sleeping Donald. *(June 23, 1955)*",
+          "value": "Front cover: The nephews route their model railroad around the sleeping Donald. (June 23, 1955)",
+          "bbox": [
+            {
+              "h": 17.34264100609756,
+              "w": 125.95411895007621,
+              "x": 10.59767792492378,
+              "y": 59.63673018292683,
+              "confidence": 0.87,
+              "end_index": 368,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "DONALD DUCK - 10 - Gyro has invented a gun for Donald that shoots custard, temporarily blinding game and letting the hunter capture it alive. *(Mar. 17, 1955)*",
+          "value": "DONALD DUCK - 10 - Gyro has invented a gun for Donald that shoots custard, temporarily blinding game and letting the hunter capture it alive. (Mar. 17, 1955)",
+          "bbox": [
+            {
+              "h": 17.34264100609756,
+              "w": 125.95411895007621,
+              "x": 10.59767792492378,
+              "y": 59.63673018292683,
+              "confidence": 0.87,
+              "end_index": 368,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Gyro, although mentioned, does not appear in the story.\nReprinted: Walt Disney’s Comics No. 399, December 1973.",
+          "value": "Gyro, although mentioned, does not appear in the story.\nReprinted: Walt Disney’s Comics No. 399, December 1973.",
           "bbox": [
             {
               "h": 17.34264100609756,
@@ -74,7 +108,7 @@
         },
         {
           "level": 1,
-          "md": "# 184 - January 1956 - 36 pages",
+          "md": "## 184 - January 1956 - 36 pages",
           "value": "184 - January 1956 - 36 pages",
           "bbox": [
             {
@@ -109,7 +143,7 @@
         },
         {
           "level": 1,
-          "md": "# 185 (16/5) - February 1956 - 36 pages",
+          "md": "## 185 (16/5) - February 1956 - 36 pages",
           "value": "185 (16/5) - February 1956 - 36 pages",
           "bbox": [
             {
@@ -126,8 +160,25 @@
           "type": "heading"
         },
         {
-          "md": "DONALD DUCK - 10 - At New Year’s, Donald resolves to serve only the nephews’ favorite foods, while the nephews resolve to eat only the foods that Donald has said are good for them. *(Apr. 21, 1955)*\nCross-references: The ducks refer clearly to the events of “DONALD DUCK” in Walt Disney’s Comics No. 173, February 1955.\nReprinted: Walt Disney’s Comics No. 377, February 1972.",
-          "value": "DONALD DUCK - 10 - At New Year’s, Donald resolves to serve only the nephews’ favorite foods, while the nephews resolve to eat only the foods that Donald has said are good for them. (Apr. 21, 1955)\nCross-references: The ducks refer clearly to the events of “DONALD DUCK” in Walt Disney’s Comics No. 173, February 1955.\nReprinted: Walt Disney’s Comics No. 377, February 1972.",
+          "md": "DONALD DUCK - 10 - At New Year’s, Donald resolves to serve only the nephews’ favorite foods, while the nephews resolve to eat only the foods that Donald has said are good for them. *(Apr. 21, 1955)*",
+          "value": "DONALD DUCK - 10 - At New Year’s, Donald resolves to serve only the nephews’ favorite foods, while the nephews resolve to eat only the foods that Donald has said are good for them. (Apr. 21, 1955)",
+          "bbox": [
+            {
+              "h": 22.99102134146342,
+              "w": 125.7951237376143,
+              "x": 10.649197908727134,
+              "y": 132.33148628048778,
+              "confidence": 0.91,
+              "end_index": 374,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Cross-references:* The ducks refer clearly to the events of “DONALD DUCK” in *Walt Disney’s Comics* No. 173, February 1955.\nReprinted: Walt Disney’s Comics No. 377, February 1972.",
+          "value": "Cross-references: The ducks refer clearly to the events of “DONALD DUCK” in Walt Disney’s Comics No. 173, February 1955.\nReprinted: Walt Disney’s Comics No. 377, February 1972.",
           "bbox": [
             {
               "h": 22.99102134146342,
@@ -144,7 +195,7 @@
         },
         {
           "level": 1,
-          "md": "# 186 (16/6) - March 1956 - 36 pages",
+          "md": "## 186 (16/6) - March 1956 - 36 pages",
           "value": "186 (16/6) - March 1956 - 36 pages",
           "bbox": [
             {
@@ -161,8 +212,25 @@
           "type": "heading"
         },
         {
-          "md": "DONALD DUCK - 10 - Donald and the nephews have rival ice taxis to carry fishermen to fishing holes across a frozen lake. *(Apr. 21, 1955)*\nA new version of “This Month’s Thriller - Rival Boatmen” in Walt Disney’s Comics No. 45, June 1944. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)\nReprinted: Walt Disney Comics Digest No. 33, February 1972.",
-          "value": "DONALD DUCK - 10 - Donald and the nephews have rival ice taxis to carry fishermen to fishing holes across a frozen lake. (Apr. 21, 1955)\nA new version of “This Month’s Thriller - Rival Boatmen” in Walt Disney’s Comics No. 45, June 1944. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)\nReprinted: Walt Disney Comics Digest No. 33, February 1972.",
+          "md": "DONALD DUCK - 10 - Donald and the nephews have rival ice taxis to carry fishermen to fishing holes across a frozen lake. *(Apr. 21, 1955)*",
+          "value": "DONALD DUCK - 10 - Donald and the nephews have rival ice taxis to carry fishermen to fishing holes across a frozen lake. (Apr. 21, 1955)",
+          "bbox": [
+            {
+              "h": 23.142461890243883,
+              "w": 125.91145341082316,
+              "x": 10.38437166539634,
+              "y": 208.59107469512196,
+              "confidence": 0.91,
+              "end_index": 400,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A new version of “This Month’s Thriller - Rival Boatmen” in *Walt Disney’s Comics* No. 45, June 1944. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)\nReprinted: Walt Disney Comics Digest No. 33, February 1972.",
+          "value": "A new version of “This Month’s Thriller - Rival Boatmen” in Walt Disney’s Comics No. 45, June 1944. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)\nReprinted: Walt Disney Comics Digest No. 33, February 1972.",
           "bbox": [
             {
               "h": 23.142461890243883,
@@ -179,7 +247,7 @@
         },
         {
           "level": 1,
-          "md": "# 187 (16/7) - April 1956 - 36 pages",
+          "md": "## 187 (16/7) - April 1956 - 36 pages",
           "value": "187 (16/7) - April 1956 - 36 pages",
           "bbox": [
             {
@@ -214,7 +282,7 @@
         },
         {
           "level": 1,
-          "md": "# 188 (16/8) - May 1956 - 36 pages",
+          "md": "## 188 (16/8) - May 1956 - 36 pages",
           "value": "188 (16/8) - May 1956 - 36 pages",
           "bbox": [
             {
@@ -231,8 +299,25 @@
           "type": "heading"
         },
         {
-          "md": "DONALD DUCK - 10 - Donald enters the Duckburg tryouts for the Olympic team, but finishes in only one event, and with no one but the nephews there to see him. *(Apr. 28, 1955)*\nBarks caricatured himself on the sixth page of this story as Fulldrip Pulpbugle, a javelin hurler with hay fever.",
-          "value": "DONALD DUCK - 10 - Donald enters the Duckburg tryouts for the Olympic team, but finishes in only one event, and with no one but the nephews there to see him. (Apr. 28, 1955)\nBarks caricatured himself on the sixth page of this story as Fulldrip Pulpbugle, a javelin hurler with hay fever.",
+          "md": "DONALD DUCK - 10 - Donald enters the Duckburg tryouts for the Olympic team, but finishes in only one event, and with no one but the nephews there to see him. *(Apr. 28, 1955)*",
+          "value": "DONALD DUCK - 10 - Donald enters the Duckburg tryouts for the Olympic team, but finishes in only one event, and with no one but the nephews there to see him. (Apr. 28, 1955)",
+          "bbox": [
+            {
+              "h": 22.92480182926829,
+              "w": 126.04590034298779,
+              "x": 10.670179115853657,
+              "y": 295.38878048780487,
+              "confidence": 0.92,
+              "end_index": 288,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks caricatured himself on the sixth page of this story as Fulldrip Pulpbugle, a javelin hurler with hay fever.",
+          "value": "Barks caricatured himself on the sixth page of this story as Fulldrip Pulpbugle, a javelin hurler with hay fever.",
           "bbox": [
             {
               "h": 22.92480182926829,
@@ -249,7 +334,7 @@
         },
         {
           "level": 1,
-          "md": "# 189 (16/9) - June 1956 - 36 pages",
+          "md": "## 189 (16/9) - June 1956 - 36 pages",
           "value": "189 (16/9) - June 1956 - 36 pages",
           "bbox": [
             {
@@ -284,7 +369,7 @@
         },
         {
           "level": 1,
-          "md": "# 190 (16/10) - July 1956 - 36 pages",
+          "md": "## 190 (16/10) - July 1956 - 36 pages",
           "value": "190 (16/10) - July 1956 - 36 pages",
           "bbox": [
             {
@@ -301,8 +386,25 @@
           "type": "heading"
         },
         {
-          "md": "DONALD DUCK - 10 - Donald and the nephews hold a swimming race to decide if the nephews will take their piano lessons without complaining. *(July 14, 1955)*\nA new version of “DONALD DUCK” in Walt Disney’s Comics No. 54, March 1945. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)",
-          "value": "DONALD DUCK - 10 - Donald and the nephews hold a swimming race to decide if the nephews will take their piano lessons without complaining. (July 14, 1955)\nA new version of “DONALD DUCK” in Walt Disney’s Comics No. 54, March 1945. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)",
+          "md": "DONALD DUCK - 10 - Donald and the nephews hold a swimming race to decide if the nephews will take their piano lessons without complaining. *(July 14, 1955)*",
+          "value": "DONALD DUCK - 10 - Donald and the nephews hold a swimming race to decide if the nephews will take their piano lessons without complaining. (July 14, 1955)",
+          "bbox": [
+            {
+              "h": 17.451431021341463,
+              "w": 126.27286394817072,
+              "x": 149.81781059451217,
+              "y": 54.68683879573171,
+              "confidence": 0.9,
+              "end_index": 333,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "A new version of “DONALD DUCK” in *Walt Disney’s Comics* No. 54, March 1945. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)",
+          "value": "A new version of “DONALD DUCK” in Walt Disney’s Comics No. 54, March 1945. (Barks pointed out the resemblance in a June 1956 letter to one of his editors at Western Publishing.)",
           "bbox": [
             {
               "h": 17.451431021341463,
@@ -319,7 +421,7 @@
         },
         {
           "level": 1,
-          "md": "# 191 (16/11) - August 1956 - 36 pages",
+          "md": "## 191 (16/11) - August 1956 - 36 pages",
           "value": "191 (16/11) - August 1956 - 36 pages",
           "bbox": [
             {
@@ -354,7 +456,7 @@
         },
         {
           "level": 1,
-          "md": "# 192 (16/12) - September 1956 - 36 pages",
+          "md": "## 192 (16/12) - September 1956 - 36 pages",
           "value": "192 (16/12) - September 1956 - 36 pages",
           "bbox": [
             {
@@ -389,7 +491,7 @@
         },
         {
           "level": 1,
-          "md": "# 193 (17/1) - October 1956 - 36 pages",
+          "md": "## 193 (17/1) - October 1956 - 36 pages",
           "value": "193 (17/1) - October 1956 - 36 pages",
           "bbox": [
             {
@@ -424,7 +526,7 @@
         },
         {
           "level": 1,
-          "md": "# 194 (17/2) - November 1956 - 36 pages",
+          "md": "## 194 (17/2) - November 1956 - 36 pages",
           "value": "194 (17/2) - November 1956 - 36 pages",
           "bbox": [
             {
@@ -459,7 +561,7 @@
         },
         {
           "level": 1,
-          "md": "# 195 (17/3) - December 1956 - 36 pages",
+          "md": "## 195 (17/3) - December 1956 - 36 pages",
           "value": "195 (17/3) - December 1956 - 36 pages",
           "bbox": [
             {
@@ -494,7 +596,7 @@
         },
         {
           "level": 1,
-          "md": "# 196 (17/4) - January 1957 - 36 pages",
+          "md": "## 196 (17/4) - January 1957 - 36 pages",
           "value": "196 (17/4) - January 1957 - 36 pages",
           "bbox": [
             {
@@ -529,7 +631,7 @@
         },
         {
           "level": 1,
-          "md": "# 197 (17/5) - February 1957 - 36 pages",
+          "md": "## 197 (17/5) - February 1957 - 36 pages",
           "value": "197 (17/5) - February 1957 - 36 pages",
           "bbox": [
             {
@@ -546,8 +648,25 @@
           "type": "heading"
         },
         {
-          "md": "DONALD DUCK - 10 - Donald becomes a border patrolman in the desert and is tricked by camera and parakeet smugglers. *(Jan. 5, 1956)*\nSimilar to “DONALD DUCK” in Walt Disney’s Comics No. 94, July 1948.\nReprinted: Walt Disney’s Comics No. 354, March 1970.",
-          "value": "DONALD DUCK - 10 - Donald becomes a border patrolman in the desert and is tricked by camera and parakeet smugglers. (Jan. 5, 1956)\nSimilar to “DONALD DUCK” in Walt Disney’s Comics No. 94, July 1948.\nReprinted: Walt Disney’s Comics No. 354, March 1970.",
+          "md": "DONALD DUCK - 10 - Donald becomes a border patrolman in the desert and is tricked by camera and parakeet smugglers. *(Jan. 5, 1956)*",
+          "value": "DONALD DUCK - 10 - Donald becomes a border patrolman in the desert and is tricked by camera and parakeet smugglers. (Jan. 5, 1956)",
+          "bbox": [
+            {
+              "h": 17.75144817073171,
+              "w": 125.9682050304878,
+              "x": 150.57312118902436,
+              "y": 297.00713414634146,
+              "confidence": 0.9,
+              "end_index": 252,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Similar to “DONALD DUCK” in *Walt Disney’s Comics* No. 94, July 1948.\nReprinted: Walt Disney’s Comics No. 354, March 1970.",
+          "value": "Similar to “DONALD DUCK” in Walt Disney’s Comics No. 94, July 1948.\nReprinted: Walt Disney’s Comics No. 354, March 1970.",
           "bbox": [
             {
               "h": 17.75144817073171,
@@ -564,7 +683,7 @@
         },
         {
           "level": 1,
-          "md": "# 198 (17/6) - March 1957 - 36 pages",
+          "md": "## 198 (17/6) - March 1957 - 36 pages",
           "value": "198 (17/6) - March 1957 - 36 pages",
           "bbox": [
             {

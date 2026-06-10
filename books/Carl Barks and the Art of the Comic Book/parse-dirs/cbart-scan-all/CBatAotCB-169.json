@@ -3,113 +3,6 @@
     {
       "items": [
         {
-          "items": [
-            {
-              "md": "From Walt Disney's Comics No. 44, May 1944; © 1944 Walt Disney Productions.",
-              "value": "From Walt Disney's Comics No. 44, May 1944; © 1944 Walt Disney Productions.",
-              "bbox": [
-                {
-                  "h": 93.65451219512195,
-                  "w": 129.51067740091463,
-                  "x": 143.55815453506096,
-                  "y": 13.44,
-                  "confidence": 0.69,
-                  "end_index": 74,
-                  "label": "image",
-                  "start_index": 0
-                }
-              ],
-              "type": "text"
-            }
-          ],
-          "md": "From Walt Disney’s Comics No. 44, May 1944; © 1944 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 93.65,
-              "w": 129.51,
-              "x": 143.56,
-              "y": 13.44,
-              "confidence": null,
-              "end_index": null,
-              "label": null,
-              "start_index": null
-            }
-          ],
-          "type": "header"
-        },
-        {
-          "caption": "Donald Duck talking about chemical atoms while his nephews watch skeptically. From Walt Disney’s Comics No. 44, May 1944.",
-          "md": "![Donald Duck talking about chemical atoms while his nephews watch skeptically. From Walt Disney’s Comics No. 44, May 1944.](CBatAotCB-169_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-169_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 93.11256573932927,
-              "w": 128.81244855182925,
-              "x": 11.913226943597559,
-              "y": 14.640071455792683,
-              "confidence": 0.95,
-              "end_index": 146,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "Donald Duck mumbling while his nephews observe a bump on his head. From Walt Disney’s Comics No. 44, May 1944.",
-          "md": "![Donald Duck mumbling while his nephews observe a bump on his head. From Walt Disney’s Comics No. 44, May 1944.](CBatAotCB-169_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-169_page_1_image_2_v2.jpg",
-          "bbox": [
-            {
-              "h": 93.65451219512195,
-              "w": 129.51067740091463,
-              "x": 143.55815453506096,
-              "y": 13.44,
-              "confidence": 0.93,
-              "end_index": 135,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "Donald Duck demanding quiet to use his “vast mental powers” while his nephews look on. From Walt Disney’s Comics No. 44, May 1944.",
-          "md": "![Donald Duck demanding quiet to use his “vast mental powers” while his nephews look on. From Walt Disney’s Comics No. 44, May 1944.](CBatAotCB-169_page_1_image_3_v2.jpg)",
-          "url": "CBatAotCB-169_page_1_image_3_v2.jpg",
-          "bbox": [
-            {
-              "h": 91.96008384146342,
-              "w": 128.65812440453507,
-              "x": 12.679569955221035,
-              "y": 111.2155106707317,
-              "confidence": 0.92,
-              "end_index": 155,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "Donald Duck feeling like a “super man” while his nephews talk to him. From Walt Disney’s Comics No. 44, May 1944.",
-          "md": "![Donald Duck feeling like a “super man” while his nephews talk to him. From Walt Disney’s Comics No. 44, May 1944.](CBatAotCB-169_page_1_image_4_v2.jpg)",
-          "url": "CBatAotCB-169_page_1_image_4_v2.jpg",
-          "bbox": [
-            {
-              "h": 92.44642911585368,
-              "w": 129.5493407012195,
-              "x": 144.05818788109755,
-              "y": 110.34643673780488,
-              "confidence": 0.91,
-              "end_index": 138,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
           "md": "agency and trap a bank robber despite Donald’s efforts to confuse them with phony clues. *(May 31, 1945)*",
           "value": "agency and trap a bank robber despite Donald’s efforts to confuse them with phony clues. (May 31, 1945)",
           "bbox": [
@@ -179,7 +72,7 @@
           "type": "text"
         },
         {
-          "md": "**Cross-references:** At the beginning of this story, Donald refers clearly to the story in the preceding issue, Walt Disney’s Comics No. 61, October 1945.",
+          "md": "*Cross-references:* At the beginning of this story, Donald refers clearly to the story in the preceding issue, Walt Disney’s Comics No. 61, October 1945.",
           "value": "Cross-references: At the beginning of this story, Donald refers clearly to the story in the preceding issue, Walt Disney’s Comics No. 61, October 1945.",
           "bbox": [
             {
@@ -231,7 +124,7 @@
           "type": "text"
         },
         {
-          "md": "**Changes:** According to Barks, the ducks’ halos in the last panel were added by the editors. (April 1968 letter to Michael Barrier)\n**Reprinted:** Walt Disney’s Comics No. 304, January 1966",
+          "md": "*Changes:* According to Barks, the ducks’ halos in the last panel were added by the editors. (April 1968 letter to Michael Barrier)\n**Reprinted:** Walt Disney’s Comics No. 304, January 1966",
           "value": "Changes: According to Barks, the ducks’ halos in the last panel were added by the editors. (April 1968 letter to Michael Barrier)\nReprinted: Walt Disney’s Comics No. 304, January 1966",
           "bbox": [
             {

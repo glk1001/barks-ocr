@@ -210,7 +210,7 @@
           "type": "text"
         },
         {
-          "md": "Barks: “Inking was done in the office. Don’t remember the reasons.”",
+          "md": "*Barks:* “Inking was done in the office. Don’t remember the reasons.”",
           "value": "Barks: “Inking was done in the office. Don’t remember the reasons.”",
           "bbox": [
             {
@@ -399,7 +399,7 @@
           "type": "text"
         },
         {
-          "md": "Weston: For the taffy story in Walt Disney’s Comics and Stories No. 175, there are presently known one and a quarter pages of unpublished art. The sequence is numbered as the last two panels of page 6 and all of page 7 of the story, and begins with",
+          "md": "*Weston:* For the taffy story in *Walt Disney’s Comics and Stories* No. 175, there are presently known one and a quarter pages of unpublished art. The sequence is numbered as the last two panels of page 6 and all of page 7 of the story, and begins with",
           "value": "Weston: For the taffy story in Walt Disney’s Comics and Stories No. 175, there are presently known one and a quarter pages of unpublished art. The sequence is numbered as the last two panels of page 6 and all of page 7 of the story, and begins with",
           "bbox": [
             {

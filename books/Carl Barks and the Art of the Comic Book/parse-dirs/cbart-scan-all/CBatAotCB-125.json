@@ -55,8 +55,8 @@
         },
         {
           "level": 1,
-          "md": "# MARCH OF COMICS (See BOYS’ AND GIRLS’ MARCH OF COMICS)",
-          "value": "MARCH OF COMICS (See BOYS’ AND GIRLS’ MARCH OF COMICS)",
+          "md": "# MARCH OF COMICS",
+          "value": "MARCH OF COMICS",
           "bbox": [
             {
               "h": 15.29111661585368,
@@ -72,8 +72,25 @@
           "type": "heading"
         },
         {
+          "md": "## (See BOYS’ AND GIRLS’ MARCH OF COMICS)",
+          "value": "(See BOYS’ AND GIRLS’ MARCH OF COMICS)",
+          "bbox": [
+            {
+              "h": 17.097484756097565,
+              "w": 124.88386730659299,
+              "x": 12.202244545541157,
+              "y": 206.51538109756098,
+              "confidence": 0.98,
+              "end_index": 132,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
           "level": 2,
-          "md": "## MERRY CHRISTMAS (Dell)",
+          "md": "# MERRY CHRISTMAS (Dell)",
           "value": "MERRY CHRISTMAS (Dell)",
           "bbox": [
             {
@@ -91,7 +108,7 @@
         },
         {
           "level": 3,
-          "md": "### 39 - (December) 1960 - 84 pages",
+          "md": "## 39 - (December) 1960 - 84 pages",
           "value": "39 - (December) 1960 - 84 pages",
           "bbox": [
             {
@@ -143,7 +160,7 @@
         },
         {
           "level": 2,
-          "md": "## MICKEY MOUSE (Dell)",
+          "md": "# MICKEY MOUSE (Dell)",
           "value": "MICKEY MOUSE (Dell)",
           "bbox": [
             {
@@ -161,7 +178,7 @@
         },
         {
           "level": 3,
-          "md": "### Four Color 79 - (August) 1945 - 36 pages",
+          "md": "## Four Color 79 - (August) 1945 - 36 pages",
           "value": "Four Color 79 - (August) 1945 - 36 pages",
           "bbox": [
             {
@@ -230,7 +247,7 @@
         },
         {
           "level": 2,
-          "md": "## MICKEY MOUSE ALMANAC (Dell)",
+          "md": "# MICKEY MOUSE ALMANAC (Dell)",
           "value": "MICKEY MOUSE ALMANAC (Dell)",
           "bbox": [
             {
@@ -248,7 +265,7 @@
         },
         {
           "level": 3,
-          "md": "### 1 - (December) 1957 - 100 pages",
+          "md": "## 1 - (December) 1957 - 100 pages",
           "value": "1 - (December) 1957 - 100 pages",
           "bbox": [
             {
@@ -317,8 +334,8 @@
         },
         {
           "level": 2,
-          "md": "## MICKEY MOUSE SUMMER FUN (See SUMMER FUN)",
-          "value": "MICKEY MOUSE SUMMER FUN (See SUMMER FUN)",
+          "md": "# MICKEY MOUSE SUMMER FUN",
+          "value": "MICKEY MOUSE SUMMER FUN",
           "bbox": [
             {
               "h": 14.808852896341449,
@@ -335,7 +352,25 @@
         },
         {
           "level": 2,
-          "md": "## NEW FUNNIES (Dell)",
+          "md": "## (See SUMMER FUN)",
+          "value": "(See SUMMER FUN)",
+          "bbox": [
+            {
+              "h": 14.808852896341449,
+              "w": 113.48530106707312,
+              "x": 155.16020579268292,
+              "y": 125.86773246951219,
+              "confidence": 0.98,
+              "end_index": 39,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "# NEW FUNNIES (Dell)",
           "value": "NEW FUNNIES (Dell)",
           "bbox": [
             {
@@ -353,7 +388,7 @@
         },
         {
           "level": 3,
-          "md": "### 76 - June 1943 - 68 pages",
+          "md": "## 76 - June 1943 - 68 pages",
           "value": "76 - June 1943 - 68 pages",
           "bbox": [
             {
@@ -422,7 +457,7 @@
         },
         {
           "level": 2,
-          "md": "## OUR GANG COMICS (Dell)",
+          "md": "# OUR GANG COMICS (Dell)",
           "value": "OUR GANG COMICS (Dell)",
           "bbox": [
             {
@@ -457,7 +492,7 @@
         },
         {
           "level": 3,
-          "md": "### 8 - Nov.-Dec. 1943 - 60 pages",
+          "md": "## 8 - Nov.-Dec. 1943 - 60 pages",
           "value": "8 - Nov.-Dec. 1943 - 60 pages",
           "bbox": [
             {
@@ -491,8 +526,8 @@
           "type": "text"
         },
         {
-          "md": "Barks discussed his work for Our Gang Comics in the Comic Art interview: “The Barney Bear stories were assigned to me for no particular reason that I know of (artists were in short supply, perhaps). I had never heard of Barney Bear or Benny Burro until the office sent me a model sheet of ‘Benny, the Lonesome Burro’ and asked me to do a finished 8-page story for the MGM Our Gang No. 8. They must have liked the yarn, for they asked me to do another for Our Gang No. 9, and also sent a model sheet of a nameless dog whom I called Happy Hound. I did an 8-pager of him for Our Gang No. 9. Later I saw him in an MGM movie short as Droopy. Then I was asked for another Benny for Our Gang No.",
-          "value": "Barks discussed his work for Our Gang Comics in the Comic Art interview: “The Barney Bear stories were assigned to me for no particular reason that I know of (artists were in short supply, perhaps). I had never heard of Barney Bear or Benny Burro until the office sent me a model sheet of ‘Benny, the Lonesome Burro’ and asked me to do a finished 8-page story for the MGM Our Gang No. 8. They must have liked the yarn, for they asked me to do another for Our Gang No. 9, and also sent a model sheet of a nameless dog whom I called Happy Hound. I did an 8-pager of him for Our Gang No. 9. Later I saw him in an MGM movie short as Droopy. Then I was asked for another Benny for Our Gang No.",
+          "md": "Barks discussed his work for Our Gang Comics in the Comic Art interview: “The Barney Bear stories were assigned to me for no particular reason that I know of (artists were in short supply, perhaps). I had never heard of Barney Bear or Benny Burro until the office sent me a model sheet of ‘Benny, the Lonesome Burro’ and asked me to do a finished 8-page story for the MGM Our Gang No. 8. They must have liked the yarn, for they asked me to do another for Our Gang No. 9, and also sent a model sheet of a nameless dog whom I called Happy Hound. I did an 8-pager of him for Our Gang No. 9. Later I saw him in an MGM movie short as Droopy. Then I was asked for another Benny for Our Gang No. 10. Next, I was asked to combine Benny with Barney Bear into an 8-page, 8-panel format as a regular feature, starting in *Our Gang* No. 11.",
+          "value": "Barks discussed his work for Our Gang Comics in the Comic Art interview: “The Barney Bear stories were assigned to me for no particular reason that I know of (artists were in short supply, perhaps). I had never heard of Barney Bear or Benny Burro until the office sent me a model sheet of ‘Benny, the Lonesome Burro’ and asked me to do a finished 8-page story for the MGM Our Gang No. 8. They must have liked the yarn, for they asked me to do another for Our Gang No. 9, and also sent a model sheet of a nameless dog whom I called Happy Hound. I did an 8-pager of him for Our Gang No. 9. Later I saw him in an MGM movie short as Droopy. Then I was asked for another Benny for Our Gang No. 10. Next, I was asked to combine Benny with Barney Bear into an 8-page, 8-panel format as a regular feature, starting in Our Gang No. 11.",
           "bbox": [
             {
               "h": 64.44278963414638,

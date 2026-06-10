@@ -71,30 +71,6 @@
           "type": "text"
         },
         {
-          "caption": "This half page, although unpublished in the United States, was published in the Finnish comic book Aku Ankka (Donald Duck) in 1976; © 1976 Walt Disney Productions.",
-          "md": "![This half page, although unpublished in the United States, was published in the Finnish comic book Aku Ankka (Donald Duck) in 1976; © 1976 Walt Disney Productions.](CBatAotCB-139_page_1_image_3_v2.jpg)",
-          "url": "CBatAotCB-139_page_1_image_3_v2.jpg",
-          "bbox": null,
-          "type": "image"
-        },
-        {
-          "md": "This half page, although unpublished in the United States, was published in the Finnish comic book Aku Ankka (Donald Duck) in 1976; © 1976 Walt Disney Productions.",
-          "value": "This half page, although unpublished in the United States, was published in the Finnish comic book Aku Ankka (Donald Duck) in 1976; © 1976 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 11.90574695121948,
-              "w": 224.42895531631098,
-              "x": 32.62035680259146,
-              "y": 339.13673780487807,
-              "confidence": 0.96,
-              "end_index": 162,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "items": [
             {
               "md": "Carl Barks and the Art of the Comic Book\n139",

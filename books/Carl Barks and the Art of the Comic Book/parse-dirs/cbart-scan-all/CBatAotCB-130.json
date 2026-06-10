@@ -21,7 +21,7 @@
         },
         {
           "level": 3,
-          "md": "### PG\\&E KITE GIVEAWAY",
+          "md": "# PG\\&E KITE GIVEAWAY",
           "value": "PG&E KITE GIVEAWAY",
           "bbox": [
             {
@@ -39,7 +39,7 @@
         },
         {
           "level": 3,
-          "md": "### (see KITE GIVEAWAY)",
+          "md": "## (see KITE GIVEAWAY)",
           "value": "(see KITE GIVEAWAY)",
           "bbox": [
             {
@@ -57,7 +57,7 @@
         },
         {
           "level": 3,
-          "md": "### PICNIC PARTY",
+          "md": "# PICNIC PARTY",
           "value": "PICNIC PARTY",
           "bbox": [
             {
@@ -75,7 +75,7 @@
         },
         {
           "level": 3,
-          "md": "### (See VACATION PARADE)",
+          "md": "## (See VACATION PARADE)",
           "value": "(See VACATION PARADE)",
           "bbox": [
             {
@@ -93,7 +93,7 @@
         },
         {
           "level": 3,
-          "md": "### PORKY PIG (Dell)",
+          "md": "# PORKY PIG (Dell)",
           "value": "PORKY PIG (Dell)",
           "bbox": [
             {
@@ -110,7 +110,7 @@
           "type": "heading"
         },
         {
-          "md": "**Four Color 48 - (July) 1944 - 52 pages**",
+          "md": "## Four Color 48 - (July) 1944 - 52 pages",
           "value": "Four Color 48 - (July) 1944 - 52 pages",
           "bbox": [
             {
@@ -124,7 +124,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "PORKY PIG in “Porky of the Mounties” - 24 - art only - Petunia goes to Canada for the summer, and when she fails to write him for a week, Porky decides to go to a masquerade party, as a Mounted Policeman. The wind blows Porky’s hat into a boxcar, and he and Bugs are trapped inside and carried to Canada, where Porky is mistaken by Petunia’s uncle for Dauntless of the Mounties. *(Mar. 21, 1944)*",
@@ -179,7 +179,7 @@
         },
         {
           "level": 3,
-          "md": "### SCE KITE GIVEAWAY",
+          "md": "# SCE KITE GIVEAWAY",
           "value": "SCE KITE GIVEAWAY",
           "bbox": [
             {
@@ -197,7 +197,7 @@
         },
         {
           "level": 3,
-          "md": "### (See KITE GIVEAWAYS)",
+          "md": "## (See KITE GIVEAWAYS)",
           "value": "(See KITE GIVEAWAYS)",
           "bbox": [
             {
@@ -215,7 +215,7 @@
         },
         {
           "level": 3,
-          "md": "### SUMMER FUN (Dell)",
+          "md": "# SUMMER FUN (Dell)",
           "value": "SUMMER FUN (Dell)",
           "bbox": [
             {
@@ -249,7 +249,7 @@
           "type": "text"
         },
         {
-          "md": "**2 - (August) 1959 - 84 pages**",
+          "md": "## 2 - (August) 1959 - 84 pages",
           "value": "2 - (August) 1959 - 84 pages",
           "bbox": [
             {
@@ -263,7 +263,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "UNCLE SCROOGE and GYRO in Fun? What’s That? - 10. Scrooge and Gyro are under a doctor’s orders to stop working and have fun, but whatever they try, they wind up counting money and inventing. *(Jan. 8, 1959)*",
@@ -301,7 +301,7 @@
         },
         {
           "level": 3,
-          "md": "### TOM AND JERRY SUMMER FUN (Dell)",
+          "md": "# TOM AND JERRY SUMMER FUN (Dell)",
           "value": "TOM AND JERRY SUMMER FUN (Dell)",
           "bbox": [
             {
@@ -318,7 +318,7 @@
           "type": "heading"
         },
         {
-          "md": "**1 - (July) 1954 - 100 pages**",
+          "md": "## 1 - (July) 1954 - 100 pages",
           "value": "1 - (July) 1954 - 100 pages",
           "bbox": [
             {
@@ -332,7 +332,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "DROOPY - 8 (pp. 83-90) - script only - Droopy, while",
@@ -387,7 +387,7 @@
         },
         {
           "level": 3,
-          "md": "### TOM AND JERRY SUMMER FUN (Gold Key)",
+          "md": "# TOM AND JERRY SUMMER FUN (Gold Key)",
           "value": "TOM AND JERRY SUMMER FUN (Gold Key)",
           "bbox": [
             {
@@ -404,7 +404,7 @@
           "type": "heading"
         },
         {
-          "md": "**1 - (October) 1967 - 69 pages**",
+          "md": "## 1 - (October) 1967 - 69 pages",
           "value": "1 - (October) 1967 - 69 pages",
           "bbox": [
             {
@@ -418,7 +418,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "DROOPY - 8 - Reprinted from *Tom and Jerry Summer Fun* (Dell) No. 1, 1954.",
@@ -439,7 +439,7 @@
         },
         {
           "level": 3,
-          "md": "### TOM AND JERRY WINTER CARNIVAL (Dell)",
+          "md": "# TOM AND JERRY WINTER CARNIVAL (Dell)",
           "value": "TOM AND JERRY WINTER CARNIVAL (Dell)",
           "bbox": [
             {
@@ -456,7 +456,7 @@
           "type": "heading"
         },
         {
-          "md": "**1 - (December) 1952 - 100 pages**",
+          "md": "## 1 - (December) 1952 - 100 pages",
           "value": "1 - (December) 1952 - 100 pages",
           "bbox": [
             {
@@ -470,7 +470,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "DROOPY - 8 (pp. 45-52) - script only - Droopy is given a job as a fox hound, and he bumbles through the hunt until he follows the fox into the hunter’s house. *(Mar. 6, 1952)*",
@@ -524,7 +524,7 @@
           "type": "text"
         },
         {
-          "md": "**2 - 1953 - 100 pages**",
+          "md": "## 2 - 1953 - 100 pages",
           "value": "2 - 1953 - 100 pages",
           "bbox": [
             {
@@ -576,7 +576,7 @@
         },
         {
           "level": 3,
-          "md": "### UNCLE DONALD AND HIS NEPHEWS FAMILY FUN (Dell)",
+          "md": "# UNCLE DONALD AND HIS NEPHEWS FAMILY FUN (Dell)",
           "value": "UNCLE DONALD AND HIS NEPHEWS FAMILY FUN (Dell)",
           "bbox": [
             {
@@ -593,7 +593,7 @@
           "type": "heading"
         },
         {
-          "md": "**1 - (November) 1960 - 84 pages**",
+          "md": "## 1 - (November) 1960 - 84 pages",
           "value": "1 - (November) 1960 - 84 pages",
           "bbox": [
             {

@@ -3,95 +3,6 @@
     {
       "items": [
         {
-          "caption": "ON THE SEA BOTTOM AND ON THE SURFACE THE DUCKS WORK LIKE MAD! RAM THOSE BALLS DOWN THE HOSE, BOYS! RAM ‘EM DOWN THE HOSE!",
-          "md": "![ON THE SEA BOTTOM AND ON THE SURFACE THE DUCKS WORK LIKE MAD! RAM THOSE BALLS DOWN THE HOSE, BOYS! RAM ‘EM DOWN THE HOSE!](CBatAotCB-175_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-175_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 93.61806974085366,
-              "w": 138.7441727801067,
-              "x": 11.75770984184451,
-              "y": 12.406834984756097,
-              "confidence": 0.94,
-              "end_index": 146,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "WE ARE, UNCA’ DONALD! BUT WE’RE GETTING TIRED! THIS IS TWO SCOW LOADS WE’VE SENT DOWN!",
-          "md": "![WE ARE, UNCA’ DONALD! BUT WE’RE GETTING TIRED! THIS IS TWO SCOW LOADS WE’VE SENT DOWN!](CBatAotCB-175_page_1_image_3_v2.jpg)",
-          "url": "CBatAotCB-175_page_1_image_3_v2.jpg",
-          "bbox": [
-            {
-              "h": 93.06834317835366,
-              "w": 121.26060022865852,
-              "x": 153.53939977134144,
-              "y": 12.093501333841463,
-              "confidence": 0.91,
-              "end_index": 111,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "SOON THE TERRIFIC TOIL PAYS OFF! SHE’S MOVING! HER KEEL IS PULLING OUT OF THE MUD!",
-          "md": "![SOON THE TERRIFIC TOIL PAYS OFF! SHE’S MOVING! HER KEEL IS PULLING OUT OF THE MUD!](CBatAotCB-175_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-175_page_1_image_2_v2.jpg",
-          "bbox": [
-            {
-              "h": 92.77068978658536,
-              "w": 134.27717999714173,
-              "x": 11.987654225419206,
-              "y": 108.62859375,
-              "confidence": 0.92,
-              "end_index": 107,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "THAR SHE BLOWS!",
-          "md": "![THAR SHE BLOWS!](CBatAotCB-175_page_1_image_4_v2.jpg)",
-          "url": "CBatAotCB-175_page_1_image_4_v2.jpg",
-          "bbox": [
-            {
-              "h": 93.66841463414633,
-              "w": 127.32281821646339,
-              "x": 148.84748094512193,
-              "y": 108.02865091463414,
-              "confidence": 0.9,
-              "end_index": 40,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From *Walt Disney’s Comics* No. 104, May 1949; © 1949 Walt Disney Productions.",
-          "value": "\nFrom Walt Disney’s Comics No. 104, May 1949; © 1949 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.327942073170752,
-              "w": 166.59049304496946,
-              "x": 61.720179592225605,
-              "y": 204.1615701219512,
-              "confidence": 0.93,
-              "end_index": 77,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "houseboat on Lake Erie for the summer to keep them out of mischief. (Jan. 10, 1952)",
           "value": "houseboat on Lake Erie for the summer to keep them out of mischief. (Jan. 10, 1952)",
           "bbox": [
@@ -264,7 +175,7 @@
           "type": "text"
         },
         {
-          "md": "Barks: “Slated for #145 W\\.D.C. but used in #144.” The story",
+          "md": "*Barks:* “Slated for #145 W\\.D.C. but used in #144.” The story",
           "value": "Barks: “Slated for #145 W.D.C. but used in #144.” The story",
           "bbox": [
             {

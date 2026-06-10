@@ -3,8 +3,8 @@
     {
       "items": [
         {
-          "md": "of Donald’s recordings of Shoeless Pashly, the calypso king. *(May 23, 1957)*",
-          "value": "of Donald’s recordings of Shoeless Pashly, the calypso king. (May 23, 1957)",
+          "md": "UNCLE SCROOGE in City of Golden Roofs - 26 - Scrooge and Donald hold a contest to see who can make money the fastest — Donald selling midget tape recorders or Scrooge selling huge stoves for heating airplane hangers — while sailing up the Gung Ho River in Indo China. They stumble upon the ancient city of Tangkor Wat; it has remained hidden for a thousand years, but yields to the temptations of Donald’s recordings of Shoeless Pashly, the calypso king. *(May 23, 1957)*",
+          "value": "UNCLE SCROOGE in City of Golden Roofs - 26 - Scrooge and Donald hold a contest to see who can make money the fastest — Donald selling midget tape recorders or Scrooge selling huge stoves for heating airplane hangers — while sailing up the Gung Ho River in Indo China. They stumble upon the ancient city of Tangkor Wat; it has remained hidden for a thousand years, but yields to the temptations of Donald’s recordings of Shoeless Pashly, the calypso king. (May 23, 1957)",
           "bbox": [
             {
               "h": 11.517110327743902,
@@ -89,7 +89,7 @@
         },
         {
           "level": 1,
-          "md": "# 21 - Mar.-May 1958 - 36 pages",
+          "md": "## 21 - Mar.-May 1958 - 36 pages",
           "value": "21 - Mar.-May 1958 - 36 pages",
           "bbox": [
             {
@@ -294,7 +294,7 @@
         },
         {
           "level": 1,
-          "md": "# 22 - June-Aug. 1958 - 36 pages",
+          "md": "## 22 - June-Aug. 1958 - 36 pages",
           "value": "22 - June-Aug. 1958 - 36 pages",
           "bbox": [
             {
@@ -499,7 +499,7 @@
         },
         {
           "level": 1,
-          "md": "# 23 - Sept.-Nov. 1958 - 36 pages",
+          "md": "## 23 - Sept.-Nov. 1958 - 36 pages",
           "value": "23 - Sept.-Nov. 1958 - 36 pages",
           "bbox": [
             {
@@ -584,7 +584,7 @@
           "type": "text"
         },
         {
-          "md": "Barks: “This story was stretched from a short one by Nick George.”",
+          "md": "*Barks:* “This story was *stretched* from a short one by Nick George.”",
           "value": "Barks: “This story was stretched from a short one by Nick George.”",
           "bbox": [
             {

@@ -37,8 +37,25 @@
           "type": "text"
         },
         {
-          "md": "UNCLE SCROOGE Crawls for Cash - 3/8 - A broken leg doesn’t stop Scrooge from going after a penny. *(Oct. 1, 1958)*\nThe Dell Pledge fills out the half page.",
-          "value": "UNCLE SCROOGE Crawls for Cash - 3/8 - A broken leg doesn’t stop Scrooge from going after a penny. (Oct. 1, 1958)\nThe Dell Pledge fills out the half page.",
+          "md": "UNCLE SCROOGE Crawls for Cash - 3/8 - A broken leg doesn’t stop Scrooge from going after a penny. *(Oct. 1, 1958)*",
+          "value": "UNCLE SCROOGE Crawls for Cash - 3/8 - A broken leg doesn’t stop Scrooge from going after a penny. (Oct. 1, 1958)",
+          "bbox": [
+            {
+              "h": 17.309153963414637,
+              "w": 125.61894590796493,
+              "x": 11.96939441215701,
+              "y": 40.147911585365854,
+              "confidence": 0.97,
+              "end_index": 154,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Dell Pledge fills out the half page.",
+          "value": "The Dell Pledge fills out the half page.",
           "bbox": [
             {
               "h": 17.309153963414637,
@@ -225,8 +242,25 @@
           "type": "text"
         },
         {
-          "md": "UNCLE SCROOGE The Money Hat - 3/8 - A bag of money holds down Scrooge’s hat on a windy day. *(May 20, 1959)*.\nThe Dell Pledge fills out the page.",
-          "value": "UNCLE SCROOGE The Money Hat - 3/8 - A bag of money holds down Scrooge’s hat on a windy day. (May 20, 1959).\nThe Dell Pledge fills out the page.",
+          "md": "UNCLE SCROOGE The Money Hat - 3/8 - A bag of money holds down Scrooge’s hat on a windy day. *(May 20, 1959)*.",
+          "value": "UNCLE SCROOGE The Money Hat - 3/8 - A bag of money holds down Scrooge’s hat on a windy day. (May 20, 1959).",
+          "bbox": [
+            {
+              "h": 17.318711890243886,
+              "w": 125.87170112423779,
+              "x": 11.79488328887195,
+              "y": 209.86712652439024,
+              "confidence": 0.95,
+              "end_index": 144,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Dell Pledge fills out the page.",
+          "value": "The Dell Pledge fills out the page.",
           "bbox": [
             {
               "h": 17.318711890243886,

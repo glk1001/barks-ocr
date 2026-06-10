@@ -3,95 +3,6 @@
     {
       "items": [
         {
-          "caption": "BUT NOW I HAVE GOOD NEWS FOR ALL YOU FANS! FULLDRIP PULPBUGLE, THE FABULOUS JAVELIN THROWER, IS WARMING UP TO THROW!",
-          "md": "![BUT NOW I HAVE GOOD NEWS FOR ALL YOU FANS! FULLDRIP PULPBUGLE, THE FABULOUS JAVELIN THROWER, IS WARMING UP TO THROW!](CBatAotCB-180_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-180_page_1_image_2_v2.jpg",
-          "bbox": [
-            {
-              "h": 71.360390625,
-              "w": 85.58000619283536,
-              "x": 43.207670064786576,
-              "y": 12.810834603658536,
-              "confidence": 0.96,
-              "end_index": 141,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "HE’S POISED TO START HIS RUN! AT LAST DUCKBURG IS GOING TO SEE A REAL STAR PERFORM! AH!.. AH!",
-          "md": "![HE’S POISED TO START HIS RUN! AT LAST DUCKBURG IS GOING TO SEE A REAL STAR PERFORM! AH!.. AH!](CBatAotCB-180_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-180_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 71.08011385289633,
-              "w": 112.92988376524391,
-              "x": 130.59780297256094,
-              "y": 12.60453172637195,
-              "confidence": 0.97,
-              "end_index": 118,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "CHOO! WHO LET DANDELIONS GROW IN HERE? THEY GIVE ME HAY FEVER!.. WHOOSH! AH-CHOOF! CHOO",
-          "md": "![CHOO! WHO LET DANDELIONS GROW IN HERE? THEY GIVE ME HAY FEVER!.. WHOOSH! AH-CHOOF! CHOO](CBatAotCB-180_page_1_image_4_v2.jpg)",
-          "url": "CBatAotCB-180_page_1_image_4_v2.jpg",
-          "bbox": [
-            {
-              "h": 70.36006669207316,
-              "w": 102.94409394054878,
-              "x": 43.91141673018293,
-              "y": 86.42151105182927,
-              "confidence": 0.94,
-              "end_index": 112,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "caption": "THE GREAT PULPBUGLE IS THROUGH FOR THE DANDELION SEASON! SORRY! ... NEXT THROWER IS - I’M VERY SORRY - DONALD DUCK! AH-CHOO!",
-          "md": "![THE GREAT PULPBUGLE IS THROUGH FOR THE DANDELION SEASON! SORRY! ... NEXT THROWER IS - I’M VERY SORRY - DONALD DUCK! AH-CHOO!](CBatAotCB-180_page_1_image_3_v2.jpg)",
-          "url": "CBatAotCB-180_page_1_image_3_v2.jpg",
-          "bbox": [
-            {
-              "h": 70.53623666158538,
-              "w": 95.04523056402437,
-              "x": 148.83158346036586,
-              "y": 86.3393311737805,
-              "confidence": 0.95,
-              "end_index": 149,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "From *Walt Disney’s Comics* No. 188, May 1956; © 1956 Walt Disney Productions.",
-          "value": "From Walt Disney’s Comics No. 188, May 1956; © 1956 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.7145236280487826,
-              "w": 158.82345703125,
-              "x": 64.91880668826218,
-              "y": 161.38095274390244,
-              "confidence": 0.93,
-              "end_index": 77,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "DONALD DUCK - 10 - Donald attends a “suppressed desire” party dressed as a knight in shining armor, and the other partygoers scoff at him. *(Mar. 15, 1956)*",
           "value": "DONALD DUCK - 10 - Donald attends a “suppressed desire” party dressed as a knight in shining armor, and the other partygoers scoff at him. (Mar. 15, 1956)",
           "bbox": [
@@ -109,7 +20,7 @@
           "type": "text"
         },
         {
-          "md": "Barks: “I bought the basic idea for this story from my daughter who lived in Washington state.”",
+          "md": "*Barks:* “I bought the basic idea for this story from my daughter who lived in Washington state.”",
           "value": "Barks: “I bought the basic idea for this story from my daughter who lived in Washington state.”",
           "bbox": [
             {
@@ -298,7 +209,7 @@
           "type": "text"
         },
         {
-          "md": "Barks: “Got basic idea of this from my daughter.”",
+          "md": "*Barks:* “Got basic idea of this from my daughter.”",
           "value": "Barks: “Got basic idea of this from my daughter.”",
           "bbox": [
             {

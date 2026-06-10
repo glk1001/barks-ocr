@@ -353,8 +353,8 @@
           "type": "heading"
         },
         {
-          "md": "Front cover (art only): The nephews use one of Donald’s skis as a sled. (*June 21, 1967*)\nDONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 148, January 1953.",
-          "value": "Front cover (art only): The nephews use one of Donald’s skis as a sled. (June 21, 1967)\nDONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 148, January 1953.",
+          "md": "Front cover (art only): The nephews use one of Donald’s skis as a sled. (*June 21, 1967*)",
+          "value": "Front cover (art only): The nephews use one of Donald’s skis as a sled. (June 21, 1967)",
           "bbox": [
             {
               "h": 11.27073932926829,
@@ -511,41 +511,6 @@
         },
         {
           "level": 2,
-          "md": "## 335 (28/11) - August 1968 - 36 pages",
-          "value": "335 (28/11) - August 1968 - 36 pages",
-          "bbox": [
-            {
-              "h": 5.548519435975608,
-              "w": 86.4720788871951,
-              "x": 149.9540625,
-              "y": 77.82810022865853,
-              "confidence": 0.96,
-              "end_index": 35,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 129, June 1951.\nChanges: Panels on first page trimmed for indicia, except bottom row.",
-          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 129, June 1951.\nChanges: Panels on first page trimmed for indicia, except bottom row.",
-          "bbox": [
-            {
-              "h": 11.593719512195129,
-              "w": 126.12428163109753,
-              "x": 150.25794969512194,
-              "y": 201.64623475609756,
-              "confidence": 0.89,
-              "end_index": 143,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "level": 2,
           "md": "## 341 (29/5) - February 1969 - 36 pages",
           "value": "341 (29/5) - February 1969 - 36 pages",
           "bbox": [
@@ -563,8 +528,25 @@
           "type": "heading"
         },
         {
-          "md": "Front cover (art only): A snowman seems to have thrown a snowball that just hit Donald. (*June 7, 1968*)\nThe same idea — but a different drawing — was used for the cover of Walt Disney’s Comics No. 256, January 1962.",
-          "value": "Front cover (art only): A snowman seems to have thrown a snowball that just hit Donald. (June 7, 1968)\nThe same idea — but a different drawing — was used for the cover of Walt Disney’s Comics No. 256, January 1962.",
+          "md": "Front cover (art only): A snowman seems to have thrown a snowball that just hit Donald. (*June 7, 1968*)",
+          "value": "Front cover (art only): A snowman seems to have thrown a snowball that just hit Donald. (June 7, 1968)",
+          "bbox": [
+            {
+              "h": 11.24707317073171,
+              "w": 125.93641006097559,
+              "x": 149.97009717987802,
+              "y": 131.12168826219514,
+              "confidence": 0.89,
+              "end_index": 215,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The same idea — but a different drawing — was used for the cover of *Walt Disney’s Comics* No. 256, January 1962.",
+          "value": "The same idea — but a different drawing — was used for the cover of Walt Disney’s Comics No. 256, January 1962.",
           "bbox": [
             {
               "h": 11.24707317073171,
@@ -598,8 +580,8 @@
           "type": "heading"
         },
         {
-          "md": "Front cover (art only): The nephews are using Daisy’s portable hair dryer to pop popcorn. (*Aug. 28, 1968*)\nDONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 131, August 1951.\nChanges: Panels on first page trimmed for indicia, except first panel.",
-          "value": "Front cover (art only): The nephews are using Daisy’s portable hair dryer to pop popcorn. (Aug. 28, 1968)\nDONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 131, August 1951.\nChanges: Panels on first page trimmed for indicia, except first panel.",
+          "md": "Front cover (art only): The nephews are using Daisy’s portable hair dryer to pop popcorn. (*Aug. 28, 1968*)",
+          "value": "Front cover (art only): The nephews are using Daisy’s portable hair dryer to pop popcorn. (Aug. 28, 1968)",
           "bbox": [
             {
               "h": 11.85315548780487,
@@ -608,181 +590,6 @@
               "y": 154.57457698170734,
               "confidence": 0.86,
               "end_index": 254,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "level": 2,
-          "md": "## 343 (29/7) - April 1969 - 36 pages",
-          "value": "343 (29/7) - April 1969 - 36 pages",
-          "bbox": [
-            {
-              "h": 5.5983155487804925,
-              "w": 78.9466863567073,
-              "x": 150.3442625762195,
-              "y": 196.04124237804876,
-              "confidence": 0.96,
-              "end_index": 33,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 144, September 1952.\nChanges: Panels on first page trimmed for indicia, except first panel.",
-          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 144, September 1952.\nChanges: Panels on first page trimmed for indicia, except first panel.",
-          "bbox": [
-            {
-              "h": 11.520663109756114,
-              "w": 125.91580828410822,
-              "x": 11.989667135099085,
-              "y": 285.13703506097556,
-              "confidence": 0.89,
-              "end_index": 149,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "level": 2,
-          "md": "## 344 (29/8) - May 1969 - 36 pages",
-          "value": "344 (29/8) - May 1969 - 36 pages",
-          "bbox": [
-            {
-              "h": 5.545678353658523,
-              "w": 78.39397865853658,
-              "x": 151.5934927591463,
-              "y": 231.80410060975612,
-              "confidence": 0.96,
-              "end_index": 31,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 127, April 1951.\nChanges: Panels on first page trimmed for indicia, except first panel.",
-          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 127, April 1951.\nChanges: Panels on first page trimmed for indicia, except first panel.",
-          "bbox": [
-            {
-              "h": 11.36084222560974,
-              "w": 126.16305640243898,
-              "x": 150.08721036585365,
-              "y": 166.4279725609756,
-              "confidence": 0.87,
-              "end_index": 145,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "level": 2,
-          "md": "## 345 (29/9) - June 1969 - 36 pages",
-          "value": "345 (29/9) - June 1969 - 36 pages",
-          "bbox": [
-            {
-              "h": 5.538589939024405,
-              "w": 76.96673780487805,
-              "x": 150.6365739329268,
-              "y": 267.2192606707317,
-              "confidence": 0.96,
-              "end_index": 32,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 139, April 1952.\nChanges: Panels on first page trimmed for indicia.",
-          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 139, April 1952.\nChanges: Panels on first page trimmed for indicia.",
-          "bbox": [
-            {
-              "h": 11.652233231707305,
-              "w": 126.09802591463414,
-              "x": 150.45367568597558,
-              "y": 237.36715701219512,
-              "confidence": 0.9,
-              "end_index": 125,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "level": 2,
-          "md": "## 346 (29/10) - July 1969 - 36 pages",
-          "value": "346 (29/10) - July 1969 - 36 pages",
-          "bbox": [
-            {
-              "h": 5.491211890243885,
-              "w": 78.38828506097559,
-              "x": 150.84351562499998,
-              "y": 296.7061737804878,
-              "confidence": 0.96,
-              "end_index": 33,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 140, May 1952.\nChanges: Panels on first page trimmed for indicia.",
-          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 140, May 1952.\nChanges: Panels on first page trimmed for indicia.",
-          "bbox": [
-            {
-              "h": 11.21213414634145,
-              "w": 123.75360137195122,
-              "x": 150.52520579268293,
-              "y": 273.2602362804878,
-              "confidence": 0.89,
-              "end_index": 123,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "level": 2,
-          "md": "## 347 (29/11) - August 1969 - 36 pages",
-          "value": "347 (29/11) - August 1969 - 36 pages",
-          "bbox": [
-            {
-              "h": 5.5802743902438845,
-              "w": 86.81674733231706,
-              "x": 150.85251905487803,
-              "y": 326.40340701219515,
-              "confidence": 0.96,
-              "end_index": 35,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "md": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 141, June 1952.\nChanges: Panels on first page trimmed for indicia.",
-          "value": "DONALD DUCK - 10 - Reprinted from Walt Disney’s Comics No. 141, June 1952.\nChanges: Panels on first page trimmed for indicia.",
-          "bbox": [
-            {
-              "h": 11.511951219512188,
-              "w": 125.91142339939023,
-              "x": 149.89367949695122,
-              "y": 83.51830792682927,
-              "confidence": 0.9,
-              "end_index": 124,
               "label": "text",
               "start_index": 0
             }

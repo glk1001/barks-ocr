@@ -88,41 +88,6 @@
           "type": "text"
         },
         {
-          "caption": "Barks’s blue-pencil rough for the front cover of Uncle Scrooge No. 51, August 1964; © 1964 Walt Disney Productions.",
-          "md": "![Barks’s blue-pencil rough for the front cover of Uncle Scrooge No. 51, August 1964; © 1964 Walt Disney Productions.](CBatAotCB-150_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-150_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 277.58436928353655,
-              "w": 221.63402486661585,
-              "x": 33.025365377286576,
-              "y": 57.05337461890244,
-              "confidence": 1.0,
-              "end_index": 140,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
-          "md": "Barks’s blue-pencil rough for the front cover of *Uncle Scrooge* No. 51, August 1964; © 1964 Walt Disney Productions.",
-          "value": "Barks’s blue-pencil rough for the front cover of Uncle Scrooge No. 51, August 1964; © 1964 Walt Disney Productions.",
-          "bbox": [
-            {
-              "h": 6.759900914634144,
-              "w": 256.5934534584603,
-              "x": 18.177215367759143,
-              "y": 342.7097332317073,
-              "confidence": 0.91,
-              "end_index": 116,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "items": [
             {
               "md": "150 Carl Barks and the Art of the Comic Book",

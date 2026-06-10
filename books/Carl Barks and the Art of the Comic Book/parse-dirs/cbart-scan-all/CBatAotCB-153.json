@@ -38,8 +38,25 @@
           "type": "text"
         },
         {
-          "md": "UNCLE SCROOGE House of Haunts - 24 - Scrooge transfers his money to a secret hiding place in anticipation of the release of the “rehabilitated” Beagle Boys from prison. The Beagle Boys spray him with a glowing paint so that they can follow him to his fortune, which is hidden in the “dreaded castle of the ancient mad duke of Duckburg.” *(Aug. 3, 1965)*\nBarks’s title for this story was “His Shining Hour”; the title was changed by his editors.\nReprinted: Uncle Scrooge No. 129, June 1976.",
-          "value": "UNCLE SCROOGE House of Haunts - 24 - Scrooge transfers his money to a secret hiding place in anticipation of the release of the “rehabilitated” Beagle Boys from prison. The Beagle Boys spray him with a glowing paint so that they can follow him to his fortune, which is hidden in the “dreaded castle of the ancient mad duke of Duckburg.” (Aug. 3, 1965)\nBarks’s title for this story was “His Shining Hour”; the title was changed by his editors.\nReprinted: Uncle Scrooge No. 129, June 1976.",
+          "md": "UNCLE SCROOGE House of Haunts - 24 - Scrooge transfers his money to a secret hiding place in anticipation of the release of the “rehabilitated” Beagle Boys from prison. The Beagle Boys spray him with a glowing paint so that they can follow him to his fortune, which is hidden in the “dreaded castle of the ancient mad duke of Duckburg.” *(Aug. 3, 1965)*",
+          "value": "UNCLE SCROOGE House of Haunts - 24 - Scrooge transfers his money to a secret hiding place in anticipation of the release of the “rehabilitated” Beagle Boys from prison. The Beagle Boys spray him with a glowing paint so that they can follow him to his fortune, which is hidden in the “dreaded castle of the ancient mad duke of Duckburg.” (Aug. 3, 1965)",
+          "bbox": [
+            {
+              "h": 41.28521341463414,
+              "w": 125.790556640625,
+              "x": 10.579936880716462,
+              "y": 52.152233231707314,
+              "confidence": 0.9,
+              "end_index": 723,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks’s title for this story was “His Shining Hour”; the title was changed by his editors.\nReprinted: Uncle Scrooge No. 129, June 1976.",
+          "value": "Barks’s title for this story was “His Shining Hour”; the title was changed by his editors.\nReprinted: Uncle Scrooge No. 129, June 1976.",
           "bbox": [
             {
               "h": 41.28521341463414,
