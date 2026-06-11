@@ -3,7 +3,7 @@
     {
       "items": [
         {
-          "md": "**206 (18/2) - November 1957 - 36 pages**",
+          "md": "## 206 (18/2) - November 1957 - 36 pages",
           "value": "206 (18/2) - November 1957 - 36 pages",
           "bbox": [
             {
@@ -17,7 +17,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover: Donald and the nephews are tangled in taffy. *(Jan. 31, 1957)*",
@@ -88,7 +88,7 @@
           "type": "text"
         },
         {
-          "md": "**207 (18/3) - December 1957 - 36 pages**",
+          "md": "## 207 (18/3) - December 1957 - 36 pages",
           "value": "207 (18/3) - December 1957 - 36 pages",
           "bbox": [
             {
@@ -102,7 +102,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald’s ventriloquist’s dummy is a parrot. *(Mar. 14, 1957)*",
@@ -156,7 +156,7 @@
           "type": "text"
         },
         {
-          "md": "**208 (18/4) - January 1958 - 36 pages**",
+          "md": "## 208 (18/4) - January 1958 - 36 pages",
           "value": "208 (18/4) - January 1958 - 36 pages",
           "bbox": [
             {
@@ -170,7 +170,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover: The nephews wear a single serape over all of their shoulders. *(May 29, 1957)*",
@@ -224,7 +224,7 @@
           "type": "text"
         },
         {
-          "md": "**209 (18/5) - February 1958 - 36 pages**",
+          "md": "## 209 (18/5) - February 1958 - 36 pages",
           "value": "209 (18/5) - February 1958 - 36 pages",
           "bbox": [
             {
@@ -238,7 +238,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover: A loose spring on Donald’s chair has propelled him into the ceiling. *(Aug. 15, 1957)*",
@@ -292,7 +292,7 @@
           "type": "text"
         },
         {
-          "md": "**210 (18/6) - March 1958 - 36 pages**",
+          "md": "## 210 (18/6) - March 1958 - 36 pages",
           "value": "210 (18/6) - March 1958 - 36 pages",
           "bbox": [
             {
@@ -306,7 +306,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "DONALD DUCK - 10 - Donald is left in charge of a bakery on his first day on the job when the owner has to go to another city. *(July 25, 1957)*",
@@ -343,7 +343,7 @@
           "type": "text"
         },
         {
-          "md": "**211 (18/7) - April 1958 - 36 pages**",
+          "md": "## 211 (18/7) - April 1958 - 36 pages",
           "value": "211 (18/7) - April 1958 - 36 pages",
           "bbox": [
             {
@@ -357,7 +357,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "DONALD DUCK - 10 - Donald, taken in by the nephews’ April Fool joke, goes to the South Seas in search of magic wishing stones. *(April 18, 1957)*",
@@ -411,7 +411,7 @@
           "type": "text"
         },
         {
-          "md": "**212 (18/8) - May 1958 - 36 pages**",
+          "md": "## 212 (18/8) - May 1958 - 36 pages",
           "value": "212 (18/8) - May 1958 - 36 pages",
           "bbox": [
             {
@@ -425,7 +425,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews are splattered with paint as they help Donald paint the ceiling. *(Nov. 7, 1957)*",
@@ -496,7 +496,7 @@
           "type": "text"
         },
         {
-          "md": "**213 (18/9) - June 1958 - 36 pages**",
+          "md": "## 213 (18/9) - June 1958 - 36 pages",
           "value": "213 (18/9) - June 1958 - 36 pages",
           "bbox": [
             {
@@ -510,7 +510,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover: The nephews’ oars get tangled while they are sculling with Donald. *(Feb. 21, 1957)*",
@@ -581,7 +581,7 @@
           "type": "text"
         },
         {
-          "md": "**214 (18/10) - July 1958 - 36 pages**",
+          "md": "## 214 (18/10) - July 1958 - 36 pages",
           "value": "214 (18/10) - July 1958 - 36 pages",
           "bbox": [
             {
@@ -595,7 +595,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald holds the nephews’ dripping ice-cream cones as they gobble candy. *(Nov. 7, 1957)*",
@@ -649,7 +649,7 @@
           "type": "text"
         },
         {
-          "md": "**215 (18/11) - August 1958 - 36 pages**",
+          "md": "## 215 (18/11) - August 1958 - 36 pages",
           "value": "215 (18/11) - August 1958 - 36 pages",
           "bbox": [
             {
@@ -663,7 +663,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald hauls the nephews to the bathtub in a large towel. *(Dec. 19, 1957)*",
@@ -751,7 +751,7 @@
           "type": "text"
         },
         {
-          "md": "**216 (18/12) - September 1958 - 36 pages**",
+          "md": "## 216 (18/12) - September 1958 - 36 pages",
           "value": "216 (18/12) - September 1958 - 36 pages",
           "bbox": [
             {
@@ -765,7 +765,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews disturb Donald’s rest by putting up a “do not disturb” sign. *(Feb. 7, 1958)*",

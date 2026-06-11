@@ -54,7 +54,7 @@
           "type": "text"
         },
         {
-          "md": "**148 (13/4) - January 1953 - 52 pages**",
+          "md": "## 148 (13/4) - January 1953 - 52 pages",
           "value": "148 (13/4) - January 1953 - 52 pages",
           "bbox": [
             {
@@ -68,7 +68,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): A dog joins the nephews’ carol singing. *(July 31, 1952)*",
@@ -122,7 +122,7 @@
           "type": "text"
         },
         {
-          "md": "**149 (13/5) - February 1953 - 52 pages**",
+          "md": "## 149 (13/5) - February 1953 - 52 pages",
           "value": "149 (13/5) - February 1953 - 52 pages",
           "bbox": [
             {
@@ -136,7 +136,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews wait with first aid as Donald prepares to ski. *(July 31, 1952)*",
@@ -190,7 +190,7 @@
           "type": "text"
         },
         {
-          "md": "**150 (13/6) - March 1953 - 52 pages**",
+          "md": "## 150 (13/6) - March 1953 - 52 pages",
           "value": "150 (13/6) - March 1953 - 52 pages",
           "bbox": [
             {
@@ -204,7 +204,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews share a dunce cap in Donald’s classroom. *(Sept. 18, 1952)*",
@@ -258,7 +258,7 @@
           "type": "text"
         },
         {
-          "md": "**151 (13/7) - April 1953 - 52 pages**",
+          "md": "## 151 (13/7) - April 1953 - 52 pages",
           "value": "151 (13/7) - April 1953 - 52 pages",
           "bbox": [
             {
@@ -272,7 +272,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald regulates the nephews’ traffic with stop and go signals. *(Oct. 2, 1952)*",
@@ -326,7 +326,7 @@
           "type": "text"
         },
         {
-          "md": "**152 (13/8) - May 1953 - 52 pages**",
+          "md": "## 152 (13/8) - May 1953 - 52 pages",
           "value": "152 (13/8) - May 1953 - 52 pages",
           "bbox": [
             {
@@ -340,7 +340,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews paint golf balls as Easter eggs. *(Aug. 14, 1952)*",
@@ -394,7 +394,7 @@
           "type": "text"
         },
         {
-          "md": "**153 (13/9) - June 1953 - 52 pages**",
+          "md": "## 153 (13/9) - June 1953 - 52 pages",
           "value": "153 (13/9) - June 1953 - 52 pages",
           "bbox": [
             {
@@ -408,7 +408,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald spells out “don’t touch” on a cake’s icing as the nephews watch. *(Oct. 2, 1952)*",
@@ -445,7 +445,7 @@
           "type": "text"
         },
         {
-          "md": "**154 (13/10) - July 1953 - 52 pages**",
+          "md": "## 154 (13/10) - July 1953 - 52 pages",
           "value": "154 (13/10) - July 1953 - 52 pages",
           "bbox": [
             {
@@ -459,7 +459,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews dispense grape juice from Donald’s tuba. *(Oct. 2, 1952)*",
@@ -513,7 +513,7 @@
           "type": "text"
         },
         {
-          "md": "**155 (13/11) - August 1953 - 52 pages**",
+          "md": "## 155 (13/11) - August 1953 - 52 pages",
           "value": "155 (13/11) - August 1953 - 52 pages",
           "bbox": [
             {
@@ -527,7 +527,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews, dressed as Scouts, prepare to awaken Donald with a trumpet blast. *(Dec. 6, 1952)*",
@@ -581,7 +581,7 @@
           "type": "text"
         },
         {
-          "md": "**156 (13/12) - September 1953 - 52 pages**",
+          "md": "## 156 (13/12) - September 1953 - 52 pages",
           "value": "156 (13/12) - September 1953 - 52 pages",
           "bbox": [
             {
@@ -595,7 +595,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald finds that the nephews have dirtied his hand towel. *(Apr. 6, 1953)*",
@@ -649,7 +649,7 @@
           "type": "text"
         },
         {
-          "md": "**157 (14/1) - October 1953 - 52 pages**",
+          "md": "## 157 (14/1) - October 1953 - 52 pages",
           "value": "157 (14/1) - October 1953 - 52 pages",
           "bbox": [
             {
@@ -663,7 +663,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): The nephews fish from hiding as truant officer Donald walks by. *(Mar. 12, 1953)*",
@@ -734,7 +734,7 @@
           "type": "text"
         },
         {
-          "md": "**158 (14/2) - November 1953 - 52 pages**",
+          "md": "## 158 (14/2) - November 1953 - 52 pages",
           "value": "158 (14/2) - November 1953 - 52 pages",
           "bbox": [
             {
@@ -748,7 +748,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): A worm intervenes as Donald and Daisy bite at a Halloween apple. *(Dec. 6, 1952)*",
@@ -802,7 +802,7 @@
           "type": "text"
         },
         {
-          "md": "**159 (14/3) - December 1953 - 52 pages**",
+          "md": "## 159 (14/3) - December 1953 - 52 pages",
           "value": "159 (14/3) - December 1953 - 52 pages",
           "bbox": [
             {
@@ -816,7 +816,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover (art only): Donald gets the nephews to smile for the camera by holding up a candy cane. *(Apr. 9, 1953)*",

@@ -37,7 +37,7 @@
           "type": "text"
         },
         {
-          "md": "**53 - October 1964 - 36 pages**",
+          "md": "## 53 - October 1964 - 36 pages",
           "value": "53 - October 1964 - 36 pages",
           "bbox": [
             {
@@ -51,7 +51,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover. A nervous Scrooge, wearing a postman’s hat, prepares to deposit a letter in the mouth of a strange, living mailbox. (Illustrating “Interplanetary Postman.”) (*Mar. 27, 1964*)",

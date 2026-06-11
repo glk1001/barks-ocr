@@ -21,7 +21,7 @@
           "type": "heading"
         },
         {
-          "md": "**1 - (September) 1965 - 96 pages**",
+          "md": "## 1 - (September) 1965 - 96 pages",
           "value": "1 - (September) 1965 - 96 pages",
           "bbox": [
             {
@@ -35,7 +35,7 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "heading"
         },
         {
           "md": "Front cover: Reprinted from the front cover of *Uncle Scrooge* Four Color No. 386, 1952.",
