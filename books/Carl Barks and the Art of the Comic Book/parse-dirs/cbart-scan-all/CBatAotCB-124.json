@@ -107,8 +107,8 @@
           "type": "text"
         },
         {
-          "md": "The fourth panel on the second page of the published version contains the dialogue Barks wrote fortwo panels; the fifth panel was to have been a full page wide.",
-          "value": "The fourth panel on the second page of the published version contains the dialogue Barks wrote fortwo panels; the fifth panel was to have been a full page wide.",
+          "md": "The fourth panel on the second page of the published version contains the dialogue Barks wrote for two panels; the fifth panel was to have been a full page wide.",
+          "value": "The fourth panel on the second page of the published version contains the dialogue Barks wrote for two panels; the fifth panel was to have been a full page wide.",
           "bbox": [
             {
               "h": 17.08886432926829,
@@ -332,8 +332,8 @@
           "type": "text"
         },
         {
-          "md": "This booklet was published in at least two different editons, one for Pacific Gas and Electric Company and the other for the  Southern California Edison Company. In the SCE edition, the  third panel on the seventh page shows Donald telling the",
-          "value": "This booklet was published in at least two different editons, one for Pacific Gas and Electric Company and the other for the  Southern California Edison Company. In the SCE edition, the  third panel on the seventh page shows Donald telling the",
+          "md": "This booklet was published in at least two different editions, one for Pacific Gas and Electric Company and the other for the  Southern California Edison Company. In the SCE edition, the  third panel on the seventh page shows Donald telling the",
+          "value": "This booklet was published in at least two different editions, one for Pacific Gas and Electric Company and the other for the  Southern California Edison Company. In the SCE edition, the  third panel on the seventh page shows Donald telling the",
           "bbox": [
             {
               "h": 23.264016768292695,
