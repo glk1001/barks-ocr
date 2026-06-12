@@ -22,6 +22,7 @@ typographic norms.
 """
 
 import json
+from collections.abc import Iterator
 from pathlib import Path
 
 import typer
@@ -48,9 +49,14 @@ def _process_file(path: Path) -> int:
     with path.open(encoding="utf-8") as f:
         data = json.load(f)
 
+    def walk(items: list) -> Iterator[dict]:
+        for item in items:
+            yield item
+            yield from walk(item.get("items") or [])
+
     changed = 0
     for page in data.get("pages") or []:
-        for item in page.get("items") or []:
+        for item in walk(page.get("items") or []):
             for field in _TEXT_FIELDS:
                 original = item.get(field)
                 if not isinstance(original, str) or not original:

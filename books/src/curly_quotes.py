@@ -73,6 +73,12 @@ def curlify(text: str) -> str:
     return "".join(parts)
 
 
+# A single quote in opening position is nevertheless an *apostrophe of
+# elision* (right single quote) when it elides the start of a year or a
+# well-known word: "the '49 sailboat cover", "the '40s", "'em", "'cause".
+_ELISION_RE = re.compile(r"\d|(?:em|til|till|tis|cause|course)\b", re.IGNORECASE)
+
+
 def _curlify_segment(text: str, prev: str) -> tuple[str, str]:
     """Curlify one tag-free segment, threading the previous-char context.
 
@@ -87,7 +93,7 @@ def _curlify_segment(text: str, prev: str) -> tuple[str, str]:
 
     """
     out: list[str] = []
-    for ch in text:
+    for idx, ch in enumerate(text):
         if ch in _DOUBLE_QUOTE_CHARS:
             opening = prev == "" or prev in _OPEN_CONTEXT
             replacement = _LEFT_DOUBLE if opening else _RIGHT_DOUBLE
@@ -95,6 +101,8 @@ def _curlify_segment(text: str, prev: str) -> tuple[str, str]:
             prev = replacement
         elif ch in _SINGLE_QUOTE_CHARS:
             opening = prev == "" or prev in _OPEN_CONTEXT
+            if opening and _ELISION_RE.match(text, idx + 1):
+                opening = False
             replacement = _LEFT_SINGLE if opening else _RIGHT_SINGLE
             out.append(replacement)
             prev = replacement
