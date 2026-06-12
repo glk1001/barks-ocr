@@ -74,8 +74,8 @@
           "type": "text"
         },
         {
-          "md": "In contrast to the bibliography itself, the information in this list is highly compressed. I saw no point in dupli- cating information in the bibliography, and so I have included only enough facts to permit the identification of the story or cover submitted, or accepted, on a certain date. I have resorted to extensive abbreviations, as follows:",
-          "value": "In contrast to the bibliography itself, the information in this list is highly compressed. I saw no point in dupli- cating information in the bibliography, and so I have included only enough facts to permit the identification of the story or cover submitted, or accepted, on a certain date. I have resorted to extensive abbreviations, as follows:",
+          "md": "In contrast to the bibliography itself, the information in this list is highly compressed. I saw no point in duplicating information in the bibliography, and so I have included only enough facts to permit the identification of the story or cover submitted, or accepted, on a certain date. I have resorted to extensive abbreviations, as follows:",
+          "value": "In contrast to the bibliography itself, the information in this list is highly compressed. I saw no point in duplicating information in the bibliography, and so I have included only enough facts to permit the identification of the story or cover submitted, or accepted, on a certain date. I have resorted to extensive abbreviations, as follows:",
           "bbox": [
             {
               "h": 40.31235708841462,
@@ -91,8 +91,8 @@
           "type": "text"
         },
         {
-          "md": "DD - Donald Duck; JW - Huey, Dewey and Louie Junior Woodchucks; OG - Our Gang Comics; US - Uncle Scrooge; WDC - WaltDisney’s Comics; 4C-FourColor;FC - front cover; IFC - inside front cover; IBC - inside back cover; BC - back cover. I have not abbreviated the titles of comic books that have only a few entries.",
-          "value": "DD - Donald Duck; JW - Huey, Dewey and Louie Junior Woodchucks; OG - Our Gang Comics; US - Uncle Scrooge; WDC - WaltDisney’s Comics; 4C-FourColor;FC - front cover; IFC - inside front cover; IBC - inside back cover; BC - back cover. I have not abbreviated the titles of comic books that have only a few entries.",
+          "md": "DD - Donald Duck; JW - Huey, Dewey and Louie Junior Woodchucks; OG - Our Gang Comics; US - Uncle Scrooge; WDC - Walt Disney’s Comics; 4C-Four Color;FC - front cover; IFC - inside front cover; IBC - inside back cover; BC - back cover. I have not abbreviated the titles of comic books that have only a few entries.",
+          "value": "DD - Donald Duck; JW - Huey, Dewey and Louie Junior Woodchucks; OG - Our Gang Comics; US - Uncle Scrooge; WDC - Walt Disney’s Comics; 4C-Four Color;FC - front cover; IFC - inside front cover; IBC - inside back cover; BC - back cover. I have not abbreviated the titles of comic books that have only a few entries.",
           "bbox": [
             {
               "h": 34.99996189024388,
@@ -125,8 +125,8 @@
           "type": "text"
         },
         {
-          "md": "There is one partial exception to this rule. Barks did do work — mostly front covers — for many issues of Walt Disney’s Comics, in addition to his “Donald Duck” sto- ries. However, this work was limited and insignificant compared to the stories with Donald. Accordingly, the cntries for Walt Disney’s Comics are for the Donald stories, except where noted otherwise. Thus, the entry for “WDC No. 150” is for the Donald story in that issue; the entry for the front cover of that issue is listed as “FC, WDC No. 150.” Question marks follow the”FC”for those covers whose location is open to question.",
-          "value": "There is one partial exception to this rule. Barks did do work — mostly front covers — for many issues of Walt Disney’s Comics, in addition to his “Donald Duck” sto- ries. However, this work was limited and insignificant compared to the stories with Donald. Accordingly, the cntries for Walt Disney’s Comics are for the Donald stories, except where noted otherwise. Thus, the entry for “WDC No. 150” is for the Donald story in that issue; the entry for the front cover of that issue is listed as “FC, WDC No. 150.” Question marks follow the”FC”for those covers whose location is open to question.",
+          "md": "There is one partial exception to this rule. Barks did do work — mostly front covers — for many issues of Walt Disney’s Comics, in addition to his “Donald Duck” stories. However, this work was limited and insignificant compared to the stories with Donald. Accordingly, the cntries for Walt Disney’s Comics are for the Donald stories, except where noted otherwise. Thus, the entry for “WDC No. 150” is for the Donald story in that issue; the entry for the front cover of that issue is listed as “FC, WDC No. 150.” Question marks follow the ”FC” for those covers whose location is open to question.",
+          "value": "There is one partial exception to this rule. Barks did do work — mostly front covers — for many issues of Walt Disney’s Comics, in addition to his “Donald Duck” stories. However, this work was limited and insignificant compared to the stories with Donald. Accordingly, the cntries for Walt Disney’s Comics are for the Donald stories, except where noted otherwise. Thus, the entry for “WDC No. 150” is for the Donald story in that issue; the entry for the front cover of that issue is listed as “FC, WDC No. 150.” Question marks follow the ”FC” for those covers whose location is open to question.",
           "bbox": [
             {
               "h": 65.13002286585365,
@@ -160,8 +160,42 @@
           "type": "heading"
         },
         {
-          "md": "**Date uncertain**: DD 4C No. 9.\n**Dec.?**: WDC No. 31.\n**Dec. 23**: WDC No. 32.",
-          "value": "Date uncertain: DD 4C No. 9.\nDec.?: WDC No. 31.\nDec. 23: WDC No. 32.",
+          "md": "Date uncertain - DD 4C No. 9.",
+          "value": "Date uncertain - DD 4C No. 9.",
+          "bbox": [
+            {
+              "h": 16.673734756097563,
+              "w": 67.8399598656631,
+              "x": 12.365260218178353,
+              "y": 287.5358917682927,
+              "confidence": 0.86,
+              "end_index": 79,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec.? - WDC No. 31.",
+          "value": "Dec.? - WDC No. 31.",
+          "bbox": [
+            {
+              "h": 16.673734756097563,
+              "w": 67.8399598656631,
+              "x": 12.365260218178353,
+              "y": 287.5358917682927,
+              "confidence": 0.86,
+              "end_index": 79,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 23 - WDC No. 32.",
+          "value": "Dec. 23 - WDC No. 32.",
           "bbox": [
             {
               "h": 16.673734756097563,
@@ -195,8 +229,8 @@
           "type": "heading"
         },
         {
-          "md": "**Jan. 16**: New Funnies No. 76.\n**Jan. 29**: WDC No. 33.\n**Feb. 24**: WDC No. 34.\n**Mar. 17**: WDC No. 35.\n**Apr. 20**: WDC No. 36.",
-          "value": "Jan. 16: New Funnies No. 76.\nJan. 29: WDC No. 33.\nFeb. 24: WDC No. 34.\nMar. 17: WDC No. 35.\nApr. 20: WDC No. 36.",
+          "md": "Jan. 16 - New Funnies No. 76.",
+          "value": "Jan. 16 - New Funnies No. 76.",
           "bbox": [
             {
               "h": 29.65808689024394,
@@ -212,8 +246,314 @@
           "type": "text"
         },
         {
-          "md": "**May 10**: “Mummy’s Ring,” “Hard Loser,” DD 4C No. 29.\n**May 29**: “Too Many Pets,” DD 4C No. 29.\n**June 22**: WDC No. 38.\n**June 30**: OG No. 8.\n**July 23**: WDC No. 39.\n**July 31**: Happy Hound, OG No. 9.\n**Aug. 12**: Benny Burro, OG No. 9.\n**Aug. 28**: WDC No. 40.\n**Sept. 22**: WDC No. 41.\n**Oct. 9**: OG No. 10.\n**Oct. 20**: WDC No. 42.\n**Oct. 30**: Happy Hound, OG No. 11.\n**Nov. 27**: WDC No. 43.\n**Dec. 16**: Barney Bear and Benny Burro, OG No. 11.\n**Dec. 30**: WDC No. 44.",
-          "value": "May 10: “Mummy’s Ring,” “Hard Loser,” DD 4C No. 29.\nMay 29: “Too Many Pets,” DD 4C No. 29.\nJune 22: WDC No. 38.\nJune 30: OG No. 8.\nJuly 23: WDC No. 39.\nJuly 31: Happy Hound, OG No. 9.\nAug. 12: Benny Burro, OG No. 9.\nAug. 28: WDC No. 40.\nSept. 22: WDC No. 41.\nOct. 9: OG No. 10.\nOct. 20: WDC No. 42.\nOct. 30: Happy Hound, OG No. 11.\nNov. 27: WDC No. 43.\nDec. 16: Barney Bear and Benny Burro, OG No. 11.\nDec. 30: WDC No. 44.",
+          "md": "Jan. 29 - WDC No. 33.",
+          "value": "Jan. 29 - WDC No. 33.",
+          "bbox": [
+            {
+              "h": 29.65808689024394,
+              "w": 66.602900390625,
+              "x": 12.168450600228658,
+              "y": 322.58314024390245,
+              "confidence": 0.75,
+              "end_index": 131,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 24 - WDC No. 34.",
+          "value": "Feb. 24 - WDC No. 34.",
+          "bbox": [
+            {
+              "h": 29.65808689024394,
+              "w": 66.602900390625,
+              "x": 12.168450600228658,
+              "y": 322.58314024390245,
+              "confidence": 0.75,
+              "end_index": 131,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 17 - WDC No. 35.",
+          "value": "Mar. 17 - WDC No. 35.",
+          "bbox": [
+            {
+              "h": 29.65808689024394,
+              "w": 66.602900390625,
+              "x": 12.168450600228658,
+              "y": 322.58314024390245,
+              "confidence": 0.75,
+              "end_index": 131,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 20 - WDC No. 36.",
+          "value": "Apr. 20 - WDC No. 36.",
+          "bbox": [
+            {
+              "h": 29.65808689024394,
+              "w": 66.602900390625,
+              "x": 12.168450600228658,
+              "y": 322.58314024390245,
+              "confidence": 0.75,
+              "end_index": 131,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 10 - “Mummy’s Ring,” “Hard Loser,” DD 4C No. 29.",
+          "value": "May 10 - “Mummy’s Ring,” “Hard Loser,” DD 4C No. 29.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 29 - “Too Many Pets,” DD 4C No. 29.",
+          "value": "May 29 - “Too Many Pets,” DD 4C No. 29.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 22 - WDC No. 38.",
+          "value": "June 22 - WDC No. 38.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 30 - OG No. 8.",
+          "value": "June 30 - OG No. 8.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 23 - WDC No. 39.",
+          "value": "July 23 - WDC No. 39.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 31 - Happy Hound, OG No. 9.",
+          "value": "July 31 - Happy Hound, OG No. 9.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 12 - Benny Burro, OG No. 9.",
+          "value": "Aug. 12 - Benny Burro, OG No. 9.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 28 - WDC No. 40.",
+          "value": "Aug. 28 - WDC No. 40.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 22 - WDC No. 41.",
+          "value": "Sept. 22 - WDC No. 41.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 9 - OG No. 10.",
+          "value": "Oct. 9 - OG No. 10.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 20 - WDC No. 42.",
+          "value": "Oct. 20 - WDC No. 42.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 30 - Happy Hound, OG No. 11.",
+          "value": "Oct. 30 - Happy Hound, OG No. 11.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 27 - WDC No. 43.",
+          "value": "Nov. 27 - WDC No. 43.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 16 - Barney Bear and Benny Burro, OG No. 11.",
+          "value": "Dec. 16 - Barney Bear and Benny Burro, OG No. 11.",
+          "bbox": [
+            {
+              "h": 87.96612233231707,
+              "w": 123.55269626524391,
+              "x": 150.18863185975607,
+              "y": 30.612844893292685,
+              "confidence": 0.76,
+              "end_index": 481,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 30 - WDC No. 44.",
+          "value": "Dec. 30 - WDC No. 44.",
           "bbox": [
             {
               "h": 87.96612233231707,
@@ -247,8 +587,314 @@
           "type": "heading"
         },
         {
-          "md": "**Jan. 19**: WDC No. 45.\n**Feb. 7**: OG No. 12.\n**Feb. 29**: WDC No. 46.\n**Mar. 21**: Porky Pig 4C No. 48.\n**Apr. 1**: WDC No. 47.\n**Apr. 19**: OG No. 13.\n**Apr. 26**: WDC No. 48.\n**May 26**: WDC No. 49.\n**June 22**: WDC No. 50.\n**July 11**: OG No. 14.\n**July 27**: WDC No. 51.\n**Aug. 9**: “Frozen Gold,” DD 4C No. 62.\n**Aug. 26**: WDC No. 52.\n**Sept. 7**: OG No. 15.\n**Sept. 23**: “Mystery of the Swamp,” DD 4C No. 62.\n**Oct. 6**: WDC No. 53.\n**Oct. 27**: WDC No. 54.\n**Nov. 2**: OG No. 16.\n**Dec. 1**: WDC No. 55.",
-          "value": "Jan. 19: WDC No. 45.\nFeb. 7: OG No. 12.\nFeb. 29: WDC No. 46.\nMar. 21: Porky Pig 4C No. 48.\nApr. 1: WDC No. 47.\nApr. 19: OG No. 13.\nApr. 26: WDC No. 48.\nMay 26: WDC No. 49.\nJune 22: WDC No. 50.\nJuly 11: OG No. 14.\nJuly 27: WDC No. 51.\nAug. 9: “Frozen Gold,” DD 4C No. 62.\nAug. 26: WDC No. 52.\nSept. 7: OG No. 15.\nSept. 23: “Mystery of the Swamp,” DD 4C No. 62.\nOct. 6: WDC No. 53.\nOct. 27: WDC No. 54.\nNov. 2: OG No. 16.\nDec. 1: WDC No. 55.",
+          "md": "Jan. 19 - WDC No. 45.",
+          "value": "Jan. 19 - WDC No. 45.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 7 - OG No. 12.",
+          "value": "Feb. 7 - OG No. 12.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 29 - WDC No. 46.",
+          "value": "Feb. 29 - WDC No. 46.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 21 - Porky Pig 4C No. 48.",
+          "value": "Mar. 21 - Porky Pig 4C No. 48.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 1 - WDC No. 47.",
+          "value": "Apr. 1 - WDC No. 47.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 19 - OG No. 13.",
+          "value": "Apr. 19 - OG No. 13.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 26 - WDC No. 48.",
+          "value": "Apr. 26 - WDC No. 48.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 26 - WDC No. 49.",
+          "value": "May 26 - WDC No. 49.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 22 - WDC No. 50.",
+          "value": "June 22 - WDC No. 50.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 11 - OG No. 14.",
+          "value": "July 11 - OG No. 14.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 27 - WDC No. 51.",
+          "value": "July 27 - WDC No. 51.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 9 - “Frozen Gold,” DD 4C No. 62.",
+          "value": "Aug. 9 - “Frozen Gold,” DD 4C No. 62.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 26 - WDC No. 52.",
+          "value": "Aug. 26 - WDC No. 52.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 7 - OG No. 15.",
+          "value": "Sept. 7 - OG No. 15.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 23 - “Mystery of the Swamp,” DD 4C No. 62.",
+          "value": "Sept. 23 - “Mystery of the Swamp,” DD 4C No. 62.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 6 - WDC No. 53.",
+          "value": "Oct. 6 - WDC No. 53.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 27 - WDC No. 54.",
+          "value": "Oct. 27 - WDC No. 54.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 2 - OG No. 16.",
+          "value": "Nov. 2 - OG No. 16.",
+          "bbox": [
+            {
+              "h": 5.683445121951217,
+              "w": 109.32593940548779,
+              "x": 150.90916349085364,
+              "y": 222.9368368902439,
+              "confidence": 0.82,
+              "end_index": 514,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 1 - WDC No. 55.",
+          "value": "Dec. 1 - WDC No. 55.",
           "bbox": [
             {
               "h": 5.683445121951217,
@@ -282,8 +928,229 @@
           "type": "heading"
         },
         {
-          "md": "**Jan. 6**: OG No. 17.\n**Jan. ?**: WDC No. 56.\n**Feb. 2**: WDC No. 57.\n**Feb. 20**: OG No. 18.\n**Mar. 9**: WDC No. 58.\n**Apr. 3**: WDC No. 59.\n**Apr. 14**: OG No. 19.\n**Apr. 27**: Mickey Mouse 4C No. 79.\n**May 12**: WDC No. 60.\n**May 31**: WDC No. 61.\n**June 13**: OG No. 20.\n**June 27**: WDC No. 62.\n**July 19**: “Firebug,” DD 4C No. 108.\n**Aug. 2**: WDC No. 63.",
-          "value": "Jan. 6: OG No. 17.\nJan. ?: WDC No. 56.\nFeb. 2: WDC No. 57.\nFeb. 20: OG No. 18.\nMar. 9: WDC No. 58.\nApr. 3: WDC No. 59.\nApr. 14: OG No. 19.\nApr. 27: Mickey Mouse 4C No. 79.\nMay 12: WDC No. 60.\nMay 31: WDC No. 61.\nJune 13: OG No. 20.\nJune 27: WDC No. 62.\nJuly 19: “Firebug,” DD 4C No. 108.\nAug. 2: WDC No. 63.",
+          "md": "Jan. 6 - OG No. 17.",
+          "value": "Jan. 6 - OG No. 17.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. ? - WDC No. 56.",
+          "value": "Jan. ? - WDC No. 56.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 2 - WDC No. 57.",
+          "value": "Feb. 2 - WDC No. 57.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 20 - OG No. 18.",
+          "value": "Feb. 20 - OG No. 18.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 9 - WDC No. 58.",
+          "value": "Mar. 9 - WDC No. 58.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 3 - WDC No. 59.",
+          "value": "Apr. 3 - WDC No. 59.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 14 - OG No. 19.",
+          "value": "Apr. 14 - OG No. 19.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 27 - Mickey Mouse 4C No. 79.",
+          "value": "Apr. 27 - Mickey Mouse 4C No. 79.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 12 - WDC No. 60.",
+          "value": "May 12 - WDC No. 60.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 31 - WDC No. 61.",
+          "value": "May 31 - WDC No. 61.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 13 - OG No. 20.",
+          "value": "June 13 - OG No. 20.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 27 - WDC No. 62.",
+          "value": "June 27 - WDC No. 62.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 19 - “Firebug,” DD 4C No. 108.",
+          "value": "July 19 - “Firebug,” DD 4C No. 108.",
+          "bbox": [
+            {
+              "h": 81.98698170731704,
+              "w": 78.54782583841464,
+              "x": 151.08528772865853,
+              "y": 270.39178353658536,
+              "confidence": 0.78,
+              "end_index": 362,
+              "label": "key-value-region",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 2 - WDC No. 63.",
+          "value": "Aug. 2 - WDC No. 63.",
           "bbox": [
             {
               "h": 81.98698170731704,

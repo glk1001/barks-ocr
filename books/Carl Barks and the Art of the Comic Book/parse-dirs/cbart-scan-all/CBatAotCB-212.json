@@ -3,8 +3,501 @@
     {
       "items": [
         {
-          "md": "Mar. 18 - Three covers, “Gab Muffer,” GG 4C No. 1047.\nApr. 1 - FC, WDC No. 236.\nApr. 14 - “Milktime Melodies,” “Stubborn Stork,” “Lost Rabbit Foot,” GG 4C No. 1047.\nApr. 20 - GG, US No. 29.\nApr. 23 - FC, WDC No. 243.\nMay 14 - All of Daisy Duck’s Diary 4C No. 1055, except “Donald’s Party.\nMay 20 - “Master Glasser,” DD No. 68; half-page gag, US No. 28.\nMay 26 - Christmas Parade No. 26.\nMay 29 - “Donald’s Party,” Daisy Duck’s Diary 4C No. 1055.\nJune 12 - FC, WDC No. 232.\nJune 15 - “Island in the Sky,” US No. 29.\nJuly 1 1 - FC, US No. 28; “Hound of the Whiskervilles,” FC US No. 29; WDC No. 232.\nJuly 15 - “Free Ski Spree,” “Touché Toupeé,” Grandma Duck’s Farm Friends 4C No. 1073.\nJuly 18 - FC, Grandma Duck’s Farm Friends 4C No. 1073.\nJuly 28 - IFC, “Snow Chaser,” Grandma Duck’s Farm Friends 4C No. 1073.\nJuly 31 - FC, US No. 32; FC, WDC No. 235.\nAug. 12 - FC, US No. 31; WDC No. 233.\nAug. 17 - WDC No. 234.\nAug. 21 - FC, DD No. 70.\nSept. 12 - “Cave of the Winds,” “Madball Pitcher,” GG 4C No. 1095.\nSept. 16 - “Mixed Up Mixer,” GG 4C No. 1095.\nSept. 28 - FC, GG 4C No. 1095; WDC No. 235.\nOct. 14 - WDC No. 236.\nOct. 17 - Uncle Scrooge the Lemonade King (children’s book).\nOct. 19 - IFC, IBC, BC, GG 4C No. 1095.\nOct. 22 - FC, DD No. 71; FC, DD No. 72; FC, Donald Duck Album 4C No. 1099 (DelI).\nOct. 29 - “The Bear Tamer,” GG 4C No. 1095.\nNov. 13 - “Pipeline to Danger,” US No. 30.\nNov. 27 - FC, DD No. 73.\nDec. 9 - “Yoicks! The Fox!,” GG, US No. 30.",
-          "value": "Mar. 18 - Three covers, “Gab Muffer,” GG 4C No. 1047.\nApr. 1 - FC, WDC No. 236.\nApr. 14 - “Milktime Melodies,” “Stubborn Stork,” “Lost Rabbit Foot,” GG 4C No. 1047.\nApr. 20 - GG, US No. 29.\nApr. 23 - FC, WDC No. 243.\nMay 14 - All of Daisy Duck’s Diary 4C No. 1055, except “Donald’s Party.\nMay 20 - “Master Glasser,” DD No. 68; half-page gag, US No. 28.\nMay 26 - Christmas Parade No. 26.\nMay 29 - “Donald’s Party,” Daisy Duck’s Diary 4C No. 1055.\nJune 12 - FC, WDC No. 232.\nJune 15 - “Island in the Sky,” US No. 29.\nJuly 1 1 - FC, US No. 28; “Hound of the Whiskervilles,” FC US No. 29; WDC No. 232.\nJuly 15 - “Free Ski Spree,” “Touché Toupeé,” Grandma Duck’s Farm Friends 4C No. 1073.\nJuly 18 - FC, Grandma Duck’s Farm Friends 4C No. 1073.\nJuly 28 - IFC, “Snow Chaser,” Grandma Duck’s Farm Friends 4C No. 1073.\nJuly 31 - FC, US No. 32; FC, WDC No. 235.\nAug. 12 - FC, US No. 31; WDC No. 233.\nAug. 17 - WDC No. 234.\nAug. 21 - FC, DD No. 70.\nSept. 12 - “Cave of the Winds,” “Madball Pitcher,” GG 4C No. 1095.\nSept. 16 - “Mixed Up Mixer,” GG 4C No. 1095.\nSept. 28 - FC, GG 4C No. 1095; WDC No. 235.\nOct. 14 - WDC No. 236.\nOct. 17 - Uncle Scrooge the Lemonade King (children’s book).\nOct. 19 - IFC, IBC, BC, GG 4C No. 1095.\nOct. 22 - FC, DD No. 71; FC, DD No. 72; FC, Donald Duck Album 4C No. 1099 (DelI).\nOct. 29 - “The Bear Tamer,” GG 4C No. 1095.\nNov. 13 - “Pipeline to Danger,” US No. 30.\nNov. 27 - FC, DD No. 73.\nDec. 9 - “Yoicks! The Fox!,” GG, US No. 30.",
+          "md": "Mar. 18 - Three covers, “Gab Muffer,” GG 4C No. 1047.",
+          "value": "Mar. 18 - Three covers, “Gab Muffer,” GG 4C No. 1047.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 1 - FC, WDC No. 236.",
+          "value": "Apr. 1 - FC, WDC No. 236.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 14 - “Milktime Melodies,” “Stubborn Stork,” “Lost Rabbit Foot,” GG 4C No. 1047.",
+          "value": "Apr. 14 - “Milktime Melodies,” “Stubborn Stork,” “Lost Rabbit Foot,” GG 4C No. 1047.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 20 - GG, US No. 29.",
+          "value": "Apr. 20 - GG, US No. 29.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 23 - FC, WDC No. 243.",
+          "value": "Apr. 23 - FC, WDC No. 243.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 14 - All of Daisy Duck’s Diary 4C No. 1055, except “Donald’s Party.",
+          "value": "May 14 - All of Daisy Duck’s Diary 4C No. 1055, except “Donald’s Party.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 20 - “Master Glasser,” DD No. 68; half-page gag, US No. 28.",
+          "value": "May 20 - “Master Glasser,” DD No. 68; half-page gag, US No. 28.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 26 - Christmas Parade No. 26.",
+          "value": "May 26 - Christmas Parade No. 26.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 29 - “Donald’s Party,” Daisy Duck’s Diary 4C No. 1055.",
+          "value": "May 29 - “Donald’s Party,” Daisy Duck’s Diary 4C No. 1055.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 12 - FC, WDC No. 232.",
+          "value": "June 12 - FC, WDC No. 232.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 15 - “Island in the Sky,” US No. 29.",
+          "value": "June 15 - “Island in the Sky,” US No. 29.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 1 1 - FC, US No. 28; “Hound of the Whiskervilles,” FC US No. 29; WDC No. 232.",
+          "value": "July 1 1 - FC, US No. 28; “Hound of the Whiskervilles,” FC US No. 29; WDC No. 232.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 15 - “Free Ski Spree,” “Touché Toupeé,” Grandma Duck’s Farm Friends 4C No. 1073.",
+          "value": "July 15 - “Free Ski Spree,” “Touché Toupeé,” Grandma Duck’s Farm Friends 4C No. 1073.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 18 - FC, Grandma Duck’s Farm Friends 4C No. 1073.",
+          "value": "July 18 - FC, Grandma Duck’s Farm Friends 4C No. 1073.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 28 - IFC, “Snow Chaser,” Grandma Duck’s Farm Friends 4C No. 1073.",
+          "value": "July 28 - IFC, “Snow Chaser,” Grandma Duck’s Farm Friends 4C No. 1073.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 31 - FC, US No. 32; FC, WDC No. 235.",
+          "value": "July 31 - FC, US No. 32; FC, WDC No. 235.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 12 - FC, US No. 31; WDC No. 233.",
+          "value": "Aug. 12 - FC, US No. 31; WDC No. 233.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 17 - WDC No. 234.",
+          "value": "Aug. 17 - WDC No. 234.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 21 - FC, DD No. 70.",
+          "value": "Aug. 21 - FC, DD No. 70.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 12 - “Cave of the Winds,” “Madball Pitcher,” GG 4C No. 1095.",
+          "value": "Sept. 12 - “Cave of the Winds,” “Madball Pitcher,” GG 4C No. 1095.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 16 - “Mixed Up Mixer,” GG 4C No. 1095.",
+          "value": "Sept. 16 - “Mixed Up Mixer,” GG 4C No. 1095.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 28 - FC, GG 4C No. 1095; WDC No. 235.",
+          "value": "Sept. 28 - FC, GG 4C No. 1095; WDC No. 235.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 14 - WDC No. 236.",
+          "value": "Oct. 14 - WDC No. 236.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 17 - Uncle Scrooge the Lemonade King (children’s book).",
+          "value": "Oct. 17 - Uncle Scrooge the Lemonade King (children’s book).",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 19 - IFC, IBC, BC, GG 4C No. 1095.",
+          "value": "Oct. 19 - IFC, IBC, BC, GG 4C No. 1095.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 22 - FC, DD No. 71; FC, DD No. 72; FC, Donald Duck Album 4C No. 1099 (DelI).",
+          "value": "Oct. 22 - FC, DD No. 71; FC, DD No. 72; FC, Donald Duck Album 4C No. 1099 (DelI).",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 29 - “The Bear Tamer,” GG 4C No. 1095.",
+          "value": "Oct. 29 - “The Bear Tamer,” GG 4C No. 1095.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 13 - “Pipeline to Danger,” US No. 30.",
+          "value": "Nov. 13 - “Pipeline to Danger,” US No. 30.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 27 - FC, DD No. 73.",
+          "value": "Nov. 27 - FC, DD No. 73.",
+          "bbox": [
+            {
+              "h": 11.205754573170724,
+              "w": 125.65274414062499,
+              "x": 12.214882574314023,
+              "y": 114.41619283536585,
+              "confidence": 0.8,
+              "end_index": 1454,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 9 - “Yoicks! The Fox!,” GG, US No. 30.",
+          "value": "Dec. 9 - “Yoicks! The Fox!,” GG, US No. 30.",
           "bbox": [
             {
               "h": 11.205754573170724,
@@ -38,8 +531,8 @@
           "type": "heading"
         },
         {
-          "md": "Jan. 7 - FC, WDC No. 238; WDC No. 238.\nJan. 15 - WDC No. 237; WDC No. 239; WDC No. 240.\nJan. 28 - WDC No. 241.\nFeb. 12 - “All at Sea,” US No. 31.\nFeb. 16 - GG, US No. 31.\nFeb. 26 - “Two-way Luck,” US No. 31; FC, WDC No. 242.\nMar. 7 - Unpublished FC for WDC (“hammocks”).\nMar. 11 - WDC No. 242.\nApr. 11 - WDC No. 243; WDC No. 244.\nApr. 18 - FC, Donald Duck Album 4C No. 1 140 (Dell); FC, WDC No. 241; WDC No. 245.\nApr. 21 - FC, US No. 33.\nApr. 25 - FC, Merry Christmas No. 39; FC, Uncle Donald and His Nephews Family Fun No. 38.",
-          "value": "Jan. 7 - FC, WDC No. 238; WDC No. 238.\nJan. 15 - WDC No. 237; WDC No. 239; WDC No. 240.\nJan. 28 - WDC No. 241.\nFeb. 12 - “All at Sea,” US No. 31.\nFeb. 16 - GG, US No. 31.\nFeb. 26 - “Two-way Luck,” US No. 31; FC, WDC No. 242.\nMar. 7 - Unpublished FC for WDC (“hammocks”).\nMar. 11 - WDC No. 242.\nApr. 11 - WDC No. 243; WDC No. 244.\nApr. 18 - FC, Donald Duck Album 4C No. 1 140 (Dell); FC, WDC No. 241; WDC No. 245.\nApr. 21 - FC, US No. 33.\nApr. 25 - FC, Merry Christmas No. 39; FC, Uncle Donald and His Nephews Family Fun No. 38.",
+          "md": "Jan. 7 - FC, WDC No. 238; WDC No. 238.",
+          "value": "Jan. 7 - FC, WDC No. 238; WDC No. 238.",
           "bbox": [
             {
               "h": 11.193064024390205,
@@ -55,8 +548,518 @@
           "type": "text"
         },
         {
-          "md": "May 12 - “That’s No Fable,” US No. 32.\nMay 17 - “Clothes Make the Duck,” US No. 32.\nJune 6 - Daisy Duck’s Diary 4C No. 1150.\nJune 13 - GG, US No. 32.\nJuly 11 - WDC No. 247; WDC No. 248.\nJuly 18 - “Thrift Gift,” US No. 32; WDC No. 246.\nJuly 25 - FC, US No. 34; FC, WDC No. 247.\nAug. 1 - FC, US No. 35.\nAug. 8 - FC, DD No. 78; Grandma Duck’s Farm Friends 4C No. 1161.\nAug. 15 - GG, US No. 33.\nSept. 3 - “Billions in the Hole,” US No. 33; FC, US No. 36.\nSept. 12 - “Bongo on the Congo,” US No. 33.\nSept. 19 - FC, DD No. 77; FC, DDNo.79;FC, WDCNo.250; FC, WDC No. 253.\nOct. 1 - FC, GG 4C No. 1184.\nOct. 12 - All interior pages, GG 4C No. 1184.\nOct. 31 - IFC, IBC, BC, GG 4C No. 1184; WDC No. 249.\nNov. 12 - WDC No. 250.\nNov. 16 - “Chugwagon Derby,” US No. 34.\nDec. 10 - “Mythtic Mystery,” GG, US No. 34.\nDec. 28 - WDC No. 251.",
-          "value": "May 12 - “That’s No Fable,” US No. 32.\nMay 17 - “Clothes Make the Duck,” US No. 32.\nJune 6 - Daisy Duck’s Diary 4C No. 1150.\nJune 13 - GG, US No. 32.\nJuly 11 - WDC No. 247; WDC No. 248.\nJuly 18 - “Thrift Gift,” US No. 32; WDC No. 246.\nJuly 25 - FC, US No. 34; FC, WDC No. 247.\nAug. 1 - FC, US No. 35.\nAug. 8 - FC, DD No. 78; Grandma Duck’s Farm Friends 4C No. 1161.\nAug. 15 - GG, US No. 33.\nSept. 3 - “Billions in the Hole,” US No. 33; FC, US No. 36.\nSept. 12 - “Bongo on the Congo,” US No. 33.\nSept. 19 - FC, DD No. 77; FC, DDNo.79;FC, WDCNo.250; FC, WDC No. 253.\nOct. 1 - FC, GG 4C No. 1184.\nOct. 12 - All interior pages, GG 4C No. 1184.\nOct. 31 - IFC, IBC, BC, GG 4C No. 1184; WDC No. 249.\nNov. 12 - WDC No. 250.\nNov. 16 - “Chugwagon Derby,” US No. 34.\nDec. 10 - “Mythtic Mystery,” GG, US No. 34.\nDec. 28 - WDC No. 251.",
+          "md": "Jan. 15 - WDC No. 237; WDC No. 239; WDC No. 240.",
+          "value": "Jan. 15 - WDC No. 237; WDC No. 239; WDC No. 240.",
+          "bbox": [
+            {
+              "h": 11.193064024390205,
+              "w": 125.74533584222559,
+              "x": 12.17677448551829,
+              "y": 338.8380868902439,
+              "confidence": 0.83,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. 28 - WDC No. 241.",
+          "value": "Jan. 28 - WDC No. 241.",
+          "bbox": [
+            {
+              "h": 11.193064024390205,
+              "w": 125.74533584222559,
+              "x": 12.17677448551829,
+              "y": 338.8380868902439,
+              "confidence": 0.83,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 12 - “All at Sea,” US No. 31.",
+          "value": "Feb. 12 - “All at Sea,” US No. 31.",
+          "bbox": [
+            {
+              "h": 11.193064024390205,
+              "w": 125.74533584222559,
+              "x": 12.17677448551829,
+              "y": 338.8380868902439,
+              "confidence": 0.83,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 16 - GG, US No. 31.",
+          "value": "Feb. 16 - GG, US No. 31.",
+          "bbox": [
+            {
+              "h": 11.193064024390205,
+              "w": 125.74533584222559,
+              "x": 12.17677448551829,
+              "y": 338.8380868902439,
+              "confidence": 0.83,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 26 - “Two-way Luck,” US No. 31; FC, WDC No. 242.",
+          "value": "Feb. 26 - “Two-way Luck,” US No. 31; FC, WDC No. 242.",
+          "bbox": [
+            {
+              "h": 11.193064024390205,
+              "w": 125.74533584222559,
+              "x": 12.17677448551829,
+              "y": 338.8380868902439,
+              "confidence": 0.83,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 7 - Unpublished FC for WDC (“hammocks”).",
+          "value": "Mar. 7 - Unpublished FC for WDC (“hammocks”).",
+          "bbox": [
+            {
+              "h": 11.193064024390205,
+              "w": 125.74533584222559,
+              "x": 12.17677448551829,
+              "y": 338.8380868902439,
+              "confidence": 0.83,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 11 - WDC No. 242.",
+          "value": "Mar. 11 - WDC No. 242.",
+          "bbox": [
+            {
+              "h": 11.193064024390205,
+              "w": 125.74533584222559,
+              "x": 12.17677448551829,
+              "y": 338.8380868902439,
+              "confidence": 0.83,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 11 - WDC No. 243; WDC No. 244.",
+          "value": "Apr. 11 - WDC No. 243; WDC No. 244.",
+          "bbox": [
+            {
+              "h": 11.193064024390205,
+              "w": 125.74533584222559,
+              "x": 12.17677448551829,
+              "y": 338.8380868902439,
+              "confidence": 0.83,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 18 - FC, Donald Duck Album 4C No. 1 140 (Dell); FC, WDC No. 241; WDC No. 245.",
+          "value": "Apr. 18 - FC, Donald Duck Album 4C No. 1 140 (Dell); FC, WDC No. 241; WDC No. 245.",
+          "bbox": [
+            {
+              "h": 11.193064024390205,
+              "w": 125.74533584222559,
+              "x": 12.17677448551829,
+              "y": 338.8380868902439,
+              "confidence": 0.83,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 21 - FC, US No. 33.",
+          "value": "Apr. 21 - FC, US No. 33.",
+          "bbox": [
+            {
+              "h": 11.193064024390205,
+              "w": 125.74533584222559,
+              "x": 12.17677448551829,
+              "y": 338.8380868902439,
+              "confidence": 0.83,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 25 - FC, Merry Christmas No. 39; FC, Uncle Donald and His Nephews Family Fun No. 38.",
+          "value": "Apr. 25 - FC, Merry Christmas No. 39; FC, Uncle Donald and His Nephews Family Fun No. 38.",
+          "bbox": [
+            {
+              "h": 11.193064024390205,
+              "w": 125.74533584222559,
+              "x": 12.17677448551829,
+              "y": 338.8380868902439,
+              "confidence": 0.83,
+              "end_index": 526,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 12 - “That’s No Fable,” US No. 32.",
+          "value": "May 12 - “That’s No Fable,” US No. 32.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 17 - “Clothes Make the Duck,” US No. 32.",
+          "value": "May 17 - “Clothes Make the Duck,” US No. 32.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 6 - Daisy Duck’s Diary 4C No. 1150.",
+          "value": "June 6 - Daisy Duck’s Diary 4C No. 1150.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 13 - GG, US No. 32.",
+          "value": "June 13 - GG, US No. 32.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 11 - WDC No. 247; WDC No. 248.",
+          "value": "July 11 - WDC No. 247; WDC No. 248.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 18 - “Thrift Gift,” US No. 32; WDC No. 246.",
+          "value": "July 18 - “Thrift Gift,” US No. 32; WDC No. 246.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 25 - FC, US No. 34; FC, WDC No. 247.",
+          "value": "July 25 - FC, US No. 34; FC, WDC No. 247.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 1 - FC, US No. 35.",
+          "value": "Aug. 1 - FC, US No. 35.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 8 - FC, DD No. 78; Grandma Duck’s Farm Friends 4C No. 1161.",
+          "value": "Aug. 8 - FC, DD No. 78; Grandma Duck’s Farm Friends 4C No. 1161.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 15 - GG, US No. 33.",
+          "value": "Aug. 15 - GG, US No. 33.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 3 - “Billions in the Hole,” US No. 33; FC, US No. 36.",
+          "value": "Sept. 3 - “Billions in the Hole,” US No. 33; FC, US No. 36.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 12 - “Bongo on the Congo,” US No. 33.",
+          "value": "Sept. 12 - “Bongo on the Congo,” US No. 33.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 19 - FC, DD No. 77; FC, DDNo.79;FC, WDCNo.250; FC, WDC No. 253.",
+          "value": "Sept. 19 - FC, DD No. 77; FC, DDNo.79;FC, WDCNo.250; FC, WDC No. 253.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 1 - FC, GG 4C No. 1184.",
+          "value": "Oct. 1 - FC, GG 4C No. 1184.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 12 - All interior pages, GG 4C No. 1184.",
+          "value": "Oct. 12 - All interior pages, GG 4C No. 1184.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 31 - IFC, IBC, BC, GG 4C No. 1184; WDC No. 249.",
+          "value": "Oct. 31 - IFC, IBC, BC, GG 4C No. 1184; WDC No. 249.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 12 - WDC No. 250.",
+          "value": "Nov. 12 - WDC No. 250.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 16 - “Chugwagon Derby,” US No. 34.",
+          "value": "Nov. 16 - “Chugwagon Derby,” US No. 34.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 10 - “Mythtic Mystery,” GG, US No. 34.",
+          "value": "Dec. 10 - “Mythtic Mystery,” GG, US No. 34.",
+          "bbox": [
+            {
+              "h": 10.895459222560984,
+              "w": 124.27060403963416,
+              "x": 150.72768864329265,
+              "y": 85.43534108231707,
+              "confidence": 0.62,
+              "end_index": 821,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 28 - WDC No. 251.",
+          "value": "Dec. 28 - WDC No. 251.",
           "bbox": [
             {
               "h": 10.895459222560984,
@@ -90,8 +1093,467 @@
           "type": "heading"
         },
         {
-          "md": "Jan. 10 - WDC No. 252.\nJan. 16 - WDC No. 253.\nJan. 23 - FC, WDC No. 256.\nFeb. 16 - “Golden Nugget Boat,” US No. 35.\nFeb. 24 - “Gift Lion,” GG, US No. 35.\nMar. 4 - FC, DD No. 80.\nMar. 13 - WDC No. 254.\nMar. 20 - WDC No. 255.\nMar. 27 - FC, US No. 37.\nApr. 8 - FC, Donald Duck Album 4C No. 1239; (Dell); FC, GG 4C No. 1267.\nApr. 17 - “The Midas Touch,” US No. 36.\nApr. 21 - FC, WDC No. 261.\nMay 3 - FC, GG No. 01-329-207; “Money Bag Goat,” GG US No. 36.\nMay 17 - WDC No. 256.\nJune 5 - WDC No. 257.\nJune 14 - WDC No. 258.\nJune 19 - “Buffaloed by Buffaloes,” GG 4C No. 1267.\nJuly 7 - “Cave of Ali Baba,” US No. 37.\nJuly 13 - “Deep Down Doings,” US No. 37.\nAug. 22 - GG, US No. 37.\nSept. 7 - FC, WDC No. 260.\nSept. 14 - WDC No. 259.\nSept. 19 - WDC No. 260.\nSept. 28 - Unpublished FC for GG (“rocket chair”)\nOct. 5 - Unpublished FC for WDC (“kids at bat”).\nOct. 11 - “The Unsafe Safe,” US No. 38.\nOct. 16 - “Much Luck McDuck,” US No. 38.\nNov. 1 - One-page and half-page gags for US No. 38 (three and a half pages), 39 (half page), 54 (one page), and WDC",
-          "value": "Jan. 10 - WDC No. 252.\nJan. 16 - WDC No. 253.\nJan. 23 - FC, WDC No. 256.\nFeb. 16 - “Golden Nugget Boat,” US No. 35.\nFeb. 24 - “Gift Lion,” GG, US No. 35.\nMar. 4 - FC, DD No. 80.\nMar. 13 - WDC No. 254.\nMar. 20 - WDC No. 255.\nMar. 27 - FC, US No. 37.\nApr. 8 - FC, Donald Duck Album 4C No. 1239; (Dell); FC, GG 4C No. 1267.\nApr. 17 - “The Midas Touch,” US No. 36.\nApr. 21 - FC, WDC No. 261.\nMay 3 - FC, GG No. 01-329-207; “Money Bag Goat,” GG US No. 36.\nMay 17 - WDC No. 256.\nJune 5 - WDC No. 257.\nJune 14 - WDC No. 258.\nJune 19 - “Buffaloed by Buffaloes,” GG 4C No. 1267.\nJuly 7 - “Cave of Ali Baba,” US No. 37.\nJuly 13 - “Deep Down Doings,” US No. 37.\nAug. 22 - GG, US No. 37.\nSept. 7 - FC, WDC No. 260.\nSept. 14 - WDC No. 259.\nSept. 19 - WDC No. 260.\nSept. 28 - Unpublished FC for GG (“rocket chair”)\nOct. 5 - Unpublished FC for WDC (“kids at bat”).\nOct. 11 - “The Unsafe Safe,” US No. 38.\nOct. 16 - “Much Luck McDuck,” US No. 38.\nNov. 1 - One-page and half-page gags for US No. 38 (three and a half pages), 39 (half page), 54 (one page), and WDC",
+          "md": "Jan. 10 - WDC No. 252.",
+          "value": "Jan. 10 - WDC No. 252.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. 16 - WDC No. 253.",
+          "value": "Jan. 16 - WDC No. 253.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. 23 - FC, WDC No. 256.",
+          "value": "Jan. 23 - FC, WDC No. 256.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 16 - “Golden Nugget Boat,” US No. 35.",
+          "value": "Feb. 16 - “Golden Nugget Boat,” US No. 35.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 24 - “Gift Lion,” GG, US No. 35.",
+          "value": "Feb. 24 - “Gift Lion,” GG, US No. 35.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 4 - FC, DD No. 80.",
+          "value": "Mar. 4 - FC, DD No. 80.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 13 - WDC No. 254.",
+          "value": "Mar. 13 - WDC No. 254.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 20 - WDC No. 255.",
+          "value": "Mar. 20 - WDC No. 255.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 27 - FC, US No. 37.",
+          "value": "Mar. 27 - FC, US No. 37.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 8 - FC, Donald Duck Album 4C No. 1239; (Dell); FC, GG 4C No. 1267.",
+          "value": "Apr. 8 - FC, Donald Duck Album 4C No. 1239; (Dell); FC, GG 4C No. 1267.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 17 - “The Midas Touch,” US No. 36.",
+          "value": "Apr. 17 - “The Midas Touch,” US No. 36.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 21 - FC, WDC No. 261.",
+          "value": "Apr. 21 - FC, WDC No. 261.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 3 - FC, GG No. 01-329-207; “Money Bag Goat,” GG US No. 36.",
+          "value": "May 3 - FC, GG No. 01-329-207; “Money Bag Goat,” GG US No. 36.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 17 - WDC No. 256.",
+          "value": "May 17 - WDC No. 256.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 5 - WDC No. 257.",
+          "value": "June 5 - WDC No. 257.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 14 - WDC No. 258.",
+          "value": "June 14 - WDC No. 258.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 19 - “Buffaloed by Buffaloes,” GG 4C No. 1267.",
+          "value": "June 19 - “Buffaloed by Buffaloes,” GG 4C No. 1267.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 7 - “Cave of Ali Baba,” US No. 37.",
+          "value": "July 7 - “Cave of Ali Baba,” US No. 37.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 13 - “Deep Down Doings,” US No. 37.",
+          "value": "July 13 - “Deep Down Doings,” US No. 37.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 22 - GG, US No. 37.",
+          "value": "Aug. 22 - GG, US No. 37.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 7 - FC, WDC No. 260.",
+          "value": "Sept. 7 - FC, WDC No. 260.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 14 - WDC No. 259.",
+          "value": "Sept. 14 - WDC No. 259.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 19 - WDC No. 260.",
+          "value": "Sept. 19 - WDC No. 260.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 28 - Unpublished FC for GG (“rocket chair”)",
+          "value": "Sept. 28 - Unpublished FC for GG (“rocket chair”)",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 5 - Unpublished FC for WDC (“kids at bat”).",
+          "value": "Oct. 5 - Unpublished FC for WDC (“kids at bat”).",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 11 - “The Unsafe Safe,” US No. 38.",
+          "value": "Oct. 11 - “The Unsafe Safe,” US No. 38.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 16 - “Much Luck McDuck,” US No. 38.",
+          "value": "Oct. 16 - “Much Luck McDuck,” US No. 38.",
+          "bbox": [
+            {
+              "h": 11.327309451219534,
+              "w": 125.1244207317073,
+              "x": 151.48588033536586,
+              "y": 339.57948932926826,
+              "confidence": 0.81,
+              "end_index": 1045,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 1 - One-page and half-page gags for US No. 38 (three and a half pages), 39 (half page), 54 (one page), and WDC",
+          "value": "Nov. 1 - One-page and half-page gags for US No. 38 (three and a half pages), 39 (half page), 54 (one page), and WDC",
           "bbox": [
             {
               "h": 11.327309451219534,

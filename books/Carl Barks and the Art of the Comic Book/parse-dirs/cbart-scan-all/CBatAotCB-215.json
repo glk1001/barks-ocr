@@ -21,8 +21,25 @@
           "type": "heading"
         },
         {
-          "md": "Mar. 9 - “Hark, Hark, the Ark,” JW No. 23.\nMar. 30 - “Captains Outrageous,” JW No. 25.",
-          "value": "Mar. 9 - “Hark, Hark, the Ark,” JW No. 23.\nMar. 30 - “Captains Outrageous,” JW No. 25.",
+          "md": "Mar. 9 - “Hark, Hark, the Ark,” JW No. 23.",
+          "value": "Mar. 9 - “Hark, Hark, the Ark,” JW No. 23.",
+          "bbox": [
+            {
+              "h": 11.997759146341464,
+              "w": 97.67688917206554,
+              "x": 10.860444097751524,
+              "y": 40.652732469512195,
+              "confidence": 0.88,
+              "end_index": 85,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 30 - “Captains Outrageous,” JW No. 25.",
+          "value": "Mar. 30 - “Captains Outrageous,” JW No. 25.",
           "bbox": [
             {
               "h": 11.997759146341464,

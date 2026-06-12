@@ -3,8 +3,110 @@
     {
       "items": [
         {
-          "md": "No. 262 (half page); FC, US No. 39; unpublished half-page “status seeker” gag.\nNov. 3 - GG, US No. 38.\nNov 6 - FC, DD No. 83.\nNov. 9 - Unpublished FC for US (“six cups”).\nNov. 16 - WDC No. 261.\nDec. 5 - WDC No. 262.\nDec. 13 - WDC No. 263.",
-          "value": "No. 262 (half page); FC, US No. 39; unpublished half-page “status seeker” gag.\nNov. 3 - GG, US No. 38.\nNov 6 - FC, DD No. 83.\nNov. 9 - Unpublished FC for US (“six cups”).\nNov. 16 - WDC No. 261.\nDec. 5 - WDC No. 262.\nDec. 13 - WDC No. 263.",
+          "md": "No. 262 (half page); FC, US No. 39; unpublished half-page “status seeker” gag.",
+          "value": "No. 262 (half page); FC, US No. 39; unpublished half-page “status seeker” gag.",
+          "bbox": [
+            {
+              "h": 11.686217606707315,
+              "w": 120.51873332698169,
+              "x": 17.596247618140243,
+              "y": 16.547466653963415,
+              "confidence": 0.83,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 3 - GG, US No. 38.",
+          "value": "Nov. 3 - GG, US No. 38.",
+          "bbox": [
+            {
+              "h": 11.686217606707315,
+              "w": 120.51873332698169,
+              "x": 17.596247618140243,
+              "y": 16.547466653963415,
+              "confidence": 0.83,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov 6 - FC, DD No. 83.",
+          "value": "Nov 6 - FC, DD No. 83.",
+          "bbox": [
+            {
+              "h": 11.686217606707315,
+              "w": 120.51873332698169,
+              "x": 17.596247618140243,
+              "y": 16.547466653963415,
+              "confidence": 0.83,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 9 - Unpublished FC for US (“six cups”).",
+          "value": "Nov. 9 - Unpublished FC for US (“six cups”).",
+          "bbox": [
+            {
+              "h": 11.686217606707315,
+              "w": 120.51873332698169,
+              "x": 17.596247618140243,
+              "y": 16.547466653963415,
+              "confidence": 0.83,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 16 - WDC No. 261.",
+          "value": "Nov. 16 - WDC No. 261.",
+          "bbox": [
+            {
+              "h": 11.686217606707315,
+              "w": 120.51873332698169,
+              "x": 17.596247618140243,
+              "y": 16.547466653963415,
+              "confidence": 0.83,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 5 - WDC No. 262.",
+          "value": "Dec. 5 - WDC No. 262.",
+          "bbox": [
+            {
+              "h": 11.686217606707315,
+              "w": 120.51873332698169,
+              "x": 17.596247618140243,
+              "y": 16.547466653963415,
+              "confidence": 0.83,
+              "end_index": 237,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 13 - WDC No. 263.",
+          "value": "Dec. 13 - WDC No. 263.",
           "bbox": [
             {
               "h": 11.686217606707315,
@@ -38,8 +140,450 @@
           "type": "heading"
         },
         {
-          "md": "Jan. 15 - “A Spicy Tale,” GG, IFC, IBC, US No. 39; “Million Dollar Shower,” WDC No. 297; unpublished “major operation” half-page.\nFeb. 5 - “Tricky Experiment,” US No. 39.\nFeb. 9 - WDC No. 264.\nFeb. 17 - WDC No. 265.\nMar. 5 - WDC No. 266.\nMar. 15 - WDC No. 267.\nMar. 19 - GG, US No. 41.\nApr. 12 - “Oddball Odyssey,” US No. 40.\nApr. 18 - GG, US No. 40.\nMay 16 - “Status Seeker,” US No. 41.\nMay 21 - FC, US No. 40.\nJune 4 - WDC No. 268.\nJune? - WDC No. 269.\nJune 25 - WDC No. 270.\nJuly 16 - “For Old Dime’s Sake,” US No. 43.\nAug. 11 - WDC No. 271.\nAug. 15 - WDC No. 272.\nAug. 27 - WDC No. 273.\nSept. 17 - “Sticky Money,” US No. 42.\nSept. 24 - One-page gags for US No. 42, half-page gags for US No. 47.\nOct. 10 - WDC No. 274.\nOct. 29 - WDC No. 275.\nNov. 5 - FC, US No. 43.\nNov. 13 - WDC No. 276.\nDec. 10 - “Crown of the Mayas,” US No. 44.\nDec. 20 - Gag ideas (one each) for US No. 46, 54, 55, 61.\nDec. 26 - “Invisible Intruder,” US No. 44.",
-          "value": "Jan. 15 - “A Spicy Tale,” GG, IFC, IBC, US No. 39; “Million Dollar Shower,” WDC No. 297; unpublished “major operation” half-page.\nFeb. 5 - “Tricky Experiment,” US No. 39.\nFeb. 9 - WDC No. 264.\nFeb. 17 - WDC No. 265.\nMar. 5 - WDC No. 266.\nMar. 15 - WDC No. 267.\nMar. 19 - GG, US No. 41.\nApr. 12 - “Oddball Odyssey,” US No. 40.\nApr. 18 - GG, US No. 40.\nMay 16 - “Status Seeker,” US No. 41.\nMay 21 - FC, US No. 40.\nJune 4 - WDC No. 268.\nJune? - WDC No. 269.\nJune 25 - WDC No. 270.\nJuly 16 - “For Old Dime’s Sake,” US No. 43.\nAug. 11 - WDC No. 271.\nAug. 15 - WDC No. 272.\nAug. 27 - WDC No. 273.\nSept. 17 - “Sticky Money,” US No. 42.\nSept. 24 - One-page gags for US No. 42, half-page gags for US No. 47.\nOct. 10 - WDC No. 274.\nOct. 29 - WDC No. 275.\nNov. 5 - FC, US No. 43.\nNov. 13 - WDC No. 276.\nDec. 10 - “Crown of the Mayas,” US No. 44.\nDec. 20 - Gag ideas (one each) for US No. 46, 54, 55, 61.\nDec. 26 - “Invisible Intruder,” US No. 44.",
+          "md": "Jan. 15 - “A Spicy Tale,” GG, IFC, IBC, US No. 39; “Million Dollar Shower,” WDC No. 297; unpublished “major operation” half-page.",
+          "value": "Jan. 15 - “A Spicy Tale,” GG, IFC, IBC, US No. 39; “Million Dollar Shower,” WDC No. 297; unpublished “major operation” half-page.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 5 - “Tricky Experiment,” US No. 39.",
+          "value": "Feb. 5 - “Tricky Experiment,” US No. 39.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 9 - WDC No. 264.",
+          "value": "Feb. 9 - WDC No. 264.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 17 - WDC No. 265.",
+          "value": "Feb. 17 - WDC No. 265.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 5 - WDC No. 266.",
+          "value": "Mar. 5 - WDC No. 266.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 15 - WDC No. 267.",
+          "value": "Mar. 15 - WDC No. 267.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 19 - GG, US No. 41.",
+          "value": "Mar. 19 - GG, US No. 41.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 12 - “Oddball Odyssey,” US No. 40.",
+          "value": "Apr. 12 - “Oddball Odyssey,” US No. 40.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 18 - GG, US No. 40.",
+          "value": "Apr. 18 - GG, US No. 40.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 16 - “Status Seeker,” US No. 41.",
+          "value": "May 16 - “Status Seeker,” US No. 41.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 21 - FC, US No. 40.",
+          "value": "May 21 - FC, US No. 40.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 4 - WDC No. 268.",
+          "value": "June 4 - WDC No. 268.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June? - WDC No. 269.",
+          "value": "June? - WDC No. 269.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 25 - WDC No. 270.",
+          "value": "June 25 - WDC No. 270.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 16 - “For Old Dime’s Sake,” US No. 43.",
+          "value": "July 16 - “For Old Dime’s Sake,” US No. 43.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 11 - WDC No. 271.",
+          "value": "Aug. 11 - WDC No. 271.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 15 - WDC No. 272.",
+          "value": "Aug. 15 - WDC No. 272.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 27 - WDC No. 273.",
+          "value": "Aug. 27 - WDC No. 273.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 17 - “Sticky Money,” US No. 42.",
+          "value": "Sept. 17 - “Sticky Money,” US No. 42.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 24 - One-page gags for US No. 42, half-page gags for US No. 47.",
+          "value": "Sept. 24 - One-page gags for US No. 42, half-page gags for US No. 47.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 10 - WDC No. 274.",
+          "value": "Oct. 10 - WDC No. 274.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 29 - WDC No. 275.",
+          "value": "Oct. 29 - WDC No. 275.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 5 - FC, US No. 43.",
+          "value": "Nov. 5 - FC, US No. 43.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 13 - WDC No. 276.",
+          "value": "Nov. 13 - WDC No. 276.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 10 - “Crown of the Mayas,” US No. 44.",
+          "value": "Dec. 10 - “Crown of the Mayas,” US No. 44.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 20 - Gag ideas (one each) for US No. 46, 54, 55, 61.",
+          "value": "Dec. 20 - Gag ideas (one each) for US No. 46, 54, 55, 61.",
+          "bbox": [
+            {
+              "h": 17.730560213414638,
+              "w": 125.41444371665395,
+              "x": 12.945722060785059,
+              "y": 81.64274771341464,
+              "confidence": 0.78,
+              "end_index": 934,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 26 - “Invisible Intruder,” US No. 44.",
+          "value": "Dec. 26 - “Invisible Intruder,” US No. 44.",
           "bbox": [
             {
               "h": 17.730560213414638,
@@ -73,8 +617,552 @@
           "type": "heading"
         },
         {
-          "md": "Jan. 12 - Unpublished one-page “kids runaway” gag.\nJan. 17 - FC, US No. 44.\nJan. 23 - FC, Donald Duck Album No. 1 (Gold Key).\nJan. 28 - “Isle of Geese,” US No. 45.\nFeb. 7 - “Travel Tightwad,” US No. 45.\nFeb. 21 - FC, WDC No. 276.\nMar. 6 - FC, US No. 45.\nMar. 7 - WDC No. 277.\nMar. 19 - GG, US No. 46.\nApr. 4 - FC, WDC No. 277.\nApr. 11 - WDC No. 278.\nMay 8 - FC, WDC No. 278.\nMay 27 - “Lost Beneath the Sea,” US No. 46.\nJune 4 - “Lemonade Fling,” FC, US No. 46.\nJune 7 - One-page gags for US No. 46, 54.\nJune 24 - WDC No. 279.\nJuly 1 - FC, WDC No. 279.\nJuly 15 - WDC No. 280.\nJuly 22 - GG, US No. 47.\nAug. 5 - FC; WDC No. 280.\nAug. 14 - “Thrifty Spendthrift,” US No. 47.\nAug. 19 - Unknown page intended for US No. 47, possibly in US No. 61.\nAug. 21 - FC, US No. 47.\nAug. 26 - WDC, No. 281.\nSept. 6 - FC, WDE No. 281; WDC No. 282.\nSept. 16 - GG, US No. 48; FC, WDC No. 282.\nOct. 5 - “Many Faces of Magica de Spell,” US No. 48.\nOct. 15 - FC, US No. 48.\nOct. 29 - WDC No. 283.\nOct. 31 - FC, WDC No. 283.\nNov. 12 - “Loony Luna Gold Rush,” FC, US No. 49.\nDec. 3 - WDC No. 286.\nDec. 26 - “Rug Riders in the Sky,” FC, US No. 50.",
-          "value": "Jan. 12 - Unpublished one-page “kids runaway” gag.\nJan. 17 - FC, US No. 44.\nJan. 23 - FC, Donald Duck Album No. 1 (Gold Key).\nJan. 28 - “Isle of Geese,” US No. 45.\nFeb. 7 - “Travel Tightwad,” US No. 45.\nFeb. 21 - FC, WDC No. 276.\nMar. 6 - FC, US No. 45.\nMar. 7 - WDC No. 277.\nMar. 19 - GG, US No. 46.\nApr. 4 - FC, WDC No. 277.\nApr. 11 - WDC No. 278.\nMay 8 - FC, WDC No. 278.\nMay 27 - “Lost Beneath the Sea,” US No. 46.\nJune 4 - “Lemonade Fling,” FC, US No. 46.\nJune 7 - One-page gags for US No. 46, 54.\nJune 24 - WDC No. 279.\nJuly 1 - FC, WDC No. 279.\nJuly 15 - WDC No. 280.\nJuly 22 - GG, US No. 47.\nAug. 5 - FC; WDC No. 280.\nAug. 14 - “Thrifty Spendthrift,” US No. 47.\nAug. 19 - Unknown page intended for US No. 47, possibly in US No. 61.\nAug. 21 - FC, US No. 47.\nAug. 26 - WDC, No. 281.\nSept. 6 - FC, WDE No. 281; WDC No. 282.\nSept. 16 - GG, US No. 48; FC, WDC No. 282.\nOct. 5 - “Many Faces of Magica de Spell,” US No. 48.\nOct. 15 - FC, US No. 48.\nOct. 29 - WDC No. 283.\nOct. 31 - FC, WDC No. 283.\nNov. 12 - “Loony Luna Gold Rush,” FC, US No. 49.\nDec. 3 - WDC No. 286.\nDec. 26 - “Rug Riders in the Sky,” FC, US No. 50.",
+          "md": "Jan. 12 - Unpublished one-page “kids runaway” gag.",
+          "value": "Jan. 12 - Unpublished one-page “kids runaway” gag.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. 17 - FC, US No. 44.",
+          "value": "Jan. 17 - FC, US No. 44.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. 23 - FC, Donald Duck Album No. 1 (Gold Key).",
+          "value": "Jan. 23 - FC, Donald Duck Album No. 1 (Gold Key).",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Jan. 28 - “Isle of Geese,” US No. 45.",
+          "value": "Jan. 28 - “Isle of Geese,” US No. 45.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 7 - “Travel Tightwad,” US No. 45.",
+          "value": "Feb. 7 - “Travel Tightwad,” US No. 45.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 21 - FC, WDC No. 276.",
+          "value": "Feb. 21 - FC, WDC No. 276.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 6 - FC, US No. 45.",
+          "value": "Mar. 6 - FC, US No. 45.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 7 - WDC No. 277.",
+          "value": "Mar. 7 - WDC No. 277.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 19 - GG, US No. 46.",
+          "value": "Mar. 19 - GG, US No. 46.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 4 - FC, WDC No. 277.",
+          "value": "Apr. 4 - FC, WDC No. 277.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 11 - WDC No. 278.",
+          "value": "Apr. 11 - WDC No. 278.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 8 - FC, WDC No. 278.",
+          "value": "May 8 - FC, WDC No. 278.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 27 - “Lost Beneath the Sea,” US No. 46.",
+          "value": "May 27 - “Lost Beneath the Sea,” US No. 46.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 4 - “Lemonade Fling,” FC, US No. 46.",
+          "value": "June 4 - “Lemonade Fling,” FC, US No. 46.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 7 - One-page gags for US No. 46, 54.",
+          "value": "June 7 - One-page gags for US No. 46, 54.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 24 - WDC No. 279.",
+          "value": "June 24 - WDC No. 279.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 1 - FC, WDC No. 279.",
+          "value": "July 1 - FC, WDC No. 279.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 15 - WDC No. 280.",
+          "value": "July 15 - WDC No. 280.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 22 - GG, US No. 47.",
+          "value": "July 22 - GG, US No. 47.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 5 - FC; WDC No. 280.",
+          "value": "Aug. 5 - FC; WDC No. 280.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 14 - “Thrifty Spendthrift,” US No. 47.",
+          "value": "Aug. 14 - “Thrifty Spendthrift,” US No. 47.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 19 - Unknown page intended for US No. 47, possibly in US No. 61.",
+          "value": "Aug. 19 - Unknown page intended for US No. 47, possibly in US No. 61.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 21 - FC, US No. 47.",
+          "value": "Aug. 21 - FC, US No. 47.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 26 - WDC, No. 281.",
+          "value": "Aug. 26 - WDC, No. 281.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 6 - FC, WDE No. 281; WDC No. 282.",
+          "value": "Sept. 6 - FC, WDE No. 281; WDC No. 282.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 16 - GG, US No. 48; FC, WDC No. 282.",
+          "value": "Sept. 16 - GG, US No. 48; FC, WDC No. 282.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 5 - “Many Faces of Magica de Spell,” US No. 48.",
+          "value": "Oct. 5 - “Many Faces of Magica de Spell,” US No. 48.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 15 - FC, US No. 48.",
+          "value": "Oct. 15 - FC, US No. 48.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 29 - WDC No. 283.",
+          "value": "Oct. 29 - WDC No. 283.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 31 - FC, WDC No. 283.",
+          "value": "Oct. 31 - FC, WDC No. 283.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 12 - “Loony Luna Gold Rush,” FC, US No. 49.",
+          "value": "Nov. 12 - “Loony Luna Gold Rush,” FC, US No. 49.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 3 - WDC No. 286.",
+          "value": "Dec. 3 - WDC No. 286.",
+          "bbox": [
+            {
+              "h": 11.485209603658536,
+              "w": 125.73876333841463,
+              "x": 150.2203925304878,
+              "y": 76.57505144817074,
+              "confidence": 0.77,
+              "end_index": 1119,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 26 - “Rug Riders in the Sky,” FC, US No. 50.",
+          "value": "Dec. 26 - “Rug Riders in the Sky,” FC, US No. 50.",
           "bbox": [
             {
               "h": 11.485209603658536,
@@ -108,8 +1196,484 @@
           "type": "heading"
         },
         {
-          "md": "Jan. 18 - “How Green Was my Lettuce,” FC, US No. 51.\nFeb. 19 - “Great Wig Mystery,” FC, US No. 52.\nMar. 6 - WDC No. 288.\nMar. 18 - FC, WDC No. 288.\nMar. 27 - “Interplanetary Postman,” FC, US No. 53.\nApr. 6 - WDC No. 289.\nApr. 22 - FC, WDC No. 289.\nMay 11 - “Billion Dollar Safari,” FC, US No. 54.\nMay 15 - FC, WDC No. 290.\nMay 25 - WDC No. 291.\nMay 29 - FC, WDC No. 291.\nJune 11 - WDC No. 292.\nJune 16 - FC, WDC No. 292.\nJuly 13 - “McDuck of Arabia,” FC, US No. 55.\nAug. 3 - Lost watch gag, US No. 55.\nAug. 31 - “Ghost Town Railroad,” FC, IFC, US No. 56.\nSept. 17 - WDC No. 294.\nSept. 19 - Forgotten keys gag, US No. 57.\nSept. 28 - Three one-page gags, US No. 57.\nOct. 9 - FC, WDC No. 295; FC, WDC No. 296.\nOct. 19 - FC, US No. 57.\nOct. 23 - FC, DD No. 101.\nOct. 30 - “Swamp of No Return,” US No. 57.\nNov. 16 - WDC No. 297.\nNov. 28 - FC, WDC No. 297.\nDec. 3 - FC, US No. 58.\nDec. 13 - “Giant Robot Robbers,” US No. 58.\nDec. 21 - One-page gags for US No. 58 (two), 61 (one).\nDec. 22 - FC, WDC No. 298.",
-          "value": "Jan. 18 - “How Green Was my Lettuce,” FC, US No. 51.\nFeb. 19 - “Great Wig Mystery,” FC, US No. 52.\nMar. 6 - WDC No. 288.\nMar. 18 - FC, WDC No. 288.\nMar. 27 - “Interplanetary Postman,” FC, US No. 53.\nApr. 6 - WDC No. 289.\nApr. 22 - FC, WDC No. 289.\nMay 11 - “Billion Dollar Safari,” FC, US No. 54.\nMay 15 - FC, WDC No. 290.\nMay 25 - WDC No. 291.\nMay 29 - FC, WDC No. 291.\nJune 11 - WDC No. 292.\nJune 16 - FC, WDC No. 292.\nJuly 13 - “McDuck of Arabia,” FC, US No. 55.\nAug. 3 - Lost watch gag, US No. 55.\nAug. 31 - “Ghost Town Railroad,” FC, IFC, US No. 56.\nSept. 17 - WDC No. 294.\nSept. 19 - Forgotten keys gag, US No. 57.\nSept. 28 - Three one-page gags, US No. 57.\nOct. 9 - FC, WDC No. 295; FC, WDC No. 296.\nOct. 19 - FC, US No. 57.\nOct. 23 - FC, DD No. 101.\nOct. 30 - “Swamp of No Return,” US No. 57.\nNov. 16 - WDC No. 297.\nNov. 28 - FC, WDC No. 297.\nDec. 3 - FC, US No. 58.\nDec. 13 - “Giant Robot Robbers,” US No. 58.\nDec. 21 - One-page gags for US No. 58 (two), 61 (one).\nDec. 22 - FC, WDC No. 298.",
+          "md": "Jan. 18 - “How Green Was my Lettuce,” FC, US No. 51.",
+          "value": "Jan. 18 - “How Green Was my Lettuce,” FC, US No. 51.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Feb. 19 - “Great Wig Mystery,” FC, US No. 52.",
+          "value": "Feb. 19 - “Great Wig Mystery,” FC, US No. 52.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 6 - WDC No. 288.",
+          "value": "Mar. 6 - WDC No. 288.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 18 - FC, WDC No. 288.",
+          "value": "Mar. 18 - FC, WDC No. 288.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Mar. 27 - “Interplanetary Postman,” FC, US No. 53.",
+          "value": "Mar. 27 - “Interplanetary Postman,” FC, US No. 53.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 6 - WDC No. 289.",
+          "value": "Apr. 6 - WDC No. 289.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Apr. 22 - FC, WDC No. 289.",
+          "value": "Apr. 22 - FC, WDC No. 289.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 11 - “Billion Dollar Safari,” FC, US No. 54.",
+          "value": "May 11 - “Billion Dollar Safari,” FC, US No. 54.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 15 - FC, WDC No. 290.",
+          "value": "May 15 - FC, WDC No. 290.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 25 - WDC No. 291.",
+          "value": "May 25 - WDC No. 291.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "May 29 - FC, WDC No. 291.",
+          "value": "May 29 - FC, WDC No. 291.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 11 - WDC No. 292.",
+          "value": "June 11 - WDC No. 292.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "June 16 - FC, WDC No. 292.",
+          "value": "June 16 - FC, WDC No. 292.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "July 13 - “McDuck of Arabia,” FC, US No. 55.",
+          "value": "July 13 - “McDuck of Arabia,” FC, US No. 55.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 3 - Lost watch gag, US No. 55.",
+          "value": "Aug. 3 - Lost watch gag, US No. 55.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Aug. 31 - “Ghost Town Railroad,” FC, IFC, US No. 56.",
+          "value": "Aug. 31 - “Ghost Town Railroad,” FC, IFC, US No. 56.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 17 - WDC No. 294.",
+          "value": "Sept. 17 - WDC No. 294.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 19 - Forgotten keys gag, US No. 57.",
+          "value": "Sept. 19 - Forgotten keys gag, US No. 57.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Sept. 28 - Three one-page gags, US No. 57.",
+          "value": "Sept. 28 - Three one-page gags, US No. 57.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 9 - FC, WDC No. 295; FC, WDC No. 296.",
+          "value": "Oct. 9 - FC, WDC No. 295; FC, WDC No. 296.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 19 - FC, US No. 57.",
+          "value": "Oct. 19 - FC, US No. 57.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 23 - FC, DD No. 101.",
+          "value": "Oct. 23 - FC, DD No. 101.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Oct. 30 - “Swamp of No Return,” US No. 57.",
+          "value": "Oct. 30 - “Swamp of No Return,” US No. 57.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 16 - WDC No. 297.",
+          "value": "Nov. 16 - WDC No. 297.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Nov. 28 - FC, WDC No. 297.",
+          "value": "Nov. 28 - FC, WDC No. 297.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 3 - FC, US No. 58.",
+          "value": "Dec. 3 - FC, US No. 58.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 13 - “Giant Robot Robbers,” US No. 58.",
+          "value": "Dec. 13 - “Giant Robot Robbers,” US No. 58.",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 21 - One-page gags for US No. 58 (two), 61 (one).",
+          "value": "Dec. 21 - One-page gags for US No. 58 (two), 61 (one).",
+          "bbox": [
+            {
+              "h": 5.603711890243912,
+              "w": 111.58165015243898,
+              "x": 150.67749237804878,
+              "y": 195.79596036585366,
+              "confidence": 0.77,
+              "end_index": 999,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Dec. 22 - FC, WDC No. 298.",
+          "value": "Dec. 22 - FC, WDC No. 298.",
           "bbox": [
             {
               "h": 5.603711890243912,
