@@ -3,8 +3,42 @@
     {
       "items": [
         {
-          "md": "Reprinted: *Uncle Scrooge* No. 135, December 1976; *Walt Disney Comics Digest* No. 16, October 1969.\nUNCLE SCROOGE - 5/8 - Scrooge proves he has a “roll that would choke a horse.” (*Oct. 31, 1957*)\nThe Dell Pledge and an advertisement fill out the page.\nUNCLE SCROOGE - 1 (inside back cover) - Scrooge finds a way to read his newspaper without paying for expensive electricity. (*Mar. 25, 1958*)",
-          "value": "Reprinted: Uncle Scrooge No. 135, December 1976; Walt Disney Comics Digest No. 16, October 1969.\nUNCLE SCROOGE - 5/8 - Scrooge proves he has a “roll that would choke a horse.” (Oct. 31, 1957)\nThe Dell Pledge and an advertisement fill out the page.\nUNCLE SCROOGE - 1 (inside back cover) - Scrooge finds a way to read his newspaper without paying for expensive electricity. (Mar. 25, 1958)",
+          "md": "UNCLE SCROOGE - 5/8 - Scrooge proves he has a “roll that would choke a horse.” (*Oct. 31, 1957*)",
+          "value": "UNCLE SCROOGE - 5/8 - Scrooge proves he has a “roll that would choke a horse.” (Oct. 31, 1957)",
+          "bbox": [
+            {
+              "h": 17.08153010670732,
+              "w": 125.39109160632621,
+              "x": 11.695534727515243,
+              "y": 47.4960537347561,
+              "confidence": 0.84,
+              "end_index": 394,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The Dell Pledge and an advertisement fill out the page.",
+          "value": "The Dell Pledge and an advertisement fill out the page.",
+          "bbox": [
+            {
+              "h": 17.08153010670732,
+              "w": 125.39109160632621,
+              "x": 11.695534727515243,
+              "y": 47.4960537347561,
+              "confidence": 0.84,
+              "end_index": 394,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge finds a way to read his newspaper without paying for expensive electricity. (*Mar. 25, 1958*)",
+          "value": "UNCLE SCROOGE - 1 (inside back cover) - Scrooge finds a way to read his newspaper without paying for expensive electricity. (Mar. 25, 1958)",
           "bbox": [
             {
               "h": 17.08153010670732,

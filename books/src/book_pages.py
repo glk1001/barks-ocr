@@ -181,6 +181,10 @@ def is_running_header_item(  # noqa: PLR0911 - many reasons to drop
             has_lower = any(c.islower() for c in heading_text)
             if has_letter and not has_lower and heading_text in repeating_headings:
                 return True
+        # A heading that survived the checks above is a real section title -
+        # never treat it as a standalone page number. (Appendix A's year
+        # headings like "## 1942" are all digits, but they are headings.)
+        return False
     if not value or len(value) > _MAX_PAGE_NUMBER_LEN:
         return False
     if value.isdigit():
