@@ -91,7 +91,7 @@
           "type": "text"
         },
         {
-          "md": "DD - Donald Duck; JW - Huey, Dewey and Louie Junior Woodchucks; OG - Our Gang Comics; US - Uncle Scrooge; WDC - Walt Disney’s Comics; 4C-Four Color;FC - front cover; IFC - inside front cover; IBC - inside back cover; BC - back cover. I have not abbreviated the titles of comic books that have only a few entries.",
+          "md": "DD - Donald Duck; JW - *Huey, Dewey and Louie Junior Woodchucks;* OG - *Our Gang Comics;* US - *Uncle Scrooge;* WDC - *Walt Disney’s Comics;* 4C - *Four Color;* FC - front cover; IFC - inside front cover; IBC - inside back cover; BC - back cover. I have not abbreviated the titles of comic books that have only a few entries.",
           "value": "DD - Donald Duck; JW - Huey, Dewey and Louie Junior Woodchucks; OG - Our Gang Comics; US - Uncle Scrooge; WDC - Walt Disney’s Comics; 4C-Four Color;FC - front cover; IFC - inside front cover; IBC - inside back cover; BC - back cover. I have not abbreviated the titles of comic books that have only a few entries.",
           "bbox": [
             {
@@ -108,7 +108,7 @@
           "type": "text"
         },
         {
-          "md": "When an entry consists of only a comic book’s title and issue number, that means that all of Barks’ work in that comic book was submitted on that date. For example, most of the listings for Our Gang Comics are in fact listings for the “Barney Bear and Benny Burro” stories Barks did for that title.",
+          "md": "When an entry consists of only a comic book’s title and issue number, that means that all of Barks’ work in that comic book was submitted on that date. For example, most of the listings for *Our Gang* Comics are in fact listings for the “Barney Bear and Benny Burro” stories Barks did for that title.",
           "value": "When an entry consists of only a comic book’s title and issue number, that means that all of Barks’ work in that comic book was submitted on that date. For example, most of the listings for Our Gang Comics are in fact listings for the “Barney Bear and Benny Burro” stories Barks did for that title.",
           "bbox": [
             {
@@ -125,7 +125,7 @@
           "type": "text"
         },
         {
-          "md": "There is one partial exception to this rule. Barks did do work — mostly front covers — for many issues of Walt Disney’s Comics, in addition to his “Donald Duck” stories. However, this work was limited and insignificant compared to the stories with Donald. Accordingly, the entries for Walt Disney’s Comics are for the Donald stories, except where noted otherwise. Thus, the entry for “WDC No. 150” is for the Donald story in that issue; the entry for the front cover of that issue is listed as “FC, WDC No. 150.” Question marks follow the ”FC” for those covers whose location is open to question.",
+          "md": "There is one partial exception to this rule. Barks did do work — mostly front covers — for many issues of *Walt Disney’s Comics,* in addition to his “Donald Duck” stories. However, this work was limited and insignificant compared to the stories with Donald. Accordingly, the entries for *Walt Disney’s Comics* are for the Donald stories, except where noted otherwise. Thus, the entry for “WDC No. 150” is for the Donald story in that issue; the entry for the front cover of that issue is listed as “FC, WDC No. 150.” Question marks follow the ”FC” for those covers whose location is open to question.",
           "value": "There is one partial exception to this rule. Barks did do work — mostly front covers — for many issues of Walt Disney’s Comics, in addition to his “Donald Duck” stories. However, this work was limited and insignificant compared to the stories with Donald. Accordingly, the entries for Walt Disney’s Comics are for the Donald stories, except where noted otherwise. Thus, the entry for “WDC No. 150” is for the Donald story in that issue; the entry for the front cover of that issue is listed as “FC, WDC No. 150.” Question marks follow the ”FC” for those covers whose location is open to question.",
           "bbox": [
             {
