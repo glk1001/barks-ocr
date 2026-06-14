@@ -139,24 +139,6 @@
           "type": "text"
         },
         {
-          "caption": "This photograph of Carl Barks and other members of Western Publishing’s California staff appeared in the company’s annual report for 1957. Of the other people in the photo, R.S. Callender was a vice president of Western and head of its West Coast Division; Albert L. Stoffel was Callender’s assistant; Chase Craig and Alice N. Cobb were comic-book editors; Thomas McKimson supervised the Whitman books; Carl Buettner supervised the Golden Books; Michael H. Arens and John N. Carey were comic-book artists; and Ralph Heimdahl was the artist for the Bugs Bunny newspaper strip. Most of the other people in the photo were members of the sales staff.",
-          "md": "![This photograph of Carl Barks and other members of Western Publishing’s California staff appeared in the company’s annual report for 1957. Of the other people in the photo, R.S. Callender was a vice president of Western and head of its West Coast Division; Albert L. Stoffel was Callender’s assistant; Chase Craig and Alice N. Cobb were comic-book editors; Thomas McKimson supervised the Whitman books; Carl Buettner supervised the Golden Books; Michael H. Arens and John N. Carey were comic-book artists; and Ralph Heimdahl was the artist for the Bugs Bunny newspaper strip. Most of the other people in the photo were members of the sales staff.](CBatAotCB-083_page_1_image_2_v2.jpg)",
-          "url": "CBatAotCB-083_page_1_image_2_v2.jpg",
-          "bbox": [
-            {
-              "h": 178.67126024199695,
-              "w": 225.89986280487804,
-              "x": 28.69655487804878,
-              "y": 11.811601800685976,
-              "confidence": 0.98,
-              "end_index": 317,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
           "md": "Near the end of the fifties, Barks turned in *Uncle Scrooge* to stories set in outer space; he evidently found in them a kind of release. But he took no pains to make them plausible, and so they failed even as fantasy. On earth, by contrast, some of his “scientific” explanations of myths and legends (the *Flying Dutchman*, for example) were labored and relentless. The delicate balance between the fantastic and the mundane, which Barks had struck so well, so often, was lost.",
           "value": "Near the end of the fifties, Barks turned in Uncle Scrooge to stories set in outer space; he evidently found in them a kind of release. But he took no pains to make them plausible, and so they failed even as fantasy. On earth, by contrast, some of his “scientific” explanations of myths and legends (the Flying Dutchman, for example) were labored and relentless. The delicate balance between the fantastic and the mundane, which Barks had struck so well, so often, was lost.",
           "bbox": [
