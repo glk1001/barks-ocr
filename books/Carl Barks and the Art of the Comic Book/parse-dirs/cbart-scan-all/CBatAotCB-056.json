@@ -20,17 +20,17 @@
           "type": "text"
         },
         {
-          "caption": "From “Luck of the North” in <i>Donald Duck</i> Four Color No. 256, 1949; © 1949 Walt Disney Productions.",
-          "md": "![From “Luck of the North” in Donald Duck Four Color No. 256, 1949; © 1949 Walt Disney Productions.](CBatAotCB-054_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-054_page_1_image_1_v2.jpg",
+          "caption": "From <i>Walt Disney’s Comics</i> No. 140, May 1952; © 1952 Walt Disney Productions.",
+          "md": "![From Walt Disney’s Comics No. 140, May 1952; © 1952 Walt Disney Productions.](CBatAotCB-056_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-056_page_1_image_1_v2.jpg",
           "bbox": [
             {
-              "h": 278.4374599847561,
-              "w": 190.25835365853658,
-              "x": 48.76225038109756,
-              "y": 64.63295922256097,
-              "confidence": 0.98,
-              "end_index": 396,
+              "h": 92.9392754382622,
+              "w": 146.71898008765243,
+              "x": 10.033186451981706,
+              "y": 10.975865567835365,
+              "confidence": 0.99,
+              "end_index": 83,
               "label": "image",
               "start_index": 0
             }

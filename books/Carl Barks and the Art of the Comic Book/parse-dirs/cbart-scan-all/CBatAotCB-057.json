@@ -37,24 +37,6 @@
           "type": "text"
         },
         {
-          "caption": "From <i>Walt Disney’s Comics</i> No. 140, May 1952; © 1952 Walt Disney Productions.",
-          "md": "![From Walt Disney’s Comics No. 140, May 1952; © 1952 Walt Disney Productions.](CBatAotCB-056_page_1_image_1_v2.jpg)",
-          "url": "CBatAotCB-056_page_1_image_1_v2.jpg",
-          "bbox": [
-            {
-              "h": 92.9392754382622,
-              "w": 146.71898008765243,
-              "x": 10.033186451981706,
-              "y": 10.975865567835365,
-              "confidence": 0.99,
-              "end_index": 83,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "image"
-        },
-        {
           "md": "Gyro Gearloose, the third of Barks’s major supporting characters, did a walk-on in that same story, but it was in the next issue of *Walt Disney’s Comics* that Gyro really made his debut. Gyro was not a duck, but a chicken — a chicken almost twice as tall as the ducks, with a mop of red hair and glasses perched on his beak. Clad, in his early appearances, in a baggy",
           "value": "Gyro Gearloose, the third of Barks’s major supporting characters, did a walk-on in that same story, but it was in the next issue of Walt Disney’s Comics that Gyro really made his debut. Gyro was not a duck, but a chicken — a chicken almost twice as tall as the ducks, with a mop of red hair and glasses perched on his beak. Clad, in his early appearances, in a baggy",
           "bbox": [

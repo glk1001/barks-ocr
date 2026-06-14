@@ -37,6 +37,24 @@
           "type": "text"
         },
         {
+          "caption": "From “Luck of the North” in <i>Donald Duck</i> Four Color No. 256, 1949; © 1949 Walt Disney Productions.",
+          "md": "![From “Luck of the North” in Donald Duck Four Color No. 256, 1949; © 1949 Walt Disney Productions.](CBatAotCB-054_page_1_image_1_v2.jpg)",
+          "url": "CBatAotCB-054_page_1_image_1_v2.jpg",
+          "bbox": [
+            {
+              "h": 278.4374599847561,
+              "w": 190.25835365853658,
+              "x": 48.76225038109756,
+              "y": 64.63295922256097,
+              "confidence": 0.98,
+              "end_index": 396,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image"
+        },
+        {
           "items": [
             {
               "md": "54\nCarl Barks and the Art of the Comic Book",
