@@ -1,14 +1,25 @@
-# Format overrides for the Carl Barks Conversations EPUB build.
+# Image-layout overrides for the "Carl Barks and the Art of the Comic Book"
+# EPUB build. Each [[image_overrides]] entry tweaks how one figure is sized or
+# placed in the rendered page.
 #
-# The bbox heuristic promotes indented text items to <blockquote>. This file
-# demotes the false positives — TOC lines, interview bylines, and running-header
-# leaks — back to ordinary <p>. Each override matches on spread stem (substring)
-# plus the first few characters of the item text. Use ``as = "blockquote"`` to
-# promote an item the heuristic missed.
+# Match (which image the entry applies to):
+#   parse_dir            = required; the parse dir name (e.g. "cbart-scan-all").
+#   spread               = required; substring of the source spread stem
+#                          (e.g. "CBatAotCB-057").
+#   caption_starts_with  = match the image whose caption begins with this text;
+#   url                  = match the image by its url/filename stem.
+#                          Give at least one of caption_starts_with / url.
+#   side                 = optional "left" or "right" (which page of a spread).
+#
+# Style (at least one required):
+#   width        = CSS width, e.g. "90%".
+#   max_height   = CSS max-height, e.g. "45vh".
+#   space_above  = vertical gap before the figure, e.g. "2em".
+#   class        = CSS class on the <figure>, e.g. "side-by-side".
 
 [[image_overrides]]
 parse_dir = "cbart-scan-all"
-spread = "CBatAotCB-031"
+spread = "CBatAotCB-034"
 caption_starts_with = "Roger Armstrong"
 width = "90%"
 max_height = "45vh"
@@ -18,16 +29,34 @@ parse_dir = "cbart-scan-all"
 spread = "CBatAotCB-031"
 caption_starts_with = ""
 url = "CBatAotCB-032_page_1_image_1_v2"
-width = "100%"
+width = "90%"
+max_height = "100vh"
+space_above = "3em"
+
+[[image_overrides]]
+parse_dir = "cbart-scan-all"
+spread = "CBatAotCB-031"
+caption_starts_with = ""
+url = "CBatAotCB-033_page_1_image_1_v2"
+width = "90%"
 max_height = "100vh"
 space_above = "2em"
+
+[[image_overrides]]
+parse_dir = "cbart-scan-all"
+spread = "CBatAotCB-039"
+caption_starts_with = ""
+url = "CBatAotCB-038_page_1_image_1_v2"
+width = "85%"
+max_height = "100vh"
+space_above = "1em"
 
 [[image_overrides]]
 parse_dir = "cbart-scan-all"
 spread = "CBatAotCB-041"
 caption_starts_with = ""
 url = "CBatAotCB-042_page_1_image_1_v2"
-width = "100%"
+width = "95%"
 max_height = "100vh"
 space_above = "2em"
 
