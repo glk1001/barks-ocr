@@ -4,8 +4,8 @@
       "items": [
         {
           "level": 1,
-          "md": "# APPENDIX D",
-          "value": "APPENDIX D",
+          "md": "# APPENDIX D<br/>AN INFORMAL (AND HIGHLY SELECTIVE) LISTING OF ARTICLES ABOUT CARL BARKS",
+          "value": "APPENDIX D AN INFORMAL (AND HIGHLY SELECTIVE) LISTING OF ARTICLES ABOUT CARL BARKS",
           "bbox": [
             {
               "h": 28.893991520579267,
@@ -14,24 +14,6 @@
               "y": 18.59341034679878,
               "confidence": 0.67,
               "end_index": 9,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "level": 1,
-          "md": "# AN INFORMAL (AND HIGHLY SELECTIVE) LISTING OF ARTICLES ABOUT CARL BARKS",
-          "value": "AN INFORMAL (AND HIGHLY SELECTIVE) LISTING OF ARTICLES ABOUT CARL BARKS",
-          "bbox": [
-            {
-              "h": 28.893991520579267,
-              "w": 125.67203827648625,
-              "x": 12.314991068025913,
-              "y": 18.59341034679878,
-              "confidence": 0.92,
-              "end_index": 70,
               "label": "paragraph_title",
               "start_index": 0
             }

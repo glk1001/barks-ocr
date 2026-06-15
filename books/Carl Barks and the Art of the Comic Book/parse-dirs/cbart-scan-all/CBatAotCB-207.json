@@ -4,8 +4,8 @@
       "items": [
         {
           "level": 1,
-          "md": "# APPENDIX A",
-          "value": "APPENDIX A",
+          "md": "# APPENDIX A<br/>A CHRONOLOGICAL LISTING OF BARKS’S COMICS WORK",
+          "value": "APPENDIX A A CHRONOLOGICAL LISTING OF BARKS’S COMICS WORK",
           "bbox": [
             {
               "h": 28.201366234756097,
@@ -14,24 +14,6 @@
               "y": 29.7527743902439,
               "confidence": 0.65,
               "end_index": 9,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "level": 1,
-          "md": "# A CHRONOLOGICAL LISTING OF BARKS’S COMICS WORK",
-          "value": "A CHRONOLOGICAL LISTING OF BARKS’S COMICS WORK",
-          "bbox": [
-            {
-              "h": 28.0,
-              "w": 87.0,
-              "x": 28.0,
-              "y": 29.0,
-              "confidence": 0.88,
-              "end_index": 45,
               "label": "paragraph_title",
               "start_index": 0
             }

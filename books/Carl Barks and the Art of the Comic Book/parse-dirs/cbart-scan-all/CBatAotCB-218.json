@@ -4,8 +4,8 @@
       "items": [
         {
           "level": 1,
-          "md": "# APPENDIX C",
-          "value": "APPENDIX C",
+          "md": "# APPENDIX C<br/>SCROOGE ON THE SCREEN",
+          "value": "APPENDIX C SCROOGE ON THE SCREEN",
           "bbox": [
             {
               "h": 15.092612423780492,
@@ -14,24 +14,6 @@
               "y": 15.787059832317071,
               "confidence": 0.69,
               "end_index": 9,
-              "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "level": 1,
-          "md": "# SCROOGE ON THE SCREEN",
-          "value": "SCROOGE ON THE SCREEN",
-          "bbox": [
-            {
-              "h": 15.092612423780492,
-              "w": 98.90193978658536,
-              "x": 25.008835746951217,
-              "y": 15.787059832317071,
-              "confidence": 0.81,
-              "end_index": 20,
               "label": "paragraph_title",
               "start_index": 0
             }

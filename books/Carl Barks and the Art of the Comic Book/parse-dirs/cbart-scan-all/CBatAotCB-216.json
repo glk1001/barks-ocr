@@ -4,8 +4,8 @@
       "items": [
         {
           "level": 1,
-          "md": "# APPENDIX B",
-          "value": "APPENDIX B",
+          "md": "# APPENDIX B<br/>BARKS AS A DISNEY STORY MAN",
+          "value": "APPENDIX B BARKS AS A DISNEY STORY MAN",
           "bbox": [
             {
               "h": 13.74849895198171,
@@ -15,24 +15,6 @@
               "confidence": 0.63,
               "end_index": 9,
               "label": "paragraph_title",
-              "start_index": 0
-            }
-          ],
-          "type": "heading"
-        },
-        {
-          "level": 1,
-          "md": "# BARKS AS A DISNEY STORY MAN",
-          "value": "BARKS AS A DISNEY STORY MAN",
-          "bbox": [
-            {
-              "h": 65.33303163109757,
-              "w": 126.19098418445121,
-              "x": 12.107452362804876,
-              "y": 59.360104801829266,
-              "confidence": 0.59,
-              "end_index": 26,
-              "label": "text",
               "start_index": 0
             }
           ],
