@@ -3,58 +3,40 @@
     {
       "items": [
         {
-          "items": [
-            {
-              "level": 1,
-              "md": "# APPENDIX B",
-              "value": "APPENDIX B",
-              "bbox": [
-                {
-                  "h": 13.74849895198171,
-                  "w": 120.70386099466464,
-                  "x": 14.378670445884145,
-                  "y": 16.764513624237804,
-                  "confidence": 0.63,
-                  "end_index": 9,
-                  "label": "paragraph_title",
-                  "start_index": 0
-                }
-              ],
-              "type": "heading"
-            },
-            {
-              "level": 1,
-              "md": "# BARKS AS A DISNEY STORY MAN",
-              "value": "BARKS AS A DISNEY STORY MAN",
-              "bbox": [
-                {
-                  "h": 65.33303163109757,
-                  "w": 126.19098418445121,
-                  "x": 12.107452362804876,
-                  "y": 59.360104801829266,
-                  "confidence": 0.59,
-                  "end_index": 26,
-                  "label": "text",
-                  "start_index": 0
-                }
-              ],
-              "type": "heading"
-            }
-          ],
-          "md": "# APPENDIX B\n# BARKS AS A DISNEY STORY MAN",
+          "level": 1,
+          "md": "# APPENDIX B",
+          "value": "APPENDIX B",
           "bbox": [
             {
-              "h": 107.93,
-              "w": 126.19,
-              "x": 12.11,
-              "y": 16.76,
-              "confidence": null,
-              "end_index": null,
-              "label": null,
-              "start_index": null
+              "h": 13.74849895198171,
+              "w": 120.70386099466464,
+              "x": 14.378670445884145,
+              "y": 16.764513624237804,
+              "confidence": 0.63,
+              "end_index": 9,
+              "label": "paragraph_title",
+              "start_index": 0
             }
           ],
-          "type": "header"
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# BARKS AS A DISNEY STORY MAN",
+          "value": "BARKS AS A DISNEY STORY MAN",
+          "bbox": [
+            {
+              "h": 65.33303163109757,
+              "w": 126.19098418445121,
+              "x": 12.107452362804876,
+              "y": 59.360104801829266,
+              "confidence": 0.59,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
         },
         {
           "md": "The following is a list of the Disney cartoons on which Barks worked as a story man, according to his own records. The date in parentheses is the cartoon’s release date.",
@@ -108,8 +90,8 @@
           "type": "text"
         },
         {
-          "md": "*Modern Inventions* (May 29, 1937)\n*Donald’s Ostrich* (December 10, 1937)\n*Self Control* (February 11, 1938)\n*Donald’s Better Self* (March 11, 1938) SC\n*Donald’s Nephews* (April 15, 1938) SC\n*Good Scouts* (July 8, 1938) SC\n*Donald’s Golf Game* (November 4, 1938) SC\n*Donald’s Lucky Day* (January 13, 1939) SC\n*The Hockey Champ* (April 28, 1939) SD\n*Donald’s Cousin Gus* (May 19, 1939) SD\n*Sea Scouts* (June 30, 1939) SD\n*Donald’s Penguin* (August 11, 1939) SC\n*The Autograph Hound* (September 1, 1939) SC\n*Mr. Duck Steps Out* (June 7, 1940)\n*Bone Trouble* (June 28, 1940)\n*Put-Put Troubles* (July 19, 1940)",
-          "value": "Modern Inventions (May 29, 1937)\nDonald’s Ostrich (December 10, 1937)\nSelf Control (February 11, 1938)\nDonald’s Better Self (March 11, 1938) SC\nDonald’s Nephews (April 15, 1938) SC\nGood Scouts (July 8, 1938) SC\nDonald’s Golf Game (November 4, 1938) SC\nDonald’s Lucky Day (January 13, 1939) SC\nThe Hockey Champ (April 28, 1939) SD\nDonald’s Cousin Gus (May 19, 1939) SD\nSea Scouts (June 30, 1939) SD\nDonald’s Penguin (August 11, 1939) SC\nThe Autograph Hound (September 1, 1939) SC\nMr. Duck Steps Out (June 7, 1940)\nBone Trouble (June 28, 1940)\nPut-Put Troubles (July 19, 1940)",
+          "md": "*Modern Inventions* (May 29, 1937)",
+          "value": "Modern Inventions (May 29, 1937)",
           "bbox": [
             {
               "h": 94.85770198170731,
@@ -125,8 +107,586 @@
           "type": "text"
         },
         {
-          "md": "*Donald’s Vacation* (August 9, 1940)\n*Window Cleaners* (September 20, 1940)\n*Fire Chief* (December 13, 1940)\n*Timber* (January 10, 1941)\n*The Golden Eggs* (March 7, 1941)\n*Early to Bed* (July 11, 1941)\n*Truant Officer Donald* (August 1, 1941)\n*Old MacDonald Duck* (September 12, 1941)\n*Chef Donald* (December 5, 1941)\n*The Village Smithy* (January 16, 1942)\n*Donald’s Snow Fight* (April 10, 1942)\n*Donald Gets Drafted* (May 1, 1942)\n*The Army Mascot* (May 22, 1942)\n*The Vanishing Private* (September 25, 1942)\n*Sky Trooper* (November 6, 1942)\n*Bellboy Donald* (December 18, 1942)\n*The Old Army Game* (November 5, 1943)\n*Home Defense* (November 26, 1943)\n*Trombone Trouble* (February 18, 1944)\n*The Plastics Inventor* (September 1, 1944)",
-          "value": "Donald’s Vacation (August 9, 1940)\nWindow Cleaners (September 20, 1940)\nFire Chief (December 13, 1940)\nTimber (January 10, 1941)\nThe Golden Eggs (March 7, 1941)\nEarly to Bed (July 11, 1941)\nTruant Officer Donald (August 1, 1941)\nOld MacDonald Duck (September 12, 1941)\nChef Donald (December 5, 1941)\nThe Village Smithy (January 16, 1942)\nDonald’s Snow Fight (April 10, 1942)\nDonald Gets Drafted (May 1, 1942)\nThe Army Mascot (May 22, 1942)\nThe Vanishing Private (September 25, 1942)\nSky Trooper (November 6, 1942)\nBellboy Donald (December 18, 1942)\nThe Old Army Game (November 5, 1943)\nHome Defense (November 26, 1943)\nTrombone Trouble (February 18, 1944)\nThe Plastics Inventor (September 1, 1944)",
+          "md": "*Donald’s Ostrich* (December 10, 1937)",
+          "value": "Donald’s Ostrich (December 10, 1937)",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Self Control* (February 11, 1938)",
+          "value": "Self Control (February 11, 1938)",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Donald’s Better Self* (March 11, 1938) SC",
+          "value": "Donald’s Better Self (March 11, 1938) SC",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Donald’s Nephews* (April 15, 1938) SC",
+          "value": "Donald’s Nephews (April 15, 1938) SC",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Good Scouts* (July 8, 1938) SC",
+          "value": "Good Scouts (July 8, 1938) SC",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Donald’s Golf Game* (November 4, 1938) SC",
+          "value": "Donald’s Golf Game (November 4, 1938) SC",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Donald’s Lucky Day* (January 13, 1939) SC",
+          "value": "Donald’s Lucky Day (January 13, 1939) SC",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*The Hockey Champ* (April 28, 1939) SD",
+          "value": "The Hockey Champ (April 28, 1939) SD",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Donald’s Cousin Gus* (May 19, 1939) SD",
+          "value": "Donald’s Cousin Gus (May 19, 1939) SD",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Sea Scouts* (June 30, 1939) SD",
+          "value": "Sea Scouts (June 30, 1939) SD",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Donald’s Penguin* (August 11, 1939) SC",
+          "value": "Donald’s Penguin (August 11, 1939) SC",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*The Autograph Hound* (September 1, 1939) SC",
+          "value": "The Autograph Hound (September 1, 1939) SC",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Mr. Duck Steps Out* (June 7, 1940)",
+          "value": "Mr. Duck Steps Out (June 7, 1940)",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Bone Trouble* (June 28, 1940)",
+          "value": "Bone Trouble (June 28, 1940)",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Put-Put Troubles* (July 19, 1940)",
+          "value": "Put-Put Troubles (July 19, 1940)",
+          "bbox": [
+            {
+              "h": 94.85770198170731,
+              "w": 103.68469893292682,
+              "x": 11.913046875,
+              "y": 165.17930259146343,
+              "confidence": 0.84,
+              "end_index": 605,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Donald’s Vacation* (August 9, 1940)",
+          "value": "Donald’s Vacation (August 9, 1940)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Window Cleaners* (September 20, 1940)",
+          "value": "Window Cleaners (September 20, 1940)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Fire Chief* (December 13, 1940)",
+          "value": "Fire Chief (December 13, 1940)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Timber* (January 10, 1941)",
+          "value": "Timber (January 10, 1941)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*The Golden Eggs* (March 7, 1941)",
+          "value": "The Golden Eggs (March 7, 1941)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Early to Bed* (July 11, 1941)",
+          "value": "Early to Bed (July 11, 1941)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Truant Officer Donald* (August 1, 1941)",
+          "value": "Truant Officer Donald (August 1, 1941)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Old MacDonald Duck* (September 12, 1941)",
+          "value": "Old MacDonald Duck (September 12, 1941)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Chef Donald* (December 5, 1941)",
+          "value": "Chef Donald (December 5, 1941)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*The Village Smithy* (January 16, 1942)",
+          "value": "The Village Smithy (January 16, 1942)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Donald’s Snow Fight* (April 10, 1942)",
+          "value": "Donald’s Snow Fight (April 10, 1942)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Donald Gets Drafted* (May 1, 1942)",
+          "value": "Donald Gets Drafted (May 1, 1942)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*The Army Mascot* (May 22, 1942)",
+          "value": "The Army Mascot (May 22, 1942)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*The Vanishing Private* (September 25, 1942)",
+          "value": "The Vanishing Private (September 25, 1942)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Sky Trooper* (November 6, 1942)",
+          "value": "Sky Trooper (November 6, 1942)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Bellboy Donald* (December 18, 1942)",
+          "value": "Bellboy Donald (December 18, 1942)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*The Old Army Game* (November 5, 1943)",
+          "value": "The Old Army Game (November 5, 1943)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Home Defense* (November 26, 1943)",
+          "value": "Home Defense (November 26, 1943)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Trombone Trouble* (February 18, 1944)",
+          "value": "Trombone Trouble (February 18, 1944)",
+          "bbox": [
+            {
+              "h": 118.8339715129573,
+              "w": 98.39666730182924,
+              "x": 150.40963605182924,
+              "y": 17.49823885289634,
+              "confidence": 0.85,
+              "end_index": 736,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*The Plastics Inventor* (September 1, 1944)",
+          "value": "The Plastics Inventor (September 1, 1944)",
           "bbox": [
             {
               "h": 118.8339715129573,

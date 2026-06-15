@@ -3,40 +3,22 @@
     {
       "items": [
         {
-          "items": [
-            {
-              "level": 1,
-              "md": "# ADDENDA",
-              "value": "ADDENDA",
-              "bbox": [
-                {
-                  "h": 5.0,
-                  "w": 38.0,
-                  "x": 54.0,
-                  "y": 17.0,
-                  "confidence": 0.94,
-                  "end_index": 6,
-                  "label": "paragraph_title",
-                  "start_index": 0
-                }
-              ],
-              "type": "heading"
-            }
-          ],
+          "level": 1,
           "md": "# ADDENDA",
+          "value": "ADDENDA",
           "bbox": [
             {
               "h": 5.0,
               "w": 38.0,
               "x": 54.0,
               "y": 17.0,
-              "confidence": null,
-              "end_index": null,
-              "label": null,
-              "start_index": null
+              "confidence": 0.94,
+              "end_index": 6,
+              "label": "paragraph_title",
+              "start_index": 0
             }
           ],
-          "type": "header"
+          "type": "heading"
         },
         {
           "md": "Most of this book was written in 1978, with a few bits and pieces added in 1979 and 1981. There was some information that could not, for a number of reasons, be incorporated in the body of the bibliography, and so I am including it here.",

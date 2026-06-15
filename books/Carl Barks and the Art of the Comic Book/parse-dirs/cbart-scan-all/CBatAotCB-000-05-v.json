@@ -3,40 +3,22 @@
     {
       "items": [
         {
-          "items": [
-            {
-              "level": 1,
-              "md": "# Contents",
-              "value": "Contents",
-              "bbox": [
-                {
-                  "h": 13.635714557926827,
-                  "w": 87.39658536585365,
-                  "x": 97.49767911585364,
-                  "y": 47.73711699695122,
-                  "confidence": 0.98,
-                  "end_index": 7,
-                  "label": "paragraph_title",
-                  "start_index": 0
-                }
-              ],
-              "type": "heading"
-            }
-          ],
+          "level": 1,
           "md": "# Contents",
+          "value": "Contents",
           "bbox": [
             {
-              "h": 13.64,
-              "w": 87.4,
-              "x": 97.5,
-              "y": 47.74,
-              "confidence": null,
-              "end_index": null,
-              "label": null,
-              "start_index": null
+              "h": 13.635714557926827,
+              "w": 87.39658536585365,
+              "x": 97.49767911585364,
+              "y": 47.73711699695122,
+              "confidence": 0.98,
+              "end_index": 7,
+              "label": "paragraph_title",
+              "start_index": 0
             }
           ],
-          "type": "header"
+          "type": "heading"
         },
         {
           "md": "Preface vii",

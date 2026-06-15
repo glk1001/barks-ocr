@@ -3,58 +3,40 @@
     {
       "items": [
         {
-          "items": [
-            {
-              "level": 1,
-              "md": "# APPENDIX A",
-              "value": "APPENDIX A",
-              "bbox": [
-                {
-                  "h": 28.201366234756097,
-                  "w": 87.34424542682927,
-                  "x": 28.76603563262195,
-                  "y": 29.7527743902439,
-                  "confidence": 0.65,
-                  "end_index": 9,
-                  "label": "paragraph_title",
-                  "start_index": 0
-                }
-              ],
-              "type": "heading"
-            },
-            {
-              "level": 1,
-              "md": "# A CHRONOLOGICAL LISTING OF BARKS'S COMICS WORK",
-              "value": "A CHRONOLOGICAL LISTING OF BARKS'S COMICS WORK",
-              "bbox": [
-                {
-                  "h": 28.0,
-                  "w": 87.0,
-                  "x": 28.0,
-                  "y": 29.0,
-                  "confidence": 0.88,
-                  "end_index": 45,
-                  "label": "paragraph_title",
-                  "start_index": 0
-                }
-              ],
-              "type": "heading"
-            }
-          ],
-          "md": "# APPENDIX A\n# A CHRONOLOGICAL LISTING OF BARKS’S COMICS WORK",
+          "level": 1,
+          "md": "# APPENDIX A",
+          "value": "APPENDIX A",
           "bbox": [
             {
-              "h": 28.95,
-              "w": 88.11,
-              "x": 28.0,
-              "y": 29.0,
-              "confidence": null,
-              "end_index": null,
-              "label": null,
-              "start_index": null
+              "h": 28.201366234756097,
+              "w": 87.34424542682927,
+              "x": 28.76603563262195,
+              "y": 29.7527743902439,
+              "confidence": 0.65,
+              "end_index": 9,
+              "label": "paragraph_title",
+              "start_index": 0
             }
           ],
-          "type": "header"
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# A CHRONOLOGICAL LISTING OF BARKS’S COMICS WORK",
+          "value": "A CHRONOLOGICAL LISTING OF BARKS’S COMICS WORK",
+          "bbox": [
+            {
+              "h": 28.0,
+              "w": 87.0,
+              "x": 28.0,
+              "y": 29.0,
+              "confidence": 0.88,
+              "end_index": 45,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
         },
         {
           "md": "This is a complete list of Carl Barks’ work for Western Publishing Company, arranged according to the dates on which the work was submitted to or accepted by Western.",
@@ -108,7 +90,7 @@
           "type": "text"
         },
         {
-          "md": "When an entry consists of only a comic book’s title and issue number, that means that all of Barks’ work in that comic book was submitted on that date. For example, most of the listings for *Our Gang* Comics are in fact listings for the “Barney Bear and Benny Burro” stories Barks did for that title.",
+          "md": "When an entry consists of only a comic book’s title and issue number, that means that all of Barks’ work in that comic book was submitted on that date. For example, most of the listings for *Our Gang Comics* are in fact listings for the “Barney Bear and Benny Burro” stories Barks did for that title.",
           "value": "When an entry consists of only a comic book’s title and issue number, that means that all of Barks’ work in that comic book was submitted on that date. For example, most of the listings for Our Gang Comics are in fact listings for the “Barney Bear and Benny Burro” stories Barks did for that title.",
           "bbox": [
             {
