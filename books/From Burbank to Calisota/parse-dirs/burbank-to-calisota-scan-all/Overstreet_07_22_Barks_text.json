@@ -1,0 +1,184 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "with other original long duck stories. The monthly Comics and Stories magazines that first appeared in 1941 only reprinted old newspaper Sunday and daily strips of the Taliaferro ducks.",
+          "value": "with other original long duck stories. The monthly Comics and Stories magazines that first appeared in 1941 only reprinted old newspaper Sunday and daily strips of the Taliaferro ducks.",
+          "bbox": [
+            {
+              "h": 31.92,
+              "w": 73.54,
+              "x": 8.65,
+              "y": 9.12,
+              "confidence": 0.99,
+              "end_index": 184,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "By chance, a few months after his start as a chicken mogul, Barks heard that Western Publishing Company was looking for artists to do original duck stories for the Comics and Stories. Realizing that it would take time to develop and sell a character of his own, Barks wrote Western that he would be interested in doing some free-lance work for the Disney comics. He envisioned occasional comic book work that he might work on from time to time.",
+          "value": "By chance, a few months after his start as a chicken mogul, Barks heard that Western Publishing Company was looking for artists to do original duck stories for the Comics and Stories. Realizing that it would take time to develop and sell a character of his own, Barks wrote Western that he would be interested in doing some free-lance work for the Disney comics. He envisioned occasional comic book work that he might work on from time to time.",
+          "bbox": [
+            {
+              "h": 76.38,
+              "w": 73.61,
+              "x": 8.89,
+              "y": 42.43,
+              "confidence": 0.99,
+              "end_index": 443,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Young Carl in 1944 taking a close look at a real duck.",
+          "value": "Young Carl in 1944 taking a close look at a real duck.",
+          "bbox": [
+            {
+              "h": 7.2,
+              "w": 71.91,
+              "x": 10.41,
+              "y": 223.71,
+              "confidence": 0.94,
+              "end_index": 53,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Young Carl in 1944 taking a close look at a real duck.**",
+          "value": "Young Carl in 1944 taking a close look at a real duck.",
+          "bbox": [
+            {
+              "h": 100.3,
+              "w": 71.73,
+              "x": 9.95,
+              "y": 120.74,
+              "confidence": 0.83,
+              "end_index": 57,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The rest is history. What the world lost in a budding Frank Perdue is more than made up for in the golden-quilled chronicler of Duckburg, Calisota. Barks' first story appeared in April 1943 (WDCS No. 31). He illustrated the",
+          "value": "The rest is history. What the world lost in a budding Frank Perdue is more than made up for in the golden-quilled chronicler of Duckburg, Calisota. Barks' first story appeared in April 1943 (WDCS No. 31). He illustrated the",
+          "bbox": [
+            {
+              "h": 38.97,
+              "w": 73.55,
+              "x": 8.8,
+              "y": 234.72,
+              "confidence": 0.99,
+              "end_index": 222,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "script he had been given and so greatly improved the story line that from that time on, he did both the scripts and the artwork for his stories. Barks is one of the very few comic artists who did both jobs (Jack Cole of Plastic Man was another). That his material was superior was abundantly clear to his readers. During a bleak period in 1950, Barks was so laden with long book assignments that he did only three of the twelve Comics and Stories, and the resulting avalanche of protest mail convinced the powers that be that Barks should do all the ten-pagers as well as all the long one-shots.",
+          "value": "script he had been given and so greatly improved the story line that from that time on, he did both the scripts and the artwork for his stories. Barks is one of the very few comic artists who did both jobs (Jack Cole of Plastic Man was another). That his material was superior was abundantly clear to his readers. During a bleak period in 1950, Barks was so laden with long book assignments that he did only three of the twelve Comics and Stories, and the resulting avalanche of protest mail convinced the powers that be that Barks should do all the ten-pagers as well as all the long one-shots.",
+          "bbox": [
+            {
+              "h": 98.18,
+              "w": 73.69,
+              "x": 89.87,
+              "y": 9.11,
+              "confidence": 0.99,
+              "end_index": 594,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The \"powers that be\", incidentally, were NOT the Walt Disney Studios. After he left the animation department, all Barks' Disney work was done through the Western Publishing Company, then located in Poughkeepsie, New York. \"I free-lanced for quite a while at the beginning. Then when Western Publishing ran into a little difficulty with the state board that collects money for unemployment insurance and state sales taxes and so on, they found it more advantageous to put us fellows on the payroll rather than having us as free-lancers. So I got on the payroll thát way, and it was very good because they gave me all kinds of fringe benefits that I wouldn't have gotten as a free-lancer.\"",
+          "value": "The \"powers that be\", incidentally, were NOT the Walt Disney Studios. After he left the animation department, all Barks' Disney work was done through the Western Publishing Company, then located in Poughkeepsie, New York. \"I free-lanced for quite a while at the beginning. Then when Western Publishing ran into a little difficulty with the state board that collects money for unemployment insurance and state sales taxes and so on, they found it more advantageous to put us fellows on the payroll rather than having us as free-lancers. So I got on the payroll thát way, and it was very good because they gave me all kinds of fringe benefits that I wouldn't have gotten as a free-lancer.\"",
+          "bbox": [
+            {
+              "h": 116.46,
+              "w": 73.68,
+              "x": 89.79,
+              "y": 107.54,
+              "confidence": 0.99,
+              "end_index": 686,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Until 1943, Donald Duck was just a quack in Ducky Nash's larynx. From Donald's first appearance in the 1936 Silly Symphony short \"The Wise Little Hen,\" he had been loud, volatile, and irascible. He had also been, for all intents and purposes, unintelligible. When Barks took",
+          "value": "Until 1943, Donald Duck was just a quack in Ducky Nash's larynx. From Donald's first appearance in the 1936 Silly Symphony short \"The Wise Little Hen,\" he had been loud, volatile, and irascible. He had also been, for all intents and purposes, unintelligible. When Barks took",
+          "bbox": [
+            {
+              "h": 49.39,
+              "w": 73.66,
+              "x": 89.58,
+              "y": 223.66,
+              "confidence": 0.99,
+              "end_index": 273,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-43",
+              "value": "A-43",
+              "bbox": [
+                {
+                  "h": 4.1,
+                  "w": 10.19,
+                  "x": 80.45,
+                  "y": 282.23,
+                  "confidence": 0.95,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-43",
+          "bbox": [
+            {
+              "h": 4.1,
+              "w": 10.19,
+              "x": 80.45,
+              "y": 282.23,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 290.64,
+      "page_number": 1,
+      "page_width": 173.76,
+      "success": true,
+      "printed_page_number": "43"
+    }
+  ]
+}

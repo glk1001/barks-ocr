@@ -1,0 +1,187 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Illustration of various Disney characters including Scrooge McDuck, the Beagle Boys, and Magica De Spell",
+          "value": "Illustration of various Disney characters including Scrooge McDuck, the Beagle Boys, and Magica De Spell",
+          "bbox": [
+            {
+              "h": 54.4,
+              "w": 160.72,
+              "x": 6.0,
+              "y": 9.05,
+              "confidence": 0.88,
+              "end_index": 103,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# CARL BARKS--<br>",
+          "value": "CARL BARKS--<br>",
+          "bbox": [
+            {
+              "h": 11.66,
+              "w": 95.98,
+              "x": 37.68,
+              "y": 67.11,
+              "confidence": 0.92,
+              "end_index": 13,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "# From Burbank to Calisota<br><br>",
+          "value": "from Burbank to Calisota<br><br>",
+          "bbox": [
+            {
+              "h": 15.3,
+              "w": 161.21,
+              "x": 6.42,
+              "y": 81.57,
+              "confidence": 0.94,
+              "end_index": 25,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "level": 3,
+          "md": "# By E. B. Boatner",
+          "value": "By E. B. Boatner",
+          "bbox": [
+            {
+              "h": 5.0,
+              "w": 42.11,
+              "x": 63.21,
+              "y": 100.01,
+              "confidence": 0.81,
+              "end_index": 15,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "*E. B. Boatner was graduated from Radcliffe in 1963. She has been a freelance photographer and writer since 1970. Her work has been published by UPI and Newsweek. An interest in comics developed in 1965 and she has previously interviewed Carl Barks and written an article about him which appeared in the Harvard Magazine.*",
+          "value": "E. B. Boatner was graduated from Radcliffe in 1963. She has been a freelance photographer and writer since 1970. Her work has been published by UPI and Newsweek. An interest in comics developed in 1965 and she has previously interviewed Carl Barks and written an article about him which appeared in the Harvard Magazine.",
+          "bbox": [
+            {
+              "h": 27.44,
+              "w": 152.23,
+              "x": 9.92,
+              "y": 243.51,
+              "confidence": 0.79,
+              "end_index": 321,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Few readers of Walt Disney's Comics and Stories in 1946 would have thought a can in Donald Duck's cupboard labelled \"Barks Dog Soup\" had anything to do with the author of the story. Nor, in all likelihood, would they have noticed \"Barks' Jiffy Chicken Dinner\" painted into the Walt Kelly cover of the March 1947 issue. Until the late 1950's when persistent fans first penetrated the pulp curtain, there were precious few other clues to indicate that the man who drew the Donald Duck stories was Carl Barks—the \"Good Artist\" who invented Scrooge McDuck, Gladstone Gander, Gyro Gearloose, the Beagle Boys, and Magica deSpell. Like other Disney artists,",
+          "value": "Few readers of Walt Disney's Comics and Stories in 1946 would have thought a can in Donald Duck's cupboard labelled \"Barks Dog Soup\" had anything to do with the author of the story. Nor, in all likelihood, would they have noticed \"Barks' Jiffy Chicken Dinner\" painted into the Walt Kelly cover of the March 1947 issue. Until the late 1950's when persistent fans first penetrated the pulp curtain, there were precious few other clues to indicate that the man who drew the Donald Duck stories was Carl Barks—the \"Good Artist\" who invented Scrooge McDuck, Gladstone Gander, Gyro Gearloose, the Beagle Boys, and Magica deSpell. Like other Disney artists,",
+          "bbox": [
+            {
+              "h": 110.3,
+              "w": 73.66,
+              "x": 9.19,
+              "y": 119.23,
+              "confidence": 0.99,
+              "end_index": 649,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Carl Barks maintained total anonymity during the twenty-three years that he drew virtually all of the duck Comics and Stories and one-shot Donald Duck's, and all of the Uncle Scrooge books—a record more enviable for a CIA man than an artist.",
+          "value": "Carl Barks maintained total anonymity during the twenty-three years that he drew virtually all of the duck Comics and Stories and one-shot Donald Duck's, and all of the Uncle Scrooge books—a record more enviable for a CIA man than an artist.",
+          "bbox": [
+            {
+              "h": 43.78,
+              "w": 73.66,
+              "x": 90.09,
+              "y": 119.81,
+              "confidence": 0.81,
+              "end_index": 240,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In fact, Barks was so unused to the idea of recognition that when he received his first fan letter, he and his wife Gare decided that it had been cooked up by their friend Bob Harmon, a gag writer for Dennis the Menace known for his practical jokes. Only after Harmon had repeatedly denied authorship and after fan Spicer and his brother Bill appeared in person did Barks begin to realize that there were",
+          "value": "In fact, Barks was so unused to the idea of recognition that when he received his first fan letter, he and his wife Gare decided that it had been cooked up by their friend Bob Harmon, a gag writer for Dennis the Menace known for his practical jokes. Only after Harmon had repeatedly denied authorship and after fan Spicer and his brother Bill appeared in person did Barks begin to realize that there were",
+          "bbox": [
+            {
+              "h": 66.53,
+              "w": 73.48,
+              "x": 89.73,
+              "y": 164.45,
+              "confidence": 0.8,
+              "end_index": 403,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+       {
+          "items": [
+            {
+              "md": "A-37",
+              "value": "A-37",
+              "bbox": [
+                {
+                  "h": 3.92,
+                  "w": 10.06,
+                  "x": 81.22,
+                  "y": 279.77,
+                  "confidence": 0.95,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-37",
+          "bbox": [
+            {
+              "h": 3.92,
+              "w": 10.06,
+              "x": 81.22,
+              "y": 279.77,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 288.0,
+      "page_number": 1,
+      "page_width": 176.64,
+      "success": true,
+      "printed_page_number": "37"
+    }
+  ]
+}

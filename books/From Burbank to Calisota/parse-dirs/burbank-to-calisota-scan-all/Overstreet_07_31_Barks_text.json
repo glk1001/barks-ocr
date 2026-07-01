@@ -1,0 +1,201 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Barks used her a bit like Keaton did his heroines: she was there to move along a piece of action and was then retired from the field. Daisy's character never developed, though her language softened over the years. For Donald, she remained dangerous, fearsome, and unpredictable.",
+          "value": "Barks used her a bit like Keaton did his heroines: she was there to move along a piece of action and was then retired from the field. Daisy's character never developed, though her language softened over the years. For Donald, she remained dangerous, fearsome, and unpredictable.",
+          "bbox": [
+            {
+              "h": 49.02,
+              "w": 73.92,
+              "x": 9.48,
+              "y": 10.95,
+              "confidence": 0.99,
+              "end_index": 277,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "For all Donald's problems—or perhaps because of them—he was Barks' favorite character. \"He was just a squawker when I picked him up, and I think I developed him into a rounded character before I got through with him.\" Scrooge and Gladstone were marvelously conceived, but Donald was Everyduck, more vulnerable because he felt more intensely, more human because he was capable of responding to a wider variety of situations. The reader could identify with three cubic acres of money (would we otherwise sell lottery tickets?) and the reader could aspire to jackpot",
+          "value": "For all Donald's problems—or perhaps because of them—he was Barks' favorite character. \"He was just a squawker when I picked him up, and I think I developed him into a rounded character before I got through with him.\" Scrooge and Gladstone were marvelously conceived, but Donald was Everyduck, more vulnerable because he felt more intensely, more human because he was capable of responding to a wider variety of situations. The reader could identify with three cubic acres of money (would we otherwise sell lottery tickets?) and the reader could aspire to jackpot",
+          "bbox": [
+            {
+              "h": 99.47,
+              "w": 73.92,
+              "x": 9.75,
+              "y": 60.34,
+              "confidence": 0.99,
+              "end_index": 562,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "luck (would we otherwise BUY lottery tickets?) but most people live the life of Donald Duck. \"This morning I got my tongue caught in the cake mixer, and before that, the soap powder fell in my scrambled eggs, and before that...\" Everyone wants to make his family and friends proud. Donald simply carries these feelings to excess, understandable in the light of his past failures.",
+          "value": "luck (would we otherwise BUY lottery tickets?) but most people live the life of Donald Duck. \"This morning I got my tongue caught in the cake mixer, and before that, the soap powder fell in my scrambled eggs, and before that...\" Everyone wants to make his family and friends proud. Donald simply carries these feelings to excess, understandable in the light of his past failures.",
+          "bbox": [
+            {
+              "h": 66.48,
+              "w": 73.37,
+              "x": 89.86,
+              "y": 10.81,
+              "confidence": 0.99,
+              "end_index": 378,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "At best Donald was never a calm personality, but in the early stories his tendency toward mayhem was more pronounced. In WDCS No. 48, Donald feels that neighbor Jones has gypped him out of a dime's worth of putty. \"Gangway!\" screams Donald. \"I'm off on a mission of destruction!\" Tempers mount. \"You everlasting sucker!\" \"You dismal duck!\" Donald digs up his sidewalk and fills in the pit with ten barrels of putty. Feigning injury, Donald lures Jones into his trap and watches as",
+          "value": "At best Donald was never a calm personality, but in the early stories his tendency toward mayhem was more pronounced. In WDCS No. 48, Donald feels that neighbor Jones has gypped him out of a dime's worth of putty. \"Gangway!\" screams Donald. \"I'm off on a mission of destruction!\" Tempers mount. \"You everlasting sucker!\" \"You dismal duck!\" Donald digs up his sidewalk and fills in the pit with ten barrels of putty. Feigning injury, Donald lures Jones into his trap and watches as",
+          "bbox": [
+            {
+              "h": 82.93,
+              "w": 73.61,
+              "x": 89.86,
+              "y": 77.34,
+              "confidence": 0.98,
+              "end_index": 479,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic panel showing Donald Duck being splashed with water by neighbor Jones",
+          "value": "Comic panel showing Donald Duck being splashed with water by neighbor Jones",
+          "bbox": [
+            {
+              "h": 54.14,
+              "w": 75.3,
+              "x": 9.82,
+              "y": 161.3,
+              "confidence": 0.85,
+              "end_index": 74,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic panel showing neighbor Jones singing in a pool of putty",
+          "value": "Comic panel showing neighbor Jones singing in a pool of putty",
+          "bbox": [
+            {
+              "h": 54.07,
+              "w": 75.32,
+              "x": 86.54,
+              "y": 161.24,
+              "confidence": 0.83,
+              "end_index": 60,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic panel showing neighbor Jones talking to his wife about putty",
+          "value": "Comic panel showing neighbor Jones talking to his wife about putty",
+          "bbox": [
+            {
+              "h": 54.1,
+              "w": 75.84,
+              "x": 9.4,
+              "y": 222.29,
+              "confidence": 0.83,
+              "end_index": 65,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic panel showing Donald and Jones arguing over a fence at night",
+          "value": "Comic panel showing Donald and Jones arguing over a fence at night",
+          "bbox": [
+            {
+              "h": 53.93,
+              "w": 75.13,
+              "x": 86.83,
+              "y": 222.15,
+              "confidence": 0.83,
+              "end_index": 65,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "From Walt Disney's Comics and Stories No. 48, 1944, c. WDP",
+          "value": "From Walt Disney's Comics and Stories No. 48, 1944, c. WDP",
+          "bbox": [
+            {
+              "h": 4.01,
+              "w": 113.56,
+              "x": 30.07,
+              "y": 277.14,
+              "confidence": 0.94,
+              "end_index": 57,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-52",
+              "value": "A-52",
+              "bbox": [
+                {
+                  "h": 3.12,
+                  "w": 9.84,
+                  "x": 82.8,
+                  "y": 282.96,
+                  "confidence": 0.93,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-52",
+          "bbox": [
+            {
+              "h": 3.12,
+              "w": 9.84,
+              "x": 82.8,
+              "y": 282.96,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 295.68,
+      "page_number": 1,
+      "page_width": 170.88,
+      "success": true,
+      "printed_page_number": "52"
+    }
+  ]
+}

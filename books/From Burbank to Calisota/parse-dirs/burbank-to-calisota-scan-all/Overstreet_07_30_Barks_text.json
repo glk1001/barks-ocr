@@ -1,0 +1,218 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Comic panel showing Donald Duck in bed thinking: \"TOMORROW I CAN GO DOWNTOWN WITHOUT HAVING TO DODGE THAT BRAGGING PEST! HE WON'T BE BACK FOR WEEKS AND WEEKS!\"",
+          "value": "Comic panel showing Donald Duck in bed thinking: \"TOMORROW I CAN GO DOWNTOWN WITHOUT HAVING TO DODGE THAT BRAGGING PEST! HE WON'T BE BACK FOR WEEKS AND WEEKS!\"",
+          "bbox": [
+            {
+              "h": 52.43,
+              "w": 72.63,
+              "x": 12.98,
+              "y": 11.04,
+              "confidence": 0.8,
+              "end_index": 158,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic panel showing Donald Duck in bed thinking: \"ICEBERGS AND POLAR BEARS! IT WAS A DIRTY TRICK TO PLAY ON HIM, BUT HE HAD IT COMING!\"",
+          "value": "Comic panel showing Donald Duck in bed thinking: \"ICEBERGS AND POLAR BEARS! IT WAS A DIRTY TRICK TO PLAY ON HIM, BUT HE HAD IT COMING!\"",
+          "bbox": [
+            {
+              "h": 52.29,
+              "w": 66.26,
+              "x": 87.96,
+              "y": 12.75,
+              "confidence": 0.71,
+              "end_index": 134,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic panel showing Donald Duck tossing in bed thinking: \"GUYS CAN GET STRANDED ON THOSE ICE FLOES AND DRIFT FOR MONTHS! HAVE TO LIVE ON FISH! HA! HA!\"",
+          "value": "Comic panel showing Donald Duck tossing in bed thinking: \"GUYS CAN GET STRANDED ON THOSE ICE FLOES AND DRIFT FOR MONTHS! HAVE TO LIVE ON FISH! HA! HA!\"",
+          "bbox": [
+            {
+              "h": 51.27,
+              "w": 69.84,
+              "x": 13.24,
+              "y": 64.3,
+              "confidence": 0.75,
+              "end_index": 150,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic panel showing Donald Duck in bed thinking: \"WONDER IF HE THOUGHT TO TAKE A KNIFE AND FORK— OR AM I BEING FUNNY?\"",
+          "value": "Comic panel showing Donald Duck in bed thinking: \"WONDER IF HE THOUGHT TO TAKE A KNIFE AND FORK— OR AM I BEING FUNNY?\"",
+          "bbox": [
+            {
+              "h": 51.03,
+              "w": 72.54,
+              "x": 84.18,
+              "y": 64.29,
+              "confidence": 0.73,
+              "end_index": 117,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "From Four Color No. 256, 1949, c. WDP",
+          "value": "From Four Color No. 256, 1949, c. WDP",
+          "bbox": [
+            {
+              "h": 3.91,
+              "w": 75.5,
+              "x": 46.78,
+              "y": 117.2,
+              "confidence": 0.93,
+              "end_index": 36,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "prostrate on a burning desert. From his previous kindly concern he switches to: \"Well! It looks as if my nephews ARE in trouble! I intended to be generous with them but—when I have someone at my mercy, I just can't help myself!—I drive a hard bargain!\" Teeth bared and literally licking his lips, he yanks up Donald's head by the feathers and croons, \"Here, perk up! I'll trade you this water bag for your priceless hourglass!\"",
+          "value": "prostrate on a burning desert. From his previous kindly concern he switches to: \"Well! It looks as if my nephews ARE in trouble! I intended to be generous with them but—when I have someone at my mercy, I just can't help myself!—I drive a hard bargain!\" Teeth bared and literally licking his lips, he yanks up Donald's head by the feathers and croons, \"Here, perk up! I'll trade you this water bag for your priceless hourglass!\"",
+          "bbox": [
+            {
+              "h": 72.02,
+              "w": 73.46,
+              "x": 6.79,
+              "y": 125.02,
+              "confidence": 0.99,
+              "end_index": 426,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Of all the ducks, Gladstone is probably the least likely to play a really dirty trick on anyone. \"I had a little bad luck on that deal I tried to rig on Donald—but that's because cheating is a form of work!\" It's not the ethics that bother Gladstone; it's the ergs.",
+          "value": "Of all the ducks, Gladstone is probably the least likely to play a really dirty trick on anyone. \"I had a little bad luck on that deal I tried to rig on Donald—but that's because cheating is a form of work!\" It's not the ethics that bother Gladstone; it's the ergs.",
+          "bbox": [
+            {
+              "h": 44.49,
+              "w": 73.15,
+              "x": 7.28,
+              "y": 196.79,
+              "confidence": 0.99,
+              "end_index": 264,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Only poor Donald continually falls prey to remorse. Goaded beyond his endurance by Gladstone's endless bragging, Donald fakes a treasure map that sends him off on a wild gander",
+          "value": "Only poor Donald continually falls prey to remorse. Goaded beyond his endurance by Gladstone's endless bragging, Donald fakes a treasure map that sends him off on a wild gander",
+          "bbox": [
+            {
+              "h": 32.74,
+              "w": 73.2,
+              "x": 7.43,
+              "y": 241.39,
+              "confidence": 0.99,
+              "end_index": 175,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "chase to the Arctic (Luck of the North, FC No. 256). Later that evening, Donald tosses and turns in his bed, pondering Gladstone's fate. \"Guys can get stranded on those ice floes and drift for months! Have to live on fish! Ha! Ha! Wonder if he thought to take a knife and fork—\" But then, as remorse sets in: \"Or am I being funny?\"",
+          "value": "chase to the Arctic (Luck of the North, FC No. 256). Later that evening, Donald tosses and turns in his bed, pondering Gladstone's fate. \"Guys can get stranded on those ice floes and drift for months! Have to live on fish! Ha! Ha! Wonder if he thought to take a knife and fork—\" But then, as remorse sets in: \"Or am I being funny?\"",
+          "bbox": [
+            {
+              "h": 54.6,
+              "w": 73.48,
+              "x": 89.1,
+              "y": 124.36,
+              "confidence": 0.99,
+              "end_index": 330,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The machinations of Donald's girlfriend Daisy are especially calculated to keep Donald at a high pitch of remorse and guilt, or jealousy if the story concerns his romantic rivalry with cousin Gladstone. Barks had very little use for female characters, and considering the personality of Daisy Duck, another character he inherited, it is easy to see why. Daisy usually injects conflict and stress, even when she is asking Donald to some festivity. \"T.I.N.A.I.—I.A.C.\" reads one of her engraved cards—\"This Is Not An Invitation—It's A Command!\"",
+          "value": "The machinations of Donald's girlfriend Daisy are especially calculated to keep Donald at a high pitch of remorse and guilt, or jealousy if the story concerns his romantic rivalry with cousin Gladstone. Barks had very little use for female characters, and considering the personality of Daisy Duck, another character he inherited, it is easy to see why. Daisy usually injects conflict and stress, even when she is asking Donald to some festivity. \"T.I.N.A.I.—I.A.C.\" reads one of her engraved cards—\"This Is Not An Invitation—It's A Command!\"",
+          "bbox": [
+            {
+              "h": 93.78,
+              "w": 73.64,
+              "x": 89.13,
+              "y": 179.19,
+              "confidence": 0.99,
+              "end_index": 541,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-51",
+              "value": "A-51",
+              "bbox": [
+                {
+                  "h": 3.97,
+                  "w": 9.58,
+                  "x": 78.56,
+                  "y": 280.42,
+                  "confidence": 0.95,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-51",
+          "bbox": [
+            {
+              "h": 3.97,
+              "w": 9.58,
+              "x": 78.56,
+              "y": 280.42,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 292.56,
+      "page_number": 1,
+      "page_width": 172.56,
+      "success": true,
+      "printed_page_number": "51"
+    }
+  ]
+}

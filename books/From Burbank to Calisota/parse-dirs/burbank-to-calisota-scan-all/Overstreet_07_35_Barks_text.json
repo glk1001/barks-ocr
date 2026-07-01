@@ -1,0 +1,150 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "compact fellows of the sixities. \"There's one thing that people don't understand,\" explains Barks, \"and that's that a guy's style changes naturally. Without an artist's knowing it, his style will change.\"",
+          "value": "compact fellows of the sixities. \"There's one thing that people don't understand,\" explains Barks, \"and that's that a guy's style changes naturally. Without an artist's knowing it, his style will change.\"",
+          "bbox": [
+            {
+              "h": 38.83,
+              "w": 73.59,
+              "x": 11.19,
+              "y": 11.47,
+              "confidence": 0.84,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Around 1952 the lettering in the stories also changed. While Gare, his wife-to-be, was recovering from an accident, Carl walked into the hospital with a batch of duck drawings and asked if she would like to try the lettering. From that point on, the stories were distinguished by her taller thinner lettering. Gare also did blacking and some background detail work for the stories. Barks and Gare were married in 1954, and they continued to pursue their artistic careers together. Gare is a highly accomplished landscape artist who studied at Vesper George in Boston. Her oils of forest and wildlife scenes have been sold through various galleries in California and are reproduced as Christmas cards through Leanin' Tree of Boulder, Colorado.",
+          "value": "Around 1952 the lettering in the stories also changed. While Gare, his wife-to-be, was recovering from an accident, Carl walked into the hospital with a batch of duck drawings and asked if she would like to try the lettering. From that point on, the stories were distinguished by her taller thinner lettering. Gare also did blacking and some background detail work for the stories. Barks and Gare were married in 1954, and they continued to pursue their artistic careers together. Gare is a highly accomplished landscape artist who studied at Vesper George in Boston. Her oils of forest and wildlife scenes have been sold through various galleries in California and are reproduced as Christmas cards through Leanin' Tree of Boulder, Colorado.",
+          "bbox": [
+            {
+              "h": 126.49,
+              "w": 73.95,
+              "x": 11.08,
+              "y": 55.92,
+              "confidence": 0.99,
+              "end_index": 741,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "It was not until 1955 that Barks tried his hand at a medium other than black-and-white inking. He experimented briefly with watercolors (one study called Life Can Be Beautiful depicted pink and blue and purple pigs in their pen) but it took too much time away from the duck stories. A master at comic plotting, Barks admits diffidently that he tried writing prose on occasion but was less than satisfied with the results. \"I didn't have enough education in writing to be able to construct sentences and mold them into paragraphs and the paragraphs into chapters. I just",
+          "value": "It was not until 1955 that Barks tried his hand at a medium other than black-and-white inking. He experimented briefly with watercolors (one study called Life Can Be Beautiful depicted pink and blue and purple pigs in their pen) but it took too much time away from the duck stories. A master at comic plotting, Barks admits diffidently that he tried writing prose on occasion but was less than satisfied with the results. \"I didn't have enough education in writing to be able to construct sentences and mold them into paragraphs and the paragraphs into chapters. I just",
+          "bbox": [
+            {
+              "h": 93.11,
+              "w": 73.78,
+              "x": 11.25,
+              "y": 182.71,
+              "confidence": 0.83,
+              "end_index": 568,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "bogged down. The nice thing about comics is that you only have to write one sentence at a time. I believe I did try to write a detective story; and, of course, as everyone does, a sort of a sad story.\"",
+          "value": "bogged down. The nice thing about comics is that you only have to write one sentence at a time. I believe I did try to write a detective story; and, of course, as everyone does, a sort of a sad story.\"",
+          "bbox": [
+            {
+              "h": 32.79,
+              "w": 73.27,
+              "x": 92.02,
+              "y": 11.13,
+              "confidence": 0.81,
+              "end_index": 200,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "By the time Barks retired in 1966, he was doing acrylic studies of young maidens in exotic locales with titles like Rose of Tralee and Spring in Samarkand. He had thought to avoid the trouble and turpentine involved in oils, but by 1968 Carl wrote with his unique blend of pride and reservation, \"My wife and I are artists now. At least my wife is. We take our oil paintings to galleries around Southern California and to outdoor shows. .I've sold only one painting, a landscape of a desert. My regular output is pictures in slightly satirical situations (still an old gag man). The paintings get a lot of attention, but they don't sell worth a damn.\"",
+          "value": "By the time Barks retired in 1966, he was doing acrylic studies of young maidens in exotic locales with titles like Rose of Tralee and Spring in Samarkand. He had thought to avoid the trouble and turpentine involved in oils, but by 1968 Carl wrote with his unique blend of pride and reservation, \"My wife and I are artists now. At least my wife is. We take our oil paintings to galleries around Southern California and to outdoor shows. .I've sold only one painting, a landscape of a desert. My regular output is pictures in slightly satirical situations (still an old gag man). The paintings get a lot of attention, but they don't sell worth a damn.\"",
+          "bbox": [
+            {
+              "h": 110.39,
+              "w": 73.27,
+              "x": 91.85,
+              "y": 44.21,
+              "confidence": 0.8,
+              "end_index": 650,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "His subjects fluctuated rapidly between 1965-1969. In 1965 he had \"lost interest in ducks.\" Barks was pleased with the little girl paintings until 1968, but in March of 1969 he wrote, \"Odd how I've retired all of my little girl pictures months ago. They aren't 'Carl Barks'. I started doing vigorous oil landscapes, then drifted into my latest kick which I think is my métier at last—the far away and long ago. My subjects haven't been far away so far, but LONG ago. I noticed that nobody ever paints the So. California Indians in their pre-white man historical, primitive format, so I started painting squaws, 'princesses,' etc., and now scenes of the little tribelets on the local hills in all their pristine savagery. The technical problems",
+          "value": "His subjects fluctuated rapidly between 1965-1969. In 1965 he had \"lost interest in ducks.\" Barks was pleased with the little girl paintings until 1968, but in March of 1969 he wrote, \"Odd how I've retired all of my little girl pictures months ago. They aren't 'Carl Barks'. I started doing vigorous oil landscapes, then drifted into my latest kick which I think is my métier at last—the far away and long ago. My subjects haven't been far away so far, but LONG ago. I noticed that nobody ever paints the So. California Indians in their pre-white man historical, primitive format, so I started painting squaws, 'princesses,' etc., and now scenes of the little tribelets on the local hills in all their pristine savagery. The technical problems",
+          "bbox": [
+            {
+              "h": 121.79,
+              "w": 73.52,
+              "x": 91.64,
+              "y": 154.81,
+              "confidence": 0.81,
+              "end_index": 742,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-56",
+              "value": "A-56",
+              "bbox": [
+                {
+                  "h": 4.05,
+                  "w": 10.33,
+                  "x": 83.59,
+                  "y": 284.28,
+                  "confidence": 0.82,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-56",
+          "bbox": [
+            {
+              "h": 4.05,
+              "w": 10.33,
+              "x": 83.59,
+              "y": 284.28,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 292.8,
+      "page_number": 1,
+      "page_width": 170.4,
+      "success": true,
+      "printed_page_number": "56"
+    }
+  ]
+}

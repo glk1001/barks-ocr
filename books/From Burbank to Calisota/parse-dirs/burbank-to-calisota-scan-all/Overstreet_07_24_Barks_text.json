@@ -1,0 +1,218 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Comic panel: Donald Duck sitting in bed, thinking \"(ULP!) SOMETHING'S MISSING HERE!\"",
+          "value": "Comic panel: Donald Duck sitting in bed, thinking \"(ULP!) SOMETHING'S MISSING HERE!\"",
+          "bbox": [
+            {
+              "h": 51.59,
+              "w": 71.12,
+              "x": 16.48,
+              "y": 11.19,
+              "confidence": 0.79,
+              "end_index": 83,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic panel: Donald Duck falling through his bed, shouting \"MY BED! THOSE ANTS ATE MY SOLID OAK BED RIGHT OUT FROM UNDER ME!\"",
+          "value": "Comic panel: Donald Duck falling through his bed, shouting \"MY BED! THOSE ANTS ATE MY SOLID OAK BED RIGHT OUT FROM UNDER ME!\"",
+          "bbox": [
+            {
+              "h": 51.26,
+              "w": 70.94,
+              "x": 89.11,
+              "y": 11.23,
+              "confidence": 0.81,
+              "end_index": 124,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic panel: Donald Duck in a room with holes in the wall, shouting \"THE GAGE OF BATTLE HAS BEEN FLUNG! THIS WILL BE WAR TO A FINISH!\"",
+          "value": "Comic panel: Donald Duck in a room with holes in the wall, shouting \"THE GAGE OF BATTLE HAS BEEN FLUNG! THIS WILL BE WAR TO A FINISH!\"",
+          "bbox": [
+            {
+              "h": 51.54,
+              "w": 68.2,
+              "x": 15.86,
+              "y": 64.25,
+              "confidence": 0.78,
+              "end_index": 133,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic panel: A neighbor looking annoyed while loud noises \"CRACK BAM RIP!\" come from Donald's house, thinking \"HOW CAN ONE DUCK MAKE SO MUCH NOISE?\"",
+          "value": "Comic panel: A neighbor looking annoyed while loud noises \"CRACK BAM RIP!\" come from Donald's house, thinking \"HOW CAN ONE DUCK MAKE SO MUCH NOISE?\"",
+          "bbox": [
+            {
+              "h": 51.43,
+              "w": 74.77,
+              "x": 85.35,
+              "y": 63.99,
+              "confidence": 0.8,
+              "end_index": 147,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "From Walt Disney's Comics and Stories No. 170, 1954, c. WDP",
+          "value": "From Walt Disney's Comics and Stories No. 170, 1954, c. WDP",
+          "bbox": [
+            {
+              "h": 3.93,
+              "w": 115.56,
+              "x": 31.03,
+              "y": 117.2,
+              "confidence": 0.94,
+              "end_index": 58,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "chemicals?\" asks Donald. \"Fizzy things and sticky things, maybe!\" answers Dewey. \"I bet I could make NOISY things!\" decides Donald with relish.",
+          "value": "chemicals?\" asks Donald. \"Fizzy things and sticky things, maybe!\" answers Dewey. \"I bet I could make NOISY things!\" decides Donald with relish.",
+          "bbox": [
+            {
+              "h": 27.1,
+              "w": 73.07,
+              "x": 10.49,
+              "y": 125.5,
+              "confidence": 0.98,
+              "end_index": 142,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The duck persona is believable, and so Donald's adventures, however hyperbolic, are accepted by the reader without question. Barks' touch is sure enough that it doesn't matter that Donald, Scrooge, and Gladstone are only two feet high in a world of full-sized pig and dog people. It seems perfectly natural in The Golden Helmet (FC No. 408) that Donald should be sitting on the curator's desk to discuss the future of North America eye-to-eye. Barks may have been testing the limits of the size business when barber Donald (WDCS No. 272) appears wearing high Japanese clogs in all the shop scenes.",
+          "value": "The duck persona is believable, and so Donald's adventures, however hyperbolic, are accepted by the reader without question. Barks' touch is sure enough that it doesn't matter that Donald, Scrooge, and Gladstone are only two feet high in a world of full-sized pig and dog people. It seems perfectly natural in The Golden Helmet (FC No. 408) that Donald should be sitting on the curator's desk to discuss the future of North America eye-to-eye. Barks may have been testing the limits of the size business when barber Donald (WDCS No. 272) appears wearing high Japanese clogs in all the shop scenes.",
+          "bbox": [
+            {
+              "h": 104.87,
+              "w": 73.61,
+              "x": 9.89,
+              "y": 153.46,
+              "confidence": 0.99,
+              "end_index": 596,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks defined the reality of the ducks and of the world within which they had their adventures,",
+          "value": "Barks defined the reality of the ducks and of the world within which they had their adventures,",
+          "bbox": [
+            {
+              "h": 16.37,
+              "w": 73.08,
+              "x": 10.03,
+              "y": 258.41,
+              "confidence": 0.98,
+              "end_index": 94,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "but the cement that binds the Barksian cosmos is the reality of psychology, motivations and actions of ALL the characters. Barks didn't stop at \"well rounded.\" He realized that there was a place for the aberrant, the anomalous, the obsessive.",
+          "value": "but the cement that binds the Barksian cosmos is the reality of psychology, motivations and actions of ALL the characters. Barks didn't stop at \"well rounded.\" He realized that there was a place for the aberrant, the anomalous, the obsessive.",
+          "bbox": [
+            {
+              "h": 43.99,
+              "w": 73.41,
+              "x": 90.68,
+              "y": 125.89,
+              "confidence": 0.99,
+              "end_index": 241,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "When Donald finds Scrooge's obsession with rooting through his three cubic acres of cash \"disgusting\" and calls him \"only a poor old man,\" Scrooge draws himself up to his full height and retorts, \"Bah! Kid talk! No man is poor who can do what he LIKES to ONCE in a while!\" Huey, Louie and Dewey understand the idée fixe better than their uncle does. During one of his monumental fights with neighbor Jones, Donald, who is acting equally despicably, asks what Jonesie is getting out of it all. The boys reply shrewdly, \"He's driving you MAD with frustration, Unca' Donald! That's enough for",
+          "value": "When Donald finds Scrooge's obsession with rooting through his three cubic acres of cash \"disgusting\" and calls him \"only a poor old man,\" Scrooge draws himself up to his full height and retorts, \"Bah! Kid talk! No man is poor who can do what he LIKES to ONCE in a while!\" Huey, Louie and Dewey understand the idée fixe better than their uncle does. During one of his monumental fights with neighbor Jones, Donald, who is acting equally despicably, asks what Jonesie is getting out of it all. The boys reply shrewdly, \"He's driving you MAD with frustration, Unca' Donald! That's enough for",
+          "bbox": [
+            {
+              "h": 99.19,
+              "w": 73.59,
+              "x": 90.51,
+              "y": 174.31,
+              "confidence": 0.99,
+              "end_index": 588,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-45",
+              "value": "A-45",
+              "bbox": [
+                {
+                  "h": 3.91,
+                  "w": 10.14,
+                  "x": 81.07,
+                  "y": 281.19,
+                  "confidence": 0.96,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-45",
+          "bbox": [
+            {
+              "h": 3.91,
+              "w": 10.14,
+              "x": 81.07,
+              "y": 281.19,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 294.72,
+      "page_number": 1,
+      "page_width": 173.76,
+      "success": true,
+      "printed_page_number": "45"
+    }
+  ]
+}

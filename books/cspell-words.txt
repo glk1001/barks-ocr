@@ -7,6 +7,8 @@ ault
 backlink
 bboxes
 blockquotes
+boatner's
+calisota
 curlies
 curlification
 curlified

@@ -1,0 +1,150 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "recorded nadir of sloth. He guarded his own unsavory reputation (\"Mister Chiseler to you, Quackface!\") as jealously as Scrooge defended his title of world's richest duck. One day, Donald, Scrooge, and the boys think they have finally found the source of Gladstone's fabulous luck (WDCS No. 140). They wait until he is out catching a screening of **Red Hot Guns** and rush to burgle his wall safe. All they find is a single dime. Gladstone returns unexpectedly, and the ducks wring from him a terrible confession: \"Once, very long ago, in a VERY WEAK moment I took a job! Yes, I actually WORKED— I EARNED this dime! And I've been so ashamed of it ever since that I HID it in a safe and never looked at it again!\" As the stunned ducks trudge off into the night, Donald asks, \"Any comments?\" \"Nothing that could be printed in the paper,\" replies Scrooge. The story plays up Gladstone's extraordinary code of",
+          "value": "recorded nadir of sloth. He guarded his own unsavory reputation (\"Mister Chiseler to you, Quackface!\") as jealously as Scrooge defended his title of world's richest duck. One day, Donald, Scrooge, and the boys think they have finally found the source of Gladstone's fabulous luck (WDCS No. 140). They wait until he is out catching a screening of Red Hot Guns and rush to burgle his wall safe. All they find is a single dime. Gladstone returns unexpectedly, and the ducks wring from him a terrible confession: \"Once, very long ago, in a VERY WEAK moment I took a job! Yes, I actually WORKED— I EARNED this dime! And I've been so ashamed of it ever since that I HID it in a safe and never looked at it again!\" As the stunned ducks trudge off into the night, Donald asks, \"Any comments?\" \"Nothing that could be printed in the paper,\" replies Scrooge. The story plays up Gladstone's extraordinary code of",
+          "bbox": [
+            {
+              "h": 153.63,
+              "w": 74.39,
+              "x": 10.05,
+              "y": 9.54,
+              "confidence": 0.99,
+              "end_index": 903,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "ethics and is an in-joke parody of Barks' running gag of Scrooge's own lucky First Dime.",
+          "value": "ethics and is an in-joke parody of Barks' running gag of Scrooge's own lucky First Dime.",
+          "bbox": [
+            {
+              "h": 16.52,
+              "w": 73.49,
+              "x": 91.13,
+              "y": 9.59,
+              "confidence": 0.98,
+              "end_index": 87,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge was used far more frequently than Gladstone, but Barks always had to build the story around some aspect of Scrooge's wealth. There are many one-shots where Barks used Donald and the boys by themselves, but Scrooge never supported a whole story without the other four. The closest Scrooge came to flying solo was in **Back to the Klondike** (FC No. 456). Much of the power of that story derives from flash-backs to Scrooge's youth in the Klondike and his romance with Glittering Goldie, Star of the North. The story gains strength because Scrooge is shown in a real past interacting with real people.",
+          "value": "Scrooge was used far more frequently than Gladstone, but Barks always had to build the story around some aspect of Scrooge's wealth. There are many one-shots where Barks used Donald and the boys by themselves, but Scrooge never supported a whole story without the other four. The closest Scrooge came to flying solo was in Back to the Klondike (FC No. 456). Much of the power of that story derives from flash-backs to Scrooge's youth in the Klondike and his romance with Glittering Goldie, Star of the North. The story gains strength because Scrooge is shown in a real past interacting with real people.",
+          "bbox": [
+            {
+              "h": 104.46,
+              "w": 73.49,
+              "x": 91.09,
+              "y": 26.44,
+              "confidence": 0.99,
+              "end_index": 606,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge is a fuller character with more capacity for emotion than Gladstone, though blood isn't always thicker than water. In **The Magic Hourglass** (FC No. 291) Scrooge finds his nephews lying",
+          "value": "Scrooge is a fuller character with more capacity for emotion than Gladstone, though blood isn't always thicker than water. In The Magic Hourglass (FC No. 291) Scrooge finds his nephews lying",
+          "bbox": [
+            {
+              "h": 32.78,
+              "w": 73.33,
+              "x": 91.1,
+              "y": 130.9,
+              "confidence": 0.99,
+              "end_index": 193,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic strip panels showing Scrooge McDuck finding his nephews in the desert and bargaining for their hourglass.",
+          "value": "Comic strip panels showing Scrooge McDuck finding his nephews in the desert and bargaining for their hourglass.",
+          "bbox": [
+            {
+              "h": 103.14,
+              "w": 140.68,
+              "x": 17.65,
+              "y": 166.37,
+              "confidence": 0.85,
+              "end_index": 110,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "From Four Color No. 291, 1950, c. WDP",
+          "value": "From Four Color No. 291, 1950, c. WDP",
+          "bbox": [
+            {
+              "h": 4.04,
+              "w": 75.9,
+              "x": 49.25,
+              "y": 270.36,
+              "confidence": 0.93,
+              "end_index": 36,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-50",
+              "value": "A-50",
+              "bbox": [
+                {
+                  "h": 3.95,
+                  "w": 10.3,
+                  "x": 84.26,
+                  "y": 282.36,
+                  "confidence": 0.95,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-50",
+          "bbox": [
+            {
+              "h": 3.95,
+              "w": 10.3,
+              "x": 84.26,
+              "y": 282.36,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 291.36,
+      "page_number": 1,
+      "page_width": 173.04,
+      "success": true,
+      "printed_page_number": "50"
+    }
+  ]
+}

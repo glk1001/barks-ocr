@@ -1,0 +1,167 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "These sketches were tacked up on 4 x 4-foot cellotex story boards. Generally, it worked out that two boards full would equal one seven-minute film. After the proposed story was fully roughed out, there would be another meeting in which Disney himself would participate.",
+          "value": "These sketches were tacked up on 4 x 4-foot cellotex story boards. Generally, it worked out that two boards full would equal one seven-minute film. After the proposed story was fully roughed out, there would be another meeting in which Disney himself would participate.",
+          "bbox": [
+            {
+              "h": 49.81,
+              "w": 73.91,
+              "x": 5.98,
+              "y": 9.73,
+              "confidence": 0.99,
+              "end_index": 268,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"All us guys in the story department, and I guess in the animation department too, had our innings with Walt. He came around as a sort of critic of all the work that was done in the studios, up until the 1950's when he began to spread out into so many fields that he no longer had time to criticize each individual's contribution. But he would come in on our story conferences and he was the final authority. He was a good boss, a good creative guy. Whenever he came in, he always had constructive criticism to offer on the stories. He was a very good gag man and a lot of the guys just loved to have him come in on a story conference because he would almost build the story for them if it was kind of weak. He was never vindictive or what you might call a whip-cracker. He was just a nice guy. Oh, he carried his authority—if he didn't like a story that we had up on the board, he might suggest a few changes and then maybe say, 'Oh well, let's think about it a while.' Then he would go off up to his office and send a note down by one of the traffic boys saying, 'Just put that one on the shelf and start another one.'\"",
+          "value": "\"All us guys in the story department, and I guess in the animation department too, had our innings with Walt. He came around as a sort of critic of all the work that was done in the studios, up until the 1950's when he began to spread out into so many fields that he no longer had time to criticize each individual's contribution. But he would come in on our story conferences and he was the final authority. He was a good boss, a good creative guy. Whenever he came in, he always had constructive criticism to offer on the stories. He was a very good gag man and a lot of the guys just loved to have him come in on a story conference because he would almost build the story for them if it was kind of weak. He was never vindictive or what you might call a whip-cracker. He was just a nice guy. Oh, he carried his authority—if he didn't like a story that we had up on the board, he might suggest a few changes and then maybe say, 'Oh well, let's think about it a while.' Then he would go off up to his office and send a note down by one of the traffic boys saying, 'Just put that one on the shelf and start another one.'\"",
+          "bbox": [
+            {
+              "h": 188.03,
+              "w": 73.91,
+              "x": 5.98,
+              "y": 59.53,
+              "confidence": 0.85,
+              "end_index": 1120,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Another frequent conference member was Clarence Nash. \"Since Donald evolved out of Clarence Nash's way of saying things in duck talk, he used to come in on the",
+          "value": "Another frequent conference member was Clarence Nash. \"Since Donald evolved out of Clarence Nash's way of saying things in duck talk, he used to come in on the",
+          "bbox": [
+            {
+              "h": 26.88,
+              "w": 73.75,
+              "x": 6.14,
+              "y": 247.9,
+              "confidence": 0.86,
+              "end_index": 158,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "story meetings. We had a lot of dialogue that he had to practice, and it would determine, sometimes, what the dialogue would be—whether or not he could say the words. Of course, none of us could understand him even when he said, 'Well, I said THAT all right.'\"",
+          "value": "story meetings. We had a lot of dialogue that he had to practice, and it would determine, sometimes, what the dialogue would be—whether or not he could say the words. Of course, none of us could understand him even when he said, 'Well, I said THAT all right.'\"",
+          "bbox": [
+            {
+              "h": 44.04,
+              "w": 73.45,
+              "x": 88.02,
+              "y": 9.8,
+              "confidence": 0.86,
+              "end_index": 259,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "By 1942, Barks had been in the story department for six and a half years and decided to leave the smog-filled environs of Los Angeles and head for gentler climes. While practicing his cartooning skills, he had also polished up his formula for the quick exit. Asked how he made the transition out of animation, Carl replied, \"I shut the door one Friday night and never came back.\" The transition, however, was not the obvious one. Instead of more ducks, Barks moved to San Jacinto to start a chicken ranch.",
+          "value": "By 1942, Barks had been in the story department for six and a half years and decided to leave the smog-filled environs of Los Angeles and head for gentler climes. While practicing his cartooning skills, he had also polished up his formula for the quick exit. Asked how he made the transition out of animation, Carl replied, \"I shut the door one Friday night and never came back.\" The transition, however, was not the obvious one. Instead of more ducks, Barks moved to San Jacinto to start a chicken ranch.",
+          "bbox": [
+            {
+              "h": 83.11,
+              "w": 73.41,
+              "x": 88.02,
+              "y": 53.93,
+              "confidence": 0.99,
+              "end_index": 504,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I was thinking that if I could get out there to this ranch and raise chickens to make money, in my spare time I could develop a character of my own—a sort of Superman or one of those things. I'd thought of doing something with human types of characters and I wanted to see if I could develop something along that line.\"",
+          "value": "\"I was thinking that if I could get out there to this ranch and raise chickens to make money, in my spare time I could develop a character of my own—a sort of Superman or one of those things. I'd thought of doing something with human types of characters and I wanted to see if I could develop something along that line.\"",
+          "bbox": [
+            {
+              "h": 54.83,
+              "w": 73.33,
+              "x": 87.9,
+              "y": 137.31,
+              "confidence": 0.99,
+              "end_index": 319,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks had done one long duck book in 1942, **Donald Duck Finds Pirate Gold**, (FC No. 9), but he did not originate the idea for the script. **Pirate Gold** was developed in the Disney story department by Harry Reeves and Homer Brightman. The story was broken down into panels for the comic by Bob Karp. The artwork was done jointly by Barks and Jack Hannah, each one taking several pages and illustrating them alternately. Disney had conceived the book as an experiment; if it made money, they might continue",
+          "value": "Barks had done one long duck book in 1942, Donald Duck Finds Pirate Gold, (FC No. 9), but he did not originate the idea for the script. Pirate Gold was developed in the Disney story department by Harry Reeves and Homer Brightman. The story was broken down into panels for the comic by Bob Karp. The artwork was done jointly by Barks and Jack Hannah, each one taking several pages and illustrating them alternately. Disney had conceived the book as an experiment; if it made money, they might continue",
+          "bbox": [
+            {
+              "h": 83.41,
+              "w": 73.41,
+              "x": 88.02,
+              "y": 192.16,
+              "confidence": 0.85,
+              "end_index": 507,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-42",
+              "value": "A-42",
+              "bbox": [
+                {
+                  "h": 4.14,
+                  "w": 10.24,
+                  "x": 77.86,
+                  "y": 282.08,
+                  "confidence": 0.95,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-42",
+          "bbox": [
+            {
+              "h": 4.14,
+              "w": 10.24,
+              "x": 77.86,
+              "y": 282.08,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 294.72,
+      "page_number": 1,
+      "page_width": 166.08,
+      "success": true,
+      "printed_page_number": "42"
+    }
+  ]
+}

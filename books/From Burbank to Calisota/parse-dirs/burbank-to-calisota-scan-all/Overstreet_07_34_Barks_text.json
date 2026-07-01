@@ -1,0 +1,167 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Comic panels showing Donald Duck burying himself to escape flames and a large \"WHOOSH!\" sound effect.",
+          "value": "Comic panels showing Donald Duck burying himself to escape flames and a large \"WHOOSH!\" sound effect.",
+          "bbox": [
+            {
+              "h": 46.48,
+              "w": 119.81,
+              "x": 25.3,
+              "y": 6.06,
+              "confidence": 0.78,
+              "end_index": 100,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Comic panels showing Donald Duck and his nephews in a burnt forest landscape.",
+          "value": "Comic panels showing Donald Duck and his nephews in a burnt forest landscape.",
+          "bbox": [
+            {
+              "h": 87.58,
+              "w": 120.63,
+              "x": 25.12,
+              "y": 53.81,
+              "confidence": 0.69,
+              "end_index": 76,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "From Vacation Parade No. 1, 1950, c. WDP",
+          "value": "From Vacation Parade No. 1, 1950, c. WDP",
+          "bbox": [
+            {
+              "h": 3.91,
+              "w": 79.96,
+              "x": 47.03,
+              "y": 142.14,
+              "confidence": 0.94,
+              "end_index": 39,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "the shovels over their faces. The splash panel of the flames sweeping over the four little 'graves' is truly chilling. There were short stories like the \"suppressed desire party\" (WDCS No. 198) or the \"Olympic tryouts\" (WDCS No. 188) in which Donald is a true hero. But, perhaps on the theory that no man is a hero in the bosom of his own family, it is in the long adventures that Donald shines.",
+          "value": "the shovels over their faces. The splash panel of the flames sweeping over the four little 'graves' is truly chilling. There were short stories like the \"suppressed desire party\" (WDCS No. 198) or the \"Olympic tryouts\" (WDCS No. 188) in which Donald is a true hero. But, perhaps on the theory that no man is a hero in the bosom of his own family, it is in the long adventures that Donald shines.",
+          "bbox": [
+            {
+              "h": 65.35,
+              "w": 73.37,
+              "x": 10.49,
+              "y": 149.7,
+              "confidence": 0.99,
+              "end_index": 394,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks did only two long adventures that did not concern ducks, Porky of the Mounties (FC No. 48) and Mickey Mouse in **The Riddle of the Red Hat** (FC No. 79). (He also did part of the art work on Andy Panda in New Funnies No. 76.) Barks' Porky was not particularly distinguished. \"I had to follow a model sheet so closely.",
+          "value": "Barks did only two long adventures that did not concern ducks, Porky of the Mounties (FC No. 48) and Mickey Mouse in The Riddle of the Red Hat (FC No. 79). (He also did part of the art work on Andy Panda in New Funnies No. 76.) Barks' Porky was not particularly distinguished. \"I had to follow a model sheet so closely.",
+          "bbox": [
+            {
+              "h": 55.13,
+              "w": 73.44,
+              "x": 10.22,
+              "y": 215.68,
+              "confidence": 0.99,
+              "end_index": 322,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "They were really copies of other guys' drawings and not my own inventions.\" But his Mouse had a definitely DIFFERENT quality. It is hard to put your finger on it, but he is certainly not a Gottfriedson Mickey. Barks did a few cartoons for **Flying** and **Popular Aviation** during the early forties, but his only extended work with characters other than ducks was with Barney Bear and Benny Burro for **Our Gang** comics (issues Nos. 8-36). \"They were a fairly good team to work with, though the burro was quite limited in what he could do in action gags.\"",
+          "value": "They were really copies of other guys' drawings and not my own inventions.\" But his Mouse had a definitely DIFFERENT quality. It is hard to put your finger on it, but he is certainly not a Gottfriedson Mickey. Barks did a few cartoons for Flying and Popular Aviation during the early forties, but his only extended work with characters other than ducks was with Barney Bear and Benny Burro for Our Gang comics (issues Nos. 8-36). \"They were a fairly good team to work with, though the burro was quite limited in what he could do in action gags.\"",
+          "bbox": [
+            {
+              "h": 93.94,
+              "w": 73.17,
+              "x": 89.63,
+              "y": 149.86,
+              "confidence": 0.99,
+              "end_index": 556,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Over the years, the ducks changed physically as well as emotionally, from the long-billed, long-necked birds of the cartoons to the shorter, cuter, and more",
+          "value": "Over the years, the ducks changed physically as well as emotionally, from the long-billed, long-necked birds of the cartoons to the shorter, cuter, and more",
+          "bbox": [
+            {
+              "h": 27.31,
+              "w": 73.34,
+              "x": 89.79,
+              "y": 243.83,
+              "confidence": 0.98,
+              "end_index": 155,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-55",
+              "value": "A-55",
+              "bbox": [
+                {
+                  "h": 3.89,
+                  "w": 10.11,
+                  "x": 81.1,
+                  "y": 281.04,
+                  "confidence": 0.95,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-55",
+          "bbox": [
+            {
+              "h": 3.89,
+              "w": 10.11,
+              "x": 81.1,
+              "y": 281.04,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 288.72,
+      "page_number": 1,
+      "page_width": 175.68,
+      "success": true,
+      "printed_page_number": "55"
+    }
+  ]
+}

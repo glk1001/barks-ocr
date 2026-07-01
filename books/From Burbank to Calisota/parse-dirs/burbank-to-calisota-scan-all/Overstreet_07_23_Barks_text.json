@@ -1,0 +1,160 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Donald's quacking aggressiveness and wedded it to the printed word, he changed the duck forever. Spoken language differentiates man from the beasts: Barks had suddenly thrust Donald wriggling into personhood.",
+          "value": "Donald's quacking aggressiveness and wedded it to the printed word, he changed the duck forever. Spoken language differentiates man from the beasts: Barks had suddenly thrust Donald wriggling into personhood.",
+          "bbox": [
+            {
+              "h": 37.47,
+              "w": 74.16,
+              "x": 7.44,
+              "y": 10.57,
+              "confidence": 0.78,
+              "end_index": 207,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In Barks' hands, Donald was still the impulsive, headstrong character of the animated cartoons, but he had an added dimension. Speech requires thought; with thought comes reflection and the potential for change. Barks had the necessary conditions to develop Donald into a rounded character, with all the base and noble capabilities of a human personality. \"I never thought of them as ducks. I always thought of them as people. Like when I named Uncle Scrooge \"Only a Poor Old Man\"—the title of the story— I never thought of \"Only a Poor Old Duck.\" It wouldn't have had the meaning. You wouldn't think of a multimillionaire duck. But a MAN with multimillions—you can associate the money with the man.\"",
+          "value": "In Barks' hands, Donald was still the impulsive, headstrong character of the animated cartoons, but he had an added dimension. Speech requires thought; with thought comes reflection and the potential for change. Barks had the necessary conditions to develop Donald into a rounded character, with all the base and noble capabilities of a human personality. \"I never thought of them as ducks. I always thought of them as people. Like when I named Uncle Scrooge \"Only a Poor Old Man\"—the title of the story— I never thought of \"Only a Poor Old Duck.\" It wouldn't have had the meaning. You wouldn't think of a multimillionaire duck. But a MAN with multimillions—you can associate the money with the man.\"",
+          "bbox": [
+            {
+              "h": 121.2,
+              "w": 73.65,
+              "x": 7.97,
+              "y": 49.16,
+              "confidence": 0.77,
+              "end_index": 699,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The ducks themselves felt more ambivalence about their personhood. At times they are all duck: \"I'll rave and rant and tear my feathers!\" or \"It's awful to be in debt, but being in debt to Uncle Scrooge is like having your tail caught in a wringer!\" Attempting to convince Donald that they should be in the pool instead of at the piano, the boys point out, \"We're built for swimming: see our webbed feet?\"",
+          "value": "The ducks themselves felt more ambivalence about their personhood. At times they are all duck: \"I'll rave and rant and tear my feathers!\" or \"It's awful to be in debt, but being in debt to Uncle Scrooge is like having your tail caught in a wringer!\" Attempting to convince Donald that they should be in the pool instead of at the piano, the boys point out, \"We're built for swimming: see our webbed feet?\"",
+          "bbox": [
+            {
+              "h": 71.03,
+              "w": 73.62,
+              "x": 8.33,
+              "y": 170.6,
+              "confidence": 0.77,
+              "end_index": 404,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Scrooge, on the other hand, describes his intense delight in hearing \"the thousand-dollar bills crackling between my toes!\" Donald brags one day, \"Now I can be the web-footed Sir Lancelot of Duckburg!\" while on the next, \"Now I can dally in the park like a MAN should!\" The boys fool Donald by dressing up in bug costumes, but when Donald pounces on them in a giant bird outfit they plead, \"Don't eat us. We're not bugs; we're boys!\"",
+          "value": "Scrooge, on the other hand, describes his intense delight in hearing \"the thousand-dollar bills crackling between my toes!\" Donald brags one day, \"Now I can be the web-footed Sir Lancelot of Duckburg!\" while on the next, \"Now I can dally in the park like a MAN should!\" The boys fool Donald by dressing up in bug costumes, but when Donald pounces on them in a giant bird outfit they plead, \"Don't eat us. We're not bugs; we're boys!\"",
+          "bbox": [
+            {
+              "h": 43.0,
+              "w": 73.92,
+              "x": 88.8,
+              "y": 10.09,
+              "confidence": 0.99,
+              "end_index": 432,
+              "label": "text",
+              "start_index": 0
+            },
+            {
+              "h": 32.91,
+              "w": 73.92,
+              "x": 7.92,
+              "y": 241.4,
+              "confidence": 1.0,
+              "end_index": 189,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks enjoyed playing on this ambivalence, and was consciously amused by Disney's animal subjects. \"When I first went to work at Disney's I remember I was curious about the anatomy of these animals so I asked the foreman down there, 'Well, what would happen if in animation you had a gag in which Mickey's shoes were pulled off— what would his feet look like?' The guy said, 'Oh he'd have his socks on.' I visualized them as being black and having three toes.\" Barks was evidently still mulling it over when he did the ducks. In WDCS No. 52, one of the objects pilfered by a trade rat is a three-fingered white glove. Barks' humorous cross between duckness and humanness helped keep the focus on the action and characterization, freeing the reader from cross-species identity crises.",
+          "value": "Barks enjoyed playing on this ambivalence, and was consciously amused by Disney's animal subjects. \"When I first went to work at Disney's I remember I was curious about the anatomy of these animals so I asked the foreman down there, 'Well, what would happen if in animation you had a gag in which Mickey's shoes were pulled off— what would his feet look like?' The guy said, 'Oh he'd have his socks on.' I visualized them as being black and having three toes.\" Barks was evidently still mulling it over when he did the ducks. In WDCS No. 52, one of the objects pilfered by a trade rat is a three-fingered white glove. Barks' humorous cross between duckness and humanness helped keep the focus on the action and characterization, freeing the reader from cross-species identity crises.",
+          "bbox": [
+            {
+              "h": 132.31,
+              "w": 73.36,
+              "x": 89.29,
+              "y": 54.14,
+              "confidence": 0.99,
+              "end_index": 782,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "It would seem that the one thing that Barks couldn't translate from the cartoons was noise, but he had an uncanny knack for rendering noise in a soundless medium. Donald, to the despair of his nephews and neighbors, is always tearing something down or vigorously banging together some contraption. \"How can one duck make so much noise?\" ponders the mailman as Donald rips his house apart with a crowbar searching for Antofagasta Ax-toothed ants (WDCS No. 170). \"I wonder what we could make with these pretty",
+          "value": "It would seem that the one thing that Barks couldn't translate from the cartoons was noise, but he had an uncanny knack for rendering noise in a soundless medium. Donald, to the despair of his nephews and neighbors, is always tearing something down or vigorously banging together some contraption. \"How can one duck make so much noise?\" ponders the mailman as Donald rips his house apart with a crowbar searching for Antofagasta Ax-toothed ants (WDCS No. 170). \"I wonder what we could make with these pretty",
+          "bbox": [
+            {
+              "h": 88.51,
+              "w": 73.28,
+              "x": 89.25,
+              "y": 186.52,
+              "confidence": 0.99,
+              "end_index": 506,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-44",
+              "value": "A-44",
+              "bbox": [
+                {
+                  "h": 4.11,
+                  "w": 9.9,
+                  "x": 80.61,
+                  "y": 282.66,
+                  "confidence": 0.95,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-44",
+          "bbox": [
+            {
+              "h": 4.11,
+              "w": 9.9,
+              "x": 80.61,
+              "y": 282.66,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 291.12,
+      "page_number": 1,
+      "page_width": 166.56,
+      "success": true,
+      "printed_page_number": "44"
+    }
+  ]
+}

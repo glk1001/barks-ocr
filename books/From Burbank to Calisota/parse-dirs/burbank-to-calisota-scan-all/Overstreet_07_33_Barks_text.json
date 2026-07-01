@@ -1,0 +1,150 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "an all-encompassing volume with the aura of a Gutenberg Bible and the erudition of the Library of Congress. \"It shows that all knowledge gets written down in a book. This book containing all that knowledge must have been written in very small type. The Junior Woodchucks had marvelous eyesight.\" The lowest rank in the Woodchucks was Major, while one of the highest (there seems to be no ceiling) is \"International Twelve-Star Admiral and Deputy Custodian of the Fountain of Inexhaustible Knowledge.\"",
+          "value": "an all-encompassing volume with the aura of a Gutenberg Bible and the erudition of the Library of Congress. \"It shows that all knowledge gets written down in a book. This book containing all that knowledge must have been written in very small type. The Junior Woodchucks had marvelous eyesight.\" The lowest rank in the Woodchucks was Major, while one of the highest (there seems to be no ceiling) is \"International Twelve-Star Admiral and Deputy Custodian of the Fountain of Inexhaustible Knowledge.\"",
+          "bbox": [
+            {
+              "h": 88.11,
+              "w": 74.0,
+              "x": 9.12,
+              "y": 8.87,
+              "confidence": 0.99,
+              "end_index": 499,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I was never a Boy Scout,\" admits Barks, \"but oh, I wanted to be one when I was a kid about ten or eleven years old. But there wasn't anyplace where I could ever join the Boy Scouts. I patterned the Junior Woodchucks after the Cub Scouts, really, the little bitsy guys—not the Boy Scouts themselves—but these little tiny scouts who were supposed to be so much smarter than their older brothers. That's what made the Woodchucks what they were.\" (The Italian firm of Mondadori has actually issued a Junior Woodchucks Handbook—in Italian.) The Woodchucks broaden the scope of the nephews and give them plausible reasons for knowing all sorts of implausible things that get the ducks out of tight situations.",
+          "value": "\"I was never a Boy Scout,\" admits Barks, \"but oh, I wanted to be one when I was a kid about ten or eleven years old. But there wasn't anyplace where I could ever join the Boy Scouts. I patterned the Junior Woodchucks after the Cub Scouts, really, the little bitsy guys—not the Boy Scouts themselves—but these little tiny scouts who were supposed to be so much smarter than their older brothers. That's what made the Woodchucks what they were.\" (The Italian firm of Mondadori has actually issued a Junior Woodchucks Handbook—in Italian.) The Woodchucks broaden the scope of the nephews and give them plausible reasons for knowing all sorts of implausible things that get the ducks out of tight situations.",
+          "bbox": [
+            {
+              "h": 122.12,
+              "w": 73.67,
+              "x": 9.46,
+              "y": 96.69,
+              "confidence": 0.99,
+              "end_index": 703,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The satires are all ten-pagers, monthly stories in and around Duckburg that can be categorized roughly as \"family conflicts,\" \"disaster-escalation tales,\" \"Donald's jobs,\" \"costume stories\" and the likes. The long one-shots may contain satire, but are more straight adventure stories that take the ducks to faraway",
+          "value": "The satires are all ten-pagers, monthly stories in and around Duckburg that can be categorized roughly as \"family conflicts,\" \"disaster-escalation tales,\" \"Donald's jobs,\" \"costume stories\" and the likes. The long one-shots may contain satire, but are more straight adventure stories that take the ducks to faraway",
+          "bbox": [
+            {
+              "h": 54.41,
+              "w": 73.67,
+              "x": 9.46,
+              "y": 219.39,
+              "confidence": 0.99,
+              "end_index": 313,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "places. The stories, short or long, mirror the behavior of real families in similar situations. At home, the ducks may squabble and compete, fight and call one another \"Greasy scorpions!\" or \"Viper!\" But when they are far away and threatened by some common danger, they unite. It would have been distasteful to have Donald and the boys wreaking vengeance on one another for a full thirty-two page story, but the conflict plots, like family spats, occurred in a short time span, climaxed, and ended.",
+          "value": "places. The stories, short or long, mirror the behavior of real families in similar situations. At home, the ducks may squabble and compete, fight and call one another \"Greasy scorpions!\" or \"Viper!\" But when they are far away and threatened by some common danger, they unite. It would have been distasteful to have Donald and the boys wreaking vengeance on one another for a full thirty-two page story, but the conflict plots, like family spats, occurred in a short time span, climaxed, and ended.",
+          "bbox": [
+            {
+              "h": 83.09,
+              "w": 73.16,
+              "x": 90.73,
+              "y": 9.17,
+              "confidence": 0.99,
+              "end_index": 497,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The ten-pagers were carefully constructed: Barks ordered the gags, building them to the climax, which would end the story on a laugh. In addition, he consciously aimed for a small climax or upbeat bit of business at the end of each page. The long books may be more spectacular, but the monthly short stories stand as models of economy and tight plotting. Few funnier pieces have ever been written for the comics, including those early MAD comics.",
+          "value": "The ten-pagers were carefully constructed: Barks ordered the gags, building them to the climax, which would end the story on a laugh. In addition, he consciously aimed for a small climax or upbeat bit of business at the end of each page. The long books may be more spectacular, but the monthly short stories stand as models of economy and tight plotting. Few funnier pieces have ever been written for the comics, including those early MAD comics.",
+          "bbox": [
+            {
+              "h": 76.59,
+              "w": 73.19,
+              "x": 90.89,
+              "y": 92.13,
+              "confidence": 0.99,
+              "end_index": 445,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks himself preferred doing the long books. \"A long story was better than a short story because I could always pull stuff out of it and tighten it up. The more I tightened it, the sharper it got.\" It was in the long stories that Donald's nobler side was given full rein. He had high points of bravery (though still sometimes misguided) in Terror of the River (FC No. 108), Sheriff of Bullet Valley (FC No. 199), The Golden Helmet, and Luck of the North. In Vacation Time (Vacation Parade No. 1) the ducks are trapped in a raging forest fire. Donald coolly orders the boys to dig small trenches and they all bury themselves with their wet shirts and",
+          "value": "Barks himself preferred doing the long books. \"A long story was better than a short story because I could always pull stuff out of it and tighten it up. The more I tightened it, the sharper it got.\" It was in the long stories that Donald's nobler side was given full rein. He had high points of bravery (though still sometimes misguided) in Terror of the River (FC No. 108), Sheriff of Bullet Valley (FC No. 199), The Golden Helmet, and Luck of the North. In Vacation Time (Vacation Parade No. 1) the ducks are trapped in a raging forest fire. Donald coolly orders the boys to dig small trenches and they all bury themselves with their wet shirts and",
+          "bbox": [
+            {
+              "h": 104.83,
+              "w": 73.32,
+              "x": 90.92,
+              "y": 169.22,
+              "confidence": 0.99,
+              "end_index": 649,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-54",
+              "value": "A-54",
+              "bbox": [
+                {
+                  "h": 4.07,
+                  "w": 10.15,
+                  "x": 81.89,
+                  "y": 281.59,
+                  "confidence": 0.95,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-54",
+          "bbox": [
+            {
+              "h": 4.07,
+              "w": 10.15,
+              "x": 81.89,
+              "y": 281.59,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 295.68,
+      "page_number": 1,
+      "page_width": 168.96,
+      "success": true,
+      "printed_page_number": "54"
+    }
+  ]
+}

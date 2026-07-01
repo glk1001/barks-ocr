@@ -1,0 +1,167 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "people out in the wide world who loved and admired his work.",
+          "value": "people out in the wide world who loved and admired his work.",
+          "bbox": [
+            {
+              "h": 10.37,
+              "w": 72.86,
+              "x": 10.31,
+              "y": 11.85,
+              "confidence": 0.97,
+              "end_index": 59,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "The second fan to get through, recalls Barks, was Malcolm Willits. \"He wrote a long scholarly letter about the merits of my stuff which had me floating around in the air for days. I began to think that I might have some pretty good stuff in my work, but I didn't get any more letters for a long, long time.\" Barks had made a lasting impression on two of these fans. Bill Spicer is presently editor at Western Publishing's Hollywood office, and Willits is also in Hollywood running a mammoth comic book and magazine store.",
+          "value": "The second fan to get through, recalls Barks, was Malcolm Willits. \"He wrote a long scholarly letter about the merits of my stuff which had me floating around in the air for days. I began to think that I might have some pretty good stuff in my work, but I didn't get any more letters for a long, long time.\" Barks had made a lasting impression on two of these fans. Bill Spicer is presently editor at Western Publishing's Hollywood office, and Willits is also in Hollywood running a mammoth comic book and magazine store.",
+          "bbox": [
+            {
+              "h": 87.37,
+              "w": 73.21,
+              "x": 10.31,
+              "y": 22.8,
+              "confidence": 0.77,
+              "end_index": 520,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Devoted and insistent fans were discovering the identity of the \"Good Artist,\" but the comic collecting world in general was uninterested in Disney. While caped heroes were taking off, so to speak, during the next decade, it was still possible to put an ad in **The Boston Globe** offering to relieve folks of their old duck comics for a dime apiece. In 1965, **Action No. 1** was selling for $45 in one Boston store, while Barks' **Only a Poor Old Man** (Four Color No. 386) was in a bin for a quarter. The artist himself could not foresee the coming Barks boom. In a letter from that year, Carl wrote, \"My advice is not to be hasty to pay premium prices for these oldies. The publishers are reprinting those old stories quite steadily these days. I imagine the price of old first editions has fallen drastically as a result.\" Alas, it was not so. The Marvel revolution was generating a new set of superhero fans, and comic collecting and dealing became big business. The ducks finally came into prominence, making Barks, in",
+          "value": "Devoted and insistent fans were discovering the identity of the \"Good Artist,\" but the comic collecting world in general was uninterested in Disney. While caped heroes were taking off, so to speak, during the next decade, it was still possible to put an ad in The Boston Globe offering to relieve folks of their old duck comics for a dime apiece. In 1965, Action No. 1 was selling for $45 in one Boston store, while Barks' Only a Poor Old Man (Four Color No. 386) was in a bin for a quarter. The artist himself could not foresee the coming Barks boom. In a letter from that year, Carl wrote, \"My advice is not to be hasty to pay premium prices for these oldies. The publishers are reprinting those old stories quite steadily these days. I imagine the price of old first editions has fallen drastically as a result.\" Alas, it was not so. The Marvel revolution was generating a new set of superhero fans, and comic collecting and dealing became big business. The ducks finally came into prominence, making Barks, in",
+          "bbox": [
+            {
+              "h": 166.44,
+              "w": 73.21,
+              "x": 10.83,
+              "y": 109.88,
+              "confidence": 0.99,
+              "end_index": 1024,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "particular, a highly collectible artist. Not only did the prices of the originals not go down, but some REPRINTS are selling today for up to $25 as well.",
+          "value": "particular, a highly collectible artist. Not only did the prices of the originals not go down, but some REPRINTS are selling today for up to $25 as well.",
+          "bbox": [
+            {
+              "h": 26.62,
+              "w": 72.94,
+              "x": 92.15,
+              "y": 10.66,
+              "confidence": 0.98,
+              "end_index": 152,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "By 1976, duck fame had grown to such an extent that **The People's Almanac** elevated Scrooge McDuck to the status of \"Famous Nonperson,\" along with Sherlock Holmes, and devoted an entire page to Scrooge's rise from miner to miser, mentioning one Carl Barks as Scrooge's main biographer. The Almanac gave Scrooge McDuck more press than the Mouse House had accorded his biographer during the past three decades, though the history of the ducks' Boswell is interesting in itself.",
+          "value": "By 1976, duck fame had grown to such an extent that The People's Almanac elevated Scrooge McDuck to the status of \"Famous Nonperson,\" along with Sherlock Holmes, and devoted an entire page to Scrooge's rise from miner to miser, mentioning one Carl Barks as Scrooge's main biographer. The Almanac gave Scrooge McDuck more press than the Mouse House had accorded his biographer during the past three decades, though the history of the ducks' Boswell is interesting in itself.",
+          "bbox": [
+            {
+              "h": 82.49,
+              "w": 73.08,
+              "x": 91.98,
+              "y": 38.02,
+              "confidence": 0.99,
+              "end_index": 476,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Carl Barks was born on March 27, 1901, on a small grain ranch near Merrill, Oregon. He and his older brother led a fairly isolated life there, without the \"average\" child's access to movies, books, paints, and crayons. \"We had to work all the time, so we had very little time to play. We went to school in a little one-room school house and there were very few kids there to play with. The school was several miles away from a town of any kind, just a little old school house sitting out there in the sagebrush.\" Most of Barks' early work was sketched out on his school slate. \"Pencils and paper were quite rare, so very little of my stuff was ever permanently done. I'd pick up a piece of charcoal out of the stove and draw on the walls of the house—get my butt spanked.\" So frequently is genius rewarded.",
+          "value": "Carl Barks was born on March 27, 1901, on a small grain ranch near Merrill, Oregon. He and his older brother led a fairly isolated life there, without the \"average\" child's access to movies, books, paints, and crayons. \"We had to work all the time, so we had very little time to play. We went to school in a little one-room school house and there were very few kids there to play with. The school was several miles away from a town of any kind, just a little old school house sitting out there in the sagebrush.\" Most of Barks' early work was sketched out on his school slate. \"Pencils and paper were quite rare, so very little of my stuff was ever permanently done. I'd pick up a piece of charcoal out of the stove and draw on the walls of the house—get my butt spanked.\" So frequently is genius rewarded.",
+          "bbox": [
+            {
+              "h": 137.12,
+              "w": 73.38,
+              "x": 91.73,
+              "y": 120.83,
+              "confidence": 0.77,
+              "end_index": 805,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks never had any formal art training. When he was sixteen, he subscribed to the Landon mail",
+          "value": "Barks never had any formal art training. When he was sixteen, he subscribed to the Landon mail",
+          "bbox": [
+            {
+              "h": 15.84,
+              "w": 72.65,
+              "x": 92.27,
+              "y": 258.8,
+              "confidence": 0.78,
+              "end_index": 93,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-39",
+              "value": "A-39",
+              "bbox": [
+                {
+                  "h": 4.22,
+                  "w": 10.1,
+                  "x": 82.51,
+                  "y": 284.02,
+                  "confidence": 0.79,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-39",
+          "bbox": [
+            {
+              "h": 4.22,
+              "w": 10.1,
+              "x": 82.51,
+              "y": 284.02,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 296.16,
+      "page_number": 1,
+      "page_width": 174.72,
+      "success": true,
+      "printed_page_number": "39"
+    }
+  ]
+}

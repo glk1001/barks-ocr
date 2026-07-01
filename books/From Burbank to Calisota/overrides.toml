@@ -1,0 +1,7 @@
+# Format overrides for the Carl Barks Conversations EPUB build.
+#
+# The bbox heuristic promotes indented text items to <blockquote>. This file
+# demotes the false positives — TOC lines, interview bylines, and running-header
+# leaks — back to ordinary <p>. Each override matches on spread stem (substring)
+# plus the first few characters of the item text. Use ``as = "blockquote"`` to
+# promote an item the heuristic missed.

@@ -1,0 +1,166 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "course, but the infrequency of the mail delivery at the ranch and the difficulty of obtaining proper art supplies forced him to quit after only four installments. From the beginning, Barks was interested strictly in cartoon art, and he would practice by working up prototype daily strips using human characters. He would carry them through several episodes then tear up that batch and start another. It was wartime, and Barks was earning his keep by plowing and doing farm work for the neighbors. In 1917, he could make a man's wages of $5 a day farming: cartooning would have to wait.",
+          "value": "course, but the infrequency of the mail delivery at the ranch and the difficulty of obtaining proper art supplies forced him to quit after only four installments. From the beginning, Barks was interested strictly in cartoon art, and he would practice by working up prototype daily strips using human characters. He would carry them through several episodes then tear up that batch and start another. It was wartime, and Barks was earning his keep by plowing and doing farm work for the neighbors. In 1917, he could make a man's wages of $5 a day farming: cartooning would have to wait.",
+          "bbox": [
+            {
+              "h": 98.89,
+              "w": 74.09,
+              "x": 9.69,
+              "y": 10.63,
+              "confidence": 0.99,
+              "end_index": 584,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "In December 1918, Barks left home and went to San Francisco, where he found work in a job printing office. He stayed there for a year and a half, actively searching for a way to break into cartooning. He did manage to do a few small jobs for the printing office, \"very simple little things that didn't involve any lettering\"; he frequented the art departments of The San Francisco Bulletin, the Chronicle, and the Examiner but never found an opening.",
+          "value": "In December 1918, Barks left home and went to San Francisco, where he found work in a job printing office. He stayed there for a year and a half, actively searching for a way to break into cartooning. He did manage to do a few small jobs for the printing office, \"very simple little things that didn't involve any lettering\"; he frequented the art departments of The San Francisco Bulletin, the Chronicle, and the Examiner but never found an opening.",
+          "bbox": [
+            {
+              "h": 77.36,
+              "w": 73.82,
+              "x": 9.67,
+              "y": 110.14,
+              "confidence": 0.84,
+              "end_index": 449,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Following his stint at the printers, Carl returned to work at the home ranch and then spent the summer of 1923 as a swamper in a logging camp. (After the trees were felled and the bucker cut the timber into sixteen-foot lengths, swamper Barks lopped the branches off before the logs were snaked out and processed.) When the logging season ended that fall, Barks moved back down south, this time to the railroad yards of Roseville, California. He spent a few months in the car shops and then moved out onto the riveting gang where he",
+          "value": "Following his stint at the printers, Carl returned to work at the home ranch and then spent the summer of 1923 as a swamper in a logging camp. (After the trees were felled and the bucker cut the timber into sixteen-foot lengths, swamper Barks lopped the branches off before the logs were snaked out and processed.) When the logging season ended that fall, Barks moved back down south, this time to the railroad yards of Roseville, California. He spent a few months in the car shops and then moved out onto the riveting gang where he",
+          "bbox": [
+            {
+              "h": 87.97,
+              "w": 73.75,
+              "x": 9.52,
+              "y": 187.75,
+              "confidence": 0.99,
+              "end_index": 531,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "heated rivets on a piecework basis. By working piecework, Barks was able to make a full dollar an hour rather than the day laborer's seventy-five cents.",
+          "value": "heated rivets on a piecework basis. By working piecework, Barks was able to make a full dollar an hour rather than the day laborer's seventy-five cents.",
+          "bbox": [
+            {
+              "h": 26.4,
+              "w": 73.3,
+              "x": 90.85,
+              "y": 10.8,
+              "confidence": 0.99,
+              "end_index": 151,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "During the six and a half years that he worked in Roseville, Barks never lost sight of his goal. His desire to become a professional cartoonist was as much pragmatic as aesthetic. \"I always felt that cartooning would be an easier job than any of the other things that I worked at.\" Carl would have kept on drawing—he was a cartoonist born—but it seemed eminently more sensible to make one's livelihood in a warm studio instead of outdoors following the backside of a team of mules or heating rivets in southern California.",
+          "value": "During the six and a half years that he worked in Roseville, Barks never lost sight of his goal. His desire to become a professional cartoonist was as much pragmatic as aesthetic. \"I always felt that cartooning would be an easier job than any of the other things that I worked at.\" Carl would have kept on drawing—he was a cartoonist born—but it seemed eminently more sensible to make one's livelihood in a warm studio instead of outdoors following the backside of a team of mules or heating rivets in southern California.",
+          "bbox": [
+            {
+              "h": 88.56,
+              "w": 73.41,
+              "x": 91.25,
+              "y": 38.08,
+              "confidence": 0.85,
+              "end_index": 521,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "He submitted drawings and gags to various magazines and garnered his share of rejection slips, although he never approached the big names. \"I didn't try The New Yorker or the ones who were paying high prices because every cartoonist that free-lanced at all was already crowding that market.\" Finally his first cartoon—without his gag line—sold to The Calgary Eye-Opener, and Carl began appearing there on a fairly regular basis during 1929. He also sold a few cartoons to Judge magazine and College Humor. With cartoon cash finally coming in, Barks began to feel pretty wealthy. It is probably fortunate for duck futures that he, along with the rest of the country, didn't realize just how long and deep the Depression was going to be. He took the leap into full-time cartooning:",
+          "value": "He submitted drawings and gags to various magazines and garnered his share of rejection slips, although he never approached the big names. \"I didn't try The New Yorker or the ones who were paying high prices because every cartoonist that free-lanced at all was already crowding that market.\" Finally his first cartoon—without his gag line—sold to The Calgary Eye-Opener, and Carl began appearing there on a fairly regular basis during 1929. He also sold a few cartoons to Judge magazine and College Humor. With cartoon cash finally coming in, Barks began to feel pretty wealthy. It is probably fortunate for duck futures that he, along with the rest of the country, didn't realize just how long and deep the Depression was going to be. He took the leap into full-time cartooning:",
+          "bbox": [
+            {
+              "h": 126.64,
+              "w": 73.75,
+              "x": 91.08,
+              "y": 126.94,
+              "confidence": 0.84,
+              "end_index": 778,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "\"I told the foreman of our division that I was going to go behind the car, light up a cigarette, and start smoking on the job. I said,",
+          "value": "\"I told the foreman of our division that I was going to go behind the car, light up a cigarette, and start smoking on the job. I said,",
+          "bbox": [
+            {
+              "h": 20.64,
+              "w": 73.54,
+              "x": 90.85,
+              "y": 253.92,
+              "confidence": 0.98,
+              "end_index": 133,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-40",
+              "value": "A-40",
+              "bbox": [
+                {
+                  "h": 4.08,
+                  "w": 10.19,
+                  "x": 81.43,
+                  "y": 284.11,
+                  "confidence": 0.85,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-40",
+          "bbox": [
+            {
+              "h": 4.08,
+              "w": 10.19,
+              "x": 81.43,
+              "y": 284.11,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 295.2,
+      "page_number": 1,
+      "page_width": 169.92,
+      "success": true
+    }
+  ]
+}

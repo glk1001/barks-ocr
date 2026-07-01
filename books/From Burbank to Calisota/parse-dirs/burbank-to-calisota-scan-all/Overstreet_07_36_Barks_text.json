@@ -1,0 +1,184 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "have been too much. I've painted nothing but duds so far. However, I'm having fun. . .I'll continue to produce muddy oil frustrations of my Indians, cowboys and maybe embattled Greeks in the plains of Troy.\"",
+          "value": "have been too much. I've painted nothing but duds so far. However, I'm having fun. . .I'll continue to produce muddy oil frustrations of my Indians, cowboys and maybe embattled Greeks in the plains of Troy.\"",
+          "bbox": [
+            {
+              "h": 38.23,
+              "w": 73.38,
+              "x": 8.04,
+              "y": 10.3,
+              "confidence": 0.99,
+              "end_index": 206,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Thanks to the persistent efforts of a fan named Glenn Bray, Barks wrote to Disney for permission to paint scenes from the duck canon. With the Disney go-ahead, the Golden Age of the Barks duck oils had begun. The first painting Barks hesitantly offered to Glenn for $50. One of the last, an ambitious Bicentennial Duckburg parade scene, was auctioned this past Fourth of July for $6,400. All in all, Barks painted some 130 scenes that constitute the apotheosis of Duck art in the Western world.",
+          "value": "Thanks to the persistent efforts of a fan named Glenn Bray, Barks wrote to Disney for permission to paint scenes from the duck canon. With the Disney go-ahead, the Golden Age of the Barks duck oils had begun. The first painting Barks hesitantly offered to Glenn for $50. One of the last, an ambitious Bicentennial Duckburg parade scene, was auctioned this past Fourth of July for $6,400. All in all, Barks painted some 130 scenes that constitute the apotheosis of Duck art in the Western world.",
+          "bbox": [
+            {
+              "h": 82.16,
+              "w": 73.31,
+              "x": 7.85,
+              "y": 48.9,
+              "confidence": 0.98,
+              "end_index": 493,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks was the only Disney artist allowed to sell original art, and he worked on the duck paintings until Disney withdrew permission in 1976. Barks is philosophical about the ban, and in one way it has freed him to pursue those avenues of the \"long ago and far away\" with nonfeathered subjects.",
+          "value": "Barks was the only Disney artist allowed to sell original art, and he worked on the duck paintings until Disney withdrew permission in 1976. Barks is philosophical about the ban, and in one way it has freed him to pursue those avenues of the \"long ago and far away\" with nonfeathered subjects.",
+          "bbox": [
+            {
+              "h": 49.61,
+              "w": 73.2,
+              "x": 7.95,
+              "y": 131.38,
+              "confidence": 0.99,
+              "end_index": 292,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Barks traveled to Boston for Newcon '76, the only convention he ever attended, and saw the first two of his nonduck paintings sold at auction. One of them was King Midas Having Fun, which incorporates all the technical skill and satiric approach that characterizes Barks' feathered period. The feelings of many people",
+          "value": "Barks traveled to Boston for Newcon '76, the only convention he ever attended, and saw the first two of his nonduck paintings sold at auction. One of them was King Midas Having Fun, which incorporates all the technical skill and satiric approach that characterizes Barks' feathered period. The feelings of many people",
+          "bbox": [
+            {
+              "h": 55.35,
+              "w": 73.25,
+              "x": 8.11,
+              "y": 181.35,
+              "confidence": 0.99,
+              "end_index": 316,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "fortunate enough to meet him were summed up by one man who darted out of the crowd and said simply, \"I just want to shake your hand and tell you that you made my childhood much happier with your stories.\"",
+          "value": "fortunate enough to meet him were summed up by one man who darted out of the crowd and said simply, \"I just want to shake your hand and tell you that you made my childhood much happier with your stories.\"",
+          "bbox": [
+            {
+              "h": 37.47,
+              "w": 73.2,
+              "x": 88.9,
+              "y": 10.95,
+              "confidence": 0.99,
+              "end_index": 203,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Photograph of Carl Barks",
+          "value": "Photograph of Carl Barks",
+          "bbox": [
+            {
+              "h": 113.65,
+              "w": 71.63,
+              "x": 89.32,
+              "y": 50.54,
+              "confidence": 0.77,
+              "end_index": 23,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**For Carl, there is always another rainbow.**",
+          "value": "For Carl, there is always another rainbow.",
+          "bbox": [
+            {
+              "h": 7.28,
+              "w": 42.95,
+              "x": 105.27,
+              "y": 165.14,
+              "confidence": 0.96,
+              "end_index": 45,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Many people will regret that Barks can no longer paint the ducks. But the wells of myth and imagination run deep enough to afford him ample material for another 130 paintings, and Carl's own zest for exploring the world and its foibles ensures that he will not lack for inspiration. For Carl, like sourdough Scrooge, there is \"always another rainbow.\"",
+          "value": "Many people will regret that Barks can no longer paint the ducks. But the wells of myth and imagination run deep enough to afford him ample material for another 130 paintings, and Carl's own zest for exploring the world and its foibles ensures that he will not lack for inspiration. For Carl, like sourdough Scrooge, there is \"always another rainbow.\"",
+          "bbox": [
+            {
+              "h": 60.61,
+              "w": 73.49,
+              "x": 89.35,
+              "y": 175.83,
+              "confidence": 0.99,
+              "end_index": 350,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-57",
+              "value": "A-57",
+              "bbox": [
+                {
+                  "h": 3.98,
+                  "w": 10.16,
+                  "x": 81.03,
+                  "y": 282.25,
+                  "confidence": 0.95,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-57",
+          "bbox": [
+            {
+              "h": 3.98,
+              "w": 10.16,
+              "x": 81.03,
+              "y": 282.25,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 291.12,
+      "page_number": 1,
+      "page_width": 173.52,
+      "success": true,
+      "printed_page_number": "57"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Carl Barks holding a large sheet of comic book art",
+          "value": "Carl Barks holding a large sheet of comic book art",
+          "bbox": [
+            {
+              "h": 120.4,
+              "w": 77.57,
+              "x": 4.8,
+              "y": 11.39,
+              "confidence": 0.83,
+              "end_index": 49,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Carl Barks presenting Bob Overstreet with a comic book cover",
+          "value": "Carl Barks presenting Bob Overstreet with a comic book cover",
+          "bbox": [
+            {
+              "h": 57.88,
+              "w": 83.6,
+              "x": 86.09,
+              "y": 11.31,
+              "confidence": 0.85,
+              "end_index": 59,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Carl presenting Bob Overstreet with this year's cover.",
+          "value": "Carl presenting Bob Overstreet with this year's cover.",
+          "bbox": [
+            {
+              "h": 7.2,
+              "w": 64.41,
+              "x": 92.05,
+              "y": 69.6,
+              "confidence": 0.95,
+              "end_index": 53,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Like all comic book art, the duck stories were drawn on large size sheets such as this.",
+          "value": "Like all comic book art, the duck stories were drawn on large size sheets such as this.",
+          "bbox": [
+            {
+              "h": 10.32,
+              "w": 61.28,
+              "x": 9.37,
+              "y": 134.64,
+              "confidence": 0.95,
+              "end_index": 86,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Carl Barks holding a copy of \"Disneyana\" with another person",
+          "value": "Carl Barks holding a copy of \"Disneyana\" with another person",
+          "bbox": [
+            {
+              "h": 60.39,
+              "w": 81.01,
+              "x": 88.99,
+              "y": 84.88,
+              "confidence": 0.84,
+              "end_index": 59,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Published in 1975, \"**Disneyana**\" gave long overdue recognition to Carl's work.",
+          "value": "Published in 1975, \"Disneyana\" gave long overdue recognition to Carl's work.",
+          "bbox": [
+            {
+              "h": 7.63,
+              "w": 73.3,
+              "x": 91.66,
+              "y": 148.03,
+              "confidence": 0.96,
+              "end_index": 79,
+              "label": "caption",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Left to Right: Carl Barks, Barbara Boatner and John Stanley",
+          "value": "Left to Right: Carl Barks, Barbara Boatner and John Stanley",
+          "bbox": [
+            {
+              "h": 98.48,
+              "w": 162.25,
+              "x": 5.78,
+              "y": 160.22,
+              "confidence": 0.84,
+              "end_index": 58,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Left to Right: Carl, Barbara Boatner and John Stanley at the Boston Convention (1976). John, who wrote and drew the Little Lulu stories, and Carl meet for the first time.",
+          "value": "Left to Right: Carl, Barbara Boatner and John Stanley at the Boston Convention (1976). John, who wrote and drew the Little Lulu stories, and Carl meet for the first time.",
+          "bbox": [
+            {
+              "h": 11.04,
+              "w": 69.94,
+              "x": 13.94,
+              "y": 259.68,
+              "confidence": 1.0,
+              "end_index": 105,
+              "label": "caption",
+              "start_index": 0
+            },
+            {
+              "h": 6.96,
+              "w": 68.01,
+              "x": 92.05,
+              "y": 260.16,
+              "confidence": 1.0,
+              "end_index": 169,
+              "label": "caption",
+              "start_index": 107
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "A-38",
+              "value": "A-38",
+              "bbox": [
+                {
+                  "h": 4.0,
+                  "w": 10.1,
+                  "x": 83.93,
+                  "y": 283.49,
+                  "confidence": 0.95,
+                  "end_index": 3,
+                  "label": "footer",
+                  "start_index": 0
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "A-38",
+          "bbox": [
+            {
+              "h": 4.0,
+              "w": 10.1,
+              "x": 83.93,
+              "y": 283.49,
+              "confidence": null,
+              "end_index": null,
+              "label": null,
+              "start_index": null
+            }
+          ],
+          "type": "footer"
+        }
+      ],
+      "page_height": 293.76,
+      "page_number": 1,
+      "page_width": 174.48,
+      "success": true,
+      "printed_page_number": "38"
+    }
+  ]
+}
