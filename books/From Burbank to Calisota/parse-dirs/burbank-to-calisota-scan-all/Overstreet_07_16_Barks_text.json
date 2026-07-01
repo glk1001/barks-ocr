@@ -3,8 +3,6 @@
     {
       "items": [
         {
-          "md": "Illustration of various Disney characters including Scrooge McDuck, the Beagle Boys, and Magica De Spell",
-          "value": "Illustration of various Disney characters including Scrooge McDuck, the Beagle Boys, and Magica De Spell",
           "bbox": [
             {
               "h": 54.4,
@@ -17,7 +15,9 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "image",
+          "url": "Overstreet_07_16_Barks_text_image_1.png",
+          "caption": ""
         },
         {
           "level": 1,
@@ -74,8 +74,8 @@
           "type": "heading"
         },
         {
-          "md": "*E. B. Boatner was graduated from Radcliffe in 1963. She has been a freelance photographer and writer since 1970. Her work has been published by UPI and Newsweek. An interest in comics developed in 1965 and she has previously interviewed Carl Barks and written an article about him which appeared in the Harvard Magazine.*",
-          "value": "E. B. Boatner was graduated from Radcliffe in 1963. She has been a freelance photographer and writer since 1970. Her work has been published by UPI and Newsweek. An interest in comics developed in 1965 and she has previously interviewed Carl Barks and written an article about him which appeared in the Harvard Magazine.",
+          "md": "*E. B. Boatner was graduated from Radcliffe in 1963. She has been a freelance photographer and writer since 1970. Her work has been published by UPI and Newsweek. An interest in comics developed in 1965 and she has previously interviewed Carl Barks and written an article about him which appeared in the Harvard Magazine.*<br><br>",
+          "value": "E. B. Boatner was graduated from Radcliffe in 1963. She has been a freelance photographer and writer since 1970. Her work has been published by UPI and Newsweek. An interest in comics developed in 1965 and she has previously interviewed Carl Barks and written an article about him which appeared in the Harvard Magazine.<br><br>",
           "bbox": [
             {
               "h": 27.44,
@@ -108,7 +108,7 @@
           "type": "text"
         },
         {
-          "md": "Carl Barks maintained total anonymity during the twenty-three years that he drew virtually all of the duck Comics and Stories and one-shot Donald Duck's, and all of the Uncle Scrooge books—a record more enviable for a CIA man than an artist.",
+          "md": "Carl Barks maintained total anonymity during the twenty-three years that he drew virtually all of the duck **Comics and Stories** and one-shot **Donald Duck's,** and all of the **Uncle Scrooge** books—a record more enviable for a CIA man than an artist.",
           "value": "Carl Barks maintained total anonymity during the twenty-three years that he drew virtually all of the duck Comics and Stories and one-shot Donald Duck's, and all of the Uncle Scrooge books—a record more enviable for a CIA man than an artist.",
           "bbox": [
             {
@@ -125,8 +125,8 @@
           "type": "text"
         },
         {
-          "md": "In fact, Barks was so unused to the idea of recognition that when he received his first fan letter, he and his wife Gare decided that it had been cooked up by their friend Bob Harmon, a gag writer for Dennis the Menace known for his practical jokes. Only after Harmon had repeatedly denied authorship and after fan Spicer and his brother Bill appeared in person did Barks begin to realize that there were",
-          "value": "In fact, Barks was so unused to the idea of recognition that when he received his first fan letter, he and his wife Gare decided that it had been cooked up by their friend Bob Harmon, a gag writer for Dennis the Menace known for his practical jokes. Only after Harmon had repeatedly denied authorship and after fan Spicer and his brother Bill appeared in person did Barks begin to realize that there were",
+          "md": "In fact, Barks was so unused to the idea of recognition that when he received his first fan letter, he and his wife Gare decided that it had been cooked up by their friend Bob Harmon, a gag writer for **Dennis the Menace** known for his practical jokes. Only after Harmon had repeatedly denied authorship and after fan Spicer and his brother Bill appeared in person did Barks begin to realize that there were people out in the wide world who loved and admired his work.",
+          "value": "In fact, Barks was so unused to the idea of recognition that when he received his first fan letter, he and his wife Gare decided that it had been cooked up by their friend Bob Harmon, a gag writer for Dennis the Menace known for his practical jokes. Only after Harmon had repeatedly denied authorship and after fan Spicer and his brother Bill appeared in person did Barks begin to realize that there were people out in the wide world who loved and admired his work.",
           "bbox": [
             {
               "h": 66.53,
@@ -141,7 +141,7 @@
           ],
           "type": "text"
         },
-       {
+        {
           "items": [
             {
               "md": "A-37",

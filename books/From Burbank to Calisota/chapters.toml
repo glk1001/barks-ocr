@@ -1,8 +1,19 @@
-# Carl Barks: Conversations — chapter sidecar for EPUB build.
-# Each chapter must specify exactly one anchor:
+# From Burbank to Calisota — chapter sidecar for EPUB build.
+# Each chapter becomes one entry in the e-reader navigation TOC and must
+# specify exactly one anchor:
 #   * 'start_printed_page' — must match a printed page number detected on a
-#     spread (see each scan dir's *_manifest.json "printed_page_numbers_detected").
+#     page (see the Available printed pages list in any build error).
 #   * 'start_heading' — matched against a heading item's visible text
-#     (case-insensitive). Used when the printed-page anchor is unreliable
-#     (e.g. spreads with one detected page number split across two sides).
+#     (case-insensitive).
+#
+# Note: 'kind = "contents"' is only for books that contain an actual printed
+# Table-of-Contents page in their body; this single-article book has none, so
+# the navigation TOC is built from the chapters below.
 
+[[chapters]]
+title = "Title Page"
+start_printed_page = "i"
+
+[[chapters]]
+title = "Carl Barks — from Burbank to Calisota"
+start_printed_page = "37"

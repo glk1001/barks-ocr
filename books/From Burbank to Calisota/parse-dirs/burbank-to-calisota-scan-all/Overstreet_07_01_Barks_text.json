@@ -1,0 +1,67 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "The Comic Book Price Guide No. 7, 1977-1978\nRobert M. Overstreet<div style=\"page-break-after: always;\"></div>",
+          "value": "The Comic Book Price Guide\nRobert M. Overstreet",
+          "bbox": [
+            {
+              "h": 23.55631043254571,
+              "w": 127.85561524032964,
+              "x": 139.89890176614904,
+              "y": 408.834196960747,
+              "confidence": 0.93,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Special Contributors to this Edition\nE. B. Boatner<div style=\"page-break-after: always;\"></div>",
+          "value": "Special Contributors to this Edition\nE. B. Boatner",
+          "bbox": [
+            {
+              "h": 23.55631043254571,
+              "w": 127.85561524032964,
+              "x": 139.89890176614904,
+              "y": 408.834196960747,
+              "confidence": 0.93,
+              "end_index": 62,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Copyright 1977 by Robert M. Overstreet\nNew York<div style=\"page-break-after: always;\"></div>",
+          "value": "Copyright 1977 by Robert M. Overstreet\nNew York",
+          "bbox": [
+            {
+              "h": 22.68570517339936,
+              "w": 115.47921429592222,
+              "x": 518.82413536109,
+              "y": 493.8339410156251,
+              "confidence": 0.92,
+              "end_index": 38,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 594.72,
+      "page_number": 1,
+      "page_width": 841.2,
+      "success": true,
+      "printed_page_number": "i, iii"
+    }
+  ]
+}

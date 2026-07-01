@@ -20,7 +20,25 @@
           "type": "text"
         },
         {
-          "md": "Barks' violence was realistic because there was always a consequence to a given action. Unaided, Jones would have drowned. Villain McFiendy in **In Darkest Africa** (March of Comics No. 20) tampers with the ducks' gear. Suspecting sabotage, Donald throws a chunk of their hardtack to a crocodile that writhes into a screeching knot and dies. What would have happened to the ducks is clear, and the impact of the violence registers far more forcefully than the concatenations of explosives and boobytraps of a Roadrunner cartoon.",
+          "md": "![From Walt Disney's Comics and Stories No. 48, 1944, c. WDP](Overstreet_07_31_Barks_text_image_1.png)",
+          "bbox": [
+            {
+              "h": 54.14,
+              "w": 75.3,
+              "x": 9.82,
+              "y": 161.3,
+              "confidence": 0.85,
+              "end_index": 74,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "url": "Overstreet_07_31_Barks_text_image_1.png",
+          "caption": "From Walt Disney's Comics and Stories No. 48, 1944, c. WDP"
+        },
+        {
+          "md": "Barks' violence was realistic because there was always a consequence to a given action. Unaided, Jones would have drowned. Villain McFiendy in **In Darkest Africa** (March of Comics No. 20) tampers with the ducks' gear. Suspecting sabotage, Donald throws a chunk of their hardtack to a crocodile that writhes into a screeching knot and dies. What would have happened to the ducks is clear, and the impact of the violence registers far more forcefully than the concatenations of explosives and boobytraps of a **Roadrunner** cartoon.",
           "value": "Barks' violence was realistic because there was always a consequence to a given action. Unaided, Jones would have drowned. Villain McFiendy in In Darkest Africa (March of Comics No. 20) tampers with the ducks' gear. Suspecting sabotage, Donald throws a chunk of their hardtack to a crocodile that writhes into a screeching knot and dies. What would have happened to the ducks is clear, and the impact of the violence registers far more forcefully than the concatenations of explosives and boobytraps of a Roadrunner cartoon.",
           "bbox": [
             {

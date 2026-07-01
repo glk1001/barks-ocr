@@ -37,6 +37,24 @@
           "type": "text"
         },
         {
+          "md": "![From **Walt Disney's Comics and Stories** No. 140, 1952, c. WDP](Overstreet_07_28_Barks_text_image_1.png)",
+          "bbox": [
+            {
+              "h": 51.38,
+              "w": 80.15,
+              "x": 13.8,
+              "y": 11.95,
+              "confidence": 0.86,
+              "end_index": 107,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "url": "Overstreet_07_28_Barks_text_image_1.png",
+          "caption": "From Walt Disney's Comics and Stories No. 140, 1952, c. WDP"
+        },
+        {
           "md": "Scrooge was used far more frequently than Gladstone, but Barks always had to build the story around some aspect of Scrooge's wealth. There are many one-shots where Barks used Donald and the boys by themselves, but Scrooge never supported a whole story without the other four. The closest Scrooge came to flying solo was in **Back to the Klondike** (FC No. 456). Much of the power of that story derives from flash-backs to Scrooge's youth in the Klondike and his romance with Glittering Goldie, Star of the North. The story gains strength because Scrooge is shown in a real past interacting with real people.",
           "value": "Scrooge was used far more frequently than Gladstone, but Barks always had to build the story around some aspect of Scrooge's wealth. There are many one-shots where Barks used Donald and the boys by themselves, but Scrooge never supported a whole story without the other four. The closest Scrooge came to flying solo was in Back to the Klondike (FC No. 456). Much of the power of that story derives from flash-backs to Scrooge's youth in the Klondike and his romance with Glittering Goldie, Star of the North. The story gains strength because Scrooge is shown in a real past interacting with real people.",
           "bbox": [
@@ -65,40 +83,6 @@
               "confidence": 0.99,
               "end_index": 193,
               "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Comic strip panels showing Scrooge McDuck finding his nephews in the desert and bargaining for their hourglass.",
-          "value": "Comic strip panels showing Scrooge McDuck finding his nephews in the desert and bargaining for their hourglass.",
-          "bbox": [
-            {
-              "h": 103.14,
-              "w": 140.68,
-              "x": 17.65,
-              "y": 166.37,
-              "confidence": 0.85,
-              "end_index": 110,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "From Four Color No. 291, 1950, c. WDP",
-          "value": "From Four Color No. 291, 1950, c. WDP",
-          "bbox": [
-            {
-              "h": 4.04,
-              "w": 75.9,
-              "x": 49.25,
-              "y": 270.36,
-              "confidence": 0.93,
-              "end_index": 36,
-              "label": "caption",
               "start_index": 0
             }
           ],

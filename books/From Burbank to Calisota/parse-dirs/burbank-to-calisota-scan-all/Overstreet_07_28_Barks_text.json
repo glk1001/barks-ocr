@@ -3,91 +3,6 @@
     {
       "items": [
         {
-          "md": "Comic panel showing Scrooge McDuck confessing to taking a job while Donald and the nephews look on in shock.",
-          "value": "Comic panel showing Scrooge McDuck confessing to taking a job while Donald and the nephews look on in shock.",
-          "bbox": [
-            {
-              "h": 51.38,
-              "w": 80.15,
-              "x": 13.8,
-              "y": 11.95,
-              "confidence": 0.86,
-              "end_index": 107,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Comic panel showing Scrooge McDuck working and earning a dime.",
-          "value": "Comic panel showing Scrooge McDuck working and earning a dime.",
-          "bbox": [
-            {
-              "h": 51.9,
-              "w": 63.0,
-              "x": 95.48,
-              "y": 11.85,
-              "confidence": 0.81,
-              "end_index": 61,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Comic panel showing Scrooge McDuck hiding his face in shame while Donald and a nephew look at him.",
-          "value": "Comic panel showing Scrooge McDuck hiding his face in shame while Donald and a nephew look at him.",
-          "bbox": [
-            {
-              "h": 50.58,
-              "w": 71.58,
-              "x": 13.7,
-              "y": 64.95,
-              "confidence": 0.82,
-              "end_index": 97,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Comic panel showing silhouettes of the characters with speech bubbles.",
-          "value": "Comic panel showing silhouettes of the characters with speech bubbles.",
-          "bbox": [
-            {
-              "h": 50.46,
-              "w": 71.84,
-              "x": 86.41,
-              "y": 65.11,
-              "confidence": 0.8,
-              "end_index": 69,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "From **Walt Disney's Comics and Stories** No. 140, 1952, c. WDP",
-          "value": "From Walt Disney's Comics and Stories No. 140, 1952, c. WDP",
-          "bbox": [
-            {
-              "h": 3.36,
-              "w": 114.72,
-              "x": 27.12,
-              "y": 116.4,
-              "confidence": 1.0,
-              "end_index": 62,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "production. John Stanley, one of the few artists along with Barks who was also a master storyteller, never sent the Little Lulu-Tubby gang on adventures far away from home. Barks' characters, however, trekked to the far ends of the earth. \"I'd think of a place that I wanted to draw. I felt that if I could enjoy drawing some particular locale, it would be much easier to think of business to go on in that particular place, and that would help me get started on a story.\" If that place happened to be ancient Greece or Persia, it was not because they were exploitable countries for Scrooge, but because they were rich in folklore and mythology. \"As for my use of myths in the plots of my stories, the reason is laziness. A myth from ancient times gave me many plot gimmicks upon which to base the actions and motivations. I was hitching rides on the chariots of the gods.\"",
           "value": "production. John Stanley, one of the few artists along with Barks who was also a master storyteller, never sent the Little Lulu-Tubby gang on adventures far away from home. Barks' characters, however, trekked to the far ends of the earth. \"I'd think of a place that I wanted to draw. I felt that if I could enjoy drawing some particular locale, it would be much easier to think of business to go on in that particular place, and that would help me get started on a story.\" If that place happened to be ancient Greece or Persia, it was not because they were exploitable countries for Scrooge, but because they were rich in folklore and mythology. \"As for my use of myths in the plots of my stories, the reason is laziness. A myth from ancient times gave me many plot gimmicks upon which to base the actions and motivations. I was hitching rides on the chariots of the gods.\"",
           "bbox": [
@@ -122,7 +37,7 @@
           "type": "text"
         },
         {
-          "md": "other inventions was that they had specific and limiting personality traits. \"Gladstone would have been a very tiresome subject if he had been used over and over. I could only bring him in once in a while and use him in situations where his luck was useful to the plot of the story. I think in **A Christmas for Shacktown** (FC No. 367) I was able to use Gladstone's luck in a very beneficial way. It was about as good a treatment as I could find for Gladstone. I wouldn't have wanted to do a Gladstone book. I had to do Gyro Gearloose and Junior Woodchuck books, but to do a Gladstone book would have been a real grind.\"",
+          "md": "other inventions was that they had specific and limiting personality traits. \"Gladstone would have been a very tiresome subject if he had been used over and over. I could only bring him in once in a while and use him in situations where his luck was useful to the plot of the story. I think in **A Christmas for Shacktown** (FC No. 367) I was able to use Gladstone's luck in a very beneficial way. It was about as good a treatment as I could find for Gladstone. I wouldn't have wanted to do a **Gladstone** book. I had to do Gyro Gearloose and Junior Woodchuck books, but to do a Gladstone book would have been a real grind.\"",
           "value": "other inventions was that they had specific and limiting personality traits. \"Gladstone would have been a very tiresome subject if he had been used over and over. I could only bring him in once in a while and use him in situations where his luck was useful to the plot of the story. I think in A Christmas for Shacktown (FC No. 367) I was able to use Gladstone's luck in a very beneficial way. It was about as good a treatment as I could find for Gladstone. I wouldn't have wanted to do a Gladstone book. I had to do Gyro Gearloose and Junior Woodchuck books, but to do a Gladstone book would have been a real grind.\"",
           "bbox": [
             {

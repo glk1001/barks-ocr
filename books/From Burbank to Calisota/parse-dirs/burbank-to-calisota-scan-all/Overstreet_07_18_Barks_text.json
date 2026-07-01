@@ -3,23 +3,6 @@
     {
       "items": [
         {
-          "md": "people out in the wide world who loved and admired his work.",
-          "value": "people out in the wide world who loved and admired his work.",
-          "bbox": [
-            {
-              "h": 10.37,
-              "w": 72.86,
-              "x": 10.31,
-              "y": 11.85,
-              "confidence": 0.97,
-              "end_index": 59,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "The second fan to get through, recalls Barks, was Malcolm Willits. \"He wrote a long scholarly letter about the merits of my stuff which had me floating around in the air for days. I began to think that I might have some pretty good stuff in my work, but I didn't get any more letters for a long, long time.\" Barks had made a lasting impression on two of these fans. Bill Spicer is presently editor at Western Publishing's Hollywood office, and Willits is also in Hollywood running a mammoth comic book and magazine store.",
           "value": "The second fan to get through, recalls Barks, was Malcolm Willits. \"He wrote a long scholarly letter about the merits of my stuff which had me floating around in the air for days. I began to think that I might have some pretty good stuff in my work, but I didn't get any more letters for a long, long time.\" Barks had made a lasting impression on two of these fans. Bill Spicer is presently editor at Western Publishing's Hollywood office, and Willits is also in Hollywood running a mammoth comic book and magazine store.",
           "bbox": [
@@ -71,7 +54,7 @@
           "type": "text"
         },
         {
-          "md": "By 1976, duck fame had grown to such an extent that **The People's Almanac** elevated Scrooge McDuck to the status of \"Famous Nonperson,\" along with Sherlock Holmes, and devoted an entire page to Scrooge's rise from miner to miser, mentioning one Carl Barks as Scrooge's main biographer. The Almanac gave Scrooge McDuck more press than the Mouse House had accorded his biographer during the past three decades, though the history of the ducks' Boswell is interesting in itself.",
+          "md": "By 1976, duck fame had grown to such an extent that **The People's Almanac** elevated Scrooge McDuck to the status of \"Famous Nonperson,\" along with Sherlock Holmes, and devoted an entire page to Scrooge's rise from miner to miser, mentioning one Carl Barks as Scrooge's main biographer. **The Almanac** gave Scrooge McDuck more press than the Mouse House had accorded his biographer during the past three decades, though the history of the ducks' Boswell is interesting in itself.",
           "value": "By 1976, duck fame had grown to such an extent that The People's Almanac elevated Scrooge McDuck to the status of \"Famous Nonperson,\" along with Sherlock Holmes, and devoted an entire page to Scrooge's rise from miner to miser, mentioning one Carl Barks as Scrooge's main biographer. The Almanac gave Scrooge McDuck more press than the Mouse House had accorded his biographer during the past three decades, though the history of the ducks' Boswell is interesting in itself.",
           "bbox": [
             {

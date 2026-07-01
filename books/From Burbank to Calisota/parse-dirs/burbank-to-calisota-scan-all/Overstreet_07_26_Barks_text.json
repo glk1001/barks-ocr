@@ -3,40 +3,6 @@
     {
       "items": [
         {
-          "md": "Comic strip panels showing Donald Duck and his nephews fighting a robot Comic strip panels showing Donald Duck and his nephews fighting a robot Comic strip panels showing Donald Duck and his nephews fighting a robot Comic strip panels showing Donald Duck and his nephews fighting a robot",
-          "value": "Comic strip panels showing Donald Duck and his nephews fighting a robot Comic strip panels showing Donald Duck and his nephews fighting a robot Comic strip panels showing Donald Duck and his nephews fighting a robot Comic strip panels showing Donald Duck and his nephews fighting a robot",
-          "bbox": [
-            {
-              "h": 109.66,
-              "w": 120.78,
-              "x": 26.13,
-              "y": 12.35,
-              "confidence": 0.54,
-              "end_index": 286,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "**From Walt Disney's Comics and Stories No. 41, 1944, c. WDP**",
-          "value": "From Walt Disney's Comics and Stories No. 41, 1944, c. WDP",
-          "bbox": [
-            {
-              "h": 3.83,
-              "w": 113.55,
-              "x": 29.22,
-              "y": 122.74,
-              "confidence": 0.92,
-              "end_index": 61,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
           "md": "parents, and you wind up with **Oedipus Rex and Medea.** ...",
           "value": "parents, and you wind up with Oedipus Rex and Medea. ...",
           "bbox": [
@@ -52,6 +18,24 @@
             }
           ],
           "type": "text"
+        },
+        {
+          "md": "![**From Walt Disney's Comics and Stories No. 41, 1944, c. WDP**](Overstreet_07_26_Barks_text_image_1.png)",
+          "bbox": [
+            {
+              "h": 109.66,
+              "w": 120.78,
+              "x": 26.13,
+              "y": 12.35,
+              "confidence": 0.54,
+              "end_index": 286,
+              "label": "image",
+              "start_index": 0
+            }
+          ],
+          "type": "image",
+          "url": "Overstreet_07_26_Barks_text_image_1.png",
+          "caption": "From Walt Disney's Comics and Stories No. 41, 1944, c. WDP"
         },
         {
           "md": "An old gag man, Barks played the ducks for laughs; and from the start, a thinking, articulate Donald was funny. He frequently had Donald quietly assessing his impending annihilation as the world fell apart around him; the juxtaposition was far funnier than the quacking film duck. In WDCS No. 40, Donald sets out to show off his skiing expertise. When he is inadvertently shot off a snag-toothed crag, he muses as he hurtles toward the opposing mountain face, \"Well, that gives me another two minutes to live!\"",

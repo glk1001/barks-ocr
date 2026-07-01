@@ -88,25 +88,7 @@
           "type": "text"
         },
         {
-          "md": "The mechanics of new inventions were plot primers for Barks. \"I think that the most influential thing in my writing was the modern technology and the changes constantly going on around us.\" Locale was the second most important technique to speed up",
-          "value": "The mechanics of new inventions were plot primers for Barks. \"I think that the most influential thing in my writing was the modern technology and the changes constantly going on around us.\" Locale was the second most important technique to speed up",
-          "bbox": [
-            {
-              "h": 44.05,
-              "w": 73.25,
-              "x": 94.16,
-              "y": 120.84,
-              "confidence": 0.99,
-              "end_index": 247,
-              "label": "text",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Comic panel showing Donald Duck reading a letter from Uncle Scrooge",
-          "value": "Comic panel showing Donald Duck reading a letter from Uncle Scrooge",
+          "md": "![From Four Color No. 178, 1947, c. WDP](Overstreet_07_27_Barks_text_image_1.png)",
           "bbox": [
             {
               "h": 52.03,
@@ -119,71 +101,22 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "image",
+          "url": "Overstreet_07_27_Barks_text_image_1.png",
+          "caption": "From Four Color No. 178, 1947, c. WDP"
         },
         {
-          "md": "Comic panel showing Uncle Scrooge laughing while looking out a window",
-          "value": "Comic panel showing Uncle Scrooge laughing while looking out a window",
+          "md": "The mechanics of new inventions were plot primers for Barks. \"I think that the most influential thing in my writing was the modern technology and the changes constantly going on around us.\" Locale was the second most important technique to speed up",
+          "value": "The mechanics of new inventions were plot primers for Barks. \"I think that the most influential thing in my writing was the modern technology and the changes constantly going on around us.\" Locale was the second most important technique to speed up",
           "bbox": [
             {
-              "h": 51.49,
-              "w": 69.24,
-              "x": 96.15,
-              "y": 170.17,
-              "confidence": 0.8,
-              "end_index": 68,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Comic panel showing a close-up of Uncle Scrooge's face",
-          "value": "Comic panel showing a close-up of Uncle Scrooge's face",
-          "bbox": [
-            {
-              "h": 52.18,
-              "w": 49.72,
-              "x": 19.96,
-              "y": 224.17,
-              "confidence": 0.74,
-              "end_index": 53,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Comic panel showing Donald and the nephews driving a car towards a mountain cabin",
-          "value": "Comic panel showing Donald and the nephews driving a car towards a mountain cabin",
-          "bbox": [
-            {
-              "h": 52.25,
-              "w": 94.73,
-              "x": 71.06,
-              "y": 223.89,
-              "confidence": 0.83,
-              "end_index": 80,
-              "label": "image",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "From Four Color No. 178, 1947, c. WDP",
-          "value": "From Four Color No. 178, 1947, c. WDP",
-          "bbox": [
-            {
-              "h": 5.04,
-              "w": 75.6,
-              "x": 52.8,
-              "y": 277.92,
-              "confidence": 1.0,
-              "end_index": 36,
-              "label": "caption",
+              "h": 44.05,
+              "w": 73.25,
+              "x": 94.16,
+              "y": 120.84,
+              "confidence": 0.99,
+              "end_index": 247,
+              "label": "text",
               "start_index": 0
             }
           ],

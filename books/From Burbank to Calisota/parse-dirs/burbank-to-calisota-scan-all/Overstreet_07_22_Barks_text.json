@@ -37,25 +37,7 @@
           "type": "text"
         },
         {
-          "md": "Young Carl in 1944 taking a close look at a real duck.",
-          "value": "Young Carl in 1944 taking a close look at a real duck.",
-          "bbox": [
-            {
-              "h": 7.2,
-              "w": 71.91,
-              "x": 10.41,
-              "y": 223.71,
-              "confidence": 0.94,
-              "end_index": 53,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "**Young Carl in 1944 taking a close look at a real duck.**",
-          "value": "Young Carl in 1944 taking a close look at a real duck.",
+          "md": "![Young Carl in 1944 taking a close look at a real duck.](Overstreet_07_22_Barks_text_image_1.png)",
           "bbox": [
             {
               "h": 100.3,
@@ -68,7 +50,9 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "image",
+          "url": "Overstreet_07_22_Barks_text_image_1.png",
+          "caption": "Young Carl in 1944 taking a close look at a real duck."
         },
         {
           "md": "The rest is history. What the world lost in a budding Frank Perdue is more than made up for in the golden-quilled chronicler of Duckburg, Calisota. Barks' first story appeared in April 1943 (WDCS No. 31). He illustrated the",
@@ -88,7 +72,7 @@
           "type": "text"
         },
         {
-          "md": "script he had been given and so greatly improved the story line that from that time on, he did both the scripts and the artwork for his stories. Barks is one of the very few comic artists who did both jobs (Jack Cole of Plastic Man was another). That his material was superior was abundantly clear to his readers. During a bleak period in 1950, Barks was so laden with long book assignments that he did only three of the twelve Comics and Stories, and the resulting avalanche of protest mail convinced the powers that be that Barks should do all the ten-pagers as well as all the long one-shots.",
+          "md": "script he had been given and so greatly improved the story line that from that time on, he did both the scripts and the artwork for his stories. Barks is one of the very few comic artists who did both jobs (Jack Cole of **Plastic Man** was another). That his material was superior was abundantly clear to his readers. During a bleak period in 1950, Barks was so laden with long book assignments that he did only three of the twelve Comics and Stories, and the resulting avalanche of protest mail convinced the powers that be that Barks should do all the ten-pagers as well as all the long one-shots.",
           "value": "script he had been given and so greatly improved the story line that from that time on, he did both the scripts and the artwork for his stories. Barks is one of the very few comic artists who did both jobs (Jack Cole of Plastic Man was another). That his material was superior was abundantly clear to his readers. During a bleak period in 1950, Barks was so laden with long book assignments that he did only three of the twelve Comics and Stories, and the resulting avalanche of protest mail convinced the powers that be that Barks should do all the ten-pagers as well as all the long one-shots.",
           "bbox": [
             {
@@ -122,7 +106,7 @@
           "type": "text"
         },
         {
-          "md": "Until 1943, Donald Duck was just a quack in Ducky Nash's larynx. From Donald's first appearance in the 1936 Silly Symphony short \"The Wise Little Hen,\" he had been loud, volatile, and irascible. He had also been, for all intents and purposes, unintelligible. When Barks took",
+          "md": "Until 1943, Donald Duck was just a quack in Ducky Nash's larynx. From Donald's first appearance in the 1936 **Silly Symphony** short \"The Wise Little Hen,\" he had been loud, volatile, and irascible. He had also been, for all intents and purposes, unintelligible. When Barks took",
           "value": "Until 1943, Donald Duck was just a quack in Ducky Nash's larynx. From Donald's first appearance in the 1936 Silly Symphony short \"The Wise Little Hen,\" he had been loud, volatile, and irascible. He had also been, for all intents and purposes, unintelligible. When Barks took",
           "bbox": [
             {

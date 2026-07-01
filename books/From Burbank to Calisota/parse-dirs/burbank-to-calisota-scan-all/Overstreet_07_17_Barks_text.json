@@ -3,8 +3,7 @@
     {
       "items": [
         {
-          "md": "Carl Barks holding a large sheet of comic book art",
-          "value": "Carl Barks holding a large sheet of comic book art",
+          "md": "![Like all comic book art, the duck stories were drawn on large size sheets such as this.](Overstreet_07_17_Barks_text_image_1.png)",
           "bbox": [
             {
               "h": 120.4,
@@ -17,11 +16,12 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "image",
+          "url": "Overstreet_07_17_Barks_text_image_1.png",
+          "caption": "Like all comic book art, the duck stories were drawn on large size sheets such as this."
         },
         {
-          "md": "Carl Barks presenting Bob Overstreet with a comic book cover",
-          "value": "Carl Barks presenting Bob Overstreet with a comic book cover",
+          "md": "![Carl Barks presenting Bob Overstreet with this year's cover.](Overstreet_07_17_Barks_text_image_2.png)",
           "bbox": [
             {
               "h": 57.88,
@@ -34,45 +34,12 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "image",
+          "url": "Overstreet_07_17_Barks_text_image_2.png",
+          "caption": "Carl Barks presenting Bob Overstreet with this year's cover."
         },
         {
-          "md": "Carl presenting Bob Overstreet with this year's cover.",
-          "value": "Carl presenting Bob Overstreet with this year's cover.",
-          "bbox": [
-            {
-              "h": 7.2,
-              "w": 64.41,
-              "x": 92.05,
-              "y": 69.6,
-              "confidence": 0.95,
-              "end_index": 53,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Like all comic book art, the duck stories were drawn on large size sheets such as this.",
-          "value": "Like all comic book art, the duck stories were drawn on large size sheets such as this.",
-          "bbox": [
-            {
-              "h": 10.32,
-              "w": 61.28,
-              "x": 9.37,
-              "y": 134.64,
-              "confidence": 0.95,
-              "end_index": 86,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Carl Barks holding a copy of \"Disneyana\" with another person",
-          "value": "Carl Barks holding a copy of \"Disneyana\" with another person",
+          "md": "![Published in 1975, \"Disneyana</em>\" gave long overdue recognition to Carl's work.](Overstreet_07_17_Barks_text_image_3.png)",
           "bbox": [
             {
               "h": 60.39,
@@ -85,28 +52,12 @@
               "start_index": 0
             }
           ],
-          "type": "text"
+          "type": "image",
+          "url": "Overstreet_07_17_Barks_text_image_3.png",
+          "caption": "Published in 1975, \"Disneyana</em>\" gave long overdue recognition to Carl's work."
         },
         {
-          "md": "Published in 1975, \"**Disneyana**\" gave long overdue recognition to Carl's work.",
-          "value": "Published in 1975, \"Disneyana\" gave long overdue recognition to Carl's work.",
-          "bbox": [
-            {
-              "h": 7.63,
-              "w": 73.3,
-              "x": 91.66,
-              "y": 148.03,
-              "confidence": 0.96,
-              "end_index": 79,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
-        },
-        {
-          "md": "Left to Right: Carl Barks, Barbara Boatner and John Stanley",
-          "value": "Left to Right: Carl Barks, Barbara Boatner and John Stanley",
+          "md": "![Left to Right: Carl, Barbara Boatner and John Stanley at the Boston Convention (1976). John, who wrote and drew the Little Lulu stories, and Carl meet for the first time.](Overstreet_07_17_Barks_text_image_4.png)",
           "bbox": [
             {
               "h": 98.48,
@@ -119,34 +70,9 @@
               "start_index": 0
             }
           ],
-          "type": "text"
-        },
-        {
-          "md": "Left to Right: Carl, Barbara Boatner and John Stanley at the Boston Convention (1976). John, who wrote and drew the Little Lulu stories, and Carl meet for the first time.",
-          "value": "Left to Right: Carl, Barbara Boatner and John Stanley at the Boston Convention (1976). John, who wrote and drew the Little Lulu stories, and Carl meet for the first time.",
-          "bbox": [
-            {
-              "h": 11.04,
-              "w": 69.94,
-              "x": 13.94,
-              "y": 259.68,
-              "confidence": 1.0,
-              "end_index": 105,
-              "label": "caption",
-              "start_index": 0
-            },
-            {
-              "h": 6.96,
-              "w": 68.01,
-              "x": 92.05,
-              "y": 260.16,
-              "confidence": 1.0,
-              "end_index": 169,
-              "label": "caption",
-              "start_index": 107
-            }
-          ],
-          "type": "text"
+          "type": "image",
+          "url": "Overstreet_07_17_Barks_text_image_4.png",
+          "caption": "Left to Right: Carl, Barbara Boatner and John Stanley at the Boston Convention (1976). John, who wrote and drew the Little Lulu stories, and Carl meet for the first time."
         },
         {
           "items": [

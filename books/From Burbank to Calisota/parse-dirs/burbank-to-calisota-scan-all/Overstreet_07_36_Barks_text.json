@@ -54,7 +54,7 @@
           "type": "text"
         },
         {
-          "md": "Barks traveled to Boston for Newcon '76, the only convention he ever attended, and saw the first two of his nonduck paintings sold at auction. One of them was King Midas Having Fun, which incorporates all the technical skill and satiric approach that characterizes Barks' feathered period. The feelings of many people",
+          "md": "Barks traveled to Boston for Newcon '76, the only convention he ever attended, and saw the first two of his nonduck paintings sold at auction. One of them was **King Midas Having Fun,** which incorporates all the technical skill and satiric approach that characterizes Barks' feathered period. The feelings of many people",
           "value": "Barks traveled to Boston for Newcon '76, the only convention he ever attended, and saw the first two of his nonduck paintings sold at auction. One of them was King Midas Having Fun, which incorporates all the technical skill and satiric approach that characterizes Barks' feathered period. The feelings of many people",
           "bbox": [
             {
@@ -88,8 +88,7 @@
           "type": "text"
         },
         {
-          "md": "Photograph of Carl Barks",
-          "value": "Photograph of Carl Barks",
+          "md": "![**For Carl, there is always another rainbow.**](Overstreet_07_36_Barks_text_image_1.png)",
           "bbox": [
             {
               "h": 113.65,
@@ -102,24 +101,9 @@
               "start_index": 0
             }
           ],
-          "type": "text"
-        },
-        {
-          "md": "**For Carl, there is always another rainbow.**",
-          "value": "For Carl, there is always another rainbow.",
-          "bbox": [
-            {
-              "h": 7.28,
-              "w": 42.95,
-              "x": 105.27,
-              "y": 165.14,
-              "confidence": 0.96,
-              "end_index": 45,
-              "label": "caption",
-              "start_index": 0
-            }
-          ],
-          "type": "text"
+          "type": "image",
+          "url": "Overstreet_07_36_Barks_text_image_1.png",
+          "caption": "For Carl, there is always another rainbow."
         },
         {
           "md": "Many people will regret that Barks can no longer paint the ducks. But the wells of myth and imagination run deep enough to afford him ample material for another 130 paintings, and Carl's own zest for exploring the world and its foibles ensures that he will not lack for inspiration. For Carl, like sourdough Scrooge, there is \"always another rainbow.\"",
