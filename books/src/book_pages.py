@@ -62,6 +62,9 @@ class BookPage:
             side.
         items: Items assigned to this side, in the original reading order.
         page_index_global: 1-based index across all book pages in all parses.
+        page_width: Page width in LlamaParse page-space points, or ``None``.
+            Carried through from the source spread so the column-detection
+            threshold can scale to the parse's coordinate space.
 
     """
 
@@ -72,6 +75,7 @@ class BookPage:
     printed_page_number: str | None
     items: list[dict]
     page_index_global: int
+    page_width: float | None = None
 
 
 def _split_printed_pages(raw: str | None) -> list[str | None]:
@@ -244,6 +248,7 @@ def split_by_side(
                 printed_page_number=printed[0] if printed else None,
                 items=unsided_items,
                 page_index_global=0,
+                page_width=record.page_width,
             )
         ]
 
@@ -268,6 +273,7 @@ def split_by_side(
                 printed_page_number=printed_left,
                 items=left_items,
                 page_index_global=0,
+                page_width=record.page_width,
             )
         )
     if right_items:
@@ -280,6 +286,7 @@ def split_by_side(
                 printed_page_number=printed_right,
                 items=right_items,
                 page_index_global=0,
+                page_width=record.page_width,
             )
         )
     return pages
@@ -347,4 +354,5 @@ def iter_book_pages(
                 printed_page_number=page.printed_page_number,
                 items=page.items,
                 page_index_global=counter,
+                page_width=page.page_width,
             )

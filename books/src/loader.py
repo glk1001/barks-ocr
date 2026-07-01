@@ -40,6 +40,9 @@ class SpreadRecord:
         printed_page_number: Raw printed-page-number string from the page
             metadata (e.g. ``"xxvi, xxvii"`` for a spread or ``"49"`` for a
             single page), or ``None``.
+        page_width: Page width in LlamaParse's page-space points
+            (``pages[0].page_width``), or ``None`` if absent. Used to scale the
+            column-detection threshold to the parse's coordinate space.
 
     """
 
@@ -48,6 +51,7 @@ class SpreadRecord:
     spread_num_global: int
     items: list[dict]
     printed_page_number: str | None
+    page_width: float | None
 
 
 def _iter_parse_json_paths(parse_dir: Path) -> list[Path]:
@@ -116,7 +120,7 @@ def _strip_reprinted_lines(item: dict) -> None:
         item[key] = "\n".join(out)
 
 
-def _load_parse_json(json_path: Path) -> tuple[list[dict], str | None]:
+def _load_parse_json(json_path: Path) -> tuple[list[dict], str | None, float | None]:
     """Load a parse JSON and extract items + printed page number.
 
     Reprint-source captions are removed: items whose first key is ``md`` with a
@@ -128,15 +132,17 @@ def _load_parse_json(json_path: Path) -> tuple[list[dict], str | None]:
         json_path: Path to the parse JSON file (one spread or one page).
 
     Returns:
-        ``(items, printed_page_number)`` where ``items`` is ``pages[0].items`` and
-        ``printed_page_number`` is ``pages[0].printed_page_number`` (or ``None``).
+        ``(items, printed_page_number, page_width)`` where ``items`` is
+        ``pages[0].items``, ``printed_page_number`` is
+        ``pages[0].printed_page_number`` (or ``None``), and ``page_width`` is
+        ``pages[0].page_width`` (or ``None``).
 
     """
     with json_path.open(encoding="utf-8") as f:
         data = json.load(f)
     pages = data.get("pages") or []
     if not pages:
-        return [], None
+        return [], None, None
     page = pages[0]
     items: list[dict] = []
     for item in page.get("items") or []:
@@ -148,7 +154,9 @@ def _load_parse_json(json_path: Path) -> tuple[list[dict], str | None]:
             # The item was nothing but a reprint clause; drop it entirely.
             continue
         items.append(item)
-    return items, page.get("printed_page_number")
+    page_width = page.get("page_width")
+    page_width = float(page_width) if isinstance(page_width, int | float) else None
+    return items, page.get("printed_page_number"), page_width
 
 
 def iter_spreads(parse_dirs: list[Path]) -> Iterator[SpreadRecord]:
@@ -176,11 +184,12 @@ def iter_spreads(parse_dirs: list[Path]) -> Iterator[SpreadRecord]:
             raise FileNotFoundError(msg)
         for json_path in json_paths:
             global_num += 1
-            items, printed = _load_parse_json(json_path)
+            items, printed, page_width = _load_parse_json(json_path)
             yield SpreadRecord(
                 parse_dir=parse_dir,
                 spread_stem=json_path.stem,
                 spread_num_global=global_num,
                 items=items,
                 printed_page_number=printed,
+                page_width=page_width,
             )

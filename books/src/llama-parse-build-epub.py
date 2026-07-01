@@ -60,6 +60,8 @@ div.chapter:first-of-type {
 p { margin: 0.5em 0; text-align: justify; }
 figure { margin: 1.5em 0 1em 0; text-align: center; }
 figure img { max-width: 90%; max-height: 80vh; height: auto; object-fit: contain; }
+figure.page-scan { margin: 0 0 1.5em 0; page-break-after: avoid; }
+figure.page-scan img { max-width: 100%; max-height: 100vh; }
 figure.side-by-side {
   display: inline-block;
   max-width: 48%;
@@ -256,12 +258,42 @@ _BLOCKQUOTE_INDENT_THRESHOLD = 15.0
 # build a reliable median baseline.
 _MIN_ITEMS_FOR_HEURISTIC = 2
 
-# Minimum forward jump in bbox-x (in page-space points) between two
-# consecutive items that signals a column boundary inside a single page. The
-# typical column gap in a two-column print layout is ~250-300pt; within-column
-# x variation (paragraph indents, hanging list bullets) sits well under 50pt,
-# so 100 is a safe fence.
+# Absolute upper bound (in page-space points) on the forward jump in bbox-x
+# between two consecutive text items that signals a column boundary inside a
+# single page. LlamaParse coordinate spaces differ by parse: a two-page spread
+# is ~840pt wide while a single-page parse can be ~170-290pt wide, so a fixed
+# threshold that fences one scale mis-fires on the other. Real column gaps sit
+# at ~0.40-0.49 of page width and within-column x variation (paragraph indents,
+# hanging bullets) stays under ~0.25, so the effective threshold is scaled to
+# page width (``_COLUMN_X_JUMP_FRACTION``) and capped here so it never exceeds
+# the value used before per-page scaling was introduced.
 _COLUMN_X_JUMP_THRESHOLD = 100.0
+
+# Fraction of page width used as the column-boundary threshold. Chosen to sit in
+# the empty band between real column gaps (>=0.35 of page width across the
+# corpus) and the largest within-column jump (<=0.25), so it separates columns
+# on narrow single-page parses without over-splitting single-column pages.
+_COLUMN_X_JUMP_FRACTION = 0.30
+
+
+def _column_jump_threshold(page_width: float | None) -> float:
+    """Return the column-boundary x-jump threshold for a page.
+
+    Scales with ``page_width`` so the fence tracks the parse's coordinate space,
+    capped at ``_COLUMN_X_JUMP_THRESHOLD`` so it never exceeds the historic
+    fixed value (keeping wide-spread parses byte-identical). Falls back to the
+    fixed value when ``page_width`` is unknown.
+
+    Args:
+        page_width: Page width in page-space points, or ``None``.
+
+    Returns:
+        The minimum forward bbox-x jump that marks a new column.
+
+    """
+    if page_width is None or page_width <= 0:
+        return _COLUMN_X_JUMP_THRESHOLD
+    return min(_COLUMN_X_JUMP_THRESHOLD, _COLUMN_X_JUMP_FRACTION * page_width)
 
 
 def _item_bbox_x(item: dict) -> float | None:
@@ -286,40 +318,40 @@ def _median(values: list[float]) -> float:
     return 0.5 * (s[mid - 1] + s[mid])
 
 
-def _split_into_columns(items: list[dict]) -> list[list[dict]]:
+def _split_into_columns(items: list[dict], page_width: float | None = None) -> list[list[dict]]:
     """Split a page's items into per-column lists in reading order.
 
     LlamaParse emits items in reading order, so a two-column page reads
     col1.top → col1.bottom → col2.top → col2.bottom. The transition is
-    detected by a forward jump in ``bbox.x`` larger than
-    ``_COLUMN_X_JUMP_THRESHOLD`` between two consecutive *text* items; once
-    observed, every subsequent item joins the new column. Only text items
-    drive the comparison because inline images can sit anywhere in a layout
-    (e.g. a CB Conversations interview body has a portrait pinned to the
-    right margin of an otherwise single-column page) and would otherwise
-    register a spurious column break. Items missing bbox info, and non-text
-    items, are appended to the current column without resetting state.
+    detected by a forward jump in ``bbox.x`` larger than the page's
+    column-jump threshold (see ``_column_jump_threshold``, which scales with
+    ``page_width``) between two consecutive *text* items; once observed, every
+    subsequent item joins the new column. Only text items drive the comparison
+    because inline images can sit anywhere in a layout (e.g. a CB Conversations
+    interview body has a portrait pinned to the right margin of an otherwise
+    single-column page) and would otherwise register a spurious column break.
+    Items missing bbox info, and non-text items, are appended to the current
+    column without resetting state.
 
     For a single-column page, returns one list containing every item.
 
     Args:
         items: Items in the page's reading order.
+        page_width: Page width in page-space points, used to scale the
+            column-jump threshold. ``None`` falls back to the fixed threshold.
 
     Returns:
         One list per column, in reading order. Always returns at least one
         list (possibly empty) so callers can index ``[0]``.
 
     """
+    threshold = _column_jump_threshold(page_width)
     columns: list[list[dict]] = [[]]
     last_text_x: float | None = None
     for item in items:
         if item.get("type") == "text":
             x = _item_bbox_x(item)
-            if (
-                x is not None
-                and last_text_x is not None
-                and x - last_text_x >= _COLUMN_X_JUMP_THRESHOLD
-            ):
+            if x is not None and last_text_x is not None and x - last_text_x >= threshold:
                 columns.append([])
             if x is not None:
                 last_text_x = x
@@ -852,7 +884,9 @@ def _apply_format_fixes(
     for page in pages:
         _link_page_footnotes(page)
 
-    pages_blocks: list[list[list[dict]]] = [_split_into_columns(p.items) for p in pages]
+    pages_blocks: list[list[list[dict]]] = [
+        _split_into_columns(p.items, p.page_width) for p in pages
+    ]
     flat_blocks: list[list[dict]] = [block for blocks in pages_blocks for block in blocks]
 
     _merge_continuation_headings(flat_blocks)
@@ -1017,6 +1051,77 @@ def _page_matches_override(page: BookPage, parse_dir: str, spread: str, side: st
     return not (side is not None and page.side != side)
 
 
+def _image_source_path(page: BookPage, item: dict) -> Path:
+    """Return the on-disk source path for an image item.
+
+    Full-page-scan items injected by ``_inject_page_scans`` carry an absolute
+    source path in ``_scan_src`` (the scan lives outside the parse dir); all
+    other image items resolve their ``url`` relative to the page's parse dir.
+
+    Args:
+        page: The book page the item belongs to.
+        item: The image item dict.
+
+    Returns:
+        The source file path to read the image bytes from.
+
+    """
+    scan_src = item.get("_scan_src")
+    if isinstance(scan_src, str):
+        return Path(scan_src)
+    return page.parse_dir / (item.get("url") or "")
+
+
+# Extensions searched (in order) for a page's full-page scan, matched against
+# the page's spread stem, e.g. ``Overstreet_07_16_Barks_text.jpg``.
+_PAGE_SCAN_EXTS = (".jpg", ".jpeg", ".png")
+
+
+def _find_page_scan(scans_dir: Path, spread_stem: str) -> Path | None:
+    """Return the full-page scan file for ``spread_stem`` in ``scans_dir``, if any."""
+    for ext in _PAGE_SCAN_EXTS:
+        candidate = scans_dir / f"{spread_stem}{ext}"
+        if candidate.is_file():
+            return candidate
+    return None
+
+
+def _inject_page_scans(pages: list[BookPage], scans_dir: Path) -> None:
+    """Prepend a full-page-scan image item to each page whose scan is found.
+
+    The book's illustrations were not extracted as ``type:image`` items by
+    LlamaParse, so this embeds the original full-page scan (matched by spread
+    stem in ``scans_dir``) at the top of each page. The synthetic item reuses
+    the normal image render/collect path but carries an absolute ``_scan_src``
+    so it resolves outside the parse dir, and ``_figure_class="page-scan"`` for
+    styling. Pages with no matching scan are logged and left unchanged.
+
+    Args:
+        pages: All book pages; their ``items`` lists are mutated in place.
+        scans_dir: Directory holding one full-page scan per page.
+
+    """
+    missing = 0
+    for page in pages:
+        scan = _find_page_scan(scans_dir, page.spread_stem)
+        if scan is None:
+            missing += 1
+            logger.warning(f"No page scan found for {page.spread_stem} in {scans_dir}")
+            continue
+        page.items.insert(
+            0,
+            {
+                "type": "image",
+                "url": scan.name,
+                "caption": "",
+                "_scan_src": str(scan.resolve()),
+                "_figure_class": "page-scan",
+            },
+        )
+    found = len(pages) - missing
+    logger.info(f"Injected {found}/{len(pages)} full-page scan(s) from {scans_dir}.")
+
+
 def _render_item_html(page: BookPage, item: dict, md_renderer: MarkdownIt) -> str:
     """Render a single LlamaParse item to an XHTML fragment.
 
@@ -1042,7 +1147,7 @@ def _render_item_html(page: BookPage, item: dict, md_renderer: MarkdownIt) -> st
         if not url:
             msg = f"There is an image without an url in {source}: '{item}'"
             raise RuntimeError(msg)
-        url_path = page.parse_dir / url
+        url_path = _image_source_path(page, item)
         if not url_path.is_file():
             msg = f'Could not find url: "{url_path}" (referenced from {source})'
             raise FileNotFoundError(msg)
@@ -1220,7 +1325,7 @@ def _build_render_blocks(section: _ChapterSection, md_renderer: MarkdownIt) -> l
     render_blocks: list[dict] = []
     for page in section.pages:
         anchor = _page_anchor_html(page) if page.printed_page_number else ""
-        columns = _split_into_columns(page.items)
+        columns = _split_into_columns(page.items, page.page_width)
         for col_idx, col_items in enumerate(columns):
             items: list[list[str]] = []
             for item in col_items:
@@ -2023,7 +2128,7 @@ def _collect_image_paths(pages: list[BookPage]) -> dict[str, Path]:
             basename = Path(url).name
             if basename in mapping:
                 continue
-            src = page.parse_dir / basename
+            src = _image_source_path(page, item)
             if not src.is_file():
                 logger.warning(f"Referenced image not found on disk: {src}")
                 continue
@@ -2209,6 +2314,46 @@ def _build_epub(  # noqa: PLR0913 - arg-per-option is reasonable for an epub bui
     logger.info(f"Wrote EPUB: {output_path}")
 
 
+def _validate_main_inputs(
+    parse_dirs: Path,
+    chapters: Path,
+    overrides: Path | None,
+    page_scans_dir: Path | None,
+) -> list[Path]:
+    """Validate CLI path inputs and return the sorted parse subdirectories.
+
+    Args:
+        parse_dirs: Parent directory of per-scan parse subdirectories.
+        chapters: Path to the chapters sidecar (must exist).
+        overrides: Optional overrides sidecar (must exist if given).
+        page_scans_dir: Optional full-page scans directory (must exist if given).
+
+    Returns:
+        The parse subdirectories under ``parse_dirs`` in sorted order.
+
+    Raises:
+        typer.Exit: If any path is missing or no parse subdirectories exist.
+
+    """
+    if not parse_dirs.is_dir():
+        logger.error(f"Not a directory: {parse_dirs}")
+        raise typer.Exit(1)
+    parse_dir_list = sorted(d for d in parse_dirs.iterdir() if d.is_dir())
+    if not parse_dir_list:
+        logger.error(f"No parse subdirectories found under: {parse_dirs}")
+        raise typer.Exit(1)
+    if not chapters.is_file():
+        logger.error(f"Chapters sidecar not found: {chapters}")
+        raise typer.Exit(1)
+    if overrides is not None and not overrides.is_file():
+        logger.error(f"Overrides sidecar not found: {overrides}")
+        raise typer.Exit(1)
+    if page_scans_dir is not None and not page_scans_dir.is_dir():
+        logger.error(f"Page scans directory not found: {page_scans_dir}")
+        raise typer.Exit(1)
+    return parse_dir_list
+
+
 @app.command()
 def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
     parse_dirs: Path = typer.Option(  # noqa: B008
@@ -2225,6 +2370,15 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
     author: str = typer.Option(..., "--author", help="Book author / editor."),
     cover: Path | None = typer.Option(  # noqa: B008
         None, "--cover", help="Optional cover image."
+    ),
+    page_scans_dir: Path | None = typer.Option(  # noqa: B008
+        None,
+        "--page-scans-dir",
+        help=(
+            "Optional directory of full-page scans (one per page, named by the "
+            "parse JSON stem). When given, each page's scan is embedded at the "
+            "top of that page."
+        ),
     ),
     output: Path | None = typer.Option(  # noqa: B008
         None,
@@ -2244,19 +2398,7 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
     ),
 ) -> None:
     """Build an EPUB3 from LlamaParse parse directories and a chapter sidecar."""
-    if not parse_dirs.is_dir():
-        logger.error(f"Not a directory: {parse_dirs}")
-        raise typer.Exit(1)
-    parse_dir_list = sorted(d for d in parse_dirs.iterdir() if d.is_dir())
-    if not parse_dir_list:
-        logger.error(f"No parse subdirectories found under: {parse_dirs}")
-        raise typer.Exit(1)
-    if not chapters.is_file():
-        logger.error(f"Chapters sidecar not found: {chapters}")
-        raise typer.Exit(1)
-    if overrides is not None and not overrides.is_file():
-        logger.error(f"Overrides sidecar not found: {overrides}")
-        raise typer.Exit(1)
+    parse_dir_list = _validate_main_inputs(parse_dirs, chapters, overrides, page_scans_dir)
 
     chapter_list = _load_chapters(chapters)
     override_list, image_override_list = _load_overrides(overrides)
@@ -2270,6 +2412,9 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
     if not pages:
         logger.error("No book pages to write.")
         raise typer.Exit(1)
+
+    if page_scans_dir is not None:
+        _inject_page_scans(pages, page_scans_dir)
 
     try:
         _apply_format_fixes(pages, override_list, image_override_list)
