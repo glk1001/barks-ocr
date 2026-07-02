@@ -11,9 +11,5 @@
 # the navigation TOC is built from the chapters below.
 
 [[chapters]]
-title = "Title Page"
-start_printed_page = "i"
-
-[[chapters]]
 title = "Carl Barks — from Burbank to Calisota"
 start_printed_page = "37"

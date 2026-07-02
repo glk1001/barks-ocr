@@ -10,6 +10,7 @@ beamsearch
 blas
 blit
 blueviolet
+boatner
 bocr
 bolditalic
 boxlayout

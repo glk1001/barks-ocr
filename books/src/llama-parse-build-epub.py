@@ -2209,6 +2209,20 @@ def _add_cover_to_spine(book: epub.EpubBook, spine: list) -> None:
     spine.insert(0, "cover")
 
 
+def _init_book(
+    identifier_stem: str, title: str, author: str, language: str, source: str | None
+) -> epub.EpubBook:
+    """Create the EPUB book and set its core Dublin Core metadata."""
+    book = epub.EpubBook()
+    book.set_identifier(f"llama-parse-{identifier_stem}")
+    book.set_title(title)
+    book.set_language(language)
+    book.add_author(author)
+    if source:
+        book.add_metadata("DC", "source", source)
+    return book
+
+
 def _build_epub(  # noqa: PLR0913 - arg-per-option is reasonable for an epub builder
     pages: list[BookPage],
     chapters_by_page: dict[int, _Chapter],
@@ -2217,6 +2231,8 @@ def _build_epub(  # noqa: PLR0913 - arg-per-option is reasonable for an epub bui
     author: str,
     language: str,
     cover_path: Path | None,
+    source: str | None = None,
+    include_nav_in_spine: bool = True,
 ) -> None:
     """Assemble and write the EPUB3.
 
@@ -2228,13 +2244,15 @@ def _build_epub(  # noqa: PLR0913 - arg-per-option is reasonable for an epub bui
         author: Book author / editor.
         language: BCP-47 language tag (e.g. ``"en"``).
         cover_path: Optional cover image path.
+        source: Optional citation of the original publication, recorded as
+            Dublin Core ``dc:source`` (useful when the EPUB is a single article
+            extracted from a larger work).
+        include_nav_in_spine: When False, the nav document is still written to
+            the manifest (required for a valid EPUB3) but omitted from the linear
+            reading order, so a single-article book has no Contents reading page.
 
     """
-    book = epub.EpubBook()
-    book.set_identifier(f"llama-parse-{output_path.stem}")
-    book.set_title(title)
-    book.set_language(language)
-    book.add_author(author)
+    book = _init_book(output_path.stem, title, author, language, source)
 
     cover_added = False
     if cover_path is not None:
@@ -2295,7 +2313,10 @@ def _build_epub(  # noqa: PLR0913 - arg-per-option is reasonable for an epub bui
         toc_entries.append(epub.Link(file_name, section.title, uid))
 
     book.toc = list(toc_entries)
-    spine: list = ["nav", *xhtml_sections]
+    # The nav document is always emitted (EPUB3 requires it in the manifest),
+    # but for a single-article book it is kept out of the linear spine so the
+    # reader opens cover -> article with no separate Contents page.
+    spine: list = [*(["nav"] if include_nav_in_spine else []), *xhtml_sections]
     if cover_added:
         _add_cover_to_spine(book, spine)
     book.spine = spine
@@ -2368,6 +2389,15 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
     ),
     title: str = typer.Option(..., "--title", help="Book title."),
     author: str = typer.Option(..., "--author", help="Book author / editor."),
+    source: str | None = typer.Option(
+        None,
+        "--source",
+        help=(
+            "Optional citation of the original publication (recorded as "
+            "dc:source), e.g. when the EPUB is a single article extracted from "
+            "a larger book."
+        ),
+    ),
     cover: Path | None = typer.Option(  # noqa: B008
         None, "--cover", help="Optional cover image."
     ),
@@ -2390,6 +2420,14 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
         False,  # noqa: FBT003
         "--keep-running-headers",
         help="Keep running page headers and standalone page-number items in body text.",
+    ),
+    no_toc: bool = typer.Option(
+        False,  # noqa: FBT003
+        "--no-toc",
+        help=(
+            "Keep the navigation document out of the linear reading order so the "
+            "book opens cover -> content with no Contents page (single-article books)."
+        ),
     ),
     overrides: Path | None = typer.Option(  # noqa: B008
         None,
@@ -2441,6 +2479,8 @@ def main(  # noqa: PLR0913 - one param per CLI flag is the natural shape here
         author=author,
         language=language,
         cover_path=cover,
+        source=source,
+        include_nav_in_spine=not no_toc,
     )
 
 
