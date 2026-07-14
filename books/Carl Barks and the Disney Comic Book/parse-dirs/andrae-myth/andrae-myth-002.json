@@ -1,0 +1,202 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Illustration of Donald Duck and Uncle Scrooge",
+          "value": "Illustration of Donald Duck and Uncle Scrooge",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "[www.upress.state.ms.us](http://www.upress.state.ms.us)",
+          "text": "www.upress.state.ms.us",
+          "url": "http://www.upress.state.ms.us",
+          "bbox": null,
+          "type": "link"
+        },
+        {
+          "md": "The University Press of Mississippi is a member of the\nAssociation of American University Presses.",
+          "value": "The University Press of Mississippi is a member of the\nAssociation of American University Presses.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Illustrations courtesy of the collection of\nThomas Andrae unless otherwise noted",
+          "value": "Illustrations courtesy of the collection of\nThomas Andrae unless otherwise noted",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Information on Carl Barks's animation work appearing in \"The\nDuck Man\" was previously published in *Animation Journal*\n(Spring 1997).",
+          "value": "Information on Carl Barks's animation work appearing in \"The\nDuck Man\" was previously published in Animation Journal\n(Spring 1997).",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Copyright © 2006 by University Press of Mississippi\nAll rights reserved\nManufactured in the United States of America",
+          "value": "Copyright © 2006 by University Press of Mississippi\nAll rights reserved\nManufactured in the United States of America",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "First Edition 2006",
+          "value": "First Edition 2006",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "∞",
+          "value": "∞",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Library of Congress Cataloging-in-Publication Data",
+          "value": "Library of Congress Cataloging-in-Publication Data",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Andrae, Thomas.",
+          "value": "Andrae, Thomas.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Carl Barks and the Disney comic book : unmasking the myth\nof modernity / Thomas Andrae.— 1st ed.",
+          "value": "Carl Barks and the Disney comic book : unmasking the myth\nof modernity / Thomas Andrae.— 1st ed.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "p. cm.",
+          "value": "p. cm.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Includes bibliographical references and index.",
+          "value": "Includes bibliographical references and index.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "ISBN 1-57806-857-6 (cloth : alk. paper) —",
+          "value": "ISBN 1-57806-857-6 (cloth : alk. paper) —",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "ISBN 1-57806-858-4 (pbk. : alk. paper) 1. Barks, Carl, 1901— —\nCriticism and interpretation. I. Title.",
+          "value": "ISBN 1-57806-858-4 (pbk. : alk. paper) 1. Barks, Carl, 1901— —\nCriticism and interpretation. I. Title.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "PN6727.B35Z53 2006",
+          "value": "PN6727.B35Z53 2006",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "741.5092—dc22 2006001963",
+          "value": "741.5092—dc22 2006001963",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "British Library Cataloging-in-Publication Data available",
+          "value": "British Library Cataloging-in-Publication Data available",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# CONTENTS",
+          "value": "CONTENTS",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "Acknowledgments VII\nList of Abbreviations IX",
+          "value": "Acknowledgments VII\nList of Abbreviations IX",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "REREADING DONALD DUCK 3",
+              "value": "REREADING DONALD DUCK 3",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "THE DUCK MAN 31",
+              "value": "THE DUCK MAN 31",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "FROM BURBANK TO DUCKBURG 61",
+              "value": "FROM BURBANK TO DUCKBURG 61",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "AMERICAN GOTHIC 109",
+              "value": "AMERICAN GOTHIC 109",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "THE GARDEN IN THE MACHINE 157",
+              "value": "THE GARDEN IN THE MACHINE 157",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "RESURRECTING THE SELF-MADE MAN 187",
+              "value": "RESURRECTING THE SELF-MADE MAN 187",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "THE POSTMODERN CRACK-UP 228",
+              "value": "THE POSTMODERN CRACK-UP 228",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "1. REREADING DONALD DUCK 3\n\n2. THE DUCK MAN 31\n\n3. FROM BURBANK TO DUCKBURG 61\n\n4. AMERICAN GOTHIC 109\n\n5. THE GARDEN IN THE MACHINE 157\n\n6. RESURRECTING THE SELF-MADE MAN 187\n\n7. THE POSTMODERN CRACK-UP 228",
+          "ordered": true,
+          "bbox": null,
+          "type": "list"
+        },
+        {
+          "md": "A Carl Barks Filmography 279",
+          "value": "A Carl Barks Filmography 279",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Notes 283",
+          "value": "Notes 283",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Index 303",
+          "value": "Index 303",
+          "bbox": null,
+          "type": "text"
+        }
+      ],
+      "page_height": 1190.4,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true
+    }
+  ]
+}

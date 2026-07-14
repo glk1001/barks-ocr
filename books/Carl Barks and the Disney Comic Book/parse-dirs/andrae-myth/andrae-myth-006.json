@@ -1,0 +1,51 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Illustration of an older man with glasses and a hearing aid, and a stylized number 1 icon",
+          "value": "Illustration of an older man with glasses and a hearing aid, and a stylized number 1 icon",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# REREADING DONALD DUCK",
+          "value": "REREADING DONALD DUCK",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "**B**efore television, rock music, and video games, comic books were the mainstay of children's entertainment in America. Their ten-cent price and massive print runs made them a near universal experience of children who grew up from the Great Depression through the baby boom years. Printed on pulp stock sandwiched between slick paper covers, comics epitomized the junk aesthetic of mass-produced culture and were never intended to survive more than several readings. To think of them as worthy of being saved, let alone collected for their artistry and monetary value, would have seemed ridiculous to adults who threw them away by the thousands during paper drives and fits of house cleaning. Yet the children who read them saved and collected them, treating them as rare treasures that gave voice to their experiences and longings like nothing else in the culture.",
+          "value": "Before television, rock music, and video games, comic books were the mainstay of children's entertainment in America. Their ten-cent price and massive print runs made them a near universal experience of children who grew up from the Great Depression through the baby boom years. Printed on pulp stock sandwiched between slick paper covers, comics epitomized the junk aesthetic of mass-produced culture and were never intended to survive more than several readings. To think of them as worthy of being saved, let alone collected for their artistry and monetary value, would have seemed ridiculous to adults who threw them away by the thousands during paper drives and fits of house cleaning. Yet the children who read them saved and collected them, treating them as rare treasures that gave voice to their experiences and longings like nothing else in the culture.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Since the 1960s, a revolution in taste has occurred. Comic books, like other pop cultural ephemera, have become highly priced collector's items in a booming nostalgia market. However, comics are valued for more than sentimental reasons or monetary value. They are now celebrated as works of art, and an audience of aficionados has enshrined a pantheon of artists as the medium's greatest auteurs. Chief among these is Carl Barks,",
+          "value": "Since the 1960s, a revolution in taste has occurred. Comic books, like other pop cultural ephemera, have become highly priced collector's items in a booming nostalgia market. However, comics are valued for more than sentimental reasons or monetary value. They are now celebrated as works of art, and an audience of aficionados has enshrined a pantheon of artists as the medium's greatest auteurs. Chief among these is Carl Barks,",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "\\<page_number>3\\</page_number>",
+              "value": "<page_number>3</page_number>",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "<page_number>3</page_number>",
+          "bbox": null,
+          "type": "footer"
+        }
+      ],
+      "page_height": 1190.4,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "3"
+    }
+  ]
+}

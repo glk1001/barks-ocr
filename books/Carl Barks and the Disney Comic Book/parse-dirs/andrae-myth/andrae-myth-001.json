@@ -1,0 +1,64 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Illustration of Carl Barks wearing glasses and a hearing aid",
+          "value": "Illustration of Carl Barks wearing glasses and a hearing aid",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# CARL BARKS",
+          "value": "CARL BARKS",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# AND THE DISNEY",
+          "value": "AND THE DISNEY",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# COMIC BOOK",
+          "value": "COMIC BOOK",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "UNMASKING THE MYTH OF MODERNITY",
+          "value": "UNMASKING THE MYTH OF MODERNITY",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "THOMAS\nANDRAE",
+          "value": "THOMAS\nANDRAE",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "UNIVERSITY PRESS OF MISSISSIPPI / JACKSON",
+              "value": "UNIVERSITY PRESS OF MISSISSIPPI / JACKSON",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "UNIVERSITY PRESS OF MISSISSIPPI / JACKSON",
+          "bbox": null,
+          "type": "footer"
+        }
+      ],
+      "page_height": 1190.4,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true
+    }
+  ]
+}

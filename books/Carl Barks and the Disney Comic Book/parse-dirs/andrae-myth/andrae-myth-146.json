@@ -1,0 +1,334 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# A CARL BARKS FILMOGRAPHY",
+          "value": "A CARL BARKS FILMOGRAPHY",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "Donald's Golf Game. November 4, 1938. SD.",
+          "value": "Donald's Golf Game. November 4, 1938. SD.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Donald's Lucky Day. January 13, 1939.\\*",
+          "value": "Donald's Lucky Day. January 13, 1939.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The Hockey Champ. April 28, 1939. SD.\\*",
+          "value": "The Hockey Champ. April 28, 1939. SD.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Donald's Cousin Gus. May 19, 1939. SD.\\*",
+          "value": "Donald's Cousin Gus. May 19, 1939. SD.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Sea Scouts. June 30, 1939. SD. Directed by Dick Lundy.\\*",
+          "value": "Sea Scouts. June 30, 1939. SD. Directed by Dick Lundy.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Donald's Penguin. August 11, 1939. SD.",
+          "value": "Donald's Penguin. August 11, 1939. SD.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The Autograph Hound. September 1, 1939. SC.",
+          "value": "The Autograph Hound. September 1, 1939. SC.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Mr. Duck Steps Out. June 7, 1940. SD.",
+          "value": "Mr. Duck Steps Out. June 7, 1940. SD.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Put-Put Troubles. June 19, 1940. Directed by Riley Thompson.",
+          "value": "Put-Put Troubles. June 19, 1940. Directed by Riley Thompson.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Bone Trouble (Pluto). June 28, 1940. Directed by Jack Kinney.",
+          "value": "Bone Trouble (Pluto). June 28, 1940. Directed by Jack Kinney.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Donald's Vacation. August 9, 1940.",
+          "value": "Donald's Vacation. August 9, 1940.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Window Cleaners. September 20, 1940. SC.\\*",
+          "value": "Window Cleaners. September 20, 1940. SC.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Fire Chief. December 13, 1940.\\*",
+          "value": "Fire Chief. December 13, 1940.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Timber. January 10, 1941. SD.\\*",
+          "value": "Timber. January 10, 1941. SD.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The Golden Eggs. March 7, 1941. SC. Directed by Wilfred Jackson.",
+          "value": "The Golden Eggs. March 7, 1941. SC. Directed by Wilfred Jackson.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Early to Bed. July 11, 1941. SC.\\*",
+          "value": "Early to Bed. July 11, 1941. SC.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Truant Officer Donald. August 1, 1941. SC.\\*",
+          "value": "Truant Officer Donald. August 1, 1941. SC.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Old McDonald Duck. September 12, 1941. SD.\\*",
+          "value": "Old McDonald Duck. September 12, 1941. SD.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Chef Donald. December 5, 1941. SD.\\*",
+          "value": "Chef Donald. December 5, 1941. SD.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The Village Smithy. January 16, 1942. Directed by Dick Lundy.",
+          "value": "The Village Smithy. January 16, 1942. Directed by Dick Lundy.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Donald's Snow Fight. April 10, 1942. SD.\\*",
+          "value": "Donald's Snow Fight. April 10, 1942. SD.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Donald Gets Drafted. May 1, 1942. SD.",
+          "value": "Donald Gets Drafted. May 1, 1942. SD.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The Army Mascot (Pluto). May 22, 1942. Directed by Clyde Geronomi.",
+          "value": "The Army Mascot (Pluto). May 22, 1942. Directed by Clyde Geronomi.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The Vanishing Private. September 25, 1942. SD.\\*",
+          "value": "The Vanishing Private. September 25, 1942. SD.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Sky Trooper. November 6, 1942.",
+          "value": "Sky Trooper. November 6, 1942.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Bellboy Donald. December 18, 1942.\\*",
+          "value": "Bellboy Donald. December 18, 1942.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The Old Army Game. November 5, 1943. SC.\\*",
+          "value": "The Old Army Game. November 5, 1943. SC.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Home Defense. November 26, 1943.\\*",
+          "value": "Home Defense. November 26, 1943.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Trombone Trouble. February 18, 1944. SD.\\*",
+          "value": "Trombone Trouble. February 18, 1944. SD.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The Plastics Inventor. September 1944.",
+          "value": "The Plastics Inventor. September 1944.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Barks also worked on other cartoons that were never produced, including the following:",
+          "value": "Barks also worked on other cartoons that were never produced, including the following:",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The Love Nest. February 1936.",
+          "value": "The Love Nest. February 1936.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Timid Elmer. c. 1936.",
+          "value": "Timid Elmer. c. 1936.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Northwest Mounted. 1936.\\*",
+          "value": "Northwest Mounted. 1936.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Nightwatchman Donald. August 1937.\\*",
+          "value": "Nightwatchman Donald. August 1937.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Interior Decorators. October 1937.\\*",
+          "value": "Interior Decorators. October 1937.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Yukon Mickey (Yukon Donald). February 1938.\\*",
+          "value": "Yukon Mickey (Yukon Donald). February 1938.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Lost Prospectors. March 1938.\\*",
+          "value": "Lost Prospectors. March 1938.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Donald Munchausen. April 1938.",
+          "value": "Donald Munchausen. April 1938.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# A CARL BARKS FILMOGRAPHY",
+          "value": "A CARL BARKS FILMOGRAPHY",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "Tanglefoot. May 1938.",
+          "value": "Tanglefoot. May 1938.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Donald's Shooting Gallery. June 1938.",
+          "value": "Donald's Shooting Gallery. June 1938.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The Rubber Hunter. c. 1938.\\*",
+          "value": "The Rubber Hunter. c. 1938.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Donald's Balloon. August 1938.",
+          "value": "Donald's Balloon. August 1938.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The Beaver Hunters. May 1939.\\*",
+          "value": "The Beaver Hunters. May 1939.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Traveling Salesman Donald. c. 1940.\\*",
+          "value": "Traveling Salesman Donald. c. 1940.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Sculptor Donald. c. 1941.",
+          "value": "Sculptor Donald. c. 1941.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Madame XX. 1942.\\*",
+          "value": "Madame XX. 1942.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Donald's Tank. 1942.\\*",
+          "value": "Donald's Tank. 1942.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "For a description of these cartoons, see Thomas Andrae, \"A Carl Barks Filmography,\" Carl Barks Library of Walt Disney Comics and Stories in Color (Prescott, Ariz.: Another Rainbow, 1996), 51: 13-15.",
+          "value": "For a description of these cartoons, see Thomas Andrae, \"A Carl Barks Filmography,\" Carl Barks Library of Walt Disney Comics and Stories in Color (Prescott, Ariz.: Another Rainbow, 1996), 51: 13-15.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "\\<page_number>280\\</page_number>\n\\<page_number>281\\</page_number>",
+              "value": "<page_number>280</page_number>\n<page_number>281</page_number>",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "<page_number>280</page_number>\n<page_number>281</page_number>",
+          "bbox": null,
+          "type": "footer"
+        }
+      ],
+      "page_height": 1190.4,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "280, 281"
+    }
+  ]
+}

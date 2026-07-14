@@ -1,0 +1,64 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# THE DUCK MAN",
+          "value": "THE DUCK MAN",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "comic book work: \"I took a big gamble,\" he recalled. \"I hoped that I could get on with Western Publishing doing these familiar ducks. Otherwise, I was going to be stuck with having to develop something myself and see if I could sell it\" to a publisher.<sup>76</sup> But before he could start working on his own strips, Western asked him to illustrate a ten-page Donald Duck story for *Walt Disney's Comics and Stories* (#31 [April 1943]). Western would keep him busy writing and drawing the Disney ducks for the next twenty-four years and even into his retirement. However, his work in animation proved to be an invaluable source of inspiration, suggesting gags, characters, and plot lines for years to come.",
+          "value": "comic book work: \"I took a big gamble,\" he recalled. \"I hoped that I could get on with Western Publishing doing these familiar ducks. Otherwise, I was going to be stuck with having to develop something myself and see if I could sell it\" to a publisher.<sup>76</sup> But before he could start working on his own strips, Western asked him to illustrate a ten-page Donald Duck story for Walt Disney's Comics and Stories (#31 [April 1943]). Western would keep him busy writing and drawing the Disney ducks for the next twenty-four years and even into his retirement. However, his work in animation proved to be an invaluable source of inspiration, suggesting gags, characters, and plot lines for years to come.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Chapter 3 icon\nIllustration of a man with glasses and a large nose",
+          "value": "Chapter 3 icon\nIllustration of a man with glasses and a large nose",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# FROM BURBANK TO DUCKBURG",
+          "value": "FROM BURBANK TO DUCKBURG",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "The creation of Donald Duck is tied to the man who would be his voice for more than fifty years, Clarence \"Ducky\" Nash. Nash had been a well-known entertainer on the Chautauqua circuit (traveling tent show), playing a mandolin and performing animal and bird imitations. His specialty was an imitation of a baby goat reciting \"Mary Had a Little Lamb.\" Nash had heard that Disney was looking for people to do animal sounds for his cartoons. One day, on his way to work, Nash stopped at the Disney Studio on an impulse and was interviewed by animation director Wilfred Jackson. In the middle of Nash's recitation of his baby goat imitation, Jackson secretly switched on the intercom to Disney's office, and Walt came down. Disney had already heard Nash perform on the radio and was interested in auditioning him. After Nash finished, he quacked like a duck. Walt looked at Jackson and said, \"That's our talking duck! That's the voice we've been looking for!\" A star was born.<sup>1</sup>",
+          "value": "The creation of Donald Duck is tied to the man who would be his voice for more than fifty years, Clarence \"Ducky\" Nash. Nash had been a well-known entertainer on the Chautauqua circuit (traveling tent show), playing a mandolin and performing animal and bird imitations. His specialty was an imitation of a baby goat reciting \"Mary Had a Little Lamb.\" Nash had heard that Disney was looking for people to do animal sounds for his cartoons. One day, on his way to work, Nash stopped at the Disney Studio on an impulse and was interviewed by animation director Wilfred Jackson. In the middle of Nash's recitation of his baby goat imitation, Jackson secretly switched on the intercom to Disney's office, and Walt came down. Disney had already heard Nash perform on the radio and was interested in auditioning him. After Nash finished, he quacked like a duck. Walt looked at Jackson and said, \"That's our talking duck! That's the voice we've been looking for!\" A star was born.<sup>1</sup>",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "According to Nash, Disney invented important aspects of Donald's personality, such as his volatile temper and infectious laugh. It was also \"Disney's idea to have Donald dressed up in a sailor suit,\" Nash claimed, because \"Donald is a duck and ducks are associated with water. Therefore it seemed only natural to have Donald dressed as a sailor.\" Disney also",
+          "value": "According to Nash, Disney invented important aspects of Donald's personality, such as his volatile temper and infectious laugh. It was also \"Disney's idea to have Donald dressed up in a sailor suit,\" Nash claimed, because \"Donald is a duck and ducks are associated with water. Therefore it seemed only natural to have Donald dressed as a sailor.\" Disney also",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "\\<page_number>60\\</page_number>\n\\<page_number>61\\</page_number>",
+              "value": "<page_number>60</page_number>\n<page_number>61</page_number>",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "<page_number>60</page_number>\n<page_number>61</page_number>",
+          "bbox": null,
+          "type": "footer"
+        }
+      ],
+      "page_height": 1190.4,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "60, 61"
+    }
+  ]
+}

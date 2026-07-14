@@ -1,0 +1,51 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Book cover illustration featuring a caricature of Carl Barks with glasses and a hearing aid against a blue background with faint sketches of Disney characters.",
+          "value": "Book cover illustration featuring a caricature of Carl Barks with glasses and a hearing aid against a blue background with faint sketches of Disney characters.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# CARL BARKS",
+          "value": "CARL BARKS",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "level": 2,
+          "md": "## AND THE DISNEY",
+          "value": "AND THE DISNEY",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "level": 1,
+          "md": "# COMIC BOOK",
+          "value": "COMIC BOOK",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "UNMASKING THE MYTH OF MODERNITY",
+          "value": "UNMASKING THE MYTH OF MODERNITY",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "**THOMAS**\n**ANDRAE**",
+          "value": "THOMAS\nANDRAE",
+          "bbox": null,
+          "type": "text"
+        }
+      ],
+      "page_height": 841.68,
+      "page_number": 1,
+      "page_width": 595.2,
+      "success": true
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+# Carl Barks and the Disney Comic Book (Thomas Andrae, 2006) — chapter sidecar.
+# Each chapter must specify exactly one anchor:
+#   * 'start_printed_page' — must match a printed page number detected on a
+#     spread (a spread's detected value may be e.g. "30, 31"; the anchor matches
+#     either comma-separated part).
+# The seven body chapters are numbered 1-7 in the printed book (confirmed by the
+# chapter-number icons on their opening pages and the Notes section headings).
+
+[[chapters]]
+title = "Acknowledgments"
+start_printed_page = "VII"
+
+[[chapters]]
+title = "Abbreviations"
+start_printed_page = "VIII"
+
+[[chapters]]
+title = "1. Rereading Donald Duck"
+start_printed_page = "3"
+
+[[chapters]]
+title = "2. The Duck Man"
+start_printed_page = "31"
+
+[[chapters]]
+title = "3. From Burbank to Duckburg"
+start_printed_page = "61"
+
+[[chapters]]
+title = "4. American Gothic"
+start_printed_page = "111"
+
+[[chapters]]
+title = "5. The Garden in the Machine"
+start_printed_page = "157"
+
+[[chapters]]
+title = "6. Resurrecting the Self-Made Man"
+start_printed_page = "187"
+
+[[chapters]]
+title = "7. The Postmodern Crack-Up"
+start_printed_page = "229"
+
+[[chapters]]
+title = "A Carl Barks Filmography"
+start_printed_page = "279"
+
+[[chapters]]
+title = "Notes"
+start_printed_page = "283"
+
+[[chapters]]
+title = "Index"
+start_printed_page = "303"

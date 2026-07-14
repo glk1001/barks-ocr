@@ -1,0 +1,102 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Top half of the image showing a dark scanner background",
+          "value": "Top half of the image showing a dark scanner background",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# ACKNOWLEDGMENTS",
+          "value": "ACKNOWLEDGMENTS",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "to Dana Gabbard; to David Gerstein; to Peter Kylling; to All Star Auctions; to Ellen D. Goldlust-Gingrich; and last but not least to my wife, Robin, for putting up with an author who was as obsessive in his scholarship as Uncle Scrooge in hoarding wealth.",
+          "value": "to Dana Gabbard; to David Gerstein; to Peter Kylling; to All Star Auctions; to Ellen D. Goldlust-Gingrich; and last but not least to my wife, Robin, for putting up with an author who was as obsessive in his scholarship as Uncle Scrooge in hoarding wealth.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# ABBREVIATIONS",
+          "value": "ABBREVIATIONS",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "items": [
+            {
+              "md": "**DD** Donald Duck",
+              "value": "DD Donald Duck",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "**FC** Four Color",
+              "value": "FC Four Color",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "**GG** Gyro Gearloose",
+              "value": "GG Gyro Gearloose",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "*JW* Huey, Dewey, and Louie Junior Woodchucks",
+              "value": "JW Huey, Dewey, and Louie Junior Woodchucks",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "*MOC* Boys' and Girls' March of Comics",
+              "value": "MOC Boys' and Girls' March of Comics",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "*US* Uncle Scrooge",
+              "value": "US Uncle Scrooge",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "*WDC&S* Walt Disney's Comics and Stories",
+              "value": "WDC&S Walt Disney's Comics and Stories",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "* **DD** Donald Duck\n* **FC** Four Color\n* **GG** Gyro Gearloose\n* *JW* Huey, Dewey, and Louie Junior Woodchucks\n* *MOC* Boys' and Girls' March of Comics\n* *US* Uncle Scrooge\n* *WDC&S* Walt Disney's Comics and Stories",
+          "ordered": false,
+          "bbox": null,
+          "type": "list"
+        },
+        {
+          "items": [
+            {
+              "md": "\\<page_number>VIII\\</page_number>\n\\<page_number>IX\\</page_number>",
+              "value": "<page_number>VIII</page_number>\n<page_number>IX</page_number>",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "<page_number>VIII</page_number>\n<page_number>IX</page_number>",
+          "bbox": null,
+          "type": "footer"
+        }
+      ],
+      "page_height": 1190.4,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "VIII, IX"
+    }
+  ]
+}

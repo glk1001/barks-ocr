@@ -1,8 +1,9 @@
+
 # cspell word list — project-specific words
 # One word per line. Case-insensitive.
-
 acked
 acks
+andrae
 arctan
 autojunk
 barksian
@@ -23,15 +24,15 @@ colorfmt
 coords
 crooge
 csvfile
+denoise
+denoising
 deskew
 deskewed
 deskewing
 dirname
+dismissable
 divid
 divis
-denoise
-denoising
-dismissable
 dotenv
 easyocr
 entr

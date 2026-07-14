@@ -1,0 +1,81 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Full page illustration",
+          "value": "Full page illustration",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Barks submitted this drawing of Snow White and the Seven Dwarfs to obtain his first job at the Disney Studio (1935).",
+          "value": "Barks submitted this drawing of Snow White and the Seven Dwarfs to obtain his first job at the Disney Studio (1935).",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Barks submitted this drawing of Snow White and the Seven Dwarfs to obtain his first job at the Disney Studio (1935). © Disney Enterprises, Inc.",
+          "value": "Barks submitted this drawing of Snow White and the Seven Dwarfs to obtain his first job at the Disney Studio (1935). © Disney Enterprises, Inc.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "A storyboard drawing featuring Donald Duck and his nephews from Truant Officer Donald (1941).",
+          "value": "A storyboard drawing featuring Donald Duck and his nephews from Truant Officer Donald (1941).",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "A storyboard drawing featuring Donald Duck and his nephews from *Truant Officer Donald* (1941). © Disney Enterprises, Inc.",
+          "value": "A storyboard drawing featuring Donald Duck and his nephews from Truant Officer Donald (1941). © Disney Enterprises, Inc.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 3,
+          "md": "### AMERICAN GOTHIC",
+          "value": "AMERICAN GOTHIC",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "emperor of North America, Donald and the boys race to the coast of Labrador.",
+          "value": "emperor of North America, Donald and the boys race to the coast of Labrador.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Barks is clearly ambivalent about the Vikings and the myth of heroic adventure that they represent. On the one hand, the story implies that they are admirable figures, and Donald becomes a contemporary embodiment of their self-sufficiency, ruggedness, and daring seamanship. After having his boat stolen by Azure, he must sail exactly like his heroes, sighting the stars rather than depending on compasses and modern navigational equipment. On the other hand, the historic Vikings were also rapacious raiders and bloodthirsty conquerors who pillaged and violently conquered other lands. Azure Blue, who claims to be their descendant, embodies the psychology of conquest they represent. But Azure is an unworthy relation. While the Vikings depended on superior fighting and navigational skills to conquer their victims, he uses knavery and the law. Coming from an acrimonious divorce in which he had lost everything, Barks was quite bitter toward lawyers. In \"The Golden Helmet,\" lawyers manipulate the law for the advantage of the powerful and, as Sharkey's name implies, are amoral shysters. As in many Barks stories, the law is shown to be impotent in protecting people from oppression. The museum curator tells Donald that Azure is operating within the law and that they can stop him only by beating him to the helmet.",
+          "value": "Barks is clearly ambivalent about the Vikings and the myth of heroic adventure that they represent. On the one hand, the story implies that they are admirable figures, and Donald becomes a contemporary embodiment of their self-sufficiency, ruggedness, and daring seamanship. After having his boat stolen by Azure, he must sail exactly like his heroes, sighting the stars rather than depending on compasses and modern navigational equipment. On the other hand, the historic Vikings were also rapacious raiders and bloodthirsty conquerors who pillaged and violently conquered other lands. Azure Blue, who claims to be their descendant, embodies the psychology of conquest they represent. But Azure is an unworthy relation. While the Vikings depended on superior fighting and navigational skills to conquer their victims, he uses knavery and the law. Coming from an acrimonious divorce in which he had lost everything, Barks was quite bitter toward lawyers. In \"The Golden Helmet,\" lawyers manipulate the law for the advantage of the powerful and, as Sharkey's name implies, are amoral shysters. As in many Barks stories, the law is shown to be impotent in protecting people from oppression. The museum curator tells Donald that Azure is operating within the law and that they can stop him only by beating him to the helmet.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "However, the story also contains a deeper satire that critiques the ideology of private ownership. According to the Code of Discovery, which justifies Azure's ownership of the continent, \"Any man who discovers a new land beyond the seas shall be the owner of that land unless he claims it for his king.\" According to this \"law,\" mere occupation of a piece of territory grants exclusive rights of ownership to its \"discoverer.\" Barks's fictional law replicates the real-life assertions of ownership of the lands of the New World by European explorers such as Columbus and Drake. \"The Golden Helmet\" shows the arbitrary nature of such territorial claims. In hindsight we are aware that the discovery and ownership of the New World is a Eurocentric conceit. The indigenous peoples of the New World were clearly the \"owners\" of its lands and wealth and were already members of a thriving civilization before European explorers arrived. Barks",
+          "value": "However, the story also contains a deeper satire that critiques the ideology of private ownership. According to the Code of Discovery, which justifies Azure's ownership of the continent, \"Any man who discovers a new land beyond the seas shall be the owner of that land unless he claims it for his king.\" According to this \"law,\" mere occupation of a piece of territory grants exclusive rights of ownership to its \"discoverer.\" Barks's fictional law replicates the real-life assertions of ownership of the lands of the New World by European explorers such as Columbus and Drake. \"The Golden Helmet\" shows the arbitrary nature of such territorial claims. In hindsight we are aware that the discovery and ownership of the New World is a Eurocentric conceit. The indigenous peoples of the New World were clearly the \"owners\" of its lands and wealth and were already members of a thriving civilization before European explorers arrived. Barks",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "\\<page_number>151\\</page_number>",
+              "value": "<page_number>151</page_number>",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "<page_number>151</page_number>",
+          "bbox": null,
+          "type": "footer"
+        }
+      ],
+      "page_height": 1190.4,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "151"
+    }
+  ]
+}

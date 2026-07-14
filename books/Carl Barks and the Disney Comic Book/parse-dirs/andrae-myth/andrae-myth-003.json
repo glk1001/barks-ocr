@@ -1,0 +1,45 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# ACKNOWLEDGMENTS",
+          "value": "ACKNOWLEDGMENTS",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "Writing a book involves the aid of many people, and this volume is no exception. First, I would like to express my gratitude to the late Carl Barks for his great patience and generosity in answering a plethora of questions over many years and for creating the stories that have meant so much to me and millions of others. I also owe a debt of gratitude to David Smith and the Walt Disney Archives for invaluable assistance in hunting down rare Barks art and to the late Bruce Hamilton, my former publisher at Another Rainbow, for giving me the chance to write about and research Barks's work.",
+          "value": "Writing a book involves the aid of many people, and this volume is no exception. First, I would like to express my gratitude to the late Carl Barks for his great patience and generosity in answering a plethora of questions over many years and for creating the stories that have meant so much to me and millions of others. I also owe a debt of gratitude to David Smith and the Walt Disney Archives for invaluable assistance in hunting down rare Barks art and to the late Bruce Hamilton, my former publisher at Another Rainbow, for giving me the chance to write about and research Barks's work.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Thanks also to my editor at the University Press of Mississippi, Seetha Srinivasan, for having confidence in this project through its many years of gestation; to David Kunzle, for his invaluable feedback and cogent editing suggestions as reader of my manuscript; to Geoffrey Blum, who cowrote with me some of the material on which this book is based; to Donald Ault, for interview material; to Mark Evanier, for important information about Chase Craig and Western Publishing; to Mary E. Whitney and Dr. Peter Demyan, for information about William F. Whittier and the towns of Hemet and San Jacinto; to Robert Norman and Andrew Hastings, for their wonderful photographs; to Rory Root and Comic Relief in Berkeley;",
+          "value": "Thanks also to my editor at the University Press of Mississippi, Seetha Srinivasan, for having confidence in this project through its many years of gestation; to David Kunzle, for his invaluable feedback and cogent editing suggestions as reader of my manuscript; to Geoffrey Blum, who cowrote with me some of the material on which this book is based; to Donald Ault, for interview material; to Mark Evanier, for important information about Chase Craig and Western Publishing; to Mary E. Whitney and Dr. Peter Demyan, for information about William F. Whittier and the towns of Hemet and San Jacinto; to Robert Norman and Andrew Hastings, for their wonderful photographs; to Rory Root and Comic Relief in Berkeley;",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "\\<page_number>VII\\</page_number>",
+              "value": "<page_number>VII</page_number>",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "<page_number>VII</page_number>",
+          "bbox": null,
+          "type": "footer"
+        }
+      ],
+      "page_height": 1190.4,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "VII"
+    }
+  ]
+}

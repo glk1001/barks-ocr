@@ -1,0 +1,70 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Top half of the book spread is blank/dark",
+          "value": "Top half of the book spread is blank/dark",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## THE POSTMODERN CRACK-UP",
+          "value": "THE POSTMODERN CRACK-UP",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "inextricably linked to the politics of his time and offer one of the most trenchant critiques of patriarchal capitalism in any popular media. They trace the history of our culture's will to power that goes back five thousand years to the origins of civilization through the era of European colonization and the hegemony of the West to the postmodern society of the present. They call into question the tentacle-like homogenization of both the Third World and the United States by consumerism and global capitalism.",
+          "value": "inextricably linked to the politics of his time and offer one of the most trenchant critiques of patriarchal capitalism in any popular media. They trace the history of our culture's will to power that goes back five thousand years to the origins of civilization through the era of European colonization and the hegemony of the West to the postmodern society of the present. They call into question the tentacle-like homogenization of both the Third World and the United States by consumerism and global capitalism.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "The depth of this critique has led some authors to claim that Barks's vision is primarily nihilistic, a \"disenchanted utopia\" that offers no solution to the negativity his stories inscribe.<sup>81</sup> This judgment is too simplistic. Although Barks dissuades us from believing in either a bucolic Golden Age or a modern technological utopia, his narratives have an important utopian subtext. They are characterized by what I have called an ethic of balance. As a curb on the quest for unlimited material accumulation, growth, and progress promoted by the culture of western modernity, they offer one of the few visions of communal and ecologically sustainable societies in the popular media as well as an ethic of nonviolence that satirizes the deleterious consequences of masculine aggression, competition, and war. Having grown up in the rural hinterlands before the full onslaught of urbanization, technological proliferation, and monopoly capitalism, Barks invested his stories with a morality of humility, moderation, tolerance, and compassion as an antidote to the domination of humanity and nature of the present paradigm.",
+          "value": "The depth of this critique has led some authors to claim that Barks's vision is primarily nihilistic, a \"disenchanted utopia\" that offers no solution to the negativity his stories inscribe.<sup>81</sup> This judgment is too simplistic. Although Barks dissuades us from believing in either a bucolic Golden Age or a modern technological utopia, his narratives have an important utopian subtext. They are characterized by what I have called an ethic of balance. As a curb on the quest for unlimited material accumulation, growth, and progress promoted by the culture of western modernity, they offer one of the few visions of communal and ecologically sustainable societies in the popular media as well as an ethic of nonviolence that satirizes the deleterious consequences of masculine aggression, competition, and war. Having grown up in the rural hinterlands before the full onslaught of urbanization, technological proliferation, and monopoly capitalism, Barks invested his stories with a morality of humility, moderation, tolerance, and compassion as an antidote to the domination of humanity and nature of the present paradigm.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Barks's tales thus tales contribute to what we might call a form of reflexive modernity, an awareness of the costs and dangers as well as the advantages of our modern/postmodern world. Barks was a very modernist antimodernist, well aware of the power that his narratives could exert on his readers. Like Alfred Hitchcock and French New Wave cinema, he created a self-reflexive discourse in his works that operated within popular narratives yet promoted a critical spectatorship by his audience. His \"open\" texts, with their multiple, contradictory worldviews and self-reflexive parodies of popular narratives, empower readers to resist the passive consumption of his work, offering important countertexts to the",
+          "value": "Barks's tales thus tales contribute to what we might call a form of reflexive modernity, an awareness of the costs and dangers as well as the advantages of our modern/postmodern world. Barks was a very modernist antimodernist, well aware of the power that his narratives could exert on his readers. Like Alfred Hitchcock and French New Wave cinema, he created a self-reflexive discourse in his works that operated within popular narratives yet promoted a critical spectatorship by his audience. His \"open\" texts, with their multiple, contradictory worldviews and self-reflexive parodies of popular narratives, empower readers to resist the passive consumption of his work, offering important countertexts to the",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## THE POSTMODERN CRACK-UP",
+          "value": "THE POSTMODERN CRACK-UP",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "commodification of media culture. They open up the mind to the clash of divergent worldviews and discourses and undermine notions of male mastery, a unitary self, and totalizing ideology. Just as Donald and Scrooge represent the deluded humans of the present, the nephews are harbingers of a new planetary consciousness, embodying the possibility of the emergence of a new form of humanity. Yet it is important to remember that these child/adults are not charismatic heroes but only representations of ourselves and the potentialities that we all possess in the struggle for self-empowerment and a meaningful life.",
+          "value": "commodification of media culture. They open up the mind to the clash of divergent worldviews and discourses and undermine notions of male mastery, a unitary self, and totalizing ideology. Just as Donald and Scrooge represent the deluded humans of the present, the nephews are harbingers of a new planetary consciousness, embodying the possibility of the emergence of a new form of humanity. Yet it is important to remember that these child/adults are not charismatic heroes but only representations of ourselves and the potentialities that we all possess in the struggle for self-empowerment and a meaningful life.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "\\<page_number>276\\</page_number>\n\\<page_number>277\\</page_number>",
+              "value": "<page_number>276</page_number>\n<page_number>277</page_number>",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "<page_number>276</page_number>\n<page_number>277</page_number>",
+          "bbox": null,
+          "type": "footer"
+        }
+      ],
+      "page_height": 1190.4,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "276, 277"
+    }
+  ]
+}

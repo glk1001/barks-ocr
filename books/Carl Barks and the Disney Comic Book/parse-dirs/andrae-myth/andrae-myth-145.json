@@ -1,0 +1,51 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 1,
+          "md": "# A CARL BARKS FILMOGRAPHY",
+          "value": "A CARL BARKS FILMOGRAPHY",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "The following is a list of produced Disney cartoons on which Carl Barks worked as a storyman. Unless otherwise noted, all films were Donald Duck cartoons directed by Jack King. An asterisk indicates that Barks drew many or most of the storyboards for that film. Initials SD and SC indicate whether Barks was a story director or a member of the story crew on a film. Although this title was sometimes nominal, the director was generally the most experienced storyman in a unit, the person who explained a storyboard to Walt Disney and to the other gag men in story conferences. According to Barks,",
+          "value": "The following is a list of produced Disney cartoons on which Carl Barks worked as a storyman. Unless otherwise noted, all films were Donald Duck cartoons directed by Jack King. An asterisk indicates that Barks drew many or most of the storyboards for that film. Initials SD and SC indicate whether Barks was a story director or a member of the story crew on a film. Although this title was sometimes nominal, the director was generally the most experienced storyman in a unit, the person who explained a storyboard to Walt Disney and to the other gag men in story conferences. According to Barks,",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "In most Disney story units, the story director was a sort of corporal with some small amount of authority over the gagmen and sketchmen. He was also the guy who choreographed the story in presenting it before Walt. His ability to grunt, squeal, emote, and howl with laughter at his storyboard gags determined his standing in the studio's hierarchy. In the Duck unit, none of us—except possibly Harry Reeves—wanted any authority, and none of us wanted the job of explaining the crudely drawn storyboards to Walt. His attention was always twenty drawings ahead of the narrator, anyway. I got stuck with the job after Harry was moved up to roving straw boss of the whole shorts division.<sup>1</sup>",
+          "value": "In most Disney story units, the story director was a sort of corporal with some small amount of authority over the gagmen and sketchmen. He was also the guy who choreographed the story in presenting it before Walt. His ability to grunt, squeal, emote, and howl with laughter at his storyboard gags determined his standing in the studio's hierarchy. In the Duck unit, none of us—except possibly Harry Reeves—wanted any authority, and none of us wanted the job of explaining the crudely drawn storyboards to Walt. His attention was always twenty drawings ahead of the narrator, anyway. I got stuck with the job after Harry was moved up to roving straw boss of the whole shorts division.<sup>1</sup>",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "*Modern Inventions.* May 29, 1937.\\*\n*Donald's Ostrich.* December 10, 1937.\n*Self Control.* February 11, 1938. SD.\n*Donald's Better Self.* March 11, 1938. SD.\n*Donald's Nephews.* April 15, 1938. SC.\n*Good Scouts.* July 8, 1938. SD.\\*",
+          "value": "Modern Inventions. May 29, 1937.*\nDonald's Ostrich. December 10, 1937.\nSelf Control. February 11, 1938. SD.\nDonald's Better Self. March 11, 1938. SD.\nDonald's Nephews. April 15, 1938. SC.\nGood Scouts. July 8, 1938. SD.*",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "\\<page_number>279\\</page_number>",
+              "value": "<page_number>279</page_number>",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "<page_number>279</page_number>",
+          "bbox": null,
+          "type": "footer"
+        }
+      ],
+      "page_height": 1190.4,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "279"
+    }
+  ]
+}

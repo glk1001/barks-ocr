@@ -1,0 +1,63 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "Top half of the image showing the upper part of a book spread",
+          "value": "Top half of the image showing the upper part of a book spread",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 2,
+          "md": "## FROM BURBANK TO DUCKBURG",
+          "value": "FROM BURBANK TO DUCKBURG",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "them to the extent of explaining their parental origins detracts from their mystique.\"<sup>75</sup> By creating a fluid, pluralistic universe that lay open to many possibilities rather than forcing his cosmos to congeal into a static totality, Barks allowed himself an enormous degree of flexibility, giving his imagination free rein. Varying his plots so that readers' expectations would be continually thrown off guard, he created a variegated, unpredictable world in which the audience was never quite certain about what to expect next, undermining the illusions of a fixed, unified subjectivity and sense of mastery that informed most comic books.",
+          "value": "them to the extent of explaining their parental origins detracts from their mystique.\"<sup>75</sup> By creating a fluid, pluralistic universe that lay open to many possibilities rather than forcing his cosmos to congeal into a static totality, Barks allowed himself an enormous degree of flexibility, giving his imagination free rein. Varying his plots so that readers' expectations would be continually thrown off guard, he created a variegated, unpredictable world in which the audience was never quite certain about what to expect next, undermining the illusions of a fixed, unified subjectivity and sense of mastery that informed most comic books.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Illustration of a man with glasses and a hearing aid above the title \"4 AMERICAN GOTHIC\"",
+          "value": "Illustration of a man with glasses and a hearing aid above the title \"4 AMERICAN GOTHIC\"",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "**B**arks's debut as a comic book writer occurred with a little-known story, \"Pluto Saves the Ship\" (Large Feature #7 [1942]), which he wrote in his spare evenings with two coworkers from the Disney Studio. \"My experience working with Jack Hannah and Nick George . . . convinced me the comic book method of presenting stories was not too difficult to be mastered.\" The comic, Barks recalled, was \"designed to take advantage of the wartime jitters. [W]e three did the final draft in rough sketch form in my den room in North Hollywood. The post—Pearl Harbor blackouts were in effect, and we had all the window blinds closed and taped shut. It was hot and stuffy, and we consumed many beers. The story shows the effects.\"<sup>1</sup>",
+          "value": "Barks's debut as a comic book writer occurred with a little-known story, \"Pluto Saves the Ship\" (Large Feature #7 [1942]), which he wrote in his spare evenings with two coworkers from the Disney Studio. \"My experience working with Jack Hannah and Nick George . . . convinced me the comic book method of presenting stories was not too difficult to be mastered.\" The comic, Barks recalled, was \"designed to take advantage of the wartime jitters. [W]e three did the final draft in rough sketch form in my den room in North Hollywood. The post—Pearl Harbor blackouts were in effect, and we had all the window blinds closed and taped shut. It was hot and stuffy, and we consumed many beers. The story shows the effects.\"<sup>1</sup>",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "\"Donald Duck Finds Pirate Gold\" (FC #9 [1942]), was the first comic book story that Barks drew and the first Donald Duck adventure.<sup>2</sup> Until 1942, when \"Pirate Gold\" was published, Disney comics had been largely reprints of newspaper comic strips. Floyd Gottfredson's Mickey Mouse comic strip adventures were serialized in monthly installments. However, Donald Duck comic strips had been self-contained gag strips, and no Donald Duck adventure stories existed for publishers to reprint. By the late 1930s and early 1940s, Donald Duck had surpassed Mickey Mouse",
+          "value": "\"Donald Duck Finds Pirate Gold\" (FC #9 [1942]), was the first comic book story that Barks drew and the first Donald Duck adventure.<sup>2</sup> Until 1942, when \"Pirate Gold\" was published, Disney comics had been largely reprints of newspaper comic strips. Floyd Gottfredson's Mickey Mouse comic strip adventures were serialized in monthly installments. However, Donald Duck comic strips had been self-contained gag strips, and no Donald Duck adventure stories existed for publishers to reprint. By the late 1930s and early 1940s, Donald Duck had surpassed Mickey Mouse",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "items": [
+            {
+              "md": "\\<page_number>108\\</page_number>\n\\<page_number>109\\</page_number>",
+              "value": "<page_number>108</page_number>\n<page_number>109</page_number>",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "<page_number>108</page_number>\n<page_number>109</page_number>",
+          "bbox": null,
+          "type": "footer"
+        }
+      ],
+      "page_height": 1190.4,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "108, 109"
+    }
+  ]
+}

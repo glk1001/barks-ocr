@@ -1,0 +1,61 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "COMICS STUDIES / POPULAR CULTURE",
+          "value": "COMICS STUDIES / POPULAR CULTURE",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# THE FIRST FULL-LENGTH CRITICAL STUDY OF THE GENIUS WHO CREATED DUCKBURG AND UNCLE SCROOGE",
+          "value": "THE FIRST FULL-LENGTH CRITICAL STUDY OF THE GENIUS WHO CREATED DUCKBURG AND UNCLE SCROOGE",
+          "bbox": null,
+          "type": "heading"
+        },
+        {
+          "md": "“A lifelong devotion to Carl Barks and the Disney comic results in a meticulously and bravely researched chronicle of the great Duck Man’s efforts, viewed in a critical and holistic vein. Barks is here established, finally, as a giant of twentieth-century popular culture, in the context of his times: Cold War, consumerism, ecology, technology, questions of gender and social hierarchy, U.S. imperialism, and the impact of Scrooge-ish greed on the Third World. The conservative Barks is shown as a radical satirist.”",
+          "value": "“A lifelong devotion to Carl Barks and the Disney comic results in a meticulously and bravely researched chronicle of the great Duck Man’s efforts, viewed in a critical and holistic vein. Barks is here established, finally, as a giant of twentieth-century popular culture, in the context of his times: Cold War, consumerism, ecology, technology, questions of gender and social hierarchy, U.S. imperialism, and the impact of Scrooge-ish greed on the Third World. The conservative Barks is shown as a radical satirist.”",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "—DAVID KUNZLE",
+          "value": "—DAVID KUNZLE",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Author of *The History of the Comic Strip* and *Che Guevara: Icon, Myth, and Message*",
+          "value": "Author of The History of the Comic Strip and Che Guevara: Icon, Myth, and Message",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "THOMAS ANDRAE, an instructor in the cinema department of San Francisco State University, is the senior editor and cofounder of *Discourse: Journal for Theoretical Studies in Media and Culture*. He produced *The Duck Man*, a feature-length documentary on Carl Barks, and was an editor of the Carl Barks Library.",
+          "value": "THOMAS ANDRAE, an instructor in the cinema department of San Francisco State University, is the senior editor and cofounder of Discourse: Journal for Theoretical Studies in Media and Culture. He produced The Duck Man, a feature-length documentary on Carl Barks, and was an editor of the Carl Barks Library.",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "barcode",
+          "value": "barcode",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "Carl Barks self-portrait, courtesy of Thomas Andrae",
+          "value": "Carl Barks self-portrait, courtesy of Thomas Andrae",
+          "bbox": null,
+          "type": "text"
+        }
+      ],
+      "page_height": 841.68,
+      "page_number": 1,
+      "page_width": 595.2,
+      "success": true
+    }
+  ]
+}
