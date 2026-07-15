@@ -21,11 +21,14 @@ app = typer.Typer(add_completion=False)
 TIER = "agentic"
 VERSION = "latest"
 CUSTOM_PROMPT = (
-    "This is a two-column document. Read columns left-to-right, top-to-bottom "
-    "within each column. Preserve the reading order."
+    "This image is a two-page book spread. Parse the LEFT page in full first, in reading "
+    "order (top to bottom, respecting any multi-column layout within that page). Then parse "
+    "the RIGHT page in full, in reading order. Insert a clear page break between the two "
+    "pages and do not interleave content across the gutter. If the image contains only one "
+    "page, parse just that page. Ignore the dark scanner background around the pages."
 )
 
-load_dotenv(Path(__file__).parent.parent / ".env.runtime")
+load_dotenv(Path(__file__).parent.parent.parent / ".env.runtime")
 
 
 def _printed_page_numbers(result: "ParsingGetResponse") -> dict[int, str]:
@@ -206,7 +209,7 @@ def main(
         None,
         "--output-dir",
         "-o",
-        help="Directory to write output files (default: same as image_dir).",
+        help="Directory to write output files (default: 'llama_parse' next to image_dir).",
     ),
     overwrite: bool = typer.Option(
         False,  # noqa: FBT003
@@ -225,7 +228,7 @@ def main(
         logger.error(f"Not a directory: {image_dir}")
         raise typer.Exit(1)
 
-    resolved_output_dir = output_dir if output_dir is not None else image_dir
+    resolved_output_dir = output_dir if output_dir is not None else image_dir.parent / "llama_parse"
     resolved_output_dir.mkdir(parents=True, exist_ok=True)
 
     images = sorted(image_dir.glob("*.jpg")) + sorted(image_dir.glob("*.JPG"))

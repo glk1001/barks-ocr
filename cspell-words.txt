@@ -58,6 +58,7 @@ imwrite
 initargs
 inpaint
 intspan
+jpgs
 kivy
 kpoe
 letterboxing
