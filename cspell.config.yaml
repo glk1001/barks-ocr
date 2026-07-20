@@ -13,12 +13,19 @@ ignorePaths:
   - "src/barks_ocr/nano/nano_banana_panels.py"
   - "src/barks_ocr/nano/nano_banana_test.py"
 
-# Enable Python built-in dictionary plus word lists
+# Enable Python built-in dictionary plus word lists:
+#   - barks-fantagraphics : the shared Barks vocabulary, referenced across the repo
+#       boundary (like .ruff.toml's `extend = "../barks-compleat-reader/…"`). Single
+#       source of truth in the sibling repo; updates there flow in automatically.
+#   - project             : this repo's own words — only words NOT in the shared list.
 dictionaryDefinitions:
+  - name: barks-fantagraphics
+    path: "../barks-compleat-reader/src/barks-fantagraphics/cspell-words.txt"
   - name: project
     path: "./cspell-words.txt"
     addWords: true
 
 dictionaries:
   - python
+  - barks-fantagraphics
   - project

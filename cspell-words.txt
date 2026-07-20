@@ -1,12 +1,13 @@
-
 # cspell word list — project-specific words
 # One word per line. Case-insensitive.
+# Only words NOT in the shared Barks vocabulary
+# (../barks-compleat-reader/src/barks-fantagraphics/cspell-words.txt,
+# referenced by cspell.config.yaml) belong here.
 acked
 acks
 andrae
 arctan
 autojunk
-barksian
 beamsearch
 blas
 blit
@@ -22,7 +23,6 @@ chkr
 codepoint
 colorfmt
 coords
-crooge
 csvfile
 denoise
 denoising
@@ -34,12 +34,9 @@ dismissable
 divid
 divis
 dotenv
-easyocr
 entr
 ents
 etype
-fanta
-fantagraphics
 favourites
 floatlayout
 fromarray
@@ -49,7 +46,6 @@ gemg
 gemr
 genai
 getrgb
-grazie
 gttl
 halign
 hotpink
@@ -69,10 +65,7 @@ norp
 numpad
 opno
 outpaint
-paddleocr
 palegreen
-phant
-pngs
 propn
 putalpha
 qint
@@ -96,8 +89,6 @@ uncurated
 ungrab
 unrotated
 unwarping
-uppercased
-verdana
 vscodium
 whof
 whoi

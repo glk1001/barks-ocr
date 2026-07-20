@@ -25,6 +25,10 @@ from loguru import logger
 app = typer.Typer(add_completion=False)
 
 _BARKS_BOOKS_WORDS = Path(__file__).parent.parent / "cspell-words-barks-books.txt"
+_SHARED_BARKS_WORDS = (
+    Path(__file__).parent.parent.parent.parent
+    / "barks-compleat-reader/src/barks-fantagraphics/cspell-words.txt"
+)
 
 # Two chars: one alnum + a trailing hyphen.
 _MIN_HYPHEN_CONTEXT = 2
@@ -224,7 +228,7 @@ def main(
         logger.error(f"No parse subdirectories found under: {parse_dirs}")
         raise typer.Exit(1)
 
-    ignore_words = _load_ignore_words(_BARKS_BOOKS_WORDS)
+    ignore_words = _load_ignore_words(_BARKS_BOOKS_WORDS) | _load_ignore_words(_SHARED_BARKS_WORDS)
     logger.info(f"Loaded {len(ignore_words)} project ignore-words.")
 
     logger.info(f"Loading spreads from {len(parse_dir_list)} parse dir(s) ...")

@@ -1,14 +1,13 @@
-# cspell word list — project-specific words
+# cspell word list — book-build project-specific words
 # One word per line. Case-insensitive.
+# Only words NOT in the shared Barks vocabulary
+# (../../barks-compleat-reader/src/barks-fantagraphics/cspell-words.txt) and
+# NOT in ./cspell-words-barks-books.txt (both referenced by cspell.json) belong here.
 
 alnum
-arminta
-ault
 backlink
 bboxes
 blockquotes
-boatner's
-calisota
 curlies
 curlification
 curlified
@@ -23,9 +22,9 @@ linkified
 linkify
 metas
 misoriented
+morfologik
 mybook
 noteref
-overstreet
 pagebreak
 parentheticals
 pdfium
@@ -33,5 +32,4 @@ spellcheckable
 sluggable
 subline
 unsided
-willits
 zout

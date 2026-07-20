@@ -2,10 +2,18 @@
   "version": "0.2",
   "dictionaryDefinitions": [
     {
+      "name": "barks-fantagraphics",
+      "path": "../../barks-compleat-reader/src/barks-fantagraphics/cspell-words.txt"
+    },
+    {
+      "name": "barks-books",
+      "path": "./cspell-words-barks-books.txt"
+    },
+    {
       "name": "book-build-words",
-      "path": "./cspell-words.txt"
+      "path": "./cspell-words.txt",
+      "addWords": true
     }
   ],
-  "dictionaries": ["book-build-words"]
+  "dictionaries": ["barks-fantagraphics", "barks-books", "book-build-words"]
 }
-

@@ -28,6 +28,9 @@ app = typer.Typer(add_completion=False)
 _REPO_ROOT = Path(__file__).parent.parent.parent
 _PROJECT_WORDS = _REPO_ROOT / "cspell-words.txt"
 _BARKS_BOOKS_WORDS = Path(__file__).parent.parent / "cspell-words-barks-books.txt"
+_SHARED_BARKS_WORDS = (
+    _REPO_ROOT.parent / "barks-compleat-reader/src/barks-fantagraphics/cspell-words.txt"
+)
 
 _CSPELL_LINE_RE = re.compile(
     r":(?P<line>\d+):(?P<col>\d+)\s+-\s+Unknown word \((?P<word>[^)]+)\)"
@@ -111,6 +114,10 @@ def _write_cspell_config(config_path: Path) -> None:
         "language": "en",
         "dictionaryDefinitions": [
             {
+                "name": "barks-fantagraphics",
+                "path": str(_SHARED_BARKS_WORDS),
+            },
+            {
                 "name": "project",
                 "path": str(_PROJECT_WORDS),
                 "addWords": True,
@@ -121,7 +128,7 @@ def _write_cspell_config(config_path: Path) -> None:
                 "addWords": True,
             },
         ],
-        "dictionaries": ["en_us", "project", "barks-books"],
+        "dictionaries": ["en_us", "barks-fantagraphics", "project", "barks-books"],
     }
     config_path.write_text(json.dumps(config, indent=2), encoding="utf-8")
 
@@ -268,7 +275,6 @@ def main(
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
         input_path = tmp / "spellcheck-input.txt"
-        #        input_path = Path("/tmp") / "spellcheck-input.txt"
         config_path = tmp / "cspell.config.json"
         _write_cspell_input(metas, input_path)
         _write_cspell_config(config_path)
