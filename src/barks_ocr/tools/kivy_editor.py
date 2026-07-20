@@ -9,7 +9,8 @@ from pathlib import Path
 import typer
 from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE, STR_TITLE_TO_ENUM
 from barks_fantagraphics.comic_book import get_page_str
-from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT, PageType
+from barks_fantagraphics.comic_book_info import ONE_PAGERS
+from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT, PNG_FILE_EXT, PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
 from barks_fantagraphics.comics_utils import get_backup_file
@@ -630,6 +631,13 @@ class EditorApp(App):
         self._panel_segments_file = segments_dir / (fanta_page + ".json")
 
     def _get_srce_image_file(self, title_str: str, fanta_page: str) -> Path:
+        if STR_TITLE_TO_ENUM[title_str] in ONE_PAGERS:
+            # One-pagers have no ini file, so 'get_comic_book' can't resolve them.
+            # Their restored page lives directly in the volume's restored image dir.
+            return Path(
+                self._comics_database.get_fantagraphics_restored_volume_image_dir(self._volume)
+            ) / (fanta_page + PNG_FILE_EXT)
+
         comic = self._comics_database.get_comic_book(title_str)
         srce_image_file = comic.get_final_srce_story_file(fanta_page, PageType.BODY)
         return srce_image_file[0]
