@@ -58,6 +58,7 @@ jpgs
 kivy
 kpoe
 letterboxing
+licence
 misrecognized
 mkldnn
 motionevent
@@ -70,6 +71,7 @@ propn
 putalpha
 qint
 readtext
+recognise
 rects
 rowname
 sapg

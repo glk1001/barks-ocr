@@ -10,6 +10,8 @@ name = "barks-ocr"
 version = "0.1.0"
 description = "Scripts for OCR processing of Fantagraphics Carl Barks comic pages."
 readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENCE", "NOTICE"]
 requires-python = ">=3.13"
 dependencies = [
     "barks-fantagraphics",
