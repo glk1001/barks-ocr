@@ -93,8 +93,9 @@ dev = [
     "timm>=1.0.27",
     "torch>=2.11.0",
     "transformers>=4.49,<5",
-    # Pinned to match the rest of the barks repos. 0.0.62 introduced a flaky salsa
-    # panic that aborts files on roughly 1 in 3 runs of a large project; ty is beta
-    # with 1.0 targeted for 2026, so pin until it stabilizes.
-    "ty==0.0.61",
+    # Pinned to match the rest of the barks repos. 0.0.62 and 0.0.63 had a flaky
+    # salsa panic that aborted files on roughly 1 in 3 runs of a large project;
+    # 0.0.64 fixes it. ty is beta with 1.0 targeted for 2026, so stay pinned until
+    # it stabilizes.
+    "ty==0.0.64",
 ]
