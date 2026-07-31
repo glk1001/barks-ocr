@@ -415,6 +415,9 @@ class _DraggableLabel(KivyLabel):
         self._drag_offset = (0.0, 0.0)
         self._on_touched = on_touched
         self._on_double_tapped = on_double_tapped
+        # Widget.canvas comes from Kivy's compiled base class, which ships no stubs;
+        # both checkers read it as possibly-None. It is always set on a live widget.
+        # pyrefly: ignore[missing-attribute]
         with self.canvas.before:  # ty: ignore[unresolved-attribute]
             Color(1.0, 0.85, 0.4, 1.0)
             self._bg = Rectangle(pos=self.pos, size=self.size)

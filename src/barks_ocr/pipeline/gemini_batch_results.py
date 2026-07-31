@@ -71,7 +71,8 @@ def process_batch_job(comics_database: ComicsDatabase, title: str) -> None:  # n
 
         logger.info(f"Job status: {job_state}.")
         # The output is in another file.
-        result_file_name = batch_job_from_file.dest.file_name  # ty:ignore[unresolved-attribute]
+        assert batch_job_from_file.dest is not None
+        result_file_name = batch_job_from_file.dest.file_name
         logger.info(f'Results are in Gemini file: "{result_file_name}".')
 
         logger.info("Downloading and parsing result file content...")

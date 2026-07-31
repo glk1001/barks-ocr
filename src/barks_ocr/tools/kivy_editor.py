@@ -157,7 +157,9 @@ class EnginePane:
         self.label_prop = label_prop  # StringProperty name on EditorApp
         self.group_id: str = ""
         self.label: str = ""
-        # Always set by _load_page_data() before any method accesses it.
+        # Always set by _load_page_data() before any method accesses it, so it is
+        # annotated non-Optional deliberately to keep every read site clean.
+        # pyrefly: ignore[bad-assignment]
         self.page_group: SpeechPageGroup = None  # ty:ignore[invalid-assignment]
         self.speech_groups: dict[str, SpeechText] = {}
         self.canvas: BoundingBoxCanvas | None = None
@@ -303,6 +305,9 @@ class BoundingBoxCanvas(Widget):
         # Use a managed InstructionGroup so we never call canvas.clear(),
         # which would corrupt Kivy's internal canvas groups used by TextInput.
         self._draw_group = InstructionGroup()
+        # Widget.canvas comes from Kivy's compiled base class, which ships no stubs;
+        # both checkers read it as possibly-None. It is always set on a live widget.
+        # pyrefly: ignore[missing-attribute]
         self.canvas.add(self._draw_group)  # ty:ignore[unresolved-attribute]
 
         self.bind(size=self._redraw, pos=self._redraw)
@@ -398,14 +403,18 @@ class BoundingBoxCanvas(Widget):
             )
         )
         if self._all_panel_bounds_local:
-            self._draw_all_panel_bounds(g)
+            self._draw_all_panel_bounds(g, self._all_panel_bounds_local)
         elif self._panel_bounds_local:
-            self._draw_panel_bounds(g)
+            self._draw_panel_bounds(g, self._panel_bounds_local)
         if self._text_box:
-            self._draw_text_box(g)
+            self._draw_text_box(g, self._text_box)
 
-    def _draw_panel_bounds(self, g: InstructionGroup) -> None:
-        pl, pt, pr, pb = self._panel_bounds_local
+    # The three _draw_* helpers take the thing they draw as an argument rather than
+    # re-reading the `... | None` attribute: the caller above has already established
+    # it is set, and passing it makes that precondition explicit instead of relying on
+    # a narrowing the type checkers cannot carry across the call.
+    def _draw_panel_bounds(self, g: InstructionGroup, bounds: tuple[int, int, int, int]) -> None:
+        pl, pt, pr, pb = bounds
         tl = self._local_to_screen(pl, pt)
         tr = self._local_to_screen(pr, pt)
         br = self._local_to_screen(pr, pb)
@@ -424,9 +433,11 @@ class BoundingBoxCanvas(Widget):
                 g.add(Color(0.2, 1.0, 0.5, 1.0))
                 g.add(Rectangle(texture=texture, pos=(tx, ty), size=texture.size))
 
-    def _draw_all_panel_bounds(self, g: InstructionGroup) -> None:
+    def _draw_all_panel_bounds(
+        self, g: InstructionGroup, all_bounds: list[tuple[int, int, int, int]]
+    ) -> None:
         """Draw all panel outlines with numbered labels (used when panel_num is -1)."""
-        for i, (pl, pt, pr, pb) in enumerate(self._all_panel_bounds_local):
+        for i, (pl, pt, pr, pb) in enumerate(all_bounds):
             tl = self._local_to_screen(pl, pt)
             tr = self._local_to_screen(pr, pt)
             br = self._local_to_screen(pr, pb)
@@ -447,8 +458,8 @@ class BoundingBoxCanvas(Widget):
                 g.add(Color(0.2, 1.0, 1.0, 1.0))
                 g.add(Rectangle(texture=texture, pos=(tx, ty), size=texture.size))
 
-    def _draw_text_box(self, g: InstructionGroup) -> None:
-        pts = [self._local_to_screen(p[0], p[1]) for p in self._text_box]
+    def _draw_text_box(self, g: InstructionGroup, text_box: list) -> None:
+        pts = [self._local_to_screen(p[0], p[1]) for p in text_box]
         # Box outline
         g.add(Color(1.0, 0.5, 0.0, 1.0))
         flat = [c for pt in pts for c in pt] + list(pts[0])
@@ -490,6 +501,11 @@ class BoundingBoxCanvas(Widget):
 
     def on_touch_move(self, touch: MotionEvent) -> bool:
         if touch.grab_current is not self or not self._dragging:
+            return False
+        # `_dragging` is only set by on_touch_down, which returns early unless
+        # `_text_box` is set and which sets `_drag_start_box` on both of its drag
+        # paths. Re-check here so that invariant is enforced rather than assumed.
+        if self._text_box is None or self._drag_start_box is None:
             return False
         if self._drag_corner >= 0:
             lx, ly = self._screen_to_local(touch.x, touch.y)
@@ -644,7 +660,12 @@ class EditorApp(App):
 
     def _load_queue_entry(self, index: int) -> None:
         """Load the queue entry at *index* and refresh the entire UI."""
-        entry = self._queue[index]
+        if self._queue is None:
+            return
+        # Bind a local: the narrowing above would not survive the _load_page_data /
+        # _set_group_id calls below, which the checkers must assume can reassign it.
+        queue = self._queue
+        entry = queue[index]
         self._queue_index = index
         self._has_changes = False
 
@@ -662,7 +683,7 @@ class EditorApp(App):
             if resolved:
                 self._set_group_id(pane, resolved)
 
-        self.queue_progress_text = f"{index + 1} / {len(self._queue)}"
+        self.queue_progress_text = f"{index + 1} / {len(queue)}"
 
         for pane in self._panes:
             if pane.canvas is not None:
@@ -860,7 +881,7 @@ class EditorApp(App):
             self,
             pane.text_prop,
             self._encode_for_display(speech_group.raw_ai_text)
-            if self._decode_checkbox and self._decode_checkbox.active
+            if self._decode_on
             else speech_group.raw_ai_text,
         )
         # Read from live JSON, not SpeechText — the dataclass is never updated after load,
@@ -933,6 +954,16 @@ class EditorApp(App):
     def _decode_from_display(text: str) -> str:
         return text.replace("\n", r"\n").encode("utf-8").decode("unicode_escape")
 
+    @property
+    def _decode_on(self) -> bool:
+        """Whether the escape-decoding checkbox is ticked.
+
+        The checkbox only exists once `_create_editor_widget()` has run, so read it
+        through here rather than off the `CheckBox | None` attribute directly. An
+        absent checkbox counts as not ticked, which is its initial state anyway.
+        """
+        return self._decode_checkbox is not None and self._decode_checkbox.active
+
     # ── widget construction ───────────────────────────────────────────────────
 
     def _create_editor_widget(self) -> BoxLayout:
@@ -960,7 +991,7 @@ class EditorApp(App):
             try:
                 t1 = ti_easy.text
                 t2 = ti_pad.text
-                if self._decode_checkbox.active:
+                if self._decode_on:
                     t1 = self._decode_from_display(t1)
                     t2 = self._decode_from_display(t2)
                 if t1 != t2:
@@ -1339,7 +1370,7 @@ class EditorApp(App):
     def _get_current_text(self, pane: EnginePane) -> str:
         """Return the current decoded text for a pane."""
         text = getattr(self, pane.text_prop)
-        return self._decode_from_display(text) if self._decode_checkbox.active else text
+        return self._decode_from_display(text) if self._decode_on else text
 
     def _handle_save(self, *, renumber: bool = False) -> None:
         """Save text, panel_num, and text_box changes to both OCR JSON files."""
@@ -1451,7 +1482,7 @@ class EditorApp(App):
         setattr(self, target.text_prop, new_text)
         # _on_text_changed only fires when the TextInput is focused, so sync
         # raw_ai_text and the change flag explicitly.
-        decoded = self._decode_from_display(new_text) if self._decode_checkbox.active else new_text
+        decoded = self._decode_from_display(new_text) if self._decode_on else new_text
         target.speech_groups[target.group_id] = replace(
             target.speech_groups[target.group_id],
             raw_ai_text=decoded,

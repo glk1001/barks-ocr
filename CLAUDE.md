@@ -8,57 +8,36 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
-**Run a script:**
+**Run all lint/static checks (ruff check + format, ty, pyrefly, cspell; plus a non-gating `uv audit`):**
 ```bash
-uv run src/batch-ocr.py --help
-uv run src/make-gemini-ai-groups-batch-job.py --help
+bash scripts/full-lint.sh
+```
+It does not run tests — this repo has no test suite.
+
+**Type-check (two checkers).** `ty` is the primary; **pyrefly** is gated alongside it and is stricter on nullability, which is most of what it earns us. Config and rationale live in `pyrefly.toml`.
+
+```bash
+uv run ty check . --error-on-warning
+bash scripts/pyrefly.sh                      # or: uv run pyrefly check
+bash scripts/pyrefly.sh --min-severity=warn  # also show the non-gating warnings
 ```
 
-**Common tasks via just (imports from `../barks-comic-building/.justfile`):**
-```bash
-just find-words "word"
-just open-prelim volume page
-just annotate-ocr volume page
-just check-ocr volume
-```
+The pyrefly gate is a plain **0 errors** with **no baseline file**, matching the sibling `barks-comic-building` rather than `barks-compleat-reader`. Keep it that way: fix a new finding, or suppress it at the line with a `# pyrefly: ignore[<rule>]` comment saying why, rather than adding a baseline to hide it.
 
-**Type-check (ty):**
-```bash
-uv run ty check
-```
+`tools/kivy_editor.py` and `tools/annotate.py` are Kivy apps, so this repo does carry some Kivy-boundary noise. It is handled by config in `pyrefly.toml` (`replace-imports-with-any` for the compiled/provider-loaded Kivy modules, plus the `bad-override` family disabled against Kivy's compiled base classes) — not by grandfathering. The standing line suppressions are only the two `Widget.canvas` accesses and the two numeric CSS `font-weight` values in `censorship_table.py`, each explained in place.
 
-**Lint (ruff):**
-```bash
-uv run ruff check .
-uv run ruff format .
-```
+**Toolchain bump.** `ruff` and `ty` are `==`-pinned; bump them deliberately on a branch with `bash scripts/bump-toolchain.sh`. Runbook: `../barks-compleat-reader/docs/toolchain-bump.md`.
 
 ## Architecture
 
-### Directory Structure
-
-| Directory | Role |
-|---|---|
-| `src/` | Main OCR pipeline scripts |
-| `src/utils/` | Shared utility modules (geometry, OCR box types, Gemini AI helpers) |
-| `src/tools/` | Utility/diagnostic tools (excluded from linting) |
-
-### Key Scripts
-
-- `batch-ocr.py` — Runs EasyOCR and PaddleOCR on restored comic pages, saves preliminary OCR box data
-- `gemini_ai_ocr_grouper.py` — Groups OCR text boxes into speech bubbles/captions using Gemini AI and panel segment data
-- `make-gemini-ai-groups-batch-job.py` / `make-gemini-ai-groups-from-batch.py` — Batch Gemini AI job management
-- `make-whoosh-index-from-gemini-ai-groups.py` — Builds searchable Whoosh full-text index from AI groups
-- `fix-ocr.py` / `annotate-ocr.py` — Manual OCR correction and annotation tools
-- `kivy-prelim-ocr-editor.py` — Kivy GUI for editing preliminary OCR results
-
 ### Shared Packages
 
-`barks-fantagraphics` and `comic-utils` are installed as editable **uv path dependencies** — no `PYTHONPATH` configuration needed:
+`barks-fantagraphics`, `barks-kivy-ui` and `comic-utils` are installed as editable **uv path dependencies** — no `PYTHONPATH` configuration needed:
 
 | Package | Role |
 |---|---|
 | `barks_fantagraphics` | Comics database, titles, pages, OCR file paths, panel boxes, speech groupers |
+| `barks_kivy_ui` | Shared Kivy UI widgets |
 | `comic_utils` | Shared utilities (image I/O, CLI options, timing) |
 
 Path dependencies are declared in `pyproject.toml` under `[tool.uv.sources]` pointing to `../barks-compleat-reader/src/`.
@@ -66,7 +45,3 @@ Path dependencies are declared in `pyproject.toml` under `[tool.uv.sources]` poi
 ### Runtime API Keys
 
 `barks-ocr` uses Google Gemini AI. The `.env.runtime` file contains `GEMINI_API_KEY` — do not modify or commit this file.
-
-## Code Style
-
-- `src/tools/`, `**/experiments/`, and `**/scraps/` are excluded from linting and type checking.

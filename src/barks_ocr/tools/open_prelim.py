@@ -37,7 +37,10 @@ def edit_file(file: Path, line: int) -> None:
     logger.debug(f"Running command: {command}.")
 
     process = subprocess.Popen(command, stdout=subprocess.PIPE, text=True)  # noqa: S603
-    _output = process.stdout.readline()  # ty:ignore[unresolved-attribute]
+    # stdout is always a pipe here (stdout=subprocess.PIPE) but is declared Optional,
+    # so narrow rather than suppress. readline() blocks until the editor has started.
+    if process.stdout is not None:
+        process.stdout.readline()
 
     logger.debug(f'Editor should now have opened "{file}" at line {line}.')
 

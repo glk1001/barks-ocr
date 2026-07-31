@@ -90,6 +90,7 @@ def print_title_summary(
         is_barks = comic.is_barks_title()
 
         title_enum = STR_TITLE_TO_ENUM[title_str]
+        ocr_error = ""
         try:
             page_group = get_speech_page_group(
                 comics_database,

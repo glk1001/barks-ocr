@@ -88,6 +88,11 @@ dev = [
     "en-core-web-sm",
     "llama-cloud>=1.6.0",
     "prek>=0.3.8",
+    # Second type checker, and a GATE alongside ty (pre-commit, full-lint.sh). Stricter
+    # than ty on nullability, which is most of what it earns us. The gate is a plain 0
+    # errors with no baseline file, matching ../barks-comic-building. Deliberately left
+    # unpinned, unlike ruff/ty: it is 1.x with real semver.
+    "pyrefly>=1.1.1",
     # Pinned: with select = ["ALL"] (via ../barks-compleat-reader/.ruff-base.toml), a
     # ruff release that stabilizes rules out of preview changes our lint policy, not
     # just the version. Bump deliberately and triage the new hits.

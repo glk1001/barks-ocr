@@ -1,0 +1,79 @@
+# pyrefly.toml — second type checker, gated alongside `ty`.
+#
+# pyrefly runs in pre-commit and `scripts/full-lint.sh` (and on demand via
+# `scripts/pyrefly.sh` / `uv run pyrefly check`). It is stricter than ty on
+# nullability, which is most of what it earns us here. The gate is a plain
+# **0 errors** — as in the sibling `barks-comic-building`, there is deliberately
+# no baseline file. Keep it that way: fix a new finding, or suppress it at the
+# line with a comment saying why, rather than adding a baseline to hide it.
+#
+# Two tools here (`tools/kivy_editor.py`, `tools/annotate.py`) are Kivy apps, so
+# this repo does carry some of the same Kivy-boundary noise as
+# `barks-compleat-reader`. It is handled the same way — by config, below — rather
+# than by grandfathering it into a baseline.
+
+# Mirror ty.toml's `[environment] root`: the package plus the separate `books`
+# tree. Listing them explicitly keeps `experiments/`, `scraps/`, `logs/` and
+# `graphify-out/` out of scope. There is no `tests/` directory in this repo.
+project-includes = [
+    "src",
+    "books/src",
+]
+
+search-path = [
+    "src",
+    "books/src",
+]
+
+project-excludes = [
+    # Matches ty.toml's `[src] exclude`, so the two checkers see the same tree.
+    "**/experiments/**",
+    "**/scraps/**",
+    "**/__pycache__/**",
+    "src/barks_ocr/utils/geometry.py",
+    "src/barks_ocr/utils/ocr_box.py",
+    "src/barks_ocr/nano/nano_banana_panels.py",
+    "src/barks_ocr/nano/nano_banana_test.py",
+    "src/barks_ocr/nano/nano_banana_create_cover.py",
+]
+
+python-interpreter = ".venv/bin/python"
+
+# Kivy ships as compiled modules with no stubs (no py.typed, zero .pyi). ty
+# silently treats them as Any; pyrefly needs to be told to. Kivy also annotates
+# its `Window`/`Config` singletons as `WindowBase | None`, so every
+# `Window.bind(...)` / `Config.getint(...)` reads as an attribute access on a
+# possibly-None value. These are untyped Kivy singletons regardless; treating
+# their modules as Any matches ty's effective stance. Same list as the reader's
+# pyrefly.toml, minus the entries for packages this repo does not import.
+#
+# `cv2` is deliberately NOT listed: the sibling repos replace it because its
+# partial inline types reject every call, but it produces no findings here today.
+# Add it if that changes rather than carrying dead config.
+replace-imports-with-any = [
+    "kivy.properties",
+    "kivy.graphics",
+    "kivy.graphics.*",
+    "kivy._event",
+    "kivy._clock",
+    "kivy.weakproxy",
+    "kivy.core.window",
+    "kivy.config",
+    # kivy.core.text picks its Label implementation at import time via Kivy's provider
+    # loader, so the exported `Label`/`LabelBase` names are typed as possibly-None and
+    # every `CoreLabel(...)` construction reads as "expected a callable, got None".
+    "kivy.core.text",
+]
+
+# Override-shape mismatches against Kivy's *compiled* base classes (Widget,
+# Label, TextInput, …). pyrefly can't see the real signatures of the .so bases,
+# so every `on_touch_down`/`on_touch_move` override reads as a mismatch. All are
+# the Kivy stub gap, not real bugs; disable these kinds rather than annotate a
+# growing list per new widget.
+# (This table must stay LAST — a TOML section header captures every key below
+# it, so any top-level key placed after it would be parsed into [errors].)
+[errors]
+bad-override = false
+bad-override-param-name = false
+bad-override-mutable-attribute = false
+inconsistent-inheritance = false

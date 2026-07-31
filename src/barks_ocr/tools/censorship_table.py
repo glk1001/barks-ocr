@@ -24,6 +24,9 @@ def get_censorship_fixes_table(file: Path) -> GT:
             Page_Panel=html("Panel"),
         )
         .tab_style(
+            # great_tables types `weight` as a 4-value Literal, but it passes the value
+            # straight through to CSS `font-weight`, where numeric weights are valid.
+            # pyrefly: ignore[bad-argument-type]
             style=style.text(weight=500),  # ty: ignore[invalid-argument-type]
             locations=loc.body(columns="Story"),
         )
@@ -49,6 +52,8 @@ def get_censorship_fixes_table(file: Path) -> GT:
     )
     required_columns = df.drop("Story").columns
     table = table.tab_style(
+        # Numeric CSS font-weight, as above.
+        # pyrefly: ignore[bad-argument-type]
         style=style.text(style="italic", weight=500),  # ty: ignore[invalid-argument-type]
         locations=[loc.body(columns=col_name) for col_name in required_columns],
     )
