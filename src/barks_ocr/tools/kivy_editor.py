@@ -33,6 +33,18 @@ from barks_ocr.utils.group_checks import (
     DISMISSABLE_ISSUE_TYPES,
     DISMISSABLE_PREDICATES,
 )
+from barks_ocr.utils.vision_schema import (
+    CAP_COLOUR_KEY,
+    CAP_COLOUR_OPTIONS,
+    OTHER_PREFIX,
+    REVIEWED_CONFIDENCE,
+    SPEAKER_CONFIDENCE_KEY,
+    SPEAKER_KEY,
+    SPEAKER_OPTIONS,
+    SPEAKER_REVIEWED_KEY,
+    VISION_NOTE_KEY,
+    normalize_speaker,
+)
 
 APP_LOGGING_NAME = "kpoe"
 
@@ -126,6 +138,12 @@ DEFAULT_TYPE = "dialogue"
 TITLE_PAGE_DEFAULT_TYPE = "title"
 TITLE_PAGE_ISSUE_TYPE = "title_page"
 FLORENCE_CHECK_ISSUE_TYPE = "florence-check"
+
+# Pseudo-options in the speaker popup: the free-text row, and "no cap visible".
+# Neither is a stored value — "other" becomes an OTHER_PREFIX name on save, and
+# CAP_COLOUR_NONE becomes a null cap_colour.
+SPEAKER_OTHER_OPTION = "other"
+CAP_COLOUR_NONE = "none"
 
 
 # ── Data classes ─────────────────────────────────────────────────────────────
@@ -872,7 +890,11 @@ class EditorApp(App):
         pane.group_id = group_id
         speech_group = pane.speech_groups[group_id]
         pane.label = self._get_ocr_label(
-            pane.name, group_id, self._get_pane_type(pane), self._get_pane_florence_ack(pane)
+            pane.name,
+            group_id,
+            self._get_pane_type(pane),
+            self._get_pane_florence_ack(pane),
+            self._get_pane_speaker(pane),
         )
         # Always push the label to the StringProperty so the header updates even
         # when the text value doesn't change (Kivy skips dispatch for same values).
@@ -898,9 +920,16 @@ class EditorApp(App):
             pane.panel_num_input.text = str(panel_num)
 
     @staticmethod
-    def _get_ocr_label(ocr_name: str, group_id: str, type_name: str, florence_ack: bool) -> str:
+    def _get_ocr_label(
+        ocr_name: str, group_id: str, type_name: str, florence_ack: bool, speaker: str | None
+    ) -> str:
         flor_state = "ack" if florence_ack else "-"
-        return f"{ocr_name}: group_id: {group_id} ({type_name})  [flor: {flor_state}]"
+        label = f"{ocr_name}: group_id: {group_id} ({type_name})  [flor: {flor_state}]"
+        # Only groups the vision pass has seen carry a speaker, so the tag is
+        # left off entirely rather than shown empty on the rest of the corpus.
+        if speaker:
+            label += f"  [spkr: {speaker}]"
+        return label
 
     def _get_pane_type(self, pane: EnginePane) -> str:
         return (pane.json_group() or {}).get("type") or DEFAULT_TYPE
@@ -911,6 +940,11 @@ class EditorApp(App):
         if group is None:
             return False
         return FLORENCE_CHECK_ISSUE_TYPE in (group.get("acknowledged_issues") or [])
+
+    @staticmethod
+    def _get_pane_speaker(pane: EnginePane) -> str | None:
+        group = pane.json_group()
+        return None if group is None else group.get(SPEAKER_KEY)
 
     def _refresh_pane_labels(self) -> None:
         """Re-compute both panes' header labels and push to their label props.
@@ -924,6 +958,7 @@ class EditorApp(App):
                 pane.group_id,
                 self._get_pane_type(pane),
                 self._get_pane_florence_ack(pane),
+                self._get_pane_speaker(pane),
             )
             current_prop: str = getattr(self, pane.label_prop)
             if current_prop.startswith("DIFFS -- "):
@@ -1093,6 +1128,7 @@ class EditorApp(App):
             ("Copy In", lambda _inst, p=pane: self._handle_copy_in(p)),
             ("Copy Fmt", lambda _inst, p=pane: self._handle_copy_fmt(p)),
             ("Mark OK", lambda _inst, p=pane: self._show_acknowledge_popup(p)),
+            ("Speaker", lambda _inst, p=pane: self._show_speaker_popup(p)),
             ("Delete", lambda _inst, p=pane: self._handle_delete(p)),
         ):
             btn = Button(text=btn_text, size_hint_y=None, height=36)
@@ -1724,6 +1760,196 @@ class EditorApp(App):
         button_layout.add_widget(cancel_btn)
         content.add_widget(button_layout)
         popup.open()
+
+    # ── speaker popup ─────────────────────────────────────────────────────────
+
+    @staticmethod
+    def _vision_summary(group: dict) -> str:
+        """One line describing the vision pass's own call on this group."""
+        speaker = group.get(SPEAKER_KEY)
+        if not speaker:
+            return "vision pass: not run on this group"
+        confidence = group.get(SPEAKER_CONFIDENCE_KEY) or "?"
+        cap = group.get(CAP_COLOUR_KEY) or CAP_COLOUR_NONE
+        reviewed = " — reviewed" if group.get(SPEAKER_REVIEWED_KEY) else ""
+        return f"vision: {speaker} ({confidence}), cap {cap}{reviewed}"
+
+    @staticmethod
+    def _build_speaker_rows(content: BoxLayout, current: str | None) -> tuple[dict, TextInput]:
+        """Add the roster radio rows to *content*; return the radios and free-text input."""
+        other_text = TextInput(multiline=False, font_size="14sp", size_hint_y=None, height=30)
+        selected = current
+        if isinstance(current, str) and current.startswith(OTHER_PREFIX):
+            other_text.text = current[len(OTHER_PREFIX) :].strip()
+            selected = SPEAKER_OTHER_OPTION
+
+        radios: dict[str, CheckBox] = {}
+        for name in (*SPEAKER_OPTIONS, SPEAKER_OTHER_OPTION):
+            row = BoxLayout(orientation="horizontal", size_hint_y=None, height=30, spacing=8)
+            cb = CheckBox(
+                group="speaker_popup", active=(name == selected), size_hint_x=None, width=30
+            )
+            radios[name] = cb
+            lbl = Label(
+                text=OTHER_PREFIX if name == SPEAKER_OTHER_OPTION else name,
+                halign="left",
+                valign="middle",
+                size_hint_x=None,
+                width=90,
+            )
+            lbl.bind(size=lbl.setter("text_size"))
+            row.add_widget(cb)
+            row.add_widget(lbl)
+            row.add_widget(other_text if name == SPEAKER_OTHER_OPTION else Widget())
+            content.add_widget(row)
+        return radios, other_text
+
+    @staticmethod
+    def _build_cap_colour_row(content: BoxLayout, current: str | None) -> dict:
+        """Add the cap-colour radio row to *content*; return its radios."""
+        row = BoxLayout(orientation="horizontal", size_hint_y=None, height=30, spacing=4)
+        row.add_widget(Label(text="cap:", size_hint_x=None, width=50, halign="left"))
+        radios: dict[str, CheckBox] = {}
+        for colour in (*CAP_COLOUR_OPTIONS, CAP_COLOUR_NONE):
+            cb = CheckBox(
+                group="cap_colour_popup",
+                active=(colour == (current or CAP_COLOUR_NONE)),
+                size_hint_x=None,
+                width=30,
+            )
+            radios[colour] = cb
+            lbl = Label(text=colour, size_hint_x=None, width=58, halign="left", valign="middle")
+            lbl.bind(size=lbl.setter("text_size"))
+            row.add_widget(cb)
+            row.add_widget(lbl)
+        content.add_widget(row)
+        return radios
+
+    @staticmethod
+    def _build_vision_note_view(note: str) -> ScrollView:
+        """Return a scrollable, read-only view of the vision pass's reasoning."""
+        note_label = Label(
+            text=note or "(no vision note)",
+            font_size="13sp",
+            halign="left",
+            valign="top",
+            color=(0.75, 0.75, 0.75, 1),
+            size_hint_y=None,
+        )
+        note_label.bind(width=lambda inst, w: setattr(inst, "text_size", (w, None)))
+        note_label.bind(texture_size=lambda inst, ts: setattr(inst, "height", ts[1]))
+        scroll = ScrollView(size_hint_y=1)
+        scroll.add_widget(note_label)
+        return scroll
+
+    def _show_speaker_popup(self, pane: EnginePane) -> None:
+        """Review the vision pass's speaker attribution on this pane's current group.
+
+        Only this pane is touched. The vision pass runs against a single engine
+        and the two engines' group ids do not correspond, so writing the other
+        pane's group would invent an attribution for an unrelated text box.
+
+        The model's own call and reasoning are shown read-only; saving records
+        the human's answer. Nothing is written unless a roster entry is picked,
+        so opening the popup on a group the vision pass never saw and pressing
+        Save is a no-op.
+        """
+        group = pane.json_group()
+        if group is None:
+            logger.warning(f"Group {pane.group_id} not found for speaker popup.")
+            return
+
+        content = BoxLayout(orientation="vertical", padding=10, spacing=6)
+        content.add_widget(
+            Label(
+                text=f"Speaker — {pane.name} group {pane.group_id}",
+                size_hint_y=None,
+                height=28,
+                bold=True,
+            )
+        )
+        radios, other_text = self._build_speaker_rows(content, group.get(SPEAKER_KEY))
+        cap_radios = self._build_cap_colour_row(content, group.get(CAP_COLOUR_KEY))
+
+        summary = Label(
+            text=self._vision_summary(group),
+            size_hint_y=None,
+            height=24,
+            font_size="13sp",
+            color=(1, 1, 0, 1),
+            halign="left",
+            valign="middle",
+        )
+        summary.bind(size=summary.setter("text_size"))
+        content.add_widget(summary)
+        content.add_widget(self._build_vision_note_view((group.get(VISION_NOTE_KEY) or "").strip()))
+
+        error_label = Label(
+            text="", size_hint_y=None, height=22, font_size="13sp", color=(1, 0.4, 0.4, 1)
+        )
+        content.add_widget(error_label)
+
+        button_layout = BoxLayout(spacing=10, size_hint_y=None, height=44)
+        popup = Popup(
+            title="Speaker",
+            content=content,
+            size_hint=(None, None),
+            # Tall enough that the roster rows do not squeeze the vision-note
+            # view, which is the only child that gives up space (size_hint_y=1).
+            # Every roster entry added costs 36px here (row plus spacing).
+            size=(560, 900),
+            auto_dismiss=False,
+        )
+
+        def on_save(_inst: Button) -> None:
+            selected = next((n for n, c in radios.items() if c.active), None)
+            if selected is None:
+                popup.dismiss()
+                return
+            if selected == SPEAKER_OTHER_OPTION:
+                free_text = other_text.text.strip()
+                if not free_text:
+                    error_label.text = f'Type a name for "{OTHER_PREFIX}", or pick a roster entry.'
+                    return
+                speaker = OTHER_PREFIX + free_text
+            else:
+                speaker = selected
+            cap = next((c for c, cb in cap_radios.items() if cb.active), CAP_COLOUR_NONE)
+            self._apply_speaker(pane, speaker, None if cap == CAP_COLOUR_NONE else cap)
+            popup.dismiss()
+
+        save_btn = Button(text="Save")
+        save_btn.bind(on_press=on_save)
+        cancel_btn = Button(text="Cancel")
+        cancel_btn.bind(on_press=lambda _: popup.dismiss())
+        button_layout.add_widget(save_btn)
+        button_layout.add_widget(cancel_btn)
+        content.add_widget(button_layout)
+        popup.open()
+
+    def _apply_speaker(self, pane: EnginePane, speaker: str, cap_colour: str | None) -> None:
+        """Write a reviewed speaker attribution to this pane's current group.
+
+        ``speaker_confidence`` becomes ``high`` — a human has now looked at the
+        art — and ``speaker_reviewed`` records that it was a human who did, which
+        the confidence alone cannot say. The population that was low-confidence
+        before review is preserved in the ``--queue-speakers`` file.
+        """
+        group = pane.json_group()
+        if group is None:
+            return
+        # Canonicalize before storing: the free-text box can produce doubled
+        # spaces, and a roster name typed behind "other:" is just that name.
+        speaker = normalize_speaker(speaker)
+        group[SPEAKER_KEY] = speaker
+        group[SPEAKER_CONFIDENCE_KEY] = REVIEWED_CONFIDENCE
+        group[SPEAKER_REVIEWED_KEY] = True
+        group[CAP_COLOUR_KEY] = cap_colour
+        self._has_changes = True
+        self._refresh_pane_labels()
+        logger.debug(
+            f'{pane.name} group {pane.group_id}: speaker set to "{speaker}" (cap {cap_colour}).'
+        )
 
     @staticmethod
     def _show_confirm_popup(  # noqa: PLR0913
