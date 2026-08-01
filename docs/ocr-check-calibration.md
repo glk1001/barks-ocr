@@ -9,6 +9,34 @@ Raw scripts and outputs behind every figure here:
 
 ---
 
+## Engine agreement is the completion metric
+
+Every page is OCR'd twice, by EasyOCR and PaddleOCR, and reconciled by hand until
+the two agree. A page both engines read identically has independent corroboration
+and needs nothing further; the rest is the work left. `ocr_check` reports it per
+volume, and it separates the corpus cleanly:
+
+```
+Engine agreement — 3595/5358 pages (67.1%):
+  Vol  1  ########################  100.0%  (155/155)
+  Vol 18  ##################         74.1%  (126/170)
+  Vol 19  ###                        12.4%  ( 21/170)
+```
+
+Vols 1-17 and 28 sit at 94-100%, vol 18 at 74%, and vols 19-27 and 29 at 2-12%.
+
+The comparison runs **once per page pair**, not once per engine — the surrounding
+loops visit each page twice, and comparing there would report every mismatch
+twice. It reads from the live `speech_page_json` rather than
+`SpeechPageGroup.speech_groups`, which is built at load time and would not see
+fixes applied earlier in the same pass.
+
+`only_in_easy` / `only_in_paddle` / `text_mismatch` came from `compare.py`, now
+deleted. The fold-in was verified equivalent: on vol 18 both report the same
+10 / 13 / 65.
+
+---
+
 ## The two failure modes are not symmetric
 
 `_text_fits_in_box` derives the font size from `box_h / n_lines` and then tests only
@@ -56,6 +84,60 @@ Reproduce: `scripts/old_vs_new.py <volumes>` → `outputs/old-vs-new-per-volume-
 
 ---
 
+## The em-dash rule, and what measuring it changed
+
+Two regexes became one positive rule: an em-dash needs a space, line break or
+text edge before it, and one of those, the end of the text, or terminal
+punctuation it hugs (`BEHIND —!`) after it. What it may not do is drift away from
+that punctuation (`WHAT GEEFS — ?`).
+
+Measured contexts, which is what settled the rule:
+
+| correct | | wrong | |
+|---|---|---|---|
+| `SP — SP` | 5599 | `alnum — \n` | 196 |
+| `SP — \n` | 2566 | `alnum — $` | 185 |
+| `SP — $` | 2000 | `alnum — alnum` | 62 |
+| `—!` hugging | 90 | `alnum — SP` | 31 |
+| `! —` between clauses | 191 | `SP — —` doubled | 30 |
+| | | `— !` adrift | 37 |
+
+**The old check was over-flagging, and the acknowledgements prove it.** Its
+`[!?]\s+—` half fired on 191 occurrences of `FIGURE THIS OUT! — UH, OH!`, which
+is correct usage — and **60 of the 75 `dash_wrong_space` acknowledgements in the
+corpus were dismissals of exactly that**. Meanwhile it missed ~400 real breaches.
+Net effect of the rewrite: **+493 real catches, −183 false positives**.
+
+Old issue names are honoured as aliases when reading `acknowledged_issues`
+(`_ACKNOWLEDGEMENT_ALIASES`), so none of the 75 dismissals was orphaned and no
+prelim file needed rewriting.
+
+## Checks added after measuring, and checks rejected after measuring
+
+Every candidate was counted against all 10,716 prelim files before being adopted.
+Added:
+
+| check | hits | |
+|---|---|---|
+| `text_mismatch` | 8080 | engines disagree on the text |
+| `only_in_paddle` / `only_in_easy` | 996 / 535 | one engine has a group the other lacks |
+| `double_hyphen` | 198 | a hyphen run standing in for an em-dash |
+| `whitespace` | 122 | outer, per-line trailing, or doubled |
+| `panel_num_mismatch` | 74 | text_box lies wholly inside a *different* panel |
+| `unbalanced_quotes` | 51 | odd number of `"` |
+| `invalid_type` | 26 | `caption`, `speech`, `dialogtext`, `dialogtext_bubble_id` |
+
+**Rejected, so they are not proposed again:**
+
+- **duplicate text on a page (2407), or within one panel (1020)** — legitimate:
+  two nephews both say `AYE!`.
+- **em-dash at a line break (2532)** — ordinary wrapping.
+- **soft hyphen at a line break (806)** — that *is* the wrap convention;
+  `speech_groupers` strips `­\n` when building `ai_text`. Only a soft hyphen
+  **not** at a line end is wrong, and there are 2.
+- **text_box not inside any panel (5.9%)** — balloons overhang gutters. Only the
+  "inside a *different* panel" variant is precise enough, at 0.2%.
+
 ## The `--fix-*` flags require a clean prelim repo
 
 The fixers rewrite `ai_text` and `panel_num` in place through a bare
@@ -80,6 +162,18 @@ Commit or stash them first, so this --fix pass can be undone
 `--force` overrides it, with a warning naming the count. If the prelim dir is
 not a git work tree the check degrades to a warning rather than blocking, so the
 tool still runs on a machine without the data repo.
+
+`--fix-whitespace` and `--fix-dashes` are the unattended ones — pure string
+cleanups with no judgement in them, unlike the wrapping fixes, which need
+cross-engine evidence. Two things learned building them:
+
+- **The dash fixer converts hyphen *runs*, not pairs.** 70 of the 221 runs in the
+  corpus are three hyphens or more, so a plain `--` swap turned `HOW ARE ---`
+  into `HOW ARE —-`. Caught by running the fixer against the repo and reading
+  `git diff` — which is the guard earning its keep on its first outing.
+- **61 of those runs touch a word**, so converting them leaves an em-dash that
+  `em_dash_spacing` then flags. That is intended: the transcription is now right
+  and only the spacing is open, which needs a human.
 
 ## `MAX_FIX_PASSES = 5`
 
