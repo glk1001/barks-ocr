@@ -6,6 +6,16 @@ __pycache__/
 logs/
 .env.runtime
 
+# Comic text, never committed. This repo is public, and a prelim groups file
+# holds the verbatim dialogue of an in-copyright Barks story -- the same
+# material the OCR corpus deliberately keeps in a private repo. Ignored by
+# pattern rather than by name so a stray copy cannot slip in under `git add .`.
+*-groups.json
+ocr-groups-example.json
+
+# Third-party tool download, not a dependency of anything here.
+epubcheck-*.zip
+
 # PyCharm / IntelliJ
 .idea/**/workspace.xml
 .idea/**/tasks.xml
