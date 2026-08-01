@@ -20,11 +20,18 @@ Read tool and writes JSON, which is ordinary subscription usage. The Python tool
 do only deterministic I/O.
 
 ```
-barks-ocr-vision-prep  --volume 1 --pages 076-085     # crop + build the queue
-   <Claude Code reads the crops, writes result.json per page>
+barks-ocr-vision-prep  --volume 1 --pages 076-085     # crop, queue, roster.txt
+   <Claude Code reads roster.txt + the crops, writes result.json per page>
 barks-ocr-vision-report --out-dir ~/barks-vision/vol01-076-085
-barks-ocr-vision-apply  --out-dir ~/barks-vision/vol01-076-085 --queue-out review.txt
+barks-ocr-vision-apply  --out-dir ~/barks-vision/vol01-076-085 \
+    --queue-out review.txt --queue-speakers speakers.txt
 ```
+
+Two queues, deliberately separate: `--queue-out` holds the proposed text
+corrections, `--queue-speakers` the groups whose speaker the model was unsure
+of. They are different jobs — one is a transcription check, the other is a look
+at the art — and the correction rate of each is only meaningful measured alone.
+`--speaker-confidences` selects which confidences to queue, default `low`.
 
 `--out-dir` defaults to `~/barks-vision/vol<NN>-<pages>`. **Not `/tmp`**: a
 snap-confined Firefox gets a private `/tmp` namespace and cannot open a report
@@ -55,7 +62,9 @@ Written onto each group in the prelim JSON by `vision_apply`:
 | key | values |
 |---|---|
 | `speaker` | roster name, `narrator`, `none`, `unknown`, or `other:<free text>` |
+| | roster: Donald, Huey, Dewey, Louie, `nephews`, Daisy, Gladstone, Scrooge, Gyro |
 | `speaker_confidence` | `high` / `medium` / `low` |
+| `speaker_reviewed` | `true` once a human has confirmed the speaker in the editor |
 | `cap_colour` | `red` / `blue` / `green`, or `null` when not visible |
 | `emphasis_spans` | `[[start, end, "bold"], …]` — char offsets into the **current** `ai_text` |
 | `vision_note` | the reasoning behind the call |
@@ -65,6 +74,49 @@ Written onto each group in the prelim JSON by `vision_apply`:
 Panel descriptions go to a sibling `{page}-panel-descriptions.json`, **not** into
 the group JSON: `final_groups.py` copies only the `groups` key and would silently
 drop a new top-level section.
+
+The roster lives in `utils/vision_schema.py` and is enforced only at *validation*
+time. So that the pass is not left guessing the names, `vision_prep` renders the
+whole vocabulary — roster, confidences, cap colours, emphasis kinds — from those
+same constants into **`<out-dir>/roster.txt`**, next to the crops. Read it before
+starting; otherwise a run that writes `Uncle Scrooge` for `Scrooge` fails
+`vision_apply` after the reading work is already done.
+
+It is generated, never hand-written, and rewritten on every prep run, so a name
+added to the roster reaches the next pass on its own.
+
+### One-off characters, and keeping them from splitting
+
+A character not on the roster goes behind the prefix: `other:Argus McFiendy`.
+In the pilot that mechanism carries 26 of 138 attributions, though for unnamed
+roles rather than named one-offs — `other:crows` (17), `other:crowd` and
+`other:football players` (4 each), `other:shopkeeper`.
+
+Free text is where drift gets in: `other: Argus` and `other:Argus` name one
+character and are two speakers. Both write paths therefore run
+`normalize_speaker` — outer and repeated whitespace collapsed, and a roster name
+written behind the prefix (`other:Donald`) unwrapped to the roster entry it
+already is. `vision_apply` canonicalizes *before* validating, so the value that
+is checked is the value that gets stored.
+
+Case is deliberately left alone. "McFiendy" has no safe automatic casing, and
+title-casing it would be a different kind of wrong, so case variants are
+surfaced for a human instead:
+
+```bash
+barks-ocr-speaker-census                 # whole corpus, ~5s
+barks-ocr-speaker-census --volume 1-3
+```
+
+It reports counts per name, spellings that collapse onto one speaker, anything
+off-roster or not in canonical form, and the free-form names used often enough
+to be worth promoting (`--promote-at`, default 10). It is read-only.
+
+**A recurring `other:` name is the signal to promote it** into `SPEAKER_OPTIONS`.
+It is then exact-matched, so its spelling can no longer drift, and `roster.txt`
+regenerates on the next prep. Genuinely one-off characters stay behind the
+prefix — putting a single story's villain on the roster would only make the
+editor's popup unusable.
 
 Design decisions worth not re-litigating:
 
@@ -78,8 +130,41 @@ Design decisions worth not re-litigating:
 - **Both the name and the colour.** Naming a nephew relies on the Huey-red /
   Dewey-blue / Louie-green convention, which was not firmly fixed in 1943 Barks.
   Recording `cap_colour` alongside keeps the mapping reversible if it turns out wrong.
+- **`nephews` is a roster entry.** Some stories give two or three of them the
+  same cap colour — 085 p3 of the pilot does — and some lines the three speak
+  together. `nephews` is the honest answer there, and is not the same as
+  `unknown`, which means the speaker could not be placed at all. Prefer it to
+  guessing a name; a guess is unrecoverable, a collective is not.
 - **`vision_` prefix on the reasoning fields.** The group already carries a
   Gemini-written `notes`; a bare `note` beside it would be a trap.
+- **The vocabulary lives in `utils/vision_schema.py`.** `vision_apply` validates
+  against it and the editor offers it back; a roster name in one but not the
+  other would be a trap that only shows up as a rejected result file.
+
+---
+
+## Reviewing the speaker calls in the editor
+
+Each engine column has a **Speaker** button. It opens the roster, the cap-colour
+row, and — read-only — what the vision pass itself said and why.
+
+It is deliberately **per-pane**, unlike Set Type and Set Flor. The vision pass
+runs against one engine, and the two engines' group ids do not correspond, so
+writing the other pane's group would invent an attribution for an unrelated text
+box.
+
+Saving records the human's answer, sets `speaker_confidence` to `high` — someone
+has now looked at the art — and sets `speaker_reviewed`, which is what
+distinguishes a confirmation from the model's own confident guess. The
+population that *was* low-confidence before review survives in the
+`--queue-speakers` file, so the correction rate is still measurable afterwards.
+
+Nothing is written unless a roster entry is picked: opening the popup on a group
+the vision pass never saw and pressing Save is a no-op. `other:` with an empty
+box is refused rather than saved as a nameless speaker.
+
+The pane header carries `[spkr: <name>]` once a group has one, so the queue can
+be walked without opening the popup on every entry.
 
 ---
 
@@ -135,8 +220,9 @@ wrong** (079 g16, 080 g6, 080 g7); 081 g3 and 083 g12 are correct. Recorded in
   `077 g1` (`YOU — YOU` → `YOU-YOU`) is solid. `085 g7`
   (`INVISIBLE SEEDS,` → `INVISIBLE, SEEDS,`) is explicitly low-confidence — the
   stored reading is the more sensible phrase and the mark is small; needs an eyeball.
-- **kivy_editor has no speaker field.** Worth adding only if review shows the
-  low-confidence calls are wrong often enough to matter.
+- **The speaker review has not been run yet.** The editor can now do it (below);
+  what it is for is measuring how often the low-confidence calls are wrong. Run
+  it on the pilot's 18 `low` entries before scaling the pass up.
 - **Scale is undecided.** 10 pages is a shakedown. Next step would be a full volume
   (~170 pages), then a decision about the remaining ~5400.
 - **24 pages have no prelim OCR at all** — see below. The tools no longer trip over
