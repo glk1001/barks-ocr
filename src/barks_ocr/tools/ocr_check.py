@@ -5,6 +5,7 @@ from datetime import UTC, datetime
 from difflib import SequenceMatcher
 from enum import Enum, auto
 from pathlib import Path
+from statistics import median
 
 import typer
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
@@ -32,16 +33,36 @@ from barks_ocr.utils.ocr_box import OcrBox, PointList
 # ── Text-fit constants ────────────────────────────────────────────────────────
 
 FIT_FONT_PATH = Path("/home/greg/Prj/fonts/verdana.ttf")
-FIT_WIDTH_TOLERANCE = 1.5  # allow 10% overflow (Verdana is not the comic's font)
-FIT_WIDTH_TOLERANCE_SFX = 4.0  # sound-effect lettering is stylized and often wider
+FIT_WIDTH_TOLERANCE = 1.5  # allow 50% overflow (Verdana is not the comic's font)
+FIT_WIDTH_TOLERANCE_SFX = 4.0  # allow 300% overflow: sound-effect lettering is stylized
 FIT_HEIGHT_FRACTION = 0.75  # derived font size ≈ box line height * this
 FIT_MIN_FONT_SIZE = 8
 MIN_MATCH_RATIO = 0.7  # SequenceMatcher threshold for cross-engine pairing
+MAX_FIX_PASSES = 5  # one fix can enable another; cap the re-check loop
+STYLIZED_TYPES = ("sound_effect", "background")
+
+# ── Line-height constants ─────────────────────────────────────────────────────
+# The fit check derives font size from box height / line count, so extra line
+# breaks only ever make text easier to pass. These catch that inverse failure by
+# comparing a group's line packing against the rest of its page.
+# Real lettering is very consistent within a page, so correct groups cluster
+# tightly around the median and 0.9 leaves headroom without catching them. The
+# false-positive knee is at 0.95, where the flag rate jumps ~3x.
+LINE_HEIGHT_OUTLIER_FRACTION = 0.9  # below this * page median => surplus line breaks
+MIN_GROUPS_FOR_LINE_HEIGHT = 5  # too few groups for a trustworthy page median
 
 _FIT_FONT_MISSING_WARNED: list[bool] = [False]
 _FIT_MEASURE_DRAW = ImageDraw.Draw(Image.new("RGB", (1, 1)))
 
 # ── Issue data ────────────────────────────────────────────────────────────────
+
+
+@dataclass(frozen=True)
+class PageLineHeights:
+    """Median implied line height for a page, in this engine and the other one."""
+
+    own: float | None
+    other: float | None
 
 
 @dataclass
@@ -151,6 +172,88 @@ def _text_fits_in_box(  # noqa: C901
         f" horizontal=[{msg_h}] vertical=[{msg_v}]"
     )
     return False
+
+
+def _is_stylized(group: dict) -> bool:
+    """Whether the group's lettering is stylized, so its metrics are unreliable."""
+    return (group.get("type") or "").strip().lower() in STYLIZED_TYPES
+
+
+def _fit_params(group: dict) -> tuple[bool, float]:
+    """Return the (strict, width_tolerance) fit parameters for a group.
+
+    Keyed off the group's ``type``: only unknown types get the strict
+    single-orientation check; the stylized types also get a wider tolerance.
+    """
+    group_type = (group.get("type") or "").strip().lower()
+    stylized_types = STYLIZED_TYPES
+    strict = group_type not in ("dialogue", "narration", *stylized_types)
+    width_tolerance = (
+        FIT_WIDTH_TOLERANCE_SFX if group_type in stylized_types else FIT_WIDTH_TOLERANCE
+    )
+    return strict, width_tolerance
+
+
+def _group_text_fits(group: dict, fanta_page: str = "") -> bool:
+    """Return whether the group's own ai_text fits its own text_box."""
+    strict, width_tolerance = _fit_params(group)
+    return _text_fits_in_box(
+        (group.get("ai_text") or "").strip(),
+        group.get("text_box") or [],
+        fanta_page,
+        strict=strict,
+        width_tolerance=width_tolerance,
+    )
+
+
+def _implied_line_height(group: dict) -> float | None:
+    """Box height per text line, or None when the group cannot be measured.
+
+    Stylized groups are excluded: their lettering size is deliberately unlike
+    the surrounding dialogue, so they are neither judged nor used as evidence.
+    """
+    ai_text = (group.get("ai_text") or "").strip()
+    text_box = group.get("text_box") or []
+    if not ai_text or not text_box or _is_stylized(group):
+        return None
+
+    _box_w, box_h = _box_wh(text_box)
+    if box_h <= 0:
+        return None
+
+    return box_h / max(1, len(ai_text.split("\n")))
+
+
+def _page_median_line_height(json_groups: dict) -> float | None:
+    """Median implied line height for a page, or None if too few groups to judge."""
+    heights = [h for g in json_groups.values() if (h := _implied_line_height(g)) is not None]
+    if len(heights) < MIN_GROUPS_FOR_LINE_HEIGHT:
+        return None
+    return median(heights)
+
+
+def _is_line_height_outlier(group: dict, page_median: float | None) -> bool:
+    """Whether the group's lines are packed far tighter than the page norm.
+
+    This catches the inverse of the fit check. ``_text_fits_in_box`` derives the
+    font size from box height / line count, so surplus line breaks shrink the
+    font and always pass — only too *few* lines can ever fail it. A group whose
+    implied line height sits well below the rest of the page is the signature of
+    a spurious line break.
+    """
+    if page_median is None:
+        return False
+
+    line_height = _implied_line_height(group)
+    if line_height is None:
+        return False
+
+    return line_height < page_median * LINE_HEIGHT_OUTLIER_FRACTION
+
+
+def _layout_ok(group: dict, fanta_page: str, page_median: float | None) -> bool:
+    """Whether a group's text both fits its box and is wrapped like the page norm."""
+    return _group_text_fits(group, fanta_page) and not _is_line_height_outlier(group, page_median)
 
 
 def _apply_line_pattern(source_text: str, pattern_text: str) -> str:
@@ -269,12 +372,11 @@ class OcrChecker:
             for pg in page_groups:
                 pages[pg.fanta_page][pg.ocr_index] = pg
 
-            title_issues: list[IssueFound] = []
-            for fanta_page in sorted(pages):
-                variants = pages[fanta_page]
-                for ocr_index, page_group in variants.items():
-                    other = variants.get(_other_ocr_type(ocr_index))
-                    title_issues.extend(self._check_page_group(page_group, page_panel_boxes, other))
+            title_issues, passes = self._check_title_to_convergence(
+                title_str, pages, page_panel_boxes
+            )
+            if passes > 1:
+                logger.info(f'"{title_str}": converged after {passes} passes.')
 
             if title_issues:
                 print(f'Issues in "{title_str}" (Vol. {volume}):')
@@ -288,6 +390,58 @@ class OcrChecker:
         self._print_issues_summary(all_issues)
         self._write_queue_file(all_issues, output_file)
 
+    # ── Per-title passes ──────────────────────────────────────────────────────
+
+    def _check_title_to_convergence(
+        self,
+        title_str: str,
+        pages: dict[str, dict[OcrTypes, SpeechPageGroup]],
+        page_panel_boxes: TitlePagesPanelBoxes,
+    ) -> tuple[list[IssueFound], int]:
+        """Re-run the check pass until one applies no fixes. Returns (issues, passes).
+
+        A fix can supply exactly the donor another group was waiting on — pages
+        are checked and saved in order, so a group never sees a donor repaired
+        later in the same pass. Repeating until nothing changes lets those
+        knock-on fixes land in one invocation. Only the final pass's issues are
+        returned; earlier passes list issues that were then fixed.
+        """
+        title_issues, there_were_fixes = self._check_title_pages(pages, page_panel_boxes)
+        passes = 1
+        while there_were_fixes and passes < MAX_FIX_PASSES:
+            passes += 1
+            title_issues, there_were_fixes = self._check_title_pages(pages, page_panel_boxes)
+
+        if there_were_fixes:
+            logger.warning(
+                f'"{title_str}": still applying fixes after {MAX_FIX_PASSES} passes.'
+                f" Giving up — re-run to continue."
+            )
+
+        return title_issues, passes
+
+    def _check_title_pages(
+        self,
+        pages: dict[str, dict[OcrTypes, SpeechPageGroup]],
+        page_panel_boxes: TitlePagesPanelBoxes,
+    ) -> tuple[list[IssueFound], bool]:
+        """One full pass over a title's pages. Returns (issues, any_fixes_applied)."""
+        issues: list[IssueFound] = []
+        any_fixes = False
+
+        for fanta_page in sorted(pages):
+            variants = pages[fanta_page]
+            for ocr_index, page_group in variants.items():
+                other = variants.get(_other_ocr_type(ocr_index))
+                page_issues, there_were_fixes = self._check_page_group(
+                    page_group, page_panel_boxes, other
+                )
+                issues.extend(page_issues)
+                if there_were_fixes:
+                    any_fixes = True
+
+        return issues, any_fixes
+
     # ── Per-page / per-group checks ───────────────────────────────────────────
 
     def _check_page_group(
@@ -295,32 +449,55 @@ class OcrChecker:
         page_group: SpeechPageGroup,
         page_panel_boxes: TitlePagesPanelBoxes,
         other_page_group: SpeechPageGroup | None = None,
-    ) -> list[IssueFound]:
+    ) -> tuple[list[IssueFound], bool]:
+        """Check one page/engine, applying any enabled fixes.
+
+        Returns (issues, there_were_fixes).
+        """
         volume = page_group.fanta_vol
         fanta_page = page_group.fanta_page
         engine = str(page_group.ocr_index)
-        json_groups = page_group.speech_page_json.get("groups", {})
         per_page_boxes = page_panel_boxes.pages[fanta_page]
 
         issues: list[IssueFound] = []
         there_were_fixes = False
 
-        if self._fix_groups_order:
-            if page_group.renumber_groups():
+        if self._fix_groups_order and page_group.renumber_groups():
+            there_were_fixes = True
+
+        # Read the groups only after any renumbering: renumber_groups() rebinds
+        # speech_page_json["groups"] to a freshly keyed dict, and the checks must
+        # report the new group ids or the queue file would point at the old ones.
+        json_groups = page_group.speech_page_json.get("groups", {})
+
+        line_heights = PageLineHeights(
+            own=_page_median_line_height(json_groups),
+            other=_page_median_line_height(
+                other_page_group.speech_page_json.get("groups", {})
+                if other_page_group is not None
+                else {}
+            ),
+        )
+
+        for group_id, group in json_groups.items():
+            group_issues, there_were_group_fixes = self._check_group(
+                volume,
+                fanta_page,
+                engine,
+                group_id,
+                group,
+                per_page_boxes,
+                other_page_group,
+                line_heights,
+            )
+            issues.extend(group_issues)
+            if there_were_group_fixes:
                 there_were_fixes = True
-        else:
-            for group_id, group in json_groups.items():
-                group_issues, there_were_group_fixes = self._check_group(
-                    volume, fanta_page, engine, group_id, group, per_page_boxes, other_page_group
-                )
-                issues.extend(group_issues)
-                if there_were_group_fixes:
-                    there_were_fixes = True
 
         if there_were_fixes:
             page_group.save_json()
 
-        return issues
+        return issues, there_were_fixes
 
     def _check_group(  # noqa: C901, PLR0913
         self,
@@ -331,6 +508,7 @@ class OcrChecker:
         group: dict,
         page_panel_boxes: PagePanelBoxes,
         other_page_group: SpeechPageGroup | None = None,
+        line_heights: PageLineHeights = PageLineHeights(None, None),  # noqa: B008
     ) -> tuple[list[IssueFound], bool]:
         ai_text = (group.get("ai_text") or "").strip()
         notes = (group.get("notes") or "").strip()
@@ -376,72 +554,113 @@ class OcrChecker:
             add("dash_no_spaces")
 
         if ai_text:
-            fit_fixed, fit_issue = self._check_text_fits(
-                group, group_id, fanta_page, other_page_group
+            layout_fixed, layout_issue = self._check_text_layout(
+                group, group_id, fanta_page, other_page_group, line_heights
             )
-            if fit_fixed:
+            if layout_fixed:
                 there_were_fixes = True
-            if fit_issue:
-                add(fit_issue)
+            if layout_issue:
+                add(layout_issue)
 
         return issues, there_were_fixes
 
-    # ── Text-fit check + optional fix ─────────────────────────────────────────
+    # ── Text-layout check + optional fix ──────────────────────────────────────
 
-    def _check_text_fits(
+    def _check_text_layout(
         self,
         group: dict,
         group_id: str,
         fanta_page: str,
         other_page_group: SpeechPageGroup | None,
+        line_heights: PageLineHeights,
     ) -> tuple[bool, str | None]:
         """Return (fix_applied, issue_type_to_add).
 
-        - fits already → (False, None).
-        - doesn't fit, no fix flag → (False, "text_does_not_fit").
-        - doesn't fit, flag set, match found → rewrap in place → (True, None).
-        - doesn't fit, flag set, no match → warn → (False, "text_does_not_fit").
+        Two opposite wrapping failures are checked, both repaired the same way —
+        by transplanting the other engine's line pattern:
+
+        - too few lines: the text overflows its box → "text_does_not_fit".
+        - too many lines: the lines are packed far tighter than the rest of the
+          page, which the fit check cannot see → "too_many_lines".
+
+        Well-formed → (False, None). Ill-formed with no fix flag, or with the
+        transplant rejected → (False, issue_type). Transplant applied →
+        (True, None).
         """
         ai_text = (group.get("ai_text") or "").strip()
         text_box = group.get("text_box") or []
         if not ai_text or not text_box:
             return False, None
 
-        group_type = (group.get("type") or "").strip().lower()
-        stylized_types = ("sound_effect", "background")
-        strict = group_type not in ("dialogue", "narration", *stylized_types)
-        width_tolerance = (
-            FIT_WIDTH_TOLERANCE_SFX if group_type in stylized_types else FIT_WIDTH_TOLERANCE
-        )
-
-        if _text_fits_in_box(
-            ai_text, text_box, fanta_page, strict=strict, width_tolerance=width_tolerance
-        ):
+        if not _group_text_fits(group, fanta_page):
+            issue = "text_does_not_fit"
+        elif _is_line_height_outlier(group, line_heights.own):
+            issue = "too_many_lines"
+        else:
             return False, None
 
         if not self._fix_newlines:
-            return False, "text_does_not_fit"
+            return False, issue
+
+        if not self._transplant_line_pattern(
+            group, group_id, fanta_page, other_page_group, line_heights
+        ):
+            return False, issue
+
+        return True, None
+
+    @staticmethod
+    def _transplant_line_pattern(
+        group: dict,
+        group_id: str,
+        fanta_page: str,
+        other_page_group: SpeechPageGroup | None,
+        line_heights: PageLineHeights,
+    ) -> bool:
+        """Rewrap group's ai_text to the other engine's line pattern, if that helps.
+
+        Returns whether ai_text was changed. This is the non-interactive
+        equivalent of the kivy editor's "Copy Fmt" button. The donor must itself
+        be well laid out, and the rewrapped result must be too, or nothing is
+        written.
+        """
+        ai_text = (group.get("ai_text") or "").strip()
 
         match = _find_matching_group(group, other_page_group)
         if match is None:
             logger.warning(
-                f"Group {group_id}: text does not fit text_box and no matching"
+                f"Group {group_id}: badly wrapped text and no matching"
                 f" group found in the other engine to transplant newlines from."
             )
-            return False, "text_does_not_fit"
+            return False
+
+        if not _layout_ok(match, fanta_page, line_heights.other):
+            logger.warning(
+                f"Group {group_id}: badly wrapped text but the matching group"
+                f" in the other engine is not well laid out either,"
+                f" so its line pattern is not worth transplanting."
+            )
+            return False
 
         pattern_text = (match.get("ai_text") or "").strip()
         new_text = _apply_line_pattern(ai_text, pattern_text)
         if new_text == ai_text:
             logger.warning(
-                f"Group {group_id}: text does not fit but line-pattern transplant"
+                f"Group {group_id}: badly wrapped text but line-pattern transplant"
                 f" produced no change."
             )
-            return False, "text_does_not_fit"
+            return False
+
+        if not _layout_ok({**group, "ai_text": new_text}, fanta_page, line_heights.own):
+            logger.warning(
+                f"Group {group_id}: line-pattern transplant did not produce a well"
+                f" laid out result, so ai_text was left unchanged."
+            )
+            return False
 
         group["ai_text"] = new_text
         logger.info(f"Group {group_id}: rewrapped ai_text using other-engine pattern.")
-        return True, None
+        return True
 
     # ── Predicates ────────────────────────────────────────────────────────────
 
