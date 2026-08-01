@@ -79,7 +79,10 @@ A group is flagged when `box_h / n_lines` falls below this fraction of the page 
 cleaned, so their wrapping reflects deliberate choices and they make the threshold look
 far more aggressive than it is. Vols 19 and 21 are the honest sample.
 
-Flag rate by threshold:
+> **Superseded 2026-08-01.** The sweep below measured a biased metric, and the case it
+> cites has since been fixed on disk (vol 18 page 031 group 15 now reads three lines at
+> ratio 1.068), so it can no longer serve as a regression test. Kept for the record;
+> the current values come from the two sections that follow.
 
 | threshold | vol 19 | vol 21 | vol 18 (already fixed at 0.8) |
 |---|---|---|---|
@@ -89,15 +92,81 @@ Flag rate by threshold:
 | 0.85 | 239 (6.9%) | 283 (6.8%) | 29 (0.7%) |
 | 0.80 | 203 (5.9%) | 254 (6.1%) | 0 (0.0%) |
 
-The uncleaned volumes show a broad plateau from 0.75 to 0.92 and then a jump at 0.95
-(vol 19: 271 → 397). **0.95 is the false-positive knee; 0.90 sits safely below it with
-headroom.** Do not raise it without re-running this sweep.
-
-The value was raised from an initial 0.8 because a real case sat at **0.82** — vol 18
-page 031 group 15, where easyocr split `LOOK AT 'EM DIVE!` across two lines, dropping
-the derived font from 28px to 22px while paddleocr had it right.
-
 Reproduce: `scripts/threshold.py <volumes>`, `scripts/page_fonts.py <vol> <page> <engine>`.
+
+### The metric was biased by line count
+
+`box_h / n_lines` is **not** the line height. It is the line height plus the balloon's
+vertical padding divided by the line count:
+
+```
+box_h = n_lines * line_height + padding    =>    box_h/n = line_height + padding/n
+```
+
+The padding is charged once but divided by `n`, so short groups measure high. Median
+ratio to the page median, by line count (vols 1, 19, 21, easyocr):
+
+| n_lines | 1 | 2 | 3 | 4 | 5 | 6+ |
+|---|---|---|---|---|---|---|
+| median ratio | **1.188** | 1.020 | 0.998 | 0.986 | 0.976 | 0.959 |
+| % flagged at 0.9 | 13.7% | 8.5% | 9.6% | 12.8% | 18.1% | 19.9% |
+
+One-line groups sat 19% above the page median. Left in the median they inflated it and
+pushed correctly wrapped multi-line groups under the threshold — and they were *also*
+being judged, which is meaningless: **24% of all flags were on single-line groups**, and
+one line cannot be too many lines. `MIN_LINES_FOR_LINE_HEIGHT = 2` drops them from both
+roles at once, since `_implied_line_height` feeds the median and the test alike.
+
+`type: title` joined `STYLIZED_TYPES` in the same pass. A splash-page logo is hand-drawn
+at one huge word per line — vol 1 page 010's is 160px per line against a page median of
+46 — so it is evidence of nothing. It also cleared 18 bogus `text_does_not_fit` flags
+corpus-wide, since `STYLIZED_TYPES` drives `_fit_params` too.
+
+The reported case was **vol 1 page 010 panel 4**: `PULL, YOU SWABS, / THERE'S A BIG BLOW /
+COMING!` — correctly wrapped, flagged in both engines. That page has only seven
+measurable groups, three of them polluting: the title logo (ratio 3.48) and two one-line
+`AYE!` balloons (1.44, 1.48). They pulled the median from ~42 to 46.
+
+A regression model (`box_h = L*n + P` fitted per page) was tried and **rejected**: it
+centres the ratio across line counts but widens the spread, raising flag rates at the
+same threshold (vol 18 0.3% → 2.8%).
+
+### Two bands, because one threshold cannot do both jobs
+
+With the metric fixed, vol 1 shows a cliff exactly where the uncleaned volumes show a
+plateau:
+
+| threshold | vol 1 (cleaned) | vol 18 (cleaned) | vol 19 | vol 21 |
+|---|---|---|---|---|
+| 0.95 | 375 (19.3%) | 126 (3.2%) | 225 (7.7%) | 281 (8.0%) |
+| 0.92 | 168 (8.6%) | 24 (0.6%) | 155 (5.3%) | 185 (5.3%) |
+| 0.90 | 77 (4.0%) | 9 (0.2%) | 147 (5.1%) | 172 (4.9%) |
+| **0.85** | **6 (0.3%)** | 6 (0.2%) | 133 (4.6%) | 151 (4.3%) |
+| 0.80 | 4 (0.2%) | 2 (0.1%) | 106 (3.6%) | 127 (3.6%) |
+
+A cleaned volume should not hold 66 real wrapping errors bunched in one 0.05-wide band,
+and the uncleaned volumes lose only ~9% of their flags across the same span. So the band
+is split rather than picked:
+
+- **below `LINE_HEIGHT_OUTLIER_FRACTION = 0.85`** → `too_many_lines`, always reported;
+- **0.85 to `LINE_HEIGHT_MARGINAL_FRACTION = 0.9`** → `too_many_lines_marginal`, reported
+  only with `--include-marginal`.
+
+Both edges are CLI-tunable (`--line-height-threshold`, `--line-height-marginal`).
+
+| | default `too_many_lines` | `--include-marginal` adds |
+|---|---|---|
+| vol 1 (cleaned) | 6 | +71 |
+| vol 18 (cleaned) | 6 | +3 |
+| vol 19 | 131 | +13 |
+| vol 21 | 147 | +16 |
+
+The split is what makes the marginal band's character visible: it is nearly all of vol
+1's flags and almost none of vol 19's.
+
+Every line-height issue now carries its ratio, in the console line and as a **sixth
+field** in the queue file, so a queue can be triaged before it is worked.
+`load_queue_file` reads only the first five fields, so the editor is unaffected.
 
 ### Fixability — the check earns its keep
 
@@ -121,8 +190,13 @@ Reproduce: `scripts/show_fixes.py <out> <vol> <limit>` → `outputs/vol19-21-fix
 
 ### `MIN_GROUPS_FOR_LINE_HEIGHT = 5`
 
-A page median from fewer than five measurable groups is not worth trusting. Stylized
-types (`sound_effect`, `background`) are excluded both as subjects and as evidence —
+A page median from fewer than five measurable groups is not worth trusting. Raising the
+bar for what counts as measurable took the unjudged-page count from 34 to 94; that is
+the price of the fix, and it is what makes page 010 come out right — it has exactly four
+multi-line groups, and at a minimum of 4 its paddleocr `g3` is flagged again at 0.83.
+
+Stylized types (`sound_effect`, `background`, `title`) are excluded both as subjects and
+as evidence —
 their lettering is deliberately unlike the surrounding dialogue.
 
 ---
@@ -135,5 +209,7 @@ their lettering is deliberately unlike the surrounding dialogue.
 - **`style == "emphasized"` is not ground truth for word-level bold.** It is a
   *whole-group* flag. On vol 1 pages 076-085, no group carries it despite the pages
   containing five unmistakable bold words. Do not use it to validate the vision pass.
-- **`--volume N` aborts on a missing prelim file** rather than skipping the page.
-  Vols 8, 9, 20 and vol 1 (page 500) all trip this. Use `--title` as a workaround.
+- **The marginal band has not been checked against the art.** It is called noise on
+  distributional evidence — a cliff on cleaned volumes against a plateau on uncleaned
+  ones — not because anyone looked at the pages. `--include-marginal` plus the ratio in
+  the queue file is there so that can be settled properly.

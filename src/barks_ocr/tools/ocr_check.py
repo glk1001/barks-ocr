@@ -39,17 +39,28 @@ FIT_HEIGHT_FRACTION = 0.75  # derived font size ≈ box line height * this
 FIT_MIN_FONT_SIZE = 8
 MIN_MATCH_RATIO = 0.7  # SequenceMatcher threshold for cross-engine pairing
 MAX_FIX_PASSES = 5  # one fix can enable another; cap the re-check loop
-STYLIZED_TYPES = ("sound_effect", "background")
+# Lettering that is deliberately unlike the surrounding dialogue, so neither its
+# width nor its line height says anything about the page. "title" is the
+# splash-page logo: hand-drawn, one huge word per line, and nothing Verdana can
+# model — measured strictly it produced 18 bogus text_does_not_fit flags.
+STYLIZED_TYPES = ("sound_effect", "background", "title")
 
 # ── Line-height constants ─────────────────────────────────────────────────────
 # The fit check derives font size from box height / line count, so extra line
 # breaks only ever make text easier to pass. These catch that inverse failure by
 # comparing a group's line packing against the rest of its page.
 # Real lettering is very consistent within a page, so correct groups cluster
-# tightly around the median and 0.9 leaves headroom without catching them. The
-# false-positive knee is at 0.95, where the flag rate jumps ~3x.
-LINE_HEIGHT_OUTLIER_FRACTION = 0.9  # below this * page median => surplus line breaks
+# tightly around the median.
+#
+# Two bands, because one threshold cannot serve both needs. Below the outlier
+# fraction the packing is unambiguous and always reported. Between the two lies
+# a band that is mostly noise — on the cleaned vol 1, 66 of 72 flags sat there,
+# while the uncleaned vols 19/21 barely change across it (5.1% -> 4.6%) — so it
+# is reported only on request, as "too_many_lines_marginal".
+LINE_HEIGHT_OUTLIER_FRACTION = 0.85  # below this * page median => surplus line breaks
+LINE_HEIGHT_MARGINAL_FRACTION = 0.9  # ...and below this => marginal, opt-in
 MIN_GROUPS_FOR_LINE_HEIGHT = 5  # too few groups for a trustworthy page median
+MIN_LINES_FOR_LINE_HEIGHT = 2  # one-line boxes measure high; see _implied_line_height
 
 _FIT_FONT_MISSING_WARNED: list[bool] = [False]
 _FIT_MEASURE_DRAW = ImageDraw.Draw(Image.new("RGB", (1, 1)))
@@ -74,6 +85,15 @@ class MissingPrelim:
     fanta_pages: list[str]
 
 
+@dataclass(frozen=True)
+class LineHeightLimits:
+    """The two line-height bands, and whether the marginal one is reported."""
+
+    outlier: float = LINE_HEIGHT_OUTLIER_FRACTION
+    marginal: float = LINE_HEIGHT_MARGINAL_FRACTION
+    include_marginal: bool = False
+
+
 @dataclass
 class IssueFound:
     volume: int
@@ -84,6 +104,7 @@ class IssueFound:
     panel_num: int
     text: str
     notes: str
+    ratio: float | None = None
 
 
 def _format_page_ranges(fanta_pages: list[str]) -> str:
@@ -240,17 +261,29 @@ def _implied_line_height(group: dict) -> float | None:
 
     Stylized groups are excluded: their lettering size is deliberately unlike
     the surrounding dialogue, so they are neither judged nor used as evidence.
+
+    Single-line groups are excluded for a separate reason. ``box_h / n_lines``
+    is not the line height — it is the line height plus the balloon's vertical
+    padding divided by the line count. A one-line box charges the whole padding
+    to its only line, so it measures about 19% high corpus-wide (median ratio
+    to the page median: 1.19 at one line against 1.00 at three). Left in, they
+    inflate the median and push correctly wrapped multi-line groups under the
+    threshold. They are not worth judging either: one line cannot be too many.
     """
     ai_text = (group.get("ai_text") or "").strip()
     text_box = group.get("text_box") or []
     if not ai_text or not text_box or _is_stylized(group):
         return None
 
+    n_lines = len(ai_text.split("\n"))
+    if n_lines < MIN_LINES_FOR_LINE_HEIGHT:
+        return None
+
     _box_w, box_h = _box_wh(text_box)
     if box_h <= 0:
         return None
 
-    return box_h / max(1, len(ai_text.split("\n")))
+    return box_h / n_lines
 
 
 def _page_median_line_height(json_groups: dict) -> float | None:
@@ -261,28 +294,46 @@ def _page_median_line_height(json_groups: dict) -> float | None:
     return median(heights)
 
 
-def _is_line_height_outlier(group: dict, page_median: float | None) -> bool:
-    """Whether the group's lines are packed far tighter than the page norm.
+def _line_height_ratio(group: dict, page_median: float | None) -> float | None:
+    """Return the group's implied line height as a fraction of its page's median.
 
-    This catches the inverse of the fit check. ``_text_fits_in_box`` derives the
-    font size from box height / line count, so surplus line breaks shrink the
-    font and always pass — only too *few* lines can ever fail it. A group whose
+    This is the inverse of the fit check. ``_text_fits_in_box`` derives the font
+    size from box height / line count, so surplus line breaks shrink the font
+    and always pass — only too *few* lines can ever fail it. A group whose
     implied line height sits well below the rest of the page is the signature of
-    a spurious line break.
+    a spurious line break, and how far below is how confident that reading is.
+
+    Returns None when the group cannot be judged: single-line and stylized
+    groups, and pages with too few groups to hold a trustworthy median.
     """
-    if page_median is None:
-        return False
+    if page_median is None or page_median <= 0:
+        return None
 
     line_height = _implied_line_height(group)
     if line_height is None:
-        return False
+        return None
 
-    return line_height < page_median * LINE_HEIGHT_OUTLIER_FRACTION
+    return line_height / page_median
 
 
-def _layout_ok(group: dict, fanta_page: str, page_median: float | None) -> bool:
+def _is_line_height_outlier(
+    group: dict, page_median: float | None, fraction: float = LINE_HEIGHT_OUTLIER_FRACTION
+) -> bool:
+    """Whether the group's lines are packed far tighter than the page norm."""
+    ratio = _line_height_ratio(group, page_median)
+    return ratio is not None and ratio < fraction
+
+
+def _layout_ok(
+    group: dict,
+    fanta_page: str,
+    page_median: float | None,
+    fraction: float = LINE_HEIGHT_OUTLIER_FRACTION,
+) -> bool:
     """Whether a group's text both fits its box and is wrapped like the page norm."""
-    return _group_text_fits(group, fanta_page) and not _is_line_height_outlier(group, page_median)
+    return _group_text_fits(group, fanta_page) and not _is_line_height_outlier(
+        group, page_median, fraction
+    )
 
 
 def _apply_line_pattern(source_text: str, pattern_text: str) -> str:
@@ -372,8 +423,10 @@ class OcrChecker:
         fix_panel_nums: bool,
         fix_groups_order: bool,
         fix_newlines: bool,
+        line_height_limits: LineHeightLimits | None = None,
     ) -> None:
         self._comics_database = comics_database
+        self._limits = line_height_limits or LineHeightLimits()
         self._fix_panel_nums = fix_panel_nums
         self._fix_groups_order = fix_groups_order
         self._fix_newlines = fix_newlines
@@ -554,7 +607,7 @@ class OcrChecker:
         issues: list[IssueFound] = []
         there_were_fixes = False
 
-        def add(issue_type: str) -> None:
+        def add(issue_type: str, ratio: float | None = None) -> None:
             issues.append(
                 IssueFound(
                     volume=volume,
@@ -565,6 +618,7 @@ class OcrChecker:
                     panel_num=panel_num,
                     text=ai_text,
                     notes=notes,
+                    ratio=ratio,
                 )
             )
 
@@ -591,13 +645,13 @@ class OcrChecker:
             add("dash_no_spaces")
 
         if ai_text:
-            layout_fixed, layout_issue = self._check_text_layout(
+            layout_fixed, layout_issue, layout_ratio = self._check_text_layout(
                 group, group_id, fanta_page, other_page_group, line_heights
             )
             if layout_fixed:
                 there_were_fixes = True
             if layout_issue:
-                add(layout_issue)
+                add(layout_issue, layout_ratio)
 
         return issues, there_were_fixes
 
@@ -610,44 +664,49 @@ class OcrChecker:
         fanta_page: str,
         other_page_group: SpeechPageGroup | None,
         line_heights: PageLineHeights,
-    ) -> tuple[bool, str | None]:
-        """Return (fix_applied, issue_type_to_add).
+    ) -> tuple[bool, str | None, float | None]:
+        """Return (fix_applied, issue_type_to_add, line_height_ratio).
 
         Two opposite wrapping failures are checked, both repaired the same way —
         by transplanting the other engine's line pattern:
 
         - too few lines: the text overflows its box → "text_does_not_fit".
         - too many lines: the lines are packed far tighter than the rest of the
-          page, which the fit check cannot see → "too_many_lines".
+          page, which the fit check cannot see → "too_many_lines", or
+          "too_many_lines_marginal" in the noisier band just above it.
 
-        Well-formed → (False, None). Ill-formed with no fix flag, or with the
-        transplant rejected → (False, issue_type). Transplant applied →
-        (True, None).
+        Well-formed → (False, None, ratio). Ill-formed with no fix flag, or with
+        the transplant rejected → (False, issue_type, ratio). Transplant applied
+        → (True, None, ratio).
         """
         ai_text = (group.get("ai_text") or "").strip()
         text_box = group.get("text_box") or []
         if not ai_text or not text_box:
-            return False, None
+            return False, None, None
+
+        ratio = _line_height_ratio(group, line_heights.own)
 
         if not _group_text_fits(group, fanta_page):
             issue = "text_does_not_fit"
-        elif _is_line_height_outlier(group, line_heights.own):
+        elif ratio is not None and ratio < self._limits.outlier:
             issue = "too_many_lines"
+        elif self._limits.include_marginal and ratio is not None and ratio < self._limits.marginal:
+            issue = "too_many_lines_marginal"
         else:
-            return False, None
+            return False, None, ratio
 
         if not self._fix_newlines:
-            return False, issue
+            return False, issue, ratio
 
         if not self._transplant_line_pattern(
             group, group_id, fanta_page, other_page_group, line_heights
         ):
-            return False, issue
+            return False, issue, ratio
 
-        return True, None
+        return True, None, ratio
 
-    @staticmethod
     def _transplant_line_pattern(
+        self,
         group: dict,
         group_id: str,
         fanta_page: str,
@@ -671,7 +730,7 @@ class OcrChecker:
             )
             return False
 
-        if not _layout_ok(match, fanta_page, line_heights.other):
+        if not _layout_ok(match, fanta_page, line_heights.other, self._limits.outlier):
             logger.warning(
                 f"Group {group_id}: badly wrapped text but the matching group"
                 f" in the other engine is not well laid out either,"
@@ -688,7 +747,9 @@ class OcrChecker:
             )
             return False
 
-        if not _layout_ok({**group, "ai_text": new_text}, fanta_page, line_heights.own):
+        if not _layout_ok(
+            {**group, "ai_text": new_text}, fanta_page, line_heights.own, self._limits.outlier
+        ):
             logger.warning(
                 f"Group {group_id}: line-pattern transplant did not produce a well"
                 f" laid out result, so ai_text was left unchanged."
@@ -776,19 +837,26 @@ class OcrChecker:
 
     @staticmethod
     def _write_queue_file(all_issues: list[IssueFound], output_file: Path) -> None:
-        """Write de-duplicated queue file: one entry per unique (vol, page, engine, group_id)."""
+        """Write de-duplicated queue file: one entry per unique (vol, page, engine, group_id).
+
+        A line-height issue carries its ratio as a sixth field, so a queue can be
+        triaged before it is worked. ``load_queue_file`` reads only the first
+        five fields, so the extra one costs the editor nothing.
+        """
         seen: set[tuple[int, str, str, str]] = set()
         queue_lines: list[str] = []
         for issue in all_issues:
             key = (issue.volume, issue.fanta_page, issue.engine, issue.group_id)
             if key not in seen:
                 seen.add(key)
+                ratio_str = "" if issue.ratio is None else f" {issue.ratio:.2f}"
                 queue_lines.append(
                     f"{issue.volume}"
                     f" {int(issue.fanta_page)}"
                     f" {issue.engine}"
                     f" {issue.group_id}"
                     f" {issue.issue_type}"
+                    f"{ratio_str}"
                 )
         output_file.write_text("\n".join(queue_lines) + ("\n" if queue_lines else ""))
         print(f'\nQueue file: "{output_file}" ({len(queue_lines)} entries).')
@@ -826,10 +894,11 @@ class OcrChecker:
     def _print_issue(issue: IssueFound) -> None:
         text_preview = issue.text.replace("\n", "\\n")[:60]
         notes_str = f", notes={issue.notes!r}" if issue.notes else ""
+        ratio_str = "" if issue.ratio is None else f" ratio={issue.ratio:.2f}"
         print(
             f"  [{issue.issue_type}]"
             f" page={issue.fanta_page} {issue.engine} group={issue.group_id}"
-            f" panel={issue.panel_num}"
+            f" panel={issue.panel_num}{ratio_str}"
             f" text={text_preview!r}{notes_str}"
         )
 
@@ -860,19 +929,42 @@ def main(  # noqa: PLR0913
     fix_panel_nums: bool = False,
     fix_groups_order: bool = False,
     fix_newlines: bool = False,
+    include_marginal: bool = typer.Option(
+        default=False,
+        help="Also report the noisier line-height band as 'too_many_lines_marginal'.",
+    ),
+    line_height_threshold: float = typer.Option(
+        LINE_HEIGHT_OUTLIER_FRACTION,
+        help="Flag as 'too_many_lines' below this fraction of the page median line height.",
+    ),
+    line_height_marginal: float = typer.Option(
+        LINE_HEIGHT_MARGINAL_FRACTION,
+        help="Upper edge of the marginal band; only used with --include-marginal.",
+    ),
 ) -> None:
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."
+        raise typer.BadParameter(err_msg)
+    if line_height_marginal < line_height_threshold:
+        err_msg = (
+            f"--line-height-marginal ({line_height_marginal}) must not be below"
+            f" --line-height-threshold ({line_height_threshold})."
+        )
         raise typer.BadParameter(err_msg)
 
     comics_database = ComicsDatabase()
     volumes = list(intspan(volumes_str)) if volumes_str else []
     title_list = get_titles(comics_database, volumes, title_str, exclude_non_comics=True)
 
-    output_file = output or _default_output_file(volumes_str)
-    OcrChecker(comics_database, fix_panel_nums, fix_groups_order, fix_newlines).check_titles(
-        title_list, output_file
+    limits = LineHeightLimits(
+        outlier=line_height_threshold,
+        marginal=line_height_marginal,
+        include_marginal=include_marginal,
     )
+    output_file = output or _default_output_file(volumes_str)
+    OcrChecker(
+        comics_database, fix_panel_nums, fix_groups_order, fix_newlines, limits
+    ).check_titles(title_list, output_file)
 
 
 if __name__ == "__main__":
