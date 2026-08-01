@@ -1,4 +1,5 @@
 # ruff: noqa: T201
+import subprocess
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import UTC, datetime
@@ -11,6 +12,7 @@ import typer
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
+from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_DIR
 from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePagesPanelBoxes, TitlePanelBoxes
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups, SpeechPageGroup
 from comic_utils.common_typer_options import TitleArg, VolumesArg
@@ -908,6 +910,77 @@ class OcrChecker:
 app = typer.Typer()
 
 
+MAX_DIRTY_PATHS_SHOWN = 10
+
+
+def _uncommitted_prelim_paths() -> list[str] | None:
+    """Return the prelim repo's uncommitted paths, or None if it is not a git work tree.
+
+    Returns:
+        Porcelain status lines, empty when the tree is clean; None when the
+        prelim directory is not version-controlled or git is unavailable.
+
+    """
+    git = ("git", "-C", str(OCR_PRELIM_DIR))
+    try:
+        inside = subprocess.run(  # noqa: S603
+            [*git, "rev-parse", "--is-inside-work-tree"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if inside.returncode != 0 or inside.stdout.strip() != "true":
+            return None
+        status = subprocess.run(  # noqa: S603
+            [*git, "status", "--porcelain"], capture_output=True, text=True, check=True
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+
+    return [line for line in status.stdout.splitlines() if line.strip()]
+
+
+def _check_prelim_repo_clean(*, force: bool) -> None:
+    """Abort a --fix run unless the prelim edits it will overwrite are recoverable.
+
+    The fixers rewrite ai_text and panel_num in place, with no backup. Requiring
+    a clean tree first is what makes ``git diff`` afterwards mean something, and
+    what lets the run be undone at all.
+
+    Args:
+        force: Skip the check, having accepted that the run cannot be undone.
+
+    Raises:
+        typer.Exit: When the prelim repo has uncommitted changes.
+
+    """
+    dirty = _uncommitted_prelim_paths()
+
+    if dirty is None:
+        logger.warning(
+            f'Prelim dir is not a git repo: "{OCR_PRELIM_DIR}".'
+            f" A --fix pass there cannot be undone."
+        )
+        return
+
+    if not dirty or force:
+        if dirty and force:
+            logger.warning(f"--force: overwriting with {len(dirty)} uncommitted change(s) present.")
+        return
+
+    print(f"ERROR: {len(dirty)} uncommitted change(s) in the prelim repo:")
+    for line in dirty[:MAX_DIRTY_PATHS_SHOWN]:
+        print(f"  {line}")
+    if len(dirty) > MAX_DIRTY_PATHS_SHOWN:
+        print(f"  ... and {len(dirty) - MAX_DIRTY_PATHS_SHOWN} more")
+    print(
+        f"\nCommit or stash them first, so this --fix pass can be undone:\n"
+        f'  git -C "{OCR_PRELIM_DIR}" add -A && git -C "{OCR_PRELIM_DIR}" commit\n'
+        f"\nOr re-run with --force to overwrite them anyway."
+    )
+    raise typer.Exit(1)
+
+
 def _default_output_file(volumes_str: str) -> Path:
     today = datetime.now(tz=UTC).date().isoformat()
     if volumes_str:
@@ -929,6 +1002,10 @@ def main(  # noqa: PLR0913
     fix_panel_nums: bool = False,
     fix_groups_order: bool = False,
     fix_newlines: bool = False,
+    force: bool = typer.Option(
+        default=False,
+        help="Run a --fix pass even with uncommitted prelim changes (they cannot be recovered).",
+    ),
     include_marginal: bool = typer.Option(
         default=False,
         help="Also report the noisier line-height band as 'too_many_lines_marginal'.",
@@ -951,6 +1028,9 @@ def main(  # noqa: PLR0913
             f" --line-height-threshold ({line_height_threshold})."
         )
         raise typer.BadParameter(err_msg)
+
+    if fix_panel_nums or fix_groups_order or fix_newlines:
+        _check_prelim_repo_clean(force=force)
 
     comics_database = ComicsDatabase()
     volumes = list(intspan(volumes_str)) if volumes_str else []

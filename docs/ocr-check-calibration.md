@@ -56,6 +56,31 @@ Reproduce: `scripts/old_vs_new.py <volumes>` → `outputs/old-vs-new-per-volume-
 
 ---
 
+## The `--fix-*` flags require a clean prelim repo
+
+The fixers rewrite `ai_text` and `panel_num` in place through a bare
+`save_json()` — no backup, unlike the kivy editor and `vision_apply`, which pass
+`save_json(backup_file=...)`.
+
+Since 2026-08-01 the prelim files are a private git repo
+(`~/Books/Carl Barks/Fantagraphics-restored-ocr/Prelim`, `barks-ocr-prelim`), so
+the answer is a guard rather than a backup: a `--fix` pass refuses to start
+unless the tree is clean. That is strictly better than a backup, because it
+forces the recoverable state to exist *before* the destructive write, and it
+makes `git diff` afterwards show exactly what the fixer did.
+
+```
+$ barks-ocr-check --volume 19 --fix-newlines
+ERROR: 3 uncommitted change(s) in the prelim repo:
+   M "Carl Barks Vol. 19 .../031-easyocr-gemini-prelim-groups.json"
+   ...
+Commit or stash them first, so this --fix pass can be undone
+```
+
+`--force` overrides it, with a warning naming the count. If the prelim dir is
+not a git work tree the check degrades to a warning rather than blocking, so the
+tool still runs on a machine without the data repo.
+
 ## `MAX_FIX_PASSES = 5`
 
 Pages are checked and saved in order, and within a page easyocr is processed before
