@@ -39,6 +39,22 @@ SPEAKER_OPTIONS: tuple[str, ...] = (
 ROSTER: frozenset[str] = frozenset(SPEAKER_OPTIONS)
 OTHER_PREFIX = "other:"
 
+# Database character tags that name somebody the roster already carries, under a
+# fuller form. Mapped rather than offered alongside: a closed set holding both
+# "Daisy" and "Daisy Duck" would make one character into two speakers, which is
+# the exact drift the closed set exists to prevent.
+#
+# The two "not in ... series" entries are not names at all -- they tag where a
+# story sits in the Fantagraphics series, and only look like cast because they
+# live in the character groups. They map to the character they are about.
+DB_CHARACTER_ALIASES: dict[str, str] = {
+    "Daisy Duck": "Daisy",
+    "Gladstone Gander": "Gladstone",
+    "Gyro Gearloose": "Gyro",
+    "Gyro not in GG series": "Gyro",
+    "Uncle Scrooge not in US series": "Scrooge",
+}
+
 # Glosses for the entries that are easy to use wrongly, rendered into the
 # roster file the vision pass is handed. The named cast needs no explanation.
 SPEAKER_NOTES: dict[str, str] = {

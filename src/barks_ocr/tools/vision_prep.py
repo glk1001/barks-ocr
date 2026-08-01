@@ -5,6 +5,14 @@ Crops each page into per-panel PNGs, writes a downscaled page overview, and dump
 the existing OCR groups as a compact JSON stub.  The output directory is then read
 by Claude Code (see ``vision_apply.py`` for the write-back side).
 
+**A story is the unit of work**, not a volume: ``--title`` is the primary
+selector.  The closed vocabulary the pass is validated against is per-story --
+it is the roster plus the characters the database tags as appearing in *this*
+story -- so a run spanning several stories can only be handed the union of their
+casts, which is looser and lets the pass name someone from the wrong story.
+``--volume`` with ``--pages`` still works for a deliberate page range, and warns
+when the range crosses titles.
+
 Every emitted image is quantized to a 256-colour palette.  This is not cosmetic:
 Claude Code's Read tool re-encodes any image over ~500KB as reduced-quality JPEG,
 which destroys the fine lettering that bold detection depends on.  Barks line art
@@ -28,9 +36,26 @@ from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from loguru import logger
 from PIL import Image
 
-from barks_ocr.utils.vision_schema import roster_text
+from barks_ocr.utils.story_cast import story_characters
+from barks_ocr.utils.vision_schema import (
+    BEATS_KEY,
+    CAPTURE_MODEL_KEY,
+    CAPTURE_PROMPT_VERSION_KEY,
+    CAPTURED_KEY,
+    CHARACTERS_KEY,
+    PANELS_OF_NOTE_KEY,
+    SETTING_KEY,
+    TIME_OF_DAY_KEY,
+    VISIBLE_TEXT_KEY,
+    roster_text,
+)
 
 app = typer.Typer()
+
+# The per-page capture template. Written with this page's panel numbers already
+# filled in, so `panels_of_note` is a choice from a list rather than a guess at
+# how many panels the page has.
+CAPTURE_STUB_FILE = "page-capture.json"
 
 # The vocabulary file dropped next to the queue. The roster is enforced only when
 # `vision_apply` validates, so it has to travel with the crops — otherwise the
@@ -160,14 +185,37 @@ def _prep_page(  # noqa: PLR0913
     groups = _trimmed_groups(page_group.speech_page_json)
     (page_dir / "groups.json").write_text(json.dumps(groups, indent=2) + "\n")
 
+    panel_nums = [box.panel_num for box in page_panel_boxes.panel_boxes]
+    (page_dir / CAPTURE_STUB_FILE).write_text(_capture_stub(panel_nums))
+
     return {
         "fanta_page": fanta_page,
         "title": title_str,
         "engine": engine.value,
         "panels": panel_files,
+        "panel_nums": panel_nums,
         "num_groups": len(groups),
         "status": "pending",
     }
+
+
+def _capture_stub(panel_nums: list[int]) -> str:
+    """Return the empty page-capture record for a page with these panels."""
+    stub = {
+        CHARACTERS_KEY: [],
+        SETTING_KEY: None,
+        TIME_OF_DAY_KEY: None,
+        VISIBLE_TEXT_KEY: [],
+        BEATS_KEY: [],
+        # Pre-listed so the choice is which of these panels is worth naming.
+        # Most pages need none; listing them all defeats the point.
+        PANELS_OF_NOTE_KEY: [],
+        "_panels_on_this_page": panel_nums,
+        CAPTURE_MODEL_KEY: None,
+        CAPTURE_PROMPT_VERSION_KEY: None,
+        CAPTURED_KEY: None,
+    }
+    return json.dumps(stub, indent=2) + "\n"
 
 
 def _default_out_dir(volume: int, pages: list[str]) -> Path:
@@ -179,6 +227,12 @@ def _default_out_dir(volume: int, pages: list[str]) -> Path:
     """
     span = pages[0] if len(pages) == 1 else f"{pages[0]}-{pages[-1]}"
     return DEFAULT_ROOT.expanduser() / f"vol{volume:02d}-{span}"
+
+
+def _slug(title_str: str) -> str:
+    """Return a directory-safe form of a story title."""
+    keep = "".join(c.lower() if c.isalnum() else "-" for c in title_str)
+    return "-".join(filter(None, keep.split("-")))
 
 
 def _parse_pages(pages_str: str) -> list[str]:
@@ -199,29 +253,77 @@ def _parse_pages(pages_str: str) -> list[str]:
     return pages
 
 
+def _title_pages(speech_groups: SpeechGroups, title_str: str, engine: OcrTypes) -> list[str]:
+    """Return every page of one title that has OCR for this engine."""
+    title = STR_TITLE_TO_ENUM[title_str]
+    pages = sorted(
+        {
+            page_group.fanta_page
+            for page_group in speech_groups.get_speech_page_groups(title, skip_missing=True)
+            if page_group.ocr_index == engine
+        }
+    )
+    if not pages:
+        msg = f'No {engine.value} OCR pages found for "{title_str}".'
+        raise typer.BadParameter(msg)
+    return pages
+
+
+def _cast_for(entries: list[dict]) -> tuple[list[str], list[str]]:
+    """Return the closed-set cast for a prepped run, and the titles it spans.
+
+    A single title gets exactly its own tagged characters.  A page range that
+    happens to cross stories gets the union, which is looser -- the pass can
+    then name a character from a story that is not the one in front of it.
+    That is the argument for running per title, so the caller is told.
+    """
+    titles = sorted({entry["title"] for entry in entries})
+    cast = sorted({name for t in titles for name in story_characters(STR_TITLE_TO_ENUM[t])})
+    return cast, titles
+
+
 @app.command(help="Crop comic pages into per-panel images for a Claude Code vision pass.")
 def main(
-    volume: Annotated[int, typer.Option("--volume", "-v", help="Fantagraphics volume number.")],
+    title_str: Annotated[
+        str, typer.Option("--title", "-t", help="Story title. The unit the pass is built around.")
+    ] = "",
+    volume: Annotated[
+        int | None,
+        typer.Option("--volume", "-v", help="Fantagraphics volume number (with --pages)."),
+    ] = None,
     pages_str: Annotated[
         str, typer.Option("--pages", "-p", help="Page range or list, e.g. '076-085' or '076,079'.")
-    ],
+    ] = "",
     out_dir: Annotated[
         Path | None,
         typer.Option(
             "--out-dir",
             "-o",
-            help=f"Where to write the work queue (default: {DEFAULT_ROOT}/vol<N>-<pages>).",
+            help=f"Where to write the work queue (default: under {DEFAULT_ROOT}).",
         ),
     ] = None,
     engine: Annotated[
         OcrTypes, typer.Option("--engine", "-e", help="Which OCR pass to annotate.")
     ] = OcrTypes.EASYOCR,
 ) -> None:
-    pages = _parse_pages(pages_str)
-    out_dir = out_dir or _default_out_dir(volume, pages)
+    if bool(title_str) == bool(volume is not None or pages_str):
+        msg = "Give either --title, or --volume with --pages."
+        raise typer.BadParameter(msg)
+
     comics_database = ComicsDatabase()
     speech_groups = SpeechGroups(comics_database)
     title_panel_boxes = TitlePanelBoxes(comics_database)
+
+    if title_str:
+        volume = comics_database.get_fanta_volume_int(title_str)
+        pages = _title_pages(speech_groups, title_str, engine)
+        out_dir = out_dir or DEFAULT_ROOT.expanduser() / _slug(title_str)
+    else:
+        if volume is None or not pages_str:
+            msg = "--volume and --pages must be given together."
+            raise typer.BadParameter(msg)
+        pages = _parse_pages(pages_str)
+        out_dir = out_dir or _default_out_dir(volume, pages)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     entries = [
@@ -237,13 +339,26 @@ def main(
         for fanta_page in pages
     ]
 
+    cast, titles = _cast_for(entries)
     queue_file = out_dir / "queue.json"
-    queue = {"volume": volume, "engine": engine.value, "pages": entries}
+    queue = {
+        "volume": volume,
+        "engine": engine.value,
+        "titles": titles,
+        "story_cast": cast,
+        "pages": entries,
+    }
     queue_file.write_text(json.dumps(queue, indent=2) + "\n")
 
     # Rewritten every run, so a roster entry added later reaches the next pass.
     roster_file = out_dir / ROSTER_FILE
-    roster_file.write_text(roster_text())
+    roster_file.write_text(roster_text(cast))
+
+    if len(titles) > 1:
+        logger.warning(
+            f"These pages span {len(titles)} titles, so the character list is the union"
+            " of their casts and is looser than a per-title run would give."
+        )
 
     total_panels = sum(len(e["panels"]) for e in entries)
     total_groups = sum(e["num_groups"] for e in entries)
