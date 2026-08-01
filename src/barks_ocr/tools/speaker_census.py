@@ -13,17 +13,15 @@ Read-only.  It reports what a human should decide about; it changes nothing.
 
 from collections import Counter, defaultdict
 from dataclasses import dataclass
-from typing import Annotated, Any
+from typing import Annotated
 
 import typer
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_database import ComicsDatabase
-from barks_fantagraphics.comics_helpers import get_titles
-from barks_fantagraphics.fanta_comics_info import FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER
 from barks_fantagraphics.speech_groupers import SpeechGroups
 from comic_utils.common_typer_options import TitleArg, VolumesArg
-from intspan import intspan
 
+from barks_ocr.utils.title_selection import resolve_titles
 from barks_ocr.utils.vision_schema import (
     OTHER_PREFIX,
     ROSTER,
@@ -177,22 +175,8 @@ def main(
         typer.Option("--promote-at", help="Free-form uses at which to suggest a roster entry."),
     ] = DEFAULT_PROMOTE_AT,
 ) -> None:
-    if volumes_str and title_str:
-        msg = "Options --volume and --title are mutually exclusive."
-        raise typer.BadParameter(msg)
-
     comics_database = ComicsDatabase()
-    # A census over everything is the useful default, so an unqualified run means
-    # the whole corpus. `get_titles` asserts on an empty volume list, so the range
-    # has to be spelled out rather than left to it.
-    if volumes_str:
-        volumes: list[Any] = list(intspan(volumes_str))
-    elif title_str:
-        volumes = []
-    else:
-        volumes = list(range(FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER + 1))
-    title_list = get_titles(comics_database, volumes, title_str, exclude_non_comics=True)
-
+    title_list = resolve_titles(comics_database, volumes_str, title_str)
     speech_groups = SpeechGroups(comics_database)
     found = _collect(comics_database, speech_groups, title_list)
 
