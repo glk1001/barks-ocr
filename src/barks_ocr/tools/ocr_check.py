@@ -65,6 +65,15 @@ class PageLineHeights:
     other: float | None
 
 
+@dataclass(frozen=True)
+class MissingPrelim:
+    """A title's pages that have no prelim OCR file — a gap in the OCR data."""
+
+    volume: int
+    title_str: str
+    fanta_pages: list[str]
+
+
 @dataclass
 class IssueFound:
     volume: int
@@ -75,6 +84,26 @@ class IssueFound:
     panel_num: int
     text: str
     notes: str
+
+
+def _format_page_ranges(fanta_pages: list[str]) -> str:
+    """Collapse sorted page numbers into ranges, keeping their zero padding.
+
+    ``intspan`` would do the collapsing but returns bare ints, and these pages
+    are named after zero-padded files ("096-easyocr-...json"), so the padding
+    has to survive.
+    """
+    if not fanta_pages:
+        return ""
+
+    runs: list[list[str]] = [[fanta_pages[0]]]
+    for page in fanta_pages[1:]:
+        if int(page) == int(runs[-1][-1]) + 1:
+            runs[-1].append(page)
+        else:
+            runs.append([page])
+
+    return ", ".join(run[0] if len(run) == 1 else f"{run[0]}-{run[-1]}" for run in runs)
 
 
 def _rect_from_points(points: PointList) -> Rect:
@@ -360,13 +389,20 @@ class OcrChecker:
     ) -> None:
         """Check all pages of each title; print issues and write a queue file."""
         all_issues: list[IssueFound] = []
+        all_missing: list[MissingPrelim] = []
 
         for title_str in title_list:
             print("-" * 80)
             title = STR_TITLE_TO_ENUM[title_str]
             volume = self._comics_database.get_fanta_volume_int(title_str)
-            page_groups = self._speech_groups.get_speech_page_groups(title)
+            page_groups = self._speech_groups.get_speech_page_groups(title, skip_missing=True)
             page_panel_boxes = self._title_panel_boxes.get_page_panel_boxes(title)
+
+            missing_pages = sorted(
+                {m.fanta_page for m in self._speech_groups.get_missing_prelim_pages(title)}
+            )
+            if missing_pages:
+                all_missing.append(MissingPrelim(volume, title_str, missing_pages))
 
             pages: dict[str, dict[OcrTypes, SpeechPageGroup]] = defaultdict(dict)
             for pg in page_groups:
@@ -388,6 +424,7 @@ class OcrChecker:
             all_issues.extend(title_issues)
 
         self._print_issues_summary(all_issues)
+        self._print_missing_prelims(all_missing)
         self._write_queue_file(all_issues, output_file)
 
     # ── Per-title passes ──────────────────────────────────────────────────────
@@ -764,6 +801,26 @@ class OcrChecker:
         print(f"Total issues: {len(all_issues)}")
         for issue_type, count in sorted(counts.items()):
             print(f"  {issue_type}: {count}")
+
+    @staticmethod
+    def _print_missing_prelims(all_missing: list[MissingPrelim]) -> None:
+        """List the pages that were skipped for want of a prelim OCR file.
+
+        These are not editor work, so they are kept out of the queue file. They
+        are OCR that never ran, and the only place they surface otherwise is a
+        warning buried in the log.
+        """
+        if not all_missing:
+            return
+
+        total = sum(len(m.fanta_pages) for m in all_missing)
+        print()
+        print(f"Missing prelim OCR — {total} page(s), OCR never ran on these:")
+        for missing in sorted(all_missing, key=lambda m: (m.volume, m.title_str)):
+            print(
+                f"  Vol {missing.volume:>2}  {missing.title_str}:"
+                f" {_format_page_ranges(missing.fanta_pages)}"
+            )
 
     @staticmethod
     def _print_issue(issue: IssueFound) -> None:

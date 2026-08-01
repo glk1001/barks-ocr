@@ -362,7 +362,7 @@ def _build_one_page(
     matching = next(
         (
             g
-            for g in speech_groups.get_speech_page_groups(title_enum)
+            for g in speech_groups.get_speech_page_groups(title_enum, skip_missing=True)
             if g.ocr_index == engine and g.fanta_page == fanta_page
         ),
         None,
@@ -382,7 +382,7 @@ def _build_annotated_pages(
     save: bool,
 ) -> list[tuple[str, Image.Image, list[SpeechLabel]]]:
     title_enum = comic.get_title_enum()
-    title_speech_page_groups = speech_groups.get_speech_page_groups(title_enum)
+    title_speech_page_groups = speech_groups.get_speech_page_groups(title_enum, skip_missing=True)
     title_pages_panel_boxes = title_panel_boxes.get_page_panel_boxes(title_enum)
 
     filtered = [g for g in title_speech_page_groups if g.ocr_index == engine]

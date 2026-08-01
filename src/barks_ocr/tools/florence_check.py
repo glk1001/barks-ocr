@@ -518,7 +518,7 @@ def _process_title(  # noqa: PLR0913
     """
     title = STR_TITLE_TO_ENUM[title_str]
     speech_groups = SpeechGroups(comics_database)
-    speech_page_groups = speech_groups.get_speech_page_groups(title)
+    speech_page_groups = speech_groups.get_speech_page_groups(title, skip_missing=True)
     comic = comics_database.get_comic_book(title_str)
 
     checked = 0

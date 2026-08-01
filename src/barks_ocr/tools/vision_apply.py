@@ -190,7 +190,7 @@ def main(
         title = STR_TITLE_TO_ENUM[result["title"]]
         found = [
             pg
-            for pg in speech_groups.get_speech_page_groups(title)
+            for pg in speech_groups.get_speech_page_groups(title, skip_missing=True)
             if pg.ocr_index == engine and pg.fanta_page == page
         ]
         if not found:

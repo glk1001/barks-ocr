@@ -50,7 +50,7 @@ def _compare_title(
     title = STR_TITLE_TO_ENUM[title_str]
     volume = comics_database.get_fanta_volume_int(title_str)
     speech_groups = SpeechGroups(comics_database)
-    speech_page_groups = speech_groups.get_speech_page_groups(title)
+    speech_page_groups = speech_groups.get_speech_page_groups(title, skip_missing=True)
 
     pages: dict[str, dict[OcrTypes, SpeechPageGroup]] = defaultdict(dict)
     for g in speech_page_groups:

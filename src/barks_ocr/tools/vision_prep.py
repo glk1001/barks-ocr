@@ -92,7 +92,7 @@ def _find_page_group(
 ) -> Any | None:  # noqa: ANN401
     """Return the SpeechPageGroup for one page/engine, or None if absent."""
     title = STR_TITLE_TO_ENUM[title_str]
-    for page_group in speech_groups.get_speech_page_groups(title):
+    for page_group in speech_groups.get_speech_page_groups(title, skip_missing=True):
         if page_group.ocr_index == engine and page_group.fanta_page == fanta_page:
             return page_group
     return None

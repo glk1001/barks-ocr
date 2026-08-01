@@ -139,5 +139,58 @@ wrong** (079 g16, 080 g6, 080 g7); 081 g3 and 083 g12 are correct. Recorded in
   low-confidence calls are wrong often enough to matter.
 - **Scale is undecided.** 10 pages is a shakedown. Next step would be a full volume
   (~170 pages), then a decision about the remaining ~5400.
-- **`barks-ocr-check --volume N` aborts** on a missing prelim file rather than
-  skipping the page — vols 8, 9, 20 and vol 1 (page 500). `--title` works around it.
+- **24 pages have no prelim OCR at all** — see below. The tools no longer trip over
+  them, but the OCR still needs to be run.
+
+---
+
+## Missing prelim OCR files
+
+`barks-ocr-check --volume N` used to abort on the first absent prelim JSON, taking
+the whole volume with it. `_get_speech_text_list` wrapped every read failure —
+including a plain `FileNotFoundError` — in a `ValueError`. Fixed 2026-08-01.
+
+A survey of vols 1–29 (445 titles) split the absent files cleanly in two, and the
+two halves want opposite treatment.
+
+**Reprinted one-pagers — ignore, silently.** Vol 1's `All One-Pagers` pages
+500-627 are one-pagers collected from other volumes. Their source images are
+symlinks in `Fantagraphics-fixes-and-additions/.../images` pointing at the
+original volume's page, which is where the OCR lives. They are not this title's
+OCR work and never were, so they are no longer offered as pages at all —
+`_get_srce_page_to_dest_page_map` drops them unconditionally, for every caller.
+
+The test is `ComicBook.get_srce_original_fixes_story_file(page).is_symlink()`.
+Check the **fixes** source, not the restored image: 21 of the 128 have a real
+restored PNG and would slip through. Across all 445 titles the predicate matches
+those 128 pages, none of which has OCR, and no page that does.
+
+**Genuinely missing OCR — skip, loudly, and only where asked.** 24 pages:
+
+| Vol | Title | Pages |
+|---|---|---|
+| 8 | Letter to Santa | 078 |
+| 9 | Donald's Grandma Duck | 096-109 |
+| 9 | Camp Counselor | 110-117 |
+| 20 | The Mines of King Solomon | 035 |
+
+These are defects to fix, so they stay loud. `get_speech_page_groups` takes
+`skip_missing`, **default `False`** — the abort is still the default everywhere.
+`ocr_check`, `compare`, `annotate`, `florence_check`, `vision_prep` and
+`vision_apply` opt in and log a warning per file; `whoosh_index` and
+`string_replacer` deliberately do not, since a silent hole there means an
+incomplete search index or a half-applied bulk edit.
+
+Only an *absent* file is tolerated. A malformed one still raises, under
+`skip_missing` too.
+
+`ocr_check` closes with the roll-call, so the defects do not live only in the log:
+
+```
+Missing prelim OCR — 1 page(s), OCR never ran on these:
+  Vol  8  Letter to Santa: 078
+```
+
+They are **not** written to the queue file — there is nothing for the editor to
+open. Re-run `barks-ocr-check --volume 8 9 20` after any OCR backfill; the block
+disappears when the list is empty.
