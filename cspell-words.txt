@@ -1,7 +1,7 @@
+# (../barks-compleat-reader/src/barks-fantagraphics/cspell-words.txt,
 # cspell word list — project-specific words
 # One word per line. Case-insensitive.
 # Only words NOT in the shared Barks vocabulary
-# (../barks-compleat-reader/src/barks-fantagraphics/cspell-words.txt,
 # referenced by cspell.config.yaml) belong here.
 acked
 acks
@@ -30,6 +30,7 @@ denoising
 deskew
 deskewed
 deskewing
+dialogtext
 dirname
 dismissable
 divid
@@ -41,6 +42,7 @@ etype
 favourites
 floatlayout
 fromarray
+geefs
 gemb
 gemf
 gemg

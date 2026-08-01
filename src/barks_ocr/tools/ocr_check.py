@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from difflib import SequenceMatcher
 from enum import Enum, auto
+from itertools import zip_longest
 from pathlib import Path
 from statistics import median
 
@@ -22,13 +23,10 @@ from PIL import Image, ImageDraw, ImageFont
 
 from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.group_checks import (
-    has_dash_no_spaces,
-    has_dash_wrong_space,
-    has_dot_at_end_of_sentence,
-    has_page_number_notes,
+    cleaned_whitespace,
+    get_fired_dismissable_issues,
     is_acknowledged,
-    is_ai_detected_error,
-    is_short_text,
+    with_em_dashes,
 )
 from barks_ocr.utils.ocr_box import OcrBox, PointList
 
@@ -63,6 +61,7 @@ LINE_HEIGHT_OUTLIER_FRACTION = 0.85  # below this * page median => surplus line 
 LINE_HEIGHT_MARGINAL_FRACTION = 0.9  # ...and below this => marginal, opt-in
 MIN_GROUPS_FOR_LINE_HEIGHT = 5  # too few groups for a trustworthy page median
 MIN_LINES_FOR_LINE_HEIGHT = 2  # one-line boxes measure high; see _implied_line_height
+BAR_WIDTH = 24  # width of the engine-agreement progress bar
 
 _FIT_FONT_MISSING_WARNED: list[bool] = [False]
 _FIT_MEASURE_DRAW = ImageDraw.Draw(Image.new("RGB", (1, 1)))
@@ -79,12 +78,87 @@ class PageLineHeights:
 
 
 @dataclass(frozen=True)
+class PageContext:
+    """Which page/engine is being checked, and what the checks need about it.
+
+    All of this is derivable from the ``SpeechPageGroup``; carrying it together
+    keeps it off every check's parameter list.
+    """
+
+    volume: int
+    fanta_page: str
+    engine: str
+    panel_boxes: PagePanelBoxes
+    line_heights: PageLineHeights
+    other_page_group: SpeechPageGroup | None
+
+    @classmethod
+    def build(
+        cls,
+        page_group: SpeechPageGroup,
+        panel_boxes: PagePanelBoxes,
+        line_heights: PageLineHeights,
+        other_page_group: SpeechPageGroup | None,
+    ) -> "PageContext":
+        """Derive the context from the page group being checked."""
+        return cls(
+            volume=page_group.fanta_vol,
+            fanta_page=page_group.fanta_page,
+            engine=str(page_group.ocr_index),
+            panel_boxes=panel_boxes,
+            line_heights=line_heights,
+            other_page_group=other_page_group,
+        )
+
+
+@dataclass(frozen=True)
 class MissingPrelim:
     """A title's pages that have no prelim OCR file — a gap in the OCR data."""
 
     volume: int
     title_str: str
     fanta_pages: list[str]
+
+
+@dataclass(frozen=True)
+class TitleAgreement:
+    """How many of a title's pages both engines read identically."""
+
+    agreed: int
+    total: int
+    volume: int = 0
+    title_str: str = ""
+
+    def with_title(self, volume: int, title_str: str) -> "TitleAgreement":
+        """Return a copy labelled with the title it belongs to."""
+        return TitleAgreement(self.agreed, self.total, volume, title_str)
+
+
+@dataclass(frozen=True)
+class MissingPanel:
+    """A panel one engine found speech in and the other did not."""
+
+    volume: int
+    fanta_page: str
+    panel_num: int
+    missing_in: str
+
+
+@dataclass(frozen=True)
+class FixFlags:
+    """Which repairs a run is allowed to write. All off by default."""
+
+    panel_nums: bool = False
+    groups_order: bool = False
+    newlines: bool = False
+    whitespace: bool = False
+    dashes: bool = False
+
+    def any_enabled(self) -> bool:
+        """Whether this run will write to the prelim files at all."""
+        return any(
+            (self.panel_nums, self.groups_order, self.newlines, self.whitespace, self.dashes)
+        )
 
 
 @dataclass(frozen=True)
@@ -127,6 +201,54 @@ def _format_page_ranges(fanta_pages: list[str]) -> str:
             runs.append([page])
 
     return ", ".join(run[0] if len(run) == 1 else f"{run[0]}-{run[-1]}" for run in runs)
+
+
+def _print_engine_agreement(all_agreement: list[TitleAgreement]) -> None:
+    """Print how many pages both engines read identically, by volume and overall.
+
+    This is the completion metric. A page both engines agree on has independent
+    corroboration and needs no further reconciliation; the rest is the work left.
+    """
+    per_volume: dict[int, list[int]] = defaultdict(lambda: [0, 0])
+    for entry in all_agreement:
+        per_volume[entry.volume][0] += entry.agreed
+        per_volume[entry.volume][1] += entry.total
+
+    agreed = sum(v[0] for v in per_volume.values())
+    total = sum(v[1] for v in per_volume.values())
+    if not total:
+        return
+
+    print()
+    print(f"Engine agreement — {agreed}/{total} pages ({agreed / total:.1%}):")
+    for volume in sorted(per_volume):
+        vol_agreed, vol_total = per_volume[volume]
+        if not vol_total:
+            continue
+        fraction = vol_agreed / vol_total
+        bar = "#" * round(fraction * BAR_WIDTH)
+        print(
+            f"  Vol {volume:>2}  {bar:<{BAR_WIDTH}}  {fraction:>5.1%}  ({vol_agreed}/{vol_total})"
+        )
+
+
+def _print_missing_panels(all_missing_panels: list[MissingPanel]) -> None:
+    """List panels one engine found speech in and the other did not."""
+    if not all_missing_panels:
+        return
+
+    by_page: dict[tuple[int, str], list[MissingPanel]] = defaultdict(list)
+    for entry in all_missing_panels:
+        by_page[(entry.volume, entry.fanta_page)].append(entry)
+
+    print()
+    print(f"Panels seen by only one engine — {len(all_missing_panels)}:")
+    for volume, fanta_page in sorted(by_page):
+        parts = [
+            f"panel {m.panel_num} (none in {m.missing_in})"
+            for m in sorted(by_page[(volume, fanta_page)], key=lambda m: m.panel_num)
+        ]
+        print(f"  Vol {volume:>2}  page {fanta_page}: {', '.join(parts)}")
 
 
 def _rect_from_points(points: PointList) -> Rect:
@@ -407,6 +529,66 @@ def _other_ocr_type(ocr_type: OcrTypes) -> OcrTypes:
     return OcrTypes.PADDLEOCR if ocr_type == OcrTypes.EASYOCR else OcrTypes.EASYOCR
 
 
+def _groups_by_panel(json_groups: dict) -> dict[int, list[tuple[str, str]]]:
+    """Group ``(group_id, ai_text)`` by panel_num, in reading order within a panel.
+
+    Read from the live JSON rather than ``SpeechPageGroup.speech_groups``, which
+    is built at load time and would not see fixes applied earlier in this pass.
+    Group ids sort numerically, which is the order ``renumber_groups()`` puts
+    them in — panel, then down and across the page.
+    """
+    by_panel: dict[int, list[tuple[str, str]]] = defaultdict(list)
+    for group_id, group in sorted(json_groups.items(), key=lambda kv: int(kv[0])):
+        ai_text = (group.get("ai_text") or "").strip()
+        if ai_text:
+            by_panel[int(group.get("panel_num", -1))].append((group_id, ai_text))
+    return by_panel
+
+
+def _get_reduced_text_box(text_box: PointList, reduce_by: int) -> tuple[bool, PointList | None]:
+    p0_x = text_box[0][0] + reduce_by
+    p0_y = text_box[0][1] + reduce_by
+    p1_x = text_box[1][0] - reduce_by
+    p1_y = text_box[1][1] + reduce_by
+    p2_x = text_box[2][0] - reduce_by
+    p2_y = text_box[2][1] - reduce_by
+    p3_x = text_box[3][0] + reduce_by
+    p3_y = text_box[3][1] - reduce_by
+
+    if p1_x <= p0_x or p2_y <= p0_y:
+        return False, None
+
+    return True, [(p0_x, p0_y), (p1_x, p1_y), (p2_x, p2_y), (p3_x, p3_y)]
+
+
+def _get_enclosing_panel_num(box: PointList, page_panel_boxes: PagePanelBoxes) -> int:
+    box_rect = _rect_from_points(OcrBox(box, "", 0, "").min_rotated_rectangle)
+
+    for i, panel_box in enumerate(page_panel_boxes.panel_boxes):
+        panel_rect = Rect(panel_box.x0, panel_box.y0, panel_box.w, panel_box.h)
+        if panel_rect.is_rect_inside_rect(box_rect):
+            return i + 1
+
+    return -1
+
+
+def _is_in_wrong_panel(group: dict, page_panel_boxes: PagePanelBoxes) -> bool:
+    """Whether the text_box sits wholly inside a panel other than the one claimed.
+
+    Deliberately narrow. A box that is inside *no* panel proves nothing — speech
+    balloons routinely overhang the gutter, and 5.9% of groups do — so only a box
+    that lands squarely in a different panel counts. That is rare (~0.2%) and
+    is a genuine mis-assignment every time.
+    """
+    panel_num = int(group.get("panel_num", -1))
+    text_box = group.get("text_box") or []
+    if panel_num == -1 or not text_box:
+        return False
+
+    enclosing = _get_enclosing_panel_num(text_box, page_panel_boxes)
+    return enclosing not in (-1, panel_num)
+
+
 class PanelNumState(Enum):
     PANEL_NUM_SET = auto()
     PANEL_NUM_NOT_SET_FIXABLE = auto()
@@ -422,16 +604,12 @@ class OcrChecker:
     def __init__(
         self,
         comics_database: ComicsDatabase,
-        fix_panel_nums: bool,
-        fix_groups_order: bool,
-        fix_newlines: bool,
+        fixes: FixFlags | None = None,
         line_height_limits: LineHeightLimits | None = None,
     ) -> None:
         self._comics_database = comics_database
+        self._fixes = fixes or FixFlags()
         self._limits = line_height_limits or LineHeightLimits()
-        self._fix_panel_nums = fix_panel_nums
-        self._fix_groups_order = fix_groups_order
-        self._fix_newlines = fix_newlines
         self._speech_groups = SpeechGroups(comics_database)
         self._title_panel_boxes = TitlePanelBoxes(self._comics_database)
 
@@ -445,6 +623,8 @@ class OcrChecker:
         """Check all pages of each title; print issues and write a queue file."""
         all_issues: list[IssueFound] = []
         all_missing: list[MissingPrelim] = []
+        all_missing_panels: list[MissingPanel] = []
+        all_agreement: list[TitleAgreement] = []
 
         for title_str in title_list:
             print("-" * 80)
@@ -463,7 +643,7 @@ class OcrChecker:
             for pg in page_groups:
                 pages[pg.fanta_page][pg.ocr_index] = pg
 
-            title_issues, passes = self._check_title_to_convergence(
+            title_issues, missing_panels, agreement, passes = self._check_title_to_convergence(
                 title_str, pages, page_panel_boxes
             )
             if passes > 1:
@@ -477,8 +657,12 @@ class OcrChecker:
                 print(f'  No issues in "{title_str}" (Vol. {volume}).')
 
             all_issues.extend(title_issues)
+            all_missing_panels.extend(missing_panels)
+            all_agreement.append(agreement.with_title(volume, title_str))
 
         self._print_issues_summary(all_issues)
+        _print_engine_agreement(all_agreement)
+        _print_missing_panels(all_missing_panels)
         self._print_missing_prelims(all_missing)
         self._write_queue_file(all_issues, output_file)
 
@@ -489,8 +673,10 @@ class OcrChecker:
         title_str: str,
         pages: dict[str, dict[OcrTypes, SpeechPageGroup]],
         page_panel_boxes: TitlePagesPanelBoxes,
-    ) -> tuple[list[IssueFound], int]:
-        """Re-run the check pass until one applies no fixes. Returns (issues, passes).
+    ) -> tuple[list[IssueFound], list[MissingPanel], TitleAgreement, int]:
+        """Re-run the check pass until one applies no fixes.
+
+        Returns (issues, missing_panels, agreement, passes).
 
         A fix can supply exactly the donor another group was waiting on — pages
         are checked and saved in order, so a group never sees a donor repaired
@@ -498,27 +684,33 @@ class OcrChecker:
         knock-on fixes land in one invocation. Only the final pass's issues are
         returned; earlier passes list issues that were then fixed.
         """
-        title_issues, there_were_fixes = self._check_title_pages(pages, page_panel_boxes)
+        result = self._check_title_pages(pages, page_panel_boxes)
         passes = 1
-        while there_were_fixes and passes < MAX_FIX_PASSES:
+        while result[-1] and passes < MAX_FIX_PASSES:
             passes += 1
-            title_issues, there_were_fixes = self._check_title_pages(pages, page_panel_boxes)
+            result = self._check_title_pages(pages, page_panel_boxes)
 
+        title_issues, missing_panels, agreement, there_were_fixes = result
         if there_were_fixes:
             logger.warning(
                 f'"{title_str}": still applying fixes after {MAX_FIX_PASSES} passes.'
                 f" Giving up — re-run to continue."
             )
 
-        return title_issues, passes
+        return title_issues, missing_panels, agreement, passes
 
     def _check_title_pages(
         self,
         pages: dict[str, dict[OcrTypes, SpeechPageGroup]],
         page_panel_boxes: TitlePagesPanelBoxes,
-    ) -> tuple[list[IssueFound], bool]:
-        """One full pass over a title's pages. Returns (issues, any_fixes_applied)."""
+    ) -> tuple[list[IssueFound], list[MissingPanel], TitleAgreement, bool]:
+        """One full pass over a title's pages.
+
+        Returns (issues, missing_panels, agreement, any_fixes_applied).
+        """
         issues: list[IssueFound] = []
+        missing_panels: list[MissingPanel] = []
+        agreed = 0
         any_fixes = False
 
         for fanta_page in sorted(pages):
@@ -532,7 +724,13 @@ class OcrChecker:
                 if there_were_fixes:
                     any_fixes = True
 
-        return issues, any_fixes
+            # Once per page, after both engines have had their fixes applied.
+            pair_issues, pair_missing, agree = self._check_engine_agreement(variants)
+            issues.extend(pair_issues)
+            missing_panels.extend(pair_missing)
+            agreed += agree
+
+        return issues, missing_panels, TitleAgreement(agreed, len(pages)), any_fixes
 
     # ── Per-page / per-group checks ───────────────────────────────────────────
 
@@ -546,15 +744,10 @@ class OcrChecker:
 
         Returns (issues, there_were_fixes).
         """
-        volume = page_group.fanta_vol
-        fanta_page = page_group.fanta_page
-        engine = str(page_group.ocr_index)
-        per_page_boxes = page_panel_boxes.pages[fanta_page]
-
         issues: list[IssueFound] = []
         there_were_fixes = False
 
-        if self._fix_groups_order and page_group.renumber_groups():
+        if self._fixes.groups_order and page_group.renumber_groups():
             there_were_fixes = True
 
         # Read the groups only after any renumbering: renumber_groups() rebinds
@@ -562,49 +755,43 @@ class OcrChecker:
         # report the new group ids or the queue file would point at the old ones.
         json_groups = page_group.speech_page_json.get("groups", {})
 
-        line_heights = PageLineHeights(
-            own=_page_median_line_height(json_groups),
-            other=_page_median_line_height(
-                other_page_group.speech_page_json.get("groups", {})
-                if other_page_group is not None
-                else {}
+        context = PageContext.build(
+            page_group,
+            panel_boxes=page_panel_boxes.pages[page_group.fanta_page],
+            line_heights=PageLineHeights(
+                own=_page_median_line_height(json_groups),
+                other=_page_median_line_height(
+                    other_page_group.speech_page_json.get("groups", {})
+                    if other_page_group is not None
+                    else {}
+                ),
             ),
+            other_page_group=other_page_group,
         )
 
         for group_id, group in json_groups.items():
-            group_issues, there_were_group_fixes = self._check_group(
-                volume,
-                fanta_page,
-                engine,
-                group_id,
-                group,
-                per_page_boxes,
-                other_page_group,
-                line_heights,
-            )
+            group_issues, there_were_group_fixes = self._check_group(context, group_id, group)
             issues.extend(group_issues)
             if there_were_group_fixes:
                 there_were_fixes = True
+
+        if self._apply_text_fixes(json_groups):
+            there_were_fixes = True
 
         if there_were_fixes:
             page_group.save_json()
 
         return issues, there_were_fixes
 
-    def _check_group(  # noqa: C901, PLR0913
+    def _check_group(
         self,
-        volume: int,
-        fanta_page: str,
-        engine: str,
+        context: PageContext,
         group_id: str,
         group: dict,
-        page_panel_boxes: PagePanelBoxes,
-        other_page_group: SpeechPageGroup | None = None,
-        line_heights: PageLineHeights = PageLineHeights(None, None),  # noqa: B008
     ) -> tuple[list[IssueFound], bool]:
+        """Run every group-level check. Returns (issues, there_were_fixes)."""
         ai_text = (group.get("ai_text") or "").strip()
-        notes = (group.get("notes") or "").strip()
-        panel_num_state, panel_num = self._get_panel_num_state(group, page_panel_boxes)
+        panel_num_state, panel_num = self._get_panel_num_state(group, context.panel_boxes)
 
         issues: list[IssueFound] = []
         there_were_fixes = False
@@ -612,14 +799,14 @@ class OcrChecker:
         def add(issue_type: str, ratio: float | None = None) -> None:
             issues.append(
                 IssueFound(
-                    volume=volume,
-                    fanta_page=fanta_page,
-                    engine=engine,
+                    volume=context.volume,
+                    fanta_page=context.fanta_page,
+                    engine=context.engine,
                     group_id=group_id,
                     issue_type=issue_type,
                     panel_num=panel_num,
                     text=ai_text,
-                    notes=notes,
+                    notes=(group.get("notes") or "").strip(),
                     ratio=ratio,
                 )
             )
@@ -628,34 +815,124 @@ class OcrChecker:
             add("panel_unassigned")
         elif panel_num_state == PanelNumState.PANEL_NUM_NOT_SET_FIXABLE:
             there_were_fixes = self._deal_with_fixable_panel_num(group, group_id, panel_num)
+        elif _is_in_wrong_panel(group, context.panel_boxes):
+            add("panel_num_mismatch")
 
-        if ai_text == "":
+        if not ai_text:
             add("empty_text")
-        elif is_short_text(group) and not is_acknowledged(group, "short_text"):
-            add("short_text")
-        if is_ai_detected_error(group) and not is_acknowledged(group, "error_notes"):
-            add("error_notes")
-        if has_page_number_notes(group) and not is_acknowledged(group, "page_number_notes"):
-            add("page_number_notes")
-        if has_dot_at_end_of_sentence(group) and not is_acknowledged(
-            group, "dot_at_end_of_sentence"
-        ):
-            add("dot_at_end_of_sentence")
-        if has_dash_wrong_space(group) and not is_acknowledged(group, "dash_wrong_space"):
-            add("dash_wrong_space")
-        if has_dash_no_spaces(group) and not is_acknowledged(group, "dash_no_spaces"):
-            add("dash_no_spaces")
+        else:
+            # short_text is only meaningful when there is text at all; the rest
+            # come straight off the registry in utils/group_checks.py, so adding
+            # a check there needs no change here.
+            for issue_type in get_fired_dismissable_issues(group):
+                if not is_acknowledged(group, issue_type):
+                    add(issue_type)
 
-        if ai_text:
             layout_fixed, layout_issue, layout_ratio = self._check_text_layout(
-                group, group_id, fanta_page, other_page_group, line_heights
+                group, group_id, context
             )
-            if layout_fixed:
-                there_were_fixes = True
+            there_were_fixes = there_were_fixes or layout_fixed
             if layout_issue:
                 add(layout_issue, layout_ratio)
 
         return issues, there_were_fixes
+
+    # ── Cross-engine agreement ────────────────────────────────────────────────
+
+    @staticmethod
+    def _check_engine_agreement(
+        variants: dict[OcrTypes, SpeechPageGroup],
+    ) -> tuple[list[IssueFound], list[MissingPanel], bool]:
+        """Compare the two engines for one page. Returns (issues, missing, agree).
+
+        Runs **once per page**, not once per engine — the callers loop over
+        engines, and doing this there would report every mismatch twice.
+
+        Both engines reading a page the same way is the strongest evidence the
+        page is right, so ``agree`` is what the completion metric counts.
+        """
+        easy = variants.get(OcrTypes.EASYOCR)
+        paddle = variants.get(OcrTypes.PADDLEOCR)
+        if easy is None or paddle is None:
+            return [], [], False
+
+        easy_panels = _groups_by_panel(easy.speech_page_json.get("groups", {}))
+        paddle_panels = _groups_by_panel(paddle.speech_page_json.get("groups", {}))
+
+        issues: list[IssueFound] = []
+        missing: list[MissingPanel] = []
+        volume, fanta_page = easy.fanta_vol, easy.fanta_page
+
+        def issue(engine: str, group_id: str, issue_type: str, panel: int, text: str, ratio=None):  # noqa: ANN202, ANN001, PLR0913
+            return IssueFound(
+                volume=volume,
+                fanta_page=fanta_page,
+                engine=engine,
+                group_id=group_id,
+                issue_type=issue_type,
+                panel_num=panel,
+                text=text,
+                notes="",
+                ratio=ratio,
+            )
+
+        for panel in sorted(set(easy_panels) | set(paddle_panels)):
+            in_easy, in_paddle = easy_panels.get(panel, []), paddle_panels.get(panel, [])
+            if not in_easy or not in_paddle:
+                missing.append(
+                    MissingPanel(
+                        volume,
+                        fanta_page,
+                        panel,
+                        str(OcrTypes.EASYOCR) if not in_easy else str(OcrTypes.PADDLEOCR),
+                    )
+                )
+                continue
+
+            for easy_item, paddle_item in zip_longest(in_easy, in_paddle):
+                if easy_item is None:
+                    gid, text = paddle_item
+                    issues.append(
+                        issue(str(OcrTypes.PADDLEOCR), gid, "only_in_paddle", panel, text)
+                    )
+                elif paddle_item is None:
+                    gid, text = easy_item
+                    issues.append(issue(str(OcrTypes.EASYOCR), gid, "only_in_easy", panel, text))
+                elif easy_item[1] != paddle_item[1]:
+                    ratio = SequenceMatcher(None, easy_item[1], paddle_item[1]).ratio()
+                    issues.append(
+                        issue(
+                            str(OcrTypes.EASYOCR),
+                            easy_item[0],
+                            "text_mismatch",
+                            panel,
+                            easy_item[1],
+                            ratio,
+                        )
+                    )
+
+        return issues, missing, not issues and not missing
+
+    def _apply_text_fixes(self, json_groups: dict) -> bool:
+        """Apply the unambiguous string rewrites. Returns whether anything changed.
+
+        Both are pure cleanups with no judgement in them — stray whitespace
+        and "--" for an em-dash — which is why they can run unattended while the
+        wrapping fixes need cross-engine evidence.
+        """
+        changed = False
+        for group_id, group in json_groups.items():
+            before = group.get("ai_text") or ""
+            after = before
+            if self._fixes.whitespace:
+                after = cleaned_whitespace(after)
+            if self._fixes.dashes:
+                after = with_em_dashes(after)
+            if after != before:
+                group["ai_text"] = after
+                changed = True
+                logger.info(f"Group {group_id}: cleaned up ai_text.")
+        return changed
 
     # ── Text-layout check + optional fix ──────────────────────────────────────
 
@@ -663,9 +940,7 @@ class OcrChecker:
         self,
         group: dict,
         group_id: str,
-        fanta_page: str,
-        other_page_group: SpeechPageGroup | None,
-        line_heights: PageLineHeights,
+        context: PageContext,
     ) -> tuple[bool, str | None, float | None]:
         """Return (fix_applied, issue_type_to_add, line_height_ratio).
 
@@ -686,9 +961,9 @@ class OcrChecker:
         if not ai_text or not text_box:
             return False, None, None
 
-        ratio = _line_height_ratio(group, line_heights.own)
+        ratio = _line_height_ratio(group, context.line_heights.own)
 
-        if not _group_text_fits(group, fanta_page):
+        if not _group_text_fits(group, context.fanta_page):
             issue = "text_does_not_fit"
         elif ratio is not None and ratio < self._limits.outlier:
             issue = "too_many_lines"
@@ -697,12 +972,10 @@ class OcrChecker:
         else:
             return False, None, ratio
 
-        if not self._fix_newlines:
+        if not self._fixes.newlines:
             return False, issue, ratio
 
-        if not self._transplant_line_pattern(
-            group, group_id, fanta_page, other_page_group, line_heights
-        ):
+        if not self._transplant_line_pattern(group, group_id, context):
             return False, issue, ratio
 
         return True, None, ratio
@@ -711,9 +984,7 @@ class OcrChecker:
         self,
         group: dict,
         group_id: str,
-        fanta_page: str,
-        other_page_group: SpeechPageGroup | None,
-        line_heights: PageLineHeights,
+        context: PageContext,
     ) -> bool:
         """Rewrap group's ai_text to the other engine's line pattern, if that helps.
 
@@ -724,7 +995,7 @@ class OcrChecker:
         """
         ai_text = (group.get("ai_text") or "").strip()
 
-        match = _find_matching_group(group, other_page_group)
+        match = _find_matching_group(group, context.other_page_group)
         if match is None:
             logger.warning(
                 f"Group {group_id}: badly wrapped text and no matching"
@@ -732,7 +1003,9 @@ class OcrChecker:
             )
             return False
 
-        if not _layout_ok(match, fanta_page, line_heights.other, self._limits.outlier):
+        if not _layout_ok(
+            match, context.fanta_page, context.line_heights.other, self._limits.outlier
+        ):
             logger.warning(
                 f"Group {group_id}: badly wrapped text but the matching group"
                 f" in the other engine is not well laid out either,"
@@ -750,7 +1023,10 @@ class OcrChecker:
             return False
 
         if not _layout_ok(
-            {**group, "ai_text": new_text}, fanta_page, line_heights.own, self._limits.outlier
+            {**group, "ai_text": new_text},
+            context.fanta_page,
+            context.line_heights.own,
+            self._limits.outlier,
         ):
             logger.warning(
                 f"Group {group_id}: line-pattern transplant did not produce a well"
@@ -773,7 +1049,7 @@ class OcrChecker:
         return self._can_replace_missing_panel_num(group, page_panel_boxes)
 
     def _deal_with_fixable_panel_num(self, group: dict, group_id: str, panel_num: int) -> bool:
-        if self._fix_panel_nums:
+        if self._fixes.panel_nums:
             group["panel_num"] = panel_num
             logger.warning(f"For group {group_id}, fixed panel_num = {panel_num}.")
             return True
@@ -781,7 +1057,7 @@ class OcrChecker:
         logger.warning(
             f"For group {group_id}, panel_num is not set"
             f" (and should be {panel_num})"
-            f" but fix panel nums = {self._fix_panel_nums}."
+            f" but fix panel nums = {self._fixes.panel_nums}."
         )
         return False
 
@@ -795,45 +1071,18 @@ class OcrChecker:
 
         text_box = group["text_box"]
         for reduce_by in [20, 40, 60]:
-            can_do, reduced_box = self._get_reduced_text_box(text_box, reduce_by)
+            can_do, reduced_box = _get_reduced_text_box(text_box, reduce_by)
             if not can_do:
                 logger.warning(f"Could not reduce text box: {text_box}")
                 break
             assert reduced_box
-            new_panel_num = self._get_enclosing_panel_num(reduced_box, page_panel_boxes)
+            new_panel_num = _get_enclosing_panel_num(reduced_box, page_panel_boxes)
             if new_panel_num != -1:
                 return PanelNumState.PANEL_NUM_NOT_SET_FIXABLE, new_panel_num
 
         logger.warning(f"Could not find enclosing panel for box: {text_box}")
 
         return PanelNumState.PANEL_NUM_NOT_SET_UNFIXABLE, -1
-
-    @staticmethod
-    def _get_reduced_text_box(text_box: PointList, reduce_by: int) -> tuple[bool, PointList | None]:
-        p0_x = text_box[0][0] + reduce_by
-        p0_y = text_box[0][1] + reduce_by
-        p1_x = text_box[1][0] - reduce_by
-        p1_y = text_box[1][1] + reduce_by
-        p2_x = text_box[2][0] - reduce_by
-        p2_y = text_box[2][1] - reduce_by
-        p3_x = text_box[3][0] + reduce_by
-        p3_y = text_box[3][1] - reduce_by
-
-        if p1_x <= p0_x or p2_y <= p0_y:
-            return False, None
-
-        return True, [(p0_x, p0_y), (p1_x, p1_y), (p2_x, p2_y), (p3_x, p3_y)]
-
-    @staticmethod
-    def _get_enclosing_panel_num(box: PointList, page_panel_boxes: PagePanelBoxes) -> int:
-        box_rect = _rect_from_points(OcrBox(box, "", 0, "").min_rotated_rectangle)
-
-        for i, panel_box in enumerate(page_panel_boxes.panel_boxes):
-            panel_rect = Rect(panel_box.x0, panel_box.y0, panel_box.w, panel_box.h)
-            if panel_rect.is_rect_inside_rect(box_rect):
-                return i + 1
-
-        return -1
 
     # ── Output helpers ────────────────────────────────────────────────────────
 
@@ -1002,6 +1251,11 @@ def main(  # noqa: PLR0913
     fix_panel_nums: bool = False,
     fix_groups_order: bool = False,
     fix_newlines: bool = False,
+    fix_whitespace: bool = typer.Option(
+        default=False,
+        help="Strip outer/trailing whitespace and collapse doubled spaces in ai_text.",
+    ),
+    fix_dashes: bool = typer.Option(default=False, help="Rewrite '--' as an em-dash in ai_text."),
     force: bool = typer.Option(
         default=False,
         help="Run a --fix pass even with uncommitted prelim changes (they cannot be recovered).",
@@ -1029,7 +1283,14 @@ def main(  # noqa: PLR0913
         )
         raise typer.BadParameter(err_msg)
 
-    if fix_panel_nums or fix_groups_order or fix_newlines:
+    fixes = FixFlags(
+        panel_nums=fix_panel_nums,
+        groups_order=fix_groups_order,
+        newlines=fix_newlines,
+        whitespace=fix_whitespace,
+        dashes=fix_dashes,
+    )
+    if fixes.any_enabled():
         _check_prelim_repo_clean(force=force)
 
     comics_database = ComicsDatabase()
@@ -1042,9 +1303,7 @@ def main(  # noqa: PLR0913
         include_marginal=include_marginal,
     )
     output_file = output or _default_output_file(volumes_str)
-    OcrChecker(
-        comics_database, fix_panel_nums, fix_groups_order, fix_newlines, limits
-    ).check_titles(title_list, output_file)
+    OcrChecker(comics_database, fixes, limits).check_titles(title_list, output_file)
 
 
 if __name__ == "__main__":
