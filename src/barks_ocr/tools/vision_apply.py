@@ -57,6 +57,7 @@ from barks_ocr.utils.vision_schema import (
     VISION_TEXT_ISSUE,
     is_valid_setting,
     is_valid_speaker,
+    nephew_needs_collective,
     normalize_setting,
     normalize_speaker,
 )
@@ -147,9 +148,20 @@ def _validate_group(  # noqa: PLR0913
     errors: list[str],
     cast: frozenset[str] = frozenset(),
 ) -> None:
-    _check_speaker(entry.get("speaker"), where, errors, cast)
-    if entry.get("speaker_confidence") not in CONFIDENCES:
+    speaker = entry.get("speaker")
+    confidence = entry.get("speaker_confidence")
+    _check_speaker(speaker, where, errors, cast)
+    if confidence not in CONFIDENCES:
         errors.append(f"{where}: speaker_confidence must be one of {sorted(CONFIDENCES)}.")
+    elif (
+        isinstance(speaker, str)
+        and isinstance(confidence, str)
+        and nephew_needs_collective(speaker, confidence)
+    ):
+        errors.append(
+            f'{where}: "{speaker}" at {confidence} confidence -- if the cap cannot be read,'
+            ' the answer is "nephews", and that is not a low-confidence call.'
+        )
     cap = entry.get("cap_colour")
     if cap is not None and cap not in CAP_COLOUR_SET:
         errors.append(f'{where}: cap_colour "{cap}" is not one of {sorted(CAP_COLOUR_SET)}.')

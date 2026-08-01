@@ -369,12 +369,56 @@ detection — the only real check is looking at the art.
 Caps read cleanly in daylight panels. They are unreadable when:
 
 - the scene is at night — everything renders flat moonlight blue (079 p2);
-- the nephews wear football helmets (078 p1, 080 p2, 083 p2);
 - the colourist slips — 085 p3 gives two nephews the same green.
 
-Those cases are exactly the 18 `low` entries, and `cap_colour` is `null` there, so
+Those cases are among the 18 `low` entries, and `cap_colour` is `null` there, so
 nothing is silently guessed. Where the art carries the colour some other way — the
 red/blue/green pyjamas in 085 p5 — identification still works.
+
+**Football helmets are *not* a reliable predictor**, though an earlier draft of
+this doc said so. The review below confirmed all three of 078's helmeted nephews
+as correctly named, while 080 and 083 — also helmeted — were wrong. Helmets
+appear on both sides, so they do not explain the failures; the night scene does.
+
+### The speaker review: 10 of 14 wrong, and 9 of those are one mistake
+
+Run on the pilot's 18 `low` entries. 14 judged, 4 left unjudged as genuinely
+unreadable — which is the honest outcome, not a gap.
+
+| | |
+|---|---|
+| queued | 18 |
+| reviewed | 14 |
+| model wrong | **10 (71%)** |
+
+The rate is not the finding. The **shape** is:
+
+```
+079 g4,g5,g6   Huey, Dewey, Louie  ->  nephews     (night scene)
+080 g0,g1,g2   Huey, Dewey, Louie  ->  nephews     (helmets)
+083 g5,g6,g7   Huey, Dewey, Louie  ->  nephews     (helmets)
+084 g8         Dewey               ->  Huey
+```
+
+**Nine of the ten are the same error, in three clean triples.** Only 084 g8 is a
+real misidentification. The pass is not bad at seeing — it fails to fall back to
+`nephews` when it cannot read a cap.
+
+And it knew. The four left unjudged carry `vision_note`s that state the ambiguity
+outright — *"tail ambiguous between the red- and blue-capped nephews"*, *"the
+middle and right caps BOTH read…"*. It wrote down that it could not tell, and
+named a specific nephew anyway. The rule was already in `roster.txt`.
+
+**So the fix is enforcement, not rewording.** `vision_apply` now refuses an
+individual nephew at `low` confidence: if the cap cannot be read the answer is
+`nephews`, and that is not a low-confidence call. The rule is rendered into
+`roster.txt` from the same constant, so the pass is told it and cannot violate
+it — a rule the model states and then breaks needs a validator, not better prose.
+
+**Keep queueing `low`; do not move the threshold.** A 71% error rate more than
+earns the review. But this one rule would have prevented 9 of these 10, which
+matters most at scale: a volume's ~370 low-confidence entries was the workload
+concern, and if that population is mostly this pattern it largely evaporates.
 
 ### Bonus: the `type` field mis-labels speech as thought
 
@@ -428,9 +472,13 @@ Five things to measure, in this order:
   speech script. `085 g7` (`INVISIBLE SEEDS,` → `INVISIBLE, SEEDS,`) is explicitly
   low-confidence: the stored reading is the more sensible phrase and the mark is
   small, so it needs an eyeball.
-- **The speaker review has not been run yet.** The editor can now do it (above);
-  what it is for is measuring how often the low-confidence calls are wrong. Run
-  it on the pilot's 18 `low` entries before scaling the pass up.
+- **4 of the pilot's 18 speaker calls are still unjudged** — 077 g11/g12 and 085
+  g10/g12, all genuinely unreadable. They keep `low` and no `speaker_reviewed`
+  flag, which is the correct state for them, not a gap to close.
+- **`other:crows` is at 17 uses and above the promotion threshold**, but all 17
+  come from one story where crows are the antagonists. The threshold was meant
+  for names recurring *across* stories, so this waits for corpus evidence — and
+  is a hint the census could weight by how many titles a name appears in.
 - **The pilot's `type: thought` mislabels are unfixed** — 079 g16, 080 g6, 080 g7
   are recorded in `vision_note` only.
 - **24 pages have no prelim OCR at all** — see below. The tools no longer trip over

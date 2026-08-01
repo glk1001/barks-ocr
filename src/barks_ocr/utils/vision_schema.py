@@ -67,6 +67,37 @@ SPEAKER_NOTES: dict[str, str] = {
 CONFIDENCE_OPTIONS: tuple[str, ...] = ("high", "medium", "low")
 CONFIDENCES: frozenset[str] = frozenset(CONFIDENCE_OPTIONS)
 
+# The three nephews by name, as distinct from the `nephews` collective.
+NEPHEW_NAMES: frozenset[str] = frozenset({"Huey", "Dewey", "Louie"})
+
+# Naming an individual nephew rests entirely on the cap-colour convention, so
+# being unsure *which* nephew is exactly the case `nephews` exists for. The
+# combination is therefore refused rather than merely discouraged.
+#
+# Measured, not assumed: reviewing the pilot's 18 low-confidence calls found 10
+# wrong, and **9 of those 10 were a named nephew that should have been the
+# collective** -- three clean triples on 079, 080 and 083. The pass had the rule
+# already ("prefer it to guessing a name; a guess is unrecoverable, a collective
+# is not") and its own `vision_note`s said the tails were ambiguous. It named one
+# anyway. A rule the model states and then breaks needs enforcing, not rewording.
+NEPHEW_GUESS_CONFIDENCE = "low"
+
+
+def nephew_needs_collective(speaker: str, confidence: str) -> bool:
+    """Return whether this call must be the collective rather than a name.
+
+    Args:
+        speaker: The speaker value.
+        confidence: The stated ``speaker_confidence``.
+
+    Returns:
+        True when an individual nephew is named at a confidence that does not
+        support naming one.
+
+    """
+    return speaker in NEPHEW_NAMES and confidence == NEPHEW_GUESS_CONFIDENCE
+
+
 CAP_COLOUR_OPTIONS: tuple[str, ...] = ("red", "blue", "green")
 CAP_COLOUR_SET: frozenset[str] = frozenset(CAP_COLOUR_OPTIONS)
 
@@ -361,6 +392,13 @@ def roster_text(story_characters: Iterable[str] = ()) -> str:
         "  The name after the colon must not be empty.",
         "",
         f"speaker_confidence — one of: {', '.join(CONFIDENCE_OPTIONS)}",
+        (
+            f"  Naming one nephew at {NEPHEW_GUESS_CONFIDENCE} confidence is REFUSED."
+            " If you cannot tell which"
+        ),
+        "  of the three it is, the answer is `nephews` — and you are not unsure of that,",
+        "  so it is not a low-confidence call. Being unsure which nephew is exactly what",
+        "  `nephews` is for; a guess at a name is unrecoverable, a collective is not.",
         f"cap_colour — one of: {', '.join(CAP_COLOUR_OPTIONS)}, or null when no cap is visible",
         (
             "emphasis_spans — [[start, end, kind], ...], kind one of:"
