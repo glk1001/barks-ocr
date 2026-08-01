@@ -83,6 +83,7 @@ sapg
 scancode
 scrollview
 socr
+spkr
 srce
 stubhead
 sysfs

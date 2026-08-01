@@ -9,7 +9,9 @@ and would silently drop a new top-level section.
 
 ``ai_text`` is never modified.  Proposed text corrections are written to a
 kivy-editor queue file for review instead, in the same format ``ocr_check``
-emits.
+emits.  ``--queue-speakers`` writes a second, separate queue of the groups
+whose speaker attribution the model was unsure of, so the two reviews can be
+worked through independently.
 
 Everything is validated before anything is written: unknown group ids, emphasis
 spans that fall outside the current ``ai_text``, and speakers outside the roster
@@ -29,9 +31,19 @@ from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from loguru import logger
 
+from barks_ocr.utils.vision_schema import (
+    CAP_COLOUR_SET,
+    CONFIDENCES,
+    EMPHASIS_KINDS,
+    OTHER_PREFIX,
+    VISION_SPEAKER_ISSUE,
+    VISION_TEXT_ISSUE,
+    is_valid_speaker,
+    normalize_speaker,
+)
+
 app = typer.Typer()
 
-VISION_ISSUE = "vision-text"
 PANEL_FILE_SUFFIX = "-panel-descriptions.json"
 
 # result.json key -> key written on the group.  The reasoning fields are prefixed
@@ -53,22 +65,14 @@ APPLIED_KEYS = {
     "corrected_text": "vision_corrected_text",
 }
 
-# Free-form speakers are allowed only behind the "other:" prefix, so a typo in a
-# main-cast name is caught rather than silently becoming a new character.
-ROSTER = frozenset({"Donald", "Huey", "Dewey", "Louie", "narrator", "none", "unknown"})
-OTHER_PREFIX = "other:"
-CONFIDENCES = frozenset({"high", "medium", "low"})
-CAP_COLOUR_SET = frozenset({"red", "blue", "green"})
-EMPHASIS_KINDS = frozenset({"bold", "italic"})
-
 
 def _check_speaker(speaker: Any, where: str, errors: list[str]) -> None:  # noqa: ANN401
     if not isinstance(speaker, str):
         errors.append(f"{where}: speaker must be a string, got {speaker!r}.")
-    elif speaker not in ROSTER and not speaker.startswith(OTHER_PREFIX):
+    elif not is_valid_speaker(speaker):
         errors.append(
             f'{where}: speaker "{speaker}" is not in the roster'
-            f' and is not prefixed "{OTHER_PREFIX}".'
+            f' and is not a non-empty "{OTHER_PREFIX}" name.'
         )
 
 
@@ -123,16 +127,46 @@ def _load_results(out_dir: Path) -> tuple[dict, list[tuple[str, dict]]]:
     return queue, results
 
 
-def _apply_page(  # noqa: PLR0913
-    page_group: Any,  # noqa: ANN401
+def _normalize_results(results: list[tuple[str, dict]]) -> int:
+    """Canonicalize every speaker in place. Returns how many values changed.
+
+    Done before validation so the value that is checked is the value that gets
+    stored — otherwise a model writing ``"other: Argus"`` for a character
+    already recorded as ``"other:Argus"`` would quietly split it in two.
+    """
+    changed = 0
+    for _page, result in results:
+        for entry in result.get("groups", {}).values():
+            speaker = entry.get("speaker")
+            if not isinstance(speaker, str):
+                continue  # `_check_speaker` reports the type error.
+            canonical = normalize_speaker(speaker)
+            if canonical != speaker:
+                entry["speaker"] = canonical
+                changed += 1
+    return changed
+
+
+def _queue_lines_for_page(
+    page: str,
     result: dict,
     volume: int,
     engine: OcrTypes,
-    out_dir: Path,
-    queue_lines: list[str],
-    *,
-    dry_run: bool,
-) -> int:
+    speaker_confidences: frozenset[str],
+) -> tuple[list[str], list[str]]:
+    """Return this page's (text-correction, speaker-review) kivy-editor queue lines."""
+    text_lines: list[str] = []
+    speaker_lines: list[str] = []
+    for gid, entry in result["groups"].items():
+        prefix = f"{volume} {int(page)} {engine.value} {int(gid)}"
+        if not entry.get("text_ok"):
+            text_lines.append(f"{prefix} {VISION_TEXT_ISSUE}")
+        if entry.get("speaker_confidence") in speaker_confidences:
+            speaker_lines.append(f"{prefix} {VISION_SPEAKER_ISSUE}")
+    return text_lines, speaker_lines
+
+
+def _apply_page(page_group: Any, result: dict, *, dry_run: bool) -> int:  # noqa: ANN401
     """Write one page's annotations. Returns the number of groups changed."""
     json_groups = page_group.speech_page_json.get("groups", {})
     page = page_group.fanta_page
@@ -143,8 +177,6 @@ def _apply_page(  # noqa: PLR0913
         for result_key, stored_key in APPLIED_KEYS.items():
             group[stored_key] = entry.get(result_key)
         changed += 1
-        if not entry.get("text_ok"):
-            queue_lines.append(f"{volume} {int(page)} {engine.value} {int(gid)} {VISION_ISSUE}")
 
     if dry_run:
         return changed
@@ -158,32 +190,32 @@ def _apply_page(  # noqa: PLR0913
 
     panel_file = ocr_file.parent / (page + PANEL_FILE_SUFFIX)
     panel_file.write_text(json.dumps(result["panels"], indent=2, ensure_ascii=False) + "\n")
-    del out_dir
 
     return changed
 
 
-@app.command(help="Merge a Claude Code vision pass back into the prelim OCR group JSON.")
-def main(
-    out_dir: Annotated[
-        Path, typer.Option("--out-dir", "-o", help="The vision_prep output directory.")
-    ],
-    queue_out: Annotated[
-        Path | None,
-        typer.Option("--queue-out", help="Where to write the kivy-editor review queue."),
-    ] = None,
-    dry_run: Annotated[
-        bool, typer.Option("--dry-run", help="Validate and report, but write nothing.")
-    ] = False,
-) -> None:
-    queue, results = _load_results(out_dir)
-    volume = int(queue["volume"])
-    engine = OcrTypes(queue["engine"])
+def _write_queue(queue_out: Path, header: str, lines: list[str]) -> int:
+    """Write a de-duplicated kivy-editor queue file. Returns the entry count."""
+    unique = sorted(set(lines))
+    queue_out.parent.mkdir(parents=True, exist_ok=True)
+    queue_out.write_text(header + "\n".join(unique) + "\n")
+    return len(unique)
 
-    comics_database = ComicsDatabase()
-    speech_groups = SpeechGroups(comics_database)
 
-    # Resolve every page and validate everything before writing a single file.
+def _parse_confidences(spec: str) -> frozenset[str]:
+    """Parse the comma-separated ``--speaker-confidences`` value."""
+    wanted = frozenset(c.strip() for c in spec.split(",") if c.strip())
+    unknown = wanted - CONFIDENCES
+    if unknown:
+        msg = f"Unknown speaker confidence(s) {sorted(unknown)}; want {sorted(CONFIDENCES)}."
+        raise typer.BadParameter(msg)
+    return wanted
+
+
+def _resolve_and_validate(
+    results: list[tuple[str, dict]], speech_groups: SpeechGroups, engine: OcrTypes
+) -> tuple[dict[str, Any], list[str]]:
+    """Resolve every page's group data and validate its result. Returns (pages, errors)."""
     page_groups: dict[str, Any] = {}
     errors: list[str] = []
     for page, result in results:
@@ -205,6 +237,47 @@ def main(
                 errors.append(f"{where}: group id does not exist in the prelim JSON.")
                 continue
             _validate_group(gid, entry, json_groups[gid].get("ai_text") or "", where, errors)
+    return page_groups, errors
+
+
+@app.command(help="Merge a Claude Code vision pass back into the prelim OCR group JSON.")
+def main(
+    out_dir: Annotated[
+        Path, typer.Option("--out-dir", "-o", help="The vision_prep output directory.")
+    ],
+    queue_out: Annotated[
+        Path | None,
+        typer.Option("--queue-out", help="Where to write the text-correction review queue."),
+    ] = None,
+    queue_speakers: Annotated[
+        Path | None,
+        typer.Option("--queue-speakers", help="Where to write the speaker review queue."),
+    ] = None,
+    speaker_confidences: Annotated[
+        str,
+        typer.Option(
+            "--speaker-confidences",
+            help="Comma-separated speaker_confidence values to queue for review.",
+        ),
+    ] = "low",
+    dry_run: Annotated[
+        bool, typer.Option("--dry-run", help="Validate and report, but write nothing.")
+    ] = False,
+) -> None:
+    wanted_confidences = _parse_confidences(speaker_confidences)
+
+    queue, results = _load_results(out_dir)
+    volume = int(queue["volume"])
+    engine = OcrTypes(queue["engine"])
+
+    speech_groups = SpeechGroups(ComicsDatabase())
+
+    normalized = _normalize_results(results)
+    if normalized:
+        print(f"Canonicalized {normalized} speaker value(s) before validating.")
+
+    # Resolve every page and validate everything before writing a single file.
+    page_groups, errors = _resolve_and_validate(results, speech_groups, engine)
 
     if errors:
         print(f"Validation failed with {len(errors)} error(s); nothing was written:")
@@ -212,23 +285,34 @@ def main(
             print(f"  - {err}")
         raise typer.Exit(code=1)
 
-    queue_lines: list[str] = []
+    text_lines: list[str] = []
+    speaker_lines: list[str] = []
     total = 0
     for page, result in results:
-        total += _apply_page(
-            page_groups[page], result, volume, engine, out_dir, queue_lines, dry_run=dry_run
+        total += _apply_page(page_groups[page], result, dry_run=dry_run)
+        page_text, page_speaker = _queue_lines_for_page(
+            page, result, volume, engine, wanted_confidences
         )
+        text_lines += page_text
+        speaker_lines += page_speaker
 
-    if queue_out is not None and not dry_run:
-        queue_out.parent.mkdir(parents=True, exist_ok=True)
-        header = f"# vision-check text corrections (volume {volume}, engine {engine.value})\n"
-        queue_out.write_text(header + "\n".join(sorted(set(queue_lines))) + "\n")
-        print(f'Review queue: "{queue_out}" ({len(set(queue_lines))} entries).')
+    queues = (
+        (queue_out, "text corrections", text_lines),
+        (queue_speakers, "speaker review", speaker_lines),
+    )
+    for path, what, lines in queues:
+        if path is not None and not dry_run:
+            header = f"# vision-check {what} (volume {volume}, engine {engine.value})\n"
+            print(f'Review queue ({what}): "{path}" ({_write_queue(path, header, lines)} entries).')
 
     verb = "Would annotate" if dry_run else "Annotated"
     print(f"{verb} {total} group(s) across {len(results)} page(s).")
     if dry_run:
-        print(f"{len(set(queue_lines))} group(s) have proposed text corrections.")
+        print(f"{len(set(text_lines))} group(s) have proposed text corrections.")
+        print(
+            f"{len(set(speaker_lines))} group(s) have a speaker call at"
+            f" confidence {sorted(wanted_confidences)}."
+        )
 
 
 if __name__ == "__main__":

@@ -28,7 +28,15 @@ from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from loguru import logger
 from PIL import Image
 
+from barks_ocr.utils.vision_schema import roster_text
+
 app = typer.Typer()
+
+# The vocabulary file dropped next to the queue. The roster is enforced only when
+# `vision_apply` validates, so it has to travel with the crops — otherwise the
+# session doing the reading has to be told the names out of band, and a run that
+# writes "Uncle Scrooge" for "Scrooge" fails after all the work is done.
+ROSTER_FILE = "roster.txt"
 
 # Claude Code recompresses images above this size; stay well under it.
 MAX_IMAGE_BYTES = 500 * 1024
@@ -233,12 +241,21 @@ def main(
     queue = {"volume": volume, "engine": engine.value, "pages": entries}
     queue_file.write_text(json.dumps(queue, indent=2) + "\n")
 
+    # Rewritten every run, so a roster entry added later reaches the next pass.
+    roster_file = out_dir / ROSTER_FILE
+    roster_file.write_text(roster_text())
+
     total_panels = sum(len(e["panels"]) for e in entries)
     total_groups = sum(e["num_groups"] for e in entries)
     logger.info(f'Wrote queue file "{queue_file}".')
+    logger.info(f'Wrote roster file "{roster_file}".')
     print(
         f"Prepared {len(entries)} page(s), {total_panels} panel(s), {total_groups} group(s)"
         f' in "{out_dir}".'
+    )
+    print(
+        f'Read "{roster_file}" before the vision pass'
+        " — it is what result.json will be validated against."
     )
     print("\nNext:")
     print(f"  barks-ocr-vision-report --out-dir {out_dir}")
