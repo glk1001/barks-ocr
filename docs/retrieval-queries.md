@@ -64,106 +64,125 @@ Confidence varies. Where a query names a story, the assistant is reasonably conf
 contains that element but **has not verified the page** — treat the Expected column as a starting
 hypothesis, not ground truth.
 
-| #  | Query                                  | Layer                        | Expected                  | Why it's in the set                                                                                               |
-|----|----------------------------------------|------------------------------|---------------------------|-------------------------------------------------------------------------------------------------------------------|
-| 11 | Scrooge diving into his money bin | `capture`                    | recurs across many titles | The single most iconic Barks image, and pure art — dialogue rarely narrates it. If capture misses this, it fails. |
-| 12 | the square eggs | `both`                       | Lost in the Andes         | Named in dialogue *and* visible; tests that the two layers agree                                                  |
-| 13 | cubical chickens | `capture`                    | Lost in the Andes         | The same story's visual gag that dialogue may never name                                                          |
-| 14 | ping-pong balls raising a sunken ship | `capture`                    | The Sunken Yacht          | A purely visual solution to the plot                                                                              |
-| 15 | Bombie the Zombie | `capture` (`characters`)     | Voodoo Hoodoo             | A DB-tagged one-off — tests Decision 3's closed set end to end                                                    |
-| 16 | Gyro's Little Helper | `capture` (`characters`)     | Gyro Gearloose stories    | A DB-tagged recurring secondary character                                                                         |
-| 17 | the Beagle Boys in their masks | `capture` (`characters`)     | many titles               | Tests a *group* character across stories                                                                          |
-| 18 | Bolivar the dog | `capture` (`characters`)     | several titles            | DB-tagged, easy to confuse with any dog in frame                                                                  |
-| 19 | Grandma Duck's farm | `capture` (`setting`)        | several titles            | A recurring named setting — the promotion candidate case                                                          |
-| 20 | the Junior Woodchucks in uniform | `capture`                    | many titles               | Uniform as a visual identifier, like the caps                                                                     |
-| 21 | a newspaper headline | `visible_text`               | many titles               | The commonest non-speech lettering; a yield check for the new field                                               |
-| 22 | a wanted poster or reward notice | `visible_text`               | Sheriff of Bullet Valley  | Plot-bearing lettering                                                                                            |
-| 23 | a shop window or storefront sign | `visible_text`               | many titles               | The category the pilot's find belongs to                                                                          |
-| 24 | lettering on Scrooge's office door | `visible_text`               | Uncle Scrooge titles      | Small, specific, easy to miss                                                                                     |
-| 25 | a character silhouetted against the moon or sky | `capture`                    | ?                         | Pure composition — no dialogue, no props, no named character                                                      |
-| 26 | an establishing shot with no characters in frame | `capture`                    | ?                         | The hardest negative case, and invisible to every other layer                                                     |
-| 27 | Donald in a rage | `capture` (`beats`)          | many titles               | A recurring *emotional* beat; tests whether `beats` carries anything retrievable                                  |
-| 28 | Donald and Gladstone in the same panel | `capture` (`characters`)     | several titles            | Co-occurrence, not presence — a different query shape                                                             |
-| 29 | a chase or pursuit across several panels | `capture` (`beats`)          | Sheriff of Bullet Valley  | Spans panels, so page-level capture should beat panel-level here                                                  |
-| 30 | the story's splash page | `capture` (`panels_of_note`) | every title               | Should be trivially answerable; if `panels_of_note` cannot find a splash, it is not earning its place             |
-| 31 | the nephews driving a car | `capture`                    | Sheriff of Bullet Valley  | Should pick characters and car                                                                                    |
-| 32 | a character swimming | `capture`                    | ?                         | Tests character actions                                                                                           |
-| 33 | a character that is sick | `capture`                    | Billions to Sneeze At     | Tests character health                                                                                            |
-| 34 | a character that is sad | `capture`                    | Billions to Sneeze At     | Tests character emotions                                                                                          |
-| 35 | a character that is smiling | `capture`                    | Billions to Sneeze At     | Tests character emotions                                                                                          |
-| 36 | a character that is using a machine | `capture`                    | Billions to Sneeze At     | Tests character action                                                                                            |
-| 37 | a character that is crying | `capture`                    | Billions to Sneeze At     | Tests character emotions                                                                                          |
-| 38 | a character that is sneezing | `capture`                    | Billions to Sneeze At     | Tests character action                                                                                            |
-| 39 | a character kissing | `capture`                    | Billions to Sneeze At     | Tests character action                                                                                            |
-| 40 | a character that is a doctor | `capture`                    | Billions to Sneeze At     | Tests character recognition                                                                                       |
-| 41 | a cave | `capture`                    | Billions to Sneeze At     | Tests object recognition                                                                                          |
-| 42 | a character that has a halo | `capture`                    | Billions to Sneeze At     | Tests object recognition                                                                                          |
-| 43 | a panel containing silhouettes | `capture`(`panels_of_note`)  | Billions to Sneeze At     | Tests silhouette recognition                                                                                      |
-| 44 | a panel containing a campfire | `capture`(`panels_of_note`)  | Billions to Sneeze At     | Tests object recognition                                                                                          |
-| 45 | a character pointing | `capture`                    | Billions to Sneeze At     | Tests character action                                                                                            |
-| 46 | a sound effect | `visible_text`               | Billions to Sneeze At     | Very common non-speech lettering                                                                                  |
-| 47 | a character that is a policeman | `capture`                    | Plenty of Pets            | Tests character recognition                                                                                       |
-| 48 | a character carrying something | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
-| 49 | non-speaking animals | `capture`                    | Plenty of Pets            | Tests can distinguish non-anthropomorphic animals                                                                 |
-| 50 | a radio | `capture`                    | Plenty of Pets            | Tests object recognition                                                                                          |
-| 51 | a character colliding with something | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
-| 52 | a character collapsed | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
-| 53 | a character in bed | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
-| 54 | a character that is a burglar | `capture`                    | Plenty of Pets            | Tests character recognition                                                                                       |
-| 55 | a burglar putting objects in bag | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
-| 56 | a telephone | `capture`                    | Plenty of Pets            | Tests object recognition                                                                                          |
-| 57 | a character that is scared | `capture`                    | Plenty of Pets            | Tests character emotions                                                                                          |
-| 58 | a character eating food | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
-| 59 | car 313 | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 60 | a character that is a cowboy | `capture`                    | Sheriff of Bullet Valley  | Tests character recognition                                                                                       |
-| 61 | a handgun | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 62 | a river or creek | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 63 | a brand on cattle | `visible_text`               | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 64 | a character riding a horse | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
-| 65 | a character wearing a sheriff's badge | `capture`                    | Sheriff of Bullet Valley  | Tests character recognition                                                                                       |
-| 66 | a character cutting a wire fence | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
-| 67 | a character being tied up | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
-| 68 | a gunshot | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 69 | a walkie talkie | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 70 | a character hiding | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
-| 71 | a rifle | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 72 | a sub-machinegun | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 73 | a character sleeping | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
-| 74 | an antenna | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 75 | a character yelling | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
-| 76 | a character feeling pain | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
-| 77 | badlands | `capture` (`setting`)        | Sheriff of Bullet Valley  | Important setting for the plot                                                                                    |
-| 78 | a hand grenade | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 79 | a character's pants falling down | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
-| 80 | an empty handgun | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 81 | a sunset | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 82 | a character smoking a pipe | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
-| 83 | a cattle ranch | `capture` (`setting`)        | several titles            | An important setting for the plot                                                   |
-| 84 | a robot | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
-| 85 | a character being electrocuted | `capture`                    | Roscoe the Robot          | Tests character action                                                                                            |
-| 86 | a hammer | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
-| 87 | a fly swatter | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
-| 88 | a gold fish in a bowl | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
-| 89 | a medical kit | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
-| 90 | a fly (the insect) | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
-| 91 | a dumbells | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
-| 92 | a legless chair | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
-| 93 | a character being hit | `capture`                    | Roscoe the Robot          | Tests character action                                                                                            |
-| 94 | a character that is a postman | `capture`                    | Roscoe the Robot          | Tests character recognition                                                                                       |
-| 95 | a letterbox | `capture`                    | Plenty of Pets            | Tests object recognition                                                                                          |
-| 96 | an alleyway | `capture` (`setting`)        | several titles            | An important setting for the plot                                                   |
-| 97 | a character fainting | `capture`                    | Roscoe the Robot          | Tests character action                                                                                            |
+| #   | Query                              | Layer                        | Expected                  | Why it's in the set                                                                                               |
+|-----|------------------------------------|------------------------------|---------------------------|-------------------------------------------------------------------------------------------------------------------|
+| 11  | Scrooge diving into his money bin  | `capture`                    | recurs across many titles | The single most iconic Barks image, and pure art — dialogue rarely narrates it. If capture misses this, it fails. |
+| 12  | the square eggs                    | `both`                       | Lost in the Andes         | Named in dialogue *and* visible; tests that the two layers agree                                                  |
+| 13  | cubical chickens                   | `capture`                    | Lost in the Andes         | The same story's visual gag that dialogue may never name                                                          |
+| 14  | ping-pong balls raising a sunken ship | `capture`                    | The Sunken Yacht          | A purely visual solution to the plot                                                                              |
+| 15  | Bombie the Zombie                  | `capture` (`characters`)     | Voodoo Hoodoo             | A DB-tagged one-off — tests Decision 3's closed set end to end                                                    |
+| 16  | Gyro's Little Helper               | `capture` (`characters`)     | Gyro Gearloose stories    | A DB-tagged recurring secondary character                                                                         |
+| 17  | the Beagle Boys in their masks     | `capture` (`characters`)     | many titles               | Tests a *group* character across stories                                                                          |
+| 18  | Bolivar the dog                    | `capture` (`characters`)     | several titles            | DB-tagged, easy to confuse with any dog in frame                                                                  |
+| 19  | Grandma Duck's farm                | `capture` (`setting`)        | several titles            | A recurring named setting — the promotion candidate case                                                          |
+| 20  | the Junior Woodchucks in uniform   | `capture`                    | many titles               | Uniform as a visual identifier, like the caps                                                                     |
+| 21  | a newspaper headline               | `visible_text`               | many titles               | The commonest non-speech lettering; a yield check for the new field                                               |
+| 22  | a wanted poster or reward notice   | `visible_text`               | Sheriff of Bullet Valley  | Plot-bearing lettering                                                                                            |
+| 23  | a shop window or storefront sign   | `visible_text`               | many titles               | The category the pilot's find belongs to                                                                          |
+| 24  | lettering on Scrooge's office door | `visible_text`               | Uncle Scrooge titles      | Small, specific, easy to miss                                                                                     |
+| 25  | a character silhouetted against the moon or sky | `capture`                    | ?                         | Pure composition — no dialogue, no props, no named character                                                      |
+| 26  | an establishing shot with no characters in frame | `capture`                    | ?                         | The hardest negative case, and invisible to every other layer                                                     |
+| 27  | Donald in a rage                   | `capture` (`beats`)          | many titles               | A recurring *emotional* beat; tests whether `beats` carries anything retrievable                                  |
+| 28  | Donald and Gladstone in the same panel | `capture` (`characters`)     | several titles            | Co-occurrence, not presence — a different query shape                                                             |
+| 29  | a chase or pursuit across several panels | `capture` (`beats`)          | Sheriff of Bullet Valley  | Spans panels, so page-level capture should beat panel-level here                                                  |
+| 30  | the story's splash page            | `capture` (`panels_of_note`) | every title               | Should be trivially answerable; if `panels_of_note` cannot find a splash, it is not earning its place             |
+| 31  | the nephews driving a car          | `capture`                    | Sheriff of Bullet Valley  | Should pick characters and car                                                                                    |
+| 32  | a character swimming               | `capture`                    | ?                         | Tests character actions                                                                                           |
+| 33  | a character that is sick           | `capture`                    | Billions to Sneeze At     | Tests character health                                                                                            |
+| 34  | a character that is sad            | `capture`                    | Billions to Sneeze At     | Tests character emotions                                                                                          |
+| 35  | a character that is smiling        | `capture`                    | Billions to Sneeze At     | Tests character emotions                                                                                          |
+| 36  | a character that is using a machine | `capture`                    | Billions to Sneeze At     | Tests character action                                                                                            |
+| 37  | a character that is crying         | `capture`                    | Billions to Sneeze At     | Tests character emotions                                                                                          |
+| 38  | a character that is sneezing       | `capture`                    | Billions to Sneeze At     | Tests character action                                                                                            |
+| 39  | a character kissing                | `capture`                    | Billions to Sneeze At     | Tests character action                                                                                            |
+| 40  | a character that is a doctor       | `capture`                    | Billions to Sneeze At     | Tests character recognition                                                                                       |
+| 41  | a cave                             | `capture`                    | Billions to Sneeze At     | Tests object recognition                                                                                          |
+| 42  | a character that has a halo        | `capture`                    | Billions to Sneeze At     | Tests object recognition                                                                                          |
+| 43  | a panel containing silhouettes     | `capture`(`panels_of_note`)  | Billions to Sneeze At     | Tests silhouette recognition                                                                                      |
+| 44  | a panel containing a campfire      | `capture`(`panels_of_note`)  | Billions to Sneeze At     | Tests object recognition                                                                                          |
+| 45  | a character pointing               | `capture`                    | Billions to Sneeze At     | Tests character action                                                                                            |
+| 46  | a sound effect                     | `visible_text`               | Billions to Sneeze At     | Very common non-speech lettering                                                                                  |
+| 47  | a character that is a policeman    | `capture`                    | Plenty of Pets            | Tests character recognition                                                                                       |
+| 48  | a character carrying something     | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
+| 49  | non-speaking animals               | `capture`                    | Plenty of Pets            | Tests can distinguish non-anthropomorphic animals                                                                 |
+| 50  | a radio                            | `capture`                    | Plenty of Pets            | Tests object recognition                                                                                          |
+| 51  | a character colliding with something | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
+| 52  | a character collapsed              | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
+| 53  | a character in bed                 | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
+| 54  | a character that is a burglar      | `capture`                    | Plenty of Pets            | Tests character recognition                                                                                       |
+| 55  | a burglar putting objects in bag   | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
+| 56  | a telephone                        | `capture`                    | Plenty of Pets            | Tests object recognition                                                                                          |
+| 57  | a character that is scared         | `capture`                    | Plenty of Pets            | Tests character emotions                                                                                          |
+| 58  | a character eating food            | `capture`                    | Plenty of Pets            | Tests character action                                                                                            |
+| 59  | car 313                            | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 60  | a character that is a cowboy       | `capture`                    | Sheriff of Bullet Valley  | Tests character recognition                                                                                       |
+| 61  | a handgun                          | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 62  | a river or creek                   | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 63  | a brand on cattle                  | `visible_text`               | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 64  | a character riding a horse         | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
+| 65  | a character wearing a sheriff's badge | `capture`                    | Sheriff of Bullet Valley  | Tests character recognition                                                                                       |
+| 66  | a character cutting a wire fence   | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
+| 67  | a character being tied up          | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
+| 68  | a gunshot                          | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 69  | a walkie talkie                    | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 70  | a character hiding                 | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
+| 71  | a rifle                            | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 72  | a sub-machinegun                   | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 73  | a character sleeping               | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
+| 74  | an antenna                         | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 75  | a character yelling                | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
+| 76  | a character feeling pain           | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
+| 77  | badlands                           | `capture` (`setting`)        | Sheriff of Bullet Valley  | Important setting for the plot                                                                                    |
+| 78  | a hand grenade                     | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 79  | a character's pants falling down   | `capture`                    | Sheriff of Bullet Valley  | Tests character action                                                                                            |
+| 80  | an empty handgun                   | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 81  | a sunset                           | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 82  | a character smoking a pipe         | `capture`                    | Sheriff of Bullet Valley  | Tests object recognition                                                                                          |
+| 83  | a cattle ranch                     | `capture` (`setting`)        | several titles            | An important setting for the plot                                                                                 |
+| 84  | a robot                            | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
+| 85  | a character being electrocuted     | `capture`                    | Roscoe the Robot          | Tests character action                                                                                            |
+| 86  | a hammer                           | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
+| 87  | a fly swatter                      | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
+| 88  | a gold fish in a bowl              | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
+| 89  | a medical kit                      | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
+| 90  | a fly (the insect)                 | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
+| 91  | a dumbells                         | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
+| 92  | a legless chair                    | `capture`                    | Roscoe the Robot          | Tests object recognition                                                                                          |
+| 93  | a character being hit              | `capture`                    | Roscoe the Robot          | Tests character action                                                                                            |
+| 94  | a character that is a postman      | `capture`                    | Roscoe the Robot          | Tests character recognition                                                                                       |
+| 95  | a letterbox                        | `capture`                    | Plenty of Pets            | Tests object recognition                                                                                          |
+| 96  | an alleyway                        | `capture` (`setting`)        | several titles            | An important setting for the plot                                                                                 |
+| 97  | a character fainting               | `capture`                    | Roscoe the Robot          | Tests character action                                                                                            |
+| 98  | an establishing shot               | `capture`                    | The Big Bin on Killmotor Hill | Opening panel setting up plot                                                                                     |
+| 99  | an acid moat                       | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 100 | a microphone                       | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 101 | a cannon                           | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 102 | a portcullis                       | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 103 | flypaper                           | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 104 | a beartrap                         | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 105 | a drawbridge                       | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 106 | an alarm bell                      | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 107 | love                               | `capture`                    | The Big Bin on Killmotor Hill | Tests character emotion                                                                                           |
+| 108 | a periscope                        | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 109 | a pickaxe                          | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 110 | a spade                            | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 111 | worry                              | `capture`                    | The Big Bin on Killmotor Hill | Tests character emotion                                                                                           |
+| 112 | wall painting                      | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 113 | a water hose                       | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 114 | character kicking another character | `capture`                    | The Big Bin on Killmotor Hill | Tests character action |
+| 115 | a fire hydrant                     | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
+| 116 | making a fire with books           | `capture`                    | The Big Bin on Killmotor Hill | Tests object recognition                                                                                          |
 
 ---
 
 ## Controls — the speech layer must not regress
 
-The 46 above are deliberately capture-heavy — 39 `capture`, 6 `visible_text`, 1 `both`, 0 `speech`
-— because a set weighted toward speech would prove nothing about the vision pass. But that leaves
+The 116 above are deliberately capture-heavy — overwhelmingly `capture`, a handful of
+`visible_text`, one `both`, no `speech` — because a set weighted toward speech would prove nothing about the vision pass. But that leaves
 no check that adding capture has not *broken* what already works, and no calibration for what a hit
 looks like on data known to support it.
 
-These three are not part of the 46. They should pass before and after, unchanged.
+These three are not part of the 116. They should pass before and after, unchanged.
 
 | # | Query | Layer | Expected | Why |
 |---|---|---|---|---|

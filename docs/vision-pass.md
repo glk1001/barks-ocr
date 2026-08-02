@@ -474,17 +474,20 @@ them would have been the wrong order.
 | **Billions to Sneeze At** | 10 | 044-053 (10) | ~14 | none |
 | **Plenty of Pets** | 7 | 199-208 (10) | ~13 | none |
 | **Roscoe the Robot** | 20 | 175-178 (4) | ~13 | none |
-| **+ one with a tagged cast** — see below | | ~10 | | required |
+| **The Big Bin on Killmotor Hill** | 11 | 10 | ~19 | **The Beagle Boys** |
 
-4 to 32 pages is a wider length spread than the original plan had, and Roscoe is
-a deliberate density stress test: 13 queries against 4 pages, ~2.5 objects a page.
+**~66 pages.** 4 to 32 is a wider length spread than the original plan had, and
+Roscoe is a deliberate density stress test: 13 queries against 4 pages, roughly
+2.5 objects per page.
 
-**A fifth title is needed and is not optional.** None of the four has a DB-tagged
-cast, so `story_characters`, the aliasing and the nested-group flattening would
-all go completely untested — the entire closed-set mechanism. Candidates:
-*Cave of the Winds* (vol 26, 10p, Little Helper — also lights up two queries) or
-*The Big Bin on Killmotor Hill* (vol 11, 10p, Beagle Boys — lights up the money
-bin query). That brings the run to ~66 pages.
+The fifth title is not a spare. The other four carry **no DB-tagged cast at
+all**, so `story_characters`, the aliasing and the nested-group flattening would
+have gone completely untested by the run meant to prove them. Big Bin is the only
+unit exercising the closed set end to end.
+
+Four of the five also carry `THINGS` anchors — `313`, `HDL driving car` and
+`cigarettes` on Sheriff, `sulphuric acid` on Big Bin — so the naming-anchor path
+gets covered too.
 
 **The one-pager batch unit was dropped as impossible**, not as unnecessary — see
 Open threads. The question it was for, whether a union of unrelated casts
