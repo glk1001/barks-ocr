@@ -460,30 +460,43 @@ wrong** (079 g16, 080 g6, 080 g7); 081 g3 and 083 g12 are correct. Recorded in
 
 ## The next run: a title mix, not a volume
 
-Because the unit is the story, the next run should test the axis that actually
-varies — **story length** — rather than 205 pages of one volume's sameness. Four
-units, about 60 pages total:
+Because the unit is the story, the next run tests the axis that actually varies
+— **story length** — rather than 205 pages of one volume's sameness.
 
-| unit | pages | what it tests |
-|---|---:|---|
-| a 10-pager | ~10 | the modal Barks story; directly comparable to the pilot |
-| a second 10-pager, different cast | ~10 | does the per-story closed set hold on a different tag set? |
-| a long adventure (24–32p) | ~30 | do settings multiply? does one session hold a story that long? |
-| a one-pager batch | ~10 | the awkward case — its closed set is the union of ten unrelated stories |
+The titles were **chosen by the queries, not the other way round**: 63 of the 97
+in [`retrieval-queries.md`](retrieval-queries.md) name a specific story, and
+those stories are the run. Picking titles first and hoping the queries reached
+them would have been the wrong order.
 
-That is ~330 panels and ~800 groups: cheap enough to run twice if the first pass
-says the schema is wrong, and it puts the speaker queue at a workable ~107
-entries rather than a volume's ~370.
+| title | vol | pages | queries | DB cast |
+|---|---|---:|---:|---|
+| **Sheriff of Bullet Valley** | 6 | 144-175 (32) | ~23 | none |
+| **Billions to Sneeze At** | 10 | 044-053 (10) | ~14 | none |
+| **Plenty of Pets** | 7 | 199-208 (10) | ~13 | none |
+| **Roscoe the Robot** | 20 | 175-178 (4) | ~13 | none |
+| **+ one with a tagged cast** — see below | | ~10 | | required |
 
-**Pick the four so they light up ten or twelve of the queries in
-[`retrieval-queries.md`](retrieval-queries.md)** — rather than picking titles
-first and finding the queries cannot reach them.
+4 to 32 pages is a wider length spread than the original plan had, and Roscoe is
+a deliberate density stress test: 13 queries against 4 pages, ~2.5 objects a page.
+
+**A fifth title is needed and is not optional.** None of the four has a DB-tagged
+cast, so `story_characters`, the aliasing and the nested-group flattening would
+all go completely untested — the entire closed-set mechanism. Candidates:
+*Cave of the Winds* (vol 26, 10p, Little Helper — also lights up two queries) or
+*The Big Bin on Killmotor Hill* (vol 11, 10p, Beagle Boys — lights up the money
+bin query). That brings the run to ~66 pages.
+
+**The one-pager batch unit was dropped as impossible**, not as unnecessary — see
+Open threads. The question it was for, whether a union of unrelated casts
+degrades the closed set, can be tested separately and cheaply with `--volume`
+and `--pages` across a title boundary, which exercises the same warning path.
 
 Five things to measure, in this order:
 
 1. **Correction rate** against the pilot's **1.5%**. Read this first: materially
    higher means the pass is hallucinating, not that the story is dirty.
-2. **Retrieval hit rate** on the 30 pre-committed queries. The pass/fail gate.
+2. **Retrieval hit rate** on the pre-committed queries, each miss split into
+   *not recorded* vs *not retrieved*. The pass/fail gate.
 3. **Low-confidence speaker error rate.** Decides whether `low` is worth queueing
    at corpus scale, or whether the threshold should move.
 4. **Off-vocabulary rate** for `characters` and `setting`, and which `other:`
@@ -512,6 +525,28 @@ Five things to measure, in this order:
   are recorded in `vision_note` only.
 - **24 pages have no prelim OCR at all** — see below. The tools no longer trip over
   them, but the OCR still needs to be run.
+- **One-pagers cannot be prepped at all.** All 155 `ONE_PAGERS` fail to resolve —
+  128 `TitleNotFoundError`, 27 `KeyError` — because they have no `.ini`, and no
+  one-pager OCR exists in the corpus under any title. This is why the trial has
+  no one-pager unit. Whether they are ever worth capturing is open; they would
+  need OCR first, and then a way to address them that is not a story title.
+- **136 pages of OCR are unreachable, all in vol 2.** 5,358 easyocr prelim pages
+  are on disk; 5,222 are reachable through a title. The gap is twelve vol-2
+  stories — *Good Neighbors*, *Salesman Donald*, *Snow Fun*, *Kite Weather*,
+  *The Hard Loser*, *Too Many Pets*, *The Duck in the Iron Pants*, *Three Dirty
+  Little Ducks* and others — which abort with:
+
+  > `Panels segments info file ".../Frozen Gold/031.json" is older than srce image file ".../images/031.png"`
+
+  That is the staleness guard firing correctly, not corruption: the restored PNGs
+  were regenerated after the panel segments. Regenerating vol 2's panel segments
+  clears it. Until then `vision_prep --title` fails on any of those twelve.
+- **Two database accessors disagree about story ownership.** The comic page map
+  can claim pages belonging to neighbouring stories — *Sheriff of Bullet Valley*
+  comes back with 103, 176 and 177 on top of its real 144-175.
+  `vision_prep._title_pages` now keeps only pages both accessors agree on and
+  names the rest in a warning, but the underlying disagreement is unfixed, and
+  anything else walking the page map will hit it too.
 
 ---
 
