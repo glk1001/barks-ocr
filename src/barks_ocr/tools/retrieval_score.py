@@ -147,6 +147,9 @@ SHERIFF_RANCH_PAGES = [
 ]
 # fmt: on
 
+# Every page of Plenty of Pets after the nephews get home has the pets loose on it.
+POP_ANIMAL_PAGES: list[str] = [str(p) for p in range(200, 209)]
+
 
 QUERIES: dict[str, list[tuple[int, str, list[str] | None]]] = {
     "Roscoe the Robot": [
@@ -225,6 +228,28 @@ QUERIES: dict[str, list[tuple[int, str, list[str] | None]]] = {
         (81, "a sunset", ["175"]),
         (82, "a character smoking a pipe", ["145", "150", "151", "164", "167", "168", "175"]),
         (83, "a cattle ranch", SHERIFF_RANCH_PAGES),
+    ],
+    # 13 of the queries in `docs/retrieval-queries.md` name this title (#47-#58 and
+    # #95), plus two any title can answer.  Expected pages taken from the ART while
+    # reading, before any capture record existed for the page.
+    "Plenty of Pets": [
+        (30, "the story's splash page", ["199"]),
+        (43, "a panel containing silhouettes", ["200", "204", "205"]),
+        (47, "a character that is a policeman", ["199"]),
+        (48, "a character carrying something", ["199", "204", "208"]),
+        # True of nine of the ten pages -- this is a pet-shop story.  Recorded at its
+        # real breadth and reported as non-discriminating rather than trimmed.
+        (49, "non-speaking animals", POP_ANIMAL_PAGES),
+        (50, "a radio", ["202"]),
+        (51, "a character colliding with something", ["200", "203", "206"]),
+        (52, "a character collapsed", ["203", "206"]),
+        (53, "a character in bed", ["204", "205", "207", "208"]),
+        (54, "a character that is a burglar", ["204", "205", "206", "207"]),
+        (55, "a burglar putting objects in bag", ["205"]),
+        (56, "a telephone", ["205", "208"]),
+        (57, "a character that is scared", ["199", "205", "206", "207"]),
+        (58, "a character eating food", ["208"]),
+        (95, "a letterbox", ["199"]),
     ],
 }
 

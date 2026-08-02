@@ -575,7 +575,7 @@ them would have been the wrong order.
 |---|---|---:|---:|---|---|
 | **Sheriff of Bullet Valley** | 6 | 144-175 (32) | 27 | none | **trial 3** |
 | **Billions to Sneeze At** | 10 | 044-053 (10) | ~14 | none | **trial 2** |
-| **Plenty of Pets** | 7 | 199-208 (10) | ~13 | none | — |
+| **Plenty of Pets** | 7 | 199-208 (10) | ~13 | none | **trial 4** |
 | **Roscoe the Robot** | 20 | 175-178 (4) | ~13 | none | **trial 1** |
 | **The Big Bin on Killmotor Hill** | 11 | 10 | ~19 | **The Beagle Boys** | — |
 
@@ -1340,6 +1340,303 @@ Two other defects worth the editor's time:
 
 ---
 
+## Trial results 4 — Plenty of Pets, vol 7 pages 199-208
+
+Run 2026-08-02. 10 pages, 79 panels, 144 groups. Fourth unit of the five-title
+trial, and the first since the pilot with a **full nephew cast on nearly every
+page**.
+
+| | |
+|---|---|
+| `vision_text_ok: false` | **0** (Sheriff 0, Billions 0, Roscoe 2.3%, pilot 1.5%) |
+| emphasis runs | 24 across 23 of 144 groups (**16%** of groups) |
+| confidence | high 138 / **medium 6** / low 0 |
+| `cap_colour` non-null | 8 (red 4, green 2, blue 2) |
+| `visible_text` strings | 25 |
+
+### Correction rate: zero for the third title running
+
+144 groups and nothing to correct. Holding to the word-level-misreadings-only
+rule, the following were seen and deliberately **not** counted, each recorded in
+`vision_note`:
+
+- **A soft hyphen where the art letters an ordinary one** — `202 g16` breaks
+  `WOOD­PECKER` across lines with U+00AD. Word-break convention.
+- **An extra comma** — `205 g11` stores `NO, YOU DON'T, BUD!` where the art
+  letters `NO YOU DON'T, BUD!`. Punctuation, `string_replacer`'s job, same rule
+  that spared Billions' `052 g4` and Sheriff's `156 g4`.
+
+**Three genuine defects that are not text corrections**, all new-ish shapes:
+
+- **`206 panel 2` letters `CLICK!` beside the key and has no OCR group at all.**
+  Caught in `visible_text`. Exactly Sheriff's `172 FZZT!`.
+- **`199` has a page-wide `panel_num` shift.** `panel_boxes` gives the page seven
+  panels and the crops follow that, but every group except `g0` and `g10` is
+  stored one panel too high, and `g11`/`g12` say `8`, which is not a panel on the
+  page at all. The grouping pass appears to have counted the title logo and the
+  splash art as two panels. Previous titles produced *single* mis-numbered groups
+  (Billions `048 g3/g4`, Sheriff `150 g9`); a whole-page shift on the splash is a
+  bigger version of the same class and is the kind of thing worth a cheap
+  mechanical check, since `max(panel_num) > len(panel_boxes)` catches it outright.
+- **The drawn `?` device is typed three different ways.** `205 g9` is
+  `background`, `207 g12` is `sound_effect`, and the three `?`s over the nephews'
+  heads on `208 panel 5` have **no groups at all**. It makes no sound in any of
+  them.
+
+### Measurement 3: six medium calls, and the first *reviewable* nephew population
+
+`--queue-speakers` at the default wrote **zero** entries — the fourth title in a
+row, and for the reason Sheriff established: the collective rule means an
+unreadable cap yields `nephews` at `high`, so the low band cannot fill. The
+`low,medium` run wrote **6**:
+
+```
+199 g12   Huey   tail lands on the red cap, but both crate-haulers have the pole in their beaks
+200 g2    Huey   same panel-and-pole problem one page later
+204 g1    Louie  green cap unmistakable, but the red cap in the same panel prints brown
+204 g3    Huey   the same muddy red flash
+207 g4    Donald a shout through a wall with nobody in frame; the burglar would suit it too
+208 g20   Louie  named by the *previous balloon*, not by the art
+```
+
+**This is a different population from Sheriff's, and that is the finding.**
+Sheriff's 14 were 9 adults, 5 nephews. These 6 are **4 nephews, 1 adult-ish
+offstage shout, and 1 placed by dialogue** — back to the pilot's shape, because
+this story has the three nephews on nine of ten pages and Sheriff's four
+interchangeable dog-faced men do not exist here.
+
+**The open question from Sheriff — does adult-identity-by-costume-colour recur?
+— answers *no*, and the reason is structural.** This story is built on unnamed
+adult roles (`other:the policeman`, `other:the Black Mask Burglar`) exactly as
+predicted, but there are only **two adults in the whole story and they never
+share a panel**. The failure mode needs *two similar adults told apart only by
+costume colour*; a story with one policeman and one burglar in a checked cap
+cannot produce it however many unnamed roles it has. So Sheriff's error class is
+better described as **a large similar-looking supporting cast**, not "unnamed
+adult roles" — which is a narrower and more useful thing to watch for.
+
+What did recur, in a new place: **the colourist**. On this title the caps are
+drawn near-solid black with a small colour flash, and the flash is unreliable —
+`200 panel 1` prints one cap a dull olive-grey, `204 panel 1` prints red as
+brown, and `203 panels 7 and 8` each give **two of three nephews a green flash**.
+Sheriff's rule (two the same colour, or a non-roster colour, means colour is not
+evidence in that panel) was applied panel-wide each time, which is why five
+individually-named calls came out `nephews` instead.
+
+That rule is also what makes the 8 non-null `cap_colour` values the *low* number
+here rather than a shortfall: the caps are visible on far more pages than that,
+and were discarded on purpose.
+
+**Two evidence kinds the schema cannot record**, both of which carried real calls:
+
+- **Pyjama and shirt colour.** `204 panels 4-5` and `208 panels 2, 3, 5` dress
+  the nephews in red/blue/green with no caps at all, and all eleven calls there
+  are `high`. This is the pilot's `085 p5` case, and `cap_colour` has nowhere to
+  put it — which is the strongest argument yet for the `identified_by` idea in
+  Open threads, since the *same* field would then carry "cap", "pyjamas" and
+  Sheriff's missing "hat colour" for adults.
+- **The previous balloon.** `208 g20` is Louie because `g19` says
+  "WHAT DO YOU THINK, LOUIE?" — nothing in the art says so. Recorded at medium to
+  match Sheriff's `165 g0`, which is the same category.
+
+### Retrieval: 11 of 15, and **again not one miss is *not recorded***
+
+`--validate` was run first and reproduced Roscoe at 15 / 1 / #93; it still does
+with the *Plenty of Pets* set added.
+
+13 queries name this title (#47-#58 and #95); two more (#30, #43) are cross-title.
+
+| | |
+|---|---:|
+| hit | **11** |
+| miss | **4** (#51, #55, #57, #95) |
+| capture-only hits | 7 |
+| also answerable from speech | 4 |
+| false positives | 0 |
+
+Seven of eleven capture-only is the best ratio of the four titles (Roscoe 11/15,
+Billions 9/12, Sheriff 9/26) — a domestic slapstick story talks about its props
+much less than a western does.
+
+The four misses split **4 not-retrieved, 0 not-recorded**, matching Sheriff
+exactly. Two are the failure modes already documented and two are worth reading:
+
+- **#51 *colliding* — not retrieved.** All three pages record the collision:
+  "knocks Donald off his feet" (200), "butts Donald head first into the tree
+  trunk" (203), "butts the burglar off his feet" (206). Nothing says *collide*.
+  Morphology does not help here and neither would a stemmer — this is the
+  **reader-vocabulary vs drawn-vocabulary** gap, now on its fifth instance after
+  *sick*, *sad*, *pain* and (below) *scared*.
+- **#57 *scared* — not retrieved, and it is the emotion case again.** The records
+  carry the *depiction* on every expected page — "sweat drops flying", "sweating,
+  backed into the corner", "pulling up short" — and never the word. This is
+  precisely Billions' #34 *sad* → "in tears" result, reproduced on a different
+  emotion in a different story. **Two titles have now independently shown that
+  emotion fails on retrieval rather than on discrimination.** That is no longer a
+  single observation, and it is the clearest case in the trial for embeddings.
+- **#55 *bag* against the record's *sack*** — plain synonymy. Unlike Sheriff's
+  #79 there is no source word to prefer: the comic never names it.
+- **#95 *letterbox* against the record's *mailbox*.** This one was **called in
+  advance and left to fail on purpose.** Reading page 199 it was obvious that the
+  query's British *letterbox* would not reach an American comic's *mailbox*, and
+  writing both would have manufactured a hit. Sheriff's rule — prefer the comic's
+  own word — cannot decide it, because the art names the box only `DONALD DUCK`.
+  So this is a **third** vocabulary class, distinct from the two already recorded:
+  not drifting within a title (Roscoe), not drifting away from the source
+  (Sheriff), but **the query and the record using different correct words for the
+  same object with no source text to arbitrate**. Only embeddings fix it.
+
+One property of the scorer worth recording from this title: **#49
+*non-speaking animals* hits, but on the wrong pages.** Its expected list is nine
+of the ten pages, and the top band returns `199, 200, 203` — of which 199 is not
+on the list at all, because the animals there are shut in a cage. A query true of
+almost a whole title is close to a guaranteed hit and discriminates nothing; it
+is reported here rather than trimmed, as Sheriff did for #60 and #65.
+
+### Where the animals went, and why
+
+**Decision: non-speaking animals stay in `objects`; an animal gets into
+`characters` only if the art gives it a balloon.** This follows Sheriff exactly
+(livestock in `objects`, `other:Donald's horse` in `characters` because 174 g5
+gives it "PANT! PUFF!"), and it was worth deciding deliberately because this is a
+pet story where the animals drive the entire plot — they are the ones who defeat
+the burglar.
+
+The test fires exactly once in ten pages: **`205 g8`, where the police whistle
+the goat has swallowed sounds inside it in a balloon of its own with a proper
+tail.** So `other:the goat` is in `characters` on 205 and the goat is in
+`objects` on every other page. Every other animal noise in the story — the owl's
+`HOO!`, the goat's `BAA!`, the woodpecker's `RAT-A-TAT` — is display lettering
+with no balloon and is left `none`, the same treatment as Sheriff's coyote and
+snake.
+
+Retrieval is unaffected either way, since the scorer indexes `characters` and
+`objects` equally; this is a schema-consistency decision, not a retrieval one.
+
+Two conventions this title needed on top of that:
+
+- **The nephews' `ZZZ`s get a speaker** (`207 g9`, `nephews`), where the drawn
+  `?` on `205 g9` does not. Snoring is a noise the characters make, which is
+  Sheriff's test; a question mark represents a state and makes no sound.
+- **The burglar's balloon-less `YEEK! YOWCH!`** (`206 g6`) records him as the
+  speaker, on Sheriff's `166 YEOWCH!` precedent. Note the mirror image: Sheriff's
+  case was typed `sound_effect` and this one is typed `dialogue`, and they are
+  the same thing.
+
+### `visible_text`: 1 net new in 25, and the yield is not rising with page count
+
+25 strings, of which **one exists nowhere in the OCR groups** — `CLICK!` on 206,
+the key turning in the closet door. Against Roscoe's 0 of 13, Billions' 2 of 18
+and Sheriff's 7 of 62, that is **4%**, the second-worst of the four.
+
+Sheriff suggested the yield was rising with page count. This title says otherwise:
+10 pages here yield 1 where 10 pages of Billions yielded 2. What actually
+predicts the yield is **how much non-speech lettering the story has that OCR did
+not already catch**, and Barks' sound effects are nearly always caught — 24 of
+these 25 strings are already OCR groups. The one that got away is small lettering
+on a prop, which is now the shape of **every** net-new string across four titles
+(`1¢`, `M.D.`, `313`, two cattle brands, a `REWARD` poster, and now `CLICK!`).
+
+### Off-vocabulary rate
+
+`characters`: **8 distinct values, 5 on the roster** (Donald, Huey, Dewey, Louie,
+`nephews`), covering 29 of 35 page-appearances — **83%**, far the best of the four
+titles (Sheriff 50%, Billions 75% of values but a smaller cast, Roscoe 1 of 6).
+The three `other:` names are `the Black Mask Burglar`, `the policeman` and
+`the goat`. **The database tags this story with no cast at all** — `story_cast`
+in `queue.json` is `[]` for the **fourth title running**, so the closed-set
+machinery (`story_characters`, the `Daisy Duck`/`Gyro Gearloose` aliasing, the
+nested `Pig Villains` flattening) is still completely untested after 56 of the
+trial's ~66 pages. **Big Bin is the only unit left that can exercise it**, and
+skipping it would leave the trial having proved nothing about the one design
+decision it was built to validate.
+
+`setting`: **0 of 10 pages used a closed-vocabulary value**, all `other:`
+(`Donald's house` 8, `Donald's kitchen` 1, `Donald's back yard` 1). The closed
+vocabulary is now **0-for-4** on being worth reaching for, and this title is the
+cleanest demonstration of why: nine of the ten pages are `indoors`, which is true
+and answers nothing.
+
+Note also that the one-value-per-page limitation bites here in a *new* way. It is
+not that pages cut between two locations (they do — 202 alternates yard and
+living room four times); it is that a whole story set in one house makes `setting`
+**constant**, so the field discriminates nothing at all within the title. Sheriff
+and Billions lost information to the single value; this title has almost none to
+lose.
+
+`barks-ocr-speaker-census --volume 7` reports **no variant spellings and nothing
+off-roster**. One name clears the promotion threshold — `the Black Mask Burglar`
+at 11 — and **should not be promoted**, for the same reason as Blacksnake McQuirt
+and `other:crows`: it is a single-story name. This is the third title to put a
+single-story name over the threshold, which strengthens Sheriff's argument that
+the census should weight by *how many titles* a name appears in.
+
+### `type` is wrong at 2.8%, and this title breaks the one-directional finding
+
+**4 of 144 groups (2.8%)**, and unlike the last three titles they do **not** all
+run the same way:
+
+| direction | count | groups |
+|---|---:|---|
+| thought cloud typed `dialogue` | 2 | 200 g4, 200 g5 |
+| **speech balloon typed `thought`** | **2** | 207 g2, 207 g14 |
+
+Every group actually typed `thought` elsewhere on the title was checked against
+the art and is correct — eleven of them, most on 205.
+
+`207 g2` and `g14` are Donald shouting from inside the locked closet: plain
+triangular tails, no bubble trail, beak open. Sheriff reported "no
+`dialogue`-drawn-as-`thought` errors at all" and called the error
+one-directional on the strength of 407 groups; **the pilot found this direction
+and so does this title**, so the corpus estimate should stay ~2-5% and
+**bidirectional**, with the reverse direction rarer.
+
+The two on `200` are the mirror pair — `g4` and `g5` are both scalloped clouds
+with two-circle trails typed `dialogue`, and `g5` is the harder call because
+Donald's beak is wide open in it.
+
+### Cost
+
+**One session**, 116 images read: 10 page overviews, 79 panel crops, and **8
+enlargements**. Batched one message per page, as Sheriff established.
+
+The page-reading phase ran **19:42 to 20:06, ~24 minutes for 10 pages** —
+**~2.4 min/page against Sheriff's 1.6**. Page 199 alone took ~7 of those minutes
+(the splash, three enlargements, and the pre-read name grep), so **the last nine
+pages ran at ~1.9 min/page**, which is Sheriff's rate within noise. Reading the
+two design docs, adding the query set and scoring sit on top of that and are not
+counted, as on previous titles.
+
+So this title neither confirms nor undercuts Sheriff's 1.6 — it reproduces it
+once the first page is excluded, on a fifth of the pages, which is about the most
+a 10-page unit can say. The 8 enlargements are the honest per-page variable, and
+they are concentrated: **Sheriff spent 11 on 32 pages, this title 8 on 10**,
+because the caps here are drawn near-black with a small colour flash and three
+panels send three balloon tails into one black background.
+
+### The pre-read name grep worked, and its one gap is worth fixing
+
+Sheriff's discipline — grep the whole title's `groups.json` for capitalised names
+before reading page 1 — was followed and resolved **Sylvester** (the squirrel),
+**Jasmine Joe** and **the Black Mask Burglar** up front, so the burglar was never
+provisionally `other:the thug`.
+
+It **missed `Yehooty`**, the owl, which is named on 202. The grep printed the
+frequency table's head and its rare tail, and `YEHOOTY` occurs three times —
+enough to fall out of the tail and too rare to reach the head. The fix is to
+print *all* distinct capitalised tokens minus a stop list rather than the two
+ends of the distribution. The cost was one retrospective edit across four pages
+(`owl` → `Yehooty the owl`), caught because the name appeared before the story
+was finished; on a longer title it would have been the Roscoe split.
+
+The same edit was made for `skunk` → `Jasmine Joe the skunk`, which the grep
+*did* surface but whose referent only became clear on 204, when the nephew
+holding the skunk asks whether to leave Jasmine Joe outside. **A name in the
+dialogue does not tell you which thing it names**, so the grep buys the spelling,
+not the identification.
+
+---
+
 ## Open threads
 
 - **The pilot's `result.json` no longer validates**, and correctly so: it names
@@ -1444,7 +1741,60 @@ Two other defects worth the editor's time:
   `other:crows`. The fourth, **`other:the sheriff`, is a role rather than a name**
   and plausibly recurs across the corpus — the first genuine promotion candidate
   the census has produced. Weighting by how many titles a name appears in would
-  separate all four correctly.
+  separate all four correctly. *Plenty of Pets* adds a fourth single-story name
+  over the threshold (`other:the Black Mask Burglar`, 11) and a genuine role
+  below it (`other:the policeman`, 2), which is the same argument again: the
+  threshold is measuring the wrong thing.
+- **The `identified_by` idea now has three distinct callers, not one.** Sheriff
+  wanted it for adults identified by hat colour with nothing to record it.
+  *Plenty of Pets* adds two more: eleven `high`-confidence calls made from
+  **pyjama and shirt colour** (204 panels 4-5, 208 panels 2, 3, 5), which
+  `cap_colour` cannot hold, and one made from **the previous balloon** (208 g20,
+  named by the line before it). One field naming the evidence would cover cap,
+  costume, hat and dialogue alike, and would make a call reversible the way
+  `cap_colour` already makes a nephew call reversible.
+- **Sheriff's adult-identity error class did not recur, and the reason narrows
+  it.** *Plenty of Pets* was the natural test — it is built on unnamed adult
+  roles (#47 policeman, #54 burglar) — and produced none of it, because the story
+  has only **two adults and they never share a panel**. The failure needs two or
+  more similar-looking figures separated only by costume colour, so the class is
+  better stated as **a large similar-looking supporting cast** than as "unnamed
+  adult roles". Still unwatched at scale; Big Bin's Beagle Boys are the obvious
+  next place for it to appear.
+- **Emotion's retrieval failure is now reproduced, not observed once.** Billions
+  found #34 *sad* recorded as "in tears" and unreachable; *Plenty of Pets* finds
+  #57 *scared* recorded as "sweat drops flying" and "backed into the corner", and
+  unreachable in the same way. Two titles, two emotions, same result. Combined
+  with *sick* and *pain*, **reader-vocabulary vs drawn-vocabulary is now the
+  trial's single most repeated finding at five instances**, and the argument for
+  embeddings rather than for any schema change.
+- **A third free-text vocabulary class, and this one has no rule.** Roscoe found
+  drift *within* a title, Sheriff found drift *away from the source* (`trousers`
+  vs the comic's own `pants`). *Plenty of Pets* #95 is neither: the query says
+  *letterbox*, the record says *mailbox*, both are correct, and **the comic never
+  names the object**, so "prefer the comic's own word" cannot arbitrate. It was
+  recorded as `mailbox` deliberately and allowed to miss rather than writing both
+  words to manufacture a hit. Nothing but semantic retrieval fixes this one.
+- **`max(panel_num) > len(panel_boxes)` would be a cheap mechanical check.**
+  *Plenty of Pets* 199 has a **page-wide** panel_num shift — every group but two
+  stored one panel too high, with two groups claiming a panel 8 the page does not
+  have — apparently because the grouping pass counted the splash's title logo and
+  its art as two panels. Previous titles produced single mis-numbered groups
+  (Billions 048 g3/g4, Sheriff 150 g9, 165 g4); this is the same class at page
+  scale, on a splash, and unlike the others it is detectable without looking at
+  the art.
+- **The drawn `?` device has no consistent type.** `205 g9` is `background`,
+  `207 g12` is `sound_effect`, and the three on `208 panel 5` have no group at
+  all. It makes no sound in any of them. Small, but it is the kind of thing a
+  category query over `type` would trip on.
+- **The pre-read name grep needs to print the whole distribution.** Sheriff's
+  grep-first discipline was followed on *Plenty of Pets* and resolved Sylvester,
+  Jasmine Joe and the Black Mask Burglar before page 199 — but **missed
+  `Yehooty`**, which occurs three times: too rare for the frequency head, too
+  common for the rare tail, and the run printed only those two ends. Print all
+  distinct capitalised tokens minus a stop list. Note also what the grep cannot
+  buy: it surfaced `JASMINE JOE` but not *which animal that is*, which only
+  became clear on 204.
 - **`visible_text` is untyped, so category queries over it cannot be answered.**
   Query #46 *a sound effect* misses on a page holding `SMACK!`, `KA-CHOO!` and
   `AH-CHOO!`, because nothing records that those strings are sound effects. First
