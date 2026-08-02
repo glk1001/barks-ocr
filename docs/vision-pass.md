@@ -316,6 +316,15 @@ as it stands today. Output is `VERBATIM` and stamped local-only in both formats.
 
 Design decisions worth not re-litigating:
 
+- **A result with no page capture is refused.** One record per page is the
+  schema, and a missing one used to apply cleanly and print a group count that
+  read as success — which is how *Billions to Sneeze At* once merged 136 groups
+  and zero capture records silently. The commonest cause is composing the record
+  in the `page-capture.json` stub `vision_prep` leaves in the page directory and
+  never copying it into `result.json`; `vision_apply` checks the stub and says so
+  when that is what happened. `--no-capture` is for a deliberately groups-only
+  run. The closing line counts capture records alongside groups, so a shortfall
+  is visible even when it is allowed.
 - **The vision pass never changes the words of `ai_text`.** It adds emphasis
   markup, and the run is refused unless that strips back to the stored text.
   Corrections go to a kivy-editor queue for review. Saves use
@@ -1013,17 +1022,18 @@ is still the unit that answers measurement 5.
   one-pager OCR exists in the corpus under any title. This is why the trial has
   no one-pager unit. Whether they are ever worth capturing is open; they would
   need OCR first, and then a way to address them that is not a story title.
-- **136 pages of OCR are unreachable, all in vol 2.** 5,358 easyocr prelim pages
-  are on disk; 5,222 are reachable through a title. The gap is twelve vol-2
-  stories — *Good Neighbors*, *Salesman Donald*, *Snow Fun*, *Kite Weather*,
-  *The Hard Loser*, *Too Many Pets*, *The Duck in the Iron Pants*, *Three Dirty
-  Little Ducks* and others — which abort with:
+- ~~**136 pages of OCR are unreachable, all in vol 2.**~~ **Fixed 2026-08-02** by
+  regenerating vol 2's panel segments. The staleness guard had been firing
+  correctly — the restored PNGs were rebuilt after the panel segments — and
+  aborted twelve vol-2 stories with
 
   > `Panels segments info file ".../Frozen Gold/031.json" is older than srce image file ".../images/031.png"`
 
-  That is the staleness guard firing correctly, not corruption: the restored PNGs
-  were regenerated after the panel segments. Regenerating vol 2's panel segments
-  clears it. Until then `vision_prep --title` fails on any of those twelve.
+  All **5,358** easyocr prelim pages are now reachable through a title, up from
+  5,222, and **no title aborts** across the 450 configured in vols 1-29.
+  `barks-ocr-vision-prep --title "Kite Weather"` prepares 10 pages / 58 panels
+  cleanly, and a whole-corpus `barks-ocr-speech-script` run closes with only the
+  24 genuinely-missing-OCR pages below.
 - **Two database accessors disagree about story ownership.** The comic page map
   can claim pages belonging to neighbouring stories — *Sheriff of Bullet Valley*
   comes back with 103, 176 and 177 on top of its real 144-175.

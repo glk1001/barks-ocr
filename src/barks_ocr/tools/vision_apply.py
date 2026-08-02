@@ -29,6 +29,15 @@ vocabulary, a ``panels_of_note`` entry naming a panel the page does not have,
 an over-long ``objects`` inventory, and any capture field nobody has given a
 publication class -- each aborts the run.  Saves go through
 ``save_json(backup_file=...)`` so the previous prelim JSON is preserved.
+
+So does a result with **no capture at all**.  The schema is one record per page,
+and a missing one used to apply cleanly and print a group count that read as
+success, which is how a whole title once merged 136 groups and zero capture
+records without saying so anywhere.  The commonest cause is filling in the
+``page-capture.json`` stub ``vision_prep`` leaves in the page directory and never
+copying it into ``result.json``; the error says so when it can see that is what
+happened.  ``--no-capture`` is how a deliberately groups-only run says it meant
+it -- the pilot, for instance, predates page capture entirely.
 """
 
 import json
@@ -74,6 +83,9 @@ from barks_ocr.utils.vision_schema import (
 app = typer.Typer()
 
 CAPTURE_FILE_SUFFIX = "-page-capture.json"
+# What `vision_prep` calls the per-page stub inside the output directory. Named
+# here so the "you left it in the stub" diagnosis below cannot drift from it.
+STUB_FILE_NAME = "page-capture.json"
 
 # The capture keys a result may carry. Anything else is rejected: an unclassified
 # field has no publication class, so it cannot be exported safely later, and
@@ -474,6 +486,50 @@ def _parse_confidences(spec: str) -> frozenset[str]:
     return wanted
 
 
+def _stub_is_filled(out_dir: Path, page: str) -> bool:
+    """Return whether the prep stub for a page has been written into but left there.
+
+    ``vision_prep`` drops a ``page-capture.json`` stub in each page directory as
+    somewhere to compose the record, but ``vision_apply`` reads the capture from
+    ``result.json``.  Filling the stub and never copying it across looks exactly
+    like doing no capture at all, so the two cases are told apart here and the
+    error says which one happened.
+    """
+    stub_file = out_dir / page / STUB_FILE_NAME
+    if not stub_file.is_file():
+        return False
+    try:
+        stub = json.loads(stub_file.read_text())
+    except (OSError, json.JSONDecodeError):
+        return False
+    return any(stub.get(key) for key in CAPTURE_KEYS)
+
+
+def _missing_capture_errors(results: list[tuple[str, dict]], out_dir: Path) -> list[str]:
+    """Report every page whose result carries no capture record.
+
+    Separate from ``_resolve_and_validate`` because it is a different kind of
+    check: that one asks whether the capture is *valid*, this one whether it is
+    *there*.  A missing one used to apply cleanly and print a group count that
+    read as success, which is how a whole title once merged its groups and no
+    capture at all without saying so.
+    """
+    errors = []
+    for page, result in results:
+        if result.get("capture") is not None:
+            continue
+        where = f'page {page}: no "capture" key in result.json'
+        if _stub_is_filled(out_dir, page):
+            errors.append(
+                f"{where} — but {page}/{STUB_FILE_NAME} has been filled in."
+                " The stub is scratch space; copy it into result.json under a"
+                ' "capture" key.'
+            )
+        else:
+            errors.append(f"{where}. Pass --no-capture if this run is groups-only.")
+    return errors
+
+
 def _resolve_and_validate(
     results: list[tuple[str, dict]],
     speech_groups: SpeechGroups,
@@ -526,7 +582,7 @@ def _resolve_and_validate(
 
 
 @app.command(help="Merge a Claude Code vision pass back into the prelim OCR group JSON.")
-def main(
+def main(  # noqa: PLR0913
     out_dir: Annotated[
         Path, typer.Option("--out-dir", "-o", help="The vision_prep output directory.")
     ],
@@ -545,6 +601,13 @@ def main(
             help="Comma-separated speaker_confidence values to queue for review.",
         ),
     ] = "low",
+    no_capture: Annotated[
+        bool,
+        typer.Option(
+            "--no-capture",
+            help="Allow results with no page capture, for a groups-only or pre-capture run.",
+        ),
+    ] = False,
     dry_run: Annotated[
         bool, typer.Option("--dry-run", help="Validate and report, but write nothing.")
     ] = False,
@@ -566,6 +629,8 @@ def main(
         entry["fanta_page"]: entry.get("panel_nums") or [] for entry in queue["pages"]
     }
     page_groups, errors = _resolve_and_validate(results, speech_groups, engine, panel_nums_by_page)
+    if not no_capture:
+        errors += _missing_capture_errors(results, out_dir)
 
     if errors:
         print(f"Validation failed with {len(errors)} error(s); nothing was written:")
@@ -599,7 +664,11 @@ def main(
             print(f'Review queue ({what}): "{path}" ({_write_queue(path, header, lines)} entries).')
 
     verb = "Would annotate" if dry_run else "Annotated"
-    print(f"{verb} {total} group(s) across {len(results)} page(s).")
+    captured = sum(1 for _page, result in results if result.get("capture") is not None)
+    # Count the capture records too. The group total alone reads as success even
+    # when every page wrote nothing but groups, which is how a whole title once
+    # applied with no capture at all and said so nowhere.
+    print(f"{verb} {total} group(s) and {captured} page capture(s) across {len(results)} page(s).")
     if dry_run:
         print(f"{len(set(text_lines))} group(s) have proposed text corrections.")
         print(
