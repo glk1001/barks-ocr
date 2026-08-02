@@ -12,6 +12,8 @@ read the registry, so neither needs touching.
 import re
 from collections.abc import Callable
 
+from barks_fantagraphics.speech_markup import strip_markup
+
 DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "short_text",
     "error_notes",
@@ -77,8 +79,20 @@ _ADRIFT_PUNCTUATION_RE = re.compile(r"\s+[!?]")
 _HYPHEN_RUN_RE = re.compile(r"-{2,}")
 
 
+def _plain_text(group: dict) -> str:
+    """Return the group's text with emphasis markup removed.
+
+    Every check below is about the lettering, not its presentation, so all of
+    them go through here.  Reading ``group["ai_text"]`` directly would measure
+    the tags too: ``[b]X[/b]`` is eight characters, so ``is_short_text`` would
+    no longer recognize a one-character group, and the em-dash rule would read
+    the ``]`` before a dash as the character preceding it.
+    """
+    return strip_markup(group.get("ai_text") or "")
+
+
 def is_short_text(group: dict) -> bool:
-    ai_text = (group.get("ai_text") or "").strip().lower()
+    ai_text = _plain_text(group).strip().lower()
     return (len(ai_text) == 1) and (ai_text not in ("?", "!"))
 
 
@@ -93,7 +107,7 @@ def has_page_number_notes(group: dict) -> bool:
 
 
 def has_dot_at_end_of_sentence(group: dict) -> bool:
-    ai_text = group.get("ai_text") or ""
+    ai_text = _plain_text(group)
     for match in _SENTENCE_END_RE.finditer(ai_text):
         word_before = match.group(1).upper()
         if word_before not in _SENTENCE_END_ABBREVIATIONS:
@@ -115,7 +129,7 @@ def has_em_dash_spacing_error(group: dict) -> bool:
     "OUT! - UH, OH!", which is correct usage: 60 of the 75 acknowledgements in
     the corpus were dismissals of exactly that false positive.
     """
-    ai_text = group.get("ai_text") or ""
+    ai_text = _plain_text(group)
     for match in re.finditer(EM_DASH, ai_text):
         # Either edge of the text reads as a break, so a leading dash is fine.
         before = ai_text[match.start() - 1] if match.start() else "\n"
@@ -137,12 +151,12 @@ def has_em_dash_spacing_error(group: dict) -> bool:
 
 def has_double_hyphen(group: dict) -> bool:
     """Whether the text has a run of hyphens, almost always an unconverted em-dash."""
-    return bool(_HYPHEN_RUN_RE.search(group.get("ai_text") or ""))
+    return bool(_HYPHEN_RUN_RE.search(_plain_text(group)))
 
 
 def has_unbalanced_quotes(group: dict) -> bool:
     """Whether the text has an odd number of double-quote characters."""
-    return ((group.get("ai_text") or "").count('"') % 2) == 1
+    return (_plain_text(group).count('"') % 2) == 1
 
 
 def has_invalid_type(group: dict) -> bool:
@@ -152,7 +166,7 @@ def has_invalid_type(group: dict) -> bool:
 
 def has_whitespace_error(group: dict) -> bool:
     """Whether the text has stray whitespace: outer, per-line trailing, or doubled."""
-    ai_text = group.get("ai_text") or ""
+    ai_text = _plain_text(group)
     if not ai_text:
         return False
     return (

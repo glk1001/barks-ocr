@@ -12,6 +12,8 @@ import re
 from collections.abc import Iterable, Mapping
 from enum import StrEnum
 
+from barks_fantagraphics.speech_markup import EMPHASIS_TAGS
+
 # Ordered, because the editor lays the roster out in this order. Free-form
 # speakers are allowed only behind ``OTHER_PREFIX``, so a typo in a main-cast
 # name is caught rather than silently becoming a new character.
@@ -101,7 +103,12 @@ def nephew_needs_collective(speaker: str, confidence: str) -> bool:
 CAP_COLOUR_OPTIONS: tuple[str, ...] = ("red", "blue", "green")
 CAP_COLOUR_SET: frozenset[str] = frozenset(CAP_COLOUR_OPTIONS)
 
-EMPHASIS_KINDS: frozenset[str] = frozenset({"bold", "italic"})
+# Emphasis is written inline, as `[b]WORD[/b]`, into the group's `ai_text`
+# itself; `EMPHASIS_TAGS` in `barks_fantagraphics.speech_markup` is the
+# vocabulary and the only definition of it. It used to be a separate
+# `emphasis_spans` field of character offsets, which drifted the moment anything
+# else edited the text -- see that module for the full argument.
+EMPHASIS_MARKUP_KEY = "emphasis_markup"
 
 # Broad, unambiguous categories only. A specific named place -- the Money Bin,
 # Plain Awful, Grandma Duck's farm -- arrives behind OTHER_PREFIX exactly as a
@@ -225,9 +232,11 @@ FIELD_CLASS: dict[str, PublicationClass] = {
     VISION_NOTE_KEY: PublicationClass.DERIVED,
     "vision_text_ok": PublicationClass.FACT,
     "vision_corrected_text": PublicationClass.VERBATIM,
-    # Offsets, not text -- but meaningless apart from the `ai_text` they index,
-    # and they encode the shape of it. Classed with the text they belong to.
-    "emphasis_spans": PublicationClass.VERBATIM,
+    # The marked-up `ai_text`: the comic's own words, so it is classed exactly
+    # as `ai_text` is. (The retired `emphasis_spans` was classed VERBATIM too,
+    # on the reasoning that offsets encode the shape of the text they index.
+    # Inline markup makes that literal rather than an inference.)
+    EMPHASIS_MARKUP_KEY: PublicationClass.VERBATIM,
     # -- the per-page capture file ---------------------------------------
     CHARACTERS_KEY: PublicationClass.FACT,
     SETTING_KEY: PublicationClass.FACT,
@@ -440,10 +449,13 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  `nephews` is for; a guess at a name is unrecoverable, a collective is not.",
         f"cap_colour — one of: {', '.join(CAP_COLOUR_OPTIONS)}, or null when no cap is visible",
         (
-            "emphasis_spans — [[start, end, kind], ...], kind one of:"
-            f" {', '.join(sorted(EMPHASIS_KINDS))}"
+            f"{EMPHASIS_MARKUP_KEY} — the group's ai_text with emphasis marked"
+            f" inline: {', '.join(f'[{t}]WORD[/{t}]' for t in EMPHASIS_TAGS)}."
         ),
-        "  start and end are character offsets into the group's current ai_text.",
+        "  Copy the ai_text exactly and add only the tags; it is checked against",
+        "  the stored text and the run is refused if anything else changed.",
+        "  A literal [ ] or & in the lettering must be written &bl; &br; &amp;.",
+        "  Omit the field when nothing on the page is emphasized.",
         "",
         "Per page, in the page capture file:",
         "",

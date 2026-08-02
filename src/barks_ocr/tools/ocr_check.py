@@ -16,6 +16,7 @@ from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_DIR
 from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePagesPanelBoxes, TitlePanelBoxes
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups, SpeechPageGroup
+from barks_fantagraphics.speech_markup import has_markup, strip_markup
 from comic_utils.common_typer_options import TitleArg, VolumesArg
 from intspan import intspan
 from loguru import logger
@@ -348,6 +349,17 @@ def _text_fits_in_box(  # noqa: C901
     return False
 
 
+def _plain(group: dict) -> str:
+    """Return the group's ai_text with emphasis markup removed and outer space trimmed.
+
+    Every measurement in this module -- width fit, line height, the cross-engine
+    similarity ratio -- is about the lettering, so all of them read through here.
+    Measuring the marked-up string instead would count ``[b]`` as six characters
+    of text and report boxes as overfull that are not.
+    """
+    return strip_markup(group.get("ai_text") or "").strip()
+
+
 def _is_stylized(group: dict) -> bool:
     """Whether the group's lettering is stylized, so its metrics are unreliable."""
     return (group.get("type") or "").strip().lower() in STYLIZED_TYPES
@@ -372,7 +384,7 @@ def _group_text_fits(group: dict, fanta_page: str = "") -> bool:
     """Return whether the group's own ai_text fits its own text_box."""
     strict, width_tolerance = _fit_params(group)
     return _text_fits_in_box(
-        (group.get("ai_text") or "").strip(),
+        _plain(group),
         group.get("text_box") or [],
         fanta_page,
         strict=strict,
@@ -394,7 +406,7 @@ def _implied_line_height(group: dict) -> float | None:
     inflate the median and push correctly wrapped multi-line groups under the
     threshold. They are not worth judging either: one line cannot be too many.
     """
-    ai_text = (group.get("ai_text") or "").strip()
+    ai_text = _plain(group)
     text_box = group.get("text_box") or []
     if not ai_text or not text_box or _is_stylized(group):
         return None
@@ -503,7 +515,7 @@ def _find_matching_group(
         return None
 
     panel_num = int(group.get("panel_num", -1))
-    ai_text = (group.get("ai_text") or "").strip()
+    ai_text = _plain(group)
     if not ai_text:
         return None
 
@@ -514,7 +526,7 @@ def _find_matching_group(
     for other in other_groups.values():
         if int(other.get("panel_num", -1)) != panel_num:
             continue
-        other_text = (other.get("ai_text") or "").strip()
+        other_text = _plain(other)
         if not other_text:
             continue
         ratio = SequenceMatcher(None, ai_text, other_text).ratio()
@@ -539,7 +551,7 @@ def _groups_by_panel(json_groups: dict) -> dict[int, list[tuple[str, str]]]:
     """
     by_panel: dict[int, list[tuple[str, str]]] = defaultdict(list)
     for group_id, group in sorted(json_groups.items(), key=lambda kv: int(kv[0])):
-        ai_text = (group.get("ai_text") or "").strip()
+        ai_text = _plain(group)
         if ai_text:
             by_panel[int(group.get("panel_num", -1))].append((group_id, ai_text))
     return by_panel
@@ -790,7 +802,7 @@ class OcrChecker:
         group: dict,
     ) -> tuple[list[IssueFound], bool]:
         """Run every group-level check. Returns (issues, there_were_fixes)."""
-        ai_text = (group.get("ai_text") or "").strip()
+        ai_text = _plain(group)
         panel_num_state, panel_num = self._get_panel_num_state(group, context.panel_boxes)
 
         issues: list[IssueFound] = []
@@ -956,7 +968,7 @@ class OcrChecker:
         the transplant rejected → (False, issue_type, ratio). Transplant applied
         → (True, None, ratio).
         """
-        ai_text = (group.get("ai_text") or "").strip()
+        ai_text = _plain(group)
         text_box = group.get("text_box") or []
         if not ai_text or not text_box:
             return False, None, None
@@ -993,7 +1005,20 @@ class OcrChecker:
         be well laid out, and the rewrapped result must be too, or nothing is
         written.
         """
-        ai_text = (group.get("ai_text") or "").strip()
+        if has_markup(group.get("ai_text") or ""):
+            # Rewrapping rebuilds the string from a donor's line pattern, which
+            # would have to carry the emphasis tags across to their new
+            # positions -- the offset-mapping problem this whole scheme exists to
+            # avoid. Refuse and say so, rather than silently dropping the bold or
+            # wrapping on a character count that includes "[b]".
+            logger.warning(
+                f"Group {group_id}: badly wrapped text, but it carries emphasis"
+                f" markup, so the line-pattern transplant was skipped."
+                f" Rewrap it by hand in the editor."
+            )
+            return False
+
+        ai_text = _plain(group)
 
         match = _find_matching_group(group, context.other_page_group)
         if match is None:
@@ -1013,7 +1038,7 @@ class OcrChecker:
             )
             return False
 
-        pattern_text = (match.get("ai_text") or "").strip()
+        pattern_text = _plain(match)
         new_text = _apply_line_pattern(ai_text, pattern_text)
         if new_text == ai_text:
             logger.warning(

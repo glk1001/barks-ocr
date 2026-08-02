@@ -10,6 +10,7 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePagesPanelBoxes, TitlePanelBoxes
 from barks_fantagraphics.speech_groupers import SpeechGroups, SpeechPageGroup
+from barks_fantagraphics.speech_markup import has_markup, strip_markup
 from comic_utils.common_typer_options import TitleArg, VolumesArg
 from intspan import intspan
 
@@ -41,6 +42,10 @@ class PageCleaner:
 
         self.lines_changed_count = 0
         self.file_modified = False
+        # Groups the substitution refused to touch because it would have had to
+        # move emphasis markup. Reported rather than silently skipped: a bulk
+        # edit that quietly missed some groups is the failure this guards.
+        self.markup_skipped: list[str] = []
 
     def clean(self) -> None:
         fanta_page = self._speech_page_group.fanta_page
@@ -189,20 +194,63 @@ class PageCleaner:
 
         return -1
 
-    def _get_replace_text(self, _group_id: str, group: dict) -> tuple[bool, str]:
-        ai_text = group["ai_text"]
-        assert self._target_regex is not None
-        new_ai_text = self._target_regex.sub(self._replacement_string, ai_text)
-        if new_ai_text != ai_text:
-            print(
-                f"Modified ai_text:\n"
-                f"{textwrap.indent(ai_text, ' ' * 4)} ->\n"
-                f"====\n"
-                f"{textwrap.indent(group['ai_text'], ' ' * 4)}\n"
-            )
-            return True, new_ai_text
+    def _get_replace_text(self, group_id: str, group: dict) -> tuple[bool, str]:
+        """Apply the substitution to one group's ai_text.
 
-        return False, ""
+        Emphasis markup makes this less simple than it looks.  Running the regex
+        straight at the stored string means a pattern like ``YOU — YOU`` fails to
+        match ``YOU — [b]YOU[/b]``: a **silent under-match**, which is the same
+        class of quiet wrongness that inline markup was adopted to eliminate, so
+        it cannot be tolerated here either.
+
+        The rule: match against the stripped text, which is what the user's
+        pattern is written against.  When the group carries markup, accept the
+        substitution only if applying it to the marked-up string gives the same
+        result once stripped -- that is, the match did not straddle a tag.
+        Otherwise refuse the group and record it for the run's summary, because
+        moving the tags to their new positions is exactly the offset-mapping
+        problem inline markup exists to avoid.
+
+        Args:
+            group_id: The group's key, for the skip report.
+            group: The group dict, read but not written.
+
+        Returns:
+            ``(changed, new_text)``; ``(False, "")`` when nothing is to be done.
+
+        """
+        assert self._target_regex is not None
+        stored = group["ai_text"]
+        plain = strip_markup(stored)
+        new_plain = self._target_regex.sub(self._replacement_string, plain)
+        if new_plain == plain:
+            return False, ""
+
+        if not has_markup(stored):
+            self._print_change(stored, new_plain)
+            return True, new_plain
+
+        new_stored = self._target_regex.sub(self._replacement_string, stored)
+        if strip_markup(new_stored) != new_plain:
+            self.markup_skipped.append(group_id)
+            print(
+                f"SKIPPED group {group_id}: the pattern matches its text but the"
+                f" group carries emphasis markup that the replacement would move."
+                f"\n{textwrap.indent(stored, ' ' * 4)}"
+            )
+            return False, ""
+
+        self._print_change(stored, new_stored)
+        return True, new_stored
+
+    @staticmethod
+    def _print_change(before: str, after: str) -> None:
+        print(
+            f"Modified ai_text:\n"
+            f"{textwrap.indent(before, ' ' * 4)} ->\n"
+            f"====\n"
+            f"{textwrap.indent(after, ' ' * 4)}\n"
+        )
 
     def _replace_json(
         self,
@@ -237,6 +285,7 @@ class PrelimOCRCleaner:
         self._files_checked_count = 0
         self._files_processed_count = 0
         self._lines_process_count = 0
+        self._markup_skipped_count = 0
 
     def clean_titles(
         self,
@@ -247,6 +296,7 @@ class PrelimOCRCleaner:
         self._files_checked_count = 0
         self._files_processed_count = 0
         self._lines_process_count = 0
+        self._markup_skipped_count = 0
 
         for title_str in title_list:
             print("-" * 80)
@@ -275,6 +325,14 @@ class PrelimOCRCleaner:
             f" files modified: {self._files_processed_count};"
             f" lines modified: {self._lines_process_count}.\n"
         )
+        if self._markup_skipped_count:
+            # Loud, and last: a bulk edit that quietly left groups untouched is
+            # worse than one that did nothing, because it looks finished.
+            print(
+                f"{self._markup_skipped_count} group(s) matched the pattern but were"
+                f" SKIPPED because the replacement would have moved their emphasis"
+                f" markup. They are listed above and need editing by hand.\n"
+            )
 
     def _replace_string_in_title(  # noqa: PLR0913
         self,
@@ -315,6 +373,7 @@ class PrelimOCRCleaner:
             if page_cleaner.file_modified:
                 self._files_processed_count += 1
             self._lines_process_count += page_cleaner.lines_changed_count
+            self._markup_skipped_count += len(page_cleaner.markup_skipped)
 
 
 app = typer.Typer()

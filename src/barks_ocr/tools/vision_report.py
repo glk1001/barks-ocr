@@ -8,19 +8,28 @@ from disk, not served.
 
 The report is organized page -> panel -> group, so each panel crop sits directly
 above its description and the speech groups drawn in it.  ``ai_text`` is rendered
-with the emphasis spans applied, which is the only place the bold detection is
-actually visible.  Nothing here reads or writes the prelim OCR JSON, so the
-report can be produced before ``vision_apply`` has been run.
+with its inline emphasis markup turned into real ``<strong>``/``<em>``, which is
+the only place the bold detection is actually visible.  Nothing here reads or
+writes the prelim OCR JSON, so the report can be produced before
+``vision_apply`` has been run.
 """
 
 import html
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 from typing import Annotated
 
 import typer
+from barks_fantagraphics.speech_markup import (
+    has_markup,
+    strip_markup,
+    unescape_markup,
+)
 from loguru import logger
+
+from barks_ocr.utils.vision_schema import EMPHASIS_MARKUP_KEY
 
 app = typer.Typer()
 
@@ -101,18 +110,26 @@ document.getElementById('only').onchange=e=>{
 """
 
 
-def _render_text(ai_text: str, spans: list) -> str:
-    """Escape ``ai_text`` and wrap each emphasis span in a ``<strong>``."""
-    ordered = sorted((s for s in spans if len(s) == 3), key=lambda s: s[0])  # noqa: PLR2004
+_TAG_TO_HTML = {"b": ("<strong>", "</strong>"), "i": ("<em>", "</em>")}
+
+
+def _render_text(markup: str) -> str:
+    """Escape the text for HTML and turn its Kivy emphasis tags into elements.
+
+    Everything outside a tag is escaped, so a literal bracket in the lettering --
+    Gemini writes annotations like ``[Chinese Characters]`` -- shows as itself
+    rather than being read as markup.
+    """
     out: list[str] = []
     cursor = 0
-    for start, end, _kind in ordered:
-        if start < cursor or end > len(ai_text):
+    for match in re.finditer(r"\[(/?)([a-z]+)\]", markup):
+        tag = match.group(2)
+        if tag not in _TAG_TO_HTML:
             continue
-        out.append(html.escape(ai_text[cursor:start]))
-        out.append(f"<strong>{html.escape(ai_text[start:end])}</strong>")
-        cursor = end
-    out.append(html.escape(ai_text[cursor:]))
+        out.append(html.escape(unescape_markup(markup[cursor : match.start()])))
+        out.append(_TAG_TO_HTML[tag][1 if match.group(1) else 0])
+        cursor = match.end()
+    out.append(html.escape(unescape_markup(markup[cursor:])))
     return "".join(out)
 
 
@@ -124,8 +141,12 @@ def _speaker_dot(cap_colour: str | None) -> str:
 
 def _group_html(gid: str, src: dict, res: dict) -> str:
     """Render one speech group: metadata line, text, note and any correction."""
-    spans = res.get("emphasis_spans") or []
-    flagged = (not res.get("text_ok")) or res.get("speaker_confidence") == "low" or bool(spans)
+    # The report normally runs before `vision_apply`, so the proposed markup is
+    # still only in the result; after applying, it is on the group. Prefer the
+    # result so the report shows what is about to be written.
+    stored = res.get(EMPHASIS_MARKUP_KEY) or (src.get("ai_text") or "")
+    emphasized = has_markup(stored)
+    flagged = (not res.get("text_ok")) or res.get("speaker_confidence") == "low" or emphasized
     conf = res.get("speaker_confidence", "?")
 
     badges = [
@@ -134,8 +155,8 @@ def _group_html(gid: str, src: dict, res: dict) -> str:
     ]
     if not res.get("text_ok"):
         badges.append('<span class="badge low">text differs</span>')
-    if spans:
-        badges.append(f'<span class="badge">{len(spans)} bold</span>')
+    if emphasized:
+        badges.append('<span class="badge">emphasis</span>')
 
     group_class = "group flagged" if flagged else "group"
     parts = [f'<div class="{group_class}">']
@@ -147,12 +168,12 @@ def _group_html(gid: str, src: dict, res: dict) -> str:
         f"{''.join(badges)}"
         "</div>"
     )
-    parts.append(f'<p class="speech">{_render_text(src.get("ai_text") or "", spans)}</p>')
+    parts.append(f'<p class="speech">{_render_text(stored)}</p>')
 
     if not res.get("text_ok") and res.get("corrected_text"):
         parts.append(
             '<div class="fix">'
-            f'<div class="was">stored: {html.escape(src.get("ai_text") or "")}</div>'
+            f'<div class="was">stored: {html.escape(strip_markup(stored))}</div>'
             f"<div>art:&nbsp;&nbsp;&nbsp; {html.escape(res['corrected_text'])}</div>"
             "</div>"
         )
@@ -211,11 +232,16 @@ def _tally(pages: list[tuple[str, dict, dict]]) -> str:
     groups = corrections = bolds = 0
     conf: dict[str, int] = dict.fromkeys(CONFIDENCE_ORDER, 0)
     speakers: dict[str, int] = defaultdict(int)
-    for _page, _src, result in pages:
-        for res in result["groups"].values():
+    for _page, src_groups, result in pages:
+        for gid, res in result["groups"].items():
             groups += 1
             corrections += not res.get("text_ok")
-            bolds += len(res.get("emphasis_spans") or [])
+            # Emphasis is read off the prepped group text, not the result: the
+            # result carries the proposed markup only until it is applied.
+            emphasis_source = res.get(EMPHASIS_MARKUP_KEY) or (
+                src_groups.get(gid, {}).get("ai_text") or ""
+            )
+            bolds += has_markup(emphasis_source)
             conf[res.get("speaker_confidence", "low")] = (
                 conf.get(res.get("speaker_confidence", "low"), 0) + 1
             )
@@ -226,7 +252,7 @@ def _tally(pages: list[tuple[str, dict, dict]]) -> str:
     conf_str = ", ".join(f"{k} {conf.get(k, 0)}" for k in CONFIDENCE_ORDER)
     return (
         f'<div class="stats"><b>{len(pages)}</b> pages · <b>{groups}</b> groups · '
-        f"<b>{bolds}</b> bold spans · <b>{corrections}</b> proposed text corrections"
+        f"<b>{bolds}</b> group(s) with emphasis · <b>{corrections}</b> proposed text corrections"
         f"<br>confidence: {conf_str}<br>speakers: {top}</div>"
     )
 

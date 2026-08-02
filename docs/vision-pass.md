@@ -93,7 +93,7 @@ Written onto each group in the prelim JSON by `vision_apply`:
 | `speaker_confidence` | `high` / `medium` / `low` |
 | `speaker_reviewed` | `true` once a human has confirmed the speaker in the editor |
 | `cap_colour` | `red` / `blue` / `green`, or `null` when not visible |
-| `emphasis_spans` | `[[start, end, "bold"], …]` — char offsets into the **current** `ai_text` |
+| emphasis | inline in `ai_text` as `[b]WORD[/b]` / `[i]WORD[/i]`, not a separate field |
 | `vision_note` | the reasoning behind the call |
 | `vision_text_ok` | `false` when the art disagrees with `ai_text` |
 | `vision_corrected_text` | the reading from the art |
@@ -258,7 +258,7 @@ writes the next exporter.
 |---|---|---|
 | `FACT` | measurements, ids, closed-vocabulary labels | `panel_num`, `text_box`, `characters`, `setting`, `time_of_day`, `speaker`, `cap_colour` |
 | `DERIVED` | our own words *about* the work | `beats`, `panels_of_note`, `vision_note`, `notes` |
-| `VERBATIM` | text copied out of the comic, or inseparable from it | `ai_text`, `visible_text`, `emphasis_spans`, `vision_corrected_text` |
+| `VERBATIM` | text copied out of the comic, or inseparable from it | `ai_text` (emphasis markup included), `visible_text`, `vision_corrected_text` |
 
 `classify()` **raises on any field not in the table** rather than defaulting. A
 field nobody has classified must stop an export, because guessing permissively
@@ -266,9 +266,10 @@ publishes someone else's copyright. Each written capture record also stamps its
 own fields with their class, so an exporter never has to look it up elsewhere —
 and cannot quietly stop looking.
 
-`emphasis_spans` is offsets rather than text, but it is meaningless apart from
-the `ai_text` it indexes and encodes the shape of it, so it is classed with the
-text it belongs to.
+Emphasis needs no row of its own: it is inside `ai_text`, which is already
+`VERBATIM`. Under the retired `emphasis_spans` it was classed `VERBATIM` too, on
+the reasoning that offsets encode the shape of the text they index — inline
+markup makes that literal rather than an inference.
 
 **Why in the data and not in a document:** the sibling `barks-wiki` states "never
 reproduce" in four separate places, and its `generate_covers()` still emits 189
@@ -322,11 +323,9 @@ Design decisions worth not re-litigating:
   day carries its own signal: the unreadable cap colours on 079 are unreadable
   *because* it is a night scene, so recording it explains a low-confidence
   cluster rather than merely observing one.
-- **Spans, not inline markup.** Inline `**bold**` would break
-  `whoosh_index.check_capitalization_map`, perturb `ocr_check`'s width-fit and
-  line-height heuristics, invalidate cached `florence_passed` entries, and render
-  literally in reader search results. 139 groups also already contain a `*` used as
-  a footnote marker, so `*` cannot mean emphasis.
+- **Inline markup, not spans.** Emphasis is written into `ai_text` itself as
+  `[b]WORD[/b]`, Kivy's own syntax. This reverses an earlier decision and the
+  reasoning is worth keeping — see below.
 - **Both the name and the colour.** Naming a nephew relies on the Huey-red /
   Dewey-blue / Louie-green convention, which was not firmly fixed in 1943 Barks.
   Recording `cap_colour` alongside keeps the mapping reversible if it turns out wrong.
@@ -342,6 +341,95 @@ Design decisions worth not re-litigating:
   other would be a trap that only shows up as a rejected result file.
 
 ---
+
+## Emphasis: inline markup, and why the spans were retired
+
+Emphasis lives **inside** `ai_text`, as `[b]WORD[/b]`. It used to be a separate
+`emphasis_spans` field holding `[[start, end, kind], …]` character offsets. That
+was the wrong call, and it was reversed on 2026-08-02, before the trial went any
+further.
+
+**Offsets index a string that other tools edit.** The kivy editor rewrites
+`ai_text`, `string_replacer` runs bulk regex substitutions over it, and applying
+a queued vision correction changes its length. Each of those moves the text out
+from under a stored offset.
+
+The pilot had already produced the failure and nobody had noticed. `077 g1`
+carries a bold span over `SABOTEURS` and a **queued, unapplied** correction that
+shortens the text by two characters. Applying it would have slid the span two
+characters along, off the word it marks:
+
+```
+span (26, 35)
+in stored ai_text : 'SABOTEURS'
+after correction  : 'BOTEURS!'
+```
+
+**No validator could have caught that**, which is the whole argument. The span
+stays in range, so a bounds check passes; the corruption is a shift, not an
+overflow. Roscoe then added two *one-character* spans — a lone emphasized `I` —
+which is the case where a drifted offset is guaranteed to land on some other
+letter and look entirely reasonable.
+
+Inline tags travel with the characters they mark, so the failure cannot occur.
+
+### What the reversal cost, and the four guards that pay for it
+
+The original objections were real but all dissolve under stripping at the
+consumer boundary, and Whoosh turns out to support exactly the shape needed:
+`_stored_content_raw` lets one field be **analysed stripped and stored marked
+up**, so search matches plain text while the reader gets tags back to render.
+
+What does not dissolve is that markup fails *open* — a consumer that forgets to
+strip leaks `[b]` into a search result — where spans fail *safe*. That trade is
+still worth making, because a leaked tag is noticed the first time anyone looks
+and a drifted offset is invisible forever. **Visible failures beat silent ones.**
+Four guards keep it honest:
+
+1. **Strip in the accessor.** `SpeechText.ai_text` is plain; `ai_text_markup`
+   carries the tags; `raw_ai_text` is what is on disk. A consumer that has never
+   heard of emphasis is correct by doing the obvious thing. `SearchEngine`'s
+   `SpeechInfo` has the same split. The raw-dict readers an accessor cannot
+   reach — `ocr_check`, `group_checks` — strip explicitly.
+2. **Escape on write.** `[`, `]` and `&` in the lettering become `&bl;`, `&br;`,
+   `&amp;`. Not hypothetical: 31 corpus groups hold brackets, including Gemini's
+   own `[Illegible Comic Covers]` annotations, and 59 hold an ampersand, from
+   signs like `GOLDSTEIN & CO.`
+3. **Compare stripped text where the metric matters.** `save_group` stays
+   markup-sensitive or an emphasis edit would be dropped; `groups_with_text_changes()`
+   answers the different question the correction rate counts. Stronger still,
+   `vision_apply` **refuses the run** unless the proposed markup strips back to
+   the stored words — which also closes the gap between reading the crops at prep
+   time and applying the result later.
+4. **`string_replacer` strips, matches, re-inserts.** A pattern for `YOU — YOU`
+   would not match `YOU — [b]YOU[/b]`: a silent under-match, the same class of
+   wrongness. It now matches against stripped text and accepts the substitution
+   only when it does not straddle a tag, refusing and **reporting** the rest.
+
+Two places refuse rather than mangle: re-wrapping a marked-up group (`ocr_check`
+and the editor's Copy Fmt) would have to move the tags to new positions, which is
+the offset problem again.
+
+### The one accepted regression
+
+Search highlighting is confined to the lettering, so a phrase spanning an
+emphasis boundary — "really sharp", where only SHARP is bold — is not
+highlighted. Retrieval is unaffected; the page is still found, because the index
+holds stripped text. It is only the colour in the bubble list that goes missing.
+
+Confining it is not optional. Substituting over the whole string let a search for
+`b` wrap the `b` inside `[b]`, and `amp` the one inside `&amp;`, producing a tag
+Kivy cannot parse — **visibly broken text on screen**, and for `amp` in any of
+the 59 ampersand groups whether or not emphasis was ever added. A missed
+highlight is harmless; a mangled tag is not.
+
+### Migration
+
+`barks-ocr-migrate-emphasis` (dry run by default, backs up every file it writes)
+folded 17 span sets into markup and escaped 90 groups — 107 groups across 86 of
+11,120 files. Every conversion was verified to strip back to the original text
+before anything was written. Doing it at 25 spans was cheap; at corpus scale it
+would not have been.
 
 ## Reviewing the speaker calls in the editor
 
@@ -375,7 +463,7 @@ be walked without opening the popup on every entry.
 | | |
 |---|---|
 | `vision_text_ok: false` | 2 (1.5%) |
-| bold spans | 5 |
+| groups with emphasis | 5 |
 | confidence | high 78 / medium 38 / low 18 |
 | `cap_colour` non-null | 37 |
 
@@ -519,7 +607,7 @@ Run 2026-08-02. 4 pages, 32 panels, 44 groups. First unit of the five-title tria
 | | |
 |---|---|
 | `vision_text_ok: false` | 1 (**2.3%**, against the pilot's 1.5%) |
-| bold spans | 20 across 44 groups (**45%**, against the pilot's 3.7%) |
+| emphasized words | 20 across 44 groups (**45%**, against the pilot's 3.7%) |
 | confidence | high 44 / medium 0 / low 0 |
 | `cap_colour` non-null | 0 |
 
@@ -530,11 +618,12 @@ is loading a spare bulb into. Queued in `~/barks-vision/roscoe-review.txt`. At
 
 ### Bold density is a property of the series, not of the corpus
 
-20 spans where the pilot found 5 — twelve times the rate. The Gyro Gearloose
+20 emphasized words where the pilot found 5 — twelve times the rate. The Gyro Gearloose
 stories letter emphasis constantly; *The Victory Garden* (1943) almost never
 does. **So the pilot's 5 is not a corpus baseline**, and neither is this. Two of
 the twenty are single characters — the lone `I` in "this is where **I** wanted to
-hide" — which is the case inline markup would have handled worst.
+hide" — which is the case a stored offset would have handled worst, and one
+reason the spans were retired the same day.
 
 ### Measurement 3 is untestable on this title, and that is structural
 

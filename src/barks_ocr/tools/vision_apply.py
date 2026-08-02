@@ -3,7 +3,8 @@
 
 Reads the ``result.json`` files written under a ``vision_prep`` output directory
 and, for each group, adds ``speaker``, ``speaker_confidence``, ``cap_colour`` and
-``emphasis_spans``.
+the group's emphasis, which is written inline into ``ai_text`` as ``[b]``/``[i]``
+markup rather than held as offsets beside it.
 
 Each page's structured capture -- who is depicted, the setting, the time of day,
 the non-speech lettering, a couple of plain sentences, and any panel worth
@@ -12,14 +13,17 @@ group JSON, because ``final_groups.py`` copies only the ``groups`` key and would
 silently drop a new top-level section.  Every field it holds is stamped with its
 publication class, so an exporter never has to look that up elsewhere.
 
-``ai_text`` is never modified.  Proposed text corrections are written to a
+The **words** of ``ai_text`` are never modified: emphasis markup is added to it,
+and validation refuses the run unless the marked-up text strips back to exactly
+what is already stored.  Proposed text corrections are written to a
 kivy-editor queue file for review instead, in the same format ``ocr_check``
 emits.  ``--queue-speakers`` writes a second, separate queue of the groups
 whose speaker attribution the model was unsure of, so the two reviews can be
 worked through independently.
 
 Everything is validated before anything is written: unknown group ids, emphasis
-spans falling outside the current ``ai_text``, a character who is neither on the
+markup that is malformed or does not strip back to the stored text, a character
+who is neither on the
 roster nor tagged for this story, a setting or time of day outside the
 vocabulary, a ``panels_of_note`` entry naming a panel the page does not have,
 an over-long ``objects`` inventory, and any capture field nobody has given a
@@ -38,6 +42,7 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_utils import get_backup_file
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM_DIR
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
+from barks_fantagraphics.speech_markup import strip_markup, validate_markup
 from loguru import logger
 
 from barks_ocr.utils.story_cast import story_characters
@@ -46,7 +51,7 @@ from barks_ocr.utils.vision_schema import (
     CAP_COLOUR_SET,
     CHARACTERS_KEY,
     CONFIDENCES,
-    EMPHASIS_KINDS,
+    EMPHASIS_MARKUP_KEY,
     FIELD_CLASS,
     MAX_OBJECTS,
     OBJECTS_KEY,
@@ -104,7 +109,6 @@ APPLIED_KEYS = {
     "speaker": "speaker",
     "speaker_confidence": "speaker_confidence",
     "cap_colour": "cap_colour",
-    "emphasis_spans": "emphasis_spans",
     "note": "vision_note",
     "text_ok": "vision_text_ok",
     "corrected_text": "vision_corrected_text",
@@ -126,23 +130,38 @@ def _check_speaker(
         )
 
 
-def _check_spans(spans: Any, ai_text: str, where: str, errors: list[str]) -> None:  # noqa: ANN401
-    if not isinstance(spans, list):
-        errors.append(f"{where}: emphasis_spans must be a list.")
+def _check_emphasis(markup: Any, ai_text: str, where: str, errors: list[str]) -> None:  # noqa: ANN401
+    """Validate a group's marked-up text against the ``ai_text`` on disk.
+
+    Two things are checked, and the second is the important one.  The markup
+    must be well formed, and it must **strip back to exactly the stored text**.
+
+    That equality is what makes writing emphasis into ``ai_text`` safe.  The
+    vision pass reads the crops at prep time and the result is applied later, so
+    the text can move underneath it -- an editor session, a bulk substitution, an
+    earlier queued correction.  Under the retired offsets scheme that produced a
+    span still in range and pointing at the wrong words, with nothing to notice.
+    Here it is a refused run with the diff printed, before anything is written.
+    """
+    if markup is None:
         return
-    for span in spans:
-        if not (isinstance(span, list) and len(span) == 3):  # noqa: PLR2004
-            errors.append(f"{where}: bad emphasis span {span!r}; want [start, end, kind].")
-            continue
-        start, end, kind = span
-        if not (isinstance(start, int) and isinstance(end, int)):
-            errors.append(f"{where}: span offsets must be ints, got {span!r}.")
-        elif not 0 <= start < end <= len(ai_text):
-            errors.append(
-                f"{where}: span [{start}, {end}] is outside ai_text of length {len(ai_text)}."
-            )
-        if kind not in EMPHASIS_KINDS:
-            errors.append(f'{where}: unknown emphasis kind "{kind}".')
+    if not isinstance(markup, str):
+        errors.append(f"{where}: {EMPHASIS_MARKUP_KEY} must be a string, got {markup!r}.")
+        return
+
+    errors.extend(f"{where}: {problem}." for problem in validate_markup(markup))
+
+    # Both sides stripped: on a re-run the stored ai_text already carries the
+    # previous pass's tags, and it is the words that have to match, not the
+    # emphasis.
+    stripped = strip_markup(markup)
+    stored_plain = strip_markup(ai_text)
+    if stripped != stored_plain:
+        errors.append(
+            f"{where}: {EMPHASIS_MARKUP_KEY} does not match the stored ai_text once the"
+            f" tags are removed, so the text has changed since the crops were read."
+            f"\n  stored:  {stored_plain!r}\n  stripped:{stripped!r}"
+        )
 
 
 def _validate_group(  # noqa: PLR0913
@@ -170,7 +189,7 @@ def _validate_group(  # noqa: PLR0913
     cap = entry.get("cap_colour")
     if cap is not None and cap not in CAP_COLOUR_SET:
         errors.append(f'{where}: cap_colour "{cap}" is not one of {sorted(CAP_COLOUR_SET)}.')
-    _check_spans(entry.get("emphasis_spans"), ai_text, where, errors)
+    _check_emphasis(entry.get(EMPHASIS_MARKUP_KEY), ai_text, where, errors)
     if not entry.get("text_ok") and not entry.get("corrected_text"):
         errors.append(f"{where}: text_ok is false but no corrected_text was supplied.")
     del gid
@@ -357,6 +376,18 @@ def _apply_page(page_group: Any, result: dict, *, dry_run: bool) -> int:  # noqa
         group = json_groups[gid]
         for result_key, stored_key in APPLIED_KEYS.items():
             group[stored_key] = entry.get(result_key)
+
+        # Emphasis goes into `ai_text` itself. Validation has already checked
+        # that this strips back to the stored words, so the only thing changing
+        # is which of them are tagged.
+        #
+        # An absent field leaves `ai_text` alone rather than clearing existing
+        # tags. Absent means "this run said nothing about emphasis here", which
+        # is not the same as "there is none", and a re-run must not silently
+        # delete emphasis a human added in the editor.
+        markup = entry.get(EMPHASIS_MARKUP_KEY)
+        if markup is not None:
+            group["ai_text"] = markup
         changed += 1
 
     if dry_run:

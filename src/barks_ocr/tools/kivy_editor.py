@@ -2,7 +2,7 @@
 import copy
 import json
 from collections.abc import Callable
-from dataclasses import dataclass, replace
+from dataclasses import dataclass
 from io import BytesIO
 from pathlib import Path
 
@@ -21,6 +21,7 @@ from barks_fantagraphics.speech_groupers import (
     SpeechText,
     get_speech_page_group,
 )
+from barks_fantagraphics.speech_markup import has_markup
 from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
 from comic_utils.screen_utils import get_centred_position_on_primary_monitor
@@ -833,9 +834,8 @@ class EditorApp(App):
         """Handle text edit in a pane's TextInput."""
         if not instance.focus:
             return
-        pane.speech_groups[pane.group_id] = replace(
-            pane.speech_groups[pane.group_id],
-            raw_ai_text=self._get_current_text(pane),
+        pane.speech_groups[pane.group_id] = pane.speech_groups[pane.group_id].with_stored_text(
+            self._get_current_text(pane)
         )
         self._has_changes = True
 
@@ -1512,6 +1512,15 @@ class EditorApp(App):
         source = self._other_pane(target)
         pattern_text = getattr(self, source.text_prop)
         current_text = getattr(self, target.text_prop)
+        if has_markup(current_text) or has_markup(pattern_text):
+            # Re-wrapping rebuilds the string word by word, which would move the
+            # emphasis tags to arbitrary places. Refuse rather than mangle; the
+            # tags are visible in the box and can be moved by hand.
+            logger.warning(
+                "Copy Fmt skipped: one of the panes carries emphasis markup,"
+                " which the line-pattern transplant would scramble."
+            )
+            return
         new_text = self._apply_line_pattern(current_text, pattern_text)
         if new_text == current_text:
             return
@@ -1519,10 +1528,9 @@ class EditorApp(App):
         # _on_text_changed only fires when the TextInput is focused, so sync
         # raw_ai_text and the change flag explicitly.
         decoded = self._decode_from_display(new_text) if self._decode_on else new_text
-        target.speech_groups[target.group_id] = replace(
-            target.speech_groups[target.group_id],
-            raw_ai_text=decoded,
-        )
+        target.speech_groups[target.group_id] = target.speech_groups[
+            target.group_id
+        ].with_stored_text(decoded)
         self._has_changes = True
 
     @staticmethod
@@ -1624,13 +1632,11 @@ class EditorApp(App):
         new_group["ocr_text"] = ""
         new_group["cleaned_box_texts"] = {}
 
-        ai_text = new_group.get("ai_text", "")
-        new_speech_text = SpeechText(
+        new_speech_text = SpeechText.from_stored(
             group_id=new_id,
             panel_num=new_group.get("panel_num", -1),
-            raw_ai_text=ai_text,
-            ai_text=ai_text.replace("-\n", "-").replace("\u00ad\n", "").replace("\u200b\n", ""),
-            type=new_group.get("type", "dialogue"),
+            stored_text=new_group.get("ai_text", ""),
+            type_=new_group.get("type", "dialogue"),
             text_box=new_group.get("text_box", []),
         )
 
