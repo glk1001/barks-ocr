@@ -110,6 +110,7 @@ would silently drop a new top-level section.
 | `setting` | `indoors`, `outdoors`, `street`, `countryside`, `wilderness`, `at sea`, `underground`, `unknown`, or `other:<named place>` |
 | `time_of_day` | `day` / `night` / `dusk-or-dawn` / `indoors-or-unclear` |
 | `visible_text` | lettering that is not speech — signs, posters, newspapers, labels, painted sound effects |
+| `objects` | notable things visible, at most 12. Free text: `fly swatter`, `goldfish bowl` |
 | `beats` | 1–3 plain sentences saying what happens. Only what is shown |
 | `panels_of_note` | `[[panel_num, phrase], …]` for panels worth addressing alone |
 | `capture_model`, `capture_prompt_version`, `captured` | provenance |
@@ -133,6 +134,34 @@ schema's only guard against capture drifting into a page-by-page retelling.
 `visible_text` is the biggest gap it closes — unrecoverable from speech OCR, and
 with **no pilot baseline at all**, so its yield is itself a thing the next run
 measures.
+
+### `objects` exists because the queries specified it
+
+It was not in the original design. `beats` was expected to carry props, and the
+plan said an explicit field had to earn its place only after raising `MAX_BEATS`
+failed. Writing the retrieval queries settled it without needing the trial:
+around sixty of them ask for background props, and **"Roscoe the Robot" is four
+pages whose queries name ten distinct objects** — a fly swatter, a goldfish bowl,
+dumbbells, a legless chair, a hammer, a medical kit, a fly. Three sentences a
+page that must also carry the plot could never hold that, and a longer cap would
+not have helped: a prop only reaches a beat sentence when it is plot-relevant,
+and the discriminating queries are deliberately about props that are not.
+
+That is the query set doing its job — specifying a field before any vision
+session was spent discovering the gap.
+
+No closed vocabulary, because there cannot be one. Free text, whitespace
+collapsed, promoted by census like any other free-form value. The cap of 12 is
+there for a different reason than `MAX_BEATS`: that one guards against retelling,
+this one against an **inventory**. A page listing thirty objects matches every
+query and discriminates nothing.
+
+The database's `THINGS` tags ride along as **naming anchors** rather than a
+vocabulary — `story_things()` puts `313`, `HDL driving car` and `cigarettes` in
+front of a *Sheriff of Bullet Valley* run, and `square eggs` in front of *Lost in
+the Andes*, so a recurring prop is written the same way every time instead of
+arriving as "a car", "the red car" and "313". The category is narrow and mostly
+chemical names from the Gyro stories, so an empty result is the common case.
 
 ### The vocabulary travels with the crops
 

@@ -154,8 +154,26 @@ CHARACTERS_KEY = "characters"
 SETTING_KEY = "setting"
 TIME_OF_DAY_KEY = "time_of_day"
 VISIBLE_TEXT_KEY = "visible_text"
+OBJECTS_KEY = "objects"
 BEATS_KEY = "beats"
 PANELS_OF_NOTE_KEY = "panels_of_note"
+
+# `objects` has no closed vocabulary and cannot have one -- a fly swatter, a
+# legless chair and a goldfish bowl are not enumerable in advance. It is free
+# text, normalized for whitespace and surfaced by the census like any other
+# free-form value.
+#
+# It exists because the retrieval queries specified it. Sixty-odd of them ask
+# for background props, and `beats` is three sentences that must also carry the
+# plot: "Roscoe the Robot" is four pages and its queries name ten distinct
+# objects. Beats could never have held that, and raising its cap would not have
+# helped -- a prop only reaches a beat sentence if it is plot-relevant, and the
+# useful queries are deliberately about props that are not.
+#
+# The cap is here for a different reason than `MAX_BEATS`. That one guards
+# against retelling; this one guards against an inventory. A page listing thirty
+# objects matches every query and discriminates nothing.
+MAX_OBJECTS = 12
 
 # Provenance. The capture layer is a cache -- a better model should be able to
 # rebuild it -- so every record says what built it and when.
@@ -214,6 +232,7 @@ FIELD_CLASS: dict[str, PublicationClass] = {
     CHARACTERS_KEY: PublicationClass.FACT,
     SETTING_KEY: PublicationClass.FACT,
     TIME_OF_DAY_KEY: PublicationClass.FACT,
+    OBJECTS_KEY: PublicationClass.FACT,
     VISIBLE_TEXT_KEY: PublicationClass.VERBATIM,
     BEATS_KEY: PublicationClass.DERIVED,
     PANELS_OF_NOTE_KEY: PublicationClass.DERIVED,
@@ -286,6 +305,23 @@ def verbatim_keys(keys: Iterable[str]) -> list[str]:
     return [key for key in keys if classify(key) is PublicationClass.VERBATIM]
 
 
+def collapse_whitespace(value: str) -> str:
+    """Return *value* with outer and repeated whitespace collapsed.
+
+    The only drift that can be fixed mechanically in a free-text field with no
+    vocabulary behind it. ``"fly  swatter"`` and ``"fly swatter "`` name one
+    object; anything subtler is for the census and a human.
+
+    Args:
+        value: The value as written.
+
+    Returns:
+        The value to store.
+
+    """
+    return _WHITESPACE_RE.sub(" ", value.strip())
+
+
 def _normalize_vocab_value(value: str, canonical: Mapping[str, str]) -> str:
     """Collapse whitespace and unwrap a prefixed value that is really canonical.
 
@@ -353,7 +389,7 @@ def speaker_key(speaker: str) -> str:
     return normalize_speaker(speaker).casefold()
 
 
-def roster_text(story_characters: Iterable[str] = ()) -> str:
+def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str] = ()) -> str:
     """Render the vocabulary as the ``roster.txt`` handed to the vision pass.
 
     Generated rather than written by hand: the names the pass is told and the
@@ -364,6 +400,9 @@ def roster_text(story_characters: Iterable[str] = ()) -> str:
             main-cast roster for the run in hand. Passing them makes the answer
             a closed-set choice rather than an open one, so a name outside the
             set is an error signal instead of silent drift.
+        story_things: This story's database thing tags. Not a vocabulary --
+            ``objects`` cannot have one -- but naming anchors, so a recurring
+            prop is written the same way each time it appears.
 
     Returns:
         The full text of the roster file, newline-terminated.
@@ -415,6 +454,20 @@ def roster_text(story_characters: Iterable[str] = ()) -> str:
         f"  {TIME_OF_DAY_KEY} — one of: {', '.join(TIME_OF_DAY_OPTIONS)}",
         f"  {VISIBLE_TEXT_KEY} — lettering that is NOT speech: signs, posters, newspapers,",
         "    labels, sound effects painted into the art. Transcribe exactly; omit if none.",
+        f"  {OBJECTS_KEY} — notable things visible on the page, at most {MAX_OBJECTS}.",
+        "    Short noun phrases: 'fly swatter', 'goldfish bowl', 'sheriff's badge'.",
+        "    Include a prop even when it carries no plot -- that is exactly what this",
+        "    field is for, and what the sentences below will not mention. But do not",
+        "    inventory the scenery: a page listing everything matches everything.",
+        *(
+            [
+                "    The database records these notable things in THIS story --",
+                "    name them this way so they stay findable:",
+                *[f"      {name}" for name in sorted(set(story_things))],
+            ]
+            if story_things
+            else []
+        ),
         f"  {BEATS_KEY} — 1 to 3 plain sentences saying what happens on the page.",
         "    Describe only what is shown. No mood, no significance, no interpretation.",
         f"  {PANELS_OF_NOTE_KEY} — [[panel_num, phrase], ...] for panels worth addressing",

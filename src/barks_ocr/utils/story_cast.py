@@ -18,7 +18,9 @@ the roster is the head; the closed set is the union.
 """
 
 from barks_fantagraphics.barks_tags import (
+    BARKS_TAG_CATEGORIES,
     BARKS_TAGGED_TITLES,
+    TagCategories,
     TagGroups,
     Tags,
     get_all_tags_in_tag_group,
@@ -81,3 +83,34 @@ def story_characters(title: Titles) -> list[str]:
         _canonical(tag) for tag in _character_tags() if title in BARKS_TAGGED_TITLES.get(tag, [])
     }
     return sorted(tagged - ROSTER)
+
+
+def story_things(title: Titles) -> list[str]:
+    """Return the notable things the database tags as appearing in *title*.
+
+    Not a vocabulary for the ``objects`` field -- there cannot be one, since a
+    fly swatter and a legless chair are not enumerable in advance. These are
+    *naming anchors* for the handful of props the database considers notable
+    (``313``, ``square eggs``, ``HDL driving car``), so that a recurring object
+    is written the same way every time instead of arriving as "a car", "the red
+    car" and "313" in three different stories.
+
+    The category is narrow and idiosyncratic -- most of it is the chemical names
+    from the Gyro stories -- so an empty result is the common case.
+
+    Args:
+        title: The story to look up.
+
+    Returns:
+        The tagged thing names for this story, sorted.
+
+    """
+    tags: set[Tags] = set()
+    for entry in BARKS_TAG_CATEGORIES.get(TagCategories.THINGS, []):
+        # A category holds groups, but the same nesting the character groups use
+        # means an entry can already be a tag. Mirrors the database's own guard.
+        if isinstance(entry, TagGroups):
+            tags |= get_all_tags_in_tag_group(entry)
+        else:
+            tags.add(entry)
+    return sorted(tag.value for tag in tags if title in BARKS_TAGGED_TITLES.get(tag, []))

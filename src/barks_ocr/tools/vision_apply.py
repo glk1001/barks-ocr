@@ -22,12 +22,13 @@ Everything is validated before anything is written: unknown group ids, emphasis
 spans falling outside the current ``ai_text``, a character who is neither on the
 roster nor tagged for this story, a setting or time of day outside the
 vocabulary, a ``panels_of_note`` entry naming a panel the page does not have,
-and any capture field nobody has given a publication class -- each aborts the
-run.  Saves go through ``save_json(backup_file=...)`` so the previous prelim
-JSON is preserved.
+an over-long ``objects`` inventory, and any capture field nobody has given a
+publication class -- each aborts the run.  Saves go through
+``save_json(backup_file=...)`` so the previous prelim JSON is preserved.
 """
 
 import json
+from collections.abc import Callable
 from pathlib import Path
 from typing import Annotated, Any
 
@@ -47,6 +48,8 @@ from barks_ocr.utils.vision_schema import (
     CONFIDENCES,
     EMPHASIS_KINDS,
     FIELD_CLASS,
+    MAX_OBJECTS,
+    OBJECTS_KEY,
     OTHER_PREFIX,
     PANELS_OF_NOTE_KEY,
     SETTING_KEY,
@@ -55,6 +58,7 @@ from barks_ocr.utils.vision_schema import (
     VISIBLE_TEXT_KEY,
     VISION_SPEAKER_ISSUE,
     VISION_TEXT_ISSUE,
+    collapse_whitespace,
     is_valid_setting,
     is_valid_speaker,
     nephew_needs_collective,
@@ -75,6 +79,7 @@ CAPTURE_KEYS = frozenset(
         SETTING_KEY,
         TIME_OF_DAY_KEY,
         VISIBLE_TEXT_KEY,
+        OBJECTS_KEY,
         BEATS_KEY,
         PANELS_OF_NOTE_KEY,
     }
@@ -239,6 +244,15 @@ def _validate_capture(
 
     _check_str_list(capture.get(VISIBLE_TEXT_KEY), VISIBLE_TEXT_KEY, where, errors)
 
+    objects = _check_str_list(capture.get(OBJECTS_KEY), OBJECTS_KEY, where, errors)
+    if len(objects) > MAX_OBJECTS:
+        # An inventory matches every query and so discriminates nothing. This is
+        # a different concern from MAX_BEATS, which guards against retelling.
+        errors.append(f"{where}: {len(objects)} objects; at most {MAX_OBJECTS} are allowed.")
+    errors.extend(
+        f"{where}: {OBJECTS_KEY} entry {name!r} is blank." for name in objects if not name.strip()
+    )
+
     beats = _check_str_list(capture.get(BEATS_KEY), BEATS_KEY, where, errors)
     if len(beats) > MAX_BEATS:
         errors.append(f"{where}: {len(beats)} beats; at most {MAX_BEATS} are allowed.")
@@ -282,18 +296,35 @@ def _normalize_results(results: list[tuple[str, dict]]) -> int:
             if canonical != speaker:
                 entry["speaker"] = canonical
                 changed += 1
+        changed += _normalize_capture(result.get("capture") or {})
+    return changed
 
-        capture = result.get("capture") or {}
-        names = capture.get(CHARACTERS_KEY)
-        if isinstance(names, list):
-            for i, name in enumerate(names):
-                if isinstance(name, str) and (canonical := normalize_speaker(name)) != name:
-                    names[i] = canonical
-                    changed += 1
-        setting = capture.get(SETTING_KEY)
-        if isinstance(setting, str) and (canonical := normalize_setting(setting)) != setting:
-            capture[SETTING_KEY] = canonical
+
+def _normalize_list_in_place(values: Any, canonicalize: Callable[[str], str]) -> int:  # noqa: ANN401
+    """Canonicalize a list of strings in place. Returns how many changed."""
+    if not isinstance(values, list):
+        return 0
+    changed = 0
+    for i, value in enumerate(values):
+        if isinstance(value, str) and (canonical := canonicalize(value)) != value:
+            values[i] = canonical
             changed += 1
+    return changed
+
+
+def _normalize_capture(capture: dict) -> int:
+    """Canonicalize one page's capture record in place. Returns how many changed."""
+    changed = _normalize_list_in_place(capture.get(CHARACTERS_KEY), normalize_speaker)
+
+    setting = capture.get(SETTING_KEY)
+    if isinstance(setting, str) and (canonical := normalize_setting(setting)) != setting:
+        capture[SETTING_KEY] = canonical
+        changed += 1
+
+    # Objects are free text with no vocabulary behind them, so whitespace is the
+    # only drift fixable mechanically. "fly  swatter" and "fly swatter " are one
+    # object; anything subtler is for the census and a human.
+    changed += _normalize_list_in_place(capture.get(OBJECTS_KEY), collapse_whitespace)
     return changed
 
 

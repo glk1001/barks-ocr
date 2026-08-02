@@ -36,13 +36,14 @@ from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from loguru import logger
 from PIL import Image
 
-from barks_ocr.utils.story_cast import story_characters
+from barks_ocr.utils.story_cast import story_characters, story_things
 from barks_ocr.utils.vision_schema import (
     BEATS_KEY,
     CAPTURE_MODEL_KEY,
     CAPTURE_PROMPT_VERSION_KEY,
     CAPTURED_KEY,
     CHARACTERS_KEY,
+    OBJECTS_KEY,
     PANELS_OF_NOTE_KEY,
     SETTING_KEY,
     TIME_OF_DAY_KEY,
@@ -67,8 +68,9 @@ ROSTER_FILE = "roster.txt"
 MAX_IMAGE_BYTES = 500 * 1024
 PALETTE_SIZE = 256
 # The overview only supplies cross-panel context (reading order, who is in frame),
-# so it does not need lettering-grade resolution.
-OVERVIEW_LONG_EDGE = 1500
+# so it does not need lettering-grade resolution. Tried in order until one fits
+# under MAX_IMAGE_BYTES -- see `_write_overview`.
+OVERVIEW_LONG_EDGES = (1500, 1350, 1200, 1050, 900)
 CROP_PAD_PX = 8
 
 # Under $HOME, not /tmp: snap-confined browsers get a private /tmp namespace and
@@ -95,9 +97,25 @@ def _crop_panel(page_image: Image.Image, box: Any, pad: int) -> Image.Image:  # 
 
 
 def _write_overview(page_image: Image.Image, out_file: Path) -> int:
-    overview = page_image.copy()
-    overview.thumbnail((OVERVIEW_LONG_EDGE, OVERVIEW_LONG_EDGE), Image.Resampling.LANCZOS)
-    return _save_quantized(overview, out_file)
+    """Write the page overview, shrinking until it clears the size threshold.
+
+    Unlike the panel crops, the overview carries no lettering the pass has to
+    read -- it supplies cross-panel context only, reading order and who is in
+    frame -- so trading resolution for size costs nothing here.
+
+    A single fixed edge length is not enough: a busy page can exceed the limit
+    even downscaled and quantized (144 of "Sheriff of Bullet Valley" lands at
+    507KB, seven over), and a constant chosen to fit that page would only fail
+    on a busier one later.
+    """
+    size = MAX_IMAGE_BYTES + 1  # Only survives if the edge list is somehow empty.
+    for long_edge in OVERVIEW_LONG_EDGES:
+        overview = page_image.copy()
+        overview.thumbnail((long_edge, long_edge), Image.Resampling.LANCZOS)
+        size = _save_quantized(overview, out_file)
+        if size <= MAX_IMAGE_BYTES:
+            return size
+    return size  # Still too big at the smallest size; the caller reports it.
 
 
 def _page_image_file(comics_database: ComicsDatabase, title_str: str, fanta_page: str) -> Path:
@@ -206,6 +224,7 @@ def _capture_stub(panel_nums: list[int]) -> str:
         SETTING_KEY: None,
         TIME_OF_DAY_KEY: None,
         VISIBLE_TEXT_KEY: [],
+        OBJECTS_KEY: [],
         BEATS_KEY: [],
         # Pre-listed so the choice is which of these panels is worth naming.
         # Most pages need none; listing them all defeats the point.
@@ -253,24 +272,57 @@ def _parse_pages(pages_str: str) -> list[str]:
     return pages
 
 
-def _title_pages(speech_groups: SpeechGroups, title_str: str, engine: OcrTypes) -> list[str]:
-    """Return every page of one title that has OCR for this engine."""
+def _title_pages(
+    comics_database: ComicsDatabase, speech_groups: SpeechGroups, title_str: str, engine: OcrTypes
+) -> list[str]:
+    """Return every page of one title that has OCR for this engine.
+
+    Two database accessors disagree here and the difference matters, so both are
+    consulted rather than one trusted.  ``get_speech_page_groups`` walks the
+    comic's page map, which can reach past the story into the ones around it --
+    "Sheriff of Bullet Valley" comes back with 103, 176 and 177 alongside its
+    real 144-175, and those three pages belong to *Sorry to be Safe*, *Best Laid
+    Plans* and *The Genuine Article*.
+
+    Prepping them would crop another story's art into this story's directory and
+    validate it against this story's cast, so a page is kept only when
+    ``get_title_from_volume_page`` agrees it belongs here.
+    """
     title = STR_TITLE_TO_ENUM[title_str]
-    pages = sorted(
+    volume = comics_database.get_fanta_volume_int(title_str)
+    claimed = sorted(
         {
             page_group.fanta_page
             for page_group in speech_groups.get_speech_page_groups(title, skip_missing=True)
             if page_group.ocr_index == engine
         }
     )
+
+    pages, foreign = [], []
+    for fanta_page in claimed:
+        try:
+            owner, _ = get_title_from_volume_page(comics_database, volume, fanta_page)
+        except Exception:  # noqa: BLE001 -- unresolvable means "not this story".
+            owner = None
+        if owner == title_str:
+            pages.append(fanta_page)
+        else:
+            foreign.append((fanta_page, owner))
+
+    if foreign:
+        listed = ", ".join(f"{p} ({o or 'unresolvable'})" for p, o in foreign)
+        logger.warning(
+            f'Dropped {len(foreign)} page(s) the page map claims for "{title_str}"'
+            f" but which belong elsewhere: {listed}."
+        )
     if not pages:
         msg = f'No {engine.value} OCR pages found for "{title_str}".'
         raise typer.BadParameter(msg)
     return pages
 
 
-def _cast_for(entries: list[dict]) -> tuple[list[str], list[str]]:
-    """Return the closed-set cast for a prepped run, and the titles it spans.
+def _cast_for(entries: list[dict]) -> tuple[list[str], list[str], list[str]]:
+    """Return the closed-set cast and thing anchors for a run, and the titles it spans.
 
     A single title gets exactly its own tagged characters.  A page range that
     happens to cross stories gets the union, which is looser -- the pass can
@@ -279,7 +331,8 @@ def _cast_for(entries: list[dict]) -> tuple[list[str], list[str]]:
     """
     titles = sorted({entry["title"] for entry in entries})
     cast = sorted({name for t in titles for name in story_characters(STR_TITLE_TO_ENUM[t])})
-    return cast, titles
+    things = sorted({name for t in titles for name in story_things(STR_TITLE_TO_ENUM[t])})
+    return cast, things, titles
 
 
 @app.command(help="Crop comic pages into per-panel images for a Claude Code vision pass.")
@@ -316,7 +369,7 @@ def main(
 
     if title_str:
         volume = comics_database.get_fanta_volume_int(title_str)
-        pages = _title_pages(speech_groups, title_str, engine)
+        pages = _title_pages(comics_database, speech_groups, title_str, engine)
         out_dir = out_dir or DEFAULT_ROOT.expanduser() / _slug(title_str)
     else:
         if volume is None or not pages_str:
@@ -339,20 +392,21 @@ def main(
         for fanta_page in pages
     ]
 
-    cast, titles = _cast_for(entries)
+    cast, things, titles = _cast_for(entries)
     queue_file = out_dir / "queue.json"
     queue = {
         "volume": volume,
         "engine": engine.value,
         "titles": titles,
         "story_cast": cast,
+        "story_things": things,
         "pages": entries,
     }
     queue_file.write_text(json.dumps(queue, indent=2) + "\n")
 
     # Rewritten every run, so a roster entry added later reaches the next pass.
     roster_file = out_dir / ROSTER_FILE
-    roster_file.write_text(roster_text(cast))
+    roster_file.write_text(roster_text(cast, things))
 
     if len(titles) > 1:
         logger.warning(
