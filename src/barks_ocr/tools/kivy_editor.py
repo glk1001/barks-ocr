@@ -1859,6 +1859,11 @@ class EditorApp(App):
         the human's answer. Nothing is written unless a roster entry is picked,
         so opening the popup on a group the vision pass never saw and pressing
         Save is a no-op.
+
+        **Confirm as is** covers the other outcome: agreeing with the call.
+        Without it a confirmation is indistinguishable on disk from never having
+        opened the group, which is why *Sheriff of Bullet Valley*'s 13
+        confirmations rest on the reviewer's report rather than on the data.
         """
         group = pane.json_group()
         if group is None:
@@ -1924,11 +1929,24 @@ class EditorApp(App):
             self._apply_speaker(pane, speaker, None if cap == CAP_COLOUR_NONE else cap)
             popup.dismiss()
 
+        def on_confirm(_inst: Button) -> None:
+            if not group.get(SPEAKER_KEY):
+                error_label.text = "Nothing to confirm — the vision pass never set a speaker here."
+                return
+            if self._speaker_widgets_differ(group, radios, other_text, cap_radios):
+                error_label.text = "Selection changed — press Save to record it."
+                return
+            self._confirm_speaker_as_is(pane)
+            popup.dismiss()
+
         save_btn = Button(text="Save")
         save_btn.bind(on_press=on_save)
+        confirm_btn = Button(text="Confirm as is")
+        confirm_btn.bind(on_press=on_confirm)
         cancel_btn = Button(text="Cancel")
         cancel_btn.bind(on_press=lambda _: popup.dismiss())
         button_layout.add_widget(save_btn)
+        button_layout.add_widget(confirm_btn)
         button_layout.add_widget(cancel_btn)
         content.add_widget(button_layout)
         popup.open()
@@ -1956,6 +1974,72 @@ class EditorApp(App):
         logger.debug(
             f'{pane.name} group {pane.group_id}: speaker set to "{speaker}" (cap {cap_colour}).'
         )
+
+    @staticmethod
+    def _speaker_widgets_differ(
+        group: dict, radios: dict, other_text: TextInput, cap_radios: dict
+    ) -> bool:
+        """Return whether the popup's selection has moved off the stored call.
+
+        "Confirm as is" means what is on disk, so an edited selection has to be
+        refused rather than silently thrown away: a reviewer who retyped a name
+        and then pressed the wrong button would otherwise record a confirmation
+        of the value they had just replaced.
+
+        Args:
+            group: The stored group dict being reviewed.
+            radios: The roster radio buttons, keyed by option name.
+            other_text: The free-text input beside the ``other:`` row.
+            cap_radios: The cap-colour radio buttons, keyed by colour.
+
+        Returns:
+            ``True`` if the widgets no longer show what is stored.
+
+        """
+        picked = next((name for name, cb in radios.items() if cb.active), None)
+        if picked == SPEAKER_OTHER_OPTION:
+            picked = OTHER_PREFIX + other_text.text.strip()
+        # A cleared free-text box is not a rename, just an empty box.
+        if picked is not None and picked != OTHER_PREFIX:
+            stored = group.get(SPEAKER_KEY) or ""
+            if normalize_speaker(picked) != normalize_speaker(stored):
+                return True
+        picked_cap = next((c for c, cb in cap_radios.items() if cb.active), CAP_COLOUR_NONE)
+        return picked_cap != (group.get(CAP_COLOUR_KEY) or CAP_COLOUR_NONE)
+
+    def _confirm_speaker_as_is(self, pane: EnginePane) -> bool:
+        """Stamp this group's existing speaker call as human-reviewed, unchanged.
+
+        ``speaker`` and ``cap_colour`` are left exactly as the vision pass wrote
+        them; only ``speaker_reviewed`` and the confidence move. That is the
+        whole point: agreeing with a call otherwise writes nothing, so on disk a
+        confirmation looks identical to a group nobody ever opened, and the
+        denominator of the speaker-review rate cannot be read from the data.
+
+        The confidence goes to ``high`` for the same reason it does in
+        ``_apply_speaker`` — a human has now looked at the art — and the
+        population that was low-confidence *before* review still survives in the
+        ``--queue-speakers`` file, so the error rate stays measurable.
+
+        Args:
+            pane: The engine pane whose current group is being confirmed.
+
+        Returns:
+            ``True`` if a call was stamped, ``False`` if there was none to
+            confirm.
+
+        """
+        group = pane.json_group()
+        if group is None or not group.get(SPEAKER_KEY):
+            return False
+        group[SPEAKER_CONFIDENCE_KEY] = REVIEWED_CONFIDENCE
+        group[SPEAKER_REVIEWED_KEY] = True
+        self._has_changes = True
+        self._refresh_pane_labels()
+        logger.debug(
+            f'{pane.name} group {pane.group_id}: speaker "{group[SPEAKER_KEY]}" confirmed as is.'
+        )
+        return True
 
     @staticmethod
     def _show_confirm_popup(  # noqa: PLR0913

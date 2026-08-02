@@ -466,6 +466,26 @@ Nothing is written unless a roster entry is picked: opening the popup on a group
 the vision pass never saw and pressing Save is a no-op. `other:` with an empty
 box is refused rather than saved as a nameless speaker.
 
+**Confirm as is** covers the other outcome — agreeing with the call. Added
+2026-08-03, before the *Plenty of Pets* queue was reviewed. It stamps
+`speaker_reviewed` and moves the confidence to `high` while leaving `speaker`
+and `cap_colour` exactly as the pass wrote them.
+
+Without it, agreeing wrote nothing at all, so **a confirmation was
+indistinguishable on disk from a group nobody ever opened** — which is why
+*Sheriff of Bullet Valley*'s 13 confirmations rest on GLK's report rather than
+on the data, and why the pilot's four genuinely-unjudgeable entries cannot be
+told from entries no one reached. The denominator of the speaker-review rate is
+now self-evidencing.
+
+The button refuses rather than guesses if the popup's selection has been moved
+off the stored value: "as is" means what is on disk, and a reviewer who retyped
+a name and then hit the wrong button would otherwise record a confirmation of
+the value they had just replaced. Comparison runs through `normalize_speaker`,
+so `other:Donald` typed over a stored `Donald` is correctly seen as *unchanged*
+rather than as an edit. It saves through `save_json()` on `_has_changes` alone,
+so a group whose text never changed still reaches disk.
+
 The pane header carries `[spkr: <name>]` once a group has one, so the queue can
 be walked without opening the popup on every entry.
 
@@ -1125,11 +1145,9 @@ measured on a title with the full cast, readable caps and 32 pages.
 doubt.** Only the corrected group carries `speaker_reviewed` on disk. The editor
 writes nothing unless a roster entry is picked and saved, so agreeing with a call
 and moving on is **indistinguishable from never having looked at it**. The 13
-confirmations therefore rest on GLK's report, not on the data. Worth closing
-before the next title: a confirm-as-is action that stamps `speaker_reviewed`
-without changing the speaker would make the denominator self-evidencing, and it
-would also separate the pilot's four genuinely-unjudgeable entries from entries
-nobody reached.
+confirmations therefore rest on GLK's report, not on the data. **Closed
+2026-08-03** by the editor's Confirm as is button, which was added before the
+next queue was reviewed; these 13 are deliberately not retrofitted.
 
 **The one error is exactly the class this section predicted.** 168 g5 is the man
 in the green rocking chair, and the pass gave him to Old Jim because his red shirt
@@ -1706,13 +1724,16 @@ not the identification.
   **1 wrong in 14 (7%), against the pilot's 10 in 14 (71%)**. Measurement 3 is
   answered. The one error is adult-identity-by-costume-colour, the class named in
   the bullet below.
-- **A confirmed speaker call is not recorded, so the denominator is not
-  self-evidencing.** The editor writes nothing unless a roster entry is picked and
-  saved, so agreeing with a call leaves no trace and looks identical to never
-  having opened it — only Sheriff's one *correction* carries `speaker_reviewed`,
-  not the 13 confirmations. A confirm-as-is action stamping `speaker_reviewed`
-  without changing the speaker would fix it, and would also separate the pilot's
-  four genuinely-unjudgeable entries from entries nobody reached.
+- ~~**A confirmed speaker call is not recorded, so the denominator is not
+  self-evidencing.**~~ **Fixed 2026-08-03** by the editor's **Confirm as is**
+  button, added before the *Plenty of Pets* queue was reviewed — see the editor
+  section. It stamps `speaker_reviewed` and `high` confidence without touching
+  `speaker` or `cap_colour`, and refuses if the popup selection has been edited.
+  **The two runs already done are not retrofitted**: Sheriff's 13 confirmations
+  still rest on GLK's report and the pilot's four unjudgeable entries still carry
+  no flag, because stamping them now would record a review that did not happen
+  the way the data would then claim. From *Plenty of Pets* onward the denominator
+  is readable off disk.
 - **The speaker risk has moved from nephews to adults, and nothing supports
   adults.** Sheriff's `low,medium` queue is dominated by the sheriff / Old Jim /
   posseman / Double X rider set, who are distinguishable only by hat and shirt
