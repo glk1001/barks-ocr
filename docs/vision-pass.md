@@ -448,6 +448,16 @@ would not have been.
 
 ## Reviewing the speaker calls in the editor
 
+```bash
+uv run barks-ocr-kivy-editor -- --queue-file ~/barks-vision/<title>-speakers.txt
+```
+
+**The bare `--` is required**, and only for the Kivy tools — this one and
+`barks-ocr-annotate`. Kivy parses `sys.argv` itself at import and rejects flags
+it does not recognise; it stops at `--` and leaves the rest to Typer. Neither
+tool sets `KIVY_NO_ARGS=1`, which would remove the need for it. Every other
+command in this document takes its flags bare.
+
 Each engine column has a **Speaker** button. It opens the roster, the cap-colour
 row, and — read-only — what the vision pass itself said and why.
 
