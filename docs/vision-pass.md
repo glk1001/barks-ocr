@@ -510,8 +510,149 @@ Five things to measure, in this order:
 
 `visible_text` has no baseline, so establishing its yield is itself an output.
 
+---
+
+## Trial results 1 — Roscoe the Robot, vol 20 pages 175-178
+
+Run 2026-08-02. 4 pages, 32 panels, 44 groups. First unit of the five-title trial.
+
+| | |
+|---|---|
+| `vision_text_ok: false` | 1 (**2.3%**, against the pilot's 1.5%) |
+| bold spans | 20 across 44 groups (**45%**, against the pilot's 3.7%) |
+| confidence | high 44 / medium 0 / low 0 |
+| `cap_colour` non-null | 0 |
+
+**The correction rate holds.** One in 44, and it is a real defect: `175 g12`
+`ELECTRIC RULES` → `ELECTRIC BULBS`, hand-scrawled on the crate the Little Helper
+is loading a spare bulb into. Queued in `~/barks-vision/roscoe-review.txt`. At
+2.3% against 1.5% on a 44-group sample the pass is reading, not inventing.
+
+### Bold density is a property of the series, not of the corpus
+
+20 spans where the pilot found 5 — twelve times the rate. The Gyro Gearloose
+stories letter emphasis constantly; *The Victory Garden* (1943) almost never
+does. **So the pilot's 5 is not a corpus baseline**, and neither is this. Two of
+the twenty are single characters — the lone `I` in "this is where **I** wanted to
+hide" — which is the case inline markup would have handled worst.
+
+### Measurement 3 is untestable on this title, and that is structural
+
+All 44 calls are `high`; `--queue-speakers` wrote **zero** entries. Gyro is the
+only duck in the story, so there is no cap to read and no nephew to confuse. A
+one-lead story cannot exercise the low-confidence path at all — the remaining
+four titles have to carry that measurement alone.
+
+### Retrieval: 15 of 16, but only 11 the vision pass earned
+
+Scored by keyword search over the capture records, so every hit is attributable
+to a field. 12 Roscoe-specific queries plus 4 that any title can answer (#16,
+#30, #43, #96).
+
+| | |
+|---|---|
+| hit | 15 |
+| miss — *not retrieved* | 1 (#93) |
+| miss — *not recorded* | 1 (#85, on the first pass) |
+| false positives | 0 |
+
+**Four of the fifteen are not the vision pass's to claim.** #84 *a robot*, #87 *a
+fly swatter*, #90 *a fly* and #96 *an alleyway* are all answerable from the OCR
+speech alone — the dialogue says "a robot that can act", "gone after the
+swatter", "swat that fly", "the terrible footpad's alley". Capture found them
+too, but they discriminate nothing. **The honest figure is 11 capture-only hits.**
+
+The two misses want opposite fixes, which is the split working:
+
+- **#93 *a character being hit* — not retrieved.** 176 panel 4 is recorded, in
+  two fields: "swats the fly on Gyro's face with a SPLAT, knocking Gyro off his
+  feet". Keyword search cannot get from *hit* to *swats* and *knocking off his
+  feet*; an embedding retriever would. The schema is fine. **This is the single
+  strongest argument in the trial so far for semantic rather than lexical
+  retrieval** — nothing about the record is deficient.
+- **#85 *a character being electrocuted* — not recorded.** 175 panel 3 has the
+  Little Helper grabbing the live wire out of Roscoe's open chest, limbs flung
+  out, bulb head blazing, lightning jagging in every direction. The first pass
+  wrote the panel's dialogue and its bold span and **did not mention the gag at
+  all** — it is background business in a panel whose balloon is about something
+  else. Re-reading the panel with the query in hand found it immediately.
+
+That second miss is the one to learn from, and it is not a schema failure: three
+sentences and eleven object slots had room. It is an **attention** failure —
+the pass followed the dialogue and under-read the silent business around it.
+Whatever the fix is (a prompt that asks explicitly what else is happening in each
+panel, or a second reading pass), it is not another field.
+
+### Free text drifts inside a single title, let alone across the corpus
+
+Query #92 *a legless chair* hit page 176 and missed 175 — the same blue chair,
+written `legless blue deck chair` on one page and `blue folding chair` on the
+next, four pages apart in one sitting. The census catches this across stories;
+nothing catches it within one. Both are now the same string.
+
+The same problem, caught in time: the holdup man of 177 is drawn in full on 178
+as a workman with a wrench. Recording him as `other:the thug` on one page and
+`other:the workman` on the next would have made **one character into two**. He is
+`other:the workman` on both, and the silhouette gag is recorded in
+`vision_note` and `panels_of_note` instead.
+
+### Off-vocabulary rate is near-total, and mostly unavoidable
+
+`characters`: 6 distinct values, of which **1** is on the roster. The other five
+— `other:Roscoe the robot`, `other:Gyro's Little Helper`, `other:the workman`,
+`other:the postman`, `other:the kitten` — are all free text, and the database
+tags this story with no cast at all. A Gyro Gearloose story simply has an
+off-roster cast; this is what the closed set cannot cover.
+
+`setting`: **0 of 4 pages** used a closed-vocabulary value. Both are `other:`
+(`other:Gyro's workshop`, `other:the footpad's alley`), because `indoors` and
+`street` are true but carry no retrievable information, and query #96 wanted the
+alley by name.
+
+**`other:Gyro's Little Helper` is the promotion candidate**, and a better one than
+`other:crows`: it recurs across every Gyro story in the corpus rather than
+seventeen times in one. Query #16 asks for it by name.
+
+### `visible_text` yield on this title: zero net new lettering
+
+13 strings captured — crate labels, the gate sign, two letters, the title logo,
+and the painted sound effects. **Every one already exists as an OCR group.** The
+OCR pass caught all of the non-speech lettering on these four pages, so
+`visible_text` duplicated the speech layer and added nothing. The pilot's
+invisible-seeds poster shows that is not always true, but this title says the
+field's yield is uneven and cannot be assumed. Worth re-measuring per title
+rather than declaring it settled either way.
+
+### `type` is wrong the other way round here
+
+The pilot found 3 of 5 `thought`-typed groups were really speech. Roscoe has the
+mirror-image defect and far more of it: **12 of 44 groups (27%) are drawn as
+thought clouds and typed `dialogue`** — and `177 g4` is typed `narration` while
+the art gives it a bubble trail running down to Gyro's head. The story's premise
+is a machine that reads thoughts, so almost every balloon in it is a thought.
+Recorded in `vision_note` only; nothing was changed.
+
+`177 g3` is a different defect: one group holding **two physically separate
+letters** lying at opposite corners of the panel. Both readings are correct, so
+it is not a text correction, but it should be two groups.
+
+### Cost
+
+**One session, ~45 minutes wall-clock**, 40 images read (4 page overviews, 32
+panel crops, 4 enlargements to settle small lettering). That includes reading
+both design docs and the `vision_apply` source once, which the next title will
+not repeat.
+
+Do not extrapolate ~11 min/page to the corpus from a 4-page sample — the fixed
+cost dominates at this size, and Roscoe was deliberately chosen as the densest
+title in the trial. The 32-page *Sheriff of Bullet Valley* is the unit that will
+actually answer measurement 5.
+
 ## Open threads
 
+- **1 queued Roscoe correction is unapplied.** `~/barks-vision/roscoe-review.txt`.
+  `175 g12` (`ELECTRIC RULES` → `ELECTRIC BULBS`) is solid; it needs a pass
+  through the kivy editor like any other queued correction.
 - **2 queued corrections are unapplied.** `~/barks-vision/vol01-vision-review.txt`.
   `077 g1` (`YOU — YOU` → `YOU-YOU`) is solid — and is visible in context in the
   speech script. `085 g7` (`INVISIBLE SEEDS,` → `INVISIBLE, SEEDS,`) is explicitly
@@ -525,7 +666,18 @@ Five things to measure, in this order:
   for names recurring *across* stories, so this waits for corpus evidence — and
   is a hint the census could weight by how many titles a name appears in.
 - **The pilot's `type: thought` mislabels are unfixed** — 079 g16, 080 g6, 080 g7
-  are recorded in `vision_note` only.
+  are recorded in `vision_note` only. Roscoe adds 12 more in the other direction,
+  plus `177 g3`, which is two separate letters in one group.
+- **No retrieval engine exists.** The Roscoe queries were scored with a keyword
+  search over the capture JSON, written for that run and not kept. Miss #93 is
+  recorded-but-unreachable by keyword and would fall to an embedding search, so
+  the scoring tool is now itself a variable in the measurement: **the next title
+  must be scored the same way as this one, or the two numbers cannot be
+  compared.**
+- **The pass under-reads silent background business.** Roscoe query #85 missed a
+  full-panel electrocution gag because the panel's balloon was about something
+  else. One instance, so it is a hypothesis rather than a finding — watch for it
+  on the next title before changing the prompt.
 - **24 pages have no prelim OCR at all** — see below. The tools no longer trip over
   them, but the OCR still needs to be run.
 - **One-pagers cannot be prepped at all.** All 155 `ONE_PAGERS` fail to resolve —
