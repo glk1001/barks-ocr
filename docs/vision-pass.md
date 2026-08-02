@@ -1103,10 +1103,48 @@ honest collective that loses almost nothing, where the adult fallback is
 where the remaining speaker risk in the corpus lives, and a story with a large
 adult supporting cast is where it will show up.
 
-Measurement 3 still has no error rate, because judging these 14 needs a human in
-the editor. But it now has a **shape**, which is what the pilot's 10-of-14 gave
-and what two titles of zeroes could not: the residual uncertainty is
-adult-identity-by-costume-colour, concentrated on night and indoor pages.
+#### The review: 1 correction in 14 — against the pilot's 10 in 14
+
+GLK reviewed the queue and made **one** correction:
+
+```
+168 g5   other:Old Jim Diamond  ->  other:posseman
+```
+
+| | pilot | Sheriff |
+|---|---:|---:|
+| queued | 18 | 14 |
+| reviewed | 14 | 14 |
+| model wrong | **10 (71%)** | **1 (7%)** |
+
+**Measurement 3 finally has a number**, and it is a tenth of the pilot's. That is
+the collective rule and the nine-of-ten error pattern it was written to prevent,
+measured on a title with the full cast, readable caps and 32 pages.
+
+**One caveat on the 13 confirmations, and it is a tooling gap rather than a
+doubt.** Only the corrected group carries `speaker_reviewed` on disk. The editor
+writes nothing unless a roster entry is picked and saved, so agreeing with a call
+and moving on is **indistinguishable from never having looked at it**. The 13
+confirmations therefore rest on GLK's report, not on the data. Worth closing
+before the next title: a confirm-as-is action that stamps `speaker_reviewed`
+without changing the speaker would make the denominator self-evidencing, and it
+would also separate the pilot's four genuinely-unjudgeable entries from entries
+nobody reached.
+
+**The one error is exactly the class this section predicted.** 168 g5 is the man
+in the green rocking chair, and the pass gave him to Old Jim because his red shirt
+and blue neckerchief in panel 4 matched the hatless figure at the desk in panel 2.
+He is a posseman — the *same* man as 168 g3, which the pass had already called a
+posseman after noticing his shirt and trousers swap colour between the two panels.
+So the pass saw the anomaly, recorded it, and then let costume colour override it
+one panel later. Adult-identity-by-costume-colour was named above as the residual
+risk; it is also, on this title, the *only* thing the pass got wrong.
+
+That the single error sits on the one night-and-indoors page, in the one group
+where two panels disagree about a man's clothes, is the strongest available
+argument for the `identified_by` idea in Open threads: had the call recorded
+*what evidence identified him*, the contradiction with g3 would have been
+mechanical to catch instead of needing a human eye.
 
 ### The colourist breaks the cap convention on five pages
 
@@ -1366,10 +1404,18 @@ Two other defects worth the editor's time:
   an error rate. But Sheriff explains the emptiness rather than merely repeating
   it: the collective rule added after the pilot means an unreadable cap yields
   `nephews` at `high`, so the low-confidence population the pilot measured cannot
-  form any more. The `low,medium` run has since been done: **14 entries, 9 of them
-  adults**, which is the reverse of the pilot's all-nephew population. Still no
-  error rate — judging them needs a human in the editor — but the shape is now
-  known.
+  form any more. The `low,medium` run has since been done — **14 entries, 9 of
+  them adults**, the reverse of the pilot's all-nephew population — and reviewed:
+  **1 wrong in 14 (7%), against the pilot's 10 in 14 (71%)**. Measurement 3 is
+  answered. The one error is adult-identity-by-costume-colour, the class named in
+  the bullet below.
+- **A confirmed speaker call is not recorded, so the denominator is not
+  self-evidencing.** The editor writes nothing unless a roster entry is picked and
+  saved, so agreeing with a call leaves no trace and looks identical to never
+  having opened it — only Sheriff's one *correction* carries `speaker_reviewed`,
+  not the 13 confirmations. A confirm-as-is action stamping `speaker_reviewed`
+  without changing the speaker would fix it, and would also separate the pilot's
+  four genuinely-unjudgeable entries from entries nobody reached.
 - **The speaker risk has moved from nephews to adults, and nothing supports
   adults.** Sheriff's `low,medium` queue is dominated by the sheriff / Old Jim /
   posseman / Double X rider set, who are distinguishable only by hat and shirt
