@@ -108,6 +108,46 @@ _WORD_RE = re.compile(r"[a-z0-9]+")
 # finding for a state the capture layer never records.
 # --------------------------------------------------------------------------- #
 
+# Sheriff of Bullet Valley runs 32 pages, so several of its queries are true of
+# most of the story.  Those lists are pulled out here rather than inlined, both to
+# keep the table readable and to make the breadth visible: a query whose expected
+# list is nearly the whole title cannot discriminate, and that is a finding about
+# the query rather than about the capture.
+SHERIFF_ALL_PAGES: list[str] = [str(p) for p in range(144, 176)]
+
+SHERIFF_COWBOY_PAGES = SHERIFF_ALL_PAGES  # every page has someone in cowboy dress
+
+# fmt: off
+SHERIFF_HANDGUN_PAGES = [
+    "144", "147", "148", "149", "151", "152", "153", "155", "156", "157", "163",
+    "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "175",
+]
+SHERIFF_HORSE_PAGES = [
+    "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156",
+    "157", "160", "162", "164", "165", "169", "170", "171", "174", "175",
+]
+SHERIFF_BADGE_PAGES = [
+    "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155",
+    "156", "157", "162", "164", "165", "166", "167", "168", "169", "170", "171",
+    "172", "173", "174", "175",
+]
+SHERIFF_BADLANDS_PAGES = [
+    "144", "147", "148", "149", "154", "155", "156", "157", "162", "165", "166",
+    "167", "169", "170", "171", "172", "173", "174", "175",
+]
+SHERIFF_SILHOUETTE_PAGES = [
+    "146", "147", "148", "149", "154", "155", "158", "161", "164", "165", "168",
+    "169", "171", "175",
+]
+SHERIFF_SUB_MACHINEGUN_PAGES = [
+    "149", "151", "155", "156", "160", "163", "166", "169", "170",
+]
+SHERIFF_RANCH_PAGES = [
+    "149", "150", "151", "152", "153", "154", "158", "159", "160",
+]
+# fmt: on
+
+
 QUERIES: dict[str, list[tuple[int, str, list[str] | None]]] = {
     "Roscoe the Robot": [
         (16, "Gyro's Little Helper", ["175", "176", "177", "178"]),
@@ -146,6 +186,45 @@ QUERIES: dict[str, list[tuple[int, str, list[str] | None]]] = {
         (45, "a character pointing", ["047"]),
         (46, "a sound effect", ["048", "049", "052"]),
         (115, "a fire hydrant", ["049"]),
+    ],
+    # 27 of the queries in `docs/retrieval-queries.md` name this title (#22, #29,
+    # #31 and the whole run #59-#82), plus three that any title can answer.  The
+    # expected pages were taken from the ART while reading, not from what the
+    # capture records happen to say -- that is what lets a miss be split into
+    # "not recorded" and "not retrieved".
+    "Sheriff of Bullet Valley": [
+        (22, "a wanted poster or reward notice", ["144", "145", "175"]),
+        (29, "a chase or pursuit across several panels", ["164", "174"]),
+        (30, "the story's splash page", ["144"]),
+        (31, "the nephews driving a car", ["154", "155", "157"]),
+        (43, "a panel containing silhouettes", SHERIFF_SILHOUETTE_PAGES),
+        (59, "car 313", ["144", "146", "154", "155", "157"]),
+        # True of nearly every page in the story -- kept honest and reported as
+        # non-discriminating rather than trimmed to flatter the hit rate.
+        (60, "a character that is a cowboy", SHERIFF_COWBOY_PAGES),
+        (61, "a handgun", SHERIFF_HANDGUN_PAGES),
+        (62, "a river or creek", ["146", "147", "149", "150", "155", "161"]),
+        (63, "a brand on cattle", ["147", "151", "152", "154", "160"]),
+        (64, "a character riding a horse", SHERIFF_HORSE_PAGES),
+        (65, "a character wearing a sheriff's badge", SHERIFF_BADGE_PAGES),
+        (66, "a character cutting a wire fence", ["151"]),
+        (67, "a character being tied up", ["153", "158", "159", "160", "174", "175"]),
+        (68, "a gunshot", ["155", "157", "163", "166", "170", "172", "173"]),
+        (69, "a walkie talkie", ["156"]),
+        (70, "a character hiding", ["159", "160", "165"]),
+        (71, "a rifle", ["150", "157", "163", "164"]),
+        (72, "a sub-machinegun", SHERIFF_SUB_MACHINEGUN_PAGES),
+        (73, "a character sleeping", ["162"]),
+        (74, "an antenna", ["156", "163", "164"]),
+        (75, "a character yelling", ["150", "151", "152", "158", "165"]),
+        (76, "a character feeling pain", ["157", "166", "167", "171", "174"]),
+        (77, "badlands", SHERIFF_BADLANDS_PAGES),
+        (78, "a hand grenade", ["172"]),
+        (79, "a character's pants falling down", ["173", "174"]),
+        (80, "an empty handgun", ["173"]),
+        (81, "a sunset", ["175"]),
+        (82, "a character smoking a pipe", ["145", "150", "151", "164", "167", "168", "175"]),
+        (83, "a cattle ranch", SHERIFF_RANCH_PAGES),
     ],
 }
 

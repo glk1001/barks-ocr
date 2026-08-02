@@ -202,7 +202,26 @@ unless the result is still 15 hits, 1 miss, #93**:
 ```bash
 barks-ocr-retrieval-score --validate                        # is the calibration intact?
 barks-ocr-retrieval-score --title "Billions to Sneeze At"
+barks-ocr-retrieval-score --title "Sheriff of Bullet Valley"
 ```
+
+**Run `--validate` first, every time.** It is the only thing that makes two
+titles' numbers comparable, and it is cheap.
+
+Expected pages are filled in from the **art**, while reading, never from what the
+capture records happen to say. Scoring against the pass's own output would make
+every query a tautology and would destroy the not-recorded / not-retrieved split
+below, which is the part that argues for a fix.
+
+One property of the scorer worth knowing before reading a result: a query **hits
+if any expected page lands in the top band**, and the top band is the maximum-
+scoring pages capped at three. So a long expected list makes a hit *easier*, and
+a query that is true of most of a title is close to a guaranteed hit. Do not trim
+such lists to flatter the number — record the breadth and report the query as
+non-discriminating, as *Sheriff of Bullet Valley* does for #60 and #65. The same
+cap has a sharper edge: when more than three pages tie at the top score the tie
+is broken **by page number**, which is how Sheriff's #29 missed with both correct
+pages scoring the maximum.
 
 Matching is deliberately lexical — no stemmer, no embeddings — because that is
 what trial 1 was scored with. Improving it is a change to the measurement, so it

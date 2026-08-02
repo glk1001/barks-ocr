@@ -571,13 +571,13 @@ in [`retrieval-queries.md`](retrieval-queries.md) name a specific story, and
 those stories are the run. Picking titles first and hoping the queries reached
 them would have been the wrong order.
 
-| title | vol | pages | queries | DB cast |
-|---|---|---:|---:|---|
-| **Sheriff of Bullet Valley** | 6 | 144-175 (32) | ~23 | none |
-| **Billions to Sneeze At** | 10 | 044-053 (10) | ~14 | none |
-| **Plenty of Pets** | 7 | 199-208 (10) | ~13 | none |
-| **Roscoe the Robot** | 20 | 175-178 (4) | ~13 | none |
-| **The Big Bin on Killmotor Hill** | 11 | 10 | ~19 | **The Beagle Boys** |
+| title | vol | pages | queries | DB cast | run |
+|---|---|---:|---:|---|---|
+| **Sheriff of Bullet Valley** | 6 | 144-175 (32) | 27 | none | **trial 3** |
+| **Billions to Sneeze At** | 10 | 044-053 (10) | ~14 | none | **trial 2** |
+| **Plenty of Pets** | 7 | 199-208 (10) | ~13 | none | — |
+| **Roscoe the Robot** | 20 | 175-178 (4) | ~13 | none | **trial 1** |
+| **The Big Bin on Killmotor Hill** | 11 | 10 | ~19 | **The Beagle Boys** | — |
 
 **~66 pages.** 4 to 32 is a wider length spread than the original plan had, and
 Roscoe is a deliberate density stress test: 13 queries against 4 pages, roughly
@@ -961,6 +961,347 @@ That is **~9 min/page against Roscoe's ~11**, on 2.5× the pages — so the fixe
 cost is visibly amortising, but not fast. The 32-page *Sheriff of Bullet Valley*
 is still the unit that answers measurement 5.
 
+## Trial results 3 — Sheriff of Bullet Valley, vol 6 pages 144-175
+
+Run 2026-08-02. 32 pages, 254 panels, 407 groups. Third unit of the five-title
+trial, and 3.2× the size of the second. **This is the measurement-5 title.**
+
+| | |
+|---|---|
+| `vision_text_ok: false` | **0** (against Roscoe's 2.3%, Billions' 0, the pilot's 1.5%) |
+| emphasis runs | 154 across 126 of 407 groups (**31%** of groups) |
+| confidence | high 393 / medium 12 / **low 2** |
+| `cap_colour` non-null | 37 (blue 19, green 9, red 9) |
+| `visible_text` strings | 62 |
+
+### Cost — measurement 5, which is what this title was for
+
+**One session, 52 minutes wall-clock** (16:07 to 16:59), 297 images read: 32 page
+overviews, all 254 panel crops, and 11 enlargements. No design-doc reading beyond
+this document and `retrieval-queries.md`.
+
+That is **~1.6 min/page against Billions' ~9 and Roscoe's ~11**, on 3.2× and 8×
+the pages. The fixed cost has not merely amortised, it has stopped mattering.
+
+**Do not read that as the pass getting cleverer.** The whole difference is
+batching: a page is one message containing `groups.json` and ten `Read` calls
+issued together, and the per-page cost is then dominated by one model turn rather
+than by ten round trips. Roscoe's 4 pages and Billions' 10 could not amortise a
+fixed cost they were too small to hide; 32 pages can. The honest projection is
+that **the remaining ~5,500 pages are on the order of 150 hours of session time at
+this rate**, and that this is now a token-cost question rather than a wall-clock
+one — which is a different decision from the one measurement 5 was set up to
+answer, and a much easier one.
+
+The 11 enlargements are the real per-page variable, and they were spent almost
+entirely on cap colours (below) rather than on lettering.
+
+### Correction rate: zero again, and the rule earned its keep
+
+407 groups and nothing to correct. Two titles running, on a sample four times the
+size. Read with Roscoe's 2.3% and the pilot's 1.5%, measurement 1 says the pass
+is reading rather than inventing, and that is all it says.
+
+Holding to Billions' **word-level-misreadings-only** rule mattered more here than
+on either previous title, because a 32-page story surfaces far more near-misses.
+None of the following was counted, and all are recorded in `vision_note`:
+
+- **Film titles in single quotes** where the stored text has double — 145 g6 and
+  g8, 146 g2, 149 g5, 154 g6. Punctuation normalisation, `string_replacer`'s job.
+  Not uniform in the art either: 169 g9, 172 g0 and 175 g14 *are* double-quoted
+  and match.
+- **`MCQUIRT` vs `McQUIRT`.** The art letters the villain's name with a small c
+  throughout; the OCR stored it capitalised on 149, 150 and 169 and preserved the
+  small c on 170. One name, two transcriptions, inside one story — a case
+  difference, so the same rule that spared Billions' mixed-case office motto
+  spares it.
+- **An em-dash stored where the art letters a hyphen** (156 g4) — the mirror of
+  Billions' 052 g4.
+- **Drawn brand devices.** The Diamond Ranch gate sign is stored three different
+  ways: bare `RANCH` on 146, `◇ RANCH` (U+25C7) on 150 and 154, `◊ RANCH`
+  (U+25CA) on 157. Each matches its own art; the inconsistency is corpus-wide, not
+  a misreading.
+- **Music notes** drawn inside balloons on 171 g1 and 172 g7, not transcribed.
+  Correctly — they are a device, not lettering.
+
+**One thing that is a genuine defect but not a text correction**: `172 panel 5`
+letters `FZZT!` along the grenade's flight path and **has no OCR group at all**.
+The pass caught it in `visible_text`. That is a missing group rather than a wrong
+one, so it does not touch the correction rate — but it is the clearest single
+demonstration in three titles that `visible_text` is doing work the OCR layer
+missed.
+
+### Measurement 3: 2 low-confidence calls in 407 — and the reason is the fix
+
+`--queue-speakers` wrote **2 entries**, both on 168: `g10` and `g11`, two adult
+figures in a night panel drawn in flat black silhouette with no hat, no
+neckerchief and no star to tell a posseman from Old Jim. They are genuinely
+unreadable, which is why they are `low`.
+
+**Two entries is not a population you can compute an error rate from**, and I am
+not going to dress it up as one. Measurement 3 has now gone three titles without
+a real answer, and this title had the full cast, 32 pages and readable caps.
+
+But it did not fail for Roscoe's reason (one lead, no caps) or Billions' reason
+(nephews drawn capless throughout). It failed for a **structural** reason that is
+worth more than the number would have been:
+
+> The collective rule is what destroys the low-confidence population. Every time
+> the art would not say which nephew was speaking, the honest answer was
+> `nephews` at **high** confidence — not an individual at `low`. The pilot's 18
+> low-confidence entries existed precisely *because* the pass was naming
+> individuals it could not see.
+
+So the right reading is that **the rule added after the pilot works, and its
+success is measured by the queue being empty rather than by the queue being
+accurate.** A trial designed to measure the error rate of a bad behaviour cannot
+measure it once the behaviour is fixed.
+
+#### The `low,medium` run: 14 entries, and 9 of them are adults
+
+```bash
+barks-ocr-vision-apply --out-dir ~/barks-vision/sheriff-of-bullet-valley \
+    --queue-speakers ~/barks-vision/sheriff-speakers-low-medium.txt \
+    --speaker-confidences low,medium
+```
+
+14 entries — the 2 lows plus all 12 mediums. The original low-only queue is kept
+separately so the population that *was* low before review survives, as the editor
+section requires. The 14 split three ways:
+
+| | | |
+|---|---:|---|
+| **adult identity, two candidates and no colour to separate them** | **8** | 151 g9, 164 g4, 164 g9, 168 g2, g3, g5, g10, g11 |
+| nephew identity, marginal hue or imprecise tail | 5 | 144 g12, 159 g5, 161 g9, 161 g10, 162 g13 |
+| speaker placed by what the line says, not by the art | 1 | 165 g0 |
+
+**This is the finding the low-only queue was too small to show.** The pilot's
+entire low-confidence population was nephews; Sheriff's is **9 of 14 adults**
+(counting 165 g0, which is also an adults-vs-jeep question). The cause is
+structural and new to this title: the story carries four similar dog-faced men —
+the sheriff, Old Jim Diamond, possemen and Double X riders — who are told apart
+**only by hat and shirt colour**, and Barks repeatedly removes exactly that
+evidence:
+
+- **168 alone contributes 5 of the 14.** It is the story's one night-and-indoors
+  page: the men are drawn hatless at the desk and in the rocking chair, then in
+  flat black silhouette outside. Same mechanism as the pilot's night scene on 079,
+  applied to adults instead of nephews.
+- **168 g3 is a colourist swap**, not a reading failure: the man in the green
+  rocking chair wears a blue shirt and red trousers in one panel and a red shirt
+  and blue trousers in the next. Either his colours were swapped or they are two
+  different men, and the art will not say which.
+- **164 g4 and g9** fail the same way at distance — two riders at the head of a
+  posse whose hats both print teal, and a rider in a green hat wearing the
+  sheriff's yellow shirt.
+
+**There is no adult equivalent of the two things that make nephews tractable.**
+`cap_colour` records the evidence behind a nephew call and makes it reversible;
+nothing records "identified by hat colour" for an adult. And `nephews` is an
+honest collective that loses almost nothing, where the adult fallback is
+`unknown`, which loses everything. That asymmetry — not the nephew rule — is
+where the remaining speaker risk in the corpus lives, and a story with a large
+adult supporting cast is where it will show up.
+
+Measurement 3 still has no error rate, because judging these 14 needs a human in
+the editor. But it now has a **shape**, which is what the pilot's 10-of-14 gave
+and what two titles of zeroes could not: the residual uncertainty is
+adult-identity-by-costume-colour, concentrated on night and indoor pages.
+
+### The colourist breaks the cap convention on five pages
+
+This is the finding that forced the rule above. Barks — or the colourist — gives
+**two nephews the same colour in one panel** on 159 p7, 161 p4, 162 p1, 163 p1 and
+163 p4, and twice paints a cap **orange-gold**, which is not a roster colour at
+all (161 p4, 162 p1). 168 and 175 draw the nephews **bare-headed indoors**, as
+Billions did throughout.
+
+The rule adopted and applied consistently: **if two nephews in one panel show the
+same colour, or a cap shows a non-roster colour, colour is not evidence in that
+panel** — the speaker is `nephews` even when the balloon tail lands unambiguously
+on one of them. Where all three are separable (158, 160 p6, 161 p8, 162 p7, 163
+p2, 167) the individual name is recorded with its `cap_colour`.
+
+That yielded 37 non-null cap colours — **the first title in the trial to produce
+any at all**, Roscoe and Billions having produced zero each — and a 19/9/9
+blue/green/red split that is itself worth noting: blue is twice as often readable
+as either other colour.
+
+### Retrieval: 26 of 30, and every miss is a *retrieval* miss
+
+`barks-ocr-retrieval-score --validate` was run **first** and reproduced Roscoe at
+15 / 1 / #93, so these numbers are comparable by construction. It still validates
+after the Sheriff query set was added.
+
+27 of the queries in `retrieval-queries.md` name this title (#22, #29, #31 and the
+whole run #59-#82); three more (#30, #43, #83) are cross-title.
+
+| | |
+|---|---:|
+| hit | **26** |
+| miss | **4** (#29, #70, #76, #79) |
+| capture-only hits | 9 |
+| also answerable from speech | 17 |
+| false positives | 0 |
+
+**Only 9 of the 26 hits are the vision pass's to claim.** That is a far worse
+ratio than Roscoe's 11-of-15 or Billions' 9-of-12, and the reason is structural:
+this story *talks about* its own props constantly — the brands, the guns, the
+steers, the ranch, the jeep are all named in dialogue — so the speech layer
+reaches them without capture's help. A western is the worst case for
+demonstrating that page capture earns its place.
+
+The queries that capture genuinely won are the visual ones: #30 splash, #31 the
+nephews driving, #43 silhouettes, #62 river/creek, #66 cutting the wire fence,
+#71 rifle, #73 sleeping, #80 empty handgun, #82 smoking a pipe.
+
+#### Four misses, and **not one of them is "not recorded"**
+
+This is the sharpest result in the trial so far. Every expected page for every
+missed query has the thing written down.
+
+- **#29 *a chase or pursuit across several panels* — a new failure mode.** 164
+  ("Blacksnake gives chase") and 174 ("Donald chases Blacksnake") both score the
+  **maximum** and are still not returned: **nine pages tie at the top score, and
+  `TOP_BAND = 3` truncates the tie alphabetically** to 144, 155, 157. Nothing is
+  wrong with the record, the schema or even the matcher. This miss is caused by
+  the **length of the title** — 32 pages generate ties that 4 and 10 pages could
+  not — and it will get worse, not better, at corpus scale.
+- **#70 *a character hiding* — the sneezing bug again, verbatim.** 159 records
+  "hide to listen" and "hidden under one haystack". `hide` is not a prefix of
+  `hiding` (the silent *e* is dropped) and `hidden` is two edits away, so neither
+  matches. This is exactly Billions' `sneeze` vs `sneezing`, in a story where
+  hiding is a plot point on three pages. Worse, 165 *did* score — by
+  `_within_one_edit` matching **`hiding` to `riding`**, which in a western is on
+  nearly every page. The fuzzy matcher bought a false positive and still missed.
+- **#76 *a character feeling pain* — recorded as depiction, never as concept.**
+  Zero of the five expected pages match. The records say `YEOWCH!`, `YEEK!`,
+  `EE-YOW!`, "seeing stars", and "a small blue star drawn at his backside where a
+  bullet stung him". All faithful; none says *pain* or *hurt*. This is the third
+  instance of Billions' finding (sick → "does not feel well", sad → "in tears")
+  and it is now the trial's most repeated result: **the record uses the word Barks
+  draws and the query uses the word a reader thinks in.**
+- **#79 *a character's pants falling down* — capture drifted away from the
+  comic's own vocabulary.** 173 and 174 record "his blue trousers drop round his
+  ankles" and the object `blue trousers round the ankles`. The query says *pants*
+  — **and so does the comic**, in 173 g7: "HE FILLED MY **PANTS** SO FULL OF LEAD
+  MY BELT BUCKLE BROKE!" The speech layer would have answered this query and
+  capture did not, because the pass wrote British *trousers* over the source's
+  *pants*. Roscoe found free text drifting **within** a title; this is free text
+  drifting **away from the source text**, which is a new and more avoidable class.
+  The lesson is concrete: **prefer the comic's own word for a thing it names.**
+
+So the split that "makes the trial answer anything" comes out **4 not-retrieved,
+0 not-recorded**. Roscoe was 1 and 1, Billions was 4 and 2. Three titles in, the
+schema has stopped generating misses.
+
+### `visible_text`: 7 net new in 62, the best yield of the three titles
+
+62 strings captured, **7 of which exist nowhere in the OCR groups**:
+
+| page | string | what it is |
+|---|---|---|
+| 144 | `313` | the licence plate on the car, unread on this page |
+| 145 | `REWARD` | a small mugshot poster on the sheriff's office wall |
+| 146 | `REWARD` | the same poster in a different panel |
+| 146 | `LAST CHANCE` | a saloon sign at the edge of frame |
+| 148 | `XX` | the Double X brand on the horse and the saddle |
+| 160 | `XX` | the Double X brands on the driven herd |
+| 172 | `FZZT!` | the hand grenade's fuse — a whole sound effect with no group |
+
+Against Roscoe's **0 of 13** and Billions' **2 of 18**, this is 11% and the field's
+best showing yet. The shape is consistent with Billions' finding — small lettering
+on a prop (`1¢`, `M.D.`, and now a licence plate and two cattle brands) — with one
+new category: **a sound effect the OCR pass missed entirely**. Four titles in
+(counting the pilot's invisible-seeds poster), `visible_text` yields little but
+reliably not nothing, and the yield is rising with page count rather than being
+uniform per page.
+
+### Off-vocabulary rate
+
+`characters`: **13 distinct values, 5 of them on the roster** (Donald, `nephews`,
+Huey, Dewey, Louie), covering 63 of 126 page-appearances — an even 50/50 split
+with the eight `other:` names, and the best roster coverage of the three titles.
+The eight are `Blacksnake McQuirt`, `Old Jim Diamond`, `the sheriff`,
+`Double X rider`, `posseman`, `townsman`, `cowboy` and `Donald's horse`.
+
+**The database tags this story with no cast at all**, yet it has two substantial
+named characters who carry the whole plot. Three titles in, `story_cast` has been
+empty every time, and the closed-set machinery it was built for is still
+completely untested — Big Bin remains the only unit that will exercise it.
+
+`setting`: **0 of 32 pages used a closed-vocabulary value.** Every one is
+`other:`, across six distinct places (`badlands` 17, `the Diamond Ranch` 7,
+`a western town street` 3, `the sheriff's office` 2, `the canyon` 2,
+`the Double X camp` 1). Roscoe was 0 of 4 and Billions 2 of 10. The closed
+vocabulary is now 0-for-3 on being worth reaching for.
+
+`barks-ocr-speaker-census --volume 6` reports **no variant spellings and nothing
+off-roster** — the naming discipline held across 32 pages. It names four
+promotion candidates over the threshold of 10: `Blacksnake McQuirt` (54),
+`Old Jim Diamond` (36), `the sheriff` (19), `Double X rider` (12).
+
+**Three of those four should not be promoted**, for exactly the reason
+`other:crows` should not: they are single-story names, and the threshold was meant
+for names recurring *across* stories. **`other:the sheriff` is different** — it is
+a *role*, not a name, and a town sheriff recurs across the corpus. That is the
+first real promotion candidate the census has produced, and it argues the census
+should distinguish roles from names as well as weighting by title count.
+
+#### How the names were kept from splitting
+
+Blacksnake McQuirt is not named in the art until 149 and Old Jim not until 150,
+but both appear from 147. Rather than invent a provisional name and rename later
+— Roscoe's `other:the thug` / `other:the workman` failure — **the whole title's
+`groups.json` was grepped for capitalised names before page 147 was read.** It
+cost one command and removed the failure mode entirely. Worth doing by default.
+
+### `setting` is one value per page, and this title says Billions was right
+
+Billions found 4 of 10 pages cutting between two locations. Sheriff does it on
+**at least 8 of 32** — 144 (badlands then town), 145 (office then boardwalk), 146,
+154, 155, 157, 168 and 175 (sunset badlands, then the office, then the town at
+night). So it is a Barks structure, not a ten-page coincidence, and the field is
+lossy on roughly a quarter to a third of pages. As on Billions the lost value
+survives in `objects`, `beats` and `panels_of_note`, which is why #77 badlands and
+#83 cattle ranch both still hit. Worth a second value; not worth it yet.
+
+### `type` is wrong at 1.7%, and always the same way
+
+**7 of 407 groups (1.7%) are drawn as thought clouds and typed `dialogue`** —
+149 g2, 156 g0, 169 g10, 170 g0, 171 g0, 171 g4, 171 g7. Not one group typed
+`thought` on this title is wrong, and there are no `dialogue`-drawn-as-`thought`
+errors at all. Billions was 2.9% the same way and Roscoe 27% (inflated by its
+thought-reading premise); the pilot was the only title to err in the other
+direction. **1.7% on 407 groups is the best corpus estimate available**, and the
+error is one-directional.
+
+Two other defects worth the editor's time:
+
+- **`150 g9` and `165 g4` carry the wrong `panel_num`** — both belong a panel
+  later than they are stored, and both are visible in the prep output because the
+  text box drags the crop down a row. Same class as Billions' 048 g3/g4.
+- **`164 g1` merges two physically separate balloons** — a small "WE MADE IT!"
+  and a larger "DRIVE ON HARD GROUND…", each with its own outline, possibly two
+  different nephews. Same class as Roscoe's 177 g3.
+
+### Two schema edges this title hit first
+
+- **A horse gets a balloon.** `174 g5` is "PANT! PUFF!" with its tail on the
+  horse's head, not Donald's. Recorded as `other:Donald's horse`, against the
+  convention used everywhere else here that animals are `objects` — the steers,
+  the coyote and the sidewinder all stay out of `characters`. A named-role animal
+  that acts and is given a balloon is a different thing from livestock, and the
+  `other:` prefix is exactly the escape hatch for it.
+- **Yells lettered without a balloon.** 166's `YEOWCH!` and `YEEK!` are typed
+  `sound_effect` but are uttered by riders, so the speaker is recorded rather than
+  left as `none`; 169's `SNARL!` and `HISS!` come from a coyote and a snake and
+  are left `none`. 174 g4 then letters `SNARL!` *inside a proper balloon* and is
+  correctly typed `dialogue`. The distinguishing test used throughout: **does a
+  character make the noise**, not whether it sits in a balloon.
+
+---
+
 ## Open threads
 
 - **The pilot's `result.json` no longer validates**, and correctly so: it names
@@ -987,34 +1328,92 @@ is still the unit that answers measurement 5.
   work around. Its one known divergence is recorded in the module: it credits
   Roscoe's #16 to the speech layer, where the trial-1 write-up credited capture,
   because 176's dialogue happens to call Roscoe "a strong, alert HELPER".
-- **Lexical retrieval, not the schema, is now the binding constraint.** Trial 1
-  had one recorded-but-unreachable miss (#93 *hit* vs *swats*). Trial 2 has four
-  of six, including a story named *Billions to Sneeze At* missing "a character
-  that is sneezing" over `sneeze` vs `sneezing`. A stemmer would fix that one and
-  an embedding retriever would fix all four — but changing the scorer mid-trial
-  is exactly what the bullet above exists to prevent, so the fix waits for the
-  end of the five titles and is then applied to all of them at once.
-- **The pass under-reads silent background business.** Roscoe query #85 missed a
-  full-panel electrocution gag because the panel's balloon was about something
-  else. It did **not** recur on *Billions to Sneeze At*, where the halo, the
-  full-silhouette panel and the collapsed washerwoman were all caught on the
-  first read. One instance and one non-instance, so it stays a hypothesis; watch
-  it on *Sheriff of Bullet Valley* before changing the prompt.
-- **The low-confidence speaker path is still untested after two titles.** Roscoe
-  had one lead and no caps to read; *Billions to Sneeze At* has all three nephews
-  but Barks draws them capless throughout, so every call is `nephews` at `high`.
-  Both titles wrote zero `--queue-speakers` entries. Measurement 3 now rests
-  entirely on the remaining three titles, and it is the one most likely to end
-  the trial unanswered.
-- **`setting` is one value per page and four of Billions' ten pages have two.**
-  The lost value survives in `objects` and `beats`, so retrieval still works, but
-  the field is lossy wherever a page cuts location mid-page. Whether that is a
-  Barks structure or a ten-page coincidence is a question for the 32-page
-  *Sheriff of Bullet Valley*.
+- **Lexical retrieval, not the schema, is the binding constraint — now settled.**
+  Trial 1 had one recorded-but-unreachable miss (#93 *hit* vs *swats*). Trial 2
+  had four of six, including a story named *Billions to Sneeze At* missing "a
+  character that is sneezing" over `sneeze` vs `sneezing`. **Trial 3 is four of
+  four**: not one Sheriff miss is *not recorded*. Three failure modes are now
+  documented — morphology (`hide`/`hiding`, the silent *e*, identical to
+  `sneeze`/`sneezing`), reader-vocabulary vs drawn-vocabulary (*pain* vs
+  `YEOWCH!`, the third instance after *sick* and *sad*), and tie-truncation. A
+  stemmer fixes the first, embeddings the second, a ranking change the third.
+  Changing the scorer mid-trial is exactly what the bullet above exists to
+  prevent, so all three wait for the end of the five titles and are then applied
+  to every title at once.
+- **The matcher's fuzzy rule buys false positives.** `_within_one_edit` matches
+  **`hiding` to `riding`** — which in a western is on nearly every page. It gave
+  Sheriff's #70 a spurious score on 165 and still missed the two pages that
+  actually record the hiding. Worth measuring the fuzzy rule's precision when the
+  retriever is revisited; it may cost more than it earns.
+- **Capture can drift away from the comic's own vocabulary.** Sheriff's #79 miss
+  is `trousers` in the capture against `pants` in the query *and in the dialogue
+  on the same page*. Roscoe found free text drifting **within** a title; this is
+  drifting **away from the source**, it is more avoidable, and the rule is simply
+  **prefer the comic's own word for a thing it names**. Not yet a validator, but
+  it could be one: a capture noun that has a synonym in the same page's `ai_text`
+  is a smell.
+- ~~**The pass under-reads silent background business.**~~ Roscoe query #85 missed
+  a full-panel electrocution gag because the panel's balloon was about something
+  else. It did **not** recur on *Billions to Sneeze At* and did **not** recur on
+  *Sheriff of Bullet Valley*, where the jackrabbits watching car 313 (155 p3), the
+  buzzards over the knocked-out Donald (171 p2), the bluebird on the revolver
+  (175 p3) and the brand changing on the horse between 156 p5 and 156 p8 were all
+  caught on the first read. **One instance against two non-instances**: treat
+  Roscoe's #85 as a one-off rather than a standing weakness, and do not change the
+  prompt for it.
+- **Measurement 3 is effectively answered, but not the way it was posed.** Three
+  titles have now produced 0, 0 and **2** `--queue-speakers` entries. Two is not
+  an error rate. But Sheriff explains the emptiness rather than merely repeating
+  it: the collective rule added after the pilot means an unreadable cap yields
+  `nephews` at `high`, so the low-confidence population the pilot measured cannot
+  form any more. The `low,medium` run has since been done: **14 entries, 9 of them
+  adults**, which is the reverse of the pilot's all-nephew population. Still no
+  error rate — judging them needs a human in the editor — but the shape is now
+  known.
+- **The speaker risk has moved from nephews to adults, and nothing supports
+  adults.** Sheriff's `low,medium` queue is dominated by the sheriff / Old Jim /
+  posseman / Double X rider set, who are distinguishable only by hat and shirt
+  colour, and it concentrates on the one night-and-indoors page (168 gives 5 of
+  14) where Barks draws them hatless or in silhouette. Two things make nephews
+  tractable and neither has an adult analogue: `cap_colour` records the evidence
+  and keeps a call reversible, and `nephews` is a collective that loses almost
+  nothing. The adult fallback is `unknown`, which loses everything. Worth
+  considering a general `identified_by` note or an adult-collective convention
+  before a title with a big supporting cast is run at scale.
+- ~~**`setting` is one value per page and four of Billions' ten pages have two.**~~
+  **Settled by Sheriff**: at least 8 of its 32 pages cut between two locations, so
+  it is a Barks structure rather than a ten-page coincidence. The field is lossy on
+  roughly a quarter to a third of pages corpus-wide. The lost value survives in
+  `objects`, `beats` and `panels_of_note` and retrieval still works, so this is a
+  known limitation rather than a pending change.
+- **Retrieval now fails on title *length*, which is new.** Sheriff's #29 miss is
+  not a vocabulary problem: nine pages tie at the top score and `TOP_BAND = 3`
+  truncates the tie **alphabetically**, dropping both correct pages. 4 and 10-page
+  titles could not generate ties that deep. Any fix to the retriever has to
+  address ranking-under-ties, not just matching — and like every other scorer
+  change it waits until all five titles are in.
+- **The census should distinguish roles from names.** Sheriff puts four names over
+  the promotion threshold, and three of them (`Blacksnake McQuirt`,
+  `Old Jim Diamond`, `Double X rider`) are single-story, exactly like
+  `other:crows`. The fourth, **`other:the sheriff`, is a role rather than a name**
+  and plausibly recurs across the corpus — the first genuine promotion candidate
+  the census has produced. Weighting by how many titles a name appears in would
+  separate all four correctly.
 - **`visible_text` is untyped, so category queries over it cannot be answered.**
   Query #46 *a sound effect* misses on a page holding `SMACK!`, `KA-CHOO!` and
   `AH-CHOO!`, because nothing records that those strings are sound effects. First
   query to want the field typed; not worth a schema change on one instance.
+  Sheriff does not press the case either way — it captures 23 sound-effect strings
+  but the query set does not ask #46 of it.
+- **The `type` field's corpus error rate is now estimable: ~1.7%, one-directional.**
+  Sheriff has 7 thought-clouds-typed-`dialogue` in 407 groups and no errors the
+  other way, against Billions' 2.9% on 136 and Roscoe's premise-inflated 27%. Only
+  the pilot ever erred in the other direction. The mislabels across all four runs
+  are still recorded in `vision_note` only and none has been fixed.
+- **`170 g9` shows the OCR transcribing one name two ways inside one story** —
+  `McQUIRT` there against `MCQUIRT` on 149, 150 and 169, for identical art. Not a
+  correction under the case rule, but a `string_replacer` candidate if the corpus
+  ever wants one spelling.
 - **24 pages have no prelim OCR at all** — see below. The tools no longer trip over
   them, but the OCR still needs to be run.
 - **One-pagers cannot be prepped at all.** All 155 `ONE_PAGERS` fail to resolve —
