@@ -36,6 +36,7 @@ dismissable
 divid
 divis
 dotenv
+dumbells
 entr
 ents
 etype
@@ -72,6 +73,7 @@ onchange
 opno
 outpaint
 palegreen
+parentheticals
 propn
 putalpha
 qint

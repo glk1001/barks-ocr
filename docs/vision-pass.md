@@ -26,6 +26,7 @@ barks-ocr-vision-prep  --title "The Victory Garden"    # crop, queue, roster.txt
 barks-ocr-vision-report --out-dir ~/barks-vision/the-victory-garden
 barks-ocr-vision-apply  --out-dir ~/barks-vision/the-victory-garden \
     --queue-out review.txt --queue-speakers speakers.txt
+barks-ocr-retrieval-score --title "The Victory Garden"   # measurement 2
 ```
 
 Two queues, deliberately separate: `--queue-out` holds the proposed text
@@ -643,6 +644,12 @@ Scored by keyword search over the capture records, so every hit is attributable
 to a field. 12 Roscoe-specific queries plus 4 that any title can answer (#16,
 #30, #43, #96).
 
+*Reproducible since trial 2:* `barks-ocr-retrieval-score --validate` re-runs this
+exact scoring and fails if it no longer comes out 15 / 1 / #93. It credits #16 to
+the speech layer rather than to capture, so it reports 10 capture-only where the
+count below says 11 — 176's dialogue calls Roscoe "a strong, alert HELPER", which
+a lexical matcher cannot tell from the Little Helper.
+
 | | |
 |---|---|
 | hit | 15 |
@@ -742,6 +749,209 @@ cost dominates at this size, and Roscoe was deliberately chosen as the densest
 title in the trial. The 32-page *Sheriff of Bullet Valley* is the unit that will
 actually answer measurement 5.
 
+---
+
+## Trial results 2 — Billions to Sneeze At, vol 10 pages 044-053
+
+Run 2026-08-02. 10 pages, 78 panels, 136 groups. Second unit of the five-title
+trial, and 2.5× the size of the first.
+
+| | |
+|---|---|
+| `vision_text_ok: false` | **0** (against Roscoe's 2.3% and the pilot's 1.5%) |
+| emphasized runs | 71 across 53 of 136 groups (**39%** of groups) |
+| confidence | high 136 / medium 0 / low 0 |
+| `cap_colour` non-null | 0 |
+
+### A zero correction rate is a result, not a clean bill of health
+
+136 groups and nothing to correct. Read against the pilot's 1.5% and Roscoe's
+2.3% that is reassuring about hallucination, which is what measurement 1 is for.
+It is **not** evidence the pass reads better than it did — the sample is one
+story, and vol 10 may simply be cleaner than vol 20.
+
+Two disagreements with the art were found and deliberately **not** raised as
+corrections, because counting them would have meant comparing against a
+different rule than Roscoe's:
+
+- `050 g4`, the framed office motto, is lettered in mixed case in the art
+  (*"A penny SAVED is a penny EARNED!"*) and stored in caps. Every group in the
+  corpus is stored in caps; flagging this would flag the transcription
+  convention, corpus-wide, on every page that has a mixed-case sign.
+- `052 g4` stores a plain hyphen where the art letters a dash. Punctuation
+  normalisation is `string_replacer`'s job, not the vision pass's.
+
+Roscoe's one correction was a **word** misread (`ELECTRIC RULES` → `ELECTRIC
+BULBS`). Holding the rate to word-level misreadings keeps the two numbers
+measuring the same thing. Both observations are recorded in `vision_note`.
+
+### Bold density: a third data point, and still no baseline
+
+39% of groups carry emphasis against Roscoe's 45% and the pilot's 3.7%. Roscoe
+argued that bold density is a property of the series; this widens that to
+**a property of the era**. Both 1951-52 stories letter emphasis constantly and the
+1943 *Victory Garden* almost never does. Do not treat any of the three as a
+corpus baseline.
+
+One emphasis case the schema had no kind for: `050 g8` is a single balloon
+reading "MONEY — AH-CHOO!" where the sneeze is lettered several times the size
+of the rest. That is unmistakably the emphasis, but it is *size*, not weight or
+slant. It is marked `[b]`, which is the least-wrong of the two available kinds
+and is noted in place. `053 g10` needed the opposite care — three repetitions of
+"OH, SO?" growing in weight, where a substring replace would have tagged all
+three.
+
+### Measurement 3 is untestable again, for the opposite reason
+
+Zero `low`-confidence calls, so `--queue-speakers` wrote **zero** entries — the
+same outcome as Roscoe, from a different cause. Roscoe had no nephews to confuse;
+this story has all three, but Barks draws them **capless throughout**. Every
+nephew line is `nephews` at `high`, which is the correct answer and is exactly
+what the collective rule asks for.
+
+`cap_colour` is null on all 136 groups for the same reason. **Two titles in, the
+low-confidence path has not been exercised once**, and the trial has three titles
+left to do it. That is now the measurement most at risk of going unanswered.
+
+### Retrieval: 12 of 18, and the scorer is now a tool
+
+`barks-ocr-retrieval-score` replaces trial 1's throwaway script. Its `--validate`
+mode re-scores Roscoe and **fails if the result is not 15 hits, 1 miss, #93** —
+so the two titles' numbers are comparable by construction rather than by hope.
+It is deliberately lexical: no stemmer, no embeddings.
+
+| | 14 committed queries | 4 cross-title | total |
+|---|---:|---:|---:|
+| hit | 9 | 3 | **12** |
+| miss | 5 | 1 | **6** |
+| false positives | 0 | 1 | **1** |
+
+Nine of the twelve hits are capture-only; three (#11, #36, #40) the speech layer
+answers too. `panels_of_note` carried seven hits, `objects` six, `beats` five.
+
+**Four of the five committed misses are *not retrieved*, not *not recorded*** —
+and that lopsidedness is the finding:
+
+- **#38 *a character that is sneezing*.** The word "sneeze"/"sneezes" is in the
+  records of four separate pages. The query says "sneezing". A prefix match gets
+  from `alley` to `alleyway` but not from `sneeze` to `sneezing`, so **the story
+  called *Billions to Sneeze At* misses the query "a character that is
+  sneezing".** Nothing is wrong with the schema, the capture or the reading.
+- **#33 *sick*** is recorded as "does not feel well" and "allergic to money".
+- **#34 *sad*** is recorded as "in tears", "crying", "sobbing", "cry in bed".
+- **#26** is the trial's first **false positive**: 045 is returned for "an
+  establishing shot with no characters in frame" because its `panels_of_note`
+  says "establishing shot" — and Scrooge is in the frame. A lexical retriever
+  cannot express the negation, and the query is built entirely out of one.
+
+Only two misses argue for a schema change:
+
+- **#35 *smiling* — not recorded.** Nowhere in the ten pages. Probably correct:
+  Barks characters smile on most panels, so the tag would return most pages and
+  discriminate nothing. This is the #34 objection, arriving on a different query.
+- **#46 *a sound effect* — not recorded as a category.** `visible_text` holds
+  `SMACK!`, `KA-CHOO!`, `AH-CHOO!` as strings but nothing says they *are* sound
+  effects, so the category query cannot reach them. `visible_text` is untyped by
+  design; this is the first query to want it typed. Roscoe has the same shape
+  (`BZZT`, `SPLAT`) and simply never ran the query.
+
+### Emotion: it fails on retrieval, not on discrimination
+
+The query set put emotion on trial and named #34 *sad* the deliberate test case,
+to be scored by **what fraction of the trial's pages it returns**. The answer is
+**zero of ten** — and #37 *crying* returns two of ten, the right two.
+
+So the objection the doc anticipated is not the one that bit. Emotion is not
+returning everything and discriminating nothing; it is unreachable, because the
+records use the word Barks draws (`crying`, `in tears`, `sobbing`) and the query
+uses the word a reader thinks in (`sad`). **The emotion field's fate is a
+vocabulary question, not a discrimination one**, and lexical retrieval is what
+decides it. Nothing here argues for adding an emotion field; #37 already works
+without one, because "crying" is a thing you can see.
+
+### `setting` is one value per page, and Barks pages have two
+
+Four of the ten pages cut between two locations mid-page — 050 spends five
+panels in Scrooge's office and three at the cave, 052 splits four and four. The
+schema takes one value, so on each of those pages **one real setting is not
+recorded as a setting**. It survives in `objects`, `beats` and `panels_of_note`,
+which is why #41 *a cave* still hits both 050 and 052, but the field itself is
+lossy on 40% of this title's pages. Worth watching on *Sheriff of Bullet
+Valley*, which is long enough to say whether this is a Barks structure or a
+ten-page coincidence.
+
+### Off-vocabulary rate
+
+`characters`: 7 distinct values, **3 on the roster** (Donald, Scrooge,
+`nephews`) covering 21 of 28 page-appearances. The four `other:` names are the
+story's one-offs — `other:the washerwoman`, `other:the doctor`,
+`other:Mr. O'Dope`, `other:Miss Lily de la Field` — and the database tags this
+story with no cast at all, so the closed set could not have covered them. Better
+than Roscoe's 1-of-6, and for a structural reason: this is a Donald/Scrooge story
+where the leads *are* the roster.
+
+`setting`: **2 of 10 pages** used a closed-vocabulary value (`street` twice).
+The other eight are `other:`, all naming a specific place. Same finding as
+Roscoe, on 2.5× the sample: the closed vocabulary is true but carries no
+retrievable information, so the pass reaches past it every time.
+
+`barks-ocr-speaker-census --volume 10` reports **no variant spellings and
+nothing off-roster**. No promotion candidate: the most-used free-form name is at
+5, half the threshold, and all four are single-story one-offs.
+
+### `visible_text`: 2 net new strings in 18
+
+18 strings captured, and **16 already exist as OCR groups**. The two that do not:
+
+- `049` — the `1¢` on the gumball machine
+- `050` — the `M.D.` on the doctor's bag
+
+Both are small lettering on a prop, which is the shape of what OCR misses.
+Roscoe's yield was zero of 13, the pilot's was the invisible-seeds poster. Three
+titles in, `visible_text` yields **little but not nothing**, and what it yields
+is consistently the same kind of thing. Do not declare it settled either way yet.
+
+### The pass under-reads silent background business — not seen here
+
+Roscoe's #85 raised this as a hypothesis: a full-panel electrocution gag missed
+because the balloon was about something else. **It did not recur on this title.**
+The silent business here — the halo on 051 p8 and 052 p4, the full-silhouette
+panel on 051 p7, the washerwoman face down on 047 p5 — was all caught on the
+first read, and #42 and #43 hit because of it. One recurrence, one
+non-recurrence; the hypothesis stays open rather than confirmed or dropped.
+
+### `type` is wrong the same way as Roscoe, at a fifth the rate
+
+**4 of 136 groups (2.9%) are drawn as thought clouds and typed `dialogue`** —
+`045 g1`, `047 g11`, `048 g10`, `048 g11`. Every group actually typed `thought`
+on this title is correct, which is the reverse of the pilot. Roscoe's 27% was
+inflated by its premise (a machine that reads thoughts); 2.9% is probably nearer
+the corpus rate. Recorded in `vision_note` only; nothing was changed.
+
+`046 g2` is genuinely ambiguous — a small scalloped cloud with drool drips and no
+bubble trail, beside Scrooge sniffing coins — and is left as typed.
+
+**A panel-number defect, which is new:** `048 g3` and `g4` are stored as
+`panel_num 1` but belong to panel 3, the coin-kissing close-up. Panel 3 has no
+groups at all. It is visible in the prep output as well as the art — their text
+boxes get unioned into panel 1's crop, which is why that crop reaches down two
+rows. The vision result schema has no `panel_num` field, so it is recorded in
+`vision_note`; the kivy editor is where it gets fixed.
+
+`053 g9` and `g15` each cover a whole scatter of separate `BILL` sheets under one
+group. Unlike Roscoe's `177 g3` this is defensible — they are one drift of paper,
+not two letters at opposite corners of a panel.
+
+### Cost
+
+**One session, ~90 minutes wall-clock**, 98 images read (10 page overviews, 88
+panel crops, no enlargements needed). No design-doc reading beyond this document
+and `retrieval-queries.md`.
+
+That is **~9 min/page against Roscoe's ~11**, on 2.5× the pages — so the fixed
+cost is visibly amortising, but not fast. The 32-page *Sheriff of Bullet Valley*
+is still the unit that answers measurement 5.
+
 ## Open threads
 
 - **The pilot's `result.json` no longer validates**, and correctly so: it names
@@ -760,16 +970,42 @@ actually answer measurement 5.
 - **The pilot's `type: thought` mislabels are unfixed** — 079 g16, 080 g6, 080 g7
   are recorded in `vision_note` only. Roscoe adds 12 more in the other direction,
   plus `177 g3`, which is two separate letters in one group.
-- **No retrieval engine exists.** The Roscoe queries were scored with a keyword
-  search over the capture JSON, written for that run and not kept. Miss #93 is
-  recorded-but-unreachable by keyword and would fall to an embedding search, so
-  the scoring tool is now itself a variable in the measurement: **the next title
-  must be scored the same way as this one, or the two numbers cannot be
-  compared.**
+- **No retrieval engine exists** — but the *scorer* is no longer a variable.
+  `barks-ocr-retrieval-score` was written for trial 2 and calibrated until it
+  reproduced trial 1 exactly; `--validate` re-runs Roscoe and exits non-zero if
+  the result is not 15 / 1 / #93. Score every future title with it, and treat a
+  validate failure as "these numbers are not comparable" rather than as a bug to
+  work around. Its one known divergence is recorded in the module: it credits
+  Roscoe's #16 to the speech layer, where the trial-1 write-up credited capture,
+  because 176's dialogue happens to call Roscoe "a strong, alert HELPER".
+- **Lexical retrieval, not the schema, is now the binding constraint.** Trial 1
+  had one recorded-but-unreachable miss (#93 *hit* vs *swats*). Trial 2 has four
+  of six, including a story named *Billions to Sneeze At* missing "a character
+  that is sneezing" over `sneeze` vs `sneezing`. A stemmer would fix that one and
+  an embedding retriever would fix all four — but changing the scorer mid-trial
+  is exactly what the bullet above exists to prevent, so the fix waits for the
+  end of the five titles and is then applied to all of them at once.
 - **The pass under-reads silent background business.** Roscoe query #85 missed a
   full-panel electrocution gag because the panel's balloon was about something
-  else. One instance, so it is a hypothesis rather than a finding — watch for it
-  on the next title before changing the prompt.
+  else. It did **not** recur on *Billions to Sneeze At*, where the halo, the
+  full-silhouette panel and the collapsed washerwoman were all caught on the
+  first read. One instance and one non-instance, so it stays a hypothesis; watch
+  it on *Sheriff of Bullet Valley* before changing the prompt.
+- **The low-confidence speaker path is still untested after two titles.** Roscoe
+  had one lead and no caps to read; *Billions to Sneeze At* has all three nephews
+  but Barks draws them capless throughout, so every call is `nephews` at `high`.
+  Both titles wrote zero `--queue-speakers` entries. Measurement 3 now rests
+  entirely on the remaining three titles, and it is the one most likely to end
+  the trial unanswered.
+- **`setting` is one value per page and four of Billions' ten pages have two.**
+  The lost value survives in `objects` and `beats`, so retrieval still works, but
+  the field is lossy wherever a page cuts location mid-page. Whether that is a
+  Barks structure or a ten-page coincidence is a question for the 32-page
+  *Sheriff of Bullet Valley*.
+- **`visible_text` is untyped, so category queries over it cannot be answered.**
+  Query #46 *a sound effect* misses on a page holding `SMACK!`, `KA-CHOO!` and
+  `AH-CHOO!`, because nothing records that those strings are sound effects. First
+  query to want the field typed; not worth a schema change on one instance.
 - **24 pages have no prelim OCR at all** — see below. The tools no longer trip over
   them, but the OCR still needs to be run.
 - **One-pagers cannot be prepped at all.** All 155 `ONE_PAGERS` fail to resolve —

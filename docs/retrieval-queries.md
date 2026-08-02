@@ -192,6 +192,22 @@ These three are not part of the 116. They should pass before and after, unchange
 
 ## Scoring
 
+**Use `barks-ocr-retrieval-score`**, and nothing else. The queries below are only
+an acceptance test if every title is scored the same way, and trial 1 was scored
+with a throwaway script that then had to be recorded as a variable in its own
+measurement. The tool carries the query sets and the per-title expected pages,
+and its `--validate` mode re-scores *Roscoe the Robot* and **exits non-zero
+unless the result is still 15 hits, 1 miss, #93**:
+
+```bash
+barks-ocr-retrieval-score --validate                        # is the calibration intact?
+barks-ocr-retrieval-score --title "Billions to Sneeze At"
+```
+
+Matching is deliberately lexical — no stemmer, no embeddings — because that is
+what trial 1 was scored with. Improving it is a change to the measurement, so it
+waits until all five titles are in and is then applied to all of them at once.
+
 Run each query against the capture data and record:
 
 - **hit** — the right page is in the top few results
