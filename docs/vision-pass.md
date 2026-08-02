@@ -315,8 +315,13 @@ as it stands today. Output is `VERBATIM` and stamped local-only in both formats.
 
 Design decisions worth not re-litigating:
 
-- **`ai_text` is never modified.** Corrections go to a kivy-editor queue for review.
-  Saves use `save_json(backup_file=...)`, unlike `ocr_check`'s bare `save_json()`.
+- **The vision pass never changes the words of `ai_text`.** It adds emphasis
+  markup, and the run is refused unless that strips back to the stored text.
+  Corrections go to a kivy-editor queue for review. Saves use
+  `save_json(backup_file=...)`, unlike `ocr_check`'s bare `save_json()`.
+  **The text queue converges**: a group whose stored `ai_text` already matches its
+  `vision_corrected_text` is not re-queued, both sides compared stripped, so a
+  human who applied a correction while keeping the emphasis still counts as done.
 - **Publication class lives in the data**, not in this document. See above.
 - **`setting` and `time_of_day` are separate fields.** Folded together, every
   place would need a value per lighting condition. And the pilot showed time of
@@ -739,14 +744,12 @@ actually answer measurement 5.
 
 ## Open threads
 
-- **1 queued Roscoe correction is unapplied.** `~/barks-vision/roscoe-review.txt`.
-  `175 g12` (`ELECTRIC RULES` → `ELECTRIC BULBS`) is solid; it needs a pass
-  through the kivy editor like any other queued correction.
-- **2 queued corrections are unapplied.** `~/barks-vision/vol01-vision-review.txt`.
-  `077 g1` (`YOU — YOU` → `YOU-YOU`) is solid — and is visible in context in the
-  speech script. `085 g7` (`INVISIBLE SEEDS,` → `INVISIBLE, SEEDS,`) is explicitly
-  low-confidence: the stored reading is the more sensible phrase and the mark is
-  small, so it needs an eyeball.
+- **The pilot's `result.json` no longer validates**, and correctly so: it names
+  individual nephews at `low` confidence on four groups, which is exactly the
+  pattern the collective rule was added to refuse. Re-applying that directory
+  therefore aborts. Leave it — rewriting those calls would erase the evidence the
+  rule was derived from. It does mean the pilot can no longer be re-applied
+  without a re-read.
 - **4 of the pilot's 18 speaker calls are still unjudged** — 077 g11/g12 and 085
   g10/g12, all genuinely unreadable. They keep `low` and no `speaker_reviewed`
   flag, which is the correct state for them, not a gap to close.

@@ -347,9 +347,42 @@ def _normalize_capture(capture: dict) -> int:
     return changed
 
 
-def _queue_lines_for_page(
+def _correction_applied(entry: dict, group: dict) -> bool:
+    """Whether the group's stored text already matches the correction proposed for it.
+
+    What stops the text-correction queue from re-offering work that is done.
+    ``text_ok`` records what the pass found when it read the crops and never
+    changes afterwards, so queueing on it alone hands back every correction ever
+    proposed, on every run, forever.  The speaker queue avoids this with
+    ``speaker_reviewed``; the text side needs no such flag, because the group
+    already carries the answer -- if ``ai_text`` says what ``vision_corrected_text``
+    says, somebody has applied it.
+
+    Both sides are stripped.  A human applying a correction in the editor keeps
+    the emphasis, so the stored text can carry tags that the proposed correction
+    -- written before the markup existed -- never had.  The pilot's ``077 g1`` is
+    exactly that: the stored text carries a bold on SABOTEURS that the proposed
+    correction, written before the markup existed, does not -- the same words
+    either way.
+
+    Args:
+        entry: The group's entry in ``result.json``.
+        group: The stored prelim OCR group.
+
+    Returns:
+        True when the correction has already landed, so nothing is to be queued.
+
+    """
+    corrected = entry.get("corrected_text")
+    if not corrected:
+        return False
+    return strip_markup(group.get("ai_text") or "") == strip_markup(corrected)
+
+
+def _queue_lines_for_page(  # noqa: PLR0913
     page: str,
     result: dict,
+    json_groups: dict,
     volume: int,
     engine: OcrTypes,
     speaker_confidences: frozenset[str],
@@ -359,7 +392,7 @@ def _queue_lines_for_page(
     speaker_lines: list[str] = []
     for gid, entry in result["groups"].items():
         prefix = f"{volume} {int(page)} {engine.value} {int(gid)}"
-        if not entry.get("text_ok"):
+        if not entry.get("text_ok") and not _correction_applied(entry, json_groups.get(gid, {})):
             text_lines.append(f"{prefix} {VISION_TEXT_ISSUE}")
         if entry.get("speaker_confidence") in speaker_confidences:
             speaker_lines.append(f"{prefix} {VISION_SPEAKER_ISSUE}")
@@ -546,7 +579,12 @@ def main(
     for page, result in results:
         total += _apply_page(page_groups[page], result, dry_run=dry_run)
         page_text, page_speaker = _queue_lines_for_page(
-            page, result, volume, engine, wanted_confidences
+            page,
+            result,
+            page_groups[page].speech_page_json.get("groups", {}),
+            volume,
+            engine,
+            wanted_confidences,
         )
         text_lines += page_text
         speaker_lines += page_speaker
