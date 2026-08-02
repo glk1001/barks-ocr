@@ -7,8 +7,11 @@ afterwards would unconsciously describe what the schema already happens to recor
 Same discipline `docs/ocr-check-calibration.md` applies to the fit constants: pick the target
 first, then tune against it.
 
-**This is a draft for GLK to cut and replace.** Queries invented by the assistant test the
-assistant's idea of what matters. Delete freely, and add the ones you actually want answered.
+Queries invented by the assistant test the assistant's idea of what matters, so the set was drafted
+to be cut and replaced. GLK has since added 16 — mostly **actions and objects** (driving, swimming,
+sneezing, a campfire, a cave, silhouettes), a category the draft missed almost entirely by
+weighting itself toward iconic named moments. Keep cutting; a query that would not occur to you
+will pass or fail and tell you nothing you wanted to know.
 
 ---
 
@@ -61,39 +64,55 @@ Confidence varies. Where a query names a story, the assistant is reasonably conf
 contains that element but **has not verified the page** — treat the Expected column as a starting
 hypothesis, not ground truth.
 
-| # | Query | Layer | Expected | Why it's in the set |
-|---|---|---|---|---|
+| #  | Query                          | Layer | Expected               | Why it's in the set                                                                                               |
+|----|--------------------------------|---|------------------------|-------------------------------------------------------------------------------------------------------------------|
 | 11 | Scrooge diving into his money bin | `capture` | recurs across many titles | The single most iconic Barks image, and pure art — dialogue rarely narrates it. If capture misses this, it fails. |
-| 12 | the square eggs | `both` | Lost in the Andes | Named in dialogue *and* visible; tests that the two layers agree |
-| 13 | cubical chickens | `capture` | Lost in the Andes | The same story's visual gag that dialogue may never name |
-| 14 | ping-pong balls raising a sunken ship | `capture` | The Sunken Yacht | A purely visual solution to the plot |
-| 15 | Bombie the Zombie | `capture` (`characters`) | Voodoo Hoodoo | A DB-tagged one-off — tests Decision 3's closed set end to end |
-| 16 | Gyro's Little Helper | `capture` (`characters`) | Gyro Gearloose stories | A DB-tagged recurring secondary character |
-| 17 | the Beagle Boys in their masks | `capture` (`characters`) | many titles | Tests a *group* character across stories |
-| 18 | Bolivar the dog | `capture` (`characters`) | several titles | DB-tagged, easy to confuse with any dog in frame |
-| 19 | Grandma Duck's farm | `capture` (`setting`) | several titles | A recurring named setting — the promotion candidate case |
-| 20 | the Junior Woodchucks in uniform | `capture` | many titles | Uniform as a visual identifier, like the caps |
-| 21 | a newspaper headline | `visible_text` | many titles | The commonest non-speech lettering; a yield check for the new field |
-| 22 | a wanted poster or reward notice | `visible_text` | ? | Plot-bearing lettering |
-| 23 | a shop window or storefront sign | `visible_text` | many titles | The category the pilot's find belongs to |
-| 24 | lettering on Scrooge's office door | `visible_text` | Uncle Scrooge titles | Small, specific, easy to miss |
-| 25 | a character silhouetted against the moon or sky | `capture` | ? | Pure composition — no dialogue, no props, no named character |
-| 26 | an establishing shot with no characters in frame | `capture` | ? | The hardest negative case, and invisible to every other layer |
-| 27 | Donald in a rage | `capture` (`beats`) | many titles | A recurring *emotional* beat; tests whether `beats` carries anything retrievable |
-| 28 | Donald and Gladstone in the same panel | `capture` (`characters`) | several titles | Co-occurrence, not presence — a different query shape |
-| 29 | a chase or pursuit across several panels | `capture` (`beats`) | ? | Spans panels, so page-level capture should beat panel-level here |
-| 30 | the story's splash page | `capture` (`panels_of_note`) | every title | Should be trivially answerable; if `panels_of_note` cannot find a splash, it is not earning its place |
+| 12 | the square eggs                | `both` | Lost in the Andes      | Named in dialogue *and* visible; tests that the two layers agree                                                  |
+| 13 | cubical chickens               | `capture` | Lost in the Andes      | The same story's visual gag that dialogue may never name                                                          |
+| 14 | ping-pong balls raising a sunken ship | `capture` | The Sunken Yacht       | A purely visual solution to the plot                                                                              |
+| 15 | Bombie the Zombie              | `capture` (`characters`) | Voodoo Hoodoo          | A DB-tagged one-off — tests Decision 3's closed set end to end                                                    |
+| 16 | Gyro's Little Helper           | `capture` (`characters`) | Gyro Gearloose stories | A DB-tagged recurring secondary character                                                                         |
+| 17 | the Beagle Boys in their masks | `capture` (`characters`) | many titles            | Tests a *group* character across stories                                                                          |
+| 18 | Bolivar the dog                | `capture` (`characters`) | several titles         | DB-tagged, easy to confuse with any dog in frame                                                                  |
+| 19 | Grandma Duck's farm            | `capture` (`setting`) | several titles         | A recurring named setting — the promotion candidate case                                                          |
+| 20 | the Junior Woodchucks in uniform | `capture` | many titles            | Uniform as a visual identifier, like the caps                                                                     |
+| 21 | a newspaper headline           | `visible_text` | many titles            | The commonest non-speech lettering; a yield check for the new field                                               |
+| 22 | a wanted poster or reward notice | `visible_text` | ?                      | Plot-bearing lettering                                                                                            |
+| 23 | a shop window or storefront sign | `visible_text` | many titles            | The category the pilot's find belongs to                                                                          |
+| 24 | lettering on Scrooge's office door | `visible_text` | Uncle Scrooge titles   | Small, specific, easy to miss                                                                                     |
+| 25 | a character silhouetted against the moon or sky | `capture` | ?                      | Pure composition — no dialogue, no props, no named character                                                      |
+| 26 | an establishing shot with no characters in frame | `capture` | ?                      | The hardest negative case, and invisible to every other layer                                                     |
+| 27 | Donald in a rage               | `capture` (`beats`) | many titles            | A recurring *emotional* beat; tests whether `beats` carries anything retrievable                                  |
+| 28 | Donald and Gladstone in the same panel | `capture` (`characters`) | several titles         | Co-occurrence, not presence — a different query shape                                                             |
+| 29 | a chase or pursuit across several panels | `capture` (`beats`) | ?                      | Spans panels, so page-level capture should beat panel-level here                                                  |
+| 30 | the story's splash page        | `capture` (`panels_of_note`) | every title            | Should be trivially answerable; if `panels_of_note` cannot find a splash, it is not earning its place             |
+| 31 | the nephews driving a car      | `capture`  | ?                      | Should pick characters and car                                                                                    |
+| 32 | a character swimming           | `capture`  | ?                      | Tests character actions                                                                                           |
+| 33 | a character that is sick       | `capture`  | Billions to Sneeze At  | Tests character health                                                                                            |
+| 34 | a character that is sad        | `capture`  | Billions to Sneeze At  | Tests character emotions                                                                                          |
+| 35 | a character that is smiling    | `capture`  | Billions to Sneeze At  | Tests character emotions                                                                                          |
+| 36 | a character that is using a machine | `capture`  | Billions to Sneeze At  | Tests character action                                                                                            |
+| 37 | a character that is crying     | `capture`  | Billions to Sneeze At  | Tests character emotions                                                                                          |
+| 38 | a character that is sneezing   | `capture`  | Billions to Sneeze At  | Tests character action                                                                                            |
+| 39 | a character kissing            | `capture`  | Billions to Sneeze At  | Tests character action                                                                                            |
+| 40 | identify a character that is a doctor | `capture`  | Billions to Sneeze At  | Tests character recognition                                                                                       |
+| 41 | identify a cave                | `capture`  | Billions to Sneeze At  | Tests object recognition                                                                                          |
+| 42 | a character that has a halo    | `capture`  | Billions to Sneeze At  | Tests object recognition                                                                                          |
+| 43 | a panel containing silhouettes | `capture`(`panels_of_note`) | Billions to Sneeze At  | Tests silhouette recognition                                                                                      |
+| 44 | a panel containing a campfire  | `capture`(`panels_of_note`) | Billions to Sneeze At  | Tests object recognition                                                                                          |
+| 45 | a character pointing           | `capture`  | Billions to Sneeze At  | Tests character action                                                                                            |
+| 46 | a sound effect                 | `visible_text`  | Billions to Sneeze At  | Very common non-speech lettering                                                                                  |
 
 ---
 
 ## Controls — the speech layer must not regress
 
-The 30 above are deliberately capture-heavy (24 `capture`, 5 `visible_text`, 1 `both`, 0 `speech`),
-because a set weighted toward speech would prove nothing about the vision pass. But that leaves no
-check that adding capture hasn't *broken* what already works, and no calibration for what a hit
+The 46 above are deliberately capture-heavy — 39 `capture`, 6 `visible_text`, 1 `both`, 0 `speech`
+— because a set weighted toward speech would prove nothing about the vision pass. But that leaves
+no check that adding capture has not *broken* what already works, and no calibration for what a hit
 looks like on data known to support it.
 
-These three are not part of the 30. They should pass before and after, unchanged.
+These three are not part of the 46. They should pass before and after, unchanged.
 
 | # | Query | Layer | Expected | Why |
 |---|---|---|---|---|
@@ -113,6 +132,40 @@ Run each query against the capture data and record:
 Record the tally in `docs/vision-pass.md` beside the 1.5% correction-rate baseline. A `capture`
 query that only a `speech` match could have answered is **not** a hit for the vision pass — note
 which layer actually produced each result.
+
+### Split every miss two ways
+
+**This is the part that makes the trial answer anything.** Open the page's capture record and ask
+whether the thing was written down at all:
+
+| | meaning | the fix it argues for |
+|---|---|---|
+| **not recorded** | capture never mentions it — the page says nothing about a car, or about swimming | the *schema* is too thin: raise `MAX_BEATS`, or add a field |
+| **not retrieved** | capture does mention it, but the query did not surface the page | the schema is fine; *retrieval* needs work |
+
+These want opposite fixes, and a bare miss count cannot tell them apart. Scoring them separately
+costs a glance at one JSON file per miss.
+
+**Fix them in this order.** `MAX_BEATS = 3` is a policy number — chosen as a guard against capture
+drifting into a page-by-page retelling, not tuned against any evidence. Four or five sentences per
+page is still not an abridgment, so **raising the cap is the cheaper first move**, and an explicit
+`objects` or `actions` field only earns its place if that fails. Settling that order now keeps it
+from being reverse-engineered out of the results.
+
+### Emotion is on trial, not assumed
+
+Queries 33–39 include emotional and bodily states. `crying`, `smiling`, `sneezing` and `kissing`
+are visible; **`sad` (#34) is the deliberate test case.** Barks draws feeling legibly enough that
+readers agree on it instinctively, so the objection is not that a model cannot see it.
+
+The objection is **discrimination**: a tag that is readable on most pages returns most pages, and
+answers nothing. So score #34 by *what fraction of the trial's pages it returns*, not only by
+whether the right one is among them. If it hits 2 pages in 10 and they are the right two, it has
+earned its place. If it hits 6 in 10, it is dead on retrieval grounds however accurate each call
+was.
+
+Note also that emotion would be the **only capture field with no error detection** — no closed set,
+no census, no review queue, no validator. Everything else has something that catches a wrong value.
 
 **No target is set here on purpose.** The first run establishes the baseline; the number to beat
 comes after, once it is known what is achievable rather than what sounds good.
