@@ -2465,6 +2465,66 @@ same day, so its corrections carry the superseded call and its confirmations
 carry only a date — where the pilot's 71%, the 5-in-50 audit and every other rate
 here survive solely as diffs against a scratch directory.
 
+#### The result: 1 wrong in 53, and `other:` is the safe population
+
+Reviewed 2026-08-03. All 53 carry `speaker_reviewed` on disk, and the tally was
+read back from the corpus rather than from a report — the first time that has
+been possible.
+
+| | | |
+|---|---:|---|
+| queued and reviewed | 53 | of 197 `other:` calls, all 22 names |
+| **corrected** | **1 (1.9%)** | `047 g2`, Billions |
+
+Read against the only comparable measurement — the 50-call audit of unreviewed
+*high-confidence individual nephews*, which came back 5 wrong in 50 — **a free-form
+speaker is about five times safer than a named nephew.** Both audits looked at a
+population nobody had checked, rather than at a queue selected for doubt, so the
+comparison is fair. That is the reassuring answer for corpus scale, where four of
+five titles had an off-roster cast and `other:` is the dominant population.
+
+The per-kind split is a *distribution of one error*, not four rates, and should
+not be read as though it were:
+
+| kind | reviewed | wrong |
+|---|---:|---:|
+| named one-off | 18 | 0 |
+| unnamed role | 23 | 1 |
+| collective | 9 | 0 |
+| animal | 3 | 0 |
+
+**The one error is not the failure mode this audit was designed around.** The
+prediction was role-into-role drift — a posseman recorded as a townsman. Instead
+it is an off-roster name given to a line a **lead character** speaks. Billions
+`047` panel 3 carries two balloons, and the pass gave both to the washerwoman,
+saying so in as many words: *"Both balloons in this panel are hers; Donald and
+Scrooge are silent."* The plea is hers; `OH, ME! OH, MY!` is Donald's.
+
+Two things follow, and the second is the more useful.
+
+**A confident note is still not evidence.** This is the *Plenty of Pets* finding
+again — "the tail comes down squarely onto the middle nephew", recorded with
+false precision and wrong — in a population where nothing to do with caps or
+nephews is involved. The pattern is not about colour or about nephews; it is
+that the pass writes its conclusion in the same confident register whether or not
+the art supports it.
+
+**Short exclamations are where attribution is weakest.** `OH, ME! OH, MY!` is a
+stock Barks interjection with no tail worth tracing, and it went wrong here. The
+identical line appears on Big Bin `046 g20`, where it was recorded at **medium**
+confidence precisely because nobody is drawn in the panel and only register
+suggested Scrooge. The same phrase defeated attribution twice in one trial. A
+rule worth considering before the corpus run: **a balloon of two or three words
+with no tail on a figure is a low-confidence call whoever speaks it**, which is a
+cheaper and more general guard than anything cap-specific.
+
+**No evidence was backfilled.** The `identified_by` checkboxes went unused across
+all 53, so the 1000-group backfill is still entirely outstanding and this audit's
+calls remain as unreversible as they were. Recording it while reviewing was the
+cheap moment; `--missing-evidence` still returns the whole corpus.
+
+143 `other:` calls remain unreviewed.
+
 ### The cost: the five read titles can no longer be re-applied
 
 Making `identified_by` required means every `result.json` from the five-title
@@ -2803,6 +2863,10 @@ noise or a symbol.
   general finding**: every other error rate in this document comes from the ~4% of
   groups that get queued, so the same question is open for `other:` speakers and
   for the collective, neither of which has ever been audited.
+  **`other:` was audited 2026-08-03: 1 wrong in 53 (1.9%)**, against the nephew
+  high band's 5 in 50. A free-form speaker is roughly five times safer than a
+  named nephew, which is the good news for corpus scale since `other:` is the
+  larger population there. **The collective is still unaudited** — 113 calls.
 - **Blue is over-called, not most legible.** *Sheriff* concluded blue was the most
   readable cap because it was recorded most often (19 of 37). The audit says the
   opposite: blue is where the errors are. Worth a line in `roster.txt` warning
