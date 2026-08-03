@@ -102,6 +102,7 @@ ungrab
 unrotated
 unwarping
 vismir
+visstat
 vscodium
 whof
 whoi

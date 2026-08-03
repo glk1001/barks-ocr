@@ -23,6 +23,7 @@ do only deterministic I/O.
 ```
 barks-ocr-vision-prep  --title "The Victory Garden"    # crop, queue, roster.txt
    <Claude Code reads roster.txt + the crops, writes result.json per page>
+barks-ocr-vision-status                                  # what has been read, and under which rules
 barks-ocr-vision-report --out-dir ~/barks-vision/the-victory-garden
 barks-ocr-vision-apply  --out-dir ~/barks-vision/the-victory-garden \
     --queue-out review.txt --queue-speakers speakers.txt
@@ -114,7 +115,7 @@ would silently drop a new top-level section.
 | `objects` | notable things visible, at most 12. Free text: `fly swatter`, `goldfish bowl` |
 | `beats` | 1–3 plain sentences saying what happens. Only what is shown |
 | `panels_of_note` | `[[panel_num, phrase], …]` for panels worth addressing alone |
-| `capture_model`, `capture_prompt_version`, `captured` | provenance |
+| `capture_model`, `capture_prompt_version`, `captured`, `capture_rules` | provenance — written by `vision_apply`, not by the pass. Null on everything read before 2026-08-03; see the status section |
 
 **This replaced free-prose panel descriptions, which the pilot used.** Prose is
 inconsistent across stories, hard to query, impossible to review at ~33,000
@@ -1879,6 +1880,83 @@ buckets, and the distinction is the useful part:
 
 So the mirror doubles as a reconciliation finder, pointed at exactly the groups a
 vision pass has just looked at closely.
+
+---
+
+## Tracking what has been read: a status scan, not a ledger
+
+Asked before trial 5, prompted by the sibling repo's `restore-ledger.jsonl` and
+`upscale-ledger.jsonl`. The answer is **yes to provenance and coverage, no to a
+run/page ledger**, and the reason is that the two workloads are not the same
+shape.
+
+A restore or upscale run is long, unattended, parameterised by a recipe hash, and
+can be stopped half way through — so its ledger earns its place answering *where
+did I get to* for work that cannot simply be repeated, and *which recipe produced
+this page*. A vision pass is one title in one session and is **idempotent**:
+applying a result twice changes nothing. There is no lost position to recover,
+and a second record of what is on disk could only drift away from the disk.
+
+```bash
+barks-ocr-vision-status          # volumes with vision data
+barks-ocr-vision-status --all    # every volume
+```
+
+### The provenance was designed and never written
+
+`capture_model`, `capture_prompt_version` and `captured` were declared in
+`vision_schema.py`, given publication classes, rendered into every
+`page-capture.json` stub by `vision_prep`, and documented in this file as the
+provenance row — and **never written by anything**. They were absent from
+`vision_apply`'s `CAPTURE_KEYS`, so a result that set them was *rejected*, and
+`_stamped()` did not add them. All 56 capture records written before 2026-08-03
+carry nulls.
+
+Fixed that day. Every capture record now carries:
+
+```json
+"capture_model": "claude-opus-5[1m]",
+"capture_prompt_version": 2,
+"captured": "2026-08-03T11:09:52+10:00",
+"capture_rules": ["collective-nephew", "inline-emphasis",
+                  "mirror-engines", "lone-panel-queue"]
+```
+
+The version and the rule list are filled in **by the applying code**, not
+accepted from the result file: they are properties of the tooling, not claims a
+reading session should be trusted to make about itself. `capture_model` is the
+one thing the session does know, so it comes from `--capture-model` and stays
+`null` rather than being guessed.
+
+`capture_rules` exists because a bare integer tells a future reader nothing about
+what changed. Add a rule, bump the version, in the same commit.
+
+**The five titles already read are deliberately left unstamped.** Re-applying
+them would write `v2` onto pages that were not read under v2's rules — the mirror
+and the lone-panel queue did not exist when they were read. The nulls are what
+identifies that cohort, and the status report names it rather than hiding it:
+
+```
+capture prompt version (current is v2):
+   unstamped (pre-2026-08-03)    56 page(s)  <- read before provenance was written; rules unknown
+```
+
+**Big Bin will therefore be the first title distinguishable from them**, which is
+the whole reason this went in before trial 5 rather than after.
+
+### What a scan cannot recover, and the agreed shape for it
+
+A review outcome is an *event*, not a state. Trial 4's *2 wrong in 6* and the
+*5 wrong in 50* audit were both reconstructed by diffing the `result.json` files
+in `~/barks-vision` against the corpus; delete that scratch directory and both
+measurements are gone. `speaker_reviewed` records that a human looked, never what
+they changed.
+
+Agreed shape when this is built: **store the pass's original call on the group**,
+beside the reviewer's answer — `speaker_was` and the review date — rather than
+adding a ledger. The datum belongs with the thing it describes, it survives any
+scratch directory, and it makes a per-title error rate computable from the corpus
+alone. Not built yet.
 
 ---
 

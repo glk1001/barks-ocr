@@ -184,9 +184,41 @@ MAX_OBJECTS = 12
 
 # Provenance. The capture layer is a cache -- a better model should be able to
 # rebuild it -- so every record says what built it and when.
+#
+# These three were declared here, rendered into `vision_prep`'s stub and written
+# up in the docs from the beginning, and **never actually written**: they were
+# absent from `vision_apply`'s allowed capture keys, so a result that set them
+# was rejected, and nothing else filled them in.  All 56 capture records written
+# before 2026-08-03 carry nulls.  Fixed that day, which is why the version below
+# starts at 2 -- version 1 is the unstamped cohort, identifiable only by the
+# nulls it left behind.
 CAPTURE_MODEL_KEY = "capture_model"
 CAPTURE_PROMPT_VERSION_KEY = "capture_prompt_version"
 CAPTURED_KEY = "captured"
+CAPTURE_RULES_KEY = "capture_rules"
+
+# Bumped whenever a change alters what the pass is asked to produce or what the
+# tooling will accept, so a page can be told apart from one read under older
+# rules.  `CAPTURE_RULES` spells the same thing out in names, because a bare
+# integer tells a future reader nothing about what changed.
+CAPTURE_PROMPT_VERSION = 2
+
+# The rules in force that change what the pass does, newest last.  Add an entry and bump the version
+# above in the same commit.
+CAPTURE_RULES: tuple[str, ...] = (
+    # An individual nephew may not be named at low confidence; if the cap cannot
+    # be read the answer is the collective.  Added after the pilot's 10-in-14.
+    "collective-nephew",
+    # Emphasis is inline `[b]`/`[i]` markup inside ai_text, not stored offsets.
+    "inline-emphasis",
+    # Annotations are copied onto the other engine's groups, so a pass does not
+    # widen the gap the two-engine reconciliation is closing.
+    "mirror-engines",
+    # An individual nephew named on a cap colour with no sibling nephew in the
+    # panel is queued for review whatever confidence the pass gave it.  Added
+    # after the 50-call audit found that configuration 24% wrong.
+    "lone-panel-queue",
+)
 
 
 class PublicationClass(StrEnum):
@@ -248,6 +280,7 @@ FIELD_CLASS: dict[str, PublicationClass] = {
     CAPTURE_MODEL_KEY: PublicationClass.FACT,
     CAPTURE_PROMPT_VERSION_KEY: PublicationClass.FACT,
     CAPTURED_KEY: PublicationClass.FACT,
+    CAPTURE_RULES_KEY: PublicationClass.FACT,
 }
 
 

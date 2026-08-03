@@ -42,6 +42,7 @@ it -- the pilot, for instance, predates page capture entirely.
 
 import json
 from collections.abc import Callable
+from datetime import datetime
 from pathlib import Path
 from typing import Annotated, Any
 
@@ -59,6 +60,12 @@ from barks_ocr.utils.story_cast import story_characters
 from barks_ocr.utils.vision_schema import (
     BEATS_KEY,
     CAP_COLOUR_SET,
+    CAPTURE_MODEL_KEY,
+    CAPTURE_PROMPT_VERSION,
+    CAPTURE_PROMPT_VERSION_KEY,
+    CAPTURE_RULES,
+    CAPTURE_RULES_KEY,
+    CAPTURED_KEY,
     CHARACTERS_KEY,
     CONFIDENCES,
     EMPHASIS_MARKUP_KEY,
@@ -450,7 +457,13 @@ def _unreferenced_nephews(result: dict, json_groups: dict) -> frozenset[str]:
     )
 
 
-def _apply_page(page_group: Any, result: dict, *, dry_run: bool) -> int:  # noqa: ANN401
+def _apply_page(
+    page_group: Any,  # noqa: ANN401
+    result: dict,
+    capture_model: str | None,
+    *,
+    dry_run: bool,
+) -> int:
     """Write one page's annotations. Returns the number of groups changed."""
     json_groups = page_group.speech_page_json.get("groups", {})
     page = page_group.fanta_page
@@ -489,21 +502,47 @@ def _apply_page(page_group: Any, result: dict, *, dry_run: bool) -> int:  # noqa
         # Beside the prelim JSON rather than inside it: `final_groups.py` copies
         # only the `groups` key and would silently drop a new top-level section.
         capture_file = ocr_file.parent / (page + CAPTURE_FILE_SUFFIX)
-        capture_file.write_text(json.dumps(_stamped(capture), indent=2, ensure_ascii=False) + "\n")
+        capture_file.write_text(
+            json.dumps(_stamped(capture, capture_model), indent=2, ensure_ascii=False) + "\n"
+        )
 
     return changed
 
 
-def _stamped(capture: dict) -> dict:
-    """Return the capture record with its per-field publication classes recorded.
+def _stamped(capture: dict, capture_model: str | None) -> dict:
+    """Return the capture record with its provenance and publication classes.
 
-    Written into the file rather than left to the reader.  The class is a
-    property of the data, and an exporter that has to look the answer up
-    elsewhere is one refactor away from not looking it up at all.
+    Both are written into the file rather than left to the reader.  The
+    publication class is a property of the data, and an exporter that has to look
+    the answer up elsewhere is one refactor away from not looking it up at all.
+
+    The provenance keys were declared, documented and rendered into
+    ``vision_prep``'s stub from the start and never written, because they were
+    absent from ``CAPTURE_KEYS`` and so rejected on the way in.  Every record
+    written before 2026-08-03 carries nulls, which is now what identifies that
+    cohort.  They are filled in **here** rather than accepted from the result
+    file because the version and the rule list are properties of the code doing
+    the applying, not claims the reading session should be trusted to make about
+    itself.
+
+    Args:
+        capture: The page's capture record, as the pass wrote it.
+        capture_model: The model that read the crops, if it was declared.
+
+    Returns:
+        The record to write.
+
     """
-    return {
+    stamped = {
         **capture,
-        "_publication_class": {key: FIELD_CLASS[key].value for key in sorted(capture)},
+        CAPTURE_MODEL_KEY: capture_model,
+        CAPTURE_PROMPT_VERSION_KEY: CAPTURE_PROMPT_VERSION,
+        CAPTURED_KEY: datetime.now().astimezone().isoformat(timespec="seconds"),
+        CAPTURE_RULES_KEY: list(CAPTURE_RULES),
+    }
+    return {
+        **stamped,
+        "_publication_class": {key: FIELD_CLASS[key].value for key in sorted(stamped)},
     }
 
 
@@ -682,6 +721,13 @@ def main(  # noqa: PLR0913
     dry_run: Annotated[
         bool, typer.Option("--dry-run", help="Validate and report, but write nothing.")
     ] = False,
+    capture_model: Annotated[
+        str | None,
+        typer.Option(
+            "--capture-model",
+            help="The model that read the crops, recorded on every capture record.",
+        ),
+    ] = None,
     no_mirror: Annotated[
         bool,
         typer.Option(
@@ -720,7 +766,7 @@ def main(  # noqa: PLR0913
     speaker_lines: list[str] = []
     total = 0
     for page, result in results:
-        total += _apply_page(page_groups[page], result, dry_run=dry_run)
+        total += _apply_page(page_groups[page], result, capture_model, dry_run=dry_run)
         page_text, page_speaker = _queue_lines_for_page(
             page,
             result,
@@ -757,9 +803,12 @@ def main(  # noqa: PLR0913
     print(f"{verb} {total} group(s) and {captured} page capture(s) across {len(results)} page(s).")
     if dry_run:
         print(f"{len(set(text_lines))} group(s) have proposed text corrections.")
+        # Not all of these are queued for their confidence any more: the
+        # lone-panel rule adds groups the pass was sure about.
         print(
-            f"{len(set(speaker_lines))} group(s) have a speaker call at"
-            f" confidence {sorted(wanted_confidences)}."
+            f"{len(set(speaker_lines))} group(s) queued for speaker review"
+            f" (confidence {sorted(wanted_confidences)}, plus any nephew named"
+            f" alone in a panel)."
         )
 
 
