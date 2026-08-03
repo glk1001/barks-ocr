@@ -24,6 +24,7 @@ which *kinds* of call are unreliable -- by taking a few of each distinct name.
 barks-ocr-speaker-queue --other --per-name 3 --out ~/barks-vision/other-audit.txt
 barks-ocr-speaker-queue --volume 6 --confidence low,medium
 barks-ocr-speaker-queue --collective --unreviewed --per-title 10
+barks-ocr-speaker-queue --speaker none,narrator --per-title 8
 ```
 
 Read-only apart from the queue file it writes.
@@ -51,6 +52,7 @@ from barks_ocr.utils.vision_schema import (
     SPEAKER_KEY,
     SPEAKER_REVIEWED_KEY,
     VISION_SPEAKER_ISSUE,
+    speaker_key,
 )
 
 app = typer.Typer()
@@ -140,20 +142,27 @@ class Selectors:
     unreviewed: bool = False
     missing_evidence: bool = False
     confidences: frozenset[str] = frozenset()
+    # Compared as `speaker_key`, the same canonical form the census groups on, so
+    # `--speaker donald` finds `Donald` and `--speaker other:Donald` finds it too.
+    speakers: frozenset[str] = frozenset()
 
     def keeps(self, call: Call) -> bool:
-        """Return whether *call* survives every selector."""
-        if self.other and not call.speaker.startswith(OTHER_PREFIX):
-            return False
-        if self.collective and call.speaker != "nephews":
-            return False
-        if self.nephews and call.speaker not in NEPHEW_NAMES:
-            return False
-        if self.unreviewed and call.reviewed:
-            return False
-        if self.missing_evidence and call.has_evidence:
-            return False
-        return not (self.confidences and call.confidence not in self.confidences)
+        """Return whether *call* survives every selector.
+
+        Written as the reasons to reject rather than a chain of guards, so
+        adding a selector is one line and the "unset means do not filter"
+        contract stays visible in each row.
+        """
+        rejected = (
+            self.other and not call.speaker.startswith(OTHER_PREFIX),
+            self.collective and call.speaker != "nephews",
+            self.nephews and call.speaker not in NEPHEW_NAMES,
+            self.speakers and speaker_key(call.speaker) not in self.speakers,
+            self.unreviewed and call.reviewed,
+            self.missing_evidence and call.has_evidence,
+            self.confidences and call.confidence not in self.confidences,
+        )
+        return not any(rejected)
 
 
 def _cap(calls: list[Call], bucket: Callable[[Call], str], limit: int) -> list[Call]:
@@ -223,6 +232,14 @@ def main(  # noqa: PLR0913
     nephews: Annotated[
         bool, typer.Option("--nephews", help="Only individually-named nephews.")
     ] = False,
+    speakers: Annotated[
+        str,
+        typer.Option(
+            "--speaker",
+            help="Comma-separated speaker values, e.g. 'none,narrator' or 'Donald'."
+            " The general form of the three flags above.",
+        ),
+    ] = "",
     confidences: Annotated[
         str, typer.Option("--confidence", help="Comma-separated confidences to include.")
     ] = "",
@@ -264,12 +281,18 @@ def main(  # noqa: PLR0913
         unreviewed=unreviewed,
         missing_evidence=missing_evidence,
         confidences=frozenset(c.strip() for c in confidences.split(",") if c.strip()),
+        speakers=frozenset(speaker_key(s.strip()) for s in speakers.split(",") if s.strip()),
     )
-    calls = [c for c in calls if selectors.keeps(c)]
+    kept = [c for c in calls if selectors.keeps(c)]
 
-    if not calls:
-        print("No calls match those selectors.")
+    if not kept:
+        # A mistyped --speaker is the likely cause and the fix is knowing what is
+        # actually stored, so say so rather than leaving the caller to guess.
+        print("No calls match those selectors. Speaker values present:")
+        for value, count in Counter(c.speaker for c in calls).most_common():
+            print(f"  {count:>4}  {value}")
         raise typer.Exit(code=1)
+    calls = kept
 
     selected = _sample(calls, per_name, per_title)
 
