@@ -183,6 +183,18 @@ def _group_html(gid: str, src: dict, res: dict) -> str:
     return "".join(parts)
 
 
+def _panel_images(entry: dict, panel_no: int) -> list[str]:
+    """Return the crop file(s) for one panel, in reading order.
+
+    A panel too large to sit under the recompression threshold is written by
+    ``vision_prep`` as overlapping tiles -- ``panel-01a.png``, ``panel-01b.png``
+    -- so the report shows all of them rather than one broken image.
+    """
+    prefix = f"panel-{panel_no:02d}"
+    named = [name for name in entry.get("panels", []) if name.startswith(prefix)]
+    return sorted(named) or [f"{prefix}.png"]
+
+
 def _page_html(page: str, entry: dict, src_groups: dict, result: dict) -> str:
     """Render one page: header, then each panel with its description and groups."""
     by_panel: dict[str, list[str]] = defaultdict(list)
@@ -203,7 +215,10 @@ def _page_html(page: str, entry: dict, src_groups: dict, result: dict) -> str:
     for panel_no in panel_nums:
         panel_group_ids = sorted(by_panel.get(panel_no, []), key=int)
         parts.append('<div class="panel">')
-        parts.append(f'<img src="{page}/panel-{int(panel_no):02d}.png" alt="panel {panel_no}">')
+        parts.extend(
+            f'<img src="{page}/{name}" alt="panel {panel_no}">'
+            for name in _panel_images(entry, int(panel_no))
+        )
         parts.append('<div class="panel-body">')
         parts.append(f'<div class="panel-no">Panel {panel_no}</div>')
         parts.append(

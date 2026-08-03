@@ -16,9 +16,15 @@ when the range crosses titles.
 Every emitted image is quantized to a 256-colour palette.  This is not cosmetic:
 Claude Code's Read tool re-encodes any image over ~500KB as reduced-quality JPEG,
 which destroys the fine lettering that bold detection depends on.  Barks line art
-is flat colour, so a 256-colour palette is visually lossless and keeps every panel
-comfortably under the threshold.  Plain ``save("PNG")`` is NOT safe -- it exceeds
-500KB on roughly a third of the panels in the larger volumes.
+is flat colour, so a 256-colour palette is visually lossless and keeps almost every
+panel comfortably under the threshold.  Plain ``save("PNG")`` is NOT safe -- it
+exceeds 500KB on roughly a third of the panels in the larger volumes.
+
+The few panels too big even quantized are **tiled**, not shrunk: a splash panel is
+split into overlapping full-resolution tiles.  Shrinking would cost the 36px
+lettering and the cap-colour fidelity that are precisely what the pass is weakest
+at reading, so resolution and palette are the last things to give up, not the
+first.  See ``TILE_OVERLAP_FRACTION``.
 """
 
 import json
@@ -73,6 +79,19 @@ PALETTE_SIZE = 256
 OVERVIEW_LONG_EDGES = (1500, 1350, 1200, 1050, 900)
 CROP_PAD_PX = 8
 
+# A handful of panels are too big to fit under MAX_IMAGE_BYTES even quantized:
+# "The Big Bin on Killmotor Hill" has four, of which two do not fit at any
+# palette depth down to 64 colours.  They are split into overlapping tiles at
+# full resolution and full palette rather than shrunk, because the two things a
+# smaller crop would cost are exactly the two the pass is worst at -- 36px
+# lettering, and telling a green cap in shadow from a blue one.  The overview
+# can trade resolution for size (it carries no lettering); a panel cannot.
+#
+# The overlap keeps a balloon or a face from landing on the cut: at 15% of the
+# tile, anything smaller than that is whole in at least one tile.
+TILE_OVERLAP_FRACTION = 0.15
+MAX_TILES_PER_PANEL = 4
+
 # Under $HOME, not /tmp: snap-confined browsers get a private /tmp namespace and
 # cannot open a report written there.
 DEFAULT_ROOT = Path("~/barks-vision")
@@ -94,6 +113,58 @@ def _crop_panel(page_image: Image.Image, box: Any, pad: int) -> Image.Image:  # 
     x1 = min(page_image.width, box.x0 + box.w + pad)
     y1 = min(page_image.height, box.y0 + box.h + pad)
     return page_image.crop((x0, y0, x1, y1))
+
+
+def _tile_images(panel: Image.Image, count: int) -> list[Image.Image]:
+    """Split ``panel`` into ``count`` overlapping tiles along its longer axis."""
+    horizontal = panel.width >= panel.height
+    length = panel.width if horizontal else panel.height
+    # Each tile covers its share plus the overlap, so consecutive tiles share a
+    # band rather than butting up against each other.
+    step = length / count
+    reach = step * (1.0 + TILE_OVERLAP_FRACTION)
+
+    tiles = []
+    for i in range(count):
+        start = max(0, round(i * step - (reach - step) / 2))
+        end = min(length, round(start + reach))
+        if i == count - 1:
+            end = length
+        box = (start, 0, end, panel.height) if horizontal else (0, start, panel.width, end)
+        tiles.append(panel.crop(box))
+    return tiles
+
+
+def _write_panel(panel: Image.Image, page_dir: Path, panel_num: int) -> tuple[list[str], int]:
+    """Write one panel, tiling it if a single image would be recompressed.
+
+    Returns the file names written and the size of the largest, so the caller
+    can report a panel that is still oversized at the tile cap.
+    """
+    name = f"panel-{panel_num:02d}.png"
+    size = _save_quantized(panel, page_dir / name)
+    if size <= MAX_IMAGE_BYTES:
+        return [name], size
+
+    for count in range(2, MAX_TILES_PER_PANEL + 1):
+        tiles = _tile_images(panel, count)
+        names = [f"panel-{panel_num:02d}{chr(ord('a') + i)}.png" for i in range(count)]
+        sizes = [
+            _save_quantized(tile, page_dir / tile_name)
+            for tile, tile_name in zip(tiles, names, strict=True)
+        ]
+        if max(sizes) <= MAX_IMAGE_BYTES:
+            (page_dir / name).unlink(missing_ok=True)
+            logger.info(
+                f"Panel {panel_num} of {page_dir.name} is {size // 1024}KB;"
+                f" split into {count} overlapping tiles at full resolution"
+                f" (largest {max(sizes) // 1024}KB)."
+            )
+            return names, max(sizes)
+        for tile_name in names:
+            (page_dir / tile_name).unlink(missing_ok=True)
+
+    return [name], size
 
 
 def _write_overview(page_image: Image.Image, out_file: Path) -> int:
@@ -186,17 +257,19 @@ def _prep_page(  # noqa: PLR0913
 
     panel_files: list[str] = []
     for panel_box in page_panel_boxes.panel_boxes:
-        name = f"panel-{panel_box.panel_num:02d}.png"
-        size = _save_quantized(_crop_panel(page_image, panel_box, CROP_PAD_PX), page_dir / name)
+        panel = _crop_panel(page_image, panel_box, CROP_PAD_PX)
+        names, size = _write_panel(panel, page_dir, panel_box.panel_num)
         if size > MAX_IMAGE_BYTES:
-            oversized.append(f"{name} ({size // 1024}KB)")
-        panel_files.append(name)
+            oversized.append(f"{names[0]} ({size // 1024}KB)")
+        panel_files.extend(names)
 
     if oversized:
         # Failing loudly beats silently handing Claude Code a JPEG-mangled crop.
         msg = (
             f"Page {fanta_page}: {len(oversized)} image(s) exceed"
             f" {MAX_IMAGE_BYTES // 1024}KB and would be recompressed: {', '.join(oversized)}."
+            f" Panels are already tiled up to {MAX_TILES_PER_PANEL} ways before this fires,"
+            f" so raising MAX_TILES_PER_PANEL is the fix rather than shrinking the crop."
         )
         raise typer.BadParameter(msg)
 
