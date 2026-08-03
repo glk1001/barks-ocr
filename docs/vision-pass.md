@@ -120,6 +120,9 @@ Written onto each group in the prelim JSON by `vision_apply`:
 | `speaker_confidence` | `high` / `medium` / `low` |
 | `speaker_reviewed` | `true` once a human has confirmed the speaker in the editor |
 | `cap_colour` | `red` / `blue` / `green`, or `null` when not visible |
+| `identified_by` | what the call rests on — a **list** of `balloon-tail`, `cap-colour`, `costume`, `hat`, `sole-figure`, `dialogue`, `caption`, `off-panel`. Required wherever somebody speaks |
+| `speaker_was`, `cap_colour_was` | the pass's call, kept when a review **changes** it. Absent on a confirmation |
+| `speaker_reviewed_date` | when a human looked |
 | emphasis | inline in `ai_text` as `[b]WORD[/b]` / `[i]WORD[/i]`, not a separate field |
 | `vision_note` | the reasoning behind the call |
 | `vision_text_ok` | `false` when the art disagrees with `ai_text` |
@@ -2327,7 +2330,90 @@ Agreed shape when this is built: **store the pass's original call on the group**
 beside the reviewer's answer — `speaker_was` and the review date — rather than
 adding a ledger. The datum belongs with the thing it describes, it survives any
 scratch directory, and it makes a per-title error rate computable from the corpus
-alone. Not built yet.
+alone. **Built 2026-08-03**, exactly to that shape — see below.
+
+---
+
+## Three changes with a deadline
+
+Made 2026-08-03, deliberately **before** the corpus run rather than after, and
+grouped because they share one property: the vision pass writes fields *into* the
+corpus, so a field added later needs those pages read again. Re-reading is the one
+cost in this project that cannot be amortised, which gives schema and guidance
+decisions a hard deadline at the start of the run. Everything else on the open
+threads — the panel-box checks, census weighting, the `type` mislabels — is as
+cheap after 5,483 pages as before, and can wait.
+
+`capture_prompt_version` goes to **3**, with `identified-by` and
+`framing-vocabulary` added to `capture_rules`.
+
+### `identified_by` — what the call rests on
+
+`cap_colour` records the evidence behind a *nephew* call and is what makes one
+reversible. The trial found three populations with no equivalent, and every one
+of them is unrecoverable without this:
+
+- **adults told apart only by hat and shirt colour** — where the trial's single
+  confirmed colour-override error lives (Sheriff `168 g5`, whose contradiction
+  with `g3` would have been mechanical to catch had the evidence been recorded);
+- **eleven high-confidence calls made from what a character was wearing**
+  (*Plenty of Pets* 204 and 208), which `cap_colour` has nowhere to put;
+- **a call made from the previous balloon** rather than from the art at all
+  (`208 g20`, Sheriff `165 g0`).
+
+A **list**, because a real call rests on more than one thing — a tail that lands
+on a figure *and* the cap that figure wears — and separating them is what lets a
+later check ask whether two calls in one panel disagree about the same evidence.
+
+**Closed, with no `other:` escape**, unlike `speaker` and `setting`. The point is
+to make calls comparable across the corpus — to ask whether the costume-based
+calls are the ones that turn out wrong — and free text cannot be counted. A kind
+genuinely missing is a reason to add one here deliberately.
+
+It is **required wherever somebody speaks**, since a call with no recorded
+evidence is precisely the state the field exists to end; `none` needs none.
+Two cross-checks come free and both are cheap to state: a `cap_colour` was read
+but the call does not cite it, or it cites `cap-colour` and no colour was
+recorded. Either means the two fields were filled in independently rather than
+describing one judgement.
+
+### Framing vocabulary — guidance, not a field
+
+The trial's only *not recorded* misses were #98 and #26, both asking for a shot
+type. Capture describes what is *in* a panel and never how it is framed. Since
+`panels_of_note` is free text, this costs a paragraph in `roster.txt` rather than
+a schema change — which is what the trial argued for, and `v3` then showed the
+content is often already there in substance: an embedding reaches "establishing
+shot" from a wide scene-setting description. The guidance asks for the shot to be
+named *only where the framing is what makes the panel notable*, since labelling
+every panel would defeat `panels_of_note` entirely.
+
+### `speaker_was` — making a review outcome survive
+
+Every speaker error rate in this document — the pilot's 10 in 14, Sheriff's 1 in
+14, *Plenty of Pets*' 2 in 6, the 5 in 50 audit, Big Bin's 0 in 8 — was
+reconstructed by diffing `~/barks-vision` against the corpus, and would vanish
+with that directory. The editor now keeps the superseded call beside the new one.
+
+The rule is exact and the asymmetry is the whole design: **`speaker_was` is
+written only when a review changes the call.** A reviewed group carrying it is a
+correction; a reviewed group without it is a confirmation. So a per-title error
+rate becomes computable from the corpus alone, with no scratch directory and no
+ledger — the datum sits on the thing it describes, and a second record of what is
+on disk could only drift away from it.
+
+It is written **once**: a second edit of an already-corrected group must not
+overwrite the pass's original answer with the first reviewer's. `Confirm as is`
+deliberately writes no `speaker_was` at all, only the date.
+
+### The cost: the five read titles can no longer be re-applied
+
+Making `identified_by` required means every `result.json` from the five-title
+trial now fails validation, since none of them carries it. That is the same
+state the pilot has been in since the collective-nephew rule went in, and it is
+correct for the same reason: **those pages were read under v2's rules and saying
+so is more useful than pretending otherwise.** The annotations already on disk
+are untouched; only a re-apply would abort, and a re-apply would be wrong.
 
 ---
 
@@ -2681,6 +2767,12 @@ noise or a symbol.
   2026-08-03 — see the mirroring section. Left open: **5 line-break differences
   and 4 word differences on Roscoe** that the mirror would not cross, which are
   real reconciliation work rather than tool failures.
+- ~~**The `identified_by` idea now has three distinct callers, not one.**~~
+  **Built 2026-08-03, before the corpus run** — see *Three changes with a
+  deadline* below. It is a required list wherever somebody speaks, closed with no
+  `other:` escape, because the point is to make calls *comparable* and free text
+  cannot be counted. Two cross-checks come free: a `cap_colour` was read but the
+  call does not claim to rest on it, or the reverse.
 - **The `identified_by` idea now has three distinct callers, not one.** Sheriff
   wanted it for adults identified by hat colour with nothing to record it.
   *Plenty of Pets* adds two more: eleven `high`-confidence calls made from

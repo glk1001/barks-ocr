@@ -3,6 +3,7 @@ import copy
 import json
 from collections.abc import Callable
 from dataclasses import dataclass
+from datetime import datetime
 from io import BytesIO
 from pathlib import Path
 
@@ -37,12 +38,15 @@ from barks_ocr.utils.group_checks import (
 from barks_ocr.utils.vision_schema import (
     CAP_COLOUR_KEY,
     CAP_COLOUR_OPTIONS,
+    CAP_COLOUR_WAS_KEY,
     OTHER_PREFIX,
     REVIEWED_CONFIDENCE,
     SPEAKER_CONFIDENCE_KEY,
     SPEAKER_KEY,
     SPEAKER_OPTIONS,
+    SPEAKER_REVIEWED_DATE_KEY,
     SPEAKER_REVIEWED_KEY,
+    SPEAKER_WAS_KEY,
     VISION_NOTE_KEY,
     normalize_speaker,
 )
@@ -1968,6 +1972,16 @@ class EditorApp(App):
         art — and ``speaker_reviewed`` records that it was a human who did, which
         the confidence alone cannot say. The population that was low-confidence
         before review is preserved in the ``--queue-speakers`` file.
+
+        When the review **changes** the call, the pass's own answer is kept
+        beside the new one as ``speaker_was`` / ``cap_colour_was``. A review
+        outcome is an event rather than a state, and without this the only record
+        of it is a scratch directory: every speaker error rate in
+        ``docs/vision-pass.md`` was reconstructed by diffing ``~/barks-vision``
+        against the corpus, and would vanish with it. Stored here, a reviewed
+        group carrying ``speaker_was`` is a correction and one without it is a
+        confirmation, so a per-title error rate is computable from the corpus
+        alone.
         """
         group = pane.json_group()
         if group is None:
@@ -1975,9 +1989,19 @@ class EditorApp(App):
         # Canonicalize before storing: the free-text box can produce doubled
         # spaces, and a roster name typed behind "other:" is just that name.
         speaker = normalize_speaker(speaker)
+        was_speaker = group.get(SPEAKER_KEY)
+        was_cap = group.get(CAP_COLOUR_KEY)
+        # Only on a real change, and only the first time: a second edit of an
+        # already-corrected group must not overwrite the pass's original answer
+        # with the first reviewer's.
+        changed = normalize_speaker(was_speaker or "") != speaker or was_cap != cap_colour
+        if changed and was_speaker and SPEAKER_WAS_KEY not in group:
+            group[SPEAKER_WAS_KEY] = was_speaker
+            group[CAP_COLOUR_WAS_KEY] = was_cap
         group[SPEAKER_KEY] = speaker
         group[SPEAKER_CONFIDENCE_KEY] = REVIEWED_CONFIDENCE
         group[SPEAKER_REVIEWED_KEY] = True
+        group[SPEAKER_REVIEWED_DATE_KEY] = _today()
         group[CAP_COLOUR_KEY] = cap_colour
         self._has_changes = True
         self._refresh_pane_labels()
@@ -2044,6 +2068,10 @@ class EditorApp(App):
             return False
         group[SPEAKER_CONFIDENCE_KEY] = REVIEWED_CONFIDENCE
         group[SPEAKER_REVIEWED_KEY] = True
+        # Deliberately no `speaker_was`: nothing was superseded. Its absence on a
+        # reviewed group is what marks this as a confirmation rather than a
+        # correction, which is what makes the error rate readable off disk.
+        group[SPEAKER_REVIEWED_DATE_KEY] = _today()
         self._has_changes = True
         self._refresh_pane_labels()
         logger.debug(
@@ -2110,6 +2138,11 @@ class EditorApp(App):
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 app = typer.Typer()
+
+
+def _today() -> str:
+    """Return today's date, for stamping when a review happened."""
+    return datetime.now().astimezone().date().isoformat()
 
 
 @app.command(help="Prelim OCR Text Editor")

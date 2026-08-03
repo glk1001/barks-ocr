@@ -49,9 +49,13 @@ from loguru import logger
 from barks_ocr.cli_setup import get_comic_titles, init_logging
 from barks_ocr.utils.vision_schema import (
     CAP_COLOUR_KEY,
+    CAP_COLOUR_WAS_KEY,
+    IDENTIFIED_BY_KEY,
     SPEAKER_CONFIDENCE_KEY,
     SPEAKER_KEY,
+    SPEAKER_REVIEWED_DATE_KEY,
     SPEAKER_REVIEWED_KEY,
+    SPEAKER_WAS_KEY,
     VISION_NOTE_KEY,
 )
 
@@ -68,7 +72,13 @@ MIRRORED_KEYS = (
     SPEAKER_KEY,
     SPEAKER_CONFIDENCE_KEY,
     CAP_COLOUR_KEY,
+    IDENTIFIED_BY_KEY,
     SPEAKER_REVIEWED_KEY,
+    # The superseded call and its review date travel for the same reason the
+    # reviewed flag does: they are about the art, not about the transcription.
+    SPEAKER_WAS_KEY,
+    CAP_COLOUR_WAS_KEY,
+    SPEAKER_REVIEWED_DATE_KEY,
     VISION_NOTE_KEY,
     "vision_text_ok",
     "vision_corrected_text",

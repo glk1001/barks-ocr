@@ -70,6 +70,8 @@ from barks_ocr.utils.vision_schema import (
     CONFIDENCES,
     EMPHASIS_MARKUP_KEY,
     FIELD_CLASS,
+    IDENTIFIED_BY_KEY,
+    IDENTIFIED_BY_SET,
     MAX_OBJECTS,
     NEPHEW_NAMES,
     OBJECTS_KEY,
@@ -82,6 +84,7 @@ from barks_ocr.utils.vision_schema import (
     VISION_SPEAKER_ISSUE,
     VISION_TEXT_ISSUE,
     collapse_whitespace,
+    invalid_identified_by,
     is_valid_setting,
     is_valid_speaker,
     nephew_needs_collective,
@@ -130,6 +133,7 @@ APPLIED_KEYS = {
     "speaker": "speaker",
     "speaker_confidence": "speaker_confidence",
     "cap_colour": "cap_colour",
+    "identified_by": IDENTIFIED_BY_KEY,
     "note": "vision_note",
     "text_ok": "vision_text_ok",
     "corrected_text": "vision_corrected_text",
@@ -210,10 +214,62 @@ def _validate_group(  # noqa: PLR0913
     cap = entry.get("cap_colour")
     if cap is not None and cap not in CAP_COLOUR_SET:
         errors.append(f'{where}: cap_colour "{cap}" is not one of {sorted(CAP_COLOUR_SET)}.')
+    _check_identified_by(entry.get("identified_by"), speaker, cap, where, errors)
     _check_emphasis(entry.get(EMPHASIS_MARKUP_KEY), ai_text, where, errors)
     if not entry.get("text_ok") and not entry.get("corrected_text"):
         errors.append(f"{where}: text_ok is false but no corrected_text was supplied.")
     del gid
+
+
+def _check_identified_by(
+    value: Any,  # noqa: ANN401
+    speaker: Any,  # noqa: ANN401
+    cap: Any,  # noqa: ANN401
+    where: str,
+    errors: list[str],
+) -> None:
+    """Validate the evidence list behind a speaker call.
+
+    Required wherever somebody speaks, because a call with no recorded evidence
+    is exactly the irreversible state this field was added to end. ``none`` is
+    the one speaker that needs none -- nobody said it.
+
+    The one cross-check worth making here: a ``cap_colour`` was read but the call
+    does not claim to rest on it, or the reverse. Both are cheap to state and
+    either is a sign the two fields were filled in independently rather than
+    describing one judgement.
+    """
+    if speaker == "none":
+        return
+    if value is None:
+        errors.append(
+            f"{where}: identified_by is required when somebody speaks"
+            f" -- one or more of {sorted(IDENTIFIED_BY_SET)}."
+        )
+        return
+    if not isinstance(value, list) or not all(isinstance(v, str) for v in value):
+        errors.append(f"{where}: identified_by must be a list of strings, got {value!r}.")
+        return
+    if not value:
+        errors.append(f"{where}: identified_by is empty; omit the speaker or name the evidence.")
+        return
+    unknown = invalid_identified_by(value)
+    if unknown:
+        errors.append(
+            f"{where}: identified_by {unknown} not in {sorted(IDENTIFIED_BY_SET)}."
+            " The vocabulary is closed on purpose -- add a kind rather than free text."
+        )
+        return
+    if cap is not None and "cap-colour" not in value:
+        errors.append(
+            f'{where}: cap_colour "{cap}" was read but identified_by does not include'
+            ' "cap-colour". Say what the call rests on, or drop the cap colour.'
+        )
+    elif cap is None and "cap-colour" in value:
+        errors.append(
+            f'{where}: identified_by claims "cap-colour" but cap_colour is null.'
+            " Record the colour that was read."
+        )
 
 
 def _check_str_list(value: Any, key: str, where: str, errors: list[str]) -> list[str]:  # noqa: ANN401

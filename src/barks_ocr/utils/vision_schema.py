@@ -103,6 +103,46 @@ def nephew_needs_collective(speaker: str, confidence: str) -> bool:
 CAP_COLOUR_OPTIONS: tuple[str, ...] = ("red", "blue", "green")
 CAP_COLOUR_SET: frozenset[str] = frozenset(CAP_COLOUR_OPTIONS)
 
+# What the speaker call actually rests on. `cap_colour` records the evidence
+# behind a *nephew* call and is what makes one reversible; the five-title trial
+# found three separate populations with no equivalent, and every one of them is
+# unrecoverable without this field:
+#
+#   - adults told apart only by hat and shirt colour, where the single confirmed
+#     colour-override error in the trial lives (Sheriff 168 g5, whose
+#     contradiction with g3 would have been mechanical to catch);
+#   - eleven high-confidence calls made from pyjamas and shirt colour, which
+#     `cap_colour` has nowhere to put (Plenty of Pets 204, 208);
+#   - a call made from the previous balloon rather than from the art at all
+#     (Plenty of Pets 208 g20, Sheriff 165 g0).
+#
+# A list rather than one value, because a real call usually rests on more than
+# one thing -- a tail that lands on a figure *and* the cap that figure wears --
+# and separating them is what lets a later check ask whether two calls in one
+# panel disagree about the same evidence.
+IDENTIFIED_BY_OPTIONS: tuple[str, ...] = (
+    "balloon-tail",
+    "cap-colour",
+    "costume",
+    "hat",
+    "sole-figure",
+    "dialogue",
+    "caption",
+    "off-panel",
+)
+IDENTIFIED_BY_SET: frozenset[str] = frozenset(IDENTIFIED_BY_OPTIONS)
+
+IDENTIFIED_BY_NOTES: dict[str, str] = {
+    "balloon-tail": "the tail lands on this figure",
+    "cap-colour": "a nephew's cap, recorded in cap_colour",
+    "costume": "pyjamas, shirt or other clothing colour",
+    "hat": "an adult's hat -- colour or shape",
+    "sole-figure": "the only character who could be speaking",
+    "dialogue": "what the line says, or what the previous balloon said",
+    "caption": "a narration box, not a character",
+    "off-panel": "the speaker is not drawn in this panel",
+}
+
 # Emphasis is written inline, as `[b]WORD[/b]`, into the group's `ai_text`
 # itself; `EMPHASIS_TAGS` in `barks_fantagraphics.speech_markup` is the
 # vocabulary and the only definition of it. It used to be a separate
@@ -139,12 +179,32 @@ TIMES_OF_DAY: frozenset[str] = frozenset(TIME_OF_DAY_OPTIONS)
 SPEAKER_KEY = "speaker"
 SPEAKER_CONFIDENCE_KEY = "speaker_confidence"
 CAP_COLOUR_KEY = "cap_colour"
+IDENTIFIED_BY_KEY = "identified_by"
 VISION_NOTE_KEY = "vision_note"
 
 # Written by the editor only. `speaker_confidence` alone cannot tell a human's
 # confirmation from the model's own confident guess, and the difference is the
 # whole point of the review pass.
 SPEAKER_REVIEWED_KEY = "speaker_reviewed"
+
+# Also written by the editor only, and only when a review *changes* the call:
+# the pass's own answer, kept beside the reviewer's.
+#
+# A review outcome is an event, not a state, and `speaker_reviewed` records only
+# that somebody looked. Every speaker error rate in `docs/vision-pass.md` -- the
+# pilot's 10 in 14, Sheriff's 1 in 14, Plenty of Pets' 2 in 6, the 5 in 50 audit,
+# Big Bin's 0 in 8 -- was reconstructed by diffing scratch files in
+# `~/barks-vision` against the corpus, and vanishes with that directory. Storing
+# the superseded call on the group makes a per-title error rate computable from
+# the corpus alone: a reviewed group carrying `speaker_was` is a correction, one
+# without it is a confirmation.
+#
+# Deliberately not a ledger. The datum belongs with the thing it describes, it
+# survives any scratch directory, and a second record of what is on disk could
+# only drift away from the disk.
+SPEAKER_WAS_KEY = "speaker_was"
+CAP_COLOUR_WAS_KEY = "cap_colour_was"
+SPEAKER_REVIEWED_DATE_KEY = "speaker_reviewed_date"
 
 # The confidence a reviewed group carries: a human looked at the art.
 REVIEWED_CONFIDENCE = "high"
@@ -201,7 +261,7 @@ CAPTURE_RULES_KEY = "capture_rules"
 # tooling will accept, so a page can be told apart from one read under older
 # rules.  `CAPTURE_RULES` spells the same thing out in names, because a bare
 # integer tells a future reader nothing about what changed.
-CAPTURE_PROMPT_VERSION = 2
+CAPTURE_PROMPT_VERSION = 3
 
 # The rules in force that change what the pass does, newest last.  Add an entry and bump the version
 # above in the same commit.
@@ -218,6 +278,13 @@ CAPTURE_RULES: tuple[str, ...] = (
     # panel is queued for review whatever confidence the pass gave it.  Added
     # after the 50-call audit found that configuration 24% wrong.
     "lone-panel-queue",
+    # Every speaker call records what evidence it rests on, so a call made from
+    # a hat, a costume or the previous balloon is as reversible as a nephew call
+    # made from a cap already was.
+    "identified-by",
+    # `panels_of_note` names the shot where the framing is the point. The five-
+    # title trial's only *not recorded* misses were both queries asking for one.
+    "framing-vocabulary",
 )
 
 
@@ -261,6 +328,13 @@ FIELD_CLASS: dict[str, PublicationClass] = {
     SPEAKER_CONFIDENCE_KEY: PublicationClass.FACT,
     SPEAKER_REVIEWED_KEY: PublicationClass.FACT,
     CAP_COLOUR_KEY: PublicationClass.FACT,
+    # Closed-vocabulary labels about the art, exactly as `cap_colour` is.
+    IDENTIFIED_BY_KEY: PublicationClass.FACT,
+    # The superseded call and when it was superseded. Same class as the fields
+    # they shadow -- a wrong closed-set label is still a closed-set label.
+    SPEAKER_WAS_KEY: PublicationClass.FACT,
+    CAP_COLOUR_WAS_KEY: PublicationClass.FACT,
+    SPEAKER_REVIEWED_DATE_KEY: PublicationClass.FACT,
     VISION_NOTE_KEY: PublicationClass.DERIVED,
     "vision_text_ok": PublicationClass.FACT,
     "vision_corrected_text": PublicationClass.VERBATIM,
@@ -481,6 +555,18 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  so it is not a low-confidence call. Being unsure which nephew is exactly what",
         "  `nephews` is for; a guess at a name is unrecoverable, a collective is not.",
         f"cap_colour — one of: {', '.join(CAP_COLOUR_OPTIONS)}, or null when no cap is visible",
+        f"{IDENTIFIED_BY_KEY} — what the call actually rests on. A list, because a real",
+        "  call usually rests on more than one thing. One or more of:",
+        *[
+            f"  {kind.ljust(max(len(k) for k in IDENTIFIED_BY_OPTIONS))}  "
+            f"{IDENTIFIED_BY_NOTES.get(kind, '')}".rstrip()
+            for kind in IDENTIFIED_BY_OPTIONS
+        ],
+        "  Record it even when the answer seems obvious: this is what makes a call",
+        "  reversible later. cap_colour already does that for a nephew, and nothing",
+        "  did it for an adult identified by a hat, for a call made from what a",
+        "  character was wearing, or for a speaker named by the previous balloon",
+        "  rather than by the art. Omit only for `none`.",
         (
             f"{EMPHASIS_MARKUP_KEY} — the group's ai_text with emphasis marked"
             f" inline: {', '.join(f'[{t}]WORD[/{t}]' for t in EMPHASIS_TAGS)}."
@@ -518,6 +604,12 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         f"  {PANELS_OF_NOTE_KEY} — [[panel_num, phrase], ...] for panels worth addressing",
         "    on their own: the splash, the gag, the reveal. Most pages need none, and",
         "    listing every panel defeats the point.",
+        "    Name the SHOT as well as its contents where the framing is the point --",
+        "    'establishing shot', 'close-up', 'wide', 'silhouette', 'from above',",
+        "    'no characters in frame'. This is the one gap five titles of capture",
+        "    found: the pages were described in detail and the framing never was, so",
+        "    a query asking for an establishing shot reached nothing. Do not label",
+        "    every panel; only where the framing is what makes the panel notable.",
     ]
     return "\n".join(lines) + "\n"
 
@@ -556,3 +648,23 @@ def is_valid_setting(setting: str) -> bool:
     if setting in SETTINGS:
         return True
     return setting.startswith(OTHER_PREFIX) and bool(setting[len(OTHER_PREFIX) :].strip())
+
+
+def invalid_identified_by(kinds: Iterable[str]) -> list[str]:
+    """Return the evidence kinds that are not in the vocabulary.
+
+    Closed with no ``other:`` escape, unlike ``speaker`` and ``setting``. The
+    point of the field is to make calls comparable across a corpus -- to ask
+    whether two calls in one panel rest on the same evidence, or whether the
+    costume-based calls are the ones that turn out wrong -- and free text cannot
+    be counted. A kind genuinely missing from the list is a reason to add one
+    here, deliberately, rather than to let it arrive unannounced.
+
+    Args:
+        kinds: The ``identified_by`` values from one group.
+
+    Returns:
+        The unrecognized values, in the order given. Empty when all are valid.
+
+    """
+    return [kind for kind in kinds if kind not in IDENTIFIED_BY_SET]
