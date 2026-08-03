@@ -39,6 +39,8 @@ from barks_ocr.utils.vision_schema import (
     CAP_COLOUR_KEY,
     CAP_COLOUR_OPTIONS,
     CAP_COLOUR_WAS_KEY,
+    IDENTIFIED_BY_KEY,
+    IDENTIFIED_BY_OPTIONS,
     OTHER_PREFIX,
     REVIEWED_CONFIDENCE,
     SPEAKER_CONFIDENCE_KEY,
@@ -1863,6 +1865,47 @@ class EditorApp(App):
         return radios
 
     @staticmethod
+    def _build_identified_by_rows(content: BoxLayout, current: list | None) -> dict:
+        """Add the evidence checkboxes to *content*; return them keyed by kind.
+
+        Independent checkboxes rather than radios: ``identified_by`` is a list,
+        because a real call usually rests on more than one thing -- a tail that
+        lands on a figure *and* the cap that figure wears.
+
+        Laid out four to a row to keep the popup's vertical budget for the
+        vision-note view, which is the only child that gives up space.
+        """
+        picked = set(current or ())
+        radios: dict[str, CheckBox] = {}
+        per_row = 4
+        for start in range(0, len(IDENTIFIED_BY_OPTIONS), per_row):
+            row = BoxLayout(orientation="horizontal", size_hint_y=None, height=30, spacing=2)
+            row.add_widget(
+                Label(
+                    text="by:" if start == 0 else "",
+                    size_hint_x=None,
+                    width=50,
+                    halign="left",
+                )
+            )
+            for kind in IDENTIFIED_BY_OPTIONS[start : start + per_row]:
+                cb = CheckBox(active=(kind in picked), size_hint_x=None, width=28)
+                radios[kind] = cb
+                lbl = Label(
+                    text=kind,
+                    size_hint_x=None,
+                    width=92,
+                    halign="left",
+                    valign="middle",
+                    font_size="12sp",
+                )
+                lbl.bind(size=lbl.setter("text_size"))
+                row.add_widget(cb)
+                row.add_widget(lbl)
+            content.add_widget(row)
+        return radios
+
+    @staticmethod
     def _build_vision_note_view(note: str) -> ScrollView:
         """Return a scrollable, read-only view of the vision pass's reasoning."""
         note_label = Label(
@@ -1912,6 +1955,7 @@ class EditorApp(App):
         )
         radios, other_text = self._build_speaker_rows(content, group.get(SPEAKER_KEY))
         cap_radios = self._build_cap_colour_row(content, group.get(CAP_COLOUR_KEY))
+        evidence = self._build_identified_by_rows(content, group.get(IDENTIFIED_BY_KEY))
 
         summary = Label(
             text=self._vision_summary(group),
@@ -1938,8 +1982,9 @@ class EditorApp(App):
             size_hint=(None, None),
             # Tall enough that the roster rows do not squeeze the vision-note
             # view, which is the only child that gives up space (size_hint_y=1).
-            # Every roster entry added costs 36px here (row plus spacing).
-            size=(560, 900),
+            # Every roster entry added costs 36px here (row plus spacing), and
+            # the two identified_by rows cost 72px between them.
+            size=(560, 960),
             auto_dismiss=False,
         )
 
@@ -1957,7 +2002,12 @@ class EditorApp(App):
             else:
                 speaker = selected
             cap = next((c for c, cb in cap_radios.items() if cb.active), CAP_COLOUR_NONE)
-            self._apply_speaker(pane, speaker, None if cap == CAP_COLOUR_NONE else cap)
+            self._apply_speaker(
+                pane,
+                speaker,
+                None if cap == CAP_COLOUR_NONE else cap,
+                [k for k, cb in evidence.items() if cb.active],
+            )
             popup.dismiss()
 
         def on_confirm(_inst: Button) -> None:
@@ -1967,7 +2017,13 @@ class EditorApp(App):
             if self._speaker_widgets_differ(group, radios, other_text, cap_radios):
                 error_label.text = "Selection changed — press Save to record it."
                 return
-            self._confirm_speaker_as_is(pane)
+            # Evidence is deliberately NOT part of "as is". `speaker` and
+            # `cap_colour` are the call, and confirming means those are right;
+            # `identified_by` says what the call rested on, which does not
+            # contradict it. Every group annotated before this field existed has
+            # none, so letting a confirmation record it is the only way to
+            # backfill the evidence for the population most in need of it.
+            self._confirm_speaker_as_is(pane, [k for k, cb in evidence.items() if cb.active])
             popup.dismiss()
 
         save_btn = Button(text="Save")
@@ -1982,7 +2038,13 @@ class EditorApp(App):
         content.add_widget(button_layout)
         popup.open()
 
-    def _apply_speaker(self, pane: EnginePane, speaker: str, cap_colour: str | None) -> None:
+    def _apply_speaker(
+        self,
+        pane: EnginePane,
+        speaker: str,
+        cap_colour: str | None,
+        identified_by: list[str] | None = None,
+    ) -> None:
         """Write a reviewed speaker attribution to this pane's current group.
 
         ``speaker_confidence`` becomes ``high`` — a human has now looked at the
@@ -2020,6 +2082,8 @@ class EditorApp(App):
         group[SPEAKER_REVIEWED_KEY] = True
         group[SPEAKER_REVIEWED_DATE_KEY] = _today()
         group[CAP_COLOUR_KEY] = cap_colour
+        if identified_by:
+            group[IDENTIFIED_BY_KEY] = identified_by
         self._has_changes = True
         self._refresh_pane_labels()
         logger.debug(
@@ -2058,7 +2122,9 @@ class EditorApp(App):
         picked_cap = next((c for c, cb in cap_radios.items() if cb.active), CAP_COLOUR_NONE)
         return picked_cap != (group.get(CAP_COLOUR_KEY) or CAP_COLOUR_NONE)
 
-    def _confirm_speaker_as_is(self, pane: EnginePane) -> bool:
+    def _confirm_speaker_as_is(
+        self, pane: EnginePane, identified_by: list[str] | None = None
+    ) -> bool:
         """Stamp this group's existing speaker call as human-reviewed, unchanged.
 
         ``speaker`` and ``cap_colour`` are left exactly as the vision pass wrote
@@ -2074,6 +2140,11 @@ class EditorApp(App):
 
         Args:
             pane: The engine pane whose current group is being confirmed.
+            identified_by: Evidence kinds ticked in the popup, recorded even on a
+                confirmation. Saying what a call rested on does not contradict
+                agreeing with it, and every group annotated before that field
+                existed has none -- so this is the only way to backfill the
+                evidence for the population that most needs it.
 
         Returns:
             ``True`` if a call was stamped, ``False`` if there was none to
@@ -2089,6 +2160,8 @@ class EditorApp(App):
         # reviewed group is what marks this as a confirmation rather than a
         # correction, which is what makes the error rate readable off disk.
         group[SPEAKER_REVIEWED_DATE_KEY] = _today()
+        if identified_by:
+            group[IDENTIFIED_BY_KEY] = identified_by
         self._has_changes = True
         self._refresh_pane_labels()
         logger.debug(

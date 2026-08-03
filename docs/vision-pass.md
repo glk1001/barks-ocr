@@ -2406,6 +2406,65 @@ It is written **once**: a second edit of an already-corrected group must not
 overwrite the pass's original answer with the first reviewer's. `Confirm as is`
 deliberately writes no `speaker_was` at all, only the date.
 
+### Reviewing evidence, and building a queue from the corpus
+
+The editor's Speaker popup now carries the `identified_by` checkboxes, and this
+is where the field earns its keep on data that predates it: **every group
+annotated before 2026-08-03 has none**, so the only way to backfill the evidence
+for the highest-risk population is to record it while reviewing anyway.
+
+The rule the popup follows is worth stating, because it is not the obvious one.
+`speaker` and `cap_colour` are **the call**, and `Confirm as is` still refuses if
+either has been moved. `identified_by` is **evidence about** the call, and saying
+what a call rested on does not contradict agreeing with it — so a confirmation
+may record it. Ticking evidence therefore does not turn a confirmation into a
+correction, and no `speaker_was` is written.
+
+```bash
+barks-ocr-speaker-queue --other --per-name 3 --out ~/barks-vision/other-audit.txt
+barks-ocr-speaker-queue --title "Sheriff of Bullet Valley" --confidence low,medium
+barks-ocr-speaker-queue --collective --unreviewed
+barks-ocr-speaker-queue --missing-evidence      # everything read before v3
+```
+
+`barks-ocr-speaker-queue` builds a review queue from **what is already in the
+corpus**, which `vision_apply --queue-speakers` cannot: that writes a queue as a
+side effect of applying a run, and the five trial titles can no longer be applied
+at all. It also **samples**, because the populations are lopsided — see the
+`other:` audit below.
+
+### The `other:` population, and why a flat audit of it would say little
+
+Measured across the six annotated titles: **197 `other:` speaker calls, 22
+distinct names**. Every error rate in this document is a *nephew* rate, and at
+corpus scale `other:` is the larger population, since four of five trial titles
+had an off-roster cast.
+
+But the shape defeats a flat audit. **Sheriff is 132 of the 197**, and three
+names — `Blacksnake McQuirt` (54), `Old Jim Diamond` (35), `the sheriff` (19) —
+are 55% of the whole. Reviewing all 197 would spend most of the effort re-asking
+*"is this Blacksnake or Old Jim?"*, a question Sheriff's own low/medium review
+already answered: 1 wrong in 14, and the one error was exactly that confusion.
+
+Sampling three per name covers **all 22 names in 53 groups**, and asks the
+question that has no answer yet — which *kinds* of `other:` call are unreliable:
+
+| kind | names | what can go wrong |
+|---|---:|---|
+| named one-off | 6 | simply the wrong character |
+| unnamed role | 10 | drift into a neighbouring role |
+| collective | 3 | little — a group attribution can hardly be misread |
+| animal | 3 | the balloon / no-balloon convention |
+
+The queue is grouped by kind with comment separators, so stopping after one kind
+still leaves a complete answer for that kind rather than a random slice of
+everything.
+
+**This is the first audit that will record itself.** `speaker_was` landed the
+same day, so its corrections carry the superseded call and its confirmations
+carry only a date — where the pilot's 71%, the 5-in-50 audit and every other rate
+here survive solely as diffs against a scratch directory.
+
 ### The cost: the five read titles can no longer be re-applied
 
 Making `identified_by` required means every `result.json` from the five-title
