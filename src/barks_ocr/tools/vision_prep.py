@@ -43,6 +43,7 @@ from loguru import logger
 from PIL import Image
 
 from barks_ocr.utils.story_cast import story_characters, story_things
+from barks_ocr.utils.title_selection import title_pages
 from barks_ocr.utils.vision_schema import (
     BEATS_KEY,
     CAPTURE_MODEL_KEY,
@@ -350,44 +351,13 @@ def _title_pages(
 ) -> list[str]:
     """Return every page of one title that has OCR for this engine.
 
-    Two database accessors disagree here and the difference matters, so both are
-    consulted rather than one trusted.  ``get_speech_page_groups`` walks the
-    comic's page map, which can reach past the story into the ones around it --
-    "Sheriff of Bullet Valley" comes back with 103, 176 and 177 alongside its
-    real 144-175, and those three pages belong to *Sorry to be Safe*, *Best Laid
-    Plans* and *The Genuine Article*.
-
-    Prepping them would crop another story's art into this story's directory and
-    validate it against this story's cast, so a page is kept only when
-    ``get_title_from_volume_page`` agrees it belongs here.
+    The page-map disagreement this guards against is described on
+    ``title_pages``; prepping a foreign page would crop another story's art into
+    this story's directory and validate it against this story's cast. Prep is the
+    one caller that cannot continue with nothing, so the empty case aborts here
+    rather than in the shared helper.
     """
-    title = STR_TITLE_TO_ENUM[title_str]
-    volume = comics_database.get_fanta_volume_int(title_str)
-    claimed = sorted(
-        {
-            page_group.fanta_page
-            for page_group in speech_groups.get_speech_page_groups(title, skip_missing=True)
-            if page_group.ocr_index == engine
-        }
-    )
-
-    pages, foreign = [], []
-    for fanta_page in claimed:
-        try:
-            owner, _ = get_title_from_volume_page(comics_database, volume, fanta_page)
-        except Exception:  # noqa: BLE001 -- unresolvable means "not this story".
-            owner = None
-        if owner == title_str:
-            pages.append(fanta_page)
-        else:
-            foreign.append((fanta_page, owner))
-
-    if foreign:
-        listed = ", ".join(f"{p} ({o or 'unresolvable'})" for p, o in foreign)
-        logger.warning(
-            f'Dropped {len(foreign)} page(s) the page map claims for "{title_str}"'
-            f" but which belong elsewhere: {listed}."
-        )
+    pages = title_pages(comics_database, speech_groups, title_str, engine)
     if not pages:
         msg = f'No {engine.value} OCR pages found for "{title_str}".'
         raise typer.BadParameter(msg)

@@ -9,6 +9,7 @@ andrae
 arctan
 autojunk
 beamsearch
+beartrap
 blas
 blit
 blueviolet
@@ -107,4 +108,5 @@ vscodium
 whof
 whoi
 xlat
+Yehooty
 ylat
