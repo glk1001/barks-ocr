@@ -260,16 +260,21 @@ def _check_identified_by(
             " The vocabulary is closed on purpose -- add a kind rather than free text."
         )
         return
-    if cap is not None and "cap-colour" not in value:
-        errors.append(
-            f'{where}: cap_colour "{cap}" was read but identified_by does not include'
-            ' "cap-colour". Say what the call rests on, or drop the cap colour.'
-        )
-    elif cap is None and "cap-colour" in value:
+    # Only one direction is an error. Claiming to have identified somebody by a
+    # colour that was never recorded is incoherent.
+    if cap is None and "cap-colour" in value:
         errors.append(
             f'{where}: identified_by claims "cap-colour" but cap_colour is null.'
             " Record the colour that was read."
         )
+    # The reverse -- a colour recorded without being cited as evidence -- used to
+    # be an error here and is now deliberately allowed, because it is the single
+    # most informative state the two fields can be in: the tail identified the
+    # nephew, a colour was read, and they DISAGREE. Rejecting it forced the
+    # reader either to drop the observation or to claim the colour as evidence
+    # for a call it did not support, and the second is how 30 later-named
+    # collective calls came to cite a cap reading that can no longer be told from
+    # one written in from the convention afterwards.
 
 
 def _check_str_list(value: Any, key: str, where: str, errors: list[str]) -> list[str]:  # noqa: ANN401

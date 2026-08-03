@@ -2707,12 +2707,25 @@ answer. The field would then be recording a tautology, which is the same failure
 the query set guards against by taking expected pages from the art rather than
 from the capture records.
 
-**Nothing currently says `cap_colour` must be what is printed rather than what
-the convention implies.** That is worth stating in `roster.txt` before the corpus
-run, and it costs nothing: a cap read as blue on a nephew the tail says is Huey
-should be recorded blue, and the disagreement is the useful part. Until then the
-five panels above are best read as *one reviewer's reading against one earlier
-session's*, not as a refutation.
+**Added 2026-08-03 as `observed-cap-colour`.** `cap_colour` records what is
+*printed*, never what the convention implies once the nephew has been named some
+other way — because deriving the evidence from the answer makes it a tautology
+and removes the only check on the red/blue/green convention itself. A cap that
+reads blue on a nephew the tail says is Huey is recorded blue, and **the
+disagreement is the point**.
+
+Fixing this required **relaxing the validator**, which had the tension backwards.
+It used to reject a `cap_colour` recorded without `cap-colour` cited as
+evidence — so a reader who saw a colour that did not support the call had to
+either drop the observation or claim it as evidence anyway. The second is
+precisely how those 30 calls came to cite a cap reading. That direction is now
+allowed, and it is the most informative state the two fields can hold. The
+reverse — citing `cap-colour` with no colour recorded — is still refused, since
+identifying somebody by a colour nobody wrote down is incoherent.
+
+Until the corpus is read under this rule, the five panels above are best read as
+*one reviewer's reading against one earlier session's*, not as a refutation.
+`capture_prompt_version` goes to **6**.
 
 ### The classification audit: 0 in 47, and the prediction was wrong
 

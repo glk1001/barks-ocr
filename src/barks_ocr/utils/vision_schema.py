@@ -282,7 +282,7 @@ CAPTURE_RULES_KEY = "capture_rules"
 # different rule set, which is the single ambiguity the number exists to prevent.
 # A version costs nothing; a version that means two things costs the whole
 # scheme. An empty cohort simply never appears in the status report.
-CAPTURE_PROMPT_VERSION = 5
+CAPTURE_PROMPT_VERSION = 6
 
 # The rules in force that change what the pass does, newest last.  Add an entry and bump the version
 # above in the same commit.
@@ -317,6 +317,12 @@ CAPTURE_RULES: tuple[str, ...] = (
     # corrected on the 1942 pilot had been assigned by order rather than by tail,
     # which stayed invisible until evidence had to be recorded per call.
     "no-reading-order",
+    # `cap_colour` records the colour actually printed, never the colour the
+    # red/blue/green convention implies once the nephew has been named some other
+    # way. Deriving the evidence from the answer makes it a tautology and removes
+    # the only check on the convention -- which is why 30 later-named collective
+    # calls can no longer be told from cap readings written in after the fact.
+    "observed-cap-colour",
 )
 
 
@@ -614,6 +620,19 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  two nephews printed the same colour tells you nothing about either, and",
         "  an orange-gold cap is not a roster colour. Those caps are unreadable.",
         "  The rest of the panel is unaffected.",
+        "",
+        "  RECORD WHAT IS PRINTED, NOT WHAT THE CONVENTION IMPLIES. This field is",
+        "  the evidence for the call, so deriving it FROM the call makes it a",
+        "  tautology and destroys the only check on the convention itself. If the",
+        "  tail says Huey and the cap reads blue, record blue -- the disagreement",
+        "  is the useful part and is exactly what a later reader needs. Never fill",
+        "  the colour in from the name, and never claim `cap-colour` as evidence",
+        "  for a call the tail alone decided; if the colour played no part, leave",
+        "  it null and do not list it.",
+        "  Why it matters: 30 collective calls were later named, nearly all citing",
+        "  the tail AND the cap. Whether the earlier reading of those caps was",
+        "  wrong, or the colours were written in from the names afterwards, is now",
+        "  undecidable -- which is the ambiguity this rule exists to prevent.",
         f"{IDENTIFIED_BY_KEY} — what the call actually rests on. A list, because a real",
         "  call usually rests on more than one thing. One or more of:",
         *[
