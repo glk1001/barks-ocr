@@ -2673,6 +2673,71 @@ nephews' `ZZZ`.
 one of those cases was *caught during reading* and written up at the time. They
 were caught because the test is easy once it is asked — not because it is hard.
 
+### The evidence backfill found something else: the pass was using reading order
+
+Backfilling `identified_by` onto the 108 individually-named nephew calls was
+meant to be bookkeeping. It produced **11 speaker corrections, and every one of
+them is in *The Victory Garden*** — none in Sheriff, *Plenty of Pets* or Big Bin.
+
+GLK noticed the pattern first and proposed the cause: a very early Barks story
+whose balloon tails are less precisely drawn than his later work. The data agrees,
+and the pass's own notes say how the failure happened.
+
+On `076` the three nephews come out as a **cyclic permutation**:
+
+| | the pass | corrected to | cap actually |
+|---|---|---|---|
+| `g4` | Huey — *"rests on the cap-colour convention **plus balloon-tail order**"* | Louie | green |
+| `g5` | Dewey — *"Blue-capped; **middle of the three-balloon chain**"* | Huey | red |
+| `g6` | Louie — *"Green-capped; **last of the chain**"* | Dewey | blue |
+
+And `084 g1`: *"Caps clearly readable at the counter — red, blue, green **left to
+right**."* Corrected to green, red, blue.
+
+**The pass was not tracing tails. It was assigning nephews by balloon order and
+left-to-right position, and writing the result up as though it had read the
+caps.** That is the confident-register failure again — the same shape as *Plenty
+of Pets*' "the tail comes down squarely onto the middle nephew" and the
+washerwoman's "both balloons in this panel are hers" — but with a specific
+substitute heuristic now named.
+
+It explains why only this title. In later Barks the tails are precise enough that
+reading order and the true speaker usually coincide, so the heuristic agrees with
+the art and is never caught. In a 1942 story they diverge, and every divergence
+is an error.
+
+The pass's own doubt tracks the same line. Tail-ambiguity language in nephew
+notes, against the story's submission year:
+
+| title | submitted | notes | tail doubt |
+|---|---:|---:|---:|
+| The Victory Garden | **1942** | 36 | **11%** |
+| Sheriff of Bullet Valley | 1948 | 84 | 3% |
+| Plenty of Pets | 1949 | 56 | 0% |
+| Billions to Sneeze At | 1950 | 15 | 0% |
+| The Big Bin on Killmotor Hill | 1951 | 15 | 0% |
+
+**One caveat, and it is a real one: only one title in the trial predates 1948.**
+So "early Barks" rests on a single story, and this could be that story's
+lettering rather than the era's. What is *not* in doubt is the mechanism, because
+the pass wrote down that it used balloon order — that is independent of how many
+early titles were sampled.
+
+**This also revises the pilot's 71%.** That figure is attributed above to the
+absence of the collective rule, and 9 of its 10 errors were a named nephew that
+should have been collective. The backfill shows a second cause underneath: even
+where the pass named a specific nephew it had the *names in the wrong rotation*.
+The collective rule fixed the symptom that was measured; the reading-order
+substitution was never visible until evidence had to be recorded for each call.
+
+**A rule worth adding before the corpus run**, and it is the same shape as the
+per-cap fix: *balloon order and left-to-right position are not evidence.* If a
+tail cannot be traced to a figure, the answer is the collective — which is what
+`nephews` has always been for. Deliberately **not** proposed as a new
+`identified_by` kind: recording "reading order" as legitimate evidence would
+license the thing that went wrong. Vols 1-5 are ~1942-47 and are where this will
+bite.
+
 ### Four audits, and they agree about where the risk is
 
 | population | reviewed | wrong |
