@@ -23,14 +23,20 @@ small JSON files and a full report takes a few seconds.
 import collections
 import json
 import re
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Annotated
 
 import typer
+from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
+from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_DIR
+from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from comic_utils.common_typer_options import LogLevelArg
+from loguru import logger
 
 from barks_ocr.cli_setup import init_logging
+from barks_ocr.utils.title_selection import title_pages
 from barks_ocr.utils.vision_schema import (
     CAPTURE_PROMPT_VERSION,
     CAPTURE_PROMPT_VERSION_KEY,
@@ -140,20 +146,164 @@ def _report(stats: dict[str, VolumeStat], *, show_all: bool) -> None:
     print(f"\nrules in force now: {', '.join(CAPTURE_RULES)}")
 
 
+@dataclass(frozen=True)
+class TitleStat:
+    """One story's coverage, for the work list."""
+
+    order: int
+    year: int
+    title: str
+    volume: int
+    pages: int
+    read: int
+    captured: int
+    versions: tuple[str, ...]
+
+    @property
+    def state(self) -> str:
+        """Return a short word for how far this title has got."""
+        if not self.read:
+            return "--"
+        if self.read < self.pages:
+            return f"part ({self.read}/{self.pages})"
+        return "done" if self.captured == self.pages else f"done, {self.captured} capture"
+
+
+def scan_titles(comics_database: ComicsDatabase, speech_groups: SpeechGroups) -> list[TitleStat]:
+    """Return every story that has OCR, in the order Barks wrote them.
+
+    **The `Titles` enum is already chronological**, which was checked rather than
+    assumed: across all 450 titles carrying a submitted year there is not one
+    inversion between enum order and year. So the work order is `int(Titles.X)`
+    and no date parsing is needed.
+
+    Derived from the corpus on every call, like the volume scan above and for the
+    same reason -- a title is read iff its groups carry a speaker, so there is
+    nothing to keep in step and nothing to go stale.
+    """
+    # Resolving all 450 titles walks every page's panel boxes, and the database
+    # warns per page about bounding-box heights -- 13MB of it, none of it about
+    # coverage. Silenced for the scan only, and restored straight after, so a
+    # real warning from anywhere else still reaches the caller.
+    logger.disable("barks_fantagraphics")
+    try:
+        return _scan_titles(comics_database, speech_groups)
+    finally:
+        logger.enable("barks_fantagraphics")
+
+
+def _scan_titles(comics_database: ComicsDatabase, speech_groups: SpeechGroups) -> list[TitleStat]:
+    """Walk every title. See ``scan_titles``, which wraps this to quieten the database."""
+    stats: list[TitleStat] = []
+    for title_str, title in STR_TITLE_TO_ENUM.items():
+        try:
+            pages = title_pages(comics_database, speech_groups, title_str, OcrTypes.EASYOCR)
+        except Exception as exc:  # noqa: BLE001 -- see below.
+            # Silent by design, and it is the common case rather than an error:
+            # the 155 one-pagers have no .ini to resolve, and the essays and
+            # introductions are not stories. Logging each would bury the report
+            # under a hundred lines saying the corpus is shaped as documented.
+            logger.debug(f'Skipping "{title_str}": {exc}')
+            continue
+        if not pages:
+            continue
+        comic = comics_database.get_comic_book(title_str)
+        read = captured = 0
+        versions: collections.Counter[str] = collections.Counter()
+        for page_group in speech_groups.get_speech_page_groups(title, skip_missing=True):
+            if page_group.ocr_index != OcrTypes.EASYOCR or page_group.fanta_page not in pages:
+                continue
+            groups = page_group.speech_page_json.get("groups", {})
+            if not any(g.get(SPEAKER_KEY) for g in groups.values()):
+                continue
+            read += 1
+            capture = page_group.ocr_prelim_groups_json_file.parent / (
+                page_group.fanta_page + CAPTURE_SUFFIX
+            )
+            if not capture.is_file():
+                continue
+            captured += 1
+            version = json.loads(capture.read_text()).get(CAPTURE_PROMPT_VERSION_KEY)
+            versions[UNSTAMPED if version is None else f"v{version}"] += 1
+        stats.append(
+            TitleStat(
+                order=int(title),
+                year=comic.submitted_year,
+                title=title_str,
+                volume=comics_database.get_fanta_volume_int(title_str),
+                pages=len(pages),
+                read=read,
+                captured=captured,
+                versions=tuple(sorted(versions)),
+            )
+        )
+    return sorted(stats, key=lambda s: s.order)
+
+
+def _report_titles(stats: list[TitleStat], *, start: int, limit: int, todo_only: bool) -> None:
+    """Print the chronological work list."""
+    shown = [s for s in stats if not (todo_only and s.read)]
+    window = shown[start : start + limit] if limit else shown[start:]
+
+    print(f"{'#':>5} {'year':>6}  {'title':<44}{'vol':>4}{'pages':>6}  state")
+    for i, s in enumerate(window, start=start + 1):
+        note = f"  [{', '.join(s.versions)}]" if s.versions else ""
+        print(f"{i:>5} {s.year:>6}  {s.title[:44]:<44}{s.volume:>4}{s.pages:>6}  {s.state}{note}")
+
+    done = [s for s in stats if s.read >= s.pages]
+    left = [s for s in stats if s.read < s.pages]
+    print(
+        f"\n{len(done)} of {len(stats)} title(s) done; "
+        f"{len(left)} left, {sum(s.pages - s.read for s in left)} page(s)."
+    )
+    if left:
+        nxt = left[0]
+        print(f'next: "{nxt.title}" ({nxt.year}, vol {nxt.volume}, {nxt.pages}p)')
+        print(f'  barks-ocr-name-grep   --title "{nxt.title}"')
+        print(f'  barks-ocr-vision-prep --title "{nxt.title}"')
+
+
 app = typer.Typer()
 
 
 @app.command(help="Report which pages the vision pass has read, and under which rules.")
-def main(
+def main(  # noqa: PLR0913
     show_all: Annotated[
         bool,
         typer.Option("--all", help="List every volume, not only those with vision data."),
     ] = False,
+    by_title: Annotated[
+        bool,
+        typer.Option("--titles", help="Per-story work list, in the order Barks wrote them."),
+    ] = False,
+    todo_only: Annotated[
+        bool, typer.Option("--todo", help="With --titles, hide stories already read.")
+    ] = False,
+    next_only: Annotated[
+        bool, typer.Option("--next", help="Print just the next unread story and stop.")
+    ] = False,
+    start: Annotated[int, typer.Option("--from", help="With --titles, skip this many.")] = 0,
+    limit: Annotated[
+        int, typer.Option("--limit", help="With --titles, show at most this many. 0 for all.")
+    ] = 40,
     log_level_str: LogLevelArg = "WARNING",
 ) -> None:
     """Scan the prelim tree and report vision-pass coverage."""
     init_logging(APP_LOGGING_NAME, "vision-status.log", log_level_str)
-    _report(scan(OCR_PRELIM_DIR), show_all=show_all)
+    if not (by_title or next_only):
+        _report(scan(OCR_PRELIM_DIR), show_all=show_all)
+        return
+
+    comics_database = ComicsDatabase()
+    stats = scan_titles(comics_database, SpeechGroups(comics_database))
+    if next_only:
+        # Bare title on stdout, so a shell can use it directly.
+        remaining = [s for s in stats if s.read < s.pages]
+        if not remaining:
+            raise typer.Exit(code=1)
+        print(remaining[0].title)
+        return
+    _report_titles(stats, start=start, limit=limit, todo_only=todo_only)
 
 
 if __name__ == "__main__":

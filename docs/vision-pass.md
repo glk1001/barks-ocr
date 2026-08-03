@@ -75,6 +75,24 @@ provenance is written null and the page joins an unidentifiable cohort.
 the rule version each was read under. Nothing else is a reliable record: the
 scratch directories under `~/barks-vision` are not.
 
+```bash
+barks-ocr-vision-status --titles --todo     # the work list, oldest story first
+barks-ocr-vision-status --next              # just the next title, for a script
+```
+
+`--titles` is the answer to *what have I done and what is left*, and it is
+**derived from the corpus on every run rather than kept in a tracking file** —
+the same argument the volume report has always made. A title is read iff its
+groups carry a speaker, so there is nothing to keep in step and nothing to go
+stale. Chronological order comes free: the `Titles` enum is already in
+submission order, checked across all 450 titles with a year for **zero
+inversions** against it.
+
+Chronological order **front-loads the risk**, deliberately. The first forty-odd
+stories are 1942-45, which is exactly where the reading-order finding is
+untested. Better to learn that on title 3 than on title 200 — but expect the
+early titles to be less representative than the trial's averages suggest.
+
 ### Where things stand, 2026-08-03
 
 | | |
