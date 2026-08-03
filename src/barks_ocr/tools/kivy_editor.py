@@ -1730,7 +1730,9 @@ class EditorApp(App):
         for issue_type in DISMISSABLE_ISSUE_TYPES:
             row = BoxLayout(orientation="horizontal", size_hint_y=None, height=34, spacing=8)
             firing = DISMISSABLE_PREDICATES[issue_type](group)
-            cb = CheckBox(active=firing or issue_type in current, size_hint_x=None, width=30)
+            # Only stored acknowledgements start checked. Pre-checking every
+            # firing issue meant a reflexive Save acknowledged all of them.
+            cb = CheckBox(active=issue_type in current, size_hint_x=None, width=30)
             checkboxes[issue_type] = cb
             status = "firing" if firing else "not firing"
             lbl = Label(text=f"{issue_type}  ({status})", halign="left", valign="middle")
@@ -1749,7 +1751,15 @@ class EditorApp(App):
         )
 
         def on_save(_inst: Button) -> None:
-            new_list = [t for t in DISMISSABLE_ISSUE_TYPES if checkboxes[t].active]
+            # Entries outside the registry are legacy names ("dash_wrong_space")
+            # that is_acknowledged still honours via its aliases — keep them,
+            # or one Save here would silently revive the issues they dismiss.
+            legacy = [
+                t
+                for t in (group.get("acknowledged_issues") or [])
+                if t not in DISMISSABLE_ISSUE_TYPES
+            ]
+            new_list = [t for t in DISMISSABLE_ISSUE_TYPES if checkboxes[t].active] + legacy
             if new_list:
                 group["acknowledged_issues"] = new_list
             elif "acknowledged_issues" in group:
