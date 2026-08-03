@@ -21,6 +21,7 @@ Read tool and writes JSON, which is ordinary subscription usage. The Python tool
 do only deterministic I/O.
 
 ```
+barks-ocr-name-grep    --title "The Victory Garden"    # proper nouns, before reading page 1
 barks-ocr-vision-prep  --title "The Victory Garden"    # crop, queue, roster.txt
    <Claude Code reads roster.txt + the crops, writes result.json per page>
 barks-ocr-vision-status                                  # what has been read, and under which rules
@@ -81,6 +82,30 @@ and fails loudly rather than hand over a degraded crop.
 recompressed. Panels (median 891x636) pass through at native resolution, so the
 36px lettering survives. The page overview is sent too, but only for cross-panel
 context — reading order, who is in frame.
+
+**A panel too big even quantized is tiled, not shrunk.** Added 2026-08-03, when
+*The Big Bin on Killmotor Hill* became the first title to abort prep: four of its
+75 panels exceed 500KB at 256 colours, and **two of them do not fit at any palette
+depth down to 64**. So the palette had nothing left to give and the choice was
+between resolution and tiling.
+
+Tiling wins because the two things a smaller crop costs are exactly the two the
+pass is weakest at — the 36px lettering, and telling a green cap in shadow from a
+blue one, which the trial-4 audit found is where 4 of 5 speaker errors live.
+`_write_panel` therefore splits an oversized panel into 2–4 overlapping
+full-resolution tiles (`panel-01a.png`, `panel-01b.png`, …), 15% overlap so no
+balloon or face lands on a cut. The overview keeps its *resolution* ladder for
+the opposite reason: it carries no lettering at all.
+
+The queue's `panels` list carries the tile names, and `vision_report` reads that
+list rather than guessing `panel-NN.png`, so a tiled panel renders as its tiles
+instead of one broken image.
+
+One unexpected benefit: **Big Bin needed zero enlargements in ten pages**, against
+Sheriff's 11 in 32 and *Plenty of Pets*' 8 in 10, because the tiles are already a
+magnified view of the biggest panels. And one unexpected diagnosis — see trial 5:
+`047`'s oversized panel is oversized because `panel_boxes` merged two drawn panels
+into one box, so the size assertion doubles as a panel-segmentation smoke alarm.
 
 ---
 
@@ -608,7 +633,7 @@ them would have been the wrong order.
 | **Billions to Sneeze At** | 10 | 044-053 (10) | ~14 | none | **trial 2** |
 | **Plenty of Pets** | 7 | 199-208 (10) | ~13 | none | **trial 4** |
 | **Roscoe the Robot** | 20 | 175-178 (4) | ~13 | none | **trial 1** |
-| **The Big Bin on Killmotor Hill** | 11 | 10 | ~19 | **The Beagle Boys** | — |
+| **The Big Bin on Killmotor Hill** | 11 | 038-047 (10) | 24 | **The Beagle Boys** | **trial 5** |
 
 **~66 pages.** 4 to 32 is a wider length spread than the original plan had, and
 Roscoe is a deliberate density stress test: 13 queries against 4 pages, roughly
@@ -1312,6 +1337,8 @@ The eight are `Blacksnake McQuirt`, `Old Jim Diamond`, `the sheriff`,
 named characters who carry the whole plot. Three titles in, `story_cast` has been
 empty every time, and the closed-set machinery it was built for is still
 completely untested — Big Bin remains the only unit that will exercise it.
+(It did, on 2026-08-03: see trial 5, where the Beagle Boys come back from the
+closed set and roster coverage reaches 98% of page-appearances.)
 
 `setting`: **0 of 32 pages used a closed-vocabulary value.** Every one is
 `other:`, across six distinct places (`badlands` 17, `the Diamond Ranch` 7,
@@ -1337,7 +1364,9 @@ Blacksnake McQuirt is not named in the art until 149 and Old Jim not until 150,
 but both appear from 147. Rather than invent a provisional name and rename later
 — Roscoe's `other:the thug` / `other:the workman` failure — **the whole title's
 `groups.json` was grepped for capitalised names before page 147 was read.** It
-cost one command and removed the failure mode entirely. Worth doing by default.
+cost one command and removed the failure mode entirely. Worth doing by default —
+and since trial 5 it is a tool, `barks-ocr-name-grep`, with the two passes that
+run turned out to need. See Open threads.
 
 ### `setting` is one value per page, and this title says Billions was right
 
@@ -1712,7 +1741,9 @@ machinery (`story_characters`, the `Daisy Duck`/`Gyro Gearloose` aliasing, the
 nested `Pig Villains` flattening) is still completely untested after 56 of the
 trial's ~66 pages. **Big Bin is the only unit left that can exercise it**, and
 skipping it would leave the trial having proved nothing about the one design
-decision it was built to validate.
+decision it was built to validate. **It was run on 2026-08-03 and did exercise
+it** — see trial 5, which is the only place in this document where `story_cast`
+and `story_things` are non-empty.
 
 `setting`: **0 of 10 pages used a closed-vocabulary value**, all `other:`
 (`Donald's house` 8, `Donald's kitchen` 1, `Donald's back yard` 1). The closed
@@ -1797,6 +1828,295 @@ The same edit was made for `skunk` → `Jasmine Joe the skunk`, which the grep
 holding the skunk asks whether to leave Jasmine Joe outside. **A name in the
 dialogue does not tell you which thing it names**, so the grep buys the spelling,
 not the identification.
+
+---
+
+## Trial results 5 — The Big Bin on Killmotor Hill, vol 11 pages 038-047
+
+Run 2026-08-03. 10 pages, 75 panels, 133 groups. **The last unit of the
+five-title trial, and the only one that exercises the closed set.**
+
+| | |
+|---|---|
+| `vision_text_ok: false` | **1 (0.75%)** (Sheriff 0, Plenty of Pets 0, Billions 0, Roscoe 2.3%, pilot 1.5%) |
+| emphasis runs | 62 across 51 of 133 groups (**38%** of groups) |
+| confidence | high 131 / **medium 2** / low 0 |
+| `cap_colour` non-null | 8 (red 6, blue 1, green 1) |
+| `visible_text` strings | 29 |
+| first title stamped | `capture_prompt_version: 2` |
+
+### The closed set works, and it is worth more than the retrieval number
+
+This is what the title was kept for. Four titles ran with `story_cast: []`, so
+`story_characters`, the `Daisy Duck`/`Gladstone Gander`/`Gyro Gearloose` aliasing
+and the nested `Pig Villains` flattening had **never been exercised once** across
+56 of the trial's 66 pages. All four paths now have evidence:
+
+- **`roster.txt` offered it.** `story_cast: ['The Beagle Boys']` and
+  `story_things: ['sulphuric acid']` reach `queue.json` and the roster file, the
+  first non-empty values in the trial. The roster renders the Beagle Boys under
+  *"and, tagged in the database as appearing in THIS story"*, which is the closed-set
+  question the design asks for rather than an open one.
+- **They came back from the closed set, not from `other:`.** `042` and `047`
+  store `"The Beagle Boys"` bare in `characters`. On any previous title a recurring
+  group villain had nowhere to go but free text, where `other:the Beagle Boys` and
+  `other:Beagle Boys` are two characters.
+- **The aliasing and the flattening are correct**, checked directly rather than
+  inferred: `Daisy Duck → Daisy`, `Gladstone Gander → Gladstone`,
+  `Gyro Gearloose → Gyro`, and — the part that matters — the two entries that are
+  **not names at all**, `Gyro not in GG series` and `Uncle Scrooge not in US series`,
+  fold onto `Gyro` and `Scrooge` instead of becoming characters. `Soapy Slick` and
+  `Mr. McSwine` are present in the 48-name set, which they could only be if
+  `get_all_tags_in_tag_group` really flattens the nested `Pig Villains` group.
+  Nothing leaks: no full-form name and no pseudo-entry survives canonicalization.
+
+**Measurement 4 is the result this title moves**, and it moves a long way.
+`characters` has 8 distinct values across the title, of which **6 are roster
+entries and 1 is the closed set**; exactly one is free text
+(`other:a bystander`, used once). By page-appearances that is **40 of 41 covered
+by roster + closed set — 98%**, against *Plenty of Pets*' 83%, Sheriff's 50% and
+Roscoe's 1-of-6.
+
+The census makes the same point from the other end:
+`barks-ocr-speaker-census --volume 11` reports **no variant spellings and nothing
+off-roster**, and — the telling part — **the Beagle Boys do not appear in the
+free-form section at all.** The two free-form names are `a bystander` and
+`the radio announcer`, one use each, neither near the promotion threshold. This is
+the first title in five to produce **no promotion candidate and no single-story
+name over the threshold**, and the reason is structural rather than lucky: the one
+name that would have recurred was already in the closed set.
+
+`setting` is the exception and gets no help: **0 of 10 pages used a
+closed-vocabulary value**, all `other:` (`the money bin` 7, `Killmotor Hill` 2,
+`the cleared space` 1). The closed vocabulary is now **0-for-5**.
+
+### Correction rate: 1 in 133, and it is a real word
+
+`046 g7` stores `PUT EXTRA BLANKETS ON THE **BEDS**!` where the radio bulletin
+letters **`BED!`** singular. A word-level misreading, so it counts: **0.75%**,
+sitting between Roscoe's 2.3% and the three zeroes. Five titles in, measurement 1
+says the pass is reading rather than inventing and nothing more.
+
+Held to the word-level-misreadings-only rule, the following were seen and
+deliberately **not** counted, each recorded in `vision_note`:
+
+- **`MCDUCK` against the art's `McDUCK`** (043 g11) — a case difference, the same
+  rule that spared Sheriff's `McQUIRT`.
+- **A soft hyphen** (U+00AD) breaking `COOK-STOVE` across lines on `046 g12`
+  where the art letters an ordinary one. Word-break convention, as *Plenty of
+  Pets* `202 g16`.
+- **Two clipped signs completed by the OCR** — `039 g11` stores `STOP HERE` for a
+  sign drawn running off the panel edge showing only `STO / HER`, and `043 g8` does
+  the same for `PERISCOPE PEEPHOLE`. Completing a clipped sign is the right reading,
+  not a misreading.
+
+**One correction, and the emphasis had to be written against the uncorrected
+text.** `046 g7` also carries a bold run over the whole second half of the
+bulletin. `vision_apply` refuses any markup that does not strip back to the
+*stored* words, so the markup is written over `BEDS!` and the correction is
+proposed separately. The tags sit entirely after the corrected word, so applying
+the queued fix cannot disturb them — which is the inline-markup argument working
+exactly as the spans section claims, on the first case in the trial where a
+correction and an emphasis run share a group.
+
+### A speaker population that is entirely the new rule's doing
+
+`--queue-speakers` wrote **8 entries at the default `low` threshold, and not one
+of them is a low-confidence call** — the pass made zero. All 8 come from the
+lone-panel rule added after trial 4: an individual nephew named on a cap colour
+with no other nephew speaking in the same panel.
+
+```
+038 g5, g12   039 g8   040 g3, g9   041 g1   043 g2   044 g9
+```
+
+This is the rule paying for itself at 6.0% of groups (Sheriff 4.7%, *Plenty of
+Pets* 1.4%), and it is the fifth title running in which the **low band is empty
+because the collective rule works**. Only 2 groups are `medium`, both the
+placed-by-what-the-line-says category: `042 g9` (a periscope-view panel whose tail
+runs off-panel toward where both Donald and Scrooge stand) and `046 g20` (`OH, ME!
+OH, MY!` from inside a bin nobody is drawn in, given to Scrooge on register alone).
+
+**These 8 are queued, not reviewed.** The pass reviewing its own calls would be
+circular, and every speaker error rate in this document comes from someone else
+looking at the art. `~/barks-vision/big-bin-speakers.txt` is ready for the editor.
+
+Two things about the cap evidence here are worth recording whatever the review
+says. **Only 8 of 133 groups carry a `cap_colour` at all**, because this story
+keeps the nephews bare-headed for long stretches (039 panels 2-3, 046 panel 1) and
+because the whole middle of the story has only *one* nephew on the page. And the
+colourist is unreliable in a new place: **Donald's own sailor hat prints green
+rather than blue** on `045 panel 7` and `042 panel 2`. Four titles found the
+colourist slipping on nephew caps; this is the first time it slips on a lead's
+costume, which is a caution that "identified by costume colour" is shaky even for
+a character nobody would otherwise doubt.
+
+### Retrieval: 17 of 24, and the first *not-recorded* misses in three titles
+
+`barks-ocr-retrieval-score --validate` was run **first** and reproduced Roscoe at
+15 / 1 / #93, and still does with the Big Bin set added. 19 queries name this
+title (#98-#116) plus five cross-title (#11, #17, #26, #30, #43).
+
+| | |
+|---|---:|
+| hit | **17** |
+| miss | **7** (#11, #26, #98, #103, #107, #111, #112) |
+| capture-only hits | 9 |
+| also answerable from speech | 8 |
+| false positives | 0 |
+
+**#17 is the query this title existed for and it hits on both pages**, via
+`characters` among four other fields — which is to say the closed-set name is
+retrievable, not merely storable.
+
+#### The split: 5 not-retrieved, 2 not-recorded
+
+Sheriff and *Plenty of Pets* had each produced **zero** not-recorded misses, and
+Roscoe's only one was fixed on a re-read. This title produces two, and they are
+the same gap twice:
+
+- **#98 *an establishing shot* and #26 *an establishing shot with no characters in
+  frame* — both not recorded.** The pages are described in detail — 038's splash
+  as "the money bin drawn as a plain riveted steel cube standing alone on the bare
+  summit", 046 panel 4 as "a fire hydrant burst open in the **empty** night street"
+  — but the phrase *establishing shot* appears nowhere on the title, and neither
+  does any other shot-type word. **Capture records what is in a panel and never how
+  it is framed.** That is a real hole and a new one: `panels_of_note` is free text
+  and could carry framing vocabulary, so this argues for guidance rather than a
+  field. Note it is *not* Billions' #26 result — that was a false positive caused by
+  a record that happened to say "establishing shot"; here nothing says it, which is
+  the honest version of the same finding.
+
+The other five are all *not retrieved*, and between them they add **two new
+vocabulary classes** to the three already documented:
+
+- **#103 *flypaper* — and the source-word rule caused this miss.** The record says
+  `fly paper` in `objects`, `visible_text` and `beats`, because **the comic letters
+  it `FLY PAPER` as two words** and the standing rule is to prefer the comic's own
+  word. The query says the closed compound. So this is neither synonymy nor
+  morphology but **compounding**, and it is the first case where *following* the
+  Sheriff `trousers`/`pants` rule produced the miss rather than preventing one. The
+  two rules can conflict, and no amount of care about vocabulary resolves it —
+  a stemmer will not join `flypaper` to `fly paper` either, since the split is in
+  tokenisation, not in morphology.
+- **#112 *wall painting* against the record's *wall picture*** — plain synonymy
+  with no source word to arbitrate, since the comic letters only the captions
+  (`MIGHTY DOLLAR`, `A FAST BUCK`) and never names the object. Exactly *Plenty of
+  Pets*' #95 letterbox/mailbox class, reproduced.
+- **#11 *Scrooge diving into his money bin* — the iconic one, and it misses.**
+  The doc said of this query: *"If capture misses this, it fails."* The gag is
+  recorded twice on 041 — "throws himself off the catwalk into the coins" in
+  `beats`, "launching himself off the catwalk into the heaped coins, arms spread,
+  hat and spectacles flying loose" in `panels_of_note` — and the word *dive* is in
+  neither. **The schema and the reading are fine; the retriever cannot get from
+  *diving* to *launching himself*.** Read against the pass/fail framing this is the
+  single strongest embeddings argument in five titles, because it is the one query
+  the doc singled out in advance and the record could hardly be better.
+- **#107 *love* and #111 *worry* — emotion, for the third and fourth time.**
+  041 records `hearts` in `objects` and "three red hearts floating around his head"
+  in `panels_of_note`; 043 records "sobbing" and "flat on his back on the floor".
+  Neither says *love* or *worry*. Both were **called in advance and left to fail on
+  purpose**, as *Plenty of Pets* did with #95: writing the reader's word over the
+  drawn one would manufacture a hit and destroy the measurement.
+
+So **reader-vocabulary vs drawn-vocabulary now stands at seven instances** across
+four titles — *sick*, *sad*, *pain*, *scared*, *colliding*, *love*, *worry* — plus
+*diving*. It is not a schema problem and five titles have not made it one.
+
+### `visible_text`: 1 net new in 29
+
+29 strings, of which **one exists nowhere in the OCR groups** — `B Co.`, a shop
+awning at the edge of frame on 039. That is **3.4%**, against Roscoe's 0 of 13,
+Billions' 2 of 18, Sheriff's 7 of 62 and *Plenty of Pets*' 1 of 25.
+
+Five titles in, the field's shape is settled and *Plenty of Pets* had it right:
+what predicts the yield is how much non-speech lettering the story carries that
+OCR did not already catch, and **every net-new string across five titles is small
+lettering on a prop or at the edge of frame** (`1¢`, `M.D.`, `313`, two cattle
+brands, a `REWARD` poster, `CLICK!`, and now a half-seen shop sign). This title has
+a great deal of non-speech lettering — five warning signs, `SULPHURIC ACID`, three
+`FLY PAPER` sheets, `BEAGLE BOYS` placards, seven `BILLS`/`LEDGER` spines — and
+the OCR caught essentially all of it.
+
+One string is genuinely net-new and *not* counted above because it is a second
+instance rather than a missing one: `047` letters `BEAGLE BOYS` across two
+sweaters and the OCR grouped both, but `042`'s four Beagle Boys carry four
+placards of which the OCR grouped one.
+
+### `type` is wrong at 0.75%, and the *other* mislabel is the balloon/sound-effect axis
+
+**1 of 133 groups (0.75%)** is a thought cloud typed `dialogue` — `042 g5`, a
+scalloped cloud with a four-circle trail rising from the periscope. That is the
+lowest rate of the five titles (Sheriff 1.7%, Billions 2.9%, *Plenty of Pets*
+2.8%, Roscoe's premise-inflated 27%), and both groups actually typed `thought`
+here — `042 g3` and `045 g4` — are correct.
+
+A second mislabel sits on a different axis and is worth separating: **`043 g5`
+`YOICKS!` is typed `sound_effect` but the art puts it in a proper rounded balloon
+with a tail to Donald.** That is the Sheriff `174 g4` / *Plenty of Pets* `206 g6`
+category — a yell that is dialogue by the test used throughout — and it argues the
+corpus `type` error rate should be tracked as *two* rates, since a
+thought/dialogue confusion and a dialogue/sound-effect confusion have nothing to
+do with each other.
+
+The drawn-punctuation device appears again and is typed a **fourth** way:
+`045 g8` is three exclamation marks around Scrooge's head typed `sound_effect`,
+against *Plenty of Pets*' `?` as `background` (205 g9) and `sound_effect`
+(207 g12) and as no group at all (208 panel 5). `046 g18` has a drawn `?` with no
+group. It still makes no sound in any of them.
+
+### A panel-segmentation defect, found by the size assertion
+
+`047`'s panel 1 crop is 1872x1345 and 854KB — the largest in the title — and the
+reason is not a big drawing. **The art draws two panels there with a ruled border
+between them**, the ice-cube view and the caption panel where the ducks crawl out,
+and `panel_boxes` returns a single box spanning both. All three groups in that
+row therefore carry `panel_num: 1`, correctly with respect to the box and wrongly
+with respect to the page.
+
+This is a different class from every panel defect the trial has found so far —
+Billions `048 g3/g4`, Sheriff `150 g9` and `165 g4`, *Plenty of Pets* `199` — all
+of which were *stored `panel_num`* errors against correct boxes. Here the box
+itself is wrong, so no `panel_num` check could catch it and the kivy editor cannot
+fix it. Usefully, **the 500KB assertion caught it for free**: a panel box that
+spans two drawn panels is roughly twice the area of its neighbours, which is
+exactly what trips the size limit. Worth knowing that the crop-size failure is a
+weak panel-segmentation smoke alarm, and worth checking the other three oversized
+panels (038 p1, 040 p5, 047 p4) on the same suspicion — 038's is a genuine splash,
+but 040 p5 has the same two-areas-one-box look.
+
+### Mirroring: the first title with no residue at all
+
+`vision_apply` mirrored **133 of 133 groups and all 51 marked-up groups (62
+emphasis runs)** onto paddleocr, and **nothing was refused** — no line-break
+differences and no word differences, where Roscoe left 5 and 4.
+
+That is not the pass being tidier; it is where the volume sits. Vol 11 is inside
+the reconciled range (vols 1-18 at 99.6% identical), so the two engines already
+agreed word for word and newline for newline on every annotated group. The mirror
+doubling as a reconciliation finder is only interesting where reconciliation is
+outstanding.
+
+### Cost
+
+**One session**, 85 images read: 10 page overviews and 75 panel images (79 panel
+boxes' worth, four of them delivered as tiles), and **zero enlargements** — the
+first title in the trial to need none, because the tiles already magnify the
+panels that would have prompted one and because there are only 8 readable caps in
+the story to trace.
+
+The page-reading phase ran **11:25 to 11:43, ~18 minutes for 10 pages — ~1.8
+min/page**, against Sheriff's 1.6 and *Plenty of Pets*' 2.4 (1.9 excluding its
+splash). Reading the two design docs, fixing the prep abort, adding the query set
+and scoring sit on top of that and are not counted, as on every previous title.
+
+**This does not move measurement 5 and is not offered as doing so.** Ten pages
+cannot; Sheriff's 32-page 1.6 min/page stands as the projection, and the honest
+reading of 1.8 is that a third 10-page title reproduced it within noise. What it
+does confirm is that the batching discipline — one message per page carrying
+`groups.json`, the overview and every panel crop — is what the rate depends on,
+since this title used it from page 1 and shows none of *Plenty of Pets*' first-page
+penalty.
 
 ---
 
@@ -1944,6 +2264,18 @@ capture prompt version (current is v2):
 **Big Bin will therefore be the first title distinguishable from them**, which is
 the whole reason this went in before trial 5 rather than after.
 
+Done — `barks-ocr-vision-status` now reports the split it was built to show:
+
+```
+capture prompt version (current is v2):
+   unstamped (pre-2026-08-03)    56 page(s)  <- read before provenance was written; rules unknown
+   v2                            10 page(s)
+```
+
+The 10 stamped pages carry `capture_model: "claude-opus-5[1m]"`, passed on the
+command line, with the version and the four-rule list filled in by the applying
+code rather than accepted from the result file.
+
 ### What a scan cannot recover, and the agreed shape for it
 
 A review outcome is an *event*, not a state. Trial 4's *2 wrong in 6* and the
@@ -1998,6 +2330,21 @@ alone. Not built yet.
   Changing the scorer mid-trial is exactly what the bullet above exists to
   prevent, so all three wait for the end of the five titles and are then applied
   to every title at once.
+  **The five titles are now in (trial 5, 2026-08-03), so that wait is over.**
+  The scored tally across all five is **81 hits / 22 misses** (Roscoe 15/1,
+  Billions 12/6, Sheriff 26/4, Plenty of Pets 11/4, Big Bin 17/7), of which
+  **18 are *not retrieved* and 4 are *not recorded*** — the four being Billions'
+  #35 *smiling* and #46 *a sound effect*, and Big Bin's #26 and #98, which are one
+  gap counted twice (shot type is never written down). Not one is thinness in a
+  field the queries were built to test.
+  Trial 5 adds a **fourth** failure mode to the three above:
+  **compounding** (`flypaper` against the comic's own `FLY PAPER`), which neither
+  a stemmer nor an embedding over unigrams closes — a bigram index would.
+  So the priority is now evidenced rather than guessed: the stemmer is cheapest
+  and fixes fewest, tie-ranking matters more the longer the title, and
+  **embeddings are what the bulk of the residue needs** — seven
+  reader-vocabulary instances plus #11, the query the design named in advance as
+  the one that must not miss.
 - **The matcher's fuzzy rule buys false positives.** `_within_one_edit` matches
   **`hiding` to `riding`** — which in a western is on nearly every page. It gave
   Sheriff's #70 a spurious score on 165 and still missed the two pages that
@@ -2119,15 +2466,29 @@ alone. Not built yet.
   has only **two adults and they never share a panel**. The failure needs two or
   more similar-looking figures separated only by costume colour, so the class is
   better stated as **a large similar-looking supporting cast** than as "unnamed
-  adult roles". Still unwatched at scale; Big Bin's Beagle Boys are the obvious
-  next place for it to appear.
+  adult roles". **Big Bin was named as the next place to look and cannot answer
+  either**, for a third structural reason: its four Beagle Boys are drawn as a
+  set of near-identical masked figures — precisely the configuration — but they
+  **never speak**. Not one balloon in the story is theirs, so no attribution is
+  ever demanded of them. Three titles have now failed to reproduce Sheriff's error
+  class for three different reasons (one lead; two adults who never share a panel;
+  a similar-looking group that is silent), which is itself worth knowing: the
+  failure needs a large similar-looking cast that also *talks*, and that is rarer
+  than a large similar-looking cast.
 - **Emotion's retrieval failure is now reproduced, not observed once.** Billions
   found #34 *sad* recorded as "in tears" and unreachable; *Plenty of Pets* finds
   #57 *scared* recorded as "sweat drops flying" and "backed into the corner", and
   unreachable in the same way. Two titles, two emotions, same result. Combined
   with *sick* and *pain*, **reader-vocabulary vs drawn-vocabulary is now the
   trial's single most repeated finding at five instances**, and the argument for
-  embeddings rather than for any schema change.
+  embeddings rather than for any schema change. **Trial 5 adds *love* (recorded as
+  `hearts`) and *worry* (recorded as "sobbing"), taking it to seven** — and, more
+  pointedly, adds **#11 *Scrooge diving into his money bin***, the one query the
+  design doc singled out in advance with *"if capture misses this, it fails"*. It
+  misses on `diving` against a record that says "throws himself off the catwalk
+  into the coins" and "launching himself off the catwalk, hat and spectacles
+  flying". Nothing about that record is deficient, which makes it the cleanest
+  embeddings argument the trial has produced.
 - **A third free-text vocabulary class, and this one has no rule.** Roscoe found
   drift *within* a title, Sheriff found drift *away from the source* (`trousers`
   vs the comic's own `pants`). *Plenty of Pets* #95 is neither: the query says
@@ -2143,24 +2504,96 @@ alone. Not built yet.
   (Billions 048 g3/g4, Sheriff 150 g9, 165 g4); this is the same class at page
   scale, on a splash, and unlike the others it is detectable without looking at
   the art.
+- **The drawn punctuation device has no consistent type, and trial 5 found a
+  fourth.** `045 g8` types three exclamation marks around Scrooge's head as
+  `sound_effect`, and `046 g18` gives a drawn `?` no group at all. With the two
+  below that is four treatments across two titles for a device that makes no
+  sound in any of them.
 - **The drawn `?` device has no consistent type.** `205 g9` is `background`,
   `207 g12` is `sound_effect`, and the three on `208 panel 5` have no group at
   all. It makes no sound in any of them. Small, but it is the kind of thing a
   category query over `type` would trip on.
-- **The pre-read name grep needs to print the whole distribution.** Sheriff's
-  grep-first discipline was followed on *Plenty of Pets* and resolved Sylvester,
-  Jasmine Joe and the Black Mask Burglar before page 199 — but **missed
-  `Yehooty`**, which occurs three times: too rare for the frequency head, too
-  common for the rare tail, and the run printed only those two ends. Print all
-  distinct capitalised tokens minus a stop list. Note also what the grep cannot
-  buy: it surfaced `JASMINE JOE` but not *which animal that is*, which only
-  became clear on 204.
+- ~~**The pre-read name grep needs to print the whole distribution.**~~
+  **Done on trial 5, and it is now a tool rather than a discipline:**
+
+  ```bash
+  barks-ocr-name-grep --title "The Big Bin on Killmotor Hill"
+  barks-ocr-name-grep --volume 11 --min-pair 3
+  ```
+
+  It runs **two passes, because they fail in opposite ways and neither alone is
+  enough**, which is the finding trial 5 produced.
+
+  *Pass 1, non-dictionary tokens.* `/usr/share/dict/american-english` and
+  `british-english` as the stop list, printing **every** surviving token rather
+  than a frequency head and tail. A dictionary has no cutoff to fall through, so
+  the gap that lost `Yehooty` (3 occurrences: too rare for the head, too common
+  for the tail) cannot reopen. The output stays readable — Big Bin leaves 18
+  tokens from 451 distinct, Roscoe 7 from 226.
+
+  *Pass 2, repeated word pairs.* **A name spelled out of ordinary words is
+  invisible to a dictionary filter**, and Big Bin's antagonists are exactly that:
+  `BEAGLE` and `BOYS` are both dictionary words, so pass 1 returned *nothing at
+  all* for the story's entire villain cast. This is the mirror of the Yehooty gap
+  — that one was too rare, this one too *ordinary*. Casing cannot rescue it since
+  the lettering is stored in caps. Adjacent pairs can, and immediately give
+  `BEAGLE BOYS` (13, five pages), `MONEY BIN`, `UNCLE SCROOGE`, plus *Plenty of
+  Pets*' `BLACK MASK` / `MASK BURGLAR` and Roscoe's `GYRO GEARLOOSE`.
+
+  Pass 2 pays a second time by surfacing **the comic's own wording** for things
+  the story names, which is what capture is meant to reuse: `FLY PAPER` and
+  `PERISCOPE PEEPHOLE` both came out of it. (Trial 5's #103 shows that cuts both
+  ways — see the compounding bullet below.)
+
+  Two implementation notes worth not rediscovering. The **dictionary is the only
+  stop list** for pass 1; comic interjections survive as noise, deliberately,
+  because every hand-written stop entry is a chance to hide a name. And the scan
+  is restricted to the pages the title **really owns** via the shared
+  `title_pages`, since the page map reaches into the stories around it — an
+  unfiltered run reports *Sheriff of Bullet Valley* as 35 pages and mixes three
+  other stories' names into its list.
+
+  Note what the grep still cannot buy: on *Plenty of Pets* it surfaced
+  `JASMINE JOE` but not *which animal that is*, which only page 204 settled. It
+  buys the spelling, not the identification.
+- **`panel_boxes` can merge two drawn panels into one box.** Trial 5's `047`
+  panel 1 spans the ice-cube view *and* the bordered caption panel beside it, so
+  three groups carry a `panel_num` that is right for the box and wrong for the
+  page. Every previous panel defect in the trial was a stored `panel_num` against
+  a correct box, which the editor can fix; this one cannot be fixed there at all,
+  and `max(panel_num) > len(panel_boxes)` cannot see it either. The one cheap
+  signal available is that a merged box is roughly double the area of its
+  neighbours — which is why the 500KB crop assertion caught it. Worth a check that
+  flags a panel box far larger than its page's median.
+- **Following "prefer the comic's own word" can itself cause a miss.** Trial 5's
+  #103 asks for *flypaper*; the art letters `FLY PAPER` and the record says
+  `fly paper`, so the query misses **because the rule was obeyed**. This is a
+  fourth vocabulary class — **compounding** — and unlike the other three neither a
+  stemmer nor care about wording fixes it, since the split is in tokenisation. A
+  retriever that indexes bigrams as well as tokens would close it; nothing in the
+  writing discipline can.
+- **Capture never records how a panel is framed.** Trial 5's #98 and #26 are the
+  first *not-recorded* misses in three titles, and both ask for a shot type. The
+  pages are described richly and the words *establishing shot*, *close-up*, *wide*
+  appear nowhere in five titles of capture. `panels_of_note` is free text and could
+  carry framing vocabulary at no schema cost, so this argues for guidance in
+  `roster.txt` rather than a new field — but it is a genuine hole, and it is the
+  only one the five-title trial found in the schema itself.
 - **`visible_text` is untyped, so category queries over it cannot be answered.**
   Query #46 *a sound effect* misses on a page holding `SMACK!`, `KA-CHOO!` and
   `AH-CHOO!`, because nothing records that those strings are sound effects. First
   query to want the field typed; not worth a schema change on one instance.
   Sheriff does not press the case either way — it captures 23 sound-effect strings
   but the query set does not ask #46 of it.
+- **The `type` error rate should be tracked as two rates, not one.** Trial 5 has
+  **1 of 133 (0.75%)** thought-cloud-typed-`dialogue`, the lowest of the five, and
+  separately `043 g5` `YOICKS!` typed `sound_effect` inside a proper balloon with a
+  tail. A thought/dialogue confusion and a dialogue/sound-effect confusion have
+  nothing to do with each other and averaging them into one percentage hides both.
+  Across five titles the thought/dialogue axis is ~0.75-2.9% (ignoring Roscoe's
+  premise-inflated 27%) and bidirectional; the balloon/sound-effect axis has now
+  appeared on three titles (Sheriff `174 g4`, *Plenty of Pets* `206 g6`, Big Bin
+  `043 g5`) and has never been counted at all.
 - **The `type` field's corpus error rate is now estimable: ~1.7%, one-directional.**
   Sheriff has 7 thought-clouds-typed-`dialogue` in 407 groups and no errors the
   other way, against Billions' 2.9% on 136 and Roscoe's premise-inflated 27%. Only

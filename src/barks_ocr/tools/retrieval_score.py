@@ -251,6 +251,45 @@ QUERIES: dict[str, list[tuple[int, str, list[str] | None]]] = {
         (58, "a character eating food", ["208"]),
         (95, "a letterbox", ["199"]),
     ],
+    # 19 of the queries in `docs/retrieval-queries.md` name this title (#98-#116),
+    # plus five any title can answer (#11, #17, #26, #30, #43).  Expected pages
+    # taken from the ART while reading, before any capture record existed.
+    #
+    # This is the only title in the trial with a non-empty `story_cast`, which is
+    # what #17 is here to exercise: the Beagle Boys have to come back from the
+    # closed set rather than from an `other:` free-text name.
+    "The Big Bin on Killmotor Hill": [
+        (11, "Scrooge diving into his money bin", ["041"]),
+        (17, "the Beagle Boys in their masks", ["042", "047"]),
+        # The one panel in the story with no character in frame at all: the burst
+        # fire hydrant in the empty night street, and the bin splitting from outside.
+        (26, "an establishing shot with no characters in frame", ["046"]),
+        (30, "the story's splash page", ["038"]),
+        (43, "a panel containing silhouettes", ["046"]),
+        (98, "an establishing shot", ["038", "047"]),
+        (99, "an acid moat", ["040"]),
+        (100, "a microphone", ["040"]),
+        (101, "a cannon", ["040", "044"]),
+        (102, "a portcullis", ["040"]),
+        (103, "flypaper", ["040"]),
+        (104, "a beartrap", ["040"]),
+        (105, "a drawbridge", ["040", "043", "044"]),
+        (106, "an alarm bell", ["041"]),
+        # Drawn as hearts round Scrooge's head, never named. Committed because the
+        # art plainly shows it; if it misses, that is the emotion result again.
+        (107, "love", ["041"]),
+        (108, "a periscope", ["042", "043"]),
+        (109, "a pickaxe", ["042"]),
+        (110, "a spade", ["042"]),
+        # Same shape as #107: drawn as sobbing, tears and clutched head, never
+        # named as worry.
+        (111, "worry", ["043", "044", "046"]),
+        (112, "wall painting", ["045"]),
+        (113, "a water hose", ["045"]),
+        (114, "character kicking another character", ["045"]),
+        (115, "a fire hydrant", ["046"]),
+        (116, "making a fire with books", ["046"]),
+    ],
 }
 
 # The trial-1 result recorded in `docs/vision-pass.md`, which `--validate` holds

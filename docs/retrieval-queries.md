@@ -227,6 +227,14 @@ Matching is deliberately lexical — no stemmer, no embeddings — because that 
 what trial 1 was scored with. Improving it is a change to the measurement, so it
 waits until all five titles are in and is then applied to all of them at once.
 
+**All five titles are now in** (trial 5, *The Big Bin on Killmotor Hill*,
+2026-08-03), so that condition is met. The five-title tally is **81 hits / 22
+misses**, split **18 not retrieved / 4 not recorded**. Four failure modes are
+documented in `docs/vision-pass.md`: morphology, reader-vocabulary vs
+drawn-vocabulary, tie-truncation, and — new in trial 5 — **compounding**
+(`flypaper` against the comic's own two-word `FLY PAPER`), which a stemmer cannot
+close because the split is in tokenisation rather than in morphology.
+
 Run each query against the capture data and record:
 
 - **hit** — the right page is in the top few results
