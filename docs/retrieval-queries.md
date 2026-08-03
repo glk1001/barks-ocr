@@ -253,8 +253,18 @@ failure the scorer was written to prevent. `lexical` reproduces all five titles
 byte for byte and is frozen.
 
 `v2` adds a Porter stemmer (already available via Whoosh), compound joining and
-IDF-weighted ranking. **81 hits → 85**, five queries fixed and one lost. See
-`docs/vision-pass.md` for what each change bought and what it cost.
+IDF-weighted ranking. **81 hits → 85**, five queries fixed and one lost.
+
+`v3` adds sentence embeddings on top: **85 → 93 of 103**, eight of the twelve
+semantic misses closed and **nothing regressed**. It is not the default, because
+it loads a model; `v2` stays the default for a quick check.
+
+```bash
+barks-ocr-retrieval-score --title "Plenty of Pets" --matcher v3
+```
+
+See `docs/vision-pass.md` for what each change bought, what it cost, and the two
+rounds where the hit count rose for the wrong reasons.
 
 Run each query against the capture data and record:
 

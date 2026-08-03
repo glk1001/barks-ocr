@@ -2423,6 +2423,88 @@ and #93's *hit*/swats.
 **Nothing lexical will close any of them**, which is what makes the remaining
 question a clean one: an embedding either reaches these 12 or the finding stands.
 
+### `v3`: the dense retriever, and it reaches eight of the twelve
+
+Added 2026-08-03. `--matcher v3` adds sentence embeddings
+(`all-mpnet-base-v2` via `sentence-transformers`) alongside `v2`'s lexical rules.
+
+| | lexical | v2 | **v3** |
+|---|---:|---:|---:|
+| hits of 103 | 81 | 85 | **93** |
+
+**Eight of the twelve semantic misses close, and nothing regresses** — every
+`v2` hit is still a hit, on every title. Fixed: #33 *sick*, #34 *sad*,
+#46 *a sound effect*, #51 *colliding*, #57 *scared*, #76 *pain*,
+#98 *an establishing shot*, #107 *love*.
+
+Two are worth singling out. **#107 returns exactly `041` and nothing else** —
+the page whose record says "three red hearts floating around his head", with no
+lexical field matching at all. And **#46 returns exactly its three expected
+pages**, which the trial had filed as *not recorded* because `visible_text` is
+untyped and nothing says `KA-CHOO!` *is* a sound effect; the embedding reaches
+the category without the field being typed. So does **#98**: "establishing shot"
+is never written anywhere, but a wide scene-setting description is close enough
+to the phrase. **Two of the four *not recorded* misses were only ever
+lexically unrecorded** — the content was there, and that is a softer result than
+the trial's "capture never records how a panel is framed".
+
+Three design decisions, each made against a mistake:
+
+- **A page is scored by its best-matching phrase, not by one page vector.**
+  `objects` holds up to twelve unrelated noun phrases; averaging a fly swatter
+  together with everything else matches nothing in particular.
+- **The dense side must clear a sigma above its own title's spread** to propose a
+  page at all. A cosine is never zero, so left unbounded it proposes a full band
+  for every query — on a four-page title that returns three of four pages
+  whatever was asked, and it collapsed the capture-only/speech-answerable split
+  to **zero capture-only on Roscoe**. That split is one of the numbers the trial
+  reports, so it matters more than the hit rate. The gate is relative to the
+  query's own spread rather than a fixed cosine **because a fixed threshold would
+  have to be picked by seeing which value let the expected pages through** — and
+  the queries are the acceptance test. Nothing here is tuned against them.
+- **It backfills; it never displaces.** Reciprocal rank fusion was tried first and
+  rejected on evidence: giving both rankers equal say scored 95, but *lost* #43
+  and #93, pushing correct lexical answers out of a full band. Backfill buys a
+  property worth more than the two queries it forfeits — **a rise in the hit count
+  can now only mean the dense retriever found a page the lexical one missed.**
+
+That last point is the methodological lesson of this whole exercise, and it was
+learnt twice. The first cut of `v2` scored 87 with two false hits; the first cut
+of `v3` scored 95 with two real losses. **Both looked like improvements and both
+needed a per-query trace to see through.** Every change here makes hits easier, so
+the count moves whether or not retrieval got better.
+
+#### What backfill costs, measured
+
+Four of the ten remaining misses are *only* the no-displacement rule, and in each
+the dense retriever **had the correct page** but the lexical band was already full
+of wrong ones: **#82, #55, #95, #112**. Switching to fusion would take them and
+give back #43 and #93. The residue, diagnosed:
+
+| | count | queries |
+|---|---:|---|
+| band full — semantic had it, backfill could not fire | 4 | #82, #55, #95, #112 |
+| band full — semantic proposed nothing | 1 | #11 |
+| semantic proposed nothing or wrong pages | 3 | #93, #35, #111 |
+| negation — unreachable by any retriever | 2 | #26 (×2) |
+
+**#11 is the honest disappointment.** *Scrooge diving into his money bin* is the
+query the design named in advance as the one that must not miss; `diving` against
+"launching himself off the catwalk" embeds at **0.824**, the strongest similarity
+measured anywhere in this work — and it still misses, because the lexical band is
+full of three wrong pages and the gate rejected the rest of the title. The signal
+is there and the band mechanics hide it.
+
+**#111 *worry* is the one genuine semantic failure**, and it is instructive:
+against "flat on his back on the floor, sobbing" it embeds at **0.119**, below
+control pairs chosen to be unrelated (*a cannon* / "a bear trap", 0.199). So does
+#76's *pain* against `YEOWCH!` at **0.079** — an interjection carries no meaning
+the model knows, and #76 only hits by reaching a different phrase. The
+reader-vocabulary finding is therefore **narrowed rather than overturned**: an
+embedding closes the ones where the record describes the thing in words
+(*sad*/"in tears", *sick*/"does not feel well"), and fails where the record is a
+noise or a symbol.
+
 ---
 
 ## Open threads

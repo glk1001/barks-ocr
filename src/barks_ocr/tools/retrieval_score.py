@@ -94,6 +94,7 @@ from barks_ocr.utils.vision_schema import (
     BEATS_KEY,
     CHARACTERS_KEY,
     OBJECTS_KEY,
+    OTHER_PREFIX,
     PANELS_OF_NOTE_KEY,
     SETTING_KEY,
     TIME_OF_DAY_KEY,
@@ -154,6 +155,7 @@ class Matcher:
     compounds: bool = False
     idf: bool = False
     fuzzy: bool = True
+    semantic: bool = False
     # LEXICAL keeps only the pages tied at the maximum score, capped at TOP_BAND,
     # which is what truncated Sheriff's #29 alphabetically. Graded scores make
     # exact ties vanishingly rare, so a max-only band would collapse to a single
@@ -184,8 +186,59 @@ V2 = Matcher(
     ranked_band=True,
 )
 
-MATCHERS = {m.name: m for m in (LEXICAL, V2)}
+V3 = Matcher(
+    name="v3",
+    rules=(
+        "exact",
+        "prefix>=4",
+        "fuzzy>=6",
+        "porter-stem",
+        "compound-join",
+        "idf-weighted",
+        "ranked-band",
+        "semantic-rrf",
+    ),
+    stem=True,
+    compounds=True,
+    idf=True,
+    ranked_band=True,
+    semantic=True,
+)
+
+MATCHERS = {m.name: m for m in (LEXICAL, V2, V3)}
 DEFAULT_MATCHER = V2
+
+# Sentence embeddings for the semantic half of `v3`. Chosen for quality rather
+# than speed: the whole corpus is 66 captured pages and about a hundred queries,
+# so throughput is irrelevant and the larger model is free.
+EMBED_MODEL = "all-mpnet-base-v2"  # cspell:disable-line
+
+# Reciprocal rank fusion, the standard way to combine a lexical and a dense
+# retriever. Deliberately parameter-light: k is the conventional 60 and NOTHING
+# is tuned against the query set. That restraint is the point -- the queries are
+# the acceptance test for the capture layer, so fitting a weight to them would
+# make the test grade its own answer, which is the same error as scoring expected
+# pages from the capture records instead of from the art.
+RRF_K = 60
+
+# A dense retriever always returns a ranking -- a cosine is never zero -- so it
+# has no natural notion of "nothing here". Left unbounded it proposes TOP_BAND
+# pages for every query, which on a four-page title means three of the four come
+# back whatever was asked, and the capture-only/speech-answerable split collapses
+# to nothing. That split is one of the numbers the trial reports, so this matters
+# more than the hit rate.
+#
+# The gate is deliberately **relative to the query's own spread** rather than a
+# fixed cosine: a page must stand out from the other pages of its title by this
+# many standard deviations to be proposed at all. A fixed threshold would have to
+# be picked by looking at which value made the expected pages pass, and the
+# queries are the acceptance test -- fitting to them is the same error as taking
+# expected pages from the capture records instead of from the art. One sigma is
+# the conventional outlier mark, not a tuned value.
+SEMANTIC_SIGMA = 1.0
+
+# A spread needs at least two pages to mean anything.
+MIN_PAGES_FOR_SPREAD = 2
 
 
 # --------------------------------------------------------------------------- #
@@ -395,6 +448,10 @@ TRIAL_1_TITLE = "Roscoe the Robot"
 TRIAL_1_RESULTS: dict[str, dict[str, object]] = {
     "lexical": {"hit": 15, "miss": 1, "missed": [93]},
     "v2": {"hit": 15, "miss": 1, "missed": [93]},
+    # v3 does not move Roscoe: #93 is a four-page title's only miss, and the
+    # semantic gate asks a page to stand a sigma clear of its siblings, which
+    # four pages rarely manage. The calibration is unchanged rather than absent.
+    "v3": {"hit": 15, "miss": 1, "missed": [93]},
 }
 
 
@@ -512,6 +569,15 @@ def _flatten(value: Any) -> str:  # noqa: ANN401 -- capture values are free-form
     return " ".join(_flatten_parts(value))
 
 
+def _readable(part: str) -> str:
+    """Return a capture phrase as plain language, for encoding.
+
+    Strips the ``other:`` prefix, which marks a value as outside the closed
+    vocabulary and means nothing to a language model, and flattens newlines.
+    """
+    return " ".join(part.strip().removeprefix(OTHER_PREFIX).split())
+
+
 def _index_title(
     title_str: str, engine: OcrTypes, matcher: Matcher = LEXICAL
 ) -> dict[str, dict[str, Any]]:
@@ -546,6 +612,20 @@ def _index_title(
                 else set()
             ),
             "speech_compounds": _compound_tokens(speech_parts) if matcher.compounds else set(),
+            # Kept as separate phrases for the dense retriever, which scores a
+            # page by its best-matching phrase rather than by one page vector.
+            # `characters` and `setting` carry an `other:` prefix that is schema
+            # bookkeeping rather than language, so it is dropped before encoding.
+            "capture_parts": (
+                [_readable(p) for parts in field_parts.values() for p in parts if _readable(p)]
+                if matcher.semantic
+                else []
+            ),
+            "speech_parts": (
+                [p.replace("\n", " ").strip() for p in speech_parts if p.strip()]
+                if matcher.semantic
+                else []
+            ),
         }
     return dict(sorted(index.items()))
 
@@ -596,6 +676,91 @@ def _page_score(
     return total
 
 
+_MODEL: Any = None
+
+
+def _model() -> Any:  # noqa: ANN401 -- SentenceTransformer, imported lazily.
+    """Return the sentence-embedding model, loading it once.
+
+    Imported and loaded lazily so ``lexical`` and ``v2`` -- which is the default
+    and needs none of this -- pay neither the import nor the several seconds of
+    model load.
+    """
+    global _MODEL  # noqa: PLW0603 -- a process-wide cache for a multi-second load.
+    if _MODEL is None:
+        from sentence_transformers import SentenceTransformer  # noqa: PLC0415
+
+        _MODEL = SentenceTransformer(EMBED_MODEL)
+    return _MODEL
+
+
+def _phrase_ranking(query: str, index: dict[str, dict[str, Any]], layer: str) -> list[str]:
+    """Rank pages by their best-matching phrase, semantically.
+
+    A page is scored by the **maximum** similarity over its own phrases, not by
+    one vector for the whole page. That matters: ``objects`` holds up to twelve
+    unrelated noun phrases and ``beats`` up to three sentences, so a single
+    page-level vector would average a fly swatter together with everything else
+    and match nothing in particular. The queries are short and specific, so the
+    right question is whether *some one thing* on the page matches.
+    """
+    pages = [p for p, blobs in index.items() if blobs[f"{layer}_parts"]]
+    if not pages:
+        return []
+    model = _model()
+    flat: list[str] = []
+    owner: list[str] = []
+    for page in pages:
+        for phrase in index[page][f"{layer}_parts"]:
+            flat.append(phrase)
+            owner.append(page)
+
+    vectors = model.encode(flat, normalize_embeddings=True, show_progress_bar=False)
+    query_vector = model.encode([query], normalize_embeddings=True, show_progress_bar=False)[0]
+    best: dict[str, float] = {}
+    for page, vector in zip(owner, vectors, strict=True):
+        score = float(vector @ query_vector)
+        if score > best.get(page, -1.0):
+            best[page] = score
+
+    values = list(best.values())
+    if len(values) < MIN_PAGES_FOR_SPREAD:
+        return []
+    mean = sum(values) / len(values)
+    spread = math.sqrt(sum((v - mean) ** 2 for v in values) / len(values))
+    if spread == 0.0:
+        return []
+    floor = mean + SEMANTIC_SIGMA * spread
+    standout = {page: score for page, score in best.items() if score >= floor}
+    return [page for page, _score in sorted(standout.items(), key=lambda kv: (-kv[1], kv[0]))]
+
+
+def _fuse(lexical: list[str], semantic: list[str]) -> list[str]:
+    """Fill the band with the lexical ranking, then top it up semantically.
+
+    The dense retriever **backfills; it never displaces**. Reciprocal rank fusion
+    was tried first and rejected on evidence: giving both rankers equal say let
+    the semantic side push a correct lexical answer out of a full band, which cost
+    Big Bin's #43 while buying wins elsewhere. That is the wrong trade, because
+    the dense retriever was added to reach queries the lexical one *cannot* --
+    re-ranking the ones it already answers is outside the problem it was brought
+    in for.
+
+    It also buys a property worth more than the queries it forfeits: under
+    backfill a rise in the hit count can only mean the dense retriever found a
+    page the lexical one missed. Two earlier rounds of this work produced hit-rate
+    rises that turned out to be artifacts of a looser band, and each took a
+    per-token trace to expose. This design cannot produce that class of result.
+    """
+    band = list(lexical[:TOP_BAND])
+    for page in semantic:
+        if len(band) >= TOP_BAND:
+            break
+        if page not in band:
+            band.append(page)
+    return band
+
+
 def _search(
     query: str, index: dict[str, dict[str, Any]], layer: str, matcher: Matcher = LEXICAL
 ) -> list[str]:
@@ -611,9 +776,15 @@ def _search(
         )
         > 0
     ]
+    ranked = sorted(scored, key=lambda s: (-s[0], s[1]))
+    if matcher.semantic:
+        # Fused even when the lexical side is empty: a query whose words appear
+        # nowhere is exactly the case the dense retriever exists for. If neither
+        # side proposes anything the result is still empty, so "no match" stays
+        # expressible.
+        return _fuse([page for _score, page in ranked], _phrase_ranking(query, index, layer))
     if not scored:
         return []
-    ranked = sorted(scored, key=lambda s: (-s[0], s[1]))
     if matcher.ranked_band:
         return [page for _score, page in ranked[:TOP_BAND]]
     best = max(score for score, _page in scored)
