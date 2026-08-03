@@ -159,7 +159,11 @@ class Selectors:
             self.nephews and call.speaker not in NEPHEW_NAMES,
             self.speakers and speaker_key(call.speaker) not in self.speakers,
             self.unreviewed and call.reviewed,
-            self.missing_evidence and call.has_evidence,
+            # `none` is exempt from `identified_by` in the validator -- nobody
+            # said it, so there is no evidence to name -- and a queue that offers
+            # those groups anyway disagrees with the schema and pads the backlog
+            # by 156 groups nobody should open.
+            self.missing_evidence and (call.has_evidence or call.speaker == "none"),
             self.confidences and call.confidence not in self.confidences,
         )
         return not any(rejected)
