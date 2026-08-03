@@ -2579,6 +2579,79 @@ call for a stated reason is worth more than agreeing silently.
 143 `other:` calls remain unreviewed, and the corpus-wide `identified_by`
 backfill is still outstanding — `--missing-evidence` returns 948.
 
+### The collective audit: 0 errors in 47, and 9 recoverable identifications
+
+Reviewed 2026-08-03, the last of the three populations. Sampled **per title
+rather than per name**, because the collective is a single speaker value —
+`--per-name` would have returned three groups — and the thing that varies is how
+a title draws its caps.
+
+```bash
+barks-ocr-speaker-queue --collective --unreviewed --per-title 10
+```
+
+**Not one call is a real error.** Across 47 reviewed, `nephews` is never given to
+somebody who is not a nephew. In the direction that matters the collective is
+completely safe, which is what the rule was written to guarantee.
+
+All 9 corrections are the *other* thing: `nephews` where the art did name one
+after all. That is over-caution, not error — and it is **recoverable**, as this
+review just demonstrated. The asymmetry the collective rule was built on
+("a guess is unrecoverable, a collective is not") is therefore holding exactly as
+designed, and 19% recoverable loss against 0% unrecoverable error is arguably the
+correct operating point rather than a fault.
+
+**The per-title sample earned itself**, because the result varies almost entirely
+on the axis it was spread across:
+
+| title | reviewed | over-caution | why |
+|---|---:|---:|---|
+| Sheriff of Bullet Valley | 10 | **6** | caps readable on many pages |
+| Plenty of Pets | 11 | 2 | caps near-black with a small unreliable flash |
+| The Big Bin on Killmotor Hill | 7 | 1 | mixed; several bare-headed panels |
+| **Billions to Sneeze At** | 10 | **0** | nephews drawn **capless throughout** |
+
+Billions returning zero is the control working: where the art gives no cap, the
+collective is forced and cannot be over-used. Sheriff returning 6 in 10 is the
+finding.
+
+#### Three of the nine are the panel-wide colour rule over-firing
+
+This is the actionable part, and it is visible in the data rather than inferred.
+Sheriff's rule — *if two nephews in one panel show the same colour, or a cap
+shows a non-roster colour, colour is not evidence **in that panel*** — was applied
+panel-wide. In three of the corrected panels a **sibling group is still
+`nephews`**:
+
+| | corrected | siblings left as `nephews` |
+|---|---|---|
+| Sheriff `161` p4 | `g6` → Huey | `g5` |
+| Sheriff `162` p1 | `g1` → Louie | `g0`, `g2` |
+| Plenty of Pets `203` p7 | `g10` → Louie | `g8`, `g9` |
+
+Two of those panels are the very ones this document lists as colourist slips. So
+the mechanism is exact: **one nephew's cap was unreadable, and the rule discarded
+colour for every nephew in the panel — including ones whose caps were perfectly
+clear.** The reviewer could name one and not the others, which is precisely what
+a per-cap rule would have produced in the first place.
+
+**The fix is a narrowing, not a loosening**, and it costs nothing in safety:
+apply "colour is not evidence" to *the caps that are actually ambiguous*, not to
+the panel. The pilot's failure — naming a nephew whose cap could not be read —
+stays refused, because that cap is still ambiguous. Worth doing before the corpus
+run, since it is a reading rule rather than a schema change.
+
+The other six are plain over-caution with no panel rule involved: a nephew alone
+or nearly alone in frame, with a readable cap, called collectively anyway. One of
+them (`038 g9`) is from this session's own Big Bin read, where the note recorded
+"caps drawn near-solid black with only a small colour flash" and declined to
+name — and the flash was red enough.
+
+One reviewer note is worth quoting, because it marks the honest edge of the
+finding. On Sheriff `144 g8`: *"The blue color is not really visible except by
+zooming in. In a case like this 'nephews' would have been an acceptable answer."*
+So of the nine, at least one is a judgement call rather than a clear miss.
+
 ### The cost: the five read titles can no longer be re-applied
 
 Making `identified_by` required means every `result.json` from the five-title
@@ -2917,10 +2990,21 @@ noise or a symbol.
   general finding**: every other error rate in this document comes from the ~4% of
   groups that get queued, so the same question is open for `other:` speakers and
   for the collective, neither of which has ever been audited.
-  **`other:` was audited 2026-08-03: 1 wrong in 53 (1.9%)**, against the nephew
-  high band's 5 in 50. A free-form speaker is roughly five times safer than a
-  named nephew, which is the good news for corpus scale since `other:` is the
-  larger population there. **The collective is still unaudited** — 113 calls.
+  **Both were audited 2026-08-03 and the question is now closed.** `other:` came
+  back **1 wrong in 53 (1.9%)** against the nephew high band's 5 in 50 — a
+  free-form speaker is roughly five times safer than a named nephew, which is the
+  good news for corpus scale since `other:` is the larger population there. The
+  **collective came back 0 errors in 47**: it is never given to a non-nephew.
+  Its 9 corrections are all over-caution, and 3 of those are the panel-wide
+  colour rule suppressing readable caps alongside unreadable ones.
+- **The panel-wide colour rule is too blunt, and narrowing it is free.** Sheriff's
+  rule discards colour for *every* nephew in a panel where any cap is ambiguous.
+  The collective audit shows the cost directly: in three corrected panels a
+  sibling group is still `nephews`, so one unreadable cap suppressed a clear one.
+  Applying it per cap rather than per panel recovers those identifications while
+  leaving the pilot's failure — naming a nephew whose own cap cannot be read —
+  refused exactly as now. A reading rule, so it costs nothing to change before
+  the corpus run.
 - **Blue is over-called, not most legible.** *Sheriff* concluded blue was the most
   readable cap because it was recorded most often (19 of 37). The audit says the
   opposite: blue is where the errors are. Worth a line in `roster.txt` warning
