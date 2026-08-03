@@ -2652,6 +2652,44 @@ finding. On Sheriff `144 g8`: *"The blue color is not really visible except by
 zooming in. In a case like this 'nephews' would have been an acceptable answer."*
 So of the nine, at least one is a judgement call rather than a clear miss.
 
+### The classification audit: 0 in 47, and the prediction was wrong
+
+Reviewed 2026-08-03, the fourth and last population: the 156 `none` calls and 56
+`narrator` calls, sampled eight per title across all six.
+
+```bash
+barks-ocr-speaker-queue --speaker none,narrator --unreviewed --per-title 8
+```
+
+**47 reviewed, zero corrections.** This was predicted to be the highest-yield
+population left, on the reasoning that these are *classification* rather than
+identification calls — "does a character make this noise?" is applied by
+judgement on every sound effect, and the trial had already turned up several
+where the answer was yes: Sheriff's `YEOWCH!` from a rider, *Plenty of Pets*'
+`YEEK! YOWCH!` from the burglar, Big Bin's `ROOT SNORT` from Scrooge, the
+nephews' `ZZZ`.
+
+**The prediction was wrong, and the record already contained the reason.** Every
+one of those cases was *caught during reading* and written up at the time. They
+were caught because the test is easy once it is asked — not because it is hard.
+
+### Four audits, and they agree about where the risk is
+
+| population | reviewed | wrong |
+|---|---:|---:|
+| named nephews, high band | 50 | **5 (10%)** |
+| `other:` | 53 | 1 (1.9%) |
+| collective | 47 | 0 errors (9 over-caution) |
+| `none` / `narrator` | 47 | **0** |
+
+Three of the four return essentially nothing, and the one that does not is the
+one where the question is *which of several similar figures is this*. **Speaker
+error lives in visual discrimination and almost nowhere else** — not in free-form
+naming, not in the collective, not in classification. That is a more useful
+result than any single rate, and it is the argument for stopping here: auditing
+Donald's remaining 259 calls would test the easiest discrimination in the corpus
+at five times the cost of anything above.
+
 ### The cost: the five read titles can no longer be re-applied
 
 Making `identified_by` required means every `result.json` from the five-title
@@ -2997,14 +3035,21 @@ noise or a symbol.
   **collective came back 0 errors in 47**: it is never given to a non-nephew.
   Its 9 corrections are all over-caution, and 3 of those are the panel-wide
   colour rule suppressing readable caps alongside unreadable ones.
-- **The panel-wide colour rule is too blunt, and narrowing it is free.** Sheriff's
-  rule discards colour for *every* nephew in a panel where any cap is ambiguous.
-  The collective audit shows the cost directly: in three corrected panels a
-  sibling group is still `nephews`, so one unreadable cap suppressed a clear one.
-  Applying it per cap rather than per panel recovers those identifications while
-  leaving the pilot's failure — naming a nephew whose own cap cannot be read —
-  refused exactly as now. A reading rule, so it costs nothing to change before
-  the corpus run.
+- ~~**The panel-wide colour rule is too blunt.**~~ **Fixed 2026-08-03, and the
+  root cause was worse than the rule.** Going to change it revealed that the rule
+  **was never in `roster.txt` at all** — it existed only as prose in this document
+  describing what one session had done, so every later session had to read that
+  and re-derive it. The panel-wide form it kept being re-derived in cost 9
+  identifications, 3 of them a clear cap suppressed by an unreadable one beside
+  it. It is now rendered into `roster.txt` from `vision_schema.py` in its
+  per-cap form: judge each cap on its own, and a nephew beside an unreadable cap
+  is still nameable if his own is plainly red. The guard the rule exists for is
+  untouched — a nephew whose *own* cap cannot be read still cannot be named, so
+  the pilot's failure stays refused.
+  This is the document's own lesson landing on the document: **a rule a generator
+  cannot read is a rule a generator will break.** Two rules had already been moved
+  into `roster.txt` for exactly this reason; this one was missed because it read
+  like a finding rather than an instruction.
 - **Blue is over-called, not most legible.** *Sheriff* concluded blue was the most
   readable cap because it was recorded most often (19 of 37). The audit says the
   opposite: blue is where the errors are. Worth a line in `roster.txt` warning

@@ -276,7 +276,12 @@ CAPTURE_RULES_KEY = "capture_rules"
 # tooling will accept, so a page can be told apart from one read under older
 # rules.  `CAPTURE_RULES` spells the same thing out in names, because a bare
 # integer tells a future reader nothing about what changed.
-CAPTURE_PROMPT_VERSION = 3
+# Bumped rather than amended even though **no page was ever read under 3**: it
+# was committed, so a checkout at that commit would read pages calling themselves
+# v3 under a different rule set, which is the one ambiguity the number exists to
+# prevent. A version costs nothing; a version that means two things costs the
+# whole scheme. Expect the status report to show unstamped, 2, then 4.
+CAPTURE_PROMPT_VERSION = 4
 
 # The rules in force that change what the pass does, newest last.  Add an entry and bump the version
 # above in the same commit.
@@ -300,6 +305,12 @@ CAPTURE_RULES: tuple[str, ...] = (
     # `panels_of_note` names the shot where the framing is the point. The five-
     # title trial's only *not recorded* misses were both queries asking for one.
     "framing-vocabulary",
+    # Cap colour is judged per cap, not per panel. Until now this rule existed
+    # only as prose in `docs/vision-pass.md` describing what one session had
+    # done, so every later session had to re-derive it -- and the panel-wide
+    # form it kept being re-derived in cost 9 identifications, 3 of them a clear
+    # cap suppressed by an unreadable one beside it.
+    "per-cap-colour",
 )
 
 
@@ -572,6 +583,19 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  so it is not a low-confidence call. Being unsure which nephew is exactly what",
         "  `nephews` is for; a guess at a name is unrecoverable, a collective is not.",
         f"cap_colour — one of: {', '.join(CAP_COLOUR_OPTIONS)}, or null when no cap is visible",
+        "  Judge each cap ON ITS OWN. A nephew whose cap is not drawn, is lost in",
+        "  shadow, or prints a colour that is not one of the three cannot be named",
+        "  from colour -- but a nephew standing beside him whose cap is plainly red",
+        "  still can. Do NOT discard colour for the whole panel because one cap in",
+        "  it is unreadable.",
+        "  Measured: reviewing the collective found 9 identifications the pass",
+        "  declined to make although the art named them, and 3 of those were a",
+        "  clear cap suppressed by an unreadable one in the same panel.",
+        "  The printed colours are genuinely unreliable, so this is not licence",
+        "  to guess:",
+        "  two nephews printed the same colour tells you nothing about either, and",
+        "  an orange-gold cap is not a roster colour. Those caps are unreadable.",
+        "  The rest of the panel is unaffected.",
         f"{IDENTIFIED_BY_KEY} — what the call actually rests on. A list, because a real",
         "  call usually rests on more than one thing. One or more of:",
         *[
