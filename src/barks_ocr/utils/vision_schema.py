@@ -276,12 +276,13 @@ CAPTURE_RULES_KEY = "capture_rules"
 # tooling will accept, so a page can be told apart from one read under older
 # rules.  `CAPTURE_RULES` spells the same thing out in names, because a bare
 # integer tells a future reader nothing about what changed.
-# Bumped rather than amended even though **no page was ever read under 3**: it
-# was committed, so a checkout at that commit would read pages calling themselves
-# v3 under a different rule set, which is the one ambiguity the number exists to
-# prevent. A version costs nothing; a version that means two things costs the
-# whole scheme. Expect the status report to show unstamped, 2, then 4.
-CAPTURE_PROMPT_VERSION = 4
+# Bumped on every committed rule change, including ones no page was ever read
+# under -- 3 and 4 are both empty cohorts. Amending a committed version instead
+# would let a checkout at that commit read pages calling themselves v3 under a
+# different rule set, which is the single ambiguity the number exists to prevent.
+# A version costs nothing; a version that means two things costs the whole
+# scheme. An empty cohort simply never appears in the status report.
+CAPTURE_PROMPT_VERSION = 5
 
 # The rules in force that change what the pass does, newest last.  Add an entry and bump the version
 # above in the same commit.
@@ -311,6 +312,11 @@ CAPTURE_RULES: tuple[str, ...] = (
     # form it kept being re-derived in cost 9 identifications, 3 of them a clear
     # cap suppressed by an unreadable one beside it.
     "per-cap-colour",
+    # Balloon order and left-to-right position are not evidence for who speaks;
+    # an untraceable tail means the collective. Every one of the 11 nephew calls
+    # corrected on the 1942 pilot had been assigned by order rather than by tail,
+    # which stayed invisible until evidence had to be recorded per call.
+    "no-reading-order",
 )
 
 
@@ -582,6 +588,18 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  of the three it is, the answer is `nephews` — and you are not unsure of that,",
         "  so it is not a low-confidence call. Being unsure which nephew is exactly what",
         "  `nephews` is for; a guess at a name is unrecoverable, a collective is not.",
+        "",
+        "  READING ORDER IS NOT EVIDENCE. The order the balloons are read in, and",
+        "  where a figure stands left to right, tell you NOTHING about who speaks.",
+        "  Trace each tail to a figure. If you cannot, the answer is `nephews`.",
+        "  Measured: on a 1942 story every one of 11 nephew calls a reviewer",
+        "  corrected had been assigned this way — three consecutive balloons came",
+        "  out as a clean rotation of the three names — and the notes said so:",
+        '  "the cap-colour convention plus balloon-tail order", "the middle of the',
+        '  three-balloon chain", "readable left to right".',
+        "  It goes unnoticed in the later stories because their tails are drawn",
+        "  precisely enough that reading order usually agrees with the art. In the",
+        "  early ones it does not, and every disagreement is a wrong name.",
         f"cap_colour — one of: {', '.join(CAP_COLOUR_OPTIONS)}, or null when no cap is visible",
         "  Judge each cap ON ITS OWN. A nephew whose cap is not drawn, is lost in",
         "  shadow, or prints a colour that is not one of the three cannot be named",

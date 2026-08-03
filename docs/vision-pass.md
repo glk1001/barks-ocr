@@ -2730,13 +2730,20 @@ where the pass named a specific nephew it had the *names in the wrong rotation*.
 The collective rule fixed the symptom that was measured; the reading-order
 substitution was never visible until evidence had to be recorded for each call.
 
-**A rule worth adding before the corpus run**, and it is the same shape as the
+**Added 2026-08-03 as `no-reading-order`**, and it is the same shape as the
 per-cap fix: *balloon order and left-to-right position are not evidence.* If a
 tail cannot be traced to a figure, the answer is the collective — which is what
-`nephews` has always been for. Deliberately **not** proposed as a new
-`identified_by` kind: recording "reading order" as legitimate evidence would
-license the thing that went wrong. Vols 1-5 are ~1942-47 and are where this will
-bite.
+`nephews` has always been for. It is rendered into `roster.txt` with the measured
+finding attached, so the pass is told what went wrong rather than only what to
+do.
+
+Deliberately **not** a new `identified_by` kind: recording "reading order" as
+legitimate evidence would license the thing that went wrong. There is no way to
+say a call rested on position, and that is the point — a call that can only rest
+on position is a collective.
+
+Vols 1-5 are roughly 1942-47 and are where this will bite. `capture_prompt_version`
+goes to **5**.
 
 ### Four audits, and they agree about where the risk is
 
