@@ -75,8 +75,9 @@ EM_DASH = "—"
 # What may sit next to an em-dash. A line break or either edge of the text
 # counts, so the wrapped and interrupted forms both pass.
 _EM_DASH_BREAK_CHARS = frozenset({" ", "\n"})
-_TERMINAL_PUNCTUATION = frozenset({"!", "?"})
-_ADRIFT_PUNCTUATION_RE = re.compile(r"\s+[!?]")
+# After the dash, one hugging exception: interrupted speech ending a quotation
+# closes straight onto the quote — 'PREPARE TO GET SICK —"'.
+_EM_DASH_AFTER_CHARS = _EM_DASH_BREAK_CHARS | {'"'}
 _HYPHEN_RUN_RE = re.compile(r"-{2,}")
 
 
@@ -119,16 +120,17 @@ def has_dot_at_end_of_sentence(group: dict) -> bool:
 def has_em_dash_spacing_error(group: dict) -> bool:
     """Whether any em-dash is spaced against the corpus convention.
 
-    One rule, replacing two narrower regexes. An em-dash must be preceded by a
-    space, a line break or the start of the text, and followed by one of those,
-    the end of the text, or terminal punctuation it hugs ("BEHIND -!"). What it
-    must not do is float away from that punctuation ("WHAT GEEFS - ?").
+    The convention (GLK, 2026-08-03): an em-dash is separated by a space, a
+    line break or a text edge from whatever sits next to it — letters and
+    punctuation alike, so "WHAT GEEFS — ?" is right and "BOOK —!" is wrong.
+    The one exception is a closing double quote, which hugs the dash when
+    interrupted speech ends a quotation: 'PREPARE TO GET SICK —"'.
 
-    The convention is overwhelming — 5599 spaced both sides, 2566 ending a line,
-    2000 ending the text. The old pair missed ~400 real breaches (a word run
-    straight into a dash, doubled dashes) while flagging 191 occurrences of
-    "OUT! - UH, OH!", which is correct usage: 60 of the 75 acknowledgements in
-    the corpus were dismissals of exactly that false positive.
+    An earlier rule had the punctuation cases backwards — it accepted the
+    hugging form and flagged the spaced one as adrift. Measured on the
+    reviewed vols 1-18 before flipping: 78 hugging groups it waved through
+    become errors, and the 16 spaced and 30 quote-hugging groups it wrongly
+    flagged come clean.
     """
     ai_text = _plain_text(group)
     for match in re.finditer(EM_DASH, ai_text):
@@ -138,14 +140,8 @@ def has_em_dash_spacing_error(group: dict) -> bool:
             return True
 
         rest = ai_text[match.end() :]
-        if not rest:
-            continue  # the dash ends the text: interrupted speech
-        if rest[0] in _TERMINAL_PUNCTUATION:
-            continue  # hugging its punctuation: "BEHIND -!"
-        if rest[0] not in _EM_DASH_BREAK_CHARS:
-            return True  # runs straight into a word, or another dash
-        if _ADRIFT_PUNCTUATION_RE.match(rest):
-            return True  # "WHAT GEEFS - ?"
+        if rest and rest[0] not in _EM_DASH_AFTER_CHARS:
+            return True  # runs into a word, punctuation, or another dash
 
     return False
 

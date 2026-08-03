@@ -87,9 +87,20 @@ Reproduce: `scripts/old_vs_new.py <volumes>` → `outputs/old-vs-new-per-volume-
 ## The em-dash rule, and what measuring it changed
 
 Two regexes became one positive rule: an em-dash needs a space, line break or
-text edge before it, and one of those, the end of the text, or terminal
-punctuation it hugs (`BEHIND —!`) after it. What it may not do is drift away from
-that punctuation (`WHAT GEEFS — ?`).
+text edge on **both** sides — punctuation included, so `WHAT GEEFS — ?` is
+right and `BOOK —!` is wrong. The single exception is a closing double quote
+hugging the dash when interrupted speech ends a quotation: `GET SICK —"`.
+
+**2026-08-03: the punctuation cases were flipped.** The rule as first written
+accepted the hugging form (`—!`) and flagged the spaced form (`— ?`) as
+"adrift" — backwards against GLK's actual convention. Measured on the reviewed
+vols 1-18 before adopting the flip: 78 hugging groups the old rule waved
+through become errors, and the 16 spaced and 30 quote-hugging groups it
+wrongly flagged come clean. The 5:1 corpus lean toward hugging is not
+evidence for hugging — that form was never flagged, so review never touched
+it, while the spaced form survived *despite* being flagged. The table below
+predates the flip; its context counts are still accurate, only the
+correct/wrong verdicts on `—!` and `— !` have swapped.
 
 Measured contexts, which is what settled the rule:
 
