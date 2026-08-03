@@ -23,7 +23,7 @@ which *kinds* of call are unreliable -- by taking a few of each distinct name.
 ```bash
 barks-ocr-speaker-queue --other --per-name 3 --out ~/barks-vision/other-audit.txt
 barks-ocr-speaker-queue --volume 6 --confidence low,medium
-barks-ocr-speaker-queue --collective --unreviewed
+barks-ocr-speaker-queue --collective --unreviewed --per-title 10
 ```
 
 Read-only apart from the queue file it writes.
@@ -31,6 +31,7 @@ Read-only apart from the queue file it writes.
 
 import sys
 from collections import Counter, defaultdict
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Annotated
@@ -155,25 +156,54 @@ class Selectors:
         return not (self.confidences and call.confidence not in self.confidences)
 
 
-def _sample(calls: list[Call], per_name: int) -> list[Call]:
-    """Take at most *per_name* calls of each distinct speaker, spread across pages.
+def _cap(calls: list[Call], bucket: Callable[[Call], str], limit: int) -> list[Call]:
+    """Keep at most *limit* calls per bucket, spread across pages.
 
     Unreviewed first, then evenly through the pages rather than clustered on
-    one: three calls from a single page test one panel, not one name.
+    one: three calls from a single page test one panel, not one bucket.
     """
-    by_name: dict[str, list[Call]] = defaultdict(list)
+    grouped: dict[str, list[Call]] = defaultdict(list)
     for call in calls:
-        by_name[call.speaker].append(call)
+        grouped[bucket(call)].append(call)
 
     picked: list[Call] = []
-    for rows in by_name.values():
+    for rows in grouped.values():
         # Numeric on the group id, matching how the queue lines are ordered:
         # sorted as text, group 10 would come before group 5 and the sample
         # would depend on an ordering nobody intended.
         rows.sort(key=lambda c: (c.reviewed, c.fanta_page, int(c.group_id)))
-        step = max(1, len(rows) // per_name)
-        picked.extend(rows[::step][:per_name])
+        step = max(1, len(rows) // limit)
+        picked.extend(rows[::step][:limit])
     return picked
+
+
+def _sample(calls: list[Call], per_name: int, per_title: int) -> list[Call]:
+    """Thin the queue so no one bucket dominates it.
+
+    **Which bucket depends on the population**, and getting that wrong makes the
+    flag useless rather than merely suboptimal.
+
+    ``--per-name`` is right when many speakers share a queue and one of them is
+    most of it: the free-form calls are 22 names of which one is 54 of 197, so
+    capping per name covers every name in a fraction of the groups.
+
+    ``--per-title`` is right when the queue is **one** speaker and the thing that
+    varies is the story. The collective is the case: `nephews` is a single value,
+    so ``--per-name`` would return that many calls in total and nothing else --
+    but Sheriff is 47 of the 102, and whether the collective was the right answer
+    depends almost entirely on how a title draws its caps. Billions draws them
+    capless throughout so the collective is forced; Sheriff's are readable on
+    many pages, which is where over-caution would show. Sampling per title puts
+    each drawing style in the sample.
+
+    Given both, the caps apply in turn -- name first, then title -- so the title
+    cap is exact and the name cap is an upper bound.
+    """
+    if per_name > 0:
+        calls = _cap(calls, lambda c: c.speaker, per_name)
+    if per_title > 0:
+        calls = _cap(calls, lambda c: c.title, per_title)
+    return calls
 
 
 @app.command(help="Build a kivy-editor speaker-review queue from what is already annotated.")
@@ -206,6 +236,14 @@ def main(  # noqa: PLR0913
             help="Sample at most this many of each distinct speaker. 0 takes everything.",
         ),
     ] = 0,
+    per_title: Annotated[
+        int,
+        typer.Option(
+            "--per-title",
+            help="Sample at most this many from each title. Use for single-speaker"
+            " queues like --collective, where --per-name has nothing to spread across.",
+        ),
+    ] = 0,
     missing_evidence: Annotated[
         bool,
         typer.Option("--missing-evidence", help=f"Only calls with no {IDENTIFIED_BY_KEY}."),
@@ -233,7 +271,7 @@ def main(  # noqa: PLR0913
         print("No calls match those selectors.")
         raise typer.Exit(code=1)
 
-    selected = _sample(calls, per_name) if per_name > 0 else calls
+    selected = _sample(calls, per_name, per_title)
 
     # Grouped by risk class, so stopping half way still leaves a complete answer
     # for the kinds already walked rather than a random half of everything.
@@ -258,6 +296,18 @@ def main(  # noqa: PLR0913
     print(f"{annotated} annotated call(s) across {len(titles)} title(s); {len(selected)} queued.")
     for label, count in sorted(tally.items()):
         print(f"  {count:>3}  {label}")
+
+    # Also by title, since a single-speaker queue -- the collective is the case --
+    # collapses the breakdown above to one uninformative line, and the title is
+    # then the axis the sample was actually spread across.
+    per_title_tally = Counter(call.title for call in selected)
+    available = Counter(call.title for call in calls)
+    if len(per_title_tally) > 1:
+        print("\n  by title:")
+        for title_name, count in sorted(per_title_tally.items()):
+            of = available[title_name]
+            suffix = f" of {of}" if count != of else ""
+            print(f"    {count:>3}{suffix:<8}  {title_name}")
     print(f'\nWrote "{out}".')
     print(f"  uv run barks-ocr-kivy-editor -- --queue-file {out}")
 
