@@ -1494,6 +1494,73 @@ neither error. There is no free validator in the stored fields — unsurprising 
 hindsight, since it was built to catch a colour failure and these are not colour
 failures.
 
+### The high-confidence audit: 5 wrong in 50, and the risky configuration is the opposite of the expected one
+
+Run 2026-08-03 on all 50 unreviewed individual-nephew calls at `high`. This is
+the first time the high band has ever been looked at.
+
+| | |
+|---|---:|
+| queued | 50 |
+| confirmed | 45 |
+| **corrected** | **5 (10%)** |
+
+**10% is not clean.** The high band is better than the medium band's 33% but it
+is not the safe population the confidence label implies, and every error rate
+before this one was measured on the ~4% of groups that get queued.
+
+Split by panel configuration — classified as the *pass* wrote it, not as the disk
+reads after correction — the result inverts the hypothesis that produced it:
+
+| panel | calls | wrong |
+|---|---:|---:|
+| two or three nephews speaking, tails converging | 33 | **1 (3%)** |
+| **one nephew speaking, no sibling in the panel** | **17** | **4 (24%)** |
+
+The pass is not worse at crowded panels; it is worse at empty ones. Three caps
+side by side are read *against each other*, and a lone cap is read against
+nothing:
+
+```
+155 g2   Louie(green) -> Dewey(blue)
+158 g9   Dewey(blue)  -> Louie(green)
+159 g1   Louie(green) -> Dewey(blue)
+163 g2   Dewey(blue)  -> Huey(red)
+208 g3   Dewey        -> nephews      (two tails on two nephews, genuinely unresolvable)
+```
+
+**All four swaps involve blue, and three are blue↔green in both directions.** That
+directly contradicts *Sheriff*'s reading that blue was the most legible colour
+because it was recorded most often (19 of 37). It is the most **over-called** one:
+on the restored colour, green in shadow prints close enough to blue to take it,
+and with no neighbouring cap for reference the pass commits.
+
+`208 g3` is the fifth and is a different animal — two tails landing on two
+different nephews, which is exactly what `nephews` is for. It was `high`, so
+**neither the low/medium queue nor the new rule below would have caught it**; only
+this exhaustive audit did. At 1 in 33 it is not worth tripling the review queue
+to reach, and that is a deliberate acceptance rather than an oversight.
+
+### The rule this bought
+
+`--queue-speakers` now also queues **an individual nephew named on a cap colour
+with no other nephew speaking in the same panel**, whatever confidence the pass
+gave it. Everything it needs is already stored — `speaker`, `cap_colour`,
+`panel_num` — so it needs no new field.
+
+Replayed against the audit it queues **4 of the 5** corrections. Its cost is
+small and, usefully, concentrated where the risk is:
+
+| title | groups queued |
+|---|---|
+| Sheriff of Bullet Valley | 19 of 407 (4.7%) |
+| Plenty of Pets | 2 of 144 (1.4%) |
+| Billions, Roscoe | 0 — neither names an individual nephew at all |
+
+`speaker_confidence` is deliberately **not** rewritten. It records what the pass
+believed; this rule is the reviewer knowing something about the configuration
+that the pass could not.
+
 **This is a different population from Sheriff's, and that is the finding.**
 Sheriff's 14 were 9 adults, 5 nephews. These 6 are **4 nephews, 1 adult-ish
 offstage shout, and 1 placed by dialogue** — back to the pilot's shape, because
@@ -1937,13 +2004,21 @@ vision pass has just looked at closely.
   "the cap cannot be read" but **"several balloons converge over adjacent
   nephews"**, where `nephews` is the honest answer however legible the caps are.
   Not worth writing until the audit below says how common this is.
-- **50 high-confidence individual-nephew calls have never been reviewed**, and
-  **36 of them sit in panels naming more than one nephew** — the exact
-  configuration that produced both known errors. Every error rate in this document
-  comes from the low/medium band, about 4% of annotated groups, so the
-  high-confidence population is entirely unmeasured. Queued to
-  `~/barks-vision/high-confidence-nephews.txt`. This is the measurement that says
-  whether the tail problem is a curiosity or the main remaining speaker risk.
+- ~~**50 high-confidence individual-nephew calls have never been reviewed.**~~
+  **Done 2026-08-03: 5 wrong in 50 (10%)**, and the answer inverted the guess that
+  motivated it. Crowded panels are *safe* (1 in 33); a nephew speaking alone in a
+  panel is not (4 in 17, 24%), because a lone cap is read against no reference.
+  All four swaps involve blue and three are blue↔green. `--queue-speakers` now
+  covers that configuration. **The high band is 10% wrong, which is the more
+  general finding**: every other error rate in this document comes from the ~4% of
+  groups that get queued, so the same question is open for `other:` speakers and
+  for the collective, neither of which has ever been audited.
+- **Blue is over-called, not most legible.** *Sheriff* concluded blue was the most
+  readable cap because it was recorded most often (19 of 37). The audit says the
+  opposite: blue is where the errors are. Worth a line in `roster.txt` warning
+  that green in shadow prints close to blue on the restored colour — though the
+  pilot's lesson is that a rule the model is told and then breaks needs a
+  validator, which is why the queue rule went in as well as any prose.
 - **A within-panel colour-consistency validator was tried and rejected.** Two
   nephews sharing a `cap_colour` in one panel, or one nephew carrying two, finds
   **zero** contradictions across all 867 annotated groups and catches neither

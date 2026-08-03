@@ -64,6 +64,7 @@ from barks_ocr.utils.vision_schema import (
     EMPHASIS_MARKUP_KEY,
     FIELD_CLASS,
     MAX_OBJECTS,
+    NEPHEW_NAMES,
     OBJECTS_KEY,
     OTHER_PREFIX,
     PANELS_OF_NOTE_KEY,
@@ -403,13 +404,50 @@ def _queue_lines_for_page(  # noqa: PLR0913
     """Return this page's (text-correction, speaker-review) kivy-editor queue lines."""
     text_lines: list[str] = []
     speaker_lines: list[str] = []
+    unreferenced = _unreferenced_nephews(result, json_groups)
     for gid, entry in result["groups"].items():
         prefix = f"{volume} {int(page)} {engine.value} {int(gid)}"
         if not entry.get("text_ok") and not _correction_applied(entry, json_groups.get(gid, {})):
             text_lines.append(f"{prefix} {VISION_TEXT_ISSUE}")
-        if entry.get("speaker_confidence") in speaker_confidences:
+        if entry.get("speaker_confidence") in speaker_confidences or gid in unreferenced:
             speaker_lines.append(f"{prefix} {VISION_SPEAKER_ISSUE}")
     return text_lines, speaker_lines
+
+
+def _unreferenced_nephews(result: dict, json_groups: dict) -> frozenset[str]:
+    """Return group ids naming one nephew by cap colour with no sibling to check it against.
+
+    Measured on the 50-call audit of 2026-08-03: an individual nephew named in a
+    panel where **no other nephew speaks** was wrong 4 times in 17 (24%), against
+    1 in 33 (3%) where the panel has two or three of them talking.  The pass is
+    not worse at those panels -- it has less to go on.  Three caps side by side
+    are read against each other; a single cap is read against nothing, and on the
+    restored colour green in shadow prints close enough to blue that all four
+    errors ran between those two.
+
+    So these are queued whatever confidence the pass gave them, which is nearly
+    always ``high``.  The confidence field is deliberately **not** rewritten: it
+    records what the pass believed, and this is the reviewer knowing something
+    about the configuration that the pass could not.
+
+    Args:
+        result: The page's parsed ``result.json``.
+        json_groups: The page's stored groups, for ``panel_num``.
+
+    Returns:
+        The group ids to queue for a speaker review.
+
+    """
+    by_panel: dict[Any, list[str]] = {}
+    for gid, entry in result["groups"].items():
+        if entry.get("speaker") in NEPHEW_NAMES:
+            panel = json_groups.get(gid, {}).get("panel_num")
+            by_panel.setdefault(panel, []).append(gid)
+    return frozenset(
+        group_ids[0]
+        for group_ids in by_panel.values()
+        if len(group_ids) == 1 and result["groups"][group_ids[0]].get("cap_colour")
+    )
 
 
 def _apply_page(page_group: Any, result: dict, *, dry_run: bool) -> int:  # noqa: ANN401
