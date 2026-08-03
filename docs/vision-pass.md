@@ -2518,12 +2518,66 @@ rule worth considering before the corpus run: **a balloon of two or three words
 with no tail on a figure is a low-confidence call whoever speaks it**, which is a
 cheaper and more general guard than anything cap-specific.
 
-**No evidence was backfilled.** The `identified_by` checkboxes went unused across
-all 53, so the 1000-group backfill is still entirely outstanding and this audit's
-calls remain as unreversible as they were. Recording it while reviewing was the
-cheap moment; `--missing-evidence` still returns the whole corpus.
+#### The evidence, recorded on a second pass — and `costume` is the finding
 
-143 `other:` calls remain unreviewed.
+The `identified_by` checkboxes went unused on the first run and were filled in on
+a second: **52 of the 53**, with **zero consistency problems** — no unknown kind,
+and no call citing `cap-colour` without a colour or the reverse.
+
+`off-panel` (8 calls) proved correct everywhere it was used, which is worth
+stating because a *collective* marked `off-panel` looks wrong at a glance. Each
+one is a genuinely unseen speaker: the unboxed floating shouts on 082, the crowd
+cheer whose tail runs off the panel edge on 083, Roscoe's holdup man whose tail
+disappears into a black doorway, and the kitten that is "never drawn on this
+page, only heard."
+
+The distribution is the useful part:
+
+| speaker kind | calls | resting on `costume` |
+|---|---:|---:|
+| unnamed role | 22 | **81%** |
+| named one-off | 19 | 78% |
+| collective | 9 | 22% |
+| animal | 3 | 0% |
+
+**For an unnamed role, costume is not corroboration — it is the identification.**
+A policeman is a policeman because of the uniform; the washerwoman by her patched
+dress; the doctor by the coat. Which lands the field exactly where it was aimed:
+the population that rests most heavily on costume is the unnamed-role population,
+and costume is the evidence class this trial found most fragile — Sheriff's
+`168 g5`, the one confirmed colour-override error in five titles, is a
+costume-based unnamed-role call. Those calls can now be pulled as a class and
+checked together, which was impossible before the field existed.
+
+`cap-colour` is used zero times here, correctly: every call in this audit is
+`other:`, so no nephew and no cap is involved.
+
+#### `speaker_review_note`, because a correction leaves a false note behind
+
+The missing 53rd is the one call the audit **corrected**, and it exposed a gap
+worth more than the tick it was missing. Its `vision_note` still reads:
+
+> The washerwoman — a dog-faced woman in a patched blue dress and pink bonnet —
+> on her knees. **Both balloons in this panel are hers; Donald and Scrooge are
+> silent.**
+
+The speaker now says `Donald`. Nothing supersedes `vision_note`, so **after a
+correction it asserts something the data contradicts, in an authoritative
+register**, and there was no field for the reviewer's own reasoning at all.
+
+Added 2026-08-03: `speaker_review_note`, a second note rather than an edit of the
+first. Overwriting `vision_note` would destroy the evidence of *how the pass went
+wrong* — which is the raw material every finding in this document is made of, the
+ambiguous tails and the 2x enlargements recorded in false precision. Both notes
+are kept and `speaker_was` says which one the data agrees with. The editor also
+marks a superseded note as such where it displays it, since a stale note read
+unmarked is worse than no note.
+
+It is offered on a confirmation as readily as on a correction: agreeing with a
+call for a stated reason is worth more than agreeing silently.
+
+143 `other:` calls remain unreviewed, and the corpus-wide `identified_by`
+backfill is still outstanding — `--missing-evidence` returns 948.
 
 ### The cost: the five read titles can no longer be re-applied
 

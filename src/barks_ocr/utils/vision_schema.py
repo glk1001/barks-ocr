@@ -206,6 +206,21 @@ SPEAKER_WAS_KEY = "speaker_was"
 CAP_COLOUR_WAS_KEY = "cap_colour_was"
 SPEAKER_REVIEWED_DATE_KEY = "speaker_reviewed_date"
 
+# The reviewer's own reasoning, and the only field that can hold it.
+#
+# `vision_note` is the *pass's* reasoning and nothing supersedes it, so after a
+# correction it is left asserting something the data now contradicts -- and it
+# reads as authoritative while doing so. The one correction in the `other:` audit
+# still says "Both balloons in this panel are hers; Donald and Scrooge are
+# silent" on a group whose speaker is now Donald.
+#
+# Deliberately a *second* note rather than an edit of the first. Overwriting
+# `vision_note` would destroy the evidence of how the pass went wrong, which is
+# the raw material every finding in `docs/vision-pass.md` was derived from --
+# the pilot's ambiguous tails, the 2x enlargements recorded in false precision.
+# Both notes are kept and `speaker_was` says which one the data agrees with.
+SPEAKER_REVIEW_NOTE_KEY = "speaker_review_note"
+
 # The confidence a reviewed group carries: a human looked at the art.
 REVIEWED_CONFIDENCE = "high"
 
@@ -336,6 +351,8 @@ FIELD_CLASS: dict[str, PublicationClass] = {
     CAP_COLOUR_WAS_KEY: PublicationClass.FACT,
     SPEAKER_REVIEWED_DATE_KEY: PublicationClass.FACT,
     VISION_NOTE_KEY: PublicationClass.DERIVED,
+    # Our own words about the work, exactly as `vision_note` is.
+    SPEAKER_REVIEW_NOTE_KEY: PublicationClass.DERIVED,
     "vision_text_ok": PublicationClass.FACT,
     "vision_corrected_text": PublicationClass.VERBATIM,
     # The marked-up `ai_text`: the comic's own words, so it is classed exactly

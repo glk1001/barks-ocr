@@ -46,6 +46,7 @@ from barks_ocr.utils.vision_schema import (
     SPEAKER_CONFIDENCE_KEY,
     SPEAKER_KEY,
     SPEAKER_OPTIONS,
+    SPEAKER_REVIEW_NOTE_KEY,
     SPEAKER_REVIEWED_DATE_KEY,
     SPEAKER_REVIEWED_KEY,
     SPEAKER_WAS_KEY,
@@ -1906,14 +1907,24 @@ class EditorApp(App):
         return radios
 
     @staticmethod
-    def _build_vision_note_view(note: str) -> ScrollView:
-        """Return a scrollable, read-only view of the vision pass's reasoning."""
+    def _build_vision_note_view(note: str, *, superseded: bool = False) -> ScrollView:
+        """Return a scrollable, read-only view of the vision pass's reasoning.
+
+        When the call has since been corrected the note is the *losing* argument
+        and is marked as such. It is kept rather than edited -- it is the
+        evidence of how the pass went wrong, which is what the write-up's
+        findings are made of -- but shown unmarked it reads as authoritative on a
+        group whose data now says otherwise.
+        """
+        prefix = (
+            "[SUPERSEDED — this describes the call a review replaced]\n\n" if superseded else ""
+        )
         note_label = Label(
-            text=note or "(no vision note)",
+            text=(prefix + note) if note else "(no vision note)",
             font_size="13sp",
             halign="left",
             valign="top",
-            color=(0.75, 0.75, 0.75, 1),
+            color=(1, 0.65, 0.4, 1) if superseded else (0.75, 0.75, 0.75, 1),
             size_hint_y=None,
         )
         note_label.bind(width=lambda inst, w: setattr(inst, "text_size", (w, None)))
@@ -1921,6 +1932,20 @@ class EditorApp(App):
         scroll = ScrollView(size_hint_y=1)
         scroll.add_widget(note_label)
         return scroll
+
+    @staticmethod
+    def _build_review_note_input(content: BoxLayout, current: str | None) -> TextInput:
+        """Add the reviewer's note box to *content* and return it."""
+        note = TextInput(
+            text=current or "",
+            hint_text="why (optional) — kept beside the pass's note, never over it",
+            multiline=True,
+            size_hint_y=None,
+            height=54,
+            font_size="13sp",
+        )
+        content.add_widget(note)
+        return note
 
     def _show_speaker_popup(self, pane: EnginePane) -> None:
         """Review the vision pass's speaker attribution on this pane's current group.
@@ -1968,7 +1993,14 @@ class EditorApp(App):
         )
         summary.bind(size=summary.setter("text_size"))
         content.add_widget(summary)
-        content.add_widget(self._build_vision_note_view((group.get(VISION_NOTE_KEY) or "").strip()))
+        content.add_widget(
+            self._build_vision_note_view(
+                (group.get(VISION_NOTE_KEY) or "").strip(),
+                superseded=bool(group.get(SPEAKER_WAS_KEY)),
+            )
+        )
+
+        review_note = self._build_review_note_input(content, group.get(SPEAKER_REVIEW_NOTE_KEY))
 
         error_label = Label(
             text="", size_hint_y=None, height=22, font_size="13sp", color=(1, 0.4, 0.4, 1)
@@ -1984,7 +2016,7 @@ class EditorApp(App):
             # view, which is the only child that gives up space (size_hint_y=1).
             # Every roster entry added costs 36px here (row plus spacing), and
             # the two identified_by rows cost 72px between them.
-            size=(560, 960),
+            size=(560, 1020),
             auto_dismiss=False,
         )
 
@@ -2007,6 +2039,7 @@ class EditorApp(App):
                 speaker,
                 None if cap == CAP_COLOUR_NONE else cap,
                 [k for k, cb in evidence.items() if cb.active],
+                review_note.text.strip(),
             )
             popup.dismiss()
 
@@ -2023,7 +2056,11 @@ class EditorApp(App):
             # contradict it. Every group annotated before this field existed has
             # none, so letting a confirmation record it is the only way to
             # backfill the evidence for the population most in need of it.
-            self._confirm_speaker_as_is(pane, [k for k, cb in evidence.items() if cb.active])
+            self._confirm_speaker_as_is(
+                pane,
+                [k for k, cb in evidence.items() if cb.active],
+                review_note.text.strip(),
+            )
             popup.dismiss()
 
         save_btn = Button(text="Save")
@@ -2044,6 +2081,7 @@ class EditorApp(App):
         speaker: str,
         cap_colour: str | None,
         identified_by: list[str] | None = None,
+        review_note: str = "",
     ) -> None:
         """Write a reviewed speaker attribution to this pane's current group.
 
@@ -2084,6 +2122,8 @@ class EditorApp(App):
         group[CAP_COLOUR_KEY] = cap_colour
         if identified_by:
             group[IDENTIFIED_BY_KEY] = identified_by
+        if review_note:
+            group[SPEAKER_REVIEW_NOTE_KEY] = review_note
         self._has_changes = True
         self._refresh_pane_labels()
         logger.debug(
@@ -2123,7 +2163,10 @@ class EditorApp(App):
         return picked_cap != (group.get(CAP_COLOUR_KEY) or CAP_COLOUR_NONE)
 
     def _confirm_speaker_as_is(
-        self, pane: EnginePane, identified_by: list[str] | None = None
+        self,
+        pane: EnginePane,
+        identified_by: list[str] | None = None,
+        review_note: str = "",
     ) -> bool:
         """Stamp this group's existing speaker call as human-reviewed, unchanged.
 
@@ -2145,6 +2188,9 @@ class EditorApp(App):
                 agreeing with it, and every group annotated before that field
                 existed has none -- so this is the only way to backfill the
                 evidence for the population that most needs it.
+            review_note: The reviewer's own reasoning, recorded on a confirmation
+                as readily as on a correction: agreeing with a call for a stated
+                reason is worth more than agreeing silently.
 
         Returns:
             ``True`` if a call was stamped, ``False`` if there was none to
@@ -2162,6 +2208,8 @@ class EditorApp(App):
         group[SPEAKER_REVIEWED_DATE_KEY] = _today()
         if identified_by:
             group[IDENTIFIED_BY_KEY] = identified_by
+        if review_note:
+            group[SPEAKER_REVIEW_NOTE_KEY] = review_note
         self._has_changes = True
         self._refresh_pane_labels()
         logger.debug(
