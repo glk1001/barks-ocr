@@ -228,12 +228,33 @@ what trial 1 was scored with. Improving it is a change to the measurement, so it
 waits until all five titles are in and is then applied to all of them at once.
 
 **All five titles are now in** (trial 5, *The Big Bin on Killmotor Hill*,
-2026-08-03), so that condition is met. The five-title tally is **81 hits / 22
-misses**, split **18 not retrieved / 4 not recorded**. Four failure modes are
-documented in `docs/vision-pass.md`: morphology, reader-vocabulary vs
+2026-08-03), so that condition is met. The five-title tally under `lexical` is
+**81 hits / 22 misses**, split **18 not retrieved / 4 not recorded**. Four failure
+modes are documented in `docs/vision-pass.md`: morphology, reader-vocabulary vs
 drawn-vocabulary, tie-truncation, and — new in trial 5 — **compounding**
 (`flypaper` against the comic's own two-word `FLY PAPER`), which a stemmer cannot
-close because the split is in tokenisation rather than in morphology.
+close because the split is in how the text divides into tokens at all.
+
+### Two matcher generations, both runnable
+
+The scorer now carries **`--matcher lexical`** and **`--matcher v2`** (the
+default), and `--validate` holds each to its own recorded trial-1 result.
+
+```bash
+barks-ocr-retrieval-score --validate                     # v2
+barks-ocr-retrieval-score --validate --matcher lexical   # the trial's matcher
+barks-ocr-retrieval-score --title "Plenty of Pets" --matcher lexical
+```
+
+Keeping the old one is the point rather than a courtesy: every number in
+`docs/vision-pass.md` was measured by `lexical`, and replacing it would have made
+all five trial results unverifiable the moment the scorer moved on — the exact
+failure the scorer was written to prevent. `lexical` reproduces all five titles
+byte for byte and is frozen.
+
+`v2` adds a Porter stemmer (already available via Whoosh), compound joining and
+IDF-weighted ranking. **81 hits → 85**, five queries fixed and one lost. See
+`docs/vision-pass.md` for what each change bought and what it cost.
 
 Run each query against the capture data and record:
 

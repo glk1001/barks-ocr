@@ -2331,6 +2331,100 @@ alone. Not built yet.
 
 ---
 
+## The scorer's second generation
+
+Built 2026-08-03, once all five titles were in and the deferred changes were
+unblocked. Three of the four documented failure modes are lexical, so they went
+first; the fourth needs embeddings and is still open.
+
+**Both generations stay runnable.** `--matcher lexical` is what the trial was
+scored with and is frozen; `--matcher v2` is the default. Replacing the old
+matcher would have made every number above unverifiable the moment the scorer
+moved on, which is precisely the failure the scorer exists to prevent — so
+`--validate` carries one calibration per generation. `lexical` reproduces all
+five titles byte for byte, checked as a regression rather than asserted.
+
+| | lexical | v2 |
+|---|---:|---:|
+| hits | 81 | **85** |
+| misses | 22 | **18** |
+
+Five queries fixed, one lost:
+
+- **#38 *sneezing*** and **#70 *hiding*** — the stemmer, exactly as predicted.
+  Both are the silent-*e* case prefix matching cannot reach. #38 now returns all
+  three expected pages and nothing else.
+- **#79 *pants falling down*** — retrieved on `falling`/`fall`. The noun still
+  misses, so the `trousers`/`pants` vocabulary gap is real and unfixed; the page
+  comes back because the record describes the same event in the same words the
+  query uses for everything except the garment.
+- **#103 *flypaper*** — compound joining, against the art's own `FLY PAPER`.
+- **#29 *a chase*** — IDF weighting, the nine-way tie.
+- **#82 *smoking a pipe*** is the one lost, and it is the most interesting result
+  of the four. Its `lexical` hit was **also** a tie artifact: seven pages tied at
+  score 1.0 on the single token `pipe`, and alphabetical truncation happened to
+  keep two correct ones. So one title produced a lucky hit and an unlucky miss by
+  the same mechanism, and the fix that corrected #29 necessarily gave up #82.
+  Counting it as a straight regression would be reading the tie as though it had
+  been a judgement.
+
+### Two mistakes worth recording, because both looked like successes
+
+The first cut of `v2` scored **87**, and two of those hits were false.
+
+**Compound joining polluted the index.** Pairs were formed across the whole
+flattened field text, so unrelated neighbours fused into words the record never
+contained — and because a compound sat in the ordinary token set, the *prefix*
+rule then matched any word that started one. A query's `down` reached a junk join
+beginning "down" and scored a page on nothing. That is what made **#11 *Scrooge
+diving into his money bin*** appear fixed: the expected page came back without
+matching `diving` at all, on generic tokens alone. The fix is two constraints —
+compounds are formed **within one string**, and matched by **equality only**.
+#11 is a miss again, correctly.
+
+**The fuzzy rule's `hiding`/`riding` bug has a twin**: `diving` matches `driving`.
+It scored a wrong page highly on the same query.
+
+The lesson is not about either bug. It is that **a rise in the hit count is not
+evidence the matcher improved** — every one of these changes makes hits easier,
+so the count moves whether or not retrieval got better. What distinguishes them
+is reading the per-token trace for each newly-hit query and asking which token
+earned it. Both false hits looked exactly like the four real ones in the tally.
+
+### The fuzzy rule, finally measured
+
+The trial recorded a suspicion that `_within_one_edit` cost more than it earned
+and asked for a measurement when the retriever was revisited. Under `v2` its
+**only** effect across all five titles is **#91**, where it carries the query
+set's own typo (`dumbells` against the record's `dumbbells`). Removing it changes
+nothing else: 85 → 84 hits, and the difference is that one query.
+
+So it neither earns its keep nor costs anything measurable any more. The stemmer
+took over the morphology it was compensating for. It is kept because removing it
+would lose a hit, but the honest description is that **it now exists to paper over
+a typo in the query set**, and correcting `dumbells` in the query text would
+retire it — which is a change to the pre-committed set, so it is left alone.
+
+### What is left, and what could reach it
+
+| | count | queries |
+|---|---:|---|
+| **semantic — an embedding could reach** | **12** | #93, #33, #34, #76, #51, #55, #57, #95, #11, #107, #111, #112 |
+| *not recorded* — no retriever can reach | 5 | #35, #46, #26 (×2), #98 |
+| ranking artifact | 1 | #82 |
+
+The 12 are the reader-vocabulary vs drawn-vocabulary finding in full: *sick* for
+"does not feel well", *sad* for "in tears", *pain* for `YEOWCH!`, *scared* for
+"sweat drops flying", *colliding* for "knocks him off his feet", *love* for
+hearts, *worry* for sobbing, *diving* for "throws himself off the catwalk", plus
+three plain synonym pairs (*bag*/sack, *letterbox*/mailbox, *painting*/picture)
+and #93's *hit*/swats.
+
+**Nothing lexical will close any of them**, which is what makes the remaining
+question a clean one: an embedding either reaches these 12 or the finding stands.
+
+---
+
 ## Open threads
 
 - **The pilot's `result.json` no longer validates**, and correctly so: it names
@@ -2384,6 +2478,11 @@ alone. Not built yet.
   **embeddings are what the bulk of the residue needs** — seven
   reader-vocabulary instances plus #11, the query the design named in advance as
   the one that must not miss.
+
+  **Done, for the three lexical fixes, on 2026-08-03** — see *The scorer's second
+  generation* below. `81 hits → 85`. What is left is the embeddings question,
+  now with a number on it: **12 of the 18 remaining misses are semantic**, 5 are
+  *not recorded* and so unreachable by any retriever, and 1 is a ranking artifact.
 - **The matcher's fuzzy rule buys false positives.** `_within_one_edit` matches
   **`hiding` to `riding`** — which in a western is on nearly every page. It gave
   Sheriff's #70 a spurious score on 165 and still missed the two pages that

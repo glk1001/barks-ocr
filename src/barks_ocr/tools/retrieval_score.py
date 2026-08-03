@@ -13,7 +13,16 @@ recorded trial-1 outcome (15 hits of 16, #93 the only *not retrieved* miss).  Ru
 it before trusting a new title's number: if the calibration has drifted, the two
 titles are no longer being measured the same way.
 
-Matching is deliberately lexical and nothing more -- no stemmer, no embeddings:
+**Two matcher generations, and both stay runnable.** ``--matcher lexical`` is the
+one the five-title trial was scored with, and every number in
+``docs/vision-pass.md`` is its; it is frozen. ``--matcher v2`` (the default) adds
+a Porter stemmer, compound joining and IDF-weighted ranking, each earned by a
+documented miss. Replacing the old matcher rather than keeping it would have made
+the trial's recorded results unverifiable the moment the scorer moved on, which
+is the very failure this module was written to prevent -- so ``--validate``
+carries one calibration per generation and checks whichever is selected.
+
+The ``lexical`` rules, which ``v2`` inherits except where noted:
 
 * parentheticals are dropped, so "a fly (the insect)" searches for "a fly";
 * function words are dropped, and so are one-character tokens, since the ``s``
@@ -24,6 +33,27 @@ Matching is deliberately lexical and nothing more -- no stemmer, no embeddings:
   carries the query set's own typo in #91 ("dumbells" / "dumbbells");
 * a page scores the number of *distinct* query tokens it matches, and the result
   is the highest-scoring band, capped at ``TOP_BAND``.
+
+``v2`` changes three of those and the tally moves 81 hits to 85 across the five
+titles -- five queries fixed, one lost:
+
+* **stemming** fixes ``sneeze``/``sneezing`` (#38) and ``hide``/``hiding`` (#70),
+  and retrieves #79 on ``falling``/``fall`` where the noun still misses;
+* **compound joining** fixes #103, ``flypaper`` against the art's own
+  ``FLY PAPER``. Compounds match by equality only and are formed within one
+  string, both learnt the hard way: left open to the prefix rule, a query's
+  "down" reached a junk join starting with it and scored pages on nothing;
+* **IDF weighting** fixes #29, where nine pages tied at the top score and the cap
+  truncated the tie by page number. It costs #82, and that is worth reading
+  rather than regretting: #82's ``lexical`` hit was *also* a tie artifact -- seven
+  pages tied at 1.0 and alphabetical truncation happened to keep two correct ones.
+  The same mechanism produced one lucky hit and one unlucky miss in one title.
+
+The fuzzy rule was measured while it was being reasoned about, since the trial
+recorded a suspicion that it cost more than it earned. Under ``v2`` its **only**
+effect across all five titles is #91, where it carries the query set's own typo
+(``dumbells``). It buys one hit and no longer changes any other result, because
+the stemmer took over the morphology it was compensating for.
 
 Note what is **not** stripped: "character", "panel", "page" and "story" stay in
 the query.  They look like noise but they are load-bearing -- #30 ("the story's
@@ -46,7 +76,10 @@ keeps the two apart.  Trial 1's honest figure was 11 capture-only of 15.
 """
 
 import json
+import math
 import re
+from dataclasses import dataclass
+from itertools import pairwise
 from typing import Annotated, Any
 
 import typer
@@ -55,6 +88,7 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from barks_fantagraphics.speech_markup import strip_markup, unescape_markup
 from loguru import logger
+from whoosh.lang.porter import stem as porter_stem
 
 from barks_ocr.utils.vision_schema import (
     BEATS_KEY,
@@ -96,6 +130,62 @@ MIN_FUZZY = 6  # shortest token allowed to match within one edit
 MIN_TOKEN = 2  # a bare "s" off a possessive would match every possessive
 
 _WORD_RE = re.compile(r"[a-z0-9]+")
+
+
+@dataclass(frozen=True)
+class Matcher:
+    """One generation of the matching rules, named so a result can cite it.
+
+    The five-title trial was scored entirely by ``LEXICAL``, and every number in
+    ``docs/vision-pass.md`` is that matcher's.  Improving the matcher is a change
+    to the measurement, so the old one is kept runnable rather than replaced:
+    otherwise the trial's recorded results become unverifiable the moment the
+    scorer moves on, which is the exact failure this module was written to
+    prevent.
+
+    ``rules`` is listed for the same reason ``capture_rules`` is stamped on a
+    capture record -- a bare version number tells a later reader nothing about
+    what changed.
+    """
+
+    name: str
+    rules: tuple[str, ...]
+    stem: bool = False
+    compounds: bool = False
+    idf: bool = False
+    fuzzy: bool = True
+    # LEXICAL keeps only the pages tied at the maximum score, capped at TOP_BAND,
+    # which is what truncated Sheriff's #29 alphabetically. Graded scores make
+    # exact ties vanishingly rare, so a max-only band would collapse to a single
+    # page; ranked_band takes the top TOP_BAND by score instead, which is the
+    # ordinary recall@3 the cap was always reaching for.
+    ranked_band: bool = False
+
+
+LEXICAL = Matcher(
+    name="lexical",
+    rules=("exact", "prefix>=4", "fuzzy>=6", "count-distinct-tokens", "max-score-band"),
+)
+
+V2 = Matcher(
+    name="v2",
+    rules=(
+        "exact",
+        "prefix>=4",
+        "fuzzy>=6",
+        "porter-stem",
+        "compound-join",
+        "idf-weighted",
+        "ranked-band",
+    ),
+    stem=True,
+    compounds=True,
+    idf=True,
+    ranked_band=True,
+)
+
+MATCHERS = {m.name: m for m in (LEXICAL, V2)}
+DEFAULT_MATCHER = V2
 
 
 # --------------------------------------------------------------------------- #
@@ -297,11 +387,52 @@ QUERIES: dict[str, list[tuple[int, str, list[str] | None]]] = {
 # earned by capture, where a purely lexical speech layer credits it to the
 # dialogue, because 176 happens to call Roscoe "a strong, alert HELPER".
 TRIAL_1_TITLE = "Roscoe the Robot"
-TRIAL_1_RESULT: dict[str, object] = {"hit": 15, "miss": 1, "missed": [93]}
+
+# One calibration per matcher generation. The `lexical` entry is the trial-1
+# result every number in `docs/vision-pass.md` was measured against and must
+# never change; a later matcher gets its own entry rather than overwriting it,
+# so a drift in either is still caught.
+TRIAL_1_RESULTS: dict[str, dict[str, object]] = {
+    "lexical": {"hit": 15, "miss": 1, "missed": [93]},
+    "v2": {"hit": 15, "miss": 1, "missed": [93]},
+}
 
 
-def _tokens(text: str) -> set[str]:
-    return set(_WORD_RE.findall(text.lower()))
+def _tokens(text: str, matcher: Matcher = LEXICAL) -> set[str]:
+    """Return the searchable word tokens of a record field."""
+    found = set(_WORD_RE.findall(text.lower()))
+    if matcher.stem:
+        found |= {_stem(word) for word in found}
+    return found
+
+
+def _compound_tokens(parts: list[str]) -> set[str]:
+    """Return the join of each adjacent word pair, so an open compound is reachable.
+
+    This is trial 5's ``flypaper`` miss: the art letters ``FLY PAPER``, the
+    capture rightly used the comic's own two words, and obeying the
+    prefer-the-source rule is therefore what caused the miss. Neither a stemmer
+    nor an embedding over single words closes it -- the split is in how the text
+    divides into tokens at all.
+
+    Two constraints, both learnt by getting it wrong first. Pairs are formed
+    **within one string**, never across the join of a field's separate values,
+    or the last word of one object phrase and the first of the next fuse into a
+    word neither of them contains. And a compound is only ever matched
+    **exactly** (see ``_page_score``): left open to the prefix rule, every
+    compound becomes a magnet for the word that starts it, so a query's "down"
+    reached a junk join beginning "down" and scored the page on nothing.
+    """
+    found: set[str] = set()
+    for part in parts:
+        words = _WORD_RE.findall(part.lower())
+        found |= {a + b for a, b in pairwise(words)}
+    return found
+
+
+def _stem(token: str) -> str:
+    """Return the Porter stem, or the token itself if stemming would empty it."""
+    return porter_stem(token) or token
 
 
 def _query_tokens(query: str) -> list[str]:
@@ -338,34 +469,52 @@ def _within_one_edit(a: str, b: str) -> bool:
     return True
 
 
-def _token_matches(query_token: str, record_token: str) -> bool:
+def _token_matches(query_token: str, record_token: str, matcher: Matcher = LEXICAL) -> bool:
     if query_token == record_token:
+        return True
+    if matcher.stem and _stem(query_token) == _stem(record_token):
+        # Morphology: sneeze/sneezing and hide/hiding, the two misses that made
+        # the strongest case for a stemmer. Prefix matching cannot reach either,
+        # because the silent e is dropped before the suffix.
         return True
     short, long_ = sorted((query_token, record_token), key=len)
     if len(short) >= MIN_PREFIX and long_.startswith(short):
         return True
+    if not matcher.fuzzy:
+        return False
     return len(short) >= MIN_FUZZY and _within_one_edit(query_token, record_token)
 
 
-def _flatten(value: Any) -> str:  # noqa: ANN401 -- capture values are free-form JSON.
-    """Return every string anywhere in a capture field, space-joined.
+def _flatten_parts(value: Any) -> list[str]:  # noqa: ANN401 -- capture values are free-form JSON.
+    """Return every string anywhere in a capture field, kept separate.
 
     ``panels_of_note`` is a list of ``[panel, phrase]`` pairs and ``vision_apply``
     stamps each field with its publication class, so this has to walk both lists
     and the ``{"value": ..., "class": ...}`` wrapper rather than assume a shape.
+
+    The values stay **unjoined** because compound tokens must not straddle two of
+    them -- ``objects`` is a list of separate noun phrases, and joining it first
+    makes a compound out of the last word of one and the first word of the next.
     """
     if value is None:
-        return ""
+        return []
     if isinstance(value, str):
-        return value
+        return [value]
     if isinstance(value, dict):
-        return _flatten(value["value"] if "value" in value else list(value.values()))
+        return _flatten_parts(value["value"] if "value" in value else list(value.values()))
     if isinstance(value, list):
-        return " ".join(_flatten(item) for item in value)
-    return str(value)
+        return [part for item in value for part in _flatten_parts(item)]
+    return [str(value)]
 
 
-def _index_title(title_str: str, engine: OcrTypes) -> dict[str, dict[str, Any]]:
+def _flatten(value: Any) -> str:  # noqa: ANN401 -- capture values are free-form JSON.
+    """Return every string anywhere in a capture field, space-joined."""
+    return " ".join(_flatten_parts(value))
+
+
+def _index_title(
+    title_str: str, engine: OcrTypes, matcher: Matcher = LEXICAL
+) -> dict[str, dict[str, Any]]:
     """Return the capture and speech token sets for every captured page of a title."""
     title = STR_TITLE_TO_ENUM[title_str]
     speech_groups = SpeechGroups(ComicsDatabase())
@@ -381,53 +530,122 @@ def _index_title(title_str: str, engine: OcrTypes) -> dict[str, dict[str, Any]]:
             continue
 
         capture = json.loads(capture_file.read_text())
-        per_field = {f: _tokens(_flatten(capture.get(f))) for f in CAPTURE_FIELDS}
+        field_parts = {f: _flatten_parts(capture.get(f)) for f in CAPTURE_FIELDS}
+        per_field = {f: _tokens(" ".join(parts), matcher) for f, parts in field_parts.items()}
         groups = page_group.speech_page_json.get("groups", {})
-        speech = _tokens(
-            " ".join(strip_markup(unescape_markup(g.get("ai_text", ""))) for g in groups.values())
-        )
+        speech_parts = [
+            strip_markup(unescape_markup(g.get("ai_text", ""))) for g in groups.values()
+        ]
         index[page] = {
             "capture": set().union(*per_field.values()) if per_field else set(),
             "per_field": per_field,
-            "speech": speech,
+            "speech": _tokens(" ".join(speech_parts), matcher),
+            "capture_compounds": (
+                _compound_tokens([p for parts in field_parts.values() for p in parts])
+                if matcher.compounds
+                else set()
+            ),
+            "speech_compounds": _compound_tokens(speech_parts) if matcher.compounds else set(),
         }
     return dict(sorted(index.items()))
 
 
-def _search(query: str, index: dict[str, dict[str, Any]], layer: str) -> list[str]:
+def _idf(index: dict[str, dict[str, Any]], layer: str) -> dict[str, float]:
+    """Return an inverse-document-frequency weight per token, over this title's pages.
+
+    Counting matched tokens equally is what produced Sheriff's #29: nine pages
+    tied at the top score and the cap truncated the tie by page number, dropping
+    both correct pages. The tie is an artifact of every token being worth one --
+    "character", "panel" and "chase" all score the same on a 32-page western.
+    Weighting by rarity separates them, and the longer the title the more it
+    matters, which is the direction the corpus is going.
+    """
+    pages = max(len(index), 1)
+    seen: dict[str, int] = {}
+    for blobs in index.values():
+        for token in blobs[layer]:
+            seen[token] = seen.get(token, 0) + 1
+    # Smoothed, so a token on every page still counts a little rather than zero.
+    return {token: math.log(1.0 + pages / count) for token, count in seen.items()}
+
+
+def _page_score(
+    query_tokens: list[str],
+    record: set[str],
+    weights: dict[str, float],
+    matcher: Matcher,
+    compounds: frozenset[str] | set[str] = frozenset(),
+) -> float:
+    """Score one page: matched query tokens, weighted by rarity under ``idf``.
+
+    A compound is matched by equality only -- never by prefix or edit distance --
+    so that indexing "fly paper" as "flypaper" cannot also make every word a
+    prefix of some junk join.
+    """
+    total = 0.0
+    for q in query_tokens:
+        hits = [r for r in record if _token_matches(q, r, matcher)]
+        if q in compounds:
+            hits.append(q)
+        if not hits:
+            continue
+        # The rarest record token this query token reached: a query word that
+        # lands on a distinctive phrase should count for more than one that
+        # lands on a word every page carries.
+        total += max(weights.get(r, 1.0) for r in hits) if matcher.idf else 1.0
+    return total
+
+
+def _search(
+    query: str, index: dict[str, dict[str, Any]], layer: str, matcher: Matcher = LEXICAL
+) -> list[str]:
     query_tokens = _query_tokens(query)
-    scored: list[tuple[int, str]] = []
-    for page, blobs in index.items():
-        matched = sum(any(_token_matches(q, r) for r in blobs[layer]) for q in query_tokens)
-        if matched:
-            scored.append((matched, page))
+    weights = _idf(index, layer) if matcher.idf else {}
+    scored = [
+        (score, page)
+        for page, blobs in index.items()
+        if (
+            score := _page_score(
+                query_tokens, blobs[layer], weights, matcher, blobs[f"{layer}_compounds"]
+            )
+        )
+        > 0
+    ]
     if not scored:
         return []
+    ranked = sorted(scored, key=lambda s: (-s[0], s[1]))
+    if matcher.ranked_band:
+        return [page for _score, page in ranked[:TOP_BAND]]
     best = max(score for score, _page in scored)
-    return [page for score, page in sorted(scored, key=lambda s: (-s[0], s[1])) if score == best][
-        :TOP_BAND
-    ]
+    return [page for score, page in ranked if score == best][:TOP_BAND]
 
 
-def _fields_hit(query: str, index: dict[str, dict[str, Any]], page: str) -> list[str]:
+def _fields_hit(
+    query: str, index: dict[str, dict[str, Any]], page: str, matcher: Matcher = LEXICAL
+) -> list[str]:
     query_tokens = _query_tokens(query)
     per_field = index[page]["per_field"]
     return [
         field
         for field in CAPTURE_FIELDS
-        if any(any(_token_matches(q, r) for r in per_field[field]) for q in query_tokens)
+        if any(any(_token_matches(q, r, matcher) for r in per_field[field]) for q in query_tokens)
     ]
 
 
-def _score_title(title_str: str, index: dict[str, dict[str, Any]]) -> dict[str, Any]:
+def _score_title(
+    title_str: str, index: dict[str, dict[str, Any]], matcher: Matcher = LEXICAL
+) -> dict[str, Any]:
     queries = QUERIES[title_str]
     tally = {"hit": 0, "miss": 0, "capture_only": 0, "speech_answerable": 0}
     missed: list[int] = []
 
-    print(f'\nRetrieval queries for "{title_str}" -- {len(index)} captured page(s)\n')
+    print(
+        f'\nRetrieval queries for "{title_str}" -- {len(index)} captured page(s)'
+        f"   [matcher: {matcher.name}]\n"
+    )
     for num, text, expected in queries:
-        capture_pages = _search(text, index, "capture")
-        speech_pages = _search(text, index, "speech")
+        capture_pages = _search(text, index, "capture", matcher)
+        speech_pages = _search(text, index, "speech", matcher)
         want = expected or []
         hit = any(p in capture_pages for p in want)
         by_speech = any(p in speech_pages for p in want)
@@ -443,7 +661,7 @@ def _score_title(title_str: str, index: dict[str, dict[str, Any]]) -> dict[str, 
         print(f"           want {want or '(none committed)'}   capture {capture_pages or '-'}")
         if hit:
             fields = ", ".join(
-                _fields_hit(text, index, next(p for p in want if p in capture_pages))
+                _fields_hit(text, index, next(p for p in want if p in capture_pages), matcher)
             )
             suffix = "   (the speech layer answers this too)" if by_speech else ""
             print(f"           via {fields}{suffix}")
@@ -469,6 +687,13 @@ def main(
     engine: Annotated[
         str, typer.Option("--engine", help="Which OCR engine's pages to score.")
     ] = OcrTypes.EASYOCR.value,
+    matcher_name: Annotated[
+        str,
+        typer.Option(
+            "--matcher",
+            help='Matching rules to score with: "lexical" is the five-title trial\'s.',
+        ),
+    ] = DEFAULT_MATCHER.name,
     validate: Annotated[
         bool,
         typer.Option(
@@ -477,34 +702,41 @@ def main(
         ),
     ] = False,
 ) -> None:
+    if matcher_name not in MATCHERS:
+        known = ", ".join(f'"{m}"' for m in MATCHERS)
+        msg = f'Unknown matcher "{matcher_name}". Known: {known}.'
+        raise typer.BadParameter(msg)
+    matcher = MATCHERS[matcher_name]
+
     title_str = TRIAL_1_TITLE if validate else title
     if title_str not in QUERIES:
         known = ", ".join(f'"{t}"' for t in QUERIES)
         msg = f'No query set for "{title_str}". Known: {known}.'
         raise typer.BadParameter(msg)
 
-    index = _index_title(title_str, OcrTypes(engine))
+    index = _index_title(title_str, OcrTypes(engine), matcher)
     if not index:
         msg = f'No "{CAPTURE_FILE_SUFFIX}" files found for "{title_str}"; run vision_apply first.'
         raise typer.BadParameter(msg)
 
-    result = _score_title(title_str, index)
+    result = _score_title(title_str, index, matcher)
 
     if not validate:
         return
 
+    expected = TRIAL_1_RESULTS[matcher.name]
     drift = [
-        f"{key}: got {result[key]}, trial 1 recorded {TRIAL_1_RESULT[key]}"
+        f"{key}: got {result[key]}, recorded {expected[key]}"
         for key in ("hit", "miss", "missed")
-        if result[key] != TRIAL_1_RESULT[key]
+        if result[key] != expected[key]
     ]
     if drift:
-        print("\nCalibration has DRIFTED from the recorded trial-1 result:")
+        print(f'\nCalibration has DRIFTED for matcher "{matcher.name}":')
         for line in drift:
             print(f"  - {line}")
         print("Any other title's number is no longer comparable with Roscoe's until this is fixed.")
         raise typer.Exit(code=1)
-    logger.info("Scorer still reproduces the recorded trial-1 result exactly.")
+    logger.info(f'Matcher "{matcher.name}" still reproduces its recorded trial-1 result exactly.')
 
 
 if __name__ == "__main__":
