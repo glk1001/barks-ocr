@@ -1721,6 +1721,16 @@ class EditorApp(App):
         current = set(group.get("acknowledged_issues") or [])
         checkboxes: dict[str, CheckBox] = {}
 
+        # In queue mode the popup was opened to deal with one known issue, so
+        # pre-tick exactly that one. Only that one: pre-ticking every firing
+        # issue is the bug this replaced — a reflexive Save acknowledged all
+        # of them.
+        queue_issue = ""
+        if self._queue:
+            entry = self._queue[self._queue_index]
+            if entry.engine == str(pane.ocr_type) and str(entry.group_id) == pane.group_id:
+                queue_issue = entry.issue_type
+
         content = BoxLayout(orientation="vertical", padding=10, spacing=8)
         content.add_widget(
             Label(
@@ -1734,9 +1744,11 @@ class EditorApp(App):
         for issue_type in DISMISSABLE_ISSUE_TYPES:
             row = BoxLayout(orientation="horizontal", size_hint_y=None, height=34, spacing=8)
             firing = DISMISSABLE_PREDICATES[issue_type](group)
-            # Only stored acknowledgements start checked. Pre-checking every
-            # firing issue meant a reflexive Save acknowledged all of them.
-            cb = CheckBox(active=issue_type in current, size_hint_x=None, width=30)
+            cb = CheckBox(
+                active=issue_type in current or issue_type == queue_issue,
+                size_hint_x=None,
+                width=30,
+            )
             checkboxes[issue_type] = cb
             status = "firing" if firing else "not firing"
             lbl = Label(text=f"{issue_type}  ({status})", halign="left", valign="middle")
@@ -1746,11 +1758,16 @@ class EditorApp(App):
             content.add_widget(row)
 
         button_layout = BoxLayout(spacing=10, size_hint_y=None, height=44)
+        # Size to the content: header + rows + buttons + padding/spacing, plus
+        # the popup's own title bar. The old fixed 380 clipped the rows once
+        # the registry grew past what it was written for.
+        n_rows = len(DISMISSABLE_ISSUE_TYPES)
+        content_height = 28 + n_rows * 34 + 44 + 2 * 10 + 8 * (n_rows + 1)
         popup = Popup(
             title="Acknowledge issues",
             content=content,
             size_hint=(None, None),
-            size=(460, 380),
+            size=(480, content_height + 60),
             auto_dismiss=False,
         )
 
