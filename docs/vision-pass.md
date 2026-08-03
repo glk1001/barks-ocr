@@ -1586,6 +1586,15 @@ small and, usefully, concentrated where the risk is:
 | Sheriff of Bullet Valley | 19 of 407 (4.7%) |
 | Plenty of Pets | 2 of 144 (1.4%) |
 | Billions, Roscoe | 0 — neither names an individual nephew at all |
+| **The Big Bin on Killmotor Hill** | **8 of 133 (6.0%)** — and *all* of its queue |
+
+**The rule was first reviewed on trial 5, and came back 0 wrong in 8** — see that
+section. That is the first direct test of the population this rule exists to
+catch, and it neither confirms nor refutes the 24% the audit measured: eight is a
+small denominator, and six of the eight rest on an unambiguous bright red, a
+colour absent from all four of the audit's swaps. What it does show is the rule
+firing on exactly the right configuration — on Big Bin it *is* the whole queue,
+because the pass made no low-confidence calls at all.
 
 `speaker_confidence` is deliberately **not** rewritten. It records what the pass
 believed; this rule is the reviewer knowing something about the configuration
@@ -1937,9 +1946,39 @@ placed-by-what-the-line-says category: `042 g9` (a periscope-view panel whose ta
 runs off-panel toward where both Donald and Scrooge stand) and `046 g20` (`OH, ME!
 OH, MY!` from inside a bin nobody is drawn in, given to Scrooge on register alone).
 
-**These 8 are queued, not reviewed.** The pass reviewing its own calls would be
-circular, and every speaker error rate in this document comes from someone else
-looking at the art. `~/barks-vision/big-bin-speakers.txt` is ready for the editor.
+**Reviewed 2026-08-03: 8 queued, 8 confirmed, 0 wrong.** GLK walked the queue in
+the editor and found no issues; all 8 carry `speaker_reviewed` with `speaker` and
+`cap_colour` exactly as the pass wrote them — 6 Huey on red, 1 Dewey on blue,
+1 Louie on green.
+
+Against the pilot's 71%, Sheriff's 7%, *Plenty of Pets*' 33% and the high-band
+audit's 10%, **zero in eight is the cleanest speaker result in the trial.** Two
+things temper it and both should be said plainly. Eight is a small denominator —
+it cannot distinguish a genuinely easy title from a lucky one. And the population
+is not the same population those other rates measured: these are all *lone-panel*
+calls, the configuration the audit found worst at 24%, but on a title where six of
+the eight rest on an unambiguous bright red. Red was involved in none of the
+audit's four swaps, which were all blue and mostly blue↔green. So the honest
+reading is that **the lone-panel rule queued the right configuration and this
+title happened to be an easy instance of it**, not that the configuration is safe.
+
+The two calls that were *not* red — `040 g3` Dewey on blue and `044 g9` Louie on
+green — are the ones that carried real risk, since blue↔green is where the audit's
+errors live. Both were confirmed. Two data points do not overturn the audit, but
+they are the first evidence that a blue/green call made *with another cap in the
+same panel for reference* holds up.
+
+**The denominator is readable off disk**, which is what the Confirm as is button
+was added for: this is the second title after *Plenty of Pets* whose review count
+rests on the data rather than on a verbal report.
+
+One workflow note worth keeping. The review happened *after* `vision_apply` had
+run the mirror, so the 8 flags landed on easyocr only and
+`barks-ocr-vision-mirror --write` had to be run again to carry them across. That
+is not a defect in either tool — the mirror is idempotent and the second run wrote
+6 pages and then went quiet — but **a review is always after the apply that
+queued it**, so mirroring again afterwards is a standing step rather than a
+one-off.
 
 Two things about the cap evidence here are worth recording whatever the review
 says. **Only 8 of 133 groups carry a `cap_colour` at all**, because this story
@@ -2444,6 +2483,15 @@ alone. Not built yet.
   that green in shadow prints close to blue on the restored colour — though the
   pilot's lesson is that a rule the model is told and then breaks needs a
   validator, which is why the queue rule went in as well as any prose.
+  **Trial 5 adds the first two confirmed blue/green lone-panel calls** — `040 g3`
+  Dewey on blue and `044 g9` Louie on green, both reviewed and both right. They do
+  not overturn the audit, but they share a property the audit's four swaps did
+  not: in each, a second cap of a different colour is in the same panel to read
+  against. That is consistent with the audit's own explanation — a lone cap is
+  read against nothing — and suggests the risky case is narrower than "an
+  individual nephew alone in a panel". Worth checking on the next title whether
+  the queue rule can ask for *no other cap in frame* rather than *no other nephew
+  speaking*, which is a different and smaller population.
 - **A within-panel colour-consistency validator was tried and rejected.** Two
   nephews sharing a `cap_colour` in one panel, or one nephew carrying two, finds
   **zero** contradictions across all 867 annotated groups and catches neither
