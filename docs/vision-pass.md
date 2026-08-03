@@ -2652,6 +2652,68 @@ finding. On Sheriff `144 g8`: *"The blue color is not really visible except by
 zooming in. In a case like this 'nephews' would have been an acceptable answer."*
 So of the nine, at least one is a judgement call rather than a clear miss.
 
+### The collective backfill: 26% recovered, and the rule's evidence base does not survive
+
+Backfilling evidence onto the collective produced **21 more corrections**, on top
+of the audit's 9. Every one is again over-caution, and across **all 115
+originally-collective calls now reviewed there is still not a single real
+error** — the collective is never given to somebody who is not a nephew.
+
+| | |
+|---|---:|
+| originally collective | 115 |
+| moved to a name | **30 (26%)** |
+| real errors | **0** |
+
+**A quarter of the collective was recoverable**, and it concentrates on Sheriff
+(17 of the 21) and *Plenty of Pets* (4), exactly as the per-title sample
+predicted.
+
+The sharper result is what happened to the panels this document cites as the
+*reason* for the panel-wide rule. That passage reads:
+
+> Barks — or the colourist — gives **two nephews the same colour in one panel** on
+> 159 p7, 161 p4, 162 p1, 163 p1 and 163 p4, and twice paints a cap
+> **orange-gold**, which is not a roster colour at all (161 p4, 162 p1).
+
+All five are now fully resolved into individual names, with clean and *distinct*
+roster colours:
+
+| panel | now |
+|---|---|
+| 159 p7 | Dewey blue |
+| 161 p4 | Dewey blue, Huey red |
+| **162 p1** | Huey red, Louie green, Dewey blue |
+| 163 p1 | Louie green, Huey red |
+| 163 p4 | Louie green, Dewey blue |
+
+No panel shows two nephews sharing a colour, and no orange-gold cap survives —
+including on the two panels where it was specifically claimed.
+
+#### One thing this does *not* settle, and it matters
+
+Two readings disagree, and the data cannot arbitrate between them:
+
+- the earlier session misread the colours, and the panel-wide rule was built on
+  an observation that was not there; or
+- **`cap_colour` was written from the convention rather than from the page.**
+
+The second is a real risk and the recorded evidence cannot rule it out. Nearly
+every one of these corrections carries `identified_by: [balloon-tail,
+cap-colour]`. If the *tail* identified the nephew and the colour was then filled
+in from the Huey-red/Dewey-blue/Louie-green convention, those are not two
+independent pieces of evidence — they are one, with the second derived from the
+answer. The field would then be recording a tautology, which is the same failure
+the query set guards against by taking expected pages from the art rather than
+from the capture records.
+
+**Nothing currently says `cap_colour` must be what is printed rather than what
+the convention implies.** That is worth stating in `roster.txt` before the corpus
+run, and it costs nothing: a cap read as blue on a nephew the tail says is Huey
+should be recorded blue, and the disagreement is the useful part. Until then the
+five panels above are best read as *one reviewer's reading against one earlier
+session's*, not as a refutation.
+
 ### The classification audit: 0 in 47, and the prediction was wrong
 
 Reviewed 2026-08-03, the fourth and last population: the 156 `none` calls and 56
