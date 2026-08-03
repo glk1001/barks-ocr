@@ -43,6 +43,61 @@ written there, whatever the permissions say.
 
 ---
 
+## Running a title: the short version
+
+Everything below this section is *why*. This is *what*, for a session picking the
+work up cold. The five-title trial is finished; what follows is the corpus run.
+
+**1. Read `<out-dir>/roster.txt` before page 1.** It is generated from
+`utils/vision_schema.py` on every prep and carries the whole vocabulary plus the
+seven reading rules the trial produced — the collective, per-cap colour, no
+reading order, observed cap colour, evidence, framing, emphasis. It is 110 lines
+and it is what `vision_apply` validates against, so a run that ignores it fails
+after the reading work is done. **Do not rely on this document for the rules**;
+the rules are in that file precisely because prose in here was twice found not
+to reach the pass.
+
+**2. Batch one message per page.** `groups.json`, `page.png` and every panel crop
+issued together in a single message. This is not a nicety — it is the entire
+difference between **1.6 min/page and 11**, because the per-page cost is then one
+model turn rather than ten round trips. Short titles cannot amortise the fixed
+cost; long ones can.
+
+**3. Grep the names first.** `barks-ocr-name-grep --title "…"` runs two passes
+and both are needed: non-dictionary tokens catch odd spellings, repeated word
+pairs catch names made of ordinary words. It buys the *spelling*, not the
+identification.
+
+**4. Stamp the model.** `vision_apply --capture-model "claude-opus-5[1m]"`, or the
+provenance is written null and the page joins an unidentifiable cohort.
+
+**5. Check state with `barks-ocr-vision-status`**, which reports pages read and
+the rule version each was read under. Nothing else is a reliable record: the
+scratch directories under `~/barks-vision` are not.
+
+### Where things stand, 2026-08-03
+
+| | |
+|---|---|
+| pages read | 77 of 5,560 (1.2%) — the pilot and five trial titles |
+| rule version | **6** (`capture_prompt_version`); cohorts on disk are unstamped and v2 |
+| retrieval | `barks-ocr-retrieval-score`, three matcher generations, `--validate` first |
+| speaker review | four audits and two backfills complete — see *Four audits* below |
+
+Two things to watch on the first titles of the corpus run, both recorded as open
+rather than settled:
+
+- **the reading-order finding rests on one pre-1948 title.** Vols 1-5 are roughly
+  1942-47. If early tails really are less precise, that is where it shows.
+- **`observed-cap-colour` should start surfacing tail/cap disagreements.** If it
+  never does across many titles, suspect the colour is still being written in
+  from the convention rather than read off the page.
+
+Known blockers, unchanged: **155 one-pagers cannot be prepped at all**, and 24
+pages have no prelim OCR.
+
+---
+
 ## The unit of work is the story, not the volume
 
 `--title` is the primary selector. `--volume` with `--pages` still works for a
