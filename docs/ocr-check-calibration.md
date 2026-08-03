@@ -84,6 +84,29 @@ Reproduce: `scripts/old_vs_new.py <volumes>` → `outputs/old-vs-new-per-volume-
 
 ---
 
+## Angled lettering gets a second chance in its own frame
+
+The group `text_box` is always axis-aligned (the Gemini grouper writes it that
+way), so for lettering drawn on a slant it overstates **both** dimensions —
+`HOORAY!` at ~20° on vol 2 page 040 reads as a 112px-tall single line, the
+derived font is enormous, and `text_does_not_fit` fires on text that plainly
+fits its balloon.
+
+The OCR engines' fragment quads in `cleaned_box_texts` do follow the angle.
+When their median baseline angle passes `FRAGMENT_ANGLE_THRESHOLD_DEG` (5°,
+matching `OcrBox.is_approx_rect`), `_group_text_fits` re-measures in that
+frame: every fragment corner rotated back by the angle, bounding box taken,
+same font-from-height width test.
+
+Applied **one-directionally, after the axis check fails** — the rotated frame
+can clear a false flag but never create a new one. Measured on vols 1-19
+before adopting: 37 of the then-current `text_does_not_fit` flags were on
+angled groups; 23 cleared in the rotated frame (all verified plausible —
+diagonal captions like `NEXT MORNING`, slanted cheers) and 14 genuinely
+overflow. Groups without usable fragments fall back to the axis-only check
+unchanged. The line-height checks stay on axis geometry deliberately: the
+inflated height makes angled groups measure *roomy*, which fails safe there.
+
 ## The em-dash rule, and what measuring it changed
 
 Two regexes became one positive rule: an em-dash needs a space, line break or
