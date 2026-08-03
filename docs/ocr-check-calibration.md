@@ -127,6 +127,20 @@ Added:
 | `unbalanced_quotes` | 51 | odd number of `"` |
 | `invalid_type` | 26 | `caption`, `speech`, `dialogtext`, `dialogtext_bubble_id` |
 
+Added 2026-08-03, structural rather than measured — each one is a data error
+whenever it fires, so there was nothing to calibrate:
+
+- **`invalid_markup`** — `speech_markup.validate_markup` over the stored
+  `ai_text`: unbalanced or mis-nested `[b]`/`[i]`, disallowed tags, unescaped
+  `&`/`[`/`]`. Dismissable, in the `group_checks` registry.
+- **`bad_text_box`** — a `text_box` that is missing, not 4 points, has a
+  malformed point, or has zero area. It also gates every geometric check and
+  fixer for that group; such boxes used to be skipped silently and then crash
+  a `--fix` pass.
+- **`panel_num_out_of_range`** — a set `panel_num` of 0 or beyond the page's
+  panel count, which `panel_num_mismatch` structurally cannot see (it needs
+  the box to sit wholly inside a different *real* panel).
+
 **Rejected, so they are not proposed again:**
 
 - **duplicate text on a page (2407), or within one panel (1020)** — legitimate:
@@ -140,15 +154,15 @@ Added:
 
 ## The `--fix-*` flags require a clean prelim repo
 
-The fixers rewrite `ai_text` and `panel_num` in place through a bare
-`save_json()` — no backup, unlike the kivy editor and `vision_apply`, which pass
-`save_json(backup_file=...)`.
+The fixers rewrite `ai_text` and `panel_num` in place. Since 2026-08-03 each
+written file also gets a timestamped copy under the backup dir, like the kivy
+editor and `vision_apply` — but the clean-tree guard remains the real safety.
 
 Since 2026-08-01 the prelim files are a private git repo
 (`~/Books/Carl Barks/Fantagraphics-restored-ocr/Prelim`, `barks-ocr-prelim`), so
-the answer is a guard rather than a backup: a `--fix` pass refuses to start
-unless the tree is clean. That is strictly better than a backup, because it
-forces the recoverable state to exist *before* the destructive write, and it
+the primary answer is a guard rather than a backup: a `--fix` pass refuses to
+start unless the tree is clean. That is strictly better than a backup, because
+it forces the recoverable state to exist *before* the destructive write, and it
 makes `git diff` afterwards show exactly what the fixer did.
 
 ```

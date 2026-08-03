@@ -12,7 +12,7 @@ read the registry, so neither needs touching.
 import re
 from collections.abc import Callable
 
-from barks_fantagraphics.speech_markup import strip_markup
+from barks_fantagraphics.speech_markup import strip_markup, validate_markup
 
 DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "short_text",
@@ -23,6 +23,7 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "double_hyphen",
     "unbalanced_quotes",
     "invalid_type",
+    "invalid_markup",
     "whitespace",
     "florence-check",
 )
@@ -164,6 +165,17 @@ def has_invalid_type(group: dict) -> bool:
     return (group.get("type") or "").strip().lower() not in VALID_GROUP_TYPES
 
 
+def has_invalid_markup(group: dict) -> bool:
+    """Whether the group's stored ai_text carries malformed emphasis markup.
+
+    Unbalanced or mis-nested ``[b]``/``[i]``, a disallowed tag, or an
+    unescaped ``&``/``[``/``]`` — everything ``validate_markup`` reports.
+    Reads the raw string, not ``_plain_text``: markup validity is a property
+    of what is on disk, and ``strip_markup`` would remove the evidence.
+    """
+    return bool(validate_markup(group.get("ai_text") or ""))
+
+
 def has_whitespace_error(group: dict) -> bool:
     """Whether the text has stray whitespace: outer, per-line trailing, or doubled."""
     ai_text = _plain_text(group)
@@ -217,6 +229,7 @@ DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     "double_hyphen": has_double_hyphen,
     "unbalanced_quotes": has_unbalanced_quotes,
     "invalid_type": has_invalid_type,
+    "invalid_markup": has_invalid_markup,
     "whitespace": has_whitespace_error,
     "florence-check": _never_fires,
 }
