@@ -1137,13 +1137,17 @@ adult supporting cast is where it will show up.
 
 *Plenty of Pets* was reviewed on 2026-08-03 with the new Confirm as is button, so
 its denominator is the first that can be read off disk: **6 queued, 6 stamped
-`speaker_reviewed`, 2 wrong (33%)**. Both errors are nephew-identity-by-cap-colour
-— `199 g12` Huey→**Dewey**, `204 g1` Louie→**Huey** — and both were calls hedged
-to medium *because the notes had already recorded that the cap colours print
-unreliably on that title*. The two non-cap mediums were confirmed. So on that
-title cap-based medium calls ran **2 of 4 wrong** and non-cap ones 0 of 2, which
-is Sheriff's 168 g5 pattern again: see the anomaly, record it, let colour override
-it anyway.
+`speaker_reviewed`, 2 wrong (33%)** — `199 g12` Huey→**Dewey** and `204 g1`
+Louie→**Huey**.
+
+**Both are balloon-tail errors, not colour errors**, which makes them a *different*
+class from `168 g5` below rather than a repeat of it. In each the pass picked the
+wrong figure in a multi-nephew panel and then read that figure's cap correctly. So
+`168 g5` stays the trial's only confirmed instance of costume colour overriding
+better evidence, and the adult-identity risk described above is still supported by
+exactly one case. See trial 4 for the full account, including that both panels had
+been enlarged specifically to trace those tails and both traces are recorded in
+confident language and wrong.
 
 #### The review: 1 correction in 14 — against the pilot's 10 in 14
 
@@ -1439,27 +1443,56 @@ unreadable cap yields `nephews` at `high`, so the low band cannot fill. The
 208 g20   Louie  named by the *previous balloon*, not by the art
 ```
 
-**Reviewed 2026-08-03: 2 wrong in 6 (33%).** `199 g12` is **Dewey**, not Huey;
-`204 g1` is **Huey**, not Louie. All six carry `speaker_reviewed` on disk, the
-first title whose denominator does not rest on a verbal report.
+**Reviewed 2026-08-03: 2 wrong in 6 (33%), and both are balloon-tail errors.**
+All six carry `speaker_reviewed` on disk, the first title whose denominator does
+not rest on a verbal report.
 
-The shape is sharper than the rate. **Both errors are cap-colour calls, and both
-were hedged to medium for exactly the right reason** — the notes say the caps on
-this title are near-solid black with a colour flash, that one prints brown where
-red is meant, and that the panel's colouring is "not fully trustworthy". The pass
-wrote the doubt down and named a nephew anyway. The two mediums that were *not*
-about colour (the offstage shout, the one named by the previous balloon) were both
-confirmed.
+```
+199 g12   Huey  -> Dewey     the tail points at a different nephew
+204 g1    Louie -> Huey      the tail points at a different nephew
+```
 
-So on this title: **cap-based medium calls 2 of 4 wrong, non-cap medium calls 0 of
-2.** Sheriff's single error was the same structure on an adult — the pass noticed
-that a man's shirt and trousers swapped colour between panels, recorded it, then
-let costume colour decide anyway one panel later. Three titles running, *the
-failure is not misreading colour; it is continuing to use colour after recording
-that it is unreliable.* The collective rule already covers the case where colour
-is absent. What is missing is the case where colour is **present and known
-untrustworthy**, and the honest answer there is `nephews` at high rather than an
-individual at medium — which would have prevented both of these.
+**Not one of them is a colour error.** In both the pass picked the wrong *figure*
+and then read that figure's cap correctly; the colour was never in question. This
+matters because it reverses what an earlier draft of this section concluded. That
+draft read both corrections as cap-colour failures and generalised, across three
+titles, that the pass "continues to use colour after recording that it is
+unreliable". **That conclusion was wrong**, and it was wrong in the most seductive
+way available: the `vision_note`s on both groups really do record the colouring as
+untrustworthy, so the story fitted perfectly and was built on a cause that turns
+out not to be the cause. *Sheriff*'s `168 g5` remains the **only** confirmed
+colour-override error in the trial — one instance, not a pattern, and not grounds
+for a rule change.
+
+**Both panels had been enlarged to 2x specifically to trace their tails**, and
+both traces are recorded in the notes with false precision — "the tail comes down
+squarely onto the middle nephew", "lands squarely on the red-capped nephew's cap
+at 2x". The enlargement raised confidence without raising accuracy. That is the
+finding worth carrying: **on a panel where several balloons drop into one dark
+background over closely-spaced nephews, magnification is not the safeguard it
+feels like**, and a note that sounds certain is not evidence that it was.
+
+`204 g1` is the sharper of the two. The correct answer is the nephew whose cap the
+pass had *itself* flagged as printing a warm brown rather than red — so it
+discounted the figure with the awkward colour and took the one with the clean
+green, when the tail pointed at the awkward one all along. Colour did play a part,
+but as a distraction from the tail rather than as a misreading.
+
+What this does not tell us is whether the same failure is loose in the calls
+nobody has checked. Every speaker error rate in this document — the pilot's 71%,
+Sheriff's 7%, this title's 33% — comes from the low/medium band, roughly 4% of
+annotated groups. **50 individual-nephew calls sit at `high` and have never been
+looked at** (32 on Sheriff, 18 here), and **36 of those 50 are in panels naming
+more than one nephew — which is to say, panels where a balloon tail decides the
+answer, exactly where both known errors happened.** Queued to
+`~/barks-vision/high-confidence-nephews.txt`.
+
+A mechanical check was tried and **rejected on evidence**: within one panel, two
+nephews sharing a `cap_colour`, or one nephew carrying two. Across all 867
+annotated groups it finds **zero** contradictions, and it would have caught
+neither error. There is no free validator in the stored fields — unsurprising in
+hindsight, since it was built to catch a colour failure and these are not colour
+failures.
 
 **This is a different population from Sheriff's, and that is the finding.**
 Sheriff's 14 were 9 adults, 5 nephews. These 6 are **4 nephews, 1 adult-ish
@@ -1893,15 +1926,28 @@ vision pass has just looked at closely.
   over the threshold (`other:the Black Mask Burglar`, 11) and a genuine role
   below it (`other:the policeman`, 2), which is the same argument again: the
   threshold is measuring the wrong thing.
-- **Extend the collective rule from "colour absent" to "colour recorded as
-  unreliable".** *Plenty of Pets*' review came back 2 wrong in 6, and both errors
-  are nephew-by-cap-colour calls whose own `vision_note` had already said the
-  panel's colouring was not trustworthy. Sheriff's single error is the same
-  structure on an adult. The existing rule refuses an individual nephew when the
-  cap **cannot be read**; it says nothing about a cap that can be read but has
-  just been observed to be wrong, and that is now the residual error class on two
-  titles. A validator could catch it: a group whose note mentions a colour
-  anomaly and whose speaker is an individual nephew is the exact shape to refuse.
+- **The residual speaker error is balloon-tail tracing, not colour.** *Plenty of
+  Pets* came back 2 wrong in 6 and **both** are the pass picking the wrong figure
+  in a multi-nephew panel; the cap it then read was correct each time. Colour
+  handling therefore needs no change on this evidence, and *Sheriff*'s `168 g5`
+  is still the only confirmed colour-override error in the trial. Two things
+  follow. **Enlarging does not fix it** — both panels were magnified 2x
+  specifically to trace those tails, and both notes record the wrong trace in
+  confident language. And the collective rule may want a second trigger: not just
+  "the cap cannot be read" but **"several balloons converge over adjacent
+  nephews"**, where `nephews` is the honest answer however legible the caps are.
+  Not worth writing until the audit below says how common this is.
+- **50 high-confidence individual-nephew calls have never been reviewed**, and
+  **36 of them sit in panels naming more than one nephew** — the exact
+  configuration that produced both known errors. Every error rate in this document
+  comes from the low/medium band, about 4% of annotated groups, so the
+  high-confidence population is entirely unmeasured. Queued to
+  `~/barks-vision/high-confidence-nephews.txt`. This is the measurement that says
+  whether the tail problem is a curiosity or the main remaining speaker risk.
+- **A within-panel colour-consistency validator was tried and rejected.** Two
+  nephews sharing a `cap_colour` in one panel, or one nephew carrying two, finds
+  **zero** contradictions across all 867 annotated groups and catches neither
+  known error. Recorded so it is not re-proposed.
 - **The engines must be mirrored, or the pass fights the reconciliation.** Handled
   2026-08-03 — see the mirroring section. Left open: **5 line-break differences
   and 4 word differences on Roscoe** that the mirror would not cross, which are
