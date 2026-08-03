@@ -1133,6 +1133,18 @@ honest collective that loses almost nothing, where the adult fallback is
 where the remaining speaker risk in the corpus lives, and a story with a large
 adult supporting cast is where it will show up.
 
+#### Trial 4's review, for comparison: 2 corrections in 6
+
+*Plenty of Pets* was reviewed on 2026-08-03 with the new Confirm as is button, so
+its denominator is the first that can be read off disk: **6 queued, 6 stamped
+`speaker_reviewed`, 2 wrong (33%)**. Both errors are nephew-identity-by-cap-colour
+— `199 g12` Huey→**Dewey**, `204 g1` Louie→**Huey** — and both were calls hedged
+to medium *because the notes had already recorded that the cap colours print
+unreliably on that title*. The two non-cap mediums were confirmed. So on that
+title cap-based medium calls ran **2 of 4 wrong** and non-cap ones 0 of 2, which
+is Sheriff's 168 g5 pattern again: see the anomaly, record it, let colour override
+it anyway.
+
 #### The review: 1 correction in 14 — against the pilot's 10 in 14
 
 GLK reviewed the queue and made **one** correction:
@@ -1427,6 +1439,28 @@ unreadable cap yields `nephews` at `high`, so the low band cannot fill. The
 208 g20   Louie  named by the *previous balloon*, not by the art
 ```
 
+**Reviewed 2026-08-03: 2 wrong in 6 (33%).** `199 g12` is **Dewey**, not Huey;
+`204 g1` is **Huey**, not Louie. All six carry `speaker_reviewed` on disk, the
+first title whose denominator does not rest on a verbal report.
+
+The shape is sharper than the rate. **Both errors are cap-colour calls, and both
+were hedged to medium for exactly the right reason** — the notes say the caps on
+this title are near-solid black with a colour flash, that one prints brown where
+red is meant, and that the panel's colouring is "not fully trustworthy". The pass
+wrote the doubt down and named a nephew anyway. The two mediums that were *not*
+about colour (the offstage shout, the one named by the previous balloon) were both
+confirmed.
+
+So on this title: **cap-based medium calls 2 of 4 wrong, non-cap medium calls 0 of
+2.** Sheriff's single error was the same structure on an adult — the pass noticed
+that a man's shirt and trousers swapped colour between panels, recorded it, then
+let costume colour decide anyway one panel later. Three titles running, *the
+failure is not misreading colour; it is continuing to use colour after recording
+that it is unreliable.* The collective rule already covers the case where colour
+is absent. What is missing is the case where colour is **present and known
+untrustworthy**, and the honest answer there is `nephews` at high rather than an
+individual at medium — which would have prevented both of these.
+
 **This is a different population from Sheriff's, and that is the finding.**
 Sheriff's 14 were 9 adults, 5 nephews. These 6 are **4 nephews, 1 adult-ish
 offstage shout, and 1 placed by dialogue** — back to the pilot's shape, because
@@ -1665,6 +1699,89 @@ not the identification.
 
 ---
 
+## Mirroring across engines: the pass must not undo the reconciliation
+
+Added 2026-08-03, after four titles had been annotated on one engine only.
+
+The corpus carries **both** engines all the way through on purpose. They are not
+alternatives to choose between — they are being **reviewed and reconciled toward
+each other**, with `ocr_check` and the kivy editor, until both files say the same
+thing and can collapse into a single set of finals. `use_as_final` was an early
+idea for picking a winner per page and is not going to be used; measured on
+2026-08-03 it is `false` on all 5,560 easyocr pages and `true` on exactly one
+paddleocr page, so nothing has ever depended on it.
+
+Against that, **a vision pass makes the two engines less alike.** Every bold run
+it writes lands on one side only, and *Plenty of Pets* produced 219 of them in a
+single sitting — 219 fresh discrepancies for a human to reconcile, created by the
+tool that is supposed to help finish the job. That, and not the loss of the
+annotations, is why mirroring exists: the annotations are cheap to redo, the
+reconciliation is not.
+
+```bash
+barks-ocr-vision-mirror --title "Plenty of Pets"          # dry run
+barks-ocr-vision-mirror --title "Plenty of Pets" --write
+```
+
+`vision_apply` now runs it automatically at the end of every apply, with
+`--no-mirror` to opt out.
+
+### Reconciliation progress, which is what makes this cheap
+
+Identical stored text between the two engines, markup ignored:
+
+| | identical | groups still differing |
+|---|---:|---:|
+| **vols 1-18** | **99.6%** | 199 |
+| **vols 19+** | **90.0%** | 2,568 |
+| all | 96.1% | 2,767 |
+
+Vol 28 is already at 99.9%, out of sequence; vol 29 is furthest out at 82.8%.
+Because the annotated titles sit mostly in the reconciled range, **99.5% of
+annotated groups mirror cleanly**.
+
+### Matching is by text, not by group id
+
+The two engines' group ids do not correspond — that is why the editor's Speaker
+button is per-pane and why the pass reads one engine. But the *words* do
+correspond, after Gemini's grouping, for 99.7% of annotated groups. So a group is
+paired with the one on the other side that stores the same words, whitespace
+ignored. Where several balloons on a page carry identical words — "YES," twice in
+one panel of 202 — the nearest text box wins, keeping the pairing one-to-one.
+
+**Emphasis is held to a stricter test than the speaker fields.** A speaker call is
+about the art and travels with the balloon, so whitespace cannot invalidate it.
+Markup indexes the characters of one specific string, so it crosses only when both
+sides store exactly the same characters, **newlines included** — a tag placed
+against different line breaks lands on the wrong word, which is the offset problem
+in another guise. Both sides are compared *stripped*, so a re-run over already
+mirrored groups is a clean no-op rather than a page of false differences.
+
+`speaker_reviewed` is mirrored deliberately. A human's answer to "who is speaking"
+is about the art, not about which engine transcribed the balloon, and the two
+files are destined to become one — leaving the flag off one side would only
+manufacture a difference to reconcile later.
+
+### The residue is a worklist, not a failure
+
+Backfilled across the pilot and all four trial titles: **861 groups and 211
+emphasis runs** mirrored, over 66 pages. What did **not** cross is reported in two
+buckets, and the distinction is the useful part:
+
+- **5 groups agree word for word but break their lines differently** (Roscoe 175
+  g5, 178 g5/g6/g7/g9). Speaker fields crossed; emphasis did not. Fix the line
+  breaks and re-run.
+- **4 groups the engines genuinely disagree about**, all Roscoe, all in a vol-20
+  file that is only 89% reconciled: the `GYRO GEARLOOSE` title logo, the
+  `INVENTION KIT` and `FOR BIG INVENTIONS` crate labels, and `177 g3` — which is
+  the two-separate-letters-in-one-group defect trial 1 already recorded. Nothing
+  was copied onto these.
+
+So the mirror doubles as a reconciliation finder, pointed at exactly the groups a
+vision pass has just looked at closely.
+
+---
+
 ## Open threads
 
 - **The pilot's `result.json` no longer validates**, and correctly so: it names
@@ -1776,6 +1893,19 @@ not the identification.
   over the threshold (`other:the Black Mask Burglar`, 11) and a genuine role
   below it (`other:the policeman`, 2), which is the same argument again: the
   threshold is measuring the wrong thing.
+- **Extend the collective rule from "colour absent" to "colour recorded as
+  unreliable".** *Plenty of Pets*' review came back 2 wrong in 6, and both errors
+  are nephew-by-cap-colour calls whose own `vision_note` had already said the
+  panel's colouring was not trustworthy. Sheriff's single error is the same
+  structure on an adult. The existing rule refuses an individual nephew when the
+  cap **cannot be read**; it says nothing about a cap that can be read but has
+  just been observed to be wrong, and that is now the residual error class on two
+  titles. A validator could catch it: a group whose note mentions a colour
+  anomaly and whose speaker is an individual nephew is the exact shape to refuse.
+- **The engines must be mirrored, or the pass fights the reconciliation.** Handled
+  2026-08-03 — see the mirroring section. Left open: **5 line-break differences
+  and 4 word differences on Roscoe** that the mirror would not cross, which are
+  real reconciliation work rather than tool failures.
 - **The `identified_by` idea now has three distinct callers, not one.** Sheriff
   wanted it for adults identified by hat colour with nothing to record it.
   *Plenty of Pets* adds two more: eleven `high`-confidence calls made from

@@ -54,6 +54,7 @@ from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from barks_fantagraphics.speech_markup import strip_markup, validate_markup
 from loguru import logger
 
+from barks_ocr.tools.vision_mirror import MirrorReport, mirror_title
 from barks_ocr.utils.story_cast import story_characters
 from barks_ocr.utils.vision_schema import (
     BEATS_KEY,
@@ -581,6 +582,38 @@ def _resolve_and_validate(
     return page_groups, errors
 
 
+def _mirror_to_other_engine(
+    speech_groups: SpeechGroups,
+    results: list[tuple[str, dict]],
+    engine: OcrTypes,
+    *,
+    dry_run: bool,
+) -> None:
+    """Copy this run's annotations onto the engine the pass did not read.
+
+    Runs once per title touched, and reports through the mirror's own tally so
+    the line-break and word differences it refuses to cross are visible here
+    rather than only when the standalone command is run.
+    """
+    other = next(t for t in OcrTypes if t != engine)
+    report = MirrorReport()
+    for title_str in dict.fromkeys(result["title"] for _page, result in results):
+        mirror_title(
+            speech_groups,
+            STR_TITLE_TO_ENUM[title_str],
+            engine,
+            other,
+            report,
+            dry_run=dry_run,
+        )
+    verb = "Would mirror" if dry_run else "Mirrored"
+    print(
+        f"{verb} {report.fields_copied} group(s) and {report.markup_copied} emphasis run(s)"
+        f" onto {other.value}."
+    )
+    report.log(dry_run=dry_run)
+
+
 @app.command(help="Merge a Claude Code vision pass back into the prelim OCR group JSON.")
 def main(  # noqa: PLR0913
     out_dir: Annotated[
@@ -610,6 +643,13 @@ def main(  # noqa: PLR0913
     ] = False,
     dry_run: Annotated[
         bool, typer.Option("--dry-run", help="Validate and report, but write nothing.")
+    ] = False,
+    no_mirror: Annotated[
+        bool,
+        typer.Option(
+            "--no-mirror",
+            help="Do not copy the annotations onto the other engine's groups.",
+        ),
     ] = False,
 ) -> None:
     wanted_confidences = _parse_confidences(speaker_confidences)
@@ -662,6 +702,14 @@ def main(  # noqa: PLR0913
         if path is not None and not dry_run:
             header = f"# vision-check {what} (volume {volume}, engine {engine.value})\n"
             print(f'Review queue ({what}): "{path}" ({_write_queue(path, header, lines)} entries).')
+
+    # Mirror before the closing line, so the tally reports what actually
+    # happened on both engines. The corpus carries both all the way through so
+    # their differences can be reconciled down to one set of finals, and a pass
+    # that annotated only one of them would hand back a fresh pile of
+    # differences to reconcile -- 219 of them on Plenty of Pets alone.
+    if not no_mirror:
+        _mirror_to_other_engine(speech_groups, results, engine, dry_run=dry_run)
 
     verb = "Would annotate" if dry_run else "Annotated"
     captured = sum(1 for _page, result in results if result.get("capture") is not None)
