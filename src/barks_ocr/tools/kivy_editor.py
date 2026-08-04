@@ -810,6 +810,7 @@ class EditorApp(App):
 
         Ctrl+Enter — Save & Next (queue mode) or Save (single mode).
         Ctrl+S     — Save without advancing.
+        Ctrl+K     — Confirm the speaker call as is and advance (queue mode).
         """
         if "ctrl" not in modifier:
             return False
@@ -822,6 +823,9 @@ class EditorApp(App):
             return True
         if key == ord("s"):
             self._handle_save(renumber=True)
+            return True
+        if key == ord("k") and self._queue:
+            self._handle_confirm_and_next()
             return True
         return False
 
@@ -1194,6 +1198,15 @@ class EditorApp(App):
         else:
             row.add_widget(self._get_save_next_queue_item_button())
 
+            # Beside Skip on purpose: they are the two ways to move on without
+            # changing the call, and the difference between them -- one records
+            # a verdict, the other records nothing -- is the whole point.
+            confirm_btn = Button(
+                text="Confirm (^K)", size_hint_x=None, width=130, size_hint_y=None, height=44
+            )
+            confirm_btn.bind(on_press=lambda _: self._handle_confirm_and_next())
+            row.add_widget(confirm_btn)
+
             skip_btn = Button(text="Skip", size_hint_x=None, width=90, size_hint_y=None, height=44)
             skip_btn.bind(on_press=lambda _: self._handle_skip())
             row.add_widget(skip_btn)
@@ -1462,6 +1475,49 @@ class EditorApp(App):
 
     def _handle_save_and_next(self, *, renumber: bool = False) -> None:
         self._handle_save(renumber=renumber)
+        self._advance_queue()
+
+    def _queue_primary_pane(self) -> EnginePane | None:
+        """Return the pane the current queue entry names, or None outside queue mode.
+
+        The queue line names an engine, and the two engines' group ids do not
+        correspond, so a confirmation has only one pane it can honestly apply to.
+        """
+        if not self._queue:
+            return None
+        entry = self._queue[self._queue_index]
+        return self._easy_pane if entry.engine == "easyocr" else self._pad_pane
+
+    def _handle_confirm_and_next(self) -> None:
+        """Agree with the queued group's speaker call and move on, in one action.
+
+        The popup already offers **Confirm as is**, but a reviewer who can see at
+        a glance that a call is right still has to open it, click, and then
+        advance -- three actions to say "yes". At that price the cheaper move is
+        to skip, and a skip writes nothing: on disk it is indistinguishable from
+        a group nobody opened, which is the very thing ``speaker_reviewed``
+        exists to end. So the whole verdict is bound to one keystroke.
+
+        Deliberately does **not** renumber, unlike every other save path here.
+        Confirming means nothing about the group changes but the review flag, and
+        renumbering rewrites group ids across the page -- too large a side effect
+        to hang on "this one is fine".
+
+        Nothing is written and the queue does not advance when the group carries
+        no speaker to confirm, because silently stepping past it would look
+        exactly like success.
+        """
+        pane = self._queue_primary_pane()
+        if pane is None:
+            return
+        if not self._confirm_speaker_as_is(pane):
+            logger.warning(
+                f"Nothing to confirm on {pane.name} group {pane.group_id}:"
+                " the vision pass set no speaker here. Staying put."
+            )
+            return
+        logger.info(f"Confirmed {pane.name} group {pane.group_id} as is.")
+        self._handle_save()
         self._advance_queue()
 
     def _handle_skip(self) -> None:
