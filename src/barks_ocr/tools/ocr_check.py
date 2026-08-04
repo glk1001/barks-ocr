@@ -1,4 +1,5 @@
 # ruff: noqa: T201
+import json
 import math
 import subprocess
 from collections import Counter, defaultdict
@@ -130,6 +131,16 @@ class MissingPrelim:
     title_str: str
     pages_both: list[str]
     pages_by_engine: dict[str, list[str]]
+
+
+@dataclass(frozen=True)
+class UnreadablePrelim:
+    """A prelim OCR file that will not parse, and why."""
+
+    volume: int
+    title_str: str
+    json_file: Path
+    reason: str
 
 
 def _build_missing_prelim(
@@ -817,6 +828,14 @@ class OcrChecker:
         output_file: Path,
     ) -> None:
         """Check all pages of each title; print issues and write a queue file."""
+        # Before anything reads a group: a malformed file makes the loader raise,
+        # which used to end the whole run on a traceback naming one file. Every
+        # other page in the volume went unchecked, and a second bad file was not
+        # even reported. This finds them all first and says so plainly.
+        if unreadable := self._unreadable_prelims(title_list):
+            self._print_unreadable_prelims(unreadable)
+            raise typer.Exit(code=1)
+
         all_issues: list[IssueFound] = []
         all_missing: list[MissingPrelim] = []
         all_missing_panels: list[MissingPanel] = []
@@ -1423,6 +1442,54 @@ class OcrChecker:
         print(f"Total issues: {len(all_issues)}")
         for issue_type, count in sorted(counts.items()):
             print(f"  {issue_type}: {count}")
+
+    def _unreadable_prelims(self, title_list: list[str]) -> list[UnreadablePrelim]:
+        """Return every prelim OCR file for these titles that will not parse.
+
+        A file that is present but malformed is a different fault from one that
+        is absent, and far quieter. Corruption that preserves a file's byte
+        length and mtime -- a character typed over another -- is invisible to
+        ``git status`` too, because git trusts its stat cache and never re-hashes
+        it. One such file sat in the corpus with a stray ``!`` inside a
+        ``text_box``, and every sweep that wrapped ``json.load`` in a
+        ``try/except`` skipped it and reported nothing wrong.
+
+        Reads the files directly rather than through ``SpeechGroups``, which
+        raises on the first bad one; the point here is to find all of them.
+        """
+        unreadable: list[UnreadablePrelim] = []
+        for title_str in title_list:
+            title = STR_TITLE_TO_ENUM[title_str]
+            volume = self._comics_database.get_fanta_volume_int(title_str)
+            # Private, and the only way to get the paths without also parsing
+            # them. `get_missing_prelim_pages` walks the same iterator for the
+            # same reason -- it wants the paths, not the contents.
+            for *_, json_file in self._speech_groups._iter_prelim_pages(title):  # noqa: SLF001
+                if not json_file.is_file():
+                    continue  # absent is `MissingPrelim`, reported separately
+                try:
+                    json.loads(json_file.read_text())
+                except (OSError, ValueError) as e:
+                    unreadable.append(UnreadablePrelim(volume, title_str, json_file, str(e)))
+        return unreadable
+
+    @staticmethod
+    def _print_unreadable_prelims(unreadable: list[UnreadablePrelim]) -> None:
+        """Report the malformed files and stop, rather than half-checking a volume."""
+        print()
+        print(f"Unreadable prelim OCR — {len(unreadable)} file(s) will not parse:")
+        for u in sorted(unreadable, key=lambda x: (x.volume, str(x.json_file))):
+            print(f"  Vol {u.volume}  {u.json_file.name}")
+            print(f"      {u.title_str}")
+            print(f"      {u.reason}")
+        print()
+        print("Nothing was checked. Restore each file and re-run:")
+        print('  git -C "<prelim repo>" show "HEAD:<path>" > "<path>"')
+        print(
+            "Use `show >` rather than `checkout`: if the corruption did not change"
+            " the file's size, git believes it matches the index and checkout is a"
+            " no-op."
+        )
 
     @staticmethod
     def _print_missing_prelims(all_missing: list[MissingPrelim]) -> None:
