@@ -201,6 +201,13 @@ class LineHeightLimits:
 _QUEUE_SEVERITY: tuple[str, ...] = (
     "bad_text_box",
     "invalid_markup",
+    # Beside `invalid_markup` because it is the same kind of fault: a stored
+    # value outside its vocabulary, which no downstream consumer can interpret.
+    # It used to be unlisted, and an unlisted type ranks after every issue here
+    # -- so a group with a bad `type` and anything else at all queued under the
+    # anything else, and the bad type was never the thing the reviewer was sent
+    # to look at. Vol 27 page 138 had six invalid types and offered five.
+    "invalid_type",
     "empty_text",
     "panel_unassigned",
     "panel_num_out_of_range",
