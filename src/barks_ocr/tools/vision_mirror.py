@@ -57,6 +57,8 @@ from barks_ocr.utils.vision_schema import (
     SPEAKER_REVIEWED_DATE_KEY,
     SPEAKER_REVIEWED_KEY,
     SPEAKER_WAS_KEY,
+    TYPE_KEY,
+    TYPE_WAS_KEY,
     VISION_NOTE_KEY,
 )
 
@@ -85,6 +87,14 @@ MIRRORED_KEYS = (
     "vision_text_ok",
     "vision_corrected_text",
 )
+
+# `type` is deliberately NOT in the list above, which copies a key whenever the
+# two sides differ. Both engines carry their own Gemini-assigned type, and those
+# disagree on plenty of groups the vision pass never had an opinion about --
+# blanket-copying would overwrite one grouper's answer with the other's and call
+# it mirroring. Only a type the pass actually corrected travels, which is
+# exactly the set carrying `type_was`.
+RETYPED_KEYS = (TYPE_KEY, TYPE_WAS_KEY)
 
 
 def _match_key(ai_text: str | None) -> str:
@@ -163,6 +173,26 @@ def _build_index(groups: dict) -> dict[str, list[tuple[str, dict]]]:
     return index
 
 
+def _copy_fields(src: dict, dst: dict) -> bool:
+    """Copy one paired group's annotations across. Returns whether *dst* changed.
+
+    The type keys are held back behind their own test. Both engines carry a
+    Gemini-assigned ``type`` and those disagree on groups the vision pass never
+    had an opinion about, so copying on difference alone would overwrite one
+    grouper's answer with the other's. Only a type the pass overruled travels,
+    and ``type_was`` is what says so.
+    """
+    changed = False
+    keys = MIRRORED_KEYS
+    if src.get(TYPE_WAS_KEY) is not None:
+        keys = (*keys, *RETYPED_KEYS)
+    for stored_key in keys:
+        if src.get(stored_key) != dst.get(stored_key):
+            dst[stored_key] = src.get(stored_key)
+            changed = True
+    return changed
+
+
 def mirror_page(src_groups: dict, dst_groups: dict, where: str, report: MirrorReport) -> bool:
     """Mirror one page's annotations from *src_groups* onto *dst_groups*.
 
@@ -198,10 +228,7 @@ def mirror_page(src_groups: dict, dst_groups: dict, where: str, report: MirrorRe
         )
         used.add(dst_gid)
 
-        for stored_key in MIRRORED_KEYS:
-            if src.get(stored_key) != dst.get(stored_key):
-                dst[stored_key] = src.get(stored_key)
-                changed = True
+        changed = _copy_fields(src, dst) or changed
         report.fields_copied += 1
 
         # Markup indexes a specific string, so it only travels when the two

@@ -39,6 +39,7 @@ from barks_ocr.utils.vision_schema import (
     CAP_COLOUR_KEY,
     CAP_COLOUR_OPTIONS,
     CAP_COLOUR_WAS_KEY,
+    GROUP_TYPE_OPTIONS,
     IDENTIFIED_BY_KEY,
     IDENTIFIED_BY_OPTIONS,
     OTHER_PREFIX,
@@ -134,14 +135,9 @@ CROP_PADDING_UNKNOWN = 400
 HANDLE_RADIUS = 14
 
 # Allowed values for a group's "type" field, shown in the bottom-bar radio row.
-TYPE_OPTIONS: tuple[str, ...] = (
-    "background",
-    "dialogue",
-    "narration",
-    "sound_effect",
-    "thought",
-    "title",
-)
+# Defined in `vision_schema` so the radio row, `group_checks` and the vision
+# pass -- which now writes this field -- cannot drift apart.
+TYPE_OPTIONS: tuple[str, ...] = GROUP_TYPE_OPTIONS
 DEFAULT_TYPE = "dialogue"
 TITLE_PAGE_DEFAULT_TYPE = "title"
 TITLE_PAGE_ISSUE_TYPE = "title_page"

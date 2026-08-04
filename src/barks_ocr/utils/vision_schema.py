@@ -224,6 +224,45 @@ SPEAKER_REVIEW_NOTE_KEY = "speaker_review_note"
 # The confidence a reviewed group carries: a human looked at the art.
 REVIEWED_CONFIDENCE = "high"
 
+# What kind of lettering a group is. Gemini assigns this at grouping time and
+# the vision pass may now correct it, because the pass is the first thing in the
+# chain that looks at the art rather than at the text.
+#
+# Ordered, because the editor lays the radio row out in this order.
+#
+# Defined here for the same reason the speaker roster is: there were two copies,
+# in `group_checks` and in `kivy_editor`, and a vocabulary the validator and the
+# editor each keep their own copy of is a silent trap waiting to happen. Nothing
+# enforced it against Gemini either, and the corpus carries 27 groups outside
+# the set -- "caption", "speech", "dialogtext", "dialogtext_bubble_id", "symbol".
+GROUP_TYPE_OPTIONS: tuple[str, ...] = (
+    "background",
+    "dialogue",
+    "narration",
+    "sound_effect",
+    "thought",
+    "title",
+)
+GROUP_TYPES: frozenset[str] = frozenset(GROUP_TYPE_OPTIONS)
+
+GROUP_TYPE_NOTES: dict[str, str] = {
+    "background": "lettering in the scene: signs, labels, newspapers, a name on a hull",
+    "dialogue": "somebody speaking, in a balloon",
+    "narration": "a caption box in the author's voice",
+    "sound_effect": "a noise painted into the art rather than spoken in a balloon",
+    "thought": "a thought balloon -- cloud edge and a trail of bubbles, not a tail",
+    "title": "the story logo and byline",
+}
+
+TYPE_KEY = "type"
+
+# The superseded type, written only when the pass changes one -- the same
+# bargain `speaker_was` strikes, and for the same reason: a group carrying
+# `type_was` is a correction, one without it was never disputed. Without it a
+# corrected type is indistinguishable from one Gemini got right, and the rate at
+# which the grouper mislabels becomes unmeasurable the moment it is overwritten.
+TYPE_WAS_KEY = "type_was"
+
 # Queue issue types, shared between the queues `vision_apply` writes and the
 # editor's info bar.
 VISION_TEXT_ISSUE = "vision-text"
@@ -672,6 +711,20 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  did it for an adult identified by a hat, for a call made from what a",
         "  character was wearing, or for a speaker named by the previous balloon",
         "  rather than by the art. Omit only for `none`.",
+        f"{TYPE_KEY} — what kind of lettering the group is. One of:",
+        *[
+            f"  {kind.ljust(max(len(k) for k in GROUP_TYPE_OPTIONS))}  "
+            f"{GROUP_TYPE_NOTES.get(kind, '')}".rstrip()
+            for kind in GROUP_TYPE_OPTIONS
+        ],
+        "  OMIT THIS FIELD unless the stored type is wrong. It already carries",
+        "  Gemini's answer, and supplying it only to agree writes noise. Supplying",
+        "  it at all is a correction: the old value is kept as `type_was`, so a",
+        "  group carrying that is one the pass overruled.",
+        "  Worth checking whenever the art and the label disagree about the",
+        "  drawing rather than the words -- a thought balloon has a cloud edge and",
+        "  a trail of bubbles, a speech balloon has a pointed tail, and a noise",
+        "  painted into the art is not the same as one lettered inside a balloon.",
         (
             f"{EMPHASIS_MARKUP_KEY} — the group's ai_text with emphasis marked"
             f" inline: {', '.join(f'[{t}]WORD[/{t}]' for t in EMPHASIS_TAGS)}."

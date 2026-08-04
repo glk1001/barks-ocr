@@ -70,6 +70,7 @@ from barks_ocr.utils.vision_schema import (
     CONFIDENCES,
     EMPHASIS_MARKUP_KEY,
     FIELD_CLASS,
+    GROUP_TYPES,
     IDENTIFIED_BY_KEY,
     IDENTIFIED_BY_SET,
     MAX_OBJECTS,
@@ -83,6 +84,8 @@ from barks_ocr.utils.vision_schema import (
     SETTING_KEY,
     TIME_OF_DAY_KEY,
     TIMES_OF_DAY,
+    TYPE_KEY,
+    TYPE_WAS_KEY,
     VISIBLE_TEXT_KEY,
     VISION_SPEAKER_ISSUE,
     VISION_TEXT_ISSUE,
@@ -218,10 +221,29 @@ def _validate_group(  # noqa: PLR0913
     if cap is not None and cap not in CAP_COLOUR_SET:
         errors.append(f'{where}: cap_colour "{cap}" is not one of {sorted(CAP_COLOUR_SET)}.')
     _check_identified_by(entry.get("identified_by"), speaker, cap, where, errors)
+    _check_group_type(entry.get(TYPE_KEY), where, errors)
     _check_emphasis(entry.get(EMPHASIS_MARKUP_KEY), ai_text, where, errors)
     if not entry.get("text_ok") and not entry.get("corrected_text"):
         errors.append(f"{where}: text_ok is false but no corrected_text was supplied.")
     del gid
+
+
+def _check_group_type(value: Any, where: str, errors: list[str]) -> None:  # noqa: ANN401
+    """Validate a proposed correction to a group's ``type``.
+
+    Optional by design. The field already carries Gemini's answer, so supplying
+    it only to agree would write noise on every group; absent means the pass had
+    no quarrel with it. Present means the pass is overruling the grouper, which
+    is why the old value is kept as ``type_was``.
+    """
+    if value is None:
+        return
+    if not isinstance(value, str) or value not in GROUP_TYPES:
+        errors.append(
+            f"{where}: {TYPE_KEY} {value!r} is not one of {sorted(GROUP_TYPES)}."
+            " The vocabulary is closed -- the corpus already carries 27 groups"
+            " outside it from before anything checked."
+        )
 
 
 def _check_identified_by(
@@ -598,16 +620,28 @@ def _apply_page(
     capture_model: str | None,
     *,
     dry_run: bool,
-) -> int:
-    """Write one page's annotations. Returns the number of groups changed."""
+) -> tuple[int, int]:
+    """Write one page's annotations. Returns (groups changed, types corrected)."""
     json_groups = page_group.speech_page_json.get("groups", {})
     page = page_group.fanta_page
     changed = 0
+    retyped = 0
 
     for gid, entry in result[RESULT_GROUPS_KEY].items():
         group = json_groups[gid]
         for result_key, stored_key in APPLIED_KEYS.items():
             group[stored_key] = entry.get(result_key)
+
+        # `type` is deliberately not in APPLIED_KEYS, which blanket-writes every
+        # key including as None: that would wipe the grouper's answer off every
+        # group the pass said nothing about. Absent means "no quarrel with it",
+        # so only a supplied value touches the group -- and only a value that
+        # differs is a correction worth recording.
+        new_type = entry.get(TYPE_KEY)
+        if new_type is not None and new_type != group.get(TYPE_KEY):
+            group[TYPE_WAS_KEY] = group.get(TYPE_KEY)
+            group[TYPE_KEY] = new_type
+            retyped += 1
 
         # Emphasis goes into `ai_text` itself. Validation has already checked
         # that this strips back to the stored words, so the only thing changing
@@ -623,7 +657,7 @@ def _apply_page(
         changed += 1
 
     if dry_run:
-        return changed
+        return changed, retyped
 
     ocr_file = page_group.ocr_prelim_groups_json_file
     backup_file = Path(
@@ -641,7 +675,41 @@ def _apply_page(
             json.dumps(_stamped(capture, capture_model), indent=2, ensure_ascii=False) + "\n"
         )
 
-    return changed
+    return changed, retyped
+
+
+def _print_summary(  # noqa: PLR0913
+    results: list[tuple[str, dict]],
+    total: int,
+    retyped: int,
+    text_lines: list[str],
+    speaker_lines: list[str],
+    wanted_confidences: frozenset[str],
+    *,
+    dry_run: bool,
+) -> None:
+    """Print what the run did, or would do."""
+    verb = "Would annotate" if dry_run else "Annotated"
+    captured = sum(1 for _page, result in results if result.get(RESULT_CAPTURE_KEY) is not None)
+    # Count the capture records too. The group total alone reads as success even
+    # when every page wrote nothing but groups, which is how a whole title once
+    # applied with no capture at all and said so nowhere.
+    print(f"{verb} {total} group(s) and {captured} page capture(s) across {len(results)} page(s).")
+    # Said out loud rather than left to be noticed in a diff: this is the pass
+    # overruling the grouper, and the rate it happens at is the only measure of
+    # how often the grouper mislabels.
+    if retyped:
+        retyped_verb = "Would correct" if dry_run else "Corrected"
+        print(f"{retyped_verb} the type on {retyped} group(s); the old values are kept.")
+    if dry_run:
+        print(f"{len(set(text_lines))} group(s) have proposed text corrections.")
+        # Not all of these are queued for their confidence any more: the
+        # lone-panel rule adds groups the pass was sure about.
+        print(
+            f"{len(set(speaker_lines))} group(s) queued for speaker review"
+            f" (confidence {sorted(wanted_confidences)}, plus any nephew named"
+            f" alone in a panel)."
+        )
 
 
 def _stamped(capture: dict, capture_model: str | None) -> dict:
@@ -904,8 +972,13 @@ def main(  # noqa: PLR0913
     text_lines: list[str] = []
     speaker_lines: list[str] = []
     total = 0
+    retyped = 0
     for page, result in results:
-        total += _apply_page(page_groups[page], result, capture_model, dry_run=dry_run)
+        page_total, page_retyped = _apply_page(
+            page_groups[page], result, capture_model, dry_run=dry_run
+        )
+        total += page_total
+        retyped += page_retyped
         page_text, page_speaker = _queue_lines_for_page(
             page,
             result,
@@ -934,21 +1007,15 @@ def main(  # noqa: PLR0913
     if not no_mirror:
         _mirror_to_other_engine(speech_groups, results, engine, dry_run=dry_run)
 
-    verb = "Would annotate" if dry_run else "Annotated"
-    captured = sum(1 for _page, result in results if result.get(RESULT_CAPTURE_KEY) is not None)
-    # Count the capture records too. The group total alone reads as success even
-    # when every page wrote nothing but groups, which is how a whole title once
-    # applied with no capture at all and said so nowhere.
-    print(f"{verb} {total} group(s) and {captured} page capture(s) across {len(results)} page(s).")
-    if dry_run:
-        print(f"{len(set(text_lines))} group(s) have proposed text corrections.")
-        # Not all of these are queued for their confidence any more: the
-        # lone-panel rule adds groups the pass was sure about.
-        print(
-            f"{len(set(speaker_lines))} group(s) queued for speaker review"
-            f" (confidence {sorted(wanted_confidences)}, plus any nephew named"
-            f" alone in a panel)."
-        )
+    _print_summary(
+        results,
+        total,
+        retyped,
+        text_lines,
+        speaker_lines,
+        wanted_confidences,
+        dry_run=dry_run,
+    )
 
 
 if __name__ == "__main__":

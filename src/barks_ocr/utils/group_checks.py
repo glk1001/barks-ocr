@@ -14,6 +14,8 @@ from collections.abc import Callable
 
 from barks_fantagraphics.speech_markup import strip_markup, validate_markup
 
+from barks_ocr.utils.vision_schema import GROUP_TYPES
+
 DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "short_text",
     "error_notes",
@@ -29,11 +31,13 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
 )
 
 # The `type` vocabulary Gemini is asked for. Anything else is a mis-labelled
-# group: the corpus carries 26, as "caption", "speech", "dialogtext" and
-# "dialogtext_bubble_id".
-VALID_GROUP_TYPES: frozenset[str] = frozenset(
-    {"dialogue", "narration", "thought", "sound_effect", "background", "title"}
-)
+# group: the corpus carries 27, as "caption", "speech", "dialogtext",
+# "dialogtext_bubble_id" and "symbol".
+#
+# Re-exported from `vision_schema` rather than restated. It used to be spelled
+# out here and again in `kivy_editor`, which is exactly the drift the schema
+# module exists to prevent -- and the vision pass now writes this field too.
+VALID_GROUP_TYPES: frozenset[str] = GROUP_TYPES
 
 # Word-uppercased forms (e.g. "MR", "PROF") that, when followed by ".", should
 # NOT be flagged as a sentence end. Add common comic abbreviations as needed.
