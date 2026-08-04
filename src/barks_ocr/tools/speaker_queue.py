@@ -62,8 +62,27 @@ app = typer.Typer()
 # convention that it reaches `characters` only when the art gives it a balloon.
 # Grouping the queue by this makes a partial review still a complete answer for
 # the kinds already walked, rather than a random slice of everything.
+#
+# Matched as bare substrings, which is what lets "kitten" catch "kittens" and
+# "dog" catch "sheepdog". The cost is that a short hint also fires inside an
+# unrelated word: "ape" sits in paper, cape, escape and shape, so "the paper
+# boy" would file as an animal. Nothing in the corpus collides today, and the
+# class only decides which section of the review queue a call lands in, so a
+# miss is a misfiled row rather than bad data -- but keep new hints long, and
+# prefer the distinctive word over the short one.
 COLLECTIVE_HINTS = ("crowd", "crows", "players", "people", "boys", "men")
-ANIMAL_HINTS = ("horse", "goat", "kitten", "dog", "cat", "owl", "squirrel", "skunk")
+ANIMAL_HINTS = (
+    "horse",
+    "goat",
+    "kitten",
+    "dog",
+    "cat",
+    "owl",
+    "squirrel",
+    "skunk",
+    "gorilla",
+    "ape",
+)
 
 
 @dataclass(frozen=True)
