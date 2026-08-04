@@ -77,6 +77,9 @@ from barks_ocr.utils.vision_schema import (
     OBJECTS_KEY,
     OTHER_PREFIX,
     PANELS_OF_NOTE_KEY,
+    RESULT_CAPTURE_KEY,
+    RESULT_GROUPS_KEY,
+    RESULT_TITLE_KEY,
     SETTING_KEY,
     TIME_OF_DAY_KEY,
     TIMES_OF_DAY,
@@ -380,6 +383,77 @@ def _load_results(out_dir: Path) -> tuple[dict, list[tuple[str, dict]]]:
     return queue, results
 
 
+def _structure_errors(results: list[tuple[str, dict]]) -> list[str]:
+    """Check each result's top-level shape before anything reads into it.
+
+    Separate from ``_resolve_and_validate``, and run before it, because that
+    function *indexes* ``title`` and ``groups`` rather than checking them: a
+    result missing either used to abort the whole run with a bare ``KeyError``
+    after every page had been read, which is exactly the failure the roster
+    exists to prevent.  Normalization walks ``groups`` too, and runs earlier
+    still, so the check has to come before both.
+
+    An unknown title is the same class of problem one line further on:
+    ``STR_TITLE_TO_ENUM`` is a plain dict lookup, so a misspelled story used to
+    surface as a ``KeyError`` naming the misspelling and nothing else.
+
+    Args:
+        results: The loaded ``(fanta_page, result)`` pairs.
+
+    Returns:
+        One error per structural problem, in page order.
+
+    """
+    errors: list[str] = []
+    for page, result in results:
+        where = f"page {page}"
+
+        title = result.get(RESULT_TITLE_KEY)
+        if title is None:
+            errors.append(
+                f'{where}: no "{RESULT_TITLE_KEY}" key in result.json. Every page names'
+                " the story it belongs to, spelled as queue.json spells it."
+            )
+        elif not isinstance(title, str) or title not in STR_TITLE_TO_ENUM:
+            errors.append(
+                f"{where}: {RESULT_TITLE_KEY} {title!r} is not a known story."
+                " Spell it as queue.json spells it."
+            )
+
+        groups = result.get(RESULT_GROUPS_KEY)
+        if groups is None:
+            errors.append(
+                f'{where}: no "{RESULT_GROUPS_KEY}" key in result.json.'
+                " A page with nothing to annotate still needs an empty object."
+            )
+        elif not isinstance(groups, dict):
+            errors.append(
+                f"{where}: {RESULT_GROUPS_KEY} must be an object keyed by group id,"
+                f" got {type(groups).__name__}."
+            )
+        else:
+            errors.extend(
+                f"{where} group {gid}: entry must be an object, got {type(entry).__name__}."
+                for gid, entry in groups.items()
+                if not isinstance(entry, dict)
+            )
+
+        capture = result.get(RESULT_CAPTURE_KEY)
+        if capture is not None and not isinstance(capture, dict):
+            errors.append(
+                f"{where}: {RESULT_CAPTURE_KEY} must be an object, got {type(capture).__name__}."
+            )
+    return errors
+
+
+def _report_and_exit(errors: list[str]) -> None:
+    """Print every validation error and leave without writing anything."""
+    print(f"Validation failed with {len(errors)} error(s); nothing was written:")
+    for err in errors:
+        print(f"  - {err}")
+    raise typer.Exit(code=1)
+
+
 def _normalize_results(results: list[tuple[str, dict]]) -> int:
     """Canonicalize every speaker in place. Returns how many values changed.
 
@@ -389,7 +463,7 @@ def _normalize_results(results: list[tuple[str, dict]]) -> int:
     """
     changed = 0
     for _page, result in results:
-        for entry in result.get("groups", {}).values():
+        for entry in result.get(RESULT_GROUPS_KEY, {}).values():
             speaker = entry.get("speaker")
             if not isinstance(speaker, str):
                 continue  # `_check_speaker` reports the type error.
@@ -397,7 +471,7 @@ def _normalize_results(results: list[tuple[str, dict]]) -> int:
             if canonical != speaker:
                 entry["speaker"] = canonical
                 changed += 1
-        changed += _normalize_capture(result.get("capture") or {})
+        changed += _normalize_capture(result.get(RESULT_CAPTURE_KEY) or {})
     return changed
 
 
@@ -473,7 +547,7 @@ def _queue_lines_for_page(  # noqa: PLR0913
     text_lines: list[str] = []
     speaker_lines: list[str] = []
     unreferenced = _unreferenced_nephews(result, json_groups)
-    for gid, entry in result["groups"].items():
+    for gid, entry in result[RESULT_GROUPS_KEY].items():
         prefix = f"{volume} {int(page)} {engine.value} {int(gid)}"
         if not entry.get("text_ok") and not _correction_applied(entry, json_groups.get(gid, {})):
             text_lines.append(f"{prefix} {VISION_TEXT_ISSUE}")
@@ -507,14 +581,14 @@ def _unreferenced_nephews(result: dict, json_groups: dict) -> frozenset[str]:
 
     """
     by_panel: dict[Any, list[str]] = {}
-    for gid, entry in result["groups"].items():
+    for gid, entry in result[RESULT_GROUPS_KEY].items():
         if entry.get("speaker") in NEPHEW_NAMES:
             panel = json_groups.get(gid, {}).get("panel_num")
             by_panel.setdefault(panel, []).append(gid)
     return frozenset(
         group_ids[0]
         for group_ids in by_panel.values()
-        if len(group_ids) == 1 and result["groups"][group_ids[0]].get("cap_colour")
+        if len(group_ids) == 1 and result[RESULT_GROUPS_KEY][group_ids[0]].get("cap_colour")
     )
 
 
@@ -530,7 +604,7 @@ def _apply_page(
     page = page_group.fanta_page
     changed = 0
 
-    for gid, entry in result["groups"].items():
+    for gid, entry in result[RESULT_GROUPS_KEY].items():
         group = json_groups[gid]
         for result_key, stored_key in APPLIED_KEYS.items():
             group[stored_key] = entry.get(result_key)
@@ -558,7 +632,7 @@ def _apply_page(
     backup_file.parent.mkdir(parents=True, exist_ok=True)
     page_group.save_json(backup_file=backup_file)
 
-    capture = result.get("capture")
+    capture = result.get(RESULT_CAPTURE_KEY)
     if capture is not None:
         # Beside the prelim JSON rather than inside it: `final_groups.py` copies
         # only the `groups` key and would silently drop a new top-level section.
@@ -655,14 +729,16 @@ def _missing_capture_errors(results: list[tuple[str, dict]], out_dir: Path) -> l
     """
     errors = []
     for page, result in results:
-        if result.get("capture") is not None:
+        if result.get(RESULT_CAPTURE_KEY) is not None:
             continue
-        where = f'page {page}: no "capture" key in result.json'
+        where = f'page {page}: no "{RESULT_CAPTURE_KEY}" key in result.json'
         if _stub_is_filled(out_dir, page):
             errors.append(
                 f"{where} — but {page}/{STUB_FILE_NAME} has been filled in."
-                " The stub is scratch space; copy it into result.json under a"
-                ' "capture" key.'
+                " The stub is scratch space; copy its content fields into"
+                f' result.json under a "{RESULT_CAPTURE_KEY}" key. Copy the fields,'
+                " not the whole stub: its provenance keys are written here and are"
+                " rejected coming from a result."
             )
         else:
             errors.append(f"{where}. Pass --no-capture if this run is groups-only.")
@@ -683,7 +759,7 @@ def _resolve_and_validate(
     casts: dict[str, frozenset[str]] = {}
 
     for page, result in results:
-        title_str = result["title"]
+        title_str = result[RESULT_TITLE_KEY]
         title = STR_TITLE_TO_ENUM[title_str]
         if title_str not in casts:
             casts[title_str] = frozenset(story_characters(title))
@@ -699,7 +775,7 @@ def _resolve_and_validate(
         page_groups[page] = found[0]
         json_groups = found[0].speech_page_json.get("groups", {})
 
-        for gid, entry in result["groups"].items():
+        for gid, entry in result[RESULT_GROUPS_KEY].items():
             where = f"page {page} group {gid}"
             if gid not in json_groups:
                 errors.append(f"{where}: group id does not exist in the prelim JSON.")
@@ -708,7 +784,7 @@ def _resolve_and_validate(
                 gid, entry, json_groups[gid].get("ai_text") or "", where, errors, casts[title_str]
             )
 
-        capture = result.get("capture")
+        capture = result.get(RESULT_CAPTURE_KEY)
         if capture is not None:
             _validate_capture(
                 capture,
@@ -735,7 +811,7 @@ def _mirror_to_other_engine(
     """
     other = next(t for t in OcrTypes if t != engine)
     report = MirrorReport()
-    for title_str in dict.fromkeys(result["title"] for _page, result in results):
+    for title_str in dict.fromkeys(result[RESULT_TITLE_KEY] for _page, result in results):
         mirror_title(
             speech_groups,
             STR_TITLE_TO_ENUM[title_str],
@@ -803,6 +879,11 @@ def main(  # noqa: PLR0913
     volume = int(queue["volume"])
     engine = OcrTypes(queue["engine"])
 
+    # Before anything reads into a result: the steps below index these keys
+    # rather than checking them, so a malformed page has to stop the run here.
+    if structural := _structure_errors(results):
+        _report_and_exit(structural)
+
     speech_groups = SpeechGroups(ComicsDatabase())
 
     normalized = _normalize_results(results)
@@ -818,10 +899,7 @@ def main(  # noqa: PLR0913
         errors += _missing_capture_errors(results, out_dir)
 
     if errors:
-        print(f"Validation failed with {len(errors)} error(s); nothing was written:")
-        for err in errors:
-            print(f"  - {err}")
-        raise typer.Exit(code=1)
+        _report_and_exit(errors)
 
     text_lines: list[str] = []
     speaker_lines: list[str] = []
@@ -857,7 +935,7 @@ def main(  # noqa: PLR0913
         _mirror_to_other_engine(speech_groups, results, engine, dry_run=dry_run)
 
     verb = "Would annotate" if dry_run else "Annotated"
-    captured = sum(1 for _page, result in results if result.get("capture") is not None)
+    captured = sum(1 for _page, result in results if result.get(RESULT_CAPTURE_KEY) is not None)
     # Count the capture records too. The group total alone reads as success even
     # when every page wrote nothing but groups, which is how a whole title once
     # applied with no capture at all and said so nowhere.

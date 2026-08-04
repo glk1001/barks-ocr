@@ -229,6 +229,17 @@ REVIEWED_CONFIDENCE = "high"
 VISION_TEXT_ISSUE = "vision-text"
 VISION_SPEAKER_ISSUE = "vision-speaker"
 
+# Top-level keys of the `result.json` the reading session writes, one per page.
+#
+# Named here, and rendered into the roster, because `title` was neither: it is
+# read straight out of the parsed result before validation begins, so a result
+# without it aborted the run with a bare KeyError rather than a validation
+# message -- after the reading work, which is the failure the roster exists to
+# prevent. Found on the first corpus title, 2026-08-04.
+RESULT_TITLE_KEY = "title"
+RESULT_GROUPS_KEY = "groups"
+RESULT_CAPTURE_KEY = "capture"
+
 # Keys of the per-page capture file, written beside the prelim JSON rather than
 # into it: `final_groups.py` copies only the `groups` key and would silently
 # drop a new top-level section.
@@ -569,6 +580,22 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "# Vision pass vocabulary — generated from barks_ocr/utils/vision_schema.py.",
         "# `vision_apply` validates every result.json against exactly these values,",
         "# and anything else aborts the run once the reading work is already done.",
+        "",
+        "Each page directory takes one result.json with exactly these top-level keys:",
+        "",
+        f"  {RESULT_TITLE_KEY}     the story title, spelled as queue.json spells it.",
+        "            REQUIRED, and the one field that is not validated: it is read",
+        "            before the checks start, so leaving it out aborts the run with a",
+        "            bare KeyError instead of a message, after the reading is done.",
+        f"  {RESULT_GROUPS_KEY}    {{ group_id: {{ ... }} }}, using the fields below. Ids are",
+        "            strings, and must be ones the page's groups.json already has.",
+        f"  {RESULT_CAPTURE_KEY}   the per-page record described at the end of this file.",
+        "            Required unless the run is passed --no-capture.",
+        "",
+        "  Nothing else belongs at the top level, and the capture record takes only the",
+        "  keys listed for it. In particular the page-capture.json stub in the page",
+        "  directory is scratch space, NOT a template: it carries provenance keys that",
+        "  `vision_apply` fills in itself and will reject coming from a result.",
         "",
         "speaker — one of:",
     ]
