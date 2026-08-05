@@ -217,6 +217,19 @@ to `nephews`, leaving `speaker_reviewed: true` beside a `speaker_was` equal to
 again. Before the fix a second apply was safe only on a title with no review on
 it yet, which is not a property anybody could see from the outside.
 
+**A capture record is only rewritten when its substance changed.** `captured` is
+stamped fresh on every run, so an unconditional write made a re-apply rewrite
+every capture file on the title even when the reading was identical — ten files
+of pure timestamp churn burying the two or three lines that actually changed,
+which is most of why the clobber above was hard to see in a diff. The comparison
+ignores `captured` alone, so a changed `capture_model` or prompt version still
+rewrites, and an unchanged record keeps the older and more accurate date: the
+stamp says when the reading was established, not when a command last ran over
+it. The run reports how many it left alone.
+
+**A re-apply of an unchanged title is now a complete no-op** — verified on *Good
+Deeds*: 147 groups, both engines, zero files touched.
+
 ### Page capture
 
 One record per page, written to a sibling `{page}-page-capture.json` — **not**

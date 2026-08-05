@@ -42,6 +42,7 @@ it -- the pilot, for instance, predates page capture entirely.
 
 import json
 from collections.abc import Callable
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import Annotated, Any
@@ -653,19 +654,73 @@ def _unreferenced_nephews(result: dict, json_groups: dict) -> frozenset[str]:
     )
 
 
+@dataclass
+class ApplyTally:
+    """What one run wrote, and what it deliberately did not."""
+
+    groups: int = 0
+    retyped: int = 0
+    preserved: int = 0
+    captures_unchanged: int = 0
+
+    def __add__(self, other: "ApplyTally") -> "ApplyTally":
+        """Return the two tallies summed field by field, for accumulating pages."""
+        return ApplyTally(
+            self.groups + other.groups,
+            self.retyped + other.retyped,
+            self.preserved + other.preserved,
+            self.captures_unchanged + other.captures_unchanged,
+        )
+
+
+def _write_capture(capture_file: Path, capture: dict, capture_model: str | None) -> bool:
+    """Write the page capture record, unless only its timestamp would move.
+
+    ``captured`` is stamped fresh on every run, so an unconditional write made a
+    re-apply rewrite every capture file on the title even when the reading had
+    not changed by a character.  That is not free: it buries the two or three
+    lines that *did* change under ten files of pure timestamp churn, which is
+    exactly the noise that made a clobbered speaker review hard to see in a diff
+    on 2026-08-05.
+
+    Comparing everything **except** ``captured`` also keeps the stamp honest. It
+    is meant to say when this reading was established, not when a command was
+    last run over it, so a run that changes nothing should leave the older and
+    more accurate date in place.  A changed ``capture_model`` or prompt version
+    still rewrites, because both are part of the record rather than of the run.
+
+    Args:
+        capture_file: Where the record lives, beside the prelim JSON.
+        capture: The page's capture record, as the pass wrote it.
+        capture_model: The model that read the crops, if it was declared.
+
+    Returns:
+        True when the file was written, False when it was already current.
+
+    """
+    stamped = _stamped(capture, capture_model)
+    if capture_file.exists():
+        try:
+            existing = json.loads(capture_file.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            # An unreadable record is one to replace, not one to preserve.
+            existing = None
+        if isinstance(existing, dict) and {
+            k: v for k, v in existing.items() if k != CAPTURED_KEY
+        } == {k: v for k, v in stamped.items() if k != CAPTURED_KEY}:
+            return False
+    capture_file.write_text(json.dumps(stamped, indent=2, ensure_ascii=False) + "\n")
+    return True
+
+
 def _apply_page(
     page_group: Any,  # noqa: ANN401
     result: dict,
     capture_model: str | None,
     *,
     dry_run: bool,
-) -> tuple[int, int, int]:
-    """Write one page's annotations.
-
-    Returns:
-        (groups changed, types corrected, reviewed speaker calls left alone).
-
-    """
+) -> ApplyTally:
+    """Write one page's annotations."""
     json_groups = page_group.speech_page_json.get("groups", {})
     page = page_group.fanta_page
     changed = 0
@@ -711,7 +766,7 @@ def _apply_page(
         changed += 1
 
     if dry_run:
-        return changed, retyped, preserved
+        return ApplyTally(changed, retyped, preserved)
 
     ocr_file = page_group.ocr_prelim_groups_json_file
     backup_file = Path(
@@ -720,23 +775,20 @@ def _apply_page(
     backup_file.parent.mkdir(parents=True, exist_ok=True)
     page_group.save_json(backup_file=backup_file)
 
+    unchanged = 0
     capture = result.get(RESULT_CAPTURE_KEY)
     if capture is not None:
         # Beside the prelim JSON rather than inside it: `final_groups.py` copies
         # only the `groups` key and would silently drop a new top-level section.
         capture_file = ocr_file.parent / (page + CAPTURE_FILE_SUFFIX)
-        capture_file.write_text(
-            json.dumps(_stamped(capture, capture_model), indent=2, ensure_ascii=False) + "\n"
-        )
+        unchanged = int(not _write_capture(capture_file, capture, capture_model))
 
-    return changed, retyped, preserved
+    return ApplyTally(changed, retyped, preserved, unchanged)
 
 
 def _print_summary(  # noqa: PLR0913
     results: list[tuple[str, dict]],
-    total: int,
-    retyped: int,
-    preserved: int,
+    tally: ApplyTally,
     text_lines: list[str],
     speaker_lines: list[str],
     wanted_confidences: frozenset[str],
@@ -745,25 +797,40 @@ def _print_summary(  # noqa: PLR0913
 ) -> None:
     """Print what the run did, or would do."""
     verb = "Would annotate" if dry_run else "Annotated"
-    captured = sum(1 for _page, result in results if result.get(RESULT_CAPTURE_KEY) is not None)
     # Count the capture records too. The group total alone reads as success even
     # when every page wrote nothing but groups, which is how a whole title once
     # applied with no capture at all and said so nowhere.
-    print(f"{verb} {total} group(s) and {captured} page capture(s) across {len(results)} page(s).")
+    #
+    # Deliberately counted from the results rather than from what was written:
+    # this line exists to catch a title applying with no capture at all, and
+    # counting writes would report a re-apply of a fully captured title as zero
+    # -- the very failure it is here to detect.
+    captured = sum(1 for _page, result in results if result.get(RESULT_CAPTURE_KEY) is not None)
+    print(
+        f"{verb} {tally.groups} group(s) and {captured} page capture(s)"
+        f" across {len(results)} page(s)."
+    )
+    if tally.captures_unchanged:
+        unchanged_verb = "would be" if dry_run else "were"
+        print(
+            f"{tally.captures_unchanged} of those capture record(s) {unchanged_verb}"
+            f" already current and {'would keep' if dry_run else 'kept'} their"
+            f" original captured date."
+        )
     # Said out loud rather than left to be noticed in a diff: this is the pass
     # overruling the grouper, and the rate it happens at is the only measure of
     # how often the grouper mislabels.
-    if retyped:
+    if tally.retyped:
         retyped_verb = "Would correct" if dry_run else "Corrected"
-        print(f"{retyped_verb} the type on {retyped} group(s); the old values are kept.")
+        print(f"{retyped_verb} the type on {tally.retyped} group(s); the old values are kept.")
     # Also said out loud. A re-apply that quietly declines to write part of what
     # the result file says is exactly the kind of silent divergence between
     # `result.json` and the corpus that is worth one line to notice.
-    if preserved:
+    if tally.preserved:
         preserved_verb = "Would leave" if dry_run else "Left"
         print(
-            f"{preserved_verb} the speaker call on {preserved} already-reviewed group(s)"
-            f" alone; a review outranks the pass."
+            f"{preserved_verb} the speaker call on {tally.preserved} already-reviewed"
+            f" group(s) alone; a review outranks the pass."
         )
     if dry_run:
         print(f"{len(set(text_lines))} group(s) have proposed text corrections.")
@@ -1035,16 +1102,9 @@ def main(  # noqa: PLR0913
 
     text_lines: list[str] = []
     speaker_lines: list[str] = []
-    total = 0
-    retyped = 0
-    preserved = 0
+    tally = ApplyTally()
     for page, result in results:
-        page_total, page_retyped, page_preserved = _apply_page(
-            page_groups[page], result, capture_model, dry_run=dry_run
-        )
-        total += page_total
-        retyped += page_retyped
-        preserved += page_preserved
+        tally += _apply_page(page_groups[page], result, capture_model, dry_run=dry_run)
         page_text, page_speaker = _queue_lines_for_page(
             page,
             result,
@@ -1075,9 +1135,7 @@ def main(  # noqa: PLR0913
 
     _print_summary(
         results,
-        total,
-        retyped,
-        preserved,
+        tally,
         text_lines,
         speaker_lines,
         wanted_confidences,
