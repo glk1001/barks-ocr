@@ -51,9 +51,9 @@ work up cold. The five-title trial is finished; what follows is the corpus run.
 **1. Read `<out-dir>/roster.txt` before page 1.** It is generated from
 `utils/vision_schema.py` on every prep and carries the whole vocabulary plus the
 seven reading rules the trial produced — the collective, per-cap colour, no
-reading order, observed cap colour, evidence, framing, emphasis. It is 110 lines
-and it is what `vision_apply` validates against, so a run that ignores it fails
-after the reading work is done. **Do not rely on this document for the rules**;
+reading order, observed cap colour, evidence, framing, emphasis — plus the crop
+scales below. It is short, and it is what `vision_apply` validates against, so a
+run that ignores it fails after the reading work is done. **Do not rely on this document for the rules**;
 the rules are in that file precisely because prose in here was twice found not
 to reach the pass.
 

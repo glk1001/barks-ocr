@@ -646,6 +646,17 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  directory is scratch space, NOT a template: it carries provenance keys that",
         "  `vision_apply` fills in itself and will reject coming from a result.",
         "",
+        "TRACING A TAIL — the two images in a page directory are NOT the same scale.",
+        "  panel-NN.png is source resolution, and the text_box corners in groups.json",
+        "  are in those same coordinates. page.png is the downscaled overview, about",
+        "  half, so those numbers land somewhere else on it entirely.",
+        "  Crop from the PANEL files. The failure the other way is silent: what comes",
+        "  back is a plausible piece of comic art with no balloon tail in it, which",
+        "  reads as a badly drawn tail rather than as a bad crop.",
+        "  Then upscale — 2-3x to see which hat a tail leans at, 4-6x to settle a",
+        "  single letter. Reading lettering off the overview has already produced a",
+        "  proposed word-level correction against text that was right all along.",
+        "",
         "speaker — one of:",
     ]
     width = max(len(name) for name in SPEAKER_OPTIONS)
