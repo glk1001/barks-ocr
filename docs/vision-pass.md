@@ -191,7 +191,7 @@ Written onto each group in the prelim JSON by `vision_apply`:
 | `speaker` | roster name, `narrator`, `none`, `unknown`, or `other:<free text>` |
 | | roster: Donald, Huey, Dewey, Louie, `nephews`, Daisy, Gladstone, Scrooge, Gyro |
 | `speaker_confidence` | `high` / `medium` / `low` |
-| `speaker_reviewed` | `true` once a human has confirmed the speaker in the editor |
+| `speaker_reviewed` | `true` once a human has confirmed the speaker in the editor. It also **freezes the call against a re-apply** — see below |
 | `cap_colour` | `red` / `blue` / `green`, or `null` when not visible |
 | `identified_by` | what the call rests on — a **list** of `balloon-tail`, `cap-colour`, `costume`, `hat`, `sole-figure`, `dialogue`, `caption`, `off-panel`. Required wherever somebody speaks |
 | `speaker_was`, `cap_colour_was` | the pass's call, kept when a review **changes** it. Absent on a confirmation |
@@ -200,6 +200,22 @@ Written onto each group in the prelim JSON by `vision_apply`:
 | `vision_note` | the reasoning behind the call |
 | `vision_text_ok` | `false` when the art disagrees with `ai_text` |
 | `vision_corrected_text` | the reading from the art |
+
+**A review outranks the pass, and `vision_apply` now enforces that.** On a group
+carrying `speaker_reviewed`, a re-apply leaves `speaker`, `speaker_confidence`,
+`cap_colour` and `identified_by` exactly as the reviewer left them — the four
+keys the editor writes — and says how many it left alone. It still refreshes
+`vision_note` and the two text fields, because those are the pass's own
+reasoning and its text proposal, not the reviewer's; the reviewer's reasoning
+lives in `speaker_review_note`. A reviewed group is also no longer re-offered by
+`--queue-speakers`.
+
+Fixed 2026-08-05, after a re-apply run only to regenerate the review queues put
+`Donald` and `medium` back over a review that had corrected *Good Deeds* 262 g4
+to `nephews`, leaving `speaker_reviewed: true` beside a `speaker_was` equal to
+`speaker`. That equality is the signature of the damage if it is ever seen
+again. Before the fix a second apply was safe only on a title with no review on
+it yet, which is not a property anybody could see from the outside.
 
 ### Page capture
 

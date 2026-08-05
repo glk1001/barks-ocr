@@ -59,6 +59,7 @@ from barks_ocr.tools.vision_mirror import MirrorReport, mirror_title
 from barks_ocr.utils.story_cast import story_characters
 from barks_ocr.utils.vision_schema import (
     BEATS_KEY,
+    CAP_COLOUR_KEY,
     CAP_COLOUR_SET,
     CAPTURE_MODEL_KEY,
     CAPTURE_PROMPT_VERSION,
@@ -82,6 +83,9 @@ from barks_ocr.utils.vision_schema import (
     RESULT_GROUPS_KEY,
     RESULT_TITLE_KEY,
     SETTING_KEY,
+    SPEAKER_CONFIDENCE_KEY,
+    SPEAKER_KEY,
+    SPEAKER_REVIEWED_KEY,
     TIME_OF_DAY_KEY,
     TIMES_OF_DAY,
     TYPE_KEY,
@@ -144,6 +148,32 @@ APPLIED_KEYS = {
     "text_ok": "vision_text_ok",
     "corrected_text": "vision_corrected_text",
 }
+
+# The four keys a speaker review owns, and which a re-apply must therefore leave
+# alone once `speaker_reviewed` is set. Exactly the set the editor writes when a
+# reviewer answers "who is speaking here" -- see `_set_speaker` in
+# `kivy_editor.py`, which writes these four and nothing else about the call.
+#
+# Without this a second apply silently reverts the review to whatever the pass
+# originally said, because APPLIED_KEYS blanket-writes every key on every group.
+# Measured 2026-08-05 on *Good Deeds*: a re-apply run only to regenerate the
+# review queues put `Donald` and `medium` back over a review that had corrected
+# 262 g4 to `nephews`, while leaving `speaker_reviewed: true` and
+# `speaker_was: "Donald"` in place -- an incoherent group whose `speaker_was`
+# equals its `speaker`, which is the signature to grep for if it happens again.
+#
+# The other three applied keys are deliberately still written to a reviewed
+# group. `vision_note` is the *pass's* reasoning and nothing supersedes it (the
+# reviewer has `speaker_review_note`), and the two text fields belong to the
+# text-correction workflow, which `speaker_reviewed` says nothing about.
+SPEAKER_REVIEW_OWNED_KEYS = frozenset(
+    {
+        SPEAKER_KEY,
+        SPEAKER_CONFIDENCE_KEY,
+        CAP_COLOUR_KEY,
+        IDENTIFIED_BY_KEY,
+    }
+)
 
 
 def _check_speaker(
@@ -573,6 +603,15 @@ def _queue_lines_for_page(  # noqa: PLR0913
         prefix = f"{volume} {int(page)} {engine.value} {int(gid)}"
         if not entry.get("text_ok") and not _correction_applied(entry, json_groups.get(gid, {})):
             text_lines.append(f"{prefix} {VISION_TEXT_ISSUE}")
+        # Both tests are against `result.json`, which never changes once written,
+        # so without the `speaker_reviewed` check the queue hands back every
+        # low-confidence call and every lone-panel nephew on every run forever --
+        # the same trap `_correction_applied` exists to keep off the text side.
+        # `_correction_applied`'s docstring already claimed the speaker queue
+        # worked this way; it did not, and *Good Deeds* re-offered two groups
+        # that had been reviewed minutes earlier.
+        if json_groups.get(gid, {}).get(SPEAKER_REVIEWED_KEY):
+            continue
         if entry.get("speaker_confidence") in speaker_confidences or gid in unreferenced:
             speaker_lines.append(f"{prefix} {VISION_SPEAKER_ISSUE}")
     return text_lines, speaker_lines
@@ -620,16 +659,31 @@ def _apply_page(
     capture_model: str | None,
     *,
     dry_run: bool,
-) -> tuple[int, int]:
-    """Write one page's annotations. Returns (groups changed, types corrected)."""
+) -> tuple[int, int, int]:
+    """Write one page's annotations.
+
+    Returns:
+        (groups changed, types corrected, reviewed speaker calls left alone).
+
+    """
     json_groups = page_group.speech_page_json.get("groups", {})
     page = page_group.fanta_page
     changed = 0
     retyped = 0
+    preserved = 0
 
     for gid, entry in result[RESULT_GROUPS_KEY].items():
         group = json_groups[gid]
+        # A human has answered this one, and their answer outranks the pass's.
+        # Skipping the keys rather than the whole group keeps the pass's own
+        # reasoning and its text-correction proposal current -- see
+        # SPEAKER_REVIEW_OWNED_KEYS.
+        reviewed = bool(group.get(SPEAKER_REVIEWED_KEY))
+        if reviewed:
+            preserved += 1
         for result_key, stored_key in APPLIED_KEYS.items():
+            if reviewed and stored_key in SPEAKER_REVIEW_OWNED_KEYS:
+                continue
             group[stored_key] = entry.get(result_key)
 
         # `type` is deliberately not in APPLIED_KEYS, which blanket-writes every
@@ -657,7 +711,7 @@ def _apply_page(
         changed += 1
 
     if dry_run:
-        return changed, retyped
+        return changed, retyped, preserved
 
     ocr_file = page_group.ocr_prelim_groups_json_file
     backup_file = Path(
@@ -675,13 +729,14 @@ def _apply_page(
             json.dumps(_stamped(capture, capture_model), indent=2, ensure_ascii=False) + "\n"
         )
 
-    return changed, retyped
+    return changed, retyped, preserved
 
 
 def _print_summary(  # noqa: PLR0913
     results: list[tuple[str, dict]],
     total: int,
     retyped: int,
+    preserved: int,
     text_lines: list[str],
     speaker_lines: list[str],
     wanted_confidences: frozenset[str],
@@ -701,6 +756,15 @@ def _print_summary(  # noqa: PLR0913
     if retyped:
         retyped_verb = "Would correct" if dry_run else "Corrected"
         print(f"{retyped_verb} the type on {retyped} group(s); the old values are kept.")
+    # Also said out loud. A re-apply that quietly declines to write part of what
+    # the result file says is exactly the kind of silent divergence between
+    # `result.json` and the corpus that is worth one line to notice.
+    if preserved:
+        preserved_verb = "Would leave" if dry_run else "Left"
+        print(
+            f"{preserved_verb} the speaker call on {preserved} already-reviewed group(s)"
+            f" alone; a review outranks the pass."
+        )
     if dry_run:
         print(f"{len(set(text_lines))} group(s) have proposed text corrections.")
         # Not all of these are queued for their confidence any more: the
@@ -973,12 +1037,14 @@ def main(  # noqa: PLR0913
     speaker_lines: list[str] = []
     total = 0
     retyped = 0
+    preserved = 0
     for page, result in results:
-        page_total, page_retyped = _apply_page(
+        page_total, page_retyped, page_preserved = _apply_page(
             page_groups[page], result, capture_model, dry_run=dry_run
         )
         total += page_total
         retyped += page_retyped
+        preserved += page_preserved
         page_text, page_speaker = _queue_lines_for_page(
             page,
             result,
@@ -1011,6 +1077,7 @@ def main(  # noqa: PLR0913
         results,
         total,
         retyped,
+        preserved,
         text_lines,
         speaker_lines,
         wanted_confidences,
