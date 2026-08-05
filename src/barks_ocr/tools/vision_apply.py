@@ -662,6 +662,7 @@ class ApplyTally:
     retyped: int = 0
     preserved: int = 0
     captures_unchanged: int = 0
+    pages_unchanged: int = 0
 
     def __add__(self, other: "ApplyTally") -> "ApplyTally":
         """Return the two tallies summed field by field, for accumulating pages."""
@@ -670,6 +671,7 @@ class ApplyTally:
             self.retyped + other.retyped,
             self.preserved + other.preserved,
             self.captures_unchanged + other.captures_unchanged,
+            self.pages_unchanged + other.pages_unchanged,
         )
 
 
@@ -713,6 +715,38 @@ def _write_capture(capture_file: Path, capture: dict, capture_model: str | None)
     return True
 
 
+def _groups_written(page_group: Any, ocr_file: Path, before: str) -> bool:  # noqa: ANN401
+    """Save the page's group JSON, unless applying changed nothing in it.
+
+    ``save_json`` copies the file into the backup tree before every write, so an
+    unconditional save on a re-apply meant a fresh backup of every page on the
+    title with nothing to distinguish it from the last one.  Backups are meant to
+    be the state before a change; a pile of identical copies of an unchanged file
+    is only noise to search when one is actually wanted.
+
+    The test is the serialization rather than the counters kept while applying,
+    because those count groups *touched*, not groups whose stored data moved --
+    every group is touched on every run by design.
+
+    Args:
+        page_group: The page whose group JSON may need saving.
+        ocr_file: Where that JSON lives, for siting the backup.
+        before: The page JSON serialized as it was before applying.
+
+    Returns:
+        True when the file was written, False when it was already current.
+
+    """
+    if json.dumps(page_group.speech_page_json, indent=4) == before:
+        return False
+    backup_file = Path(
+        str(get_backup_file(ocr_file)).replace(str(OCR_PRELIM_DIR), str(OCR_PRELIM_BACKUP_DIR))
+    )
+    backup_file.parent.mkdir(parents=True, exist_ok=True)
+    page_group.save_json(backup_file=backup_file)
+    return True
+
+
 def _apply_page(
     page_group: Any,  # noqa: ANN401
     result: dict,
@@ -726,6 +760,10 @@ def _apply_page(
     changed = 0
     retyped = 0
     preserved = 0
+    # Serialized exactly as `save_json` will write it, so comparing against the
+    # same serialization afterwards answers precisely "would the file bytes
+    # differ" -- see `_groups_written`.
+    before = json.dumps(page_group.speech_page_json, indent=4)
 
     for gid, entry in result[RESULT_GROUPS_KEY].items():
         group = json_groups[gid]
@@ -769,11 +807,7 @@ def _apply_page(
         return ApplyTally(changed, retyped, preserved)
 
     ocr_file = page_group.ocr_prelim_groups_json_file
-    backup_file = Path(
-        str(get_backup_file(ocr_file)).replace(str(OCR_PRELIM_DIR), str(OCR_PRELIM_BACKUP_DIR))
-    )
-    backup_file.parent.mkdir(parents=True, exist_ok=True)
-    page_group.save_json(backup_file=backup_file)
+    groups_written = _groups_written(page_group, ocr_file, before)
 
     unchanged = 0
     capture = result.get(RESULT_CAPTURE_KEY)
@@ -783,7 +817,7 @@ def _apply_page(
         capture_file = ocr_file.parent / (page + CAPTURE_FILE_SUFFIX)
         unchanged = int(not _write_capture(capture_file, capture, capture_model))
 
-    return ApplyTally(changed, retyped, preserved, unchanged)
+    return ApplyTally(changed, retyped, preserved, unchanged, int(not groups_written))
 
 
 def _print_summary(  # noqa: PLR0913
@@ -816,6 +850,16 @@ def _print_summary(  # noqa: PLR0913
             f"{tally.captures_unchanged} of those capture record(s) {unchanged_verb}"
             f" already current and {'would keep' if dry_run else 'kept'} their"
             f" original captured date."
+        )
+    # Worth its own line because the absence of a backup is otherwise invisible:
+    # somebody looking for the state before this run needs to know there is not
+    # a new copy of these pages waiting in the backup tree.
+    if tally.pages_unchanged:
+        pages_verb = "would be" if dry_run else "were"
+        print(
+            f"{tally.pages_unchanged} page(s) of groups {pages_verb} already current"
+            f" and {'would not be' if dry_run else 'were not'} rewritten, so no"
+            f" backup {'would be' if dry_run else 'was'} taken for them."
         )
     # Said out loud rather than left to be noticed in a diff: this is the pass
     # overruling the grouper, and the rate it happens at is the only measure of

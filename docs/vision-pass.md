@@ -227,8 +227,19 @@ rewrites, and an unchanged record keeps the older and more accurate date: the
 stamp says when the reading was established, not when a command last ran over
 it. The run reports how many it left alone.
 
+**The group JSON is likewise only saved when applying moved something in it.**
+`save_json` copies the file into the backup tree before every write, and backup
+names carry the source file's timestamp, so they accumulate — an unconditional
+save meant a re-apply left a fresh backup of every page on the title with
+nothing to distinguish it from the last one. 383 of them had piled up against
+these ten pages, 90 in one afternoon. The test is the serialized page JSON
+before and after, not the counters kept while applying: those count groups
+*touched*, and every group is touched on every run by design.
+
 **A re-apply of an unchanged title is now a complete no-op** — verified on *Good
-Deeds*: 147 groups, both engines, zero files touched.
+Deeds*: 147 groups, both engines, zero files written and zero backups taken.
+Change one group and exactly that page is rewritten and backed up, on both
+engines, while the other nine are left alone.
 
 ### Page capture
 
