@@ -63,6 +63,12 @@ difference between **1.6 min/page and 11**, because the per-page cost is then on
 model turn rather than ten round trips. Short titles cannot amortise the fixed
 cost; long ones can.
 
+**2a. Crop tails from `panel-NN.png`, never from `page.png`.** The panel crops
+are source resolution and match the `text_box` coordinates in `groups.json`;
+`page.png` is the downscaled overview, about half, so those same numbers land
+somewhere else on it and the miss is silent. Upscale the crop 2–6x to trace a
+tail or settle a letter. See *Two constraints that shape everything*.
+
 **3. Grep the names first.** `barks-ocr-name-grep --title "…"` runs two passes
 and both are needed: non-dictionary tokens catch odd spellings, repeated word
 pairs catch names made of ordinary words. It buys the *spelling*, not the
@@ -155,6 +161,25 @@ and fails loudly rather than hand over a degraded crop.
 recompressed. Panels (median 891x636) pass through at native resolution, so the
 36px lettering survives. The page overview is sent too, but only for cross-panel
 context — reading order, who is in frame.
+
+**So the two image files in a page directory are not in the same coordinate
+space, and tracing a tail means knowing which is which.** `panel-NN.png` is at
+source resolution; `page.png` is the downscaled overview — about half, 1087x1500
+against a ~2175px page on a Vol. 1 ten-pager. The `text_box` corners in
+`groups.json` are in **source** coordinates, so they line up with the panel crops
+and are roughly 2x too large for the overview.
+
+Crop from the panel files. Cropping `page.png` with numbers taken from
+`groups.json` lands somewhere else on the page entirely, and the failure is
+silent: what comes back is a plausible piece of comic art with no balloon tail in
+it, which reads as a badly drawn tail rather than as a mistake in the crop. Cost
+a wasted cycle on *The Limber W. Guest Ranch* before the ratio was noticed.
+
+Upscaling the crop is what settles the hard calls — `Image.LANCZOS` at 2–3x to
+see which hat a tail leans at, 4–6x to settle a single letter. On that same title
+the page overview showed a balloon ending in a D where the panel crop at 6x shows
+the P of `GIDDAP!` — a word-level correction that would have been filed against
+text that was right all along.
 
 **A panel too big even quantized is tiled, not shrunk.** Added 2026-08-03, when
 *The Big Bin on Killmotor Hill* became the first title to abort prep: four of its
