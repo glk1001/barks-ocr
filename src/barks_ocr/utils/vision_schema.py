@@ -19,11 +19,21 @@ from barks_fantagraphics.speech_markup import EMPHASIS_TAGS
 # name is caught rather than silently becoming a new character.
 #
 # "nephews" is not a fourth nephew: it is the honest answer when the line is one
-# of the three but the art will not say which. The Huey-red / Dewey-blue /
-# Louie-green convention was not firmly fixed in the early years, and 085 p3 of
-# the pilot gives two nephews the same green. It also covers a line the three
+# of the three but the art will not say which. It also covers a line the three
 # speak together. Prefer it to guessing a name; it is not the same as "unknown",
 # which means the speaker could not be placed at all.
+#
+# It is NOT the answer merely because a story is early. The Huey-red /
+# Dewey-blue / Louie-green convention holds from the start, and a cap that
+# prints one of the three cleanly names its wearer on a 1943 story as readily as
+# on a 1955 one -- reviewed 2026-08-05, when 40 of *Good Deeds*' collective
+# calls were named off the cap. What fails on the early titles is the
+# *printing*, panel by panel rather than story by story: 085 p3 of the pilot
+# gives two nephews the same green, all 64 pages of *Pirate Gold* give all three
+# the same blue, and *Mummy's Ring* prints one drawing blue-and-blue on 144 and
+# blue-and-green where the back matter reprints that same page as 232. So read
+# every cap on its own and let the unreadable ones be collective; do not
+# discount a whole story.
 SPEAKER_OPTIONS: tuple[str, ...] = (
     "Donald",
     "Huey",
@@ -134,7 +144,7 @@ IDENTIFIED_BY_SET: frozenset[str] = frozenset(IDENTIFIED_BY_OPTIONS)
 
 IDENTIFIED_BY_NOTES: dict[str, str] = {
     "balloon-tail": "the tail lands on this figure",
-    "cap-colour": "a nephew's cap, recorded in cap_colour",
+    "cap-colour": "the nephew's cap named him -- red Huey, blue Dewey, green Louie",
     "costume": "pyjamas, shirt or other clothing colour",
     "hat": "an adult's hat -- colour or shape",
     "sole-figure": "the only character who could be speaking",
@@ -673,6 +683,17 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  precisely enough that reading order usually agrees with the art. In the",
         "  early ones it does not, and every disagreement is a wrong name.",
         f"cap_colour — one of: {', '.join(CAP_COLOUR_OPTIONS)}, or null when no cap is visible",
+        "  A CLEAN CAP NAMES ITS WEARER: red is Huey, blue is Dewey, green is",
+        "  Louie. Where a tail lands on ONE nephew and his cap prints one of the",
+        "  three, name him, record the colour, and list `cap-colour` alongside",
+        "  `balloon-tail` as evidence. The convention is itself the anchor and",
+        "  needs nothing else -- the story does NOT have to name a nephew in its",
+        "  dialogue first, and the year does not matter.",
+        "  Measured 2026-08-05: a 1943 story read under the opposite rule made",
+        "  every one of its nephew calls a collective, and the review then named",
+        "  40 of them off the cap. Read a second 1943 story the same cautious way",
+        "  and 23 of its 114 collectives had to be named afterwards.",
+        "",
         "  Judge each cap ON ITS OWN. A nephew whose cap is not drawn, is lost in",
         "  shadow, or prints a colour that is not one of the three cannot be named",
         "  from colour -- but a nephew standing beside him whose cap is plainly red",
