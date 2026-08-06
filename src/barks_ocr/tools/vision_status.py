@@ -54,6 +54,31 @@ _VOL_RE = re.compile(r"Vol\.? (\d+)")
 # carry nulls, which is the only thing identifying them.
 UNSTAMPED = "unstamped (pre-2026-08-03)"
 
+# Titles that are finished but can never satisfy ``read == pages``, and so would
+# be offered as the next job for ever.
+#
+# A page counts as read when at least one of its groups carries a speaker, so a
+# page with no groups at all can never count.  *Donald Duck Finds Pirate Gold*
+# (1942) is fully read and fully reviewed -- all 385 groups -- but three of its
+# 64 pages (032, 036 and 048) are wordless, so it sits at 61/64 permanently and
+# `--next` kept re-offering it once every other early title was done.
+#
+# Deliberately a named special case rather than a general "a page with no groups
+# is done" rule.  That rule is the real fix, but it cannot be written until the
+# 155 one-pagers that cannot be prepped are settled, and on its own it would
+# quietly mark a page that has simply not been prepped yet as finished -- which
+# is the failure this list is meant to prevent, not cause.  A second title
+# needing an entry here is the signal to write the general rule instead.
+_ALWAYS_DONE = frozenset({"Donald Duck Finds Pirate Gold"})
+
+# Fail loudly at import rather than silently never matching if a title is ever
+# renamed -- a special case that quietly stops applying is worse than none, since
+# the symptom is just the old bug coming back.  Raised rather than asserted so it
+# survives `python -O`.
+if _unknown := sorted(_ALWAYS_DONE - STR_TITLE_TO_ENUM.keys()):
+    msg = f"Unknown title(s) in _ALWAYS_DONE: {_unknown}"
+    raise ValueError(msg)
+
 
 class VolumeStat:
     """One volume's tally."""
@@ -240,6 +265,16 @@ def _scan_titles(comics_database: ComicsDatabase, speech_groups: SpeechGroups) -
     return sorted(stats, key=lambda s: s.order)
 
 
+def _unread(stats: list[TitleStat]) -> list[TitleStat]:
+    """Titles still to read, oldest first, skipping those that can never count.
+
+    The single answer to "what is next", used by both `--next` and the footer of
+    `--titles`.  They asked it separately before, so fixing one left the other
+    still naming a finished story.  See `_ALWAYS_DONE`.
+    """
+    return [s for s in stats if s.read < s.pages and s.title not in _ALWAYS_DONE]
+
+
 def _report_titles(stats: list[TitleStat], *, start: int, limit: int, todo_only: bool) -> None:
     """Print the chronological work list."""
     shown = [s for s in stats if not (todo_only and s.read)]
@@ -250,10 +285,13 @@ def _report_titles(stats: list[TitleStat], *, start: int, limit: int, todo_only:
         note = f"  [{', '.join(s.versions)}]" if s.versions else ""
         print(f"{i:>5} {s.year:>6}  {s.title[:44]:<44}{s.volume:>4}{s.pages:>6}  {s.state}{note}")
 
-    done = [s for s in stats if s.read >= s.pages]
-    left = [s for s in stats if s.read < s.pages]
+    left = _unread(stats)
+    # Counted as done rather than dropped, so the two figures still sum to the
+    # corpus and the outstanding page count stops including pages nothing will
+    # ever read.
+    done = len(stats) - len(left)
     print(
-        f"\n{len(done)} of {len(stats)} title(s) done; "
+        f"\n{done} of {len(stats)} title(s) done; "
         f"{len(left)} left, {sum(s.pages - s.read for s in left)} page(s)."
     )
     if left:
@@ -298,7 +336,7 @@ def main(  # noqa: PLR0913
     stats = scan_titles(comics_database, SpeechGroups(comics_database))
     if next_only:
         # Bare title on stdout, so a shell can use it directly.
-        remaining = [s for s in stats if s.read < s.pages]
+        remaining = _unread(stats)
         if not remaining:
             raise typer.Exit(code=1)
         print(remaining[0].title)
