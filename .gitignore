@@ -1,5 +1,12 @@
-# Claude Code
-.claude/
+# Claude Code. Per-user state (settings, settings.local) stays out, but
+# `skills/` is project tooling: it documents this repo's own commands and
+# hazards, so it should version with them and show up in review.
+#
+# Written as `.claude/*` plus a negation rather than `.claude/` because git
+# will not descend into an excluded directory, so a re-include under one has
+# no effect.
+.claude/*
+!.claude/skills/
 
 .venv/
 __pycache__/
