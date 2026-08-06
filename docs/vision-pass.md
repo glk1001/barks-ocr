@@ -83,7 +83,7 @@ scratch directories under `~/barks-vision` are not.
 
 ```bash
 barks-ocr-vision-status --titles --todo     # the work list, oldest story first
-barks-ocr-vision-status --next              # just the next title, for a script
+barks-ocr-vision-status --next N            # just the next N quoted titles, for a script
 ```
 
 `--titles` is the answer to *what have I done and what is left*, and it is

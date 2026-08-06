@@ -28,7 +28,7 @@ from pathlib import Path
 from typing import Annotated
 
 import typer
-from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
+from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE, STR_TITLE_TO_ENUM, Titles
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_DIR
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
@@ -69,7 +69,7 @@ UNSTAMPED = "unstamped (pre-2026-08-03)"
 # quietly mark a page that has simply not been prepped yet as finished -- which
 # is the failure this list is meant to prevent, not cause.  A second title
 # needing an entry here is the signal to write the general rule instead.
-_ALWAYS_DONE = frozenset({"Donald Duck Finds Pirate Gold"})
+_ALWAYS_DONE = frozenset({ENUM_TO_STR_TITLE[int(Titles.DONALD_DUCK_FINDS_PIRATE_GOLD)]})
 
 # Fail loudly at import rather than silently never matching if a title is ever
 # renamed -- a special case that quietly stops applying is worse than none, since
@@ -206,15 +206,20 @@ def scan_titles(comics_database: ComicsDatabase, speech_groups: SpeechGroups) ->
     same reason -- a title is read iff its groups carry a speaker, so there is
     nothing to keep in step and nothing to go stale.
     """
+    logger.debug("Scanning titles...")
+
     # Resolving all 450 titles walks every page's panel boxes, and the database
     # warns per page about bounding-box heights -- 13MB of it, none of it about
     # coverage. Silenced for the scan only, and restored straight after, so a
     # real warning from anywhere else still reaches the caller.
     logger.disable("barks_fantagraphics")
     try:
-        return _scan_titles(comics_database, speech_groups)
+        titles = _scan_titles(comics_database, speech_groups)
     finally:
         logger.enable("barks_fantagraphics")
+
+    logger.debug("Finished scanning titles.")
+    return titles
 
 
 def _scan_titles(comics_database: ComicsDatabase, speech_groups: SpeechGroups) -> list[TitleStat]:
@@ -318,8 +323,8 @@ def main(  # noqa: PLR0913
         bool, typer.Option("--todo", help="With --titles, hide stories already read.")
     ] = False,
     next_only: Annotated[
-        bool, typer.Option("--next", help="Print just the next unread story and stop.")
-    ] = False,
+        int, typer.Option("--next", help="Print just the next N unread stories and stop.")
+    ] = 0,
     start: Annotated[int, typer.Option("--from", help="With --titles, skip this many.")] = 0,
     limit: Annotated[
         int, typer.Option("--limit", help="With --titles, show at most this many. 0 for all.")
@@ -335,11 +340,12 @@ def main(  # noqa: PLR0913
     comics_database = ComicsDatabase()
     stats = scan_titles(comics_database, SpeechGroups(comics_database))
     if next_only:
+        assert next_only > 0
         # Bare title on stdout, so a shell can use it directly.
         remaining = _unread(stats)
         if not remaining:
             raise typer.Exit(code=1)
-        print(remaining[0].title)
+        print(", ".join([f'"{t.title}"' for t in remaining[0:next_only]]))
         return
     _report_titles(stats, start=start, limit=limit, todo_only=todo_only)
 
