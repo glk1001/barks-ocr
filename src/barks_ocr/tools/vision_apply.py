@@ -81,7 +81,10 @@ from barks_ocr.utils.vision_schema import (
     OTHER_PREFIX,
     PANELS_OF_NOTE_KEY,
     RESULT_CAPTURE_KEY,
+    RESULT_CORRECTED_TEXT_KEY,
     RESULT_GROUPS_KEY,
+    RESULT_NOTE_KEY,
+    RESULT_TEXT_OK_KEY,
     RESULT_TITLE_KEY,
     SETTING_KEY,
     SPEAKER_CONFIDENCE_KEY,
@@ -92,8 +95,11 @@ from barks_ocr.utils.vision_schema import (
     TYPE_KEY,
     TYPE_WAS_KEY,
     VISIBLE_TEXT_KEY,
+    VISION_CORRECTED_TEXT_KEY,
+    VISION_NOTE_KEY,
     VISION_SPEAKER_ISSUE,
     VISION_TEXT_ISSUE,
+    VISION_TEXT_OK_KEY,
     collapse_whitespace,
     invalid_identified_by,
     is_valid_setting,
@@ -145,9 +151,9 @@ APPLIED_KEYS = {
     "speaker_confidence": "speaker_confidence",
     "cap_colour": "cap_colour",
     "identified_by": IDENTIFIED_BY_KEY,
-    "note": "vision_note",
-    "text_ok": "vision_text_ok",
-    "corrected_text": "vision_corrected_text",
+    RESULT_NOTE_KEY: VISION_NOTE_KEY,
+    RESULT_TEXT_OK_KEY: VISION_TEXT_OK_KEY,
+    RESULT_CORRECTED_TEXT_KEY: VISION_CORRECTED_TEXT_KEY,
 }
 
 # The four keys a speaker review owns, and which a re-apply must therefore leave
@@ -254,7 +260,7 @@ def _validate_group(  # noqa: PLR0913
     _check_identified_by(entry.get("identified_by"), speaker, cap, where, errors)
     _check_group_type(entry.get(TYPE_KEY), where, errors)
     _check_emphasis(entry.get(EMPHASIS_MARKUP_KEY), ai_text, where, errors)
-    if not entry.get("text_ok") and not entry.get("corrected_text"):
+    if not entry.get(RESULT_TEXT_OK_KEY) and not entry.get(RESULT_CORRECTED_TEXT_KEY):
         errors.append(f"{where}: text_ok is false but no corrected_text was supplied.")
     del gid
 
@@ -582,7 +588,7 @@ def _correction_applied(entry: dict, group: dict) -> bool:
         True when the correction has already landed, so nothing is to be queued.
 
     """
-    corrected = entry.get("corrected_text")
+    corrected = entry.get(RESULT_CORRECTED_TEXT_KEY)
     if not corrected:
         return False
     return strip_markup(group.get("ai_text") or "") == strip_markup(corrected)
@@ -602,7 +608,9 @@ def _queue_lines_for_page(  # noqa: PLR0913
     unreferenced = _unreferenced_nephews(result, json_groups)
     for gid, entry in result[RESULT_GROUPS_KEY].items():
         prefix = f"{volume} {int(page)} {engine.value} {int(gid)}"
-        if not entry.get("text_ok") and not _correction_applied(entry, json_groups.get(gid, {})):
+        if not entry.get(RESULT_TEXT_OK_KEY) and not _correction_applied(
+            entry, json_groups.get(gid, {})
+        ):
             text_lines.append(f"{prefix} {VISION_TEXT_ISSUE}")
         # Both tests are against `result.json`, which never changes once written,
         # so without the `speaker_reviewed` check the queue hands back every

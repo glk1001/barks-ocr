@@ -191,6 +191,8 @@ SPEAKER_CONFIDENCE_KEY = "speaker_confidence"
 CAP_COLOUR_KEY = "cap_colour"
 IDENTIFIED_BY_KEY = "identified_by"
 VISION_NOTE_KEY = "vision_note"
+VISION_TEXT_OK_KEY = "vision_text_ok"
+VISION_CORRECTED_TEXT_KEY = "vision_corrected_text"
 
 # Written by the editor only. `speaker_confidence` alone cannot tell a human's
 # confirmation from the model's own confident guess, and the difference is the
@@ -288,6 +290,20 @@ VISION_SPEAKER_ISSUE = "vision-speaker"
 RESULT_TITLE_KEY = "title"
 RESULT_GROUPS_KEY = "groups"
 RESULT_CAPTURE_KEY = "capture"
+
+# The three group keys a result carries under its own name rather than the
+# `vision_` one it is stored under -- `vision_apply.APPLIED_KEYS` maps them.
+# Named here so the roster documents the same strings the validator reads.
+#
+# They were missing from the roster for the first fifteen titles, which made
+# `text_ok` the sharpest edge in the contract: absent reads as false, and
+# `_validate_group` then refuses the whole run for want of a `corrected_text`
+# -- after every page has been read. Sessions were working around it by being
+# told about it in the prompt instead, which is exactly the failure the roster
+# exists to prevent. Added 2026-08-06.
+RESULT_TEXT_OK_KEY = "text_ok"
+RESULT_CORRECTED_TEXT_KEY = "corrected_text"
+RESULT_NOTE_KEY = "note"
 
 # Keys of the per-page capture file, written beside the prelim JSON rather than
 # into it: `final_groups.py` copies only the `groups` key and would silently
@@ -436,8 +452,8 @@ FIELD_CLASS: dict[str, PublicationClass] = {
     VISION_NOTE_KEY: PublicationClass.DERIVED,
     # Our own words about the work, exactly as `vision_note` is.
     SPEAKER_REVIEW_NOTE_KEY: PublicationClass.DERIVED,
-    "vision_text_ok": PublicationClass.FACT,
-    "vision_corrected_text": PublicationClass.VERBATIM,
+    VISION_TEXT_OK_KEY: PublicationClass.FACT,
+    VISION_CORRECTED_TEXT_KEY: PublicationClass.VERBATIM,
     # The marked-up `ai_text`: the comic's own words, so it is classed exactly
     # as `ai_text` is. (The retired `emphasis_spans` was classed VERBATIM too,
     # on the reasoning that offsets encode the shape of the text they index.
@@ -765,6 +781,30 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  the stored text and the run is refused if anything else changed.",
         "  A literal [ ] or & in the lettering must be written &bl; &br; &amp;.",
         "  Omit the field when nothing on the page is emphasized.",
+        f"{RESULT_TEXT_OK_KEY} — REQUIRED ON EVERY GROUP. true once you have read the",
+        "  lettering in the art and it matches the stored ai_text.",
+        "  There is no default: a group without this key reads as false, and a false",
+        f"  one without {RESULT_CORRECTED_TEXT_KEY} is refused -- so forgetting it on a",
+        "  single group aborts the run after every page has been read. Write it on",
+        "  every group, including sound effects, signs and the title logo.",
+        f"  It is stored as `{VISION_TEXT_OK_KEY}`, and it is a three-state field:",
+        "  true is checked-and-correct, false is checked-and-wrong, and absent from",
+        "  the stored group means never checked. That is why it cannot default.",
+        f"{RESULT_CORRECTED_TEXT_KEY} — the reading from the art, whole group, when",
+        f"  {RESULT_TEXT_OK_KEY} is false. Required in that case and pointless otherwise.",
+        "  Give the entire text of the group with the fix folded in, not the changed",
+        "  word alone, and keep the stored line breaks.",
+        "  ONLY FOR WORD-LEVEL MISREADINGS -- a different word, a dropped word, a",
+        "  repeated word one time too few. Quote style, case, dashes, apostrophes,",
+        "  drop capitals and drawn devices are NOT corrections; note them instead.",
+        "  Crop the balloon and upscale it before proposing one: reading lettering",
+        "  off page.png has already produced a correction against text that was",
+        "  right all along.",
+        f"{RESULT_NOTE_KEY} — the reasoning behind the call, stored as `{VISION_NOTE_KEY}`.",
+        "  What the tail did, what the cap actually printed, why a type was overruled,",
+        "  and why a boy was NOT named where he might have been. This is the field a",
+        "  reviewer reads when disagreeing, so write the evidence rather than the",
+        "  conclusion: 'tail ends 40px above the red cap' beats 'clearly Huey'.",
         "",
         "Per page, in the page capture file:",
         "",
