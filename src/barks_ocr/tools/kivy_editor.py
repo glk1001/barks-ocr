@@ -127,6 +127,16 @@ EASY_OCR = "EasyOCR"
 PADDLE_OCR = "PaddleOCR"
 MAX_NUM_PANELS = 8
 
+# Height of a pane's text slot. Both the editable input and the rendered view
+# occupy it, so they swap without the column reflowing.
+TEXT_SLOT_HEIGHT = 350
+
+# TextInput's own defaults, repeated so the rendered view can match them. A Label
+# has no background of its own and defaults to white text, so left alone it would
+# swap a light pane for a dark one.
+TEXT_INPUT_BG = (1, 1, 1, 1)
+TEXT_INPUT_FG = (0, 0, 0, 1)
+
 # Pixels of context padding around the enlarged crop region
 CROP_PADDING = 150
 # Extra padding used when panel_num is -1 (unassigned) — shows more page context
@@ -186,6 +196,13 @@ class EnginePane:
         self.speech_groups: dict[str, SpeechText] = {}
         self.canvas: BoundingBoxCanvas | None = None
         self.panel_num_input: TextInput | None = None
+        # The text slot holds two widgets and shows one at a time: the editable
+        # TextInput while codes are shown, the read-only markup Label while they
+        # are rendered. See `EditorApp._sync_text_widgets`.
+        self.text_slot: BoxLayout | None = None
+        self.text_input: TextInput | None = None
+        self.rendered_view: ScrollView | None = None
+        self.rendered_label: Label | None = None
 
     def json_groups(self) -> dict:
         """Return the live JSON ``groups`` dict (mutable), or an empty dict if missing."""
@@ -996,9 +1013,64 @@ class EditorApp(App):
     def _decode_from_display(text: str) -> str:
         return text.replace("\n", r"\n").encode("utf-8").decode("unicode_escape")
 
+    def _on_pane_text_set(self, pane: EnginePane) -> None:
+        """Mirror a pane text change into the rendered Label, when it is showing."""
+        if not self._decode_on:
+            self._refresh_rendered_text(pane)
+
+    def _refresh_rendered_text(self, pane: EnginePane) -> None:
+        """Push the pane's current text into its rendered Label.
+
+        The stored ``ai_text`` is *already* Kivy markup and is passed through
+        untouched: emphasis is written as ``[b]``/``[i]``, and a literal bracket
+        or ampersand in the lettering is already written ``&bl; &br; &amp;`` --
+        which is why this must not escape anything itself. Escaping again would
+        print a shop sign reading ``FEEDS &amp; SEEDS``. Verified over the whole
+        prelim corpus (11,120 files): no bare ampersands, no brackets outside the
+        four emphasis tags, no unbalanced tags.
+
+        Half-finished markup can only come from an edit in progress, and Kivy
+        treats what it cannot parse as ordinary text -- a stray ``[b`` renders as
+        ``[b``. There is deliberately no pre-validation here: the render happens
+        inside Kivy's draw cycle, so a guard at this point could not catch a
+        failure there anyway, and one that looked like it could would be worse
+        than none.
+
+        Only called while the rendered view is the visible widget, so editing
+        does not pay for markup parsing on every keystroke.
+        """
+        if pane.rendered_label is not None:
+            pane.rendered_label.text = getattr(self, pane.text_prop)
+
+    def _sync_text_widgets(self) -> None:
+        """Put the right widget in each pane's text slot for the current mode.
+
+        Codes shown -> the editable ``TextInput``. Codes rendered -> the read-only
+        markup ``Label``, because Kivy's ``TextInput`` has no markup support and
+        so cannot show bold at all.
+
+        The ``TextInput`` stays alive and bound to the pane's StringProperty while
+        it is out of the tree, so the diff labels and the diff highlighter keep
+        reading a live widget either way.
+        """
+        for pane in self._panes:
+            slot, text_input, rendered_view = pane.text_slot, pane.text_input, pane.rendered_view
+            if slot is None or text_input is None or rendered_view is None:
+                continue
+            if not self._decode_on:
+                self._refresh_rendered_text(pane)
+            wanted = text_input if self._decode_on else rendered_view
+            if slot.children and slot.children[0] is wanted:
+                continue
+            slot.clear_widgets()
+            slot.add_widget(wanted)
+
     @property
     def _decode_on(self) -> bool:
-        """Whether the escape-decoding checkbox is ticked.
+        """Whether the "Show Codes" checkbox is ticked.
+
+        Ticked means unicode escapes and emphasis tags are shown as written and
+        the text is editable; clear means both are rendered and it is not.
 
         The checkbox only exists once `_create_editor_widget()` has run, so read it
         through here rather than off the `CheckBox | None` attribute directly. An
@@ -1057,6 +1129,8 @@ class EditorApp(App):
         ti_easy.bind(focus=refresh_on_unfocus)
         ti_pad.bind(focus=refresh_on_unfocus)
         update_diff_labels()
+        # Fill each pane's text slot for the checkbox's initial state.
+        self._sync_text_widgets()
 
         columns = BoxLayout(orientation="horizontal", spacing=10)
         columns.add_widget(easy_col)
@@ -1109,22 +1183,69 @@ class EditorApp(App):
         header_row.add_widget(pane.panel_num_input)
         col.add_widget(header_row)
 
-        # Text input
+        # Text slot: the editable input and the rendered view share this space, and
+        # `_sync_text_widgets()` swaps which of the two is in it.
+        text_slot = BoxLayout(orientation="vertical", size_hint_y=None, height=TEXT_SLOT_HEIGHT)
+
         text_input = TextInput(
             text=getattr(self, pane.text_prop),
             font_name=OPEN_SANS_FONT,
             font_size="20sp",
             multiline=True,
-            size_hint_y=None,
-            height=350,
             padding=10,
             hint_text=f"Edit {pane.name} text here...",
         )
         self.bind(**{pane.text_prop: text_input.setter("text")})
         text_input.bind(text=self.setter(pane.text_prop))
         text_input.bind(text=lambda inst, val, p=pane: self._on_text_changed(p, inst, val))
+
+        # Read-only rendered twin. Kivy's TextInput cannot render markup -- only
+        # Label can -- so showing real bold means showing a different widget.
+        # Scrolled, because a long caption box overflows the slot and a Label,
+        # unlike a TextInput, would silently clip it.
+        rendered_label = Label(
+            text="",
+            markup=True,
+            font_name=OPEN_SANS_FONT,
+            font_size="20sp",
+            halign="left",
+            valign="top",
+            size_hint_y=None,
+            padding=(10, 10),
+            color=TEXT_INPUT_FG,
+        )
+        rendered_label.bind(
+            width=lambda inst, w: setattr(inst, "text_size", (w - 20, None)),
+            texture_size=lambda inst, ts: setattr(inst, "height", ts[1]),
+        )
+        rendered_view = ScrollView(do_scroll_x=False, do_scroll_y=True)
+        rendered_view.add_widget(rendered_label)
+        # Paint the same background the TextInput has, so swapping the two does not
+        # flip the pane between dark and light. A Label draws no background of its
+        # own, so without this the rendered view shows the window behind it.
+        # Widget.canvas comes from Kivy's compiled base class, which ships no stubs;
+        # both checkers read it as possibly-None. It is always set on a live widget.
+        # pyrefly: ignore[missing-attribute]
+        with rendered_view.canvas.before:  # ty:ignore[unresolved-attribute]
+            Color(*TEXT_INPUT_BG)
+            backdrop = Rectangle(pos=rendered_view.pos, size=rendered_view.size)
+        rendered_view.bind(
+            pos=lambda _inst, val: setattr(backdrop, "pos", val),
+            size=lambda _inst, val: setattr(backdrop, "size", val),
+        )
+
+        pane.text_slot = text_slot
+        pane.text_input = text_input
+        pane.rendered_view = rendered_view
+        pane.rendered_label = rendered_label
+
+        # Keep the rendered twin current when the text changes underneath it --
+        # stepping to another group while codes are rendered goes through the
+        # StringProperty, not through the TextInput.
+        self.bind(**{pane.text_prop: lambda _inst, _val, p=pane: self._on_pane_text_set(p)})
+
         setattr(self, pane.text_prop, self._encode_for_display(getattr(self, pane.text_prop)))
-        col.add_widget(text_input)
+        col.add_widget(text_slot)
 
         # Per-engine action buttons
         btn_row = BoxLayout(orientation="horizontal", size_hint_y=None, height=36, spacing=6)
@@ -1222,7 +1343,7 @@ class EditorApp(App):
     def _add_decode_checkbox(self) -> tuple[BoxLayout, CheckBox]:
         checkbox_layout = BoxLayout(orientation="horizontal", size_hint_y=None, height=30)
         decode_checkbox = CheckBox(active=True, size_hint_x=None, width=30)
-        decode_label = Label(text="Show Unicode", halign="left", valign="middle")
+        decode_label = Label(text="Show Codes", halign="left", valign="middle")
         decode_label.bind(size=decode_label.setter("text_size"))
 
         def on_checkbox_active(_instance: CheckBox, value: bool) -> None:
@@ -1235,6 +1356,9 @@ class EditorApp(App):
                         setattr(self, pane.text_prop, self._decode_from_display(text))
             except UnicodeDecodeError as e:
                 logger.exception(f"Error converting text: {e}")
+            # After the conversion, not before: the rendered Label is filled from
+            # the converted property value.
+            self._sync_text_widgets()
 
         decode_checkbox.bind(active=on_checkbox_active)
         checkbox_layout.add_widget(decode_checkbox)
