@@ -20,10 +20,11 @@ barks-ocr-name-grep    --title "…"           # BEFORE page 1
 barks-ocr-vision-prep  --title "…"           # crops, queue.json, roster.txt
 #   <read roster.txt, then the pages, writing result.json per page>
 barks-ocr-vision-apply --out-dir ~/barks-vision/<slug> --dry-run --capture-model "claude-opus-5[1m]"
-barks-ocr-vision-apply --out-dir ~/barks-vision/<slug>          --capture-model "claude-opus-5[1m]"
+barks-ocr-vision-apply --out-dir ~/barks-vision/<slug>          --capture-model "claude-opus-5[1m]" \
+    --queue-out ~/barks-vision/<slug>/queue-text.txt
 ```
 
-Then build **both** queue files, commit, and stop. Mirroring waits until the
+Then build the queue files, commit, and stop. Mirroring waits until the
 reviewer says the review is done.
 
 **Dry-run at page 2 of the first title** to prove the contract before doing all
@@ -31,6 +32,15 @@ the reading, then once per title before applying.
 
 **`--capture-model` is not optional.** Without it the provenance is written null
 and the pages join an unidentifiable cohort.
+
+**Neither is `--queue-out`.** Without it the text corrections the pass proposed
+are written to the group and handed to nobody: the summary prints "N group(s)
+have proposed text corrections" and that is the last anyone hears of it. Fifteen
+titles ran without it, and the 2026-08-06 audit found five corrections still
+outstanding across three volumes. It is idempotent — `_correction_applied`
+compares stored `ai_text` against the proposal with markup stripped, so a
+correction already applied is never re-offered — which is why passing it always
+is safe.
 
 ## Reading the pages
 
@@ -63,20 +73,36 @@ capture record.
 compare to the stored `ai_text`. Do not learn about a mismatch from validation
 after all the reading is done.
 
-## Queues — two files, distinct paths
+## Queues — distinct paths, and three kinds of review
+
+Speakers, from what is already annotated:
 
 ```bash
 barks-ocr-speaker-queue --title "…" --unreviewed --confidence low,medium -o <dir>/queue-lowmed.txt
 barks-ocr-speaker-queue --title "…" --unreviewed                        -o <dir>/queue-full.txt
 ```
 
-Sort both by **volume, page, group (numeric), engine** — group is field 4, engine
-field 3 — keep the summary header, drop the `# --- category ---` separators.
-Report the counts.
+Text and type corrections, which have their own review state and their own tool:
+
+```bash
+barks-ocr-vision-corrections --title "…"                       # what is outstanding
+barks-ocr-vision-corrections --title "…" -o <dir>/queue-corrections.txt
+```
+
+Sort every queue by **volume, page, group (numeric), engine** — group is field 4,
+engine field 3 — keep the summary header, drop the `# --- category ---`
+separators. **Report all three counts per title**, not just the speaker ones:
+reporting only speakers is how the text corrections went unnoticed for fifteen
+titles.
+
+`vision-corrections` reads the **corpus**, not the out-dir, so it still answers
+for titles whose scratch directory is long gone. It covers **both engines** by
+default: `ai_text` is not mirrored — the two engines legitimately disagree about
+that field — so a text correction applied to one side leaves the other wrong.
 
 **Never re-run `vision_apply` to regenerate a queue.** On a title carrying a
 review it is safe now, but the habit is what caused the clobber; `speaker-queue`
-reads and writes nothing.
+and `vision-corrections` read the corpus and write only their queue file.
 
 ## Committing
 
@@ -110,6 +136,19 @@ barks-ocr-vision-mirror --title "…" --write
 Then verify both engines match on group count, reviewed count, `identified_by`
 count, and the speaker / cap_colour / confidence distributions, and commit with
 explicit paths. Report whether the mirror was clean.
+
+**Run `barks-ocr-vision-corrections --title "…"` as part of the same check.** A
+review can be 125/125 on speakers and still leave every text and type correction
+untouched — they are separate review states and the speaker count says nothing
+about them.
+
+**A review can also add groups.** *Good Neighbors* 069 gained a group for a
+`ZOOM` the pass had recorded only as page-level `visible_text`. The editor seeds
+a new group from a neighbour, so it arrives carrying that neighbour's `ai_text`,
+`type`, `vision_note` and `identified_by` — all wrong for the new box, and
+`ai_text` is the searchable text. Check any group the review added against its
+own crop before mirroring, because the mirror will copy those fields onto the
+other engine.
 
 Check for groups left without `speaker_reviewed` and say so — a "review complete"
 commit that is really 140/141 is bad provenance. `--unreviewed` with no

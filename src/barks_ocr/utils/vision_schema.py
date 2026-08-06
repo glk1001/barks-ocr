@@ -275,10 +275,51 @@ TYPE_KEY = "type"
 # which the grouper mislabels becomes unmeasurable the moment it is overwritten.
 TYPE_WAS_KEY = "type_was"
 
+# Written by the editor only, and the reason type review needs a flag at all
+# where text review does not.
+#
+# A text correction carries its own answer: `vision_apply._correction_applied`
+# compares the stored `ai_text` against `vision_corrected_text` and knows the
+# work is done. A type correction has no such comparison to make. `type_was` is
+# history, not a proposal -- an accepted type correction and one nobody has ever
+# looked at are byte-identical -- so without a flag the type queue either
+# re-offers all 52 forever or cannot be built at all.
+#
+# Same bargain as `speaker_reviewed`: absence of `type_was` on a reviewed group
+# marks a confirmation, presence marks a correction, so the grouper's error rate
+# and the pass's own type-overrule accuracy both stay readable off disk.
+# Added 2026-08-06, after an audit found 52 type corrections across Vol. 1 and
+# Vol. 2 and no way to tell which had ever been checked.
+TYPE_REVIEWED_KEY = "type_reviewed"
+TYPE_REVIEWED_DATE_KEY = "type_reviewed_date"
+
+# Written by the editor only, and only needed for the outcome the text side
+# cannot express on its own: a correction the reviewer looked at and *rejected*.
+#
+# `_correction_applied` closes a text correction by comparing the stored
+# `ai_text` against `vision_corrected_text`, which is a complete answer for
+# "accepted" and no answer at all for "considered and turned down" -- the two
+# strings still differ, so the queue re-offers it on every run, forever. Found
+# 2026-08-07 on Vol. 1 130 g6, where the reviewer kept the stored spelling of a
+# sound effect over the one the pass proposed and it would not go away.
+#
+# One flag rather than an explicit accept/reject pair, because the outcome stays
+# computable without one: on a reviewed group, `ai_text` matching the proposal
+# is an acceptance and `ai_text` unchanged is a rejection. That keeps the pass's
+# text accuracy measurable off disk, which is the same bargain `speaker_was` and
+# `type_was` strike.
+#
+# `vision_corrected_text` is deliberately kept on a rejected group rather than
+# deleted. It is the evidence of what the pass misread, and this codebase keeps
+# superseded values everywhere else for exactly that reason.
+VISION_TEXT_REVIEWED_KEY = "vision_text_reviewed"
+VISION_TEXT_REVIEWED_DATE_KEY = "vision_text_reviewed_date"
+
 # Queue issue types, shared between the queues `vision_apply` writes and the
 # editor's info bar.
 VISION_TEXT_ISSUE = "vision-text"
 VISION_SPEAKER_ISSUE = "vision-speaker"
+VISION_TYPE_ISSUE = "vision-type"
 
 # Top-level keys of the `result.json` the reading session writes, one per page.
 #

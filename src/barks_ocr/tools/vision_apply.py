@@ -93,6 +93,7 @@ from barks_ocr.utils.vision_schema import (
     TIME_OF_DAY_KEY,
     TIMES_OF_DAY,
     TYPE_KEY,
+    TYPE_REVIEWED_KEY,
     TYPE_WAS_KEY,
     VISIBLE_TEXT_KEY,
     VISION_CORRECTED_TEXT_KEY,
@@ -100,6 +101,8 @@ from barks_ocr.utils.vision_schema import (
     VISION_SPEAKER_ISSUE,
     VISION_TEXT_ISSUE,
     VISION_TEXT_OK_KEY,
+    VISION_TEXT_REVIEWED_DATE_KEY,
+    VISION_TEXT_REVIEWED_KEY,
     collapse_whitespace,
     invalid_identified_by,
     is_valid_setting,
@@ -563,15 +566,23 @@ def _normalize_capture(capture: dict) -> int:
 
 
 def _correction_applied(entry: dict, group: dict) -> bool:
-    """Whether the group's stored text already matches the correction proposed for it.
+    """Whether this text correction is finished -- taken, or looked at and turned down.
 
     What stops the text-correction queue from re-offering work that is done.
     ``text_ok`` records what the pass found when it read the crops and never
     changes afterwards, so queueing on it alone hands back every correction ever
     proposed, on every run, forever.  The speaker queue avoids this with
-    ``speaker_reviewed``; the text side needs no such flag, because the group
-    already carries the answer -- if ``ai_text`` says what ``vision_corrected_text``
-    says, somebody has applied it.
+    ``speaker_reviewed``; an *accepted* text correction needs no such flag,
+    because the group already carries the answer -- if ``ai_text`` says what
+    ``vision_corrected_text`` says, somebody has applied it.
+
+    A *rejected* one does need the flag, and that is what
+    ``vision_text_reviewed`` is for.  This function claimed for a while that the
+    text side needed no flag at all, which was true only of the half of the
+    outcome space it had been tested on: a reviewer who reads the art, decides
+    the pass was wrong and leaves the text alone produces two strings that still
+    differ, so the correction came back on every run.  Vol. 1 130 g6 is the
+    case -- a sound effect whose stored spelling the reviewer kept.
 
     Both sides are stripped.  A human applying a correction in the editor keeps
     the emphasis, so the stored text can carry tags that the proposed correction
@@ -585,13 +596,30 @@ def _correction_applied(entry: dict, group: dict) -> bool:
         group: The stored prelim OCR group.
 
     Returns:
-        True when the correction has already landed, so nothing is to be queued.
+        True when the correction is settled, so nothing is to be queued.
 
     """
     corrected = entry.get(RESULT_CORRECTED_TEXT_KEY)
     if not corrected:
         return False
+    if group.get(VISION_TEXT_REVIEWED_KEY):
+        return True
     return strip_markup(group.get("ai_text") or "") == strip_markup(corrected)
+
+
+def _expire_text_review(group: dict, proposed_before: str | None) -> None:
+    """Drop a text review whose proposal this run has replaced.
+
+    A text review answers one specific proposal. A run that proposes a different
+    correction for the same group has not been reviewed, so the flag must not
+    carry over -- otherwise re-reading a title silently buries every fresh
+    correction on any group whose earlier proposal was once turned down, and the
+    queue reports clean while sitting on real work.
+    """
+    if group.get(VISION_CORRECTED_TEXT_KEY) == proposed_before:
+        return
+    group.pop(VISION_TEXT_REVIEWED_KEY, None)
+    group.pop(VISION_TEXT_REVIEWED_DATE_KEY, None)
 
 
 def _queue_lines_for_page(  # noqa: PLR0913
@@ -782,17 +810,28 @@ def _apply_page(
         reviewed = bool(group.get(SPEAKER_REVIEWED_KEY))
         if reviewed:
             preserved += 1
+        proposed_before = group.get(VISION_CORRECTED_TEXT_KEY)
         for result_key, stored_key in APPLIED_KEYS.items():
             if reviewed and stored_key in SPEAKER_REVIEW_OWNED_KEYS:
                 continue
             group[stored_key] = entry.get(result_key)
+        _expire_text_review(group, proposed_before)
 
         # `type` is deliberately not in APPLIED_KEYS, which blanket-writes every
         # key including as None: that would wipe the grouper's answer off every
         # group the pass said nothing about. Absent means "no quarrel with it",
         # so only a supplied value touches the group -- and only a value that
         # differs is a correction worth recording.
+        #
+        # `type_reviewed` outranks the pass here exactly as `speaker_reviewed`
+        # does above, and for a sharper reason: without this guard a re-apply
+        # would not merely overwrite the human's type but overwrite `type_was`
+        # with it, destroying the record of what the grouper originally said and
+        # leaving `type_reviewed` asserting that somebody approved a value they
+        # never saw.
         new_type = entry.get(TYPE_KEY)
+        if group.get(TYPE_REVIEWED_KEY):
+            new_type = None
         if new_type is not None and new_type != group.get(TYPE_KEY):
             group[TYPE_WAS_KEY] = group.get(TYPE_KEY)
             group[TYPE_KEY] = new_type

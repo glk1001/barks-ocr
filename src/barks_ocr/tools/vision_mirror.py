@@ -58,8 +58,12 @@ from barks_ocr.utils.vision_schema import (
     SPEAKER_REVIEWED_KEY,
     SPEAKER_WAS_KEY,
     TYPE_KEY,
+    TYPE_REVIEWED_DATE_KEY,
+    TYPE_REVIEWED_KEY,
     TYPE_WAS_KEY,
     VISION_NOTE_KEY,
+    VISION_TEXT_REVIEWED_DATE_KEY,
+    VISION_TEXT_REVIEWED_KEY,
 )
 
 APP_LOGGING_NAME = "vismir"
@@ -86,6 +90,11 @@ MIRRORED_KEYS = (
     VISION_NOTE_KEY,
     "vision_text_ok",
     "vision_corrected_text",
+    # A text review is an answer about the art, so it travels like the speaker
+    # one. Without it a correction turned down on easyocr is still outstanding
+    # on paddleocr, and the reviewer is asked the same question twice.
+    VISION_TEXT_REVIEWED_KEY,
+    VISION_TEXT_REVIEWED_DATE_KEY,
 )
 
 # `type` is deliberately NOT in the list above, which copies a key whenever the
@@ -94,7 +103,12 @@ MIRRORED_KEYS = (
 # blanket-copying would overwrite one grouper's answer with the other's and call
 # it mirroring. Only a type the pass actually corrected travels, which is
 # exactly the set carrying `type_was`.
-RETYPED_KEYS = (TYPE_KEY, TYPE_WAS_KEY)
+#
+# The review flag rides with them for the same reason `speaker_reviewed` does:
+# a human's answer to "what kind of lettering is this" is about the art, not
+# about which engine transcribed it, and reviewing the same group twice -- once
+# per engine -- is work nobody should be asked to do.
+RETYPED_KEYS = (TYPE_KEY, TYPE_WAS_KEY, TYPE_REVIEWED_KEY, TYPE_REVIEWED_DATE_KEY)
 
 
 def _match_key(ai_text: str | None) -> str:

@@ -22,7 +22,7 @@ from barks_fantagraphics.speech_groupers import (
     SpeechText,
     get_speech_page_group,
 )
-from barks_fantagraphics.speech_markup import has_markup
+from barks_fantagraphics.speech_markup import has_markup, strip_markup
 from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
 from comic_utils.screen_utils import get_centred_position_on_primary_monitor
@@ -51,7 +51,14 @@ from barks_ocr.utils.vision_schema import (
     SPEAKER_REVIEWED_DATE_KEY,
     SPEAKER_REVIEWED_KEY,
     SPEAKER_WAS_KEY,
+    TYPE_KEY,
+    TYPE_REVIEWED_DATE_KEY,
+    TYPE_REVIEWED_KEY,
+    TYPE_WAS_KEY,
+    VISION_CORRECTED_TEXT_KEY,
     VISION_NOTE_KEY,
+    VISION_TEXT_REVIEWED_DATE_KEY,
+    VISION_TEXT_REVIEWED_KEY,
     normalize_speaker,
 )
 
@@ -1310,6 +1317,17 @@ class EditorApp(App):
         set_flor_btn.bind(on_press=lambda _: self._apply_florence_ack_to_current_groups())
         row.add_widget(set_flor_btn)
 
+        # The only way to say "no" to a proposed text correction. Accepting one
+        # needs no button -- editing the text is the answer, and the queue reads
+        # it off the text itself -- but turning one down changes nothing on the
+        # group, so without this the correction is re-offered on every run
+        # forever.
+        keep_text_btn = Button(
+            text="Keep Text", size_hint_x=None, width=110, size_hint_y=None, height=44
+        )
+        keep_text_btn.bind(on_press=lambda _: self._keep_text_as_is())
+        row.add_widget(keep_text_btn)
+
         if not self._queue:
             row.add_widget(self._get_save_exit_button())
         else:
@@ -1367,20 +1385,116 @@ class EditorApp(App):
 
     # ── type popup ────────────────────────────────────────────────────────────
 
+    def _keep_text_as_is(self) -> None:
+        """Record that a proposed text correction was read and turned down.
+
+        The asymmetry with the speaker and type reviews is deliberate. Accepting
+        a text correction writes itself: the reviewer edits ``ai_text``, and the
+        queue closes the item by finding that the stored text now says what the
+        proposal says. Rejecting one writes *nothing* -- the whole point is that
+        the text does not change -- so it needs somewhere to leave a mark, or the
+        correction comes back on every run. Vol. 1 130 g6 is the case that found
+        this: a sound effect whose stored spelling the reviewer kept.
+
+        Only groups actually carrying a proposal are stamped, so pressing this on
+        an ordinary group is a no-op rather than a flag nobody can interpret.
+        """
+        anchor = self._pane_text(self._queue_primary_pane()) if self._queue else None
+        stamped: list[str] = []
+        for pane in self._panes:
+            json_group = pane.json_group()
+            if json_group is None or not json_group.get(VISION_CORRECTED_TEXT_KEY):
+                continue
+            if anchor is not None and self._pane_text(pane) != anchor:
+                continue
+            json_group[VISION_TEXT_REVIEWED_KEY] = True
+            json_group[VISION_TEXT_REVIEWED_DATE_KEY] = _today()
+            stamped.append(f"{pane.name} group {pane.group_id}")
+        if not stamped:
+            self._show_confirm_popup(
+                "Keep Text",
+                "No proposed text correction on this group.",
+                on_confirm=lambda: None,
+                confirm_label="OK",
+                cancel_label=None,
+            )
+            return
+        self._has_changes = True
+        self._refresh_pane_labels()
+        logger.info(f"Text correction kept as is on: {', '.join(stamped)}.")
+
+    @staticmethod
+    def _pane_text(pane: EnginePane | None) -> str | None:
+        """Return the pane's current group text, as the key two engines pair on.
+
+        ``None`` when the pane has no current group. Callers must not read two
+        ``None`` results as "the same balloon" -- they mean "no balloon here" --
+        which is why the caller below skips the comparison entirely unless it has
+        a real anchor to compare against.
+        """
+        json_group = pane.json_group() if pane is not None else None
+        if json_group is None:
+            return None
+        return " ".join(strip_markup(json_group.get("ai_text") or "").split())
+
     def _apply_type_to_current_groups(self, type_name: str) -> None:
-        """Write *type_name* to both panes' currently selected group's JSON."""
-        changed = False
+        """Write *type_name*, and stamp the review, on each pane showing this balloon.
+
+        Choosing a type in the popup *is* the review, so the group is stamped
+        whether or not the value moved -- a reviewer who opens the popup, sees
+        ``sound_effect`` and presses Save has confirmed it just as deliberately
+        as one who changes it. Without that, confirmations write nothing and the
+        ``vision-type`` queue re-offers them forever, which is the exact failure
+        ``type_reviewed`` exists to prevent.
+
+        ``type_was`` is recorded when a human moves a type the vision pass never
+        disputed, so a human correction stays as measurable as a pass one -- and
+        so ``vision_mirror`` carries the result across, since it gates the type
+        keys on ``type_was`` being present.
+
+        **In queue mode a pane is only written when it is showing the same
+        balloon.** ``_load_queue_entry`` puts both panes on the same numeric
+        group id, and the two engines' ids do not correspond -- so the second
+        pane is routinely showing a different group, and writing to it blind
+        would set a type on the wrong balloon and, now, stamp it reviewed and
+        fabricate a ``type_was`` for a correction nobody made. Paired on
+        stripped, whitespace-collapsed ``ai_text``, the same key
+        ``vision_mirror`` matches groups on.
+
+        Outside queue mode there is no check: both panes are where the user
+        navigated them, and the two engines' `ai_text` can legitimately differ by
+        a character, so refusing on a mismatch would silently drop an edit the
+        user made deliberately.
+        """
+        anchor = self._pane_text(self._queue_primary_pane()) if self._queue else None
+        stamped = False
         for pane in self._panes:
             json_group = pane.json_group()
             if json_group is None:
                 continue
-            if json_group.get("type") != type_name:
-                json_group["type"] = type_name
-                changed = True
-        if changed:
+            if anchor is not None and self._pane_text(pane) != anchor:
+                logger.info(
+                    f"{pane.name} group {pane.group_id}: different text to the queue entry"
+                    " - type not applied to this pane."
+                )
+                continue
+            previous = json_group.get(TYPE_KEY)
+            if previous != type_name:
+                if previous is not None:
+                    # Only on the first change: a second edit must not overwrite
+                    # the original value with the intermediate one. And only when
+                    # there was a value -- a `type_was` of None would claim a
+                    # correction that never happened and, worse, read as absent
+                    # to the mirror, which gates the type keys on it.
+                    json_group.setdefault(TYPE_WAS_KEY, previous)
+                json_group[TYPE_KEY] = type_name
+            json_group[TYPE_REVIEWED_KEY] = True
+            json_group[TYPE_REVIEWED_DATE_KEY] = _today()
+            stamped = True
+        if stamped:
             self._has_changes = True
             self._refresh_pane_labels()
-            logger.debug(f'Type set to "{type_name}" for both panes\' current groups.')
+            logger.debug(f'Type set to "{type_name}" and stamped reviewed.')
 
     def _apply_florence_ack_to_current_groups(self) -> None:
         """Add ``florence-check`` to acknowledged_issues on both panes' current groups."""
@@ -1426,6 +1540,23 @@ class EditorApp(App):
                 bold=True,
             )
         )
+
+        # What the grouper said before the pass overruled it. Without this the
+        # reviewer sees only the answer and not the disagreement, which is the
+        # whole thing a `vision-type` queue entry is asking them to adjudicate.
+        group = self._easy_pane.json_group() or {}
+        if group.get(TYPE_WAS_KEY):
+            reviewed = " (already reviewed)" if group.get(TYPE_REVIEWED_KEY) else ""
+            content.add_widget(
+                Label(
+                    text=f"vision pass overruled: {group[TYPE_WAS_KEY]} -> "
+                    f"{group.get(TYPE_KEY)}{reviewed}",
+                    size_hint_y=None,
+                    height=24,
+                    font_size="12sp",
+                    color=(1, 0.65, 0.4, 1),
+                )
+            )
 
         for type_name in TYPE_OPTIONS:
             row = BoxLayout(orientation="horizontal", size_hint_y=None, height=34, spacing=8)
