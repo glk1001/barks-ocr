@@ -1342,6 +1342,17 @@ class EditorApp(App):
             confirm_btn.bind(on_press=lambda _: self._handle_confirm_and_next())
             row.add_widget(confirm_btn)
 
+            # The type equivalent, and the reason it exists: agreeing with a
+            # type changes no stored value, so the only way to record agreement
+            # was to open the Set Type popup, re-pick the value already selected
+            # and press two Saves. A whole 52-entry review was done that way and
+            # left nothing on disk. One press now stamps and advances.
+            confirm_type_btn = Button(
+                text="Confirm Type", size_hint_x=None, width=140, size_hint_y=None, height=44
+            )
+            confirm_type_btn.bind(on_press=lambda _: self._handle_confirm_type_and_next())
+            row.add_widget(confirm_type_btn)
+
             skip_btn = Button(text="Skip", size_hint_x=None, width=90, size_hint_y=None, height=44)
             skip_btn.bind(on_press=lambda _: self._handle_skip())
             row.add_widget(skip_btn)
@@ -1768,6 +1779,36 @@ class EditorApp(App):
             )
             return
         logger.info(f"Confirmed {pane.name} group {pane.group_id} as is.")
+        self._handle_save()
+        self._advance_queue()
+
+    def _handle_confirm_type_and_next(self) -> None:
+        """Agree with the queued group's type call and move on, in one action.
+
+        The type counterpart of ``_handle_confirm_and_next``, and it exists for a
+        sharper version of the same reason. Agreeing with a type changed no
+        stored value at all, so recording agreement meant opening the Set Type
+        popup, re-picking the value already selected, pressing its Save and then
+        Save & Next -- four actions to say "yes". A 52-entry review was worked
+        that way on 2026-08-07 and left nothing on disk: clean tree, no backups,
+        every one of the 52 still queued afterwards.
+
+        Like the speaker confirm, this deliberately does **not** renumber. And it
+        stays put when the group carries no disputed type, because stepping
+        silently past would look exactly like success.
+        """
+        pane = self._queue_primary_pane()
+        if pane is None:
+            return
+        group = pane.json_group()
+        if group is None or not group.get(TYPE_WAS_KEY):
+            logger.warning(
+                f"Nothing to confirm on {pane.name} group {pane.group_id}:"
+                " the vision pass did not overrule the type here. Staying put."
+            )
+            return
+        self._apply_type_to_current_groups(group.get(TYPE_KEY) or DEFAULT_TYPE)
+        logger.info(f"Confirmed {pane.name} group {pane.group_id} type as is.")
         self._handle_save()
         self._advance_queue()
 

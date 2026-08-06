@@ -43,15 +43,19 @@ barks-ocr-vision-corrections --type --volume 1-2 -o queue-type.txt
 Read-only apart from the queue file it writes.
 """
 
+import json
 import sys
 from collections import Counter
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Any
 
 import typer
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.comics_utils import get_backup_file
+from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM_DIR
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from barks_fantagraphics.speech_markup import strip_markup
 from comic_utils.common_typer_options import TitleArg, VolumesArg
@@ -60,6 +64,7 @@ from loguru import logger
 from barks_ocr.utils.title_selection import resolve_titles
 from barks_ocr.utils.vision_schema import (
     TYPE_KEY,
+    TYPE_REVIEWED_DATE_KEY,
     TYPE_REVIEWED_KEY,
     TYPE_WAS_KEY,
     VISION_CORRECTED_TEXT_KEY,
@@ -148,6 +153,7 @@ def _collect(  # noqa: PLR0913
     titles: list[str],
     engines: tuple[OcrTypes, ...],
     skipped: list[str],
+    targets: list[tuple[Any, str, str]],
     *,
     want_text: bool,
     want_type: bool,
@@ -185,6 +191,10 @@ def _collect(  # noqa: PLR0913
                 for wanted, issue, pair in checks:
                     if not wanted or pair is None:
                         continue
+                    # Paired with `found` index for index. --confirm-all writes
+                    # through these objects, so it can never resolve a group by
+                    # a key that turns out not to be unique across titles.
+                    targets.append((page_group, group_id, issue))
                     found.append(
                         Correction(
                             volume=volume,
@@ -225,6 +235,60 @@ def _report(found: list[Correction], *, verbose: bool) -> None:
                 print(f"      type:   {c.stored} -> {c.proposed}")
 
 
+def _confirm_all(targets: list[tuple[Any, str, str]]) -> tuple[int, int]:
+    """Stamp ``type_reviewed`` on every queued type correction. Returns (groups, pages).
+
+    For the reviewer who has walked the whole queue and agrees with all of it.
+    That is the one outcome the editor makes expensive: agreeing changes no
+    value, so unless the type popup is opened and saved on each entry there is
+    nothing to persist, and a whole review can be done and leave no trace. It
+    happened -- 52 corrections checked, 0 stamped, the working tree clean and no
+    backups written.
+
+    Deliberately type-only. The equivalent for text would be a bulk *rejection*
+    of every proposed correction, which is a destructive default dressed up as a
+    convenience; those are turned down one at a time in the editor.
+
+    Takes the *page group objects themselves* rather than a key to match on.
+    The first version keyed on ``(fanta_page, engine, group_id)``, which is not
+    unique across titles -- page 013 group 9 exists in nearly every volume -- so
+    each of 52 corrections also stamped its namesake in about fourteen other
+    books, and 749 files were rewritten instead of 31. Identity is the only
+    honest key here, and passing the object removes the question.
+
+    Saves through ``save_json(backup_file=...)`` like every other writer here, so
+    the 4-space no-trailing-newline format is produced by the same code as
+    everywhere else.
+    """
+    today = date.today().isoformat()  # noqa: DTZ011 -- a local review date, not an instant.
+    stamped = 0
+    pages: dict[int, tuple[Any, str]] = {}
+    for page_group, group_id, issue in targets:
+        if issue != VISION_TYPE_ISSUE:
+            continue
+        group = page_group.speech_page_json.get("groups", {}).get(group_id)
+        if group is None:
+            continue
+        if id(page_group) not in pages:
+            pages[id(page_group)] = (page_group, json.dumps(page_group.speech_page_json, indent=4))
+        group[TYPE_REVIEWED_KEY] = True
+        group[TYPE_REVIEWED_DATE_KEY] = today
+        stamped += 1
+
+    written = 0
+    for page_group, before in pages.values():
+        if json.dumps(page_group.speech_page_json, indent=4) == before:
+            continue
+        ocr_file = page_group.ocr_prelim_groups_json_file
+        backup_file = Path(
+            str(get_backup_file(ocr_file)).replace(str(OCR_PRELIM_DIR), str(OCR_PRELIM_BACKUP_DIR))
+        )
+        backup_file.parent.mkdir(parents=True, exist_ok=True)
+        page_group.save_json(backup_file=backup_file)
+        written += 1
+    return stamped, written
+
+
 def _report_skipped(skipped: list[str]) -> None:
     """Say which titles could not be read, so a clean result is never overstated."""
     if not skipped:
@@ -259,7 +323,21 @@ def main(  # noqa: PLR0913
     verbose: Annotated[
         bool, typer.Option("--verbose", help="Print corrected text in full rather than clipped.")
     ] = False,
+    confirm_all: Annotated[
+        bool,
+        typer.Option(
+            "--confirm-all",
+            help="Stamp type_reviewed on every listed type correction. Requires --type.",
+        ),
+    ] = False,
 ) -> None:
+    # Guarded rather than quietly widened: --confirm-all over text would be a
+    # bulk rejection of every proposed correction, which is destructive and is
+    # not what anybody reaching for a "confirm" flag means.
+    if confirm_all and not type_only:
+        print("--confirm-all needs --type. It stamps type reviews and nothing else.")
+        raise typer.Exit(code=2)
+
     comics_database = ComicsDatabase()
     speech_groups = SpeechGroups(comics_database)
     titles = resolve_titles(comics_database, volumes_str, title_str)
@@ -271,12 +349,14 @@ def main(  # noqa: PLR0913
     want_type = type_only or not text_only
 
     skipped: list[str] = []
+    targets: list[tuple[Any, str, str]] = []
     found = _collect(
         comics_database,
         speech_groups,
         titles,
         engines,
         skipped,
+        targets,
         want_text=want_text,
         want_type=want_type,
     )
@@ -304,6 +384,19 @@ def main(  # noqa: PLR0913
         path.write_text(header + "\n".join(lines) + "\n")
         print(f'\nWrote "{path}" ({len(lines)} entries).')
         print(f"  uv run barks-ocr-kivy-editor -- --queue-file {path}")
+
+    if confirm_all:
+        stamped, pages = _confirm_all(targets)
+        # The count is the whole safety story: the first version of this stamped
+        # 52 corrections onto 749 pages by matching a key that repeats across
+        # titles, so a run that touches more groups than it listed is wrong by
+        # construction and must not be allowed to finish quietly.
+        if stamped != len(found):
+            print(f"\nABORTED SHAPE CHECK: listed {len(found)} but stamped {stamped}.")
+            raise typer.Exit(code=1)
+        print(f"\nStamped {TYPE_REVIEWED_KEY} on {stamped} group(s) across {pages} page(s).")
+        if len(engines) == 1:
+            print("  Run barks-ocr-vision-mirror --write to carry it to the other engine.")
 
     _report_skipped(skipped)
 
