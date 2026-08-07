@@ -293,6 +293,35 @@ TYPE_WAS_KEY = "type_was"
 TYPE_REVIEWED_KEY = "type_reviewed"
 TYPE_REVIEWED_DATE_KEY = "type_reviewed_date"
 
+# Written into the prep stub only, never onto a stored group: the OTHER engine's
+# label for the same lettering, and present only when the two disagree.
+#
+# `vision_prep` builds its queue from one engine, so until now the pass only ever
+# saw that engine's `type`. A label wrong only on the other side was proposed by
+# nothing, queued by nothing and reviewed by nobody -- `vision_corrections`
+# reports proposals, and no proposal exists for a group the pass never flagged.
+#
+# Measured 2026-08-07 over all 5560 pages, pairing groups on whitespace-normalized `ai_text`
+# because the ids do not correspond between engines: 2725 disagreements, 3.92% of
+# the 69472 groups that could be paired, two thirds of them dialogue-versus-
+# thought, spread evenly across all 30 volumes. On the 43 where a pass had
+# recorded `identified_by: balloon-tail` -- a thought balloon has no tail, so the
+# side saying `thought` is provably wrong -- paddleocr was wrong 36 times and
+# easyocr 7. Both graders are wrong often enough that neither can simply be
+# declared canonical; the only cheap adjudicator is a pass with the art open.
+OTHER_ENGINE_TYPE_KEY = "type_other_engine"
+
+# Written by `vision_apply` whenever the pass supplied a `type` at all, including
+# one that agrees with the stored value.
+#
+# `type_was` cannot carry this: it records a value that was *overruled*, so it is
+# absent exactly when the pass confirms the engine it read and the other engine
+# is the wrong one. Without a separate marker that case is unfixable -- the pass
+# would have adjudicated the disagreement and had no way to say so, and the
+# mirror, which only moves a type carrying `type_was`, would leave the other
+# engine's wrong label standing.
+TYPE_ADJUDICATED_KEY = "type_adjudicated"
+
 # Written by the editor only, and only needed for the outcome the text side
 # cannot express on its own: a correction the reviewer looked at and *rejected*.
 #
@@ -814,6 +843,17 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  drawing rather than the words -- a thought balloon has a cloud edge and",
         "  a trail of bubbles, a speech balloon has a pointed tail, and a noise",
         "  painted into the art is not the same as one lettered inside a balloon.",
+        "  ONE EXCEPTION, and it reverses the rule: when a group carries",
+        f"  `{OTHER_ENGINE_TYPE_KEY}` the two OCR passes labelled the same lettering",
+        "  differently, so one of",
+        f"  them is wrong. ALWAYS supply `{TYPE_KEY}` on such a group -- the label the",
+        "  art actually supports -- even when that is the value already stored.",
+        "  Confirming is not noise here: it is the only way the correct label",
+        "  reaches the other engine, and nothing else in the pipeline looks at",
+        "  this. A stub carrying it should not come back silent.",
+        "  Measured over the whole corpus: 3.92% of groups disagree this way, two",
+        "  thirds of them dialogue against thought, and neither engine is reliably",
+        "  the right one -- so read the balloon, do not prefer a side.",
         (
             f"{EMPHASIS_MARKUP_KEY} — the group's ai_text with emphasis marked"
             f" inline: {', '.join(f'[{t}]WORD[/{t}]' for t in EMPHASIS_TAGS)}."

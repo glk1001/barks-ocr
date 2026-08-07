@@ -92,6 +92,7 @@ from barks_ocr.utils.vision_schema import (
     SPEAKER_REVIEWED_KEY,
     TIME_OF_DAY_KEY,
     TIMES_OF_DAY,
+    TYPE_ADJUDICATED_KEY,
     TYPE_KEY,
     TYPE_REVIEWED_KEY,
     TYPE_WAS_KEY,
@@ -783,6 +784,49 @@ def _groups_written(page_group: Any, ocr_file: Path, before: str) -> bool:  # no
     return True
 
 
+def _apply_type(group: dict, entry: dict) -> int:
+    """Apply the pass's ruling on one group's ``type``. Returns 1 if it overruled the grouper.
+
+    ``type`` is deliberately not in ``APPLIED_KEYS``, which blanket-writes every
+    key including as None: that would wipe the grouper's answer off every group
+    the pass said nothing about. Absent means "no quarrel with it", so only a
+    supplied value touches the group.
+
+    ``type_reviewed`` outranks the pass here exactly as ``speaker_reviewed``
+    does, and for a sharper reason: without the guard a re-apply would not
+    merely overwrite the human's type but overwrite ``type_was`` with it,
+    destroying the record of what the grouper originally said and leaving
+    ``type_reviewed`` asserting that somebody approved a value they never saw.
+
+    ``type_adjudicated`` is set for any supplied value, including one that
+    agrees with the stored type. The pass is told to supply ``type`` on any
+    group whose stub carried ``type_other_engine``, and there the agreeing case
+    is the whole point -- this engine is right and the other is wrong, so the
+    label still has to travel. ``type_was`` is absent by definition in that
+    case, and it is what the mirror gates on, so without this marker the
+    adjudication would be made and then dropped.
+
+    Args:
+        group: The stored group, modified in place.
+        entry: The result entry for this group.
+
+    Returns:
+        1 when the stored type was overruled, 0 otherwise.
+
+    """
+    new_type = entry.get(TYPE_KEY)
+    if new_type is None or group.get(TYPE_REVIEWED_KEY):
+        return 0
+
+    group[TYPE_ADJUDICATED_KEY] = True
+    if new_type == group.get(TYPE_KEY):
+        return 0
+
+    group[TYPE_WAS_KEY] = group.get(TYPE_KEY)
+    group[TYPE_KEY] = new_type
+    return 1
+
+
 def _apply_page(
     page_group: Any,  # noqa: ANN401
     result: dict,
@@ -817,25 +861,7 @@ def _apply_page(
             group[stored_key] = entry.get(result_key)
         _expire_text_review(group, proposed_before)
 
-        # `type` is deliberately not in APPLIED_KEYS, which blanket-writes every
-        # key including as None: that would wipe the grouper's answer off every
-        # group the pass said nothing about. Absent means "no quarrel with it",
-        # so only a supplied value touches the group -- and only a value that
-        # differs is a correction worth recording.
-        #
-        # `type_reviewed` outranks the pass here exactly as `speaker_reviewed`
-        # does above, and for a sharper reason: without this guard a re-apply
-        # would not merely overwrite the human's type but overwrite `type_was`
-        # with it, destroying the record of what the grouper originally said and
-        # leaving `type_reviewed` asserting that somebody approved a value they
-        # never saw.
-        new_type = entry.get(TYPE_KEY)
-        if group.get(TYPE_REVIEWED_KEY):
-            new_type = None
-        if new_type is not None and new_type != group.get(TYPE_KEY):
-            group[TYPE_WAS_KEY] = group.get(TYPE_KEY)
-            group[TYPE_KEY] = new_type
-            retyped += 1
+        retyped += _apply_type(group, entry)
 
         # Emphasis goes into `ai_text` itself. Validation has already checked
         # that this strips back to the stored words, so the only thing changing

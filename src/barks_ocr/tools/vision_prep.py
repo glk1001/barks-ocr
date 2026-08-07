@@ -28,6 +28,7 @@ first.  See ``TILE_OVERLAP_FRACTION``.
 """
 
 import json
+from collections import Counter
 from pathlib import Path
 from typing import Annotated, Any
 
@@ -39,6 +40,7 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
 from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePanelBoxes
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
+from barks_fantagraphics.speech_markup import strip_markup
 from loguru import logger
 from PIL import Image
 
@@ -51,9 +53,11 @@ from barks_ocr.utils.vision_schema import (
     CAPTURED_KEY,
     CHARACTERS_KEY,
     OBJECTS_KEY,
+    OTHER_ENGINE_TYPE_KEY,
     PANELS_OF_NOTE_KEY,
     SETTING_KEY,
     TIME_OF_DAY_KEY,
+    TYPE_KEY,
     VISIBLE_TEXT_KEY,
     roster_text,
 )
@@ -202,12 +206,64 @@ def _page_image_file(comics_database: ComicsDatabase, title_str: str, fanta_page
     return comic.get_final_srce_story_file(fanta_page, PageType.BODY)[0]
 
 
-def _trimmed_groups(speech_page_json: dict) -> dict:
-    """Reduce the existing groups to just what the vision pass judges against."""
+def _match_key(ai_text: str | None) -> str:
+    """Return the whitespace-insensitive key two engines' groups are paired on.
+
+    The same key ``vision_mirror`` pairs on, and for the same reason: group ids
+    do not correspond between the engines, so pairing on id silently compares
+    unrelated balloons.
+    """
+    return " ".join(strip_markup(ai_text or "").split())
+
+
+def _other_engine_types(
+    speech_groups: SpeechGroups, title_str: str, fanta_page: str, engine: OcrTypes
+) -> dict[str, str]:
+    """Return the other engine's ``type`` per group text, for texts unique on that page.
+
+    Args:
+        speech_groups: The loaded speech groups for the title.
+        title_str: The story being prepped.
+        fanta_page: The page being prepped.
+        engine: The engine this run reads; the *other* one is looked up.
+
+    Returns:
+        Text key to type. Empty when the other engine has no groups for the page,
+        which is not an error -- one engine sometimes finds text the other misses.
+
+    """
+    other = next((e for e in OcrTypes if e != engine), None)
+    if other is None:
+        return {}
+    page_group = _find_page_group(speech_groups, title_str, fanta_page, other)
+    if page_group is None:
+        return {}
+
+    groups = page_group.speech_page_json.get("groups", {}).values()
+    counts = Counter(_match_key(group.get("ai_text")) for group in groups)
     return {
-        group_id: {field: group.get(field) for field in GROUP_FIELDS}
-        for group_id, group in speech_page_json.get("groups", {}).items()
+        key: group.get(TYPE_KEY)
+        for group in groups
+        if (key := _match_key(group.get("ai_text"))) and counts[key] == 1 and group.get(TYPE_KEY)
     }
+
+
+def _trimmed_groups(speech_page_json: dict, other_types: dict[str, str]) -> dict:
+    """Reduce the existing groups to just what the vision pass judges against.
+
+    Adds ``type_other_engine`` where the two OCR passes labelled the same
+    lettering differently. The pass reads one engine, so without this a label
+    wrong only on the other side is invisible to it -- and to the corrections
+    queue, which reports proposals and so has nothing to report.
+    """
+    trimmed = {}
+    for group_id, group in speech_page_json.get("groups", {}).items():
+        entry = {field: group.get(field) for field in GROUP_FIELDS}
+        other = other_types.get(_match_key(group.get("ai_text")))
+        if other is not None and other != group.get(TYPE_KEY):
+            entry[OTHER_ENGINE_TYPE_KEY] = other
+        trimmed[group_id] = entry
+    return trimmed
 
 
 def _find_page_group(
@@ -274,7 +330,8 @@ def _prep_page(  # noqa: PLR0913
         )
         raise typer.BadParameter(msg)
 
-    groups = _trimmed_groups(page_group.speech_page_json)
+    other_types = _other_engine_types(speech_groups, title_str, fanta_page, engine)
+    groups = _trimmed_groups(page_group.speech_page_json, other_types)
     (page_dir / "groups.json").write_text(json.dumps(groups, indent=2) + "\n")
 
     panel_nums = [box.panel_num for box in page_panel_boxes.panel_boxes]

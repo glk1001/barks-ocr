@@ -57,6 +57,7 @@ from barks_ocr.utils.vision_schema import (
     SPEAKER_REVIEWED_DATE_KEY,
     SPEAKER_REVIEWED_KEY,
     SPEAKER_WAS_KEY,
+    TYPE_ADJUDICATED_KEY,
     TYPE_KEY,
     TYPE_REVIEWED_DATE_KEY,
     TYPE_REVIEWED_KEY,
@@ -101,14 +102,25 @@ MIRRORED_KEYS = (
 # two sides differ. Both engines carry their own Gemini-assigned type, and those
 # disagree on plenty of groups the vision pass never had an opinion about --
 # blanket-copying would overwrite one grouper's answer with the other's and call
-# it mirroring. Only a type the pass actually corrected travels, which is
-# exactly the set carrying `type_was`.
+# it mirroring. Measured 2026-08-07: 2725 such disagreements corpus-wide, 3.92%
+# of the groups that can be paired, and neither engine is reliably the right one.
+#
+# So only a type the pass actually ruled on travels, which is the set carrying
+# `type_was` (it overruled this engine) or `type_adjudicated` (it settled a
+# cross-engine disagreement, possibly by confirming this engine, in which case
+# there is no `type_was` to gate on).
 #
 # The review flag rides with them for the same reason `speaker_reviewed` does:
 # a human's answer to "what kind of lettering is this" is about the art, not
 # about which engine transcribed it, and reviewing the same group twice -- once
 # per engine -- is work nobody should be asked to do.
-RETYPED_KEYS = (TYPE_KEY, TYPE_WAS_KEY, TYPE_REVIEWED_KEY, TYPE_REVIEWED_DATE_KEY)
+RETYPED_KEYS = (
+    TYPE_KEY,
+    TYPE_WAS_KEY,
+    TYPE_REVIEWED_KEY,
+    TYPE_REVIEWED_DATE_KEY,
+    TYPE_ADJUDICATED_KEY,
+)
 
 
 def _match_key(ai_text: str | None) -> str:
@@ -193,12 +205,14 @@ def _copy_fields(src: dict, dst: dict) -> bool:
     The type keys are held back behind their own test. Both engines carry a
     Gemini-assigned ``type`` and those disagree on groups the vision pass never
     had an opinion about, so copying on difference alone would overwrite one
-    grouper's answer with the other's. Only a type the pass overruled travels,
-    and ``type_was`` is what says so.
+    grouper's answer with the other's. Only a type the pass ruled on travels:
+    ``type_was`` says it overruled this engine, ``type_adjudicated`` says it
+    settled a cross-engine disagreement, which includes confirming this engine
+    and so leaves no ``type_was`` behind.
     """
     changed = False
     keys = MIRRORED_KEYS
-    if src.get(TYPE_WAS_KEY) is not None:
+    if src.get(TYPE_WAS_KEY) is not None or src.get(TYPE_ADJUDICATED_KEY):
         keys = (*keys, *RETYPED_KEYS)
     for stored_key in keys:
         if src.get(stored_key) != dst.get(stored_key):
