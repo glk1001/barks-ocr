@@ -54,8 +54,8 @@ so the same numbers land elsewhere and the miss is *silent* — what comes back 
 plausible comic art with no tail in it. Helpers, no barks imports needed:
 
 ```bash
-uv run python ~/barks-vision/dump_boxes.py "Some Title" ~/barks-vision/boxes-<slug>.json
-python3 ~/barks-vision/crop.py ~/barks-vision/<slug> <page> <panel> <x0> <y0> <x1> <y1> <scale> out.png
+uv run python scripts/vision/dump_boxes.py "…" ~/barks-vision/<slug>/boxes-<slug>.json
+python3 scripts/vision/crop.py ~/barks-vision/<slug> <page> <panel> <x0> <y0> <x1> <y1> <scale> out.png
 ```
 
 2–3x settles which hat a tail leans at, 4–6x a letter, 8–12x a cap crown of a
