@@ -69,11 +69,31 @@ Claude Code keeps this project's memory in
 
     ~/.claude/projects/<project-path-with-slashes-as-dashes>/memory/
 
-The directory name is derived from the checkout path, so **if the laptop uses
-the same path the key matches** and copying the `memory/` directory across is
-enough. It holds the accumulated review feedback — the under-naming rule, the
-corrected cap-colour cutoff, the painted-noise rule. A session without it
-repeats mistakes the reviewer has already corrected three times.
+The directory name is the checkout path with `/` turned into `-`, so **the
+laptop must use the same checkout path** or the key differs and the memory is
+silently not found. It holds the accumulated review feedback — the under-naming
+rule, the corrected cap-colour cutoff, the painted-noise rule. A session without
+it repeats mistakes the reviewer has already corrected three times.
+
+Copy `memory/` and nothing else. The directory above it is session transcripts:
+1.1G against the memory's 128K.
+
+```bash
+rsync -av ~/.claude/projects/-home-greg-Prj-github-barks-compleat-digital-barks-ocr/memory/ \
+  laptop:~/.claude/projects/-home-greg-Prj-github-barks-compleat-digital-barks-ocr/memory/
+```
+
+Two files are about this desktop's hardware rather than the project —
+`feedback_ptyxis_session_restore.md` and `project_gdm_magnifier.md`. Add
+`--exclude='*ptyxis*' --exclude='*gdm*'` to leave them behind.
+
+**There is no merge.** `rsync -a` overwrites the destination, so a memory
+written on the laptop is lost the next time you copy the other way. `--update`
+does not save you either: `MEMORY.md` is a single index, so if both machines
+added entries you end up with one side's index listing only half the files that
+are present. Copy in the direction of the machine you have just worked on,
+before you switch — the same discipline the prelim repo needs, for the same
+reason.
 
 ## Working on two machines
 
