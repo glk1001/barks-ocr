@@ -45,10 +45,29 @@ Three things it has to get right, learned by getting them wrong first:
   lettering is grouped somewhere else in the title — that is exactly the real
   case. *The Mad Chemist*'s `313` plate is grouped on 131 and missing on 128 and
   129.
+- **Separate a near match from a gap.** The pass transcribes `visible_text` by
+  eye, and on a sound effect that means counting repeated letters. It wrote
+  `FZZZZT!` where the group — which both engines found — says `FZZZT!`. Reporting
+  that as missing sends a reviewer to a page with nothing to add. Anything within
+  `NEAR_MATCH_RATIO` of a grouped text goes to its own class instead, printed
+  with the text it nearly matches so a reader can settle which reading is right.
+  It is deliberately not folded into the covered case: which of the two is
+  correct is a judgement, not something to resolve silently.
 
-Result of the first corpus sweep, 2026-08-08: 203 vision-passed pages carrying
-`visible_text` → **12 items on 11 pages**, in volumes 1, 2 and 11. Mostly signs
-and shop lettering — the searchable-content class rather than sound effects.
+  These are worth reading rather than dismissing. The second one found —
+  `5 BALLS 1` against a grouped `5 BALLS` — is not a wobble in the capture at
+  all: the group's text looks truncated, which is a correction to that group
+  rather than a new one.
+
+Result of the corpus sweep, 2026-08-08: 203 vision-passed pages carrying
+`visible_text` → **8 genuinely ungrouped items on 8 pages**, in volumes 1, 2 and
+11, plus 2 near matches to check and 2 entries on the ignore list. Mostly signs
+and small scenery.
+
+That figure fell from 15 as each filter went in — 3 lost to proper markup
+handling, 2 to the ignore list, 2 to the near-match class. Nearly half of the
+first raw count was noise, which is worth knowing before trusting a future sweep
+that has not been read carefully.
 
 ### Ignoring a finding
 

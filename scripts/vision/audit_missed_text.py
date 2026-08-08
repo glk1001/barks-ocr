@@ -34,6 +34,7 @@ import json
 import re
 import sys
 from collections import defaultdict
+from difflib import SequenceMatcher
 from pathlib import Path
 
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
@@ -51,8 +52,16 @@ TITLE_TYPE = "title"
 IGNORE_FILE = Path(__file__).with_name("missed-text-ignore.txt")
 SCOPED_ENTRY_FIELDS = 3  # volume, page, and the lettering itself
 
+# Tuned on the one case that prompted it: FZZZZT! against a grouped FZZZT!
+# scores 0.91. The length floor keeps short strings, where a couple of shared
+# characters is most of the string, from matching each other by chance.
+NEAR_MATCH_RATIO = 0.85
+MIN_NEAR_MATCH_LEN = 4
+
 # title, volume, fanta_page, lettering, engines that grouped it (empty = neither)
 Finding = tuple[str, int, str, str, list[OcrTypes]]
+# ... and the grouped text it nearly matches, for the near-miss class
+NearMiss = tuple[str, int, str, str, str]
 
 
 def normalize(text: str | None) -> str:
@@ -106,6 +115,27 @@ def covers(needle: str, grouped: set[str]) -> bool:
     return any(needle == text or needle in text for text in grouped)
 
 
+def near_match(needle: str, grouped: set[str]) -> str | None:
+    """Return the closest grouped text if one is nearly this lettering, else None.
+
+    The pass transcribes ``visible_text`` by eye, and on a sound effect that means
+    counting repeated letters: it wrote ``FZZZZT!`` where the group -- which
+    both engines found -- says ``FZZZT!``. That is a wobble in the transcription,
+    not lettering anybody missed, and reporting it as a gap sends a reviewer to
+    a page where there is nothing to add.
+
+    Held apart from ``covers`` rather than folded into it, and reported as its
+    own class: a near match is a guess about which of two readings is right, and
+    that is a judgement for a reader, not something to resolve silently.
+    """
+    if len(needle) < MIN_NEAR_MATCH_LEN:
+        return None  # short strings collide by chance
+    best = max(grouped, key=lambda text: SequenceMatcher(None, needle, text).ratio(), default="")
+    if best and SequenceMatcher(None, needle, best).ratio() >= NEAR_MATCH_RATIO:
+        return best
+    return None
+
+
 def index_pages(
     page_groups: list[SpeechPageGroup],
 ) -> tuple[dict[str, dict[OcrTypes, set[str]]], dict[str, Path], set[str]]:
@@ -149,8 +179,12 @@ def page_capture(capture_file: Path) -> list[str] | None:
 
 def audit_title(
     comics_database: ComicsDatabase, speech_groups: SpeechGroups, title_str: str
-) -> tuple[list[Finding], int, int]:
-    """Audit one title; return its findings, pages checked, and logo echoes dropped."""
+) -> tuple[list[Finding], list[NearMiss], int, int]:
+    """Audit one title.
+
+    Returns its findings, its near misses, the pages checked and the number of
+    story-logo echoes dropped.
+    """
     title = STR_TITLE_TO_ENUM[title_str]
     volume = comics_database.get_fanta_volume_int(title_str)
     try:
@@ -160,10 +194,11 @@ def audit_title(
         # answers "nothing missing" while silently not having looked is worse
         # than one that admits it could not look.
         logger.warning(f'Skipping "{title_str}": {exc}')
-        return [], 0, 0
+        return [], [], 0, 0
 
     grouped_text, capture_files, logos = index_pages(page_groups)
     findings: list[Finding] = []
+    near_misses: list[NearMiss] = []
     pages_checked = 0
     suppressed = 0
 
@@ -172,23 +207,33 @@ def audit_title(
         if visible is None:
             continue
         pages_checked += 1
+        every_text = set().union(*per_engine.values()) if per_engine else set()
         for item in visible:
             needle = normalize(item)
             if not needle:
                 continue
             have = [engine for engine, texts in per_engine.items() if covers(needle, texts)]
+            close = None if have else near_match(needle, every_text)
             if have:
                 if len(have) < len(per_engine):
                     findings.append((title_str, volume, page, item, have))
             elif any(needle == logo or needle in logo or logo in needle for logo in logos):
                 suppressed += 1
+            elif close:
+                near_misses.append((title_str, volume, page, item, close))
             else:
                 findings.append((title_str, volume, page, item, []))
 
-    return findings, pages_checked, suppressed
+    return findings, near_misses, pages_checked, suppressed
 
 
-def report(findings: list[Finding], pages: int, suppressed: int, ignores: int) -> None:
+def report(
+    findings: list[Finding],
+    near_misses: list[NearMiss],
+    pages: int,
+    suppressed: int,
+    ignores: int,
+) -> None:
     """Print the sweep result, worst class first."""
     neither = [f for f in findings if not f[4]]
     one_only = [f for f in findings if f[4]]
@@ -207,6 +252,10 @@ def report(findings: list[Finding], pages: int, suppressed: int, ignores: int) -
     for title_str, volume, page, item, have in one_only:
         engines = ", ".join(str(engine) for engine in have)
         print(f"  vol {volume:<3} {page}  {item!r:<42} {title_str}  (only {engines})")
+
+    print(f"\n=== nearly a grouped text -- check the transcription: {len(near_misses)} ===")
+    for title_str, volume, page, item, close in near_misses:
+        print(f"  vol {volume:<3} {page}  {item!r:<42} {title_str}  vs grouped {close!r}")
 
     if neither:
         by_volume: dict[int, int] = defaultdict(int)
@@ -241,18 +290,20 @@ def main() -> None:
     titles = resolve_titles(comics_database, "", only_title or "")
 
     findings: list[Finding] = []
+    near_misses: list[NearMiss] = []
     pages = 0
     suppressed = 0
     for title_str in titles:
-        found, checked, dropped = audit_title(comics_database, speech_groups, title_str)
+        found, close, checked, dropped = audit_title(comics_database, speech_groups, title_str)
         findings += found
+        near_misses += close
         pages += checked
         suppressed += dropped
 
     ignores = load_ignores()
     kept = [f for f in findings if not ignored(ignores, f)]
 
-    report(kept, pages, suppressed, len(findings) - len(kept))
+    report(kept, near_misses, pages, suppressed, len(findings) - len(kept))
     if csv_out:
         write_csv(kept, csv_out)
 

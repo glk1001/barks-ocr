@@ -44,6 +44,8 @@ etype
 favourites
 floatlayout
 fromarray
+fzzzt
+fzzzzt
 geefs
 gemb
 gemf
