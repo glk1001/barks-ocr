@@ -1802,9 +1802,29 @@ class EditorApp(App):
             return
         group = pane.json_group()
         if group is None or not group.get(TYPE_WAS_KEY):
+            # Say so on screen, not only in the log. A corrections queue mixes
+            # `vision-text` and `vision-type` rows, and it is sorted by page, so
+            # it can perfectly well open on a text row -- where this button has
+            # nothing to confirm and correctly stays put. Logging that to a
+            # console nobody is looking at makes a working button look dead.
+            # `Keep Text` already pops up in the mirror-image case; match it.
             logger.warning(
                 f"Nothing to confirm on {pane.name} group {pane.group_id}:"
                 " the vision pass did not overrule the type here. Staying put."
+            )
+            hint = (
+                "\nThis entry is a proposed text correction:\nedit the text to accept it,"
+                " or press Keep Text to reject it."
+                if group is not None and group.get(VISION_CORRECTED_TEXT_KEY)
+                else ""
+            )
+            self._show_confirm_popup(
+                "Confirm Type",
+                f"No overruled type on this group.{hint}",
+                on_confirm=lambda: None,
+                confirm_label="OK",
+                cancel_label=None,
+                size=(520, 240),
             )
             return
         self._apply_type_to_current_groups(group.get(TYPE_KEY) or DEFAULT_TYPE)
