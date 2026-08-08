@@ -22,6 +22,7 @@ barks-ocr-vision-prep  --title "…"           # crops, queue.json, roster.txt
 barks-ocr-vision-apply --out-dir ~/barks-vision/<slug> --dry-run --capture-model "claude-opus-5[1m]"
 barks-ocr-vision-apply --out-dir ~/barks-vision/<slug>          --capture-model "claude-opus-5[1m]" \
     --queue-out ~/barks-vision/<slug>/queue-text.txt
+uv run python scripts/vision/audit_missed_text.py --title "…"   # lettering no group covers
 ```
 
 Then build the queue files, commit, and stop. Mirroring waits until the
@@ -41,6 +42,26 @@ outstanding across three volumes. It is idempotent — `_correction_applied`
 compares stored `ai_text` against the proposal with markup stripped, so a
 correction already applied is never re-offered — which is why passing it always
 is safe.
+
+**Run the missed-text audit before handing the title back.** The pass transcribes
+non-speech lettering into each page's `visible_text`, and some of it is lettering
+neither engine grouped — never searchable, never boxed, never in any queue. The
+audit diffs the two off the corpus and takes seconds. A first sweep found 8 real
+items across 203 already-passed pages, and four in a single ten-page title.
+
+Read what it prints rather than trusting the count. It reports three classes and
+they need different things: **grouped by neither engine** is a group to add;
+**grouped by only one** is a group to copy across; **nearly a grouped text** is
+usually the pass's own transcription off by a letter, but can instead mean the
+group's text is truncated, which is a correction to that group. Findings not
+worth a group go in `scripts/vision/missed-text-ignore.txt` with a reason — never
+by editing `visible_text`, which is a true record of what is printed.
+
+Adding the groups is the reviewer's job, in the editor, and there are two traps
+worth passing on with the queue: **Copy In deep-copies `speaker_reviewed`**, so a
+group copied inside a finished title is born already signed off wearing the seed
+group's speaker; and a box dragged onto the right lettering does not change the
+text, so check both. Details in `docs/missed-text.md`.
 
 ## Reading the pages
 
@@ -73,7 +94,7 @@ capture record.
 compare to the stored `ai_text`. Do not learn about a mismatch from validation
 after all the reading is done.
 
-## Queues — distinct paths, and three kinds of review
+## Queues — distinct paths, and four kinds of review
 
 Speakers, from what is already annotated:
 
@@ -91,9 +112,10 @@ barks-ocr-vision-corrections --title "…" -o <dir>/queue-corrections.txt
 
 Sort every queue by **volume, page, group (numeric), engine** — group is field 4,
 engine field 3 — keep the summary header, drop the `# --- category ---`
-separators. **Report all three counts per title**, not just the speaker ones:
-reporting only speakers is how the text corrections went unnoticed for fifteen
-titles.
+separators. **Report all four counts per title** — speakers, text, type and
+missed text — not just the speaker ones: reporting only speakers is how the text
+corrections went unnoticed for fifteen titles, and missed text has no count at
+all unless the audit is run and its result said out loud.
 
 `vision-corrections` reads the **corpus**, not the out-dir, so it still answers
 for titles whose scratch directory is long gone. It covers **both engines** by
