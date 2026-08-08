@@ -107,6 +107,30 @@ overflow. Groups without usable fragments fall back to the axis-only check
 unchanged. The line-height checks stay on axis geometry deliberately: the
 inflated height makes angled groups measure *roomy*, which fails safe there.
 
+## `text-will-never-fit`, the last resort on the fit check
+
+Everything above narrows the fit check towards the flags a reviewer can act on,
+and some overflow survives all of it: the lettering is transcribed correctly,
+the box is drawn where the lettering is, and Verdana at the derived size simply
+needs more width than Barks's hand did. Nothing in the file is wrong, so no edit
+will clear the flag — the reviewer ticks `text-will-never-fit` in the editor's
+**Mark OK** popup and `text_does_not_fit` stops being reported for that group.
+
+It is registered in `DISMISSABLE_PREDICATES` against `_never_fires`, like
+`florence-check`: the check itself lives in `ocr_check`, needs the rendered font
+and the page's geometry, and cannot run from `group_checks`. So the popup always
+shows it as "not firing" and never pre-ticks it — including from a
+`text_does_not_fit` queue entry, deliberately, since most overflow is a fixable
+box or a missing line break and this acknowledgement gives up on the group for
+good.
+
+It covers the **fit half only**. `too_many_lines` is the opposite failure and is
+still reported: accepting that text overflows its box says nothing about whether
+its lines are packed tighter than the rest of the page. And per *An acknowledged
+group is off limits to its fixer* below, the `--fix-newlines` transplant is
+gated with the check — no issue reported means no rewrap attempted, so the
+accepted overflow is not quietly rewrapped on the next `--fix` pass.
+
 ## The em-dash rule, and what measuring it changed
 
 Two regexes became one positive rule: an em-dash needs a space, line break or

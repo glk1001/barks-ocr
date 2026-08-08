@@ -27,6 +27,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.group_checks import (
+    TEXT_NEVER_FITS_ISSUE,
     cleaned_whitespace,
     get_fired_dismissable_issues,
     is_acknowledged,
@@ -1258,6 +1259,12 @@ class OcrChecker:
           page, which the fit check cannot see → "too_many_lines", or
           "too_many_lines_marginal" in the noisier band just above it.
 
+        A group acknowledging ``text-will-never-fit`` skips the fit half only —
+        that is the reviewer saying the lettering overflows the box as drawn and
+        no rewrap will change it, which says nothing about the line packing. The
+        wrapping fixer is gated with it: no issue reported, so no transplant is
+        attempted, and the accepted overflow is not quietly rewrapped away.
+
         Well-formed → (False, None, ratio). Ill-formed with no fix flag, or with
         the transplant rejected → (False, issue_type, ratio). Transplant applied
         → (True, None, ratio).
@@ -1269,7 +1276,9 @@ class OcrChecker:
 
         ratio = _line_height_ratio(group, context.line_heights.own)
 
-        if not _group_text_fits(group, context.fanta_page):
+        if not is_acknowledged(group, TEXT_NEVER_FITS_ISSUE) and not _group_text_fits(
+            group, context.fanta_page
+        ):
             issue = "text_does_not_fit"
         elif ratio is not None and ratio < self._limits.outlier:
             issue = "too_many_lines"

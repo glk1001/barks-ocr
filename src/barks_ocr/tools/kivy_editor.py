@@ -2096,6 +2096,11 @@ class EditorApp(App):
         # pre-tick exactly that one. Only that one: pre-ticking every firing
         # issue is the bug this replaced — a reflexive Save acknowledged all
         # of them.
+        #
+        # This matches by name, so a `text_does_not_fit` entry does NOT pre-tick
+        # `text-will-never-fit`, deliberately: most overflows are a fixable box
+        # or a missing line break, and that acknowledgement gives up on the
+        # group for good. Tick it by hand once the box has been looked at.
         queue_issue = ""
         if self._queue:
             entry = self._queue[self._queue_index]

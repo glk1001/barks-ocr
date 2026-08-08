@@ -16,6 +16,12 @@ from barks_fantagraphics.speech_markup import strip_markup, validate_markup
 
 from barks_ocr.utils.vision_schema import GROUP_TYPES
 
+# Acknowledging this silences `ocr_check`'s ``text_does_not_fit`` for the group:
+# the lettering overflows the box and always will, because the box is as drawn.
+# Named for the judgement, not the check, since the check keeps firing —
+# `ocr_check` is what stops reporting it.
+TEXT_NEVER_FITS_ISSUE = "text-will-never-fit"
+
 DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "short_text",
     "error_notes",
@@ -28,6 +34,7 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "invalid_markup",
     "whitespace",
     "florence-check",
+    TEXT_NEVER_FITS_ISSUE,
 )
 
 # The `type` vocabulary Gemini is asked for. Anything else is a mis-labelled
@@ -283,9 +290,14 @@ def with_dash_fixes(ai_text: str, group: dict) -> str:
 
 
 def _never_fires(group: dict) -> bool:
-    # florence-check is an external check (florence_check.py); it has no
-    # in-process predicate, so the acknowledge popup never auto-checks it.
-    # The user toggles it manually to opt a group out of future florence runs.
+    # For the issues whose check lives outside this module, so there is nothing
+    # to evaluate here. The acknowledge popup shows them as "not firing" and
+    # never auto-checks them; the user toggles them by hand to opt the group out
+    # of the check that does own them:
+    #
+    #   florence-check       -- florence_check.py, an external model run.
+    #   text-will-never-fit  -- ocr_check's text_does_not_fit, which needs the
+    #                           rendered font and the page context.
     del group
     return False
 
@@ -302,6 +314,7 @@ DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     "invalid_markup": has_invalid_markup,
     "whitespace": has_whitespace_error,
     "florence-check": _never_fires,
+    TEXT_NEVER_FITS_ISSUE: _never_fires,
 }
 
 # Issue types that were renamed or merged. 75 groups carry an acknowledgement
