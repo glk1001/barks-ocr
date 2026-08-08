@@ -19,3 +19,9 @@
 # a story panel. Real lettering, but not story content and not worth a box.
 BUY WAR SAVINGS BONDS AND STAMPS
 HELP KEEP AMERICA STRONG
+
+# Judged not worth a group, 2026-08-08. Scoped to their pages rather than
+# ignored everywhere: both are ordinary words that will turn up again on other
+# pages, where they may well deserve a group.
+2 031 EXIT
+11 039 B Co.

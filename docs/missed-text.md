@@ -102,8 +102,9 @@ gap is what the rest of this document is for.
 
 At **apply time**, in `vision_apply` — never afterwards.
 
-This is not a preference. Adding groups after a review was tried on
-*The Mad Chemist* and cost three separate faults:
+This is not a preference. Adding groups after a review was tried twice — on
+*The Mad Chemist*, then across six pages of the back-catalogue sweep — and cost
+four separate faults:
 
 1. `renumber_groups()` sorts by `(panel_num, min_y, min_x)`, so a group added
    for an early panel takes its reading-order slot and pushes every higher id up
@@ -116,9 +117,37 @@ This is not a preference. Adding groups after a review was tried on
    finished.
 3. Because it looks finished, the one-key speaker confirm signed off on it.
    A wrong call acquired a human review flag.
+4. Worse than 3, and the reason this is not just a matter of care: **Copy In
+   deep-copies `speaker_reviewed`**. In a finished title every group is reviewed,
+   so every group copied from one is born already flagged as reviewed, wearing
+   the seed's speaker. Nobody has to press confirm at all. That happened on 6 of
+   6 groups added during the back-catalogue sweep, without the reviewer doing
+   anything wrong.
 
 At apply time none of that exists yet: nothing is reviewed, no queue has been
 cut, and the renumber settles once before anything depends on an id.
+
+### What the sweep showed about doing it by hand
+
+Six groups were added through the editor to close audit findings. Every box was
+placed, every group reached both engines, and the numbering settled — and still
+only three of the six were right:
+
+- two had the box dead on the target lettering but kept the seed's `ai_text`
+  (a group over `FOOF` reading `PFONK!`, one on the `313` plate reading `GET
+  ALONG LITTLE DOGIES!`). The canvas looks correct; the text field is elsewhere
+  on screen.
+- one had correct text on a box over the wrong label entirely.
+- all six arrived reviewed, per fault 4 above.
+
+None of this is carelessness — it is what the interaction makes easy. The audit
+caught all three text faults on the next run, because a group whose text does not
+match the lettering still reads as missing. It could not have caught the box
+fault; that needed cropping the box off the restored page image and looking.
+`text_box` is in full-page coordinates, so the page image needs no panel
+arithmetic — but note that some Vol. 1 pages are absent from
+`Fantagraphics-restored` and present in `Fantagraphics-fixes-and-additions` as
+`.jpg`, so a checker has to try both trees.
 
 ### Schema
 
