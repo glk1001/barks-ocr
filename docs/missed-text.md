@@ -50,6 +50,29 @@ Result of the first corpus sweep, 2026-08-08: 203 vision-passed pages carrying
 `visible_text` → **12 items on 11 pages**, in volumes 1, 2 and 11. Mostly signs
 and shop lettering — the searchable-content class rather than sound effects.
 
+### Ignoring a finding
+
+Some lettering is real but not worth a group, and there is no group to hang an
+acknowledgement on — that is what makes it a finding in the first place. So the
+audit keeps its own list, `scripts/vision/missed-text-ignore.txt`:
+
+```
+SOME LETTERING              # ignored wherever it appears
+2 075 SOME LETTERING        # ignored only on that volume and page
+```
+
+Matched on the same normalization as everything else, so punctuation and case do
+not matter. Two wartime public-service fillers are listed there, which is why the
+sweep above reports 12 and a run today reports 10.
+
+The audit prints how many entries it ignored on every run. An ignore list that
+hides its own size stops being a record of a decision and becomes a way of not
+seeing the problem.
+
+**Do not instead edit a page's `visible_text`.** That field records what is
+printed on the page and is true as it stands; an ignore belongs in the list,
+where it carries a reason.
+
 **Its limit:** it only finds what a pass wrote down. Lettering no pass ever
 noticed is invisible to it, so the count is a floor, not a total. Closing that
 gap is what the rest of this document is for.

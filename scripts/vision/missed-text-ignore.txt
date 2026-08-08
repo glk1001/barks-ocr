@@ -1,0 +1,21 @@
+# Lettering the missed-text audit should stop reporting.
+#
+# One entry per line, either of:
+#     SOME LETTERING              ignored wherever it appears
+#     <volume> <page> SOME TEXT   ignored only on that page
+#
+# Matched on letters and digits only, the same normalisation the audit uses, so
+# punctuation, case and line breaks do not matter. Blank lines and # are skipped.
+#
+# This is for lettering that is real but not worth a group. It is NOT for
+# suppressing a finding you have not looked at: the audit prints how many
+# entries it ignored on every run, so the count stays visible.
+#
+# Do not "fix" a finding by editing a page's visible_text instead. That field
+# records what is actually printed on the page and is true as it stands; an
+# ignore belongs here, where it carries a reason.
+
+# Wartime public-service filler, printed in the margins rather than drawn into
+# a story panel. Real lettering, but not story content and not worth a box.
+BUY WAR SAVINGS BONDS AND STAMPS
+HELP KEEP AMERICA STRONG

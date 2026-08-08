@@ -48,6 +48,8 @@ from barks_ocr.utils.vision_schema import TYPE_KEY, VISIBLE_TEXT_KEY
 CAPTURE_FILE_SUFFIX = "-page-capture.json"
 CAPTURE_MODEL_KEY = "capture_model"
 TITLE_TYPE = "title"
+IGNORE_FILE = Path(__file__).with_name("missed-text-ignore.txt")
+SCOPED_ENTRY_FIELDS = 3  # volume, page, and the lettering itself
 
 # title, volume, fanta_page, lettering, engines that grouped it (empty = neither)
 Finding = tuple[str, int, str, str, list[OcrTypes]]
@@ -61,6 +63,38 @@ def normalize(text: str | None) -> str:
     differences mean the lettering was missed.
     """
     return re.sub(r"[^A-Z0-9]", "", strip_markup(unescape_markup(text or "")).upper())
+
+
+def load_ignores() -> set[tuple[int | None, str | None, str]]:
+    """Read the ignore list as (volume, page, normalized lettering) entries.
+
+    A bare line ignores the lettering wherever it appears; a line led by two
+    integers scopes it to one page. Volume and page are None for a bare entry.
+    """
+    if not IGNORE_FILE.is_file():
+        return set()
+    entries: set[tuple[int | None, str | None, str]] = set()
+    for raw_line in IGNORE_FILE.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = line.split(maxsplit=2)
+        scoped = len(parts) == SCOPED_ENTRY_FIELDS and parts[0].isdigit() and parts[1].isdigit()
+        if scoped:
+            entries.add((int(parts[0]), parts[1], normalize(parts[2])))
+        else:
+            entries.add((None, None, normalize(line)))
+    return {e for e in entries if e[2]}
+
+
+def ignored(entries: set[tuple[int | None, str | None, str]], finding: Finding) -> bool:
+    """Whether the ignore list covers this finding."""
+    _, volume, page, item, _ = finding
+    needle = normalize(item)
+    return any(
+        needle == text and (vol is None or (vol == volume and pg == page))
+        for vol, pg, text in entries
+    )
 
 
 def covers(needle: str, grouped: set[str]) -> bool:
@@ -154,13 +188,16 @@ def audit_title(
     return findings, pages_checked, suppressed
 
 
-def report(findings: list[Finding], pages: int, suppressed: int) -> None:
+def report(findings: list[Finding], pages: int, suppressed: int, ignores: int) -> None:
     """Print the sweep result, worst class first."""
     neither = [f for f in findings if not f[4]]
     one_only = [f for f in findings if f[4]]
 
     print(f"Swept {pages} vision-passed page(s) carrying {VISIBLE_TEXT_KEY}.")
-    print(f"Suppressed {suppressed} story-logo echo(es) on pages that carry no logo.\n")
+    print(f"Suppressed {suppressed} story-logo echo(es) on pages that carry no logo.")
+    # Never silent: an ignore list that hides its own size is a way to stop
+    # seeing a problem rather than a way to record a decision about it.
+    print(f"Ignored {ignores} finding(s) listed in {IGNORE_FILE.name}.\n")
 
     print(f"=== grouped by NEITHER engine: {len(neither)} ===")
     for title_str, volume, page, item, _ in neither:
@@ -212,9 +249,12 @@ def main() -> None:
         pages += checked
         suppressed += dropped
 
-    report(findings, pages, suppressed)
+    ignores = load_ignores()
+    kept = [f for f in findings if not ignored(ignores, f)]
+
+    report(kept, pages, suppressed, len(findings) - len(kept))
     if csv_out:
-        write_csv(findings, csv_out)
+        write_csv(kept, csv_out)
 
 
 if __name__ == "__main__":
