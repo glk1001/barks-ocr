@@ -52,13 +52,19 @@ from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_utils import get_backup_file
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM_DIR
+from barks_fantagraphics.panel_boxes import TitlePanelBoxes
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from barks_fantagraphics.speech_markup import strip_markup, validate_markup
 from loguru import logger
 
 from barks_ocr.tools.vision_mirror import MirrorReport, mirror_title
+from barks_ocr.tools.vision_prep import CROP_PAD_PX
 from barks_ocr.utils.story_cast import story_characters
 from barks_ocr.utils.vision_schema import (
+    ADDED_AI_TEXT_KEY,
+    ADDED_GROUP_MAX_OVERLAP,
+    ADDED_PANEL_KEY,
+    ADDED_TEXT_BOX_KEY,
     BEATS_KEY,
     CAP_COLOUR_KEY,
     CAP_COLOUR_SET,
@@ -80,6 +86,7 @@ from barks_ocr.utils.vision_schema import (
     OBJECTS_KEY,
     OTHER_PREFIX,
     PANELS_OF_NOTE_KEY,
+    RESULT_ADDED_GROUPS_KEY,
     RESULT_CAPTURE_KEY,
     RESULT_CORRECTED_TEXT_KEY,
     RESULT_GROUPS_KEY,
@@ -97,6 +104,7 @@ from barks_ocr.utils.vision_schema import (
     TYPE_REVIEWED_KEY,
     TYPE_WAS_KEY,
     VISIBLE_TEXT_KEY,
+    VISION_ADDED_KEY,
     VISION_CORRECTED_TEXT_KEY,
     VISION_NOTE_KEY,
     VISION_SPEAKER_ISSUE,
@@ -267,6 +275,183 @@ def _validate_group(  # noqa: PLR0913
     if not entry.get(RESULT_TEXT_OK_KEY) and not entry.get(RESULT_CORRECTED_TEXT_KEY):
         errors.append(f"{where}: text_ok is false but no corrected_text was supplied.")
     del gid
+
+
+BOX_CORNERS = 4  # x0, y0, x1, y1
+
+
+@dataclass(frozen=True)
+class _AdditionContext:
+    """What placing one page's additions needs to know about that page."""
+
+    page: str
+    title: Any
+    title_str: str
+    json_groups: dict
+    cast: frozenset[str]
+
+
+@dataclass(frozen=True)
+class _PlacedAdditions:
+    """One page's additions, placed on the art and ready to write to both engines."""
+
+    entries: list[tuple[dict, list[list[int]]]]
+    other_page_group: Any
+
+
+def _place_entries(
+    added: list,
+    page_boxes: Any,  # noqa: ANN401
+    json_groups: dict,
+    where: str,
+    errors: list[str],
+) -> list[tuple[dict, list[list[int]]]]:
+    """Convert each entry's panel box to full-page corners, dropping the refused ones."""
+    placed: list[tuple[dict, list[list[int]]]] = []
+    for index, entry in enumerate(added):
+        if not isinstance(entry, dict):
+            continue  # already reported by the schema pass
+        corners = _check_added_geometry(entry, page_boxes, json_groups, f"{where}[{index}]", errors)
+        if corners is not None:
+            placed.append((entry, corners))
+    return placed
+
+
+def _resolve_additions(  # noqa: PLR0911, PLR0913 -- each return is a distinct refusal
+    context: _AdditionContext,
+    added: Any,  # noqa: ANN401
+    speech_groups: SpeechGroups,
+    comics_database: ComicsDatabase,
+    engine: OcrTypes,
+    panel_boxes: dict[str, Any],
+    errors: list[str],
+) -> _PlacedAdditions | None:
+    """Validate and place one page's ``added_groups``, or None if it has none.
+
+    Everything here runs before a byte is written, so a box in the wrong frame
+    or a duplicate of an existing group costs a message rather than a bad group
+    that someone has to find later.
+    """
+    page = context.page
+    if added is not None and not isinstance(added, list):
+        errors.append(
+            f"page {page}: {RESULT_ADDED_GROUPS_KEY} must be a list, got"
+            f" {type(added).__name__}. Omit the key when there is nothing to add."
+        )
+        return None
+    if not added:
+        return None
+
+    where = f"page {page} {RESULT_ADDED_GROUPS_KEY}"
+    before_count = len(errors)
+    for index, entry in enumerate(added):
+        _validate_added_group(entry, f"{where}[{index}]", errors, context.cast)
+    # Only worth loading the title's panel geometry once something needs placing,
+    # and only for entries already known to be well formed -- geometry errors on
+    # a malformed entry are noise on top of the real complaint.
+    if len(errors) != before_count:
+        return None
+
+    if context.title_str not in panel_boxes:
+        panel_boxes[context.title_str] = TitlePanelBoxes(comics_database).get_page_panel_boxes(
+            context.title
+        )
+    page_boxes = panel_boxes[context.title_str].pages.get(page)
+    if page_boxes is None:
+        errors.append(f"page {page}: no panel boxes for this page, so nothing can be placed.")
+        return None
+
+    entries = _place_entries(added, page_boxes, context.json_groups, where, errors)
+    if not entries:
+        return None
+
+    # A group missing on one engine is precisely what the mirror cannot repair,
+    # so both sides have to exist before anything is added to either.
+    other = [
+        pg
+        for pg in speech_groups.get_speech_page_groups(context.title, skip_missing=True)
+        if pg.ocr_index != engine and pg.fanta_page == page
+    ]
+    if not other:
+        errors.append(
+            f"page {page}: an added group goes on both engines, and this page has"
+            " no groups for the other one."
+        )
+        return None
+    return _PlacedAdditions(entries, other[0])
+
+
+@dataclass(frozen=True)
+class Resolved:
+    """What resolving a run's pages produced, before anything is written.
+
+    ``other_page_groups`` and ``additions`` are keyed only by the pages that add
+    a group, which on most runs is none of them.
+    """
+
+    page_groups: dict[str, Any]
+    other_page_groups: dict[str, Any]
+    additions: dict[str, list[tuple[dict, list[list[int]]]]]
+    errors: list[str]
+
+
+def _validate_added_group(
+    entry: Any,  # noqa: ANN401
+    where: str,
+    errors: list[str],
+    cast: frozenset[str] = frozenset(),
+) -> None:
+    """Validate one ``added_groups`` entry, before any panel geometry is loaded.
+
+    Everything here is checkable from the result alone. Whether the box actually
+    falls inside the panel, and whether it duplicates a group the page already
+    has, needs the title's panel boxes and is checked at insertion.
+
+    Stricter than a normal group in two places, both because there is no stored
+    value to fall back on: ``type`` is required rather than optional, and
+    ``text_ok`` must be true -- the lettering is being transcribed from the art
+    here, so there is nothing for it to disagree with.
+    """
+    if not isinstance(entry, dict):
+        errors.append(f"{where}: entry must be an object, got {type(entry).__name__}.")
+        return
+
+    panel = entry.get(ADDED_PANEL_KEY)
+    if not isinstance(panel, int) or isinstance(panel, bool) or panel <= 0:
+        errors.append(f"{where}: {ADDED_PANEL_KEY} must be a positive panel number, got {panel!r}.")
+
+    box = entry.get(ADDED_TEXT_BOX_KEY)
+    if (
+        not isinstance(box, list)
+        or len(box) != BOX_CORNERS
+        or not all(isinstance(v, int) and not isinstance(v, bool) for v in box)
+    ):
+        errors.append(
+            f"{where}: {ADDED_TEXT_BOX_KEY} must be [x0, y0, x1, y1] in the panel's own"
+            f" coordinates, got {box!r}."
+        )
+    elif box[0] >= box[2] or box[1] >= box[3]:
+        errors.append(f"{where}: {ADDED_TEXT_BOX_KEY} {box!r} is empty or inverted.")
+
+    text = entry.get(ADDED_AI_TEXT_KEY)
+    if not isinstance(text, str) or not text.strip():
+        errors.append(f"{where}: {ADDED_AI_TEXT_KEY} must be the lettering as drawn, got {text!r}.")
+
+    group_type = entry.get(TYPE_KEY)
+    if not isinstance(group_type, str) or group_type not in GROUP_TYPES:
+        errors.append(
+            f"{where}: {TYPE_KEY} {group_type!r} is not one of {sorted(GROUP_TYPES)}."
+            " An added group must say which kind it is; there is no stored value here."
+        )
+
+    _check_speaker(entry.get(SPEAKER_KEY), where, errors, cast)
+    if entry.get(SPEAKER_CONFIDENCE_KEY) not in CONFIDENCES:
+        errors.append(f"{where}: {SPEAKER_CONFIDENCE_KEY} must be one of {sorted(CONFIDENCES)}.")
+    if entry.get(RESULT_TEXT_OK_KEY) is not True:
+        errors.append(
+            f"{where}: {RESULT_TEXT_OK_KEY} must be true on an added group -- the text is"
+            " being read off the art here, so there is nothing to disagree with."
+        )
 
 
 def _check_group_type(value: Any, where: str, errors: list[str]) -> None:  # noqa: ANN401
@@ -827,6 +1012,183 @@ def _apply_type(group: dict, entry: dict) -> int:
     return 1
 
 
+def _panel_bounds(page_boxes: Any, panel_num: int) -> tuple[int, int, int, int] | None:  # noqa: ANN401
+    """Full-page (x0, y0, x1, y1) of a panel, or None if the page has no such panel."""
+    for box in page_boxes.panel_boxes:
+        if box.panel_num == panel_num:
+            return (box.x0, box.y0, box.x0 + box.w, box.y0 + box.h)
+    return None
+
+
+def _to_full_page(panel_box: list[int], bounds: tuple[int, int, int, int]) -> list[list[int]]:
+    """Convert a panel-local [x0, y0, x1, y1] to full-page corner points.
+
+    The panel PNG the pass measured against starts at ``(x0 - pad, y0 - pad)`` in
+    full-page coordinates, not at the panel's own corner -- ``vision_prep`` crops
+    with ``CROP_PAD_PX`` of margin so a box drawn right at the edge is still
+    visible. Getting this offset wrong shifts every added box by the pad, which
+    is small enough to look plausible and be missed.
+    """
+    origin_x, origin_y = bounds[0] - CROP_PAD_PX, bounds[1] - CROP_PAD_PX
+    x0, y0, x1, y1 = (
+        panel_box[0] + origin_x,
+        panel_box[1] + origin_y,
+        panel_box[2] + origin_x,
+        panel_box[3] + origin_y,
+    )
+    return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
+
+
+def _extent(corners: list[list[int]]) -> tuple[int, int, int, int]:
+    """Bounding box of a group's corner points."""
+    xs = [p[0] for p in corners]
+    ys = [p[1] for p in corners]
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def _covered_fraction(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> float:
+    """Overlap as a fraction of the smaller box.
+
+    Not IoU: the question is "is this lettering already covered", and a small
+    box sitting entirely inside a large one is fully covered while scoring a
+    low IoU.
+    """
+    ix0, iy0 = max(a[0], b[0]), max(a[1], b[1])
+    ix1, iy1 = min(a[2], b[2]), min(a[3], b[3])
+    if ix1 <= ix0 or iy1 <= iy0:
+        return 0.0
+    intersection = (ix1 - ix0) * (iy1 - iy0)
+    smaller = min((a[2] - a[0]) * (a[3] - a[1]), (b[2] - b[0]) * (b[3] - b[1]))
+    return intersection / smaller if smaller else 0.0
+
+
+def _check_added_geometry(
+    entry: dict,
+    page_boxes: Any,  # noqa: ANN401
+    json_groups: dict,
+    where: str,
+    errors: list[str],
+) -> list[list[int]] | None:
+    """Place an addition on the page, or explain why it cannot go there.
+
+    Returns the full-page corner points, or None when it was refused. Both
+    checks need data the schema pass does not have -- the title's panel boxes,
+    and what the page already carries -- but they still run before anything is
+    written, so a bad box costs a message rather than a bad group.
+    """
+    panel_num = entry[ADDED_PANEL_KEY]
+    bounds = _panel_bounds(page_boxes, panel_num)
+    if bounds is None:
+        have = sorted(box.panel_num for box in page_boxes.panel_boxes)
+        errors.append(f"{where}: no panel {panel_num} on this page; it has {have}.")
+        return None
+
+    corners = _to_full_page(entry[ADDED_TEXT_BOX_KEY], bounds)
+    extent = _extent(corners)
+    if not (
+        bounds[0] <= extent[0]
+        and bounds[1] <= extent[1]
+        and extent[2] <= bounds[2]
+        and extent[3] <= bounds[3]
+    ):
+        errors.append(
+            f"{where}: {ADDED_TEXT_BOX_KEY} {entry[ADDED_TEXT_BOX_KEY]} lands at"
+            f" {extent} in full-page coordinates, outside panel {panel_num} {bounds}."
+            " The box is measured in the panel crop's own frame, not the page's."
+        )
+        return None
+
+    for gid, group in json_groups.items():
+        stored = group.get("text_box")
+        if not stored:
+            continue
+        overlap = _covered_fraction(extent, _extent(stored))
+        if overlap > ADDED_GROUP_MAX_OVERLAP:
+            errors.append(
+                f"{where}: overlaps existing group {gid} by {overlap:.0%}"
+                f" ({group.get('ai_text', '')[:40]!r}). That is a correction to that"
+                " group, not lettering nobody grouped."
+            )
+            return None
+    return corners
+
+
+def _added_group(entry: dict, corners: list[list[int]]) -> dict:
+    """Build the stored group for an addition.
+
+    Deliberately not marked reviewed: it reaches the reviewer through the
+    ordinary unreviewed queue like any other group. `panel_id` is written as the
+    panel number because the corpus has no consistent rule for it -- some pages
+    are 0-based, some 1-based -- and nothing in this pipeline reads it.
+    """
+    return {
+        "panel_id": str(entry[ADDED_PANEL_KEY]),
+        "panel_num": entry[ADDED_PANEL_KEY],
+        "text_box": corners,
+        "ocr_text": "",
+        "ai_text": entry[ADDED_AI_TEXT_KEY],
+        "type": entry[TYPE_KEY],
+        "style": "normal",
+        "notes": "",
+        "cleaned_box_texts": {},
+        SPEAKER_KEY: entry.get(SPEAKER_KEY),
+        SPEAKER_CONFIDENCE_KEY: entry.get(SPEAKER_CONFIDENCE_KEY),
+        "cap_colour": entry.get("cap_colour"),
+        VISION_NOTE_KEY: entry.get(RESULT_NOTE_KEY),
+        VISION_TEXT_OK_KEY: True,
+        VISION_ADDED_KEY: True,
+    }
+
+
+def _insert_added_groups(
+    page_group: Any,  # noqa: ANN401
+    additions: list[tuple[dict, list[list[int]]]],
+    *,
+    dry_run: bool,
+) -> int:
+    """Append this page's additions to one engine and settle the numbering.
+
+    Appended at ``max(id) + 1`` and then renumbered once, here, while nothing
+    yet refers to an id. Doing it later is what invalidated stored ids on
+    2026-08-08; see ``docs/missed-text.md``.
+    """
+    if not additions:
+        return 0
+    json_groups = page_group.speech_page_json.setdefault("groups", {})
+    before = json.dumps(page_group.speech_page_json, indent=4)
+
+    for entry, corners in additions:
+        new_id = str(max((int(k) for k in json_groups), default=-1) + 1)
+        json_groups[new_id] = _added_group(entry, corners)
+    page_group.renumber_groups()
+
+    if not dry_run:
+        ocr_file = page_group.ocr_prelim_groups_json_file
+        _groups_written(page_group, ocr_file, before)
+    return len(additions)
+
+
+def _add_missing_groups(
+    resolved: "Resolved",
+    page_groups: dict[str, Any],
+    *,
+    dry_run: bool,
+) -> None:
+    """Add every page's new groups, to both engines, and say how many.
+
+    Runs before the annotation pass so the ids are settled before anything reads
+    one, and covers both engines because the mirror can copy fields onto a group
+    but cannot bring one into existence.
+    """
+    added = 0
+    for page, entries in resolved.additions.items():
+        added += _insert_added_groups(page_groups[page], entries, dry_run=dry_run)
+        _insert_added_groups(resolved.other_page_groups[page], entries, dry_run=dry_run)
+    if added:
+        verb = "Would add" if dry_run else "Added"
+        print(f"{verb} {added} group(s) for lettering neither engine had grouped.")
+
+
 def _apply_page(
     page_group: Any,  # noqa: ANN401
     result: dict,
@@ -1064,15 +1426,22 @@ def _missing_capture_errors(results: list[tuple[str, dict]], out_dir: Path) -> l
 def _resolve_and_validate(
     results: list[tuple[str, dict]],
     speech_groups: SpeechGroups,
+    comics_database: ComicsDatabase,
     engine: OcrTypes,
     panel_nums_by_page: dict[str, list[int]],
-) -> tuple[dict[str, Any], list[str]]:
-    """Resolve every page's group data and validate its result. Returns (pages, errors)."""
+) -> Resolved:
+    """Resolve every page's group data and validate its result."""
     page_groups: dict[str, Any] = {}
+    # Only populated for pages that add a group: the other engine has to receive
+    # it too, since a group missing on one side is exactly what the mirror
+    # cannot fix -- it copies fields onto matched groups and never creates one.
+    other_page_groups: dict[str, Any] = {}
+    additions: dict[str, list[tuple[dict, list[list[int]]]]] = {}
     errors: list[str] = []
-    # Cached per title: the tag lookup walks every character group, and a run is
-    # usually one story, so recomputing it per page would be pure waste.
+    # Both cached per title: the tag lookup walks every character group and the
+    # panel boxes read the segmentation, and a run is usually one story.
     casts: dict[str, frozenset[str]] = {}
+    panel_boxes: dict[str, Any] = {}
 
     for page, result in results:
         title_str = result[RESULT_TITLE_KEY]
@@ -1100,6 +1469,19 @@ def _resolve_and_validate(
                 gid, entry, json_groups[gid].get("ai_text") or "", where, errors, casts[title_str]
             )
 
+        placed = _resolve_additions(
+            _AdditionContext(page, title, title_str, json_groups, casts[title_str]),
+            result.get(RESULT_ADDED_GROUPS_KEY),
+            speech_groups,
+            comics_database,
+            engine,
+            panel_boxes,
+            errors,
+        )
+        if placed is not None:
+            additions[page] = placed.entries
+            other_page_groups[page] = placed.other_page_group
+
         capture = result.get(RESULT_CAPTURE_KEY)
         if capture is not None:
             _validate_capture(
@@ -1109,7 +1491,7 @@ def _resolve_and_validate(
                 f"page {page} capture",
                 errors,
             )
-    return page_groups, errors
+    return Resolved(page_groups, other_page_groups, additions, errors)
 
 
 def _mirror_to_other_engine(
@@ -1200,7 +1582,8 @@ def main(  # noqa: PLR0913
     if structural := _structure_errors(results):
         _report_and_exit(structural)
 
-    speech_groups = SpeechGroups(ComicsDatabase())
+    comics_database = ComicsDatabase()
+    speech_groups = SpeechGroups(comics_database)
 
     normalized = _normalize_results(results)
     if normalized:
@@ -1210,12 +1593,18 @@ def main(  # noqa: PLR0913
     panel_nums_by_page = {
         entry["fanta_page"]: entry.get("panel_nums") or [] for entry in queue["pages"]
     }
-    page_groups, errors = _resolve_and_validate(results, speech_groups, engine, panel_nums_by_page)
+    resolved = _resolve_and_validate(
+        results, speech_groups, comics_database, engine, panel_nums_by_page
+    )
+    page_groups = resolved.page_groups
+    errors = resolved.errors
     if not no_capture:
         errors += _missing_capture_errors(results, out_dir)
 
     if errors:
         _report_and_exit(errors)
+
+    _add_missing_groups(resolved, page_groups, dry_run=dry_run)
 
     text_lines: list[str] = []
     speaker_lines: list[str] = []

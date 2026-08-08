@@ -96,7 +96,7 @@ where it carries a reason.
 noticed is invisible to it, so the count is a floor, not a total. Closing that
 gap is what the rest of this document is for.
 
-## Proposal: let the pass add the group
+## The pass can add the group — built 2026-08-08
 
 ### Where it goes, and why that is the whole design
 
@@ -178,30 +178,47 @@ The tool already knows every panel's origin from the data `dump_boxes.py` writes
 A wrong box is worse than no group: it anchors searchable text to the wrong place
 and reads as authoritative.
 
-### What `vision_apply` should enforce
+### What `vision_apply` enforces
 
+All of it before a byte is written, so a bad entry costs a message rather than a
+group somebody has to find later:
+
+- the entry is well formed, `type` is given (there is no stored value to fall
+  back on) and `text_ok` is true (the text is being read off the art, so there
+  is nothing to disagree with)
 - the panel exists on that page, and the box lies inside its bounds
-- the box does not overlap an existing group above a threshold — that is a
-  duplicate, not a miss
-- write to **both** engines: a miss is nearly always a miss on both
-- append at `max(id) + 1`, then renumber immediately, once
-- never set `speaker_reviewed`, so it reaches the reviewer through
-  `--unreviewed` exactly like every other group
-- mark the group as pass-added — a reviewer looking at it should be able to see
-  it did not come from OCR
+- the box does not cover more than `ADDED_GROUP_MAX_OVERLAP` of an existing
+  group — that is a correction to that group, not a miss
+- both engines have the page, since a group missing on one side is precisely
+  what the mirror cannot repair: it copies fields onto matched groups and never
+  creates one
 
-### The part that is not plumbing
+Then it appends at `max(id) + 1` on both engines, renumbers each once, writes
+`vision_added: true`, and does **not** set `speaker_reviewed` — the group reaches
+the reviewer through the ordinary unreviewed queue like any other.
 
-The pass has to notice reliably, not incidentally. Today `visible_text` is
-filled in as conspicuous lettering catches the eye. Making it dependable means an
-explicit step in the read: for each panel, inventory every piece of lettering,
-then diff that against the groups supplied for the page.
+Proven end to end on 2026-08-08 against *The Mad Chemist*: a valid entry created
+the same group with the same id on both engines with the numbering settled, and
+the three refusals each reported and wrote nothing — a box given in full-page
+coordinates by mistake (caught by the panel-bounds check, which is exactly the
+mistake panel-local input exists to make impossible to commit silently), a box
+over an existing balloon (100% overlap), and a panel the page does not have.
+
+### The part that is not plumbing — still not built
+
+The pass can now add a group when it notices one. It still only notices
+incidentally: `visible_text` is filled in as conspicuous lettering catches the
+eye. Making it dependable means an explicit step in the read — for each panel,
+inventory every piece of lettering, then diff that against the groups supplied
+for the page.
 
 That is a real cost on every page, to catch something that ran about 2% of groups
-on *The Mad Chemist* and 12 items across 203 pages elsewhere. Worth deciding
-deliberately rather than by default — and worth noting that the misses skew
-toward signs and shop lettering, which is the searchable-content the capture
-layer exists to serve, rather than toward speech.
+on *The Mad Chemist* and 8 items across 203 pages elsewhere. Deliberately left
+undecided: the audit now runs on every title, so the evidence for whether the
+inventory earns its keep will accumulate on its own rather than being guessed at
+now. The misses skew toward signs and shop lettering — the searchable content the
+capture layer exists to serve — rather than toward speech, which is the argument
+in favour when the time comes.
 
 ## Related
 

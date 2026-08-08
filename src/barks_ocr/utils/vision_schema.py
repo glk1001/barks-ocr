@@ -375,6 +375,37 @@ RESULT_TEXT_OK_KEY = "text_ok"
 RESULT_CORRECTED_TEXT_KEY = "corrected_text"
 RESULT_NOTE_KEY = "note"
 
+# Lettering neither OCR engine grouped, which the pass can add as a new group.
+# Separate from `groups` because that key validates its ids against the page's
+# existing groups and these have none yet.
+#
+# The box is given in PANEL coordinates and converted by `vision_apply`. The
+# pass works in panel crops -- that is the frame it can see, and `panel-NN.png`
+# shares the `text_box` space -- so asking for full-page coordinates would be
+# asking for arithmetic it has no way to check. A wrong box is worse than no
+# group: it anchors searchable text to the wrong place and reads as authoritative.
+#
+# Groups added by hand after a review cost three separate faults on 2026-08-08
+# (ids renumbered under stored references, a group seeded from the one beside it
+# wearing its annotation, and Copy In carrying the seed's review flag so a wrong
+# call was signed off without anyone confirming it). At apply time none of that
+# state exists yet, which is the whole reason this lives here. See
+# `docs/missed-text.md`.
+RESULT_ADDED_GROUPS_KEY = "added_groups"
+ADDED_PANEL_KEY = "panel"
+ADDED_TEXT_BOX_KEY = "text_box_panel"
+ADDED_AI_TEXT_KEY = "ai_text"
+
+# Written on the group so a reviewer can see it did not come from OCR.
+VISION_ADDED_KEY = "vision_added"
+
+# Above this overlap with a group the page already has, an addition is a
+# duplicate rather than a miss. Deliberately low: two boxes over the same
+# lettering rarely agree closely, and the cost of refusing a real addition (a
+# message, then a nudged box) is far below the cost of a second group silently
+# covering text that is already covered.
+ADDED_GROUP_MAX_OVERLAP = 0.20
+
 # Keys of the per-page capture file, written beside the prelim JSON rather than
 # into it: `final_groups.py` copies only the `groups` key and would silently
 # drop a new top-level section.
@@ -711,6 +742,8 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
 
     """
     extra = sorted(set(story_characters) - ROSTER)
+    overlap_pct = int(ADDED_GROUP_MAX_OVERLAP * 100)
+    added_extras = f"{SPEAKER_CONFIDENCE_KEY}, {RESULT_TEXT_OK_KEY}, {RESULT_NOTE_KEY}"
     lines = [
         "# Vision pass vocabulary — generated from barks_ocr/utils/vision_schema.py.",
         "# `vision_apply` validates every result.json against exactly these values,",
@@ -726,6 +759,8 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "            strings, and must be ones the page's groups.json already has.",
         f"  {RESULT_CAPTURE_KEY}   the per-page record described at the end of this file.",
         "            Required unless the run is passed --no-capture.",
+        f"  {RESULT_ADDED_GROUPS_KEY}  OPTIONAL. Lettering on the page that no group covers,",
+        "                described below. Omit the key entirely when there is none.",
         "",
         "  Nothing else belongs at the top level, and the capture record takes only the",
         "  keys listed for it. In particular the page-capture.json stub in the page",
@@ -886,6 +921,33 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  and why a boy was NOT named where he might have been. This is the field a",
         "  reviewer reads when disagreeing, so write the evidence rather than the",
         "  conclusion: 'tail ends 40px above the red cap' beats 'clearly Huey'.",
+        "",
+        f"{RESULT_ADDED_GROUPS_KEY} — a LIST, for lettering on the page that no group covers.",
+        "  Neither engine found it, so it is not searchable, has no box, and reaches",
+        "  no review queue. Adding it here is the only way it becomes a group.",
+        "  Omit the key when there is none; an empty list is fine but says nothing.",
+        "",
+        "  Do NOT use this to correct a group that exists. If the lettering is already",
+        "  grouped and the words are wrong, that is `corrected_text` on that group; if",
+        "  the box is wrong, leave it and say so in `note`. An addition overlapping",
+        f"  an existing box by more than {overlap_pct}% is refused as a duplicate.",
+        "",
+        "  Each entry takes:",
+        f"    {ADDED_PANEL_KEY}          the panel number the lettering is drawn in.",
+        f"    {ADDED_TEXT_BOX_KEY}  [x0, y0, x1, y1] in PANEL coordinates -- the frame of",
+        "                   panel-NN.png, the same one you cropped to read it. NOT",
+        "                   full-page: the tool converts, so you never do that sum.",
+        "                   The box must lie inside the panel or the run is refused.",
+        f"    {ADDED_AI_TEXT_KEY}        the lettering, exactly as drawn.",
+        f"    {TYPE_KEY}           which kind, from the list above. Usually background",
+        "                   for a sign or a label, sound_effect for a noise.",
+        "    speaker        as above -- almost always `none` for this kind of",
+        "                   lettering, which is why it was missed in the first place.",
+        f"    {added_extras}   as for a normal group.",
+        "",
+        "  The group is written to BOTH engines, appended, and the page renumbered",
+        "  once so ids stay in reading order. It is never marked reviewed: it reaches",
+        "  the reviewer through the ordinary unreviewed queue, like anything else.",
         "",
         "Per page, in the page capture file:",
         "",
