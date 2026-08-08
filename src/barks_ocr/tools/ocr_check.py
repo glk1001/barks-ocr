@@ -1633,7 +1633,10 @@ def main(  # noqa: PLR0913
         default=False,
         help="Strip outer/trailing whitespace and collapse doubled spaces in ai_text.",
     ),
-    fix_dashes: bool = typer.Option(default=False, help="Rewrite '--' as an em-dash in ai_text."),
+    fix_dashes: bool = typer.Option(
+        default=False,
+        help="Rewrite '--' as an em-dash in ai_text, and space a dash off the word before it.",
+    ),
     force: bool = typer.Option(
         default=False,
         help="Run a --fix pass even with uncommitted prelim changes (they cannot be recovered).",

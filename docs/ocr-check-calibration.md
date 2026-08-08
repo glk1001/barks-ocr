@@ -212,15 +212,27 @@ tool still runs on a machine without the data repo.
 
 `--fix-whitespace` and `--fix-dashes` are the unattended ones — pure string
 cleanups with no judgement in them, unlike the wrapping fixes, which need
-cross-engine evidence. Two things learned building them:
+cross-engine evidence. Three things learned building them:
 
 - **The dash fixer converts hyphen *runs*, not pairs.** 70 of the 221 runs in the
   corpus are three hyphens or more, so a plain `--` swap turned `HOW ARE ---`
   into `HOW ARE —-`. Caught by running the fixer against the repo and reading
   `git diff` — which is the guard earning its keep on its first outing.
-- **61 of those runs touch a word**, so converting them leaves an em-dash that
-  `em_dash_spacing` then flags. That is intended: the transcription is now right
-  and only the spacing is open, which needs a human.
+- **The fixer also spaces a dash off the word before it.** This started as a
+  deliberate omission — 61 of the runs touch a word, and leaving them for
+  `em_dash_spacing` to flag was called intended. It was not: the AI writes
+  `WAY—` directly far more often than a hyphen run ever produced it, so the
+  same mechanical edit was reaching the queue 490 times with no fixer able to
+  make it (vol 4 page 048 group 4 is the case that surfaced it). The corpus
+  puts a break before the dash **10,699 to 490**, so the rewrite carries no
+  more judgement than the run conversion does.
+- **One following context is exempt.** A dash running straight into the next
+  word — `IN—AND HOW`, `INTERESTING—SIR` — is the corpus majority *without the
+  space*,
+  71 to 9, the only right-hand context where that is true. The fixer's
+  lookahead skips those 71; `em_dash_spacing` still flags them, and they stay
+  a hand edit. Spacing to the *right* of a dash is likewise untouched, so a
+  converted run can still come out flagged — that part really is intended.
 
 ## `MAX_FIX_PASSES = 5`
 

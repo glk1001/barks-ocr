@@ -85,6 +85,10 @@ _EM_DASH_BREAK_CHARS = frozenset({" ", "\n"})
 _EM_DASH_HUGGING_CHARS = frozenset({"!", "?", '"'})
 _ADRIFT_PUNCTUATION_RE = re.compile(r"\s+[!?]")
 _HYPHEN_RUN_RE = re.compile(r"-{2,}")
+# An em-dash that hugs the word before it, with a non-word character (or the
+# end of the text) after it. The lookahead is what spares the "IN—AND HOW"
+# form, which the corpus writes without the space 71 times to 9.
+_WORD_HUGGING_DASH_RE = re.compile(rf"(?<=\w){EM_DASH}(?!\w)")
 
 
 def _plain_text(group: dict) -> str:
@@ -207,17 +211,25 @@ def cleaned_whitespace(ai_text: str) -> str:
 
 
 def with_em_dashes(ai_text: str) -> str:
-    """Return ai_text with each run of two or more hyphens as a single em-dash.
+    """Return ai_text with hyphen runs as em-dashes, each spaced off the word before it.
 
     Runs, not pairs: the corpus has 221 of them and 70 are three hyphens or
     more, so a plain "--" swap would leave a stray hyphen behind.
 
-    61 of those runs touch a word on at least one side, so converting them
-    leaves an em-dash that ``has_em_dash_spacing_error`` will then flag. That is
-    the intended outcome — the transcription is now right and only the spacing
-    is in question, which needs a human.
+    The space is then restored in front of any dash that hugs the word before
+    it — the ones the run conversion just made ("HOW ARE--" → "HOW ARE —"), and
+    the 490 the AI wrote that way in the first place, which no fixer used to
+    reach. The corpus puts a break before the dash 10,699 times against 490, and
+    that holds in every following context except one: a dash running straight
+    into the next word ("IN—AND HOW") goes without the space 71 times to 9, so
+    ``_WORD_HUGGING_DASH_RE`` leaves that form alone for a human to judge.
+
+    Spacing on the *right* of the dash is still not touched, so a converted run
+    can come out of here and still be flagged by ``has_em_dash_spacing_error``.
+    That is the intended outcome — the transcription is now right and only the
+    remaining spacing is in question.
     """
-    return _HYPHEN_RUN_RE.sub(EM_DASH, ai_text)
+    return _WORD_HUGGING_DASH_RE.sub(f" {EM_DASH}", _HYPHEN_RUN_RE.sub(EM_DASH, ai_text))
 
 
 def _never_fires(group: dict) -> bool:
