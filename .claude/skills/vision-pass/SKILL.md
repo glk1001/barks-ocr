@@ -108,6 +108,7 @@ Text and type corrections, which have their own review state and their own tool:
 ```bash
 barks-ocr-vision-corrections --title "…"                       # what is outstanding
 barks-ocr-vision-corrections --title "…" -o <dir>/queue-corrections.txt
+barks-ocr-vision-corrections                                   # the WHOLE corpus
 ```
 
 Sort every queue by **volume, page, group (numeric), engine** — group is field 4,
@@ -121,6 +122,22 @@ all unless the audit is run and its result said out loud.
 for titles whose scratch directory is long gone. It covers **both engines** by
 default: `ai_text` is not mirrored — the two engines legitimately disagree about
 that field — so a text correction applied to one side leaves the other wrong.
+
+**Run it with no `--title` from time to time.** Per-title is what the sequence
+above asks for, and per-title only ever answers about the title in hand: a
+correction proposed by a pass and never confirmed is invisible until somebody
+thinks to ask about *that* title. On 2026-08-08 one straggler turned up while
+closing out an unrelated sweep; putting the same question to the whole corpus
+found **34**, across nine Vol. 1 and Vol. 2 titles, every one `thought ->
+dialogue`. They were almost certainly the batch lost before the one-key type
+confirm existed — a 52-entry review worked the old four-action way on 2026-08-07
+left nothing on disk.
+
+Two things that sweep also settled, worth not re-learning: a corpus run costs
+about a minute and reports `Nothing outstanding across 445 title(s)` when clean,
+so there is no reason to skip it. And do not generalise an engine bias from one
+title — the first sampled looked purely paddleocr, while the full 34 were 27
+paddleocr and 7 easyocr.
 
 **Never re-run `vision_apply` to regenerate a queue.** On a title carrying a
 review it is safe now, but the habit is what caused the clobber; `speaker-queue`
