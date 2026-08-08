@@ -30,7 +30,7 @@ from barks_ocr.utils.group_checks import (
     cleaned_whitespace,
     get_fired_dismissable_issues,
     is_acknowledged,
-    with_em_dashes,
+    with_dash_fixes,
 )
 from barks_ocr.utils.ocr_box import OcrBox, PointList
 
@@ -1207,6 +1207,11 @@ class OcrChecker:
         and "--" for an em-dash — which is why they can run unattended while the
         wrapping fixes need cross-engine evidence.
 
+        A group that has acknowledged the issue a fixer exists for is left
+        alone, exactly as the check leaves it alone. Otherwise the next --fix
+        run would quietly undo the dismissal the user made in the editor, and
+        the run after that would do it again.
+
         Groups carrying emphasis markup are skipped, like the line-pattern
         transplant skips them: the fixers edit the raw stored string, and
         rewriting around ``[b]``/``[i]`` tags is exactly the offset problem
@@ -1217,10 +1222,10 @@ class OcrChecker:
         for group_id, group in json_groups.items():
             before = group.get("ai_text") or ""
             after = before
-            if self._fixes.whitespace:
+            if self._fixes.whitespace and not is_acknowledged(group, "whitespace"):
                 after = cleaned_whitespace(after)
             if self._fixes.dashes:
-                after = with_em_dashes(after)
+                after = with_dash_fixes(after, group)
             if after == before:
                 continue
             if has_markup(before):
@@ -1635,7 +1640,7 @@ def main(  # noqa: PLR0913
     ),
     fix_dashes: bool = typer.Option(
         default=False,
-        help="Rewrite '--' as an em-dash in ai_text, and space a dash off the word before it.",
+        help="Rewrite '--' as an em-dash in ai_text and normalize the spacing around it.",
     ),
     force: bool = typer.Option(
         default=False,

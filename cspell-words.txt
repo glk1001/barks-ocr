@@ -91,6 +91,7 @@ scancode
 scrollview
 socr
 spkr
+sput
 srce
 stubhead
 sysfs

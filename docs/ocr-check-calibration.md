@@ -226,13 +226,71 @@ cross-engine evidence. Three things learned building them:
   make it (vol 4 page 048 group 4 is the case that surfaced it). The corpus
   puts a break before the dash **10,699 to 490**, so the rewrite carries no
   more judgement than the run conversion does.
-- **One following context is exempt.** A dash running straight into the next
-  word — `IN—AND HOW`, `INTERESTING—SIR` — is the corpus majority *without the
-  space*,
-  71 to 9, the only right-hand context where that is true. The fixer's
-  lookahead skips those 71; `em_dash_spacing` still flags them, and they stay
-  a hand edit. Spacing to the *right* of a dash is likewise untouched, so a
-  converted run can still come out flagged — that part really is intended.
+- **Carve-outs in a fixer are a bug, not a nicety.** The first version of the
+  spacing rewrite exempted the closed-up `IN—AND HOW` form behind a lookahead
+  and left the right-hand side of the dash alone entirely, on the grounds that
+  `em_dash_spacing` would flag what was left and a human would judge it. That
+  reasoning does not survive contact with the numbers: **158 groups came out of
+  `--fix-dashes` still flagged**, and not one of them needed judgement — they
+  needed a rule. The exemption's own evidence, a 71-to-9 corpus count for the
+  closed form, was measuring the AI's habit rather than the art, which is
+  exactly the objection that had already retired the identical argument for the
+  490 `WAY—` cases.
+
+So `--fix-dashes` now enforces one rule end to end, the same one
+`has_em_dash_spacing_error` tests: **an em-dash takes a break — space, line
+break or text edge — on its left, and a break, a text edge, or its own hugging
+punctuation on its right.** Four ordered rewrites in `with_dash_fixes` get there,
+and they are idempotent, so the fix loop converges on the first pass. Corpus
+counts for each class it now settles:
+
+| Class | Occurrences | Handling |
+|---|---|---|
+| `HOW ARE ---` hyphen runs | 221 | converted to one dash |
+| `WAY—`, dash hugging the word before it | 490 | space inserted (break-before wins 10,699 to 490) |
+| `IN—AND HOW`, dash closed between two words | 67 | spaced both sides |
+| `CAME ASHORE — !`, punctuation adrift by a space | 30 | pulled back to `—!` |
+| `'EXPECT'— AIR`, dash hugging closing punctuation | 7 | space inserted |
+| `WHAT'S THIS —FLY SPRAY?`, space left but not right | 7 | space inserted |
+
+Two classes are settled in the *check* instead, because no edit would improve
+them: `AD INFINITUM —)` and `GREAT SECRET —'` join the hugging set (3 cases —
+spacing a dash off a closing paren would be worse), and punctuation adrift
+across a *line break*, `WELL, I'LL BE —\n!!!`, stops being flagged at all (8
+cases — that is the art's wrapping, and closing it up would merge two lines that
+the line-fit checks measure).
+
+- **One class is left flagged on purpose.** The doubled dash `——` — `MINIE MO
+  ——`, `ME —— AND WITHOUT` — 34 occurrences over 16 page/group spots. Collapsing
+  it to a single dash would be defensible by analogy with the hyphen run, and
+  was declined: it is a reading of the lettering, not a spacing convention. The
+  left-hand rewrite excludes `EM_DASH` from its lookbehind precisely so the
+  fixer cannot quietly turn `——` into `— —` on its way past.
+
+### An acknowledged group is off limits to its fixer
+
+A fixer runs on the same groups its check reports, which has to include *not*
+running on a group the reviewer has dismissed. Otherwise the next `--fix` pass
+silently reinstates the very edit the dismissal rejected, and the pass after
+that does it again — the acknowledgement becomes unusable against anything a
+fixer can write. `with_dash_fixes` therefore returns its input untouched when
+the group acknowledges `em_dash_spacing` or `double_hyphen` (old
+`dash_wrong_space`/`dash_no_spaces` names included), and `--fix-whitespace`
+skips a group acknowledging `whitespace`. Corpus: **117 groups** carry a dash
+acknowledgement, 45 of them still breaching the rule and correctly silent.
+
+It is all-or-nothing per group, not per rewrite. Vol 7 page 135 group 6 settled
+that: the reviewer accepted `dash_wrong_space` and hand-restored `SPUT! — --`,
+and gating each rewrite on its own check would have re-run the hyphen-run
+conversion — `double_hyphen` not being acknowledged there — putting `— —`
+straight back. A group that has been looked at once is finished with the
+machine.
+
+**This was found the hard way.** The first run of the widened fixer rewrote
+**23 already-acknowledged groups** across vols 1, 2 and 17 before the gate
+existed, including `AND IF WE\nWIN — ?` → `WIN —?`, dismissed years earlier
+under the old name. They were restored from `HEAD`; the guard that made it
+recoverable was, again, running against a clean repo and reading `git diff`.
 
 ## `MAX_FIX_PASSES = 5`
 

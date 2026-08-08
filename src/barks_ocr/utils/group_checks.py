@@ -80,15 +80,23 @@ EM_DASH = "—"
 # counts, so the wrapped and interrupted forms both pass.
 _EM_DASH_BREAK_CHARS = frozenset({" ", "\n"})
 # What may hug the dash on its right: the punctuation ending an interrupted
-# utterance ("BUT —!") and the closing quote when interrupted speech ends a
-# quotation ('GET SICK —"').
-_EM_DASH_HUGGING_CHARS = frozenset({"!", "?", '"'})
-_ADRIFT_PUNCTUATION_RE = re.compile(r"\s+[!?]")
+# utterance ("BUT —!"), and the closing quote, apostrophe or paren when the
+# interruption ends a quotation or an aside ('GET SICK —"', "AD INFINITUM —)").
+_EM_DASH_HUGGING_CHARS = frozenset({"!", "?", '"', ")", "'"})
+# A *space* between the dash and its punctuation is a slip; a line break is not.
+# "WELL, I'LL BE —\n!!!" is the art's own wrapping, 8 times in the corpus, and
+# joining the lines to satisfy the rule would edit what the transcription saw.
+_ADRIFT_PUNCTUATION_RE = re.compile(r" +[!?]")
 _HYPHEN_RUN_RE = re.compile(r"-{2,}")
-# An em-dash that hugs the word before it, with a non-word character (or the
-# end of the text) after it. The lookahead is what spares the "IN—AND HOW"
-# form, which the corpus writes without the space 71 times to 9.
-_WORD_HUGGING_DASH_RE = re.compile(rf"(?<=\w){EM_DASH}(?!\w)")
+# The three rewrites that make ``with_dash_fixes`` output text
+# ``has_em_dash_spacing_error`` accepts. The left-hand one takes any non-break
+# character, EM_DASH excepted so that "——" is never split into "— —" — the
+# doubled dash is the one class left for a human.
+_ADRIFT_HUGGING_RE = re.compile(rf"{EM_DASH} +(?=[!?])")
+_LEFT_HUGGING_DASH_RE = re.compile(rf"(?<=[^\s{EM_DASH}]){EM_DASH}")
+_RIGHT_HUGGING_DASH_RE = re.compile(rf"{EM_DASH}(?=\w)")
+# The checks whose acknowledgement silences the whole dash fixer for a group.
+_DASH_ISSUES: tuple[str, ...] = ("em_dash_spacing", "double_hyphen")
 
 
 def _plain_text(group: dict) -> str:
@@ -132,15 +140,23 @@ def has_em_dash_spacing_error(group: dict) -> bool:
 
     An em-dash needs a space, a line break or a text edge before it. After
     it: one of those, the end of the text, or the punctuation of an
-    interrupted utterance hugging it — "BUT —!", "WHAT IS YOUR —?", and the
-    closing quote in 'GET SICK —"'. What it may not do is drift away from
-    that punctuation ("WHAT GEEFS — ?"): standard typography binds the dash
-    and its punctuation as one unit, so the space is a transcription slip.
+    interrupted utterance hugging it — "BUT —!", "WHAT IS YOUR —?", the
+    closing quote in 'GET SICK —"', and the closing apostrophe or paren in
+    "AD INFINITUM —)". What it may not do is drift away from that punctuation
+    by a space ("WHAT GEEFS — ?"): standard typography binds the dash and its
+    punctuation as one unit, so the space is a transcription slip. A *line
+    break* between them is not — that is the art's own wrapping.
 
     Settled 2026-08-03 after a brief flip to requiring the space, reverted
     the same day against typographic convention and the art (the reviewed
     vols 1-18 hug 80 to 16). The quote exception is the one change kept from
     that episode — the original rule wrongly flagged all 30 corpus cases.
+
+    Widened 2026-08-08 so that ``with_dash_fixes`` can satisfy it outright:
+    ``)`` and ``'`` joined the hugging set (3 corpus cases with no sensible
+    fix — spacing them would be worse), and the adrift rule narrowed from any
+    whitespace to spaces only. What remains flagged with no fixer behind it is
+    the doubled dash "——", 34 occurrences over 16 spots, kept as a hand edit.
     """
     ai_text = _plain_text(group)
     for match in re.finditer(EM_DASH, ai_text):
@@ -210,26 +226,60 @@ def cleaned_whitespace(ai_text: str) -> str:
     return "\n".join(lines).strip()
 
 
-def with_em_dashes(ai_text: str) -> str:
-    """Return ai_text with hyphen runs as em-dashes, each spaced off the word before it.
+def with_dash_fixes(ai_text: str, group: dict) -> str:
+    """Return ai_text with the dash rewrites *group* has not dismissed.
 
-    Runs, not pairs: the corpus has 221 of them and 70 are three hyphens or
-    more, so a plain "--" swap would leave a stray hyphen behind.
+    The rule is the one ``has_em_dash_spacing_error`` enforces: a break (space,
+    line break or text edge) on the dash's left, and a break, a text edge, or
+    its own hugging punctuation on its right. Everything here is a mechanical
+    step towards that, so the output passes the check — the sole exception is
+    the doubled dash "——", which is left alone deliberately.
 
-    The space is then restored in front of any dash that hugs the word before
-    it — the ones the run conversion just made ("HOW ARE--" → "HOW ARE —"), and
-    the 490 the AI wrote that way in the first place, which no fixer used to
-    reach. The corpus puts a break before the dash 10,699 times against 490, and
-    that holds in every following context except one: a dash running straight
-    into the next word ("IN—AND HOW") goes without the space 71 times to 9, so
-    ``_WORD_HUGGING_DASH_RE`` leaves that form alone for a human to judge.
+    A group that has accepted **either** dash issue is returned untouched, the
+    same way the checks stay quiet on it. Acknowledging one but not the other
+    is not a licence to apply the rest: vol 7 page 135 group 6 is the case that
+    settled it — the reviewer accepted ``dash_wrong_space`` and hand-restored
+    "SPUT! — --", and per-rewrite gating would have converted the hyphen run
+    straight back to "— —" on the next run, undoing that by a rule the reviewer
+    had just overruled. The old ``dash_wrong_space``/``dash_no_spaces`` names
+    count, since ``is_acknowledged`` honours them.
 
-    Spacing on the *right* of the dash is still not touched, so a converted run
-    can come out of here and still be flagged by ``has_em_dash_spacing_error``.
-    That is the intended outcome — the transcription is now right and only the
-    remaining spacing is in question.
+    What is left wrong in an accepted group stays reported — the checks are
+    dismissed per group, not per corpus — so nothing goes missing; it just
+    waits for a hand that has already looked at it once.
+
+    The text is passed separately from the group because the whitespace fixer
+    runs first and the two compose on one string; the group is read only for
+    its acknowledgements.
+
+    Four ordered rewrites:
+
+    1. Hyphen runs, not pairs: the corpus has 221 of them and 70 are three
+       hyphens or more, so a plain "--" swap would leave a stray hyphen behind.
+    2. Punctuation pulled back against the dash ("CAME ASHORE — !" → "—!").
+       Standard typography binds the two as one unit. This must run before the
+       left-hand spacing so "WAY— !" lands on "WAY —!", not "WAY — !".
+    3. A space in front of any dash hugging the character before it — the ones
+       step 1 just made ("HOW ARE--"), the 490 the AI wrote that way itself,
+       and the closing quote form ("'EXPECT'— AIR"). The corpus puts a break
+       before the dash 10,699 times against 490.
+    4. A space after any dash running straight into the next word ("IN—AND
+       HOW", "WHAT'S THIS —FLY SPRAY?").
+
+    Step 4 reverses a carve-out made on 2026-08-08, when the closed-up
+    "IN—AND HOW" form was spared on a 71-to-9 corpus count. That count measured
+    the AI's habit, not the art, and it left 67 occurrences flagged with no
+    fixer able to touch them; the same reasoning had already spaced the other
+    490. The result is idempotent, so the ``MAX_FIX_PASSES`` loop converges on
+    the first pass.
     """
-    return _WORD_HUGGING_DASH_RE.sub(f" {EM_DASH}", _HYPHEN_RUN_RE.sub(EM_DASH, ai_text))
+    if any(is_acknowledged(group, issue) for issue in _DASH_ISSUES):
+        return ai_text
+
+    text = _HYPHEN_RUN_RE.sub(EM_DASH, ai_text)
+    text = _ADRIFT_HUGGING_RE.sub(EM_DASH, text)
+    text = _LEFT_HUGGING_DASH_RE.sub(f" {EM_DASH}", text)
+    return _RIGHT_HUGGING_DASH_RE.sub(f"{EM_DASH} ", text)
 
 
 def _never_fires(group: dict) -> bool:
