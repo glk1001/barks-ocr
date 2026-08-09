@@ -101,10 +101,12 @@ timespec
 tobytes
 torchao
 touchpads
+uncompared
 uncurated
 ungrab
 unreviewed
 unrotated
+unvalidated
 unwarping
 vismir
 visstat

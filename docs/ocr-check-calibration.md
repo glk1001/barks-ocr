@@ -35,6 +35,10 @@ fixes applied earlier in the same pass.
 deleted. The fold-in was verified equivalent: on vol 18 both report the same
 10 / 13 / 65.
 
+**Agreement counts how the page was *read*, and nothing else.** `box_mismatch` and
+`attrs_mismatch` — see *Comparing the record, not just the reading* below — are
+reported and queued but deliberately excluded from this metric.
+
 ---
 
 ## The two failure modes are not symmetric
@@ -107,29 +111,183 @@ overflow. Groups without usable fragments fall back to the axis-only check
 unchanged. The line-height checks stay on axis geometry deliberately: the
 inflated height makes angled groups measure *roomy*, which fails safe there.
 
-## `text-will-never-fit`, the last resort on the fit check
+## Comparing the record, not just the reading
 
-Everything above narrows the fit check towards the flags a reviewer can act on,
-and some overflow survives all of it: the lettering is transcribed correctly,
-the box is drawn where the lettering is, and Verdana at the derived size simply
-needs more width than Barks's hand did. Nothing in the file is wrong, so no edit
-will clear the flag — the reviewer ticks `text-will-never-fit` in the editor's
-**Mark OK** popup and `text_does_not_fit` stops being reported for that group.
+The cross-engine comparison used to stop at the text. Two groups could hold the same
+lettering while disagreeing about where that lettering sits and what kind of lettering
+it is, and nothing looked. `type` alone disagreed on **2,342** pairs — the class the
+vision pass structurally cannot see (see *paddleocr-only type errors*), because it reads
+one engine at a time.
+
+So on every pair the two engines read **identically**, two further checks run:
+`box_mismatch` and `attrs_mismatch`. Both are reported against easyocr, as
+`text_mismatch` already is, with the paddleocr group id in the notes — the engines number
+their groups independently, so without it the entry names a group that cannot be found in
+the other pane.
+
+They run *only* where the readings match. A positional pair with differing text is
+already reported as `text_mismatch` and may simply be mis-paired, so a box or attribute
+verdict on it would be measuring nothing.
+
+### `BOX_IOU_MIN = 0.5`
+
+Intersection over union of the two axis-aligned boxes. Measured over the 65,649 pairs
+that read identically:
+
+| | p1 | p5 | p10 | p25 | p50 |
+|---|---|---|---|---|---|
+| IoU | 0.363 | 0.701 | 0.801 | 0.889 | **0.932** |
+
+| threshold | pairs | share |
+|---|---|---|
+| **IoU < 0.5** | **1,190** | **1.8%** |
+| IoU < 0.7 | 3,273 | 5.0% |
+| IoU < 0.9 | 19,315 | 29.4% |
+
+IoU rather than a pixel distance because it normalises: a 30px edge slip is nothing on a
+500px balloon and most of a 150px caption. 0.5 is the knee that isolates real
+disagreement — **111 pairs do not overlap at all**, and several of those carry a
+degenerate box on one side (`WHOOSH!` at 309x7, `ZOOM` at 195x4). Tunable with
+`--box-iou-min`.
+
+A malformed box on either side yields no verdict at all rather than a score of 0:
+`bad_text_box` already owns that fault, and every geometric check in the module is gated
+on `_text_box_problem` the same way.
+
+### Which attributes must match
+
+Everything the two groups carry, minus the fields that are engine-local by construction.
+The exclusions, with their differ-rate over identically-read pairs — these measure the
+field's noise, not the corpus's errors:
+
+| excluded | differs | why |
+|---|---|---|
+| `ocr_text` | 91% | the raw engine output; that is the whole point of it |
+| `cleaned_box_texts` | 98% | per-engine fragment quads |
+| `notes` | 90% | Gemini writes them per engine, per file |
+| `text_box` | 93% | `box_mismatch` owns it, with a tolerance |
+| `florence_passed` | 99.9% | `florence_check` runs against one engine at a time |
+| `panel_id` | 11% | an engine-local id; `panel_num` is the shared one |
+
+**Absent and empty compare equal** — `[]`, `""` and `{}` all normalise to `None`. Without
+that, `emphasis_spans` reads as differing on all 152 pairs that carry it, purely because
+one side stores the empty list and the other omits the key.
+
+What actually fires, corpus-wide (6,432 pairs, some naming more than one field):
+
+| field | pairs |
+|---|---|
+| `style` | 3,789 |
+| `type` | 2,342 |
+| `speaker_reviewed_date` / `speaker_reviewed` | 389 / 308 |
+| `acknowledged_issues` | 78 |
+| `identified_by` | 62 |
+| `type_was` / `speaker_was` / `cap_colour_was` | 46 / 42 / 11 |
+| `speaker` / `speaker_confidence` / `cap_colour` | 42 / 42 / 41 |
+| `speaker_review_note` | 27 |
+| `ai_text` | 1 |
+
+Two things worth knowing about that table. `style` is over half of it and the docs
+already list it under *What is not validated* — it is a Gemini judgement, and 2,540 of
+its mismatches are just `normal` vs `emphasized`, so treat it as the low-value tail. And
+the `*_was` / `*_reviewed*` rows are review bookkeeping: they mean a reviewer edited one
+engine and `vision-mirror` has not been run, not that the lettering is wrong.
+
+The lone `ai_text` row is not a contradiction of "read identically". The text comparison
+runs on `_plain`, which strips emphasis markup, so a pair whose markup differs but whose
+lettering does not passes the reading check and is caught here instead.
+
+### Working them in the editor
+
+Both are fixed through the Kivy editor's **Diff** button, one per pane. Two things
+support it:
+
+- **The other engine's box is drawn on the crop**, dashed and grey-white, under the
+  editable orange one and with no handles. A `box_mismatch` is then a picture rather than
+  a number — you can see which of the two boxes the lettering is actually in. It appears
+  whenever a counterpart exists, not only when the IoU is bad.
+- **The pane header carries a marker** — `[diff: box 0.34; type, speaker]` — so a
+  disagreement is visible while stepping through groups, without opening anything.
+
+The popup lists the IoU row first, then one row per differing field, each showing both
+engines' values with a button that takes the other engine's. **Take all** does the lot.
+Every action writes into the pane you opened it from and never the other file, so the
+reviewer always picks which reading wins.
+
+Taking a field the other engine does not carry **removes** it rather than writing an
+empty value, so the two sides end up equal under the same absent-is-empty rule
+`differing_attrs` compares by. Writing `None` would leave the row on screen for ever.
+
+The editor and `ocr_check` both read `utils/engine_compare.py` — the field list, the
+normalisation and the IoU live there once. The `type` vocabulary was duplicated across
+two modules once before and drifted; this does not repeat it.
+
+A pair the two engines read *differently* has no counterpart at all: the popup says to
+reconcile the text first, and no ghost box or marker is drawn. That matches when the
+checks run at all.
+
+### Why neither counts towards engine agreement
+
+Folding them in would take agreement from **70.0% to 24.3%**, and the drop is dominated
+by that bookkeeping tail rather than by anything about how a page was read. A stale
+`speaker_reviewed_date` is worth fixing and says nothing about whether the two engines
+read the page the same way.
+
+So `_check_engine_agreement` accumulates the two levels separately and computes
+`agree` from the reading level alone. The temptation to simplify it back to
+`not issues` is why the docstring says so in as many words. Verified on the corpus: with
+both checks live, agreement is **3749/5358 (70.0%)** and every pre-existing issue count
+is unchanged to the unit.
+
+## `text-will-never-fit`, the last resort on the layout checks
+
+Everything above narrows the layout checks towards the flags a reviewer can act
+on, and some groups survive all of it: the lettering is transcribed correctly,
+the wrapping is what the balloon does, and the box is simply too small to hold
+that text at page-normal lettering. Nothing in the file is wrong, so no edit
+clears the flag — the reviewer ticks `text-will-never-fit` in the editor's
+**Mark OK** popup and `ocr_check` stops running its layout checks on that group.
 
 It is registered in `DISMISSABLE_PREDICATES` against `_never_fires`, like
-`florence-check`: the check itself lives in `ocr_check`, needs the rendered font
-and the page's geometry, and cannot run from `group_checks`. So the popup always
-shows it as "not firing" and never pre-ticks it — including from a
-`text_does_not_fit` queue entry, deliberately, since most overflow is a fixable
-box or a missing line break and this acknowledgement gives up on the group for
-good.
+`florence-check`: the checks themselves live in `ocr_check`, need the rendered
+font and the page's geometry, and cannot run from `group_checks`. So the popup
+always shows it as "not firing" and never pre-ticks it — including from a
+`text_does_not_fit` or `too_many_lines` queue entry, deliberately, since most of
+both is a fixable box or a stray line break and this acknowledgement gives up on
+the group's layout for good.
 
-It covers the **fit half only**. `too_many_lines` is the opposite failure and is
-still reported: accepting that text overflows its box says nothing about whether
-its lines are packed tighter than the rest of the page. And per *An acknowledged
-group is off limits to its fixer* below, the `--fix-newlines` transplant is
-gated with the check — no issue reported means no rewrap attempted, so the
-accepted overflow is not quietly rewrapped on the next `--fix` pass.
+### It covers both checks, because they are two halves of one measurement
+
+It first shipped covering the fit check only, on the reasoning that accepting an
+overflow says nothing about line packing. That reasoning does not survive the
+arithmetic: both checks read the same box against the same line count, from
+opposite sides. The fit check derives its font from box height / line count and
+compares the widest rendered line to the box width; the line-height check
+compares that same box height / line count to the page median.
+
+So a box that cannot be reconciled with its text lands on whichever side its
+wrapping puts it. Too small in *both* dimensions and the derived font goes tiny,
+the width test passes, and the implied line height falls under the 0.85 bar —
+`too_many_lines`. Narrow but tall enough and the font is page-normal, the line
+height is unremarkable, and the width test fails — `text_does_not_fit`. The
+reviewer's judgement is about the box and the text, not about which of the two
+arithmetics caught them, so one acknowledgement covers both.
+
+No reviewed group needs it for the line-height half *yet*. Vol 3 page 117 group
+11 looked like one — 7 lines in a 173x83 box, implied line height 11.9px against
+a page median of 38 — and turned out to be a data error rather than a never-fit:
+the box is correctly drawn around the curved `$100,000` on the money bag, and it
+is the `ai_text` that is wrong, a duplicate of the `HAW! HAW! HAW!` balloon
+beside it (group 10). Corrected to `$100,000` it is single-line, so the
+line-height check does not judge it at all. A cautionary example rather than a
+supporting one: a deep line-height outlier on a small box is worth a look at the
+art before it is accepted, because a duplicated `ai_text` produces exactly that
+signature.
+
+Per *An acknowledged group is off limits to its fixer* below, the
+`--fix-newlines` transplant is gated with the checks — no issue reported means
+no transplant attempted, so the layout the reviewer accepted is not quietly
+rewritten on the next `--fix` pass.
 
 ## The em-dash rule, and what measuring it changed
 
@@ -331,9 +489,11 @@ Reproduce: `scripts/flags.py <out> <vol> <panel_nums> <groups_order> <newlines>`
 
 ---
 
-## `LINE_HEIGHT_OUTLIER_FRACTION = 0.9`
+## `LINE_HEIGHT_OUTLIER_FRACTION = 0.85`, `LINE_HEIGHT_MARGINAL_FRACTION = 0.9`
 
 A group is flagged when `box_h / n_lines` falls below this fraction of the page median.
+The heading read `LINE_HEIGHT_OUTLIER_FRACTION = 0.9` until 2026-08-09 — the value the
+first sweep below arrived at, left behind when *Two bands* split it into 0.85 and 0.9.
 
 **Calibrate on uncleaned volumes.** Vol 5 and the other low volumes have been manually
 cleaned, so their wrapping reflects deliberate choices and they make the threshold look
@@ -458,6 +618,43 @@ multi-line groups, and at a minimum of 4 its paddleocr `g3` is flagged again at 
 Stylized types (`sound_effect`, `background`, `title`) are excluded both as subjects and
 as evidence —
 their lettering is deliberately unlike the surrounding dialogue.
+
+### One engine flags it, the other does not: read the denominator
+
+The median is computed **per engine, per page** — `PageLineHeights.own` is the median of
+the page as *this* engine boxed it. So an identical group can land on opposite sides of
+the bar in the two engines, because the thing that differs is the denominator, not the
+group.
+
+**Vol 4 page 046 group 9** is the clean example. The group is the same in both engines
+down to the pixel — box `520x116`, three lines, implied line height **38.667** — and
+only paddleocr reports `too_many_lines`:
+
+| | easyocr | paddleocr |
+|---|---|---|
+| g1 `TWENTY-FIVE!...` | 776x87 → 43.50 | 820x109 → **54.50** |
+| g11 `WHAT A SYSTEM!` | 378x85 → 42.50 | 415x110 → **55.00** |
+| g3 / g6 / g8 | 49.50 / 40.67 / 38.75 | 50.25 / 42.00 / 40.00 |
+| **page median** | **41.583** | **46.125** |
+| **g9 ratio** | 38.667/41.583 = **0.930** | 38.667/46.125 = **0.838** |
+
+Paddleocr drew every other box on the page looser, and two of them much looser, so its
+median rises by 4.5px and g9 crosses the 0.85 bar without changing at all. The small-N
+effect above is the amplifier: six measurable groups means the median is the mean of the
+3rd and 4th values, so two padded boxes move it directly.
+
+**How to read one.** A one-engine `too_many_lines` is evidence about the *page*, not the
+group. Compare the flagged group's box against the other engine's: if they agree and the
+two ratios straddle the bar, the fault is loose boxes elsewhere on the page, and
+tightening those is the real correction — it clears the flag by fixing what is actually
+wrong. Only when the boxes genuinely differ is the flagged group itself the suspect.
+
+**Not a defect to design out.** The metric has to be relative, since absolute line
+heights vary by page and volume, and a per-engine reading can only honestly be judged
+against its own engine's median — a shared or cross-engine median would import one
+engine's boxing errors into the other's page. The cross-engine transplant already
+depends on this: `_layout_ok` judges a candidate donor against *its* engine's median
+(`line_heights.other`), which is what makes "the donor is well laid out" mean anything.
 
 ---
 

@@ -112,6 +112,44 @@ def save_box_groups_as_json(groups: dict[int, list[tuple[OcrBox, float]]], file:
         json.dump(groups, f, indent=4, default=custom_ocr_box)
 
 
+TEXT_BOX_CORNERS = 4  # the prelim schema stores a text_box as TL, TR, BR, BL
+
+
+def points_bbox(points: PointList) -> tuple[float, float, float, float]:
+    """Return (x0, y0, x1, y1), the axis-aligned extents of a point list."""
+    xs = [p[0] for p in points]
+    ys = [p[1] for p in points]
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def text_box_problem(text_box: object) -> str | None:
+    """Describe what is wrong with a text_box, or None when it is sound.
+
+    Everything geometric indexes the four corner points, and a malformed box
+    used to be skipped silently only to crash a later ``--fix`` pass. This is the
+    single gate: ``ocr_check`` reports a box it rejects as "bad_text_box" and
+    keeps it away from every geometric check and fixer.
+    """
+    if not isinstance(text_box, list) or not text_box:
+        return "missing"
+    if len(text_box) != TEXT_BOX_CORNERS:
+        return f"has {len(text_box)} points, expected {TEXT_BOX_CORNERS}"
+    xs: list[float] = []
+    ys: list[float] = []
+    for point in text_box:
+        match point:
+            case [int() | float() as x, int() | float() as y] if math.isfinite(x) and math.isfinite(
+                y
+            ):
+                xs.append(x)
+                ys.append(y)
+            case _:
+                return f"malformed point: {point!r}"
+    if max(xs) - min(xs) <= 0 or max(ys) - min(ys) <= 0:
+        return "degenerate (zero area)"
+    return None
+
+
 def get_box_str(box_pts: PointList) -> str:
     assert len(box_pts) == 4  # noqa: PLR2004
     return (

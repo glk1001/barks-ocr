@@ -31,6 +31,12 @@ from loguru import logger
 from PIL import Image as PilImage
 
 from barks_ocr.cli_setup import init_logging
+from barks_ocr.utils.engine_compare import (
+    BOX_IOU_MIN,
+    box_iou,
+    differing_attrs,
+    normalized_attr,
+)
 from barks_ocr.utils.group_checks import (
     DISMISSABLE_ISSUE_TYPES,
     DISMISSABLE_PREDICATES,
@@ -329,6 +335,9 @@ class BoundingBoxCanvas(Widget):
         self._img_h = 1
         self._crop_offset: tuple[int, int] = (0, 0)
         self._text_box: list | None = None  # crop-local PIL coords
+        # The other engine's box for the same lettering, drawn but never editable,
+        # so a "box_mismatch" can be judged against the art instead of a number.
+        self._other_text_box: list | None = None  # crop-local PIL coords
         self._panel_bounds_local: tuple[int, int, int, int] | None = None
         self._panel_num: int | None = None
         # Set when panel_num is -1: all panels drawn as numbered overlays
@@ -366,22 +375,26 @@ class BoundingBoxCanvas(Widget):
         panel_bounds_full_page: tuple[int, int, int, int] | None,
         all_panel_bounds_full_page: list[tuple[int, int, int, int]] | None = None,
         panel_num: int | None = None,
+        other_text_box_full_page: list | None = None,
     ) -> None:
         """Load a new image + bounding box.  All coords in full-page PIL space.
 
         When all_panel_bounds_full_page is provided the canvas shows numbered
         outlines for every panel instead of a single highlighted panel boundary.
         This is used when panel_num is -1 so the user can identify the panel.
+
+        other_text_box_full_page, when given, is drawn as a read-only ghost: the
+        same lettering as the other engine boxed it.
         """
         self._img_w, self._img_h = pil_image.size
         self._crop_offset = crop_offset
         ox, oy = crop_offset
-        raw = [[float(p[0]) - ox, float(p[1]) - oy] for p in text_box_full_page]
-        # Normalize to axis-aligned rectangle: corners in TL, TR, BR, BL order.
-        xs = [p[0] for p in raw]
-        ys = [p[1] for p in raw]
-        x0, y0, x1, y1 = min(xs), min(ys), max(xs), max(ys)
-        self._text_box = [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
+        self._text_box = self._to_local_rect(text_box_full_page, crop_offset)
+        self._other_text_box = (
+            self._to_local_rect(other_text_box_full_page, crop_offset)
+            if other_text_box_full_page
+            else None
+        )
         if panel_bounds_full_page:
             pl, pt, pr, pb = panel_bounds_full_page
             self._panel_bounds_local = (pl - ox, pt - oy, pr - ox, pb - oy)
@@ -401,6 +414,15 @@ class BoundingBoxCanvas(Widget):
         buf.seek(0)
         self._texture = CoreImage(buf, ext="png").texture
         self._redraw()
+
+    @staticmethod
+    def _to_local_rect(text_box_full_page: list, crop_offset: tuple[int, int]) -> list:
+        """Crop-local axis-aligned rectangle, corners in TL, TR, BR, BL order."""
+        ox, oy = crop_offset
+        xs = [float(p[0]) - ox for p in text_box_full_page]
+        ys = [float(p[1]) - oy for p in text_box_full_page]
+        x0, y0, x1, y1 = min(xs), min(ys), max(xs), max(ys)
+        return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
 
     def get_text_box_full_page(self) -> list:
         """Return current text box in full-page PIL coords (rounded to int)."""
@@ -452,6 +474,10 @@ class BoundingBoxCanvas(Widget):
             self._draw_all_panel_bounds(g, self._all_panel_bounds_local)
         elif self._panel_bounds_local:
             self._draw_panel_bounds(g, self._panel_bounds_local)
+        # The ghost goes down first so the editable box draws over it where they
+        # overlap — the one being dragged should never be the one underneath.
+        if self._other_text_box:
+            self._draw_other_text_box(g, self._other_text_box)
         if self._text_box:
             self._draw_text_box(g, self._text_box)
 
@@ -515,6 +541,18 @@ class BoundingBoxCanvas(Widget):
         for pt in pts:
             d = HANDLE_RADIUS
             g.add(Ellipse(pos=(pt[0] - d / 2, pt[1] - d / 2), size=(d, d)))
+
+    def _draw_other_text_box(self, g: InstructionGroup, text_box: list) -> None:
+        """Draw the other engine's box: dashed, no handles, visibly not yours.
+
+        Grey-white rather than another saturated colour — orange is the editable
+        box and blue the panel bounds, and a third bright outline would compete
+        with both for a box that cannot even be clicked.
+        """
+        pts = [self._local_to_screen(p[0], p[1]) for p in text_box]
+        g.add(Color(0.85, 0.85, 0.9, 0.9))
+        flat = [c for pt in pts for c in pt] + list(pts[0])
+        g.add(Line(points=flat, width=1.5, dash_offset=3, dash_length=6))
 
     # ── touch events ─────────────────────────────────────────────────────────
 
@@ -637,6 +675,7 @@ class EditorApp(App):
 
         self._info_label: Label | None = None
         self._decode_checkbox: CheckBox | None = None
+        self._diff_popup: Popup | None = None
         self._has_changes = False
 
         # Load the initial page data
@@ -764,6 +803,8 @@ class EditorApp(App):
             logger.warning(f'Source image not found: "{self._srce_image_file}".')
             return
 
+        other_text_box = self._other_engine_text_box(pane)
+
         full_img = load_pil_image_for_reading(self._srce_image_file)
         img_w, img_h = full_img.size
 
@@ -781,6 +822,7 @@ class EditorApp(App):
                 crop_offset=(crop_l, crop_t),
                 panel_bounds_full_page=None,
                 all_panel_bounds_full_page=all_panel_bounds or None,
+                other_text_box_full_page=other_text_box,
             )
         else:
             panel_bounds = get_panel_bounds_from_file(self._panel_segments_file, panel_num)
@@ -794,10 +836,53 @@ class EditorApp(App):
                 crop_offset=(crop_l, crop_t),
                 panel_bounds_full_page=panel_bounds,
                 panel_num=panel_num,
+                other_text_box_full_page=other_text_box,
             )
             logger.debug(
                 f"Panel {panel_num}: text_box = {text_box}, panel_bounds = {panel_bounds}."
             )
+
+    # ── cross-engine comparison ───────────────────────────────────────────────
+
+    def _counterpart_group(self, pane: EnginePane) -> dict | None:
+        """Return the other engine's group for the same lettering, or None.
+
+        ``ocr_check`` pairs the engines positionally within a panel; here the two
+        panes are already stepped together onto the same lettering, so the other
+        pane's current group *is* the counterpart. It is only comparable when the
+        two read the same, which is exactly the precondition ``box_mismatch`` and
+        ``attrs_mismatch`` are raised under — so a pair that disagrees on the
+        text is reported as no counterpart at all, and the Diff popup says so
+        rather than diffing two different pieces of lettering.
+        """
+        mine = pane.json_group()
+        theirs = self._other_pane(pane).json_group()
+        if mine is None or theirs is None:
+            return None
+        if strip_markup(mine.get("ai_text") or "") != strip_markup(theirs.get("ai_text") or ""):
+            return None
+        return theirs
+
+    def _other_engine_text_box(self, pane: EnginePane) -> list | None:
+        """Return the counterpart's text_box, or None when nothing is comparable."""
+        counterpart = self._counterpart_group(pane)
+        if counterpart is None:
+            return None
+        return counterpart.get("text_box") or None
+
+    def _pane_diff_summary(self, pane: EnginePane) -> str:
+        """Short marker for the pane label: what this group disagrees about."""
+        counterpart = self._counterpart_group(pane)
+        if counterpart is None:
+            return ""
+        group = pane.json_group() or {}
+        parts: list[str] = []
+        iou = box_iou(group.get("text_box") or [], counterpart.get("text_box") or [])
+        if iou is not None and iou < BOX_IOU_MIN:
+            parts.append(f"box {iou:.2f}")
+        if differing := differing_attrs(group, counterpart):
+            parts.append(", ".join(differing))
+        return f"  [diff: {'; '.join(parts)}]" if parts else ""
 
     # ── App lifecycle ─────────────────────────────────────────────────────────
 
@@ -990,7 +1075,7 @@ class EditorApp(App):
                 self._get_pane_type(pane),
                 self._get_pane_florence_ack(pane),
                 self._get_pane_speaker(pane),
-            )
+            ) + self._pane_diff_summary(pane)
             current_prop: str = getattr(self, pane.label_prop)
             if current_prop.startswith("DIFFS -- "):
                 setattr(self, pane.label_prop, f"DIFFS -- {pane.label}")
@@ -1262,6 +1347,7 @@ class EditorApp(App):
             ("Select", lambda _inst, p=pane: self._show_speech_item_popup_for(p)),
             ("Copy In", lambda _inst, p=pane: self._handle_copy_in(p)),
             ("Copy Fmt", lambda _inst, p=pane: self._handle_copy_fmt(p)),
+            ("Diff", lambda _inst, p=pane: self._show_engine_diff_popup(p)),
             ("Mark OK", lambda _inst, p=pane: self._show_acknowledge_popup(p)),
             ("Speaker", lambda _inst, p=pane: self._show_speaker_popup(p)),
             ("Delete", lambda _inst, p=pane: self._handle_delete(p)),
@@ -2043,6 +2129,230 @@ class EditorApp(App):
             result[new_key] = new_value
         return result
 
+    # ── engine diff popup ─────────────────────────────────────────────────────
+
+    def _show_engine_diff_popup(self, pane: EnginePane) -> None:
+        """Show what this group disagrees with the other engine about, and fix it.
+
+        Covers the two cross-engine issues ``ocr_check`` raises on a pair that
+        reads identically: ``box_mismatch`` (the IoU row) and ``attrs_mismatch``
+        (one row per differing field). Every action writes into *this* pane only
+        — the other engine's file is never touched from here, so the reviewer
+        always chooses which of the two readings wins.
+        """
+        group = pane.json_group()
+        if group is None:
+            logger.warning(f"Group {pane.group_id} not found for diff popup.")
+            return
+
+        content = BoxLayout(orientation="vertical", padding=10, spacing=8)
+        content.add_widget(
+            Label(
+                text=f"Engine diff — {pane.name} group {pane.group_id}",
+                size_hint_y=None,
+                height=28,
+                bold=True,
+            )
+        )
+
+        counterpart = self._counterpart_group(pane)
+        rows = (
+            []
+            if counterpart is None
+            else self._build_diff_rows(pane, group, counterpart, self._other_pane(pane).name)
+        )
+
+        if counterpart is None:
+            content.add_widget(
+                Label(
+                    text=(
+                        "The two engines do not read this group the same, so there is"
+                        " nothing to compare.\nReconcile the text first — the box and"
+                        " attribute checks only run on a matching pair."
+                    ),
+                    halign="center",
+                )
+            )
+        elif not rows:
+            content.add_widget(
+                Label(
+                    text=f"Identical to {self._other_pane(pane).name} on every compared field.",
+                    halign="center",
+                )
+            )
+        else:
+            body = BoxLayout(orientation="vertical", spacing=10, size_hint_y=None)
+            body.bind(minimum_height=body.setter("height"))
+            for row in rows:
+                body.add_widget(row)
+            scroll = ScrollView()
+            scroll.add_widget(body)
+            content.add_widget(scroll)
+
+        buttons = BoxLayout(spacing=10, size_hint_y=None, height=44)
+        if rows and counterpart is not None:
+            take_all = Button(text="Take all")
+            take_all.bind(on_press=lambda _inst: self._take_all_from_other(pane, counterpart))
+            buttons.add_widget(take_all)
+        close = Button(text="Close")
+        close.bind(on_press=lambda _inst: self._close_diff_popup())
+        buttons.add_widget(close)
+        content.add_widget(buttons)
+
+        self._diff_popup = Popup(
+            title="Engine diff",
+            content=content,
+            size_hint=(None, None),
+            size=(660, min(720, 220 + 92 * max(1, len(rows)))),
+            auto_dismiss=False,
+        )
+        self._diff_popup.open()
+
+    def _build_diff_rows(
+        self, pane: EnginePane, group: dict, counterpart: dict, other_name: str
+    ) -> list[BoxLayout]:
+        """One row per disagreement: the box IoU first, then each differing field."""
+        rows: list[BoxLayout] = []
+
+        iou = box_iou(group.get("text_box") or [], counterpart.get("text_box") or [])
+        if iou is not None and iou < BOX_IOU_MIN:
+            rows.append(
+                self._diff_row(
+                    title=f"text_box — IoU {iou:.2f}",
+                    mine=str(group.get("text_box")),
+                    theirs=str(counterpart.get("text_box")),
+                    other_name=other_name,
+                    on_take=lambda _inst: self._apply_and_reopen(
+                        pane, lambda: self._take_box_from_other(pane, counterpart)
+                    ),
+                    take_text="Copy Box",
+                )
+            )
+
+        rows.extend(
+            self._diff_row(
+                title=field,
+                mine=self._format_attr(group.get(field)),
+                theirs=self._format_attr(counterpart.get(field)),
+                other_name=other_name,
+                on_take=lambda _inst, f=field: self._apply_and_reopen(
+                    pane, lambda: self._take_attr_from_other(pane, counterpart, f)
+                ),
+            )
+            for field in differing_attrs(group, counterpart)
+        )
+        return rows
+
+    def _diff_row(  # noqa: PLR0913
+        self,
+        title: str,
+        mine: str,
+        theirs: str,
+        other_name: str,
+        on_take: Callable[[object], None],
+        take_text: str = "Take",
+    ) -> BoxLayout:
+        row = BoxLayout(orientation="vertical", size_hint_y=None, height=84, spacing=2)
+
+        heading = Label(text=title, size_hint_y=None, height=24, bold=True, halign="left")
+        heading.bind(size=heading.setter("text_size"))
+        row.add_widget(heading)
+
+        values = BoxLayout(orientation="horizontal", size_hint_y=None, height=56, spacing=8)
+        text = Label(
+            text=f"{self._DIFF_MINE}  {mine}\n{other_name}:  {theirs}",
+            halign="left",
+            valign="middle",
+        )
+        text.bind(size=text.setter("text_size"))
+        values.add_widget(text)
+
+        take = Button(text=take_text, size_hint_x=None, width=110)
+        take.bind(on_press=on_take)
+        values.add_widget(take)
+        row.add_widget(values)
+        return row
+
+    _DIFF_MINE = "this pane:"
+
+    @staticmethod
+    def _format_attr(value: object) -> str:
+        """Render an attribute for the diff, marking every empty form the same."""
+        if normalized_attr(value) is None:
+            return "(none)"
+        return str(value)
+
+    def _apply_and_reopen(self, pane: EnginePane, apply: Callable[[], None]) -> None:
+        """Run one take action, then rebuild the popup around what is left."""
+        apply()
+        self._close_diff_popup()
+        self._show_engine_diff_popup(pane)
+
+    def _close_diff_popup(self) -> None:
+        if self._diff_popup is not None:
+            self._diff_popup.dismiss()
+            self._diff_popup = None
+
+    def _take_box_from_other(self, pane: EnginePane, counterpart: dict) -> None:
+        """Adopt the other engine's text_box for this pane's group."""
+        other_box = counterpart.get("text_box") or []
+        group = pane.json_group()
+        if not other_box or group is None:
+            return
+        group["text_box"] = copy.deepcopy(other_box)
+        self._has_changes = True
+        self._load_canvas_content(pane)
+        self._refresh_pane_labels()
+        logger.info(f"Group {pane.group_id}: took text_box from the other engine.")
+
+    def _take_attr_from_other(self, pane: EnginePane, counterpart: dict, field: str) -> None:
+        """Adopt the other engine's value for one field.
+
+        A field the other engine does not carry is *removed* rather than written
+        as an empty value, so that taking it actually makes the two sides equal
+        under the absent-is-empty rule ``differing_attrs`` compares by. Writing
+        ``None`` instead would leave the row on screen for ever.
+        """
+        group = pane.json_group()
+        if group is None:
+            return
+        if field in counterpart:
+            group[field] = copy.deepcopy(counterpart[field])
+        else:
+            group.pop(field, None)
+
+        if field == "ai_text":
+            self._sync_pane_text_from_json(pane, group)
+        if field in ("panel_num", "text_box"):
+            self._load_canvas_content(pane)
+
+        self._has_changes = True
+        self._refresh_pane_labels()
+        logger.info(f"Group {pane.group_id}: took {field} from the other engine.")
+
+    def _take_all_from_other(self, pane: EnginePane, counterpart: dict) -> None:
+        """Adopt every disagreeing value, box included, then rebuild the popup."""
+        group = pane.json_group()
+        if group is None:
+            return
+        # differing_attrs is re-read per field because taking one can change what
+        # the next comparison sees; the snapshot is taken once here on purpose,
+        # since every field in it is being taken anyway.
+        for field in differing_attrs(group, counterpart):
+            self._take_attr_from_other(pane, counterpart, field)
+        self._take_box_from_other(pane, counterpart)
+        self._close_diff_popup()
+        self._show_engine_diff_popup(pane)
+
+    def _sync_pane_text_from_json(self, pane: EnginePane, group: dict) -> None:
+        """Push a taken ai_text into the pane's editable text and its SpeechText."""
+        stored = group.get("ai_text") or ""
+        pane.speech_groups[pane.group_id] = pane.speech_groups[pane.group_id].with_stored_text(
+            stored
+        )
+        shown = self._encode_for_display(stored) if self._decode_on else stored
+        setattr(self, pane.text_prop, shown)
+
     def _handle_delete(self, pane: EnginePane) -> None:
         """Delete the current group from a pane and navigate to the neighbor."""
         # Find the best neighbor (previous, or next if first) before removing.
@@ -2097,10 +2407,11 @@ class EditorApp(App):
         # issue is the bug this replaced — a reflexive Save acknowledged all
         # of them.
         #
-        # This matches by name, so a `text_does_not_fit` entry does NOT pre-tick
-        # `text-will-never-fit`, deliberately: most overflows are a fixable box
-        # or a missing line break, and that acknowledgement gives up on the
-        # group for good. Tick it by hand once the box has been looked at.
+        # This matches by name, so a `text_does_not_fit` or `too_many_lines`
+        # entry does NOT pre-tick `text-will-never-fit`, deliberately: most of
+        # both is a fixable box or a stray line break, and that acknowledgement
+        # gives up on the group's layout for good. Tick it by hand once the box
+        # has been looked at.
         queue_issue = ""
         if self._queue:
             entry = self._queue[self._queue_index]

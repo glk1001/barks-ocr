@@ -3,6 +3,7 @@ import json
 import math
 import subprocess
 from collections import Counter, defaultdict
+from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from difflib import SequenceMatcher
@@ -25,6 +26,7 @@ from intspan import intspan
 from loguru import logger
 from PIL import Image, ImageDraw, ImageFont
 
+from barks_ocr.utils.engine_compare import BOX_IOU_MIN, box_iou, differing_attrs
 from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.group_checks import (
     TEXT_NEVER_FITS_ISSUE,
@@ -33,7 +35,7 @@ from barks_ocr.utils.group_checks import (
     is_acknowledged,
     with_dash_fixes,
 )
-from barks_ocr.utils.ocr_box import OcrBox, PointList
+from barks_ocr.utils.ocr_box import OcrBox, PointList, points_bbox, text_box_problem
 
 # ── Text-fit constants ────────────────────────────────────────────────────────
 
@@ -227,7 +229,14 @@ _QUEUE_SEVERITY: tuple[str, ...] = (
     "text_does_not_fit",
     "too_many_lines",
     "too_many_lines_marginal",
+    # The cross-engine block. A box disagreement is a concrete geometry fault and
+    # is worth seeing ahead of a text diff; an attribute difference is the least
+    # urgent of the set. "box_mismatch" and "text_mismatch" cannot both fire on
+    # one pair — the box check only runs where the two readings are identical —
+    # so their order only matters against the checks above.
+    "box_mismatch",
     "text_mismatch",
+    "attrs_mismatch",
     "only_in_easy",
     "only_in_paddle",
 )
@@ -321,54 +330,13 @@ def _print_missing_panels(all_missing_panels: list[MissingPanel]) -> None:
         print(f"  Vol {volume:>2}  page {fanta_page}: {', '.join(parts)}")
 
 
-TEXT_BOX_CORNERS = 4  # the prelim schema stores a text_box as TL, TR, BR, BL
 POINT_COORDS = 2
-
-
-def _points_bbox(points: PointList) -> tuple[float, float, float, float]:
-    """Return (min_x, min_y, max_x, max_y) over the points.
-
-    ``OcrBox.min_rotated_rectangle`` yields two corner points for a near
-    axis-aligned box but all four for a rotated one; taking the bounding box
-    over whatever comes back handles both shapes.
-    """
-    xs = [p[0] for p in points]
-    ys = [p[1] for p in points]
-    return min(xs), min(ys), max(xs), max(ys)
 
 
 def _box_wh(text_box: PointList) -> tuple[int, int]:
     """Return (width, height) in pixels from the text_box's min rotated rect."""
-    x0, y0, x1, y1 = _points_bbox(OcrBox(text_box, "", 0, "").min_rotated_rectangle)
+    x0, y0, x1, y1 = points_bbox(OcrBox(text_box, "", 0, "").min_rotated_rectangle)
     return int(x1 - x0), int(y1 - y0)
-
-
-def _text_box_problem(text_box: object) -> str | None:
-    """Describe what is wrong with a text_box, or None when it is sound.
-
-    Everything geometric in this module indexes the four corner points, and a
-    malformed box used to be skipped silently only to crash a later ``--fix``
-    pass. This is the single gate: a box it rejects is reported as
-    "bad_text_box" and kept away from every geometric check and fixer.
-    """
-    if not isinstance(text_box, list) or not text_box:
-        return "missing"
-    if len(text_box) != TEXT_BOX_CORNERS:
-        return f"has {len(text_box)} points, expected {TEXT_BOX_CORNERS}"
-    xs: list[float] = []
-    ys: list[float] = []
-    for point in text_box:
-        match point:
-            case [int() | float() as x, int() | float() as y] if math.isfinite(x) and math.isfinite(
-                y
-            ):
-                xs.append(x)
-                ys.append(y)
-            case _:
-                return f"malformed point: {point!r}"
-    if max(xs) - min(xs) <= 0 or max(ys) - min(ys) <= 0:
-        return "degenerate (zero area)"
-    return None
 
 
 def _rotated_frame_wh(group: dict) -> tuple[int, int] | None:
@@ -390,7 +358,7 @@ def _rotated_frame_wh(group: dict) -> tuple[int, int] | None:
     points: list[tuple[float, float]] = []
     for frag in fragments.values():
         quad = frag.get("text_box") or []
-        if _text_box_problem(quad) is not None:
+        if text_box_problem(quad) is not None:
             return None
         p0, p1, _p2, p3 = quad
         side_a = (p1[0] - p0[0], p1[1] - p0[1])
@@ -433,7 +401,7 @@ def _text_fits_in_box(
     See ``_text_fits_in_wh`` — this just supplies the box's axis-aligned
     dimensions and short-circuits the unmeasurable cases.
     """
-    if not ai_text.strip() or _text_box_problem(text_box) is not None:
+    if not ai_text.strip() or text_box_problem(text_box) is not None:
         return True
     return _text_fits_in_wh(
         ai_text, _box_wh(text_box), fanta_page, strict=strict, width_tolerance=width_tolerance
@@ -596,7 +564,7 @@ def _implied_line_height(group: dict) -> float | None:
     """
     ai_text = _plain(group)
     text_box = group.get("text_box") or []
-    if not ai_text or _is_stylized(group) or _text_box_problem(text_box) is not None:
+    if not ai_text or _is_stylized(group) or text_box_problem(text_box) is not None:
         return None
 
     n_lines = len(ai_text.split("\n"))
@@ -729,19 +697,22 @@ def _other_ocr_type(ocr_type: OcrTypes) -> OcrTypes:
     return OcrTypes.PADDLEOCR if ocr_type == OcrTypes.EASYOCR else OcrTypes.EASYOCR
 
 
-def _groups_by_panel(json_groups: dict) -> dict[int, list[tuple[str, str]]]:
-    """Group ``(group_id, ai_text)`` by panel_num, in reading order within a panel.
+def _groups_by_panel(json_groups: dict) -> dict[int, list[tuple[str, dict]]]:
+    """Group ``(group_id, group)`` by panel_num, in reading order within a panel.
+
+    The group dict rather than just its text, because the cross-engine checks
+    compare the box and the attributes too; the text comes back out via
+    ``_plain``.
 
     Read from the live JSON rather than ``SpeechPageGroup.speech_groups``, which
     is built at load time and would not see fixes applied earlier in this pass.
     Group ids sort numerically, which is the order ``renumber_groups()`` puts
     them in — panel, then down and across the page.
     """
-    by_panel: dict[int, list[tuple[str, str]]] = defaultdict(list)
+    by_panel: dict[int, list[tuple[str, dict]]] = defaultdict(list)
     for group_id, group in sorted(json_groups.items(), key=lambda kv: int(kv[0])):
-        ai_text = _plain(group)
-        if ai_text:
-            by_panel[int(group.get("panel_num", -1))].append((group_id, ai_text))
+        if _plain(group):
+            by_panel[int(group.get("panel_num", -1))].append((group_id, group))
     return by_panel
 
 
@@ -762,7 +733,7 @@ def _get_reduced_text_box(text_box: PointList, reduce_by: int) -> tuple[bool, Po
 
 
 def _get_enclosing_panel_num(box: PointList, page_panel_boxes: PagePanelBoxes) -> int:
-    x0, y0, x1, y1 = _points_bbox(OcrBox(box, "", 0, "").min_rotated_rectangle)
+    x0, y0, x1, y1 = points_bbox(OcrBox(box, "", 0, "").min_rotated_rectangle)
     box_rect = Rect(x0, y0, x1 - x0, y1 - y0)
 
     for i, panel_box in enumerate(page_panel_boxes.panel_boxes):
@@ -814,10 +785,12 @@ class OcrChecker:
         comics_database: ComicsDatabase,
         fixes: FixFlags | None = None,
         line_height_limits: LineHeightLimits | None = None,
+        box_iou_min: float = BOX_IOU_MIN,
     ) -> None:
         self._comics_database = comics_database
         self._fixes = fixes or FixFlags()
         self._limits = line_height_limits or LineHeightLimits()
+        self._box_iou_min = box_iou_min
         self._speech_groups = SpeechGroups(comics_database)
         self._title_panel_boxes = TitlePanelBoxes(self._comics_database)
 
@@ -974,7 +947,7 @@ class OcrChecker:
         if self._fixes.groups_order:
             groups_before = page_group.speech_page_json.get("groups", {})
             bad_boxes = [
-                gid for gid, g in groups_before.items() if _text_box_problem(g.get("text_box"))
+                gid for gid, g in groups_before.items() if text_box_problem(g.get("text_box"))
             ]
             if bad_boxes:
                 # renumber_groups() raises on a malformed text_box, and an
@@ -1030,7 +1003,7 @@ class OcrChecker:
     ) -> tuple[list[IssueFound], bool]:
         """Run every group-level check. Returns (issues, there_were_fixes)."""
         ai_text = _plain(group)
-        box_problem = _text_box_problem(group.get("text_box"))
+        box_problem = text_box_problem(group.get("text_box"))
 
         panel_num_state: PanelNumState | None = None
         panel_num = int(group.get("panel_num", -1))
@@ -1124,8 +1097,8 @@ class OcrChecker:
 
     # ── Cross-engine agreement ────────────────────────────────────────────────
 
-    @staticmethod
     def _check_engine_agreement(
+        self,
         variants: dict[OcrTypes, SpeechPageGroup],
     ) -> tuple[list[IssueFound], list[MissingPanel], bool]:
         """Compare the two engines for one page. Returns (issues, missing, agree).
@@ -1133,8 +1106,22 @@ class OcrChecker:
         Runs **once per page**, not once per engine — the callers loop over
         engines, and doing this there would report every mismatch twice.
 
+        Two levels of comparison, kept apart on purpose:
+
+        - **How the page was read** — which panels hold groups, and what those
+          groups say. ``only_in_easy``, ``only_in_paddle``, ``text_mismatch``.
+        - **What is recorded about a group both engines read identically** —
+          where its box sits (``box_mismatch``) and what its other fields say
+          (``attrs_mismatch``).
+
         Both engines reading a page the same way is the strongest evidence the
-        page is right, so ``agree`` is what the completion metric counts.
+        page is right, so ``agree`` is what the completion metric counts — and it
+        counts **only the first level**. The second is reported and queued like
+        any other issue but deliberately kept out of the metric: a stale
+        ``speaker_reviewed_date`` is worth fixing and says nothing about whether
+        the page was read correctly. Folding it in would take engine agreement
+        from 70% to 24% overnight and make every historical figure incomparable.
+        Do not simplify this back to ``not issues``.
         """
         easy = variants.get(OcrTypes.EASYOCR)
         paddle = variants.get(OcrTypes.PADDLEOCR)
@@ -1144,11 +1131,20 @@ class OcrChecker:
         easy_panels = _groups_by_panel(easy.speech_page_json.get("groups", {}))
         paddle_panels = _groups_by_panel(paddle.speech_page_json.get("groups", {}))
 
-        issues: list[IssueFound] = []
+        reading_issues: list[IssueFound] = []
+        record_issues: list[IssueFound] = []
         missing: list[MissingPanel] = []
         volume, fanta_page = easy.fanta_vol, easy.fanta_page
 
-        def issue(engine: str, group_id: str, issue_type: str, panel: int, text: str, ratio=None):  # noqa: ANN202, ANN001, PLR0913
+        def issue(  # noqa: ANN202, PLR0913
+            engine: str,
+            group_id: str,
+            issue_type: str,
+            panel: int,
+            text: str,
+            ratio: float | None = None,
+            notes: str = "",
+        ):
             return IssueFound(
                 volume=volume,
                 fanta_page=fanta_page,
@@ -1157,7 +1153,7 @@ class OcrChecker:
                 issue_type=issue_type,
                 panel_num=panel,
                 text=text,
-                notes="",
+                notes=notes,
                 ratio=ratio,
             )
 
@@ -1179,27 +1175,99 @@ class OcrChecker:
 
             for easy_item, paddle_item in zip_longest(in_easy, in_paddle):
                 if easy_item is None:
-                    gid, text = paddle_item
-                    issues.append(
-                        issue(str(OcrTypes.PADDLEOCR), gid, "only_in_paddle", panel, text)
+                    gid, group = paddle_item
+                    reading_issues.append(
+                        issue(str(OcrTypes.PADDLEOCR), gid, "only_in_paddle", panel, _plain(group))
                     )
-                elif paddle_item is None:
-                    gid, text = easy_item
-                    issues.append(issue(str(OcrTypes.EASYOCR), gid, "only_in_easy", panel, text))
-                elif easy_item[1] != paddle_item[1]:
-                    ratio = SequenceMatcher(None, easy_item[1], paddle_item[1]).ratio()
-                    issues.append(
+                    continue
+                if paddle_item is None:
+                    gid, group = easy_item
+                    reading_issues.append(
+                        issue(str(OcrTypes.EASYOCR), gid, "only_in_easy", panel, _plain(group))
+                    )
+                    continue
+
+                easy_id, easy_group = easy_item
+                paddle_id, paddle_group = paddle_item
+                easy_text, paddle_text = _plain(easy_group), _plain(paddle_group)
+
+                if easy_text != paddle_text:
+                    reading_issues.append(
                         issue(
                             str(OcrTypes.EASYOCR),
-                            easy_item[0],
+                            easy_id,
                             "text_mismatch",
                             panel,
-                            easy_item[1],
-                            ratio,
+                            easy_text,
+                            SequenceMatcher(None, easy_text, paddle_text).ratio(),
                         )
                     )
+                    # The pair may simply be mis-paired — positional pairing does
+                    # not guarantee these are the same lettering — so a box or
+                    # attribute verdict on it would be measuring nothing.
+                    continue
 
-        return issues, missing, not issues and not missing
+                record_issues.extend(
+                    self._compare_matched_pair(
+                        easy_group, paddle_group, panel, easy_id, paddle_id, issue
+                    )
+                )
+
+        return (
+            reading_issues + record_issues,
+            missing,
+            not reading_issues and not missing,
+        )
+
+    def _compare_matched_pair(  # noqa: PLR0913
+        self,
+        easy_group: dict,
+        paddle_group: dict,
+        panel: int,
+        easy_id: str,
+        paddle_id: str,
+        issue: Callable[..., IssueFound],
+    ) -> list[IssueFound]:
+        """Box and attribute checks for one pair the two engines read identically.
+
+        Reported against easyocr, as ``text_mismatch`` is, so a group's whole
+        cross-engine story sits on one queue entry. The paddleocr group id goes
+        in the notes because the two engines number their groups independently —
+        without it, the entry names a group the reviewer cannot find in the other
+        pane.
+        """
+        found: list[IssueFound] = []
+        text = _plain(easy_group)
+        other = f"paddleocr group {paddle_id}"
+
+        iou = box_iou(easy_group.get("text_box") or [], paddle_group.get("text_box") or [])
+        if iou is not None and iou < self._box_iou_min:
+            found.append(
+                issue(
+                    str(OcrTypes.EASYOCR),
+                    easy_id,
+                    "box_mismatch",
+                    panel,
+                    text,
+                    iou,
+                    f"{other}; text_box IoU {iou:.2f}",
+                )
+            )
+
+        if differing := differing_attrs(easy_group, paddle_group):
+            found.append(
+                issue(
+                    str(OcrTypes.EASYOCR),
+                    easy_id,
+                    "attrs_mismatch",
+                    panel,
+                    text,
+                    None,
+                    f"{other}; differs on {', '.join(differing)}",
+                )
+            )
+
+        return found
 
     def _apply_text_fixes(self, json_groups: dict) -> bool:
         """Apply the unambiguous string rewrites. Returns whether anything changed.
@@ -1259,11 +1327,20 @@ class OcrChecker:
           page, which the fit check cannot see → "too_many_lines", or
           "too_many_lines_marginal" in the noisier band just above it.
 
-        A group acknowledging ``text-will-never-fit`` skips the fit half only —
-        that is the reviewer saying the lettering overflows the box as drawn and
-        no rewrap will change it, which says nothing about the line packing. The
-        wrapping fixer is gated with it: no issue reported, so no transplant is
-        attempted, and the accepted overflow is not quietly rewrapped away.
+        A group acknowledging ``text-will-never-fit`` skips **both**: the
+        reviewer has said the lettering cannot be made to sit in the box as
+        drawn, and the two checks are that one judgement measured from opposite
+        sides. Both read box height / line count — the fit check turns it into a
+        font size and tests the width, the line-height check tests it against
+        the page median — so a box too small in both dimensions fails the
+        line-height half while *passing* the fit half on its shrunken font, and
+        a narrow but tall box does the reverse. Which one fires is an accident
+        of the wrapping, so silencing one half alone leaves the group reported
+        by the other for the same single fault.
+
+        The wrapping fixer is gated with it: no issue reported, so no transplant
+        is attempted, and the layout the reviewer accepted is not quietly
+        rewritten on the next ``--fix`` pass.
 
         Well-formed → (False, None, ratio). Ill-formed with no fix flag, or with
         the transplant rejected → (False, issue_type, ratio). Transplant applied
@@ -1276,9 +1353,10 @@ class OcrChecker:
 
         ratio = _line_height_ratio(group, context.line_heights.own)
 
-        if not is_acknowledged(group, TEXT_NEVER_FITS_ISSUE) and not _group_text_fits(
-            group, context.fanta_page
-        ):
+        if is_acknowledged(group, TEXT_NEVER_FITS_ISSUE):
+            return False, None, ratio
+
+        if not _group_text_fits(group, context.fanta_page):
             issue = "text_does_not_fit"
         elif ratio is not None and ratio < self._limits.outlier:
             issue = "too_many_lines"
@@ -1422,9 +1500,11 @@ class OcrChecker:
         one (per ``_QUEUE_SEVERITY``), not whichever check happened to run
         first, so triage by issue type sees the worst of each group.
 
-        A line-height issue carries its ratio as a sixth field, so a queue can be
-        triaged before it is worked. ``load_queue_file`` reads only the first
-        five fields, so the extra one costs the editor nothing.
+        An issue with a number behind it carries that as a sixth field, so a
+        queue can be triaged before it is worked: the line-height ratio, the
+        text-similarity ratio, or the box IoU, depending on the issue.
+        ``load_queue_file`` reads only the first five fields, so the extra one
+        costs the editor nothing.
         """
         best: dict[tuple[int, str, str, str], IssueFound] = {}
         for issue in all_issues:
@@ -1667,6 +1747,10 @@ def main(  # noqa: PLR0913
         LINE_HEIGHT_MARGINAL_FRACTION,
         help="Upper edge of the marginal band; only used with --include-marginal.",
     ),
+    box_iou_min: float = typer.Option(
+        BOX_IOU_MIN,
+        help="Flag as 'box_mismatch' when the engines' text_boxes overlap below this IoU.",
+    ),
 ) -> None:
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."
@@ -1676,6 +1760,9 @@ def main(  # noqa: PLR0913
             f"--line-height-marginal ({line_height_marginal}) must not be below"
             f" --line-height-threshold ({line_height_threshold})."
         )
+        raise typer.BadParameter(err_msg)
+    if not 0.0 <= box_iou_min <= 1.0:
+        err_msg = f"--box-iou-min ({box_iou_min}) must be between 0 and 1."
         raise typer.BadParameter(err_msg)
 
     fixes = FixFlags(
@@ -1698,7 +1785,7 @@ def main(  # noqa: PLR0913
         include_marginal=include_marginal,
     )
     output_file = output or _default_output_file(volumes_str)
-    OcrChecker(comics_database, fixes, limits).check_titles(title_list, output_file)
+    OcrChecker(comics_database, fixes, limits, box_iou_min).check_titles(title_list, output_file)
 
 
 if __name__ == "__main__":

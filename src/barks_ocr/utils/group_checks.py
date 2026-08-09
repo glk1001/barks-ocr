@@ -16,10 +16,11 @@ from barks_fantagraphics.speech_markup import strip_markup, validate_markup
 
 from barks_ocr.utils.vision_schema import GROUP_TYPES
 
-# Acknowledging this silences `ocr_check`'s ``text_does_not_fit`` for the group:
-# the lettering overflows the box and always will, because the box is as drawn.
-# Named for the judgement, not the check, since the check keeps firing —
-# `ocr_check` is what stops reporting it.
+# Acknowledging this silences every layout check `ocr_check` runs on the group
+# -- `text_does_not_fit` and both `too_many_lines` bands. They are two symptoms
+# of one fault, a box that cannot hold its lettering as drawn, and which one
+# fires is an accident of the wrapping. Named for the judgement, not for either
+# check, since the checks keep firing -- `ocr_check` is what stops reporting.
 TEXT_NEVER_FITS_ISSUE = "text-will-never-fit"
 
 DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
@@ -296,7 +297,7 @@ def _never_fires(group: dict) -> bool:
     # of the check that does own them:
     #
     #   florence-check       -- florence_check.py, an external model run.
-    #   text-will-never-fit  -- ocr_check's text_does_not_fit, which needs the
+    #   text-will-never-fit  -- ocr_check's layout checks, which need the
     #                           rendered font and the page context.
     del group
     return False
