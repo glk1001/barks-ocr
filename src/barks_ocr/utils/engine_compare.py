@@ -14,11 +14,18 @@ from barks_ocr.utils.ocr_box import PointList, points_bbox, text_box_problem
 
 # Below this intersection-over-union, the two engines boxed different things.
 # Measured over the 65,649 cross-engine pairs that read identically: median IoU
-# 0.932, p10 0.801, p1 0.363. 0.5 selects 1.8% of pairs, and 111 of those do not
-# overlap at all — several with a degenerate box on one side (heights of 4-7px).
-# IoU rather than a pixel distance because it normalizes: a 30px edge slip is
-# nothing on a 500px balloon and most of a 150px caption.
-BOX_IOU_MIN = 0.5
+# 0.932, p10 0.801, p1 0.363. IoU rather than a pixel distance because it
+# normalizes: a 30px edge slip is nothing on a 500px balloon and most of a 150px
+# caption.
+#
+# 0.4 flags 761 pairs (1.16%), down from 1,188 at the original 0.5. Loosened
+# because most of what it reports is a padding difference rather than a
+# disagreement about where the lettering is: across the whole 0.1-0.5 range
+# about three quarters of flagged pairs have one box wholly inside the other
+# (`AK!` at 71x42 against 109x68, `GEE!` at 99x37 against 135x67). That ratio is
+# flat, so there is no threshold that separates the two — see the calibration
+# doc. Tunable per run with --box-iou-min.
+BOX_IOU_MIN = 0.4
 
 # Fields that differ between the engines by construction, so a difference in one
 # says nothing about either reading. Percentages are over the pairs that read

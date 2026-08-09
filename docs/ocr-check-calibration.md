@@ -129,7 +129,7 @@ They run *only* where the readings match. A positional pair with differing text 
 already reported as `text_mismatch` and may simply be mis-paired, so a box or attribute
 verdict on it would be measuring nothing.
 
-### `BOX_IOU_MIN = 0.5`
+### `BOX_IOU_MIN = 0.4`
 
 Intersection over union of the two axis-aligned boxes. Measured over the 65,649 pairs
 that read identically:
@@ -140,19 +140,57 @@ that read identically:
 
 | threshold | pairs | share |
 |---|---|---|
-| **IoU < 0.5** | **1,190** | **1.8%** |
-| IoU < 0.7 | 3,273 | 5.0% |
-| IoU < 0.9 | 19,315 | 29.4% |
+| IoU < 0.50 | 1,188 | 1.81% |
+| IoU < 0.45 | 939 | 1.43% |
+| **IoU < 0.40** | **761** | **1.16%** |
+| IoU < 0.35 | 615 | 0.94% |
+| IoU < 0.30 | 504 | 0.77% |
+| IoU < 0.20 | 345 | 0.53% |
 
 IoU rather than a pixel distance because it normalises: a 30px edge slip is nothing on a
-500px balloon and most of a 150px caption. 0.5 is the knee that isolates real
-disagreement — **111 pairs do not overlap at all**, and several of those carry a
-degenerate box on one side (`WHOOSH!` at 309x7, `ZOOM` at 195x4). Tunable with
-`--box-iou-min`.
+500px balloon and most of a 150px caption. **111 pairs do not overlap at all**, and
+several of those carry a degenerate box on one side (`WHOOSH!` at 309x7, `ZOOM` at
+195x4). Tunable per run with `--box-iou-min`.
+
+It shipped at 0.5 and was loosened to 0.4 on 2026-08-09, which is a judgement about queue
+size rather than a knee in the data — there is no knee, and the sweep below is the reason
+to say so out loud.
 
 A malformed box on either side yields no verdict at all rather than a score of 0:
 `bad_text_box` already owns that fault, and every geometric check in the module is gated
-on `_text_box_problem` the same way.
+on `text_box_problem` the same way.
+
+#### Most of what it flags is padding, not disagreement
+
+Split the flagged pairs by whether one box sits wholly inside the other — the engines
+agreeing on where the lettering is and differing only on how much room to give it:
+
+| band | pairs | nested | offset | nested share |
+|---|---|---|---|---|
+| 0.45–0.50 | 249 | 189 | 60 | 76% |
+| 0.40–0.45 | 178 | 147 | 31 | 83% |
+| 0.35–0.40 | 146 | 103 | 43 | 71% |
+| 0.30–0.35 | 111 | 83 | 28 | 75% |
+| 0.25–0.30 | 101 | 77 | 24 | 76% |
+| 0.10–0.25 | 185 | 132 | 53 | 71% |
+| **0.00–0.10** | **218** | **71** | **147** | **33%** |
+
+The share is flat at roughly three quarters all the way from 0.5 down to 0.10, and only
+flips below 0.10. Two things follow.
+
+**Lowering the threshold does not improve the signal, it just shortens the queue.** Every
+band drops nested and offset pairs in the same proportion, so 0.4 against 0.5 is 427
+fewer flags of the same mixture, not 427 fewer false ones. The typical nested case is a
+short exclamation where one engine boxes the glyphs and the other the balloon — `AK!` at
+71x42 against 109x68, `GEE!` at 99x37 against 135x67. Whether that is benign depends on
+what reads the box: for the fit and line-height checks a box 2.4x taller is not a detail,
+and those run per engine off exactly this geometry.
+
+**If only genuine offsets are wanted, the threshold is the wrong instrument.** The clean
+separation is nesting, not overlap: exempting nested pairs would leave ~286 offset pairs
+at 0.5, more real disagreement than 0.4 reports while queueing far less padding. Not
+done, because "one box inside the other" is not automatically correct — see above — and
+it would need its own calibration.
 
 ### Which attributes must match
 
