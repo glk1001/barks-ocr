@@ -209,15 +209,42 @@ def _copy_fields(src: dict, dst: dict) -> bool:
     ``type_was`` says it overruled this engine, ``type_adjudicated`` says it
     settled a cross-engine disagreement, which includes confirming this engine
     and so leaves no ``type_was`` behind.
+
+    ``type_was`` itself is never copied. The ruling travels; each engine's
+    record of having been wrong does not, because that is per engine. The
+    destination gets one only when this copy actually changes its ``type``, and
+    then it records the label the destination itself held.
     """
     changed = False
     keys = MIRRORED_KEYS
-    if src.get(TYPE_WAS_KEY) is not None or src.get(TYPE_ADJUDICATED_KEY):
+    # The destination's own superseded label, set only when this copy actually
+    # changes its `type`. Bound here rather than in the branch below so the
+    # post-loop write does not depend on two `retyping` tests agreeing.
+    dst_was: str | None = None
+    retyping = src.get(TYPE_WAS_KEY) is not None or src.get(TYPE_ADJUDICATED_KEY)
+    if retyping:
         keys = (*keys, *RETYPED_KEYS)
+        # `type_was` is the ONE type key that must not be copied: it is this
+        # engine's own history, not the ruling. The source's says the source's
+        # grouper was wrong; whether the destination's was is a separate fact,
+        # and it is false whenever the destination already carried the label the
+        # pass settled on. Writing it anyway inflates the very number `type_was`
+        # exists to keep readable -- how often each grouper mislabels.
+        # Measured 2026-08-09: mirroring Vol. 1 as it stood would have stamped 8
+        # such records, and on 3 of the 4 pages involved that was the only thing
+        # the mirror had to do. Found on Camera Crazy 155 g9, where the second
+        # engine had `dialogue` right from the start and was handed a
+        # `type_was: sound_effect` recording a correction it never needed.
+        keys = tuple(k for k in keys if k != TYPE_WAS_KEY)
+        dst_was = dst.get(TYPE_KEY) if dst.get(TYPE_KEY) != src.get(TYPE_KEY) else None
     for stored_key in keys:
         if src.get(stored_key) != dst.get(stored_key):
             dst[stored_key] = src.get(stored_key)
             changed = True
+    # Set after the loop so it records what the destination held BEFORE the copy.
+    if retyping and dst_was is not None and dst.get(TYPE_WAS_KEY) != dst_was:
+        dst[TYPE_WAS_KEY] = dst_was
+        changed = True
     return changed
 
 
