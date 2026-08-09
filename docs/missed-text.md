@@ -231,18 +231,32 @@ at all, and adding it produced a duplicate. And note that the audit matches by
 substring, so a short effect inside a longer one (`AWK!` within `SQUAWK!`) reads
 as already grouped.
 
-### Outstanding, for a later pass
+### Doing the adds after the review — worked through 2026-08-09
 
-Left deliberately un-added because each one renumbers a page and would invalidate
-a finished review:
+*Farragut the Falcon* finished with three structural gaps, deliberately left
+until the review was mirrored because each renumbers a page: an `AWK!` on 159
+grouped by neither engine, a panel-8 `OW!` on 158 that only easyocr had, and the
+vertical `LATER` on 166 grouped twice on both. Closing them in the editor
+afterwards worked — both engines came back holding the same 139 groups, matching
+on every `(panel, text)` key and on every count — but it cost two repairs worth
+knowing about in advance.
 
-- *Farragut the Falcon* 159 — `AWK!`, the falcon's cry in panel 4, grouped by
-  neither engine. It is in that page's `visible_text`, so the audit keeps
-  reporting it, though as *only paddleocr* because of the substring match above.
-- *Farragut the Falcon* 158 — the panel-8 `OW!` exists on easyocr only; paddleocr
-  never grouped that lettering.
-- *Farragut the Falcon* 166 — the vertical `LATER` in the margin is grouped twice
-  on both engines, boxes 3px apart. A deletion, not an addition.
+**A group added in the editor keeps the seed's `ai_text`.** The `AWK!` arrived on
+both engines reading `SQUAWK!`, the text of the group it was seeded from, and
+attributed to the wrong bird with it. The one group added to close a
+searchability gap was therefore itself unsearchable, and the wrong text was on
+the searchable field rather than anywhere a reader would notice. Check the text
+of any added group against its own crop, not just its box.
+
+**On easyocr it also arrived `speaker_reviewed`,** deep-copied from the seed, so
+it was signed off before anyone had looked at it — and a title reporting a
+complete review would have carried a group nobody read. Clear it and requeue.
+
+Both hazards are in `SKILL.md` already; what this run adds is that they land
+together on the same group, and that the corrupted field is the one the addition
+existed to populate. The remaining check that catches them is the one that
+catches the renumbering: re-verify by `(panel_num, ai_text)` afterwards, and read
+the added groups' text off the art.
 
 ### The part that is not plumbing — still not built
 
