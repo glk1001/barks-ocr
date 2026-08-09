@@ -12,6 +12,10 @@ has twice been found not to reach the pass.
 
 This skill is the **operational** half: the order of the steps, and the traps.
 
+The prompt that *starts* a run is `docs/vision-pass-run-prompt.md` — the title
+block, the last review's findings, and the volume's cap palette, which are the
+only parts this skill and `roster.txt` cannot supply.
+
 ## The sequence, per title
 
 ```bash
