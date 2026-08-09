@@ -204,6 +204,46 @@ coordinates by mistake (caught by the panel-bounds check, which is exactly the
 mistake panel-local input exists to make impossible to commit silently), a box
 over an existing balloon (100% overlap), and a panel the page does not have.
 
+### The renumbering shifts every later annotation — found 2026-08-09
+
+The append-and-renumber above is correct in itself, and it is also a trap: the
+per-group annotations are written by the id in `result.json`, which is the
+**pre-insertion** numbering. An addition at reading-order position *n* therefore
+gives every group from *n* upwards the *previous* group's speaker, cap colour,
+`identified_by`, note and type correction, and leaves the last group on the page
+with none. Both engines.
+
+Found on *Farragut the Falcon* 163, where a `ZOW` inserted at position 4 moved
+nine groups: a `Dewey` call landed on the wrong balloon, and a speech balloon was
+typed `sound_effect` because it inherited the next group's correction. Nothing
+downstream catches it — the audit runs clean afterwards precisely because the
+addition has landed, and the generated queue is one entry short for that page,
+which is what desynchronises the editor mid-review.
+
+Until `vision_apply` keys annotations after renumbering, treat any run that
+reports *Added N group(s)* as suspect: re-check that page's annotations against
+the corpus by `(panel_num, ai_text)`, which renumbering cannot move, before
+building any queue. Repair the same way.
+
+Two habits that would have avoided it entirely. **Check the other engine first**
+— paddleocr already had that `ZOW`, so it was a copy-across and not an addition
+at all, and adding it produced a duplicate. And note that the audit matches by
+substring, so a short effect inside a longer one (`AWK!` within `SQUAWK!`) reads
+as already grouped.
+
+### Outstanding, for a later pass
+
+Left deliberately un-added because each one renumbers a page and would invalidate
+a finished review:
+
+- *Farragut the Falcon* 159 — `AWK!`, the falcon's cry in panel 4, grouped by
+  neither engine. It is in that page's `visible_text`, so the audit keeps
+  reporting it, though as *only paddleocr* because of the substring match above.
+- *Farragut the Falcon* 158 — the panel-8 `OW!` exists on easyocr only; paddleocr
+  never grouped that lettering.
+- *Farragut the Falcon* 166 — the vertical `LATER` in the margin is grouped twice
+  on both engines, boxes 3px apart. A deletion, not an addition.
+
 ### The part that is not plumbing — still not built
 
 The pass can now add a group when it notices one. It still only notices
