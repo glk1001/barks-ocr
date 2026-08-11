@@ -25,3 +25,18 @@ HELP KEEP AMERICA STRONG
 # pages, where they may well deserve a group.
 2 031 EXIT
 11 039 B Co.
+
+# Judged not worth a group, 2026-08-11. A magazine cover title in the newsstand
+# rack, most of it hidden behind the magazine standing in front: at 16x only OP
+# is legible and the full title cannot be inferred -- COP fits as well as POP
+# beside the CRIME cover next to it. A group was added and then removed, since a
+# searchable box whose text is a guess is worse than none. The page's
+# visible_text still records OP, which is what is printed.
+#
+# Both spellings are listed because the decision has to survive a re-reading.
+# Note that the OP entry will not actually fire: `covers` matches on
+# containment, and a two-letter needle is a substring of TO POINT in a dialogue
+# group on the same page, so the audit never raises it in the first place. The
+# POP line is the one that does the work if anyone completes the word later.
+2 009 OP
+2 009 POP
