@@ -1391,12 +1391,6 @@ class EditorApp(App):
 
         row.add_widget(self._get_save_button())
 
-        set_type_btn = Button(
-            text="Set Type", size_hint_x=None, width=110, size_hint_y=None, height=44
-        )
-        set_type_btn.bind(on_press=lambda _: self._show_type_popup())
-        row.add_widget(set_type_btn)
-
         set_flor_btn = Button(
             text="Set Flor", size_hint_x=None, width=110, size_hint_y=None, height=44
         )
@@ -1413,6 +1407,12 @@ class EditorApp(App):
         )
         keep_text_btn.bind(on_press=lambda _: self._keep_text_as_is())
         row.add_widget(keep_text_btn)
+
+        set_type_btn = Button(
+            text="Set Type", size_hint_x=None, width=110, size_hint_y=None, height=44
+        )
+        set_type_btn.bind(on_press=lambda _: self._show_type_popup())
+        row.add_widget(set_type_btn)
 
         if not self._queue:
             row.add_widget(self._get_save_exit_button())
@@ -2783,6 +2783,15 @@ class EditorApp(App):
         group carrying ``speaker_was`` is a correction and one without it is a
         confirmation, so a per-title error rate is computable from the corpus
         alone.
+
+        Each ``_was`` key answers for its own field and is written only when
+        *that* field changed. They used to be written as a pair whenever either
+        one moved, which broke the very thing they exist for: a speaker-only
+        correction stamped ``cap_colour_was`` equal to the unchanged cap, and a
+        cap-only correction stamped ``speaker_was`` equal to the unchanged
+        speaker, so a confirmation read as a correction and inflated the error
+        rate. Found 2026-08-11 across four titles; ``speaker_was == speaker`` is
+        the signature, and ``cap_colour_was == cap_colour`` the commoner one.
         """
         group = pane.json_group()
         if group is None:
@@ -2795,15 +2804,28 @@ class EditorApp(App):
         # Only on a real change, and only the first time: a second edit of an
         # already-corrected group must not overwrite the pass's original answer
         # with the first reviewer's.
-        changed = normalize_speaker(was_speaker or "") != speaker or was_cap != cap_colour
-        if changed and was_speaker and SPEAKER_WAS_KEY not in group:
+        if (
+            was_speaker
+            and normalize_speaker(was_speaker) != speaker
+            and SPEAKER_WAS_KEY not in group
+        ):
             group[SPEAKER_WAS_KEY] = was_speaker
+        if was_cap != cap_colour and CAP_COLOUR_WAS_KEY not in group:
             group[CAP_COLOUR_WAS_KEY] = was_cap
         group[SPEAKER_KEY] = speaker
         group[SPEAKER_CONFIDENCE_KEY] = REVIEWED_CONFIDENCE
         group[SPEAKER_REVIEWED_KEY] = True
         group[SPEAKER_REVIEWED_DATE_KEY] = _today()
         group[CAP_COLOUR_KEY] = cap_colour
+        # A `_was` key must never equal its current value. The guard above keeps
+        # the *first* reviewer's answer, so a second edit that puts the call back
+        # to what the pass said would strand a key asserting a correction that no
+        # longer exists -- which is how 130 g4, 157 g14 and 160 g11 came to read
+        # `speaker_was == speaker` with no correction anywhere in their history.
+        if SPEAKER_WAS_KEY in group and group[SPEAKER_WAS_KEY] == group[SPEAKER_KEY]:
+            del group[SPEAKER_WAS_KEY]
+        if CAP_COLOUR_WAS_KEY in group and group[CAP_COLOUR_WAS_KEY] == group[CAP_COLOUR_KEY]:
+            del group[CAP_COLOUR_WAS_KEY]
         if identified_by:
             group[IDENTIFIED_BY_KEY] = identified_by
         if review_note:
