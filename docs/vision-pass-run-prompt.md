@@ -79,6 +79,34 @@ p117 panel 3 (the boys hold their caps at Daisy's door):
 Paste these into a prompt that continues the same volume. Match dim crowns
 against the hexes, not against an idea of red.
 
+Vol. 3, from *Mystery of the Swamp* 016 panel 8, and re-measured on three more
+titles 2026-08-11/12:
+
+| | |
+|---|---|
+| red (Huey) | `#e71a21` |
+| blue (Dewey) | `#04a4d6` |
+| green (Louie) | `#039d45` |
+| solid winter caps, *Pumpkinburg* 044 p7 | `#e71a21` `#01a2d3` `#009d43` |
+| black-cap segments, *Icebox Robber* 072 p2 | `#e41921` `#06a4d0` `#019d42` |
+| thin slivers, *Icebox Robber* 072 p3 | `#db3131` `#159cad` `#2f8780` |
+| small figures, *Pumpkinburg* 047 p8 | `#da1e25` `#0da2cf` `#109592` |
+| tiny figures, *Pumpkinburg* 053 p4 | `#de1749` `#219a94` `#3d7d4e` |
+
+**Vol. 3 uses two cap constructions and sometimes none at all**, so do not
+assume from one title what the next one shows. *Pumpkinburg* is a winter story
+with big solid stocking caps that read at a glance; *The Icebox Robber* uses
+the black cap with coloured segments, and only on one of its ten pages;
+*Webfooted Wrangler* has the boys in identical brown ten-gallon hats from the
+splash on and offers no colour anywhere in the title.
+
+The hardest case measured so far is *Pumpkinburg* 053 p4, where the boys are
+about 25px tall and the blue prints `#219a94` — G154 against B148, further
+toward cyan than any recorded green drift and less blue than any recorded blue.
+It is only resolvable by elimination: the other two caps in the panel read
+unambiguously red and green, so the third is the blue however it printed. Say
+so in the note when a colour is settled that way.
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
