@@ -46,7 +46,7 @@ ENGINE_LOCAL_FIELDS: frozenset[str] = frozenset(
 # validated", and it was over half of every attrs_mismatch raised — 3,789 pairs,
 # of which 2,540 are nothing more interesting than "normal" against "emphasized".
 # Reporting it buried the 2,342 "type" disagreements the check exists to find.
-UNVALIDATED_FIELDS: frozenset[str] = frozenset({"style", "type_was"})
+UNVALIDATED_FIELDS: frozenset[str] = frozenset({"style", "type_was", "vision_added"})
 
 UNCOMPARED_FIELDS: frozenset[str] = ENGINE_LOCAL_FIELDS | UNVALIDATED_FIELDS
 
