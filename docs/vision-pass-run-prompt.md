@@ -79,7 +79,7 @@ p117 panel 3 (the boys hold their caps at Daisy's door):
 Paste these into a prompt that continues the same volume. Match dim crowns
 against the hexes, not against an idea of red.
 
-Vol. 3, from *Mystery of the Swamp* 016 panel 8, and re-measured on three more
+Vol. 3, from *Mystery of the Swamp* 016 panel 8, and re-measured on four more
 titles 2026-08-11/12:
 
 | | |
@@ -92,13 +92,37 @@ titles 2026-08-11/12:
 | thin slivers, *Icebox Robber* 072 p3 | `#db3131` `#159cad` `#2f8780` |
 | small figures, *Pumpkinburg* 047 p8 | `#da1e25` `#0da2cf` `#109592` |
 | tiny figures, *Pumpkinburg* 053 p4 | `#de1749` `#219a94` `#3d7d4e` |
+| black-cap segments, *Pecking Order* 075 p2 | `#d72b2f` `#0f9fa7` `#039e4f` |
+| large caps, *Pecking Order* 083 p2 | `#de1a21` `#09a1d5` `#099b46` |
 
 **Vol. 3 uses two cap constructions and sometimes none at all**, so do not
 assume from one title what the next one shows. *Pumpkinburg* is a winter story
 with big solid stocking caps that read at a glance; *The Icebox Robber* uses
 the black cap with coloured segments, and only on one of its ten pages;
 *Webfooted Wrangler* has the boys in identical brown ten-gallon hats from the
-splash on and offers no colour anywhere in the title.
+splash on and offers no colour anywhere in the title. *Pecking Order* uses the
+black cap with segments too, but throughout, not on one page — so "which
+construction" is per title and "how many pages carry it" is a separate question.
+
+**A dark, muddy segment beside a clean bright one is the GREEN, not a second
+blue** — and "the two of them look alike, so neither counts" is a trap that has
+now cost seven names across three sessions. In *Pecking Order* the pass measured
+`#21949a` next to `#3f737e` on 076 p4, and `#29969f` next to `#335f68` on 077 p8,
+called each pair "the same hue at two lightnesses, B above G in all four", and
+recorded both as unreadable. The review named the darker one **green** every
+time — 3 for 3, plus three more collectives it named outright.
+
+B against G is **not** the discriminator when the segment is small. Saturation
+is: a blue segment stays saturated however tiny, so one that has gone muddy at
+all is a thinned green whatever B is doing. `#3f737e` and `#335f68` are both
+about 50% saturated; the blues beside them are 95%.
+
+And rank the segments **against each other inside the panel** before asking
+whether any is ambiguous. Three caps that are always red, blue and green mean
+the ordering resolves itself: brightest-and-most-saturated of the two cool
+segments is the blue, the duller one is the green. Snap first, then ask about
+ties — a tie you created by snapping both toward blue is circular, and it is the
+specific move to distrust.
 
 The hardest case measured so far is *Pumpkinburg* 053 p4, where the boys are
 about 25px tall and the blue prints `#219a94` — G154 against B148, further
