@@ -63,6 +63,30 @@ Pets* and *The Hard Loser* reduced to four lines:
 - two were animal-vs-duck and went opposite ways, reasoned from the content of
   the noise to the species; read the drawing, not the onomatopoeia
 
+### Findings to paste into the next run (2026-08-12)
+
+17 corrections over *Pecking Order* and *Taming the Rapids*. **15 of the 17 were
+collectives the review then named**; only 2 were a call the pass had actually
+made. Every hedge held — all 52 medium calls were promoted to high.
+
+- TWO CAPS THAT LOOK ALIKE ARE STILL TWO CAPS. This one family produced 9 of the
+  17. Saturation is the discriminator, not blue-against-green: a blue segment
+  stays saturated however small, so the muddier of two cool bands is the green.
+  Rank the segments against each other inside the panel before calling any of
+  them unreadable — with only three inks, a panel carrying a clean red always
+  resolves. And if two sampling boxes return the **identical** hex, that is a
+  sampling fault, not one ink: real ink on two caps differs by a few counts, so
+  crop at 10x and look before concluding anything.
+- "GATHERED TAILS" MEANS CONVERGING ON ONE FIGURE. Four names were lost by
+  reading two tips ~70px apart, straddling two heads, as a cascade gathering.
+  Before invoking the clause, name the single figure both tips land on; if you
+  cannot, it does not apply and the tails name one boy each.
+- COUNT THE TAILS BEFORE CALLING TWO BALLOONS A JOINED PAIR. Assuming a shared
+  tail shifted a whole chain by one and cost two names.
+- A NEPHEW'S OWN CAP IN HIS OWN HANDS STILL NAMES HIM. The prop rule is about
+  scene property carried across a panel break, not a cap knocked off a head in
+  the panel where it came off.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
