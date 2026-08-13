@@ -87,6 +87,79 @@ made. Every hedge held — all 52 medium calls were promoted to high.
   scene property carried across a panel break, not a cap knocked off a head in
   the panel where it came off.
 
+### Findings to paste into the next run (2026-08-12, second batch)
+
+67 speaker corrections over *Days at the Lazy K*, *The Riddle of the Red Hat* and
+*Eyes in the Dark* — 538 groups. **61 of the 67 were `nephews` promoted to a
+name. Exactly one went the other way.** All 23 medium calls were promoted to
+high and none demoted, the second review running to do so.
+
+- A JOINED CASCADE'S LEFT-TO-RIGHT ORDER NAMES THEM. Three joined balloons,
+  three tails all leaving the lowest one and fanning one per boy, three readable
+  caps: that is one speaker per boy and the shared left-to-right order settles
+  which. The pass measured the tips, recorded the caps, wrote *"left-to-right
+  would make this one the red cap"* into the note and then recorded `nephews`
+  anyway; the review took that mapping every single time. A uniform 50-90px
+  offset is fine as long as order and spacing are preserved. `nephews` is for
+  tails that genuinely gather on ONE figure, for bare or unreadable caps, and for
+  a group whose box spans two balloons with different speakers.
+- ON A NIGHT PAGE THE BACKGROUND IS THE SAME BLUE AS A CAP. The one true cap
+  misread in 538 groups: a sampling box on a boy at a blue-lit fence returned
+  `#01a2d3`, H194 at full saturation, and the pass called it Dewey. That was the
+  fence. His band was the muted teal-green behind it. A cap hex that matches the
+  panel's background exactly is a sampling fault, not a reading.
+- SMALL FIGURES IN FRAME BEAT AN OFF-PANEL ADULT. Three balloons over a wide
+  shot with the boys tiny at one edge were given to Donald off-panel; all three
+  were nephews. Do not invent an off-panel speaker when the figures are drawn,
+  however small.
+- LETTERING INSIDE A THOUGHT CLOUD BELONGS TO THE FIGURE DRAWN INSIDE IT. `OINK!`
+  in a cloud holding a pig is the pig, not the character whose bubble trail leads
+  to the cloud.
+- THE TYPE QUEUE ONLY SHOWS WHAT THE PASS TOUCHED. A `ZZZ` the pass corrected was
+  re-corrected to `dialogue`; an identical `ZZZZZ` the pass left alone was never
+  looked at and still reads `sound_effect`. The two now disagree on the same
+  story. Snoring is a voice.
+
+### Findings to paste into the next run (2026-08-13)
+
+11 speaker corrections over *Thug Busters*, *The Great Ski Race* and *The
+Firebug* — 552 groups, so **2.0% against the previous batch's 12.5%**. All 59
+medium calls were promoted to high and none demoted, the third review running to
+do so: the hedging is calibrated, and what is left is in the calls the pass made
+confidently.
+
+The batch also split cleanly into two classes, and the second is new.
+
+- STILL UNDER-NAMING, 5 OF THE 11. Three were `?` marks, one hanging over each
+  of three boys with clean caps, recorded as `nephews` because nobody utters a
+  question mark; the review named all three off the cap beneath. One was a
+  silhouette pile where the tail belonged to the tall figure and went to a small
+  one — `nephews` where the answer was **Donald**. This rule is now in
+  `vision_schema.py`; a device over ONE figure names him.
+- A NAME SWAPPED FOR ANOTHER, 6 OF THE 11, AND THIS IS THE NEW ONE. Four were in
+  a single pile-up panel — three boys diving on Donald, heads overlapping, tail
+  tips within 40px of each other. The pass wrote *"the pile makes the tails
+  crowd"* into its own note, hedged to medium, and then assigned by balloon order
+  anyway; the review re-mapped all three to a different permutation. Two more
+  went the same way in crowded panels, one of them to **Donald**. Order is not
+  the tie-breaker when the tails crowd — crop at 6-10x and separate them, or say
+  `nephews`. Also in `vision_schema.py` now.
+- A COLOURING FAULT DID NOT STOP THE REVIEW NAMING THE BOY. On a panel printing
+  two of the three caps in the identical green `#0d9855`, the pass applied "two
+  caps the same colour name neither" and recorded `nephews`; the review named the
+  left one **Louie**. One data point, so the roster rule stands — but hedge to
+  medium and name rather than decline outright.
+- THE SPEAKER REVIEW IS NOT THE TYPE REVIEW. Two of the three titles came back
+  552/555 on speakers with **all 44 of their type corrections untouched**, while
+  the third had every one confirmed. Hand the corrections queue back separately
+  and say the count out loud; `vision-corrections --title` is the only thing that
+  answers for it.
+- DIFF THE ENGINES PER PAGE — IT PAID. On one page paddleocr had never created
+  five of easyocr's groups, including three whole balloons. The missed-text audit
+  saw two of them (only the two that happened to be in `visible_text`) and
+  `vision-mirror` then reported the same five as having no counterpart. The check
+  is `scripts/vision/engine_diff.py "Title"`, or bare for the whole corpus.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -104,7 +177,7 @@ Paste these into a prompt that continues the same volume. Match dim crowns
 against the hexes, not against an idea of red.
 
 Vol. 3, from *Mystery of the Swamp* 016 panel 8, and re-measured on four more
-titles 2026-08-11/12:
+titles 2026-08-11/13:
 
 | | |
 |---|---|
@@ -118,8 +191,62 @@ titles 2026-08-11/12:
 | tiny figures, *Pumpkinburg* 053 p4 | `#de1749` `#219a94` `#3d7d4e` |
 | black-cap segments, *Pecking Order* 075 p2 | `#d72b2f` `#0f9fa7` `#039e4f` |
 | large caps, *Pecking Order* 083 p2 | `#de1a21` `#09a1d5` `#099b46` |
+| backs to reader, *Days at the Lazy K* 093 p4 | `#e21723` `#0ca1d2` `#039c44` |
+| caps lifted off, *Days at the Lazy K* 094 p11 | `#e4181f` `#09a2d4` `#029d43` |
+| caps knocked off, *Days at the Lazy K* 099 p11 | `#e5191f` `#01a3d3` `#019d43` |
+| wide side band, *Eyes in the Dark* 101 p4 | `#e41920` `#08a3ce` `#089c6a` |
+| solid deerstalkers, *Thug Busters* 113 p1 | `#e71a21` `#01a2d4` `#009d46` |
+| segmented swim caps, *The Great Ski Race* 127 p8 | `#e71a21` `#05a2d4` `#039b43` |
+| banded black caps, *The Firebug* 208 p10 | `#e61b1e` `#089fc4` `#019d46` |
 
-**Vol. 3 uses two cap constructions and sometimes none at all**, so do not
+**A third construction, and it flips the reading rule.** *Eyes in the Dark* puts
+one large coloured band down the side of the cap, about a third of the crown —
+it reads at a glance and is used on every page. But its green prints at **H160**,
+not the H145 above, and both cool caps come out at S0.9+. On that title **hue is
+the discriminator and saturation is not**, which is the reverse of the thin-sliver
+rule below. Say in the note which one you used.
+
+*Days at the Lazy K* is the segmented black cap throughout, and gave a
+colouring fault worth knowing about: 098 p12 prints two of the three caps in the
+same green, identical at 10x, with the third a clean red. Two caps the same
+colour name neither.
+
+Vol. 3 also has titles with no nephews in them at all. *The Riddle of the Red
+Hat* is the Mickey Mouse back-of-book strip — no caps anywhere, and `Black Pete`
+arrives as a bare roster value the database supplies for that story.
+
+**A fourth and a fifth construction, and one title with no caps for a whole
+page.** *Thug Busters* puts the boys in big solid single-colour deerstalkers,
+worn on every page and readable at a glance — the easiest cap in the volume, and
+the story checks the convention itself: 110 p9 names the blue-capped boy
+Inspector Dewey, and on 115 p7 the red cap speaks and the next balloon answers
+him as Inspector Huey. *The Great Ski Race* uses a segmented swim cap, black
+crown with one coloured band, but only in the boat and beach panels; the boys are
+bare-headed through most of 118, 119 and 125, which is why a third of that
+title's calls are collectives. *The Firebug* uses a broad band across a black
+crown and confirms the convention in its own captions — 200 p1 reads "DEWEY SPIES
+SMOKE" over a boy in the blue band.
+
+**A teal band that is either ink, and only its own panel decides.** *The Firebug*
+prints the blue at H168-176 in about a third of its panels — muddy enough to look
+green, saturated enough not to be. It is the BLUE where the panel's other cool
+cap is a clean green (198 p6 `#0ea58c` beside `#069952`; 201 p7 `#0ea285` beside
+`#0a9c51`) and the GREEN where the other is a clean blue (205 p10 `#10968c`
+beside `#09a3d4`). The same printed colour, opposite answers. Do not carry a
+reading of it from one panel to the next: rank the two cool caps against each
+other inside the panel, exactly as for the thin slivers, and say in the note that
+the call was made by elimination.
+
+**And a page where the shirts carry the colour instead.** *The Firebug* 197 has
+no caps at all: the boys wear coloured shirts, green `#0a9846` (H145) and blue
+`#14a5c3` (H190), which are the cap inks to within a few counts — but the third
+shirt is ORANGE `#ec681d`, not the red ink, so that boy is named by elimination
+and not by matching. No panel in the title shows a coloured shirt and a cap
+together, so the whole page rests on that one inference; it was read at medium
+throughout and the review promoted all of it. Look for the bridging panel first,
+and hedge the page if there is none.
+
+**Vol. 3 uses five cap constructions and sometimes none at all**, so do not
 assume from one title what the next one shows. *Pumpkinburg* is a winter story
 with big solid stocking caps that read at a glance; *The Icebox Robber* uses
 the black cap with coloured segments, and only on one of its ten pages;

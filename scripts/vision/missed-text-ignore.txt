@@ -40,3 +40,26 @@ HELP KEEP AMERICA STRONG
 # POP line is the one that does the work if anyone completes the word later.
 2 009 OP
 2 009 POP
+
+# Judged not worth a group, 2026-08-12. The Ritzee Hat Shoppe window sign is
+# already grouped on both 209 and 219; the audit raises it only because the two
+# groups spell it differently. 209 stores "Ritzēe" with a macron over the second
+# e and 219 stores plain "Ritzee". The art draws a small decorative stroke there
+# in a script face, so neither is a misreading of a word -- it is a diacritic,
+# which the roster excludes from corrected_text. The page visible_text uses the
+# plain spelling.
+#
+# This entry does NOT currently fire, and the entry is kept anyway so the
+# decision survives a re-reading. audit_missed_text.py applies load_ignores()
+# only to `findings` -- the grouped-by-neither and grouped-by-one classes -- and
+# never to `near_misses`, so a near-miss cannot be suppressed at all today. The
+# line will start working if that is ever wired up.
+3 209 Ritzee Hat Shoppe
+
+# Judged not worth a group, 2026-08-12. The Great Ski Race 124 panel 3 draws a
+# refreshment stand with a row of four small price plates along its front -- a
+# pictogram of the item over "5¢", "10¢", "5¢", "5¢". They are scenery prices a
+# couple of dozen pixels high, not lettering anyone reads or would search for,
+# and neither engine grouped any of them. Recorded in the page visible_text as a
+# true record of what is printed, and deliberately left ungrouped.
+3 124 5¢ 10¢ 5¢ 5¢
