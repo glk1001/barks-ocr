@@ -160,6 +160,48 @@ The batch also split cleanly into two classes, and the second is new.
   `vision-mirror` then reported the same five as having no counterpart. The check
   is `scripts/vision/engine_diff.py "Title"`, or bare for the whole corpus.
 
+### Findings to paste into the next run (2026-08-13, third batch)
+
+2 speaker corrections over *Ten-Dollar Dither* — 175 groups, **1.2%**, against
+2.0% and 12.5% in the two batches before. All 20 medium calls were promoted to
+high and none demoted, the fourth review running to do so. Both corrections were
+the same pair in one panel, and both had already been hedged for the right
+reason — so what follows is mostly about the close-out, which is where this
+title's real damage was.
+
+- TRACE A TAIL FROM THE TIP UP, NOT FROM THE BALLOON DOWN. The two corrections
+  were a swapped pair in a panel where two tails **crossed** between the balloons
+  and the boys. The pass assigned each tail to the balloon whose edge it seemed
+  to leave; at that end both tails pass through the same few dozen pixels, so it
+  is a coin flip dressed as a measurement. The tip end is reliable, the origin
+  end is not. When two tails cross, left-to-right balloon order beats
+  nearest-edge — Barks crosses tails to preserve reading order, not to break it.
+- TWO CAPS IN THE IDENTICAL INK STILL NAME THEM. 135 p3 printed two caps the same
+  `#0a9e9c`, confirmed over two **disjoint wide** samples (514px and 204px), so it
+  was the printing and not a sampling box. The pass named them from the story's
+  seating order with the third cap as anchor, at medium, with `cap_colour` left
+  **null** so the call was not a tautology — the review promoted both. Do not
+  decline to `nephews` for this. A *small* sample matching on two caps is still a
+  bad box: crop at 10x and look.
+- A CLEAN CAP AND TAIL BEAT A LOOSE THIRD-PERSON LINE. A red-capped boy says
+  *"as soon as **Huey** finds another can opener"*. Recorded Huey/red at medium
+  with the contradiction written into the note; the review promoted it to high.
+  Barks writes the gag before he counts the caps.
+- CHECK EVERY REVIEW-ADDED GROUP ON BOTH ENGINES BEFORE MIRRORING. Four groups
+  added for missed text produced **five** faults: three arrived carrying the seed
+  group's `ai_text`, `notes` and `vision_note` (the boxes were right — it is the
+  text that comes across); one was written *into* an existing group and destroyed
+  a whole balloon on one engine; one went to one engine only; one was added twice,
+  identical in every field. Compare group counts per page **per engine** first,
+  then dump each added group beside its seed and flag every byte-identical field.
+  The missed-text audit reports zero once a group exists, whatever its text says,
+  so it catches none of this.
+- THE MISSED-TEXT AUDIT HAS A SECOND BLIND SPOT WORTH SAYING OUT LOUD. It only
+  sees `visible_text`, which is non-speech by definition, so a missed *shout* never
+  reaches it; and a missed string that already exists as a group elsewhere on the
+  page is matched and suppressed. This title had one of each (`OW!` and a second
+  `SPLAT`). Report those in prose — the tool will not.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -198,6 +240,7 @@ titles 2026-08-11/13:
 | solid deerstalkers, *Thug Busters* 113 p1 | `#e71a21` `#01a2d4` `#009d46` |
 | segmented swim caps, *The Great Ski Race* 127 p8 | `#e71a21` `#05a2d4` `#039b43` |
 | banded black caps, *The Firebug* 208 p10 | `#e61b1e` `#089fc4` `#019d46` |
+| wedged black caps, *Ten-Dollar Dither* 128 p2 | `#e51720` `#01a3d4` `#009d46` |
 
 **A third construction, and it flips the reading rule.** *Eyes in the Dark* puts
 one large coloured band down the side of the cap, about a third of the crown —
