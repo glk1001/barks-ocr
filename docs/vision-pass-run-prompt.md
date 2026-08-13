@@ -241,6 +241,9 @@ titles 2026-08-11/13:
 | segmented swim caps, *The Great Ski Race* 127 p8 | `#e71a21` `#05a2d4` `#039b43` |
 | banded black caps, *The Firebug* 208 p10 | `#e61b1e` `#089fc4` `#019d46` |
 | wedged black caps, *Ten-Dollar Dither* 128 p2 | `#e51720` `#01a3d4` `#009d46` |
+| band + mittens, *Donald Duck's Best Christmas* 138 p2 | `#e41c24` `#04a4d4` `#049c8c` |
+| stocking caps, *Silent Night* 251 p8 | `#e41c1c` `#04a4d4` `#049c44` |
+| caps + mittens, *Donald Tames His Temper* 147 p3 | `#e41c24` `#04a4d4` `#049c44` |
 
 **A third construction, and it flips the reading rule.** *Eyes in the Dark* puts
 one large coloured band down the side of the cap, about a third of the crown —
@@ -289,7 +292,26 @@ together, so the whole page rests on that one inference; it was read at medium
 throughout and the review promoted all of it. Look for the bridging panel first,
 and hedge the page if there is none.
 
-**Vol. 3 uses five cap constructions and sometimes none at all**, so do not
+**A sixth and a seventh construction, and both put the colour on the HANDS.**
+*Donald Duck's Best Christmas* gives the boys a thin band across the black
+crown plus **matching mittens**, and the mittens are the readable half: on 143
+the caps are gone entirely and only the mittens name anyone, and on 143 p4/p5/p8
+there is neither. Its green drifts H145-H176 across the title, so hue **and
+value** separate it from the blue (both sit at S0.97) — saturation does not.
+*Silent Night* and *Donald Tames His Temper* both use big solid single-colour
+stocking caps with a pompom, the easiest cap in the volume, and *Temper* adds
+the matching mittens again. Both print the identical three inks, `#e41c24` /
+`#04a4d4` (H194 V0.83) / `#049c44` (H145 V0.61).
+
+**But all three are winter stories where the caps come off indoors.** That is
+the thing to plan for, not the hue: *Silent Night* is bare-headed for 250 and
+the first four panels of 251, and *Temper* from 149 p3 to the end, which is 107
+of its 161 groups. Both titles finish on 59 and 27 `nephews` collectives — not
+because a readable cap was declined, but because nothing is printed. Say which
+it is in the note; the two look identical in a queue and only one of them is an
+error worth correcting.
+
+**Vol. 3 uses seven cap constructions and sometimes none at all**, so do not
 assume from one title what the next one shows. *Pumpkinburg* is a winter story
 with big solid stocking caps that read at a glance; *The Icebox Robber* uses
 the black cap with coloured segments, and only on one of its ten pages;
