@@ -202,6 +202,66 @@ title's real damage was.
   page is matched and suppressed. This title had one of each (`OW!` and a second
   `SPLAT`). Report those in prose — the tool will not.
 
+### Findings to paste into the next run (2026-08-13, fourth batch)
+
+18 speaker or cap corrections over *Donald Duck's Best Christmas*, *Silent
+Night* and *Donald Tames His Temper* — 459 groups, **3.9%**, against 1.2% for
+the batch before. All 41 medium calls were promoted to high and none demoted,
+the seventh review running to do so. The rate went up because one panel family
+went wrong three times over, not because the hedging drifted.
+
+- **IN A JOINED CLUSTER, DO NOT DECIDE WHICH BALLOON OWNS A TAIL FROM WHERE IT
+  LEAVES THE OUTLINE.** 6 of the 18. On 138 p2 the pass traced three tips
+  correctly, then attached each to the balloon whose bottom edge the tail hung
+  off — and got a clean rotation of the three names. The review used plain
+  balloon reading order against the left-to-right tip order and reversed all of
+  them. This extends "trace a tail from the tip up": the **tip** tells you the
+  figure, **reading order** tells you the balloon. At the origin end the tails of
+  a joined cluster all pass through the same few dozen pixels, so an attachment
+  that looks unambiguous at 6x is still a coin flip.
+- **A FAN THAT DOES NOT REACH EVERY BOY IS THE GATHERED CASE.** 3 of the 18. On
+  138 p4 the pass measured three tips, found two landing on one boy and none on
+  the third, wrote exactly that into its own note, and named them anyway at
+  medium; all three came back `nephews`. The clause is not narrowly "several
+  tails converging on one figure" — it is any fan that fails to give one tail per
+  boy.
+- **`other:everyone` IS THE VALUE FOR A CHORUS OF THE WHOLE PARTY.** 3 of the 18,
+  and the pass did not know the value existed. Carol balloons with a spray of
+  wavy trails across Donald *and* the boys were given to Donald at medium with a
+  note saying it might be the whole party. It is. Do not pick the loudest figure
+  out of a group that is plainly singing together.
+- **A BARE WHITE DUCK HEAD IS A NEPHEW UNTIL YOU SEE THE CAP AND THE TIE.** The
+  figure switching on the electric fan was read as Donald; indoors he still wears
+  the sailor cap and the bow tie, and this one had neither. Check for them before
+  naming him, especially on a small figure in the middle distance.
+- **A CAPTION-SHAPED BOX CAN BELONG TO A FIGURE DRAWN UNDER IT.** *Temper*'s
+  closing caption, "ALL QUIET ON OAK STREET…", is the policeman's line, not the
+  narrator's. And on the other side of the same coin, 148's framed resolution
+  went `none` -> **Donald**: lettering a character composed is theirs, unlike a
+  shop sign or a label.
+
+And three things from the close-out, which is where this batch's real damage was:
+
+- **A ONE-ENGINE GROUP CAN PASS BOTH CHECKS.** *Temper* 147 carried a `?` on
+  paddleocr only. `engine_diff.py` did not flag it — a single character is too
+  short for its filter — and the missed-text audit cannot see a drawn device,
+  which is never in `visible_text`. Only comparing group counts **per page per
+  engine** found it. Do that first, before the tools.
+- **`vision-mirror` repairs that case by itself.** It matched the group on its
+  box and copied the reviewed speaker across from the other engine. No hand
+  editing, no `added_groups`.
+- **SEED RESIDUE HAS MOVED TO THE REASONING FIELDS.** The two groups added on
+  *Silent Night* 250 had the right `ai_text` and the right boxes — and carried
+  the seed's Gemini `notes` ("This is a thought bubble, indicated by the cloud
+  shape", on a book cover), the pass's `vision_note` for an unrelated group
+  verbatim, and an `identified_by` on a `none` speaker. Grep the notes, not just
+  the text.
+
+One transcription error of the pass's own: *Silent Night* 250's book spine reads
+**ANTE BELLUM BROMIDES**, and the pass recorded BROADSIDES in `visible_text` off
+the page overview. Crop before transcribing anything into `visible_text`, exactly
+as for a `corrected_text`.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
