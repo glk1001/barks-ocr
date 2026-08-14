@@ -262,6 +262,55 @@ One transcription error of the pass's own: *Silent Night* 250's book spine reads
 the page overview. Crop before transcribing anything into `visible_text`, exactly
 as for a `corrected_text`.
 
+### Findings to paste into the next run (2026-08-14, fifth batch)
+
+9 speaker corrections over *Singapore Joe*, *Master Ice Fisher* and *Jet Rescue*
+— 468 groups, **1.9%**, against 3.9% for the batch before. All 68 medium calls
+were promoted to high and none demoted, the eighth review running to do so.
+
+- **A PANEL THAT PRINTS TWO CAPS IN ONE INK IS STILL AN IDENTIFICATION. 5 of the
+  9, and this is the whole story of the batch.** Vol. 3 did it in five panels
+  across the three titles — 158 p6 `#13a1cb` on two of three, 171 p5 `#2f9383`,
+  175 p3 `#139a7b`, 177 p4 `#0e9649`, 184 p2 `#139c82` — every one confirmed at
+  5-6x, so the printing and not a sampling box. The pass declined on three of
+  them and the review named **both boys on 158 p6, both on 175 p3, and the one on
+  184 p2**. Where the pass instead named them off the panel next door (171 p5 and
+  177 p4, both consecutive panels of the same scene with the caps unambiguous
+  there), the review kept the call. So the cross-panel chain is the right move and
+  the roster's "two nephews printed the same colour tells you nothing about
+  either" is about the COLOUR, not about the panel: it retires `cap_colour`, not
+  the identification. Look for the chain, and if there is none, name from seating
+  order at medium with `cap_colour` null rather than declining.
+- **A LINE THAT NAMES A NEPHEW CAN OWN THE NEXT BALLOON.** 159 p4: one boy says
+  *"IT'S HUEY, UNCA' DONALD! HE DOES IMITATIONS!"* and the next balloon is the
+  imitation itself, delivered by a boy with a clean green cap. The pass recorded
+  Louie off the cap and the tail; the review made it **Huey and left `cap_colour`
+  green**, a deliberate recorded disagreement. This does not overturn Ten-Dollar
+  Dither's "a clean cap and tail beat a loose third-person line" — the difference
+  is that this line introduces the speaker of the balloon that follows it, which
+  is an identification and not an aside.
+- **DO NOT OVERRIDE A MEASURED TIP WITH "ONE TAIL PER BOY".** 168 p1: the pass
+  wrote *"the tip at x415 falls inside the red boy's head span"* into its own
+  note and then gave the balloon to the next boy along anyway, to keep one tail
+  per boy. The review took the tip. Worse, the cap it claimed for that boy was
+  read off the panel image and never sampled — a targeted sample returns no
+  chromatic pixel on him at all. **Both cap-colour reversals in this batch were on
+  caps the pass did not sample**, out of about 135 colour reads that were.
+- **THE ONLY OVER-NAMING WAS IN THE CLEANEST PANEL IN THE TITLE.** 176 p3 is *Jet
+  Rescue*'s cap-reference panel — three big caps, red green and blue, unmissable —
+  and the one call the review sent back to `nephews` was there. A panel being easy
+  to read colour in does not make its tails easy to attach.
+- **THE ONE-ENGINE GROUPS ARE STILL THE CLOSE-OUT'S REAL WORK.** Five across the
+  three titles, all shouts or display lettering: 157 `OW!`, 162 `OWOO!`, 169
+  `OW!`, 173 `WHOOM!` (paddleocr only) and 171 `GOODBYE, CRUEL WORLD!` (easyocr
+  only, which is why that title mirrors 127 of 128). `engine_diff` caught two of
+  the five and the missed-text audit one; **per-page per-engine counts caught all
+  five**. Annotate them by hand — but do it BEFORE building the corrections queue,
+  not after: the two annotated late on *Singapore Joe* missed that title's queue
+  and were still outstanding after the review.
+- And the usual straggler: two groups came back unreviewed out of 468, 173 g12 and
+  184 g4. Count `speaker_reviewed` on both engines before calling a review done.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -304,6 +353,24 @@ titles 2026-08-11/13:
 | band + mittens, *Donald Duck's Best Christmas* 138 p2 | `#e41c24` `#04a4d4` `#049c8c` |
 | stocking caps, *Silent Night* 251 p8 | `#e41c1c` `#04a4d4` `#049c44` |
 | caps + mittens, *Donald Tames His Temper* 147 p3 | `#e41c24` `#04a4d4` `#049c44` |
+| banded black caps, *Singapore Joe* 165 p5 | `#e41a1d` `#04a2d5` `#079b45` |
+| banded black caps, *Master Ice Fisher* 166 p5 | `#d91a20` `#08a3cc` `#089a46` |
+| banded black caps, *Jet Rescue* 176 p3 | `#e61921` `#0ea2c6` `#049b43` |
+
+**Three more banded-black-cap titles, and between them five panels that print
+two caps in ONE ink.** All three use the black crown with a coloured band, the
+same construction as *Pecking Order* and *The Firebug*, and all three print the
+canonical three inks when they print them cleanly. What they add is the failure
+mode: `#13a1cb` on two of three caps (*Singapore Joe* 158 p6), `#2f9383` (*Master
+Ice Fisher* 171 p5), `#139a7b` (175 p3), `#0e9649` (*Jet Rescue* 177 p4) and
+`#139c82` (184 p2), each confirmed at 5-6x over disjoint boxes. Two of the three
+titles also shuffle the boys' left-to-right order from panel to panel — *Master
+Ice Fisher* 166 p5 seats them red/GREEN/blue, *Jet Rescue* 177 p1 blue/red/green —
+so seating is no anchor in any of them, and the panel next door is.
+
+Their green also drifts further than the volume's usual H145: *Singapore Joe*
+runs H145-H179 and *Master Ice Fisher* H140-H170, so the blue is repeatedly the
+muddier-looking cap and must be ranked inside its own panel every time.
 
 **A third construction, and it flips the reading rule.** *Eyes in the Dark* puts
 one large coloured band down the side of the cap, about a third of the crown —
