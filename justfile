@@ -1,6 +1,11 @@
 import '../barks-comic-building/justfile'
 
-_ocr_uv_run := "uv run --project " + justfile_directory()
+# `offline` comes from the imported barks-comic-building justfile — do not redefine it
+# here, just errors on a duplicate definition. This repo is the one that actually needs
+# it: the `en-core-web-sm` dev dependency is a direct URL (github.com), so uv revalidates
+# it over the network on every sync, and every recipe below then fails with no
+# connection whether or not it touches spacy. The wheel is already cached.
+_ocr_uv_run := "uv run " + offline + " --project " + justfile_directory()
 
 _default2:
     just --list --unsorted
