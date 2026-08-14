@@ -356,6 +356,7 @@ titles 2026-08-11/13:
 | banded black caps, *Singapore Joe* 165 p5 | `#e41a1d` `#04a2d5` `#079b45` |
 | banded black caps, *Master Ice Fisher* 166 p5 | `#d91a20` `#08a3cc` `#089a46` |
 | banded black caps, *Jet Rescue* 176 p3 | `#e61921` `#0ea2c6` `#049b43` |
+| banded black caps, *Donald's Monster Kite* 189 p4 | `#d91c24` `#07a3d1` `#278079` |
 
 **Three more banded-black-cap titles, and between them five panels that print
 two caps in ONE ink.** All three use the black crown with a coloured band, the
@@ -371,6 +372,14 @@ so seating is no anchor in any of them, and the panel next door is.
 Their green also drifts further than the volume's usual H145: *Singapore Joe*
 runs H145-H179 and *Master Ice Fisher* H140-H170, so the blue is repeatedly the
 muddier-looking cap and must be ranked inside its own panel every time.
+
+*Donald's Monster Kite* is the same banded black cap, and its green drifts as
+far as anything in the volume: H146 when it prints cleanly but H157, H175, H177,
+H180 and H181 on thin slivers, so on that title **hue alone does not separate the
+two cool caps** and value does — its greens sit at V0.55-0.61 against the blues'
+V0.72-0.83. It also prints two caps in one ink four times (189 p7 two greens,
+189 p8 both `#208878`, 191 p3 both `#109898`), and takes every cap off for the
+three panels set indoors at home on 195.
 
 **A third construction, and it flips the reading rule.** *Eyes in the Dark* puts
 one large coloured band down the side of the cap, about a third of the crown —
