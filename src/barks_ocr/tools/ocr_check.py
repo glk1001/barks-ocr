@@ -879,7 +879,6 @@ class OcrChecker:
             title = STR_TITLE_TO_ENUM[title_str]
             volume = self._comics_database.get_fanta_volume_int(title_str)
             page_groups = self._speech_groups.get_speech_page_groups(title, skip_missing=True)
-            page_panel_boxes = self._title_panel_boxes.get_page_panel_boxes(title)
 
             missing_by_page: dict[str, set[str]] = defaultdict(set)
             for m in self._speech_groups.get_missing_prelim_pages(title):
@@ -890,6 +889,19 @@ class OcrChecker:
             pages: dict[str, dict[OcrTypes, SpeechPageGroup]] = defaultdict(dict)
             for pg in page_groups:
                 pages[pg.fanta_page][pg.ocr_index] = pg
+
+            if not pages:
+                # Nothing of this title's own to check. The synthetic "All
+                # One-Pagers" collection is the case: all 133 of its pages are
+                # reprints, OCR'd in the volume they came from, so the page map
+                # is empty by design. Asking for its panel boxes would load
+                # geometry for pages that deliberately have no segments file --
+                # the one-pagers are in no title, so nothing ever segmented
+                # them. Missing prelims are still reported above.
+                print(f'  No pages to check in "{title_str}" (Vol. {volume}).')
+                continue
+
+            page_panel_boxes = self._title_panel_boxes.get_page_panel_boxes(title)
 
             title_issues, missing_panels, agreement, passes = self._check_title_to_convergence(
                 title_str, pages, page_panel_boxes
