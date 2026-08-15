@@ -10,7 +10,7 @@ from difflib import SequenceMatcher
 from enum import Enum, auto
 from itertools import zip_longest
 from pathlib import Path
-from statistics import median
+from statistics import mean, median
 
 import typer
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
@@ -71,6 +71,12 @@ LINE_HEIGHT_OUTLIER_FRACTION = 0.85  # below this * page median => surplus line 
 LINE_HEIGHT_MARGINAL_FRACTION = 0.9  # ...and below this => marginal, opt-in
 MIN_GROUPS_FOR_LINE_HEIGHT = 5  # too few groups for a trustworthy page median
 MIN_LINES_FOR_LINE_HEIGHT = 2  # one-line boxes measure high; see _implied_line_height
+# When the plain median sits this far above the page's densest cluster of line
+# heights, the median is measuring the wrong lettering -- see
+# ``_page_median_line_height``. 1.2 clears the 1.05-1.15 shoulder of ordinary
+# pages by a wide margin: 9,395 of 10,190 corpus pages sit at a ratio of 1.0.
+LINE_HEIGHT_BIMODAL_RATIO = 1.2
+_MODE_SMALLEST_SAMPLE = 2  # half-sample recursion stops here and averages the pair
 BAR_WIDTH = 24  # width of the engine-agreement progress bar
 
 _FIT_FONT_MISSING_WARNED: list[bool] = [False]
@@ -207,6 +213,7 @@ class LineHeightLimits:
     outlier: float = LINE_HEIGHT_OUTLIER_FRACTION
     marginal: float = LINE_HEIGHT_MARGINAL_FRACTION
     include_marginal: bool = False
+    bimodal_ratio: float = LINE_HEIGHT_BIMODAL_RATIO
 
 
 # One queue entry per group carries the group's most severe issue; this is
@@ -578,12 +585,64 @@ def _implied_line_height(group: dict) -> float | None:
     return box_h / n_lines
 
 
-def _page_median_line_height(json_groups: dict) -> float | None:
-    """Median implied line height for a page, or None if too few groups to judge."""
+def _half_sample_mode(values: list[float]) -> float:
+    """Return the centre of the densest cluster in *values*.
+
+    Repeatedly keeps the half of the sorted sample with the smallest range, so
+    it converges on the tightest concentration of values rather than on the
+    middle of the list. Unlike the median it is not moved by *how many* values
+    lie in the other cluster, only by how tightly they sit -- which is what
+    makes it survive a page where the contaminating register is the majority.
+    """
+    ordered = sorted(values)
+    while len(ordered) > _MODE_SMALLEST_SAMPLE:
+        half = (len(ordered) + 1) // 2
+        widths = [(ordered[i + half - 1] - ordered[i], i) for i in range(len(ordered) - half + 1)]
+        _width, start = min(widths)
+        ordered = ordered[start : start + half]
+    return mean(ordered)
+
+
+def _page_median_line_height(
+    json_groups: dict, bimodal_ratio: float = LINE_HEIGHT_BIMODAL_RATIO
+) -> float | None:
+    """Return the page's reference line height, or None if too few groups to judge.
+
+    Normally the plain median of the page's implied line heights: body
+    lettering is very consistent within a page, so the correctly boxed groups
+    cluster tightly and the median lands among them.
+
+    Some pages carry two registers, though, and then the median measures the
+    wrong one. Vol 3 page 257 is the clearest case -- the carol relayed through
+    the loudspeakers is free-lettered at 69-127px against ordinary dialogue at
+    41px, and **seven of its twelve measurable groups are the carol**, so the
+    median lands at 70.75 and every correctly wrapped dialogue balloon on the
+    page is flagged while the actual outliers pass. The same inversion arrives
+    by a second route on the uncleaned volumes, where a majority of loosely
+    drawn boxes lifts the median off the true lettering (vol 26 page 161 and
+    others). Rejecting outliers would not help: the median is already inside
+    the contaminating mode, so there is nothing for it to anchor on.
+
+    So the page is checked for that shape and, when it has it, the median of
+    the densest cluster is used instead. The test is deliberately one-sided --
+    only a median sitting *above* the mode is replaced -- which mirrors the
+    one-directionality of the check it feeds: ``_is_line_height_outlier`` fires
+    only below the reference, so only an inflated reference creates false
+    flags. Measured over all 10,190 corpus pages, that is not a nicety but the
+    whole safety argument: 63 pages would gain a flag if the mode were
+    substituted unconditionally, and **every one of them has the mode above the
+    median**, so the ratio gate excludes the lot. Of the pages it does catch,
+    26 trip the gate (0.26%) and their flags fall from 101 to 4.
+    """
     heights = [h for g in json_groups.values() if (h := _implied_line_height(g)) is not None]
     if len(heights) < MIN_GROUPS_FOR_LINE_HEIGHT:
         return None
-    return median(heights)
+
+    page_median = median(heights)
+    mode = _half_sample_mode(heights)
+    if mode > 0 and (page_median / mode) > bimodal_ratio:
+        return mode
+    return page_median
 
 
 def _line_height_ratio(group: dict, page_median: float | None) -> float | None:
@@ -969,11 +1028,12 @@ class OcrChecker:
             page_group,
             panel_boxes=panel_boxes,
             line_heights=PageLineHeights(
-                own=_page_median_line_height(json_groups),
+                own=_page_median_line_height(json_groups, self._limits.bimodal_ratio),
                 other=_page_median_line_height(
                     other_page_group.speech_page_json.get("groups", {})
                     if other_page_group is not None
-                    else {}
+                    else {},
+                    self._limits.bimodal_ratio,
                 ),
             ),
             other_page_group=other_page_group,
@@ -1747,6 +1807,13 @@ def main(  # noqa: PLR0913
         LINE_HEIGHT_MARGINAL_FRACTION,
         help="Upper edge of the marginal band; only used with --include-marginal.",
     ),
+    line_height_bimodal: float = typer.Option(
+        LINE_HEIGHT_BIMODAL_RATIO,
+        help=(
+            "Measure a page against its densest cluster of line heights, not its median,"
+            " when the median sits above that cluster by more than this ratio."
+        ),
+    ),
     box_iou_min: float = typer.Option(
         BOX_IOU_MIN,
         help="Flag as 'box_mismatch' when the engines' text_boxes overlap below this IoU.",
@@ -1763,6 +1830,11 @@ def main(  # noqa: PLR0913
         raise typer.BadParameter(err_msg)
     if not 0.0 <= box_iou_min <= 1.0:
         err_msg = f"--box-iou-min ({box_iou_min}) must be between 0 and 1."
+        raise typer.BadParameter(err_msg)
+    if line_height_bimodal < 1.0:
+        # At or below 1.0 the mode would replace the median on nearly every
+        # page, including the 63 where it sits *above* it and adds flags.
+        err_msg = f"--line-height-bimodal ({line_height_bimodal}) must be at least 1.0."
         raise typer.BadParameter(err_msg)
 
     fixes = FixFlags(
@@ -1783,6 +1855,7 @@ def main(  # noqa: PLR0913
         outlier=line_height_threshold,
         marginal=line_height_marginal,
         include_marginal=include_marginal,
+        bimodal_ratio=line_height_bimodal,
     )
     output_file = output or _default_output_file(volumes_str)
     OcrChecker(comics_database, fixes, limits, box_iou_min).check_titles(title_list, output_file)

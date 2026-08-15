@@ -694,6 +694,85 @@ engine's boxing errors into the other's page. The cross-engine transplant alread
 depends on this: `_layout_ok` judges a candidate donor against *its* engine's median
 (`line_heights.other`), which is what makes "the donor is well laid out" mean anything.
 
+### `LINE_HEIGHT_BIMODAL_RATIO = 1.2` — when the median measures the wrong lettering
+
+Added 2026-08-15, after vol 3 reported ten `too_many_lines` on one page and every one
+of them was wrong.
+
+The section above assumes the page median lands among the body lettering. On a page
+carrying **two registers** it does not, and then the check inverts completely — it
+flags the correctly wrapped groups and passes the outliers. Vol 3 page 257 (*Silent
+Night*) is the clearest case. The carol relayed through the planted loudspeakers is
+free-lettered at 69–127px against ordinary dialogue at 41px, and **seven of the twelve
+measurable groups are the carol**:
+
+| | | |
+|---|---|---|
+| g7 41.00 → 0.58 **FLAG** | g3 41.25 → 0.58 **FLAG** | g5 41.40 → 0.59 **FLAG** |
+| g10 44.00 → 0.62 **FLAG** | g0 55.00 → 0.78 **FLAG** | g9 69.50 → 0.98 |
+| g4 72.00 → 1.02 | g6 74.50 → 1.05 | g12 81.00 → 1.14 |
+| g13 103.00 → 1.46 | g1 116.50 → 1.65 | g2 127.00 → 1.80 |
+
+Median 70.75; the page's actual dialogue norm is **41.4**. All five flags are ordinary,
+correctly wrapped balloons, in both engines.
+
+It is partly traceable to the vision pass: `g1`, `g2`, `g12` and `g13` carry
+`type_was: sound_effect` and were retyped to `dialogue` under the relayed-voice rule,
+which dropped them out of `STYLIZED_TYPES` and into the median. Retyping them back is
+**not** the fix — the label is right, and it only moves the median to 49.5, leaving
+three flags, because `ALL IS CALM/BRIGHT` and one `SILENT NIGHT` were never
+`sound_effect`.
+
+**Outlier rejection cannot fix this.** With the contaminating register in the majority,
+the median is already inside it, so there is nothing to anchor a rejection rule on. What
+separates the two registers is density, not count: body lettering is a fixed printed
+size and clusters within a fraction of a pixel (41.0, 41.25, 41.4), while display
+lettering is hand-drawn and sprawls. So `_half_sample_mode` recurses on whichever half
+of the sorted sample has the smallest range, converging on the tightest cluster — 41.325
+here — and `_page_median_line_height` uses it in place of the median when
+
+```
+page_median / mode > LINE_HEIGHT_BIMODAL_RATIO
+```
+
+**The gate is one-sided on purpose, and that is the entire safety argument.** The check
+fires only *below* the reference, so only an inflated reference invents flags. Over all
+10,190 corpus pages, substituting the mode unconditionally would add flags on 63 pages —
+and **every one of those has the mode above the median** (ratios 0.77–0.98), so a gate
+that only replaces an inflated median excludes the lot by construction. Verified against
+the shipped function: **26 pages change, 0 gain a flag.**
+
+The threshold sits clear of the noise. Ratio distribution over the corpus:
+
+| ratio | 0.8 | 0.9 | 1.0 | 1.1 | 1.2 | 1.3 | 1.4 | 1.5 | 1.7 | 1.8 | 2.0 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| pages | 6 | 49 | **9,395** | 701 | 18 | 9 | 5 | 2 | 3 | 1 | 1 |
+
+92% of pages sit at 1.0 and never reach the branch. The 1.1 bucket is the shoulder of
+ordinary pages, and 1.2 clears it; loosening to 1.15 would add 13 pages for 13 flags,
+tightening to 1.25 would drop 5 pages that lose 17 flags between them.
+
+Effect, by volume:
+
+| vol | 3 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 29 | **all** |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| before | 10 | 166 | 151 | 123 | 154 | 145 | 145 | 138 | 150 | 66 | **1,307** |
+| after | 0 | 155 | 137 | 116 | 140 | 126 | 142 | 132 | 141 | 62 | **1,210** |
+
+**Every manually cleaned volume is untouched** — vols 1–18 and 28 do not appear in that
+table at all, which is what says the 0.85 calibration still means what it meant.
+
+The uncleaned volumes reach the same inversion by a different route: not display
+lettering but a *majority of loosely drawn boxes* lifting the median off the true
+lettering. Vol 26 page 161 flags six groups at 37.0–41.0 against a median of 48.2 while
+everything from 55 to 75 passes. That is the "loose boxes elsewhere on the page"
+diagnosis of the section above, now made by the estimator instead of by the reviewer —
+and the mode lands at 36–38px on vols 23, 24 and 26 alike, matching the body-lettering
+norm measured independently on the clean volumes.
+
+Tunable with `--line-height-bimodal`, floored at 1.0 (below that the mode would replace
+the median on nearly every page, including the 63 where it would add flags).
+
 ---
 
 ## What is **not** validated
