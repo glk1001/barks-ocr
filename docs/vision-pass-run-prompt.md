@@ -311,6 +311,60 @@ were promoted to high and none demoted, the eighth review running to do so.
 - And the usual straggler: two groups came back unreviewed out of 468, 173 g12 and
   184 g4. Count `speaker_reviewed` on both engines before calling a review done.
 
+### Findings to paste into the next run (2026-08-15, sixth batch)
+
+6 speaker corrections over *Donald's Monster Kite* alone — 129 groups, **4.7%**,
+against 1.9% for the batch before. All 7 medium calls were promoted to high and
+none demoted, the ninth review running to do so, and 5 of the 7 kept the pass's
+name. **5 of the 6 corrections were on one page, 188, and both are attachment
+faults in a fan of three balloons over three boys.** One was a vocabulary change.
+
+- **A ROW OF BOYS WITH ONE TAIL EACH IS NAMED BY POSITION OFF ONE READABLE CAP.
+  The other caps do not have to print at all.** 188 p2: three nephews strung out
+  along a log, a balloon and a tail apiece, and only the leading boy's cap carries
+  ink — two red slivers, `#c04828`. The pass scanned the whole panel, found no
+  chromatic pixel on the other two, and recorded `nephews` twice. The review named
+  them **Louie** and **Dewey** off the leading boy's red and the left-to-right
+  order. Re-measured afterwards at every threshold down to S≥0.25: those two cap
+  bands really are colourless, both reading the same washed-out olive `#546352`
+  H113 S0.17 / `#789371` H108 S0.23. So the naming did not come from colour and
+  was never going to. **"No cap ink on this boy" is not a reason to decline when
+  the row has one anchor cap and one tail per boy** — that is the same
+  left-to-right mapping as a joined cascade, applied to figures instead of
+  balloons.
+- **WHEN A FAN'S TIPS ARE OFFSET BY ONE BALLOON, READING ORDER WINS — AND THE
+  GIVEAWAY IS THE TAIL THAT LANDS ON NOBODY.** 188 p6, 3 of the 6, a clean
+  rotation reversed. Three balloons left to right over three boys left to right
+  (red `#dd1920`, blue `#19a2b3`, green `#228e54`). The pass measured the tips:
+  balloon 2's tip fell inside the red boy's cap span and balloon 3's inside the
+  blue boy's, so it assigned 2→Huey, 3→Dewey and gave balloon 1 to Louie by
+  elimination — **having written into its own note that balloon 1's tail reaches
+  x=373 at head height, which is empty sky over the trees**. The review used plain
+  reading order: 1→red, 2→blue, 3→green. Every measured tip was one boy to the
+  left of its balloon.
+  This does not retire "a measured tip beats one-tail-per-boy" (*Jet Rescue* 168
+  p1), it bounds it. Reconciling the two: **if every boy gets exactly one tip, the
+  tip is the answer. If the tips are spread out and in order but one boy is
+  skipped, the whole attachment is drawing slop and reading order is the answer.
+  If the tips converge on ONE figure, decline to `nephews`.** Never resolve the
+  leftover balloon by elimination — a fan that fails to reach a boy has already
+  told you the tips cannot be trusted individually.
+- **THE PASS ONLY EVER SEES ONE ENGINE'S `type`, AND `type_other_engine` DID NOT
+  FIRE ONCE.** The pass proposed 7 type corrections and the review confirmed all
+  7, including all four of 194's `thought -> dialogue` calls. But the review then
+  settled **6 more the pass never flagged**, four of them groups where *paddleocr
+  alone* held `thought` while easyocr held `dialogue`. Not one group in the title
+  carried `type_other_engine`, so the roster's "always supply `type` on such a
+  group" rule never fired — the field is simply not populated here. Add a
+  per-group `type` diff between the two engines to the close-out; it is a plain
+  dict comparison and it would have caught all four.
+- **THE `other:` VALUES DRIFTED, BUT DELIBERATELY.** The review changed exactly
+  one of four free-text speakers, `other:a banquet guest` -> `other:banquet
+  guests` on 194 g11, leaving the other three alone — a chorus against three
+  single voices, not a typo. Left as the reviewer set it. Still worth grepping
+  the counts: a 1-against-3 split is what an accidental near-duplicate looks like
+  too.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
