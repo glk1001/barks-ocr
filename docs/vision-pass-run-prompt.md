@@ -365,6 +365,55 @@ faults in a fan of three balloons over three boys.** One was a vocabulary change
   the counts: a 1-against-3 split is what an accidental near-duplicate looks like
   too.
 
+### Findings to paste into the next run (2026-08-17, seventh batch)
+
+15 speaker corrections and 4 cap corrections over *The Terror of the River!!*,
+*Seals Are So Smart!* and *Biceps Blues* — 710 groups, **2.1%**, against 4.7% for
+the batch before. 20 of 23 medium calls were promoted and 3 corrected, none
+demoted. But **12 of the 15 landed on calls the pass made at `high`**, and the
+rate is wildly uneven: 1.5% on *Terror*, 6.2% on *Seals*, **0% on *Biceps
+Blues***, which came back 153/153 untouched.
+
+- **A CHROMATIC BLOB IS ONLY A CAP IF IT SITS ON A HEAD. ALL FOUR CAP REVERSALS
+  WERE BLOB-TO-FIGURE ERRORS, NOT HUE ERRORS.** Every hex the pass sampled was
+  correct; what it got wrong was which figure the ink belonged to. *Seals* 039 p3:
+  a `#0d9a84` H171 blob at x516-546 was the **five-dollar bill in a boy's hand** —
+  the same ink as the cap green, cap-sized, at head height, and it passed every
+  size and aspect filter. 040 p5: the pass read the *higher* red blob as the
+  waving boy in front and dismissed the green at y407-470 as "a mitt or a collar";
+  the green was his cap, and he reads lower because he is **nearer**. 036 p8: two
+  `#06a07d` H166 blobs written off as "grass tufts well above their heads" were
+  the cap wedges on the foreground boy — the y was compared against the wrong
+  figure. The connected-component scan finds INK, not caps, and Barks props share
+  the cap inks: banknotes, grass, mittens, balls. Confirm the blob sits on a head
+  before naming from it. One 4-5x crop covered all three of these.
+- **A ROTATED ROW IS THE SIGNATURE OF ONE MIS-ASSIGNED BLOB.** 039 p3 came back as
+  a clean 3-cycle, blue/red/green -> green/blue/red. That is not three bad
+  attachments; it is one prop mistaken for a cap shifting the whole left-to-right
+  mapping by one boy. When a review rotates a row, re-check the blobs before
+  re-checking the tails.
+- **A STRAIGHT-SIDED WHITE BOX CAN STILL BE A BALLOON.** *Terror* 067 g5, a
+  rectangular caption-shaped box with no visible tail reporting the wrecked yacht
+  club, went `narrator` -> `other:man at the yacht club`. The pass had called it a
+  caption precisely because the tailed balloon two panels later (067 g7) looked
+  different. Straight sides are not the test; look for the tail.
+- **AN ADDED GROUP NOW ARRIVES ON BOTH ENGINES WEARING THE SEED'S `speaker_was`.**
+  The two groups the review added for the 313 number plate on *Terror* 048 came
+  through carrying `type: dialogue`, the seed's Gemini `notes`, the seed's
+  `vision_note` verbatim, an `identified_by` on a `none` speaker, and phantom
+  `speaker_was` / `cap_colour_was`. Left alone they would have read as two more
+  speaker corrections and one more cap correction — 17/5 instead of 15/4. Strip
+  them, set the real `type`, and mark `vision_added` to match the corpus shape.
+- **THE ENGINES NUMBER GROUPS INDEPENDENTLY, SO A STRAGGLER ID CAN LOOK DONE.**
+  *Biceps Blues* 075 g13 is a different balloon on each engine; paddleocr's g13 was
+  already reviewed while easyocr's was not. `vision-mirror` matches on text and box
+  and put the flag on the right one, but do not read a straggler queue as if the id
+  meant the same group on both sides.
+- And the type work needs no new rule: 31 type corrections across the three titles
+  were **all** confirmed, no text correction was reversed, and the per-group type
+  diff between the engines came back 0 on all three after the apply. The
+  close-out check added last batch is doing its job.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -536,6 +585,32 @@ toward cyan than any recorded green drift and less blue than any recorded blue.
 It is only resolvable by elimination: the other two caps in the panel read
 unambiguously red and green, so the third is the blue however it printed. Say
 so in the note when a colour is settled that way.
+
+Vol. 4, from *The Terror of the River!!* 048 panel 8 (the three caps in a row,
+big and lit), and re-measured on two more titles 2026-08-17:
+
+| | red | blue | green |
+|---|---|---|---|
+| large coloured front panel, *The Terror of the River!!* 048 p8 | `#e21b1f` H359 | `#03a2d0` H193 | `#019d47` H147 |
+| segmented beanie, *Seals Are So Smart!* 035 p3 | `#e41b1f` H359 | `#04a5d2` H193 | `#009d47` H147 |
+| segmented beanie, *Biceps Blues* 080 p6 | `#e11b1f` H359 | `#00a3d3` H194 | `#009c49` H148 |
+
+Red and blue are stable — H358-359 and H184-194 — and **the green is the one that
+moves**: H147 when it prints cleanly but H155, H159, H160, H163, H167 and H171 on
+thin slivers. Twice (*Seals* 043 p3, 044 p7) both cool caps landed green-side of
+H160 in the same panel; both were settled by ranking the two against each other
+inside the panel and chaining to the panel next door, with `cap_colour` left null.
+
+**But the palette is the smaller half of the problem in this volume, because two
+of the three titles take the caps away.** *The Terror of the River!!* puts the
+boys in identical blue sailor caps aboard the houseboat — `#017fb5` H198 on all
+three, and on Donald — for 23 of its 28 pages, and *Biceps Blues* has them
+bare-headed for the whole indoor half and drawn as flat black silhouettes twice
+more. Between them that is 173 of the batch's 178 collectives: absence, not a
+declined cap. The three names *Terror* does record all come from **dialogue** —
+Louie from 055 g9 back-propagated to 054, Huey from 060 g3/g4 and confirmed by
+060's own caption, Louie again from 063 g8. Plan for the construction, then ask
+separately how many pages actually carry it.
 
 ## The long form is retired
 
