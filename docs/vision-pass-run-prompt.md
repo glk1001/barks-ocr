@@ -414,6 +414,59 @@ Blues***, which came back 153/153 untouched.
   diff between the engines came back 0 on all three after the apply. The
   close-out check added last batch is doing its job.
 
+### Findings to paste into the next run (2026-08-17, eighth batch)
+
+6 speaker corrections over *The Smugsnorkle Squattie* alone — 140 groups, **4.3%**,
+against 2.1% for the batch before. Five of the six also overturned a cap colour.
+All 6 medium hedges were promoted to high and 5 of them kept the pass's name, so
+**5 of the 6 corrections again landed on calls made at `high`**. Every type
+correction was confirmed, no text correction was proposed or made, and the review
+added no groups.
+
+- **A TAIL LEAVING A BALLOON'S OWN OUTLINE BELONGS TO THAT BALLOON.** 2 of the 6,
+  and they are one move. On the splash, 083, a tail runs down-left from under the
+  `HUH?` balloon onto the red-capped boy. The pass saw it, decided `HUH?` had to be
+  Donald's because the boys had just asked him a question, and re-attributed the
+  tail to the balloon *above* it — which then made `MAY WE HAVE HIM?` the red boy
+  and left Donald with a tailless balloon. The review took the plain reading: `HUH?`
+  is **Huey** off that tail, and `MAY WE HAVE HIM?` is **Dewey**, the boy under its
+  own tail. Narrative fit is not evidence against a drawn tail; a nephew can say
+  `HUH?` too.
+- **WHEN THE ADULT WEARS THE SAME INK AS A CAP, THE FIGURE IS DECIDED BY SIZE AND
+  BILL, NOT BY COLOUR.** Donald wears a blue workman's cap for most of 085-087, the
+  same `#00a4d4` H194 as Dewey's band. On 086 p7 the pass read the duck holding the
+  mirror as Donald *because of the blue*; it is **Dewey**. This is the blob-to-figure
+  error the seventh batch found, one level up: the ink was right, the head it was
+  sitting on was a nephew's. Check the head's size and bill length before letting a
+  cap ink name an adult.
+- **A BLACK SILHOUETTE CAN STILL BE NAMED FROM THE PANEL BEFORE IT.** 088's kidnap
+  sequence: panel 3's dialogue names the boy Donald has hold of (*HE'S KIDNAPING
+  LOUIE!*), and panel 4 draws the same struggle as flat silhouettes. The pass
+  recorded `nephews` for all four shouts because no cap reads on a silhouette; the
+  review named the carried boy **Louie** in panel 4 as well. Absence of colour is
+  not absence of identification when the scene continues.
+- **WHERE TWO BOYS OVERLAP IN X, THE NEARER ONE OWNS THE TIP.** 089 p5, the last 2
+  of the 6, a clean swap: the pass measured one long tail to x368, gave it to the
+  blue-capped boy behind, and took the green-capped foreground boy by elimination.
+  Both were wrong way round. The foreground boy sits LOWER and further left than his
+  cap suggests, and "never resolve the leftover balloon by elimination" applies to
+  figures that overlap, not only to fans.
+- **A PANEL CAN PRINT A NEPHEW IN ANOTHER NEPHEW'S INK, AND THE DIALOGUE OUTRANKS
+  IT.** 088 p3 prints a **red** band on the boy the same panel's dialogue calls
+  Louie. The pass named him Louie from the line, recorded `cap_colour: red` as
+  printed rather than filling it in from the name, and hedged the other two boys of
+  that panel to medium; the review confirmed all three. Record the disagreement, do
+  not smooth it away — and do not let one mis-coloured panel spread doubt over the
+  rest of the title, which used the convention throughout.
+- And the close-out again: the review renumbered 088's easyocr ids into reading
+  order — `OW!` moved from g14 to g10 and everything above it shifted — without
+  adding or deleting a group. Counts stayed 15/15, `vision-mirror` matched on text
+  and box, and nothing was lost; but a stored `result.json` or a queue built before
+  the review would now point at the wrong groups.
+- One straggler again, the eighth title running: 088 g7, the last of a page's four
+  silhouette shouts. Count `speaker_reviewed` on both engines before calling a
+  review done.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -594,10 +647,11 @@ big and lit), and re-measured on two more titles 2026-08-17:
 | large coloured front panel, *The Terror of the River!!* 048 p8 | `#e21b1f` H359 | `#03a2d0` H193 | `#019d47` H147 |
 | segmented beanie, *Seals Are So Smart!* 035 p3 | `#e41b1f` H359 | `#04a5d2` H193 | `#009d47` H147 |
 | segmented beanie, *Biceps Blues* 080 p6 | `#e11b1f` H359 | `#00a3d3` H194 | `#009c49` H148 |
+| segmented beanie, *The Smugsnorkle Squattie* 083 p4 | `#de1b1f` H359 | `#00a2d2` H194 | `#009d49` H148 |
 
 Red and blue are stable — H358-359 and H184-194 — and **the green is the one that
-moves**: H147 when it prints cleanly but H155, H159, H160, H163, H167 and H171 on
-thin slivers. Twice (*Seals* 043 p3, 044 p7) both cool caps landed green-side of
+moves**: H147 when it prints cleanly but H155, H159, H160, H163, H167, H171, H179
+on thin slivers. Twice (*Seals* 043 p3, 044 p7) both cool caps landed green-side of
 H160 in the same panel; both were settled by ranking the two against each other
 inside the panel and chaining to the panel next door, with `cap_colour` left null.
 
@@ -611,6 +665,17 @@ declined cap. The three names *Terror* does record all come from **dialogue** �
 Louie from 055 g9 back-propagated to 054, Huey from 060 g3/g4 and confirmed by
 060's own caption, Louie again from 063 g8. Plan for the construction, then ask
 separately how many pages actually carry it.
+
+*The Smugsnorkle Squattie* is the counter-case and the one to expect next: the
+same segmented beanie, worn on **all ten pages**, with only two silhouette panels
+and one cap knocked off its wearer's head — 4 collectives in 140 groups. What it
+adds instead is two hazards of its own. **Donald wears a blue workman's cap**
+through 085-087, printing the same `#00a4d4` H194 as Dewey's band, so a cap-blue
+blob at head height is his half the time; the coloured alphabet blocks on 089 and
+the painted doghouse on 085 are in the three cap inks as well. And **088 p3 prints
+Louie's cap RED**, in the one panel whose dialogue names him (*HE'S KIDNAPING
+LOUIE!*) — a permuted panel the review confirmed, in a title that otherwise keeps
+the convention on every page.
 
 ## The long form is retired
 
