@@ -53,3 +53,8 @@ check-ocr volume queue_file *extras:
 [group('OCR')]
 kivy-editor volume fanta_page easy_id='0' paddle_id='0':
     KIVY_NO_ARGS=1 {{_ocr_uv_run}} "barks-ocr-kivy-editor" --volume {{volume}} --fanta-page {{fanta_page}} --easyocr-group-id {{easy_id}} --paddleocr-group-id {{paddle_id}}
+
+# Invoke the kivy editor for a queue
+[group('OCR')]
+kivy-editor-queue qfile:
+    KIVY_NO_ARGS=1 {{_ocr_uv_run}} "barks-ocr-kivy-editor" --queue-file {{qfile}}
