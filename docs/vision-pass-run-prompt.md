@@ -858,6 +858,28 @@ big and lit), and re-measured on two more titles 2026-08-17:
 | segmented beanie, *The Bill Collectors* 193 p6 | `#e21a1e` H359 | `#03a4d4` H194 | `#019b4f` H150 |
 | segmented beanie, *Turkey Raffle* 131 p5 | `#e31a1f` H359 | `#01a4d2` H193 | `#009d49` H148 |
 | segmented beanie, *Maharajah Donald* 008 p1 | `#d41c20` H358 | `#019ebf` H190 | `#009545` H147 |
+| segmented beanie, *The Cantankerous Cat* 141 p7 | `#e11b1f` H359 | `#04a4d3` H194 | `#019a48` H148 |
+| nightshirts, *The Cantankerous Cat* 147 p8 | `#e41a1e` H359 | `#00a2d1` H193 | `#019a47` H147 |
+| segmented beanie, *Donald Duck's Atom Bomb* 152 p5 | `#e11a1f` H358 | `#02a4d4` H194 | `#009b45` H147 |
+| segmented beanie, *Going Buggy* 165 p7 | `#d41c1e` H359 | `#07a4cf` H193 | `#049952` H151 |
+
+**And a fourth thing Vol. 4 does with the colour: it puts it on Donald.** *The
+Cantankerous Cat* from 148 p4, *Going Buggy* on every page and *The Peaceful
+Hills* on every page all give Donald a cap printed in Dewey's exact blue —
+`#02a4d3`, `#02a4d4`, `#069bc8`, all H193-194 — joining *Smugsnorkle* and
+*Santa's Stormy Visit*. That is five titles, and it means the largest cap-blue
+blob in a Vol. 4 panel is routinely his: 4541px in *Going Buggy* 161 p7 and
+1207px in *The Cantankerous Cat* 148 p4 against Dewey's 142px in the same panel.
+Read the blob's AREA before naming anyone from it.
+
+**And a title where the caps come off and the nightshirts take over.** *The
+Cantankerous Cat* wears the beanie only on its four outdoor pages; 144 and 147
+are bedroom pages and the colour moves to nightshirts, with 147 p8 printing all
+three at once — green `#019a47` H147, red `#e41a1e` H359, blue `#00a2d1` H193 —
+which is the bridging panel that makes the costume readable as the cap key. That
+title also states its nap rotation in dialogue on 148 g9, 149 g7 and 149 g13, and
+149 p7 then prints a clean green on a boy the line says is asleep. Follow the
+line, record the colour as printed, and leave the pair collective.
 
 **And the three 1946 titles at 121-140 and 193-201 add the failure the palette
 cannot describe: the colourist himself.** All three use the segmented beanie and
