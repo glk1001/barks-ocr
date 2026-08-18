@@ -525,6 +525,14 @@ Hookey*** — and one cause accounts for most of the gap.
   have read as one more speaker and one more type correction. Strip all five,
   write a real note, and set `vision_added` — Vol. 3 192 g13 is the same `313`
   plate and is the shape to copy.
+  *Santa's* 099 then did it again for the `CAPTAIN` cap band the missed-text
+  audit had been flagging, seeded from `SPLAT!` two groups away and carrying its
+  Gemini `notes`, its `vision_note` verbatim and a phantom
+  `type_was: sound_effect`. **But not everything inherited is residue**: that
+  group's `style: angled` looks like the seed's display lettering and is in fact
+  correct, because the cap is tumbling through the air and the word runs
+  bottom-to-top — which is also why its box is taller than it is wide. Crop the
+  box before stripping a field that might be right.
 - **AND A FREE-TEXT SPEAKER SPLIT IN TWO.** *Santa's* now carries
   `other:the radio` (3) beside `other:the radio announcer` (1). It may well be
   deliberate — the announcer reading the bulletin against the set's static — but
