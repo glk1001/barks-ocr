@@ -651,12 +651,20 @@ correction proposed or made, and no group added, deleted, renumbered or re-boxed
   elephant's neck is the mahout for the whole Indian sequence, so the seat names
   him even where the panel prints him as a black shape; the pass used exactly that
   rule on 023 and 025 and failed to apply it one page earlier.
-- One straggler again, the **eleventh title running**: 029 g2, a narration caption.
-  Count `speaker_reviewed` on both engines before calling a review done.
-- And one to watch rather than fix: 012 g7, `SQUEECH!`, went `none` -> **nephews**
-  — the noise is a boy being squeezed inside the pineapple — but its `type` was
-  left `sound_effect`. That is exactly the legacy shape the type rule exists to
-  catch, and a speaker review does not touch `type`.
+- One straggler again, the **eleventh title running**: 029 g2, a narration caption,
+  confirmed unchanged once looked at. Count `speaker_reviewed` on both engines
+  before calling a review done — and note that `speaker-queue` exits 1 WITHOUT
+  writing its file when nothing matches, so a stale queue from the previous run
+  stays on disk looking current. Read the "No calls match those selectors" line,
+  not the file.
+- **A SPEAKER CORRECTION CAN LEAVE THE TYPE BEHIND, AND THAT PAIR IS WORTH
+  GREPPING FOR AT CLOSE-OUT.** 012 g7, `SQUEECH!`, went `none` -> **nephews** in
+  the review — the noise is a boy being squeezed inside the pineapple — while its
+  `type` stayed `sound_effect`, which is exactly the legacy shape the type rule
+  exists to catch. Reported and then retyped to `dialogue` on both engines. Any
+  group whose speaker names a character while its type is `sound_effect` is the
+  same case: the speaker review does not touch `type`, so nothing else will find
+  it.
 
 One process note worth keeping: a corpus-wide `barks-ocr-vision-corrections` run
 now dies with `FileNotFoundError` on a missing Vol. 2 cover,
