@@ -467,6 +467,70 @@ added no groups.
   silhouette shouts. Count `speaker_reviewed` on both engines before calling a
   review done.
 
+### Findings to paste into the next run (2026-08-18, ninth batch)
+
+45 speaker corrections and 28 cap corrections over *Santa's Stormy Visit*,
+*Swimming Swindlers* and *Playin' Hookey* — 428 groups, **10.5%**, against 4.3%
+for the batch before and the worst since the 12.5% of 2026-08-12. All 72 medium
+hedges were promoted and none demoted, the eleventh review running to do so, so
+the hedging is still calibrated and the damage is somewhere else. The rate is
+uneven — 6.6% on *Swimming Swindlers*, 12.1% on *Santa's*, **13.1% on *Playin'
+Hookey*** — and one cause accounts for most of the gap.
+
+- **NEVER WRITE "NO INK" INTO A NOTE ON THE STRENGTH OF A FILTERED SCAN. 17 of
+  the 22 corrections on *Playin' Hookey* landed on groups whose notes said
+  exactly that.** "no chromatic blob", "no cap ink resolves", "carries no
+  chromatic pixel at S>=0.6" — and the ink was there the whole time. On 113 p4
+  the scan at the *same* thresholds reports **40 blobs**, including blue caps at
+  `#019ac7` and `#009cca`, both H194. What hid them was a shell filter: the scan
+  padded its size column, so `n=  308` and `n=30097` split into different awk
+  fields and an `$3 ~ /n=/` guard matched nothing at all. An empty pipe read as
+  an empty panel. The rule: an absence claim is only allowed when the scan's own
+  `N blob(s)` header says zero, and the note should quote that count. Do the size
+  windowing inside the script (`--min` / `--max`), never in a pipe.
+- **A ROW WITH NO CAP INK AT ALL IS STILL NAMED FROM POSITION.** 093 p3 is the
+  honest version of the same call and it went the same way. Re-measured at
+  min 8px / S>=0.45 the panel really does print no cap ink — the only chromatic
+  blobs are the lantern housing — and the review still named all three boys
+  Huey/Louie/Dewey *with cap colours*, off the row order and the reference panel
+  next door. So "absent, not declined" is not a defence. This extends *Monster
+  Kite*'s "one anchor cap names the whole row" to **zero** anchor caps: three
+  boys in a row with one balloon each get named whatever the colour does.
+- **THE OFFSET FAN HELD 4 TIMES IN 5, AND THE EXCEPTION HAS A TELL.** Five fans
+  in this batch showed the one-boy-left shift; 094 p4, 098 p6, 107 p3 and 115 p2
+  were all confirmed with the names the reading-order rule gave. The one reversed
+  was 093 p2, where the review took the measured tips instead — and the pass had
+  already written the alternative into its own note. The difference is that on
+  093 p2 the two boys the rule had to order **overlapped in x** (head centres 322
+  and 327): there was no left-to-right order to read, so the fallback had nothing
+  to fall back on. When the boys a fan spans overlap in x, prefer the tips and
+  hedge; when they are strung out, the reading-order rule is good.
+- **A PAIR CAN STILL BE SWAPPED AFTER TRACING THE TAILS AT SOURCE RESOLUTION.**
+  093 p6 was read off the whole panel at native size, one tail per boy, each tip
+  measured onto its own cap — and g13/g14 came back swapped anyway, with both cap
+  colours moving. Loading the panel is not proof; it is one more measurement.
+- **A WORDLESS NOISE BESIDE AN ANIMAL IS NOT AUTOMATICALLY THE ANIMAL.** Two of
+  these, in opposite directions. On *Santa's* 096 the pass gave `SQUAWK! WHEEK!`
+  and `SQUARK! WHEEK!` to `other:the albatross`; the review made all three
+  `other:the radio`, noted "radio static", and left `GRAWK!` on the same page
+  with the bird. On *Playin' Hookey* 117 the pass gave `GLEEP!`/`PLEEP!` to
+  `other:the goats`; the review made them **Dewey and Louie**. Ask what the noise
+  is *for* before assigning it to whatever is drawn nearest.
+- **THE ADDED GROUP ARRIVED WEARING THE SEED AGAIN — FIFTH ROUND, AND NOW THE
+  FULL SET.** *Playin' Hookey* 118 gained the car's `313` number plate in panel 7,
+  correctly on both engines and appended as g11 so nothing renumbered. It carried
+  the seed's Gemini `notes`, the pass's `vision_note` for the panel's balloon
+  verbatim, an `identified_by` of `sole-figure`/`balloon-tail` on a `none`
+  speaker, and phantom `speaker_was: Donald` / `type_was: thought` that would
+  have read as one more speaker and one more type correction. Strip all five,
+  write a real note, and set `vision_added` — Vol. 3 192 g13 is the same `313`
+  plate and is the shape to copy.
+- **AND A FREE-TEXT SPEAKER SPLIT IN TWO.** *Santa's* now carries
+  `other:the radio` (3) beside `other:the radio announcer` (1). It may well be
+  deliberate — the announcer reading the bulletin against the set's static — but
+  a 3-against-1 split is also what an accidental near-duplicate looks like, so
+  say it out loud at close-out rather than leaving it to be found later.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -648,6 +712,8 @@ big and lit), and re-measured on two more titles 2026-08-17:
 | segmented beanie, *Seals Are So Smart!* 035 p3 | `#e41b1f` H359 | `#04a5d2` H193 | `#009d47` H147 |
 | segmented beanie, *Biceps Blues* 080 p6 | `#e11b1f` H359 | `#00a3d3` H194 | `#009c49` H148 |
 | segmented beanie, *The Smugsnorkle Squattie* 083 p4 | `#de1b1f` H359 | `#00a2d2` H194 | `#009d49` H148 |
+| segmented beanie, *Santa's Stormy Visit* 093 p6 | `#e01c1f` H359 | `#04a4d3` H194 | `#039b49` H148 |
+| segmented beanie, *Playin' Hookey* 111 p7 | `#d51a1f` H358 | `#00a4d5` H194 | `#009d47` H147 |
 
 Red and blue are stable — H358-359 and H184-194 — and **the green is the one that
 moves**: H147 when it prints cleanly but H155, H159, H160, H163, H167, H171, H179
@@ -676,6 +742,30 @@ the painted doghouse on 085 are in the three cap inks as well. And **088 p3 prin
 Louie's cap RED**, in the one panel whose dialogue names him (*HE'S KIDNAPING
 LOUIE!*) — a permuted panel the review confirmed, in a title that otherwise keeps
 the convention on every page.
+
+**And in two titles the colour leaves the cap altogether.** *Santa's Stormy
+Visit* prints the beanie on only four panels of its eight pages; everywhere else
+the boys are bare-headed, in **nightshirts** (097 p3: green `#009d48`, blue
+`#039ecc`, red `#db1920`) or **pyjama collars** (100 p5: red `#d81a21`, blue
+`#06a4d4`, green `#049948`). It also puts Donald in a blue keeper's cap in the
+same `#01a3d3` H194 as Dewey's band for most of the title, so a cap-blue blob at
+head height is his as often as not — decide the figure by size and bill, as on
+*Smugsnorkle*. Its one usable check is that 097 p2 and p3 print the same three
+boys in **opposite** left-to-right order, so the colour tracks the boy and not
+the seat.
+
+*Swimming Swindlers* is the harder case: **swim trunks for eight of ten pages,
+and the set is red / black-and-teal striped / plain black, which is not the
+roster's red-blue-green**. Do not assume the convention on a garment that is not
+a cap. The key has to come from the dialogue and it arrives late — 110 p7 has
+Donald address the boy in the red trunks as *HONEST HUEY*, and 103 p7/p8 pin the
+striped suit on Louie, leaving plain black for Dewey — so read the title through
+first and back-propagate. The review confirmed the key and left a note on 101 g3
+saying so: blue-for-Louie is a colouring error that runs through the whole story
+and the plot depends on it. The key **deliberately stops working** for the relay
+on 104-105, where the other two dress to match Louie, and it **starts working
+again** on 107-108 for the second race — the pass retired it three pages early
+and lost three names that way. The beanies come back for 106 p4 onward.
 
 ## The long form is retired
 
