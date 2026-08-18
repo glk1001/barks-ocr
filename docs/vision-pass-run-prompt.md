@@ -539,6 +539,74 @@ Hookey*** — and one cause accounts for most of the gap.
   a 3-against-1 split is also what an accidental near-duplicate looks like, so
   say it out loud at close-out rather than leaving it to be found later.
 
+### Findings to paste into the next run (2026-08-18, tenth batch)
+
+25 speaker corrections and 13 cap corrections over *The Gold-Finder*, *The Bill
+Collectors* and *Turkey Raffle* — 468 groups, **8.1%**, against 10.5% for the
+batch before. All 50 medium hedges were promoted and none demoted, the twelfth
+review running to do so. The rate is uneven — 5.2% on *Gold-Finder*, **12.7% on
+*Bill Collectors***, 7.0% on *Turkey Raffle* — and the two ends of it failed in
+opposite ways: on *Gold-Finder* six of the seven landed on `high` calls and on
+*Bill Collectors* seven of the eleven landed on calls already hedged to medium,
+which is the hedge doing its job.
+
+- **THE COLOURIST IS A THIRD PARTY AND THIS VOLUME LETS HIM WIN.** *Gold-Finder*
+  123 prints the second nephew's cap a clean `#029c47` H147 on every panel of the
+  page and he is **Dewey**; the review kept `cap_colour: green` on all six groups,
+  so the record now carries the fault instead of hiding it. Same shape on *Bill
+  Collectors* 200 g5, where the crown was cropped at 3.6x and is unarguably green
+  on a boy the review calls **Huey**. No reading of the ink could have produced
+  either name. What produces them is tracking one boy through the scene — the boy
+  who fetches the watch and then holds it, the boy who went in at the window one
+  panel earlier — and letting that outrank a cap you have measured. Six of this
+  batch's 25 speaker corrections are that single page.
+- **A MUDDY COOL BAND IS THE HARDEST CALL IN THE VOLUME AND IT WENT WRONG IN BOTH
+  DIRECTIONS.** *Bill Collectors* 196 g8 is a 20-23px band at `#216677` H192
+  **S0.72**; it was read as blue off hue alone and is the **green** — the
+  saturation test says a blue stays saturated however small, and p2 had already
+  shown that boy going up the pole. *Turkey Raffle* 139 g17 is the inverse: a 55px
+  `#388f62` H149 **S0.61** band read as a green cap and named, sent back to
+  `nephews` with `cap_colour` null. So: below about S0.75 a cool band names
+  nobody on its own. Rank it inside the panel, and if the panel has no clean
+  companion to rank it against, decline the colour and name from the scene or not
+  at all.
+- **DO NOT PUSH A MAPPING SIDEWAYS TO SATISFY A LINE.** *Bill Collectors* 197
+  g5/g6: the tip measured at x~178, inside the left boy's head span, and the whole
+  three-boy mapping was then shifted one boy right so that *"OPEN THE BRIEF CASE,
+  DEWEY!"* would not be spoken by Dewey. The measured tip was right and both
+  groups came back. A line that addresses a nephew constrains ONE speaker; it is
+  not a licence to rotate the row.
+- **TWO BOXES STACKED IN ONE OUTLINE ARE A JOINED PAIR, NOT ONE BALLOON.**
+  *Turkey Raffle* 133 g1/g2, *"IT'S"* and *"ALIVE!"*, were read as a single
+  balloon and given a single speaker; the review kept g1 Dewey and made g2
+  **Louie**. The same title has a dozen correctly-named cascades in it, so the
+  test is mechanical: two group boxes stacked with their own outlines is two
+  speakers unless a tail says otherwise.
+- **BARE HEADS STILL GET NAMED.** *Turkey Raffle* 138 g5 went `nephews` ->
+  **Dewey** on a boy swimming with his cap off. The batch recorded 33 collectives
+  and defended most of them as absence rather than a declined cap — 20 of them in
+  *Turkey Raffle* alone, where the boys are silhouettes, swimming or indoors for
+  half the title — and the review took one of them anyway. Absence buys a hedge,
+  not a pass.
+- **CHECK THE ADULT BEFORE HANDING A LINE TO DONALD.** *Turkey Raffle* 137 g5,
+  *"NO MAN LIVING HAS EVER HIT TWO!"*, is the shoot man conceding, not Donald
+  boasting. In a two-hander where one of the pair is a bit player, read whose
+  interest the line serves.
+- **THE SPEAKER REVIEW IS STILL NOT THE TYPE REVIEW.** *Gold-Finder*'s 4 and *Bill
+  Collectors*' 0 came back settled, and *Turkey Raffle*'s 3 (133 g15 `LATER`
+  background -> narration, 139 g3/g4 `OW!` sound_effect -> dialogue) are still
+  unconfirmed on both engines after a 172/172 speaker review. Hand the corrections
+  queue back separately and say the count out loud.
+- And the straggler, the **tenth title running** and now three in one batch:
+  *Bill Collectors* 197 g8 and *Turkey Raffle* 136 g10, both the last group of a
+  page, both confirmed unchanged once looked at. Count `speaker_reviewed` on both
+  engines before calling a review done.
+
+One process note worth keeping: a corpus-wide `barks-ocr-vision-corrections` run
+now dies with `FileNotFoundError` on a missing Vol. 2 cover,
+`Fantagraphics-original/Carl Barks Vol. 2 …/images/686.jpg`. Per-title runs are
+unaffected.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -722,6 +790,19 @@ big and lit), and re-measured on two more titles 2026-08-17:
 | segmented beanie, *The Smugsnorkle Squattie* 083 p4 | `#de1b1f` H359 | `#00a2d2` H194 | `#009d49` H148 |
 | segmented beanie, *Santa's Stormy Visit* 093 p6 | `#e01c1f` H359 | `#04a4d3` H194 | `#039b49` H148 |
 | segmented beanie, *Playin' Hookey* 111 p7 | `#d51a1f` H358 | `#00a4d5` H194 | `#009d47` H147 |
+| segmented beanie, *The Gold-Finder* 121 p3 | `#d2191d` H359 | `#05a3b0` H185 | `#019c46` H147 |
+| segmented beanie, *The Bill Collectors* 193 p6 | `#e21a1e` H359 | `#03a4d4` H194 | `#019b4f` H150 |
+| segmented beanie, *Turkey Raffle* 131 p5 | `#e31a1f` H359 | `#01a4d2` H193 | `#009d49` H148 |
+
+**And the three 1946 titles at 121-140 and 193-201 add the failure the palette
+cannot describe: the colourist himself.** All three use the segmented beanie and
+all three print the canonical inks when they print them at all, but *The
+Gold-Finder* 123 gives Dewey a clean green crown for a whole page, *The Bill
+Collectors* 200 p1 and 201 p5 shuffle the three inks against the story's own
+names, and *Turkey Raffle* 133 and 136 do it in small figures. In every one of
+those the review named the boy from the scene and left `cap_colour` as printed.
+Read the caps, record what they print, and do not let a measured hex override a
+boy you have followed across the page.
 
 Red and blue are stable — H358-359 and H184-194 — and **the green is the one that
 moves**: H147 when it prints cleanly but H155, H159, H160, H163, H167, H171, H179
