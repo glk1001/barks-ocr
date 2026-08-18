@@ -602,6 +602,62 @@ which is the hedge doing its job.
   page, both confirmed unchanged once looked at. Count `speaker_reviewed` on both
   engines before calling a review done.
 
+### Findings to paste into the next run (2026-08-18, eleventh batch)
+
+20 speaker corrections and 6 cap reversals over *Maharajah Donald* alone — 388
+groups, **5.2%**, against 8.1% for the batch before. All 44 medium hedges were
+promoted to high and none demoted, the thirteenth review running to do so, and
+**17 of the 20 landed on calls the pass made at `high`**. Everything else came
+back clean for once: all five of the pass's type corrections confirmed on both
+engines and `vision-corrections --title` reporting nothing outstanding, no text
+correction proposed or made, and no group added, deleted, renumbered or re-boxed.
+
+- **A CAP YOU CAN SAMPLE IS NOT EVIDENCE THAT THE SPEAKER IS A BOY.** 4 of the 20
+  went to **Donald** (016 g12, 017 g7, 017 g10, 028 g14), and all six cap
+  reversals are the same shape: every hex the pass sampled was right, and the head
+  under it was not the speaker's. Through 013-019 Donald is bare-headed in a
+  dinner jacket while the boys' beanies print cleanly, so the only measurable
+  colour in the panel belongs to somebody who is not talking. This is
+  *Smugsnorkle*'s blue-workman's-cap error with the colours reversed: check size
+  and bill before letting a sampled wedge decide, and treat "there is a cap I can
+  measure" as a reason to look harder, not as the answer.
+- **A MEASURED TIP IS NOT A NAME. 6 of the 20 were tails the pass had traced at
+  1-1.7x with the coordinates written into its own note** (009 g7, 015 g2, 017
+  g10, 017 g11, 018 g1, 028 g14). Every one came back `nephews` or Donald. 017 p7
+  is the offset fan again and the giveaway is the adult: Donald, red, blue, green
+  strung out left to right, tips measured at x505 and x585 landing on the red and
+  the blue boy, and the answers are **Donald** and **`nephews`** — one figure to
+  the left, which is the Vol. 4 habit. When a row starts with an adult, count him
+  as the first position before mapping anything.
+- **A CAPTION NAMING A NEPHEW FOR AN OFF-PANEL ACTION DOES NOT TRANSFER TO THE
+  PANELS AROUND IT.** 029's caption reads *DEWEY FAILS TO NOTICE THE TAG ABOVE THE
+  FAUCET!* over a panel with no character in frame; the pass gave the bare-headed
+  boy at the hose in the panel before AND the panel after to Dewey, and the review
+  sent **both** back to `nephews`. It bounds *Singapore Joe* 159 p4 rather than
+  contradicting it: there a character's line introduced the speaker of the next
+  balloon, here a caption describes an action nobody is drawn performing.
+- **THE REVIEW CONSOLIDATED THE CAST AND NEVER SPLIT IT. 5 of the 20 are free-text
+  roles, and every one moved to a figure already on the page.** The pearl buyer is
+  `other:a customer`, not the shop's clerk (009 g15 and 010 g3, and
+  `other:the jewelry clerk` is now gone from the corpus); 024 g1's balcony line and
+  025 g2's ladder line are both the compiler of the deficit rather than the
+  messenger and the tax collector; and 020 g6's *(COUGH! COUGH!)* is
+  `other:a palace servant`, not the Maharajah, whose cough it had been on 016 and
+  017. Invent a role only when no drawn figure fits — and note that the review kept
+  guard / servant / officer / herald / messenger as five distinct roles, so the
+  distinction itself was sound.
+- **THE ONE UNDER-NAMING CORRECTION IS THE SEAT, NOT THE FACE.** 022 g4 went
+  `nephews` -> **Louie** on a page drawn entirely in silhouette. The boy at the
+  elephant's neck is the mahout for the whole Indian sequence, so the seat names
+  him even where the panel prints him as a black shape; the pass used exactly that
+  rule on 023 and 025 and failed to apply it one page earlier.
+- One straggler again, the **eleventh title running**: 029 g2, a narration caption.
+  Count `speaker_reviewed` on both engines before calling a review done.
+- And one to watch rather than fix: 012 g7, `SQUEECH!`, went `none` -> **nephews**
+  — the noise is a boy being squeezed inside the pineapple — but its `type` was
+  left `sound_effect`. That is exactly the legacy shape the type rule exists to
+  catch, and a speaker review does not touch `type`.
+
 One process note worth keeping: a corpus-wide `barks-ocr-vision-corrections` run
 now dies with `FileNotFoundError` on a missing Vol. 2 cover,
 `Fantagraphics-original/Carl Barks Vol. 2 …/images/686.jpg`. Per-title runs are
@@ -793,6 +849,7 @@ big and lit), and re-measured on two more titles 2026-08-17:
 | segmented beanie, *The Gold-Finder* 121 p3 | `#d2191d` H359 | `#05a3b0` H185 | `#019c46` H147 |
 | segmented beanie, *The Bill Collectors* 193 p6 | `#e21a1e` H359 | `#03a4d4` H194 | `#019b4f` H150 |
 | segmented beanie, *Turkey Raffle* 131 p5 | `#e31a1f` H359 | `#01a4d2` H193 | `#009d49` H148 |
+| segmented beanie, *Maharajah Donald* 008 p1 | `#d41c20` H358 | `#019ebf` H190 | `#009545` H147 |
 
 **And the three 1946 titles at 121-140 and 193-201 add the failure the palette
 cannot describe: the colourist himself.** All three use the segmented beanie and
@@ -855,6 +912,20 @@ and the plot depends on it. The key **deliberately stops working** for the relay
 on 104-105, where the other two dress to match Louie, and it **starts working
 again** on 107-108 for the second race — the pass retired it three pages early
 and lost three names that way. The beanies come back for 106 p4 onward.
+
+**And one title changes costume halfway through and hands you a key for it.**
+*Maharajah Donald* prints the segmented beanie on only 10 of its 28 pages
+(007-011 and 015-019, reference panel 008 p1); the boys are drawn bare-headed for
+the stowaway sequence on 013-014 and from 028 to the end, and in India they wear
+**turbans** — two identical blue-and-white striped ones and a **RED** one. The
+red turban is a real identification and worth looking for early: 022 p5 shows
+that boy swinging the mahout's pole and p6 answers *"YOU KNOCKED HIM OUT,
+LOUIE!"*, and 027 g7 summons *"MAHOUT LOUIE, AND THE SAHIBS, HUEY AND DEWEY"* —
+the same boy, in the same seat on the elephant's neck, which then names him on
+silhouette pages too. Donald wears a green robe and a gold-plumed yellow turban
+from 020, so a big red or yellow shape at head height is a costume and not a cap.
+Its grass and hedges also print at `#009c48` H147, the exact green of the cap
+wedge, so every green blob needs a head under it.
 
 ## The long form is retired
 
