@@ -671,7 +671,7 @@ now dies with `FileNotFoundError` on a missing Vol. 2 cover,
 `Fantagraphics-original/Carl Barks Vol. 2 …/images/686.jpg`. Per-title runs are
 unaffected.
 
-### Findings to paste into the next run (2026-08-19, twelfth batch, titles 1-2)
+### Findings to paste into the next run (2026-08-19, twelfth batch)
 
 10 corrections over *The Cantankerous Cat* — 5 speaker and 5 cap over 142
 groups, **7.0%**, against 5.2% the batch before. All 4 medium calls were promoted
@@ -728,6 +728,37 @@ four of them Donald against Professor Mollicule in a two-figure panel.**
   it outstanding. Read the stored string, not the outstanding count.
 - The type queue behaved this time: all 8 type corrections were confirmed, so
   the untouched-type-queue problem from title 1 is not universal.
+
+**And the last two titles: 18 corrections over *Going Buggy*'s 134 groups
+(13.4%) and ZERO over *The Peaceful Hills*' 28.** Batch total 33 corrections over
+438 groups, 7.5%, against 5.2% the batch before.
+
+- THE SPEAKER FIELD NAMES WHO MAKES A NOISE, EVEN WHEN THE TYPE STAYS
+  `sound_effect`. Nine of *Going Buggy*'s fourteen were this one rule: six
+  `CHOMP!`s → `nephews` (the boys chewing inside the bug suits) and three
+  `CLACK!`s → `Donald` (his costume beak). I had set all nine to `none`, writing
+  "a prop makes it, not a voice" into the notes, having quoted the opposite rule
+  from `roster.txt` on the same page. *The Peaceful Hills* fixes the boundary by
+  coming back clean: its ten `none` effects — THUD, CHUNK, RUMBLE, ROAR, BANG,
+  BOOM, SNAP — all stood, because impacts, gunfire and weather have no maker.
+  Expect the close-out grep for "speaker named while type is sound_effect" to
+  fire on the first class; that is the correct end state, not a defect.
+- NEVER `head` AN INK SCAN. Three more corrections came from 162 p3, where I
+  piped the scan through `awk` and `head -12`, saw only wall and floor, and wrote
+  *"a cap-ink scan of the panel finds nothing on any of them"* into three notes.
+  Re-run unfiltered the caps are all there — red `#d01c1f` H359, blue `#059db6`
+  H188, green `#069389` H176, at 99, 184 and 179 pixels. **The scan sorts by area
+  descending and a cap is always among the smallest blobs**, so seven background
+  regions filled the visible lines and `head` cut the list before the caps.
+  Truncation removes exactly the class of blob being looked for. Window by size
+  inside the script; a cap band is roughly 80-5000px.
+- OVER-NAMING HAPPENS TOO, ONCE. 167 g1 went `Louie` → `nephews`, the batch's
+  only demotion, against a tail I had measured onto a green cap. One reversal in
+  33 corrections — the direction of travel is still overwhelmingly toward naming.
+- AND CHECK YOUR OWN `other:` SPELLING AGAINST THE CORPUS, NOT JUST THE REVIEW'S.
+  The drift on this title was mine: I wrote `other:the Mayor` where the corpus
+  already had 11 groups of `other:the mayor`. Grep the corpus-wide counts for the
+  value before inventing the capitalisation.
 
 ## Per-volume cap palette
 
