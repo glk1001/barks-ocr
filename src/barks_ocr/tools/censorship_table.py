@@ -24,6 +24,11 @@ COLUMN_WIDTHS = {
 #     constant down the whole document and the column would say nothing.
 RENDERED_COLUMNS = list(COLUMN_WIDTHS)
 
+# The columns drawn in italics. Named rather than taken as "everything but Story", which
+# is how it used to be worked out: that swept up Volume, Image and Fanta_page the moment
+# they were added, and an italic page number reads as an aside rather than a reference.
+ITALIC_COLUMNS = ("Page_Panel", "Change_From", "Change_To")
+
 # `_remove_white_background` turns a pixel transparent when every channel exceeds this,
 # so anything at or below it is what survives into the finished page.
 WHITE_THRESHOLD = 127
@@ -128,12 +133,11 @@ def get_censorship_fixes_table(file: Path) -> GT:
     )
 
     table = table.tab_style(style=style.text(weight="bold"), locations=loc.column_labels())
-    required_columns = df.drop("Story").columns
     table = table.tab_style(
         # Numeric CSS font-weight, as above.
         # pyrefly: ignore[bad-argument-type]
         style=style.text(style="italic", weight=500),  # ty: ignore[invalid-argument-type]
-        locations=[loc.body(columns=col_name) for col_name in required_columns],
+        locations=[loc.body(columns=col_name) for col_name in ITALIC_COLUMNS],
     )
     return table  # noqa: RET504
 
@@ -195,6 +199,9 @@ def ditto_repeated_values(header: list[str], rows: list[list[str]]) -> list[list
     always carries its full values - which is what the ditto marks in the source CSV
     could not do, since they referred back across page breaks.
 
+    A blank never takes a ditto: two whole-story rows share an empty Image and Fanta_page,
+    and a quote mark under an empty cell claims there was a value to repeat.
+
     Args:
         header: The CSV column names, in order.
         rows: One rendered page's data rows.
@@ -219,7 +226,7 @@ def ditto_repeated_values(header: list[str], rows: list[list[str]]) -> list[list
     for row in rows:
         out = list(row)
         for column, guard, replacement in suppressed:
-            if not previous or row[column] != previous[column]:
+            if not previous or not row[column] or row[column] != previous[column]:
                 continue
             if guard is None or row[guard] == previous[guard]:
                 out[column] = replacement
@@ -295,8 +302,6 @@ def _render_page(header: list[str], page_rows: list[list[str]], image_file: Path
         csv_writer.writerows(page_rows)  # Writes all rows at once
 
     gt_table = get_censorship_fixes_table(temp_file)
-    gt_table.show()
-
     gt_table.save(str(image_file), scale=2.5, expand=10)
     _remove_white_background(image_file)
     _trim_vertical_padding(image_file)
