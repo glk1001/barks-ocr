@@ -671,7 +671,7 @@ now dies with `FileNotFoundError` on a missing Vol. 2 cover,
 `Fantagraphics-original/Carl Barks Vol. 2 …/images/686.jpg`. Per-title runs are
 unaffected.
 
-### Findings to paste into the next run (2026-08-19, twelfth batch, first title)
+### Findings to paste into the next run (2026-08-19, twelfth batch, titles 1-2)
 
 10 corrections over *The Cantankerous Cat* — 5 speaker and 5 cap over 142
 groups, **7.0%**, against 5.2% the batch before. All 4 medium calls were promoted
@@ -703,6 +703,31 @@ two panels**, and both were fans.
   disagreements** from the review, and `vision-corrections` still reporting all
   50 entries outstanding afterwards. Confirming a type is a separate action from
   confirming a speaker, and finishing the speakers says nothing about it.
+
+**And from *Donald Duck's Atom Bomb*, 5 corrections over 134 groups (3.7%) —
+four of them Donald against Professor Mollicule in a two-figure panel.**
+
+- WITH TWO ADULTS IN FRAME THE ATTRIBUTION IS AS SHAKY AS A NEPHEW FAN, and the
+  medium hedge found it: **4 of the 9 medium calls were corrected against 1 of
+  the 125 highs**, about 44% against 0.8%. Two tails descending into one knot of
+  figures is the same problem as a fan and gets the same treatment.
+- A DRAWN FIGURE BEATS AN OFF-PANEL ONE EVEN WHEN THE TAIL FALLS SHORT. 155 g12
+  is a close-up of Donald's face alone with the tail stopping well above his
+  head; I promoted it to an off-panel professor and the review gave it to
+  Donald. A tail ending in empty space over a head is still that head's.
+- REGISTER IS NOT EVIDENCE. "The professors do not talk like this" lost twice.
+- CHECK THE `other:` VALUES BEFORE MIRRORING, NOT AFTER. This review handed back
+  `other:Professor Molicule`, one `l`, against 31 of the canonical spelling — a
+  typo to fix on easyocr first so the mirror carries it. It also introduced
+  `other:Donald and Professor Mollicule`, the only **compound** in 273 distinct
+  `other:` values corpus-wide; that one is a deliberate reading, so hand it back
+  as a question rather than collapsing it.
+- A TEXT CORRECTION CAN COME BACK HALF-APPLIED. 153 g6 proposed two words,
+  `PECULIAR -> BECULIAR` and `PROFESSOR -> BROVESSOR`; the stored text now has
+  the second and not the first, and `vision-corrections` correctly still reports
+  it outstanding. Read the stored string, not the outstanding count.
+- The type queue behaved this time: all 8 type corrections were confirmed, so
+  the untouched-type-queue problem from title 1 is not universal.
 
 ## Per-volume cap palette
 
