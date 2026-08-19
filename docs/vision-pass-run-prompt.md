@@ -720,8 +720,14 @@ four of them Donald against Professor Mollicule in a two-figure panel.**
   `other:Professor Molicule`, one `l`, against 31 of the canonical spelling — a
   typo to fix on easyocr first so the mirror carries it. It also introduced
   `other:Donald and Professor Mollicule`, the only **compound** in 273 distinct
-  `other:` values corpus-wide; that one is a deliberate reading, so hand it back
-  as a question rather than collapsing it.
+  `other:` values corpus-wide. That one is CORRECT and must not be collapsed:
+  155 p5's balloon carries **two tails**, one to each of them. I missed the
+  second twice — it runs parallel to the curtain's vertical strokes and reads as
+  one more line of the background until the whole panel is in frame.
+- COUNT EVERY TAIL ON A BALLOON, NOT JUST THE FIRST ONE THAT EXPLAINS THE LINE.
+  Two tails means two speakers and a compound `other:` value. Crop the whole
+  panel before tracing, and expect a tail crossing hatching, a curtain, rain or a
+  fence to vanish into it.
 - A TEXT CORRECTION CAN COME BACK HALF-APPLIED. 153 g6 proposed two words,
   `PECULIAR -> BECULIAR` and `PROFESSOR -> BROVESSOR`; the stored text now has
   the second and not the first, and `vision-corrections` correctly still reports
