@@ -25,6 +25,7 @@ codepoint
 colorfmt
 colours
 coords
+cscsv
 csvfile
 denoise
 denoising
@@ -52,12 +53,15 @@ gemf
 gemg
 gemr
 genai
+getbbox
+getchannel
 getrgb
 gttl
 halign
 hotpink
 ikey
 imwrite
+inducks
 initargs
 inpaint
 intspan
@@ -104,6 +108,7 @@ touchpads
 uncompared
 uncurated
 ungrab
+unrecognised
 unreviewed
 unrotated
 unvalidated
