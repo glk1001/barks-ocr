@@ -1,26 +1,30 @@
 """Derive the volume/image/page columns of the censorship-fixes CSV.
 
-The CSV at ``CSV_DIR / "censorship-fixes-simple.csv"`` is hand-maintained: GLK adds a row
-naming a story, a ``comic_page.panel`` reference and the before/after text, and classifies
-each row as an error or a censorship fix. Everything else - the Fantagraphics volume, the
-scan image stem and the printed book page - is derived here.
+The CSV, which ships in `barks_fantagraphics/data`, is hand-maintained: GLK adds a row
+naming a story, a page and panel, and the before/after text, and classifies each row as
+an error or a censorship fix. Everything else - the Fantagraphics volume, the scan image
+stem and the printed book page - is derived here, and the rows are sorted into book
+order.
 
-The tool is idempotent, so it can be re-run after rows are added. It reads either the
-original four-column layout (``Story, Change_From, Change_To, Page_Panel``, with a ``"``
-cell meaning "same as the row above") or the nine-column layout it writes, and always
-emits the nine-column layout with every value written out in full.
+The tool is idempotent, so it can be re-run after rows are added, and it writes nothing
+when nothing has changed.
 """
 
 import csv
 import io
 import re
-import shutil
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Annotated
 
 import typer
 from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE
+from barks_fantagraphics.censorship_fixes import (
+    CENSORSHIP_FIXES_CSV,
+    CENSORSHIP_FIXES_HEADER,
+    CensorshipFixesError,
+    read_censorship_fixes,
+)
 from barks_fantagraphics.comic_book_info import COVERS_SET
 from barks_fantagraphics.comics_consts import PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
@@ -35,9 +39,6 @@ from barks_ocr.cli_setup import init_logging
 
 APP_LOGGING_NAME = "cscsv"
 
-ROOT_DIR = Path.home() / "Books" / "Carl Barks"
-CSV_DIR = ROOT_DIR / "Projects" / "Barks Reader"
-CSV_FILE = CSV_DIR / "censorship-fixes-simple.csv"
 
 # The printed book page of every CCBDL story, generated from INDUCKS by the barks-wiki
 # repo. Nothing in `barks_fantagraphics` records it: the DB knows only scan image stems,
@@ -51,21 +52,6 @@ CCBDL_CONTENTS_FILE = (
 
 # Vol | Pg | Type | Title | Pp | INDUCKS code | DB title (stories) | DB body | delta
 CONTENTS_TABLE_COLUMNS = 9
-
-LEGACY_HEADER = ["Story", "Change_From", "Change_To", "Page_Panel"]
-HEADER = [
-    "Volume",
-    "Image",
-    "Fanta_page",
-    "Comic_page",
-    "Panel",
-    "Story",
-    "Error_type",
-    "Change_From",
-    "Change_To",
-]
-
-DITTO = '"'
 
 # Story names in the CSV that predate the canonical title spellings. The curly
 # apostrophe is the CSV's, and has to be matched exactly.
@@ -288,42 +274,6 @@ def locate_story(
     return StoryLocation(title, volume, images, _printed_page(contents, title, volume, first_image))
 
 
-def split_page_panel(page_panel: str) -> tuple[str, str]:
-    """Split a `Page_Panel` cell into its comic page and panel parts.
-
-    Most cells are `page.panel`, but three other forms appear: `all` for a whole-story
-    fix, `3.*` for a whole page, and `6.7.8` for two panels of one page.
-
-    Args:
-        page_panel: The `Page_Panel` cell.
-
-    Returns:
-        The comic page and the panel, either of which may be empty.
-
-    Raises:
-        CensorshipCsvError: If the cell is in none of the known forms.
-
-    """
-    cell = page_panel.strip()
-    if cell in ("", "all"):
-        return "", ""
-
-    parts = cell.split(".")
-    if not all(p.isdigit() for p in parts[:1]):
-        msg = f'Unrecognised Page_Panel value: "{page_panel}".'
-        raise CensorshipCsvError(msg)
-
-    page = parts[0]
-    panels = parts[1:]
-    if panels == ["*"]:
-        return page, ""
-    if all(p.isdigit() for p in panels):
-        return page, ",".join(panels)
-
-    msg = f'Unrecognised Page_Panel value: "{page_panel}".'
-    raise CensorshipCsvError(msg)
-
-
 def fanta_page_for(location: StoryLocation, comic_page: str) -> str:
     """Return the printed book page for one comic page of a story.
 
@@ -350,31 +300,12 @@ def fanta_page_for(location: StoryLocation, comic_page: str) -> str:
     return str(location.printed_page + page - 2)
 
 
-def expand_dittos(rows: list[list[str]]) -> list[list[str]]:
-    """Replace every ditto cell with the value it stands in for.
-
-    Args:
-        rows: The CSV data rows, a ditto cell being a lone double-quote.
-
-    Returns:
-        The same rows with every ditto resolved against the rows above it.
-
-    """
-    expanded: list[list[str]] = []
-    previous: list[str] = []
-    for row in rows:
-        filled = [
-            prev if cell == DITTO else cell for cell, prev in zip(row, previous or row, strict=True)
-        ]
-        expanded.append(filled)
-        previous = filled
-
-    return expanded
-
-
 @dataclass(frozen=True, slots=True)
 class FixRecord:
-    """One censorship-fix row, independent of which CSV layout it was read from.
+    """One censorship-fix row, reduced to the cells a person actually authors.
+
+    The volume, image and printed page are left out on purpose: they are derived
+    from these by `build_rows`, so carrying them here would let a stale value in.
 
     Attributes:
         story: The `Story` cell, kept verbatim.
@@ -395,44 +326,29 @@ class FixRecord:
 
 
 def read_fix_records(file: Path) -> list[FixRecord]:
-    """Read the censorship-fixes CSV in either of its layouts.
+    """Read the censorship-fixes CSV.
 
     Args:
         file: The CSV file.
 
     Returns:
-        One record per data row, with dittos expanded and `Page_Panel` split.
+        One record per data row, with `Page_Panel` split into page and panel.
 
     Raises:
-        CensorshipCsvError: If the header is neither layout, or a cell is unparsable.
+        CensorshipCsvError: If a cell is unparsable.
 
     """
-    with file.open("r", newline="", encoding="utf-8") as csvfile:
-        reader = csv.reader(csvfile)
-        header = next(reader)
-        rows = expand_dittos([row for row in reader if row])
+    try:
+        rows = read_censorship_fixes(file)
+    except CensorshipFixesError as e:
+        raise CensorshipCsvError(str(e)) from e
 
-    if header == LEGACY_HEADER:
-        return [
-            FixRecord(story, *split_page_panel(page_panel), "", change_from, change_to)
-            for story, change_from, change_to, page_panel in rows
-        ]
-
-    if header == HEADER:
-        return [
-            FixRecord(
-                row[HEADER.index("Story")],
-                row[HEADER.index("Comic_page")],
-                row[HEADER.index("Panel")],
-                row[HEADER.index("Error_type")],
-                row[HEADER.index("Change_From")],
-                row[HEADER.index("Change_To")],
-            )
-            for row in rows
-        ]
-
-    msg = f'Unrecognised CSV header in "{file}": {header}.'
-    raise CensorshipCsvError(msg)
+    return [
+        FixRecord(
+            row.story, row.comic_page, row.panel, row.error_type, row.change_from, row.change_to
+        )
+        for row in rows
+    ]
 
 
 def build_rows(records: list[FixRecord], locations: dict[str, StoryLocation]) -> list[list[str]]:
@@ -443,7 +359,7 @@ def build_rows(records: list[FixRecord], locations: dict[str, StoryLocation]) ->
         locations: Story name to resolved location, from `locate_story`.
 
     Returns:
-        One output row per record, in `HEADER` order, sorted by `row_sort_key`.
+        One output row per record, in `CENSORSHIP_FIXES_HEADER` order, sorted by `row_sort_key`.
 
     Raises:
         CensorshipCsvError: If a record names a comic page the story does not have.
@@ -487,7 +403,7 @@ def row_sort_key(row: list[str]) -> tuple:
     its volume, since it stands for the whole story rather than a page of it.
 
     Args:
-        row: One output row, in `HEADER` order.
+        row: One output row, in `CENSORSHIP_FIXES_HEADER` order.
 
     Returns:
         A sort key.
@@ -495,7 +411,7 @@ def row_sort_key(row: list[str]) -> tuple:
     """
 
     def cell(name: str) -> str:
-        return row[HEADER.index(name)]
+        return row[CENSORSHIP_FIXES_HEADER.index(name)]
 
     fanta_page = cell("Fanta_page")
     folio = re.fullmatch(r"(\d+)([a-z]*)", fanta_page)
@@ -514,7 +430,7 @@ def render_csv(rows: list[list[str]]) -> str:
     """Render the nine-column CSV, quoting every field as the original does.
 
     Args:
-        rows: The data rows, in `HEADER` order.
+        rows: The data rows, in `CENSORSHIP_FIXES_HEADER` order.
 
     Returns:
         The complete file content.
@@ -523,7 +439,7 @@ def render_csv(rows: list[list[str]]) -> str:
     out = io.StringIO(newline="")
     # The file this replaces is LF-terminated; csv.writer defaults to CRLF.
     writer = csv.writer(out, quoting=csv.QUOTE_ALL, lineterminator="\n")
-    writer.writerow(HEADER)
+    writer.writerow(CENSORSHIP_FIXES_HEADER)
     writer.writerows(rows)
     return out.getvalue()
 
@@ -577,7 +493,7 @@ app = typer.Typer()
 def main(
     csv_file: Annotated[
         Path, typer.Option("--csv-file", help="The censorship fixes CSV to rewrite.")
-    ] = CSV_FILE,
+    ] = CENSORSHIP_FIXES_CSV,
     contents_file: Annotated[
         Path,
         typer.Option("--contents-file", help="The barks-wiki CCBDL contents markdown table."),
@@ -614,10 +530,9 @@ def main(
         _console.print(f"[dim]{csv_file} is already up to date - nothing written.[/]")
         return
 
-    backup_file = csv_file.with_suffix(csv_file.suffix + ".bak")
-    shutil.copy2(csv_file, backup_file)
+    # No backup file: the CSV is tracked in barks-compleat-reader, so git is the
+    # history, and an untracked .bak beside it inside `data/` would be clutter.
     csv_file.write_text(content, encoding="utf-8", newline="")
-    _console.print(f"[dim]Backed up to[/] [cyan]{backup_file}[/]")
     _console.print(f"[dim]Wrote {len(rows)} rows to[/] [cyan]{csv_file}[/]")
 
 

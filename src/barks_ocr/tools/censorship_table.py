@@ -2,11 +2,9 @@ import csv
 from pathlib import Path
 
 import polars as pl
+from barks_fantagraphics.censorship_fixes import CENSORSHIP_FIXES_HEADER, read_censorship_fixes
 from great_tables import GT, html, loc, style
 from PIL import Image, ImageChops
-
-ROOT_DIR = Path("/home/greg/Books/Carl Barks")
-CSV_DIR = ROOT_DIR / "Projects" / "Barks Reader"
 
 # Written by `barks-ocr-censorship-csv`; see `tools/censorship_csv.py` for how the
 # derived columns are worked out.
@@ -306,11 +304,8 @@ def _render_page(header: list[str], page_rows: list[list[str]], image_file: Path
 
 def main() -> None:
     page_size = 36
-    file = CSV_DIR / "censorship-fixes-simple.csv"
-    with file.open("r", newline="") as csvfile:
-        csv_reader = csv.reader(csvfile)
-        header = next(csv_reader)
-        csv_rows = list(csv_reader)
+    header = CENSORSHIP_FIXES_HEADER
+    csv_rows = [row.as_cells() for row in read_censorship_fixes()]
 
     # Break each fixes list into pages with white backgrounds. These can be added to the
     # Gimp project where the background is easily removed. Then apply contrast = -70% to
