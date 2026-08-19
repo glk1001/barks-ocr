@@ -23,6 +23,7 @@ from barks_fantagraphics.censorship_fixes import (
     CENSORSHIP_FIXES_CSV,
     CENSORSHIP_FIXES_HEADER,
     CensorshipFixesError,
+    CensorshipFixRow,
     read_censorship_fixes,
 )
 from barks_fantagraphics.comic_book_info import COVERS_SET
@@ -325,30 +326,36 @@ class FixRecord:
     change_to: str
 
 
-def read_fix_records(file: Path) -> list[FixRecord]:
-    """Read the censorship-fixes CSV.
+def read_fix_records(file: Path) -> tuple[list[CensorshipFixRow], list[FixRecord]]:
+    """Read the censorship-fixes CSV, as stored rows and as authored records.
+
+    Both are returned because they are needed together: the records are what the derived
+    columns are rebuilt from, and the stored rows are what the rebuilt ones are checked
+    against.
 
     Args:
         file: The CSV file.
 
     Returns:
-        One record per data row, with `Page_Panel` split into page and panel.
+        The rows as stored, and the same rows reduced to their authored cells.
 
     Raises:
-        CensorshipCsvError: If a cell is unparsable.
+        CensorshipCsvError: If the file cannot be read.
 
     """
     try:
-        rows = read_censorship_fixes(file)
+        stored_rows = read_censorship_fixes(file)
     except CensorshipFixesError as e:
         raise CensorshipCsvError(str(e)) from e
 
-    return [
+    records = [
         FixRecord(
             row.story, row.comic_page, row.panel, row.error_type, row.change_from, row.change_to
         )
-        for row in rows
+        for row in stored_rows
     ]
+
+    return stored_rows, records
 
 
 def build_rows(records: list[FixRecord], locations: dict[str, StoryLocation]) -> list[list[str]]:
@@ -359,7 +366,8 @@ def build_rows(records: list[FixRecord], locations: dict[str, StoryLocation]) ->
         locations: Story name to resolved location, from `locate_story`.
 
     Returns:
-        One output row per record, in `CENSORSHIP_FIXES_HEADER` order, sorted by `row_sort_key`.
+        One output row per record, in `CENSORSHIP_FIXES_HEADER` order and in the
+        records' own order, so a row can be compared with the one it came from.
 
     Raises:
         CensorshipCsvError: If a record names a comic page the story does not have.
@@ -389,7 +397,104 @@ def build_rows(records: list[FixRecord], locations: dict[str, StoryLocation]) ->
             ]
         )
 
-    return sorted(rows, key=row_sort_key)
+    return rows
+
+
+# The columns this tool works out from Story and Comic_page. Everything else in a row is
+# authored by hand, so only these can disagree with the story they claim to describe.
+DERIVED_COLUMNS = ("Volume", "Image", "Fanta_page")
+
+
+@dataclass(frozen=True, slots=True)
+class RowDisagreement:
+    """One derived cell that does not match what the story and page say it should be.
+
+    Attributes:
+        line: The row's line in the CSV, counting the header as line 1.
+        story: The row's story, for finding it by eye.
+        comic_page: The row's page within that story.
+        column: Which derived column disagrees.
+        stored: The value in the file.
+        derived: The value the comics database and the CCBDL contents give.
+
+    """
+
+    line: int
+    story: str
+    comic_page: str
+    column: str
+    stored: str
+    derived: str
+
+
+def find_disagreements(
+    stored_rows: list[CensorshipFixRow], derived_rows: list[list[str]]
+) -> list[RowDisagreement]:
+    """Find every derived cell that disagrees with the row's own story and page.
+
+    A hand-edited Volume, Image or Fanta_page is otherwise invisible: a plain run would
+    quietly overwrite it, so nothing would ever say the row had been wrong.
+
+    Args:
+        stored_rows: The rows as read from the file.
+        derived_rows: The rebuilt rows, in the same order.
+
+    Returns:
+        One entry per disagreeing cell, in file order.
+
+    """
+    disagreements = []
+    for line, (stored, derived) in enumerate(zip(stored_rows, derived_rows, strict=True), start=2):
+        stored_cells = stored.as_cells()
+        for column in DERIVED_COLUMNS:
+            index = CENSORSHIP_FIXES_HEADER.index(column)
+            if stored_cells[index] != derived[index]:
+                disagreements.append(
+                    RowDisagreement(
+                        line=line,
+                        story=stored.story,
+                        comic_page=stored.comic_page,
+                        column=column,
+                        stored=stored_cells[index],
+                        derived=derived[index],
+                    )
+                )
+
+    return disagreements
+
+
+def print_disagreements(disagreements: list[RowDisagreement]) -> None:
+    """Print the derived cells that disagree with their row's story and page.
+
+    Args:
+        disagreements: The disagreements, from `find_disagreements`.
+
+    """
+    table = Table(
+        title="Derived columns that disagree with the row's story and page",
+        box=box.ROUNDED,
+        header_style="bold red",
+        title_style="bold red",
+    )
+    table.add_column("Line", justify="right")
+    table.add_column("Story")
+    table.add_column("Comic page", justify="right")
+    table.add_column("Column")
+    table.add_column("In file")
+    table.add_column("Should be")
+
+    for bad in disagreements:
+        table.add_row(
+            str(bad.line),
+            bad.story,
+            bad.comic_page,
+            bad.column,
+            f"[red]{bad.stored or '(blank)'}[/]",
+            f"[green]{bad.derived or '(blank)'}[/]",
+        )
+
+    _console.print()
+    _console.print(table)
 
 
 def row_sort_key(row: list[str]) -> tuple:
@@ -510,7 +615,7 @@ def main(
     comics_database = ComicsDatabase(for_building_comics=False)
     covers = {ENUM_TO_STR_TITLE[t] for t in COVERS_SET}
 
-    records = read_fix_records(csv_file)
+    stored_rows, records = read_fix_records(csv_file)
     locations = {
         record.story: locate_story(comics_database, contents, record.story, covers)
         for record in records
@@ -519,11 +624,29 @@ def main(
 
     print_story_summary(records, locations)
 
+    disagreements = find_disagreements(stored_rows, rows)
+    if disagreements:
+        print_disagreements(disagreements)
+
+    sorted_rows = sorted(rows, key=row_sort_key)
+    out_of_order = [row.as_cells() for row in stored_rows] != sorted_rows
+
     if check:
-        _console.print(f"[dim]--check: {len(rows)} rows resolved, nothing written.[/]")
+        _console.print(f"[dim]--check: {len(rows)} rows resolved.[/]")
+        if disagreements:
+            _console.print(
+                f"[red]{len(disagreements)} derived cell(s) disagree with"
+                f" their row's story and page.[/]"
+            )
+        if out_of_order:
+            _console.print("[yellow]The file is not in book order.[/]")
+        if disagreements or out_of_order:
+            _console.print("[dim]Re-run without --check to rewrite it.[/]")
+            raise typer.Exit(code=1)
+        _console.print("[dim]Every derived column agrees, and the file is in order.[/]")
         return
 
-    content = render_csv(rows)
+    content = render_csv(sorted_rows)
     if content == csv_file.read_text(encoding="utf-8", newline=""):
         # Nothing derived has changed, so leave the backup alone - re-running the tool
         # must never overwrite a backup that still holds real earlier content.
