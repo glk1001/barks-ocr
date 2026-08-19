@@ -26,6 +26,16 @@ COLUMN_WIDTHS = {
 #     constant down the whole document and the column would say nothing.
 RENDERED_COLUMNS = list(COLUMN_WIDTHS)
 
+# `_remove_white_background` turns a pixel transparent when every channel exceeds this,
+# so anything at or below it is what survives into the finished page.
+WHITE_THRESHOLD = 127
+
+# The hairline between rows. great_tables' own default is #d3d3d3 (211), which the Gimp
+# pipeline deletes outright - every channel is above WHITE_THRESHOLD - so the tables have
+# been coming out with no rules at all. A rule has to sit at or below that threshold to
+# survive, which makes #787878 (120) about the lightest hairline this pipeline can carry.
+ROW_RULE_COLOR = "#787878"
+
 # One table per Error_type, each written as its own set of page images numbered from 1.
 # Exactly one story carries both kinds, so this splits almost nothing between the two.
 ERROR_TYPE_FILE_STEMS = {
@@ -116,6 +126,7 @@ def get_censorship_fixes_table(file: Path) -> GT:
         # which is left-aligned in the very next column.
         .cols_align(align="right", columns="Page_Panel")
         .tab_style(style=style.css("padding-right: 8px"), locations=loc.body("Page_Panel"))
+        .tab_options(table_body_hlines_color=ROW_RULE_COLOR, table_body_hlines_width="1px")
     )
 
     table = table.tab_style(style=style.text(weight="bold"), locations=loc.column_labels())
@@ -252,7 +263,7 @@ def _trim_vertical_padding(image_file: Path, margin: int = PAGE_MARGIN) -> None:
     img.crop((0, top, img.width, bottom)).save(image_file)
 
 
-def _remove_white_background(image_file: Path, threshold: int = 127) -> None:
+def _remove_white_background(image_file: Path, threshold: int = WHITE_THRESHOLD) -> None:
     """Replace near-white pixels with transparency in-place."""
     img = Image.open(image_file).convert("RGBA")
     r, g, b, _ = img.split()

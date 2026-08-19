@@ -58,6 +58,7 @@ getchannel
 getrgb
 gttl
 halign
+hlines
 hotpink
 ikey
 imwrite
