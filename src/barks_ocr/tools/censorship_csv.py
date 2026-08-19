@@ -115,7 +115,8 @@ def parse_ccbdl_contents(contents_file: Path) -> dict[str, list[ContentsEntry]]:
         contents_file: Path to `okf/reference/data/ccbdl-contents.md`.
 
     Returns:
-        Every `comic story` row that names a DB title, grouped by that title.
+        Every `comic story` row that names a DB title and a numeric DB body start,
+        grouped by that title.
 
     Raises:
         CensorshipCsvError: If the file is missing or holds no usable rows.
@@ -136,7 +137,10 @@ def parse_ccbdl_contents(contents_file: Path) -> dict[str, list[ContentsEntry]]:
         if len(cells) != CONTENTS_TABLE_COLUMNS or cells[0] == "Vol" or set(cells[0]) <= set("-:"):
             continue
         volume, printed_page, _type, _title, _pp, _code, db_title, db_body, _delta = cells
-        if not db_title or not db_body:
+        # 34 rows write `DB body` as an em dash rather than leaving it empty, meaning the
+        # wiki found no DB image for the story. Such a row can never be matched to a
+        # story's first image, so it is dropped here rather than left to fail `int()`.
+        if not db_title or not db_body.isdigit():
             continue
         entries.setdefault(db_title, []).append(
             ContentsEntry(int(volume), printed_page, db_title, db_body)
@@ -286,8 +290,8 @@ def build_rows(
         stored order, so a row can be compared with the one it came from.
 
     A row naming a page its story does not have derives to blank cells, which
-    `find_disagreements` then reports; raising here would stop every other row being
-    checked over one typo.
+    `find_disagreements` reports as an unfixable disagreement; raising here would stop
+    every other row being checked over one typo.
 
     """
     rows = []
@@ -332,6 +336,10 @@ class RowDisagreement:
         column: Which derived column disagrees.
         stored: The value in the file.
         derived: The value the comics database and the CCBDL contents give.
+        fixable: Whether re-running the tool would settle it. A blank cell with a value
+            to fill it with is fixable; a row naming a page its story does not have is
+            not, since there is nothing to derive and only the author can say what the
+            row meant.
 
     """
 
@@ -341,6 +349,7 @@ class RowDisagreement:
     column: str
     stored: str
     derived: str
+    fixable: bool = True
 
 
 def find_disagreements(
@@ -362,8 +371,28 @@ def find_disagreements(
         One entry per disagreeing cell, in file order.
 
     """
+    image_index = CENSORSHIP_FIXES_HEADER.index("Image")
+
     disagreements = []
     for line, (stored, derived) in enumerate(zip(stored_rows, derived_rows, strict=True), start=2):
+        # A row naming a page its story does not have derives a blank image, and a blank
+        # stored image would otherwise agree with it - so the typo would be reported by
+        # nothing. There is no value to fill the cell with, so the author has to settle it.
+        no_such_page = bool(stored.comic_page) and not derived[image_index]
+        if no_such_page:
+            numbered = sorted(locations[stored.story].images, key=int)
+            disagreements.append(
+                RowDisagreement(
+                    line=line,
+                    story=stored.story,
+                    comic_page=stored.comic_page,
+                    column="Image",
+                    stored=stored.image,
+                    derived=f"that story has pages {numbered[0]}-{numbered[-1]}",
+                    fixable=False,
+                )
+            )
+
         # An unnumbered row's image is carried through rather than derived, so comparing
         # it with itself proves nothing. Check it names a page the story actually has.
         if stored.image and not stored.comic_page:
@@ -383,6 +412,9 @@ def find_disagreements(
         stored_cells = stored.as_cells()
         for column in DERIVED_COLUMNS:
             index = CENSORSHIP_FIXES_HEADER.index(column)
+            if no_such_page and index == image_index:
+                # Already reported above, and with something to act on.
+                continue
             if stored_cells[index] != derived[index]:
                 disagreements.append(
                     RowDisagreement(
@@ -453,16 +485,26 @@ def row_sort_key(row: list[str]) -> tuple:
     def cell(name: str) -> str:
         return row[CENSORSHIP_FIXES_HEADER.index(name)]
 
+    def panel_key(panel: str) -> tuple[tuple[int, str], ...]:
+        # Every panel written so far is a number or a comma-separated pair of them, but
+        # sorting is no place to insist on that: a range or a word orders on its leading
+        # digits, and on the text itself after that, rather than raising from inside
+        # `sorted` with nothing to say which row was at fault.
+        parts = [p.strip() for p in panel.split(",")]
+        return tuple(((int(m[0]) if (m := re.match(r"\d+", p)) else 0), p) for p in parts if p)
+
     fanta_page = cell("Fanta_page")
     folio = re.fullmatch(r"(\d+)([a-z]*)", fanta_page)
     page_key = (int(folio[1]), folio[2]) if folio else (0, "")
+
+    comic_page = cell("Comic_page")
 
     return (
         int(cell("Volume")),
         bool(fanta_page),
         page_key,
-        int(cell("Comic_page") or 0),
-        tuple(int(p) for p in cell("Panel").split(",") if p),
+        int(comic_page) if comic_page.isdigit() else 0,
+        panel_key(cell("Panel")),
     )
 
 
@@ -550,8 +592,11 @@ def main(
     comics_database = ComicsDatabase(for_building_comics=False)
 
     stored_rows = read_fix_records(csv_file)
+    # Once per distinct story, not once per row: each call loads the story's ini file and
+    # walks its pages, and the CSV runs several rows to the story.
     locations = {
-        row.story: locate_story(comics_database, contents, row.story) for row in stored_rows
+        story: locate_story(comics_database, contents, story)
+        for story in dict.fromkeys(row.story for row in stored_rows)
     }
     rows = build_rows(stored_rows, locations)
 
@@ -562,12 +607,14 @@ def main(
         print_disagreements(disagreements)
 
     sorted_rows = sorted(rows, key=row_sort_key)
-    out_of_order = [row.as_cells() for row in stored_rows] != sorted_rows
+    # The derived rows either side of the sort, not the stored ones: comparing with what
+    # is in the file makes every blank cell awaiting a fill look like a row out of place.
+    out_of_order = rows != sorted_rows
 
     # A blank cell is the tool's to fill in. A cell someone typed is not: the value it
     # disagrees with may be the right one, as it was for Turkey Raffle, where the page
-    # was wrong and the image was right.
-    conflicts = [bad for bad in disagreements if bad.stored]
+    # was wrong and the image was right. Neither is a blank cell with nothing to fill it.
+    conflicts = [bad for bad in disagreements if bad.stored or not bad.fixable]
 
     _console.print(f"[dim]{len(rows)} rows resolved.[/]")
     if conflicts:
