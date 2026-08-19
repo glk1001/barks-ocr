@@ -671,6 +671,39 @@ now dies with `FileNotFoundError` on a missing Vol. 2 cover,
 `Fantagraphics-original/Carl Barks Vol. 2 …/images/686.jpg`. Per-title runs are
 unaffected.
 
+### Findings to paste into the next run (2026-08-19, twelfth batch, first title)
+
+10 corrections over *The Cantankerous Cat* — 5 speaker and 5 cap over 142
+groups, **7.0%**, against 5.2% the batch before. All 4 medium calls were promoted
+to high and none demoted, so the hedging is still fine; **9 of the 10 landed on
+two panels**, and both were fans.
+
+- A TIP THAT LANDS ON A HEAD DOES NOT ANCHOR A FAN. 141 p5: three balloons, three
+  boys, two tips on empty grass and the third **inside a boy's head span, on a cap
+  sampled at `#e11b1f` H359**. I used the clean tip as an anchor, named that boy
+  and left the other two `nephews`. The review shifted the whole fan one boy right
+  and named all three off reading order — the anchor was itself the slipped tip.
+  If ANY tip in a fan lands on nobody, no tip in that fan is trustworthy,
+  including the one that looks measured. The tip-beats-order rule applies only
+  when every tip in the fan lands on a figure.
+- THE SAME OFF-BY-ONE HITS THE CAP READING, NOT JUST THE TAIL. 148 p5 kept both
+  my speakers, which came from a naming line, and moved both cap colours one boy
+  along — red→green and green→blue. Map caps to heads as its own measurement; do
+  not inherit the boundaries you used for the tails.
+- A NAMING LINE NAMES THE BOY EVEN WHEN THE CAP SAYS OTHERWISE. 149 g12: the
+  line "LET'S WAKE LOUIE" leaves Huey and Dewey awake, the one readable cap in
+  the panel is a clean green, and I recorded the colour and declined the name.
+  The review named him **Dewey** and kept the green. The disagreement is the
+  record; it is not a reason to retreat to a collective.
+- DO NOT INVENT A SECOND VOICE FOR A ONE-FIGURE PANEL. 147 g1: two balloons over
+  Donald in bed with an imagined vignette on the wall, read as Donald arguing
+  with himself. The answering balloon is a nephew's. Reaching for
+  conscience-and-self is the same error as reaching for an off-panel adult.
+- And the type queue went untouched again: 25 type corrections, **zero
+  disagreements** from the review, and `vision-corrections` still reporting all
+  50 entries outstanding afterwards. Confirming a type is a separate action from
+  confirming a speaker, and finishing the speakers says nothing about it.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
