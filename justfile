@@ -58,3 +58,13 @@ kivy-editor volume fanta_page easy_id='0' paddle_id='0':
 [group('OCR')]
 kivy-editor-queue qfile:
     KIVY_NO_ARGS=1 {{_ocr_uv_run}} "barks-ocr-kivy-editor" --queue-file {{qfile}}
+
+# The two checks run in this order on purpose. The second reads the Image column at face
+# value, so a row whose image has drifted from the story it names would send it looking
+# at the wrong page and report a fix as undocumented when it is not.
+
+# Check the censorship fixes CSV against its own stories, then against the images
+[group('censorship')]
+check-censorship:
+    {{_ocr_uv_run}} barks-ocr-censorship-csv --check
+    {{uv_run}} barks-check-build --censorship-only --log-level SUCCESS

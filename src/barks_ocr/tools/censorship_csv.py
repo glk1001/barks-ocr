@@ -18,18 +18,16 @@ from pathlib import Path
 from typing import Annotated
 
 import typer
-from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE
 from barks_fantagraphics.censorship_fixes import (
     CENSORSHIP_FIXES_CSV,
     CENSORSHIP_FIXES_HEADER,
     CensorshipFixesError,
     CensorshipFixRow,
+    censorship_story_pages,
     read_censorship_fixes,
+    resolve_censorship_story,
 )
-from barks_fantagraphics.comic_book_info import COVERS_SET
-from barks_fantagraphics.comics_consts import PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
-from barks_fantagraphics.pages import get_page_num_str, get_srce_and_dest_pages_in_order
 from comic_utils.common_typer_options import LogLevelArg
 from loguru import logger
 from rich import box
@@ -53,13 +51,6 @@ CCBDL_CONTENTS_FILE = (
 
 # Vol | Pg | Type | Title | Pp | INDUCKS code | DB title (stories) | DB body | delta
 CONTENTS_TABLE_COLUMNS = 9
-
-# Story names in the CSV that predate the canonical title spellings. The curly
-# apostrophe is the CSV's, and has to be matched exactly.
-TITLE_ALIASES = {
-    "The Mummy’s Ring": "Donald Duck and the Mummy's Ring",  # noqa: RUF001
-    "Race to the South Seas": "Race to the South Seas!",
-}
 
 # Fantagraphics censored one page out of the ten-page `The Bill Collectors`, so CCBDL
 # vol 4 prints nine pages while the DB carries the restored ten. The restored page is
@@ -103,6 +94,8 @@ class StoryLocation:
         title: The canonical DB title.
         volume: The Fantagraphics volume number.
         images: Comic page number to scan image stem, for BODY pages only.
+        unnumbered_images: Stems of the story's pages that carry no comic page number -
+            its cover and the like.
         printed_page: The story's first printed book page, or None if the story does
             not appear in the printed volume at all.
 
@@ -111,6 +104,7 @@ class StoryLocation:
     title: str
     volume: int
     images: dict[str, str]
+    unnumbered_images: frozenset[str]
     printed_page: int | None
 
 
@@ -155,62 +149,6 @@ def parse_ccbdl_contents(contents_file: Path) -> dict[str, list[ContentsEntry]]:
     return entries
 
 
-def resolve_title(comics_database: ComicsDatabase, story: str, covers: set[str]) -> str:
-    """Resolve a CSV story name to its canonical DB title.
-
-    Handles the CSV's padded issue strings ("WDCS  34"), issue strings that match both a
-    story and that issue's cover, and the two legacy title spellings.
-
-    Args:
-        comics_database: The comics database.
-        story: The `Story` cell as written in the CSV.
-        covers: Canonical titles that are covers, to be discarded from issue matches.
-
-    Returns:
-        The canonical DB title.
-
-    Raises:
-        CensorshipCsvError: If the story does not resolve to exactly one title.
-
-    """
-    if story in TITLE_ALIASES:
-        return TITLE_ALIASES[story]
-
-    issue = re.sub(r"\s+", " ", story).strip()
-    found, titles, _closest = comics_database.get_story_title_from_issue(issue)
-    if found:
-        story_titles = [t for t in titles if t not in covers]
-        if len(story_titles) == 1:
-            return story_titles[0]
-        msg = f'Issue "{story}" matches {len(story_titles)} stories: {story_titles}.'
-        raise CensorshipCsvError(msg)
-
-    is_title, closest = comics_database.is_story_title(story)
-    if is_title:
-        return story
-
-    msg = f'Story "{story}" is not a known title or issue. Closest match: "{closest}".'
-    raise CensorshipCsvError(msg)
-
-
-def _body_images(comics_database: ComicsDatabase, title: str) -> tuple[int, dict[str, str]]:
-    """Map a story's comic page numbers to their scan image stems.
-
-    `comics_helpers.get_volume_and_page` is not used here: it derives the stem
-    arithmetically as `first_stem + page - 1`, which is wrong wherever a story's BODY
-    stems are not contiguous - `The Bill Collectors` maps page 3 to `227` and page 4
-    to `195`.
-    """
-    comic = comics_database.get_comic_book(title)
-    srce_and_dest = get_srce_and_dest_pages_in_order(comic, get_full_paths=False)
-    images = {
-        get_page_num_str(dest): Path(srce.page_filename).stem
-        for srce, dest in zip(srce_and_dest.srce_pages, srce_and_dest.dest_pages, strict=True)
-        if dest.page_type == PageType.BODY
-    }
-    return comic.get_fanta_volume(), images
-
-
 def _printed_page(
     contents: dict[str, list[ContentsEntry]], title: str, volume: int, first_image: str
 ) -> int | None:
@@ -248,7 +186,6 @@ def locate_story(
     comics_database: ComicsDatabase,
     contents: dict[str, list[ContentsEntry]],
     story: str,
-    covers: set[str],
 ) -> StoryLocation:
     """Resolve one CSV story name to its volume, page images and printed start page.
 
@@ -256,7 +193,6 @@ def locate_story(
         comics_database: The comics database.
         contents: The parsed CCBDL contents table, from `parse_ccbdl_contents`.
         story: The `Story` cell as written in the CSV.
-        covers: Canonical titles that are covers.
 
     Returns:
         The story's location in its Fantagraphics volume.
@@ -265,14 +201,25 @@ def locate_story(
         CensorshipCsvError: If the story cannot be resolved or has no BODY pages.
 
     """
-    title = resolve_title(comics_database, story, covers)
-    volume, images = _body_images(comics_database, title)
-    if not images:
+    try:
+        title = resolve_censorship_story(comics_database, story)
+        pages = censorship_story_pages(comics_database, title)
+    except CensorshipFixesError as e:
+        raise CensorshipCsvError(str(e)) from e
+
+    if not pages.body_images:
         msg = f'No BODY pages found for "{title}".'
         raise CensorshipCsvError(msg)
 
-    first_image = images[min(images, key=int)]
-    return StoryLocation(title, volume, images, _printed_page(contents, title, volume, first_image))
+    first_image = pages.body_images[min(pages.body_images, key=int)]
+
+    return StoryLocation(
+        title,
+        pages.volume,
+        pages.body_images,
+        pages.unnumbered_images,
+        _printed_page(contents, title, pages.volume, first_image),
+    )
 
 
 def fanta_page_for(location: StoryLocation, comic_page: str) -> str:
@@ -301,99 +248,68 @@ def fanta_page_for(location: StoryLocation, comic_page: str) -> str:
     return str(location.printed_page + page - 2)
 
 
-@dataclass(frozen=True, slots=True)
-class FixRecord:
-    """One censorship-fix row, reduced to the cells a person actually authors.
-
-    The volume, image and printed page are left out on purpose: they are derived
-    from these by `build_rows`, so carrying them here would let a stale value in.
-
-    Attributes:
-        story: The `Story` cell, kept verbatim.
-        comic_page: The comic page within the story, or "".
-        panel: The panel within that page, or "".
-        error_type: GLK's classification, or "" if not yet filled in.
-        change_from: The text or artwork as Fantagraphics printed it.
-        change_to: The text or artwork as restored.
-
-    """
-
-    story: str
-    comic_page: str
-    panel: str
-    error_type: str
-    change_from: str
-    change_to: str
-
-
-def read_fix_records(file: Path) -> tuple[list[CensorshipFixRow], list[FixRecord]]:
-    """Read the censorship-fixes CSV, as stored rows and as authored records.
-
-    Both are returned because they are needed together: the records are what the derived
-    columns are rebuilt from, and the stored rows are what the rebuilt ones are checked
-    against.
+def read_fix_records(file: Path) -> list[CensorshipFixRow]:
+    """Read the censorship-fixes CSV.
 
     Args:
         file: The CSV file.
 
     Returns:
-        The rows as stored, and the same rows reduced to their authored cells.
+        The rows as stored.
 
     Raises:
         CensorshipCsvError: If the file cannot be read.
 
     """
     try:
-        stored_rows = read_censorship_fixes(file)
+        return read_censorship_fixes(file)
     except CensorshipFixesError as e:
         raise CensorshipCsvError(str(e)) from e
 
-    records = [
-        FixRecord(
-            row.story, row.comic_page, row.panel, row.error_type, row.change_from, row.change_to
-        )
-        for row in stored_rows
-    ]
 
-    return stored_rows, records
+def build_rows(
+    stored_rows: list[CensorshipFixRow], locations: dict[str, StoryLocation]
+) -> list[list[str]]:
+    """Rebuild the derived columns of every row.
 
-
-def build_rows(records: list[FixRecord], locations: dict[str, StoryLocation]) -> list[list[str]]:
-    """Turn fix records into the nine-column output rows.
+    A row with no comic page is a fix to a page that has none - a cover, or a splash.
+    Its image and printed page cannot be derived from anything, so they are the author's
+    to give and are carried through untouched; `find_disagreements` is what checks the
+    image really is one of that story's unnumbered pages.
 
     Args:
-        records: The rows read from the CSV.
+        stored_rows: The rows read from the CSV.
         locations: Story name to resolved location, from `locate_story`.
 
     Returns:
-        One output row per record, in `CENSORSHIP_FIXES_HEADER` order and in the
-        records' own order, so a row can be compared with the one it came from.
+        One output row per stored row, in `CENSORSHIP_FIXES_HEADER` order and in the
+        stored order, so a row can be compared with the one it came from.
 
-    Raises:
-        CensorshipCsvError: If a record names a comic page the story does not have.
+    A row naming a page its story does not have derives to blank cells, which
+    `find_disagreements` then reports; raising here would stop every other row being
+    checked over one typo.
 
     """
     rows = []
-    for record in records:
-        location = locations[record.story]
-        image = ""
-        if record.comic_page:
-            image = location.images.get(record.comic_page, "")
-            if not image:
-                msg = f'"{record.story}" ({location.title}) has no comic page {record.comic_page}.'
-                raise CensorshipCsvError(msg)
+    for row in stored_rows:
+        location = locations[row.story]
+        if row.comic_page:
+            image = location.images.get(row.comic_page, "")
+            fanta_page = fanta_page_for(location, row.comic_page) if image else ""
+        else:
+            image, fanta_page = row.image, row.fanta_page
 
         rows.append(
             [
                 str(location.volume),
                 image,
-                fanta_page_for(location, record.comic_page),
-                record.comic_page,
-                record.panel,
-                record.story,
-                record.error_type,
-                record.change_from,
-                record.change_to,
+                fanta_page,
+                row.comic_page,
+                row.panel,
+                row.story,
+                row.error_type,
+                row.change_from,
+                row.change_to,
             ]
         )
 
@@ -428,7 +344,9 @@ class RowDisagreement:
 
 
 def find_disagreements(
-    stored_rows: list[CensorshipFixRow], derived_rows: list[list[str]]
+    stored_rows: list[CensorshipFixRow],
+    derived_rows: list[list[str]],
+    locations: dict[str, StoryLocation],
 ) -> list[RowDisagreement]:
     """Find every derived cell that disagrees with the row's own story and page.
 
@@ -438,6 +356,7 @@ def find_disagreements(
     Args:
         stored_rows: The rows as read from the file.
         derived_rows: The rebuilt rows, in the same order.
+        locations: Story name to resolved location, from `locate_story`.
 
     Returns:
         One entry per disagreeing cell, in file order.
@@ -445,6 +364,22 @@ def find_disagreements(
     """
     disagreements = []
     for line, (stored, derived) in enumerate(zip(stored_rows, derived_rows, strict=True), start=2):
+        # An unnumbered row's image is carried through rather than derived, so comparing
+        # it with itself proves nothing. Check it names a page the story actually has.
+        if stored.image and not stored.comic_page:
+            unnumbered = locations[stored.story].unnumbered_images
+            if stored.image not in unnumbered:
+                disagreements.append(
+                    RowDisagreement(
+                        line=line,
+                        story=stored.story,
+                        comic_page=stored.comic_page,
+                        column="Image",
+                        stored=stored.image,
+                        derived=f"one of {sorted(unnumbered - {'empty_page'})}",
+                    )
+                )
+
         stored_cells = stored.as_cells()
         for column in DERIVED_COLUMNS:
             index = CENSORSHIP_FIXES_HEADER.index(column)
@@ -549,17 +484,17 @@ def render_csv(rows: list[list[str]]) -> str:
     return out.getvalue()
 
 
-def print_story_summary(records: list[FixRecord], locations: dict[str, StoryLocation]) -> None:
+def print_story_summary(rows: list[CensorshipFixRow], locations: dict[str, StoryLocation]) -> None:
     """Print how every distinct story in the CSV was resolved.
 
     Args:
-        records: The rows read from the CSV.
+        rows: The rows read from the CSV.
         locations: Story name to resolved location, from `locate_story`.
 
     """
     counts: dict[str, int] = {}
-    for record in records:
-        counts[record.story] = counts.get(record.story, 0) + 1
+    for row in rows:
+        counts[row.story] = counts.get(row.story, 0) + 1
 
     table = Table(
         title="Censorship CSV story resolution",
@@ -613,34 +548,42 @@ def main(
 
     contents = parse_ccbdl_contents(contents_file)
     comics_database = ComicsDatabase(for_building_comics=False)
-    covers = {ENUM_TO_STR_TITLE[t] for t in COVERS_SET}
 
-    stored_rows, records = read_fix_records(csv_file)
+    stored_rows = read_fix_records(csv_file)
     locations = {
-        record.story: locate_story(comics_database, contents, record.story, covers)
-        for record in records
+        row.story: locate_story(comics_database, contents, row.story) for row in stored_rows
     }
-    rows = build_rows(records, locations)
+    rows = build_rows(stored_rows, locations)
 
-    print_story_summary(records, locations)
+    print_story_summary(stored_rows, locations)
 
-    disagreements = find_disagreements(stored_rows, rows)
+    disagreements = find_disagreements(stored_rows, rows, locations)
     if disagreements:
         print_disagreements(disagreements)
 
     sorted_rows = sorted(rows, key=row_sort_key)
     out_of_order = [row.as_cells() for row in stored_rows] != sorted_rows
 
+    # A blank cell is the tool's to fill in. A cell someone typed is not: the value it
+    # disagrees with may be the right one, as it was for Turkey Raffle, where the page
+    # was wrong and the image was right.
+    conflicts = [bad for bad in disagreements if bad.stored]
+
+    _console.print(f"[dim]{len(rows)} rows resolved.[/]")
+    if conflicts:
+        _console.print(
+            f"[red]{len(conflicts)} cell(s) contradict their row's story and page."
+            f" Nothing will be rewritten until they are settled.[/]"
+        )
+        raise typer.Exit(code=1)
+
+    fills = len(disagreements)
     if check:
-        _console.print(f"[dim]--check: {len(rows)} rows resolved.[/]")
-        if disagreements:
-            _console.print(
-                f"[red]{len(disagreements)} derived cell(s) disagree with"
-                f" their row's story and page.[/]"
-            )
+        if fills:
+            _console.print(f"[yellow]{fills} blank cell(s) would be filled in.[/]")
         if out_of_order:
             _console.print("[yellow]The file is not in book order.[/]")
-        if disagreements or out_of_order:
+        if fills or out_of_order:
             _console.print("[dim]Re-run without --check to rewrite it.[/]")
             raise typer.Exit(code=1)
         _console.print("[dim]Every derived column agrees, and the file is in order.[/]")
