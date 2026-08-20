@@ -1052,6 +1052,36 @@ from 020, so a big red or yellow shape at head height is a costume and not a cap
 Its grass and hedges also print at `#009c48` H147, the exact green of the cap
 wedge, so every green blob needs a head under it.
 
+Vol. 5, from *Volcano Valley* 048 panel 2 — the three boys at the model-shop
+counter, each showing a cap **peak sliver only**, 86-161px:
+
+| | red (Huey) | blue (Dewey) | green (Louie) |
+|---|---|---|---|
+| peak slivers, *Volcano Valley* 048 p2 | `#e61b1f` H358.8 | `#00a5d7` H194.0 | `#0b9750` H149.6 |
+| caps whole, front-on, 053 p1 | `#e51a1f` H358.5 | `#02a4d6` H194.2 | — |
+| backs to reader, 063 p8 | `#e51a20` H358.2 | `#00a5d7` H194.0 | `#009e49` H147.7 |
+| dark sliver, 058 p2 | `#b0271a` H5.2 | `#05a5d4` H193.6 | black, unreadable |
+
+Red and blue sit still at H358-359 and H193-194. The green is `#009e49` H147.7
+when it prints and `#018345` H151.4 in shadow.
+
+**The construction alternates inside a single story**, which is what makes area
+useless here: 30-160px slivers on 048, 057 and 058, and caps drawn whole at
+1500-5000px on 051 p4, 053 p1, 063 p8, 067 p4 and 076 p3. **Donald wears a flying
+cap in the same `#00a5d7` in nearly every panel**, so the largest blue blob is his
+about as often as it is Dewey's — 053 p1 has a 5094px blue that is a *nephew's*,
+with Donald not in the panel at all. Check the head, not the area.
+
+**And the green hides in the hedge.** `#018345` H151.4 is also the story's foliage,
+so where a boy stands against greenery the connected-component scan merges cap and
+hedge into one huge blob and reports no cap-sized green at all — 048 p4 looks
+capless and the middle boy is plainly green when you sample panel (730-810,
+270-320) directly. When red and blue are found and green is not, suspect the merge
+before concluding the boy is bare.
+
+**Scan this volume at a 25px floor.** A first pass at 60 dropped the reference caps
+themselves.
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
