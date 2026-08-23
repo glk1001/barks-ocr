@@ -4,9 +4,10 @@ The prompt that starts a vision pass over the next titles. Recovered from the
 session transcripts on 2026-08-09 after it went missing; keep it here rather
 than in scrollback.
 
-The procedure lives in the `vision-pass` skill and the reading rules in the
-generated `roster.txt`. **This file is only the part neither of those can
-supply**: which titles, and what the last review found.
+The procedure lives in the `vision-pass` skill, the reading rules in the
+generated `roster.txt`, and the image budget in `docs/vision-pass-cost.md`.
+**This file is only the part none of those can supply**: which titles, and what
+the last review found.
 
 ## The prompt
 
@@ -20,8 +21,14 @@ Run the next <N> corpus titles. Crops are not prepped.
 <total> pages, #1-<N> on --todo. Sanity-check any title that looks incomplete
 against its zero-group count before re-running it.
 
-The vision-pass skill has the procedure; roster.txt has the reading rules.
-Don't restate either back at me.
+The vision-pass skill has the procedure; roster.txt has the reading rules;
+docs/vision-pass-cost.md has the image budget. Don't restate any of them
+back at me.
+
+COST. Target 3 images read per page, 5 as the ceiling. About 10% wrong on
+nephew cap calls is fine -- every panel gets reviewed anyway -- so do NOT
+spend images buying accuracy past that. Report the image count and the
+per-page rate in the close-out next to the correction counts.
 
 FROM THE LAST REVIEW (<N> corrections over <titles>)
 - <what the corrections had in common>
@@ -765,6 +772,69 @@ four of them Donald against Professor Mollicule in a two-figure panel.**
   The drift on this title was mine: I wrote `other:the Mayor` where the corpus
   already had 11 groups of `other:the mayor`. Grep the corpus-wide counts for the
   value before inventing the capitalisation.
+
+### Findings to paste into the next run (2026-08-23, thirteenth batch)
+
+17 speaker corrections over *Donald's Posy Patch*, *Donald Mines His Own
+Business* and *Magical Misery* — 393 groups, **4.3%**, and **9.2% inside the
+nephew domain** (16 of 174 Huey/Dewey/Louie/`nephews` groups). The reviewer has
+since set the tolerance at about 10% on nephew calls, so **that rate is at
+target and accuracy is no longer the binding constraint — cost is.** See
+`docs/vision-pass-cost.md`, which this batch caused.
+
+The shape is new and worth stating plainly: **13 of the 17 were calls made at
+`high`, and only 4 of 21 `medium` calls were wrong.** Twelve reviews running,
+the hedging has been calibrated; what is left is entirely in the confident
+calls. Three demotions too, after batches of none.
+
+- MEASURE A TIP TO A HEAD, NOT TO A CAP. Four of the five name swaps quoted a
+  confident pixel margin, and every one was measured to a cap edge. A duck in
+  three-quarter view has a beak reaching far past his cap: on *Donald Mines*
+  045 p4 the green cap ends at x=793 and its wearer's beak reaches back to
+  x=573, so a tip at x=589 was written up as *"10px past the red cap and 68px
+  short of the green"* while sitting on the green boy's face. Now in
+  `vision_schema.py`. **A margin measured to the wrong landmark is worse than
+  no margin — it reads as measurement and promotes the call to high.**
+- A CLEAN CAP NAMES ITS WEARER WHEN HE IS THE ONLY NEPHEW IN FRAME. A sole boy
+  wearing 3319px of clean `#03a4d5` was recorded `nephews`, the note reasoning
+  that *"he is the only nephew in the panel, so the colour is recorded rather
+  than used to pick between boys"*. The note contradicted its own call. The
+  convention is not a tie-breaker that needs a rival. Now in
+  `vision_schema.py`.
+- THE FURNITURE CAN BE THE CAP INK, AND VALUE IS WHAT SEPARATES THEM. All three
+  titles print the nephew green as a leaf green at H110-112 `#4da33d` — **not**
+  the Vol. 5 roster green — and *Magical Misery* prints its sofa and its hedge
+  at H109.7 `#54b041`. Same hue to within a degree; the caps sit at V=0.64 and
+  the furniture at V=0.69. Hue alone merges a cap into a 95,000px hedge blob.
+- A CAP-SIZED BLOB ON NOBODY'S HEAD. *Magical Misery* 087 p3 has Donald's
+  magician's hat in mid-air as a 3271px blob in exactly the cap green. It was
+  the first candidate reference panel and it was wrong. The rule is already in
+  the schema; this is the cleanest example of it yet.
+- THE REVIEW FILLED A CAP COLOUR IN FROM THE NAME, ONCE. *Posy Patch* 030 g12
+  went `nephews` → `Huey` with `cap_colour: red` on a panel that prints **no
+  red at any threshold** — a full unfiltered colour census returns sand, cream,
+  lavender, black, brown, orange and a pale blue. The speaker call stands, but
+  the colour is now unfalsifiable. Worth a census rather than a scan whenever a
+  correction adds a colour the pass reported absent.
+- A LABEL WITH AN ARROW IS NARRATION, NOT BACKGROUND. `DOOR STOP` pointing at
+  the door stop is the author annotating his own drawing, not lettering in the
+  scene.
+- A ROTATED CAPTION READS AS A WORD. *Magical Misery* 079 g15 stores `JAW`,
+  which is the grouper taking the vertical caption `LATER!` on its side. The box
+  is right and only the text is wrong, so the missed-text audit reports `LATER!`
+  as grouped-by-neither until the correction is confirmed — **not** a group to
+  add. Check any three-or-four-letter background group against a vertical box.
+- A TYPE CORRECTION CAN BE REFUSED SILENTLY. `vision_apply` reported 5 type
+  corrections where 6 were supplied; the missing one carried `type_reviewed`
+  from a fortnight earlier and was correctly left alone. Nothing said so.
+  **Reconcile the count the tool prints against the count you supplied**, and
+  hand the difference to the reviewer — the page was left internally
+  inconsistent, one balloon `thought` and its twin `dialogue`, until they fixed
+  it by hand.
+- CHECK THE TREE BEFORE RE-APPLYING A COMMITTED TITLE. A review had started
+  between the commit and the re-apply, and Vol. 20 had 179 unrelated
+  uncommitted files. `vision_apply` protected the reviewed speakers, which was
+  luck rather than care; the skill says use `vision-mirror` after a review.
 
 ## Per-volume cap palette
 
