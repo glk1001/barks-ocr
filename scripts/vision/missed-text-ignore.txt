@@ -63,3 +63,34 @@ HELP KEEP AMERICA STRONG
 # and neither engine grouped any of them. Recorded in the page visible_text as a
 # true record of what is printed, and deliberately left ungrouped.
 3 124 5¢ 10¢ 5¢ 5¢
+
+# Judged not worth a group, 2026-08-25. Watching the Watchman records seven
+# DRAWN DEVICES in its pages' visible_text -- music notes, red impact stars,
+# yellow lightning bolts, and the brushed Chinese characters on the silk-bale
+# labels. The corpus rule is that a drawn device belongs in visible_text so the
+# audit can see it, and the audit then reports each one as lettering neither
+# engine grouped. None of them is lettering: there is no text to put in an
+# ai_text, and the Chinese brush characters are not transcribable into a
+# searchable string. The entries below are the descriptions as written into
+# visible_text, so they are matched exactly.
+6 052 a pair of music notes drawn inside the phonograph balloon
+6 052 a music note drawn inside Donald's song balloon
+6 053 two music notes and a sharp sign drawn at the left edge of panel 1, the radio still playing
+6 055 Chinese characters brushed on the labels of the silk bales
+6 056 music notes drawn beside the fife and drum lettering in panel 4
+6 057 red stars drawn flying off Donald in panels 2 and 3
+6 057 yellow lightning bolts drawn round Donald in panel 7
+
+# Judged not worth a group, 2026-08-25. Wired records five DRAWN DEVICES in
+# its pages' visible_text -- the music notes beside the boys' singing-telegram
+# balloons and the hearts drawn round Angina Arthritis as she reads. Same case
+# as the Watching the Watchman entries above: recorded so the audit can see
+# them, but there is no text to put in an ai_text. The two COASTAL UNION
+# findings on 065 and 066 are NOT ignored -- those are real cap-band lettering
+# that both engines missed on those two pages and grouped on four others, and
+# the reviewer should decide whether the 30px bands are worth boxing there.
+6 065 a music note drawn under the boys' song balloon in panel 7
+6 065 a music note drawn beside the song balloon in panel 8
+6 066 hearts drawn round the woman as she reads the telegram
+6 067 a music note drawn inside Donald's singing balloon in panel 2
+6 069 music notes drawn beside the boys' song balloon in panels 3 and 4
