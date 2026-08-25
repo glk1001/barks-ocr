@@ -22,6 +22,23 @@ speaker corrections                17 / 393  =  4.3%   whole batch
     of which in the nephew domain  16 / 174  =  9.2%   Huey/Dewey/Louie/nephews
 ```
 
+Measured again on the 2026-08-25 batch — *Christmas on Bear Mountain*, *The
+Terrible Turkey*, *Wintertime Wager*, 532 groups:
+
+```
+speaker corrections                22 / 532  =  4.1%   whole batch
+    of which in the nephew domain  18 / 197  =  9.1%   Huey/Dewey/Louie/nephews
+images read                        56 / 40 pages = 1.40 per page
+```
+
+The batch average holds, but it is carried by one twenty-page title whose caps
+are off indoors for seventeen of its pages. Split by title the nephew domain
+runs **6.5% / 12.8% / 12.0%** — the two ten-page titles, where the caps actually
+print, both went over. Where the caps are readable the error is roughly double
+the batch figure, and the corrections there were not close calls: they were caps
+already measured into the note and then not used. That is a reading discipline
+to fix, not an image budget to raise.
+
 **9.2% is already at tolerance.** Accuracy is therefore *not* the binding
 constraint, and has not been for some time. Cost is. Every rule below trades
 looking for money at an exchange rate the reviewer has said they will take.

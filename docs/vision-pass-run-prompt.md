@@ -836,6 +836,57 @@ calls. Three demotions too, after batches of none.
   uncommitted files. `vision_apply` protected the reviewed speakers, which was
   luck rather than care; the skill says use `vision-mirror` after a review.
 
+### Findings to paste into the next run (2026-08-25, fourteenth batch)
+
+*Christmas on Bear Mountain*, *The Terrible Turkey*, *Wintertime Wager* — 532
+groups, 22 speaker corrections (4.1%), 18 of them in the nephew domain (9.1%).
+Split by title the nephew domain runs 6.5% / 12.8% / 12.0%: the batch average
+only holds because the twenty-page title is capless indoors for most of its
+length. Both ten-page titles went over.
+
+**Nearly every correction was evidence already written into the note and then
+not used.** That is one finding, and it has four faces:
+
+- *Wintertime Wager* 042: the note reads "left to right their caps are green,
+  red and yellow-white", and on the next group "the second boy, the one in the
+  red cap. I am not naming him from that alone — see the note on 044, where the
+  red cap is anchored to Huey by name." Cap, tail and anchor, all three in
+  writing, and the answer given was the collective. **A late anchor applies
+  backwards to every panel it implicates**, and citing it is not applying it.
+- Two calls set out both readings and picked the weaker — "this throws
+  Gladstone's own greeting back at him, which is Donald's gag rather than a
+  boy's", answered `nephews`; "OH, MY! is Gladstone's own refrain earlier on this
+  page", answered Donald. **A note that argues against its own call is the single
+  best predictor of a correction in this corpus.** Re-read the note before
+  writing the speaker.
+- Four declines said "no readable cap" where a `capscan` at a **20px floor**
+  shows it plainly. `capsum` is a locator: its 15px dilation merges a cap into
+  neighbouring ink and its size cap then drops the cluster. It never answers
+  "there is no cap". Neither does a crop aimed at the wrong y band — one decline
+  came from cropping the *houses* above the boys and concluding from that.
+- A cap in a **non-roster colour is not a dead end**. Where the third boy's
+  knitted cap is yellow-white, his mittens and scarf carry 5144px of clean
+  `#00a5d7`; the review named him on `costume`, with `cap_colour` left null.
+
+Three smaller ones:
+
+- **A tip that lands between two heads does not go to the nearer one.** Two
+  corrections were 11px-against-39px and 39px-against-132px calls that both went
+  the other way. Rank by the spur's own d-vector — one of them pointed
+  down-*left* at the further boy and the vector was in the note — and by what the
+  figures are drawn doing; the second boy had his hand cupped to his beak in a
+  crop already taken. A margin decides it only when the tip is *inside* a span.
+- **A wordless `SIGH!` belongs to the sleeper**, not to the duck pressed against
+  the sleeping bear. Two corrections, same panel shape.
+- Words coming from all four ducks at once take **`other:Donald and the
+  nephews`** — with the definite article, which is the corpus spelling.
+
+One verification trap, no correction attached: **pair the two engines on
+normalised `ai_text`, never on group id, when checking a mirror.** Two pages of
+one title list an out-of-reading-order group last on easyocr where paddleocr has
+it in place, so an id-keyed check reports fourteen mismatches on a mirror that is
+in fact perfect. `vision_mirror` itself pairs on text and is right.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -1151,6 +1202,23 @@ before concluding the boy is bare.
 
 **Scan this volume at a 25px floor.** A first pass at 60 dropped the reference caps
 themselves.
+
+Vol. 6, from *Wintertime Wager* — a **winter** story, and the first title read in
+the volume:
+
+- Indoors the boys are **bare-headed**, which is six of its ten pages. Outdoors
+  they wear knitted caps: red `#e61b1f`, leafgreen `#3bac42` at **H124**, and a
+  third that is **white with a yellow band** and so not a roster colour at all.
+- **The third boy is named by costume, not cap.** His mittens and scarf are
+  `#00a5d7`; `identified_by: ["balloon-tail", "costume"]`, `cap_colour` null.
+- **The red cap is anchored by name, not by convention.** On 044 panel 3 one of
+  them shouts "WE'VE GOT HIM, HUEY!" at the boy driving the tractor, and that boy
+  wears red in panels 2, 6 and 8 of the same page.
+- Scenery to keep out of the bands: the living-room rug is the **same** `#3bac42`
+  as the cap green, and `#6eb53d` (H95, V0.71) is the outdoor shrubbery.
+
+The volume's other titles are not winter stories, so none of the above should be
+assumed to carry — sweep before page 1 as usual.
 
 ## The long form is retired
 
