@@ -1285,6 +1285,32 @@ differs from *Wintertime Wager*'s knitted caps:
   ink on 080-084 only; from 085 the party is in brown pith helmets and 100-101 in
   white sailor hats. *Wired* has no cap key on any page.
 
+Vol. 6, from the second three 1947 titles read on 2026-08-25 — the construction
+above holds on all three, so `heads2.py`/`caphead` remain the right tools:
+
+- *Going Ape*: blue `#00a4d6`, red `#e61b1f`, green `#4da33e` (H110.6), reference
+  panel 070 p1. Cap ink prints in **that panel only** — from panel 2 the boys are
+  bare-headed for the rest of the story, so nine of its ten pages are collectives.
+- *The Old Castle's Secret*: blue `#05a4d3`, red `#e21a1f`, green `#4da23f`
+  (H110.5), reference panels 015 p8 and 014 p6. Caps print outdoors and through
+  the armour halls; they come **off** for the middle of the story, first under
+  borrowed helmets (020-023) and then not at all once the helmets are lost in the
+  moat (027 on), which is why pages 020, 021, 028, 029 and 031 are collectives
+  end to end.
+- *Spoil the Rod*: blue `#06a4d0`, red `#e21a1e`, green `#53a345`, reference panel
+  104 p5. Caps print **outdoors only**; from 106 the story moves indoors and the
+  boys are bare-headed, so the names come from the dialogue instead.
+- **Two greens to keep apart in this volume.** The grass is `#56b03f`/`#59b140`
+  (H107, V0.69) and the cap green is `#4da23e` (H110.6, V0.64): four degrees of
+  hue apart, separated reliably only by the exact hex, and V0.68 is the usable
+  cut. *Scrooge's own tam* in the Scottish scenes is a third green, `#70b53e`
+  (H95, V0.71), and does not collide with either.
+- **Donald wears a nephew colour in two of the three.** He is in a one-piece blue
+  tam through the castle scenes of *The Old Castle's Secret* and a purple helmet
+  with a red crest from 024, and *Going Ape* puts him in a blue cap for the
+  hypnotist sequence. The segmented crown is what separates them: two or three
+  abutting pieces of one hex is a boy, one solid piece is Donald.
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
