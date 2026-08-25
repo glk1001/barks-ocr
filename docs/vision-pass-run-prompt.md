@@ -887,6 +887,53 @@ one title list an out-of-reading-order group last on easyocr where paddleocr has
 it in place, so an id-keyed check reports fourteen mismatches on a mirror that is
 in fact perfect. `vision_mirror` itself pairs on text and is right.
 
+### Findings to paste into the next run (2026-08-25, fifteenth batch)
+
+*Watching the Watchman*, *Darkest Africa*, *Wired* — 24 corrections over 567
+groups, 21 of them in the nephew domain. Written as rules:
+
+- **Where nobody wears a distinguishing hat, the error moves to Donald against
+  nephew.** 12 of *Darkest Africa*'s 15 corrections were that pair under
+  identical pith helmets — not nephew against nephew, which the cap rules are
+  built for. Head size fails (a wide shot scales both down, and Barks draws a
+  crouching Donald small) and so does register ("that line sounds like an order").
+  What works: **scan for Donald's red bow tie.** It survives under any hat and a
+  `capscan` at a 20px floor finds it in shadow — an 87px `#983227` pair placed
+  him second from the left among four identical helmets. Sample for it before
+  arguing from size.
+- **A negative cap sweep is a result, not a hedge.** *Wired* returned **0
+  corrections in 144 groups**: bare heads, then the same red messenger cap on all
+  four ducks. Say the sweep came back empty and stop looking.
+- **A naming line beats the cap the story prints.** 057 says "HUEY AND LOUIE HAVE
+  PASSED OUT, BUT I'M STILL ON THE JOB" and the speaker's cap prints **red** on
+  all six panels he is in — while 058 prints the two who *did* collapse as blue
+  and red. Following the line at medium, with `cap_colour` recorded as printed,
+  stood: none of that title's 9 corrections was on that page.
+- **Measure the story's tail offset once, then use it.** *Watching the Watchman*
+  runs its tails ~20px LEFT of the boy's head span (055 p4's three land 12/3/10px
+  left); *Darkest Africa* 083 runs them right. A gap that size is the story's
+  habit, not a fan — but derive it from a panel where the mapping is unambiguous
+  before leaning on it.
+- **Crop the side the tail points at, not the figures.** 089 p8 draws two figures
+  at the right; I cropped `(400,200)-(948,655)`, read both correctly, and gave the
+  balloon to the wrong one. Its tail runs down-LEFT into a third of the panel my
+  crop began after — empty water with a canoe prow, and the speaker off-frame in
+  it. Read the tip and d-vector first and make the crop span that direction.
+- **Who is drawn and who speaks are separate questions.** The same panel's page
+  capture said "McFiendy catches Van Tulip", and that stayed true when the speaker
+  moved to Donald. A review changing a speaker does not by itself falsify a beat.
+- **Not every bare device is `thought`.** A lone `!` in a musing balloon is; a
+  lone `!` on a sleeper jerking awake is a vocalised gasp and was corrected to
+  `dialogue`. Look at what the figure is doing.
+
+Two process notes, no correction attached. **A full speaker count says nothing
+about the type queue** — one title finished 148/148 on speakers with all 14 type
+corrections untouched. And **a review that adds a group hands back Copy In
+residue**: both added groups here arrived carrying the seed group's `vision_note`,
+one also its `identified_by: ["caption"]`. Check added groups against their own
+crop *and* their metadata before mirroring, or the residue is copied to both
+engines.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -1219,6 +1266,24 @@ the volume:
 
 The volume's other titles are not winter stories, so none of the above should be
 assumed to carry — sweep before page 1 as usual.
+
+Vol. 6, from the three 1947 titles read on 2026-08-25 — and note the construction
+differs from *Wintertime Wager*'s knitted caps:
+
+- *Watching the Watchman* and *Darkest Africa* both build the cap as a **coloured
+  side panel on a black crown**, split into two blobs by the brim, so `heads2.py`
+  is the right tool. Watchman: blue `#03a4d5`, red `#e51a20`, green `#4da240`
+  (H111), reference panel 055 p7. Darkest Africa: blue `#07a4d4`, red `#e61b1f`,
+  green `#4da33e` (H110.6), reference panel 080 p3.
+- **In Darkest Africa the cap green and the foliage are the same ink.** In the
+  reference panel itself the green band and the bush behind the boys are both
+  `#4da33d`/`#4da33e`. Colour cannot separate them at all — only whether the blob
+  sits on a head. Both greens report under capscan's `leafgrn` band, not `green`.
+- Neither is *Wintertime Wager*'s `#3bac42` (H124), so the volume uses at least
+  two cap greens. Fix the palette from a reference panel every time.
+- **Where the caps stop matters more than their hex.** Darkest Africa prints cap
+  ink on 080-084 only; from 085 the party is in brown pith helmets and 100-101 in
+  white sailor hats. *Wired* has no cap key on any page.
 
 ## The long form is retired
 

@@ -39,6 +39,28 @@ the batch figure, and the corrections there were not close calls: they were caps
 already measured into the note and then not used. That is a reading discipline
 to fix, not an image budget to raise.
 
+Measured again on the 2026-08-25 batch — *Watching the Watchman*, *Darkest
+Africa*, *Wired*, 567 groups:
+
+```
+speaker corrections                24 / 567  =  4.2%   whole batch
+    of which in the nephew domain  21 / 187  = 11.2%   Huey/Dewey/Louie/nephews
+images read                        63 / 42 pages = 1.50 per page
+```
+
+Split by title the nephew domain runs **14.0% / 15.5% / 0.0%**, and the spread is
+the whole story. *Wired* returned **0 corrections in 144 groups** because the
+story has no cap key at all — bare heads, then identical red messenger caps on
+all four ducks — so there was nothing to get wrong and the collective was forced
+rather than chosen. *Darkest Africa* is not a cap problem either: 12 of its 15
+corrections are **Donald against nephew under identical pith helmets**, which no
+cap rule addresses.
+
+The lesson for the budget is that the nephew percentage is only meaningful where
+caps actually print. Where they do not, the number to watch is whether Donald can
+be told from a boy — and the cheapest discriminator there is not an image at all,
+it is a `capscan` for his red bow tie, which survives under any hat.
+
 **9.2% is already at tolerance.** Accuracy is therefore *not* the binding
 constraint, and has not been for some time. Cost is. Every rule below trades
 looking for money at an exchange rate the reviewer has said they will take.
