@@ -70,6 +70,34 @@ buying accuracy you have already been told is unnecessary.** A crop that moves
 the nephew error from 9% to 8% is a bad trade. A crop that stops a whole page
 being mis-attributed is still a good one.
 
+Measured again on the 2026-08-25 batch — *Going Ape*, *The Old Castle's Secret*,
+*Spoil the Rod*, 664 groups:
+
+```
+speaker corrections                22 / 664  =  3.3%   whole batch
+    of which in the nephew domain  17 / 291  =  5.8%   Huey/Dewey/Louie/nephews
+images read                        58 / 52 pages = 1.12 per page
+```
+
+Split by title the whole-title rate runs **4.8% / 3.9% / 0.0%**, and the cheapest
+title was also the most accurate. *Spoil the Rod* returned **0 corrections in 129
+groups** for the opposite reason to *Wired*'s zero: not because nothing could be
+read, but because the story **hands each boy a distinguishing project** — one is
+inventing, one painting, one learning navigation — and then names him by it in
+the dialogue two pages later. Cap, tail and dialogue all agreed on every one of
+its ten named calls, and it cost 1.10 images per page.
+
+The batch's own error class was not caps at all. Six of *The Old Castle's
+Secret*'s sixteen corrections were **lines given to Donald or Scrooge that belong
+to the boys**, every one resting on an adult head span estimated by eye while the
+boys' spans in the same panel came measured from `caphead`. An adult's span costs
+one `heads2.py` call and the tool is already open; not making it turned a free
+measurement into the batch's largest single fault.
+
+Cost held at **1.12 per page against a target of 3**, the lowest of the four
+batches measured here, on the largest page count. Nothing was traded for it: the
+correction rate is also the lowest of the four.
+
 ## Images do not buy accuracy
 
 Fourteen vision sessions, from the Claude Code transcripts, joined to runs by
