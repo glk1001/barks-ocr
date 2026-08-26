@@ -96,3 +96,13 @@ HELP KEEP AMERICA STRONG
 6 069 music notes drawn beside the boys' song balloon in panels 3 and 4
 6 128 two music notes drawn beside the hot dog man as he tips the wienies into the stand
 6 139 three question marks drawn over the boys in panel 6
+
+# Judged not worth a group, 2026-08-26, Rival Beachcombers (Vol. 7). GLK added
+# the one real find on 171 -- the red SALE masthead on Gladstone's newspaper --
+# and ruled out two classes standing: drawn MUSICAL NOTES, and SUBSTRINGS of
+# text a group already carries. The notes below are the first; the second needs
+# no entry, because the audit already suppresses a finding that any grouped text
+# contains (171's red 'NEW' masthead sits inside the grouped 'OLD NEWSPAPER').
+# NOT ignored: 178's dollar-sign hood ornament, which is neither -- it is a
+# drawn character on a prop, and the audit should raise it once for a decision.
+7 176 two music notes (♫ ♪) drawn beside Gladstone's head in panel 3, outside the thought balloon
