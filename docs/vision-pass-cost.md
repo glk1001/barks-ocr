@@ -98,6 +98,69 @@ Cost held at **1.12 per page against a target of 3**, the lowest of the four
 batches measured here, on the largest page count. Nothing was traded for it: the
 correction rate is also the lowest of the four.
 
+Measured again on the 2026-08-27 batch — *The Sunken Yacht*, *Race to the South
+Seas!*, *Managing the Echo System*, 613 groups:
+
+```
+speaker corrections                60 / 613  =  9.8%   whole batch
+    of which in the nephew domain  51 / 208  = 24.5%   Huey/Dewey/Louie/nephews
+images read                        76 / 42 pages = 1.81 per page
+```
+
+The batch figure is the worst recorded here and the cost is among the lowest, so
+it is worth being precise about what the 60 are. **None of them is a nephew
+misidentified.** All 25 names the pass proposed survived review — every one made
+by reading a cap hex off the art and bracketing it against a balloon. Sorted by
+what actually went wrong:
+
+```
+24  wrong character         Donald against a nephew, almost entirely
+23  under-named             `nephews` the review sharpened to a name
+13  given to nobody         `none` on a noise a character was making
+ 0  nephew misidentified
+```
+
+Only the first is an error of reading. The second is the pass declining a call
+the art supported; the third is a field misuse, thirteen instances of one
+mistake. Split by title the whole-title rate runs **0.7% / 8.7% / 21.1%**, and
+the spread is the finding.
+
+*The Sunken Yacht* returned **1 correction in 143 — 0 of 140 high-confidence
+calls** — the best result in this file. It is the title whose nephews wear plain
+undyed sailor caps, so every nephew call was forced to the collective and there
+was nothing to get wrong. Compare *Wired*'s zero above: the same mechanism.
+
+*Managing the Echo System* returned 21.1%, and 31 of its 31 corrections are the
+second and third classes above — 18 collectives sharpened, 13 noises handed to
+nobody. Its caps read on 36 groups and every name held. A title can therefore
+post the worst rate in the batch without a single wrong identification.
+
+**The binding constraint is no longer accuracy per image, it is confidence
+calibration.** Across the batch:
+
+```
+high     45 / 549  =  8.2%
+medium   13 /  55  = 23.6%
+low       1 /   3  = 33.3%
+```
+
+Medium is three times worse than high, and was five times worse on the one title
+where it was used at scale — matching the 31% against 7.3% recorded on the
+2026-08-19 batch. Medium is not "slightly less sure": it is where nearly all the
+readable-page error lives, and it is almost entirely one guess, the long-shot
+Donald-against-nephew. **A medium call costs the reviewer exactly the same
+keystroke as a wrong high one and tells them nothing extra.** The cheap fix is
+not an image — it is a better default: on a long shot with no figure drawn at
+readable size, the line is Donald's unless it is addressed *to* him. That single
+rule accounts for 15 of this batch's 24 wrong-character corrections.
+
+The corollary for this file: **no image would have prevented any of the 60.**
+The wrong-character ones were long shots with nothing to enlarge; the
+under-named ones were caps the pass had already measured into its own notes and
+then declined to use; the `none` ones were a rule misread, not a picture
+misread. Cost held at 1.81 per page against a target of 3 and buying more would
+have changed nothing.
+
 ## Images do not buy accuracy
 
 Fourteen vision sessions, from the Claude Code transcripts, joined to runs by
