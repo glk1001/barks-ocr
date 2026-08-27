@@ -30,6 +30,7 @@ coords
 cscsv
 denoise
 denoising
+desaturated
 deskew
 deskewed
 deskewing
@@ -59,6 +60,7 @@ getchannel
 getrgb
 gttl
 halign
+hexcode
 hlines
 hotpink
 ikey
