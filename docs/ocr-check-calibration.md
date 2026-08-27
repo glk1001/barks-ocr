@@ -404,6 +404,12 @@ knew about each fault and said nothing a reviewer could act on:
   diagnosed were the ones missing from the queue while the *un*diagnosable ones
   (`panel_unassigned`, 340) were in it.
 
+Added 2026-08-27:
+
+- **`panel_nums_not_contiguous`** (416 page/engine entries) — a page that skips
+  a panel number. See the section below; unlike the two above it, this one is a
+  prompt to look rather than a fault.
+
 **Rejected, so they are not proposed again:**
 
 - **duplicate text on a page (2407), or within one panel (1020)** — legitimate:
@@ -566,6 +572,97 @@ The pairing change on its own is small and in the right direction. Measured over
 vols 1-8, 19 and 21 (1,910 pages) with the old id sort swapped back in: two
 `text_mismatch` flags disappear (vol 7 page 131 group 7, at ratio 0.18, among them)
 and engine agreement moves 1872 → 1873 pages.
+
+---
+
+## `panel_nums_not_contiguous` — a page that skips a panel
+
+The groups on a page should occupy panels 1..n with nothing skipped. A hole is
+either lettering that was never grouped, or a run of groups filed under the wrong
+panel. Nothing saw it: `panel_num_mismatch` needs the box to sit wholly inside a
+different *real* panel, `panel_num_out_of_range` only checks one group's number
+against the panel count, and the cross-engine `MissingPanel` fires only when the
+two engines *disagree* — so a page where both engines skip the same panel said
+nothing at all. That last case is 197 pages, and is the whole of what this check
+adds; the 71 pages where only one engine has the hole were already named by
+`MissingPanel` (which is printed, never queued).
+
+Bounded above by the highest panel that has text, not by the page's panel count.
+Ending on a wordless panel is ordinary Barks — 67 easyocr pages (1.3%) do — and
+is not a fault, so only an interior hole is reported. Two suppressions keep the
+entry pointing at something workable:
+
+- A `panel_num` past the page's panel count is ignored when taking the maximum,
+  so one group claiming panel 99 does not invent 90-odd missing panels. In the
+  corpus this never bites (0 pages), but `panel_num_out_of_range` exists, so the
+  two checks should not report the same group twice.
+- A page holding any unassigned (-1) group is skipped. That group's text may be
+  the missing panel's, so the hole restates `panel_unassigned` /
+  `panel_num_fixable` and clears itself once those are worked. 34 of 454.
+
+Corpus: **416 page/engine entries**, ~3.9% of the 10,716 prelim files.
+
+One entry per page/engine. The finding is about a panel holding *no* group, so
+there is nothing in it to anchor to; the entry is anchored on the first group —
+in reading order — of the next panel that does have one, that being the nearest
+thing an editor can open. `panel_num` on the entry is therefore the **empty**
+panel, not the anchor group's own. On every other issue the two are the same
+panel, and printing the anchor's made the line name a group in panel 4 while
+complaining about panel 3 with nothing saying why (vol 21 page 63 is the case
+that showed it up). The note now names the anchor's panel too, so the two
+numbers on the line are never silently different.
+
+### Verifying one in the editor
+
+The panel the issue is about holds no group, so Prev/Next cannot reach it — they
+step through groups, and the nearest one back is in the panel *before* the hole.
+So on a `panel_nums_not_contiguous` queue entry the editor widens its crop to
+span the empty panel(s) as well as the anchor's, outlining them in amber with
+their real panel numbers (the existing teal overlay numbers by list position,
+which would label panel 3 as "1" when drawing a subset). The verification is
+"is that panel really wordless?", and it is a two-second look once it is on
+screen.
+
+Scoped so nothing else changes: only while the current queue entry is one of
+these, only for the contiguous run of empty panels ending at `panel_num - 1`,
+and computed from each pane's own groups so a one-engine hole widens only that
+pane. Navigate away with Prev/Next and the ordinary crop comes back.
+
+`panels_with_no_groups` lives in `utils/group_checks.py` for this — `ocr_check`
+and the editor must agree on which panels are empty, and a second copy of the
+arithmetic drifting from the first would point the reviewer at the wrong panel.
+
+### Acknowledging one
+
+`panel-has-no-text` in the `group_checks` registry, set from the editor's
+"Mark OK" popup — the reviewer's "that skipped panel really is wordless". It has
+no predicate (`_never_fires`, like `text-will-never-fit` and `florence-check`):
+`ocr_check` decides when the issue fires and reads the acknowledgement itself,
+because the judgement needs the whole page and its panel boxes, which a
+predicate over one group cannot see.
+
+Two things follow from there being no group in the skipped panel to mark:
+
+- **It is anchor-bound.** It is stored on, and read back off, the anchor group.
+  Delete or add a group, the ids shift, the anchor may become a different group,
+  and the acknowledgement stops being found. The issue re-fires — the safe
+  direction to fail in, but it does mean these do not survive heavy editing.
+- **It is per page/engine, not per panel.** A page skipping two panels is one
+  issue naming both, so one acknowledgement covers both, including a panel that
+  later turns out to have had lettering.
+
+The name deliberately differs from the queue type `panel_nums_not_contiguous`,
+so the popup's name-match does not pre-tick it. Same reasoning as
+`text-will-never-fit`: a reflexive Save must not dismiss a finding nobody looked
+at, and looking at the panel is the entire work here.
+
+**It ranks last in the `panel_num` block on purpose, because its precision is
+low.** A silent panel is legitimate and common, and nothing here can tell one
+from a missed group without looking at the art. Three hits spot-checked against
+the pages — vol 1 pages 122 panel 5, 139 panel 1 and 140 panel 5 — were all
+genuinely wordless. Treat an entry as a prompt to look at the page, not as a
+defect; anything the tool has concretely diagnosed about the anchor group
+outranks it and takes the queue slot.
 
 ---
 

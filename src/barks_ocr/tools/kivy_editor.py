@@ -40,6 +40,7 @@ from barks_ocr.utils.engine_compare import (
 from barks_ocr.utils.group_checks import (
     DISMISSABLE_ISSUE_TYPES,
     DISMISSABLE_PREDICATES,
+    panels_with_no_groups,
 )
 from barks_ocr.utils.vision_schema import (
     CAP_COLOUR_KEY,
@@ -154,6 +155,12 @@ TEXT_INPUT_FG = (0, 0, 0, 1)
 CROP_PADDING = 150
 # Extra padding used when panel_num is -1 (unassigned) — shows more page context
 CROP_PADDING_UNKNOWN = 400
+
+# (outline, label) for the two numbered-panel overlays. Teal is the existing
+# "here are all the panels, which one is it?" overlay; the empty-panel one is
+# amber so it reads as a different statement on a canvas that may show both.
+_ALL_PANELS_COLOR = ((0.2, 0.8, 0.8, 0.7), (0.2, 1.0, 1.0, 1.0))
+_EMPTY_PANEL_COLOR = ((1.0, 0.65, 0.0, 0.9), (1.0, 0.8, 0.3, 1.0))
 # Screen-space radius (px) for corner drag handles on the bounding box
 HANDLE_RADIUS = 14
 
@@ -164,6 +171,11 @@ TYPE_OPTIONS: tuple[str, ...] = GROUP_TYPE_OPTIONS
 DEFAULT_TYPE = "dialogue"
 TITLE_PAGE_DEFAULT_TYPE = "title"
 TITLE_PAGE_ISSUE_TYPE = "title_page"
+# ocr_check's page-level "this page skips a panel" issue. Landing on one of
+# these puts the reviewer on a group in the panel *after* the empty one, and the
+# whole job is to look at the empty panel -- which holds no group, so no amount
+# of Prev/Next reaches it. The canvas widens to include it instead.
+PANEL_GAP_ISSUE_TYPE = "panel_nums_not_contiguous"
 FLORENCE_CHECK_ISSUE_TYPE = "florence-check"
 
 # Pseudo-options in the speaker popup: the free-text row, and "no cap visible".
@@ -316,6 +328,24 @@ def compute_crop_region(
     return left, top, right, bottom
 
 
+def _union_bounds(
+    panel_bounds: tuple[int, int, int, int] | None,
+    extra: list[tuple[int, tuple[int, int, int, int]]],
+) -> tuple[int, int, int, int] | None:
+    """Grow *panel_bounds* to also contain *extra*'s bounds, so a crop spans them all."""
+    boxes = [b for _num, b in extra]
+    if panel_bounds:
+        boxes.append(panel_bounds)
+    if not boxes:
+        return None
+    return (
+        min(b[0] for b in boxes),
+        min(b[1] for b in boxes),
+        max(b[2] for b in boxes),
+        max(b[3] for b in boxes),
+    )
+
+
 # ── BoundingBoxCanvas ─────────────────────────────────────────────────────────
 
 
@@ -342,6 +372,7 @@ class BoundingBoxCanvas(Widget):
         self._panel_num: int | None = None
         # Set when panel_num is -1: all panels drawn as numbered overlays
         self._all_panel_bounds_local: list[tuple[int, int, int, int]] | None = None
+        self._empty_panels_local: list[tuple[int, tuple[int, int, int, int]]] | None = None
 
         self._on_box_changed = on_box_changed
 
@@ -376,6 +407,7 @@ class BoundingBoxCanvas(Widget):
         all_panel_bounds_full_page: list[tuple[int, int, int, int]] | None = None,
         panel_num: int | None = None,
         other_text_box_full_page: list | None = None,
+        empty_panels_full_page: list[tuple[int, tuple[int, int, int, int]]] | None = None,
     ) -> None:
         """Load a new image + bounding box.  All coords in full-page PIL space.
 
@@ -385,6 +417,12 @@ class BoundingBoxCanvas(Widget):
 
         other_text_box_full_page, when given, is drawn as a read-only ghost: the
         same lettering as the other engine boxed it.
+
+        empty_panels_full_page, as (panel_num, bounds) pairs, is drawn *in
+        addition to* the highlighted panel rather than instead of it: the point
+        is to see the empty panel next to the one the group is in. It carries
+        its own numbers because it is a subset of the page's panels, so a label
+        taken from list position would name the wrong panel.
         """
         self._img_w, self._img_h = pil_image.size
         self._crop_offset = crop_offset
@@ -407,6 +445,13 @@ class BoundingBoxCanvas(Widget):
             ]
         else:
             self._all_panel_bounds_local = None
+        if empty_panels_full_page:
+            self._empty_panels_local = [
+                (num, (pl - ox, pt - oy, pr - ox, pb - oy))
+                for num, (pl, pt, pr, pb) in empty_panels_full_page
+            ]
+        else:
+            self._empty_panels_local = None
         self._panel_num = panel_num
 
         buf = BytesIO()
@@ -474,6 +519,9 @@ class BoundingBoxCanvas(Widget):
             self._draw_all_panel_bounds(g, self._all_panel_bounds_local)
         elif self._panel_bounds_local:
             self._draw_panel_bounds(g, self._panel_bounds_local)
+        # After the highlighted panel, not instead of it — both are wanted here.
+        if self._empty_panels_local:
+            self._draw_numbered_panels(g, self._empty_panels_local, _EMPTY_PANEL_COLOR)
         # The ghost goes down first so the editable box draws over it where they
         # overlap — the one being dragged should never be the one underneath.
         if self._other_text_box:
@@ -509,15 +557,30 @@ class BoundingBoxCanvas(Widget):
         self, g: InstructionGroup, all_bounds: list[tuple[int, int, int, int]]
     ) -> None:
         """Draw all panel outlines with numbered labels (used when panel_num is -1)."""
-        for i, (pl, pt, pr, pb) in enumerate(all_bounds):
+        self._draw_numbered_panels(g, list(enumerate(all_bounds, start=1)), _ALL_PANELS_COLOR)
+
+    def _draw_numbered_panels(
+        self,
+        g: InstructionGroup,
+        panels: list[tuple[int, tuple[int, int, int, int]]],
+        colors: tuple[tuple[float, float, float, float], tuple[float, float, float, float]],
+    ) -> None:
+        """Outline each (panel_num, bounds) pair and label it with its number.
+
+        The number comes from the pair, not from the loop index: the empty-panel
+        overlay draws a *subset* of the page's panels, so numbering by position
+        would label panel 3 as "1".
+        """
+        outline_color, label_color = colors
+        for num, (pl, pt, pr, pb) in panels:
             tl = self._local_to_screen(pl, pt)
             tr = self._local_to_screen(pr, pt)
             br = self._local_to_screen(pr, pb)
             bl = self._local_to_screen(pl, pb)
-            g.add(Color(0.2, 0.8, 0.8, 0.7))
+            g.add(Color(*outline_color))
             g.add(Line(points=[*tl, *tr, *br, *bl, *tl], width=1.5, dash_offset=4, dash_length=8))
             # Draw panel number in the top-left corner of each panel
-            lbl = CoreLabel(text=str(i + 1), font_size=18, bold=True)
+            lbl = CoreLabel(text=str(num), font_size=18, bold=True)
             lbl.refresh()
             texture = lbl.texture
             if texture:
@@ -527,7 +590,7 @@ class BoundingBoxCanvas(Widget):
                 # Dark background for readability
                 g.add(Color(0, 0, 0, 0.6))
                 g.add(Rectangle(pos=(tx - 2, ty - 2), size=(texture.width + 4, texture.height + 4)))
-                g.add(Color(0.2, 1.0, 1.0, 1.0))
+                g.add(Color(*label_color))
                 g.add(Rectangle(texture=texture, pos=(tx, ty), size=texture.size))
 
     def _draw_text_box(self, g: InstructionGroup, text_box: list) -> None:
@@ -826,8 +889,9 @@ class EditorApp(App):
             )
         else:
             panel_bounds = get_panel_bounds_from_file(self._panel_segments_file, panel_num)
+            empty_panels = self._empty_panels_to_show(pane, panel_num)
             crop_l, crop_t, crop_r, crop_b = compute_crop_region(
-                img_w, img_h, panel_bounds, text_box
+                img_w, img_h, _union_bounds(panel_bounds, empty_panels), text_box
             )
             cropped = full_img.crop((crop_l, crop_t, crop_r, crop_b))
             canvas.set_content(
@@ -837,10 +901,54 @@ class EditorApp(App):
                 panel_bounds_full_page=panel_bounds,
                 panel_num=panel_num,
                 other_text_box_full_page=other_text_box,
+                empty_panels_full_page=empty_panels or None,
             )
             logger.debug(
                 f"Panel {panel_num}: text_box = {text_box}, panel_bounds = {panel_bounds}."
             )
+
+    def _empty_panels_to_show(
+        self, pane: EnginePane, panel_num: int
+    ) -> list[tuple[int, tuple[int, int, int, int]]]:
+        """Return the empty panels just before *panel_num*, for a panel-gap queue entry.
+
+        `ocr_check`'s `panel_nums_not_contiguous` is the one issue whose subject
+        has no group in it, so the reviewer is landed on a group in the *next*
+        panel and Prev/Next can never reach the panel in question. Widening the
+        crop to include it is the whole fix: the verification is "is that panel
+        really wordless?", which is a two-second look once it is on screen.
+
+        Scoped tightly on purpose, so no other editing session sees a changed
+        crop:
+
+        - Only while the current queue entry is a panel-gap entry. Browsing a
+          page, or working any other issue, is untouched.
+        - Only the *contiguous run* of empty panels ending at `panel_num - 1`.
+          A group elsewhere on the page, including one the reviewer reaches with
+          Prev/Next, is not before any hole, so it gets the ordinary crop back.
+        - Computed from this pane's own groups, so a hole in one engine only
+          widens that engine's pane.
+        """
+        if not self._queue or self._queue[self._queue_index].issue_type != PANEL_GAP_ISSUE_TYPE:
+            return []
+
+        panel_count = len(get_all_panel_bounds_from_file(self._panel_segments_file) or [])
+        empty = set(panels_with_no_groups(pane.json_groups(), panel_count))
+
+        run: list[int] = []
+        candidate = panel_num - 1
+        while candidate in empty:
+            run.append(candidate)
+            candidate -= 1
+        if not run:
+            return []
+
+        found: list[tuple[int, tuple[int, int, int, int]]] = []
+        for num in sorted(run):
+            bounds = get_panel_bounds_from_file(self._panel_segments_file, num)
+            if bounds:
+                found.append((num, bounds))
+        return found
 
     # ── cross-engine comparison ───────────────────────────────────────────────
 

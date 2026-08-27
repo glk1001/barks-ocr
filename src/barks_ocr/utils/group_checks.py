@@ -23,6 +23,70 @@ from barks_ocr.utils.vision_schema import GROUP_TYPES
 # check, since the checks keep firing -- `ocr_check` is what stops reporting.
 TEXT_NEVER_FITS_ISSUE = "text-will-never-fit"
 
+# Acknowledging this silences `ocr_check`'s `panel_nums_not_contiguous` for the
+# page/engine it is set on. Named for the judgement -- "the skipped panel really
+# has no lettering" -- and not for the check, following TEXT_NEVER_FITS_ISSUE.
+#
+# It is unlike every other type here in that it is not about the group carrying
+# it. The finding is about a panel with *no* group, so there is nothing in that
+# panel to mark; `ocr_check` anchors the issue on the first group of the next
+# populated panel, and reads the acknowledgement back off that same group. Two
+# consequences worth knowing before setting it:
+#
+#   - It is anchor-bound. Delete or add a group and the ids shift, the anchor
+#     may become a different group, and the acknowledgement stops being found.
+#     The issue then re-fires, which is the safe direction to fail in.
+#   - It is per page/engine, not per panel. A page skipping two panels is one
+#     issue naming both, so acknowledging it covers both -- including a panel
+#     that later turns out to have had lettering all along.
+PANEL_HAS_NO_TEXT_ISSUE = "panel-has-no-text"
+
+
+def panels_with_no_groups(json_groups: dict, panel_count: int) -> list[int]:
+    """Return the panels a page skips: 1..max-with-text, minus those that have text.
+
+    The page's groups should occupy panels 1..n with nothing skipped. A hole is
+    either lettering that was never grouped or groups filed under the wrong
+    panel -- or, often enough, a genuinely wordless panel, which is why
+    `PANEL_HAS_NO_TEXT_ISSUE` exists.
+
+    Bounded above by the highest panel that *has* text rather than by
+    `panel_count`: ending on a wordless panel is ordinary Barks and is not a
+    hole. A `panel_num` past `panel_count` is ignored entirely, so one group
+    claiming panel 99 cannot invent 90-odd empty panels -- that claim is
+    `ocr_check`'s `panel_num_out_of_range` to report, not this function's.
+
+    Returns nothing for a page holding an unassigned (-1) group: that group's
+    text may belong to the empty panel, so the hole would just restate
+    `panel_unassigned` and resolves itself once that is worked.
+
+    Shared so that `ocr_check` and the Kivy editor agree on which panels are
+    empty -- the editor widens its crop to show them, and a second copy of this
+    arithmetic drifting from the first would point the reviewer at the wrong
+    panel.
+
+    Args:
+        json_groups: One page/engine's groups, as stored.
+        panel_count: How many panels the page's segments file defines.
+
+    Returns:
+        The skipped panel numbers, ascending. Empty when there is no hole.
+
+    """
+    texted = [
+        group for group in json_groups.values() if strip_markup(group.get("ai_text") or "").strip()
+    ]
+    if any(int(group.get("panel_num", -1)) == -1 for group in texted):
+        return []
+
+    used = {int(group.get("panel_num", -1)) for group in texted}
+    used = {panel for panel in used if 1 <= panel <= panel_count}
+    if not used:
+        return []
+
+    return sorted(set(range(1, max(used) + 1)) - used)
+
+
 DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "short_text",
     "error_notes",
@@ -36,6 +100,7 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "whitespace",
     "florence-check",
     TEXT_NEVER_FITS_ISSUE,
+    PANEL_HAS_NO_TEXT_ISSUE,
 )
 
 # The `type` vocabulary Gemini is asked for. Anything else is a mis-labelled
@@ -316,6 +381,10 @@ DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     "whitespace": has_whitespace_error,
     "florence-check": _never_fires,
     TEXT_NEVER_FITS_ISSUE: _never_fires,
+    # Like the two above it: `ocr_check` decides when this fires and consults
+    # `is_acknowledged` itself, because the judgement needs the whole page and
+    # its panel boxes, which a predicate over one group cannot see.
+    PANEL_HAS_NO_TEXT_ISSUE: _never_fires,
 }
 
 # Issue types that were renamed or merged. 75 groups carry an acknowledgement

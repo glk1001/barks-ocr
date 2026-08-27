@@ -37,10 +37,12 @@ from PIL import Image, ImageDraw, ImageFont
 from barks_ocr.utils.engine_compare import BOX_IOU_MIN, box_iou, differing_attrs
 from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.group_checks import (
+    PANEL_HAS_NO_TEXT_ISSUE,
     TEXT_NEVER_FITS_ISSUE,
     cleaned_whitespace,
     get_fired_dismissable_issues,
     is_acknowledged,
+    panels_with_no_groups,
     with_dash_fixes,
 )
 from barks_ocr.utils.ocr_box import OcrBox, PointList, points_bbox, text_box_problem
@@ -248,6 +250,10 @@ _QUEUE_SEVERITY: tuple[str, ...] = (
     "panel_num_fixable",
     "panel_num_out_of_range",
     "panel_num_mismatch",
+    # Last of the panel_num block, because it is the weakest of them: it names a
+    # page, not a fault in the group it is anchored to, and a silent panel is
+    # legitimate. Any concrete per-group diagnosis above should win the entry.
+    "panel_nums_not_contiguous",
     "text_does_not_fit",
     "too_many_lines",
     "too_many_lines_marginal",
@@ -886,6 +892,61 @@ def _out_of_order_group(json_groups: dict) -> tuple[str, str] | None:
     return None
 
 
+def _panel_num_gap(
+    json_groups: dict, page_panel_boxes: PagePanelBoxes
+) -> tuple[str, list[int]] | None:
+    """Return the first group after a hole in the page's panel numbering.
+
+    The groups on a page should occupy panels 1..n with nothing skipped. A
+    skipped panel is either a panel whose lettering was never grouped, or a run
+    of groups filed under the wrong panel — neither of which any other check
+    sees. ``panel_num_mismatch`` needs the box to sit wholly inside a different
+    *real* panel, and the cross-engine ``MissingPanel`` only fires when the two
+    engines disagree; a page where both engines skip the same panel is silent
+    today.
+
+    Bounded above by the highest panel that *has* text, not by the page's panel
+    count: a story that ends on a wordless panel is ordinary Barks and is not a
+    fault. Only an interior hole is reported.
+
+    Two suppressions, both to keep the entry pointing at something a reviewer
+    can act on:
+
+    - A panel_num beyond the page's panel count is ignored when taking the
+      maximum, so one group claiming panel 99 does not invent 90-odd missing
+      panels. The claim itself is reported as ``panel_num_out_of_range``.
+    - A page holding any unassigned (-1) group is skipped entirely. That group's
+      text may well belong to the empty panel, so the gap is a restatement of
+      ``panel_unassigned``/``panel_num_fixable`` and resolves itself once those
+      are worked. This is 34 of the 454 page/engine gaps in the corpus.
+
+    Args:
+        json_groups: One page/engine's groups, as stored.
+        page_panel_boxes: The page's panel boxes, for the upper bound.
+
+    Returns:
+        (anchor group id, the missing panel numbers), or None when the
+        numbering has no hole. The anchor is the first group, in reading order,
+        of the panel that follows the first hole.
+
+    """
+    gap = panels_with_no_groups(json_groups, len(page_panel_boxes.panel_boxes))
+    if not gap:
+        return None
+
+    texted = [(group_id, group) for group_id, group in json_groups.items() if _plain(group)]
+    next_panel = min(
+        panel
+        for panel in (int(group.get("panel_num", -1)) for _gid, group in texted)
+        if panel > gap[0] and panel not in gap
+    )
+    anchor_id, _anchor = min(
+        (item for item in texted if int(item[1].get("panel_num", -1)) == next_panel),
+        key=lambda item: _reading_order_key(item[1]),
+    )
+    return anchor_id, gap
+
+
 def _get_reduced_text_box(text_box: PointList, reduce_by: int) -> tuple[bool, PointList | None]:
     p0_x = text_box[0][0] + reduce_by
     p0_y = text_box[0][1] + reduce_by
@@ -1163,6 +1224,7 @@ class OcrChecker:
         )
 
         issues.extend(self._order_issue(context, json_groups))
+        issues.extend(self._panel_gap_issue(context, json_groups))
 
         for group_id, group in json_groups.items():
             group_issues, there_were_group_fixes = self._check_group(context, group_id, group)
@@ -1214,6 +1276,70 @@ class OcrChecker:
                 group_id=group_id,
                 issue_type="groups_out_of_order",
                 panel_num=int(group.get("panel_num", -1)),
+                text=_plain(group),
+                notes=f"{notes}; {note}" if notes else note,
+            )
+        ]
+
+    @staticmethod
+    def _panel_gap_issue(context: PageContext, json_groups: dict) -> list[IssueFound]:
+        """Report a page that skips a panel number.
+
+        One entry per page/engine. The finding is about a panel that holds *no*
+        group, so there is nothing in it to anchor to; the entry is anchored on
+        the first group of the next panel that does have one, since that is the
+        nearest thing an editor can open.
+
+        That split is the whole difficulty in reading one of these, so both
+        halves are spelled out. ``panel_num`` is the **empty** panel, not the
+        anchor group's own — on every other issue those are the same panel, and
+        printing the anchor's made the line name a group in panel 4 while
+        complaining about panel 3, with nothing saying why. The note then says
+        which panel the anchor group is actually in, so the two numbers on the
+        line are never silently different.
+
+        Silenced per page/engine by ``PANEL_HAS_NO_TEXT_ISSUE`` on the anchor
+        group — the reviewer's "that panel really is wordless". Deliberately not
+        the queue entry's own name, so the editor does not pre-tick it and a
+        reflexive Save cannot dismiss the finding unlooked-at.
+
+        Args:
+            context: The page being checked.
+            json_groups: That page/engine's groups, as stored.
+
+        Returns:
+            One ``panel_nums_not_contiguous`` issue, or an empty list.
+
+        """
+        gap = _panel_num_gap(json_groups, context.panel_boxes)
+        if gap is None:
+            return []
+
+        group_id, missing_panels = gap
+        group = json_groups[group_id]
+        if is_acknowledged(group, PANEL_HAS_NO_TEXT_ISSUE):
+            # Read off the anchor because that is where the editor's "Mark OK"
+            # popup can put it -- the skipped panel has no group of its own.
+            # So the acknowledgement only holds while the anchor stays the
+            # anchor; edit the page and it re-fires, which is the safe way round.
+            return []
+
+        notes = (group.get("notes") or "").strip()
+        anchor_panel = int(group.get("panel_num", -1))
+        many = len(missing_panels) > 1
+        panels_str = ", ".join(str(panel) for panel in missing_panels)
+        note = (
+            f"panel{'s' if many else ''} {panels_str} hold{'' if many else 's'} no group"
+            f" — this group is the first of panel {anchor_panel}"
+        )
+        return [
+            IssueFound(
+                volume=context.volume,
+                fanta_page=context.fanta_page,
+                engine=context.engine,
+                group_id=group_id,
+                issue_type="panel_nums_not_contiguous",
+                panel_num=missing_panels[0],
                 text=_plain(group),
                 notes=f"{notes}; {note}" if notes else note,
             )
