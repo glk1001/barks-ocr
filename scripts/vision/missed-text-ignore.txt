@@ -106,3 +106,14 @@ HELP KEEP AMERICA STRONG
 # NOT ignored: 178's dollar-sign hood ornament, which is neither -- it is a
 # drawn character on a prop, and the audit should raise it once for a decision.
 7 176 two music notes (♫ ♪) drawn beside Gladstone's head in panel 3, outside the thought balloon
+
+# Judged not worth a group, 2026-08-27, Lost in the Andes! (Vol. 7). Drawn
+# MUSICAL NOTES, under GLK's standing rule from the Rival Beachcombers hand-back.
+# Written out as prose in visible_text so the audit can see them at all -- a bare
+# glyph normalises to the empty string and is invisible at both ends.
+# NOT ignored: 014's JANITOR cap band, which is real lettering neither engine
+# grouped; it goes back to the reviewer with a panel box.
+7 032 two music notes drawn at the end of the singer's balloon in panel 4, after HOORAY! HOORAY!
+7 032 two music notes drawn at the end of the singer's balloon in panel 5, after DIXIE!
+7 033 a music note drawn at the end of the singer's balloon in panel 1
+7 044 two music notes drawn at the end of the square-dance call in panel 2
