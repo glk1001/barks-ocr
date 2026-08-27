@@ -2016,7 +2016,11 @@ class EditorApp(App):
         last_idx = len(line_counts) - 1
         for idx, count in enumerate(line_counts):
             if idx == last_idx:
-                out.append(" ".join(words[i:]))
+                # Only if there are words left for it, or the result ends in a
+                # trailing empty line -- which the docstring above says is
+                # dropped, and which depresses the group's implied line height.
+                if i < len(words):
+                    out.append(" ".join(words[i:]))
                 break
             if i >= len(words):
                 break

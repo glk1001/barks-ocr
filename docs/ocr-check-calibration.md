@@ -394,6 +394,16 @@ whenever it fires, so there was nothing to calibrate:
   panel count, which `panel_num_mismatch` structurally cannot see (it needs
   the box to sit wholly inside a different *real* panel).
 
+Added 2026-08-27, both of them holes rather than new ideas — the tool already
+knew about each fault and said nothing a reviewer could act on:
+
+- **`groups_out_of_order`** (951 page/engine entries) — see the section below.
+- **`panel_num_fixable`** (190 groups) — a `panel_num` of -1 that the tool can
+  place itself. `--fix-panel-nums` writes it; without that flag the group was
+  logged as a warning and then dropped, so the groups that had been positively
+  diagnosed were the ones missing from the queue while the *un*diagnosable ones
+  (`panel_unassigned`, 340) were in it.
+
 **Rejected, so they are not proposed again:**
 
 - **duplicate text on a page (2407), or within one panel (1020)** — legitimate:
@@ -524,6 +534,38 @@ none hit the cap, which also confirms `renumber_groups()` is idempotent and does
 drive the loop. 5 is headroom, not a working value.
 
 Reproduce: `scripts/flags.py <out> <vol> <panel_nums> <groups_order> <newlines>`.
+
+## Group order is checked, not just fixed
+
+`renumber_groups()` orders a page's groups by `(panel_num, banded y, x)`, and
+`--fix-groups-order` is the only thing that calls it. Nothing checked whether the
+stored ids were *already* in that order, and two things quietly assumed they were.
+
+`_groups_by_panel` sorted by `int(group_id)` and `_check_engine_agreement` pairs
+those lists positionally. Run `--fix-panel-nums` without `--fix-groups-order` and a
+group changes panel, its id goes stale, and every pair in that panel is offset by one
+— a `text_mismatch` on each, the page out of the agreement metric, and no issue
+naming the cause. A group appended by an editor at `max(id) + 1` does the same. The
+roll-call invocation passes no fix flags at all, so the repair never ran there.
+
+So the pairing now sorts on `speech_groupers._group_sort_key` itself — imported
+rather than copied, because a local copy drifting from it is the exact fault being
+caught — and a page whose ids are not in that order is reported as
+`groups_out_of_order`: one entry per page/engine, on the first group out of place.
+It ranks above every check below it in `_QUEUE_SEVERITY`, since a queue entry naming
+a group id that a renumber is about to change points at the wrong group. It stays
+silent on a page holding a malformed `text_box`, because `renumber_groups()` raises
+on one and `_check_page_group` skips the page — an entry telling the reviewer to
+re-run the fixer would not be true there.
+
+Corpus: **951 page/engine entries** across vols 1-29, one `--fix-groups-order` pass
+from being cleared. Vol 6 page 113 is the shape of it — keys `0…9, 12, 10, 11`,
+a group added later and numbered last.
+
+The pairing change on its own is small and in the right direction. Measured over
+vols 1-8, 19 and 21 (1,910 pages) with the old id sort swapped back in: two
+`text_mismatch` flags disappear (vol 7 page 131 group 7, at ratio 0.18, among them)
+and engine agreement moves 1872 → 1873 pages.
 
 ---
 

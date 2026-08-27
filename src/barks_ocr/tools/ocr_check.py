@@ -19,8 +19,16 @@ from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.comics_utils import get_backup_file
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM_DIR
 from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePagesPanelBoxes, TitlePanelBoxes
-from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups, SpeechPageGroup
-from barks_fantagraphics.speech_markup import has_markup, strip_markup
+from barks_fantagraphics.speech_groupers import (
+    OcrTypes,
+    SpeechGroups,
+    SpeechPageGroup,
+    # Private, and imported anyway: it *is* the order `renumber_groups()`
+    # numbers by, and a local copy of the key would silently drift from it --
+    # which is the whole fault `_out_of_order_group` exists to catch.
+    _group_sort_key,
+)
+from barks_fantagraphics.speech_markup import escape_markup, has_markup, strip_markup
 from comic_utils.common_typer_options import TitleArg, VolumesArg
 from intspan import intspan
 from loguru import logger
@@ -225,12 +233,19 @@ _QUEUE_SEVERITY: tuple[str, ...] = (
     # Beside `invalid_markup` because it is the same kind of fault: a stored
     # value outside its vocabulary, which no downstream consumer can interpret.
     # It used to be unlisted, and an unlisted type ranks after every issue here
-    # -- so a group with a bad `type` and anything else at all queued under the
-    # anything else, and the bad type was never the thing the reviewer was sent
-    # to look at. Vol 27 page 138 had six invalid types and offered five.
+    # -- so a group with a bad `type` and anything else at all was queued under
+    # the anything else, and the bad type was never the thing the reviewer was
+    # sent to look at. Vol 27 page 138 had six invalid types and offered five.
     "invalid_type",
     "empty_text",
+    # Ahead of everything below it because it invalidates them: the cross-engine
+    # checks pair a panel's groups positionally, and a queue entry pointing at
+    # a group id a renumber is about to change points at the wrong group.
+    "groups_out_of_order",
     "panel_unassigned",
+    # Same fault as `panel_unassigned`, and the panel it belongs in is known;
+    # below it because --fix-panel-nums clears this one without a reviewer.
+    "panel_num_fixable",
     "panel_num_out_of_range",
     "panel_num_mismatch",
     "text_does_not_fit",
@@ -384,7 +399,7 @@ def _rotated_frame_wh(group: dict) -> tuple[int, int] | None:
 
     if not angles:
         return None
-    frame_angle = median(angles)
+    frame_angle = _circular_median_deg(angles)
     if abs(frame_angle) < FRAGMENT_ANGLE_THRESHOLD_DEG:
         return None
 
@@ -393,6 +408,34 @@ def _rotated_frame_wh(group: dict) -> tuple[int, int] | None:
     xs = [p[0] * cos_a - p[1] * sin_a for p in points]
     ys = [p[0] * sin_a + p[1] * cos_a for p in points]
     return int(max(xs) - min(xs)), int(max(ys) - min(ys))
+
+
+def _circular_median_deg(angles: list[float]) -> float:
+    """Return the most central of a set of baseline angles folded into (-90, 90].
+
+    A plain ``median`` cannot serve here. Vertically set lettering puts its
+    fragments at about +89 and -89 degrees, which is 2 degrees apart on the page
+    and 178 apart on the number line, so the median lands near 0 — under
+    ``FRAGMENT_ANGLE_THRESHOLD_DEG``, and the vertical sound effect that the
+    rotated frame exists for loses its rescue. Measuring the spread as an angle
+    rather than a difference fixes that, and taking the most central *observed*
+    angle keeps the median's resistance to one stray fragment.
+
+    Args:
+        angles: Baseline angles in degrees, each already folded into (-90, 90].
+
+    Returns:
+        The angle from ``angles`` closest to all the others.
+
+    """
+
+    def separation(left: float, right: float) -> float:
+        # A baseline and its reverse are the same line, so the two angles are
+        # never more than 90 degrees apart however far apart they are written.
+        gap = abs(left - right) % 180.0
+        return min(gap, 180.0 - gap)
+
+    return min(angles, key=lambda candidate: sum(separation(candidate, a) for a in angles))
 
 
 def _text_fits_in_box(
@@ -705,7 +748,13 @@ def _apply_line_pattern(source_text: str, pattern_text: str) -> str:
     last_idx = len(line_counts) - 1
     for idx, count in enumerate(line_counts):
         if idx == last_idx:
-            out.append(" ".join(words[i:]))
+            # Only if there are words left for it. A donor with more lines than
+            # the source has words would otherwise end the result in "\n", and
+            # that empty line drags the group's implied line height down —
+            # inflating n_lines for every later measurement, until a
+            # --fix-whitespace pass strips it again and the file flip-flops.
+            if i < len(words):
+                out.append(" ".join(words[i:]))
             break
         if i >= len(words):
             break
@@ -756,6 +805,25 @@ def _other_ocr_type(ocr_type: OcrTypes) -> OcrTypes:
     return OcrTypes.PADDLEOCR if ocr_type == OcrTypes.EASYOCR else OcrTypes.EASYOCR
 
 
+def _reading_order_key(group: dict) -> tuple[float, float, float]:
+    """Return ``_group_sort_key``'s position for a group, tolerating a bad box.
+
+    ``_group_sort_key`` raises on a text_box it cannot read. That box is
+    reported as ``bad_text_box`` in its own right, so park the group at the end
+    of the page rather than letting it abort the comparison.
+
+    Args:
+        group: One group's JSON dict.
+
+    Returns:
+        (panel, banded y, x), sorting an unreadable box last.
+
+    """
+    if text_box_problem(group.get("text_box")) is not None:
+        return math.inf, math.inf, math.inf
+    return _group_sort_key(group)
+
+
 def _groups_by_panel(json_groups: dict) -> dict[int, list[tuple[str, dict]]]:
     """Group ``(group_id, group)`` by panel_num, in reading order within a panel.
 
@@ -765,14 +833,57 @@ def _groups_by_panel(json_groups: dict) -> dict[int, list[tuple[str, dict]]]:
 
     Read from the live JSON rather than ``SpeechPageGroup.speech_groups``, which
     is built at load time and would not see fixes applied earlier in this pass.
-    Group ids sort numerically, which is the order ``renumber_groups()`` puts
-    them in — panel, then down and across the page.
+
+    Ordered spatially — the same key ``renumber_groups()`` numbers by — and not
+    by group id. The ids are only in reading order once a renumber has run, and
+    that runs only under ``--fix-groups-order``, which the documented roll-call
+    invocation does not pass. ``_check_engine_agreement`` pairs these lists
+    positionally, so trusting stale ids there offsets every pair in a panel and
+    reports a ``text_mismatch`` on each — naming nothing that would let the
+    reviewer see the real fault. Groups whose ids *are* stale are reported
+    separately, as ``groups_out_of_order``.
     """
     by_panel: dict[int, list[tuple[str, dict]]] = defaultdict(list)
-    for group_id, group in sorted(json_groups.items(), key=lambda kv: int(kv[0])):
+    for group_id, group in sorted(json_groups.items(), key=lambda kv: _reading_order_key(kv[1])):
         if _plain(group):
             by_panel[int(group.get("panel_num", -1))].append((group_id, group))
     return by_panel
+
+
+def _out_of_order_group(json_groups: dict) -> tuple[str, str] | None:
+    """Return the first group id a renumber would move, with what is wrong.
+
+    Mirrors ``renumber_groups()``'s own "did anything change" test without
+    writing: ids must run 0..n-1, and that order must be the page's reading
+    order. ``sorted`` is stable, so two groups with identical positions are not
+    reported as a swap.
+
+    Args:
+        json_groups: One page/engine's groups, in the order they are stored.
+
+    Returns:
+        (group id, what is wrong with it), or None when the numbering is sound.
+
+    """
+    items = list(json_groups.items())
+    if not items:
+        return None
+    if any(text_box_problem(group.get("text_box")) is not None for _gid, group in items):
+        # `renumber_groups()` raises on such a box, so `_check_page_group` skips
+        # the page rather than strand a title half-written. Reporting an order
+        # the fixer will not repair would only queue an entry nobody can act on;
+        # the box itself is reported as `bad_text_box`.
+        return None
+
+    in_reading_order = sorted(items, key=lambda kv: _reading_order_key(kv[1]))
+    for position, ((group_id, _group), (wanted_id, _wanted)) in enumerate(
+        zip(items, in_reading_order, strict=True)
+    ):
+        if group_id != str(position):
+            return group_id, f"group ids are not 0..{len(items) - 1} in order"
+        if group_id != wanted_id:
+            return group_id, f"reading order puts group {wanted_id} here"
+    return None
 
 
 def _get_reduced_text_box(text_box: PointList, reduce_by: int) -> tuple[bool, PointList | None]:
@@ -1051,6 +1162,8 @@ class OcrChecker:
             other_page_group=other_page_group,
         )
 
+        issues.extend(self._order_issue(context, json_groups))
+
         for group_id, group in json_groups.items():
             group_issues, there_were_group_fixes = self._check_group(context, group_id, group)
             issues.extend(group_issues)
@@ -1066,6 +1179,45 @@ class OcrChecker:
             )
 
         return issues, there_were_fixes
+
+    @staticmethod
+    def _order_issue(context: PageContext, json_groups: dict) -> list[IssueFound]:
+        """Report a page whose group ids are not in reading order.
+
+        One entry per page/engine, on the first group that is out of place.
+        Nothing else here would say so: ``--fix-groups-order`` silently repairs
+        it when it is passed, and the checks say nothing at all when it is not,
+        while the cross-engine comparison quietly depends on the ordering being
+        right.
+
+        Args:
+            context: The page being checked.
+            json_groups: That page/engine's groups, as stored.
+
+        Returns:
+            One ``groups_out_of_order`` issue, or an empty list.
+
+        """
+        out_of_order = _out_of_order_group(json_groups)
+        if out_of_order is None:
+            return []
+
+        group_id, problem = out_of_order
+        group = json_groups[group_id]
+        notes = (group.get("notes") or "").strip()
+        note = f"{problem}; re-run with --fix-groups-order"
+        return [
+            IssueFound(
+                volume=context.volume,
+                fanta_page=context.fanta_page,
+                engine=context.engine,
+                group_id=group_id,
+                issue_type="groups_out_of_order",
+                panel_num=int(group.get("panel_num", -1)),
+                text=_plain(group),
+                notes=f"{notes}; {note}" if notes else note,
+            )
+        ]
 
     def _check_group(
         self,
@@ -1109,6 +1261,14 @@ class OcrChecker:
             add("bad_text_box", extra_note=f"text_box {box_problem}")
         elif panel_num_state == PanelNumState.PANEL_NUM_NOT_SET_FIXABLE:
             there_were_fixes = self._deal_with_fixable_panel_num(group, group_id, panel_num)
+            if not there_were_fixes:
+                # The fixer writes only under --fix-panel-nums; without it the
+                # group keeps panel_num -1. Nothing downstream would name it:
+                # `panel_unassigned` covers the unfixable case only, and
+                # _groups_by_panel files -1 under a panel the cross-engine
+                # checks skip. Left as it was, the groups the tool has
+                # positively diagnosed were the ones it dropped from the queue.
+                add("panel_num_fixable", extra_note=f"panel_num should be {panel_num}")
         elif panel_issue := self._panel_issue(group, panel_num_state, panel_num, context):
             add(panel_issue)
 
@@ -1500,8 +1660,16 @@ class OcrChecker:
             )
             return False
 
+        # The rewrap was built from `_plain()`, which resolved `&amp;`, `&bl;`
+        # and `&br;` back to `&`, `[` and `]`. Escape them again before storing:
+        # ai_text on disk is Kivy markup, and the reader would act on a bare
+        # bracket. `has_markup` above only sees `[b]`/`[i]`, so an escaped
+        # string reaches here -- 59 corpus groups hold an ampersand and 31 hold
+        # brackets. Round-trips exactly, the text carrying no tags.
+        stored_text = escape_markup(new_text)
+
         if not _layout_ok(
-            {**group, "ai_text": new_text},
+            {**group, "ai_text": stored_text},
             context.fanta_page,
             context.line_heights.own,
             self._limits.outlier,
@@ -1512,7 +1680,7 @@ class OcrChecker:
             )
             return False
 
-        group["ai_text"] = new_text
+        group["ai_text"] = stored_text
         logger.info(f"Group {group_id}: rewrapped ai_text using other-engine pattern.")
         return True
 
@@ -1544,10 +1712,20 @@ class OcrChecker:
     def _can_replace_missing_panel_num(
         self, group: dict, page_panel_boxes: PagePanelBoxes
     ) -> tuple[PanelNumState, int]:
-        panel_num = int(group["panel_num"])
+        # Read both fields the way `_get_panel_num_state` does. It defends
+        # against an absent panel_num with a -1 default and then routes exactly
+        # that case here, where a `group["panel_num"]` would have raised
+        # KeyError -- and nothing up the stack catches it, so a single such
+        # group would take down a whole multi-volume run.
+        panel_num = int(group.get("panel_num", -1))
         assert panel_num == -1
 
-        text_box = group["text_box"]
+        text_box = group.get("text_box") or []
+        if text_box_problem(text_box) is not None:
+            # `_check_group` screens these out before it asks; belt and braces,
+            # since every line below indexes the four corner points.
+            return PanelNumState.PANEL_NUM_NOT_SET_UNFIXABLE, -1
+
         for reduce_by in [20, 40, 60]:
             can_do, reduced_box = _get_reduced_text_box(text_box, reduce_by)
             if not can_do:
@@ -1705,12 +1883,34 @@ app = typer.Typer()
 MAX_DIRTY_PATHS_SHOWN = 10
 
 
-def _uncommitted_prelim_paths() -> list[str] | None:
-    """Return the prelim repo's uncommitted paths, or None if it is not a git work tree.
+class PrelimRepoStatus(Enum):
+    """What git could tell us about the prelim work tree."""
+
+    READ = auto()  # `dirty` is authoritative: empty means a clean tree
+    NOT_A_REPO = auto()
+    GIT_FAILED = auto()
+
+
+@dataclass(frozen=True)
+class PrelimRepoState:
+    """The prelim repo as git reports it, with the two failure modes kept apart."""
+
+    status: PrelimRepoStatus
+    dirty: list[str]
+    error: str = ""
+
+
+def _prelim_repo_state() -> PrelimRepoState:
+    """Return the prelim repo's uncommitted paths, or why they could not be read.
+
+    "Not a work tree" and "git would not answer" used to come back as the same
+    None, and the caller read both as "not version-controlled: warn and carry
+    on". An index.lock, a permissions error or a momentarily missing git then
+    disarmed the --fix undo gate on a repo that *did* have uncommitted prelim
+    edits — the one situation the gate exists for.
 
     Returns:
-        Porcelain status lines, empty when the tree is clean; None when the
-        prelim directory is not version-controlled or git is unavailable.
+        The work tree's porcelain status lines, or the reason there are none.
 
     """
     git = ("git", "-C", str(OCR_PRELIM_DIR))
@@ -1721,15 +1921,32 @@ def _uncommitted_prelim_paths() -> list[str] | None:
             text=True,
             check=False,
         )
-        if inside.returncode != 0 or inside.stdout.strip() != "true":
-            return None
-        status = subprocess.run(  # noqa: S603
-            [*git, "status", "--porcelain"], capture_output=True, text=True, check=True
-        )
-    except (OSError, subprocess.SubprocessError):
-        return None
+        if inside.returncode != 0:
+            # `git` ran and said no. It says the same for a path that is simply
+            # outside any repo, which is not a fault -- so only a stderr that
+            # does not name that case is treated as one.
+            stderr = inside.stderr.strip()
+            if "not a git repository" in stderr.lower():
+                return PrelimRepoState(PrelimRepoStatus.NOT_A_REPO, [])
+            return PrelimRepoState(
+                PrelimRepoStatus.GIT_FAILED, [], stderr or "git rev-parse failed"
+            )
+        if inside.stdout.strip() != "true":
+            return PrelimRepoState(PrelimRepoStatus.NOT_A_REPO, [])
 
-    return [line for line in status.stdout.splitlines() if line.strip()]
+        status = subprocess.run(  # noqa: S603
+            [*git, "status", "--porcelain"], capture_output=True, text=True, check=False
+        )
+        if status.returncode != 0:
+            return PrelimRepoState(
+                PrelimRepoStatus.GIT_FAILED, [], status.stderr.strip() or "git status failed"
+            )
+    except (OSError, subprocess.SubprocessError) as exc:
+        return PrelimRepoState(PrelimRepoStatus.GIT_FAILED, [], str(exc))
+
+    return PrelimRepoState(
+        PrelimRepoStatus.READ, [line for line in status.stdout.splitlines() if line.strip()]
+    )
 
 
 def _check_prelim_repo_clean(*, force: bool) -> None:
@@ -1744,18 +1961,33 @@ def _check_prelim_repo_clean(*, force: bool) -> None:
         force: Skip the check, having accepted that the run cannot be undone.
 
     Raises:
-        typer.Exit: When the prelim repo has uncommitted changes.
+        typer.Exit: When the prelim repo has uncommitted changes, or when git
+            could not say whether it does.
 
     """
-    dirty = _uncommitted_prelim_paths()
+    state = _prelim_repo_state()
 
-    if dirty is None:
+    if state.status == PrelimRepoStatus.NOT_A_REPO:
         logger.warning(
             f'Prelim dir is not a git repo: "{OCR_PRELIM_DIR}".'
             f" A --fix pass there cannot be undone."
         )
         return
 
+    if state.status == PrelimRepoStatus.GIT_FAILED:
+        # Whether there is anything to lose is precisely what could not be
+        # established, so this is not the "no repo, nothing to check" case.
+        if force:
+            logger.warning(f"--force: proceeding though git could not be read ({state.error}).")
+            return
+        print(f"ERROR: could not read the prelim repo's status: {state.error}")
+        print(
+            f'  git -C "{OCR_PRELIM_DIR}" status --porcelain\n'
+            f"\nFix that first, or re-run with --force to write without an undo path."
+        )
+        raise typer.Exit(1)
+
+    dirty = state.dirty
     if not dirty or force:
         if dirty and force:
             logger.warning(f"--force: overwriting with {len(dirty)} uncommitted change(s) present.")
