@@ -244,6 +244,59 @@ can change an answer.
   Scale from the scan's blob boxes, which are already in panel pixels, not from
   a view you are eyeballing.
 
+Measured again on *Voodoo Hoodoo* (Vol. 7, 32 pages, 402 groups), the first
+title in this file whose caps print as a **black crown carrying one coloured
+wedge** rather than a full coloured crown:
+
+```
+speaker corrections            30 / 402  =  7.5%
+cap colours overturned         15 / 402          (previous batch: 0 / 613)
+images read                    74 / 32 pages = 2.31 per page
+```
+
+The cost went **up** from 1.81 to 2.31 and the correction rate went **down**
+from 9.8% to 7.5%, which is the first batch where spending more helped. But
+the composition changed in a way the previous entry did not predict:
+
+```
+ 9  under-named          `nephews` the review sharpened to a name
+ 8  wrong nephew         Huey/Dewey/Louie swapped for each other
+ 4  over-named           a name the review withdrew to `nephews`
+ 4  -> Donald
+ 5  adults / other
+```
+
+The previous batch recorded **zero nephews misidentified in 613 groups** and
+**zero cap colours overturned**. This one posts 8 and 15. Every call in it was
+high confidence, so confidence was not the discriminator — **cap area was**. A
+wedge contributes 130-1800px against a crown that reads achromatic, and
+scenery in the same inks (red curtains, red brick, an armchair, Scrooge's
+green collar) sits at head height all through the title.
+
+Two mechanisms, both verified against the art afterwards:
+
+- **Reading two balloons as joined.** On 100 p7 the pass wrote "joined along a
+  shared edge, one tail between them" and gave both balloons to one boy. They
+  are two balloons with two tails. That single call cost one wrong name and
+  one name never made, and the same slide on 100 p6 shifted the rest of the
+  panel by one. A "joined" call is a claim about the drawing and needs a crop
+  of the neck, exactly as a tail does.
+- **Naming off a sliver seen at contact-sheet scale.** The 15 colour moves have
+  no direction — red->blue x3, red->green x2, blue->green x2, green->blue,
+  blue->red — which is noise, not bias. Under a few hundred saturated pixels,
+  probe the head and crop that one cap at 4-6x before writing the colour down.
+
+The corollary is **not** to decline more. Under-naming still outnumbers
+over-naming 9 to 4, and on 090 p8 a boy whose crown probes with no chromatic
+ink at any zoom was named by the review and held through two rechecks. The
+wedge is for **checking** a name, not for licensing one; when it will not read,
+fall back to the tail and the scene rather than to the collective.
+
+Cheap wins that did hold: `scripts/vision/probe.py` (new here) settled every
+"is there ink on this head at all" question in-process for nothing, and
+stitching 2-5 crops into one contact sheet meant 74 image reads carried roughly
+three times that many crops.
+
 ## What is still worth an image
 
 - The **cap-reference panel**, once per title, before page 1. Getting the
