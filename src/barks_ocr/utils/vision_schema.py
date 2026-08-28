@@ -399,6 +399,36 @@ ADDED_AI_TEXT_KEY = "ai_text"
 # Written on the group so a reviewer can see it did not come from OCR.
 VISION_ADDED_KEY = "vision_added"
 
+# The ONLY keys a hand-made group inherits from whatever group seeded it, used
+# by the editor's Copy In. A whitelist on purpose: a blacklist has to be updated
+# every time a key is added to the group, and the ones that get forgotten are
+# annotation keys -- exactly the ones that do harm when they arrive attached to
+# different lettering. `notes` and `style` are NOT here: both are on every group
+# and both are reset instead, because the editor exposes no control for either
+# and a wrong value copied in could not be put right from the UI.
+SEEDED_KEYS: tuple[str, ...] = (
+    "panel_id",
+    "panel_num",
+    "text_box",
+    "ai_text",
+    TYPE_KEY,
+)
+
+# What `style` is set to on a hand-made group. 'normal' is the overwhelming
+# majority of the corpus; the alternatives ('emphasized', 'angled', 'split',
+# 'vertical') describe how a specific piece of lettering is drawn and so cannot
+# be inherited from a different one.
+DEFAULT_GROUP_STYLE = "normal"
+
+# What a hand-made group's speaker is until somebody answers for it. NOT absent:
+# `speaker_queue` drops any group with no speaker before any filter runs, so an
+# empty key would keep a new group out of the review queue exactly as the
+# inherited `speaker_reviewed` used to. `unknown` is honest, it is in the roster
+# already, and at `low` it is caught by a plain `--unreviewed` sweep and by
+# `--confidence low,medium` alike.
+UNPLACED_SPEAKER = "unknown"
+UNPLACED_CONFIDENCE = "low"
+
 # Above this overlap with a group the page already has, an addition is a
 # duplicate rather than a miss. Deliberately low: two boxes over the same
 # lettering rarely agree closely, and the cost of refusing a real addition (a

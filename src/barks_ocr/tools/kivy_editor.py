@@ -46,11 +46,13 @@ from barks_ocr.utils.vision_schema import (
     CAP_COLOUR_KEY,
     CAP_COLOUR_OPTIONS,
     CAP_COLOUR_WAS_KEY,
+    DEFAULT_GROUP_STYLE,
     GROUP_TYPE_OPTIONS,
     IDENTIFIED_BY_KEY,
     IDENTIFIED_BY_OPTIONS,
     OTHER_PREFIX,
     REVIEWED_CONFIDENCE,
+    SEEDED_KEYS,
     SPEAKER_CONFIDENCE_KEY,
     SPEAKER_KEY,
     SPEAKER_OPTIONS,
@@ -62,6 +64,9 @@ from barks_ocr.utils.vision_schema import (
     TYPE_REVIEWED_DATE_KEY,
     TYPE_REVIEWED_KEY,
     TYPE_WAS_KEY,
+    UNPLACED_CONFIDENCE,
+    UNPLACED_SPEAKER,
+    VISION_ADDED_KEY,
     VISION_CORRECTED_TEXT_KEY,
     VISION_NOTE_KEY,
     VISION_TEXT_REVIEWED_DATE_KEY,
@@ -2201,9 +2206,7 @@ class EditorApp(App):
         target_json_groups = target.json_groups()
         new_id = str(max((int(k) for k in target_json_groups), default=-1) + 1)
 
-        new_group = copy.deepcopy(source_group)
-        new_group["ocr_text"] = ""
-        new_group["cleaned_box_texts"] = {}
+        new_group = self._seed_group_from(source_group)
 
         new_speech_text = SpeechText.from_stored(
             group_id=new_id,
@@ -2226,6 +2229,62 @@ class EditorApp(App):
         self._load_canvas_content(target)
         self._has_changes = True
         logger.info(f"Copied group {source.group_id} as new group {new_id}.")
+
+    @staticmethod
+    def _seed_group_from(source_group: dict) -> dict:
+        """Build a new group from *source_group*, carrying only what a new group may own.
+
+        A WHITELIST, not a list of things to strip. Copy In is the only way to make
+        a group by hand, so it is used two ways: to pull across lettering the other
+        engine did group, and -- when neither engine found the text at all -- as a
+        blank "new group" button with an arbitrary group as the template. In the
+        second case every judgement on the seed is about different lettering, and a
+        wrong judgement that is *asserted* does far more damage than an empty field
+        the reviewer has to fill.
+
+        The cost of getting this wrong was measured on Vol. 8 (2026-08-28): eight
+        added groups arrived wearing the seed's ``vision_note``, a ``type_was``
+        recording an overrule that never happened, and an ``identified_by`` on a
+        speaker of ``none``. Earlier rounds saw worse -- ``speaker_reviewed`` came
+        across too, so a group nobody had looked at was born signed off and reached
+        no review queue at all.
+
+        Nothing is lost by clearing the annotation on a genuine cross-engine copy:
+        ``vision-mirror`` exists to carry exactly these fields between the two
+        files, and it can be pointed either way with ``--src-engine``.
+
+        ``notes`` and ``style`` are reset rather than inherited because the editor
+        exposes no control for either, so a wrong value copied in cannot be put
+        right from the UI.
+
+        The speaker is set to ``unknown`` rather than left off. ``speaker_queue``
+        skips any group with no speaker at all (``if not speaker: continue``), so
+        clearing the key outright would keep the new group out of the review queue
+        just as effectively as the inherited ``speaker_reviewed`` used to -- the
+        same failure wearing the opposite disguise. ``unknown`` is the roster's own
+        value for "could not be placed", it is what the group honestly is until
+        somebody looks, and at ``low`` it is picked up by both a plain
+        ``--unreviewed`` sweep and a ``--confidence low,medium`` one.
+        """
+        new_group = {
+            key: copy.deepcopy(source_group[key]) for key in SEEDED_KEYS if key in source_group
+        }
+        new_group["ocr_text"] = ""
+        new_group["cleaned_box_texts"] = {}
+        new_group["notes"] = ""
+        new_group["style"] = DEFAULT_GROUP_STYLE
+        # Unanswered, and visibly so, rather than absent -- see the docstring.
+        new_group[SPEAKER_KEY] = UNPLACED_SPEAKER
+        new_group[SPEAKER_CONFIDENCE_KEY] = UNPLACED_CONFIDENCE
+        # This group did not come from OCR on this engine, whatever it came from.
+        new_group[VISION_ADDED_KEY] = True
+
+        dropped = sorted(set(source_group) - set(new_group))
+        if dropped:
+            logger.info(
+                f"Copy In: cleared {len(dropped)} field(s) from the seed: {', '.join(dropped)}."
+            )
+        return new_group
 
     @staticmethod
     def _insert_after(d: dict, after_key: str, new_key: str, new_value: object) -> dict:
