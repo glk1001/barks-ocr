@@ -117,3 +117,11 @@ HELP KEEP AMERICA STRONG
 7 032 two music notes drawn at the end of the singer's balloon in panel 5, after DIXIE!
 7 033 a music note drawn at the end of the singer's balloon in panel 1
 7 044 two music notes drawn at the end of the square-dance call in panel 2
+
+# Judged not worth a group, 2026-08-28. Letter to Santa 059 panel 1 catches the
+# top corner of the Atlas Machinery sign as Donald runs out of the yard: the
+# panel edge cuts it to "...ANY" over "...ERY" and nothing else is legible. The
+# whole sign is already a group on 058 (group 8), where it is drawn in full.
+# The pass transcribed the full name into visible_text from that knowledge, so
+# the audit is matching more text than 059 actually prints.
+8 059 ATLAS MACHINERY COMPANY
