@@ -161,6 +161,15 @@ _EM_DASH_HUGGING_CHARS = frozenset({"!", "?", '"', ")", "'"})
 # joining the lines to satisfy the rule would edit what the transcription saw.
 _ADRIFT_PUNCTUATION_RE = re.compile(r" +[!?]")
 _HYPHEN_RUN_RE = re.compile(r"-{2,}")
+# A space between a word and the "!" or "?" ending its sentence: "SCARE !",
+# "HAIRY HARRY ???". Part of the whitespace rule rather than the dash one --
+# `_ADRIFT_PUNCTUATION_RE` above covers the same slip after an EM_DASH, which
+# `with_dash_fixes` already repairs, and the two must not both claim a group.
+#
+# Spaces and tabs only, never a newline: "SCARE\n!" is the art's own wrapping,
+# 10 times in the corpus, and joining those lines would edit what the
+# transcription saw -- the same reasoning that keeps the dash rule off it.
+_SPACED_END_PUNCT_RE = re.compile(r"(?<=[0-9A-Za-z])[ \t]+(?=[!?])")
 # The three rewrites that make ``with_dash_fixes`` output text
 # ``has_em_dash_spacing_error`` accepts. The left-hand one takes any non-break
 # character, EM_DASH excepted so that "——" is never split into "— —" — the
@@ -278,7 +287,7 @@ def has_invalid_markup(group: dict) -> bool:
 
 
 def has_whitespace_error(group: dict) -> bool:
-    """Whether the text has stray whitespace: outer, per-line trailing, or doubled."""
+    """Whether the text has stray whitespace: outer, per-line trailing, doubled, or before !/?."""
     ai_text = _plain_text(group)
     if not ai_text:
         return False
@@ -286,16 +295,24 @@ def has_whitespace_error(group: dict) -> bool:
         ai_text != ai_text.strip()
         or "  " in ai_text
         or any(line != line.rstrip() for line in ai_text.split("\n"))
+        or _SPACED_END_PUNCT_RE.search(ai_text) is not None
     )
 
 
 def cleaned_whitespace(ai_text: str) -> str:
     """Return ai_text with outer, trailing and doubled spaces removed.
 
+    Also closes up a space before the "!" or "?" ending a sentence. Applied per
+    line, so it can only ever delete a space or tab — a sentence whose
+    punctuation the art wrapped onto the next line keeps its line break.
+
     Line structure is preserved — the wrapping is meaningful and is what the
     line-height checks in ``ocr_check`` measure.
     """
-    lines = [re.sub(r" {2,}", " ", line).rstrip() for line in ai_text.split("\n")]
+    lines = [
+        re.sub(r" {2,}", " ", _SPACED_END_PUNCT_RE.sub("", line)).rstrip()
+        for line in ai_text.split("\n")
+    ]
     return "\n".join(lines).strip()
 
 

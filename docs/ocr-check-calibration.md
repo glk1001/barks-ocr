@@ -404,6 +404,17 @@ knew about each fault and said nothing a reviewer could act on:
   diagnosed were the ones missing from the queue while the *un*diagnosable ones
   (`panel_unassigned`, 340) were in it.
 
+Added 2026-08-28:
+
+- **A space before a sentence's `!` or `?`** ("SCARE !", "HAIRY HARRY ???") —
+  folded into the existing `whitespace` check and `--fix-whitespace`, not given
+  a type of its own: it is the same class of slip as a doubled space, and the
+  corpus carries **187 groups** of it. Spaces and tabs only, so the 10 groups
+  where the art wrapped the punctuation onto its own line ("SCARE\n!") keep
+  their line break. It requires an alphanumeric before the space, which is what
+  keeps it off `— !` — `with_dash_fixes` already owns that one, and two fixers
+  claiming a group is how they fight over it.
+
 Added 2026-08-27:
 
 - **`panel_nums_not_contiguous`** (416 page/engine entries) — a page that skips
