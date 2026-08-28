@@ -1311,6 +1311,41 @@ above holds on all three, so `heads2.py`/`caphead` remain the right tools:
   hypnotist sequence. The segmented crown is what separates them: two or three
   abutting pieces of one hex is a boy, one solid piece is Donald.
 
+Vol. 8, from the three 1949 titles read on 2026-08-28 — the volume's own
+construction is a **black crown with a small coloured sliver**, and it held on
+*The Goldilocks Gambit*: red `#e61b1f` (H358.8), blue `#03a4d5`/`#08a5d5`
+(H193-194), green `#009e49`/`#4da23f` (H110-148), reference panel 089 p7, all
+three readable at 2.2x.
+
+- **The Goldilocks Gambit's cap green is the same ink as the foliage**
+  (`#009e49`), so `capwide` reports the cap as scenery and a green cap beside a
+  tree reads as zero. 089 p5 needed a 3x crop of the crown to find two slivers
+  the census had swallowed. Probe the crown or crop it; never take a capwide
+  zero for a bare head.
+- **The other two titles do not use the volume palette at all**, so do not
+  assume it. *Letter to Santa* dresses the boys in **winter knits** — red
+  `#e61b1f`, blue `#00a5d7`, green `#50a241` stocking caps with matching
+  scarves, huge and unmistakable — and takes them off the moment the story goes
+  indoors at 063, which is most of it. *Luck of the North* puts them in
+  **parka hoods** in the same three colours from 118 outdoors, off indoors and
+  on the ship. Both are absence, not under-naming.
+- **A parka hood goes in `cap_colour`.** The pass left the field null and
+  recorded the colour as `costume`; the review filled it in on six groups. Cite
+  `cap-colour` and `costume` together.
+- **Two red-parka collisions to watch.** In *Luck of the North* Gladstone wears
+  a red parka for the whole Arctic sequence, the same red as Huey's hood — he is
+  told apart by his green hat brim and green shoes against the boys' plain
+  orange feet, and 135 g5 turned on exactly that. In *Letter to Santa* the two
+  uncles spend nine pages in identical Santa suits and are separated by the face
+  alone: Scrooge has feathery white cheek tufts and, from 071, spectacles;
+  Donald is smooth-cheeked with the longer beak. Reference panels 074 p1 and
+  075 p3.
+- **The long-shot Donald default inverts here.** *Luck of the North* travels as
+  a party of four for twenty pages, so a long shot nearly always holds three
+  boys as well as Donald; ten of its seventeen corrections were `Donald` going
+  to a boy. Default to Donald only where he is alone or nearly so.
+
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
