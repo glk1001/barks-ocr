@@ -1690,12 +1690,23 @@ class EditorApp(App):
                 continue
             previous = json_group.get(TYPE_KEY)
             if previous != type_name:
-                if previous is not None:
+                if previous is not None and not json_group.get(VISION_ADDED_KEY):
                     # Only on the first change: a second edit must not overwrite
                     # the original value with the intermediate one. And only when
                     # there was a value -- a `type_was` of None would claim a
                     # correction that never happened and, worse, read as absent
                     # to the mirror, which gates the type keys on it.
+                    #
+                    # A hand-made group is excluded for the first of those
+                    # reasons. Its starting type came from whatever group seeded
+                    # Copy In, not from a grouper looking at this lettering, so
+                    # there is no considered label for anything to have overruled
+                    # -- and the editor would render the result as "vision pass
+                    # overruled: X -> Y" on a group the pass never saw. Measured
+                    # on volume 8: the group added to 044 as g15 was seeded from
+                    # a `dialogue` group, set to `background`, and claimed an
+                    # overrule that never happened. The mirror keys off
+                    # `vision_added` instead.
                     json_group.setdefault(TYPE_WAS_KEY, previous)
                 json_group[TYPE_KEY] = type_name
             json_group[TYPE_REVIEWED_KEY] = True

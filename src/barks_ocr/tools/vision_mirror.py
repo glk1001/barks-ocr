@@ -62,6 +62,7 @@ from barks_ocr.utils.vision_schema import (
     TYPE_REVIEWED_DATE_KEY,
     TYPE_REVIEWED_KEY,
     TYPE_WAS_KEY,
+    VISION_ADDED_KEY,
     VISION_NOTE_KEY,
     VISION_TEXT_REVIEWED_DATE_KEY,
     VISION_TEXT_REVIEWED_KEY,
@@ -221,7 +222,18 @@ def _copy_fields(src: dict, dst: dict) -> bool:
     # changes its `type`. Bound here rather than in the branch below so the
     # post-loop write does not depend on two `retyping` tests agreeing.
     dst_was: str | None = None
-    retyping = src.get(TYPE_WAS_KEY) is not None or src.get(TYPE_ADJUDICATED_KEY)
+    # A hand-made destination opens the type gate too. The gate exists to stop
+    # one grouper's answer overwriting the other's, and a group the editor made
+    # by hand has no grouper answer to protect -- neither engine's OCR produced
+    # it. Without this it would be gated shut for good, because the editor no
+    # longer writes `type_was` on such a group (its starting type came from
+    # whatever seeded Copy In, so nothing overruled anything).
+    #
+    # Keyed off the DESTINATION deliberately, not the source. The other way
+    # round would let a hand-made copy push its type back over the real grouper
+    # answer it was seeded from, which is the very overwrite the gate is for.
+    hand_made_dst = bool(dst.get(VISION_ADDED_KEY))
+    retyping = src.get(TYPE_WAS_KEY) is not None or src.get(TYPE_ADJUDICATED_KEY) or hand_made_dst
     if retyping:
         keys = (*keys, *RETYPED_KEYS)
         # `type_was` is the ONE type key that must not be copied: it is this
@@ -236,7 +248,12 @@ def _copy_fields(src: dict, dst: dict) -> bool:
         # engine had `dialogue` right from the start and was handed a
         # `type_was: sound_effect` recording a correction it never needed.
         keys = tuple(k for k in keys if k != TYPE_WAS_KEY)
-        dst_was = dst.get(TYPE_KEY) if dst.get(TYPE_KEY) != src.get(TYPE_KEY) else None
+        # ...and a hand-made destination gets none either, for the same reason
+        # the editor no longer writes one: the label it is about to lose was
+        # inherited from the group that seeded it, not decided about this
+        # lettering, so recording it as superseded would invent a correction.
+        if not hand_made_dst:
+            dst_was = dst.get(TYPE_KEY) if dst.get(TYPE_KEY) != src.get(TYPE_KEY) else None
     for stored_key in keys:
         if src.get(stored_key) != dst.get(stored_key):
             dst[stored_key] = src.get(stored_key)
