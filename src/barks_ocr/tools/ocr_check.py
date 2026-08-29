@@ -1794,11 +1794,27 @@ class OcrChecker:
         # brackets. Round-trips exactly, the text carrying no tags.
         stored_text = escape_markup(new_text)
 
+        # Accepted if it is well laid out against *either* page's median.
+        #
+        # The own-engine median alone used to decide this, and on a page where
+        # one engine under-wrapped most of its groups that median is computed
+        # from the very fault being repaired: vol 21 page 174 easyocr reads 57.5
+        # against paddleocr's 38.3, so the correct five-line rewrap scored 0.62
+        # and was thrown away. The bimodal guard in `_page_median_line_height`
+        # does not save it -- it looks for the densest cluster, and there is no
+        # clean one left when the whole page leans the same way. Vol 21 alone
+        # had 19 such rewraps rejected and none accepted.
+        #
+        # Widening rather than swapping to the donor's median, because the donor
+        # page can be the poisoned one just as easily. A rewrap unsound by both
+        # is still refused, and `_layout_ok`'s fit half is measured against the
+        # recipient's own box either way -- so a donor line count that genuinely
+        # cannot sit in this box is still caught.
+        rewrapped = {**group, "ai_text": stored_text}
         if not _layout_ok(
-            {**group, "ai_text": stored_text},
-            context.fanta_page,
-            context.line_heights.own,
-            self._limits.outlier,
+            rewrapped, context.fanta_page, context.line_heights.own, self._limits.outlier
+        ) and not _layout_ok(
+            rewrapped, context.fanta_page, context.line_heights.other, self._limits.outlier
         ):
             logger.warning(
                 f"Group {group_id}: line-pattern transplant did not produce a well"

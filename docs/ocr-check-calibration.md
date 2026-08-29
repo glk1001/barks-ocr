@@ -923,6 +923,34 @@ norm measured independently on the clean volumes.
 Tunable with `--line-height-bimodal`, floored at 1.0 (below that the mode would replace
 the median on nearly every page, including the 63 where it would add flags).
 
+### The transplant used to be blocked by the fault it repairs
+
+Where the bimodal guard runs out. `_transplant_line_pattern` accepted a rewrap only if
+it was well laid out against the **recipient's own** page median — but on a page where
+one engine under-wrapped most of its groups, that median is computed from the very fault
+being repaired, and there is no second cluster for the mode to find because the whole
+page leans one way.
+
+Vol 21 page 174 is the case. Easyocr has 12 of its 18 groups not fitting; paddleocr has
+2, both tiny sound effects. Easyocr's median reads **57.5** against paddleocr's **38.3**
+(the guard did fire, pulling it from 72.5 to 57.5 — not nearly enough). Group 1 is one
+unwrapped 80-character line whose text matches paddleocr's exactly; the transplant
+rebuilds paddleocr's five lines and the result *fits*, but scores 177/5 = 35.4 against
+57.5 — ratio 0.62, under the 0.85 threshold — and was thrown away. Vol 21 had **19**
+such rewraps rejected and **none** accepted, on pages 174 and 166 (own median 66.0
+against 37.05).
+
+So the rewrap is now accepted if it is well laid out against **either** page's median.
+Widened rather than swapped to the donor's, because the donor page can be the poisoned
+one just as easily. The guard still bites: `_layout_ok`'s fit half is measured against
+the recipient's own box either way, so a donor line count that genuinely cannot sit in
+this box is still caught.
+
+Corpus, over every group that does not fit and has a well-laid-out donor: 2561 rewraps
+were accepted before and still are, **172 are newly accepted**, and 30 are still refused
+— 8 too tight by both medians and 22 that still do not fit. A widening of 6.7%, not a
+rubber stamp.
+
 ---
 
 ## What is **not** validated
