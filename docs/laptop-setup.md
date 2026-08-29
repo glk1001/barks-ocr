@@ -103,17 +103,42 @@ horrible merge. The discipline is simply:
     git -C "$PRELIM" pull     # before starting
     git -C "$PRELIM" push     # before switching machines
 
+`barks-ocr` needs the same treatment and is easy to forget because it is not
+where the data lives. A pass commits to it too — the missed-text ignore list
+grows, and `docs/vision-pass-run-prompt.md` accumulates the per-volume cap
+palette that stops the next run re-deriving it. Pull it before you start or you
+read a title with last month's palette notes.
+
 A vision pass touches one title at a time and commits per title, so as long as
 each machine pushes before you switch, there is nothing to reconcile. If you
 want belt and braces, work different volumes on each.
 
+## Every `barks-ocr-*` command needs `--offline`
+
+    uv run --offline barks-ocr-vision-status --titles --todo
+
+Without it, uv revalidates the `en-core-web-sm` URL dependency in
+`[tool.uv.sources]` on every invocation, and with no network the command dies
+before it runs. The failure looks like a broken install rather than a network
+one, so it is worth putting `--offline` in from the start on a machine that may
+be offline. It costs nothing when the network is up.
+
+`python3 scripts/vision/crop.py` and the other plain-`python3` helpers are
+unaffected -- they deliberately avoid the uv/barks import graph.
+
 ## Check it works
 
 ```bash
-uv run barks-ocr-vision-status --titles --todo | head        # corpus visible?
-uv run barks-ocr-vision-corrections                          # nothing outstanding, nothing skipped?
-uv run python scripts/vision/dump_boxes.py "Snow Fun" ~/barks-vision/snow-fun/boxes-snow-fun.json
+git -C "$PRELIM" pull                                        # shared state first
+uv run --offline barks-ocr-vision-status --titles --todo | head
+uv run --offline barks-ocr-vision-corrections
+uv run --offline python scripts/vision/dump_boxes.py "Snow Fun" ~/barks-vision/snow-fun/boxes-snow-fun.json
 ```
 
-The second is the real test: it reads every title and reports the ones it could
-not, so a clean run means the mtimes survived the copy.
+`vision-corrections` is the real test: it reads every title and reports the ones
+it could not, so a clean run means the mtimes survived the copy. What you are
+looking for is the **absence** of a `!! N title(s) NOT checked` line —
+`vision-status` will not tell you, it swallows that error at DEBUG.
+
+A small non-zero *outstanding* count is normal and unrelated; that is the
+corpus-wide correction backlog, not a copy problem.
