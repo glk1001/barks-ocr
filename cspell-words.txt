@@ -83,6 +83,7 @@ motionevent
 ndimage
 norp
 numpad
+ocrc
 onchange
 opno
 outpaint

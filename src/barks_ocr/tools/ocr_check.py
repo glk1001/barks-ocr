@@ -29,11 +29,12 @@ from barks_fantagraphics.speech_groupers import (
     _group_sort_key,
 )
 from barks_fantagraphics.speech_markup import escape_markup, has_markup, strip_markup
-from comic_utils.common_typer_options import TitleArg, VolumesArg
+from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from intspan import intspan
 from loguru import logger
 from PIL import Image, ImageDraw, ImageFont
 
+from barks_ocr.cli_setup import init_logging
 from barks_ocr.utils.engine_compare import BOX_IOU_MIN, box_iou, differing_attrs
 from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.group_checks import (
@@ -46,6 +47,8 @@ from barks_ocr.utils.group_checks import (
     with_dash_fixes,
 )
 from barks_ocr.utils.ocr_box import OcrBox, PointList, points_bbox, text_box_problem
+
+APP_LOGGING_NAME = "ocrc"
 
 # ── Text-fit constants ────────────────────────────────────────────────────────
 
@@ -2204,7 +2207,10 @@ def main(  # noqa: PLR0913
         BOX_IOU_MIN,
         help="Flag as 'box_mismatch' when the engines' text_boxes overlap below this IoU.",
     ),
+    log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
+    init_logging(APP_LOGGING_NAME, "kivy-prelim-ocr-editor.log", log_level_str)
+
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."
         raise typer.BadParameter(err_msg)
