@@ -26,6 +26,7 @@ from barks_fantagraphics.speech_markup import has_markup, strip_markup
 from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
 from comic_utils.screen_utils import get_centred_position_on_primary_monitor
+from intspan import ParseError, intspan
 from kivy.config import Config
 from loguru import logger
 from PIL import Image as PilImage
@@ -182,6 +183,12 @@ TITLE_PAGE_ISSUE_TYPE = "title_page"
 # of Prev/Next reaches it. The canvas widens to include it instead.
 PANEL_GAP_ISSUE_TYPE = "panel_nums_not_contiguous"
 FLORENCE_CHECK_ISSUE_TYPE = "florence-check"
+# A `--fanta-page` span, worked as a queue of whole pages. Not an issue any
+# checker raises -- there is nothing to dismiss and nothing to land on, just a
+# page to browse -- so it matches no dismissable type, which is the point.
+PAGE_SWEEP_ISSUE_TYPE = "page_sweep"
+# The engine names a queue line uses, which are not the display names above.
+EASYOCR_ENGINE = "easyocr"
 
 # Pseudo-options in the speaker popup: the free-text row, and "no cap visible".
 # Neither is a stored value — "other" becomes an OTHER_PREFIX name on save, and
@@ -202,11 +209,33 @@ class SpeechItem:
 
 @dataclass
 class QueueEntry:
+    """One stop in the editor's queue: a page, and the group to land on.
+
+    ``group_id`` belongs to ``engine``; the two engines' ids do not correspond,
+    so the other pane can only be placed by guessing the same number -- which is
+    all a queue *file* line supports, and all it needs, since such a line always
+    names one flagged group.
+
+    ``other_group_id`` exists for the one caller that knows better: a
+    ``--fanta-page`` sweep is built from the CLI, which names a group id per
+    engine. ``None`` keeps the guess.
+    """
+
     volume: int
     fanta_page: int
     engine: str  # "easyocr" or "paddleocr"
     group_id: int
     issue_type: str
+    other_group_id: int | None = None
+
+
+class PageNotInVolumeError(ValueError):
+    """No title in the volume owns this Fanta page.
+
+    A ``ValueError`` so that it joins the failure ``get_speech_page_group``
+    already raises for an unreadable prelim JSON: to the queue both mean the same
+    thing -- this page cannot be opened, step over it.
+    """
 
 
 class EnginePane:
@@ -271,6 +300,40 @@ def load_queue_file(queue_file: Path) -> list[QueueEntry]:
         except ValueError:
             logger.warning(f"Skipping invalid queue line: {line!r}")
     return entries
+
+
+def build_page_queue(
+    volume: int, pages: list[int], easyocr_group_id: int, paddleocr_group_id: int
+) -> list[QueueEntry]:
+    """Turn a multi-page ``--fanta-page`` span into a queue, one entry per page.
+
+    The CLI group ids name a group on the page the user was already looking at,
+    which is the *first* page of the span and no other -- the ids do not carry
+    across pages, and the two engines do not even share them within one page. So
+    they are honoured on the first entry and every later page opens on its own
+    first group.
+
+    Args:
+        volume: The volume every page belongs to.
+        pages: The Fanta page numbers, already expanded from the intspan.
+        easyocr_group_id: EasyOCR group to land on, first page only.
+        paddleocr_group_id: PaddleOCR group to land on, first page only.
+
+    Returns:
+        One ``QueueEntry`` per page, in the order given.
+
+    """
+    return [
+        QueueEntry(
+            volume=volume,
+            fanta_page=page,
+            engine=EASYOCR_ENGINE,
+            group_id=easyocr_group_id if i == 0 else 0,
+            other_group_id=paddleocr_group_id if i == 0 else 0,
+            issue_type=PAGE_SWEEP_ISSUE_TYPE,
+        )
+        for i, page in enumerate(pages)
+    ]
 
 
 def get_panel_bounds_from_file(
@@ -720,13 +783,29 @@ class EditorApp(App):
 
     def __init__(  # noqa: PLR0913
         self,
-        volume: int,
-        fanta_page: int,
-        easyocr_group_id: int,
-        paddleocr_group_id: int,
+        volume: int = 0,
+        fanta_page: int = 0,
+        easyocr_group_id: int = 0,
+        paddleocr_group_id: int = 0,
         queue: list[QueueEntry] | None = None,
         queue_index: int = 0,
     ) -> None:
+        """Open the editor on one page, or on the first workable entry of a queue.
+
+        Args:
+            volume: Volume to open. Single mode only -- a queue entry carries its
+                own, and these four are ignored when *queue* is given.
+            fanta_page: Fanta page to open.
+            easyocr_group_id: EasyOCR group to land on.
+            paddleocr_group_id: PaddleOCR group to land on.
+            queue: The stops to work through, or None for single mode.
+            queue_index: Which stop to start at.
+
+        Raises:
+            PageNotInVolumeError: If no entry in *queue* names a page that can be
+                opened.
+
+        """
         super().__init__()
 
         self._comics_database = ComicsDatabase()
@@ -746,23 +825,27 @@ class EditorApp(App):
         self._diff_popup: Popup | None = None
         self._has_changes = False
 
-        # Load the initial page data
-        self._volume = volume
-        self._fanta_page = get_page_str(fanta_page)
-        self._load_page_data(volume, self._fanta_page)
-
-        init_group_ids = (
-            (self._easy_pane, easyocr_group_id),
-            (self._pad_pane, paddleocr_group_id),
-        )
-        for pane, gid in init_group_ids:
-            sid = str(gid)
-            if sid not in pane.speech_groups:
-                sid = next(iter(pane.speech_groups), sid)
-            self._set_group_id(pane, sid)
-
+        # Load the initial page data. In queue mode that is the queue's own
+        # job -- it places both panes and steps over a page that will not open --
+        # and doing it here as well would only be a second, divergent copy.
         if self._queue:
-            self.queue_progress_text = f"{queue_index + 1} / {len(self._queue)}"
+            if not self._load_queue_entry(queue_index):
+                msg = f"No entry in the {len(self._queue)}-entry queue could be opened."
+                raise PageNotInVolumeError(msg)
+        else:
+            self._volume = volume
+            self._fanta_page = get_page_str(fanta_page)
+            self._load_page_data(volume, self._fanta_page)
+
+            init_group_ids = (
+                (self._easy_pane, easyocr_group_id),
+                (self._pad_pane, paddleocr_group_id),
+            )
+            for pane, gid in init_group_ids:
+                sid = str(gid)
+                if sid not in pane.speech_groups:
+                    sid = next(iter(pane.speech_groups), sid)
+                self._set_group_id(pane, sid)
 
         Window.bind(on_request_close=self.on_request_close)
         Window.bind(on_key_down=self._on_key_down)
@@ -774,11 +857,26 @@ class EditorApp(App):
     # ── page / queue loading ──────────────────────────────────────────────────
 
     def _load_page_data(self, volume: int, fanta_page: str) -> None:
-        """Load both OCR speech groups for a given volume + page."""
+        """Load both OCR speech groups for a given volume + page.
+
+        Args:
+            volume: The Fantagraphics volume number.
+            fanta_page: The zero-padded Fanta page string.
+
+        Raises:
+            PageNotInVolumeError: If no title in the volume owns that page.
+            ValueError: If a prelim OCR JSON cannot be read.
+
+        """
         self._volume = volume
         self._fanta_page = fanta_page
 
         title_str, dest_page = get_title_from_volume_page(self._comics_database, volume, fanta_page)
+        # An unowned page comes back as ("", -1), which used to reach the lookup
+        # below as KeyError('') -- unreadable, and fatal in the middle of a queue.
+        if not title_str:
+            msg = f"No title in volume {volume} owns page {fanta_page}."
+            raise PageNotInVolumeError(msg)
         self._title = STR_TITLE_TO_ENUM[title_str]
         dest_page_str = get_page_str(dest_page)
 
@@ -811,27 +909,71 @@ class EditorApp(App):
         srce_image_file = comic.get_final_srce_story_file(fanta_page, PageType.BODY)
         return srce_image_file[0]
 
-    def _load_queue_entry(self, index: int) -> None:
-        """Load the queue entry at *index* and refresh the entire UI."""
+    def _load_entry_page(self, entry: QueueEntry) -> bool:
+        """Load the page a queue entry names; False, with a warning, if unusable.
+
+        A ``--fanta-page`` span is written by hand against a volume that is not a
+        solid block of story pages, so a range reaches pages no title owns and
+        pages with no prelim OCR; and a wordless page has a JSON with no groups
+        in it, which the editor cannot show either -- ``build`` indexes
+        ``speech_groups`` by the current id. All three are pages with nothing to
+        edit, so all three are reported here rather than raised, and the queue
+        steps over them.
+
+        Args:
+            entry: The queue stop whose page should be loaded.
+
+        Returns:
+            ``True`` if both engines' groups are now loaded for that page.
+
+        """
+        where = f"volume {entry.volume} page {get_page_str(entry.fanta_page)}"
+        try:
+            self._load_page_data(entry.volume, get_page_str(entry.fanta_page))
+        except ValueError as e:
+            logger.warning(f"Skipping {where}: {e}")
+            return False
+        if empty := [pane.name for pane in self._panes if not pane.speech_groups]:
+            logger.warning(f"Skipping {where}: no {' or '.join(empty)} groups on it.")
+            return False
+        return True
+
+    def _load_queue_entry(self, index: int) -> bool:
+        """Load the queue entry at *index* and refresh the entire UI.
+
+        Args:
+            index: Where to start looking. Entries whose page cannot be opened
+                are stepped over, so the entry that loads may be a later one.
+
+        Returns:
+            ``True`` if an entry was loaded, ``False`` if the queue ran out of
+            openable pages.
+
+        """
         if self._queue is None:
-            return
+            return False
         # Bind a local: the narrowing above would not survive the _load_page_data /
         # _set_group_id calls below, which the checkers must assume can reassign it.
         queue = self._queue
+        while index < len(queue) and not self._load_entry_page(queue[index]):
+            index += 1
+        if index >= len(queue):
+            return False
+
         entry = queue[index]
         self._queue_index = index
         self._has_changes = False
 
-        fanta_page_str = get_page_str(entry.fanta_page)
-        self._load_page_data(entry.volume, fanta_page_str)
-
         primary_id = str(entry.group_id)
-        if entry.engine == "easyocr":
+        if entry.engine == EASYOCR_ENGINE:
             primary, secondary = self._easy_pane, self._pad_pane
         else:
             primary, secondary = self._pad_pane, self._easy_pane
+        # Only a page sweep knows the other engine's id; a queue file line has
+        # nothing better to offer the second pane than the same number.
+        secondary_id = primary_id if entry.other_group_id is None else str(entry.other_group_id)
 
-        for pane, gid in ((primary, primary_id), (secondary, primary_id)):
+        for pane, gid in ((primary, primary_id), (secondary, secondary_id)):
             resolved = gid if gid in pane.speech_groups else next(iter(pane.speech_groups), None)
             if resolved:
                 self._set_group_id(pane, resolved)
@@ -843,6 +985,7 @@ class EditorApp(App):
                 self._load_canvas_content(pane)
         if self._info_label is not None:
             self._info_label.text = self._get_editor_info()
+        return True
 
     # ── canvas / image helpers ────────────────────────────────────────────────
 
@@ -1958,7 +2101,7 @@ class EditorApp(App):
         if not self._queue:
             return None
         entry = self._queue[self._queue_index]
-        return self._easy_pane if entry.engine == "easyocr" else self._pad_pane
+        return self._easy_pane if entry.engine == EASYOCR_ENGINE else self._pad_pane
 
     def _handle_confirm_and_next(self) -> None:
         """Agree with the queued group's speaker call and move on, in one action.
@@ -3137,11 +3280,8 @@ class EditorApp(App):
         popup.open()
 
     def _advance_queue(self) -> None:
-        next_index = self._queue_index + 1
-        if self._queue is None or next_index >= len(self._queue):
+        if self._queue is None or not self._load_queue_entry(self._queue_index + 1):
             self._show_queue_done_popup()
-            return
-        self._load_queue_entry(next_index)
 
     def _show_queue_done_popup(self) -> None:
         self._show_confirm_popup(
@@ -3173,43 +3313,73 @@ def _today() -> str:
 
 @app.command(help="Prelim OCR Text Editor")
 def main(  # noqa: PLR0913
-    volume: int = typer.Option(0, help="Volume number (single mode)"),
-    fanta_page: int = typer.Option(0, help="Fanta page number (single mode)"),
-    easyocr_group_id: int = typer.Option(0, help="EasyOCR group ID (single mode)"),
-    paddleocr_group_id: int = typer.Option(0, help="PaddleOCR group ID (single mode)"),
+    volume: int = typer.Option(0, help="Volume number"),
+    fanta_page: str = typer.Option(
+        "",
+        "--fanta-page",
+        help="Fanta page, or an intspan of them ('3-7,12') to work as a queue",
+    ),
+    easyocr_group_id: int = typer.Option(0, help="EasyOCR group ID (first page only)"),
+    paddleocr_group_id: int = typer.Option(0, help="PaddleOCR group ID (first page only)"),
     queue_file: Path = typer.Option(  # noqa: B008
         None,
         "--queue-file",
-        help="Queue file: one 'volume page engine group_id' per line",
+        help="Queue file: one 'volume page engine group_id issue_type' per line",
     ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
     init_logging(APP_LOGGING_NAME, "kivy-prelim-ocr-editor.log", log_level_str)
 
+    queue: list[QueueEntry] | None = None
+    single_page = 0
+
     if queue_file is not None:
+        if fanta_page:
+            msg = "Options --queue-file and --fanta-page are mutually exclusive."
+            raise typer.BadParameter(msg)
         queue = load_queue_file(queue_file)
         if not queue:
             logger.error(f'Queue file "{queue_file}" contains no valid entries.')
             raise typer.Exit(1)
-        first = queue[0]
-        EditorApp(
-            volume=first.volume,
-            fanta_page=first.fanta_page,
-            easyocr_group_id=first.group_id,
-            paddleocr_group_id=first.group_id,
-            queue=queue,
-            queue_index=0,
-        ).run()
     else:
         if not volume or not fanta_page:
-            logger.error("Provide --volume and --fanta-page for single mode, or --queue-file.")
+            logger.error("Provide --volume and --fanta-page, or --queue-file.")
             raise typer.Exit(1)
-        EditorApp(
-            volume=volume,
-            fanta_page=fanta_page,
-            easyocr_group_id=easyocr_group_id,
-            paddleocr_group_id=paddleocr_group_id,
-        ).run()
+        try:
+            pages = list(intspan(fanta_page))
+        except ParseError as e:
+            logger.error(f'Cannot read --fanta-page "{fanta_page}" as a page span: {e}')
+            raise typer.Exit(1) from e
+        if not pages:
+            logger.error(f'--fanta-page "{fanta_page}" names no pages.')
+            raise typer.Exit(1)
+        # One page stays single mode -- Save & Exit, no progress counter -- so the
+        # long-standing way of opening one page is untouched. Two or more become a
+        # queue of whole pages, worked with Save & Next like any other queue.
+        if len(pages) > 1:
+            queue = build_page_queue(volume, pages, easyocr_group_id, paddleocr_group_id)
+        else:
+            single_page = pages[0]
+
+    try:
+        editor = (
+            EditorApp(queue=queue, queue_index=0)
+            if queue is not None
+            else EditorApp(
+                volume=volume,
+                fanta_page=single_page,
+                easyocr_group_id=easyocr_group_id,
+                paddleocr_group_id=paddleocr_group_id,
+            )
+        )
+    except ValueError as e:
+        # A page no title owns, or one with no readable prelim OCR. In single
+        # mode that is the whole session, so it is a clean exit and not a stack
+        # trace out of a Kivy constructor.
+        logger.error(f"Cannot open the editor: {e}")
+        raise typer.Exit(1) from e
+
+    editor.run()
 
 
 if __name__ == "__main__":
