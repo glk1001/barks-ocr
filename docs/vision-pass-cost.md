@@ -336,6 +336,42 @@ carried the long-shot Donald guess. And **tiling still pays**: 44 image reads
 carried about 110 separate crops, and the two spent fixing the palette per title
 were the best-value images in the batch.
 
+Measured again on the 2026-08-31 review of *Trail of the Unicorn* (Vol. 8, 24
+pages, 278 groups), one title read on its own:
+
+```
+speaker corrections                14 / 278  =  5.0%
+    of which in the nephew domain  12 /  57  = 21.1%   Huey/Dewey/Louie/nephews
+images read                        51 / 24 pages = 2.13 per page
+cap colours: 33 of 38 survived, 5 overturned
+medium: 17 of 21 held, 4 reversed
+```
+
+The cost went up from 1.57 to 2.13 and the whole-title rate came down from 8.0%
+to 5.0%, which is what the previous entry asked for: the spend went on the thing
+that batch identified. **Every page called bare or unreadable was cropped
+first** - 007, 029 p5, and the flat two-colour silhouette panels where `capscan`
+returns one background field and nothing else - and none of those calls was
+overturned. The `heads2`-zero error class from the previous batch does not
+appear here at all.
+
+Where the 14 went instead:
+
+```
+ 4  Donald against a nephew      two of them Donald wearing the roster colour
+ 3  over-named                   a name the review withdrew to `nephews`
+ 2  wrong nephew                 one swapped pair, from a crossing I invented
+ 2  chorus                       `other:Donald and the nephews`, see the memory
+ 2  silhouette guesses           Donald<->nephews, both directions, both wrong
+ 1  caption voice                a quoted caption stays `narrator`
+```
+
+None of these is an image the pass declined to spend. Two were a cap probe
+overruling a beak I had already read correctly, and two were guesses on
+all-silhouette panels where no image could have helped. The lesson for the
+budget is the same as 2026-08-27's: at 2.13 per page against a target of 3,
+cost is not what is limiting this.
+
 ## What is still worth an image
 
 - The **cap-reference panel**, once per title, before page 1. Getting the

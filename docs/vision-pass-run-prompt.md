@@ -1382,6 +1382,42 @@ Do not expect `#e61b1f` on a tab.
   review promotes it rather than fixing it. Do not avoid it, and do not use it
   for the long-shot Donald guess, which is where it went wrong in Vol. 7.
 
+Vol. 8, from *Trail of the Unicorn* read on 2026-08-31 and reviewed the same
+day — 24 pages, 278 groups, 14 corrections (5.0%). The volume construction holds
+in the Duckburg and Shangri-Lala pages, but this title **changes cap in the
+middle**: from 021, once the party is climbing, the boys are in winter caps with
+a BIG coloured earflap that reads at contact-sheet scale, and the small black-
+crown wedge is gone. Bare-headed on 007 and indoors on 029.
+
+- **The fakir is Gladstone.** "Mustapha Handout", who takes ten dollars off
+  Donald on 014 and sells him the painted donkey on 018, is Gladstone in a red
+  turban, green robe and a false white beard. 019 p5 has the boys addressing the
+  turbaned figure as COUSIN GLADSTONE GANDER, 019 p8 knocks the beard off, and
+  020 has him admitting the ten dollars. File the lines under `Gladstone`, not
+  under a free-text alias.
+- **A LONG DROOPY BEAK BEATS ANY CAP COLOUR.** Two of the 14 corrections are a
+  nephew named off ink that was on Donald's head — his own `#00a5d7` sailor cap
+  on 015 p5, and a green cap on 025 p6 where `capscan` returned no blue in the
+  panel at all and I concluded he was not in it. Fix which figure is Donald from
+  the beak before reading a single cap; a capscan zero for blue is not evidence
+  that Donald is absent.
+- **Do not invent a crossing.** 013 p5: I wrote "the two tails cross" off tips
+  landing 20-30px past a head span, which is inside the error of the tip reading
+  itself. They do not cross, and the review swapped both names and both colours.
+- **A flat silhouette panel is not automatically a collective.** 026 p2 is black
+  shapes against one flat colour and the review still named Dewey. But 028 p8,
+  also silhouettes, had my Donald and my `nephews` swapped in both directions —
+  so on silhouettes decline the Donald-against-nephew guess rather than the name.
+- **A chorus of all four takes `other:Donald and the nephews`.** Neither
+  `Donald` (010 p5, where a real tail lands on him) nor `nephews` (029 p5) was
+  accepted for a line the whole family shouts.
+- **Medium did not hold this time**: 4 of 21 reversed, against 0 of 20 the week
+  before. Keep using it — the value is honest and the reviewer promotes most of
+  it — but the 20-of-20 above was one title's luck, not a recalibration.
+- **Type**: three unicorn whinnies and a snort moved `sound_effect -> dialogue`
+  and all four were confirmed. An animal's own voice is dialogue; its hooves,
+  jaws and the rope it parts are not.
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
