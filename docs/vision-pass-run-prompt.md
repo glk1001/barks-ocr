@@ -1346,6 +1346,42 @@ three readable at 2.2x.
   to a boy. Default to Donald only where he is alone or nearly so.
 
 
+Vol. 8, from the three 1949 titles read on 2026-08-31 — *New Toys*, *Donald's
+Love Letters*, *Rip Van Donald*, all three fully reviewed. The volume
+construction holds where it is used, but **the red prints dull once the sliver
+is small**: `#ad301a`, `#ba291c`, `#903616`, `#da1f1f`, `#e31d21`, H4-16 at
+S=0.85-0.89, against a clean `#04a4d5` blue and a `#43a350`/`#4da33e` green.
+Do not expect `#e61b1f` on a tab.
+
+- **The cap goes on and off panel by panel, not scene by scene.** *New Toys* has
+  the boys bare-headed for all of 099 and all of 104, capped on 100 p6-p8, 101,
+  102 p8, 103, 105 and 106 p1 — including outdoors on both sides of the switch.
+  Establish it per panel; a page that was bare two pages ago is not evidence.
+- **This is where the batch lost its corrections.** Twelve of seventeen
+  under-namings sit on panels called bare off a `heads2`/`capsum` zero with no
+  crop spent — *New Toys* 104 and 105, *Rip Van Donald* 154 p1 (shadow), 155 p2
+  (flat silhouette), 159 p2 (a green cap the census merged into foliage one
+  hue-degree away). Every cap that WAS cropped survived: 75 colours untouched.
+  On this volume a whole-page census zero means **crop that page**, not "bare".
+- ***Rip Van Donald* runs two keys and the second inverts the first.** 153-155
+  and 162 p6-p8 are the winter cap with the ordinary convention. 156-161 dress
+  the boys as old men in coloured **top hats** whose colours the colourist got
+  erratically wrong: 157 p2 is dialogue-proven Huey in a **blue** hat (he names
+  Dewey and Louie in the third person), and the review kept Huey while noting
+  *"Colorist error: shoud be red"*. Red stayed Dewey on 157 p3 and 160 p4, but
+  156 p5 was swapped back to blue=Dewey, red=Huey. **Do not promote one
+  dialogue-proven panel into a story-wide permuted key** — check whether the
+  anomaly holds over consecutive pages first, which is what separates this from
+  *High-wire Daredevils*. Costume hats go in `identified_by: hat` with
+  `cap_colour` null; a parka hood still goes in `cap_colour`.
+- **Two colour collisions.** Donald's sailor cap is the same `#00a5d7` as a blue
+  top hat, and the foliage `#54b041` is one hue-degree from the hat green
+  `#4da33e`. Rank within the panel and check what the blob sits on.
+- **Medium was right 20 times out of 20.** Used for a believed value with thin
+  evidence — a tip stopping short, an elimination, a balloon with no tail — the
+  review promotes it rather than fixing it. Do not avoid it, and do not use it
+  for the long-shot Donald guess, which is where it went wrong in Vol. 7.
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
