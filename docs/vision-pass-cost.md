@@ -297,6 +297,45 @@ Cheap wins that did hold: `scripts/vision/probe.py` (new here) settled every
 stitching 2-5 crops into one contact sheet meant 74 image reads carried roughly
 three times that many crops.
 
+Measured again on the 2026-08-31 batch — *New Toys*, *Donald's Love Letters*,
+*Rip Van Donald* (Vol. 8, 28 pages, 361 groups), all three fully reviewed on
+both engines:
+
+```
+speaker corrections                29 / 361  =  8.0%   whole batch
+    of which in the nephew domain  27 / 159  = 17.0%   Huey/Dewey/Louie/nephews
+images read                        44 / 28 pages = 1.57 per page
+by title                     14.8% / 1.9% / 6.7%
+```
+
+Cost is not the story here — 1.57 against a target of 3, and the cheapest title
+was also the most accurate. **The error has one cause and it is a refusal to
+spend an image.** Seventeen of the 29 are under-namings, and **twelve of those
+sit on panels the pass declared bare or unreadable off a census zero without
+cropping**: *New Toys* 104 and 105, where the note reads *"heads2 finds no roster
+ink on any nephew head in panels 1-8"*, and *Rip Van Donald* 154 p1 (figures in
+shadow), 155 p2 (a flat silhouette panel) and 159 p2 (a green cap the census
+merged into foliage one hue-degree away).
+
+Everything that WAS cropped survived: **32 red, 22 blue and 21 green cap colours
+untouched**, and the only colour overturned in the batch, 153 g3, is the one
+where the census had merged the tab into a hedge of the same ink. So the rule in
+*What to stop looking at* — establish a bare head once from the scan and move on
+— has a hard boundary. It holds for a title with **no cap key at all** (*Wired*,
+*The Sunken Yacht*, and here *New Toys* 099, where the boys are plainly
+bare-headed at 1.6x). It does **not** hold for a title whose cap is a 130-400px
+sliver that alternates on and off: there a whole-page zero is a reason to spend
+one tiled crop of the three heads, not a verdict. One image on *New Toys* 104
+would have converted eight collectives into names.
+
+Two things worth carrying forward. **Every one of the batch's 20 medium calls was
+confirmed at high with no change of value** — medium used for *thin evidence
+behind a believed value* (a tip stopping short, an elimination, a balloon with no
+tail) is a useful provenance marker, not the coin flip it was in Vol. 7, where it
+carried the long-shot Donald guess. And **tiling still pays**: 44 image reads
+carried about 110 separate crops, and the two spent fixing the palette per title
+were the best-value images in the batch.
+
 ## What is still worth an image
 
 - The **cap-reference panel**, once per title, before page 1. Getting the
