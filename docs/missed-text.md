@@ -96,6 +96,28 @@ where it carries a reason.
 noticed is invisible to it, so the count is a floor, not a total. Closing that
 gap is what the rest of this document is for.
 
+## `vision_added` is not the pass's flag — 2026-09-01
+
+`vision_added: true` marks a group **added by hand in the editor rather than
+produced by an OCR engine**. It is not a record that the vision pass added
+something: 127 groups carry it across 22 volumes, including pages in Vol. 21 and
+Vol. 22 with no `vision_note` on any group, which the pass has never touched.
+
+It is worth knowing because it looks broken when it is not. The flag can sit on
+ordinary dialogue, and on a **different id on each engine**. *In Ancient Persia*
+054: both engines captured `UNCA DONALD, WHICH ONE IS YOU?` as a single group, a
+human split it into two, and each engine kept the original in a different slot —
+so the hand-added half is easyocr g9 and paddleocr g8. Nothing is wrong. The
+group that still carries `ocr_text` and `cleaned_box_texts` is the engine's; the
+one with both empty is the hand-add.
+
+Two consequences. **Never strip the flag to tidy an id mismatch** — it is the
+only record that a group is not engine output. And **do not exclude
+`vision_added` groups when counting what a review corrected**: they are ordinary
+reviewable groups, and skipping them drops real corrections. The only thing that
+should not count is an added group's *first* speaker, `speaker_was: "unknown"`,
+which is the group being born rather than a call being fixed.
+
 ## A duplicated OCR string can hide a real miss — 2026-09-01
 
 *Land of the Totem Poles* 185 is a full-page splash with four blasts of display
