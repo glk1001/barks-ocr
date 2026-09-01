@@ -96,6 +96,35 @@ where it carries a reason.
 noticed is invisible to it, so the count is a floor, not a total. Closing that
 gap is what the rest of this document is for.
 
+## A duplicated OCR string can hide a real miss — 2026-09-01
+
+*Land of the Totem Poles* 185 is a full-page splash with four blasts of display
+lettering: `PFOOOO`, `SCREECH`, `YOWOOO` and `TOOT`. Both engines grouped all
+four boxes correctly — but stored the fourth group's text as `YOWOOO`, a
+duplicate of the third, instead of `TOOT`.
+
+The audit reported `TOOT` under **grouped by NEITHER engine**, which was wrong in
+the way that matters: a group was sitting on it, with the right box, carrying the
+wrong words. The reviewer's fix was a retype with no box move, and no group was
+added — the page still has eleven.
+
+Two things to carry from it.
+
+**The audit's classes describe the TEXT, not the boxes.** "Grouped by neither
+engine" means no group's *text* matches, and a group whose text is a duplicate of
+its neighbour's matches nothing. Before treating a finding as a group to add,
+check whether a box is already on the lettering: adding a second group there
+would have produced an overlapping duplicate, which `vision_apply` refuses, or
+worse a real one on the engine that was never checked.
+
+**The pass will not catch this on its own, because `text_ok` is answered per
+group.** The pass read the lettering, wrote all four strings into `visible_text`
+— including `YOWOOO` twice — and still marked every group `text_ok: true`, having
+checked each group's speaker and taken the stored string on trust. The tell was
+in its own capture: a page listing the same sound effect twice is worth one look
+at the art, and a `visible_text` entry the audit then reports as ungrouped is
+worth checking against the boxes before it is called a miss.
+
 ## The pass can add the group — built 2026-08-08
 
 ### Where it goes, and why that is the whole design
