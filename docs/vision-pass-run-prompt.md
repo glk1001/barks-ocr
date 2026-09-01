@@ -1418,6 +1418,44 @@ crown wedge is gone. Bare-headed on 007 and indoors on 029.
   and all four were confirmed. An animal's own voice is dialogue; its hooves,
   jaws and the rope it parts are not.
 
+Vol. 9, from *In Ancient Persia* read on 2026-09-01 and reviewed the same
+day — the first title read in this volume, so the palette below is new.
+**The construction is a black crown carrying a WIDE coloured band** over the
+top and down the side, several times the area of the Vol. 8 sliver and legible
+at contact-sheet scale: red `#e61b1f`, blue `#06a6d4`, green `#4da23f`,
+reference panel 038 p2 (three boys in a row along a wall).
+
+- **The band shades badly and the two ends of the range collide.** Blue comes
+  back as `#1fa3a0`, `#24a28f`, `#4da39e` (H171-178) in torchlight and desert
+  light, and green as `#34a372` (H153). Rank the three crowns **within the
+  panel** and never against absolute hue.
+- **And ranking within the panel is not enough on its own.** On 060 p6 I probed
+  all three crowns, found `#34a372` (H153.5), a clean red, and `#5fa25d`
+  (H118.3), reasoned that the H118 was the green and the H153 therefore the blue
+  *by elimination* — and the review made it red. The elimination is only as good
+  as the assumption that all three boys are present and each wears a different
+  ink. **13 cap colours were overturned in 297 groups here, against 5 in 288 on
+  the Vol. 8 title read the same week**, and the moves have no direction
+  (red->green, green->red, red->blue, blue->red, blue->green, green->blue), which
+  is the Vol. 7 signature for reading too small. A band that is legible at
+  contact-sheet scale is legible enough to *see*; it is not legible enough to
+  *name*. Crop it.
+- **A costume can be issued twice.** Donald is dressed in Prince Cad Ali Cad's
+  own wedding finery on 052, so for three pages two ducks wear an identical blue
+  conical hat and red ruff — including a panel where they point at each other and
+  both answer `I AM!`. Those calls have to rest on the dialogue. Flagging the
+  collision and marking the pairs medium worked: the review fixed 052 g0/g1 (a
+  clean swap), 053 g1 and 055 g5/g6 without any of them going unnoticed. It
+  resolves on 055 p2, where Donald is bare-headed and Cad keeps the hat.
+- **The dialogue beat the tail on a silhouette.** 045 p3: the balloon's tail
+  lands on a small figure 45px short of Donald's head, but SUFFERIN' HOPTOADS is
+  his idiom; I took the tail, flagged the conflict, and the review took the
+  idiom. On an all-black panel the register outranks a tip reading.
+- **A yellow rectangular box with an arrow tail is the narrator.** 052 g11 was
+  stored `dialogue`; the type correction to `narration` was confirmed. The same
+  words are ordinary speech balloons in the very next panel, which is what makes
+  the device worth checking rather than assuming.
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —

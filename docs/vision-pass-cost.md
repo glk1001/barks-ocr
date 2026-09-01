@@ -372,6 +372,63 @@ all-silhouette panels where no image could have helped. The lesson for the
 budget is the same as 2026-08-27's: at 2.13 per page against a target of 3,
 cost is not what is limiting this.
 
+Measured again on the 2026-09-01 batch — *Land of the Totem Poles*, *Serum to
+Codfish Cove* (Vol. 8) and *In Ancient Persia* (Vol. 9), 58 pages, 735 groups,
+all three fully reviewed on both engines:
+
+```
+speaker corrections                68 / 735  =  9.3%   whole batch
+    of which in the nephew domain  44 / 268  = 16.4%   Huey/Dewey/Louie/nephews
+images read                       164 / 58 pages = 2.83 per page
+cap colours overturned             23
+by title                     6.6% / 8.7% / 12.1%
+```
+
+Cost went up from *Trail of the Unicorn*'s 2.13 to 2.83 and the rate went the
+wrong way, 5.0% to 9.3%. **The extra spend was not wasted — it was spent on the
+wrong half of the page.** Sorted by what actually went wrong:
+
+```
+22  under-named          `nephews` the review sharpened to a name
+17  wrong nephew         Huey/Dewey/Louie swapped for each other
+16  Donald against another
+ 5  over-named           a name the review withdrew to `nephews`
+ 8  adults / other / none
+```
+
+The previous batch's lesson was *crop the pages you would otherwise call bare*,
+and that held: **not one page called bare or unreadable was overturned**, and
+under-naming fell from 17-of-29 to 22-of-68 as a share. What replaced it is
+**wrong nephew, up from 2 to 17**, and it is concentrated in the one title with
+the biggest, most legible caps in the corpus so far. *In Ancient Persia* posts 11
+wrong-nephew swaps and 13 overturned colours; the two Vol. 8 titles, whose caps
+are a small sliver, post 6 and 10 between them.
+
+That inversion is the finding. **A cap that is legible at contact-sheet scale
+invites you to name it from the contact sheet, and the Vol. 9 band is exactly
+big enough to do that with.** The Vol. 8 sliver is so small it forces a crop and
+the crop gets it right; the Vol. 9 band looks readable in the montage and is not.
+The colour moves have no direction — red->green, green->red, red->blue,
+blue->red, blue->green, green->blue — which is the Vol. 7 noise signature, not a
+bias. **Size of cap is not the discriminator. Size of the image you read it in
+is.**
+
+One cheap habit came out badly enough to name. On 060 p6 all three crowns were
+probed in-process, two came back greenish, and the third was assigned *by
+elimination* — the review overturned it. `probe.py` tells you what ink is on a
+head; it cannot tell you that the panel holds three different boys. Elimination
+across a panel is a claim about who is in it, and needs the same crop a tail
+does.
+
+What did work, all of it cheap: the beak-before-cap rule (16 Donald corrections
+and not one of them a capscan overruling a beak the way Vol. 8's did), flagging
+an art-vs-dialogue conflict rather than silently picking (045 g2 went to the
+reviewer's reading, 044 g4 held at mine), and marking a genuinely undecidable
+pair medium instead of guessing (the 052-055 costume collision, where all four
+corrections landed on flagged groups). Medium was 46 calls across the batch and
+every one was resolved rather than left; **0 of 46 survived as medium**, which is
+what medium is for.
+
 ## What is still worth an image
 
 - The **cap-reference panel**, once per title, before page 1. Getting the
