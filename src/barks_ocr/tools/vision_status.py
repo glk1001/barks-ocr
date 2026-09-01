@@ -42,6 +42,7 @@ from barks_ocr.utils.vision_schema import (
     CAPTURE_PROMPT_VERSION_KEY,
     CAPTURE_RULES,
     SPEAKER_KEY,
+    VISION_NOTE_KEY,
 )
 
 APP_LOGGING_NAME = "visstat"
@@ -57,8 +58,8 @@ UNSTAMPED = "unstamped (pre-2026-08-03)"
 # Titles that are finished but can never satisfy ``read == pages``, and so would
 # be offered as the next job for ever.
 #
-# A page counts as read when at least one of its groups carries a speaker, so a
-# page with no groups at all can never count.  *Donald Duck Finds Pirate Gold*
+# A page counts as read when at least one of its groups carries a vision note, so
+# a page with no groups at all can never count.  *Donald Duck Finds Pirate Gold*
 # (1942) is fully read and fully reviewed -- all 385 groups -- but three of its
 # 64 pages (032, 036 and 048) are wordless, so it sits at 61/64 permanently and
 # `--next` kept re-offering it once every other early title was done.
@@ -78,6 +79,18 @@ _ALWAYS_DONE = frozenset({ENUM_TO_STR_TITLE[int(Titles.DONALD_DUCK_FINDS_PIRATE_
 if _unknown := sorted(_ALWAYS_DONE - STR_TITLE_TO_ENUM.keys()):
     msg = f"Unknown title(s) in _ALWAYS_DONE: {_unknown}"
     raise ValueError(msg)
+
+
+def _read_by_the_pass(groups: dict[str, dict]) -> bool:
+    """Whether the vision pass has actually read this page.
+
+    The test is the pass's OWN field, not ``speaker``.  Groups added by hand in
+    the editor carry ``vision_added`` and a speaker, and there are 13 of them
+    scattered across volumes 9 to 22 -- a lone ``ZOW`` or ``?`` picked up during
+    ordinary OCR correction.  Counting those as read marked 13 untouched stories,
+    224 pages, as partly done, and ``--todo`` then hid every one of them.
+    """
+    return any(VISION_NOTE_KEY in g for g in groups.values())
 
 
 class VolumeStat:
@@ -118,9 +131,13 @@ def scan(prelim_dir: Path) -> dict[str, VolumeStat]:
 
         groups = json.loads(prelim.read_text()).get("groups", {})
         stat.groups += len(groups)
-        annotated = [g for g in groups.values() if g.get(SPEAKER_KEY)]
-        if not annotated:
+        # A page counts as read only where the PASS left its own mark. A speaker
+        # alone is not enough: `vision_added` groups are added by hand in the
+        # editor and carry one, so a single `ZOW` was making a 28-page story that
+        # nothing had read look started. See _read_by_the_pass.
+        if not _read_by_the_pass(groups):
             continue
+        annotated = [g for g in groups.values() if g.get(SPEAKER_KEY)]
         stat.annotated += 1
         stat.annotated_groups += len(annotated)
 
@@ -244,7 +261,7 @@ def _scan_titles(comics_database: ComicsDatabase, speech_groups: SpeechGroups) -
             if page_group.ocr_index != OcrTypes.EASYOCR or page_group.fanta_page not in pages:
                 continue
             groups = page_group.speech_page_json.get("groups", {})
-            if not any(g.get(SPEAKER_KEY) for g in groups.values()):
+            if not _read_by_the_pass(groups):
                 continue
             read += 1
             capture = page_group.ocr_prelim_groups_json_file.parent / (
@@ -282,7 +299,11 @@ def _unread(stats: list[TitleStat]) -> list[TitleStat]:
 
 def _report_titles(stats: list[TitleStat], *, start: int, limit: int, todo_only: bool) -> None:
     """Print the chronological work list."""
-    shown = [s for s in stats if not (todo_only and s.read)]
+    # `--todo` asks the same question as `--next` and the footer, through the same
+    # function. It used to test `s.read` on its own, so a story one page into a
+    # thirty-page read vanished from the work list while `--next` still offered it.
+    unread = {s.title for s in _unread(stats)}
+    shown = [s for s in stats if not (todo_only and s.title not in unread)]
     window = shown[start : start + limit] if limit else shown[start:]
 
     print(f"{'#':>5} {'year':>6}  {'title':<44}{'vol':>4}{'pages':>6}  state")
