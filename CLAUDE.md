@@ -28,6 +28,37 @@ The pyrefly gate is a plain **0 errors** with **no baseline file**, matching the
 
 **Toolchain bump.** `ruff` and `ty` are `==`-pinned; bump them deliberately on a branch with `bash scripts/bump-toolchain.sh`. Runbook: `../barks-compleat-reader/docs/toolchain-bump.md`.
 
+## Vision-Pass Pipeline
+
+The procedure is the `/vision-pass` skill (`.claude/skills/vision-pass/SKILL.md`);
+the *reading* rules are in the generated `<out-dir>/roster.txt` and nowhere else.
+Three things govern every run and so live here too:
+
+**Image budget: target 3 images read per page, 5 the ceiling** for a cap-dense
+title, and say so in the report if you go over. `docs/vision-pass-cost.md` is
+the authority — the per-page ladder, the measured per-title table, and the list
+of what never earns an image. Read colour by sampling hexes off `panel-NN.png`
+(`scripts/vision/capscan.py`) rather than opening the image, and read the prep's files straight
+off disk instead of manufacturing scaled copies. Report the image count and the
+per-page rate in the close-out. Undetected drift to 9.4 images per page once
+burned the session limit three times and cut throughput from 30+ pages to under
+10.
+
+**Close-out is scripted.** `bash scripts/closeout.sh [--stage apply|review]
+"<title>"` runs the read-only checks in one go — missed-text audit, engine diff,
+outstanding text/type corrections, unreviewed speakers on *both* engines, mirror
+dry run, and `git status` in this repo and the prelim repo — and exits non-zero
+if any gating check is dirty. It writes nothing and commits nothing. Use it
+instead of re-typing the sequence; read the WARN rows, which are advisory by
+design. `UV_OFFLINE=1` when there is no network.
+
+**The prelim JSON is its own git repo** at `Fantagraphics-restored-ocr/Prelim`,
+not the parent. Stage explicit file paths — never a directory, never a glob: a
+pathspec of `"Carl Barks Vol. 2*"` matches Vol. 20 through Vol. 29, and **Vol. 19
+must stay out**. The format is `json.dumps(d, indent=4)`, ASCII-escaped, with
+**no trailing newline**; prove the round trip before any scripted edit or a
+one-string change reformats the whole file.
+
 ## Architecture
 
 ### Shared Packages
