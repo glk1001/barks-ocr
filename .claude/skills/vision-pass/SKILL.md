@@ -45,8 +45,32 @@ from a clean reference panel, and re-deriving it is where a run loses
 corrections.
 
 **After a review, write the new findings back** as a fresh dated section in that
-file. That is the one step in the loop that needs a human, and it is what makes
-the next `/vision-pass <N>` self-sufficient.
+file. That is what makes the next `/vision-pass <N>` self-sufficient, and it is
+the one input nothing else derives — it went eight titles without an entry once,
+because writing one meant reading a review back out of memory.
+
+It does not. Every correction is on disk:
+
+```bash
+uv run --offline python scripts/vision/review_findings.py "…" --since <the pass's commit>
+```
+
+`speaker_was`, `cap_colour_was` and `type_was` hold what the pass said, and
+`vision_note` holds its own reasoning for getting it wrong — which is the raw
+material, not the reviewer's prose (one measured title had a review note on 1
+correction in 26). The tool groups the corrections by direction, because that is
+what turns a list into a rule: `nephews` -> a name is an under-naming finding,
+the reverse is an over-naming one, and a name swapped for a name is about tails.
+
+**Pass `--since`.** A review overwrites `speaker_confidence` with `high`, so
+without it the medium-against-high correction rate is gone — and that is usually
+the most useful number in the whole review. *Pixilated Parrot* came back 41.2%
+of mediums corrected against 6.0% of highs; *Lost in the Andes!* 31.0% against
+7.3%. A medium is not a safe hedge.
+
+Read the output, state the rules, and have the reviewer check them: a rule
+inferred from a correction can misread **why** it was made, and that is the only
+part of this loop a person is still needed for.
 
 ## The sequence, per title
 
