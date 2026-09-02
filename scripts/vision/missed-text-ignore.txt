@@ -125,3 +125,6 @@ HELP KEEP AMERICA STRONG
 # The pass transcribed the full name into visible_text from that knowledge, so
 # the audit is matching more text than 059 actually prints.
 8 059 ATLAS MACHINERY COMPANY
+# You Can't Guess! (Vol. 9) 188 p6: the showroom sign AUTOM... runs off the
+# panel edge; a partial word.
+9 188 AUTOM
