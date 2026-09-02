@@ -89,47 +89,59 @@ and at least one stray three-space indent from a hand edit. **The backlog blocks
 nothing** — a file rewritten by the normal tooling comes back correct, so the
 check can only refuse an edit that *preserves* the bad bytes.
 
-### 3. `vision_added` lost, or an id-renumber landing annotations on the wrong
-group — *the two data-destroying incidents*
+### 3. `vision_added` lost, or an id renumber — **BUILT** (2026-09-02)
 
-The editor renumbers ids on both delete *and* add, and can re-sort a page into
-reading order with no add and no delete at all. A stored `result.json` is then
-silently pointed at the wrong group, and `vision_added` — which marks a
-hand-add, predates the pass, and sits on different ids per engine — must never
-be stripped.
+`scripts/vision/audit_drift.py`. The plan said this "wants either the git blob
+of the previous commit or a checkpoint written by prep" — the prelim repo has
+380 commits, so the checkpoint already existed and nothing new had to be built.
 
-Check, at apply time and in closeout: match old to new by **(text, occurrence)**,
-never by id and never by text alone, and refuse if the `vision_added` set has
-shrunk. This is the most valuable check on the list and by some way the most
-work — it needs the pre-edit state, so it wants either the git blob of the
-previous commit or a checkpoint written by prep.
+Two refinements the first run forced, each cutting the noise by an order of
+magnitude:
 
-### 4. Copy-In residue on a group the reviewer added — *fires most often*
+- **Strip emphasis before comparing.** An apply writing `[b]…[/b]` into
+  `ai_text` changes the bytes and nothing else, and is the commonest edit in the
+  corpus. Comparing raw text gave 446 findings over 8 commits; stripping markup
+  gave **24**.
+- **A shift is the fault; a retype is not.** If an id's new text is what its
+  *neighbour* used to hold, the page was renumbered under a stored
+  `result.json`. If the text is merely different, somebody corrected it. Of the
+  24, **13 were shifts and 11 ordinary retypes** (`YOWOOO`→`TOOT`, `. . .`→`.....`).
 
-A group seeded from a neighbour is born carrying that neighbour's `ai_text`,
-`type`, `vision_note`, `notes`, `acknowledged_issues` and `identified_by`, and
-Copy In deep-copies `speaker_reviewed` so it arrives already signed off. One
-batch of 4 review-added groups produced 5 distinct faults.
+It found a live one: *The Pixilated Parrot* 008, both engines, a `'!'` group
+inserted at g9 and every id above it carrying its predecessor's text.
 
-Check: for each group, flag `ai_text` byte-identical to another group on the same
-page whose `text_box` does not overlap it. This must be a **WARN**, not a gate —
-a duplicated string is sometimes the true lettering, which is itself a
-documented trap. Pair it with a hard check that per-engine group counts moved
-together: an add on one engine only is unambiguous.
+### 4, 5, 6 — **BUILT** as one sweep (2026-09-02)
 
-### 5. Free-text `other:` speakers drifting — *cheap, silent*
+`scripts/vision/audit_groups.py`, wired into `closeout.sh` as advisory. Each of
+the three needed its premise corrected by measurement first.
 
-`other:` names get no closed-set check. Two checks, both a `Counter` away: flag
-any `other:` value used exactly once in a title, and hard-fail on two values
-differing only by case or whitespace. Catches the capitalisation drift and the
-near-duplicate name before a mirror copies it to the second engine.
+**Item 5 — `other:` drift.** The plan said to flag any `other:` used exactly
+once. There are 172 of those and they are the normal case: a harbour messenger,
+a fireman, a shark. The wrong signal by 19 to 1. What does work is normalising
+case *and a leading article*: **9 real pairs**, `other:crowd` / `other:the
+crowd`, `other:shopkeeper` / `other:the shopkeeper`, `a bear` / `the bear`.
+Naive case-and-whitespace matching, which is what the plan proposed, finds zero.
 
-### 6. Required fields missing on a group — *cheap*
+**Item 6 — required fields.** Mostly already enforced: `vision_apply` requires
+`speaker_confidence`, validates the cast, `cap_colour`, `identified_by` and the
+type, and refuses `text_ok: false` with no `corrected_text`. It can only enforce
+going forward, and **1,503 stored groups carry a speaker with no
+`identified_by`**, concentrated in Vols. 6, 10, 7 and 1 — the shape of a cohort
+read before the field existed. Report-only; `speaker-queue --missing-evidence`
+is the queue path.
 
-`text_ok` and `speaker_confidence` are required on every group, `none` groups
-included, and `roster.txt` does not say so. A wordless page still needs a
-`result.json` with `"groups": {}` and its capture record. A flat schema check
-over the corpus; likely finds a backlog on first run.
+**Item 4 — Copy-In residue.** The plan's signal, duplicated `ai_text` with
+non-overlapping boxes, does not work: 2,468 raw, 2,336 after the overlap filter,
+100 after also requiring an identical `vision_note` — and every visible one of
+those 100 is real repeated lettering (`SEEDS` on a packet, `D. DUCK` on a
+mailbox, `CASTOR OIL`, `$100,000`). Duplicated text is not the signal.
+
+The population that is worth checking is the **133 groups actually carrying
+`vision_added`**. Against those: 25 duplicate another group's text, and — the
+unambiguous one the plan did not think of — **11 pages carry a different number
+of added groups on each engine**, one of them three against zero. The pass, the
+mirror and `speaker-queue` all read easyocr, so a group added only to paddleocr
+reaches no queue and is never reviewed.
 
 ### 7. A title vanishing from the scans — **BUILT** (2026-09-02)
 
@@ -144,27 +156,49 @@ is where this document already put it.
 
 ## Where each gates
 
-- **closeout.sh, stage apply** — 4, 5, 6
-- **closeout.sh, stage review** — 3, 4, 5
+- **closeout.sh, both stages** — 4, 5, 6, via `audit_groups.py` (advisory)
+- **run by hand after an editor session** — 3, via `audit_drift.py`
 - **prelim repo pre-commit** — 1 (warn), 2 (refuse) — installed 2026-09-02
 - **corpus sweep, run occasionally with no `--title`** — 6, 7
 
-## Suggested order
+## All seven are built. What it taught.
 
-1, 2 and 7 are done. Remaining: 5 and 6 are a `Counter` and a field check, and
-both will report a backlog worth reading before anything is wired to fail on
-them. 4 is a heuristic and should stay advisory. 3 is the real project — do it
-last, deliberately, and only once there is a pre-edit checkpoint to compare
-against.
+**Every single entry had a wrong premise, and only measurement found them.**
+Written from a friction log, each described the failure accurately and the
+*detection* wrongly:
 
-**What building the first three actually taught.** Every one of the three had at
-least one wrong premise, and only the replay found them: a volume that turned out
-to be tracked and owned, a "directory pathspec" a pre-commit hook cannot see, a
-single file format that turned out to be three, and a span rule that the history
-falsified outright. None of that was visible from the friction log the entries
-were written from. **Replay a proposed check against the whole history before
-writing it, not after** — it is cheaper than the check, and twice here it changed
-whether the check should refuse or merely speak up.
+| entry | the premise | what the data said |
+|---|---|---|
+| 1 | never stage Vol. 19 | it is tracked, and its owner commits it |
+| 1 | refuse a multi-volume stage | 19 of 380 commits span, none a mistake |
+| 2 | one prelim JSON format | three, and an apply writes two of them |
+| 3 | compare stored text by id | markup made 95% of it noise |
+| 4 | duplicated `ai_text` finds residue | 100 findings, every visible one real lettering |
+| 5 | flag an `other:` used once | 172 of them, all legitimate |
+| 6 | required fields are unchecked | apply already enforces all of them |
+
+Two lessons worth keeping:
+
+**Replay a proposed check against the whole history before writing it.** It is
+cheaper than the check, and here it changed the design of every one — twice
+turning a refusal into a warning, once replacing the signal outright.
+
+**The backlog is the design input, not an obstacle.** A check whose first run
+returns thousands is measuring the wrong thing; one that returns 9, 11 or 25 has
+found something. Item 4 only became useful when the population narrowed from all
+groups to the 133 carrying `vision_added`.
+
+## What is now outstanding, for a human
+
+None of these is a code change:
+
+- **11 pages** where a hand-added group exists on one engine only.
+- **9 `other:` speaker pairs** differing by an article — pick one, retire the other.
+- **1,503 groups** with a speaker and no `identified_by`, mostly an old cohort.
+- **34 groups files** off-format (an uppercase `\u00AD`, one three-space indent);
+  harmless, and self-healing on the next rewrite.
+- ***The Pixilated Parrot* 008**, both engines: an insert cascade shifted every
+  id above g9. Worth confirming no stored `result.json` was applied after it.
 
 **Do not wire any of these to fail before running it across the whole corpus and
 reading the backlog.** Every mechanical check on this list is being written after
