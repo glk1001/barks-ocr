@@ -1084,6 +1084,53 @@ next Vol. 9 run.**
 - **`type_reviewed` silently declines a type proposal**: apply drops it and
   reports a lower count. Say so in the close-out or it is lost.
 
+### Findings to paste into the next run (2026-09-02, twenty-first batch)
+
+*The Magic Hourglass* (Vol. 9, 28 pages, 339 groups), reviewed the same day:
+**27 speaker corrections, 8.0%** -- 26 of them in the nephew domain (37.1% of
+70). High 25 of 310 (8.1%), medium 2 of 29 (6.9%): the mediums held, the
+highs did not. Cost 1.75 images per page. *Big-Top Bedlam* is still under
+review.
+
+- **A red or green crown is never Donald, and a blue one is Donald only when
+  the head is the biggest in the panel.** Nine corrections, a third of the
+  title, are `Donald` -> a boy, and every one came back WITH a cap colour: a
+  close-up "of Donald" holding the hourglass (124 g7, blue), "Donald firing
+  from the camel" (133 g8, red), "Donald at the liner's rail" (145 g2, red),
+  the tallest figure in a line (141 g6, blue). The pass wrote `sole-figure`
+  and `balloon-tail` Donald without probing the crown, because the duck was
+  big or alone. Vol. 9 prints Donald's sailor hat in Dewey's `#00a5d7`, so a
+  blue census line proves nothing either way; a red or green one settles it.
+  Never write Donald on a duck whose crown has not been probed.
+- **The collision cuts the other way too.** 144 g13, "the boy holding the
+  water bag" with 503px of `#08a4d4`, was Donald, and 138 g6 was Donald; the
+  blue was his hat. Size the head before naming a blue cap Dewey.
+- **Caps come off indoors and are held.** In Scrooge's office (120 p10) the
+  boys stand bare-headed with their caps in their hands; the review named all
+  three from the held caps ("holding cap") and the red the pass measured on
+  one crown belonged to the neighbour's hand. A cap in a hand names its
+  holder; a blob at head height beside a bare crown is probably a held cap.
+- **Tips on a head boundary went to the collective 4 times and were named
+  the other way 5 times** -- a wash, so keep naming, but the frosty unison
+  balloon over two scowling boys (121 g7) and a tail 50px short of the
+  nearest head on a splash (118 g1) were withdrawn to `nephews`.
+- **Six type corrections the pass never proposed**: Scrooge's kitchen
+  soliloquy (119) and two others were speech balloons stored as `thought`,
+  and two `dialogue` were thought balloons (128 g4, 143 g10). The cloud edge
+  is not legible on a 250px montage; check `type` on any balloon whose edge
+  you did not see at panel resolution.
+- **The reviewer swapped Donald and Scrooge on 129 p8** (g8 -> Scrooge, g9
+  -> Donald) against two clean tail readings, and sent 144 g4 "TA TA TA TA!"
+  to Scrooge. Worth a second look from the reviewer before those rules are
+  believed.
+- **A free-text name can carry a typo**: `other:a radier` came back on 140
+  g9 and was fixed before the mirror. Grep the `other:` counts for
+  singletons every time.
+- **`uv run` from the prelim directory silently runs nothing.** The mirror
+  was launched with the prelim repo as cwd, printed nothing under the grep,
+  and wrote nothing; the verify step caught it. Run every `barks-ocr-*`
+  command from the barks-ocr checkout.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at

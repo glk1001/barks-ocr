@@ -484,6 +484,24 @@ drive sequence, where Donald has been narrating for four pages and the panel
 holds nothing but scenery; the pass gave him the next line by momentum. That is
 a reasoning default, not a resolution problem.
 
+Measured again on the 2026-09-02 review of *The Magic Hourglass* (Vol. 9, 28
+pages, 339 groups), the first of a two-title batch:
+
+```
+speaker corrections                27 / 339  =  8.0%
+    of which in the nephew domain  26 /  70  = 37.1%   Huey/Dewey/Louie/nephews
+images read                        49 / 28 pages = 1.75 per page
+high 25/310 = 8.1%   medium 2/29 = 6.9%
+```
+
+Cost held and the rate did not, and the 27 have one cause: **nine are
+`Donald` -> a boy on ducks whose crown the pass never probed**, because the
+figure was big, alone or at the front of a line. Vol. 9 prints Donald's hat
+in the cap blue, so the census cannot separate him from Dewey; a red or green
+line can, and four of the nine came back red. The probe is free and was not
+run. Two more went the other way (a "boy" with 503px of blue was Donald).
+No image was declined on any of them.
+
 ## What is still worth an image
 
 - The **cap-reference panel**, once per title, before page 1. Getting the
