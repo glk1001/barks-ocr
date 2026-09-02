@@ -227,7 +227,9 @@ Check the tree first: other volumes may have in-flight uncommitted work that is
 not yours. End messages with the `Co-Authored-By` trailer.
 
 Prelim JSON is `json.dumps(d, indent=4)` — 4-space, `ensure_ascii`, **no trailing
-newline**. Prove the round trip before any scripted edit; get it wrong and a
+newline** — but that is only the **groups** files. `NNN-page-capture.json` and
+`NNN-panel-descriptions.json` are `indent=2` **with** a trailing newline; an
+apply writes those too. Measured over all 12,372 tracked files. Prove the round trip before any scripted edit; get it wrong and a
 one-string change reformats the whole file.
 
 ## When the reviewer says a title's review is done

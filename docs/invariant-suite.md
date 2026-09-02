@@ -42,20 +42,52 @@ Ranked by how often the class has actually fired against how cheap the check is.
 Each names the incident it comes from, so a check that never fires can be
 retired on evidence rather than kept out of habit.
 
-### 1. Vol. 19 staged into the prelim repo — *cheap, catastrophic*
+### 1. ~~Vol. 19 staged into the prelim repo~~ — **BUILT, and downgraded** (2026-09-02)
 
-A pathspec of `"Carl Barks Vol. 2*"` matches Vol. 20–29, and Vol. 19 must stay
-out. This is a pre-commit hook in the **prelim** repo (which has none today),
-not in this one: reject any staged path under a Vol. 19 directory, and reject a
-staged *directory* pathspec outright. Pure string work, no corpus load, and the
-only entry on this list whose failure is unrecoverable rather than annoying.
+Built as `scripts/vision/check_prelim_staged.py`, wired into the prelim repo's
+`.git/hooks/pre-commit` as a forwarder. **Two of this entry's three claims were
+wrong, and the evidence changed the design.**
 
-### 2. Prelim JSON reformatted by a scripted edit — *cheap, wide blast radius*
+*"Vol. 19 must stay out"* is a rule for Claude, not a repo invariant. Vol. 19 is
+tracked — 340 files — and its owner commits it under their own name, most
+recently 2026-08-30. A hook cannot tell who is committing, so one that refused
+those paths would block the person the directory belongs to. Dropped.
 
-The format is `json.dumps(d, indent=4)`, ASCII-escaped, no trailing newline. A
-one-string edit written back with any other setting rewrites the whole file, and
-the diff then hides the real change. Check: re-serialize every staged prelim
-file and byte-compare. Same pre-commit hook as #1.
+*"Reject a staged directory pathspec"* is not observable. By the time a
+pre-commit hook runs, git has already expanded a directory or glob into
+individual paths; only its consequences survive.
+
+*The general form — refuse a staged set spanning more than one volume — does not
+survive the replay either.* Over all 380 commits, **19 span multiple volumes and
+none is a mistake**: they are the corpus-wide sweeps this workflow runs on
+purpose — the `other:` speaker audit (6 volumes), "settle every outstanding
+vision text correction" (3), an em-dash fix that reached 23. Spans run 2 to 23
+for deliberate work, so neither spanning nor its size separates accident from
+intent, and a gate firing on 5% of real commits gets trained away. **It ships as
+a named, counted warning** — enough to make "I meant one title and staged ten
+volumes" obvious, without refusing anything.
+
+### 2. Prelim JSON reformatted by a scripted edit — **BUILT** (2026-09-02)
+
+Same hook. This one refuses. But the entry above said "the format", and **there
+are three**, which neither CLAUDE.md nor the skill said. Measured over all 12,372
+tracked JSON files at HEAD:
+
+| kind | format | clean |
+|---|---|---|
+| `*-gemini-prelim-groups.json` | `indent=4`, **no** trailing newline | 10,682 / 10,716 |
+| `*-page-capture.json` | `indent=2`, **with** a trailing newline | 1,537 / 1,646 |
+| `*-panel-descriptions.json` | `indent=2`, **with** a trailing newline | 10 / 10 |
+
+Only the groups files are gated. Page captures are 93% consistent and the other
+107 are undiagnosed; refusing on them would block work to enforce a rule nobody
+established. They are reported, not refused.
+
+The 34 off-format groups files are two real causes: a `\u00AD` escape written in
+uppercase where `json.dumps` emits lowercase (identical JSON, different bytes),
+and at least one stray three-space indent from a hand edit. **The backlog blocks
+nothing** — a file rewritten by the normal tooling comes back correct, so the
+check can only refuse an edit that *preserves* the bad bytes.
 
 ### 3. `vision_added` lost, or an id-renumber landing annotations on the wrong
 group — *the two data-destroying incidents*
@@ -99,28 +131,40 @@ included, and `roster.txt` does not say so. A wordless page still needs a
 `result.json` with `"groups": {}` and its capture record. A flat schema check
 over the corpus; likely finds a backlog on first run.
 
-### 7. A title vanishing from the scans — *cheap, and it hides everything else*
+### 7. A title vanishing from the scans — **BUILT** (2026-09-02)
 
-The stale panel-segments mtime gate is swallowed at DEBUG in `vision-status`, so
-an affected title silently drops out of `--titles`/`--todo`/`--next` and out of
-any corpus sweep. closeout already catches the `vision-corrections` form of this;
-the missing piece is asserting the **denominator**: the "N of 441 title(s)" total
-must not fall between runs.
+`scripts/vision/title_census.py`, baselined at **441 titles**. Records the title
+*names*, not just the count, because a count alone leaves you looping a suspect
+volume through `title_pages()` to find which one went; the names answer it
+directly. A drop exits non-zero, a rise is reported for a deliberate `--update`.
+
+Not wired into `closeout.sh`: it takes ~40s against closeout's ~2s, because it
+builds every title's page list. It belongs to the occasional corpus sweep, which
+is where this document already put it.
 
 ## Where each gates
 
 - **closeout.sh, stage apply** — 4, 5, 6
 - **closeout.sh, stage review** — 3, 4, 5
-- **prelim repo pre-commit** (does not exist yet; would need creating) — 1, 2
+- **prelim repo pre-commit** — 1 (warn), 2 (refuse) — installed 2026-09-02
 - **corpus sweep, run occasionally with no `--title`** — 6, 7
 
 ## Suggested order
 
-1, 2 and 7 are each an afternoon and gate the failures that are either
-unrecoverable or invisible. 5 and 6 are a `Counter` and a field check, and both
-will report a backlog worth reading before anything is wired to fail on them. 4
-is a heuristic and should stay advisory. 3 is the real project — do it last,
-deliberately, and only once there is a pre-edit checkpoint to compare against.
+1, 2 and 7 are done. Remaining: 5 and 6 are a `Counter` and a field check, and
+both will report a backlog worth reading before anything is wired to fail on
+them. 4 is a heuristic and should stay advisory. 3 is the real project — do it
+last, deliberately, and only once there is a pre-edit checkpoint to compare
+against.
+
+**What building the first three actually taught.** Every one of the three had at
+least one wrong premise, and only the replay found them: a volume that turned out
+to be tracked and owned, a "directory pathspec" a pre-commit hook cannot see, a
+single file format that turned out to be three, and a span rule that the history
+falsified outright. None of that was visible from the friction log the entries
+were written from. **Replay a proposed check against the whole history before
+writing it, not after** — it is cheaper than the check, and twice here it changed
+whether the check should refuse or merely speak up.
 
 **Do not wire any of these to fail before running it across the whole corpus and
 reading the backlog.** Every mechanical check on this list is being written after

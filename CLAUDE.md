@@ -56,8 +56,11 @@ design. `UV_OFFLINE=1` when there is no network.
 not the parent. Stage explicit file paths — never a directory, never a glob: a
 pathspec of `"Carl Barks Vol. 2*"` matches Vol. 20 through Vol. 29, and **Vol. 19
 must stay out**. The format is `json.dumps(d, indent=4)`, ASCII-escaped, with
-**no trailing newline**; prove the round trip before any scripted edit or a
-one-string change reformats the whole file.
+**no trailing newline** -- but ONLY for `*-gemini-prelim-groups.json`.
+`*-page-capture.json` and `*-panel-descriptions.json`, which an apply also
+writes, are `indent=2` **with** a trailing newline. Prove the round trip before
+any scripted edit, or a one-string change reformats the whole file. The prelim
+repo's pre-commit hook now refuses a mis-formatted groups file.
 
 ## Architecture
 
