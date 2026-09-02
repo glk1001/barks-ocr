@@ -1221,6 +1221,52 @@ review.
   `#4da33e` (H111) to `#40a264` (H142), one hue-band from the `#009e49`
   foliage.
 
+### Findings to paste into the next run (2026-09-03, twenty-second batch, second title)
+
+*Dangerous Disguise* (Vol. 10, 28 pages, 328 groups after the review added
+four), reviewed the next day: **30 speaker corrections, 9.1%**, of which 4 are
+the reviewer's added `!` and `? ? ?` groups and 1 is a free-text rename, so the
+pass's real count is **25 of 324, 7.7%** -- 25 in the nephew domain (34.7% of
+72). High 26 of 316 (8.2%), medium 2 of 8 (25%). Cost 1.32 images per page.
+The first Vol. 10 title read, and the first with the wedge cap on blue water.
+
+- **Twelve collectives were named, and every one had a note saying the wedge
+  did not read.** 017 g3, 021 g0/g1 (three heads poking out of the SAND), 028
+  g0/g1/g2 (three boys in the reeds, a chain of three balloons), 043 g11/g12
+  -- all tiny figures where a probe of the crown found nothing, and the review
+  named them red, green and blue regardless. Twelve of 25 is the whole
+  under-naming class, and it is the wedge-cap title's version of the *New
+  Toys* finding: **a probe zero on a wedge cap is a reason to crop at 3x, not a
+  verdict.** The wedge is a few dozen pixels on a 60px head and sits on
+  whichever side faces away as often as not.
+- **Blue near water, hoses or sky is the sea, not a cap.** 036 g4 and 041 g7
+  are the boy holding the cold-water hose, named Dewey off 900px and 2700px of
+  `#06a4d5` on his head, and both came back Huey: the blue was the water
+  spraying past his cap. 020 g8 and 021 g5 went to blue the other way. The
+  Vol. 10 wedge blue and the Vol. 10 sea are the same `#00a5d7`, so on a beach
+  page `heads.py` cannot tell one from the other. Red and green survived far
+  better (023 g9 and 017 g11 are the two green/red reversals, both slivers
+  under 600px).
+- **A one-boy panel is still not a name when his wedge faces away.** 018 g0
+  (Huey -> Dewey, reviewer: "next panel is Dewey") and 032 g5 (Donald -> Huey)
+  were named from the figure in frame; the review used the adjacent panel's
+  continuity. Read the page as a sequence: a boy who walks out of one panel is
+  the boy who walks into the next.
+- **Register beat the drawing three times, all adults.** 042 g2 ("...WILL HANG
+  ZE MEDAL AROUND YOUR PRETTY NECK") is the bullfighter speaking TO Madame,
+  not Madame; 025 g1 ("HAPPY LANDINGS, OPERATOR MINUS-X!") is the boys, not
+  Donald; 024 g10 ("NOW SUPPOSE YOU JUMP, CHUM!") went to Huey. Read who is
+  addressed before deciding who speaks: a second-person line about a pretty
+  neck is not said by its owner.
+- **Five thought balloons stored as dialogue went unflagged** (018 g5, 019
+  g6/g7, 020 g0, 030 g1), on top of the eight type corrections the pass made.
+  The pass corrected every sound_effect on a voice and missed every cloud
+  edge, again. Check the balloon edge on every thought-shaped line, not the
+  type field.
+- **Two of the eight mediums were reversed, both the gap-landing tip** (020
+  g8, 021 g5), which matches the *You Can't Guess!* finding above: where the
+  tip sits between two boys the pass loses either way, so `nephews`.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at

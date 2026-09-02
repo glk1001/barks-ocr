@@ -529,7 +529,19 @@ speaker corrections  (You Can't Guess!)   12 / 357  =  3.4%   after excluding
 images read                              109 / 81 pages = 1.35 per page
     by title                              41/25 = 1.64, 37/28 = 1.32, 31/28 = 1.11
 high 11/355 = 3.1%   medium 2/2 = 100%
+
+speaker corrections  (Dangerous Disguise)  25 / 324  =  7.7%   after excluding
+                                                              4 reviewer-added
+                                                              groups, 1 rename
+    of which in the nephew domain         25 /  72  = 34.7%
+high 26/316 = 8.2%   medium 2/8 = 25%
 ```
+
+*Dangerous Disguise* is the worst nephew-domain figure in this file, and 12 of
+its 25 are the same mechanism as *New Toys*: a probe zero on a tiny wedge cap
+taken as a bare head. The other big class is the sea printing in the wedge
+blue, which no census can separate. Both are crops the pass declined, at 1.32
+images a page; the title had room for one more per page.
 
 The Vol. 9 title's caps are big winter stocking caps, legible at contact-sheet
 scale, and it cost 1.64 a page against 1.75 and 1.36 on the two Vol. 9 titles
