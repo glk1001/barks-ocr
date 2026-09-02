@@ -502,6 +502,21 @@ line can, and four of the nine came back red. The probe is free and was not
 run. Two more went the other way (a "boy" with 503px of blue was Donald).
 No image was declined on any of them.
 
+And on the second title of the batch, *Big-Top Bedlam* (Vol. 9, 28 pages, 303
+groups), reviewed the same day:
+
+```
+speaker corrections                21 / 303  =  6.9%
+    of which in the nephew domain  12 /  63  = 19.0%   Huey/Dewey/Louie/nephews
+images read                        38 / 28 pages = 1.36 per page
+high 16/265 = 6.0%   medium 5/38 = 13.2%
+batch                              48 / 642  =  7.5%   at 1.55 images per page
+```
+
+Nine of the twelve are Dewey and Louie exchanged on crowns whose ink the pass
+had measured, which is a palette question for the next Vol. 9 title, not an
+image that was declined. The rest are costume names in a quick-change plot.
+
 ## What is still worth an image
 
 - The **cap-reference panel**, once per title, before page 1. Getting the

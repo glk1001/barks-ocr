@@ -1131,6 +1131,39 @@ review.
   and wrote nothing; the verify step caught it. Run every `barks-ocr-*`
   command from the barks-ocr checkout.
 
+### Findings to paste into the next run (2026-09-02, twenty-first batch, second title)
+
+*Big-Top Bedlam* (Vol. 9, 28 pages, 303 groups), reviewed the same day:
+**21 speaker corrections, 6.9%** -- 12 in the nephew domain (19.0% of 63).
+High 16 of 265 (6.0%), medium 5 of 38 (13.2%). Cost 1.36 images per page.
+The batch as a whole: 48 of 642, 7.5%.
+
+- **Nine of the twelve nephew corrections are Dewey and Louie swapped, and
+  every one of them had a cap colour measured and recorded the pass's way.**
+  Green -> blue five times, blue -> green twice (147 g0/g1, 155 g10, 158
+  g1/g2, 165 g0). The pass read `#4da33e` and `#00a5d7` off the crowns, so
+  either the colourist swaps those two boys in this title or the reviewer
+  reads the pair the other way; two crowns in one row cannot both be right.
+  The next Vol. 9 title should crop one clean blue-and-green pair at 4x and
+  say which ink the review calls Dewey before naming any of them.
+- **The disguises are not all Zippo.** The review moved four `other:Zippo`
+  to `other:a clown` (the hoop clown on 161, the pie clown on 162-163) and
+  one clown back to Zippo (159 g8), while the bathrobe man's `I SMELL
+  SARDINES!` and one ZIP went to Donald. A quick-change plot does not
+  license naming every costume after the artist; name the costume unless
+  the story shows the change.
+- **Sixteen type corrections, twelve the pass never proposed**: the
+  ringmaster's off-panel patter over the acts was stored `narration` and is
+  `dialogue` (155 g0/g1/g5), `SHOW TIME!` is `narration` not `background`,
+  and four thought/dialogue flips. An off-panel voice in a box with no tail
+  still needs its type read from the drawing, not from the box.
+- **The free-text case trap again**: two `other:zippo` came back beside 46
+  `other:Zippo` and were folded before the mirror.
+- **A review can retype a group's text**: 165 g7 came back as `FIRE!\nOW!`
+  with g8 `FIRE!`, both unreviewed and both engines the same, so g8 now
+  duplicates its neighbour's word over the `OW!` box. Check `ai_text` on the
+  stragglers before trusting the queue.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
