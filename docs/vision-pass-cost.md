@@ -517,6 +517,30 @@ Nine of the twelve are Dewey and Louie exchanged on crowns whose ink the pass
 had measured, which is a palette question for the next Vol. 9 title, not an
 image that was declined. The rest are costume names in a quick-change plot.
 
+Measured again on the 2026-09-02 batch -- *You Can't Guess!* (Vol. 9, 25
+pages), *Dangerous Disguise* and *No Such Varmint* (Vol. 10, 28 pages each),
+81 pages, 1015 groups; only the first reviewed so far:
+
+```
+speaker corrections  (You Can't Guess!)   12 / 357  =  3.4%   after excluding
+                                                              6 reviewer-added
+                                                              plate groups
+    of which in the nephew domain         12 / 114  = 10.5%
+images read                              109 / 81 pages = 1.35 per page
+    by title                              41/25 = 1.64, 37/28 = 1.32, 31/28 = 1.11
+high 11/355 = 3.1%   medium 2/2 = 100%
+```
+
+The Vol. 9 title's caps are big winter stocking caps, legible at contact-sheet
+scale, and it cost 1.64 a page against 1.75 and 1.36 on the two Vol. 9 titles
+before it; the error class is not caps at all but which of two boys a
+gap-landing tail belongs to (4 swaps, all the lean, and 5 names withdrawn to
+the collective). The two Vol. 10 titles are wedge-cap stories on blue water,
+where a `heads.py` census cannot separate the blue wedge from the sea; the
+saving there came from probing crowns in-process and cropping only where a
+probe found ink, and from reading whole pages as a montage plus a report of
+tail tips -- most pages cost exactly one image.
+
 ## What is still worth an image
 
 - The **cap-reference panel**, once per title, before page 1. Getting the

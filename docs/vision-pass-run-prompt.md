@@ -1164,6 +1164,63 @@ The batch as a whole: 48 of 642, 7.5%.
   duplicates its neighbour's word over the `OW!` box. Check `ai_text` on the
   stragglers before trusting the queue.
 
+### Findings to paste into the next run (2026-09-02, twenty-second batch)
+
+*You Can't Guess!* (Vol. 9, 25 pages, 363 groups after the review added six),
+reviewed the same day: **18 speaker corrections, 5.0%**, of which 6 are the
+reviewer's own added licence-plate groups moving from `unknown` to `none`, so
+the pass's real count is **12 of 357, 3.4%** -- 12 in the nephew domain (10.5%
+of 114). High 11 of 355 (3.1%), medium 2 of 2 (100%). Cost 1.64 images per
+page. *Dangerous Disguise* and *No Such Varmint* (Vol. 10) are still under
+review.
+
+- **A clean tail onto a clean cap was withdrawn to `nephews` five times, and
+  the pass's note was right each time.** 178 g0, 184 g1, 184 g8, 189 g11 and
+  191 g3 all had a tail measured onto one boy and a big winter stocking cap
+  measured on him (2318px of `#02a4d6` on 191 g3), and every one came back
+  `nephews` with the cap cleared. Against that the review also NAMED two
+  collectives (187 g5, 191 g11), so the reviewer is not applying a bare-head
+  rule; the five look like tails the reviewer read differently. Worth a second
+  look from the reviewer before this is believed as a rule, because taken at
+  face value it says a stocking cap is not a name.
+- **Both medium calls were corrected, and both were the tip-versus-lean case.**
+  177 g9 (tip 4px inside the blue boy, leaning to the red one) and 178 g8 (the
+  upper of two joined balloons, given to the blue boy by balloon order) both
+  went to the boy the tail LEANED toward. With 176 g1 (a tail "straight down
+  over the green cap" that the review sent to the red boy beside him) and 176
+  g8 (the GULP! sent to the blue boy behind the red one), all four swaps are a
+  tail between two boys where the pass took the nearer head. Where the tip sits
+  in a gap, the lean beat the tip 4-0 here -- the opposite of what the Vol. 8
+  batches found. Say `nephews` on a gap-landing tip rather than pick a side.
+- **Scrooge's top hat names Scrooge even on a duck who is bleating.** 187 g11,
+  the BAAAAA, was Donald in the pass because the story had just hypnotised
+  Donald; the review made it Scrooge, and the figure wears Scrooge's top hat
+  and pince-nez. A hat is evidence for an adult exactly as a cap is for a boy;
+  the plot is not.
+- **Twelve type corrections the pass never proposed**, on top of the nine it
+  did: 185 g0 (Scrooge's cubic-acres line stored as dialogue is a thought),
+  183 g4 (the CHRISTMAS TREES lot sign was `sound_effect`), 181 g9 (Daisy's
+  BZZZT whisper, which the pass had already flipped, came back) and the like.
+  A stored `sound_effect` on a sign is as wrong as one on a voice; check the
+  type on every non-balloon group, not only the ones the roster's examples
+  cover.
+- **The reviewer grouped the four 313 licence plates the pass had put on the
+  ignore list**, and the added groups were seeded from a neighbour: 181
+  easyocr g6 arrived with `identified_by: ['caption']` and Daisy's note, and
+  landed at id 6 on one engine and id 12 on the other. The mirror pairs by
+  text so the id shift was harmless, but the residue had to be cleared by hand
+  before the write. Do not put a prop number on the ignore list until the
+  reviewer has said so; and after any review, diff the added groups' fields
+  on both engines before mirroring.
+- **The wedge cap is back in Vol. 10 (a black crown with one coloured side
+  patch), and the water prints in the wedge blue.** *Dangerous Disguise* and
+  *No Such Varmint* are beach and bay stories drawn on `#00a5d7` sea, the same
+  ink as the blue wedge, so `heads.py` reports blue on every boy standing in
+  front of water. A blue reading there is worthless without a crop; red and
+  green are still reliable. The green wedge itself prints anywhere from
+  `#4da33e` (H111) to `#40a264` (H142), one hue-band from the `#009e49`
+  foliage.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
