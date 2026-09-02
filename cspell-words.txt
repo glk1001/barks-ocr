@@ -5,6 +5,7 @@
 # referenced by cspell.config.yaml) belong here.
 acked
 acks
+allbold
 andrae
 arctan
 autojunk
@@ -39,6 +40,7 @@ dirname
 dismissable
 divid
 divis
+docstrings
 dotenv
 dumbells
 entr
@@ -81,6 +83,7 @@ misrecognized
 mkldnn
 motionevent
 ndimage
+neighbours
 norp
 numpad
 ocrc

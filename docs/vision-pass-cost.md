@@ -206,7 +206,8 @@ and say so in the report if you go over.**
 
 Per page, in order:
 
-1. **One montage of every panel** (`montage.py <page-dir> out.png 250`). This
+1. **One montage of every panel**
+   (`uv run --offline python scripts/vision/montage.py <page-dir> out.png 250`). This
    is the default view and for most pages it is the only one. Bold, balloon
    shape, who is in frame, whether anyone wears a cap at all — all legible at
    250px.
@@ -229,7 +230,7 @@ These accounted for most of the overspend on the 2026-08-19 batch. None of them
 can change an answer.
 
 - **Helmets, bee veils, silhouettes, bare heads.** No cap ink means no name.
-  Establish it once from the scan — `capscan.py` reports every blob and its
+  Establish it once from the scan — `scripts/vision/capscan.py` reports every blob and its
   hex — and write `nephews` without opening the panel. Whole pages of *Posy
   Patch* are GI helmets and bee veils; whole pages of *Magical Misery* are
   bare-headed indoors.
