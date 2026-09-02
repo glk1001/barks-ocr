@@ -427,6 +427,13 @@ DEFAULT_GROUP_STYLE = "normal"
 # already, and at `low` it is caught by a plain `--unreviewed` sweep and by
 # `--confidence low,medium` alike.
 UNPLACED_SPEAKER = "unknown"
+
+# The one speaker that needs no ``identified_by``: nobody said it, so there is
+# no call to have rested on anything. Every other value -- ``unknown`` included
+# -- requires evidence, which is what ``vision_apply._check_identified_by``
+# enforces and what the corpus already does (30 of 32 ``unknown`` groups carry
+# evidence; none of the 2,334 ``none`` groups do).
+NO_SPEAKER = "none"
 UNPLACED_CONFIDENCE = "low"
 
 # Above this overlap with a group the page already has, an addition is a

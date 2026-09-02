@@ -51,6 +51,7 @@ from barks_ocr.utils.vision_schema import (
     GROUP_TYPE_OPTIONS,
     IDENTIFIED_BY_KEY,
     IDENTIFIED_BY_OPTIONS,
+    NO_SPEAKER,
     OTHER_PREFIX,
     REVIEWED_CONFIDENCE,
     SEEDED_KEYS,
@@ -3030,24 +3031,22 @@ class EditorApp(App):
         )
 
         def on_save(_inst: Button) -> None:
-            selected = next((n for n, c in radios.items() if c.active), None)
-            if selected is None:
+            speaker, error_label.text = self._chosen_speaker(radios, other_text)
+            if error_label.text:
+                return
+            if not speaker:
                 popup.dismiss()
                 return
-            if selected == SPEAKER_OTHER_OPTION:
-                free_text = other_text.text.strip()
-                if not free_text:
-                    error_label.text = f'Type a name for "{OTHER_PREFIX}", or pick a roster entry.'
-                    return
-                speaker = OTHER_PREFIX + free_text
-            else:
-                speaker = selected
             cap = next((c for c, cb in cap_radios.items() if cb.active), CAP_COLOUR_NONE)
+            ticked = [k for k, cb in evidence.items() if cb.active]
+            error_label.text = self._evidence_error(group, speaker, ticked)
+            if error_label.text:
+                return
             self._apply_speaker(
                 pane,
                 speaker,
                 None if cap == CAP_COLOUR_NONE else cap,
-                [k for k, cb in evidence.items() if cb.active],
+                ticked,
                 review_note.text.strip(),
             )
             popup.dismiss()
@@ -3065,11 +3064,11 @@ class EditorApp(App):
             # contradict it. Every group annotated before this field existed has
             # none, so letting a confirmation record it is the only way to
             # backfill the evidence for the population most in need of it.
-            self._confirm_speaker_as_is(
-                pane,
-                [k for k, cb in evidence.items() if cb.active],
-                review_note.text.strip(),
-            )
+            ticked = [k for k, cb in evidence.items() if cb.active]
+            error_label.text = self._evidence_error(group, group.get(SPEAKER_KEY, ""), ticked)
+            if error_label.text:
+                return
+            self._confirm_speaker_as_is(pane, ticked, review_note.text.strip())
             popup.dismiss()
 
         save_btn = Button(text="Save")
@@ -3159,6 +3158,61 @@ class EditorApp(App):
         self._refresh_pane_labels()
         logger.debug(
             f'{pane.name} group {pane.group_id}: speaker set to "{speaker}" (cap {cap_colour}).'
+        )
+
+    @staticmethod
+    def _chosen_speaker(radios: dict, other_text: TextInput) -> tuple[str, str]:
+        """Resolve the popup's speaker selection into a stored speaker value.
+
+        Args:
+            radios: The roster radio buttons, keyed by option name.
+            other_text: The free-text input beside the ``other:`` row.
+
+        Returns:
+            ``(speaker, error)``. Both empty means nothing was picked, which is
+            not a mistake -- the caller closes the popup.
+
+        """
+        selected = next((n for n, c in radios.items() if c.active), None)
+        if selected is None:
+            return "", ""
+        if selected != SPEAKER_OTHER_OPTION:
+            return selected, ""
+        free_text = other_text.text.strip()
+        if not free_text:
+            return "", f'Type a name for "{OTHER_PREFIX}", or pick a roster entry.'
+        return OTHER_PREFIX + free_text, ""
+
+    @staticmethod
+    def _evidence_error(group: dict, speaker: str, ticked: list[str] | None) -> str:
+        """Return why this call cannot be stored yet, or "" if it can.
+
+        The editor is where a review is entered and ``vision_apply`` is where it
+        is validated, and the two disagreed: apply refuses a group whose speaker
+        is anything but ``none`` and which carries no ``identified_by``, while
+        the editor stamped ``speaker_reviewed`` regardless. A group could
+        therefore be walked through review, marked reviewed, drop out of every
+        ``--unreviewed`` queue, and still be rejected on the next apply -- which
+        is what happened to all three groups added to *The Pixilated Parrot*.
+
+        Ticking nothing on a group that already carries evidence is fine: the
+        stored value stands, and a confirmation is not obliged to restate it.
+
+        Args:
+            group: The stored group being reviewed.
+            speaker: The speaker about to be written.
+            ticked: Evidence kinds ticked in the popup, if any.
+
+        Returns:
+            The message to show the reviewer, or "" when the write may proceed.
+
+        """
+        if speaker == NO_SPEAKER or ticked or group.get(IDENTIFIED_BY_KEY):
+            return ""
+        return (
+            f'"{speaker}" has no identified_by — tick what the call rests on.'
+            " Storing it would stamp the group reviewed, drop it out of every"
+            " --unreviewed queue, and still be refused by the next apply."
         )
 
     @staticmethod
