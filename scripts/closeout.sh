@@ -210,6 +210,26 @@ for engine in easyocr paddleocr; do
     fi
 done
 
+# --- 4b. stored-group integrity: speaker drift, evidence, added-group faults --
+# Advisory. All three classes carry a standing backlog that predates the check,
+# so this prints and never gates; --fail-on-findings is for once one is cleared.
+echo "-> group audit"
+if capture group-audit uv run python scripts/vision/audit_groups.py "$TITLE"; then
+    lopsided=$(num group-audit 's/^=== hand-added groups present on only one engine: \([0-9]*\) page(s) ===$/\1/p')
+    drift=$(num group-audit 's/^=== other: speakers that differ only by case or an article: \([0-9]*\) ===$/\1/p')
+    if [[ -z "$lopsided" || -z "$drift" ]]; then
+        row FAIL "group audit" "could not parse output -- read the log"
+    elif ((lopsided > 0)); then
+        row WARN "group audit" "$lopsided page(s) add a group on one engine only"
+    elif ((drift > 0)); then
+        row WARN "group audit" "$drift other: speaker(s) differ only by an article"
+    else
+        row OK "group audit" "no speaker drift or one-engine adds"
+    fi
+else
+    row FAIL "group audit" "command failed -- read the log"
+fi
+
 # --- 5. mirror dry run -------------------------------------------------------
 # At --stage review this runs AFTER `vision-mirror --write`, so a non-zero count
 # means the mirror did not take. Never invoked with --write here.

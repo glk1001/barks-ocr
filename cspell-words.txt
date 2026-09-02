@@ -83,7 +83,9 @@ misrecognized
 mkldnn
 motionevent
 ndimage
+neighbour
 neighbours
+normalise
 norp
 numpad
 ocrc
