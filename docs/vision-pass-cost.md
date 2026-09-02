@@ -429,6 +429,60 @@ corrections landed on flagged groups). Medium was 46 calls across the batch and
 every one was resolved rather than left; **0 of 46 survived as medium**, which is
 what medium is for.
 
+Measured again on the 2026-09-01 batch — *Wild about Flowers* (10 pages) and
+*Vacation Time* (33 pages), both Vol. 9, 43 pages, 440 groups, both reviewed
+the next day:
+
+```
+speaker corrections                19 / 440  =  4.3%   whole batch
+    of which in the nephew domain  16 / 113  = 14.2%   Huey/Dewey/Louie/nephews
+images read                        84 / 43 pages = 1.95 per page
+cap colours: 76 of 85 survived, 9 overturned
+by title                     2.6% / 4.9%
+high 16/416 = 3.8%   medium 3/24 = 12.5%   (0 survived as medium)
+```
+
+Cost came down from the previous batch's 2.83 to **1.95** and the rate came down
+with it, 9.3% to 4.3%. That is not a trade — it is the previous entry's own
+prescription working. The 2.83 run was spending images to *see* the Vol. 9 cap
+and then naming it from the montage anyway; here every nephew name was cropped
+or probed, and the extra looking was cheaper because it was aimed.
+
+Three habits carried the reduction, all of them free:
+
+- **Hue arithmetic instead of a second image.** These are forest stories and the
+  background green (`#009e49`, H148) sits directly behind the crowns, one
+  degree-band away from the cap green (`#4da33f`, H112). `probe.py` separates
+  them for nothing, and doing that first meant a crop was only ever spent on a
+  crown that had already shown chromatic ink.
+- **Tiling by panel rather than by page.** 84 images carried about 130 separate
+  crops. The binding constraint on a contact sheet is that the long side must
+  stay under ~1500px or the whole sheet is downsampled and the magnification is
+  thrown away — three 2.5x crowns fit; three whole panels at 2.5x do not.
+- **Reading the montage for layout and nothing else.** Who is in frame, how many
+  balloons, which panels are silhouettes. Every name came from a crop, a probe
+  or `tailtip.py`.
+
+The one image class that did not pay: the first cap sheet on the reference panel
+of *Wild about Flowers* (029) was cropped too tight and had to be re-shot wider.
+Crop the head **and the shoulders** on a reference panel — a crown alone gives
+no scale and no neighbour to rank against.
+
+What the 19 corrections were, and none of them is an image that was declined:
+
+```
+ 6  wrong nephew          Huey/Dewey/Louie swapped for each other
+ 4  Donald -> a nephew    3 of them off-panel lines in a monologue stretch
+ 3  under-named           `nephews` the review sharpened to a name
+ 2  a nephew -> Donald
+ 4  other / none / over-named
+```
+
+The 4 `Donald -> nephews` are the finding. All three off-panel ones sit in the
+drive sequence, where Donald has been narrating for four pages and the panel
+holds nothing but scenery; the pass gave him the next line by momentum. That is
+a reasoning default, not a resolution problem.
+
 ## What is still worth an image
 
 - The **cap-reference panel**, once per title, before page 1. Getting the

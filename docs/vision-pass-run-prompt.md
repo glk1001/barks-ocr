@@ -1456,6 +1456,49 @@ reference panel 038 p2 (three boys in a row along a wall).
   words are ordinary speech balloons in the very next panel, which is what makes
   the device worth checking rather than assuming.
 
+Read again on 2026-09-01 with *Wild about Flowers* (10 pages) and *Vacation
+Time* (33 pages), 440 groups, both reviewed the next day. **19 corrections,
+4.3%** — 2.6% and 4.9% by title, against In Ancient Persia's 12.1%. The two
+things that changed are worth keeping.
+
+- **THE WIDE BAND IS A VIEWING ANGLE, NOT THE CONSTRUCTION.** The cap is a
+  coloured crown with a black band round it. Side-on the colour is broad —
+  4449px of `#e61b1f` on *Wild about Flowers* 029 p6, 1252px of `#05a4d6` on
+  *Vacation Time* 075 p6. From above or behind, the black band faces the reader
+  and the same cap survives as a rim of 100-400px. **Both appear in the same
+  title, often on the same page**, so neither reading licenses the other: crop
+  either way. 76 of 85 cap colours survived here, against 13 overturned in 297
+  groups last time.
+- **CAP GREEN IS H109-121; FOLIAGE GREEN IS H146-150.** `#4da33f`, `#4ca23e`,
+  `#51a353` against `#009e49`, `#3b9a62`. Both these titles are forest stories
+  and the background green sits directly behind the crowns, so a green patch at
+  H148 on a head is usually the wall of trees showing past the cap. The hue gap
+  is the whole discriminator and it is free from `probe.py`.
+- **THE COLOURIST DOES NOT TRACK THE BROTHERS IN *VACATION TIME*, AND THE STORY
+  PROVES IT TWICE.** A clean `#4da33f` H112 crown is called **DEWEY** by Donald
+  on 078 and **HUEY** by Donald on 087, confirmed by the chief on 093; the
+  camera-carrier is coloured red on 074, blue on 086 and green on 087/092.
+  Taking the vocative, recording the printed colour anyway and saying so in the
+  note was accepted on every one of those groups. Where nothing names anybody,
+  the convention plus `medium` is the right fallback — see below.
+- **MEDIUM IS STILL THE RIGHT MARKER AND STILL THE EXPENSIVE HALF.** 3 of 24
+  medium calls were corrected (12.5%) against 16 of 416 high (3.8%), and 0
+  survived as medium. Both the flagged art-versus-dialogue conflicts held.
+- **DONALD'S RUNNING COMMENTARY IS NOT AUTOMATICALLY DONALD.** 3 of *Vacation
+  Time*'s 16 are `Donald -> nephews` on off-panel lines in the drive sequence
+  (064 g0, 065 g3, 065 g11), where the panel holds only scenery and the line
+  reads like the lecture Donald has been giving for four pages. It is the boys.
+  An off-panel line in a monologue stretch still needs a reason beyond "he was
+  talking last".
+- **A DRAWN `?` OVER A BYSTANDER IS NOT HIS.** 092 g9, a question mark over the
+  tough guy while the boys produce the camera, went to `none`. The roster's
+  device rule names the figure a device hangs over; a `?` floating over a
+  reaction shot is punctuation on the panel, not on the man.
+- **A SONG WITH NO SINGER CAN BE THE FURNITURE.** *Wild about Flowers* 035 g9,
+  the only high-confidence call reversed in that title: a song coming out of the
+  drifting gondola is the boat's radio, which the dialogue installed two pages
+  earlier ("IT HAS A RADIO AND PLUSH SEATS!"). The review made it `other:radio`.
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
