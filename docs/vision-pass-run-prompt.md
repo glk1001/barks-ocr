@@ -944,6 +944,146 @@ one also its `identified_by: ["caption"]`. Check added groups against their own
 crop *and* their metadata before mirroring, or the residue is copied to both
 engines.
 
+### Findings to paste into the next run (2026-08-26, sixteenth batch)
+
+*Links Hijinks*, *Pizen Spring*, and the Vol. 6 1948 titles. **Reconstructed on
+2026-09-02 from the memory notes of the time, not written at review.** The rules
+are the notes' own; the correction counts are only quoted where a note recorded
+one.
+
+- **A teal-drifted cap band is as often the BLUE as the green.** In *Links
+  Hijinks* the H149-168 band was blue, and reading it green cost the pair. Rank
+  within the panel against a clean reference, and never carry a hue reading from
+  one page to the next.
+- **Below about S0.75 a cool band names nobody on its own.** It failed in *both*
+  directions in one title. Say so and take the tail instead.
+- **Five of eight corrections in one title were caps I declined and the reviewer
+  read.** Declining is not the safe option; it is the error. Probe the head's
+  pixel histogram before writing "no readable cap".
+- **`capsum` is a locator, not a decider.** Its 15px dilation and 150px floor
+  swallow real caps — never decline off `capsum` alone; `capscan` decides.
+- **Knowing Donald wears Dewey's blue makes you decline blue rather than check
+  it.** The crown SHAPE separates a sailor cap from a beanie; Dewey's blue
+  outnumbers Donald's.
+- **Gladstone wears the roster inks** — his fedora is the cap green and his bow
+  tie Dewey's blue — and *Pizen Spring*'s sky is `#01a3d3`, the same ink again.
+  A blob is only a cap if it sits on a head.
+- **A balloon with no tail is its own speaker.** Place the panel's tailed
+  balloons first, then give the tailless one what is left. Never inherit.
+- **On a `sound_effect` the speaker names WHO MAKES the noise**, and `none` means
+  nobody does.
+
+### Findings to paste into the next run (2026-08-27, seventeenth batch)
+
+*Lost in the Andes!* — **40 speaker corrections over 456 groups (8.8%)**, and
+32 of 128 nephew-domain calls (25%).
+
+- **Medium is where the error lives: 31.0% of what was written at medium was
+  corrected, against 7.3% of what was written at high.** A medium is not a
+  safe hedge; it is a coin-flip that reads as caution.
+- **`capscan`'s hue bands have one-degree cracks** at H182/183 and H12/340, and
+  its `green` band is not where the cap green lives. It reported `red: 0 /
+  green: 0 / blue: 0` for three plainly coloured caps. When a band comes back
+  empty and a name hangs on it, re-run `capwide.py` and then crop.
+- **A black crown with a small coloured wedge is misread about 4% of the time** —
+  15 `cap_colour_was` in 402 groups against 0 in the previous 613. Probe, then
+  crop at 4-6x. A wholly black crown still names its boy from the tail; it is not
+  a reason to fall back to `nephews`.
+- **`tailtip.py` returns the strongest spur, never the tail COUNT.** Reading one
+  returned spur as "one tail" merges two balloons and loses a name.
+- **Calling two balloons joined when each carries a tail loses a name** and
+  slides the whole cascade by one.
+- **A drawn device the engines missed reaches nobody unless the pass records it
+  in `visible_text`.**
+- **The editor can re-sort a page into reading order and renumber with no add and
+  no delete**, so compare id->ai_text when diffing a review, never the id set.
+
+### Findings to paste into the next run (2026-08-28, eighteenth batch)
+
+*Super Snooper*, *Frog-Jumping*, *Dowsing Ducks*, *The Goldilocks Gambit* —
+**22 corrections over 429 groups (5.1%)**, split very unevenly: 1.4%, 3.6% and
+**10.1%**.
+
+- **Desaturated pages invert an in-panel hue ranking rather than blurring it.**
+  Almost all of *Dowsing Ducks*' error is its desert half, where the ink washes
+  toward one teal: blue/red became green/red twice, and 14 `cap_colour` values
+  moved with the names. An eight-degree gap is noise. Crop instead of ranking.
+- **Never extrapolate a tail past its drawn tip.** All three nephew errors in
+  *The Goldilocks Gambit* were that one move: a slope projected ~100px to head
+  height **swapped the pair** both times. Quote the tip coordinate and the head
+  spans and stop. A computed landing point reads as measurement and wrongly
+  promotes the call to high.
+- **On an unreadable long shot the default is Donald**, 15 corrections to 5 the
+  other way — but only where nobody is legible at all.
+- **Two caps printing the identical ink still name their boys** from seating
+  order at medium with `cap_colour` null. Two disjoint wide samples returning the
+  same value is the printing, not a bad box.
+- **A coloured parka hood belongs in `cap_colour`**, not only in `costume`.
+- **Copy In keeps the seed's `ai_text`, `notes`, `acknowledged_issues` and
+  `style`** — check every group a review added against its own crop.
+
+### Findings to paste into the next run (2026-08-31, nineteenth batch)
+
+*New Toys*, *Donald's Love Letters*, *Rip Van Donald*, *Trail of the Unicorn*.
+*New Toys* ran **18 corrections in 122 groups (14.8%)**; *Love Letters* 2 in 104
+(1.9%) the same day with the same tools.
+
+- **A census zero on a sliver-cap title means CROP, not bare.** 13 of *New Toys*'
+  18 corrections were `nephews` -> a name on the two pages where a `heads2` zero
+  was taken as proof of bare heads and no crop was spent. The control title,
+  read the same day, came back 1.9%.
+- **Cap AREA is the discriminator, not confidence.** 25 of 25 names off full
+  crowns survived; a wedge cap overturned 15 colours and 8 names.
+- **Trace a crossing tail from the TIP upwards.** Picking the nearer balloon edge
+  inverted both names — the only 2 corrections in 171 groups.
+- **A story can print a PERMUTED palette.** *High-wire Daredevils* colours Louie
+  red on 3 of 10 pages. Let dialogue outrank the roster convention and hand back
+  a retouch list.
+- **Every group a review inserts strands exactly one already-annotated group.**
+  Match old to new by (text, occurrence) — never by id, never by text alone.
+- **Count `speaker_reviewed` on BOTH engines before calling a review done.** Six
+  titles running each finished exactly one group short.
+- **A chorus of all four is `other:Donald and the nephews`** — neither `Donald`
+  nor `nephews` was accepted.
+- **A long droopy beak makes the figure Donald whatever sits on its head**, and a
+  capscan zero for blue does not mean Donald is absent.
+
+### Findings to paste into the next run (2026-09-02, twentieth batch)
+
+*Serum to Codfish Cove*, *In Ancient Persia*, *Wild about Flowers*, *Vacation
+Time*, *The Pixilated Parrot*. **This is the batch that matters most for the
+next Vol. 9 run.**
+
+- **The Vol. 9 cap is a coloured crown with a black band, so its apparent width
+  is the VIEWING ANGLE.** Broad from the side (1252px of `#05a4d6`, a 4449px red
+  band), a 100-400px rim from above or behind. The same title gives both — do not
+  conclude a palette from a sliver. Cap green is H109-121; foliage green H146-150.
+- **Vacation Time's cap ink is unreliable and the story proves it.** The same
+  clean `#4da33f` H112 crown is Dewey on 078 and Huey on 087/092, both settled by
+  Donald using the name. Take the name, record the printed colour.
+- **Register is not evidence when the art is readable.** The largest single error
+  cluster of the batch: four balloons given to Donald on *Pixilated Parrot* 026
+  on grounds of "spokesman" and "only duck at readable size" — with a boy's red
+  cap measurable at (353..474). Net **5 `Donald` -> a nephew against 2 back**.
+  Run the cap census before writing `Donald` on an untraced balloon.
+- **An off-panel line in a monologue is not automatically his.** Three of
+  *Vacation Time*'s corrections are balloons over pure scenery in a stretch where
+  Donald had been lecturing for four pages. "He had the last line" is momentum.
+- **A running motif does not own every instance of itself.** 63 of *Pixilated
+  Parrot*'s 334 groups are the parrot's tally, and the one that was not is handed
+  over **two balloons earlier**: "MAYBE POLLY WILL HEAR US AND START COUNTING,
+  TOO!". Read the previous balloon before assigning the motif.
+- **Crop the HEADS, not the balloons.** The only wasted image of the run was a
+  four-tile sheet framed on balloons already transcribed; the heads the tails
+  point at were below the crop. Take the tip's y from `tailtip.py` and crop
+  downwards from it, wide enough for every candidate head plus shoulders.
+- **A missed-text finding can already have a box on it** — the group's text is a
+  duplicate of its neighbour's, so the fix is a retype, not a new group.
+- **`vision_added` means added by hand, not by the pass.** Never strip it, and do
+  not exclude those groups when counting corrections.
+- **`type_reviewed` silently declines a type proposal**: apply drops it and
+  reports a lower count. Say so in the close-out or it is lost.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -1430,10 +1570,23 @@ crown wedge is gone. Bare-headed on 007 and indoors on 029.
 
 Vol. 9, from *In Ancient Persia* read on 2026-09-01 and reviewed the same
 day — the first title read in this volume, so the palette below is new.
-**The construction is a black crown carrying a WIDE coloured band** over the
-top and down the side, several times the area of the Vol. 8 sliver and legible
-at contact-sheet scale: red `#e61b1f`, blue `#06a6d4`, green `#4da23f`,
-reference panel 038 p2 (three boys in a row along a wall).
+**CORRECTED 2026-09-01 from *Wild about Flowers* and *Vacation Time*.** This
+entry originally read "a black crown carrying a WIDE coloured band", which is one
+viewing angle rather than the construction. The cap is the classic **coloured
+crown with a black band round it**: seen from the side the colour is broad
+(1252px of `#05a4d6` on *Vacation Time* 075 p6, a 4449px red band on *Wild about
+Flowers* 029 p6) and legible at contact-sheet scale; seen from above or behind
+the black band faces the reader and the colour survives only as a rim of 100-400px.
+**The same title gives both, so never conclude a palette from a sliver.**
+
+Inks: red `#e61b1f`, blue `#06a6d4`, green `#4da23f`; cap green sits at H109-121
+against foliage green at H146-150. Reference panel 038 p2 (three boys in a row
+along a wall).
+
+**And the ink does not always name the boy.** *Vacation Time* gives the same
+clean `#4da33f` H112 crown to Dewey on 078 and to Huey on 087/092, each settled
+by Donald using the name out loud. Where a line names somebody, take the name and
+record the printed colour.
 
 - **The band shades badly and the two ends of the range collide.** Blue comes
   back as `#1fa3a0`, `#24a28f`, `#4da39e` (H171-178) in torchlight and desert
