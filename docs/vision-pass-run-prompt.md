@@ -9,6 +9,16 @@ generated `roster.txt`, and the image budget in `docs/vision-pass-cost.md`.
 **This file is only the part none of those can supply**: which titles, and what
 the last review found.
 
+**The skill now reads this file itself.** `/vision-pass <N>` takes the titles
+from `barks-ocr-vision-status --titles --todo` and the findings from the most
+recent `### Findings to paste into the next run` section below, so the prompt no
+longer has to be written out by hand each time. The template is kept for the
+occasions that need one — a batch with an unusual instruction, or a run started
+somewhere without the skill.
+
+What still needs a human is the other end of the loop: **after a review, write
+the findings back here as a fresh dated section.** Nothing derives those.
+
 ## The prompt
 
 ```

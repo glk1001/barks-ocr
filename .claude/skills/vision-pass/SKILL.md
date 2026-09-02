@@ -16,6 +16,38 @@ The prompt that *starts* a run is `docs/vision-pass-run-prompt.md` — the title
 block, the last review's findings, and the volume's cap palette, which are the
 only parts this skill and `roster.txt` cannot supply.
 
+## Starting a run
+
+`/vision-pass <N>` is enough. Two inputs a run needs; both have a fixed home, so
+neither has to be typed out.
+
+**Which titles** — the head of the work list, oldest first:
+
+```bash
+barks-ocr-vision-status --titles --todo | head
+```
+
+Take the first N, and say the title block back once — title, volume, pages, year
+— so the batch is on the record. Sanity-check any title that looks incomplete
+against its zero-group count before re-running it.
+
+**What the last review found** — the most recent `### Findings to paste into the
+next run` section of `docs/vision-pass-run-prompt.md`. **Read that one section
+before page 1.** It is the only input neither this skill nor `roster.txt`
+carries: the procedure and the reading rules are fixed, but the findings are
+what stops a corrected error class coming back, and they are written as *rules*
+for that reason. Read the latest section only — the older ones are the audit
+trail, and re-reading fifteen batches of them is its own kind of overspend.
+
+That file also carries the **per-volume cap palette**. If the batch stays inside
+a volume just read, say so and carry the palette over: it is fixed per volume
+from a clean reference panel, and re-deriving it is where a run loses
+corrections.
+
+**After a review, write the new findings back** as a fresh dated section in that
+file. That is the one step in the loop that needs a human, and it is what makes
+the next `/vision-pass <N>` self-sufficient.
+
 ## The sequence, per title
 
 ```bash
@@ -72,6 +104,35 @@ text, so check both. Details in `docs/missed-text.md`.
 **One message per page**: `groups.json`, `page.png` and every panel crop issued
 together. This is 1.6 min/page against 11 — the per-page cost becomes one model
 turn rather than ten round trips.
+
+### The image budget — target 3 images read per page, 5 the ceiling
+
+**The numbers and the per-page ladder live in `docs/vision-pass-cost.md`.** Read
+it rather than restating it: it carries the measured per-title table, the three
+allowed views in order (panel montage at 250px, a whole-panel view at 0.55-0.62x
+only where two figures could speak *and* a cap is readable, a crop only where the
+tips are within a head-width), and the list of what never earns an image.
+
+Two things from it that govern the whole run:
+
+- **Read `page.png` and `panel-NN.png` straight off disk.** A manufactured crop
+  costs a Bash turn *and* an image read, then sits in context for the session.
+  The good 51-page run read 136 images off ~25 helper calls; the 9.4-per-page run
+  generated 229.
+- **Colour is a file to sample, not an image to look at.** `scripts/vision/capscan.py`
+  reports every blob and its hex, so "which ink is this cap" costs a few hundred tokens
+  and answers better than the eye — it is what caught two caps printing an
+  identical `#0a9e9c`. Load a panel for **tails and figures** only.
+
+**Report the image count and the per-page rate in the close-out**, next to the
+correction counts. That number is the only way the next run knows whether the
+budget held, and going over 5 on a cap-dense title is a thing to say out loud
+rather than absorb.
+
+Run the **close-out at low effort** — prep, apply, audit, engine diff, queues,
+mirror, commit. That half is procedure with tool output as the check. Keep high
+effort for the reading, where the failure mode is a confident, plausible, wrong
+note that costs a reviewer pass rather than failing loudly.
 
 **Crop tails from `panel-NN.png`, never `page.png`.** The panel files are source
 resolution and share the `text_box` coordinate space; `page.png` is about half,
