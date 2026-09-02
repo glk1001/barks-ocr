@@ -2126,10 +2126,10 @@ class EditorApp(App):
         pane = self._queue_primary_pane()
         if pane is None:
             return
-        if not self._confirm_speaker_as_is(pane):
+        problem = self._confirm_speaker_as_is(pane)
+        if problem:
             logger.warning(
-                f"Nothing to confirm on {pane.name} group {pane.group_id}:"
-                " the vision pass set no speaker here. Staying put."
+                f"Not confirming {pane.name} group {pane.group_id}: {problem} Staying put."
             )
             return
         logger.info(f"Confirmed {pane.name} group {pane.group_id} as is.")
@@ -3038,17 +3038,15 @@ class EditorApp(App):
                 popup.dismiss()
                 return
             cap = next((c for c, cb in cap_radios.items() if cb.active), CAP_COLOUR_NONE)
-            ticked = [k for k, cb in evidence.items() if cb.active]
-            error_label.text = self._evidence_error(group, speaker, ticked)
-            if error_label.text:
-                return
-            self._apply_speaker(
+            error_label.text = self._apply_speaker(
                 pane,
                 speaker,
                 None if cap == CAP_COLOUR_NONE else cap,
-                ticked,
+                [k for k, cb in evidence.items() if cb.active],
                 review_note.text.strip(),
             )
+            if error_label.text:
+                return
             popup.dismiss()
 
         def on_confirm(_inst: Button) -> None:
@@ -3065,10 +3063,11 @@ class EditorApp(App):
             # none, so letting a confirmation record it is the only way to
             # backfill the evidence for the population most in need of it.
             ticked = [k for k, cb in evidence.items() if cb.active]
-            error_label.text = self._evidence_error(group, group.get(SPEAKER_KEY, ""), ticked)
+            # The guard lives in _confirm_speaker_as_is so that every caller gets
+            # it; the popup just shows whatever reason comes back.
+            error_label.text = self._confirm_speaker_as_is(pane, ticked, review_note.text.strip())
             if error_label.text:
                 return
-            self._confirm_speaker_as_is(pane, ticked, review_note.text.strip())
             popup.dismiss()
 
         save_btn = Button(text="Save")
@@ -3090,7 +3089,7 @@ class EditorApp(App):
         cap_colour: str | None,
         identified_by: list[str] | None = None,
         review_note: str = "",
-    ) -> None:
+    ) -> str:
         """Write a reviewed speaker attribution to this pane's current group.
 
         ``speaker_confidence`` becomes ``high`` — a human has now looked at the
@@ -3119,7 +3118,10 @@ class EditorApp(App):
         """
         group = pane.json_group()
         if group is None:
-            return
+            return ""
+        problem = self._evidence_error(group, normalize_speaker(speaker), identified_by)
+        if problem:
+            return problem
         # Canonicalize before storing: the free-text box can produce doubled
         # spaces, and a roster name typed behind "other:" is just that name.
         speaker = normalize_speaker(speaker)
@@ -3159,6 +3161,7 @@ class EditorApp(App):
         logger.debug(
             f'{pane.name} group {pane.group_id}: speaker set to "{speaker}" (cap {cap_colour}).'
         )
+        return ""
 
     @staticmethod
     def _chosen_speaker(radios: dict, other_text: TextInput) -> tuple[str, str]:
@@ -3252,7 +3255,7 @@ class EditorApp(App):
         pane: EnginePane,
         identified_by: list[str] | None = None,
         review_note: str = "",
-    ) -> bool:
+    ) -> str:
         """Stamp this group's existing speaker call as human-reviewed, unchanged.
 
         ``speaker`` and ``cap_colour`` are left exactly as the vision pass wrote
@@ -3277,14 +3280,24 @@ class EditorApp(App):
                 as readily as on a correction: agreeing with a call for a stated
                 reason is worth more than agreeing silently.
 
+        The evidence guard lives HERE rather than at the call sites, because one
+        of those is `_handle_confirm_and_next` -- the one-keystroke queue
+        confirm, which opens no popup and so passes no ``identified_by`` at all.
+        Guarding only the popup left the fast path, which is the one a reviewer
+        working a queue actually uses, still able to stamp a review that records
+        nothing. A group with no stored evidence now cannot be confirmed by
+        keystroke: it has to be opened and the evidence ticked.
+
         Returns:
-            ``True`` if a call was stamped, ``False`` if there was none to
-            confirm.
+            "" when the call was stamped, otherwise why it was not.
 
         """
         group = pane.json_group()
         if group is None or not group.get(SPEAKER_KEY):
-            return False
+            return "the vision pass set no speaker here"
+        problem = self._evidence_error(group, group.get(SPEAKER_KEY, ""), identified_by)
+        if problem:
+            return problem
         group[SPEAKER_CONFIDENCE_KEY] = REVIEWED_CONFIDENCE
         group[SPEAKER_REVIEWED_KEY] = True
         # Deliberately no `speaker_was`: nothing was superseded. Its absence on a
@@ -3300,7 +3313,7 @@ class EditorApp(App):
         logger.debug(
             f'{pane.name} group {pane.group_id}: speaker "{group[SPEAKER_KEY]}" confirmed as is.'
         )
-        return True
+        return ""
 
     @staticmethod
     def _show_confirm_popup(  # noqa: PLR0913
