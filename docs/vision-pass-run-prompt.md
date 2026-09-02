@@ -1267,6 +1267,51 @@ The first Vol. 10 title read, and the first with the wedge cap on blue water.
   g8, 021 g5), which matches the *You Can't Guess!* finding above: where the
   tip sits between two boys the pass loses either way, so `nephews`.
 
+### Findings to paste into the next run (2026-09-03, twenty-second batch, third title)
+
+*No Such Varmint* (Vol. 10, 28 pages, 335 groups after the review added one),
+reviewed the next day: **69 speaker corrections, 20.6%** -- 67 in the nephew
+domain (36.4% of 184), the worst figure in this file. High 58 of 304 (19.1%),
+medium 10 of 30 (33.3%). Cost 1.11 images per page, the cheapest of the three,
+and that is the finding.
+
+- **FIFTY collectives were named, and the pass had declined every one of them
+  on a probe zero.** 26 are figures the note calls tiny (boys on a wall, in a
+  boat, in the reeds, on a rock across the bay), 21 are boys at readable size
+  whose crown probed no ink, 3 are the bare-headed boys on the sofa (071
+  g0-g2) whom the review named from the caps lying beside them ("holding
+  cap"). The reviewer read the wedge on all fifty. `probe.py` on a 60px head
+  finds nothing because the wedge is a dozen pixels of ink on the far side of
+  the crown; it is not evidence of absence. **On a wedge-cap title every boy
+  who speaks gets a 3x crop of his head**, tiled three or four to a sheet --
+  one image a page would have bought most of the fifty, and the title had two
+  images a page to spare.
+- **Twelve wedge colours were overturned, every one a sliver under 600px read
+  from a census or a 0.8x crop**: green -> blue four times (077 g8, 079 g9,
+  080 g8, 071 g14 red -> blue), red -> blue three times, red -> green and
+  green -> red twice each. No direction, so noise, exactly the Vol. 7 wedge
+  signature. Under a few hundred pixels the hue is not readable in-process;
+  crop at 4x and look.
+- **A cap on the sofa beside a bare head names the boy sitting nearest it.**
+  071 g0-g2: the review wrote "holding cap" on all three. The *Magic
+  Hourglass* rule (a cap in a hand names its holder) extends to a cap lying at
+  a boy's side indoors.
+- **Flute notes are dialogue.** The pass proposed `sound_effect` on the
+  TWEETLE groups (073 g2/g4, 077 g4/g5), reasoning that a flute is not a voice
+  like the whistled tune in the roster; the review put all four back to
+  dialogue. Music a character makes on the panel is that character's line.
+  The serpent's ROAR on 079 g3 went the other way, to `none` and
+  `sound_effect` (the pass's dialogue proposal was declined silently), while
+  its SNORF! and HIC! stayed dialogue -- read that as the roar belonging to the
+  spray rather than a rule about animals.
+- **Two names were withdrawn (073 g9, 075 g10), both red slivers under 400px
+  where a boy was pushing or pointing and the tail was long.** With the
+  twelve swaps that is fourteen wedge reads wrong against fifty declined; the
+  balance still says crop and name.
+- **The text correction on 083 g5 (SNARF! -> SNORF!) was neither accepted nor
+  declined** and is the one item outstanding on the title; it is in
+  `queue-corrections.txt` for both engines.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at

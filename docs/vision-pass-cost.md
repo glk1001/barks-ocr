@@ -535,7 +535,20 @@ speaker corrections  (Dangerous Disguise)  25 / 324  =  7.7%   after excluding
                                                               groups, 1 rename
     of which in the nephew domain         25 /  72  = 34.7%
 high 26/316 = 8.2%   medium 2/8 = 25%
+
+speaker corrections  (No Such Varmint)     69 / 335  = 20.6%
+    of which in the nephew domain         67 / 184  = 36.4%
+    of which collectives named            50
+high 58/304 = 19.1%   medium 10/30 = 33.3%
 ```
+
+*No Such Varmint* posts the worst rate in this file at the lowest cost in this
+file, 1.11 images a page, and the two facts are one fact: fifty of its sixty-nine
+corrections are collectives the pass declined on a `probe.py` zero, on a title
+whose cap is a dozen pixels of ink on one side of a black crown. The reviewer
+named every one. The cheapest run is not the best run when the cheapness is
+images the page needed: a 3x tiled crop of every speaking boy's head, one image
+a page, would have converted most of the fifty and left the title under 2.5.
 
 *Dangerous Disguise* is the worst nephew-domain figure in this file, and 12 of
 its 25 are the same mechanism as *New Toys*: a probe zero on a tiny wedge cap
