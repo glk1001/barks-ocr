@@ -149,13 +149,23 @@ def check_format(repo: Path, paths: list[str]) -> tuple[list[str], list[str]]:
             continue
         raw = blob.stdout
         try:
-            want = json.dumps(json.loads(raw), indent=indent).encode()
+            loaded = json.loads(raw)
         except (UnicodeDecodeError, json.JSONDecodeError) as exc:
             fatal.append(f"{path}  ({type(exc).__name__})")
             continue
+        # The groups files are ASCII-escaped; the page-capture and
+        # panel-descriptions files are written by `vision_apply` with
+        # ensure_ascii=False, so a literal cent sign or em dash is the
+        # expected form there. Measured 2026-09-02: 108 of 1727 tracked
+        # page-capture files carry literal non-ASCII and none carry \u
+        # escapes. Accept either encoding rather than NOTE on every apply.
+        wants = [
+            json.dumps(loaded, indent=indent).encode(),
+            json.dumps(loaded, indent=indent, ensure_ascii=False).encode("utf-8"),
+        ]
         if newline:
-            want += b"\n"
-        if raw == want:
+            wants = [want + b"\n" for want in wants]
+        if raw in wants:
             continue
         note = f"{path}  (expected indent={indent}"
         note += ", trailing newline)" if newline else ", no trailing newline)"
