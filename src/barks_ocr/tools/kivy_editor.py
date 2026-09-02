@@ -2128,6 +2128,15 @@ class EditorApp(App):
             return
         problem = self._confirm_speaker_as_is(pane)
         if problem:
+            group = pane.json_group() or {}
+            if group.get(SPEAKER_KEY):
+                # The call is there, only its evidence is missing. Refusing into
+                # the log would leave the reviewer pressing a key that visibly
+                # does nothing, so open the popup they need instead: the reason
+                # shows in its error label and the tick boxes are right there.
+                logger.info(f"{pane.name} group {pane.group_id}: {problem} Opening the popup.")
+                self._show_speaker_popup(pane, problem)
+                return
             logger.warning(
                 f"Not confirming {pane.name} group {pane.group_id}: {problem} Staying put."
             )
@@ -2957,7 +2966,7 @@ class EditorApp(App):
         content.add_widget(note)
         return note
 
-    def _show_speaker_popup(self, pane: EnginePane) -> None:
+    def _show_speaker_popup(self, pane: EnginePane, notice: str = "") -> None:
         """Review the vision pass's speaker attribution on this pane's current group.
 
         Only this pane is touched. The vision pass runs against a single engine
@@ -2973,6 +2982,14 @@ class EditorApp(App):
         Without it a confirmation is indistinguishable on disk from never having
         opened the group, which is why *Sheriff of Bullet Valley*'s 13
         confirmations rest on the reviewer's report rather than on the data.
+
+        Args:
+            pane: The engine pane whose current group is being reviewed.
+            notice: Pre-filled text for the popup's error label, used when the
+                popup was opened *because* something was refused -- the
+                one-keystroke queue confirm hands its reason across, so the
+                reviewer sees why the popup appeared instead of an empty box.
+
         """
         group = pane.json_group()
         if group is None:
@@ -3012,8 +3029,10 @@ class EditorApp(App):
 
         review_note = self._build_review_note_input(content, group.get(SPEAKER_REVIEW_NOTE_KEY))
 
+        # Seeded when the popup was opened *because* something was refused, so
+        # the reviewer sees why it appeared rather than an empty box.
         error_label = Label(
-            text="", size_hint_y=None, height=22, font_size="13sp", color=(1, 0.4, 0.4, 1)
+            text=notice, size_hint_y=None, height=22, font_size="13sp", color=(1, 0.4, 0.4, 1)
         )
         content.add_widget(error_label)
 
@@ -3212,11 +3231,7 @@ class EditorApp(App):
         """
         if speaker == NO_SPEAKER or ticked or group.get(IDENTIFIED_BY_KEY):
             return ""
-        return (
-            f'"{speaker}" has no identified_by — tick what the call rests on.'
-            " Storing it would stamp the group reviewed, drop it out of every"
-            " --unreviewed queue, and still be refused by the next apply."
-        )
+        return f'"{speaker}" has no identified_by — tick what the call rests on.'
 
     @staticmethod
     def _speaker_widgets_differ(
@@ -3294,7 +3309,7 @@ class EditorApp(App):
         """
         group = pane.json_group()
         if group is None or not group.get(SPEAKER_KEY):
-            return "the vision pass set no speaker here"
+            return "the vision pass set no speaker here."
         problem = self._evidence_error(group, group.get(SPEAKER_KEY, ""), identified_by)
         if problem:
             return problem
