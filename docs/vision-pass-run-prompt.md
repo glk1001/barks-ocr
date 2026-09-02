@@ -1300,17 +1300,18 @@ and that is the finding.
   TWEETLE groups (073 g2/g4, 077 g4/g5), reasoning that a flute is not a voice
   like the whistled tune in the roster; the review put all four back to
   dialogue. Music a character makes on the panel is that character's line.
-  The serpent's ROAR on 079 g3 went the other way, to `none` and
-  `sound_effect` (the pass's dialogue proposal was declined silently), while
-  its SNORF! and HIC! stayed dialogue -- read that as the roar belonging to the
-  spray rather than a rule about animals.
+  The ROAR on 079 g3 went the other way, to `none` and `sound_effect`,
+  because it is the outboard motor at the stern, not the serpent: the pass
+  read the word's content into the nearest creature. The serpent's SNORF! and
+  HIC! stayed dialogue, so the animal-voice rule holds; read the drawing under
+  the lettering, not the onomatopoeia.
 - **Two names were withdrawn (073 g9, 075 g10), both red slivers under 400px
   where a boy was pushing or pointing and the tail was long.** With the
   twelve swaps that is fourteen wedge reads wrong against fifty declined; the
   balance still says crop and name.
-- **The text correction on 083 g5 (SNARF! -> SNORF!) was neither accepted nor
-  declined** and is the one item outstanding on the title; it is in
-  `queue-corrections.txt` for both engines.
+- **The text correction on 083 g5 (SNARF! -> SNORF!) was accepted after the
+  mirror**, in a separate commit; a text correction has its own review state
+  and the speaker count says nothing about it.
 
 ## Per-volume cap palette
 
