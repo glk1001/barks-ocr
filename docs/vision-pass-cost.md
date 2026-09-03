@@ -597,6 +597,25 @@ case -- a big head with cap ink on it, named Donald because it was big. None
 of that needed an image, and the medium rate (32%) says the pass knew where it
 was guessing.
 
+Measured again on the 2026-09-03 review of *Knightly Rivals* (Vol. 10, 10
+pages, 137 groups after one add), the second title of the same batch:
+
+```
+speaker corrections                17 / 137  = 12.4%   (16 / 136 excluding the add)
+    of which in the nephew domain   8 /  27  = 29.6%   Huey/Dewey/Louie/nephews
+images read                        16 / 10 pages = 1.60 per page
+high 15/129 = 11.6%   medium 2/7
+batch                              46 / 508  =  9.1%   at 2.2 images per page
+```
+
+The cheapest title of the batch and the worst rate, and five of the sixteen
+are the one image class this file says to buy: a whole-head crop on a crown
+the census called black. The pass cropped a strip across the crown fronts and
+declared all five unreadable; the review named them all. The other eleven are
+identities carried across panels -- which woman wears the blue dress, who is in
+the armour, who is in the ogre suit -- and one more big head read as Donald,
+written on the same day as the rule against it.
+
 ## What is still worth an image
 
 - The **cap-reference panel**, once per title, before page 1. Getting the

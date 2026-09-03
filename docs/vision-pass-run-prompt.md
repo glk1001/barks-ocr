@@ -1518,6 +1518,69 @@ pass's own (both held), two the review's (129 g12 thought -> dialogue,
 - **The licence plate 313 on 112 was left ungrouped**, as on The April
   Foolers 099; the audit line stays.
 
+### Findings to paste into the next run (2026-09-03, twenty-fourth batch, second title)
+
+*Knightly Rivals* (Vol. 10, 10 pages, 137 groups after the review added
+one), reviewed the same day and mirrored clean: **17 speaker corrections,
+12.4%**, of which 1 is the reviewer's added ACT I label, so the pass's real
+count is **16 of 136, 11.8%** -- 8 in the nephew domain (29.6% of 27). Cost
+1.6 images per page, the cheapest title of the batch and the worst rate.
+High 15 of 129, 11.6%; medium 2 of 7. Three type corrections, two of them
+the pass's own SNORT! moves (held) and one the review's (142 g0, the
+director's opening line stored as narration).
+
+- **DAISY IS THE HAIR BOW, NOT THE DRESS.** 141 g11 and 142 g5 were given to
+  `other:the drama-club director` because the speaker wore a blue dress and
+  held the script; both were Daisy. The two women swap dress colours from
+  panel to panel in this story, and the only constant is Daisy's red bow and
+  the director's brown hair and spectacles. Name an adult woman off the
+  feature Barks keeps fixed, not off the ink the colourist changes.
+- **A CROWN CROP THAT STOPS AT THE BROW MISSES THE WEDGE.** All five of 140's
+  collectives (p4 g4-g6, p7 g9-g10) were named by the review, one by
+  elimination; the pass had cropped a strip across the crown fronts at 2.5x
+  and called them black. The wedge sits at the top and back of the crown.
+  Crop the whole head with air above it, as the April Foolers rule says, and
+  a probe box the same. 140 g2, the one name the pass DID make off a 551px
+  census green, was withdrawn -- the hedge behind the boys is green too.
+- **The close-up rule did not survive one title.** 147 g14 (YOU JOKERS KNOW
+  VERY WELL WHO IS GOING TO WIN THAT DUEL! SHUT UP!) is one big head at the
+  left with 401px of red on its crown in the census, written Donald; the
+  review made it Huey. Written the same day as the In Old California! finding
+  that says exactly this. One big head, one probe, before Donald.
+- **Track who is inside the armour panel by panel.** 145 g4 (I'M THE GUY THAT
+  CAN PUT THE CHIV IN CHIVALRY!) went Donald -> Gladstone: on 145 the armoured
+  knight is Gladstone, with Donald in his sailor suit calling him a tinhorn
+  show-off on the same page. The pass carried "Donald is the one in armour"
+  over from 142-143.
+- **A balloon over two brawlers is a chorus of two.** 142 g4 (THAT LETS HIM
+  OUT!, each pointing a thumb at the other) and 144 g9 (OH, YEAH? WELL, WE'LL
+  DECIDE THAT RIGHT NOW!) both became `other:Donald and Gladstone`; the pass
+  had picked the one whose beak was open.
+- **Do not build a plot to name a costume.** The pass reasoned that the
+  magnetised pair must be inside the ogre suit on 149 and gave the ogre's
+  four lines to `other:Donald and Gladstone`. The review made the ogre
+  `other:another actor` (149 g4, g7), gave OUCH! AIN'T I SUPPOSED TO BE
+  PADDED to the `nephews` in the knight suit who take the blow, and the
+  closing CHIVALRY, PHOOEY! to Daisy, whose hennin is the tall silhouette
+  chasing the three small knights. Where a figure is a costume and nothing
+  on the page says who wears it, `other:` the costume and let the reviewer
+  decide.
+- **The reviewer's `other:` value is `other:another actor`**, now on 2 groups;
+  reuse it rather than inventing a synonym.
+- **The added group arrived clean** (144 g7 ACT I, `none`, reviewed, flagged
+  on both engines) and the last id on the page came back unreviewed, as
+  *Reviews finish one group short* predicts; one queue line fixed it. ACT I
+  was lettering the pass never put in `visible_text`, which is the gap the
+  skill now closes.
+
+**Batch summary, twenty-fourth batch (Vol. 10, 38 pages, 510 groups after
+two adds):** 49 speaker corrections, of which 3 are reviewer-added groups or
+their neighbours, so **46 of 508, 9.1%**; nephew domain **36 of 126, 28.6%**.
+Split by title 8.1% / 11.8%. Cost 2.2 images per page. Neither title's error
+is a wedge left uncropped: it is Donald taking lines that belong to the boys
+(17 of the 46), one big head read as Donald three times on each title, and
+two costume or dress-colour identities carried across panels.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
