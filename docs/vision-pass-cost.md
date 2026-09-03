@@ -566,6 +566,37 @@ saving there came from probing crowns in-process and cropping only where a
 probe found ink, and from reading whole pages as a montage plus a report of
 tail tips -- most pages cost exactly one image.
 
+Measured again on the 2026-09-03 review of *In Old California!* (Vol. 10, 28
+pages, 373 groups after one add), reviewed the same day:
+
+```
+speaker corrections                32 / 373  =  8.6%   (30 / 372 excluding the add)
+    of which in the nephew domain  28 /  99  = 28.3%   Huey/Dewey/Louie/nephews
+images read                        68 / 28 pages = 2.43 per page
+high 21/343 = 6.1%   medium 9/28 = 32.1%
+```
+
+The dearest title since *The April Foolers* and the worst rate since *No Such
+Varmint*, and for once the two are unrelated: not one of the 32 is a wedge the
+pass declined to crop. Sorted:
+
+```
+14  Donald -> a boy         3 of them close-up heads written `sole-figure`
+ 5  wrong nephew            a row of three shifted one figure, twice
+ 3  a boy -> Donald
+ 3  over-named              two brown-red wedges and a gap-lean
+ 3  other: roles
+ 4  captions, unknowns, an added group
+```
+
+The images went on wedges, which held (22 blue, 17 red, 16 green survive; the
+three withdrawn were the muddy ones), and the errors are register: a 28-page
+story in which the boys do most of the deciding, read with the long-shot
+default that hands a decision to Donald. The three close-ups are the plainest
+case -- a big head with cap ink on it, named Donald because it was big. None
+of that needed an image, and the medium rate (32%) says the pass knew where it
+was guessing.
+
 ## What is still worth an image
 
 - The **cap-reference panel**, once per title, before page 1. Getting the

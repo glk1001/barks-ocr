@@ -1451,6 +1451,73 @@ nephew domain on the wedge-cap title is an under-naming or a wedge misread;
 the two titles with no readable cap came in under 3.5% on dialogue and tails
 alone.
 
+### Findings to paste into the next run (2026-09-03, twenty-fourth batch)
+
+*In Old California!* (Vol. 10, 28 pages, 373 groups after the review added
+one), reviewed the same day and mirrored clean: **32 speaker corrections,
+8.6%**, of which 2 are the reviewer's added `? ? ?` and its neighbour, so
+the pass's real count is **30 of 372, 8.1%** -- 28 in the nephew domain
+(28.3% of 99). Cost 2.43 images per page. Confidence: **high 21 of 343,
+6.1%; medium 9 of 28, 32.1%.** Four type corrections, two of them the
+pass's own (both held), two the review's (129 g12 thought -> dialogue,
+134 g20 the `$ $ $` balloon background -> dialogue, Donald).
+
+- **A CLOSE-UP HEAD IS NOT DONALD BY DEFAULT.** 117 g4 (SURE! JUST LIKE
+  INDIANS LIVED...), 120 g9 (HOLD IT! I SEE SMOKE!) and 121 g2 (I DON'T CARE
+  WHO LIVES THERE!) were written `sole-figure` Donald on panels that hold
+  one big duck head, and the review gave them to Louie, Louie and Huey. On
+  117 p3 the census had 132px of cap green ON that head and the note called
+  it "a boy's cap intruding at the left edge". A single big head earns one
+  probe: Donald's cap prints `#016ca7`, a boy's wedge one of the three, and
+  a beak-and-eye close-up hides the size cue. Three of the title's fourteen
+  Donald -> a boy corrections were this one move.
+- **Donald's lines went to the boys fourteen times and the boys' to Donald
+  three.** Beyond the close-ups, 116 g0/g3, 117 g9, 118 g5, 119 g1, 120 g11
+  and 137 g0 were adult-register lines on panels holding Donald AND boys,
+  every one settled by register ("the lecture continues", "the leader's
+  line") with the tail tip 50-120px from either head. On this title the
+  boys lecture, decide and proclaim; register lost 14-3. Where the tip is
+  within a head-width of a boy, the boy has it whatever the words sound
+  like.
+- **A row of three shifted by one, twice.** 134 g18/g19: the caps were
+  measured red, blue, green left to right, the tips fell over the blue and
+  green boys, and the review named the red and blue boys -- both tails one
+  figure left of where the tip x said. The head spans came from beak boxes
+  on running figures, whose heads lead the beak. When the census gives the
+  spans, crop the row once before naming three from it.
+- **The gap-lean rule went 0 for 2 here.** 113 g14 (tip in the gap, leaned
+  right, named the red boy) came back `nephews`; 138 g0 (gap, leaned right,
+  named green) came back Dewey, the boy on the OTHER side. With 2 for 2
+  against after 5 for 0 for, the lean is a tie-break for a tip that stops
+  short of two heads, not a rule that names one.
+- **Brown-red wedges are not red.** 124 g8 (#8e542a, H19) and 137 g10 named
+  Huey off a dull red-brown wedge came back `nephews`, and 135 g2's
+  "red-brown wedge" was a blue one (Huey -> Dewey). Vol. 10's red in shade
+  can print brown, but a hue under 25 with S under 0.7 is unreadable, not
+  red: record the collective and say why.
+- **A yellow caption box can be the boys'.** 126 g8 (TONS OF BARBECUED MEAT,
+  AND FRIJOLES AND TAMALES...) was written `narrator` off the box; the review
+  made it `nephews` and left the type narration. The April Foolers rule (WE
+  is not the narrator's word) has a sibling: a menu recited with relish is a
+  boy's.
+- **The flagged conflicts split 1-1.** 122 g11 (PUT THE GUN AWAY!, the tail
+  on Don Gaspar who holds the rifle) went to Don Gaspar: the tail won over
+  the sense of the line. 132 g3 (SOME WALK!, flagged for the tail leaning
+  toward the boys) held as Donald. Flag them; do not pre-empt them.
+- **The review's add carried a false `vision_added`.** 127 gained `? ? ?`
+  on both engines, and on easyocr the neighbouring AND THEN! caption came
+  back as g19 with `vision_added: true` that the pass commit shows it never
+  had; paddleocr's copy has no flag. The mirror is by text so nothing
+  crossed wrongly, but the group audit now reports one hand-added group on
+  one engine only, and it is this artefact, not a missing group. Left in
+  place -- a `vision_added` is provenance until someone says otherwise.
+- **A thought balloon stored on a speech balloon went unchecked.** 129 g12
+  (I THINK THERE IS SOMETHING WE CAN DO! I'LL SEE!) is a pointed-tail balloon
+  stored as `thought`; the pass read the speaker and never the type. The
+  type rule is a drawing test and costs nothing on the montage.
+- **The licence plate 313 on 112 was left ungrouped**, as on The April
+  Foolers 099; the audit line stays.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -2055,6 +2122,14 @@ that *Voodoo Hoodoo* and *No Such Varmint* had, not the Vol. 9 coloured crown:
   probe against what is behind the head before writing the colour down.
 - **Cap green is H111-135, foliage H148**, the Vol. 9 rule again; `capscan`
   files the cap under `leafgrn` and the bushes under `green`.
+- **The red wedge in shade prints brown, and the same teal can be Donald's
+  cap.** *In Old California!* (2026-09-03): a red wedge turned away from the
+  light reads `#8e542a`-`#b07d44` (H19-26, S0.6-0.77), and two of three such
+  reads were withdrawn by the review while a third was blue. Donald's sailor
+  cap prints `#016ca7` in most panels but `#369a8a` (H170) on 114 p1, the
+  identical teal to a boy's wedge in the same panel, so a teal on a big head
+  is Donald before it is Dewey. Lit crowns from behind are full colour:
+  red `#e21b20`, blue `#00a4d5`, green `#44b16d` (H142).
 - **Winter titles put no colour on the boys at all.** *Operation St. Bernard*
   dresses them in identical brown fur hats outdoors and bare heads indoors, so
   every nephew name in it came from the "Colonel X" address chain and nothing
