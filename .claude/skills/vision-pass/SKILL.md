@@ -123,6 +123,27 @@ group copied inside a finished title is born already signed off wearing the seed
 group's speaker; and a box dragged onto the right lettering does not change the
 text, so check both. Details in `docs/missed-text.md`.
 
+**MISSED TEXT GOES AT THE TOP OF THE HAND-BACK, ITEM BY ITEM, AND IS WORKED
+FIRST.** Save the audit's output beside the queues
+(`... > <out-dir>/queue-missed.txt`) and open the hand-back message with the
+list itself — page, panel, the lettering, and which of the three classes it is —
+not a count in a table. A `1 in neither engine` line in a close-out table was
+read only after the whole In Old California! review was done (2026-09-03), and
+the reviewer then had to come back to a finished title for a licence plate.
+Two more reasons it comes first: the reviewer has to ADD those groups before
+working the speaker queue, because an add renumbers the page and strands every
+later queue entry on it; and a finding the reviewer decides against still needs
+their word before it can go in the ignore list. Say plainly when there is none,
+so silence is never mistaken for "not checked".
+
+**The audit can only see what `visible_text` holds.** Every page's capture must
+carry every piece of non-speech lettering on it — signs, labels, sound effects,
+a licence plate, a drawn `?` — including lettering that IS grouped, because the
+diff is what finds the ones that are not. Knightly Rivals came back "title not
+read" from the close-out because no page carried any; In Old California! had
+the 139 plate found only on a second look. Fill it on every page, not just
+where something looks unusual.
+
 ## Reading the pages
 
 **One message per page**: `groups.json`, `page.png` and every panel crop issued
@@ -205,7 +226,9 @@ engine field 3 — keep the summary header, drop the `# --- category ---`
 separators. **Report all four counts per title** — speakers, text, type and
 missed text — not just the speaker ones: reporting only speakers is how the text
 corrections went unnoticed for fifteen titles, and missed text has no count at
-all unless the audit is run and its result said out loud.
+all unless the audit is run and its result said out loud. Missed text is not a
+count in that table: it is the first thing in the message, listed in full (see
+*Run the missed-text audit* above).
 
 `vision-corrections` reads the **corpus**, not the out-dir, so it still answers
 for titles whose scratch directory is long gone. It covers **both engines** by
@@ -305,6 +328,11 @@ commit that is really 140/141 is bad provenance. `--unreviewed` with no
 - Tool output is buried in DEBUG logs; filter with `grep -v "| DEBUG \|WARNING"`.
 
 ## Reporting
+
+**Lead with the missed text**, per title, every item with its page, panel and
+lettering, before any count or table — or the sentence "no missed text" if the
+audit found none. It is the one finding the reviewer must act on before the
+speaker queue, and the one that was missed until after a review.
 
 Report **per title, not in one lump**. Say whether observed cap colour surfaced
 any tail/cap disagreement, and list the distinct `other:` speaker values so
