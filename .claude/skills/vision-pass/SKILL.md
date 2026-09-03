@@ -124,10 +124,22 @@ group's speaker; and a box dragged onto the right lettering does not change the
 text, so check both. Details in `docs/missed-text.md`.
 
 **MISSED TEXT GOES AT THE TOP OF THE HAND-BACK, ITEM BY ITEM, AND IS WORKED
-FIRST.** Save the audit's output beside the queues
-(`... > <out-dir>/queue-missed.txt`) and open the hand-back message with the
-list itself — page, panel, the lettering, and which of the three classes it is —
-not a count in a table. A `1 in neither engine` line in a close-out table was
+FIRST.** Write it as a real queue, `<out-dir>/queue-missed.txt`, and open the
+hand-back message with the list itself — page, panel, the lettering, and which
+of the three classes it is — not a count in a table. The audit's printout is
+NOT a queue file: the editor takes five fields per line, `volume page engine
+group kind`, with an integer group id, and a missed item has no group yet. Park
+each entry on a neighbouring group in the same panel, one line per engine, and
+put the lettering and panel after the kind, where the parser ignores them:
+
+```
+# missed text -- grouped by NEITHER engine; add in the editor
+10 139 easyocr 3 missed-text 313 (licence plate, panel 3)
+10 139 paddleocr 3 missed-text 313 (licence plate, panel 3)
+```
+
+A file of report text loads as nothing at all — the editor skips every line
+with a warning — which is what happened the first time (2026-09-03). A `1 in neither engine` line in a close-out table was
 read only after the whole In Old California! review was done (2026-09-03), and
 the reviewer then had to come back to a finished title for a licence plate.
 Two more reasons it comes first: the reviewer has to ADD those groups before
