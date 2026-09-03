@@ -1313,6 +1313,51 @@ and that is the finding.
   mirror**, in a separate commit; a text correction has its own review state
   and the speaker count says nothing about it.
 
+### Findings to paste into the next run (2026-09-03, twenty-third batch)
+
+*A Financial Fable* (Vol. 10, 10 pages, 120 groups after the review added
+one), reviewed the same day and mirrored clean: **5 speaker corrections,
+4.2%**, of which 1 is the reviewer's own added CLOSED sign (100 g20, unknown
+-> none), so the pass's real count is **4 of 119, 3.4%** -- all 4 in the
+nephew domain (28.6% of 14). No mediums were written. Cost 1.8 images per
+page. *Operation St. Bernard* and *The April Foolers* are still under review.
+
+- **The boys lecture Donald, not the other way round.** 092 g6 (IF YOU'RE
+  GONNA WEAR WARM WOOL JACKETS, YOU GOTTA WORK TO GET THE WOOL!) and 092 g9
+  (...YOU GOTTA WORK TO GET THE EGGS!) went Donald -> Huey and Donald ->
+  Louie. Donald has just said I HATE WORK, and YOU GOTTA WORK is said *to*
+  the complainer; the pass read the panel as an adult lecturing a child and
+  never traced either tail. Half the title's corrections. Read who is
+  addressed before deciding who speaks, and trace the tail even when the
+  register looks settled -- the caps were there to read (the census had the
+  egg boy's green at 325px and the pass wrote it off as furniture).
+- **A probe zero on a wedge is still not a verdict**, on the first title
+  where the pass thought it had learned that. 096 g8: the note reads "at 2.5x
+  his black crown shows no coloured wedge", and the review named Louie. The
+  probe box was 100 pixels wide on a crown that turns away from the reader;
+  one more crop at 4x would have found the wedge on the far side.
+- **A gap-landing tip is named by its lean.** 096 g9: the tail "angles
+  down-right and its tip lands in the gap between the middle boy (blue) and
+  the right boy (red)", recorded as `nephews` under the twenty-second batch's
+  rule, and the review gave it to the red boy the tail leaned toward. That
+  makes the lean 5-0 over the tip across two batches and 1-0 over declining.
+  Where the tip sits in a gap, take the boy the tail leans toward; do not
+  pick the nearer head, and do not decline.
+- **The added group arrived clean.** 100 g20 (a CLOSED sign on panel 5) came
+  with `vision_added`, no `identified_by`, no `vision_note`, `none` on
+  easyocr and `unknown`/`low` on paddleocr, which the mirror overwrote. No
+  residue to clear -- the first added group in five titles that needed no
+  hand edit.
+- **`review_findings.py` lists every `type_was`, not only this review's.**
+  It reported four type corrections; 093 g5/g6 and 099 g14 already carried
+  their `type_was` at the pass commit, from an earlier sweep. Only 095 g0
+  (the pass's own dialogue -> thought) belongs to this review. Check
+  `git show <pass-commit>` before counting a type correction against a pass.
+- **The licence plate 313 on 099 was not grouped.** The missed-text audit
+  still reports it; the reviewer grouped the plates on *You Can't Guess!*
+  and left this one, so a prop number is the reviewer's call each time and
+  the audit line stays until they say ignore.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
