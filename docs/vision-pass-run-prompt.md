@@ -1358,6 +1358,46 @@ page. *Operation St. Bernard* and *The April Foolers* are still under review.
   and left this one, so a prop number is the reviewer's call each time and
   the audit line stays until they say ignore.
 
+### Findings to paste into the next run (2026-09-03, twenty-third batch, second title)
+
+*Operation St. Bernard* (Vol. 10, 10 pages, 135 groups after the review added
+one), reviewed the same day and mirrored clean: **5 speaker corrections,
+3.7%**, of which 1 is the reviewer's added `? ?` over Donald on 054 p7, so the
+pass's real count is **4 of 134, 3.0%** -- 3 in the nephew domain (5.3% of
+57). No mediums written. Cost 1.4 images per page. A winter title with no cap
+ink anywhere, so every correction is about tails and register, not colour.
+
+- **Two boys named by dialogue name the third.** 054 g2 (OH, BOY! OH, BOY!)
+  was `nephews` because the boys are bare-headed indoors; the review made it
+  Huey with the note "Not Dewey or Louie" -- the other two boys in the same
+  panel are Dewey and Louie by the Colonel address chain. Elimination is
+  accepted when all three are in frame and two carry a name from the
+  dialogue. The pass had both names in its own notes on the neighbouring
+  groups and did not use them.
+- **THE KIDS is Donald's word.** 063 g4 (IT'S THE KIDS!) went to the chief
+  because the balloon sat over him; the review gave it to Donald. The chief
+  calls the boys Colonels in every one of his 25 lines and never anything
+  else. Where two adults share a panel and a balloon sits between them, the
+  vocabulary decides before the balloon position does.
+- **Two tails read wrong on a 0.55x contact sheet, one each way.** 057 g9
+  (ALL HE DOES IS HUDDLE ON THE WARM SIDE OF THE TREES!) Donald -> nephews,
+  and 056 g2 (OR ELSE HE DOESN'T WANT TO GET HIS FEET WET!) nephews ->
+  Donald. Both were adult-against-boys calls settled from a half-scale sheet
+  of four panels, the cheapest view the run used. When the question is Donald
+  against a boy and the panel holds both, the sheet tile needs to be 0.8x or
+  the panel read on its own.
+- **The pass missed a device it had already described.** The `? ?` over
+  Donald on 054 p7 is in the pass's note for group 15 ("Donald ... stands
+  between the two boys with a ? over him") and nowhere else: not grouped by
+  either engine, not in `visible_text`, so the missed-text audit could not
+  see it. A drawn device the note mentions belongs in `visible_text` too.
+- **The added group arrived clean on both engines** (`identified_by`
+  `balloon-tail`, no note, `speaker_reviewed` on both). Second clean add in
+  a row since the editor started insisting on `identified_by`.
+- **Two of the four type corrections predate the pass** (056 g0, 056 g11 --
+  `type_was` already at the pass commit); the pass's own two (054 g5 DOGS
+  book cover, 058 g4 PANT! PUFF!) were confirmed.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
