@@ -1891,6 +1891,39 @@ things that changed are worth keeping.
   drifting gondola is the boat's radio, which the dialogue installed two pages
   earlier ("IT HAS A RADIO AND PLUSH SEATS!"). The review made it `other:radio`.
 
+Vol. 10, from *A Financial Fable* 097 p5 (three boys seen from behind, red,
+green and blue wedges in a row) read on 2026-09-03, and confirmed on *The April
+Foolers* the same day. The cap is the **black crown carrying coloured wedges**
+that *Voodoo Hoodoo* and *No Such Varmint* had, not the Vol. 9 coloured crown:
+
+| | |
+|---|---|
+| red (Huey) | `#e61b1f` |
+| blue (Dewey) | `#06a4d4` |
+| green (Louie) | `#4da23f` (H111), shaded to `#2ea04a` (H135) |
+| foliage green | `#009e49` (H148) |
+| fence rail and water | `#00a5d7`, the wedge blue exactly |
+
+- **Even from behind a wedge is about 500px.** On the reference panel the
+  three crowns fill the frame and capscan still finds 491, 512 and 723px of
+  ink. From the front the same wedge is a 50-400px sliver at one side of the
+  crown, `heads.py` reports nothing on most of them, and only a 2-3x crop
+  reads it. Budget one crop sheet a page on a nephew-dense title; *The April
+  Foolers* named 45 of 73 nephew lines that way at 2.7 images a page.
+- **The scenery prints in two of the three inks.** The fence rail and the
+  river are `#00a5d7`, the bushes `#009e49`; a probe box that touches either
+  reports a cap that is not there (*The April Foolers* 111 p1 probed 897px of
+  "green" that was the bank behind the boy). Red has no look-alike. Rank a
+  probe against what is behind the head before writing the colour down.
+- **Cap green is H111-135, foliage H148**, the Vol. 9 rule again; `capscan`
+  files the cap under `leafgrn` and the bushes under `green`.
+- **Winter titles put no colour on the boys at all.** *Operation St. Bernard*
+  dresses them in identical brown fur hats outdoors and bare heads indoors, so
+  every nephew name in it came from the "Colonel X" address chain and nothing
+  from the art. And the boys go bare-headed indoors in ordinary stories too
+  (*The April Foolers* 102 p2-p6, breakfast) and lose their caps in the river
+  on 111.
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
