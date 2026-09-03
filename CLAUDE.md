@@ -62,6 +62,13 @@ writes, are `indent=2` **with** a trailing newline. Prove the round trip before
 any scripted edit, or a one-string change reformats the whole file. The prelim
 repo's pre-commit hook now refuses a mis-formatted groups file.
 
+To work in a second checkout of that repo (a `git worktree`, so that hand edits
+stay out of the tree another session is using), set `BARKS_OCR_PRELIM_DIR` to
+its path: every `barks-ocr-*` command then reads and writes the prelim JSON
+there, and `ocr_check` runs its git check there. Only the prelim root moves;
+images, annotations and `Prelim-backups` stay put. A path that is not a
+directory fails at import.
+
 ## Architecture
 
 ### Shared Packages
