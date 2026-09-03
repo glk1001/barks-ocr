@@ -1398,6 +1398,59 @@ ink anywhere, so every correction is about tails and register, not colour.
   `type_was` already at the pass commit); the pass's own two (054 g5 DOGS
   book cover, 058 g4 PANT! PUFF!) were confirmed.
 
+### Findings to paste into the next run (2026-09-03, twenty-third batch, third title)
+
+*The April Foolers* (Vol. 10, 10 pages, 129 groups after the review added
+one), reviewed the same day and mirrored clean: **14 speaker corrections,
+10.9%**, of which 1 is the reviewer's added MEIN KAMPF book cover (103 g2)
+and 1 a caption that is really a boy's line, so the pass's real count is
+**12 of 128, 9.4%** -- all 12 in the nephew domain (16.4% of 73). No mediums
+written. Cost 2.7 images per page, the dearest of the three, and the title
+that bought the most crops still under-named the most.
+
+- **TEN COLLECTIVES WERE NAMED, AND EVERY ONE HAS A NOTE SAYING THE WEDGE
+  DID NOT READ.** 102 g9 ("only a dull olive patch"), 103 g3 ("no wedge at
+  0.8x and a probe finds no cap ink"), 105 g12/g13 ("a dark olive patch at
+  3x"), 106 g4 ("cropped at 2x his crown is wholly black"), 107 g10/g11,
+  108 g4, 109 g10 ("only 45px of desaturated water blue"), 103 g9 (tiny
+  figures). The reviewer read red, green and blue on all ten. Two things
+  follow. A **dull olive patch on a black crown IS the green wedge in
+  shadow** (105 g12, 106 g4, 108 g4 all went to Louie), so a desaturated
+  patch is a colour, not an absence -- the *Cap slivers drift teal* rule for
+  green. And a wedge sits on the far side of the crown from the reader as
+  often as not, so a probe box on the visible side reads nothing; when the
+  crown probes empty, the answer is the wedge on the OTHER side, which
+  needs the full head at 4x, not a 100px box.
+- **A probe can still name the wrong boy.** 107 g9 went Dewey -> Louie with
+  325px of #06a5d5 on the probe, and 108 g8 Huey -> Dewey off a red sliver
+  read at 0.6x. On 107 p7 the boy is lying on his back laughing with a blue
+  fence rail behind his head; the blue was the rail. Rank the probe against
+  what is behind the head (the Vol. 10 palette note), and a crown seen
+  from an odd angle needs the crop, not the census.
+- **A drop-capital box is not always the narrator.** 103 g12 (WHEN HE
+  REACHES FOR THE WALLET, WE JERK IT AWAY AND YELL APRIL FOOL!) is a yellow
+  box with a drop capital and a first-person plural; the review made it
+  `nephews` and `dialogue`. WE is not the narrator's word. The Vol. 9
+  finding (a yellow box with an arrow tail is the narrator) has its
+  converse: a box with the boys' pronoun in it is a boy speaking.
+- **The insert ate the page's tail again.** 103 gained one group at id 2,
+  every later id shifted, and the last id (old g13, Donald's thought) came
+  back unreviewed; a one-line queue fixed it. Count `speaker_reviewed`
+  against the group count on any page that gained a group before calling
+  the review done, as *Reviews finish one group short* says.
+- **The pass's seven type proposals all held**: four bubble-trailed
+  balloons of Donald's stored as dialogue and the three ZZZ snores plus one
+  more moved to dialogue with the sleepers named. Three more `type_was`
+  entries (105 g4, 106 g1, 107 g9) predate the pass.
+
+**Batch summary, twenty-third batch (Vol. 10, 30 pages, 383 groups after
+three adds):** 24 speaker corrections, of which 3 are reviewer-added groups,
+so **21 of 380, 5.5%**; nephew domain **19 of 144, 13.2%**. Split by title
+3.4% / 3.0% / 9.4%. Cost 1.97 images per page. Every correction in the
+nephew domain on the wedge-cap title is an under-naming or a wedge misread;
+the two titles with no readable cap came in under 3.5% on dialogue and tails
+alone.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
