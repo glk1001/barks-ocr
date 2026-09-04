@@ -156,3 +156,28 @@ HELP KEEP AMERICA STRONG
 11 064 music notes drawn beside Donald as he skis in panel 4
 11 066 music notes drawn inside the song balloon in panel 3
 11 067 music notes drawn inside the song balloons in panels 3 and 7
+
+# Ruled out by GLK, 2026-09-04, Terror of the Beagle Boys (Vol. 10):
+# "it's a mix of ! ? and icons - so I'll leave this one out".
+#
+# Two classes. First, the burst cloud over Donald on 011 as the telephone wakes
+# him: a red star, a puff and two exclamation marks together, so there is no
+# string an ai_text could carry -- the same case as the Watching the Watchman
+# devices above, not the lone `!` groups the corpus types as thought/dialogue.
+10 011 ! ! -- two exclamation marks in a burst cloud over Donald in panel 6, beside a red star and a puff of shock symbols
+#
+# Second, the Barks money-bag and safe-door dollar sign, on 8 of the title's 10
+# pages. This is the money-bin story, so the emblem is scenery here in a way the
+# Rival Beachcombers 178 hood ornament was not; that one was kept out of this
+# list deliberately so it would be raised once, and it was. Recorded in each
+# page's visible_text as a true record of what is printed, and left ungrouped.
+10 006 a dollar sign painted on the safe door in panel 2
+10 006 a dollar sign on the money sack in panel 2
+10 007 dollar signs woven into the curtains behind Donald in panel 2
+10 009 a dollar sign on the money sack in panels 4 and 6
+10 009 a dollar sign on the front of the counting desk in panel 1
+10 010 dollar signs on the window curtains in panel 1
+10 012 dollar signs on the curtains behind the pair in panels 3 and 4
+10 013 dollar signs on the money sacks behind the door in panel 1
+10 014 a dollar-sign emblem on the disc above the building name in panel 7
+10 015 dollar signs on the loose banknotes in panels 5 and 6

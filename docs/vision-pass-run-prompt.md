@@ -2171,6 +2171,75 @@ no cap to read, do not spend the cap budget on it -- read the tails and go.
   122/122 on speakers and still owes two boxes. Check the counts, not the
   hand-back.
 
+### Findings to paste into the next run (2026-09-04, twenty-seventh batch, third title)
+
+*The Screaming Cowboy* reviewed and mirrored, 141/141. **26 speaker corrections
+in 141 groups, 18.4%, and 20 of 60 in the nephew domain -- 33.3%.** The worst
+title of the run by a factor of three, and it closes the batch at:
+
+```
+Terror of the Beagle Boys     0 of 122   0.0%    no nephews in the story
+Gladstone's Usual...         12 of 140   8.6%    7 of 29 nephew (24.1%)
+The Screaming Cowboy         26 of 141  18.4%   20 of 60 nephew (33.3%)
+batch                        38 of 403   9.4%   27 of 89 nephew (30.3%)
+   highs 18/119 (15.1%) against mediums 7/21 (33.3%) on the third title
+```
+
+- **THE TEAL BAND IS THE BLUE. I GOT THIS WRONG TWICE IN ONE BATCH, IN OPPOSITE
+  DIRECTIONS, AFTER BUILDING A RULE THAT SAID SO.** In *Gladstone's* I anchored
+  on the blue ("it always prints exactly `#00a5d7`, so a cool badge that is not
+  that is the green") and a shaded blue at H177.8 came back Dewey. In *The
+  Screaming Cowboy* I anchored on VALUE instead ("green at V0.64, blue never
+  below V0.74") and **four** shaded blues came back Dewey: 063 g11 `#2ca487`,
+  064 g0 `#2da49c`, 065 g2 `#3ba487`, 067 g7 `#3d967a`, every one of them
+  H160-178 at V0.59-0.64.
+  Both rules were built from the LIT badges in the title and then applied to the
+  shaded ones, which is the one place they cannot hold: shading moves a blue
+  down into the green's value and across into the green's hue.
+  **Anchor on the green instead. It is the stable ink in both titles --
+  H108-130 in *Gladstone's*, H108-112 here -- and anything cooler than about
+  H140 is the blue however muddy it looks.** This is
+  [[project_teal_band_was_blue_not_green]], which I quoted and then reasoned
+  past.
+- **AND I NAMED A PINE TREE AS A CAP.** 061 g7's `#4da140` at H112.7 is the tree
+  green I had written into that title's own commit message as a look-alike --
+  "the cap green to two decimal places, so a green blob has to be shown sitting
+  on a head before it names anybody". I then took a blob at (769,451) and named
+  the boy under it without checking. The reviewer made it Huey. A `capscan` hit
+  is ink, not a cap; put the crop up and see the head.
+- **ROLE REASONING LOST TWICE ON WIDE SHOTS.** 061 g11 ("Donald is the one who
+  would rent the cabin") and 062 g3 ("Donald leads the hunt, and he speaks in
+  the panels either side") both went to **nephews**. On a wide shot where no
+  figure is readable, a line about what the party is going to do next belongs to
+  the boys -- they are the detectives in this story and Donald is the one being
+  managed. "Who would say this" is not evidence; it lost both times it was used.
+- **A DIALOGUE CHAIN NAMES ACROSS ONE PANEL, NOT ACROSS AN INTERRUPTION.** The
+  one over-naming, 063 g5, was named Huey because the objection two panels later
+  is answered by a boy whose cap reads red -- so, I argued, the opening line was
+  his too. The review made it `nephews`. Contrast 067 g12, where the same
+  reasoning was NOT corrected: there the question and its answer are adjacent
+  panels with nothing between them. When another boy speaks in between, the
+  chain is broken.
+- **A SECOND COPY OF A GROUPED STRING NEEDS ITS OWN `visible_text` LINE.** The
+  review added 058 g17, the `313` licence plate in panel 4. The pass had grouped
+  the same plate in panel 7 and written **one** `313` into `visible_text`, so the
+  audit matched it against the panel-7 group and reported the page clean --
+  [[project_vision_audit_nearmiss_gap]] exactly. Write one entry per occurrence
+  with the panel named ("313 on the licence plate, panel 4" and "... panel 7")
+  and the second copy becomes visible.
+- **Under-naming is still the biggest single class: 9 of 26.** Most were panels
+  where the note says "no cap stripe readable at this size" -- 065 g0/g1, 066
+  g1, 067 g0/g1/g4. The reviewer's own note on 067 g0 is the method: **"Not
+  Dewey or Huey"** -- elimination against the *other balloons in the scene*, not
+  just against the other caps in the panel. If two of three boys in a
+  three-balloon exchange are named, the third is named too, whatever his cap is
+  doing.
+- **The free-text role name drifted inside a single batch.** The review renamed
+  the same role two ways: `other:Junior Woodchuck` in *Gladstone's* and
+  `other:a Junior Woodchuck` here, 4 and 8 groups. And `other:Woodchucks chief`
+  (6) sits beside the corpus's established `other:the Junior Woodchucks chief`
+  (50). Grep the family whenever a review renames a role, and raise it.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
