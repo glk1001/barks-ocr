@@ -2084,6 +2084,88 @@ inks. Construction is per story, not per volume -- and on the one-pagers it is
 usually turned away, so 8 of 23 nephew-domain groups are named and the rest are
 pages where the boys are bare-headed, established at a 30px cap floor.
 
+### Findings to paste into the next run (2026-09-04, twenty-seventh batch, two titles reviewed)
+
+*Terror of the Beagle Boys* and *Gladstone's Usual Very Good Year* reviewed and
+mirrored. **12 speaker corrections in 262 pass-written groups, 4.6%** -- but the
+two titles could hardly be further apart, and the split is the whole story:
+
+```
+Terror of the Beagle Boys    0 of 122   0.0%   no nephews in the story at all
+Gladstone's Usual...        12 of 140   8.6%   7 of 29 in the nephew domain (24.1%)
+                                               highs 10/129 (7.8%), mediums 2/11 (18.2%)
+```
+
+**A TWO-HANDER WITH NO NEPHEWS IS THE CHEAPEST UNIT IN THE CORPUS.** *Terror* is
+Scrooge and Donald for ten pages and came back **0 of 122**, beating even the
+Vol. 11 one-pagers' 0.8%. Every call rested on a traced tail, on a costume key
+that never varies (Donald in the black jacket and red bow tie, Scrooge in the
+blue coat) or on what the line says, and all 122 went at high. When a title has
+no cap to read, do not spend the cap budget on it -- read the tails and go.
+
+- **THE CAP-REFERENCE PANEL IS ALSO A PANEL YOU HAVE TO NAME PEOPLE IN.** Four
+  of *Gladstone's* seven nephew corrections are one panel, **050 p1 -- the very
+  panel the pass used to fix the title's palette.** It measured green `#519d3e`,
+  blue `#00a5d7` and red `#e51b20` on three badges in a row, wrote all three
+  hexes into its own note, and then recorded every balloon in the panel as
+  `nephews` because "the three heads overlap". The review named all four off
+  those measurements. Deriving the palette from a panel and then declining to
+  apply it *there* is the purest form of the use-the-evidence-you-already-wrote
+  error: the panel you chose as the reference is by construction the one where
+  the caps read best.
+- **A PER-TITLE COLOUR RULE BUILT ONLY FROM LIT BADGES WILL FAIL ON THE SHADED
+  ONE, AND IT COST TWO NAMES.** The pass observed that *Gladstone's* blue prints
+  `#00a5d7` H194.0 S1.00 V0.84 in every panel it measured, and turned that into
+  "a cool badge that is not exactly the blue is the green". 054 g9's `#1da39e`
+  (H177.8 S0.82 V0.64) is a **shaded blue**, and the review made it Dewey. The
+  value rule that worked on *The Screaming Cowboy* -- green at V0.64, blue never
+  below V0.74 -- would have given the same wrong answer here.
+  What actually separates them in this title is the GREEN's range, not the
+  blue's: the green badges run **H117-130** (`#4e9c51`, `#50984d`, `#4da33e`) and
+  never leave it, so **anything cooler than about H140 is the blue, however
+  muddy it looks.** That is [[project_teal_band_was_blue_not_green]] again, and
+  the pass had that memory and reasoned past it.
+- **AND THE ELIMINATION INHERITS THE ERROR.** 054 g11 was named Dewey by
+  "two named leaves the third" -- correct reasoning on top of the wrong first
+  read, so the review had to flip it to Louie as well. One misread badge cost
+  **both** names in the row. Elimination is only as good as the cap it
+  eliminates from; sample the third badge before leaning on it.
+- **A DUCK IN DONALD'S OUTFIT WITHOUT THE HAT IS NOT DONALD.** 057 g1: the pass
+  read the figure beside the tipping bowl as Donald "who has lost his beret in
+  the fall", on the strength of the black-and-white striped sleeves. The review
+  made it **Huey**, red recorded. In this title the nephews wear black jackets
+  too, so the sleeve is not a Donald key -- the beret is, and its absence should
+  have forced a cap probe rather than an explanation for why it is missing.
+- **A DRAWN `!` IS DIALOGUE; A DRAWN `?` IS THOUGHT.** 056 g7, the single red
+  exclamation mark over Gladstone as he takes in the size of the bowl, was
+  proposed as `thought` by analogy with the one-pagers' `? ? ?` over Donald. The
+  review made it **dialogue**. Put with 196's `! ! !` over the shouting boys,
+  the split is by the mark, not by how vocal the figure looks: `!` is voiced,
+  `?` is not. The pass's other two type proposals (054 g14 `BZZT!` and 057 g5
+  the ticket number in its own balloon, both to `dialogue`) stand as written.
+- **THE PHANTOM `type_was` INFLATED THE TALLY AGAIN, THREE TO ONE.**
+  `review_findings.py` reported 6 type corrections for *Gladstone's*; 048 g12,
+  051 g12 and 053 g12 already carried `type_was` at the pass commit and are not
+  review work at all. **One** type correction was actually made. Diff `type_was`
+  against the pass commit before quoting the number -- this is the third batch
+  in a row where it has misled.
+- **A REVIEW CAN HAND BACK A ROLE NAME THAT DUPLICATES AN ESTABLISHED ONE.**
+  `other:Holsworthy Hog` became `other:Woodchucks chief` (6 groups after
+  mirroring), and the corpus already carries **50** groups on
+  `other:the Junior Woodchucks chief`. Grep the corpus for the new value's
+  neighbours the moment a review renames a free-text role, and raise it before
+  it spreads.
+- **A four-dot ellipsis and a four-dash run are the same thing at 300px.** The
+  pass marked 057 g4 `text_ok` true off the montage; the art reads
+  `NUMBER! ----`, not `NUMBER!...`, and the reviewer hand-edited both engines.
+  A run of small marks inside a balloon is not a `text_ok` you can grant from a
+  contact sheet.
+- **Missed text handed back is not done until it is on disk.** *Terror*'s two
+  additions (011 p6's burst-cloud `! !`, 015 p6's fifth `BEAGLE BOYS`) are still
+  not there -- group counts are unchanged on both engines -- so the title is
+  122/122 on speakers and still owes two boxes. Check the counts, not the
+  hand-back.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -2699,11 +2781,15 @@ Do not carry a construction across a story boundary; derive it from the
 story's own clean panel before page 1. The inks themselves do hold:
 red `#e51b20`, blue `#00a5d7`, green `#4da33f`/`#519d3e` (H108-112).
 
-- **The blue is the anchor, not the green.** In *Gladstone's* the blue prints
-  `#00a5d7` H194.0 S1.00 V0.84 in **every** panel measured, while the green
-  drifts H108-H146. So a cool badge that is not the exact blue is the green --
-  which is what named 054 g9's `#1da39e` (H177.8), a badge that hue alone would
-  have left unreadable.
+- **The GREEN is the anchor in *Gladstone's*, and reading it the other way
+  round cost two names.** The pass argued that the blue prints `#00a5d7` H194.0
+  S1.00 V0.84 in every panel, so a cool badge that is not exactly that must be
+  the green -- and 054 g9's `#1da39e` (H177.8 S0.82 V0.64) turned out to be a
+  **shaded blue**, which the review made Dewey and which then flipped 054 g11 as
+  well. Anchor on the green instead: it runs **H117-130** (`#4e9c51`, `#50984d`,
+  `#4da33e`) and never leaves that range, so anything cooler than about H140 is
+  the blue however muddy it looks. Value does not help here -- the shaded blue
+  sits at V0.64, the green's own value.
 - **In *The Screaming Cowboy* the blue drifts too, and VALUE separates them.**
   The cap green prints V0.64 at any hue (`#4da33e` H111, `#2ca487` H165,
   `#2da49c` H176, `#3ba487` H163); the blue never drops below V0.74
