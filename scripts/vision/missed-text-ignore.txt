@@ -181,3 +181,22 @@ HELP KEEP AMERICA STRONG
 10 013 dollar signs on the money sacks behind the door in panel 1
 10 014 a dollar-sign emblem on the disc above the building name in panel 7
 10 015 dollar signs on the loose banknotes in panels 5 and 6
+
+# Vol. 11, three titles read 2026-09-04. Dollar signs drawn on MONEY -- sacks,
+# bags, banknote bundles -- rather than on a sign or a fixture. The reviewer
+# added the two that are lettering on an object (068 g14, the hanging shop
+# sign; 093 g2, the back of Scrooge's chair) and declined these. 068's entry is
+# here even though it IS now grouped: the group's text is a bare "$", which
+# normalises to nothing, so no visible_text wording can ever match it. 093's
+# entry covers both halves -- the chair back is grouped, the sacks are declined.
+11 068 a dollar sign painted on the hanging shop sign at the left of panel 8
+11 070 a dollar sign drawn on the banknote bundles in the money bin
+11 071 a dollar sign drawn on each of the money bags in panels 1 and 5
+11 093 a dollar sign drawn on each of the money sacks in panels 4, 7 and 8, and on the back of Scrooge's chair in panel 1
+11 094 a dollar sign drawn on the money sack in panels 1, 7 and 8
+
+# Statuesque Spendthrifts 075 panel 5 carries a red-framed sign at the top right
+# whose lettering runs off the panel border after two characters, "WO". Real
+# lettering and correctly found, but a clipped fragment of an unknowable word is
+# not worth a box, and the reviewer declined it.
+11 075 WO -- large blue block capitals in a red-framed sign at the top right corner of panel 5, running off the panel border
