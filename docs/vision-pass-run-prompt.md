@@ -1581,6 +1581,93 @@ is a wedge left uncropped: it is Donald taking lines that belong to the boys
 (17 of the 46), one big head read as Donald three times on each title, and
 two costume or dress-colour identities carried across panels.
 
+### Findings to paste into the next run (2026-09-04, twenty-fifth batch)
+
+*Pool Sharks* (Vol. 10, 10 pages, 126 groups), reviewed the same day and
+mirrored clean: **4 speaker corrections, 3.2%**, 3 of them in the nephew
+domain (23.1% of 13). Confidence: **high 4 of 112, 3.6%; medium 0 of 14,
+0.0%** -- every hedge the pass made was right, which is the first title in
+this run of six where the medium rate beat the high rate. Cost 4.4 images
+per page, well over budget and concentrated on two pages. All four of the
+pass's type corrections were confirmed and the review added six more
+`dialogue -> thought` moves of its own.
+
+- **A WEDGE CAN SURVIVE AS A 40px SLIVER AT S0.3, AND EVERY CENSUS MISSES
+  IT.** 159 g12/g13 were written `nephews` on the strength of "capscan and
+  capwide report red 0, green 0, blue 0 and leafgrn 0 at a 20px floor, and a
+  probe of each crown at S>=0.06 returns only the pale sky"; the review named
+  Louie and Dewey and recorded green and blue. Re-checked afterwards:
+  `capwide` at a floor of **8 pixels** still returns 0 blobs in all three
+  bands, and a 3x crop shows all three wedges plainly -- a grey-green sliver
+  on the left crown, a brown-ochre one on the middle, a teal one on the
+  right, each 20-60px at the crown's right edge. The failure is `MIN_SAT`,
+  not the band edges, so `capwide` does not rescue it. `probe.py` DID show
+  it and the pass read past it: the boxes came back `green 133-176px
+  #5d7876 H167.8 S 0.07/0.10/0.30`, and a chromatic band with **>100px and a
+  max saturation of 0.30 inside a crown box is a shaded wedge, not noise**.
+  A census of zero across every band on a panel that plainly holds three
+  nephews is a reason to crop at 3x, never a reason to write `nephews`.
+- **A tip inside a head span is only as good as the span.** 159 g6's tail tip
+  was measured at panel x=524 and called "inside the middle boy's head span
+  (515-660), 59px clear of the left boy, who ends at 465"; the review gave it
+  to the left boy. The spans were eyeballed off the panel image rather than
+  taken from a head census, and being wrong about where a head ends turns a
+  measured tip into a confident wrong name. Take the spans from `heads.py`
+  before quoting a margin against them.
+- **Read what the gag is doing before naming the sole figure.** 156 g2 (`? ?
+  YEWOUCH! OWOO!! I'M FREEZING! BRRRR! LEMME OUTA HERE!`) was written Donald
+  as "alone, buried in the truckload of ice that has been dumped in the
+  pool". Donald ordered the ice to freeze the children out, and the next
+  panel is `THEY'RE GONE! NOW... I'LL TAKE MY DIP!` -- so the figure in the
+  ice is the children, and the review made it `other:neighbourhood kids`.
+  The panel was read off the 250px montage and never opened.
+- **The reviewer's collective for a crowd of children is
+  `other:neighbourhood kids`.** The title now carries that on 1 group and the
+  pass's `other:the neighbourhood children` on 1 other (155 g6, the shouts
+  from the pool). Two values for one crowd; worth settling on one.
+- **A prop colour can be a real per-boy key when a panel bridges it.**
+  151 p1 has the three boys bare-crowned with red, blue and green suitcases;
+  151 p2 and 159 p5 show the same three boys with the case beside the
+  matching cap. Six names were made that way and none was corrected.
+
+*The Trouble With Dimes* (Vol. 10, 10 pages, 131 groups) and *Gladstone's
+Luck* (Vol. 10, 10 pages, 125 groups) were passed the same day and are not
+yet reviewed. Cost 2.3 and 1.8 images per page. What they add:
+
+- **A STORY CAN TAKE THE CAPS OFF FOR HALF ITS LENGTH.** *The Trouble With
+  Dimes* draws the nephews bare-headed from 160 to 162 -- no cap at all, and
+  a probe of each crown returns only the wall behind -- and *Gladstone's
+  Luck* does the same indoors on 171, 172 and 179 p7-p8 while capping them on
+  the golf course. Establish per PAGE, not per title: the same story that
+  gives you nothing on page 2 can seat all three in clean bands on page 4.
+- **Pyjamas are a costume key and they print the roster inks exactly.**
+  *The Trouble With Dimes* 168 puts the boys in red `#e61b1f`, blue
+  `#04a4d5` and green `#4da23f` (H111) pyjama tops -- the three cap inks to
+  the digit -- and 169 p7 shows the same three on their caps. Six names, all
+  at high with `costume` in the evidence.
+- **`NOW BACK TO UNCLE SCROOGE'S!` is stored as narration and is not.** The
+  same six words appear four times in *The Trouble With Dimes*: a spoken
+  balloon with a pointed tail on 164 p5, a thought cloud with a bubble trail
+  on 164 p8 and 166 p6, and a real caption box with a drop capital on 164 p6.
+  Two of the four were stored `narration`. A short line that reads like a
+  scene-change caption still has to be looked at.
+- **The name scan cannot see a nephew named once with a dictionary word.**
+  *Gladstone's Luck* 174 g5 is `THE BALL'S SAILING INTO THE ROUGH, LOUIE!` --
+  the only direct address in the story, and `barks-ocr-name-grep` lists
+  neither LOUIE (it is in the dictionary) nor the phrase (it occurs once).
+  It also names the boy who is NOT speaking, which is what made the speaker
+  identifiable by elimination.
+- **A red blob above a head can be the flagstick.** *Gladstone's Luck* 174 p8
+  gives `heads.py` a 457px `#e31b1f` reading as CAP-INK on the boy at the
+  green; he is holding a red flagstick that passes through that band. The
+  name was left at medium on continuity and `cap_colour` null.
+
+**Batch summary, twenty-fifth batch (Vol. 10, 30 pages, 382 groups):** one
+title reviewed, 4 of 126 (3.2%). Cost 2.8 images per page across the batch,
+but 4.4 on the reviewed title. Its whole error was one panel read off the
+montage and two nephew calls where a measurement was quoted against a
+landmark that had not itself been measured.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
