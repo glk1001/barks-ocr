@@ -2136,13 +2136,18 @@ no cap to read, do not spend the cap budget on it -- read the tails and go.
   made it **Huey**, red recorded. In this title the nephews wear black jackets
   too, so the sleeve is not a Donald key -- the beret is, and its absence should
   have forced a cap probe rather than an explanation for why it is missing.
-- **A DRAWN `!` IS DIALOGUE; A DRAWN `?` IS THOUGHT.** 056 g7, the single red
-  exclamation mark over Gladstone as he takes in the size of the bowl, was
-  proposed as `thought` by analogy with the one-pagers' `? ? ?` over Donald. The
-  review made it **dialogue**. Put with 196's `! ! !` over the shouting boys,
-  the split is by the mark, not by how vocal the figure looks: `!` is voiced,
-  `?` is not. The pass's other two type proposals (054 g14 `BZZT!` and 057 g5
-  the ticket number in its own balloon, both to `dialogue`) stand as written.
+- **A STARTLE IS A STARTLE WHETHER OR NOT THE BEAK IS OPEN.** 056 g7, the single
+  red exclamation mark over Gladstone as he takes in the size of the bowl, was
+  typed `thought` on the reasoning that he is startled *silently*. The review
+  made it **dialogue**. That is not a new rule -- the corpus split is already
+  "a musing device is `thought`, a startle is a vocalised gasp and so
+  `dialogue`" (Vol. 6 088 g12 against 081 g7) -- it is the same rule applied to
+  a figure whose mouth is not drawn open. The "silently" was an inference, and
+  the art did not supply it. Running score for a lone `!`: dialogue 3, thought 1.
+  Do NOT reduce this to the glyph: `!` is not automatically dialogue, and 081 g7
+  is a lone `!` the reviewer kept at `thought`.
+  The pass's other two type proposals (054 g14 `BZZT!` and 057 g5 the ticket
+  number in its own balloon, both to `dialogue`) stand as written.
 - **THE PHANTOM `type_was` INFLATED THE TALLY AGAIN, THREE TO ONE.**
   `review_findings.py` reported 6 type corrections for *Gladstone's*; 048 g12,
   051 g12 and 053 g12 already carried `type_was` at the pass commit and are not
