@@ -2967,6 +2967,7 @@ three inks are the only thing they share.** Four are now measured:
 | *The Screaming Cowboy* | black skull-cap with a coloured STRIPE over the crown | **060 p8** |
 | *Rocket Wing Saves the Day* | black crown with a coloured BAND showing as a curved side sliver | **078 p6** |
 | *Gladstone's Terrible Secret* | the same banded black crown | **089 p2** |
+| *The Think Box Bollix* | plain black skull cap with a small coloured SLIVER at the crown edge | **106 p1** |
 
 Do not carry a construction across a story boundary; derive it from the
 story's own clean panel before page 1. The inks themselves do hold:
@@ -3015,6 +3016,20 @@ red `#e51b20`, blue `#00a5d7`, green `#4da33f`/`#519d3e` (H108-112).
   Woodchucks in *Gladstone's* wear the same cap -- 052 p2 has a pig-faced club
   member in one with a red diamond. Check the head under the badge.
 
+- **THE SLIVER IS THERE OR IT IS NOT, AND THE SAME BOY GOES BOTH WAYS ON ONE PAGE.**
+  *The Think Box Bollix* prints the coloured sliver only at certain head
+  angles: 106 p1 shows all three crowns from behind, blue/red/green, big
+  and unmistakable, and 105 p8 two pages earlier returns `red 0 / green 0 /
+  blue 0` from `capwide` at a 20px floor for the same three boys in the
+  same scene. Nineteen of the title's 23 collectives are that, an outright
+  silhouette (105 p5, 106 p4) or the bare-headed bedroom on 101 -- absence,
+  not a declined cap. Where two crowns did read the third was named by
+  elimination, which is where 3 of its 15 names came from.
+  Two look-alikes in it: **Gyro wears a RED cap** through half the story and
+  a red-banded straw hat through the rest, and the foliage prints **H100.9**
+  against the cap green's **H111**, eight degrees apart at almost the same
+  saturation.
+
 Vol. 10, from *A Financial Fable* 097 p5 (three boys seen from behind, red,
 green and blue wedges in a row) read on 2026-09-03, and confirmed on *The April
 Foolers* the same day. The cap is the **black crown carrying coloured wedges**
@@ -3055,6 +3070,50 @@ that *Voodoo Hoodoo* and *No Such Varmint* had, not the Vol. 9 coloured crown:
   from the art. And the boys go bare-headed indoors in ordinary stories too
   (*The April Foolers* 102 p2-p6, breakfast) and lose their caps in the river
   on 111.
+
+Vol. 12, from *Only a Poor Old Man* 016 p5 (the three boys in a row, caps big
+and lit, one balloon and one tail each) read on 2026-09-05. The cap is a
+**black crown carrying a coloured band down the side**:
+
+| | |
+|---|---|
+| red (Huey) | `#e82720` H2.1 S0.86 V0.91 |
+| blue (Dewey) | `#00a5d7` H194.0 S1.00 V0.84 |
+| green (Louie) | `#5ca93a` H101.8 S0.65 V0.66 |
+| shaded green seen | `#58943c` -- same hue, S0.58 V0.58 |
+| foliage and grass | `#5caa3c` H102.5, the cap green to a decimal place |
+| a second, darker green | `#33a250` H136, pines and deep foliage |
+
+- **SCROOGE'S COAT IS `#e82720` -- HUEY'S EXACT RED -- AND IT IS THE BIGGEST
+  RED BLOB IN NEARLY EVERY PANEL.** A whole-title census found 771 hits of
+  that hex, the largest 17,609px, and almost all of them are the coat. The
+  blue is worse: **Donald's sailor cap and Scrooge's top-hat band both print
+  `#00a5d7`**, Dewey's exact blue, 439 hits in the title. Neither ink names a
+  boy until the blob has been shown sitting on a small head.
+- **The green is also the grass.** Cap green H101.8 against foliage H102.5 --
+  under a degree apart. `heads.py` placing it on a skull is the only test that
+  works; `capscan`'s band names decide nothing here.
+- **One panel prints the blue at H154.** 016 p5's middle cap probes
+  `#38a677` H154.4 S0.66, and it is the ONLY hit at that hue in the whole
+  32-page title. It is the blue, read by ranking the two cool caps inside
+  that panel: the boy beside him carries `#5ca73b` H101.7 at the identical
+  S0.65, so a band 52 degrees cooler at the same saturation is the other cool
+  ink and not a shaded green. Elimination agrees -- red and green are both
+  taken in the row. A 3.2x crop shows it plainly teal beside a plainly grass
+  green.
+- **The caps come off, and often.** The boys are bare-headed for the whole
+  Money Bin sequence on 014 and in the hammock on 025; 016 p7-p8 and 032 p1-p2
+  are flat night silhouettes. Those collectives are absence, not a declined
+  cap -- say which in the note.
+- **`UNCA SCROOGE` is a nephew and `UNCLE SCROOGE` is Donald, on all fourteen
+  occurrences.** The story never mixes them. It settles every wide shot and
+  every off-panel voice in the title on its own, and it is worth checking for
+  in any Scrooge story before spending an image on a tail.
+- **One colourist slip, and the address won.** 028 addresses a boy as LOUIE in
+  panel 2 and then draws him in a RED band in panels 3, 6 and 8, while 029 p5
+  and p7 draw Louie in a clean green. Recorded as `Louie` with
+  `cap_colour: red`, per [[feedback_colourist_error_breaks_the_chain]] --
+  worth a retouch note.
 
 ## The long form is retired
 
