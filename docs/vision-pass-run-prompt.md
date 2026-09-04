@@ -1824,13 +1824,13 @@ Three titles passed, none reviewed yet: *Ten-Star Generals* (Vol. 10, 10 pages,
   reads like a nephew's line, and a long spur sweeps left out of the balloon to
   end 24px off the Marshal's face at his eye level, with the three boys
   clustered 100px below. Both were caught only by cropping the tail.
-- **A SCALLOPED BALLOON EDGE READS AS TAILS AT 0.6 SCALE.** *A Christmas for
-  Shacktown* 019 p4: the balloon's cloud bottom has three rounded lobes over
-  the three nephews and one real spur at the far right, on Donald. Read off the
-  stacked sheet it was a nephew; cropped at 2.2x it is plainly Donald. If a
-  panel appears to have one tail per figure, that is the shape to distrust
-  first -- a genuine multi-tail chorus balloon has thin tapering spurs, not
-  lobes, and *Shacktown* 013 p4 and 007 p6 both have real ones.
+- **THIS BULLET WAS WRONG AND THE REVIEW OVERTURNED IT; SEE THE 2026-09-04
+  REVIEW SECTION BELOW.** It claimed that *A Christmas for Shacktown* 019 p4's
+  balloon had "three rounded lobes" that only looked like tails, and gave the
+  line to Donald alone off the one spur at the right. At 2.4x the bottom edge
+  is four SHARP POINTS, one aimed at each figure, and the review made the
+  speaker `other:Donald, Daisy, and the nephews`. A shape that looks like one
+  tail per figure usually IS one tail per figure. Do not distrust it; zoom it.
 - **A tip in a gap went one head LEFT again, and a measured tip beat the rule.**
   *Ten-Star Generals* 180 g9 and *Shacktown* 036 g15 are both gap tips resolved
   one head left, per the twenty-fifth batch. But *Shacktown* 006 g11 was a gap
@@ -1959,6 +1959,60 @@ lettering and it goes quiet. 204 gained a second `TOOLS` overlapping the one
 hand-added on 2026-08-29 by 96%, which was deleted again -- and that deletion left
 id 15 as a GAP rather than renumbering the page, identically on both engines.
 Gaps are tolerated: 32 of 5557 pages in the corpus already have one.
+
+### Findings to paste into the next run (2026-09-04, twenty-sixth batch, third title)
+
+*A Christmas for Shacktown* (Vol. 11, 32 pages, 401 groups) reviewed and
+mirrored clean, no group added, deleted or renumbered: **19 speaker corrections,
+4.7%**, 12 of them in the nephew domain (19.4% of 62). High 18 of 393 (4.6%),
+medium 1 of 8. **All 6 of the pass's type corrections were confirmed** and the
+review made 4 more of its own. One text edit the pass had not proposed: 016 g9's
+`. . . .` tightened to `....`, which is spacing rather than a word, so leaving
+it was within the roster -- but the reviewer wanted it.
+
+**Batch total: 70 corrections over 690 groups across the three titles, 10.1%,
+and the spread is 3.4% / 4.7% / 27.5%.** The outlier is entirely the wedge-census
+failure recorded in the previous section.
+
+- **THE BIGGEST CLASS HERE IS NOT NEPHEWS AT ALL -- IT IS WHICH ADULT, AND WHAT
+  TO CALL A GROUP.** 6 of the 19 are an `other:` role, and they split three ways.
+  (a) The reviewer's collective for a crowd of one kind is **plural and bare**:
+  `other:one of the engineers` came back twice as **`other:the engineers`**.
+  Use the plural form for an unnamed group from the start. (b) A mixed group of
+  named characters gets all of them: 019 g6 Donald -> **`other:Donald, Daisy, and
+  the nephews`**. (c) And an unnamed adult must not be given a name that fits:
+  037 g5 Daisy -> **`other:a woman`**, 029 g7 Scrooge -> `other:one of the
+  engineers`, 030 g13 the reverse.
+- **DO NOT NAME AN ADULT FROM A PROP THAT IS NOT UNIQUE.** 029 g7 ("MY SPECTACLES
+  FELL IN, AND I HAVEN'T HEARD 'EM HIT BOTTOM!") was given to Scrooge on the
+  reasoning that "he is the only character in the story who wears them". He is
+  not -- the engineers wear them too. A prop only identifies when you have
+  checked every other figure in the panel for it, and a panel full of
+  interchangeable bearded men is exactly where that check fails.
+- **A BLUE SAILOR CAP IS NOT ALWAYS DONALD'S, AND A TAIL POINTING AWAY IS NOT AN
+  OFF-PANEL SPEAKER.** Both Donald -> Scrooge corrections are this. 031 g4: the
+  hand drawing the tunnel on the chart was read as "the duck in the blue sailor
+  cap"; it is Scrooge. 017 g12: the pass traced the tail as pointing down-LEFT,
+  away from the only figure in frame, and concluded an off-panel Donald -- the
+  line is Scrooge's. A tail leaving the frame is a reason to widen the crop, not
+  to award the line to whoever is off-panel.
+- **THE PASS OVER-READ CAPS HERE AS BADLY AS IT UNDER-READ THEM ON THE OTHER
+  TITLE.** 4 of the 19 are a named boy going back to `nephews` with the colour
+  stripped (007 g3, 007 g6, 013 g0, 031 g8), against only 2 the other way. On a
+  title whose stocking caps are big and clean, the failure flips direction: the
+  cap is legible, so the temptation is to trust a tail you have not actually
+  traced and let the nearby cap supply the name. Cap legibility is not tail
+  evidence.
+- **A CAPTION BOX IS NOT ALWAYS THE NARRATOR.** 035 g7 went `narrator` ->
+  `Louie`, with a green cap recorded. The pass called it "caption box across the
+  top of panel 4" on shape alone. A box at the top of a panel in a character's
+  voice is still that character; read whose voice it is before reading the frame
+  around it.
+- **A SILHOUETTE PANEL IS NOT AUTOMATICALLY THE BOYS.** 033 g11 and 034 g1 both
+  went `nephews` -> `Donald`. The pass wrote "the party in silhouette; nothing
+  separates the figures at that scale" -- but the party contains Donald and
+  Scrooge as well as three boys, and silhouettes still differ in HEIGHT. Measure
+  the outline before falling back to the collective.
 
 ## Per-volume cap palette
 
