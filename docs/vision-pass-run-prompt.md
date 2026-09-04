@@ -2249,6 +2249,92 @@ batch                        38 of 403   9.4%   27 of 89 nephew (30.3%)
   (6) sits beside the corpus's established `other:the Junior Woodchucks chief`
   (50). Grep the family whenever a review renames a role, and raise it.
 
+### Findings to paste into the next run (2026-09-04, twenty-eighth batch, three titles reviewed)
+
+*Statuesque Spendthrifts*, *Rocket Wing Saves the Day* and *Gladstone's
+Terrible Secret*, all Vol. 11, reviewed and mirrored together.
+
+```
+Statuesque Spendthrifts       4 of 138   2.9%    1 of  5 nephew (20.0%)
+Rocket Wing Saves the Day    14 of 160   8.8%   14 of 65 nephew (21.5%)
+Gladstone's Terrible Secret   5 of 120   4.2%    5 of 15 nephew (33.3%)
+batch                        23 of 418   5.5%   20 of 85 nephew (23.5%)
+   highs 15/387 (3.9%) against mediums 9/31 (29.0%) -- a 7.4x ratio
+```
+
+- **A COSTUME KEY DOES NOT TRAVEL OUT OF THE PANEL THAT DEFINES IT. Three of
+  *Statuesque*'s four corrections were this one move.** The title turns on
+  telling the mayor from the park commissioner, and 069 g7 settles it by direct
+  address -- one official calls the other "MAYOR!" -- so I fixed RED bow tie =
+  commissioner, BLUE = mayor, and 076 g14 then hands over a figure in a yellow
+  sash lettered MAYOR wearing the blue tie, which looked like independent
+  proof.
+  The review KEPT every call I made in a panel holding BOTH officials (068 g3,
+  g5, g7, g8, g9, g10; 069 g7, g8; 072 g1, g2) and OVERTURNED every call I made
+  in a panel holding ONE, all three to the mayor (071 g13, 074 g1, 074 g2).
+  074 g2 is the one that matters: I measured a 250px `#e61b1f` bow tie at head
+  height, on a lone official, and called it high.
+  So the tie separates two figures standing next to each other; it does not
+  name a character across the story. **A lone official in this title is the
+  mayor.** Generalised: a key derived from contrast -- this one is red, so that
+  one is blue -- is only ever valid where the contrast is visible. Carrying it
+  into a solo panel is inventing a fact.
+- **THE BIGGEST CLASS IS A RULE I HAD, USED CORRECTLY THREE TIMES, AND THEN
+  DECLINED TO USE EIGHT TIMES.** All eight of *Rocket Wing*'s under-namings are
+  a boy whose crown capscan reported blank, and my note in every case says so
+  and stops -- "his crown carries no chromatic ink", "no cap ink at a 15px
+  floor". The reviewer named all eight and supplied a colour for each, and the
+  method is written into their own note on 078 g8: **"Not Louie or Huey"**.
+  That is elimination against the other boys in the panel, not a reading of his
+  cap. I applied exactly that reasoning on 080 g5, 085 g4 and 095 g6 -- and all
+  three were kept.
+  **Where three boys are in frame and two carry measurable bands, the third is
+  named, and cap_colour stays null.** This is not a new rule; it is
+  [[feedback_two_named_leaves_the_third]], and the failure was applying it
+  inconsistently inside a single title.
+- **A MEASURED BAND IS NOT ENOUGH -- THE TAIL HAS TO LAND ON THE HEAD THAT
+  WEARS IT.** Three of the five name-for-name swaps were mediums with the tip
+  in a gap, which is the expected cost. The two that should not have happened
+  were HIGH and had a band quoted to the pixel: 085 g14 (Dewey -> Huey) and
+  086 g16 (Huey -> Dewey). On 086 g16 I wrote "tail comes down onto the
+  RIGHT-hand boy, whose band is capscan #e51920 1104px at (473,390,523,498)"
+  -- two separate claims welded into one sentence, and I checked neither
+  against the other. Say which boy the tail lands on, then say which boy the
+  blob sits on, and only then join them.
+- **IN A STORY WHERE DONALD IS ONE OF THE SNOOPERS, HE TAKES THE BOYISH LINES
+  TOO.** Two of *Gladstone's* five corrections are `nephews` -> `Donald`:
+  094 g9 "AW, WE ARE NOT!" and 096 g9 "HOORAY FOR UNCLE SCROOGE!". I read both
+  as a boy's register. 091 g11 went the other way -- I traced a short tail onto
+  Gladstone and it was the hidden watchers -- so the register test failed in
+  both directions in one title. Where Donald is crouching in the hedge with the
+  kids, register is worth nothing and only the tail counts.
+- **`review_findings.py --since <sha>` lists every group that CARRIES
+  `type_was`, not only the ones changed since that sha.** Thirteen of the
+  nineteen "type corrections" it reported for this batch predate the batch
+  entirely -- 081 g12-g14, 082 g2/g9/g14, 084 g11, 085 g0, 091 g8, 094 g7,
+  095 g1, 073 g9, 079 g10 all already had the field at `b8af9d7c~1`. Check
+  `git show <base>:<file>` before crediting a type change to the review, or the
+  findings section records work nobody did.
+- **The review rewrote `speaker_confidence` to high on all 420 groups**, as
+  usual, so `--since` is not optional if the medium-against-high split is
+  wanted -- and on this batch that split is the most useful number in the
+  review.
+- **The two review-added groups arrived CLEAN this time.** 075 g6
+  (CORNELIUS COOT) and 076 g15 (MAYOR) both landed on both engines with
+  matching ids, `speaker: none`, `type: background`, `vision_added: true` and
+  no trace of the seed group's ai_text, note or identified_by -- the Copy In
+  residue trap did not fire. Two things still worth checking on any added
+  group: both carry `vision_text_ok: null`, so the transcription has never been
+  confirmed by anyone, and 075 g6's `panel_id` says 4 while its box lies inside
+  panel 3.
+- **One straggler, and it was a TEXT edit that skipped the speaker stamp.**
+  074 g3 ('AH!') came back as the single group of 420 never `speaker_reviewed`.
+  Its text had been corrected in the same session (my `AH,` -> the drawn `AH!`),
+  and the text-correction path evidently does not stamp the speaker. Handed
+  back, stamped and re-mirrored, so the batch closed at 420 of 420 -- but count
+  `speaker_reviewed` after every review, and look first at the groups whose text
+  changed.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -2859,12 +2945,32 @@ three inks are the only thing they share.** Four are now measured:
 | the nine one-pagers | black crown with coloured segments | -- |
 | *Gladstone's Usual Very Good Year* | grey fur winter cap with a coloured DIAMOND badge on the side | **050 p1** |
 | *The Screaming Cowboy* | black skull-cap with a coloured STRIPE over the crown | **060 p8** |
+| *Rocket Wing Saves the Day* | black crown with a coloured BAND showing as a curved side sliver | **078 p6** |
+| *Gladstone's Terrible Secret* | the same banded black crown | **089 p2** |
 
 Do not carry a construction across a story boundary; derive it from the
 story's own clean panel before page 1. The inks themselves do hold:
 red `#e51b20`, blue `#00a5d7`, green `#4da33f`/`#519d3e` (H108-112).
 
-- **The GREEN is the anchor in *Gladstone's*, and reading it the other way
+- **IN THE TWO BANDED-CROWN TITLES THE FOLIAGE SITS INSIDE THE CAP GREEN'S
+  HUE, AND ONLY SATURATION SEPARATES THEM.** *Rocket Wing* plays out in a back
+  yard and *Gladstone's Terrible Secret* on lawns and hedges, and the greenery
+  prints **H100-108 at S0.54-0.57** against caps at **H108-113 at S0.57-0.63**
+  -- as little as three degrees apart on *Gladstone's* 089 p2, where a
+  220,000px hedge swallowed a cap outright in a proximity-merged census. Key
+  the census on hue AND saturation, never on `capscan`'s band names, which
+  file both under `leafgrn`.
+  Two blobs that passed every hue and saturation test and were still not caps:
+  *Gladstone's* 094 p6, 5,329px `#4da33d` H110.6 S0.63 at head height, is the
+  LAMP BASE; and 097 p5, 4,115px at S0.62, is on the FLOOR beside Gladstone's
+  shoes. [[project_cap_blob_must_sit_on_a_head]] costs nothing to apply and
+  caught both.
+  Indoors the same caps drop below `capscan`'s saturation floor entirely --
+  095 g6's green probes at `#536c4a` H104.1 **S0.31** with the floor dropped,
+  and *Rocket Wing* 081's potato-cellar caps at `#6c9c70` S0.31 and `#a5352a`
+  H5.4 -- so a cellar or an interior means probe, not scan.
+- **The GREEN is the anchor in *Gladstone's Usual Very Good Year*, and reading
+  it the other way
   round cost two names.** The pass argued that the blue prints `#00a5d7` H194.0
   S1.00 V0.84 in every panel, so a cool badge that is not exactly that must be
   the green -- and 054 g9's `#1da39e` (H177.8 S0.82 V0.64) turned out to be a
