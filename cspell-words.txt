@@ -96,6 +96,7 @@ opno
 outpaint
 palegreen
 parentheticals
+pcrop
 posseman
 propn
 putalpha
