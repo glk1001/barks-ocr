@@ -1782,6 +1782,19 @@ pass declined to read on a panel where a census it did not run puts the answer
 on a head, three are a tip in a gap given to the nearer head, and two are an
 adult named off a contact strip without the face being looked at.
 
+**The batch's one added group arrived clean, and both of its hazards held
+off.** *Gladstone's Luck* 174 gained the flagstick numeral on BOTH engines,
+appended as the last id, so nothing was renumbered and every existing group's
+`ai_text` is byte-identical to the pass commit; there was no Copy-In residue
+and no straggler. That is the good case, and it is worth diffing per-engine
+`ai_text` against the pass commit to establish it rather than assuming it.
+
+Then the missed-text audit went on reporting the item, because `visible_text`
+still held the PROSE form the pass uses for an ungrouped device and the audit
+matches by substring. One line back to the bare lettering and the title audits
+clean. The rule already existed and the batch still hit it: **check the audit
+again AFTER a review adds a group, not only before.**
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
