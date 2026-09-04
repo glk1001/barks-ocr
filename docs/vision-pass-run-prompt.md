@@ -1668,6 +1668,66 @@ but 4.4 on the reviewed title. Its whole error was one panel read off the
 montage and two nephew calls where a measurement was quoted against a
 landmark that had not itself been measured.
 
+### Findings to paste into the next run (2026-09-04, twenty-fifth batch, second title)
+
+*The Trouble With Dimes* (Vol. 10, 10 pages, 131 groups), reviewed the same
+day and mirrored clean, no group added or deleted: **5 speaker corrections,
+3.8%**, every one of them in the nephew domain (20.8% of 24) and every one of
+them on page 168. The pass's single medium was not corrected; high 5 of 130.
+All three of its type corrections were confirmed. Cost 2.3 images per page.
+
+- **A TAIL TIP THAT STOPS IN A GAP BELONGS TO THE HEAD ON ITS LEFT.** Measured
+  twice in two days, and the "nearer head" rule was wrong both times. 168 g6:
+  tip at panel x=815, `heads.py` gives the three heads as (339..516),
+  (587..763), (844..1034) -- so the tip is 52px past the middle boy and 29px
+  short of the right one. The pass gave it to the nearer, right-hand boy; the
+  review gave it to the middle one. Pool Sharks 159 g6 the day before: tip at
+  x=524, heads at (232..454), (534..660), (740..879) -- 70px past the left boy
+  and 10px short of the middle. Same move, same reversal. In both titles the
+  tails overshoot to the RIGHT of their own speaker, which is the Vol. 4
+  offset fan inverted; go one head left of the tip, or say `nephews`.
+- **AND THE SPANS THE PASS QUOTED WERE NOT MEASURED.** Both notes carried a
+  confident margin -- "inside the middle boy's head span (515-660)", "on the
+  left edge of the rightmost boy's head, which begins at 819" -- and both
+  spans were read off the panel image by eye. The census says 534 and 844.
+  A tip coordinate is worthless against a span that was guessed: run
+  `heads.py` on the panel and quote `head+beak x=(a..b)`.
+- **`capwide` says the ink exists; `heads.py` says it is on a head.** 168 g3
+  was written `nephews` because "no boy is drawn clearly enough to separate";
+  the review named Huey and recorded red. The pass had run `capwide` on that
+  panel and seen `red 207px x512-518` and `152px x466-488` at `#e61b1f`, and
+  could not place them. `heads.py` on the same panel reports
+  `head+beak x=(293..510) CAP-INK: red(512,362,519,405) a=137 #e61b1f` -- the
+  same sliver, attached to a head. One extra command, and the only one of the
+  four census tools that answers the question that matters.
+- **Carry a page's seating across its panels.** 168 g7 and g8 were declined as
+  "both buried in the bedding with no collar showing at all"; the review named
+  Louie and Dewey. The panel two before it seats the same three boys in bed
+  green, blue, red and the panel two after seats them the same way. Where a
+  page establishes the order by colour once, the panels between inherit it.
+- **A STACKED CONTACT STRIP CANNOT NAME AN ADULT.** 168 g12 (`WHAT ARE YOU
+  KIDS DOIN' IN MY DIMES?`) went to Scrooge, off a 0.72-scale strip where the
+  figure read as a white head in a green nightshirt; it is Donald, and a 2.2x
+  crop shows a smooth head with no side-whiskers and no spectacles. At that
+  scale Donald and Scrooge are the same silhouette. The strip is triage --
+  balloon shape, who is in frame, whether a crown carries a band. Naming an
+  adult needs the face.
+- **A text correction can be marked reviewed and not applied.** 165 g8's sign
+  reads COLLECTORS in the art and the story's two other copies of it are
+  stored that way; the group came back `vision_text_reviewed: true` on both
+  engines with `ai_text` still reading COLECTORS and the proposal still
+  sitting in `vision_corrected_text`. `vision-corrections` then reports
+  nothing outstanding. Same shape as the `type_reviewed` silent decline:
+  after a review, diff the proposals against the stored text rather than
+  trusting the outstanding count.
+
+**Batch summary, twenty-fifth batch (Vol. 10, 30 pages, 382 groups; two of
+three titles reviewed, 257 groups):** **9 speaker corrections, 3.5%**; nephew
+domain **8 of 37, 21.6%**; **0 of 15 mediums corrected**. Split by title
+3.2% / 3.8%. Cost 2.8 images per page. Seven of the nine corrections are one
+of two moves: a tip in a gap given to the nearer head, or a boy declined on a
+panel where a census the pass did not run puts colour on his head.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
