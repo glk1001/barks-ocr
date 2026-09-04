@@ -128,3 +128,9 @@ HELP KEEP AMERICA STRONG
 # You Can't Guess! (Vol. 9) 188 p6: the showroom sign AUTOM... runs off the
 # panel edge; a partial word.
 9 188 AUTOM
+# Crafty Corner (Vol. 11 one-pager) 197 p4: Donald whistles and the balloon
+# holds musical notation, not lettering -- there is nothing for the OCR to
+# carry, and the reviewer decided against a group for it. The two other drawn
+# devices in this batch DID get groups (143 "? ? ?", 196 "! ! !"), so this is a
+# decision about notation specifically, not about devices in general.
+11 197 a balloon of musical notes hangs over Donald in panel 4 as he whistles, and neither engine has grouped it

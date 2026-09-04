@@ -2014,6 +2014,66 @@ failure recorded in the previous section.
   Scrooge as well as three boys, and silhouettes still differ in HEIGHT. Measure
   the outline before falling back to the collective.
 
+### Findings to paste into the next run (2026-09-04, the Vol. 11 one-pagers)
+
+All nine Vol. 11 one-pagers passed, reviewed and mirrored: 125/125 on both
+engines after the review added two groups. **1 speaker correction in 123
+pass-written groups, 0.8%** -- the best rate of the day against 3.4% / 4.7% /
+27.5% for the three full titles, and *The Gilded Man*'s three pages came back
+0 of 52 highs corrected. A one-pager is the easiest unit in the corpus: seven
+or eight panels, a cast of two or three, and every panel legible on one montage.
+
+- **A DEVICE BALLOON STILL HAS A TAIL, AND THE TAIL STILL NAMES.** The single
+  correction is *Awash in Success* 142 g1, the `BZZT! BZZT! BZZT!` of the buzzer
+  box: `nephews` -> **Huey**, red recorded. The pass had already seen the cap --
+  its own note says "the left boy carries a red segment and the right a green
+  one" -- and then declined on the reasoning that "the balloon serves the device
+  the three of them are operating together". A noise a group of characters
+  produces from a shared prop is still lettered with ONE tail, and that tail
+  lands on one boy. Trace it and name him; the shared prop is not a reason to
+  fall back on the collective. Same shape as *Ten-Star Generals* 181 g8.
+- **THE REVIEWER'S LINE ON DRAWN DEVICES IS NOTATION.** Three ungrouped devices
+  turned up in these nine pages and were settled three different ways, which
+  together give the rule. Drawn punctuation gets a group: 143 `? ? ?` over
+  Donald went in as **thought / Donald**, 196 `! ! !` over the boys as
+  **dialogue / nephews** -- so the type follows whether a voice makes the sound,
+  exactly as for words, and the speaker is whoever the device hangs over. Drawn
+  MUSIC does not: the balloon of notes over Donald whistling on 197 p4 was left
+  ungrouped and is now in `missed-text-ignore.txt`. Notation carries no lettering
+  for the OCR to hold.
+- **RECORD EVERY DEVICE ON THE PAGE, NOT THE ONE THAT CAUGHT YOUR EYE.** The pass
+  reported 143's `? ? ?` and MISSED 196's `! ! !` two pages later, because it
+  never put that one in `visible_text` -- and the audit can only find what the
+  capture holds, so it reported a clean page. That is the second time in one day:
+  *The Truant Nephews* 203 lost a `TOOLS` stencil the same way while its `!`
+  marks were reported. Sweep the page for devices as a step, the way the cap
+  census is a step.
+- **THE PHANTOM `type_was` IS NOT INERT.** `vision_apply` wrote
+  `"type_was": "background"` onto 109 g0, whose type is `title` before and after
+  and for which the pass supplied no type at all. `vision-corrections` does not
+  see it, because the type never changed -- but `review_findings.py` DOES, and
+  reports it as a real `background -> title` type correction, inflating the
+  count and crediting the pass with an overrule it never made. Check a type
+  correction against the previous commit before believing the tally.
+- **The one-pager apply route is per PAGE, not per volume.** Vol. 11's nine split
+  three ways: 208/209/210 resolve through *A Christmas for Shacktown*, 108/109/142
+  through *The Golden Helmet*, 143/196/197 through *The Gilded Man* -- each
+  through the story it is physically bound inside. The queue names the owning
+  title per page. Checking that SOME configured title in the volume reaches the
+  page is the right feasibility test, but it does not tell you which one to name.
+- **And the stopgap prep's panel numbers are not the pipeline's.** The hand-built
+  out-dir numbers panels from the panel-segments file, which does not match the
+  prelim's `panel_id`: on 143 the logo is `panel_id` 0 but panel 1 here, and the
+  two drift apart mid-page. Group data is unaffected -- the panel references in
+  notes and `panels_of_note` are not. Say which numbering a note uses.
+
+**Vol. 11's one-pagers do NOT use the volume's feature-story cap.** *A Christmas
+for Shacktown* puts the boys in solid pompom stocking caps; all nine one-pagers
+use the SEGMENTED BEANIE, a black crown with coloured segments, in the same three
+inks. Construction is per story, not per volume -- and on the one-pagers it is
+usually turned away, so 8 of 23 nephew-domain groups are named and the rest are
+pages where the boys are bare-headed, established at a 30px cap floor.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
