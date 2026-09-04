@@ -2023,15 +2023,25 @@ pass-written groups, 0.8%** -- the best rate of the day against 3.4% / 4.7% /
 0 of 52 highs corrected. A one-pager is the easiest unit in the corpus: seven
 or eight panels, a cast of two or three, and every panel legible on one montage.
 
-- **A DEVICE BALLOON STILL HAS A TAIL, AND THE TAIL STILL NAMES.** The single
-  correction is *Awash in Success* 142 g1, the `BZZT! BZZT! BZZT!` of the buzzer
-  box: `nephews` -> **Huey**, red recorded. The pass had already seen the cap --
-  its own note says "the left boy carries a red segment and the right a green
-  one" -- and then declined on the reasoning that "the balloon serves the device
-  the three of them are operating together". A noise a group of characters
-  produces from a shared prop is still lettered with ONE tail, and that tail
-  lands on one boy. Trace it and name him; the shared prop is not a reason to
-  fall back on the collective. Same shape as *Ten-Star Generals* 181 g8.
+- **ONE TAIL SETTLES BOTH THE SPEAKER AND THE TYPE, AND THE PASS SPLIT THEM.**
+  *Awash in Success* 142 g1, `BZZT! BZZT! BZZT!`, took the batch's only speaker
+  correction AND had its type correction rejected -- and the two are one error.
+  The pass read the noise as the buzzer box the three boys are crouched over,
+  wrote `nephews`, and proposed `dialogue -> sound_effect`. The review made it
+  **Huey** with red recorded and put the type back to **dialogue**: the boys are
+  making the buzzing noise themselves.
+  The tell was in the drawing the whole time. The balloon carries an ordinary
+  pointed tail landing on the red-capped boy. A balloon with a tail on a
+  character is that character's VOICE -- so the same tail that names Huey also
+  says the sound is not a machine. The pass used the tail to name the maker of
+  what it had already decided was a machine noise, instead of letting the tail
+  decide whether it was a machine noise at all. **Read the tail before the
+  prop.** A device in the panel is not evidence about the type; a tail on a head
+  is evidence about both.
+  It had also already seen the cap -- its own note says "the left boy carries a
+  red segment and the right a green one" -- and declined it because "the balloon
+  serves the device the three of them are operating together". Same
+  use-the-evidence-you-already-wrote shape as *Ten-Star Generals* 181 g8.
 - **THE REVIEWER'S LINE ON DRAWN DEVICES IS NOTATION.** Three ungrouped devices
   turned up in these nine pages and were settled three different ways, which
   together give the rule. Drawn punctuation gets a group: 143 `? ? ?` over
