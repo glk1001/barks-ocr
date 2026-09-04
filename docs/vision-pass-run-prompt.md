@@ -2327,6 +2327,26 @@ batch                        23 of 418   5.5%   20 of 85 nephew (23.5%)
   group: both carry `vision_text_ok: null`, so the transcription has never been
   confirmed by anyone, and 075 g6's `panel_id` says 4 while its box lies inside
   panel 3.
+- **WRITE `visible_text` AS THE BARE LETTERING. A LOCATOR MAKES THE FINDING
+  PERMANENTLY UNCLEARABLE, INCLUDING AGAINST THE GROUP THAT LATER COVERS IT.**
+  I recorded the two missed items as `"CORNELIUS COOT -- on the cap course of
+  the pedestal in panel 3, above the dedication plate and outside every group's
+  box"` and `"MAYOR -- lettered down the yellow sash across the mayor's chest in
+  panel 7; no group covers it"`. The locators were meant to help the reviewer
+  find them, and they did — but the audit matches on letters and digits, so
+  after the groups were added **both entries still reported "grouped by NEITHER
+  engine"**, and the second one's "no group covers it" had become a lie sitting
+  in the record. Rewritten to `CORNELIUS COOT` and `MAYOR`, both cleared at
+  once.
+  The twenty-seventh batch found half of this for a SECOND copy of an
+  already-grouped string; the general rule is stronger. **`visible_text` is a
+  transcription field: put the lettering in it and nothing else.** Where to look
+  belongs in `queue-missed.txt`, which is prose by design and which the audit
+  never reads.
+  The exception that has no fix: lettering that is a bare glyph. 068 g14's
+  group text is `$`, which reduces to nothing, so no wording of `visible_text`
+  can ever match it — those go to `missed-text-ignore.txt` even after they are
+  grouped.
 - **One straggler, and it was a TEXT edit that skipped the speaker stamp.**
   074 g3 ('AH!') came back as the single group of 420 never `speaker_reviewed`.
   Its text had been corrected in the same session (my `AH,` -> the drawn `AH!`),
