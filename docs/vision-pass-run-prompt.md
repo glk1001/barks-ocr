@@ -1728,6 +1728,60 @@ domain **8 of 37, 21.6%**; **0 of 15 mediums corrected**. Split by title
 of two moves: a tip in a gap given to the nearer head, or a boy declined on a
 panel where a census the pass did not run puts colour on his head.
 
+### Findings to paste into the next run (2026-09-04, twenty-fifth batch, third title)
+
+*Gladstone's Luck* (Vol. 10, 10 pages, 125 groups), reviewed the same day and
+mirrored clean, no group added, deleted or renumbered: **7 speaker
+corrections, 5.6%**, 6 of them in the nephew domain (16.2% of 37). Neither of
+the pass's two mediums was corrected; high 7 of 123. Its one type correction
+was confirmed. Cost 1.8 images per page, the cheapest title of the batch.
+
+- **A COLOURIST ERROR CAN PUT THE WRONG CAP ON A BOY, AND A CHAIN BUILT ON IT
+  BREAKS ONE BALLOON AWAY.** 174 g6 came back Huey -> Louie with the
+  reviewer's own note, *"Colorist error: should be Louie"*, and the printed
+  red left in `cap_colour`. That single mis-colouring cost a second call as
+  well: 174 g5 (`THE BALL'S SAILING INTO THE ROUGH, LOUIE!`) had been reasoned
+  out as "the addressee is in the rough, so the speaker is the other boy, the
+  red-capped one" -- formally right, and wrong because the red-capped boy IS
+  Louie. It came back `nephews`. When a direct address and a cap disagree
+  about which boy is which, the ADDRESS wins, the printed colour still goes in
+  `cap_colour`, and every other call in that panel that leant on the cap has
+  to be re-derived or withdrawn. Third instance in the corpus after the
+  permuted palette of *High-wire Daredevils* and *Vacation Time*.
+- **TWO NAMED LEAVES THE THIRD BY ELIMINATION -- APPLY IT EVERY TIME.** 173
+  g2/g3 were declined as "the two on the left wear plain black caps with no
+  band showing at this angle"; the review named Dewey and Huey. The pass had
+  already named the right-hand boy Louie in the same panel off a green band,
+  and `heads.py` -- which it never ran on that panel -- reports the middle
+  boy's cap as `CAP-INK: red(406,335,429,361) a=178 #b42e28` on the head at
+  x=(353..487). With green and red placed, the left boy is Dewey and no blue
+  needs to print: `capwide` finds 0 blue blobs at a floor of 10 and the crown
+  probe returns only sky. The pass made exactly this call on 175 p3 and it
+  stood; not making it here cost two names.
+- **A drawn device names the figure under it -- so identify the figure.** 171
+  g6/g7, the two `?` marks, were both given to Donald as "hanging over Donald"
+  and "the inset close-up of Donald's face". The panel holds both ducks: the
+  vase is landing on Donald at the lower left, and the circular inset at the
+  right is GLADSTONE, tan hat and green suit, with the `?` beside his head.
+  Both went to Gladstone. The narratively obvious owner of a `?` is the one
+  it happened TO; the drawing gives it to the one who is baffled.
+- **A free-text `other:` can be the wrong sex.** 171 g8 went from
+  `other:the woman at the window` to `other:the man at the window`; the pass
+  wrote "a woman leaning out of the upstairs window in a blue dress" off a
+  0.72-scale contact strip. The value carries no closed-set check, so nothing
+  catches it but a crop.
+
+**Batch summary, twenty-fifth batch (Vol. 10, 30 pages, 382 groups, all three
+titles reviewed):** **16 speaker corrections, 4.2%**; nephew domain **14 of
+74, 18.9%**; **0 of 17 mediums corrected** against 16 of 365 highs (4.4%).
+Split by title 3.2% / 3.8% / 5.6%. All 8 type corrections the batch proposed
+were confirmed, and its one text correction was applied. Cost 2.8 images per
+page. Against the twenty-fourth batch's 9.1% this is less than half the rate,
+and the residue is concentrated: of the 16, five are a cap or a device the
+pass declined to read on a panel where a census it did not run puts the answer
+on a head, three are a tip in a gap given to the nearer head, and two are an
+adult named off a contact strip without the face being looked at.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
