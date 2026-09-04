@@ -134,3 +134,25 @@ HELP KEEP AMERICA STRONG
 # devices in this batch DID get groups (143 "? ? ?", 196 "! ! !"), so this is a
 # decision about notation specifically, not about devices in general.
 11 197 a balloon of musical notes hangs over Donald in panel 4 as he whistles, and neither engine has grouped it
+
+# Judged not worth a group, 2026-09-04, Gladstone's Usual Very Good Year
+# (Vol. 11). Drawn MUSICAL NOTES, under GLK's standing rule from the Rival
+# Beachcombers hand-back. Written out as prose in visible_text so the audit can
+# see them at all -- a bare glyph normalises to the empty string.
+11 054 two music notes drawn beside Gladstone's head in panel 8 as he strolls past
+
+# Judged not worth a group, 2026-09-04, The Screaming Cowboy (Vol. 11). Drawn
+# MUSICAL NOTES, under GLK's standing rule from the Rival Beachcombers hand-back.
+# The title's running gag is a song, so the notes appear on seven of its ten
+# pages -- inside Donald's own singing balloon and inside the juke box's, and
+# once loose beside him as he skis. Written out as prose in visible_text so the
+# audit can see them at all; there is no lettering for an ai_text to carry.
+# The red heart drawn into 064 g6's balloon is NOT listed: it is already inside
+# that group's stored ai_text.
+11 058 music notes drawn inside Donald's song balloon in panel 6
+11 059 music notes drawn inside the juke box's song balloon in panel 7
+11 061 music notes drawn inside the song balloon in panel 3
+11 063 music notes drawn inside the song balloon in panel 8
+11 064 music notes drawn beside Donald as he skis in panel 4
+11 066 music notes drawn inside the song balloon in panel 3
+11 067 music notes drawn inside the song balloons in panels 3 and 7

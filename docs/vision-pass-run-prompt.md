@@ -2685,6 +2685,41 @@ Woodchuck duty in the brown coonskin cap instead, where the only roster ink left
 is their MITTENS. That is where all 24 of the title's collectives come from;
 every panel that printed a cap was named. Establish it per PAGE.
 
+**Vol. 11 uses a DIFFERENT CAP CONSTRUCTION IN EVERY STORY, and the volume's
+three inks are the only thing they share.** Four are now measured:
+
+| story | construction | reference panel |
+|---|---|---|
+| *A Christmas for Shacktown* | solid pompom stocking cap, scarf and mittens to match | 006 p4 |
+| the nine one-pagers | black crown with coloured segments | -- |
+| *Gladstone's Usual Very Good Year* | grey fur winter cap with a coloured DIAMOND badge on the side | **050 p1** |
+| *The Screaming Cowboy* | black skull-cap with a coloured STRIPE over the crown | **060 p8** |
+
+Do not carry a construction across a story boundary; derive it from the
+story's own clean panel before page 1. The inks themselves do hold:
+red `#e51b20`, blue `#00a5d7`, green `#4da33f`/`#519d3e` (H108-112).
+
+- **The blue is the anchor, not the green.** In *Gladstone's* the blue prints
+  `#00a5d7` H194.0 S1.00 V0.84 in **every** panel measured, while the green
+  drifts H108-H146. So a cool badge that is not the exact blue is the green --
+  which is what named 054 g9's `#1da39e` (H177.8), a badge that hue alone would
+  have left unreadable.
+- **In *The Screaming Cowboy* the blue drifts too, and VALUE separates them.**
+  The cap green prints V0.64 at any hue (`#4da33e` H111, `#2ca487` H165,
+  `#2da49c` H176, `#3ba487` H163); the blue never drops below V0.74
+  (`#00a5d7` V0.84, `#16a4bd` V0.74). Saturation agrees -- green S0.59-0.78,
+  blue S0.88-1.00 -- but hue does not, H176 against H189 being only 13 apart.
+- **Two look-alikes in that title, both of which the eye would take for a cap.**
+  Donald's beret is `#04a4d5`, Dewey's blue exactly, so only size and position
+  separate them; and the inn's teal wainscot is `#37a28e` H168.8 at the green's
+  own S and V, in big flat blobs behind the boys on 059. Cap green there is
+  H108-112, the wainscot H168-169. The pine trees are a third: `#4da140` H111,
+  the cap green to two decimal places, so a green blob has to be shown sitting
+  on a head before it names anybody.
+- **A grey cap with a coloured diamond is not by itself a nephew.** The Junior
+  Woodchucks in *Gladstone's* wear the same cap -- 052 p2 has a pig-faced club
+  member in one with a red diamond. Check the head under the badge.
+
 Vol. 10, from *A Financial Fable* 097 p5 (three boys seen from behind, red,
 green and blue wedges in a row) read on 2026-09-03, and confirmed on *The April
 Foolers* the same day. The cap is the **black crown carrying coloured wedges**
