@@ -1795,6 +1795,91 @@ matches by substring. One line back to the bare lettering and the title audits
 clean. The rule already existed and the batch still hit it: **check the audit
 again AFTER a review adds a group, not only before.**
 
+### Findings to paste into the next run (2026-09-04, twenty-sixth batch)
+
+Three titles passed, none reviewed yet: *Ten-Star Generals* (Vol. 10, 10 pages,
+117 groups), *A Christmas for Shacktown* (Vol. 11, 32 pages, 401 groups) and
+*The Truant Nephews* (Vol. 10, 10 pages, 172 groups). 690 groups over 52 pages,
+**2.0 images per page** (23 / 54 / 27). Confidence 671 high, 19 medium, 0 low.
+
+- **A TITLE CAN PRINT NO CAP COLOUR AT ALL, AND THE SCENERY CAN PRINT ALL
+  THREE.** *Ten-Star Generals* puts every nephew in the brown Junior Woodchuck
+  coonskin cap for all ten pages, so `cap_colour` is null throughout. Worse,
+  `heads.py` reports CAP-INK on nearly every head in it and every reading is
+  scenery: the barn wall behind them is `#e61b1f`, the *exact* Vol. 10 cap red,
+  and the sky and pond are `#00a5d7`, the exact wedge blue. Rank a CAP-INK hit
+  against what is behind the figure before believing it, and on a title like
+  this stop running the census at all -- it produces only false positives.
+- **When the ink is gone, the story's own key replaces it.** *Ten-Star
+  Generals* assigns one merit badge per boy in dialogue on its first page --
+  bow and arrow Huey, canoe Dewey, life-saving Louie -- and then uses it to the
+  end. That named 28 of 42 nephew-domain groups with `cap_colour` null on every
+  one. 182 confirms the key independently: the boy in the pond is bare-headed
+  for swimming and names the other two. Read the first page for a per-boy key
+  before deciding a colourless title is unnameable.
+- **THE BALLOON OVER A CHARACTER IS NOT HIS.** Two calls in *Ten-Star Generals*
+  would have gone the wrong way on placement alone. 186 g6 sits squarely over
+  Donald and its tail runs the other way, into the Marshal's shoulder at panel
+  (452,155). 188 g11 ("NOW HE'S DRIFTED INTO THE TERRIBLE DEMONS' WHIRLPOOL!")
+  reads like a nephew's line, and a long spur sweeps left out of the balloon to
+  end 24px off the Marshal's face at his eye level, with the three boys
+  clustered 100px below. Both were caught only by cropping the tail.
+- **A SCALLOPED BALLOON EDGE READS AS TAILS AT 0.6 SCALE.** *A Christmas for
+  Shacktown* 019 p4: the balloon's cloud bottom has three rounded lobes over
+  the three nephews and one real spur at the far right, on Donald. Read off the
+  stacked sheet it was a nephew; cropped at 2.2x it is plainly Donald. If a
+  panel appears to have one tail per figure, that is the shape to distrust
+  first -- a genuine multi-tail chorus balloon has thin tapering spurs, not
+  lobes, and *Shacktown* 013 p4 and 007 p6 both have real ones.
+- **A tip in a gap went one head LEFT again, and a measured tip beat the rule.**
+  *Ten-Star Generals* 180 g9 and *Shacktown* 036 g15 are both gap tips resolved
+  one head left, per the twenty-fifth batch. But *Shacktown* 006 g11 was a gap
+  tip read off a 0.65 sheet that would have gone to the green boy, and a 3x
+  crop put the tip at panel (417,418), exactly on the red cap's leading edge.
+  The rule is the fallback for a tip you have actually measured and that still
+  lands between two heads -- not a substitute for the crop.
+- **Two of the three engines' devices need a type, and `allbold` under-reports
+  on short groups.** *Shacktown* 035 p5 splits one cluster of drawn question
+  marks into two groups and labels one `background` and one `sound_effect`;
+  both are the same device over Scrooge and both were set to `thought`, which
+  is what 008 g9 already stores for the identical thing. And `allbold` scored
+  *Ten-Star Generals* 180 g5's "HAVE" at 1.07 when a 5x crop shows it plainly
+  bold: a four-word group's own baseline is dragged up by its one bold word, so
+  the 1.3 threshold under-reports there. The 250px montage is the sanctioned
+  view for emphasis; the tool is a screen.
+- **A WORDLESS DEVICE MUST NOT GO IN `visible_text`.** Recording "a red diamond
+  badge is drawn on the Woodchuck cap" as prose put a false missed-text finding
+  on all ten pages of *Ten-Star Generals*. The audit matches `visible_text` by
+  substring against the groups' text, so prose about a device that carries no
+  letters can never match anything. Prose belongs there only when the device IS
+  lettering and is genuinely ungrouped -- which is how *The Truant Nephews* 203
+  panel 8's three drawn "!" marks were surfaced, correctly, as the batch's one
+  real missed-text item.
+- **A MANGLED UNICODE ESCAPE IS A TEXT CORRECTION.** *Ten-Star Generals* 189 g6
+  ends with the literal characters `u2014` where the art has an em dash, and
+  the caption on the same page stores its dash correctly. Decode before
+  grepping: a raw grep for `u2014` hits every legitimate `\u2014` escape in an
+  ASCII-escaped file and tells you nothing. One occurrence in 690 groups.
+- **A TITLE'S FILLER PAGES CARRY GROUPS AND REACH NOBODY.** `vision-apply` on
+  *A Christmas for Shacktown* logs "35 page(s)" against 32 prepped. The three
+  are 208 (FRONT_MATTER) and 209/210 (BACK_MATTER) -- one-page gag strips bound
+  with the story, carrying **21, 12 and 14 grouped balloons** on both engines,
+  none of them annotated, none in any queue. Read that log line: the mismatch
+  is the only thing that says so.
+- **The collectives can be the story rather than a failure.** *The Truant
+  Nephews* finishes on 88 of 129 nephew-domain groups collective, and that is
+  what the art gives: the boys are under a truck tilt, inside a packing crate,
+  or drawn as three pairs of eyes in a solid black panel for most of it, and
+  where they are on the page their black crowns are usually turned so no wedge
+  shows. Every panel that printed two or three wedges was named. Say which kind
+  of collective it is in the note -- absence looks identical to under-naming in
+  a queue, and only one of them is worth a reviewer's time.
+- **`identified_by` will not accept `cap-colour` with a null colour.** Three
+  elimination calls -- name the third boy because the other two caps in the
+  panel are readable -- were refused by validation for claiming cap-colour on a
+  boy whose own crown printed nothing. The evidence there is the tail plus the
+  OTHER caps, so the list is `balloon-tail` and the elimination goes in the note.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -2372,6 +2457,29 @@ things that changed are worth keeping.
   the only high-confidence call reversed in that title: a song coming out of the
   drifting gondola is the boat's radio, which the dialogue installed two pages
   earlier ("IT HAS A RADIO AND PLUSH SEATS!"). The review made it `other:radio`.
+
+Vol. 11, from *A Christmas for Shacktown* 006 panel 4 (the three boys in a row,
+caps AND matching mittens), confirmed on panels 2 and 5 of the same page:
+
+| | |
+|---|---|
+| red (Huey) | `#e61b1f` H358.8 S0.88 V0.90 |
+| blue (Dewey) | `#05a4d5` H194.1 S0.98 V0.84 |
+| green (Louie) | `#4da23f` **H111** S0.61 V0.64 |
+
+**Solid single-colour stocking caps with a pompom, the easiest construction in
+the corpus** -- and the scarf and mittens are printed in the same ink, so most
+panels carry the key twice. The green lands in capscan's `leafgrn` band, not
+`green`: on the reference panel `green` reports 652 blobs and none in window
+while `leafgrn` holds the cap. Its saturation is only 0.61, which clears
+`heads.py`'s 0.55 floor but not by much, so a shaded green cap can drop out.
+
+**But the story takes the caps off for a third of its length.** Indoors the boys
+are bare-headed and carry no colour at all -- a census over every panel of 009,
+010, 032 and 033 finds nothing on any of them -- and on 019 they are on Junior
+Woodchuck duty in the brown coonskin cap instead, where the only roster ink left
+is their MITTENS. That is where all 24 of the title's collectives come from;
+every panel that printed a cap was named. Establish it per PAGE.
 
 Vol. 10, from *A Financial Fable* 097 p5 (three boys seen from behind, red,
 green and blue wedges in a row) read on 2026-09-03, and confirmed on *The April
