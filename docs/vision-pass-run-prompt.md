@@ -2224,9 +2224,18 @@ batch                        38 of 403   9.4%   27 of 89 nephew (30.3%)
   review added 058 g17, the `313` licence plate in panel 4. The pass had grouped
   the same plate in panel 7 and written **one** `313` into `visible_text`, so the
   audit matched it against the panel-7 group and reported the page clean --
-  [[project_vision_audit_nearmiss_gap]] exactly. Write one entry per occurrence
-  with the panel named ("313 on the licence plate, panel 4" and "... panel 7")
-  and the second copy becomes visible.
+  [[project_vision_audit_nearmiss_gap]] exactly.
+  There is no `visible_text` spelling that fixes this, and it is worth being
+  exact about why: the audit matches on containment after normalising to letters
+  and digits, so a second bare `313` dedupes against the first and a located
+  form ("313 on the licence plate, panel 4") matches no group's text and would
+  report the page dirty for ever. **The only thing that finds a second copy is
+  counting the copies in the art against the groups on the page**, which is the
+  same check the *Terror* 015 jersey needed -- five `BEAGLE BOYS` in one panel
+  against four groups. Do that count on any panel that repeats a string.
+  Corollary, learned by tripping over it: **once such a copy IS grouped, take
+  the descriptive form back out of `visible_text`.** Left in, it is a finding
+  the audit can never clear.
 - **Under-naming is still the biggest single class: 9 of 26.** Most were panels
   where the note says "no cap stripe readable at this size" -- 065 g0/g1, 066
   g1, 067 g0/g1/g4. The reviewer's own note on 067 g0 is the method: **"Not
