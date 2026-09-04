@@ -1880,6 +1880,86 @@ Three titles passed, none reviewed yet: *Ten-Star Generals* (Vol. 10, 10 pages,
   boy whose own crown printed nothing. The evidence there is the tail plus the
   OTHER caps, so the list is `balloon-tail` and the elimination goes in the note.
 
+### Findings to paste into the next run (2026-09-04, twenty-sixth batch, two titles reviewed)
+
+*Ten-Star Generals* (Vol. 10, 117 groups) and *The Truant Nephews* (Vol. 10,
+176 groups after the review added five and deleted one) both reviewed and
+mirrored clean the same day. **51 speaker corrections over 288 groups**, and the
+two titles could not be further apart: 4 of 117 (3.4%) against 47 of 171
+(27.5%). The whole difference is one habit.
+
+- **A NULL CAP CENSUS IS NOT EVIDENCE OF ABSENCE, AND `heads.py` CANNOT SEE A
+  VOL. 10 WEDGE.** 40 of *The Truant Nephews*' 47 corrections are a nephew the
+  pass declined on a cap it had called unreadable, every one of them coming back
+  with a colour the reviewer simply read. The mechanism is now measured: on 198
+  p7 the pass wrote "their caps turned to the reader as plain black crowns --
+  heads.py finds no cap ink at all on the panel", and a 3.6x crop of that exact
+  panel shows red, green and teal wedges on the three crowns. They are 30-60px
+  slivers riding the TOP EDGE of the crown, under `heads.py`'s 120px `MIN_CAP`
+  floor and above the white-skull band it anchors on, so it is structurally
+  blind to them. Re-running it as `heads.py <panel> 40` finds them.
+  **Never write `nephews` off a silent census. Drop the floor, then crop at
+  3-4x, and only then decline.** The twenty-fifth batch already said a zero
+  census is a reason to crop; this is the same finding costing 40 names.
+- **The per-page split says it outright.** Pages where the pass cropped the
+  wedges came back at **0%** (199, 207). Pages where it stopped at the census
+  output came back at **37-71%** (200 71.4%, 206 66.7%, 202 60.0%, 205 37.5%).
+  Nothing else about those pages differs.
+- **A MEDIUM WAS NOT SAFER THIS TIME.** 2 of 7 mediums corrected (28.6%) against
+  44 of 164 highs (26.8%) -- the first title in the corpus where the two rates
+  match. Both corrected mediums were gap tips the pass named anyway (200 g7,
+  202 g9, both `Dewey` -> `nephews`). Hedging a gap tip to medium did not make
+  the name any more survivable; the roster's answer for a tip you cannot place
+  is the collective, not a name at lower confidence.
+- **THE VOL. 10 RIGHT-OVERSHOOT IS NOT CONFINED TO TIPS THAT LAND IN A GAP.**
+  All three of *The Truant Nephews*' name-to-name swaps are on 206, and all
+  three are the same move: the pass named the boy the tip sat on, and the answer
+  was the boy one place to his LEFT. 206 p4 g8 went to the red boy at head
+  (652..837) and belongs to the middle boy; 206 p5 g9 and g10 each slid one boy
+  right in the same way. This is the offset fan the pass DID diagnose on 207 p7,
+  where the leftmost tip landed on nobody and gave the drift away -- on 206 every
+  tip landed on a head, so nothing flagged it and the whole row went out by one.
+  On a Vol. 10 three-boy row, place the fan and then ask whether shifting it one
+  boy left fits better, even when every tip is sitting on a face.
+- **And do not read a wedge colour off a 0.6-scale sheet.** The pass recorded the
+  leftmost boy of 206 p5 as having "a dark cap with a hint of green". A census at
+  a 40px floor finds no chromatic ink on that head at all. A colour that was
+  eyeballed rather than sampled is worth less than no colour, because it gets
+  written into `cap_colour` as evidence.
+
+*Ten-Star Generals*, by contrast, corrected 4 of 117 with 0 of its 4 mediums
+touched, and its three lessons are small:
+
+- **THE EVIDENCE WAS IN THE PASS'S OWN NOTE, AGAIN.** 180 g7 and g9 both came
+  back as one nephew swapped for another. The pass had written the correct
+  reading into its note as the alternative -- "in p4 the left boy is Dewey
+  pointing at Huey; in p5 the left boy is Huey pointing at Dewey" -- and voted
+  against it because both tails landed on the boy in the same position on the
+  page. The boys take turns introducing each other: the boy POINTED AT in one
+  panel is the one SPEAKING in the next. Where a story has a boy name his
+  brother, read the next panel before assuming a single spokesman.
+- **A per-boy key works on the DRAWING as well as the words.** 181 g8 was
+  declined because "no boy is drawn clearly enough"; the reviewer named Huey
+  because he is the one making the bow. The pass had built the whole title on a
+  badge key -- bow Huey, canoe Dewey, life-saving Louie -- and applied it only
+  to what a boy SAID, never to what he was doing with his hands.
+- **A label pointed at an object in the author's voice is `narration`.** 185 g11,
+  the "DONALD'S BOW!" tag, went `none`/`background` -> `narrator`/`narration`.
+  It is Barks labelling the giveaway for the reader, not lettering inside the
+  scene, and the test is whose voice it is rather than whether it sits in the art.
+
+**And two things the review did to the data, both worth checking for.** It added
+five groups and deleted one. 203 gained the three drawn "!" marks the pass had
+reported as missed text **plus a `TOOLS` crate stencil in the same panel that the
+pass had not reported** -- the audit cannot find what `visible_text` does not
+hold, so an incomplete capture reads as a clean audit. And the pass's `visible_text`
+entry there was PROSE, which never matches a group by substring, so the audit went
+on reporting the item after the review had grouped it; one line back to the bare
+lettering and it goes quiet. 204 gained a second `TOOLS` overlapping the one
+hand-added on 2026-08-29 by 96%, which was deleted again -- and that deletion left
+id 15 as a GAP rather than renumbering the page, identically on both engines.
+Gaps are tolerated: 32 of 5557 pages in the corpus already have one.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
