@@ -2355,6 +2355,96 @@ batch                        23 of 418   5.5%   20 of 85 nephew (23.5%)
   `speaker_reviewed` after every review, and look first at the groups whose text
   changed.
 
+### Findings to paste into the next run (2026-09-05, twenty-ninth batch, one title reviewed)
+
+*The Think Box Bollix*, Vol. 11, reviewed and mirrored. *Only a Poor Old Man*
+was passed in the same batch and is not reviewed yet.
+
+```
+The Think Box Bollix   13 of 119   10.9%   13 of 38 nephew (34.2%)
+   highs 13/118 (11.0%) against the one medium 0/1 -- the medium was KEPT
+```
+
+**The confidence split inverted, and that is the story of the batch.** The one
+call hedged to medium survived and thirteen highs did not, because the failure
+was not uncertainty -- it was a systematic move, reading cap slivers by eye off
+a contact sheet, and a systematic move is written at high every time. A
+confidence figure only measures what the pass knew it was unsure of.
+
+- **A PLURAL PRONOUN IS NOT A CHORUS. Three of the five under-namings were
+  balloons made collective because the words said WE'RE.** 100 g8 "WE'RE
+  WORKING FOR MR. GEARLOOSE!", 100 g9 "WE'RE HIS ASSISTANTS!" and 102 g12
+  "A WOLF! A WOLF!" all went `nephews` -> a name. A boy answering for the group
+  still speaks alone, and the words never say how many mouths are open.
+  The construction itself is real and the reviewer left it alone where it was
+  drawn -- 107 g7's two tails stayed `nephews` -- so the test is the TAILS and
+  only the tails. Count them, and let the pronoun say nothing.
+
+- **THE VOLUME'S OWN HUE RULE, APPLIED TWICE AND DROPPED ONCE -- ON THE ONE
+  SLIVER THAT WAS NEVER PROBED.** Vol. 11's rule is that the cap green holds
+  H108-112 and anything cooler than about H140 is the blue however muddy it
+  looks. The pass used it correctly on 106 p5 (`#27a395` H173.2 -> blue) and
+  103 p8 (`#3b986f` H153.5 -> blue), and then called 106 p2 green by eye off a
+  0.95-scale stack. It measures **139px of `#3a947a` H162.7 S0.61, with red 0
+  and blue 0 elsewhere in the panel** -- the blue, by the same rule, and the
+  review made it Dewey.
+  Every sliver this pass PROBED survived the review; the ones it eyeballed off
+  a contact sheet ran 2 right and 2 wrong. In a title whose foliage sits at
+  H90-101 and whose cap green sits at H111-112, naming a cap green by eye is a
+  coin flip. **The contact sheet says which boy has ink on him; it never says
+  which ink.**
+
+- **DEWEY IS THE BOY THAT GOES MISSING.** Seven of the thirteen corrections
+  end at Dewey. The pass wrote Huey 5 / Dewey 5 / Louie 5 and the review closed
+  at Huey 5 / **Dewey 10** / Louie 4. Where a sliver is cool and small, the
+  answer has been Dewey far more often than not.
+
+- **A DRAWN DEVICE WITH NO LETTERS IN IT CAN ONLY REACH THE REVIEWER THROUGH
+  `queue-missed.txt`.** The review added three groups for the three `!` marks
+  over the boys in 105 panel 7. The pass recorded them nowhere: not as groups,
+  because `added_groups` is unusable, and not in `visible_text`, because a bare
+  `!` normalises to nothing and the audit could never have cleared it. The
+  missed-text hand-back is prose by design and is the only channel that works.
+  Write "three drawn exclamation marks, one over each boy, 105 panel 7" there.
+  The three arrived CLEAN on both engines -- matching ids and boxes, empty
+  `ocr_text` and `notes`, no inherited note or ai_text, `identified_by` set --
+  but all three carry no `vision_text_ok`, so nobody has confirmed the
+  transcription.
+
+- **WHEN A PANEL HOLDS AN ANIMAL THE STORY IS ABOUT TO REVEAL AS A TALKER,
+  CHECK THE ANIMAL BEFORE THE BOYS.** 105 g8 "YEAH! A WOLF GOT HIM! A REAL
+  WOLF!" was traced to the first nephew and belongs to the rabbit. The boxes
+  settle it after the fact: the balloon sits at x226-650, the left of panel 7
+  where the rabbit is, and the three added `!` marks at x671-1025 over the
+  boys. That IS the gag -- the rabbit speaks, the boys react, and panel 8 pays
+  it off with "Y-YOU'RE TALKING!". A speaking animal reads as scenery right up
+  to the moment the story turns it over.
+
+- **QUERY BACK TO THE REVIEWER: 105 g7's `cap_colour`.** It came back
+  `Huey` with `cap_colour: red`. `capwide` over the whole of 105 panel 6 at a
+  15px floor returns **red 0 blob(s) and blue 0 blob(s)**, and `heads.py` puts
+  1,562px of `#4ea23e` H112.2 -- the volume's cap green to a decimal place --
+  on the third boy, which is the boy the pass's tail landed on. Whatever
+  settles the name, red is not printed anywhere in that panel, so the field is
+  recording a colour the art does not carry.
+
+- **`review_findings.py --since` over-reported the types AGAIN.** It listed
+  103 g1 (`background` -> `dialogue`) and 106 g1 (`thought` -> `dialogue`) for
+  this batch; a text-keyed diff against the pass commit shows neither type
+  changed during the review, so both `type_was` values predate it. **Zero**
+  type corrections this batch. Diff against the pass commit before crediting a
+  type change -- and key that diff on `ai_text`, not on id, because a review
+  that adds a group renumbers the page underneath it.
+
+- **The review handed back a duplicate free-text name**, `other:a rabbit`
+  against the three existing `other:the rabbit`. Normalised before mirroring,
+  as the skill asks.
+
+- **Two stragglers, and they are the page's tail again.** 105 gained three
+  groups and its last two ids were the two never stamped -- the same shape as
+  every other insertion. Count `speaker_reviewed` on both engines and look at
+  the end of any page that grew.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
