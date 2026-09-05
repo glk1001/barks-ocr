@@ -2681,6 +2681,72 @@ Houseboat Holiday   25 of 130  19.2%    highs 25/130 (19.2%) mediums 0/1
   rest**; that class exists precisely for this and it earned its keep here.
 
 
+### Findings to paste into the next run (2026-09-05, thirty-first batch, Gemstone Hunters reviewed)
+
+*Gemstone Hunters*, Vol. 11, reviewed and mirrored. The mirror is clean:
+126 groups both engines, 125 reviewed, 114 with `identified_by`, identical
+speaker / cap_colour / confidence distributions, and **zero** per-group field
+mismatches keyed on normalised `ai_text`.
+
+```
+Gemstone Hunters   5 of 125   4.0%    nephew domain 4 of 29 (13.8%)
+   3 one nephew -> another, 1 nephew -> Donald, 1 the added group's default
+   0 type corrections; 1 text correction still outstanding (158 g9)
+   confidence gave no signal -- the pass wrote 125 of 125 high
+```
+
+- **THE FOUR SPEAKER CORRECTIONS ARE ALL TAIL-READING, AND NOT ONE OF THEM IS A
+  COLOUR ERROR.** Every cap hex the pass recorded was right; the reviewer
+  changed `cap_colour` only because the speaker changed, and each new colour is
+  a band the pass had already measured in that same panel. The colour census is
+  sound. What failed is where the tail was said to land.
+- **NEVER QUOTE A TIP COORDINATE READ OFF A `stack.py` COMPOSITE.** Two of the
+  four (158 g4 Dewey -> Huey, 160 g6 Huey -> Louie) came from converting a
+  position in a *stacked* image back to panel pixels by guessing the per-crop
+  y-offset the stack had introduced. Re-measured on single `pcrop.py` crops:
+  158's tip is at about (309,296), on the red band, against the `(226,282)`
+  the note claimed -- 80px out. 160's is at about (339,277), on the green
+  band, against the claimed `(395,235)` -- 55px out. **The errors have no
+  direction**; they are conversion noise, and they are worse than no number
+  because `(226,282)` reads as measurement and promoted both calls to high.
+  Measure a tip only on a crop whose origin you passed to `pcrop.py`, or quote
+  no number at all.
+- **A `head+beak x=(...)` SPAN CAN BE TWO BOYS MERGED, AND USING IT WIDENS ONE
+  BOY BY A WHOLE NEIGHBOUR.** 163 g9 (Louie -> Huey) cited "inside the green
+  boy's head span 120-370". heads.py had merged two touching heads into that
+  one span: the green boy actually stops near x=227 and the red boy's cap
+  begins at 268, and the tip at 264 is on the red cap, 4px in. **Cross-check
+  any head span against the per-boy cap-ink boxes before quoting it** -- those
+  are never merged. In a three-boy close-up a span wider than about 150px is
+  the tell.
+- **READ WHICH WAY THE SPUR POINTS, NOT WHICH SIDE OF THE BALLOON IT HANGS
+  FROM.** 156 g1 (Louie -> Donald) was given to the green-capped boy because
+  "the tail comes down the balloon's right side onto him". The spur is on the
+  balloon's right and points down-LEFT: its tip sits at about (439,555), 21px
+  off Donald's head and 54px off the boy's, and the direction settles it for
+  Donald. This is [[feedback_tip_in_a_gap_use_the_direction]] missed for the
+  third time; the position of a tail's ROOT says nothing.
+- **A PAGE WITH NO `visible_text` IS A PAGE THE MISSED-TEXT AUDIT NEVER
+  SWEEPS.** The audit reported this title clean in all three classes, and the
+  review then added a group the pass had missed: the `313` licence plate on
+  158 panel 2. The audit could not see it because 158's capture carried no
+  `visible_text` at all -- it swept 6 of 10 pages, and 155, 156, 158 and 163
+  were skipped for the same reason. The pass had recorded the very same plate
+  on 160 g3, on the very same car. **Fill `visible_text` on every page, or the
+  audit's "clean" means only "not checked".**
+- **THE ADD WAS INSERTED, NOT APPENDED, AND COST ONE STRAGGLER AND ONE STALE
+  QUEUE ENTRY.** `313` went in at 158 g2 on both engines and shifted every
+  later id up by one. The page's last group, now 158 g11, fell off the end of
+  a queue built before the insert and is the title's only unreviewed group; and
+  the outstanding text correction moved from g8 to g9, so the corrections queue
+  had to be regenerated before it would address the right group. **After any
+  add: regenerate every queue that still has entries on that page.**
+- **`review_findings --since` REPORTED A TYPE CORRECTION THAT PREDATES THE
+  BATCH BY THREE WEEKS.** 163 g3 `sound_effect -> dialogue` carries
+  `type_reviewed_date: 2026-08-12`. The real count for this batch is zero.
+  Check the date on every `type_was` before believing the tool's total.
+
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -3296,6 +3362,8 @@ three inks are the only thing they share.** Four are now measured:
 | *The Think Box Bollix* | plain black skull cap with a small coloured SLIVER at the crown edge | **106 p1** |
 | *The Golden Helmet* | black skull-cap with a coloured CRESCENT at the crown edge | **124 p1** |
 | *Houseboat Holiday* | the same crescent -- but only for the first third of the story | **145 p6** |
+| *Gemstone Hunters* | black skull-cap with a coloured BAND arching over the crown | **160 p3** |
+| *The Gilded Man* | the same banded crown | **160 p3** (Gemstone) / **182 p2** |
 
 Do not carry a construction across a story boundary; derive it from the
 story's own clean panel before page 1.
