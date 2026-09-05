@@ -206,3 +206,17 @@ HELP KEEP AMERICA STRONG
 # found, and covered by the standing rule that drawn music notes are not worth
 # a group.
 11 169 four musical notes drawn in a balloon over Philo T. Ellic as he hums at his desk in panel 2
+
+# Spending Money, Vol. 11, read 2026-09-05. Same standing rule as the three
+# titles above: dollar signs drawn on MONEY -- sacks, bags -- and on the front
+# of Scrooge's own desk, which is the money-bin furniture rather than a sign.
+# This is the money-bin story, so the emblem is scenery throughout. Recorded in
+# each page's visible_text as a true record of what is printed, and left
+# ungrouped. The page 205 roadside billboard is NOT listed here: it is a new
+# kind of finding and is waiting on the reviewer's word.
+11 198 a dollar sign drawn on each of the money sacks in panels 5, 6, 7 and 8, and on the front of Scrooge's desk in panel 5
+11 199 a dollar sign drawn on each of the money sacks in panels 1, 5, 6 and 7, and on the front of Scrooge's desk in panels 4 and 8
+11 200 a dollar sign drawn on each of the money sacks in panels 5, 7 and 8
+11 203 a dollar sign drawn on the money sack in panel 4
+11 204 a dollar sign drawn on the money bag Donald throws in panel 6
+11 207 a dollar sign drawn on each of the money sacks in panels 1, 2, 4, 6 and 8
