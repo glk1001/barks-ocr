@@ -2550,6 +2550,137 @@ Only a Poor Old Man   10 of 400   2.5%    5 of 26 nephew (19.2%)
   for the page and look for a one-character difference before assuming
   anything worse.
 
+### Findings to paste into the next run (2026-09-05, thirtieth batch, two titles reviewed)
+
+*The Golden Helmet* and *Houseboat Holiday*, both Vol. 11, reviewed and
+mirrored together. Both mirrors clean: distributions identical on both
+engines, zero per-group field mismatches.
+
+```
+The Golden Helmet   28 of 385   7.3%    highs 20/361 (5.5%)  mediums 8/24 (33.3%)
+Houseboat Holiday   25 of 130  19.2%    highs 25/130 (19.2%) mediums 0/1
+   GH: 5 of 5 type proposals accepted, 1 text fix landed, 3 groups added
+   HH: nothing added, nothing outstanding -- every correction a speaker
+```
+
+- **A COLOURED GARMENT CARRIES THE CAP CONVENTION, AND NO BRIDGING PANEL IS
+  REQUIRED. Twenty-four of Houseboat Holiday's twenty-five corrections are
+  this one refusal.** From 147 p5 the boys swim for the rest of the story
+  with their caps off, in trunks striped red, plain and blue. The pass
+  recorded `nephews` on all of it and wrote the reason into every note: *"no
+  panel shows a boy in both his cap and his trunks, so there is no bridge
+  from the stripes to a name and the costume names nobody."* The review names
+  them from the trunks anyway -- `identified_by: ['balloon-tail','costume']`,
+  roster colour in `cap_colour` -- and the colours are the ones capscan had
+  ALREADY MEASURED on those trunks: 147 p6 red `#d81e1f` on the left boy ->
+  Huey, blue `#459aa6` on the right -> Dewey.
+  The pass measured the ink that names them and then argued itself out of it.
+  The rule: **the three inks name the boy wherever they are printed on him --
+  cap, shirt, mittens, swimming trunks. Do not require a panel showing the
+  cap and the garment together.** [[feedback_shirt_colour_names_them_too]]
+  said this already; what is new is that the bridge is not a precondition.
+- **ON A WIDE SHOT WITH NO READABLE FIGURE, THE LINE IS THE BOYS' -- five of
+  the seven `Donald` -> `nephews` corrections.** 124 g13 "SMART IDEA! START
+  YELLING!", 125 g4 "HELLO!", 126 g13 "IT'S THE FOREDECK...", 127 g11 "DO YOU
+  SEE A HEADLAND...", 127 g13 "OLAF THE BLUE MUST HAVE FELT THE SAME WAY!".
+  Every one was a MEDIUM where the pass wrote "given to Donald because he is
+  the one giving orders / because he has the map" -- register reasoning, with
+  the note itself conceding the drawing did not say.
+  But it is **not** a blanket rule, and the counter-example is in the same
+  title: 121 g13 "SEA BIRDS FLYING FOR COVER!" the pass DID give to `nephews`
+  on that rule, and the review moved it to Donald. So: 5 wrong one way, 1
+  wrong the other. Prefer the boys on a wide shot, and expect the nautical
+  observations to stay Donald's.
+- **THE CONFIDENCE FLAG WORKED IN ONE TITLE AND WAS USELESS IN THE OTHER, FOR
+  A REASON WORTH KNOWING.** Golden Helmet's mediums corrected at 33.3%
+  against its highs' 5.5% -- six times the rate, the first batch in three
+  where the flag pointed the right way. Houseboat's corrected 25 highs and 0
+  of its 1 medium. The difference is the KIND of error: Golden Helmet's were
+  genuine close calls the pass knew it was guessing at, Houseboat's were one
+  systematic rule the pass was certain of. **A medium is worth writing when
+  the uncertainty is real; it cannot catch a wrong rule, because a wrong rule
+  never feels uncertain.**
+- **QUERY BACK TO THE REVIEWER: six Golden Helmet calls gained a `cap_colour`
+  on panels where NO cap ink is printed at any floor.** 126 g0 -> Dewey/blue,
+  127 g3 -> Louie/green, 127 g4 -> Dewey/blue, 128 g3 -> Louie/green, 129 g3
+  -> Louie/green, 131 g6 -> Dewey/blue. Re-scanned after the review at a
+  **15px** floor to check whether the pass had simply screened them out: 127
+  p3 has no cap-green and no cap-blue at all (its only green is sea spray at
+  `#51988f` H172.4 S0.47), and 128 p2's only blue is Donald's own 1,126px
+  cap. So the names are not coming from ink on those panels, and the recorded
+  colour is the convention read backwards -- which is exactly the tautology
+  `cap_colour` exists to prevent. **What is the mechanism -- seating order,
+  scene continuity from a nearby panel that does print, or the costume rule
+  above?** Whichever it is, the pass should be applying it too, and cannot
+  until it is named.
+- **A REVIEW CAN HAND BACK BOTH A MISSPELLING AND A ROSTER COLLISION, AND THE
+  MIRROR WILL DOUBLE THEM.** Golden Helmet came back with `other:Sharkey` on
+  four groups against `other:Sharky` on thirty-four -- the art letters SHARKY
+  (116 g6, 128 g12, 139 g0) -- and with `other:Azure Blue` on 116 g7, where
+  **Azure Blue is a database roster value for that story and takes no
+  `other:` prefix at all.** The second is new: check singletons not just
+  against each other but against the ROSTER. Both were normalised before
+  mirroring, so paddleocr never saw them. Grep the `other:` counts every time,
+  and do it BEFORE the mirror.
+- **AN ADDED GROUP IS SOMETIMES APPENDED AND SOMETIMES INSERTED, IN THE SAME
+  REVIEW.** Golden Helmet gained three: 115 g9 and 119 g16 were APPENDED as
+  the page's last id and stranded nobody, while 125 g10 was INSERTED and
+  shifted every id from 10 up by one -- leaving 125 g17, the page's tail,
+  unreviewed on both engines. Nothing was destroyed (17 texts in, 18 out,
+  none lost), but the straggler is real. **After any add, check both: count
+  `speaker_reviewed` per engine, and diff id -> ai_text rather than the id
+  set.** Houseboat added nothing and still left 150 g4 unreviewed, so a
+  straggler does not require an insertion to explain it.
+- **A BACKGROUND LABEL MISSING FROM `visible_text` IS INVISIBLE TO THE AUDIT,
+  AND THE REVIEWER FOUND ONE THE PASS NEVER SAW.** 119 g16 is an `ATLAS`
+  label in panel 7 that the pass did not record; because it never reached
+  that page's `visible_text`, the missed-text audit reported the page clean.
+  Same root cause as the previous batch's prison number. **Sweep every panel
+  for lettering before writing the capture, not just the panels that look
+  like they have signs in them.**
+- **THREE QUEUED MISSED-TEXT ITEMS WERE NOT ADDED AND ARE STILL OPEN.**
+  Golden Helmet 118 `SEC 1` (wall plate, truncated by the panel border) and
+  122 `33` (warship hull number); Houseboat 152 panel 8, the grawlix cursing
+  balloon whose caption says the comments cannot be printed. A finding the
+  reviewer decides against still needs their word before it can go in
+  `missed-text-ignore.txt`, so these are carried, not dropped.
+- **ALL THREE MISSED-TEXT ITEMS WERE THEN GROUPED, AND THE CLOSE-OUT IS GREEN.**
+  118 `SEC` was APPENDED as the page's last id and shifted nothing; 122 `33`
+  was INSERTED in reading order and shifted g8-g11 up by one; 152's grawlix
+  balloon was APPENDED as the new last id on both engines. Both titles now
+  pass every gating check, with the missed-text audit clean in all three
+  classes.
+- **HOW TO GROUP A BALLOON THAT HAS NO LETTERS IN IT.** The corpus already
+  holds **815 symbol-only groups** across 280 distinct strings, so there is a
+  settled convention and it does not need inventing: **the literal glyphs in
+  `ai_text`, space-separated, `\n` for a line break.** Precedents: `? ?`,
+  `! ? !`, `$ $ $`, `♪`/`♫`/`🎵`, and the closest analogue for a multi-glyph
+  device, Vol. 24 180 g7 `'$ # $ #\n# $ # $'`. Non-ASCII is fine -- the file
+  is `ensure_ascii`, so it stores as `\u` escapes and round-trips.
+  A grawlix is SPEECH, not a device: Houseboat 152's caption says *"his
+  comments cannot be printed here"*, so the balloon IS the comments --
+  `type: dialogue`, speaker Donald, `off-panel` because he is inside the
+  barrel. Contrast the bare `?`, which is a device and takes the type it is
+  drawn as. And append it as the page's new LAST id rather than routing it
+  through `vision_apply`'s `added_groups`, which renumbers before the
+  annotations land.
+- **DO NOT VERIFY A MIRROR BY GROUP ID -- IT MANUFACTURES PHANTOMS.** After
+  the final mirror an id-keyed check reported six field mismatches on Golden
+  Helmet 122 g5/g6. Nothing was wrong: the editor had re-sorted easyocr's
+  panel 5 into reading order and paddleocr kept the old order, so the same
+  two groups sit on swapped ids with correct values on both. **Keyed on
+  normalised `ai_text` -- the way apply and mirror actually match -- there
+  were zero mismatches.** The tell is distributions that are identical while
+  per-id fields disagree in mirrored pairs.
+- **A STROKE CUT BY THE PANEL BORDER IS NOT A CHARACTER.** The pass wrote
+  `SEC 1` into 118's `visible_text`; the review grouped it as `SEC`, and the
+  audit's third class -- *nearly a grouped text* -- caught the disagreement.
+  Re-cropped at 8x, the plate reads SEC followed by a partial vertical stroke
+  running into the border, so the group was right and the capture had
+  overclaimed. **Transcribe what is fully legible and let the audit find the
+  rest**; that class exists precisely for this and it earned its keep here.
+
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -3163,10 +3294,48 @@ three inks are the only thing they share.** Four are now measured:
 | *Rocket Wing Saves the Day* | black crown with a coloured BAND showing as a curved side sliver | **078 p6** |
 | *Gladstone's Terrible Secret* | the same banded black crown | **089 p2** |
 | *The Think Box Bollix* | plain black skull cap with a small coloured SLIVER at the crown edge | **106 p1** |
+| *The Golden Helmet* | black skull-cap with a coloured CRESCENT at the crown edge | **124 p1** |
+| *Houseboat Holiday* | the same crescent -- but only for the first third of the story | **145 p6** |
 
 Do not carry a construction across a story boundary; derive it from the
-story's own clean panel before page 1. The inks themselves do hold:
-red `#e51b20`, blue `#00a5d7`, green `#4da33f`/`#519d3e` (H108-112).
+story's own clean panel before page 1.
+The inks themselves do hold: red `#e51b20`, blue `#00a5d7`,
+green `#4da33f`/`#519d3e` (H108-112).
+
+- **A SIXTH AND SEVENTH CONSTRUCTION, AND BOTH ARE THE SAME CRESCENT.**
+  *The Golden Helmet* and *Houseboat Holiday* both use a black skull-cap
+  carrying a small coloured crescent at the crown edge, and both print the
+  volume's three inks cleanly when they print them at all: red `#e61b1f`
+  H358.8 S0.88, green `#4da33f` H109-113 S0.61 V0.64, blue `#00a5d7` H194.0
+  S1.00 V0.84. Their clean three-cap panels are *Golden Helmet* 124 p1 and
+  *Houseboat* 145 p6 and 146 p4, each printing all three in one frame.
+  Two things about that green. It lands in capscan's **`leafgrn`** band, never
+  in `green` -- a `green: 0` line on either title means nothing. And on a
+  crescent of a few hundred pixels ringed by black it **bleeds toward cyan**:
+  the same cap reads H144-158 small and H109-113 large, with R and G holding
+  to within a few counts and only B lifted. Rank it on S and V, which stay at
+  0.6/0.6 where the blue sits at 1.00/0.84, rather than on hue.
+  *Golden Helmet* also has an H168 `#37a28e` teal all over its sea pages --
+  that one IS the water, and it is 55 degrees off the cap green.
+- **Donald's own cap is the trap in both.** His sailor cap is a SOLID blue
+  `#00a5d7` dome of 1,000-8,000px with no black crown, so it is the biggest
+  blue blob in most panels; a nephew's blue crescent runs 180-2,100px and
+  always has black around it. Read the construction, not just the hex.
+- **Plan for the caps coming OFF.** *Houseboat Holiday* puts the boys in
+  swimsuits from 147 p5 and they stay bare-headed to the end, so 148-153 carry
+  no cap ink at all -- that is where nearly all of its collectives come from,
+  and it is absence, not a declined reading. Their trunks are striped red,
+  plain and blue, but NO panel shows a boy in both his cap and his trunks, so
+  the stripes bridge to nothing. *Golden Helmet* does the same on a smaller
+  scale: the boys are bare-headed for the whole of 119, indoors at home, and
+  again in scattered later panels -- 122 p4, 125 p7, 130 p5, 131 p5.
+- **A DIRECT ADDRESS CAN CONTRADICT A CLEAN CAP.** *Golden Helmet* 129 g12 is
+  a boy with 1,730px of unambiguous `#4ea240` H111.4 green who predicts the cut
+  headland, and 130 g0 answers him by name: "DEWEY, YOU'RE RIGHT!". It is the
+  only line in 32 pages that names a single nephew. Recorded Dewey with
+  `cap_colour: green` -- the name wins, the printed ink is kept. Whether that
+  is one mis-coloured cap or a permuted palette is the reviewer's call, and
+  every other green in the title is still recorded Louie on the convention.
 
 - **IN THE TWO BANDED-CROWN TITLES THE FOLIAGE SITS INSIDE THE CAP GREEN'S
   HUE, AND ONLY SATURATION SEPARATES THEM.** *Rocket Wing* plays out in a back
