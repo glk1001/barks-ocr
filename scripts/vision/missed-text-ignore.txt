@@ -220,3 +220,13 @@ HELP KEEP AMERICA STRONG
 11 203 a dollar sign drawn on the money sack in panel 4
 11 204 a dollar sign drawn on the money bag Donald throws in panel 6
 11 207 a dollar sign drawn on each of the money sacks in panels 1, 2, 4, 6 and 8
+
+# The Hypno-Gun, Vol. 13, read 2026-09-05 -- the volume's first title. Same
+# standing rule again: dollar signs drawn on MONEY, here the sacks in Scrooge's
+# office and the one Donald carries home. Recorded in each page's visible_text
+# as a true record of what is printed, and left ungrouped. The 056 impact stars
+# are NOT listed here: a drawn device carrying no characters is a new class for
+# this list, and it is queued for the reviewer's word.
+13 050 a dollar sign drawn on the money sacks stacked beside Scrooge's desk
+13 051 a dollar sign drawn on the money sack Scrooge hands over
+13 057 a dollar sign drawn on the money sack Donald carries home
