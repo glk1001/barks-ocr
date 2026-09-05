@@ -2520,6 +2520,28 @@ Only a Poor Old Man   10 of 400   2.5%    5 of 26 nephew (19.2%)
   `vision-corrections` and the missed-text audit at the review close-out, not
   just at the apply.
 
+- **AN OUTSTANDING-CORRECTIONS COUNT OF ZERO DOES NOT SAY THE PROPOSALS WERE
+  ACCEPTED.** `vision-corrections` drops a group once `type_reviewed` is
+  stamped, whether the reviewer took the proposed type or put the old one back,
+  so "Nothing outstanding" reads the same either way. Read the STORED values:
+  on this title all four came back `type` = the proposed value with `type_was`
+  preserved and `type_reviewed: true` on both engines, so all four were
+  accepted -- 008 g6 `sound_effect`->`dialogue`, and 020 g1, 025 g9 and 031 g7
+  to `narration`. The text fix landed too. Check `type` against `type_was`
+  before reporting a proposal as taken.
+
+- **AN ADDED GROUP IS SOMETIMES APPENDED AND SOMETIMES INSERTED, AND THE TWO
+  FAIL IN OPPOSITE WAYS.** *The Think Box Bollix* 105 re-sorted on save: ids
+  shifted and the page's last two groups were stranded unreviewed, the familiar
+  pattern. All three *Only a Poor Old Man* adds were APPENDED as the page's
+  last id instead: nothing renumbered, nothing was stranded -- and the page's
+  ids no longer follow the page. 027 now runs panel `1,1,2,2,3,3,4,4,6,7,8,5`,
+  and 029 puts a panel-3 question mark after its panel-8 groups.
+  So do not assume either behaviour. **After any add, check BOTH: count
+  `speaker_reviewed` for stragglers, and list the page's `panel_num` by id to
+  see whether reading order survived.** Do not renumber to fix the order --
+  that is the one operation that invalidates everything keyed to the ids.
+
 - **THE MIRROR MATCHES ON `ai_text`, SO ONE DROPPED CHARACTER STRANDS A
   GROUP.** The review typed 037 g9's label with a trailing period on easyocr
   and without it on paddleocr; the mirror could not pair them and the title sat
