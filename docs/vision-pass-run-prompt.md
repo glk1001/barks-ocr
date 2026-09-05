@@ -2445,6 +2445,89 @@ confidence figure only measures what the pass knew it was unsure of.
   every other insertion. Count `speaker_reviewed` on both engines and look at
   the end of any page that grew.
 
+### Findings to paste into the next run (2026-09-05, twenty-ninth batch, second title)
+
+*Only a Poor Old Man*, Vol. 12, reviewed and mirrored. Same batch as *The
+Think Box Bollix* above, and the two titles fail in the same place.
+
+```
+Only a Poor Old Man   10 of 400   2.5%    5 of 26 nephew (19.2%)
+   highs 10/397 (2.5%) against mediums 0/3 -- all three mediums KEPT
+   plus 8 text corrections and 2 added groups, none of it speaker work
+```
+
+- **A CAPTION BOX IS THE NARRATOR EVEN WHEN IT IS SET IN QUOTATION MARKS AND
+  SPEAKS IN THE FIRST PERSON. Four of the ten corrections are this one call.**
+  014 g11 `"FROZE MY FINGERS TO THE BONE..."`, 015 g1, 015 g3 and 020 g1 are
+  Scrooge's Klondike, Montana and Spanish Main flashbacks, every one of them
+  quoted and every one of them saying I and ME. The pass reasoned from exactly
+  that -- "the narrator does not say me" -- gave all four to `Scrooge`, and was
+  wrong four times out of four.
+  The roster already says it: `narrator` is *a caption box, not a character*.
+  It is a statement about the BOX. **The narrator can quote a character; the
+  field still records the box and not the voice inside it.** Do not argue past
+  it from the pronouns.
+
+- **`text_ok: true` IS A CLAIM ABOUT LETTERING READ AT SIZE, AND ALL EIGHT
+  TEXT CORRECTIONS WERE SMALL BACKGROUND LABELS CONFIRMED OFF A CONTACT
+  SHEET.** 021 g10, 029 g1, 030 g2/g3/g8, 034 g4/g12 and 037 g9 are all Beagle
+  Boy shirt labels, and every one was short -- a dropped `INC.`, a dropped
+  prison number. The pass marked each `text_ok: true` having seen it only at
+  250px in a montage, where the eye fills in a familiar shape it has already
+  read correctly six times.
+  This is the SAME root cause as *The Think Box Bollix*'s cap findings one
+  title earlier, and it is worth stating once for both: **the contact sheet is
+  for triage. Anything the pass is going to ASSERT -- a colour, a
+  transcription -- has to be cropped first.** One title it cost cap colours,
+  the next it cost eight transcriptions.
+
+- **BOTH ADDED GROUPS ARE LETTERING THE PASS NEVER RECORDED, AND THEY FAIL IN
+  TWO DIFFERENT WAYS.** 022 g11 is a Beagle Boy prison number `176-831`: the
+  pass wrote `BEAGLE BOYS INC.` into `visible_text` for that page and left the
+  number beside it out, so the audit had nothing to diff and reported clean.
+  029 g12 is a drawn `?` over Donald -- a bare glyph, which normalises to
+  nothing, so `visible_text` could never have carried it at all.
+  With the three `!` marks from the previous title that is **four** missed
+  devices in two titles. **Put every background label in `visible_text`,
+  prison numbers included, and put every wordless drawn device in
+  `queue-missed.txt` as prose, because that is the only channel that can
+  carry it.**
+
+- **THE MEDIUMS SURVIVED AGAIN.** All three of this title's mediums were kept
+  and ten highs were corrected; across both titles of the batch that is 4
+  mediums kept against 23 highs corrected. Two titles running, the confidence
+  field has pointed the wrong way -- because both titles' errors were
+  systematic moves the pass was sure of, not close calls. **A low correction
+  rate among mediums is not reassurance; it means the damage is somewhere the
+  pass never doubted itself.**
+
+- **QUERY BACK TO THE REVIEWER: 027 g9 now claims `cap-colour` as evidence
+  with `cap_colour: null`.** The review moved it `Dewey` -> `Huey`, set the
+  colour to null and left `cap-colour` in `identified_by`, and the mirror
+  copied that onto both engines. It is the exact combination `vision_apply`
+  REFUSES from a pass -- "identified_by claims cap-colour but cap_colour is
+  null. Record the colour that was read." **The validation that guards the
+  pass does not guard the editor**, so a review can write a state the pass
+  cannot. Either the colour wants recording or `cap-colour` wants dropping,
+  and only the reviewer knows which. (The pass had measured 1,099px of
+  `#03a4d5` on that head, so there IS a colour to record.)
+
+- **A REVIEW CAN BE 400 OF 400 ON SPEAKERS AND HAVE TOUCHED NEITHER THE
+  CORRECTIONS QUEUE NOR THE MISSED TEXT.** This one was, and it had not: the
+  ten text and type corrections the pass proposed are still outstanding, and
+  the `BOOM` on 027 that neither engine grouped is still ungrouped. They are
+  separate review states and the speaker count says nothing about them. Run
+  `vision-corrections` and the missed-text audit at the review close-out, not
+  just at the apply.
+
+- **THE MIRROR MATCHES ON `ai_text`, SO ONE DROPPED CHARACTER STRANDS A
+  GROUP.** The review typed 037 g9's label with a trailing period on easyocr
+  and without it on paddleocr; the mirror could not pair them and the title sat
+  at 401 of 402 reviewed with everything else clean. The tell is a mirror
+  reporting one fewer copied than annotated. Diff the two engines' `ai_text`
+  for the page and look for a one-character difference before assuming
+  anything worse.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
