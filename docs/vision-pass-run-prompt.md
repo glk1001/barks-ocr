@@ -2763,24 +2763,37 @@ The Gilded Man   25 of 389   6.4%    nephew domain 22 (of 110, 20%)
 - **UNDER-NAMING IS AGAIN THE LARGEST CLASS: 11 OF 25.** Second batch running.
   Nothing new in the rule; what is new is the evidence about *why* the pass
   cannot close the gap — below.
-- **THE STANDING QUERY, NOW WITH THE PROBES DONE. In 7 of the 11 the pass
-  wrote "no roster ink on this crown", and re-probing after the review shows
-  the pass was right.** 190 p7's middle boy (reviewer: Louie/green) carries
-  nothing but the pale wall at S0.18 and 61px of grey-green at S0.08; 186 p6's
-  boy (Huey/red) carries nothing at all; 180 p3's boy in the tree (Huey/red)
-  carries only 74px and 52px of `#b23521` H8.3, which is the branch bark and
-  not the roster `#e51a1f`. **So the reviewer is not reading ink the census
-  missed — they are naming the boy and then recording a `cap_colour` for a cap
-  that prints none.** That is the tautology the field exists to prevent, and
-  it is the same query the thirtieth batch raised on six Golden Helmet calls.
-- **AND THERE IS A SECOND, DOCUMENTED BEHAVIOUR THAT LOOKS RIGHT.** 174 g0 is
-  the one correction carrying a reviewer note — *"Huey had the castor oil from
-  last panel"* — and it is the one under-naming where `cap_colour` was left
-  **null**. So the review already distinguishes *naming from scene continuity*
-  (colour null) from *naming with a colour*. Only the first is explained.
-  **What names the boy in the other seven, and should the pass be recording a
-  colour for it?** Until that is answered the pass cannot apply the rule, and
-  it is worth 11 corrections a title.
+- **THE QUERY IS ANSWERED, AND THE ANSWER IS THAT THE PASS WAS WRONG.** This
+  section first claimed the reviewer was colouring crowns that print nothing.
+  GLK, 2026-09-05: *"I try as hard as I can to identify the nephews using
+  color and in the cases you miss I usually find a very tiny color
+  identifier."* Checked against the three cases the claim rested on, and the
+  claim does not survive:
+  * **180 p3** (Huey/red) — the note called the crown's only red "the
+    branch's `#a23f21` bark". Probed tight, the mark on the crown is 88px of
+    `#b23521` at **S0.81**, and the branch probed away from the head carries
+    **no red at all**. A clean cap band, found by the pass's own census and
+    then argued away as scenery.
+  * **190 p7** (Louie/green) and **186 p6** (Huey/red) — the identifier is a
+    wedge of a few dozen pixels at about **S0.08** on a black cap. `capscan`
+    reports nothing even with `MIN_SAT` dropped to 0.05 and `probe` calls it
+    grey; at 3.2x it is plainly a coloured wedge. **The tooling cannot see
+    these at any setting. The eye at 3x can.**
+- **SO: CROP THE CROWN AT 3x AND LOOK BEFORE YOU DECLINE.** The census is a
+  screen, not a verdict — `capscan.py` says so in its own docstring and this
+  is what it means. One stacked image covers three boys and it is the
+  difference between eleven corrections and none. And never call a chromatic
+  blob on a crown scenery without probing the scenery: if the branch has no
+  red in it, the red is not the branch.
+- **DO NOT GOLD-PLATE IT.** GLK, same message: *"The whole nephew
+  identification is hard and I'm happy to continue with your best effort with
+  my reviews being the final arbiter."* One look at the crown is the cost, not
+  five. `feedback_cost_per_page_beats_accuracy` still stands.
+- **THE ONE CORRECTION CARRYING A REVIEWER NOTE IS THE OTHER MECHANISM.** 174
+  g0 — *"Huey had the castor oil from last panel"* — names from scene
+  continuity, and it is the one under-naming where `cap_colour` was correctly
+  left **null**. Colour when you can see colour; continuity names the boy but
+  leaves the field empty.
 - **AN IDIOM IS NOT A VOICE-PRINT, AND THE PILOT PAIR WAS EXACTLY INVERTED.**
   The pass gave the charter pilot 176 g8 (*"QUITE A COLORFUL ERRAND, ME
   HEARTIES!"*) because that is how the pilot talks on 177 g8, and gave Donald
