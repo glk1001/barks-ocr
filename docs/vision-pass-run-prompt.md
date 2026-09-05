@@ -3456,9 +3456,30 @@ three inks are the only thing they share.** Four are now measured:
 | *Houseboat Holiday* | the same crescent -- but only for the first third of the story | **145 p6** |
 | *Gemstone Hunters* | black skull-cap with a coloured BAND arching over the crown | **160 p3** |
 | *The Gilded Man* | the same banded crown | **160 p3** (Gemstone) / **182 p2** |
+| *Spending Money* | black skull-cap with a tiny coloured CHIP at the crown edge | **202 p2** |
 
 Do not carry a construction across a story boundary; derive it from the
 story's own clean panel before page 1.
+
+- **THE TWELFTH CONSTRUCTION IS BELOW `capscan`'s DEFAULT FLOOR, AND THAT IS THE
+  WHOLE FINDING.** *Spending Money*'s cap is a wholly black skull cap carrying a
+  coloured chip of **10 to 60 pixels** at the crown edge -- a top chip plus a
+  matching sliver down the cap's right side. `capscan.py` defaults to
+  `MIN_AREA=25` and at that floor it finds ONE of the three boys on the
+  reference panel; at **8** it finds all three. On 202 p2, blue `#07a5d5` 60px
+  at (554,274), red `#b21e20` **10px** at (618,251), green `#4da544` **12px**
+  at (734,264). Pass an explicit floor of 8 on this construction or the census
+  says the caps are not printed when they are.
+  Where the boys are drawn larger the same chip is 200px and reads easily --
+  205 p8 gives 207px of blue, 198px of red and 206px of green, each with its
+  side sliver, and `heads.py` places all three on their own heads without help.
+- **THE FOLIAGE IS THE CAP GREEN TO THE DIGIT IN THAT TITLE.** *Spending Money*
+  is a road-trip story and the roadside greenery prints `#4da33e` **H111.1
+  S0.62 V0.64** -- Louie's ink exactly, in blobs of 1,000 to 7,000px on most
+  outdoor panels. The car is `#e61b1f`, Huey's red, and it is the biggest red
+  blob on the page for eight pages running; Donald's sailor cap and the sky are
+  `#00a5d7`. All three inks have a full-size look-alike in this title, so
+  nothing names a boy until `heads.py` has put the blob on a skull.
 The inks themselves do hold: red `#e51b20`, blue `#00a5d7`,
 green `#4da33f`/`#519d3e` (H108-112).
 
@@ -3638,6 +3659,48 @@ and lit, one balloon and one tail each) read on 2026-09-05. The cap is a
   and p7 draw Louie in a clean green. Recorded as `Louie` with
   `cap_colour: red`, per [[feedback_colourist_error_breaks_the_chain]] --
   worth a retouch note.
+
+
+Vol. 13, from *The Hypno-Gun* 057 p5 and 057 p8 (the three boys in a row, then
+the same three seen from above) read on 2026-09-05 -- the volume's first title.
+The cap is a **black skull cap carrying broad coloured segments over the crown**,
+a gore pattern of alternating black and colour, 400-1600px and unmistakable:
+
+| | |
+|---|---|
+| red (Huey) | `#e61b1f` H358.8 S0.88 V0.90 |
+| blue (Dewey) | `#04a4d5` H194.0 S0.98 V0.84 |
+| green (Louie) | `#4da33e` H111.1 S0.62 V0.64 |
+
+The three inks are Vol. 11's and Vol. 10's to within a count or two, so only the
+construction is new. The green lands in `leafgrn`: **`green` reports 0 blobs on
+every panel of the title**, which is the standing trap and not a finding about
+this story.
+
+- **THE CAPS COME OFF FOR THE FIRST TWO PAGES AND COME BACK FOR THE LAST.** On
+  048 and 049 all three boys are bare-headed -- plain white skulls with a hair
+  tuft -- and `capscan` at an **8px** floor returns `leafgrn 0` on every panel
+  of both pages, with 049 p5 (the three of them in a row, a balloon each)
+  returning **zero blobs in all three bands**. That is absence, not a declined
+  reading, and it is why every nephew name on those pages has to come from the
+  words. They are capped again on 057, which is where the palette above comes
+  from.
+- **THE ADDRESS CARRIES THE WHOLE OF 048.** The boy with the gun names his first
+  target LOUIE and his second DEWEY, and then asks DEWEY to hypnotize him in
+  turn -- so he is neither, and by elimination he is Huey. Six of the page's ten
+  groups hang off that one chain. Panel 1 at 1.7x settles which boy holds the
+  gun (the right-hand one) and therefore which is Louie.
+- **049 p5 IS THREE TAILS AND THREE BOYS AND STILL NAMES NOBODY.** Three
+  separate balloons, one tail each, so they are three different speakers and not
+  a chorus -- but with no cap and no address anywhere on the page, left-to-right
+  order gives an order and no names. Recorded `nephews` three times over, and
+  the reason is worth keeping distinct from the ordinary under-naming case:
+  the tails were traced and the answer still is not there.
+- **Scrooge's coat is `#a04453`/`#9f4553`**, H350-351 S0.57, and it is the
+  biggest thing in the red band on most panels of both this title and *Spending
+  Money*. It is 8 degrees off the cap red and half its saturation, so the hex
+  separates them cleanly -- but a red-band blob count does not.
+
 
 ## The long form is retired
 
