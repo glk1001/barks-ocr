@@ -2747,6 +2747,85 @@ Gemstone Hunters   5 of 125   4.0%    nephew domain 4 of 29 (13.8%)
   Check the date on every `type_was` before believing the tool's total.
 
 
+### Findings to paste into the next run (2026-09-05, thirty-first batch, second title)
+
+*The Gilded Man*, Vol. 11, 32 pages, reviewed and mirrored. Mirror clean: 391
+groups both engines, 390 reviewed, 352 with `identified_by`, 126 carrying
+emphasis, zero per-group field mismatches keyed on normalised `ai_text`.
+
+```
+The Gilded Man   25 of 389   6.4%    nephew domain 22 (of 110, 20%)
+   11 nephews -> a name      5 one nephew -> another
+    3 Donald -> a nephew     3 a nephew -> Donald     3 an other: role
+   high 25/435 (5.7%)   medium 2/8 (25.0%)   4 type corrections
+```
+
+- **UNDER-NAMING IS AGAIN THE LARGEST CLASS: 11 OF 25.** Second batch running.
+  Nothing new in the rule; what is new is the evidence about *why* the pass
+  cannot close the gap — below.
+- **THE STANDING QUERY, NOW WITH THE PROBES DONE. In 7 of the 11 the pass
+  wrote "no roster ink on this crown", and re-probing after the review shows
+  the pass was right.** 190 p7's middle boy (reviewer: Louie/green) carries
+  nothing but the pale wall at S0.18 and 61px of grey-green at S0.08; 186 p6's
+  boy (Huey/red) carries nothing at all; 180 p3's boy in the tree (Huey/red)
+  carries only 74px and 52px of `#b23521` H8.3, which is the branch bark and
+  not the roster `#e51a1f`. **So the reviewer is not reading ink the census
+  missed — they are naming the boy and then recording a `cap_colour` for a cap
+  that prints none.** That is the tautology the field exists to prevent, and
+  it is the same query the thirtieth batch raised on six Golden Helmet calls.
+- **AND THERE IS A SECOND, DOCUMENTED BEHAVIOUR THAT LOOKS RIGHT.** 174 g0 is
+  the one correction carrying a reviewer note — *"Huey had the castor oil from
+  last panel"* — and it is the one under-naming where `cap_colour` was left
+  **null**. So the review already distinguishes *naming from scene continuity*
+  (colour null) from *naming with a colour*. Only the first is explained.
+  **What names the boy in the other seven, and should the pass be recording a
+  colour for it?** Until that is answered the pass cannot apply the rule, and
+  it is worth 11 corrections a title.
+- **AN IDIOM IS NOT A VOICE-PRINT, AND THE PILOT PAIR WAS EXACTLY INVERTED.**
+  The pass gave the charter pilot 176 g8 (*"QUITE A COLORFUL ERRAND, ME
+  HEARTIES!"*) because that is how the pilot talks on 177 g8, and gave Donald
+  177 g2 (*"THE SAVANNAHS!"*). Both are backwards: ME HEARTIES is Donald doing
+  a nautical turn, and the pilot's own line is the flat geographical answer.
+  These were the pass's only two mediums and both were corrected -- the flag
+  worked because the uncertainty was real and the note said the drawing did
+  not say. **Medium 2 of 8 against high 25 of 435: 4.4x. A medium written for
+  a reason still earns its place.**
+- **A BOX IN CAPTION COLOURS CAN BE A SIGN.** 173 g3, *YES, WE HAVE NO MAGENTA
+  STAMPS!*, was recorded `narration` because it is a pink box in the same
+  colour the page uses for MEANWHILE!. The review retyped it `background`: at
+  1.7x it is squared to the post office wall with the wall colour showing
+  round it and its own black border, and it has no drop capital, which every
+  real caption on these pages does. **Test a caption by its drop capital and
+  by whether it sits flush in a panel corner, not by its fill colour.**
+  Note the review left `speaker: narrator` and `identified_by: ['caption']` on
+  it -- the only type/speaker inconsistency in 517 groups across both titles,
+  and handed back rather than changed here.
+- **A DIVIDED BALLOON'S RULE IS LETTERING.** 195 g6 came back with a line of
+  16 dashes inside its `ai_text`. It is not corruption: the balloon really is
+  divided by a drawn dashed rule between *IT'S UNCA DONALD!* and *HE'S OUT AT
+  THE CITY LIMITS!*. Check the art before "fixing" a stray-looking run of
+  punctuation; the corpus's only other long dash runs are trailing ones for an
+  interrupted line.
+- **AN APPENDED ADD STRANDS NOBODY; AN INSERTED ONE STRANDS EXACTLY ONE.** Same
+  reviewer, same sitting: Gemstone's `313` was *inserted* at 158 g2 and pushed
+  the page's tail off a queue built before it, while this title's two adds --
+  `313` at 189 g15 and the bare `!` at 195 g10 -- were *appended* as the new
+  highest id and shifted nothing. Both were on both engines and both were free
+  of copy-in residue (`ocr_text` and `notes` empty, `speaker_was: unknown`).
+  **Diff the id set, not the count, to tell which kind you have.**
+- **THE STRAGGLER WAS NOT THE PAGE TAIL THIS TIME.** 195 g3 (`STAMP ALBUM`,
+  background, speaker `none`) is the group immediately *before* the appended
+  one. Do not assume the unreviewed group is the last id.
+- **AN IGNORE-FILE LINE MUST MATCH `visible_text` VERBATIM, NOT DESCRIBE IT.**
+  The first attempt at declining 169's music notes wrote a full description
+  into `missed-text-ignore.txt` while `visible_text` held the two words
+  `musical notes`; the audit went on reporting it, because both sides are
+  normalised to letters and digits and the two strings no longer agreed. They
+  have to be the same string. And 195's `!` cleared only once `visible_text`
+  went back from the prose to the bare glyph, which is
+  [[project_devices_must_go_in_visible_text]] working exactly as recorded.
+
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at

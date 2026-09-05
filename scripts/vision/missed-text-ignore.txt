@@ -200,3 +200,9 @@ HELP KEEP AMERICA STRONG
 # lettering and correctly found, but a clipped fragment of an unknowable word is
 # not worth a box, and the reviewer declined it.
 11 075 WO -- large blue block capitals in a red-framed sign at the top right corner of panel 5, running off the panel border
+
+# The Gilded Man 169 panel 2: Philo T. Ellic hums at his desk under a balloon
+# holding four musical notes and nothing else. Real drawn lettering, correctly
+# found, and covered by the standing rule that drawn music notes are not worth
+# a group.
+11 169 four musical notes drawn in a balloon over Philo T. Ellic as he hums at his desk in panel 2
