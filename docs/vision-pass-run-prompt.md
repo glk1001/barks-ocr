@@ -2839,6 +2839,83 @@ The Gilded Man   25 of 389   6.4%    nephew domain 22 (of 110, 20%)
   [[project_devices_must_go_in_visible_text]] working exactly as recorded.
 
 
+### Findings to paste into the next run (2026-09-06, thirty-second batch, Spending Money reviewed)
+
+*Spending Money*, Vol. 11, 10 pages, reviewed and mirrored. Mirror clean: 139
+groups both engines, 139 reviewed, 119 with `identified_by`, 30 carrying
+emphasis, identical speaker / cap_colour / confidence distributions and **zero**
+per-group field mismatches keyed on normalised `ai_text`.
+
+```
+Spending Money   1 of 139   0.7%    nephew domain 1 of 4 (25.0%)
+   1 unknown -> Donald.  0 nephew corrections, 0 cap_colour corrections
+   1 type correction (the pass's own proposal, accepted); 1 text correction
+   high 0/138 (0.0%)   medium 1/1 (100.0%)
+```
+
+- **THE LOWEST CORRECTION RATE ON RECORD, AND IT IS NOT A REASON TO RELAX.** The
+  title is a Scrooge-and-Donald two-hander: only 4 of its 139 groups are in the
+  nephew domain, which is where every batch's corrections live. Read the 0.7%
+  as "this story had almost no nephew work in it", not as "the method got
+  better". *Gemstone Hunters* was 4.0% and *The Gilded Man* 6.4% on the same
+  volume, and both were nephew-dense.
+- **THE ONE CORRECTION WAS THE PASS'S ONLY MEDIUM, AND THE FLAG WORKED
+  PERFECTLY.** medium 1 of 1 against high 0 of 138. Third batch running in which
+  the mediums are corrected at many times the rate of the highs (*Pixilated
+  Parrot* 41.2 vs 6.0, *The Gilded Man* 25.0 vs 5.7, now 100 vs 0). A medium
+  written for a stated reason is the single most useful signal this pass emits;
+  keep writing them and keep them rare.
+- **A TAIL THAT REACHES INTO A VEHICLE NAMES THE DRIVER.** 203 g4, *THAT'S THE
+  WAY WE'RE GOING TO EAT FROM NOW ON!*, was recorded `unknown` because the
+  balloon's tail stops in open sky about 40px above the car roof and no occupant
+  is drawn readably. The reviewer made it Donald. **The evidence was already in
+  the note**: it says the tip is at (235,388) and that the cabin runs x 233-390,
+  which puts the tip directly over the front of the cabin -- and Donald drives
+  in every panel of the trip. [[feedback-use-the-evidence-you-already-wrote]]
+  for the third time, and the first where the answer was an adult.
+  The note also floated "register suggests a nephew" and declined that too; the
+  register guess would have been wrong as well, so the lesson is the tip's
+  position, not the words. **GLK: is "the tip lands over the cabin, so it is
+  whoever is at the wheel" the rule you applied, or did you name Donald from
+  the story rather than the drawing?**
+- **A REVIEW CAN CARRY A TEXT CORRECTION THAT NO QUEUE EVER REPORTS.** 206 g11
+  came back `$ McDUCK BLDG $` -> `McDUCK BLDG`, edited straight into `ai_text`
+  on both engines. `vision-corrections` says "nothing outstanding" for it,
+  because a correction typed directly is already applied and was never a
+  proposal. **Diff `ai_text` per engine against the pass's own commit after
+  every review** -- that is the only thing that surfaces these, and it is the
+  same per-engine `ai_text` diff that catches an added group corrupting
+  easyocr.
+- **A DOLLAR SIGN ON A MEDALLION IS ARCHITECTURE, NOT LETTERING.** That is what
+  the retype was about. At 4x the McDuck Building sign is a lettered panel
+  reading `McDUCK BLDG`, with a dollar emblem on a disc at each end **outside**
+  the panel and a third worked into the scrollwork above. The pass folded all
+  three into the sign's text. Same class as the Vol. 10 014 emblem already in
+  `missed-text-ignore.txt`; the page's `visible_text` is corrected and the
+  ornament recorded separately. **Test a sign by its lettered panel, not by
+  everything inside the group's box.**
+- **`review_findings --since` OVER-REPORTED TYPES AGAIN, SECOND BATCH RUNNING.**
+  It listed two type corrections; 206 g7 `dialogue -> narration` carries
+  `type_reviewed_date: 2026-08-12` and is present in the commit *before* the
+  pass. The real count is one -- the pass's own 198 g1 `dialogue -> thought`,
+  accepted on both engines. Check the date on every `type_was`, every time.
+- **BOX CHURN IS NOT A FINDING.** The review moved **45** `text_box` values, 22
+  on easyocr and 23 on paddleocr, and the two sets are not the same groups --
+  the editor tightens boxes per engine. Largest corner displacement 157px on a
+  balloon several hundred px wide, and only one of the 45 came with a text
+  change. Measure the displacement before reading a moved box as a relocation
+  onto different lettering.
+- **THE COLLECTIVES ALL STOOD.** Two `nephews`, one `other:Scrooge and the
+  nephews` (a four-tail balloon) and both named nephews (205 g17 Dewey by a
+  60px blue chip, g18 Huey by a red one) were accepted unchanged, as were all
+  eight `other:` roles. Under-naming has been the dominant error class for two
+  batches; it did not appear here, and the four-tail chorus and the tiny-chip
+  cap readings are both confirmed good.
+- **The missed-text item is still open.** 205's illegible roadside billboard was
+  queued and the review did not rule on it, so it is deliberately still out of
+  `missed-text-ignore.txt` and the audit still reports the title dirty.
+
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at

@@ -230,3 +230,11 @@ HELP KEEP AMERICA STRONG
 13 050 a dollar sign drawn on the money sacks stacked beside Scrooge's desk
 13 051 a dollar sign drawn on the money sack Scrooge hands over
 13 057 a dollar sign drawn on the money sack Donald carries home
+
+# Spending Money 206 panel 6, added 2026-09-06 after the review. The pass read
+# the McDuck Building sign as "$ McDUCK BLDG $" and the reviewer retyped it
+# "McDUCK BLDG": at 4x the two dollar signs are ARCHITECTURAL ORNAMENT on
+# medallions at either end of the sign, outside the lettered panel, with a
+# third in the scrollwork above. Same class as the Vol. 10 014 emblem already
+# declined above -- recorded in visible_text, not grouped.
+11 206 a dollar sign on a medallion at each end of the McDuck Building sign and a third in the scrollwork above it
