@@ -41,6 +41,17 @@ TEXT_NEVER_FITS_ISSUE = "text-will-never-fit"
 #     that later turns out to have had lettering all along.
 PANEL_HAS_NO_TEXT_ISSUE = "panel-has-no-text"
 
+# Acknowledging this silences `ocr_check`'s `box_outside_panel` for the group it
+# is set on. Named for the judgement -- "the lettering really does sit out
+# there" -- following the two above.
+#
+# The two classes it exists for, both measured over vols 1-29: splash-page
+# mastheads, where the title logo and the "Walt Disney" byline are drawn above
+# panel 1 and belong to no panel at all (vol 27 page 146 is three such groups);
+# and a sound effect the art deliberately bursts through a panel border. Both
+# are correct as drawn and would otherwise re-fire on every run.
+BOX_OUTSIDE_PANEL_ISSUE = "box-outside-panel"
+
 
 def panels_with_no_groups(json_groups: dict, panel_count: int) -> list[int]:
     """Return the panels a page skips: 1..max-with-text, minus those that have text.
@@ -101,6 +112,7 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "florence-check",
     TEXT_NEVER_FITS_ISSUE,
     PANEL_HAS_NO_TEXT_ISSUE,
+    BOX_OUTSIDE_PANEL_ISSUE,
 )
 
 # The `type` vocabulary Gemini is asked for. Anything else is a mis-labelled
@@ -381,6 +393,8 @@ def _never_fires(group: dict) -> bool:
     #   florence-check       -- florence_check.py, an external model run.
     #   text-will-never-fit  -- ocr_check's layout checks, which need the
     #                           rendered font and the page context.
+    #   box-outside-panel    -- ocr_check's overhang check, which needs the
+    #                           page's panel boxes.
     del group
     return False
 
@@ -402,6 +416,9 @@ DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     # `is_acknowledged` itself, because the judgement needs the whole page and
     # its panel boxes, which a predicate over one group cannot see.
     PANEL_HAS_NO_TEXT_ISSUE: _never_fires,
+    # Same again: the group carries its text_box, but not the panel box it has
+    # to be measured against.
+    BOX_OUTSIDE_PANEL_ISSUE: _never_fires,
 }
 
 # Issue types that were renamed or merged. 75 groups carry an acknowledgement

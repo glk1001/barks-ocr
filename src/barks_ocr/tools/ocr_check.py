@@ -18,7 +18,12 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.comics_utils import get_backup_file
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM_DIR
-from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePagesPanelBoxes, TitlePanelBoxes
+from barks_fantagraphics.panel_boxes import (
+    PagePanelBoxes,
+    PanelBox,
+    TitlePagesPanelBoxes,
+    TitlePanelBoxes,
+)
 from barks_fantagraphics.speech_groupers import (
     OcrTypes,
     SpeechGroups,
@@ -38,6 +43,7 @@ from barks_ocr.cli_setup import init_logging
 from barks_ocr.utils.engine_compare import BOX_IOU_MIN, box_iou, differing_attrs
 from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.group_checks import (
+    BOX_OUTSIDE_PANEL_ISSUE,
     PANEL_HAS_NO_TEXT_ISSUE,
     TEXT_NEVER_FITS_ISSUE,
     cleaned_whitespace,
@@ -90,6 +96,30 @@ MIN_LINES_FOR_LINE_HEIGHT = 2  # one-line boxes measure high; see _implied_line_
 # pages by a wide margin: 9,395 of 10,190 corpus pages sit at a ratio of 1.0.
 LINE_HEIGHT_BIMODAL_RATIO = 1.2
 _MODE_SMALLEST_SAMPLE = 2  # half-sample recursion stops here and averages the pair
+
+# ── Panel-overhang constants ──────────────────────────────────────────────────
+# How far a group's text_box may hang out of the panel it claims before
+# `box_outside_panel` reports it. `_is_in_wrong_panel` cannot see any of this:
+# it fires only where the box sits wholly inside a *different* panel, which is
+# 45 groups in the whole corpus.
+#
+# Two conditions, both required, because either alone is noise. Measured over
+# vols 1-29 (143,342 groups with an in-range panel_num, both engines):
+#
+#   - Overlapping the panel imperfectly at all: 3.16%. Speech balloons routinely
+#     cross a gutter and this is ordinary art.
+#   - Area fraction alone: at 25% it is 481 groups, but a small box needs to
+#     drift only a dozen pixels to clear it.
+#   - The pair below: 460 groups, 0.32%. Spot checks found a genuinely wrong
+#     panel_num the mismatch check is blind to (vol 9 page 063 group 4 sits
+#     678px clear of its panel), and pages whose panel *segments* are wrong
+#     (vol 28 page 096 draws its whole top row of dialogue above panel 1).
+#
+# Loosening to 10% doubles the count to 764 and the extra band is mostly
+# balloons hanging over a panel edge; tightening to 50% halves it to 219 and
+# drops real mis-assignments sitting in the 25-50% band.
+BOX_OUTSIDE_PANEL_FRACTION = 0.25  # of the text_box's own area, outside the panel
+BOX_OUTSIDE_PANEL_MIN_PX = 30.0  # ...and this far past the nearest panel edge
 BAR_WIDTH = 24  # width of the engine-agreement progress bar
 
 _FIT_FONT_MISSING_WARNED: list[bool] = [False]
@@ -229,6 +259,32 @@ class LineHeightLimits:
     bimodal_ratio: float = LINE_HEIGHT_BIMODAL_RATIO
 
 
+@dataclass(frozen=True)
+class PanelOverhangLimits:
+    """How far outside its panel a text_box may sit before it is reported.
+
+    Both conditions have to hold; see the constants for why neither works
+    alone.
+    """
+
+    fraction: float = BOX_OUTSIDE_PANEL_FRACTION
+    min_px: float = BOX_OUTSIDE_PANEL_MIN_PX
+
+
+@dataclass(frozen=True)
+class PanelIssue:
+    """A panel-assignment fault, and what to tell the reviewer about it.
+
+    Carries a note and a ratio because ``box_outside_panel`` has measurements
+    worth quoting; the other three panel issues are fully described by their
+    name and leave both empty.
+    """
+
+    issue_type: str
+    note: str = ""
+    ratio: float | None = None
+
+
 # One queue entry per group carries the group's most severe issue; this is
 # that order, worst first. Types not listed (the dismissable cosmetic ones)
 # rank after all of these.
@@ -253,6 +309,11 @@ _QUEUE_SEVERITY: tuple[str, ...] = (
     "panel_num_fixable",
     "panel_num_out_of_range",
     "panel_num_mismatch",
+    # Below `panel_num_mismatch` because it is the weaker diagnosis of the two:
+    # the mismatch names the panel the box actually sits in, while this one only
+    # says the claimed panel is not where the lettering is. They never both fire
+    # -- the overhang check runs only where the mismatch check found nothing.
+    "box_outside_panel",
     # Last of the panel_num block, because it is the weakest of them: it names a
     # page, not a fault in the group it is anchored to, and a silent panel is
     # legitimate. Any concrete per-group diagnosis above should win the entry.
@@ -978,13 +1039,48 @@ def _get_enclosing_panel_num(box: PointList, page_panel_boxes: PagePanelBoxes) -
     return -1
 
 
+def _panel_overhang(text_box: PointList, panel_box: PanelBox) -> tuple[float, float]:
+    """How far the text_box hangs out of *panel_box*.
+
+    Measured on the axis-aligned bounds of the box's minimum rotated rectangle,
+    the same footprint ``_get_enclosing_panel_num`` tests, so the two checks
+    cannot disagree about where a group is.
+
+    Args:
+        text_box: The group's stored corner points. Assumed well-formed —
+            callers check ``text_box_problem`` first.
+        panel_box: The panel the group claims.
+
+    Returns:
+        (fraction of the text_box's area lying outside the panel, the worst
+        single-edge overhang in pixels). Both are 0.0 for a box wholly inside
+        the panel, and for a degenerate box with no area.
+
+    """
+    x0, y0, x1, y1 = points_bbox(OcrBox(text_box, "", 0, "").min_rotated_rectangle)
+    width, height = x1 - x0, y1 - y0
+    if width <= 0 or height <= 0:
+        return 0.0, 0.0
+
+    px0, py0 = panel_box.x0, panel_box.y0
+    px1, py1 = px0 + panel_box.w, py0 + panel_box.h
+    overlap_w = max(0.0, min(x1, px1) - max(x0, px0))
+    overlap_h = max(0.0, min(y1, py1) - max(y0, py0))
+
+    outside = 1.0 - (overlap_w * overlap_h) / (width * height)
+    worst_edge = max(px0 - x0, x1 - px1, py0 - y0, y1 - py1, 0.0)
+    return outside, worst_edge
+
+
 def _is_in_wrong_panel(group: dict, page_panel_boxes: PagePanelBoxes) -> bool:
     """Whether the text_box sits wholly inside a panel other than the one claimed.
 
-    Deliberately narrow. A box that is inside *no* panel proves nothing — speech
-    balloons routinely overhang the gutter, and 5.9% of groups do — so only a box
-    that lands squarely in a different panel counts. That is rare (~0.2%) and
-    is a genuine mis-assignment every time.
+    Deliberately narrow. A box that is inside *no* panel proves little on its
+    own — speech balloons routinely overhang the gutter, and 5.9% of groups do —
+    so only a box that lands squarely in a different panel counts here. That is
+    rare (45 groups in the corpus) and is a genuine mis-assignment every time.
+    How far a box that is inside no panel has strayed is `box_outside_panel`'s
+    question, and it is asked only where this one has answered no.
     """
     panel_num = int(group.get("panel_num", -1))
     text_box = group.get("text_box") or []
@@ -1020,11 +1116,13 @@ class OcrChecker:
         fixes: FixFlags | None = None,
         line_height_limits: LineHeightLimits | None = None,
         box_iou_min: float = BOX_IOU_MIN,
+        overhang_limits: PanelOverhangLimits | None = None,
     ) -> None:
         self._comics_database = comics_database
         self._fixes = fixes or FixFlags()
         self._limits = line_height_limits or LineHeightLimits()
         self._box_iou_min = box_iou_min
+        self._overhang = overhang_limits or PanelOverhangLimits()
         self._speech_groups = SpeechGroups(comics_database)
         self._title_panel_boxes = TitlePanelBoxes(self._comics_database)
 
@@ -1399,7 +1497,7 @@ class OcrChecker:
                 # positively diagnosed were the ones it dropped from the queue.
                 add("panel_num_fixable", extra_note=f"panel_num should be {panel_num}")
         elif panel_issue := self._panel_issue(group, panel_num_state, panel_num, context):
-            add(panel_issue)
+            add(panel_issue.issue_type, panel_issue.ratio, panel_issue.note)
 
         if not ai_text:
             add("empty_text")
@@ -1438,23 +1536,64 @@ class OcrChecker:
             found.append((layout_issue, layout_ratio))
         return found, layout_fixed
 
-    @staticmethod
     def _panel_issue(
+        self,
         group: dict,
         panel_num_state: PanelNumState | None,
         panel_num: int,
         context: PageContext,
-    ) -> str | None:
-        """Which panel-assignment issue applies, or None when the panel num is sound."""
+    ) -> PanelIssue | None:
+        """Which panel-assignment issue applies, or None when the panel num is sound.
+
+        At most one, worst first: the three that say the ``panel_num`` itself is
+        unusable, then the overhang measurement, which only means anything once
+        the number it is measured against is known to be a real panel.
+        """
         if panel_num_state == PanelNumState.PANEL_NUM_NOT_SET_UNFIXABLE:
-            return "panel_unassigned"
+            return PanelIssue("panel_unassigned")
         if not 1 <= panel_num <= len(context.panel_boxes.panel_boxes):
             # _is_in_wrong_panel cannot see this: it only fires when the box
             # sits wholly inside a different real panel.
-            return "panel_num_out_of_range"
+            return PanelIssue("panel_num_out_of_range")
         if _is_in_wrong_panel(group, context.panel_boxes):
-            return "panel_num_mismatch"
-        return None
+            return PanelIssue("panel_num_mismatch")
+        return self._overhang_issue(group, panel_num, context)
+
+    def _overhang_issue(
+        self, group: dict, panel_num: int, context: PageContext
+    ) -> PanelIssue | None:
+        """Report a text_box that sits significantly outside the panel it claims.
+
+        The lettering is somewhere its panel is not, which is one of three
+        things: a wrong ``panel_num`` that ``_is_in_wrong_panel`` is blind to
+        because the box overhangs rather than landing squarely in its true
+        panel; panel *segments* that do not match the page; or art the check is
+        right about and the reviewer is not interested in — a masthead above
+        panel 1, a sound effect bursting a border — which is what
+        ``BOX_OUTSIDE_PANEL_ISSUE`` is for.
+
+        The note quotes both measurements, so the reviewer can tell a box that
+        is 60% out by a hair from one sitting in the next panel down. Returns
+        None when the box is within its panel, or the overhang is acknowledged.
+        """
+        if is_acknowledged(group, BOX_OUTSIDE_PANEL_ISSUE):
+            return None
+
+        text_box = group.get("text_box") or []
+        if not text_box:
+            return None
+
+        panel_box = context.panel_boxes.panel_boxes[panel_num - 1]
+        outside, worst_edge = _panel_overhang(text_box, panel_box)
+        if outside <= self._overhang.fraction or worst_edge <= self._overhang.min_px:
+            return None
+
+        return PanelIssue(
+            "box_outside_panel",
+            f"{outside:.0%} of the text_box is outside panel {panel_num}"
+            f" ({worst_edge:.0f}px past its nearest edge)",
+            outside,
+        )
 
     # ── Cross-engine agreement ────────────────────────────────────────────────
 
@@ -1897,7 +2036,8 @@ class OcrChecker:
 
         An issue with a number behind it carries that as a sixth field, so a
         queue can be triaged before it is worked: the line-height ratio, the
-        text-similarity ratio, or the box IoU, depending on the issue.
+        text-similarity ratio, the box IoU, or the outside-the-panel fraction,
+        depending on the issue.
         ``load_queue_file`` reads only the first five fields, so the extra one
         costs the editor nothing.
         """
@@ -2207,6 +2347,20 @@ def main(  # noqa: PLR0913
         BOX_IOU_MIN,
         help="Flag as 'box_mismatch' when the engines' text_boxes overlap below this IoU.",
     ),
+    outside_panel_fraction: float = typer.Option(
+        BOX_OUTSIDE_PANEL_FRACTION,
+        help=(
+            "Flag as 'box_outside_panel' when more than this fraction of a text_box's"
+            " area falls outside the panel it claims."
+        ),
+    ),
+    outside_panel_px: float = typer.Option(
+        BOX_OUTSIDE_PANEL_MIN_PX,
+        help=(
+            "...and only when it also reaches past the nearest panel edge by this many"
+            " pixels. Both conditions must hold."
+        ),
+    ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
     init_logging(APP_LOGGING_NAME, "kivy-prelim-ocr-editor.log", log_level_str)
@@ -2222,6 +2376,14 @@ def main(  # noqa: PLR0913
         raise typer.BadParameter(err_msg)
     if not 0.0 <= box_iou_min <= 1.0:
         err_msg = f"--box-iou-min ({box_iou_min}) must be between 0 and 1."
+        raise typer.BadParameter(err_msg)
+    if not 0.0 <= outside_panel_fraction < 1.0:
+        # 1.0 is unreachable: a box wholly outside its panel measures exactly
+        # 1.0, and the test is a strict ">".
+        err_msg = f"--outside-panel-fraction ({outside_panel_fraction}) must be in [0, 1)."
+        raise typer.BadParameter(err_msg)
+    if outside_panel_px < 0.0:
+        err_msg = f"--outside-panel-px ({outside_panel_px}) must not be negative."
         raise typer.BadParameter(err_msg)
     if line_height_bimodal < 1.0:
         # At or below 1.0 the mode would replace the median on nearly every
@@ -2249,8 +2411,11 @@ def main(  # noqa: PLR0913
         include_marginal=include_marginal,
         bimodal_ratio=line_height_bimodal,
     )
+    overhang_limits = PanelOverhangLimits(fraction=outside_panel_fraction, min_px=outside_panel_px)
     output_file = output or _default_output_file(volumes_str)
-    OcrChecker(comics_database, fixes, limits, box_iou_min).check_titles(title_list, output_file)
+    OcrChecker(comics_database, fixes, limits, box_iou_min, overhang_limits).check_titles(
+        title_list, output_file
+    )
 
 
 if __name__ == "__main__":
