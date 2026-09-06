@@ -253,3 +253,13 @@ HELP KEEP AMERICA STRONG
 # as a true record of what is drawn. Same standing as the Gilded Man 169
 # musical notes.
 13 056 red and green impact stars drawn round Rockjaw's head as he hits the tree
+
+# A Charitable Chore 074, declined by the reviewer 2026-09-06 ("ignore S
+# monograms"). Two single letters used as decoration in the Squanderbilt Hotel:
+# a winged S on the front of the reception desk (panel 3) and an S on the back
+# of the armchair in the suite (panel 7). Real drawn lettering, correctly found
+# by the audit, but a furniture monogram rather than story content, so not worth
+# a group. Both strings are pasted from the page's visible_text so the two sides
+# normalise identically.
+13 074 a winged letter S monogram on the front of the hotel desk
+13 074 a letter S on the back of the armchair in the hotel suite
