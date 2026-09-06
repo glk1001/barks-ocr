@@ -2865,19 +2865,28 @@ Spending Money   1 of 139   0.7%    nephew domain 1 of 4 (25.0%)
   Parrot* 41.2 vs 6.0, *The Gilded Man* 25.0 vs 5.7, now 100 vs 0). A medium
   written for a stated reason is the single most useful signal this pass emits;
   keep writing them and keep them rare.
-- **A TAIL THAT REACHES INTO A VEHICLE NAMES THE DRIVER.** 203 g4, *THAT'S THE
-  WAY WE'RE GOING TO EAT FROM NOW ON!*, was recorded `unknown` because the
-  balloon's tail stops in open sky about 40px above the car roof and no occupant
-  is drawn readably. The reviewer made it Donald. **The evidence was already in
-  the note**: it says the tip is at (235,388) and that the cabin runs x 233-390,
-  which puts the tip directly over the front of the cabin -- and Donald drives
-  in every panel of the trip. [[feedback-use-the-evidence-you-already-wrote]]
-  for the third time, and the first where the answer was an adult.
-  The note also floated "register suggests a nephew" and declined that too; the
-  register guess would have been wrong as well, so the lesson is the tip's
-  position, not the words. **GLK: is "the tip lands over the cabin, so it is
-  whoever is at the wheel" the rule you applied, or did you name Donald from
-  the story rather than the drawing?**
+- **WHEN THE ART CANNOT PLACE A LINE, THE STORY'S PREMISE CAN, AND `unknown` IS
+  ALMOST NEVER THE ANSWER.** 203 g4, *THAT'S THE WAY WE'RE GOING TO EAT FROM NOW
+  ON!*, was recorded `unknown` because the balloon's tail stops in open sky about
+  40px above the car roof and no occupant is drawn readably. The reviewer made it
+  Donald, and -- asked directly whether that came from the geometry or the story
+  -- answered **from the story**: GLK, 2026-09-06, *"the dialogue fitted with
+  Donald being in charge of spending money."* So the rule is NOT "the tip lands
+  over the cabin, so it is whoever is at the wheel"; the first draft of this
+  section guessed that and it was wrong.
+  What the line actually is, is a **decision about the arrangement**, and this
+  story has installed exactly one character with the authority to make it --
+  Donald is hired on 200 to do the spending and does every choosing from there.
+  The pass's note floated "register suggests a nephew", reading the enthusiasm
+  as childlike; it is a declaration of policy, not delight.
+  This does NOT reinstate role reasoning in general --
+  [[feedback-role-reasoning-loses-on-wide-shots]] still stands, and "who would
+  say this" cost two Donalds that were the boys. The difference is what is being
+  reasoned from: a *premise the story has established on the page* places a
+  line, a *guess about who is the sort of person to say it* does not. Where the
+  art is silent, ask which character the story has put in charge of the thing
+  the line decides, and only fall back to `unknown` when nothing has been
+  established.
 - **A REVIEW CAN CARRY A TEXT CORRECTION THAT NO QUEUE EVER REPORTS.** 206 g11
   came back `$ McDUCK BLDG $` -> `McDUCK BLDG`, edited straight into `ai_text`
   on both engines. `vision-corrections` says "nothing outstanding" for it,
@@ -2914,6 +2923,74 @@ Spending Money   1 of 139   0.7%    nephew domain 1 of 4 (25.0%)
 - **The missed-text item is still open.** 205's illegible roadside billboard was
   queued and the review did not rule on it, so it is deliberately still out of
   `missed-text-ignore.txt` and the audit still reports the title dirty.
+
+
+### Findings to paste into the next run (2026-09-06, thirty-second batch, second title)
+
+*The Hypno-Gun*, Vol. 13, 10 pages, reviewed and mirrored. Mirror clean: 125
+groups both engines, 125 reviewed, 114 with `identified_by`, 36 carrying
+emphasis, identical distributions and **zero** per-group field mismatches keyed
+on normalised `ai_text`. No text corrections, and no type corrections.
+
+```
+The Hypno-Gun   2 of 125   1.6%    nephew domain 2 of 16 (12.5%)
+   057 g12 nephews -> Donald,  057 g14 Huey -> Donald (cap red -> null)
+   high 0/123 (0.0%)   medium 2/2 (100.0%)
+```
+
+- **BOTH CORRECTIONS WERE THE PASS'S ONLY TWO MEDIUMS, AGAIN.** Second title
+  running in this batch where every medium was corrected and no high was:
+  Spending Money 1/1 against 0/138, this 2/2 against 0/123. Across the batch
+  that is **3 of 3 mediums and 0 of 261 highs**. The flag is now the most
+  reliable thing the pass produces — but note what it means: a medium is not
+  "probably right", it is "probably wrong". Write one only where the call would
+  genuinely go either way, and expect the reviewer to overturn it.
+- **BOTH CORRECTIONS ARE ONE MISREAD PRONOUN.** 057 g10-g14 are a **single
+  Donald monologue** and every "HE" in it is *Scrooge*: he reports Scrooge's
+  account (*FROM UNCLE SCROOGE! / HE GAVE IT TO ME AS A REWARD...*), undercuts
+  it (*SO HE SAYS! / BUT HE ISN'T FOOLING ME! HE MUST HAVE DREAMED THAT...*)
+  and closes with the moral (*WHICH JUST GOES TO SHOW WHAT THAT THING WILL DO
+  TO SOMEBODY WITH A GULLIBLE MIND!*). The pass read the "HE" in g12 as Donald,
+  concluded a nephew must be doubting him, and then handed the closing line to
+  a nephew as well. **Before assigning a run of balloons in one panel, settle
+  who each pronoun refers to and check whether the run is one speaker.** The
+  gag only works if Donald says it — he is the gullible one and does not know
+  it, and giving the punchline to a nephew destroys it.
+- **A CURVING TAIL'S BEND IS NOT ITS TIP.** 057 g14's tail is long and curves:
+  it leaves the balloon heading down-left, turns at about (505,168) in panel
+  coordinates, and then runs down-RIGHT to end on Donald's head at about
+  (626,293), just left of his blue cap. The pass quoted **(504,212)** as "the
+  tip", which is that bend, then matched the false tip's x against the cap
+  columns below and named the red-capped boy. Two compounding errors: stopping
+  at the first direction change, and then treating an x-coordinate over a cap
+  as evidence across a 275px vertical gap — which the note itself flagged as
+  the reason for the medium. **Follow a tail to where the line stops, not to
+  where it changes direction**, and if a quoted tip needs a 275px extrapolation
+  to reach anybody, it is not a measurement.
+- **IN BOTH CASES THE TAIL WAS RIGHT AND THE READING OF THE WORDS WAS WRONG.**
+  g12's tail landed on Donald and the pass argued it away on content grounds;
+  g14's content pointed at a nephew and a mis-traced tail agreed. So the error
+  class here is not tracing at all — it is the story reading overruling, or
+  corrupting, a correct trace. Compare the other title in this batch, where the
+  story reading was what the reviewer used. **The words place a line the art
+  leaves open; they do not overrule a tail that lands.**
+- **`review_findings --since` OVER-REPORTED TYPES FOR THE THIRD BATCH RUNNING,
+  AND THIS TIME IT TURNED 0 INTO 4.** It listed 048 g0, 051 g3, 052 g3 and
+  055 g5; all four carry `type_reviewed_date: 2026-08-13` and all four are
+  present in the commit *before* the pass. The real count is **zero**. Three
+  batches is enough: the tool should filter `type_was` by
+  `type_reviewed_date` against the `--since` commit's date rather than listing
+  every group that carries the field. Until it does, date-check every row.
+- **THE CAP PALETTE THIS TITLE PRODUCED NAMED NOBODY IN IT.** The title now
+  carries **no `cap_colour` at all** — the one value the pass wrote was cleared
+  with g14. The boys are bare-headed on 048 and 049, and 057, the only page
+  that prints caps, ended up with no nephew speaker. All three surviving nephew
+  names (Huey 7 groups, Louie 1, Dewey 1) come from the direct-address chain on
+  048, and every one stood. The palette derived from 057 p5 and p8 is still
+  worth having for the volume, but record honestly that it decided nothing
+  here.
+- **The 056 impact stars are still open** — a drawn device carrying no
+  characters, queued and not ruled on, so still out of `missed-text-ignore.txt`.
 
 
 ## Per-volume cap palette

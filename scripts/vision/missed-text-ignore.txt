@@ -238,3 +238,10 @@ HELP KEEP AMERICA STRONG
 # third in the scrollwork above. Same class as the Vol. 10 014 emblem already
 # declined above -- recorded in visible_text, not grouped.
 11 206 a dollar sign on a medallion at each end of the McDuck Building sign and a third in the scrollwork above it
+
+# Spending Money 205 panel 5, declined by GLK 2026-09-06 ("skip illegible
+# roadside billboard"). A distant billboard on the far verge whose lettering is
+# drawn as seven or eight illegible marks -- no readable word at 8x. Real drawn
+# lettering, correctly found by the audit, but nothing transcribable, so it is
+# not worth a group.
+11 205 a distant roadside billboard in panel 5 whose lettering is drawn as illegible marks
