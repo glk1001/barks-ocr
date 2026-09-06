@@ -263,3 +263,12 @@ HELP KEEP AMERICA STRONG
 # normalise identically.
 13 074 a winged letter S monogram on the front of the hotel desk
 13 074 a letter S on the back of the armchair in the hotel suite
+
+# My Lucky Valentine 100 panel 8, declined by GLK 2026-09-06 (keep the two
+# lettering items, ignore-list the star). A single red pain star drawn in the
+# air beside Donald after the householder kicks him off the porch. A drawn
+# device carrying no characters, so there is nothing to transcribe and no group
+# to add; recorded in the page's visible_text as a true record of what is drawn.
+# Same standing as the Hypno-Gun 056 impact stars above. The string is pasted
+# from the page's visible_text so the two sides normalise identically.
+13 100 a red pain star drawn in the air beside Donald after the kick
