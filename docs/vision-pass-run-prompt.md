@@ -3159,6 +3159,80 @@ A Charitable Chore      1 of 152   0.7%       0 of 5       1 of 147  0.7%
   distributions, zero per-group mismatches, and `vision-corrections --title`
   reports nothing outstanding.
 
+### Findings to paste into the next run (2026-09-06, thirty-fourth batch, second title)
+
+*Turkey with All the Schemings* (10pp, 152 groups read) reviewed and mirrored.
+The review ADDED 8 groups, taking the title to 160.
+
+```
+                            real corrections      mediums      highs
+A Charitable Chore          1 of 152   0.7%       0 of 5       1 of 147  0.7%
+Turkey with All the Sch.    3 of 152   2.0%       1 of 2       2 of 150  1.3%
+```
+
+- **`review_findings` said 11 at 6.9%; the truth is 3 at 2.0%.** Eight of its
+  rows are the eight groups the review added, every one an `unknown -> X` on a
+  `speaker_was` default. On a title with adds the tool's headline is unusable —
+  subtract them, and do it by matching stripped `ai_text` and occurrence, not by
+  id. [[project_review_adds_shift_ids_and_strand_a_group]].
+- **A DRAWN DEVICE OVER A CHARACTER IS A `thought` GROUP WITH THAT CHARACTER AS
+  ITS SPEAKER.** Four of the eight adds: `$ $ $` -> **Scrooge, thought** on 082
+  and 083, `$ $ $ $ $ $ $ $` -> **Scrooge, thought** on 084, and `!` ->
+  **Donald, thought** on 083. I had put all four into `visible_text` as prose
+  ("drawn dollar signs floating around Scrooge's head") and described them as
+  background lettering. Recording them is what got them boxed — keep doing that
+  — but **describe them as the thought of the figure they hang over**, because
+  that is what they become. The roster already says so for a `?`
+  ("A DRAWN DEVICE OVER ONE FIGURE NAMES THAT FIGURE"); it applies to floating
+  `$` clusters and bare exclamation marks too. Only lettering that is genuinely
+  in the scene — the `R` monogram, `TELEPHONE`, `600`, `$9.73` — came back
+  `background` / `none`.
+- **THE ARROW LABEL IS `narration`, NOT `background`.** 082 g4 `WASHERS`,
+  `none/background -> narrator/narration` with `identified_by: ["caption"]`. I
+  had flagged in the close-out that the corpus stored this device inconsistently
+  (`WASHERS` as background, `TAILS` on 096 g9 as narration) and declined to pick;
+  the review picked. **An author's arrow label pointing into the art is the
+  narrator.** Type it `narration`, speaker `narrator`, `identified_by`
+  `["caption"]`.
+- **WHEN BALLOONS CANNOT BE PAIRED TO TAILS, NO BALLOON IN THE STACK IS
+  NAMEABLE — INCLUDING THE ONE WHOSE TAIL YOU CAN TRACE.** 079 panel 2, the
+  three-balloon cascade: `Huey -> nephews` and `Louie -> nephews`, both
+  `cap_colour` nulled. The gores were real and correctly measured (`#e51b20` on
+  the left boy, `#4ea240` H111.4 S0.60 on the middle) and I traced all three
+  TIPS to all three boys. What I could not do was say which BALLOON owned which
+  tail: two of the three emerged from under g4's bottom edge, so one of them was
+  g1's, drawn behind the stack. I wrote exactly that into the note and then
+  named the one balloon whose tail left its own edge — **at high**. That is the
+  call that was reversed. Tracing a tail to a boy tells you a boy is speaking;
+  it does not tell you WHICH BALLOON he is speaking, and the words are the whole
+  point. Three balloons, three tails, unresolved ownership: `nephews` x3.
+  Note the confidence was inverted too — the `high` was wrong and one of the
+  two `medium`s was right.
+- **DO NOT LET A PROP'S SEMANTICS DRIVE A TRANSCRIPTION.** I queued the 081
+  greasepaint jar as `GOO` off a 5x crop, reasoning that a costume trunk would
+  hold goo; the reviewer typed `600`, and at **7x** the first glyph is plainly a
+  6 — a curved stroke into a closed lower loop with **no horizontal crossbar**,
+  where this hand's capital G has one. 5x was not enough for a three-character
+  label. The roster's "crop and upscale before proposing a correction" covers
+  what the lettering *looks* like; extend it to what the prop *ought* to say.
+- **`review_findings --since` TRANSPOSED TWO IDS ON A RENUMBERED PAGE.** It
+  listed 086 g17 `dialogue -> thought` as a current type correction and 086 g15
+  `sound_effect -> dialogue` as PREDATING. On disk it is the other way round:
+  g15 is `ZZZ`, corrected today, and g17 is `SUFFERING SAWFISH`, adjudicated
+  2026-08-13. The counts were right and only the ids crossed. On any title whose
+  review renumbered, **check the type lists by text**.
+  Same class as [[project_queue_ids_go_stale_on_renumber]].
+- **THE INSERTS RENUMBERED FOUR PAGES AND COST NOTHING.** 082, 083, 084 and 086
+  were re-sorted into reading order, moving up to 17 ids on one page — and no
+  text was lost, no annotation was stranded, and both engines renumbered
+  identically. None of the eight added groups carried seed residue
+  (`vision_note`, `notes` and `acknowledged_issues` all empty).
+  [[project_editor_resorts_and_renumbers]] is still true and still harmless when
+  the diff is keyed on text.
+- **CLOSED.** 160 groups on 10 pages, 160 `speaker_reviewed` and 132
+  `identified_by` on both engines, `cap_colour` null on all 160, zero per-group
+  mismatches, nothing outstanding in `vision-corrections`.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
