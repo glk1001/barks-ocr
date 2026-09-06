@@ -3308,6 +3308,64 @@ Flip Decision               8 of 154   5.2%       0 of 2       8 of 152  5.3%
   `vision-corrections` with no `--title` reports *Nothing outstanding across 460
   title(s)*.
 
+
+### Findings to paste into the next run (2026-09-06, thirty-fifth batch, first title reviewed)
+
+*My Lucky Valentine* (10pp, 130 groups read) reviewed and mirrored; no groups
+added or deleted, title closed at 130 on both engines.
+
+```
+                            real corrections      mediums      highs
+My Lucky Valentine          6 of 130   4.6%       0 of 1       6 of 129  4.7%
+   nephew domain            6 of  25  24.0%
+```
+
+- **A SCALLOPED BALLOON BOTTOM FAKES A TAIL, AND IT COST FIVE NAMES OUT OF SIX
+  CORRECTIONS.** Every over-naming in the title was the same move: the balloon
+  bottom is a chain of rounded lobes, the cusp where two lobes meet makes a
+  downward point, and over a row of three boys one of those cusps always sits
+  above a head. Five times that cusp was written up as a tail and the boy under
+  it named; the reviewer sent all five back to `nephews` and cleared
+  `cap_colour`. **The tell is in the pass's own prose** -- two of the five notes
+  open with *"the balloon's bottom edge is scalloped, but one lobe comes to a
+  point"*. The scalloping had been seen and argued past. If you write
+  "scalloped, but", stop.
+  At 2.6x the two are not close: a real tail reaches well BELOW the outline, is
+  much narrower than a lobe, has straight sides converging on one sharp point,
+  and stands alone against an evenly spaced run of lobes. A cusp is two curves
+  meeting, the same width as its neighbours, and part of the run.
+- **BUT DO NOT READ THAT AS "DECLINE THE SCALLOPED ONES".** The sixth correction
+  is the opposite error: 106 g6 *does* have a real tail, longer and narrower
+  than the lobes, landing on the green-tied boy -- and the pass took a scallop
+  two boys to its left and named Dewey. The rule is **find the long narrow spike
+  first; only if there is not one is the group `nephews`.** Every call that
+  rested on a real tail stood, and so did the offset-fan reading on 107 p6,
+  where three balloons over three boys were named from the fan rather than from
+  any single lobe.
+- **THE HIGH FLAG IS STILL WHERE THE ERRORS LIVE.** 6 of 129 highs corrected
+  against 0 of 1 medium -- the third batch running in which the medium flag
+  catches nothing and every error cluster is a `high`. All six of these were
+  written at high with a pixel margin in the note, which is exactly the
+  failure the roster warns about: *a margin quoted against the wrong landmark
+  reads as measurement and promotes the call to high*. Here the wrong landmark
+  was not a cap instead of a head -- it was a balloon outline instead of a tail.
+- **THE DIRECTION INVERTED, AND THAT IS ABOUT MECHANISM, NOT APPETITE.** Five of
+  six were OVER-naming, against a corpus record that says under-naming is the
+  whole error class. The counter-lesson is narrow: nothing here says name fewer
+  boys, it says stop manufacturing tails. 19 of the title's 25 nephew-domain
+  calls stood, names included.
+- **The missed text was not worked.** Both items the pass handed back -- `LAW`
+  on 098 panel 1 and `STA` on 099 panel 6, neither of which
+  `audit_missed_text.py` can raise because containment swallows a short needle
+  -- are still ungrouped, and so is the drawn pain star on 100. Group counts are
+  identical to the prep on both engines, so nothing was renumbered and the
+  mirror was safe; but a queue file handed back at the TOP of a report still
+  went unworked, which is worth knowing about the hand-back format.
+- **Everything else came back clean.** All five type corrections and the one
+  text correction (`BRAVE` -> `BRASS MONKEY`) were confirmed, the only ai_text
+  change in the title is that retype, and the engine diff, group audit and
+  mirror verification are all clean.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
