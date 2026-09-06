@@ -3233,6 +3233,81 @@ Turkey with All the Sch.    3 of 152   2.0%       1 of 2       2 of 150  1.3%
   `identified_by` on both engines, `cap_colour` null on all 160, zero per-group
   mismatches, nothing outstanding in `vision-corrections`.
 
+### Findings to paste into the next run (2026-09-06, thirty-fourth batch, third title and batch close)
+
+*Flip Decision* (10pp, 154 groups read) reviewed and mirrored; 3 groups added,
+title closed at 157. All three titles of the batch are now closed.
+
+```
+                            real corrections      mediums      highs
+A Charitable Chore          1 of 152   0.7%       0 of 5       1 of 147  0.7%
+Turkey with All the Sch.    3 of 152   2.0%       1 of 2       2 of 150  1.3%
+Flip Decision               8 of 154   5.2%       0 of 2       8 of 152  5.3%
+   batch                   12 of 458   2.6%       1 of 9      11 of 449  2.4%
+```
+
+- **ALL EIGHT OF FLIP DECISION'S CORRECTIONS WERE CAP READINGS, AND THE ROOT WAS
+  REASONING ABOUT THE PANEL'S PALETTE INSTEAD OF ASKING WHICH BLOB SITS ON A
+  HEAD.** Seven `nephews -> a name`, one `Dewey -> Huey`. Two opposite failures,
+  one cause:
+    - **A decoy in the exact cap ink does not disqualify the band.** This title
+      prints a red car at `#e61b1f` and a green fence at `#009e49` — the cap red
+      and (near) the cap green. I wrote "its greens are the fence at S1.00, its
+      only blue is Donald's cap" and moved on. On 094 panel 7 a **1172px red
+      gore at S0.88 was sitting on the leftmost boy's head**, in the same band I
+      had just written off. Identify the decoy and then *still* ask which
+      remaining blobs land on a head. [[project_cap_blob_must_sit_on_a_head]].
+    - **Colour on a cap's OUTLINE is print bleed, not a gore.** 093 g0: I named
+      Dewey from ~100px of `#00a4d5` in three slivers at a 5px floor and marked
+      it **high**. At 3.4x those flecks sit on the boundary between the black cap
+      and the pale-blue sky — bleed at the edge. The reviewer read the boy as
+      Huey. A gore sits *inside* the crown, not along the line where it meets
+      the background.
+  The same census error cost one correction on *A Charitable Chore* (071 g10,
+  a gore at S0.12-0.27) and was caught mid-title on this one. Three separate
+  shapes of the same mistake in one batch: too low an area floor, too high a
+  saturation floor, and a palette argument that skipped the head test.
+- **RETRACT "A SINGLE BALLOON OVER A BUNCHED TRIO IS `nephews`".** That was the
+  thirty-third batch's rule and I applied it faithfully. The reviewer named
+  every instance of it here: 095 g14 and 097 g11/g12 are one balloon over three
+  overlapping boys and came back Dewey, Dewey and Louie, each with a
+  `cap_colour` set — so a specific gore was read for each. **Bunching is not a
+  reason to decline; it is a reason to crop.** What the old rule was really
+  about is the *previous* batch's panels, where no gore was readable at all.
+  Where the gores print, name them however bunched they are.
+- **THE MEDIUM FLAG IS NOT A PREDICTOR ANY MORE.** Across the batch: **1 of 9
+  mediums** corrected against **11 of 449 highs**, and every one of the batch's
+  error clusters was a `high` — the 079 cascade, the 093 sky-bleed, all seven
+  Flip Decision collectives. Two batches ago every medium was wrong; now the
+  flag catches almost nothing. Keep writing mediums for the reviewer's benefit,
+  but **stop treating a `high` as settled** — that is where the errors live.
+- **AN INSERT DISPLACED A GROUP OUT OF THE QUEUE AGAIN.** 097's apartment `1`
+  went in at g8 and shifted every later id by one; the panel-7 caption, old g12
+  and now g13, never reached the reviewer and the title sat at 156/157. It is
+  not always the page's last id — g18 was reviewed and g13 was not.
+  **Count `speaker_reviewed` on both engines before mirroring, every time.**
+  Chased separately, it came back confirming the pass's `narrator` unchanged.
+  [[project_added_group_shifts_queue_tail]].
+- **THE CAPTION RETYPE IS A HOUSE CONVENTION, CONFIRMED TWICE.** `So-` -> `SO —`
+  on 075 in the first title and again on 097 here, plus `GO?...` -> `GO? ...` on
+  089. A drop-capital caption normalises to caps with an em-dash, and an ellipsis
+  takes a leading space. None of these reach `vision-corrections` — a retype is
+  already applied — so diff `ai_text` against the pass commit or they are
+  invisible. [[project_review_retype_reaches_no_queue]].
+- **SWITCH `visible_text` BACK TO THE GLYPH THE MOMENT A DEVICE IS GROUPED.**
+  At the review-stage close-out *Flip Decision* audited clean while the other
+  two still reported findings — every one of *Turkey*'s seven was a device the
+  review HAD grouped, still described in `visible_text` as prose ("drawn dollar
+  signs floating around Scrooge's head" against a group whose `ai_text` is
+  `$ $ $`). The prose form is only for lettering nobody has grouped yet.
+  **Re-run the audit after a review, not only before it**, and fix the field to
+  match the new groups. [[project_devices_must_go_in_visible_text]] already says
+  so; this is the first batch where it cost a failing close-out on two titles.
+- **CLOSED.** 470 groups across 30 pages and three titles, every group reviewed
+  and mirrored on both engines, zero per-group mismatches anywhere, and
+  `vision-corrections` with no `--title` reports *Nothing outstanding across 460
+  title(s)*.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
