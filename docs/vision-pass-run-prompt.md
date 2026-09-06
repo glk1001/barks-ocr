@@ -3082,6 +3082,83 @@ Omelet               5 of 163   3.1%        0 of 2        5 of 161  3.1%
   With them in, `vision-corrections` with no `--title` reports *Nothing
   outstanding across 460 title(s)*.
 
+### Findings to paste into the next run (2026-09-06, thirty-fourth batch, first title reviewed)
+
+*A Charitable Chore* (10pp, 152 groups) read, reviewed and mirrored.
+*Turkey with All the Schemings* (10pp, 152) and *Flip Decision* (10pp, 154)
+are read and applied, review in progress.
+
+```
+                        real corrections      mediums      highs
+A Charitable Chore      1 of 152   0.7%       0 of 5       1 of 147  0.7%
+```
+
+- **COUNT BY TEXT AGAIN: `review_findings` said 2, the real figure is 1.** The
+  second row, 074 g13 `unknown -> none`, is the group the REVIEW added -- its
+  `speaker_was` defaults to `unknown`, so it books as a correction of a call the
+  pass never made. Subtract every added group before quoting a rate.
+  [[project_review_adds_shift_ids_and_strand_a_group]] once more, in its milder
+  form: this insertion appended at g13 and renumbered nothing, so no straggler
+  was created and both engines finished at 153/153.
+- **THE ONE ERROR WAS A CAP GREEN SHADED BELOW EVERY CENSUS FLOOR, AND THE HUE
+  WAS RIGHT ALL ALONG.** 071 g10, `nephews -> Louie`, `cap_colour null ->
+  green`. My note said "that cap is solid black: capscan at an 8px floor puts no
+  red, blue or leafgrn blob anywhere on his head". The ink is there: **516px at
+  `#627360` H113.7**, dead inside the Vol. 13 cap-green band (H103-132), printed
+  over a black crown at **S0.12-0.27**. `capscan` and `capwide` both carry
+  `MIN_SAT = 0.40`, so both return `green: 0` for that panel at any area floor,
+  and `capwide`'s widened bands do not help because the miss is in saturation,
+  not hue. So:
+    - **A shaded gore falls BELOW the cap band, not between the cap and the
+      foliage band.** The Vol. 13 rule "caps sit at S0.4-0.6 and foliage at
+      S0.94-1.00" screens foliage OUT; it does not put a floor under a cap.
+    - **`probe.py` had already printed it and I read the wrong column.** Its row
+      was `green 516px #627360 H113.7 S 0.12/0.17/0.27`. On a black crown the
+      HUE column decides. Never write "no cap ink" off a blob census -- probe the
+      crown and read the hue.
+    - **Probe the CROWN STRIP, not the skull.** My box was `(14,234)-(150,380)`,
+      which is the white skull `heads.py` reports; the cap sits ABOVE it and the
+      gore was at y<234. [[feedback_ink_above_the_white_skull_is_the_cap]].
+  This same error was then made at scale on *Flip Decision* -- a 30px area floor
+  hid gores of 60-250px on four pages -- and caught mid-title only by cropping.
+- **THE MEDIUM FLAG WENT 0 OF 5, AND ALL FIVE WERE PROMOTED UNCHANGED.** Second
+  batch running that it has caught nothing (3 of 8 last time, 0 of 5 now)
+  against 1 of 147 highs. The four-batch run where every medium was wrong is
+  well and truly over: read a medium as a request for a second look, not as a
+  prediction, and keep writing what the alternative reading is -- that is what
+  makes it cheap for the reviewer to promote.
+- **THE OFFSET-FAN READING HELD, ON A VOL. 13 TITLE.** 071 panel 5: three
+  balloons over three boys, every tip 60-130px LEFT of the boy reading order
+  gives it, the leftmost landing on open pavement. I assigned by the uniform
+  drift rather than by nearest head, flagged all three medium, and the review
+  promoted all three unchanged. [[project_offset_fan_reading_order_wins]] is now
+  confirmed outside Vol. 4. A tip landing on NOBODY is the signal; when it fires,
+  the whole fan has moved and reading order wins.
+- **TWO RETYPES I DECLINED AS "STYLE" WERE MADE ANYWAY.** 068 g14 `BYE!` ->
+  `'BYE!` and 075 g8 `So-` -> `SO —`, both typed straight into `ai_text` in the
+  editor and both applied to BOTH engines. So, for this corpus:
+    - **an elision apostrophe is transcribed**, not style;
+    - **a drop-capital caption is normalised to caps with an em-dash** -- `SO —`,
+      the form 069 g0 already carried, not the drawn mixed case `So-`.
+  Neither reached `vision-corrections`, because a retype is already applied
+  [[project_review_retype_reaches_no_queue]]; they were found by diffing
+  `ai_text` against the pass commit, which is the only way to see them.
+- **QUEUEING AN AUDIT-INVISIBLE DUPLICATE WORKS.** The `$98` tag on 074 panel 5
+  is a second copy of a string that already has a group, so
+  `audit_missed_text.py` matched it against the `$98.00` display card and
+  reported nothing. It reached the reviewer only because it went into
+  `queue-missed.txt` by hand with a line saying the audit could not see it, and
+  it came back as a properly boxed group. Keep writing those rows.
+- **THE ADDED GROUP CARRIED NO SEED RESIDUE.** 074 g13 arrived with its own box,
+  `ai_text` `$98`, `type` `background`, `speaker` `none`, `vision_added: true`,
+  and no `vision_note`, `identified_by` or `acknowledged_issues` copied from a
+  neighbour -- so [[project_editor_copy_in_residue]] did not fire this time.
+  Still check it: the check is two lines and the failure is silent.
+- **CLOSED.** 153 groups on 10 pages, 153 `speaker_reviewed` and 128
+  `identified_by` on both engines, identical speaker / `cap_colour` / confidence
+  distributions, zero per-group mismatches, and `vision-corrections --title`
+  reports nothing outstanding.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
