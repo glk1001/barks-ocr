@@ -4215,6 +4215,63 @@ pitchfork = Huey, and the three are separable even in the story's flat
 silhouette panels by hat point, horns and curled hood.
 
 
+**Vol. 13's *My Lucky Valentine* puts the three inks on the BOW TIE, not the
+cap.** All three boys wear the identical plain brown Junior Woodchuck coonskin
+cap with a yellow diamond badge, and the convention is carried on the Woodchuck
+bow tie under the chin. Reference panel 099 p1, the three sitting in a row: red
+`#e51a20` at panel x204-378, blue `#04a4d5` at x444-517, green `#4da33e` H110.7
+at x639-826, each under its own skull. Two decoys: **their MITTENS are the same
+blue as Dewey's bow and every boy wears a pair**, which is the biggest blob in
+most panels, and **Donald's own bow tie is the same red**. On 098 the boys are
+in plain black jerseys with no bow tie at all -- a whole-panel census returns
+only the red exercise mat and the blue window curtains -- so that page's
+collectives are absence of the convention rather than a declined reading.
+The title also uses an **offset fan** on 107 p6: three balloons, three boys,
+and all three tails sitting about 150px LEFT of their own boy with the leftmost
+landing on bare brickwork.
+
+**Vol. 12's *Back to the Klondike* keeps the volume's black cap with a coloured
+side band, but at 30-80px** -- capscan at a 25px floor finds the slivers mixed
+with noise, so the reading is a 1.0-1.5x crop, not a census. Reference panel
+049 p5, the three in a row: green, red, blue left to right. Four decoys, all
+live for the whole 32 pages:
+
+| | |
+|---|---|
+| Scrooge's coat | `#5caa3c` H102.5 -- the SAME ink as Louie's band |
+| Scrooge's top hat band | `#00a5d7` -- Dewey's blue |
+| Scrooge's duffel bag | `#4da33e` H111 -- a second green that is never a cap |
+| the boys' trail packs | red, blue and green BEDROLLS of the roster inks |
+
+- **The caps come off indoors.** Through the cabin scenes on 070-072 the boys
+  hold their caps in their hands; the band still names them, but it has to be
+  read off the cap in the hand rather than off a head.
+- **A colourist swap runs through 071-072.** Dewey names the third boy in 071
+  g1 -- LOUIE'S ALREADY TAKEN THE BEANSHOOTER AND SCRAMMED -- so the two left
+  in the cabin are Dewey and Huey; but the boy who runs off with the gun is
+  printed RED and the one left behind is printed GREEN. The address wins and
+  the printed ink is recorded as observed, per the standing rule.
+- **`UNCA SCROOGE` is a nephew and `UNCLE SCROOGE` is Donald** holds on this
+  title too, on every occurrence -- as it did on *Only a Poor Old Man*.
+
+**Both Vol. 12 titles in this batch draw balloons with MORE THAN ONE TAIL.**
+*Somethin' Fishy Here* 079 g7 and 082 g6 carry two apiece and 082 g10 three;
+*Back to the Klondike* 074 g6, 075 g4 and 075 g9 each carry three spread across
+the row of boys. They are long narrow pointed spikes, not the balloon's own
+scalloped bottom, and each one lands on a different figure. Two or three
+distinct figures receiving a tail is two or three speakers, so the group is
+`nephews` however readable the bands are -- record the bands in the note so a
+reviewer can see it was not a declined reading.
+
+**Caption boxes in these three titles are all set in a slanted display hand.**
+That slant is the house hand for a caption, not emphasis, so no `[i]` is marked
+on any of them. Contrast *My Lucky Valentine* 102 g6/g7 and *Somethin' Fishy
+Here* 079 g2, where a quotation is set slanted INSIDE an otherwise upright
+balloon and IS marked -- the same treatment as the Cornelius Coot inscription
+in Vol. 11 072. The corpus is split on this (31 Vol. 13 narration groups carry
+`[i]`, 46 do not), so it is flagged for the reviewer rather than settled here.
+
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
