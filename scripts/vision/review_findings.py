@@ -30,6 +30,17 @@ rate — the single most useful number in any of these reviews, 31.0% against 7.
 on *Lost in the Andes!* — is gone from the current state. Pass `--since <ref>`
 and it is read from the git blob of the pass's own commit instead.
 
+WHY `--since` ALSO GATES THE TYPE LIST. `type_was` is durable: it stays on a
+group for ever once a type has been overruled, so listing every group that
+carries it reports old adjudications as though this review had made them. That
+over-reported three batches running -- on *Gemstone Hunters* it turned 0 into 1,
+on *Spending Money* 1 into 2, and on *The Hypno-Gun* **0 into 4**, all four of
+those dated 2026-08-13, twenty-four days before the pass. With `--since` a row
+is only this batch's when the group was NOT already `type_reviewed` in that
+commit's blob, which keeps a pass's own proposal that the review then confirmed
+and drops the stale ones. Without `--since` the distinction cannot be drawn at
+all and the list says so.
+
 The output is raw material, not the finding. Reading it and stating the rule is
 the judgement, and a rule inferred from a correction can misread WHY it was made.
 """
@@ -54,6 +65,8 @@ from barks_ocr.utils.vision_schema import (
     SPEAKER_REVIEW_NOTE_KEY,
     SPEAKER_WAS_KEY,
     TYPE_KEY,
+    TYPE_REVIEWED_DATE_KEY,
+    TYPE_REVIEWED_KEY,
     TYPE_WAS_KEY,
     VISION_NOTE_KEY,
 )
@@ -122,6 +135,7 @@ def main() -> None:  # noqa: C901, PLR0912, PLR0915 -- one report, printed in se
     by_class: dict[str, list[str]] = defaultdict(list)
     caps: list[str] = []
     types: list[str] = []
+    stale_types: list[str] = []
     phantom = 0
     was_confidence: Counter[str] = Counter()
     corrected_confidence: Counter[str] = Counter()
@@ -152,7 +166,8 @@ def main() -> None:  # noqa: C901, PLR0912, PLR0915 -- one report, printed in se
                 if speaker in NEPHEW_NAMES or speaker == COLLECTIVE:
                     nephew_domain += 1
 
-                old_conf = (before.get(gid) or {}).get(SPEAKER_CONFIDENCE_KEY)
+                old = before.get(gid) or {}
+                old_conf = old.get(SPEAKER_CONFIDENCE_KEY)
                 if old_conf:
                     was_confidence[old_conf] += 1
 
@@ -187,9 +202,14 @@ def main() -> None:  # noqa: C901, PLR0912, PLR0915 -- one report, printed in se
                         f" -> {group.get(CAP_COLOUR_KEY)!r}  (speaker unchanged: {speaker!r})"
                     )
                 if TYPE_WAS_KEY in group:
-                    types.append(
-                        f"{page} g{gid}: {group.get(TYPE_WAS_KEY)!r} -> {group.get(TYPE_KEY)!r}"
-                    )
+                    line = f"{page} g{gid}: {group.get(TYPE_WAS_KEY)!r} -> {group.get(TYPE_KEY)!r}"
+                    if old.get(TYPE_REVIEWED_KEY):
+                        # Already adjudicated before `since`, so `type_was` is an
+                        # older batch's and not this review's.
+                        when = old.get(TYPE_REVIEWED_DATE_KEY) or "date not recorded"
+                        stale_types.append(f"{line}   (reviewed {when})")
+                    else:
+                        types.append(line)
 
     total = sum(len(v) for v in by_class.values())
     scope = only_title or f"{len(titles)} title(s)"
@@ -221,6 +241,16 @@ def main() -> None:  # noqa: C901, PLR0912, PLR0915 -- one report, printed in se
         print(f"\n--- type corrections: {len(types)}")
         for line in types[:MAX_PER_CLASS]:
             print(f"     {line}")
+        if len(types) > MAX_PER_CLASS:
+            print(f"     ... and {len(types) - MAX_PER_CLASS} more")
+
+    if stale_types:
+        print(f"\n--- type_was PREDATING {since}: {len(stale_types)}, NOT counted above")
+        print("      (an older adjudication, still carried on the group; `type_was` is durable)")
+        for line in stale_types[:MAX_PER_CLASS]:
+            print(f"     {line}")
+        if len(stale_types) > MAX_PER_CLASS:
+            print(f"     ... and {len(stale_types) - MAX_PER_CLASS} more")
 
     if phantom:
         print(f"\n!! {phantom} group(s) carry a _was equal to the current value.")
@@ -238,6 +268,10 @@ def main() -> None:  # noqa: C901, PLR0912, PLR0915 -- one report, printed in se
         print("\n(no --since given, so the pass's own confidences are gone: a review")
         print(" overwrites them with 'high'. Pass --since <the pass's commit> for the")
         print(" medium-against-high rate, which is usually the most useful number here.)")
+        if types:
+            print("\n!! and the type list above is EVERY group carrying `type_was`, which is")
+            print("   durable -- some of those adjudications predate this review. --since")
+            print("   splits them; without it, check type_reviewed_date on each by hand.")
 
 
 if __name__ == "__main__":
