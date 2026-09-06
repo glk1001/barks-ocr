@@ -3000,6 +3000,88 @@ The Hypno-Gun   2 of 125   1.6%    nephew domain 2 of 16 (12.5%)
   characters, queued and not ruled on, so still out of `missed-text-ignore.txt`.
 
 
+### Findings to paste into the next run (2026-09-06, thirty-third batch, all three titles reviewed)
+
+*Trick or Treat* (32pp, 329 groups), *Hobblin' Goblins* (9pp, 115) and
+*Omelet* (10pp, 163), all read and all reviewed the same day, all mirrored.
+
+```
+                    real corrections        mediums      highs
+Trick or Treat      13 of 329   4.0%        3 of 4       10 of 325  3.1%
+Hobblin' Goblins     8 of 115   7.0%        0 of 2        8 of 113  7.1%
+Omelet               5 of 163   3.1%        0 of 2        5 of 161  3.1%
+   batch            26 of 607   4.3%        3 of 8       23 of 599  3.8%
+```
+
+- **COUNT BY TEXT, NOT BY ID, ON ANY TITLE WHOSE REVIEW ADDED A GROUP.**
+  `review_findings --since` reported 15 / 10 / 8; the true counts are
+  **13 / 8 / 5**. Every one of the seven surplus rows is an `unknown -> none`
+  on an id that an insertion moved -- the tool compares old id N against the
+  newly inserted group. Re-match on (normalised `ai_text`, occurrence). Across
+  the batch the tool over-reported by 39%, and it over-reported most on the
+  title with fewest real corrections. [[project_review_adds_shift_ids_and_strand_a_group]]
+- **OVER-NAMING WAS HALF OF ALL CORRECTIONS -- 13 OF 26 -- AND IT IS NOT A
+  COSTUME-TITLE EFFECT.** 7 on *Trick or Treat*, 3 on *Hobblin' Goblins*,
+  3 on *Omelet*; the last six are on titles where the boys wear ordinary caps
+  and I had a hex on a head. This reverses the standing under-naming rule for
+  this kind of panel, and the boundary is the same one all three reviews drew:
+    - **a set of balloons with one tail each names them all** -- three-tail
+      chorus balloons, cascades, `NOT ME!` pairs, the silhouette fans. Not one
+      of these was touched in 607 groups.
+    - **a single balloon over a bunched trio is `nephews`**, even with a
+      measured tip and a clean cap under it. 039 g5, 043 g9, 046 g9, 058 g6,
+      065 g5, 065 g7 all had both and all came back collective.
+  So the tail names a boy when the panel's other balloons have already claimed
+  the other two. On its own, against three heads in a bunch, it does not.
+- **THE MEDIUM FLAG WENT 3 OF 8 THIS BATCH, NOT 3 OF 3.** Still 10x the high
+  rate (37.5% against 3.8%), and all three that fell were on the same title --
+  but the four-batch run of "every medium is wrong" is over. Read it as: a
+  medium is a request for a second pair of eyes, not a prediction. Keep
+  writing them, keep writing what the other reading is; the three that were
+  corrected were all corrected *to the alternative the note named*.
+- **A COLOURIST ERROR, CALLED BY THE REVIEWER IN SO MANY WORDS.**
+  *Hobblin' Goblins* 045 g3, `Dewey -> Huey`, reviewer's note *"Colorist error:
+  should be red cap"*. I had sampled `#429aae` H191.1 S0.62 and read it as a
+  shaded blue, which it is -- the cap is simply printed the wrong colour.
+  [[feedback_colourist_error_breaks_the_chain]] again: record the printed ink,
+  take the name from everything else.
+- **A CAPSCAN ZERO IS NOT PROOF OF NO CAP.** 045 g4, `nephews -> Louie`,
+  reviewer's note *"Can just see green"*. I declined because capscan returned
+  red 0 and leafgrn 0 at an 8px floor and wrote that only one of the three
+  carried readable ink. The green was visible in the crop I already had. The
+  census screens; the crop decides.
+- **AN ADULT WHOSE HEAD ABUTS THE BALLOON IS A LIVE CANDIDATE.**
+  *Hobblin' Goblins* 040 g5, `nephews -> Gyro`. My note explicitly ruled him
+  out -- "not on Gyro, who is at x 620-940 with the balloon merely abutting his
+  cap" -- and the line is *THE GOBLINS WILL BE HEXED!*, in his own coinage two
+  pages after he says *hex-rays*. Where a balloon runs up against an adult's
+  head and the diction is his, abutting is not the same as unrelated.
+- **A SECOND COPY OF AN ALREADY-GROUPED STRING IS INVISIBLE TO THE AUDIT, AND
+  IT HAPPENED TWICE.** Both reviews found lettering the missed-text audit could
+  not: a second `RAY SHAPER` tag (*Hobblin' Goblins* 039, panel 2, distinct
+  from the panel-1 one) and a second `313` number plate (*Omelet* 058, panel 7,
+  distinct from the panel-1 one). Both were in `visible_text` -- once -- so the
+  diff matched them against the existing group and reported nothing.
+  [[project_vision_audit_nearmiss_gap]] confirmed twice in one batch.
+  **Fix: when the same lettering appears more than once on a page, record it
+  once per occurrence in `visible_text`, not once per string.**
+- **A ROLE VALUE CAN BE SHARPENED.** *Omelet* 064 g11,
+  `other:a townswoman -> other:the baker's wife`. Using a generic
+  `other:a townsman` / `other:a townswoman` for a crowd of extras kept the
+  namespace clean across 23 uses and no near-duplicates drifted, which was the
+  right call -- but where a figure has an actual role in the scene, name the
+  role.
+- **CLOSED.** All three titles finished at 613 groups across 51 pages, every
+  group reviewed on both engines, zero per-group mismatches on any mirrored
+  field. Two stragglers had to be chased first, both created by an insertion:
+  *Hobblin' Goblins* 039 g15 (stranded when `RAY SHAPER` went in at g7) and
+  *Omelet* 065 g14. **Count `speaker_reviewed` on BOTH engines before calling a
+  review done** -- neither straggler was visible from the correction list, and
+  the type corrections are a separate review state again: *Trick or Treat* sat
+  at 330/330 speakers with 017 g6 and 033 g8 still unconfirmed for two rounds.
+  With them in, `vision-corrections` with no `--title` reports *Nothing
+  outstanding across 460 title(s)*.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -3861,6 +3943,50 @@ this story.
   biggest thing in the red band on most panels of both this title and *Spending
   Money*. It is 8 degrees off the cap red and half its saturation, so the hex
   separates them cleanly -- but a red-band blob count does not.
+
+
+**Three more Vol. 13 titles, read 2026-09-06: *Trick or Treat*, *Hobblin'
+Goblins* and *Omelet*.** The three inks above held on every panel that printed
+them, so the palette is settled for the volume. What these titles add is the
+two ways it goes wrong.
+
+**The cap green runs H103-132 and the `green` band is never it.** Measured
+across the batch: `#4da33e` H111, `#4fa43e` H110, `#45a257` H132, `#4f9c5a`
+H129, `#60a34a` H105, `#6ca257` H103, `#69a670` H127 -- all at **S0.37-0.63**.
+Every one of them lands in `leafgrn`, and capscan's `green` band (H140-182)
+held nothing but grass, hedge and foliage all batch long: `#009e49` H147.7
+S1.00 on *Hobblin' Goblins*, `#009f8b` H172.5 S1.00 on *Omelet*. So `green: 0`
+is the normal reading here and says nothing. Saturation is the discriminator,
+not the band name: the foliage sits at S0.94-1.00 and the caps at S0.4-0.6.
+Note also that a cap below about S0.4 drops out of `leafgrn` too -- *Hobblin'
+Goblins* 045 p3 returns `leafgrn 0` for a cap that probes `#69a670` H126.9
+S0.37 -- so `probe.py` on the head, not the census, settles those.
+
+**Four decoys that print a cap ink exactly.** Each is large, none is on a head:
+
+| | | |
+|---|---|---|
+| apples | `#e61b1f` | *Hobblin' Goblins* 042 and 043 -- the identical hex to the cap red, 40+ blobs a panel |
+| picket fence | `#00a5d7` | *Hobblin' Goblins* 044 p1 -- the identical hex to the cap blue, over 3000px |
+| grass | `#54b041` H109.7 | *Omelet* 060 p8 -- the cap-green hue exactly, in 13,000-15,000px blobs |
+| hens' combs | `#e41a20` | *Omelet* 060 and 062 -- the cap red on every bird in a flock of 10,000 |
+
+Add to these the adult reds already known in the volume: Gyro's trousers
+`#a04453` H350.2 S0.57 and Scrooge's coat at the same hex. The rule they all
+serve is the standing one -- a blob has to sit on a HEAD -- but on these titles
+it is doing most of the work, not a little of it.
+
+**And one title prints no cap ink at all.** *Trick or Treat* puts the three
+boys in Halloween costume for all 32 pages and never takes it off, so
+`cap_colour` is null wherever the costume is black or the panel is a
+silhouette. The costumes carry the convention instead, and this was confirmed
+with the reviewer before the pass was written: the red devil hood and suit
+sample `#e61b1f` and the black witch hat's band `#00a5d7` -- both on a head
+covering -- with the yellow ghost sheet (`#f8ea89`, not a roster colour) the
+third by elimination. The assignment is stable across every page: witch hat and
+loot sack = Dewey, ghost sheet and jack-o'-lantern pole = Louie, devil hood and
+pitchfork = Huey, and the three are separable even in the story's flat
+silhouette panels by hat point, horns and curled hood.
 
 
 ## The long form is retired
