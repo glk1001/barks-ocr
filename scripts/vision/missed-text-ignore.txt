@@ -245,3 +245,11 @@ HELP KEEP AMERICA STRONG
 # lettering, correctly found by the audit, but nothing transcribable, so it is
 # not worth a group.
 11 205 a distant roadside billboard in panel 5 whose lettering is drawn as illegible marks
+
+# The Hypno-Gun 056 panel 8, declined by the reviewer 2026-09-06 ("skip the
+# impact stars"). Red and green stars drawn round Rockjaw Bumrisk's head as he
+# hits the tree. A drawn device carrying no characters at all, so no
+# transcription and no group is possible; recorded in the page's visible_text
+# as a true record of what is drawn. Same standing as the Gilded Man 169
+# musical notes.
+13 056 red and green impact stars drawn round Rockjaw's head as he hits the tree
