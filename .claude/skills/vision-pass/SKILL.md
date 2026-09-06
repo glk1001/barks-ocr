@@ -62,8 +62,12 @@ correction in 26). The tool groups the corrections by direction, because that is
 what turns a list into a rule: `nephews` -> a name is an under-naming finding,
 the reverse is an over-naming one, and a name swapped for a name is about tails.
 
-**Pass `--since`.** A review overwrites `speaker_confidence` with `high`, so
-without it the medium-against-high correction rate is gone — and that is usually
+**Pass `--since`.** It buys two things. `type_was` is durable, so without
+`--since` the type list is every group that has *ever* had its type overruled,
+which over-reported three batches running (0 shown as 4 on one title); with it,
+stale rows go into their own `type_was PREDATING <ref>` block and the headline
+count is this review's. And a review overwrites `speaker_confidence` with
+`high`, so without it the medium-against-high correction rate is gone — and that is usually
 the most useful number in the whole review. *Pixilated Parrot* came back 41.2%
 of mediums corrected against 6.0% of highs; *Lost in the Andes!* 31.0% against
 7.3%. A medium is not a safe hedge.

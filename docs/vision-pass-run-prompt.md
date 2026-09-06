@@ -2907,7 +2907,7 @@ Spending Money   1 of 139   0.7%    nephew domain 1 of 4 (25.0%)
   It listed two type corrections; 206 g7 `dialogue -> narration` carries
   `type_reviewed_date: 2026-08-12` and is present in the commit *before* the
   pass. The real count is one -- the pass's own 198 g1 `dialogue -> thought`,
-  accepted on both engines. Check the date on every `type_was`, every time.
+  accepted on both engines. **FIXED 2026-09-06** -- see the next section.
 - **BOX CHURN IS NOT A FINDING.** The review moved **45** `text_box` values, 22
   on easyocr and 23 on paddleocr, and the two sets are not the same groups --
   the editor tightens boxes per engine. Largest corner displacement 157px on a
@@ -2977,10 +2977,17 @@ The Hypno-Gun   2 of 125   1.6%    nephew domain 2 of 16 (12.5%)
 - **`review_findings --since` OVER-REPORTED TYPES FOR THE THIRD BATCH RUNNING,
   AND THIS TIME IT TURNED 0 INTO 4.** It listed 048 g0, 051 g3, 052 g3 and
   055 g5; all four carry `type_reviewed_date: 2026-08-13` and all four are
-  present in the commit *before* the pass. The real count is **zero**. Three
-  batches is enough: the tool should filter `type_was` by
-  `type_reviewed_date` against the `--since` commit's date rather than listing
-  every group that carries the field. Until it does, date-check every row.
+  present in the commit *before* the pass. The real count is **zero**.
+  **FIXED the same day.** `review_findings.py` now gates the type list on
+  `--since` as well: a row counts only when the group was NOT already
+  `type_reviewed` in that commit's blob, which keeps a pass's own proposal that
+  the review then confirmed and drops the rest into a separate
+  `type_was PREDATING <ref>` block with each date shown. Checked against four
+  hand-verified counts -- Gemstone Hunters 0 real / 1 stale, Spending Money
+  1 / 1, The Gilded Man 4 / 5, The Hypno-Gun 0 / 4.
+  **So: pass `--since` and read the headline number. Without `--since` the
+  distinction cannot be drawn and the type list is still every group carrying
+  the field -- the report now says so, but it cannot fix it.**
 - **THE CAP PALETTE THIS TITLE PRODUCED NAMED NOBODY IN IT.** The title now
   carries **no `cap_colour` at all** — the one value the pass wrote was cleared
   with g14. The boys are bare-headed on 048 and 049, and 057, the only page
