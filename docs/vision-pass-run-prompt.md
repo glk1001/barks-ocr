@@ -3476,26 +3476,40 @@ The Master Rainmaker           2 of 128   1.6%      1 of  5  20.0%     2 of  4  
   called done. **Count `speaker_reviewed` on both engines before mirroring, every
   time**, and hold the mirror on a title that is short even by one.
 
-### Findings to paste into the next run (2026-09-07, thirty-seventh batch, two of three titles reviewed)
+### Findings to paste into the next run (2026-09-07, thirty-seventh batch, all three titles reviewed)
 
-*The Money Stairs* (Vol. 13) and *The Horseradish Story* (Vol. 12) reviewed and
-mirrored, both engines identical on group count, `speaker_reviewed`,
-`identified_by` and the speaker / cap_colour / confidence distributions.
-*The Round Money Bin* is still being reviewed, so it contributes nothing below.
+*The Money Stairs* (Vol. 13), *The Horseradish Story* and *The Round Money Bin*
+(Vol. 12) reviewed and mirrored, all three clean on every gating check of
+`closeout.sh --stage review`, and both engines identical on group count,
+`speaker_reviewed`, `identified_by` and the speaker / cap_colour / confidence
+distributions.
 
 ```
-                          real corrections    nephew domain    mediums      highs
-The Money Stairs            1 of  98   1.0%    0 of  1  0.0%   (none)     1 of  97  1.0%
-The Horseradish Story       3 of 255   1.2%    2 of 36  5.6%   1 of  4    2 of 250  0.8%
-    batch so far            4 of 353   1.1%    2 of 37  5.4%   1 of  4    3 of 347  0.9%
+                       real corrections   touching nephews   mediums     highs
+The Money Stairs         1 of  98   1.0%   0 of  1    0.0%   (none)    1 of  97  1.0%
+The Horseradish Story    3 of 255   1.2%   2 of 36    5.6%   1 of 4    2 of 250  0.8%
+The Round Money Bin      4 of 142   2.8%   2 of  4   50.0%   (none)    4 of 141  2.8%
+    batch                8 of 495   1.6%   4 of 41    9.8%   1 of 4    7 of 488  1.4%
 ```
 
-The counts above exclude the two groups the review ADDED and then finished
-itself -- *Money Stairs* 172 g10 and *Horseradish* 088 g12 -- which
-`review_findings` reports as `unknown ->` corrections but which correct nothing
-the pass wrote.
+"touching nephews" counts a correction with `Huey`/`Dewey`/`Louie`/`nephews` on
+either side, against the number of groups the title finally has in that domain.
+It is not `review_findings`' own nephew figure, which counts the review's added
+groups as corrections and reported *Round Money Bin* as 4 of 4. Note the
+denominators: 1 and 4 on two of the three titles, so read those rows as counts.
 
-- **BOTH READING REVERSALS IN THE BATCH WERE THE SAME MOVE: A DRAWN FEATURE
+**Not one nephew was misidentified in 495 groups.** Every name the pass wrote --
+including all four it took from the one direct address in *Horseradish* -- came
+back untouched. The whole nephew-domain error is one DECLINE the review
+sharpened, which is the corpus's standing shape and it held again here.
+
+The counts above exclude the three groups the review ADDED and then finished
+itself -- *Money Stairs* 172 g10, *Horseradish* 088 g12 and *Round Money Bin*
+109 g2 -- which `review_findings` reports as `unknown ->` corrections but which
+correct nothing the pass wrote. *Round Money Bin*'s nephew denominator is 4, so
+read its 75% as three groups, not as a rate.
+
+- **THREE OF THE BATCH'S FOUR READING REVERSALS WERE ONE MOVE: A DRAWN FEATURE
   ASSERTED FROM THE 250px MONTAGE AND NEVER CHECKED AT PANEL RESOLUTION.**
   *Money Stairs* 170 g7, the pass wrote *"a bordered caption box at the top
   left, not a balloon"* and gave it to `narrator`; at source resolution it is a
@@ -3503,8 +3517,12 @@ the pass wrote.
   the bottle. *Horseradish* 098 g7, the pass wrote *"the figure wears the white
   captain's cap with the black band"* and gave it to Scrooge; at source
   resolution the figure is a nephew in a plain white gob cap with no band, a
-  hair tuft and no whiskers. Both notes name a specific feature as the evidence,
-  and in both the feature is not in the drawing.
+  hair tuft and no whiskers. *Horseradish* 097 g3, the pass wrote *"the sea
+  striking the hull, lettered across the panel"* and typed `SMACKO!` as a
+  `sound_effect` with speaker `none`; at source resolution it is lettered in a
+  BALLOON with a pointed tail, which is why the reviewer made it `dialogue`
+  (see the `sound_effect` bullet below). All three notes name a specific
+  feature as the evidence, and in all three the feature is not in the drawing.
   **The rule: a montage settles who is in frame and roughly where the balloons
   sit. It does not settle a box border, a cap band, or anything else a note
   offers as its reason.** If the note is going to name a drawn feature, that
@@ -3533,13 +3551,25 @@ the pass wrote.
   four survived review. **A prop a story hands to one boy and lets him keep is
   as good as a cap for as long as he keeps it** -- and unlike a cap it does not
   need a clean print.
-- **WHEN A REVIEW MOVES ONE MEMBER OF A LARGE UNIFORM CLASS, COUNT THE CLASS
-  BEFORE REWRITING THE RULE.** *Horseradish* 097 g3, `SMACKO!`, came back
-  `none -> unknown`. It is the only one of the title's THIRTEEN sound effects
-  moved off `none`, and `SNAP!` and `POP!` in the same panel pair were left
-  alone. Reported to the reviewer as a probable slip rather than absorbed as a
-  distinction between `none` and `unknown`; it is now mirrored onto paddleocr,
-  so it needs undoing on both engines if it was one.
+- **A SOUND EFFECT IN A BALLOON IS DIALOGUE. CHECK THE SHAPE BEFORE TYPING ONE
+  `sound_effect`.** *Horseradish* 097 g3, `SMACKO!`, came back `sound_effect ->
+  dialogue` with the speaker `none -> unknown`, and it is the only one of the
+  title's THIRTEEN effects that moved. The reason is visible the moment the
+  panel is opened: `SMACKO!` sits in a **speech balloon with a pointed tail**,
+  while `SNAP!`, `POP!`, `WAM!`, `BLAM!`, `BIFF!`, `BOP!`, `SOCK!`, `BAM!`,
+  `ROAR!`, `POW BOOM! BAM!` and both `S.O.S!` are **display lettering painted
+  into the art** -- and all twelve of those correctly stayed `none`.
+  The roster's rule that *"UNBOXED words are not settled by the drawing"* has a
+  converse it does not spell out: **a BOXED one is.** A balloon means a voice
+  utters it, whatever the word imitates -- so the type is `dialogue`, and where
+  the panel is a long shot with nobody drawn at readable size the speaker is
+  **`unknown`, not `none`**. `none` is for lettering nobody utters; it is not
+  the default for anything that reads like a noise.
+  I first reported this to the reviewer as a probable slip, on the grounds that
+  twelve of thirteen had gone the other way. Counting the class was right; the
+  conclusion was wrong, because I had counted the words and not looked at their
+  shapes. **When one member of a uniform class moves, open it before calling it
+  a slip** -- the thing that makes it the exception is usually visible.
 - **A FILLER PAGE BOUND TO A TITLE REACHES NO QUEUE, AND BACK_MATTER DOES IT
   TOO.** *Horseradish* spans Vol. 12 083-107, but prep only takes `BODY`: 083 is
   `FRONT_MATTER` and **106 and 107 are `BACK_MATTER`**, three complete one-page
@@ -3553,11 +3583,43 @@ the pass wrote.
   grouped them as g10 `'$ $ $ $'` -- and the audit still reports them, because a
   bare glyph normalises to nothing and cannot match the prose entry that raised
   it. The same shape hides two already-grouped question marks on *Round Money
-  Bin* 112 g8 and 114 g6. **A device finding does not clear itself when the
-  device is boxed**; say so in the hand-back or it will be re-raised every run.
+  Bin* 112 g8 and 114 g6, and *Round Money Bin* 109 g2 once the review boxed
+  the coin picture's five dollar signs. **A device finding does not clear itself
+  when the device is boxed** -- and the fix is not a hand-back note but a
+  one-string edit the corpus already documents: `visible_text` carries prose
+  only while the lettering is UNGROUPED, and the exact glyph once somebody has
+  boxed it. Putting the glyph back cleared all four titles-worth of phantoms and
+  took the batch to 0 findings in all three classes.
   And the dollar signs settle the standing question the other way from the
   drawn-device ruling: **the review boxes dollar signs**, as it did on *Some
   Heir* 157, while musical notes, pain stars and arrows stay in the ignore list.
+
+- **A 21px SLIVER `heads.py` REFUSED TO ATTACH WAS STILL THE CAP.** The batch's
+  one under-naming, *Round Money Bin* 109 g8: a wide bridge shot, three boys
+  fishing, small in frame. `capscan` at a **4px** floor found exactly two
+  chromatic blobs on the figures -- Donald's own sailor cap and his bow tie --
+  plus a **21px red at `#d92124` (H359, S0.85)** sitting on the left boy's
+  crown, the boy the tail reaches. `heads.py` did not attach it to any head, so
+  the pass wrote `nephews` and put the measurement in the note. The review
+  named **Huey**, `cap_colour: red`.
+  **`heads.py` not attaching a blob is not evidence the blob is not a cap.**
+  It finds the white skull from the beak, and on a small figure that region is
+  tiny, so a crown sliver sitting above it falls outside. Where the hex is a
+  clean roster ink, the blob sits where the crown would be, and the tail already
+  reaches that boy, the sliver names him -- 21px is enough. This is
+  `feedback_declined_caps_that_do_print` again, and the pass had every number it
+  needed in its own note before declining.
+- **ONE INSERT AND ONE MERGE CANCELLED IN THE TOTAL AND HID BOTH.**
+  *Round Money Bin* finished at 142 groups, exactly what the pass wrote -- but
+  109 **gained** one (the coin picture's dollar signs, inserted at **g2**, which
+  shifted all thirteen later ids on that page) and 113 **lost** one (the review
+  merged the number plate and the shirt legend into `176-071 BEAGLE BOYS INC.`).
+  A title-level count would have shown 142 = 142 and reported nothing.
+  **Diff group counts PER PAGE against the prep, not per title**, and when a
+  page has moved, match old to new by (text, occurrence) rather than by id --
+  the ids from g2 down are all one out. Nothing was lost here: the merge keeps
+  both strings and the review standardised `INC.` onto all three Beagle Boy
+  legends in the title, but only a per-page diff shows that.
 
 ## Per-volume cap palette
 

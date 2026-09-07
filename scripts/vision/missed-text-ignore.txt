@@ -304,3 +304,25 @@ HELP KEEP AMERICA STRONG
 # LATER! caption on the same page, and containment swallows a short needle. The
 # entry is here as the record of the decision, not because the audit needs it.
 13 131 LA
+
+# Drawn devices, declined as a set by the reviewer 2026-09-07 ("skip the drawn
+# devices for this batch") -- the thirty-seventh batch's ten, across The Money
+# Stairs and The Round Money Bin. Each is a device carrying no readable
+# characters, so by the standing 2026-09-07 ruling a reader could read none of
+# them and none is a group. Strings pasted from each page's visible_text, since
+# the audit normalises both sides and an ignore that merely describes the entry
+# does not match it. Scoped to their pages: every one of these will recur.
+#
+# Not in this list, and deliberately: The Money Stairs 172's four floating
+# dollar signs, which the same review DID box as g10 '$ $ $ $' -- the review
+# boxes dollar signs that hang over a figure, as it did on Some Heir 157, and
+# that capture now holds the glyph rather than an ignore line.
+13 168 dollar signs printed on the stacked banknotes
+13 169 a wordless yellow poster board carrying a spiral swirl
+13 169 a wordless yellow poster board carrying one large drawn dollar sign
+13 169 a drawn musical note inside Donald's greeting balloon
+13 170 a dollar sign printed on the money sack beside Donald in panel 1
+13 170 two green bottles in the medicine cabinet in panel 4 whose labels are drawn as illegible squiggle lines
+13 172 a dollar sign printed on each of the banknotes in the zookeeper's hands in panel 7
+13 172 a long red arrow pointing left, drawn under the word on the yellow hauling sign in panel 8
+13 176 three large red drawn stars bursting around Donald as he falls in panel 4
