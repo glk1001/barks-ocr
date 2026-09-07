@@ -3476,6 +3476,89 @@ The Master Rainmaker           2 of 128   1.6%      1 of  5  20.0%     2 of  4  
   called done. **Count `speaker_reviewed` on both engines before mirroring, every
   time**, and hold the mirror on a title that is short even by one.
 
+### Findings to paste into the next run (2026-09-07, thirty-seventh batch, two of three titles reviewed)
+
+*The Money Stairs* (Vol. 13) and *The Horseradish Story* (Vol. 12) reviewed and
+mirrored, both engines identical on group count, `speaker_reviewed`,
+`identified_by` and the speaker / cap_colour / confidence distributions.
+*The Round Money Bin* is still being reviewed, so it contributes nothing below.
+
+```
+                          real corrections    nephew domain    mediums      highs
+The Money Stairs            1 of  98   1.0%    0 of  1  0.0%   (none)     1 of  97  1.0%
+The Horseradish Story       3 of 255   1.2%    2 of 36  5.6%   1 of  4    2 of 250  0.8%
+    batch so far            4 of 353   1.1%    2 of 37  5.4%   1 of  4    3 of 347  0.9%
+```
+
+The counts above exclude the two groups the review ADDED and then finished
+itself -- *Money Stairs* 172 g10 and *Horseradish* 088 g12 -- which
+`review_findings` reports as `unknown ->` corrections but which correct nothing
+the pass wrote.
+
+- **BOTH READING REVERSALS IN THE BATCH WERE THE SAME MOVE: A DRAWN FEATURE
+  ASSERTED FROM THE 250px MONTAGE AND NEVER CHECKED AT PANEL RESOLUTION.**
+  *Money Stairs* 170 g7, the pass wrote *"a bordered caption box at the top
+  left, not a balloon"* and gave it to `narrator`; at source resolution it is a
+  plain speech balloon with a tail running down to Scrooge, who is drinking from
+  the bottle. *Horseradish* 098 g7, the pass wrote *"the figure wears the white
+  captain's cap with the black band"* and gave it to Scrooge; at source
+  resolution the figure is a nephew in a plain white gob cap with no band, a
+  hair tuft and no whiskers. Both notes name a specific feature as the evidence,
+  and in both the feature is not in the drawing.
+  **The rule: a montage settles who is in frame and roughly where the balloons
+  sit. It does not settle a box border, a cap band, or anything else a note
+  offers as its reason.** If the note is going to name a drawn feature, that
+  feature has to have been seen at panel resolution or better -- and the panel
+  is free, it is already on disk. This is the cheap half of the cost doc's
+  "precision theatre" warning inverted: not an expensive crop propping up a call
+  already believed, but a confident note written on a view that could not carry
+  it. Note also what this does NOT overturn: 170 g7 was never a caption box, so
+  **"a caption box is the narrator" stands untouched**, and *Money Stairs* 174
+  g7 -- a genuine pink caption reading `Scrooge: "..."` -- remains `narrator`.
+- **THE MEDIUM FLAG DISCRIMINATED AGAIN, AND THE NOTE MADE THE FIX A KEYSTROKE.**
+  1 of 4 mediums corrected (25.0%) against 2 of 250 highs (0.8%), a thirtyfold
+  gap, and the one that moved was *Horseradish* 104 g5 -- one of four `YES!`
+  balloons answering Donald from off-panel in a close-up where he is the only
+  figure drawn. The pass could not map any of the four tails, recorded all four
+  as the collective at medium, and wrote into each note *"ONE OF THESE FOUR IS
+  SCROOGE'S and the art does not say which"*. The review named exactly one.
+  **When an ambiguity is N-way and closed, say so in the note and flag the whole
+  set at medium**: it converts an unrecoverable guess into one keystroke.
+- **ONE DIRECT ADDRESS CAN CARRY A WHOLE TITLE WITH NO CAP INK IN IT.**
+  *Horseradish* puts all three boys in identical plain WHITE gob caps for
+  twenty-two pages -- `cap_colour` is null on all 255 groups and **0 cap colours
+  were overturned**. Scrooge names DEWEY once, on 095 p5, sending him to the
+  radio; the radio headphones then identify the same boy on 095 p7, 095 p8 and
+  098 p8. Four named nephew calls in a title with nothing to sample, and all
+  four survived review. **A prop a story hands to one boy and lets him keep is
+  as good as a cap for as long as he keeps it** -- and unlike a cap it does not
+  need a clean print.
+- **WHEN A REVIEW MOVES ONE MEMBER OF A LARGE UNIFORM CLASS, COUNT THE CLASS
+  BEFORE REWRITING THE RULE.** *Horseradish* 097 g3, `SMACKO!`, came back
+  `none -> unknown`. It is the only one of the title's THIRTEEN sound effects
+  moved off `none`, and `SNAP!` and `POP!` in the same panel pair were left
+  alone. Reported to the reviewer as a probable slip rather than absorbed as a
+  distinction between `none` and `unknown`; it is now mirrored onto paddleocr,
+  so it needs undoing on both engines if it was one.
+- **A FILLER PAGE BOUND TO A TITLE REACHES NO QUEUE, AND BACK_MATTER DOES IT
+  TOO.** *Horseradish* spans Vol. 12 083-107, but prep only takes `BODY`: 083 is
+  `FRONT_MATTER` and **106 and 107 are `BACK_MATTER`**, three complete one-page
+  Uncle Scrooge gag strips carrying **37 easyocr groups** between them, grouped
+  by OCR and annotated by nobody. The tell is the mirror's page count against
+  prep's -- `25 page(s)` against `Prepared 22 page(s)` -- and `review_findings`
+  reporting 292 groups where the pass wrote 255. The corpus note for this only
+  mentioned FRONT_MATTER and a single page; check both ends of a title's range.
+- **THE MISSED-TEXT AUDIT CANNOT SEE A DEVICE IT ALREADY HAS.** *Money Stairs*
+  172's four drawn dollar signs were handed back as missed text, the review
+  grouped them as g10 `'$ $ $ $'` -- and the audit still reports them, because a
+  bare glyph normalises to nothing and cannot match the prose entry that raised
+  it. The same shape hides two already-grouped question marks on *Round Money
+  Bin* 112 g8 and 114 g6. **A device finding does not clear itself when the
+  device is boxed**; say so in the hand-back or it will be re-raised every run.
+  And the dollar signs settle the standing question the other way from the
+  drawn-device ruling: **the review boxes dollar signs**, as it did on *Some
+  Heir* 157, while musical notes, pain stars and arrows stay in the ignore list.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
