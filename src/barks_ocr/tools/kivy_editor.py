@@ -1,7 +1,7 @@
 # ruff: noqa: E402
 import copy
 import json
-from collections.abc import Callable
+from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from datetime import datetime
 from io import BytesIO
@@ -2836,16 +2836,48 @@ class EditorApp(App):
         return f"vision: {speaker} ({confidence}), cap {cap}{reviewed}"
 
     @staticmethod
-    def _build_speaker_rows(content: BoxLayout, current: str | None) -> tuple[dict, TextInput]:
-        """Add the roster radio rows to *content*; return the radios and free-text input."""
+    def _build_speaker_rows(
+        content: BoxLayout, current: str | None, story_cast: Iterable[str] = ()
+    ) -> tuple[dict, TextInput]:
+        """Add the roster radio rows to *content*; return the radios and free-text input.
+
+        ``story_cast`` gets a radio of its own, after the global roster and
+        before ``other:``. Without that a story-tagged name could not be picked at all: the
+        free-text box was the only route to it, and that box prepends the
+        prefix. Worse, a group ALREADY stored as such a name opened with no
+        radio ticked and an empty box, because the selection only matched the
+        global roster and the box was only filled for a prefixed value -- so the
+        popup misrepresented what was on disk.
+
+        The stored value is canonicalized before the match, so both
+        ``Goldie O'Gilt`` and a legacy ``other:Goldie O'Gilt`` tick her own
+        radio, while a genuine ``other:the doctor`` still lands in the box.
+
+        Args:
+            content: The popup body to add the rows to.
+            current: The speaker stored on the group, if any.
+            story_cast: The story's extra cast names from its database tags.
+
+        Returns:
+            ``(radios, free_text_input)``, the radios keyed by option name.
+
+        """
         other_text = TextInput(multiline=False, font_size="14sp", size_hint_y=None, height=30)
-        selected = current
-        if isinstance(current, str) and current.startswith(OTHER_PREFIX):
-            other_text.text = current[len(OTHER_PREFIX) :].strip()
+        cast = tuple(story_cast)
+        selected = (
+            normalize_speaker(current, cast) if isinstance(current, str) and current else current
+        )
+        if isinstance(selected, str) and selected.startswith(OTHER_PREFIX):
+            other_text.text = selected[len(OTHER_PREFIX) :].strip()
             selected = SPEAKER_OTHER_OPTION
 
+        names = (*SPEAKER_OPTIONS, *cast, SPEAKER_OTHER_OPTION)
+        # 90 fits the longest roster name; a cast name can be twice that
+        # ("Bombie the Zombie"), and a clipped label is a mis-click waiting to
+        # happen. ~10px per character at this font size.
+        label_width = max(90, *(10 * len(name) for name in names))
         radios: dict[str, CheckBox] = {}
-        for name in (*SPEAKER_OPTIONS, SPEAKER_OTHER_OPTION):
+        for name in names:
             row = BoxLayout(orientation="horizontal", size_hint_y=None, height=30, spacing=8)
             cb = CheckBox(
                 group="speaker_popup", active=(name == selected), size_hint_x=None, width=30
@@ -2856,7 +2888,7 @@ class EditorApp(App):
                 halign="left",
                 valign="middle",
                 size_hint_x=None,
-                width=90,
+                width=label_width,
             )
             lbl.bind(size=lbl.setter("text_size"))
             row.add_widget(cb)
@@ -3007,7 +3039,8 @@ class EditorApp(App):
                 bold=True,
             )
         )
-        radios, other_text = self._build_speaker_rows(content, group.get(SPEAKER_KEY))
+        story_cast = self._story_cast()
+        radios, other_text = self._build_speaker_rows(content, group.get(SPEAKER_KEY), story_cast)
         cap_radios = self._build_cap_colour_row(content, group.get(CAP_COLOUR_KEY))
         evidence = self._build_identified_by_rows(content, group.get(IDENTIFIED_BY_KEY))
 
@@ -3046,8 +3079,10 @@ class EditorApp(App):
             # Tall enough that the roster rows do not squeeze the vision-note
             # view, which is the only child that gives up space (size_hint_y=1).
             # Every roster entry added costs 36px here (row plus spacing), and
-            # the two identified_by rows cost 72px between them.
-            size=(560, 1020),
+            # the two identified_by rows cost 72px between them -- so the
+            # story's own cast, which gets a row each, is paid for the same way.
+            # The corpus tops out at four (Voodoo Hoodoo), most titles have none.
+            size=(560, 1020 + 36 * len(story_cast)),
             auto_dismiss=False,
         )
 
