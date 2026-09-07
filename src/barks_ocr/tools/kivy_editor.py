@@ -8,7 +8,7 @@ from io import BytesIO
 from pathlib import Path
 
 import typer
-from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE, STR_TITLE_TO_ENUM
+from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE, STR_TITLE_TO_ENUM, Titles
 from barks_fantagraphics.comic_book import get_page_str
 from barks_fantagraphics.comic_book_info import ONE_PAGERS
 from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT, PNG_FILE_EXT, PageType
@@ -43,6 +43,7 @@ from barks_ocr.utils.group_checks import (
     DISMISSABLE_PREDICATES,
     panels_with_no_groups,
 )
+from barks_ocr.utils.story_cast import story_characters
 from barks_ocr.utils.vision_schema import (
     CAP_COLOUR_KEY,
     CAP_COLOUR_OPTIONS,
@@ -810,6 +811,7 @@ class EditorApp(App):
         super().__init__()
 
         self._comics_database = ComicsDatabase()
+        self._story_casts: dict[Titles, frozenset[str]] = {}
         self._queue = queue
         self._queue_index = queue_index
 
@@ -3072,7 +3074,9 @@ class EditorApp(App):
             if not group.get(SPEAKER_KEY):
                 error_label.text = "Nothing to confirm — the vision pass never set a speaker here."
                 return
-            if self._speaker_widgets_differ(group, radios, other_text, cap_radios):
+            if self._speaker_widgets_differ(
+                group, radios, other_text, cap_radios, self._story_cast()
+            ):
                 error_label.text = "Selection changed — press Save to record it."
                 return
             # Evidence is deliberately NOT part of "as is". `speaker` and
@@ -3100,6 +3104,25 @@ class EditorApp(App):
         button_layout.add_widget(cancel_btn)
         content.add_widget(button_layout)
         popup.open()
+
+    def _story_cast(self) -> frozenset[str]:
+        """Return the current story's extra cast names, cached per title.
+
+        The speaker radios offer the GLOBAL roster only, so a story-tagged name
+        like ``Goldie O'Gilt`` can only be typed into the free-text box -- which
+        prepends ``other:``. Handing the cast to ``normalize_speaker`` is what
+        unwraps it again, the same way a typed ``other:Donald`` is unwrapped.
+        Without it one story ends up with two speakers for one character, which
+        is what happened on Back to the Klondike 073 g1.
+        """
+        title = getattr(self, "_title", None)
+        if title is None:
+            return frozenset()
+        cached = self._story_casts.get(title)
+        if cached is None:
+            cached = frozenset(story_characters(title))
+            self._story_casts[title] = cached
+        return cached
 
     def _apply_speaker(
         self,
@@ -3138,12 +3161,14 @@ class EditorApp(App):
         group = pane.json_group()
         if group is None:
             return ""
-        problem = self._evidence_error(group, normalize_speaker(speaker), identified_by)
+        problem = self._evidence_error(
+            group, normalize_speaker(speaker, self._story_cast()), identified_by
+        )
         if problem:
             return problem
         # Canonicalize before storing: the free-text box can produce doubled
         # spaces, and a roster name typed behind "other:" is just that name.
-        speaker = normalize_speaker(speaker)
+        speaker = normalize_speaker(speaker, self._story_cast())
         was_speaker = group.get(SPEAKER_KEY)
         was_cap = group.get(CAP_COLOUR_KEY)
         # Only on a real change, and only the first time: a second edit of an
@@ -3151,7 +3176,7 @@ class EditorApp(App):
         # with the first reviewer's.
         if (
             was_speaker
-            and normalize_speaker(was_speaker) != speaker
+            and normalize_speaker(was_speaker, self._story_cast()) != speaker
             and SPEAKER_WAS_KEY not in group
         ):
             group[SPEAKER_WAS_KEY] = was_speaker
@@ -3235,7 +3260,11 @@ class EditorApp(App):
 
     @staticmethod
     def _speaker_widgets_differ(
-        group: dict, radios: dict, other_text: TextInput, cap_radios: dict
+        group: dict,
+        radios: dict,
+        other_text: TextInput,
+        cap_radios: dict,
+        story_cast: frozenset[str] = frozenset(),
     ) -> bool:
         """Return whether the popup's selection has moved off the stored call.
 
@@ -3249,6 +3278,9 @@ class EditorApp(App):
             radios: The roster radio buttons, keyed by option name.
             other_text: The free-text input beside the ``other:`` row.
             cap_radios: The cap-colour radio buttons, keyed by colour.
+            story_cast: The story's extra cast names, so a story-tagged name
+                typed into the free-text box compares equal to the same name
+                stored bare.
 
         Returns:
             ``True`` if the widgets no longer show what is stored.
@@ -3260,7 +3292,7 @@ class EditorApp(App):
         # A cleared free-text box is not a rename, just an empty box.
         if picked is not None and picked != OTHER_PREFIX:
             stored = group.get(SPEAKER_KEY) or ""
-            if normalize_speaker(picked) != normalize_speaker(stored):
+            if normalize_speaker(picked, story_cast) != normalize_speaker(stored, story_cast):
                 return True
         picked_cap = next((c for c, cb in cap_radios.items() if cb.active), CAP_COLOUR_NONE)
         return picked_cap != (group.get(CAP_COLOUR_KEY) or CAP_COLOUR_NONE)

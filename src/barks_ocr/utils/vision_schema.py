@@ -708,7 +708,7 @@ def _normalize_vocab_value(value: str, canonical: Mapping[str, str]) -> str:
     return canonical.get(name.casefold(), OTHER_PREFIX + name)
 
 
-def normalize_speaker(speaker: str) -> str:
+def normalize_speaker(speaker: str, story_characters: Iterable[str] = ()) -> str:
     """Return the canonical stored form of *speaker*.
 
     Free-form names are where drift gets in. ``"other: Argus  McFiendy"`` and
@@ -717,14 +717,31 @@ def normalize_speaker(speaker: str) -> str:
     whitespace is collapsed. A roster name written behind the prefix
     (``"other:Donald"``) is unwrapped to the roster entry it already is.
 
+    ``story_characters`` extends that unwrapping to the story's own database
+    cast, and without it the same drift gets in through the side door. The
+    editor offers radio buttons for the GLOBAL roster only, so a story-tagged
+    name has to be typed into the free-text box -- which prepends the prefix --
+    and nothing then unwraps it. Measured on *Back to the Klondike* 2026-09-07:
+    ``Goldie O'Gilt`` is a valid speaker for that story and 70 groups carried
+    her, while a split group came back as ``other:Goldie O'Gilt`` and validated
+    cleanly, because :func:`is_valid_speaker` already consults the cast but this
+    did not. Two speakers, one character, and no closed-set check on the second.
+
     Args:
         speaker: The speaker value as written.
+        story_characters: The story's extra cast names, from its database
+            character tags -- the same list :func:`is_valid_speaker` accepts.
+            Callers that know which story they are in should pass it; the
+            default keeps the roster-only behaviour for those that do not.
 
     Returns:
         The value to store. Unchanged if it is already canonical.
 
     """
-    return _normalize_vocab_value(speaker, _ROSTER_BY_CASEFOLD)
+    canonical = _ROSTER_BY_CASEFOLD
+    if story_characters:
+        canonical = canonical | {name.casefold(): name for name in story_characters}
+    return _normalize_vocab_value(speaker, canonical)
 
 
 def normalize_setting(setting: str) -> str:

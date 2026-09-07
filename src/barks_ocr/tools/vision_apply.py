@@ -41,7 +41,7 @@ it -- the pilot, for instance, predates page capture entirely.
 """
 
 import json
-from collections.abc import Callable
+from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -708,18 +708,30 @@ def _normalize_results(results: list[tuple[str, dict]]) -> int:
     Done before validation so the value that is checked is the value that gets
     stored — otherwise a model writing ``"other: Argus"`` for a character
     already recorded as ``"other:Argus"`` would quietly split it in two.
+
+    The story's own cast is looked up per title and cached, so ``"other:Goldie
+    O'Gilt"`` unwraps to the roster name the story actually has, exactly as
+    ``"other:Donald"`` does. The title is read defensively: this runs before
+    validation, so a result with a missing or unknown title still normalizes
+    against the global roster rather than raising here.
     """
     changed = 0
+    casts: dict[str, frozenset[str]] = {}
     for _page, result in results:
+        title_str = result.get(RESULT_TITLE_KEY)
+        if isinstance(title_str, str) and title_str not in casts:
+            title = STR_TITLE_TO_ENUM.get(title_str)
+            casts[title_str] = frozenset(story_characters(title)) if title else frozenset()
+        cast = casts.get(title_str) if isinstance(title_str, str) else frozenset()
         for entry in result.get(RESULT_GROUPS_KEY, {}).values():
             speaker = entry.get("speaker")
             if not isinstance(speaker, str):
                 continue  # `_check_speaker` reports the type error.
-            canonical = normalize_speaker(speaker)
+            canonical = normalize_speaker(speaker, cast or ())
             if canonical != speaker:
                 entry["speaker"] = canonical
                 changed += 1
-        changed += _normalize_capture(result.get(RESULT_CAPTURE_KEY) or {})
+        changed += _normalize_capture(result.get(RESULT_CAPTURE_KEY) or {}, cast or ())
     return changed
 
 
@@ -735,9 +747,17 @@ def _normalize_list_in_place(values: Any, canonicalize: Callable[[str], str]) ->
     return changed
 
 
-def _normalize_capture(capture: dict) -> int:
-    """Canonicalize one page's capture record in place. Returns how many changed."""
-    changed = _normalize_list_in_place(capture.get(CHARACTERS_KEY), normalize_speaker)
+def _normalize_capture(capture: dict, story_characters_: Iterable[str] = ()) -> int:
+    """Canonicalize one page's capture record in place. Returns how many changed.
+
+    ``characters`` holds speaker names, so it gets the story's cast for the same
+    reason the ``speaker`` field does: a capture listing ``other:Goldie O'Gilt``
+    beside groups saying ``Goldie O'Gilt`` is the same character twice.
+    """
+    cast = tuple(story_characters_)
+    changed = _normalize_list_in_place(
+        capture.get(CHARACTERS_KEY), lambda name: normalize_speaker(name, cast)
+    )
 
     setting = capture.get(SETTING_KEY)
     if isinstance(setting, str) and (canonical := normalize_setting(setting)) != setting:
