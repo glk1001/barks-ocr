@@ -291,3 +291,16 @@ HELP KEEP AMERICA STRONG
 13 151 two drawn red pain stars beside Donald's head as he bites the coin
 13 162 drawn red hearts floating over Donald as he daydreams
 13 163 a drawn red star beside Donald's head when the monster hits him
+
+# Worm Weary 131 panel 3, declined by the reviewer 2026-09-07 ("skip the LA --
+# it's just too truncated"). A red sign board above the GYRO GEARLOOSE gate,
+# almost certainly the top of a LABORATORY sign, of which the panel edge leaves
+# only the two letters. Real lettering rather than a drawn device, so it is not
+# covered by the same day's device ruling -- but two letters carry no readable
+# content and there is nothing for a box to hold. Scoped to its page: LA is an
+# ordinary fragment that will turn up again elsewhere.
+#
+# Note that the audit cannot raise this one in any case: LA is contained in the
+# LATER! caption on the same page, and containment swallows a short needle. The
+# entry is here as the record of the decision, not because the audit needs it.
+13 131 LA

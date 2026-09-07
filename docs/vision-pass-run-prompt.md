@@ -3459,10 +3459,15 @@ The Master Rainmaker           2 of 128   1.6%      1 of  5  20.0%     2 of  4  
   entry is matched against -- but expect the ignore list, not a group, and say so
   in the hand-back so the reviewer can decline the set in one word rather than
   one at a time. This retires the error class that ran two batches.
-  One item is NOT covered and is still open: 131's `LA` sign fragment, which is
-  real lettering rather than a device. `audit_missed_text.py` cannot raise it --
-  `LA` is contained in the `LATER!` caption on the same page -- so it exists only
-  in the hand-back and needs a ruling of its own.
+  The ninth item was ruled on separately the same day and went the same way:
+  131's `LA`, the two letters the panel edge leaves of a LABORATORY sign, is real
+  lettering rather than a device but "just too truncated" to be worth a box. So
+  the second half of the line is **how much of it is left** -- a fragment too
+  short to read is no more a group than a device is. Note it could never have
+  been raised by the audit anyway (`LA` is contained in the same page's `LATER!`
+  caption, and containment swallows a short needle), so it existed only in the
+  hand-back; the ignore entry is the record of the decision rather than
+  something the audit needs.
 - **AN INSERT STRANDED TWO GROUPS, NOT ONE.** *Some Heir* 157 gained the dollar
   signs at g9 and every later id shifted by one; g8 and g13 came back unreviewed
   on the first pass and were caught by counting `speaker_reviewed` before
