@@ -3366,6 +3366,96 @@ My Lucky Valentine          6 of 130   4.6%       0 of 1       6 of 129  4.7%
   change in the title is that retype, and the engine diff, group audit and
   mirror verification are all clean.
 
+
+### Findings to paste into the next run (2026-09-07, thirty-sixth batch, five of six titles reviewed and mirrored)
+
+*The Easter Election*, *The Talking Dog*, *Worm Weary*, *Much Ado about Quackly
+Hall* and *The Master Rainmaker* (50pp, 616 groups) reviewed and mirrored, both
+engines identical on every mirrored field. *Some Heir Over the Rainbow* is held
+at 127 of 129 -- see the last bullet.
+
+```
+                              real corrections      nephew domain      mediums        highs
+The Easter Election            4 of 132   3.0%      2 of 17  11.8%     1 of  1      3 of 130  2.3%
+The Talking Dog                2 of 127   1.6%      2 of 25   8.0%     0 of  3      2 of 124  1.6%
+Worm Weary                     3 of 106   2.8%      3 of  9  33.3%     0 of  1      3 of 105  2.9%
+Much Ado about Quackly Hall   33 of 123  26.8%     32 of 42  76.2%     1 of  6     32 of 117 27.4%
+The Master Rainmaker           2 of 128   1.6%      1 of  5  20.0%     2 of  4      0 of 124  0.0%
+    batch                     44 of 616   7.1%     40 of 98  40.8%     4 of 15     40 of 600  6.7%
+    batch without Quackly     11 of 493   2.2%      8 of 56  14.3%     3 of  9      8 of 483  1.7%
+```
+
+- **A COSTUME IS A CAP, AND REFUSING TO READ ONE COST 30 NAMES IN A SINGLE
+  TITLE.** *Quackly Hall* dresses the three boys in a pirate tricorn, a red
+  bandana with an eyepatch and a gold paper crown, and keeps them in costume for
+  all ten pages. The pass found that the pirate's blue cap shows as a band inside
+  the hat brim, named him Dewey wherever it printed -- and then declined every
+  other boy on the grounds that the bandana and the crown "cover the crowns".
+  The review named all three, on a mapping that is fixed for the whole story:
+
+  | costume | boy | cap_colour the review recorded |
+  |---|---|---|
+  | red bandana and eyepatch | Huey | `red` |
+  | black pirate tricorn | Dewey | `blue` |
+  | gold paper crown | Louie | `null` |
+
+  It holds on every sole-figure panel in the title: 140 p1 and 145 p1/p4 are the
+  bandana boy alone and all three came back Huey; 140 p4 and 141 p2 are the crown
+  boy alone and both came back Louie. **The bandana is treated as showing the red
+  ink** -- the review put `cap_colour: red` on it -- and the crown shows nothing,
+  so Louie is the elimination. This is the *Trick or Treat* precedent (devil
+  hood / witch hat / ghost sheet, same volume) and the pass had it in front of it
+  and did not apply it. **Fix a costume mapping from the sole-figure panels
+  before page 1, exactly as you would fix a cap palette.**
+- **AND THE TELL IS IN THE PASS'S OWN PROSE AGAIN.** Six of the thirty notes say
+  some version of *"the bandana and the crown hide their wearers' crowns
+  entirely"*. Having written the pirate/blue link down, the pass never asked
+  whether the other two costumes were equally fixed. If you find yourself
+  identifying one boy by his costume and declining the other two, you have
+  already found the convention -- finish it.
+- **A MEASURED TIP BEATS A DIALOGUE CHAIN, AND THIS TIME THE CHAIN WON AND WAS
+  WRONG.** *The Easter Election* 114 g8: the tip was measured at local x747
+  against a head span beginning at x746 -- literally on the green-capped boy --
+  and the pass then argued past it, because the next panel has the green-capped
+  boy answering that very line and "so the green boy did not say it". The review
+  restored Louie. A character contradicting or answering his own previous line is
+  ordinary Barks; it is not evidence about a tail. **Never use the next panel to
+  overrule a tip you have already measured onto a head.**
+- **AN `other:` ROLE CAN BE A NEPHEW IN COSTUME.** 115 g9, the bearded delivery
+  man in the blue uniform who brings Gladstone the perfume, came back `nephews` --
+  the boys sent the parcel and one of them delivered it. The pass read the
+  uniform as a role and stopped. Where a story has the boys running a scheme,
+  check whether a walk-on is one of them before opening an `other:`.
+- **THE MEDIUM FLAG DISCRIMINATED THIS BATCH, for the first time in four.**
+  4 of 15 mediums corrected against 40 of 600 highs; strip Quackly Hall out and
+  it is 3 of 9 (33.3%) against 8 of 483 (1.7%), a twentyfold difference. Both
+  *Master Rainmaker* corrections were mediums and neither of its 124 highs moved.
+  Keep writing them.
+- **THREE OVER-NAMINGS, ALL THE SAME MOVE.** 138 g10, 135 g9 and 167 g14 each
+  read a cap sliver and named a boy the tail did not reach. 167 g14 is the
+  muddy `#2a9f8f` H171.8 at S0.74 -- below the S0.75 floor with no clean cool
+  companion in the panel, which the corpus already says names nobody. The rule
+  held; the pass named him anyway.
+- **ALL 18 TYPE CORRECTIONS CONFIRMED**, and `vision-corrections` with no
+  `--title` reports *Nothing outstanding across 460 title(s)*. The productive
+  ones were the caption boxes stored as dialogue (5 across the batch), a squawk
+  and a yell of pain stored as sound effects, a whale's hiccup likewise, and a
+  voice arriving out of a telephone receiver stored as a thought.
+- **TWO OF NINE MISSED-TEXT ITEMS WERE WORKED; SIX DRAWN DEVICES WERE NOT.**
+  The review grouped the two real signs -- 111's cut-off fascia (as `GROCERY`,
+  correcting the pass's `CERY`) and 157's dollar signs -- and left the musical
+  notes, quaver, seeing-stars, pain stars, hearts and anger star ungrouped and
+  un-ignore-listed. That is the second batch running where drawn devices are
+  handed back and not disposed of. **Ask for a standing ruling on drawn devices
+  rather than queueing them one at a time.** Note also that 131's `LA` sign
+  fragment is invisible to `audit_missed_text.py` -- `LA` is contained in the
+  `LATER!` caption on the same page -- so it only exists in the hand-back.
+- **AN INSERT STRANDED TWO GROUPS, NOT ONE.** *Some Heir* 157 gained the dollar
+  signs at g9 and every later id shifted by one; g8 and g13 came back
+  unreviewed. **Count `speaker_reviewed` on both engines before mirroring**, and
+  do not mirror a title that is 127 of 129 -- this one is committed unmirrored
+  and waiting on those two.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -4287,6 +4377,31 @@ collectives are absence of the convention rather than a declined reading.
 The title also uses an **offset fan** on 107 p6: three balloons, three boys,
 and all three tails sitting about 150px LEFT of their own boy with the leftmost
 landing on bare brickwork.
+
+**Vol. 13's *Much Ado about Quackly Hall* is the volume's second costume title,
+and the mapping is fixed for all ten pages**: red bandana and eyepatch = Huey
+(`cap_colour: red` -- the bandana counts as the ink), black pirate tricorn =
+Dewey (`blue`, and his cap band shows inside the brim), gold paper crown = Louie
+(`null`, named by elimination). Read it off the sole-figure panels -- 140 p1,
+145 p1 and 145 p4 for the bandana; 140 p4 and 141 p2 for the crown -- before
+page 1. Two decoys run the whole title: the bandana is the same `#e61b1f` as the
+cap red, and the movie wind machine on 144-145 is painted in it too, in blobs up
+to 42735px.
+
+**Two more Vol. 13 titles paint a major prop in the cap red**, which makes the
+red band unusable for whole pages: *Worm Weary*'s board fence and stage curtain,
+and *The Master Rainmaker*'s aeroplane (23380px of `#e61b1f` filling the frame on
+158 and 161). In both, Donald's own hat is the volume's Dewey blue at `#00a5d7`
+and up to 14809px -- larger than any cap in either story -- so size the head
+before naming a blue cap.
+
+**Vol. 13's cap inks held everywhere they printed clean** across this batch:
+red `#e61b1f`/`#e41a20`, blue `#00a5d7`/`#04a4d5`, green `#4da33e` H111. The
+green again lands in `leafgrn` and never in capscan's `green` band; and a cool
+sliver at H171-180 is the BLUE, not the green -- *The Talking Dog* 120 p3
+(`#2ea3a3` H180.0) and *The Master Rainmaker* 167 p8 (`#2a9f8f` H171.8) are both
+that shape, the first confirmed by review and the second corrected for being
+named at all at S0.74.
 
 **Vol. 12's *Back to the Klondike* keeps the volume's black cap with a coloured
 side band, but at 30-80px** -- capscan at a 25px floor finds the slivers mixed
