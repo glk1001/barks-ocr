@@ -1165,27 +1165,45 @@ def _insert_added_groups(
     additions: list[tuple[dict, list[list[int]]]],
     *,
     dry_run: bool,
-) -> int:
+) -> tuple[int, dict[str, str]]:
     """Append this page's additions to one engine and settle the numbering.
 
     Appended at ``max(id) + 1`` and then renumbered once, here, while nothing
     yet refers to an id. Doing it later is what invalidated stored ids on
     2026-08-08; see ``docs/missed-text.md``.
+
+    Returns the number added and the ``old id -> new id`` map for the groups
+    that were ALREADY on the page. The renumber sorts the new group into
+    reading order, so every id at or after it shifts up by one, and a
+    ``result.json`` written against the old numbering no longer addresses the
+    groups it means. The map is what lets the caller re-address it -- without
+    it every annotation from the insertion point lands one group early and one
+    group's ``ai_text`` is destroyed outright. Measured on *The Crazy Quiz
+    Show* 137 and again on *Bee Bumbles* 180.
     """
     if not additions:
-        return 0
+        return 0, {}
     json_groups = page_group.speech_page_json.setdefault("groups", {})
     before = json.dumps(page_group.speech_page_json, indent=4)
+
+    # Identity, not id string: `renumber_groups` rekeys the same dict objects
+    # rather than copying them, so this survives the sort intact.
+    was = {id(group): gid for gid, group in json_groups.items()}
 
     for entry, corners in additions:
         new_id = str(max((int(k) for k in json_groups), default=-1) + 1)
         json_groups[new_id] = _added_group(entry, corners)
     page_group.renumber_groups()
 
+    # `renumber_groups` rebinds the dict, so re-read it rather than reusing the
+    # local bound before the sort.
+    renumbered = page_group.speech_page_json.get("groups", {})
+    remap = {was[id(group)]: gid for gid, group in renumbered.items() if id(group) in was}
+
     if not dry_run:
         ocr_file = page_group.ocr_prelim_groups_json_file
         _groups_written(page_group, ocr_file, before)
-    return len(additions)
+    return len(additions), remap
 
 
 def _add_missing_groups(
@@ -1193,20 +1211,49 @@ def _add_missing_groups(
     page_groups: dict[str, Any],
     *,
     dry_run: bool,
-) -> None:
+) -> dict[str, dict[str, str]]:
     """Add every page's new groups, to both engines, and say how many.
 
     Runs before the annotation pass so the ids are settled before anything reads
     one, and covers both engines because the mirror can copy fields onto a group
     but cannot bring one into existence.
+
+    Returns the per-page ``old id -> new id`` map for the engine being annotated,
+    for `_remap_result_ids` to apply to the stored results.
     """
     added = 0
+    remaps: dict[str, dict[str, str]] = {}
     for page, entries in resolved.additions.items():
-        added += _insert_added_groups(page_groups[page], entries, dry_run=dry_run)
+        count, remap = _insert_added_groups(page_groups[page], entries, dry_run=dry_run)
+        added += count
+        if remap:
+            remaps[page] = remap
+        # The other engine is renumbered the same way, but no result.json is
+        # keyed against it -- the mirror matches on text, so it needs no map.
         _insert_added_groups(resolved.other_page_groups[page], entries, dry_run=dry_run)
     if added:
         verb = "Would add" if dry_run else "Added"
         print(f"{verb} {added} group(s) for lettering neither engine had grouped.")
+    return remaps
+
+
+def _remap_result_ids(
+    results: list[tuple[str, dict]],
+    remaps: dict[str, dict[str, str]],
+) -> None:
+    """Rewrite each result's group ids to the numbering the additions produced.
+
+    A ``result.json`` is written against the ids the prep handed out. Inserting a
+    group renumbers the page, so those ids now address the wrong groups. Doing
+    this once, here, keeps every reader downstream -- the annotation pass and the
+    queue builders alike -- correct without any of them knowing that ids moved.
+    """
+    for page, result in results:
+        remap = remaps.get(page)
+        if not remap:
+            continue
+        groups = result.get(RESULT_GROUPS_KEY, {})
+        result[RESULT_GROUPS_KEY] = {remap.get(gid, gid): entry for gid, entry in groups.items()}
 
 
 def _apply_page(
@@ -1624,7 +1671,7 @@ def main(  # noqa: PLR0913
     if errors:
         _report_and_exit(errors)
 
-    _add_missing_groups(resolved, page_groups, dry_run=dry_run)
+    _remap_result_ids(results, _add_missing_groups(resolved, page_groups, dry_run=dry_run))
 
     text_lines: list[str] = []
     speaker_lines: list[str] = []
