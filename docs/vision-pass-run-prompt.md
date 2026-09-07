@@ -4610,6 +4610,50 @@ in Vol. 11 072. The corpus is split on this (31 Vol. 13 narration groups carry
 `[i]`, 46 do not), so it is flagged for the reviewer rather than settled here.
 
 
+Vol. 15, from *Fix-up Mix-up* 036 p1 (the splash -- the three boys in a row
+below Donald's ladder), read 2026-09-07. The volume's cap is a **black crown
+carrying one broad coloured band** down the front and side:
+
+| | |
+|---|---|
+| red (Huey) | `#e61b1f` H358.8 S0.88 |
+| blue (Dewey) | `#08a4d4` H194.1 S0.96 |
+| green (Louie) | `#3f8164` H153.6 S0.51 |
+
+**The green is MUTED and the foliage is not.** `#3f8164` sits at S0.51 against
+this volume's `#009e49` H147.7 **S1.00** grass, hedge and shop-door green, and
+the two are only about six degrees apart in hue. Saturation is the
+discriminator, exactly as in Vol. 13; a `green`-band blob count says nothing on
+its own. Re-probed on a second panel the cap green came back `#319f60` H155.5,
+so the band runs H153-156.
+
+**But two of the volume's three 1953 titles print no cap at all**, and that is
+the thing to establish before page 1 rather than after:
+
+| | |
+|---|---|
+| *Wispy Willie* | the boys are **bare-headed** for all ten pages -- white skull, hair tuft, no cap (025 p8, 023 p5 at source resolution) |
+| *The Hammy Camel* | **bare-headed** for all ten pages (027 p4, 034 p8) |
+| *Fix-up Mix-up* | black crown with the coloured band, readable whenever the crown faces the reader |
+
+So a `capscan` zero on a Vol. 15 title is very often absence of the convention,
+not a declined reading -- but *Fix-up Mix-up* proves it is per title and not per
+volume, and it yielded **nine named nephews in 106 groups**. Read one panel of
+the boys at source resolution before assuming either way.
+
+**Donald wears the `#00a5d7` sailor cap through all three titles**, and in
+*Fix-up Mix-up* it is the largest blue in almost every panel -- 2,000-12,400px
+against a nephew band of 300-1,200px. Size the head before reading a blue blob
+as Dewey's band. His **red bow tie** is the matching trap in the red band, at
+400-2,000px, and it sits BELOW the beak where a band sits above the crown.
+
+**Three decoys that are not caps and were each measured on a nephew's own body:**
+a blue jug and a green bundle of tule roots the boys CARRY on *Wispy Willie*
+022 p6 (`#06a5d5` and `#049c48`, ~570px each, at chest height); a red-and-white
+striped BALL in the wagon on *Fix-up Mix-up* 038 p1; and blue MARBLES on the
+floor of *Wispy Willie* 023 p5. All four sit where a census expects a cap and
+none is on a head.
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
