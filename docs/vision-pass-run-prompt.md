@@ -3621,23 +3621,29 @@ read its 75% as three groups, not as a rate.
   both strings and the review standardised `INC.` onto all three Beagle Boy
   legends in the title, but only a per-page diff shows that.
 
-### Findings to paste into the next run (2026-09-07, thirty-eighth batch, three of four titles reviewed)
+### Findings to paste into the next run (2026-09-07, thirty-eighth batch, all four titles reviewed)
 
-*Bee Bumbles* (Vol. 13), *Wispy Willie* and *The Hammy Camel* (Vol. 15)
-reviewed. *Fix-up Mix-up* was passed but not yet reviewed, and was re-read
-mid-batch on the strength of these findings.
+*Bee Bumbles* (Vol. 13), *Wispy Willie*, *The Hammy Camel* and *Fix-up
+Mix-up* (Vol. 15), all four reviewed and mirrored, every mirror clean on
+group count, `speaker_reviewed`, `identified_by` and the three distributions.
 
 ```
-                    real corrections    under-naming    highs
-Bee Bumbles        10 of 126   7.9%     6 of 10        10 of 124  8.1%
-Wispy Willie       18 of 137  13.1%     1 of 18        17 of 136 12.5%
-The Hammy Camel    14 of 124  11.3%    12 of 14        14 of 123 11.4%
-    batch          42 of 387  10.9%    19 of 42
+                    real corrections   under-naming   over-naming        highs
+Bee Bumbles        10 of 126   7.9%      6 of 10          -        10 of 124  8.1%
+Wispy Willie       18 of 137  13.1%      1 of 18          -        17 of 136 12.5%
+The Hammy Camel    14 of 124  11.3%     12 of 14          -        14 of 123 11.4%
+Fix-up Mix-up      12 of 106  11.3%      3 of 12       8 of 12     10 of 104  9.6%
+    batch          54 of 493  11.0%     22 of 54       8 of 54     51 of 487 10.5%
 ```
 
-**10.9% against the thirty-seventh batch's 1.6%, and 45% of every correction
-is one move.** This is the worst batch on record and it is not a spread of
-unrelated slips.
+**11.0% against the thirty-seventh batch's 1.6%.** The worst batch on record,
+and it is two opposite errors made in sequence, not a spread of unrelated
+slips: under-naming from a false premise on the first three titles, then
+over-naming on the fourth after that feedback arrived.
+
+**Every medium in the batch was corrected -- 3 of 3 -- against 51 of 487
+highs (10.5%).** Third batch running. The flag is doing more work than any
+other single signal available to the pass.
 
 - **THE ERROR IS A TITLE-WIDE PREMISE BUILT FROM A TWO-PANEL SAMPLE, AND IT
   PROPAGATES INTO EVERY NOTE IN THE DOMAIN.** The pass read two panels of
@@ -3684,15 +3690,29 @@ unrelated slips.
   HIGH with the doubt written into its own note (*"`YEAH!` reads as a reply"*)
   and came back `nephews`. **If the note contains the objection, the call is
   not high.** Writing the doubt down is not a substitute for flagging it.
-- **A RE-READ RECOVERS MOST OF IT, AND IT IS CHEAP.** *Fix-up Mix-up* was
-  re-read before review on the strength of the above: 5 of its 13 collectives
-  turned out to carry a readable band on the boy the tail reaches, taking it
-  from 9 named to 14 in about ten images. The eight that survived are genuine
-  -- a night silhouette, two probes too weak to call, four where the tail
-  reaches a boy whose crown is turned away, and one balloon that is three
-  lobes over three boys. **When a review shows under-naming on one title of a
-  batch, re-read the unreviewed ones before handing them over** rather than
-  letting the same premise cost another twelve corrections.
+- **THE CORRECTION FOR UNDER-NAMING OVERSHOT, AND THE FOURTH TITLE PAID FOR
+  IT. THIS IS THE MOST IMPORTANT LINE IN THIS SECTION.** *Fix-up Mix-up* was
+  re-read before review on the strength of the three findings above: 5 of its
+  13 collectives were named, taking it from 9 named to 14 in about ten images.
+  **Four of those five were wrong.** The review put the title back to 9 named
+  and 13 collectives -- 8 of its 12 corrections are `a name -> nephews`, and
+  it is the only title of the batch where review NET-REDUCED naming.
+  What makes it worth writing down is that the pass had **already recorded the
+  reason each one was unsafe, in the note, and named anyway**: 038 g9 says
+  *"about 120px clear of the GREEN boy's head"*, 040 g0 says *"about 55px
+  clear"*, 038 g3 says the tail is *"the one scallop that extends well below
+  its neighbours"* -- i.e. not certainly a tail at all. Three measurements
+  written down and three names given against them.
+  **A tail tip that stops in open space above a crown is not a tail landing on
+  that boy, however clean his band is.** The band tells you who a figure IS;
+  it does not make an ambiguous tip unambiguous. And note the shape of the
+  mistake: a correction arriving from review is a correction to ONE error
+  class, not a licence to lower the bar generally. The right response to
+  "you under-named" is to re-examine the DECLINES whose evidence was never
+  measured -- not to promote the ones already measured and found short.
+  The three genuine under-namings the review did find here (036 g6, 037 g12,
+  038 g1) were all groups where the pass had recorded the crown as turned away
+  or the probe as too weak, which is the opposite situation.
 - **TWO REVIEW ADDS, AND ONE OF THEM SHOWS THE COPY IN RESIDUE TRAP INTACT.**
   *Bee Bumbles* 181 gained `GROCERY` -- the reviewer's resolution of the
   truncated `GROC` the pass handed back -- and 180 gained a group whose box
