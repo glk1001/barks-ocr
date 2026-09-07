@@ -3367,12 +3367,15 @@ My Lucky Valentine          6 of 130   4.6%       0 of 1       6 of 129  4.7%
   mirror verification are all clean.
 
 
-### Findings to paste into the next run (2026-09-07, thirty-sixth batch, five of six titles reviewed and mirrored)
+### Findings to paste into the next run (2026-09-07, thirty-sixth batch, all six titles reviewed and mirrored)
 
 *The Easter Election*, *The Talking Dog*, *Worm Weary*, *Much Ado about Quackly
-Hall* and *The Master Rainmaker* (50pp, 616 groups) reviewed and mirrored, both
-engines identical on every mirrored field. *Some Heir Over the Rainbow* is held
-at 127 of 129 -- see the last bullet.
+Hall*, *Some Heir Over the Rainbow* and *The Master Rainmaker* (60pp, 745
+groups) reviewed and mirrored, both engines identical on every mirrored field,
+and `closeout.sh --stage review` clean on all six. The correction table below
+covers the five titles reviewed in the first pass of the hand-back; *Some Heir*
+closed a day later at 129 of 129 with its two stragglers confirmed unchanged, so
+it contributes no corrections.
 
 ```
                               real corrections      nephew domain      mediums        highs
@@ -3441,20 +3444,32 @@ The Master Rainmaker           2 of 128   1.6%      1 of  5  20.0%     2 of  4  
   ones were the caption boxes stored as dialogue (5 across the batch), a squawk
   and a yell of pain stored as sound effects, a whale's hiccup likewise, and a
   voice arriving out of a telephone receiver stored as a thought.
-- **TWO OF NINE MISSED-TEXT ITEMS WERE WORKED; SIX DRAWN DEVICES WERE NOT.**
-  The review grouped the two real signs -- 111's cut-off fascia (as `GROCERY`,
-  correcting the pass's `CERY`) and 157's dollar signs -- and left the musical
-  notes, quaver, seeing-stars, pain stars, hearts and anger star ungrouped and
-  un-ignore-listed. That is the second batch running where drawn devices are
-  handed back and not disposed of. **Ask for a standing ruling on drawn devices
-  rather than queueing them one at a time.** Note also that 131's `LA` sign
-  fragment is invisible to `audit_missed_text.py` -- `LA` is contained in the
-  `LATER!` caption on the same page -- so it only exists in the hand-back.
+- **THE STANDING RULING ON DRAWN DEVICES, GIVEN 2026-09-07: A DEVICE IS NOT A
+  GROUP.** Nine missed-text items were handed back; the review grouped the two
+  that carry readable text -- 111's cut-off fascia (as `GROCERY`, correcting the
+  pass's `CERY`) and 157's dollar signs -- and GLK then declined all six drawn
+  devices at once ("skip the drawn devices"): the musical notes, the quaver, the
+  seeing-stars, the pain stars, the hearts and the anger star. All six are now in
+  `missed-text-ignore.txt`, scoped to their pages, with the strings pasted from
+  each page's `visible_text`.
+  **The line is whether a reader could read it.** Text a reader could read goes
+  in a box; a device carrying no characters does not, and belongs in
+  `visible_text` and the ignore list. Keep recording every device in
+  `visible_text` -- that is what makes the audit find it and what the ignore
+  entry is matched against -- but expect the ignore list, not a group, and say so
+  in the hand-back so the reviewer can decline the set in one word rather than
+  one at a time. This retires the error class that ran two batches.
+  One item is NOT covered and is still open: 131's `LA` sign fragment, which is
+  real lettering rather than a device. `audit_missed_text.py` cannot raise it --
+  `LA` is contained in the `LATER!` caption on the same page -- so it exists only
+  in the hand-back and needs a ruling of its own.
 - **AN INSERT STRANDED TWO GROUPS, NOT ONE.** *Some Heir* 157 gained the dollar
-  signs at g9 and every later id shifted by one; g8 and g13 came back
-  unreviewed. **Count `speaker_reviewed` on both engines before mirroring**, and
-  do not mirror a title that is 127 of 129 -- this one is committed unmirrored
-  and waiting on those two.
+  signs at g9 and every later id shifted by one; g8 and g13 came back unreviewed
+  on the first pass and were caught by counting `speaker_reviewed` before
+  mirroring. Both were then confirmed unchanged, so the cost was a day rather
+  than a wrong name -- but the title would have been committed at 127 of 129 and
+  called done. **Count `speaker_reviewed` on both engines before mirroring, every
+  time**, and hold the mirror on a title that is short even by one.
 
 ## Per-volume cap palette
 

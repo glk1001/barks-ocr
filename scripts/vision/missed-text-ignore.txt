@@ -272,3 +272,22 @@ HELP KEEP AMERICA STRONG
 # Same standing as the Hypno-Gun 056 impact stars above. The string is pasted
 # from the page's visible_text so the two sides normalise identically.
 13 100 a red pain star drawn in the air beside Donald after the kick
+
+# The thirty-sixth batch's six drawn devices, declined by GLK 2026-09-07 ("skip
+# the drawn devices"). All six were found correctly by the audit and handed back
+# in the per-title queue-missed.txt files; none carries a character, so there is
+# nothing to transcribe and no group to add. Same standing as the Hypno-Gun 056
+# impact stars and the My Lucky Valentine 100 pain star above. Each remains in
+# its page's visible_text as a true record of what is drawn, and each string
+# below is pasted from that field so the two sides normalise identically.
+#
+# This is the ruling the batch's findings asked for: a drawn device carrying no
+# lettering is not a group. Two real signs from the same hand-back WERE grouped
+# by the review (111 GROCERY, 157 the dollar signs), which is the line -- text a
+# reader could read goes in a box, a device does not.
+13 117 drawn musical notes floating over the marching band
+13 126 a drawn quaver beside the cat's balloon
+13 137 drawn stars and a spiral over Donald's head as the anglers set on him
+13 151 two drawn red pain stars beside Donald's head as he bites the coin
+13 162 drawn red hearts floating over Donald as he daydreams
+13 163 a drawn red star beside Donald's head when the monster hits him
