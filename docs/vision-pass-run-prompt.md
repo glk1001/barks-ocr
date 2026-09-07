@@ -3621,6 +3621,92 @@ read its 75% as three groups, not as a rate.
   both strings and the review standardised `INC.` onto all three Beagle Boy
   legends in the title, but only a per-page diff shows that.
 
+### Findings to paste into the next run (2026-09-07, thirty-eighth batch, three of four titles reviewed)
+
+*Bee Bumbles* (Vol. 13), *Wispy Willie* and *The Hammy Camel* (Vol. 15)
+reviewed. *Fix-up Mix-up* was passed but not yet reviewed, and was re-read
+mid-batch on the strength of these findings.
+
+```
+                    real corrections    under-naming    highs
+Bee Bumbles        10 of 126   7.9%     6 of 10        10 of 124  8.1%
+Wispy Willie       18 of 137  13.1%     1 of 18        17 of 136 12.5%
+The Hammy Camel    14 of 124  11.3%    12 of 14        14 of 123 11.4%
+    batch          42 of 387  10.9%    19 of 42
+```
+
+**10.9% against the thirty-seventh batch's 1.6%, and 45% of every correction
+is one move.** This is the worst batch on record and it is not a spread of
+unrelated slips.
+
+- **THE ERROR IS A TITLE-WIDE PREMISE BUILT FROM A TWO-PANEL SAMPLE, AND IT
+  PROPAGATES INTO EVERY NOTE IN THE DOMAIN.** The pass read two panels of
+  *Wispy Willie* -- 023 p5 and 025 p8, **both interiors** -- found the boys
+  bare-headed, and wrote *"the nephews are drawn BARE-HEADED throughout this
+  title"* into **all 26** of its nephew notes. The same sentence went into all
+  49 of *The Hammy Camel*'s. Both claims are false: 021 p7 puts all three
+  *Wispy Willie* boys in clean blue, red and green bands, and *Hammy Camel*
+  032 p4 and 031 p5 do the same. Twelve of *Hammy Camel*'s fourteen
+  corrections are nephews the review named off a band the pass had declared
+  absent, and every one of those twelve notes opens with that sentence.
+  **A cap fact is a per-panel fact.** Write it in the note for the panel it
+  was measured on and nowhere else. If a title-wide claim is worth making at
+  all it needs a sweep, not two panels -- and the two panels the pass happened
+  to open were the two where the caps were off.
+- **THE SAMPLE WAS BIASED AND THE PASS COULD HAVE SEEN IT.** Both *Wispy
+  Willie* panels were interiors. `caps off indoors, on outdoors` is already a
+  standing corpus note, and the pass had it available and did not apply it.
+  Where a cap seems absent, **check an outdoor panel and an indoor one before
+  generalising at all**, and say in the note which you checked.
+- **THE SAME PREMISE ALSO COST NINE CALLS THAT WERE NOT ABOUT CAPS.** Nine
+  *Wispy Willie* groups went `nephews -> Donald`: Donald is in the marsh and
+  laboratory sequence and the pass took every small duck there for a nephew.
+  022 p3 shows him plainly at panel resolution, blue cap and red bow tie, one
+  nephew beside him. Having decided the boys were capless the pass stopped
+  reading heads in that whole sequence. **A wrong premise does not just
+  produce wrong collectives; it stops you looking.**
+- **A DISGUISE IS NOT REFUTED BY A COSTUME.** Six groups went `other:the rat
+  inspector -> Scrooge`. The inspector IS Scrooge, and *018 p3 is a
+  single-figure close-up showing his own face and pince-nez under a false
+  beard* -- the cheapest possible check, one panel already on disk. The pass
+  read the 250px montage instead and wrote a confident note: *"He is a hired
+  man, not Scrooge in disguise -- Scrooge is thin, in a maroon coat and top
+  hat, and appears in his own office two panels earlier."* Appearing in his
+  own office two panels earlier is not an alibi, and a costume difference is
+  not evidence against a disguise **in a story whose plot is the villain
+  putting on costumes**. This is the thirty-seventh batch's montage rule
+  recurring: a note that names a drawn feature as its reason must have seen
+  that feature at panel resolution.
+- **THE MEDIUM FLAG WORKED AGAIN, AND SO DID ITS ABSENCE.** *Wispy Willie*
+  025 g11, the `! ! !` device, was flagged medium precisely because the
+  silhouette carried neither of Scrooge's props -- 1 of 1 medium corrected,
+  against 17 of 136 highs. But *Hammy Camel* 035 g13 was given to Donald at
+  HIGH with the doubt written into its own note (*"`YEAH!` reads as a reply"*)
+  and came back `nephews`. **If the note contains the objection, the call is
+  not high.** Writing the doubt down is not a substitute for flagging it.
+- **A RE-READ RECOVERS MOST OF IT, AND IT IS CHEAP.** *Fix-up Mix-up* was
+  re-read before review on the strength of the above: 5 of its 13 collectives
+  turned out to carry a readable band on the boy the tail reaches, taking it
+  from 9 named to 14 in about ten images. The eight that survived are genuine
+  -- a night silhouette, two probes too weak to call, four where the tail
+  reaches a boy whose crown is turned away, and one balloon that is three
+  lobes over three boys. **When a review shows under-naming on one title of a
+  batch, re-read the unreviewed ones before handing them over** rather than
+  letting the same premise cost another twelve corrections.
+- **TWO REVIEW ADDS, AND ONE OF THEM SHOWS THE COPY IN RESIDUE TRAP INTACT.**
+  *Bee Bumbles* 181 gained `GROCERY` -- the reviewer's resolution of the
+  truncated `GROC` the pass handed back -- and 180 gained a group whose box
+  sits exactly on the `CRASH!` lettering (panel (42,20)-(518,329) against ink
+  measured at (51,34)-(497,318)) but whose `ai_text` is still `?`, the seed
+  group's text. The box was dragged onto the right lettering and the text was
+  never changed, which is why the missed-text audit still reports CRASH! as
+  ungrouped. *Hammy Camel* 030 gained `313`, Donald's number plate, which the
+  pass had not recorded in `visible_text` at all -- a licence plate is in the
+  roster's own list of examples.
+- **STRAGGLERS AGAIN, ON TWO OF THE THREE.** *Bee Bumbles* finished 122 of 126
+  and *The Hammy Camel* 123 of 124. Count `speaker_reviewed` on both engines
+  before mirroring; neither title could be mirrored on the day.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
