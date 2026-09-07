@@ -44,6 +44,17 @@ per-page rate in the close-out. Undetected drift to 9.4 images per page once
 burned the session limit three times and cut throughput from 30+ pages to under
 10.
 
+**A scan's zero is about the scan.** `docs/cap-scanning.md` is the authority on
+why the cap tools report no ink on a cap that is plainly there — the band edges
+and the one-degree crack between them, `leafgrn` being where a cap green
+actually lives, the 25px default floor that hides whole constructions, the 0.40
+saturation floor that hides shaded and indoor caps, and which ink the S0.75
+cool-band floor applies to. The rule itself (quote the census's own
+`N blob(s) total` before ever writing "no cap ink") is in `roster.txt` and is
+what `vision_apply` validates against; this file is the operational half. An
+absence claim written off a filtered view cost 19 wrong collectives in one
+batch and 17 in another.
+
 **Close-out is scripted.** `bash scripts/closeout.sh [--stage apply|review]
 "<title>"` runs the read-only checks in one go — missed-text audit, engine diff,
 outstanding text/type corrections, unreviewed speakers on *both* engines, mirror
