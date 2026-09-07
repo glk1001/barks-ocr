@@ -107,6 +107,24 @@ on *Gladstone's* 089 p2 the greenery is H100–108 S0.54–0.57 against caps at
 H108–113 S0.57–0.63 — a three-degree gap. Key any census on hue **and**
 saturation, never on band name.
 
+### What a shaded wedge looks like in a probe
+
+A cap wedge can survive as a 20–60px sliver at **S0.1–0.3**, and then `capwide`
+reports 0 in red, green *and* blue even at an area floor of 8 — its filter is
+`MIN_SAT`, so lowering the area floor does nothing at all.
+
+**More than about 100px in a chromatic band inside a crown box, with a maximum
+saturation around 0.3, is a shaded wedge and not noise.** On *Pool Sharks* 159 p7
+the note read "no chromatic ink of any kind at any threshold" while `probe` had
+already returned `green 133–176px #5d7876 H167.8 S0.07/0.10/0.30`; the review
+named Louie and Dewey, and a 3x crop showed all three wedges. On *A Charitable
+Chore* 071 the gore was **516px of `#627360` at H113.7** over a black crown at
+S0.12–0.27 — the hue was right and only the saturation was low, which is exactly
+the case a saturation rule cuts the wrong way on.
+
+So: hue first, saturation second, and where the hue is inside the volume's cap
+band a low saturation is evidence of *shading*, not of absence.
+
 ## A teal band's drift direction is a per-title fact
 
 A thin cool band drifts toward teal, and **which** ink it drifted from cannot be
@@ -125,6 +143,23 @@ own value.
 anything cooler than about H140 is the blue however muddy. Never name a nephew
 off a teal band alone — find a clean band of the same colour in the same panel to
 measure the drift against, or crop the cap.
+
+### The channel test, where the sliver is thin
+
+In the Vol. 2 printings the cap is often a thin sliver behind the head, and the
+narrower it is the further its ink drifts toward teal: across *Good Neighbors*
+073 the same green reads `(0,157,70)`, then `(4,154,99)`, then `(12,154,131)` as
+the sliver thins.
+
+What holds up there is the **channel order, not the hue**: the story's blue keeps
+B far above G — around `(5,164,212)` in *Good Neighbors*, *Salesman Donald* and
+*Snow Fun* alike — while a thinning green keeps G at or above B even as B climbs.
+
+But the cutoff is loose, and treating `G≈B` as disqualifying threw away real
+caps: on *Snow Fun* `(3,161,168)` is the **blue** and `(6,159,147)` the **green**,
+against that story's blue `(1,164,213)` and green `(2,155,85)`. Both sat 45–62
+off in B and both were still the roster ink. Only a sample where G and B are
+genuinely level — roughly `(5,160,155)` — matches neither and is unreadable.
 
 ## The last check is always the same
 
