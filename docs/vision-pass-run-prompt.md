@@ -3980,6 +3980,121 @@ not a shell filter dropping a band, but an output limit dropping the beginning.
 **Write a long census to a file and read the file.**
 
 
+### Findings to paste into the next run (2026-09-08, forty-first batch, all three titles reviewed and mirrored)
+
+*Flour Follies*, *The Price of Fame* and *Midgets Madness*, all Vol. 15, all
+three reviewed and mirrored. Flour Follies and The Price of Fame end clean on
+every gating check; Midgets Madness is mirrored but **152 of 162 reviewed** and
+still carries one unconfirmed type proposal, for the renumbering reason below.
+
+```
+                       real corrections    nephew domain          highs
+Flour Follies       0 of 122   0.0%     0 of   9   0.0%    0 of 122   0.0%
+The Price of Fame   2 of 137   1.5%     2 of  60   3.3%    2 of 137   1.5%
+Midgets Madness    12 of 152   7.9%     7 of  35  20.0%   12 of 152   7.9%
+    batch          14 of 411   3.4%     9 of 104   8.7%   14 of 411   3.4%
+```
+
+**Every call in the batch was written `high`, so there is no medium-against-high
+split at all.** The fortieth batch measured 38.1% of mediums corrected against
+5.1% of highs and called the flag's keep earned; this batch threw that signal
+away. A pass that hedges nothing gives the reviewer no ranking to work down.
+
+- **THE OFFSET FAN WAS SPOTTED, NAMED IN THE PASS'S OWN REASONING, AND THEN
+  VOTED AGAINST.** *Midgets Madness* 092 p3: three balloons over three boys. The
+  pass traced all three tails, found the leftmost landing 43px clear of the
+  leftmost boy's head+beak span (163-316) and on a crowd figure instead, wrote
+  out `project_offset_fan_reading_order_wins` -- *a tail landing on nobody means
+  the whole fan drifted one boy left* -- and then rejected it because the other
+  two tails looked clean. The review moved all three exactly one boy right:
+  `other:a spectator -> Dewey`, `Dewey -> Huey`, `Huey -> Louie`. **Three of the
+  batch's fourteen corrections are that single decision.** A tail landing on
+  nobody is the tell, and the other tails in the same fan looking clean is what
+  the offset does -- it is not evidence against it. Apply the shift and flag the
+  fan as a set so a reviewer can flip it in one go.
+- **A COOL CAP CAN PRINT INSIDE THE HEDGE'S OWN HUE BAND, AND THE PROBE WILL NOT
+  SAY SO.** *The Price of Fame* 077 g2, `nephews -> Dewey`: the band is
+  `#23a16b` **H154.3 S0.78** at 38px, six degrees from the hedge's `#009e49`
+  H147.7 **S1.00** and inside the same capscan band. `probe.py` reported
+  `green 4389px #009e49` for the crown strip and the pass wrote *no cap ink at
+  all*; `capwide` returns **`blue: 0 blob(s)` for the whole panel**, so the cool
+  cap was never going to appear in the blue band. **Rank saturation inside the
+  band. The band label is not the answer, and on a Vol. 15 title the cap is
+  routinely the desaturated member of a band the scenery also occupies.**
+- **AND ONE SWAMPED PROBE COST BOTH OF THAT TITLE'S CORRECTIONS.** Having
+  written the absence on 077 g2, the pass used the same kind of probe on 077 g5
+  to name the third boy *by elimination* -- `Louie`, cap null. The review made it
+  `Huey`, cap red: the tail tip sits 12px from each of two heads and the wedge
+  points down-LEFT at the red-banded one, which a 3x crop shows plainly. **An
+  absence claim is not just a declined name; it silently becomes the premise of
+  every elimination on the panel.**
+- **A PROBE OVER A BOX YOU CHOSE IS A VIEW, NOT THE SCAN'S ANSWER.** The roster
+  already says a filtered census is not the census. This batch is the same
+  failure one level down: both Price of Fame probes were run honestly and quoted
+  honestly, and simply did not contain the band. Before writing an absence,
+  re-run `capwide` over the WHOLE panel and quote its per-band `N blob(s)` line,
+  which is the thing that would have said `blue: 0` and prompted a crop.
+- **THE MISSED-TEXT AUDIT CANNOT SEE A REPEATED LABEL.** All three titles
+  returned **0 findings in all three classes**, and the review then added
+  **eleven groups**: ten background labels in *Midgets Madness* -- nine `49` car
+  numbers, the `JUDGE` badge on 094 p5, the `O-U2` licence plate on the truck in
+  093 p3 -- and a `? ?` device pair in *Flour Follies* 071 p8. `49` and `JUDGE`
+  were both in the pass's `visible_text`, but **once each**: the audit matches
+  that one occurrence against the first group carrying it and reports nothing,
+  so the second and third `49` on a page are invisible. **Write the repeats in,
+  or an audit zero means only that one of them is grouped.**
+- **THE BARE DEVICES WERE MISSED AGAIN, ONE BATCH AFTER THE RULE WAS WRITTEN.**
+  The fortieth batch's *sweep each page for bare devices while writing the
+  capture, not afterwards* was carried into this pass and still lost the `? ?`
+  either side of Mrs. Heartless's head on *Flour Follies* 071 p8 -- on the panel
+  whose whole joke is her reaction. Devices are invisible to the audit twice
+  over, so the sweep is the only thing that finds them.
+- **A CAPTION BOX CAN BE A CHARACTER CONTINUING ACROSS THE PANEL BREAK.**
+  *Midgets Madness* 089 g4, `narrator -> Louie`, the reviewer's note reading
+  *Louie continuing from previous panel*. On its own the box is author's-voice
+  narration and reads that way; what settles it is the sentence it finishes from
+  the panel before. Read the previous balloon before typing a caption `narrator`.
+- **AN ENGINE NOISE IN A BALLOON IS STILL SOMEBODY'S.** *Midgets Madness* 095
+  g10, `none -> Dewey`. The pass cropped at 1.2x, read the marks between the
+  balloon and the figure as sweat rather than a bubble trail, noted the beak was
+  shut, and gave `CHUG! CHUG! CHUG! CHUG!` to the machine. It is a nephew
+  mimicking the engine as he pedals past. The existing rule -- *a balloon means
+  a voice* -- outranks a judgement about which figure looks like it is making
+  the noise.
+- **THREE CROWD CALLS WERE OVERTURNED, TWO OF THEM TO NEPHEWS.**
+  `other:a spectator in the crowd` went to `nephews` twice and to `Dewey` once.
+  A tail running into a black silhouette is not automatically a spectator when
+  the nephews are in the same frame; on a fairground title the crowd is the
+  default background and the boys keep being drawn against it.
+- **ADDS RENUMBER MID-PAGE AND STRAND THE REVIEW'S OWN STAMPS.** Six of the ten
+  *Midgets Madness* inserts landed mid-page, shifting every later id by one, and
+  ten of the pass's groups came out of the review with no `speaker_reviewed` at
+  all -- the last entries of each grown page. The skill warns that an add
+  strands later queue entries; this is the first batch to see it at scale.
+  **After a review that added groups, count `speaker_reviewed` against the NEW
+  total, never the pass's, and re-issue a straggler queue before calling the
+  title done.** The ten stragglers here are an artefact, not unfinished
+  judgement: every one still carries the pass's own value.
+- **THE `other:` VALUES HELD ACROSS 411 GROUPS.** No drift, no near-duplicates
+  and no new singletons; the review added none of its own. The one to watch on
+  a re-read is *Midgets Madness*'s `other:the judge` against
+  `other:a second race judge` -- two men in identical brown jackets and JUDGE
+  badges on 094 p5, separated only by the yellow cap.
+
+**And the zero is worth as much as the 7.9%.** *Flour Follies* returned **0 of
+122** because it has nine nephew groups in the whole title and dresses its
+adults apart -- a bald moustached man in tails, a blonde in a green skirt,
+Scrooge in red -- so every call rests on a tail into an unambiguous figure.
+*Midgets Madness* put three boys, four separately-costumed adults and a
+silhouetted crowd into the same frames and posted 7.9% with a 20% nephew
+domain. **The rate tracks how much SEPARATING a title demands -- of nephews from
+each other, of adults from adults, and now of nephews from the crowd behind
+them.**
+
+**Cost: 74 images over 30 pages, 2.5 per page**, against a target of 3 -- 3.1,
+1.7 and 2.6 by title. Two of Flour Follies' were re-dos after coordinates were
+eyeballed off a stacked strip rather than scaled from a census box.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
