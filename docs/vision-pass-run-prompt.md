@@ -5360,6 +5360,81 @@ the two are told apart at 1.0x. The same bumpy outline carries an ENGINE on
 *Midgets Madness* 095 g8, where the marks between the balloon and Donald are
 sweat drops rather than bubbles and his beak is shut.
 
+**Two more Vol. 15 titles, read 2026-09-09, and between them the volume's cap
+green now spans FOUR hues.** *Fix-up Mix-up*'s H153.6 and the H109-116 of
+Turkey Trot, Raffle Reversal, Flour Follies, Price of Fame and Midgets Madness
+are no longer the whole range:
+
+| title | reference panel | red (Huey) | green (Louie) | blue (Dewey) |
+|---|---|---|---|---|
+| *Salmon Derby* | 098 p4, three boys in a row on the beach | `#e61b1f` H358.8 S0.88 | `#4da13f` **H111.4** S0.61 | `#00a5d7` H194.0 S1.00 |
+| *Cheltenham's Choice* | 107 p4, three boys and Donald in the trailer | `#dc1f21` H359.4 S0.86 | `#45a252` **H128.4** S0.57 | `#00a5d7` H194.0 S1.00 |
+
+**And each of those two titles prints Louie's band at more than one hue.**
+*Salmon Derby* gives H111.4 on 098 p4, 098 p7 and 097 p3 but `#179557`
+**H150.5** on 096 p4 and `#159a52` H147.5 on 099 p5 -- the second value is the
+volume's own foliage hue, so on the H150 pages the band and the trees are the
+same ink and only `heads.py` putting it on a skull separates them.
+*Cheltenham's Choice* is worse: H128.4 on 107 p4, `#43a048` **H123.2** on
+108 p4, `#4da33f` H111.1 on 110 p7 and 113 p2, and `#029e47` **H147.7** on
+111 p4 -- four hues in ten pages, the last of them the foliage green printed as
+a broad clean band on a black crown. **Do not carry a green hue from one panel
+of a Vol. 15 title to the next; probe each crown.**
+
+**A COOL INK AT H171-176 RUNS THROUGH BOTH TITLES AND NAMES NOBODY.** Salmon
+Derby puts `#51857f` H173.1 S0.39 on 101 p7's third boy, `#26a290` H171.3
+**S0.77** on 103 p5's, and H173 on both readable crowns of 102 p2; Cheltenham's
+Choice puts `#04a29b` H176.6 **S0.98** on 111 p4's left boy and `#2fa37c` H162
+on 115 p1's. Saturation does not rescue these -- S0.98 is as saturated as the
+roster blue -- because the HUE sits squarely between the green band's ceiling
+and the blue band's floor. Every one of them had to be resolved by elimination
+off the other two boys, and where the other two were not both clean the group
+stayed collective. Treat H165-180 on a crown as an unreadable band, not as a
+shaded blue and not as a shaded green.
+
+**Two decoys measured on these titles.** On *Salmon Derby* the bay water is
+`#0182bb` H198.6 S1.00 in blobs of 12,000-19,000px, right beside the boys'
+heads on 100, 101 and 104; on *Cheltenham's Choice* the bayou is the same ink
+at 1729px directly under a nephew's chin on 108 p4. Both are more saturated
+than any nephew band on their pages. And Gladstone's `#00a5d7` hat is in two
+thirds of Salmon Derby's panels, on top of Donald's sailor cap in the same ink.
+
+Vol. 12, two more titles read 2026-09-09, and the volume's H102.5 cap green is
+NOT universal either:
+
+| title | reference panel | red (Huey) | green (Louie) | blue (Dewey) |
+|---|---|---|---|---|
+| *Tralla La* | 194 p4, two boys and Scrooge in close-up | `#e21c1f` H359.1 S0.88 | `#5ca93a` **H102.0** S0.66 | `#00a5d7` H194.0 S1.00 |
+| *Outfoxed Fox* | 219 p7, three boys in a row | `#e11b20` H358.2 S0.87 | `#4da23e` **H111.2** S0.61 | `#00a5d7` H194.0 S1.00 |
+
+*Tralla La* is the volume's textbook case -- its green is the grass to a
+decimal place, so a green blob names a boy only when `heads.py` puts it on a
+skull. *Outfoxed Fox* is eleven degrees off it and much easier, and the lawn in
+that story does not compete.
+
+- **SCROOGE'S COAT IS `#a04453` H350.2 ON BOTH TITLES**, and it is the largest
+  red on nearly every page he is in; his top-hat band is `#00a5d7`, Dewey's
+  exact ink, and it is 2500-4500px against a nephew band of 100-1000px. On
+  *Tralla La* he also wears a GREEN ROBE for 204 and a blue one for 202-203,
+  and the robe prints `#5caa3c` -- the cap green exactly. The 242px of it the
+  census put beside a nephew's head on 204 p4 is his sleeve.
+- **THE TRALLA LA BOYS GO BARE-HEADED FOR WHOLE PAGES.** No cap at all on
+  204 p4, 204 p6, 208 p6, 209 p2 or 209 p4 -- plain white skull and a hair
+  tuft -- and the caps are back, clean, on 205 p2, 205 p4, 207 p7 and 209 p7.
+  Both facts are per panel. The flying suits on 197-199 hide them completely,
+  and their colours are red / green / yellow, which is not the roster palette.
+- **`UNCA SCROOGE` IS A NEPHEW AND `UNCLE SCROOGE` IS DONALD, ON BOTH TITLES
+  AND ON EVERY OCCURRENCE.** Tralla La: 7 UNCA against 12 UNCLE. Outfoxed Fox:
+  3 UNCA SCROOGE and 4 UNCA DONALD, all nephews', against 8 UNCLE SCROOGE, all
+  Donald's or narration. It settled about twenty groups between them for free
+  and it is worth grepping before page 1 of any Scrooge story.
+- **`barks-ocr-name-grep` DOES NOT SEE NEPHEW NAMES.** It reports non-dictionary
+  tokens plus repeated word pairs, so a name it knows is invisible: it returned
+  nothing for *Tralla La*, and *Tralla La* 196 g5 is Scrooge saying QUICK,
+  DEWEY! -- the only nephew named in the story. Grep `ai_text` directly for
+  HUEY/DEWEY/LOUIE as well as running name-grep.
+
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
