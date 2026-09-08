@@ -4894,6 +4894,55 @@ in Vol. 11 072. The corpus is split on this (31 Vol. 13 narration groups carry
 `[i]`, 46 do not), so it is flagged for the reviewer rather than settled here.
 
 
+**A third Vol. 12 title, *The Secret of Atlantis*, and its caps come and go by
+setting.** It is a Scrooge story with the boys in and out of it, and the cap is
+the volume's black crown with a coloured side band -- but only outdoors. Cap
+reference **164 p8**, the three boys at the bakery window, all three bands big
+and clean:
+
+| | |
+|---|---|
+| green (Louie) | `#5caa3b` H102.0 S0.65 |
+| red (Huey) | `#e61b1f` H358.8 S0.88 |
+| blue (Dewey) | `#00a5d7` H194.0 S1.00 |
+
+**Where the bands are and are not printed, checked panel by panel:** banded on
+161 p1 (blue/red/olive left to right), 164 p8, 167 p1/p3/p4/p6 and 168 p1/p5/p6;
+**bare-headed** on 158 p4 -- capscan over the whole panel returns `red: 0
+blob(s) total`, `green: 0`, `leafgrn: 0`, and a 2.4x crop shows plain white
+skulls with a hair tuft, the four blue blobs being the boys' collars at chest
+height -- and again on 156 p1 and all of 175. So `capscan` zeros on this title
+mean two different things on two different pages, and only the crop separates
+them.
+
+**The third boy's band is repeatedly an unreadable shaded olive** rather than a
+roster green: 161 p1 prints blue and red cleanly and leaves the third at an
+olive too desaturated to name, which is the *two named leaves the third* case.
+On 167 p1 the middle boy's crown probes `#7ba85a` **H94.6** S0.46, 175px --
+`capscan`'s `leafgrn` band starts at H95, so its `leafgrn: 0` misses a real
+green cap **by four tenths of a degree**. Probe the crown before believing that
+zero.
+
+**And from 175 p5 the caps stop mattering: everybody is in a diving helmet.**
+The story hands back the names instead -- 176 g1 and 183 g7 both call the two
+divers HUEY AND DEWEY, and 185 g0's caption puts LOUIE on the boat -- so the
+underwater collectives are a fact about the helmets, not a declined reading.
+Say which in the note.
+
+**Two levers do most of the adult work in this title, and both are free.**
+`UNCA SCROOGE` is a nephew's form and `UNCLE SCROOGE` is Donald's, on all 19
+occurrences, exactly as in *Only a Poor Old Man*. And inside the identical grey
+diving suits **Donald is the smooth-headed figure and Scrooge the one with
+muttonchop whiskers round the beak plus a red chest fitting** -- checked at 1.7x
+on 172 p1, 173 p1 and 174 p6, where Donald is the left figure in all three.
+That one crop settled about sixty groups.
+
+**The decoys are the volume's usual ones**, and Scrooge is in nearly every
+panel: his coat `#a04453` H350.2 is the biggest red on most pages, his top-hat
+band and Donald's sailor cap both print `#00a5d7`, and the bakery/roadside
+foliage sits at H102, the cap green to a decimal place.
+
+
 Vol. 15, from *Fix-up Mix-up* 036 p1 (the splash -- the three boys in a row
 below Donald's ladder), read 2026-09-07. The volume's cap is a **black crown
 carrying one broad coloured band** down the front and side:
@@ -4973,6 +5022,36 @@ are the same green. Every one of them sits where a census expects a cap.
 **And the nightclothes actively lie.** On 050 p6 the boy in BLUE pyjamas wears
 a clean RED band and the boy in GREEN pyjamas a clean BLUE one. Read the crown,
 not the costume, on that page.
+
+**A fifth Vol. 15 title, *Raffle Reversal*, and its band is a sliver like
+*Turkey Trot*'s, not the broad band of *Fix-up Mix-up*.** Reference panel
+**056 p4**, the three boys under one balloon: the band shows as a small patch at
+the crown's upper-left plus a second sliver at the left side, 71-75px each.
+
+| | |
+|---|---|
+| blue (Dewey) | `#00a5d5` H193.7 S1.00 |
+| red (Huey) | `#e21d21` H358.8 S0.87 |
+| green (Louie) | lands in `leafgrn` at `#4fa43d` **H109.5** S0.63 (057 p3), never in capscan's `green` |
+
+So this title behaves like *Turkey Trot*, not like *Fix-up Mix-up*: `green: 0`
+says nothing, and the third boy is repeatedly shaded past reading -- 056 p4's
+left band probes `#4e7474` H180 **S0.33** and names nobody, so he is Louie by
+elimination with `cap_colour` null.
+
+**GLADSTONE WEARS A `#00a5d7` HAT, NOT ONLY THE BOW TIE.** That is Dewey's exact
+ink and the same ink as Donald's sailor cap, and Gladstone is in two thirds of
+the panels, so a blue blob on a head in this title is his as often as Donald's.
+What separates them is the **maroon `#a04453` suit** underneath -- `heads.py`
+reports both as `blue` on a head and cannot tell them apart. Read at 2.6x on the
+splash, where he is held aloft holding the winning ticket.
+
+**The bold cut is about 1.15, and one word is only half bold.** Whole-word bold
+sits at 1.27-1.43 and everything unemphasised at 1.06 or below, so the gap is
+wide -- but `HOWDEE,` comes back at 1.19 on three separate pages because Barks
+sets **`HOW` plain and `DEE` heavy inside the one word**, three times in this
+story (056 g16, 058 g3, 059 g4). A ratio between the two populations is worth a
+crop before it is called clean.
 
 ## The long form is retired
 
