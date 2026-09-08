@@ -3727,6 +3727,87 @@ other single signal available to the pass.
   and *The Hammy Camel* 123 of 124. Count `speaker_reviewed` on both engines
   before mirroring; neither title could be mirrored on the day.
 
+### Findings to paste into the next run (2026-09-08, thirty-ninth batch, Turkey Trot reviewed)
+
+*Turkey Trot at One Whistle* (Vol. 15) and *The Menehune Mystery* (Vol. 12).
+Turkey Trot reviewed and mirrored, clean on group count, `speaker_reviewed`,
+`identified_by` and all three distributions. Menehune read and handed back.
+
+```
+                        real corrections   under-naming   over-naming        highs
+Turkey Trot        6 of 113   5.3%       4 of 6        2 of 6      6 of 113  5.3%
+    nephew domain  6 of  24  25.0%
+```
+
+**5.3% overall but 25.0% of the nephew domain** -- every correction the review
+made was a nephew call. The pass wrote no mediums at all, so there is no
+medium-against-high split to report this time; that is itself worth noting,
+because the flag has been the single most useful signal in the last three
+batches and this pass gave the reviewer none of it.
+
+- **A CROP FRAMED ON THE FACE CANNOT CONTAIN A CAP, AND WILL ALWAYS READ
+  BARE-HEADED.** This is the whole of the under-naming in this batch. 053 g5
+  was declared bare-headed off a 5x crop whose top edge sat at panel **y=432**
+  when the black crown and its red band run **y=365-420** -- the cap was
+  entirely above the window. Re-cropped afterwards with headroom it is
+  unmistakable. The crown sits ON TOP of the white skull, so the crop has to
+  extend roughly a head-height above it; `heads.py`'s own docstring says as
+  much about its crown strip, and the pass had that warning and cropped as if
+  it did not. **Before writing `bare-headed`, check that the crop contains sky
+  above the skull.**
+- **`heads.py` SAYING `no cap ink` IS NOT AN ABSENCE CLAIM.** 054 g4 and g6
+  were declined on exactly that, and the review named Huey and Dewey off a red
+  and a blue band. That line is a per-head result at a 100px floor, not the
+  census's own `N blob(s) total`; the roster's absence rule wants the second,
+  and the honest response to the first is to crop.
+- **RELATIVE HEAD SIZE IS NOT A DONALD TEST -- CROWN SHAPE IS.** 048 g2 was
+  given to Donald because the left figure's head looked full-size beside a
+  smaller one; it is Louie. Two things in the pass's own crop said so and were
+  not used: the figure has a **hair tuft**, and his cap is the SAME
+  construction as the red-banded boy's beside him. Donald's in that story is a
+  green kepi with a black brim, a different object. The other figure was
+  smaller because it was turned away, not because it was a child. 050 g0 is
+  the same confusion inverted, `nephews` where Donald was in frame.
+- **AND THAT REVERSAL CORRECTS A PALETTE CLAIM THIS FILE WOULD OTHERWISE HAVE
+  CARRIED FORWARD.** On the strength of 048 g2 the pass wrote that Donald's cap
+  green and Louie's band are the same ink darkened. They are not: **Donald
+  `#4f753b`/`#4d743b` H99-103 S0.47-0.50 V0.45; Louie `#4da33e`/`#4ea340`
+  H110-112 S0.61-0.62 V0.63.** Hue and value both separate them cleanly. The
+  pass had measured exactly that on 047 p6 first and then talked itself out of
+  it on the strength of the misidentified figure. **A measurement overturned by
+  an identification is worth re-checking before the identification is trusted.**
+- **A TITLE-WIDE CAP CLAIM WAS MADE AND CAUGHT MID-PASS.** On *Menehune* the
+  first three panels opened -- 120 p5 (office), 131 (ship's brig), 143 (island)
+  -- all showed bare heads, and `the boys wear no caps in this story` went into
+  the notes. **122 p8 disproves it**: all three crowns carry bands, probed on
+  the heads at `#e22721` H1.9 S0.85 and `#06a4d4` H193.4 S0.97, the third bare
+  and therefore Louie by elimination. Every affected note was rewritten as a
+  per-panel fact. The thirty-eighth batch's rule held, but only because the
+  sample was extended; three panels is not a sweep either.
+- **A BOLD CUT IS PER TITLE AND NEEDS TWO CALIBRATION CROPS, NOT ONE.**
+  *Turkey Trot* sits at 1.15 (GOOD 1.16 bold, MISTAKE 1.04 not). *Menehune*
+  looked like 1.30 off one crop -- 120 g1, where FOR SAFEKEEPING! at 1.24 is
+  genuinely not bold -- and a second crop at 143 g10 showed KNOW at **1.28
+  plainly bold**, putting the real cut near 1.26. One crop gives an upper
+  bound, not a threshold. Take a second on a balloon whose hits straddle the
+  gap.
+- **allbold's ROW LABELS GO OUT BY ONE, AND ITS EDGE BLOBS ARE OUTLINE.** Seen
+  repeatedly this batch: on 053 g5 it prints L2-L5 for four drawn rows so its
+  "HIM WITH" hit is really FIGHT; on 053 g2 two hits at 1.49 and 1.70 both END
+  at x=693 and are the balloon's right edge, not words. **Ranges that share an
+  end x, or that sit past the last word, are outline.** Check the x-range
+  before marking, and re-check any line whose blob count does not match its
+  word count.
+- **THE EMPHASIS FIELD MUST COPY THE STORED LINE BREAKS.** Six groups in
+  *Menehune* failed validation because the markup was retyped with the pass's
+  own line breaks. `vision_apply` catches it, but only after all the reading is
+  done; strip-and-compare locally first, which takes seconds.
+
+**One group added that neither engine had**: *Menehune* 127 panel 5 carries
+`SLAP!` lettered across the whole frame and had no group at all on either side.
+Panels holding nothing but display lettering are where this happens -- the
+panel had no other text for the engines to anchor on.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -4549,6 +4630,49 @@ and lit, one balloon and one tail each) read on 2026-09-05. The cap is a
   worth a retouch note.
 
 
+**Vol. 12's *The Menehune Mystery* prints the cap on ONE page of thirty-two,
+and names no nephew anywhere in its dialogue.** A direct grep for
+HUEY/DEWEY/LOUIE across both engines returns nothing in 32 pages, so there is
+no address chain to fall back on: every nephew call rests on a cap or a tail,
+and 74 of its 398 groups end up collective.
+
+The reason is costume, not colour. **Aboard ship (128-135) the boys wear
+identical WHITE SAILOR SUITS AND HATS**, and **on the island (136-151) they are
+bare-headed** -- plain white skull and hair tuft, confirmed at 4x with a full
+head-height of sky above the crown on 143 p1. Neither is a declined reading.
+
+**But 122 does print the bands, and an early draft of this entry said the title
+had none.** 122 p8 shows all three crowns: middle `#e22721` H1.9 S0.85 and
+right `#06a4d4` H193.4 S0.97 probed on the heads, the left one bare and
+therefore Louie by elimination; 122 p4 shows a clean green band on the nearest
+boy. Three panels opened at random on this title all happened to be capless.
+**Three panels is not a sweep.**
+
+Three decoys run the whole 32 pages and each is the largest blob of its colour
+in most panels:
+
+| | |
+|---|---|
+| Scrooge's coat | `#a04453` H350.2 S0.57 -- NOT the `#e82720` cap red, but it is the biggest red on almost every page |
+| Donald's sailor cap and Scrooge's top-hat band | both `#00a5d7`, Dewey's exact ink, and between them nearly every blue at head height |
+| island foliage | `#5caa3c` H102, the cap green to a decimal place, in blobs up to 142,000px |
+
+Add the ducks' **red bow ties** at neck height, which `heads.py` reports as red
+on a head all through the Duckburg chapters, and the **Beagle Boys' yellow
+number plates**, which are the story's most frequent piece of background
+lettering (twenty-odd groups).
+
+`The Beagle Boys` is supplied by the database as a **bare roster value** for
+this story, like `Black Pete` in Vol. 3 -- no `other:` prefix, and 76 groups use
+it. The genuine `other:` values are just four: `other:Opu Nui` (17),
+`other:the birds` (6), `other:the Coast Guard admiral` (2) and
+`other:the menehunes` (1).
+
+**The story italicises every Hawaiian word it then glosses** -- HOA, KAMA'AINA,
+MALIHINI(S), KANES, PUPULE, HAOLES -- and sets MENEHUNES! bold and upright
+instead. Confirmed at 3x on 143 g10, where MALIHINIS and KANES are plainly
+slanted against upright neighbours in the same balloon.
+
 Vol. 13, from *The Hypno-Gun* 057 p5 and 057 p8 (the three boys in a row, then
 the same three seen from above) read on 2026-09-05 -- the volume's first title.
 The cap is a **black skull cap carrying broad coloured segments over the crown**,
@@ -4759,6 +4883,42 @@ a blue jug and a green bundle of tule roots the boys CARRY on *Wispy Willie*
 striped BALL in the wagon on *Fix-up Mix-up* 038 p1; and blue MARBLES on the
 floor of *Wispy Willie* 023 p5. All four sit where a census expects a cap and
 none is on a head.
+
+
+**A fourth Vol. 15 title, *Turkey Trot at One Whistle*, and its cap green is
+NOT the volume's.** Reference panel 050 p8, the three boys' heads in a row: the
+construction is the volume's black crown with a coloured band, but here the
+band is mostly hidden and shows as a **small sliver of 98-218px** at the
+crown's edge rather than the 300-1200px of *Fix-up Mix-up*.
+
+| | |
+|---|---|
+| red (Huey) | `#e31b20` / `#e61b1f` H358-359 S0.88 |
+| blue (Dewey) | `#05a5d5` / `#00a5d7` H194 S0.97-1.00 |
+| green (Louie) | `#4da33e` H111.1 **S0.62 V0.63** |
+
+**That green lands in `leafgrn`, never in capscan's `green` band** -- H111, not
+the H153.6 the *Fix-up Mix-up* entry above gives. On this title `green: 0` says
+nothing at all; it is the Vol. 13 behaviour, not the Vol. 15 one.
+
+**Donald wears a GREEN stationmaster cap through the whole title, and it is the
+decoy that costs a name.** It prints `#4f753b` / `#4d743b` **H99-103 S0.47-0.50
+V0.45** -- close enough to Louie's band in hue to be mistaken for it, and the
+pass did exactly that on 048 g2 before review caught it. **Value separates them
+cleanly: Donald V0.45, Louie V0.63**, and so does hue at H99-103 against
+H110-112. Where that is still not enough, the CONSTRUCTION decides -- Donald's
+is a kepi with a black brim, the boys' a black crown with a band.
+
+Four more decoys, all measured on this title: the boys' jerseys carry a
+**pale-blue collar and bow** at neck height (`#0aa5d3`, up to 1380px); the
+kitchen shelf on 050 p2 holds **blue, yellow, red and green books** in exactly
+the roster inks; the bedroom wall on 049 p8 is `#4da33e` H111 S0.62 in a
+**16,367px** blob, the cap-green hex exactly; and the turkey crates on 053 p8
+are the same green. Every one of them sits where a census expects a cap.
+
+**And the nightclothes actively lie.** On 050 p6 the boy in BLUE pyjamas wears
+a clean RED band and the boy in GREEN pyjamas a clean BLUE one. Read the crown,
+not the costume, on that page.
 
 ## The long form is retired
 
