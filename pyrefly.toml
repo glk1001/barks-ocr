@@ -23,6 +23,11 @@ project-includes = [
 search-path = [
     "src",
     "books/src",
+    # The vision helpers are standalone scripts run by path, so Python puts their
+    # own directory on sys.path and a sibling import resolves at runtime. Both
+    # checkers need telling. This widens module RESOLUTION only -- these files were
+    # already in scope, and no file is added to or removed from the check.
+    "scripts/vision",
 ]
 
 project-excludes = [

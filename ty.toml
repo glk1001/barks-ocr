@@ -1,6 +1,6 @@
 [environment]
 python = "./.venv"
-root = ["./src", "./books/src"]
+root = ["./src", "./books/src", "./scripts/vision"]
 
 [src]
 exclude = [

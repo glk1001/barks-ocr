@@ -208,6 +208,25 @@ python3 scripts/vision/crop.py ~/barks-vision/<slug> <page> <panel> <x0> <y0> <x
 2–3x settles which hat a tail leans at, 4–6x a letter, 8–12x a cap crown of a
 few dozen ink pixels.
 
+**Three sweeps to run once per title, before page 1, that cost no images at
+all.** Each is the whole-title form of a per-panel tool, run in one process:
+
+```bash
+uv run --offline python scripts/vision/title_bands.py  <out-dir> > <out-dir>/bands.txt
+uv run --offline python scripts/vision/title_heads.py  <out-dir> > <out-dir>/census.txt
+uv run --offline python scripts/vision/panel_boxes.py  <out-dir> [PAGE ...]
+```
+
+`title_bands` gives one line per panel with each band's `N blob(s) total`, which
+is the number the roster demands before any absence claim and which shows at a
+glance whether a title wears its caps — read the `leafgrn` column, not `green`.
+`title_heads` is the head census over every panel; **redirect it and read the
+file**, because `tail`-ing one has already dropped twenty-one pages and produced
+absence claims written against an output limit. `panel_boxes` converts every
+group's `text_box` into PANEL coordinates, so a balloon can be placed against a
+head without doing the origin arithmetic by hand — it places balloons, it does
+not name speakers, and the tail still has to be traced.
+
 **Find the title's clean cap-reference panel before page 1**, not when you reach
 it — scan for the panel where caps are big and lit (held, removed, backs to
 reader, a close row) and fix the palette from it. Getting this wrong costs a
