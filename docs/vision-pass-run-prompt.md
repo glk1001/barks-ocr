@@ -3862,6 +3862,111 @@ reading a title demands, not how long it is.**
   113/113 on one with the other untouched -- which is exactly what happened.
   Hand back the corrections queue path in the same message as the speaker one.
 
+### Findings to paste into the next run (2026-09-08, fortieth batch, both titles reviewed and mirrored)
+
+*Raffle Reversal* (Vol. 15) and *The Secret of Atlantis* (Vol. 12), both
+reviewed and mirrored. Raffle Reversal clean on every gating check at 142/142;
+Atlantis mirrored at **395/397** -- two groups the review never reached, 171 g0
+and 173 g9, handed back in `queue-stragglers.txt`.
+
+```
+                       real corrections    nephew domain          highs        mediums
+Raffle Reversal    3 of 142   2.1%      2 of 16  12.5%     3 of 139  2.2%   0 of  3   0.0%
+Atlantis          35 of 432   8.1%     23 of 78  29.5%    23 of 375  6.1%   8 of 18  44.4%
+    batch         38 of 574   6.6%     25 of 94  26.6%    26 of 514  5.1%   8 of 21  38.1%
+```
+
+**The medium flag earned its keep: 38.1% of mediums corrected against 5.1% of
+highs, the widest split on record.** Where the pass hedged it was right to.
+That is the argument for writing mediums at all -- the thirty-ninth batch had
+none and the reviewer said so.
+
+- **A LEFT/RIGHT RULE DERIVED FROM THREE PANELS AND APPLIED ACROSS SIXTY GROUPS
+  IS THIS BATCH'S WHOLE STORY.** Fifteen of Atlantis's 35 corrections are
+  Donald and Scrooge swapped inside identical grey diving suits -- nine
+  `Scrooge -> Donald` and six the other way. The pass cropped 172 p1, 173 p1 and
+  174 p6 at 1.7x, found Donald smooth-headed on the LEFT and Scrooge with
+  muttonchops on the RIGHT in all three, wrote that into sixty notes, and then
+  leaned on the SEATING wherever the faces were too small to re-check. The face
+  test was sound; the seating was a coincidence in three panels. **Three panels
+  agreeing is not a rule. Re-read the face in each panel, or write the
+  collective.** This is the thirty-ninth batch's *a chain built on one traced
+  tip fails whole* at title scale, and it cost more than every cap error in the
+  batch put together.
+- **TWO ADULTS IN IDENTICAL COSTUME IS A HARDER PROBLEM THAN THREE NEPHEWS IN
+  CAPS.** Only four of Atlantis's corrections are one nephew for another or a
+  nephew named or declined. The 8.1% is adult-against-adult, and the previous
+  batch's rule -- *the error rate tracks how much cap reading a title demands* --
+  needs the other half added: **it tracks how much ADULT separating a title
+  demands too, and that is the more expensive kind.** A story that puts its two
+  adults in the same suit for twenty pages should be read expecting it.
+- **THE REFERENCE PANEL'S OWN TAIL WAS MIS-TRACED.** 164 g8 went
+  `Dewey -> Louie`, cap `blue -> green`. The pass named 164 p8 the title's cap
+  reference, measured all three bands correctly off it, and then read the one
+  balloon's tail onto the wrong boy. **Getting the palette right off a panel
+  does not get that panel's tail right; they are two separate readings and the
+  first one flatters the second.**
+- **A WHOLE-PANEL CENSUS ZERO WAS OVERTURNED TWICE IN ONE PANEL.** 168 g4 and
+  g5 went `nephews -> Dewey` and `nephews -> Huey`, on a panel whose note read
+  "capscan finds only an 86px `#238fb5` in the whole panel, which is the sea".
+  The census header was quoted honestly and the bands were there anyway, at
+  middle distance on a headland. **A census zero on a panel where the figures
+  are small is a reason to crop, not an absence.** The roster already says a
+  zero is a threshold; this is the third batch running where it was written up
+  as a bare head instead.
+- **A MACHINE PLAYING A RECORDED VOICE IS A SPEAKER.** The pass put the four
+  juke-box songs on Atlantis 182 down as `sound_effect` with speaker `none`,
+  citing *played by a machine, `none`*. The review made all four **dialogue**
+  and gave them `other:the jukebox`. Same correction on 160 g7, the
+  advertisement on the television screen: `background` / `none` became
+  **dialogue** / `other:radio announcer`. **Recorded and broadcast speech is
+  speech.** The `none` rule is for a noise no voice makes -- an impact, a door,
+  a whistle -- not for a voice arriving through a speaker. The existing note
+  about a jagged tail into a radio was right and the pass did not apply it to a
+  juke box.
+- **THE TYPE PROPOSALS WERE ALL CONFIRMED, AND THE REVIEW FOUND FIVE MORE.**
+  Every one of the pass's six type corrections on Atlantis and its one on Raffle
+  Reversal stood, including `SOB!` and a pigeon's `HIC!` going
+  `sound_effect -> dialogue`, `1313` going `sound_effect -> background`, and two
+  pink time captions going `dialogue -> narration`. **Keep proposing both
+  directions** -- the five the review added were all ones the pass had looked at
+  and left alone.
+- **BUT THE SPEAKER ON A CONFIRMED TYPE CAN STILL BE WRONG.** 166 g8: the pass
+  moved the pigeon's `HIC!` to dialogue, which was right, and gave it
+  `other:the pigeon`, which was not -- the review made it **Scrooge**. Getting
+  the type argument right is not evidence about whose voice it is.
+- **DRAWN `$` AND `?` DEVICES ARE LETTERING, AND THE AUDIT CANNOT FIND THEM FOR
+  YOU.** The pass added six ungrouped devices (a `!` on 157 p7, where the panel
+  had no text at all; a winged `$` and a `!` on 178; `DINER` and `CAFE` on the
+  178 arcade; a `!` on 180 p8) and the review then added **four more** the pass
+  had walked past -- `$ $ $ $ $ $ $` on 158 p6 and 183 p8, `$ $ $` on 159 p2,
+  `?` on 173 p8. `audit_missed_text.py` only ever sees what `visible_text`
+  holds, so a device the pass never noticed is invisible to it twice over.
+  **Sweep each page for bare devices while writing the capture, not afterwards.**
+- **AND *TURKEY TROT AT ONE WHISTLE* IS STILL OPEN.** A corpus-wide
+  `vision-corrections` run at the end of this batch returned exactly six
+  outstanding across 460 titles, and all six are Turkey Trot's type corrections
+  from the thirty-ninth batch. The previous section said to hand the corrections
+  queue back in the same message as the speaker queue; it was, and they still
+  did not get worked. **Say the count out loud in the hand-back, not just the
+  path.**
+
+**On the cheap side, two levers did work and are worth reaching for first.**
+Atlantis's `UNCA SCROOGE` / `UNCLE SCROOGE` split held on all 19 occurrences and
+settled every off-panel adult line for nothing; the review corrected none of the
+calls that rested on it. And a title-wide `heads.py` census run in one process
+(about 90 seconds for 242 panels) is what found that the caps come and go by
+setting -- worth the wait on any title where the boys drift in and out.
+
+**A process note against the pass, not the reading.** The first title-wide
+census on Atlantis was piped through `tail -140` and silently lost its first 21
+pages, which made eleven pages look like the only ones carrying cap ink. It was
+caught and re-run unfiltered before any absence claim was written, but it is the
+same filtered-view trap the roster names, arrived at from a different direction:
+not a shell filter dropping a band, but an output limit dropping the beginning.
+**Write a long census to a file and read the file.**
+
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
