@@ -3983,16 +3983,16 @@ not a shell filter dropping a band, but an output limit dropping the beginning.
 ### Findings to paste into the next run (2026-09-08, forty-first batch, all three titles reviewed and mirrored)
 
 *Flour Follies*, *The Price of Fame* and *Midgets Madness*, all Vol. 15, all
-three reviewed and mirrored. Flour Follies and The Price of Fame end clean on
-every gating check; Midgets Madness is mirrored but **152 of 162 reviewed** and
-still carries one unconfirmed type proposal, for the renumbering reason below.
+three reviewed and mirrored, all three at **every group reviewed on both
+engines**. One type proposal is still unconfirmed on Midgets Madness (093 g7,
+`narration -> sound_effect`), which is a review decision and not a pass one.
 
 ```
                        real corrections    nephew domain          highs
 Flour Follies       0 of 122   0.0%     0 of   9   0.0%    0 of 122   0.0%
 The Price of Fame   2 of 137   1.5%     2 of  60   3.3%    2 of 137   1.5%
-Midgets Madness    12 of 152   7.9%     7 of  35  20.0%   12 of 152   7.9%
-    batch          14 of 411   3.4%     9 of 104   8.7%   14 of 411   3.4%
+Midgets Madness    14 of 152   9.2%     9 of  35  25.7%   14 of 152   9.2%
+    batch          16 of 411   3.9%    11 of 104  10.6%   16 of 411   3.9%
 ```
 
 **Every call in the batch was written `high`, so there is no medium-against-high
@@ -4008,7 +4008,7 @@ away. A pass that hedges nothing gives the reviewer no ranking to work down.
   the whole fan drifted one boy left* -- and then rejected it because the other
   two tails looked clean. The review moved all three exactly one boy right:
   `other:a spectator -> Dewey`, `Dewey -> Huey`, `Huey -> Louie`. **Three of the
-  batch's fourteen corrections are that single decision.** A tail landing on
+  batch's sixteen corrections are that single decision.** A tail landing on
   nobody is the tell, and the other tails in the same fan looking clean is what
   the offset does -- it is not evidence against it. Apply the shift and flag the
   fan as a set so a reviewer can flip it in one go.
@@ -4073,20 +4073,41 @@ away. A pass that hedges nothing gives the reviewer no ranking to work down.
   strands later queue entries; this is the first batch to see it at scale.
   **After a review that added groups, count `speaker_reviewed` against the NEW
   total, never the pass's, and re-issue a straggler queue before calling the
-  title done.** The ten stragglers here are an artefact, not unfinished
-  judgement: every one still carries the pass's own value.
+  title done.** Worth doing rather than waving through: the ten looked like
+  pure artefact -- every one still carried the pass's own value -- and when the
+  queue was worked, eight were confirmed as written and **two were a swap**, the
+  095 pair below. A straggler queue is not a formality.
+- **THE SKY BETWEEN A BALLOON AND THE HEADS UNDER IT MAKES WEDGES THAT LOOK
+  EXACTLY LIKE TAILS.** *Midgets Madness* 095 g13 and g14 came back as a clean
+  swap, `Huey <-> Louie` and `red <-> green`, and both are one misread. On 095
+  p8 the balloon sits directly above two boys, and the background shows through
+  either side of the real tail as two clean downward wedges; the pass traced one
+  of THOSE, which moved the tip 20-30px left, out of the red boy's head+beak
+  span (starting x347) and into the gap, and the gap then got resolved by
+  direction to the green boy. **The tail is the wedge that is BALLOON-coloured
+  and continuous with the balloon fill; the decoys are sky-coloured.** That
+  costs nothing to check and it is decisive at 2-3x.
+- **AND ON THE FACING PANEL, THE TIP WAS RIGHT AND THE DIRECTION WAS READ
+  BACKWARDS.** 095 p7's tail is a long wedge pointing down-LEFT at the
+  green-banded boy; the pass put the tip in about the right place and then gave
+  it to the head sitting under it. That is the same mechanism as *The Price of
+  Fame* 077 g5, where the wedge points down-left at the red boy and the pass
+  took the head beneath the tip. **Three of this batch's sixteen corrections are
+  a tip in a gap given to the nearer head instead of the head the wedge points
+  at** -- the roster rule already says the nearer head is not the answer, and it
+  was broken three times in one batch.
 - **THE `other:` VALUES HELD ACROSS 411 GROUPS.** No drift, no near-duplicates
   and no new singletons; the review added none of its own. The one to watch on
   a re-read is *Midgets Madness*'s `other:the judge` against
   `other:a second race judge` -- two men in identical brown jackets and JUDGE
   badges on 094 p5, separated only by the yellow cap.
 
-**And the zero is worth as much as the 7.9%.** *Flour Follies* returned **0 of
+**And the zero is worth as much as the 9.2%.** *Flour Follies* returned **0 of
 122** because it has nine nephew groups in the whole title and dresses its
 adults apart -- a bald moustached man in tails, a blonde in a green skirt,
 Scrooge in red -- so every call rests on a tail into an unambiguous figure.
 *Midgets Madness* put three boys, four separately-costumed adults and a
-silhouetted crowd into the same frames and posted 7.9% with a 20% nephew
+silhouetted crowd into the same frames and posted 9.2% with a 25.7% nephew
 domain. **The rate tracks how much SEPARATING a title demands -- of nephews from
 each other, of adults from adults, and now of nephews from the crowd behind
 them.**
