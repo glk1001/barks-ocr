@@ -3866,8 +3866,9 @@ reading a title demands, not how long it is.**
 
 *Raffle Reversal* (Vol. 15) and *The Secret of Atlantis* (Vol. 12), both
 reviewed and mirrored. Raffle Reversal clean on every gating check at 142/142;
-Atlantis mirrored at **395/397** -- two groups the review never reached, 171 g0
-and 173 g9, handed back in `queue-stragglers.txt`.
+Atlantis first mirrored at 395/397, then finished at **397/397** once the two
+groups the review had not reached, 171 g0 and 173 g9, came back confirmed as
+the pass wrote them. Both titles end clean on every gating check.
 
 ```
                        real corrections    nephew domain          highs        mediums
@@ -3943,13 +3944,25 @@ none and the reviewer said so.
   `?` on 173 p8. `audit_missed_text.py` only ever sees what `visible_text`
   holds, so a device the pass never noticed is invisible to it twice over.
   **Sweep each page for bare devices while writing the capture, not afterwards.**
-- **AND *TURKEY TROT AT ONE WHISTLE* IS STILL OPEN.** A corpus-wide
-  `vision-corrections` run at the end of this batch returned exactly six
-  outstanding across 460 titles, and all six are Turkey Trot's type corrections
-  from the thirty-ninth batch. The previous section said to hand the corrections
-  queue back in the same message as the speaker queue; it was, and they still
-  did not get worked. **Say the count out loud in the hand-back, not just the
-  path.**
+- **AND THE CORPUS IS NOW CLEAN, WHICH TOOK TWO BATCHES IT SHOULD NOT HAVE.**
+  A corpus-wide `vision-corrections` run at the end of this batch returned
+  exactly six outstanding across 460 titles, and all six were *Turkey Trot at
+  One Whistle*'s type corrections from the thirty-ninth batch -- proposed,
+  handed back in a queue file, reported again in the close-out, and still not
+  worked. They were finished in this batch and the corpus now reports **nothing
+  outstanding across 460 titles**.
+- **THE INSTRUMENT FOR THAT IS `vision-corrections --type --confirm-all`, AND
+  IT IS WHY THE BACKLOG EXISTED.** Agreeing with a proposed type changes no
+  value, so unless the editor's type popup is opened and saved on every entry a
+  whole review can be walked and leave nothing on disk -- the tool's own
+  docstring records 52 corrections checked and 0 stamped. **A reviewer who
+  agrees with the whole queue should be told that flag exists**, scoped with
+  `--title`; it is the only bulk path and it is deliberately type-only.
+- **AND A CONFIRMED SPEAKER DOES NOT CARRY THE TYPE WITH IT.** All three Turkey
+  Trot groups already had `speaker_reviewed` on `other:the turkeys` -- a human
+  had agreed turkeys make the noise -- while `type_reviewed` stayed absent for
+  two batches. The two review states are independent in both directions, and
+  the speaker being signed off is the reason nobody noticed.
 
 **On the cheap side, two levers did work and are worth reaching for first.**
 Atlantis's `UNCA SCROOGE` / `UNCLE SCROOGE` split held on all 19 occurrences and
