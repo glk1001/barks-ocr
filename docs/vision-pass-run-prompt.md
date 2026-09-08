@@ -5171,6 +5171,59 @@ sets **`HOW` plain and `DEE` heavy inside the one word**, three times in this
 story (056 g16, 058 g3, 059 g4). A ratio between the two populations is worth a
 crop before it is called clean.
 
+**Three more Vol. 15 titles, read 2026-09-08, and all three put the green in
+`leafgrn`.** *Fix-up Mix-up*'s H153.6 green is now the exception in this
+volume, not the rule: every title measured since lands at H109-116, so on a
+Vol. 15 title `green: 0` should be read as *the band is empty*, not as *no
+green cap*.
+
+| title | reference panel | red (Huey) | green (Louie) | blue (Dewey) |
+|---|---|---|---|---|
+| *Flour Follies* | 066 p2, three boys leaping along a wall | `#c4292f` H357.7 S0.79 dim, `#de1b1f` elsewhere | `#4fa340` **H110.9** S0.61 | `#05a6d5` H193.6 S0.98 |
+| *The Price of Fame* | 077 p6, the only frame that prints all three | `#e51a20` H358.5 S0.89 | `#5b9757` **H116.2 S0.42** | `#10a1c1` H190.8 S0.92 |
+| *Midgets Madness* | 095 p8, two heads in close-up | `#e61b1f` H358.8 S0.88 | `#4da33f` **H111.6** S0.61 | `#00a5d7` H194.0 S1.00 |
+
+**The bands are small and often shaded below capwide's own floors.** On *Flour
+Follies* 070 p6 the plain census returns `green: 0` and no red on any head, and
+probing the three crowns finds green 77px `#248a47`, red 221px `#de1b1f` and
+blue 61px `#06a5d4` -- three clean roster inks, none of which the screen saw.
+*The Price of Fame*'s green at **S0.42** sits barely above capscan's 0.40
+saturation floor, and a per-panel band sweep of that whole title finds `leafgrn`
+on exactly three panels out of eighty. **Probe the crown before writing any
+absence on a Vol. 15 title.**
+
+**THE CAPS COME OFF INDOORS, AND *The Price of Fame* IS ALMOST ALL INDOORS.**
+Six of its seven named nephews come from one page's four outdoor panels; the
+other forty nephew groups are collectives forced by the art, with capscan
+returning 0 blob(s) total in every band on most indoor panels. *Flour Follies*
+is the same shape at smaller scale. Establish which way a Vol. 15 title runs
+from one indoor panel and one outdoor panel before page 1 -- and note that
+*Midgets Madness* is the reverse case, outdoors at a fairground for ten pages,
+and yields 21 names.
+
+**Four decoys measured on a nephew's own head in these three titles**, all of
+them ink of a roster colour sitting exactly where a band would:
+
+| decoy | title | what it is |
+|---|---|---|
+| `#00a5d7` H194.0 S1.00, a=1025-1263 | *Flour Follies* 070 p6, 072 p5 | **Scrooge's top hat carries a Dewey-blue band**, larger than every nephew band on the page put together |
+| red diamond, a=506-646 | *Midgets Madness* 087 p4, 090 p5 | **Donald's lavender crash helmet**, and the racing men wear the same helmet |
+| `#009e49` H147.7 S1.00 | *Midgets Madness* throughout, *The Price of Fame* 082/083 | the foliage green, seven degrees off the cap's leafgrn and fully saturated -- and on 082 p8 it is an **ICE BAG on a nephew's head** |
+| `#a04453` H350.2 S0.57 | *Flour Follies* 066 | the brick wall, in the red band at head height for a whole page |
+
+Add to them *The Price of Fame* 085 p2, where the head census hangs red on all
+three boys at once: those blobs sit at y181-214, above every skull top at
+y273-278, and are the striped awning behind them.
+
+**Two balloon shapes worth knowing in this volume.** Barks letters SINGING in a
+balloon with a bumpy outline and no bubble trail -- *The Price of Fame* 078 g9
+comes through a closed door's KEYHOLE that way, and 079 g5 joins Donald's head
+directly. That is `dialogue`, not `thought`; the thought balloons in the same
+titles have a cloud-scalloped edge AND a trail of separate outlined bubbles, and
+the two are told apart at 1.0x. The same bumpy outline carries an ENGINE on
+*Midgets Madness* 095 g8, where the marks between the balloon and Donald are
+sweat drops rather than bubbles and his beak is shut.
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —
