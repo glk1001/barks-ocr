@@ -3727,7 +3727,7 @@ other single signal available to the pass.
   and *The Hammy Camel* 123 of 124. Count `speaker_reviewed` on both engines
   before mirroring; neither title could be mirrored on the day.
 
-### Findings to paste into the next run (2026-09-08, thirty-ninth batch, Turkey Trot reviewed)
+### Findings to paste into the next run (2026-09-08, thirty-ninth batch, both titles reviewed)
 
 *Turkey Trot at One Whistle* (Vol. 15) and *The Menehune Mystery* (Vol. 12).
 Turkey Trot reviewed and mirrored, clean on group count, `speaker_reviewed`,
@@ -3807,6 +3807,60 @@ batches and this pass gave the reviewer none of it.
 `SLAP!` lettered across the whole frame and had no group at all on either side.
 Panels holding nothing but display lettering are where this happens -- the
 panel had no other text for the engines to anchor on.
+
+
+**Menehune came back at 1.8%, the best rate on record, and the contrast with
+Turkey Trot's 25.0% nephew domain is the useful part.**
+
+```
+                        real corrections   nephew domain            highs
+Turkey Trot        6 of 113   5.3%      6 of  24  25.0%     6 of 113  5.3%
+Menehune           7 of 398   1.8%      4 of  72   5.6%     7 of 398  1.8%
+    batch         13 of 511   2.5%     10 of  96  10.4%    13 of 511  2.5%
+```
+
+Menehune is 32 pages against Turkey Trot's 10 and took 1.75 images per page
+against 3.7, and it still corrected less than a third as often per group.
+The difference is not care, it is **what the art offered**: Menehune has no
+cap to misread on 31 of its 32 pages, so the pass mostly had to choose between
+adults, which it does well. Turkey Trot had readable bands and the pass got
+four of them wrong by cropping badly. **The error rate tracks how much cap
+reading a title demands, not how long it is.**
+
+- **A CHAIN BUILT ON ONE TRACED TIP FAILS WHOLE.** *Menehune* 141 p7/p8 came
+  back INVERTED END TO END -- three groups, all three wrong. The pass traced
+  one tail ("down to a tip on Donald's head, blue sailor cap"), assigned the
+  other balloon by elimination from it, and then assigned the next panel from
+  that. One measurement, three calls, and when the measurement went the wrong
+  way all three followed. **Where a panel has two balloons, trace BOTH before
+  chaining a third off either.** Elimination is only as good as the single
+  reading it eliminates from.
+- **A NAME DERIVED AND THEN ARGUED AWAY IS THE CHEAPEST CORRECTION THERE IS.**
+  *Menehune* 122 g9 went `Donald -> Louie`. The pass's own note had already
+  worked out that the left boy is Louie -- red and blue bands probed on the
+  other two, so the third is his by elimination -- and then declared the tail
+  off-panel because it "ended against a blank green wall with no figure near
+  it". It reaches him. This is the thirty-eighth batch's *use the evidence you
+  wrote* finding again, and it is now the second batch running where the single
+  most expensive nephew error was a name the pass had already assembled.
+- **TRANSCRIBE THE WHOLE OF A COSTUME LABEL, NUMBER AND ALL.** Five of the
+  review's seven added groups on *Menehune* are Beagle Boy number plates the
+  pass never noticed, and two more are corrections of plates it DID group but
+  transcribed as bare `BEAGLE BOYS` when the art reads `176-761 BEAGLE BOYS,
+  INC.`. The digits sit in a separate yellow tab above the jersey word, so they
+  read as a different object and get dropped. On a Beagle Boys title the plates
+  are the most numerous piece of background lettering on the page -- twenty-odd
+  groups in this one -- and they are searchable text.
+- **ALL NINE PROPOSED TYPE CORRECTIONS WERE CONFIRMED**, including the five
+  bird cries on 138 and the boys' whispered `BZZT BZZT` on 149. The
+  voice-versus-machine test is holding; what still needs saying is the reverse
+  direction, `142 g2 dialogue -> background`, a chest number plate stored as
+  speech. **Both directions are worth proposing.**
+- **TURKEY TROT'S SIX TYPE CORRECTIONS WERE NOT WORKED AND ARE STILL OPEN**
+  while Menehune's nine were all confirmed in the same sitting. The speaker
+  queue and the corrections queue are separate files and a title can finish
+  113/113 on one with the other untouched -- which is exactly what happened.
+  Hand back the corrections queue path in the same message as the speaker one.
 
 ## Per-volume cap palette
 
