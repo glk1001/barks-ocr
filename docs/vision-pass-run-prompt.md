@@ -4350,6 +4350,106 @@ them, not the ones with unusual casts.
 
 
 
+### Findings to paste into the next run (2026-09-09, forty-fourth batch, ALL FOUR REVIEWED AND MIRRORED)
+
+Replaces the pass-only numbers in the section below it. Four Vol. 15 titles,
+40 pages, 500 groups after four review adds. **35 genuine speaker corrections
+in 500 = 7.0%** -- but **33 of the 35 are in the nephew domain, which is 33 of
+151 = 21.9%**, twice the reviewer's stated tolerance:
+
+| title | groups | nephew domain | named | corrections | rate |
+|---|---|---|---|---|---|
+| Too Safe Safe | 116 | 3 | 0 | 2 | 1.7% |
+| Search for the Cuspidoria | 125 | 30 | 19 | 9 | 7.2% |
+| New Year's Revolutions | 134 | 77 | 46 | 17 | 12.7% |
+| Iceboat to Beaver Island | 125 | 41 | 25 | 7 | 5.6% |
+
+**The rate is a function of nephew density and nothing else** -- 3, 30, 77 and
+41 nephew groups against 1.7%, 7.2%, 12.7% and 5.6%. Everything outside that
+domain was right: two corrections in 349 non-nephew groups.
+
+- **WRITING EVERYTHING `high` WAS A MISTAKE, AND NOT THE ONE THE LAST THREE
+  BATCHES WARNED ABOUT.** Acting on "medium is not a hedge", this batch wrote
+  **no medium or low anywhere in 500 groups** -- and then 21.9% of the nephew
+  domain was wrong. Confidence carried no information at all, so a reviewer
+  could not triage by it and had to check every call. The finding those
+  batches actually support is *spend the crop instead of writing a medium*,
+  not *write high regardless of what the crop showed*. **A tip that lands in a
+  gap, a tail-less balloon resolved by ordering, and a fan read against
+  reading order are all still `medium`** -- they are exactly the three shapes
+  that were reversed here.
+- **THE TIP IS NOT WORTH WHAT THIS BATCH PUT ON IT.** Of the 35, **eleven** are
+  a name the pass measured a tail onto: 6 over-namings (a name -> `nephews`)
+  and 5 of the 7 attribution swaps. Every one has a pixel margin written into
+  its note. Against that, 14 are under-namings the review named off the cap row
+  with no tail at all. **The cap row outperformed the traced tip in both
+  directions in this batch.** When a panel's caps read cleanly left to right,
+  rank the balloons against the caps FIRST and use the tip only to break a tie.
+- **A FAN IS EVERY BALLOON IN THE PANEL, NOT THE ONES THAT LOOK LIKE A SET.**
+  Cuspidoria 151 p3 has five balloons over three boys; the pass treated the
+  three cry balloons as a closed fan, found one tip in a gap, invoked the
+  offset-fan rule and used reading order. The review used the measured tips --
+  which is what the pass's own crop had already said -- and the two upper
+  balloons took the remaining boys, so nobody was skipped. **Count the
+  balloons before deciding a boy has been skipped.** Four of that page's five
+  groups were corrected.
+- **"NO CAP INK IN THE PANEL" IS NOT A REASON TO DECLINE.** Ten of the 14
+  under-namings are New Year's Revolutions, seven of them on page 159 alone,
+  where the pass wrote *three specks in the distance*, *the head census finds
+  no cap ink in the panel at all*, and *the boys are packed at the left*. The
+  review named all seven. On a title whose caps are the easiest in the volume,
+  a census miss is a threshold, not an absence -- probe the crowns.
+- **A LONE BLUE-CAPPED DUCK IS NOT DONALD, TWICE IN ONE BATCH.** Cuspidoria
+  147 g9 and Iceboat 167 g5 both went `Donald` -> `Dewey`. Both notes say
+  "Donald alone" / "Donald pointing", and both titles' own palette entries --
+  written by the same pass -- say Donald's cap prints the nephews' blue. Size
+  the head before writing the name; the ink cannot do it.
+- **THE PASS MISSED THREE PIECES OF LETTERING OUTRIGHT, AND THE AUDIT COULD
+  NOT HELP.** The review added `WINK WINK` inside the signal-lamp flash
+  (Cuspidoria 154), `POOF` lettered in flame shapes (Iceboat 173) and `ZOW` in
+  the snow spray (Iceboat 174). None was in any page's `visible_text`, so the
+  diff had nothing to compare. **Sound effects drawn INTO the art -- inside a
+  flash, a flame or a spray, in the shape of the thing -- are the class the
+  pass reads past.** Look for them wherever a panel has a burst.
+- **AND IT MISSED TWO MORE DEVICES OF A CLASS ALREADY IN THE FINDINGS.**
+  Cuspidoria 152 g3 is thirteen drawn dollar signs round Scrooge's head; the
+  pass described them in the neighbouring group's note and did not box them.
+  That is the third batch running for "the reviewer adds bare devices and the
+  pass never does". The one the pass DID add -- Too Safe Safe 141's bare `?` --
+  was confirmed unchanged, so the fix works when it is applied.
+- **`review_findings --since` OVER-REPORTS THREE DIFFERENT WAYS.** Raw output
+  said 13 / 17 / 9 / 3; the true figures are 9 / 17 / 7 / 2. Three causes,
+  all worth knowing:
+  1. **A review's own added groups** count as corrections, `unknown` -> their
+     value. Six across the batch.
+  2. **An added group renumbers the page**, and `--since` diffs by id, so a
+     stale field on a shifted group reads as fresh. Cuspidoria 152's single
+     "type correction" was a 2026-08-15 adjudication that moved from g5 to g6.
+  3. **A ratification looks exactly like a correction.** Iceboat 169 g13/g14
+     were already `dialogue` at the pass commit; the review only stamped
+     `type_reviewed_date`. Same shape as the forty-third batch's 13.
+  **Real type corrections across the whole batch: zero.** Check `type` against
+  the pass commit before quoting any type number.
+- **THE OFF-BY-ONE STRAGGLER IS CAUSED BY THE ADD.** Two titles finished one
+  group short, and in both the straggler was the last id on the one page that
+  had gained a group -- Cuspidoria 152 g9, Too Safe Safe 145 g10. Titles with
+  no adds (New Year's Revolutions, Iceboat) finished complete. Check the pages
+  that grew, not the whole title.
+- **A `text_ok: true` WITH THE PROBLEM IN ITS OWN NOTE.** New Year's
+  Revolutions 157 g10 stored `CAT RAT`; the pass cropped it, wrote *"the final
+  T of RAT is partly hidden behind an arm"* into the note, and marked
+  `text_ok` true instead of proposing `corrected_text`. The review retyped it
+  `CAT RA`, which then raised a near-miss the ignore list cannot suppress,
+  because the page's `visible_text` still claimed the T. Both are fixed. The
+  measure-then-vote-against error is not confined to the speaker field.
+- **CORPUS SWEEPS AFTER ALL FOUR MIRRORS.** `vision-corrections` with no
+  title: **2 outstanding across 460**, both the forty-third batch's `CAFE` ->
+  `CAFÉ` on Cibola 017. `speaker-queue --unreviewed --confidence low,medium`
+  with no title: **9 across three already-reviewed titles**, unchanged --
+  Sheriff of Bullet Valley 5, The Big Bin on Killmotor Hill 2, The Victory
+  Garden 2, in `~/barks-vision/queue-corpus-lowmed-2026-09-09.txt`.
+
+
 ### Findings to paste into the next run (2026-09-09, forty-fourth batch, PASS ONLY -- not yet reviewed)
 
 Four Vol. 15 titles, 40 pages, **493 groups**: *Too Safe Safe* 116, *Search for
