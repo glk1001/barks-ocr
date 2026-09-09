@@ -45,6 +45,7 @@ divis
 docstrings
 dotenv
 dumbells
+emcheck
 entr
 ents
 etype
