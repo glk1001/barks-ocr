@@ -4116,6 +4116,133 @@ them.**
 1.7 and 2.6 by title. Two of Flour Follies' were re-dos after coordinates were
 eyeballed off a stacked strip rather than scaled from a census box.
 
+### Findings to paste into the next run (2026-09-09, forty-second batch, all four titles reviewed and mirrored)
+
+*Salmon Derby* and *Cheltenham's Choice* (Vol. 15), *Tralla La* and *Outfoxed
+Fox* (Vol. 12). All four reviewed, mirrored, and at **every group reviewed on
+both engines** -- the three one-group stragglers left open after the first
+three reviews were all reviewed later and the reviewer **agreed with all
+three**, changing nothing but the stamp.
+
+```
+                        real corrections      nephew domain          highs         mediums
+Salmon Derby           2 of 122   1.6%      2 of  34   5.9%    2 of 119  1.7%    0 of  3
+Tralla La             14 of 270   5.2%     12 of  38  31.6%   12 of 257  4.7%    2 of 13
+Outfoxed Fox           8 of 119   6.7%      8 of  19  42.1%    8 of 119  6.7%    0 of  0
+Cheltenham's Choice   19 of 144  13.2%     18 of  47  38.3%   18 of 141 12.8%    1 of  3
+     batch            43 of 655   6.6%     40 of 138  29.0%   40 of 636  6.3%    3 of 19
+```
+
+**32 of the 43 are one class: a collective the review named.** Three run the
+other way. The flag still ranks -- 15.8% of mediums corrected against 6.3% of
+highs -- but 636 highs against 19 mediums means the pass hedged almost nothing,
+and every one of the 32 under-namings was written `high`.
+
+- **THE PRINTED BLOB LIST IS NOT THE ABSENCE TEST. THE COUNT IN THE BAND HEADER
+  IS.** *Salmon Derby* 097 g13 was written `nephews` on an explicit "no red on
+  any head" -- read off a `tail -18` of the census. The band header on that same
+  run said `red: 18 blob(s)`, and the boy's band was 54px, below `capwide.py`'s
+  **top-8-per-band print limit**. The absence was never in the data; it was in
+  the view. `capwide` prints eight blobs and counts all of them: quote the
+  `N blob(s)` header for every band, per panel, and never write an absence from
+  a piped or truncated list.
+
+- **`title_heads.py` IS A FLOOR ON THE FIGURES, NOT A CENSUS.** *Tralla La* 207
+  g7 was given to Louie because "only one boy is in the panel" -- from
+  `title_heads`, which needs a white skull and so cannot see a duck in
+  silhouette. `capwide` on that panel returns `red: 3 blob(s)`, the largest 586px
+  of clean `#e61b1f`. The review made it Huey. A head count that comes back
+  low is a statement about skull pixels.
+
+- **THE CORRECTIONS ARE ON THE PANELS THAT WERE NOT OPENED.** *Outfoxed Fox*
+  is the clean experiment: **all 9 of its corrections fell on panels the pass
+  never opened, and all 7 groups on panels it did open survived review.** It had
+  the batch's lowest image spend and, of the first three titles, its highest
+  correction rate. The image that is not spent is not saved; it is deferred to
+  the reviewer.
+
+- **ON THE FOURTH TITLE THE CAP INK WAS RIGHT IN BOTH DIRECTIONS AND THE TAIL
+  REASONING WAS WRONG IN BOTH.** *Cheltenham's Choice* posted the batch's worst
+  rate at 13.2%, and it splits cleanly: **12 of its 14 under-namings had a
+  measurable band on a head that the pass declined** as too small, too far, or
+  unseparated by a tail -- and **both of its over-namings named a boy off a clean
+  band under a balloon with no tail at all**. The colour was never the thing
+  that failed. What failed was treating a balloon's span as a tail, in both
+  directions.
+
+- **A SELF-CONTRADICTING NOTE IS A CORRECTION WAITING TO HAPPEN.** Three times
+  in this batch the pass wrote the disqualifying sentence into its own note and
+  then made the call anyway, and all three were reversed: *Tralla La* 194 g1
+  ("a box over a figure is not a tail"), *Cheltenham's Choice* 115 g1 ("a
+  balloon sitting over a figure is not a tail, which is why this is medium"),
+  and *Tralla La* 204 g3, which cited a precedent giving `YE CATS` to Donald and
+  then gave it to Scrooge. **If the note contains the reason the call is wrong,
+  the call is wrong.**
+
+- **THE H165-180 TEAL DOES NAME SOMEBODY -- AMEND THE PREVIOUS ENTRY.** The
+  section committed the day before recorded a recurring teal at H165-180 as ink
+  that "names nobody". *Cheltenham's Choice* 113 g5 has exactly two bands, red
+  `#e51a20` H358.2 and teal **`#07a29f` H178.8**, and the review named **Dewey**
+  off the teal. On 115 g1 the left boy's **`#2fa37c` H159.8** stood against a
+  clean `#4da33f` H111.6 and the review declined to take the green, making the
+  group collective. **The cool band is a shaded roster cap, not a decoy.** Treat
+  H160-180 on a crown as a desaturated Dewey blue or Louie green to be resolved
+  by a crop -- not as ink belonging to nobody.
+
+- **ONE TITLE PRINTED LOUIE'S BAND ACROSS FOUR DIFFERENT GREENS.**
+  *Cheltenham's Choice*: H128 on 107 p4, H123 on 108 p4, H111 on 110 p7, and
+  **H147.7** on 111 p7 -- the last being the volume's own foliage green, and
+  still unmistakably a broad band on a black crown. A per-title green measured
+  once from a reference panel is a starting point, not a filter.
+
+- **WORTH A RE-READ: *Cheltenham's Choice* 112 p8.** The panel carries two
+  bands, green `#4da33f` H111.6 at 139px and blue `#07a4d4` H194.0 at 133px. The
+  review named **Dewey** -- the blue boy -- but stamped `cap_colour: green`. The
+  name and the recorded ink disagree under the volume's own convention.
+
+- **REGISTER REASONING LOST AGAIN, TO AN ANIMAL.** *Cheltenham's Choice* 113
+  g13, `Donald -> other:the mynah bird`. The note argued the insult was
+  "affectionate and it is his own thought that follows" -- about a talking bird
+  that has its own balloons on five other groups in the same title.
+
+- **A COSTUME KEY WAS OFFERED AND REJECTED, AND IT WAS REAL.** *Tralla La*
+  198/199: the pass considered red/green/yellow flying suits as a per-boy key
+  and rejected it. The reviewer's note reads **"Yellow costume for Dewey"**.
+
+- **MISSED TEXT: 3 items in 52 pages**, and two of them are bare punctuation
+  devices over a figure -- *Salmon Derby* 102 g14 `! ! !` over three boys in a
+  panel never opened, and *Outfoxed Fox* 214 g12 `$ $ $` over Donald digging.
+  The third is *Tralla La* 200, where the review split one group into its two
+  sentences and gave the second to Louie. **The missed-text audit sweeps
+  `visible_text` the pass itself wrote, so it cannot catch a device the pass
+  never listed.** A wordless panel still needs the panel opened.
+
+- **TEXT CORRECTIONS REACH NO QUEUE.** All 4 were written straight into
+  `ai_text` with `text_ok` and `corrected_text` both null: `So-` -> `SO —`
+  (*Salmon Derby* 097 g11), `---` -> `...` (105 g1), `So!` -> `SO!` (*Tralla La*
+  190 g7), and `MILLIONS OF SHEKELS'` -> `MILLIONS OF SHEEP'S` (205 g13). Two of
+  the four are the same fault: a lowercase-plus-hyphen rendering of a shouted
+  capital and a dash. Diff `ai_text` against the pass commit at close-out;
+  `vision-corrections` will report nothing.
+
+- **TYPE: 0 CORRECTIONS, AND THE TOOL SAYS 13.** Every group carrying
+  `type_was` in this batch was the pass's *own* retype, ratified by the review
+  -- `type` unchanged, only `type_reviewed_date` stamped.
+  `review_findings.py --since` filters on that date, so an agreement and a
+  correction look identical in its "type corrections" list. **Read `type`
+  against the pass commit before quoting that number.**
+
+- **`barks-ocr-name-grep` CANNOT SEE A NEPHEW NAME**, reconfirmed: it reports
+  only non-dictionary tokens, so `QUICK, DEWEY!` (*Tralla La* 196 g5) never
+  surfaces. Read the addresses by eye at prep. The Vol. 12 `UNCA SCROOGE`
+  (a nephew) against `UNCLE SCROOGE` (Donald) split held on every occurrence in
+  both Vol. 12 titles.
+
+**Three kinds of call should stop being written `high`:** one backed by an
+absence, one made collective because no tail separated boys whose bands were
+measured, and any call on a panel that was not opened. All three are
+represented above, all three were reversed, and all three were `high`.
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
