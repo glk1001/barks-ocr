@@ -5562,6 +5562,60 @@ that story does not compete.
   HUEY/DEWEY/LOUIE as well as running name-grep.
 
 
+Vol. 15, two more titles read 2026-09-09, and on THESE two the saturation
+split that failed on *Salmon Derby* works:
+
+| title | reference panel | red (Huey) | green (Louie) | blue (Dewey) |
+|---|---|---|---|---|
+| *Travelling Truants* | 117 p4, three nightshirts in one frame | `#e51a20` | `#4da33d` | `#00a5d7` |
+| *Rants About Ants* | banded black crowns, outdoors only | `#e51a20` | `#4da33d` | `#00a5d7` |
+
+**The cap green prints S0.61-0.63 and the cap blue S0.96-1.00**, so an
+intermediate hue resolves on saturation rather than staying unreadable:
+`#08a182` **H167.8 S0.95** on *Travelling Truants* 120 p4 is inside the
+H165-180 dead band the Salmon Derby entry above says to give up on, but its
+saturation is the blue's and nothing like the green's. Those calls were made
+and held at **medium**, with the measured hue and saturation written into the
+note so a reviewer can overturn them in one look. Do not read this as
+cancelling the Salmon Derby rule: there the two inks were NOT separated by
+saturation, so measure the volume's own green before leaning on it.
+
+- ***Travelling Truants* carries two colour keys, not one.** Black crowns with
+  a coloured band outdoors, and nightshirts in the same three inks on the
+  bedroom page 117 -- whose panel 4 prints all three in one frame and is the
+  title's reference panel for that reason.
+- ***Rants About Ants* takes the caps off indoors** -- bare-headed through 126
+  and most of 128, banded crowns everywhere outdoors. Two panels print two
+  green bands and no blue (127 p6; 126 p9's balloon also carries two tail
+  points over three boys), so those groups stay collective.
+
+Vol. 14, established on *The Seven Cities of Cibola* 2026-09-09 and confirmed
+on *Million Dollar Pigeon*:
+
+| | |
+|---|---|
+| red (Huey) | `#e61b1f` H358.8 |
+| blue (Dewey) | `#00a4d7` H194.0 |
+| green (Louie) | `#4ca33e` H111.7 S0.62 |
+
+- **THE VOLUME-WIDE DECOY IS SCROOGE'S TOP HAT.** Its band prints `#00a5d5`
+  -- the roster blue, the same ink as Donald's sailor cap and Dewey's band --
+  so a blue blob at head height is his about as often as anybody's. It is in
+  the head census on six of *Million Dollar Pigeon* 036's eight panels.
+- **HIS COAT PRINTS `#e61b1f`, THE ROSTER CAP RED EXACTLY**, in blobs of
+  5,000-8,300px against a nephew band of a few hundred. On a Scrooge story in
+  this volume the largest red on the page is his coat, every time.
+- A saturated green near a figure need not be a cap or a leaf: on *Million
+  Dollar Pigeon* 037 p6 the 2,853px of `#009e49` **H147.7 S1.00** at the lower
+  left is the upholstery of his desk chair.
+- **THE Vol. 12 `UNCA SCROOGE` / `UNCLE SCROOGE` SPLIT DOES NOT HOLD HERE.**
+  Cibola 012 g1 is Donald saying UNCA with only Scrooge in the panel. Test the
+  split on the title in hand before spending it.
+- *Million Dollar Pigeon* has no nephews in it at all, so `cap_colour` is null
+  on all 42 of its groups. Check the cast before deriving a palette from a
+  title.
+
+
 ## The long form is retired
 
 Runs up to 2026-08-05 pasted a ~120-line prompt carrying every rule inline —

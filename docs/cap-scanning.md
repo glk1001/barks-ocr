@@ -170,3 +170,21 @@ skull falls outside the region it searches and is still the cap.
 
 Where even a low floor returns nothing, crop the crown at 3–6x and look before
 declining.
+
+## The head census only finds ducks
+
+`heads.py` and `title_heads.py` work from the white skull and the beak, so a
+character drawn as a **human** is invisible to them — no beak, no skull, no
+row. A panel that the census reports as holding one head can hold two figures,
+and the missing one can be the speaker.
+
+*Million Dollar Pigeon* (Vol. 14, 2026-09-09) has two such characters, the park
+policeman and the railway ticket agent, and between them they speak five
+groups. The census reports exactly one beak in 036 panel 5 — Scrooge's, with
+his blue-banded top hat above it — while the panel actually shows the agent
+filling its left half, leaning over the counter with the balloon tail running
+to him. Reading the census alone would have made him an off-panel voice.
+
+So a census row count is a count of **ducks**, not of figures. Use it to place
+the ducks you already know are there, and never as evidence that nobody else is
+in the panel: for that, open the panel or take the speaker from the line.
