@@ -4349,6 +4349,113 @@ them, not the ones with unusual casts.
   page and counting balloons against groups.
 
 
+
+### Findings to paste into the next run (2026-09-09, forty-fourth batch, PASS ONLY -- not yet reviewed)
+
+Four Vol. 15 titles, 40 pages, **493 groups**: *Too Safe Safe* 116, *Search for
+the Cuspidoria* 121, *New Year's Revolutions* 134, *Iceboat to Beaver Island*
+123. Every speaker call is `high`; **not one medium or low was written in the
+whole batch**, which is the previous three batches' finding acted on. The
+review will say whether that was earned.
+
+Nephew domain and how much of it got named:
+
+| title | nephew groups | named | collectives |
+|---|---|---|---|
+| Too Safe Safe | 3 | 1 (33%) | 2 |
+| Search for the Cuspidoria | 29 | 14 (48%) | 15 |
+| New Year's Revolutions | 77 | 40 (52%) | 37 |
+| Iceboat to Beaver Island | 40 | 26 (65%) | 14 |
+
+- **THE CHEAPEST THING IN THIS BATCH WAS A STACKED TAIL-BAND CROP.** Nearly
+  every name above came from one `stack.py` image carrying three or four
+  narrow strips -- the band between a panel's balloons and its heads, at
+  1.5-1.7x -- read against the head spans `title_heads.py` had already
+  printed. One image settled a whole page. The batch ran **2.6 images per
+  page** and named 81 of 149 nephew groups. Crop the BAND, not the panel:
+  a strip from the balloon bottoms to the tops of the caps is where every
+  tail lives and it costs a fifth of a panel view.
+- **COUNT THE TAILS BEFORE NAMING, BECAUSE A "WE" LINE USUALLY HAS THREE.**
+  Every `WE`/`OUR` line in this batch that I checked turned out to hang one
+  tail per boy: *New Year's Revolutions* 157 p1, p4 and p5, *Cuspidoria* 147
+  p1, *Iceboat* 171 p7, 173 p4, 175 p5 and 168 p8. Those are choruses and
+  stay `nephews` -- but the same crop is what names the single-tail balloons
+  beside them, so it is never wasted. **A three-tail balloon is not the same
+  finding as a crowded fan**; it is the art saying all three.
+- **A FAN OFFSET BY A CONSTANT IS STILL READABLE.** Twice the tips landed
+  short of their boys by the SAME amount -- *New Year's Revolutions* 158 p2
+  (66px and 61px left) and *Iceboat* 174 p2 (50px and 46px left) -- and in
+  both the offsets matching to within 5px is what made the mapping safe.
+  Measure every tip in the fan before deciding it has slipped: a consistent
+  offset names them, a ragged one does not.
+- **DONALD WORE A NEPHEW INK IN THREE OF THE FOUR TITLES.** His sailor cap is
+  `#00a5d7`/`#02a5d5` -- Dewey's exact band -- in *Too Safe Safe* and
+  *Cuspidoria*, he wears a blue winter cap in *New Year's Revolutions*, and in
+  *Iceboat* he wears a **maroon `#a04453` coat**, which is the ink Scrooge's
+  coat prints elsewhere in the volume and is the largest red on most of those
+  pages. Scrooge's top-hat band is `#04a4d5` in *Cuspidoria*. **On this volume
+  the largest blob of a roster colour is an adult's about as often as a
+  nephew's** -- size the head first, every time.
+- **TWO BLUE CAPS IN ONE PANEL IS A REAL CONFIGURATION.** *New Year's
+  Revolutions* 162 p2 has a blue-capped nephew in the foreground and a small
+  blue-capped figure on the slope, and the story's own logic (Louie is away
+  all afternoon) is the only thing that makes the second one Donald. Flagged
+  in the note; it is the batch's most likely wrong call.
+- **`leafgrn: 0` MEANT NOTHING ON ANY OF THE FOUR.** *Cuspidoria*'s band sweep
+  returns leafgrn 0 on 72 of 77 panels and the head census still finds clean
+  `#4da23f` H111 caps on 147 p5 and 150 p8. Probe the crown; do not read the
+  band totals as an absence.
+- **ONE TITLE PRINTS ITS CAP GREEN AT TWO HUES.** *Cuspidoria* gives `#4da23f`
+  H111 on 147 p5 and 150 p8 but `#3c907b` **H165.0 S0.58** on the splash --
+  inside the H165-180 dead band the Salmon Derby entry says to give up on. It
+  was resolvable only by elimination against the clean blue and red beside it
+  in the same row. Record the printed hex and say the call was made that way.
+- **THE CAPS COME OFF INDOORS, AND THAT IS MOST OF THE COLLECTIVES.** All 37
+  of *New Year's Revolutions*' collectives are indoor pages (160 entire, 161
+  p1-p3, 164 p2-p8, 165) plus two silhouette panels; *Iceboat* 168 p3-p7 is
+  the same. Say in the note which it is -- nothing printed, versus a cap
+  declined -- because the two look identical in a queue.
+- **A TITLE CAN NAME THE BOYS IN ITS OWN CAPTION.** *New Year's Revolutions*
+  161 p5 reads **"HUEY AND DEWEY GO TO WORK!"** over the pair doing the ski
+  tricks, and 161 p3 / 164 p2 name Louie in dialogue. That settled about
+  fifteen groups for nothing. Grep the narration boxes for HUEY/DEWEY/LOUIE
+  at prep alongside `name-grep`, which still cannot see them.
+- **A DEVICE OVER A GROUP IS STILL COLLECTIVE, AND THE PASS SHOULD ADD IT.**
+  Added one group this batch -- a bare `?` in a thought bubble over Donald on
+  *Too Safe Safe* 141 p1, which neither engine had. The reviewer-adds-devices
+  finding from the forty-third batch is acted on; keep looking on any panel
+  where somebody reacts without words.
+- **THE MISSED-TEXT AUDIT MISSED BOTH OF THIS BATCH'S REAL FINDINGS.** The
+  mailbox on *Too Safe Safe* 140 p1 reads `DON` / `DU`, cut off by the panel
+  frame, and `DON` is a substring of the DONALD already grouped on that page,
+  so the diff cleared it. `CUSPIDORIA` lettered along the wreck's hull on 155
+  p7 is the second-copy blind spot -- the same string is in the caption above
+  it. **Both are in the hand-back by hand.** A short or duplicated string is
+  invisible to the audit by construction; read the panel.
+- **`CUSPIDORIA` IS SET IN ITALIC EVERY TIME IT APPEARS** (149 g8, 152 g2/g6,
+  153 g1, 155 g0/g13). `allbold.py` measures stroke width and cannot see
+  slant at all, so a story's italicised proper noun has to be caught by eye
+  off the montage and then confirmed with one crop.
+- **THE BOLD CUT ON THIS VOLUME IS ABOUT 1.15, NOT 1.3.** Confirmed by crop
+  three times: `JOBS!` measured **1.16**, `TOO` **1.28** and `FIFTY` **1.30**
+  and all three are plainly bold. And `allbold`'s word-to-blob pairing is
+  wrong often enough to matter even on a line it marks `=`: on *Too Safe Safe*
+  140 g10 it put 1.47 on STRONGER when the crop shows **WAX** is the bold word
+  and STRONGER is not.
+- **A SHIVER IS A VOICE.** Two type corrections, *Iceboat* 169 g13/g14 `BRR!`
+  from `sound_effect` to `dialogue`, because the identical lettering on 170 is
+  already stored as dialogue and because a shiver comes out of a body. The
+  rats take it as speaker; their `CHOMP!`/`GNAW` stay `sound_effect` with the
+  rats named, which is the Going Buggy boundary.
+- **CORPUS SWEEPS, RUN AT THE END OF THE BATCH.** `vision-corrections` with no
+  title: **6 outstanding across 460 titles** -- this batch's 4 (169 g13/g14 on
+  both engines) plus 2 from the forty-third, `CAFE` -> `CAFÉ` on *The Seven
+  Cities of Cibola* 017 g1. `speaker-queue --unreviewed --confidence low,medium`
+  with no title: **9 groups across three already-reviewed titles** -- *Sheriff
+  of Bullet Valley* 5, *The Big Bin on Killmotor Hill* 2, *The Victory Garden*
+  2 -- written to `~/barks-vision/queue-corpus-lowmed-2026-09-09.txt`.
+
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -5631,6 +5738,38 @@ heads on 100, 101 and 104; on *Cheltenham's Choice* the bayou is the same ink
 at 1729px directly under a nephew's chin on 108 p4. Both are more saturated
 than any nephew band on their pages. And Gladstone's `#00a5d7` hat is in two
 thirds of Salmon Derby's panels, on top of Donald's sailor cap in the same ink.
+
+Vol. 15, the four titles read 2026-09-09 (forty-fourth batch). All four use the
+volume's leafgrn cap green and its stable red and blue, but each puts an ADULT
+in one of the three inks:
+
+| title | reference panel | red (Huey) | green (Louie) | blue (Dewey) |
+|---|---|---|---|---|
+| *Too Safe Safe* | 140 p2, three boys on the stoop | `#e51a1f` | `#4da33e` **H111.1** | `#00a5d7` |
+| *Search for the Cuspidoria* | 147 p5, two boys in close-up | `#e61b1f` | `#4da23f` **H111.1** S0.6 | `#08a4d4` H193.8 |
+| *New Year's Revolutions* | 156 p4, three boys in a row | `#e61b1f` | `#4ea23f` **H111** | `#00a5d7` |
+| *Iceboat to Beaver Island* | 166 p1, the splash row | `#e61b1f` | `#4da33f` **H111** | `#04a4d6` |
+
+- ***Cuspidoria* prints its green at a SECOND hue**: `#3c907b` **H165.0 S0.58**
+  on the splash, inside the H165-180 dead band, against `#4da23f` H111 on 147
+  p5 and 150 p8. On the splash it was named only by elimination against a
+  clean blue and a clean red in the same row.
+- **The adults wear the roster inks.** Donald's sailor cap is `#00a5d7` in
+  *Too Safe Safe* and `#02a5d5` in *Cuspidoria*; he wears a blue winter cap in
+  *New Year's Revolutions* and a **maroon `#a04453` coat** for the whole of
+  *Iceboat*. Scrooge's top-hat band is `#04a4d5` in *Cuspidoria* and his coat
+  is the roster red there. In *New Year's Revolutions* 162 p2 there are two
+  blue caps in one panel, one a nephew and one Donald.
+- **Two of the four are WINTER stories and take the caps off indoors.** *New
+  Year's Revolutions* is capless on 160, 161 p1-p3, 164 p2-p8 and 165 -- 37 of
+  its 77 nephew groups -- and *Iceboat* on 168 p3-p7. Both print big, solid,
+  easy earflap caps outdoors, so the difficulty is entirely about which pages
+  are interiors.
+- **Decoys measured on these four**: the green armchair upholstery `#009e49`
+  H147.7 (8563px) beside the boys on *Too Safe Safe* 145 p7; the green sofa
+  `#009e49` (5559px) on *Iceboat* 168 p6; the red books on the shelf
+  `#e61b1f` (8988px) on *Iceboat* 168 p3, right where a band would be; the bay
+  water and the red machinery on *Cuspidoria* 149 p2.
 
 Vol. 12, two more titles read 2026-09-09, and the volume's H102.5 cap green is
 NOT universal either:
