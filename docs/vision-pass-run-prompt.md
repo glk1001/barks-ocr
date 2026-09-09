@@ -4556,6 +4556,118 @@ Nephew domain and how much of it got named:
   2 -- written to `~/barks-vision/queue-corpus-lowmed-2026-09-09.txt`.
 
 
+### Findings to paste into the next run (2026-09-10, forty-fifth batch, PASS ONLY -- not yet reviewed)
+
+Four titles, 52 pages, **663 groups**: *The Mysterious Stone Ray* (Vol. 14) 356,
+*A Campaign of Note* (Vol. 14) 53, *The Daffy Taffy Pull* (Vol. 15) 129, *The
+Tuckered Tiger* (Vol. 14) 125. **1.5 images per page**, against a target of 3
+and a ceiling of 5; only one page went over, 042, at 6, and it is the title's
+cap-reference page. Nephew domain and how much of it got named:
+
+| title | nephew groups | named | collectives |
+|---|---|---|---|
+| The Mysterious Stone Ray | 96 | 34 (35%) | 62 |
+| A Campaign of Note | 11 | 1 (9%) | 10 |
+| The Daffy Taffy Pull | 26 | 14 (54%) | 12 |
+| The Tuckered Tiger | 27 | 8 (30%) | 19 |
+
+- **A TITLE CAN PAINT THE WRONG BOY, AND ONLY DIALOGUE CATCHES IT.** *The
+  Mysterious Stone Ray* names its cast twice -- 053 g3 `STAY HERE AND GUARD
+  THIS CROOK, HUEY!` leaves Huey on the beach, and 055 g3 has Scrooge call
+  `DONALD! DEWEY! LOUIE!` over exactly three petrified figures -- and the art
+  then gives the SURVIVING boy a clean H112 green band on 055/056 and a 1786px
+  roster blue on 057 p5, and gives roster red to boys who by dialogue are Dewey
+  or Louie. Three different inks on one boy in three consecutive pages. The
+  reviewer's ruling was **dialogue wins, cap_colour records the printed ink,
+  those calls sit at medium, and the disagreements go back as a retouch list**.
+  Where a title has no naming line and its ink has already been shown to drift,
+  `nephews` is the honest answer rather than the convention.
+- **CHECK THE CONVENTION BEFORE TRUSTING IT, EVEN INSIDE A VOLUME.** Stone Ray
+  and *The Tuckered Tiger* are the same volume and the same reference palette,
+  and one tracks it and one does not. On Tuckered Tiger 098 p5 the three boys
+  read blue, red, green in a row and every later panel agrees; on Stone Ray 042
+  p3 they read red, blue, green in a row and the story then contradicts it. One
+  clean reference panel is not a guarantee for the title -- it is a guarantee
+  for that panel.
+- **`leafgrn: 0` ON ALL 77 PANELS OF A TITLE STILL MEANT NOTHING.** *The Daffy
+  Taffy Pull*'s whole-title `bands.txt` reads leafgrn 0 everywhere and I nearly
+  wrote the title off as printing no cap green. `title_heads` finds 136px,
+  163px and 181px of **#4ea340 H112** on Louie's crown on 182 p5, and Donald
+  names him in the same panel. The band column's floor is simply above a wedge
+  of a few hundred pixels. Quote `N blob(s) total` from the per-panel census,
+  never the whole-title band sweep.
+- **BARE-HEADED INDOORS IS A REAL, CHECKABLE FACT.** On Daffy Taffy the boys
+  genuinely wear nothing on 176-179, which are all interiors, and put the bands
+  back on outdoors from 181. That made every nephew group on the indoor pages a
+  measured collective rather than a declined one, and it is the difference
+  between "no band prints" and "I could not read the band".
+- **THE CAP CONSTRUCTION IS PER TITLE AND IT CHANGES THE BUDGET.** Tuckered
+  Tiger draws a black cap with a small coloured WEDGE at the side, so the
+  readable ink is 130-720px even in close-up and only a stacked crop separates
+  it. Stone Ray draws a narrow band that reads 35-700px. Neither is the broad
+  crown band the Vol. 15 titles wear. Establish which one a title uses off the
+  reference panel before deciding what a small blob means.
+- **AN ADULT'S COAT COLOUR IS WORTH MEASURING ONCE PER TITLE.** Scrooge's coat
+  is `#a04453` H350.2 maroon on *The Tuckered Tiger* and on *A Campaign of
+  Note*, not the volume's roster red -- which is the opposite of the Vol. 14
+  entry below and makes a clean `#e61b1f` blob on those two titles a nephew's
+  wedge rather than his coat. On Stone Ray it IS the roster red, at 5,000-21,000px.
+- **THE SEA CAN BE THE ROSTER BLUE.** On Stone Ray the water prints `#00a5d5`
+  H193.5 S1.00 in blobs of 13,000px and up, the same ink as Dewey's band,
+  Donald's sailor cap and Scrooge's hat band. Four things share one hex on that
+  title; only area and position separate them.
+- **THE UNCA/UNCLE SPLIT HELD 3 FOR 3.** Stone Ray 14 UNCA against 4 UNCLE,
+  Tuckered Tiger 6 against 6, Campaign of Note 2 against 3 -- and in every case
+  the nephews take UNCA and Donald takes UNCLE. It settled about thirty groups
+  across the batch for nothing. Grep it before page 1.
+- **A NAMING LINE IN A CAPTION IS AS GOOD AS ONE IN A BALLOON.** Daffy Taffy's
+  184 g2 is a caption reading `"I FOUND DEWEY WITH ALL OF HIS CANDY STILL
+  UNSOLD!"`, and 060's caption on Campaign of Note is `HUEY, LOUIE, AND DEWEY
+  ESCAPE!`. Grep the narration boxes as well as the dialogue.
+- **ELIMINATION ACROSS PAGES WORKS, BUT COUNT THE INFERENCES.** Daffy Taffy
+  names Louie on 182 and Dewey on 184, and 182's `YOU'VE SOLD ALL OF YOUR
+  CANDY, TOO?` makes 181's seller a third boy -- Huey, corroborated by 243px of
+  roster red. That is one inference and it was taken. Tuckered Tiger 103 g1 would
+  have needed two stacked ones (the speaker is the book-holder, and the
+  book-holder is the unread third) and was left collective.
+- **`visible_text` IS A LIST OF STRINGS, WHICH `roster.txt` DOES NOT SAY.** The
+  page-2 dry-run caught it on the first two pages; without that dry-run it
+  would have aborted after 28 pages of reading. Keep doing it at page 2.
+- **NINE TYPE CORRECTIONS, AND FOUR OF THEM ARE ONE CLASS.** *The Tuckered
+  Tiger* 106 g1/g3/g7/g8 are the track announcer's loudspeaker balloons stored
+  as `narration`; they are drawn as balloons, one carries a tail to the judges'
+  stand, and the same page's two genuine caption boxes are slanted coloured
+  boxes with drop caps. A relayed voice is dialogue. The other five: two bare
+  drawn devices out of `background`/`dialogue` into `thought` (099 g3, 181 g3),
+  a tut and a yelp out of `sound_effect` into `dialogue` (062 g8, 183 g1), and
+  three drawn question marks over one Beagle Boy into `thought` (065 g9).
+- **A DROP CAP READS AS A BOLD WORD AND IS NOT ONE.** allbold put 1.36-1.68 on
+  the first word of nine caption boxes across the batch -- DONALD, THEY, ABOARD,
+  SOON, HUEY, SO -- every one of them the oversized initial. And its
+  word-to-blob pairing failed on at least a dozen lines: 054 g4's 1.26 is a
+  question mark, 049 g9's 1.51 is the single letter I, 065 g12's 1.35 a 34px
+  blob. **Compare word against word WITHIN a line, not against the group base**,
+  and treat a base above about 4.0 as the whole group being bold -- that
+  signature appeared five times (040 g2, 044 g7, 045 g4, 052 g4, 065 g3) and a
+  crop confirmed it every time.
+- **MISSED TEXT: 8 ITEMS, AND 2 OF THEM THE AUDIT COULD NOT SEE.** The audit
+  found 6 on Stone Ray and 1 on Campaign of Note. It found nothing on Tuckered
+  Tiger, where 098 p8 has drawn dollar signs round Scrooge's head that no engine
+  grouped -- a bare device has nothing to diff against, exactly as the
+  forty-fourth batch found. Four of the Stone Ray six are the Beagle Boy's
+  prison number `176-761`, which IS grouped on 052/063/064/066 and is not on
+  050/055/057/059.
+- **CORPUS SWEEPS, RUN AT THE END OF THE BATCH.** `vision-corrections` with no
+  title: **18 outstanding across 460 titles**, all of them this batch's nine
+  type corrections on both engines; the forty-fourth batch's `CAFÉ` and `BRR!`
+  entries are gone, so they were worked. `speaker-queue --unreviewed
+  --confidence low,medium` with no title: **41 groups, every one of them from
+  this batch** -- Stone Ray 33, Tuckered Tiger 6, Daffy Taffy 1, Campaign of
+  Note 1 -- written to `~/barks-vision/queue-corpus-lowmed-2026-09-10.txt`. The
+  nine stragglers the forty-fourth batch left on *Sheriff of Bullet Valley*,
+  *The Big Bin on Killmotor Hill* and *The Victory Garden* no longer appear.
+
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -5964,6 +6076,51 @@ on *Million Dollar Pigeon*:
 - *Million Dollar Pigeon* has no nephews in it at all, so `cap_colour` is null
   on all 42 of its groups. Check the cast before deriving a palette from a
   title.
+
+Vol. 14, three more titles read 2026-09-10 (forty-fifth batch), and the volume
+entry above holds for two of them and fails outright for the third:
+
+| title | reference panel | red (Huey) | green (Louie) | blue (Dewey) |
+|---|---|---|---|---|
+| *The Mysterious Stone Ray* | 042 p3, three boys in a row on the beach | `#e61b1f` H358.8 S0.88 | `#4ba43d` **H111.8** S0.63 | `#0ea5b7` H186.4 |
+| *The Tuckered Tiger* | 098 p5, three boys facing Scrooge | `#cf262d` / `#e61b1f` | `#4a9f3b` **H112** | `#03a5d6` |
+| *A Campaign of Note* | 070 p1, only one boy reads | -- | `#4ea341` **H112** | -- |
+
+- ***The Mysterious Stone Ray* DOES NOT TRACK THE CONVENTION AND SAYS SO ITSELF.**
+  Its reference panel is clean, and its dialogue then contradicts it twice:
+  053 g3 leaves Huey on the beach, 055 g3 names Donald, Dewey and Louie as the
+  three petrified, and the surviving boy is painted H112 GREEN on 055/056 and
+  1786px of roster BLUE on 057 p5. Take the address, record the printed ink,
+  hold at medium. This is the volume's exception, not its rule.
+- **THE CAP CONSTRUCTION DIFFERS BETWEEN THE TWO Vol. 14 TITLES.** Stone Ray
+  draws a narrow band that reads 35-700px and is often below capscan's 25px
+  floor at the crown edge; Tuckered Tiger draws a black cap with a small
+  coloured WEDGE at the side reading 130-720px. Neither is a broad crown band.
+- **SCROOGE'S COAT IS NOT THE ROSTER RED ON EVERY TITLE IN THIS VOLUME.** It is
+  `#a04453` **H350.2 S0.57** maroon on *The Tuckered Tiger* and *A Campaign of
+  Note* -- which makes a clean `#e61b1f` blob on those two a nephew's wedge --
+  and the roster red at 5,000-21,000px on *The Mysterious Stone Ray*. Measure
+  it once per title.
+- **ON STONE RAY THE SEA IS THE ROSTER BLUE**, `#00a5d5` H193.5 S1.00 in blobs
+  of 13,000px and up, sharing its hex with Dewey's band, Donald's sailor cap
+  and Scrooge's hat band. Four things, one ink; only area and position separate
+  them. Its foliage and upholstery are the volume's usual `#009e49` H147.7.
+
+Vol. 15, one more title read 2026-09-10, and its bands are the smallest yet:
+
+| title | reference panel | red (Huey) | green (Louie) | blue (Dewey) |
+|---|---|---|---|---|
+| *The Daffy Taffy Pull* | no single panel; the three are named on 181, 182 and 184 | `#e41b1f` 243px | `#4ea340` **H112** 480px | clean blue on 184 |
+
+- **ITS WHOLE-TITLE `bands.txt` READS `leafgrn: 0` ON ALL 77 PANELS AND THAT IS
+  A THRESHOLD, NOT AN ABSENCE.** `title_heads` finds 136px, 163px and 181px of
+  `#4ea340` H112 on Louie's crown on 182 p5, in the same panel where Donald
+  names him. The band column's floor is above a wedge of a few hundred pixels.
+- **THE BOYS ARE GENUINELY BARE-HEADED INDOORS** on 176-179, every one of them
+  an interior, and wear the bands outdoors from 181. That is a measured absence
+  and the reason every nephew group on those four pages is collective.
+- The 2035px and 3017px of `#019d47` H147 beside Louie on 182 p5 are the green
+  candy box he carries, not a band -- the band is the 136-181px H112 above it.
 
 
 ## The long form is retired
