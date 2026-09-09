@@ -4245,20 +4245,32 @@ represented above, all three were reversed, and all three were `high`.
 
 ### Findings to paste into the next run (2026-09-09, forty-third batch, three of four titles reviewed)
 
-*Travelling Truants* 5 corrections in 138 (3.6%), *Rants About Ants* 9 in 120
-(7.5%), *The Seven Cities of Cibola* 48 in 446 (10.8%). Million Dollar Pigeon
-was still being reviewed when these were written.
+All four titles are now reviewed and mirrored. *Travelling Truants* 5
+corrections in 138 (3.6%), *Rants About Ants* 9 in 120 (7.5%), *The Seven
+Cities of Cibola* 52 in 446 (11.6%), *Million Dollar Pigeon* **0 in 42**.
 
 **Medium is not a hedge, for the third batch running.** By the confidence the
 pass wrote: Truants 25.0% of mediums corrected against 3.0% of highs, Cibola
-34.4% against 6.3%. Rants About Ants is the exception that proves it -- 0 of 5
+34.4% against 7.3%. Rants About Ants is the exception that proves it -- 0 of 5
 mediums, 7.0% of highs -- and it had only five. A medium is a coin flip on
-Cibola. Spend the crop instead of writing one.
+Cibola. Spend the crop instead of writing one. Cibola's last remaining medium,
+012 g12, was corrected too, in the straggler pass: `nephews` -> Donald on a
+panel whose own note says heads.py found two overlapping red-carrying heads.
+**On an unreadable panel the collective is not the safe answer either** -- the
+hedge was wrong in the direction of naming no nephew at all.
 
 **Count the review's own added groups out before reading a correction rate.**
-Eight of Cibola's 48 are a group the REVIEW added going `unknown` -> its real
-value (four `$` devices to Scrooge, three shirt plates to `none`, 012 g10 to
-Louie). Those are not pass errors. The real figure is 40 in 446, 9.0%.
+Eleven of Cibola's 52 are a group whose `speaker_was` is `unknown` -- a group
+the REVIEW added, going to its real value (four `$` devices to Scrooge, shirt
+plates to `none`, 012 g10 to Louie). Those are not pass errors. Thirteen of the
+52 sit on a `vision_added` group. The real figure is **41 genuine pass errors
+in 446, 9.2%**.
+
+**Million Dollar Pigeon is the control.** Forty-two high-confidence speaker
+calls, none overturned, on a four-page title with no nephews in it and two
+speakers drawn as humans. Its one correction is the review's own added group.
+The titles that cost corrections are the ones with three identical boys in
+them, not the ones with unusual casts.
 
 - **AN ADDRESS OUTRANKS A CAP, AND THE `UNCA` / `UNCLE` SPLIT IS AN ADDRESS.**
   See the Vol. 14 palette entry below: the split held 11 for 11 on Cibola, and
@@ -4301,6 +4313,33 @@ Louie). Those are not pass errors. The real figure is 40 in 446, 9.0%.
   title's five corrections are that one panel, offset by exactly one. This is
   the Vol. 4 offset fan in another volume -- when a cascade's names come from a
   row of caps rather than from traced tails, flag the whole fan as a set.
+- **THE REVIEWER ADDS BARE DEVICES, AND THE PASS NEVER DOES.** Six groups
+  added across this batch are a lone `$`, `?` or `? ?` in its own balloon --
+  four on Cibola, one on Million Dollar Pigeon 037, one on The Strange
+  Shipwrecks 033. Neither engine groups them and the pass did not propose one
+  of the six. They are speech: a device in a tailed balloon takes the thinker
+  and the `thought` type. Look for them on any panel where a character reacts
+  without words.
+- **A REVIEW CAN LEAVE A GROUP IT ADDED HALF-ANNOTATED.** Cibola 018 g21
+  arrived at `unknown` / `low` with no `identified_by` and no note, while its
+  three sibling Beagle Boy shirt plates were `none` / high. It was caught only
+  because it showed up in the unreviewed queue. **List every `vision_added`
+  group with an empty note before mirroring** -- the mirror copies those fields
+  onto the other engine.
+- **THE OFF-BY-ONE STRAGGLER IS CORPUS-WIDE, NOT PER-TITLE.** A sweep with
+  `barks-ocr-speaker-queue --unreviewed` and no `--title` found seven groups
+  across six titles that had each been called review-complete, in Vols. 2, 4,
+  6, 9, 12 and 22. Six of the seven were confirmations -- the calls were right
+  and the stamp was never applied -- so the cost is provenance, not accuracy.
+  Run that sweep at the end of a batch, not the per-title check.
+- **SPEAKER VALUES OUTSIDE THE CLOSED SET ARE IN THE CORPUS AT SCALE.** 936
+  groups carry a bare character name with no `other:` prefix -- `The Beagle
+  Boys` 306, `Gneezles` 102, `Neighbor Jones` 98, `Goldie O'Gilt` 72 and
+  thirteen more, across nine volumes. `roster.txt` says anyone outside the
+  closed set goes behind the prefix, and `vision_apply` enforces that on what a
+  PASS proposes; nothing enforces it on what a review writes. This is not from
+  this batch and it is not a thing to sweep on sight -- it needs a decision
+  about which side is right first.
 - **THE MISSED-TEXT AUDIT CANNOT SEE A MISSED BALLOON.** The review added a
   whole spoken group to Cibola 012 -- Louie's "AND THIRSTY, TOO! HOW I WISH WE
   HAD THAT CANTEEN OF WATER!... (GASP!)" -- that neither engine grouped and the
