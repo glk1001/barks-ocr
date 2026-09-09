@@ -4243,6 +4243,73 @@ absence, one made collective because no tail separated boys whose bands were
 measured, and any call on a panel that was not opened. All three are
 represented above, all three were reversed, and all three were `high`.
 
+### Findings to paste into the next run (2026-09-09, forty-third batch, three of four titles reviewed)
+
+*Travelling Truants* 5 corrections in 138 (3.6%), *Rants About Ants* 9 in 120
+(7.5%), *The Seven Cities of Cibola* 48 in 446 (10.8%). Million Dollar Pigeon
+was still being reviewed when these were written.
+
+**Medium is not a hedge, for the third batch running.** By the confidence the
+pass wrote: Truants 25.0% of mediums corrected against 3.0% of highs, Cibola
+34.4% against 6.3%. Rants About Ants is the exception that proves it -- 0 of 5
+mediums, 7.0% of highs -- and it had only five. A medium is a coin flip on
+Cibola. Spend the crop instead of writing one.
+
+**Count the review's own added groups out before reading a correction rate.**
+Eight of Cibola's 48 are a group the REVIEW added going `unknown` -> its real
+value (four `$` devices to Scrooge, three shirt plates to `none`, 012 g10 to
+Louie). Those are not pass errors. The real figure is 40 in 446, 9.0%.
+
+- **AN ADDRESS OUTRANKS A CAP, AND THE `UNCA` / `UNCLE` SPLIT IS AN ADDRESS.**
+  See the Vol. 14 palette entry below: the split held 11 for 11 on Cibola, and
+  the one group the previous run cited as a counter-example, 012 g1, was the
+  pass's own error. Grepping `ai_text` for UNCA and UNCLE before page 1 would
+  have caught it for free. **The rule the previous run wrote down was inferred
+  from a correction it had not yet had reviewed** -- do not write a palette
+  entry off a single unreviewed group.
+- **PRESENCE IS NOT ATTRIBUTION: DONALD'S SAILOR CAP TOOK SEVEN LINES OFF THE
+  BOYS.** Cibola corrected `Donald` -> the nephew domain seven times, five of
+  them to Dewey, and the pass note on nearly every one names the sailor cap
+  hex as the reason -- `#04a3d6` on 011 g2, `#01a5d6` on 013 g2, `#02a4d5` on
+  014 g11. Finding Donald in the panel is not evidence that the balloon is his.
+  Every one of those notes describes locating Donald and none of them describes
+  tracing the tail to him.
+- **THE LONG-SHOT DEFAULT IS DONALD, AND ROLE REASONING STILL BEAT IT FIVE
+  TIMES.** Cibola corrected `Scrooge` -> `Donald` on 011 g1, 011 g3, 014 g11,
+  023 g2 and 024 g7, and `nephews` -> `Donald` on five more. The pass notes say
+  things like "given to Scrooge -- the ship is his find and the bafflement is
+  his": that is who-would-say-this, on a panel where the art was not readable.
+  On an unreadable long shot in a Scrooge story the answer is still Donald.
+- **A CAPSCAN ZERO DID NOT STOP THE REVIEWER NAMING THE BOY.** Seventeen
+  `nephews` -> a name across the two nephew titles (10 Cibola, 7 Ants), every
+  one of them `cap_colour` null -> a colour, and the pass note on most says the
+  scan found nothing: "heads.py finds no cap ink", "title_bands gives red=0".
+  Ants 128 g0/g1/g2 are the sharpest case -- the pass wrote "the boys are
+  BARE-HEADED again on this page" and declined all three; the review named all
+  three. **Bare-headed is a fact about the ink, not about the boy.** Place them
+  by tail and reading order and name them.
+- **A NOISE IN A BALLOON IS `dialogue` EVEN WHEN THE MAKER IS A SWARM.** The
+  review retyped all five of Rants About Ants' `ZZT!` groups (129 g5, g6, g7,
+  g11 and 134 g4) from `sound_effect` to `dialogue`. The pass had already given
+  them `other:the ants` as speaker and then left the type alone, reasoning that
+  the noise is one their own bodies make. The speaker rule and the type rule
+  are independent: a tailed balloon is a voice, whatever is making it.
+- **A THREE-BALLOON CASCADE CAN SLIDE BY ONE, AND THE CAP ROW WILL NOT SAY SO.**
+  Truants 124 is the whole title's error: the pass read the caps in the truck
+  interior "left to right blue / red / green" and named g8 Huey, g9 Louie,
+  g17 Louie; the review made them Dewey, Huey and `nephews`. Three of the
+  title's five corrections are that one panel, offset by exactly one. This is
+  the Vol. 4 offset fan in another volume -- when a cascade's names come from a
+  row of caps rather than from traced tails, flag the whole fan as a set.
+- **THE MISSED-TEXT AUDIT CANNOT SEE A MISSED BALLOON.** The review added a
+  whole spoken group to Cibola 012 -- Louie's "AND THIRSTY, TOO! HOW I WISH WE
+  HAD THAT CANTEEN OF WATER!... (GASP!)" -- that neither engine grouped and the
+  pass never noticed. The audit diffs `visible_text`, which by definition holds
+  only NON-speech lettering, so a balloon nobody boxed is invisible to it and
+  to every count in the close-out. The only thing that finds one is reading the
+  page and counting balloons against groups.
+
+
 ## Per-volume cap palette
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
@@ -5608,9 +5675,14 @@ on *Million Dollar Pigeon*:
 - A saturated green near a figure need not be a cap or a leaf: on *Million
   Dollar Pigeon* 037 p6 the 2,853px of `#009e49` **H147.7 S1.00** at the lower
   left is the upholstery of his desk chair.
-- **THE Vol. 12 `UNCA SCROOGE` / `UNCLE SCROOGE` SPLIT DOES NOT HOLD HERE.**
-  Cibola 012 g1 is Donald saying UNCA with only Scrooge in the panel. Test the
-  split on the title in hand before spending it.
+- **THE Vol. 12 `UNCA SCROOGE` / `UNCLE SCROOGE` SPLIT HOLDS HERE TOO, 11 FOR
+  11.** After review, all seven UNCA groups in Cibola are nephews (009 g1,
+  012 g1, 013 g8, 014 g5, 015 g14, 025 g2, 029 g2) and none of the four UNCLE
+  ones is (006 g0 `none`, 006 g1 and 027 g18 narrator, 032 g1 Donald). The
+  entry that stood here until 2026-09-09 claimed the split failed, on the
+  strength of Cibola 012 g1 -- and 012 g1 was the pass's own error, corrected
+  by the review from Donald to Dewey. Grep the addresses before page 1 and let
+  them outrank a cap.
 - *Million Dollar Pigeon* has no nephews in it at all, so `cap_colour` is null
   on all 42 of its groups. Check the cast before deriving a palette from a
   title.
