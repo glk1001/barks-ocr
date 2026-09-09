@@ -326,3 +326,19 @@ HELP KEEP AMERICA STRONG
 13 172 a dollar sign printed on each of the banknotes in the zookeeper's hands in panel 7
 13 172 a long red arrow pointing left, drawn under the word on the yellow hauling sign in panel 8
 13 176 three large red drawn stars bursting around Donald as he falls in panel 4
+
+# Too Safe Safe 140 panel 1, declined by GLK 2026-09-09 ("I'll skip the Don /
+# DU missed text this time"). The Duck family mailbox stands at the right edge
+# of the panel and the frame cuts it after three characters on the top line and
+# two on the second, leaving DON over DU. Real lettering rather than a drawn
+# device, so the 2026-09-07 device ruling does not cover it -- but the same
+# reasoning as Worm Weary 131's LA applies: a truncated fragment carries no
+# readable content and there is nothing for a searchable box to hold.
+#
+# Neither line can fire in any case, which is why the audit reported zero on
+# this page and the finding had to be carried by hand: DON is contained in the
+# DONALD of three grouped balloons on the same page, and containment swallows a
+# short needle. The entries are here as the record of the decision. Both stay
+# in 140's visible_text, which is a true record of what is printed.
+15 140 DON
+15 140 DU
