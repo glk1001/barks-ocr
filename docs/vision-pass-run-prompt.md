@@ -4556,11 +4556,98 @@ Nephew domain and how much of it got named:
   2 -- written to `~/barks-vision/queue-corpus-lowmed-2026-09-09.txt`.
 
 
+### Findings to paste into the next run (2026-09-10, forty-fifth batch, ONE OF FOUR REVIEWED -- *The Tuckered Tiger*)
+
+Replaces that title's numbers in the pass-only section below; Stone Ray,
+Campaign of Note and Daffy Taffy Pull are still unreviewed. **15 genuine
+speaker corrections in 125 passed groups = 12.0%**, and **14 of them are in
+the 23-group nephew domain = 60.9%** -- nearly three times the forty-fourth
+batch's 21.9%, and in the opposite direction.
+
+| direction | n | what it was |
+|---|---|---|
+| `nephews` -> a name | **12** | collectives the review named, every one with a cap_colour it filled in |
+| nephew domain -> Donald | 2 | 098 g13, 100 g11 |
+| `nephews` -> `other:` | 1 | 101 g6, a bystander |
+
+- **THE ERROR CLASS FLIPPED, AND OVER-CORRECTING IS HOW.** The forty-fourth
+  batch was punished for naming too much at high; this pass was punished for
+  naming too little. **Twelve of fifteen corrections are under-namings**, and
+  ten of those twelve carry the same sentence in the pass's own note -- *"his
+  wedge does not read in this panel"*, *"neither wedge reads here"*, *"their
+  wedges do not separate at this size"*. The review filled in a cap_colour for
+  **every one of them**. The wedge did read; the pass ran the per-panel census,
+  got nothing at that head, and declined instead of cropping. **A census miss
+  on a small-cap construction is an instruction to spend a crop, not a reason
+  to write `nephews`.**
+- **THE IMAGE BUDGET HAS A FLOOR AS WELL AS A CEILING, AND THIS IS THE
+  MEASUREMENT.** The title ran **1.1 images per page** against a target of 3,
+  on a construction whose readable ink is 130-720px and with 27 nephew groups
+  in ten pages. That underspend bought twelve wrong collectives. `docs/vision-pass-cost.md`
+  is about not exceeding 3; the other half is that a cap-dense title read at
+  1.1 has not been read. **Budget by nephew density, not by page count.**
+- **`nephews` IS NOT A SAFE HEDGE EITHER.** The confidence field carried almost
+  nothing again -- high 13 of 118 corrected (11.0%), medium 1 of 6 (16.7%) --
+  but the reason is new: the pass avoided a wrong name by writing a collective,
+  which is not a confidence at all and which the review then had to redo
+  twelve times. A `nephews` on a panel whose caps are actually readable costs
+  the reviewer exactly what a wrong name does.
+- **AN ELIMINATION CHAIN CAN BE INTERNALLY SOUND AND REST ON A WRONG FIRST
+  LINK.** 103 g1 was declined with the reasoning *the outer two boys read blue
+  and green, so the middle one -- the one holding the open book the line is
+  read from -- is Huey*. The review named it **Louie**: the speaker is the
+  right-hand green boy, not the book-holder. The elimination was fine; the
+  premise about who was speaking was not. **Check the premise of an elimination
+  before checking its arithmetic.**
+- **A 1557px RED BLOB ON A BENT-OVER FIGURE WAS DONALD'S BOW TIE.** 100 g11 was
+  named Huey at medium off *a cap seen from above with the RED wedge*; the
+  review says Donald. Donald's bow tie is roster red and about that size, and a
+  duck bent over a stall plate puts it exactly where a crown would be. This is
+  the blob-must-sit-on-a-head error with a new disguise -- and it is the one
+  correction the medium flag actually earned.
+- **DONALD WAS IN THE PANEL AND THE PASS DID NOT COUNT HIM.** 098 g13 went
+  `nephews` -> Donald on a line that is plainly an adult's (*WHY DON'T YOU GO
+  OVER TO THE COMMITTEE ROOM AND BUILD THIS UP BIG?*). Count the adults in
+  frame before assigning a balloon to the boys.
+- **TWO STACKED BALLOONS OVER TWO BOYS WERE MAPPABLE AFTER ALL.** 098 g10/g11
+  were declined because *neither tail could be traced*, with both wedges
+  already read as blue (near, left) and red (behind, right). The review mapped
+  upper -> the near blue boy and lower -> the far red one. Recorded as an
+  outcome, not promoted to a rule: reading order is still not evidence, but
+  declining a pair whose caps you have already read costs two names.
+- **ZERO REAL TYPE CORRECTIONS, AND `review_findings` REPORTED FIVE.** All five
+  -- 099 g3 and 106 g1/g3/g7/g8 -- are the pass's own, **ratified**: the type
+  value is byte-identical before and after and only `type_reviewed_date`
+  moved to 2026-09-10. The sixteenth "speaker correction" is likewise the
+  review's own added group, `unknown` -> Scrooge. That is the forty-fourth
+  batch's over-report, twice, on the same title. **Diff the type against the
+  pass commit before quoting any type number**, and subtract the review's adds
+  from the speaker count.
+- **THE MISSED-TEXT HAND-BACK WAS ACTED ON AND THE AUDIT IS NOW CLEAN.** The
+  reviewer added 098 g15 `$ $ $ $` on both engines -- the drawn dollar signs
+  the audit could not see, listed by hand in the hand-back. It came in with its
+  own text and an empty `notes`, no seeded residue, and was appended at the
+  page's last id so nothing renumbered. **Listing a bare device by hand works;
+  keep doing it.**
+- **MIRROR AND CLOSE-OUT.** The reviewer worked easyocr only (126/126 there,
+  1/126 on paddleocr, the one being the add). `vision-mirror --write` copied
+  126 groups and 55 emphasis runs across; both engines then match on group
+  count, reviewed count, `identified_by` count and the speaker, `cap_colour`
+  and confidence distributions. `vision-corrections --title`: nothing
+  outstanding. `closeout.sh --stage review`: all gating checks clean.
+- **ONE `other:` VALUE TO WATCH.** The review introduced `other:a bystander`
+  (101 g6) alongside the pass's `other:the crowd` (102 p6). They are different
+  -- a single silhouette beside Scrooge against a row of named faces -- but
+  they are the kind of pair that drifts into duplicates. Grep the singletons
+  before the next mirror on this volume.
+
+
 ### Findings to paste into the next run (2026-09-10, forty-fifth batch, PASS ONLY -- not yet reviewed)
 
 Four titles, 52 pages, **663 groups**: *The Mysterious Stone Ray* (Vol. 14) 356,
 *A Campaign of Note* (Vol. 14) 53, *The Daffy Taffy Pull* (Vol. 15) 129, *The
-Tuckered Tiger* (Vol. 14) 125. **1.5 images per page**, against a target of 3
+Tuckered Tiger* (Vol. 14) 125. **The Tuckered Tiger has since been reviewed --
+see the section above, which replaces its numbers here.** **1.5 images per page**, against a target of 3
 and a ceiling of 5; only one page went over, 042, at 6, and it is the title's
 cap-reference page. Nephew domain and how much of it got named:
 
