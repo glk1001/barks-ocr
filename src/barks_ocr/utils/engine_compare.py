@@ -78,6 +78,52 @@ def box_iou(box_a: PointList, box_b: PointList) -> float | None:
     return intersection / union if union > 0 else 0.0
 
 
+def union_box(box_a: PointList, box_b: PointList) -> PointList | None:
+    """Build the smallest axis-aligned box containing both, or None if either is unusable.
+
+    Returned in the same shape the prelim JSON stores — four integer corners,
+    clockwise from top left — so it can be written straight back to a group.
+
+    Gated on ``text_box_problem`` for the same reason ``box_iou`` is: a
+    malformed box is "bad_text_box"'s to report, and merging one would launder
+    the fault into a box that looks sound.
+    """
+    if text_box_problem(box_a) is not None or text_box_problem(box_b) is not None:
+        return None
+
+    ax0, ay0, ax1, ay1 = points_bbox(box_a)
+    bx0, by0, bx1, by1 = points_bbox(box_b)
+    x0, y0 = round(min(ax0, bx0)), round(min(ay0, by0))
+    x1, y1 = round(max(ax1, bx1)), round(max(ay1, by1))
+
+    return [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
+
+
+def box_growth(merged: PointList, box_a: PointList, box_b: PointList) -> float:
+    """Area of *merged* over the larger of the two boxes it was built from.
+
+    1.0 means the merge cost nothing — one box already contained the other,
+    which is 53.7% of the pairs that fall below ``BOX_IOU_MIN``. Above that the
+    two engines boxed the same lettering in different places, and the further
+    apart they are the more likely it is that they are not the same lettering
+    at all: measured over the corpus's 434 flagged pairs the median is 1.00 and
+    the p90 2.45, but the tail runs to 17.7. That tail is what
+    ``--max-box-growth`` refuses.
+
+    Returns ``inf`` when both source boxes are degenerate, so a caller
+    comparing against a ceiling rejects rather than divides by zero.
+    """
+    mx0, my0, mx1, my1 = points_bbox(merged)
+    ax0, ay0, ax1, ay1 = points_bbox(box_a)
+    bx0, by0, bx1, by1 = points_bbox(box_b)
+
+    largest = max((ax1 - ax0) * (ay1 - ay0), (bx1 - bx0) * (by1 - by0))
+    if largest <= 0:
+        return float("inf")
+
+    return ((mx1 - mx0) * (my1 - my0)) / largest
+
+
 def normalized_attr(value: object) -> object:
     """Collapse the empty forms to None so absent and empty compare equal.
 

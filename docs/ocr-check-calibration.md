@@ -264,6 +264,57 @@ A pair the two engines read *differently* has no counterpart at all: the popup s
 reconcile the text first, and no ghost box or marker is drawn. That matches when the
 checks run at all.
 
+### `--fix-boxes`, so they need not be worked in the editor at all
+
+Reconciling a `box_mismatch` by hand is the one repair with no judgement in it: the two
+engines boxed the same lettering, and the reviewer is dragging handles to make two
+numbers agree. `--fix-boxes` writes **the union of the two boxes to both engines** —
+the smallest box containing both.
+
+The union rather than whichever box is larger, because only the union cannot clip
+lettering either engine caught. Measured over the corpus's **72,719 matched pairs**:
+
+| | pairs | share |
+|---|---|---|
+| below `BOX_IOU_MIN` = 0.4 | 434 | 0.60% |
+| …one box already inside the other | 233 | 53.7% of flagged |
+| …offset, so union ≠ larger box | 201 | 46.3% of flagged |
+
+On the nested half the two definitions are the same box. On the other half taking the
+larger one still cuts off what the smaller one saw, which is the whole fault being fixed.
+
+**`--max-box-growth`, default 2.0**, is the ceiling on the merged box as a multiple of
+the larger source box. The union costs nothing at all on most flagged pairs — median
+growth **1.00**, p90 **2.45** — but the tail runs to **17.7×**, and two engines reading
+the same words in two far-apart places are more likely to have been *mis-paired* than to
+disagree about padding. Merging those would replace a reportable disagreement with one
+large wrong box on both sides. At 2.0 the fix takes **378** of the 434 and refuses
+**56**, which keep their `box_mismatch` entry with the reason appended:
+
+```
+box_mismatch … notes='paddleocr group 6; text_box IoU 0.00; union 3.5x the larger box,
+above --max-box-growth'
+```
+
+Three things the measurement showed that are worth keeping in mind:
+
+- **The fix can move a group between issue types rather than clearing it.** On *Hound
+  Hounder* 025 the `OW-OOO!` pair was 170×44 on easyocr and 273×132 on paddleocr, with
+  `box_mismatch` on one side and `text_does_not_fit` on the other. After the merge both
+  engines carry the larger box, the mismatch is gone and the fit failure is reported on
+  both. That is the option working: unify the boxes and the downstream checks agree too.
+  It is *not* a new fault, but the queue does not always shrink by the number merged.
+- **A degenerate box drags the union.** The same title's `WHIRR` had a 2×2 pixel
+  paddleocr box; the union honours it and extends the easyocr box to reach it. Modest
+  here at 1.29×, and the growth ceiling is what stops the pathological version.
+- **Only the engine that was wrong gets written.** On a nested pair the outer box is
+  already the union, so that file is unchanged and only the inner one is rewritten —
+  which is why a run can report six merges and leave fewer than twelve files dirty.
+
+The merge is skipped on a group whose `box_mismatch` has been acknowledged, for the same
+reason the text fixers honour a dismissal: otherwise the next `--fix` run would quietly
+undo the judgement made in the editor.
+
 ### Why neither counts towards engine agreement
 
 Folding them in would take agreement from **70.0% to 24.3%**, and the drop is dominated
@@ -434,9 +485,15 @@ Added 2026-08-27:
 
 ## The `--fix-*` flags require a clean prelim repo
 
-The fixers rewrite `ai_text` and `panel_num` in place. Since 2026-08-03 each
-written file also gets a timestamped copy under the backup dir, like the kivy
-editor and `vision_apply` — but the clean-tree guard remains the real safety.
+The fixers rewrite `ai_text`, `panel_num` and — under `--fix-boxes` — `text_box`
+in place. Since 2026-08-03 each written file also gets a timestamped copy under
+the backup dir, like the kivy editor and `vision_apply` — but the clean-tree
+guard remains the real safety.
+
+`--fix-boxes` is the only one that writes to **both** engines from a single
+decision, so a page it touches can leave two files dirty rather than one. It is
+covered by the same guard: `FixFlags.any_enabled()` includes it, which is what
+the check is gated on.
 
 Since 2026-08-01 the prelim files are a private git repo
 (`~/Books/Carl Barks/Fantagraphics-restored-ocr/Prelim`, `barks-ocr-prelim`), so

@@ -40,7 +40,13 @@ from loguru import logger
 from PIL import Image, ImageDraw, ImageFont
 
 from barks_ocr.cli_setup import init_logging
-from barks_ocr.utils.engine_compare import BOX_IOU_MIN, box_iou, differing_attrs
+from barks_ocr.utils.engine_compare import (
+    BOX_IOU_MIN,
+    box_growth,
+    box_iou,
+    differing_attrs,
+    union_box,
+)
 from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.group_checks import (
     BOX_OUTSIDE_PANEL_ISSUE,
@@ -65,6 +71,19 @@ FIT_HEIGHT_FRACTION = 0.75  # derived font size ≈ box line height * this
 FIT_MIN_FONT_SIZE = 8
 MIN_MATCH_RATIO = 0.7  # SequenceMatcher threshold for cross-engine pairing
 MAX_FIX_PASSES = 5  # one fix can enable another; cap the re-check loop
+# Ceiling on what --fix-boxes will merge, as a multiple of the larger source box.
+#
+# The fix exists because a box_mismatch is nearly always a padding difference
+# rather than a disagreement about where the lettering is, and reconciling it by
+# hand in the editor is pure overhead. But the two engines reading the same text
+# in two far-apart places is the signature of a mis-pairing, and merging those
+# would replace a reportable disagreement with one large wrong box on both sides.
+#
+# Measured over the corpus's 434 pairs below BOX_IOU_MIN: the union costs
+# nothing at all on 233 of them (one box already inside the other), median
+# growth 1.00, p90 2.45, p99 9.70, max 17.73. At 2.0 the fix takes 378 and
+# refuses 56, which stay reported as box_mismatch for a human.
+MAX_BOX_GROWTH = 2.0
 # Lettering that is deliberately unlike the surrounding dialogue, so neither its
 # width nor its line height says anything about the page. "title" is the
 # splash-page logo: hand-drawn, one huge word per line, and nothing Verdana can
@@ -241,11 +260,19 @@ class FixFlags:
     newlines: bool = False
     whitespace: bool = False
     dashes: bool = False
+    boxes: bool = False
 
     def any_enabled(self) -> bool:
         """Whether this run will write to the prelim files at all."""
         return any(
-            (self.panel_nums, self.groups_order, self.newlines, self.whitespace, self.dashes)
+            (
+                self.panel_nums,
+                self.groups_order,
+                self.newlines,
+                self.whitespace,
+                self.dashes,
+                self.boxes,
+            )
         )
 
 
@@ -257,6 +284,19 @@ class LineHeightLimits:
     marginal: float = LINE_HEIGHT_MARGINAL_FRACTION
     include_marginal: bool = False
     bimodal_ratio: float = LINE_HEIGHT_BIMODAL_RATIO
+
+
+@dataclass(frozen=True)
+class BoxAgreementLimits:
+    """When the engines' text_boxes count as disagreeing, and when to merge them.
+
+    ``iou_min`` is the reporting threshold; ``max_growth`` only matters under
+    ``--fix-boxes``, and is the ceiling on how much bigger the merged box may be
+    than the larger of the two it replaces.
+    """
+
+    iou_min: float = BOX_IOU_MIN
+    max_growth: float = MAX_BOX_GROWTH
 
 
 @dataclass(frozen=True)
@@ -1115,13 +1155,13 @@ class OcrChecker:
         comics_database: ComicsDatabase,
         fixes: FixFlags | None = None,
         line_height_limits: LineHeightLimits | None = None,
-        box_iou_min: float = BOX_IOU_MIN,
+        box_limits: BoxAgreementLimits | None = None,
         overhang_limits: PanelOverhangLimits | None = None,
     ) -> None:
         self._comics_database = comics_database
         self._fixes = fixes or FixFlags()
         self._limits = line_height_limits or LineHeightLimits()
-        self._box_iou_min = box_iou_min
+        self._boxes = box_limits or BoxAgreementLimits()
         self._overhang = overhang_limits or PanelOverhangLimits()
         self._speech_groups = SpeechGroups(comics_database)
         self._title_panel_boxes = TitlePanelBoxes(self._comics_database)
@@ -1258,10 +1298,19 @@ class OcrChecker:
                     any_fixes = True
 
             # Once per page, after both engines have had their fixes applied.
-            pair_issues, pair_missing, agree = self._check_engine_agreement(variants)
+            pair_issues, pair_missing, agree, boxes_merged = self._check_engine_agreement(variants)
             issues.extend(pair_issues)
             missing_panels.extend(pair_missing)
             agreed += agree
+            if boxes_merged:
+                # Saved here rather than in _check_page_group: the merge writes
+                # to both engines at once, so both files are now dirty and the
+                # per-engine save has already been and gone for this page.
+                any_fixes = True
+                for page_group in variants.values():
+                    page_group.save_json(
+                        backup_file=_prelim_backup_file(page_group.ocr_prelim_groups_json_file)
+                    )
 
         return issues, missing_panels, TitleAgreement(agreed, len(pages)), any_fixes
 
@@ -1600,8 +1649,12 @@ class OcrChecker:
     def _check_engine_agreement(
         self,
         variants: dict[OcrTypes, SpeechPageGroup],
-    ) -> tuple[list[IssueFound], list[MissingPanel], bool]:
-        """Compare the two engines for one page. Returns (issues, missing, agree).
+    ) -> tuple[list[IssueFound], list[MissingPanel], bool, bool]:
+        """Compare the two engines for one page.
+
+        Returns (issues, missing, agree, boxes_merged). ``boxes_merged`` is the
+        one repair made from here rather than in ``_check_page_group``: it needs
+        both engines in hand, and it writes to both.
 
         Runs **once per page**, not once per engine — the callers loop over
         engines, and doing this there would report every mismatch twice.
@@ -1626,7 +1679,7 @@ class OcrChecker:
         easy = variants.get(OcrTypes.EASYOCR)
         paddle = variants.get(OcrTypes.PADDLEOCR)
         if easy is None or paddle is None:
-            return [], [], False
+            return [], [], False, False
 
         easy_panels = _groups_by_panel(easy.speech_page_json.get("groups", {}))
         paddle_panels = _groups_by_panel(paddle.speech_page_json.get("groups", {}))
@@ -1634,6 +1687,7 @@ class OcrChecker:
         reading_issues: list[IssueFound] = []
         record_issues: list[IssueFound] = []
         missing: list[MissingPanel] = []
+        merged_any = False
         volume, fanta_page = easy.fanta_vol, easy.fanta_page
 
         def issue(  # noqa: ANN202, PLR0913
@@ -1707,16 +1761,18 @@ class OcrChecker:
                     # attribute verdict on it would be measuring nothing.
                     continue
 
-                record_issues.extend(
-                    self._compare_matched_pair(
-                        easy_group, paddle_group, panel, easy_id, paddle_id, issue
-                    )
+                pair_issues, pair_merged = self._compare_matched_pair(
+                    easy_group, paddle_group, panel, easy_id, paddle_id, issue
                 )
+                record_issues.extend(pair_issues)
+                if pair_merged:
+                    merged_any = True
 
         return (
             reading_issues + record_issues,
             missing,
             not reading_issues and not missing,
+            merged_any,
         )
 
     def _compare_matched_pair(  # noqa: PLR0913
@@ -1727,8 +1783,10 @@ class OcrChecker:
         easy_id: str,
         paddle_id: str,
         issue: Callable[..., IssueFound],
-    ) -> list[IssueFound]:
+    ) -> tuple[list[IssueFound], bool]:
         """Box and attribute checks for one pair the two engines read identically.
+
+        Returns (issues, box_was_merged).
 
         Reported against easyocr, as ``text_mismatch`` is, so a group's whole
         cross-engine story sits on one queue entry. The paddleocr group id goes
@@ -1737,22 +1795,25 @@ class OcrChecker:
         pane.
         """
         found: list[IssueFound] = []
+        merged_box = False
         text = _plain(easy_group)
         other = f"paddleocr group {paddle_id}"
 
         iou = box_iou(easy_group.get("text_box") or [], paddle_group.get("text_box") or [])
-        if iou is not None and iou < self._box_iou_min:
-            found.append(
-                issue(
-                    str(OcrTypes.EASYOCR),
-                    easy_id,
-                    "box_mismatch",
-                    panel,
-                    text,
-                    iou,
-                    f"{other}; text_box IoU {iou:.2f}",
+        if iou is not None and iou < self._boxes.iou_min:
+            merged_box, refusal = self._merge_pair_boxes(easy_group, paddle_group, easy_id)
+            if not merged_box:
+                found.append(
+                    issue(
+                        str(OcrTypes.EASYOCR),
+                        easy_id,
+                        "box_mismatch",
+                        panel,
+                        text,
+                        iou,
+                        f"{other}; text_box IoU {iou:.2f}{refusal}",
+                    )
                 )
-            )
 
         if differing := differing_attrs(easy_group, paddle_group):
             found.append(
@@ -1767,7 +1828,55 @@ class OcrChecker:
                 )
             )
 
-        return found
+        return found, merged_box
+
+    def _merge_pair_boxes(
+        self, easy_group: dict, paddle_group: dict, easy_id: str
+    ) -> tuple[bool, str]:
+        """Give both engines the union of their text_boxes. Returns (merged, why not).
+
+        Only ever called on a pair already below ``--box-iou-min``, and only
+        under ``--fix-boxes``. The union is used rather than whichever box is
+        larger because it is the only choice that cannot clip lettering either
+        engine caught: on the 53.7% of flagged pairs where one box already
+        contains the other the two are the same box, and on the rest the larger
+        box can still cut off what the smaller one saw.
+
+        Refused, with the reason appended to the group's ``box_mismatch`` entry,
+        when the merge would grow past ``--max-box-growth``. Two engines that
+        read the same words in two far-apart places are more likely to have been
+        mis-paired than to disagree about padding, and merging those replaces a
+        reportable disagreement with one large wrong box on both sides.
+
+        An acknowledged ``box_mismatch`` is left alone for the same reason
+        ``_apply_text_fixes`` honours a dismissal: otherwise the next --fix run
+        would quietly undo the judgement the user made in the editor.
+        """
+        if not self._fixes.boxes:
+            return False, ""
+        if is_acknowledged(easy_group, "box_mismatch") or is_acknowledged(
+            paddle_group, "box_mismatch"
+        ):
+            return False, "; acknowledged, so not merged"
+
+        easy_box = easy_group.get("text_box") or []
+        paddle_box = paddle_group.get("text_box") or []
+        merged = union_box(easy_box, paddle_box)
+        if merged is None:
+            # A malformed box is reported as bad_text_box in its own right.
+            return False, ""
+
+        growth = box_growth(merged, easy_box, paddle_box)
+        if growth > self._boxes.max_growth:
+            return False, f"; union {growth:.1f}x the larger box, above --max-box-growth"
+
+        easy_group["text_box"] = merged
+        paddle_group["text_box"] = merged
+        logger.info(
+            f"Group {easy_id}: merged the engines' text_boxes"
+            f" ({growth:.2f}x the larger of the two)."
+        )
+        return True, ""
 
     def _apply_text_fixes(self, json_groups: dict) -> bool:
         """Apply the unambiguous string rewrites. Returns whether anything changed.
@@ -2320,6 +2429,20 @@ def main(  # noqa: PLR0913
         default=False,
         help="Rewrite '--' as an em-dash in ai_text and normalize the spacing around it.",
     ),
+    fix_boxes: bool = typer.Option(
+        default=False,
+        help=(
+            "Give both engines the union of their text_boxes on every pair reported as"
+            " box_mismatch, so there is nothing left to reconcile by hand."
+        ),
+    ),
+    max_box_growth: float = typer.Option(
+        MAX_BOX_GROWTH,
+        help=(
+            "Refuse a --fix-boxes merge that would make the box more than this many times"
+            " the larger of the two it replaces; those stay reported as box_mismatch."
+        ),
+    ),
     force: bool = typer.Option(
         default=False,
         help="Run a --fix pass even with uncommitted prelim changes (they cannot be recovered).",
@@ -2377,6 +2500,12 @@ def main(  # noqa: PLR0913
     if not 0.0 <= box_iou_min <= 1.0:
         err_msg = f"--box-iou-min ({box_iou_min}) must be between 0 and 1."
         raise typer.BadParameter(err_msg)
+    if max_box_growth < 1.0:
+        # The union is never smaller than the larger source box, so anything
+        # below 1.0 refuses every merge and makes --fix-boxes a no-op that
+        # looks like it ran.
+        err_msg = f"--max-box-growth ({max_box_growth}) must be at least 1.0."
+        raise typer.BadParameter(err_msg)
     if not 0.0 <= outside_panel_fraction < 1.0:
         # 1.0 is unreachable: a box wholly outside its panel measures exactly
         # 1.0, and the test is a strict ">".
@@ -2397,6 +2526,7 @@ def main(  # noqa: PLR0913
         newlines=fix_newlines,
         whitespace=fix_whitespace,
         dashes=fix_dashes,
+        boxes=fix_boxes,
     )
     if fixes.any_enabled():
         _check_prelim_repo_clean(force=force)
@@ -2412,8 +2542,9 @@ def main(  # noqa: PLR0913
         bimodal_ratio=line_height_bimodal,
     )
     overhang_limits = PanelOverhangLimits(fraction=outside_panel_fraction, min_px=outside_panel_px)
+    box_limits = BoxAgreementLimits(iou_min=box_iou_min, max_growth=max_box_growth)
     output_file = output or _default_output_file(volumes_str)
-    OcrChecker(comics_database, fixes, limits, box_iou_min, overhang_limits).check_titles(
+    OcrChecker(comics_database, fixes, limits, box_limits, overhang_limits).check_titles(
         title_list, output_file
     )
 
