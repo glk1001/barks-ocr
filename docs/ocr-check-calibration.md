@@ -1183,9 +1183,10 @@ Measured over the 144,216 groups with text and a sound box (2026-09-10, working 
 | the pair's fragments unusable | 6,781 | the corroboration above |
 | fragments' texts under `FRAG_COVERAGE_MIN` 0.8 of the group's glyphs on both engines | 217 | the union is then a lower bound on the lettering, not its extent |
 | union outside the text_box by more than `FRAG_INSIDE_TOLERANCE_PX` 10 | 8,142 | the fragments describe some other box — vol 18 page 152 group 0's sit 500px from it — or the engines' boxes differ, which is `box_mismatch`'s business |
+| the pair's fragments are a copy of this group's, to the coordinate | 1,580 paired groups (558 in vol 7, 354 in vol 1) | a copy is one reading, not two. The editor's Copy In seeds a group with the source's fields, and vol 1's added-original pages were captured once. Vol 1 page 261 group 11, `HE LEFT HIS MOTOR / RUNNING.`, is a right box over a fragment that stops short of its line at a density of 0.39; with the same fragment on both engines it was the one flag the corroboration rule let through on a box the reviewer had passed |
 
-Fragments under 20x15px are dropped as stray marks before any of that. 112,114 groups
-are judged.
+Fragments under 20x15px are dropped as stray marks before any of that. About 112,000
+groups are judged.
 
 #### Distribution and edges
 
@@ -1198,28 +1199,29 @@ are judged.
 | width ratio above | corpus | stylized | vol 1 | vol 18 | vol 11 | vol 19 | vol 21 |
 |---|---|---|---|---|---|---|---|
 | 1.3 | 98 | 26 | 4 | 0 | 6 | 3 | 2 |
-| **1.5** | **45** | **18** | **4** | **0** | **2** | **3** | **0** |
+| **1.5** | **45** (38 after the copied-fragment gate) | **18** | **4** (2) | **0** | **2** | **3** | **0** |
 | 1.75 | 17 | 9 | 0 | 0 | 2 | 3 | 0 |
 | 2.0 | 8 | 5 | 0 | 0 | 0 | 2 | 0 |
 
-The 45 above 1.5 were read against the art (two, vol 1 page 261's pair, could not be
-located). **21** are the fault the check exists for: a box drawn round an adjacent
-balloon as well as its own (vol 26 page 063, vol 14 page 178, vol 25 page 043), round the
-whole panel (vol 29 pages 100, 118, 025), or round blank burst — the KNOCK pair at 1.81
-and 1.76. **16** are a box that is right around lettering the fragments stop short of: a
-trailing dash or ellipsis (`SO —`, `SAY —`, `BUT —`, `SO ...`), a run of exclamation marks
-(`GEE!!!`), or a drop capital (`SOON!`). The engines' fragment *text* includes the dash;
-only the box excludes it, so no coverage rule separates them. That is the residual
-false-positive class, and the reviewer marks it `box-is-deliberately-wide`. The other
-**8** are signs and labels with a roomy margin (`INN`, `ZERO`, `LIFE / GUARD`), which a
-reviewer may tighten or leave.
+The 45 above 1.5 before the copied-fragment gate were read against the art; that gate
+then removed 7 of them, every one a right box (vol 1 page 261's pair among them), and none
+of the real faults. Of the **38** left, **19** are the fault the check exists for: a box
+drawn round an adjacent balloon as well as its own (vol 26 page 063, vol 14 page 178, vol
+25 page 043), round the whole panel (vol 29 pages 100, 118, 025), or round blank burst —
+the KNOCK pair at 1.81 and 1.76. **14** are a box that is right around lettering the
+fragments stop short of: a trailing dash or ellipsis (`SO —`, `SAY —`, `BUT —`, `SO ...`),
+a run of exclamation marks (`GEE!!!`), or a drop capital (`SOON!`). The engines' fragment
+*text* includes the dash; only the box excludes it, so no coverage rule separates them.
+That is the residual false-positive class, and the reviewer marks it
+`box-is-deliberately-wide`. The other **5** are signs and labels with a roomy margin
+(`INN`, `ZERO`, `LIFE / GUARD`), which a reviewer may tighten or leave.
 
 Above **1.5** is always reported, as `box_too_big`, the same issue name as the height
 reading because the reviewer's action is the same — redraw the box — with the console
 note saying which reading fired and quoting the ratio (`box is 1.81x wider than its
 lettering (3 fragments across both engines)`); the queue file's sixth field carries it.
-**1.3 to 1.5** is `box_too_big_marginal` behind `--include-marginal`, where the extra 53
-are mostly the punctuation class and short signs. 1.5 sits well past p99.9 of the judged
+**1.3 to 1.5** is `box_too_big_marginal` behind `--include-marginal`, where the extra
+fifty-odd are mostly the punctuation class and short signs. 1.5 sits well past p99.9 of the judged
 population; the target group clears it by a wide margin, where at 1.75 it would have
 cleared by 0.01 on easyocr. Both edges are CLI-tunable (`--box-too-wide`,
 `--box-too-wide-marginal`), the marginal edge floored above 1.0 like the others.

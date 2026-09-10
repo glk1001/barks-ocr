@@ -152,9 +152,9 @@ BOX_TOO_BIG_MARGINAL_RATIO = 2.0  # ...and above this => marginal, opt-in
 # engines' fragments on the paired group is taken, and a group is judged only
 # when both contribute. Measured over the 112,114 groups that pass the gates
 # below: median 1.00, p99 1.08, p99.9 1.28; the stylized subset p99 1.21. Above
-# 1.5 there are 45, of which 21 are a box drawn round an adjacent balloon or
-# the whole panel, 16 are a punctuation tail or a drop capital the fragments
-# never box (`SO --`, `GEE!!!`), and 8 are a roomy sign box. Hence the same
+# 1.5 there are 38, of which 19 are a box drawn round an adjacent balloon or
+# the whole panel, 14 are a punctuation tail or a drop capital the fragments
+# never box (`SO --`, `GEE!!!`), and 5 are a roomy sign box. Hence the same
 # two-band shape. See docs/ocr-check-calibration.md.
 BOX_TOO_WIDE_RATIO = 1.5  # box width over lettering width => box_too_big
 BOX_TOO_WIDE_MARGINAL_RATIO = 1.3  # ...and above this => marginal, opt-in
@@ -877,6 +877,11 @@ def _fragment_coverage(fragment_text: str, ai_text: str) -> float:
     return len(_glyphs(fragment_text)) / n_glyphs if n_glyphs else 0.0
 
 
+def _quad_set(quads: list[PointList]) -> set[tuple[tuple[float, float], ...]]:
+    """Return the quads as a set, rounded so two copies of one reading compare equal."""
+    return {tuple((round(x, 1), round(y, 1)) for x, y in quad) for quad in quads}
+
+
 def _paired_fragment_quads(
     group: dict, other_page_group: SpeechPageGroup | None
 ) -> list[PointList] | None:
@@ -893,6 +898,15 @@ def _paired_fragment_quads(
     no pair, or when the fragments' texts cover under ``FRAG_COVERAGE_MIN`` of
     the group's glyphs on both engines -- the union is then a lower bound on the
     lettering, not its extent.
+
+    None too when the pair's fragments are a copy of this group's, to the
+    coordinate. 1,580 paired groups carry the same fragment set on both
+    engines -- the editor's Copy In seeds a group with the source's fields, and
+    the added-original pages of vol 1 were captured once -- and a copy is one
+    reading, not two: vol 1 page 261 group 11 ``HE LEFT HIS MOTOR / RUNNING.``
+    is a right box over a fragment that stops short of its line, and with the
+    same fragment on both sides it was the one flag the corroboration rule let
+    through on a box a reviewer had passed.
     """
     own = _usable_fragment_quads(group)
     if not own or not own[0]:
@@ -900,6 +914,8 @@ def _paired_fragment_quads(
     other = _find_matching_group(group, other_page_group)
     theirs = _usable_fragment_quads(other) if other is not None else None
     if not theirs or not theirs[0]:
+        return None
+    if _quad_set(own[0]) == _quad_set(theirs[0]):
         return None
 
     ai_text = _plain(group)
