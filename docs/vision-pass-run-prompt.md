@@ -4690,6 +4690,38 @@ one text fix (`DOC!....` -> `DOC! ....`), and seven text_boxes tightened.
   downstream cares, but a later `--fix-boxes` run will merge them back to the
   union of the two hand edits, which is slightly larger than either.
 
+### Findings to paste into the next run (2026-09-10, forty-fifth batch, THIRD OF FOUR REVIEWED -- *A Campaign of Note*)
+
+Replaces that title's numbers in the pass-only section below; only *The
+Mysterious Stone Ray* is still unreviewed. **1 speaker correction in 53 passed
+groups = 1.9%**, the cleanest title of the batch by a wide margin, and the whole
+of it is one balloon.
+
+| | |
+|---|---|
+| 070 g2 `AND THE ELECTION IS TOMORROW!` | `Louie` / `cap_colour: green` / medium -> **`Huey` / `red` / high** |
+
+- **I WROTE `balloon-tail` IN `identified_by` AND THEN USED THE BALLOON'S SPAN.**
+  Three nephews walk left to right across 070 panel 1 wearing blue, red and
+  green. The balloon hangs at the top right, its x-span squarely over the green
+  boy -- and its tail runs down and to the **left**, to the red one. I recorded
+  both `balloon-tail` and `cap-colour` as the evidence, then named the cap that
+  sat under the balloon. The review made it Huey and raised it from medium to
+  **high**, so the tail was not ambiguous; I simply did not follow it.
+- **MEDIUM WAS THE HONEST PART.** Every other call in the title was high and
+  every one held. The one group I was unsure about is the one that was wrong,
+  which is the confidence field working -- but the fix is to trace the tail, not
+  to hedge. A `cap_colour` recorded off the balloon's span is worse than no
+  `cap_colour`, because it dresses a guess as a measurement.
+- **THE TITLE IS OTHERWISE A GOOD SIGN FOR SHORT ONES.** 53 groups over 4 pages,
+  25 of them Scrooge, 7 held as the `nephews` collective and all 7 correct.
+  Nothing was under-named and nothing over-named, which is the balance the
+  forty-fifth batch's other two titles both missed in opposite directions.
+- **ONE MISSED-TEXT FINDING, DECLINED.** 069's campaign banner is cut by the
+  panel frame into CAN / CIT / WILL SP. Now in `missed-text-ignore.txt` with its
+  reasoning, alongside Too Safe Safe 140's DON / DU: a truncated fragment has
+  nothing for a searchable box to hold. It stays in 069's `visible_text`.
+
 ### Findings to paste into the next run (2026-09-10, forty-fifth batch, PASS ONLY -- not yet reviewed)
 
 Four titles, 52 pages, **663 groups**: *The Mysterious Stone Ray* (Vol. 14) 356,
