@@ -5349,6 +5349,68 @@ Dogcatcher 6 (the page views only). Nephew domain:
   across 460 titles**, all this batch's type corrections (Hondorica 3 groups,
   Dogcatcher 10, both engines).
 
+### Findings to paste into the next run (2026-09-10, forty-eighth batch, ONE OF FOUR REVIEWED -- *The Fabulous Philosopher's Stone*)
+
+Replaces that title's numbers in the pass-only section below. **32 speaker
+corrections in 306 passed groups = 10.5%, 27 in the 72-group nephew domain =
+37.5%.** `review_findings` counts 335 because the prep pages run to 144 (back
+matter) and the review added two groups, 110 g16/g17, the dollar signs in
+Scrooge's eyes on panel 3 (`thought`, Scrooge, hand-lettered text, both
+engines). One type change, the pass's own (111 g12 `845 845 845` to thought),
+ratified; the five it flags as predating are August adjudications. Mirror
+clean: 308/308 on both engines, 295 `identified_by`, identical distributions.
+
+| direction | n |
+|---|---|
+| a name -> `nephews` (over-naming) | **11** (118 g11, 119 g8, 121 g1, 121 g3, 123 g13, 123 g14, 126 g8, 127 g7, 127 g9, 130 g6, 131 g3) |
+| one nephew -> another | 6 (118 g1, 122 g9, 122 g10, 130 g1, 131 g10, 131 g15) |
+| Donald -> a boy | 3 (113 g1, 124 g2, 125 g2) |
+| Scrooge -> Donald | 2 (115 g1, 116 g4) |
+| Scrooge -> the nephew domain | 4 (118 g5, 127 g8, 122 g3, 126 g6) |
+| the nephew domain -> Donald | 2 (112 g13, 122 g2) |
+| `nephews` -> a name | 1 (120 g1) |
+| `unknown` -> Scrooge, `other:Donald and the nephews` | 3 (the two adds, 116 g3) |
+
+- **THE GAP-TIP RULE REVERSED ON THIS CAP: 11 OVER-NAMINGS, THE FIRST TITLE
+  WHERE OVER-NAMING BEAT UNDER-NAMING 11 TO 1.** Every gap and edge tip the
+  pass named in the ray's direction on the small side-tab cap went back to
+  the collective: 118 g11, 119 g8, 121 g3, 123 g14, 126 g8, 127 g9, 131 g3
+  are all "gap tip, named in the ray's direction, medium" notes, and 121 g1,
+  123 g13, 127 g7, 130 g6 named on a 73-150px tab. **Where the tab is under
+  200px and the tip is not inside a head span, write `nephews`.** The rule
+  from the forty-seventh batch (side segment 200-1,300px) does not carry to
+  a tab of a few dozen pixels.
+- **MEDIUM WAS THE ERROR: 20 OF 41 MEDIUMS CORRECTED (48.8%) AGAINST 10 OF
+  265 HIGHS (3.8%).** Worse than Pixilated Parrot's 41.2%. A medium on this
+  title meant "the tail did not land"; the review's answer to that was the
+  collective nearly every time.
+- **SIX SWAPS, AND FOUR OF THEM HUEY -> LOUIE OR DEWEY.** 118 g1, 122 g9/g10,
+  130 g1, 131 g10 were red tabs of 97-1,228px named Huey off a probe with a
+  gap tip; the review read the other boy. On 122 the lantern-glow trio the
+  pass split by beak went the other way entirely (the blue boy and the dark
+  green boy, not the red one). The red tab is the one that prints big, so
+  a red probe hit in a three-boy panel is not a name unless the tip is IN
+  his span.
+- **THREE DONALDS WERE BOYS AND TWO SCROOGES WERE DONALD.** 113 g1 (the
+  magnifier in the vaulted room), 124 g2 and 125 g2 (the lantern-bearer and
+  the boy in the red jewel chest) were read as Donald off a blue sailor cap
+  -- on this volume Donald's cap and Dewey's tab are the same `#00a5d5` and
+  the pass took the blue for Donald three times. Size the head; a blue tab
+  on a small head is Dewey. 115 g1 and 116 g4 went Scrooge -> Donald on
+  tailtip rays that reached Scrooge's hat.
+- **THE SILHOUETTE PANELS WENT TO THE BOYS.** 118 g5 (harbour wall) and 127
+  g8 (the Theseus question) were written Scrooge at medium off a silhouette
+  and a leftward tail; both are the boys'. 122 g2 `I'M GETTING SCARED` went
+  the other way, to Donald. Silhouette reads are 3 for 3 wrong here.
+- **THE GUIDE-BOOK BOY IS NOT A KEY EITHER**: 118 g9 (the book-holder, kept
+  Louie), 118 g11 and 119 g8 (tails on non-holders) went collective, not to
+  the holder. Neither prop nor tail settles a Guide Book line on this title.
+- **116 g3 `GROAN!` IS A CHORUS**: `other:Donald and the nephews`, the
+  memory's form.
+- **THE FIRST 110 SPLASH REVIEW ADDED THE `$ $ $` EYE DEVICES** as thought
+  groups. A row of drawn dollar signs in a character's eyes is lettering to
+  the reviewer; list it in `visible_text` and add it.
+
 ### Findings to paste into the next run (2026-09-10, forty-eighth batch, PASS ONLY -- not yet reviewed)
 
 Four titles, 52 pages, **633 groups**: *The Fabulous Philosopher's Stone*
