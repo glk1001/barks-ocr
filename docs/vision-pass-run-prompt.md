@@ -4895,6 +4895,48 @@ cap-reference page. Nephew domain and how much of it got named:
   *The Big Bin on Killmotor Hill* and *The Victory Garden* no longer appear.
 
 
+### Findings to paste into the next run (2026-09-10, forty-sixth batch, ONE OF FOUR REVIEWED -- *Donald Duck Tells About Kites*)
+
+Replaces that title's numbers in the pass-only section below. **6 speaker
+corrections in 112 groups = 5.4%, all six in the 44-group nephew domain =
+13.6%.** No type or text changes since the pass commit (diffed against
+7f741552); the six type entries `review_findings` lists are the pass's own
+instruction-balloon corrections, ratified. Mirror clean: 112/112 on both
+engines, 100 `identified_by`, identical speaker, cap_colour and confidence
+distributions.
+
+| direction | n | what it was |
+|---|---|---|
+| one nephew -> another | 3 | all on 189 p1 and p3 |
+| `Donald` -> `nephews` | 1 | 186 g8 `I TOLD YOU, LOUIE!` |
+| a name -> `nephews` | 1 | 189 g17 |
+| `nephews` -> a name | 1 | 192 g5, the notebook writer read green |
+
+- **THE PERMUTED KEY HELD WHERE THE ADDRESSES ARE, AND 189 IS WHERE IT DID
+  NOT.** Every blue-Huey call made off a naming line survived. All three
+  name-for-name swaps are on 189, the one page with three boys in a row and no
+  address: 189 g5 went `Dewey / red` -> `Louie / green` (the review read the
+  middle boy's cap as green where the pass measured 2021px of #e51a20), g8
+  went `Huey` -> `Dewey / blue`, and g0 (the glue-covered boy) went `Louie` ->
+  `Huey / blue`. **Note for the next Kites-style title: g8 and g0 apply
+  different keys to the same blue** -- g0 reads blue as Huey (the story's key),
+  g8 reads blue as Dewey (the volume's). One of them is a slip; flag to the
+  reviewer rather than resolve. Where a story permutes its key, the pass's
+  medium on every red and green call was the right hedge: 3 of 17 mediums were
+  corrected against 3 of 95 highs.
+- **`I TOLD YOU, LOUIE!` IS NOT DONALD'S.** 186 g8 went to `nephews`; the pile
+  under the tree has three boys in it and the line is a brother's scold. The
+  pass reasoned from the adult register and a tail into a heap of heads. A
+  heap is a long shot's worth of ambiguity with none of its excuse.
+- **THE ELIMINATION ON 189 g17 WAS REVERSED.** One tail onto the rightmost of
+  three boys, green cap on a 0.7x crop, named Louie; the review made it
+  `nephews`. Recorded as an outcome.
+- **THE REVIEW FIXED TEXT THE PASS PASSED.** `notes` on 189 g5/g8 read
+  `Corrected 'I WANTS' to 'I WANTA'`, on 192 g5 `Corrected 'THAIS' to
+  'THAT'S' and added '6!'` -- but the stored `ai_text` is unchanged since the
+  pass, so those notes describe Gemini-era fixes carried on the group, not
+  this review. The pass's `text_ok: true` on every group stands.
+
 ### Findings to paste into the next run (2026-09-10, forty-sixth batch, PASS ONLY -- not yet reviewed)
 
 Four titles, 50 pages, **675 groups**: *Donald Duck Tells About Kites* (Vol. 15)
