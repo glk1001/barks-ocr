@@ -4895,7 +4895,102 @@ cap-reference page. Nephew domain and how much of it got named:
   *The Big Bin on Killmotor Hill* and *The Victory Garden* no longer appear.
 
 
+### Findings to paste into the next run (2026-09-10, forty-sixth batch, PASS ONLY -- not yet reviewed)
+
+Four titles, 50 pages, **675 groups**: *Donald Duck Tells About Kites* (Vol. 15)
+112, *The Lemming with the Locket* (Vol. 14) 271, *The Ghost Sheriff of Last
+Gasp* (Vol. 15) 163, *A Descent Interval* (Vol. 15) 129. **65 images read =
+1.3 per page** against a target of 3; the highest title was Kites at 1.75,
+where the cap key had to be re-derived from dialogue. Nephew domain:
+
+| title | nephew groups | named | collectives | low/medium queue |
+|---|---|---|---|---|
+| Donald Duck Tells About Kites | 43 | 30 (70%) | 13 | 17 |
+| The Lemming with the Locket | 80 | 45 (56%) | 35 | 21 |
+| The Ghost Sheriff of Last Gasp | 57 | 42 (74%) | 15 | 16 |
+| A Descent Interval | 34 | 23 (68%) | 11 | 21 |
+
+- **A TITLE CAN PERMUTE THE WHOLE KEY, AND THE ADDRESSES SAY SO ON PAGE ONE.**
+  Kites puts HUEY in the blue-trimmed cap: Donald names him on 186 p2, 191 p5,
+  192 p1 and 192 p5 and the boy is blue every time, and 186 p3 names the
+  red-capped boy DEWEY. Green is therefore Louie by elimination. The pass
+  followed the story's own key, recorded the printed ink in `cap_colour`, and
+  held every red and green call at medium (one address each) with the blue
+  ones at high (five). This is not Stone Ray's drift -- the key is consistent
+  across all eight pages -- so no retouch list; but a reviewer who reads
+  `cap_colour: blue` next to `Huey` should know it is deliberate. **Grep the
+  addresses before page 1 on every title, even one with a clean reference
+  panel.**
+- **THE VOL. 15 CAP CONSTRUCTION CHANGES PER TITLE AGAIN.** Kites: black cap
+  with a small coloured trim at each side (266-601px). Ghost Sheriff: enormous
+  cowboy hats (2,000-6,000px) in the three inks, the easiest title in months.
+  Descent Interval: a small coloured patch on the back of a black cap
+  (120-1,350px). All three pass through `capscan`'s default floor except the
+  smallest Kites and Descent patches; the per-panel census caught those.
+- **HICCUPS ARE A VOICE.** Ghost Sheriff stores fifteen `HIC` groups as
+  `sound_effect`; every one is Wild Bill Trueshot hiccupping, so all fifteen
+  went to `dialogue` with him as speaker, off-panel where he is unseen. Same
+  reasoning for the Lemming's URP, ARK, GRR and SQUEAK on Lemming with the
+  Locket (an animal's voice) and for the two YOW/OW cries Scrooge makes when
+  bitten. CHOMP stays `sound_effect` but takes the lemming as maker.
+- **SCROOGE'S BUBBLE-TRAIL BALLOONS ARE STORED AS DIALOGUE ON 074.** Four of
+  the five balloons on Lemming 074 have a trail of circles to his head at 0.8x
+  and were corrected to `thought`; the fifth has a pointed tail and stays
+  speech. The same on Descent Interval 200 p5-p6 and 202 p5, Donald inside the
+  globe. Check the underside of every solo-Scrooge balloon before trusting the
+  stored type.
+- **A CAPTION LETTERED LIKE A BALLOON.** Lemming 078 p6 `BUT --` is a
+  drop-capital caption at the panel corner stored as `dialogue`; corrected to
+  `narration`. Kites has the reverse six times: instruction balloons with
+  tails to Donald's hands stored as `narration`, corrected to `dialogue`.
+- **TAILTIP MERGES TOUCHING BALLOONS.** On Lemming 083 p5 and Ghost Sheriff
+  008 p5 the tool returned the neighbour's tail or one shared spur for two
+  balloons. A 0.7x view of the panel settled each in one image; when two
+  balloons touch, read the crop, not the tool.
+- **THE PRELIM VOLUME DIRECTORY IS NAMED FOR THE VOLUME'S LEAD STORY.**
+  Descent Interval's pages live in the *Ghost Sheriff of Last Gasp* directory
+  of Vol. 15. A staging assertion that looked for the title in the directory
+  name matched nothing; assert on the volume prefix and the page numbers.
+- **THE BARE-HEADED PAGES.** Kites has none. Lemming 095 p1-p5 (the inn),
+  Ghost Sheriff 006 and 007 p1-p2 (indoors), Descent 194 (indoors) are all
+  white-skull pages and every nephew group on them is a measured collective.
+- **MISSED TEXT: ONE ITEM.** Lemming 084 p3 `BAM`, the crew pile-up, grouped
+  by neither engine; in `queue-missed.txt` parked on g2. The other three
+  titles came back clean.
+- **CORPUS SWEEPS AT THE END OF THE BATCH.** `vision-corrections` with no
+  title: **74 outstanding across 460 titles**, all this batch's type
+  corrections (Kites 12, Lemming 24, Ghost Sheriff 32, Descent 6, both
+  engines). `speaker-queue --unreviewed --confidence low,medium` with no
+  title: **75 groups, every one from this batch**, written to
+  `~/barks-vision/queue-corpus-lowmed-2026-09-10b.txt`. The forty-fifth
+  batch's 41 no longer appear.
+
 ## Per-volume cap palette
+Vol. 15, three more titles read 2026-09-10 (forty-sixth batch), and the volume
+now has three cap constructions in three stories:
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *Donald Duck Tells About Kites* | 192 p5, three boys in a row | `#e51a20` 542px | `#4da23f` H111 511px | `#00a5d7` | side trim on a black cap, 266-601px |
+| *The Ghost Sheriff of Last Gasp* | 013 p1, three boys in close-up | `#e61b1f` 6324px | `#4ca33e` H111 3969px | `#00a5d7` 6095px | full cowboy hats |
+| *A Descent Interval* | 197 p8, three boys in close-up | `#e61b1f` 1354px | `#4ca33e` H112 165-263px | `#00a5d7` 518px | a patch at the back of a black cap |
+
+- ***KITES PERMUTES THE KEY.*** Donald addresses the blue-trimmed boy as HUEY
+  on 186, 191 and 192 (twice) and the red one as DEWEY on 186 p3; green is
+  Louie by elimination. Consistent across all eight pages, so a per-story key
+  rather than colourist drift. `cap_colour` records the printed ink.
+- Ghost Sheriff's hats are the same blue as Donald's own hat, at adult size;
+  the boys are bare-headed indoors on 006-007 p2.
+- Descent's patches are small enough that `title_heads` lists them but a
+  25px `capscan` floor at panel scale sometimes does not; the boys are
+  bare-headed indoors on 194.
+
+Vol. 14, *The Lemming with the Locket* read 2026-09-10: the volume entry holds
+(`#e61b1f` / `#4ca33e` H111 / `#00a5d7`; Scrooge's coat `#a04453` maroon, his
+hat band the roster blue). The boys carry their caps in their laps on 079 p8
+and go bare-headed at the inn on 095. Reference panel 087 p1.
+
+
 
 Not in the skill, because it is per volume. Vol. 2, from the reference panel at
 p117 panel 3 (the boys hold their caps at Daisy's door):
