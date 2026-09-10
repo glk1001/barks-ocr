@@ -337,6 +337,19 @@ Four things the measurement showed that are worth keeping in mind:
   would renumber either way; the merge changes which pair is transposed, not whether the
   page is flagged. Nothing else in 65,989 merges moves, and the cross-engine pairing —
   which is positional within a panel — does not change on any page at all.
+- **A skewed quad is `bad_text_box`, not a merge.** `text_box_problem` now rejects a
+  group box whose corners are not axis-aligned. The corpus held exactly one — Vol. 6
+  *The Old Castle's Secret* page 154 group 10, a 52px page number with a typo in one
+  corner, identical on both engines — which the union would otherwise have squared up to
+  294px on both files and logged as a 1.00× merge, since growth is measured bbox against
+  bbox and cannot see it.
+- **Two pages in the corpus change reading order**, Vol. 25 page 115 and Vol. 29 page
+  172, both on easyocr. `_reading_order_key` sorts by `text_box` position, so a box that
+  grows can in principle overtake its neighbour and make `--fix-groups-order` renumber
+  the page. Both of these are already reported as `groups_out_of_order` today, so they
+  would renumber either way; the merge changes which pair is transposed, not whether the
+  page is flagged. Nothing else in 65,989 merges moves, and the cross-engine pairing —
+  which is positional within a panel — does not change on any page at all.
 
 The merge is skipped on a group whose `box_mismatch` has been acknowledged, for the same
 reason the text fixers honour a dismissal: otherwise the next `--fix` run would quietly
@@ -468,9 +481,9 @@ whenever it fires, so there was nothing to calibrate:
   `ai_text`: unbalanced or mis-nested `[b]`/`[i]`, disallowed tags, unescaped
   `&`/`[`/`]`. Dismissable, in the `group_checks` registry.
 - **`bad_text_box`** — a `text_box` that is missing, not 4 points, has a
-  malformed point, or has zero area. It also gates every geometric check and
-  fixer for that group; such boxes used to be skipped silently and then crash
-  a `--fix` pass.
+  malformed point, has zero area, or is not axis-aligned. It also gates every
+  geometric check and fixer for that group; such boxes used to be skipped
+  silently and then crash a `--fix` pass.
 - **`panel_num_out_of_range`** — a set `panel_num` of 0 or beyond the page's
   panel count, which `panel_num_mismatch` structurally cannot see (it needs
   the box to sit wholly inside a different *real* panel).

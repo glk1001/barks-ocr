@@ -497,7 +497,7 @@ def _rotated_frame_wh(group: dict) -> tuple[int, int] | None:
     points: list[tuple[float, float]] = []
     for frag in fragments.values():
         quad = frag.get("text_box") or []
-        if text_box_problem(quad) is not None:
+        if text_box_problem(quad, axis_aligned=False) is not None:
             return None
         p0, p1, _p2, p3 = quad
         side_a = (p1[0] - p0[0], p1[1] - p0[1])

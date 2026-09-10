@@ -122,13 +122,21 @@ def points_bbox(points: PointList) -> tuple[float, float, float, float]:
     return min(xs), min(ys), max(xs), max(ys)
 
 
-def text_box_problem(text_box: object) -> str | None:
+def text_box_problem(text_box: object, *, axis_aligned: bool = True) -> str | None:
     """Describe what is wrong with a text_box, or None when it is sound.
 
     Everything geometric indexes the four corner points, and a malformed box
     used to be skipped silently only to crash a later ``--fix`` pass. This is the
     single gate: ``ocr_check`` reports a box it rejects as "bad_text_box" and
     keeps it away from every geometric check and fixer.
+
+    A group's ``text_box`` is always axis-aligned -- two distinct x values and
+    two distinct y values among its corners -- and by default a quad that is
+    not is rejected too. The corpus held one, a 52px-wide page number with a
+    typo in one corner, which ``--fix-boxes`` would otherwise have squared up
+    to 294px on both engines and logged as a costless merge. The OCR engines'
+    fragment quads in ``cleaned_box_texts`` legitimately follow angled
+    lettering, so a caller measuring those passes ``axis_aligned=False``.
     """
     if not isinstance(text_box, list) or not text_box:
         return "missing"
@@ -147,6 +155,8 @@ def text_box_problem(text_box: object) -> str | None:
                 return f"malformed point: {point!r}"
     if max(xs) - min(xs) <= 0 or max(ys) - min(ys) <= 0:
         return "degenerate (zero area)"
+    if axis_aligned and (len(set(xs)) != 2 or len(set(ys)) != 2):  # noqa: PLR2004
+        return "not axis-aligned"
     return None
 
 
