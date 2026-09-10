@@ -37,6 +37,7 @@ from barks_ocr.utils.engine_compare import (
     box_iou,
     differing_attrs,
     normalized_attr,
+    union_box,
 )
 from barks_ocr.utils.group_checks import (
     DISMISSABLE_ISSUE_TYPES,
@@ -2562,7 +2563,7 @@ class EditorApp(App):
                     on_take=lambda _inst: self._apply_and_reopen(
                         pane, lambda: self._take_box_from_other(pane, counterpart)
                     ),
-                    take_text="Copy Box",
+                    take_text="Merge Box",
                 )
             )
 
@@ -2631,16 +2632,29 @@ class EditorApp(App):
             self._diff_popup = None
 
     def _take_box_from_other(self, pane: EnginePane, counterpart: dict) -> None:
-        """Adopt the other engine's text_box for this pane's group."""
-        other_box = counterpart.get("text_box") or []
+        """Give this pane's group the union of the two engines' text_boxes.
+
+        The union rather than a copy of the other engine's box, for the reason
+        ``ocr_check --fix-boxes`` writes the union: it is the only choice that
+        cannot clip lettering either engine caught, and the pairs that reach
+        this popup are the ones the fixer refused, so a reviewer's repair here
+        should land on the same box the fixer would have written. Still writes
+        into this pane only; the other engine's box is left for its own turn.
+        """
         group = pane.json_group()
-        if not other_box or group is None:
+        if group is None:
             return
-        group["text_box"] = copy.deepcopy(other_box)
+        merged = union_box(group.get("text_box") or [], counterpart.get("text_box") or [])
+        if merged is None:
+            logger.warning(
+                f"Group {pane.group_id}: one engine's text_box is malformed, so no union."
+            )
+            return
+        group["text_box"] = merged
         self._has_changes = True
         self._load_canvas_content(pane)
         self._refresh_pane_labels()
-        logger.info(f"Group {pane.group_id}: took text_box from the other engine.")
+        logger.info(f"Group {pane.group_id}: took the union of the engines' text_boxes.")
 
     def _take_attr_from_other(self, pane: EnginePane, counterpart: dict, field: str) -> None:
         """Adopt the other engine's value for one field.
