@@ -4895,6 +4895,61 @@ cap-reference page. Nephew domain and how much of it got named:
   *The Big Bin on Killmotor Hill* and *The Victory Garden* no longer appear.
 
 
+### Findings to paste into the next run (2026-09-10, forty-sixth batch, THIRD OF FOUR REVIEWED -- *The Ghost Sheriff of Last Gasp*)
+
+Replaces that title's numbers in the pass-only section below; *The Lemming
+with the Locket*'s two stragglers have since been reviewed and it is 273/273
+on both engines. **6 speaker corrections in 163 passed groups = 3.7%, all six
+in the 57-group nephew domain = 10.5%.** `review_findings` says seven; the
+seventh is the review's own add, 009 g17, the drawn `?` over the CLANG panel
+(`other:Donald and the nephews`, `thought`). No type or text change since the
+pass commit 93a86007 except the reviewer's punctuation on 010 g10; the sixteen
+type entries listed are the pass's hiccups, ratified. Mirror clean on every
+distribution, 164 groups both engines -- but **010 g10 is not yet
+`speaker_reviewed`** and **the paddleocr copy of the added 009 g17 carries
+`CLANG`, its seed's text, where easyocr has `?`**; both in
+`queue-stragglers.txt`.
+
+| direction | n |
+|---|---|
+| a name -> `nephews` | 3 (009 g8, 014 g12, 015 g5) |
+| Donald -> the nephew domain | 2 (007 g11 the long shot, 008 g6) |
+| one nephew -> another | 1 (013 g1 Louie -> Huey) |
+
+- **THE EASIEST TITLE IN MONTHS, AND THE CAPS ARE WHY.** Cowboy hats of
+  2,000-6,000px in three inks; 42 of 57 nephew groups named and 39 held.
+  Compare *Lemming*'s 32.5% on a patch construction the same day. The
+  construction, not the care, sets the rate.
+- **THREE OVER-NAMINGS, ALL MEDIUM GAP TIPS.** 009 g8, 014 g12 and 015 g5
+  were each a tailtip tip in the gap between two hats with a direction called
+  for one of them, and each was written at medium. The review made all three
+  collective. On a title where the hats are this legible a gap tip is not
+  worth a name: **where the tip lands between two readable caps, write
+  `nephews` and let the reviewer place it** -- it costs the same keystroke and
+  cannot be wrong.
+- **THE LONG-SHOT DEFAULT LOST ON 007 g11.** `IT COULD STAND SOME PAINT!`
+  over a car a few dozen pixels wide went Donald -> `nephews`; the quip is a
+  boy's. The default is for lines that could be anybody's, not for a wisecrack
+  answering Donald's own line in the previous panel.
+- **008 g6 WAS THE BOYS' ANSWER, NOT DONALD'S.** `ONLY SPIDERS AND MOTHS!`
+  went Donald -> Louie. The pass had both balloons in the panel to Donald off
+  two tailtip spurs and wrote "Donald answers his own question"; the review
+  read it as the question-and-answer it looks like. When a panel's two
+  balloons are a Q and an A, two tails to one figure is the reading to doubt.
+- **013 g1 IS A TAIL DISAGREEMENT.** Louie -> Huey with cap green -> red; the
+  pass's tip (669,242) was on the green hat on a 0.75x view. Recorded, not
+  argued.
+- **A DRAWN `?` IS A GROUP.** 009 p5's question mark over Donald's head in the
+  CLANG panel was in neither engine and not in the pass's `visible_text`, so
+  the audit could not see it; the review added it. Same class as *Tuckered
+  Tiger*'s dollar signs: **list every drawn device in `visible_text`.**
+- **COPY IN RESIDUE ON THE ADD, AGAIN.** The paddleocr side of the added group
+  kept the seed group's `ai_text` (`CLANG`), and `vision-mirror` does not
+  mirror text. The engine-diff check passed because it pairs positionally.
+  Check any review-added group's text on BOTH engines before mirroring.
+- **CONFIDENCE: 3 of 147 highs (2.0%), 3 of 16 mediums (18.8%).** Nine times
+  worse at medium, the widest gap of the batch.
+
 ### Findings to paste into the next run (2026-09-10, forty-sixth batch, SECOND OF FOUR REVIEWED -- *The Lemming with the Locket*)
 
 Replaces that title's numbers in the pass-only section below. **28 speaker
