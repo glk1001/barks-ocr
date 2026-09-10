@@ -4895,6 +4895,67 @@ cap-reference page. Nephew domain and how much of it got named:
   *The Big Bin on Killmotor Hill* and *The Victory Garden* no longer appear.
 
 
+### Findings to paste into the next run (2026-09-10, forty-sixth batch, SECOND OF FOUR REVIEWED -- *The Lemming with the Locket*)
+
+Replaces that title's numbers in the pass-only section below. **28 speaker
+corrections in 271 passed groups = 10.3%, 26 of them in the 80-group nephew
+domain = 32.5%.** `review_findings` reports 30, but two are the review's own
+adds (084 g3 `BAM` seeded `unknown`, 089 g5 a fourth `AYE!`), subtracted here.
+One real type change since the pass commit dc7c0c55 (078 g6, the quoted
+telescope caption, to `narration` with speaker `narrator`); the other twelve it
+lists are the pass's own, ratified. Mirror clean: 273 groups on both engines,
+identical speaker, cap_colour and confidence distributions. **Two groups are
+still not `speaker_reviewed`** -- 084 g10 and 089 g11, the last id on each page
+that grew -- handed back in `queue-stragglers.txt`.
+
+| direction | n |
+|---|---|
+| `nephews` -> a name | **15** |
+| one nephew -> another | 5 |
+| nephew domain -> Donald | 4 |
+| a name -> `nephews` | 2 |
+| Donald -> `nephews`, Scrooge -> narrator | 2 |
+
+- **FIFTEEN UNDER-NAMINGS, AND THE NOTE ON EVERY ONE SAYS "CAP PRINTS
+  NOTHING".** 075 g10/g11, 077 g5, 083 g5, 084 g7, 087 g8/g9/g12/g13, 088 g5,
+  091 g5/g7 and three more: the pass ran the census, found no roster ink on
+  that head, and wrote the collective. The review filled a cap_colour on every
+  one. On this title the cap is a patch on the back of a black cap, often
+  turned away, and the census floor hides it; the forty-fifth batch said the
+  same about *Tuckered Tiger*'s wedge. **A census zero on a small-cap
+  construction is an instruction to crop, not a licence for `nephews`** --
+  written down twice now and still 15 groups in one title.
+- **ONE OF THE FIVE SWAPS WAS THE PASS'S OWN MISATTRIBUTED BLOB.** 081 g5 was
+  named Huey off `red 505px at (745,342) on head (767,348,856,445)`; a 1.3x
+  crop shows the boy's cap is GREEN and the red is the ship's rail beside his
+  head. The blob-must-sit-on-a-head error, again, from reading the census
+  without the crop.
+- **TWO SWAPS OVERTURN A TAIL, NOT AN INK.** 089 g8 (`Huey` -> `Louie`) and
+  094 g7 (`Louie` -> `Huey`): on both the head the pass measured really does
+  wear the colour the pass wrote (red on 089 p5, green on 094 p6, 1.3x crops),
+  so the review has moved the balloon to the other boy. Both tails were
+  tailtip readings across a gap. Flagged for a second look rather than
+  argued; if they stand, the lesson is that a gap tip plus a ray is still a
+  guess.
+- **THE AYE! BALLOONS WENT TO DONALD.** 089 g2/g3/g4 (`nephews`, off-panel)
+  are now `Donald`, and the fourth AYE! the review added is Donald too -- four
+  AYE! around Donald's own `ALL IN FAVOR SAY AYE!`. Recorded as the review's
+  call; it reads as the boys' chorus to the pass and is flagged with the two
+  tail swaps.
+- **`I DID NOT LOOK` DRESSED AS `nephews`, AGAIN.** 079 g13 the pass called
+  Donald on a sailor collar and the review made `nephews`; 083 g7 the pass
+  called Huey on two red slivers and the review made Donald. Both were
+  0.55-0.7x views of two-figure panels. Two adults-versus-boy misreads on a
+  title where the boy and Donald wear the same black shirt.
+- **THE MISSED TEXT WAS ACTED ON, AND IT FOUND A SECOND.** The reviewer added
+  084 `BAM` from the hand-back and, unprompted, a fourth `AYE!` on 089 that the
+  pass had not listed in `visible_text` either -- the audit could not have
+  seen it because the pass wrote three AYEs into the page record and there
+  are four on the page. **Count the repeats when transcribing `visible_text`.**
+- **CONFIDENCE: 26 of 250 highs corrected (10.4%), 4 of 19 mediums (21.1%),
+  0 of 2 lows.** The medium flag doubled the rate again; the highs it did not
+  cover were the fifteen collectives, which carry no confidence at all.
+
 ### Findings to paste into the next run (2026-09-10, forty-sixth batch, ONE OF FOUR REVIEWED -- *Donald Duck Tells About Kites*)
 
 Replaces that title's numbers in the pass-only section below. **6 speaker
