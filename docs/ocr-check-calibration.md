@@ -266,37 +266,57 @@ checks run at all.
 
 ### `--fix-boxes`, so they need not be worked in the editor at all
 
-Reconciling a `box_mismatch` by hand is the one repair with no judgement in it: the two
-engines boxed the same lettering, and the reviewer is dragging handles to make two
-numbers agree. `--fix-boxes` writes **the union of the two boxes to both engines** —
-the smallest box containing both.
+Reconciling two engines' boxes by hand is the one repair with no judgement in it: they
+boxed the same lettering, and the reviewer is dragging handles to make two numbers agree.
+`--fix-boxes` writes **the union of the two boxes to both engines** — the smallest box
+containing both.
+
+**It runs on every pair the engines read identically, not on the reported ones.** That
+distinction is the whole point, and the first version of this option got it wrong. The
+population it was originally scoped to — pairs below `BOX_IOU_MIN` — is 312 of 65,989,
+**0.47%**; the reconciling that actually costs review time is the two or three pixels of
+padding on the other 99.5%, which is never reported because 0.4 IoU is a deliberately
+high bar for asking a human to look. Vol. 15 page 176 is typical: all fourteen groups
+have boxes that differ, all fourteen sit between IoU 0.74 and 0.96, and not one of them
+is reported.
+
+So `--box-iou-min` and `--max-box-growth` gate different things and are independent:
+
+| flag | decides |
+|---|---|
+| `--box-iou-min` | what a **human** is told about, as `box_mismatch` |
+| `--max-box-growth` | what the **fix** is willing to merge |
 
 The union rather than whichever box is larger, because only the union cannot clip
-lettering either engine caught. Measured over the corpus's **72,719 matched pairs**:
+lettering either engine caught. Where one box already contains the other the two
+definitions are the same box; elsewhere taking the larger one still cuts off what the
+smaller one saw, which is the whole fault being fixed.
 
-| | pairs | share |
-|---|---|---|
-| below `BOX_IOU_MIN` = 0.4 | 434 | 0.60% |
-| …one box already inside the other | 233 | 53.7% of flagged |
-| …offset, so union ≠ larger box | 201 | 46.3% of flagged |
+Measured over all **65,989 matched pairs**:
 
-On the nested half the two definitions are the same box. On the other half taking the
-larger one still cuts off what the smaller one saw, which is the whole fault being fixed.
+| population | pairs | median | p90 | p99 | max |
+|---|---|---|---|---|---|
+| all matched pairs | 65,989 | 1.01 | 1.04 | 1.09 | 11.48 |
+| below `BOX_IOU_MIN` = 0.4 | 312 | 1.00 | 2.42 | 9.12 | 11.48 |
+
+The median merge costs **1% of the box's area**, and 5,416 pairs (8.2%) are already
+byte-identical. The whole tail lives in the flagged subset — on 184 of those 312 the
+union costs nothing at all, because one box already contains the other.
 
 **`--max-box-growth`, default 2.0**, is the ceiling on the merged box as a multiple of
-the larger source box. The union costs nothing at all on most flagged pairs — median
-growth **1.00**, p90 **2.45** — but the tail runs to **17.7×**, and two engines reading
-the same words in two far-apart places are more likely to have been *mis-paired* than to
-disagree about padding. Merging those would replace a reportable disagreement with one
-large wrong box on both sides. At 2.0 the fix takes **378** of the 434 and refuses
-**56**, which keep their `box_mismatch` entry with the reason appended:
+the larger source box, and is the only thing separating a padding difference from a pair
+matched up wrongly: two engines reading the same words in two far-apart places are more
+likely to be the latter, and merging those would replace a reportable disagreement with
+one large wrong box on both sides. At 2.0 the fix takes **65,948** pairs and refuses
+**41** — all 41 from the flagged subset — which keep their `box_mismatch` entry with the
+reason appended:
 
 ```
 box_mismatch … notes='paddleocr group 6; text_box IoU 0.00; union 3.5x the larger box,
 above --max-box-growth'
 ```
 
-Three things the measurement showed that are worth keeping in mind:
+Four things the measurement showed that are worth keeping in mind:
 
 - **The fix can move a group between issue types rather than clearing it.** On *Hound
   Hounder* 025 the `OW-OOO!` pair was 170×44 on easyocr and 273×132 on paddleocr, with
@@ -310,10 +330,20 @@ Three things the measurement showed that are worth keeping in mind:
 - **Only the engine that was wrong gets written.** On a nested pair the outer box is
   already the union, so that file is unchanged and only the inner one is rewritten —
   which is why a run can report six merges and leave fewer than twelve files dirty.
+- **Two pages in the corpus change reading order**, Vol. 25 page 115 and Vol. 29 page
+  172, both on easyocr. `_reading_order_key` sorts by `text_box` position, so a box that
+  grows can in principle overtake its neighbour and make `--fix-groups-order` renumber
+  the page. Both of these are already reported as `groups_out_of_order` today, so they
+  would renumber either way; the merge changes which pair is transposed, not whether the
+  page is flagged. Nothing else in 65,989 merges moves, and the cross-engine pairing —
+  which is positional within a panel — does not change on any page at all.
 
 The merge is skipped on a group whose `box_mismatch` has been acknowledged, for the same
 reason the text fixers honour a dismissal: otherwise the next `--fix` run would quietly
-undo the judgement made in the editor.
+undo the judgement made in the editor. Note the asymmetry this leaves: an acknowledgement
+can only exist on a pair that was reported, so the 99.5% that are merged silently have no
+way to opt out. That is the intended trade — the whole point is that they need no
+attention — but it is why the growth ceiling is the safeguard that matters.
 
 ### Why neither counts towards engine agreement
 
@@ -493,7 +523,9 @@ guard remains the real safety.
 `--fix-boxes` is the only one that writes to **both** engines from a single
 decision, so a page it touches can leave two files dirty rather than one. It is
 covered by the same guard: `FixFlags.any_enabled()` includes it, which is what
-the check is gated on.
+the check is gated on. It is also by far the widest-reaching of them — it merges
+65,948 of the corpus's 65,989 cross-engine pairs — so run it a volume at a time
+and read the `git diff`.
 
 Since 2026-08-01 the prelim files are a private git repo
 (`~/Books/Carl Barks/Fantagraphics-restored-ocr/Prelim`, `barks-ocr-prelim`), so

@@ -73,16 +73,20 @@ MIN_MATCH_RATIO = 0.7  # SequenceMatcher threshold for cross-engine pairing
 MAX_FIX_PASSES = 5  # one fix can enable another; cap the re-check loop
 # Ceiling on what --fix-boxes will merge, as a multiple of the larger source box.
 #
-# The fix exists because a box_mismatch is nearly always a padding difference
-# rather than a disagreement about where the lettering is, and reconciling it by
-# hand in the editor is pure overhead. But the two engines reading the same text
-# in two far-apart places is the signature of a mis-pairing, and merging those
-# would replace a reportable disagreement with one large wrong box on both sides.
+# The fix exists because the engines almost never box the same lettering in quite
+# the same place, and reconciling that by hand in the editor is pure overhead.
+# But the two of them reading the same text in two far-apart places is the
+# signature of a pair matched up wrongly, and merging those would replace a
+# reportable disagreement with one large wrong box on both sides. This is the
+# only thing standing between the two, which is why --fix-boxes does not also
+# gate on BOX_IOU_MIN: see _merge_pair_boxes.
 #
-# Measured over the corpus's 434 pairs below BOX_IOU_MIN: the union costs
-# nothing at all on 233 of them (one box already inside the other), median
-# growth 1.00, p90 2.45, p99 9.70, max 17.73. At 2.0 the fix takes 378 and
-# refuses 56, which stay reported as box_mismatch for a human.
+# Measured over all 65,989 cross-engine pairs that read identically: median
+# growth 1.01, p90 1.04, p99 1.09, max 11.48. The tail is almost entirely inside
+# the 312 pairs that fall below BOX_IOU_MIN, where the union costs nothing at all
+# on 184 of them (one box already contains the other) but the spread runs median
+# 1.00, p90 2.42, p99 9.12. At 2.0 the fix takes 65,948 pairs and refuses 41, all
+# 41 from that flagged subset; they stay reported as box_mismatch for a human.
 MAX_BOX_GROWTH = 2.0
 # Lettering that is deliberately unlike the surrounding dialogue, so neither its
 # width nor its line height says anything about the page. "title" is the
@@ -290,9 +294,11 @@ class LineHeightLimits:
 class BoxAgreementLimits:
     """When the engines' text_boxes count as disagreeing, and when to merge them.
 
-    ``iou_min`` is the reporting threshold; ``max_growth`` only matters under
-    ``--fix-boxes``, and is the ceiling on how much bigger the merged box may be
-    than the larger of the two it replaces.
+    The two are independent on purpose. ``iou_min`` decides only what is
+    *reported* as ``box_mismatch``. ``max_growth`` decides only what
+    ``--fix-boxes`` is willing to *merge*, as a multiple of the larger of the two
+    boxes it replaces; the fix runs on every pair the engines read identically,
+    not just the reported ones.
     """
 
     iou_min: float = BOX_IOU_MIN
@@ -1800,9 +1806,16 @@ class OcrChecker:
         other = f"paddleocr group {paddle_id}"
 
         iou = box_iou(easy_group.get("text_box") or [], paddle_group.get("text_box") or [])
-        if iou is not None and iou < self._boxes.iou_min:
+        if iou is not None:
+            # Merge first, then report only what the merge would not take. The
+            # two thresholds are deliberately independent: --box-iou-min decides
+            # what a *human* is told about, --max-box-growth decides what the fix
+            # is willing to do. Merging only the pairs already below --box-iou-min
+            # answered the wrong question -- those are the 0.5% where the engines
+            # boxed different lettering, while the reconciling that actually costs
+            # review time is the few pixels of padding on the other 99.5%.
             merged_box, refusal = self._merge_pair_boxes(easy_group, paddle_group, easy_id)
-            if not merged_box:
+            if not merged_box and iou < self._boxes.iou_min:
                 found.append(
                     issue(
                         str(OcrTypes.EASYOCR),
@@ -1835,18 +1848,25 @@ class OcrChecker:
     ) -> tuple[bool, str]:
         """Give both engines the union of their text_boxes. Returns (merged, why not).
 
-        Only ever called on a pair already below ``--box-iou-min``, and only
-        under ``--fix-boxes``. The union is used rather than whichever box is
-        larger because it is the only choice that cannot clip lettering either
-        engine caught: on the 53.7% of flagged pairs where one box already
-        contains the other the two are the same box, and on the rest the larger
-        box can still cut off what the smaller one saw.
+        Called under ``--fix-boxes`` on **every** pair the two engines read
+        identically, not just the ones reported as ``box_mismatch``. Those are
+        two different populations: the report is about whether a human should
+        look, and 0.4 IoU is a high bar for that; the fix is about sparing the
+        reviewer a reconciliation, and the reconciliation is just as tedious at
+        0.93 IoU as at 0.3. Across the corpus 65,948 of 65,989 pairs merge, at a
+        median cost of 1% of the box's area.
 
-        Refused, with the reason appended to the group's ``box_mismatch`` entry,
-        when the merge would grow past ``--max-box-growth``. Two engines that
-        read the same words in two far-apart places are more likely to have been
-        mis-paired than to disagree about padding, and merging those replaces a
-        reportable disagreement with one large wrong box on both sides.
+        The union is used rather than whichever box is larger because it is the
+        only choice that cannot clip lettering either engine caught: where one
+        box already contains the other the two are the same box, and elsewhere
+        the larger box can still cut off what the smaller one saw.
+
+        Refused when the merge would grow past ``--max-box-growth``; if the pair
+        was also below ``--box-iou-min`` the reason is appended to its
+        ``box_mismatch`` entry. Two engines that read the same words in two
+        far-apart places are more likely to have been paired up wrongly than to
+        disagree about padding, and merging those replaces a reportable
+        disagreement with one large wrong box on both sides.
 
         An acknowledged ``box_mismatch`` is left alone for the same reason
         ``_apply_text_fixes`` honours a dismissal: otherwise the next --fix run
@@ -2432,8 +2452,9 @@ def main(  # noqa: PLR0913
     fix_boxes: bool = typer.Option(
         default=False,
         help=(
-            "Give both engines the union of their text_boxes on every pair reported as"
-            " box_mismatch, so there is nothing left to reconcile by hand."
+            "Give both engines the union of their text_boxes on every pair they read"
+            " identically, so there is nothing left to reconcile by hand. Independent"
+            " of --box-iou-min, which only decides what gets reported."
         ),
     ),
     max_box_growth: float = typer.Option(
@@ -2468,7 +2489,10 @@ def main(  # noqa: PLR0913
     ),
     box_iou_min: float = typer.Option(
         BOX_IOU_MIN,
-        help="Flag as 'box_mismatch' when the engines' text_boxes overlap below this IoU.",
+        help=(
+            "Flag as 'box_mismatch' when the engines' text_boxes overlap below this IoU."
+            " Reporting only: it does not decide what --fix-boxes merges."
+        ),
     ),
     outside_panel_fraction: float = typer.Option(
         BOX_OUTSIDE_PANEL_FRACTION,
