@@ -5180,6 +5180,50 @@ where the cap key had to be re-derived from dialogue. Nephew domain:
   `~/barks-vision/queue-corpus-lowmed-2026-09-10b.txt`. The forty-fifth
   batch's 41 no longer appear.
 
+### Findings to paste into the next run (2026-09-10, forty-seventh batch, ONE OF TWO REVIEWED -- *Secret of Hondorica*)
+
+Replaces that title's numbers in the pass-only section below. **25 speaker
+corrections in 332 groups = 7.5%, all 25 in the 111-group nephew domain =
+22.5%.** No text or type change since the pass commit 9e1ca774; the three type
+entries listed are the pass's own, ratified (030 g0's `narration` predates the
+pass). Mirror clean: 332/332 on both engines, 325 `identified_by`, identical
+speaker, cap_colour and confidence distributions.
+
+| direction | n |
+|---|---|
+| `nephews` -> a name | **12** (009 g1, 009 g8, 010 g9, 014 g1, 016 g7, 019 g4, 020 g6, 025 g11, 026 g9, 029 g7, 029 g13, 030 g16) |
+| Donald -> the nephew domain | **6** (009 g2, 009 g6, 009 g9, 013 g11, 016 g8, 019 g3) |
+| one nephew -> another | 3 (012 g5, 028 g3, 028 g7) |
+| a name -> `nephews` | 3 (015 g4, 023 g12, 025 g5) |
+| `nephews` -> Donald | 1 (018 g3) |
+
+- **THE GAP-TIP RULE COST TWELVE NAMES ON THIS CONSTRUCTION.** Of the nine
+  gap tips the pass wrote collective, the review named seven (009 g1, 009 g8,
+  014 g1, 016 g7, 020 g6, 029 g7, 029 g13), every one in the direction the
+  pass's own note recorded the ray pointing. Add the census-zero collectives
+  (010 g9, 019 g4, 030 g16: a turned cap the review still read) and a chorus
+  it split (025 g11), and the forty-sixth batch's "a gap tip is not a name"
+  ran at 7 of 9 wrong here. **On a side-segment cap, a gap tip with a
+  direction is a name at medium**; write the collective only when the ray
+  enters nobody.
+- **SIX DONALD CALLS WERE THE BOYS', AND THREE WERE SILHOUETTE PANELS.** 009
+  g6, 009 g9 and 013 g11 had a tail the pass read to the big silhouette or to
+  Donald beside the boys; the review gave all three to the boys. 009 g2, 016
+  g8 and 019 g3 went to a named boy (Louie, Huey, Huey) off caps the pass
+  had already measured in the same panel. The two-figure Donald-versus-boy
+  panel is again the largest single error class outside the gap rule.
+- **THE EDGE TIPS HELD 7 OF 10.** Of the edge-of-span calls written at medium,
+  015 g4, 023 g12 and 025 g5 went collective and 028 g3/g7 swapped Huey ->
+  Louie (the reviewer reads the middle boy's patch green); the rest stood.
+  012 g5 swapped the other way on a tip the pass placed inside the green
+  boy's span.
+- **CONFIDENCE: 5 of 23 mediums (21.7%) against 20 of 305 highs (6.6%).** The
+  highs that fell were the twelve collectives, which carry no confidence
+  flag at all, and the six Donalds.
+- **THE 015 g10 `OH, NO!` STAYED DIALOGUE.** The `type_reviewed` stamp from
+  August outranks the pass, as the pass-only section said; the reviewer left
+  it.
+
 ### Findings to paste into the next run (2026-09-10, forty-seventh batch, PASS ONLY -- not yet reviewed)
 
 Two titles, 30 pages, **420 groups**: *Secret of Hondorica* (Vol. 17) 332,
