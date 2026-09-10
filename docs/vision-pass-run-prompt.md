@@ -5606,6 +5606,56 @@ reference row, one each on 118, 121, 122 and 133 for tails). Nephew domain:
   4 (the rest are August thought-balloon adjudications carrying
   `type_was`).
 
+### Findings to paste into the next run (2026-09-11, forty-ninth batch, THREE OF THREE -- *The Unorthodox Ox*, batch closed)
+
+Replaces that title's numbers in the pass-only section below. **8 speaker
+corrections in 123 groups = 6.5%, all 8 in the 34-group nephew domain =
+23.5%.** All seven bull-voice type proposals confirmed, no group added by the
+review. Mirror clean: 123/123 groups on both engines, 122 reviewed on each,
+identical distributions; **084 g5 is a straggler** (the boy fitting the dark
+glasses, Louie on a 1,936px `#019d46` cap), handed back as
+`queue-stragglers.txt`. Highs 4 of 114 corrected (3.5%), mediums 4 of 9
+(44.4%).
+
+**Batch total: 2 + 8 + 8 = 18 speaker corrections in 355 groups = 5.1%, 17
+of them in the 101-group nephew domain = 16.8%.** Mediums 6 of 23 corrected
+(26.1%), highs 11 of 331 (3.3%).
+
+| direction | n |
+|---|---|
+| a name -> `nephews` | 4 (083 g12, 084 g3, 084 g13, 086 g7) |
+| `nephews` -> a name | 1 (085 g7 Louie) |
+| one nephew -> another | 1 (088 g1 Dewey -> Huey) |
+| Donald <-> Grandma Duck | 2 (081 g4, g5 exchanged) |
+
+- **THE FOUR OVER-NAMES ARE THE BATCH'S ONLY ONES AND THREE OF THE FOUR WERE
+  MEDIUMS ON SMALL OR OFF-HUE CAPS**: 084 g3 a 197px dull red, 084 g13 a
+  shaded `#12a3b4` H186, 086 g7 a `#1e6c6e` H181 patch under a blue tent.
+  The one high, 083 g12, was a 3,900px clean blue from BEHIND: the tip sat
+  inside the right boy's span at its edge, but two boys seen from the back
+  with the balloon over both is a chorus to the reviewer. So on this volume
+  the OFF-HUE cap (H160-H190) is not a name at any size, and on Chickadee
+  the same ink was the blue boy -- read it as `nephews` with the hex in the
+  note and let the review decide.
+- **085 g7 WAS THE GAP TIP THAT WENT LOUIE** (the collective the pass wrote
+  by the forty-eighth rule; the two it named at medium against the rule,
+  085 g9 and g12, both HELD). With Chickadee's five, gap tips named by the
+  review are now 6 for 6 on this batch: name them at medium, never
+  collective.
+- **081 g4/g5 EXCHANGED DONALD AND GRANDMA.** `BUT HE'S SO SEEDY-LOOKING! I
+  WISH I HAD TIME TO SLICK HIM UP A BIT!` is Grandma's, `OH, FORGET IT! HIS
+  LOOKS WILL HELP! BYE! BYE!` is Donald's driving off. The pass placed both
+  by which figure each balloon sat over; the register (who wants the bull
+  seedy for the contest) says the reverse. Two adults, a tail each, and the
+  drawing won over the words in the note -- the words were right.
+- **088 g1 WENT DEWEY -> HUEY** on a 163px blue against a 413px red: the
+  tip landed inside the middle boy's skull by both tailtip readings and the
+  reviewer gave it to the red boy beside him. A sub-200px cap does not
+  outrank the neighbour's.
+- **THE BULL IS CONFIRMED A SPEAKER**: all seven SNORT/BAW `sound_effect ->
+  dialogue` with `other:Johnny the bull` stood; BLINK stayed a sound effect.
+- **`other:` values all stood**, and `Grandma Duck` is a plain roster value.
+
 ### Findings to paste into the next run (2026-09-11, forty-ninth batch, TWO OF THREE REVIEWED -- *The Chickadee Challenge*)
 
 Replaces that title's numbers in the pass-only section below. **8 speaker
