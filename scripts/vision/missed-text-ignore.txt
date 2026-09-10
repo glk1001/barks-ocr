@@ -342,3 +342,17 @@ HELP KEEP AMERICA STRONG
 # in 140's visible_text, which is a true record of what is printed.
 15 140 DON
 15 140 DU
+
+# A Campaign of Note 069 panel 1, declined by GLK 2026-09-10 ("Don't need the
+# one missed text"). Scrooge's campaign banner is lashed to a tree at the right
+# edge of the panel and the frame cuts every line of it vertically: CAN over CIT
+# in large blue capitals, WILL SP in black beneath. Not three words but three
+# truncations of longer ones, so there is no lettering here for a searchable box
+# to hold -- the same reasoning as Too Safe Safe 140's DON / DU above and Worm
+# Weary 131's LA.
+#
+# The panel is built on it. Scrooge is thinking "I PAINTED THAT SIGN WITH MY OWN
+# HANDS, BUT I GUESS NOBODY'S READ IT!" while the frame stops the reader reading
+# it either, which is why the fragment stays in 069's visible_text: it is a true
+# record of what is printed, and the joke needs it.
+14 069 CAN CIT WILL SP
