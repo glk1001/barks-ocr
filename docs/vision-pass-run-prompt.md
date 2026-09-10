@@ -4895,6 +4895,63 @@ cap-reference page. Nephew domain and how much of it got named:
   *The Big Bin on Killmotor Hill* and *The Victory Garden* no longer appear.
 
 
+### Findings to paste into the next run (2026-09-10, forty-sixth batch, FOURTH OF FOUR -- *A Descent Interval*, batch closed)
+
+Replaces that title's numbers in the pass-only section below; *Ghost Sheriff*'s
+straggler and the `CLANG` residue are fixed and it is 164/164. **10 speaker
+corrections in 129 groups = 7.8%, 8 in the 34-group nephew domain = 23.5%.**
+No type or text change since the pass commit 769fd620; the three type entries
+listed are the pass's bubble-trail corrections, ratified. Mirror clean:
+129/129 on both engines, every distribution identical.
+
+**Batch total: 6 + 28 + 6 + 10 = 50 speaker corrections in 675 groups = 7.4%,
+48 of them in the 214-group nephew domain = 22.4%.** Per title 5.4% / 10.3% /
+3.7% / 7.8%, and the nephew rate ran 13.6% / 32.5% / 10.5% / 23.5% -- the two
+patch-cap titles at two to three times the two big-hat or trimmed-cap ones.
+
+| direction | n |
+|---|---|
+| a name -> `nephews` | 5 (195 g4, 196 g5, 197 g2, 203 g4, 203 g9) |
+| one nephew -> another | 3 (197 g3, 197 g10, 203 g13) |
+| `nephews` -> `other:Professor Quahog` | 1 (199 g6, the heeling ship) |
+| one fisherman -> the other | 1 (202 g6) |
+
+- **EIGHT OF TEN CORRECTIONS WERE MEDIUMS -- 8 of 19 (42.1%) against 1 of 108
+  highs (0.9%).** The pass wrote medium on every gap tip and every small-patch
+  read on this title, and the review overturned nearly half of them. The
+  confidence field worked as a flag here; what it says about the pass is that
+  a gap tip on a 120-300px patch is a coin toss, and the honest write is
+  `nephews`. Across the batch: mediums 18 of 71 corrected (25.4%), highs 33 of
+  600 (5.5%).
+- **FIVE OVER-NAMINGS, ALL GAP TIPS OR TINY PATCHES.** 195 g4 and 203 g4 were
+  tips in the gap between two boys with a direction; 197 g2 a split/thin
+  disagreement resolved by which balloon hung over whom; 203 g9 a tip on a
+  boy whose patch was read at page resolution; 196 g5 a 468px red beside a
+  head that the reviewer notes `There is no cap` -- another blob-not-on-a-head.
+  Same rule as *Ghost Sheriff*: **a gap tip is not a name.**
+- **TWO SWAPS WENT BLUE -> GREEN ON 197 (g3, g10).** The pass read a
+  120-150px blue patch (H188 S0.89, off the roster blue) on each; the review
+  reads green, and on g10 adds `Louie is visibly speaking`. A dull off-hue
+  patch under 200px is not a colour read; write the collective.
+- **THE HEELING-SHIP BALLOON WAS THE PROFESSOR'S.** 199 g6 `LOOK OUT! WHAT
+  HAPPENED?` from tiny figures at the winch, written `nephews` at low; the
+  review makes it Quahog. Low was right to be low.
+- **THE TWO FISHERMEN SWAPPED ONCE.** 202 g6 `MY EYES CAN'T BELIEVE WHAT THEY
+  SEE!` went from the green-capped man to the bandana man; the pass placed it
+  off which figure had his arms out. Two look-alike adults in one panel is
+  the two-adults error class, and it happened on the one page they share.
+- **MISSED TEXT: NONE.** All three drawn devices on the title were already
+  groups.
+
+**Batch close.** Four titles, 50 pages, 675 passed groups, 4 groups added by
+the reviews (Lemming `BAM` and a fourth `AYE!`, Ghost Sheriff a drawn `?`,
+and none on Kites or Descent), 1 real type change (Lemming 078 g6), 0 text
+changes by the pass. Every title 100% reviewed on both engines, mirrors clean.
+The rule that would have bought the most: **a census zero or a gap tip on a
+small-patch construction is a crop, not a call** -- 15 under-namings on Lemming
+and 8 gap-tip over-namings on Sheriff and Descent are the same failure read in
+opposite directions.
+
 ### Findings to paste into the next run (2026-09-10, forty-sixth batch, THIRD OF FOUR REVIEWED -- *The Ghost Sheriff of Last Gasp*)
 
 Replaces that title's numbers in the pass-only section below; *The Lemming
