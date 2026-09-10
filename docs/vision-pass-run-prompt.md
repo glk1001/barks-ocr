@@ -5180,7 +5180,105 @@ where the cap key had to be re-derived from dialogue. Nephew domain:
   `~/barks-vision/queue-corpus-lowmed-2026-09-10b.txt`. The forty-fifth
   batch's 41 no longer appear.
 
+### Findings to paste into the next run (2026-09-10, forty-seventh batch, PASS ONLY -- not yet reviewed)
+
+Two titles, 30 pages, **420 groups**: *Secret of Hondorica* (Vol. 17) 332,
+*Dogcatcher Duck* (Vol. 17) 88. **51 images read = 1.7 per page** against a
+target of 3: Hondorica 45 (1.9 per page, 21 of them crops of three-boy rows),
+Dogcatcher 6 (the page views only). Nephew domain:
+
+| title | nephew groups | named | collectives | low/medium queue |
+|---|---|---|---|---|
+| Secret of Hondorica | 106 | 69 (65%) | 37 | 27 |
+| Dogcatcher Duck | 10 | 5 (50%) | 5 | 7 |
+
+- **VOL. 17'S FIRST TITLES, AND THE CAPS ARE A SIDE SEGMENT ON A BLACK CAP.**
+  Lit and turned toward the reader it prints 200-1,300px of clean ink (009 p2
+  is the reference row: blue 672px, red 488px, green 244px); turned away it is
+  a 60-200px sliver or nothing at all, and a boy with his cap turned sits
+  beside two who are named (010 p7, 019 p3, 021 p8). **Two named leaves the
+  third** was used on 010 p7; elsewhere the turned boy stayed collective.
+  Both titles open indoors with the caps carried in hand (007-008, Scrooge's
+  office) and every nephew group there is a measured collective.
+- **THE BOYS' BALLOON TAILS LEAN TOWARD DONALD ON THIS TITLE.** 020 p5 `WHAT
+  ABOUT THOSE INDIANS, UNCA DONALD?` sits over the one boy at left and its
+  tail runs down-right, 50px past his head, toward Donald -- and the address
+  proves it is the boy's. The same layout on 018 p4 (`GOLLY! HOW DO WE GET
+  ACROSS?`), 025 p3 and 027 p1 was read the same way and written **medium**;
+  the first of them had been written Donald off the tail alone before 020 was
+  reached, and was rewritten. **A tail that leaves a boy's balloon and points
+  at Donald is the boy's when the balloon sits over the boy** -- the same
+  Q-and-A trap the forty-sixth batch recorded on Ghost Sheriff 008 g6.
+- **EDGE-OF-SPAN TIPS, ~10 OF THEM, ALL WRITTEN AS THE BOY UNDER THE BALLOON
+  AT MEDIUM.** On the three-boy rows (016 p3, 018 p7, 023 p2, 028 p3/p7/p8,
+  031 p3, 032 p5, 036 p7) `tailtip` puts the tip at the LEFT edge of one
+  boy's span with the ray leaning left into the gap. Each was written as the
+  boy whose span the tip touches, medium. If the review holds them, an edge
+  tip is a name on this construction; if it flips them, the forty-sixth
+  batch's gap rule extends to edges.
+- **NINE GAP TIPS WRITTEN COLLECTIVE** under the forty-sixth batch's rule (009
+  p1, 009 p4, 014 p1, 016 p5, 020 p4, 026 p5, 029 p5, 029 p8, 034 p8). Every
+  note records the direction; on 029 p5 and p8 the ray enters one boy's head.
+  If the review names most of them off the direction, the rule cost more than
+  it saved on this construction.
+- **THREE GREENS, AND THE BAND NAMES LIE.** The reference panel's cap green is
+  `#40a562` **H143** (the `green` band); every later cap green is `#4da33f`
+  H111-114 (`leafgrn`); foliage, Scrooge's coat and the jungle are `#009e49`
+  H147 (`green`). So `bands.txt`'s `green` column on this volume is mostly
+  scenery and its `leafgrn` column is the caps -- read the hex, not the band.
+  A crown probe that returns H147 next to a boy's head is a leaf.
+- **DONALD IN THE CHU COSTUME IS STILL DONALD** (027-028): grass suit, red
+  feather collar, no sailor cap. He recites the native phrases himself (027
+  g4, g6 are his, the boys add the translations), and the census does not
+  find his beak under the grass on every panel.
+- **DOGCATCHER'S QUOTED CAPTION BOXES ARE THE NARRATOR**, six of them stored
+  as dialogue and corrected; the one balloon WITH a tail (031 g9) is Donald's
+  dialogue and was corrected the other way. The three `OHO!` laughs from the
+  silhouetted car went to Donald at medium as dialogue.
+- **ANIMAL NOISES.** Barks, yelps and yowps (034 g5, 035 g6-g8) went to
+  `dialogue` with `other:the hounds`; the three `BZZZ` (013) stayed
+  `sound_effect` with `other:the bumblebees` as maker -- a buzz is not a
+  voice. The war drums are `other:the natives` and the bugle `other:the
+  mayor` (named on 036 p8), both sound_effect.
+- **OFF-PANEL VOICES OVER THE IDOL PANELS** (026 p2, three balloons with no
+  duck in frame) were written low; 011 p1 and 012 p5 likewise medium/low.
+  Those are the four lows in the batch.
+- **BOTH `LOUIE` ADDRESSES WERE USED.** 028 g9 `YOUR SLINGSHOT, LOUIE!` names
+  the silhouette and rules the blue speaker out; 029 g6 `IT WORKED!` then
+  lands on the green boy by tail, which is the slingshot boy.
+- **`other:` VALUES**: Don Pedro, the chief, a native (7), the natives (4), the
+  bumblebees, the vulture, a fiesta guest, a woman guest; the mayor, the TV
+  crew, the fire chief, the fire engine driver, the racing dogs, the hounds,
+  the racetrack crowd, a fox hunter, the fox hunters.
+- **ONE TYPE CORRECTION REACHED NO QUEUE.** Hondorica 015 g10 `OH, NO!` has a
+  bubble trail to Gladstone's head and was written `thought`, but the group
+  carries `type_reviewed` from 2026-08-16, so `vision_apply` left the stored
+  `dialogue` alone and nothing lists it. The reviewer decides it from the
+  crop; it is not in `queue-corrections.txt`.
+- **MISSED TEXT: NONE** on either title; engine diff clean on both.
+- **CORPUS SWEEP.** `vision-corrections` with no title: **26 outstanding
+  across 460 titles**, all this batch's type corrections (Hondorica 3 groups,
+  Dogcatcher 10, both engines).
+
 ## Per-volume cap palette
+Vol. 17, first two titles read 2026-09-10 (forty-seventh batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Secret of Hondorica* | 009 p2, three boys in close-up | `#e31c20` 488px | `#40a562` **H143** 244px there; `#4da33f` H111-114, 150-1,000px on every later panel | `#06a4d4` 672px | coloured segment at the side or back of a black cap |
+| *Dogcatcher Duck* | no clean row; 031 p3 and 034 p8 | `#e61b1f` 289-601px | never printed clean | `#00a5d7` 315-1,433px | the same |
+
+- Donald's sailor cap is the same `#00a5d7` as Dewey's segment at
+  1,000-10,000px; foliage, Scrooge's coat and the jungle are `#009e49` H147,
+  in the `green` band, so on this volume the caps live in `leafgrn` and the
+  `green` column is scenery.
+- The caps come off indoors: 007-008 (Scrooge's office) are bare-headed with
+  the caps in hand, and the boys are silhouettes on roughly a third of the
+  jungle panels.
+- The turned-away cap prints 60-200px or nothing; the census floor of 25px at
+  panel scale keeps most of them, and a probe of the crown box settles the
+  rest.
+
 Vol. 15, three more titles read 2026-09-10 (forty-sixth batch), and the volume
 now has three cap constructions in three stories:
 
