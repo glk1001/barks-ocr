@@ -5606,6 +5606,47 @@ reference row, one each on 118, 121, 122 and 133 for tails). Nephew domain:
   4 (the rest are August thought-balloon adjudications carrying
   `type_was`).
 
+### Findings to paste into the next run (2026-09-11, forty-ninth batch, TWO OF THREE REVIEWED -- *The Chickadee Challenge*)
+
+Replaces that title's numbers in the pass-only section below. **8 speaker
+corrections in 117 groups = 6.8%, all 8 in the 61-group nephew domain =
+13.1%.** No group added, no type outstanding. Mirror clean: 117/117 on both
+engines, 111 `identified_by`, identical distributions. Highs 6 of 104
+corrected (5.8%), mediums 2 of 13 (15.4%).
+
+| direction | n |
+|---|---|
+| `nephews` -> a name | 5 (069 g10 Huey, 070 g1 Louie, g7 Dewey, g8 Huey, g11 Dewey) |
+| one nephew -> another | 2 (070 g2 Louie -> Dewey, g4 Huey -> Louie) |
+| a name -> `nephews` | 1 (069 g9) |
+
+- **EVERY GAP TIP THE PASS LEFT COLLECTIVE WAS NAMED, 5 FOR 5.** The
+  forty-eighth batch's rule ("a gap tip is the boy the balloon sits over or
+  the collective") produced pure under-naming here: on the two picnic pages
+  the reviewer named all five off the drawing. Neither proximity nor the ray
+  predicts the answer (069 g10 went to the FARTHER skull, 070 g11 to the
+  nearer, 070 g8 to the one 4px farther), so the pass cannot resolve them
+  by measurement; but declining was still the wrong hedge. Name the gap tip
+  at MEDIUM with both candidates in the note, so the reviewer's keystroke
+  fixes it either way and a right guess is not thrown away.
+- **070 g4 WENT HUEY -> LOUIE WITH THE REVIEWER'S NOTE "LOUIE HAS AN OPEN
+  MOUTH".** The tip sat over the middle (red) boy's column; the right (green)
+  boy is the one speaking. On a three-in-a-row panel the OPEN BEAK is
+  evidence the pass never used; check it before the tip.
+- **070 g1 AND g2 SWAPPED THE SEATING.** The pass read the table left to
+  right as unreadable / red / teal and named the right boy Louie; the
+  review has the g2 boy Dewey and the g1 line Louie. The `#519d88` H163
+  ink the pass wrote `green` was blue in shade: on this volume an off-hue
+  cap between H160 and H190 is the BLUE segment, not the green.
+- **069 g9 `HA! ANOTHER CLUB! HA!` WENT COLLECTIVE**: the tip sat above the
+  blue boy's cap but the line is a chorus of three laughing boys; a tail
+  over one head does not make a three-voice jeer his.
+- **The Woodchuck-cap pages (071-078) stood in full**: every address-named
+  general, every signal count, the three continuity mediums and all the
+  collectives. Naming by address is safe; the picnic pages with roster caps
+  are where this title's errors lived.
+- **`other:` values all stood.**
+
 ### Findings to paste into the next run (2026-09-11, forty-ninth batch, ONE OF THREE REVIEWED -- *Trouble Indemnity*)
 
 Replaces that title's numbers in the pass-only section below. **2 speaker
