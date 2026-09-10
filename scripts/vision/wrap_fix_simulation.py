@@ -157,8 +157,8 @@ def simulate_transplant(  # noqa: PLR0913
             speech_page_json={"groups": donor_groups}
         ),
     )
-    fixed, issue, _ratio = checker._check_text_layout(working, group_id, context)
-    return fixed, issue, oc._plain(working)
+    fixed, issue = checker._check_text_layout(working, group_id, context)
+    return fixed, issue.issue_type if issue is not None else None, oc._plain(working)
 
 
 def sweep(volumes: list[int]) -> tuple[Counter, list[tuple]]:

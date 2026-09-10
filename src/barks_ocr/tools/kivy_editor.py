@@ -2763,7 +2763,8 @@ class EditorApp(App):
         # both is a fixable box or a stray line break, and that acknowledgement
         # gives up on the group's layout for good. Tick it by hand once the box
         # has been looked at. Likewise a `box_too_big` entry does not pre-tick
-        # `lettering-is-large`: most of that band is a box to redraw.
+        # `lettering-is-large` or `box-is-deliberately-wide`: most of both bands
+        # is a box to redraw, and the entry does not say which reading fired.
         queue_issue = ""
         if self._queue:
             entry = self._queue[self._queue_index]

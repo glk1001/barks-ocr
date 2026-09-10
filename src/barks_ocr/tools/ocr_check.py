@@ -1,6 +1,7 @@
 # ruff: noqa: T201
 import json
 import math
+import re
 import subprocess
 from collections import Counter, defaultdict
 from collections.abc import Callable
@@ -49,6 +50,7 @@ from barks_ocr.utils.engine_compare import (
 )
 from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.group_checks import (
+    BOX_IS_WIDE_ISSUE,
     BOX_MISMATCH_ISSUE,
     BOX_OUTSIDE_PANEL_ISSUE,
     LETTERING_IS_LARGE_ISSUE,
@@ -135,6 +137,40 @@ LINE_HEIGHT_BIMODAL_RATIO = 1.2
 # 3.0 always reported, 2.0-3.0 only on request. See docs/ocr-check-calibration.md.
 BOX_TOO_BIG_RATIO = 3.0  # above this * page reference line height => box_too_big
 BOX_TOO_BIG_MARGINAL_RATIO = 2.0  # ...and above this => marginal, opt-in
+# The same fault read across the page. The ratio above is a HEIGHT measurement,
+# so a box that is the right height but far too wide passes it -- vol 11 page
+# 008 group 10, `KNOCK! / KNOCK!`, is 324px of box round 179px of lettering with
+# 140px of blank burst to the left, at a line height only 1.6x the page's -- and
+# on a stylized group it is never computed at all. Nothing else reads width from
+# above either: the fit check only asks whether the lettering is too wide for
+# the box, never the reverse.
+#
+# The lettering's own width comes from the engines' fragment quads in
+# `cleaned_box_texts`, which hug the ink. Not one engine's: a fragment box often
+# covers part of its own word (easyocr boxed the `INK!` of `BOINK!` and the `DO`
+# of `Y' DO?`, each with the full word as its text), so the union of BOTH
+# engines' fragments on the paired group is taken, and a group is judged only
+# when both contribute. Measured over the 112,114 groups that pass the gates
+# below: median 1.00, p99 1.08, p99.9 1.28; the stylized subset p99 1.21. Above
+# 1.5 there are 45, of which 21 are a box drawn round an adjacent balloon or
+# the whole panel, 16 are a punctuation tail or a drop capital the fragments
+# never box (`SO --`, `GEE!!!`), and 8 are a roomy sign box. Hence the same
+# two-band shape. See docs/ocr-check-calibration.md.
+BOX_TOO_WIDE_RATIO = 1.5  # box width over lettering width => box_too_big
+BOX_TOO_WIDE_MARGINAL_RATIO = 1.3  # ...and above this => marginal, opt-in
+# What makes a fragment quad usable as evidence of where the lettering is.
+FRAG_MIN_WIDTH_PX = 20  # smaller than this is a stray mark, not a word
+FRAG_MIN_HEIGHT_PX = 15
+# A fragment box narrower than this many pixels per letter per pixel of height
+# does not span its own text (`OUR BOOK SAYS MAN HASN'T MASTERED EVEN` in 83px)
+# and puts the whole group beyond judging. Real lettering sits at 0.46-0.92 for
+# 90% of the corpus's 578K fragments; 2.3% fall under 0.35.
+FRAG_MIN_CHAR_DENSITY = 0.35
+# The fragments must account for this share of the group's glyphs on at least
+# one engine, or their union is a lower bound on the lettering, not its extent.
+FRAG_COVERAGE_MIN = 0.8
+# ...and lie inside the group's text_box, else they describe some other box.
+FRAG_INSIDE_TOLERANCE_PX = 10
 _MODE_SMALLEST_SAMPLE = 2  # half-sample recursion stops here and averages the pair
 
 # ── Panel-overhang constants ──────────────────────────────────────────────────
@@ -303,8 +339,11 @@ class LineHeightLimits:
 
     ``outlier`` and ``marginal`` are fractions of the page reference and read
     from below (too many lines); ``too_big`` and ``too_big_marginal`` are
-    multiples of it and read from above (a box far larger than its lettering).
-    One ``include_marginal`` switch opens both marginal bands.
+    multiples of it and read from above (a box far taller than its lettering);
+    ``too_wide`` and ``too_wide_marginal`` are multiples of the lettering's own
+    width, from the engines' fragments, and catch the oversize box the height
+    reading cannot. One ``include_marginal`` switch opens all three marginal
+    bands.
     """
 
     outlier: float = LINE_HEIGHT_OUTLIER_FRACTION
@@ -313,6 +352,8 @@ class LineHeightLimits:
     bimodal_ratio: float = LINE_HEIGHT_BIMODAL_RATIO
     too_big: float = BOX_TOO_BIG_RATIO
     too_big_marginal: float = BOX_TOO_BIG_MARGINAL_RATIO
+    too_wide: float = BOX_TOO_WIDE_RATIO
+    too_wide_marginal: float = BOX_TOO_WIDE_MARGINAL_RATIO
 
 
 @dataclass(frozen=True)
@@ -349,6 +390,21 @@ class PanelIssue:
     Carries a note and a ratio because ``box_outside_panel`` has measurements
     worth quoting; the other three panel issues are fully described by their
     name and leave both empty.
+    """
+
+    issue_type: str
+    note: str = ""
+    ratio: float | None = None
+
+
+@dataclass(frozen=True)
+class LayoutIssue:
+    """A text-level finding on one group, and what to tell the reviewer about it.
+
+    The same shape as ``PanelIssue``. ``ratio`` is the number behind the
+    finding where there is one -- the line-height ratio, or the box-to-lettering
+    width ratio -- and ``note`` says which where the issue name alone does not:
+    ``box_too_big`` has two routes in. The registry checks leave both empty.
     """
 
     issue_type: str
@@ -776,6 +832,119 @@ def _implied_line_height(group: dict) -> float | None:
         return None
 
     return box_h / n_lines
+
+
+def _glyphs(text: str) -> str:
+    """Return *text* without its whitespace: the characters that take up width."""
+    return re.sub(r"\s+", "", text)
+
+
+def _usable_fragment_quads(group: dict) -> tuple[list[PointList], str] | None:
+    """Return the group's OCR fragment quads that can say where its lettering is.
+
+    The quads and their texts joined, or None when the group cannot be judged
+    from its fragments at all.
+
+    Stray marks -- under ``FRAG_MIN_WIDTH_PX`` by ``FRAG_MIN_HEIGHT_PX`` -- are
+    dropped. A fragment far narrower than its own text
+    (``FRAG_MIN_CHAR_DENSITY``) disqualifies the whole group rather than just
+    itself: a box that does not span its word says nothing about where the word
+    ends, and there is no telling which of its neighbours do. Vol 18 page 018
+    group 10 carries ``OUR BOOK SAYS MAN HASN'T MASTERED EVEN`` in an 83px box.
+    """
+    quads: list[PointList] = []
+    texts: list[str] = []
+    for fragment in (group.get("cleaned_box_texts") or {}).values():
+        quad = fragment.get("text_box") or []
+        if text_box_problem(quad, axis_aligned=False) is not None:
+            continue
+        x0, y0, x1, y1 = points_bbox(quad)
+        width, height = x1 - x0, y1 - y0
+        if width < FRAG_MIN_WIDTH_PX or height < FRAG_MIN_HEIGHT_PX:
+            continue
+        text = fragment.get("text_frag") or ""
+        n_letters = sum(c.isalnum() for c in text)
+        if n_letters and width / (n_letters * height) < FRAG_MIN_CHAR_DENSITY:
+            return None
+        quads.append(quad)
+        texts.append(text)
+    return quads, "".join(texts)
+
+
+def _fragment_coverage(fragment_text: str, ai_text: str) -> float:
+    """Return the share of the group's glyphs that its fragments' texts account for."""
+    n_glyphs = len(_glyphs(ai_text))
+    return len(_glyphs(fragment_text)) / n_glyphs if n_glyphs else 0.0
+
+
+def _paired_fragment_quads(
+    group: dict, other_page_group: SpeechPageGroup | None
+) -> list[PointList] | None:
+    """Return the usable fragment quads of the group AND of its pair on the other engine.
+
+    Both engines or nothing. Either engine alone routinely boxes part of a word
+    while reading all of it -- easyocr boxed the ``INK!`` of ``BOINK!`` with
+    ``BOINK!`` as the fragment's text -- so a one-engine union stops short and
+    flags a box that is right; read against the art it did so on ten of eleven
+    cleaned-volume hits, and requiring both engines removed every one.
+
+    None when either side has no usable fragments (``_usable_fragment_quads``,
+    which also covers hand-added groups), when ``_find_matching_group`` finds
+    no pair, or when the fragments' texts cover under ``FRAG_COVERAGE_MIN`` of
+    the group's glyphs on both engines -- the union is then a lower bound on the
+    lettering, not its extent.
+    """
+    own = _usable_fragment_quads(group)
+    if not own or not own[0]:
+        return None
+    other = _find_matching_group(group, other_page_group)
+    theirs = _usable_fragment_quads(other) if other is not None else None
+    if not theirs or not theirs[0]:
+        return None
+
+    ai_text = _plain(group)
+    coverage = max(_fragment_coverage(own[1], ai_text), _fragment_coverage(theirs[1], ai_text))
+    if coverage < FRAG_COVERAGE_MIN:
+        return None
+    return own[0] + theirs[0]
+
+
+def _box_to_lettering_width_ratio(
+    group: dict, other_page_group: SpeechPageGroup | None
+) -> tuple[float, int] | None:
+    """Return how many times wider the group's text_box is than the lettering inside it.
+
+    (ratio, fragment count), or None when the group cannot be judged.
+
+    The lettering's extent is the axis-aligned union of ``_paired_fragment_quads``.
+    A union that reaches outside the text_box by more than
+    ``FRAG_INSIDE_TOLERANCE_PX`` means the fragments belong to some other box
+    (vol 18 page 152 group 0's sit 500px away from it) and is not judged. Past
+    that gate the ratio is at least about 1.0 and reads as the padding round the
+    ink.
+
+    Width only. The same union read for height is dominated by ordinary balloon
+    padding -- a one-line box is routinely 1.5-1.9x its glyphs' height -- and
+    the height reading belongs to ``_line_height_ratio`` in any case.
+    """
+    text_box = group.get("text_box") or []
+    quads = _paired_fragment_quads(group, other_page_group)
+    if quads is None or text_box_problem(text_box) is not None:
+        return None
+
+    box_x0, box_y0, box_x1, box_y1 = points_bbox(text_box)
+    ink_x0, ink_y0, ink_x1, ink_y1 = points_bbox([point for quad in quads for point in quad])
+    tolerance = FRAG_INSIDE_TOLERANCE_PX
+    outside = (
+        ink_x0 < box_x0 - tolerance
+        or ink_y0 < box_y0 - tolerance
+        or ink_x1 > box_x1 + tolerance
+        or ink_y1 > box_y1 + tolerance
+    )
+    ink_width = ink_x1 - ink_x0
+    if outside or ink_width <= 0:
+        return None
+    return (box_x1 - box_x0) / ink_width, len(quads)
 
 
 def _half_sample_mode(values: list[float]) -> float:
@@ -1606,8 +1775,8 @@ class OcrChecker:
             text_issues, layout_fixed = self._text_issues(
                 context, group_id, group, skip_layout=box_problem is not None
             )
-            for issue_type, ratio in text_issues:
-                add(issue_type, ratio)
+            for issue in text_issues:
+                add(issue.issue_type, issue.ratio, issue.note)
             there_were_fixes = there_were_fixes or layout_fixed
 
         return issues, there_were_fixes
@@ -1619,22 +1788,24 @@ class OcrChecker:
         group: dict,
         *,
         skip_layout: bool,
-    ) -> tuple[list[tuple[str, float | None]], bool]:
+    ) -> tuple[list[LayoutIssue], bool]:
         """Text-level issues for one group with text. Returns (issues, layout_fixed).
 
         The registry checks come straight off utils/group_checks.py, so adding
         a check there needs no change here. The layout check is skipped for a
         malformed text_box, whose geometry means nothing.
         """
-        found: list[tuple[str, float | None]] = [
-            (t, None) for t in get_fired_dismissable_issues(group) if not is_acknowledged(group, t)
+        found: list[LayoutIssue] = [
+            LayoutIssue(t)
+            for t in get_fired_dismissable_issues(group)
+            if not is_acknowledged(group, t)
         ]
         if skip_layout:
             return found, False
 
-        layout_fixed, layout_issue, layout_ratio = self._check_text_layout(group, group_id, context)
-        if layout_issue:
-            found.append((layout_issue, layout_ratio))
+        layout_fixed, layout_issue = self._check_text_layout(group, group_id, context)
+        if layout_issue is not None:
+            found.append(layout_issue)
         return found, layout_fixed
 
     def _panel_issue(
@@ -2019,10 +2190,11 @@ class OcrChecker:
         group: dict,
         group_id: str,
         context: PageContext,
-    ) -> tuple[bool, str | None, float | None]:
-        """Return (fix_applied, issue_type_to_add, line_height_ratio).
+    ) -> tuple[bool, LayoutIssue | None]:
+        """Return (fix_applied, issue_to_add).
 
-        First the box itself: one several times taller than its lettering is
+        First the box itself: one several times taller than its lettering, or
+        far wider than the lettering the engines boxed inside it, is
         "box_too_big" (or "box_too_big_marginal"), reported and never repaired
         -- see ``_box_too_big_issue`` for why it goes ahead of the fit check.
 
@@ -2049,70 +2221,124 @@ class OcrChecker:
         is attempted, and the layout the reviewer accepted is not quietly
         rewritten on the next ``--fix`` pass.
 
-        Well-formed → (False, None, ratio). Ill-formed with no fix flag, or with
-        the transplant rejected → (False, issue_type, ratio). Transplant applied
-        → (True, None, ratio).
+        Well-formed → (False, None). Ill-formed with no fix flag, or with the
+        transplant rejected → (False, issue). Transplant applied → (True, None).
         """
         ai_text = _plain(group)
         text_box = group.get("text_box") or []
         if not ai_text or not text_box:
-            return False, None, None
+            return False, None
 
         ratio = _line_height_ratio(group, context.line_heights.own)
-        issue = self._layout_issue(group, ratio, context.fanta_page)
+        issue = self._layout_issue(group, ratio, context)
         if issue is None:
-            return False, None, ratio
+            return False, None
 
         # An oversize box is never transplanted: the fault is the box, not the
         # wrapping, and a rewrap could only move the lettering around inside it.
-        if issue in _NO_TRANSPLANT_ISSUES or not self._fixes.newlines:
-            return False, issue, ratio
+        if issue.issue_type in _NO_TRANSPLANT_ISSUES or not self._fixes.newlines:
+            return False, issue
 
         if not self._transplant_line_pattern(group, group_id, context):
-            return False, issue, ratio
+            return False, issue
 
-        return True, None, ratio
+        return True, None
 
-    def _layout_issue(self, group: dict, ratio: float | None, fanta_page: str) -> str | None:
+    def _layout_issue(
+        self, group: dict, ratio: float | None, context: PageContext
+    ) -> LayoutIssue | None:
         """Return this group's one layout issue, worst first, or None when well laid out.
 
         The oversize check goes first and is not silenced by
         ``text-will-never-fit``; the three wrapping checks follow and are.
         """
-        if too_big := self._box_too_big_issue(group, ratio):
+        if too_big := self._box_too_big_issue(group, ratio, context):
             return too_big
         if is_acknowledged(group, TEXT_NEVER_FITS_ISSUE):
             return None
-        if not _group_text_fits(group, fanta_page):
-            return "text_does_not_fit"
+        if not _group_text_fits(group, context.fanta_page):
+            return LayoutIssue("text_does_not_fit", ratio=ratio)
         if ratio is not None and ratio < self._limits.outlier:
-            return "too_many_lines"
+            return LayoutIssue("too_many_lines", ratio=ratio)
         if self._limits.include_marginal and ratio is not None and ratio < self._limits.marginal:
-            return "too_many_lines_marginal"
+            return LayoutIssue("too_many_lines_marginal", ratio=ratio)
         return None
 
-    def _box_too_big_issue(self, group: dict, ratio: float | None) -> str | None:
+    def _box_too_big_issue(
+        self, group: dict, ratio: float | None, context: PageContext
+    ) -> LayoutIssue | None:
         """Which oversize-box issue applies, or None when the box is a plausible size.
 
-        The one layout check that reads the line-height ratio from above. It
-        runs BEFORE the fit check because a box several times taller than its
-        lettering hands the fit check a font several times too large, and the
-        width test then fails for the wrong reason: vol 29 page 084 group 19,
-        ``A FERRY? / ...SAY!`` in an 863x722 box, came back as
-        ``text_does_not_fit`` and was offered a rewrap that could never help.
+        Two readings of the one fault, and either can fire. Where both do, the
+        always-reported band wins over a marginal one whichever route found it.
 
-        Silenced by ``lettering-is-large``, not ``text-will-never-fit``. That
-        one says the box is too SMALL for its text; a reviewer who has said so
-        has said nothing about this, and a shouted line or a display caption is
-        a box that is right around lettering that is big.
+        - **Height**, ``_too_tall_issue``: the line-height ratio read from
+          above. It runs BEFORE the fit check because a box several times
+          taller than its lettering hands the fit check a font several times
+          too large, and the width test then fails for the wrong reason: vol 29
+          page 084 group 19, ``A FERRY? / ...SAY!`` in an 863x722 box, came
+          back as ``text_does_not_fit`` and was offered a rewrap that could
+          never help.
+        - **Width**, ``_too_wide_issue``: the box against the lettering the two
+          engines boxed inside it. The only oversize reading a stylized group
+          gets, since it has no line-height ratio, and the one that sees a box
+          of the right height with blank space beside its lettering: vol 11
+          page 008 group 10, ``KNOCK! / KNOCK!``.
+
+        Silenced by two acknowledgements, one per reading, and by neither is
+        ``text-will-never-fit``: that one says the box is too SMALL for its
+        text, and a reviewer who has said so has said nothing about this.
+        """
+        candidates = [
+            issue
+            for issue in (self._too_tall_issue(group, ratio), self._too_wide_issue(group, context))
+            if issue is not None
+        ]
+        if not candidates:
+            return None
+        return min(candidates, key=lambda issue: _severity_rank(issue.issue_type))
+
+    def _too_tall_issue(self, group: dict, ratio: float | None) -> LayoutIssue | None:
+        """Return the oversize box as the line-height ratio sees it, or None.
+
+        Silenced by ``lettering-is-large``: a shouted line or a display caption
+        is a box that is right around lettering that is big.
         """
         if ratio is None or is_acknowledged(group, LETTERING_IS_LARGE_ISSUE):
             return None
         if ratio > self._limits.too_big:
-            return "box_too_big"
+            return LayoutIssue("box_too_big", ratio=ratio)
         if self._limits.include_marginal and ratio > self._limits.too_big_marginal:
-            return "box_too_big_marginal"
+            return LayoutIssue("box_too_big_marginal", ratio=ratio)
         return None
+
+    def _too_wide_issue(self, group: dict, context: PageContext) -> LayoutIssue | None:
+        """Return the oversize box as the engines' fragments see it, or None.
+
+        The note carries the measurement, because the issue name is shared with
+        the height reading and the reviewer should know which one to look at.
+
+        Silenced by ``box-is-deliberately-wide``: the fragments stop short of a
+        drop capital or a dash the lettering plainly has, or the box was drawn
+        round a burst on purpose.
+        """
+        if is_acknowledged(group, BOX_IS_WIDE_ISSUE):
+            return None
+        measured = _box_to_lettering_width_ratio(group, context.other_page_group)
+        if measured is None:
+            return None
+        ratio, n_fragments = measured
+        if ratio > self._limits.too_wide:
+            issue_type = "box_too_big"
+        elif self._limits.include_marginal and ratio > self._limits.too_wide_marginal:
+            issue_type = "box_too_big_marginal"
+        else:
+            return None
+        note = (
+            f"box is {ratio:.2f}x wider than its lettering"
+            f" ({n_fragments} fragments across both engines)"
+        )
+        return LayoutIssue(issue_type, note=note, ratio=ratio)
 
     def _transplant_line_pattern(
         self,
@@ -2540,38 +2766,39 @@ def _default_output_file(volumes_str: str) -> Path:
     return Path(f"ocr-check-{today}.txt")
 
 
-def _validate_line_height_bands(
-    outlier: float, marginal: float, too_big: float, too_big_marginal: float
-) -> None:
-    """Refuse band edges that cross, or an oversize band that starts inside the page norm.
+def _validate_line_height_bands(limits: LineHeightLimits) -> None:
+    """Refuse band edges that cross, or an oversize band that starts inside the norm.
 
     Args:
-        outlier: ``--line-height-threshold``, the always-reported lower edge.
-        marginal: ``--line-height-marginal``, the opt-in band's upper edge.
-        too_big: ``--box-too-big``, the always-reported upper edge.
-        too_big_marginal: ``--box-too-big-marginal``, the opt-in band's lower edge.
+        limits: The edges as given on the command line -- ``--line-height-threshold``
+            and ``--line-height-marginal`` read from below; ``--box-too-big`` and
+            ``--box-too-big-marginal``, ``--box-too-wide`` and
+            ``--box-too-wide-marginal`` read from above, each pair an always-reported
+            edge and the opt-in band's lower edge.
 
     Raises:
         typer.BadParameter: On any edge that would make a band empty or absurd.
 
     """
-    if marginal < outlier:
+    if limits.marginal < limits.outlier:
         err_msg = (
-            f"--line-height-marginal ({marginal}) must not be below"
-            f" --line-height-threshold ({outlier})."
+            f"--line-height-marginal ({limits.marginal}) must not be below"
+            f" --line-height-threshold ({limits.outlier})."
         )
         raise typer.BadParameter(err_msg)
-    if too_big_marginal > too_big:
-        err_msg = (
-            f"--box-too-big-marginal ({too_big_marginal}) must not be above"
-            f" --box-too-big ({too_big})."
-        )
-        raise typer.BadParameter(err_msg)
-    if too_big_marginal <= 1.0:
-        # The reference is the page's own median, so at 1.0 the marginal band
-        # would take in half of every page.
-        err_msg = f"--box-too-big-marginal ({too_big_marginal}) must be above 1.0."
-        raise typer.BadParameter(err_msg)
+    for name, always, marginal in (
+        ("box-too-big", limits.too_big, limits.too_big_marginal),
+        ("box-too-wide", limits.too_wide, limits.too_wide_marginal),
+    ):
+        if marginal > always:
+            err_msg = f"--{name}-marginal ({marginal}) must not be above --{name} ({always})."
+            raise typer.BadParameter(err_msg)
+        if marginal <= 1.0:
+            # Both references are the group's own norm -- the page's median line
+            # height, the lettering's own width -- so at 1.0 the marginal band
+            # would take in half of every page.
+            err_msg = f"--{name}-marginal ({marginal}) must be above 1.0."
+            raise typer.BadParameter(err_msg)
 
 
 @app.command(help="Check prelim OCR JSON files for issues and write a kivy-editor queue file.")
@@ -2644,6 +2871,17 @@ def main(  # noqa: PLR0913
         BOX_TOO_BIG_MARGINAL_RATIO,
         help="Lower edge of the oversize marginal band; only used with --include-marginal.",
     ),
+    box_too_wide: float = typer.Option(
+        BOX_TOO_WIDE_RATIO,
+        help=(
+            "Flag as 'box_too_big' above this multiple of the lettering's own width,"
+            " as boxed by both engines' OCR fragments."
+        ),
+    ),
+    box_too_wide_marginal: float = typer.Option(
+        BOX_TOO_WIDE_MARGINAL_RATIO,
+        help="Lower edge of the too-wide marginal band; only used with --include-marginal.",
+    ),
     box_iou_min: float = typer.Option(
         BOX_IOU_MIN,
         help=(
@@ -2672,9 +2910,17 @@ def main(  # noqa: PLR0913
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."
         raise typer.BadParameter(err_msg)
-    _validate_line_height_bands(
-        line_height_threshold, line_height_marginal, box_too_big, box_too_big_marginal
+    limits = LineHeightLimits(
+        outlier=line_height_threshold,
+        marginal=line_height_marginal,
+        include_marginal=include_marginal,
+        bimodal_ratio=line_height_bimodal,
+        too_big=box_too_big,
+        too_big_marginal=box_too_big_marginal,
+        too_wide=box_too_wide,
+        too_wide_marginal=box_too_wide_marginal,
     )
+    _validate_line_height_bands(limits)
     if not 0.0 <= box_iou_min <= 1.0:
         err_msg = f"--box-iou-min ({box_iou_min}) must be between 0 and 1."
         raise typer.BadParameter(err_msg)
@@ -2713,14 +2959,6 @@ def main(  # noqa: PLR0913
     volumes = list(intspan(volumes_str)) if volumes_str else []
     title_list = get_titles(comics_database, volumes, title_str, exclude_non_comics=True)
 
-    limits = LineHeightLimits(
-        outlier=line_height_threshold,
-        marginal=line_height_marginal,
-        include_marginal=include_marginal,
-        bimodal_ratio=line_height_bimodal,
-        too_big=box_too_big,
-        too_big_marginal=box_too_big_marginal,
-    )
     overhang_limits = PanelOverhangLimits(fraction=outside_panel_fraction, min_px=outside_panel_px)
     box_limits = BoxAgreementLimits(iou_min=box_iou_min, max_growth=max_box_growth)
     output_file = output or _default_output_file(volumes_str)

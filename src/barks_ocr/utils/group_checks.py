@@ -33,6 +33,16 @@ TEXT_NEVER_FITS_ISSUE = "text-will-never-fit"
 # as the others are.
 LETTERING_IS_LARGE_ISSUE = "lettering-is-large"
 
+# Acknowledging this silences the other route into `ocr_check`'s `box_too_big`:
+# the box measured against the lettering the two OCR engines boxed inside it,
+# which is how a box of the right height with blank space beside its lettering
+# is caught. The judgement is again that the box is RIGHT -- the fragments stop
+# short of a drop capital or a trailing dash that is plainly lettering, or the
+# box was drawn round a sound-effect burst on purpose -- and it is kept apart
+# from LETTERING_IS_LARGE_ISSUE because the two readings fail independently: a
+# group can carry either or both.
+BOX_IS_WIDE_ISSUE = "box-is-deliberately-wide"
+
 # Acknowledging this silences `ocr_check`'s `panel_nums_not_contiguous` for the
 # page/engine it is set on. Named for the judgement -- "the skipped panel really
 # has no lettering" -- and not for the check, following TEXT_NEVER_FITS_ISSUE.
@@ -132,6 +142,7 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "florence-check",
     TEXT_NEVER_FITS_ISSUE,
     LETTERING_IS_LARGE_ISSUE,
+    BOX_IS_WIDE_ISSUE,
     PANEL_HAS_NO_TEXT_ISSUE,
     BOX_OUTSIDE_PANEL_ISSUE,
     BOX_MISMATCH_ISSUE,
@@ -417,6 +428,8 @@ def _never_fires(group: dict) -> bool:
     #                           rendered font and the page context.
     #   lettering-is-large   -- ocr_check's box_too_big, the same page context
     #                           read from the other end.
+    #   box-is-deliberately-wide -- box_too_big's width reading, which needs
+    #                           the other engine's fragments for the pair.
     #   box-outside-panel    -- ocr_check's overhang check, which needs the
     #                           page's panel boxes.
     del group
@@ -437,6 +450,7 @@ DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     "florence-check": _never_fires,
     TEXT_NEVER_FITS_ISSUE: _never_fires,
     LETTERING_IS_LARGE_ISSUE: _never_fires,
+    BOX_IS_WIDE_ISSUE: _never_fires,
     # Like the two above it: `ocr_check` decides when this fires and consults
     # `is_acknowledged` itself, because the judgement needs the whole page and
     # its panel boxes, which a predicate over one group cannot see.

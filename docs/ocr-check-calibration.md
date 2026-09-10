@@ -58,7 +58,9 @@ completely different signal — hence the page-median line height.
 
 Neither says anything about a box that is far too **big** for its lettering: the fit
 check only gets a larger font out of it, and the packing check has no upper edge.
-`box_too_big` reads the same page-median signal from above — see its own section.
+`box_too_big` reads the same page-median signal from above — and, because that is a
+height, reads the box's width against the lettering the engines boxed inside it — see
+its own section.
 
 ---
 
@@ -1132,6 +1134,111 @@ reference for both directions, and it was paid rather than carrying two.
 Reproduce: the survey is a forty-line read of `_implied_line_height` and
 `_page_median_line_height` over every groups file; the numbers above were taken on
 2026-09-10 against the corpus as committed that day.
+
+### `BOX_TOO_WIDE_RATIO = 1.5`, `BOX_TOO_WIDE_MARGINAL_RATIO = 1.3` — the width reading
+
+Added the same day, for a box the ratio above cannot see. Vol 11 page 008 group 10 is
+`KNOCK! / KNOCK!`, a sound effect in a burst: the lettering spans x 1758–1937 on both
+engines' fragments, the box runs from x 1618, so 140px of blank burst sits to its left.
+The line-height ratio is 1.6 — the lettering genuinely *is* large — and the group is
+stylized, so `_implied_line_height` returns None and the height reading never runs at
+all. Both engines carry the same wide box, so `box_mismatch` passes too. Nothing measured
+a box against the lettering inside it in the x direction.
+
+The signal is the engines' own fragment quads in `cleaned_box_texts`, which hug the ink
+and follow its angle: `box_w` over the width of their axis-aligned union. It is
+font-independent, which is what lets it run on the sound effects and signs the
+Verdana-based fit check has to treat leniently.
+
+#### One engine's fragments are not the lettering
+
+The obvious version — the group's own fragments — was surveyed first and then read
+against the art. Gated for coverage (the fragments' texts had to account for 80% of the
+group's letters), containment (the union inside the box) and a per-fragment density
+floor, it still flagged 251 groups above 1.5, 20 of them on the cleaned vols 1 and 18.
+A montage of eleven of those cleaned hits showed **ten correct boxes**: in each, an
+engine's fragment box covered *part of its own word* while its text carried the whole
+word — easyocr boxed the `INK!` of `BOINK!`, the `DO` of `Y' DO?`, the `LET'S / SEE` of
+`LET'S GO / SEE`; both engines box only the small letters of a drop-capital caption
+(`SO —`, `LATER!`, `SOON!`). Text coverage cannot see any of it, because the text is
+complete; only the box is short. Fragment density catches the gross cases (`OUR BOOK
+SAYS MAN HASN'T MASTERED EVEN` in 83px, vol 18 page 018) but not a box that stops
+halfway through a two-word line.
+
+So the check takes the union of **both** engines' fragments on the pair `_find_matching_group`
+returns, and judges a group only when both contribute a usable fragment. Where one
+engine's box stops short the other's usually does not, and a padded box is padded on
+both. On the KNOCK group itself this is also what makes it fire on easyocr, whose own
+fragments kept only one of the two `KNOCK!`s (coverage 0.5): paddleocr's two fill the
+union in. Everything below is the two-engine union.
+
+#### Gates
+
+Measured over the 144,216 groups with text and a sound box (2026-09-10, working tree):
+
+| gate | groups it excludes | why |
+|---|---|---|
+| own fragments unusable (none; or one narrower than `FRAG_MIN_CHAR_DENSITY` 0.35 px per letter per px of height) | 15,477 | hand-added groups have none; a fragment that does not span its word says nothing about where the word ends. Real lettering sits at 0.46–0.92 for 90% of the corpus's 578K fragments, 2.3% under 0.35 |
+| no pair on the other engine | 1,485 | nothing to corroborate with |
+| the pair's fragments unusable | 6,781 | the corroboration above |
+| fragments' texts under `FRAG_COVERAGE_MIN` 0.8 of the group's glyphs on both engines | 217 | the union is then a lower bound on the lettering, not its extent |
+| union outside the text_box by more than `FRAG_INSIDE_TOLERANCE_PX` 10 | 8,142 | the fragments describe some other box — vol 18 page 152 group 0's sit 500px from it — or the engines' boxes differ, which is `box_mismatch`'s business |
+
+Fragments under 20x15px are dropped as stray marks before any of that. 112,114 groups
+are judged.
+
+#### Distribution and edges
+
+| | n | median | p95 | p99 | p99.9 | max |
+|---|---|---|---|---|---|---|
+| all judged | 112,114 | 1.00 | 1.02 | 1.08 | 1.28 | 7.8 |
+| non-stylized | 106,684 | 1.00 | 1.02 | 1.07 | 1.25 | 2.3 |
+| stylized | 5,430 | 1.00 | 1.07 | 1.21 | 1.99 | 7.8 |
+
+| width ratio above | corpus | stylized | vol 1 | vol 18 | vol 11 | vol 19 | vol 21 |
+|---|---|---|---|---|---|---|---|
+| 1.3 | 98 | 26 | 4 | 0 | 6 | 3 | 2 |
+| **1.5** | **45** | **18** | **4** | **0** | **2** | **3** | **0** |
+| 1.75 | 17 | 9 | 0 | 0 | 2 | 3 | 0 |
+| 2.0 | 8 | 5 | 0 | 0 | 0 | 2 | 0 |
+
+The 45 above 1.5 were read against the art (two, vol 1 page 261's pair, could not be
+located). **21** are the fault the check exists for: a box drawn round an adjacent
+balloon as well as its own (vol 26 page 063, vol 14 page 178, vol 25 page 043), round the
+whole panel (vol 29 pages 100, 118, 025), or round blank burst — the KNOCK pair at 1.81
+and 1.76. **16** are a box that is right around lettering the fragments stop short of: a
+trailing dash or ellipsis (`SO —`, `SAY —`, `BUT —`, `SO ...`), a run of exclamation marks
+(`GEE!!!`), or a drop capital (`SOON!`). The engines' fragment *text* includes the dash;
+only the box excludes it, so no coverage rule separates them. That is the residual
+false-positive class, and the reviewer marks it `box-is-deliberately-wide`. The other
+**8** are signs and labels with a roomy margin (`INN`, `ZERO`, `LIFE / GUARD`), which a
+reviewer may tighten or leave.
+
+Above **1.5** is always reported, as `box_too_big`, the same issue name as the height
+reading because the reviewer's action is the same — redraw the box — with the console
+note saying which reading fired and quoting the ratio (`box is 1.81x wider than its
+lettering (3 fragments across both engines)`); the queue file's sixth field carries it.
+**1.3 to 1.5** is `box_too_big_marginal` behind `--include-marginal`, where the extra 53
+are mostly the punctuation class and short signs. 1.5 sits well past p99.9 of the judged
+population; the target group clears it by a wide margin, where at 1.75 it would have
+cleared by 0.01 on easyocr. Both edges are CLI-tunable (`--box-too-wide`,
+`--box-too-wide-marginal`), the marginal edge floored above 1.0 like the others.
+
+Where both readings fire, the always-reported band wins whichever route found it.
+The width reading has its own acknowledgement, `box-is-deliberately-wide`, kept apart
+from `lettering-is-large` because the two readings fail independently: a shouted line in a
+tight box is large lettering; a caption with a drop capital is a right box the fragments
+under-measure. A group can carry either or both.
+
+Width only. The same two-engine union read for **height** is dominated by ordinary
+balloon padding — a one-line box measures 1.5–1.9x its glyphs' height as a matter of
+course (vol 1 page 258 group 14 at 1.90 is a perfectly drawn balloon) — and the height
+reading belongs to the line-height ratio in any case.
+
+Reproduce: the survey is a sixty-line read of `_usable_fragment_quads`,
+`_find_matching_group` and `points_bbox` over every groups file, run 2026-09-10 against
+the working tree (which held the wide KNOCK box uncommitted; HEAD has it tight, and the
+counts above include it).
 
 ---
 
