@@ -5349,7 +5349,119 @@ Dogcatcher 6 (the page views only). Nephew domain:
   across 460 titles**, all this batch's type corrections (Hondorica 3 groups,
   Dogcatcher 10, both engines).
 
+### Findings to paste into the next run (2026-09-10, forty-eighth batch, PASS ONLY -- not yet reviewed)
+
+Four titles, 52 pages, **633 groups**: *The Fabulous Philosopher's Stone*
+(Vol. 14) 303, *Heirloom Watch* (Vol. 14) 96, *Donald's Raucous Role* (Vol.
+17) 123, *Good Canoes and Bad Canoes* (Vol. 17) 111. **61 images read = 1.17
+per page** against a target of 3: 52 page views plus nine crops (three on
+Philosopher's Stone 110 for the book spines, two on 112 for the cap
+reference row, one each on 118, 121, 122 and 133 for tails). Nephew domain:
+
+| title | nephew groups | named | collectives | mediums in domain | low/medium queue |
+|---|---|---|---|---|---|
+| The Fabulous Philosopher's Stone | 67 | 49 (73%) | 18 | 28 | 41 |
+| Heirloom Watch | 0 | -- | -- | -- | 0 |
+| Donald's Raucous Role | 13 | 5 (38%) | 8 | 3 | 3 |
+| Good Canoes and Bad Canoes | 34 | 30 (88%) | 4 | 21 | 21 |
+
+- **PHILOSOPHER'S STONE PRINTS A BLACK CAP WITH A SMALL SIDE TAB, 70-200px,
+  UNDER THE CENSUS FLOOR.** The reference row 112 p4 (three boys, close)
+  reads blue / red / dark-green left to right in a 2.5x crop; `title_heads`
+  attaches cap ink to almost none of them and the `leafgrn` column is 0 on
+  nearly every panel. Every name on the title came from a `probe.py` of the
+  crown box, or from the census where the tab happened to face the reader
+  (300-2,600px of `#e61b1f` then). **Its green tab prints TWO ways**: clean
+  `#4da33d` H111 (115, 118 p1, 131) and a dark `#27865a`-`#35a46d` H150-152
+  (112 p4, 118 p4, 120 p1). The dark one sits in capscan's `green` band with
+  the foliage, so a `green` blob on a crown here is a cap, not a leaf -- the
+  opposite of the Vol. 17 rule. Both were written `green` with the hex in
+  the note.
+- **THIRTY-FOUR MEDIUMS IN THE NEPHEW DOMAIN, ALMOST ALL GAP AND EDGE
+  TIPS.** Following the forty-seventh batch, every gap tip was named in the
+  direction of its ray at medium (118 g1, g11, 122 g8-g10, 124 g0-g1, 126
+  g6, g8, 127 g9, 130 g1, 131 g5, g10, g15, 133 g3) and every edge tip as
+  the boy whose span the tip sits in (121 g3, 123 g14, Raucous Role 040 g10,
+  Good Canoes 056 g10). The review of these two rules on a small-tab cap is
+  the thing this batch was for.
+- **THE BOY HOLDING THE GUIDE BOOK IS NOT THE ONE THE TAIL LANDS ON.** Three
+  times on Philosopher's Stone (118 g9, 118 g11, 119 g8) the balloon quotes
+  the Junior Woodchucks' Guide Book and the tail lands on a boy other than
+  the one holding it. All three were written from the tail at medium with
+  the conflict in the note. If the review moves them to the book-holder,
+  the prop outranks the tail on this title.
+- **BOTH DONALD AND SCROOGE WERE NAMED FROM TAILS, NOT REGISTER.** Long-shot
+  and silhouette Donald-versus-Scrooge calls (115 g9, 117 g1-g2, 118 g4-g5,
+  123 g3-g4, 127 g10-g11) are medium; JEEPERS on 124 g1 went to Scrooge on
+  the ray and is flagged. The one big-head test that mattered: 124 g0's
+  rope-puller tip was equidistant from two groups and stayed with the boy
+  doing the pulling.
+- **GOOD CANOES' BOYS WEAR BIG SIDE SEGMENTS AND THE TAILS STILL CONVERGE ON
+  THE RED BOY.** On 057 two-boy panels, four of five tips landed nearer the
+  red boy; the two pairs were split by nearest head at medium (g0/g1, g4/g5,
+  g9/g10). Two named leaves the third was used on 049 g8, 051 g3, 056 g3,
+  058 g8 where one crown probed no ink at all.
+- **INDOORS THE BOYS ARE BARE-HEADED ON BOTH VOL. 17 TITLES**: Raucous Role
+  in bed and at the hospital (039, 045, 048), and every hotel-interior page
+  of Philosopher's Stone (128). Those collectives are measured absence, with
+  the bands totals quoted. Raucous Role 042 p8 prints the boys in red, green
+  and blue PYJAMAS -- costume names them if a line ever lands there; none
+  did.
+- **RAUCOUS ROLE IS A SOUND-EFFECT STORY**: 30 of its 123 groups are noises,
+  and each was given its MAKER as speaker with `sound_effect` kept -- Donald
+  for the saw, hammer, chains, washboard, drum and siren (off-panel when
+  heard through a wall), the author for his horn, shotgun and slipper-taps,
+  the cheese-taster for the alpenhorn, `none` for the record player, the
+  train and the streetcar. The three cat noises on 039 (MEOWRR, SPIT, FZT)
+  went to `dialogue` / `other:the alley cats`; the hornets' BZAZZZZZ on Good
+  Canoes 055 stayed `sound_effect` with the hornets as maker.
+- **TWELVE DIALOGUE -> THOUGHT CORRECTIONS ON THE TWO VOL. 17 TITLES.**
+  Gemini labelled cloud-edged balloons with bubble trails `dialogue` on
+  Raucous Role 043 (3), 044 (2), 047, 048 (2) and Good Canoes 054 (3), 055
+  (3), 057. Read the trail, not the words: every one is a private thought.
+  Good Canoes also had five `narration` -> `dialogue` on 050-051 (the
+  announcer's speech balloons stored as captions) and Heirloom Watch 143 g9
+  (a tailed balloon to a hand).
+- **MISSED TEXT, FIVE ITEMS, ALL ADDED BY THE PASS**: Philosopher's Stone 110
+  `GOLD` and `HISTORIE GOLDE` (two book spines under the scroll), 114 p8 a
+  drawn `?` over the middle boy, Raucous Role 047 p6 the siren's `SCREEE`,
+  Good Canoes 058 p5 a `?` over the close-up boy. The audit is clean on all
+  four titles after the apply.
+- **`other:` VALUES**: Monsieur Mattressface (29), the librarian (4), the
+  Bagdad scholar, the Damascus record-keeper, the history clerk, the
+  ironworks foreman; a barrister (23), the barristers (chorus, 1), the
+  cablegram messenger; the author (19), the author's wife, the
+  cheese-taster (7), the alley cats (3), the nurse; the contest announcer
+  (15), the prize presenter (a different man on 058 p6), the spectators
+  (3), Porkmuscle J. Hamfat, the turtle, the hornets.
+- **CORPUS SWEEP NOT RUN THIS BATCH**; the per-title `vision-corrections`
+  shows 2 + 2 + 14 + 8 outstanding, of which the pass's own are 1 + 1 + 7 +
+  4 (the rest are August thought-balloon adjudications carrying
+  `type_was`).
+
 ## Per-volume cap palette
+Vol. 14, two more titles read 2026-09-10 (forty-eighth batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Fabulous Philosopher's Stone* | 112 p4, three boys in a row on deck | `#e61b1f` 73-2,600px | `#4da33d` H111 clean, or `#27865a`-`#35a46d` H150 dark | `#00a5d5` 150-3,700px | black cap with a small side TAB, 70-200px turned away, under the 25px-floor census on most panels |
+| *Heirloom Watch* | no nephews in the story | -- | -- | -- | -- |
+
+- Probe the crown box; the census attaches a tab only when it faces the
+  reader. The dark green tab lands in capscan's `green` band -- on this
+  title a `green` blob ON A CROWN is a cap.
+- Scrooge's coat is the roster red at 1,000-10,000px and his hat band the
+  roster blue, as on Cibola; Donald's sailor cap is the roster blue too.
+- The boys are bare-headed indoors at the hotel (128).
+
+Vol. 17, two more titles read 2026-09-10 (forty-eighth batch); the Hondorica
+entry below holds:
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Donald's Raucous Role* | 040 p4, two boys' backs | `#e51a1f` 2,535px | `#4fa43e` H110 1,100-1,200px | `#00a5d7` 1,900-3,600px | side segment on a black cap; bare-headed indoors (039, 041 bed, 045, 048) |
+| *Good Canoes and Bad Canoes* | 057 p1, two boys' backs | `#e41a1f` 940-2,400px | `#4fa43f` H110 1,100-1,600px | `#04a4d6` 900-1,600px | the same, drawn large from behind; a shaded green reads `#35904e` H145 S0.5 |
+
 Vol. 17, first two titles read 2026-09-10 (forty-seventh batch):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
