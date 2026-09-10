@@ -44,12 +44,12 @@ from barks_ocr.utils.engine_compare import (
     BOX_IOU_MIN,
     box_growth,
     box_iou,
-    boxes_equal,
     differing_attrs,
     union_box,
 )
 from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.group_checks import (
+    BOX_MISMATCH_ISSUE,
     BOX_OUTSIDE_PANEL_ISSUE,
     PANEL_HAS_NO_TEXT_ISSUE,
     TEXT_NEVER_FITS_ISSUE,
@@ -1305,16 +1305,28 @@ class OcrChecker:
                     any_fixes = True
 
             # Once per page, after both engines have had their fixes applied.
-            pair_issues, pair_missing, agree, boxes_merged = self._check_engine_agreement(variants)
+            # A page with no panel boxes is skipped by every per-engine fixer
+            # (see _check_page_group); the merge honours the same skip, since
+            # writing to a page the log has just called skipped -- and one that
+            # --fix-groups-order will not renumber if the merge reorders it --
+            # is not what the operator was told.
+            merge_boxes = self._fixes.boxes and fanta_page in page_panel_boxes.pages
+            pair_issues, pair_missing, agree, merged_engines = self._check_engine_agreement(
+                variants, merge_boxes
+            )
             issues.extend(pair_issues)
             missing_panels.extend(pair_missing)
             agreed += agree
-            if boxes_merged:
+            if merged_engines:
                 # Saved here rather than in _check_page_group: the merge writes
-                # to both engines at once, so both files are now dirty and the
-                # per-engine save has already been and gone for this page.
+                # from a decision about both engines, and the per-engine save
+                # has already been and gone for this page. Only the engines
+                # whose box actually changed are written; on a nested pair the
+                # outer box was already the union, and rewriting that file
+                # would cost a timestamped backup for a byte-identical save.
                 any_fixes = True
-                for page_group in variants.values():
+                for engine in merged_engines:
+                    page_group = variants[engine]
                     page_group.save_json(
                         backup_file=_prelim_backup_file(page_group.ocr_prelim_groups_json_file)
                     )
@@ -1656,12 +1668,16 @@ class OcrChecker:
     def _check_engine_agreement(
         self,
         variants: dict[OcrTypes, SpeechPageGroup],
-    ) -> tuple[list[IssueFound], list[MissingPanel], bool, bool]:
+        merge_boxes: bool,
+    ) -> tuple[list[IssueFound], list[MissingPanel], bool, set[OcrTypes]]:
         """Compare the two engines for one page.
 
-        Returns (issues, missing, agree, boxes_merged). ``boxes_merged`` is the
-        one repair made from here rather than in ``_check_page_group``: it needs
-        both engines in hand, and it writes to both.
+        Returns (issues, missing, agree, merged_engines). ``merged_engines`` is
+        the engines whose ``text_box`` the one repair made from here rewrote --
+        the ``--fix-boxes`` merge, which needs both engines in hand and so
+        cannot live in ``_check_page_group``. ``merge_boxes`` is whether that
+        merge may run on this page at all; the caller folds the flag and
+        whether the page can be fixed together.
 
         Runs **once per page**, not once per engine — the callers loop over
         engines, and doing this there would report every mismatch twice.
@@ -1686,7 +1702,7 @@ class OcrChecker:
         easy = variants.get(OcrTypes.EASYOCR)
         paddle = variants.get(OcrTypes.PADDLEOCR)
         if easy is None or paddle is None:
-            return [], [], False, False
+            return [], [], False, set()
 
         easy_panels = _groups_by_panel(easy.speech_page_json.get("groups", {}))
         paddle_panels = _groups_by_panel(paddle.speech_page_json.get("groups", {}))
@@ -1694,7 +1710,7 @@ class OcrChecker:
         reading_issues: list[IssueFound] = []
         record_issues: list[IssueFound] = []
         missing: list[MissingPanel] = []
-        merged_any = False
+        merged_engines: set[OcrTypes] = set()
         volume, fanta_page = easy.fanta_vol, easy.fanta_page
 
         def issue(  # noqa: ANN202, PLR0913
@@ -1769,17 +1785,16 @@ class OcrChecker:
                     continue
 
                 pair_issues, pair_merged = self._compare_matched_pair(
-                    easy_group, paddle_group, panel, easy_id, paddle_id, issue
+                    easy_group, paddle_group, panel, easy_id, paddle_id, issue, merge_boxes
                 )
                 record_issues.extend(pair_issues)
-                if pair_merged:
-                    merged_any = True
+                merged_engines |= pair_merged
 
         return (
             reading_issues + record_issues,
             missing,
             not reading_issues and not missing,
-            merged_any,
+            merged_engines,
         )
 
     def _compare_matched_pair(  # noqa: PLR0913
@@ -1790,10 +1805,11 @@ class OcrChecker:
         easy_id: str,
         paddle_id: str,
         issue: Callable[..., IssueFound],
-    ) -> tuple[list[IssueFound], bool]:
+        merge_boxes: bool,
+    ) -> tuple[list[IssueFound], set[OcrTypes]]:
         """Box and attribute checks for one pair the two engines read identically.
 
-        Returns (issues, box_was_merged).
+        Returns (issues, engines whose text_box the merge rewrote).
 
         Reported against easyocr, as ``text_mismatch`` is, so a group's whole
         cross-engine story sits on one queue entry. The paddleocr group id goes
@@ -1802,26 +1818,40 @@ class OcrChecker:
         pane.
         """
         found: list[IssueFound] = []
-        merged_box = False
+        merged: set[OcrTypes] = set()
         text = _plain(easy_group)
         other = f"paddleocr group {paddle_id}"
 
         iou = box_iou(easy_group.get("text_box") or [], paddle_group.get("text_box") or [])
-        if iou is not None:
-            # Merge first, then report only what the merge would not take. The
-            # two thresholds are deliberately independent: --box-iou-min decides
-            # what a *human* is told about, --max-box-growth decides what the fix
-            # is willing to do. Merging only the pairs already below --box-iou-min
-            # answered the wrong question -- those are the 0.5% where the engines
-            # boxed different lettering, while the reconciling that actually costs
-            # review time is the few pixels of padding on the other 99.5%.
-            merged_box, refusal = self._merge_pair_boxes(easy_group, paddle_group, easy_id)
-            if not merged_box and iou < self._boxes.iou_min:
+        acknowledged = is_acknowledged(easy_group, BOX_MISMATCH_ISSUE) or is_acknowledged(
+            paddle_group, BOX_MISMATCH_ISSUE
+        )
+        if iou is not None and not acknowledged:
+            # An acknowledged box_mismatch is neither reported nor merged, for
+            # the same reason _apply_text_fixes honours a dismissal: otherwise
+            # the next --fix run would quietly undo the judgement the user made
+            # in the editor -- and a box tightened by hand on one engine is
+            # exactly what the merge would re-inflate.
+            #
+            # Otherwise merge first, then report only what the merge would not
+            # take. The two thresholds are deliberately independent:
+            # --box-iou-min decides what a *human* is told about, --max-box-growth
+            # decides what the fix is willing to do. Merging only the pairs
+            # already below --box-iou-min answered the wrong question -- those
+            # are the 0.5% where the engines boxed different lettering, while the
+            # reconciling that actually costs review time is the few pixels of
+            # padding on the other 99.5%. A refusal is reported whatever the IoU,
+            # so that a run with a tightened --max-box-growth cannot leave a pair
+            # both unmerged and unlisted.
+            refusal = ""
+            if merge_boxes:
+                merged, refusal = self._merge_pair_boxes(easy_group, paddle_group, easy_id)
+            if not merged and (refusal or iou < self._boxes.iou_min):
                 found.append(
                     issue(
                         str(OcrTypes.EASYOCR),
                         easy_id,
-                        "box_mismatch",
+                        BOX_MISMATCH_ISSUE,
                         panel,
                         text,
                         iou,
@@ -1842,12 +1872,15 @@ class OcrChecker:
                 )
             )
 
-        return found, merged_box
+        return found, merged
 
     def _merge_pair_boxes(
         self, easy_group: dict, paddle_group: dict, easy_id: str
-    ) -> tuple[bool, str]:
-        """Give both engines the union of their text_boxes. Returns (merged, why not).
+    ) -> tuple[set[OcrTypes], str]:
+        """Give both engines the union of their text_boxes.
+
+        Returns (engines whose box changed, why not). An empty set with an
+        empty reason means there was nothing to do.
 
         Called under ``--fix-boxes`` on **every** pair the two engines read
         identically, not just the ones reported as ``box_mismatch``. Those are
@@ -1862,51 +1895,49 @@ class OcrChecker:
         box already contains the other the two are the same box, and elsewhere
         the larger box can still cut off what the smaller one saw.
 
-        Refused when the merge would grow past ``--max-box-growth``; if the pair
-        was also below ``--box-iou-min`` the reason is appended to its
-        ``box_mismatch`` entry. Two engines that read the same words in two
-        far-apart places are more likely to have been paired up wrongly than to
-        disagree about padding, and merging those replaces a reportable
-        disagreement with one large wrong box on both sides.
+        Refused when the merge would grow past ``--max-box-growth``; the caller
+        appends the reason to the pair's ``box_mismatch`` entry. Two engines
+        that read the same words in two far-apart places are more likely to
+        have been paired up wrongly than to disagree about padding, and merging
+        those replaces a reportable disagreement with one large wrong box on
+        both sides.
 
-        An acknowledged ``box_mismatch`` is left alone for the same reason
-        ``_apply_text_fixes`` honours a dismissal: otherwise the next --fix run
-        would quietly undo the judgement the user made in the editor.
+        Whether the pair may be merged at all -- the flag, the page, an
+        acknowledgement -- is the caller's decision; this only does the merge.
         """
-        if not self._fixes.boxes:
-            return False, ""
-        if is_acknowledged(easy_group, "box_mismatch") or is_acknowledged(
-            paddle_group, "box_mismatch"
-        ):
-            return False, "; acknowledged, so not merged"
-
         easy_box = easy_group.get("text_box") or []
         paddle_box = paddle_group.get("text_box") or []
         merged = union_box(easy_box, paddle_box)
         if merged is None:
             # A malformed box is reported as bad_text_box in its own right.
-            return False, ""
+            return set(), ""
 
         growth = box_growth(merged, easy_box, paddle_box)
         if growth > self._boxes.max_growth:
-            return False, f"; union {growth:.1f}x the larger box, above --max-box-growth"
+            return set(), f"; union {growth:.1f}x the larger box, above --max-box-growth"
 
-        if boxes_equal(easy_box, merged) and boxes_equal(paddle_box, merged):
-            # Already merged, on this run or an earlier one. Reporting it as a
-            # fix would keep _check_title_to_convergence looping until it hits
-            # MAX_FIX_PASSES and warns, on every title with a matched pair --
-            # which, now that the merge is no longer gated on --box-iou-min, is
-            # every title there is. Not a refusal either: nothing is wrong, so
-            # there is no reason to append to a box_mismatch note.
-            return False, ""
-
-        easy_group["text_box"] = merged
-        paddle_group["text_box"] = merged
-        logger.info(
-            f"Group {easy_id}: merged the engines' text_boxes"
-            f" ({growth:.2f}x the larger of the two)."
-        )
-        return True, ""
+        # Only the engines whose box is not already the union are written. An
+        # already-merged pair -- on this run or an earlier one -- must not be
+        # reported as a fix: that would keep _check_title_to_convergence looping
+        # until it hits MAX_FIX_PASSES and warns, on every title with a matched
+        # pair, which is every title there is. Not a refusal either: nothing is
+        # wrong, so there is no reason to append to a box_mismatch note.
+        changed: set[OcrTypes] = set()
+        for engine, group, box in (
+            (OcrTypes.EASYOCR, easy_group, easy_box),
+            (OcrTypes.PADDLEOCR, paddle_group, paddle_box),
+        ):
+            if box != merged:
+                # Each engine gets its own list: the two dicts must not alias
+                # one object, or a later in-place edit to one would move both.
+                group["text_box"] = [list(point) for point in merged]
+                changed.add(engine)
+        if changed:
+            logger.info(
+                f"Group {easy_id}: merged the engines' text_boxes"
+                f" ({growth:.2f}x the larger of the two)."
+            )
+        return changed, ""
 
     def _apply_text_fixes(self, json_groups: dict) -> bool:
         """Apply the unambiguous string rewrites. Returns whether anything changed.

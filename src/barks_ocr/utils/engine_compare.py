@@ -10,6 +10,8 @@ list, which is the drift `vision_schema` exists to prevent and which the group
 `type` vocabulary already fell into once.
 """
 
+from collections.abc import Sequence
+
 from barks_ocr.utils.ocr_box import PointList, points_bbox, text_box_problem
 
 # Below this intersection-over-union, the two engines boxed different things.
@@ -78,11 +80,12 @@ def box_iou(box_a: PointList, box_b: PointList) -> float | None:
     return intersection / union if union > 0 else 0.0
 
 
-def union_box(box_a: PointList, box_b: PointList) -> PointList | None:
+def union_box(box_a: PointList, box_b: PointList) -> list[list[int]] | None:
     """Build the smallest axis-aligned box containing both, or None if either is unusable.
 
-    Returned in the same shape the prelim JSON stores — four integer corners,
-    clockwise from top left — so it can be written straight back to a group.
+    Returned in the same shape the prelim JSON stores — four integer corners as
+    two-element lists, clockwise from top left — so it can be written straight
+    back to a group and compared to a stored box with plain ``==``.
 
     Gated on ``text_box_problem`` for the same reason ``box_iou`` is: a
     malformed box is "bad_text_box"'s to report, and merging one would launder
@@ -96,41 +99,20 @@ def union_box(box_a: PointList, box_b: PointList) -> PointList | None:
     x0, y0 = round(min(ax0, bx0)), round(min(ay0, by0))
     x1, y1 = round(max(ax1, bx1)), round(max(ay1, by1))
 
-    return [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
+    return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
 
 
-def boxes_equal(box_a: PointList, box_b: PointList) -> bool:
-    """Whether two text_boxes name the same corners, ignoring how they are spelled.
-
-    A box read from the prelim JSON is a list of two-element **lists**, while
-    ``union_box`` builds a list of **tuples**, so ``==`` between them is False
-    even when every coordinate matches. Callers use this to tell "the merge
-    changed something" from "the merge rewrote a box with the value it already
-    had" -- a distinction ``--fix-boxes`` needs, because reporting the second as
-    a fix stops the check loop from ever converging.
-
-    Compares the corners themselves rather than ``points_bbox``, so squaring up
-    a stored quad still counts as a change.
-    """
-    if len(box_a) != len(box_b):
-        return False
-
-    return all(
-        float(pa[0]) == float(pb[0]) and float(pa[1]) == float(pb[1])
-        for pa, pb in zip(box_a, box_b, strict=True)
-    )
-
-
-def box_growth(merged: PointList, box_a: PointList, box_b: PointList) -> float:
+def box_growth(merged: Sequence[Sequence[float]], box_a: PointList, box_b: PointList) -> float:
     """Area of *merged* over the larger of the two boxes it was built from.
 
     1.0 means the merge cost nothing — one box already contained the other,
-    which is 53.7% of the pairs that fall below ``BOX_IOU_MIN``. Above that the
-    two engines boxed the same lettering in different places, and the further
-    apart they are the more likely it is that they are not the same lettering
-    at all: measured over the corpus's 434 flagged pairs the median is 1.00 and
-    the p90 2.45, but the tail runs to 17.7. That tail is what
-    ``--max-box-growth`` refuses.
+    which is 184 of the 312 pairs that fall below ``BOX_IOU_MIN``. Above that
+    the two engines boxed the same lettering in different places, and the
+    further apart they are the more likely it is that they are not the same
+    lettering at all: over those 312 flagged pairs the median is 1.00 and the
+    p90 2.42, but the tail runs to 11.48. That tail is what
+    ``--max-box-growth`` refuses. The numbers are the ones at
+    ``MAX_BOX_GROWTH`` and in the calibration doc.
 
     Returns ``inf`` when both source boxes are degenerate, so a caller
     comparing against a ceiling rejects rather than divides by zero.

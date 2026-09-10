@@ -308,8 +308,11 @@ the larger source box, and is the only thing separating a padding difference fro
 matched up wrongly: two engines reading the same words in two far-apart places are more
 likely to be the latter, and merging those would replace a reportable disagreement with
 one large wrong box on both sides. At 2.0 the fix takes **65,948** pairs and refuses
-**41** — all 41 from the flagged subset — which keep their `box_mismatch` entry with the
-reason appended:
+**41** — all 41 from the flagged subset — which are reported as `box_mismatch` with the
+reason appended, whatever their IoU. At the default 2.0 a refused pair is always below
+`--box-iou-min` anyway (an IoU of 0.4 bounds the union to about 1.55× the larger box),
+but a tighter `--max-box-growth` can refuse a pair the IoU threshold would never report,
+and a pair that is neither merged nor listed would look like a finished run:
 
 ```
 box_mismatch … notes='paddleocr group 6; text_box IoU 0.00; union 3.5x the larger box,
@@ -328,15 +331,13 @@ Four things the measurement showed that are worth keeping in mind:
   paddleocr box; the union honours it and extends the easyocr box to reach it. Modest
   here at 1.29×, and the growth ceiling is what stops the pathological version.
 - **Only the engine that was wrong gets written.** On a nested pair the outer box is
-  already the union, so that file is unchanged and only the inner one is rewritten —
-  which is why a run can report six merges and leave fewer than twelve files dirty.
-- **Two pages in the corpus change reading order**, Vol. 25 page 115 and Vol. 29 page
-  172, both on easyocr. `_reading_order_key` sorts by `text_box` position, so a box that
-  grows can in principle overtake its neighbour and make `--fix-groups-order` renumber
-  the page. Both of these are already reported as `groups_out_of_order` today, so they
-  would renumber either way; the merge changes which pair is transposed, not whether the
-  page is flagged. Nothing else in 65,989 merges moves, and the cross-engine pairing —
-  which is positional within a panel — does not change on any page at all.
+  already the union, so that file is neither rewritten nor given a timestamped backup;
+  only the inner one is — which is why a run can report six merges and leave fewer than
+  twelve files dirty.
+- **A page with no panel boxes is not merged.** Every per-engine fixer skips such a page
+  (the log says so), and the merge honours the same skip: before it existed the
+  cross-engine step was read-only, and a merge that reordered a page nothing would
+  renumber is not what "page skipped" promised.
 - **A skewed quad is `bad_text_box`, not a merge.** `text_box_problem` now rejects a
   group box whose corners are not axis-aligned. The corpus held exactly one — Vol. 6
   *The Old Castle's Secret* page 154 group 10, a 52px page number with a typo in one
@@ -351,12 +352,15 @@ Four things the measurement showed that are worth keeping in mind:
   page is flagged. Nothing else in 65,989 merges moves, and the cross-engine pairing —
   which is positional within a panel — does not change on any page at all.
 
-The merge is skipped on a group whose `box_mismatch` has been acknowledged, for the same
-reason the text fixers honour a dismissal: otherwise the next `--fix` run would quietly
-undo the judgement made in the editor. Note the asymmetry this leaves: an acknowledgement
-can only exist on a pair that was reported, so the 99.5% that are merged silently have no
-way to opt out. That is the intended trade — the whole point is that they need no
-attention — but it is why the growth ceiling is the safeguard that matters.
+The merge is skipped — and nothing is reported — on a pair where either engine's group
+has acknowledged `box_mismatch`, for the same reason the text fixers honour a dismissal:
+otherwise the next `--fix` run would quietly undo the judgement made in the editor.
+`box_mismatch` is in the `group_checks` registry, so the editor's Mark OK popup offers
+it on any group. That matters more than it sounds: a box a reviewer tightens by hand on
+one engine still overlaps its counterpart far above 0.4, so nothing is ever reported
+about it, and without the acknowledgement the next `--fix-boxes` would re-inflate it to
+the other engine's box on both sides. Until the registry entry existed the fixer honoured
+an acknowledgement no tool could set, and no group in the corpus carried one.
 
 ### Why neither counts towards engine agreement
 

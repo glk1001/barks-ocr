@@ -1,5 +1,6 @@
 import json
 import math
+from collections.abc import Sequence
 from pathlib import Path
 from typing import Any
 
@@ -115,8 +116,13 @@ def save_box_groups_as_json(groups: dict[int, list[tuple[OcrBox, float]]], file:
 TEXT_BOX_CORNERS = 4  # the prelim schema stores a text_box as TL, TR, BR, BL
 
 
-def points_bbox(points: PointList) -> tuple[float, float, float, float]:
-    """Return (x0, y0, x1, y1), the axis-aligned extents of a point list."""
+def points_bbox(points: Sequence[Sequence[float]]) -> tuple[float, float, float, float]:
+    """Return (x0, y0, x1, y1), the axis-aligned extents of a point list.
+
+    Takes any sequence of (x, y) pairs: the ``PointList`` tuples the OCR
+    engines build, and the ``[x, y]`` lists a ``text_box`` reads back from the
+    prelim JSON and ``union_box`` writes to it.
+    """
     xs = [p[0] for p in points]
     ys = [p[1] for p in points]
     return min(xs), min(ys), max(xs), max(ys)

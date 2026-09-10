@@ -52,6 +52,16 @@ PANEL_HAS_NO_TEXT_ISSUE = "panel-has-no-text"
 # are correct as drawn and would otherwise re-fire on every run.
 BOX_OUTSIDE_PANEL_ISSUE = "box-outside-panel"
 
+# Acknowledging this on either engine's group silences `ocr_check`'s
+# `box_mismatch` for the pair and, more to the point, stops `--fix-boxes`
+# merging it. It is the only way a reviewer can keep a box they tightened by
+# hand on one engine: the fixer would otherwise re-inflate it to the other
+# engine's box on the next run, with no report, because a tightened box still
+# overlaps its counterpart well above the reporting threshold. It used to be
+# honoured by the fixer without being offered by the editor's Mark OK popup,
+# so no group in the corpus carried it.
+BOX_MISMATCH_ISSUE = "box_mismatch"
+
 
 def panels_with_no_groups(json_groups: dict, panel_count: int) -> list[int]:
     """Return the panels a page skips: 1..max-with-text, minus those that have text.
@@ -113,6 +123,7 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     TEXT_NEVER_FITS_ISSUE,
     PANEL_HAS_NO_TEXT_ISSUE,
     BOX_OUTSIDE_PANEL_ISSUE,
+    BOX_MISMATCH_ISSUE,
 )
 
 # The `type` vocabulary Gemini is asked for. Anything else is a mis-labelled
@@ -419,6 +430,9 @@ DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     # Same again: the group carries its text_box, but not the panel box it has
     # to be measured against.
     BOX_OUTSIDE_PANEL_ISSUE: _never_fires,
+    # And again: it is a verdict on a pair of groups, one per engine, which
+    # `ocr_check` alone has in hand.
+    BOX_MISMATCH_ISSUE: _never_fires,
 }
 
 # Issue types that were renamed or merged. 75 groups carry an acknowledgement
