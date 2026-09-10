@@ -5349,6 +5349,40 @@ Dogcatcher 6 (the page views only). Nephew domain:
   across 460 titles**, all this batch's type corrections (Hondorica 3 groups,
   Dogcatcher 10, both engines).
 
+### Findings to paste into the next run (2026-09-10, forty-eighth batch, THREE OF FOUR REVIEWED -- *Donald's Raucous Role*)
+
+Replaces that title's numbers in the pass-only section below. **4 speaker
+corrections in 124 groups = 3.2%, all 4 in the 13-group nephew domain =
+30.8%.** No group added; the pass's SCREEE (047 g6) and its seven type
+changes (three cat noises to dialogue, four cloud balloons to thought) all
+ratified; the five it flags as predating are August adjudications. Mirror
+clean: 124/124 on both engines, identical distributions.
+
+| direction | n |
+|---|---|
+| a name -> `nephews` | 3 (040 g10, 041 g0, 041 g4) |
+| one nephew -> another | 1 (040 g7 Huey -> Louie) |
+
+- **THE EDGE TIP WENT COLLECTIVE AGAIN, AND SO DID THE TWO GAP TIPS.** 040
+  g10 (tip inside the left boy's span, ray into the middle boy), 041 g0 (tip
+  15px outside the middle boy's span) and 041 g4 (tip above the left bed
+  boy) were the title's three mediums and all three went to `nephews`:
+  mediums 2 of 3, highs 2 of 121 (1.7%). Same verdict as Philosopher's
+  Stone: on this batch a tip that is not squarely in a head is the
+  collective.
+- **040 g7 WAS THE BACK OF A CAP, AND THE 2,535px OF RED WAS NOT HUEY.** Two
+  boys with their backs to the reader; the probe returned the whole back of
+  the left cap red and the review named him Louie. A cap seen from behind
+  shows its back panel, not its side segment, and the back panel is not the
+  key on this title. Do not name off a rear view.
+- **EVERY NOISE-MAKER CALL HELD**: Donald for the saw, hammer, chains,
+  washboard, drum and siren (off-panel through the wall), the author for
+  horn, shotgun and slipper-taps, the cheese-taster for the alpenhorn,
+  `none` for the record player and the traffic. The maker-as-speaker
+  convention on a sound-effect story is settled.
+- **THE CAT NOISES ARE DIALOGUE**: MEOWRR, SPIT and FZT to
+  `other:the alley cats` stood.
+
 ### Findings to paste into the next run (2026-09-10, forty-eighth batch, TWO OF FOUR REVIEWED -- *Heirloom Watch*)
 
 Replaces that title's numbers in the pass-only section below. **0 speaker
