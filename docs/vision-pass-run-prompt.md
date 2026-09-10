@@ -5606,6 +5606,26 @@ reference row, one each on 118, 121, 122 and 133 for tails). Nephew domain:
   4 (the rest are August thought-balloon adjudications carrying
   `type_was`).
 
+### Findings to paste into the next run (2026-09-11, forty-ninth batch, ONE OF THREE REVIEWED -- *Trouble Indemnity*)
+
+Replaces that title's numbers in the pass-only section below. **2 speaker
+corrections in 115 groups = 1.7%, 1 in the 6-group nephew domain.** One
+group added (068 g13, the DONALD DUCK on the vaudeville contract, background /
+none). Both type proposals confirmed. Mirror clean: 115/115 on both engines,
+102 `identified_by`, identical distributions. Highs 1 of 113 corrected
+(0.9%), the one medium (068 g8, the elimination call) held.
+
+- **067 g3 `OOPS! I TRIPPED!` WENT SCROOGE -> DONALD.** The note read the tail
+  to Scrooge on the platform while Donald is falling; the review gave the
+  line to Donald. A two-adult panel at long shot, the error class the cost
+  doc names: the tail was cited but not measured.
+- **068 g13 IS A REVIEW ADD**: the contract lettering the pass had put only in
+  `visible_text` as `DONALD DUCK`. The audit passed because the page-level
+  text matched the story logo's echo suppression; a name that is also the
+  title is invisible to it.
+- **The nephew calls on 068 all stood**, including the two-tail chorus (g11)
+  and the elimination (g8).
+
 ### Findings to paste into the next run (2026-09-10, forty-ninth batch, PASS ONLY -- not yet reviewed)
 
 Three titles, 30 pages, **354 groups**, all Vol. 17: *Trouble Indemnity* 114,
