@@ -23,6 +23,16 @@ from barks_ocr.utils.vision_schema import GROUP_TYPES
 # check, since the checks keep firing -- `ocr_check` is what stops reporting.
 TEXT_NEVER_FITS_ISSUE = "text-will-never-fit"
 
+# Acknowledging this silences `ocr_check`'s `box_too_big` bands on the group.
+# The layout checks read one number -- box height per text line -- against the
+# page norm, and TEXT_NEVER_FITS_ISSUE covers the reading from below: a box too
+# small for its lettering. This is the reading from above, and it is a different
+# judgement rather than the same one restated: the box is RIGHT, and the
+# lettering inside it is simply large -- a shout, a display caption, the carol
+# relayed through the loudspeakers on vol 3 page 257. Named for that judgement,
+# as the others are.
+LETTERING_IS_LARGE_ISSUE = "lettering-is-large"
+
 # Acknowledging this silences `ocr_check`'s `panel_nums_not_contiguous` for the
 # page/engine it is set on. Named for the judgement -- "the skipped panel really
 # has no lettering" -- and not for the check, following TEXT_NEVER_FITS_ISSUE.
@@ -121,6 +131,7 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "whitespace",
     "florence-check",
     TEXT_NEVER_FITS_ISSUE,
+    LETTERING_IS_LARGE_ISSUE,
     PANEL_HAS_NO_TEXT_ISSUE,
     BOX_OUTSIDE_PANEL_ISSUE,
     BOX_MISMATCH_ISSUE,
@@ -404,6 +415,8 @@ def _never_fires(group: dict) -> bool:
     #   florence-check       -- florence_check.py, an external model run.
     #   text-will-never-fit  -- ocr_check's layout checks, which need the
     #                           rendered font and the page context.
+    #   lettering-is-large   -- ocr_check's box_too_big, the same page context
+    #                           read from the other end.
     #   box-outside-panel    -- ocr_check's overhang check, which needs the
     #                           page's panel boxes.
     del group
@@ -423,6 +436,7 @@ DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     "whitespace": has_whitespace_error,
     "florence-check": _never_fires,
     TEXT_NEVER_FITS_ISSUE: _never_fires,
+    LETTERING_IS_LARGE_ISSUE: _never_fires,
     # Like the two above it: `ocr_check` decides when this fires and consults
     # `is_acknowledged` itself, because the judgement needs the whole page and
     # its panel boxes, which a predicate over one group cannot see.

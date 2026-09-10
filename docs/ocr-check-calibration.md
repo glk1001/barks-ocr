@@ -56,6 +56,10 @@ So the fit check is one-directional. It catches text collapsed onto **too few** 
 **many** lines. `too_many_lines` exists to cover the other direction, and it needs a
 completely different signal — hence the page-median line height.
 
+Neither says anything about a box that is far too **big** for its lettering: the fit
+check only gets a larger font out of it, and the packing check has no upper edge.
+`box_too_big` reads the same page-median signal from above — see its own section.
+
 ---
 
 ## `--fix-newlines` fit guards
@@ -408,6 +412,11 @@ the width test passes, and the implied line height falls under the 0.85 bar —
 height is unremarkable, and the width test fails — `text_does_not_fit`. The
 reviewer's judgement is about the box and the text, not about which of the two
 arithmetics caught them, so one acknowledgement covers both.
+
+It does **not** cover `box_too_big`. That check reads the same number from the other
+end, and the judgement is the opposite one — the box is right and the lettering is
+large — so it has its own acknowledgement, `lettering-is-large`. A group can carry both
+only by being too small and too big at once, which is to say never.
 
 No reviewed group needs it for the line-height half *yet*. Vol 3 page 117 group
 11 looked like one — 7 lines in a 173x83 box, implied line height 11.9px against
@@ -1056,6 +1065,73 @@ Corpus, over every group that does not fit and has a well-laid-out donor: 2561 r
 were accepted before and still are, **172 are newly accepted**, and 30 are still refused
 — 8 too tight by both medians and 22 that still do not fit. A widening of 6.7%, not a
 rubber stamp.
+
+---
+
+## `BOX_TOO_BIG_RATIO = 3.0`, `BOX_TOO_BIG_MARGINAL_RATIO = 2.0` — the box, not the wrapping
+
+Added 2026-09-10, after a reviewer asked whether anything reported a text box for being
+too big. Nothing did. `text_does_not_fit` derives its font from the box height, so a
+taller box only makes the text fit more easily; `too_many_lines` compares the implied line
+height against the page norm but only from below; `box_outside_panel` measures the box
+against its panel, not its text; and `box_mismatch` compares the two engines, so two
+engines agreeing on the same oversize box pass.
+
+The signal is the one `too_many_lines` already computes — `box_h / n_lines` over the
+page's reference line height — read from above. Measured over all 109,058 measurable
+groups (multi-line, non-stylized, on a page with at least five measurable groups), the
+ratio sits at a median of 1.00, p90 1.10, p95 1.18, p99 1.54, and then runs out to 21.85.
+
+| ratio above | corpus | cleaned vols 1 + 18 | vol 19 | vol 21 |
+|---|---|---|---|---|
+| 1.5 | 1266 | 34 | 10 | 54 |
+| 2.0 | 445 | 13 | 0 | 13 |
+| **3.0** | **160** | **4** | 0 | 2 |
+
+The top of the tail is unambiguous: vol 29 page 097 group 8 is `AND / SO-` in a
+1434x1622 box, ratio 21.9, and the next eleven are all vol 29, 22 and 7 boxes drawn
+round a whole panel or a splash logo typed as narration. The cleaned tail is not error.
+Vol 1 page 013 group 11 (ratio 4.1) is the black-panel display caption `BUT / OUT- /
+SIDE`; vol 1 page 096 group 10 (3.2) is a shouted `HELP / UNCA DONALD! / A / SHARK`
+with `SHARK` at four times body height. Both boxes are drawn tightly around their
+lettering; the lettering is simply large. That is the false-positive class, and the
+reviewer marks it `lettering-is-large`.
+
+So the same two-band shape as `too_many_lines`, for the same reason: the 2.0–3.0 band
+holds 285 flags of which 9 are on the cleaned volumes, and a cleaned volume should not
+hold nine real oversize boxes. Above **3.0** is always reported as `box_too_big`; **2.0 to
+3.0** is `box_too_big_marginal`, reported only with `--include-marginal`, the same switch
+that opens the other marginal band. Both edges are CLI-tunable (`--box-too-big`,
+`--box-too-big-marginal`), and the marginal edge is floored above 1.0 because the
+reference is the page's own median.
+
+### It runs before the fit check, and it is never repaired
+
+A box several times taller than its lettering hands the fit check a font several times
+too large, and the width test then fails for the wrong reason. Vol 29 page 084 group 19,
+`A FERRY? / ...SAY!` in an 863x722 box (ratio 17.3), was reported as `text_does_not_fit`
+and offered a `--fix-newlines` rewrap that could never have helped: the fault is the box.
+So `box_too_big` is decided first, wins the group's one layout issue, and is excluded from
+the transplant. There is no `--fix-*` for it. The other engine's box is not a safe donor —
+`box_mismatch` already refuses a union that would more than double a box, and the pair it
+refuses is exactly this population — so the repair is the editor's.
+
+### Which reference
+
+The page reference is `_page_median_line_height`, which on a bimodal page swaps the median
+for the densest cluster. That swap was justified one-directionally — only an *inflated*
+median creates false `too_many_lines` flags — and read from above it cuts the other way: a
+lowered reference adds oversize flags. Measured, it does not matter. Only 16 of 10,262
+pages substitute the mode, and using it instead of the plain median moves 25 flags at 2.0
+and 9 at 3.0 across the whole corpus. The one page worth naming is the carol page, vol 3
+page 257: `HOWLY / NIGHT —` flags at 3.0–3.1 on both engines and four more carol groups sit
+in the marginal band, every one of them display lettering in a correctly drawn box. Six
+`lettering-is-large` acknowledgements on one page is the price of keeping a single
+reference for both directions, and it was paid rather than carrying two.
+
+Reproduce: the survey is a forty-line read of `_implied_line_height` and
+`_page_median_line_height` over every groups file; the numbers above were taken on
+2026-09-10 against the corpus as committed that day.
 
 ---
 

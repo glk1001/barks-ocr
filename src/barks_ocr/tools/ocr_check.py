@@ -51,6 +51,7 @@ from barks_ocr.utils.geometry import Rect
 from barks_ocr.utils.group_checks import (
     BOX_MISMATCH_ISSUE,
     BOX_OUTSIDE_PANEL_ISSUE,
+    LETTERING_IS_LARGE_ISSUE,
     PANEL_HAS_NO_TEXT_ISSUE,
     TEXT_NEVER_FITS_ISSUE,
     cleaned_whitespace,
@@ -119,6 +120,21 @@ MIN_LINES_FOR_LINE_HEIGHT = 2  # one-line boxes measure high; see _implied_line_
 # ``_page_median_line_height``. 1.2 clears the 1.05-1.15 shoulder of ordinary
 # pages by a wide margin: 9,395 of 10,190 corpus pages sit at a ratio of 1.0.
 LINE_HEIGHT_BIMODAL_RATIO = 1.2
+# The same measurement read from the other end. The two bands above ask whether
+# the lines are packed too tightly; nothing asked whether the box is far too
+# *big* for its lettering -- drawn round the whole panel, or round two
+# balloons' worth of art -- because the fit check cannot see it (a taller box
+# only hands it a larger font) and the packing check has no upper edge.
+#
+# Measured over all 109,058 measurable groups (multi-line, non-stylized, on a
+# page with a reference): median 1.00, p99 1.54. Above 3.0 there are 160, 4 of
+# them on the cleaned vols 1 and 18; between 2.0 and 3.0 another 285, 9 of them
+# cleaned. The cleaned tail is not error but display lettering -- a shouted
+# `HELP ... A SHARK` at 3.2x, a black-panel `BUT OUT-SIDE` caption at 4.1x --
+# which the reviewer marks `lettering-is-large`. Hence the same two-band shape:
+# 3.0 always reported, 2.0-3.0 only on request. See docs/ocr-check-calibration.md.
+BOX_TOO_BIG_RATIO = 3.0  # above this * page reference line height => box_too_big
+BOX_TOO_BIG_MARGINAL_RATIO = 2.0  # ...and above this => marginal, opt-in
 _MODE_SMALLEST_SAMPLE = 2  # half-sample recursion stops here and averages the pair
 
 # ── Panel-overhang constants ──────────────────────────────────────────────────
@@ -283,12 +299,20 @@ class FixFlags:
 
 @dataclass(frozen=True)
 class LineHeightLimits:
-    """The two line-height bands, and whether the marginal one is reported."""
+    """The line-height bands at both ends, and whether the marginal ones are reported.
+
+    ``outlier`` and ``marginal`` are fractions of the page reference and read
+    from below (too many lines); ``too_big`` and ``too_big_marginal`` are
+    multiples of it and read from above (a box far larger than its lettering).
+    One ``include_marginal`` switch opens both marginal bands.
+    """
 
     outlier: float = LINE_HEIGHT_OUTLIER_FRACTION
     marginal: float = LINE_HEIGHT_MARGINAL_FRACTION
     include_marginal: bool = False
     bimodal_ratio: float = LINE_HEIGHT_BIMODAL_RATIO
+    too_big: float = BOX_TOO_BIG_RATIO
+    too_big_marginal: float = BOX_TOO_BIG_MARGINAL_RATIO
 
 
 @dataclass(frozen=True)
@@ -332,6 +356,9 @@ class PanelIssue:
     ratio: float | None = None
 
 
+# The layout issues `--fix-newlines` must leave alone: a rewrap cannot shrink a box.
+_NO_TRANSPLANT_ISSUES: frozenset[str] = frozenset({"box_too_big", "box_too_big_marginal"})
+
 # One queue entry per group carries the group's most severe issue; this is
 # that order, worst first. Types not listed (the dismissable cosmetic ones)
 # rank after all of these.
@@ -368,6 +395,12 @@ _QUEUE_SEVERITY: tuple[str, ...] = (
     "text_does_not_fit",
     "too_many_lines",
     "too_many_lines_marginal",
+    # The box is several times too tall for its lettering. Only one layout issue
+    # fires per group, so its place here matters only against the blocks above
+    # and below: a concrete geometry fault on this group, ahead of the
+    # cross-engine comparisons for the same reason box_outside_panel is.
+    "box_too_big",
+    "box_too_big_marginal",
     # The cross-engine block. A box disagreement is a concrete geometry fault and
     # is worth seeing ahead of a text diff; an attribute difference is the least
     # urgent of the set. "box_mismatch" and "text_mismatch" cannot both fire on
@@ -1989,15 +2022,19 @@ class OcrChecker:
     ) -> tuple[bool, str | None, float | None]:
         """Return (fix_applied, issue_type_to_add, line_height_ratio).
 
-        Two opposite wrapping failures are checked, both repaired the same way —
-        by transplanting the other engine's line pattern:
+        First the box itself: one several times taller than its lettering is
+        "box_too_big" (or "box_too_big_marginal"), reported and never repaired
+        -- see ``_box_too_big_issue`` for why it goes ahead of the fit check.
+
+        Then two opposite wrapping failures, both repaired the same way — by
+        transplanting the other engine's line pattern:
 
         - too few lines: the text overflows its box → "text_does_not_fit".
         - too many lines: the lines are packed far tighter than the rest of the
           page, which the fit check cannot see → "too_many_lines", or
           "too_many_lines_marginal" in the noisier band just above it.
 
-        A group acknowledging ``text-will-never-fit`` skips **both**: the
+        A group acknowledging ``text-will-never-fit`` skips **both** of those: the
         reviewer has said the lettering cannot be made to sit in the box as
         drawn, and the two checks are that one judgement measured from opposite
         sides. Both read box height / line count — the fit check turns it into a
@@ -2022,26 +2059,60 @@ class OcrChecker:
             return False, None, None
 
         ratio = _line_height_ratio(group, context.line_heights.own)
-
-        if is_acknowledged(group, TEXT_NEVER_FITS_ISSUE):
+        issue = self._layout_issue(group, ratio, context.fanta_page)
+        if issue is None:
             return False, None, ratio
 
-        if not _group_text_fits(group, context.fanta_page):
-            issue = "text_does_not_fit"
-        elif ratio is not None and ratio < self._limits.outlier:
-            issue = "too_many_lines"
-        elif self._limits.include_marginal and ratio is not None and ratio < self._limits.marginal:
-            issue = "too_many_lines_marginal"
-        else:
-            return False, None, ratio
-
-        if not self._fixes.newlines:
+        # An oversize box is never transplanted: the fault is the box, not the
+        # wrapping, and a rewrap could only move the lettering around inside it.
+        if issue in _NO_TRANSPLANT_ISSUES or not self._fixes.newlines:
             return False, issue, ratio
 
         if not self._transplant_line_pattern(group, group_id, context):
             return False, issue, ratio
 
         return True, None, ratio
+
+    def _layout_issue(self, group: dict, ratio: float | None, fanta_page: str) -> str | None:
+        """Return this group's one layout issue, worst first, or None when well laid out.
+
+        The oversize check goes first and is not silenced by
+        ``text-will-never-fit``; the three wrapping checks follow and are.
+        """
+        if too_big := self._box_too_big_issue(group, ratio):
+            return too_big
+        if is_acknowledged(group, TEXT_NEVER_FITS_ISSUE):
+            return None
+        if not _group_text_fits(group, fanta_page):
+            return "text_does_not_fit"
+        if ratio is not None and ratio < self._limits.outlier:
+            return "too_many_lines"
+        if self._limits.include_marginal and ratio is not None and ratio < self._limits.marginal:
+            return "too_many_lines_marginal"
+        return None
+
+    def _box_too_big_issue(self, group: dict, ratio: float | None) -> str | None:
+        """Which oversize-box issue applies, or None when the box is a plausible size.
+
+        The one layout check that reads the line-height ratio from above. It
+        runs BEFORE the fit check because a box several times taller than its
+        lettering hands the fit check a font several times too large, and the
+        width test then fails for the wrong reason: vol 29 page 084 group 19,
+        ``A FERRY? / ...SAY!`` in an 863x722 box, came back as
+        ``text_does_not_fit`` and was offered a rewrap that could never help.
+
+        Silenced by ``lettering-is-large``, not ``text-will-never-fit``. That
+        one says the box is too SMALL for its text; a reviewer who has said so
+        has said nothing about this, and a shouted line or a display caption is
+        a box that is right around lettering that is big.
+        """
+        if ratio is None or is_acknowledged(group, LETTERING_IS_LARGE_ISSUE):
+            return None
+        if ratio > self._limits.too_big:
+            return "box_too_big"
+        if self._limits.include_marginal and ratio > self._limits.too_big_marginal:
+            return "box_too_big_marginal"
+        return None
 
     def _transplant_line_pattern(
         self,
@@ -2469,6 +2540,40 @@ def _default_output_file(volumes_str: str) -> Path:
     return Path(f"ocr-check-{today}.txt")
 
 
+def _validate_line_height_bands(
+    outlier: float, marginal: float, too_big: float, too_big_marginal: float
+) -> None:
+    """Refuse band edges that cross, or an oversize band that starts inside the page norm.
+
+    Args:
+        outlier: ``--line-height-threshold``, the always-reported lower edge.
+        marginal: ``--line-height-marginal``, the opt-in band's upper edge.
+        too_big: ``--box-too-big``, the always-reported upper edge.
+        too_big_marginal: ``--box-too-big-marginal``, the opt-in band's lower edge.
+
+    Raises:
+        typer.BadParameter: On any edge that would make a band empty or absurd.
+
+    """
+    if marginal < outlier:
+        err_msg = (
+            f"--line-height-marginal ({marginal}) must not be below"
+            f" --line-height-threshold ({outlier})."
+        )
+        raise typer.BadParameter(err_msg)
+    if too_big_marginal > too_big:
+        err_msg = (
+            f"--box-too-big-marginal ({too_big_marginal}) must not be above"
+            f" --box-too-big ({too_big})."
+        )
+        raise typer.BadParameter(err_msg)
+    if too_big_marginal <= 1.0:
+        # The reference is the page's own median, so at 1.0 the marginal band
+        # would take in half of every page.
+        err_msg = f"--box-too-big-marginal ({too_big_marginal}) must be above 1.0."
+        raise typer.BadParameter(err_msg)
+
+
 @app.command(help="Check prelim OCR JSON files for issues and write a kivy-editor queue file.")
 def main(  # noqa: PLR0913
     volumes_str: VolumesArg = "",
@@ -2511,7 +2616,10 @@ def main(  # noqa: PLR0913
     ),
     include_marginal: bool = typer.Option(
         default=False,
-        help="Also report the noisier line-height band as 'too_many_lines_marginal'.",
+        help=(
+            "Also report the noisier line-height bands, as 'too_many_lines_marginal'"
+            " and 'box_too_big_marginal'."
+        ),
     ),
     line_height_threshold: float = typer.Option(
         LINE_HEIGHT_OUTLIER_FRACTION,
@@ -2527,6 +2635,14 @@ def main(  # noqa: PLR0913
             "Measure a page against its densest cluster of line heights, not its median,"
             " when the median sits above that cluster by more than this ratio."
         ),
+    ),
+    box_too_big: float = typer.Option(
+        BOX_TOO_BIG_RATIO,
+        help="Flag as 'box_too_big' above this multiple of the page median line height.",
+    ),
+    box_too_big_marginal: float = typer.Option(
+        BOX_TOO_BIG_MARGINAL_RATIO,
+        help="Lower edge of the oversize marginal band; only used with --include-marginal.",
     ),
     box_iou_min: float = typer.Option(
         BOX_IOU_MIN,
@@ -2556,12 +2672,9 @@ def main(  # noqa: PLR0913
     if volumes_str and title_str:
         err_msg = "Options --volume and --title are mutually exclusive."
         raise typer.BadParameter(err_msg)
-    if line_height_marginal < line_height_threshold:
-        err_msg = (
-            f"--line-height-marginal ({line_height_marginal}) must not be below"
-            f" --line-height-threshold ({line_height_threshold})."
-        )
-        raise typer.BadParameter(err_msg)
+    _validate_line_height_bands(
+        line_height_threshold, line_height_marginal, box_too_big, box_too_big_marginal
+    )
     if not 0.0 <= box_iou_min <= 1.0:
         err_msg = f"--box-iou-min ({box_iou_min}) must be between 0 and 1."
         raise typer.BadParameter(err_msg)
@@ -2605,6 +2718,8 @@ def main(  # noqa: PLR0913
         marginal=line_height_marginal,
         include_marginal=include_marginal,
         bimodal_ratio=line_height_bimodal,
+        too_big=box_too_big,
+        too_big_marginal=box_too_big_marginal,
     )
     overhang_limits = PanelOverhangLimits(fraction=outside_panel_fraction, min_px=outside_panel_px)
     box_limits = BoxAgreementLimits(iou_min=box_iou_min, max_growth=max_box_growth)
