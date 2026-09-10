@@ -4722,7 +4722,67 @@ of it is one balloon.
   reasoning, alongside Too Safe Safe 140's DON / DU: a truncated fragment has
   nothing for a searchable box to hold. It stays in 069's `visible_text`.
 
+### Findings to paste into the next run (2026-09-10, forty-fifth batch, FOURTH OF FOUR -- *The Mysterious Stone Ray*, batch closed)
+
+The batch's biggest title and its worst result. **40 speaker corrections in 365
+groups = 11.0%**, and **30 of them fall in the 71-group nephew domain = 42.3%**.
+Counted from the editor's own `speaker_was`, not from a text diff -- a diff keyed
+on text collapses the duplicate Beagle Boy placards and undercounted this by ten.
+
+| direction | n |
+|---|---|
+| `nephews` -> a name | **25** |
+| `unknown` -> `none` / a name | 9 |
+| `Huey` -> `nephews` | 2 |
+| other single moves | 4 |
+
+18 `cap_colour`s were filled in where the pass left them null.
+
+- **THE BATCH RAN 42.3% AND 60.9% WRONG IN THE NEPHEW DOMAIN ON ITS TWO BIG
+  TITLES.** *The Tuckered Tiger* was 60.9%, this is 42.3%, and both are the same
+  direction: a collective the review resolved. Meanwhile *A Campaign of Note*
+  took ONE correction in 53 groups and *The Daffy Taffy Pull* took none at all in
+  its 18 nephew groups. The difference is not care, it is whether the caps are
+  legible -- and 18 filled-in `cap_colour`s here say they were.
+- **AN ADJUDICATED CONFLICT IS NOT A LICENCE TO DECLINE EVERYWHERE.** This is the
+  title whose dialogue contradicted its printed caps, ruled mid-batch as *dialogue
+  wins, record the ink*. That ruling covered a handful of groups. What actually
+  happened is that the doubt spread: 25 collectives across 28 pages, on a title
+  where the review could name them. Worse, the four `cap_colour`s it overturned
+  were three `red`/Huey calls and one `blue`, two of which it pushed BACK to
+  `nephews` -- so the same title was both over- and under-named. **Quarantine a
+  palette conflict to the pages that show it.**
+- **THE `unknown` GROUPS WERE THE OTHER NINE.** Six became `none` and three took a
+  name. `unknown` was doing duty for "I did not look", which is what `none` and a
+  named speaker are for; see the sound-effect entries above.
+- **A SPLIT BOX SURVIVES BOTH TOOLS, AND THE IDS ARE A RED HERRING.** The review
+  split 063 panel 8 into `CHEAP! CHEAP!` and `WITH THIS RAY...`; both engines got
+  both halves with identical boxes, but on opposite ids (easyocr g14/g16,
+  paddleocr g16/g14). Nothing broke: `ocr_check` pairs positionally within the
+  panel and matched easyocr 16 to paddleocr 14, and `vision_mirror` keys on
+  normalised `ai_text`, not on id. Had it keyed on id it would have written each
+  half's annotations onto the other. `--fix-groups-order` afterwards lands both
+  halves on g14 and the discrepancy disappears.
+- **THE REVIEW'S OWN TRANSCRIPTIONS NEED THE AUDIT TOO.** It boxed the Beagle Boy
+  placards on 050, 057 and 059 -- lettering neither engine had grouped -- and
+  typed `176-671` on all three. The art reads `176-761`, the same glyphs as 052
+  and 055 which it typed and stored as 761. A transposition across three
+  near-identical placards in a row, caught only because the missed-text audit
+  compares `visible_text` against the grouped text. 065's digits are behind a
+  head and stay as typed.
+- **THE QUEUE FILE HID A `text_does_not_fit` FOR THE SECOND TIME.** 043's six
+  floating dollar signs were flagged all along, behind `groups_out_of_order` --
+  the queue collapses to one entry per group and the most urgent issue wins. It
+  only surfaced once the renumber cleared the entry above it. When a fix clears
+  one issue, re-run the console listing rather than trusting the queue to be the
+  whole story.
+
 ### Findings to paste into the next run (2026-09-10, forty-fifth batch, PASS ONLY -- not yet reviewed)
+
+**ALL FOUR ARE NOW REVIEWED AND MIRRORED -- the four sections above replace every
+number in this one.** Batch total: **40 + 12 + 1 + 15 = 68 speaker corrections**,
+and the spread between titles is the finding: 1.9% on *A Campaign of Note* against
+11.0% here, with the nephew domain running 0% and 42.3% on the two extremes.
 
 Four titles, 52 pages, **663 groups**: *The Mysterious Stone Ray* (Vol. 14) 356,
 *A Campaign of Note* (Vol. 14) 53, *The Daffy Taffy Pull* (Vol. 15) 129, *The
