@@ -5180,6 +5180,51 @@ where the cap key had to be re-derived from dialogue. Nephew domain:
   `~/barks-vision/queue-corpus-lowmed-2026-09-10b.txt`. The forty-fifth
   batch's 41 no longer appear.
 
+### Findings to paste into the next run (2026-09-10, forty-seventh batch, BOTH REVIEWED -- *Dogcatcher Duck*, batch closed)
+
+Replaces that title's numbers in the pass-only section below. **12 speaker
+corrections in 88 passed groups = 13.6%, 9 in the 13-group nephew domain =
+69.2%.** `review_findings` counts 119 groups because the title's pages run to
+039 (back matter the prep skips) and the review added one group, 034 g15,
+the greyhound's blanket number `6` in panel 6 (`background`, `none`, clean
+text on both engines). No type change since the pass commit eea781e0; the
+ten type entries listed are the pass's own, ratified, and the ten it flags as
+predating are August's thought-balloon adjudications. Mirror clean: 89/89 on
+both engines, identical distributions.
+
+| direction | n |
+|---|---|
+| `nephews` -> a name | 3 (031 g1, 031 g2, 036 g8) |
+| a name -> `nephews` | 3 (031 g8, 032 g6, 036 g11) |
+| Donald -> `nephews` | 3 (031 g10-g12, the `OHO!` laughs) |
+| `other:` renamed | 2 (033 g8/g9 `the TV crew` -> `the audience`) |
+
+**Batch total: 25 + 12 = 37 speaker corrections in 420 groups = 8.8%, 34 of
+them in the 124-group nephew domain = 27.4%.** Mediums 11 of 30 corrected
+(36.7%), highs 25 of 386 (6.5%).
+
+- **THE GAP TIPS WERE NAMED AGAIN.** 031 g1, 031 g2 and 036 g8 were the
+  pass's three gap or no-ink collectives on the car panels; the review named
+  all three, as it named seven of nine on Hondorica. Across the batch the
+  forty-sixth batch's gap rule ran **10 of 12 wrong**: on this volume's cap it
+  is retired. Name a gap tip in the direction of its ray at medium.
+- **THE EDGE TIPS ALL FELL HERE.** 031 g8, 032 g6 and 036 g11 -- every
+  edge-of-span call on this title -- went collective; on Hondorica 7 of 10
+  held. The edge tip is a coin toss on a two-boy back seat and a name on a
+  three-boy row; write it medium and let the review place it.
+- **`OHO!` FROM A SILHOUETTED CAR IS THE BOYS'.** Three laughs written Donald
+  at medium went to `nephews`; the `dialogue` type held. A laugh from a car
+  full of boys belongs to the boys unless the drawing says otherwise.
+- **THE TOMATO-THROWERS ARE THE AUDIENCE, NOT THE CREW.** 033 g8/g9 were
+  renamed `other:the audience`; the cameraman (g7) stayed `the TV crew`. A
+  silhouette behind a camera is crew, a silhouette with a bucket is not.
+- **MISSED TEXT THE AUDIT COULD NOT SEE.** The blanket number `6` on the
+  netted greyhound (034 p6) was in neither engine and not in the pass's
+  `visible_text`, so the audit had nothing to diff. **A number on a racing
+  blanket, a jersey or a door is lettering: list it.**
+- **CONFIDENCE: 6 of 7 mediums corrected (85.7%) against 5 of 81 highs
+  (6.2%).** Every medium on this title was an edge tip or an off-screen laugh.
+
 ### Findings to paste into the next run (2026-09-10, forty-seventh batch, ONE OF TWO REVIEWED -- *Secret of Hondorica*)
 
 Replaces that title's numbers in the pass-only section below. **25 speaker
