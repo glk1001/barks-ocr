@@ -99,6 +99,28 @@ def union_box(box_a: PointList, box_b: PointList) -> PointList | None:
     return [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
 
 
+def boxes_equal(box_a: PointList, box_b: PointList) -> bool:
+    """Whether two text_boxes name the same corners, ignoring how they are spelled.
+
+    A box read from the prelim JSON is a list of two-element **lists**, while
+    ``union_box`` builds a list of **tuples**, so ``==`` between them is False
+    even when every coordinate matches. Callers use this to tell "the merge
+    changed something" from "the merge rewrote a box with the value it already
+    had" -- a distinction ``--fix-boxes`` needs, because reporting the second as
+    a fix stops the check loop from ever converging.
+
+    Compares the corners themselves rather than ``points_bbox``, so squaring up
+    a stored quad still counts as a change.
+    """
+    if len(box_a) != len(box_b):
+        return False
+
+    return all(
+        float(pa[0]) == float(pb[0]) and float(pa[1]) == float(pb[1])
+        for pa, pb in zip(box_a, box_b, strict=True)
+    )
+
+
 def box_growth(merged: PointList, box_a: PointList, box_b: PointList) -> float:
     """Area of *merged* over the larger of the two boxes it was built from.
 

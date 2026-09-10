@@ -44,6 +44,7 @@ from barks_ocr.utils.engine_compare import (
     BOX_IOU_MIN,
     box_growth,
     box_iou,
+    boxes_equal,
     differing_attrs,
     union_box,
 )
@@ -1889,6 +1890,15 @@ class OcrChecker:
         growth = box_growth(merged, easy_box, paddle_box)
         if growth > self._boxes.max_growth:
             return False, f"; union {growth:.1f}x the larger box, above --max-box-growth"
+
+        if boxes_equal(easy_box, merged) and boxes_equal(paddle_box, merged):
+            # Already merged, on this run or an earlier one. Reporting it as a
+            # fix would keep _check_title_to_convergence looping until it hits
+            # MAX_FIX_PASSES and warns, on every title with a matched pair --
+            # which, now that the merge is no longer gated on --box-iou-min, is
+            # every title there is. Not a refusal either: nothing is wrong, so
+            # there is no reason to append to a box_mismatch note.
+            return False, ""
 
         easy_group["text_box"] = merged
         paddle_group["text_box"] = merged
