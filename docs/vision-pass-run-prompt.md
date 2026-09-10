@@ -5349,6 +5349,30 @@ Dogcatcher 6 (the page views only). Nephew domain:
   across 460 titles**, all this batch's type corrections (Hondorica 3 groups,
   Dogcatcher 10, both engines).
 
+### Findings to paste into the next run (2026-09-10, forty-eighth batch, TWO OF FOUR REVIEWED -- *Heirloom Watch*)
+
+Replaces that title's numbers in the pass-only section below. **0 speaker
+corrections in 96 passed groups**, the fourth zero in this file and the first
+with no nephews to force it: the cast is Scrooge, Donald, Gyro and five
+barristers, and every tail landed. `review_findings` reports 98 because the
+review added two `$` groups, the dollar signs on the safe in 137 p5 and 138
+p5 (`background`, `none`, both engines). The one type change is the pass's
+own (143 g9 narration -> dialogue, a tailed balloon to a hand), ratified; 140
+g4 predates. Mirror clean: 98/98 on both engines, 88 `identified_by`,
+identical distributions.
+
+- **A DRAWN `$` ON A PROP IS LETTERING TO THE REVIEWER**, as the eye devices
+  on Philosopher's Stone 110 were: the safe's dollar sign was in
+  `visible_text` on both pages and neither engine had grouped it. When a
+  page's `visible_text` carries a `$`, add the group in the pass rather than
+  leaving it for the review.
+- **`other:a barrister` (23) AND `other:the barristers` (1, the four-tailed
+  chorus on 141 p1) BOTH STOOD.** The singular for one unnamed member of a
+  named firm and the plural for the chorus is the pattern to reuse.
+- **THE OFF-PANEL CALLS ALL HELD** (140 g8 Gyro's hand and pencil, 143 g2
+  the eclipse sky, 143 g9 the hand with the tweezers): a hand in frame is
+  an `off-panel` voice, not `unknown`.
+
 ### Findings to paste into the next run (2026-09-10, forty-eighth batch, ONE OF FOUR REVIEWED -- *The Fabulous Philosopher's Stone*)
 
 Replaces that title's numbers in the pass-only section below. **32 speaker
