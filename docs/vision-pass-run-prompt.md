@@ -5349,6 +5349,55 @@ Dogcatcher 6 (the page views only). Nephew domain:
   across 460 titles**, all this batch's type corrections (Hondorica 3 groups,
   Dogcatcher 10, both engines).
 
+### Findings to paste into the next run (2026-09-10, forty-eighth batch, FOURTH OF FOUR -- *Good Canoes and Bad Canoes*, batch closed)
+
+Replaces that title's numbers in the pass-only section below. **7 speaker
+corrections in 112 groups = 6.2%, 6 in the 33-group nephew domain = 18.2%.**
+No group added. Mirror clean: 112/112 on both engines, 103 `identified_by`,
+identical distributions. **Two things still open at the commit**: 054 g1
+(`POP!`, the starting gun, `none`) was never stamped `speaker_reviewed` on
+either engine, and the pass's four `dialogue -> thought` changes (054 g9, 055
+g0, g2, g4, the cloud balloons) are unconfirmed -- the review's speakers are
+mirrored, the one-key type confirm is not done. `queue-stragglers.txt` and
+`queue-corrections.txt` in the out-dir hold them.
+
+| direction | n |
+|---|---|
+| one nephew -> another | 4 (056 g4 Dewey -> Louie, 057 g4 Huey -> Louie, 058 g14 Louie -> Huey, 058 g15 Huey -> Dewey) |
+| a name -> `nephews` | 1 (056 g10) |
+| a boy -> Donald | 1 (058 g10, the `?` device) |
+| narrator -> an `other:` | 1 (054 g0, the announcer's tailless box) |
+
+**Batch total: 32 + 0 + 4 + 7 = 43 speaker corrections in 638 groups = 6.7%,
+37 of them in the 118-group nephew domain = 31.4%.** Mediums 29 of 65
+corrected (44.6%), highs 14 of 573 (2.4%).
+
+- **THE FOUR SWAPS ARE ALL GAP TIPS NAMED IN THE RAY'S DIRECTION, AND THE
+  RAY WAS WRONG EVERY TIME.** 056 g4 (ray toward the blue boy: Louie), 057
+  g4 (tip inside the red boy's span: Louie, the balloon's own side), 058 g14
+  (gap between green and red: Huey), 058 g15 (gap toward Donald: Dewey by
+  dialogue, held). With Philosopher's Stone's eleven, the forty-seventh
+  batch's "name a gap tip in the direction of its ray" is now **0 for 15
+  across this batch**. Retire it: on a gap tip, name the boy the BALLOON
+  SITS OVER if that is unambiguous, else the collective.
+- **056 g10 WAS THE EDGE TIP THAT WENT COLLECTIVE**, as every edge tip on the
+  batch did (Philosopher's Stone 121 g3, 123 g14, Raucous Role 040 g10).
+  Edge tips are `nephews` on this batch, 4 for 4.
+- **THE `?` OVER THE CLOSE-UP BOY WENT TO DONALD.** 058 g10's question mark
+  sits at the top-left corner of panel 5, above the ukulele, and the review
+  read it as Donald's puzzlement (he is groggy in the next panels), not the
+  boy's. A device at a panel corner is not "over" the nearest head.
+- **A TAILLESS ROUNDED BOX THAT READS AS THE ANNOUNCER IS THE ANNOUNCER.** 054
+  g0 stayed `narration` in type but went `other:the contest announcer` in
+  speaker: the box carries his programme line. Speaker follows the voice
+  even where the drawing is a caption.
+- **CONFIDENCE ACROSS THE BATCH: mediums 44.6% corrected against highs
+  2.4%.** The medium was where every gap and edge tip lived; nothing else
+  was wrong at scale. Fewer mediums, more collectives.
+- **`other:` VALUES ALL STOOD** on this title: the contest announcer, the
+  prize presenter, the spectators, Porkmuscle J. Hamfat, the turtle, the
+  hornets.
+
 ### Findings to paste into the next run (2026-09-10, forty-eighth batch, THREE OF FOUR REVIEWED -- *Donald's Raucous Role*)
 
 Replaces that title's numbers in the pass-only section below. **4 speaker
