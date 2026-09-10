@@ -5606,7 +5606,91 @@ reference row, one each on 118, 121, 122 and 133 for tails). Nephew domain:
   4 (the rest are August thought-balloon adjudications carrying
   `type_was`).
 
+### Findings to paste into the next run (2026-09-10, forty-ninth batch, PASS ONLY -- not yet reviewed)
+
+Three titles, 30 pages, **354 groups**, all Vol. 17: *Trouble Indemnity* 114,
+*The Chickadee Challenge* 117, *The Unorthodox Ox* 123 (one added). **44 images
+read = 1.47 per page** against a target of 3: 30 page views plus 14 crops and
+panel views (four 0.6x panel views and one 2x tail crop on Trouble Indemnity
+068; three 1x head crops, one 0.5x corner view and two 1x crops on Chickadee
+069-070, one on 074; one tail crop and one sign crop on the Ox). Nephew domain:
+
+| title | nephew groups | named | collectives | mediums in domain | low/medium queue |
+|---|---|---|---|---|---|
+| Trouble Indemnity | 6 | 5 (83%) | 1 | 1 | 1 |
+| The Chickadee Challenge | 61 | 32 (52%) | 29 | 13 | 13 |
+| The Unorthodox Ox | 34 | 16 (47%) | 18 | 9 | 9 |
+
+- **GAP TIPS WENT COLLECTIVE, AS THE FORTY-EIGHTH BATCH SAID.** Every tip
+  that landed between two skulls with the balloon over both was written
+  `nephews` (Chickadee 069 g10, 070 g1, g7, g8, g11; Ox 085 g7), whatever the
+  ray did. Two were named anyway at medium, with the reason in the note: Ox
+  085 g9 (12px from one skull against 30px, and the boy has his finger up in
+  the 'idea' pose) and 085 g12 (the tip touches the left boy's beak end, 62px
+  from the next). The review of those two is what settles whether proximity
+  inside a head-width is allowed to break the tie.
+- **THE CHICKADEE CHALLENGE IS A WOODCHUCK-CAP STORY: 071-078 CARRY NO ROSTER
+  INK AT ALL** and every name on those pages is an ADDRESS. `GENERAL DEWEY` /
+  `YES, GENERAL HUEY!` name the measuring pair on 072 (six groups, high), the
+  chisel boy's `GENERAL LOUIE` names the boy beside him on 074 p8, the
+  troopers' `YES, GENERAL LOUIE! CALL THE SIGNALS!` on 076 p6 makes every
+  numbered signal on 076-077 Louie's (five groups). Three continuity calls
+  were made at medium (073 g0, g4 Huey from the graph he was computing; 075
+  g0 and its two PONKs Louie from the chisel staying with the other boy across
+  one panel). Everything else in Woodchuck caps is `nephews`.
+- **069 p3 PRINTS TWO RED CAPS.** The letter-holder and the boy beside him
+  both probe `#e61b1f` (248px against 265px), and no green anywhere on the
+  panel. The letter-holder was named Huey from the letter he has carried
+  since p1 (where he was the only red) and the other boy Louie by
+  elimination, `cap_colour` recorded as the printed red, both medium. A
+  colourist slip; the review says whether continuity may carry a name across
+  one.
+- **THE OX PRINTS ITS CAP GREEN IN CAPSCAN'S `green` BAND** (`#029d46` H146,
+  S0.99), not `leafgrn` as the rest of Vol. 17: on this title a `green` blob
+  on a skull IS the cap. Its blue drifts from `#00a5d7` to `#23a186` H167 in
+  shade on one panel (085 p4) and `#12a3b4` H186 on another (084 p7); the
+  seat and the other two caps carried those. The boys are bare-headed at
+  breakfast (079-080, eleven collectives).
+- **TROUBLE INDEMNITY 068 p7 HAS A BALLOON WITH TWO TAILS**, one to each of
+  the first two boys, only visible in a 2x crop; `tailtip` gave the two
+  readings 40px apart and that disagreement is what earned the crop. 068 g8
+  is the batch's one elimination call (blue and a 140px red named the other
+  two).
+- **THE BULL IS A SPEAKER.** Seven `sound_effect -> dialogue` on the Ox for
+  SNORT and BAW with `other:Johnny the bull`; BLINK stays a sound effect with
+  the blinker as maker. Trouble Indemnity's RAHRRR went the same way for
+  Mugger Jones's dog, and its three `dialogue -> thought` are cloud balloons
+  (064 g1 a `?` device). The four bugle TA-RAs on Chickadee stayed
+  `sound_effect` with `other:the Woodchuck bugler`, per the Masters of Melody
+  ruling.
+- **MISSED TEXT, ONE ITEM, ADDED BY THE PASS**: Ox 081 p7 the RR CROSSING
+  crossbuck. The audit is clean on all three titles after the apply.
+- **`other:` VALUES**: Mr. Brasshorn (22), the clerk (3), Mugger Jones (2),
+  Mugger Jones's dog; the Chickadee nest leader (10), the Woodchuck bugler
+  (4), the Junior Woodchuck observer (3), the Woodchuck troopers (2), a
+  Woodchuck trooper (2), a Chickadee (2), the Chickadees; Johnny the bull (9),
+  the spectators (4), the policeman (2), the arena announcer (2), the fair
+  official (2), the Blue Angel balloonist, the jam exhibitor. Grandma Duck (7)
+  was written `other:Grandma Duck` and the apply canonicalized it to the
+  plain `Grandma Duck`, a name the schema already knows.
+- **CORPUS SWEEP RUN**: `vision-corrections` with no title reports only this
+  batch's own 18 type rows (9 groups x 2 engines) outstanding across 460
+  titles.
+
 ## Per-volume cap palette
+Vol. 17, three more titles read 2026-09-10 (forty-ninth batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Trouble Indemnity* | 068 p5, three boys facing Donald | `#e51a20` 2,151px | `#54a071` H143 S0.47 shaded on p5, `#4da440` H112 on p8 | `#00a5d7` 1,220px | side segment on a black cap; only 068 has the boys |
+| *The Chickadee Challenge* | 069 p5, three boys in a row | `#e61b1f` 130-620px, `#b53126` dull on 070 | `#5c9f54` H114 / `#4fa43f` H110; `#519d88` H163 in shade | `#09a4d4` 60-1,700px | side segment, small; 071-078 are brown Woodchuck caps with NO roster ink |
+| *The Unorthodox Ox* | 085 p6, three boys on the fence | `#e41a20` 250-3,300px | `#029d46` **H146 in the `green` band** | `#00a5d7`, shading to `#23a186` H167 and `#12a3b4` H186 | side segment on a black cap; bare-headed at breakfast 079-080 |
+
+- On the Ox a `green` blob on a skull is the cap; on the other two it is
+  the Vol. 17 rule (`leafgrn` for caps, `green` for scenery), except the
+  shaded `#54a071` on Trouble Indemnity 068 p5.
+- Chickadee 069 p3 prints two red caps on adjacent boys, a colourist slip.
+
 Vol. 14, two more titles read 2026-09-10 (forty-eighth batch):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
