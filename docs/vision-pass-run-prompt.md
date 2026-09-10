@@ -5354,12 +5354,10 @@ Dogcatcher 6 (the page views only). Nephew domain:
 Replaces that title's numbers in the pass-only section below. **7 speaker
 corrections in 112 groups = 6.2%, 6 in the 33-group nephew domain = 18.2%.**
 No group added. Mirror clean: 112/112 on both engines, 103 `identified_by`,
-identical distributions. **Two things still open at the commit**: 054 g1
-(`POP!`, the starting gun, `none`) was never stamped `speaker_reviewed` on
-either engine, and the pass's four `dialogue -> thought` changes (054 g9, 055
-g0, g2, g4, the cloud balloons) are unconfirmed -- the review's speakers are
-mirrored, the one-key type confirm is not done. `queue-stragglers.txt` and
-`queue-corrections.txt` in the out-dir hold them.
+identical distributions. The straggler 054 g1 (`POP!`, `none`) and the
+pass's four `dialogue -> thought` changes (054 g9, 055 g0, g2, g4, the cloud
+balloons) were finished after the first commit; the review-stage close-out is
+clean and the title is 112/112 on both engines.
 
 | direction | n |
 |---|---|
