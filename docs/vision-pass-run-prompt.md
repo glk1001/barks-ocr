@@ -4642,6 +4642,51 @@ batch's 21.9%, and in the opposite direction.
   before the next mirror on this volume.
 
 
+### Findings to paste into the next run (2026-09-10, forty-fifth batch, SECOND OF FOUR REVIEWED -- *The Daffy Taffy Pull*)
+
+Replaces that title's numbers in the pass-only section below; Stone Ray and
+Campaign of Note are still unreviewed. **12 speaker corrections in 129 passed
+groups = 9.3%** -- and all twelve are the same mistake, on a class that was
+therefore **100% wrong**. Nothing else was corrected: no types, no cap_colours,
+one text fix (`DOC!....` -> `DOC! ....`), and seven text_boxes tightened.
+
+| class | groups | corrected |
+|---|---|---|
+| quoted flashback captions | 12 | **12 (100%)** |
+| nephew domain (Huey/Dewey/Louie/`nephews`) | 18 | **0** |
+| everything else | 99 | 0 |
+
+- **A QUOTED FIRST-PERSON CAPTION IS STILL THE NARRATOR.** The whole story is a
+  framed flashback: Donald in a psychiatrist's office on 176 and 185, the tale
+  in between. Every flashback caption is Donald's own voice in quotation marks
+  -- `"I STARTED THE KIDS ON THEIR WAY!"`, `"THE TOWN CRANK HAD BOUGHT IT!"` --
+  and I wrote `Donald` on all twelve. The field records **the box**, not the
+  voice quoted inside it. This rule was already written down and I broke it
+  twelve times in one title, because first-person quoted text reads as speech
+  in a way third-person narration never does.
+- **THE TELL IS THE FRAMING DEVICE, AND IT IS VISIBLE ON PAGE 1.** A story that
+  opens on a character recounting events and closes back in the same room is
+  narrating the middle. Check the last page at prep: if it returns to the
+  opening scene, every caption between them is `narrator` no matter whose voice
+  it quotes. That single check would have caught all twelve here for one image.
+- **THE NEPHEW DOMAIN TOOK ZERO CORRECTIONS**, 18 groups including 7 held as
+  the `nephews` collective. Vol. 15's palette held: `#e51a20` / `#4da33d` /
+  `#00a5d7`, clean bands, and the two collectives that stayed collective were
+  right to. The forty-fifth batch's *Tuckered Tiger* section above was punished
+  60.9% in this domain on a wedge-cap title at 1.1 images per page; this title
+  is the control, and the difference is that its caps are legible.
+- **THREE GROUPS NOW CARRY A TYPE THAT CONTRADICTS THE SPEAKER.** 176 g8 and
+  176 g11 are typed `dialogue` and 182 g1 `thought`, but all three were moved to
+  `narrator`. The review corrected no types, so these are the pass's types
+  standing against the review's speakers. Nine of the twelve are typed
+  `narration` and are consistent. **Unresolved -- do not mirror this pattern
+  forward without deciding which field is wrong.**
+- **A HAND-TWEAKED BOX BREAKS THE `--fix-boxes` INVARIANT.** After `--fix-boxes`
+  all 129 pairs held identical boxes on both engines; the review tightened seven
+  and they now differ again, at IoU 0.898-0.996. None is reportable and nothing
+  downstream cares, but a later `--fix-boxes` run will merge them back to the
+  union of the two hand edits, which is slightly larger than either.
+
 ### Findings to paste into the next run (2026-09-10, forty-fifth batch, PASS ONLY -- not yet reviewed)
 
 Four titles, 52 pages, **663 groups**: *The Mysterious Stone Ray* (Vol. 14) 356,
