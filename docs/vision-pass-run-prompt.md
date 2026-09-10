@@ -5612,9 +5612,9 @@ Replaces that title's numbers in the pass-only section below. **8 speaker
 corrections in 123 groups = 6.5%, all 8 in the 34-group nephew domain =
 23.5%.** All seven bull-voice type proposals confirmed, no group added by the
 review. Mirror clean: 123/123 groups on both engines, 122 reviewed on each,
-identical distributions; **084 g5 is a straggler** (the boy fitting the dark
-glasses, Louie on a 1,936px `#019d46` cap), handed back as
-`queue-stragglers.txt`. Highs 4 of 114 corrected (3.5%), mediums 4 of 9
+identical distributions; the one straggler, 084 g5 (the boy fitting the dark
+glasses, Louie on a 1,936px `#019d46` cap), was finished after the first
+commit and held, so the title is 123/123 on both engines. Highs 4 of 114 corrected (3.5%), mediums 4 of 9
 (44.4%).
 
 **Batch total: 2 + 8 + 8 = 18 speaker corrections in 355 groups = 5.1%, 17
