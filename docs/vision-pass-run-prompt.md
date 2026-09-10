@@ -4675,12 +4675,15 @@ one text fix (`DOC!....` -> `DOC! ....`), and seven text_boxes tightened.
   right to. The forty-fifth batch's *Tuckered Tiger* section above was punished
   60.9% in this domain on a wedge-cap title at 1.1 images per page; this title
   is the control, and the difference is that its caps are legible.
-- **THREE GROUPS NOW CARRY A TYPE THAT CONTRADICTS THE SPEAKER.** 176 g8 and
-  176 g11 are typed `dialogue` and 182 g1 `thought`, but all three were moved to
-  `narrator`. The review corrected no types, so these are the pass's types
-  standing against the review's speakers. Nine of the twelve are typed
-  `narration` and are consistent. **Unresolved -- do not mirror this pattern
-  forward without deciding which field is wrong.**
+- **THE SPEAKER FIX LEFT THREE TYPES BEHIND, AND TYPE IS A SEPARATE QUEUE.** 176
+  g8, 176 g11 and 182 g1 were moved to `narrator` while keeping the pass's
+  `dialogue`/`dialogue`/`thought`, because a review corrects speakers and types
+  through different paths and this one corrected no types. Resolved the same day:
+  all three are now `narration`, so all twelve agree. **The lesson is for the
+  pass, not the review** -- mistyping a caption box and misattributing it are the
+  same error surfacing in two fields, so a `narrator` correction should always
+  prompt a look at the type. Nine of the twelve were already `narration`, which
+  is exactly why the three stood out only on a cross-field check.
 - **A HAND-TWEAKED BOX BREAKS THE `--fix-boxes` INVARIANT.** After `--fix-boxes`
   all 129 pairs held identical boxes on both engines; the review tightened seven
   and they now differ again, at IoU 0.898-0.996. None is reportable and nothing
