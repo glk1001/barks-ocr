@@ -5788,6 +5788,93 @@ panel views (four 0.6x panel views and one 2x tail crop on Trouble Indemnity
   batch's own 18 type rows (9 groups x 2 engines) outstanding across 460
   titles.
 
+### Findings to paste into the next run (2026-09-11, fiftieth batch, TWO OF THREE REVIEWED -- *Riches, Riches, Everywhere!*)
+
+Replaces that title's numbers in the pass-only section below. **20 speaker
+corrections in 222 groups = 9.0%, all 20 in the 49-group nephew domain =
+40.8%.** No group added; 168 g8/g9 (one balloon the engines had split)
+merged by the review. All three type proposals confirmed. Mirror clean:
+221/221 on both engines, 215 `identified_by`, identical distributions.
+Highs 18 of 206 corrected (8.7%), mediums 2 of 15 (13.3%).
+
+| direction | n |
+|---|---|
+| `nephews` -> a name | 9 (164 g1 Huey, 167 g2 Huey, 169 g0 Louie, 171 g4 Louie, 172 g8 Dewey, 172 g14 Dewey, 173 g4 Louie, 173 g7 Louie, 179 g11 Louie) |
+| Scrooge <-> Donald | 6 (165 g5/g6, 171 g10, 173 g9, 179 g3, 179 g7) |
+| one nephew -> another | 3 (166 g6 Dewey -> Louie, 167 g14 Dewey -> Huey, 172 g12 Huey -> Louie) |
+| Donald -> a name | 1 (169 g6 Huey) |
+| a name -> `nephews` | 1 (172 g4) |
+
+- **NINE UNDER-NAMES, EVERY ONE A BOY THE PASS CALLED "BLACK CAP, NO INK".**
+  The reviewer named them off the drawing where the census had nothing
+  above its 25px floor and probes found 65-160px slivers. On this title a
+  sliver IS the name: the caps are black beanies with a patch at the back,
+  and a boy seen from the front shows a few dozen pixels of it. When two
+  boys in the panel are already named, name the third; when a probe finds a
+  sliver of one roster hue, name him at medium rather than writing
+  collective.
+- **THE OPEN-BEAK RULE LOST 2 OF 3.** 172 g4 (open beak, red boy) went to
+  `nephews` and 172 g12 (open beak, red boy) went to the tail's boy Louie;
+  only 166 g6 was a tail-and-beak agreement and it still went Dewey -> Louie
+  (the review read the crates boy's cap as green). Read the TAIL first; an
+  open beak on the other boy is a reason for medium, not a reason to move
+  the name.
+- **SIX SCROOGE/DONALD SWAPS, ALL AT LONG SHOT OR WITH BOTH IN FRAME.** 165
+  g5/g6 exchanged (the WHERE question is Donald's, PHOOEY is Scrooge's);
+  171 g10 and 173 g9 and 179 g3/g7 are two-adult panels where the pass
+  cited the tail without measuring it. This is the two-adult error class
+  the cost doc names; measure the tip on any Scrooge/Donald panel with both
+  in frame.
+- **169 g6 WENT DONALD -> HUEY** with the reviewer's note "Not Dewey or
+  Louie": the boy with the pick pointing at the water hole, not Donald
+  above him, so a tail read to the wrong head at page scale.
+- **Vol. 14 `UNCA` / `UNCLE` HELD**: no correction crossed it.
+- **`other:` values all stood**: `Punter`, `Digger`, `the claim jumpers`,
+  `the kookaburras`; the four `unknown` HALLO! specks stood as `unknown`.
+
+### Findings to paste into the next run (2026-09-11, fiftieth batch, ONE OF THREE REVIEWED -- *The Great Steamboat Race*)
+
+Replaces that title's numbers in the pass-only section below. **21 speaker
+corrections in 216 groups = 9.7%, 14 in the 35-group nephew domain =
+40.0%.** Four groups added by the review: two `$` devices as Scrooge's
+thoughts (151 g9, 152 g13) and the two `CAPTAIN` badges the audit had
+found (154 g10, 160 g8). Text correction `ZOWL!` -> `ZOW!` applied; the
+five type proposals were NOT confirmed and are still outstanding on both
+engines (150 g3, 157 g2, 157 g4, 158 g6, 160 g12). Mirror clean: 205/205
+on both engines, 203 reviewed on each, 191 `identified_by`, identical
+distributions; **151 g8 and g14 are still unreviewed** and are in
+`queue-stragglers.txt`. The review typed `other:Horshoe Hogg` on two
+groups (160 g5, g9); normalised to `Horseshoe Hogg` before the mirror.
+Highs 15 of 185 corrected (8.1%), mediums 5 of 16 (31.2%).
+
+| direction | n |
+|---|---|
+| `nephews` -> a name | 7 (151 g11 Louie, 154 g1 Louie, 154 g2 Dewey, 156 g1 Louie, 158 g1 Louie, 158 g9 Huey, 159 g11 Louie) |
+| Donald -> `nephews` | 4 (147 g11, 148 g10, 161 g0, 161 g5) |
+| `nephews` -> Donald | 2 (146 g12 the `?` device, 161 g1 Louie -> Donald) |
+| `unknown` -> Scrooge / `none` | 4 (151 g9, 152 g13, 154 g10, 160 g8 -- the review's own adds) |
+| `narrator` -> a voice | 2 (160 g5 Hogg, 160 g6 `unknown`) |
+| a name -> `nephews` | 1 (153 g3) |
+
+- **THE UNDER-NAMES ARE ALL INDOOR OR HELMET PAGES WHERE THE PASS WROTE
+  "BLACK CAP".** 154 g1/g2 and 156-159 name boys whose caps the census
+  never listed; the reviewer read them off the drawing at panel scale (156
+  g1: "Not Dewey or Huey"). Same lesson as Riches: on a black-beanie title
+  a sliver of ink names, so probe every crown before writing collective.
+- **FOUR DONALDS WERE BOYS, TWO ON THE 161 TUBE RAFT AT SPECK SCALE.** The
+  long-shot default to Donald went 0 for 4 here (147 g11 and 148 g10 are
+  medium shots where the boy beside Donald had the beak open). The default
+  is for a lone figure at long shot, not for a panel with a boy in it.
+- **161 g1 WENT LOUIE -> DONALD**: the engineer-continuity call at medium was
+  wrong; the maroon probe on g2 (Scrooge) held. Continuity from three pages
+  back is not evidence at speck scale.
+- **160 g5 AND g6 ARE NOT CAPTIONS TO THE REVIEWER**: the two yellow boxes
+  over the racing boats went to Hogg and `unknown` as voices, with the type
+  left `narration`. Say so to the reviewer; the type and the speaker now
+  disagree on those two.
+- **`other:` values otherwise stood**: `Horseshoe Hogg`, `the stewardess`,
+  `a River Belle workman`.
+
 ### Findings to paste into the next run (2026-09-11, fiftieth batch, PASS ONLY -- not yet reviewed)
 
 Three titles, 42 pages, **556 groups**: *The Great Steamboat Race* (Vol. 14)
