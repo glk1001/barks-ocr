@@ -6089,7 +6089,57 @@ hat), 23 type corrections. Mediums 32 of 460.
   the SEIPRAH chorus). Three `unknown`: 211 g2 (specks) and g6/g7 (eyes in
   the dark).
 
+### Findings to paste into the next run (2026-09-11, fifty-second batch, PASS ONLY -- not yet reviewed)
+
+One title, 10 pages, **127 groups**: *Three Un-Ducks* (Vol. 17, 099-108).
+**15 images read = 1.5 per page** (10 `page.png`, 5 generated crops or
+stacks), under the 3-per-page target; every cap call was sampled with
+`capscan`/`probe`. No missed text (audit 0/0/0), no text corrections, **6
+type corrections** (dialogue -> thought on 100 g6/g7/g12/g13 and 107
+g9/g10, all Donald's bubble-trailed balloons). **Mediums 8 of 127.** Speaker
+split: Donald 49, `nephews` 27, Louie 11, Huey 10, Dewey 8, narrator 9,
+`none` 11, Bernie 1, `other:Grandma Duck` 1.
+
+- **NO NEPHEW IS NAMED IN ANY LINE.** `name-grep` found no HUEY, DEWEY or
+  LOUIE; the 29 named nephew groups rest on a cap patch and a tail, or on
+  elimination.
+- **THE 27 COLLECTIVES ARE MOSTLY NO-CAP PANELS, NOT DECLINES.** The boys
+  are eyes in a chest (102 p3), scrubbed and bare-headed (102 p7-p8), indoors
+  (100 p5, 103 p2), under cod liver oil (108 p4), or tiny on a sled (099 p2);
+  each note quotes the panel's `0 blob(s) total` or a crown probe. The
+  declines that are real: two boys printing the same ink (099 p3 `#429f86`
+  twice, 108 p2 H147-151 twice), a gap tip over an H139 boy beside a clean
+  H110 green (100 g3), and two-tail or chorus balloons (099 g3, 107 g7).
+- **TEAL NAMED AS DEWEY TWICE**: 107 g5 (`#09a19a` H177, by elimination
+  against clean red and H135 green, high) and 099 g14 (`#3c9f8c` H168, a gap
+  tip, medium). Check the second first.
+- **THREE BOYS NAMED BY ELIMINATION**: 099 g11 and 108 g9 (Dewey,
+  `cap_colour` null), 106 g6 (Huey on a dark `#7a3e2c` patch, medium).
+- **GAP TIPS**: 099 g11 and g14 went one head left, per the Vol. 10/14 rule.
+  107 g6 did NOT: its tip ends 17px from the middle boy's beak and its ray
+  runs on to the left boy, who had just spoken g5, so it was written Huey at
+  medium. If the review moves it left, the rule holds even against nearness.
+- **101 g1 IS A THOUGHT THE PASS COULD NOT CORRECT.** A 1.3x crop shows a
+  bubble between the balloon and Donald's head, but both engines carry
+  `type_reviewed` from 2026-08-16 as `dialogue`, so `vision_apply` kept the
+  review's label and no queue shows it. The note says thought.
+- **`other:` values**: `Grandma Duck` only (108 g16). Bernie is in the
+  roster.
+
 ## Per-volume cap palette
+Vol. 17, one more title read 2026-09-11 (fifty-second batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Three Un-Ducks* | 108 p1, three boys in close-up (also 107 p7 and 099 p1) | `#e51a20` 1,300-4,400px, dull `#ab311f`/`#c81c1e`, dark `#7a3e2c` H14 on 106 p6 | `#4fa43f`-`#5ea458` H108-115 clean, `#3da357`/`#40a360` H135-139, shaded `#618a68`-`#6fb06a` S0.30-0.40 | `#00a5d7` 200-1,400px, `#11a0b7` H188; **teal `#3c9f8c`-`#09a19a` H164-177** | a coloured patch at the side or back of a black beanie; bare-headed indoors (100 p5, 102 p7-p8, 103 p2) |
+
+- The teal is Dewey's blue in shade: 107 p3 names it by elimination against
+  a clean red and an H135 green. But 099 p3 prints the same `#429f86` on two
+  boys, so a teal is not a name on its own.
+- The pinata and the foliage are `#009e47` H147 in the `green` band; two
+  boys wearing an H147-151 crown ink (108 p2) are not named by it.
+- Donald's bow tie is the roster red (106 p6 and 108 p6 at 600px).
+
 Vol. 14, one more title read 2026-09-11 (fifty-first batch):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
