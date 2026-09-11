@@ -5788,6 +5788,49 @@ panel views (four 0.6x panel views and one 2x tail crop on Trouble Indemnity
   batch's own 18 type rows (9 groups x 2 engines) outstanding across 460
   titles.
 
+### Findings to paste into the next run (2026-09-11, fiftieth batch, THREE OF THREE -- *The Custard Gun*, batch closed)
+
+Replaces that title's numbers in the pass-only section below. **22 speaker
+corrections in 136 groups = 16.2%, 21 in the 56-group nephew domain =
+37.5%.** No group added or merged; all four type proposals confirmed.
+Mirror clean: 136/136 on both engines, 122 `identified_by`, identical
+distributions. Highs 18 of 120 corrected (15.0%), mediums 4 of 16 (25.0%).
+
+**Batch total: 21 + 20 + 22 = 63 speaker corrections in 574 groups = 11.0%,
+55 of them in the 140-group nephew domain = 39.3%.** Mediums 11 of 47
+corrected (23.4%), highs 51 of 511 (10.0%). Under-naming was 32 of the 63.
+
+| direction | n |
+|---|---|
+| `nephews` -> a name | 16 (089 g1 Huey, g6 Huey, g12 Louie; 090 g3 Louie, g4 Dewey, g9 Huey; 091 g11 Louie; 092 g1 Louie; 093 g3 Louie, g6 Louie, g7 Huey; 097 g10 Dewey, g13 Huey; 098 g0, g4, g6 Huey) |
+| one nephew -> another | 4 (089 g4 Dewey -> Huey, 091 g13 Huey -> Dewey, 097 g2 Louie -> Dewey, 097 g6 Louie -> Dewey) |
+| Donald -> Huey | 1 (090 g5, the silhouette with the gun) |
+| Donald -> `other:the goat` | 1 (092 g8 `GRUNT?`) |
+
+- **SIXTEEN UNDER-NAMES ON A TEN-PAGE TITLE, EVERY ONE A BOY THE PASS WROTE
+  "NO INK" ON.** With Steamboat's 7 and Riches' 9 that is 32 in the batch,
+  half of all corrections. The three titles draw black beanies with a patch
+  at the back; front-on the patch is a sliver under the 25px floor, and the
+  reviewer named every such boy off the drawing. The rule for beanie
+  titles: probe each crown at S>=0.06 before writing collective, and name a
+  single-hue sliver at medium. A `nephews` on a beanie title is now the
+  most expensive thing the pass writes.
+- **THE OPEN-BEAK RULE IS DEAD: 0 FOR 4 ACROSS THE BATCH.** 089 g4 went
+  Dewey -> Huey (the tail's boy), 091 g11 went to Louie by cap, and Riches
+  172 g4/g12 went the same way. Read the tail; an open beak on the other
+  boy is not evidence.
+- **TWO GREEN-PATCH LOUIES WERE DEWEY (097 g2, g6)** and one `#08a29d` teal
+  (097 g4) held as Dewey: on this title the H140-150 patch is NOT reliably
+  the green segment -- the reviewer read 097 g6's `#0da842` patch as blue.
+  Record the hex, hold at medium, and let the elimination from a clean red
+  do the work.
+- **THE SILHOUETTE WITH THE GUN (090 g5) WAS A BOY**, not Donald: a sailor
+  cap in outline is not enough when three boys are in the panel.
+- **`GRUNT?` (092 g8) IS THE GOAT'S**: a balloon over the thicket with a
+  question mark is still the animal's voice; the reviewer added
+  `other:the goat`. The moose SNORTs and the `FUNG!` shots stood.
+- **`other:` values**: `the moose`, `the second moose`, `the goat`.
+
 ### Findings to paste into the next run (2026-09-11, fiftieth batch, TWO OF THREE REVIEWED -- *Riches, Riches, Everywhere!*)
 
 Replaces that title's numbers in the pass-only section below. **20 speaker
