@@ -5972,6 +5972,60 @@ two. Type proposals 12 (5 / 3 / 4), one text correction (Steamboat 151
   two-man whisper), `the kookaburras`; Custard `the moose`, `the second
   moose`. Riches 178 g12-15 (four `HALLO!` over specks) are `unknown`.
 
+### Findings to paste into the next run (2026-09-11, fifty-first batch, REVIEWED -- *The Golden Fleecing*, batch closed)
+
+Replaces the numbers in the pass-only section below. **31 speaker
+corrections, 22 of them in the 122-group nephew domain = 18.0%**
+(`review_findings.py` counts 499 groups because it sweeps two pages outside
+the pass; on the 465 passed groups that is 6.7%). All 23 type proposals were
+confirmed; 202 g18 went to `!` and 207 g6 to `POP`. The review added three
+`$` devices as Scrooge's thoughts (186 p5, 191 p6, 208 p5). Mirror clean:
+465/465 on both engines, 439 `identified_by`, identical distributions. Highs
+23 of 430 corrected (5.3%), **mediums 8 of 32 (25.0%)**.
+
+| direction | n |
+|---|---|
+| `nephews` -> a name | 10 (187 g1 Huey, 195 g11 Louie, 200 g8 Huey, 206 g3 Louie, 206 g4 Huey, 206 g6 Huey, 207 g11 Dewey, 208 g2 Dewey, 208 g12 Huey, 213 g5 Huey) |
+| one nephew -> another | 6 (190 g0 Huey -> Louie, 195 g4 Huey -> Louie, 200 g1 Huey -> Dewey, 206 g10 Huey -> Dewey, 209 g1 Dewey -> Huey, 211 g9 Huey -> Dewey) |
+| a name -> `nephews` | 3 (207 g2, 207 g20, 212 g14) |
+| an `other:` role | 6 (189 g2, 189 g4, 193 g0 -> `Eiprah Ali`; 204 g9 -> `Harpie Agnes`; 204 g11 -> Donald; 196 g14 `nephews` -> `the helicopter pilot`) |
+| silhouettes and specks | 3 (211 g2 `unknown` -> Donald, 211 g10 `nephews` -> Scrooge, 212 g13 Donald -> Scrooge) |
+| the review's own `$` adds | 3 (`none` -> Scrooge) |
+
+- **THE DIRECTION RULE FOR GAP TIPS IS DEAD: 0 FOR 6.** Every tip the pass
+  found between two heads and named by where its ray pointed was moved: 190
+  g0, 195 g4, 200 g1, 206 g10 and 209 g1 went to the boy on the tip's LEFT
+  (the head it had just passed), and 207 g20 went to `nephews`. With 211 g9
+  (a tip on the right boy's crown, moved to the middle boy) and 212 g13 (a
+  tip on Donald's cap, moved to Scrooge on his left) that is **seven of the
+  eight name-for-name swaps moving one figure LEFT**. The Vol. 10 finding
+  (a gap tip goes one head left) holds on Vol. 14: Barks's tails on this
+  title overshoot to the right. Name the left-hand head, at medium.
+- **TEN UNDER-NAMES, AGAIN ON "NO INK" BEANIES.** 206 g3/g4/g6 and 208 g2
+  were outdoor panels where the 15px census read 0 on all four bands, and
+  the review named all four boys off the drawing; 213 g5 was an indoor pair
+  the pass called bare-headed. Same lesson as the fiftieth batch: on a
+  beanie title an all-zero census at 15px is the floor, not the cap. Probe
+  every crown at 8px and S>=0.06, or crop, before writing collective.
+- **THE TEAL-AS-BLUE CALLS STOOD; THE TAILS DID NOT.** No correction moved a
+  name because its patch colour was misread -- the drifting olive, teal and
+  brown-red patches were read correctly. Every nephew swap was a tail.
+- **THE SALESMAN'S COSTUME KEY WAS WRONG.** The pass pinned Eiprah Ali to the
+  green robe and purple turban and called the purple-robed, green-turbaned
+  'brother' a different harpie; the review gave 189 g2, 189 g4 and 193 g0 to
+  Ali. A disguise is a costume that can be swapped between panels; do not
+  build a per-character key from one panel (the Vol. 4 costume-key finding
+  again).
+- **204 g11 `OH, CERTAINLY NOT! HEE! HEE! HEE!` IS DONALD'S**, sarcastic,
+  not an off-panel harpie's -- the pass read the HEE as the harpies'
+  signature laugh.
+- **THE `$` DEVICES ARE SCROOGE'S THOUGHTS**, as on *The Great Steamboat
+  Race*: the pass did not group them and the review added them.
+- **`other:` values** after review: `Eiprah Ali`, `a harpie`, `Harpie
+  Agnes`, `Harpie Fay`, `Harpie Bessie`, `Harpie Inez`, `the sleepless
+  dragon`, `the tailor`, `the helicopter pilot` (one typed without `the`,
+  normalised before the mirror), `the mice`, `Donald and Scrooge`.
+
 ### Findings to paste into the next run (2026-09-11, fifty-first batch, PASS ONLY -- not yet reviewed)
 
 One title, 32 pages, **460 groups**: *The Golden Fleecing* (Vol. 14,
