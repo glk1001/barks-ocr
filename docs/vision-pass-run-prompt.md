@@ -5972,7 +5972,84 @@ two. Type proposals 12 (5 / 3 / 4), one text correction (Steamboat 151
   two-man whisper), `the kookaburras`; Custard `the moose`, `the second
   moose`. Riches 178 g12-15 (four `HALLO!` over specks) are `unknown`.
 
+### Findings to paste into the next run (2026-09-11, fifty-first batch, PASS ONLY -- not yet reviewed)
+
+One title, 32 pages, **460 groups**: *The Golden Fleecing* (Vol. 14,
+182-213). **43 images read = 1.34 per page** (32 `page.png`, 2 panel files,
+9 generated crops or grids), under the 3-per-page target; every cap call was
+sampled with `capscan`/`probe`, and most contested tips came from
+`tailtip` rather than crops. Two groups added (a `?` thought over Scrooge's barrel on
+184 p8, a `!!` balloon over Donald on 193 p2). Missed text: **one, 207 p3
+`POP`** -- g6's box holds the POP lettering but its text duplicates g5's
+`BOOM / BAM` on both engines (the pass wrongly marked it `text_ok`); it is
+in `queue-missed.txt` as a text fix, not an add. One text correction (202
+g18 `PARSNIP PUDDING!` -> `!`, the thought circle over Scrooge's flying
+hat), 23 type corrections. Mediums 32 of 460.
+
+- **NO NEPHEW IS NAMED IN ANY LINE OF THE STORY.** `name-grep` and a direct
+  grep found no HUEY, DEWEY or LOUIE on any of the 32 pages, so every one
+  of the 86 named nephew groups (Huey 42, Louie 28, Dewey 16) rests on a
+  cap patch and a tail, and 38 stayed `nephews`. The review is the only
+  check on the palette here.
+- **THE CAPS ARE BLACK BEANIES WITH A SMALL PATCH, AND THE PATCH DRIFTS.**
+  Clean on 195 p3 (see the palette entry); elsewhere the green boy prints an
+  olive `#737148` H57 (186 p8), a shaded `#4b6d55` H130 S0.3 (190 p3), a
+  `#6aa26b` H120 under the saturation floor (199 p8); the blue boy prints
+  teal `#16a2a3` H180 (190 p2), `#4da4a8` H180-189 (199 p4) and `#16a1ab`
+  H184 (207 p4); the red boy prints dull `#8e421c` H20 (188 p8), `#9c402c`
+  H11 (200 p1), `#ad2d16` H9 (199 p8). Each was named against the clean
+  inks of the other two boys in the same panel, at medium where the patch
+  was the only evidence. Check the teal-as-blue calls first.
+- **THREE BOYS NAMED BY ELIMINATION** where the third patch was unreadable
+  and the other two were clean: 190 g4 (Louie, shaded green recorded), 208
+  g10 and 211 g8 (Louie, `cap_colour` null).
+- **SIX GAP TIPS NAMED BY THE TAIL'S DIRECTION AT MEDIUM**: 190 g0, 195 g4,
+  200 g1, 206 g10, 207 g20, 209 g1. Each tip stopped between two heads and
+  its ray ran into one of them; the pass named that boy rather than the
+  nearer head. If the review moves these, the direction rule does not hold
+  on this title.
+- **BARE-HEADED INDOORS, CAPPED OUTDOORS**: the boys read without caps at
+  home on 192 and 194 and at Scrooge's office on 213 p4; every group there
+  is `nephews` with the census header quoted per panel. 206 p2-p3 and 208
+  p2 are outdoor panels where all four bands read 0 at 15px -- the beanies
+  print plain black at that distance.
+- **ONE BOY CARRIES THE WHOLE OF 212**: the red-patched boy (Huey, five
+  different reds from `#852b1e` to `#f1171a`) does the dragon sequence alone
+  and is named on all eight groups, including three thoughts.
+- **THE DRAGON'S NOISES WENT `sound_effect -> dialogue`**: ROAR, HISS,
+  SNORF, WHEEZE, SNORT, the AH-AH-AAH before a sneeze (197 g15, 198 g2, 199
+  g9/10/12/13, 205 g7, 210 g11), plus the harpies' EEK/YIPE/SCREECH/YELP and
+  the mice's SQUEECH on 207, the salesman's SNIFF! SNIFF! (184 g8/g9) and
+  Scrooge's two bare `!` marks (186 g3/g4). The dragon's CHOMP (209 g4) and
+  SLAM (211 g5) and Scrooge's lip SMACK (202 g12) were left `sound_effect`
+  with the maker named. The reversed echo `HARPIES!` (205 g3/g4) is `none`
+  at medium; a reviewer may credit it to Donald and Scrooge.
+- **THOUGHT/SPEECH OVERRULED ON THE DRAWING**: 183 g12 and 192 g1 are bubble
+  trails stored as dialogue; 208 g9 is a pointed tail stored as thought; 207
+  g0 is a caption stored as dialogue; 190 g13 `KEEP OUT` is a door sign
+  stored as a sound effect.
+- **`other:` values** (check for drift): `Eiprah Ali` (the disguised
+  salesman, 26), `a harpie` (48), `Harpie Agnes` (25), `Harpie Fay`,
+  `Harpie Bessie`, `Harpie Inez`, `the sleepless dragon` (15), `the
+  tailor`, `the helicopter pilot`, `the mice`, `Donald and Scrooge` (205 g0,
+  the SEIPRAH chorus). Three `unknown`: 211 g2 (specks) and g6/g7 (eyes in
+  the dark).
+
 ## Per-volume cap palette
+Vol. 14, one more title read 2026-09-11 (fifty-first batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Golden Fleecing* | 195 p3, three boys from behind at the dock | `#e81c1e` 300-2,700px | `#4ea33e` H110.5 300-1,900px | `#00a5d5` 700-1,300px | a coloured patch at the side or back of a black beanie; drifts to olive, teal and brown-red (see the findings) |
+
+- Scrooge's coat is the roster red exactly (`#e61b1f`, 5,000-13,000px), as
+  on Cibola; so are the guidebook, the rockets and Donald's bow tie. His hat
+  band and Donald's cap are the roster blue. Foliage, the Argo and the
+  green sack are `#009e49` H147.7, in the `green` band -- the cap green is
+  in `leafgrn`.
+- Bare-headed indoors (192, 194, 213 p4); silhouettes on 187 p2, 192 p6,
+  195 p2, 211 p7.
+
 Vol. 14, two more titles read 2026-09-11 (fiftieth batch):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
