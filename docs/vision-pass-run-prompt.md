@@ -5788,7 +5788,84 @@ panel views (four 0.6x panel views and one 2x tail crop on Trouble Indemnity
   batch's own 18 type rows (9 groups x 2 engines) outstanding across 460
   titles.
 
+### Findings to paste into the next run (2026-09-11, fiftieth batch, PASS ONLY -- not yet reviewed)
+
+Three titles, 42 pages, **556 groups**: *The Great Steamboat Race* (Vol. 14)
+200, *Riches, Riches, Everywhere!* (Vol. 14) 221, *The Custard Gun* (Vol. 17)
+135. **78 images read = 1.86 per page** (29 / 29 / 20), under the 3-per-page
+target; 4 crops generated, all for bare devices or a letter. Three groups
+added (a `?` over the boys on Steamboat 146 p5, a `?` over the disguised
+claim jumper on Riches 174 p8, a `!` over a boy on Custard 093 p3). Missed
+text: **two `CAPTAIN` cap badges on Steamboat 154 p6 and 160 p6**, grouped
+by neither engine (157 g11 is the same lettering grouped); none on the other
+two. Type proposals 12 (5 / 3 / 4), one text correction (Steamboat 151
+`ZOWL!` -> `ZOW!`). Mediums 46 of 556 (16 / 14 / 16).
+
+- **CAPS COME OFF INDOORS ON BOTH Vol. 14 TITLES AND THE PASS FIRST WROTE
+  THAT AS A TITLE-WIDE ABSENCE.** Steamboat 146-151 (office, bin, airliner)
+  and Riches 164-165 (bin) are plain black caps with no ink in any census;
+  the roster inks appear the moment the boys are outdoors (Steamboat 152,
+  Riches 166). Three notes had `no roster ink on this title` written before
+  152 was read and had to be rewritten. Write the absence for the PANEL and
+  check an outdoor page before any wider claim.
+- **THE OPEN BEAK AGAINST THE TAIL, FOUR TIMES.** On Riches 172 g4 and g12
+  and Custard 089 g4 and 091 g11 the tail tip sat on or over one boy while
+  the OTHER boy had the open beak and the gesture. The pass followed the
+  Chickadee finding (070 g4) and named the open-beak boy at medium each
+  time, with the tail's boy in the note. Whether that holds is the thing
+  this review settles: if it does not, the four go back to the tail.
+- **TWO-TAIL BALLOONS ARE COLLECTIVES**: Steamboat 153 g0 and Custard 091 g8
+  each carry one balloon with two tails to two boys and were left `nephews`.
+- **THE CUSTARD GUN'S CAPS ARE BLACK BEANIES WITH A COLOURED PATCH AT THE
+  BACK, 60-400px,** and the green patch prints in the scenery ink
+  (`#009d49`-`#0da842`, H140-150, the `green` band) rather than the H111
+  `leafgrn` of the rest of Vol. 17. Every green-patch call there is Louie at
+  medium with the hex in the note (090 g11, 092 g9, 097 g6). Riches prints
+  its caps small too: 167 p5 and 169 p1 read only 160-340px of shaded ink
+  per crown at S0.4-0.8, and on 169 p1 the two unnamed boys shared one hue
+  (H157) and stayed collective.
+- **RICHES 179 PRINTS DEWEY IN RED AND THEN IN GREEN**: the caption names
+  DEWEY'S voice over a boy in a 385px `#e7191f` cap (g1) and Donald addresses
+  the boy in a 183px `#4ba23e` cap as DEWEY (g5). Both named Dewey by the
+  address with the printed colour recorded, per the colourist-error rule.
+- **THE `UNCA` / `UNCLE` SPLIT HELD ON ALL THREE**: every UNCLE SCROOGE is
+  Donald's, every UNCA a boy's; used as the anchor on every long shot and
+  silhouette where Donald and a boy could both speak.
+- **Sound effects that are voices**: five Scrooge sneezes (Steamboat 157-161),
+  two kookaburra laughs (Riches 169-170) and two moose SNORTs (Custard 096)
+  went `sound_effect -> dialogue`; a door-knock (Steamboat 150 g3) went the
+  other way; `RIVER` on a wrecked hull (160 g11) went `dialogue ->
+  background`. Custard gun shots (`FUNG!`) were left `sound_effect` with the
+  shooter as maker (Donald, the moose, a boy).
+- **`other:` values**: Steamboat `Horseshoe Hogg`, `the stewardess`, `a River
+  Belle workman`; Riches `Punter`, `Digger`, `the claim jumpers` (one
+  two-man whisper), `the kookaburras`; Custard `the moose`, `the second
+  moose`. Riches 178 g12-15 (four `HALLO!` over specks) are `unknown`.
+
 ## Per-volume cap palette
+Vol. 14, two more titles read 2026-09-11 (fiftieth batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Great Steamboat Race* | 152 p3, two boys from behind | `#e61a1f` 250-1,650px | `#4ca33e` H111 300-1,200px | not printed clean on any page read | coloured segment at the side or back of a black cap; plain black indoors on 146-151 |
+| *Riches, Riches, Everywhere!* | 166 p4, two boys on the crates | `#e61b1f` 160-720px, `#b2331e` dull in shade | `#4ca33c` H111 in light, `#16844e`-`#467c5b` H143-150 in shade, 160-1,300px | `#03a4d5` 300-1,200px, `#3ca783` H160 in shade | the same; plain black in the bin on 164-165 |
+
+- Scrooge's coat is the `#a04453` maroon on both (as on *The Tuckered
+  Tiger*), so a clean `#e61b1f` blob is a boy's cap or Donald's tie; his hat
+  band and Donald's sailor cap are the roster blue, and on Steamboat the
+  river and sky print the same `#00a5d5`.
+- On Steamboat the boys' green and red print on 152-153, 158-159 and 161
+  only; every other nephew call rests on a tail or an address.
+
+Vol. 17, one more title read 2026-09-11 (fiftieth batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Custard Gun* | 091 p6, three boys running | `#e51a1f` 150-1,650px, dull `#962d1b`-`#b8332b` from the side | `#009d49`-`#0da842` **H140-150, the `green` band, the same ink as the bushes** | `#02a4d6` 100-1,200px, `#08a29d` H180 in shade | a coloured patch at the back of a black beanie, mostly 60-400px |
+
+- The green patch is NOT in `leafgrn` on this title: read a `green` blob on
+  a crown as the cap, and expect it to share its hex with the foliage.
+
 Vol. 17, three more titles read 2026-09-10 (forty-ninth batch):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
