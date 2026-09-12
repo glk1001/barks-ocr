@@ -6094,10 +6094,11 @@ hat), 23 type corrections. Mediums 32 of 460.
 Replaces the numbers in the pass-only section below. **13 speaker
 corrections in 127 groups = 10.2%, all 13 in the 56-group nephew domain =
 23.2%.** All 6 type proposals confirmed; no group added, deleted or merged.
-Mirror clean: 127/127 on both engines, 125 `speaker_reviewed`, 116
+Mirror clean: 127/127 on both engines, **127 `speaker_reviewed`**, 116
 `identified_by`, identical distributions. Highs 11 of 119 corrected (9.2%),
-**mediums 2 of 8 (25.0%)**. Two groups left unreviewed on both engines (103
-g2, 107 g4) and handed back as `queue-stragglers.txt`.
+**mediums 2 of 8 (25.0%)**. The last two groups (103 g2, 107 g4) were
+reviewed on 2026-09-12 and both CONFIRMED as `nephews` -- neither carries
+`speaker_was` -- so the tally above is the title's final one.
 
 | direction | n |
 |---|---|
