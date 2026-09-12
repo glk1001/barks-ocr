@@ -6284,12 +6284,18 @@ Vol. 8 *Toasty Toys*, *No Place to Hide*, *Tied-Down Tools*, *Noise Nullifier*.
   Toys* put the boys in pyjamas, bandages or bare heads throughout. Establish it
   once per panel from the band row and move on; do not spend crops hunting ink
   that is not printed.
-- **`vision-status --titles --todo` STILL OMITS ONE-PAGERS**, so the work list has
-  to be built separately: walk `ONE_PAGERS` from `barks_fantagraphics.comic_book_info`,
-  resolve each through `title_pages`, and test "read" with `vision_status`'s own
-  rule (any group carrying `vision_note`). Of 155 one-pagers, **12 are read, 93
-  are unread and resolvable, and 50 resolve to no pages at all** -- those 50 are
-  not work, they simply are not in the restored volumes.
+- **`vision-status --titles --todo` STILL OMITS ONE-PAGERS**, so they have no work
+  list of their own. **`scripts/vision/one_pager_todo.py`, added with this batch,
+  rebuilds one** -- it walks `ONE_PAGERS`, resolves each through `title_pages`,
+  and keeps `vision_status`'s own test for "read": any group carrying
+  `vision_note`, never `speaker`. Run it instead of deriving the list again:
+
+      uv run --offline python scripts/vision/one_pager_todo.py
+
+  Of the 155 one-pagers, **50 resolve to no pages at all** and are not a backlog
+  -- they are simply not in the restored volumes. After this batch **32 are read
+  and 73 unread**; it was 12 and 93 before it, and the next batch comes off the
+  `--` rows, oldest first.
 - **`other:` values used** (8 distinct): `the doctor` (*Horseshoe Luck*, *Best
   Laid Plans*), `the antique dealer` and `the expressman` (*The Genuine
   Article*), `the toy salesman` (*The True Test*), `the tree salesman`, `the
