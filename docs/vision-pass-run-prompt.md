@@ -6181,6 +6181,42 @@ split: Donald 49, `nephews` 27, Louie 11, Huey 10, Dewey 8, narrator 9,
 - **`other:` values**: `Grandma Duck` only (108 g16). Bernie is in the
   roster.
 
+### Findings to paste into the next run (2026-09-12, the first two Vol. 5 one-pagers)
+
+*Fashion in Flight* (026) and *Turn for the Worse* (027), passed and reviewed
+the same day. **22 groups, 1 speaker correction -- and it belongs to a group
+the review ADDED, not to any call the pass made.** Highs 0 of 9 and 0 of 12
+corrected; no type corrections, no text corrections, no `other:` drift. **3
+images for 2 pages** (one `page.png` each, one 2.6x crop).
+
+- **A ONE-PAGER IS NOW PREPPED LIKE ANY OTHER TITLE.** `vision-prep --title
+  "Fashion in Flight"` works as of 2026-09-12, so the hand-built out-dir the
+  Vol. 11 nine needed is gone. Run them one title at a time: each then carries
+  its OWN cast anchors, where Vol. 11's queue had to name *The Golden Helmet*
+  and *The Gilded Man* and ran with `story_cast: []`. `vision-status` still
+  leaves one-pagers out of the work list, so they are asked for by name and
+  never offered by `--todo`.
+- **THE DUPLICATE-STRING TRAP RECURRED, AND IT WAS AVOIDABLE.** 026 prints the
+  `313` plate on panel 4 AND panel 5. The pass grouped the first, missed the
+  second, and the missed-text audit called the page clean because
+  `visible_text` held `313` once and that single string matched the single
+  group -- so the reviewer had to add the group by hand. This is the known
+  second-copy blind spot, and the zero-image caption-box sweep exists for
+  exactly it and was not run. Record each occurrence separately (026's capture
+  now lists `313` twice) and run that sweep before handing back.
+- **A SEVEN-PANEL GAG IS THE CHEAPEST UNIT IN THE CORPUS.** Two or three
+  characters, no nephews, no cap work at all, every call resting on a traced
+  tail or on what the line says. Both pages went high across the board and
+  both came back untouched. On a one-pager with no nephews, spend nothing on
+  the cap tooling -- read the tails and go.
+- **DAISY ANSWERS THE GAG.** 026 g8 `WELL?` is Daisy at her own house, named
+  from the tail plus Donald's own thought two panels earlier ("ROAR PAST
+  DAISY'S HOUSE"); a 2.6x crop settles the bow and dress. The visitor on 027
+  is `other:the insurance man`, role-named after the corpus habit (`the ticket
+  agent`, `the taxi driver`) rather than `the stranger`, which is only how
+  Donald addresses him.
+- **`other:` values**: `the insurance man` (027, 3 groups). Nothing else.
+
 ## Per-volume cap palette
 Vol. 17, one more title read 2026-09-11 (fifty-second batch):
 
