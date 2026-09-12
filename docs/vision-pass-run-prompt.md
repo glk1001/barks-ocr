@@ -6217,6 +6217,68 @@ images for 2 pages** (one `page.png` each, one 2.6x crop).
   Donald addresses him.
 - **`other:` values**: `the insurance man` (027, 3 groups). Nothing else.
 
+### Findings to paste into the next run (2026-09-12, twenty one-pagers Vols. 5-8, REVIEWED -- batch closed)
+
+All twenty reviewed and mirrored, 290/290 on both engines. **13 speaker
+corrections in 290 groups, 4.5%**; in the nephew domain **12 of 90, 13.3%**.
+By the confidence the pass wrote: **high 13/284 = 4.6%, medium 0/6 = 0.0%**.
+**Zero wrong-nephew swaps, zero over-namings, zero Donald-against-nephew.** All
+25 type corrections were the pass's own proposals, confirmed; 0 text
+corrections, 0 missed text. Cost was 1.6 images per page.
+
+- **NINE OF THE THIRTEEN ARE ONE TITLE, AND ALL NINE ARE ONE SENTENCE I WROTE.**
+  *Tied-Down Tools* came back **9 of 17 groups, 100% of its nephew domain**,
+  every one `nephews` -> a name, and **the reviewer recorded a cap colour on all
+  nine** -- red, green, blue, in three clean cascades of three. My note said
+  *"Bare-headed throughout this story, so every nephew call here is a
+  collective"*, written off one band row (`red=0 green=0 blue=10`) on panel 2
+  and the pyjamas in the opening panels. The caps are there later in the story.
+  This is exactly the failure `roster.txt` names -- **a cap fact is a per-panel
+  fact** -- and a title-wide absence claim copies itself into every note in the
+  domain and is wrong in every one of them.
+- **THE CONTROL EXPERIMENT IS IN THE SAME BATCH.** *King-Size Cone* has the
+  identical structure -- three cascades of three balloons over three boys -- and
+  came back **0 corrections in 9 names**, because there I cropped each panel and
+  read the bands. Same shape, opposite outcome, and the only difference is one
+  tiled image. **A three-balloon cascade over three boys is where both the wins
+  and the losses concentrate on a one-pager: crop it, every time, even when the
+  page looks bare-headed.** The nine names in *King-Size Cone*, three in *Noise
+  Nullifier*, three in *Horseshoe Luck* and two in *Tunnel Vision* all survived
+  untouched -- eighteen names made, eighteen held.
+- **A HUE GATE CAN BE TOO STRICT.** *Sleepy Sitters* 214 g1/g2 went `nephews` ->
+  Dewey and Louie with blue and green recorded. I had measured those crowns at
+  `#56943e` (H97) and `#49a34b` (H121) and rejected both for not being the
+  Vol. 7 cap green at H111. The reviewer named them anyway. Treat the H111
+  figure as the centre of a band, not a gate: an off-hue crown on a boy's head
+  in a cascade is still a cap, and elimination across the three does the rest.
+- **THE ONE NON-NEPHEW REVERSAL IS A TWO-HANDER TAIL.** *The True Test* 211 g6,
+  `I HAVEN'T TOSSED ONE OF THESE BOOMERANGS SINCE I WAS A KID!`, went
+  `other:the toy salesman` -> **Donald**. I gave it to the adult because the
+  line reads as an adult reminiscing and he is the one who throws it. Register
+  is not evidence: on a two-hander with both figures drawn, trace the tail.
+- **A CENSUS ZERO ON A SKULL IS STILL NOT AN ABSENCE.** *Bean Taken* 102 g8 went
+  `nephews` -> Huey with red recorded, against my note that the census put no
+  CAP-INK on either skull it found in that panel.
+- **THE LOGO IS ONE GROUP, NOT TWO -- SAY SO INSTEAD OF TYPE-CORRECTING BOTH
+  HALVES.** The review merged `Donald / Duck` + `By / Walt Disney` into a single
+  group on *Jumping to Conclusions* 210 and *Slippery Shine* 215, which is why
+  the batch closed at 290 groups against the 292 applied. Both are titles where
+  the engine split the logo and I proposed a type change on each half. When the
+  logo arrives as two groups, flag the split in `note` and let the review merge
+  it; correcting both halves just entrenches the split.
+- **Medium was not the risk this time, but there were only six of them.** 0 of 6
+  medium corrected against 13 of 284 high, which inverts the usual pattern
+  (31.0% against 7.3% on *Lost in the Andes!*). On a one-pager the pass is
+  mostly either certain or forced, so the medium sample is too small to read
+  anything into.
+- **Two tool notes.** `--since` earned its place again: two `type_was` rows
+  dated 2026-08-10 (*Bean Taken* 102 g4, *Sorry to be Safe* 103 g8) are durable
+  survivors of an older adjudication and were correctly excluded from this
+  batch's count. And `review_findings.py` **cannot be run corpus-wide with
+  `--since`**: it takes the first argument not starting with `-` as the title,
+  so the flag's value is swallowed as a title name and the run dies with a
+  `KeyError`. Run it per title.
+
 ### Findings to paste into the next run (2026-09-12, twenty one-pagers, Vols. 5-8, PASS ONLY -- not yet reviewed)
 
 Twenty one-pagers in one batch, oldest first off the `ONE_PAGERS` work list:
