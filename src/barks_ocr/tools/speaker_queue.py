@@ -238,6 +238,31 @@ def _sample(calls: list[Call], per_name: int, per_title: int) -> list[Call]:
     return calls
 
 
+def _write_queue(out: Path, lines: list[str], *, entries: int) -> None:
+    """Write the speaker-review queue, or remove it when there is nothing to review.
+
+    AN EMPTY QUEUE WRITES NO FILE, and removes one already at that path. ``lines``
+    always carries the header, so writing regardless would leave a header-only
+    file -- which reads as "there is a queue here" to anyone listing the out-dir,
+    and a stale one from an earlier run says it in the reviewer's own words.
+
+    DEFENSIVE, not a live fix: ``main`` exits on the selector check before it can
+    reach here with nothing selected, and ``_sample`` only ever thins a non-empty
+    list. The guard keeps the rule true if either of those changes.
+
+    Args:
+        out: the queue file to write, before ``~`` expansion.
+        lines: the header plus one line per queued call.
+        entries: how many calls were actually selected.
+
+    """
+    path = out.expanduser()
+    if not entries:
+        path.unlink(missing_ok=True)
+        return
+    path.write_text("\n".join(lines) + "\n")
+
+
 @app.command(help="Build a kivy-editor speaker-review queue from what is already annotated.")
 def main(  # noqa: PLR0913
     volumes_str: VolumesArg = "",
@@ -314,6 +339,13 @@ def main(  # noqa: PLR0913
         print("No calls match those selectors. Speaker values present:")
         for value, count in Counter(c.speaker for c in calls).most_common():
             print(f"  {count:>4}  {value}")
+        # THIS EXIT IS BEFORE THE WRITE, so the rule has to be applied here too.
+        # Without it the previous run's queue survives untouched -- same name,
+        # same stale header, entries for groups that have since been reviewed --
+        # and that is the file the reviewer then works from. Measured 2026-08-31
+        # on Trail of the Unicorn: a queue still claiming "280 annotated, 1
+        # queued" after the last straggler was done.
+        _write_queue(out, [], entries=0)
         raise typer.Exit(code=1)
     calls = kept
 
@@ -337,7 +369,7 @@ def main(  # noqa: PLR0913
             lines.append(call.line(engine.value))
             tally[f"{kind}: {call.speaker}"] += 1
 
-    out.expanduser().write_text("\n".join(lines) + "\n")
+    _write_queue(out, lines, entries=len(selected))
 
     print(f"{annotated} annotated call(s) across {len(titles)} title(s); {len(selected)} queued.")
     for label, count in sorted(tally.items()):

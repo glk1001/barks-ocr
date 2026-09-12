@@ -365,6 +365,14 @@ def main(  # noqa: PLR0913
     if not found:
         print(f"Nothing outstanding across {read} title(s).")
         _report_skipped(skipped)
+        if out is not None:
+            # Same rule as the queue writers: nothing outstanding means NO file,
+            # and a stale one from an earlier run is removed rather than left to
+            # be opened. Not writing is not enough on its own -- measured
+            # 2026-09-12, a queue still claiming "6 outstanding" survived a run
+            # that printed "Nothing outstanding", and that is the file a
+            # reviewer then works from.
+            out.expanduser().unlink(missing_ok=True)
         return
 
     _report(found, verbose=verbose)

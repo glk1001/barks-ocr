@@ -1427,8 +1427,21 @@ def _stamped(capture: dict, capture_model: str | None) -> dict:
 
 
 def _write_queue(queue_out: Path, header: str, lines: list[str]) -> int:
-    """Write a de-duplicated kivy-editor queue file. Returns the entry count."""
+    """Write a de-duplicated kivy-editor queue file. Returns the entry count.
+
+    AN EMPTY QUEUE WRITES NO FILE, and removes one already sitting at that path.
+
+    A header-only file is worse than no file. It reads as "there is a queue
+    here" to anyone listing the out-dir, and a stale one left by an earlier run
+    says it in the reviewer's own words -- same name, same header, yesterday's
+    contents. Skipping the write alone would not fix that: the stale file is
+    exactly what gets opened. So the absence is made true rather than merely
+    left unwritten, and "no file" is what "nothing outstanding" looks like.
+    """
     unique = sorted(set(lines))
+    if not unique:
+        queue_out.unlink(missing_ok=True)
+        return 0
     queue_out.parent.mkdir(parents=True, exist_ok=True)
     queue_out.write_text(header + "\n".join(unique) + "\n")
     return len(unique)
@@ -1696,7 +1709,11 @@ def main(  # noqa: PLR0913
     for path, what, lines in queues:
         if path is not None and not dry_run:
             header = f"# vision-check {what} (volume {volume}, engine {engine.value})\n"
-            print(f'Review queue ({what}): "{path}" ({_write_queue(path, header, lines)} entries).')
+            written = _write_queue(path, header, lines)
+            if written:
+                print(f'Review queue ({what}): "{path}" ({written} entries).')
+            else:
+                print(f"Review queue ({what}): nothing outstanding, so no file was written.")
 
     # Mirror before the closing line, so the tally reports what actually
     # happened on both engines. The corpus carries both all the way through so

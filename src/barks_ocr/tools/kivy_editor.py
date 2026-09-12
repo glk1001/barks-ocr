@@ -280,8 +280,15 @@ class EnginePane:
 
 
 def load_queue_file(queue_file: Path) -> list[QueueEntry]:
-    """Parse a queue file; each line: volume page engine group_id."""
-    entries = []
+    """Parse a queue file; each line: volume page engine group_id.
+
+    A MISSING FILE IS NOT AN ERROR HERE. The queue tools write no file at all
+    when nothing is outstanding, so absence is the ordinary signal for "nothing
+    to review" and must not arrive as a traceback out of ``read_text``.
+    """
+    entries: list[QueueEntry] = []
+    if not queue_file.exists():
+        return entries
     for raw_line in queue_file.read_text().splitlines():
         line = raw_line.strip()
         if not line or line.startswith("#"):
@@ -3504,7 +3511,13 @@ def main(  # noqa: PLR0913
             raise typer.BadParameter(msg)
         queue = load_queue_file(queue_file)
         if not queue:
-            logger.error(f'Queue file "{queue_file}" contains no valid entries.')
+            if queue_file.exists():
+                logger.error(f'Queue file "{queue_file}" contains no valid entries.')
+            else:
+                logger.error(
+                    f'No queue file at "{queue_file}". The queue tools write none when'
+                    " nothing is outstanding, so there is nothing to review."
+                )
             raise typer.Exit(1)
     else:
         if not volume or not fanta_page:

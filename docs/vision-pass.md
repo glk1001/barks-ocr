@@ -37,6 +37,14 @@ of. They are different jobs — one is a transcription check, the other is a loo
 at the art — and the correction rate of each is only meaningful measured alone.
 `--speaker-confidences` selects which confidences to queue, default `low`.
 
+**An empty queue writes no file, and removes one already at that path.** A
+header-only file reads as "there is a queue here" to anyone listing the out-dir,
+and a stale one left by an earlier run says it in the reviewer's own words --
+same name, same header, yesterday's contents. Skipping the write alone would not
+fix that, because the stale file is exactly what gets opened, so the absence is
+made true. No file means nothing outstanding, and the editor says so plainly
+instead of failing when handed a path that is not there.
+
 `--out-dir` defaults to `~/barks-vision/<title-slug>`. **Not `/tmp`**: a
 snap-confined Firefox gets a private `/tmp` namespace and cannot open a report
 written there, whatever the permissions say.
