@@ -6089,6 +6089,60 @@ hat), 23 type corrections. Mediums 32 of 460.
   the SEIPRAH chorus). Three `unknown`: 211 g2 (specks) and g6/g7 (eyes in
   the dark).
 
+### Findings to paste into the next run (2026-09-12, fifty-second batch, REVIEWED -- *Three Un-Ducks*, batch closed)
+
+Replaces the numbers in the pass-only section below. **13 speaker
+corrections in 127 groups = 10.2%, all 13 in the 56-group nephew domain =
+23.2%.** All 6 type proposals confirmed; no group added, deleted or merged.
+Mirror clean: 127/127 on both engines, 125 `speaker_reviewed`, 116
+`identified_by`, identical distributions. Highs 11 of 119 corrected (9.2%),
+**mediums 2 of 8 (25.0%)**. Two groups left unreviewed on both engines (103
+g2, 107 g4) and handed back as `queue-stragglers.txt`.
+
+| direction | n |
+|---|---|
+| `nephews` -> a name | 11 (099 g4 Huey, g5 Dewey, g6 Louie, g8 Dewey, g9 Louie; 100 g3 Dewey, g8 Huey; 108 g3 Dewey, g4 Louie, g6 Dewey, g7 Huey) |
+| a name -> `nephews` | 1 (099 g14 Dewey, the HAW! gap tip) |
+| one nephew -> another | 1 (107 g2 Louie -> Dewey, cap `green` -> `blue`) |
+
+- **A WHOLE-PANEL ZERO AT A 6px FLOOR IS STILL NOT AN ABSENCE, AND PROBING
+  IS NOT LOOKING.** Ten of the eleven under-names came back carrying a
+  `cap_colour` the reviewer supplied where the pass had written null --
+  099 p2 (three boys on a sled, every band `0 blob(s) total` at 6px, each
+  crown probed), 100 p5 (indoors), 108 p4 (under cod liver oil). The pass
+  did what the last two batches asked, dropped the floor to 6-10px and
+  probed every crown, and it was still wrong every time: `probe.py` reports
+  the *tint over a box*, so on a 30px crown under goo or shadow it returns
+  the goo. The rule that actually holds: **crop the crowns at 8-12x before
+  writing a collective on a beanie title.** With the fiftieth batch's 32 of
+  63 and the fifty-first's 10, under-naming on "no ink" beanies is now the
+  largest correction class three batches running.
+- **ABOVE ~H140 A GREEN-BAND CROWN IS AS OFTEN DEWEY AS LOUIE.** Both
+  name-level colour calls the review moved were mine reading a cyan-leaning
+  green as Louie: 107 g2 `#0a9c60` H155 S0.94 -> Dewey/blue, and 108 g3
+  `#099e57` H151 -> Dewey -- while 108 g4's `#0b974b` H147, the *same panel*,
+  is Louie. Hue alone does not separate them up there. Below H140 nothing
+  was corrected: every H108-139 call stood.
+- **THE IDENTICAL-INK TIE WAS OVERRULED AGAIN, TWICE.** 099 g8/g9, the
+  `#429f86` pair the pass declined because both boys printed it, came back
+  Dewey then Louie. As on *The Purloined Putty*: a same-value tie is the
+  sampler, not the printing.
+- **THE GAP-TIP RULE HELD AS A TAIL TEST AND FAILED AS A NAME.** 099 g14
+  went Dewey -> `nephews`: the tip between two heads was read one head left
+  onto the teal boy, and the reviewer would not take the name -- though
+  099 g8's teal boy IS Dewey. Where a cap backs the gap tip it survives;
+  where the cap is the only evidence it does not. 100 g3, also a gap tip,
+  was named Dewey -- the left-hand reading was right.
+- **THE HEDGE LANDED ON THE RIGHT GROUPS.** Both corrected mediums are the
+  two green-band colour calls above; the other six mediums stood, including
+  107 g6, the tip that went *against* the gap-tip rule.
+- **101 g1 IS STILL `dialogue`.** The pass's note argues thought off a
+  bubble visible at 1.3x, but the group carries `type_reviewed` from
+  2026-08-16 and the review did not revisit it. The disagreement is on
+  record in `vision_note` and nowhere else.
+- **`other:` values** after review: `Grandma Duck` only. Bernie is in the
+  roster.
+
 ### Findings to paste into the next run (2026-09-11, fifty-second batch, PASS ONLY -- not yet reviewed)
 
 One title, 10 pages, **127 groups**: *Three Un-Ducks* (Vol. 17, 099-108).
@@ -6136,6 +6190,11 @@ Vol. 17, one more title read 2026-09-11 (fifty-second batch):
 - The teal is Dewey's blue in shade: 107 p3 names it by elimination against
   a clean red and an H135 green. But 099 p3 prints the same `#429f86` on two
   boys, so a teal is not a name on its own.
+- **Reviewed 2026-09-12: the split is at about H140.** H108-139 is the cap
+  green (every such call stood); H147-177 is Dewey's blue as often as it is
+  Louie's green -- `#0a9c60` H155 and `#099e57` H151 both came back Dewey,
+  while `#0b974b` H147 in the same panel as the second is Louie. Do not
+  write Louie off a green-band hue above H140 without a crop.
 - The pinata and the foliage are `#009e47` H147 in the `green` band; two
   boys wearing an H147-151 crown ink (108 p2) are not named by it.
 - Donald's bow tie is the roster red (106 p6 and 108 p6 at 600px).
