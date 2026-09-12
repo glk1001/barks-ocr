@@ -117,8 +117,10 @@ rather than settled:
   never does across many titles, suspect the colour is still being written in
   from the convention rather than read off the page.
 
-Known blockers, unchanged: **155 one-pagers cannot be prepped at all**, and 24
-pages have no prelim OCR.
+Known blockers: ~~**155 one-pagers cannot be prepped at all**~~ **Fixed
+2026-09-12** — a located one-pager now preps like any other page, with `--title`
+or with `--volume` and `--pages`; see the entry further down. 24 pages still
+have no prelim OCR.
 
 ---
 
@@ -793,6 +795,10 @@ gets covered too.
 Open threads. The question it was for, whether a union of unrelated casts
 degrades the closed set, can be tested separately and cheaply with `--volume`
 and `--pages` across a title boundary, which exercises the same warning path.
+
+> **2026-09-12: no longer impossible.** One-pagers prep by title now, each with
+> its own cast, so a one-pager unit is available if it is ever wanted. The union
+> question is unchanged and still needs the `--volume`/`--pages` route.
 
 Five things to measure, in this order:
 
@@ -3517,11 +3523,16 @@ noise or a symbol.
   ever wants one spelling.
 - **24 pages have no prelim OCR at all** — see below. The tools no longer trip over
   them, but the OCR still needs to be run.
-- **One-pagers cannot be prepped at all.** All 155 `ONE_PAGERS` fail to resolve —
-  128 `TitleNotFoundError`, 27 `KeyError` — because they have no `.ini`, and no
-  one-pager OCR exists in the corpus under any title. This is why the trial has
-  no one-pager unit. Whether they are ever worth capturing is open; they would
-  need OCR first, and then a way to address them that is not a story title.
+- ~~**One-pagers cannot be prepped at all.**~~ **Fixed 2026-09-12.** All 155
+  `ONE_PAGERS` used to fail to resolve — 128 `TitleNotFoundError`, 27 `KeyError`
+  — because they have no `.ini`. Two helpers in `barks-fantagraphics` asked for a
+  `ComicBook` they did not actually need: `SpeechGroups._iter_prelim_pages`
+  wanted only a page map, and `TitlePanelBoxes.get_page_panel_boxes` only the
+  panel-segments file. Both now resolve a located one-pager straight from
+  `ONE_PAGER_LOCATIONS`, so `--title` and `--volume` with `--pages` both work.
+  The other half of the old claim was simply wrong: the OCR was there all along,
+  in the host volume under the page's own number. `vision-status` still leaves
+  one-pagers out of the story work list, deliberately.
 - ~~**136 pages of OCR are unreachable, all in vol 2.**~~ **Fixed 2026-08-02** by
   regenerating vol 2's panel segments. The staleness guard had been firing
   correctly — the restored PNGs were rebuilt after the panel segments — and
