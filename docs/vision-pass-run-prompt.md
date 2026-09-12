@@ -6217,7 +6217,109 @@ images for 2 pages** (one `page.png` each, one 2.6x crop).
   Donald addresses him.
 - **`other:` values**: `the insurance man` (027, 3 groups). Nothing else.
 
+### Findings to paste into the next run (2026-09-12, twenty one-pagers, Vols. 5-8, PASS ONLY -- not yet reviewed)
+
+Twenty one-pagers in one batch, oldest first off the `ONE_PAGERS` work list:
+Vol. 5 *Machine Mix-Up*; Vol. 6 *Bird Watching*, *Horseshoe Luck*, *Bean Taken*,
+*Sorry to be Safe*, *Best Laid Plans*, *The Genuine Article*; Vol. 7 *Jumping to
+Conclusions*, *The True Test*, *Ornaments on the Way*, *Too Fit to Fit*, *Tunnel
+Vision*, *Sleepy Sitters*, *Slippery Shine*, *Fractious Fun*, *King-Size Cone*;
+Vol. 8 *Toasty Toys*, *No Place to Hide*, *Tied-Down Tools*, *Noise Nullifier*.
+**292 groups, 27 type corrections, 0 text corrections, 0 missed text.**
+**32 images over 20 pages = 1.6 per page** (one `page.png` each plus 12 crops).
+
+- **THE STORY LOGO IS TYPED THREE DIFFERENT WAYS AND IS WORTH CHECKING ON EVERY
+  ONE-PAGER.** It came stored as `title` on most, as `background` on *Jumping to
+  Conclusions* (both the logo and the byline, 2 groups), and as `narration` on
+  *Too Fit to Fit* and on both halves of *Slippery Shine*. **6 of the batch's 27
+  type corrections are the logo alone.** It costs nothing to look at g0 and g1
+  before reading anything else.
+- **A ONE-PAGER'S TYPE ERRORS CLUSTER ON THE SOLO-DONALD STRETCH, SO CHECK THE
+  WHOLE STRETCH ON ONE CROP.** *Toasty Toys* panels 2, 3 and 4 are all stored
+  `dialogue` and are all cloud-plus-bubble-trail thoughts; one 1.3x stack of the
+  three necks overruled all three at once. *Machine Mix-Up* was the same shape
+  (2 of its 3). When a page has four consecutive panels of Donald alone, read
+  their balloon necks together rather than one at a time -- and note that the
+  engine often gets ONE of the run right, which is the tell that the others are
+  wrong.
+- **CHARACTER-MADE NOISE IS THE OTHER HALF OF THE TYPE WORK: 15 OF 27.** `WAK!`,
+  `GULP!`, `WHEE!`, `OUCH!`, `UMPH!`, snoring, and the boys' mouth-made aeroplane
+  noises (`BZZAZZ!`, `RRAZZZ!`, `ROAR!`, `ZOOM!`, `ZOW!`) all went
+  `sound_effect` -> `dialogue` with the maker named. **The clincher is usually in
+  the dialogue, not the drawing**: *Noise Nullifier* g4 says `YOU KIDS ARE MAKING
+  SO MUCH NOISE`, which settles five groups in one line. Impacts (`CLONK!`,
+  `WHOP!`, `CRACK!`, `BAM!`, `THUD!`, `CLICK!`) stayed `sound_effect` / `none`.
+- **VERIFY A TEXT CORRECTION AT 4x BEFORE PROPOSING IT -- THIS BATCH'S ONLY
+  CANDIDATE WAS WRONG.** *Noise Nullifier* 141 g8 reads `WE'LL` on `page.png`
+  and the stored text says `WELL`; at 4x the art has **no apostrophe** and the
+  stored text is right. The batch closed at **0 text corrections**, and the one
+  that looked certain off the overview would have been a false correction. This
+  is the roster's own warning firing exactly as written.
+- **RUN THE CAPTION SWEEP, BUT CROP ITS HIT BEFORE WRITING IT UP.** It fired once
+  in twenty pages -- *Toasty Toys* 077 panel 3, `130x438 fill=0.82 border=3/4
+  overlap=0% NO GROUP` -- and a 3x crop shows a plain yellow wall with doorframe
+  hatching: no border box, no lettering. A false positive. The sweep is still
+  worth its zero cost, but its output is a candidate, not a finding.
+- **THE CHEAPEST NAMES IN THE CORPUS COME FROM THE DIALOGUE, NOT THE CAP.**
+  *Tunnel Vision* names two groups **Louie** for no images at all: g1 addresses
+  HUEY, g2 (the same speaker, continuing) addresses DEWEY, so elimination leaves
+  Louie -- and g3 corroborates it independently with `LOUIE'S HOGGING THE VIEW`.
+  The boys are bare-headed indoors and every band row in those panels is
+  `red=0 green=0 blue=0`, so no cap could ever have done it.
+- **A THREE-BALLOON CASCADE OVER THREE CAPPED BOYS IS THE BEST VALUE IMAGE ON A
+  ONE-PAGER.** *King-Size Cone* turned **nine** would-be collectives into nine
+  names off two stacked crops: panels 2, 4 and 6 each show three boys wearing
+  clean blue, green and red bands, one tail each. **Crop each panel rather than
+  carrying the left-to-right order across** -- panel 2 was cropped separately and
+  only then found to match. *Noise Nullifier* panel 7 did the same for three more,
+  where cap band AND shirt trim carry the same ink on each boy.
+- **TWO TAILS ON ONE BALLOON IS A COLLECTIVE, NOT THE NEAREST CAP.** *Bird
+  Watching* 038 g12 `ULP!` sits directly above a clean red cap, and the cheap
+  read is Huey. At 3x the balloon has **two** pointed tails, landing on the
+  red-capped and the blue-capped boy. Two boys share the utterance, so it is
+  `nephews` -- and the clean cap under the balloon is a trap.
+- **ONE-PAGERS ARE MOSTLY BARE-HEADED, SO MOST NEPHEW CALLS ARE FORCED.** Indoor
+  domestic gags dominate: *Jumping to Conclusions*, *Tied-Down Tools*, *Tunnel
+  Vision*, *Best Laid Plans*, *No Place to Hide*, *Fractious Fun* and *Toasty
+  Toys* put the boys in pyjamas, bandages or bare heads throughout. Establish it
+  once per panel from the band row and move on; do not spend crops hunting ink
+  that is not printed.
+- **`vision-status --titles --todo` STILL OMITS ONE-PAGERS**, so the work list has
+  to be built separately: walk `ONE_PAGERS` from `barks_fantagraphics.comic_book_info`,
+  resolve each through `title_pages`, and test "read" with `vision_status`'s own
+  rule (any group carrying `vision_note`). Of 155 one-pagers, **12 are read, 93
+  are unread and resolvable, and 50 resolve to no pages at all** -- those 50 are
+  not work, they simply are not in the restored volumes.
+- **`other:` values used** (8 distinct): `the doctor` (*Horseshoe Luck*, *Best
+  Laid Plans*), `the antique dealer` and `the expressman` (*The Genuine
+  Article*), `the toy salesman` (*The True Test*), `the tree salesman`, `the
+  store clerk`, `a rival shopper` and `a shopper in the crowd` (*Ornaments on the
+  Way*). The indefinite article on the last two is deliberate: they are two
+  different shoppers in adjacent panels filling one role, and a crowd voice that
+  cannot be pinned to a figure.
+- **Two boxes flagged rather than changed**, both an engine merging two balloons
+  into one group with correct text: *Ornaments on the Way* g17 and *Fractious
+  Fun* g8. Said in `note`, not corrected.
+
 ## Per-volume cap palette
+
+Vols. 5-8 one-pagers, read 2026-09-12 -- and the headline is that the
+one-pagers mostly do NOT exercise the volume palettes at all:
+
+| title | reference | what the caps do |
+|---|---|---|
+| *Machine Mix-Up* (5) | none | Donald alone in all 7 panels; every "CAP-INK" hit is a prop -- the blue `#00a5d7` is the logo lettering, the red `#e21c1f` his bow tie |
+| *Horseshoe Luck* (6) | 039 p4, three boys in a row | green `#54ad41` / blue / red `#e61b1f` bands; p5's band row reads `red=0 green=0 blue=0` yet the census finds `#4ba340` 287px on the lone boy's crown |
+| *Bean Taken* (6) | 102 p2 counter boy | cap green `#4da33f` (the Vol. 6 H110.6 ink) on one boy; red `#e61b1f` 133+186px in p6 |
+| *King-Size Cone* (7) | 241 p2, p4 and p6 | the batch's cleanest: blue, green, red bands, big and lit, on three panels |
+| *Noise Nullifier* (8) | 141 p7 outdoors | blue/red/green on BOTH cap band and shirt trim, agreeing on all three boys |
+| *Sleepy Sitters* (7) | -- | greens read `#56943e` (H97) and `#49a34b` (H121), **neither is the Vol. 7 cap green at H111** -- unusable, do not name off them |
+
+- **Vol. 6's grass `#59b140` is all over the one-pagers and is not a cap.** On
+  *Bird Watching* it sits on all three of the small boys' crowns at 289/611/635px
+  -- identical on three boys, which is the tell that it is foliage behind them.
+- **Vol. 7's non-roster green trap recurs**: *Sleepy Sitters* above, and
+  *King-Size Cone*'s `#70b53e` (H95) scenery, well clear of the H111 cap ink.
 Vol. 17, one more title read 2026-09-11 (fifty-second batch):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
