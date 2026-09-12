@@ -29,6 +29,7 @@ from typing import Annotated
 
 import typer
 from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE, STR_TITLE_TO_ENUM, Titles
+from barks_fantagraphics.comic_book_info import ONE_PAGERS
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_DIR
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
@@ -65,11 +66,14 @@ UNSTAMPED = "unstamped (pre-2026-08-03)"
 # `--next` kept re-offering it once every other early title was done.
 #
 # Deliberately a named special case rather than a general "a page with no groups
-# is done" rule.  That rule is the real fix, but it cannot be written until the
-# 155 one-pagers that cannot be prepped are settled, and on its own it would
-# quietly mark a page that has simply not been prepped yet as finished -- which
-# is the failure this list is meant to prevent, not cause.  A second title
-# needing an entry here is the signal to write the general rule instead.
+# is done" rule.  That rule is the real fix, but on its own it would quietly mark
+# a page that has simply not been prepped yet as finished -- which is the failure
+# this list is meant to prevent, not cause.  A second title needing an entry here
+# is the signal to write the general rule instead.
+#
+# That rule used to be blocked on "the 155 one-pagers that cannot be prepped",
+# which is no longer true: since 2026-09-12 a located one-pager preps like any
+# other page.  They are still left out of this report -- see ``_scan_titles``.
 _ALWAYS_DONE = frozenset({ENUM_TO_STR_TITLE[int(Titles.DONALD_DUCK_FINDS_PIRATE_GOLD)]})
 
 # Fail loudly at import rather than silently never matching if a title is ever
@@ -243,13 +247,23 @@ def _scan_titles(comics_database: ComicsDatabase, speech_groups: SpeechGroups) -
     """Walk every title. See ``scan_titles``, which wraps this to quieten the database."""
     stats: list[TitleStat] = []
     for title_str, title in STR_TITLE_TO_ENUM.items():
+        if title in ONE_PAGERS:
+            # A located one-pager now resolves through `title_pages`: its page
+            # lives in the host volume, and since 2026-09-12 the speech groups
+            # and panel boxes no longer need a `ComicBook` to find it.  It still
+            # has no `.ini`, so `get_comic_book` below cannot resolve it and
+            # would abort the whole report -- which is exactly what it did.
+            # This is the *story* work list; a one-pager is prepped with
+            # `--title`, or with `--volume` and `--pages`.
+            continue
         try:
             pages = title_pages(comics_database, speech_groups, title_str, OcrTypes.EASYOCR)
         except Exception as exc:  # noqa: BLE001 -- see below.
             # Silent by design, and it is the common case rather than an error:
-            # the 155 one-pagers have no .ini to resolve, and the essays and
-            # introductions are not stories. Logging each would bury the report
-            # under a hundred lines saying the corpus is shaped as documented.
+            # the essays and introductions are not stories, so they have no .ini
+            # to resolve. Logging each would bury the report under a hundred
+            # lines saying the corpus is shaped as documented. (One-pagers never
+            # reach here -- they are skipped above.)
             logger.debug(f'Skipping "{title_str}": {exc}')
             continue
         if not pages:
