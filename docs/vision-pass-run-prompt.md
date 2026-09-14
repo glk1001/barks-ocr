@@ -6477,6 +6477,81 @@ for 20 pages = 1.55 per page** (16 and 15).
   `a fisherman`, `a householder`, `a passer-by`, `Mrs. Murphy`,
   `Donald and Gladstone`.
 
+### Findings to paste into the next run (2026-09-14, fifty-fifth batch, TWO OF THREE REVIEWED -- *The Olympic Hopeful* and *In the Swim*)
+
+*The Olympic Hopeful* (Vol. 17, 139-148) and *In the Swim* (Vol. 17,
+159-168); *Gopher Goof-Ups* (149-158) is still in review. **Olympic Hopeful:
+132 groups (130 passed, 2 added), 6 speaker corrections** (4 of the 36 in the
+nephew domain, 11.1%); by the confidence the pass wrote, **high 5/122, medium
+0/8**. All 13 type proposals held; 0 text corrections. **In the Swim: 122
+groups (121 passed, 1 added), 12 speaker corrections** (11 of the 44 in the
+nephew domain, 25.0%); **high 12/121**, no mediums. All 6 type proposals held
+and one more was set by accident (below); the one text correction (159 g5
+`SEA HORSES` -> `SEA HORSEMEN`) held. **Images: 18 for 10 pages (1.8 per page)
+and 15 for 10 pages (1.5 per page).**
+
+- **A GARMENT IN THE ROSTER INKS IS THE KEY, EVEN WHEN ONE PANEL PRINTS IT
+  BADLY (In the Swim, 10 of 12 corrections).** The boys are bare-headed in
+  swimsuits striped red, green and blue for almost the whole story. The pass
+  declined the stripes as "a costume key that printed blue, red and black on
+  160 p5" and wrote 42 collectives; the review named ten of them off the
+  stripe (160 g5-g6, 161 g1, 162 g7, 164 g9-g11, 167 g1-g2, 168 g10), even
+  on shaving-plastered boys. On 160 p5 the review named the blue- and
+  red-striped boys and left the third, whose stripe reads black underwater,
+  alone: one unreadable stripe does not void the other two. Read the stripe
+  as the cap -- `cap_colour` takes
+  any garment carrying the inks -- and decline only where no stripe shows.
+- **A CLOSE-HEADS GAP TIP WAS NAMED THIS TIME, NOT MADE COLLECTIVE (162 g7,
+  167 g2, Olympic 148 g5).** The Ice Taxis rule (two heads within ~20px of the
+  tip -> `nephews`) was applied three times and overturned three times: the
+  review named the boy by his garment or cap, and on 167 g2 by elimination
+  ("Not Huey or Louie"). Treat the collective as the fallback when nothing
+  names either boy, not as the answer whenever the heads are close.
+- **H140s TEAL ON VOL. 17 IS DEWEY'S BLUE (168 g14, Louie -> Dewey).** The
+  ladder boy's crown probed `#3dae6b` H142.6 and the pass named Louie against a
+  clean red. The review made him Dewey. This is the Three Un-Ducks split again
+  (H147-177 goes either way, and now H142): without a clean green on another
+  boy in the same panel, do not write Louie off a green-band hue above ~H140.
+- **A RAIN-WASHED CROWN IS NOT A BARE ONE (Olympic 147 g13-g14, 148 g5).**
+  In the rain the probes returned only the rain-grey sky (blue band S<=0.46)
+  and the pass wrote three collectives; the review named Dewey (blue) and Huey
+  twice (red). A probe box dominated by rain streaks hides a small patch --
+  crop the crown at 3x instead of trusting the histogram.
+- **A 'WE' LINE WITH ONE TAIL WAS WITHDRAWN TO THE COLLECTIVE (Olympic 140
+  g1).** `WE STILL HAVE OUR DOUBTS!`, tip inside the green-cap boy's span, was
+  named Louie at high; the review made it `nephews`. The only over-naming in
+  either title.
+- **A CAP COLOUR ADDED UNDER AN ADDRESS-NAMED BOY (Olympic 148 g6).** Named
+  Huey at medium by elimination from `SHOVE HIM, LOUIE`, cap null; the review
+  kept Huey and recorded the cap as green. Flag it: the printed ink and the
+  address disagree.
+- **A MISSED-TEXT ADD RENUMBERED A PAGE UNDER A QUEUE ALREADY BUILT (In the
+  Swim 160).** The fish `?` from `queue-missed.txt` went in as g4 and every
+  later id moved by one. The queued type confirm for the `?` device (old g5)
+  landed on `WHAT'S THAT THING?` (new g5), which became `thought` and was then
+  kept; the real `?` (new g6) stayed unconfirmed through a second pass of the
+  queue; and old g9, now g10, was never reached. **Rebuild the speaker and
+  corrections queues after the missed-text adds**, or deliver them only once
+  the adds are in.
+- **TWO EDITOR SEED TRAPS ON ONE PAGE (Olympic 148).** Copying in the cup
+  inscription left a duplicate of g15 (`DOGGONE! YOU KIDS MAKE ME FEEL...`,
+  same box, `vision_added`, reviewed) while the original stayed unreviewed, and
+  the new cup group arrived with the balloon's quotes and markup. Both were
+  fixed before the mirror. Check an added group's text, box and siblings
+  against the page before mirroring.
+- **MISSED TEXT: both single-character devices were real.** The `!` over
+  Whirlman Dervish (145 p8) and the `?` over the fish (160 p4) were added as
+  `other:Whirlman Dervish` and `other:a fish`; the audit could not see either.
+  The review also added the cup's lettering on 148 p7, which the pass had put
+  only in `visible_text`.
+- **TYPE: all 19 proposals held** -- crowd `BOO`s and sneezes to dialogue, PA
+  balloons stored as narration to dialogue, bubble-trailed balloons and bare
+  devices to thought, and the three story logos to `title`.
+- **`other:` values**: `the announcer`, `the crowd`, `a spectator`, `a judge`,
+  `the starter`, `the orator`, `the schoolteacher`, `Rocketflash's wife`,
+  `Chief Bounding Rabbit`, `Fulldrip Pulpbugle`, `Whirlman Dervish`,
+  `the submacycle owner`, `a fish`.
+
 ## Per-volume cap palette
 
 Vols. 5-8 one-pagers, read 2026-09-12 -- and the headline is that the
@@ -6496,6 +6571,19 @@ one-pagers mostly do NOT exercise the volume palettes at all:
   -- identical on three boys, which is the tell that it is foliage behind them.
 - **Vol. 7's non-roster green trap recurs**: *Sleepy Sitters* above, and
   *King-Size Cone*'s `#70b53e` (H95) scenery, well clear of the H111 cap ink.
+
+Vol. 17, three more titles read 2026-09-14 (fifty-fifth batch); the first
+and third reviewed:
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Olympic Hopeful* | 141 p3, three boys on the bench | `#e61b1f`-`#e7191f` 120-1,800px | `#1c8d70` H164.6 and `#079464` H159.6 (139), `#029c4a` H148 (141), `#0da742` H140.6 (140 p1) -- the `green` band throughout | `#00a5d7` 100-1,000px | a coloured patch at the crown and side of a black cap; washed out in the rain on 147 p7-148 p4, where the review still named them |
+| *In the Swim* | none -- bare-headed until 168 p8 | swimsuit stripes; cap `#e51c20` 1,423px on 168 p8 | swimsuit stripes | swimsuit stripes | bare heads in striped swimsuits, red/green/blue per boy: **the stripe is the key** (see the findings) |
+
+- *Gopher Goof-Ups* (read, not yet reviewed): reference 150 p7, green
+  `#069b51` H150.2 against the hedge `#0da842` H140.5; red `#e51a21`, blue
+  `#00a5d7`; small patches at the back of a black cap.
+- On *In the Swim* 168 p8 the ladder boy's `#3dae6b` H142.6 was Dewey.
 
 Vol. 17, two more titles read 2026-09-14 (fifty-fourth batch):
 
