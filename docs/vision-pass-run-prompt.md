@@ -6421,6 +6421,62 @@ confidence the pass wrote: **high 0/139, medium 0/4.** All 3 type proposals
   Count stragglers after any review that added groups.
 - **`other:` values**: none.
 
+### Findings to paste into the next run (2026-09-14, fifty-fourth batch, BOTH REVIEWED AND MIRRORED -- batch closed)
+
+*The Ice Taxis* (Vol. 17, 119-128) and *Searching for a Successor* (Vol. 17,
+129-138). **Ice Taxis: 116 groups, 4 speaker corrections** (3 of the 21 in the
+nephew domain); by the confidence the pass wrote, **high 2/106, medium 2/10**.
+All 3 type proposals confirmed; 0 text corrections. **Searching: 138 groups
+passed, the review added 2 (140), 7 speaker corrections; high 2/131, medium
+0/4, low 3/3.** Both type proposals confirmed; 0 text corrections. **31 images
+for 20 pages = 1.55 per page** (16 and 15).
+
+- **A GAP TIP BETWEEN TWO CLOSE HEADS IS A COLLECTIVE (Ice Taxis 120 g11).**
+  The tip sat 10px right of the blue-cap boy and 17px left of the green-cap
+  boy, pointing left; the pass named Dewey at high off the gap-tip-goes-left
+  rule and the review made it `nephews`. With two heads within ~20px of the
+  tip, the direction did not decide it on this title.
+- **A BALLOON WITH NO TAIL GOES TO THE BOY UNDER IT, BY ELIMINATION (120 g6).**
+  The neighbouring balloon's tail had already named Dewey, and the green-cap
+  boy stands directly under the tail-less one. The pass wrote "not named";
+  the review named Louie. The eliminate rule was available and not applied.
+- **CROP A BIG ADULT'S TAIL WHEN BOYS STAND BEHIND HIM (123 g6).** Called the
+  mayor at high off `tailtip` alone, with no crop and no cap check; the tail
+  goes past him to the red-pom boy behind the sofa. The review named Huey. It
+  was the only adult call corrected in either title.
+- **AN ART-AGAINST-DIALOGUE FLAG GOT RESOLVED, NOT OVERRULED (122 g0).**
+  `ALL CLEAR, DEWEY! YANK THE STARTER`, with the tail on the blue-cap boy: the
+  pass declined to name anyone and said why. The review named Huey and kept
+  the printed blue, so the name came from the dialogue, not the cap. Flag the
+  conflict rather than picking a side.
+- **COUNT EVERY TAIL ON A BALLOON (Searching 129 g6).** `GET AWAY, CHISELER!
+  I SAW THAT HAT FIRST!` -- the pass measured one tail onto Donald; the
+  balloon has a second tail onto Gladstone, and the review made it
+  `other:Donald and Gladstone`.
+- **A VOICE INSIDE A BUILDING THE BOYS ARE IN IS `nephews`, NOT `unknown`
+  (137 g12-g14).** Three tails run into the factory roof in a long shot with
+  nobody drawn, after the page has shown Donald and the boys inside. All three
+  were `unknown` at low; all three came back `nephews`.
+- **SAMPLE A CAP BEFORE DECLINING TO NAME ITS WEARER (137 g9).** The note
+  said the cap "was not sampled" and wrote `nephews`; the review named Louie
+  off a green cap. One `capscan` would have settled it.
+- **MISSED TEXT THE AUDIT CANNOT SEE: A REPEATED WORD AND A TAG NOBODY
+  TRANSCRIBED.** The audit reported 0 on Searching. 133 p2's second
+  `FEATHERS` sack was matched against the grouped `FEATHERS` on panel 8 of the
+  same page, and 130 p1's price tag was never in `visible_text`. A crop stack
+  found both, they went into `queue-missed.txt`, and the review added them. The
+  tag reads `10.96`; the pass flagged the last digit as 8-or-6 at 3.5x rather
+  than guessing, which was right.
+- **TYPE: ALL FIVE PROPOSALS HELD.** Bare devices (`!`, `? ? ? ?`) and a
+  bubble-trailed `OH, OH!` went to thought; a dog's `ROWF` and Donald's
+  off-panel `TAXI! TAXI!` went to dialogue.
+- **A STRAGGLER NEXT TO A CORRECTED GROUP (120 g7).** The review changed
+  120 g6 and left its neighbour g7 without `speaker_reviewed`; it was signed
+  off from a one-line queue before the mirror.
+- **`other:` values**: `the mayor`, `the mayor's dog`, `a fish fry official`,
+  `a fisherman`, `a householder`, `a passer-by`, `Mrs. Murphy`,
+  `Donald and Gladstone`.
+
 ## Per-volume cap palette
 
 Vols. 5-8 one-pagers, read 2026-09-12 -- and the headline is that the
@@ -6440,6 +6496,18 @@ one-pagers mostly do NOT exercise the volume palettes at all:
   -- identical on three boys, which is the tell that it is foliage behind them.
 - **Vol. 7's non-roster green trap recurs**: *Sleepy Sitters* above, and
   *King-Size Cone*'s `#70b53e` (H95) scenery, well clear of the H111 cap ink.
+
+Vol. 17, two more titles read 2026-09-14 (fifty-fourth batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Ice Taxis* | 128 p6, three boys in a row on the sofa | red pom `#e41a21`-`#e41a20` 500-700px; `#da1a3a` 175px on 120 p7 | wanders by page: `#049d47` H148 (128 p6), `#059d61` and `#1e9164` H156 (120 p7, 123 p6), `#34853a` H124 (121 p4) | `#03a4d6`-`#05a4d4` 600-2,100px | winter knit caps with a pom: Huey black with a red pom, Dewey light blue, Louie green |
+| *Searching for a Successor* | no clean row; 135 p3 and p5 | `#e31c20`-`#e51a20` 366-606px | `#0c9c49` 392px in two pieces (135 p4) | `#04a4d4` 1,200px (135 p3); `#07a4d5` only 110px (135 p1) | the same knit caps, small; bare-headed at the desk on 131 p4 and indoors on 133 p7 |
+
+- On *The Ice Taxis* the sofa prints `#01b3d7`/`#0097b6`, the same family as
+  Dewey's blue, and the boat's `#e71447` sits beside the cap red; the trees are
+  `#338539`/`#348539`, which is where 124 p6's green cap disappears. Read the
+  hex and place it on a crown, not the band count.
 
 Vol. 17, one more title read 2026-09-14 (fifty-third batch):
 
