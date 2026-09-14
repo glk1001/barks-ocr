@@ -356,3 +356,8 @@ HELP KEEP AMERICA STRONG
 # it either, which is why the fragment stays in 069's visible_text: it is a true
 # record of what is printed, and the joke needs it.
 14 069 CAN CIT WILL SP
+
+# Judged not worth a group by the reviewer, 2026-09-14: a price card stuck in a
+# seedling flat at the tree store (Gopher Goof-Ups 156 p2), a scribbled word
+# over "35". Real lettering, too small to read, and no story content.
+17 156 35

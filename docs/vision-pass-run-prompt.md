@@ -6477,10 +6477,13 @@ for 20 pages = 1.55 per page** (16 and 15).
   `a fisherman`, `a householder`, `a passer-by`, `Mrs. Murphy`,
   `Donald and Gladstone`.
 
-### Findings to paste into the next run (2026-09-14, fifty-fifth batch, TWO OF THREE REVIEWED -- *The Olympic Hopeful* and *In the Swim*)
+### Findings to paste into the next run (2026-09-14, fifty-fifth batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
 
-*The Olympic Hopeful* (Vol. 17, 139-148) and *In the Swim* (Vol. 17,
-159-168); *Gopher Goof-Ups* (149-158) is still in review. **Olympic Hopeful:
+*The Olympic Hopeful* (Vol. 17, 139-148), *Gopher Goof-Ups* (Vol. 17,
+149-158) and *In the Swim* (Vol. 17, 159-168). **Gopher Goof-Ups: 131 groups
+(129 passed, 2 added), 10 speaker corrections** (8 of the 45 in the nephew
+domain, 17.8%); **high 7/127, medium 2/2**. All 3 type proposals held; 0 text
+corrections; **20 images for 10 pages (2.0 per page)**. **Olympic Hopeful:
 132 groups (130 passed, 2 added), 6 speaker corrections** (4 of the 36 in the
 nephew domain, 11.1%); by the confidence the pass wrote, **high 5/122, medium
 0/8**. All 13 type proposals held; 0 text corrections. **In the Swim: 122
@@ -6502,11 +6505,23 @@ and 15 for 10 pages (1.5 per page).**
   as the cap -- `cap_colour` takes
   any garment carrying the inks -- and decline only where no stripe shows.
 - **A CLOSE-HEADS GAP TIP WAS NAMED THIS TIME, NOT MADE COLLECTIVE (162 g7,
-  167 g2, Olympic 148 g5).** The Ice Taxis rule (two heads within ~20px of the
-  tip -> `nephews`) was applied three times and overturned three times: the
+  167 g2, Olympic 148 g5, Gopher 155 g11 and 157 g4).** The Ice Taxis rule
+  (two heads within ~20px of the tip -> `nephews`) was applied five times and
+  overturned five times: the
   review named the boy by his garment or cap, and on 167 g2 by elimination
   ("Not Huey or Louie"). Treat the collective as the fallback when nothing
   names either boy, not as the answer whenever the heads are close.
+- **ELIMINATION BUILT ON A TEAL IS ELIMINATION BUILT ON A GUESS (Gopher 150
+  g1, Dewey -> Louie).** The middle boy's `#08a678` H162.5 patch was taken as
+  Louie's green, which left the capless first boy as Dewey at medium; the review
+  named the first boy Louie. The teal was the blue, so the elimination ran the
+  wrong way. Both Gopher mediums were corrected (the other, 151 g11, was a 6px
+  bump read as a tail onto a boy; the line, `OH, MY BUGGIN' EYE BULBS!`, went
+  to Donald).
+- **OVER-NAMING ON BOYS MOVING TOGETHER (Gopher 149 g5, 155 g7).** A tip on
+  the first of three boys walking in, and one inside the first of three boys
+  holding Donald back, were both withdrawn to `nephews`. When the boys act as a
+  group and the line speaks for them, a tip on the leading boy is not enough.
 - **H140s TEAL ON VOL. 17 IS DEWEY'S BLUE (168 g14, Louie -> Dewey).** The
   ladder boy's crown probed `#3dae6b` H142.6 and the pass named Louie against a
   clean red. The review made him Dewey. This is the Three Un-Ducks split again
@@ -6543,10 +6558,13 @@ and 15 for 10 pages (1.5 per page).**
   Whirlman Dervish (145 p8) and the `?` over the fish (160 p4) were added as
   `other:Whirlman Dervish` and `other:a fish`; the audit could not see either.
   The review also added the cup's lettering on 148 p7, which the pass had put
-  only in `visible_text`.
-- **TYPE: all 19 proposals held** -- crowd `BOO`s and sneezes to dialogue, PA
-  balloons stored as narration to dialogue, bubble-trailed balloons and bare
-  devices to thought, and the three story logos to `title`.
+  only in `visible_text`. On Gopher the two licence plates were added (150 p6
+  reads `313` by the review; the pass transcribed `13`, so a plate read from a
+  crop can drop a digit) and the 156 p2 price card went to `missed-text-ignore.txt`.
+- **TYPE: all 22 proposals held** -- crowd `BOO`s and sneezes to dialogue, PA
+  balloons and a window balloon stored as narration to dialogue, a pink
+  caption box stored as dialogue to narration, bubble-trailed balloons and
+  bare devices to thought, and the three story logos to `title`.
 - **`other:` values**: `the announcer`, `the crowd`, `a spectator`, `a judge`,
   `the starter`, `the orator`, `the schoolteacher`, `Rocketflash's wife`,
   `Chief Bounding Rabbit`, `Fulldrip Pulpbugle`, `Whirlman Dervish`,
@@ -6580,9 +6598,10 @@ and third reviewed:
 | *The Olympic Hopeful* | 141 p3, three boys on the bench | `#e61b1f`-`#e7191f` 120-1,800px | `#1c8d70` H164.6 and `#079464` H159.6 (139), `#029c4a` H148 (141), `#0da742` H140.6 (140 p1) -- the `green` band throughout | `#00a5d7` 100-1,000px | a coloured patch at the crown and side of a black cap; washed out in the rain on 147 p7-148 p4, where the review still named them |
 | *In the Swim* | none -- bare-headed until 168 p8 | swimsuit stripes; cap `#e51c20` 1,423px on 168 p8 | swimsuit stripes | swimsuit stripes | bare heads in striped swimsuits, red/green/blue per boy: **the stripe is the key** (see the findings) |
 
-- *Gopher Goof-Ups* (read, not yet reviewed): reference 150 p7, green
-  `#069b51` H150.2 against the hedge `#0da842` H140.5; red `#e51a21`, blue
-  `#00a5d7`; small patches at the back of a black cap.
+- *Gopher Goof-Ups* (reviewed): reference 150 p7, green `#069b51` H150.2
+  against the hedge `#0da842` H140.5; red `#e51a21`, blue `#00a5d7`; small
+  patches at the back of a black cap. The `#08a678` H162.5 patch on 150 p2 was
+  Dewey's blue, not the green.
 - On *In the Swim* 168 p8 the ladder boy's `#3dae6b` H142.6 was Dewey.
 
 Vol. 17, two more titles read 2026-09-14 (fifty-fourth batch):
