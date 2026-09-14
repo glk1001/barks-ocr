@@ -6570,7 +6570,106 @@ and 15 for 10 pages (1.5 per page).**
   `Chief Bounding Rabbit`, `Fulldrip Pulpbugle`, `Whirlman Dervish`,
   `the submacycle owner`, `a fish`.
 
+### Findings to paste into the next run (2026-09-14, fifty-sixth batch, PASS ONLY -- not yet reviewed)
+
+*Land Beneath the Ground!* (Vol. 16, 028-056), *Trapped Lightning* (Vol. 20,
+129-132) and *Camping Confusion* (Vol. 17, 169-178), all 1955. The name-grep
+found no nephew name in any line of the first two; *Camping Confusion* names
+Louie and Huey on 172 p7, which is where its palette comes from.
+
+| title | groups | medium | nephew domain (named / collective) | type | text | missed text | images |
+|---|---|---|---|---|---|---|---|
+| *Land Beneath the Ground!* | 423 | 65 | 108 (81 / 27) | 9 | 1 | 1 | 48 / 29 = 1.66 |
+| *Trapped Lightning* | 51 | 0 | 0 | 0 | 0 | 0 | 4 / 4 = 1.00 |
+| *Camping Confusion* | 133 | 12 | 46 (32 / 14) | 4 | 0 | 1 | 14 / 10 = 1.40 |
+
+**Batch: 607 groups, 66 images over 43 pages = 1.53 per page.** Missed text:
+052 p3 `S GROC` (the strip of paint peeled off the grocery) and 169 p1 `ZZZZ`
+(Donald snoring), both parked in the titles' `queue-missed.txt`.
+
+- **TWO TAGGED CASTS, TOLD APART BY NECKWEAR (Land Beneath).** The roster tags
+  `Fermies` and `Terries`, and 042 p4 states the key: Terries wear bow ties,
+  Fermies four-in-hands. **Body colour is not the key** -- red, orange, green and
+  blue creatures appear on both sides. 68 `Fermies` and 21 `Terries` calls; where
+  the tie is too small or turned away, the call is medium and follows the guide
+  by continuity. **The cheers are not a key either**: `RAH! RAH! RAH!` is cheered
+  for the Fermies and `CHA! CHA! CHA!` for the Terries on 050, but 055 g3's
+  `CHA! CHA! CHA!` comes from a necktied Fermy. A mixed crowd is
+  `other:Terries and Fermies`.
+- **OFF-PANEL YELPS FROM A CAR HOLDING TWO ADULTS WENT TO DONALD AT MEDIUM (032
+  g2, g5; 036 g3, g5).** The runaway car carries Donald and Scrooge, both out of
+  sight. Scrooge is as likely; expect the review to move some.
+- **`identified_by` IS REQUIRED ON `unknown` TOO.** Five groups under the moss or
+  among specks (049 g13-g14, 050 g6, g8, g9) were written `unknown` without it,
+  and the dry run refused all five. The roster says omit it only for `none`.
+- **THE VOL. 16 BLUE DRIFTS TEAL IN SHADE, AND THE PASS NAMED IT DEWEY AT MEDIUM**
+  (033 g4 `#299b9a` H180.5, 048 g12 `#1e919c`, 055 g12 `#3aa368` H146, and 036 g2,
+  041 g6, 052 g8 read off crops). The clean green on this title is H110 in
+  `leafgrn`, so anything cooler than ~H140 was taken as the blue. Untested.
+- **CAMPING CONFUSION'S KEY IS IN ITS DIALOGUE (172 p7-p8).** `RODMAN LOUIE`
+  carries the rod and wears the green cap `#019d47` H147; `CHARTMAN HUEY` holds
+  the chart board and wears red `#e52020`; the telescope boy is blue. The props
+  held for 171-173 and broke on 175 p2, where the blue-teal boy holds the map --
+  **name off the cap and cite a prop only as corroboration.**
+- **TEAL CAPS ON CAMPING CONFUSION: ONE DECLINED, TWO RANKED.** 173 g0 `#0ba570`
+  H159 sits between the title's green (H147) and blue (H184) with only a red boy
+  beside it, and on Vol. 17 an H162.5 patch was Dewey (Gopher Goof-Ups) -- so
+  `nephews`. 178 g14-g15 had a green (`#217a46` H141) and a teal (`#0ba593` H172)
+  in one panel and were named Louie and Dewey by ranking, at medium.
+- **A DIALOGUE-VS-CAP CONFLICT IS FLAGGED ON 173 g1.** The red-capped boy's tail
+  says `I'LL GO SEE IF HE'S VISITING ONE OF THE OTHER CAMPERS!`, but the boy who
+  comes back with the news on panel 2 wears the clean green cap. Recorded as
+  Huey at medium with the conflict in the note.
+- **CHECK A FIGURE AGAINST LATER LINES BEFORE WRITING ROLE NOTES.** The camper
+  with the leashed children was first noted as a man; Donald calls her `THAT
+  WOMAN` on 171 and `LADY` on 178. The notes were fixed before the apply;
+  `other:a camper` was right either way.
+- **ON CAMPING CONFUSION THE FOLIAGE AND THE URANIUM BUTTON SIT ON THE HEADS.**
+  The forest green `#347e4c`/`#337f4d` H141 lands inside head spans on most
+  outdoor panels and names nobody; every cap carries a pink button `#ea5551`
+  S0.64 that the census reports as red. The cap red here is S0.8 and up.
+- **BARE HEADS FORCED 9 COLLECTIVES (Camping Confusion 177 p4-p7).** The bears
+  take the caps on 176; `title_bands` reads red 0, green 0, blue 0 blob(s) total
+  on 177 p4, p5 and p6, quoted in each note.
+- **TYPE: 13 proposals.** Land Beneath: the splash logo stored as narration to
+  `title` (028 g0); a broadcast jingle, a shout lettered bare, `GRIPE! GRUMBLE!`
+  and the crowd's `YES!` from sound_effect to dialogue (039 g12, 046 g3, 046 g11,
+  055 g8); a boxed `So--` stored as dialogue to narration (043 g1); a tailed
+  `IT'S ON!` stored as background to dialogue (045 g12); a pointed tail stored
+  as thought to dialogue (046 g4); a bubble trail stored as dialogue to thought
+  (047 g10). Camping Confusion: two bubble trails to thought (173 g12, 174 g7),
+  a pointed tail to dialogue (176 g4), and the bear's `ROWR` to dialogue (177 g2).
+- **TEXT: one proposal, Land Beneath 055 g7 `SURE` -> `SHORE`**, the creatures'
+  cowboy dialect, read at 2x.
+- **`other:` values**: Land Beneath `the foreman`, `a digger`, `the grocer`, `a
+  grocery clerk`, `a policeman`, `a ferry passenger`, `a bellhop`, `a radio
+  singer`, `a radio newsman`, `the professor`, `a Terry and a Fermy`, `Terries
+  and Fermies`; Trapped Lightning `a kid`, `a racing driver`, `a housewife`, `a
+  customer`; Camping Confusion `a camper`, `a bear`, `a bear cub`.
+
 ## Per-volume cap palette
+
+Vol. 16, one title read 2026-09-14 (fifty-sixth batch); Vol. 20's *Trapped
+Lightning*, read in the same batch, has no nephews (Gyro, two mouse kids and
+Grandma Duck):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Land Beneath the Ground!* | 032 p3, three boys from behind at the tunnel mouth | `#e61b1f` 120-1,400px; dimmed `#a3321e` H9 (032 p6), `#b33841` S0.69 (041 p1) | `#4da33d`-`#4ea33f` H110-111, 250-3,500px -- the `leafgrn` band; shaded `#5aa23f` H104, `#569d5a` H123 | `#00a5d7`-`#06a5d5` 130-1,700px; teal in shade (see the findings) | a coloured patch at the side or back of a black cap; the boys are specks in the long shots of the shaft |
+
+- Scrooge's coat is the `#a04453` maroon at 1,000-17,000px, so a clean `#e61b1f`
+  blob is a boy's cap or Donald's bow tie; Donald's cap and Scrooge's hat band
+  are the roster blue.
+- The creatures print every roster ink on their bodies; a band hit on a creature
+  is never a cap.
+
+Vol. 17, one more title read 2026-09-14 (fifty-sixth batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Camping Confusion* | 172 p7-p8, named by the dialogue (`RODMAN LOUIE`, `CHARTMAN HUEY`) | `#e41b20`-`#e61a20` 240-1,400px; dimmed `#b93321` (173 p4), `#bf2d1f` (172 p6) | `#019d47`-`#009e47` H147, 340-1,100px -- the `green` band; `#0ba570` H159 (173 p1) undecided | `#04a5d6`-`#07a3cf` 200-1,500px; teal `#09a2ae` H184 (172 p6), `#0ba593` H172 (178 p8) | a coloured patch at the side of a black cap with a pink uranium button on top; the bears take the caps on 176-177 |
+
+- Donald's cap is the same `#04a5d6` as Dewey's patch, at up to 2,900px.
 
 Vols. 5-8 one-pagers, read 2026-09-12 -- and the headline is that the
 one-pagers mostly do NOT exercise the volume palettes at all:
