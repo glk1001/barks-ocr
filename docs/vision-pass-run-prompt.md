@@ -6369,6 +6369,58 @@ Vol. 8 *Toasty Toys*, *No Place to Hide*, *Tied-Down Tools*, *Noise Nullifier*.
   into one group with correct text: *Ornaments on the Way* g17 and *Fractious
   Fun* g8. Said in `note`, not corrected.
 
+### Findings to paste into the next run (2026-09-14, fifty-third batch, REVIEWED -- *Secret Resolutions*, batch closed)
+
+*Secret Resolutions* (Vol. 17, 109-118), one title. **143 groups passed; the
+review added 2 (145 on both engines). 0 speaker corrections to any call the
+pass made** -- the two `unknown -> ...` rows `review_findings.py` prints are the
+two added groups being given their first speaker, not overrulings. By the
+confidence the pass wrote: **high 0/139, medium 0/4.** All 3 type proposals
+(dialogue -> thought) confirmed; 0 text corrections. **13 images for 10 pages =
+1.3 per page.**
+
+- **A BUBBLE TRAIL WITH NO POINTED TAIL IS A THOUGHT, EVEN ON A SMOOTH-EDGED
+  BALLOON.** All three type corrections were that shape: 111 g13 `HA!`, 115 g1
+  (a cloud edge), and 116 g16 (Donald gloating at the window). Two older
+  `type_was` rows on this title (114 g13, 116 g2, adjudicated 2026-08-16) are the
+  same move, so the engine calls this construction `dialogue` habitually on
+  this story. The 2x crop of 111 g13 was the one worth taking; the other two
+  read off `page.png`.
+- **THE DIALOGUE NAMES THE PHOTOGRAPHER, AND THE NAME CARRIES.** 17 Dewey calls,
+  all held: 115 g15 answers `SIT DOWN, DEWEY`; the 116 p3 caption names him with
+  the camera; 117 g12 `HA! DEWEY!`. Carrying "the detective" and "the camera's
+  owner" across pages 116-118 held on every call, including the two left at
+  medium (118 g2, g10). This is a DIALOGUE key, not a prop key -- the line says
+  whose camera it is -- which is why it travelled where costume keys do not.
+- **PYJAMAS NAME THEM (114).** Clean `#00a5d7` / `#e61b1f` / `#4fa43d` H110 on
+  the three garments named six groups; all held. The 114 p2 silhouettes stayed
+  `nephews` and were not changed.
+- **A TIP ABOVE THE CROWNS WENT TO THE RAY, AND HELD.** 110 p7 g9: the tip stops
+  30px above the crowns, inside the green boy's head span but pointing at the
+  red cap's bill, with the green boy already holding g10. Huey at medium,
+  confirmed. Evidence for the gap-tip-goes-LEFT rule on Vol. 17, one case.
+- **DARK SLIVERS STILL NAME IN A SAME-SCENE ROW.** 110 p8 and 111 p1 print the
+  middle boy's red as `#812813` H11.5 (111px) and `#873a1a` H17.6 (62px), and the
+  right boy's green as teal `#449a87` H166.7. Named against a clean blue in the
+  same panel; all held. 111 g2 (a crown with no roster ink, named Louie by
+  elimination at medium) held too.
+- **MISSED TEXT: A CALENDAR, AND A LONE `?` THE AUDIT CANNOT SEE.** The audit
+  flagged 109's calendar lettering; the review added it. The drawn `?` over
+  Donald on 113 p1 was NOT flagged -- a single character never matches -- and was
+  found only by reading, then added. List a lone device in the missed-text queue
+  by hand.
+- **MY `visible_text` TRANSCRIPTION WAS WRONG, AND THE AUDIT KEPT FIRING ON IT.**
+  I wrote `JANUARY 1st`; the reviewer read the art as `JANUARY 56` (the added
+  group first arrived as OCR's `JANUARY 54`). Cramped calendar lettering is not
+  a transcription to guess at: crop it at 4x, and if it will not read, say so in
+  the capture rather than writing the date the story implies. The capture was
+  corrected (a misreading, not a suppression).
+- **A REVIEW ADD RENUMBERS AND STRANDS A SIGN-OFF.** The calendar group went in
+  at 109 g4, which moved Donald's g4 to g5, and that group came back never
+  `speaker_reviewed` -- a one-group straggler created by the add itself.
+  Count stragglers after any review that added groups.
+- **`other:` values**: none.
+
 ## Per-volume cap palette
 
 Vols. 5-8 one-pagers, read 2026-09-12 -- and the headline is that the
@@ -6388,6 +6440,18 @@ one-pagers mostly do NOT exercise the volume palettes at all:
   -- identical on three boys, which is the tell that it is foliage behind them.
 - **Vol. 7's non-roster green trap recurs**: *Sleepy Sitters* above, and
   *King-Size Cone*'s `#70b53e` (H95) scenery, well clear of the H111 cap ink.
+
+Vol. 17, one more title read 2026-09-14 (fifty-third batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Secret Resolutions* | 110 p7, three boys on the wall | `#e51a20` 313-550px; dark `#812813` H11.5 / `#873a1a` H17.6, 60-110px, on 110 p8 and 111 p1 | `#4fa773` H144.5 109-165px; teal `#449a87` H166.7 on 110 p8 | `#00a5d7` 380-1,300px | a coloured patch at the side or back of a black beanie; outdoors only on 110 p7-p8 and 111 p1, bare-headed indoors everywhere else |
+
+- On 114 the pyjamas carry the inks instead: `#00a5d7` / `#e61b1f` /
+  `#4fa43d` H110, clean enough to name all six groups (all held).
+- From 115 p8 on, Dewey is named by the dialogue (the detective kit and the
+  camera), not by any ink; the other two boys stay collective indoors.
+
 Vol. 17, one more title read 2026-09-11 (fifty-second batch):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
