@@ -6887,6 +6887,31 @@ engines, distributions identical.
   eyes in the smog as `nephews` (047 g5-g7), and 044 g11's foliage-hued `#35a567` cap
   named Louie.
 
+### Findings to paste into the next run (2026-09-15, fifty-seventh batch, FOUR OF FOUR -- *Inventor of Anything*, batch closed)
+
+**60 groups passed plus 2 added, 0 speaker corrections**; by the confidence the
+pass wrote, **high 0/58, medium 0/1, low 0/1** -- the `unknown` on the off-panel
+`OW` (135 g10) stood. `review_findings` prints two speaker rows, `134 g14: unknown
+-> other:the neighbour` and `136 g2: unknown -> none`, but both are the groups the
+review added. All 5 type proposals held; no text corrections. It also lists `136
+g4` and `136 g10` as dialogue -> thought: those are the pass's g3 and g9 (Speedy's
+`SPICE` thought and Gyro's hammock thought), renumbered by the add, which the pass
+saw stored as thought and did not propose. Mirrored clean onto paddleocr.
+**Batch: 15 speaker corrections over 470 passed groups (3.2%)** -- 0, 10, 5 and 0
+by title; 7 groups added, all but one a missed item.
+
+- **MISSED TEXT ADDED: 136 p2 `313`**, the hot rod's licence plate, as g2,
+  `background`, `none`.
+- **A THIRD DRAWN `?` THE AUDIT DID NOT LIST (134 g14, `thought`,
+  `other:the neighbour`).** The `?` over the neighbour on 134 p4 was in the page's
+  `visible_text`; the audit reported only `313`. Three titles of four this batch
+  had the same miss (*The Master* 023 g11, *Whale* 034 g15). Until the audit reports
+  them, every drawn `?` or device recorded in `visible_text` goes into
+  `queue-missed.txt` by hand.
+- **THE GYRO FILLER'S CAST HELD AS WRITTEN**: `other:Speedy`, named from the
+  dialogue, and the unnamed `other:the neighbour`, `other:the goat` and
+  `other:the boys next door` all stood.
+
 ## Per-volume cap palette
 
 Vol. 18, three titles read 2026-09-15 (fifty-seventh batch); Vol. 20's *Inventor
