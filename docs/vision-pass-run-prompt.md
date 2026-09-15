@@ -6898,7 +6898,8 @@ g4` and `136 g10` as dialogue -> thought: those are the pass's g3 and g9 (Speedy
 `SPICE` thought and Gyro's hammock thought), renumbered by the add, which the pass
 saw stored as thought and did not propose. Mirrored clean onto paddleocr.
 **Batch: 15 speaker corrections over 470 passed groups (3.2%)** -- 0, 10, 5 and 0
-by title; 7 groups added, all but one a missed item.
+by title; 5 groups added -- the two audit findings (`MAN OH MAN`, `313`) and three
+drawn `?` marks the audit did not list.
 
 - **MISSED TEXT ADDED: 136 p2 `313`**, the hot rod's licence plate, as g2,
   `background`, `none`.
