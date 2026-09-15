@@ -6862,6 +6862,31 @@ distributions identical.
   g4 and 030 g12, and the teal `#19a896` ranked to Dewey on 028 g11. The one medium
   corrected was 031 g1.
 
+### Findings to paste into the next run (2026-09-15, fifty-seventh batch, THREE OF FOUR REVIEWED -- *Smoke Writer in the Sky*)
+
+**139 groups, 5 speaker corrections (3.6%), every one in the nephew domain (5 of
+39, 12.8%)**; by the confidence the pass wrote, **high 5/127 (3.9%), medium 0/12**.
+No group was added. All 9 type proposals held -- the crowd's `BOO!` and laughter
+and the geese's `HONK!` as dialogue, the bubble trails as thought, the logo as
+title. No text corrections. Mirrored clean onto paddleocr: 139/139 reviewed on both
+engines, distributions identical.
+
+- **A RADIO VOICE BELONGS TO WHOEVER LAST HELD THE SET (040 g12, g14; 041 g0, g6,
+  `nephews` -> Huey).** Four zigzag tails from specks on the ground or from below the
+  panel edge were left collective; the review named all four Huey, noting "Huey was
+  last holding the walkie talkie". The pass had already named Huey on the two panels
+  where he is drawn holding it (040 g11, 041 g5) and then declined the same voice when
+  the boys shrank to specks. Carry the holder forward until another boy is shown with
+  the set.
+- **ONE OVER-NAMING: 042 g16, Louie -> `nephews`.** The tail tip sat over the left boy
+  (leafgrn cap, 860+817+622px) with a blue-capped boy beside him, but the line -- `THEN
+  BRACE YOURSELF FOR BAD NEWS! YOU'RE IN TROUBLE!` -- went to the pair. A tip over one
+  of two boys crowded together is not always a single speaker.
+- **EVERY MEDIUM HELD, 12/12**: the eliminations (038 g6, 042 g14, 047 g10), the gap
+  tip on 040 g6 against a silhouette, the walkie-talkie holders, the three pairs of
+  eyes in the smog as `nephews` (047 g5-g7), and 044 g11's foliage-hued `#35a567` cap
+  named Louie.
+
 ## Per-volume cap palette
 
 Vol. 18, three titles read 2026-09-15 (fifty-seventh batch); Vol. 20's *Inventor
