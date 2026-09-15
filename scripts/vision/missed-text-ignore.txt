@@ -366,3 +366,8 @@ HELP KEEP AMERICA STRONG
 # name on the strip of paint the quake peeled off the grocery front (Land Beneath
 # the Ground! 052 p3). Real lettering, but a torn fragment with no story content.
 16 052 S GROC
+
+# Judged not worth a group by the reviewer, 2026-09-15: the brand name on the
+# cereal boxes piled beside Donald and the boys (Faulty Fortune 066 p1). Real
+# lettering, but a repeated product label the dialogue already names.
+16 066 CANNY BRANNIES
