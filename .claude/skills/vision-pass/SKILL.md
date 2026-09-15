@@ -190,6 +190,13 @@ correction counts. That number is the only way the next run knows whether the
 budget held, and going over 5 on a cap-dense title is a thing to say out loud
 rather than absorb.
 
+**And append each title's row to `docs/vision-cost-ledger.csv`** in the same
+close-out commit: `volume,titles,pages,images,recorded,note`. Nothing in the
+corpus records images read, so the ledger is the only place
+`scripts/vision/volume_summary.py` can get the cost from, and a title left out
+shows `--` there. Count per title; join several titles with ` | ` on one row only
+when the images genuinely cannot be split.
+
 Run the **close-out at low effort** — prep, apply, audit, engine diff, queues,
 mirror, commit. That half is procedure with tool output as the check. Keep high
 effort for the reading, where the failure mode is a confident, plausible, wrong

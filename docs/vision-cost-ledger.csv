@@ -1,0 +1,28 @@
+# Vision-pass cost ledger: images read, one row per costed unit.
+#
+# Read by scripts/vision/volume_summary.py. Append a row at each pass's close-out.
+# A unit is normally one title; several titles joined with " | " share one row
+# when the pass only recorded their cost together. `recorded` is the date of the
+# findings section the figure comes from. Lines starting with # are skipped.
+volume,titles,pages,images,recorded,note
+17,Secret of Hondorica,24,45,2026-09-10,forty-seventh batch
+17,Dogcatcher Duck,6,6,2026-09-10,forty-seventh batch; page views only
+17,Donald's Raucous Role,10,10,2026-09-10,forty-eighth batch; page views only (the batch's nine crops were all on another title)
+17,Good Canoes and Bad Canoes,10,10,2026-09-10,forty-eighth batch; page views only (the batch's nine crops were all on another title)
+17,Trouble Indemnity | The Chickadee Challenge | The Unorthodox Ox,30,44,2026-09-10,forty-ninth batch; costed only as a batch
+17,The Custard Gun,10,20,2026-09-11,fiftieth batch
+17,Three Un-Ducks,10,15,2026-09-11,fifty-second batch
+17,Secret Resolutions,10,13,2026-09-14,fifty-third batch
+17,The Ice Taxis,10,16,2026-09-14,fifty-fourth batch
+17,Searching for a Successor,10,15,2026-09-14,fifty-fourth batch
+17,Gopher Goof-Ups,10,20,2026-09-14,fifty-fifth batch
+17,The Olympic Hopeful | In the Swim,20,33,2026-09-14,fifty-fifth batch; 18 and 15 recorded without saying which title was which
+16,Land Beneath the Ground!,29,48,2026-09-14,fifty-sixth batch
+17,Camping Confusion,10,14,2026-09-14,fifty-sixth batch
+18,The Master,10,19,2026-09-15,fifty-seventh batch
+18,A Whale of a Story,10,16,2026-09-15,fifty-seventh batch
+18,Smoke Writer in the Sky,10,15,2026-09-15,fifty-seventh batch
+16,The Lost Crown of Genghis Khan!,20,34,2026-09-15,fifty-eighth batch
+16,Faulty Fortune,8,17,2026-09-15,fifty-eighth batch
+18,The Runaway Train,10,11,2026-09-15,fifty-eighth batch
+18,Statues of Limitations,10,19,2026-09-15,fifty-eighth batch
