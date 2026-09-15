@@ -7072,8 +7072,49 @@ engines, distributions identical.
   technician drawn only as legs, and 054 g1, g2 from the silhouetted control tower.
 - **THE PASS'S ADDED `CRASH` STOOD** as a sound effect with no speaker.
 - **MISSED TEXT ADDED: 055 p6 `AIR FREIGHT`** as g13, `background`, `none`.
-  **053 p7 `171721`**, the locomotive's number plate, was not added and is still
-  reported by the audit.
+  **053 p7**, the locomotive's number plate, was added afterwards as g15 `171761`.
+  The pass had transcribed it `171721` into `visible_text`; at 10x the fifth
+  glyph is a 6, so the capture was corrected rather than the finding ignored. A
+  number read off a plate at 4x is not settled -- crop it at 10x before writing it.
+
+### Findings to paste into the next run (2026-09-15, fifty-eighth batch, FOUR OF FOUR -- *Statues of Limitations*, batch closed)
+
+**128 groups, 10 speaker corrections (7.8%), every one in the nephew domain (10 of
+60, 16.7%)**; by the confidence the pass wrote, **high 8/106 (7.5%), medium 2/22
+(9.1%)**. No group was added. All 4 type proposals held; no text corrections.
+Mirrored clean onto paddleocr: 128/128 reviewed on both engines, distributions
+identical. **Batch: 30 speaker corrections over 653 passed groups (4.6%)** -- 9, 11,
+0 and 10 by title; 4 groups added (the pass's `CRASH`, and the review's `313`,
+`AIR FREIGHT` and `171761`). *Faulty Fortune* 066 `CANNY BRANNIES` went to the
+ignore list on the reviewer's word.
+
+- **A SCAN ZERO ON A THIN RIM WAS A NAME, AGAIN (059 g2 -> Dewey, 065 g1 -> Huey,
+  067 g5 -> Dewey, 067 g6 -> Louie, 067 g7 -> Huey).** The same failure as *Faulty
+  Fortune*'s eight, in the other volume: across the batch 13 collectives written
+  off a capwide zero at S>=0.3, or off a sliver judged off-roster (065 g1's maroon
+  `#a24351` was the red), were named by the review. On these 1955 caps with thin
+  rims, **crop every speaking boy's rim at 3x before writing `nephews`**; the scan
+  does not see them.
+- **TAILS CROSSED: TRACE FROM THE ROOT, NOT THE TIP (058 g2 Huey -> Louie, 058 g3
+  Louie -> Huey).** The long thin tail running down the right side of the g3
+  balloon was g3's own and reached the red cap; g2's reached the green. The pass
+  gave the long spike to g2 because it appeared to start above g3, and swapped
+  the pair.
+- **A TIP LEVEL WITH ONE HEAD BELONGS TO THAT HEAD (062 g4 Dewey -> Huey).** The tip
+  sat inside the front boy's horizontal span but 31px above his cap, and level
+  with the back boy's head 18px to the right; it was the back boy's. Measure the
+  tip in y as well as x before calling it one boy's.
+- **TWO TAILS ON ONE BALLOON WERE TWO BOYS (061 g0 -> Huey, 061 g1 -> Louie).** The
+  pass read both tips as landing on the red-capped boy and left both collective;
+  the review gave one to him and the other to the boy beside him ("Not Huey or
+  Dewey", `cap_colour` null). Two tails on a balloon are two speakers until a crop
+  proves they converge.
+- **MEDIUMS HELD 20/22**, including the eliminations 058 g9 and 066 g5, the hidden
+  tails 058 g1, 058 g10 and 065 g2, and the off-palette greens 058 g11 (H90), 059 g9,
+  062 g7 (H131) and 065 g4. The two mediums corrected were 058 g2 and 062 g4.
+- **THE ADULT CAST HELD AS WRITTEN**: `other:the mayor`, `other:the mayor's aide`,
+  `other:the Umble boy`, `other:the Umble girl`, and the closing chorus as
+  `other:Donald and the nephews`.
 
 ## Per-volume cap palette
 
