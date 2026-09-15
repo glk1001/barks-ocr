@@ -7118,6 +7118,30 @@ ignore list on the reviewer's word.
 
 ## Per-volume cap palette
 
+Vol. 18, one title read 2026-09-16 (fifty-ninth batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Borderline Hero* | 070 p3, three boys running in black caps with thin rims | `#e51a20`-`#e61a20` 120-1,030px (070 p3, 072 p1-p3); dark `#7e1e16` H4.6 (072 p7); long-shot `#a82e20` H6.2 (072 p8), `#a33321` H8.3 (074 p1) | `#4fa43e` H110 180-3,200px (072 p4, p6; 077 p5, p6); shaded `#2e865b` H150.7 (070 p3), `#39ad48` H127.8 (075 p2), `#47a840` H116 (075 p7), `#359b60` H145 (077 p7) | `#00a5d5`-`#01a4d5` 80-3,400px (070 p3, 072, 074 p2, 077 p4); teal `#13a7a3`-`#019ea6` H177-183 (074 p1, 075 p7, 077 p5, p6); greener teal `#23a780`/`#02956c` H162-163, ranked blue against a greener cap beside it (072 p8, 077 p7) | a thin coloured rim on a black cap outdoors; bare-headed indoors (068, 069); some caps print no rim (072 p1 right boy, 072 p4 left boy, 075 p2 left boy) |
+
+- Donald's campaign hat is the roster `#00a5d5`; the garden gate (072 p1, p4) prints
+  the cap red at head height; the cacti are H146-163 at S1.0.
+
+Vol. 16, one title read 2026-09-16 (fifty-ninth batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Second-Richest Duck* | 074 p5, three boys at the ball in quartered caps | `#e31a20` 1,285px (074 p5 probe), `#e61a20` 835-1,491px (085 p5); rims `#e4191f` (075 p2), `#e21c20` (081 p3), `#e11d20`/`#c72528` (083 p5, p6), `#e61920` (084 p7), `#d52428` (089 p3); pinkish `#e73448` H353 (082 p8) | `#459e5f` H137.5 (074 p5), `#4aa344` H116 (075 p5), `#53a449` H113 (081 p2), `#4da33d` H111 (082 p4, 087 p6, 088 p2, p4); shaded `#6a973f` H90.7 (082 p6), `#619b37` H94.8 (082 p8), `#589b39` H101 (085 p5) | `#04a4d6`-`#06a5d4` 70-5,400px (074 p6-p8, 082 p2, 085 p5, 086 p3, 087 p3) | a coloured rim or quarter on a black cap; bare-headed through much of the voyage and Glomgold's bin (074 p2-p4, 075 p1, 078 p3-p6, 079 p3, 081 p4) |
+
+- The one naming line, 082 g4 `DEWEY`, lands on the blue-rimmed boy of 082 p2. It is
+  a dictionary word, so `name-grep` did not list it: grep the groups for all three
+  names at prep.
+- Scrooge's coat is `#a04453` and his hat band the roster blue; Glomgold's pompom
+  prints the cap red at head height (082 p4, 087 p6), and the green stars on 077 p8
+  print the cap green.
+- A filtered capwide listing showed no red blob on a red cap plain in the crop
+  (074 p5, 081 p2); the probe found `#e31a20` 1,285px on 074 p5. Probe the head.
+
 Vol. 16, two titles read 2026-09-15 (fifty-eighth batch):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
