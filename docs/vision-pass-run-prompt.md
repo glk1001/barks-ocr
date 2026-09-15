@@ -7116,6 +7116,42 @@ ignore list on the reviewer's word.
   `other:the Umble boy`, `other:the Umble girl`, and the closing chorus as
   `other:Donald and the nephews`.
 
+### Findings to paste into the next run (2026-09-16, fifty-ninth batch, ONE OF TWO REVIEWED -- *Borderline Hero*)
+
+**137 groups, 2 speaker corrections (1.5%), both in the nephew domain (2 of 48,
+4.2%)**; by the confidence the pass wrote, **high 2/125 (1.6%), medium 0/12**. No
+group was added, no text correction was proposed, and all 5 type proposals held
+(068 g0 the splash logo to `title`; 070 g14, g15, 073 g5, 074 g6 the bubble
+trails to `thought`). `review_findings` also lists 4 `type_was` rows reviewed
+2026-08-16, predating this pass and not counted. Mirrored clean onto paddleocr:
+137/137 reviewed on both engines, `identified_by` 134, and the speaker,
+`cap_colour` and confidence distributions identical.
+
+- **BOTH CORRECTIONS WERE A CAP I HAD ALREADY READ AND DECLINED TO USE (072 g8 ->
+  Huey `red`, 072 g12 -> Dewey `blue`).** Neither was a tail error: the tails were
+  right and the names were left off.
+- **A PROBE ZERO ON A SMALL LONE BOY IS NOT A BARE HEAD (072 g8).** The `TAXI!`
+  boy: `capwide` returned red 0 / green 0 / blue 0 and a probe of his head
+  (x540-620 y390-470) found no chromatic band at all, so the pass wrote
+  `nephews` and quoted both. The review read a red cap. At that size the rim is a
+  few dozen pixels against a night-blue field; **crop the cap at 4-6x before
+  writing the collective**, exactly as the fifty-eighth batch said for thin rims,
+  and do not treat a probe zero as the end of it.
+- **BACK-PROPAGATE A NAME ONTO THE SAME BOY IN THE NEIGHBOURING PANEL (072 g12).**
+  On 072 p8 the pass named the boy holding the binoculars Dewey, ranking his
+  `#02956c` H163 cap as blue against the H131 green beside it. One panel earlier,
+  on p7, the *same* boy with the *same* binoculars got `nephews`, because his cap
+  there probes as a shaded green speck (H146, S0.12) matching the boy beside him.
+  The review named him Dewey on p7 too. When a boy carries a prop across
+  consecutive panels and one panel names him, carry the name back.
+- **EVERY MEDIUM HELD, 12/12**: the gap tips (070 g7, 075 g2, 075 g8, 077 g14,
+  077 g17), the eliminations where the boy's own cap printed nothing (072 g2,
+  072 g6, 075 g1), the shaded-teal blues read by ranking (074 g1, 077 g17), the
+  long-shot `GOLLY!` (069 g12) and the silhouette call.
+- **THE ADULT CAST HELD AS WRITTEN**: `other:the border patrol chief`,
+  `other:the photographer`, `other:the pickup man`, `other:the parakeet man`,
+  `other:a smuggler`.
+
 ## Per-volume cap palette
 
 Vol. 18, one title read 2026-09-16 (fifty-ninth batch):
