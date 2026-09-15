@@ -7152,6 +7152,57 @@ trails to `thought`). `review_findings` also lists 4 `type_was` rows reviewed
   `other:the photographer`, `other:the pickup man`, `other:the parakeet man`,
   `other:a smuggler`.
 
+### Findings to paste into the next run (2026-09-16, fifty-ninth batch, TWO OF TWO -- *The Second-Richest Duck*, batch closed)
+
+**274 groups passed plus 2 added, 17 speaker corrections (6.2% of the 274)**; by
+the confidence the pass wrote, **high 12/258 (4.7%), medium 3/15 (20.0%), low
+0/1**. `review_findings` prints 5.5% and a nephew domain of 14 of 45 because its
+denominator is the whole 22-page title (308 groups): pages 090 and 091 carry 32
+groups that prep skipped and this pass never read. All 8 type proposals held and
+no text correction was proposed. Mirrored clean onto paddleocr: 276/276 reviewed
+on both engines, `identified_by` 262, distributions identical. **Batch: 19
+speaker corrections over 411 passed groups (4.6%)** -- 2 and 17 by title.
+
+- **NINE UNDER-NAMINGS, AND FIVE WERE A `capwide` ZERO WRITTEN UP AS BARE-HEADED
+  (074 g3, 074 g6, 080 g6, 083 g9, 083 g12 -> Louie).** The note in each says
+  `bare-headed` or `shows no ink` and quotes the band totals; the review found a
+  green cap every time. With *Borderline Hero*'s 072 g8 that is **six in one
+  batch, the same failure as the fifty-eighth batch's thirteen**. The scan cannot
+  see these rims: on a title whose caps are a coloured rim on black, **crop every
+  speaking boy's head at 3-6x before writing `nephews`** -- a zero from `capwide`,
+  `title_bands` *or* `probe` is not evidence of a bare head.
+- **A FLAT BLACK SILHOUETTE WAS STILL NAMED (083 g10 -> Dewey).** The pass wrote
+  `no cap colour can print on a silhouette`, which is true and still not a reason
+  to decline: the other two boys in the panel were named, so the third was the
+  remainder. Eliminate before falling back to the collective.
+- **THE SILHOUETTE BRAWL PAIR WAS SWAPPED (077 g9 Scrooge -> Glomgold, 077 g10
+  Glomgold -> Scrooge).** The pass split two identical silhouettes on the
+  dialogue: `SHORTIE` is Glomgold's word for Scrooge (076 g12), so the speaker of
+  `LONG TONS, SHORTIE!` was read as Glomgold. The review inverted both. **An
+  insult does not name its speaker**; on identical silhouettes trace the tail
+  roots or say so and leave the pair at medium.
+- **SCROOGE TOOK THREE LINES THE PASS GAVE TO SOMEONE ELSE (075 g4, 076 g5 ->
+  Scrooge from Donald; 077 g14 -> Scrooge from `nephews`).** 076 g5, `THE TIGHTWAD
+  DOESN'T EVEN BUY NEWSPAPERS!`, is the trap: it reads as Donald's line about
+  Scrooge, and it is Scrooge's about Glomgold. In a two-tycoon story the
+  miser-baiting register belongs to both of them.
+- **A DEVICE SITS OVER WHOEVER IS BENEATH IT, NOT OVER THE BOYS (089 g8
+  `nephews` -> Flintheart Glomgold).** The pass probed both boys' caps, found the
+  same red on each, and recorded the collective -- having never established that
+  the `?` hangs over the boys at all.
+- **BOTH ADDED GROUPS ARE LETTERING THE PASS LEFT OUT OF `visible_text` (085 g13
+  `? ?`, 088 g3 `POP`).** Checked against their own crops at 4-5x before
+  mirroring: the two question marks hang between the balloon tails over the boys'
+  silhouettes, and `POP` is the string parting by Scrooge's hand, so `nephews`
+  and `none` are right as the review wrote them. The missed-text audit could not
+  find either, because it only diffs what `visible_text` holds. **Transcribe
+  drawn devices and small impact effects on every page**, not just signs.
+- **MEDIUMS RAN 3/15 CORRECTED (20.0%) AGAINST HIGH'S 4.7%**, the fourth batch in
+  a row where medium is the worse bet.
+- **The canonical speaker is `Flintheart Glomgold`, with no `other:` prefix** --
+  the apply canonicalises it and reports `Canonicalized 69 speaker value(s)`.
+  Write it bare when a character is in the story's own cast list in `roster.txt`.
+
 ## Per-volume cap palette
 
 Vol. 18, one title read 2026-09-16 (fifty-ninth batch):
