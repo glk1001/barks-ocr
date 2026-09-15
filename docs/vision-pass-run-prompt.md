@@ -6991,6 +6991,67 @@ labels); *The Runaway Train* 053 p7 `171721` (the locomotive's number plate) and
   nephews`. Across titles, *Genghis*'s `the newscaster` and *Runaway Train*'s `the
   TV announcer` are the same role.
 
+### Findings to paste into the next run (2026-09-15, fifty-eighth batch, ONE OF FOUR REVIEWED -- *The Lost Crown of Genghis Khan!*)
+
+**269 groups, 9 speaker corrections (3.3%), 8 in the nephew domain (8 of 47,
+17.0%)**; by the confidence the pass wrote, **high 4/239 (1.7%), medium 3/26
+(11.5%), low 2/4**. No group was added. All 5 type proposals held; no text
+corrections. Mirrored clean onto paddleocr: 269/269 reviewed on both engines,
+distributions identical. `review_findings` counts 287 groups because it also reads
+page 059, which is not this title's and was reviewed on 2026-08-16.
+
+- **THE 017 HUEY ADDRESS STOOD, AND SO DID THE CONVENTION.** 017 g13 stayed Huey on
+  a leafgrn cap, and every red Huey and green Louie on 015-024 stood. When a naming
+  line lands on the "wrong" cap, name that panel from the line and keep the
+  convention everywhere else.
+- **A CASCADE WHOSE TAILS REACH CAPPED BOYS STILL NAMES THEM (010 g3 -> Louie, g5 ->
+  Huey).** The pass left the boarding-stairs cascade collective: g3 fed into g5,
+  g5 carried two tails, and the higher boy's cap was written off as "no chromatic
+  ink". The review named the green boy and the red boy. A capscan zero on a small
+  crown is not a bare head.
+- **016 g12, a gap tip between two sleeping boys, went to Louie** -- the boy in the
+  green sleeping bag. The pass had refused the bags as a key because Scrooge sleeps
+  in a green one on 017 p2; what the review read it from was not stated.
+- **THE LEAN BEAT THE TIP ON DONALD (013 g9 Louie -> Donald; 012 g9 nephews ->
+  Donald).** On 013 g9 the tail leaned toward Donald while its tip touched the
+  boy's beak; on 012 g9 a tip over the running silhouettes was Donald's.
+- **DONALD WAS SCROOGE TWICE (024 g3, 026 g5).** 024 g3's tip, 31px above Donald's
+  sailor cap and 57px from Scrooge's top hat, was Scrooge's. 026 g5, the low
+  long-shot default, was the watch owner's line -- `LET'S TRY TO BE FAR AWAY WHEN
+  THAT WATCH RUNS DOWN AGAIN!`.
+- **A SILHOUETTE `THAT'S A DEAL!` WAS THE CHORUS (012 g12 -> `other:Donald and the
+  nephews`)**, and 023 g14's silhouette behind the bars was a boy (`unknown` ->
+  `nephews`). 020 g2 stayed `unknown`.
+- **TWO STRAGGLERS**: 016 g1 `TICK TICK` and 023 g13 `CRACK!` were left without
+  `speaker_reviewed` at first; both were signed off before the mirror.
+
+### Findings to paste into the next run (2026-09-15, fifty-eighth batch, TWO OF FOUR REVIEWED -- *Faulty Fortune*)
+
+**120 groups passed plus 1 added, 11 speaker corrections (9.2%), 10 in the nephew
+domain (10 of 25, 40.0%)**; by the confidence the pass wrote, **high 8/111 (7.2%),
+medium 1/7, low 2/2**. `review_findings` prints 12 rows and medium 2/7: the
+twelfth, `061 g9: unknown -> none`, is the group the review added, which sits on
+the pass's g9 id. The `CANNIE` -> `CANNY` text correction and all 4 type proposals
+held. Mirrored clean onto paddleocr: 121/121 reviewed on both engines,
+distributions identical.
+
+- **AN UNMARKED BLACK CAP ON THIS TITLE WAS NOT BARE (063 g1, g2, g6, g10, 064 g1,
+  067 g5 -> Louie; 067 g6 -> Dewey; 066 g17 -> Huey).** Eight collectives were
+  written off a capwide zero at the S>=0.3 floor. The rims here are thin and dark,
+  and the green in particular sits under the saturation floor -- the same rim was
+  plain in the 062 g7 crop, which held. Where the scan finds nothing on a black
+  cap, crop the rim at 3x before calling it unmarked.
+- **THE REGISTER BEAT THE TIP (061 g3 Scrooge -> Louie).** `YES! YOU COULD RAISE
+  CARROTS! ONE EACH YEAR!` is a jab at Scrooge, and a tip 16px from his top hat
+  belonged to the green-capped boy beside it. The pass flagged the conflict at
+  medium; the review took the line. 061 g10 (the pass's g9), `YOU DON'T EXPECT ...
+  FORT WORTH`, stayed Scrooge.
+- **THE SILHOUETTED CAR WAS SETTLED FROM THE LINES (064 g7 `unknown` -> `nephews`,
+  064 g8 `unknown` -> Donald).**
+- **MISSED TEXT ADDED: 061 p4 licence plate as g9 `313`**, `background`, `none`,
+  renumbering 061 from g9. **066 p1 `CANNY BRANNIES`** (the cereal-box labels) was
+  not added and is still reported by the audit.
+
 ## Per-volume cap palette
 
 Vol. 16, two titles read 2026-09-15 (fifty-eighth batch):
