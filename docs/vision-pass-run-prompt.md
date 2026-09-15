@@ -7010,8 +7010,11 @@ page 059, which is not this title's and was reviewed on 2026-08-16.
   ink". The review named the green boy and the red boy. A capscan zero on a small
   crown is not a bare head.
 - **016 g12, a gap tip between two sleeping boys, went to Louie** -- the boy in the
-  green sleeping bag. The pass had refused the bags as a key because Scrooge sleeps
-  in a green one on 017 p2; what the review read it from was not stated.
+  green sleeping bag. The review's reason: his is the only bag still open, so he is
+  the one awake to speak, and the tail points at him approximately. The pass had
+  refused the bags as a colour key (Scrooge sleeps in a green one on 017 p2) and
+  that stands; what named him was the drawing -- who is awake -- plus the lean of
+  the tail. On a gap tip, ask which figure the art shows able to speak.
 - **THE LEAN BEAT THE TIP ON DONALD (013 g9 Louie -> Donald; 012 g9 nephews ->
   Donald).** On 013 g9 the tail leaned toward Donald while its tip touched the
   boy's beak; on 012 g9 a tip over the running silhouettes was Donald's.
@@ -7051,6 +7054,26 @@ distributions identical.
 - **MISSED TEXT ADDED: 061 p4 licence plate as g9 `313`**, `background`, `none`,
   renumbering 061 from g9. **066 p1 `CANNY BRANNIES`** (the cereal-box labels) was
   not added and is still reported by the audit.
+
+### Findings to paste into the next run (2026-09-15, fifty-eighth batch, THREE OF FOUR REVIEWED -- *The Runaway Train*)
+
+**136 groups passed plus 2 added, 0 speaker corrections**; by the confidence the
+pass wrote, **high 0/133, medium 0/4**. The groups added are the pass's own 048 p5
+`CRASH` and the review's 055 p6 `AIR FREIGHT`. `review_findings` prints one row,
+`055 g13: unknown -> none`, and high 1/133, but that is the review's add sitting on
+the pass's g13 id. Both type proposals held (057 g6, g7, the broadcast balloons
+stored as captions). Mirrored clean onto paddleocr: 138/138 reviewed on both
+engines, distributions identical.
+
+- **A TITLE WITH NO CAP KEY HELD WHOLE.** All 50 collectives stood: the boys are
+  bare-headed indoors on every page, and a line that names all three (054 g9,
+  057 g7) names none of them.
+- **EVERY MEDIUM HELD, 4/4**: 048 g8 between the boys and Donald, 053 g10 the
+  technician drawn only as legs, and 054 g1, g2 from the silhouetted control tower.
+- **THE PASS'S ADDED `CRASH` STOOD** as a sound effect with no speaker.
+- **MISSED TEXT ADDED: 055 p6 `AIR FREIGHT`** as g13, `background`, `none`.
+  **053 p7 `171721`**, the locomotive's number plate, was not added and is still
+  reported by the audit.
 
 ## Per-volume cap palette
 
