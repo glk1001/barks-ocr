@@ -6801,6 +6801,30 @@ Anything* 136 p2 `313` (the hot rod's licence plate), both parked in the titles'
   geese`, `the mailman`; *Inventor of Anything* `Speedy` (named in the dialogue),
   `the neighbour`, `the goat`, `the boys next door`.
 
+### Findings to paste into the next run (2026-09-15, fifty-seventh batch, ONE OF FOUR REVIEWED -- *The Master*)
+
+**131 groups passed plus 2 added, 0 speaker corrections**; by the confidence the
+pass wrote, **high 0/127, medium 0/4**. `review_findings` prints two rows, `019
+g13: unknown -> none` and `023 g11: unknown -> Donald`, but both are the groups the
+review added, not overrules. All 4 type proposals held; no text corrections.
+Mirrored clean onto paddleocr: 133/133 reviewed on both engines, distributions
+identical.
+
+- **MISSED TEXT ADDED: 019 p5 `MAN OH MAN`** (the cover of Donald's book) as g13,
+  `background`, `none`. It renumbers 019 from g13 on, so the pass's g17 thought
+  now reads as g18 in `review_findings`.
+- **A DRAWN `?` THE AUDIT DID NOT LIST WAS ADDED TOO (023 g11, `thought`,
+  Donald).** The `?` in its own cloud over Donald on 023 p2 was in the page's
+  `visible_text`, yet `audit_missed_text` reported only `MAN OH MAN` for the
+  title. A lone `?` in `visible_text` is not a guarantee it reaches the queue:
+  park an ungrouped drawn device in `queue-missed.txt` by hand.
+- **THE MASTER'S PALETTE AND ITS THIN RIMS HELD.** Every name resting on the H147
+  `#009d46` green and on the teal rims ranked to Louie on G above B (020 g4 H162,
+  022 g4 H175, 023 g3 H163, 026 g7 H163) stood, as did the dimmed reds named Huey
+  (020 g6 `#893b25`, 022 g1 `#762c18`) and the medium gap tip on 020 g4.
+- **THE COLLECTIVES HELD**: all 19, indoors on 018-019 and on the silhouettes
+  (018 p3, 020 p4, 024 p4), were left as `nephews`.
+
 ## Per-volume cap palette
 
 Vol. 18, three titles read 2026-09-15 (fifty-seventh batch); Vol. 20's *Inventor
