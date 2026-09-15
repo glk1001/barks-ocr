@@ -6740,7 +6740,84 @@ p1 was added as g2, `dialogue`, Donald, which renumbers the page: the
   name on 172-178 resting on `RODMAN LOUIE` / `CHARTMAN HUEY`, the green
   `#019d47`, and the ranked teals on 178 stood.
 
+### Findings to paste into the next run (2026-09-15, fifty-seventh batch, PASS ONLY -- not yet reviewed)
+
+*The Master* (Vol. 18, 018-027), *A Whale of a Story* (Vol. 18, 028-037) and
+*Smoke Writer in the Sky* (Vol. 18, 038-047), all 1955, and *Inventor of Anything*
+(Vol. 20, 133-136). The name-grep's non-dictionary list carried no nephew name,
+but *Whale* 035 names all three in dialogue (`HUEY AND DEWEY, GO OUT ON THE
+ROCKS`, `LOUIE, STAY HERE`) -- dictionary words, the grep's known blind spot.
+
+| title | groups | medium | nephew domain (named / collective) | type | text | missed text | images |
+|---|---|---|---|---|---|---|---|
+| *The Master* | 131 | 4 | 36 (17 / 19) | 4 | 0 | 1 | 19 / 10 = 1.90 |
+| *A Whale of a Story* | 140 | 16 (+1 low) | 59 (31 / 28) | 3 | 0 | 0 | 16 / 10 = 1.60 |
+| *Smoke Writer in the Sky* | 139 | 12 | 39 (29 / 10) | 9 | 0 | 0 | 15 / 10 = 1.50 |
+| *Inventor of Anything* | 60 | 1 (+1 low) | 0 | 5 | 0 | 1 | 4 / 4 = 1.00 |
+
+**Batch: 470 groups, 54 images over 34 pages = 1.59 per page.** Missed text:
+*The Master* 019 p5 `MAN OH MAN` (the cover of Donald's book) and *Inventor of
+Anything* 136 p2 `313` (the hot rod's licence plate), both parked in the titles'
+`queue-missed.txt`.
+
+- **THE VOL. 18 CAP GREEN IS A PER-TITLE FACT.** *The Master* prints it `#009d46`
+  H147 in the `green` band (021 p8); *Whale* and *Smoke Writer* print `#4fa43e`
+  H110 in `leafgrn` (028 p1, 038 p1). Red and blue are the same in all three.
+  Read the reference panel for each title rather than carrying the volume's.
+- **A DIALOGUE-VS-CAP CONFLICT IS FLAGGED TWICE (*Whale* 035 g12, 036 g9).**
+  Donald sends `HUEY AND DEWEY` fishing and keeps Louie, whose cap is leafgrn.
+  One fisher prints red; the other prints green `#529f65` H134.8 (035 p7) and a
+  weak `#7bab63` (036 p7), never blue. Both named Dewey at medium by the order,
+  with the printed colour recorded. The review settles whether order or ink wins.
+- **TEAL SLIVERS WERE RANKED, NOT DECLINED.** `#19a896` H172 (*Whale* 028 g11)
+  went to Dewey; `#009f70` H162, `#24877f` H175, `#346e5e` H163 and `#249071` H163
+  (*The Master* 020 g4, 022 g4, 023 g3, 026 g7) went to Louie on G above B, at
+  medium where the rim is thin. *Smoke Writer* 044 g11's `#35a567` H147 went to
+  Louie at medium although the story's foliage prints that hue.
+- **ELIMINATION NAMED A THIRD BOY WITH NO INK, AT MEDIUM** (*Whale* 037 g10;
+  *Smoke Writer* 038 g6, 042 g14, 047 g10).
+- **GAP TIPS WENT TO THE SIDE THE TAIL LEANS, AT MEDIUM** (*Whale* 029 g4, 030
+  g12; *Smoke Writer* 040 g6, where the other head was a silhouette, and 046 g2).
+- **A RADIO VOICE WAS NAMED FOR THE BOY HOLDING THE WALKIE-TALKIE** (*Smoke
+  Writer* 040 g11, 041 g5, Huey, medium). Zigzags from off the panel edge are
+  `nephews`.
+- **THREE PAIRS OF EYES IN THE SMOG (*Smoke Writer* 047 g5-g7)** were called
+  `nephews` at medium because the boys walk out of it on the next panel; they
+  could as well be townspeople.
+- **LOW, FOR REVIEW**: *Whale* 032 g1 (`YO, HO!` from a speck of a boat, Donald)
+  and *Inventor of Anything* 135 g10 (an off-panel `OW` in a fight, `unknown`).
+- **TYPE: 21 proposals.** Bubble trails on groups stored as dialogue, to thought:
+  *The Master* 019 g17, 020 g16 (a `?`), 026 g5; *Whale* 030 g13; *Smoke Writer*
+  041 g1, 041 g3, 046 g11; *Inventor* 133 g3, 133 g12. A pointed tail stored as
+  thought, to dialogue: *The Master* 025 g5. A tailed balloon stored as narration,
+  to dialogue: *Whale* 034 g11. Story logos stored as background, to title: *Whale*
+  028 g0, *Smoke Writer* 038 g0, and the `INVENTOR OF ANYTHING` sign (133 g7).
+  Voices stored as sound_effect, to dialogue: `BOO! BOO!` (042 g12), the geese's
+  `HONK!` (043 g13-g15), the crowd's laughter (044 g8), `OW!` and the goat's `BAA!`
+  (133 g4, g16).
+- **TEXT: none.**
+- **`other:` values**: *The Master* `the boss`, `the kingfisher`; *Whale* `the
+  Humane Society man`, `the sheriff`; *Smoke Writer* `a voter`, `the crowd`, `the
+  geese`, `the mailman`; *Inventor of Anything* `Speedy` (named in the dialogue),
+  `the neighbour`, `the goat`, `the boys next door`.
+
 ## Per-volume cap palette
+
+Vol. 18, three titles read 2026-09-15 (fifty-seventh batch); Vol. 20's *Inventor
+of Anything*, read in the same batch, has no nephews (Gyro, Speedy and a
+neighbour):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Master* | 021 p8, three boys side by side in the freezer | `#e61a20`-`#e61b20` 60-1,240px; dimmed `#893b25` H13 (020 p3), `#762c18` (022 p1) | `#009d46` H147, the `green` band; thin rims `#009f70` H162, `#24877f` H175, `#249071` H163 | `#00a5d5`; `#08a2b2` H185.6 (022 p1), `#139da5` H183 (023 p4) | a coloured patch on a black cap; bare-headed indoors on 018-019 |
+| *A Whale of a Story* | 028 p1, three boys on the cliff | `#e71c20` 60-700px; dimmed `#ae2b17` (035 p7), `#c3171b` (033 p6) | `#4fa43e` H110, the `leafgrn` band | `#00a5d5`; `#2894ad` H191, `#3caabe` H189, teal `#19a896` H172 (028 p4) | a coloured patch on a black cap; on 033 p6 two caps lie beside their owners |
+| *Smoke Writer in the Sky* | 038 p1, three boys at the hangar in big checked caps | `#e71c20`, 2,085px at 038 p1; dimmed `#b13829` (047 p6) | `#4fa43e` H110 | `#00a5d5`; `#09a5c3` (047 p6) | checked caps at 038 p1, a coloured patch on a black cap elsewhere |
+
+- Donald's cap is the roster `#00a5d5` in all three titles.
+- *The Master*'s couch stripes print `#009d46`, its cap green. *Whale*'s thermos
+  (`#3aac41` H123.7) and red bags sit beside the boys. *Smoke Writer*'s grass and
+  foliage are `#009e46`/`#009e49`, not the cap green, and Scrooge's coat is
+  `#a04553`.
 
 Vol. 16, one title read 2026-09-14 (fifty-sixth batch); Vol. 20's *Trapped
 Lightning*, read in the same batch, has no nephews (Gyro, two mouse kids and
