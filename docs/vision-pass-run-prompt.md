@@ -6726,11 +6726,13 @@ p1 was added as g2, `dialogue`, Donald, which renumbers the page: the
   so H159 sits on the blue's side. **Rank a teal against the title's clean green
   and name it at medium, rather than declining** -- the decline is the one call
   guaranteed to be corrected.
-- **A PLAIN BLACK CAP BESIDE A GREEN ONE WAS NAMED DEWEY (173 g5).** The small boy
-  peering from the bushes showed no ink at all, and the only other boy in the
-  panel was Louie in clean green; the pass left `Huey or Dewey` open and the
-  review named Dewey. The review's reason is not recorded -- check it before
-  turning this into a rule.
+- **A LIGHT-BLUE CAP READ AS SKY (173 g5, nephews -> Dewey).** The small boy
+  peering from the bushes probed only `#b4d9df` (H188, S0.19), which the pass
+  wrote off as the sky behind him and so called the cap "plain black". Zoomed in,
+  the cap is light blue: Dewey. The foreground boy is Louie in clean green, which
+  was the other half of the answer. **A pale cyan crown probe is not the sky until
+  a crop shows sky there** -- on a title whose sky is that same pale blue, crop the
+  crown at 3x before declining.
 - **ONE BEAR, NOT A CUB (176 g6, `other:a bear cub` -> `other:a bear`).** The `?`
   over the cub wearing a cap went to the plain `other:a bear` the other three bear
   groups carry; the review keeps one value for the family.
@@ -6758,7 +6760,7 @@ Vol. 17, one more title read 2026-09-14 (fifty-sixth batch):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
 |---|---|---|---|---|---|
-| *Camping Confusion* | 172 p7-p8, named by the dialogue (`RODMAN LOUIE`, `CHARTMAN HUEY`) | `#e41b20`-`#e61a20` 240-1,400px; dimmed `#b93321` (173 p4), `#bf2d1f` (172 p6) | `#019d47`-`#009e47` H147, 340-1,100px -- the `green` band | `#04a5d6`-`#07a3cf` 200-1,500px; teal `#09a2ae` H184 (172 p6), `#0ba593` H172 (178 p8), and `#0ba570` H159 (173 p1, named Dewey by the review) | a coloured patch at the side of a black cap with a pink uranium button on top; the bears take the caps on 176-177 |
+| *Camping Confusion* | 172 p7-p8, named by the dialogue (`RODMAN LOUIE`, `CHARTMAN HUEY`) | `#e41b20`-`#e61a20` 240-1,400px; dimmed `#b93321` (173 p4), `#bf2d1f` (172 p6) | `#019d47`-`#009e47` H147, 340-1,100px -- the `green` band | `#04a5d6`-`#07a3cf` 200-1,500px; teal `#09a2ae` H184 (172 p6), `#0ba593` H172 (178 p8), and `#0ba570` H159 (173 p1, named Dewey by the review); a pale `#b4d9df` S0.19 on a small cap (173 p3) that is the sky's own hex | a coloured patch at the side of a black cap with a pink uranium button on top; the bears take the caps on 176-177 |
 
 - Donald's cap is the same `#04a5d6` as Dewey's patch, at up to 2,900px.
 
