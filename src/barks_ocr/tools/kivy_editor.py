@@ -1614,8 +1614,8 @@ class EditorApp(App):
             ("Select", lambda _inst, p=pane: self._show_speech_item_popup_for(p)),
             ("Copy In", lambda _inst, p=pane: self._handle_copy_in(p)),
             ("Copy Fmt", lambda _inst, p=pane: self._handle_copy_fmt(p)),
-            ("Diff", lambda _inst, p=pane: self._show_engine_diff_popup(p)),
             ("Mark OK", lambda _inst, p=pane: self._show_acknowledge_popup(p)),
+            ("Diff", lambda _inst, p=pane: self._show_engine_diff_popup(p)),
             ("Speaker", lambda _inst, p=pane: self._show_speaker_popup(p)),
             ("Delete", lambda _inst, p=pane: self._handle_delete(p)),
         ):
