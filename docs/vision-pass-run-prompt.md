@@ -6688,6 +6688,23 @@ added, and 052 p3 `S GROC` is still ungrouped. Mirrored clean onto paddleocr.
 - **THE `unknown`s WERE RESOLVED**: 050 g8 to `nephews`, 050 g9 to Donald, and
   052 g17's tail-less `LOOKOUT ABOVE!` from Scrooge to Donald.
 - **`other:` renamed once**: 051 g13 `a bellhop` -> `a waiter`.
+- **MISSED TEXT: 052 p3 `S GROC` went to `missed-text-ignore.txt`** -- a torn
+  fragment of the store name on the peeled paint strip, not worth a group.
+
+### Findings to paste into the next run (2026-09-15, fifty-sixth batch, TWO OF THREE REVIEWED -- *Trapped Lightning*)
+
+**51 groups, 11 speaker corrections (21.6%), every one the same relabel**; all
+calls were high. No type, text or missed-text work; no group added. The review
+also moved two paddleocr text boxes (130, 132). Mirrored clean.
+
+- **NAME A RECURRING SUPPORTING CHARACTER, NOT A ROLE.** The two mouse children
+  were written `other:a kid` on all 11 of their groups; the review made every one
+  `other:morty and ferdie`. They are Mickey's nephews, drawn in overalls with
+  their names never spoken in this story -- a known pair is still named, even
+  when the dialogue does not say it. On a Gyro or Grandma Duck filler, check the
+  supporting cast against the house characters before reaching for a role.
+- **A PAIR THAT SPEAKS TOGETHER IS ONE `other:` VALUE**, even where a single tail
+  picks out one of the two: the review did not split the names by tail.
 
 ## Per-volume cap palette
 

@@ -361,3 +361,8 @@ HELP KEEP AMERICA STRONG
 # seedling flat at the tree store (Gopher Goof-Ups 156 p2), a scribbled word
 # over "35". Real lettering, too small to read, and no story content.
 17 156 35
+
+# Judged not worth a group by the reviewer, 2026-09-15: the fragment of the store
+# name on the strip of paint the quake peeled off the grocery front (Land Beneath
+# the Ground! 052 p3). Real lettering, but a torn fragment with no story content.
+16 052 S GROC
