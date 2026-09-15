@@ -6825,6 +6825,43 @@ identical.
 - **THE COLLECTIVES HELD**: all 19, indoors on 018-019 and on the silhouettes
   (018 p3, 020 p4, 024 p4), were left as `nephews`.
 
+### Findings to paste into the next run (2026-09-15, fifty-seventh batch, TWO OF FOUR REVIEWED -- *A Whale of a Story*)
+
+**140 groups passed plus 1 added, 10 speaker corrections (7.1%), every one in the
+nephew domain**; by the confidence the pass wrote, **high 9/123 (7.3%), medium
+1/16 (6.2%), low 0/1**. `review_findings` prints 11 -- the eleventh, `034 g15:
+unknown -> Donald`, is the group the review added. All 3 type proposals held; no
+text corrections. Mirrored clean onto paddleocr: 141/141 reviewed on both engines,
+distributions identical.
+
+- **TWO BOYS WERE READ AS DONALD (031 g4, 034 g11 -> Dewey).** 031 g4's "Donald at
+  right, sailor cap `#00a5d5` 1647px" was Dewey: on this title Donald's cap and
+  Dewey's patch are the same blue, so a large blue cap is not Donald's until the
+  crown shape and the beak say so. 034 g11, the figure knocked flat under THOONK
+  with its cap flying, was the boy thrown off the spout on 034 p6, not Donald --
+  follow who was just in the air before naming who lands.
+- **OFF-PANEL AND LONG-SHOT LINES WENT TO THE BOYS (030 g0, g1; 031 g1 -> `nephews`).**
+  Two tails curling off the edge of a scenery panel and a second tail into a boat
+  of specks were given to Donald because the line sounded like his plan or his
+  rallying cry. Register is not evidence; the Donald default is for a lone figure.
+- **FIVE COLLECTIVES NAMED (029 g6, 031 g3, 033 g2 -> Louie; 033 g3, 036 g6 -> Huey).**
+  Three boys whose caps showed no ink came back Louie: this title's cap green is
+  the leafgrn `#4fa43e`, and it is the ink the scans lose on small or shaded caps.
+  031 g3 also fell out of the 031 g4 error -- with the right-hand figure Dewey
+  rather than Donald, the middle boy was the third by elimination. 033 g3 carries
+  the review note "Not Dewey or Louie".
+- **THE DIALOGUE ORDER BEAT THE INK (035 g12, 036 g9 held as Dewey).** The fisher
+  Donald had sent out as one of HUEY AND DEWEY stayed Dewey although he printed a
+  green `#529f65`. When a line assigns the pair, name from the order and record the
+  printed colour.
+- **A SECOND DRAWN `?` THE AUDIT DID NOT LIST (034 g15, `thought`, Donald).** The
+  `?` over Donald on 034 p5 was in the page's `visible_text`, and the audit reported
+  nothing for the title -- the same miss as *The Master* 023 g11. Park an ungrouped
+  drawn device in `queue-missed.txt` by hand.
+- **MEDIUMS HELD 15/16**, including the elimination on 037 g10, the gap tips on 029
+  g4 and 030 g12, and the teal `#19a896` ranked to Dewey on 028 g11. The one medium
+  corrected was 031 g1.
+
 ## Per-volume cap palette
 
 Vol. 18, three titles read 2026-09-15 (fifty-seventh batch); Vol. 20's *Inventor
