@@ -6913,7 +6913,111 @@ drawn `?` marks the audit did not list.
   dialogue, and the unnamed `other:the neighbour`, `other:the goat` and
   `other:the boys next door` all stood.
 
+### Findings to paste into the next run (2026-09-15, fifty-eighth batch, PASS ONLY -- not yet reviewed)
+
+*The Lost Crown of Genghis Khan!* (Vol. 16, 008-026 plus the one-page gag 235) and
+*Faulty Fortune* (Vol. 16, 060-067), *The Runaway Train* (Vol. 18, 048-057) and
+*Statues of Limitations* (Vol. 18, 058-067), all 1955. The name-grep's
+non-dictionary list carried no nephew name for *Genghis*, but 017 g12 addresses
+`HUEY` -- the dictionary-word blind spot again; a grep of `ai_text` found it.
+
+| title | groups | medium | nephew domain (named / collective) | type | text | missed text | images |
+|---|---|---|---|---|---|---|---|
+| *The Lost Crown of Genghis Khan!* | 269 | 26 (+4 low) | 49 (28 / 21) | 5 | 0 | 0 | 34 / 20 = 1.70 |
+| *Faulty Fortune* | 120 | 7 (+2 low) | 23 (12 / 11) | 4 | 1 | 2 | 17 / 8 = 2.13 |
+| *The Runaway Train* | 136 + 1 added | 4 | 50 (0 / 50) | 2 | 0 | 2 | 11 / 10 = 1.10 |
+| *Statues of Limitations* | 128 | 22 | 60 (41 / 19) | 4 | 0 | 0 | 19 / 10 = 1.90 |
+
+**Batch: 653 groups plus 1 added, 81 images over 48 pages = 1.69 per page.**
+Missed text, parked in the titles' `queue-missed.txt`: *Faulty Fortune* 061 p4
+`3 13` (the car's licence plate) and 066 p1 `CANNY BRANNIES` (the cereal-box
+labels); *The Runaway Train* 053 p7 `171721` (the locomotive's number plate) and
+055 p6 `AIR FREIGHT` (the crate). The pass itself added *Runaway Train* 048 p5
+`CRASH`, which neither engine had grouped.
+
+- **GENGHIS 017 p7 ADDRESSES A GREEN-CAPPED BOY AS HUEY.** `SUCH SHIVERING, HUEY!`
+  goes to the only boy in view, leafgrn `#4ca23e` 2,088px, and his close-up answer
+  on p8 prints `#4da33d` 9,122px. 017 g13 is named Huey from the address at medium
+  with the green recorded; everywhere else the convention stood (red Huey, green
+  Louie), and every red- or green-named group on 015-024 carries a note pointing
+  at 017. It is the only nephew name in the title's dialogue. The review decides
+  whether the story permutes red and green or the line is a slip; if permuted,
+  those names swap as a set.
+- **THE RUNAWAY TRAIN HAS NO CAP KEY: 50 COLLECTIVES, 0 NAMED.** The boys are
+  bare-headed indoors on every page, and the only naming lines list all three
+  (054 g9, 057 g7).
+- **GAP TIPS WENT ONE HEAD LEFT, AT MEDIUM** (*Genghis* 013 g6, 015 g14, 024 g4,
+  g5; *Faulty Fortune* 066 g8, g13; *Statues* 058 g9, 062 g4, 064 g8; 059 g11 at
+  high, the boy gesturing with sound lines).
+- **ELIMINATION NAMED AN UNMARKED THIRD BOY, AT MEDIUM** (*Statues* 058 g9, 066
+  g5, `cap_colour` null).
+- **A TAIL HIDDEN BEHIND ANOTHER BALLOON WAS NAMED ON ONE TAIL PER BOY, AT MEDIUM**
+  (*Statues* 058 g1, 058 g10, 065 g2).
+- **TWO TAILS ONTO ONE BOY WERE LEFT COLLECTIVE** (*Statues* 061 g0, g1, both on
+  the red-capped boy); the review may name him Huey.
+- **OFF-PALETTE GREENS WERE NAMED LOUIE**: *Statues* 058 g11 `#71a83a` H90, 059 g9
+  `#6ca73a` H92.5, 065 g4 `#43ae47` H122, 062 g7 `#44a055` H131 (medium); *Faulty
+  Fortune* 062 g7 on a rim plain in the crop but under the 0.40 saturation floor,
+  unmeasured (medium). A teal rim was ranked to Dewey: *Statues* 060 g3 `#279299`
+  H183.7 (medium).
+- **SCROOGE BY THE TAIL WHERE THE LINE READS AS A JAB AT HIM** (*Faulty Fortune*
+  061 g3 `ONE EACH YEAR!`, 061 g9 `YOU DON'T EXPECT ... FORT WORTH`), both medium:
+  the art and the register disagree.
+- **LOW, FOR REVIEW**: the long-shot Donald default on *Genghis* 011 g7 and 026
+  g5; `unknown` on *Genghis* 020 g2 (a scenery panel) and 023 g14 (a silhouette
+  behind bars), and *Faulty Fortune* 064 g7, g8 (the car in silhouette).
+- **TYPE: 15 proposals.** Speech balloons stored as captions, to dialogue:
+  *Genghis* 019 g0, 023 g9; *Runaway Train* 057 g6, g7. Bubble trails on groups
+  stored as dialogue, to thought: *Genghis* 008 g1; *Faulty Fortune* 065 g1;
+  *Statues* 060 g7, 060 g11, 062 g13. A pointed tail stored as thought, to
+  dialogue: *Faulty Fortune* 067 g7. Voices stored as sound_effect, to dialogue:
+  *Genghis* 019 g9 `EE-YEEK`; *Faulty Fortune* 063 g7 (the prairie dog's laugh),
+  065 g7 `GROAN!`. Lettering on the plane stored as dialogue, to background:
+  *Genghis* 010 g4 `ASIA`. The logo stored as background, to title: *Statues* 058 g0.
+- **TEXT: one.** *Faulty Fortune* 060 g9 `CANNIE` -> `CANNY BRANNIES`, the cereal
+  box label read at 4x on two panels.
+- *Genghis* 235 is a one-page *Uncle Scrooge* gag (Grandma Duck at the Ritzmore
+  Cafe) prepared under this title; it was read and applied with it.
+- Single characters in `visible_text` the audit does not report: *Genghis* 009 `$`,
+  010 `A`, 026 `A`. Not parked; the reviewer's call.
+- **`other:` values**: *Genghis* `the messenger`, `the red-coated runner`, `the
+  runner on the bridge`, `the guard`, `the newscaster`, `the snowman`, `the
+  crowd`, `a reporter`, `Grandma Duck`; *Faulty Fortune* `the land office clerk`,
+  `the prairie dog`, `the Cotton Sock grocer`, `the Florida grocer`, `the Alabama
+  storekeeper`, `the stewardess`, `the drilling foreman`; *Runaway Train* `the TV
+  announcer`, `Prof. Brainwhiz`, `the technician`, `the Limited's crew`, `the
+  railroad official` (two officials share it), `the airport guard`; *Statues* `the
+  mayor`, `the mayor's aide`, `the Umble boy`, `the Umble girl`, `Donald and the
+  nephews`. Across titles, *Genghis*'s `the newscaster` and *Runaway Train*'s `the
+  TV announcer` are the same role.
+
 ## Per-volume cap palette
+
+Vol. 16, two titles read 2026-09-15 (fifty-eighth batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Lost Crown of Genghis Khan!* | 010 p2, the ducks boarding at the airfield; the fur caps on 013 p1 and 014 p1-p5 | `#e41b20`-`#e51a20` 120-5,600px | `#4da33e`-`#4ca33f` H110-112, 170-9,100px -- the `leafgrn` band | `#00a5d5`-`#05a5d5` 290-7,600px | coloured trim on fur caps in the mountains; bare-headed on the airliner (011-012) and in the cage (022-023); the three silhouettes on 015 p2 print one identical teal `#038386` H181.8 |
+| *Faulty Fortune* | 061 p2, three boys in quartered beanies in the car | `#e51a1f` 900-2,000px; thin rims `#d82123` (064 p2), dark `#bf1e22` (066 p6), `#c01f1e` (066 p7), `#d52223` 96px (067 p1) | `#4da33e` H111 1,300-1,900px; rims `#4fa341` (064 p2), `#4ca43e` (066 p8) | `#03a4d6` 850-3,200px; `#00a5d7` (066 p7) | quartered beanies on 061, then thin rims on black caps, and no rim at all on 063 and 064 p1 |
+
+- *Genghis*: Scrooge's coat is `#a04453`, and on 012 p7 he wears a blue fur cap in
+  `#00a5d7`, as Donald's sailor cap is. The one naming line (017 g12) lands on a
+  leafgrn boy -- see the findings.
+- *Faulty Fortune*: the Canny Brannies boxes print the roster blue `#00a5d7` in
+  bulk at head height (066 p1), and the trees are `#009e49` H147.7.
+
+Vol. 18, two more titles read 2026-09-15 (fifty-eighth batch):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Runaway Train* | none | -- | -- | -- | bare-headed indoors throughout; no cap key at all |
+| *Statues of Limitations* | 058 p1, three boys from behind in quartered caps | `#e71c20` 120-3,400px; dimmed `#b8251c` H3.5 (059 p5), `#ae2917` H7 (064 p7), `#d01f1f` (066 p5) | `#4fa43e` H110 50-2,000px, the `leafgrn` band; on small caps `#71a83a` H90 (058 p5), `#6ca73a` H92.5 (059 p6), `#43ae47` H122 (065 p2), `#44a055` H131 (062 p4) | `#00a5d5`-`#01a4d5` 60-1,600px; teal rims `#1ba5a4` H179.6 (059 p6), `#16a5aa` H182 (059 p7), `#279299` H183.7 (060 p2) | a coloured quarter or rim on a black cap; some caps print nothing (061 p1, 066 p5, 067 p4) |
+
+- *Statues*: the boys' green mittens print the cap leafgrn `#4fa43e` (060 p3, 061
+  p7) and are not a cap; the house door (059 p5) and the house's sill strip (064
+  p8, where it merges with a cap) print the roster blue; the Umble boy's coat is
+  `#3e7b54`/`#407c56` H142.
+- Donald's cap is the roster `#00a5d5` in both titles.
 
 Vol. 18, three titles read 2026-09-15 (fifty-seventh batch); Vol. 20's *Inventor
 of Anything*, read in the same batch, has no nephews (Gyro, Speedy and a
