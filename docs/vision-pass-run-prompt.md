@@ -6647,6 +6647,48 @@ Louie and Huey on 172 p7, which is where its palette comes from.
   and Fermies`; Trapped Lightning `a kid`, `a racing driver`, `a housewife`, `a
   customer`; Camping Confusion `a camper`, `a bear`, `a bear cub`.
 
+### Findings to paste into the next run (2026-09-15, fifty-sixth batch, ONE OF THREE REVIEWED -- *Land Beneath the Ground!*)
+
+**423 groups, 24 speaker corrections (5.7%), 20 of the 107 in the nephew domain
+(18.7%)**; by the confidence the pass wrote, **high 17/358 (4.7%), medium 7/65
+(10.8%)**. All 9 type proposals and the one text correction held; no group was
+added, and 052 p3 `S GROC` is still ungrouped. Mirrored clean onto paddleocr.
+
+- **UNDER-NAMING IS HALF THE CORRECTIONS: 10 COLLECTIVES NAMED.** Three kinds,
+  all of them evidence the pass had and declined:
+  - **A desaturated cool sliver was Dewey's blue both times** (037 g12
+    `#6ca5ab` S0.37, 042 g7 `#67a0a1` S0.36). The pass declined for want of a
+    clean cool cap to rank against; on this volume the green is H110 and never
+    that cool, so a grey-cyan sliver is the blue.
+  - **A brown-orange patch was Huey's red** (037 g13 `#965c2e` H36). Read a
+    muddy warm patch on a Vol. 16 crown as the red, not as "not a roster ink".
+  - **Tiny heads, silhouettes and an identical shaded green were all named**
+    (032 g15-g16 in the far car, 042 g8 the silhouette, 033 g12-g13 two boys both
+    probing `#5f9665`, 039 g11 a tip where two heads meet). The review named them
+    from the order in the car and the neighbouring panels; identical ink on two
+    boys does not stop a name.
+- **DONALD -> SCROOGE THREE TIMES, ON LINES DRAWN OVER DONALD (041 g1, g4; 036
+  g5).** 041 g1's tip sat 22px from Donald's cap and 041 g4's on the middle
+  silhouette, and both went to Scrooge; 036 g5 was one of the four runaway-car
+  yelps given to Donald at medium, and the other three held. **Check the line's
+  voice against Scrooge before taking a tail near both heads.**
+- **FERMIES -> TERRIES THREE TIMES (041 g10, g12; 051 g4).** Every one was an
+  orange creature the pass called "necktied" at page scale. **Crop the neck before
+  naming a side**: the tie is the only key and it reads wrong at 1x.
+- **A GAP TIP WENT TO THE NEARER HEAD, NOT ONE HEAD LEFT (032 g14, Dewey ->
+  Huey).** The tip was 30px past the blue-capped boy and 10px short of the
+  red-capped one; the review gave it to the nearer boy. The one-head-left rule
+  came from Vols. 10 and 14 -- on this title it lost. (056 g3 also went one head
+  left and came back **Donald**, not the other boy.)
+- **TWO NAMES ON BOYS UNDER THE MOSS SLIDE WENT TO DONALD (049 g2 Huey -> Donald,
+  056 g3 Huey -> Donald)**, one with the tip inside a clean red cap's span. Look
+  for Donald cut off at the panel edge before naming the boy under the tip.
+- **THE ONE OVER-NAMING IS A GULP (033 g16, Dewey -> nephews).** Tip inside a
+  clean blue cap's span; the review made the shared `GULP!` a collective.
+- **THE `unknown`s WERE RESOLVED**: 050 g8 to `nephews`, 050 g9 to Donald, and
+  052 g17's tail-less `LOOKOUT ABOVE!` from Scrooge to Donald.
+- **`other:` renamed once**: 051 g13 `a bellhop` -> `a waiter`.
+
 ## Per-volume cap palette
 
 Vol. 16, one title read 2026-09-14 (fifty-sixth batch); Vol. 20's *Trapped
