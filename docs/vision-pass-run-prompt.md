@@ -9522,3 +9522,114 @@ half the batch's error is not perception at all -- it is failing to use what was
 already known, either in the note or in the file. **The cheapest possible
 improvement for the next run is not more images. It is reading the last review's
 findings properly and cashing the notes.**
+
+## Sixty-second batch read 2026-09-16 (none reviewed)
+
+Vol. 20 and Vol. 16, four titles, 41 pages, 541 groups. 59 images, **1.44 per
+page**; per title 2.75 / 1.75 / 1.83 / 1.11.
+
+| title | vol | pages | groups | type corr. | missed text | images/pg |
+|---|---|---|---|---|---|---|
+| *Forecasting Follies* | 20 | 4 | 51 | 8 | 1 | 2.75 |
+| *Fishing Mystery* | 20 | 4 | 50 | 4 | 0 | 1.75 |
+| *The Colossalest Surprise Quiz Show* | 16 | 6 | 86 | 0 | 0 | 1.83 |
+| *A Cold Bargain* | 16 | 27 | 355 | 0 | 0 | 1.11 |
+
+### Per-volume cap palette
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *A Cold Bargain* (16) | 136 p2, the three boys in a row, read at 2.4x | `#e61920` H358.0 S0.89, 419-617px side panel (136 p2) | `#4fa43e` H110.0 S0.62, 1545px over three blobs, INDOORS (136 p8); `#4fa43c`/`#50a33f` H109-110.5 6091px (139 p7) | `#06a4d4`/`#00a4d6` H194.0, 123-318px panel (136 p2) | a BLACK cap with a coloured SIDE PANEL; the third boy's panel prints pure black on 136 p2, so one of the three is unreadable by colour in any given panel |
+| *The Colossalest Surprise Quiz Show* (16) | none -- no cap ink on any head in the title | -- | -- | -- | the boys are bare-headed on both couch panels (128 p1, p7) |
+
+- ***A Cold Bargain* has two confounders that print the roster inks at head
+  height, and both are now measured.** The ship's red **deck railing** is
+  `#e61b1f` H358.8 S0.88 -- within a degree of Huey's `#e61920` cap panel -- and
+  it runs across 139 p3/p5, 140 p7, 141-146. Red names nobody on deck. Outdoors
+  the **grass** is `#4f933e` H108 S0.58 against Louie's `#4fa43e` H110, so green
+  names nobody outdoors either. Donald's sailor cap is the SAME `#00a4d6` H194 as
+  Dewey's panel, at 2371px, and Scrooge's hat band and the studio backdrop are
+  the roster blue too.
+- ***The Colossalest Surprise Quiz Show* is the cleanest worked example yet of
+  "a blob is only a cap once a crop has put it on a head."** capwide on 128 p1
+  returns **13 red and 4 green blobs**, including 3018px of `#e41c20` H358.8
+  sitting directly above a head. A 1.5x crop shows both nephews bare-headed: the
+  red above the head line is the **picture-frame trim on the wall**, the 13433px
+  `#da4922` is the **cushion Donald lies on**, and the 2840px `#009d46` the census
+  attached to a nephew's crown is the **green couch**. On 128 p7 the only
+  roster-red is 755px of `#e51a20` which is **Donald's own bow tie**, plus a 3px
+  wall sliver. Had any of those been taken at face value the title would carry
+  four wrong names.
+
+### Findings to paste into the next run (2026-09-16, sixty-second batch, NONE REVIEWED)
+
+These are read-side findings, not review corrections -- the batch has not been
+reviewed yet, so the usual correction-rate table cannot be written and the next
+run should treat this section as provisional.
+
+- **A COSTUME KEY CAN BE DIALOGUE-ANCHORED, AND THEN IT IS EVIDENCE.** The
+  standing rule is that a costume key does not travel. *A Cold Bargain* 148 is
+  the exception that shows what makes one hold: the marching file in the blizzard
+  names itself, front to back, in four consecutive balloons -- `IS THAT YOU IN
+  THE LEAD, UNCA DONALD?` / `YES! IS THAT YOU BEHIND ME, DEWEY?` / `YES! AND
+  LOUIE'S BEHIND ME!` / `AND I AM BEHIND LOUIE, AND UNCA SCROOGE IS BEHIND ME!`
+  -- and a 1.35x crop of p3 and p4 puts a ruff colour on each position: **Donald
+  red, Dewey yellow, Louie blue, Huey orange**. That is a NON-ROSTER palette:
+  red is not Huey, blue is not Dewey, green is nobody. **Record cap_colour null
+  when the garment palette is demonstrably not the roster's**, put the garment in
+  the note and `costume` in identified_by, and say so -- writing Louie's blue
+  ruff into cap_colour would manufacture a colourist error that
+  `cap_mismatch.py` would later report as real.
+- **AN ADDRESS NAMES THE ADDRESSEE, AND IT CARRIED THIS WHOLE BATCH.** It settled
+  the speaker on roughly forty groups with no image at all: every `UNCA SCROOGE`,
+  `UNCLE SCROOGE`, `MR. McDUCK`, `DONALD`, `BOYS`, `NEPHEW`, `SKIPPER`, `PILOT`
+  and `PENGY` line names somebody who is NOT speaking. It is the cheapest
+  discriminator in the file and it should be run over the page text before any
+  panel is opened.
+- **READ allbold's BASE, NOT JUST ITS RATIO.** The ratio is against the group's
+  OWN baseline, so it fails in BOTH directions on a balloon whose lettering is not
+  uniform. *Quiz Show* 128 g7 has base **4.70** against the page's usual 3.1 --
+  a balloon that is almost entirely bold, so `I DON'T KNOW!` scores a flat 1.00x
+  while the blurted `GREE —` scores 0.80x, and comparing the two against the page
+  norm is what proves the catchphrase is set bold. The same effect runs the other
+  way on 126 g12, base **3.76** because `PILLOWS FOR SALE` is drawn large as a
+  street cry: `SOFT` measures 1.07x on a clean line and a 2.4x crop shows it
+  bold-slanted.
+- **AND DO NOT READ EMPHASIS OFF A 250px MONTAGE.** *Quiz Show* 125 g12: I read
+  `STUMPERS` as slanted on the contact sheet, allbold scored it 1.06x on a
+  cleanly-split line, and a 2.3x crop shows it **upright**. The montage was wrong
+  and the tool was right. One calibration crop per title settles the threshold --
+  it came out at about 1.14 for this title -- and is worth its single image.
+- **A WHOLLY SLANTED BALLOON IS A VOICE EFFECT, NOT EMPHASIS.** The quiz show
+  announcer's balloons (124 g1/g3/g5, 128 g0/g15/g18) are set slanted throughout
+  as the story's convention for a voice coming out of a television; inside them
+  emphasis is extra WEIGHT. Tagging those words `[i]` would have been wrong.
+  Check the whole balloon before choosing the tag, and prefer the volume's own
+  habit -- Vol. 16 runs 956 `[b]` to 320 `[i]`.
+- **LISTING A GROUPED CAPTION OR A GROUPED `?` IN visible_text MAKES A FALSE
+  MISSED-TEXT HIT.** Five of the batch's six audit findings are mine:
+  `audit_missed_text.classify` matches only against groups typed as lettering the
+  ART carries, so a `narration` caption or a `?` typed `thought` can never match
+  and comes back as `[quoted aloud, not boxed]`. Put signs, labels, sound effects
+  and ungrouped drawn devices in visible_text; leave caption boxes and devices
+  you have typed `thought` out of it.
+- **THE DRAWING TEST IS WORTH ONE STACKED IMAGE PER TITLE.** Ten of the batch's
+  twelve applied type corrections are `dialogue -> thought` on Gyro's solo
+  balloons, and every one was settled by a scalloped cloud edge with a trail of
+  separate bubbles, six of them in a single stacked crop at 1.15x. The words are
+  no guide at all -- *Fishing Mystery* 154 g11 reads `NO FOOLIN'! I THINK I'VE
+  CAUGHT A WHALE!`, which sounds spoken, and the drawing is a cloud.
+  **A ninth was refused and that is correct behaviour**: *Forecasting Follies*
+  150 g3, the lone `?` beside Gyro's head, already carries `type_reviewed` from a
+  human on 2026-08-24, and `_apply_type` declines to overrule a review. The prep
+  stub exposes only `ai_text`, `panel_num`, `text_box` and `type`, so a pass
+  CANNOT see that a type has been reviewed and will keep proposing against it --
+  expect the applied count to fall short of the written one and check `type_was`
+  rather than assuming the apply dropped something.
+- **WHERE THE TAIL WAS NOT TRACED, THE ANSWER IS `nephews`, AND THAT IS A COST
+  DECISION TO DECLARE.** *A Cold Bargain* carries roughly 60 collective nephew
+  calls. Two boys are named -- 141 g6 and 145 g6, both sole-figure-with-a-clean-cap
+  -- and four more on 148 off the dialogue chain. The rest have cap ink recorded
+  in the note but no traced tail, and per the roster a balloon's x-span is not a
+  tail. The next review will show whether 1.11 images per page under-bought this
+  title; that is the number to watch.
