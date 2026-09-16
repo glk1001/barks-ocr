@@ -39,6 +39,7 @@ dependencies = [
     "pyenchant>=3.3.0",
     "pyspellchecker>=0.8.4",
     "pyuca>=1.2",
+    "rich>=14.3.3",
     "screeninfo>=0.8.1",
     "selenium>=4.38.0",
     "sentence-transformers>=5.6.1",
