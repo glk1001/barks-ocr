@@ -9112,3 +9112,120 @@ stops being applied the moment the prompt is shortened — which is exactly the
 failure recorded twice in `docs/vision-pass.md`, where a rule lived only in
 prose and never reached the pass. New rules go in `vision_schema.py`, which
 generates `roster.txt`, which `vision_apply` validates against.
+
+### Findings to paste into the next run (2026-09-16, sixty-first batch, NONE REVIEWED YET -- *Fearsome Flowers*, *Donald's Pet Service*, *Back to Long Ago!*)
+
+**565 groups over 41 pages, 69 images, 1.68 per page.** No review has run
+yet, so there are no correction rates here -- these are findings about the
+*reading*, and the next review will price them. 4 type corrections, 0 text
+corrections, 1 missed-text item in the batch.
+
+- **`name-grep` DOES NOT REPORT HUEY, DEWEY OR LOUIE.** All three are in its
+  dictionary, so they never reach the non-dictionary list, and a single
+  occurrence never reaches the repeated-pairs list either. It reported **none**
+  of the **nine** naming lines in this batch. Grep the prelim groups directly at
+  prep -- `re.search(r"\b(HUEY|DEWEY|LOUIE)\b", ai_text)` over the title's
+  `*-easyocr-gemini-prelim-groups.json` (the groups live under a `"groups"` key,
+  not at the top level) -- and do it BEFORE page 1. It is free and it found the
+  single most valuable fact in this batch.
+- **AND THAT FACT WAS A PERMUTED PALETTE.** *Donald's Pet Service* gives
+  **Louie RED and Huey GREEN**, Dewey blue as usual, and it is not a guess: the
+  story hands one boy per job and names him each time -- 099 g7 gives the key to
+  the red-capped boy and calls him Louie, 101 g1 names the blue one Dewey, 102 g0
+  names the green one Huey, 103 g8 calls the red one Louie again to his face --
+  and each naming line is followed by two to eight panels of that boy ALONE with
+  one unmistakable cap. Reading that title on the roster default would have put a
+  wrong name on roughly forty groups. **A title that names a boy and then isolates
+  him is the cheapest palette check there is; look for it at prep.**
+- **`capscan`'s DEFAULT min_area=25 MISSES THIS CONSTRUCTION ENTIRELY.** On
+  *Fearsome Flowers* 093 p1 the three caps are slivers of **54, 34 and 33 pixels**,
+  desaturated to `#ce4b25` S0.82, `#599147` S0.51 and `#1aadc8` -- and the default
+  bands found exactly one of the three. `capwide` at **min_area=6** found all
+  three, one per head and nowhere else. Run the head census with a LOW MIN_CAP
+  (`title_heads.py <out-dir> 400 8`) at prep on any Vol. 18 title; at the default
+  the thin-rim caps are invisible before the reading starts.
+- **A NEW SCRIPT DOES THE "A BLOB MUST SIT ON A HEAD" TEST FOR YOU**:
+  `scripts/vision/crowns.py <census-file> [PAGE ...]` keeps only the ink whose
+  centre falls inside a head's skull span and whose bottom edge is on the crown,
+  and prints `NO INK ON CROWN` otherwise. It is what caught, for free and without
+  an image, that the a=16350 red beside a boy on *Fearsome Flowers* 094 p6 is the
+  HOUSE ROOF, that the a=1213 red on 097 p4 is a WINDOW FRAME, that the a=3391 red
+  on 097 p3 is an AXE BLADE, and that the a=11150 green on *Back to Long Ago!* 099
+  p2 is a floor VASE. It is a screen, not a verdict -- when a name hangs on it,
+  still crop.
+- **THE REAL CAP QUESTION IN THESE TITLES IS NOT WHICH COLOUR, IT IS WHETHER A CAP
+  IS THERE AT ALL** -- and at 250px the montage answers it. These caps are a solid
+  BLACK crown carrying a thin rim, so a bare head reads as a plain white skull with
+  a hair tuft and a capped one as a black mass, and the two are never confusable at
+  contact-sheet scale. *Fearsome Flowers* is bare-headed indoors and capped outdoors;
+  *Donald's Pet Service* the same, plus 107 p1 knocks both caps into the air;
+  *Back to Long Ago!* has the boys CARRYING their caps in their hands through
+  108-110 while they pack. **A cap in a hand, a cap in mid-air and a cap on a head
+  are three different facts and only the third names anybody.**
+- **A BALLOON SPOKEN BY MORE THAN ONE BOY IS DRAWN WITH ONE TAIL PER BOY, and
+  both titles do it.** *Fearsome Flowers* 088 g2 has three tails fanning to three
+  boys, 093 g15 has two, 097 g2/g3/g6 have two each; *Back to Long Ago!* 099 g6 has
+  three. Count the points on a balloon's lower edge before assigning it: a single
+  tail is a name, two or three is a chorus and the answer is `nephews`. Going the
+  other way, TWO TAILS THAT BOTH LAND ON THE SAME BOY are the balloon's own
+  plumbing and still one speaker (097 g13, 106 g4, 107 g9 in *Pet Service*).
+- **THE CAPTION BOX AND THE TAILLESS BALLOON ARE DIFFERENT DEVICES AND THIS TITLE
+  USES BOTH.** *Back to Long Ago!* draws narration as a **pink squared box** and
+  a character's off-figure speech as a **cream rounded balloon with a tail** -- and
+  the two were stored the wrong way round in two places: 100 g7 (`So-`, the pink
+  box) was `dialogue`, and 101 g11 (a cream balloon whose tail runs to the window,
+  first person, `WHEN I HYPNOTIZED HIM`) was `narration`. One 1.1x crop of each
+  settled both. **Before overruling a caption's type, crop it and look at the
+  outline** -- and note that the neighbouring group often tells you the answer for
+  free: 101 g13 is the same device as g11 and was already stored correctly.
+- **A PAST LIFE IS STILL THE SAME CHARACTER.** *Back to Long Ago!* spends eight
+  pages in 1564 with Scrooge drawn as Matey McDuck and Donald as Bo'sn Pintail.
+  Every line in the flashback is settled by WHO IS ADDRESSED BY NAME -- `AYE,
+  PINTAIL!` cannot be Pintail's -- and none of it needs the art at all. I recorded
+  the speakers as `Scrooge` and `Donald`, because the story says outright that they
+  are the same two (105 g11, 107 g6), with the past-life names in every note.
+  **This is the one title-wide judgement call in the batch and it is cheap to
+  reverse** if the reviewer would rather have `other:Matey McDuck`.
+- **A COSTUME IN THE ROSTER INKS IS A CAP; A DISGUISE IS NOT.** *Fearsome Flowers*
+  093 puts the boys in red, blue and green PYJAMAS at 3,000-14,000px each, one per
+  boy, aligned to the three heads the census finds -- that is a cap key and it names
+  five groups. *Back to Long Ago!* 117 puts them in a bowler, a blue cap and a red
+  fireman's hat as a disguise -- those are costume colours, the convention does not
+  apply, and everything from 117 on is a forced collective.
+- **THE COLLECTIVE RATE IS HIGH IN THIS BATCH AND MOSTLY NOT A DECLINE.** Where the
+  caps are off, in silhouette, in hand or in costume there is nothing to decline;
+  the reviewer should expect *Back to Long Ago!* in particular to be a Scrooge story
+  in which the nephews are a chorus by construction. Only 16 of 565 groups came out
+  at medium.
+- **A COUGH IS DIALOGUE** (*Fearsome Flowers* 092 g7, `COFF! COFF!` from
+  sound_effect). Same test as a laugh or a sigh: a character's voice makes it.
+- **`panel_boxes.py` TRUNCATES `ai_text` at about 50 characters**, which is not
+  enough to read a page's script off disk before opening any image. Worth a `--full`
+  flag; I wrote a throwaway dumper for it three times.
+- **The page-capture files are `ensure_ascii=False`.** `CLAUDE.md` records them as
+  `indent=2` with a trailing newline but says nothing about the escaping, and
+  *Fearsome Flowers* 090 is the first capture in the corpus to carry a non-ASCII
+  glyph (`50¢`). A scripted edit that assumed the groups files' ASCII escaping would
+  reformat it whole. The groups files remain `indent=4`, ASCII-escaped, no trailing
+  newline.
+
+## Per-volume cap palette
+
+Vol. 18 and Vol. 16, three titles read 2026-09-16 (sixty-first batch; none reviewed):
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *Fearsome Flowers* (18) | 088 p1, the splash -- the only INTERIOR panel in the title with the caps on | `#e71c20` a=188 (088 p1); `#e5-e61a1f` a=360-1,436 (091); `#e71c20` a=808-1,333 (092, 097); faint `#ce4b25` H13.5 a=54 (093 p1) | `#009e45` a=10-25 (088 p1) **and** `#4fa43e` H110 a=766-1,342 (090 p7, 092 p7) -- the volume prints BOTH greens; shaded `#599147` H105 a=34 (093 p1); `#48a541` a=20-32 (094 p4) | `#00a5d5` a=120-174 (088 p1); `#01a4d5` a=525-1,226 (091); teal `#00a291` H173.7 and `#0da5b9` H186 ranked blue (097 p1, p2) | thin rim on a black cap. **Bare-headed indoors** (088 p2-p5, 089, 097 p6-p8), capped outdoors, and on 093 p4-p8 the key moves to RED/BLUE/GREEN PYJAMAS at 3,000-14,000px |
+| *Donald's Pet Service* (18) | 099 p3 and p5, the three boys in a row outdoors | **LOUIE** -- `#e61a20` a=194-1,024, and the same ink on 100 for eight straight panels | **HUEY** -- `#4ea43e` H110 a=499-660 (102 p2-p4) | **DEWEY** -- `#00a5d5` a=37-302, all of 101 | **PALETTE PERMUTED: red is Louie and green is Huey.** Four naming lines fix it. Bare-headed indoors (098, 099 p1-p2, 107 p4-p7); both caps knocked off on 107 p1 |
+| *Back to Long Ago!* (16) | 115 p2 (blue/green/red row) and 107 p7 (red/green/blue row) | `#de1e21`-`#e01c20` a=168-238 (107 p7, p8); the thin band on the boy Donald names Huey (116 p1) | `#46-51a44x` H110-118 -- but **on 114 p3 the green over two crowns is PALM FRONDS**, not a band | `#00-0ea4d5` a=96-483 (107 p1, p7); teal `#2aa098` H175 ranked blue (107 p8) | the ordinary roster, one anchor only (116 g2). **Donald wears a BLUE sailor cap all through the modern-day pages** -- the same ink as Dewey's band. Caps off indoors 108-110 and carried in hand while packing; costume headgear from 117 on |
+
+- *Fearsome Flowers*: the `leafgrn` column is worthless on this title -- it is a
+  garden story and the band fills with foliage (1,026-1,243 blobs a panel), while
+  089's SOFA prints `#3bac42` at H123.7, inside it. The cap green is in BOTH bands
+  depending on the panel. Donald wears his own blue cap from 090 p1.
+- *Donald's Pet Service*: Donald's cap is blue too; the red window frames on 097 p4
+  and p5 (a=1,213 and a=1,024-1,672, wide flat bands at head height) are the trap on
+  that page, and the red roof on 094 p6 is a=16,350.
+- *Back to Long Ago!*: Scrooge's coat is `#a04453` and accounts for most of what the
+  census hangs on his head; the shop awning on 094 p3 of *Fearsome Flowers* and the
+  ticket-office lettering here are both the roster blue.
