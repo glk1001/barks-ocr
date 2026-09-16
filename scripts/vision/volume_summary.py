@@ -1,12 +1,12 @@
-# ruff: noqa: INP001, T201 -- a standalone script, not a package module, and printing
-# the summary is the whole point.
+# ruff: noqa: INP001 -- a standalone script, not a package module.
 """Report the vision pass over some volumes: progress, correction rate and cost.
 
     uv run --offline python scripts/vision/volume_summary.py 16-18
     uv run --offline python scripts/vision/volume_summary.py 16 18 20
 
 Answers "how are the last few volumes going" in one run, instead of reading it
-back out of fifty findings sections by hand.
+back out of fifty findings sections by hand. One `rich` table per volume, a
+totals row in each, and a cross-volume table when more than one is named.
 
 WHERE EACH NUMBER COMES FROM.
 
@@ -30,8 +30,8 @@ WHERE EACH NUMBER COMES FROM.
   ledger row covering several titles is shown as shared.
 
 A passed but unreviewed title has no `speaker_was` yet, so its rate reads 0%.
-The `reviewed` column is there so that a 0% can be told apart from a clean
-review.
+The `reviewed` column is coloured when it is short of the group count, so that a
+0% can be told apart from a clean review.
 
 The rate by the confidence the pass wrote needs the pass's commit and is not
 here; `review_findings.py --since` gives it per title.
@@ -47,6 +47,9 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from intspan import intspan
 from loguru import logger
+from rich import box
+from rich.console import Console
+from rich.table import Table
 
 from barks_ocr.tools.vision_status import TitleStat, scan_titles
 from barks_ocr.utils.title_selection import title_pages
@@ -62,7 +65,14 @@ from barks_ocr.utils.vision_schema import (
 LEDGER = Path(__file__).resolve().parents[2] / "docs" / "vision-cost-ledger.csv"
 TITLE_SEP = " | "
 COLLECTIVE = "nephews"
-TITLE_WIDTH = 42
+TITLE_WIDTH = 26
+
+# A correction rate is read against the reviewer's stated tolerance: about 10%
+# wrong on nephew calls is fine, so red starts there and yellow at half of it.
+HIGH_RATE = 10.0
+MID_RATE = 5.0
+
+_console = Console()
 
 
 @dataclass
@@ -98,6 +108,19 @@ class CostUnit:
     volume: int
     titles: tuple[str, ...]
     pages: int
+    images: int
+
+
+@dataclass(frozen=True)
+class VolumeReport:
+    """What one volume contributed, for the cross-volume table."""
+
+    volume: int
+    titles_passed: int
+    titles: int
+    tally: Tally
+    passed_pages: int
+    costed_pages: int
     images: int
 
 
@@ -187,21 +210,41 @@ def tally_title(
     return tally
 
 
-def pct(part: int, whole: int) -> str:
-    """Format a percentage, or a dash when there is nothing to divide by.
+def rate_cell(part: int, whole: int) -> str:
+    """Return a correction rate coloured against the tolerance.
 
     Args:
-        part: The numerator.
-        whole: The denominator.
+        part: Corrections.
+        whole: Groups.
 
     Returns:
-        e.g. ``"5.4%"``.
+        Marked-up cell text.
 
     """
-    return f"{100 * part / whole:.1f}%" if whole else "--"
+    if not whole:
+        return "[dim]--[/]"
+    value = 100 * part / whole
+    colour = "red" if value >= HIGH_RATE else "yellow" if value >= MID_RATE else "green"
+    return f"[{colour}]{value:.1f}%[/]"
 
 
-def title_cost(title: str, units: list[CostUnit]) -> str:
+def reviewed_cell(reviewed: int, groups: int) -> str:
+    """Return how far review has got, named rather than counted when it is done.
+
+    Args:
+        reviewed: Groups carrying `speaker_reviewed`.
+        groups: Groups in the title.
+
+    Returns:
+        Marked-up cell text.
+
+    """
+    if reviewed == groups:
+        return "[green]all[/]"
+    return f"[yellow]{reviewed}/{groups}[/]"
+
+
+def cost_cell(title: str, units: list[CostUnit]) -> str:
     """Describe what the ledger records for one title.
 
     Args:
@@ -209,20 +252,63 @@ def title_cost(title: str, units: list[CostUnit]) -> str:
         units: Every ledger unit.
 
     Returns:
-        Images per page, a shared-unit note, or ``--`` when unrecorded.
+        Images per page, marked ``*`` when the ledger row covers several
+        titles, or a dim dash when the title is not in the ledger.
 
     """
     unit = next((u for u in units if title in u.titles), None)
     if unit is None:
-        return "--"
-    rate = f"{unit.images}/{unit.pages} = {unit.images / unit.pages:.2f}"
-    return rate if len(unit.titles) == 1 else f"shared {rate}"
+        return "[dim]--[/]"
+    rate = f"{unit.images / unit.pages:.2f}"
+    return rate if len(unit.titles) == 1 else f"{rate}[dim]*[/]"
+
+
+def cost_rate(images: int, pages: int) -> str:
+    """Return images per page, or a dim note when nothing is costed.
+
+    Args:
+        images: Images read.
+        pages: Pages they cover.
+
+    Returns:
+        Marked-up cell text.
+
+    """
+    return f"[bold]{images / pages:.2f}[/]" if pages else "[dim]not recorded[/]"
+
+
+def volume_table(volume: int, caption: str) -> Table:
+    """Build the per-title table for one volume, with its columns.
+
+    Args:
+        volume: The volume number.
+        caption: The line printed under the table.
+
+    Returns:
+        An empty-bodied table, ready for rows.
+
+    """
+    table = Table(
+        title=f"Vol. {volume}",
+        caption=caption,
+        box=box.ROUNDED,
+        header_style="bold cyan",
+        title_style="bold magenta",
+    )
+    table.add_column("Title", no_wrap=True, overflow="ellipsis", max_width=TITLE_WIDTH)
+    table.add_column("Pages", justify="right")
+    table.add_column("Groups", justify="right")
+    table.add_column("Rev", justify="right")
+    table.add_column("Corr", justify="right")
+    table.add_column("Rate", justify="right")
+    table.add_column("Img/pg", justify="right")
+    return table
 
 
 def report_volume(
     volume: int, stats: list[TitleStat], tallies: dict[str, Tally], units: list[CostUnit]
-) -> tuple[Tally, int, int, int]:
-    """Print one volume's summary and per-title table.
+) -> VolumeReport:
+    """Print one volume's table and return what it contributed.
 
     Args:
         volume: The volume number.
@@ -231,7 +317,7 @@ def report_volume(
         units: Every ledger unit.
 
     Returns:
-        The volume's summed tally, passed pages, costed pages and images read.
+        The volume's totals, for the cross-volume table.
 
     """
     passed = [s for s in stats if s.read]
@@ -242,52 +328,119 @@ def report_volume(
     vol_units = [u for u in units if u.volume == volume]
     costed_pages = sum(u.pages for u in vol_units)
     images = sum(u.images for u in vol_units)
-
-    print(
-        f"\n== Vol. {volume}: {len(passed)} of {len(stats)} titles passed, "
-        f"{passed_pages} of {sum(s.pages for s in stats)} pages"
+    report = VolumeReport(
+        volume, len(passed), len(stats), total, passed_pages, costed_pages, images
     )
+
     if not passed:
-        return total, 0, 0, 0
-    print(
-        f"   groups {total.groups} (+{total.added} added in review), "
-        f"reviewed {total.reviewed}/{total.groups}"
-    )
-    print(
-        f"   speaker corrections {total.corrections} ({pct(total.corrections, total.groups)}), "
-        f"nephew domain {total.nephew_corrections} of {total.nephew_groups} "
-        f"({pct(total.nephew_corrections, total.nephew_groups)})"
-    )
-    rate = f"{images / costed_pages:.2f} per page" if costed_pages else "not recorded"
-    print(f"   images {images} over {costed_pages} costed pages = {rate}")
+        _console.print(f"\n[bold magenta]Vol. {volume}[/]: [dim]nothing passed yet[/]")
+        return report
 
-    print(
-        f"\n   {'title':<{TITLE_WIDTH}} {'pages':>5} {'groups':>6} {'added':>5} "
-        f"{'reviewed':>8} {'corr':>4} {'rate':>6}  images/page"
+    caption = (
+        f"{len(passed)} of {len(stats)} titles passed, "
+        f"{passed_pages} of {sum(s.pages for s in stats)} pages   "
+        f"+{total.added} added in review   "
+        f"nephew domain {total.nephew_corrections}/{total.nephew_groups} "
+        f"({rate_cell(total.nephew_corrections, total.nephew_groups)})"
     )
+    if any(len(u.titles) > 1 for u in vol_units):
+        caption += "   * images recorded for several titles together"
+    table = volume_table(volume, caption)
     for stat in passed:
-        t = tallies[stat.title]
-        pages = str(stat.pages) if stat.read == stat.pages else f"{stat.read}/{stat.pages}"
-        print(
-            f"   {stat.title[:TITLE_WIDTH]:<{TITLE_WIDTH}} {pages:>5} {t.groups:>6} {t.added:>5} "
-            f"{t.reviewed:>8} {t.corrections:>4} {pct(t.corrections, t.groups):>6}  "
-            f"{title_cost(stat.title, units)}"
+        tally = tallies[stat.title]
+        pages = str(stat.pages)
+        if stat.read != stat.pages:
+            pages = f"[yellow]{stat.read}/{stat.pages}[/]"
+        table.add_row(
+            stat.title,
+            pages,
+            str(tally.groups),
+            reviewed_cell(tally.reviewed, tally.groups),
+            str(tally.corrections),
+            rate_cell(tally.corrections, tally.groups),
+            cost_cell(stat.title, units),
         )
+    table.add_section()
+    table.add_row(
+        "[bold]total[/]",
+        f"[bold]{passed_pages}[/]",
+        f"[bold]{total.groups}[/]",
+        reviewed_cell(total.reviewed, total.groups),
+        f"[bold]{total.corrections}[/]",
+        rate_cell(total.corrections, total.groups),
+        cost_rate(images, costed_pages),
+    )
+    _console.print()
+    _console.print(table)
 
     left = [s for s in stats if s.read < s.pages]
     if left:
-        print(
-            f"\n   left: {len(left)} title(s), {sum(s.pages - s.read for s in left)} page(s)"
-            f" -- next {left[0].title!r}"
+        _console.print(
+            f"[dim]   left: {len(left)} title(s), {sum(s.pages - s.read for s in left)} page(s)"
+            f" -- next[/] [cyan]{left[0].title}[/]"
         )
-    return total, passed_pages, costed_pages, images
+    return report
+
+
+def report_totals(reports: list[VolumeReport]) -> None:
+    """Print one row per volume, with a grand total.
+
+    Args:
+        reports: Each volume's contribution, in the order asked for.
+
+    """
+    table = Table(
+        title="All volumes",
+        box=box.ROUNDED,
+        header_style="bold cyan",
+        title_style="bold magenta",
+    )
+    table.add_column("Volume", justify="right")
+    table.add_column("Titles", justify="right")
+    table.add_column("Pages", justify="right")
+    table.add_column("Groups", justify="right")
+    table.add_column("Reviewed", justify="right")
+    table.add_column("Corr", justify="right")
+    table.add_column("Rate", justify="right")
+    table.add_column("Images/page", justify="right")
+
+    grand = Tally()
+    pages = costed = images = 0
+    for report in reports:
+        grand.add(report.tally)
+        pages += report.passed_pages
+        costed += report.costed_pages
+        images += report.images
+        table.add_row(
+            str(report.volume),
+            f"{report.titles_passed}/{report.titles}",
+            str(report.passed_pages),
+            str(report.tally.groups),
+            reviewed_cell(report.tally.reviewed, report.tally.groups),
+            str(report.tally.corrections),
+            rate_cell(report.tally.corrections, report.tally.groups),
+            cost_rate(report.images, report.costed_pages),
+        )
+    table.add_section()
+    table.add_row(
+        "[bold]all[/]",
+        "",
+        f"[bold]{pages}[/]",
+        f"[bold]{grand.groups}[/]",
+        reviewed_cell(grand.reviewed, grand.groups),
+        f"[bold]{grand.corrections}[/]",
+        rate_cell(grand.corrections, grand.groups),
+        cost_rate(images, costed),
+    )
+    _console.print()
+    _console.print(table)
 
 
 def main() -> None:
-    """Print the summary for the volumes named on the command line."""
+    """Print the report for the volumes named on the command line."""
     volumes = parse_volumes(sys.argv[1:])
     if not volumes:
-        print(__doc__)
+        _console.print(__doc__)
         sys.exit(2)
 
     logger.remove()
@@ -303,7 +456,7 @@ def main() -> None:
     for unit in units:
         for title in unit.titles:
             if title not in known:
-                print(f"!! ledger title not found in the corpus: {title!r}")
+                _console.print(f"[yellow]!! ledger title not found in the corpus:[/] {title!r}")
 
     logger.disable("barks_fantagraphics")
     try:
@@ -311,22 +464,12 @@ def main() -> None:
     finally:
         logger.enable("barks_fantagraphics")
 
-    grand = Tally()
-    passed_pages = costed_pages = images = 0
-    for volume in volumes:
-        total, p, c, i = report_volume(
-            volume, [s for s in stats if s.volume == volume], tallies, units
-        )
-        grand.add(total)
-        passed_pages, costed_pages, images = passed_pages + p, costed_pages + c, images + i
-
+    reports = [
+        report_volume(volume, [s for s in stats if s.volume == volume], tallies, units)
+        for volume in volumes
+    ]
     if len(volumes) > 1:
-        rate = f"{images / costed_pages:.2f} per page" if costed_pages else "not recorded"
-        print(
-            f"\n== All {len(volumes)} volumes: {passed_pages} pages passed, {grand.groups} groups, "
-            f"{grand.corrections} corrections ({pct(grand.corrections, grand.groups)}), "
-            f"reviewed {grand.reviewed}/{grand.groups}, images {images}/{costed_pages} = {rate}"
-        )
+        report_totals(reports)
 
 
 if __name__ == "__main__":
