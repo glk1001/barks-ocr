@@ -9308,3 +9308,61 @@ exclude them.)
 - **11 OF THE 18 BOYS THE PASS NAMED HELD, AND THE 3 PURELY-CAP CALLS ALL HELD.**
   Naming off a band that sits on a crown was not reversed once; every reversal
   involved a tail.
+
+### Findings to paste into the next run (2026-09-16, sixty-first batch, TWO OF THREE REVIEWED -- *Donald's Pet Service*)
+
+**134 groups, 1 speaker correction in the 132 the pass wrote (0.8%), 1 of 58 in
+the nephew domain (1.7%)**; by the confidence the pass wrote, **high 1/132
+(0.8%)** -- nothing was written at medium. The type proposal held, no text
+correction was proposed, and the review added 2 groups. Mirrored clean: 134/134
+reviewed on both engines, 111 `identified_by`, distributions identical. 14 images,
+1.4 per page. (Two further `unknown -> none` moves are the reviewer setting the
+speaker on the added groups, not corrections to the pass.)
+
+- **THE PERMUTED PALETTE HELD IN FULL, AND THIS IS THE FINDING OF THE BATCH.**
+  All 39 named nephew calls survived with **no `cap_colour` changed anywhere**:
+  Louie/red 16, Dewey/blue 17, Huey/green 6. Reading this title on the roster
+  default would have put a wrong name on 22 of those 39. **A title that names a boy
+  in dialogue and then isolates him for a page is a palette anchor stronger than
+  any scan, and it is free** -- the whole key came from four lines the direct
+  three-name grep found at prep.
+- **AND IT IS THE CHEAPEST TITLE IN THE LEDGER THAT ACTUALLY NAMES NEPHEWS.**
+  `docs/vision-pass-cost.md` records two earlier near-zeroes -- *Wired* and *The
+  Sunken Yacht* -- and both got there because the art made every nephew call a
+  FORCED collective, so there was nothing to get wrong. This one named 39 of 58 and
+  still came in at 1.7%. The lesson is not that the pass read better; it is that
+  **an anchored palette converts the nephew domain from guesswork into bookkeeping.**
+  Spend the prep minute looking for the anchor before spending any images.
+- **THE ONE CORRECTION IS, AGAIN, A MAPPING I WROTE DOWN AND DECLINED.** 107 g2,
+  `nephews -> Huey`. The panel knocks both caps into the air, and I wrote
+  `Reviewer: if this pair is split it is Dewey (left) then Huey (right)`. The review
+  split it and named the right-hand balloon **Huey**. That is now **five** such
+  calls across two reviews in this batch, and in every one the note contained the
+  answer. **CASH THE NOTE.**
+- **`cap_colour` RECORDED WITHOUT PRINTED INK, SECOND REVIEW RUNNING -- WORTH A
+  WORD WITH THE REVIEWER.** 107 g2 came back `Huey` with `cap_colour: red`, but
+  `capwide` over the whole of 107 panel 1 at min_area=3 finds the only two caps in
+  it are the **blue** and **green** ones in mid-air (green `#51a443` H111.3 a=291 at
+  x492-518); every red blob in the panel is the `CRANK!` sound-effect lettering
+  (`#e71c20` a=878 at x512-564, inside the SFX box) plus two specks. So `red` is the
+  ROSTER DEFAULT reasserting itself on a title the same review had just confirmed
+  is permuted -- Huey is **green** here, six times over, all six confirmed. The
+  speaker may well be right; the colour is the one value that cannot be. Paired with
+  *Fearsome Flowers* 095 g5, where `red` was recorded in a panel whose whole-panel
+  red is 4px and 3px of `#562216`, that is two in two reviews. **`cap_colour` is the
+  only check the corpus has on the convention, so filling it from the name quietly
+  destroys the thing it exists to test.** Mirrored as the reviewer made it rather
+  than altered; one edit and a re-mirror if they want it `green` or null.
+- **THE MISSED-TEXT AUDIT HAS A SECOND BLIND SPOT: REPEATED IDENTICAL LETTERING.**
+  It reported **zero** for this title, and the review added two groups -- the second
+  and third `A-1 PEA-NUTS` sacks in 103 panel 3, a panel that holds three of them
+  and had one grouped. The audit matches `visible_text` against grouped text by
+  CONTENT, so one grouped instance covers all N. Together with *Fearsome Flowers*
+  092 (a sign a character reads aloud, suppressed as a near duplicate) the rule is:
+  **the audit answers "does this string appear in a group", not "is every instance
+  of this lettering boxed".** When a panel shows the same sign more than once, or a
+  character quotes a sign, count the instances yourself and put them in the hand-back
+  from `visible_text` -- the audit's silence is not a finding.
+- **NOTHING ELSE MOVED.** No cap reversed, no tail reversed, no type reversed, and
+  the 18 collectives all stood -- they were forced by silhouettes, bare heads and
+  airborne caps rather than declined.
