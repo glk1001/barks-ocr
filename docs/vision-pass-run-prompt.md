@@ -9131,15 +9131,19 @@ corrections, 1 missed-text item in the batch.
   `re.search(r"\b(HUEY|DEWEY|LOUIE)\b", ai_text)` over the title's
   `*-easyocr-gemini-prelim-groups.json` -- the groups live under a `"groups"` key,
   not at the top level, which is the one thing that trips the one-liner up.
-- **AND THAT FACT WAS A PERMUTED PALETTE.** *Donald's Pet Service* gives
-  **Louie RED and Huey GREEN**, Dewey blue as usual, and it is not a guess: the
+- **AND THAT FACT WAS A COLOURIST ERROR RUNNING THE WHOLE TITLE.** (Written up
+  here first as a `permuted palette`; the reviewer has since RULED that Huey is red,
+  Dewey blue and Louie green across the corpus always, and that a title disagreeing
+  is the colourist getting it wrong. See the ruling at the end of this section.)
+  *Donald's Pet Service* prints **Louie RED and Huey GREEN**, Dewey blue as usual,
+  and the names are not a guess: the
   story hands one boy per job and names him each time -- 099 g7 gives the key to
   the red-capped boy and calls him Louie, 101 g1 names the blue one Dewey, 102 g0
   names the green one Huey, 103 g8 calls the red one Louie again to his face --
   and each naming line is followed by two to eight panels of that boy ALONE with
   one unmistakable cap. Reading that title on the roster default would have put a
   wrong name on roughly forty groups. **A title that names a boy and then isolates
-  him is the cheapest palette check there is; look for it at prep.**
+  him is the cheapest check on the ink there is; look for it at prep.**
 - **`capscan`'s DEFAULT min_area=25 MISSES THIS CONSTRUCTION ENTIRELY.** On
   *Fearsome Flowers* 093 p1 the three caps are slivers of **54, 34 and 33 pixels**,
   desaturated to `#ce4b25` S0.82, `#599147` S0.51 and `#1aadc8` -- and the default
@@ -9219,7 +9223,7 @@ Vol. 18 and Vol. 16, three titles read 2026-09-16 (sixty-first batch; none revie
 | title | reference | red | green | blue | construction |
 |---|---|---|---|---|---|
 | *Fearsome Flowers* (18) | 088 p1, the splash -- the only INTERIOR panel in the title with the caps on | `#e71c20` a=188 (088 p1); `#e5-e61a1f` a=360-1,436 (091); `#e71c20` a=808-1,333 (092, 097); faint `#ce4b25` H13.5 a=54 (093 p1) | `#009e45` a=10-25 (088 p1) **and** `#4fa43e` H110 a=766-1,342 (090 p7, 092 p7) -- the volume prints BOTH greens; shaded `#599147` H105 a=34 (093 p1); `#48a541` a=20-32 (094 p4) | `#00a5d5` a=120-174 (088 p1); `#01a4d5` a=525-1,226 (091); teal `#00a291` H173.7 and `#0da5b9` H186 ranked blue (097 p1, p2) | thin rim on a black cap. **Bare-headed indoors** (088 p2-p5, 089, 097 p6-p8), capped outdoors, and on 093 p4-p8 the key moves to RED/BLUE/GREEN PYJAMAS at 3,000-14,000px |
-| *Donald's Pet Service* (18) | 099 p3 and p5, the three boys in a row outdoors | **LOUIE** -- `#e61a20` a=194-1,024, and the same ink on 100 for eight straight panels | **HUEY** -- `#4ea43e` H110 a=499-660 (102 p2-p4) | **DEWEY** -- `#00a5d5` a=37-302, all of 101 | **PALETTE PERMUTED: red is Louie and green is Huey.** Four naming lines fix it. Bare-headed indoors (098, 099 p1-p2, 107 p4-p7); both caps knocked off on 107 p1 |
+| *Donald's Pet Service* (18) | 099 p3 and p5, the three boys in a row outdoors | **LOUIE** -- `#e61a20` a=194-1,024, and the same ink on 100 for eight straight panels | **HUEY** -- `#4ea43e` H110 a=499-660 (102 p2-p4) | **DEWEY** -- `#00a5d5` a=37-302, all of 101 | **COLOURIST ERROR, WHOLE TITLE: red and green are swapped, so the red cap is Louie's and the green one Huey's.** Four naming lines fix the names; the inks are recorded as printed. Bare-headed indoors (098, 099 p1-p2, 107 p4-p7); both caps knocked off on 107 p1 |
 | *Back to Long Ago!* (16) | 115 p2 (blue/green/red row) and 107 p7 (red/green/blue row) | `#de1e21`-`#e01c20` a=168-238 (107 p7, p8); the thin band on the boy Donald names Huey (116 p1) | `#46-51a44x` H110-118 -- but **on 114 p3 the green over two crowns is PALM FRONDS**, not a band | `#00-0ea4d5` a=96-483 (107 p1, p7); teal `#2aa098` H175 ranked blue (107 p8) | the ordinary roster, one anchor only (116 g2). **Donald wears a BLUE sailor cap all through the modern-day pages** -- the same ink as Dewey's band. Caps off indoors 108-110 and carried in hand while packing; costume headgear from 117 on |
 
 - *Fearsome Flowers*: the `leafgrn` column is worthless on this title -- it is a
@@ -9319,12 +9323,12 @@ reviewed on both engines, 111 `identified_by`, distributions identical. 14 image
 1.4 per page. (Two further `unknown -> none` moves are the reviewer setting the
 speaker on the added groups, not corrections to the pass.)
 
-- **THE PERMUTED PALETTE HELD IN FULL, AND THIS IS THE FINDING OF THE BATCH.**
+- **THE READING HELD IN FULL, AND THIS IS THE FINDING OF THE BATCH.**
   All 39 named nephew calls survived with **no `cap_colour` changed anywhere**:
-  Louie/red 16, Dewey/blue 17, Huey/green 6. Reading this title on the roster
-  default would have put a wrong name on 22 of those 39. **A title that names a boy
-  in dialogue and then isolates him for a page is a palette anchor stronger than
-  any scan, and it is free** -- the whole key came from four lines the direct
+  Louie/red 16, Dewey/blue 17, Huey/green 6 (now 7). Reading this title on the
+  roster default would have put a wrong name on 22 of those 39. **A title that names
+  a boy in dialogue and then isolates him for a page is an anchor stronger than any
+  scan, and it is free** -- the whole key came from four lines the direct
   three-name grep found at prep.
 - **AND IT IS THE CHEAPEST TITLE IN THE LEDGER THAT ACTUALLY NAMES NEPHEWS.**
   `docs/vision-pass-cost.md` records two earlier near-zeroes -- *Wired* and *The
@@ -9345,14 +9349,14 @@ speaker on the added groups, not corrections to the pass.)
   it are the **blue** and **green** ones in mid-air (green `#51a443` H111.3 a=291 at
   x492-518); every red blob in the panel is the `CRANK!` sound-effect lettering
   (`#e71c20` a=878 at x512-564, inside the SFX box) plus two specks. So `red` is the
-  ROSTER DEFAULT reasserting itself on a title the same review had just confirmed
-  is permuted -- Huey is **green** here, six times over, all six confirmed. The
-  speaker may well be right; the colour is the one value that cannot be. Paired with
+  CHARACTER'S canonical colour standing in for the ink -- Huey's cap prints **green**
+  here, seven times over, every one confirmed. The NAME was right and never in
+  doubt; it is the colour field that was filled from it. Paired with
   *Fearsome Flowers* 095 g5, where `red` was recorded in a panel whose whole-panel
   red is 4px and 3px of `#562216`, that is two in two reviews. **`cap_colour` is the
   only check the corpus has on the convention, so filling it from the name quietly
-  destroys the thing it exists to test.** Mirrored as the reviewer made it rather
-  than altered; one edit and a re-mirror if they want it `green` or null.
+  destroys the thing it exists to test.** RESOLVED: set to `green`, re-mirrored and
+  committed (`2a73cc8f`), with the colourist error written into the group's note.
 - **THE MISSED-TEXT AUDIT HAS A SECOND BLIND SPOT: REPEATED IDENTICAL LETTERING.**
   It reported **zero** for this title, and the review added two groups -- the second
   and third `A-1 PEA-NUTS` sacks in 103 panel 3, a panel that holds three of them
@@ -9366,3 +9370,53 @@ speaker on the added groups, not corrections to the pass.)
 - **NOTHING ELSE MOVED.** No cap reversed, no tail reversed, no type reversed, and
   the 18 collectives all stood -- they were forced by silhouettes, bare heads and
   airborne caps rather than declined.
+
+### RULING, 2026-09-16 -- colourist errors, and what `cap_colour` is for
+
+The reviewer settled this while closing the sixty-first batch, and it overrides the
+"permuted palette" language used in this file from *High-wire Daredevils* onward.
+It is now also in `vision_schema.py`, so it reaches every future pass through the
+generated `roster.txt`.
+
+**Huey is red, Dewey is blue and Louie is green. Always, everywhere in the corpus.**
+That is a fact about the characters, not a per-title convention, and it is not
+negotiable by a title. There is no such thing as a story with its own key.
+
+**What varies is the colourist, who sometimes gets it wrong -- occasionally for a
+whole title.** When he does:
+
+- the **DIALOGUE** names the boy. It always wins.
+- **`cap_colour` still records the ink he was actually given.** Do not correct the
+  colour to match the name, and do not rename the boy to match the colour.
+- the error IS that disagreement, plus a word in the note.
+
+**Why, in one line:** nothing downstream joins `cap_colour` to identity -- it is
+read only by a display swatch in `vision_report.py` and by the editor -- so
+recording the ink costs nothing, while deriving it from the name costs the only
+evidence the error ever happened. Across the corpus the split is about **6,600
+groups where cap and name agree against 120 where they do not**, and those 120 are
+the entire record of the colourist's mistakes. Write the colours in from the names
+and all 120 read as clean, permanently.
+
+**The query that finds them**, and the reason the field is worth keeping honest:
+
+```python
+STD = {"Huey": "red", "Dewey": "blue", "Louie": "green"}
+if g.get("speaker") in STD and g.get("cap_colour") and STD[g["speaker"]] != g["cap_colour"]:
+    ...  # a colourist error, or a misread -- either way, worth a look
+```
+
+**Worked example, and the one this ruling came out of.** *Donald's Pet Service*
+(Vol. 18) has red and green swapped for the entire story: Donald hands the key to
+the RED-capped boy and calls him Louie (099 g7), names the BLUE one Dewey (101 g1)
+and the GREEN one Huey (102 g0), then leaves each alone for two to eight panels.
+Recorded as printed it comes out **Louie/red 16, Dewey/blue 17, Huey/green 7**, and
+the swap is uniform, so it is findable. One group, 107 g2, had been set to Huey/red
+during review -- the canonical colour standing in for the ink, in a panel whose only
+two caps are the blue and green ones knocked into the air. It is now `green`.
+
+**What this does NOT change:** how you NAME a boy. The convention is still the
+anchor, a clean cap still names its wearer, and you should still expect red to be
+Huey. It changes only what you write in the colour field when the art disagrees --
+and it means a title-wide disagreement is a finding to report, not a local key to
+adopt.

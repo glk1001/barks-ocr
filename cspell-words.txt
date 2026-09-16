@@ -28,6 +28,7 @@ chkg
 chkr
 codepoint
 colorfmt
+colourist
 colours
 coords
 cscsv
