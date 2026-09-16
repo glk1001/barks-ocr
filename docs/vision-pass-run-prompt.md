@@ -9120,14 +9120,17 @@ yet, so there are no correction rates here -- these are findings about the
 *reading*, and the next review will price them. 4 type corrections, 0 text
 corrections, 1 missed-text item in the batch.
 
-- **`name-grep` DOES NOT REPORT HUEY, DEWEY OR LOUIE.** All three are in its
-  dictionary, so they never reach the non-dictionary list, and a single
-  occurrence never reaches the repeated-pairs list either. It reported **none**
-  of the **nine** naming lines in this batch. Grep the prelim groups directly at
-  prep -- `re.search(r"\b(HUEY|DEWEY|LOUIE)\b", ai_text)` over the title's
-  `*-easyocr-gemini-prelim-groups.json` (the groups live under a `"groups"` key,
-  not at the top level) -- and do it BEFORE page 1. It is free and it found the
-  single most valuable fact in this batch.
+- **THE KNOWN `name-grep` HOLE COST THIS BATCH NINE NAMING LINES, AND I RAN THE
+  GREP ANYWAY RATHER THAN THE SCAN.** That HUEY, DEWEY and LOUIE are all
+  dictionary words, and so invisible to both of `name-grep`'s passes, has been a
+  standing rule since 2026-08-10 -- and the standing instruction is to run the
+  direct scan at PREP. I ran `name-grep` on all three titles first, got a clean
+  sheet, and only ran the scan later on a hunch. **It reported nine naming lines
+  `name-grep` had reported as zero**, one of which fixes a permuted palette. The
+  scan is free and takes seconds; run it at prep, not on a hunch:
+  `re.search(r"\b(HUEY|DEWEY|LOUIE)\b", ai_text)` over the title's
+  `*-easyocr-gemini-prelim-groups.json` -- the groups live under a `"groups"` key,
+  not at the top level, which is the one thing that trips the one-liner up.
 - **AND THAT FACT WAS A PERMUTED PALETTE.** *Donald's Pet Service* gives
   **Louie RED and Huey GREEN**, Dewey blue as usual, and it is not a guess: the
   story hands one boy per job and names him each time -- 099 g7 gives the key to
@@ -9202,12 +9205,12 @@ corrections, 1 missed-text item in the batch.
 - **`panel_boxes.py` TRUNCATES `ai_text` at about 50 characters**, which is not
   enough to read a page's script off disk before opening any image. Worth a `--full`
   flag; I wrote a throwaway dumper for it three times.
-- **The page-capture files are `ensure_ascii=False`.** `CLAUDE.md` records them as
-  `indent=2` with a trailing newline but says nothing about the escaping, and
-  *Fearsome Flowers* 090 is the first capture in the corpus to carry a non-ASCII
-  glyph (`50¢`). A scripted edit that assumed the groups files' ASCII escaping would
-  reformat it whole. The groups files remain `indent=4`, ASCII-escaped, no trailing
-  newline.
+- **The page-capture files are `ensure_ascii=False`** -- already a known format
+  rule, but `CLAUDE.md` gave only `indent=2` plus a trailing newline, so a round-trip
+  check written from the repo's own note FAILS on any capture holding a non-ASCII
+  glyph. *Fearsome Flowers* 090's `50¢` is such a glyph and my first check flagged a
+  clean file as mis-formatted. `CLAUDE.md` now carries the escaping too. The groups
+  files remain `indent=4`, ASCII-escaped, no trailing newline.
 
 ## Per-volume cap palette
 

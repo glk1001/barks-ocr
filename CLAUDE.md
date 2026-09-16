@@ -69,7 +69,9 @@ pathspec of `"Carl Barks Vol. 2*"` matches Vol. 20 through Vol. 29, and **Vol. 1
 must stay out**. The format is `json.dumps(d, indent=4)`, ASCII-escaped, with
 **no trailing newline** -- but ONLY for `*-gemini-prelim-groups.json`.
 `*-page-capture.json` and `*-panel-descriptions.json`, which an apply also
-writes, are `indent=2` **with** a trailing newline. Prove the round trip before
+writes, are `indent=2`, **`ensure_ascii=False`**, **with** a trailing newline --
+so a round-trip check must use the right escaping for the kind of file, or a
+capture holding a non-ASCII glyph reads as mis-formatted when it is not. Prove the round trip before
 any scripted edit, or a one-string change reformats the whole file. The prelim
 repo's pre-commit hook now refuses a mis-formatted groups file, and (since
 2026-09-16) also refuses a staged set spanning more than one volume -- a
