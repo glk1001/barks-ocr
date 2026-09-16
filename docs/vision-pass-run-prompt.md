@@ -7275,21 +7275,91 @@ added by the review and the missed-text audit stayed at zero on all 19 pages.
   `other:Grandma Duck` to a bare `Grandma Duck`, and the corpus still carries
   **8 rows of the prefixed form** from an earlier title.
 
+### Findings to paste into the next run (2026-09-16, sixtieth batch, FOUR OF FOUR -- *Knight in Shining Armor*, batch closed)
+
+**148 groups, 11 speaker corrections (7.4%), 9 of them in the nephew domain (9
+of 40, 22.5%)**; by the confidence the pass wrote, **high 8/124 (6.5%), medium
+3/24 (12.5%)**. All 11 type proposals held, no text correction was proposed and
+no group was added. Mirrored clean onto paddleocr: 148/148 reviewed, 126
+`identified_by`, distributions identical. **Batch: 374 groups over 29 pages, 11
+speaker corrections (2.9%) all in this one title, and 28 type proposals of which
+every single one held.** 45 images, 1.55 per page.
+
+- **EVERY UNDER-NAMING WAS A SCAN ZERO WRITTEN UP AS AN ABSENT CAP -- THE THIRD
+  BATCH RUNNING.** Five of them (078 g10, 081 g18/g19/g20, 087 g11), and the
+  review found a cap on four. The worst is **081 p8**, where I wrote *"all three
+  are BARE-HEADED here even though the scene is a street: capwide over the whole
+  panel at min_area=25 returns a single chromatic blob of 64px, #982d18, at the
+  panel edge, and nothing on any crown"* -- and the review named all three off
+  **blue, green and red**. Note what that means: I did exactly what the roster
+  demands, quoted the census's own header, and the header was still wrong.
+  Thirteen of these in the fifty-eighth batch, six in the fifty-ninth, five here.
+- **AND I HAD ALREADY MEASURED THE TOOL'S BLINDNESS ON THIS VERY TITLE.** Two
+  pages earlier I found that `title_bands` reports 086 p2 as `red=3 green=2
+  blue=0` on a panel where a 1.5x crop shows all three boys banded, wrote that
+  finding into the hand-back -- and then trusted a `capwide` zero on 081 p8
+  anyway. **On a construction of thin coloured rims on black caps, a whole-panel
+  scan at min_area=25 is simply blind, and the only thing that works is a 3-6x
+  crop of each crown.** If a crop has already contradicted the scan once in a
+  title, the scan is finished as evidence for that title -- do not spend it again.
+- **THE SAME ERROR RAN IN THE OPPOSITE DIRECTION TWICE: A BLOB THAT WAS NOT ON A
+  HEAD.** 078 g8 (`Dewey` blue -> **Huey** red) rested on *"his cap prints blue
+  #00a3d2 2,927px at x788-875 y144-239"*, and 084 g1 (`Louie` green -> **Huey**
+  red) on *"a green blob of #4fa43e H110.0 2,187px sits at (34,366,92,433) where
+  his crown is"*. In both the blob was scenery, and in both I promoted the call
+  with **"only one nephew in the panel"**. The unified rule for both directions:
+  **a census gives you ink, not caps. Place the blob on a head with a crop before
+  you name a boy from it OR declare him bare.** `sole-figure` is not a substitute
+  for that crop -- it is what made these two high and medium instead of
+  collective.
+- **A LINE THAT STATES A CONDITION CONTRARY TO A CHARACTER'S SITUATION EXCLUDES
+  HIM** (078 g9, `Donald` -> **Huey**). The line is `I GET IT! IF I WERE INVITED,
+  I'D GO AS AN ICE-CREAM MAN!` -- and the invitation is Donald's, so the one duck
+  on the page who cannot say it is Donald. The dialogue ruled him out before the
+  art was even consulted, and I gave it to him on a figure read. With 078 g10
+  going the same way, **neither balloon on that panel is Donald's**: the boys are
+  saying what *they* would go as.
+- **THE GAP-TIP METHOD WORKED, 3 OF 4 -- I PREDICTED THE OPPOSITE.** I flagged
+  four gap-tip mediums (078 g2, 082 g1, 083 g11, 085 g11) and said that if they
+  all reversed the finding would be about gap tips in this volume. **082 g1, 083
+  g11 and 085 g11 all held**; only 078 g2 reversed, and it went `Huey` ->
+  `Dewey`, i.e. to the same name the other three carry. Direction-of-tail plus
+  the one-head-left rule is doing real work -- keep using it, at medium.
+- **THE TEAL-AS-BLUE RANKING HELD EVERYWHERE IT WAS USED.** `#25a48a` / `#22a590`
+  / `#00a288` at H167-170 was read as this volume's blue on 082 g1, 084 g0 and
+  086 g2 and **all three held**. That is now confirmed twice over -- *Borderline
+  Hero*'s H162-163 in the fifty-ninth batch and these here.
+- **11 OF THE 14 BOYS I NAMED HELD.** Naming is not the risk; declining is, and
+  all three reversals are the blob/gap failures above rather than anything about
+  tails.
+- **MEDIUM IS THE WORSE BET FOR THE FIFTH BATCH RUNNING**: 12.5% against high's
+  6.5%.
+- Two non-nephew corrections: **083 g2** `other:the guest in the bear costume` ->
+  `other:the guest in the clown costume` (a costume read off a small background
+  figure), and **085 g8** `narrator` -> `other:a party guest`. On g8 I reasoned
+  from the drawing -- *"a squared box with no tail"* -- and the past-tense report
+  `REGGIE SLAMMED THE DOOR BEHIND HIM AND IT LOCKED!` is a guest's line, not the
+  author's. **A boxed line in the past tense is not automatically narration.**
+
 ## Per-volume cap palette
 
 Vol. 16, Vol. 18 and Vol. 20, four titles read 2026-09-16 (sixtieth batch;
-the Vol. 18 row is pass-derived and its review is still outstanding):
+all four reviewed; the Vol. 18 row is CORRECTED against its review):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
 |---|---|---|---|---|---|
 | *Migrating Millions* (16) | 096 p7, two boys beside Scrooge, caps big and lit | `#e01a1f` H358.5 520px (094 p6); `#e51a1f` 2,676px (096 p7); `#e31c1f` 510px (096 p8); dark sliver `#bb2e31` H358.7 26px (094 p7) | `#4fa43e` H110.0 3,153px (096 p7) | `#08a4d2` H193.7 485px (094 p6); `#16a3be` H189.6 360px (096 p8) | a band on a black cap outdoors; several panels print no cap ink at all (096 p3, 098 p2) |
-| *Knight in Shining Armor* (18) | 086 p2 and 083 p7, three boys with their caps on | `#e71c20` H358.8 (078 p1, p3); rims `#b92e19` H7.9 325px (086 p2), `#b42c1a` H7.0 140px (087 p8), `#e61b20` 3,230px (083 p7) | `#4fa43e` H110.0 2,187px (084 p2); `#50a43f`/`#009e49` 1,951px (083 p7); `#4ea43e` H110.6 858px (085 p8); shaded `#65a465` H120.0 S0.38 392px (086 p2); small `#68aa41` H97.7 110px (084 p1) | `#00a5d5` H193.5 331-3,007px (078 p3, p4; 083 p7; 085 p8); **teal** `#25a48a`/`#22a590`/`#00a288` H167-170, 146-225px, ranked blue (082 p1, 084 p1, 086 p2) | a thin rim on a black cap **outdoors only**; the boys are drawn bare-headed indoors through 079, 080 and 081, and 081 p8 is a street and still capless |
+| *Knight in Shining Armor* (18) | 086 p2 and 083 p7, three boys with their caps on | `#e71c20` H358.8 (078 p1, p3); rims `#b92e19` H7.9 325px (086 p2), `#b42c1a` H7.0 140px (087 p8), `#e61b20` 3,230px (083 p7); the review also read red on 078 p4, 078 p5, 081 p8 and 084 p2, where I measured none | `#50a43f`/`#009e49` 1,951px (083 p7); `#4ea43e` H110.6 858px (085 p8); shaded `#65a465` H120.0 S0.38 392px (086 p2); small `#68aa41` H97.7 110px (084 p1); the review also read green on 081 p8 and 087 p8 | `#00a5d5` H193.5 331-3,007px (078 p3; 083 p7; 085 p8); **teal** `#25a48a`/`#22a590`/`#00a288` H167-170, 146-225px, ranked blue and CONFIRMED (082 p1, 084 p1, 086 p2); the review also read blue on 081 p8 | a thin rim on a black cap; bare-headed indoors through 079 and 080, **but 081 p8 and 087 p8 DO carry caps that no whole-panel scan finds** |
 | *The Cat Box*, *Grandma's Present* (20) | none -- no nephews in either | -- | -- | -- | Gyro solo stories: Gyro, Gus Goose, Grandma Duck and two cats. No cap key at all |
 
 - *Migrating Millions*: **Scrooge's top hat band is the roster blue** `#01a4d6`-`#08a4d2`,
   and his coat is `#a04453` -- between them they account for nearly every blob
   `capwide` reports on that title. The valley greens are H147-151 at S0.94-1.0,
   well clear of the H110 cap green.
+- *Knight in Shining Armor*: **TWO INKS IN THIS ROW WERE WRONG AND THE REVIEW
+  REMOVED THEM.** `#00a3d2` 2,927px on 078 p4 and `#4fa43e` 2,187px on 084 p2
+  were recorded as nephew caps and are scenery -- both boys are Huey in red. A
+  blob is only a cap once a crop has put it on a head.
 - *Knight in Shining Armor*: `title_bands` **under-reports this title badly** --
   it gives 086 p2 `red=3 green=2 blue=0` on a panel where all three boys are
   banded. Use `title_heads`' per-head `CAP-INK` and then probe each crown; two of
